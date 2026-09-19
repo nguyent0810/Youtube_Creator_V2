@@ -54,6 +54,50 @@ SHORT_MOTION_STRENGTH = "high"
 SHORT_BROLL_SPEED = 1.6
 
 
+# ─── Kiểu caption ─────────────────────────────────────────────────────────
+#
+# TIKTOK: karaoke tô sáng từng chữ -- theo chính ghi chú thiết kế của
+# video-editor, đây là đòn bẩy lớn nhất khiến phụ đề đọc ra "sinh động" thay
+# vì tĩnh. Mặc định của họ TẮT nó để không đổi giao diện các render cũ; ta
+# bật.
+#
+# RỦI RO PHẢI CANH: dấu tiếng Việt chồng tầng (ế ồ ữ ợ ẩ) nằm CAO hơn chữ
+# hoa thường, nên viền quá dày hoặc cỡ chữ quá lớn sẽ cắt cụt phần dấu --
+# và lỗi này chỉ lộ ra ở đúng những chữ có dấu, dễ lọt qua nếu chỉ test
+# bằng chữ không dấu.
+#
+# Ba quyết định để tránh:
+#   - outline vừa phải (4), KHÔNG dày hơn: viền dày ăn vào phần dấu phía trên
+#   - KHÔNG uppercase_emphasis: chữ hoa có dấu (Ế, Ữ, Ợ) đội dấu cao hơn nữa,
+#     là trường hợp dễ bị cắt nhất
+#   - margin_v rộng để cả khối chữ không chạm mép dưới khi xuống 2 dòng
+#
+# Font Be Vietnam Pro Bold -- thiết kế riêng cho tiếng Việt, dựng sẵn trong
+# video-editor/assets/fonts. Không dùng font hệ thống: phần lớn font Latin
+# đặt dấu sai vị trí hoặc thiếu hẳn glyph tổ hợp.
+
+CAPTION_OUTLINE = 4
+CAPTION_SHADOW = 2
+HIGHLIGHT_YELLOW_BGR = "00E5FF"   # ASS là &HBBGGRR -> đây là vàng rực
+HIGHLIGHT_GREEN_BGR = "7CFC00"
+
+
+def tiktok_caption_config(highlight_bgr: str = HIGHLIGHT_YELLOW_BGR):
+    """Caption karaoke kiểu TikTok, an toàn với dấu tiếng Việt."""
+    _ensure_importable()
+    from core.pipeline.subtitle_job import SubtitleConfig
+    return SubtitleConfig(
+        enabled=True,
+        dynamic_captions_enabled=True,     # tô sáng từng chữ
+        highlight_colour_bgr=highlight_bgr,
+        font_weight_bold=True,
+        outline_width=CAPTION_OUTLINE,
+        shadow_strength=CAPTION_SHADOW,
+        uppercase_emphasis=False,          # xem ghi chú về dấu ở trên
+        remove_punctuation=False,
+    )
+
+
 class AssembleError(RuntimeError):
     pass
 
@@ -168,13 +212,12 @@ def _patched(timing: dict, broll_queries: list[str]):
 
 def assemble_short(bundle, wav_path: Path, timing: dict, out_path: Path,
                    pexels_key: str, bgm_path: Path | None = None,
-                   logo_path: Path | None = None) -> AssembleResult:
+                   logo_path: Path | None = None, subtitles=None) -> AssembleResult:
     """Dựng một Short 9:16 hoàn chỉnh: B-roll + caption karaoke + nhạc nền."""
     _ensure_importable()
     from core.pipeline.bgm import BGMConfig
     from core.pipeline.logo_overlay import LogoConfig
     from core.pipeline.stages import ProcessingState
-    from core.pipeline.subtitle_job import SubtitleConfig
     from core.pipeline.video_effects import IntensityLevel
     from core.stockfootage.assembly_job import AssemblyJob, run_assembly_job
     from core.stockfootage.providers.pexels import PexelsProvider
@@ -194,7 +237,7 @@ def assemble_short(bundle, wav_path: Path, timing: dict, out_path: Path,
             motion_mode="auto",
             motion_strength=IntensityLevel.HIGH,
             broll_speed_factor=SHORT_BROLL_SPEED,
-            subtitles=SubtitleConfig(),
+            subtitles=subtitles or tiktok_caption_config(),
             bgm=BGMConfig(path=str(bgm_path.resolve())) if bgm_path else None,
             logo=LogoConfig(path=str(logo_path.resolve())) if logo_path else None,
         )
