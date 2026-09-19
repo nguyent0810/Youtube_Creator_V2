@@ -1,0 +1,28 @@
+# Bí mật — KHÔNG BAO GIỜ commit
+.env
+*.env
+!.env.example
+.youtube_channels/
+.tiktok_channels/
+
+# Trạng thái máy sinh + sản phẩm
+state.sqlite
+state.sqlite-wal
+state.sqlite-shm
+output/
+chunks_cache/
+
+# Bundle: đây là ĐẦU VÀO do Claude sinh, nên CÓ commit (review được trong
+# git diff, khôi phục được). Bỏ dòng dưới nếu muốn giữ chúng ngoài git.
+# bundles/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+*.egg-info/
+
+# Tài sản nặng — tải riêng, không nhét vào git
+bgm/*.mp3
+fonts/

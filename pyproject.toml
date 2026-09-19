@@ -1,0 +1,16 @@
+[project]
+name = "yt-factory"
+version = "2.0.0"
+description = "Xưởng nội dung YouTube — sinh trong chat, sản xuất tự động"
+requires-python = ">=3.11"
+dependencies = [
+    "vieneu>=3.8.1",   # TTS tiếng Việt, torch-free trên CPU/ONNX
+    "httpx>=0.27",     # YouTube Data API + tải B-roll
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
