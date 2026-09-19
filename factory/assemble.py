@@ -76,7 +76,7 @@ SHORT_BROLL_SPEED = 1.6
 # video-editor/assets/fonts. Không dùng font hệ thống: phần lớn font Latin
 # đặt dấu sai vị trí hoặc thiếu hẳn glyph tổ hợp.
 
-CAPTION_OUTLINE = 4
+CAPTION_OUTLINE = 5   # day hon vi da bo hop nen; da render that va kiem tra dau con nguyen
 CAPTION_SHADOW = 2
 HIGHLIGHT_YELLOW_BGR = "00E5FF"   # ASS là &HBBGGRR -> đây là vàng rực
 HIGHLIGHT_GREEN_BGR = "7CFC00"
@@ -96,6 +96,82 @@ def tiktok_caption_config(highlight_bgr: str = HIGHLIGHT_YELLOW_BGR):
         uppercase_emphasis=False,          # xem ghi chú về dấu ở trên
         remove_punctuation=False,
     )
+
+
+# ─── Hộp nền hay chỉ viền ─────────────────────────────────────────────────
+#
+# video-editor hardcode BorderStyle=3 (hộp nền đen 50% alpha) với lý do ghi
+# rõ trong code: "dễ đọc trên B-roll rối hơn là chữ chỉ có viền". Lý do đó
+# ĐÚNG -- hộp nền thật sự dễ đọc hơn.
+#
+# Nhưng nó không phải look short-form hiện nay. Khảo sát 2026 về caption
+# TikTok/Reels: kiểu thắng là chữ trắng (hoặc vàng) viền đen ĐẬM, KHÔNG hộp,
+# tô sáng từng chữ, đặt ở khoảng một phần ba dưới. Hộp nền trông giống phụ
+# đề phim, làm video "nặng" và cũ.
+#
+# Nên đây là LỰA CHỌN có ý thức, không phải mặc định mù: "outline" cho
+# short (mặc định), "box" giữ lại cho trường hợp B-roll quá rối hoặc nội
+# dung nghiêm túc cần đọc chắc.
+#
+# Bù lại việc bỏ hộp: viền dày hơn (5 thay vì 4) + đổ bóng mạnh hơn. Vẫn
+# phải canh trần trên vì dấu tiếng Việt chồng tầng -- 5 là mức tôi đã render
+# thật và kiểm tra dấu còn nguyên; đừng tăng tiếp mà không render lại.
+
+BORDERSTYLE_INDEX = 15   # xem bảng đếm trường trong _outline_header()
+CAPTION_BORDER_BOX = 3
+CAPTION_BORDER_OUTLINE = 1
+
+
+@contextmanager
+def _caption_border(style: str):
+    """Đổi BorderStyle trong dòng Style của file ASS.
+
+    video-editor hardcode số 3 giữa một f-string dựng header, không có tham
+    số nào để đổi. Thay vì sửa repo họ, ta vá đúng hàm dựng header trong
+    phạm vi một lần render."""
+    if style == "box":
+        yield
+        return
+    _ensure_importable()
+    import core.subtitles.ass_writer as ass_writer
+    import core.subtitles.karaoke_writer as karaoke_writer
+
+    # karaoke_writer làm `from ... import build_ass_header`, nên tên đã bind
+    # sẵn trong module đó -- vá riêng ass_writer KHÔNG ăn. Phải vá cả hai
+    # chỗ. (Phát hiện thật: lần đầu render vẫn ra BorderStyle=3.)
+    orig = ass_writer.build_ass_header
+    orig_k = karaoke_writer.build_ass_header
+
+    def _outline_header(*a, **kw):
+        header = orig(*a, **kw)
+        # build_ass_header trả về LIST dòng, không phải chuỗi (caller làm
+        # `lines = build_ass_header(...)` rồi tự join). Giữ nguyên kiểu trả
+        # về, chỉ sửa đúng dòng Style.
+        out = []
+        for line in header:
+            if line.startswith("Style: "):
+                parts = line[len("Style: "):].split(",")
+                # BorderStyle là trường thứ 16 trong Format, tức INDEX 15:
+                #   0 Name  1 Fontname  2 Fontsize  3 Primary  4 Secondary
+                #   5 OutlineColour  6 BackColour  7 Bold  8 Italic
+                #   9 Underline  10 StrikeOut  11 ScaleX  12 ScaleY
+                #   13 Spacing  14 Angle  15 BorderStyle  16 Outline  17 Shadow
+                # Bản đầu tôi ghi nhầm index 16 -- và nó âm thầm ghi đè
+                # Outline thay vì BorderStyle, nên caption vẫn có hộp nền mà
+                # viền thì hỏng. Đếm lại từ Format thay vì đoán.
+                if len(parts) > BORDERSTYLE_INDEX:
+                    parts[BORDERSTYLE_INDEX] = str(CAPTION_BORDER_OUTLINE)
+                    line = "Style: " + ",".join(parts)
+            out.append(line)
+        return out
+
+    ass_writer.build_ass_header = _outline_header
+    karaoke_writer.build_ass_header = _outline_header
+    try:
+        yield
+    finally:
+        ass_writer.build_ass_header = orig
+        karaoke_writer.build_ass_header = orig_k
 
 
 class AssembleError(RuntimeError):
@@ -212,7 +288,8 @@ def _patched(timing: dict, broll_queries: list[str]):
 
 def assemble_short(bundle, wav_path: Path, timing: dict, out_path: Path,
                    pexels_key: str, bgm_path: Path | None = None,
-                   logo_path: Path | None = None, subtitles=None) -> AssembleResult:
+                   logo_path: Path | None = None, subtitles=None,
+                   caption_border: str = "outline") -> AssembleResult:
     """Dựng một Short 9:16 hoàn chỉnh: B-roll + caption karaoke + nhạc nền."""
     _ensure_importable()
     from core.pipeline.bgm import BGMConfig
@@ -242,7 +319,7 @@ def assemble_short(bundle, wav_path: Path, timing: dict, out_path: Path,
             logo=LogoConfig(path=str(logo_path.resolve())) if logo_path else None,
         )
         warnings: list[str] = []
-        with _patched(timing, list(bundle.broll_queries)):
+        with _patched(timing, list(bundle.broll_queries)), _caption_border(caption_border):
             result = run_assembly_job(job, on_warning=warnings.append)
     finally:
         provider.close()
