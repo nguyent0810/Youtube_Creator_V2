@@ -289,7 +289,9 @@ def _patched(timing: dict, broll_queries: list[str]):
 def assemble_short(bundle, wav_path: Path, timing: dict, out_path: Path,
                    pexels_key: str, bgm_path: Path | None = None,
                    logo_path: Path | None = None, subtitles=None,
-                   caption_border: str = "outline") -> AssembleResult:
+                   caption_border: str = "outline",
+                   beat_text: bool = True,
+                   beat_colour_bgr: str = HIGHLIGHT_YELLOW_BGR) -> AssembleResult:
     """Dựng một Short 9:16 hoàn chỉnh: B-roll + caption karaoke + nhạc nền."""
     _ensure_importable()
     from core.pipeline.bgm import BGMConfig
@@ -319,7 +321,11 @@ def assemble_short(bundle, wav_path: Path, timing: dict, out_path: Path,
             logo=LogoConfig(path=str(logo_path.resolve())) if logo_path else None,
         )
         warnings: list[str] = []
-        with _patched(timing, list(bundle.broll_queries)), _caption_border(caption_border):
+        with (
+            _patched(timing, list(bundle.broll_queries)),
+            _caption_border(caption_border),
+            _beat_text(timing, beat_colour_bgr, beat_text),
+        ):
             result = run_assembly_job(job, on_warning=warnings.append)
     finally:
         provider.close()
@@ -333,3 +339,90 @@ def assemble_short(bundle, wav_path: Path, timing: dict, out_path: Path,
         scene_count=result.scene_count,
         warnings=warnings + list(result.warnings or []),
     )
+
+
+# ─── Beat text ────────────────────────────────────────────────────────────
+#
+# Caption chạy dưới đáy khung suốt video. Beat text thì KHÁC HẲN: chữ rất
+# to, giữa khung, chỉ xuất hiện ở đúng hai thời điểm quyết định -- câu HOOK
+# (giữ người xem lại) và câu CHỐT (đọng lại sau khi xem).
+#
+# Vì sao chỉ hai chỗ: nếu câu nào cũng phóng to thì không câu nào còn nổi
+# bật, và chữ to che mất B-roll suốt video. Nhấn mạnh chỉ có giá trị khi nó
+# hiếm.
+#
+# Cách làm: chèn thêm dòng Dialogue vào chính file .ass mà video-editor vừa
+# ghi, dùng override tag inline (\an5 = giữa khung, \fs = cỡ chữ, \bord =
+# viền) thay vì khai báo Style thứ hai. Lý do: Style thứ hai phải chen vào
+# đúng khối [V4+ Styles] và dễ vỡ khi họ đổi header; override tag chỉ nằm
+# trong dòng Dialogue, không đụng cấu trúc file.
+#
+# DẤU TIẾNG VIỆT: cỡ chữ lớn + viền dày là đúng tổ hợp dễ cắt cụt dấu nhất.
+# Nên beat text đặt \an5 (giữa khung theo CẢ chiều dọc) -- có không gian
+# trên dưới thoải mái, khác caption bị ép sát đáy. Viền 8 ở cỡ 150 tương
+# đương tỉ lệ viền 5 ở cỡ 96 của caption, tức không dày hơn về tỉ lệ.
+
+BEAT_FONT_SIZE = 150
+BEAT_OUTLINE = 8
+BEAT_FADE_MS = 200
+
+
+def _ass_time(sec: float) -> str:
+    cs = int(round(sec * 100))
+    h, cs = divmod(cs, 360000)
+    m, cs = divmod(cs, 6000)
+    s, cs = divmod(cs, 100)
+    return f"{h:d}:{m:02d}:{s:02d}.{cs:02d}"
+
+
+def _beat_lines(timing: dict, colour_bgr: str) -> list[str]:
+    """Dialogue beat text cho câu đầu và câu cuối."""
+    segs = timing.get("segments") or []
+    if len(segs) < 2:
+        return []
+    picked = [segs[0], segs[-1]]
+    out = []
+    for seg in picked:
+        text = (seg.get("spoken") or seg["text"]).strip().rstrip(".")
+        text = text.replace("{", "").replace("}", "").replace("\n", " ")
+        # RAW STRING bắt buộc: override tag của ASS bắt đầu bằng dấu \, và
+        # \a \f \b \3 đều là escape hợp lệ của Python -- không dùng rf"" thì
+        # Python nuốt mất chúng và tag ra "{n5s150...}", libass bỏ qua, beat
+        # text hiện ra nguyên văn dấu ngoặc. (Lỗi thật, phát hiện khi đọc
+        # lại file .ass sinh ra.)
+        tag = (rf"{{\an5\fs{BEAT_FONT_SIZE}\b1\bord{BEAT_OUTLINE}\shad0"
+               rf"\c&H{colour_bgr}&\3c&H000000&\fad({BEAT_FADE_MS},{BEAT_FADE_MS})}}")
+        out.append(f"Dialogue: 1,{_ass_time(seg['start'])},{_ass_time(seg['end'])},"
+                   f"Default,,0,0,0,,{tag}{text}")
+    return out
+
+
+@contextmanager
+def _beat_text(timing: dict, colour_bgr: str, enabled: bool):
+    """Chèn beat text vào .ass NGAY SAU khi video-editor ghi xong nó.
+
+    Bọc prepare_subtitles: để nó chạy y như cũ, rồi nối thêm dòng vào file
+    kết quả trước khi ffmpeg burn. Không đụng logic caption của họ."""
+    if not enabled:
+        yield
+        return
+    _ensure_importable()
+    import core.stockfootage.assembly_job as assembly_job
+
+    orig = assembly_job.prepare_subtitles
+
+    def _with_beats(*a, **kw):
+        artifacts = orig(*a, **kw)
+        lines = _beat_lines(timing, colour_bgr)
+        if lines:
+            path = Path(artifacts.ass_path)
+            body = path.read_text(encoding="utf-8").rstrip("\n")
+            # Layer 1 > layer 0 nên beat text luôn nằm TRÊN caption thường.
+            path.write_text(body + "\n" + "\n".join(lines) + "\n", encoding="utf-8")
+        return artifacts
+
+    assembly_job.prepare_subtitles = _with_beats
+    try:
+        yield
+    finally:
+        assembly_job.prepare_subtitles = orig

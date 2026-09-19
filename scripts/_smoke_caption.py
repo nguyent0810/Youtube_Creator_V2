@@ -32,7 +32,7 @@ b = Bundle(
     thumbnail_text="",
     publish_at="2026-10-02T23:00:00Z",
     voice="Phạm Tuyên",
-    bgm="deliberate_thought.mp3",
+    bgm="asian_drums.mp3",
     broll_queries=[
         "modern kitchen interior warm light",
         "wooden kitchen counter close up",
