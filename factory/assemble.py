@@ -291,7 +291,8 @@ def assemble_short(bundle, wav_path: Path, timing: dict, out_path: Path,
                    logo_path: Path | None = None, subtitles=None,
                    caption_border: str = "outline",
                    beat_text: bool = True,
-                   beat_colour_bgr: str = HIGHLIGHT_YELLOW_BGR) -> AssembleResult:
+                   beat_colour_bgr: str = HIGHLIGHT_YELLOW_BGR,
+                   broll_pattern: str = "vpvp") -> AssembleResult:
     """Dựng một Short 9:16 hoàn chỉnh: B-roll + caption karaoke + nhạc nền."""
     _ensure_importable()
     from core.pipeline.bgm import BGMConfig
@@ -302,7 +303,16 @@ def assemble_short(bundle, wav_path: Path, timing: dict, out_path: Path,
     from core.stockfootage.providers.pexels import PexelsProvider
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    provider = PexelsProvider(api_key=pexels_key)
+    # Trộn video + ẢNH. Cảnh 1 (hero) luôn là video -- chuyển động ngay từ
+    # khung đầu giữ người xem tốt hơn ảnh tĩnh. Các cảnh sau xen kẽ: ảnh cho
+    # những hình cụ thể mà kho video mỏng (xem docstring providers.py), và
+    # xen kẽ cũng tránh cả video thành chuỗi clip stock nhìn giống hệt nhau.
+    from factory.providers import CompositeProvider, PexelsPhotoProvider
+    provider = CompositeProvider(
+        [PexelsProvider(api_key=pexels_key),
+         PexelsPhotoProvider(pexels_key, width=SHORT_WIDTH, height=SHORT_HEIGHT)],
+        pattern=broll_pattern,
+    )
     try:
         job = AssemblyJob(
             audio_path=str(wav_path.resolve()),
