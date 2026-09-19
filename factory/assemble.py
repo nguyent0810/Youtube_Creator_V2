@@ -362,9 +362,14 @@ def assemble_short(bundle, wav_path: Path, timing: dict, out_path: Path,
 # trên dưới thoải mái, khác caption bị ép sát đáy. Viền 8 ở cỡ 150 tương
 # đương tỉ lệ viền 5 ở cỡ 96 của caption, tức không dày hơn về tỉ lệ.
 
-BEAT_FONT_SIZE = 150
+BEAT_FONT_SIZE = 150        # cỡ TỐI ĐA; _fit_beat() co xuống nếu câu dài
+BEAT_MIN_FONT_SIZE = 70
+BEAT_MAX_LINES = 3
+BEAT_SAFE_WIDTH = SHORT_WIDTH * 0.82   # chừa biên hai bên, xem _fit_beat()
+BEAT_CHAR_RATIO = 0.52      # bề rộng TB mỗi ký tự / cỡ chữ, Be Vietnam Pro Bold
 BEAT_OUTLINE = 8
 BEAT_FADE_MS = 200
+BEAT_POP_MS = 140           # nửa thời gian của hiệu ứng bật ra
 
 
 def _ass_time(sec: float) -> str:
@@ -375,25 +380,71 @@ def _ass_time(sec: float) -> str:
     return f"{h:d}:{m:02d}:{s:02d}.{cs:02d}"
 
 
+def _fit_beat(text: str) -> tuple[int, str]:
+    """Chọn cỡ chữ + ngắt dòng sao cho beat text KHÔNG tràn khung.
+
+    LỖI THẬT đã sửa ở đây: bản đầu đặt cứng \\fs150 cho mọi câu. Câu hook
+    dài 11 từ ở cỡ đó rộng gấp nhiều lần khung 1080px nên chữ tràn ra ngoài
+    hai bên. \\an5 căn giữa nhưng KHÔNG tự xuống dòng -- ASS chỉ ngắt dòng ở
+    \\N do ta đặt.
+
+    Cách ước lượng: Be Vietnam Pro Bold rộng trung bình ~0,52 lần cỡ chữ mỗi
+    ký tự. Đây là xấp xỉ, nên trừ hao biên khá rộng (BEAT_SAFE_WIDTH chỉ
+    lấy 82% chiều ngang khung) thay vì tính chính xác từng glyph -- sai số
+    làm chữ nhỏ hơn một chút thì không sao, tràn khung thì hỏng hẳn.
+    """
+    words = text.split()
+    for size in range(BEAT_FONT_SIZE, BEAT_MIN_FONT_SIZE - 1, -10):
+        max_chars = int(BEAT_SAFE_WIDTH / (size * BEAT_CHAR_RATIO))
+        if max_chars < 6:
+            continue
+        lines, cur = [], ""
+        for w in words:
+            trial = f"{cur} {w}".strip()
+            if len(trial) <= max_chars or not cur:
+                cur = trial
+            else:
+                lines.append(cur)
+                cur = w
+        if cur:
+            lines.append(cur)
+        if len(lines) <= BEAT_MAX_LINES and all(len(ln) <= max_chars for ln in lines):
+            return size, r"\N".join(lines)
+    # Không vừa ở cỡ nhỏ nhất -> cắt bớt còn hơn tràn.
+    size = BEAT_MIN_FONT_SIZE
+    max_chars = max(6, int(BEAT_SAFE_WIDTH / (size * BEAT_CHAR_RATIO)))
+    clipped = text[: max_chars * BEAT_MAX_LINES - 1].rstrip() + "…"
+    chunks = [clipped[i:i + max_chars] for i in range(0, len(clipped), max_chars)]
+    return size, r"\N".join(chunks[:BEAT_MAX_LINES])
+
+
 def _beat_lines(timing: dict, colour_bgr: str) -> list[str]:
     """Dialogue beat text cho câu đầu và câu cuối."""
     segs = timing.get("segments") or []
     if len(segs) < 2:
         return []
-    picked = [segs[0], segs[-1]]
     out = []
-    for seg in picked:
+    for seg in (segs[0], segs[-1]):
         text = (seg.get("spoken") or seg["text"]).strip().rstrip(".")
         text = text.replace("{", "").replace("}", "").replace("\n", " ")
-        # RAW STRING bắt buộc: override tag của ASS bắt đầu bằng dấu \, và
-        # \a \f \b \3 đều là escape hợp lệ của Python -- không dùng rf"" thì
-        # Python nuốt mất chúng và tag ra "{n5s150...}", libass bỏ qua, beat
-        # text hiện ra nguyên văn dấu ngoặc. (Lỗi thật, phát hiện khi đọc
-        # lại file .ass sinh ra.)
-        tag = (rf"{{\an5\fs{BEAT_FONT_SIZE}\b1\bord{BEAT_OUTLINE}\shad0"
-               rf"\c&H{colour_bgr}&\3c&H000000&\fad({BEAT_FADE_MS},{BEAT_FADE_MS})}}")
-        out.append(f"Dialogue: 1,{_ass_time(seg['start'])},{_ass_time(seg['end'])},"
-                   f"Default,,0,0,0,,{tag}{text}")
+        size, wrapped = _fit_beat(text)
+        start, end = float(seg["start"]), float(seg["end"])
+
+        # HIỆU ỨNG NHẤN: bật ra từ 88% -> 104% -> 100% trong ~280ms đầu.
+        # Vọt quá 100% một chút rồi lùi về tạo cảm giác "đập vào" thay vì
+        # phóng to đều đều. Chỉ ở lúc xuất hiện -- chữ nhúc nhích suốt thời
+        # gian hiển thị thì khó đọc, phản tác dụng.
+        t1, t2 = BEAT_POP_MS, BEAT_POP_MS * 2
+        pop = (rf"\t(0,{t1},\fscx104\fscy104)"
+               rf"\t({t1},{t2},\fscx100\fscy100)")
+        # RAW STRING bắt buộc: tag ASS bắt đầu bằng \, mà \a \f \b \3 \N đều
+        # là escape hợp lệ của Python -- không dùng rf"" thì Python nuốt mất
+        # và libass bỏ qua cả tag. (Lỗi thật, chỉ thấy khi đọc file .ass.)
+        tag = (rf"{{\an5\fs{size}\b1\bord{BEAT_OUTLINE}\shad0"
+               rf"\c&H{colour_bgr}&\3c&H000000&"
+               rf"\fscx88\fscy88{pop}\fad({BEAT_FADE_MS},{BEAT_FADE_MS})}}")
+        out.append(f"Dialogue: 1,{_ass_time(start)},{_ass_time(end)},"
+                   f"Default,,0,0,0,,{tag}{wrapped}")
     return out
 
 
