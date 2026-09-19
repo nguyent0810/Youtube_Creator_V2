@@ -40,74 +40,92 @@ BGM = "asian_drums.mp3"
 # -> việc cụ thể -> hạ rào cản -> chốt vọng lại hook.
 SCRIPTS = {
     "2026-10-01": (
-        "Ngày mai không phải ngày để bắt đầu việc lớn.",
-        "Lịch cũ ghi ngày mai là Trực nguy, nhóm trực được xem là chỉ hợp vài việc rất hẹp. "
-        "Trong danh sách chỉ có an sàng, tức kê giường, và vài việc thuộc về sắp đặt chỗ ở. "
-        "Vậy nên nếu đang định ký kết hay khai trương, lùi lại một hai hôm cũng không muộn. "
-        "Ngày mai hợp để sắp xếp chỗ nằm hơn là mở đầu chuyện lớn.",
+        "Ngày mai đừng ký gì cả.",
+        "Nghe hơi quá, nhưng có lý do. "
+        "Lịch cũ gọi ngày mai là Trực nguy. Nguy ở đây không phải nguy hiểm. "
+        "Nó là ngày mà danh mục việc nên làm hẹp lại gần hết. "
+        "Cả ngày chỉ còn đúng mấy việc: kê lại giường, sắp lại chỗ nằm. "
+        "Vậy thôi. "
+        "Nên nếu đang định ký hợp đồng hay mở hàng, lùi một hôm. "
+        "Ngày mai để dọn chỗ ngủ, không phải để ký.",
         ["calm bedroom interior morning light", "wooden bed frame detail",
          "quiet vietnamese home interior", "soft daylight through window"],
-        "Ngày mai nên làm gì? Trực nguy 21 tháng 8 âm",
+        "Ngày mai đừng ký gì cả — Trực nguy 21/8 âm",
     ),
     "2026-10-02": (
-        "Ngày mai là một trong số ít ngày hợp khai trương tháng này.",
-        "Ngày 22 tháng 8 âm, ngày Kỷ Dậu, lịch cũ ghi là Trực thành. "
-        "Danh sách việc hợp gồm nhập học, di chuyển, và khai trương. "
-        "Nếu đang chờ ngày mở hàng hay chuyển chỗ, đây là ngày đáng cân nhắc. "
-        "Ít ngày hợp khai trương như ngày mai, nên đừng để trôi qua.",
+        "Tháng này chỉ có vài ngày hợp khai trương.",
+        "Và ngày mai là một trong số đó. "
+        "Lịch cũ gọi ngày mai là Trực thành. Thành, tức là nên việc. "
+        "Không phải ngày nào cũng được vậy đâu. "
+        "Có ngày lịch chỉ cho đúng một hai việc hẹp. "
+        "Ngày mai thì mở: khai trương, nhập học, chuyển nhà, đều nằm trong đó. "
+        "Ai đang chờ ngày mở hàng thì mai là ngày. "
+        "Lưu lại đi, tháng này không còn nhiều ngày như vậy.",
         ["vietnamese shop opening morning", "red ribbon cutting ceremony",
          "small business storefront daylight", "moving boxes new home"],
-        "Ngày mai hợp khai trương — Trực thành 22 tháng 8 âm",
+        "Ngày mai hợp khai trương — Trực thành 22/8 âm",
     ),
     "2026-10-03": (
-        "Ngày mai hợp thu về hơn là cho đi.",
-        "Ngày Canh Tuất, lịch cũ ghi Trực thu, và danh sách việc hợp xoay quanh nạp tài với thu tất. "
-        "Nói nôm na là ngày để gom lại, kết sổ, đòi nợ cũ hơn là mở rộng. "
-        "Một buổi ngồi soát lại giấy tờ cũng đã đúng tinh thần ngày này. "
-        "Ngày mai là ngày thu, không phải ngày phát.",
+        "Ngày mai hợp đòi nợ.",
+        "Nói vậy cho dễ nhớ, nhưng đúng tinh thần. "
+        "Lịch cũ gọi ngày mai là Trực thu. Thu, là gom về. "
+        "Việc hợp ngày này toàn nằm một phía: nạp tài, thu tất, kết sổ. "
+        "Không có việc nào là mở rộng hay cho đi. "
+        "Nên ngày mai đừng đầu tư, đừng ứng tiền trước. "
+        "Ngồi soát lại giấy tờ, gọi mấy cuộc còn nợ. "
+        "Ngày mai là ngày thu về, không phải ngày phát ra.",
         ["counting money vietnamese", "accounting ledger desk close up",
          "organizing documents folder", "calm office paperwork morning"],
-        "Ngày mai hợp thu tiền — Trực thu 23 tháng 8 âm",
+        "Ngày mai hợp thu tiền, đòi nợ — Trực thu",
     ),
     "2026-10-04": (
-        "Ngày mai là ngày hợp để cầu, không phải để làm.",
-        "Ngày Tân Hợi, Trực khai, và danh sách việc hợp mở đầu bằng tế tự, cầu phúc, cầu tự. "
-        "Sau đó mới tới xuất hành và di chuyển, tức là ngày thiên về khởi sự tinh thần. "
-        "Một nén nhang buổi sớm hay một chuyến đi đã định sẵn đều hợp với ngày này. "
-        "Ngày mai hợp để mở lòng trước, rồi mới mở việc.",
+        "Ngày mai hợp cầu hơn hợp làm.",
+        "Hơi lạ, nhưng nhìn danh mục thì rõ. "
+        "Lịch cũ gọi ngày mai là Trực khai. Và ba việc đứng đầu đều là cầu: "
+        "cầu phúc, cầu tự, tế tự. "
+        "Mãi sau mới tới xuất hành với di chuyển. "
+        "Tức là ngày này mở về phía tinh thần trước, rồi mới tới phía công việc. "
+        "Một nén nhang buổi sớm. Một chuyến đi đã hẹn từ lâu. "
+        "Ngày mai mở lòng trước đã, việc tính sau.",
         ["incense smoke altar close up", "vietnamese family altar morning",
          "open road travel daylight", "temple courtyard quiet"],
         "Ngày mai hợp cầu phúc, xuất hành — Trực khai",
     ),
     "2026-10-05": (
-        "Ngày mai là ngày để vá lại, không phải để mở ra.",
-        "Ngày Nhâm Tý, lịch cũ ghi Trực bế, và cả danh sách việc hợp chỉ gồm đắp lỗ, sửa tường, trúc đê phòng. "
-        "Toàn là việc bịt kín, gia cố, chặn lại những chỗ đang hở. "
-        "Nếu nhà có chỗ nào dột hay nứt, ngày mai đúng là lúc để xử lý. "
-        "Ngày mai hợp đóng lại hơn là mở ra.",
+        "Cả ngày mai chỉ có ba việc nên làm.",
+        "Ba thôi. Và cả ba đều giống nhau một điểm. "
+        "Đắp lỗ. Sửa tường. Trúc đê phòng. "
+        "Toàn là bịt lại, vá lại, chặn lại chỗ đang hở. "
+        "Lịch cũ gọi ngày này là Trực bế, tức là đóng. "
+        "Nhà có chỗ nào dột, chỗ nào nứt, mai xử lý là hợp nhất. "
+        "Ngày mai để vá lại, đừng mở ra thêm gì.",
         ["repairing wall plaster hands", "home renovation tools close up",
          "fixing roof tiles", "cement trowel work detail"],
-        "Ngày mai hợp sửa chữa — Trực bế 25 tháng 8 âm",
+        "Cả ngày mai chỉ có ba việc nên làm — Trực bế",
     ),
     "2026-10-06": (
-        "Ngày mai hợp động thổ và nhận việc mới.",
-        "Ngày Quý Sửu, Trực kiến, mở đầu chuỗi trực mới trong tháng. "
-        "Danh sách việc hợp gồm động thổ, san nền, lên quan nhậm chức và xuất hành. "
-        "Nếu có việc phải khởi công hay nhận bàn giao, đây là ngày đáng chọn. "
-        "Ngày mai là ngày dựng nền, cả nghĩa đen lẫn nghĩa bóng.",
+        "Ngày mai là ngày đặt nền.",
+        "Cả nghĩa đen lẫn nghĩa bóng. "
+        "Lịch cũ gọi là Trực kiến, trực mở đầu một vòng mới trong tháng. "
+        "Việc hợp cũng đúng kiểu bắt đầu: động thổ, san nền, nhận chức, xuất hành. "
+        "Ai sắp khởi công hay sắp nhận bàn giao thì để ý ngày này. "
+        "Còn chưa có gì để khởi công? "
+        "Thì bắt đầu một thói quen cũng được. Ngày đặt nền nào cũng vậy cả.",
         ["construction site groundbreaking", "foundation concrete work",
          "new office first day", "sunrise over building site"],
-        "Ngày mai hợp động thổ — Trực kiến 26 tháng 8 âm",
+        "Ngày mai là ngày đặt nền — Trực kiến 26/8 âm",
     ),
     "2026-10-07": (
-        "Ngày mai hợp dọn dẹp và chăm sóc bản thân.",
-        "Ngày Giáp Dần, Trực trừ, và danh sách việc hợp nghe rất đời thường. "
-        "Giải trừ, tắm gội, cắt tóc, chỉnh tay chân, cầu y trị bệnh, quét dọn nhà cửa. "
-        "Một buổi dọn nhà hay một lần đi khám đã lần lữa mãi đều hợp ngày này. "
-        "Ngày mai hợp bỏ đi những thứ cũ, từ trong nhà tới trên người.",
+        "Ngày mai hợp cắt tóc.",
+        "Và danh mục việc hợp ngày mai nghe rất đời. "
+        "Tắm gội, cắt tóc, cắt móng, quét dọn nhà cửa, đi khám bệnh. "
+        "Không có việc nào to tát cả. "
+        "Lịch cũ gọi ngày này là Trực trừ. Trừ, là bỏ bớt đi. "
+        "Cái hẹn khám cứ lần lữa mãi, mai đi là hợp. "
+        "Ngày mai bỏ bớt đi, từ trong nhà tới trên đầu.",
         ["cleaning house vietnamese home", "haircut barber close up",
          "decluttering tidy room", "washing hands water close up"],
-        "Ngày mai hợp dọn dẹp, cắt tóc — Trực trừ",
+        "Ngày mai hợp cắt tóc, dọn nhà — Trực trừ",
     ),
 }
 
