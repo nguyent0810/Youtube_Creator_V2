@@ -122,13 +122,38 @@ TTS chạy **CPU**, không GPU — có chủ đích. Tài liệu upstream nói t
 | `bundle.py` — hợp đồng + validate | ✅ |
 | `store.py` — bundle trên đĩa + hàng đợi SQLite | ✅ |
 | `speak.py` — TTS + timing + phụ đề | ✅ chạy thật |
-| `assemble.py` — dựng video | ⬜ tiếp theo |
-| `thumbnail.py` | ⬜ |
-| `publish.py` — YouTube API | ⬜ |
+| `assemble.py` — dựng video 9:16 | ✅ chạy thật |
+| `thumbnail.py` — khung hình + chữ | ✅ |
+| `publish.py` — YouTube API, hẹn giờ | ✅ chưa chạy thật |
 | CLI gói lại | ⬜ sau cùng |
 
 ```bash
 python -m pytest tests -q
 ```
+
+### Demo đã dựng thật
+
+```
+Short 9:16 · 10,16s · 2 cảnh · 15,3 MB · dựng trong 25,4s
+B-roll Pexels + caption karaoke khớp từng câu + nhạc nền
+```
+
+Ba thứ video-editor buộc phải đoán, ta đã biết trước nên vá đi:
+
+| Nó đoán gì | Ta biết gì |
+|---|---|
+| Whisper phiên âm ngược từ audio | `speak.py` đã ghi timing lúc tổng hợp |
+| Dịch máy từ khoá VI→EN tìm B-roll | `Bundle.broll_queries` viết sẵn bằng tiếng Anh |
+| Nạp ~500 MB model Whisper | Không bao giờ dùng tới |
+
+Vá 2 xoá một lớp lỗi thật của v1: câu *"cũng không phải hình phạt của một đấng thần linh"* (đang **phủ định**) bị dịch chữ-đúng-chữ thành *"punishment of a deity"*, và Pexels trả về ảnh linh mục Công giáo — cho một video Phật giáo. Không phải sửa bản dịch cho khéo hơn; là xoá cả bước đoán.
+
+### An toàn khi đăng
+
+`publish.py` luôn đặt `privacyStatus = "private"` kèm `publishAt`. Video tự chuyển public đúng giờ. **Không bao giờ đăng public ngay** — một lần nhầm là công khai thật, không rút lại được.
+
+Chống đăng trùng bằng `playlistItems.list` (1 đơn vị quota) chứ không `search.list` (chỉ 100 lần/ngày cho cả project).
+
+---
 
 24 test, tất cả đạt. Mỗi test khoá lại một cách hỏng thật — hoặc đã xảy ra ở v1, hoặc là giả định mà cả kiến trúc dựa vào.
