@@ -39,93 +39,90 @@ BGM = "asian_drums.mp3"
 # Kịch bản viết tay theo đúng facts của từng ngày. Mỗi cái: hook -> căn cứ
 # -> việc cụ thể -> hạ rào cản -> chốt vọng lại hook.
 SCRIPTS = {
+    # Kim Quỹ (hoàng đạo) NHƯNG Trực nguy (hẹp) -> mâu thuẫn có sẵn, dùng làm hook.
     "2026-10-01": (
-        "Ngày mai đừng ký gì cả.",
-        "Nghe hơi quá, nhưng có lý do. "
-        "Lịch cũ gọi ngày mai là Trực nguy. Nguy ở đây không phải nguy hiểm. "
-        "Nó là ngày mà danh mục việc nên làm hẹp lại gần hết. "
-        "Cả ngày chỉ còn đúng mấy việc: kê lại giường, sắp lại chỗ nằm. "
-        "Vậy thôi. "
-        "Nên nếu đang định ký hợp đồng hay mở hàng, lùi một hôm. "
-        "Ngày mai để dọn chỗ ngủ, không phải để ký.",
+        "Ngày mai là ngày hoàng đạo. Và bạn vẫn không nên ký gì.",
+        "Nghe mâu thuẫn, nhưng lịch cũ tách làm hai tầng. "
+        "Tầng sao: ngày mai là Kim Quỹ, một trong sáu sao hoàng đạo. "
+        "Tầng trực: lại là Trực nguy, tầng hẹp nhất trong mười hai trực. "
+        "Sao thì mở, trực thì đóng. "
+        "Việc còn lại chỉ vài thứ quanh chỗ nằm, chỗ ngủ. "
+        "Nên ngày mai kê lại giường thì được. Ký hợp đồng thì thôi.",
         ["calm bedroom interior morning light", "wooden bed frame detail",
          "quiet vietnamese home interior", "soft daylight through window"],
-        "Ngày mai đừng ký gì cả — Trực nguy 21/8 âm",
+        "Hoàng đạo mà vẫn không nên ký — Kim Quỹ gặp Trực nguy",
     ),
     "2026-10-02": (
-        "Tháng này chỉ có vài ngày hợp khai trương.",
-        "Và ngày mai là một trong số đó. "
-        "Lịch cũ gọi ngày mai là Trực thành. Thành, tức là nên việc. "
-        "Không phải ngày nào cũng được vậy đâu. "
-        "Có ngày lịch chỉ cho đúng một hai việc hẹp. "
-        "Ngày mai thì mở: khai trương, nhập học, chuyển nhà, đều nằm trong đó. "
+        "Sáu ngày nữa mới lại có ngày như ngày mai.",
+        "Thiên Đức. Một trong sáu sao hoàng đạo, và là sao rộng tay nhất. "
+        "Gặp đúng Trực thành, trực của chuyện nên việc. "
+        "Hai tầng cùng mở một lúc, tháng này đếm trên đầu ngón tay. "
+        "Khai trương, nhập học, chuyển nhà, đều nằm trong đó. "
         "Ai đang chờ ngày mở hàng thì mai là ngày. "
-        "Lưu lại đi, tháng này không còn nhiều ngày như vậy.",
+        "Lưu lại, kẻo trôi mất.",
         ["vietnamese shop opening morning", "red ribbon cutting ceremony",
          "small business storefront daylight", "moving boxes new home"],
-        "Ngày mai hợp khai trương — Trực thành 22/8 âm",
+        "Ngày mai hợp khai trương — Thiên Đức gặp Trực thành",
     ),
     "2026-10-03": (
-        "Ngày mai hợp đòi nợ.",
-        "Nói vậy cho dễ nhớ, nhưng đúng tinh thần. "
-        "Lịch cũ gọi ngày mai là Trực thu. Thu, là gom về. "
-        "Việc hợp ngày này toàn nằm một phía: nạp tài, thu tất, kết sổ. "
-        "Không có việc nào là mở rộng hay cho đi. "
-        "Nên ngày mai đừng đầu tư, đừng ứng tiền trước. "
-        "Ngồi soát lại giấy tờ, gọi mấy cuộc còn nợ. "
-        "Ngày mai là ngày thu về, không phải ngày phát ra.",
+        "Ngày mai là ngày Bạch Hổ.",
+        "Cái tên thôi đã đủ để người xưa né. "
+        "Một trong sáu sao hắc đạo, và là sao bị kiêng nhiều nhất. "
+        "Nhưng lịch cũ không bảo nằm im cả ngày. "
+        "Trực của ngày mai là Trực thu, hợp chuyện gom về: nạp tài, thu tất, kết sổ. "
+        "Đòi nợ được. Cho vay thì không. "
+        "Ngày Bạch Hổ hợp thu vào, không hợp phát ra.",
         ["counting money vietnamese", "accounting ledger desk close up",
          "organizing documents folder", "calm office paperwork morning"],
-        "Ngày mai hợp thu tiền, đòi nợ — Trực thu",
+        "Ngày Bạch Hổ hợp đòi nợ — Trực thu 23/8 âm",
     ),
     "2026-10-04": (
-        "Ngày mai hợp cầu hơn hợp làm.",
-        "Hơi lạ, nhưng nhìn danh mục thì rõ. "
-        "Lịch cũ gọi ngày mai là Trực khai. Và ba việc đứng đầu đều là cầu: "
-        "cầu phúc, cầu tự, tế tự. "
+        "Ba việc đứng đầu ngày mai đều bắt đầu bằng chữ cầu.",
+        "Cầu phúc. Cầu tự. Tế tự. "
         "Mãi sau mới tới xuất hành với di chuyển. "
-        "Tức là ngày này mở về phía tinh thần trước, rồi mới tới phía công việc. "
-        "Một nén nhang buổi sớm. Một chuyến đi đã hẹn từ lâu. "
-        "Ngày mai mở lòng trước đã, việc tính sau.",
+        "Sao của ngày là Ngọc Đường, sao hoàng đạo gắn với chuyện văn chương, lễ nghĩa. "
+        "Gặp Trực khai, trực của chuyện mở ra. "
+        "Nên ngày mai mở về phía tinh thần trước. "
+        "Một nén nhang buổi sớm cũng đã đúng ngày.",
         ["incense smoke altar close up", "vietnamese family altar morning",
          "open road travel daylight", "temple courtyard quiet"],
-        "Ngày mai hợp cầu phúc, xuất hành — Trực khai",
+        "Ngày mai hợp cầu phúc — Ngọc Đường gặp Trực khai",
     ),
     "2026-10-05": (
-        "Cả ngày mai chỉ có ba việc nên làm.",
-        "Ba thôi. Và cả ba đều giống nhau một điểm. "
-        "Đắp lỗ. Sửa tường. Trúc đê phòng. "
-        "Toàn là bịt lại, vá lại, chặn lại chỗ đang hở. "
-        "Lịch cũ gọi ngày này là Trực bế, tức là đóng. "
-        "Nhà có chỗ nào dột, chỗ nào nứt, mai xử lý là hợp nhất. "
-        "Ngày mai để vá lại, đừng mở ra thêm gì.",
+        "Cả ngày mai chỉ còn ba việc nên làm.",
+        "Ba thôi. Đắp lỗ. Sửa tường. Trúc đê phòng. "
+        "Nhìn là thấy một hướng: bịt lại chỗ đang hở. "
+        "Không lạ, vì sao của ngày là Thiên Lao, sao hắc đạo gắn với chuyện giam giữ, đóng kín. "
+        "Trực thì là Trực bế, cũng nghĩa là đóng. "
+        "Hai tầng cùng đóng một lượt. "
+        "Nhà có chỗ nào dột thì mai vá. Còn lại thì khoan.",
         ["repairing wall plaster hands", "home renovation tools close up",
          "fixing roof tiles", "cement trowel work detail"],
-        "Cả ngày mai chỉ có ba việc nên làm — Trực bế",
+        "Ngày mai chỉ còn ba việc nên làm — Thiên Lao gặp Trực bế",
     ),
+    # Huyền Vũ (hắc đạo) NHƯNG Trực kiến (khởi đầu) -> mâu thuẫn ngược lại.
     "2026-10-06": (
-        "Ngày mai là ngày đặt nền.",
-        "Cả nghĩa đen lẫn nghĩa bóng. "
-        "Lịch cũ gọi là Trực kiến, trực mở đầu một vòng mới trong tháng. "
-        "Việc hợp cũng đúng kiểu bắt đầu: động thổ, san nền, nhận chức, xuất hành. "
-        "Ai sắp khởi công hay sắp nhận bàn giao thì để ý ngày này. "
-        "Còn chưa có gì để khởi công? "
-        "Thì bắt đầu một thói quen cũng được. Ngày đặt nền nào cũng vậy cả.",
+        "Sao xấu, nhưng lại là ngày đặt nền.",
+        "Huyền Vũ. Một trong sáu sao hắc đạo, thường gắn với chuyện mất mát, trộm cắp. "
+        "Vậy mà trực của ngày lại là Trực kiến, trực mở đầu cả một vòng mới. "
+        "Động thổ, san nền, nhận chức, xuất hành, đều nằm trong danh mục. "
+        "Người xưa không né hẳn ngày kiểu này. Họ làm việc nền móng, tránh việc tiền bạc. "
+        "Ngày mai đặt nền thì được. Đừng mang tiền ra đếm.",
         ["construction site groundbreaking", "foundation concrete work",
          "new office first day", "sunrise over building site"],
-        "Ngày mai là ngày đặt nền — Trực kiến 26/8 âm",
+        "Sao xấu mà vẫn là ngày đặt nền — Huyền Vũ gặp Trực kiến",
     ),
     "2026-10-07": (
         "Ngày mai hợp cắt tóc.",
-        "Và danh mục việc hợp ngày mai nghe rất đời. "
-        "Tắm gội, cắt tóc, cắt móng, quét dọn nhà cửa, đi khám bệnh. "
-        "Không có việc nào to tát cả. "
-        "Lịch cũ gọi ngày này là Trực trừ. Trừ, là bỏ bớt đi. "
-        "Cái hẹn khám cứ lần lữa mãi, mai đi là hợp. "
+        "Nghe vặt vãnh, nhưng cả danh mục ngày mai đều vậy. "
+        "Tắm gội, cắt tóc, cắt móng, quét nhà, đi khám bệnh. "
+        "Sao của ngày là Tư Mệnh, sao hoàng đạo coi chuyện tuổi thọ, sức khoẻ. "
+        "Gặp Trực trừ, trực của chuyện bỏ bớt. "
+        "Cái hẹn khám cứ lần lữa mãi, mai đi là đúng ngày nhất. "
         "Ngày mai bỏ bớt đi, từ trong nhà tới trên đầu.",
         ["cleaning house vietnamese home", "haircut barber close up",
          "decluttering tidy room", "washing hands water close up"],
-        "Ngày mai hợp cắt tóc, dọn nhà — Trực trừ",
+        "Ngày mai hợp cắt tóc, khám bệnh — Tư Mệnh gặp Trực trừ",
     ),
 }
 
