@@ -34,6 +34,10 @@ from factory.vocab import SAO, TRUC
 NARROW_MAX = 3
 BROAD_MIN = 6
 
+# Số biến thể mở bài mỗi thế. Tháng 11 có 10 ngày cùng một thế mà chỉ 3
+# biến thể -> mở bài lặp 11/31 lần (35%). Nâng lên 6 để trải rộng hơn.
+_N_HOOKS = 6
+
 
 def the_cua_ngay(f: DayFacts) -> str:
     """Quan hệ giữa sao và trực -- quyết định khuôn kịch bản.
@@ -156,13 +160,16 @@ def _compose(f: DayFacts) -> tuple[str, str, str, str]:
     # thật với 3/9 cặp. Băm theo cặp thì phần băm giống hệt nhau, nên offset
     # một mình quyết định, và lệch được ĐẢM BẢO cho tới 3 lần xuất hiện.
     h = int(hashlib.sha256(f"{f.god_name}|{f.truc_name}".encode("utf-8")).hexdigest(), 16)
-    v = (h + f.target.day // 12) % 3
+    v = (h + f.target.day // 12) % _N_HOOKS
 
     if the == "sao_mo_truc_siet":
         hooks = [
             f"Ngày mai là ngày hoàng đạo, nhưng lịch chỉ cho làm {_so(n)} việc.",
             f"Sao thì tốt, mà danh mục ngày mai vỏn vẹn {_so(n)} việc.",
             f"Ngày mai mang sao {f.god_name}, nhưng đừng vội mừng.",
+            f"Ngày mai sao tốt gặp trực hẹp, nhưng trực mới là bên thắng.",
+            f"Cả ngày mai, lịch chỉ mở đầu danh mục bằng {dau}.",
+            f"Ngày mai tú {f.mansion_name}, mà danh mục chỉ {_so(n)} việc.",
         ]
         than = (f"Sao là {f.god_name}, thường được xếp vào nhóm {nhom}. "
                 f"Trực lại là {f.truc_name} — {truc.han}, nghĩa là {truc.gloss}. "
@@ -177,6 +184,9 @@ def _compose(f: DayFacts) -> tuple[str, str, str, str]:
             "Ngày mai mang sao hắc đạo, mà danh mục lại rộng bất ngờ.",
             f"Ngày mai là ngày {f.god_name}, nhưng cửa vẫn mở khá rộng.",
             f"Sao xấu, mà ngày mai lịch vẫn cho làm tới {_so(n)} việc.",
+            f"Tên sao nghe dữ, mà ngày mai lịch lại không siết mấy.",
+            f"Ngày {f.day_animal} mai sao không đẹp, nhưng việc thì không thiếu.",
+            f"Ngày mai tú {f.mansion_name}, nhưng cửa mở rộng hơn cái tên sao gợi ra.",
         ]
         than = (f"{f.god_name} thuộc nhóm {nhom}. "
                 f"Nhưng trực là {f.truc_name} — {truc.han}, nghĩa là {truc.gloss}. "
@@ -191,6 +201,9 @@ def _compose(f: DayFacts) -> tuple[str, str, str, str]:
             "Ngày mai sao và trực cùng nói một chữ, mà chữ ấy là đóng.",
             f"Cả ngày mai chỉ còn {_so(n)} việc nên làm.",
             f"Ngày mai là ngày {f.god_name}, mà lịch cũng không nới tay.",
+            "Ngày mai hai tầng lịch cùng siết, không tầng nào chịu mở.",
+            f"Việc lịch cho làm ngày mai chỉ vỏn vẹn {_so(n)}, đếm chưa hết một bàn tay.",
+            f"Ngày mai tú {f.mansion_name}, mà trực thì cũng đóng nốt.",
         ]
         than = (f"Sao là {f.god_name}, thuộc nhóm {nhom}. "
                 f"Trực là {f.truc_name} — {truc.han}, nghĩa là {truc.gloss}. "
@@ -208,6 +221,9 @@ def _compose(f: DayFacts) -> tuple[str, str, str, str]:
             "Ngày mai hai tầng của lịch không chỏi nhau, chuyện không hay gặp.",
             f"Ngày mai mang sao {f.god_name}, mà trực cũng không siết lại.",
             f"Ngày mai lịch không chặn, danh mục mở tới {_so(n)} việc.",
+            f"Ngày mai sao tốt, trực cũng tốt, mà việc thì không thiếu.",
+            f"Ngày mai hiếm ở chỗ cả sao lẫn trực đều không cản.",
+            f"Ngày mai việc đầu danh mục là {dau}, mà lịch cũng không chặn.",
         ]
         than = (f"Sao là {f.god_name}, thuộc nhóm {nhom}. "
                 f"Trực là {f.truc_name} — {truc.han}, nghĩa là {truc.gloss}. "
@@ -217,7 +233,7 @@ def _compose(f: DayFacts) -> tuple[str, str, str, str]:
         chot = "Sao thuận, trực cũng thuận. Ngày như vậy không nhiều."
         tieu_de = f"Sao và trực cùng thuận — {f.god_name} gặp {f.truc_name}"
 
-    return hooks[v], than, chot, tieu_de
+    return hooks[v % len(hooks)], than, chot, tieu_de
 
 
 _SO = {1: "một", 2: "hai", 3: "ba", 4: "bốn", 5: "năm",
