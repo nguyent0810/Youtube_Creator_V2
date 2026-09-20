@@ -124,7 +124,7 @@ TTS chạy **CPU**, không GPU — có chủ đích. Tài liệu upstream nói t
 | `speak.py` — TTS + timing + phụ đề | ✅ chạy thật |
 | `assemble.py` — dựng video 9:16 | ✅ chạy thật |
 | `thumbnail.py` — khung hình + chữ | ✅ |
-| `publish.py` — YouTube API, hẹn giờ | ✅ chưa chạy thật |
+| `publish.py` — YouTube API, hẹn giờ | ✅ **đã chạy thật** (probe 20/09/2026) |
 | CLI gói lại | ⬜ sau cùng |
 
 ```bash
@@ -149,6 +149,18 @@ Ba thứ video-editor buộc phải đoán, ta đã biết trước nên vá đi
 Vá 2 xoá một lớp lỗi thật của v1: câu *"cũng không phải hình phạt của một đấng thần linh"* (đang **phủ định**) bị dịch chữ-đúng-chữ thành *"punishment of a deity"*, và Pexels trả về ảnh linh mục Công giáo — cho một video Phật giáo. Không phải sửa bản dịch cho khéo hơn; là xoá cả bước đoán.
 
 ### An toàn khi đăng
+
+`scripts/publish_batch.py` có ba chế độ, mặc định là chế độ an toàn nhất:
+
+| | |
+|---|---|
+| `check` | Không ghi gì. Xác minh auth, chống trùng, metadata hợp lệ |
+| `probe` | Đăng **đúng một** video, private, **cố ý bỏ `publishAt`** |
+| `run` | Đăng thật, private + hẹn giờ |
+
+`probe` tồn tại vì đường ghi cần được chạy lần đầu ở chỗ không ai thấy. Không có `publishAt` thì YouTube không bao giờ tự chuyển công khai.
+
+Chạy `check` lần đầu bắt được ngay hai lỗi thật: một bug thiếu tham số API, và — nghiêm trọng hơn — hàng đợi có **32 item chứ không phải 30**, hai cái thừa là video demo dựng lúc thử nghiệm. Hàng đợi là nơi mọi thứ dồn về, gồm cả thứ chỉ để thử; bước đăng phải **tự lọc**.
 
 `publish.py` luôn đặt `privacyStatus = "private"` kèm `publishAt`. Video tự chuyển public đúng giờ. **Không bao giờ đăng public ngay** — một lần nhầm là công khai thật, không rút lại được.
 
