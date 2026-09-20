@@ -18,6 +18,7 @@ sys.path.insert(0, str(ROOT))
 from factory import store  # noqa: E402
 from factory.bundle import Bundle  # noqa: E402
 from factory.compose import script_for  # noqa: E402
+from factory.batchcheck import report_batch  # noqa: E402
 from factory.factcheck import report  # noqa: E402
 from factory.lunar import facts_range  # noqa: E402
 
@@ -67,6 +68,13 @@ for f in facts_range(start, days):
     )
     store.save_bundle(b)
     made.append((f, b, sc["the"]))
+
+# KIỂM CHÉO CẢ LÔ trước khi đưa vào hàng đợi. Kiểm từng bundle riêng lẻ
+# không bao giờ thấy tiêu đề trùng -- lỗi đó đã làm mất 9 video.
+ok_batch, batch_text = report_batch([b for _, b, _ in made], label="LÔ")
+print(batch_text)
+if not ok_batch:
+    sys.exit("DỪNG: lô không qua kiểm chéo. Không đưa vào hàng đợi.")
 
 with store.connect() as conn:
     added, total = store.sync_from_disk(conn, channel="FS")

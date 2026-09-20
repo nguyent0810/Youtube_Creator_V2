@@ -43,6 +43,25 @@ class DayFacts:
     star_desc: str
     mansion_name: str      # nhị thập bát tú, vd "Khuê"
     mansion_good: bool
+    # ─── Các tầng bổ sung ────────────────────────────────────────────────
+    # Sao và trực đều là chu kỳ 12, nên cứ 12 ngày lại lặp đúng một cặp.
+    # Tháng 10/2026 có 9 cặp ngày trùng (sao, trực) -- nếu chỉ dùng hai
+    # tầng đó thì 9 ngày không có gì riêng để nói.
+    #
+    # Những tầng dưới đây có chu kỳ KHÁC nên phá được sự lặp, và phần lớn
+    # còn hành động được hơn: giờ tốt và tuổi xung là thứ người xem soi
+    # vào bản thân ngay được.
+    mansion_animal: str    # con vật của tú, vd "Nai", "Hề"
+    mansion_element: str   # ngũ hành của tú
+    day_of_week: str       # "Thứ bảy"
+    nayin_name: str        # nạp âm, vd "Tòng Bách Mộc" -- chu kỳ 60
+    auspicious_hours: str  # "Sửu (1-3h), Thìn (7-9h)..."
+    good_directions: str   # hướng xuất hành tốt
+    conflict_animal: str   # tuổi xung, vd "Lợn"
+    conflict_chi: str      # chi xung, vd "Hợi"
+    day_animal: str        # con giáp của ngày, vd "Rắn"
+    wealth_god_dir: str    # hướng Tài thần
+    joy_god_dir: str       # hướng Hỷ thần
 
     @property
     def publish_at(self) -> str:
@@ -88,6 +107,17 @@ def facts_for(target: date) -> DayFacts:
         star_desc=stars.get("description", ""),
         mansion_name=mansion.get("name", ""),
         mansion_good=bool(mansion.get("good")),
+        mansion_animal=mansion.get("animal", ""),
+        mansion_element=mansion.get("element", ""),
+        day_of_week=(info.get("solar") or {}).get("day_of_week", ""),
+        nayin_name=(info.get("nayin") or {}).get("name", ""),
+        auspicious_hours=info.get("auspicious_hours", ""),
+        good_directions=(info.get("directions") or {}).get("good_text", ""),
+        conflict_animal=(info.get("conflicting_ages") or {}).get("conflict_animal", ""),
+        conflict_chi=(info.get("conflicting_ages") or {}).get("conflict_chi", ""),
+        day_animal=(info.get("conflicting_ages") or {}).get("day_animal", ""),
+        wealth_god_dir=(info.get("god_directions") or {}).get("wealth_god", ""),
+        joy_god_dir=(info.get("god_directions") or {}).get("joy_god", ""),
     )
 
 

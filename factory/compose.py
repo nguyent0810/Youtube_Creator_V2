@@ -24,6 +24,8 @@ theo ngày nên tất định (chạy lại ra y hệt) nhưng không lặp li�
 """
 from __future__ import annotations
 
+import hashlib
+
 from factory.lunar import DayFacts
 from factory.vocab import SAO, TRUC
 
@@ -66,6 +68,59 @@ def _kieng(f: DayFacts) -> str:
     return f"Phần kiêng ghi rõ: {_liet_ke(f.truc_bad_for, 3)}."
 
 
+
+# ─── Tầng bổ sung: phá lặp và làm nội dung dùng được ──────────────────────
+#
+# Sao và trực đều chu kỳ 12 -> cứ 12 ngày lặp một cặp. Tháng 10/2026 có 9
+# cặp trùng, và lỗi đó đã gây hậu quả thật: 9 video bị dedup bỏ qua vì trùng
+# tiêu đề.
+#
+# 28 tú có chu kỳ 28 nên trên 30 ngày cho 28 giá trị khác nhau -- gần như
+# không lặp. Hai ngày 10/10 và 22/10 cùng "Minh Đường gặp Trực kiến" nhưng
+# tú NGƯỢC nhau (Liễu xấu / Đẩu tốt), tức là có nghịch lý riêng để nói.
+#
+# Giờ hoàng đạo và tuổi xung thì khác loại: chúng không phá lặp nhiều,
+# nhưng là thứ người xem SOI VÀO BẢN THÂN được ngay. Đó là giá trị mà hai
+# tầng sao/trực không có.
+
+def _cau_tu(f: DayFacts) -> str:
+    """Nhị thập bát tú. Mọi chữ đều từ nguồn, không diễn giải."""
+    if not f.mansion_name:
+        return ""
+    xd = "tốt" if f.mansion_good else "xấu"
+    return (f"Nhị thập bát tú là tú {f.mansion_name}, con {f.mansion_animal}, "
+            f"lịch xếp vào nhóm {xd}")
+
+
+def _cau_gio(f: DayFacts) -> str:
+    """Chọn ĐÚNG MỘT giờ tốt.
+
+    Bài học v1 đã ghi lại: liệt kê cả 6 giờ ("Dần 3-5h, Thìn 7-9h, Tỵ
+    9-11h...") nghe dông dài qua giọng đọc, video thật đã bị chê vì lỗi này.
+    Lấy giờ đầu tiên, phần còn lại để trên màn hình nếu cần."""
+    if not f.auspicious_hours:
+        return ""
+    # "đầu tiên" chứ KHÔNG phải "sớm nhất": bộ kiểm chặn mọi so sánh nhất
+    # vì chúng gần như luôn là suy diễn. Ở đây "đầu tiên" lại đúng theo
+    # nghĩa đen -- nguồn trả danh sách đã sắp theo thứ tự giờ trong ngày.
+    dau = f.auspicious_hours.split(",")[0].strip()
+    return f"Giờ tốt đầu tiên trong ngày là giờ {dau}"
+
+
+def _cau_xung(f: DayFacts) -> str:
+    """Tuổi xung -- thứ người xem tự soi vào mình được ngay."""
+    if not (f.conflict_animal and f.day_animal):
+        return ""
+    return (f"Ngày {f.day_animal} thì theo lịch cũ xung với tuổi {f.conflict_animal}, "
+            f"ai tuổi đó có việc lớn thì nên cân nhắc")
+
+
+def _cau_huong(f: DayFacts) -> str:
+    if not f.wealth_god_dir:
+        return ""
+    return f"Hướng Tài thần ngày mai là hướng {f.wealth_god_dir}"
+
+
 # ─── Khuôn theo thế ───────────────────────────────────────────────────────
 #
 # Mỗi khuôn trả (hook, thân, chốt, tiêu đề). Biến thể chọn theo ngày dương
@@ -78,7 +133,30 @@ def _compose(f: DayFacts) -> tuple[str, str, str, str]:
     dau = f.truc_good_for[0].lower()
     nhom = "hoàng đạo" if f.is_auspicious_star else "hắc đạo"
     the = the_cua_ngay(f)
-    v = f.target.day % 3
+
+    # CHỌN BIẾN THỂ MỞ BÀI -- không được ăn khớp với chu kỳ 12 ngày.
+    #
+    # Bản đầu dùng `day % 3`. Nhưng sao và trực lặp đúng 12 ngày, mà 12 chia
+    # hết cho 3, nên hai ngày trùng (sao, trực) LUÔN rơi vào cùng biến thể:
+    # 10/10 và 22/10 ra hook giống hệt nhau. Đúng thứ lẽ ra phải tránh.
+    #
+    # Băm cả tú (chu kỳ 28) và can chi ngày (chu kỳ 60) vào seed: hai chu kỳ
+    # này không chia hết cho 12 nên hai ngày trùng sao/trực chắc chắn lệch
+    # biến thể. Vẫn tất định -- chạy lại ra y hệt.
+    # Băm cho phân bố đều, CỘNG THÊM số lần cặp (sao, trực) này đã xuất
+    # hiện trong tháng. Chỉ băm thôi thì vẫn có 1/3 khả năng hai ngày trùng
+    # rơi vào cùng dư -- đã xảy ra thật với 10/10 và 22/10. Offset theo
+    # `day // 12` thì lần xuất hiện thứ nhất, thứ hai, thứ ba của cùng một
+    # cặp CHẮC CHẮN lệch nhau, không phụ thuộc may rủi của hàm băm.
+    # Băm theo CẶP (sao, trực) -- KHÔNG theo ngày. Cộng số lần cặp đó đã
+    # xuất hiện trong tháng (`day // 12`, vì chu kỳ lặp đúng 12 ngày).
+    #
+    # Vì sao phải băm theo cặp: nếu băm theo ngày thì hai ngày trùng cặp có
+    # hash KHÁC nhau, cộng offset vào vẫn có thể va cùng dư -- đã xảy ra
+    # thật với 3/9 cặp. Băm theo cặp thì phần băm giống hệt nhau, nên offset
+    # một mình quyết định, và lệch được ĐẢM BẢO cho tới 3 lần xuất hiện.
+    h = int(hashlib.sha256(f"{f.god_name}|{f.truc_name}".encode("utf-8")).hexdigest(), 16)
+    v = (h + f.target.day // 12) % 3
 
     if the == "sao_mo_truc_siet":
         hooks = [
@@ -98,7 +176,7 @@ def _compose(f: DayFacts) -> tuple[str, str, str, str]:
         hooks = [
             "Ngày mai mang sao hắc đạo, mà danh mục lại rộng bất ngờ.",
             f"Ngày mai là ngày {f.god_name}, nhưng cửa vẫn mở khá rộng.",
-            f"Sao xấu, mà lịch vẫn cho làm tới {_so(n)} việc.",
+            f"Sao xấu, mà ngày mai lịch vẫn cho làm tới {_so(n)} việc.",
         ]
         than = (f"{f.god_name} thuộc nhóm {nhom}. "
                 f"Nhưng trực là {f.truc_name} — {truc.han}, nghĩa là {truc.gloss}. "
@@ -153,26 +231,43 @@ def _so(n: int) -> str:
 MIN_WORDS, MAX_WORDS = 65, 85
 
 
-def _fit(hook: str, than: str, chot: str) -> str:
-    """Căn độ dài về 65-85 từ bằng cách bỏ/thêm câu TUỲ CHỌN.
+def _fit(hook: str, than: str, chot: str, extras: list[str] | None = None) -> str:
+    """Căn 65-85 từ, và ƯU TIÊN tầng bổ sung hơn câu đệm.
 
-    Vì sao cần: danh mục của các trực dài ngắn rất khác nhau (1 việc với
-    Trực định, 10 với Trực mãn), nên cùng một khuôn cho ra kịch bản 64 từ
-    ở ngày này và 91 từ ở ngày khác. Chỉnh tay từng khuôn không giải được
-    -- độ dài phụ thuộc DỮ LIỆU, không phụ thuộc khuôn.
+    Vì sao cần: độ dài phụ thuộc DỮ LIỆU chứ không phụ thuộc khuôn -- danh
+    mục Trực định có 1 việc, Trực mãn có 10. Cùng một khuôn cho ra 64 từ
+    ngày này và 91 từ ngày khác.
 
-    Cách làm: câu cuối của thân luôn là câu khuyên dùng, bỏ đi vẫn đủ ý.
-    Quá dài thì bỏ; quá ngắn thì thêm một câu nhắc nguồn (luôn đúng, và
-    cũng là thứ nên có với nội dung lịch)."""
-    parts = [p.strip() for p in than.split(". ") if p.strip()]
+    THỨ TỰ BỎ khi quá dài: câu ĐỆM trước, tầng bổ sung sau. Bản đầu làm
+    ngược -- cắt từ cuối nên tầng bổ sung (tú, giờ tốt, tuổi xung) không
+    bao giờ lọt vào, trong khi chúng mới là thứ phá được sự lặp giữa các
+    ngày trùng sao/trực. Câu đệm kiểu "Ai đang chờ ngày để X" thì ngày nào
+    cũng nói được, bỏ đi không mất gì.
+    """
+    parts = [p.strip().rstrip(".") for p in than.split(". ") if p.strip()]
+    core, dem = parts[:-1], parts[-1:] if len(parts) > 3 else []
+    if dem:
+        core = parts[:-1]
+    else:
+        core = parts
+
     def total(ps):
         return len(f"{hook} {'. '.join(ps)}. {chot}".split())
 
-    while total(parts) > MAX_WORDS and len(parts) > 2:
-        parts.pop()
-    if total(parts) < MIN_WORDS:
-        parts.append("Đây là ghi chép theo lịch pháp truyền thống, để tham khảo")
-    return f"{hook} {'. '.join(parts)}. {chot}"
+    # 1. Lõi phải vừa trước đã.
+    while total(core) > MAX_WORDS and len(core) > 2:
+        core.pop()
+    # 2. Nhét tầng bổ sung vào chừng nào còn chỗ.
+    for e in (extras or []):
+        if e and total(core + [e]) <= MAX_WORDS:
+            core.append(e)
+    # 3. Còn dư thì mới tới câu đệm.
+    for d in dem:
+        if total(core + [d]) <= MAX_WORDS:
+            core.append(d)
+    if total(core) < MIN_WORDS:
+        core.append("Đây là ghi chép theo lịch pháp truyền thống, để tham khảo")
+    return f"{hook} {'. '.join(core)}. {chot}"
 
 
 def script_for(f: DayFacts) -> dict:
@@ -188,8 +283,16 @@ def script_for(f: DayFacts) -> dict:
     kênh lịch hằng ngày thì ngày là thông tin đầu tiên cần thấy."""
     hook, than, chot, tieu_de = _compose(f)
     ngay = f.target.strftime("%d/%m")
+
+    # Ưu tiên tầng nào nói trước: nếu tú NGƯỢC chiều với sao thì đó là
+    # nghịch lý riêng của ngày, đáng nói nhất. Không thì ưu tiên thứ người
+    # xem dùng được ngay (giờ tốt, tuổi xung).
+    tu_nghich = f.mansion_good != f.is_auspicious_star
+    extras = ([_cau_tu(f), _cau_gio(f), _cau_xung(f), _cau_huong(f)] if tu_nghich
+              else [_cau_gio(f), _cau_xung(f), _cau_tu(f), _cau_huong(f)])
+
     return {
-        "script": _fit(hook, than, chot),
+        "script": _fit(hook, than, chot, extras),
         "title": f"{ngay} — {tieu_de}"[:100],
         "the": the_cua_ngay(f),
     }
