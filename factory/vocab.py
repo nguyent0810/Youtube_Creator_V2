@@ -107,3 +107,90 @@ def gloss_phrases() -> tuple[str, ...]:
         out += [f"{s.name.lower()} nghĩa là {s.gloss}",
                 f"tên nghĩa là {s.gloss}"]
     return tuple(out)
+
+
+# ─── Việc trong lịch -> từ khoá B-roll ────────────────────────────────────
+#
+# VÌ SAO CẦN: trước đây B-roll chọn theo THẾ của ngày, mà chỉ có 4 thế.
+# Nghĩa là 61 video dùng chung đúng 4 bộ từ khoá -- 20 video "sao dữ trực
+# mở" có hình y hệt nhau. Lỗi thuần thị giác, bộ kiểm chữ không thấy được.
+#
+# Danh mục việc của 12 trực cũng là TẬP ĐÓNG (đếm trên cả năm 2026: 38 việc
+# khác nhau), nên khai một lần là phủ hết. Hình bám việc thật của ngày thì
+# vừa đa dạng vừa ĐÚNG nội dung -- video nói động thổ thì ra công trường,
+# nói tắm gội thì ra nước.
+#
+# Việc chưa có trong bảng thì rơi về từ khoá theo thế, không để trống.
+
+VIEC_BROLL: dict[str, list[str]] = {
+    "động thổ": ["construction site groundbreaking", "shovel digging soil close up"],
+    "san nền đắp nền": ["leveling ground construction", "earth mover flattening site"],
+    "khởi công làm lò": ["traditional brick kiln fire", "clay oven construction"],
+    "khai trương tàu thuyền": ["wooden fishing boat launch", "harbor boats morning"],
+    "khai trương": ["vietnamese shop opening morning", "red ribbon cutting ceremony"],
+    "lên quan nhậm chức": ["new office first day", "handshake office formal"],
+    "lên quan lâm chính": ["government office building", "formal meeting room"],
+    "xuất hành": ["open road sunrise travel", "packing bag for journey"],
+    "di chuyển": ["moving boxes new home", "carrying furniture doorway"],
+    "nhập học": ["students entering school gate", "notebook pen desk study"],
+    "tế tự": ["incense smoke altar close up", "temple offering ceremony"],
+    "cầu phúc": ["praying hands temple", "lighting incense shrine"],
+    "cầu tự": ["family altar candle light", "quiet temple prayer"],
+    "cầu y trị bệnh": ["doctor consultation clinic", "herbal medicine preparation"],
+    "lên sách lên chương biểu": ["calligraphy brush writing", "old paper scroll desk"],
+    "nạp tài": ["counting money vietnamese", "cash register shop counter"],
+    "thu tất": ["accounting ledger desk", "closing account books"],
+    "tiến người": ["job interview handshake", "team welcoming new member"],
+    "bắt bớ": ["closing iron gate", "locking door with key"],
+    "an sàng": ["wooden bed frame detail", "calm bedroom morning light"],
+    "an phủ biên cảnh": ["quiet countryside border", "watchtower landscape"],
+    "tuyển tướng": ["chess strategy close up", "team leader briefing"],
+    "trúc đê phòng": ["stone embankment river", "sandbags flood barrier"],
+    "đắp lỗ": ["patching hole in wall", "filling cracks cement"],
+    "đắp lỗ lỗ rác": ["patching hole in wall", "filling cracks cement"],
+    "sửa tường": ["repairing wall plaster hands", "cement trowel work detail"],
+    "tu sửa tường tường": ["repairing wall plaster hands", "painting wall roller"],
+    "bình trị đạo đồ": ["paving road workers", "flattening dirt path"],
+    "giải trừ": ["sweeping floor broom", "clearing clutter room"],
+    "tắm gội": ["water pouring hands close up", "clean bathroom daylight"],
+    "chỉnh dung": ["mirror reflection grooming", "barber shop interior"],
+    "cạo đầu": ["haircut barber close up", "hair clipper detail"],
+    "chỉnh tay chân móng": ["manicure hands close up", "nail care detail"],
+    "quét dọn nhà cửa": ["cleaning house vietnamese home", "mopping floor sunlight"],
+    "may cắt": ["tailor sewing fabric", "scissors cutting cloth"],
+    "dựng cột lên đòn dông": ["wooden house frame raising", "timber roof beam"],
+    "kinh vệ": ["night watch lantern", "guard walking corridor"],
+    "lập khoán giao dịch": ["signing contract close up", "handshake business deal"],
+    "mở kho": ["opening warehouse door", "stacked storage boxes"],
+    "quan đái": ["formal ceremony robe", "traditional hat detail"],
+}
+
+
+def broll_for(viec_list, fallback: list[str], n: int = 4, offset: int = 0) -> list[str]:
+    """Từ khoá B-roll bám DANH MỤC VIỆC THẬT của ngày.
+
+    Duyệt theo thứ tự việc trong nguồn nên hình đi đúng mạch lời đọc. Thiếu
+    thì bù bằng `fallback` (từ khoá theo thế) -- không bao giờ trả rỗng vì
+    Bundle.validate() coi broll_queries rỗng là lỗi cứng.
+    """
+    # XOAY điểm bắt đầu theo `offset`: 12 trực trên 61 ngày nghĩa là mỗi
+    # trực lặp ~5 lần, và nếu luôn lấy từ việc đầu danh mục thì 5 ngày đó
+    # có hình y hệt nhau. Xoay thì cùng một trực vẫn cho bộ hình khác.
+    vs = list(viec_list)
+    if vs and offset:
+        offset %= len(vs)
+        vs = vs[offset:] + vs[:offset]
+
+    out: list[str] = []
+    for v in vs:
+        for q in VIEC_BROLL.get(v.lower().strip(), []):
+            if q not in out:
+                out.append(q)
+            if len(out) >= n:
+                return out
+    for q in fallback:
+        if q not in out:
+            out.append(q)
+        if len(out) >= n:
+            break
+    return out[:n]

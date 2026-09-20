@@ -21,6 +21,7 @@ from factory.compose import script_for  # noqa: E402
 from factory.batchcheck import report_batch  # noqa: E402
 from factory.factcheck import report  # noqa: E402
 from factory.lunar import facts_range  # noqa: E402
+from factory.vocab import broll_for  # noqa: E402
 
 VOICE = "Anh Khôi"
 BGM = "asian_drums.mp3"
@@ -63,7 +64,10 @@ for f in facts_range(start, days):
         thumbnail_text="",
         publish_at=f.publish_at,
         voice=VOICE, bgm=BGM,
-        broll_queries=BROLL[sc["the"]],
+        # Hình bám DANH MỤC VIỆC THẬT của ngày, không bám thế: chỉ có 4
+        # thế nên 61 video trước đó dùng chung đúng 4 bộ từ khoá.
+        broll_queries=broll_for(f.truc_good_for, BROLL[sc["the"]],
+                                offset=f.target.day),
         source_note=f"vnlunar {f.target}: {f.can_chi_day}, sao {f.god_name}, {f.truc_name}",
     )
     store.save_bundle(b)

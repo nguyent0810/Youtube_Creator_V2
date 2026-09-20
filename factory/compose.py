@@ -176,7 +176,10 @@ def _compose(f: DayFacts) -> tuple[str, str, str, str]:
                 f"Sao mở, trực siết. "
                 f"Danh mục nên làm: {viec}. "
                 f"{_kieng(f)}")
-        chot = "Hoàng đạo không có nghĩa là muốn làm gì cũng được."
+        chots = ["Hoàng đạo không có nghĩa là muốn làm gì cũng được.",
+                 "Sao đẹp mà trực hẹp, thì vẫn cứ là ngày hẹp.",
+                 "Xem sao thôi chưa đủ, còn phải xem trực.",
+                 "Ngày tốt, nhưng tốt cho ít việc thôi."]
         tieu_de = f"Hoàng đạo mà chỉ được {_so(n)} việc — {f.god_name} gặp {f.truc_name}"
 
     elif the == "sao_du_truc_mo":
@@ -193,7 +196,10 @@ def _compose(f: DayFacts) -> tuple[str, str, str, str]:
                 f"Danh mục nên làm: {viec}. "
                 f"{_kieng(f)} "
                 f"Nên nếu định làm {dau}, ngày mai có thể cân nhắc.")
-        chot = "Sao dữ, mà cửa vẫn mở về một phía."
+        chots = ["Sao dữ, mà cửa vẫn mở về một phía.",
+                 "Tên sao nghe sợ, danh mục thì lại không.",
+                 "Đừng bỏ cả ngày chỉ vì cái tên sao.",
+                 "Sao xấu không có nghĩa là ngày bỏ đi."]
         tieu_de = f"Sao hắc đạo mà cửa vẫn mở — {f.god_name} gặp {f.truc_name}"
 
     elif the == "cung_dong":
@@ -211,7 +217,10 @@ def _compose(f: DayFacts) -> tuple[str, str, str, str]:
                 f"Danh mục nên làm chỉ còn: {viec}. "
                 f"{_kieng(f)} "
                 f"Nếu có việc đang định làm mà không nằm trong đó, lùi một hôm cũng được.")
-        chot = "Ngày mai để giữ lại, không phải để mở ra."
+        chots = ["Ngày mai để giữ lại, không phải để mở ra.",
+                 "Ngày để vá, không phải ngày để bày.",
+                 "Cả hai tầng cùng đóng, thì đừng cố mở.",
+                 "Việc lớn để hôm khác, mai làm việc nhỏ."]
         tieu_de = f"Sao và trực cùng siết — {f.god_name} gặp {f.truc_name}"
 
     else:  # cung_thuan
@@ -230,10 +239,13 @@ def _compose(f: DayFacts) -> tuple[str, str, str, str]:
                 f"Danh mục nên làm: {viec}. "
                 f"{_kieng(f)} "
                 f"Ai đang chờ ngày để {dau}, đây là ngày có thể cân nhắc.")
-        chot = "Sao thuận, trực cũng thuận. Ngày như vậy không nhiều."
+        chots = ["Sao thuận, trực cũng thuận. Ngày như vậy không nhiều.",
+                 "Hai tầng cùng mở, không phải tháng nào cũng gặp.",
+                 "Ngày mà lịch không cản gì, thì đừng để trôi.",
+                 "Cả sao lẫn trực đều thuận, hiếm hơn ta tưởng."]
         tieu_de = f"Sao và trực cùng thuận — {f.god_name} gặp {f.truc_name}"
 
-    return hooks[v % len(hooks)], than, chot, tieu_de
+    return hooks[v % len(hooks)], than, chots[v % len(chots)], tieu_de
 
 
 _SO = {1: "một", 2: "hai", 3: "ba", 4: "bốn", 5: "năm",
