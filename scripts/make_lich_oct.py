@@ -39,90 +39,101 @@ BGM = "asian_drums.mp3"
 # Kịch bản viết tay theo đúng facts của từng ngày. Mỗi cái: hook -> căn cứ
 # -> việc cụ thể -> hạ rào cản -> chốt vọng lại hook.
 SCRIPTS = {
-    # Kim Quỹ (hoàng đạo) NHƯNG Trực nguy (hẹp) -> mâu thuẫn có sẵn, dùng làm hook.
+    # Kim Quỹ (hoàng đạo) + Trực nguy (3 việc) -> sao mở, trực siết.
     "2026-10-01": (
-        "Ngày mai là ngày hoàng đạo. Và bạn vẫn không nên ký gì.",
-        "Nghe mâu thuẫn, nhưng lịch cũ tách làm hai tầng. "
-        "Tầng sao: ngày mai là Kim Quỹ, một trong sáu sao hoàng đạo. "
-        "Tầng trực: lại là Trực nguy, tầng hẹp nhất trong mười hai trực. "
-        "Sao thì mở, trực thì đóng. "
-        "Việc còn lại chỉ vài thứ quanh chỗ nằm, chỗ ngủ. "
-        "Nên ngày mai kê lại giường thì được. Ký hợp đồng thì thôi.",
+        "Ngày mai là ngày hoàng đạo, nhưng lịch chỉ cho làm đúng ba việc.",
+        "Sao là Kim Quỹ, thường được xếp vào nhóm hoàng đạo. "
+        "Trực lại là Trực nguy. Sao mở, trực siết. "
+        "Danh mục vỏn vẹn ba việc: an phủ biên cảnh, tuyển tướng, an sàng. "
+        "An sàng là kê giường, sắp chỗ nằm. Việc đó thì thuận. "
+        "Ngoài ra, lịch ghi gọn là mọi việc khác. "
+        "Hoàng đạo không có nghĩa là muốn làm gì cũng được.",
         ["calm bedroom interior morning light", "wooden bed frame detail",
          "quiet vietnamese home interior", "soft daylight through window"],
-        "Hoàng đạo mà vẫn không nên ký — Kim Quỹ gặp Trực nguy",
+        "Hoàng đạo mà chỉ được làm ba việc — Kim Quỹ gặp Trực nguy",
     ),
+    # Trực thành rơi vào 02, 18, 30 tháng 10 -> "ba ngày" là con số ĐÃ ĐẾM.
     "2026-10-02": (
-        "Sáu ngày nữa mới lại có ngày như ngày mai.",
-        "Thiên Đức. Một trong sáu sao hoàng đạo, và là sao rộng tay nhất. "
-        "Gặp đúng Trực thành, trực của chuyện nên việc. "
-        "Hai tầng cùng mở một lúc, tháng này đếm trên đầu ngón tay. "
-        "Khai trương, nhập học, chuyển nhà, đều nằm trong đó. "
-        "Ai đang chờ ngày mở hàng thì mai là ngày. "
-        "Lưu lại, kẻo trôi mất.",
+        "Cả tháng Mười chỉ có ba ngày Trực thành, và ngày mai là ngày đầu.",
+        "Sao là Thiên Đức, thuộc nhóm hoàng đạo. "
+        "Trực là Trực thành, trực của chuyện nên việc. "
+        "Lần này sao và trực cùng một hướng. "
+        "Danh mục gồm nhập học, di chuyển, khai trương, trúc đê phòng. "
+        "Ai đang chờ ngày mở hàng hay chuyển nhà, đây là ngày có thể cân nhắc. "
+        "Ngoài danh mục, lịch vẫn xếp là mọi việc khác. "
+        "Ba ngày trong cả tháng.",
         ["vietnamese shop opening morning", "red ribbon cutting ceremony",
          "small business storefront daylight", "moving boxes new home"],
-        "Ngày mai hợp khai trương — Thiên Đức gặp Trực thành",
+        "Cả tháng chỉ ba ngày như ngày mai — Thiên Đức gặp Trực thành",
     ),
+    # Bạch Hổ (hắc đạo) NHƯNG bad_for chỉ 2 việc, không phải "mọi việc khác".
     "2026-10-03": (
-        "Ngày mai là ngày Bạch Hổ.",
-        "Cái tên thôi đã đủ để người xưa né. "
-        "Một trong sáu sao hắc đạo, và là sao bị kiêng nhiều nhất. "
-        "Nhưng lịch cũ không bảo nằm im cả ngày. "
-        "Trực của ngày mai là Trực thu, hợp chuyện gom về: nạp tài, thu tất, kết sổ. "
-        "Đòi nợ được. Cho vay thì không. "
-        "Ngày Bạch Hổ hợp thu vào, không hợp phát ra.",
+        "Ngày mai là ngày Bạch Hổ, nhưng lịch chỉ kiêng đúng hai việc.",
+        "Bạch Hổ thuộc nhóm sáu sao hắc đạo. "
+        "Trực là Trực thu, thiên về chuyện gom về. "
+        "Danh mục nên làm: tiến người, nạp tài, bắt bớ, thu tất. "
+        "Phần kiêng thì rất hẹp, chỉ cầu phúc cầu tự và lên sách lên chương biểu. "
+        "Nên thu tiền, kết sổ thì thuận. Còn đi lễ cầu cúng thì nên lùi. "
+        "Sao dữ, mà cửa vẫn mở về một phía.",
         ["counting money vietnamese", "accounting ledger desk close up",
          "organizing documents folder", "calm office paperwork morning"],
-        "Ngày Bạch Hổ hợp đòi nợ — Trực thu 23/8 âm",
+        "Ngày Bạch Hổ chỉ kiêng hai việc — Trực thu 23/8 âm",
     ),
+    # Nghịch lý VỚI 03/10: việc hôm đó kiêng thì hôm nay đứng đầu danh mục.
     "2026-10-04": (
-        "Ba việc đứng đầu ngày mai đều bắt đầu bằng chữ cầu.",
-        "Cầu phúc. Cầu tự. Tế tự. "
-        "Mãi sau mới tới xuất hành với di chuyển. "
-        "Sao của ngày là Ngọc Đường, sao hoàng đạo gắn với chuyện văn chương, lễ nghĩa. "
-        "Gặp Trực khai, trực của chuyện mở ra. "
-        "Nên ngày mai mở về phía tinh thần trước. "
-        "Một nén nhang buổi sớm cũng đã đúng ngày.",
+        "Việc mà lịch vừa kiêng hôm trước, ngày mai lại đứng đầu danh mục.",
+        "Sao là Ngọc Đường, thuộc nhóm hoàng đạo. "
+        "Trực là Trực khai, trực của chuyện mở ra. "
+        "Bảy việc nên làm, mở đầu là tế tự, cầu phúc, cầu tự. "
+        "Đúng nhóm việc mà hôm trước lịch còn xếp vào phần kiêng. "
+        "Sau đó mới tới xuất hành, di chuyển, lên quan lâm chính. "
+        "Ngoài ra, lịch vẫn ghi mọi việc khác. "
+        "Cùng việc ấy, lịch đổi ý theo ngày.",
         ["incense smoke altar close up", "vietnamese family altar morning",
          "open road travel daylight", "temple courtyard quiet"],
-        "Ngày mai hợp cầu phúc — Ngọc Đường gặp Trực khai",
+        "Việc hôm trước kiêng, mai lại đứng đầu — Ngọc Đường gặp Trực khai",
     ),
+    # Thiên Lao + Trực bế -- hai tầng cùng nghĩa đóng.
     "2026-10-05": (
-        "Cả ngày mai chỉ còn ba việc nên làm.",
-        "Ba thôi. Đắp lỗ. Sửa tường. Trúc đê phòng. "
-        "Nhìn là thấy một hướng: bịt lại chỗ đang hở. "
-        "Không lạ, vì sao của ngày là Thiên Lao, sao hắc đạo gắn với chuyện giam giữ, đóng kín. "
-        "Trực thì là Trực bế, cũng nghĩa là đóng. "
-        "Hai tầng cùng đóng một lượt. "
-        "Nhà có chỗ nào dột thì mai vá. Còn lại thì khoan.",
+        "Ngày mai sao và trực cùng nói một chữ, mà chữ ấy là đóng.",
+        "Sao là Thiên Lao, thuộc nhóm hắc đạo. Chữ lao nghĩa là nhà giam. "
+        "Trực là Trực bế, chữ bế nghĩa là bịt lại. "
+        "Danh mục cũng đúng một hướng: trúc đê phòng, đắp lỗ, sửa tường. "
+        "Nhà có chỗ nào dột, chỗ nào nứt thì đây là ngày hợp. "
+        "Còn xuất hành, khai trương thì lịch ghi thẳng là kiêng. "
+        "Ngày mai để vá lại, không phải để mở ra.",
         ["repairing wall plaster hands", "home renovation tools close up",
          "fixing roof tiles", "cement trowel work detail"],
-        "Ngày mai chỉ còn ba việc nên làm — Thiên Lao gặp Trực bế",
+        "Sao và trực cùng nói một chữ đóng — Thiên Lao gặp Trực bế",
     ),
-    # Huyền Vũ (hắc đạo) NHƯNG Trực kiến (khởi đầu) -> mâu thuẫn ngược lại.
+    # NGUỒN TỰ PHÂN BIỆT: good_for có "khai trương tàu thuyền" + "khởi công
+    # làm lò"; bad_for có "Khai trương" + "khởi công xây cất". Có thật.
     "2026-10-06": (
-        "Sao xấu, nhưng lại là ngày đặt nền.",
-        "Huyền Vũ. Một trong sáu sao hắc đạo, thường gắn với chuyện mất mát, trộm cắp. "
-        "Vậy mà trực của ngày lại là Trực kiến, trực mở đầu cả một vòng mới. "
-        "Động thổ, san nền, nhận chức, xuất hành, đều nằm trong danh mục. "
-        "Người xưa không né hẳn ngày kiểu này. Họ làm việc nền móng, tránh việc tiền bạc. "
-        "Ngày mai đặt nền thì được. Đừng mang tiền ra đếm.",
+        "Lịch ngày mai vừa cho khai trương, vừa kiêng khai trương.",
+        "Sao là Huyền Vũ, thuộc nhóm hắc đạo. Trực là Trực kiến. "
+        "Phần nên làm ghi: động thổ, san nền, khai trương tàu thuyền, khởi công làm lò. "
+        "Phần kiêng lại ghi: khai trương, khởi công xây cất. "
+        "Nguồn phân biệt rất hẹp. "
+        "Cho mở lò, mở thuyền, chứ không cho mở hàng. "
+        "Nên động thổ thì thuận, mở cửa hàng thì nên lùi. "
+        "Cùng chữ khai trương, khác ở chỗ khai cái gì.",
         ["construction site groundbreaking", "foundation concrete work",
          "new office first day", "sunrise over building site"],
-        "Sao xấu mà vẫn là ngày đặt nền — Huyền Vũ gặp Trực kiến",
+        "Vừa cho vừa kiêng khai trương — Huyền Vũ gặp Trực kiến",
     ),
+    # Cả 7 việc đều là thân thể/nhà cửa, không việc nào về tiền -- đếm được.
     "2026-10-07": (
-        "Ngày mai hợp cắt tóc.",
-        "Nghe vặt vãnh, nhưng cả danh mục ngày mai đều vậy. "
-        "Tắm gội, cắt tóc, cắt móng, quét nhà, đi khám bệnh. "
-        "Sao của ngày là Tư Mệnh, sao hoàng đạo coi chuyện tuổi thọ, sức khoẻ. "
-        "Gặp Trực trừ, trực của chuyện bỏ bớt. "
-        "Cái hẹn khám cứ lần lữa mãi, mai đi là đúng ngày nhất. "
-        "Ngày mai bỏ bớt đi, từ trong nhà tới trên đầu.",
+        "Cả bảy việc lịch cho làm ngày mai đều không dính tới tiền.",
+        "Sao là Tư Mệnh, thuộc nhóm hoàng đạo. "
+        "Trực là Trực trừ. Chữ trừ nghĩa là bỏ bớt. "
+        "Danh mục gồm giải trừ, tắm gội, chỉnh dung, cạo đầu, "
+        "chỉnh tay chân móng, cầu y trị bệnh, quét dọn nhà cửa. "
+        "Toàn chuyện thân thể và nhà cửa. "
+        "Cái hẹn khám cứ lần lữa mãi, đây là ngày hợp. "
+        "Ngày hoàng đạo, nhưng để chăm mình chứ không để kiếm tiền.",
         ["cleaning house vietnamese home", "haircut barber close up",
          "decluttering tidy room", "washing hands water close up"],
-        "Ngày mai hợp cắt tóc, khám bệnh — Tư Mệnh gặp Trực trừ",
+        "Bảy việc, không việc nào dính tiền — Tư Mệnh gặp Trực trừ",
     ),
 }
 

@@ -19,6 +19,10 @@ from dataclasses import dataclass
 from datetime import date, datetime, timedelta, timezone
 
 # 6h sáng ICT = 23:00 UTC ngày hôm trước.
+# Sáu sao hoàng đạo trong hệ 12 sao. Còn lại là hắc đạo.
+AUSPICIOUS_GODS = frozenset({"Thanh Long", "Minh Đường", "Kim Quỹ",
+                             "Ngọc Đường", "Thiên Đức", "Tư Mệnh"})
+
 PUBLISH_UTC_HOUR, PUBLISH_UTC_MINUTE = 23, 0
 LEAD_DAYS = 1
 
@@ -34,6 +38,7 @@ class DayFacts:
     god_name: str          # sao của ngày, vd "Kim Quỹ", "Thiên Đức"
     truc_name: str         # vd "Trực thành"
     truc_good_for: tuple
+    truc_bad_for: tuple
     star_name: str         # 12 trực tinh, vd "Định"
     star_desc: str
     mansion_name: str      # nhị thập bát tú, vd "Khuê"
@@ -47,8 +52,15 @@ class DayFacts:
                         PUBLISH_UTC_MINUTE, tzinfo=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     @property
-    def is_auspicious(self) -> bool:
-        return self.day_type == "Hoàng Đạo"
+    def is_auspicious_star(self) -> bool:
+        """Dựa trên SAO, không dựa trên `day_type`.
+
+        vnlunar có hai trường và chúng mâu thuẫn ở 3/7 ngày đầu tháng 10:
+        day_type nói Hắc Đạo trong khi sao là Kim Quỹ (hoàng đạo), v.v.
+        Trường `12_gods` tự nhất quán (auspicious luôn đi với "Sao tốt -
+        Hoàng Đạo") và khớp truyền thống, nên nó là trường đáng tin. Cố ý
+        KHÔNG expose day_type ra ngoài để không ai lỡ dùng nhầm."""
+        return self.god_name in AUSPICIOUS_GODS
 
     @property
     def slug(self) -> str:
@@ -71,6 +83,7 @@ def facts_for(target: date) -> DayFacts:
         god_name=gods.get("name", ""),
         truc_name=truc.get("name", ""),
         truc_good_for=tuple(truc.get("good_for") or ()),
+        truc_bad_for=tuple(truc.get("bad_for") or ()),
         star_name=stars.get("name", ""),
         star_desc=stars.get("description", ""),
         mansion_name=mansion.get("name", ""),
