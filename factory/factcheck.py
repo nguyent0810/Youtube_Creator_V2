@@ -26,6 +26,7 @@ import unicodedata
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 
+from factory.claims import check_declared, check_statistics
 from factory.lunar import DayFacts
 
 # 12 sao hoàng đạo/hắc đạo. Dùng để bắt trường hợp kịch bản nhắc TÊN SAO
@@ -168,6 +169,18 @@ def check(script: str, facts: DayFacts, publish_at: str) -> list[Finding]:
     cw = len(closer.split())
     out.append(Finding(cw <= 16, "CHỐT", f"chốt {cw} từ (cần ≤16 để dễ nhớ)"))
 
+    # ─── NGOÀI NGUỒN: diễn giải phải khai báo, thống kê phải đếm lại ──────
+    #
+    # LUẬT: chỉ ĐẠT khi MỌI claim ngoài dữ liệu nguồn đã được xác minh. Một
+    # câu suy diễn thành fact, hoặc một thống kê chưa kiểm toàn bộ dữ liệu,
+    # đều phải CẦN SỬA. Phần trên chỉ soi được thứ CÓ trong nguồn -- hai
+    # hàm dưới soi đúng thứ người viết TỰ THÊM VÀO, vốn là chỗ ba claim sai
+    # trước đây đã lọt qua.
+    for c in check_declared(script):
+        out.append(Finding(c.ok, "NGOÀI", c.msg))
+    for c in check_statistics(script, facts.target):
+        out.append(Finding(c.ok, "THỐNG KÊ", c.msg))
+
     # ─── Độ dài ───────────────────────────────────────────────────────────
     total = len(script.split())
     out.append(Finding(MIN_WORDS <= total <= MAX_WORDS, "LOGIC",
@@ -179,5 +192,5 @@ def report(script: str, facts: DayFacts, publish_at: str, label: str = "") -> tu
     fs = check(script, facts, publish_at)
     ok = all(f.ok for f in fs)
     head = f"{label}  {'ĐẠT' if ok else 'CHƯA ĐẠT'}"
-    body = "\n".join(f"   [{f.area:5s}] {'ok ' if f.ok else '>> '}{f.msg}" for f in fs)
+    body = "\n".join(f"   [{f.area:8s}] {'ok ' if f.ok else '>> '}{f.msg}" for f in fs)
     return ok, f"{head}\n{body}"
