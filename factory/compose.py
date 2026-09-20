@@ -176,10 +176,20 @@ def _fit(hook: str, than: str, chot: str) -> str:
 
 
 def script_for(f: DayFacts) -> dict:
-    """Kịch bản hoàn chỉnh cho một ngày."""
+    """Kịch bản hoàn chỉnh cho một ngày.
+
+    TIÊU ĐỀ PHẢI DUY NHẤT -- lỗi thật đã xảy ra: bản đầu sinh tiêu đề từ
+    (sao, trực), mà chu kỳ sao và trực lặp lại đúng 12 ngày. Tháng 10 có 9
+    cặp ngày trùng tiêu đề, và bộ chống trùng của publish.py (so theo tiêu
+    đề) đã BỎ QUA 9 lần upload -- 9 ngày cuối tháng không có video riêng,
+    trong khi store ghi là đã đăng.
+
+    Gắn ngày vào đầu tiêu đề giải quyết tận gốc, và tiện cho người xem:
+    kênh lịch hằng ngày thì ngày là thông tin đầu tiên cần thấy."""
     hook, than, chot, tieu_de = _compose(f)
+    ngay = f.target.strftime("%d/%m")
     return {
         "script": _fit(hook, than, chot),
-        "title": tieu_de[:100],
+        "title": f"{ngay} — {tieu_de}"[:100],
         "the": the_cua_ngay(f),
     }

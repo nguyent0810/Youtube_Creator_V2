@@ -230,3 +230,40 @@ def publish_bundle(bundle, video_path: Path, creds: dict,
     return PublishResult(video_id=video_id,
                          url=f"https://youtu.be/{video_id}",
                          scheduled_at=bundle.publish_at)
+
+
+def set_schedule(video_id: str, publish_at: str, token: str) -> None:
+    """Gán publishAt cho video ĐÃ upload, không phải upload lại.
+
+    Cần cho đúng một tình huống: video đăng bằng `probe` nằm trên kênh ở
+    chế độ private KHÔNG có lịch (cố ý, để không tự công khai khi chưa ai
+    duyệt). Sau khi người duyệt xong, nó cần được gán lịch -- mà upload lại
+    thì vừa tốn hạn mức vừa tạo bản trùng.
+
+    videos.update tốn 50 đơn vị, rẻ hơn nhiều so với một lượt upload mới.
+    Bắt buộc gửi kèm `snippet` vì YouTube coi update là GHI ĐÈ toàn phần:
+    thiếu trường nào là trường đó bị xoá trắng, kể cả tiêu đề.
+    """
+    cur = _api(token, "GET", "videos", {"part": "snippet,status", "id": video_id})
+    items = cur.get("items") or []
+    if not items:
+        raise PublishError(f"không thấy video {video_id} trên kênh")
+    snippet = items[0]["snippet"]
+    status = items[0]["status"]
+
+    _api(token, "PUT", "videos", {"part": "snippet,status"}, {
+        "id": video_id,
+        # Giữ nguyên snippet cũ -- update là ghi đè toàn phần.
+        "snippet": {
+            "title": snippet["title"],
+            "description": snippet.get("description", ""),
+            "tags": snippet.get("tags", []),
+            "categoryId": snippet.get("categoryId", "22"),
+            "defaultLanguage": snippet.get("defaultLanguage", "vi"),
+        },
+        "status": {
+            "privacyStatus": "private",     # phải giữ private thì publishAt mới có tác dụng
+            "publishAt": publish_at,
+            "selfDeclaredMadeForKids": status.get("selfDeclaredMadeForKids", False),
+        },
+    })
