@@ -104,6 +104,19 @@ DECLARED: tuple[Declared, ...] = (
     ),
 )
 
+# Nối TỪ ĐIỂN TẬP ĐÓNG (12 trực + 12 sao) vào sổ. Đây là thứ khiến luật
+# "mọi claim ngoài nguồn phải xác minh" TỰ THOẢ MÃN ĐƯỢC: vốn từ của nội
+# dung Lịch hữu hạn, khai đủ một lần là phủ mọi kịch bản về sau, người
+# không phải can thiệp lần nào nữa. Xem factory/vocab.py.
+from factory.vocab import SAO, TRUC, gloss_phrases  # noqa: E402
+
+_VOCAB_DECLARED = tuple(
+    Declared(ph, "từ điển tập đóng factory/vocab.py — mỗi mục kèm chữ Hán và "
+                 "đối chiếu với danh mục good_for thật trong vnlunar", "vocab")
+    for ph in gloss_phrases()
+)
+
+DECLARED = DECLARED + _VOCAB_DECLARED
 _DECLARED_NORM = {_norm(d.claim): d for d in DECLARED}
 
 
@@ -120,6 +133,11 @@ INTERPRETIVE = (
     r"\ban\s+sàng\s+là\s+[^.,]+",
     r"trực của chuyện\s+[^.,]+",
     r"thiên về chuyện\s+[^.,]+",
+    # Dạng compose.py sinh ra: "Trực bế — 閉, nghĩa là bịt lại".
+    # Lookbehind loại thành ngữ "không có nghĩa là ..." -- đó là lối nói,
+    # không phải chú giải thuật ngữ. Bắt nhầm 9/30 kịch bản vì chốt
+    # "Hoàng đạo không có nghĩa là muốn làm gì cũng được".
+    r"(?<!không có )nghĩa là\s+[^.,]+",
 )
 
 # ─── Mẫu câu SUY ĐOÁN -- cấm hẳn, không khai báo được ─────────────────────

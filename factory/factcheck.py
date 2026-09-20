@@ -104,6 +104,16 @@ def check(script: str, facts: DayFacts, publish_at: str) -> list[Finding]:
     if "hắc đạo" in low and facts.is_auspicious_star:
         out.append(Finding(False, "FACT", f"gọi là hắc đạo nhưng {facts.god_name} là sao hoàng đạo"))
 
+    # ─── FACT: khung diễn giải không được chỏi với loại sao ───────────────
+    # Lỗi thật: ngày Bạch Hổ (hắc đạo) bị viết là "sao và trực cùng thuận".
+    # Nhãn hoàng/hắc đạo thì đúng, nhưng KHUNG lại ngược -- kiểm nhãn không
+    # đủ, phải kiểm cả cách diễn giải.
+    THUAN = ("cùng thuận", "sao thuận", "trực cũng mở theo", "không chỏi nhau")
+    hits = [k for k in THUAN if k in low]
+    if hits and not facts.is_auspicious_star:
+        out.append(Finding(False, "FACT",
+                           f"khung 'thuận' {hits} nhưng {facts.god_name} là sao hắc đạo"))
+
     # ─── FACT: trực ───────────────────────────────────────────────────────
     truc_named = [t for t in ALL_TRUC if t.lower() in low]
     out.append(Finding(truc_named == [facts.truc_name], "FACT",
