@@ -227,8 +227,8 @@ def menh_tue_sai(cung: str) -> Draft:
     chom = T.chom_of(m, d)
     S = T.SOURCED
     lech = chom != cung
-    hook = (f"Sinh ngày {d} tháng {m} là {cung}, nhưng hôm đó Mặt Trời lại đứng trước chòm {chom}."
-            if lech else f"Sinh ngày {d} tháng {m} là {cung}, nhưng cung và chòm sao không phải một.")
+    hook = (f"{cung}: sinh ngày {d} tháng {m}, nhưng hôm đó Mặt Trời lại đứng trước chòm {chom}."
+            if lech else f"{cung}: sinh ngày {d} tháng {m}, nhưng cung và chòm sao không phải một.")
     s = [hook,
          "Người Babylon chia hoàng đạo thành mười hai phần bằng nhau.",
          "Nhưng chòm thật to nhỏ khác nhau: Xử Nữ khoảng bốn mươi lăm ngày, Bọ Cạp chỉ khoảng bảy.",
@@ -259,13 +259,70 @@ MENH_ROTATION = [("tue_sai", n) for n, _ in T.CUNG[6:] + T.CUNG[:6]]   # bắt �
 
 
 # ═══ Vòng xoay + lịch sử ══════════════════════════════════════════════════
+#
+# Mỗi pillar = nhiều LOẠI chủ đề xếp XEN KẼ (round-robin), để ngày liền nhau
+# không bao giờ cùng góc. Loại HẰNG NGÀY chỉ dùng khi không còn chủ đề cố
+# định nào hợp lệ -- nó gắn với lịch thật nên không bao giờ cạn.
 
-_BUILD = {
-    ("giap", "xung"): giap_xung, ("tru", "nhat_chu"): lambda _: tru_nhat_chu(),
-    ("tru", "thap_than"): tru_thap_than, ("dich", "thai_bi"): lambda _: dich_thai_bi(),
-    ("menh", "tue_sai"): menh_tue_sai,
-}
-ROTATION = {"giap": GIAP_ROTATION, "tru": TRU_ROTATION, "dich": DICH_ROTATION, "menh": MENH_ROTATION}
+from itertools import zip_longest  # noqa: E402
+
+from factory.pillars import expand as X  # noqa: E402
+
+
+def _rr(*kinds):
+    """Xen kẽ các danh sách: a1 b1 c1 a2 b2 c2 ..."""
+    return [f for grp in zip_longest(*kinds) for f in grp if f is not None]
+
+
+def _giap():
+    chi = [c.name for c in T.CHI]
+    pairs = [(a, b) for i, a in enumerate(chi) for b in chi[i + 1:]]
+    return _rr([lambda c=c: giap_xung(c) for c in ("Tý", "Thìn", "Dần", "Sửu", "Mão", "Tỵ")],
+               [lambda c=c: X.giap_ho_so(c) for c in chi],
+               [lambda c=c: X.giap_hop(c) for c in ("Tý", "Dần", "Mão", "Thìn", "Tỵ", "Ngọ")],
+               [lambda a=a, b=b: X.giap_cap(a, b) for a, b in pairs],
+               [lambda g=g: X.giap_tam_hop(g) for g in T.TAM_HOP],
+               [lambda c=c: X.giap_hai(c) for c in ("Tý", "Sửu", "Dần", "Mão", "Thân", "Dậu")],
+               [lambda g=g: X.giap_tu_hanh_xung(g) for g in T.TU_HANH_XUNG])
+
+
+def _tru():
+    return _rr([tru_nhat_chu] + [lambda g=g: tru_thap_than(g) for g in ("tai", "quan", "thuc", "an", "ty")],
+               [lambda c=c: X.tru_can(c) for c in T.CAN_NAMES],
+               [lambda g=g, e=e: X.tru_nhom(g, e) for e in T.CAN_NAMES for g in X._GR
+                if (g, e) not in {("tai", "Bính"), ("quan", "Nhâm"), ("an", "Canh"), ("thuc", "Giáp"), ("ty", "Mậu")}],
+               [lambda i=i: X.tru_can_hop(i) for i in range(5)],
+               [lambda c=c.name: X.tru_tang_can(c) for c in T.CHI])
+
+
+def _dich():
+    ntt = sorted(int(k) for k in X._ntt())
+    return _rr([dich_thai_bi] + [lambda n=n: X.dich_ten(n) for n in range(1, 65)],
+               [lambda n=n, p=p: X.dich_hao(n, p) for n in ntt for p in range(1, 7)],
+               [lambda q=q: X.dich_quai(q) for q in T.QUAI] + [lambda n=n: X.dich_quai_tu(n) for n in ntt],
+               [lambda n=n: X.dich_tuong(n) for n in ntt] + [lambda n=n: X.dich_ho(n) for n in range(1, 65)],
+               [lambda n=n, p=p: X.dich_bien(n, p) for n in range(1, 65) for p in range(1, 7)])
+
+
+def _menh():
+    return _rr([lambda c=n: menh_tue_sai(c) for n, _ in T.CUNG[6:] + T.CUNG[:6]],
+               [lambda j=j: X.menh_nap_am(j) for j in range(30)],
+               [lambda i=i: X.menh_tu(i) for i in range(28)],
+               [lambda k=k: X.menh_nguyen_to(k) for k in range(4)]
+               + [lambda k=k: X.menh_tinh_chat(k) for k in range(3)],
+               [lambda s=s: X.menh_chu_quan(s) for s in dict.fromkeys(T.CHU_QUAN.values())])
+
+
+CANDIDATES = {"giap": _giap, "tru": _tru, "dich": _dich, "menh": _menh}
+# Nhiều góc hằng ngày, luân phiên theo ngày (ordinal % số góc).
+DAILY = {"giap": [X.giap_xung_ngay, X.giap_hop_ngay],
+         "tru": [X.tru_can_ngay, X.tru_nap_am_ngay, X.tru_tang_ngay],
+         "menh": [X.menh_tu_ngay, X.menh_cung_ngay]}
+
+
+def all_drafts(pillar: str) -> list[Draft]:
+    """Mọi chủ đề cố định của pillar (bỏ những cái không dựng được vì thiếu nguồn)."""
+    return [d for f in CANDIDATES[pillar]() if (d := f()) is not None]
 
 
 def load_history(bundle_dir: Path) -> list[dict]:
@@ -285,11 +342,29 @@ def load_history(bundle_dir: Path) -> list[dict]:
     return sorted(out, key=lambda h: h["publish_at"])
 
 
-def next_draft(pillar: str, history: list[dict]) -> tuple[Draft | None, list[str]]:
-    """Chủ đề kế tiếp chưa làm. Trả (draft, lý do các chủ đề bị bỏ)."""
-    done = {h["key"] for h in history if h["pillar"] == pillar}
-    for kind, arg in ROTATION[pillar]:
-        d = _BUILD[(pillar, kind)](arg)
-        if d.key not in done:
+def next_draft(pillar: str, history: list[dict], day=None) -> tuple[Draft | None, list[str]]:
+    """Chủ đề kế tiếp: chưa làm, và KHÁC GÓC với 3 bài gần nhất của pillar.
+
+    Hết chủ đề cố định hợp lệ thì dùng loại hằng ngày của `day`."""
+    from factory.pillars.check import check, verdict
+    same = [h for h in history if h["pillar"] == pillar]
+    done = {h["key"] for h in same}
+    from factory.pillars.check import ANGLE_GAP
+    recent = {h["angle"] for h in same[-ANGLE_GAP:]}
+    for f in CANDIDATES[pillar]():
+        d = f()
+        if d is None or d.key in done or d.angle in recent:
+            continue
+        # Chỉ trả bản ĐÃ qua bộ kiểm (độ dài, mở bài trùng với lịch sử...).
+        # Bản trượt thì bỏ qua, lấy chủ đề sau -- không cắt bừa, không sửa tay.
+        if verdict(check(d, ALL_NAMES, history)):
             return d, []
-    return None, [f"{pillar}: hết chủ đề đủ nguồn — {', '.join(T.CAN_XAC_MINH)}"]
+    if day is not None and pillar in DAILY:
+        from factory.lunar import facts_for
+        fx = facts_for(day)
+        n = len(DAILY[pillar])
+        for k in range(n):
+            d = DAILY[pillar][(day.toordinal() + k) % n](day, fx)
+            if d is not None and d.key not in done and verdict(check(d, ALL_NAMES, history)):
+                return d, []
+    return None, [f"{pillar}: hết chủ đề hợp lệ — cần thêm nguồn ({', '.join(T.CAN_XAC_MINH)})"]

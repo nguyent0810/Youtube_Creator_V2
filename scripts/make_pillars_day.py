@@ -41,7 +41,7 @@ DRY = "--dry" in sys.argv
 history = P.load_history(store.BUNDLE_DIR)
 made, blocked = [], []
 for pillar, (prefix, hhmm, feel) in P.PILLARS.items():
-    d, why = P.next_draft(pillar, history)
+    d, why = P.next_draft(pillar, history, day)
     if d is None:
         blocked += why
         continue

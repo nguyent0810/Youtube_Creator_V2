@@ -22,7 +22,15 @@ from factory.claims import SPECULATIVE
 
 MIN_WORDS, MAX_WORDS = 65, 90
 MAX_HOOK_WORDS, MAX_CLOSER_WORDS = 22, 14
-OPENING_WORDS = 4
+OPENING_WORDS = 5   # 5 để ngày + tháng của loại hằng ngày nằm trong phần so
+# Người xem hằng ngày nhớ vài tháng gần đây, không nhớ vài năm: so mở bài với
+# ~400 bài gần nhất (≈ 80 ngày × 5 bài). Loại hằng ngày mới lặp lại được sau
+# một năm mà không bị chặn vĩnh viễn.
+OPENING_WINDOW = 400
+# Góc khai thác không được trùng với 2 bài gần nhất của cùng pillar. (Ban đầu
+# là 3, nhưng mô phỏng 400 ngày cho thấy khi một pillar chỉ còn 3 loại chủ đề
+# thì luật 3 không thể thoả -> pillar bị chặn dù còn hàng trăm chủ đề.)
+ANGLE_GAP = 2
 
 # Không khẳng định mệnh lý/chiêm tinh là khoa học; không hứa hẹn kết quả.
 BANNED = ABSOLUTE + SUPERLATIVE + SPECULATIVE + (
@@ -31,11 +39,11 @@ BANNED = ABSOLUTE + SUPERLATIVE + SPECULATIVE + (
 
 # Hook phải có ít nhất một: câu hỏi, nghịch lý, đối lập, điều tưởng sai.
 HOOK_MARKERS = ("?", "chưa chắc", "vậy mà", "nhưng", "lại", "tưởng",
-                "ngược", "không phải", "mới là")
+                "ngược", "không phải", "mới là", "trong khi", "còn")
 
 # Câu diễn giải truyền thống phải tự nói rõ đó là quan niệm, không phải fact.
 HEDGES = ("theo cách luận", "truyền thống", "quan niệm", "trong lịch pháp",
-          "theo", "được xem", "thường được", "xếp", "gọi là", "có thể", "thường gọi")
+          "theo", "được xem", "thường được", "xếp", "gọi", "có thể", "thường")
 
 
 def _norm(s: str) -> str:
@@ -78,6 +86,10 @@ def sentences(script: str) -> list[str]:
     return [s.strip() for s in _SENT.split(script.strip()) if s.strip()]
 
 
+def _is_cta(s: str) -> bool:
+    return s.endswith("?") or any(k in s.lower() for k in ("comment", "bình luận", "video sau", "tập sau"))
+
+
 def check(d: Draft, all_names: set[str], history: list[dict]) -> list[Finding]:
     out: list[Finding] = []
     sents = sentences(d.script)
@@ -92,8 +104,12 @@ def check(d: Draft, all_names: set[str], history: list[dict]) -> list[Finding]:
                        if missing else "mọi claim đều có mặt trong script"))
 
     # Câu trần thuật không có claim đứng sau = tự bịa.
-    orphan = [s for s in sents[1:] if not s.endswith("?")
-              and not any(_norm(c.fragment) in _norm(s) for c in d.claims)]
+    # Câu chốt mời tương tác (câu cuối) không mang dữ kiện -> miễn. Một câu có
+    # thể là MẢNH của một trích dẫn dài nhiều câu -> nằm trong fragment là đủ.
+    body = sents[1:-1] if sents and _is_cta(sents[-1]) else sents[1:]
+    orphan = [s for s in body if not s.endswith("?")
+              and not any(_norm(c.fragment) in _norm(s) or _norm(s.rstrip(".")) in _norm(c.fragment)
+                          for c in d.claims)]
     out.append(Finding(not orphan, "FACT", f"câu không có căn cứ: {orphan}"
                        if orphan else "mọi câu trần thuật đều có căn cứ"))
 
@@ -140,14 +156,15 @@ def check(d: Draft, all_names: set[str], history: list[dict]) -> list[Finding]:
     out.append(Finding(not dup_key, "ĐỘ MỚI", f"chủ đề đã làm: {dup_key}" if dup_key
                        else f"chủ đề mới (lịch sử pillar: {len(same)} bài)"))
     op = " ".join(d.script.split()[:OPENING_WORDS]).lower()
-    dup_op = [h["key"] for h in history
+    dup_op = [h["key"] for h in history[-OPENING_WINDOW:]
               if " ".join(h["script"].split()[:OPENING_WORDS]).lower() == op]
     out.append(Finding(not dup_op, "ĐỘ MỚI", f"mở bài trùng: {dup_op}" if dup_op
                        else "mở bài chưa dùng"))
-    recent = [h["angle"] for h in same[-3:]]
-    out.append(Finding(d.angle not in recent, "ĐỘ MỚI",
-                       f"góc '{d.angle}' vừa dùng trong 3 bài gần nhất" if d.angle in recent
-                       else f"góc '{d.angle}' khác 3 bài gần nhất"))
+    recent = [h["angle"] for h in same[-ANGLE_GAP:]]
+    # Loại hằng ngày gắn với lịch thật, nội dung đổi theo ngày -> miễn luật góc.
+    out.append(Finding(d.angle not in recent or d.angle.startswith("hằng ngày"), "ĐỘ MỚI",
+                       f"góc '{d.angle}' vừa dùng trong {ANGLE_GAP} bài gần nhất" if d.angle in recent
+                       else f"góc '{d.angle}' khác {ANGLE_GAP} bài gần nhất"))
 
     # ─── ĐỘ DÀI ───────────────────────────────────────────────────────────
     out.append(Finding(MIN_WORDS <= words <= MAX_WORDS, "ĐỘ DÀI",

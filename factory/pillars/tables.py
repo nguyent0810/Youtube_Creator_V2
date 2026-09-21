@@ -248,3 +248,123 @@ CAN_XAC_MINH = {
     "lời quẻ 60 quẻ còn lại": "Mới đối chiếu Thái, Bĩ. Quẻ khác cần lấy nguyên văn "
                               "Wikisource trước khi viết.",
 }
+
+
+# ═══ MỞ RỘNG (21/09/2026) — dữ liệu cho vòng chủ đề dài hạn ═══════════════
+
+# Tháng âm của từng chi: tháng Giêng là tháng Dần, không phải tháng Tý.
+THANG_AM = {c.name: (c.i - 2) % 12 + 1 for c in CHI}
+
+
+def tu_hanh_xung(*names: str) -> bool:
+    """Bốn chi cách đều nhau 3 vị trí = hai cặp xung đan chéo."""
+    ix = sorted(CHI_BY[n].i for n in names)
+    return len(set(ix)) == 4 and all(ix[k + 1] - ix[k] == 3 for k in range(3))
+
+
+TAM_HOP = tuple(tuple(CHI[(s + 4 * k) % 12].name for k in range(3)) for s in (8, 11, 2, 5))
+# Cục mang hành của chi GIỮA (chi vượng): Thân Tý Thìn -> Tý -> Thủy.
+TAM_HOP_CUC = {g: CHI_BY[g[1]].hanh for g in TAM_HOP}
+TU_HANH_XUNG = tuple(tuple(CHI[s + 3 * k].name for k in range(4)) for s in (2, 0, 1))
+
+# Tàng can: can ẩn trong chi (bản khí trước).
+TANG_CAN = {"Tý": ("Quý",), "Sửu": ("Kỷ", "Quý", "Tân"), "Dần": ("Giáp", "Bính", "Mậu"),
+            "Mão": ("Ất",), "Thìn": ("Mậu", "Ất", "Quý"), "Tỵ": ("Bính", "Canh", "Mậu"),
+            "Ngọ": ("Đinh", "Kỷ"), "Mùi": ("Kỷ", "Đinh", "Ất"), "Thân": ("Canh", "Nhâm", "Mậu"),
+            "Dậu": ("Tân",), "Tuất": ("Mậu", "Tân", "Đinh"), "Hợi": ("Nhâm", "Giáp")}
+CAN_NAMES = tuple(n for n, _, _ in CAN)
+
+
+def can_hop(a: str, b: str) -> bool:
+    return abs(CAN_NAMES.index(a) - CAN_NAMES.index(b)) == 5
+
+
+# Hợp hoá: Giáp Kỷ -> Thổ, Ất Canh -> Kim, Bính Tân -> Thủy, Đinh Nhâm -> Mộc, Mậu Quý -> Hỏa
+CAN_HOP_HOA = {CAN_NAMES[i]: ("Thổ", "Kim", "Thủy", "Mộc", "Hỏa")[i] for i in range(5)}
+
+
+def can_xung(a: str, b: str) -> bool:
+    """Cách 6, cùng âm dương, khắc nhau. Mậu Kỷ ở giữa, không có cặp xung."""
+    ia, ib = CAN_NAMES.index(a), CAN_NAMES.index(b)
+    return abs(ia - ib) == 6 and "Mậu" not in (a, b) and "Kỷ" not in (a, b)
+
+
+# Nạp âm 60 hoa giáp -- KHÔNG lấy từ vnlunar (đã đo: sai, ví dụ Bính Tý ghi
+# Lộ Bàng Thổ thay vì Giản Hạ Thủy). Nguồn: zh-yue.wikipedia 納音.
+NAP_AM = ("Hải Trung Kim", "Lư Trung Hỏa", "Đại Lâm Mộc", "Lộ Bàng Thổ", "Kiếm Phong Kim",
+          "Sơn Đầu Hỏa", "Giản Hạ Thủy", "Thành Đầu Thổ", "Bạch Lạp Kim", "Dương Liễu Mộc",
+          "Tuyền Trung Thủy", "Ốc Thượng Thổ", "Tích Lịch Hỏa", "Tùng Bách Mộc", "Trường Lưu Thủy",
+          "Sa Trung Kim", "Sơn Hạ Hỏa", "Bình Địa Mộc", "Bích Thượng Thổ", "Kim Bạch Kim",
+          "Phú Đăng Hỏa", "Thiên Hà Thủy", "Đại Trạch Thổ", "Thoa Xuyến Kim", "Tang Đố Mộc",
+          "Đại Khê Thủy", "Sa Trung Thổ", "Thiên Thượng Hỏa", "Thạch Lựu Mộc", "Đại Hải Thủy")
+NAP_AM_HANH = {n: n.split()[-1] for n in NAP_AM}
+
+
+def can_chi_60(k: int) -> str:
+    return f"{CAN_NAMES[k % 10]} {CHI[k % 12].name}"
+
+
+def year_index(y: int) -> int:
+    return (y - 4) % 60          # 1984 = Giáp Tý = 0
+
+
+def nap_am_of(k: int) -> str:
+    return NAP_AM[(k % 60) // 2]
+
+
+# 28 tú -- KHÔNG lấy con vật từ vnlunar (đã đo: sai 5 tú, vd Đẩu ghi "Hề",
+# Tỉnh ghi "Dẫn"). Nguồn: zh.wikipedia 二十八宿 (角木蛟 ... 軫水蚓).
+TU28 = tuple(zip(
+    "Giác Cang Đê Phòng Tâm Vĩ Cơ Đẩu Ngưu Nữ Hư Nguy Thất Bích Khuê Lâu Vị Mão Tất Chủy Sâm "
+    "Tỉnh Quỷ Liễu Tinh Trương Dực Chẩn".split(),
+    ("Mộc", "Kim", "Thổ", "Nhật", "Nguyệt", "Hỏa", "Thủy") * 4,
+    ("Giao long", "Rồng", "Lạc", "Thỏ", "Cáo", "Hổ", "Báo", "Giải trãi", "Trâu", "Dơi", "Chuột",
+     "Én", "Lợn", "Du", "Sói", "Chó", "Trĩ", "Gà", "Quạ", "Khỉ", "Vượn", "Hãn", "Dê", "Hoẵng",
+     "Ngựa", "Hươu", "Rắn", "Giun"),
+))
+TU_PHUONG = ("phương Đông", "phương Bắc", "phương Tây", "phương Nam")
+TU_TUONG = ("Thanh Long", "Huyền Vũ", "Bạch Hổ", "Chu Tước")
+TU_BY = {n: (i, h, a) for i, (n, h, a) in enumerate(TU28)}
+
+# Chiêm tinh phương Tây: nguyên tố, tính chất, sao chủ quản cổ điển.
+CUNG_NAMES = tuple(n for n, _ in CUNG)
+NGUYEN_TO = {n: ("Lửa", "Đất", "Khí", "Nước")[i % 4] for i, n in enumerate(CUNG_NAMES)}
+TINH_CHAT = {n: ("Tiên phong", "Kiên định", "Linh hoạt")[i % 3] for i, n in enumerate(CUNG_NAMES)}
+CHU_QUAN = dict(zip(CUNG_NAMES, ("sao Hỏa", "sao Kim", "sao Thủy", "Mặt Trăng", "Mặt Trời",
+                                 "sao Thủy", "sao Kim", "sao Hỏa", "sao Mộc", "sao Thổ",
+                                 "sao Thổ", "sao Mộc")))
+# Tiên phong = bốn cung mở đầu ở xuân phân, hạ chí, thu phân, đông chí.
+TIET_KHI_MO_DAU = {"Bạch Dương": "xuân phân", "Cự Giải": "hạ chí",
+                   "Thiên Bình": "thu phân", "Ma Kết": "đông chí"}
+
+SOURCED.update({s.key: s for s in (
+    Sourced("tu28", "角木蛟 亢金龍 氐土貉 ... 翼火蛇 軫水蚓", "28 tú, con vật và thất diệu",
+            "https://zh.wikipedia.org/wiki/二十八宿"),
+    Sourced("napam", "甲子乙丑海中金 ... 壬戌癸亥大海水", "bảng nạp âm 60 hoa giáp",
+            "https://zh-yue.wikipedia.org/wiki/納音"),
+    Sourced("ntt", "Kinh Dịch — Ngô Tất Tố dịch", "bản dịch Kinh Dịch của Ngô Tất Tố",
+            "https://vi.wikisource.org/wiki/Kinh_Dịch"),
+)})
+
+# vnlunar viết 參 là "Thâm"; tên phổ thông là Sâm.
+TU_ALIAS = {"Thâm": "Sâm"}
+SOURCED["hetu.duongquai"] = Sourced(
+    "hetu.duongquai", "陽卦多陰，陰卦多陽，其故何也？陽卦奇，陰卦偶。",
+    "quái dương nhiều hào âm, quái âm nhiều hào dương; quái dương lẻ, quái âm chẵn",
+    "https://zh.wikisource.org/wiki/周易/繫辭下 (Hệ từ hạ)")
+
+
+def ho_quai(q: Que) -> Que:
+    """Hỗ quái: hào 2-3-4 làm quái dưới, 3-4-5 làm quái trên."""
+    h = q.hao
+    return _BY_HAO[h[1:4] + h[2:5]]
+
+
+def bien_quai(q: Que, pos: int) -> Que:
+    h = list(q.hao)
+    h[pos - 1] = 1 - h[pos - 1]
+    return _BY_HAO[tuple(h)]
+
+
+def can_chi_60_index(cc: str) -> int:
+    return next(i for i in range(60) if can_chi_60(i) == cc)

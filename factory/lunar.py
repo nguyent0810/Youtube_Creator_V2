@@ -86,6 +86,12 @@ class DayFacts:
         return f"lich-{self.target.strftime('%Y%m%d')}"
 
 
+def _tu_animal(name: str, fallback: str) -> str:
+    from factory.pillars.tables import TU_ALIAS, TU_BY
+    name = TU_ALIAS.get(name, name)
+    return TU_BY[name][2] if name in TU_BY else fallback
+
+
 def facts_for(target: date) -> DayFacts:
     import vnlunar
     info = vnlunar.get_full_info(target.day, target.month, target.year)
@@ -107,7 +113,10 @@ def facts_for(target: date) -> DayFacts:
         star_desc=stars.get("description", ""),
         mansion_name=mansion.get("name", ""),
         mansion_good=bool(mansion.get("good")),
-        mansion_animal=mansion.get("animal", ""),
+        # Con vật của tú KHÔNG lấy từ vnlunar: đã đo sai 5/28 tú ("Dẫn", "Nhén",
+        # "Lễ", "Hề", "Chốc") và 11 video Lịch đã đăng đọc sai. Dùng bảng đã
+        # đối chiếu zh.wikipedia 二十八宿 (factory/pillars/tables.TU28).
+        mansion_animal=_tu_animal(mansion.get("name", ""), mansion.get("animal", "")),
         mansion_element=mansion.get("element", ""),
         day_of_week=(info.get("solar") or {}).get("day_of_week", ""),
         nayin_name=(info.get("nayin") or {}).get("name", ""),
