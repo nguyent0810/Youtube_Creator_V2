@@ -149,6 +149,51 @@ class PexelsPhotoProvider:
         self._client.close()
 
 
+# ─── Lọc kết quả Pexels ───────────────────────────────────────────────────
+#
+# LỖI THẬT (21/09/2026, dựng thử 4 pillar): với từ khoá trừu tượng, Pexels
+# trả về tượng thần Ganesha cho bài mệnh lý, máy bay cho bài quẻ Thái, cờ Mỹ,
+# bảng chữ Scrabble. Không bộ kiểm chữ nào thấy -- chỉ lộ khi nhìn khung hình.
+#
+# Pexels không trả mô tả trong StockClip, nhưng URL trang có slug mô tả:
+#   https://www.pexels.com/photo/red-and-white-flag-12345/
+# Lọc hai lớp trên slug đó:
+#   1. CẤM: chủ thể lạc tông kênh (cờ, phương tiện, biểu tượng tôn giáo
+#      khác, chữ viết -- chữ Latin trên hình đè lên caption tiếng Việt).
+#   2. LIÊN QUAN: slug phải chứa ít nhất một từ nội dung của query.
+# Không còn gì sau lớp 2 thì chỉ giữ lớp 1 -- thà hình chung chung còn hơn
+# trống cảnh; lớp cấm thì không bao giờ nới.
+
+import re as _re
+
+BLOCK_TERMS = (
+    "flag", "airplane", "aeroplane", "plane", "aircraft", "airport", "car", "truck", "bus",
+    "ganesha", "hindu", "shiva", "jesus", "church", "cross", "christmas", "mosque", "bible",
+    "scrabble", "letter", "letters", "text", "word", "words", "alphabet", "sign", "logo",
+    "newspaper", "typewriter", "halloween", "protest", "gun", "weapon", "bikini", "lingerie",
+    "beer", "wine", "cocktail", "cigarette", "smoking", "usa", "american", "trump", "election",
+    "grasshopper", "insect", "spider", "bug", "skull", "blood",
+)
+_STOP = {"and", "the", "with", "close", "detail", "view", "old", "from", "into", "over",
+         "shot", "background", "portrait", "slow", "motion"}
+
+
+def _slug_words(clip) -> set[str]:
+    url = getattr(clip, "source_page_url", "") or ""
+    tail = url.rstrip("/").rsplit("/", 1)[-1]
+    return {w for w in _re.split(r"[^a-z]+", tail.lower()) if w and not w.isdigit()}
+
+
+def filter_clips(clips: list, query: str) -> list:
+    words = [_slug_words(c) for c in clips]
+    safe = [(c, w) for c, w in zip(clips, words) if not (w & set(BLOCK_TERMS))]
+    q = {t for t in _re.split(r"[^a-z]+", query.lower()) if len(t) >= 4 and t not in _STOP}
+    # so khớp gốc từ thô: "lanterns" khớp "lantern"
+    rel = [c for c, w in safe if any(any(x.startswith(t[:5]) or t.startswith(x[:5])
+                                         for x in w if len(x) >= 4) for t in q)]
+    return rel or [c for c, _ in safe]
+
+
 class CompositeProvider:
     """Trộn nhiều nguồn, luân phiên theo THỨ TỰ CẢNH.
 
@@ -185,14 +230,14 @@ class CompositeProvider:
     def search(self, query: str, orientation: str = "portrait", per_page: int = 15):
         provider = self._pick()
         self._scene += 1
-        clips = provider.search(query, orientation=orientation, per_page=per_page)
+        clips = filter_clips(provider.search(query, orientation=orientation, per_page=per_page), query)
         # Nhớ clip nào thuộc provider nào -- download() phải gọi đúng nguồn
         # đã tìm ra nó, vì cách tải ảnh và tải video khác hẳn nhau.
         for c in clips:
             self._by_id[c.id] = provider
         if not clips and len(self._providers) > 1:
             other = next(p for p in self._providers if p is not provider)
-            clips = other.search(query, orientation=orientation, per_page=per_page)
+            clips = filter_clips(other.search(query, orientation=orientation, per_page=per_page), query)
             for c in clips:
                 self._by_id[c.id] = other
         return clips

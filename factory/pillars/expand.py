@@ -58,8 +58,23 @@ def C(fragment, verify, basis, kind="table"):
     return Claim(fragment.rstrip("."), verify if callable(verify) else (lambda v=verify: v), basis, kind)
 
 
+BROLL_PER_VIDEO = 6
+
+
+def pick_broll(pool: list[str], key: str, n: int = BROLL_PER_VIDEO) -> list[str]:
+    """Chọn n từ khoá từ kho của pillar, XOAY theo chủ đề.
+
+    LỖI THẬT (dựng thử 12 video): mỗi dòng chỉ có 6 từ khoá dùng y hệt mọi
+    bài, Pexels trả cùng kết quả đầu -> cùng một clip đèn lồng ở 4 video
+    liền. Kho 14 từ khoá + điểm bắt đầu theo hash của chủ đề -> hai bài liền
+    nhau hiếm khi chung bộ hình."""
+    k = int(hashlib.sha256(key.encode()).hexdigest(), 16) % len(pool)
+    return [pool[(k + i * 5) % len(pool)] for i in range(n)]    # bước 5, nguyên tố cùng 14
+
+
 def _draft(pillar, key, title, sents, claims, sources, broll, angle, names):
-    return Draft(pillar, key, title, " ".join(sents), claims, sources, broll, angle, set(names))
+    return Draft(pillar, key, title, " ".join(sents), claims, sources, pick_broll(broll, key),
+                 angle, set(names))
 
 
 HEDGE_GIAP = "Đây là quan hệ trong lịch pháp, không phải lời phán hai tuổi tốt hay xấu."
@@ -67,8 +82,12 @@ CL_GIAP = ["Nhà bạn có cặp này không?", "Bạn thuộc tuổi nào trong
            "Comment tuổi của bạn nhé.", "Bạn muốn xem cặp tuổi nào tiếp theo?"]
 CL_BO = ["Nhà bạn có ai thuộc nhóm này không?", "Bạn thuộc nhóm nào?", "Comment tuổi của bạn nhé."]
 SRC_CHI = "Bảng 12 địa chi: giờ, phương, hành, tháng âm (factory/pillars/tables.py)"
-BR_GIAP = ["chinese zodiac statues", "old compass close up", "lunar calendar pages",
-           "family portrait vietnamese"]
+# Từ khoá phải là VẬT CỤ THỂ Pexels có nhiều ảnh -- từ trừu tượng ("balance",
+# "horizon") trả về hình ngẫu nhiên. Đủ 6 để không lặp cảnh.
+BR_GIAP = ["chinese zodiac figurines", "red paper lanterns", "antique brass compass",
+           "vintage clock face", "lunar new year decoration", "incense smoke temple",
+           "hourglass sand", "old pocket watch", "red envelope lucky money", "paper fan chinese",
+           "sunrise over pagoda", "chinese knot red", "dragon statue stone", "temple gate asia"]
 
 
 # ═══ 12 CON GIÁP ══════════════════════════════════════════════════════════
@@ -235,8 +254,10 @@ def giap_xung_ngay(day: date, facts) -> Draft:
 # ═══ LỤC TRỤ MỆNH LÝ ══════════════════════════════════════════════════════
 
 SRC_TRU = "Thập thần, can hợp/xung, tàng can — suy từ ngũ hành + âm dương (factory/pillars/tables.py)"
-BR_TRU = ["chinese calligraphy brush", "old almanac book pages", "five elements symbols",
-          "balance scale close up"]
+BR_TRU = ["chinese calligraphy brush ink", "ink wash mountain painting", "red chinese seal stamp",
+          "tea ceremony hands", "old books stack", "zen stones stacked", "bonsai tree close up",
+          "inkstone and brush", "candle and old book", "wooden desk study lamp", "jade stone close up",
+          "bamboo leaves sunlight", "hot tea steam", "handwriting notebook pen"]
 CL_TRU = ["Nhật chủ của bạn là can gì?", "Bạn muốn xem khái niệm nào tiếp theo?",
           "Lá số của bạn có can này không?", "Comment Nhật chủ của bạn nhé."]
 _GR = {"tai": ("toi_khac", "Tài tinh", "của cải, những gì mình quản được"),
@@ -378,8 +399,10 @@ def tru_can_ngay(day: date, facts) -> Draft:
 
 HV = {"Càn": "Thiên", "Khôn": "Địa", "Chấn": "Lôi", "Tốn": "Phong", "Khảm": "Thủy",
       "Ly": "Hỏa", "Cấn": "Sơn", "Đoài": "Trạch"}
-BR_DICH = ["i ching coins close up", "ancient bamboo scroll", "misty mountain dawn",
-           "ink wash painting landscape"]
+BR_DICH = ["ancient chinese coins", "bamboo forest mist", "misty mountains sunrise",
+           "zen garden sand", "candle flame dark", "ink brush painting", "flowing river stones",
+           "thunderstorm lightning sky", "lake reflection mountain", "waterfall forest",
+           "fire flames dark background", "wind grass field", "clouds timelapse", "old scroll paper"]
 CL_TEN = ["Bạn muốn xem quẻ nào tiếp theo?", "Comment quẻ bạn muốn nghe nhé.",
           "Bạn đã từng gieo được quẻ này chưa?"]
 CL_DICH = ["Bạn đọc câu này theo nghĩa nào?", "Bạn muốn nghe quẻ nào tiếp theo?",
@@ -532,8 +555,10 @@ def dich_tuong(so: int) -> Draft | None:
 
 # ═══ MỆNH SỐ / HUYỀN HỌC ══════════════════════════════════════════════════
 
-BR_MENH = ["night sky stars timelapse", "zodiac wheel engraving", "ancient star map",
-           "astrolabe close up"]
+BR_MENH = ["starry night sky", "milky way galaxy", "telescope night sky",
+           "full moon close up", "astrolabe", "planet saturn", "sunset horizon sky",
+           "night sky timelapse", "crescent moon", "solar eclipse", "observatory dome",
+           "star trails", "earth from space", "sunrise sun rays"]
 CL_MENH = ["Cung của bạn thuộc nhóm nào?", "Comment cung của bạn nhé.",
            "Bạn muốn so sánh hệ nào tiếp theo?", "Bạn thấy hai hệ giống nhau ở đâu nữa?"]
 SRC_WEST = "Quy ước chiêm tinh phương Tây: nguyên tố, tính chất, sao chủ quản (factory/pillars/tables.py)"
@@ -748,7 +773,7 @@ def dich_quai(name: str) -> Draft:
           C(base[3], net == sum(1 if x else 2 for x in h), "đếm nét", "doctrine"),
           C(base[4], True, "bảng QUAI")]
     s = _fit(base, _pick(name, CL_TEN), [], cl)
-    return _draft("dich", f"quai-{name}", f"Quái {name}: {img}", s, cl, [S.url], BR_DICH, "bát quái", {name})
+    return _draft("dich", f"quai-{list(T.QUAI).index(name)}", f"Quái {name}: {img}", s, cl, [S.url], BR_DICH, "bát quái", {name})
 
 
 # ─── Hằng ngày, nhiều góc ─────────────────────────────────────────────────

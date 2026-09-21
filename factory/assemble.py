@@ -243,6 +243,7 @@ def _patched(timing: dict, broll_queries: list[str]):
     orig_transcribe = subtitle_job.transcribe_audio
     orig_keywords = assembly_job.extract_keywords_for_segments
     orig_manager = assembly_job.SubtitleModelManager
+    orig_translate = assembly_job.translate_vi_to_en
 
     def _no_whisper(*_a, **_kw):
         return transcript
@@ -275,7 +276,16 @@ def _patched(timing: dict, broll_queries: list[str]):
         def get_model(self, *a, **kw):
             return None
 
+    # LỖI THẬT (21/09/2026): assembly_job DỊCH MÁY câu thoại của từng cảnh
+    # (translate_vi_to_en) và dùng làm query ƯU TIÊN; query của ta chỉ là dự
+    # phòng. Hậu quả: "Can Giáp" -> lính mặc giáp cầm súng, "Bọ Cạp" -> bọ
+    # ngựa, "Trời dưới" -> máy bay -- và cả 92 video Lịch đã đăng chưa từng
+    # dùng broll_queries. Trả None -> đường ống rơi về sk.query = query của ta.
+    def _no_translate(*_a, **_kw):
+        return None
+
     subtitle_job.transcribe_audio = _no_whisper
+    assembly_job.translate_vi_to_en = _no_translate
     assembly_job.extract_keywords_for_segments = _explicit_queries
     assembly_job.SubtitleModelManager = _NoModelNeeded
     try:
@@ -284,6 +294,7 @@ def _patched(timing: dict, broll_queries: list[str]):
         subtitle_job.transcribe_audio = orig_transcribe
         assembly_job.extract_keywords_for_segments = orig_keywords
         assembly_job.SubtitleModelManager = orig_manager
+        assembly_job.translate_vi_to_en = orig_translate
 
 
 def assemble_short(bundle, wav_path: Path, timing: dict, out_path: Path,
@@ -334,7 +345,7 @@ def assemble_short(bundle, wav_path: Path, timing: dict, out_path: Path,
         with (
             _patched(timing, list(bundle.broll_queries)),
             _caption_border(caption_border),
-            _beat_text(timing, beat_colour_bgr, beat_text),
+            _beat_text(timing, beat_colour_bgr, beat_text, getattr(bundle, "thumbnail_text", "") or ""),
         ):
             result = run_assembly_job(job, on_warning=warnings.append)
     finally:
@@ -428,14 +439,19 @@ def _fit_beat(text: str) -> tuple[int, str]:
     return size, r"\N".join(chunks[:BEAT_MAX_LINES])
 
 
-def _beat_lines(timing: dict, colour_bgr: str) -> list[str]:
-    """Dialogue beat text cho câu đầu và câu cuối."""
+def _beat_lines(timing: dict, colour_bgr: str, hook_text: str = "") -> list[str]:
+    """Dialogue beat text cho câu đầu và câu cuối.
+
+    `hook_text` (Bundle.thumbnail_text) thay chữ của cảnh đầu nếu có. LỖI
+    THẬT: hook pillar dài tới 22 từ, ở cỡ chữ nhỏ nhất vẫn không vừa 3 dòng
+    nên bị cắt còn "…đứng trướ…". Tiêu đề ngắn thì vừa ở cỡ lớn."""
     segs = timing.get("segments") or []
     if len(segs) < 2:
         return []
     out = []
-    for seg in (segs[0], segs[-1]):
-        text = (seg.get("spoken") or seg["text"]).strip().rstrip(".")
+    for k, seg in enumerate((segs[0], segs[-1])):
+        text = (hook_text if k == 0 and hook_text.strip()
+                else (seg.get("spoken") or seg["text"])).strip().rstrip(".")
         text = text.replace("{", "").replace("}", "").replace("\n", " ")
         size, wrapped = _fit_beat(text)
         start, end = float(seg["start"]), float(seg["end"])
@@ -459,7 +475,7 @@ def _beat_lines(timing: dict, colour_bgr: str) -> list[str]:
 
 
 @contextmanager
-def _beat_text(timing: dict, colour_bgr: str, enabled: bool):
+def _beat_text(timing: dict, colour_bgr: str, enabled: bool, hook_text: str = ""):
     """Chèn beat text vào .ass NGAY SAU khi video-editor ghi xong nó.
 
     Bọc prepare_subtitles: để nó chạy y như cũ, rồi nối thêm dòng vào file
@@ -474,7 +490,7 @@ def _beat_text(timing: dict, colour_bgr: str, enabled: bool):
 
     def _with_beats(*a, **kw):
         artifacts = orig(*a, **kw)
-        lines = _beat_lines(timing, colour_bgr)
+        lines = _beat_lines(timing, colour_bgr, hook_text)
         if lines:
             path = Path(artifacts.ass_path)
             body = path.read_text(encoding="utf-8").rstrip("\n")

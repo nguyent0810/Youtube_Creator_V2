@@ -128,3 +128,19 @@ def test_menh_example_date_is_real():
     for name, _ in T.CUNG:
         d = P.menh_tue_sai(name)
         assert "ngày 31 tháng 9" not in d.script and "ngày 32" not in d.script
+
+
+def test_every_topic_makes_a_valid_bundle():
+    """Mô phỏng sức chứa không dựng Bundle nên bỏ sót slug có dấu
+    ("tru-nhom-tai-Giáp", "menh-chuquan-sao Hỏa") -- lộ ra khi sinh thật."""
+    from factory.bundle import Bundle, make_slug
+    slugs = set()
+    for pillar, (prefix, _, _) in P.PILLARS.items():
+        for d in P.all_drafts(pillar):
+            b = Bundle(channel="FS", kind="short", slug=f"{prefix}{make_slug(d.key)}", script=d.script,
+                       title=d.title, description=d.title, tags=["x"], thumbnail_text=d.title,
+                       publish_at="2026-10-01T04:30:00Z", voice="Anh Khôi", bgm="x.mp3",
+                       broll_queries=d.broll)
+            b.validate()
+            assert b.slug not in slugs, b.slug
+            slugs.add(b.slug)

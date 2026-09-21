@@ -17,6 +17,7 @@ from pathlib import Path
 
 from factory.pillars.check import Claim, Draft
 from factory.pillars import tables as T
+from factory.pillars import expand as X
 
 VN_NUM = ["", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín",
           "mười", "mười một", "mười hai"]
@@ -87,8 +88,7 @@ def giap_xung(a: str) -> Draft:
     script = " ".join([hook, *body, hedge, closer])
     return Draft("giap", f"xung-{T.CHI.index(A)}", f"Vì sao {a} và {b} xung nhau?", script,
                  claims, ["Bảng 12 địa chi, lục xung (factory/pillars/tables.py)"],
-                 ["vintage clock face close up", "compass on old map", "night sky to noon sun timelapse",
-                  "yin yang stones balance"], angle, {a, b})
+                 X.pick_broll(X.BR_GIAP, f"xung-{a}"), angle, {a, b})
 
 
 GIAP_ROTATION = [("xung", c) for c in ("Tý", "Thìn", "Dần", "Sửu", "Mão", "Tỵ")]
@@ -123,8 +123,7 @@ def tru_nhat_chu() -> Draft:
     ]
     return Draft("tru", "nhat-chu", "Nhật chủ mạnh chưa chắc đã tốt", " ".join(s), claims,
                  ["Nguyên tắc Tứ Trụ/Bát Tự: Nhật chủ, vượng suy, dụng thần (kiến thức nền, không trích cổ thư)"],
-                 ["balance scale close up", "calligraphy brush ink", "old chinese almanac pages",
-                  "five elements wood fire earth metal water"], "khái niệm nền", {ex})
+                 X.pick_broll(X.BR_TRU, "nhat-chu"), "khái niệm nền", {ex})
 
 
 _GROUPS = {  # rel, nhật chủ ví dụ, hook, câu quan niệm, tên nhóm
@@ -173,8 +172,7 @@ def tru_thap_than(g: str) -> Draft:
     s += [doctrine, f"Lá số của bạn có nhiều {gname} không?"]
     return Draft("tru", f"thap-than-{g}", f"{gname}: {ts} và {td}", " ".join(s), claims,
                  ["Thập thần suy từ ngũ hành + âm dương (factory/pillars/tables.py)"],
-                 ["chinese seal stamp ink", "coins on wooden table", "family gathering dinner",
-                  "student reading lamp night"], f"thập thần {g}", {ex, same, diff, ts, td})
+                 X.pick_broll(X.BR_TRU, f"thap-than-{g}"), f"thập thần {g}", {ex, same, diff, ts, td})
 
 
 TRU_ROTATION = [("nhat_chu", None)] + [("thap_than", g) for g in ("tai", "quan", "thuc", "an", "ty")]
@@ -210,8 +208,7 @@ def dich_thai_bi() -> Draft:
     ]
     return Draft("dich", "cap-thai-bi", "Trời trên Đất dưới lại là quẻ xấu?", " ".join(s), claims,
                  [S["thai.thoan"].url, S["bi.thoan"].url],
-                 ["i ching coins hexagram", "sky and earth horizon dawn", "flowing river rocks",
-                  "ancient bamboo scroll"], "cặp quẻ đối", {"Thái", "Bĩ"})
+                 X.pick_broll(X.BR_DICH, "cap-thai-bi"), "cặp quẻ đối", {"Thái", "Bĩ"})
 
 
 DICH_ROTATION = [("thai_bi", None)]   # quẻ khác: CAN_XAC_MINH -- cần nguyên văn trước
@@ -251,8 +248,7 @@ def menh_tue_sai(cung: str) -> Draft:
     names = {cung, chom, "Xử Nữ", "Bọ Cạp"}
     return Draft("menh", f"tue-sai-{T.CUNG.index((cung, (m0, d0)))}", f"{cung} mà Mặt Trời ở chòm {chom}?",
                  " ".join(s), claims, [S["nasa.virgo45"].url],
-                 ["night sky constellation timelapse", "zodiac wheel old engraving", "earth rotation space",
-                  "astronomer telescope silhouette"], "cung vs chòm", names)
+                 X.pick_broll(X.BR_MENH, f"tue-sai-{cung}"), "cung vs chòm", names)
 
 
 MENH_ROTATION = [("tue_sai", n) for n, _ in T.CUNG[6:] + T.CUNG[:6]]   # bắt đầu từ Thiên Bình (cuối 9)
@@ -266,7 +262,6 @@ MENH_ROTATION = [("tue_sai", n) for n, _ in T.CUNG[6:] + T.CUNG[:6]]   # bắt �
 
 from itertools import zip_longest  # noqa: E402
 
-from factory.pillars import expand as X  # noqa: E402
 
 
 def _rr(*kinds):

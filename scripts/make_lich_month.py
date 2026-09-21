@@ -42,8 +42,14 @@ BROLL = {
 start = date.fromisoformat(sys.argv[1]) if len(sys.argv) > 1 else date(2026, 10, 1)
 days = int(sys.argv[2]) if len(sys.argv) > 2 else 30
 
-made, skipped = [], []
+made, skipped, kept = [], [], []
 for f in facts_range(start, days):
+    # BẤT BIẾN: bundle đã có (có thể đã lên kênh) thì KHÔNG ghi đè. Khuôn câu
+    # đổi theo thời gian; ghi đè sẽ làm bundle lệch với video đang ở trên
+    # kênh (tiêu đề lệch -> verify báo sai, chống trùng theo tiêu đề hỏng).
+    if (store.BUNDLE_DIR / "FS" / f"{f.slug}.json").exists():
+        kept.append(f.slug)
+        continue
     sc = script_for(f)
     ok, text = report(sc["script"], f, f.publish_at, label=str(f.target))
     if not ok:
@@ -75,7 +81,7 @@ for f in facts_range(start, days):
 
 # KIỂM CHÉO CẢ LÔ trước khi đưa vào hàng đợi. Kiểm từng bundle riêng lẻ
 # không bao giờ thấy tiêu đề trùng -- lỗi đó đã làm mất 9 video.
-ok_batch, batch_text = report_batch([b for _, b, _ in made], label="LÔ")
+ok_batch, batch_text = report_batch([b for _, b, _ in made], label="LÔ") if made else (True, "LÔ  không có bundle mới")
 print(batch_text)
 if not ok_batch:
     sys.exit("DỪNG: lô không qua kiểm chéo. Không đưa vào hàng đợi.")
@@ -83,7 +89,7 @@ if not ok_batch:
 with store.connect() as conn:
     added, total = store.sync_from_disk(conn, channel="FS")
 
-print(f"Sinh {len(made)}/{days} bundle, hàng đợi thêm {added} (tổng {total})")
+print(f"Sinh {len(made)}/{days} bundle mới, giữ nguyên {len(kept)} đã có, hàng đợi thêm {added} (tổng {total})")
 if skipped:
     print(f"\nBỎ QUA {len(skipped)} ngày không qua đối chiếu:")
     for d, t in skipped:

@@ -37,7 +37,8 @@ MODE = sys.argv[1] if len(sys.argv) > 1 else "check"
 #
 # Hàng đợi là nơi mọi thứ dồn về, gồm cả thứ chỉ để thử. Bước đăng phải tự
 # lọc, không được cho rằng mọi thứ trong hàng đợi đều đáng đăng.
-SLUG_PREFIX = "lich-"
+# 21/09/2026: thêm 4 dòng pillar. Demo (mau-hop-menh-kim, ...) vẫn bị loại.
+SLUG_PREFIX = ("lich-", "giap-", "tru-", "dich-", "menh-")
 
 
 def _creds() -> dict:
@@ -58,7 +59,7 @@ def do_check() -> None:
         allr = store.next_batch(conn, "assembled", limit=500, channel=CHANNEL)
     rows = [r for r in allr if r["slug"].startswith(SLUG_PREFIX)]
     bỏ = [r["slug"] for r in allr if not r["slug"].startswith(SLUG_PREFIX)]
-    print(f"sẵn sàng đăng: {len(rows)} item (khớp {SLUG_PREFIX!r})")
+    print(f"sẵn sàng đăng: {len(rows)} item (khớp {', '.join(SLUG_PREFIX)})")
     if bỏ:
         print(f"BỎ QUA {len(bỏ)} item không khớp tiền tố: {bỏ}")
     titles = publish.channel_titles(up, tok)

@@ -3,6 +3,11 @@
     python scripts/run_pipeline.py 2026-12-01 31
     python scripts/run_pipeline.py 2026-12-01 31 --no-publish
     python scripts/run_pipeline.py resume     # chỉ rút hàng đợi + thử lại item hỏng
+    python scripts/run_pipeline.py 2026-10-02 30 --only pillars   # chỉ 4 dòng pillar
+    python scripts/run_pipeline.py 2026-10-02 30 --only lich      # chỉ Lịch
+
+Mặc định sinh CẢ 5 dòng cho dải ngày: Lịch + Con Giáp + Lục Trụ + Kinh Dịch
++ Mệnh số = 5 short/ngày.
 
 `resume` là lệnh cho lịch chạy định kỳ: không sinh gì mới, chỉ đưa item
 hỏng về đúng chặng rồi chạy tiếp mọi chặng. Item hoãn vì hết quota tự hiện
@@ -39,6 +44,7 @@ RESUME = len(sys.argv) > 1 and sys.argv[1] == "resume"
 start = sys.argv[1] if len(sys.argv) > 1 and not RESUME else "2026-12-01"
 days = sys.argv[2] if len(sys.argv) > 2 and not RESUME else "31"
 do_publish = "--no-publish" not in sys.argv
+ONLY = sys.argv[sys.argv.index("--only") + 1] if "--only" in sys.argv else "all"
 
 
 def run(label: str, py: Path, args: list[str]) -> float:
@@ -74,10 +80,14 @@ print(f"Thử lại {len(back)} item hỏng: {back[:5]}" if back else "Không c�
 if wait:
     print(f"Đang hoãn chờ quota: {len(wait)} item, tự chạy lại từ {wait[0]['retry_after']}")
 
-if not RESUME:
-    timings["1. sinh kịch bản"] = run(
-        "CHẶNG 1 — sinh kịch bản + kiểm từng bản + kiểm chéo lô",
+if not RESUME and ONLY in ("all", "lich"):
+    timings["1a. sinh Lịch"] = run(
+        "CHẶNG 1a — Lịch: sinh kịch bản + kiểm từng bản + kiểm chéo lô",
         PY_TTS, ["scripts/make_lich_month.py", start, days])
+if not RESUME and ONLY in ("all", "pillars"):
+    timings["1b. sinh 4 pillar"] = run(
+        "CHẶNG 1b — 4 pillar: chọn chủ đề theo lịch sử + kiểm + kiểm chéo",
+        PY_TTS, ["scripts/make_pillars_day.py", start, days])
 
 timings["2. TTS"] = run(
     "CHẶNG 2 — TTS (venv vieneu)",
@@ -104,5 +114,5 @@ for k, v in timings.items():
     print(f"  {k:24s} {v:6.0f}s  ({v / total:4.0%})")
 print(f"  {'TỔNG':24s} {total:6.0f}s  ({total / 60:.1f} phút)")
 if not RESUME:
-    n = int(days)
+    n = int(days) * (5 if ONLY == "all" else 4 if ONLY == "pillars" else 1)
     print(f"\n  {n} video → {total / n:.0f}s mỗi video")
