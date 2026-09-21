@@ -31,9 +31,14 @@ from __future__ import annotations
 
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 import httpx
+
+
+class _Transient(Exception):
+    """Lỗi tạm (429/5xx) -- đáng thử lại."""
 
 ROOT = Path(__file__).resolve().parent.parent
 VIDEO_TOOL_ROOT = ROOT.parent / "video-editor"
@@ -118,12 +123,24 @@ class PexelsPhotoProvider:
         dest_path.parent.mkdir(parents=True, exist_ok=True)
         tmp_img = dest_path.with_suffix(".src.jpg")
 
-        with self._client.stream("GET", clip.download_url) as r:
-            if r.status_code >= 400:
-                raise RuntimeError(f"tải ảnh lỗi {r.status_code}: {clip.download_url}")
-            with open(tmp_img, "wb") as fh:
-                for chunk in r.iter_bytes():
-                    fh.write(chunk)
+        # LỖI THẬT (lô 72 video, 21/09/2026): CDN ảnh Pexels trả 503 rải rác
+        # khi tải dồn dập -> 4/72 video hỏng cả, dù chỉ thiếu MỘT ảnh. Lỗi tạm
+        # (429/5xx, mạng) thì thử lại có giãn cách; lỗi 4xx khác thì bỏ ngay.
+        for attempt in range(4):
+            try:
+                with self._client.stream("GET", clip.download_url) as r:
+                    if r.status_code == 429 or r.status_code >= 500:
+                        raise _Transient(f"tải ảnh lỗi {r.status_code}: {clip.download_url}")
+                    if r.status_code >= 400:
+                        raise RuntimeError(f"tải ảnh lỗi {r.status_code}: {clip.download_url}")
+                    with open(tmp_img, "wb") as fh:
+                        for chunk in r.iter_bytes():
+                            fh.write(chunk)
+                break
+            except (_Transient, httpx.TransportError) as exc:
+                if attempt == 3:
+                    raise RuntimeError(f"{exc} (đã thử 4 lần)") from exc
+                time.sleep(2 * 3 ** attempt)        # 2s, 6s, 18s
 
         if not FFMPEG.exists():
             raise RuntimeError(f"không thấy ffmpeg vendored tại {FFMPEG}")
@@ -194,6 +211,43 @@ def filter_clips(clips: list, query: str) -> list:
     return rel or [c for c, _ in safe]
 
 
+# ─── Cache tìm kiếm ───────────────────────────────────────────────────────
+#
+# LỖI THẬT (lô 72 video, 21/09/2026): 15 video hỏng liền một khối với "No
+# stock footage ... even with the last-resort query". Hạn mức THÁNG còn
+# 23.857/25.000 -- không phải hết quota; đó là trần ~200 request/GIỜ của
+# Pexels (không hiện trong header). 72 video × 4-6 cảnh × (query + fallback)
+# = 400+ lượt tìm trong 20 phút.
+#
+# Nhưng cả kênh chỉ có ~56 từ khoá (14/dòng) -- tìm lại cùng một từ khoá
+# cho mỗi video là phí. Cache kết quả lên đĩa 7 ngày: một lô 72 video tốn
+# ~60 lượt tìm thay vì 400+, và sau đó gần như 0.
+import dataclasses as _dc
+import hashlib as _hl
+import json as _json
+import random as _random
+
+CACHE_DIR = ROOT / "cache" / "pexels"
+CACHE_TTL_SEC = 7 * 24 * 3600
+
+
+def _cached_search(provider, query: str, orientation: str, per_page: int) -> list:
+    _ensure_importable()
+    from core.stockfootage.models import StockClip
+    key = _hl.sha1(f"{provider.name}|{query}|{orientation}|{per_page}".encode()).hexdigest()[:20]
+    path = CACHE_DIR / f"{key}.json"
+    if path.exists() and time.time() - path.stat().st_mtime < CACHE_TTL_SEC:
+        try:
+            return [StockClip(**d) for d in _json.loads(path.read_text(encoding="utf-8"))]
+        except Exception:
+            pass                                   # cache hỏng -> tìm lại
+    clips = provider.search(query, orientation=orientation, per_page=per_page)
+    if clips:                                      # không cache kết quả rỗng (có thể do bị chặn)
+        CACHE_DIR.mkdir(parents=True, exist_ok=True)
+        path.write_text(_json.dumps([_dc.asdict(c) for c in clips], ensure_ascii=False), encoding="utf-8")
+    return clips
+
+
 class CompositeProvider:
     """Trộn nhiều nguồn, luân phiên theo THỨ TỰ CẢNH.
 
@@ -211,13 +265,16 @@ class CompositeProvider:
 
     name = "composite"
 
-    def __init__(self, providers: list, pattern: str = "vpvp"):
+    def __init__(self, providers: list, pattern: str = "vpvp", seed: str = ""):
         if not providers:
             raise ValueError("CompositeProvider cần ít nhất 1 nguồn")
         self._providers = providers
         self._pattern = pattern or "v"
         self._scene = 0
         self._by_id: dict[str, object] = {}
+        # Xáo kết quả theo từng video: cache trả cùng danh sách cho mọi video,
+        # không xáo thì video nào cũng lấy đúng clip đầu tiên.
+        self._rng = _random.Random(seed) if seed else None
 
     def _pick(self):
         kind = self._pattern[self._scene % len(self._pattern)]
@@ -230,14 +287,16 @@ class CompositeProvider:
     def search(self, query: str, orientation: str = "portrait", per_page: int = 15):
         provider = self._pick()
         self._scene += 1
-        clips = filter_clips(provider.search(query, orientation=orientation, per_page=per_page), query)
+        clips = filter_clips(_cached_search(provider, query, orientation, per_page), query)
+        if self._rng:
+            self._rng.shuffle(clips)
         # Nhớ clip nào thuộc provider nào -- download() phải gọi đúng nguồn
         # đã tìm ra nó, vì cách tải ảnh và tải video khác hẳn nhau.
         for c in clips:
             self._by_id[c.id] = provider
         if not clips and len(self._providers) > 1:
             other = next(p for p in self._providers if p is not provider)
-            clips = filter_clips(other.search(query, orientation=orientation, per_page=per_page), query)
+            clips = filter_clips(_cached_search(other, query, orientation, per_page), query)
             for c in clips:
                 self._by_id[c.id] = other
         return clips

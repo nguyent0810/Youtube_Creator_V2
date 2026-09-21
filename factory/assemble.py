@@ -323,6 +323,7 @@ def assemble_short(bundle, wav_path: Path, timing: dict, out_path: Path,
         [PexelsProvider(api_key=pexels_key),
          PexelsPhotoProvider(pexels_key, width=SHORT_WIDTH, height=SHORT_HEIGHT)],
         pattern=broll_pattern,
+        seed=getattr(bundle, "slug", ""),
     )
     try:
         job = AssemblyJob(
