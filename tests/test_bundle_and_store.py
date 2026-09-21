@@ -230,3 +230,65 @@ def test_corrupt_bundle_raises_instead_of_being_skipped(tmp_path):
     (bundles / "hong.json").write_text("{ khong phai json", encoding="utf-8")
     with pytest.raises(BundleInvalid):
         list(store.iter_bundles(base=tmp_path / "bundles"))
+
+
+# ─── Thử lại tự động ──────────────────────────────────────────────────────
+
+def test_requeue_returns_item_to_the_stage_that_failed(tmp_path):
+    """Hỏng lúc ĐĂNG thì thử lại lúc đăng -- không TTS + dựng lại từ đầu."""
+    b = _bundle()
+    with store.connect(tmp_path / "s.sqlite") as conn:
+        store.enqueue(b, conn)
+        store.mark(conn, b.id, "assembled", video_path="/x/y.mp4")
+        store.bump_attempt(conn, b.id, "mạng đứt")
+        assert store.requeue_failed(conn) == [b.slug]
+        assert [r["slug"] for r in store.next_batch(conn, "assembled")] == [b.slug]
+
+
+def test_requeue_infers_stage_for_legacy_rows(tmp_path):
+    """Item hỏng trước khi có cột fail_stage (như lich-20261231) vẫn phải
+    quay về đúng chặng, suy từ kết quả đã có."""
+    b = _bundle()
+    with store.connect(tmp_path / "s.sqlite") as conn:
+        store.enqueue(b, conn)
+        conn.execute("UPDATE item SET stage='failed', attempts=1, video_path='/v.mp4' "
+                     "WHERE id=?", (b.id,))
+        store.requeue_failed(conn)
+        assert conn.execute("SELECT stage FROM item").fetchone()[0] == "assembled"
+
+
+def test_requeue_respects_max_attempts(tmp_path):
+    b = _bundle()
+    with store.connect(tmp_path / "s.sqlite") as conn:
+        store.enqueue(b, conn)
+        for _ in range(3):
+            store.bump_attempt(conn, b.id, "hỏng thật")
+        assert store.requeue_failed(conn) == []
+
+
+def test_quota_defer_hides_item_without_counting_a_failure(tmp_path):
+    """Hết quota không phải lỗi của video. Ba ngày quota đầy liên tiếp mà
+    tính là ba lần hỏng thì một video hợp lệ bị loại vĩnh viễn."""
+    b = _bundle()
+    with store.connect(tmp_path / "s.sqlite") as conn:
+        store.enqueue(b, conn)
+        store.mark(conn, b.id, "assembled", video_path="/x.mp4")
+        store.defer(conn, b.id, "429", "2999-01-01T00:00:00Z")
+        assert store.next_batch(conn, "assembled") == []
+        assert [r["slug"] for r in store.deferred(conn)] == [b.slug]
+        row = conn.execute("SELECT stage, attempts FROM item").fetchone()
+        assert (row["stage"], row["attempts"]) == ("assembled", 0)
+        store.defer(conn, b.id, "429", "2000-01-01T00:00:00Z")   # đã qua mốc reset
+        assert [r["slug"] for r in store.next_batch(conn, "assembled")] == [b.slug]
+
+
+def test_migration_adds_columns_to_existing_db(tmp_path):
+    """DB thật đã có dữ liệu trước khi thêm cột -- mở lại không được hỏng."""
+    import sqlite3
+    db = tmp_path / "old.sqlite"
+    c = sqlite3.connect(db)
+    c.executescript(store._SCHEMA)
+    c.close()
+    with store.connect(db) as conn:
+        cols = {r[1] for r in conn.execute("PRAGMA table_info(item)")}
+    assert {"fail_stage", "retry_after"} <= cols

@@ -7,7 +7,9 @@ bốn endpoint, và thêm một dependency nặng chỉ để gọi REST là đi
 thần HIT & RUN.
 
 QUOTA (kiểm chứng ngày 19/09/2026 trên tài liệu chính thức):
-  videos.insert      -- hạn mức RIÊNG 100 lần/ngày, chỉ 1 đơn vị mỗi lần
+  videos.insert      -- hạn mức RIÊNG, tài liệu ghi 100 lần/ngày, THỰC TẾ
+                        chặn ở lượt thứ 93 (HTTP 429, đo ngày 20/09/2026).
+                        Reset nửa đêm giờ Thái Bình Dương.
   playlistItems.insert, thumbnails.set, videos.update -- 50 đơn vị
   videos.list, playlistItems.list                     -- 1 đơn vị
   search.list        -- 100 lần/ngày, RẤT CHẬT
@@ -44,6 +46,32 @@ CHUNK = 8 * 1024 * 1024
 
 class PublishError(RuntimeError):
     pass
+
+
+class QuotaExceeded(PublishError):
+    """Hết hạn mức -- lỗi TẠM, video không có gì sai. Gọi tiếp chỉ phí thời
+    gian: mọi lời gọi sau đều sẽ nhận đúng lỗi này tới lúc reset."""
+
+
+def _raise(prefix: str, code: int, body: str) -> None:
+    if code == 429 or "quotaExceeded" in body or "uploadLimitExceeded" in body             or "rateLimitExceeded" in body:
+        raise QuotaExceeded(f"{prefix} HTTP {code}: {body[:400]}")
+    raise PublishError(f"{prefix} HTTP {code}: {body[:400]}")
+
+
+def next_quota_reset(now=None) -> str:
+    """Mốc reset quota kế tiếp, ISO UTC.
+
+    Reset lúc 00:00 giờ Thái Bình Dương = 07:00 UTC (mùa hè) hoặc 08:00 UTC
+    (mùa đông). Lấy 08:05 UTC cho cả năm: muộn nhất một giờ vào mùa hè,
+    nhưng không bao giờ thử lại TRƯỚC khi reset -- và không cần tzdata, thứ
+    Windows không có sẵn."""
+    from datetime import datetime, timedelta, timezone
+    now = now or datetime.now(timezone.utc)
+    t = now.replace(hour=8, minute=5, second=0, microsecond=0)
+    if t <= now:
+        t += timedelta(days=1)
+    return t.strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 @dataclass
@@ -89,7 +117,7 @@ def _api(token: str, method: str, path: str, params: dict | None = None,
         with urllib.request.urlopen(req, timeout=120) as r:
             return json.load(r) if r.length != 0 else {}
     except urllib.error.HTTPError as e:
-        raise PublishError(f"{method} {path} -> HTTP {e.code}: {e.read().decode()[:400]}") from e
+        _raise(f"{method} {path} ->", e.code, e.read().decode(errors="replace"))
 
 
 def upload_video(bundle, video_path: Path, token: str) -> str:
@@ -135,7 +163,7 @@ def upload_video(bundle, video_path: Path, token: str) -> str:
         with urllib.request.urlopen(init, timeout=60) as r:
             session_url = r.headers["Location"]
     except urllib.error.HTTPError as e:
-        raise PublishError(f"khởi tạo upload lỗi HTTP {e.code}: {e.read().decode()[:400]}") from e
+        _raise("khởi tạo upload lỗi", e.code, e.read().decode(errors="replace"))
     if not session_url:
         raise PublishError("YouTube không trả Location cho phiên upload")
 
@@ -155,7 +183,7 @@ def upload_video(bundle, video_path: Path, token: str) -> str:
                 if e.code == 308:      # còn tiếp -- đúng luồng resumable
                     sent = end + 1
                     continue
-                raise PublishError(f"upload lỗi HTTP {e.code}: {e.read().decode()[:400]}") from e
+                _raise("upload lỗi", e.code, e.read().decode(errors="replace"))
     raise PublishError("upload kết thúc mà YouTube không trả video id")
 
 
@@ -175,6 +203,30 @@ def add_to_playlist(video_id: str, playlist_id: str, token: str) -> None:
         "snippet": {"playlistId": playlist_id,
                     "resourceId": {"kind": "youtube#video", "videoId": video_id}},
     })
+
+
+def channel_titles(uploads_playlist_id: str, token: str, pages: int = 10) -> dict[str, str]:
+    """Tiêu đề -> video_id của ~500 video gần nhất. Gọi MỘT LẦN mỗi lô.
+
+    Trước đây mỗi video tự quét lại cả playlist uploads (tới 10 trang) để
+    chống trùng: 31 video = ~340 lời gọi API, và con số tăng theo độ dài
+    kênh. Chụp một lần rồi tự cập nhật sau mỗi upload là đủ -- trong một lô
+    chỉ có chính ta ghi lên kênh."""
+    out: dict[str, str] = {}
+    page = None
+    for _ in range(pages):
+        params = {"part": "snippet", "playlistId": uploads_playlist_id, "maxResults": 50}
+        if page:
+            params["pageToken"] = page
+        data = _api(token, "GET", "playlistItems", params)
+        for item in data.get("items", []):
+            sn = item["snippet"]
+            out.setdefault(sn.get("title", "").strip(),
+                           sn.get("resourceId", {}).get("videoId"))
+        page = data.get("nextPageToken")
+        if not page:
+            break
+    return out
 
 
 def already_published(title: str, uploads_playlist_id: str, token: str) -> str | None:
@@ -211,18 +263,28 @@ def uploads_playlist_id(token: str) -> str:
 def publish_bundle(bundle, video_path: Path, creds: dict,
                    thumb_path: Path | None = None,
                    playlist_id: str | None = None,
-                   skip_if_duplicate: bool = True) -> PublishResult:
-    """Đăng một Bundle. Hẹn giờ, không public ngay."""
-    token = access_token(creds)
+                   skip_if_duplicate: bool = True,
+                   token: str | None = None,
+                   known_titles: dict[str, str] | None = None) -> PublishResult:
+    """Đăng một Bundle. Hẹn giờ, không public ngay.
+
+    `known_titles` (từ channel_titles) thì chống trùng bằng bản chụp đó và
+    ghi video mới vào luôn; không có thì tự quét kênh như cũ."""
+    token = token or access_token(creds)
 
     if skip_if_duplicate:
-        existing = already_published(bundle.title, uploads_playlist_id(token), token)
+        if known_titles is not None:
+            existing = known_titles.get(bundle.title.strip())
+        else:
+            existing = already_published(bundle.title, uploads_playlist_id(token), token)
         if existing:
             return PublishResult(video_id=existing,
                                  url=f"https://youtu.be/{existing}",
                                  scheduled_at=bundle.publish_at)
 
     video_id = upload_video(bundle, video_path, token)
+    if known_titles is not None:
+        known_titles[bundle.title.strip()] = video_id
     if thumb_path and thumb_path.exists():
         set_thumbnail(video_id, thumb_path, token)
     if playlist_id:

@@ -60,14 +60,6 @@ print(f"Đúng hoàn toàn: {len(rows) - len(problems)}/{len(rows)}")
 for s, p in problems[:10]:
     print(f"   {s}: {p}")
 
-# Lịch có đứt ngày nào không — với kênh đăng hằng ngày thì đứt là thấy ngay.
-ds = sorted(datetime.strptime(r["publish_at"], "%Y-%m-%dT%H:%M:%SZ") for r in rows)
-gaps = [(ds[i], ds[i + 1]) for i in range(len(ds) - 1)
-        if (ds[i + 1] - ds[i]) != timedelta(days=1)]
-print(f"Lịch {ds[0]:%d/%m} → {ds[-1]:%d/%m} · đứt quãng: {len(gaps)}")
-for a, b_ in gaps:
-    print(f"   {a:%d/%m} → {b_:%d/%m}")
-
 # THIẾU Ở ĐUÔI -- lỗ hổng thật của bản trước: nó chỉ soi khoảng GIỮA hai mốc
 # có thật, nên khi video cuối cùng không đăng được (hết quota), dãy còn lại
 # vẫn liền mạch và verify báo ĐẠT. Ngày 31/12 biến mất mà không ai biết.
@@ -77,9 +69,26 @@ for a, b_ in gaps:
 with store.connect() as conn:
     expected = {r[0] for r in conn.execute(
         "SELECT slug FROM item WHERE slug LIKE ?", (PREFIX + "%",))}
+    # Hoãn vì hết quota là trạng thái HỢP LỆ, có mốc tự thử lại -- không
+    # phải thiếu. Quá mốc mà vẫn chưa lên kênh thì mới là thiếu.
+    wrows = [r for r in store.deferred(conn) if r["slug"].startswith(PREFIX)]
+    waiting = {r["slug"]: r["retry_after"] for r in wrows}
+
+# Lịch có đứt ngày nào không — với kênh đăng hằng ngày thì đứt là thấy ngay.
+# Ngày đang chờ quota được tính là "có", vì nó sẽ tự lấp.
+ds = sorted(datetime.strptime(x, "%Y-%m-%dT%H:%M:%SZ")
+            for x in [r["publish_at"] for r in rows] + [r["publish_at"] for r in wrows])
+gaps = [(ds[i], ds[i + 1]) for i in range(len(ds) - 1)
+        if (ds[i + 1] - ds[i]) != timedelta(days=1)]
+print(f"Lịch {ds[0]:%d/%m} → {ds[-1]:%d/%m} · đứt quãng: {len(gaps)}")
+for a, b_ in gaps:
+    print(f"   {a:%d/%m} → {b_:%d/%m}")
 got = {r["slug"] for r in rows}
-missing = sorted(expected - got)
-print(f"Trong store {len(expected)} ngày · đã lên kênh {len(got)} · thiếu {len(missing)}")
+missing = sorted(expected - got - set(waiting))
+print(f"Trong store {len(expected)} ngày · đã lên kênh {len(got)} · "
+      f"chờ quota {len(waiting)} · thiếu {len(missing)}")
+for s_, w in sorted(waiting.items())[:10]:
+    print(f"   CHỜ QUOTA: {s_} (tự đăng sau {w})")
 for m in missing[:10]:
     print(f"   THIẾU: {m}")
 

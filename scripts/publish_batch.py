@@ -61,13 +61,18 @@ def do_check() -> None:
     print(f"sẵn sàng đăng: {len(rows)} item (khớp {SLUG_PREFIX!r})")
     if bỏ:
         print(f"BỎ QUA {len(bỏ)} item không khớp tiền tố: {bỏ}")
+    titles = publish.channel_titles(up, tok)
     for r in rows[:3]:
         b = store.load_bundle(r["channel"], r["slug"])
-        dup = publish.already_published(b.title, up, tok)
+        dup = titles.get(b.title.strip())
         print(f"   {r['slug']}  {r['publish_at']}  "
               f"{'ĐÃ CÓ TRÊN KÊNH -> sẽ bỏ qua' if dup else 'chưa có'}")
-    print(f"\nquota: mỗi video tốn 1 lượt upload (hạn mức 100/ngày) "
-          f"+ 50 đơn vị nếu thêm vào playlist")
+    with store.connect() as conn:
+        dl = store.deferred(conn, CHANNEL)
+    if dl:
+        print(f"đang hoãn chờ quota: {len(dl)} item, thử lại từ {dl[0]['retry_after']}")
+    print(f"\nquota: mỗi video 1 lượt upload, trần THỰC TẾ ~92 lượt/ngày/project "
+          f"(tài liệu ghi 100)")
 
 
 def do_probe(slug: str) -> None:
@@ -114,17 +119,42 @@ def do_probe(slug: str) -> None:
 
 def do_run(limit: int) -> None:
     creds = _creds()
+    tok = publish.access_token(creds)
+    tok_at = time.monotonic()
     with store.connect() as conn:
         allr = store.next_batch(conn, "assembled", limit=500, channel=CHANNEL)
-        rows = [r for r in allr if r["slug"].startswith(SLUG_PREFIX)][:limit]
+        match = [r for r in allr if r["slug"].startswith(SLUG_PREFIX)]
+        rows = match[:limit]
         print(f"{len(rows)} item sẽ đăng (private + hẹn giờ), "
-              f"bỏ qua {len(allr) - len([r for r in allr if r['slug'].startswith(SLUG_PREFIX)])} item không khớp")
+              f"bỏ qua {len(allr) - len(match)} item không khớp")
+        if not rows:
+            print("trạng thái:", store.summary(conn))
+            return
+
+        # Chụp danh sách tiêu đề trên kênh MỘT lần cho cả lô.
+        titles = publish.channel_titles(publish.uploads_playlist_id(tok), tok)
+        print(f"chống trùng: đã chụp {len(titles)} tiêu đề gần nhất trên kênh")
+
         for i, r in enumerate(rows, 1):
             b = store.load_bundle(r["channel"], r["slug"])
+            # access_token sống 60 phút; 92 upload mất ~20 phút, nhưng lô
+            # lớn hơn hoặc mạng chậm thì vượt -- làm mới trước khi hết hạn.
+            if time.monotonic() - tok_at > 40 * 60:
+                tok, tok_at = publish.access_token(creds), time.monotonic()
             try:
-                res = publish.publish_bundle(b, Path(r["video_path"]), creds)
+                res = publish.publish_bundle(b, Path(r["video_path"]), creds,
+                                             token=tok, known_titles=titles)
                 store.mark(conn, b.id, "published", video_id=res.video_id)
                 print(f"  [{i}/{len(rows)}] {b.slug}  {res.url}  hẹn {res.scheduled_at}")
+            except publish.QuotaExceeded as exc:
+                # Hết hạn mức: item này VÀ mọi item sau đều hoãn tới lúc
+                # reset, không tính là hỏng. Gọi tiếp chỉ nhận lại đúng lỗi.
+                when = publish.next_quota_reset()
+                for rr in rows[i - 1:]:
+                    store.defer(conn, rr["id"], f"QuotaExceeded: {exc}", when)
+                print(f"  [{i}/{len(rows)}] HẾT QUOTA — hoãn {len(rows) - i + 1} item "
+                      f"tới {when} (không tính là hỏng)")
+                break
             except Exception as exc:
                 n = store.bump_attempt(conn, b.id, f"{type(exc).__name__}: {exc}")
                 print(f"  [{i}/{len(rows)}] {b.slug}  LỖI (lần {n}): {exc}")

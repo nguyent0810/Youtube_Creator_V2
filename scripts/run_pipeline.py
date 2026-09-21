@@ -2,6 +2,11 @@
 
     python scripts/run_pipeline.py 2026-12-01 31
     python scripts/run_pipeline.py 2026-12-01 31 --no-publish
+    python scripts/run_pipeline.py resume     # chỉ rút hàng đợi + thử lại item hỏng
+
+`resume` là lệnh cho lịch chạy định kỳ: không sinh gì mới, chỉ đưa item
+hỏng về đúng chặng rồi chạy tiếp mọi chặng. Item hoãn vì hết quota tự hiện
+lại khi tới mốc reset -- không cần người chạy tay.
 
 VÌ SAO CẦN FILE NÀY: từ trước tới giờ mỗi bước chạy một lệnh riêng, và tôi
 là người nối chúng lại. Đó không phải tự động hoá -- đó là tôi làm thủ công
@@ -28,8 +33,11 @@ sys.path.insert(0, str(ROOT))
 PY_TTS = Path(r"C:\Tools\Youtuber\vietneu-tts\.venv\Scripts\python.exe")
 PY_VID = Path(r"C:\Tools\Youtuber\video-editor\.venv-video\Scripts\python.exe")
 
-start = sys.argv[1] if len(sys.argv) > 1 else "2026-12-01"
-days = sys.argv[2] if len(sys.argv) > 2 else "31"
+from factory import store  # noqa: E402
+
+RESUME = len(sys.argv) > 1 and sys.argv[1] == "resume"
+start = sys.argv[1] if len(sys.argv) > 1 and not RESUME else "2026-12-01"
+days = sys.argv[2] if len(sys.argv) > 2 and not RESUME else "31"
 do_publish = "--no-publish" not in sys.argv
 
 
@@ -58,9 +66,18 @@ def run(label: str, py: Path, args: list[str]) -> float:
 timings: dict[str, float] = {}
 T0 = time.perf_counter()
 
-timings["1. sinh kịch bản"] = run(
-    "CHẶNG 1 — sinh kịch bản + kiểm từng bản + kiểm chéo lô",
-    PY_TTS, ["scripts/make_lich_month.py", start, days])
+# CHẶNG 0 — item hỏng lần trước quay về đúng chặng đã hỏng (tối đa 3 lần).
+with store.connect() as _c:
+    back = store.requeue_failed(_c)
+    wait = store.deferred(_c)
+print(f"Thử lại {len(back)} item hỏng: {back[:5]}" if back else "Không có item hỏng cần thử lại")
+if wait:
+    print(f"Đang hoãn chờ quota: {len(wait)} item, tự chạy lại từ {wait[0]['retry_after']}")
+
+if not RESUME:
+    timings["1. sinh kịch bản"] = run(
+        "CHẶNG 1 — sinh kịch bản + kiểm từng bản + kiểm chéo lô",
+        PY_TTS, ["scripts/make_lich_month.py", start, days])
 
 timings["2. TTS"] = run(
     "CHẶNG 2 — TTS (venv vieneu)",
@@ -86,5 +103,6 @@ print(f"\n{'=' * 62}\nTỔNG KẾT\n{'=' * 62}")
 for k, v in timings.items():
     print(f"  {k:24s} {v:6.0f}s  ({v / total:4.0%})")
 print(f"  {'TỔNG':24s} {total:6.0f}s  ({total / 60:.1f} phút)")
-n = int(days)
-print(f"\n  {n} video → {total / n:.0f}s mỗi video")
+if not RESUME:
+    n = int(days)
+    print(f"\n  {n} video → {total / n:.0f}s mỗi video")

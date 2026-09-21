@@ -82,9 +82,26 @@ def connect(db_path: Path | None = None):
         conn.execute("PRAGMA journal_mode=WAL")
         conn.execute("PRAGMA foreign_keys=ON")
         conn.executescript(_SCHEMA)
+        _migrate(conn)
         yield conn
     finally:
         conn.close()
+
+
+# Cột thêm sau khi DB đã có dữ liệu thật (91 video trên kênh). CREATE TABLE
+# IF NOT EXISTS không thêm cột vào bảng cũ, nên phải ALTER tay.
+#   fail_stage  -- item hỏng ở chặng nào, để thử lại đúng chặng đó chứ không
+#                  làm lại TTS + dựng cho một lỗi chỉ xảy ra lúc upload.
+#   retry_after -- lỗi TẠM (hết quota): item giữ nguyên chặng, chỉ ẩn khỏi
+#                  hàng đợi tới mốc này. Không tính là một lần hỏng.
+_MIGRATIONS = {"fail_stage": "TEXT", "retry_after": "TEXT"}
+
+
+def _migrate(conn: sqlite3.Connection) -> None:
+    have = {r[1] for r in conn.execute("PRAGMA table_info(item)")}
+    for col, typ in _MIGRATIONS.items():
+        if col not in have:
+            conn.execute(f"ALTER TABLE item ADD COLUMN {col} {typ}")
 
 
 # ─── Bundle trên đĩa ──────────────────────────────────────────────────────
@@ -153,7 +170,9 @@ def mark(conn: sqlite3.Connection, item_id: str, stage: str, **fields) -> None:
     if bad:
         raise ValueError(f"trường lạ: {sorted(bad)}")
     cols = ", ".join(f"{k} = ?" for k in fields)
-    sql = f"UPDATE item SET stage = ?, updated_at = ?{', ' + cols if cols else ''} WHERE id = ?"
+    # Tiến được một chặng thì mọi lỗi tạm trước đó hết ý nghĩa.
+    sql = (f"UPDATE item SET stage = ?, updated_at = ?, retry_after = NULL"
+           f"{', ' + cols if cols else ''} WHERE id = ?")
     conn.execute(sql, (stage, _now(), *fields.values(), item_id))
 
 
@@ -164,11 +183,40 @@ def bump_attempt(conn: sqlite3.Connection, item_id: str, error: str) -> int:
     bị giết giữa chừng, và một item hỏng vĩnh viễn không được phép thử lại
     vô hạn qua nhiều lần chạy khác nhau."""
     conn.execute(
-        "UPDATE item SET attempts = attempts + 1, error = ?, stage = 'failed', updated_at = ? WHERE id = ?",
+        "UPDATE item SET attempts = attempts + 1, error = ?, "
+        "fail_stage = CASE WHEN stage = 'failed' THEN fail_stage ELSE stage END, "
+        "stage = 'failed', updated_at = ? WHERE id = ?",
         (error[:2000], _now(), item_id),
     )
     row = conn.execute("SELECT attempts FROM item WHERE id = ?", (item_id,)).fetchone()
     return row["attempts"] if row else 0
+
+
+def defer(conn: sqlite3.Connection, item_id: str, error: str, retry_after: str) -> None:
+    """Lỗi TẠM THỜI: giữ nguyên chặng, ẩn khỏi hàng đợi tới `retry_after`.
+
+    Vì sao tách khỏi bump_attempt: tháng 12 video thứ 31 dính HTTP 429 hết
+    hạn mức upload. Video không có gì sai -- chỉ là đến lượt quá muộn. Nếu
+    tính đó là một lần HỎNG thì ba ngày quota đầy liên tiếp là item bị loại
+    vĩnh viễn, trong khi nó hoàn toàn hợp lệ."""
+    conn.execute("UPDATE item SET error = ?, retry_after = ?, updated_at = ? WHERE id = ?",
+                 (error[:2000], retry_after, _now(), item_id))
+
+
+def requeue_failed(conn: sqlite3.Connection, max_attempts: int = 3) -> list[str]:
+    """Đưa item hỏng (chưa quá max_attempts) về lại ĐÚNG chặng đã hỏng.
+
+    Item cũ chưa có fail_stage thì suy từ kết quả đã có: có video thì hỏng
+    lúc đăng, có wav thì hỏng lúc dựng, không có gì thì hỏng lúc TTS."""
+    rows = list(conn.execute(
+        "SELECT id, slug, fail_stage, wav_path, video_path FROM item "
+        "WHERE stage = 'failed' AND attempts < ?", (max_attempts,)))
+    for r in rows:
+        back = r["fail_stage"] or ("assembled" if r["video_path"]
+                                   else "spoken" if r["wav_path"] else "pending")
+        conn.execute("UPDATE item SET stage = ?, fail_stage = NULL, updated_at = ? "
+                     "WHERE id = ?", (back, _now(), r["id"]))
+    return [r["slug"] for r in rows]
 
 
 def next_batch(conn: sqlite3.Connection, stage: str, limit: int = 10,
@@ -179,10 +227,18 @@ def next_batch(conn: sqlite3.Connection, stage: str, limit: int = 10,
     phép chặn hàng đợi mãi mãi. Sắp theo publish_at để việc sắp tới hạn
     được làm trước, không phải theo thứ tự ngẫu nhiên của bảng."""
     sql = ("SELECT * FROM item WHERE stage = ? AND attempts < ?"
+           " AND (retry_after IS NULL OR retry_after <= ?)"
            + (" AND channel = ?" if channel else "")
            + " ORDER BY publish_at ASC LIMIT ?")
-    args = [stage, max_attempts] + ([channel] if channel else []) + [limit]
+    args = [stage, max_attempts, _now()] + ([channel] if channel else []) + [limit]
     return list(conn.execute(sql, args))
+
+
+def deferred(conn: sqlite3.Connection, channel: str | None = None) -> list[sqlite3.Row]:
+    """Item đang chờ lỗi tạm hết hạn (vd. quota reset)."""
+    sql = ("SELECT * FROM item WHERE retry_after IS NOT NULL AND retry_after > ?"
+           + (" AND channel = ?" if channel else "") + " ORDER BY publish_at")
+    return list(conn.execute(sql, [_now()] + ([channel] if channel else [])))
 
 
 def summary(conn: sqlite3.Connection) -> dict[str, dict[str, int]]:
