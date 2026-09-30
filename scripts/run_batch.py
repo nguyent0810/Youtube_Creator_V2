@@ -41,9 +41,16 @@ def run_tts(conn):
         return
     print(f"{len(rows)} item. Nap model TTS...")
     engine = speak._load_engine()
+    from factory import integrity
     for i, row in enumerate(rows, 1):
         b = store.load_bundle(row["channel"], row["slug"])
         t0 = time.perf_counter()
+        # Cổng toàn vẹn văn bản: MỘT điểm trước TTS cho mọi kênh/dòng.
+        bad = integrity.blocking(b.script)
+        if bad:
+            store.reject(conn, b.id, "INTEGRITY: " + "; ".join(f"{f.code} «{f.span[:40]}»" for f in bad))
+            print(f"  [{i}/{len(rows)}] {b.slug:16s} CHAN (toan ven van ban): {bad[0].code}")
+            continue
         try:
             res = speak.speak_bundle(b, OUT, engine=engine)
             store.mark(conn, b.id, "spoken",

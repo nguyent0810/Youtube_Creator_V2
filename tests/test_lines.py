@@ -70,3 +70,34 @@ def test_fiction_label_and_rotation():
     assert d is not None and d.angle == "hư cấu"
     d2, _ = cl.next_draft("truyen", [_hist(d)])
     assert d2.key != d.key
+
+
+# ─── Toàn vẹn văn bản (chuyển thể S8 từ branch feat) ───────────────────────
+
+def test_integrity_blocks_repeat_and_markup_not_truncation():
+    from factory import integrity
+    assert integrity.blocking("Câu một. Câu hai. câu MỘT!")                       # lặp sau chuẩn hoá
+    assert integrity.blocking("Mở bài. Phương án B: kết.")                         # nhãn ứng viên lọt vào
+    assert integrity.blocking("Xem thêm tại https://example.com nhé.")             # URL
+    assert not integrity.blocking("Đây là **điểm nhấn** hợp lệ. Hết.")             # ** được bóc như TTS
+    tr = integrity.check("Một câu. Câu cuối bị cụt")
+    assert tr and not tr[0].blocking and tr[0].code == "INT_TRUNCATED"
+
+
+def test_every_existing_script_passes_integrity():
+    """Không chặn nhầm kịch bản đang có của cả 3 kênh."""
+    import json
+    from pathlib import Path
+    from factory import integrity
+    bad = []
+    for f in Path("bundles").glob("*/*.json"):
+        s = json.loads(f.read_text(encoding="utf-8"))["script"]
+        if integrity.blocking(s):
+            bad.append((f.name, [x.code for x in integrity.blocking(s)]))
+    assert not bad, bad[:5]
+
+
+def test_signals_are_record_only():
+    from factory.script_signals import signals
+    s = signals("Án treo có phải là trắng án? Không. Án treo vẫn là một bản án tù.")
+    assert s["hook_is_question"] and s["first_answer_sec"] is not None and "score" not in s

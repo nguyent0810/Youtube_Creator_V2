@@ -192,6 +192,17 @@ def bump_attempt(conn: sqlite3.Connection, item_id: str, error: str) -> int:
     return row["attempts"] if row else 0
 
 
+def reject(conn: sqlite3.Connection, item_id: str, error: str) -> None:
+    """Loại hẳn một item vì lỗi NỘI DUNG (vd toàn vẹn văn bản): thử lại vô ích,
+    nên đặt attempts vượt ngưỡng để requeue_failed không đưa nó về hàng đợi."""
+    conn.execute(
+        "UPDATE item SET attempts = 99, error = ?, "
+        "fail_stage = CASE WHEN stage = 'failed' THEN fail_stage ELSE stage END, "
+        "stage = 'failed', updated_at = ? WHERE id = ?",
+        (error[:2000], _now(), item_id),
+    )
+
+
 def defer(conn: sqlite3.Connection, item_id: str, error: str, retry_after: str) -> None:
     """Lỗi TẠM THỜI: giữ nguyên chặng, ẩn khỏi hàng đợi tới `retry_after`.
 
