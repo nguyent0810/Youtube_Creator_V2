@@ -88,3 +88,21 @@ Credit ảnh tự hiện theo giấy phép.
 - Anh Khôi đọc "8-9-3" thành "8 đến 9 ba", nên phải viết bằng chữ. Đuôi "-kai" bị đọc thành "ki", nên cần map `say`.
 - Tốc độ render khoảng 2,7 lần thời lượng thực (video 34 phút mất khoảng 90 phút).
 - `motion/hf/assets/long` là junction trỏ tới `output/long`, nên ảnh và video không phải copy.
+
+## Đăng: thumbnail, SEO, phụ đề, playlist
+
+- Thumbnail: mẫu ở `thumbs/`, copy vào `motion/hf/compositions/long/` rồi render 1 khung.
+  - Công thức rút từ nghiên cứu CTR: độ tương phản cao là biến mạnh nhất, tiếp theo là gương mặt hoặc hình người.
+  - Chữ chỉ 0–3 từ, bổ sung cho tiêu đề chứ không lặp lại.
+  - Tối đa 2–3 thành phần, không khí poster phim.
+  - Luôn soi ở cỡ mobile (~200px).
+  - Làm 3 bản để A/B test bằng Test & Compare trong Studio.
+- `python motion/long/describe.py <topic>`: mô tả ≤5000 **byte**, gồm hook 2 dòng đầu chứa từ khóa, link xem tiếp, mốc chương, nguồn, ghi công.
+- `python motion/long/srt.py <topic>`: phụ đề tiếng Việt từ mốc từng từ.
+- `python motion/long/publish_long.py <topic> CL <publishAt UTC> --playlist "Tên" "Mô tả" <id…>`: chạy lần lượt các bước sau.
+  1. upload private + publishAt
+  2. category
+  3. thumbnail
+  4. phụ đề
+  5. playlist mới
+  - Chạy lại thì các bước đã xong được bỏ qua.

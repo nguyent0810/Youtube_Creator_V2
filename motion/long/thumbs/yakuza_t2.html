@@ -1,0 +1,18 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800;900&family=Playfair+Display:wght@900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#050404}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;color:#fff}
+.abs{position:absolute}
+.grain{position:absolute;inset:0;opacity:.13;mix-blend-mode:overlay}
+.vig{position:absolute;inset:0;background:radial-gradient(85% 85% at 40% 50%,transparent 50%,rgba(0,0,0,.85) 100%)}
+.glow{position:absolute;border-radius:50%;filter:blur(90px);background:rgba(226,40,25,.55)}
+.brand{position:absolute;font-family:'Playfair Display';font-weight:900;color:#ff3b24;line-height:.9;
+  text-shadow:0 0 50px rgba(255,40,20,.6),0 14px 40px #000,-4px -4px 0 #000,4px 4px 0 #000}
+.big{position:absolute;font-weight:900;line-height:1;white-space:nowrap;text-shadow:0 10px 40px #000,-5px -5px 0 #000,5px 5px 0 #000,5px -5px 0 #000,-5px 5px 0 #000}
+.tag{position:absolute;font-family:'JetBrains Mono';font-weight:700;letter-spacing:.25em;color:#ff5a43}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<img class="abs" src="assets/long/yakuza/img/fullback.jpg" style="left:-60px;top:-140px;width:1100px;height:1540px;object-fit:cover;object-position:50% 18%;filter:contrast(1.28) saturate(1.15) brightness(.9)"/><div class="abs" style="left:0;top:0;width:1000px;height:1080px;background:radial-gradient(48% 62% at 44% 52%,rgba(0,0,0,0) 55%,rgba(8,4,4,.88) 100%)"></div><div class="abs" style="inset:0;background:linear-gradient(90deg,rgba(5,4,4,0) 0%,rgba(5,4,4,.15) 36%,rgba(5,4,4,.96) 50%,#050404 62%)"></div><div class="glow" style="left:1100px;top:420px;width:700px;height:420px"></div><div class="vig"></div><div class="brand" style="left:1000px;top:90px;font-size:200px">YAKUZA</div><div class="big" style="left:1010px;top:340px;font-size:170px;color:#fff">184.100</div><div class="abs" style="left:1000px;top:420px;width:640px;height:18px;background:#ff2d1a;transform:rotate(-8deg);box-shadow:0 0 20px #000"></div><div class="big" style="left:1010px;top:560px;font-size:210px;color:#ff3b24">↓ 17.600</div><div class="tag" style="left:1016px;top:830px;font-size:36px">THÀNH VIÊN · 1963 → 2025</div><svg class="grain" width="1920" height="1080"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3" seed="4"/></filter><rect width="100%" height="100%" filter="url(#g)"/></svg>
+</div><script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

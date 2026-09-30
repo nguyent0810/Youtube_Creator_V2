@@ -32,10 +32,12 @@ def main(topic):
         if b and b not in music:
             music.append(b)
         title = ch["hud"]["t"].title() if c != "ch00" else "Mở đầu: Kobe, 5 giờ 46 phút"
+        if c == spec["chapters"][-1]:
+            title = "Kết: " + title
         chapters.append(f"{int(t // 60):02d}:{int(t % 60):02d} {title}")
         t += json.loads((od / c / "timing.json").read_text(encoding="utf-8"))["duration"]
-    lines = [meta.get("summary", ""), "", "⏱ CHƯƠNG", *chapters, "", "📚 NGUỒN THAM KHẢO (Wikipedia tiếng Anh và các nguồn được trích trong đó)",
-             *meta.get("sources", []), "",
+    lines = [meta.get("summary", ""), "", *meta.get("more", []), "", "⏱ CHƯƠNG", *chapters, "", "📚 NGUỒN THAM KHẢO (Wikipedia tiếng Anh và các nguồn được trích trong đó)",
+             *meta.get("sources", [])[:8], "và các bài Wikipedia liên quan.", "",
              "Lời dẫn là bản viết mới dựa trên tư liệu công khai; những câu có nhãn DIỄN Ý là diễn đạt lại, không phải nguyên văn.",
              "Hình ảnh/video có nhãn MINH HỌA chỉ mang tính minh họa bối cảnh.", "", "🖼 ẢNH (Wikimedia Commons)"]
     pd = 0
@@ -47,12 +49,12 @@ def main(topic):
             pd += 1
             continue
         by = re.sub(r"\s*\d\d:\d\d, .*UTC\)", "", m["artist"].split("\n")[0]).strip() or "không rõ tác giả"
-        lines.append(f"• {f[5:]} — {by} — {m['license']}")
+        name = re.sub(r"\s*\(\d{6,}\)|\.(jpe?g|png|tif)$", "", f[5:], flags=re.I)[:48]
+        lines.append(f"• {name} — {by[:40]} — {m['license']}")
     lines += [f"• Và {pd} ảnh tư liệu thuộc phạm vi công cộng (Public domain / CC0).", "",
               "🎬 VIDEO B-ROLL: Pexels (pexels.com) — giấy phép Pexels, dùng tự do.", "", "🎵 NHẠC NỀN"]
-    for b in music:
-        n = MUSIC.get(b, b)
-        lines.append(f"\"{n}\" by Kevin MacLeod (incompetech.com) — Licensed under Creative Commons: By Attribution 4.0 License — http://creativecommons.org/licenses/by/4.0/")
+    lines.append(", ".join(f"\"{MUSIC.get(b, b)}\"" for b in music) + " by Kevin MacLeod (incompetech.com)")
+    lines.append("Licensed under Creative Commons: By Attribution 4.0 License — http://creativecommons.org/licenses/by/4.0/")
     lines += ["", " ".join("#" + x for x in meta.get("hashtags", []))]
     (od / "description.txt").write_text("\n".join(lines).strip() + "\n", encoding="utf-8")
     print((od / "description.txt").read_text(encoding="utf-8"))
