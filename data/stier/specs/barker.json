@@ -1,0 +1,34 @@
+{
+ "title": "“Bộ não tội phạm nguy hiểm nhất” hay chỉ là một bà mẹ? Vụ Ma Barker",
+ "description": "Giám đốc FBI Hoover gọi Ma Barker là bộ não tội phạm nguy hiểm nhất thập kỷ. Tháng 1/1935, FBI tìm ra nơi ẩn náu của bà nhờ một lá thư nhắc tới con cá sấu Gator Joe. Giới sử học nghĩ khác về vai trò của bà.",
+ "tags": ["Ma Barker", "băng Barker-Karpis", "FBI 1935", "J. Edgar Hoover", "Florida", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 1935",
+ "sub": "MA BARKER · FLORIDA",
+ "acc": ["hoover", "fbi", "barker", "gator", "joe", "fred", "florida"],
+ "lines": [
+  "Giám đốc FBI Hoover gọi bà là bộ não tội phạm nguy hiểm nhất thập kỷ.",
+  "Ma Barker, mẹ của mấy tên cướp trong băng Barker-Karpis.",
+  "Tháng 1 năm 1935, FBI tìm ra nơi ẩn náu của băng ở Florida…",
+  "nhờ một lá thư nhắc tới con cá sấu có tên Gator Joe.",
+  "Sáng 16 tháng 1, đặc vụ bao vây căn nhà.",
+  "Đồng bọn đã rời đi ba ngày trước, chỉ còn Ma Barker và con trai Fred.",
+  "Fred nổ súng. Cả hai mẹ con bị bắn chết.",
+  "Những người quen bà khẳng định: bà chẳng hề cầm đầu vụ nào.",
+  "Giới sử học phần lớn cho rằng hình ảnh bà trùm là do FBI và báo chí dựng lên.",
+  "Bộ não tội phạm… có thể chỉ là một bà mẹ."
+ ],
+ "imgs": {"cottage": "File:Barker Cottage on Lake Weir in Florida.jpg", "fred": "File:Fred-barker1.jpg", "karpis": "File:Alvin Karpis.jpg"},
+ "scenes": [
+  {"type": "hero", "img": "cottage", "frame": "print", "tone": "bw", "intro": true, "head": "BỘ NÃO TỘI PHẠM"},
+  {"type": "file", "at": 1, "k": "BĂNG BARKER-KARPIS", "name": "MA\nBARKER", "desc": "Kate Barker · 1873–1935"},
+  {"type": "photo", "at": 2, "img": "cottage", "tone": "bw", "focus": [0.5, 0.5], "label": {"text": "NƠI ẨN NÁU · FLORIDA", "at": [2, "florida"]}},
+  {"type": "kinetic", "at": 3, "items": [{"text": "CÁ SẤU", "at": [3, "cá"], "serif": true, "size": 200}, {"text": "“GATOR JOE”", "at": [3, "gator"], "acc": true}]},
+  {"type": "date", "at": 4, "day": "OCKLAWAHA · FLORIDA", "date": "16.01.1935", "groupAt": [[4, "16"], [4, "1"], [4, "1", 0, 0.35]], "stamp": {"text": "BAO VÂY", "at": [4, "bao"]}},
+  {"type": "ledger", "at": 5, "title": "TRONG NHÀ", "rows": [{"k": "ĐỒNG BỌN", "v": "ĐÃ ĐI", "at": [5, "đồng"]}, {"k": "MA BARKER", "v": "✓", "at": [5, "ma"]}], "total": {"k": "FRED BARKER", "v": "✓", "at": [5, "fred"]}},
+  {"type": "mug", "at": 6, "ghost": "1935", "mug": {"img": "fred", "name": "FRED BARKER", "at": [6, "fred"]}, "stamp": {"text": "BỊ BẮN CHẾT", "at": [6, "chết"]}},
+  {"type": "quote", "at": 7, "text": "Bà chẳng hề cầm đầu vụ nào.", "by": "NHỮNG NGƯỜI QUEN BIẾT MA BARKER · DIỄN Ý"},
+  {"type": "slam", "at": 8, "text": "DO FBI\nDỰNG LÊN?", "sub": "NHẬN ĐỊNH CỦA GIỚI SỬ HỌC", "bg": "cottage"},
+  {"type": "hero", "at": 9, "img": "cottage", "frame": "print", "tone": "bw", "loop": true, "head": "MỘT BÀ MẸ", "tr": "cut"}
+ ],
+ "sources": ["https://en.wikipedia.org/wiki/Ma_Barker"]
+}

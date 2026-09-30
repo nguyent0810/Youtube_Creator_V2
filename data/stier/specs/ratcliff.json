@@ -1,0 +1,162 @@
+{
+ "title": "Nghi phạm chết trước khi ra tòa, vẫn bị tuyên có tội: án mạng Ratcliff 1811",
+ "description": "Tháng 12/1811, hai gia đình ở khu Wapping, London bị sát hại cách nhau 12 ngày. Nghi phạm John Williams chết trong phòng giam trước khi ra tòa, và vẫn bị tuyên có tội.",
+ "tags": [
+  "Ratcliff Highway",
+  "London 1811",
+  "John Williams",
+  "án mạng lịch sử",
+  "Wapping",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1811",
+ "sub": "RATCLIFF HIGHWAY · LONDON",
+ "acc": [
+  "wapping",
+  "london",
+  "williams",
+  "bảy",
+  "búa",
+  "cọc"
+ ],
+ "lines": [
+  "Tháng 12 năm 1811, ở khu Wapping, London, hai gia đình bị sát hại, cách nhau mười hai ngày.",
+  "Bảy người chết.",
+  "Tại hiện trường đầu tiên: một chiếc búa đóng tàu dính máu.",
+  "Tiền thưởng liên tục được nâng lên.",
+  "Nghi phạm: thủy thủ John Williams.",
+  "Nhưng trước khi ra tòa, hắn chết trong phòng giam.",
+  "Tù nhân và cai ngục kể: hôm trước hắn còn vui vẻ, tin mình sắp được thả.",
+  "Tòa vẫn tuyên hắn có tội, coi cái chết như lời thú nhận.",
+  "Hắn bị chôn ở ngã tư đường, một cây cọc đóng xuyên tim.",
+  "Hung thủ thật là ai? Có lẽ sẽ mãi không ai biết."
+ ],
+ "imgs": {
+  "shop": "File:Ratcliff Highway Murders - newspaper sketch of the Marr mercer shop and residence.jpg",
+  "maul": "File:Ratcliffe Highway Murders, Seaman's Maul used in the first murders.jpg",
+  "reward": "File:Ratcliffe Highway Murders Reward poster.jpg",
+  "funeral": "File:Ratcliffe Highway murders - funeral of the Marr family.jpg",
+  "procession": "File:Ratcliffe Highway Murders - Procession to interment of the supposed murderer John William.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "shop",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "12 NGÀY"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "7",
+     "at": [
+      1,
+      "bảy"
+     ],
+     "size": 320,
+     "serif": true,
+     "acc": true
+    },
+    {
+     "text": "NGƯỜI CHẾT",
+     "at": [
+      1,
+      "chết"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "evidence",
+   "at": 2,
+   "img": "maul",
+   "tone": "sepia",
+   "tag": "TANG VẬT · BÚA ĐÓNG TÀU",
+   "credit": "HUNG KHÍ VỤ ĐẦU TIÊN · RATCLIFF HIGHWAY"
+  },
+  {
+   "type": "photo",
+   "at": 3,
+   "img": "reward",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "TIỀN THƯỞNG · 08.12.1811",
+    "at": [
+     3,
+     "thưởng"
+    ],
+    "y": 1330
+   }
+  },
+  {
+   "type": "file",
+   "at": 4,
+   "k": "NGHI PHẠM",
+   "name": "JOHN\nWILLIAMS",
+   "desc": "Thủy thủ",
+   "stamp": {
+    "text": "BỊ BẮT",
+    "at": [
+     4,
+     "williams"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "CHẾT TRONG\nPHÒNG GIAM",
+   "bg": "funeral"
+  },
+  {
+   "type": "quote",
+   "at": 6,
+   "text": "Hôm trước hắn còn vui vẻ, tin mình sắp được thả.",
+   "by": "LỜI KỂ CỦA TÙ NHÂN VÀ CAI NGỤC · DIỄN Ý"
+  },
+  {
+   "type": "file",
+   "at": 7,
+   "k": "PHÁN QUYẾT SAU KHI CHẾT",
+   "name": "CÓ TỘI",
+   "desc": "Cái chết bị coi như lời thú nhận",
+   "stamp": {
+    "text": "CÓ TỘI",
+    "at": [
+     7,
+     "tội"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 8,
+   "img": "procession",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": {
+    "text": "CHÔN Ở NGÃ TƯ ĐƯỜNG",
+    "at": [
+     8,
+     "ngã"
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "at": 9,
+   "text": "Hung thủ thật là ai?"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Ratcliff_Highway_murders"
+ ]
+}

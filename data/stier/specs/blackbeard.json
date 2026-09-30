@@ -1,0 +1,219 @@
+{
+ "title": "Râu Đen: cướp biển đáng sợ nhất lại ít khi cần dùng bạo lực",
+ "description": "Râu Đen được kể là buộc ngòi cháy dưới mũ để dọa kẻ thù. Năm 1718, ông phong tỏa cả cảng Charleston, và thứ ông đòi làm tiền chuộc là một hòm thuốc.",
+ "tags": [
+  "Râu Đen",
+  "Blackbeard",
+  "Edward Teach",
+  "cướp biển",
+  "Queen Anne's Revenge",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1718",
+ "sub": "RÂU ĐEN · EDWARD TEACH",
+ "acc": [
+  "râu",
+  "đen",
+  "teach",
+  "charleston",
+  "maynard",
+  "ocracoke",
+  "thuốc",
+  "1996"
+ ],
+ "lines": [
+  "Râu Đen, cướp biển đáng sợ nhất thế kỷ 18, được kể là buộc những sợi ngòi cháy dưới mũ để dọa kẻ thù.",
+  "Tên thật: Edward Teach.",
+  "Nhưng giới sử học ghi nhận: ông ít khi cần dùng bạo lực.",
+  "Hình ảnh đáng sợ đã đủ khiến con mồi đầu hàng.",
+  "Tháng 5 năm 1718, ông phong tỏa cả cảng Charleston, giữ con tin.",
+  "Tiền chuộc ông đòi là… một hòm thuốc.",
+  "Ngày 22 tháng 11 năm 1718, trung úy Robert Maynard phục kích ông ở Ocracoke.",
+  "Râu Đen trúng năm phát đạn và khoảng hai mươi vết chém.",
+  "Đầu ông bị treo ở mũi tàu, để lĩnh tiền thưởng.",
+  "Năm 1996, thợ lặn tìm thấy xác tàu Queen Anne's Revenge của ông."
+ ],
+ "imgs": {
+  "bb": "File:Blackbeard the Pirate.jpg",
+  "teach": "File:Edward Teach Commonly Call'd Black Beard (bw) (cropped).jpg",
+  "capture": "File:The Capture of the Pirate Blackbeard 1718 by Jean Leon Gerome Ferris (retouched).jpg",
+  "ocracoke": "File:Ocracoke inlet north carolina 1775.jpg",
+  "history": "File:General History of the Pyrates - Blackbeard the Pirate (1725).jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "bb",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "RÂU ĐEN",
+   "tape": {
+    "text": "“ngòi cháy dưới mũ”",
+    "at": [
+     0,
+     "ngòi"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 1,
+   "k": "TÊN THẬT",
+   "name": "EDWARD\nTEACH",
+   "desc": "Khoảng 1680–1718",
+   "img": "teach"
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "BẠO LỰC?",
+     "at": [
+      2,
+      "bạo"
+     ],
+     "serif": true,
+     "size": 220
+    },
+    {
+     "text": "ÍT KHI CẦN",
+     "at": [
+      2,
+      "ít"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 3,
+   "img": "history",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "VŨ KHÍ: HÌNH ẢNH",
+    "at": [
+     3,
+     "hình"
+    ],
+    "y": 1330
+   }
+  },
+  {
+   "type": "date",
+   "at": 4,
+   "day": "CẢNG CHARLESTON · PHONG TỎA",
+   "date": "05.1718",
+   "groupAt": [
+    [
+     4,
+     "5"
+    ],
+    [
+     4,
+     "1718"
+    ]
+   ],
+   "stamp": {
+    "text": "CON TIN",
+    "at": [
+     4,
+     "con"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "MỘT HÒM THUỐC",
+   "sub": "TIỀN CHUỘC CỦA RÂU ĐEN",
+   "white": true,
+   "bg": "bb"
+  },
+  {
+   "type": "photo",
+   "at": 6,
+   "img": "capture",
+   "tone": "color",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": {
+    "text": "OCRACOKE · 22.11.1718",
+    "at": [
+     6,
+     "ocracoke"
+    ]
+   },
+   "credit": "TRANH CỦA J. L. G. FERRIS · 1920"
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "VẾT THƯƠNG",
+   "rows": [
+    {
+     "k": "ĐẠN",
+     "v": "5",
+     "at": [
+      7,
+      "năm"
+     ]
+    }
+   ],
+   "total": {
+    "k": "VẾT CHÉM",
+    "v": "~20",
+    "at": [
+     7,
+     "hai"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "MŨI TÀU",
+     "at": [
+      8,
+      "mũi"
+     ],
+     "serif": true,
+     "size": 200
+    },
+    {
+     "text": "→ TIỀN THƯỞNG",
+     "at": [
+      8,
+      "thưởng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 9,
+   "img": "ocracoke",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "QUEEN ANNE'S REVENGE · TÌM THẤY 1996",
+    "at": [
+     9,
+     "1996"
+    ],
+    "y": 1300
+   }
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Blackbeard"
+ ]
+}

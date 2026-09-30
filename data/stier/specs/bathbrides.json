@@ -1,0 +1,208 @@
+{
+ "title": "Ba cô dâu chết trong bồn tắm và thí nghiệm suýt lấy mạng thợ lặn",
+ "description": "Những người vợ mới cưới chết đuối trong bồn tắm, không một vết thương. Nhà bệnh lý học Bernard Spilsbury làm thí nghiệm với đúng chiếc bồn tắm của nạn nhân và tìm ra cách George Joseph Smith ra tay.",
+ "tags": [
+  "Brides in the Bath",
+  "George Joseph Smith",
+  "Bernard Spilsbury",
+  "pháp y",
+  "nước Anh 1915",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1915",
+ "sub": "CÔ DÂU TRONG BỒN TẮM",
+ "acc": [
+  "smith",
+  "spilsbury",
+  "bồn",
+  "tắm",
+  "chân",
+  "1915",
+  "1912"
+ ],
+ "lines": [
+  "Năm 1914, ở nước Anh, một cô dâu mới cưới chết đuối trong bồn tắm.",
+  "Không vết thương, không dấu hiệu vật lộn.",
+  "Cha của một cô dâu khác đọc báo, thấy hai cái chết giống nhau đến lạ.",
+  "Hai người chồng… là cùng một người: George Joseph Smith.",
+  "Rồi lộ thêm vụ thứ ba, năm 1912.",
+  "Nhà bệnh lý học Bernard Spilsbury cho làm thí nghiệm, bằng đúng bồn tắm của nạn nhân.",
+  "Ấn đầu người xuống nước: luôn để lại dấu vật lộn.",
+  "Nhưng kéo mạnh hai chân lên, người nằm trong bồn trượt ngay xuống nước.",
+  "Một thợ lặn tình nguyện bất tỉnh, phải mất hơn nửa tiếng mới hồi tỉnh.",
+  "Smith bị treo cổ năm 1915."
+ ],
+ "imgs": {
+  "notes": "File:Smith's instructions to counsel.jpg",
+  "spilsbury": "File:BernardSpilsbury.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "notes",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "BỒN TẮM"
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "KHÁM NGHIỆM",
+   "rows": [
+    {
+     "k": "VẾT THƯƠNG",
+     "v": "KHÔNG",
+     "at": [
+      1,
+      "thương"
+     ]
+    }
+   ],
+   "total": {
+    "k": "DẤU VẬT LỘN",
+    "v": "KHÔNG",
+    "at": [
+     1,
+     "vật"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "HAI CÁI CHẾT",
+     "at": [
+      2,
+      "hai"
+     ]
+    },
+    {
+     "text": "GIỐNG NHAU",
+     "at": [
+      2,
+      "giống"
+     ],
+     "acc": true,
+     "size": 200
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 3,
+   "k": "NGƯỜI CHỒNG · NHIỀU TÊN",
+   "name": "GEORGE\nJOSEPH SMITH",
+   "desc": "Lấy vợ, mua bảo hiểm, lấy tiền",
+   "stamp": {
+    "text": "CÙNG MỘT NGƯỜI",
+    "at": [
+     3,
+     "cùng"
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "to": 3,
+   "label": "CÔ DÂU",
+   "until": [
+    4,
+    "thứ"
+   ],
+   "sub": {
+    "text": "VỤ ĐẦU TIÊN: 1912",
+    "at": [
+     4,
+     "1912"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 5,
+   "k": "NHÀ BỆNH LÝ HỌC",
+   "name": "BERNARD\nSPILSBURY",
+   "desc": "Thí nghiệm với đúng chiếc bồn tắm",
+   "img": "spilsbury",
+   "stamp": {
+    "text": "THÍ NGHIỆM",
+    "at": [
+     5,
+     "thí"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "ẤN ĐẦU",
+     "at": [
+      6,
+      "ấn"
+     ]
+    },
+    {
+     "text": "→ CÓ VẬT LỘN",
+     "at": [
+      6,
+      "vật"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "KÉO HAI CHÂN",
+     "at": [
+      7,
+      "kéo"
+     ]
+    },
+    {
+     "text": "→ TRƯỢT XUỐNG",
+     "at": [
+      7,
+      "trượt"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "clock",
+   "at": 8,
+   "from": "BẤT TỈNH",
+   "to": "HỒI TỈNH",
+   "swap": [
+    8,
+    "hồi"
+   ],
+   "plus": "> 30 PHÚT",
+   "plusAt": [
+    8,
+    "tiếng"
+   ],
+   "turns": 1
+  },
+  {
+   "type": "slam",
+   "at": 9,
+   "text": "TREO CỔ",
+   "sub": "13.08.1915",
+   "bg": "notes"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/George_Joseph_Smith"
+ ]
+}

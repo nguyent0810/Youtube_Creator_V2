@@ -1,0 +1,163 @@
+{
+ "title": "Mỏ kim cương giả lừa cả Tiffany: vụ lừa đảo năm 1872",
+ "description": "Năm 1872, hai người đi tìm mỏ \"phát hiện\" một mỏ kim cương ở miền Tây nước Mỹ. Tiffany định giá, các nhà tài phiệt đổ tiền. Rồi nhà địa chất Clarence King tới hiện trường.",
+ "tags": [
+  "Great Diamond Hoax",
+  "mỏ kim cương giả",
+  "Tiffany",
+  "Clarence King",
+  "lừa đảo 1872",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1872",
+ "sub": "MỎ KIM CƯƠNG GIẢ",
+ "acc": [
+  "tiffany",
+  "king",
+  "kim",
+  "cương",
+  "150",
+  "660",
+  "rải"
+ ],
+ "lines": [
+  "Năm 1872, hai người đi tìm mỏ khoe một túi đá quý, nói tìm được ở một mỏ kim cương miền Tây nước Mỹ.",
+  "Tiffany, nhà kim hoàn nổi tiếng nhất New York, định giá: 150 nghìn đô.",
+  "Chuyên gia tới khảo sát, kết luận: mỏ giàu một cách kỳ diệu.",
+  "Các nhà tài phiệt đổ tiền. Hai người đi tìm mỏ bán lại phần của mình: 660 nghìn đô.",
+  "Nhưng nhà địa chất Clarence King thấy có gì đó sai.",
+  "Kim cương, hồng ngọc, ngọc lục bảo, mỗi loại hình thành trong điều kiện khác nhau.",
+  "Chúng không thể nằm chung một chỗ.",
+  "Ông tới tận nơi, và xác nhận: mỏ đã bị rải đá quý mua từ London và Paris.",
+  "Mỏ kim cương ấy… được trồng ra."
+ ],
+ "imgs": {
+  "king": "File:Clarence King USGS 1879.jpg",
+  "tiffany": "File:Charles Lewis Tiffany.png",
+  "store": "File:Charles Lewis Tiffany 2.png",
+  "harp": "File:Portrait of Asbury Harpending.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "store",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "MỎ KIM CƯƠNG"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "prefix": "$",
+   "to": 150000,
+   "label": "ĐỊNH GIÁ CỦA TIFFANY",
+   "until": [
+    1,
+    "nghìn"
+   ],
+   "img": "tiffany",
+   "imgAt": [
+    1,
+    "tiffany"
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 2,
+   "text": "Giàu một cách kỳ diệu.",
+   "by": "KẾT LUẬN CỦA CHUYÊN GIA KHẢO SÁT · 06.1872"
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "prefix": "$",
+   "to": 660000,
+   "label": "GIÁ BÁN LẠI",
+   "until": [
+    3,
+    "nghìn"
+   ],
+   "sub": {
+    "text": "CÁC NHÀ TÀI PHIỆT ĐỔ TIỀN",
+    "at": [
+     3,
+     "tài"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 4,
+   "k": "NHÀ ĐỊA CHẤT",
+   "name": "CLARENCE\nKING",
+   "desc": "Sau này là giám đốc đầu tiên của USGS",
+   "img": "king"
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "ĐIỀU KIỆN HÌNH THÀNH",
+   "rows": [
+    {
+     "k": "KIM CƯƠNG",
+     "v": "A",
+     "at": [
+      5,
+      "kim"
+     ]
+    },
+    {
+     "k": "HỒNG NGỌC",
+     "v": "B",
+     "at": [
+      5,
+      "hồng"
+     ]
+    },
+    {
+     "k": "NGỌC LỤC BẢO",
+     "v": "C",
+     "at": [
+      5,
+      "lục"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "KHÔNG THỂ\nNẰM CHUNG",
+   "white": true,
+   "bg": "store"
+  },
+  {
+   "type": "file",
+   "at": 7,
+   "k": "KẾT LUẬN TẠI HIỆN TRƯỜNG",
+   "name": "MỎ BỊ RẢI\nĐÁ QUÝ",
+   "desc": "Mua từ London và Paris",
+   "stamp": {
+    "text": "LỪA ĐẢO",
+    "at": [
+     7,
+     "rải"
+    ]
+   }
+  },
+  {
+   "type": "hero",
+   "at": 8,
+   "img": "store",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "ĐƯỢC TRỒNG RA",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Diamond_hoax_of_1872"
+ ]
+}

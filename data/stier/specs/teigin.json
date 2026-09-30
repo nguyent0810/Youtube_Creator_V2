@@ -1,0 +1,207 @@
+{
+ "title": "Vụ đầu độc ngân hàng Teigin: bản án không bộ trưởng nào ký",
+ "description": "Ngày 26/1/1948, một người tự xưng quan chức y tế cho 16 nhân viên ngân hàng Teigin ở Tokyo uống \"thuốc phòng dịch\". 12 người chết. Họa sĩ Hirasawa bị kết án tử hình, nhưng không bộ trưởng nào chịu ký lệnh thi hành.",
+ "tags": [
+  "vụ Teigin",
+  "Hirasawa Sadamichi",
+  "Tokyo 1948",
+  "án oan Nhật Bản",
+  "án tử hình",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1948",
+ "sub": "VỤ TEIGIN · TOKYO",
+ "acc": [
+  "tokyo",
+  "hirasawa",
+  "16",
+  "12",
+  "danh",
+  "thiếp",
+  "ký",
+  "95"
+ ],
+ "lines": [
+  "Ngày 26 tháng 1 năm 1948, một người đàn ông bước vào một ngân hàng ở Tokyo.",
+  "Ông tự xưng là quan chức y tế, được lực lượng chiếm đóng Mỹ cử tới phòng dịch lỵ.",
+  "Ông cho 16 người trong ngân hàng uống thuốc.",
+  "Mười hai người chết.",
+  "Kẻ cướp chỉ lấy khoảng 160 nghìn yên, bỏ lại phần lớn số tiền.",
+  "Họa sĩ Hirasawa Sadamichi bị bắt, nhờ… một tấm danh thiếp.",
+  "Sau những cuộc thẩm vấn bị cho là có tra tấn, ông nhận tội, rồi rút lại.",
+  "Ông bị tuyên án tử hình.",
+  "Nhưng không bộ trưởng tư pháp nào chịu ký lệnh thi hành.",
+  "Ông chờ án hơn 30 năm, rồi chết trong tù năm 1987, ở tuổi 95."
+ ],
+ "imgs": {
+  "trial": "File:Hirasawa Sadamichi at the 1st trial.JPG",
+  "reenact": "File:Reenact of the scene of Teigin incident by Hirasawa Sadamichi.JPG",
+  "invest": "File:The investigation for Hirasawa.JPG",
+  "case": "File:Teigin case.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "case",
+   "frame": "print",
+   "tone": "bw",
+   "intro": true,
+   "head": "NGÂN HÀNG TEIGIN"
+  },
+  {
+   "type": "file",
+   "at": 1,
+   "k": "DANH XƯNG",
+   "name": "QUAN CHỨC\nY TẾ",
+   "desc": "“Được phái tới phòng dịch lỵ”",
+   "stamp": {
+    "text": "GIẢ DANH",
+    "at": [
+     1,
+     "dịch"
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 16,
+   "label": "NGƯỜI UỐNG THUỐC",
+   "until": [
+    2,
+    "thuốc"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "12",
+     "at": [
+      3,
+      "mười"
+     ],
+     "size": 320,
+     "serif": true,
+     "acc": true
+    },
+    {
+     "text": "NGƯỜI CHẾT",
+     "at": [
+      3,
+      "chết"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "KẺ CƯỚP LẤY ĐI",
+   "rows": [
+    {
+     "k": "~160.000 YÊN",
+     "v": "✓",
+     "at": [
+      4,
+      "160"
+     ]
+    }
+   ],
+   "total": {
+    "k": "PHẦN LỚN SỐ TIỀN",
+    "v": "BỎ LẠI",
+    "at": [
+     4,
+     "bỏ"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 5,
+   "k": "NGHI PHẠM · 21.08.1948",
+   "name": "HIRASAWA\nSADAMICHI",
+   "desc": "Họa sĩ tranh tempera",
+   "img": "trial",
+   "stamp": {
+    "text": "DANH THIẾP",
+    "at": [
+     5,
+     "danh"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 6,
+   "img": "reenact",
+   "mode": "print",
+   "tone": "bw",
+   "label": {
+    "text": "NHẬN TỘI → RÚT LẠI",
+    "at": [
+     6,
+     "rút"
+    ],
+    "y": 1330
+   }
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "ÁN TỬ HÌNH",
+   "bg": "trial"
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "LỆNH THI HÀNH",
+     "at": [
+      8,
+      "lệnh"
+     ]
+    },
+    {
+     "text": "KHÔNG AI KÝ",
+     "at": [
+      8,
+      "ký"
+     ],
+     "acc": true,
+     "size": 200
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 9,
+   "items": [
+    {
+     "year": "1948",
+     "text": "Bị bắt",
+     "at": [
+      9,
+      null,
+      0,
+      0.1
+     ]
+    },
+    {
+     "year": "1987",
+     "text": "Chết trong tù, 95 tuổi",
+     "at": [
+      9,
+      "1987"
+     ]
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Sadamichi_Hirasawa"
+ ]
+}

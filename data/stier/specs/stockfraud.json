@@ -1,0 +1,196 @@
+{
+ "title": "Tin giả “Napoleon đã chết” và vụ thao túng chứng khoán London 1814",
+ "description": "Sáng 21/2/1814, một \"sĩ quan\" tới cảng Dover báo tin Napoleon đã chết. Trái phiếu trên sàn London tăng vọt, rồi rơi về chỗ cũ khi tin bị bác bỏ. Có người đã kịp bán.",
+ "tags": [
+  "gian lận chứng khoán 1814",
+  "tin giả",
+  "Napoleon",
+  "Lord Cochrane",
+  "sàn chứng khoán London",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1814",
+ "sub": "TIN GIẢ SÀN LONDON",
+ "acc": [
+  "napoleon",
+  "dover",
+  "london",
+  "cochrane",
+  "berenger",
+  "giả"
+ ],
+ "lines": [
+  "Sáng 21 tháng 2 năm 1814, một sĩ quan mặc quân phục tới cảng Dover với tin nóng:",
+  "Napoleon đã chết.",
+  "Tin được chuyển về London.",
+  "Trái phiếu chính phủ trên sàn chứng khoán tăng vọt.",
+  "Chiều hôm đó, chính phủ xác nhận: tin giả.",
+  "Giá rơi về chỗ cũ.",
+  "Nhưng một nhóm người đã kịp bán số trái phiếu mua từ tuần trước.",
+  "Viên sĩ quan ấy là Random de Berenger, đóng giả.",
+  "Trong số người bị kết tội có cả Lord Cochrane, anh hùng hải quân và nghị sĩ.",
+  "Ông bị tước quân hàm, trục xuất khỏi Quốc hội… rồi được cử tri bầu lại ngay."
+ ],
+ "imgs": {
+  "exchange": "File:Microcosm of London Plate 075 - New Stock Exchange.jpg",
+  "napoleon": "File:David - The Emperor Napoleon in his Study at the Tuileries (second version), 1812.jpg",
+  "cochrane": "File:Lord Cochrane, by James Ramsay.jpg",
+  "cartoon": "File:Things as they have been. Things as they now are.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "napoleon",
+   "frame": "gold",
+   "tone": "color",
+   "intro": true,
+   "head": "TIN NÓNG",
+   "shatter": {
+    "at": [
+     1,
+     "chết"
+    ],
+    "text": "ĐÃ CHẾT?"
+   }
+  },
+  {
+   "type": "photo",
+   "at": 2,
+   "img": "exchange",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "label": {
+    "text": "SÀN CHỨNG KHOÁN LONDON",
+    "at": [
+     2,
+     "london"
+    ]
+   },
+   "credit": "“MICROCOSM OF LONDON” · 1810"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "TRÁI PHIẾU",
+     "at": [
+      3,
+      "trái"
+     ],
+     "serif": true
+    },
+    {
+     "text": "↑ TĂNG VỌT",
+     "at": [
+      3,
+      "tăng"
+     ],
+     "acc": true,
+     "size": 220
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "TIN GIẢ",
+   "sub": "CHÍNH PHỦ XÁC NHẬN · BUỔI CHIỀU",
+   "bg": "exchange"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "↓ VỀ CHỖ CŨ",
+     "at": [
+      5,
+      "rơi"
+     ],
+     "size": 200
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 6,
+   "title": "NHÓM ĐẦU CƠ",
+   "rows": [
+    {
+     "k": "MUA · TUẦN TRƯỚC",
+     "v": "✓",
+     "at": [
+      6,
+      "mua"
+     ]
+    }
+   ],
+   "total": {
+    "k": "BÁN · ĐỈNH GIÁ",
+    "v": "✓",
+    "at": [
+     6,
+     "bán"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 7,
+   "k": "“ĐẠI TÁ DU BOURG”",
+   "name": "RANDOM\nDE BERENGER",
+   "desc": "Sĩ quan giả mạo",
+   "stamp": {
+    "text": "ĐÓNG GIẢ",
+    "at": [
+     7,
+     "đóng"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 8,
+   "k": "BỊ KẾT TỘI",
+   "name": "LORD\nCOCHRANE",
+   "desc": "Anh hùng hải quân · nghị sĩ",
+   "img": "cochrane",
+   "stamp": {
+    "text": "CÓ TỘI",
+    "at": [
+     8,
+     "kết"
+    ]
+   }
+  },
+  {
+   "type": "timeline",
+   "at": 9,
+   "items": [
+    {
+     "year": "1814",
+     "text": "Tước quân hàm, trục xuất",
+     "at": [
+      9,
+      "tước"
+     ]
+    },
+    {
+     "year": "1814",
+     "text": "Cử tri bầu lại ngay",
+     "at": [
+      9,
+      "bầu"
+     ]
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Great_Stock_Exchange_Fraud_of_1814"
+ ]
+}

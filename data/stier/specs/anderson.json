@@ -1,0 +1,199 @@
+{
+ "title": "Người phụ nữ tự nhận là công chúa Anastasia: ADN nói gì?",
+ "description": "Năm 1920 ở Berlin, một phụ nữ vô danh tuyên bố bà là Anastasia, con gái út của Sa hoàng Nicholas II. Vụ kiện kéo dài nhiều năm. Câu trả lời chỉ đến sau khi bà qua đời, từ một lọn tóc.",
+ "tags": [
+  "Anna Anderson",
+  "Anastasia",
+  "Romanov",
+  "ADN",
+  "mạo danh",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1920",
+ "sub": "ANNA ANDERSON · ANASTASIA",
+ "acc": [
+  "anastasia",
+  "romanov",
+  "adn",
+  "berlin",
+  "1984",
+  "ba",
+  "lan"
+ ],
+ "lines": [
+  "Năm 1920, ở Berlin, một phụ nữ vô danh được đưa vào bệnh viện tâm thần.",
+  "Không lâu sau, bà được cho là Anastasia, con gái út của Sa hoàng Nicholas Hai.",
+  "Người được cho là đã bị sát hại cùng cả gia đình năm 1918.",
+  "Người thân và gia sư cũ của Anastasia nói: bà ta là kẻ mạo danh.",
+  "Nhưng nhiều người khác tin bà.",
+  "Vụ kiện kéo dài nhiều năm; tòa án Đức kết luận bà không chứng minh được.",
+  "Bà qua đời năm 1984.",
+  "Sau khi Liên Xô sụp đổ, hài cốt gia đình Sa hoàng được tìm thấy.",
+  "Xét nghiệm ADN trên tóc của bà: không khớp với nhà Romanov.",
+  "Bà là Franziska Schanzkowska, một nữ công nhân người Ba Lan."
+ ],
+ "imgs": {
+  "ana1916": "File:Anastasia Nikolaevna of Russia, spring 1916.jpg",
+  "anameal": "File:Anastasia Nikolaevna of Russia 1916.jpg",
+  "sisters": "File:Maria, Anastasia and Olga Nikolaevna of Russia.jpg",
+  "teeth": "File:Anastasia Nikolaevna of Russia fake teeth.jpg",
+  "botkin": "File:Botkin,Gleb.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "ana1916",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "PHỤ NỮ VÔ DANH"
+  },
+  {
+   "type": "file",
+   "at": 1,
+   "k": "DANH TÍNH ĐƯỢC NHẬN",
+   "name": "ANASTASIA\nNIKOLAEVNA",
+   "desc": "Con gái út Sa hoàng Nicholas II",
+   "img": "ana1916"
+  },
+  {
+   "type": "photo",
+   "at": 2,
+   "img": "sisters",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "label": {
+    "text": "GIA ĐÌNH SA HOÀNG · BỊ SÁT HẠI 1918",
+    "at": [
+     2,
+     "sát"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "NGƯỜI THÂN",
+     "at": [
+      3,
+      "người"
+     ]
+    },
+    {
+     "text": "KẺ MẠO DANH",
+     "at": [
+      3,
+      "mạo"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 4,
+   "img": "botkin",
+   "mode": "print",
+   "tone": "bw",
+   "label": {
+    "text": "NHIỀU NGƯỜI VẪN TIN",
+    "at": [
+     4,
+     "tin"
+    ],
+    "y": 1330
+   }
+  },
+  {
+   "type": "file",
+   "at": 5,
+   "k": "TÒA ÁN ĐỨC",
+   "name": "KHÔNG\nCHỨNG MINH",
+   "desc": "Sau vụ kiện kéo dài nhiều năm",
+   "stamp": {
+    "text": "BÁC",
+    "at": [
+     5,
+     "chứng"
+    ]
+   }
+  },
+  {
+   "type": "date",
+   "at": 6,
+   "day": "QUA ĐỜI",
+   "date": "12.02.1984",
+   "groupAt": [
+    [
+     6,
+     "1984",
+     0,
+     -0.4
+    ],
+    [
+     6,
+     "1984",
+     0,
+     -0.2
+    ],
+    [
+     6,
+     "1984"
+    ]
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 7,
+   "img": "anameal",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "HÀI CỐT NHÀ ROMANOV ĐƯỢC TÌM THẤY",
+    "at": [
+     7,
+     "hài"
+    ],
+    "y": 1330
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 8,
+   "title": "XÉT NGHIỆM ADN",
+   "rows": [
+    {
+     "k": "MẪU: TÓC CỦA BÀ",
+     "v": "",
+     "at": [
+      8,
+      "tóc"
+     ]
+    }
+   ],
+   "total": {
+    "k": "KHỚP ROMANOV?",
+    "v": "KHÔNG",
+    "at": [
+     8,
+     "khớp"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 9,
+   "text": "FRANZISKA\nSCHANZKOWSKA",
+   "sub": "NỮ CÔNG NHÂN NGƯỜI BA LAN",
+   "bg": "teeth"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Anna_Anderson"
+ ]
+}

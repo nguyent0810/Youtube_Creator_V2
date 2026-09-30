@@ -1,0 +1,201 @@
+{
+ "title": "Thuyền trưởng Kidd: được vua ủy quyền, rồi bị xử là hải tặc",
+ "description": "Năm 1695, William Kidd được hoàng gia Anh ủy quyền săn cướp biển. Năm 1701, ông bị treo cổ ở London với tội danh cướp biển, và dây treo cổ đứt ngay lần đầu.",
+ "tags": [
+  "Thuyền trưởng Kidd",
+  "William Kidd",
+  "cướp biển",
+  "Execution Dock",
+  "kho báu",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1701",
+ "sub": "THUYỀN TRƯỞNG KIDD",
+ "acc": [
+  "kidd",
+  "quedagh",
+  "boston",
+  "london",
+  "thames",
+  "dây",
+  "đứt"
+ ],
+ "lines": [
+  "Năm 1695, William Kidd được ủy quyền… để săn cướp biển.",
+  "Ông là thuyền trưởng tư nhân được nhà nước cấp phép.",
+  "Năm 1698, ông chiếm con tàu Quedagh Merchant 400 tấn.",
+  "Nhưng thời thế đổi chiều: ông bị tuyên bố là cướp biển.",
+  "Kẻ săn cướp biển… thành cướp biển.",
+  "Ông bị bắt ở Boston, giải về London xét xử.",
+  "Ngày 23 tháng 5 năm 1701, ở Bến Hành hình, dây treo cổ đứt.",
+  "Đám đông hô: dấu hiệu của Chúa, hãy thả ông ta.",
+  "Vài phút sau, ông bị treo lần nữa.",
+  "Xác ông bị treo bên sông Thames suốt ba năm, để răn đe.",
+  "Còn kho báu ông chôn giấu… đến nay vẫn chỉ là truyền thuyết."
+ ],
+ "imgs": {
+  "kidd": "File:William Kidd.jpg",
+  "harbor": "File:Captain Kidd in New York Harbor cph.3f06373.jpg",
+  "bury": "File:Pyle pirates burying2.jpg",
+  "treasure": "File:Captain Kidd, Burying Treasure, from the Pirates of the Spanish Main series (N19) for Allen & Ginter Cigarettes MET DP835020.jpg",
+  "galley": "File:The Charles Galley-Willem van de Velde the Younger-2.jpg",
+  "hogarth": "File:William Hogarth - Industry and Idleness, Plate 5; The Idle 'Prentice turn'd away, and sent to Sea.png"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "harbor",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "SĂN CƯỚP BIỂN"
+  },
+  {
+   "type": "file",
+   "at": 1,
+   "k": "GIẤY PHÉP TƯ NHÂN · 1695",
+   "name": "WILLIAM\nKIDD",
+   "desc": "Thuyền trưởng · Dundee → New York",
+   "img": "kidd"
+  },
+  {
+   "type": "photo",
+   "at": 2,
+   "img": "galley",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": {
+    "text": "QUEDAGH MERCHANT · 400 TẤN",
+    "at": [
+     2,
+     "quedagh"
+    ]
+   },
+   "credit": "TÀU GALLEY THẾ KỶ 17 · MINH HỌA"
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "CƯỚP BIỂN",
+   "sub": "BỊ TUYÊN BỐ · 1698",
+   "bg": "harbor"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "KẺ SĂN",
+     "at": [
+      4,
+      "kẻ"
+     ],
+     "serif": true
+    },
+    {
+     "text": "= CON MỒI",
+     "at": [
+      4,
+      "thành"
+     ],
+     "acc": true,
+     "size": 220
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 5,
+   "img": "hogarth",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": {
+    "text": "BOSTON → LONDON",
+    "at": [
+     5,
+     "london"
+    ]
+   },
+   "credit": "TRANH KHẮC HOGARTH · THẾ KỶ 18"
+  },
+  {
+   "type": "date",
+   "at": 6,
+   "day": "BẾN HÀNH HÌNH · WAPPING",
+   "date": "23.05.1701",
+   "groupAt": [
+    [
+     6,
+     "23"
+    ],
+    [
+     6,
+     "5"
+    ],
+    [
+     6,
+     "1701"
+    ]
+   ],
+   "stamp": {
+    "text": "DÂY ĐỨT",
+    "at": [
+     6,
+     "đứt"
+    ]
+   }
+  },
+  {
+   "type": "quote",
+   "at": 7,
+   "text": "Dấu hiệu của Chúa! Thả ông ta ra!",
+   "by": "ĐÁM ĐÔNG · DIỄN Ý"
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "LẦN THỨ HAI",
+     "at": [
+      8,
+      "lần"
+     ],
+     "acc": true,
+     "size": 200
+    }
+   ]
+  },
+  {
+   "type": "calendar",
+   "at": 9,
+   "n": 3,
+   "unit": "NĂM",
+   "title": "BÊN SÔNG THAMES *3 NĂM*"
+  },
+  {
+   "type": "photo",
+   "at": 10,
+   "img": "treasure",
+   "mode": "print",
+   "tone": "color",
+   "label": {
+    "text": "KHO BÁU · TRUYỀN THUYẾT",
+    "at": [
+     10,
+     "truyền"
+    ],
+    "y": 1250
+   }
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/William_Kidd"
+ ]
+}

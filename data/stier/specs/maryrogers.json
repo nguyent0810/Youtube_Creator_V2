@@ -1,0 +1,172 @@
+{
+ "title": "Cô gái bán xì gà và vụ án Edgar Allan Poe cố tự giải",
+ "description": "Tháng 7/1841, thi thể Mary Rogers, \"cô gái bán xì gà xinh đẹp\" của New York, nổi trên sông Hudson. Cảnh sát bó tay. Edgar Allan Poe viết hẳn một truyện trinh thám để thử giải vụ án.",
+ "tags": [
+  "Mary Rogers",
+  "Edgar Allan Poe",
+  "Bí ẩn Marie Rogêt",
+  "New York 1841",
+  "vụ án chưa có lời giải",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1841",
+ "sub": "MARY ROGERS · NEW YORK",
+ "acc": [
+  "mary",
+  "rogers",
+  "hudson",
+  "poe",
+  "dupin",
+  "paris",
+  "xì",
+  "gà"
+ ],
+ "lines": [
+  "Tháng 7 năm 1841, thi thể cô gái bán xì gà xinh đẹp nổi trên sông Hudson.",
+  "Mary Rogers, cô bán hàng nổi tiếng của một tiệm thuốc lá ở New York.",
+  "Báo chí khắp nước Mỹ đưa tin, mỗi tờ một giả thuyết.",
+  "Băng đảng. Người yêu. Một ca phá thai hỏng.",
+  "Hôn phu của cô tự sát, để lại một mảnh thư.",
+  "Cảnh sát không giải được vụ án.",
+  "Nhưng một nhà văn thì thử.",
+  "Edgar Allan Poe viết truyện trinh thám Bí ẩn Marie Rogêt, dựng lại vụ án, chuyển bối cảnh sang Paris.",
+  "Thám tử Dupin đưa ra nhiều lời giải… nhưng không nêu tên hung thủ.",
+  "Gần 200 năm sau, cái chết của Mary Rogers vẫn chưa có lời giải."
+ ],
+ "imgs": {
+  "roget": "File:Mystery of Marie Roget.jpg",
+  "poe": "File:Edgar Allan Poe 2.jpg",
+  "poe2": "File:Edgar Allan Poe daguerreotype crop.png"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "roget",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "SÔNG HUDSON"
+  },
+  {
+   "type": "file",
+   "at": 1,
+   "k": "NẠN NHÂN",
+   "name": "MARY\nROGERS",
+   "desc": "“Cô gái bán xì gà xinh đẹp”",
+   "stamp": {
+    "text": "NEW YORK",
+    "at": [
+     1,
+     "york"
+    ]
+   }
+  },
+  {
+   "type": "crowd",
+   "at": 2,
+   "object": "none",
+   "label": {
+    "text": "MỖI TỜ BÁO MỘT GIẢ THUYẾT",
+    "at": [
+     2,
+     "giả"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "BĂNG ĐẢNG?",
+     "at": [
+      3,
+      "băng"
+     ]
+    },
+    {
+     "text": "NGƯỜI YÊU?",
+     "at": [
+      3,
+      "người"
+     ]
+    },
+    {
+     "text": "PHÁ THAI HỎNG?",
+     "at": [
+      3,
+      "phá"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [{"text": "HÔN PHU TỰ SÁT", "at": [4, "tự"]}, {"text": "MỘT MẢNH THƯ", "at": [4, "thư"], "acc": true, "serif": true}]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "BÓ TAY",
+   "sub": "CẢNH SÁT NEW YORK",
+   "white": true,
+   "bg": "roget"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "MỘT NHÀ VĂN",
+     "at": [
+      6,
+      "nhà"
+     ],
+     "serif": true
+    },
+    {
+     "text": "THỬ GIẢI",
+     "at": [
+      6,
+      "thử"
+     ],
+     "acc": true,
+     "size": 220
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 7,
+   "k": "“BÍ ẨN MARIE ROGÊT” · 1842",
+   "name": "EDGAR\nALLAN POE",
+   "desc": "Chuyển bối cảnh sang Paris",
+   "img": "poe"
+  },
+  {
+   "type": "photo",
+   "at": 8,
+   "img": "poe2",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "KHÔNG NÊU TÊN HUNG THỦ",
+    "at": [
+     8,
+     "tên"
+    ],
+    "y": 1330
+   }
+  },
+  {
+   "type": "question",
+   "at": 9,
+   "text": "Ai đã giết Mary Rogers?"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Mary_Rogers"
+ ]
+}

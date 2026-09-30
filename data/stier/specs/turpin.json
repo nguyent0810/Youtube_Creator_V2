@@ -1,0 +1,190 @@
+{
+ "title": "Dick Turpin: huyền thoại cưỡi ngựa bị treo cổ vì… trộm ngựa",
+ "description": "Chuyến phi ngựa Black Bess 320 km trong một đêm của Dick Turpin là chuyện bịa, ra đời gần 100 năm sau khi hắn chết. Turpin thật bị lộ danh tính vì chính lá thư hắn viết từ nhà tù.",
+ "tags": [
+  "Dick Turpin",
+  "Black Bess",
+  "cướp đường",
+  "York 1739",
+  "huyền thoại và sự thật",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1739",
+ "sub": "DICK TURPIN · YORK",
+ "acc": [
+  "turpin",
+  "bess",
+  "york",
+  "palmer",
+  "320",
+  "ngựa",
+  "thư"
+ ],
+ "lines": [
+  "Dick Turpin, tên cướp đường huyền thoại nước Anh, phi ngựa Black Bess 320 cây số trong một đêm.",
+  "Chuyện đó không có thật.",
+  "Nó được một nhà văn đưa vào tiểu thuyết, gần 100 năm sau khi Turpin chết.",
+  "Turpin thật là kẻ trộm hươu, trộm nhà, trộm ngựa, và giết người.",
+  "Hắn trốn lên Yorkshire, lấy tên giả John Palmer.",
+  "Bị bắt vì nghi trộm ngựa, hắn viết thư từ nhà tù cho anh rể.",
+  "Lá thư rơi vào tay nhà chức trách.",
+  "Và lộ danh tính thật.",
+  "Ngày 7 tháng 4 năm 1739, hắn bị treo cổ ở York, vì tội trộm ngựa.",
+  "Huyền thoại cưỡi ngựa… bị treo cổ vì trộm ngựa."
+ ],
+ "imgs": {
+  "tollgate": "File:Dick turpin jumping hornsey tollgate.jpg",
+  "penny": "File:Penny Dreadful Turpin.jpg",
+  "poster": "File:Dick Turpin (1925) poster.jpg",
+  "register": "File:Dick turpin parish register.jpg",
+  "fire": "File:Turpin Putting a Woman on the Fire.JPG",
+  "murderer": "File:Dick turpin murderer.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "tollgate",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "HUYỀN THOẠI"
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "KHÔNG CÓ THẬT",
+   "white": true,
+   "bg": "penny"
+  },
+  {
+   "type": "photo",
+   "at": 2,
+   "img": "poster",
+   "mode": "print",
+   "tone": "color",
+   "label": {
+    "text": "TIỂU THUYẾT · PHIM · TRUYỆN RẺ TIỀN",
+    "at": [
+     2,
+     "tiểu"
+    ],
+    "y": 1300
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "TURPIN THẬT",
+   "rows": [
+    {
+     "k": "TRỘM HƯƠU",
+     "v": "✓",
+     "at": [
+      3,
+      "hươu"
+     ]
+    },
+    {
+     "k": "TRỘM NHÀ",
+     "v": "✓",
+     "at": [
+      3,
+      "nhà"
+     ]
+    },
+    {
+     "k": "TRỘM NGỰA",
+     "v": "✓",
+     "at": [
+      3,
+      "ngựa"
+     ]
+    }
+   ],
+   "total": {
+    "k": "GIẾT NGƯỜI",
+    "v": "✓",
+    "at": [
+     3,
+     "giết"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 4,
+   "k": "YORKSHIRE",
+   "name": "JOHN\nPALMER",
+   "desc": "Tên giả của Dick Turpin",
+   "img": "murderer",
+   "stamp": {
+    "text": "TÊN GIẢ",
+    "at": [
+     4,
+     "giả"
+    ]
+   }
+  },
+  {
+   "type": "quote",
+   "at": 5,
+   "text": "Gửi anh rể…",
+   "by": "LÁ THƯ TURPIN VIẾT TỪ NHÀ TÙ YORK"
+  },
+  {
+   "type": "photo",
+   "at": 6,
+   "img": "register",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "LỘ DANH TÍNH THẬT",
+    "at": [
+     7,
+     "danh"
+    ],
+    "y": 1250
+   }
+  },
+  {
+   "type": "date",
+   "at": 8,
+   "day": "YORK",
+   "date": "07.04.1739",
+   "groupAt": [
+    [
+     8,
+     "7"
+    ],
+    [
+     8,
+     "4"
+    ],
+    [
+     8,
+     "1739"
+    ]
+   ],
+   "stamp": {
+    "text": "TRỘM NGỰA",
+    "at": [
+     8,
+     "trộm"
+    ]
+   }
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "tollgate",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "TRỘM NGỰA",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Dick_Turpin"
+ ]
+}

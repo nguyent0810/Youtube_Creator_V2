@@ -1,0 +1,181 @@
+{
+ "title": "Cô hầu gái biến mất gần một tháng, và câu chuyện chia đôi cả London",
+ "description": "Ngày 1/1/1753, Elizabeth Canning biến mất ở London. Gần một tháng sau cô trở về, kể mình bị bắt cóc và nhốt trên gác xép. Hai người bị kết tội, rồi vụ án lật ngược hoàn toàn.",
+ "tags": [
+  "Elizabeth Canning",
+  "London 1753",
+  "Henry Fielding",
+  "khai man",
+  "bí ẩn thế kỷ 18",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1753",
+ "sub": "ELIZABETH CANNING",
+ "acc": [
+  "canning",
+  "london",
+  "fielding",
+  "squires",
+  "wells",
+  "gác",
+  "xép"
+ ],
+ "lines": [
+  "Ngày 1 tháng 1 năm 1753, cô hầu gái 18 tuổi Elizabeth Canning biến mất ở London.",
+  "Gần một tháng sau, cô trở về, gầy trơ xương.",
+  "Cô kể: bị bắt cóc, nhốt trên gác xép, chỉ có bánh mì và nước.",
+  "Cô chỉ mặt hai người: chủ nhà Susannah Wells, và bà lão Mary Squires.",
+  "Quan tòa kiêm nhà văn Henry Fielding đứng về phía cô.",
+  "Cả hai bị kết tội.",
+  "Nhưng thị trưởng London nghi ngờ, điều tra lại, và nhân chứng bắt đầu đổi lời.",
+  "Canning bị kết tội khai man, bị đày biệt xứ bảy năm.",
+  "Squires được ân xá.",
+  "Gần một tháng ấy cô đã ở đâu… đến nay vẫn không ai biết."
+ ],
+ "imgs": {
+  "canning": "File:Elizabeth Canning crop.jpg",
+  "loft": "File:Elizabeth canning the loft.jpg",
+  "squires": "File:Mary squires.jpg",
+  "trial": "File:Trial of elizabeth canning.jpg",
+  "fielding": "File:Henry Fielding c 1743 etching from Jonathan Wild the Great.jpg",
+  "gascoyne": "File:Engraving of Crisp Gascoyne (cropped).jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "canning",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "BIẾN MẤT"
+  },
+  {
+   "type": "calendar",
+   "at": 1,
+   "n": 28,
+   "unit": "",
+   "title": "*GẦN 1 THÁNG*",
+   "cross": 28
+  },
+  {
+   "type": "photo",
+   "at": 2,
+   "img": "loft",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "GÁC XÉP · BÁNH MÌ VÀ NƯỚC",
+    "at": [
+     2,
+     "bánh"
+    ],
+    "y": 1300
+   }
+  },
+  {
+   "type": "photo",
+   "at": 3,
+   "img": "squires",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "BÀ LÃO MARY SQUIRES",
+    "at": [
+     3,
+     "mary"
+    ],
+    "y": 1320
+   }
+  },
+  {
+   "type": "file",
+   "at": 4,
+   "k": "QUAN TÒA · NHÀ VĂN",
+   "name": "HENRY\nFIELDING",
+   "desc": "Đứng về phía Canning",
+   "img": "fielding"
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "CÓ TỘI",
+   "bg": "trial"
+  },
+  {
+   "type": "file",
+   "at": 6,
+   "k": "THỊ TRƯỞNG LONDON",
+   "name": "CRISP\nGASCOYNE",
+   "desc": "Điều tra lại · nhân chứng đổi lời",
+   "img": "gascoyne",
+   "stamp": {
+    "text": "ĐIỀU TRA LẠI",
+    "at": [
+     6,
+     "điều"
+    ]
+   }
+  },
+  {
+   "type": "mug",
+   "at": 7,
+   "ghost": "1754",
+   "mug": {
+    "img": "canning",
+    "name": "ELIZABETH CANNING",
+    "at": [
+     7,
+     null,
+     0,
+     0.3
+    ]
+   },
+   "stamp": {
+    "text": "KHAI MAN",
+    "at": [
+     7,
+     "khai"
+    ]
+   },
+   "big": {
+    "text": "7 NĂM",
+    "small": "ĐÀY BIỆT XỨ",
+    "at": [
+     7,
+     "bảy"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "MARY SQUIRES",
+     "at": [
+      8,
+      "squires"
+     ],
+     "serif": true
+    },
+    {
+     "text": "ÂN XÁ",
+     "at": [
+      8,
+      "ân"
+     ],
+     "acc": true,
+     "size": 240
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 9,
+   "text": "Cô đã ở đâu?"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Elizabeth_Canning"
+ ]
+}

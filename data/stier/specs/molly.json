@@ -1,0 +1,32 @@
+{
+ "title": "Ông chủ mỏ thuê thám tử, rồi tự làm công tố viên: vụ Molly Maguires",
+ "description": "Thập niên 1870, một thám tử Pinkerton lấy tên giả trà trộn vào hội kín của thợ mỏ Ireland ở Pennsylvania. 20 người bị treo cổ. Đến nay người ta vẫn tranh cãi: hội kín ấy có thật sự tồn tại?",
+ "tags": ["Molly Maguires", "Pinkerton", "James McParland", "thợ mỏ Pennsylvania", "Franklin Gowen", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 1877",
+ "sub": "MOLLY MAGUIRES · PENNSYLVANIA",
+ "acc": ["pinkerton", "mckenna", "gowen", "molly", "maguires", "20", "công", "tố"],
+ "lines": [
+  "Thập niên 1870, một thám tử Pinkerton trà trộn vào hội kín của thợ mỏ Ireland ở Pennsylvania.",
+  "Hắn lấy tên giả James McKenna.",
+  "Người thuê hắn: ông chủ mỏ than giàu nhất thế giới, Franklin Gowen.",
+  "Hội kín bị gọi là Molly Maguires, bị cáo buộc giết người, đốt phá.",
+  "Lời khai của thám tử là bằng chứng then chốt.",
+  "Và chính ông chủ mỏ… đứng ra làm công tố viên trong vài phiên tòa.",
+  "Năm 1877 và 1878, hai mươi người bị treo cổ.",
+  "Nhiều nhà nghiên cứu cho rằng làn sóng tội ác chỉ xuất hiện sau khi Pinkerton tới.",
+  "Đến nay, người ta vẫn tranh cãi: hội kín ấy có thật sự tồn tại?"
+ ],
+ "imgs": {"strike": "File:The Strike in the Coal Mines - Meeting of Molly M'Guire Men.jpg", "march": "File:The March to Death Molly Maguires.png"},
+ "scenes": [
+  {"type": "hero", "img": "strike", "frame": "print", "tone": "sepia", "intro": true, "head": "HỘI KÍN THỢ MỎ"},
+  {"type": "file", "at": 1, "k": "THÁM TỬ PINKERTON", "name": "JAMES\nMCKENNA", "desc": "Tên thật: James McParland", "stamp": {"text": "TÊN GIẢ", "at": [1, "giả"]}},
+  {"type": "file", "at": 2, "k": "NGƯỜI THUÊ", "name": "FRANKLIN\nGOWEN", "desc": "Ông chủ mỏ than antraxit giàu nhất thế giới", "stamp": {"text": "THÂN CHỦ", "at": [2, "gowen"]}},
+  {"type": "kinetic", "at": 3, "items": [{"text": "MOLLY MAGUIRES", "at": [3, "molly"], "serif": true}, {"text": "GIẾT NGƯỜI · ĐỐT PHÁ", "at": [3, "giết"], "acc": true}]},
+  {"type": "kinetic", "at": 4, "items": [{"text": "LỜI KHAI THÁM TỬ", "at": [4, "khai"]}, {"text": "BẰNG CHỨNG THEN CHỐT", "at": [4, "then"], "acc": true}]},
+  {"type": "slam", "at": 5, "text": "ÔNG CHỦ MỎ\n= CÔNG TỐ VIÊN", "bg": "strike"},
+  {"type": "photo", "at": 6, "img": "march", "mode": "print", "tone": "sepia", "label": {"text": "20 NGƯỜI BỊ TREO CỔ · 1877–1878", "at": [6, "treo"], "y": 1300}},
+  {"type": "kinetic", "at": 7, "items": [{"text": "TỘI ÁC XUẤT HIỆN", "at": [7, "tội"]}, {"text": "SAU KHI PINKERTON TỚI", "at": [7, "pinkerton"], "acc": true}]},
+  {"type": "question", "at": 8, "text": "Hội kín ấy có thật?"}
+ ],
+ "sources": ["https://en.wikipedia.org/wiki/Molly_Maguires"]
+}

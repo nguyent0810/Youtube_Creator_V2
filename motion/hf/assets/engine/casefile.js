@@ -297,9 +297,14 @@
     (s.pins || []).forEach((q) => { const p = P(q.name), g = sv("g", {}, svg);
       const ring = sv("circle", { cx: p.x, cy: p.y, r: 34, fill: "none", stroke: "var(--red)", "stroke-width": 4 }, g);
       sv("circle", { cx: p.x, cy: p.y, r: 16, fill: "var(--red)" }, g);
-      const side = q.side || (p.x > 700 ? "t" : "r");
+      const lbl = q.label || p.label || p.name, lw = [...lbl].length * 22 + 40;
+      let side = q.side || (p.x > 700 ? "t" : "r");
+      // nhãn không được tràn mép khung (lỗi thật: ANTWERP/QUEBEC bị cắt)
+      if (side === "r" && p.x + lw > 1050) side = p.x - lw > 30 ? "l" : "t";
+      if (side === "l" && p.x - lw < 30) side = p.x + lw < 1050 ? "r" : "t";
+      if (side === "t" && (p.x - lw / 2 < 30 || p.x + lw / 2 > 1050)) side = p.x < 540 ? "r" : "l";
       const t = sv("text", { x: side === "r" ? p.x + 40 : side === "l" ? p.x - 40 : p.x, y: side === "t" ? p.y - 56 : p.y + 12, class: "pinlbl", "text-anchor": side === "r" ? "start" : side === "l" ? "end" : "middle" }, g);
-      t.textContent = q.label || p.label || p.name;
+      t.textContent = lbl;
       tl.fromTo(g, { opacity: 0, y: -70 }, { opacity: 1, y: 0, duration: 0.35, ease: "bounce.out", immediateRender: false }, q.at);
       tl.fromTo(ring, { scale: 0.4, transformOrigin: "50% 50%" }, { scale: 2.2, opacity: 0, duration: 0.8, ease: "power2.out", immediateRender: false }, q.at + 0.25); });
     const zt = s.zoom ? P(s.zoom) : null;
@@ -333,7 +338,7 @@
   /* ---------- kinetic: chữ lớn xếp tầng, từng dòng đập vào theo lời ----------
      sfx: mỗi item.at -> thud nhẹ */
   B.kinetic = (s, d) => {
-    const it = s.items, sizes = it.map((q) => q.size || fsz(q.text, 150, 960, 0.74)), total = sizes.reduce((a, b) => a + b * 1.08, 0);
+    const it = s.items, sizes = it.map((q) => q.size || fsz(q.text, 150, 960, 0.8)), total = sizes.reduce((a, b) => a + b * 1.08, 0);
     let y = Math.max(300, 820 - total / 2);
     it.forEach((q, k) => { const e = el("div", "kin" + (q.acc ? " acc" : "") + (q.serif ? " serif" : ""), esc(q.text), d); Object.assign(e.style, { fontSize: px(sizes[k]), top: px(y) }); y += sizes[k] * 1.08;
       tl.fromTo(e, { opacity: 0, scale: 1.35, y: -20 }, { opacity: 1, scale: 1, y: 0, duration: 0.2, ease: "power4.in", immediateRender: false }, q.at - 0.08); });
@@ -397,7 +402,7 @@
     if (s.bg) { const m = IM(s.bg), im = el("img", "abs " + toneCls("dim"), null, d); im.src = m.src; const k = Math.max(1080 / m.w, 1920 / m.h);
       Object.assign(im.style, { width: px(m.w * k), height: px(m.h * k), left: px(540 - m.w * k / 2), top: px(960 - m.h * k / 2) });
       tl.fromTo(im, { scale: 1.12 }, { scale: 1.0, duration: s.t1 - s.t0, ease: "none", immediateRender: false }, s.t0); }
-    const lines = s.text.split("\n"), fs = fsz(lines.reduce((a, b) => (a.length > b.length ? a : b)), 170, 980, 0.74);
+    const lines = s.text.split("\n"), fs = fsz(lines.reduce((a, b) => (a.length > b.length ? a : b)), 170, 960, 0.8);
     const sl = el("div", "slam", lines.map(esc).join("<br/>"), d); Object.assign(sl.style, { fontSize: px(fs), top: px(820 - fs * lines.length / 2), lineHeight: 1.02, color: s.white ? "#fff" : "" });
     tl.fromTo(sl, { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 0.18, ease: "power4.in", immediateRender: false }, s.at - 0.13);
     if (s.sub) { const sb = el("div", "dsub mono", esc(s.sub), d); sb.style.top = px(840 + fs * lines.length / 2 + 30); tl.to(sb, { opacity: 1, duration: 0.3 }, s.at + 0.3); }

@@ -1,0 +1,194 @@
+{
+ "title": "Pretty Boy Floyd có thật sự xé giấy nợ cho dân nghèo?",
+ "description": "Dân nghèo kể Pretty Boy Floyd xé giấy nợ thế chấp mỗi lần cướp ngân hàng. Chuyện đó chưa bao giờ được xác nhận. Ba tháng sau khi Dillinger chết, Floyd thành kẻ thù số một của nước Mỹ.",
+ "tags": [
+  "Pretty Boy Floyd",
+  "Charles Floyd",
+  "FBI",
+  "kẻ thù số một",
+  "Ohio 1934",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1934",
+ "sub": "PRETTY BOY FLOYD",
+ "acc": [
+  "floyd",
+  "dillinger",
+  "hoover",
+  "fbi",
+  "ohio",
+  "ngô",
+  "nợ"
+ ],
+ "lines": [
+  "Dân nghèo miền Trung nước Mỹ kể: mỗi lần cướp ngân hàng, Pretty Boy Floyd lại xé giấy nợ thế chấp của họ.",
+  "Chuyện đó chưa bao giờ được xác nhận.",
+  "Charles Floyd ghét cay ghét đắng biệt danh Cậu bé xinh trai.",
+  "Tháng 7 năm 1934, John Dillinger bị bắn chết.",
+  "Giám đốc FBI Hoover lập tức gọi Floyd là kẻ thù số một của nước Mỹ.",
+  "Ba tháng sau, ngày 22 tháng 10, đặc vụ vây hắn trên một cánh đồng ngô ở Ohio.",
+  "Floyd bị bắn chết.",
+  "Ai bắn phát cuối, và hắn chết thế nào, các lời kể vẫn mâu thuẫn.",
+  "Người hùng xé giấy nợ… có lẽ chỉ sống trong lời kể."
+ ],
+ "imgs": {
+  "fbi": "File:Pretty Boy Floyd FBI.jpg",
+  "prison": "File:Charles Arthur Floyd 1928 Prison record.jpg",
+  "h34": "File:H0171-L401000875.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "fbi",
+   "frame": "print",
+   "tone": "bw",
+   "intro": true,
+   "head": "XÉ GIẤY NỢ"
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "CHƯA XÁC NHẬN",
+   "white": true,
+   "bg": "prison"
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "“PRETTY BOY”",
+     "at": [
+      2,
+      "biệt"
+     ],
+     "serif": true
+    },
+    {
+     "text": "GHÉT CAY GHÉT ĐẮNG",
+     "at": [
+      2,
+      "ghét"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 3,
+   "day": "CHICAGO",
+   "date": "22.07.1934",
+   "groupAt": [
+    [
+     3,
+     "7"
+    ],
+    [
+     3,
+     "7",
+     0,
+     0.25
+    ],
+    [
+     3,
+     "1934"
+    ]
+   ],
+   "stamp": {
+    "text": "DILLINGER CHẾT",
+    "at": [
+     3,
+     "chết"
+    ]
+   }
+  },
+  {
+   "type": "mug",
+   "at": 4,
+   "ghost": "PUBLIC ENEMY",
+   "mug": {
+    "img": "prison",
+    "name": "CHARLES FLOYD",
+    "at": [
+     4,
+     null,
+     0,
+     0.3
+    ]
+   },
+   "big": {
+    "text": "SỐ 1",
+    "small": "KẺ THÙ CỦA NƯỚC MỸ",
+    "at": [
+     4,
+     "số"
+    ]
+   }
+  },
+  {
+   "type": "date",
+   "at": 5,
+   "day": "CÁNH ĐỒNG NGÔ · OHIO",
+   "date": "22.10.1934",
+   "groupAt": [
+    [
+     5,
+     "22"
+    ],
+    [
+     5,
+     "10"
+    ],
+    [
+     5,
+     "10",
+     0,
+     0.35
+    ]
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "BỊ BẮN CHẾT",
+   "bg": "h34"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "AI BẮN?",
+     "at": [
+      7,
+      "ai"
+     ],
+     "size": 220,
+     "serif": true
+    },
+    {
+     "text": "LỜI KỂ MÂU THUẪN",
+     "at": [
+      7,
+      "mâu"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "hero",
+   "at": 8,
+   "img": "fbi",
+   "frame": "print",
+   "tone": "bw",
+   "loop": true,
+   "head": "CHỈ LÀ LỜI KỂ?",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Pretty_Boy_Floyd"
+ ]
+}

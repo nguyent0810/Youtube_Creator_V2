@@ -1,0 +1,35 @@
+{
+ "title": "Lên ghế điện cùng ngày với người đã thú nhận gây án: Sacco và Vanzetti",
+ "description": "Năm 1920, hai nhân viên chở lương bị bắn chết ở Braintree, Massachusetts. Hai người nhập cư Ý, Sacco và Vanzetti, bị kết án. Một tử tù khác thú nhận chính hắn gây án, nhưng phán quyết không đổi.",
+ "tags": ["Sacco và Vanzetti", "án oan", "Massachusetts 1927", "ghế điện", "người nhập cư Ý", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 1927",
+ "sub": "SACCO & VANZETTI",
+ "acc": ["sacco", "vanzetti", "medeiros", "massachusetts", "50", "ghế", "điện"],
+ "lines": [
+  "Năm 1920, hai nhân viên chở lương của một xưởng giày ở Massachusetts bị bắn chết.",
+  "Hai người nhập cư Ý theo chủ nghĩa vô chính phủ bị bắt: Sacco và Vanzetti.",
+  "Năm 1921, bồi thẩm đoàn nghị án vài giờ: có tội.",
+  "Rồi một tử tù khác, Celestino Medeiros, thú nhận chính hắn đã gây án.",
+  "Phán quyết vẫn giữ nguyên.",
+  "Rạng sáng 23 tháng 8 năm 1927, Sacco và Vanzetti lên ghế điện…",
+  "cùng ngày với chính người đã thú nhận.",
+  "Đúng 50 năm sau, thống đốc Massachusetts tuyên bố: họ đã bị xét xử bất công.",
+  "Nhưng không có lệnh ân xá.",
+  "Phần lớn giới sử học cho rằng định kiến với người nhập cư đã kết án họ."
+ ],
+ "imgs": {"sacvan": "File:Sacvan.jpg", "court": "File:NorfolkCoCourt.JPG", "save": "File:Save Sacco and Vanzetti.jpg",
+          "funeral": "File:Duizenden mensen volgen de lijkwagens met daarin de stoffelijke overschotten van Nicola Sacco, SFA022004134.jpg"},
+ "scenes": [
+  {"type": "hero", "img": "sacvan", "frame": "print", "tone": "bw", "intro": true, "head": "XƯỞNG GIÀY BRAINTREE"},
+  {"type": "photo", "at": 1, "img": "sacvan", "tone": "bw", "focus": [0.5, 0.4], "label": {"text": "NICOLA SACCO · BARTOLOMEO VANZETTI", "at": [1, "sacco"]}},
+  {"type": "file", "at": 2, "k": "TÒA DEDHAM · 14.07.1921", "name": "CÓ TỘI", "desc": "Sau vài giờ nghị án", "img": "court", "stamp": {"text": "CÓ TỘI", "at": [2, "tội"]}},
+  {"type": "file", "at": 3, "k": "LỜI THÚ NHẬN", "name": "CELESTINO\nMEDEIROS", "desc": "Tử tù · nhận chính hắn gây án", "stamp": {"text": "THÚ NHẬN", "at": [3, "thú"]}},
+  {"type": "slam", "at": 4, "text": "GIỮ NGUYÊN", "bg": "court"},
+  {"type": "date", "at": 5, "bg": "save", "day": "RẠNG SÁNG · GHẾ ĐIỆN", "date": "23.08.1927", "groupAt": [[5, "23"], [5, "8"], [5, "1927"]]},
+  {"type": "kinetic", "at": 6, "items": [{"text": "CÙNG NGÀY", "at": [6, "cùng"], "size": 200, "serif": true}, {"text": "NGƯỜI ĐÃ THÚ NHẬN", "at": [6, "thú"], "acc": true}]},
+  {"type": "timeline", "at": 7, "items": [{"year": "1927", "text": "Bị xử tử", "at": [7, null, 0, 0.1]}, {"year": "1977", "text": "Tuyên bố: xét xử bất công", "at": [7, "bất"]}]},
+  {"type": "kinetic", "at": 8, "items": [{"text": "ÂN XÁ?", "at": [8, "ân"], "size": 220, "serif": true}, {"text": "KHÔNG", "at": [8, "không"], "acc": true, "size": 240}]},
+  {"type": "photo", "at": 9, "img": "funeral", "tone": "bw", "focus": [0.5, 0.5], "label": {"text": "ĐỊNH KIẾN VỚI NGƯỜI NHẬP CƯ", "at": [9, "định"]}, "credit": "HÀNG NGHÌN NGƯỜI THEO ĐOÀN XE TANG · BOSTON 1927"}
+ ],
+ "sources": ["https://en.wikipedia.org/wiki/Sacco_and_Vanzetti"]
+}

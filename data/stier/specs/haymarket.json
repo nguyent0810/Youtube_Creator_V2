@@ -1,0 +1,208 @@
+{
+ "title": "Vụ án phía sau ngày Quốc tế Lao động 1/5",
+ "description": "Ngày 4/5/1886 ở quảng trường Haymarket, Chicago, một kẻ lạ mặt ném bom vào cảnh sát tại cuộc mít tinh đòi ngày làm 8 tiếng. Tám người bị đưa ra tòa. Kẻ ném bom thật đến nay vẫn chưa ai biết.",
+ "tags": [
+  "Haymarket 1886",
+  "Quốc tế Lao động",
+  "ngày 1/5",
+  "ngày làm 8 tiếng",
+  "Chicago",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1886",
+ "sub": "HAYMARKET · CHICAGO",
+ "acc": [
+  "haymarket",
+  "chicago",
+  "8",
+  "1",
+  "bom",
+  "1893",
+  "illinois"
+ ],
+ "lines": [
+  "Ngày Quốc tế Lao động 1 tháng 5 gắn liền với một vụ án ở Chicago năm 1886.",
+  "Công nhân Mỹ đình công, đòi ngày làm việc 8 tiếng.",
+  "Ngày 4 tháng 5, tại quảng trường Haymarket, khi cảnh sát tới giải tán cuộc mít tinh…",
+  "một kẻ lạ mặt ném bom.",
+  "Bảy cảnh sát và ít nhất bốn thường dân thiệt mạng.",
+  "Tám người theo chủ nghĩa vô chính phủ bị đưa ra tòa.",
+  "Chỉ hai người có mặt ở hiện trường. Không ai trong số họ bị chứng minh là người ném bom.",
+  "Bảy án tử hình. Bốn người bị treo cổ.",
+  "Năm 1893, thống đốc Illinois ân xá những người còn lại, và chỉ trích phiên tòa.",
+  "Kẻ ném bom thật… đến nay vẫn chưa ai biết."
+ ],
+ "imgs": {
+  "map": "File:Haymarket Affair map Chicago Tribune may 5, 1886.jpg",
+  "trial": "File:The trial of the anarchists in Chicago.jpg",
+  "anarchists": "File:ChicagoAnarchists.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "trial",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "NGÀY 1 THÁNG 5"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "8 TIẾNG",
+     "at": [
+      1,
+      "8"
+     ],
+     "size": 260,
+     "serif": true,
+     "acc": true
+    },
+    {
+     "text": "MỘT NGÀY LÀM VIỆC",
+     "at": [
+      1,
+      "ngày"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 2,
+   "bg": "map",
+   "day": "QUẢNG TRƯỜNG HAYMARKET",
+   "date": "04.05.1886",
+   "groupAt": [
+    [
+     2,
+     "4"
+    ],
+    [
+     2,
+     "5"
+    ],
+    [
+     2,
+     "5",
+     0,
+     0.35
+    ]
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "NÉM BOM",
+   "bg": "map"
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "THƯƠNG VONG",
+   "rows": [
+    {
+     "k": "CẢNH SÁT",
+     "v": "7",
+     "at": [
+      4,
+      "cảnh"
+     ]
+    }
+   ],
+   "total": {
+    "k": "THƯỜNG DÂN",
+    "v": "≥ 4",
+    "at": [
+     4,
+     "thường"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 5,
+   "img": "anarchists",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "8 BỊ CÁO",
+    "at": [
+     5,
+     "tám"
+    ],
+    "y": 1340
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "2 / 8",
+     "at": [
+      6,
+      "hai"
+     ],
+     "size": 240,
+     "serif": true
+    },
+    {
+     "text": "CÓ MẶT Ở HIỆN TRƯỜNG",
+     "at": [
+      6,
+      "hiện"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "BẢN ÁN",
+   "rows": [
+    {
+     "k": "ÁN TỬ HÌNH",
+     "v": "7",
+     "at": [
+      7,
+      "tử"
+     ]
+    }
+   ],
+   "total": {
+    "k": "BỊ TREO CỔ",
+    "v": "4",
+    "at": [
+     7,
+     "treo"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 8,
+   "k": "ILLINOIS · 1893",
+   "name": "ÂN XÁ",
+   "desc": "Thống đốc John Peter Altgeld chỉ trích phiên tòa",
+   "stamp": {
+    "text": "ÂN XÁ",
+    "at": [
+     8,
+     "ân"
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "at": 9,
+   "text": "Ai đã ném bom?"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Haymarket_affair"
+ ]
+}

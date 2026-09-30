@@ -1,0 +1,35 @@
+{
+ "title": "9 thiếu niên, 8 án tử, và lời tố cáo bị thừa nhận là bịa: vụ Scottsboro",
+ "description": "Năm 1931 ở Alabama, chín thiếu niên da đen bị cáo buộc cưỡng hiếp, bị xử chóng vánh trước bồi thẩm đoàn toàn người da trắng. Một người tố cáo sau đó thừa nhận câu chuyện là bịa. Ân xá cuối cùng đến năm 2013.",
+ "tags": ["Scottsboro Boys", "án oan", "Alabama 1931", "Tòa án Tối cao Mỹ", "bồi thẩm đoàn", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 1931",
+ "sub": "SCOTTSBORO · ALABAMA",
+ "acc": ["alabama", "scottsboro", "13", "2013", "82", "bịa"],
+ "lines": [
+  "Ngày 25 tháng 3 năm 1931, chín thiếu niên da đen bị bắt trên một chuyến tàu hàng ở Alabama.",
+  "Người nhỏ nhất mới 13 tuổi.",
+  "Hai phụ nữ da trắng cáo buộc họ cưỡng hiếp.",
+  "Không có bằng chứng y khoa nào. Bồi thẩm đoàn toàn người da trắng.",
+  "Tám người bị tuyên án tử hình.",
+  "Tòa án Tối cao Mỹ hai lần can thiệp, yêu cầu xử lại.",
+  "Trong phiên xử lại, một người tố cáo thừa nhận: câu chuyện là bịa đặt.",
+  "Dù vậy, năm người vẫn bị kết tội.",
+  "Mãi tới năm 2013, bang Alabama mới ân xá cho ba người cuối cùng, khi tất cả đã qua đời.",
+  "82 năm sau."
+ ],
+ "imgs": {"young": "File:Young Black Men Accused in the Scottsboro Rape Case (cropped).jpg", "leibowitz": "File:Samuel Leibowitz and Scottsboro Boys.jpg",
+          "bates": "File:Ruby Bates testifying 1933.jpg", "browder": "File:Earl Browder with the Scottsboro Boys. 1931 Trim.png"},
+ "scenes": [
+  {"type": "hero", "img": "young", "frame": "print", "tone": "bw", "intro": true, "head": "CHÍN THIẾU NIÊN"},
+  {"type": "counter", "at": 1, "to": 13, "label": "TUỔI · NGƯỜI NHỎ NHẤT", "until": [1, "13", 0, 0.3]},
+  {"type": "kinetic", "at": 2, "items": [{"text": "LỜI CÁO BUỘC", "at": [2, "cáo"], "acc": true}]},
+  {"type": "ledger", "at": 3, "title": "PHIÊN XỬ ĐẦU · 1931", "rows": [{"k": "BẰNG CHỨNG Y KHOA", "v": "KHÔNG", "at": [3, "y"]}], "total": {"k": "BỒI THẨM ĐOÀN", "v": "TOÀN DA TRẮNG", "at": [3, "trắng"]}},
+  {"type": "counter", "at": 4, "to": 8, "label": "ÁN TỬ HÌNH", "until": [4, "tám", 0, 0.3]},
+  {"type": "photo", "at": 5, "img": "leibowitz", "tone": "bw", "focus": [0.5, 0.45], "label": {"text": "TÒA ÁN TỐI CAO · 2 LẦN XỬ LẠI", "at": [5, "hai"]}},
+  {"type": "photo", "at": 6, "img": "bates", "mode": "print", "tone": "bw", "stamp": {"text": "BỊA ĐẶT", "at": [6, "bịa"], "x": 330, "y": 1150}},
+  {"type": "kinetic", "at": 7, "items": [{"text": "VẪN KẾT TỘI", "at": [7, "kết"], "acc": true}, {"text": "5 NGƯỜI", "at": [7, "năm"], "size": 220, "serif": true}]},
+  {"type": "date", "at": 8, "day": "ALABAMA · ÂN XÁ SAU KHI MẤT", "date": "21.11.2013", "groupAt": [[8, "2013", 0, -0.4], [8, "2013", 0, -0.2], [8, "2013"]]},
+  {"type": "hero", "at": 9, "img": "young", "frame": "print", "tone": "bw", "loop": true, "head": "82 NĂM", "tr": "cut"}
+ ],
+ "sources": ["https://en.wikipedia.org/wiki/Scottsboro_Boys"]
+}

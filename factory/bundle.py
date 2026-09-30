@@ -44,7 +44,7 @@ MAX_TAGS_TOTAL_CHARS = 500
 # Short phải <= 3 phút mới được YouTube xếp vào Shorts. Ta nhắm 25-45 giây:
 # đủ dài để kể một ý trọn vẹn, đủ ngắn để giữ chân.
 SHORT_MIN_WORDS = 35
-SHORT_MAX_WORDS = 130
+SHORT_MAX_WORDS = 140   # hồ sơ S-tier ~35 giây vẫn nằm trong khung Short
 
 _ILLEGAL_TITLE = re.compile(r"[<>]")
 

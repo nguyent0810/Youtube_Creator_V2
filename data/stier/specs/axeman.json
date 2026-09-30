@@ -1,0 +1,172 @@
+{
+ "title": "Gã cầm rìu New Orleans hứa tha cho nhà nào đang chơi jazz",
+ "description": "Ngày 13/3/1919, một lá thư tự nhận của \"Gã cầm rìu New Orleans\" được đăng báo: hắn sẽ ra tay lúc 0 giờ 15 đêm 19/3, nhưng tha cho nhà nào đang chơi jazz. Đêm đó, cả thành phố chơi nhạc.",
+ "tags": [
+  "Axeman of New Orleans",
+  "New Orleans 1919",
+  "nhạc jazz",
+  "vụ án chưa có lời giải",
+  "lá thư sát nhân",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1919",
+ "sub": "GÃ CẦM RÌU · NEW ORLEANS",
+ "acc": [
+  "orleans",
+  "jazz",
+  "0",
+  "15",
+  "19",
+  "rìu"
+ ],
+ "lines": [
+  "Ngày 13 tháng 3 năm 1919, báo chí New Orleans đăng một lá thư, được cho là của một kẻ sát nhân.",
+  "Kẻ mà cả thành phố gọi là gã cầm rìu.",
+  "Hắn viết: hắn sẽ ra tay lúc 0 giờ 15 phút, đêm 19 tháng 3.",
+  "Nhưng sẽ tha cho nhà nào đang có ban nhạc chơi jazz.",
+  "Đêm đó, mọi vũ trường trong thành phố chật kín người.",
+  "Hàng trăm ngôi nhà mở tiệc, ban nhạc chơi jazz tới sáng.",
+  "Và đêm đó, không có án mạng nào.",
+  "Gã cầm rìu chưa bao giờ bị bắt.",
+  "Hắn biến mất, cũng bí ẩn như lúc xuất hiện.",
+  "Đêm ấy, cả New Orleans chơi nhạc… để sống."
+ ],
+ "imgs": {
+  "axman": "File:Mysterious axman.gif",
+  "map": "File:Axeman Map New Orleans March 1919.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "axman",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "MỘT LÁ THƯ"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "GÃ CẦM",
+     "at": [
+      1,
+      "gã"
+     ],
+     "serif": true
+    },
+    {
+     "text": "RÌU",
+     "at": [
+      1,
+      "rìu"
+     ],
+     "acc": true,
+     "size": 300,
+     "serif": true
+    }
+   ]
+  },
+  {
+   "type": "clock",
+   "at": 2,
+   "from": "ĐÊM 19.03.1919",
+   "plus": "00:15",
+   "plusAt": [
+    2,
+    "15"
+   ],
+   "turns": 1
+  },
+  {
+   "type": "quote",
+   "at": 3,
+   "text": "Nhà nào đang chơi jazz sẽ được tha.",
+   "by": "LÁ THƯ ĐĂNG BÁO 13.03.1919 · DIỄN Ý"
+  },
+  {
+   "type": "crowd",
+   "at": 4,
+   "object": "none",
+   "label": {
+    "text": "VŨ TRƯỜNG CHẬT KÍN",
+    "at": [
+     4,
+     "chật"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 5,
+   "img": "map",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "NEW ORLEANS · 03.1919",
+    "at": [
+     5,
+     "jazz"
+    ],
+    "y": 1330
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "0",
+     "at": [
+      6,
+      "không"
+     ],
+     "size": 320,
+     "serif": true,
+     "acc": true
+    },
+    {
+     "text": "ÁN MẠNG",
+     "at": [
+      6,
+      "án"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 7,
+   "k": "NEW ORLEANS · 1918–1919",
+   "name": "CHƯA BAO GIỜ\nBỊ BẮT",
+   "desc": "Danh tính vẫn là bí ẩn",
+   "stamp": {
+    "text": "CHƯA GIẢI",
+    "at": [
+     7,
+     "bắt"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "text": "BIẾN MẤT",
+   "bg": "axman"
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "axman",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "ĐỂ SỐNG",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Axeman_of_New_Orleans"
+ ]
+}

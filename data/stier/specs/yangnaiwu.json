@@ -1,0 +1,205 @@
+{
+ "title": "Dương Nãi Vũ và Tiểu Bạch Thái: kỳ án oan nổi tiếng nhất triều Thanh",
+ "description": "Năm 1873 ở Chiết Giang, Cát Phẩm Liên chết đột ngột, khám nghiệm kết luận trúng độc. Vợ anh, Tiểu Bạch Thái, bị tra tấn tới mức nhận tội và khai đồng phạm là cử nhân Dương Nãi Vũ. Bốn năm sau, bộ xương trắng lên tiếng.",
+ "tags": [
+  "Dương Nãi Vũ",
+  "Tiểu Bạch Thái",
+  "án oan triều Thanh",
+  "Từ Hi Thái hậu",
+  "Chiết Giang 1873",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1873",
+ "sub": "DƯƠNG NÃI VŨ · TIỂU BẠCH THÁI",
+ "acc": [
+  "dương",
+  "nãi",
+  "vũ",
+  "tiểu",
+  "bạch",
+  "thái",
+  "từ",
+  "hi",
+  "xương"
+ ],
+ "lines": [
+  "Năm 1873, ở Chiết Giang, Trung Quốc, một người đàn ông tên Cát Phẩm Liên chết đột ngột.",
+  "Khám nghiệm kết luận: bị đầu độc.",
+  "Người vợ trẻ, biệt danh Tiểu Bạch Thái, bị tra tấn tới mức nhận tội…",
+  "và khai đồng phạm là cử nhân Dương Nãi Vũ.",
+  "Cả hai đối mặt án tử.",
+  "Gia đình họ Dương kêu oan tận kinh thành, tờ Thân Báo đưa tin liên tục.",
+  "Tin tới tai Từ Hi Thái hậu, bà ra lệnh xử lại.",
+  "Tháng 1 năm 1877, thi hài được khám lại ở Bắc Kinh: xương trắng, không hề trúng độc.",
+  "Hóa ra, trời nóng làm xác phân hủy nhanh, người khám nghiệm tưởng là độc.",
+  "Hàng loạt quan lại bị cách chức."
+ ],
+ "imgs": {
+  "court": "File:Chinese court, Baoding.jpg",
+  "edict": "File:革除杨乃武举人身份御批.jpg",
+  "confession": "File:Confession of Yang Naiwu from the Punishment Department of Qing dynasty.png",
+  "shunpao": "File:Yang Naiwu's Second Appeal to Beijing, on Shun Pao.jpg",
+  "poster": "File:国华影业公司-杨乃武海报.jpg",
+  "cover": "File:杨乃武与小白菜 上海移风出版社 封面.png"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "cover",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "CHẾT ĐỘT NGỘT"
+  },
+  {
+   "type": "file",
+   "at": 1,
+   "k": "KHÁM NGHIỆM · 1873",
+   "name": "TRÚNG ĐỘC",
+   "desc": "Kết luận của người khám nghiệm huyện Dư Hàng",
+   "stamp": {
+    "text": "KẾT LUẬN",
+    "at": [
+     1,
+     "đầu"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 2,
+   "img": "court",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": {
+    "text": "TRA TẤN · NHẬN TỘI",
+    "at": [
+     2,
+     "nhận"
+    ]
+   },
+   "credit": "MỘT CÔNG ĐƯỜNG THỜI THANH · ẢNH 1901"
+  },
+  {
+   "type": "evidence",
+   "at": 3,
+   "img": "edict",
+   "tone": "sepia",
+   "tag": "CHIẾU TƯỚC DANH CỬ NHÂN · 1873",
+   "credit": "DƯƠNG NÃI VŨ BỊ TƯỚC DANH HIỆU CỬ NHÂN"
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "ÁN TỬ",
+   "bg": "court"
+  },
+  {
+   "type": "doc",
+   "at": 5,
+   "img": "shunpao",
+   "tone": "sepia",
+   "moves": [
+    {
+     "at": 5,
+     "x": 0.5,
+     "y": 0.3,
+     "z": 1.1
+    },
+    {
+     "at": [
+      5,
+      "thân"
+     ],
+     "x": 0.5,
+     "y": 0.55,
+     "z": 1.5
+    }
+   ],
+   "credit": "THÂN BÁO · 07.12.1874"
+  },
+  {
+   "type": "file",
+   "at": 6,
+   "k": "LỆNH TỪ KINH THÀNH",
+   "name": "XỬ LẠI",
+   "desc": "Từ Hi Thái hậu",
+   "stamp": {
+    "text": "XỬ LẠI",
+    "at": [
+     6,
+     "xử"
+    ]
+   }
+  },
+  {
+   "type": "date",
+   "at": 7,
+   "day": "BẮC KINH · KHÁM LẠI",
+   "date": "01.1877",
+   "groupAt": [
+    [
+     7,
+     "1",
+     0,
+     0.2
+    ],
+    [
+     7,
+     "1877"
+    ]
+   ],
+   "stamp": {
+    "text": "KHÔNG TRÚNG ĐỘC",
+    "at": [
+     7,
+     "trúng"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "TRỜI NÓNG",
+     "at": [
+      8,
+      "nóng"
+     ]
+    },
+    {
+     "text": "≠ ĐỘC",
+     "at": [
+      8,
+      "độc"
+     ],
+     "acc": true,
+     "size": 240
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 9,
+   "img": "poster",
+   "mode": "print",
+   "tone": "sepia",
+   "stamp": {
+    "text": "CÁCH CHỨC",
+    "at": [
+     9,
+     "cách"
+    ],
+    "x": 300,
+    "y": 1150
+   }
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Case_of_Yang_Naiwu_and_Little_Cabbage"
+ ]
+}

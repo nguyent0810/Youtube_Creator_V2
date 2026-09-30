@@ -1,0 +1,187 @@
+{
+ "title": "Vụ Leo Frank: bản án oan và đám đông vượt trên luật pháp",
+ "description": "Năm 1913 ở Atlanta, bé Mary Phagan 13 tuổi được tìm thấy đã chết trong xưởng bút chì. Giám đốc xưởng Leo Frank bị kết án. Nhiều nhà sử học nay tin hung thủ là người khác. Năm 1986, Georgia ân xá cho Frank.",
+ "tags": [
+  "Leo Frank",
+  "án oan",
+  "Atlanta 1913",
+  "Mary Phagan",
+  "Liên đoàn Chống Phỉ báng",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1913",
+ "sub": "LEO FRANK · ATLANTA",
+ "acc": [
+  "atlanta",
+  "frank",
+  "conley",
+  "georgia",
+  "1986",
+  "phagan"
+ ],
+ "lines": [
+  "Năm 1913, ở Atlanta, bé Mary Phagan, 13 tuổi, được tìm thấy đã chết dưới tầng hầm một xưởng bút chì.",
+  "Giám đốc xưởng, Leo Frank, bị bắt.",
+  "Bên công tố dựa chủ yếu vào lời khai của người lao công, Jim Conley.",
+  "Người mà nhiều nhà sử học nay tin mới là hung thủ.",
+  "Leo Frank bị tuyên án tử hình.",
+  "Năm 1915, thống đốc Georgia xem xét cả bằng chứng mới, và giảm án xuống chung thân.",
+  "Hai tháng sau, một nhóm người có vũ trang bắt Frank khỏi nhà tù, và treo cổ ông.",
+  "Không ai bị truy tố.",
+  "Năm 1986, Georgia ân xá cho Frank, thừa nhận bang đã không bảo vệ được ông.",
+  "Vụ án thúc đẩy sự ra đời của Liên đoàn Chống Phỉ báng."
+ ],
+ "imgs": {
+  "frank": "File:Leo Frank 1910s (3x4 cropped).jpg",
+  "trial": "File:Frank's trial.jpg",
+  "conley": "File:Jim Conley.jpg",
+  "slaton": "File:John Slaton and wife.jpg",
+  "headline": "File:Leo-frank-police-have-the-strangler-headline.jpg",
+  "atrial": "File:Leo-frank-at-trial crop.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "headline",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "XƯỞNG BÚT CHÌ"
+  },
+  {
+   "type": "file",
+   "at": 1,
+   "k": "GIÁM ĐỐC XƯỞNG",
+   "name": "LEO\nFRANK",
+   "desc": "National Pencil Company · Atlanta",
+   "img": "frank",
+   "stamp": {
+    "text": "BỊ BẮT",
+    "at": [
+     1,
+     "bắt"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 2,
+   "k": "NHÂN CHỨNG CHÍNH",
+   "name": "JIM\nCONLEY",
+   "desc": "Người lao công của xưởng",
+   "img": "conley"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "HUNG THỦ THẬT?",
+     "at": [
+      3,
+      "hung"
+     ],
+     "acc": true,
+     "serif": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 4,
+   "img": "trial",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "stamp": {
+    "text": "TỬ HÌNH",
+    "at": [
+     4,
+     "tử"
+    ],
+    "x": 330,
+    "y": 1150
+   },
+   "credit": "PHIÊN TÒA · ATLANTA 1913"
+  },
+  {
+   "type": "file",
+   "at": 5,
+   "k": "THỐNG ĐỐC GEORGIA · 06.1915",
+   "name": "JOHN\nSLATON",
+   "desc": "Giảm án xuống chung thân",
+   "img": "slaton",
+   "stamp": {
+    "text": "GIẢM ÁN",
+    "at": [
+     5,
+     "giảm"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "BẮT KHỎI NHÀ TÙ",
+   "sub": "17.08.1915 · MARIETTA",
+   "bg": "atrial"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "0",
+     "at": [
+      7,
+      "không"
+     ],
+     "size": 320,
+     "serif": true,
+     "acc": true
+    },
+    {
+     "text": "NGƯỜI BỊ TRUY TỐ",
+     "at": [
+      7,
+      "truy"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 8,
+   "day": "GEORGIA · ÂN XÁ",
+   "date": "1986",
+   "groupAt": [
+    [
+     8,
+     "1986"
+    ]
+   ],
+   "stamp": {
+    "text": "ÂN XÁ",
+    "at": [
+     8,
+     "ân"
+    ]
+   }
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "frank",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "CHỐNG PHỈ BÁNG",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Leo_Frank"
+ ]
+}

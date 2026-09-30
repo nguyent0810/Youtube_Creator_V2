@@ -1,0 +1,177 @@
+{
+ "title": "“Công chúa đảo Javasu” hóa ra là con gái thợ sửa giày",
+ "description": "Năm 1817, một cô gái mặc đồ kỳ dị, nói thứ tiếng không ai hiểu xuất hiện ở nước Anh. Một thủy thủ \"phiên dịch\": cô là công chúa Caraboo đảo Javasu. Giới thượng lưu tin sái cổ suốt mười tuần.",
+ "tags": [
+  "Princess Caraboo",
+  "Mary Willcocks",
+  "mạo danh",
+  "Bristol 1817",
+  "công chúa giả",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1817",
+ "sub": "CÔNG CHÚA CARABOO",
+ "acc": [
+  "caraboo",
+  "javasu",
+  "willcocks",
+  "devon",
+  "chân",
+  "dung"
+ ],
+ "lines": [
+  "Năm 1817, ở nước Anh, một cô gái mặc đồ kỳ dị xuất hiện, nói thứ tiếng không ai hiểu.",
+  "Một thủy thủ Bồ Đào Nha nói ông hiểu tiếng cô.",
+  "Cô là công chúa Caraboo, đến từ hòn đảo Javasu ở Ấn Độ Dương.",
+  "Bị hải tặc bắt cóc, cô nhảy xuống biển, bơi vào bờ.",
+  "Suốt mười tuần, giới thượng lưu tranh nhau đón tiếp.",
+  "Cô bắn cung, đấu kiếm, được vẽ chân dung.",
+  "Một bác sĩ còn xác nhận ngôn ngữ ấy là thật.",
+  "Rồi một bà chủ nhà trọ nhận ra cô từ bức chân dung trên báo.",
+  "Công chúa thật ra là Mary Willcocks, con gái một thợ sửa giày ở Devon.",
+  "Chính bức chân dung làm cô nổi tiếng… cũng làm cô bị lộ."
+ ],
+ "imgs": {
+  "bird": "File:Edward Bird - La Princesse Caraboo (1817).jpg",
+  "mary": "File:Mary Willcocks alias 'Caraboo, Princess of Javasu'.jpg",
+  "devon": "File:Illustration facing page 44, Devonshire Characters and Strange Events.png"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "bird",
+   "frame": "gold",
+   "tone": "color",
+   "intro": true,
+   "head": "CÔNG CHÚA?"
+  },
+  {
+   "type": "file",
+   "at": 1,
+   "k": "NGƯỜI PHIÊN DỊCH",
+   "name": "THỦY THỦ\nBỒ ĐÀO NHA",
+   "desc": "Tự nhận hiểu thứ tiếng lạ",
+   "stamp": {
+    "text": "PHIÊN DỊCH",
+    "at": [
+     1,
+     "hiểu"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "CÔNG CHÚA CARABOO",
+     "at": [
+      2,
+      "caraboo"
+     ],
+     "serif": true
+    },
+    {
+     "text": "ĐẢO JAVASU",
+     "at": [
+      2,
+      "javasu"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "HẢI TẶC",
+     "at": [
+      3,
+      "hải"
+     ]
+    },
+    {
+     "text": "BƠI VÀO BỜ",
+     "at": [
+      3,
+      "bơi"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "calendar",
+   "at": 4,
+   "n": 10,
+   "unit": "TUẦN",
+   "title": "*10 TUẦN* LÀM KHÁCH QUÝ"
+  },
+  {
+   "type": "photo",
+   "at": 5,
+   "img": "mary",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "BẮN CUNG · ĐẤU KIẾM",
+    "at": [
+     5,
+     "cung"
+    ],
+    "y": 1330
+   }
+  },
+  {
+   "type": "quote",
+   "at": 6,
+   "text": "Ngôn ngữ này là thật.",
+   "by": "MỘT BÁC SĨ ĐỊA PHƯƠNG · DIỄN Ý"
+  },
+  {
+   "type": "photo",
+   "at": 7,
+   "img": "bird",
+   "mode": "print",
+   "tone": "color",
+   "label": {
+    "text": "NHẬN RA TỪ BỨC CHÂN DUNG",
+    "at": [
+     7,
+     "chân"
+    ],
+    "y": 1330
+   }
+  },
+  {
+   "type": "file",
+   "at": 8,
+   "k": "DANH TÍNH THẬT",
+   "name": "MARY\nWILLCOCKS",
+   "desc": "Con gái thợ sửa giày · Devon",
+   "img": "devon",
+   "stamp": {
+    "text": "LỘ DIỆN",
+    "at": [
+     8,
+     "willcocks"
+    ]
+   }
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "bird",
+   "frame": "gold",
+   "tone": "color",
+   "loop": true,
+   "head": "BỊ LỘ",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Princess_Caraboo"
+ ]
+}

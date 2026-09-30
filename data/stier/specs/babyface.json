@@ -1,0 +1,35 @@
+{
+ "title": "“Kẻ thù số một nước Mỹ” đổi chủ 3 lần trong 4 tháng",
+ "description": "Năm 1934, FBI lần lượt hạ John Dillinger, Pretty Boy Floyd, rồi Baby Face Nelson, kẻ đã giết nhiều đặc vụ FBI nhất lịch sử. Trận đấu súng cuối cùng ở Barrington, ngoại ô Chicago.",
+ "tags": ["Baby Face Nelson", "kẻ thù số một", "FBI 1934", "Dillinger", "Pretty Boy Floyd", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 1934",
+ "sub": "BABY FACE NELSON",
+ "acc": ["dillinger", "floyd", "nelson", "fbi", "barrington", "số", "một"],
+ "lines": [
+  "Năm 1934, danh hiệu kẻ thù số một của nước Mỹ đổi chủ ba lần, chỉ trong bốn tháng.",
+  "Tháng 7, John Dillinger bị bắn chết.",
+  "Tháng 10, tới lượt Pretty Boy Floyd.",
+  "Danh hiệu rơi vào tay kẻ cuối cùng: Baby Face Nelson.",
+  "Biệt danh ấy vì hắn thấp bé, mặt non choẹt.",
+  "Nhưng hắn là kẻ đã giết nhiều đặc vụ FBI nhất lịch sử.",
+  "Ngày 27 tháng 11 năm 1934, ở Barrington, ngoại ô Chicago, hắn đấu súng với hai đặc vụ.",
+  "Cả hai đặc vụ tử nạn. Nelson trúng chín phát đạn.",
+  "Hắn nói với vợ: anh xong rồi. Rồi chết vài giờ sau.",
+  "Kẻ thù số một thứ ba… chỉ giữ danh hiệu hơn một tháng."
+ ],
+ "imgs": {"nelson": "File:Baby Face Nelson 1931 mug shot.jpg", "plaque": "File:Battle of Barrington Plaque.jpg",
+          "dillinger": "File:John Dillinger mug shot.jpg", "floyd": "File:Pretty Boy Floyd FBI.jpg"},
+ "scenes": [
+  {"type": "hero", "img": "nelson", "frame": "print", "tone": "bw", "intro": true, "head": "KẺ THÙ SỐ MỘT"},
+  {"type": "mug", "at": 1, "ghost": "07.1934", "mug": {"img": "dillinger", "name": "JOHN DILLINGER", "at": [1, null, 0, 0.3]}, "stamp": {"text": "BỊ BẮN CHẾT", "at": [1, "bắn"]}},
+  {"type": "mug", "at": 2, "ghost": "10.1934", "mug": {"img": "floyd", "name": "PRETTY BOY FLOYD", "at": [2, null, 0, 0.3]}, "stamp": {"text": "BỊ BẮN CHẾT", "at": [2, "floyd"]}},
+  {"type": "mug", "at": 3, "ghost": "SỐ 1", "mug": {"img": "nelson", "name": "BABY FACE NELSON", "at": [3, "baby"]}},
+  {"type": "kinetic", "at": 4, "items": [{"text": "THẤP BÉ", "at": [4, "thấp"]}, {"text": "MẶT NON CHOẸT", "at": [4, "mặt"], "acc": true}]},
+  {"type": "slam", "at": 5, "text": "GIẾT NHIỀU\nĐẶC VỤ FBI NHẤT", "bg": "nelson"},
+  {"type": "date", "at": 6, "bg": "plaque", "day": "BARRINGTON · ILLINOIS", "date": "27.11.1934", "groupAt": [[6, "27"], [6, "11"], [6, "1934"]]},
+  {"type": "ledger", "at": 7, "title": "TRẬN BARRINGTON", "rows": [{"k": "ĐẶC VỤ TỬ NẠN", "v": "2", "at": [7, "đặc"]}], "total": {"k": "ĐẠN TRÚNG NELSON", "v": "9", "at": [7, "chín"]}},
+  {"type": "quote", "at": 8, "text": "Anh xong rồi.", "by": "BABY FACE NELSON NÓI VỚI VỢ"},
+  {"type": "timeline", "at": 9, "items": [{"year": "22.10", "text": "Nhận danh hiệu số 1", "at": [9, null, 0, 0.2]}, {"year": "27.11", "text": "Chết ở Barrington", "at": [9, "tháng"]}]}
+ ],
+ "sources": ["https://en.wikipedia.org/wiki/Baby_Face_Nelson"]
+}

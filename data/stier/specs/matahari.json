@@ -1,0 +1,196 @@
+{
+ "title": "Từ chối bịt mắt, gửi nụ hôn gió cho đội xử bắn: Mata Hari có thật là gián điệp?",
+ "description": "Rạng sáng 15/10/1917 ở pháo đài Vincennes, vũ công Mata Hari bị xử bắn vì tội làm gián điệp cho Đức. Tình báo Anh và Pháp chưa từng đưa ra bằng chứng chắc chắn, và hồ sơ kết tội có những chỗ bị làm giả.",
+ "tags": [
+  "Mata Hari",
+  "gián điệp",
+  "Thế chiến thứ nhất",
+  "Vincennes 1917",
+  "femme fatale",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1917",
+ "sub": "MATA HARI · VINCENNES",
+ "acc": [
+  "mata",
+  "hari",
+  "vincennes",
+  "12",
+  "đức",
+  "giả"
+ ],
+ "lines": [
+  "Rạng sáng 15 tháng 10 năm 1917, tại pháo đài Vincennes, 12 người lính giương súng.",
+  "Người đứng trước họ từ chối bịt mắt, và gửi một nụ hôn gió.",
+  "Bà là Mata Hari, vũ công người Hà Lan.",
+  "Nghệ danh của bà nghĩa là mặt trời, trong tiếng Indonesia.",
+  "Bà bị Pháp kết tội làm gián điệp cho Đức trong Thế chiến thứ nhất.",
+  "Nhưng tình báo Anh và Pháp chưa từng đưa ra được bằng chứng chắc chắn.",
+  "Nhiều nhà sử học sau này phát hiện hồ sơ kết tội bà có những chỗ bị làm giả.",
+  "Có người còn cho rằng bà hoàn toàn vô tội.",
+  "Mata Hari… gián điệp, hay vật tế thần của chiến tranh?"
+ ],
+ "imgs": {
+  "arrest": "File:Mata Hari on the day of her arrest 13-2-1917.jpg",
+  "mh1910": "File:Mata-Hari 1910.jpg",
+  "merkel": "File:Mata Hari, by Jacob Merkelbach.jpg",
+  "exec": "File:The Execution of Mata Hari.jpg",
+  "guimet": "File:Mata Hari dancing in the Musée Guimet (1905) - 1.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "merkel",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "12 NGƯỜI LÍNH"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "KHÔNG BỊT MẮT",
+     "at": [
+      1,
+      "bịt"
+     ]
+    },
+    {
+     "text": "MỘT NỤ HÔN GIÓ",
+     "at": [
+      1,
+      "hôn"
+     ],
+     "acc": true,
+     "serif": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 2,
+   "img": "guimet",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "MATA HARI · 1905",
+    "at": [
+     2,
+     "mata"
+    ],
+    "y": 1330
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "MATA HARI",
+     "at": [
+      3,
+      "nghệ"
+     ],
+     "serif": true
+    },
+    {
+     "text": "= MẶT TRỜI",
+     "at": [
+      3,
+      "mặt"
+     ],
+     "acc": true,
+     "size": 200
+    }
+   ]
+  },
+  {
+   "type": "mug",
+   "at": 4,
+   "ghost": "H-21",
+   "mug": {
+    "img": "arrest",
+    "name": "MARGARETHA ZELLE",
+    "at": [
+     4,
+     null,
+     0,
+     0.3
+    ]
+   },
+   "stamp": {
+    "text": "GIÁN ĐIỆP",
+    "at": [
+     4,
+     "gián"
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "BẰNG CHỨNG CHẮC CHẮN",
+   "rows": [
+    {
+     "k": "TÌNH BÁO ANH",
+     "v": "KHÔNG",
+     "at": [
+      5,
+      "anh"
+     ]
+    }
+   ],
+   "total": {
+    "k": "TÌNH BÁO PHÁP",
+    "v": "KHÔNG",
+    "at": [
+     5,
+     "pháp"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 6,
+   "k": "HỒ SƠ KẾT TỘI",
+   "name": "CÓ CHỖ\nBỊ LÀM GIẢ",
+   "desc": "Theo nhiều nhà sử học sau này",
+   "stamp": {
+    "text": "GIẢ MẠO",
+    "at": [
+     6,
+     "giả"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "VÔ TỘI?",
+   "bg": "mh1910"
+  },
+  {
+   "type": "photo",
+   "at": 8,
+   "img": "exec",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": {
+    "text": "GIÁN ĐIỆP HAY VẬT TẾ THẦN?",
+    "at": [
+     8,
+     "vật"
+    ]
+   },
+   "credit": "TRANH MINH HỌA VỤ XỬ BẮN · 1920"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Mata_Hari"
+ ]
+}

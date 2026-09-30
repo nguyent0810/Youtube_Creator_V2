@@ -1,0 +1,33 @@
+{
+ "title": "Cuộc giải cứu giết chết chính người được giải cứu, và FBI được trao súng",
+ "description": "Sáng 17/6/1933 ở nhà ga Union Station, Kansas City, đồng bọn của tù vượt ngục Frank Nash ập tới giải cứu hắn. Bốn nhân viên thực thi pháp luật chết, và cả Frank Nash. Khi đó, đặc vụ FBI còn chưa được phép mang súng.",
+ "tags": ["thảm sát Kansas City", "Union Station 1933", "Frank Nash", "FBI", "Pretty Boy Floyd", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 1933",
+ "sub": "THẢM SÁT KANSAS CITY",
+ "acc": ["nash", "fbi", "kansas", "floyd", "súng", "quốc", "hội"],
+ "lines": [
+  "Sáng 17 tháng 6 năm 1933, ở nhà ga Union Station, Kansas City…",
+  "các đặc vụ áp giải tù vượt ngục Frank Nash lên một chiếc xe.",
+  "Đồng bọn của Nash ập tới, định giải cứu hắn.",
+  "Súng nổ.",
+  "Bốn nhân viên thực thi pháp luật chết.",
+  "Và cả… Frank Nash, người chúng định cứu.",
+  "FBI xác định Pretty Boy Floyd là một tay súng, dù có bằng chứng cho thấy hắn không liên quan.",
+  "Khi đó, đặc vụ FBI chưa được phép mang súng, cũng không có quyền bắt người.",
+  "Một năm sau, Quốc hội Mỹ trao cho họ cả hai quyền ấy.",
+  "Cuộc giải cứu thất bại… đã vũ trang cho FBI."
+ ],
+ "imgs": {"station": "File:Kansas City Union Station Massacre.jpg", "floyd": "File:Pretty Boy Floyd FBI.jpg"},
+ "scenes": [
+  {"type": "hero", "img": "station", "frame": "print", "tone": "bw", "intro": true, "head": "UNION STATION"},
+  {"type": "file", "at": 1, "k": "TÙ VƯỢT NGỤC · LEAVENWORTH", "name": "FRANK\nNASH", "desc": "Bị áp giải về nhà tù", "stamp": {"text": "ÁP GIẢI", "at": [1, "áp"]}},
+  {"type": "kinetic", "at": 2, "items": [{"text": "ĐỒNG BỌN", "at": [2, "đồng"]}, {"text": "GIẢI CỨU", "at": [2, "giải"], "acc": true, "size": 220}]},
+  {"type": "slam", "at": 3, "text": "SÚNG NỔ", "bg": "station"},
+  {"type": "ledger", "at": 4, "title": "17.06.1933", "rows": [{"k": "NHÂN VIÊN PHÁP LUẬT", "v": "4", "at": [4, "bốn"]}], "total": {"k": "FRANK NASH", "v": "CHẾT", "at": [5, "nash"]}},
+  {"type": "mug", "at": 6, "ghost": "FBI?", "mug": {"img": "floyd", "name": "PRETTY BOY FLOYD", "at": [6, "floyd"]}, "stamp": {"text": "NGHI VẤN", "at": [6, "bằng"]}},
+  {"type": "ledger", "at": 7, "title": "ĐẶC VỤ FBI · 1933", "rows": [{"k": "MANG SÚNG", "v": "✗", "at": [7, "súng"]}], "total": {"k": "BẮT NGƯỜI", "v": "✗", "at": [7, "bắt"]}},
+  {"type": "file", "at": 8, "k": "QUỐC HỘI MỸ · 1934", "name": "ĐƯỢC TRAO\nCẢ HAI QUYỀN", "desc": "Mang súng · bắt người", "stamp": {"text": "THÔNG QUA", "at": [8, "trao"]}},
+  {"type": "hero", "at": 9, "img": "station", "frame": "print", "tone": "bw", "loop": true, "head": "VŨ TRANG CHO FBI", "tr": "cut"}
+ ],
+ "sources": ["https://en.wikipedia.org/wiki/Kansas_City_massacre"]
+}

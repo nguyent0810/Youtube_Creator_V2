@@ -1,0 +1,209 @@
+{
+ "title": "Hai nữ cướp biển thoát án treo cổ nhờ một lời khai",
+ "description": "Tháng 10/1720, tàu cướp biển của Calico Jack bị bắt gần Jamaica. Toàn bộ thủy thủ nam bị treo cổ. Hai nữ cướp biển Anne Bonny và Mary Read được hoãn thi hành án.",
+ "tags": [
+  "Anne Bonny",
+  "Mary Read",
+  "nữ cướp biển",
+  "Calico Jack",
+  "Jamaica 1720",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1720",
+ "sub": "ANNE BONNY & MARY READ",
+ "acc": [
+  "bonny",
+  "read",
+  "rackham",
+  "jamaica",
+  "1733",
+  "mang",
+  "thai"
+ ],
+ "lines": [
+  "Tháng 10 năm 1720, gần Jamaica, tàu cướp biển của Calico Jack Rackham bị bắt.",
+  "Trên tàu có hai cướp biển đặc biệt: Anne Bonny và Mary Read.",
+  "Hai người phụ nữ.",
+  "Nhân chứng khai: họ mặc áo khoác nam, quần dài, mỗi người cầm một thanh mã tấu.",
+  "Rackham và toàn bộ thủy thủ nam bị treo cổ.",
+  "Nhưng Bonny và Read được hoãn thi hành án.",
+  "Lý do: cả hai đều khai đang mang thai.",
+  "Mary Read chết trong tù năm 1721.",
+  "Còn Anne Bonny… có lẽ được thả, và sống tới năm 1733.",
+  "Không ai biết chắc bà đã đi đâu."
+ ],
+ "imgs": {
+  "bonny": "File:Ann Bonny, Cole 1724.jpg",
+  "read": "File:Mary Read, Cole 1724.jpg",
+  "rackham": "File:Rackham, Jack.jpg",
+  "firing": "File:Anne Bonny, Firing Upon the Crew, from the Pirates of the Spanish Main series (N19) for Allen & Ginter Cigarettes MET DP835030.jpg",
+  "duel": "File:Mary Read, The Duel, from the Pirates of the Spanish Main series (N19) for Allen & Ginter Cigarettes MET DP835033.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "firing",
+   "frame": "print",
+   "tone": "color",
+   "intro": true,
+   "head": "TÀU CƯỚP BIỂN"
+  },
+  {
+   "type": "split",
+   "at": 1,
+   "title": "HAI CƯỚP BIỂN ĐẶC BIỆT",
+   "a": {
+    "img": "bonny",
+    "label": "ANNE BONNY",
+    "at": [
+     1,
+     "anne"
+    ]
+   },
+   "b": {
+    "img": "read",
+    "label": "MARY READ",
+    "at": [
+     1,
+     "mary"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "PHỤ NỮ",
+   "white": true,
+   "bg": "duel"
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "LỜI KHAI NHÂN CHỨNG",
+   "rows": [
+    {
+     "k": "ÁO KHOÁC NAM",
+     "v": "✓",
+     "at": [
+      3,
+      "áo"
+     ]
+    },
+    {
+     "k": "QUẦN DÀI",
+     "v": "✓",
+     "at": [
+      3,
+      "quần"
+     ]
+    }
+   ],
+   "total": {
+    "k": "MÃ TẤU",
+    "v": "✓",
+    "at": [
+     3,
+     "mã"
+    ]
+   }
+  },
+  {
+   "type": "mug",
+   "at": 4,
+   "ghost": "PORT ROYAL",
+   "mug": {
+    "img": "rackham",
+    "name": "CALICO JACK RACKHAM",
+    "at": [
+     4,
+     null,
+     0,
+     0.3
+    ]
+   },
+   "stamp": {
+    "text": "TREO CỔ",
+    "at": [
+     4,
+     "treo"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 5,
+   "k": "PHÁN QUYẾT · 1720",
+   "name": "HOÃN\nTHI HÀNH ÁN",
+   "desc": "Anne Bonny · Mary Read",
+   "stamp": {
+    "text": "HOÃN",
+    "at": [
+     5,
+     "hoãn"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "LÝ DO",
+     "at": [
+      6,
+      "lý"
+     ]
+    },
+    {
+     "text": "MANG THAI",
+     "at": [
+      6,
+      "mang"
+     ],
+     "acc": true,
+     "size": 220,
+     "serif": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 7,
+   "img": "read",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "MARY READ · CHẾT TRONG TÙ 1721",
+    "at": [
+     7,
+     "tù"
+    ],
+    "y": 1320
+   }
+  },
+  {
+   "type": "photo",
+   "at": 8,
+   "img": "bonny",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "ANNE BONNY · ?–1733",
+    "at": [
+     8,
+     "1733"
+    ],
+    "y": 1320
+   }
+  },
+  {
+   "type": "question",
+   "at": 9,
+   "text": "Bà đã đi đâu?"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Anne_Bonny",
+  "https://en.wikipedia.org/wiki/Mary_Read"
+ ]
+}

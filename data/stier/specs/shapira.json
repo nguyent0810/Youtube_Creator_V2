@@ -1,0 +1,186 @@
+{
+ "title": "“Kinh Thánh cổ” bị gọi là đồ giả, 64 năm sau Biển Chết lên tiếng",
+ "description": "Năm 1883, nhà buôn cổ vật Moses Shapira mang tới London những mảnh da cổ \"tìm thấy gần Biển Chết\", chào Bảo tàng Anh một triệu bảng. Các học giả kết luận: đồ giả. Rồi năm 1947, Cuộn sách Biển Chết thật được tìm thấy.",
+ "tags": [
+  "Shapira",
+  "Cuộn sách Biển Chết",
+  "cổ vật giả",
+  "Bảo tàng Anh",
+  "Kinh Thánh",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1883",
+ "sub": "MẢNH DA CỦA SHAPIRA",
+ "acc": [
+  "shapira",
+  "biển",
+  "chết",
+  "london",
+  "1947",
+  "rotterdam",
+  "giả"
+ ],
+ "lines": [
+  "Năm 1883, một nhà buôn cổ vật ở Jerusalem mang tới London những mảnh da cổ.",
+  "Ông nói chúng được tìm thấy gần Biển Chết.",
+  "Một phiên bản khác của sách Phục truyền trong Kinh Thánh.",
+  "Giá chào Bảo tàng Anh: một triệu bảng.",
+  "Hàng nghìn người đến xem hai mảnh được trưng bày.",
+  "Rồi các học giả kết luận: đồ giả.",
+  "Mất hết danh tiếng, năm 1884 Shapira tự sát ở Rotterdam.",
+  "Các mảnh da sau đó thất lạc, đến nay không rõ ở đâu.",
+  "Năm 1947, người ta tìm thấy Cuộn sách Biển Chết thật.",
+  "Và vài học giả bắt đầu hỏi: liệu Shapira có bị oan?"
+ ],
+ "imgs": {
+  "graphic": "File:Dersh7.png",
+  "ginsburg": "File:Ginsburg’s facsimile of the Shapira Strips, 1883.jpg",
+  "sciam": "File:Shapira Strips, 1883, Scientific American. 01.jpg",
+  "cg": "File:Clermont-Ganneau, Shapira Strips, 1883.jpg",
+  "punch": "File:Punch 1883 Mr Sharp-Eye-Ra. Showing, in very fanciful portraiture, how Detective Ginsburg actually did Mr Sharp-Eye-Ra out of his skin.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "graphic",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "MẢNH DA CỔ"
+  },
+  {
+   "type": "doc",
+   "at": 1,
+   "img": "ginsburg",
+   "tone": "sepia",
+   "moves": [
+    {
+     "at": 1,
+     "x": 0.5,
+     "y": 0.5,
+     "z": 1.3
+    },
+    {
+     "at": [
+      1,
+      "biển"
+     ],
+     "x": 0.35,
+     "y": 0.5,
+     "z": 2.0
+    }
+   ],
+   "credit": "BẢN SAO MẢNH DA · THE ATHENAEUM 1883"
+  },
+  {
+   "type": "evidence",
+   "at": 2,
+   "img": "sciam",
+   "tone": "sepia",
+   "tag": "“SÁCH PHỤC TRUYỀN” KHÁC",
+   "credit": "SCIENTIFIC AMERICAN · 1883"
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "prefix": "£",
+   "to": 1000000,
+   "label": "GIÁ CHÀO BẢO TÀNG ANH",
+   "until": [
+    3,
+    "bảng"
+   ]
+  },
+  {
+   "type": "crowd",
+   "at": 4,
+   "object": "frame",
+   "label": {
+    "text": "HÀNG NGHÌN NGƯỜI XẾP HÀNG",
+    "at": [
+     4,
+     "xem"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 5,
+   "img": "punch",
+   "mode": "print",
+   "tone": "sepia",
+   "stamp": {
+    "text": "ĐỒ GIẢ",
+    "at": [
+     5,
+     "giả"
+    ],
+    "x": 330,
+    "y": 1150
+   }
+  },
+  {
+   "type": "date",
+   "at": 6,
+   "day": "ROTTERDAM",
+   "date": "09.03.1884",
+   "groupAt": [
+    [
+     6,
+     "1884",
+     0,
+     -0.3
+    ],
+    [
+     6,
+     "1884",
+     0,
+     -0.15
+    ],
+    [
+     6,
+     "1884"
+    ]
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "THẤT LẠC",
+   "sub": "KHÔNG RÕ Ở ĐÂU",
+   "bg": "cg"
+  },
+  {
+   "type": "timeline",
+   "at": 8,
+   "items": [
+    {
+     "year": "1883",
+     "text": "Bị gọi là đồ giả",
+     "at": [
+      8,
+      null,
+      0,
+      0.1
+     ]
+    },
+    {
+     "year": "1947",
+     "text": "Tìm thấy Cuộn sách Biển Chết",
+     "at": [
+      8,
+      "1947"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 9,
+   "text": "Shapira có bị oan?"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Moses_Wilhelm_Shapira"
+ ]
+}

@@ -1,0 +1,167 @@
+{
+ "title": "Em trai khai chị đánh máy tài liệu mật, 48 năm sau thừa nhận khai man",
+ "description": "Ngày 19/6/1953, vợ chồng Julius và Ethel Rosenberg bị xử tử vì tội làm gián điệp cho Liên Xô. Nhân chứng quan trọng là em trai của Ethel. Năm 2001, ông thừa nhận đã khai man.",
+ "tags": [
+  "Julius và Ethel Rosenberg",
+  "gián điệp",
+  "David Greenglass",
+  "Venona",
+  "Sing Sing 1953",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1953",
+ "sub": "VỤ ROSENBERG",
+ "acc": [
+  "rosenberg",
+  "ethel",
+  "julius",
+  "greenglass",
+  "venona",
+  "2001",
+  "liên",
+  "xô"
+ ],
+ "lines": [
+  "Ngày 19 tháng 6 năm 1953, vợ chồng Rosenberg bị xử tử trên ghế điện.",
+  "Tội danh: làm gián điệp cho Liên Xô, bao gồm bí mật vũ khí hạt nhân.",
+  "Họ là những thường dân Mỹ đầu tiên bị xử tử vì tội này, trong thời bình.",
+  "Nhân chứng quan trọng: David Greenglass, em trai của Ethel.",
+  "Ông khai: chính chị gái đã đánh máy những ghi chép mật.",
+  "Greenglass nhận án tù, nhờ thỏa thuận nhận tội.",
+  "Năm 2001, ông thừa nhận: tôi nghĩ là vợ tôi đánh máy.",
+  "Ông khai man để bảo vệ bản thân và vợ.",
+  "Hồ sơ giải mã Venona cho thấy Julius đúng là có làm việc cho Liên Xô.",
+  "Còn Ethel… bị kết án một phần vì lời khai của chính em trai mình."
+ ],
+ "imgs": {
+  "couple": "File:Julius and Ethel Rosenberg NYWTS.jpg",
+  "julius": "File:Julius Rosenberg Arrest Photograph - NARA - 596910.jpg",
+  "ethel": "File:Ethel Rosenberg Arrest Photograph - NARA - 596909.jpg",
+  "david": "File:David Greenglass mugshot.png",
+  "diagram": "File:Greenglass bomb diagram.png"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "couple",
+   "frame": "print",
+   "tone": "bw",
+   "intro": true,
+   "head": "GHẾ ĐIỆN"
+  },
+  {
+   "type": "evidence",
+   "at": 1,
+   "img": "diagram",
+   "tone": "bw",
+   "tag": "TANG VẬT · BẢN VẼ CỦA GREENGLASS",
+   "credit": "BẢN PHÁC HỌA ĐƯỢC ĐƯA RA TẠI TÒA"
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "THƯỜNG DÂN ĐẦU TIÊN",
+     "at": [
+      2,
+      "đầu"
+     ]
+    },
+    {
+     "text": "TRONG THỜI BÌNH",
+     "at": [
+      2,
+      "bình"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "mug",
+   "at": 3,
+   "ghost": "GREENGLASS",
+   "mug": {
+    "img": "david",
+    "name": "DAVID GREENGLASS",
+    "at": [
+     3,
+     "david"
+    ]
+   }
+  },
+  {
+   "type": "quote",
+   "at": 4,
+   "text": "Chị tôi đã đánh máy những ghi chép.",
+   "by": "LỜI KHAI CỦA DAVID GREENGLASS · DIỄN Ý"
+  },
+  {
+   "type": "file",
+   "at": 5,
+   "k": "THỎA THUẬN NHẬN TỘI",
+   "name": "ÁN TÙ\nTHAY VÌ ÁN TỬ",
+   "desc": "David Greenglass",
+   "stamp": {
+    "text": "THỎA THUẬN",
+    "at": [
+     5,
+     "thỏa"
+    ]
+   }
+  },
+  {
+   "type": "quote",
+   "at": 6,
+   "text": "Tôi nghĩ là vợ tôi đánh máy.",
+   "by": "DAVID GREENGLASS · 2001"
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "KHAI MAN",
+   "sub": "ĐỂ BẢO VỆ BẢN THÂN VÀ VỢ",
+   "bg": "david"
+  },
+  {
+   "type": "split",
+   "at": 8,
+   "title": "HỒ SƠ VENONA",
+   "a": {
+    "img": "julius",
+    "label": "JULIUS · CÓ",
+    "at": [
+     8,
+     "julius"
+    ]
+   },
+   "b": {
+    "img": "ethel",
+    "label": "ETHEL · ?",
+    "at": [
+     9,
+     "ethel"
+    ]
+   }
+  },
+  {
+   "type": "hero",
+   "at": [
+    9,
+    "em",
+    0,
+    0.1
+   ],
+   "img": "couple",
+   "frame": "print",
+   "tone": "bw",
+   "loop": true,
+   "head": "LỜI KHAI CỦA EM TRAI",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Julius_and_Ethel_Rosenberg"
+ ]
+}

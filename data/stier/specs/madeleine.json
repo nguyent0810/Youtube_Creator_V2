@@ -1,0 +1,191 @@
+{
+ "title": "Phán quyết chỉ Scotland mới có: không có tội, cũng không vô tội",
+ "description": "Năm 1857 ở Glasgow, Madeleine Smith bị xử tội đầu độc người tình bằng thạch tín. Bồi thẩm đoàn đưa ra phán quyết \"Not proven\": chưa đủ chứng minh.",
+ "tags": [
+  "Madeleine Smith",
+  "Not proven",
+  "Glasgow 1857",
+  "thạch tín",
+  "luật Scotland",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1857",
+ "sub": "MADELEINE SMITH · GLASGOW",
+ "acc": [
+  "glasgow",
+  "scotland",
+  "madeleine",
+  "thạch",
+  "tín",
+  "thư",
+  "93"
+ ],
+ "lines": [
+  "Năm 1857, ở Glasgow, một cô gái nhà giàu bị xử tội đầu độc người tình bằng thạch tín.",
+  "Madeleine Smith đã bí mật hứa lấy anh ta, một người làm công nghèo.",
+  "Rồi gia đình tìm cho cô một vị hôn phu giàu có.",
+  "Cô xin lấy lại những lá thư tình.",
+  "Anh ta từ chối, dọa đưa thư ra để ép cưới.",
+  "Cô bị thấy mua thạch tín ở hiệu thuốc, ký tên chính mình.",
+  "Sáng 23 tháng 3, người tình chết vì ngộ độc thạch tín.",
+  "Bồi thẩm đoàn đưa ra một phán quyết chỉ Scotland mới có:",
+  "Chưa đủ chứng minh.",
+  "Không kết tội, cũng không tuyên vô tội. Cô bước ra tự do, và sống tới 93 tuổi."
+ ],
+ "imgs": {
+  "homes": "File:Madeline Smith and Victim Homes.jpg",
+  "trial": "File:Madeline Smith Trial.jpg",
+  "scene": "File:Madeline Smith Scene of Crime.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "trial",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "THẠCH TÍN"
+  },
+  {
+   "type": "photo",
+   "at": 1,
+   "img": "homes",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "HỨA HÔN BÍ MẬT",
+    "at": [
+     1,
+     "hứa"
+    ],
+    "y": 1250
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "HÔN PHU",
+     "at": [
+      2,
+      "hôn"
+     ],
+     "serif": true,
+     "size": 200
+    },
+    {
+     "text": "GIÀU CÓ",
+     "at": [
+      2,
+      "giàu"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 3,
+   "text": "Xin trả lại những lá thư.",
+   "by": "MADELEINE SMITH · 02.1857 · DIỄN Ý"
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "TỪ CHỐI",
+   "sub": "DỌA DÙNG THƯ ĐỂ ÉP CƯỚI",
+   "bg": "homes"
+  },
+  {
+   "type": "file",
+   "at": 5,
+   "k": "SỔ BÁN THUỐC ĐỘC",
+   "name": "THẠCH TÍN",
+   "desc": "Người mua ký tên chính mình",
+   "stamp": {
+    "text": "ĐÃ KÝ",
+    "at": [
+     5,
+     "ký"
+    ]
+   }
+  },
+  {
+   "type": "date",
+   "at": 6,
+   "bg": "scene",
+   "day": "GLASGOW",
+   "date": "23.03.1857",
+   "groupAt": [
+    [
+     6,
+     "23"
+    ],
+    [
+     6,
+     "3"
+    ],
+    [
+     6,
+     "3",
+     0,
+     0.35
+    ]
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "PHÁN QUYẾT",
+     "at": [
+      7,
+      "phán"
+     ]
+    },
+    {
+     "text": "CHỈ CÓ Ở SCOTLAND",
+     "at": [
+      7,
+      "scotland"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "text": "NOT PROVEN",
+   "sub": "CHƯA ĐỦ CHỨNG MINH",
+   "bg": "trial"
+  },
+  {
+   "type": "timeline",
+   "at": 9,
+   "items": [
+    {
+     "year": "1857",
+     "text": "Bước ra tự do",
+     "at": [
+      9,
+      "tự"
+     ]
+    },
+    {
+     "year": "1928",
+     "text": "Qua đời ở tuổi 93",
+     "at": [
+      9,
+      "93"
+     ]
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Madeleine_Smith"
+ ]
+}

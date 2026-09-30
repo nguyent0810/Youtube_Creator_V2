@@ -1,0 +1,248 @@
+{
+ "title": "Viên cảnh sát New York bị bắn giữa quảng trường Palermo khi chờ người báo tin",
+ "description": "Joseph Petrosino, người đứng đầu Đội cảnh sát Ý của New York, bí mật sang Sicily năm 1909 với danh sách tội phạm cần trục xuất. Ngày 12/3/1909, ông được hẹn gặp một người báo tin ở Palermo.",
+ "tags": [
+  "Joseph Petrosino",
+  "Mafia",
+  "Bàn tay Đen",
+  "Palermo 1909",
+  "cảnh sát New York",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1909",
+ "sub": "JOSEPH PETROSINO",
+ "acc": [
+  "petrosino",
+  "palermo",
+  "sicily",
+  "caruso",
+  "mafia",
+  "200"
+ ],
+ "lines": [
+  "Ngày 12 tháng 3 năm 1909, một cảnh sát New York bị bắn chết giữa quảng trường ở Palermo, Sicily.",
+  "Joseph Petrosino, người đứng đầu Đội cảnh sát Ý, chuyên chống Bàn tay Đen và Mafia.",
+  "Ông từng giúp danh ca Enrico Caruso thoát khỏi một vụ tống tiền.",
+  "Một đạo luật mới cho phép trục xuất người nhập cư có tiền án ở nước ngoài.",
+  "Petrosino bí mật sang Sicily, mang theo danh sách tội phạm.",
+  "Nhưng tin ông tới đã bị lộ.",
+  "Ông được hẹn gặp một người cung cấp tin, vào buổi tối.",
+  "Trong lúc chờ người đó, ông bị bắn.",
+  "Hơn 200 nghìn người đưa tang ông ở New York.",
+  "Kẻ bắn ông là ai, giới sử học đến nay vẫn chỉ có thể phỏng đoán."
+ ],
+ "imgs": {
+  "lieut": "File:Lieut. Petrosino LCCN2014683603.jpg",
+  "escort": "File:Detective Lt. Joseph Petrosiino( left) , Inspector Carey and Inspector McCafferty escorting Mafia hitman Petto the Ox (Tomasso Petto, second from left) LCCN2007686607.jpg",
+  "coffin": "File:Coffin of Petrosino arriving at his widow's home LCCN2014683248.jpg",
+  "cortege": "File:Funeral cortege of Petrosino LCCN2014683249.jpg"
+ },
+ "map": {
+  "countries": [
+   "Italy",
+   "United States of America"
+  ],
+  "context": [
+   "France",
+   "Spain",
+   "Portugal",
+   "United Kingdom",
+   "Ireland",
+   "Canada",
+   "Morocco",
+   "Algeria",
+   "Tunisia",
+   "Germany",
+   "Switzerland"
+  ],
+  "labels": {
+   "Italy": "Ý",
+   "United States of America": "MỸ"
+  },
+  "bbox": [
+   -78,
+   30,
+   18,
+   50
+  ],
+  "pins": [
+   {
+    "name": "New York",
+    "lon": -74.0,
+    "lat": 40.71,
+    "label": "NEW YORK"
+   },
+   {
+    "name": "Palermo",
+    "lon": 13.36,
+    "lat": 38.12,
+    "label": "PALERMO"
+   }
+  ]
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "lieut",
+   "frame": "print",
+   "tone": "bw",
+   "intro": true,
+   "head": "PALERMO · 1909"
+  },
+  {
+   "type": "file",
+   "at": 1,
+   "k": "ĐỘI CẢNH SÁT Ý · NYPD",
+   "name": "JOSEPH\nPETROSINO",
+   "desc": "Chống Bàn tay Đen và Mafia",
+   "img": "lieut"
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "ENRICO CARUSO",
+     "at": [
+      2,
+      "enrico"
+     ],
+     "serif": true
+    },
+    {
+     "text": "THOÁT TỐNG TIỀN",
+     "at": [
+      2,
+      "tống"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 3,
+   "img": "escort",
+   "tone": "bw",
+   "focus": [
+    0.3,
+    0.4
+   ],
+   "label": {
+    "text": "TRỤC XUẤT NGƯỜI CÓ TIỀN ÁN",
+    "at": [
+     3,
+     "trục"
+    ]
+   },
+   "credit": "PETROSINO (TRÁI) ÁP GIẢI MỘT SÁT THỦ MAFIA · 1903"
+  },
+  {
+   "type": "map",
+   "at": 4,
+   "pins": [
+    {
+     "name": "New York",
+     "at": [
+      4,
+      null,
+      0,
+      0.1
+     ],
+     "side": "r"
+    },
+    {
+     "name": "Palermo",
+     "at": [
+      4,
+      "sicily"
+     ],
+     "side": "t"
+    }
+   ],
+   "routes": [
+    {
+     "from": "New York",
+     "to": "Palermo",
+     "at": [
+      4,
+      "bí"
+     ],
+     "until": [
+      4,
+      "sicily",
+      0,
+      0.3
+     ],
+     "bend": -0.12
+    }
+   ],
+   "zoom": "Palermo"
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "BỊ LỘ",
+   "bg": "lieut"
+  },
+  {
+   "type": "clock",
+   "at": 6,
+   "from": "PIAZZA MARINA",
+   "to": "BUỔI TỐI",
+   "swap": [
+    6,
+    "buổi"
+   ],
+   "turns": 1
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "NGƯỜI BÁO TIN",
+     "at": [
+      7,
+      "người"
+     ]
+    },
+    {
+     "text": "BỊ BẮN KHI ĐANG CHỜ",
+     "at": [
+      7,
+      "bắn"
+     ],
+     "acc": true,
+     "size": 200
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 8,
+   "img": "cortege",
+   "tone": "bw",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": {
+    "text": "HƠN 200.000 NGƯỜI ĐƯA TANG",
+    "at": [
+     8,
+     "200"
+    ]
+   },
+   "credit": "NEW YORK · 12.04.1909"
+  },
+  {
+   "type": "question",
+   "at": 9,
+   "text": "Ai đã bắn ông?"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Joseph_Petrosino"
+ ]
+}
