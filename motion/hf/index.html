@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="vi" data-resolution="portrait" data-composition-variables='[
+  {"id":"series","type":"string","label":"Series","default":"law"},
+  {"id":"accent","type":"color","label":"Accent","default":"#e5484d"},
+  {"id":"kicker","type":"string","label":"Kicker","default":"HỒ SƠ"},
+  {"id":"badge","type":"string","label":"Badge","default":""},
+  {"id":"footer","type":"string","label":"Footer","default":""},
+  {"id":"duration","type":"number","label":"Duration","default":30},
+  {"id":"narration","type":"string","label":"Narration","default":""},
+  {"id":"bgm","type":"string","label":"BGM","default":""},
+  {"id":"bgm_gain","type":"number","label":"BGM gain","default":0.16},
+  {"id":"lines","type":"string","label":"Lines JSON","default":"[]"}
+]'>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1080px;height:1920px;overflow:hidden;background:#07070a}
+  #root{width:100%;height:100%;position:relative;font-family:'Be Vietnam Pro',system-ui,sans-serif;color:#f4f4f5}
+
+  /* ---- nền: gradient sâu + quầng sáng trôi chậm + hạt phim + vignette ---- */
+  .bg{position:absolute;inset:0;background:
+      radial-gradient(120% 80% at 50% 0%, #17171f 0%, #0b0b10 45%, #07070a 100%)}
+  .glow{position:absolute;width:1400px;height:1400px;left:-160px;top:180px;border-radius:50%;
+      background:radial-gradient(circle, var(--accent-soft) 0%, rgba(0,0,0,0) 62%);opacity:.55}
+  .grain{position:absolute;inset:0;opacity:.16;mix-blend-mode:overlay}
+  .vignette{position:absolute;inset:0;background:radial-gradient(75% 55% at 50% 45%, rgba(0,0,0,0) 40%, rgba(0,0,0,.72) 100%)}
+  .scan{position:absolute;inset:0;background:repeating-linear-gradient(0deg, rgba(255,255,255,.035) 0 2px, rgba(0,0,0,0) 2px 5px);opacity:.5}
+
+  /* ---- thanh tiến trình mảnh trên đỉnh ---- */
+  .progress{position:absolute;top:0;left:0;height:6px;background:var(--accent);width:0;box-shadow:0 0 24px var(--accent)}
+
+  /* ---- kicker (nhãn series) ---- */
+  .kicker{position:absolute;top:120px;left:72px;display:flex;align-items:center;gap:20px}
+  .kicker .bar{width:10px;height:44px;background:var(--accent);box-shadow:0 0 30px var(--accent)}
+  .kicker .txt{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:34px;letter-spacing:.24em;color:#d4d4d8}
+  .badge{position:absolute;top:186px;left:104px;font-family:'JetBrains Mono',monospace;font-size:26px;
+      letter-spacing:.14em;color:var(--accent);opacity:.9}
+
+  /* ---- thẻ hồ sơ giữa khung: từ khoá của từng câu ---- */
+  .stage{position:absolute;left:72px;right:72px;top:404px;height:900px}
+  .ghost{position:absolute;right:-30px;bottom:-110px;font-family:'JetBrains Mono',monospace;font-weight:700;
+      font-size:420px;line-height:1;color:rgba(255,255,255,.045);letter-spacing:-.04em;user-select:none}
+  .rules{position:absolute;left:0;right:0;top:392px;height:900px;
+      background:repeating-linear-gradient(180deg, rgba(255,255,255,.045) 0 1px, rgba(0,0,0,0) 1px 96px);opacity:.7}
+  .card{position:absolute;left:0;right:0;top:0;min-height:700px;overflow:hidden;display:flex;flex-direction:column;
+      justify-content:center;padding:64px 60px 72px;
+      background:linear-gradient(160deg, rgba(28,28,36,.94), rgba(14,14,19,.94));
+      border:2px solid rgba(255,255,255,.10);border-left:10px solid var(--accent);
+      box-shadow:0 60px 120px rgba(0,0,0,.6)}
+  .card .idx{font-family:'JetBrains Mono',monospace;font-size:26px;letter-spacing:.2em;color:#71717a;margin-bottom:26px}
+  .card .key{font-size:104px;line-height:1.05;font-weight:800;letter-spacing:-.025em}
+  .card .key.long{font-size:78px}
+  .card .key.xlong{font-size:62px;line-height:1.12}
+  .card .rule{margin-top:34px;height:4px;width:160px;background:var(--accent);opacity:.9}
+  .card .key .hl{color:var(--accent)}
+  .card .sub{margin-top:30px;font-size:34px;line-height:1.45;color:#a1a1aa;font-weight:400}
+
+  /* ---- phụ đề karaoke đáy khung ---- */
+  .capzone{position:absolute;left:64px;right:64px;bottom:300px}
+  .cap{position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:62px;line-height:1.28;font-weight:800;
+      letter-spacing:-.01em;text-shadow:0 6px 26px rgba(0,0,0,.95),0 0 4px rgba(0,0,0,.9)}
+  .w{position:relative;display:inline-block;margin:0 .14em;color:#fafafa}
+  .w .on{position:absolute;left:0;top:0;color:#ffd24a;white-space:nowrap}
+  .w.hot{color:#fff;text-decoration:underline;text-decoration-color:var(--accent);
+      text-decoration-thickness:7px;text-underline-offset:12px}
+
+  .footer{position:absolute;left:0;right:0;bottom:120px;text-align:center;
+      font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;color:#52525b}
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920" data-fps="30">
+  <div class="bg"></div>
+  <div class="glow" id="glow"></div>
+  <svg class="grain" width="1080" height="1920"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+  <div class="scan"></div>
+  <div class="vignette"></div>
+  <div class="progress" id="progress"></div>
+
+  <div class="kicker"><div class="bar"></div><div class="txt" id="kicker"></div></div>
+  <div class="badge" id="badge"></div>
+
+  <div class="rules"></div>
+  <div class="stage" id="stage"></div>
+  <div class="capzone skin-karaoke" id="capzone"></div>
+  <div class="footer" id="footer"></div>
+</div>
+
+<script>
+  const V = window.__hyperframes.getVariables();
+  const LINES = typeof V.lines === "string" ? JSON.parse(V.lines || "[]") : (V.lines || []);
+  const DUR = Number(V.duration) || 30;
+  const root = document.getElementById("root");
+  root.setAttribute("data-duration", String(DUR));
+  root.style.setProperty("--accent", V.accent);
+  root.style.setProperty("--accent-soft", hexA(V.accent, .30));
+  document.getElementById("kicker").textContent = V.kicker || "";
+  document.getElementById("badge").textContent = V.badge || "";
+  document.getElementById("footer").textContent = V.footer || "";
+
+  function hexA(hex, a){
+    const h = (hex || "#e5484d").replace("#","");
+    const n = parseInt(h.length === 3 ? h.split("").map(c=>c+c).join("") : h, 16);
+    return `rgba(${(n>>16)&255},${(n>>8)&255},${n&255},${a})`;
+  }
+  function el(tag, cls, txt){ const e=document.createElement(tag); if(cls)e.className=cls; if(txt!=null)e.textContent=txt; return e; }
+
+  // --- thẻ hồ sơ + phụ đề: mỗi câu 1 clip, runtime tự bật/tắt theo data-start ---
+  const stage = document.getElementById("stage"), capzone = document.getElementById("capzone");
+  LINES.forEach((ln, i) => {
+    const d = Math.max(0.1, ln.end - ln.start);
+
+    const card = el("div","card clip");
+    card.dataset.start = ln.start; card.dataset.duration = d; card.dataset.trackIndex = "1";
+    card.appendChild(el("div","idx", String(i+1).padStart(2,"0") + " / " + String(LINES.length).padStart(2,"0")));
+    const key = el("div","key");
+    (ln.key_parts || [{t: ln.key || "", hot:true}]).forEach(p => {
+      const s = el("span", p.hot ? "hl" : null, p.t); key.appendChild(s); key.appendChild(document.createTextNode(" "));
+    });
+    const keyLen = (ln.key_parts || []).reduce((n,p)=>n+p.t.length, 0);
+    if (keyLen > 30) key.classList.add("xlong"); else if (keyLen > 16) key.classList.add("long");
+    card.appendChild(key);
+    card.appendChild(el("div","rule"));
+    if (ln.sub) card.appendChild(el("div","sub", ln.sub));
+    const ghost = el("div","ghost", String(i+1).padStart(2,"0"));
+    card.appendChild(ghost);
+    stage.appendChild(card);
+
+    const cap = el("div","cap clip");
+    cap.dataset.start = ln.start; cap.dataset.duration = d; cap.dataset.trackIndex = "2";
+    (ln.words || []).forEach(w => {
+      const span = el("span", "w" + (w.hot ? " hot" : ""), w.w);
+      const on = el("span","on clip", w.w);
+      on.dataset.start = w.t; on.dataset.duration = Math.max(0.08, w.d); on.dataset.trackIndex = "3";
+      span.appendChild(on);
+      cap.appendChild(span);
+    });
+    capzone.appendChild(cap);
+  });
+
+  // --- chuyển động liên tục: GSAP timeline (render seek được, tất định) ---
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#progress", { width: 0 }, { width: 1080, duration: DUR, ease: "none" }, 0);
+  tl.fromTo("#glow", { x: -120, y: 60 }, { x: 140, y: -60, duration: DUR, ease: "none" }, 0);
+  tl.fromTo(".kicker", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: .7, ease: "power3.out" }, 0);
+  tl.fromTo("#badge", { opacity: 0 }, { opacity: .9, duration: .7 }, .25);
+  LINES.forEach((ln, i) => {
+    tl.fromTo(stage.children[i], { opacity: 0, y: 48, scale: .985 },
+      { opacity: 1, y: 0, scale: 1, duration: .55, ease: "power3.out" }, ln.start);
+    tl.fromTo(capzone.children[i], { opacity: 0, y: 26 },
+      { opacity: 1, y: 0, duration: .32, ease: "power2.out" }, ln.start);
+  });
+  // --- audio: narration + BGM phải nằm TRONG #root mới được composition tính ---
+  function addAudio(id, src, vol, fadeOut){
+    if (!src) return;
+    const a = document.createElement("audio");
+    a.id = id; a.className = "clip"; a.src = src;
+    a.dataset.start = "0"; a.dataset.duration = String(DUR);
+    if (vol != null) a.dataset.volume = String(vol);
+    if (fadeOut) a.dataset.fadeOut = String(fadeOut);
+    root.appendChild(a);
+  }
+  addAudio("narration", V.narration, 1, null);
+  addAudio("bgm", V.bgm, V.bgm_gain != null ? V.bgm_gain : 0.16, 1.2);
+
+  window.__timelines["main"] = tl;
+  tl.seek(0);
+</script>
+</body>
+</html>

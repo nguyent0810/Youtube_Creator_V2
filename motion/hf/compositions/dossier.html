@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="vi" data-resolution="portrait" data-composition-variables='[
+  {"id":"accent","type":"color","label":"Accent","default":"#c1121f"},
+  {"id":"kicker","type":"string","label":"Kicker","default":"HỒ SƠ"},
+  {"id":"badge","type":"string","label":"Badge","default":""},
+  {"id":"footer","type":"string","label":"Footer","default":""},
+  {"id":"duration","type":"number","label":"Duration","default":30},
+  {"id":"narration","type":"string","label":"Narration","default":""},
+  {"id":"bgm","type":"string","label":"BGM","default":""},
+  {"id":"bgm_gain","type":"number","label":"BGM gain","default":0.16},
+  {"id":"lines","type":"string","label":"Lines JSON","default":"[]"}
+]'>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./base.css" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+  /* ===== HỒ SƠ MẬT — noir tài liệu: đen sâu, đỏ máu, chữ nén, giấy hồ sơ ===== */
+  #bed { background: radial-gradient(130% 78% at 50% 6%, #171214 0%, #0b0a0c 46%, #06060a 100%); }
+  .sheet { position: absolute; left: 76px; right: 76px; top: 430px; padding: 66px 58px 78px;
+           background: linear-gradient(158deg, rgba(31,28,30,.96), rgba(13,12,14,.97));
+           border: 2px solid rgba(255,255,255,.09); border-left: 12px solid var(--accent);
+           box-shadow: 0 70px 130px rgba(0,0,0,.72); transform-origin: 50% 40%;
+           min-height: 690px; display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
+  .sheet .tag { font-family: 'JetBrains Mono', monospace; font-size: 25px; letter-spacing: .22em;
+                color: #8a8a93; margin-bottom: 30px; }
+  .sheet .key { font-family: 'Be Vietnam Pro', sans-serif; font-weight: 800; transform: scaleX(.94); transform-origin: 0 50%;
+                font-size: 118px; line-height: 1.02; letter-spacing: .004em; text-transform: uppercase; color: #f7f7f8; }
+  .sheet .key.long  { font-size: 90px; }
+  .sheet .key.xlong { font-size: 68px; line-height: 1.1; }
+  .sheet .rule { margin-top: 36px; height: 7px; width: 210px; background: var(--accent); transform-origin: 0 50%; }
+  .sheet .ghost { position: absolute; right: -36px; bottom: -132px; font-family: 'JetBrains Mono', monospace;
+                  font-weight: 700; font-size: 430px; line-height: 1; color: rgba(255,255,255,.042); }
+  .dust { position: absolute; width: 5px; height: 5px; border-radius: 50%;
+          background: rgba(255,255,255,.5); filter: blur(1px); }
+
+  /* ===== MÀN VIDEO: ảnh hiện trường kẹp trong hồ sơ ===== */
+  .mv-mask { position: absolute; inset: 0; border-style: solid; border-color: #08080a;
+             border-width: 300px 84px 820px 84px; }
+  .mv-edge { position: absolute; left: 84px; right: 84px; top: 300px; bottom: 820px;
+             border: 7px solid #e8e4dc; box-shadow: 0 40px 90px rgba(0,0,0,.75); }
+  .mv-tape { position: absolute; width: 190px; height: 54px; background: rgba(226,220,205,.82);
+             box-shadow: 0 8px 22px rgba(0,0,0,.5); }
+  .mv-tape.tl { left: 40px; top: 272px; transform: rotate(-7deg); }
+  .mv-tape.br { right: 40px; bottom: 792px; transform: rotate(-5deg); }
+  .mv-slug { position: absolute; left: 88px; top: 1126px; font-family: 'JetBrains Mono', monospace;
+             font-size: 25px; letter-spacing: .22em; color: #8a8a93; }
+  .mv-key  { position: absolute; left: 84px; right: 84px; top: 1196px; font-weight: 800;
+             font-size: 82px; line-height: 1.04; text-transform: uppercase; color: #f7f7f8;
+             transform: scaleX(.94); transform-origin: 0 50%; }
+  .mv-rule { position: absolute; left: 84px; top: 1170px; width: 0; height: 6px; background: var(--accent); }
+
+  .mv-key.long { font-size: 64px; }
+  .mv-key.xlong { font-size: 50px; line-height: 1.12; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920" data-fps="30">
+  <div class="bedrock" id="bed"></div>
+  <div class="bedrock" id="dustbox"></div>
+  <svg class="bedrock grain" width="1080" height="1920"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+  <div class="bedrock scanlines"></div>
+  <div class="bedrock vignette" id="vig"></div>
+  <div id="stage"></div>
+  <div id="capzone" class="skin-karaoke"></div>
+  <div id="kicker-row"><div class="bar"></div><div id="kicker"></div></div>
+  <div id="badge"></div>
+  <div id="footer"></div>
+  <div class="progress" id="progress"></div>
+</div>
+<script src="./engine.js"></script>
+<script>
+window.HF_STYLE = {
+  buildMediaScene(inner, ln, i, n) {
+    inner.appendChild(HF.el("div", "mv-mask"));
+    inner.appendChild(HF.el("div", "mv-edge"));
+    inner.appendChild(HF.el("div", "mv-tape tl"));
+    inner.appendChild(HF.el("div", "mv-tape br"));
+    inner.appendChild(HF.el("div", "mv-slug", "ẢNH TƯ LIỆU — HỒ SƠ " + String(i + 1).padStart(2, "0") + " / " + String(n).padStart(2, "0")));
+    inner.appendChild(HF.el("div", "mv-rule"));
+    const mvKey = HF.el("div", "mv-key", (ln.key_parts || []).map(p => p.t).join(" "));
+    if (mvKey.textContent.length > 26) mvKey.classList.add("xlong");
+    else if (mvKey.textContent.length > 14) mvKey.classList.add("long");
+    inner.appendChild(mvKey);
+  },
+  enterMedia(tl, inner, ln) {
+    tl.fromTo(inner.querySelector(".mv-edge"), { opacity: 0, scale: 1.04 },
+      { opacity: 1, scale: 1, duration: .5, ease: "power3.out" }, ln.start);
+    tl.fromTo(inner.querySelectorAll(".mv-tape"), { opacity: 0, y: -18 },
+      { opacity: 1, y: 0, duration: .36, stagger: .1 }, ln.start + .18);
+    tl.fromTo(inner.querySelector(".mv-slug"), { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: .4 }, ln.start + .3);
+    tl.fromTo(inner.querySelector(".mv-rule"), { width: 0 }, { width: 180, duration: .45, ease: "power3.out" }, ln.start + .38);
+    tl.fromTo(inner.querySelector(".mv-key"), { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: .5, ease: "power3.out" }, ln.start + .44);
+  },
+  buildScene(inner, ln, i, n) {
+    const sheet = HF.el("div", "sheet card-box");
+    sheet.appendChild(HF.el("div", "tag", "HỒ SƠ " + String(i + 1).padStart(2, "0") + " / " + String(n).padStart(2, "0")));
+    const key = HF.el("div", "key", (ln.key_parts || []).map(p => p.t).join(" "));
+    const L = key.textContent.length;
+    if (L > 30) key.classList.add("xlong"); else if (L > 16) key.classList.add("long");
+    sheet.appendChild(key);
+    sheet.appendChild(HF.el("div", "rule"));
+    sheet.appendChild(HF.el("div", "ghost", String(i + 1).padStart(2, "0")));
+    inner.appendChild(sheet);
+  },
+  enter(tl, inner, ln) {
+    const sheet = inner.querySelector(".sheet");
+    tl.fromTo(sheet, { y: 74, opacity: 0, scale: .972, rotate: -1.6 },
+      { y: 0, opacity: 1, scale: 1, rotate: -.55, duration: .62, ease: "power3.out" }, ln.start);
+    tl.fromTo(sheet.querySelector(".key"), { opacity: 0, scale: 1.1, y: 14 },
+      { opacity: 1, scale: 1, y: 0, duration: .5, ease: "power4.out" }, ln.start + .1);
+    tl.fromTo(sheet.querySelector(".rule"), { scaleX: 0 }, { scaleX: 1, duration: .5, ease: "power3.out" }, ln.start + .26);
+    tl.fromTo(sheet.querySelector(".tag"), { opacity: 0, x: -18 }, { opacity: 1, x: 0, duration: .4 }, ln.start + .06);
+    // đẩy máy chậm suốt cảnh — cảm giác ống kính tiến vào hồ sơ
+    tl.fromTo(sheet, { scale: 1 }, { scale: 1.035, duration: Math.max(.6, ln.end - ln.start), ease: "none" }, ln.start + .6);
+  },
+  transition(tl, oldS, newS, T) {
+    tl.to(oldS, { scale: 1.1, opacity: 0, filter: "blur(7px)", duration: .34, ease: "power3.in" }, T);
+    tl.fromTo(newS, { scale: .93, opacity: 0, filter: "blur(12px)" },
+      { scale: 1, opacity: 1, filter: "blur(0px)", duration: .42, ease: "power3.out" }, T + .1);
+  },
+  ambient(tl, DUR, { rand }) {
+    tl.fromTo("#progress", { width: 0 }, { width: 1080, duration: DUR, ease: "none" }, 0);
+    tl.fromTo("#kicker-row", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: .7, ease: "power3.out" }, 0);
+    tl.fromTo("#badge", { opacity: 0 }, { opacity: .92, duration: .7 }, .22);
+    tl.fromTo("#vig", { opacity: .86 }, { opacity: 1, duration: DUR, ease: "sine.inOut" }, 0);
+    const box = document.getElementById("dustbox");
+    for (let k = 0; k < 14; k++) {                 // bụi trôi -- PRNG có seed, tất định
+      const d = HF.el("div", "dust");
+      d.style.left = (rand() * 1080) + "px";
+      d.style.top = (200 + rand() * 1500) + "px";
+      box.appendChild(d);
+      tl.fromTo(d, { opacity: 0 }, { opacity: .16 + rand() * .3, duration: 1.2 }, rand() * 2);
+      tl.fromTo(d, { y: 0, x: 0 }, { y: -60 - rand() * 120, x: (rand() - .5) * 90, duration: DUR, ease: "none" }, 0);
+    }
+  }
+};
+HF.build();
+</script>
+</body>
+</html>

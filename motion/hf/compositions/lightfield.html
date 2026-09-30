@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="vi" data-resolution="portrait" data-composition-variables='[
+  {"id":"accent","type":"color","label":"Accent","default":"#d8a657"},
+  {"id":"kicker","type":"string","label":"Kicker","default":"SUY NGẪM"},
+  {"id":"badge","type":"string","label":"Badge","default":""},
+  {"id":"footer","type":"string","label":"Footer","default":""},
+  {"id":"duration","type":"number","label":"Duration","default":30},
+  {"id":"narration","type":"string","label":"Narration","default":""},
+  {"id":"bgm","type":"string","label":"BGM","default":""},
+  {"id":"bgm_gain","type":"number","label":"BGM gain","default":0.16},
+  {"id":"lines","type":"string","label":"Lines JSON","default":"[]"}
+]'>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./base.css" />
+<link rel="stylesheet" href="./longform.css" />
+<link rel="stylesheet" href="./shortform.css" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+  /* Chung cho mọi trường phái BUD: thanh tiến trình gần như vô hình, chữ
+     phụ đề đặt cao hơn để khung dưới rộng rãi. */
+  .progress { height: 3px; opacity: .35; box-shadow: none; }
+  #capzone { bottom: 250px; }
+
+  /* ===== ÁNH SÁNG: ba trường sáng trôi rất chậm, không cạnh cứng ===== */
+  #bed { background: #0d0b08; }
+  #f1, #f2, #f3 { filter: blur(6px); }
+  #f1 { background: radial-gradient(44% 30% at 26% 30%, rgba(216,166,87,.30), rgba(0,0,0,0) 70%); }
+  #f2 { background: radial-gradient(40% 28% at 74% 56%, rgba(150,170,120,.20), rgba(0,0,0,0) 72%); }
+  #f3 { background: radial-gradient(52% 34% at 46% 82%, rgba(190,140,80,.18), rgba(0,0,0,0) 74%); }
+  .grain { opacity: .14; }
+  #kicker { color: #e8d6b4; } #footer { color: #6f6350; }
+  .progress { background: var(--accent); }
+  .lf-wrap { position: absolute; left: 110px; right: 110px; top: 520px; height: 620px;
+             display: flex; flex-direction: column; justify-content: center; }
+  .lf-key { font-weight: 600; font-size: 94px; line-height: 1.16; color: #f7edda;
+            letter-spacing: -.02em; text-shadow: 0 24px 60px rgba(0,0,0,.6); }
+  .lf-key.long { font-size: 74px; } .lf-key.xlong { font-size: 58px; }
+  /* Trường sáng: sáng đổ từ trên xuống rồi tắt dần. Ảnh sáng ở phần trên
+     khung và chìm hẳn xuống dưới -- không phải vùng sáng giữa khung. */
+  .mv-veil { position: absolute; inset: 0; pointer-events: none;
+             background:
+               linear-gradient(180deg, rgba(13,11,8,.34) 0%, rgba(13,11,8,0) 18%,
+                               rgba(13,11,8,.16) 42%, rgba(13,11,8,.8) 68%,
+                               rgba(13,11,8,.99) 88%),
+               radial-gradient(ellipse 74% 52% at 50% 30%,
+                               rgba(13,11,8,0) 0%, rgba(13,11,8,.62) 100%); }
+  .mv-grade { background: linear-gradient(180deg, rgba(8,6,4,.8) 0%, rgba(8,6,4,.26) 26%,
+              rgba(8,6,4,.58) 62%, rgba(8,6,4,.92) 100%); }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920" data-fps="30">
+  <div class="bedrock" id="bed"></div>
+  <div class="bedrock" id="f1"></div>
+  <div class="bedrock" id="f2"></div>
+  <div class="bedrock" id="f3"></div>
+  <svg class="bedrock grain" width="1080" height="1920"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="3"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+  <div class="bedrock vignette"></div>
+  <div id="stage"></div>
+  <div id="capzone" class="skin-still"></div>
+  <div id="kicker-row"><div class="bar"></div><div id="kicker"></div></div>
+  <div id="badge"></div>
+  <div id="footer"></div>
+  <div class="progress" id="progress"></div>
+</div>
+<script src="./engine.js"></script>
+<script src="./longform.js"></script>
+<script>
+window.HF_STYLE = {
+  buildScene(inner, ln, i, n) {
+    const w = HF.el("div", "lf-wrap card-box");
+    const key = HF.el("div", "lf-key", (ln.key_parts || []).map(p => p.t).join(" "));
+    const L = key.textContent.length;
+    if (L > 28) key.classList.add("xlong"); else if (L > 15) key.classList.add("long");
+    w.appendChild(key);
+    inner.appendChild(w);
+  },
+  enter(tl, inner, ln) {
+    tl.fromTo(inner.querySelector(".lf-key"), { opacity: 0, filter: "blur(18px)", y: 16 },
+      { opacity: 1, filter: "blur(0px)", y: 0, duration: 1.2, ease: "sine.out" }, ln.start);
+  },
+  transition(tl, oldS, newS, T) {
+    tl.to(oldS, { opacity: 0, filter: "blur(12px)", duration: .85, ease: "sine.inOut" }, T);
+    tl.fromTo(newS, { opacity: 0, filter: "blur(14px)" },
+      { opacity: 1, filter: "blur(0px)", duration: 1.0, ease: "sine.out" }, T + .25);
+  },
+  ambient(tl, DUR) {
+    tl.fromTo("#progress", { width: 0 }, { width: 1080, duration: DUR, ease: "none" }, 0);
+    tl.fromTo("#kicker-row", { opacity: 0 }, { opacity: 1, duration: 1.4 }, 0);
+    tl.fromTo("#badge", { opacity: 0 }, { opacity: .9, duration: 1.4 }, .4);
+    tl.fromTo("#f1", { x: -70, y: 20 }, { x: 50, y: -30, duration: DUR, ease: "none" }, 0);
+    tl.fromTo("#f2", { x: 60, y: -20 }, { x: -50, y: 30, duration: DUR, ease: "none" }, 0);
+    tl.fromTo("#f3", { x: -20, y: 40 }, { x: 40, y: -20, duration: DUR, ease: "none" }, 0);
+  },
+  buildMediaScene(inner, ln) {
+    inner.appendChild(HF.el("div", "mv-veil"));
+    inner.appendChild(HF.el("div", "mv-grade"));
+  },
+  enterMedia(tl, inner, ln) {
+    // Màn che có SẴN, không fade từ 0 -- fade từ 0 nghĩa là ảnh loé ra
+    // sáng kín khung một nhịp rồi mới bị nuốt mép. Chỉ cho mép thở.
+    tl.fromTo(inner.querySelector(".mv-veil"), { opacity: .55 },
+      { opacity: 1, duration: 1.1, ease: "sine.out" }, ln.start);
+  },
+};
+HF.build();
+</script>
+</body>
+</html>

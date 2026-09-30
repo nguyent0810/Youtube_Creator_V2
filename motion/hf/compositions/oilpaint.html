@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="vi" data-resolution="portrait" data-composition-variables='[
+  {"id":"accent","type":"color","label":"Accent","default":"#c9a227"},
+  {"id":"kicker","type":"string","label":"Kicker","default":"SUY NGẪM"},
+  {"id":"badge","type":"string","label":"Badge","default":""},
+  {"id":"footer","type":"string","label":"Footer","default":""},
+  {"id":"duration","type":"number","label":"Duration","default":30},
+  {"id":"narration","type":"string","label":"Narration","default":""},
+  {"id":"bgm","type":"string","label":"BGM","default":""},
+  {"id":"bgm_gain","type":"number","label":"BGM gain","default":0.16},
+  {"id":"lines","type":"string","label":"Lines JSON","default":"[]"}
+]'>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./base.css" />
+<link rel="stylesheet" href="./longform.css" />
+<link rel="stylesheet" href="./shortform.css" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+  /* Chung cho mọi trường phái BUD: thanh tiến trình gần như vô hình, chữ
+     phụ đề đặt cao hơn để khung dưới rộng rãi. */
+  .progress { height: 3px; opacity: .35; box-shadow: none; }
+  #capzone { bottom: 250px; }
+
+  /* ===== SƠN DẦU: tông đất ấm, một nguồn sáng, vignette dày ===== */
+  #bed { background: radial-gradient(110% 75% at 30% 22%, #3d2c1e 0%, #241a12 52%, #120c08 100%); }
+  #lamp { background: radial-gradient(42% 30% at 28% 26%, rgba(233,196,122,.28), rgba(0,0,0,0) 72%); }
+  .grain { opacity: .2; mix-blend-mode: soft-light; }
+  #vig { background: radial-gradient(72% 52% at 46% 42%, rgba(0,0,0,0) 34%, rgba(0,0,0,.85) 100%); }
+  #kicker { color: #e6d6b8; } #footer { color: #7d6b52; }
+  .progress { background: var(--accent); }
+  .oil-wrap { position: absolute; left: 100px; right: 100px; top: 480px; height: 680px;
+              display: flex; flex-direction: column; justify-content: center; }
+  .oil-key { font-weight: 800; font-size: 100px; line-height: 1.1; color: #f6ecd8;
+             letter-spacing: -.024em; text-shadow: 0 30px 70px rgba(0,0,0,.75); }
+  .oil-key.long { font-size: 78px; } .oil-key.xlong { font-size: 60px; }
+  .oil-rule { margin-top: 44px; height: 3px; width: 220px; background: var(--accent);
+              transform-origin: 0 50%; opacity: .85; }
+  /* Ảnh tràn kín khung, sáng đều, đứng cạnh một nền sơn dầu nâu đen thì
+     thành tấm ảnh dán lên tranh. Màn này bo ảnh vào một vùng sáng ấm và
+     nuốt mép vào nền, cho nó nằm TRONG bức tranh. */
+  .mv-veil { position: absolute; inset: 0; pointer-events: none;
+             background: radial-gradient(ellipse 60% 38% at 50% 40%,
+                         rgba(18,12,8,0) 0%, rgba(18,12,8,.46) 56%, rgba(18,12,8,.96) 100%); }
+  .mv-glaze { position: absolute; inset: 0; pointer-events: none; mix-blend-mode: multiply;
+              background: radial-gradient(ellipse 70% 46% at 50% 38%,
+                          rgba(201,162,39,.10) 0%, rgba(61,44,30,.5) 100%); }
+  .mv-grade { background: linear-gradient(180deg, rgba(12,8,5,.78) 0%, rgba(30,20,12,.28) 24%,
+              rgba(20,13,8,.55) 62%, rgba(12,8,5,.9) 100%); }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920" data-fps="30">
+  <div class="bedrock" id="bed"></div>
+  <div class="bedrock" id="lamp"></div>
+  <svg class="bedrock grain" width="1080" height="1920"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+  <div class="bedrock vignette" id="vig"></div>
+  <div id="stage"></div>
+  <div id="capzone" class="skin-paper"></div>
+  <div id="kicker-row"><div class="bar"></div><div id="kicker"></div></div>
+  <div id="badge"></div>
+  <div id="footer"></div>
+  <div class="progress" id="progress"></div>
+</div>
+<script src="./engine.js"></script>
+<script src="./longform.js"></script>
+<script>
+window.HF_STYLE = {
+  buildScene(inner, ln, i, n) {
+    const w = HF.el("div", "oil-wrap card-box");
+    const key = HF.el("div", "oil-key", (ln.key_parts || []).map(p => p.t).join(" "));
+    const L = key.textContent.length;
+    if (L > 28) key.classList.add("xlong"); else if (L > 15) key.classList.add("long");
+    w.appendChild(key);
+    w.appendChild(HF.el("div", "oil-rule"));
+    inner.appendChild(w);
+  },
+  enter(tl, inner, ln) {
+    tl.fromTo(inner.querySelector(".oil-key"), { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 1.0, ease: "power2.out" }, ln.start);
+    tl.fromTo(inner.querySelector(".oil-rule"), { scaleX: 0 },
+      { scaleX: 1, duration: .9, ease: "power2.out" }, ln.start + .35);
+    tl.fromTo(inner.querySelector(".oil-wrap"), { scale: 1 },
+      { scale: 1.03, duration: Math.max(1, ln.end - ln.start), ease: "none" }, ln.start);
+  },
+  transition(tl, oldS, newS, T) {
+    tl.to(oldS, { opacity: 0, scale: 1.04, duration: .75, ease: "sine.inOut" }, T);
+    tl.fromTo(newS, { opacity: 0, scale: .985 },
+      { opacity: 1, scale: 1, duration: .9, ease: "sine.out" }, T + .15);
+  },
+  ambient(tl, DUR) {
+    tl.fromTo("#progress", { width: 0 }, { width: 1080, duration: DUR, ease: "none" }, 0);
+    tl.fromTo("#kicker-row", { opacity: 0 }, { opacity: 1, duration: 1.2 }, 0);
+    tl.fromTo("#badge", { opacity: 0 }, { opacity: .9, duration: 1.2 }, .4);
+    tl.fromTo("#lamp", { x: -50, opacity: .8 }, { x: 40, opacity: 1, duration: DUR, ease: "sine.inOut" }, 0);
+  },
+  buildMediaScene(inner, ln) {
+    inner.appendChild(HF.el("div", "mv-veil"));
+    inner.appendChild(HF.el("div", "mv-glaze"));
+    inner.appendChild(HF.el("div", "mv-grade"));
+  },
+  enterMedia(tl, inner, ln) {
+    // Màn che có SẴN, không fade từ 0 -- fade từ 0 nghĩa là ảnh loé ra
+    // sáng kín khung một nhịp rồi mới bị nuốt mép. Chỉ cho mép thở.
+    tl.fromTo(inner.querySelector(".mv-veil"), { opacity: .55 },
+      { opacity: 1, duration: 1.1, ease: "sine.out" }, ln.start);
+  },
+};
+HF.build();
+</script>
+</body>
+</html>

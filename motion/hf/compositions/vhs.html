@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="vi" data-resolution="portrait" data-composition-variables='[
+  {"id":"accent","type":"color","label":"Accent","default":"#45d483"},
+  {"id":"kicker","type":"string","label":"Kicker","default":"HỒ SƠ"},
+  {"id":"badge","type":"string","label":"Badge","default":""},
+  {"id":"footer","type":"string","label":"Footer","default":""},
+  {"id":"duration","type":"number","label":"Duration","default":30},
+  {"id":"narration","type":"string","label":"Narration","default":""},
+  {"id":"bgm","type":"string","label":"BGM","default":""},
+  {"id":"bgm_gain","type":"number","label":"BGM gain","default":0.16},
+  {"id":"lines","type":"string","label":"Lines JSON","default":"[]"}
+]'>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./base.css" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+  /* ===== BĂNG GHI HÌNH — CRT, timecode, nhiễu băng từ, tách màu RGB ===== */
+  #bed { background: radial-gradient(120% 80% at 50% 50%, #0d1410 0%, #070a09 60%, #040605 100%); }
+  .tape { position: absolute; left: 70px; right: 70px; top: 470px; min-height: 620px;
+          border: 3px solid rgba(69,212,131,.28); background: rgba(8,16,12,.55);
+          display: flex; flex-direction: column; justify-content: center; padding: 58px 52px; overflow: hidden; }
+  .tape .meta { font-family: 'JetBrains Mono', monospace; font-size: 25px; letter-spacing: .18em;
+                color: rgba(120,230,170,.8); margin-bottom: 28px; }
+  .tape .key { position: relative; font-weight: 800; font-size: 108px; line-height: 1.04;
+               text-transform: uppercase; color: #eafff2; letter-spacing: -.02em; }
+  .tape .key.long  { font-size: 84px; }
+  .tape .key.xlong { font-size: 64px; line-height: 1.12; }
+  .tape .key .gr, .tape .key .bl { position: absolute; left: 0; top: 0; width: 100%; }
+  .tape .key .gr { color: #ff2d55; opacity: .55; }
+  .tape .key .bl { color: #2d9bff; opacity: .55; }
+  #hud { position: absolute; right: 70px; top: 120px; text-align: right; z-index: 55;
+         font-family: 'JetBrains Mono', monospace; font-size: 30px; letter-spacing: .1em; color: #7ff0b4; }
+  #rec { display: inline-block; width: 22px; height: 22px; border-radius: 50%; background: #ff3b30; margin-right: 12px; }
+  #crt { position: absolute; inset: 0; opacity: .5;
+         background: repeating-linear-gradient(0deg, rgba(0,0,0,.42) 0 2px, rgba(0,0,0,0) 2px 4px); }
+  .band { position: absolute; left: -40px; right: -40px; height: 56px; background: rgba(255,255,255,.055);
+          box-shadow: 0 0 60px rgba(255,255,255,.08); }
+
+  /* ===== MÀN VIDEO: băng chạy toàn khung, chỉ thêm nhiễu và HUD ===== */
+  .mv-grade { position: absolute; inset: 0; background: rgba(6,14,10,.28);
+              mix-blend-mode: multiply; }
+  .mv-scan { position: absolute; inset: 0; opacity: .6;
+             background: repeating-linear-gradient(0deg, rgba(0,0,0,.5) 0 2px, rgba(0,0,0,0) 2px 4px); }
+  .mv-track { position: absolute; left: -40px; right: -40px; height: 70px;
+              background: rgba(255,255,255,.08); }
+  .mv-slug { position: absolute; left: 76px; top: 1136px; font-family: 'JetBrains Mono', monospace;
+             font-size: 26px; letter-spacing: .2em; color: rgba(120,230,170,.9); }
+  .mv-key  { position: absolute; left: 76px; right: 76px; top: 1186px; font-weight: 800;
+             font-size: 78px; line-height: 1.05; text-transform: uppercase; color: #eafff2; }
+
+  .mv-key.long { font-size: 64px; }
+  .mv-key.xlong { font-size: 50px; line-height: 1.12; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920" data-fps="30">
+  <div class="bedrock" id="bed"></div>
+  <div id="stage"></div>
+  <div class="bedrock" id="bandbox"></div>
+  <div class="bedrock" id="crt"></div>
+  <svg class="bedrock grain" width="1080" height="1920"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="3"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+  <div class="bedrock vignette"></div>
+  <div id="capzone" class="skin-rgb"></div>
+  <div id="kicker-row"><div class="bar"></div><div id="kicker"></div></div>
+  <div id="badge"></div>
+  <div id="hud"><span id="rec"></span><span id="tc">00:00:00</span></div>
+  <div id="footer"></div>
+  <div class="progress" id="progress"></div>
+</div>
+<script src="./engine.js"></script>
+<script>
+window.HF_STYLE = {
+  buildMediaScene(inner, ln, i, n, { rand }) {
+    inner.appendChild(HF.el("div", "mv-grade"));
+    inner.appendChild(HF.el("div", "mv-scan"));
+    const tr = HF.el("div", "mv-track"); tr.style.top = "0px"; inner.appendChild(tr);
+    inner.appendChild(HF.el("div", "mv-slug", "▶ PLAY   BĂNG " + String(i + 1).padStart(2, "0") + "/" + String(n).padStart(2, "0")));
+    const mvKey = HF.el("div", "mv-key", (ln.key_parts || []).map(p => p.t).join(" "));
+    if (mvKey.textContent.length > 26) mvKey.classList.add("xlong");
+    else if (mvKey.textContent.length > 14) mvKey.classList.add("long");
+    inner.appendChild(mvKey);
+  },
+  enterMedia(tl, inner, ln, i, { clip, rand }) {
+    if (clip) tl.fromTo(clip, { filter: "brightness(2.4) saturate(0.2)" },
+      { filter: "brightness(1) saturate(1)", duration: .4 }, ln.start);
+    tl.fromTo(inner.querySelector(".mv-slug"), { opacity: 0 }, { opacity: 1, duration: .3 }, ln.start + .2);
+    tl.fromTo(inner.querySelector(".mv-key"), { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: .42 }, ln.start + .28);
+    const span = Math.max(1, ln.end - ln.start);
+    tl.fromTo(inner.querySelector(".mv-track"), { y: -90, opacity: .9 },
+      { y: 1960, opacity: .9, duration: span, ease: "none" }, ln.start);
+  },
+  buildScene(inner, ln, i, n) {
+    const t = HF.el("div", "tape card-box");
+    t.appendChild(HF.el("div", "meta", "BĂNG " + String(i + 1).padStart(2, "0") + "/" + String(n).padStart(2, "0") + "  ·  SP  ·  PLAY"));
+    const txt = (ln.key_parts || []).map(p => p.t).join(" ");
+    const key = HF.el("div", "key");
+    key.appendChild(HF.el("span", "gr", txt));
+    key.appendChild(HF.el("span", "bl", txt));
+    key.appendChild(HF.el("span", "fg", txt));
+    if (txt.length > 30) key.classList.add("xlong"); else if (txt.length > 16) key.classList.add("long");
+    t.appendChild(key);
+    inner.appendChild(t);
+  },
+  enter(tl, inner, ln, i, { rand }) {
+    const t = inner.querySelector(".tape"), key = t.querySelector(".key");
+    tl.fromTo(t, { opacity: 0, scaleY: .9, filter: "brightness(2.2)" },
+      { opacity: 1, scaleY: 1, filter: "brightness(1)", duration: .34, ease: "power3.out" }, ln.start);
+    tl.fromTo(key.querySelector(".gr"), { x: -26 }, { x: -6, duration: .5, ease: "power2.out" }, ln.start);
+    tl.fromTo(key.querySelector(".bl"), { x: 26 }, { x: 6, duration: .5, ease: "power2.out" }, ln.start);
+    // rung băng từ: 3 cú giật nhỏ ở mốc cố định theo seed
+    for (let k = 0; k < 3; k++) {
+      const at = ln.start + .8 + k * Math.max(.8, (ln.end - ln.start - 1) / 3) + rand() * .2;
+      tl.to(t, { x: (rand() - .5) * 26, duration: .05 }, at);
+      tl.to(t, { x: 0, duration: .12 }, at + .06);
+    }
+  },
+  transition(tl, oldS, newS, T) {          // glitch: giật ngang + tách màu rồi cắt
+    tl.to(oldS, { x: 34, filter: "hue-rotate(35deg) saturate(1.6)", duration: .1, ease: "steps(2)" }, T);
+    tl.to(oldS, { x: -26, duration: .09, ease: "steps(2)" }, T + .1);
+    tl.to(oldS, { opacity: 0, x: 0, filter: "none", duration: .06 }, T + .2);
+    tl.fromTo(newS, { opacity: 0, x: -30, filter: "brightness(2.4) saturate(0.2)" },
+      { opacity: 1, x: 0, filter: "brightness(1) saturate(1)", duration: .3, ease: "power2.out" }, T + .2);
+  },
+  ambient(tl, DUR, { rand }) {
+    tl.fromTo("#progress", { width: 0 }, { width: 1080, duration: DUR, ease: "none" }, 0);
+    tl.fromTo("#kicker-row", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: .7, ease: "power3.out" }, 0);
+    tl.fromTo("#badge", { opacity: 0 }, { opacity: .92, duration: .7 }, .22);
+    // đèn REC nháy: chu kỳ 1s, số lần lặp hữu hạn (floor, không ceil)
+    const reps = Math.max(0, Math.floor(DUR / 1) - 1);
+    tl.to("#rec", { opacity: .15, duration: .5, ease: "steps(1)", yoyo: true, repeat: reps }, 0);
+    // timecode chạy thật theo thời gian timeline (đọc từ progress của tween)
+    const tc = document.getElementById("tc"), state = { t: 0 };
+    tl.to(state, { t: DUR, duration: DUR, ease: "none",
+      onUpdate: () => {
+        const s = Math.floor(state.t), f = Math.floor((state.t - s) * 30);
+        tc.textContent = "00:" + String(Math.floor(s / 60)).padStart(2, "0") + ":" +
+                         String(s % 60).padStart(2, "0") + ":" + String(f).padStart(2, "0");
+      } }, 0);
+    // vệt nhiễu băng chạy dọc khung
+    const box = document.getElementById("bandbox");
+    for (let k = 0; k < 3; k++) {
+      const b = HF.el("div", "band");
+      b.style.top = "0px"; b.style.opacity = "0";
+      box.appendChild(b);
+      const at = (DUR / 3) * k + rand() * 1.2;
+      tl.fromTo(b, { y: -80, opacity: 0 }, { y: 1960, opacity: .8, duration: 1.1 + rand(), ease: "none" }, at);
+      tl.to(b, { opacity: 0, duration: .2 }, at + 1.0);
+    }
+  }
+};
+HF.build();
+</script>
+</body>
+</html>

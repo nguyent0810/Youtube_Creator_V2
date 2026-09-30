@@ -1,0 +1,252 @@
+/* Khung nền chung cho mọi style cinematic — chỉ layout + phụ đề.
+   Mọi thứ thuộc về "cái nhìn" của từng style nằm trong file style đó. */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+#root { width: 100%; height: 100%; position: relative; color: #f4f4f5;
+        font-family: 'Be Vietnam Pro', system-ui, sans-serif; }
+
+/* Nền dùng chung cả composition: KHÔNG phải clip, phải tự sizing */
+.bedrock { position: absolute; inset: 0; }
+
+#stage { position: absolute; inset: 0; }
+.scene { position: absolute; inset: 0; overflow: hidden; }
+.scene-inner { position: absolute; inset: 0; }
+
+/* Phụ đề nằm TRÊN mọi transition để chữ không bao giờ bị nhoè theo cảnh */
+#capzone { position: absolute; left: 64px; right: 64px; bottom: 286px; z-index: 60; }
+.cap { position: absolute; left: 0; right: 0; bottom: 0; text-align: center;
+       font-size: 60px; line-height: 1.3; font-weight: 800; letter-spacing: -.01em;
+       text-shadow: 0 6px 30px rgba(0,0,0,.98), 0 0 6px rgba(0,0,0,.95); }
+.w  { position: relative; display: inline-block; margin: 0 .13em; color: #fafafa; }
+.w .on { position: absolute; left: 0; top: 0; color: #ffd24a; white-space: nowrap; opacity: 0; }
+.w.hot { color: #fff; text-decoration: underline; text-decoration-color: var(--accent);
+         text-decoration-thickness: 7px; text-underline-offset: 12px; }
+
+/* ===== Kiểu phụ đề theo ngày =====================================
+   Mỗi style đặt một class `skin-*` lên #capzone. Cùng một cấu trúc DOM
+   (từ nền + lớp phủ `.on` chạy theo giọng đọc), chỉ đổi cách lớp phủ ấy
+   hiện ra — cách rẻ nhất để 5 ngày trông khác hẳn nhau mà không phải
+   dựng thêm style nào.
+   Lưu ý `.on` là lớp phủ ĐÈ LÊN từ nền, nên mọi hiệu ứng phải KHÔNG đổi
+   kích thước hộp: dùng box-shadow/text-shadow thay cho padding/border. */
+
+/* 1. karaoke — vàng trơn (mặc định, dùng cho dossier) */
+#capzone.skin-karaoke .w .on { color: #ffd24a; }
+
+/* 2. pill — từ đang đọc nằm trong một viên thuốc màu accent */
+#capzone.skin-pill .w .on { color: #0b0b0f;
+    background: var(--accent); border-radius: 6px;
+    box-shadow: 0 0 0 8px var(--accent), 0 6px 26px rgba(0,0,0,.5); }
+
+/* 3. rgb — tách màu kiểu băng từ, hợp khung CRT */
+#capzone.skin-rgb .w .on { color: #ffffff;
+    text-shadow: 3px 0 #ff2d55, -3px 0 #2d9bff, 0 6px 26px rgba(0,0,0,.9); }
+
+/* 4. slab — cả dòng nằm trên nền tối có gờ accent, canh trái */
+#capzone.skin-slab .cap { text-align: left; padding: 22px 26px;
+    background: rgba(5,12,18,.72); border-left: 10px solid var(--accent);
+    text-shadow: 0 4px 18px rgba(0,0,0,.9); }
+#capzone.skin-slab .w .on { color: var(--accent); }
+
+/* ===== Skin cho kênh Phật giáo: TẮT karaoke từng từ =====
+   Từ vàng nhảy theo từng tiếng kéo mắt liên tục -- ngược thẳng với nhịp
+   "giữ khung hình đủ lâu để cảm xúc lắng đọng". Cả câu hiện cùng lúc, lớp
+   phủ `.on` không bao giờ bật. */
+#capzone.skin-still .w .on,
+#capzone.skin-ink .w .on,
+#capzone.skin-paper .w .on { opacity: 0 !important; }
+#capzone.skin-still .cap { font-weight: 600; font-size: 56px; line-height: 1.42;
+    text-shadow: 0 6px 30px rgba(0,0,0,.9); }
+#capzone.skin-still .w.hot { text-decoration: none; color: var(--accent); }
+/* mực trên giấy: chữ đen trên nền sáng, không đổ bóng đen */
+#capzone.skin-ink .cap { font-weight: 600; font-size: 54px; line-height: 1.46;
+    color: #23201b; text-shadow: none; }
+#capzone.skin-ink .w { color: #23201b; }
+#capzone.skin-ink .w.hot { text-decoration: none; color: var(--accent); font-weight: 800; }
+/* giấy cũ: chữ kem, gạch chân mảnh màu accent */
+#capzone.skin-paper .cap { font-weight: 600; font-size: 55px; line-height: 1.44;
+    color: #f0e6d2; text-shadow: 0 6px 26px rgba(0,0,0,.85); }
+#capzone.skin-paper .w { color: #f0e6d2; }
+#capzone.skin-paper .w.hot { color: #fff6e2; text-decoration-thickness: 3px;
+    text-underline-offset: 10px; text-decoration-color: var(--accent); }
+
+/* 5. glow — từ đang đọc phát sáng ấm, hợp cảnh đêm mưa */
+#capzone.skin-glow .w .on { color: #fff3dd;
+    text-shadow: 0 0 22px var(--accent), 0 0 54px var(--accent), 0 6px 26px rgba(0,0,0,.9); }
+
+#kicker-row { position: absolute; top: 118px; left: 72px; display: flex; align-items: center; gap: 20px; z-index: 50; }
+#kicker-row .bar { width: 10px; height: 46px; background: var(--accent); box-shadow: 0 0 34px var(--accent); }
+#kicker { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 33px;
+          letter-spacing: .24em; color: #e4e4e7; }
+#badge { position: absolute; top: 184px; left: 104px; z-index: 50;
+         font-family: 'JetBrains Mono', monospace; font-size: 25px; letter-spacing: .14em; color: var(--accent); }
+#footer { position: absolute; left: 0; right: 0; bottom: 118px; z-index: 50; text-align: center;
+          font-family: 'JetBrains Mono', monospace; font-size: 23px; letter-spacing: .1em; color: #52525b; }
+
+/* Lớp khí quyển dùng lại: hạt phim, vignette, quét ngang */
+.grain { position: absolute; inset: 0; opacity: .15; mix-blend-mode: overlay; }
+.vignette { position: absolute; inset: 0;
+            background: radial-gradient(76% 56% at 50% 44%, rgba(0,0,0,0) 38%, rgba(0,0,0,.78) 100%); }
+.scanlines { position: absolute; inset: 0; opacity: .45;
+             background: repeating-linear-gradient(0deg, rgba(255,255,255,.04) 0 2px, rgba(0,0,0,0) 2px 5px); }
+.progress { position: absolute; top: 0; left: 0; height: 6px; width: 0; z-index: 70;
+            background: var(--accent); box-shadow: 0 0 26px var(--accent); }
+
+/* ===== Đồ hoạ thông tin (figure): dải dưới thẻ, dùng chung cho mọi style =====
+   Chỉ số/ngưỡng/dòng chảy mà lời đọc ĐANG NÓI mới được vẽ ở đây — không vẽ
+   trang trí. Scene có figure được gắn class .has-fig để thẻ tự thu lại. */
+.scene.has-fig .card-box { min-height: 500px; }
+.fig { position: absolute; left: 76px; right: 76px; top: 1066px; height: 210px; }
+
+.fig-threshold .axis { position: relative; height: 18px; background: rgba(255,255,255,.10); }
+.fig-threshold .axis .lo { position: absolute; left: 0; top: 0; bottom: 0; width: 42%;
+                           background: rgba(255,255,255,.20); transform-origin: 0 50%; }
+.fig-threshold .axis .hi { position: absolute; left: 42%; right: 0; top: 0; bottom: 0;
+                           background: var(--accent); transform-origin: 0 50%; }
+.fig-threshold .axis .mark { position: absolute; left: 42%; top: -24px; width: 5px; height: 66px;
+                             margin-left: -2px; background: #fff; transform-origin: 50% 100%; }
+.fig-threshold .axis .pin { position: absolute; left: 42%; top: -76px; transform: translateX(-50%);
+                            font: 800 34px 'Be Vietnam Pro', sans-serif; color: #fff; white-space: nowrap; }
+.fig-threshold .labels { display: flex; justify-content: space-between; margin-top: 34px;
+                         font: 600 29px 'Be Vietnam Pro', sans-serif; }
+.fig-threshold .labels .l { color: #a1a1aa; }
+.fig-threshold .labels .r { color: #ffffff; }
+.fig-threshold .note { margin-top: 18px; font-family: 'JetBrains Mono', monospace; font-size: 24px;
+                       letter-spacing: .08em; color: var(--accent); }
+
+.fig-flow { display: flex; align-items: center; gap: 16px; }
+.fig-flow .step { flex: 1; padding: 26px 16px; border: 2px solid rgba(255,255,255,.16);
+                  background: rgba(255,255,255,.045); text-align: center;
+                  font: 700 30px/1.22 'Be Vietnam Pro', sans-serif; color: #e4e4e7; }
+.fig-flow .step.long { font-size: 25px; }
+.fig-flow .step.end { border-color: var(--accent); background: var(--accent-12); color: #fff; }
+.fig-flow .arrow { flex: 0 0 auto; font: 700 38px 'JetBrains Mono', monospace; color: var(--accent); }
+
+/* timeline + stat — bổ sung cho 2 figure type còn lại của hợp đồng v1 */
+.fig-timeline .rail { position: relative; height: 130px; margin-top: 26px; }
+.fig-timeline .line { position: absolute; left: 0; right: 0; top: 18px; height: 4px;
+                      background: rgba(255,255,255,.18); transform-origin: 0 50%; }
+.fig-timeline .tick { position: absolute; top: 0; transform: translateX(-50%); text-align: center; }
+.fig-timeline .dot { width: 22px; height: 22px; margin: 8px auto 0; border-radius: 50%;
+                     background: var(--accent); box-shadow: 0 0 26px var(--accent); }
+.fig-timeline .year { margin-top: 16px; font-family: 'JetBrains Mono', monospace;
+                      font-size: 30px; font-weight: 700; color: #f4f4f5; }
+.fig-timeline .what { margin-top: 6px; font-size: 22px; color: #a1a1aa; max-width: 220px; }
+
+.fig-stat { display: flex; flex-direction: column; justify-content: center; }
+.fig-stat .big { font-weight: 800; font-size: 104px; line-height: 1; letter-spacing: -.03em; color: #fafafa; }
+.fig-stat .track { margin-top: 26px; height: 14px; background: rgba(255,255,255,.12); }
+.fig-stat .fill { height: 100%; background: var(--accent); transform-origin: 0 50%; }
+
+/* range — dải "từ A đến B". Hai đầu đều có nhãn: cả hai đầu đều là dữ liệu,
+   khác hẳn threshold nơi chỉ có một mốc. */
+.fig-range .rail { position: relative; height: 96px; margin-top: 34px; }
+.fig-range .bar { position: absolute; left: 0; right: 0; top: 40px; height: 16px;
+                  background: linear-gradient(90deg, rgba(255,255,255,.22), var(--accent));
+                  transform-origin: 0 50%; }
+/* LƯU Ý: `.cap` là class của DÒNG PHỤ ĐỀ ở trên (left:0;right:0;60px). Mọi
+   phần tử bên trong figure phải dùng tên riêng, nếu không sẽ thừa hưởng nhầm
+   và dính đúng lỗi hai nhãn chồng lên nhau đã gặp. */
+.fig-range .edge { position: absolute; top: 0; font-weight: 800; font-size: 40px; color: #fafafa; }
+.fig-range .edge.start { left: 0; }
+.fig-range .edge.stop { right: 0; color: #fff; }
+
+
+/* ===== Cửa sổ clip Pexels ==========================================
+   Clip là MỘT MẢNH trong bố cục, không phải cái nền. Đổ clip kín khung là
+   thành giống mọi kênh short khác — đúng thứ loạt này cố tránh.
+   Thẻ <video> phải được NƯỚNG TĨNH vào HTML bởi hyperframes_bridge.py:
+   compiler chỉ đếm media khai báo tĩnh, thẻ do script tạo ra bị bỏ qua
+   (đúng cái bẫy từng làm video ra câm). */
+/* Mặc định clip phủ kín khung và nằm DƯỚI lớp scene; mỗi style tự cắt khung,
+   che tối, dán nhãn trong `buildMediaScene`. Không có "khung chung" nào cả —
+   dán một cái khung giống nhau vào mọi style chính là kiểu chèn cho có. */
+.media-clip { position: absolute; inset: 0; width: 1080px; height: 1920px;
+              object-fit: cover; }
+/* Câu có clip KHÔNG dựng thẻ của style: đó là một loại màn khác. */
+.media-veil { position: absolute; inset: 0; }
+.media-slug { position: absolute; font-family: 'JetBrains Mono', monospace;
+              letter-spacing: .16em; }
+
+
+/* ===== Bốn cách media XUẤT HIỆN =====
+   Dùng được cho cả <img> lẫn <video>. Tất cả đều tất định: mask dựa trên
+   biến CSS (GSAP set được custom property) hoặc thuần transform; chỗ nào
+   cần ngẫu nhiên thì feTurbulence CÓ SEED.
+
+   Lưu ý vì sao KHÔNG animate `mask-size` trực tiếp: cần hai tiền tố
+   (-webkit- và chuẩn), tween hai lần dễ lệch. Một biến, hai nơi đọc. */
+
+/* 1. ink — mực thấm ra từ một điểm, cạnh rách tự nhiên */
+.media-reveal-ink {
+  --ink: 4%;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cfilter%20id%3D%22b%22%20x%3D%22-40%25%22%20y%3D%22-40%25%22%20width%3D%22180%25%22%20height%3D%22180%25%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.045%22%20numOctaves%3D%223%22%20seed%3D%227%22%20result%3D%22t%22%2F%3E%3CfeDisplacementMap%20in%3D%22SourceGraphic%22%20in2%3D%22t%22%20scale%3D%2222%22%20xChannelSelector%3D%22R%22%20yChannelSelector%3D%22G%22%2F%3E%3CfeGaussianBlur%20stdDeviation%3D%221.1%22%2F%3E%3C%2Ffilter%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2234%22%20fill%3D%22white%22%20filter%3D%22url%28%23b%29%22%2F%3E%3C%2Fsvg%3E");          mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cfilter%20id%3D%22b%22%20x%3D%22-40%25%22%20y%3D%22-40%25%22%20width%3D%22180%25%22%20height%3D%22180%25%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.045%22%20numOctaves%3D%223%22%20seed%3D%227%22%20result%3D%22t%22%2F%3E%3CfeDisplacementMap%20in%3D%22SourceGraphic%22%20in2%3D%22t%22%20scale%3D%2222%22%20xChannelSelector%3D%22R%22%20yChannelSelector%3D%22G%22%2F%3E%3CfeGaussianBlur%20stdDeviation%3D%221.1%22%2F%3E%3C%2Ffilter%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2234%22%20fill%3D%22white%22%20filter%3D%22url%28%23b%29%22%2F%3E%3C%2Fsvg%3E");
+  -webkit-mask-repeat: no-repeat;            mask-repeat: no-repeat;
+  -webkit-mask-position: 47% 41%;            mask-position: 47% 41%;
+  -webkit-mask-size: var(--ink) var(--ink);  mask-size: var(--ink) var(--ink);
+}
+
+/* 2. wipe — một dải mềm quét xuống, như kéo tấm lụa */
+.media-reveal-wipe {
+  --wipe: 0%;
+  -webkit-mask-image: linear-gradient(180deg, #000 calc(var(--wipe) - 22%), transparent var(--wipe));
+          mask-image: linear-gradient(180deg, #000 calc(var(--wipe) - 22%), transparent var(--wipe));
+}
+
+/* 3. iris — vòng tròn mềm mở ra từ giữa */
+.media-reveal-iris {
+  --iris: 0%;
+  -webkit-mask-image: radial-gradient(circle at 50% 44%, #000 calc(var(--iris) - 16%), transparent var(--iris));
+          mask-image: radial-gradient(circle at 50% 44%, #000 calc(var(--iris) - 16%), transparent var(--iris));
+}
+
+/* 4. rise — dải mềm quét NGƯỢC từ dưới lên, đối cực của wipe.
+   KHÔNG làm reveal bằng `filter` (blur) hay `scale`: `filter` đang chở
+   house grade, `scale` đang chở Ken Burns. Animate chồng lên chúng là xoá
+   bảng màu hoặc tranh thuộc tính với tween khác. */
+.media-reveal-rise {
+  --rise: 0%;
+  -webkit-mask-image: linear-gradient(0deg, #000 calc(var(--rise) - 22%), transparent var(--rise));
+          mask-image: linear-gradient(0deg, #000 calc(var(--rise) - 22%), transparent var(--rise));
+}
+
+/* ---- lớp điện ảnh (chỉ kênh BUD) ------------------------------------------
+   Thứ phân biệt "ảnh đẹp có chữ" với "một khuôn hình" phần lớn không nằm ở
+   ảnh, mà ở lớp phủ chung: hạt phim và quầng sáng. Một lớp cho CẢ video, không
+   phải riêng màn ảnh -- vá từng chỗ thì mỗi màn một chất, mất luôn cảm giác
+   cùng một cuộn phim.
+
+   Nhãn kiểu "HÌNH MINH HOẠ" đã bỏ khỏi năm style BUD: đó là ngôn ngữ phóng sự.
+   Kênh hình sự thì GIỮ -- ở đó nhãn còn là lời cảnh báo ảnh chỉ mang tính
+   minh hoạ cho một vụ án có thật. */
+#cine { position: absolute; inset: 0; pointer-events: none; z-index: 40; }
+#cine .cine-grain {
+  position: absolute; inset: -95px;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27190%27%20height%3D%27190%27%3E%3Cfilter%20id%3D%27g%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%270.78%27%20numOctaves%3D%273%27%20seed%3D%2711%27%20stitchTiles%3D%27stitch%27%2F%3E%3CfeColorMatrix%20type%3D%27saturate%27%20values%3D%270%27%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%27190%27%20height%3D%27190%27%20filter%3D%27url%28%23g%29%27%20opacity%3D%270.55%27%2F%3E%3C%2Fsvg%3E");
+  background-size: 190px 190px;
+  /* overlay nhân với độ sáng nền (2*b*s), nên trên nền tối nó gần như không
+     làm gì -- .075 đo ra chênh lệch cỡ 1/60 mức xám, mắt không thấy. Hạt phim
+     phải đủ để CẢM được ở vùng trung gian mới ra chất phim. */
+  opacity: .26; mix-blend-mode: overlay;
+}
+#cine .cine-bloom {
+  position: absolute; inset: 0; mix-blend-mode: screen;
+  background: radial-gradient(ellipse 52% 32% at 50% 38%,
+              rgba(255,242,216,.085) 0%, rgba(255,242,216,0) 72%);
+}
+
+/* ===== Kênh Phong Thuỷ: kiến thức, nhịp vừa -- GIỮ bám theo giọng đọc ====
+   Khác BUD (tắt karaoke vì nhịp chiêm nghiệm), bài phong thuỷ là tra cứu:
+   mắt cần bám theo tên Can Chi, tên quẻ đang được đọc. Từ đang đọc sáng vàng
+   kim, không nhảy màu gắt. */
+#capzone.skin-gold .cap { font-weight: 600; font-size: 56px; line-height: 1.42;
+    color: #efe6d0; text-shadow: 0 6px 28px rgba(0,0,0,.9); }
+#capzone.skin-gold .w { color: #efe6d0; }
+#capzone.skin-gold .w .on { color: #f6d27a; text-shadow: 0 0 26px rgba(214,170,74,.55), 0 6px 26px rgba(0,0,0,.9); }
+#capzone.skin-gold .w.hot { text-decoration: none; color: #f3cf73; font-weight: 800; }
+
+/* Sơ đồ tra cứu (ngũ hành, bát quái) KHÔNG được phủ kín khung như ảnh chụp:
+   ảnh vuông phủ khung dọc sẽ cắt mất hai nút hai bên. Hiện nguyên hình, căn
+   đúng tâm ô cửa của style (la bàn, vòm) -- cả hai đều tâm (540, 720). */
+.media-clip.media-diagram { inset: auto; left: 190px; top: 370px; width: 700px; height: 700px;
+                            object-fit: contain; }

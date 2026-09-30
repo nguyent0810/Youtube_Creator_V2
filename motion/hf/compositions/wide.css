@@ -1,0 +1,15 @@
+/* Khổ NGANG 16:9 cho video dài -- nạp SAU base.css, chỉ ghi đè kích thước.
+   base.css viết cho 1080x1920; mọi style *_wide.html dùng file này. */
+html, body { width: 1920px; height: 1080px; }
+.media-clip { width: 1920px; height: 1080px; }
+/* Phụ đề: đáy khung, hẹp hơn chiều ngang để mắt không phải quét cả 1920px */
+#capzone { left: 300px; right: 300px; bottom: 64px; }
+.cap { font-size: 46px; line-height: 1.34; }
+#capzone.skin-ink .cap, #capzone.skin-gold .cap, #capzone.skin-still .cap { font-size: 44px; line-height: 1.38; }
+#kicker-row { top: 54px; left: 64px; }
+#kicker { font-size: 26px; }
+#kicker-row .bar { height: 36px; width: 8px; }
+#badge { top: 100px; left: 96px; font-size: 20px; }
+#footer { bottom: 18px; font-size: 18px; }
+/* Sơ đồ tra cứu: giữa ô cửa của style ngang (tâm 960, 450) */
+.media-clip.media-diagram { left: 640px; top: 130px; width: 640px; height: 640px; }

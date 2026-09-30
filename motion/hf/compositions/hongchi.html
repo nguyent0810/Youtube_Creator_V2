@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="vi" data-resolution="portrait" data-composition-variables='[
+  {"id":"accent","type":"color","label":"Accent","default":"#d4a93a"},
+  {"id":"kicker","type":"string","label":"Kicker","default":"PHONG THỦY"},
+  {"id":"badge","type":"string","label":"Badge","default":""},
+  {"id":"footer","type":"string","label":"Footer","default":""},
+  {"id":"duration","type":"number","label":"Duration","default":30},
+  {"id":"narration","type":"string","label":"Narration","default":""},
+  {"id":"bgm","type":"string","label":"BGM","default":""},
+  {"id":"bgm_gain","type":"number","label":"BGM gain","default":0.16},
+  {"id":"lines","type":"string","label":"Lines JSON","default":"[]"}
+]'>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./base.css" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+  /* ===== HỒNG CHỈ: sơn mài đỏ, viền cắt giấy vàng =====
+     Màu của giấy đỏ ngày Tết, của câu đối, bao lì xì -- ngôn ngữ thị giác
+     người Việt gắn với con giáp, tuổi, năm mới. Viền vàng là khung cắt giấy
+     hình học (ô lưới, hình thoi), không phải hoa văn vẽ tay. */
+  #capzone { bottom: 250px; }
+  .progress { height: 4px; background: #f0c14b; opacity: .8; }
+  #bed { background: radial-gradient(120% 85% at 50% 35%, #8e1c15 0%, #6a120d 45%, #3a0805 100%); }
+  .grain { opacity: .16; mix-blend-mode: multiply; }
+  #kicker { color: #f6dca0; } #footer { color: #c78f7e; }
+  #kicker-row .bar { background: #f0c14b; box-shadow: 0 0 26px rgba(240,193,75,.6); }
+  #frame { position: absolute; left: 44px; right: 44px; top: 70px; bottom: 70px;
+           border: 3px solid #d9a441; opacity: .75; }
+  #frame::before { content: ""; position: absolute; inset: 14px; border: 1px solid #d9a441; opacity: .7; }
+  .corner { position: absolute; width: 74px; height: 74px; border: 3px solid #d9a441;
+            transform: rotate(45deg); background: #6a120d; }
+  .corner::after { content: ""; position: absolute; inset: 14px; border: 2px solid #d9a441; }
+  #medal { position: absolute; left: 190px; top: 390px; width: 700px; height: 700px; border-radius: 50%;
+           border: 2px solid rgba(217,164,65,.35); box-shadow: inset 0 0 0 26px rgba(217,164,65,.05); }
+  .hc-wrap { position: absolute; left: 120px; right: 120px; top: 560px; height: 600px;
+             display: flex; flex-direction: column; justify-content: center; text-align: center; }
+  .hc-key { font-weight: 800; font-size: 96px; line-height: 1.12; color: #fbe7bd;
+            text-shadow: 0 4px 0 #3a0805, 0 24px 60px rgba(0,0,0,.55); }
+  .hc-key.long { font-size: 74px; } .hc-key.xlong { font-size: 58px; }
+  .hc-seal { margin: 30px auto 0; width: 64px; height: 64px; border: 3px solid #f0c14b;
+             transform: rotate(45deg); }
+  /* Màn ảnh: khung vòm như ô cửa đình, viền vàng; ngoài vòm là nền đỏ. */
+  .mv-arch { position: absolute; left: 150px; right: 150px; top: 300px; height: 840px;
+             border-radius: 390px 390px 18px 18px; pointer-events: none;
+             box-shadow: 0 0 0 9999px #5e100b, inset 0 0 70px rgba(58,8,5,.8); }
+  .mv-archline { position: absolute; left: 134px; right: 134px; top: 284px; height: 872px;
+                 border-radius: 406px 406px 26px 26px; border: 3px solid #d9a441;
+                 pointer-events: none; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920" data-fps="30">
+  <div class="bedrock" id="bed"></div>
+  <svg class="bedrock grain" width="1080" height="1920"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" seed="9"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+  <div id="medal"></div>
+  <div id="frame"></div>
+  <div class="corner" style="left:26px;top:52px"></div><div class="corner" style="right:26px;top:52px"></div>
+  <div class="corner" style="left:26px;bottom:52px"></div><div class="corner" style="right:26px;bottom:52px"></div>
+  <div class="bedrock vignette"></div>
+  <div id="stage"></div>
+  <div id="capzone" class="skin-glow"></div>
+  <div id="kicker-row"><div class="bar"></div><div id="kicker"></div></div>
+  <div id="badge"></div>
+  <div id="footer"></div>
+  <div class="progress" id="progress"></div>
+</div>
+<script src="./engine.js"></script>
+<script>
+window.HF_STYLE = {
+  buildScene(inner, ln, i, n) {
+    const w = HF.el("div", "hc-wrap card-box");
+    const key = HF.el("div", "hc-key", (ln.key_parts || []).map(p => p.t).join(" "));
+    const L = key.textContent.length;
+    if (L > 28) key.classList.add("xlong"); else if (L > 15) key.classList.add("long");
+    w.appendChild(key);
+    w.appendChild(HF.el("div", "hc-seal"));
+    inner.appendChild(w);
+  },
+  enter(tl, inner, ln) {
+    tl.fromTo(inner.querySelector(".hc-key"), { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: .7, ease: "back.out(1.4)" }, ln.start);
+    tl.fromTo(inner.querySelector(".hc-seal"), { opacity: 0, scale: .4, rotation: 0 },
+      { opacity: 1, scale: 1, rotation: 45, duration: .7, ease: "back.out(2)" }, ln.start + .3);
+  },
+  transition(tl, oldS, newS, T) {
+    tl.to(oldS, { opacity: 0, y: -20, duration: .5, ease: "power1.in" }, T);
+    tl.fromTo(newS, { opacity: 0 }, { opacity: 1, duration: .55 }, T + .2);
+  },
+  ambient(tl, DUR) {
+    tl.fromTo("#progress", { width: 0 }, { width: 1080, duration: DUR, ease: "none" }, 0);
+    tl.fromTo("#kicker-row", { opacity: 0 }, { opacity: 1, duration: 1.0 }, 0);
+    tl.fromTo("#frame", { opacity: 0, scale: 1.02 }, { opacity: .75, scale: 1, duration: 1.2, ease: "power2.out" }, 0);
+    tl.fromTo(".corner", { opacity: 0, scale: .5 }, { opacity: 1, scale: 1, duration: .8, stagger: .08, ease: "back.out(1.6)" }, .2);
+    tl.fromTo("#medal", { rotation: 0, opacity: .5 }, { rotation: 30, opacity: .9, duration: DUR, ease: "none" }, 0);
+  },
+  buildMediaScene(inner, ln) {
+    inner.appendChild(HF.el("div", "mv-arch"));
+    inner.appendChild(HF.el("div", "mv-archline"));
+  },
+  enterMedia(tl, inner, ln) {
+    tl.fromTo(inner.querySelector(".mv-archline"), { opacity: 0, scale: .98 },
+      { opacity: 1, scale: 1, duration: .9, ease: "power2.out" }, ln.start);
+  },
+};
+HF.build();
+</script>
+</body>
+</html>

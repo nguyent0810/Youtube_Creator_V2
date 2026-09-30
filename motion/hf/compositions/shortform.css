@@ -1,0 +1,46 @@
+/* ===== SHORT DỌC: mượn cảnh của kho video dài (longform.js) =====
+   Nạp SAU longform.css, chỉ ở style short (1080x1920). Kho vốn đo theo khung
+   ngang 1920x1080; ở đây đặt lại vị trí/cỡ cho các cảnh short dùng được:
+   word (chữ theo nghĩa), quote, illus, stat, list. Vùng an toàn: dưới dòng
+   kicker (~260px) và trên phụ đề (~bottom 420px). */
+:root { --lf-panel: rgba(22, 18, 14, .86); --lf-edge: rgba(212, 169, 58, .30); }
+
+/* Chữ theo nghĩa */
+.lf-word-stage { padding: 0 60px 420px; }
+.lf-bigword { font-size: 150px; max-width: 960px; }
+.lf-bigword.long { font-size: 116px; } .lf-bigword.xlong { font-size: 88px; }
+.lf-rays { top: 40%; }
+
+/* Trích dẫn */
+.lf-q-card { top: 860px; width: 960px; margin-left: -480px; }
+.lf-q-page .lf-q-card { padding: 56px 60px 48px; }
+.lf-q-page .lf-q-text { font-size: 62px; }
+.lf-q-kinetic .lf-q-text { font-size: 84px; }
+.lf-q-glass .lf-q-card { padding: 52px 56px; }
+.lf-q-glass .lf-q-text { font-size: 64px; }
+.lf-q-src { font-size: 26px; }
+
+/* Con số lớn */
+.lf-stat .ring, .lf-stat .num { left: 240px; top: 470px; width: 600px; height: 600px; }
+.lf-stat .num { font-size: 170px; }
+.lf-stat .lab { top: 1130px; left: 60px; right: 60px; font-size: 32px; }
+
+/* Danh sách (tối đa 4 mục) */
+.lf-list { left: 60px; right: 60px; top: 520px; }
+.lf-item { padding: 22px 30px; gap: 26px; }
+.lf-item .no { width: 76px; height: 76px; font-size: 40px; }
+.lf-item .tx { font-size: 46px; }
+
+/* Minh hoạ: svg 1920x1080 phủ kín khung dọc (preserveAspectRatio slice, xem longform.js) */
+.lf-illus-svg { width: 1080px; height: 1920px; top: -260px; }  /* chủ thể lên giữa khung, chừa phụ đề */
+
+/* Tiêu đề sơ đồ (list): kho đặt inline theo toạ độ khung ngang -> đè lại. Short cần
+   tiêu đề LỚN vì nó lấp khoảng trước khi mục đầu tiên được đọc. */
+.lf-stage > .lf-title { left: 60px !important; right: 60px; top: 330px !important; text-align: center;
+  font-family: 'Be Vietnam Pro', sans-serif; font-size: 66px; font-weight: 800; letter-spacing: .02em;
+  line-height: 1.1; color: var(--lf-fg); }
+
+/* Nét minh hoạ (vạch đường, núi) chạy xuống vùng phụ đề -> xuyên qua chữ. Mờ dần
+   phần dưới của svg trước khi tới phụ đề (svg cao 1920, dịch lên 260px). */
+.lf-illus-svg { -webkit-mask-image: linear-gradient(to bottom, #000 64%, transparent 76%);
+  mask-image: linear-gradient(to bottom, #000 64%, transparent 76%); }

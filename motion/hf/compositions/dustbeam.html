@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="vi" data-resolution="portrait" data-composition-variables='[
+  {"id":"accent","type":"color","label":"Accent","default":"#e0b872"},
+  {"id":"kicker","type":"string","label":"Kicker","default":"SUY NGẪM"},
+  {"id":"badge","type":"string","label":"Badge","default":""},
+  {"id":"footer","type":"string","label":"Footer","default":""},
+  {"id":"duration","type":"number","label":"Duration","default":30},
+  {"id":"narration","type":"string","label":"Narration","default":""},
+  {"id":"bgm","type":"string","label":"BGM","default":""},
+  {"id":"bgm_gain","type":"number","label":"BGM gain","default":0.16},
+  {"id":"lines","type":"string","label":"Lines JSON","default":"[]"}
+]'>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./base.css" />
+<link rel="stylesheet" href="./longform.css" />
+<link rel="stylesheet" href="./shortform.css" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+  /* Chung cho mọi trường phái BUD: thanh tiến trình gần như vô hình, chữ
+     phụ đề đặt cao hơn để khung dưới rộng rãi. */
+  .progress { height: 3px; opacity: .35; box-shadow: none; }
+  #capzone { bottom: 250px; }
+
+  /* ===== BỤI THỜI GIAN: một vệt sáng xiên, bụi trôi trong đó ===== */
+  #bed { background: #07060a; }
+  #beam { background: linear-gradient(104deg, rgba(0,0,0,0) 36%, rgba(224,184,114,.16) 46%,
+          rgba(224,184,114,.05) 58%, rgba(0,0,0,0) 66%); filter: blur(3px); }
+  .grain { opacity: .2; }
+  .mote { position: absolute; width: 6px; height: 6px; border-radius: 50%;
+          background: rgba(240,220,180,.75); filter: blur(1px); }
+  #kicker { color: #e2cfa8; } #footer { color: #6a5c46; }
+  .progress { background: var(--accent); }
+  .db-wrap { position: absolute; left: 110px; right: 110px; top: 560px; height: 600px;
+             display: flex; flex-direction: column; justify-content: center; }
+  .db-key { font-weight: 600; font-size: 92px; line-height: 1.16; color: #f4e9d5;
+            letter-spacing: -.02em; text-shadow: 0 26px 64px rgba(0,0,0,.8); }
+  .db-key.long { font-size: 72px; } .db-key.xlong { font-size: 57px; }
+  .mv-grade { background: linear-gradient(180deg, rgba(7,6,10,.8) 0%, rgba(7,6,10,.26) 26%,
+              rgba(7,6,10,.58) 62%, rgba(7,6,10,.92) 100%); }
+  /* Style này là một cột sáng trong bóng tối. Ảnh tràn kín khung, sáng đều,
+     là phá đúng cái làm nên nó. Màn khói này khoét một vùng sáng hình bầu dục
+     ở giữa và nuốt mép vào đen -- ảnh trông như được chùm sáng rọi tới. */
+  .mv-veil { position: absolute; inset: 0; pointer-events: none;
+             background: radial-gradient(ellipse 56% 32% at 50% 38%,
+                         rgba(7,6,10,0) 0%, rgba(7,6,10,.5) 58%, rgba(7,6,10,.94) 100%); }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920" data-fps="30">
+  <div class="bedrock" id="bed"></div>
+  <div class="bedrock" id="beam"></div>
+  <div class="bedrock" id="motes"></div>
+  <svg class="bedrock grain" width="1080" height="1920"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+  <div class="bedrock vignette"></div>
+  <div id="stage"></div>
+  <div id="capzone" class="skin-still"></div>
+  <div id="kicker-row"><div class="bar"></div><div id="kicker"></div></div>
+  <div id="badge"></div>
+  <div id="footer"></div>
+  <div class="progress" id="progress"></div>
+</div>
+<script src="./engine.js"></script>
+<script src="./longform.js"></script>
+<script>
+window.HF_STYLE = {
+  buildScene(inner, ln, i, n) {
+    const w = HF.el("div", "db-wrap card-box");
+    const key = HF.el("div", "db-key", (ln.key_parts || []).map(p => p.t).join(" "));
+    const L = key.textContent.length;
+    if (L > 28) key.classList.add("xlong"); else if (L > 15) key.classList.add("long");
+    w.appendChild(key);
+    inner.appendChild(w);
+  },
+  enter(tl, inner, ln) {
+    tl.fromTo(inner.querySelector(".db-key"), { opacity: 0, y: 24 },
+      { opacity: 1, y: 0, duration: 1.15, ease: "sine.out" }, ln.start);
+  },
+  transition(tl, oldS, newS, T) {
+    tl.to(oldS, { opacity: 0, y: -14, duration: .8, ease: "sine.inOut" }, T);
+    tl.fromTo(newS, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: .95, ease: "sine.out" }, T + .25);
+  },
+  ambient(tl, DUR, { rand }) {
+    tl.fromTo("#progress", { width: 0 }, { width: 1080, duration: DUR, ease: "none" }, 0);
+    tl.fromTo("#kicker-row", { opacity: 0 }, { opacity: 1, duration: 1.4 }, 0);
+    tl.fromTo("#badge", { opacity: 0 }, { opacity: .9, duration: 1.4 }, .4);
+    tl.fromTo("#beam", { opacity: .7, x: -30 }, { opacity: 1, x: 20, duration: DUR, ease: "sine.inOut" }, 0);
+    const box = document.getElementById("motes");
+    for (let k = 0; k < 26; k++) {
+      const m = HF.el("div", "mote");
+      m.style.left = (260 + rand() * 560) + "px";
+      m.style.top = (200 + rand() * 1400) + "px";
+      box.appendChild(m);
+      tl.fromTo(m, { opacity: 0 }, { opacity: .25 + rand() * .45, duration: 2 }, rand() * 3);
+      tl.fromTo(m, { y: 0, x: 0 }, { y: -70 - rand() * 140, x: (rand() - .5) * 70,
+        duration: DUR, ease: "none" }, 0);
+    }
+  },
+  buildMediaScene(inner, ln) {
+    inner.appendChild(HF.el("div", "mv-veil"));
+    inner.appendChild(HF.el("div", "mv-grade"));
+  },
+  enterMedia(tl, inner, ln) {
+    // Màn khói có SẴN, không fade: fade từ 0 nghĩa là ảnh loé ra sáng kín
+    // khung một nhịp rồi mới bị nuốt mép -- đúng lỗi đã gặp ở inkwash.
+    tl.fromTo(inner.querySelector(".mv-grade"), { opacity: 0 }, { opacity: 1, duration: 1.0 }, ln.start);
+  },
+};
+HF.build();
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+# Asset tạm do hyperframes_bridge.py copy vào (wav TTS + bgm của từng lần render)
+assets/
+# File composition/biến sinh ra theo từng lần render, xoá ngay sau khi render xong
+.render_*.html
+.vars_*.json
+renders/
+node_modules/

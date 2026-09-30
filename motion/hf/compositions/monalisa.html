@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="vi" data-resolution="portrait">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,600;0,800;0,900;1,600&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script src="assets/monalisa/data.js"></script>
+<!--
+  S-TIER · "Mona Lisa nổi tiếng vì bị trộm" — kênh Hình Sự.
+  Ngôn ngữ hình: HỒ SƠ LƯU TRỮ CẮT DÁN (xu hướng 2026: collage chất liệu, chữ
+  động làm hình chính, ngữ pháp phim tài liệu tiết chế). Một màu nhấn: đỏ son.
+  Toàn bộ tư liệu là ẢNH THẬT thuộc phạm vi công cộng (Wikimedia Commons) —
+  không ảnh AI. Mọi hiệu ứng bám mốc TỪNG TỪ của giọng đọc (data.js, hf_align).
+  Tất định: không Math.random, không Date, không fetch — render lại y hệt.
+-->
+<style>
+  :root { --red:#e2402d; --gold:#d8b25c; --paper:#efe4cb; --ink:#1b1714; --dim:#8c8378; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:1080px; height:1920px; overflow:hidden; background:#060505; }
+  #root { position:relative; width:1080px; height:1920px; overflow:hidden; color:#f4efe6;
+          font-family:'Be Vietnam Pro', system-ui, sans-serif; }
+  .layer { position:absolute; inset:0; }
+  .scene { position:absolute; inset:0; overflow:hidden; opacity:0; visibility:hidden; }
+  .serif { font-family:'Playfair Display', Georgia, serif; }
+  .mono  { font-family:'JetBrains Mono', monospace; }
+
+  /* ---------- nền + không khí ---------- */
+  #bed { background: radial-gradient(120% 70% at 50% 18%, #1c1714 0%, #0b0908 55%, #050404 100%); }
+  #grain { opacity:.10; mix-blend-mode:overlay; }
+  #vig { background: radial-gradient(115% 85% at 50% 45%, transparent 55%, rgba(0,0,0,.72) 100%); }
+  #leak { background: radial-gradient(40% 30% at 50% 50%, rgba(255,190,110,.55), transparent 70%);
+          mix-blend-mode:screen; opacity:0; }
+  #flash { background:#fff; opacity:0; }
+  .mote { position:absolute; width:6px; height:6px; border-radius:50%; background:rgba(255,228,180,.55); filter:blur(1.5px); }
+
+  /* ---------- khung tranh (mở + kết, lặp vòng) ---------- */
+  #framebox { position:absolute; left:50%; top:210px; width:716px; height:1020px; margin-left:-358px;
+              transform-origin:50% 45%; }
+  #frame { position:absolute; inset:0; padding:48px;
+           background: linear-gradient(135deg,#6f521c 0%,#e9c979 18%,#9a7630 36%,#f5dc92 52%,#8a6726 70%,#e3c070 86%,#5e4515 100%);
+           box-shadow: 0 60px 140px rgba(0,0,0,.8), inset 0 0 0 6px rgba(60,40,10,.55), inset 0 0 0 14px rgba(255,236,170,.25); }
+  #frame::after { content:''; position:absolute; inset:34px; border:3px solid rgba(70,48,12,.7); pointer-events:none; }
+  #hole { position:absolute; left:48px; top:48px; width:620px; height:924px; background:#231e1a; overflow:hidden;
+          box-shadow: inset 0 0 70px rgba(0,0,0,.9); }
+  .slice { position:absolute; left:0; width:620px; background-image:url(assets/monalisa/monalisa.jpg);
+           background-size:620px 924px; }
+  #hline { position:absolute; left:20px; right:20px; top:1262px; text-align:center; white-space:nowrap; }
+  #hline .hw { display:inline-block; font-family:'Playfair Display', serif; font-weight:900; font-size:66px;
+               letter-spacing:0; line-height:1.05; margin:0 .1em; opacity:0; }
+  #strike { position:absolute; left:50px; right:50px; top:1294px; height:9px; background:var(--red);
+            transform:scaleX(0); transform-origin:0 50%; border-radius:4px; box-shadow:0 0 18px rgba(226,64,45,.6); }
+  #tape { position:absolute; left:50%; top:1372px; transform:translateX(-50%) rotate(-3.5deg); padding:18px 42px 20px;
+          background:rgba(239,228,203,.94); color:#221c16; font-family:'Playfair Display',serif; font-style:italic; font-weight:700;
+          font-size:52px; box-shadow:0 18px 40px rgba(0,0,0,.55); opacity:0; white-space:nowrap; }
+  #tape::before, #tape::after { content:''; position:absolute; top:-16px; width:110px; height:40px; background:rgba(215,205,180,.75); }
+  #tape::before { left:-30px; transform:rotate(-12deg); } #tape::after { right:-30px; transform:rotate(9deg); }
+  #slam { position:absolute; left:0; right:0; top:600px; text-align:center; font-weight:900; font-size:150px; letter-spacing:-.02em; white-space:nowrap;
+          color:var(--red); text-shadow:0 0 60px rgba(226,64,45,.55), 0 20px 60px rgba(0,0,0,.8); opacity:0; }
+
+  /* ---------- S2 Louvre 1911 ---------- */
+  #sc2 .bgimg { position:absolute; left:-120px; top:0; width:1500px; height:1920px; object-fit:cover;
+                filter: sepia(.6) contrast(1.12) brightness(.42) saturate(.8); }
+  #sc2 .shade { background: linear-gradient(180deg, rgba(5,4,4,.2) 0%, rgba(5,4,4,.1) 35%, rgba(5,4,4,.85) 78%); }
+  #day { position:absolute; left:0; right:0; top:560px; text-align:center; font-size:46px; letter-spacing:.42em; color:var(--paper); }
+  #date { position:absolute; left:0; right:0; top:640px; display:flex; justify-content:center; gap:6px; }
+  .dg { width:104px; height:176px; overflow:hidden; position:relative; background:rgba(12,10,9,.55);
+        border:2px solid rgba(239,228,203,.18); border-radius:10px; }
+  .dg .reel { position:absolute; left:0; top:0; width:100%; }
+  .dg .reel div { height:176px; line-height:176px; text-align:center; font-family:'Playfair Display',serif; font-weight:900; font-size:140px; color:#fff; }
+  .dsep { width:34px; font-family:'Playfair Display',serif; font-size:120px; line-height:176px; color:var(--red); text-align:center; }
+  #louvre { position:absolute; left:0; right:0; top:900px; text-align:center; font-size:30px; letter-spacing:.22em; white-space:nowrap; color:var(--dim); opacity:0; }
+  .stamp { position:absolute; padding:14px 40px; border:12px solid var(--red); color:var(--red); font-weight:900;
+           font-size:112px; letter-spacing:.04em; border-radius:18px; opacity:0; mix-blend-mode:screen;
+           text-shadow:0 0 2px rgba(226,64,45,.9); }
+  #stampClose { left:170px; top:1040px; transform:rotate(-9deg); }
+
+  /* ---------- S3 báo Excelsior 1913 ---------- */
+  #paperwrap { position:absolute; inset:0; background:#16120e; }
+  #paper { position:absolute; left:0; top:0; width:1886px; height:2750px; transform-origin:0 0;
+           filter: sepia(.25) contrast(1.05) brightness(.95); box-shadow:0 0 120px rgba(0,0,0,.9); }
+  #paper img { width:100%; height:100%; display:block; }
+  .tagline { position:absolute; left:70px; right:70px; padding:22px 30px; background:rgba(8,7,6,.86);
+             border-left:10px solid var(--red); font-size:40px; font-weight:800; letter-spacing:.02em; opacity:0; }
+  #suspect { top:250px; }
+  #suspect .redact { display:inline-block; width:430px; height:40px; background:#000; vertical-align:-6px;
+                     box-shadow:0 0 0 3px rgba(255,255,255,.08); }
+  .credit { position:absolute; left:70px; font-size:24px; letter-spacing:.16em; color:rgba(239,228,203,.85); opacity:0;
+            padding:10px 18px; background:rgba(0,0,0,.72); border-left:6px solid var(--red); white-space:nowrap; }
+  #credit3 { top:1360px; }
+
+  /* ---------- S4 đồng hồ · S5 lịch · S6 hồ sơ ---------- */
+  #clockday { position:absolute; left:0; right:0; top:380px; text-align:center; font-size:64px; font-weight:900; letter-spacing:.2em; }
+  #clockday span { display:inline-block; }
+  #plusday { position:absolute; left:0; right:0; top:1150px; text-align:center; font-size:92px; font-weight:900; color:var(--red); opacity:0; }
+  #cal { position:absolute; left:64px; right:64px; top:720px; display:flex; gap:14px; }
+  .cell { flex:1; height:230px; border-radius:14px; background:rgba(239,228,203,.07); border:2px solid rgba(239,228,203,.22);
+          position:relative; opacity:0; }
+  .cell b { position:absolute; left:0; right:0; top:40px; text-align:center; font-family:'Playfair Display',serif; font-size:84px; }
+  .cell i { position:absolute; left:0; right:0; bottom:26px; text-align:center; font-style:normal; font-size:22px; letter-spacing:.2em; color:var(--dim); }
+  .cell svg { position:absolute; inset:0; }
+  #calt { position:absolute; left:0; right:0; top:520px; text-align:center; font-size:66px; font-weight:900; letter-spacing:.02em; opacity:0; }
+  #calt em { font-style:normal; color:var(--red); }
+  #card { position:absolute; left:110px; top:520px; width:860px; height:640px; background:var(--paper); color:var(--ink);
+          border-radius:6px; padding:64px 70px; box-shadow:0 60px 140px rgba(0,0,0,.85);
+          transform-origin:50% 100%; }
+  #card .k { font-size:28px; letter-spacing:.3em; color:#6e6355; }
+  #card .n { margin-top:44px; font-family:'Playfair Display',serif; font-weight:900; font-size:112px; line-height:1; }
+  #card .d { margin-top:28px; font-size:36px; color:#4a4137; }
+  #card .line { margin-top:44px; height:3px; background:repeating-linear-gradient(90deg,#8d8170 0 16px,transparent 16px 26px); }
+  #card .clip { position:absolute; top:-46px; right:120px; width:70px; height:170px; border:9px solid #a9a39a; border-radius:40px; }
+  #stampAsk { left:360px; top:930px; transform:rotate(-11deg); font-size:92px; mix-blend-mode:multiply; }
+
+  /* ---------- S7 đám đông · S8 bức tường ---------- */
+  #wall7 { background: radial-gradient(60% 34% at 50% 30%, #7a6446 0%, #3a2e22 45%, #120e0b 80%); }
+  #floor7 { background: linear-gradient(180deg, transparent 0%, transparent 42%, rgba(0,0,0,.55) 60%, #050404 100%); }
+  .fig { position:absolute; width:46px; height:120px; transform-origin:50% 100%; opacity:0; }
+  .fig::before { content:''; position:absolute; left:11px; top:0; width:24px; height:27px; border-radius:50%; background:var(--c); }
+  .fig::after  { content:''; position:absolute; left:0; top:28px; width:46px; height:92px; border-radius:24px 24px 4px 4px; background:var(--c); }
+  #minif { position:absolute; left:455px; top:420px; width:170px; height:232px; border:16px solid var(--gold);
+           background:#1d1814; box-shadow:0 0 80px rgba(255,210,130,.45), inset 0 0 30px rgba(0,0,0,.8); opacity:0; }
+  #wallwrap { position:absolute; left:0; top:200px; width:1080px; height:1497px; transform-origin:47% 36%; }
+  #wallwrap img { width:1080px; height:1497px; display:block; filter: contrast(1.15) brightness(.9); }
+  #pegs { position:absolute; left:0; top:200px; width:1080px; height:1497px; transform-origin:47% 36%; }
+  #pegtxt { position:absolute; left:50%; top:1080px; transform:translateX(-50%); padding:14px 26px; background:rgba(0,0,0,.78);
+            font-size:28px; letter-spacing:.2em; color:#fff; white-space:nowrap; opacity:0; }
+  #credit8 { top:1330px; }
+
+  /* ---------- S9 cái rương · S10 bản đồ · S11 nhà tù ---------- */
+  #count { position:absolute; left:0; right:0; top:330px; text-align:center; font-family:'Playfair Display',serif; font-weight:900;
+           font-size:300px; line-height:1; color:#fff; }
+  #countlbl { position:absolute; left:0; right:0; top:650px; text-align:center; font-size:52px; font-weight:900; letter-spacing:.3em; color:var(--red); }
+  #trunk { position:absolute; left:240px; top:840px; width:600px; height:420px; }
+  #trunkcap { position:absolute; left:0; right:0; top:1300px; text-align:center; font-size:30px; letter-spacing:.3em; color:var(--dim); opacity:0; }
+  #map { position:absolute; inset:0; }
+  .ctry { fill:none; stroke:#5f574d; stroke-width:2; }
+  .ctry.focus { fill:rgba(239,228,203,.06); stroke:#e9ddc4; stroke-width:3.5; }
+  .clbl { font-family:'Be Vietnam Pro'; font-weight:800; font-size:40px; letter-spacing:.3em; fill:rgba(239,228,203,.35); }
+  .pinlbl { font-family:'JetBrains Mono'; font-weight:700; font-size:34px; letter-spacing:.14em; fill:#fff; }
+  #mug { position:absolute; left:70px; top:860px; width:470px; padding:22px 22px 90px; background:#f3ecdc;
+         box-shadow:0 50px 120px rgba(0,0,0,.85); transform-origin:50% 50%; opacity:0; }
+  #mug img { width:426px; height:468px; object-fit:cover; object-position:50% 30%; display:block; filter:grayscale(1) contrast(1.1); }
+  #mug .nm { position:absolute; left:22px; right:22px; bottom:24px; height:46px; font-size:30px; font-weight:900; color:#1b1714;
+             letter-spacing:.06em; white-space:nowrap; overflow:hidden; }
+  #mug .nm .bar { position:absolute; left:0; top:4px; width:100%; height:38px; background:#000; transform-origin:100% 50%; }
+  #stampArrest { left:590px; top:1230px; transform:rotate(-8deg); font-size:100px; }
+  #bars { position:absolute; left:70px; top:860px; width:470px; height:580px; overflow:hidden; }
+  .bar2 { position:absolute; top:0; width:22px; height:580px; background:linear-gradient(90deg,#3b3632,#9a938a 45%,#2c2825);
+          box-shadow:0 0 18px rgba(0,0,0,.8); transform:translateY(-600px); }
+  #seven { position:absolute; right:70px; top:430px; text-align:right; font-family:'Playfair Display',serif; font-weight:900; font-size:210px; line-height:.95; opacity:0; }
+  #seven small { display:block; font-family:'Be Vietnam Pro'; font-size:54px; letter-spacing:.2em; color:var(--red); margin-top:10px; }
+
+  /* ---------- S12 câu hỏi ---------- */
+  #ask { position:absolute; left:0; right:0; top:820px; text-align:center; font-family:'Playfair Display',serif; font-style:italic;
+         font-weight:700; font-size:96px; opacity:0; }
+
+  /* ---------- khung chung: nhãn hồ sơ + phụ đề ---------- */
+  #kicker { position:absolute; left:64px; top:96px; display:flex; align-items:center; gap:20px; z-index:50; }
+  #kicker .bar { width:12px; height:46px; background:var(--red); }
+  #kicker .t { font-size:30px; font-weight:800; letter-spacing:.24em; }
+  #kicker .t small { display:block; font-family:'JetBrains Mono'; font-weight:500; font-size:21px; letter-spacing:.2em; color:var(--dim); margin-top:4px; }
+  #prog { position:absolute; left:64px; right:64px; top:72px; height:4px; background:rgba(255,255,255,.12); z-index:50; }
+  #prog i { position:absolute; left:0; top:0; bottom:0; width:100%; background:var(--red); transform:scaleX(0); transform-origin:0 50%; }
+  #scrims { z-index:45; background:
+      linear-gradient(180deg, rgba(0,0,0,.7) 0px, rgba(0,0,0,0) 260px),
+      linear-gradient(0deg, rgba(0,0,0,0) 180px, rgba(0,0,0,.62) 330px, rgba(0,0,0,.62) 460px, rgba(0,0,0,0) 560px); }
+  #caps { position:absolute; left:70px; right:70px; top:1478px; height:200px; z-index:60; text-align:center; }
+  .cap { position:absolute; left:0; right:0; top:0; opacity:0; font-weight:800; font-size:62px; line-height:1.22;
+         text-shadow:0 6px 28px rgba(0,0,0,.95), 0 0 6px rgba(0,0,0,.9); }
+  .cw { display:inline-block; margin:0 .12em; opacity:.28; }
+  .cw.acc { color:var(--red); }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="34.2" data-width="1080" data-height="1920" data-fps="30">
+  <div class="layer" id="bed"></div>
+  <div class="layer" id="motes"></div>
+
+  <!-- S0 + S13: khung tranh -->
+  <div class="scene" id="sc0">
+    <div id="framebox"><div id="frame"><div id="hole"></div></div></div>
+    <div id="hline"></div>
+    <div id="strike"></div>
+    <div id="tape">“một bức Leonardo nữa”</div>
+    <div id="slam">BIẾN MẤT</div>
+  </div>
+
+  <!-- S2: Louvre, 21.08.1911 -->
+  <div class="scene" id="sc2">
+    <img class="bgimg" src="assets/monalisa/saloncarre.jpg" alt="" />
+    <div class="layer shade"></div>
+    <div id="day" class="mono"></div>
+    <div id="date"></div>
+    <div id="louvre" class="mono">BẢO TÀNG LOUVRE · SALON CARRÉ</div>
+    <div class="stamp" id="stampClose">ĐÓNG CỬA</div>
+  </div>
+
+  <!-- S3: báo Excelsior 14.12.1913 -->
+  <div class="scene" id="sc3">
+    <div id="paperwrap"><div id="paper"><img src="assets/monalisa/excelsior1913.jpg" alt="" /></div></div>
+    <div class="tagline" id="suspect">NGHI PHẠM: <span class="redact"></span></div>
+    <div class="credit mono" id="credit3">ẢNH DỰNG LẠI · BÁO EXCELSIOR 14.12.1913</div>
+  </div>
+
+  <!-- S4: hôm sau -->
+  <div class="scene" id="sc4">
+    <div id="clockday"><span id="cd1">THỨ HAI</span></div>
+    <svg class="layer" viewBox="0 0 1080 1920" id="clock">
+      <circle cx="540" cy="780" r="290" fill="rgba(239,228,203,.05)" stroke="#e9ddc4" stroke-width="6"/>
+      <g id="ticks"></g>
+      <line id="hh" x1="540" y1="780" x2="540" y2="610" stroke="#fff" stroke-width="16" stroke-linecap="round"/>
+      <line id="mh" x1="540" y1="780" x2="540" y2="540" stroke="#e2402d" stroke-width="9" stroke-linecap="round"/>
+      <circle cx="540" cy="780" r="18" fill="#e2402d"/>
+    </svg>
+    <div id="plusday">+1 NGÀY</div>
+  </div>
+
+  <!-- S5: một tuần -->
+  <div class="scene" id="sc5">
+    <div id="calt">LOUVRE ĐÓNG CỬA <em>7 NGÀY</em></div>
+    <div id="cal"></div>
+  </div>
+
+  <!-- S6: Picasso -->
+  <div class="scene" id="sc6">
+    <div id="card"><div class="clip"></div>
+      <div class="k mono">HỒ SƠ · NGƯỜI BỊ THẨM VẤN</div>
+      <div class="n">PABLO<br/>PICASSO</div>
+      <div class="d">Họa sĩ · Paris, 1911</div>
+      <div class="line"></div>
+    </div>
+    <div class="stamp" id="stampAsk">THẨM VẤN</div>
+  </div>
+
+  <!-- S7: đám đông -->
+  <div class="scene" id="sc7"><div class="layer" id="wall7"></div><div id="minif"></div><div class="layer" id="floor7"></div><div class="layer" id="crowd"></div></div>
+
+  <!-- S8: bức tường trống (ảnh thật, 08.1911) -->
+  <div class="scene" id="sc8">
+    <div id="wallwrap"><img src="assets/monalisa/emptywall.jpg" alt="" /></div>
+    <svg id="pegs" viewBox="0 0 640 887" preserveAspectRatio="none"></svg>
+    <div id="pegtxt" class="mono">4 CHIẾC MÓC SẮT · KHÔNG CÒN GÌ</div>
+    <div class="credit mono" id="credit8">ẢNH TƯ LIỆU · LOUVRE, THÁNG 8.1911</div>
+  </div>
+
+  <!-- S9: 28 tháng trong rương -->
+  <div class="scene" id="sc9">
+    <div id="count">0</div>
+    <div id="countlbl">THÁNG</div>
+    <svg id="trunk" viewBox="0 0 600 420">
+      <image id="minipaint" href="assets/monalisa/monalisa.jpg" x="240" y="20" width="120" height="179"/>
+      <rect x="40" y="170" width="520" height="240" rx="18" fill="#4a3322" stroke="#1d130b" stroke-width="6"/>
+      <rect x="40" y="215" width="520" height="16" fill="#8b6a3a"/><rect x="40" y="340" width="520" height="16" fill="#8b6a3a"/>
+      <rect x="120" y="170" width="18" height="240" fill="#8b6a3a"/><rect x="462" y="170" width="18" height="240" fill="#8b6a3a"/>
+      <g id="lid"><rect x="40" y="70" width="520" height="110" rx="26" fill="#5b3f29" stroke="#1d130b" stroke-width="6"/>
+        <rect x="40" y="110" width="520" height="14" fill="#8b6a3a"/></g>
+      <rect id="lock" x="276" y="160" width="48" height="58" rx="8" fill="#c9a24e" stroke="#1d130b" stroke-width="4" opacity="0"/>
+    </svg>
+    <div id="trunkcap" class="mono">PARIS · 08.1911 → 12.1913</div>
+  </div>
+
+  <!-- S10 + S11: bản đồ, bị bắt, nhà tù -->
+  <div class="scene" id="sc10">
+    <svg id="map" viewBox="0 0 1080 1920"></svg>
+    <div id="mug"><img src="assets/monalisa/peruggia.jpg" alt="" />
+      <div class="nm">VINCENZO PERUGGIA<div class="bar"></div></div></div>
+    <div id="bars"></div>
+    <div class="stamp" id="stampArrest">BỊ BẮT</div>
+    <div id="seven">7 THÁNG<small>NGỒI TÙ</small></div>
+  </div>
+
+  <!-- S12: lặng -->
+  <div class="scene" id="sc12"><div id="ask">Còn bức tranh?</div></div>
+
+  <div class="layer" id="leak"></div>
+  <svg class="layer" id="grain" width="1080" height="1920"><filter id="gn"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="7"/></filter><rect width="100%" height="100%" filter="url(#gn)"/></svg>
+  <div class="layer" id="vig"></div>
+  <div class="layer" id="scrims"></div>
+  <div id="prog"><i></i></div>
+  <div id="kicker"><div class="bar"></div><div class="t">HỒ SƠ 1911<small>VỤ TRỘM MONA LISA</small></div></div>
+  <div id="caps"></div>
+  <div class="layer" id="flash"></div>
+</div>
+
+<script>
+(function () {
+  const $ = (s) => document.querySelector(s);
+  const el = (tag, cls, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; };
+  const SVGNS = "http://www.w3.org/2000/svg";
+  const sv = (tag, attrs) => { const e = document.createElementNS(SVGNS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); return e; };
+  // PRNG có hạt cố định (tất định — không Math.random)
+  let seed = 1911; const rnd = () => { seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; };
+
+  const L = window.ML.lines, DUR = 34.2;
+  const S = (i) => L[i].start, E = (i) => L[i].end;
+  const norm = (w) => w.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "");
+  // thời điểm từ thứ n khớp `w` trong câu i
+  const T = (i, w, n = 0) => { let c = 0; for (const x of L[i].words) if (norm(x.w) === norm(w) && c++ === n) return x.t; return S(i); };
+
+  const tl = gsap.timeline({ paused: true });
+  const show = (id, t0, t1, fade = 0.12) => {
+    tl.set(id, { autoAlpha: 0 }, 0);
+    tl.to(id, { autoAlpha: 1, duration: fade, ease: "none" }, t0);
+    if (t1 != null) tl.to(id, { autoAlpha: 0, duration: fade, ease: "none" }, t1 - fade);
+  };
+  const flash = (t, a = 0.55) => { tl.to("#flash", { opacity: a, duration: 0.04 }, t); tl.to("#flash", { opacity: 0, duration: 0.22 }, t + 0.04); };
+  const leak = (t) => { tl.fromTo("#leak", { opacity: 0, x: -700 }, { opacity: 0.9, x: 0, duration: 0.35, ease: "power2.out" }, t);
+                        tl.to("#leak", { opacity: 0, x: 700, duration: 0.45, ease: "power2.in" }, t + 0.35); };
+  const stamp = (id, t) => { tl.fromTo(id, { opacity: 0, scale: 2.4 }, { opacity: 0.95, scale: 1, duration: 0.16, ease: "power4.in" }, t);
+                             tl.to("#root", { x: 10, duration: 0.03, yoyo: true, repeat: 3 }, t + 0.16); };
+  const draw = (node, t, d, ease = "power2.inOut") => {
+    const len = node.getTotalLength(); node.style.strokeDasharray = len; node.style.strokeDashoffset = len;
+    tl.to(node, { strokeDashoffset: 0, duration: d, ease }, t);
+  };
+
+  // ---------- không khí: bụi bay, tiến độ, hạt nhiễu ----------
+  for (let i = 0; i < 38; i++) {
+    const m = el("div", "mote"); const x = rnd() * 1080, y = rnd() * 1920, s = 0.5 + rnd() * 1.4;
+    m.style.left = x + "px"; m.style.top = y + "px"; m.style.transform = `scale(${s})`; $("#motes").appendChild(m);
+    tl.to(m, { y: -160 - rnd() * 260, x: (rnd() - 0.5) * 140, opacity: 0.2 + rnd() * 0.6, duration: DUR, ease: "none" }, 0);
+  }
+  tl.to("#prog i", { scaleX: 1, duration: DUR, ease: "none" }, 0);
+  for (let k = 0; k < 68; k++) tl.set("#grain", { opacity: 0.08 + ((k * 37) % 7) / 100 }, k * 0.5);
+
+  // ---------- S0: khung tranh + tiêu đề bị gạch ----------
+  const hole = $("#hole"), N = 14, sh = 924 / N, slices = [];
+  for (let i = 0; i < N; i++) {
+    const s = el("div", "slice"); s.style.top = i * sh + "px"; s.style.height = sh + 1 + "px"; s.style.backgroundPosition = `0 ${-i * sh}px`;
+    hole.appendChild(s); slices.push(s);
+  }
+  const words0 = ["NỔI", "TIẾNG", "NHẤT", "THẾ", "GIỚI"];
+  const hw = words0.map((w) => { const e = el("span", "hw", w); $("#hline").appendChild(e); return e; });
+  show("#sc0", 0, S(2));
+  tl.fromTo("#framebox", { scale: 1.38 }, { scale: 1.0, duration: 0.75, ease: "power3.out" }, 0);
+  tl.to("#framebox", { scale: 1.07, duration: S(2) - 0.75, ease: "none" }, 0.75);
+  flash(0, 0.4);
+  ["nổi", "tiếng", "nhất", "thế", "giới"].forEach((w, k) =>
+    tl.fromTo(hw[k], { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.22, ease: "power3.out" }, Math.max(0.05, T(0, w) - 0.05)));
+  tl.to("#strike", { scaleX: 1, duration: 0.32, ease: "power3.inOut" }, T(0, "từng"));
+  tl.to(hw, { opacity: 0.35, duration: 0.3 }, T(0, "từng") + 0.2);
+  tl.fromTo("#tape", { opacity: 0, y: 60, rotation: -9 }, { opacity: 1, y: 0, rotation: -3.5, duration: 0.35, ease: "back.out(2)" }, T(0, "một") - 0.05);
+  // "biến mất": tranh tan thành dải
+  const tBien = T(1, "biến");
+  slices.forEach((s, i) => tl.to(s, { x: (i % 2 ? 1 : -1) * (700 + (i * 53) % 260), opacity: 0, duration: 0.55, ease: "power3.in" }, tBien - 0.18 + i * 0.018));
+  tl.to(["#hline", "#strike", "#tape"], { opacity: 0, duration: 0.2 }, tBien - 0.2);
+  tl.fromTo("#slam", { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 0.18, ease: "power4.in" }, tBien + 0.05);
+  tl.to("#framebox", { x: 14, duration: 0.03, yoyo: true, repeat: 5 }, tBien + 0.23);
+  flash(tBien + 0.22, 0.35);
+
+  // ---------- S2: Louvre, thứ Hai 21.08.1911 ----------
+  show("#sc2", S(2), S(3)); leak(S(2) - 0.1);
+  tl.fromTo("#sc2 .bgimg", { x: 0, scale: 1.08 }, { x: -180, scale: 1.0, duration: E(2) - S(2) + 0.3, ease: "none" }, S(2));
+  const day = "THỨ HAI"; const dayEl = $("#day");
+  [...day].forEach((ch, k) => { const sp = el("span", null, ch === " " ? "&nbsp;" : ch); sp.style.opacity = 0; dayEl.appendChild(sp);
+    tl.set(sp, { opacity: 1 }, T(2, "thứ") + k * 0.045); });
+  const digits = "21 08 1911".split(""); const dateEl = $("#date"); const reels = [];
+  digits.forEach((ch) => {
+    if (ch === " ") { dateEl.appendChild(el("div", "dsep", "·")); return; }
+    const g = el("div", "dg"); const r = el("div", "reel"); const fin = +ch;
+    const seq = []; for (let k = 0; k < 9; k++) seq.push((fin + 1 + k * 3) % 10); seq.push(fin);
+    seq.forEach((d) => r.appendChild(el("div", null, String(d)))); g.appendChild(r); dateEl.appendChild(g); reels.push({ r, n: seq.length });
+  });
+  const roll = (idx, t) => idx.forEach((k, j) => tl.fromTo(reels[k].r, { y: 0 }, { y: -(reels[k].n - 1) * 176, duration: 0.55, ease: "power3.out" }, t + j * 0.07));
+  tl.set(dateEl, { opacity: 0 }, 0); tl.to(dateEl, { opacity: 1, duration: 0.15 }, T(2, "21") - 0.1);
+  roll([0, 1], T(2, "21") - 0.05); roll([2, 3], T(2, "8") - 0.05); roll([4, 5, 6, 7], T(2, "1911") - 0.05);
+  tl.to("#louvre", { opacity: 1, duration: 0.3 }, T(2, "bảo") - 0.05);
+  stamp("#stampClose", T(2, "đóng") - 0.06);
+
+  // ---------- S3: báo Excelsior — máy quay lia qua ảnh dựng lại ----------
+  show("#sc3", S(3), S(4)); flash(S(3), 0.3);
+  const cam = (cx, cy, z) => ({ x: 540 - cx * z, y: 860 - cy * z, scale: z });
+  tl.set("#paper", cam(943, 900, 0.62), S(3));
+  tl.to("#paper", { ...cam(303, 1495, 1.72), duration: 0.8, ease: "power3.inOut" }, T(3, "người") - 0.35);   // "Sous la blouse"
+  tl.to("#paper", { ...cam(755, 855, 1.8), duration: 0.75, ease: "power3.inOut" }, T(3, "lắp") - 0.25);        // "Séparé du cadre"
+  tl.to("#paper", { ...cam(297, 855, 1.85), duration: 0.7, ease: "power3.inOut" }, T(3, "lặng") - 0.2);        // "Le tableau décroché"
+  tl.to("#paper", { ...cam(943, 1150, 0.72), duration: 0.6, ease: "power2.inOut" }, E(3) - 0.55);
+  tl.fromTo("#suspect", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out" }, T(3, "người") - 0.1);
+  tl.to("#credit3", { opacity: 1, duration: 0.3 }, S(3) + 0.3);
+
+  // ---------- S4: hôm sau ----------
+  show("#sc4", S(4), S(5)); leak(S(4) - 0.08);
+  const tk = $("#ticks"); for (let k = 0; k < 12; k++) { const a = k * Math.PI / 6;
+    tk.appendChild(sv("line", { x1: 540 + Math.sin(a) * 250, y1: 780 - Math.cos(a) * 250, x2: 540 + Math.sin(a) * 272, y2: 780 - Math.cos(a) * 272, stroke: "#e9ddc4", "stroke-width": k % 3 ? 4 : 9 })); }
+  tl.fromTo("#mh", { rotation: 0 }, { rotation: 720, svgOrigin: "540 780", duration: E(4) - S(4), ease: "power2.inOut" }, S(4));
+  tl.fromTo("#hh", { rotation: 0 }, { rotation: 60, svgOrigin: "540 780", duration: E(4) - S(4), ease: "power2.inOut" }, S(4));
+  tl.to("#cd1", { y: -30, opacity: 0, duration: 0.15 }, T(4, "hôm") - 0.1);
+  tl.set("#cd1", { textContent: "THỨ BA" }, T(4, "hôm") + 0.05);
+  tl.fromTo("#cd1", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.2, immediateRender: false }, T(4, "hôm") + 0.05);
+  tl.fromTo("#plusday", { opacity: 0, scale: 1.5 }, { opacity: 1, scale: 1, duration: 0.18, ease: "power4.in" }, T(4, "phát") - 0.1);
+
+  // ---------- S5: bảy ngày ----------
+  show("#sc5", S(5), S(6));
+  tl.fromTo("#calt", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.25 }, S(5));
+  for (let k = 0; k < 7; k++) {
+    const c = el("div", "cell", `<b>${k + 1}</b><i>NGÀY</i>`); $("#cal").appendChild(c);
+    const svg = sv("svg", { viewBox: "0 0 100 150", preserveAspectRatio: "none" });
+    const p1 = sv("path", { d: `M14 ${24 + k % 3} Q52 80 ${86 - k % 2} 128`, stroke: "#e2402d", "stroke-width": 9, fill: "none", "stroke-linecap": "round" });
+    const p2 = sv("path", { d: `M${84 + k % 2} 22 Q46 78 16 ${126 - k % 3}`, stroke: "#e2402d", "stroke-width": 9, fill: "none", "stroke-linecap": "round" });
+    svg.appendChild(p1); svg.appendChild(p2); c.appendChild(svg);
+    tl.fromTo(c, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.2, ease: "back.out(2)" }, S(5) + 0.05 + k * 0.05);
+    draw(p1, S(5) + 0.45 + k * 0.1, 0.12, "steps(3)"); draw(p2, S(5) + 0.51 + k * 0.1, 0.12, "steps(3)");
+  }
+
+  // ---------- S6: Picasso bị thẩm vấn ----------
+  show("#sc6", S(6), S(7)); leak(S(6) - 0.08);
+  tl.fromTo("#card", { rotationX: 70, y: 300, opacity: 0, rotation: 6 }, { rotationX: 0, y: 0, opacity: 1, rotation: -3, duration: 0.5, ease: "power3.out", transformPerspective: 1400 }, S(6));
+  tl.to("#card", { scale: 1.04, duration: E(6) - S(6), ease: "none" }, S(6) + 0.5);
+  stamp("#stampAsk", T(6, "thẩm") - 0.05);
+
+  // ---------- S7: đám đông xếp hàng ----------
+  show("#sc7", S(7), S(8), 0.1);
+  tl.fromTo("#minif", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.3 }, S(7));
+  for (let row = 0; row < 8; row++) {
+    const depth = row / 7, y = 760 + Math.pow(depth, 1.35) * 720, sc = 0.5 + depth * 1.9, span = 520 + depth * 1100, cnt = 7 + row;
+    const shade = Math.round(96 - depth * 90);   // xa: lẫn vào tường sáng · gần: đen đặc
+    for (let j = 0; j < cnt; j++) {
+      const fg = el("div", "fig"); const x = 540 + (j / (cnt - 1) - 0.5) * span + (rnd() - 0.5) * 60 * (0.5 + depth);
+      const s2 = sc * (0.88 + rnd() * 0.22);
+      fg.style.left = x - 23 + "px"; fg.style.top = y - 120 + (rnd() - 0.5) * 18 + "px"; fg.style.transform = `scale(${s2})`;
+      fg.style.setProperty("--c", `rgb(${shade + 8},${shade + 2},${shade - 4 < 0 ? 0 : shade - 4})`); $("#crowd").appendChild(fg);
+      tl.fromTo(fg, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.18, ease: "power2.out" }, S(7) + 0.02 + (7 - row) * 0.07 + rnd() * 0.2);
+    }
+  }
+  tl.to("#crowd", { scale: 1.08, transformOrigin: "50% 40%", duration: E(7) - S(7) + 0.2, ease: "none" }, S(7));
+
+  // ---------- S8: bức tường trống (ảnh thật) ----------
+  show("#sc8", S(8), S(9), 0.08); flash(S(8), 0.25);
+  tl.fromTo("#wallwrap", { clipPath: "circle(0% at 47% 36%)", scale: 1.12 }, { clipPath: "circle(150% at 47% 36%)", scale: 1.0, duration: 0.7, ease: "power3.out" }, S(8));
+  tl.fromTo("#pegs", { scale: 1.12 }, { scale: 1.0, duration: 0.7, ease: "power3.out" }, S(8));
+  tl.to(["#wallwrap", "#pegs"], { scale: 1.07, duration: E(8) - S(8), ease: "none" }, S(8) + 0.7);
+  [[250, 310], [343, 310], [217, 432], [367, 432]].forEach(([x, y], k) => {
+    const r = 22 + (k % 2) * 3;
+    const p = sv("path", { d: `M${x + r} ${y - 2} C${x + r} ${y - r - 6} ${x - r - 4} ${y - r} ${x - r} ${y + 2} C${x - r + 2} ${y + r + 4} ${x + r + 6} ${y + r} ${x + r - 2} ${y - 6}`,
+      stroke: "#e2402d", "stroke-width": 4.5, fill: "none", "stroke-linecap": "round" });
+    $("#pegs").appendChild(p); draw(p, T(8, "trống") - 0.15 + k * 0.1, 0.25, "steps(5)");
+  });
+  tl.to("#pegtxt", { opacity: 1, duration: 0.25 }, T(8, "tường"));
+  tl.to("#credit8", { opacity: 1, duration: 0.3 }, S(8) + 0.2);
+
+  // ---------- S9: 28 tháng trong rương ----------
+  show("#sc9", S(9), S(10)); leak(S(9) - 0.08);
+  const cnt = { v: 0 };
+  tl.to(cnt, { v: 28, duration: T(9, "tháng") + 0.25 - S(9), ease: "power2.out", onUpdate: () => { $("#count").textContent = Math.round(cnt.v); } }, S(9));
+  tl.fromTo("#countlbl", { opacity: 0, scale: 1.25 }, { opacity: 1, scale: 1, duration: 0.4, ease: "power3.out" }, T(9, "tháng") - 0.1);
+  tl.fromTo("#trunk", { opacity: 0, y: 80 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, T(9, "bức") - 0.2);
+  tl.fromTo("#lid", { rotation: -38 }, { rotation: -38, duration: 0.01, svgOrigin: "60 170" }, S(9));
+  tl.fromTo("#minipaint", { y: -40 }, { y: 150, duration: 0.45, ease: "power2.in" }, T(9, "nằm") - 0.1);
+  tl.to("#lid", { rotation: 0, svgOrigin: "60 170", duration: 0.28, ease: "power4.in" }, T(9, "rương") - 0.25);
+  tl.to("#lock", { opacity: 1, duration: 0.08 }, T(9, "rương") + 0.05);
+  tl.to("#trunk", { y: 6, duration: 0.04, yoyo: true, repeat: 3 }, T(9, "rương") + 0.03);
+  tl.to("#trunkcap", { opacity: 1, duration: 0.3 }, T(9, "paris") - 0.1);
+
+  // ---------- S10: bản đồ Paris → Florence, bị bắt ----------
+  show("#sc10", S(10), S(12)); flash(S(10), 0.2);
+  const map = $("#map"); const geo = window.ML.geo; const borders = [];
+  geo.countries.slice().sort((a, b) => a.focus - b.focus).forEach((c) => {
+    const p = sv("path", { d: c.d, class: "ctry" + (c.focus ? " focus" : "") }); map.appendChild(p); borders.push([p, c.focus]);
+  });
+  borders.forEach(([p, foc], k) => draw(p, S(10) - 0.05 + (foc ? 0.1 : 0.0) + k * 0.03, foc ? 0.9 : 0.7));
+  const lblFR = sv("text", { x: 330, y: 820, class: "clbl" }); lblFR.textContent = "PHÁP"; map.appendChild(lblFR);
+  const lblIT = sv("text", { x: 790, y: 1150, class: "clbl" }); lblIT.textContent = "Ý"; map.appendChild(lblIT);
+  tl.fromTo([lblFR, lblIT], { opacity: 0 }, { opacity: 1, duration: 0.4 }, S(10) + 0.5);
+  const [P, F] = geo.pins; const mx = (P.x + F.x) / 2 + 150, my = (P.y + F.y) / 2 - 60;
+  const route = sv("path", { d: `M${P.x} ${P.y} Q${mx} ${my} ${F.x} ${F.y}`, stroke: "#e2402d", "stroke-width": 7, fill: "none", "stroke-linecap": "round" });
+  map.appendChild(route);
+  const dash = sv("path", { d: route.getAttribute("d"), stroke: "#060505", "stroke-width": 9, fill: "none", "stroke-dasharray": "2 22" }); map.appendChild(dash);
+  const mkPin = (p, label, dx) => { const g = sv("g", {}); g.appendChild(sv("circle", { cx: p.x, cy: p.y, r: 34, fill: "none", stroke: "#e2402d", "stroke-width": 4, class: "ring" }));
+    g.appendChild(sv("circle", { cx: p.x, cy: p.y, r: 16, fill: "#e2402d" })); const t = sv("text", { x: p.x + dx, y: p.y + 12, class: "pinlbl" });
+    t.textContent = label; g.appendChild(t); map.appendChild(g); return g; };
+  const gP = mkPin(P, "PARIS", 36), gF = mkPin(F, "FLORENCE · 12.1913", 0);
+  const fl = gF.querySelector("text"); fl.setAttribute("text-anchor", "middle"); fl.setAttribute("y", F.y - 56);
+  tl.fromTo(gP, { opacity: 0, y: -60 }, { opacity: 1, y: 0, duration: 0.3, ease: "bounce.out" }, S(10) + 0.35);
+  draw(route, T(10, "mang") - 0.1, T(10, "florence") - T(10, "mang") + 0.35, "power1.inOut");
+  tl.fromTo(gF, { opacity: 0, y: -80 }, { opacity: 1, y: 0, duration: 0.35, ease: "bounce.out" }, T(10, "florence") + 0.2);
+  tl.fromTo(gF.querySelector(".ring"), { scale: 0.4, transformOrigin: "50% 50%" }, { scale: 2.2, opacity: 0, duration: 0.8, ease: "power2.out" }, T(10, "florence") + 0.45);
+  tl.to("#map", { scale: 1.12, transformOrigin: `${F.x / 10.8}% ${F.y / 19.2}%`, duration: E(10) - S(10), ease: "none" }, S(10));
+  // bị bắt: ảnh hồ sơ đập xuống, gỡ vạch đen lộ tên (đối xứng với "NGHI PHẠM" ở S3)
+  const tBat = T(10, "bắt");
+  tl.fromTo("#mug", { opacity: 0, scale: 1.7, rotation: 10 }, { opacity: 1, scale: 1, rotation: -4, duration: 0.22, ease: "power4.in" }, tBat - 0.35);
+  tl.to("#mug .nm .bar", { scaleX: 0, duration: 0.35, ease: "power3.inOut" }, tBat - 0.05);
+  stamp("#stampArrest", tBat);
+
+  // ---------- S11: bảy tháng tù ----------
+  tl.to("#stampArrest", { opacity: 0, duration: 0.2 }, S(11));
+  tl.to("#map", { opacity: 0.25, duration: 0.3 }, S(11));
+  for (let k = 0; k < 8; k++) { const b = el("div", "bar2"); b.style.left = 18 + k * 60 + "px"; $("#bars").appendChild(b);
+    tl.to(b, { y: 0, duration: 0.3, ease: "power4.in" }, S(11) + 0.05 + k * 0.035); }
+  tl.fromTo("#seven", { opacity: 0, x: -80 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out" }, T(11, "bảy") - 0.12);
+
+  // ---------- S12: lặng — "Còn bức tranh?" ----------
+  show("#sc12", S(12), S(13), 0.06);
+  tl.fromTo("#ask", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.35 }, S(12) + 0.02);
+
+  // ---------- S13: tranh trở lại — khớp khung đầu để lặp vòng ----------
+  show("#sc0", S(13), null, 0.06);
+  tl.set(["#slam"], { opacity: 0 }, S(13) - 0.1);
+  tl.set("#framebox", { scale: 1.07, x: 0 }, S(13) - 0.1);
+  tl.to("#framebox", { scale: 1.0, duration: DUR - S(13), ease: "power2.out" }, S(13));
+  slices.forEach((s, i) => tl.to(s, { x: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, S(13) + 0.02 + (N - i) * 0.02));
+  tl.set(["#strike", "#tape"], { opacity: 0 }, S(13));
+  tl.set("#hline", { opacity: 1 }, S(13));
+  tl.set(hw, { opacity: 0, y: 40 }, S(13));
+  ["nổi", "tiếng", "nhất", "thế", "giới"].forEach((w, k) =>
+    tl.to(hw[k], { opacity: 1, y: 0, duration: 0.22, ease: "power3.out" }, T(13, w) - 0.05));
+  flash(T(13, "nổi") - 0.05, 0.18);
+
+  // ---------- phụ đề: cụm 2–4 từ, trắng tối giản, một màu nhấn ----------
+  const ACC = new Set(["leonardo", "louvre", "mona", "lisa", "picasso", "florence", "paris", "1911", "1913", "21", "biến", "mất", "bắt", "trống", "bảy", "rương"]);
+  const caps = $("#caps"); const chunks = [];
+  L.forEach((ln, i) => { let cur = [];
+    ln.words.forEach((w, k) => { cur.push(w); const end = /[.,…?!]$/.test(w.w) || cur.length >= 4 || k === ln.words.length - 1;
+      if (end) { chunks.push({ i, words: cur }); cur = []; } }); });
+  chunks.forEach((c, n) => {
+    const box = el("div", "cap"); caps.appendChild(box);
+    c.words.forEach((w) => { const s = el("span", "cw" + (ACC.has(norm(w.w)) ? " acc" : ""), w.w.replace(/"/g, "")); box.appendChild(s);
+      tl.to(s, { opacity: 1, duration: 0.08 }, w.t); });
+    const t0 = c.words[0].t - 0.06, next = chunks[n + 1], t1 = next ? next.words[0].t - 0.06 : DUR;
+    tl.set(box, { opacity: 1 }, t0); tl.set(box, { opacity: 0 }, t1);
+  });
+  tl.set("#caps", { opacity: 0 }, S(12) - 0.01); tl.set("#caps", { opacity: 1 }, S(13));   // lặng tuyệt đối ở câu hỏi
+
+  window.__timelines = window.__timelines || {};
+  window.__timelines["main"] = tl;
+})();
+</script>
+</body>
+</html>

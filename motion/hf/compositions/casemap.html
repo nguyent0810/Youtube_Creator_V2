@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="vi" data-resolution="portrait" data-composition-variables='[
+  {"id":"accent","type":"color","label":"Accent","default":"#38bdf8"},
+  {"id":"kicker","type":"string","label":"Kicker","default":"HỒ SƠ"},
+  {"id":"badge","type":"string","label":"Badge","default":""},
+  {"id":"footer","type":"string","label":"Footer","default":""},
+  {"id":"duration","type":"number","label":"Duration","default":30},
+  {"id":"narration","type":"string","label":"Narration","default":""},
+  {"id":"bgm","type":"string","label":"BGM","default":""},
+  {"id":"bgm_gain","type":"number","label":"BGM gain","default":0.16},
+  {"id":"lines","type":"string","label":"Lines JSON","default":"[]"}
+]'>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./base.css" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+  /* ===== BẢN ĐỒ ĐIỀU TRA — bảng ghim, lưới bản vẽ, dây nối giữa các đầu mối ===== */
+  #bed { background: linear-gradient(170deg, #071018 0%, #050a10 55%, #03060a 100%); }
+  #grid { position: absolute; inset: 0; opacity: .5;
+          background-image: linear-gradient(rgba(56,189,248,.10) 1px, rgba(0,0,0,0) 1px),
+                            linear-gradient(90deg, rgba(56,189,248,.10) 1px, rgba(0,0,0,0) 1px);
+          background-size: 90px 90px; }
+  #wires { position: absolute; inset: 0; }
+  .node { position: absolute; left: 76px; right: 76px; top: 440px; padding: 54px 50px 60px;
+          background: rgba(6,18,28,.86); border: 2px solid rgba(56,189,248,.34);
+          box-shadow: 0 0 0 1px rgba(0,0,0,.6), 0 50px 110px rgba(0,0,0,.7);
+          min-height: 560px; display: flex; flex-direction: column; justify-content: center; }
+  .node::before { content: ""; position: absolute; left: 50%; top: -19px; width: 34px; height: 34px;
+                  margin-left: -17px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 34px var(--accent); }
+  .node .coord { font-family: 'JetBrains Mono', monospace; font-size: 24px; letter-spacing: .2em;
+                 color: rgba(125,211,252,.75); margin-bottom: 26px; }
+  .node .key { font-weight: 800; font-size: 104px; line-height: 1.05; text-transform: uppercase;
+               color: #eaf6ff; letter-spacing: -.022em; }
+  .node .key.long  { font-size: 82px; }
+  .node .key.xlong { font-size: 62px; line-height: 1.12; }
+  .node .bars { margin-top: 34px; display: flex; gap: 10px; }
+  .node .bars i { display: block; width: 46px; height: 8px; background: var(--accent); opacity: .85; transform-origin: 0 50%; }
+
+  /* ===== MÀN VIDEO: ảnh ghim trên bảng điều tra ===== */
+  .mv-mask { position: absolute; inset: 0; border-style: solid; border-color: #050a10;
+             border-width: 330px 96px 760px 96px; }
+  .mv-edge { position: absolute; left: 96px; right: 96px; top: 330px; bottom: 760px;
+             border: 14px solid #eef4f8; border-bottom-width: 84px;
+             box-shadow: 0 46px 100px rgba(0,0,0,.7); transform: rotate(-1.4deg); }
+  .mv-pin  { position: absolute; left: 50%; top: 306px; width: 30px; height: 30px; margin-left: -15px;
+             border-radius: 50%; background: var(--accent); box-shadow: 0 0 34px var(--accent); }
+  .mv-slug { position: absolute; left: 130px; top: 1112px; font-family: 'JetBrains Mono', monospace;
+             font-size: 24px; letter-spacing: .18em; color: #0a1520; }
+  .mv-key  { position: absolute; left: 96px; right: 96px; top: 1186px; font-weight: 800;
+             font-size: 76px; line-height: 1.05; text-transform: uppercase; color: #eaf6ff; }
+
+  .mv-key.long { font-size: 64px; }
+  .mv-key.xlong { font-size: 50px; line-height: 1.12; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920" data-fps="30">
+  <div class="bedrock" id="bed"></div>
+  <div class="bedrock" id="grid"></div>
+  <svg class="bedrock" id="wires" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
+  <div id="stage"></div>
+  <svg class="bedrock grain" width="1080" height="1920"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+  <div class="bedrock vignette"></div>
+  <div id="capzone" class="skin-slab"></div>
+  <div id="kicker-row"><div class="bar"></div><div id="kicker"></div></div>
+  <div id="badge"></div>
+  <div id="footer"></div>
+  <div class="progress" id="progress"></div>
+</div>
+<script src="./engine.js"></script>
+<script>
+window.HF_STYLE = {
+  buildMediaScene(inner, ln, i, n) {
+    inner.appendChild(HF.el("div", "mv-mask"));
+    inner.appendChild(HF.el("div", "mv-edge"));
+    inner.appendChild(HF.el("div", "mv-pin"));
+    inner.appendChild(HF.el("div", "mv-slug", "TANG VẬT " + String(i + 1).padStart(2, "0")));
+    const mvKey = HF.el("div", "mv-key", (ln.key_parts || []).map(p => p.t).join(" "));
+    if (mvKey.textContent.length > 26) mvKey.classList.add("xlong");
+    else if (mvKey.textContent.length > 14) mvKey.classList.add("long");
+    inner.appendChild(mvKey);
+  },
+  enterMedia(tl, inner, ln) {
+    tl.fromTo(inner.querySelector(".mv-edge"), { opacity: 0, y: -26, rotate: -4 },
+      { opacity: 1, y: 0, rotate: -1.4, duration: .55, ease: "power3.out" }, ln.start);
+    tl.fromTo(inner.querySelector(".mv-pin"), { scale: 0 }, { scale: 1, duration: .32, ease: "back.out(2)" }, ln.start + .3);
+    tl.fromTo(inner.querySelector(".mv-slug"), { opacity: 0 }, { opacity: 1, duration: .35 }, ln.start + .38);
+    tl.fromTo(inner.querySelector(".mv-key"), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: .45 }, ln.start + .44);
+  },
+  buildScene(inner, ln, i, n) {
+    const node = HF.el("div", "node card-box");
+    node.appendChild(HF.el("div", "coord", "ĐẦU MỐI " + String(i + 1).padStart(2, "0") + " — LIÊN KẾT " + String(n - i - 1) + " CÒN LẠI"));
+    const key = HF.el("div", "key", (ln.key_parts || []).map(p => p.t).join(" "));
+    const L = key.textContent.length;
+    if (L > 30) key.classList.add("xlong"); else if (L > 16) key.classList.add("long");
+    node.appendChild(key);
+    const bars = HF.el("div", "bars");
+    for (let k = 0; k < 4; k++) bars.appendChild(document.createElement("i"));
+    node.appendChild(bars);
+    inner.appendChild(node);
+  },
+  enter(tl, inner, ln, i) {
+    const node = inner.querySelector(".node");
+    tl.fromTo(node, { opacity: 0, y: 42, rotate: i % 2 ? .8 : -.8, scale: .97 },
+      { opacity: 1, y: 0, rotate: 0, scale: 1, duration: .5, ease: "power3.out" }, ln.start);
+    tl.fromTo(node.querySelector(".coord"), { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: .42 }, ln.start + .08);
+    tl.fromTo(node.querySelector(".key"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: .5, ease: "power3.out" }, ln.start + .12);
+    const bars = node.querySelectorAll(".bars i");
+    bars.forEach((b, k) => tl.fromTo(b, { scaleX: 0 }, { scaleX: 1, duration: .3, ease: "power2.out" }, ln.start + .28 + k * .07));
+  },
+  transition(tl, oldS, newS, T) {          // lưới tan: cảnh cũ dạt ngang + mờ, cảnh mới dựng lên
+    tl.to(oldS, { opacity: 0, x: -70, filter: "blur(9px)", duration: .34, ease: "power2.in" }, T);
+    tl.fromTo(newS, { opacity: 0, x: 80, filter: "blur(12px)" },
+      { opacity: 1, x: 0, filter: "blur(0px)", duration: .42, ease: "power3.out" }, T + .08);
+  },
+  ambient(tl, DUR, { rand }) {
+    tl.fromTo("#progress", { width: 0 }, { width: 1080, duration: DUR, ease: "none" }, 0);
+    tl.fromTo("#kicker-row", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: .7, ease: "power3.out" }, 0);
+    tl.fromTo("#badge", { opacity: 0 }, { opacity: .92, duration: .7 }, .22);
+    tl.fromTo("#grid", { x: 0, y: 0 }, { x: -60, y: -40, duration: DUR, ease: "none" }, 0);
+    // dây nối: vẽ dần bằng strokeDashoffset — hợp lệ, tất định
+    const svg = document.getElementById("wires"), NS = "http://www.w3.org/2000/svg";
+    for (let k = 0; k < 5; k++) {
+      const x1 = 60 + rand() * 960, y1 = 180 + rand() * 260;
+      const x2 = 60 + rand() * 960, y2 = 1380 + rand() * 340;
+      const p = document.createElementNS(NS, "path");
+      p.setAttribute("d", `M ${x1} ${y1} C ${x1} ${(y1 + y2) / 2}, ${x2} ${(y1 + y2) / 2}, ${x2} ${y2}`);
+      p.setAttribute("fill", "none");
+      p.setAttribute("stroke", "rgba(56,189,248,.22)");
+      p.setAttribute("stroke-width", "2");
+      svg.appendChild(p);
+      const len = 2400;
+      p.style.strokeDasharray = len; p.style.strokeDashoffset = len;
+      tl.to(p, { strokeDashoffset: 0, duration: 2.4 + rand() * 2, ease: "power1.inOut" }, .3 + k * (DUR / 8));
+    }
+  }
+};
+HF.build();
+</script>
+</body>
+</html>
