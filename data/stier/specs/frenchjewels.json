@@ -1,0 +1,174 @@
+{
+ "title": "Viên kim cương bị trộm năm 1792 và mang một cái tên khác",
+ "description": "Năm 1792, giữa Cách mạng Pháp, kho báu hoàng gia bị đột nhập. Phần lớn trang sức được tìm lại, nhưng viên kim cương xanh của nhà vua thì biến mất, và xuất hiện trở lại với cái tên Hope.",
+ "tags": [
+  "trang sức hoàng gia Pháp",
+  "kim cương Hope",
+  "French Blue",
+  "Cách mạng Pháp",
+  "Louvre",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1792",
+ "sub": "KHO BÁU HOÀNG GIA PHÁP",
+ "acc": [
+  "hope",
+  "sancy",
+  "louvre",
+  "smithsonian",
+  "xanh",
+  "1792",
+  "2025",
+  "nga"
+ ],
+ "lines": [
+  "Năm 1792, giữa Cách mạng Pháp, kho báu hoàng gia ở Paris bị đột nhập.",
+  "Trang sức vương miện bị cuỗm sạch.",
+  "Phần lớn về sau được tìm lại.",
+  "Viên kim cương Sancy nổi lên tận nước Nga.",
+  "Nhưng viên kim cương xanh của nhà vua… biến mất.",
+  "Người ta tin nó đã bị cắt lại, và nay mang tên khác: kim cương Hope, ở Washington.",
+  "Truyền thuyết nói Marie Antoinette từng đeo nó. Thực ra người đeo là Louis XVI.",
+  "Cả hai đều lên máy chém.",
+  "Và năm 2025, trang sức hoàng gia Pháp lại bị trộm, lần này ở bảo tàng Louvre.",
+  "Lịch sử… lặp lại."
+ ],
+ "imgs": {
+  "hope": "File:The Hope Diamond - SIA.jpg",
+  "paris": "File:Execution de Robespierre full (cropped).jpg",
+  "tav": "File:Diamant bleu par Tavernier.jpg",
+  "sancy": "File:Sancy Louvre.jpg",
+  "crown": "File:French Coronation Crown of Charlemagne.png",
+  "hand": "File:Main Justice Louvre.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "paris",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "KHO BÁU HOÀNG GIA"
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "CUỖM SẠCH",
+   "sub": "TRANG SỨC VƯƠNG MIỆN PHÁP",
+   "bg": "crown"
+  },
+  {
+   "type": "photo",
+   "at": 2,
+   "img": "hand",
+   "mode": "print",
+   "tone": "color",
+   "label": {
+    "text": "PHẦN LỚN ĐƯỢC TÌM LẠI",
+    "at": [
+     2,
+     "tìm"
+    ],
+    "y": 1330
+   }
+  },
+  {
+   "type": "evidence",
+   "at": 3,
+   "img": "sancy",
+   "tone": "color",
+   "tag": "KIM CƯƠNG SANCY",
+   "credit": "TÌM THẤY Ở NGA · NAY Ở LOUVRE"
+  },
+  {
+   "type": "evidence",
+   "at": 4,
+   "img": "tav",
+   "tone": "sepia",
+   "tag": "KIM CƯƠNG XANH CỦA NHÀ VUA",
+   "credit": "BẢN VẼ CỦA TAVERNIER · 1676"
+  },
+  {
+   "type": "evidence",
+   "at": 5,
+   "img": "hope",
+   "tone": "color",
+   "tag": "KIM CƯƠNG HOPE",
+   "credit": "BẢO TÀNG SMITHSONIAN · WASHINGTON"
+  },
+  {
+   "type": "split",
+   "at": 6,
+   "title": "AI ĐÃ ĐEO?",
+   "a": {
+    "img": "hope",
+    "label": "MARIE ANTOINETTE ✗",
+    "at": [
+     6,
+     "marie"
+    ],
+    "tone": "color"
+   },
+   "b": {
+    "img": "tav",
+    "label": "LOUIS XVI ✓",
+    "at": [
+     6,
+     "louis"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "MÁY CHÉM",
+   "sub": "CẢ HAI",
+   "bg": "paris"
+  },
+  {
+   "type": "date",
+   "at": 8,
+   "day": "BẢO TÀNG LOUVRE",
+   "date": "19.10.2025",
+   "groupAt": [
+    [
+     8,
+     "2025",
+     0,
+     -0.4
+    ],
+    [
+     8,
+     "2025",
+     0,
+     -0.2
+    ],
+    [
+     8,
+     "2025"
+    ]
+   ],
+   "stamp": {
+    "text": "LẠI BỊ TRỘM",
+    "at": [
+     8,
+     "trộm"
+    ]
+   }
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "hope",
+   "frame": "gold",
+   "tone": "color",
+   "loop": true,
+   "head": "LỊCH SỬ LẶP LẠI",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/French_Crown_Jewels",
+  "https://en.wikipedia.org/wiki/Hope_Diamond"
+ ]
+}

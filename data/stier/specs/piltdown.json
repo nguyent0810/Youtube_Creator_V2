@@ -1,0 +1,208 @@
+{
+ "title": "“Mắt xích còn thiếu” lừa cả giới khoa học suốt 41 năm",
+ "description": "Năm 1912, Charles Dawson công bố hộp sọ Piltdown, được xem là mắt xích giữa vượn và người. Năm 1953, sự thật lộ ra: sọ người hiện đại ghép với hàm đười ươi đã mài răng.",
+ "tags": [
+  "Piltdown Man",
+  "người Piltdown",
+  "lừa đảo khoa học",
+  "Charles Dawson",
+  "mắt xích còn thiếu",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1912",
+ "sub": "NGƯỜI PILTDOWN",
+ "acc": [
+  "piltdown",
+  "dawson",
+  "1953",
+  "2016",
+  "đười",
+  "ươi",
+  "mài"
+ ],
+ "lines": [
+  "Năm 1912, nước Anh tìm thấy \"mắt xích còn thiếu\" giữa loài vượn và loài người.",
+  "Một hộp sọ giống người, một hàm giống vượn, đào lên ở Piltdown.",
+  "Người phát hiện: nhà khảo cổ nghiệp dư Charles Dawson.",
+  "Giới khoa học đặt tên: người bình minh của Dawson.",
+  "Hơn 40 năm, nhiều nhà khoa học tin nó là thật.",
+  "Năm 1953, sự thật lộ ra:",
+  "hộp sọ của người hiện đại…",
+  "ghép với hàm của một con đười ươi.",
+  "Răng bị mài dũa cho giống răng người.",
+  "Năm 2016, một nghiên cứu kết luận: thủ phạm chính là Dawson.",
+  "Mắt xích còn thiếu… chỉ là một trò lừa."
+ ],
+ "imgs": {
+  "recon": "File:PSM V82 D210 Reconstruction of Eoanthropus dawsoni.png",
+  "gang": "File:Piltdown gang (dark).jpg",
+  "skull": "File:Piltdown man.jpg",
+  "mcg": "File:Piltdown Man - McGregor reconstruction.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "recon",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "MẮT XÍCH CÒN THIẾU"
+  },
+  {
+   "type": "split",
+   "at": 1,
+   "title": "PILTDOWN · 1912",
+   "a": {
+    "img": "skull",
+    "label": "SỌ · GIỐNG NGƯỜI",
+    "at": [
+     1,
+     "hộp"
+    ]
+   },
+   "b": {
+    "img": "mcg",
+    "label": "HÀM · GIỐNG VƯỢN",
+    "at": [
+     1,
+     "hàm"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 2,
+   "k": "NGƯỜI PHÁT HIỆN",
+   "name": "CHARLES\nDAWSON",
+   "desc": "Nhà khảo cổ nghiệp dư",
+   "stamp": {
+    "text": "NGHIỆP DƯ",
+    "at": [
+     2,
+     "nghiệp"
+    ]
+   }
+  },
+  {
+   "type": "quote",
+   "at": 3,
+   "text": "Eoanthropus dawsoni",
+   "by": "“NGƯỜI BÌNH MINH CỦA DAWSON”"
+  },
+  {
+   "type": "photo",
+   "at": 4,
+   "img": "gang",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "label": {
+    "text": "HƠN 40 NĂM ĐƯỢC TIN LÀ THẬT",
+    "at": [
+     4,
+     "tin"
+    ]
+   },
+   "credit": "TRANH JOHN COOKE · 1915"
+  },
+  {
+   "type": "date",
+   "at": 5,
+   "day": "SỰ THẬT",
+   "date": "1953",
+   "groupAt": [
+    [
+     5,
+     "1953"
+    ]
+   ],
+   "stamp": {
+    "text": "GIẢ MẠO",
+    "at": [
+     5,
+     "lộ"
+    ]
+   }
+  },
+  {
+   "type": "evidence",
+   "at": 6,
+   "img": "skull",
+   "tone": "bw",
+   "tag": "SỌ NGƯỜI HIỆN ĐẠI"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "+ HÀM",
+     "at": [
+      7,
+      "hàm"
+     ]
+    },
+    {
+     "text": "ĐƯỜI ƯƠI",
+     "at": [
+      7,
+      "đười"
+     ],
+     "acc": true,
+     "size": 190
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "RĂNG",
+     "at": [
+      8,
+      "răng"
+     ],
+     "size": 200
+    },
+    {
+     "text": "MÀI DŨA",
+     "at": [
+      8,
+      "mài"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 9,
+   "k": "NGHIÊN CỨU 2016",
+   "name": "THỦ PHẠM:\nDAWSON",
+   "desc": "Theo bằng chứng ADN và hình thái",
+   "stamp": {
+    "text": "KẾT LUẬN",
+    "at": [
+     9,
+     "dawson"
+    ]
+   }
+  },
+  {
+   "type": "hero",
+   "at": 10,
+   "img": "recon",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "MẮT XÍCH CÒN THIẾU",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Piltdown_Man"
+ ]
+}

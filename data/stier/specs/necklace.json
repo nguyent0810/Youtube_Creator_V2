@@ -1,0 +1,185 @@
+{
+ "title": "Hoàng hậu giả trong vườn Versailles và chuỗi kim cương biến mất",
+ "description": "Năm 1785, Hồng y de Rohan gặp \"Hoàng hậu Marie Antoinette\" trong vườn Versailles và tặng bà một bông hồng. Người phụ nữ ấy là một kỹ nữ được thuê vì giống hoàng hậu.",
+ "tags": [
+  "vụ chuỗi kim cương",
+  "Marie Antoinette",
+  "Versailles 1785",
+  "Jeanne de la Motte",
+  "Hồng y Rohan",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1785",
+ "sub": "VỤ CHUỖI KIM CƯƠNG",
+ "acc": [
+  "versailles",
+  "marie",
+  "antoinette",
+  "hồng",
+  "jeanne",
+  "kim",
+  "cương"
+ ],
+ "lines": [
+  "Năm 1785, một vị hồng y nước Pháp gặp Hoàng hậu Marie Antoinette trong vườn Versailles.",
+  "Ông tặng bà một bông hồng.",
+  "Nhưng người phụ nữ ấy không phải hoàng hậu.",
+  "Đó là một kỹ nữ, được thuê vì trông giống hoàng hậu.",
+  "Kẻ đứng sau: Jeanne de la Motte, một kẻ lừa đảo tự xưng dòng dõi vua.",
+  "Cô ta giả chữ ký hoàng hậu, dụ hồng y đứng ra mua một chuỗi kim cương cực đắt.",
+  "Chuỗi kim cương biến mất.",
+  "Hoàng hậu thật chưa từng muốn mua nó.",
+  "Jeanne bị kết tội. Nhưng dân Pháp vẫn tin hoàng hậu có dính líu.",
+  "Vụ bê bối trở thành một trong những đốm lửa khiến dân Pháp quay lưng với hoàng gia."
+ ],
+ "imgs": {
+  "queen": "File:Élisabeth Vigée Le Brun- Marie-Antoinette à la Rose - collection Resnick.jpg",
+  "affair": "File:L'Affaire du Collier de la Reine, EV0120.jpg",
+  "exec": "File:Marie Antoinette Execution.jpg",
+  "cag": "File:Cagliostro and company; a sequel to the story of the diamond necklace; (1902) (14592894650).jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "queen",
+   "frame": "gold",
+   "tone": "color",
+   "intro": true,
+   "head": "HOÀNG HẬU?"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "MỘT BÔNG HỒNG",
+     "at": [
+      1,
+      "hồng"
+     ],
+     "serif": true,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "KHÔNG PHẢI\nHOÀNG HẬU",
+   "bg": "queen"
+  },
+  {
+   "type": "file",
+   "at": 3,
+   "k": "NGƯỜI ĐÓNG THẾ",
+   "name": "NICOLE\nD'OLIVA",
+   "desc": "Được thuê vì giống hoàng hậu",
+   "stamp": {
+    "text": "GIẢ DẠNG",
+    "at": [
+     3,
+     "giống"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 4,
+   "k": "KẺ ĐỨNG SAU",
+   "name": "JEANNE\nDE LA MOTTE",
+   "desc": "Tự xưng dòng dõi vua Henri II",
+   "stamp": {
+    "text": "LỪA ĐẢO",
+    "at": [
+     4,
+     "lừa"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 5,
+   "img": "affair",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": {
+    "text": "CHỮ KÝ GIẢ · CHUỖI KIM CƯƠNG",
+    "at": [
+     5,
+     "kim"
+    ]
+   },
+   "credit": "“VỤ CHUỖI KIM CƯƠNG CỦA HOÀNG HẬU” · TRANH IN"
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "BIẾN MẤT",
+   "bg": "affair"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "HOÀNG HẬU THẬT",
+     "at": [
+      7,
+      "hoàng"
+     ]
+    },
+    {
+     "text": "CHƯA TỪNG MUỐN MUA",
+     "at": [
+      7,
+      "mua"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "split",
+   "at": 8,
+   "title": "TÒA ÁN · DƯ LUẬN",
+   "a": {
+    "img": "cag",
+    "label": "JEANNE · CÓ TỘI",
+    "at": [
+     8,
+     "jeanne"
+    ]
+   },
+   "b": {
+    "img": "queen",
+    "label": "HOÀNG HẬU · BỊ NGHI",
+    "at": [
+     8,
+     "dính"
+    ],
+    "tone": "color"
+   }
+  },
+  {
+   "type": "photo",
+   "at": 9,
+   "img": "exec",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "ĐỐM LỬA CỦA CÁCH MẠNG",
+    "at": [
+     9,
+     "đốm"
+    ],
+    "y": 1250
+   }
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Affair_of_the_Diamond_Necklace"
+ ]
+}

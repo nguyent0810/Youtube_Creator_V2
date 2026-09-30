@@ -1,0 +1,194 @@
+{
+ "title": "Bắn người trước hàng trăm nhân chứng, vẫn được tuyên vô tội",
+ "description": "Ngày 25/6/1906, trên sân thượng nhà hát Madison Square Garden, triệu phú Harry Thaw bắn chết kiến trúc sư Stanford White trước hàng trăm khán giả. \"Phiên tòa thế kỷ\" kết thúc bằng một phán quyết gây sốc.",
+ "tags": [
+  "Harry Thaw",
+  "Stanford White",
+  "Evelyn Nesbit",
+  "phiên tòa thế kỷ",
+  "Madison Square Garden",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1906",
+ "sub": "PHIÊN TÒA THẾ KỶ",
+ "acc": [
+  "thaw",
+  "white",
+  "evelyn",
+  "nesbit",
+  "madison",
+  "mất",
+  "trí"
+ ],
+ "lines": [
+  "Ngày 25 tháng 6 năm 1906, trên sân thượng nhà hát Madison Square Garden, New York…",
+  "trước hàng trăm khán giả, triệu phú Harry Thaw bắn chết kiến trúc sư Stanford White.",
+  "Người đã thiết kế chính tòa nhà ấy.",
+  "Động cơ: lòng hận thù ám ảnh, và vợ của Thaw, người mẫu Evelyn Nesbit.",
+  "Báo chí gọi đó là phiên tòa thế kỷ.",
+  "Lần xử thứ nhất, bồi thẩm đoàn không thống nhất được.",
+  "Lần thứ hai: vô tội, vì mất trí.",
+  "Thaw không vào tù, mà vào một bệnh viện tâm thần, với đủ đặc quyền nhờ tiền của gia đình.",
+  "Bắn người trước hàng trăm nhân chứng… và không bị kết tội giết người."
+ ],
+ "imgs": {
+  "thaw": "File:Harry Kendall Thaw.png",
+  "white": "File:Stanford White in 1895.jpg",
+  "white06": "File:Stanford White 33 crop.jpg",
+  "evelyn": "File:Evelyn Nesbit 12056u.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "white06",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "MADISON SQUARE GARDEN"
+  },
+  {
+   "type": "split",
+   "at": 1,
+   "title": "TRƯỚC HÀNG TRĂM KHÁN GIẢ",
+   "a": {
+    "img": "thaw",
+    "label": "HARRY THAW",
+    "at": [
+     1,
+     "harry"
+    ]
+   },
+   "b": {
+    "img": "white",
+    "label": "STANFORD WHITE",
+    "at": [
+     1,
+     "stanford"
+    ]
+   },
+   "sign": "✕",
+   "signAt": [
+    1,
+    "bắn"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "KIẾN TRÚC SƯ",
+     "at": [
+      2,
+      "thiết"
+     ]
+    },
+    {
+     "text": "CỦA TÒA NHÀ",
+     "at": [
+      2,
+      "tòa"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 3,
+   "k": "ĐỘNG CƠ",
+   "name": "EVELYN\nNESBIT",
+   "desc": "Người mẫu · vợ của Thaw",
+   "img": "evelyn"
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "PHIÊN TÒA\nTHẾ KỶ",
+   "white": true,
+   "bg": "evelyn"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "LẦN 1",
+     "at": [
+      5,
+      "lần"
+     ],
+     "serif": true,
+     "size": 200
+    },
+    {
+     "text": "KHÔNG THỐNG NHẤT",
+     "at": [
+      5,
+      "thống"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 6,
+   "k": "LẦN 2 · 02.1908",
+   "name": "VÔ TỘI",
+   "desc": "Lý do: mất trí",
+   "img": "thaw",
+   "stamp": {
+    "text": "MẤT TRÍ",
+    "at": [
+     6,
+     "mất"
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "BỆNH VIỆN MATTEAWAN",
+   "rows": [
+    {
+     "k": "NHÀ TÙ",
+     "v": "✗",
+     "at": [
+      7,
+      "tù"
+     ]
+    },
+    {
+     "k": "BỆNH VIỆN TÂM THẦN",
+     "v": "✓",
+     "at": [
+      7,
+      "bệnh"
+     ]
+    }
+   ],
+   "total": {
+    "k": "ĐẶC QUYỀN",
+    "v": "✓",
+    "at": [
+     7,
+     "đặc"
+    ]
+   }
+  },
+  {
+   "type": "hero",
+   "at": 8,
+   "img": "white06",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "KHÔNG PHẢI TỘI GIẾT NGƯỜI",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Harry_Kendall_Thaw"
+ ]
+}

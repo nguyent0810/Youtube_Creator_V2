@@ -1,0 +1,37 @@
+{
+ "title": "Trang sức hoàng gia Ireland biến mất: người giữ chìa khóa là ai?",
+ "description": "Tháng 7/1907, bốn ngày trước chuyến thăm của Vua Edward VII, trang sức hoàng gia Ireland biến mất khỏi lâu đài Dublin. Hơn một thế kỷ sau, vụ án vẫn chưa có lời giải.",
+ "tags": ["Irish Crown Jewels", "trang sức hoàng gia Ireland", "lâu đài Dublin", "Arthur Vicars", "vụ trộm chưa có lời giải", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 1907", "sub": "LÂU ĐÀI DUBLIN",
+ "acc": ["dublin", "edward", "vicars", "két", "chìa", "khóa", "cổ", "1983"],
+ "lines": [
+  "Tháng 7 năm 1907, bốn ngày trước chuyến thăm của Vua Edward VII…",
+  "trang sức hoàng gia Ireland biến mất khỏi lâu đài Dublin.",
+  "Chúng nằm trong một chiếc két sắt.",
+  "Két quá to, không lọt cửa phòng bảo mật, nên được đặt trong thư viện.",
+  "Cả hai chìa khóa két đều do một người giữ: Ngài Arthur Vicars.",
+  "Người từng say rượu, tỉnh dậy thấy bộ trang sức đeo trên cổ mình.",
+  "Ông bị kết luận thiếu cẩn trọng, và buộc phải từ chức.",
+  "Năm 1983, người ta còn dỡ cả tường và sàn gỗ tòa tháp để tìm.",
+  "Không thấy gì.",
+  "Hơn một thế kỷ, vụ án chưa có lời giải.",
+  "Bộ trang sức chưa từng xuất hiện trở lại.",
+  "Và chìa khóa, chỉ có một người giữ."
+ ],
+ "imgs": {"dudley": "File:Lord Dudley, Grand Master of the Order of St. Patrick.jpg", "jewels": "File:Irish Crown Jewels.jpg", "vicars": "File:Arthur Vicars.jpg"},
+ "scenes": [
+  {"type": "hero", "img": "dudley", "tone": "sepia", "intro": true, "head": "TRANG SỨC HOÀNG GIA", "shatter": {"at": [1, "biến"], "text": "BIẾN MẤT"}},
+  {"type": "evidence", "at": 2, "img": "jewels", "tone": "bw", "tag": "TANG VẬT · 1907", "credit": "ẢNH CẢNH SÁT DUBLIN PHÁT HÀNH · 1907"},
+  {"type": "kinetic", "at": 3, "items": [{"text": "KÉT QUÁ TO", "at": [3, "két"]}, {"text": "KHÔNG LỌT CỬA", "at": [3, "lọt"], "acc": true}, {"text": "→ THƯ VIỆN", "at": [3, "thư"]}]},
+  {"type": "file", "at": 4, "k": "NGƯỜI GIỮ 2 CHÌA KHÓA", "name": "ARTHUR\nVICARS", "desc": "Ulster King of Arms", "img": "vicars"},
+  {"type": "kinetic", "at": 5, "items": [{"text": "SAY RƯỢU", "at": [5, "say"]}, {"text": "TỈNH DẬY", "at": [5, "tỉnh"]}, {"text": "TRANG SỨC TRÊN CỔ", "at": [5, "cổ"], "acc": true}]},
+  {"type": "mug", "at": 6, "ghost": "ULSTER", "mug": {"img": "vicars", "name": "ARTHUR VICARS", "at": [6, null, 0, 0.3]}, "stamp": {"text": "TỪ CHỨC", "at": [6, "từ"]}},
+  {"type": "kinetic", "at": 7, "items": [{"text": "1983", "at": [7, "1983"], "size": 260, "serif": true}, {"text": "DỠ TƯỜNG · DỠ SÀN", "at": [7, "dỡ"], "acc": true}]},
+  {"type": "slam", "at": 8, "text": "KHÔNG THẤY GÌ", "white": true, "bg": "dudley"},
+  {"type": "timeline", "at": 9, "items": [{"year": "1907", "text": "Mất trộm", "at": [9, null, 0, 0.1]}, {"year": "1983", "text": "Dỡ tường tìm kiếm", "at": [9, "thế"]},
+   {"year": "2026", "text": "Chưa có lời giải", "at": [9, "lời"]}]},
+  {"type": "photo", "at": 10, "img": "jewels", "mode": "print", "tone": "bw", "stamp": {"text": "CHƯA TÌM THẤY", "at": [10, "chưa"], "x": 200, "y": 1180}},
+  {"type": "hero", "at": 11, "img": "dudley", "tone": "sepia", "loop": true, "head": "TRANG SỨC HOÀNG GIA", "tr": "cut"}
+ ],
+ "sources": ["https://en.wikipedia.org/wiki/Irish_Crown_Jewels"]
+}

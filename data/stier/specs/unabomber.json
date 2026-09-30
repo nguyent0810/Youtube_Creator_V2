@@ -1,0 +1,195 @@
+{
+ "title": "17 năm FBI không bắt được, người nhận ra hắn là em trai",
+ "description": "Từ 1978 đến 1995, Unabomber gửi bom qua bưu điện khắp nước Mỹ. Năm 1995, bản tuyên ngôn của hắn được đăng báo, và một người đọc nhận ra giọng văn: em trai hắn.",
+ "tags": [
+  "Unabomber",
+  "Ted Kaczynski",
+  "FBI",
+  "Washington Post",
+  "tuyên ngôn",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1996",
+ "sub": "UNABOMBER",
+ "acc": [
+  "fbi",
+  "unabomber",
+  "kaczynski",
+  "david",
+  "washington",
+  "post",
+  "montana",
+  "17",
+  "35"
+ ],
+ "lines": [
+  "Suốt 17 năm, FBI săn lùng một kẻ gửi bom qua đường bưu điện.",
+  "Ba người chết, 23 người bị thương.",
+  "Bức phác họa nổi tiếng nhất: một người đội mũ trùm, đeo kính râm.",
+  "Năm 1995, hắn hứa sẽ dừng tay, nếu báo chí đăng bản tuyên ngôn 35 nghìn chữ của hắn.",
+  "Tờ Washington Post đăng nó.",
+  "Một người đọc, và nhận ra giọng văn.",
+  "Đó là em trai hắn, David.",
+  "David báo cho FBI.",
+  "Tháng 4 năm 1996, đặc vụ bắt Ted Kaczynski trong một căn chòi không điện, không nước ở Montana.",
+  "Bắt được hắn không phải nhờ bom… mà nhờ câu chữ."
+ ],
+ "imgs": {
+  "sketch": "File:Unabomber - FBI Sketch 1987.jpg",
+  "reward": "File:FBI Reward poster Unabomber.jpg",
+  "ted": "File:Ted Kaczynski 2 (cropped).jpg",
+  "arrest": "File:Tk arrest.jpg",
+  "cabin": "File:Cabin outside 1 0.jpg",
+  "mug": "File:Ted Kaczynski full mugshot.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "sketch",
+   "frame": "print",
+   "tone": "bw",
+   "intro": true,
+   "head": "17 NĂM SĂN LÙNG"
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "1978 – 1995",
+   "rows": [
+    {
+     "k": "NGƯỜI CHẾT",
+     "v": "3",
+     "at": [
+      1,
+      "chết"
+     ]
+    }
+   ],
+   "total": {
+    "k": "BỊ THƯƠNG",
+    "v": "23",
+    "at": [
+     1,
+     "thương"
+    ]
+   }
+  },
+  {
+   "type": "evidence",
+   "at": 2,
+   "img": "sketch",
+   "tone": "bw",
+   "tag": "PHÁC HỌA CỦA FBI · 1987",
+   "credit": "MŨ TRÙM · KÍNH RÂM"
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 35000,
+   "label": "CHỮ",
+   "until": [
+    3,
+    "chữ"
+   ],
+   "sub": {
+    "text": "BẢN TUYÊN NGÔN · 1995",
+    "at": [
+     3,
+     "tuyên"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "ĐĂNG BÁO",
+   "sub": "THE WASHINGTON POST · 09.1995",
+   "white": true,
+   "bg": "reward"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "NHẬN RA",
+     "at": [
+      5,
+      "nhận"
+     ]
+    },
+    {
+     "text": "GIỌNG VĂN",
+     "at": [
+      5,
+      "giọng"
+     ],
+     "acc": true,
+     "size": 200
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 6,
+   "k": "NGƯỜI NHẬN RA",
+   "name": "DAVID\nKACZYNSKI",
+   "desc": "Em trai của Unabomber",
+   "stamp": {
+    "text": "BÁO FBI",
+    "at": [
+     7,
+     "báo"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 8,
+   "img": "cabin",
+   "tone": "bw",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": {
+    "text": "MONTANA · KHÔNG ĐIỆN · KHÔNG NƯỚC",
+    "at": [
+     8,
+     "chòi"
+    ]
+   },
+   "credit": "CĂN CHÒI CỦA KACZYNSKI · 1996"
+  },
+  {
+   "type": "mug",
+   "at": [
+    8,
+    "montana",
+    0,
+    0.4
+   ],
+   "ghost": "03.04.1996",
+   "mug": {
+    "img": "mug",
+    "name": "TED KACZYNSKI",
+    "at": [
+     9,
+     null,
+     0,
+     0.1
+    ]
+   },
+   "stamp": {
+    "text": "BỊ BẮT",
+    "at": [
+     9,
+     "câu"
+    ]
+   }
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Ted_Kaczynski"
+ ]
+}

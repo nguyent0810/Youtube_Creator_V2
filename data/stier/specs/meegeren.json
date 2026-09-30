@@ -1,0 +1,207 @@
+{
+ "title": "Kẻ làm giả tranh lừa được cả Göring, rồi thành người hùng",
+ "description": "Năm 1945, họa sĩ Han van Meegeren bị bắt vì bán \"Vermeer\" cho Hermann Göring và đối mặt án tử. Cách duy nhất để thoát tội: chứng minh chính mình đã vẽ nó.",
+ "tags": [
+  "Han van Meegeren",
+  "tranh giả Vermeer",
+  "Hermann Göring",
+  "làm giả tranh",
+  "Hà Lan 1945",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1945",
+ "sub": "VERMEER CỦA GÖRING",
+ "acc": [
+  "göring",
+  "vermeer",
+  "meegeren",
+  "137",
+  "giả",
+  "tử"
+ ],
+ "lines": [
+  "Năm 1945, một họa sĩ Hà Lan bị bắt vì bán bảo vật quốc gia cho Đức Quốc xã.",
+  "Người mua: Hermann Göring.",
+  "Món hàng: một bức tranh của Vermeer.",
+  "Göring đã đổi 137 bức tranh cướp được để lấy nó.",
+  "Tội cộng tác với địch, ông có thể lĩnh án tử.",
+  "Van Meegeren khai: bức tranh là giả… chính tôi vẽ.",
+  "Không ai tin.",
+  "Nên ông vẽ thêm một \"Vermeer\" nữa, trước mặt nhân chứng của tòa.",
+  "Tội cộng tác bị hủy: thứ bán cho Göring không phải bảo vật quốc gia.",
+  "Ông lĩnh một năm tù vì lừa đảo.",
+  "Và qua đời chưa đầy hai tháng sau.",
+  "Kẻ lừa được Göring… thành người hùng dân tộc."
+ ],
+ "imgs": {
+  "emmaus": "File:EmmausgangersVanMeegeren1937.jpg",
+  "lace": "File:The Lacemaker (Fake Vermeer).jpg",
+  "goering": "File:Hermann Göring at Nuremberg Trials November 1945.jpeg",
+  "work": "File:Han van Meegeren aan het werk, Bestanddeelnr 900-9593.jpg",
+  "han": "File:Han van Meegeren, Bestanddeelnr 900-9594.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "lace",
+   "tone": "color",
+   "intro": true,
+   "head": "BẢO VẬT QUỐC GIA",
+   "strike": [
+    1,
+    "hermann"
+   ]
+  },
+  {
+   "type": "file",
+   "at": 1,
+   "k": "NGƯỜI MUA",
+   "name": "HERMANN\nGÖRING",
+   "desc": "Thống chế Đức Quốc xã",
+   "img": "goering"
+  },
+  {
+   "type": "evidence",
+   "at": 2,
+   "img": "emmaus",
+   "tone": "color",
+   "tag": "“VERMEER”",
+   "credit": "“EMMAUS” · VAN MEEGEREN VẼ, BÁN NHƯ VERMEER · 1937"
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 137,
+   "label": "BỨC TRANH CƯỚP ĐƯỢC",
+   "until": [
+    3,
+    "bức"
+   ],
+   "sub": {
+    "text": "ĐỔI LẤY 1 “VERMEER”",
+    "at": [
+     3,
+     "lấy"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "ÁN TỬ?",
+   "sub": "TỘI CỘNG TÁC VỚI ĐỊCH",
+   "bg": "goering"
+  },
+  {
+   "type": "quote",
+   "at": 5,
+   "text": "Bức tranh là giả. Chính tôi vẽ.",
+   "by": "HAN VAN MEEGEREN · 1945"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "KHÔNG AI TIN",
+     "at": [
+      6,
+      "không"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 7,
+   "img": "work",
+   "tone": "bw",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "label": {
+    "text": "VẼ TRƯỚC MẶT NHÂN CHỨNG",
+    "at": [
+     7,
+     "nhân"
+    ]
+   },
+   "credit": "ẢNH ANEFO · 1945"
+  },
+  {
+   "type": "file",
+   "at": 8,
+   "k": "PHÁN QUYẾT",
+   "name": "KHÔNG PHẢI\nBẢO VẬT",
+   "desc": "Tội cộng tác với địch bị hủy",
+   "stamp": {
+    "text": "HỦY TỘI",
+    "at": [
+     8,
+     "hủy"
+    ]
+   }
+  },
+  {
+   "type": "mug",
+   "at": 9,
+   "ghost": "1947",
+   "mug": {
+    "img": "han",
+    "name": "HAN VAN MEEGEREN",
+    "at": [
+     9,
+     null,
+     0,
+     0.35
+    ]
+   },
+   "big": {
+    "text": "1 NĂM",
+    "small": "TỘI LỪA ĐẢO",
+    "at": [
+     9,
+     "năm"
+    ]
+   }
+  },
+  {
+   "type": "timeline",
+   "at": 10,
+   "items": [
+    {
+     "year": "1947",
+     "text": "Lĩnh án 1 năm tù",
+     "at": [
+      10,
+      null,
+      0,
+      0.1
+     ]
+    },
+    {
+     "year": "< 2 THÁNG",
+     "text": "Qua đời vì đau tim",
+     "at": [
+      10,
+      "hai"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "hero",
+   "at": 11,
+   "img": "lace",
+   "tone": "color",
+   "loop": true,
+   "head": "NGƯỜI HÙNG DÂN TỘC",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Han_van_Meegeren"
+ ]
+}

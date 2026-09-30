@@ -1,0 +1,210 @@
+{
+ "title": "Hai lần ngồi tù vì một gương mặt giống kẻ lừa đảo",
+ "description": "Năm 1895 ở London, Adolf Beck bị nhiều phụ nữ nhận diện là kẻ lừa đảo. Ông ngồi tù thay cho một người khác, rồi lại bị bắt nhầm lần thứ hai. Vụ án dẫn tới việc nước Anh lập Tòa phúc thẩm hình sự.",
+ "tags": [
+  "Adolf Beck",
+  "án oan",
+  "nhận dạng sai",
+  "London 1896",
+  "Tòa phúc thẩm hình sự",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1896",
+ "sub": "ADOLF BECK · LONDON",
+ "acc": [
+  "beck",
+  "smith",
+  "london",
+  "1877",
+  "1904",
+  "1907",
+  "bạc"
+ ],
+ "lines": [
+  "Năm 1895, ở London, một người phụ nữ chặn một ông già trên phố: chính ông đã lừa tôi!",
+  "Ông tên là Adolf Beck.",
+  "Trong buổi nhận dạng, ông là người duy nhất tóc bạc, để ria.",
+  "Nhiều phụ nữ chỉ vào ông.",
+  "Cảnh sát tin ông chính là John Smith, kẻ lừa đảo từng ngồi tù năm 1877.",
+  "Năm 1896, Beck lĩnh bảy năm tù.",
+  "Năm 1898, hồ sơ cho thấy Smith có một đặc điểm cơ thể mà Beck không có.",
+  "Nhưng không ai thả ông.",
+  "Năm 1904, Beck lại bị bắt nhầm, lần thứ hai.",
+  "Rồi kẻ lừa đảo thật bị bắt, và nhận tội.",
+  "Vụ án dẫn tới việc nước Anh lập ra Tòa phúc thẩm hình sự năm 1907."
+ ],
+ "imgs": {
+  "mug": "File:AdolfBeckMugshot.jpg",
+  "portrait": "File:Portrait of Adolf Beck (1841-1909).jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "portrait",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "CHÍNH ÔNG ĐÃ LỪA TÔI"
+  },
+  {
+   "type": "file",
+   "at": 1,
+   "k": "NGƯỜI BỊ CHỈ MẶT",
+   "name": "ADOLF\nBECK",
+   "desc": "Sinh năm 1841 · Na Uy",
+   "img": "portrait"
+  },
+  {
+   "type": "crowd",
+   "at": 2,
+   "object": "none",
+   "label": {
+    "text": "NGƯỜI DUY NHẤT TÓC BẠC, ĐỂ RIA",
+    "at": [
+     2,
+     "bạc"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "NHIỀU NHÂN CHỨNG",
+     "at": [
+      3,
+      "nhiều"
+     ]
+    },
+    {
+     "text": "CHỈ VÀO ÔNG",
+     "at": [
+      3,
+      "chỉ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "split",
+   "at": 4,
+   "title": "CÙNG MỘT NGƯỜI?",
+   "a": {
+    "img": "portrait",
+    "label": "ADOLF BECK",
+    "at": [
+     4,
+     "ông"
+    ]
+   },
+   "b": {
+    "img": "mug",
+    "label": "“JOHN SMITH”",
+    "at": [
+     4,
+     "smith"
+    ]
+   },
+   "sign": "=?",
+   "signAt": [
+    4,
+    "1877"
+   ]
+  },
+  {
+   "type": "mug",
+   "at": 5,
+   "ghost": "D 523 W",
+   "mug": {
+    "img": "mug",
+    "name": "ADOLF BECK",
+    "at": [
+     5,
+     null,
+     0,
+     0.3
+    ]
+   },
+   "bars": {
+    "at": [
+     5,
+     "bảy"
+    ]
+   },
+   "big": {
+    "text": "7 NĂM",
+    "small": "LAO ĐỘNG KHỔ SAI",
+    "at": [
+     5,
+     "tù"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 6,
+   "k": "HỒ SƠ NHÀ TÙ · 1898",
+   "name": "KHÔNG PHẢI\nCÙNG MỘT NGƯỜI",
+   "desc": "Đặc điểm cơ thể không khớp",
+   "stamp": {
+    "text": "BỊ BỎ QUA",
+    "at": [
+     7,
+     "thả"
+    ]
+   }
+  },
+  {
+   "type": "date",
+   "at": 8,
+   "day": "BẮT NHẦM LẦN 2",
+   "date": "15.04.1904",
+   "groupAt": [
+    [
+     8,
+     "1904",
+     0,
+     -0.4
+    ],
+    [
+     8,
+     "1904",
+     0,
+     -0.2
+    ],
+    [
+     8,
+     "1904"
+    ]
+   ],
+   "stamp": {
+    "text": "LẦN THỨ HAI",
+    "at": [
+     8,
+     "hai"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 9,
+   "text": "KẺ THẬT\nNHẬN TỘI",
+   "bg": "mug"
+  },
+  {
+   "type": "hero",
+   "at": 10,
+   "img": "portrait",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "TÒA PHÚC THẨM 1907",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Adolf_Beck_case"
+ ]
+}

@@ -1,0 +1,185 @@
+{
+ "title": "Một giấc mơ dẫn tới thi thể trong Nhà kho Đỏ",
+ "description": "Năm 1828, mẹ kế của Maria Marten kể giấc mơ: con gái bị giết, chôn trong Nhà kho Đỏ. Người cha tới đào. Người yêu của Maria vẫn gửi thư về nói họ đang sống hạnh phúc.",
+ "tags": [
+  "Red Barn Murder",
+  "Nhà kho Đỏ",
+  "Maria Marten",
+  "William Corder",
+  "nước Anh 1828",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1828",
+ "sub": "NHÀ KHO ĐỎ · POLSTEAD",
+ "acc": [
+  "maria",
+  "marten",
+  "corder",
+  "london",
+  "wight",
+  "giấc",
+  "mơ",
+  "guinea"
+ ],
+ "lines": [
+  "Năm 1828, ở nước Anh, một người mẹ kế kể giấc mơ: con gái bị giết, chôn trong Nhà kho Đỏ.",
+  "Maria Marten mất tích gần một năm, được cho là đã bỏ trốn cùng người yêu.",
+  "Người yêu, William Corder, vẫn gửi thư về: họ đã cưới, sống trên đảo Wight.",
+  "Ngày 19 tháng 4 năm 1828, người cha tới nhà kho, đào xuống.",
+  "Thi thể con gái ông nằm đó.",
+  "Corder bị tìm thấy ở London, đã lấy một người vợ khác.",
+  "Năm 1828, hắn bị treo cổ trước một đám đông khổng lồ.",
+  "Sợi dây treo cổ bị cắt ra bán, mỗi đoạn một đồng guinea.",
+  "Nhà kho Đỏ bị khách tò mò gỡ dần làm kỷ niệm.",
+  "Tất cả bắt đầu từ một giấc mơ."
+ ],
+ "imgs": {
+  "barn": "File:RedBarn.jpg",
+  "corder": "File:WilliamCorder-awaitingtrial.jpg",
+  "hang": "File:WilliamCorder-hanging.jpg",
+  "catnach": "File:Corder-catnach.png",
+  "broad": "File:Corder-broadside.png"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "barn",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "MỘT GIẤC MƠ",
+   "tape": {
+    "text": "“chôn trong Nhà kho Đỏ”",
+    "at": [
+     0,
+     "kho"
+    ]
+   }
+  },
+  {
+   "type": "calendar",
+   "at": 1,
+   "n": 11,
+   "unit": "THÁNG",
+   "title": "MẤT TÍCH *GẦN 1 NĂM*"
+  },
+  {
+   "type": "quote",
+   "at": 2,
+   "text": "Chúng con đã cưới, đang sống ở đảo Wight.",
+   "by": "NỘI DUNG THƯ CORDER GỬI VỀ · DIỄN Ý"
+  },
+  {
+   "type": "date",
+   "at": 3,
+   "bg": "barn",
+   "day": "NHÀ KHO ĐỎ",
+   "date": "19.04.1828",
+   "groupAt": [
+    [
+     3,
+     "19"
+    ],
+    [
+     3,
+     "4"
+    ],
+    [
+     3,
+     "1828"
+    ]
+   ],
+   "stamp": {
+    "text": "ĐÀO XUỐNG",
+    "at": [
+     3,
+     "đào"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "CON GÁI ÔNG",
+   "white": true,
+   "bg": "barn"
+  },
+  {
+   "type": "file",
+   "at": 5,
+   "k": "TÌM THẤY Ở LONDON",
+   "name": "WILLIAM\nCORDER",
+   "desc": "Đã lấy một người vợ khác",
+   "img": "corder",
+   "stamp": {
+    "text": "BỊ BẮT",
+    "at": [
+     5,
+     "london"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 6,
+   "img": "hang",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "BURY ST EDMUNDS · 1828",
+    "at": [
+     6,
+     "đám"
+    ],
+    "y": 1300
+   }
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "to": 1,
+   "label": "GUINEA / ĐOẠN DÂY",
+   "until": [
+    7,
+    "guinea"
+   ],
+   "img": "broad",
+   "imgAt": [
+    7,
+    null,
+    0,
+    0.2
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 8,
+   "img": "barn",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": {
+    "text": "BỊ GỠ DẦN LÀM KỶ NIỆM",
+    "at": [
+     8,
+     "kỷ"
+    ]
+   }
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "barn",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "MỘT GIẤC MƠ",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Red_Barn_Murder"
+ ]
+}

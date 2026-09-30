@@ -1,0 +1,222 @@
+{
+ "title": "“Vua diêm” và đế chế que diêm dựng trên sổ sách giả",
+ "description": "Thập niên 1920, Ivar Kreuger kiểm soát phần lớn que diêm trên thế giới và cho các chính phủ vay tiền để đổi lấy độc quyền. Tháng 3/1932 ông chết ở Paris, rồi người ta mở sổ sách ra.",
+ "tags": [
+  "Ivar Kreuger",
+  "Vua diêm",
+  "lừa đảo tài chính",
+  "Ponzi",
+  "Paris 1932",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1932",
+ "sub": "VUA DIÊM · IVAR KREUGER",
+ "acc": [
+  "kreuger",
+  "diêm",
+  "paris",
+  "độc",
+  "quyền",
+  "giả"
+ ],
+ "lines": [
+  "Thập niên 1920, một người Thụy Điển kiểm soát phần lớn sản lượng diêm trên thế giới.",
+  "Ivar Kreuger, biệt danh Vua diêm.",
+  "Ông cho các chính phủ châu Âu vay tiền tái thiết sau chiến tranh.",
+  "Đổi lại: độc quyền diêm ở nước họ.",
+  "Tiền cho vay đến từ ngân hàng, và trái phiếu bán cho nhà đầu tư.",
+  "Có lúc, cổ tức cho người cũ được trả bằng tiền của người mới.",
+  "Tháng 3 năm 1932, ông được phát hiện đã chết trong căn hộ ở Paris.",
+  "Cảnh sát kết luận: tự sát.",
+  "Rồi người ta mở sổ sách ra.",
+  "Chỉ cần biết chút kế toán cũng thấy sổ đã bị làm giả.",
+  "Đế chế que diêm… cháy rụi."
+ ],
+ "imgs": {
+  "kreuger": "File:Kreuger ca1920.jpg",
+  "office": "File:Ivar Kreuger office Stockholm.jpg",
+  "flight": "File:Ivar Kreuger business flight.jpg",
+  "label": "File:Matchbox label - National Safety - Sweden (circa 1920s) - MBP1135260959.jpg",
+  "sig": "File:Ivar Kreuger signature.jpg",
+  "kt": "File:AB Kreuger & Toll 1926.JPG"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "kreuger",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "VUA DIÊM"
+  },
+  {
+   "type": "evidence",
+   "at": 1,
+   "img": "label",
+   "tone": "color",
+   "tag": "NHÃN HỘP DIÊM THỤY ĐIỂN · 1920s",
+   "credit": "ĐẾ CHẾ DIÊM CỦA KREUGER"
+  },
+  {
+   "type": "photo",
+   "at": 2,
+   "img": "flight",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": {
+    "text": "CHO CÁC CHÍNH PHỦ VAY TIỀN",
+    "at": [
+     2,
+     "vay"
+    ]
+   },
+   "credit": "KREUGER TRƯỚC MỘT CHUYẾN BAY CÔNG TÁC"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "ĐỔI LẤY",
+     "at": [
+      3,
+      "đổi"
+     ]
+    },
+    {
+     "text": "ĐỘC QUYỀN",
+     "at": [
+      3,
+      "độc"
+     ],
+     "acc": true,
+     "size": 200
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "NGUỒN TIỀN",
+   "rows": [
+    {
+     "k": "VAY NGÂN HÀNG",
+     "v": "✓",
+     "at": [
+      4,
+      "ngân"
+     ]
+    },
+    {
+     "k": "BÁN TRÁI PHIẾU",
+     "v": "✓",
+     "at": [
+      4,
+      "trái"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "TIỀN NGƯỜI MỚI",
+     "at": [
+      5,
+      "tiền"
+     ]
+    },
+    {
+     "text": "→ CỔ TỨC NGƯỜI CŨ",
+     "at": [
+      5,
+      "cũ",
+      0,
+      -0.3
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 6,
+   "day": "PARIS",
+   "date": "12.03.1932",
+   "groupAt": [
+    [
+     6,
+     "3"
+    ],
+    [
+     6,
+     "3",
+     0,
+     0.3
+    ],
+    [
+     6,
+     "1932"
+    ]
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "TỰ SÁT",
+   "sub": "KẾT LUẬN CỦA CẢNH SÁT PHÁP",
+   "white": true,
+   "bg": "office"
+  },
+  {
+   "type": "photo",
+   "at": 8,
+   "img": "office",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": {
+    "text": "MỞ SỔ SÁCH",
+    "at": [
+     8,
+     "sổ"
+    ]
+   },
+   "credit": "VĂN PHÒNG CỦA KREUGER · STOCKHOLM"
+  },
+  {
+   "type": "file",
+   "at": 9,
+   "k": "KIỂM TOÁN · 1932",
+   "name": "SỔ SÁCH\nBỊ LÀM GIẢ",
+   "desc": "Rõ ràng với bất kỳ ai biết kế toán",
+   "stamp": {
+    "text": "GIẢ MẠO",
+    "at": [
+     9,
+     "giả"
+    ]
+   }
+  },
+  {
+   "type": "hero",
+   "at": 10,
+   "img": "kreuger",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "VUA DIÊM",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Ivar_Kreuger"
+ ]
+}

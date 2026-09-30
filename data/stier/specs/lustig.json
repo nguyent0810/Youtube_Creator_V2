@@ -1,0 +1,269 @@
+{
+ "title": "Người đàn ông bán tháp Eiffel… hai lần",
+ "description": "Năm 1925, Victor Lustig tự xưng quan chức Bộ Bưu điện Pháp, mời các ông trùm sắt vụn tới khách sạn sang và rao bán tháp Eiffel. Kết cục của hắn nằm trong một tủ đồ ở New York.",
+ "tags": [
+  "Victor Lustig",
+  "bán tháp Eiffel",
+  "lừa đảo",
+  "tiền giả",
+  "Alcatraz",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1925",
+ "sub": "NGƯỜI BÁN THÁP EIFFEL",
+ "acc": [
+  "eiffel",
+  "lustig",
+  "paris",
+  "poisson",
+  "york",
+  "alcatraz",
+  "51"
+ ],
+ "lines": [
+  "Năm 1925, một người đàn ông rao bán tháp Eiffel.",
+  "Hắn tự xưng là phó tổng giám đốc Bộ Bưu điện Pháp.",
+  "Mời các ông trùm sắt vụn tới một khách sạn sang.",
+  "Tin mật: Paris không kham nổi chi phí, muốn bán tháp làm sắt vụn.",
+  "Một người tên André Poisson cắn câu.",
+  "Còn đưa thêm tiền hối lộ.",
+  "Lustig đoán nạn nhân sẽ xấu hổ, không dám báo cảnh sát.",
+  "Hắn nổi danh là \"người bán tháp Eiffel hai lần\".",
+  "Mười năm sau, hắn bị bắt ở New York vì in tiền giả.",
+  "Chiếc chìa khóa trong túi mở ra một tủ đồ: 51 nghìn đô tiền giả.",
+  "Án 15 năm, ở Alcatraz.",
+  "Còn tháp Eiffel… vẫn đứng đó."
+ ],
+ "imgs": {
+  "tower": "File:Tour Eiffel Citroen.jpg",
+  "girders": "File:Eiffel Tower, construction view in 1889 of the girders of the first story.jpg",
+  "mug": "File:Victor Lustig Mugshot.jpeg",
+  "wanted": "File:176656691 dac54e5c-86c6-43e4-956c-db508d3b4780.jpg",
+  "note": "File:Counterfeit United States $10 banknote of Victor Lustig.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "tower",
+   "frame": "print",
+   "tone": "bw",
+   "intro": true,
+   "head": "THÁP EIFFEL",
+   "tape": {
+    "text": "“cần bán”",
+    "at": [
+     0,
+     "bán"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 1,
+   "k": "DANH THIẾP",
+   "name": "PHÓ TỔNG\nGIÁM ĐỐC",
+   "desc": "Bộ Bưu điện & Điện tín Pháp",
+   "stamp": {
+    "text": "GIẢ DANH",
+    "at": [
+     1,
+     "pháp"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "ÔNG TRÙM",
+     "at": [
+      2,
+      "ông"
+     ]
+    },
+    {
+     "text": "SẮT VỤN",
+     "at": [
+      2,
+      "sắt"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 3,
+   "img": "girders",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "label": {
+    "text": "TIN MẬT: BÁN LÀM SẮT VỤN",
+    "at": [
+     3,
+     "bán"
+    ]
+   },
+   "credit": "KHUNG SẮT THÁP EIFFEL · 1889"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "ANDRÉ POISSON",
+     "at": [
+      4,
+      "andré"
+     ]
+    },
+    {
+     "text": "CẮN CÂU",
+     "at": [
+      4,
+      "cắn"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "POISSON TRẢ",
+   "rows": [
+    {
+     "k": "TIỀN MUA THÁP",
+     "v": "✓",
+     "at": [
+      5,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "k": "TIỀN HỐI LỘ",
+     "v": "✓",
+     "at": [
+      5,
+      "hối"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "XẤU HỔ",
+     "at": [
+      6,
+      "xấu"
+     ]
+    },
+    {
+     "text": "KHÔNG BÁO CẢNH SÁT",
+     "at": [
+      6,
+      "báo"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "BÁN 2 LẦN",
+   "sub": "BIỆT DANH CỦA VICTOR LUSTIG",
+   "bg": "tower"
+  },
+  {
+   "type": "mug",
+   "at": 8,
+   "ghost": "1935",
+   "mug": {
+    "img": "mug",
+    "name": "VICTOR LUSTIG",
+    "at": [
+     8,
+     "bắt"
+    ],
+    "pos": "30% 30%"
+   },
+   "stamp": {
+    "text": "TIỀN GIẢ",
+    "at": [
+     8,
+     "giả"
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "at": 9,
+   "prefix": "$",
+   "to": 51000,
+   "label": "TIỀN GIẢ TRONG TỦ",
+   "until": [
+    9,
+    "51",
+    0,
+    0.3
+   ],
+   "img": "note",
+   "imgAt": [
+    9,
+    "giả"
+   ]
+  },
+  {
+   "type": "mug",
+   "at": 10,
+   "ghost": "ALCATRAZ",
+   "mug": {
+    "img": "wanted",
+    "name": "VICTOR LUSTIG",
+    "at": [
+     10,
+     null,
+     0,
+     0.3
+    ]
+   },
+   "bars": {
+    "at": [
+     10,
+     "alcatraz"
+    ]
+   },
+   "big": {
+    "text": "15 NĂM",
+    "small": "ALCATRAZ",
+    "at": [
+     10,
+     "15"
+    ]
+   }
+  },
+  {
+   "type": "hero",
+   "at": 11,
+   "img": "tower",
+   "frame": "print",
+   "tone": "bw",
+   "loop": true,
+   "head": "THÁP EIFFEL",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Victor_Lustig"
+ ]
+}

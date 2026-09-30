@@ -1,0 +1,187 @@
+{
+ "title": "“Tội ác hoàn hảo” sụp đổ vì một cái bản lề kính",
+ "description": "Năm 1924, hai sinh viên Leopold và Loeb muốn chứng minh mình đủ thông minh để phạm một tội ác hoàn hảo. Cảnh sát tìm thấy một cặp kính gần hiện trường, với một cái bản lề rất hiếm.",
+ "tags": [
+  "Leopold và Loeb",
+  "Chicago 1924",
+  "tội ác hoàn hảo",
+  "Clarence Darrow",
+  "chứng cứ",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1924",
+ "sub": "LEOPOLD & LOEB · CHICAGO",
+ "acc": [
+  "chicago",
+  "leopold",
+  "loeb",
+  "kính",
+  "bản",
+  "lề",
+  "ba",
+  "99"
+ ],
+ "lines": [
+  "Năm 1924, hai sinh viên xuất sắc ở Chicago muốn chứng minh mình đủ thông minh để phạm một tội ác hoàn hảo.",
+  "Nathan Leopold, 19 tuổi, và Richard Loeb, 18 tuổi.",
+  "Họ bắt cóc và sát hại cậu bé Bobby Franks, 14 tuổi.",
+  "Rồi gửi thư đòi tiền chuộc, đánh bằng một chiếc máy chữ ăn trộm.",
+  "Nhưng cảnh sát tìm thấy một cặp kính gần hiện trường.",
+  "Tròng kính, gọng kính đều phổ thông.",
+  "Chỉ có cái bản lề là đặc biệt.",
+  "Cả Chicago chỉ ba người mua loại này.",
+  "Một trong số đó là Leopold.",
+  "Cả hai lĩnh án chung thân cộng 99 năm.",
+  "Tội ác hoàn hảo… gãy vì một cái bản lề."
+ ],
+ "imgs": {
+  "trial": "File:Leopold and Loeb trial photo 1924.jpg",
+  "note": "File:Leopold and Loeb's ransom note for Bobby Franks.jpg",
+  "forward": "File:Forward Art Section August 3 1924.jpg",
+  "darrow": "File:Clarence Darrow.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "trial",
+   "frame": "print",
+   "tone": "bw",
+   "intro": true,
+   "head": "TỘI ÁC HOÀN HẢO"
+  },
+  {
+   "type": "photo",
+   "at": 1,
+   "img": "trial",
+   "tone": "bw",
+   "focus": [
+    0.5,
+    0.4
+   ],
+   "label": {
+    "text": "LEOPOLD 19 · LOEB 18",
+    "at": [
+     1,
+     "loeb"
+    ]
+   },
+   "credit": "ẢNH PHIÊN TÒA · 1924"
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "BOBBY FRANKS · 14 TUỔI",
+   "white": true,
+   "bg": "forward"
+  },
+  {
+   "type": "evidence",
+   "at": 3,
+   "img": "note",
+   "tone": "bw",
+   "tag": "TANG VẬT · THƯ ĐÒI TIỀN CHUỘC",
+   "credit": "ĐÁNH BẰNG MÁY CHỮ ĂN TRỘM · 1924"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "MỘT CẶP KÍNH",
+     "at": [
+      4,
+      "kính"
+     ],
+     "serif": true,
+     "size": 170
+    },
+    {
+     "text": "GẦN HIỆN TRƯỜNG",
+     "at": [
+      4,
+      "hiện"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "GIÁM ĐỊNH CẶP KÍNH",
+   "rows": [
+    {
+     "k": "TRÒNG KÍNH",
+     "v": "PHỔ THÔNG",
+     "at": [
+      5,
+      "tròng"
+     ]
+    },
+    {
+     "k": "GỌNG KÍNH",
+     "v": "PHỔ THÔNG",
+     "at": [
+      5,
+      "gọng"
+     ]
+    }
+   ],
+   "total": {
+    "k": "BẢN LỀ",
+    "v": "ĐẶC BIỆT",
+    "at": [
+     6,
+     "bản"
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "to": 3,
+   "label": "NGƯỜI MUA · CẢ CHICAGO",
+   "until": [
+    7,
+    "ba",
+    0,
+    0.2
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "text": "LEOPOLD",
+   "sub": "MỘT TRONG BA NGƯỜI MUA",
+   "bg": "trial"
+  },
+  {
+   "type": "file",
+   "at": 9,
+   "k": "LUẬT SƯ: CLARENCE DARROW",
+   "name": "CHUNG THÂN\n+ 99 NĂM",
+   "desc": "Cả hai bị cáo",
+   "img": "darrow",
+   "stamp": {
+    "text": "PHÁN QUYẾT",
+    "at": [
+     9,
+     "án"
+    ]
+   }
+  },
+  {
+   "type": "hero",
+   "at": 10,
+   "img": "trial",
+   "frame": "print",
+   "tone": "bw",
+   "loop": true,
+   "head": "MỘT CÁI BẢN LỀ",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Leopold_and_Loeb"
+ ]
+}

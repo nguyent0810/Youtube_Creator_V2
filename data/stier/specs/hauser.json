@@ -1,0 +1,202 @@
+{
+ "title": "Cậu bé bí ẩn ở Nuremberg: 196 năm sau, ADN mới có câu trả lời",
+ "description": "Ngày 26/5/1828, Kaspar Hauser xuất hiện giữa phố Nuremberg với hai lá thư, chỉ chịu ăn bánh mì và nước lã. Người ta đồn cậu là hoàng tử nhà Baden. Năm 2024, ADN lên tiếng.",
+ "tags": [
+  "Kaspar Hauser",
+  "Nuremberg 1828",
+  "bí ẩn lịch sử",
+  "ADN",
+  "nhà Baden",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1828",
+ "sub": "KASPAR HAUSER",
+ "acc": [
+  "nuremberg",
+  "hauser",
+  "baden",
+  "adn",
+  "2024",
+  "1833",
+  "tối"
+ ],
+ "lines": [
+  "Ngày 26 tháng 5 năm 1828, một cậu thiếu niên xuất hiện giữa phố Nuremberg.",
+  "Cậu cầm theo hai lá thư.",
+  "Cậu chỉ chịu ăn bánh mì và nước lã.",
+  "Tên cậu: Kaspar Hauser.",
+  "Cậu kể mình lớn lên trong một phòng giam tối, hoàn toàn cô độc.",
+  "Người ta đồn cậu là hoàng tử nhà Baden, bị giấu đi vì tranh chấp ngôi vị.",
+  "Năm 1833, cậu chết vì một vết đâm.",
+  "Cái chết ấy, đến nay vẫn gây tranh cãi.",
+  "Năm 2024, xét nghiệm ADN có câu trả lời:",
+  "cậu không phải con cháu nhà Baden.",
+  "Vậy cậu thiếu niên ở Nuremberg là ai?"
+ ],
+ "imgs": {
+  "kaspar": "File:Hauser Kreul.jpg",
+  "mill": "File:Mill pencil drawing by Kaspar Hauser, 1829.jpg",
+  "note": "File:Spiegelschriftzettel von Kaspar Hauser.jpg",
+  "stephanie": "File:StephanieB.jpg",
+  "grave": "File:Kaspar hauser grab.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "kaspar",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "CẬU THIẾU NIÊN"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "2",
+     "at": [
+      1,
+      "hai"
+     ],
+     "size": 300,
+     "serif": true,
+     "acc": true
+    },
+    {
+     "text": "LÁ THƯ",
+     "at": [
+      1,
+      "thư"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "THỰC ĐƠN",
+   "rows": [
+    {
+     "k": "BÁNH MÌ",
+     "v": "✓",
+     "at": [
+      2,
+      "bánh"
+     ]
+    },
+    {
+     "k": "NƯỚC LÃ",
+     "v": "✓",
+     "at": [
+      2,
+      "nước"
+     ]
+    }
+   ],
+   "total": {
+    "k": "MỌI THỨ KHÁC",
+    "v": "✗",
+    "at": [
+     2,
+     "lã",
+     0,
+     0.3
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 3,
+   "k": "NUREMBERG · 1828",
+   "name": "KASPAR\nHAUSER",
+   "desc": "Sinh khoảng 1812",
+   "img": "kaspar"
+  },
+  {
+   "type": "photo",
+   "at": 4,
+   "img": "mill",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "TRANH KASPAR TỰ VẼ · 1829",
+    "at": [
+     4,
+     "tối"
+    ],
+    "y": 1300
+   }
+  },
+  {
+   "type": "photo",
+   "at": 5,
+   "img": "stephanie",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "LỜI ĐỒN: HOÀNG TỬ NHÀ BADEN",
+    "at": [
+     5,
+     "hoàng"
+    ],
+    "y": 1330
+   }
+  },
+  {
+   "type": "evidence",
+   "at": 6,
+   "img": "note",
+   "tone": "sepia",
+   "tag": "TANG VẬT · 1833",
+   "credit": "MẢNH GIẤY VIẾT NGƯỢC LIÊN QUAN TỚI VỤ ĐÂM"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "ÁM SÁT?",
+     "at": [
+      7,
+      "cái"
+     ]
+    },
+    {
+     "text": "TRANH CÃI",
+     "at": [
+      7,
+      "tranh"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 8,
+   "day": "XÉT NGHIỆM ADN",
+   "date": "2024",
+   "groupAt": [
+    [
+     8,
+     "2024"
+    ]
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 9,
+   "text": "KHÔNG PHẢI\nNHÀ BADEN",
+   "bg": "kaspar"
+  },
+  {
+   "type": "question",
+   "at": 10,
+   "text": "Cậu là ai?"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Kaspar_Hauser"
+ ]
+}

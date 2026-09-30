@@ -1,0 +1,177 @@
+{
+ "title": "Thảm sát ngày Valentine 1929: kẻ giết người mặc đồng phục cảnh sát",
+ "description": "Ngày 14/2/1929, hai \"cảnh sát\" bước vào một gara ở Chicago. Bảy người của băng North Side bị bắt đứng úp mặt vào tường. Nghi ngờ đổ dồn vào Al Capone, nhưng không ai bị buộc tội.",
+ "tags": [
+  "thảm sát ngày Valentine",
+  "Al Capone",
+  "Bugs Moran",
+  "Chicago 1929",
+  "Calvin Goddard",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1929",
+ "sub": "THẢM SÁT NGÀY VALENTINE",
+ "acc": [
+  "chicago",
+  "capone",
+  "goddard",
+  "valentine",
+  "cảnh",
+  "sát"
+ ],
+ "lines": [
+  "Ngày 14 tháng 2 năm 1929, hai \"cảnh sát\" bước vào một gara ở Chicago.",
+  "Bảy người của băng North Side bị bắt đứng úp mặt vào tường.",
+  "Rồi bị bắn từ phía sau, bằng súng tiểu liên.",
+  "Khi rời đi, hai kẻ mặc thường phục giơ tay đi trước…",
+  "hai \"cảnh sát\" cầm súng đi sau, như đang áp giải.",
+  "Một nạn nhân sống thêm ít lâu, nhưng không chịu khai kẻ giết mình.",
+  "Nghi ngờ đổ dồn vào Al Capone.",
+  "Chuyên gia đạn đạo Goddard xác nhận: súng của cảnh sát Chicago không được dùng.",
+  "Nhiều kẻ bị bắt, nhưng thiếu bằng chứng, không ai bị buộc tội.",
+  "Kẻ giết người… mặc đồng phục cảnh sát."
+ ],
+ "imgs": {
+  "diagram": "File:Diagram showing the St Valentine's Day Massacre.jpg",
+  "moran": "File:George 'Bugs' Moran.jpg",
+  "capone": "File:AlCaponemugshotCPD.jpg",
+  "tommy": "File:Thompson submachine gun at Alcatraz.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "diagram",
+   "frame": "print",
+   "tone": "bw",
+   "intro": true,
+   "head": "HAI “CẢNH SÁT”"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 7,
+   "label": "NGƯỜI · BĂNG NORTH SIDE",
+   "until": [
+    1,
+    "north"
+   ],
+   "sub": {
+    "text": "ÚP MẶT VÀO TƯỜNG",
+    "at": [
+     1,
+     "tường"
+    ]
+   }
+  },
+  {
+   "type": "evidence",
+   "at": 2,
+   "img": "tommy",
+   "tone": "bw",
+   "tag": "SÚNG TIỂU LIÊN THOMPSON",
+   "credit": "MẪU THOMPSON M1928 · ẢNH MINH HỌA"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "THƯỜNG PHỤC",
+     "at": [
+      3,
+      "thường"
+     ]
+    },
+    {
+     "text": "GIƠ TAY",
+     "at": [
+      3,
+      "giơ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "“CẢNH SÁT”",
+     "at": [
+      4,
+      "cảnh"
+     ],
+     "serif": true
+    },
+    {
+     "text": "ÁP GIẢI",
+     "at": [
+      4,
+      "áp"
+     ],
+     "acc": true,
+     "size": 200
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 5,
+   "text": "Không khai.",
+   "by": "NẠN NHÂN SỐNG SÓT ÍT PHÚT"
+  },
+  {
+   "type": "file",
+   "at": 6,
+   "k": "NGHI PHẠM SỐ MỘT",
+   "name": "AL\nCAPONE",
+   "desc": "Trùm băng Chicago Outfit",
+   "img": "capone",
+   "imgPos": "20% 30%"
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "KHÔNG PHẢI\nSÚNG CẢNH SÁT",
+   "sub": "KẾT LUẬN CỦA CALVIN GODDARD",
+   "bg": "diagram"
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "0",
+     "at": [
+      8,
+      "không"
+     ],
+     "size": 300,
+     "serif": true,
+     "acc": true
+    },
+    {
+     "text": "NGƯỜI BỊ BUỘC TỘI",
+     "at": [
+      8,
+      "buộc"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "diagram",
+   "frame": "print",
+   "tone": "bw",
+   "loop": true,
+   "head": "HAI “CẢNH SÁT”",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Saint_Valentine%27s_Day_Massacre"
+ ]
+}

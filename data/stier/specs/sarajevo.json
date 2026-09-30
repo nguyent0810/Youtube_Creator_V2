@@ -1,0 +1,230 @@
+{
+ "title": "Một lần rẽ nhầm đường châm ngòi cho Thế chiến thứ nhất",
+ "description": "Sáng 28/6/1914, vụ ném bom vào đoàn xe của Thái tử Áo Franz Ferdinand thất bại. Rồi tài xế rẽ nhầm đường, lùi xe và chết máy, ngay trước mặt Gavrilo Princip.",
+ "tags": [
+  "Franz Ferdinand",
+  "ám sát Sarajevo",
+  "Gavrilo Princip",
+  "Thế chiến thứ nhất",
+  "Sarajevo 1914",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1914",
+ "sub": "SARAJEVO",
+ "acc": [
+  "sarajevo",
+  "princip",
+  "ferdinand",
+  "latin",
+  "xyanua",
+  "13",
+  "nhầm"
+ ],
+ "lines": [
+  "Một lần rẽ nhầm đường ở Sarajevo, năm 1914, châm ngòi cho cả một cuộc thế chiến.",
+  "Sáng 28 tháng 6, đoàn xe của Thái tử Áo, Franz Ferdinand, bị ném bom.",
+  "Quả bom bật khỏi mui xe, nổ dưới chiếc xe phía sau.",
+  "Kẻ ném bom nuốt thuốc độc xyanua, nhảy xuống sông.",
+  "Thuốc đã cũ, chỉ làm hắn nôn. Sông chỉ sâu 13 phân.",
+  "Lộ trình được đổi, nhưng không ai báo cho tài xế.",
+  "Xe rẽ phải ở cầu Latin. Rẽ nhầm.",
+  "Tài xế lùi xe, và chết máy.",
+  "Ngay trước mặt Gavrilo Princip, người đang đứng cạnh một cửa hàng.",
+  "Hai phát súng, và thế giới đổi hướng.",
+  "Tất cả từ một lần rẽ nhầm đường."
+ ],
+ "imgs": {
+  "franz": "File:Franz ferdinand.jpg",
+  "map": "File:1914 Sarajevo assassination map (cropped).jpg",
+  "domenica": "File:DC-1914-27-d-Sarajevo-cropped.jpg",
+  "princip": "File:Gavrilo Princip, outside court.jpg",
+  "trial": "File:Proces w Sarajewie s.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "franz",
+   "frame": "print",
+   "tone": "bw",
+   "intro": true,
+   "head": "RẼ NHẦM ĐƯỜNG"
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "bg": "map",
+   "day": "SARAJEVO",
+   "date": "28.06.1914",
+   "groupAt": [
+    [
+     1,
+     "28"
+    ],
+    [
+     1,
+     "6"
+    ],
+    [
+     1,
+     "6",
+     0,
+     0.35
+    ]
+   ],
+   "stamp": {
+    "text": "NÉM BOM",
+    "at": [
+     1,
+     "ném"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 2,
+   "img": "domenica",
+   "mode": "print",
+   "tone": "color",
+   "label": {
+    "text": "BOM NỔ DƯỚI XE SAU",
+    "at": [
+     2,
+     "nổ"
+    ],
+    "y": 1330
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "XYANUA",
+     "at": [
+      3,
+      "xyanua"
+     ],
+     "acc": true,
+     "size": 200
+    },
+    {
+     "text": "→ NHẢY SÔNG",
+     "at": [
+      3,
+      "nhảy"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "THẤT BẠI KÉP",
+   "rows": [
+    {
+     "k": "THUỐC ĐỘC",
+     "v": "CŨ · CHỈ GÂY NÔN",
+     "at": [
+      4,
+      "thuốc"
+     ]
+    },
+    {
+     "k": "SÔNG MILJACKA",
+     "v": "SÂU 13 CM",
+     "at": [
+      4,
+      "13"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 5,
+   "k": "LỘ TRÌNH MỚI",
+   "name": "KHÔNG AI\nBÁO TÀI XẾ",
+   "desc": "Đoàn xe vẫn đi theo đường cũ",
+   "stamp": {
+    "text": "SƠ SUẤT",
+    "at": [
+     5,
+     "báo"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 6,
+   "img": "map",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": {
+    "text": "CẦU LATIN · RẼ PHẢI",
+    "at": [
+     6,
+     "rẽ"
+    ]
+   },
+   "credit": "SƠ ĐỒ VỤ ÁM SÁT · BÁO CÁO CHÍNH THỨC"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "LÙI XE",
+     "at": [
+      7,
+      "lùi"
+     ]
+    },
+    {
+     "text": "CHẾT MÁY",
+     "at": [
+      7,
+      "chết"
+     ],
+     "acc": true,
+     "size": 200
+    }
+   ]
+  },
+  {
+   "type": "mug",
+   "at": 8,
+   "ghost": "PRINCIP",
+   "mug": {
+    "img": "princip",
+    "name": "GAVRILO PRINCIP",
+    "at": [
+     8,
+     "gavrilo"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 9,
+   "text": "2 PHÁT SÚNG",
+   "sub": "THẾ GIỚI ĐỔI HƯỚNG",
+   "bg": "trial"
+  },
+  {
+   "type": "hero",
+   "at": 10,
+   "img": "franz",
+   "frame": "print",
+   "tone": "bw",
+   "loop": true,
+   "head": "RẼ NHẦM ĐƯỜNG",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Assassination_of_Archduke_Franz_Ferdinand"
+ ]
+}

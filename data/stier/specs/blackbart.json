@@ -1,0 +1,205 @@
+{
+ "title": "Tên cướp lịch sự nhất miền Tây bị bắt vì một chiếc khăn tay",
+ "description": "Black Bart cướp xe ngựa của Wells Fargo ít nhất 28 lần, đội bao bột mì làm mặt nạ và để lại những bài thơ. Năm 1883, hắn đánh rơi một chiếc khăn tay có mã giặt ủi F.X.O.7.",
+ "tags": [
+  "Black Bart",
+  "Charles Boles",
+  "Wells Fargo",
+  "cướp xe ngựa",
+  "miền Tây nước Mỹ",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1883",
+ "sub": "BLACK BART",
+ "acc": [
+  "black",
+  "bart",
+  "wells",
+  "fargo",
+  "28",
+  "90",
+  "khăn",
+  "boles",
+  "quentin"
+ ],
+ "lines": [
+  "Hắn cướp xe ngựa chở tiền của Wells Fargo ít nhất 28 lần…",
+  "và, theo lời kể, chưa từng bóp cò.",
+  "Black Bart: đội bao bột mì khoét hai lỗ làm mặt nạ.",
+  "Lịch sự, không chửi thề, trừ trong những bài thơ hắn để lại.",
+  "Năm 1883, trong lúc tháo chạy, hắn đánh rơi một chiếc khăn tay.",
+  "Trên khăn có một mã giặt ủi gồm ba chữ cái và một con số.",
+  "Thám tử Wells Fargo đi hỏi khoảng 90 tiệm giặt ở San Francisco.",
+  "Và lần ra chủ nhân: Charles Boles, một quý ông lịch lãm.",
+  "Hắn lĩnh sáu năm tù ở San Quentin.",
+  "Chỉ vì một chiếc khăn tay."
+ ],
+ "imgs": {
+  "bart": "File:Charles Bowles aka Black Bart.jpg",
+  "standing": "File:Charles Bowles aka Black Bart standing.jpg",
+  "wanted": "File:Black Bart wanted poster.jpg",
+  "coach": "File:California and Oregon Stagecoach Co.jpg",
+  "coach2": "File:Stagecoach to the Sanger Mill.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "coach",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "28 LẦN CƯỚP"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "0",
+     "at": [
+      1,
+      "chưa"
+     ],
+     "size": 300,
+     "acc": true,
+     "serif": true
+    },
+    {
+     "text": "PHÁT SÚNG",
+     "at": [
+      1,
+      "bóp"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "BAO BỘT MÌ",
+     "at": [
+      2,
+      "bao"
+     ]
+    },
+    {
+     "text": "+ 2 LỖ",
+     "at": [
+      2,
+      "hai"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 3,
+   "text": "Không chửi thề, trừ trong thơ.",
+   "by": "PHONG CÁCH CỦA BLACK BART"
+  },
+  {
+   "type": "photo",
+   "at": 4,
+   "img": "coach2",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": {
+    "text": "1883 · ĐÁNH RƠI KHĂN TAY",
+    "at": [
+     4,
+     "khăn"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "F.X.O.7",
+   "sub": "MÃ GIẶT ỦI TRÊN KHĂN TAY",
+   "white": true
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "to": 90,
+   "prefix": "~",
+   "label": "TIỆM GIẶT",
+   "until": [
+    6,
+    "90",
+    0,
+    0.3
+   ],
+   "sub": {
+    "text": "SAN FRANCISCO",
+    "at": [
+     6,
+     "san"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 7,
+   "k": "CHỦ NHÂN CHIẾC KHĂN",
+   "name": "CHARLES\nBOLES",
+   "desc": "“Quý ông” · tức Black Bart",
+   "img": "bart",
+   "stamp": {
+    "text": "LỘ DIỆN",
+    "at": [
+     7,
+     "boles"
+    ]
+   }
+  },
+  {
+   "type": "mug",
+   "at": 8,
+   "ghost": "SAN QUENTIN",
+   "mug": {
+    "img": "standing",
+    "name": "CHARLES BOLES",
+    "at": [
+     8,
+     null,
+     0,
+     0.3
+    ]
+   },
+   "bars": {
+    "at": [
+     8,
+     "tù"
+    ]
+   },
+   "big": {
+    "text": "6 NĂM",
+    "small": "SAN QUENTIN",
+    "at": [
+     8,
+     "sáu"
+    ]
+   }
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "coach",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "28 LẦN CƯỚP",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Black_Bart_(outlaw)"
+ ]
+}

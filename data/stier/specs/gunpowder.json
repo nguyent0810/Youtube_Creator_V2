@@ -1,0 +1,186 @@
+{
+ "title": "36 thùng thuốc súng dưới Thượng viện Anh: đêm 4/11/1605",
+ "description": "Đêm 4/11/1605, lính canh tìm thấy một người đàn ông cạnh 36 thùng thuốc súng dưới Thượng viện. Hắn khai tên John Johnson. Tên thật: Guy Fawkes.",
+ "tags": [
+  "Âm mưu Thuốc súng",
+  "Guy Fawkes",
+  "Gunpowder Plot",
+  "Thượng viện Anh",
+  "5 tháng 11",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1605",
+ "sub": "ÂM MƯU THUỐC SÚNG",
+ "acc": [
+  "fawkes",
+  "monteagle",
+  "johnson",
+  "36",
+  "thượng",
+  "viện"
+ ],
+ "lines": [
+  "Đêm 4 tháng 11 năm 1605, dưới tòa nhà Thượng viện Anh…",
+  "lính canh tìm thấy một người đàn ông đứng cạnh 36 thùng thuốc súng.",
+  "Sáng hôm sau, nhà vua sẽ tới khai mạc Quốc hội ngay phía trên.",
+  "Âm mưu bị lộ vì một lá thư nặc danh gửi Lord Monteagle.",
+  "Người đàn ông khai tên là John Johnson.",
+  "Tên thật: Guy Fawkes.",
+  "Nhà vua cho phép tra tấn.",
+  "Chữ ký của hắn sau đó run rẩy, gần như không đọc nổi.",
+  "Hắn bị kết án tử hình.",
+  "Hơn 400 năm sau, nước Anh vẫn đốt lửa và bắn pháo hoa mỗi đêm 5 tháng 11."
+ ],
+ "imgs": {
+  "lords": "File:John Thomas Smith - Views of the East Side of the House of Lords, the East End of the Princes Chamber - B1977.14.18952 - Yale Center for British Art.jpg",
+  "consp": "File:The Gunpowder Plot Conspirators, 1605 from NPG.jpg",
+  "letter": "File:Monteagle letter.jpeg",
+  "sig": "File:Guy fawkes torture signatures.jpg",
+  "exec": "File:The execution of Guy Fawkes' (Guy Fawkes) by Claes (Nicolaes) Jansz Visscher.jpg",
+  "cellar": "File:Gunpowder plot parliament cellar.jpg",
+  "guy": "File:Procession of a guy.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "consp",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "THƯỢNG VIỆN ANH"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 36,
+   "label": "THÙNG THUỐC SÚNG",
+   "until": [
+    1,
+    "36",
+    0,
+    0.3
+   ],
+   "img": "cellar",
+   "tone": "sepia",
+   "imgAt": [
+    1,
+    "người"
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 2,
+   "img": "lords",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": {
+    "text": "NHÀ VUA · NGAY PHÍA TRÊN",
+    "at": [
+     2,
+     "vua"
+    ]
+   },
+   "credit": "HẦM DƯỚI THƯỢNG VIỆN · TRANH 1807"
+  },
+  {
+   "type": "evidence",
+   "at": 3,
+   "img": "letter",
+   "tone": "sepia",
+   "tag": "TANG VẬT · THƯ NẶC DANH",
+   "credit": "LÁ THƯ GỬI LORD MONTEAGLE · 10.1605"
+  },
+  {
+   "type": "file",
+   "at": 4,
+   "k": "LỜI KHAI",
+   "name": "JOHN\nJOHNSON",
+   "desc": "“Người hầu” trông coi căn hầm",
+   "stamp": {
+    "text": "TÊN GIẢ",
+    "at": [
+     5,
+     "tên"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "GUY FAWKES",
+   "sub": "TÊN THẬT"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "TRA TẤN",
+     "at": [
+      6,
+      "tra"
+     ],
+     "acc": true,
+     "size": 200
+    },
+    {
+     "text": "LỆNH CỦA NHÀ VUA",
+     "at": [
+      6,
+      "vua"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "evidence",
+   "at": 7,
+   "img": "sig",
+   "tone": "sepia",
+   "tag": "CHỮ KÝ CỦA FAWKES",
+   "credit": "TRÊN: SAU TRA TẤN · DƯỚI: MỘT CHỮ KÝ KHÁC"
+  },
+  {
+   "type": "photo",
+   "at": 8,
+   "img": "exec",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "stamp": {
+    "text": "TỬ HÌNH",
+    "at": [
+     8,
+     "tử"
+    ],
+    "x": 330,
+    "y": 1150
+   },
+   "credit": "TRANH KHẮC CỦA C. J. VISSCHER"
+  },
+  {
+   "type": "photo",
+   "at": 9,
+   "img": "guy",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "ĐÊM 5 THÁNG 11 · HƠN 400 NĂM",
+    "at": [
+     9,
+     "pháo"
+    ],
+    "y": 1300
+   }
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Gunpowder_Plot",
+  "https://en.wikipedia.org/wiki/Guy_Fawkes"
+ ]
+}

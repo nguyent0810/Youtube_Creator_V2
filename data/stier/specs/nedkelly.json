@@ -1,0 +1,226 @@
+{
+ "title": "Kẻ cướp mặc áo giáp làm từ lưỡi cày: trận đánh cuối của Ned Kelly",
+ "description": "Năm 1880, băng Kelly chiếm khách sạn ở Glenrowan và đối đầu cảnh sát trong 12 tiếng. Ned Kelly mặc áo giáp tự làm từ lưỡi cày, và cảnh sát tìm ra điểm yếu.",
+ "tags": [
+  "Ned Kelly",
+  "Glenrowan",
+  "áo giáp Ned Kelly",
+  "bushranger",
+  "nước Úc 1880",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1880",
+ "sub": "NED KELLY · GLENROWAN",
+ "acc": [
+  "kelly",
+  "glenrowan",
+  "melbourne",
+  "12",
+  "28",
+  "cày",
+  "chân"
+ ],
+ "lines": [
+  "Năm 1880, cảnh sát Úc đối mặt với một kẻ mặc áo giáp sắt tự làm.",
+  "Ned Kelly, thủ lĩnh băng cướp khét tiếng nhất nước Úc.",
+  "Băng Kelly lẩn trốn cảnh sát suốt hai năm.",
+  "Chúng chiếm khách sạn ở Glenrowan, giữ hàng chục con tin.",
+  "Áo giáp làm từ lưỡi cày.",
+  "Cuộc đấu súng kéo dài 12 tiếng.",
+  "Đạn không xuyên được giáp…",
+  "nên cảnh sát bắn vào đôi chân không được che.",
+  "Ned Kelly bị bắt với 28 vết thương.",
+  "Hàng nghìn người ký đơn xin tha.",
+  "Ngày 11 tháng 11 năm 1880, hắn bị treo cổ ở Melbourne.",
+  "Người ta kể, lời cuối của hắn là: đời là thế."
+ ],
+ "imgs": {
+  "stand": "File:A strange apparition Ned Kelly's last stand.jpg",
+  "mug": "File:Ned Kelly mugshot.jpg",
+  "armour": "File:Nedkellysarmour1882.jpg",
+  "capture": "File:Ned Kelly capture.jpg",
+  "gallows": "File:Ned Kelly Gallows.jpg",
+  "court": "File:Ned Kelly in court.jpg",
+  "tree": "File:Group at the Kelly Tree.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "stand",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "ÁO GIÁP SẮT",
+   "tape": {
+    "text": "“tự làm”",
+    "at": [
+     0,
+     "tự"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 1,
+   "k": "THỦ LĨNH BĂNG KELLY",
+   "name": "NED\nKELLY",
+   "desc": "Bushranger · Victoria, Úc",
+   "img": "mug"
+  },
+  {
+   "type": "photo",
+   "at": 2,
+   "img": "tree",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "label": {
+    "text": "2 NĂM LẨN TRỐN",
+    "at": [
+     2,
+     "hai"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 3,
+   "img": "capture",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "reveal": "wipe",
+   "label": {
+    "text": "GLENROWAN · HÀNG CHỤC CON TIN",
+    "at": [
+     3,
+     "con"
+    ]
+   }
+  },
+  {
+   "type": "evidence",
+   "at": 4,
+   "img": "armour",
+   "tone": "bw",
+   "tag": "TANG VẬT · LƯỠI CÀY",
+   "credit": "ÁO GIÁP CỦA NED KELLY · TRANH MINH HỌA 1880"
+  },
+  {
+   "type": "clock",
+   "at": 5,
+   "from": "GLENROWAN",
+   "plus": "12 TIẾNG",
+   "plusAt": [
+    5,
+    "12"
+   ],
+   "turns": 12
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "ĐẠN",
+     "at": [
+      6,
+      "đạn"
+     ],
+     "size": 200
+    },
+    {
+     "text": "KHÔNG XUYÊN GIÁP",
+     "at": [
+      6,
+      "xuyên"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "→ ĐÔI CHÂN",
+     "at": [
+      7,
+      "chân"
+     ],
+     "acc": true,
+     "size": 180
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 8,
+   "to": 28,
+   "label": "VẾT THƯƠNG",
+   "until": [
+    8,
+    "28",
+    0,
+    0.3
+   ],
+   "img": "stand",
+   "tone": "sepia",
+   "imgAt": [
+    8,
+    "bắt"
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 9,
+   "img": "court",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "HÀNG NGHÌN CHỮ KÝ XIN THA",
+    "at": [
+     9,
+     "đơn"
+    ],
+    "y": 1330
+   }
+  },
+  {
+   "type": "mug",
+   "at": 10,
+   "ghost": "11.11.1880",
+   "mug": {
+    "img": "mug",
+    "name": "NED KELLY",
+    "at": [
+     10,
+     null,
+     0,
+     0.3
+    ]
+   },
+   "stamp": {
+    "text": "TREO CỔ",
+    "at": [
+     10,
+     "treo"
+    ]
+   }
+  },
+  {
+   "type": "quote",
+   "at": 11,
+   "text": "Đời là thế.",
+   "by": "LỜI CUỐI ĐƯỢC KỂ LẠI CỦA NED KELLY"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Ned_Kelly"
+ ]
+}

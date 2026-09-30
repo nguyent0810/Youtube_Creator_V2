@@ -1,0 +1,252 @@
+{
+ "title": "Vì sao bảo tàng này treo khung tranh trống?",
+ "description": "Rạng sáng 18/3/1990, hai người mặc đồ cảnh sát vào Bảo tàng Isabella Stewart Gardner (Boston) và mang đi 13 tác phẩm. Đến nay chưa ai bị bắt, chưa bức nào được tìm lại.",
+ "tags": [
+  "Gardner Museum",
+  "vụ trộm tranh",
+  "Vermeer",
+  "Rembrandt",
+  "FBI",
+  "vụ án chưa có lời giải",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1990",
+ "sub": "BẢO TÀNG GARDNER · BOSTON",
+ "acc": [
+  "boston",
+  "rembrandt",
+  "degas",
+  "manet",
+  "vermeer",
+  "fbi",
+  "gardner",
+  "băng",
+  "keo",
+  "trống"
+ ],
+ "lines": [
+  "Có một bảo tàng ở Boston treo những chiếc khung tranh trống.",
+  "Rạng sáng 18 tháng 3 năm 1990, hai người mặc đồ cảnh sát xin vào.",
+  "Bảo vệ mở cửa.",
+  "Và bị trói, mắt quấn băng keo.",
+  "Hai kẻ đó ở lại suốt 81 phút.",
+  "Chúng mang đi 13 tác phẩm, có cả Rembrandt, Degas, Manet.",
+  "Và bức \"Buổi hòa nhạc\" của Vermeer, được cho là bức tranh mất tích đắt giá nhất thế giới.",
+  "FBI ước tính cả vụ: 500 triệu đô.",
+  "Tiền thưởng hiện nay: 10 triệu đô.",
+  "Hơn 35 năm, không ai bị bắt, không bức nào trở về.",
+  "Di chúc của bà Gardner cấm xê dịch bất cứ thứ gì trong bảo tàng.",
+  "Nên những chiếc khung trống vẫn treo đó.",
+  "Chờ."
+ ],
+ "imgs": {
+  "frames": "File:Empty Frames at Isabella Stewart Gardner Museum.jpg",
+  "storm": "File:Rembrandt Christ in the Storm on the Lake of Galilee.jpg",
+  "concert": "File:Vermeer The concert.JPG"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "frames",
+   "frame": "print",
+   "intro": true,
+   "head": "KHUNG TRANH TRỐNG"
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "bg": "storm",
+   "day": "RẠNG SÁNG",
+   "date": "18.03.1990",
+   "dayAt": [
+    1,
+    "rạng"
+   ],
+   "groupAt": [
+    [
+     1,
+     "18"
+    ],
+    [
+     1,
+     "3"
+    ],
+    [
+     1,
+     "1990"
+    ]
+   ],
+   "sub": {
+    "text": "HAI NGƯỜI MẶC ĐỒ CẢNH SÁT",
+    "at": [
+     1,
+     "hai"
+    ]
+   },
+   "stamp": {
+    "text": "XIN VÀO",
+    "at": [
+     1,
+     "xin",
+     0,
+     -0.05
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "BẢO VỆ",
+     "at": [
+      2,
+      "bảo"
+     ]
+    },
+    {
+     "text": "MỞ CỬA",
+     "at": [
+      2,
+      "mở"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "BĂNG KEO",
+   "sub": "TRÓI TAY · BỊT MẮT",
+   "bg": "frames"
+  },
+  {
+   "type": "clock",
+   "at": 4,
+   "from": "",
+   "plus": "81 PHÚT",
+   "plusAt": [
+    4,
+    "81"
+   ],
+   "turns": 3
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "to": 13,
+   "label": "TÁC PHẨM",
+   "until": [
+    5,
+    "tác"
+   ],
+   "img": "storm",
+   "tone": "color",
+   "sub": {
+    "text": "REMBRANDT · DEGAS · MANET",
+    "at": [
+     5,
+     "rembrandt"
+    ]
+   }
+  },
+  {
+   "type": "evidence",
+   "at": 6,
+   "img": "concert",
+   "tag": "TANG VẬT · VERMEER",
+   "credit": "“BUỔI HÒA NHẠC” · VERMEER · KHOẢNG 1664"
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "prefix": "$",
+   "to": 500,
+   "label": "TRIỆU ĐÔ",
+   "until": [
+    7,
+    "500"
+   ],
+   "sub": {
+    "text": "ƯỚC TÍNH CỦA FBI",
+    "at": [
+     7,
+     "fbi"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "text": "$10 TRIỆU",
+   "sub": "TIỀN THƯỞNG",
+   "white": true
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "0 NGƯỜI BỊ BẮT",
+     "at": [
+      9,
+      "không"
+     ]
+    },
+    {
+     "text": "0 BỨC TRỞ VỀ",
+     "at": [
+      9,
+      "không",
+      1
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 10,
+   "k": "DI CHÚC",
+   "name": "ISABELLA\nSTEWART GARDNER",
+   "desc": "1840–1924 · Boston",
+   "stamp": {
+    "text": "KHÔNG XÊ DỊCH",
+    "at": [
+     10,
+     "xê"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 11,
+   "img": "frames",
+   "tone": "color",
+   "focus": [
+    0.5,
+    0.35
+   ],
+   "label": {
+    "text": "VẪN TREO ĐÓ",
+    "at": [
+     11,
+     "treo"
+    ]
+   }
+  },
+  {
+   "type": "hero",
+   "at": 12,
+   "img": "frames",
+   "frame": "print",
+   "loop": true,
+   "head": "KHUNG TRANH TRỐNG",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Isabella_Stewart_Gardner_Museum_theft"
+ ]
+}

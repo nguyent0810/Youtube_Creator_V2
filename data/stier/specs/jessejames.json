@@ -1,0 +1,211 @@
+{
+ "title": "Tên cướp khét tiếng nhất miền Tây chết khi đang lau một bức tranh",
+ "description": "Sáng 3/4/1882, Jesse James tháo súng đặt lên ghế và đứng lên ghế lau một bức tranh bám bụi. Robert Ford, người hắn cho ở chung nhà, rút súng.",
+ "tags": [
+  "Jesse James",
+  "Robert Ford",
+  "miền Tây nước Mỹ",
+  "cướp tàu",
+  "Missouri 1882",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1882",
+ "sub": "JESSE JAMES",
+ "acc": [
+  "jesse",
+  "james",
+  "ford",
+  "missouri",
+  "10",
+  "tranh",
+  "bụi"
+ ],
+ "lines": [
+  "Tên cướp khét tiếng nhất miền Tây nước Mỹ chết khi đang lau một bức tranh.",
+  "Jesse James, kẻ cướp tàu, cướp ngân hàng suốt nhiều năm.",
+  "Thống đốc Missouri treo thưởng 10 nghìn đô để bắt hắn.",
+  "Hai anh em nhà Ford, người mới vào băng, dọn tới sống cùng.",
+  "Sáng 3 tháng 4 năm 1882, James tháo súng, đặt lên ghế sofa.",
+  "Hắn thấy một bức tranh bám bụi, bèn đứng lên ghế để lau.",
+  "Robert Ford rút súng, bắn vào sau đầu hắn.",
+  "Anh em Ford bị kết án treo cổ…",
+  "rồi được thống đốc ân xá, ngay trong cùng một ngày.",
+  "Tất cả, vì một bức tranh bám bụi."
+ ],
+ "imgs": {
+  "jesse": "File:Jesse James NYPost.jpg",
+  "woodcut": "File:Robert Ford shooting Jesse James.jpg",
+  "ford": "File:Robert Ford.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "jesse",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "MỘT BỨC TRANH",
+   "tape": {
+    "text": "“đang lau tranh”",
+    "at": [
+     0,
+     "lau"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 1,
+   "k": "HỒ SƠ · MISSOURI",
+   "name": "JESSE\nJAMES",
+   "desc": "Cướp tàu · cướp ngân hàng",
+   "img": "jesse"
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "prefix": "$",
+   "to": 10000,
+   "label": "TIỀN THƯỞNG",
+   "until": [
+    2,
+    "nghìn"
+   ],
+   "sub": {
+    "text": "THỐNG ĐỐC MISSOURI",
+    "at": [
+     2,
+     "thống"
+    ]
+   }
+  },
+  {
+   "type": "split",
+   "at": 3,
+   "title": "NGƯỜI MỚI VÀO BĂNG",
+   "a": {
+    "img": "ford",
+    "label": "ROBERT FORD",
+    "at": [
+     3,
+     "ford"
+    ]
+   },
+   "b": {
+    "img": "jesse",
+    "label": "JESSE JAMES",
+    "at": [
+     3,
+     "sống"
+    ]
+   }
+  },
+  {
+   "type": "date",
+   "at": 4,
+   "day": "ST. JOSEPH · MISSOURI",
+   "date": "03.04.1882",
+   "groupAt": [
+    [
+     4,
+     "3"
+    ],
+    [
+     4,
+     "4"
+    ],
+    [
+     4,
+     "1882"
+    ]
+   ],
+   "stamp": {
+    "text": "THÁO SÚNG",
+    "at": [
+     4,
+     "tháo"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "TRANH BÁM BỤI",
+     "at": [
+      5,
+      "tranh"
+     ]
+    },
+    {
+     "text": "ĐỨNG LÊN GHẾ",
+     "at": [
+      5,
+      "đứng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 6,
+   "img": "woodcut",
+   "mode": "print",
+   "tone": "sepia",
+   "stamp": {
+    "text": "SAU LƯNG",
+    "at": [
+     6,
+     "sau"
+    ],
+    "x": 300,
+    "y": 1180
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "ÁN TREO CỔ",
+     "at": [
+      7,
+      "treo"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "clock",
+   "at": 8,
+   "from": "TREO CỔ",
+   "to": "ÂN XÁ",
+   "swap": [
+    8,
+    "ân"
+   ],
+   "plus": "CÙNG MỘT NGÀY",
+   "plusAt": [
+    8,
+    "cùng"
+   ],
+   "turns": 1
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "jesse",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "MỘT BỨC TRANH",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Jesse_James"
+ ]
+}

@@ -1,0 +1,176 @@
+{
+ "title": "Rasputin ăn bánh tẩm xyanua mà không chết? Khám nghiệm tử thi nói khác",
+ "description": "Theo lời kể của chính kẻ giết ông, Rasputin ăn bánh tẩm xyanua, uống ba ly rượu độc mà vẫn không sao. Nhưng bản khám nghiệm tử thi không ghi nhận chất độc.",
+ "tags": [
+  "Rasputin",
+  "Felix Yusupov",
+  "Saint Petersburg 1916",
+  "xyanua",
+  "khám nghiệm tử thi",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1916",
+ "sub": "RASPUTIN · CUNG ĐIỆN MOIKA",
+ "acc": [
+  "rasputin",
+  "yusupov",
+  "xyanua",
+  "moika",
+  "ba",
+  "trán"
+ ],
+ "lines": [
+  "Truyền thuyết kể: Rasputin ăn bánh tẩm xyanua, uống ba ly rượu độc, mà vẫn không sao.",
+  "Đó là lời kể của chính kẻ giết ông: hoàng thân Felix Yusupov.",
+  "Rạng sáng 30 tháng 12 năm 1916, tại cung điện Moika, Saint Petersburg.",
+  "Một nhóm quý tộc cho rằng Rasputin đang thao túng hoàng hậu, đe dọa cả đế chế.",
+  "Nhưng con gái ông kể: cha tôi không ăn đồ ngọt.",
+  "Và bản khám nghiệm tử thi không ghi nhận chất độc.",
+  "Cũng không có dấu hiệu chết đuối.",
+  "Chỉ có ba vết đạn. Một phát bắn cự ly gần vào trán.",
+  "Người đàn ông không thể giết chết… có lẽ chỉ là một câu chuyện được kể hay."
+ ],
+ "imgs": {
+  "ras": "File:Rasputin PA.jpg",
+  "photo": "File:Rasputin Photo.jpg",
+  "daughter": "File:Rasputindaughtercropped.jpg",
+  "leaflet": "File:Rasputin listovka.jpg",
+  "bridge": "File:PolshoiPetrovskyMost.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "ras",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "KHÔNG THỂ GIẾT",
+   "tape": {
+    "text": "“bánh tẩm xyanua”",
+    "at": [
+     0,
+     "xyanua"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 1,
+   "k": "NGƯỜI KỂ CHUYỆN",
+   "name": "FELIX\nYUSUPOV",
+   "desc": "Hoàng thân · chính là kẻ giết người",
+   "stamp": {
+    "text": "NHÂN CHỨNG?",
+    "at": [
+     1,
+     "yusupov"
+    ]
+   }
+  },
+  {
+   "type": "date",
+   "at": 2,
+   "bg": "photo",
+   "day": "CUNG ĐIỆN MOIKA",
+   "date": "30.12.1916",
+   "groupAt": [
+    [
+     2,
+     "30"
+    ],
+    [
+     2,
+     "12"
+    ],
+    [
+     2,
+     "1916"
+    ]
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 3,
+   "img": "leaflet",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "“THAO TÚNG HOÀNG HẬU”",
+    "at": [
+     3,
+     "thao"
+    ],
+    "y": 1330
+   }
+  },
+  {
+   "type": "photo",
+   "at": 4,
+   "img": "daughter",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "“CHA TÔI KHÔNG ĂN ĐỒ NGỌT”",
+    "at": [
+     4,
+     "ngọt"
+    ],
+    "y": 1330
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "KHÁM NGHIỆM TỬ THI",
+   "rows": [
+    {
+     "k": "CHẤT ĐỘC",
+     "v": "KHÔNG",
+     "at": [
+      5,
+      "độc"
+     ]
+    },
+    {
+     "k": "CHẾT ĐUỐI",
+     "v": "KHÔNG",
+     "at": [
+      6,
+      "đuối"
+     ]
+    }
+   ],
+   "total": {
+    "k": "VẾT ĐẠN",
+    "v": "3",
+    "at": [
+     7,
+     "ba"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": [
+    7,
+    "một"
+   ],
+   "text": "CỰ LY GẦN",
+   "sub": "MỘT PHÁT VÀO TRÁN",
+   "bg": "ras"
+  },
+  {
+   "type": "hero",
+   "at": 8,
+   "img": "ras",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "MỘT CÂU CHUYỆN",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Grigori_Rasputin"
+ ]
+}

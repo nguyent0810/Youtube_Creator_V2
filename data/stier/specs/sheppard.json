@@ -1,0 +1,192 @@
+{
+ "title": "Vượt ngục 4 lần trong một năm, rồi nhập vào đám đông đang tìm mình",
+ "description": "Năm 1724, Jack Sheppard bị bắt năm lần và vượt ngục bốn lần. Có lần vừa thoát ra, hắn lẫn vào đám đông, chỉ tay lên mái nhà và hét: kia, hắn kìa!",
+ "tags": [
+  "Jack Sheppard",
+  "vượt ngục",
+  "London 1724",
+  "Newgate",
+  "Tyburn",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1724",
+ "sub": "JACK SHEPPARD · LONDON",
+ "acc": [
+  "sheppard",
+  "newgate",
+  "tyburn",
+  "1724",
+  "4",
+  "5",
+  "ống",
+  "khói"
+ ],
+ "lines": [
+  "Năm 1724, ở London, một tên trộm bị bắt năm lần…",
+  "và vượt ngục bốn lần.",
+  "Jack Sheppard, thợ mộc học việc, cao chưa tới mét sáu lăm.",
+  "Có lần hắn giũa đứt xích, nối chăn làm dây, tụt xuống từ cửa sổ.",
+  "Có lần vừa thoát ra, hắn lẫn vào đám đông đang hóng chuyện…",
+  "chỉ tay lên mái nhà, hét: kia, hắn kìa!",
+  "Rồi thong thả bỏ đi.",
+  "Ở nhà tù Newgate, chân còn đeo xiềng, hắn trèo ống khói, phá trần ra ngoài.",
+  "Dân nghèo London coi hắn là người hùng.",
+  "Nhưng lần bị bắt thứ năm, hắn bị treo cổ ở Tyburn, năm 22 tuổi.",
+  "Năm lần bị bắt. Bốn lần thoát."
+ ],
+ "imgs": {
+  "weir": "File:Jack Sheppard - Weir Collection.jpg",
+  "thornhill": "File:Jack Sheppard - Thornhill.jpg",
+  "cruik": "File:Sheppard Cruikshank.jpg",
+  "wych": "File:1870 WychStreet Engraving.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "thornhill",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "BỊ BẮT 5 LẦN",
+   "tape": {
+    "text": "“vượt ngục 4 lần”",
+    "at": [
+     1,
+     "bốn"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 2,
+   "k": "HỒ SƠ · LONDON",
+   "name": "JACK\nSHEPPARD",
+   "desc": "Thợ mộc học việc · cao 1,63 m",
+   "img": "weir"
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "LẦN THOÁT THỨ NHẤT",
+   "rows": [
+    {
+     "k": "GIŨA ĐỨT XÍCH",
+     "v": "✓",
+     "at": [
+      3,
+      "giũa"
+     ]
+    },
+    {
+     "k": "NỐI CHĂN LÀM DÂY",
+     "v": "✓",
+     "at": [
+      3,
+      "nối"
+     ]
+    }
+   ],
+   "total": {
+    "k": "TỤT QUA CỬA SỔ",
+    "v": "✓",
+    "at": [
+     3,
+     "cửa"
+    ]
+   }
+  },
+  {
+   "type": "crowd",
+   "at": 4,
+   "object": "none",
+   "label": {
+    "text": "LẪN VÀO ĐÁM ĐÔNG",
+    "at": [
+     4,
+     "đám"
+    ]
+   }
+  },
+  {
+   "type": "quote",
+   "at": 5,
+   "text": "Kia, hắn kìa!",
+   "by": "JACK SHEPPARD, CHỈ LÊN MÁI NHÀ"
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "THONG THẢ\nBỎ ĐI",
+   "white": true,
+   "bg": "wych"
+  },
+  {
+   "type": "photo",
+   "at": 7,
+   "img": "cruik",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "NEWGATE · ỐNG KHÓI · PHÁ TRẦN",
+    "at": [
+     7,
+     "ống"
+    ],
+    "y": 1340
+   }
+  },
+  {
+   "type": "crowd",
+   "at": 8,
+   "label": {
+    "text": "NGƯỜI HÙNG CỦA DÂN NGHÈO",
+    "at": [
+     8,
+     "người"
+    ]
+   }
+  },
+  {
+   "type": "mug",
+   "at": 9,
+   "ghost": "TYBURN",
+   "mug": {
+    "img": "thornhill",
+    "name": "JACK SHEPPARD",
+    "at": [
+     9,
+     null,
+     0,
+     0.3
+    ]
+   },
+   "stamp": {
+    "text": "TREO CỔ",
+    "at": [
+     9,
+     "treo"
+    ]
+   },
+   "big": {
+    "text": "22 TUỔI",
+    "at": [
+     9,
+     "22"
+    ]
+   }
+  },
+  {
+   "type": "hero",
+   "at": 10,
+   "img": "thornhill",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "BỊ BẮT 5 LẦN",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Jack_Sheppard"
+ ]
+}

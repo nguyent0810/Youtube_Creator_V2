@@ -1,0 +1,214 @@
+{
+ "title": "Hai kẻ bán xác người cho giảng đường y khoa: 16 nạn nhân trong 10 tháng",
+ "description": "Năm 1828 ở Edinburgh, William Burke và William Hare bán xác cho bác sĩ giải phẫu Robert Knox. Vụ án khiến tiếng Anh có thêm từ \"burking\" và dẫn tới Luật Giải phẫu 1832.",
+ "tags": [
+  "Burke và Hare",
+  "Edinburgh 1828",
+  "Robert Knox",
+  "Luật Giải phẫu",
+  "burking",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1828",
+ "sub": "BURKE & HARE · EDINBURGH",
+ "acc": [
+  "edinburgh",
+  "burke",
+  "hare",
+  "knox",
+  "16",
+  "burking",
+  "1832"
+ ],
+ "lines": [
+  "Năm 1828, ở Edinburgh, hai gã đàn ông bán xác người cho một bác sĩ giải phẫu.",
+  "Cái xác đầu tiên là một người trọ chết vì bệnh. Giá: 7 bảng 10 shilling.",
+  "Rồi chúng không chờ người ta tự chết nữa.",
+  "Mười tháng, 16 nạn nhân.",
+  "Người mua: bác sĩ Robert Knox, cho các buổi giảng giải phẫu.",
+  "Khi bị bắt, Hare được miễn tội, đổi lại làm nhân chứng chống Burke.",
+  "Burke bị treo cổ.",
+  "Xác hắn bị đem mổ xẻ, như các nạn nhân của hắn.",
+  "Bộ xương của Burke đến nay vẫn được trưng bày ở trường Y Edinburgh.",
+  "Tiếng Anh có thêm một từ: burking, giết người bằng cách làm ngạt.",
+  "Và năm 1832, nước Anh ra Luật Giải phẫu."
+ ],
+ "imgs": {
+  "bar": "File:Burke and McDougall at the bar.jpg",
+  "hares": "File:The Hares during the trial.jpg",
+  "close": "File:Hares' lodging-house, Tanner's Close.jpg",
+  "knox": "File:Dr. Robert Knox.jpg",
+  "hare": "File:William Hare.jpg",
+  "exec": "File:Execution of Burke.jpg",
+  "hand": "File:Burke's handwriting.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "bar",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "BÁN XÁC NGƯỜI"
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "CÁI XÁC ĐẦU TIÊN",
+   "rows": [
+    {
+     "k": "NGƯỜI TRỌ · CHẾT VÌ BỆNH",
+     "v": "",
+     "at": [
+      1,
+      "người"
+     ]
+    }
+   ],
+   "total": {
+    "k": "GIÁ",
+    "v": "£7 10s",
+    "at": [
+     1,
+     "giá"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 2,
+   "img": "close",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "NHÀ TRỌ · TANNER'S CLOSE",
+    "at": [
+     2,
+     "chờ"
+    ],
+    "y": 1340
+   }
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 16,
+   "label": "NẠN NHÂN",
+   "until": [
+    3,
+    "16",
+    0,
+    0.3
+   ],
+   "sub": {
+    "text": "TRONG 10 THÁNG",
+    "at": [
+     3,
+     "mười"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 4,
+   "k": "NGƯỜI MUA XÁC",
+   "name": "ROBERT\nKNOX",
+   "desc": "Bác sĩ giải phẫu · Edinburgh",
+   "img": "knox"
+  },
+  {
+   "type": "split",
+   "at": 5,
+   "title": "NHÂN CHỨNG CỦA VƯƠNG QUYỀN",
+   "a": {
+    "img": "hare",
+    "label": "HARE · MIỄN TỘI",
+    "at": [
+     5,
+     "hare"
+    ]
+   },
+   "b": {
+    "img": "bar",
+    "label": "BURKE · BỊ CÁO",
+    "at": [
+     5,
+     "burke"
+    ]
+   },
+   "sign": "→",
+   "signAt": [
+    5,
+    "chống"
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 6,
+   "img": "exec",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.4
+   ],
+   "stamp": {
+    "text": "TREO CỔ",
+    "at": [
+     6,
+     "treo"
+    ],
+    "x": 300,
+    "y": 1150
+   },
+   "credit": "VỤ HÀNH HÌNH BURKE · 1829"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "NHƯ CÁC",
+     "at": [
+      7,
+      "như"
+     ]
+    },
+    {
+     "text": "NẠN NHÂN",
+     "at": [
+      7,
+      "nạn"
+     ],
+     "acc": true,
+     "size": 190
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "text": "VẪN TRƯNG BÀY",
+   "sub": "BỘ XƯƠNG CỦA BURKE · TRƯỜNG Y EDINBURGH",
+   "white": true
+  },
+  {
+   "type": "quote",
+   "at": 9,
+   "text": "burking (động từ): giết bằng cách làm ngạt",
+   "by": "TỪ MỚI TRONG TIẾNG ANH · 1829"
+  },
+  {
+   "type": "hero",
+   "at": 10,
+   "img": "bar",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "LUẬT GIẢI PHẪU 1832",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Burke_and_Hare_murders"
+ ]
+}

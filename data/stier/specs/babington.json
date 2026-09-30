@@ -1,0 +1,170 @@
+{
+ "title": "Thư mật giấu trong nút thùng bia đưa một nữ hoàng lên đoạn đầu đài",
+ "description": "Năm 1586, thư mật của Mary, Nữ hoàng Scotland, được giấu trong nút thùng bia. Người chuyển thư là gián điệp hai mang, và kẻ giải mã còn thêm vào một đoạn tái bút giả.",
+ "tags": [
+  "Âm mưu Babington",
+  "Mary Nữ hoàng Scotland",
+  "Walsingham",
+  "mật mã",
+  "Elizabeth I",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1586",
+ "sub": "ÂM MƯU BABINGTON",
+ "acc": [
+  "mary",
+  "walsingham",
+  "babington",
+  "elizabeth",
+  "bia",
+  "mật",
+  "mã",
+  "300"
+ ],
+ "lines": [
+  "Năm 1586, những lá thư mật được giấu trong nút thùng bia…",
+  "đưa vào và ra khỏi lâu đài giam Mary, Nữ hoàng Scotland.",
+  "Thư viết bằng mật mã.",
+  "Nhưng người chuyển thư là gián điệp hai mang.",
+  "Mỗi lá thư đều bị giải mã, rồi chuyển tới Walsingham, trùm tình báo của Nữ hoàng Elizabeth.",
+  "Mary hồi âm Babington, ủng hộ kế hoạch.",
+  "Kẻ giải mã còn chép lại thư, thêm một đoạn tái bút giả, hỏi tên sáu kẻ đồng mưu.",
+  "Babington bị bắt trước khi kịp trả lời.",
+  "Ngày 8 tháng 2 năm 1587, Mary bị xử chém, trước 300 nhân chứng.",
+  "Tất cả bắt đầu từ một chiếc nút thùng bia."
+ ],
+ "imgs": {
+  "mary": "File:Mary, Queen of Scots after Nicholas Hilliard.jpg",
+  "cipher": "File:Mary-cipher-code.jpg",
+  "ps": "File:Babington postscript.jpg",
+  "hayez": "File:Hayez - Marie Stuart protestant de son innocence à la lecture de sa condamnation à mort, 1832, RF 2012 23.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "mary",
+   "tone": "color",
+   "intro": true,
+   "head": "NÚT THÙNG BIA"
+  },
+  {
+   "type": "file",
+   "at": 1,
+   "k": "TÙ NHÂN · LÂU ĐÀI CHARTLEY",
+   "name": "MARY\nSTUART",
+   "desc": "Nữ hoàng Scotland · bị giam 19 năm",
+   "img": "mary"
+  },
+  {
+   "type": "doc",
+   "at": 2,
+   "img": "cipher",
+   "tone": "sepia",
+   "moves": [
+    {
+     "at": 2,
+     "x": 0.5,
+     "y": 0.3,
+     "z": 1.2
+    },
+    {
+     "at": [
+      2,
+      "mật"
+     ],
+     "x": 0.4,
+     "y": 0.45,
+     "z": 2.0
+    }
+   ],
+   "credit": "BẢNG MẬT MÃ CỦA MARY"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "GIÁN ĐIỆP",
+     "at": [
+      3,
+      "gián"
+     ]
+    },
+    {
+     "text": "HAI MANG",
+     "at": [
+      3,
+      "hai"
+     ],
+     "acc": true,
+     "size": 190
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 4,
+   "k": "TRÙM TÌNH BÁO",
+   "name": "FRANCIS\nWALSINGHAM",
+   "desc": "Mọi lá thư đều qua tay ông",
+   "stamp": {
+    "text": "ĐÃ GIẢI MÃ",
+    "at": [
+     4,
+     "walsingham"
+    ]
+   }
+  },
+  {
+   "type": "quote",
+   "at": 5,
+   "text": "Mary hồi âm: ủng hộ kế hoạch.",
+   "by": "THƯ NGÀY 17.07.1586 · BỊ CHẶN VÀ GIẢI MÃ"
+  },
+  {
+   "type": "evidence",
+   "at": 6,
+   "img": "ps",
+   "tone": "sepia",
+   "tag": "TANG VẬT · TÁI BÚT GIẢ",
+   "credit": "ĐOẠN TÁI BÚT HỎI TÊN 6 KẺ ĐỒNG MƯU · 1586"
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "BỊ BẮT",
+   "sub": "BABINGTON · CHƯA KỊP TRẢ LỜI",
+   "bg": "cipher"
+  },
+  {
+   "type": "photo",
+   "at": 8,
+   "img": "hayez",
+   "tone": "color",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "label": {
+    "text": "08.02.1587 · 300 NHÂN CHỨNG",
+    "at": [
+     8,
+     "300"
+    ]
+   },
+   "credit": "TRANH CỦA FRANCESCO HAYEZ · 1832"
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "mary",
+   "tone": "color",
+   "loop": true,
+   "head": "NÚT THÙNG BIA",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Babington_Plot"
+ ]
+}

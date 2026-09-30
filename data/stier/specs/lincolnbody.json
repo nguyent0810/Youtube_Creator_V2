@@ -1,0 +1,193 @@
+{
+ "title": "Âm mưu trộm thi hài Tổng thống Lincoln để đòi tiền chuộc",
+ "description": "Đêm bầu cử 7/11/1876, một băng làm tiền giả ở Chicago định trộm thi hài Abraham Lincoln để đổi lấy tự do cho thợ khắc bản in của chúng và 200 nghìn đô. Người chúng tuyển thêm là chỉ điểm của Mật vụ.",
+ "tags": [
+  "Abraham Lincoln",
+  "trộm thi hài",
+  "Mật vụ Mỹ",
+  "Springfield 1876",
+  "tiền giả",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1876",
+ "sub": "LĂNG LINCOLN · SPRINGFIELD",
+ "acc": [
+  "lincoln",
+  "chicago",
+  "springfield",
+  "200",
+  "mật",
+  "vụ",
+  "bê",
+  "tông"
+ ],
+ "lines": [
+  "Đêm bầu cử tổng thống Mỹ, 7 tháng 11 năm 1876, có kẻ định trộm thi hài Abraham Lincoln.",
+  "Một băng làm tiền giả ở Chicago muốn đổi thi hài lấy tự do cho thợ khắc bản in của chúng…",
+  "cộng 200 nghìn đô.",
+  "Chúng tuyển thêm một người ở quán rượu.",
+  "Người đó là chỉ điểm của Mật vụ.",
+  "Đặc vụ nấp sẵn trong lăng mộ ở Springfield.",
+  "Bọn trộm còn không tính tới việc khiêng một cỗ quan tài nặng một phần tư tấn.",
+  "Âm mưu thất bại.",
+  "Năm 1901, con trai Lincoln cho đặt quan tài cha trong lồng thép, sâu ba mét, đổ bê tông kín.",
+  "Để không ai có thể đánh cắp ông thêm lần nào nữa."
+ ],
+ "imgs": {
+  "tomb": "File:Abetomb01.jpg",
+  "inaug": "File:LincolnJohn.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "tomb",
+   "frame": "print",
+   "tone": "bw",
+   "intro": true,
+   "head": "THI HÀI LINCOLN"
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "YÊU SÁCH CỦA BĂNG TIỀN GIẢ",
+   "rows": [
+    {
+     "k": "THẢ THỢ KHẮC BẢN IN",
+     "v": "✓",
+     "at": [
+      1,
+      "tự"
+     ]
+    }
+   ],
+   "total": {
+    "k": "TIỀN MẶT",
+    "v": "$200.000",
+    "at": [
+     2,
+     "200"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "QUÁN RƯỢU",
+     "at": [
+      3,
+      "quán"
+     ],
+     "serif": true
+    },
+    {
+     "text": "+1 NGƯỜI",
+     "at": [
+      3,
+      "người",
+      0,
+      -0.3
+     ],
+     "acc": true,
+     "size": 220
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 4,
+   "k": "THÂN PHẬN THẬT",
+   "name": "CHỈ ĐIỂM\nCỦA MẬT VỤ",
+   "desc": "Báo tin cho đặc vụ Patrick Tyrrell",
+   "stamp": {
+    "text": "CHỈ ĐIỂM",
+    "at": [
+     4,
+     "chỉ"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 5,
+   "img": "tomb",
+   "tone": "bw",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": {
+    "text": "ĐẶC VỤ NẤP SẴN",
+    "at": [
+     5,
+     "nấp"
+    ]
+   },
+   "credit": "LĂNG LINCOLN · SPRINGFIELD, ILLINOIS"
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "prefix": "~",
+   "to": 250,
+   "label": "KÝ · CỖ QUAN TÀI",
+   "until": [
+    6,
+    "tấn"
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "THẤT BẠI",
+   "white": true,
+   "bg": "tomb"
+  },
+  {
+   "type": "ledger",
+   "at": 8,
+   "title": "LĂNG MỘ · 1901",
+   "rows": [
+    {
+     "k": "LỒNG THÉP",
+     "v": "✓",
+     "at": [
+      8,
+      "lồng"
+     ]
+    },
+    {
+     "k": "ĐỘ SÂU",
+     "v": "3 MÉT",
+     "at": [
+      8,
+      "sâu"
+     ]
+    }
+   ],
+   "total": {
+    "k": "BÊ TÔNG",
+    "v": "ĐỔ KÍN",
+    "at": [
+     8,
+     "bê"
+    ]
+   }
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "inaug",
+   "frame": "print",
+   "tone": "bw",
+   "loop": true,
+   "head": "KHÔNG AI ĐÁNH CẮP",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/State_funeral_of_Abraham_Lincoln",
+  "https://en.wikipedia.org/wiki/Patrick_D._Tyrrell"
+ ]
+}

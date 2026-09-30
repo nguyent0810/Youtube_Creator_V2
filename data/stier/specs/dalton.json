@@ -1,0 +1,237 @@
+{
+ "title": "Cướp hai ngân hàng cùng lúc giữa ban ngày: phi vụ cuối của băng Dalton",
+ "description": "Bob Dalton muốn vượt mặt Jesse James: cướp hai ngân hàng cùng lúc, giữa ban ngày. Ngày 5/10/1892, băng Dalton tới Coffeyville, Kansas, và cả thị trấn cầm súng.",
+ "tags": [
+  "băng Dalton",
+  "Coffeyville 1892",
+  "Bob Dalton",
+  "Emmett Dalton",
+  "miền Tây nước Mỹ",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1892",
+ "sub": "BĂNG DALTON · COFFEYVILLE",
+ "acc": [
+  "dalton",
+  "coffeyville",
+  "jesse",
+  "james",
+  "emmett",
+  "23",
+  "14",
+  "giả"
+ ],
+ "lines": [
+  "Bob Dalton muốn làm điều Jesse James chưa từng làm: cướp hai ngân hàng cùng lúc, giữa ban ngày.",
+  "Ngày 5 tháng 10 năm 1892, băng Dalton tới Coffeyville, Kansas.",
+  "Hai ngân hàng nằm hai bên cùng một con phố.",
+  "Grat Dalton đeo ria mép giả.",
+  "Nhưng một người bán hàng đang quét vỉa hè vẫn nhận ra họ.",
+  "Anh ta chạy vào trong. Rồi dân thị trấn cầm súng.",
+  "Bốn người của băng Dalton bị bắn chết.",
+  "Chỉ Emmett sống sót, với 23 vết đạn.",
+  "Anh ta ngồi tù 14 năm rồi được tha có điều kiện.",
+  "Kế hoạch lớn nhất của Bob Dalton… cũng là kế hoạch cuối cùng."
+ ],
+ "imgs": {
+  "bob": "File:Bob Dalton, May 9, 1889.jpg",
+  "bank": "File:Condon Bank Coffeyville, Kansas c. 1890.jpg",
+  "emmett": "File:Prison Photo of Emmett Dalton after failed bank robbery at Coffeyville, Kansas.jpg",
+  "bob2": "File:Photo of Robert \"Bob\" Dalton c. 1889.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "bob",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "HAI NGÂN HÀNG",
+   "tape": {
+    "text": "“cùng lúc, giữa ban ngày”",
+    "at": [
+     0,
+     "ban"
+    ]
+   }
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "bg": "bank",
+   "day": "COFFEYVILLE · KANSAS",
+   "date": "05.10.1892",
+   "groupAt": [
+    [
+     1,
+     "5"
+    ],
+    [
+     1,
+     "10"
+    ],
+    [
+     1,
+     "1892"
+    ]
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 2,
+   "img": "bank",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": {
+    "text": "NGÂN HÀNG CONDON · BÊN KIA: FIRST NATIONAL",
+    "at": [
+     2,
+     "con"
+    ]
+   },
+   "credit": "COFFEYVILLE · KHOẢNG 1890"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "RIA MÉP",
+     "at": [
+      3,
+      "ria"
+     ],
+     "serif": true,
+     "size": 200
+    },
+    {
+     "text": "GIẢ",
+     "at": [
+      3,
+      "giả"
+     ],
+     "acc": true,
+     "size": 240
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "QUÉT VỈA HÈ",
+     "at": [
+      4,
+      "quét"
+     ]
+    },
+    {
+     "text": "NHẬN RA HỌ",
+     "at": [
+      4,
+      "nhận"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "crowd",
+   "at": 5,
+   "object": "none",
+   "label": {
+    "text": "CẢ THỊ TRẤN CẦM SÚNG",
+    "at": [
+     5,
+     "súng"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "4",
+     "at": [
+      6,
+      "bốn"
+     ],
+     "size": 300,
+     "serif": true,
+     "acc": true
+    },
+    {
+     "text": "BỊ BẮN CHẾT",
+     "at": [
+      6,
+      "bắn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "to": 23,
+   "label": "VẾT ĐẠN",
+   "until": [
+    7,
+    "23",
+    0,
+    0.3
+   ],
+   "img": "emmett",
+   "imgAt": [
+    7,
+    "emmett"
+   ]
+  },
+  {
+   "type": "mug",
+   "at": 8,
+   "ghost": "KANSAS",
+   "mug": {
+    "img": "emmett",
+    "name": "EMMETT DALTON",
+    "at": [
+     8,
+     null,
+     0,
+     0.3
+    ]
+   },
+   "bars": {
+    "at": [
+     8,
+     "tù"
+    ]
+   },
+   "big": {
+    "text": "14 NĂM",
+    "small": "NGỒI TÙ",
+    "at": [
+     8,
+     "14"
+    ]
+   }
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "bob",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "HAI NGÂN HÀNG",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Dalton_Gang"
+ ]
+}

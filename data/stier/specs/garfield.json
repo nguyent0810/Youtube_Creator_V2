@@ -1,0 +1,220 @@
+{
+ "title": "Tổng thống Mỹ trúng đạn, nhưng có lẽ bác sĩ mới là thứ giết ông",
+ "description": "Ngày 2/7/1881, Tổng thống James Garfield trúng đạn ở ga tàu Washington. Suốt 79 ngày, bác sĩ dùng ngón tay không sát trùng tìm viên đạn, còn Alexander Graham Bell chế hẳn máy dò kim loại.",
+ "tags": [
+  "James Garfield",
+  "ám sát tổng thống Mỹ",
+  "Alexander Graham Bell",
+  "máy dò kim loại",
+  "Charles Guiteau",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1881",
+ "sub": "TỔNG THỐNG GARFIELD",
+ "acc": [
+  "garfield",
+  "guiteau",
+  "bell",
+  "79",
+  "phải",
+  "kim",
+  "loại",
+  "ngón"
+ ],
+ "lines": [
+  "Năm 1881, Tổng thống Mỹ trúng đạn… nhưng có lẽ, thứ giết ông là các bác sĩ.",
+  "Ngày 2 tháng 7, ở ga tàu, Charles Guiteau bắn ông hai phát từ phía sau.",
+  "Một viên đạn nằm lại trong người.",
+  "Các bác sĩ thọc ngón tay không sát trùng vào vết thương để tìm.",
+  "Alexander Graham Bell chế hẳn một máy dò kim loại.",
+  "Nhưng khung giường bằng kim loại làm máy chạy sai.",
+  "Bác sĩ trưởng chỉ cho dò bên phải, nơi ông ta tin viên đạn nằm.",
+  "79 ngày sau, Garfield qua đời vì biến chứng nhiễm trùng.",
+  "Kẻ bắn bị treo cổ.",
+  "Nhưng giới sử học tin: nếu bác sĩ giỏi hơn, ông đã sống.",
+  "Viên đạn… có lẽ không phải thứ giết ông."
+ ],
+ "imgs": {
+  "scene": "File:Scene of the assassination of Gen. James A. Garfield, President of the United States LCCN2003671706 (cropped).jpg",
+  "garfield": "File:James Abram Garfield, photo portrait seated.jpg",
+  "guiteau": "File:Charles J Guiteau.jpg",
+  "bell": "File:Upon the electrical experiments to determine the location of the bullet in the body of the late President Garfield; and upon a successful form of induction balance for the painless detection of (14781151625).jpg",
+  "gun": "File:GarfieldBD.jpg",
+  "engr": "File:Garfield assassination engraving cropped.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "garfield",
+   "frame": "print",
+   "tone": "bw",
+   "intro": true,
+   "head": "TRÚNG ĐẠN",
+   "strike": [
+    0,
+    "nhưng"
+   ],
+   "tape": {
+    "text": "“thứ giết ông là các bác sĩ”",
+    "at": [
+     0,
+     "bác"
+    ]
+   }
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "bg": "engr",
+   "day": "GA TÀU WASHINGTON",
+   "date": "02.07.1881",
+   "groupAt": [
+    [
+     1,
+     "2"
+    ],
+    [
+     1,
+     "7"
+    ],
+    [
+     1,
+     "7",
+     0,
+     0.35
+    ]
+   ],
+   "sub": {
+    "text": "CHARLES GUITEAU · 2 PHÁT SÚNG",
+    "at": [
+     1,
+     "guiteau"
+    ]
+   }
+  },
+  {
+   "type": "evidence",
+   "at": 2,
+   "img": "gun",
+   "tone": "bw",
+   "tag": "TANG VẬT · KHẨU BRITISH BULL DOG",
+   "credit": "KHẨU SÚNG DÙNG TRONG VỤ ÁM SÁT · 1881"
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "KHÔNG SÁT TRÙNG",
+   "sub": "NGÓN TAY · DỤNG CỤ · DÒ TÌM VIÊN ĐẠN",
+   "white": true,
+   "bg": "scene"
+  },
+  {
+   "type": "photo",
+   "at": 4,
+   "img": "bell",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": {
+    "text": "MÁY DÒ KIM LOẠI CỦA BELL",
+    "at": [
+     4,
+     "máy"
+    ]
+   },
+   "credit": "BÁO CÁO CỦA A. G. BELL · 1882"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "KHUNG GIƯỜNG",
+     "at": [
+      5,
+      "khung"
+     ]
+    },
+    {
+     "text": "BẰNG KIM LOẠI",
+     "at": [
+      5,
+      "kim"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "split",
+   "at": 6,
+   "title": "CHỈ ĐƯỢC DÒ",
+   "a": {
+    "img": "garfield",
+    "label": "BÊN PHẢI ✓",
+    "at": [
+     6,
+     "phải"
+    ]
+   },
+   "b": {
+    "img": "garfield",
+    "label": "BÊN TRÁI ✗",
+    "at": [
+     6,
+     "tin"
+    ]
+   }
+  },
+  {
+   "type": "calendar",
+   "at": 7,
+   "n": 79,
+   "unit": "",
+   "title": "*79 NGÀY*"
+  },
+  {
+   "type": "mug",
+   "at": 8,
+   "ghost": "1882",
+   "mug": {
+    "img": "guiteau",
+    "name": "CHARLES GUITEAU",
+    "at": [
+     8,
+     null,
+     0,
+     0.3
+    ]
+   },
+   "stamp": {
+    "text": "TREO CỔ",
+    "at": [
+     8,
+     "treo"
+    ]
+   }
+  },
+  {
+   "type": "quote",
+   "at": 9,
+   "text": "Nếu bác sĩ giỏi hơn, ông đã sống.",
+   "by": "NHẬN ĐỊNH CỦA NHIỀU NHÀ SỬ HỌC & Y HỌC"
+  },
+  {
+   "type": "hero",
+   "at": 10,
+   "img": "garfield",
+   "frame": "print",
+   "tone": "bw",
+   "loop": true,
+   "head": "TRÚNG ĐẠN",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Assassination_of_James_A._Garfield"
+ ]
+}

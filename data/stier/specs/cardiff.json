@@ -1,0 +1,188 @@
+{
+ "title": "Người khổng lồ hóa đá giả, và bản sao giả của đồ giả",
+ "description": "Năm 1869, thợ đào giếng ở Cardiff, New York đụng phải một \"người khổng lồ hóa đá\" cao ba mét. Nó là khối thạch cao điêu khắc. Rồi ông bầu Barnum làm hẳn một bản sao và tuyên bố của mình mới là thật.",
+ "tags": [
+  "Cardiff Giant",
+  "người khổng lồ Cardiff",
+  "trò bịp",
+  "P. T. Barnum",
+  "New York 1869",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1869",
+ "sub": "NGƯỜI KHỔNG LỒ CARDIFF",
+ "acc": [
+  "cardiff",
+  "hull",
+  "marsh",
+  "barnum",
+  "thạch",
+  "cao",
+  "2.600",
+  "50"
+ ],
+ "lines": [
+  "Năm 1869, thợ đào giếng ở New York đụng phải một người khổng lồ hóa đá, cao ba mét.",
+  "Chủ trang trại dựng lều, bán vé.",
+  "Thực ra đó là một khối thạch cao, được điêu khắc rồi chôn từ năm trước.",
+  "Tác giả: George Hull, một người buôn thuốc lá, bỏ ra 2600 đô.",
+  "Nhà cổ sinh vật học Marsh thấy vết đục còn mới: trò bịp.",
+  "Nhưng đám đông vẫn đổ về.",
+  "Ông bầu gánh xiếc Barnum trả giá 50 nghìn đô để mua.",
+  "Bị từ chối, ông làm hẳn một bản sao, tuyên bố của mình mới là thật.",
+  "Đến nay, cả hai người khổng lồ giả… vẫn đang được trưng bày.",
+  "Một trò bịp, và một trò bịp của trò bịp."
+ ],
+ "imgs": {
+  "giant": "File:Cardiff Giant LCCN2014693762.jpg",
+  "onondaga": "File:The Onondaga giant LCCN2003666806.jpg",
+  "g1869": "File:Cardiff Giant 2.jpg",
+  "iowa": "File:The Cardiff Giant - History of Iowa.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "giant",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "NGƯỜI KHỔNG LỒ",
+   "tape": {
+    "text": "“hóa đá, cao 3 mét”",
+    "at": [
+     0,
+     "ba"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 1,
+   "img": "g1869",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "DỰNG LỀU · BÁN VÉ",
+    "at": [
+     1,
+     "vé"
+    ],
+    "y": 1330
+   }
+  },
+  {
+   "type": "evidence",
+   "at": 2,
+   "img": "onondaga",
+   "tone": "sepia",
+   "tag": "TANG VẬT · THẠCH CAO",
+   "credit": "“NGƯỜI KHỔNG LỒ ONONDAGA” · ẢNH TƯ LIỆU"
+  },
+  {
+   "type": "file",
+   "at": 3,
+   "k": "TÁC GIẢ TRÒ BỊP",
+   "name": "GEORGE\nHULL",
+   "desc": "Người buôn thuốc lá · chi $2.600",
+   "stamp": {
+    "text": "$2.600",
+    "at": [
+     3,
+     "2600"
+    ]
+   }
+  },
+  {
+   "type": "quote",
+   "at": 4,
+   "text": "Một trò bịp rõ rệt.",
+   "by": "OTHNIEL C. MARSH · NHÀ CỔ SINH VẬT HỌC YALE"
+  },
+  {
+   "type": "crowd",
+   "at": 5,
+   "object": "none",
+   "label": {
+    "text": "ĐÁM ĐÔNG VẪN ĐỔ VỀ",
+    "at": [
+     5,
+     "đổ"
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "prefix": "$",
+   "to": 50000,
+   "label": "GIÁ BARNUM TRẢ",
+   "until": [
+    6,
+    "nghìn"
+   ]
+  },
+  {
+   "type": "split",
+   "at": 7,
+   "title": "CÁI NÀO THẬT?",
+   "a": {
+    "img": "giant",
+    "label": "BẢN “GỐC”",
+    "at": [
+     7,
+     null,
+     0,
+     0.1
+    ]
+   },
+   "b": {
+    "img": "iowa",
+    "label": "BẢN SAO",
+    "at": [
+     7,
+     "bản"
+    ]
+   },
+   "sign": "?",
+   "signAt": [
+    7,
+    "thật"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "CẢ HAI",
+     "at": [
+      8,
+      "hai"
+     ],
+     "size": 220
+    },
+    {
+     "text": "VẪN TRƯNG BÀY",
+     "at": [
+      8,
+      "trưng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "giant",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "TRÒ BỊP CỦA TRÒ BỊP",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Cardiff_Giant"
+ ]
+}

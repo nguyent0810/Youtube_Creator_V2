@@ -1,0 +1,263 @@
+{
+ "title": "Trộm vương miện nước Anh, được vua thưởng đất?",
+ "description": "Năm 1671, Thomas Blood đóng giả mục sư, lừa ông giữ kho báu ở Tháp London rồi đập bẹp vương miện để giấu dưới áo. Kết cục của hắn khiến cả triều đình sửng sốt.",
+ "tags": [
+  "Thomas Blood",
+  "trộm vương miện",
+  "Crown Jewels",
+  "Tháp London",
+  "Charles II",
+  "hồ sơ vụ án",
+  "lịch sử Anh"
+ ],
+ "kicker": "HỒ SƠ 1671",
+ "sub": "THÁP LONDON",
+ "acc": [
+  "blood",
+  "charles",
+  "ireland",
+  "búa",
+  "vương",
+  "miện",
+  "500",
+  "300",
+  "tha"
+ ],
+ "lines": [
+  "Năm 1671, một kẻ trộm vương miện nước Anh… được nhà vua thưởng đất.",
+  "Thomas Blood đóng giả mục sư, làm thân với ông giữ kho báu 77 tuổi.",
+  "Tặng vợ ông bốn đôi găng tay trắng.",
+  "Còn hứa gả một \"người cháu\" cho con gái ông.",
+  "Ngày 9 tháng 5, hắn cùng đồng bọn xin xem vương miện.",
+  "Rồi trùm áo, đánh ông già bằng búa gỗ.",
+  "Rồi đập bẹp vương miện để giấu dưới áo.",
+  "Hắn bị bắt khi đang chạy trốn.",
+  "Và chỉ chịu khai với một người: nhà vua.",
+  "Charles II… tha bổng hắn.",
+  "Còn ban thêm đất ở Ireland, mỗi năm 500 bảng.",
+  "Ông già giữ kho được thưởng chưa tới 300 bảng, và không bao giờ nhận đủ.",
+  "Trộm vương miện, được thưởng đất."
+ ],
+ "imgs": {
+  "escape": "File:Thomas Blood's theft of the Crown Jewels.jpg",
+  "blood": "File:Portrait of Thomas Blood.jpg",
+  "charles": "File:King Charles II by John Michael Wright or studio.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "escape",
+   "tone": "sepia",
+   "intro": true,
+   "head": "TRỘM VƯƠNG MIỆN",
+   "strike": [
+    0,
+    "được"
+   ],
+   "tape": {
+    "text": "“được thưởng đất”",
+    "at": [
+     0,
+     "thưởng"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 1,
+   "k": "HỒ SƠ · KẺ GIẢ DANH",
+   "name": "THOMAS\nBLOOD",
+   "desc": "Cải trang: mục sư",
+   "img": "blood",
+   "stamp": {
+    "text": "GIẢ DANH",
+    "at": [
+     1,
+     "mục"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "4 ĐÔI",
+     "at": [
+      2,
+      "bốn"
+     ],
+     "size": 220,
+     "serif": true
+    },
+    {
+     "text": "GĂNG TAY TRẮNG",
+     "at": [
+      2,
+      "găng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "“NGƯỜI CHÁU”",
+     "at": [
+      3,
+      "người"
+     ],
+     "serif": true
+    },
+    {
+     "text": "KHÔNG CÓ THẬT",
+     "at": [
+      3,
+      "con"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 4,
+   "bg": "escape",
+   "day": "THÁP LONDON",
+   "date": "09.05.1671",
+   "groupAt": [
+    [
+     4,
+     "9"
+    ],
+    [
+     4,
+     "5"
+    ],
+    [
+     4,
+     "5",
+     0,
+     0.35
+    ]
+   ],
+   "sub": {
+    "text": "XIN XEM VƯƠNG MIỆN",
+    "at": [
+     4,
+     "xin"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "BÚA GỖ",
+   "sub": "TRÙM ÁO CHOÀNG · ĐÁNH NGƯỜI GIỮ KHO"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "ĐẬP BẸP",
+     "at": [
+      6,
+      "đập"
+     ],
+     "acc": true,
+     "size": 200
+    },
+    {
+     "text": "GIẤU DƯỚI ÁO",
+     "at": [
+      6,
+      "giấu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 7,
+   "img": "escape",
+   "mode": "print",
+   "tone": "sepia",
+   "stamp": {
+    "text": "BỊ BẮT",
+    "at": [
+     7,
+     "bắt"
+    ],
+    "x": 300,
+    "y": 1200
+   }
+  },
+  {
+   "type": "quote",
+   "at": 8,
+   "text": "Chỉ khai với nhà vua.",
+   "by": "THOMAS BLOOD · 1671"
+  },
+  {
+   "type": "file",
+   "at": 9,
+   "k": "PHÁN QUYẾT CỦA VUA",
+   "name": "CHARLES II",
+   "desc": "Vua Anh 1660–1685",
+   "img": "charles",
+   "stamp": {
+    "text": "THA BỔNG",
+    "at": [
+     9,
+     "tha"
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 10,
+   "title": "SAU VỤ TRỘM",
+   "rows": [
+    {
+     "k": "KẺ TRỘM · ĐẤT IRELAND",
+     "v": "£500/NĂM",
+     "at": [
+      10,
+      "500"
+     ]
+    },
+    {
+     "k": "NGƯỜI GIỮ KHO",
+     "v": "< £300",
+     "at": [
+      11,
+      "300"
+     ]
+    }
+   ],
+   "total": {
+    "k": "ĐÃ NHẬN ĐỦ?",
+    "v": "KHÔNG",
+    "at": [
+     11,
+     "không"
+    ]
+   }
+  },
+  {
+   "type": "hero",
+   "at": 12,
+   "img": "escape",
+   "tone": "sepia",
+   "loop": true,
+   "head": "TRỘM VƯƠNG MIỆN",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Thomas_Blood"
+ ]
+}

@@ -1,0 +1,282 @@
+{
+ "title": "Băng cướp tàu tự đi chụp ảnh, và thám tử in nó lên lệnh truy nã",
+ "description": "Tháng 12/1900, Butch Cassidy, Sundance Kid và ba đồng bọn trong băng Wild Bunch mặc com lê, ngồi chụp ảnh ở Fort Worth. Hãng thám tử Pinkerton có được tấm ảnh.",
+ "tags": [
+  "Butch Cassidy",
+  "Sundance Kid",
+  "Wild Bunch",
+  "Fort Worth Five",
+  "Pinkerton",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1900",
+ "sub": "WILD BUNCH · FORT WORTH",
+ "acc": [
+  "butch",
+  "cassidy",
+  "sundance",
+  "pinkerton",
+  "bolivia",
+  "argentina",
+  "ảnh"
+ ],
+ "lines": [
+  "Tháng 12 năm 1900, năm tên cướp tàu khét tiếng nhất miền Tây… đi chụp một tấm ảnh.",
+  "Com lê, mũ quả dưa, ngồi ngay ngắn trong một tiệm ảnh ở Fort Worth, Texas.",
+  "Butch Cassidy, Sundance Kid, và ba đồng bọn trong băng Wild Bunch.",
+  "Thám tử Pinkerton có được một bản của tấm ảnh.",
+  "Và in nó lên lệnh truy nã.",
+  "Bị truy đuổi gắt gao, Butch và Sundance bỏ trốn sang Argentina.",
+  "Rồi Bolivia.",
+  "Tháng 11 năm 1908, người ta tin cả hai chết trong một trận đấu súng với quân đội Bolivia.",
+  "Hoàn cảnh chính xác đến nay vẫn chưa rõ.",
+  "Tất cả bắt đầu từ một tấm ảnh."
+ ],
+ "imgs": {
+  "five": "File:Wildbunchlarge.jpg",
+  "butch": "File:Butch Cassidy mugshot detail.jpg",
+  "sundance": "File:Sundance Kid and Etta Place cph.3c32506.jpg"
+ },
+ "map": {
+  "countries": [
+   "United States of America",
+   "Argentina",
+   "Bolivia"
+  ],
+  "context": [
+   "Mexico",
+   "Canada",
+   "Brazil",
+   "Chile",
+   "Peru",
+   "Paraguay",
+   "Colombia",
+   "Venezuela",
+   "Ecuador",
+   "Uruguay",
+   "Cuba",
+   "Guatemala",
+   "Honduras",
+   "Nicaragua"
+  ],
+  "labels": {
+   "Argentina": "ARGENTINA",
+   "Bolivia": "BOLIVIA",
+   "United States of America": "MỸ"
+  },
+  "bbox": [
+   -125,
+   -45,
+   -40,
+   50
+  ],
+  "pins": [
+   {
+    "name": "Fort Worth",
+    "lon": -97.33,
+    "lat": 32.75,
+    "label": "FORT WORTH"
+   },
+   {
+    "name": "Buenos Aires",
+    "lon": -58.38,
+    "lat": -34.6,
+    "label": "ARGENTINA"
+   },
+   {
+    "name": "San Vicente",
+    "lon": -65.98,
+    "lat": -21.27,
+    "label": "BOLIVIA · 1908"
+   }
+  ]
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "five",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "MỘT TẤM ẢNH"
+  },
+  {
+   "type": "photo",
+   "at": 1,
+   "img": "five",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "label": {
+    "text": "FORT WORTH · 12.1900",
+    "at": [
+     1,
+     "fort"
+    ]
+   },
+   "credit": "“FORT WORTH FIVE”"
+  },
+  {
+   "type": "split",
+   "at": 2,
+   "title": "WILD BUNCH",
+   "a": {
+    "img": "butch",
+    "label": "BUTCH CASSIDY",
+    "at": [
+     2,
+     "butch"
+    ]
+   },
+   "b": {
+    "img": "sundance",
+    "label": "SUNDANCE KID",
+    "at": [
+     2,
+     "sundance"
+    ],
+    "pos": "35% 20%"
+   }
+  },
+  {
+   "type": "file",
+   "at": 3,
+   "k": "HÃNG THÁM TỬ PINKERTON",
+   "name": "BẢN SAO\nTẤM ẢNH",
+   "desc": "Nhận dạng 5 kẻ cướp tàu",
+   "img": "five",
+   "stamp": {
+    "text": "ĐÃ CÓ",
+    "at": [
+     3,
+     "được"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 4,
+   "img": "five",
+   "mode": "print",
+   "tone": "bw",
+   "stamp": {
+    "text": "TRUY NÃ",
+    "at": [
+     4,
+     "truy"
+    ],
+    "x": 300,
+    "y": 1100
+   }
+  },
+  {
+   "type": "map",
+   "at": 5,
+   "pins": [
+    {
+     "name": "Fort Worth",
+     "at": [
+      5,
+      null,
+      0,
+      0.1
+     ]
+    },
+    {
+     "name": "Buenos Aires",
+     "at": [
+      5,
+      "argentina"
+     ]
+    },
+    {
+     "name": "San Vicente",
+     "at": [
+      6,
+      "bolivia"
+     ],
+     "side": "l"
+    }
+   ],
+   "routes": [
+    {
+     "from": "Fort Worth",
+     "to": "Buenos Aires",
+     "at": [
+      5,
+      "trốn"
+     ],
+     "until": [
+      5,
+      "argentina",
+      0,
+      0.2
+     ],
+     "bend": -0.15
+    },
+    {
+     "from": "Buenos Aires",
+     "to": "San Vicente",
+     "at": [
+      6,
+      "bolivia",
+      0,
+      -0.2
+     ],
+     "until": [
+      6,
+      "bolivia",
+      0,
+      0.4
+     ],
+     "bend": 0.2
+    }
+   ],
+   "zoom": "San Vicente"
+  },
+  {
+   "type": "date",
+   "at": 7,
+   "day": "BOLIVIA",
+   "date": "11.1908",
+   "groupAt": [
+    [
+     7,
+     "11"
+    ],
+    [
+     7,
+     "1908"
+    ]
+   ],
+   "stamp": {
+    "text": "TỬ VONG?",
+    "at": [
+     7,
+     "chết"
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "at": 8,
+   "text": "Chuyện gì đã xảy ra?"
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "five",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "MỘT TẤM ẢNH",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Butch_Cassidy",
+  "https://en.wikipedia.org/wiki/Wild_Bunch"
+ ]
+}

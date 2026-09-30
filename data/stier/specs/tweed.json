@@ -1,0 +1,234 @@
+{
+ "title": "Trùm tham nhũng bị bắt ở nước ngoài nhờ một bức tranh biếm họa",
+ "description": "Boss Tweed bị kết tội rút hàng chục triệu đô của người dân New York. Năm 1875 hắn trốn sang Tây Ban Nha, và bị nhận ra nhờ chính những bức biếm họa của Thomas Nast.",
+ "tags": [
+  "Boss Tweed",
+  "Tammany Hall",
+  "Thomas Nast",
+  "tham nhũng",
+  "New York",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1875",
+ "sub": "BOSS TWEED · NEW YORK",
+ "acc": [
+  "tweed",
+  "nast",
+  "york",
+  "tây",
+  "ban",
+  "nha",
+  "tranh",
+  "25",
+  "45"
+ ],
+ "lines": [
+  "Boss Tweed, ông trùm chính trị của New York thế kỷ 19.",
+  "Hắn bị kết tội rút của người đóng thuế từ 25 tới 45 triệu đô.",
+  "Họa sĩ Thomas Nast vẽ biếm họa đả kích hắn hết số báo này tới số khác.",
+  "Tweed than: dân tôi không biết đọc… nhưng họ nhìn thấy mấy bức tranh đó.",
+  "Năm 1875, trong một lần được về thăm nhà, hắn bỏ trốn.",
+  "Qua Cuba, sang Tây Ban Nha, làm thủy thủ trên một con tàu.",
+  "Và ở biên giới Tây Ban Nha, người ta nhận ra hắn…",
+  "nhờ chính những bức biếm họa của Nast.",
+  "Hắn bị giải về New York, và chết trong tù năm 1878.",
+  "Thứ bắt được hắn không phải cảnh sát, mà là một cây bút vẽ."
+ ],
+ "imgs": {
+  "tweed": "File:William M. (Boss) Tweed, N.Y - NARA - 526217 (cropped).jpg",
+  "prey": "File:Nast-Prey-Harper's-Weekly-1871.jpg",
+  "stone": "File:Thomas Nast, Stone Walls Do Not a Prison Make cph.3a00899.jpg",
+  "nast1": "File:Boss Tweed, Nast.jpg",
+  "nast2": "File:Nast-Boss-Tweed-1871.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "tweed",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "ÔNG TRÙM NEW YORK"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "prefix": "$",
+   "from": 25,
+   "to": 45,
+   "suffix": " TRIỆU",
+   "label": "TIỀN THUẾ BỊ RÚT",
+   "until": [
+    1,
+    "45"
+   ],
+   "sub": {
+    "text": "ƯỚC TÍNH NĂM 1877",
+    "at": [
+     1,
+     "triệu"
+    ]
+   }
+  },
+  {
+   "type": "doc",
+   "at": 2,
+   "img": "prey",
+   "tone": "sepia",
+   "moves": [
+    {
+     "at": 2,
+     "x": 0.5,
+     "y": 0.25,
+     "z": 1.1
+    },
+    {
+     "at": [
+      2,
+      "đả"
+     ],
+     "x": 0.5,
+     "y": 0.6,
+     "z": 1.5
+    }
+   ],
+   "credit": "BIẾM HỌA CỦA THOMAS NAST · HARPER'S WEEKLY 1871"
+  },
+  {
+   "type": "quote",
+   "at": 3,
+   "text": "Dân tôi không biết đọc, nhưng họ nhìn thấy mấy bức tranh đó.",
+   "by": "BOSS TWEED (ĐƯỢC CHO LÀ ĐÃ NÓI)"
+  },
+  {
+   "type": "date",
+   "at": 4,
+   "bg": "stone",
+   "day": "BỎ TRỐN",
+   "date": "04.12.1875",
+   "groupAt": [
+    [
+     4,
+     "1875",
+     0,
+     -0.5
+    ],
+    [
+     4,
+     "1875",
+     0,
+     -0.2
+    ],
+    [
+     4,
+     "1875"
+    ]
+   ],
+   "stamp": {
+    "text": "BỎ TRỐN",
+    "at": [
+     4,
+     "trốn"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "CUBA",
+     "at": [
+      5,
+      "cuba"
+     ]
+    },
+    {
+     "text": "→ TÂY BAN NHA",
+     "at": [
+      5,
+      "tây"
+     ],
+     "acc": true
+    },
+    {
+     "text": "THỦY THỦ",
+     "at": [
+      5,
+      "thủy"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "split",
+   "at": 6,
+   "title": "BIÊN GIỚI TÂY BAN NHA",
+   "a": {
+    "img": "tweed",
+    "label": "NGƯỜI THẬT",
+    "at": [
+     6,
+     null,
+     0,
+     0.1
+    ]
+   },
+   "b": {
+    "img": "nast2",
+    "label": "BIẾM HỌA",
+    "at": [
+     7,
+     "biếm"
+    ]
+   },
+   "sign": "=",
+   "signAt": [
+    7,
+    "nast"
+   ]
+  },
+  {
+   "type": "mug",
+   "at": 8,
+   "ghost": "LUDLOW STREET",
+   "mug": {
+    "img": "tweed",
+    "name": "WILLIAM M. TWEED",
+    "at": [
+     8,
+     null,
+     0,
+     0.3
+    ]
+   },
+   "bars": {
+    "at": [
+     8,
+     "chết"
+    ]
+   },
+   "big": {
+    "text": "1878",
+    "small": "CHẾT TRONG TÙ",
+    "at": [
+     8,
+     "1878"
+    ]
+   }
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "nast1",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "MỘT CÂY BÚT VẼ",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/William_M._Tweed"
+ ]
+}

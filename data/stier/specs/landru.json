@@ -1,0 +1,225 @@
+{
+ "title": "Hai tấm vé tàu: một khứ hồi, một một chiều",
+ "description": "Ngày 8/12/1915, Henri Landru mua hai vé tàu tới Gambais: một vé khứ hồi cho hắn, một vé một chiều cho người phụ nữ đi cùng. Cảnh sát không tìm thấy thi thể, nhưng hắn có một cuốn sổ.",
+ "tags": [
+  "Henri Landru",
+  "Gambais",
+  "Râu Xanh",
+  "nước Pháp 1915",
+  "cuốn sổ của Landru",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1915",
+ "sub": "LANDRU · GAMBAIS",
+ "acc": [
+  "landru",
+  "gambais",
+  "11",
+  "sổ",
+  "vé",
+  "chiều"
+ ],
+ "lines": [
+  "Ngày 8 tháng 12 năm 1915, Henri Landru mua hai vé tàu tới Gambais.",
+  "Một vé khứ hồi cho hắn. Một vé một chiều cho người phụ nữ đi cùng.",
+  "Bà ấy không bao giờ trở về.",
+  "Landru đăng báo tìm vợ, nhắm vào những góa phụ cô đơn thời chiến.",
+  "Ít nhất mười phụ nữ và một thiếu niên biến mất.",
+  "Cảnh sát không tìm thấy thi thể.",
+  "Nhưng hắn có một cuốn sổ ghi chép tỉ mỉ.",
+  "Năm 1921, dựa phần lớn vào cuốn sổ ấy, hắn bị kết tội 11 vụ giết người.",
+  "Và lên máy chém ngày 25 tháng 2 năm 1922.",
+  "Tất cả bắt đầu từ một tấm vé một chiều."
+ ],
+ "imgs": {
+  "villa": "File:Landru Gambais 1919.jpg",
+  "id": "File:Landru - photographies d'identité judiciaire (17 avril 1919).jpg",
+  "landru": "File:LANDRU 1.jpg",
+  "oven": "File:Le fourneau de Landru.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "villa",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "HAI VÉ TÀU"
+  },
+  {
+   "type": "split",
+   "at": 1,
+   "title": "GAMBAIS · 08.12.1915",
+   "a": {
+    "img": "landru",
+    "label": "KHỨ HỒI",
+    "at": [
+     1,
+     "khứ"
+    ]
+   },
+   "b": {
+    "img": "villa",
+    "label": "MỘT CHIỀU",
+    "at": [
+     1,
+     "chiều"
+    ]
+   },
+   "sign": "≠",
+   "signAt": [
+    1,
+    "chiều",
+    0,
+    0.2
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "KHÔNG TRỞ VỀ",
+   "white": true,
+   "bg": "villa"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "ĐĂNG BÁO TÌM VỢ",
+     "at": [
+      3,
+      "đăng"
+     ]
+    },
+    {
+     "text": "GÓA PHỤ THỜI CHIẾN",
+     "at": [
+      3,
+      "góa"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "to": 11,
+   "label": "NGƯỜI MẤT TÍCH",
+   "until": [
+    4,
+    "biến"
+   ],
+   "sub": {
+    "text": "ÍT NHẤT 10 PHỤ NỮ + 1 THIẾU NIÊN",
+    "at": [
+     4,
+     "thiếu"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "0",
+     "at": [
+      5,
+      "không"
+     ],
+     "size": 300,
+     "serif": true,
+     "acc": true
+    },
+    {
+     "text": "THI THỂ",
+     "at": [
+      5,
+      "thi"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "CUỐN SỔ",
+     "at": [
+      6,
+      "sổ"
+     ],
+     "serif": true,
+     "size": 200
+    },
+    {
+     "text": "GHI CHÉP TỈ MỈ",
+     "at": [
+      6,
+      "tỉ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "mug",
+   "at": 7,
+   "ghost": "1921",
+   "mug": {
+    "img": "id",
+    "name": "HENRI LANDRU",
+    "at": [
+     7,
+     null,
+     0,
+     0.3
+    ],
+    "pos": "25% 40%"
+   },
+   "stamp": {
+    "text": "11 TỘI GIẾT NGƯỜI",
+    "at": [
+     7,
+     "11"
+    ]
+   }
+  },
+  {
+   "type": "date",
+   "at": 8,
+   "day": "MÁY CHÉM",
+   "date": "25.02.1922",
+   "groupAt": [
+    [
+     8,
+     "25"
+    ],
+    [
+     8,
+     "2"
+    ],
+    [
+     8,
+     "1922"
+    ]
+   ]
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "villa",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "VÉ MỘT CHIỀU",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Henri_D%C3%A9sir%C3%A9_Landru"
+ ]
+}

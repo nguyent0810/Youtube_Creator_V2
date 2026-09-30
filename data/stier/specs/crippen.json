@@ -1,0 +1,312 @@
+{
+ "title": "Kẻ sát nhân đầu tiên bị bắt nhờ một bức điện vô tuyến",
+ "description": "Năm 1910, bác sĩ Crippen trốn khỏi London cùng người tình cải trang thành cậu bé, trên tàu Montrose sang Canada. Một bức điện từ giữa Đại Tây Dương đã thay đổi tất cả.",
+ "tags": [
+  "Dr Crippen",
+  "bác sĩ Crippen",
+  "điện báo vô tuyến",
+  "tàu Montrose",
+  "Scotland Yard",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1910",
+ "sub": "BÁC SĨ CRIPPEN",
+ "acc": [
+  "crippen",
+  "montrose",
+  "canada",
+  "kendall",
+  "dew",
+  "vô",
+  "tuyến",
+  "điện",
+  "pentonville"
+ ],
+ "lines": [
+  "Năm 1910, một bác sĩ trốn khỏi London cùng người tình, đang cải trang thành cậu bé.",
+  "Cảnh sát tìm thấy hài cốt dưới sàn hầm nhà ông.",
+  "Người vợ, ca sĩ Belle Elmore, đã mất tích từ trước.",
+  "Bác sĩ Crippen lên tàu Montrose, sang Canada.",
+  "Thuyền trưởng Kendall nhận ra họ.",
+  "Và gửi một bức điện vô tuyến về Anh: đồng phạm cải trang thành cậu bé.",
+  "Thanh tra Dew lên một con tàu nhanh hơn, tới Canada trước.",
+  "Rồi cải trang làm hoa tiêu, bước lên tàu Montrose.",
+  "Crippen là tội phạm đầu tiên bị bắt nhờ điện báo vô tuyến.",
+  "Ông bị treo cổ tại nhà tù Pentonville.",
+  "Thứ bắt được ông, là một bức điện."
+ ],
+ "imgs": {
+  "trial": "File:Dr. Crippen and Ethel Leneve on trial.jpg",
+  "crippen": "File:Dr crippen.jpg",
+  "dew": "File:Dewcrippen.jpg",
+  "kendall": "File:Captain-Kendall-Empress-of-Ireland.jpg",
+  "montrose": "File:SS Montrose at Funchal, Madeira, 1934.jpg"
+ },
+ "map": {
+  "countries": [
+   "United Kingdom",
+   "Canada"
+  ],
+  "context": [
+   "Ireland",
+   "France",
+   "Belgium",
+   "Netherlands",
+   "Spain",
+   "Portugal",
+   "United States of America",
+   "Iceland",
+   "Greenland",
+   "Germany"
+  ],
+  "labels": {
+   "Canada": "CANADA",
+   "United Kingdom": "ANH"
+  },
+  "bbox": [
+   -80,
+   38,
+   10,
+   62
+  ],
+  "pins": [
+   {
+    "name": "Antwerp",
+    "lon": 4.4,
+    "lat": 51.22,
+    "label": "ANTWERP"
+   },
+   {
+    "name": "Quebec",
+    "lon": -71.21,
+    "lat": 46.81,
+    "label": "QUEBEC"
+   },
+   {
+    "name": "Liverpool",
+    "lon": -2.98,
+    "lat": 53.41,
+    "label": "LIVERPOOL"
+   }
+  ]
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "trial",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "CẢI TRANG",
+   "tape": {
+    "text": "“thành cậu bé”",
+    "at": [
+     0,
+     "cậu"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "DƯỚI SÀN HẦM",
+   "sub": "SỐ 39 HILLDROP CRESCENT · LONDON",
+   "white": true
+  },
+  {
+   "type": "file",
+   "at": 2,
+   "k": "NGƯỜI MẤT TÍCH",
+   "name": "BELLE\nELMORE",
+   "desc": "Ca sĩ nhạc hội · vợ bác sĩ Crippen",
+   "stamp": {
+    "text": "MẤT TÍCH",
+    "at": [
+     2,
+     "mất"
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "at": 3,
+   "pins": [
+    {
+     "name": "Antwerp",
+     "at": [
+      3,
+      null,
+      0,
+      0.2
+     ],
+     "side": "r"
+    },
+    {
+     "name": "Quebec",
+     "at": [
+      3,
+      "canada"
+     ],
+     "side": "l"
+    }
+   ],
+   "routes": [
+    {
+     "from": "Antwerp",
+     "to": "Quebec",
+     "at": [
+      3,
+      "tàu"
+     ],
+     "until": [
+      3,
+      "canada",
+      0,
+      0.4
+     ],
+     "bend": 0.12
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 4,
+   "k": "TÀU MONTROSE",
+   "name": "THUYỀN TRƯỞNG\nKENDALL",
+   "desc": "Người nhận ra kẻ trốn chạy",
+   "img": "kendall",
+   "stamp": {
+    "text": "NHẬN RA",
+    "at": [
+     4,
+     "nhận"
+    ]
+   }
+  },
+  {
+   "type": "quote",
+   "at": 5,
+   "text": "Đồng phạm cải trang thành cậu bé.",
+   "by": "ĐIỆN VÔ TUYẾN TỪ TÀU MONTROSE · 1910"
+  },
+  {
+   "type": "map",
+   "at": 6,
+   "pins": [
+    {
+     "name": "Liverpool",
+     "at": [
+      6,
+      null,
+      0,
+      0.15
+     ],
+     "side": "r"
+    },
+    {
+     "name": "Quebec",
+     "at": [
+      6,
+      null,
+      0,
+      0.3
+     ],
+     "side": "l"
+    }
+   ],
+   "routes": [
+    {
+     "from": "Liverpool",
+     "to": "Quebec",
+     "at": [
+      6,
+      "tàu"
+     ],
+     "until": [
+      6,
+      "trước"
+     ],
+     "bend": -0.12
+    }
+   ],
+   "zoom": "Quebec"
+  },
+  {
+   "type": "photo",
+   "at": 7,
+   "img": "montrose",
+   "tone": "bw",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": {
+    "text": "THANH TRA DEW · CẢI TRANG HOA TIÊU",
+    "at": [
+     7,
+     "hoa"
+    ]
+   },
+   "credit": "TÀU MONTROSE"
+  },
+  {
+   "type": "photo",
+   "at": 8,
+   "img": "dew",
+   "mode": "print",
+   "tone": "bw",
+   "stamp": {
+    "text": "BỊ BẮT",
+    "at": [
+     8,
+     "bắt"
+    ],
+    "x": 330,
+    "y": 1150
+   },
+   "label": {
+    "text": "LẦN ĐẦU TIÊN: ĐIỆN BÁO VÔ TUYẾN",
+    "at": [
+     8,
+     "điện"
+    ],
+    "y": 1380
+   }
+  },
+  {
+   "type": "mug",
+   "at": 9,
+   "ghost": "PENTONVILLE",
+   "mug": {
+    "img": "crippen",
+    "name": "HAWLEY H. CRIPPEN",
+    "at": [
+     9,
+     null,
+     0,
+     0.3
+    ]
+   },
+   "stamp": {
+    "text": "TỬ HÌNH",
+    "at": [
+     9,
+     "treo"
+    ]
+   }
+  },
+  {
+   "type": "hero",
+   "at": 10,
+   "img": "trial",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "MỘT BỨC ĐIỆN",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Hawley_Harvey_Crippen"
+ ]
+}

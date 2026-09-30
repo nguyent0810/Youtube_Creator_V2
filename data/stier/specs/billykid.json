@@ -1,0 +1,208 @@
+{
+ "title": "Billy the Kid vượt ngục chỉ vì xin đi vệ sinh",
+ "description": "Tháng 4/1881, Billy the Kid chờ ngày lên giá treo cổ. Trên đường từ nhà vệ sinh về phòng giam, hắn tuột khỏi còng tay. Hơn hai tháng sau, Pat Garrett tìm thấy hắn.",
+ "tags": [
+  "Billy the Kid",
+  "Pat Garrett",
+  "miền Tây nước Mỹ",
+  "vượt ngục",
+  "New Mexico 1881",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1881",
+ "sub": "BILLY THE KID",
+ "acc": [
+  "billy",
+  "kid",
+  "garrett",
+  "sumner",
+  "21",
+  "còng"
+ ],
+ "lines": [
+  "Tháng 4 năm 1881, Billy the Kid chờ ngày lên giá treo cổ.",
+  "Một phó cảnh sát trưởng đưa hắn ra nhà vệ sinh sau tòa án.",
+  "Trên đường về, hắn nấp sau một góc cầu thang…",
+  "tuột khỏi còng tay, dùng chính chiếc còng đánh người gác.",
+  "Hai phó cảnh sát chết. Chân vẫn bị xiềng, hắn trốn thoát.",
+  "Hơn hai tháng sau, cảnh sát trưởng Pat Garrett tìm thấy hắn ở Fort Sumner.",
+  "Ngày 14 tháng 7, Garrett bắn chết hắn.",
+  "Billy the Kid mới 21 tuổi.",
+  "Hắn bị gắn với chín vụ giết người.",
+  "Và cuộc vượt ngục ấy bắt đầu từ một lần xin đi vệ sinh."
+ ],
+ "imgs": {
+  "tintype": "File:Billy the Kid tintype, Fort Sumner, 1879-80.jpg",
+  "jail": "File:LincolnNM Jail and Courthouse.jpg",
+  "group": "File:Photo of Billy the Kid (left).JPG"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "tintype",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "GIÁ TREO CỔ"
+  },
+  {
+   "type": "photo",
+   "at": 1,
+   "img": "jail",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": {
+    "text": "NHÀ VỆ SINH SAU TÒA ÁN",
+    "at": [
+     1,
+     "vệ"
+    ]
+   },
+   "credit": "TÒA ÁN & NHÀ GIAM LINCOLN, NEW MEXICO"
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "GÓC",
+     "at": [
+      2,
+      "góc"
+     ],
+     "size": 200
+    },
+    {
+     "text": "CẦU THANG",
+     "at": [
+      2,
+      "cầu"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "TUỘT CÒNG",
+     "at": [
+      3,
+      "tuột"
+     ]
+    },
+    {
+     "text": "ĐÁNH NGƯỜI GÁC",
+     "at": [
+      3,
+      "đánh"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "TRỐN THOÁT",
+   "sub": "28.04.1881 · CHÂN VẪN BỊ XIỀNG",
+   "bg": "jail"
+  },
+  {
+   "type": "calendar",
+   "at": 5,
+   "n": 77,
+   "unit": "",
+   "title": "*HƠN 2 THÁNG* TỰ DO"
+  },
+  {
+   "type": "date",
+   "at": 6,
+   "day": "FORT SUMNER",
+   "date": "14.07.1881",
+   "groupAt": [
+    [
+     6,
+     "14"
+    ],
+    [
+     6,
+     "7"
+    ],
+    [
+     6,
+     "7",
+     0,
+     0.35
+    ]
+   ],
+   "stamp": {
+    "text": "PAT GARRETT",
+    "at": [
+     6,
+     "bắn"
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "to": 21,
+   "label": "TUỔI",
+   "until": [
+    7,
+    "21",
+    0,
+    0.3
+   ],
+   "img": "tintype",
+   "imgAt": [
+    7,
+    null,
+    0,
+    0.1
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "9",
+     "at": [
+      8,
+      "chín"
+     ],
+     "size": 300,
+     "acc": true,
+     "serif": true
+    },
+    {
+     "text": "VỤ GIẾT NGƯỜI",
+     "at": [
+      8,
+      "giết"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "tintype",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "GIÁ TREO CỔ",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Billy_the_Kid"
+ ]
+}

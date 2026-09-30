@@ -1,0 +1,186 @@
+{
+ "title": "Cuộn phim bỏ quên đã biến Bonnie và Clyde thành huyền thoại",
+ "description": "Tháng 4/1933, băng Barrow tháo chạy khỏi Joplin và bỏ lại một máy ảnh với mấy cuộn phim chưa rửa. Những tấm ảnh trong đó đưa Bonnie và Clyde lên trang nhất khắp nước Mỹ.",
+ "tags": [
+  "Bonnie và Clyde",
+  "Bonnie Parker",
+  "Clyde Barrow",
+  "Joplin 1933",
+  "Frank Hamer",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1933",
+ "sub": "BONNIE & CLYDE",
+ "acc": [
+  "joplin",
+  "bonnie",
+  "clyde",
+  "globe",
+  "louisiana",
+  "130",
+  "phim"
+ ],
+ "lines": [
+  "Tháng 4 năm 1933, băng Barrow tháo chạy khỏi một căn hộ ở Joplin, Missouri.",
+  "Chúng bỏ lại súng, và một máy ảnh với mấy cuộn phim chưa rửa.",
+  "Cảnh sát đem phim đi rửa ở tòa báo Joplin Globe.",
+  "Trong ảnh: Bonnie và Clyde tạo dáng, chĩa súng vào nhau.",
+  "Một tấm Bonnie ngậm xì gà, tay cầm súng lục.",
+  "Ảnh và một bài thơ của Bonnie được đưa lên khắp các mặt báo.",
+  "Cặp đôi thành tin tức trang nhất cả nước Mỹ.",
+  "Ngày 23 tháng 5 năm 1934, đội truy bắt phục kích họ ở Louisiana.",
+  "Họ bắn khoảng 130 viên đạn.",
+  "Cuộn phim bỏ quên ấy… đã tạo nên huyền thoại Bonnie và Clyde."
+ ],
+ "imgs": {
+  "couple": "File:Bonnie Parker and Clyde Barrow.jpg",
+  "cigar": "File:BonnieParkerCigar1933.jpg",
+  "fool": "File:Bonnie and Clyde fooling around Getty 514872400.jpg",
+  "posse": "File:Bonnie Parker and Clyde Barrow posse (1934).jpg",
+  "hamer": "File:FrankHamerEarly1920s.jpg",
+  "jones": "File:WDJonesAndGuns1933.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "couple",
+   "frame": "print",
+   "tone": "bw",
+   "intro": true,
+   "head": "CUỘN PHIM BỎ QUÊN"
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "BỎ LẠI Ở JOPLIN",
+   "rows": [
+    {
+     "k": "SÚNG",
+     "v": "✓",
+     "at": [
+      1,
+      "súng"
+     ]
+    },
+    {
+     "k": "MÁY ẢNH",
+     "v": "✓",
+     "at": [
+      1,
+      "máy"
+     ]
+    }
+   ],
+   "total": {
+    "k": "PHIM CHƯA RỬA",
+    "v": "✓",
+    "at": [
+     1,
+     "rửa"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "RỬA PHIM",
+   "sub": "TÒA BÁO JOPLIN GLOBE",
+   "white": true,
+   "bg": "jones"
+  },
+  {
+   "type": "photo",
+   "at": 3,
+   "img": "fool",
+   "mode": "print",
+   "tone": "bw",
+   "label": {
+    "text": "ẢNH TỪ CUỘN PHIM · 1933",
+    "at": [
+     3,
+     "chĩa"
+    ],
+    "y": 1330
+   }
+  },
+  {
+   "type": "evidence",
+   "at": 4,
+   "img": "cigar",
+   "tone": "bw",
+   "tag": "BONNIE PARKER · 1933",
+   "credit": "ẢNH TỪ CUỘN PHIM BỎ LẠI Ở JOPLIN"
+  },
+  {
+   "type": "quote",
+   "at": 5,
+   "text": "The Story of Suicide Sal",
+   "by": "MỘT BÀI THƠ CỦA BONNIE PARKER"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "TRANG NHẤT",
+     "at": [
+      6,
+      "trang"
+     ],
+     "size": 200,
+     "serif": true
+    },
+    {
+     "text": "CẢ NƯỚC MỸ",
+     "at": [
+      6,
+      "mỹ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 7,
+   "img": "posse",
+   "tone": "bw",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": {
+    "text": "ĐỘI TRUY BẮT · 23.05.1934",
+    "at": [
+     7,
+     "phục"
+    ]
+   },
+   "credit": "LOUISIANA · 1934"
+  },
+  {
+   "type": "counter",
+   "at": 8,
+   "prefix": "~",
+   "to": 130,
+   "label": "VIÊN ĐẠN",
+   "until": [
+    8,
+    "viên"
+   ]
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "couple",
+   "frame": "print",
+   "tone": "bw",
+   "loop": true,
+   "head": "CUỘN PHIM BỎ QUÊN",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Bonnie_and_Clyde"
+ ]
+}

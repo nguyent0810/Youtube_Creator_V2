@@ -1,0 +1,195 @@
+{
+ "title": "Người bắt trộm giỏi nhất London hóa ra là trùm trộm",
+ "description": "London thập niên 1720, Jonathan Wild tự xưng \"Tổng thanh tra bắt trộm\". Ai mất đồ cứ tìm ông, và ông luôn tìm lại được, bởi chính ông đã sai người đi trộm.",
+ "tags": [
+  "Jonathan Wild",
+  "Thief-Taker General",
+  "London 1725",
+  "Jack Sheppard",
+  "Tyburn",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1725",
+ "sub": "JONATHAN WILD · LONDON",
+ "acc": [
+  "wild",
+  "london",
+  "sheppard",
+  "tyburn",
+  "trộm",
+  "vé"
+ ],
+ "lines": [
+  "London những năm 1720, người bắt trộm giỏi nhất thành phố tự xưng là Tổng thanh tra bắt trộm.",
+  "Ai mất đồ, cứ tìm Jonathan Wild.",
+  "Ông ta luôn tìm lại được, và nhận tiền thưởng.",
+  "Bởi chính ông ta đã sai người đi trộm.",
+  "Wild điều hành cả một băng trộm.",
+  "Kẻ nào không nghe lời, bị ông tự tay nộp cho giá treo cổ.",
+  "Chính ông bắt Jack Sheppard, tên vượt ngục nổi tiếng.",
+  "Nhưng rồi đàn em quay sang khai chống lại ông.",
+  "Năm 1725, Jonathan Wild bị treo cổ ở Tyburn, trước một đám đông khổng lồ.",
+  "Người ta còn phát cả vé mời xem ông lên giá treo.",
+  "Kẻ bắt trộm giỏi nhất… chính là trùm trộm."
+ ],
+ "imgs": {
+  "ticket": "File:Ticket to the hanging of Jonathan Wild.jpg",
+  "ticket2": "File:Ticket for the execution of Jonathan Wild (Cropped).png",
+  "funeral": "File:The funeral procession of the celebrated Mr. Jonathan Wild Thief-Taker General of Great Britain & Ireland; together wth a list of ye principal Priggs, Hanging in Effegie, who were taken by LCCN98504181.jpg",
+  "mob": "File:Annals of Newgate - Jonathan Wild pelted by the mob on his way to Tyburn.jpg",
+  "sheppard": "File:Jack Sheppard - Thornhill.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "ticket2",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "TỔNG THANH TRA BẮT TRỘM"
+  },
+  {
+   "type": "file",
+   "at": 1,
+   "k": "“THIEF-TAKER GENERAL”",
+   "name": "JONATHAN\nWILD",
+   "desc": "London · 1682–1725",
+   "img": "ticket2"
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "DỊCH VỤ CỦA WILD",
+   "rows": [
+    {
+     "k": "TÌM LẠI ĐỒ MẤT",
+     "v": "✓",
+     "at": [
+      2,
+      "tìm"
+     ]
+    }
+   ],
+   "total": {
+    "k": "TIỀN THƯỞNG",
+    "v": "$$$",
+    "at": [
+     2,
+     "thưởng"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "CHÍNH ÔNG TA\nSAI ĐI TRỘM",
+   "bg": "funeral"
+  },
+  {
+   "type": "crowd",
+   "at": 4,
+   "object": "none",
+   "label": {
+    "text": "CẢ MỘT BĂNG TRỘM",
+    "at": [
+     4,
+     "băng"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "KHÔNG NGHE LỜI?",
+     "at": [
+      5,
+      "không"
+     ]
+    },
+    {
+     "text": "→ GIÁ TREO CỔ",
+     "at": [
+      5,
+      "giá"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 6,
+   "k": "NẠN NHÂN CỦA WILD",
+   "name": "JACK\nSHEPPARD",
+   "desc": "Tên vượt ngục nổi tiếng nhất London",
+   "img": "sheppard",
+   "stamp": {
+    "text": "BỊ BẮT",
+    "at": [
+     6,
+     "bắt"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "ĐÀN EM",
+     "at": [
+      7,
+      "đàn"
+     ]
+    },
+    {
+     "text": "KHAI HẾT",
+     "at": [
+      7,
+      "khai"
+     ],
+     "acc": true,
+     "size": 200
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 8,
+   "img": "mob",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "TYBURN · 24.05.1725",
+    "at": [
+     8,
+     "tyburn"
+    ],
+    "y": 1340
+   }
+  },
+  {
+   "type": "evidence",
+   "at": 9,
+   "img": "ticket",
+   "tone": "sepia",
+   "tag": "VÉ MỜI XEM HÀNH HÌNH",
+   "credit": "TẤM VÉ DỰ BUỔI TREO CỔ JONATHAN WILD · 1725"
+  },
+  {
+   "type": "hero",
+   "at": 10,
+   "img": "ticket2",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "TRÙM TRỘM",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Jonathan_Wild"
+ ]
+}

@@ -1,0 +1,235 @@
+{
+ "title": "Thú nhận giết 27 người, nhưng có nạn nhân vẫn còn sống",
+ "description": "Năm 1896, kẻ lừa đảo H. H. Holmes thú nhận 27 vụ giết người. Báo chí phát cuồng, rồi phát hiện vài \"nạn nhân\" vẫn đang sống. Sự thật về \"lâu đài sát nhân\" ở Chicago.",
+ "tags": [
+  "H. H. Holmes",
+  "lâu đài sát nhân",
+  "Chicago 1893",
+  "Pinkerton",
+  "lời thú tội",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1896",
+ "sub": "H. H. HOLMES · CHICAGO",
+ "acc": [
+  "holmes",
+  "chicago",
+  "pinkerton",
+  "pitezel",
+  "27",
+  "sống",
+  "1893"
+ ],
+ "lines": [
+  "Năm 1896, kẻ lừa đảo tên Holmes thú nhận đã giết 27 người.",
+  "Báo chí phát cuồng.",
+  "Nhưng trong danh sách ấy… có người vẫn còn sống.",
+  "Hắn lừa bảo hiểm, giả giấy tờ, lấy nhiều vợ cùng lúc.",
+  "Ở Chicago, hắn xây một tòa nhà ba tầng, gọi là khách sạn cho Hội chợ Thế giới 1893.",
+  "Truyền thuyết gọi nó là lâu đài sát nhân.",
+  "Nhưng nhiều chi tiết là do báo lá cải thổi phồng.",
+  "Thám tử Pinkerton lần theo hắn, bắt được ở Boston năm 1894.",
+  "Hắn bị kết án vì giết đồng bọn Benjamin Pitezel.",
+  "Và bị treo cổ ngày 7 tháng 5 năm 1896.",
+  "Ngay cả lời thú tội của hắn, cũng có phần dối trá."
+ ],
+ "imgs": {
+  "holmes": "File:Dr. Henry Howard Holmes (Herman Webster Mudgett).jpg",
+  "world": "File:World newspaper.jpg",
+  "castle": "File:H. H. Holmes Castle.jpg",
+  "conf": "File:Full confession of H. H. Holmes (page 2).jpg",
+  "geyer": "File:Philadelphia City Detective Frank Geyer.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "holmes",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "27 NGƯỜI"
+  },
+  {
+   "type": "doc",
+   "at": 1,
+   "img": "world",
+   "tone": "sepia",
+   "moves": [
+    {
+     "at": 1,
+     "x": 0.5,
+     "y": 0.2,
+     "z": 1.3
+    },
+    {
+     "at": [
+      1,
+      "cuồng"
+     ],
+     "x": 0.5,
+     "y": 0.5,
+     "z": 1.6
+    }
+   ],
+   "credit": "BÁO THE WORLD · 11.08.1895"
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "CÓ NGƯỜI",
+     "at": [
+      2,
+      "có"
+     ]
+    },
+    {
+     "text": "VẪN CÒN SỐNG",
+     "at": [
+      2,
+      "sống"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "TIỀN ÁN",
+   "rows": [
+    {
+     "k": "LỪA BẢO HIỂM",
+     "v": "✓",
+     "at": [
+      3,
+      "bảo"
+     ]
+    },
+    {
+     "k": "GIẢ GIẤY TỜ",
+     "v": "✓",
+     "at": [
+      3,
+      "giấy"
+     ]
+    },
+    {
+     "k": "LẤY NHIỀU VỢ",
+     "v": "✓",
+     "at": [
+      3,
+      "vợ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 4,
+   "img": "castle",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": {
+    "text": "CHICAGO · HỘI CHỢ 1893",
+    "at": [
+     4,
+     "hội"
+    ]
+   },
+   "credit": "TÒA NHÀ TRÊN PHỐ 63 · THẬP NIÊN 1890"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "“LÂU ĐÀI",
+     "at": [
+      5,
+      "lâu"
+     ],
+     "serif": true
+    },
+    {
+     "text": "SÁT NHÂN”",
+     "at": [
+      5,
+      "sát"
+     ],
+     "serif": true,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "THỔI PHỒNG",
+   "sub": "NHIỀU CHI TIẾT TỪ BÁO LÁ CẢI",
+   "bg": "world"
+  },
+  {
+   "type": "file",
+   "at": 7,
+   "k": "BOSTON · 17.11.1894",
+   "name": "BỊ BẮT",
+   "desc": "Thám tử Pinkerton lần theo từ Philadelphia",
+   "img": "geyer",
+   "stamp": {
+    "text": "PINKERTON",
+    "at": [
+     7,
+     "bắt"
+    ]
+   }
+  },
+  {
+   "type": "evidence",
+   "at": 8,
+   "img": "conf",
+   "tone": "sepia",
+   "tag": "HỒ SƠ · PITEZEL",
+   "credit": "LỜI THÚ TỘI CỦA HOLMES · 1896"
+  },
+  {
+   "type": "mug",
+   "at": 9,
+   "ghost": "07.05.1896",
+   "mug": {
+    "img": "holmes",
+    "name": "H. H. HOLMES",
+    "at": [
+     9,
+     null,
+     0,
+     0.3
+    ]
+   },
+   "stamp": {
+    "text": "TREO CỔ",
+    "at": [
+     9,
+     "treo"
+    ]
+   }
+  },
+  {
+   "type": "hero",
+   "at": 10,
+   "img": "holmes",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "27 NGƯỜI",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/H._H._Holmes"
+ ]
+}

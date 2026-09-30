@@ -1,0 +1,253 @@
+{
+ "title": "Một bộ quân phục cũ chiếm cả tòa thị chính: Đại úy xứ Köpenick",
+ "description": "Năm 1906, cựu tù Wilhelm Voigt mặc bộ quân phục đại úy mua từ tiệm đồ cũ, chỉ huy 11 người lính, bắt thị trưởng và tịch thu ngân quỹ thành phố Köpenick.",
+ "tags": [
+  "Đại úy Köpenick",
+  "Wilhelm Voigt",
+  "Hauptmann von Köpenick",
+  "lừa đảo",
+  "nước Đức 1906",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1906",
+ "sub": "ĐẠI ÚY XỨ KÖPENICK",
+ "acc": [
+  "voigt",
+  "köpenick",
+  "wilhelm",
+  "4002",
+  "quân",
+  "phục",
+  "lưỡi",
+  "lê"
+ ],
+ "lines": [
+  "Năm 1906, một bộ quân phục mua từ tiệm đồ cũ… chiếm cả một tòa thị chính.",
+  "Chủ nhân của nó là Wilhelm Voigt, thợ đóng giày, từng ngồi tù tổng cộng 25 năm.",
+  "Hắn chặn năm người lính trên đường: đi theo tôi.",
+  "Họ đi theo.",
+  "Hắn gom thêm sáu lính nữa, lên tàu tới Köpenick.",
+  "Bắt thị trưởng, bắt thủ quỹ, tịch thu 4002 mác.",
+  "Còn ký biên nhận, bằng tên viên cai ngục cũ của mình.",
+  "Thị trưởng hỏi: lệnh bắt đâu?",
+  "Hắn chỉ vào lưỡi lê: đây là lệnh của tôi.",
+  "Mười ngày sau hắn bị bắt, lĩnh hai mươi tháng tù.",
+  "Rồi chính Hoàng đế Wilhelm II ân xá cho hắn.",
+  "Tất cả chỉ nhờ một bộ quân phục."
+ ],
+ "imgs": {
+  "voigt": "File:Friedrich Wilhelm Voight.jpg",
+  "statue": "File:Hauptmann von Koepenick - Bronzestatue.jpg",
+  "uniform": "File:Hauptmann von Koepenick - Uniform.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "voigt",
+   "frame": "print",
+   "tone": "bw",
+   "intro": true,
+   "head": "BỘ QUÂN PHỤC",
+   "tape": {
+    "text": "“mua từ tiệm đồ cũ”",
+    "at": [
+     0,
+     "tiệm"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 1,
+   "k": "HỒ SƠ TIỀN ÁN",
+   "name": "WILHELM\nVOIGT",
+   "desc": "Thợ đóng giày · sinh 1849",
+   "img": "voigt",
+   "stamp": {
+    "text": "25 NĂM TÙ",
+    "at": [
+     1,
+     "25"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "5 NGƯỜI LÍNH",
+     "at": [
+      2,
+      "năm"
+     ]
+    },
+    {
+     "text": "“ĐI THEO TÔI.”",
+     "at": [
+      2,
+      "theo"
+     ],
+     "acc": true,
+     "serif": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "HỌ ĐI THEO",
+   "white": true,
+   "bg": "uniform"
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 5,
+   "to": 11,
+   "label": "NGƯỜI LÍNH",
+   "until": [
+    4,
+    "sáu",
+    0,
+    0.4
+   ],
+   "sub": {
+    "text": "→ TÀU TỚI KÖPENICK",
+    "at": [
+     4,
+     "tàu"
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "TÒA THỊ CHÍNH KÖPENICK",
+   "rows": [
+    {
+     "k": "THỊ TRƯỞNG",
+     "v": "BẮT",
+     "at": [
+      5,
+      "thị"
+     ]
+    },
+    {
+     "k": "THỦ QUỸ",
+     "v": "BẮT",
+     "at": [
+      5,
+      "thủ"
+     ]
+    }
+   ],
+   "total": {
+    "k": "TỊCH THU",
+    "v": "4.002 MÁC",
+    "at": [
+     5,
+     "tịch"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 6,
+   "k": "BIÊN NHẬN · 4.002 MÁC 37 PFENNIG",
+   "name": "KÝ TÊN:\nCAI NGỤC CŨ",
+   "desc": "Chữ ký mượn tên người từng canh hắn",
+   "stamp": {
+    "text": "GIẢ MẠO",
+    "at": [
+     6,
+     "cai"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "LỆNH BẮT",
+     "at": [
+      7,
+      "lệnh"
+     ]
+    },
+    {
+     "text": "ĐÂU?",
+     "at": [
+      7,
+      "đâu"
+     ],
+     "acc": true,
+     "size": 220
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 8,
+   "text": "Đây là lệnh của tôi.",
+   "by": "“ĐẠI ÚY” VOIGT, CHỈ VÀO LƯỠI LÊ"
+  },
+  {
+   "type": "mug",
+   "at": 9,
+   "ghost": "1906",
+   "mug": {
+    "img": "voigt",
+    "name": "WILHELM VOIGT",
+    "at": [
+     9,
+     null,
+     0,
+     0.35
+    ]
+   },
+   "stamp": {
+    "text": "BỊ BẮT",
+    "at": [
+     9,
+     "bắt"
+    ]
+   },
+   "bars": {
+    "at": [
+     9,
+     "hai"
+    ]
+   },
+   "big": {
+    "text": "20 THÁNG",
+    "small": "NGỒI TÙ",
+    "at": [
+     9,
+     "tháng"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 10,
+   "text": "ÂN XÁ",
+   "sub": "HOÀNG ĐẾ WILHELM II · 16.08.1908",
+   "bg": "statue"
+  },
+  {
+   "type": "hero",
+   "at": 11,
+   "img": "voigt",
+   "frame": "print",
+   "tone": "bw",
+   "loop": true,
+   "head": "BỘ QUÂN PHỤC",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Wilhelm_Voigt"
+ ]
+}

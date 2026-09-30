@@ -1,0 +1,227 @@
+{
+ "title": "Vượt ngục bằng khẩu súng gỗ, gục ngã sau một buổi xem phim",
+ "description": "Ngày 3/3/1934, John Dillinger thoát khỏi nhà tù \"không thể vượt\" Crown Point mà không nổ phát súng nào. Theo hồ sơ FBI, khẩu súng hắn cầm được tạc từ gỗ.",
+ "tags": [
+  "John Dillinger",
+  "súng gỗ",
+  "rạp Biograph",
+  "người đàn bà áo đỏ",
+  "FBI",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1934",
+ "sub": "JOHN DILLINGER",
+ "acc": [
+  "dillinger",
+  "crown",
+  "point",
+  "fbi",
+  "biograph",
+  "gỗ",
+  "đỏ",
+  "24"
+ ],
+ "lines": [
+  "Nhà tù Crown Point khoe với báo chí: không thể vượt ngục.",
+  "Ngày 3 tháng 3 năm 1934, John Dillinger bước ra khỏi đó, không nổ một phát súng.",
+  "Khẩu súng hắn cầm, theo hồ sơ FBI, được tạc từ gỗ.",
+  "Băng của hắn bị cáo buộc cướp 24 ngân hàng.",
+  "Bốn tháng sau, một phụ nữ báo cho cảnh sát nơi hắn sẽ tới.",
+  "Báo chí gọi bà là người đàn bà áo đỏ.",
+  "Tối 22 tháng 7, Dillinger đi xem phim ở rạp Biograph, Chicago.",
+  "Khi bước ra, đặc vụ liên bang đã chờ sẵn.",
+  "Hắn định chạy, và bị bắn chết.",
+  "Kẻ thoát ngục bằng khẩu súng gỗ… không thoát được một buổi xem phim."
+ ],
+ "imgs": {
+  "mug": "File:John Dillinger mug shot.jpg",
+  "wanted": "File:Dillingerwantedposter.jpg",
+  "poster": "File:John Dillinger FBI wanted poster.jpg",
+  "crowd": "File:Crowd at Biograph Theater after Dillinger death.jpg",
+  "mug24": "File:John Dillinger 1924 Mugshot.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "mug",
+   "frame": "print",
+   "tone": "bw",
+   "intro": true,
+   "head": "KHÔNG THỂ VƯỢT NGỤC",
+   "strike": [
+    1,
+    "dillinger"
+   ]
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "day": "CROWN POINT · INDIANA",
+   "date": "03.03.1934",
+   "groupAt": [
+    [
+     1,
+     "3"
+    ],
+    [
+     1,
+     "3",
+     1
+    ],
+    [
+     1,
+     "1934"
+    ]
+   ],
+   "stamp": {
+    "text": "0 PHÁT SÚNG",
+    "at": [
+     1,
+     "phát"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "SÚNG",
+     "at": [
+      2,
+      "súng"
+     ],
+     "size": 220
+    },
+    {
+     "text": "TẠC TỪ GỖ",
+     "at": [
+      2,
+      "gỗ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 24,
+   "label": "NGÂN HÀNG",
+   "until": [
+    3,
+    "24",
+    0,
+    0.3
+   ],
+   "img": "wanted",
+   "imgAt": [
+    3,
+    null,
+    0,
+    0.1
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 4,
+   "img": "poster",
+   "tone": "bw",
+   "focus": [
+    0.5,
+    0.35
+   ],
+   "label": {
+    "text": "MỘT CUỘC GỌI BÁO TIN",
+    "at": [
+     4,
+     "báo"
+    ]
+   },
+   "credit": "LỆNH TRUY NÃ CỦA FBI"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "NGƯỜI ĐÀN BÀ",
+     "at": [
+      5,
+      "người"
+     ],
+     "serif": true
+    },
+    {
+     "text": "ÁO ĐỎ",
+     "at": [
+      5,
+      "đỏ"
+     ],
+     "acc": true,
+     "size": 240,
+     "serif": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 6,
+   "day": "RẠP BIOGRAPH · CHICAGO",
+   "date": "22.07.1934",
+   "groupAt": [
+    [
+     6,
+     "22"
+    ],
+    [
+     6,
+     "7"
+    ],
+    [
+     6,
+     "7",
+     0,
+     0.35
+    ]
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "ĐẶC VỤ CHỜ SẴN",
+   "white": true,
+   "bg": "crowd"
+  },
+  {
+   "type": "photo",
+   "at": 8,
+   "img": "crowd",
+   "tone": "bw",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": {
+    "text": "ĐÁM ĐÔNG TRƯỚC RẠP BIOGRAPH · 24.07.1934",
+    "at": [
+     8,
+     "chết"
+    ]
+   }
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "mug",
+   "frame": "print",
+   "tone": "bw",
+   "loop": true,
+   "head": "KHẨU SÚNG GỖ",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/John_Dillinger"
+ ]
+}

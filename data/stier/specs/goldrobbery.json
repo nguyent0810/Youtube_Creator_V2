@@ -1,0 +1,247 @@
+{
+ "title": "Trộm 102 ký vàng trên tàu mà cân vẫn đủ: vụ cướp vàng 1855",
+ "description": "Đêm 15/5/1855, ba hòm vàng lên tàu từ London sang Paris. Đến nơi, cân vẫn gần đủ, nhưng bên trong là chì hạt. Hồ sơ vụ Great Gold Robbery.",
+ "tags": [
+  "Great Gold Robbery",
+  "cướp vàng 1855",
+  "vụ trộm trên tàu",
+  "London",
+  "Paris",
+  "hồ sơ vụ án",
+  "vụ án lịch sử"
+ ],
+ "kicker": "HỒ SƠ 1855",
+ "sub": "VỤ CƯỚP VÀNG LỚN",
+ "acc": [
+  "london",
+  "paris",
+  "vàng",
+  "chì",
+  "sáp",
+  "newgate",
+  "pháp"
+ ],
+ "lines": [
+  "Đêm 15 tháng 5 năm 1855, ba hòm vàng lên tàu từ London sang Paris.",
+  "Hòm được cân ở London, cân ở Pháp, cân lại ở Paris.",
+  "Két trên tàu cần hai chìa khóa.",
+  "Bọn trộm in dấu chìa lên sáp, rồi tự làm chìa.",
+  "Trên toa, chúng lấy vàng ra, đổ vào đúng từng ấy cân chì hạt.",
+  "Chúng mang theo cả cân để cân.",
+  "102 ký vàng, trị giá 12 nghìn bảng thời đó, biến mất.",
+  "Ở Pháp, một hòm nhẹ đi 18 ký, hai hòm kia lại nặng hơn.",
+  "Các công ty khẳng định: vụ trộm là không thể.",
+  "Rồi một tên quỵt tiền nuôi người tình của đồng bọn.",
+  "Cô tìm đến nhà tù Newgate, và kể hết.",
+  "Tất cả bắt đầu từ ba hòm vàng."
+ ],
+ "imgs": {
+  "van": "File:Agar and Burgess in the Guards' Department of the Train.jpg",
+  "bridge": "File:Agar waiting at the London Bridge Station.jpg",
+  "kay": "File:Fanny Kay and Child.jpg",
+  "court": "File:Agar under examination at the Old Bailey, during the trial of Pierce, Burgess and Tester.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "van",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "BA HÒM VÀNG"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "CÂN · LONDON",
+     "at": [
+      1,
+      "cân"
+     ]
+    },
+    {
+     "text": "CÂN · PHÁP",
+     "at": [
+      1,
+      "cân",
+      1
+     ]
+    },
+    {
+     "text": "CÂN · PARIS",
+     "at": [
+      1,
+      "cân",
+      2
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 2,
+   "img": "bridge",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": {
+    "text": "KÉT CẦN 2 CHÌA KHÓA",
+    "at": [
+     2,
+     "hai"
+    ]
+   },
+   "credit": "TRANH MINH HỌA · 1857"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "DẤU SÁP",
+     "at": [
+      3,
+      "sáp"
+     ]
+    },
+    {
+     "text": "→ CHÌA GIẢ",
+     "at": [
+      3,
+      "làm"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "TRÊN TOA HÀNH LÝ",
+   "rows": [
+    {
+     "k": "VÀNG LẤY RA",
+     "v": "−",
+     "at": [
+      4,
+      "vàng"
+     ]
+    },
+    {
+     "k": "CHÌ HẠT ĐỔ VÀO",
+     "v": "+",
+     "at": [
+      4,
+      "chì"
+     ]
+    }
+   ],
+   "total": {
+    "k": "TRỌNG LƯỢNG",
+    "v": "KHÔNG ĐỔI",
+    "at": [
+     5,
+     "cân",
+     1
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "to": 102,
+   "label": "KÝ VÀNG",
+   "until": [
+    6,
+    "ký"
+   ],
+   "sub": {
+    "text": "£12.000 THỜI ĐÓ",
+    "at": [
+     6,
+     "bảng"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "−18 KG",
+     "at": [
+      7,
+      "18"
+     ],
+     "acc": true,
+     "size": 200
+    },
+    {
+     "text": "HAI HÒM NẶNG HƠN",
+     "at": [
+      7,
+      "nặng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 8,
+   "text": "Vụ trộm là không thể.",
+   "by": "CÔNG TY ĐƯỜNG SẮT ANH · PHÁP"
+  },
+  {
+   "type": "photo",
+   "at": 9,
+   "img": "kay",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "FANNY KAY · BỊ BỎ RƠI",
+    "at": [
+     9,
+     "người"
+    ],
+    "y": 1340
+   }
+  },
+  {
+   "type": "photo",
+   "at": 10,
+   "img": "court",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "reveal": "wipe",
+   "label": {
+    "text": "KHAI HẾT",
+    "at": [
+     10,
+     "kể"
+    ]
+   },
+   "credit": "TÒA OLD BAILEY · 1857"
+  },
+  {
+   "type": "hero",
+   "at": 11,
+   "img": "van",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "BA HÒM VÀNG",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Great_Gold_Robbery"
+ ]
+}

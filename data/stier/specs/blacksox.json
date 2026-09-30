@@ -1,0 +1,175 @@
+{
+ "title": "Được tòa tuyên trắng án, vẫn bị cấm thi đấu suốt 106 năm",
+ "description": "Năm 1919, tám cầu thủ Chicago White Sox bị cáo buộc cố tình thua trận chung kết bóng chày. Tòa tuyên trắng án năm 1921, nhưng ngay hôm sau họ bị cấm thi đấu vĩnh viễn.",
+ "tags": [
+  "Black Sox",
+  "Chicago White Sox 1919",
+  "bán độ",
+  "Shoeless Joe Jackson",
+  "Landis",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1919",
+ "sub": "VỤ BÁN ĐỘ BLACK SOX",
+ "acc": [
+  "chicago",
+  "sox",
+  "landis",
+  "jackson",
+  "80",
+  "2025",
+  "tám",
+  "trắng"
+ ],
+ "lines": [
+  "Năm 1919, tám cầu thủ Chicago White Sox bị cáo buộc cố tình thua trận chung kết bóng chày.",
+  "Đổi lấy tiền của một đường dây cá độ.",
+  "Thỏa thuận được bàn ban đầu: 80 nghìn đô.",
+  "Năm 1921, họ ra tòa.",
+  "Bồi thẩm đoàn tuyên trắng án.",
+  "Nhưng ngay hôm sau, ủy viên bóng chày Landis ra phán quyết riêng:",
+  "cấm cả tám người thi đấu chuyên nghiệp, vĩnh viễn.",
+  "Kể cả ngôi sao Joe Chân Đất Jackson, người có vai trò đến nay vẫn gây tranh cãi.",
+  "Lệnh cấm kéo dài hơn một thế kỷ.",
+  "Đến năm 2025, họ mới được phục hồi, khi tất cả đã qua đời.",
+  "Trắng án ở tòa, nhưng không trắng án với bóng chày."
+ ],
+ "imgs": {
+  "team": "File:1919 Chicago White Sox.jpg",
+  "landis": "File:Landis is hired.jpg",
+  "jackson": "File:Shoeless Joe Jackson by Conlon, 1913-crop.jpg",
+  "gandil": "File:Chick gandil 1917.jpg",
+  "eight": "File:Eight men banned.png"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "team",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "CỐ TÌNH THUA"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "ĐƯỜNG DÂY",
+     "at": [
+      1,
+      "đường"
+     ]
+    },
+    {
+     "text": "CÁ ĐỘ",
+     "at": [
+      1,
+      "cá"
+     ],
+     "acc": true,
+     "size": 240
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "prefix": "$",
+   "to": 80000,
+   "label": "THỎA THUẬN BAN ĐẦU",
+   "until": [
+    2,
+    "nghìn"
+   ]
+  },
+  {
+   "type": "date",
+   "at": 3,
+   "day": "CHICAGO · PHIÊN TÒA",
+   "date": "1921",
+   "groupAt": [
+    [
+     3,
+     "1921"
+    ]
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "TRẮNG ÁN",
+   "white": true,
+   "bg": "team"
+  },
+  {
+   "type": "file",
+   "at": 5,
+   "k": "02.08.1921 · HÔM SAU",
+   "name": "ỦY VIÊN\nLANDIS",
+   "desc": "Phán quyết riêng của bóng chày",
+   "img": "landis"
+  },
+  {
+   "type": "photo",
+   "at": 6,
+   "img": "eight",
+   "mode": "print",
+   "tone": "sepia",
+   "stamp": {
+    "text": "CẤM VĨNH VIỄN",
+    "at": [
+     6,
+     "vĩnh"
+    ],
+    "x": 200,
+    "y": 1150
+   }
+  },
+  {
+   "type": "file",
+   "at": 7,
+   "k": "NGÔI SAO BỊ CẤM",
+   "name": "“SHOELESS”\nJOE JACKSON",
+   "desc": "Vai trò vẫn còn tranh cãi",
+   "img": "jackson"
+  },
+  {
+   "type": "timeline",
+   "at": 8,
+   "items": [
+    {
+     "year": "1921",
+     "text": "Bị cấm vĩnh viễn",
+     "at": [
+      8,
+      null,
+      0,
+      0.1
+     ]
+    },
+    {
+     "year": "2025",
+     "text": "Được phục hồi",
+     "at": [
+      9,
+      "2025"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "hero",
+   "at": 10,
+   "img": "team",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "TRẮNG ÁN?",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Black_Sox_Scandal"
+ ]
+}

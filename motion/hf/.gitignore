@@ -1,7 +1,11 @@
 # Asset tạm do hyperframes_bridge.py copy vào (wav TTS + bgm của từng lần render)
-assets/
+assets/*
+# Engine hồ sơ S-tier là MÃ NGUỒN, phải vào git (ảnh/giọng từng vụ thì không)
+!assets/engine/
 # File composition/biến sinh ra theo từng lần render, xoá ngay sau khi render xong
 .render_*.html
 .vars_*.json
 renders/
 node_modules/
+# Composition sinh tự động từ spec (motion/stier/build.py)
+compositions/cases/

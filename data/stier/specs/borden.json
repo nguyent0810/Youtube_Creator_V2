@@ -1,0 +1,180 @@
+{
+ "title": "Lizzie Borden và chiếc váy bị đốt: vụ án chưa có lời giải",
+ "description": "Sáng 4/8/1892, ông bà Andrew Borden bị sát hại trong chính nhà mình ở Fall River. Con gái Lizzie bị truy tố, rồi được tuyên vô tội. Không ai khác từng bị buộc tội.",
+ "tags": [
+  "Lizzie Borden",
+  "Fall River 1892",
+  "vụ án chưa có lời giải",
+  "bồi thẩm đoàn",
+  "Massachusetts",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1892",
+ "sub": "FALL RIVER · MASSACHUSETTS",
+ "acc": [
+  "borden",
+  "lizzie",
+  "fall",
+  "river",
+  "váy",
+  "đốt",
+  "vô",
+  "tội"
+ ],
+ "lines": [
+  "Sáng 4 tháng 8 năm 1892, ông Andrew Borden và vợ bị sát hại trong chính nhà mình.",
+  "Con gái ông, Lizzie Borden, ở nhà lúc đó.",
+  "Ít lâu sau, một người bạn thấy Lizzie cầm một chiếc váy, nói sẽ đốt vì nó dính sơn.",
+  "Không ai biết đó có phải chiếc váy cô mặc hôm án mạng.",
+  "Lizzie bị truy tố.",
+  "Tháng 6 năm 1893, bồi thẩm đoàn tuyên cô vô tội.",
+  "Không ai khác từng bị buộc tội.",
+  "Cô sống tiếp ở Fall River thêm hơn ba mươi năm.",
+  "Vụ án đến nay vẫn chưa có lời giải.",
+  "Còn chiếc váy ấy… đã thành tro."
+ ],
+ "imgs": {
+  "lizzie": "File:Lizzie Borden 1890.jpg",
+  "house": "File:Borden House 92 Second St Fall River Massachusetts 1892.jpg",
+  "jury": "File:Lizzie Borden Trial Jury.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "house",
+   "frame": "print",
+   "tone": "bw",
+   "intro": true,
+   "head": "CHÍNH NHÀ MÌNH"
+  },
+  {
+   "type": "file",
+   "at": 1,
+   "k": "NGƯỜI Ở NHÀ LÚC ĐÓ",
+   "name": "LIZZIE\nBORDEN",
+   "desc": "Con gái · 32 tuổi",
+   "img": "lizzie"
+  },
+  {
+   "type": "evidence",
+   "at": 2,
+   "img": "lizzie",
+   "tone": "bw",
+   "tag": "“DÍNH SƠN”",
+   "callouts": [],
+   "credit": "LIZZIE BORDEN · 1890"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "CHIẾC VÁY",
+     "at": [
+      3,
+      "chiếc"
+     ]
+    },
+    {
+     "text": "HÔM ÁN MẠNG?",
+     "at": [
+      3,
+      "án"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "TRUY TỐ",
+   "bg": "house"
+  },
+  {
+   "type": "photo",
+   "at": 5,
+   "img": "jury",
+   "tone": "bw",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "stamp": {
+    "text": "VÔ TỘI",
+    "at": [
+     5,
+     "vô"
+    ],
+    "x": 330,
+    "y": 1150
+   },
+   "credit": "BỒI THẨM ĐOÀN · NEW BEDFORD · 1893"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "0",
+     "at": [
+      6,
+      "không"
+     ],
+     "size": 300,
+     "serif": true,
+     "acc": true
+    },
+    {
+     "text": "NGƯỜI KHÁC BỊ BUỘC TỘI",
+     "at": [
+      6,
+      "buộc"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 7,
+   "items": [
+    {
+     "year": "1893",
+     "text": "Tuyên vô tội",
+     "at": [
+      7,
+      null,
+      0,
+      0.1
+     ]
+    },
+    {
+     "year": "1927",
+     "text": "Lizzie qua đời ở Fall River",
+     "at": [
+      7,
+      "mươi"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 8,
+   "text": "Ai đã làm?"
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "house",
+   "frame": "print",
+   "tone": "bw",
+   "loop": true,
+   "head": "CHÍNH NHÀ MÌNH",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Lizzie_Borden"
+ ]
+}

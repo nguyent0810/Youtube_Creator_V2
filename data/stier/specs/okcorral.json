@@ -1,0 +1,193 @@
+{
+ "title": "Trận đấu súng O.K. Corral không diễn ra ở O.K. Corral",
+ "description": "Ngày 26/10/1881 ở Tombstone, Arizona: khoảng 30 phát súng trong khoảng 30 giây. Trận đấu súng nổi tiếng nhất miền Tây thực ra diễn ra ở một lô đất hẹp cạnh tiệm ảnh.",
+ "tags": [
+  "O.K. Corral",
+  "Wyatt Earp",
+  "Doc Holliday",
+  "Tombstone",
+  "miền Tây nước Mỹ",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1881",
+ "sub": "TOMBSTONE · ARIZONA",
+ "acc": [
+  "corral",
+  "tombstone",
+  "earp",
+  "holliday",
+  "30",
+  "cowboys"
+ ],
+ "lines": [
+  "Trận đấu súng nổi tiếng nhất miền Tây… thực ra không diễn ra trong bãi O.K. Corral.",
+  "Nó diễn ra ở một lô đất hẹp cạnh tiệm ảnh, cách đó sáu căn nhà.",
+  "Tombstone, Arizona, ngày 26 tháng 10 năm 1881.",
+  "Nguyên nhân: một điều luật cấm mang súng vào thị trấn.",
+  "Ba anh em nhà Earp và Doc Holliday đi tước súng nhóm Cowboys.",
+  "Khoảng 30 phát súng, trong khoảng 30 giây.",
+  "Ba người chết, ba người bị thương.",
+  "Không ai chắc ai bắn trước.",
+  "Nhà Earp bị kiện tội giết người, rồi được xác định đã hành động hợp pháp.",
+  "Ba mươi giây… thành huyền thoại của cả miền Tây."
+ ],
+ "imgs": {
+  "corral": "File:Ok corral 1882.png",
+  "wyatt": "File:Wyatt Earp portrait.png",
+  "town": "File:Tombstone (probably in 1881) (cropped).jpg",
+  "map": "File:Tombstone fire insurance map 1886.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "corral",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "O.K. CORRAL",
+   "strike": [
+    0,
+    "không"
+   ],
+   "tape": {
+    "text": "“không phải ở đây”",
+    "at": [
+     0,
+     "corral"
+    ]
+   }
+  },
+  {
+   "type": "doc",
+   "at": 1,
+   "img": "map",
+   "tone": "sepia",
+   "moves": [
+    {
+     "at": 1,
+     "x": 0.5,
+     "y": 0.5,
+     "z": 1.0
+    },
+    {
+     "at": [
+      1,
+      "tiệm"
+     ],
+     "x": 0.45,
+     "y": 0.5,
+     "z": 2.4
+    }
+   ],
+   "credit": "BẢN ĐỒ TOMBSTONE · 1886"
+  },
+  {
+   "type": "date",
+   "at": 2,
+   "bg": "town",
+   "day": "TOMBSTONE · ARIZONA",
+   "date": "26.10.1881",
+   "groupAt": [
+    [
+     2,
+     "26"
+    ],
+    [
+     2,
+     "10"
+    ],
+    [
+     2,
+     "1881"
+    ]
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 3,
+   "text": "Cấm mang vũ khí vào thị trấn.",
+   "by": "ĐIỀU LUẬT CỦA TOMBSTONE · DIỄN Ý"
+  },
+  {
+   "type": "file",
+   "at": 4,
+   "k": "PHÍA LUẬT PHÁP",
+   "name": "NHÀ EARP\n+ HOLLIDAY",
+   "desc": "Virgil · Wyatt · Morgan · Doc",
+   "img": "wyatt",
+   "stamp": {
+    "text": "TƯỚC SÚNG",
+    "at": [
+     4,
+     "tước"
+    ]
+   }
+  },
+  {
+   "type": "clock",
+   "at": 5,
+   "from": "30 PHÁT",
+   "plus": "30 GIÂY",
+   "plusAt": [
+    5,
+    "giây"
+   ],
+   "turns": 1
+  },
+  {
+   "type": "ledger",
+   "at": 6,
+   "title": "KẾT QUẢ",
+   "rows": [
+    {
+     "k": "CHẾT",
+     "v": "3",
+     "at": [
+      6,
+      "chết"
+     ]
+    },
+    {
+     "k": "BỊ THƯƠNG",
+     "v": "3",
+     "at": [
+      6,
+      "thương"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 7,
+   "text": "Ai bắn trước?"
+  },
+  {
+   "type": "file",
+   "at": 8,
+   "k": "PHIÊN ĐIỀU TRẦN · 30 NGÀY",
+   "name": "HỢP PHÁP",
+   "desc": "Bị kiện tội giết người",
+   "stamp": {
+    "text": "KHÔNG TRUY TỐ",
+    "at": [
+     8,
+     "hợp"
+    ]
+   }
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "corral",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "30 GIÂY",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Gunfight_at_the_O.K._Corral"
+ ]
+}

@@ -1,0 +1,184 @@
+{
+ "title": "Kẻ ám sát Lincoln có mặt trong ảnh lễ nhậm chức, 6 tuần trước phát súng",
+ "description": "Ảnh lễ nhậm chức lần hai của Abraham Lincoln (4/3/1865) có mặt John Wilkes Booth. Sáu tuần sau, tối 14/4/1865, hắn bước vào nhà hát Ford.",
+ "tags": [
+  "John Wilkes Booth",
+  "ám sát Lincoln",
+  "Abraham Lincoln",
+  "nhà hát Ford",
+  "truy nã",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1865",
+ "sub": "NHÀ HÁT FORD",
+ "acc": [
+  "lincoln",
+  "booth",
+  "ford",
+  "virginia",
+  "20",
+  "12"
+ ],
+ "lines": [
+  "Trong bức ảnh lễ nhậm chức lần hai của Lincoln, tháng 3 năm 1865…",
+  "trong đám đông có mặt John Wilkes Booth.",
+  "Một diễn viên nổi tiếng, kiếm 20 nghìn đô mỗi năm.",
+  "Sáu tuần sau, tối 14 tháng 4, hắn bước vào nhà hát Ford.",
+  "Nơi hắn diễn vai cuối cùng, chưa đầy một tháng trước.",
+  "Hắn bắn Tổng thống Lincoln, rồi trốn thoát trên lưng ngựa.",
+  "Cả nước truy lùng.",
+  "Mười hai ngày sau, hắn bị dồn vào một nhà kho ở Virginia.",
+  "Nhà kho bị đốt, và hắn bị bắn chết.",
+  "Còn bức ảnh ấy… vẫn giữ khuôn mặt hắn, sáu tuần trước phát súng."
+ ],
+ "imgs": {
+  "inaug": "File:LincolnJohn.jpg",
+  "booth": "File:John Wilkes Booth-portrait.jpg",
+  "playbill": "File:John Wilkes Booth playbill.jpg",
+  "litho": "File:Assassination of President Lincoln (color) - Currier and Ives.jpg",
+  "wanted": "File:John Wilkes Booth wanted poster new.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "inaug",
+   "frame": "print",
+   "tone": "bw",
+   "intro": true,
+   "head": "LỄ NHẬM CHỨC"
+  },
+  {
+   "type": "photo",
+   "at": 1,
+   "img": "inaug",
+   "tone": "bw",
+   "focus": [
+    0.5,
+    0.4
+   ],
+   "label": {
+    "text": "TRONG ĐÁM ĐÔNG: J. W. BOOTH",
+    "at": [
+     1,
+     "john"
+    ]
+   },
+   "credit": "ẢNH LỄ NHẬM CHỨC · 04.03.1865"
+  },
+  {
+   "type": "file",
+   "at": 2,
+   "k": "DIỄN VIÊN SÂN KHẤU",
+   "name": "JOHN WILKES\nBOOTH",
+   "desc": "Thu nhập: $20.000 / năm",
+   "img": "booth"
+  },
+  {
+   "type": "date",
+   "at": 3,
+   "bg": "litho",
+   "day": "NHÀ HÁT FORD",
+   "date": "14.04.1865",
+   "groupAt": [
+    [
+     3,
+     "14"
+    ],
+    [
+     3,
+     "4"
+    ],
+    [
+     3,
+     "4",
+     0,
+     0.35
+    ]
+   ],
+   "sub": {
+    "text": "WASHINGTON · BUỔI TỐI",
+    "at": [
+     3,
+     "bước"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 4,
+   "img": "playbill",
+   "mode": "print",
+   "tone": "sepia",
+   "maxH": 1000,
+   "label": {
+    "text": "VAI DIỄN CUỐI · 18.03.1865",
+    "at": [
+     4,
+     "cuối"
+    ],
+    "y": 1330
+   }
+  },
+  {
+   "type": "photo",
+   "at": 5,
+   "img": "litho",
+   "tone": "color",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "label": {
+    "text": "TRỐN THOÁT TRÊN LƯNG NGỰA",
+    "at": [
+     5,
+     "ngựa"
+    ]
+   },
+   "credit": "TRANH IN CURRIER & IVES · 1865"
+  },
+  {
+   "type": "photo",
+   "at": 6,
+   "img": "wanted",
+   "mode": "print",
+   "tone": "bw",
+   "stamp": {
+    "text": "TRUY NÃ",
+    "at": [
+     6,
+     "truy"
+    ],
+    "x": 300,
+    "y": 1150
+   }
+  },
+  {
+   "type": "calendar",
+   "at": 7,
+   "n": 12,
+   "unit": "NGÀY",
+   "title": "*12 NGÀY* TRỐN CHẠY"
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "text": "NHÀ KHO BỐC CHÁY",
+   "sub": "VIRGINIA · 26.04.1865",
+   "bg": "litho"
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "inaug",
+   "frame": "print",
+   "tone": "bw",
+   "loop": true,
+   "head": "LỄ NHẬM CHỨC",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/John_Wilkes_Booth"
+ ]
+}

@@ -1,0 +1,177 @@
+{
+ "title": "“Tạ ơn Chúa, ta không sao”: vài giây trước quả bom thứ hai",
+ "description": "Ngày 13/3/1881 ở Saint Petersburg, quả bom đầu tiên làm hỏng xe ngựa của Sa hoàng Alexander II. Ông bước ra, không hề hấn gì. Rồi kẻ thứ hai tiến lại gần.",
+ "tags": [
+  "Sa hoàng Alexander II",
+  "ám sát 1881",
+  "Ý chí Nhân dân",
+  "Saint Petersburg",
+  "Nhà thờ Máu Đổ",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1881",
+ "sub": "SA HOÀNG ALEXANDER II",
+ "acc": [
+  "alexander",
+  "sa",
+  "hoàng",
+  "bom",
+  "thứ",
+  "hai",
+  "pho",
+  "mát"
+ ],
+ "lines": [
+  "Ngày 13 tháng 3 năm 1881, một quả bom nổ dưới xe ngựa của Sa hoàng Alexander II.",
+  "Xe bị hỏng. Sa hoàng bước ra, không hề hấn gì.",
+  "Ông nói: Tạ ơn Chúa, ta không sao.",
+  "Rồi một kẻ thứ hai tiến sát, ném quả bom thứ hai xuống chân ông.",
+  "Cả Sa hoàng và kẻ ném bom đều bị thương chí mạng.",
+  "Trước đó, ông đã sống sót qua nhiều vụ ám sát, kể cả vụ đánh bom Cung điện Mùa Đông.",
+  "Nhóm Ý chí Nhân dân còn mở cửa hàng pho mát để đào hầm dưới phố.",
+  "Nơi ông ngã xuống, nay là Nhà thờ Chúa Cứu Thế trên Máu Đổ.",
+  "Tạ ơn Chúa, ta không sao… chỉ vài giây trước quả bom thứ hai."
+ ],
+ "imgs": {
+  "deathbed": "File:Konstantin Makovsky Alexander II na smertnom odre 1881.jpg",
+  "m6": "File:Alexander II of Russia's murder 06.jpg",
+  "m2": "File:Alexander II of Russia's murder 02.jpg",
+  "zhel": "File:Zhelyabov.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "m6",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "QUẢ BOM THỨ NHẤT"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "XE HỎNG",
+     "at": [
+      1,
+      "xe"
+     ]
+    },
+    {
+     "text": "KHÔNG HỀ HẤN GÌ",
+     "at": [
+      1,
+      "hề"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 2,
+   "text": "Tạ ơn Chúa, ta không sao.",
+   "by": "SA HOÀNG ALEXANDER II · 13.03.1881"
+  },
+  {
+   "type": "photo",
+   "at": 3,
+   "img": "m2",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "reveal": "wipe",
+   "stamp": {
+    "text": "QUẢ BOM THỨ HAI",
+    "at": [
+     3,
+     "thứ",
+     1
+    ],
+    "x": 150,
+    "y": 1150
+   }
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "CHÍ MẠNG",
+   "sub": "CẢ SA HOÀNG LẪN KẺ NÉM BOM",
+   "bg": "deathbed"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "SỐNG SÓT",
+     "at": [
+      5,
+      "sống"
+     ]
+    },
+    {
+     "text": "NHIỀU VỤ ÁM SÁT",
+     "at": [
+      5,
+      "ám"
+     ],
+     "acc": true
+    },
+    {
+     "text": "CẢ BOM CUNG ĐIỆN",
+     "at": [
+      5,
+      "cung"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 6,
+   "k": "Ý CHÍ NHÂN DÂN",
+   "name": "CỬA HÀNG\nPHO MÁT",
+   "desc": "Vỏ bọc để đào đường hầm dưới phố",
+   "img": "zhel",
+   "stamp": {
+    "text": "ĐƯỜNG HẦM",
+    "at": [
+     6,
+     "hầm"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 7,
+   "img": "deathbed",
+   "mode": "print",
+   "tone": "color",
+   "label": {
+    "text": "NHÀ THỜ CHÚA CỨU THẾ TRÊN MÁU ĐỔ",
+    "at": [
+     7,
+     "nhà"
+    ],
+    "y": 1320
+   }
+  },
+  {
+   "type": "hero",
+   "at": 8,
+   "img": "m6",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "“TA KHÔNG SAO”",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Assassination_of_Alexander_II_of_Russia"
+ ]
+}

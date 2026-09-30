@@ -1,0 +1,193 @@
+{
+ "title": "Cốc sữa trứng và phép thử thạch tín đổi cả ngành pháp y",
+ "description": "Năm 1840, Charles Lafarge chết sau khi uống sữa trứng vợ pha. Hai lần thử đều không thấy thạch tín, cho tới khi chuyên gia Mathieu Orfila làm lại thí nghiệm sau cửa khóa.",
+ "tags": [
+  "Marie Lafarge",
+  "phép thử Marsh",
+  "thạch tín",
+  "độc chất học",
+  "pháp y",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1840",
+ "sub": "VỤ ÁN LAFARGE",
+ "acc": [
+  "marsh",
+  "orfila",
+  "thạch",
+  "tín",
+  "lafarge",
+  "mười",
+  "chuột"
+ ],
+ "lines": [
+  "Năm 1840, ở Pháp, một người chồng chết sau khi uống sữa trứng vợ pha.",
+  "Có người thấy cô khuấy bột trắng vào cốc.",
+  "Cô nói: đó là thuốc diệt chuột.",
+  "Tại tòa, người ta thử xác chết bằng một phép thử mới: phép thử Marsh.",
+  "Kết quả: không có thạch tín.",
+  "Khai quật thi thể, thử lại. Vẫn không.",
+  "Nhưng cốc sữa trứng thì đủ độc để giết mười người.",
+  "Tòa mời chuyên gia độc chất hàng đầu nước Pháp: Mathieu Orfila.",
+  "Ông làm lại thí nghiệm suốt đêm, sau cửa khóa.",
+  "Chiều hôm sau: có thạch tín trong thi thể.",
+  "Marie Lafarge bị kết án chung thân.",
+  "Bà là người đầu tiên bị kết tội nhờ bằng chứng độc chất."
+ ],
+ "imgs": {
+  "marie": "File:Lafarge.jpg",
+  "marsh": "File:Marsh test apparatus.jpg",
+  "orfila": "File:Portret van Mathieu Orfila, RP-P-1910-6692 (cropped).jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "marie",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "CỐC SỮA TRỨNG"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "BỘT TRẮNG",
+     "at": [
+      1,
+      "bột"
+     ],
+     "acc": true,
+     "size": 190
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 2,
+   "text": "Thuốc diệt chuột.",
+   "by": "MARIE LAFARGE"
+  },
+  {
+   "type": "evidence",
+   "at": 3,
+   "img": "marsh",
+   "tone": "bw",
+   "tag": "PHÉP THỬ MARSH",
+   "credit": "DỤNG CỤ THỬ THẠCH TÍN MARSH · BẢN VẼ"
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "ÂM TÍNH",
+   "sub": "KHÔNG CÓ THẠCH TÍN",
+   "white": true
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "KHAI QUẬT",
+     "at": [
+      5,
+      "khai"
+     ]
+    },
+    {
+     "text": "VẪN ÂM TÍNH",
+     "at": [
+      5,
+      "vẫn"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "to": 10,
+   "label": "NGƯỜI",
+   "until": [
+    6,
+    "mười"
+   ],
+   "sub": {
+    "text": "ĐỘC TRONG CỐC SỮA TRỨNG ĐỦ GIẾT",
+    "at": [
+     6,
+     "sữa"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 7,
+   "k": "CHUYÊN GIA ĐỘC CHẤT",
+   "name": "MATHIEU\nORFILA",
+   "desc": "Hàng đầu nước Pháp",
+   "img": "orfila"
+  },
+  {
+   "type": "clock",
+   "at": 8,
+   "from": "ĐÊM",
+   "to": "CHIỀU HÔM SAU",
+   "swap": [
+    9,
+    "chiều"
+   ],
+   "plus": "DƯƠNG TÍNH",
+   "plusAt": [
+    9,
+    "thạch"
+   ],
+   "turns": 3
+  },
+  {
+   "type": "mug",
+   "at": 10,
+   "ghost": "1840",
+   "mug": {
+    "img": "marie",
+    "name": "MARIE LAFARGE",
+    "at": [
+     10,
+     null,
+     0,
+     0.3
+    ]
+   },
+   "bars": {
+    "at": [
+     10,
+     "chung"
+    ]
+   },
+   "big": {
+    "text": "CHUNG THÂN",
+    "small": "TỘI ĐẦU ĐỘC",
+    "at": [
+     10,
+     "án"
+    ]
+   }
+  },
+  {
+   "type": "hero",
+   "at": 11,
+   "img": "marie",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "CỐC SỮA TRỨNG",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Marie_Lafarge",
+  "https://en.wikipedia.org/wiki/Marsh_test"
+ ]
+}

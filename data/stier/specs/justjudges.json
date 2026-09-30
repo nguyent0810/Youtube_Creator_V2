@@ -1,0 +1,209 @@
+{
+ "title": "Tấm tranh bị đánh cắp năm 1934, ai biết nó ở đâu đã mang bí mật xuống mồ",
+ "description": "Đêm 10/4/1934, tấm \"Những vị thẩm phán công minh\" của bức tranh thờ Ghent biến mất. Kẻ trộm để lại mảnh giấy, đòi một triệu franc, rồi mang bí mật xuống mồ.",
+ "tags": [
+  "Ghent Altarpiece",
+  "Just Judges",
+  "Những vị thẩm phán công minh",
+  "van Eyck",
+  "vụ trộm tranh",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1934",
+ "sub": "GHENT · NƯỚC BỈ",
+ "acc": [
+  "versailles",
+  "franc",
+  "ghent",
+  "bỉ",
+  "đức",
+  "mồ",
+  "sao"
+ ],
+ "lines": [
+  "Đêm 10 tháng 4 năm 1934, một tấm của bức tranh thờ nổi tiếng nhất nước Bỉ biến mất.",
+  "Kẻ trộm để lại một mảnh giấy bằng tiếng Pháp:",
+  "\"Lấy từ nước Đức, theo Hòa ước Versailles.\"",
+  "Rồi thư đòi tiền chuộc tới: một triệu franc.",
+  "Chính phủ Bỉ từ chối.",
+  "Ít nhất mười một lá thư qua lại.",
+  "Hắn còn trả lại một nửa tấm tranh, để làm tin.",
+  "Tháng 11, một người đàn ông hấp hối nói với luật sư: chỉ mình ông biết tấm tranh ở đâu.",
+  "Và ông sẽ mang bí mật đó xuống mồ.",
+  "Đến nay, tấm tranh vẫn chưa được tìm thấy.",
+  "Thứ đang treo ở Ghent là một bản sao.",
+  "Tên của tấm tranh bị mất: \"Những vị thẩm phán công minh\"."
+ ],
+ "imgs": {
+  "judges": "File:Ghent Altarpiece E - Just Judges (original painting).jpg",
+  "copy": "File:Ghent Altarpiece E - Just Judges by Vanderveken.jpg",
+  "open": "File:Lamgods open.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "judges",
+   "tone": "color",
+   "intro": true,
+   "head": "BỨC TRANH THỜ",
+   "shatter": {
+    "at": [
+     0,
+     "biến"
+    ],
+    "text": "BIẾN MẤT"
+   }
+  },
+  {
+   "type": "quote",
+   "at": 1,
+   "text": "Lấy từ nước Đức, theo Hòa ước Versailles.",
+   "by": "MẢNH GIẤY KẺ TRỘM ĐỂ LẠI · 1934"
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 1000000,
+   "label": "FRANC",
+   "until": [
+    3,
+    "franc"
+   ],
+   "sub": {
+    "text": "TIỀN CHUỘC",
+    "at": [
+     3,
+     "chuộc"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "TỪ CHỐI",
+   "sub": "CHÍNH PHỦ BỈ",
+   "bg": "open"
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "to": 11,
+   "suffix": "+",
+   "label": "LÁ THƯ",
+   "until": [
+    5,
+    "thư"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "½",
+     "at": [
+      6,
+      "nửa"
+     ],
+     "size": 300,
+     "serif": true,
+     "acc": true
+    },
+    {
+     "text": "TRẢ LẠI ĐỂ LÀM TIN",
+     "at": [
+      6,
+      "tin"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 7,
+   "k": "25.11.1934 · LỜI TRĂNG TRỐI",
+   "name": "ARSÈNE\nGOEDERTIER",
+   "desc": "Người tự nhận là kẻ trộm",
+   "stamp": {
+    "text": "CHỈ MÌNH TÔI BIẾT",
+    "at": [
+     7,
+     "biết"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "text": "XUỐNG MỒ",
+   "white": true,
+   "bg": "judges"
+  },
+  {
+   "type": "timeline",
+   "at": 9,
+   "items": [
+    {
+     "year": "1934",
+     "text": "Mất trộm",
+     "at": [
+      9,
+      null,
+      0,
+      0.1
+     ]
+    },
+    {
+     "year": "2026",
+     "text": "Vẫn chưa tìm thấy",
+     "at": [
+      9,
+      "chưa"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "split",
+   "at": 10,
+   "title": "ĐANG TREO Ở GHENT",
+   "a": {
+    "img": "judges",
+    "label": "BẢN GỐC · MẤT",
+    "at": [
+     10,
+     null,
+     0,
+     0.05
+    ],
+    "tone": "color"
+   },
+   "b": {
+    "img": "copy",
+    "label": "BẢN SAO",
+    "at": [
+     10,
+     "bản"
+    ],
+    "tone": "color"
+   },
+   "sign": "≠",
+   "signAt": [
+    10,
+    "sao"
+   ]
+  },
+  {
+   "type": "hero",
+   "at": 11,
+   "img": "judges",
+   "tone": "color",
+   "loop": true,
+   "head": "THẨM PHÁN CÔNG MINH",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/The_Just_Judges"
+ ]
+}

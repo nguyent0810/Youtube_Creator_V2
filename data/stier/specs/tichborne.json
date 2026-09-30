@@ -1,0 +1,244 @@
+{
+ "title": "Ông hàng thịt nhận là con trai nhà quý tộc, và bà mẹ tin thật",
+ "description": "Năm 1866, một ông hàng thịt ở Wagga Wagga (Úc) nhận mình là Roger Tichborne, người thừa kế mất tích trong vụ đắm tàu năm 1854. Mẹ của Roger nhận ngay, nhưng tòa án thì không.",
+ "tags": [
+  "Tichborne",
+  "vụ án Tichborne",
+  "Arthur Orton",
+  "mạo danh",
+  "khai man",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1866",
+ "sub": "VỤ ÁN TICHBORNE",
+ "acc": [
+  "tichborne",
+  "roger",
+  "orton",
+  "wapping",
+  "úc",
+  "pháp",
+  "14"
+ ],
+ "lines": [
+  "Năm 1866, một ông hàng thịt ở Úc nhận mình là người thừa kế một dòng họ quý tộc Anh.",
+  "Người thừa kế thật, Roger Tichborne, được cho là đã chết trong vụ đắm tàu năm 1854.",
+  "Nhưng mẹ anh không tin, đăng báo khắp nước Úc tìm con.",
+  "Ông hàng thịt không nói được tiếng Pháp, thứ tiếng mẹ đẻ của Roger.",
+  "Vậy mà bà mẹ vừa nhìn mặt đã nhận anh ta là con.",
+  "Thám tử lần về khu Wapping ở London.",
+  "Hóa ra hắn là Arthur Orton, con trai một người bán thịt ở đó.",
+  "Năm 1874, hắn lĩnh 14 năm tù vì tội khai man.",
+  "Đến giờ, vẫn có người tin hắn là Roger thật."
+ ],
+ "imgs": {
+  "roger": "File:RogerTichborne.jpg",
+  "ad": "File:Tichborne Advertisement 02 Aug 1865.jpg",
+  "claimant": "File:The Beggar's Petition.jpg",
+  "hunt": "File:The Hampshire hunt cartoon on the Tichborne case SLNSW FL3264360.jpg",
+  "trial": "File:The Tichborne Trial by Frederick Sargent.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "roger",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "NGƯỜI THỪA KẾ",
+   "tape": {
+    "text": "“ông hàng thịt ở Úc”",
+    "at": [
+     0,
+     "hàng"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 1,
+   "k": "NGƯỜI THỪA KẾ THẬT",
+   "name": "ROGER\nTICHBORNE",
+   "desc": "Mất tích năm 1854, 25 tuổi",
+   "img": "roger",
+   "stamp": {
+    "text": "MẤT TÍCH",
+    "at": [
+     1,
+     "chết"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 2,
+   "img": "ad",
+   "mode": "print",
+   "tone": "sepia",
+   "label": {
+    "text": "MẸ ĐĂNG BÁO TÌM CON",
+    "at": [
+     2,
+     "đăng"
+    ],
+    "y": 1300
+   },
+   "credit": "BÁO THE ARGUS · 02.08.1865",
+   "creditY": 1380
+  },
+  {
+   "type": "split",
+   "at": 3,
+   "title": "NÓI TIẾNG PHÁP?",
+   "a": {
+    "img": "roger",
+    "label": "ROGER · 1853",
+    "at": [
+     3,
+     null,
+     0,
+     0.1
+    ]
+   },
+   "b": {
+    "img": "claimant",
+    "label": "“ROGER” · 1872",
+    "at": [
+     3,
+     "hàng"
+    ]
+   },
+   "sign": "≠",
+   "signAt": [
+    3,
+    "pháp"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "BÀ MẸ",
+     "at": [
+      4,
+      "bà"
+     ]
+    },
+    {
+     "text": "NHÌN MẶT",
+     "at": [
+      4,
+      "nhìn"
+     ]
+    },
+    {
+     "text": "NHẬN CON",
+     "at": [
+      4,
+      "nhận"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 5,
+   "img": "hunt",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.35
+   ],
+   "label": {
+    "text": "THÁM TỬ LẦN VỀ WAPPING",
+    "at": [
+     5,
+     "wapping"
+    ]
+   },
+   "credit": "TRANH BIẾM HỌA · 1871"
+  },
+  {
+   "type": "file",
+   "at": 6,
+   "k": "DANH TÍNH THẬT",
+   "name": "ARTHUR\nORTON",
+   "desc": "Con người bán thịt ở Wapping",
+   "img": "claimant",
+   "stamp": {
+    "text": "MẠO DANH",
+    "at": [
+     6,
+     "orton"
+    ]
+   }
+  },
+  {
+   "type": "mug",
+   "at": 7,
+   "ghost": "1874",
+   "mug": {
+    "img": "claimant",
+    "name": "ARTHUR ORTON",
+    "at": [
+     7,
+     null,
+     0,
+     0.35
+    ]
+   },
+   "bars": {
+    "at": [
+     7,
+     "14"
+    ]
+   },
+   "big": {
+    "text": "14 NĂM",
+    "small": "TỘI KHAI MAN",
+    "at": [
+     7,
+     "tù"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 8,
+   "img": "trial",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "reveal": "wipe",
+   "label": {
+    "text": "ROGER THẬT?",
+    "at": [
+     8,
+     "roger"
+    ]
+   }
+  },
+  {
+   "type": "hero",
+   "at": [
+    8,
+    "roger",
+    0,
+    0.4
+   ],
+   "img": "roger",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "NGƯỜI THỪA KẾ",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Tichborne_case"
+ ]
+}

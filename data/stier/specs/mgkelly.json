@@ -1,0 +1,171 @@
+{
+ "title": "Bị bịt mắt suốt thời gian bị bắt cóc, ông vẫn dẫn FBI tới đúng chỗ",
+ "description": "Tháng 7/1933, trùm dầu mỏ Charles Urschel bị Machine Gun Kelly bắt cóc và bịt mắt. Ông ghi nhớ âm thanh, đếm bước chân, cố tình để lại dấu vân tay, và FBI lần ra trang trại ở Paradise, Texas.",
+ "tags": [
+  "Machine Gun Kelly",
+  "Charles Urschel",
+  "FBI",
+  "bắt cóc 1933",
+  "G-men",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1933",
+ "sub": "MACHINE GUN KELLY",
+ "acc": [
+  "urschel",
+  "kelly",
+  "fbi",
+  "paradise",
+  "texas",
+  "memphis",
+  "200",
+  "âm",
+  "thanh"
+ ],
+ "lines": [
+  "Tháng 7 năm 1933, trùm dầu mỏ Charles Urschel bị bắt cóc, và bị bịt mắt suốt thời gian bị giam.",
+  "Kẻ bắt cóc: Machine Gun Kelly.",
+  "Tiền chuộc: 200 nghìn đô.",
+  "Urschel được thả, nhưng ông đã chuẩn bị sẵn.",
+  "Bị bịt mắt, ông ghi nhớ mọi âm thanh xung quanh.",
+  "Đếm từng bước chân.",
+  "Và cố tình để lại dấu vân tay ở mọi chỗ tay với tới.",
+  "Từ những âm thanh ấy, FBI xác định nơi ông bị giam: một trang trại ở Paradise, Texas.",
+  "Kelly bị bắt ở Memphis ngày 26 tháng 9 năm 1933.",
+  "Câu nói Đừng bắn, G-men của hắn, có lẽ chỉ là chuyện báo chí thêu dệt.",
+  "Thứ bắt được hắn là trí nhớ của một người bị bịt mắt."
+ ],
+ "imgs": {
+  "kelly": "File:George “Machine Gun” Kelly.jpg",
+  "kathryn": "File:Kathryn Kelly.jpg",
+  "mgk": "File:MachineGunKelly.jpg",
+  "transcript": "File:Transcript for New Trial Volume 2 - DPLA - 72a5144741139eec00f540430fa27686 (page 5).jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "mgk",
+   "frame": "print",
+   "tone": "bw",
+   "intro": true,
+   "head": "BỊ BỊT MẮT"
+  },
+  {
+   "type": "file",
+   "at": 1,
+   "k": "KẺ BẮT CÓC",
+   "name": "MACHINE GUN\nKELLY",
+   "desc": "George Kelly Barnes · Memphis",
+   "img": "kelly"
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "prefix": "$",
+   "to": 200000,
+   "label": "TIỀN CHUỘC",
+   "until": [
+    2,
+    "nghìn"
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "ĐÃ CHUẨN BỊ",
+   "white": true,
+   "bg": "transcript"
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "TRÍ NHỚ CỦA URSCHEL",
+   "rows": [
+    {
+     "k": "ÂM THANH",
+     "v": "✓",
+     "at": [
+      4,
+      "âm"
+     ]
+    },
+    {
+     "k": "BƯỚC CHÂN",
+     "v": "✓",
+     "at": [
+      5,
+      "bước"
+     ]
+    }
+   ],
+   "total": {
+    "k": "DẤU VÂN TAY",
+    "v": "✓",
+    "at": [
+     6,
+     "vân"
+    ]
+   }
+  },
+  {
+   "type": "date",
+   "at": 7,
+   "day": "PARADISE · TEXAS",
+   "date": "1933",
+   "groupAt": [
+    [
+     7,
+     "fbi"
+    ]
+   ],
+   "stamp": {
+    "text": "ĐÚNG CHỖ",
+    "at": [
+     7,
+     "trang"
+    ]
+   }
+  },
+  {
+   "type": "mug",
+   "at": 8,
+   "ghost": "26.09.1933",
+   "mug": {
+    "img": "kelly",
+    "name": "GEORGE KELLY",
+    "at": [
+     8,
+     null,
+     0,
+     0.3
+    ]
+   },
+   "stamp": {
+    "text": "BỊ BẮT",
+    "at": [
+     8,
+     "bắt"
+    ]
+   }
+  },
+  {
+   "type": "quote",
+   "at": 9,
+   "text": "Đừng bắn, G-men!",
+   "by": "CÂU NÓI GÁN CHO KELLY · CÓ LẼ LÀ HUYỀN THOẠI"
+  },
+  {
+   "type": "hero",
+   "at": 10,
+   "img": "mgk",
+   "frame": "print",
+   "tone": "bw",
+   "loop": true,
+   "head": "BỊ BỊT MẮT",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Machine_Gun_Kelly_(gangster)"
+ ]
+}

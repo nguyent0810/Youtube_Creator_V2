@@ -1,0 +1,308 @@
+{
+ "title": "Kẻ lừa bán đất ở một đất nước không hề tồn tại",
+ "description": "Năm 1822, Gregor MacGregor tự xưng thủ lĩnh xứ Poyais, in cẩm nang 355 trang, phát hành tiền giấy và kêu gọi người dân lên tàu lập nghiệp. Họ chỉ thấy rừng rậm.",
+ "tags": [
+  "Poyais",
+  "Gregor MacGregor",
+  "lừa đảo lịch sử",
+  "đất nước không tồn tại",
+  "Honduras",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1822",
+ "sub": "XỨ POYAIS",
+ "acc": [
+  "poyais",
+  "macgregor",
+  "honduras",
+  "london",
+  "355",
+  "250",
+  "chết",
+  "giấy"
+ ],
+ "lines": [
+  "Năm 1822, một người Scotland bán đất ở một đất nước không hề tồn tại.",
+  "Tên nước: Poyais, có thủ đô, nhà hát, nhà thờ mái vòm, cả ngân hàng riêng.",
+  "Hắn là Gregor MacGregor, tự xưng thủ lĩnh xứ Poyais.",
+  "Một cuốn cẩm nang 355 trang mô tả đất nước đó.",
+  "Một ngân hàng London còn bảo lãnh khoản vay 200 nghìn bảng.",
+  "Người ta đổi vàng thật lấy tiền giấy Poyais.",
+  "Khoảng 250 người lên tàu đi lập nghiệp.",
+  "Họ chỉ thấy rừng rậm Honduras.",
+  "Hơn một nửa đã chết.",
+  "Còn MacGregor, mất năm 1845, được chôn cất với đầy đủ nghi lễ quân đội.",
+  "Đất nước ấy chỉ có trên giấy."
+ ],
+ "imgs": {
+  "port": "File:View of the port of Black River in the Territory of Poyais.jpg",
+  "mac": "File:Sir Gregor Macgregor.jpg",
+  "note": "File:Bank of Poyais-1 Hard Dollar (1820s) SCAM.jpg",
+  "caracas": "File:Joseph Thomas 1839 000.jpg"
+ },
+ "map": {
+  "countries": [
+   "United Kingdom",
+   "Honduras"
+  ],
+  "context": [
+   "Ireland",
+   "France",
+   "Spain",
+   "Portugal",
+   "Mexico",
+   "Guatemala",
+   "Nicaragua",
+   "Belize",
+   "El Salvador",
+   "United States of America",
+   "Cuba",
+   "Morocco"
+  ],
+  "labels": {
+   "Honduras": "HONDURAS",
+   "United Kingdom": "ANH"
+  },
+  "bbox": [
+   -92,
+   8,
+   4,
+   58
+  ],
+  "pins": [
+   {
+    "name": "London",
+    "lon": -0.1276,
+    "lat": 51.5072,
+    "label": "LONDON"
+   },
+   {
+    "name": "Black River",
+    "lon": -85.0,
+    "lat": 15.9,
+    "label": "“POYAIS”"
+   }
+  ]
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "port",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "MỘT ĐẤT NƯỚC",
+   "tape": {
+    "text": "“không hề tồn tại”",
+    "at": [
+     0,
+     "tồn"
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "XỨ POYAIS",
+   "rows": [
+    {
+     "k": "THỦ ĐÔ",
+     "v": "✓",
+     "at": [
+      1,
+      "thủ"
+     ]
+    },
+    {
+     "k": "NHÀ HÁT",
+     "v": "✓",
+     "at": [
+      1,
+      "hát"
+     ]
+    },
+    {
+     "k": "NHÀ THỜ MÁI VÒM",
+     "v": "✓",
+     "at": [
+      1,
+      "thờ"
+     ]
+    }
+   ],
+   "total": {
+    "k": "NGÂN HÀNG RIÊNG",
+    "v": "✓",
+    "at": [
+     1,
+     "ngân"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 2,
+   "k": "“THỦ LĨNH” XỨ POYAIS",
+   "name": "GREGOR\nMACGREGOR",
+   "desc": "Người Scotland · 1786–1845",
+   "img": "mac",
+   "stamp": {
+    "text": "TỰ XƯNG",
+    "at": [
+     2,
+     "tự"
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 355,
+   "label": "TRANG CẨM NANG",
+   "until": [
+    3,
+    "trang",
+    0,
+    0.2
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "prefix": "£",
+   "to": 200000,
+   "label": "KHOẢN VAY",
+   "until": [
+    4,
+    "bảng"
+   ],
+   "sub": {
+    "text": "NGÂN HÀNG LONDON BẢO LÃNH",
+    "at": [
+     4,
+     "bảo"
+    ]
+   }
+  },
+  {
+   "type": "evidence",
+   "at": 5,
+   "img": "note",
+   "tone": "color",
+   "tag": "TIỀN GIẤY POYAIS",
+   "credit": "NGÂN HÀNG POYAIS · 1 ĐÔ LA · THẬP NIÊN 1820"
+  },
+  {
+   "type": "map",
+   "at": 6,
+   "pins": [
+    {
+     "name": "London",
+     "at": [
+      6,
+      null,
+      0,
+      0.2
+     ]
+    },
+    {
+     "name": "Black River",
+     "at": [
+      6,
+      "lập",
+      0,
+      0.1
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "from": "London",
+     "to": "Black River",
+     "at": [
+      6,
+      "lên"
+     ],
+     "until": [
+      6,
+      "lập",
+      0,
+      0.2
+     ],
+     "bend": -0.2
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 7,
+   "img": "port",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": {
+    "text": "CHỈ CÓ RỪNG RẬM",
+    "at": [
+     7,
+     "rừng"
+    ]
+   },
+   "credit": "TRANH QUẢNG CÁO “CẢNG POYAIS” · 1822"
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "HƠN ½",
+     "at": [
+      8,
+      "hơn"
+     ],
+     "size": 240,
+     "serif": true
+    },
+    {
+     "text": "ĐÃ CHẾT",
+     "at": [
+      8,
+      "chết"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 9,
+   "img": "caracas",
+   "tone": "sepia",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": {
+    "text": "CARACAS · 1845 · NGHI LỄ QUÂN ĐỘI",
+    "at": [
+     9,
+     "nghi"
+    ]
+   }
+  },
+  {
+   "type": "hero",
+   "at": 10,
+   "img": "port",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "MỘT ĐẤT NƯỚC",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Gregor_MacGregor"
+ ]
+}

@@ -1,0 +1,184 @@
+{
+ "title": "Ngồi tù oan gần 20 năm, người cứu ông là cha đẻ Sherlock Holmes",
+ "description": "Năm 1908, cụ bà Marion Gilchrist bị sát hại ở Glasgow. Oscar Slater bị kết án tử hình dựa trên một biên lai cầm đồ của một chiếc trâm hoàn toàn khác. Arthur Conan Doyle vào cuộc.",
+ "tags": [
+  "Oscar Slater",
+  "án oan",
+  "Arthur Conan Doyle",
+  "Glasgow 1908",
+  "Sherlock Holmes",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1909",
+ "sub": "OSCAR SLATER · GLASGOW",
+ "acc": [
+  "glasgow",
+  "slater",
+  "conan",
+  "doyle",
+  "sherlock",
+  "trâm",
+  "1928"
+ ],
+ "lines": [
+  "Năm 1908, một cụ bà 83 tuổi bị sát hại ở Glasgow, chỉ một chiếc trâm bị lấy đi.",
+  "Cảnh sát nghi Oscar Slater, vì ông từng rao bán biên lai cầm đồ một chiếc trâm.",
+  "Rồi họ phát hiện: đó là một chiếc trâm hoàn toàn khác.",
+  "Nhưng vẫn truy tố.",
+  "Bồi thẩm đoàn: chín phiếu có tội, sáu phiếu không.",
+  "Slater bị tuyên tử hình. 20 nghìn người ký đơn, và ông thoát án tử.",
+  "Ông lao động khổ sai gần hai mươi năm.",
+  "Người đấu tranh cho ông: Arthur Conan Doyle, cha đẻ Sherlock Holmes.",
+  "Năm 1928, bản án bị hủy.",
+  "Tiền bồi thường: 6 nghìn bảng.",
+  "Rồi Slater và Conan Doyle cãi nhau… về tiền án phí."
+ ],
+ "imgs": {
+  "slater": "File:Oscar Slater 1908.jpg",
+  "room": "File:The victim's room of the Oscar Slater Case.jpg",
+  "hammer": "File:Oscar Slater's hammer.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "slater",
+   "frame": "print",
+   "tone": "bw",
+   "intro": true,
+   "head": "MỘT CHIẾC TRÂM"
+  },
+  {
+   "type": "file",
+   "at": 1,
+   "k": "NGHI PHẠM",
+   "name": "OSCAR\nSLATER",
+   "desc": "Rao bán biên lai cầm đồ một chiếc trâm",
+   "img": "slater"
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "TRÂM KHÁC",
+   "sub": "BẰNG CHỨNG SAI",
+   "white": true,
+   "bg": "room"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "VẪN TRUY TỐ",
+     "at": [
+      3,
+      "truy"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "BỒI THẨM ĐOÀN · 1909",
+   "rows": [
+    {
+     "k": "CÓ TỘI",
+     "v": "9",
+     "at": [
+      4,
+      "chín"
+     ]
+    },
+    {
+     "k": "KHÔNG",
+     "v": "6",
+     "at": [
+      4,
+      "sáu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "to": 20000,
+   "label": "CHỮ KÝ XIN THA",
+   "until": [
+    5,
+    "nghìn"
+   ],
+   "sub": {
+    "text": "THOÁT ÁN TỬ HÌNH",
+    "at": [
+     5,
+     "thoát"
+    ]
+   }
+  },
+  {
+   "type": "calendar",
+   "at": 6,
+   "n": 19,
+   "unit": "NĂM",
+   "title": "*GẦN 20 NĂM* KHỔ SAI"
+  },
+  {
+   "type": "file",
+   "at": 7,
+   "k": "NGƯỜI ĐẤU TRANH",
+   "name": "ARTHUR\nCONAN DOYLE",
+   "desc": "Cha đẻ Sherlock Holmes"
+  },
+  {
+   "type": "date",
+   "at": 8,
+   "day": "TÒA PHÚC THẨM",
+   "date": "07.1928",
+   "groupAt": [
+    [
+     8,
+     "1928",
+     0,
+     -0.2
+    ],
+    [
+     8,
+     "1928"
+    ]
+   ],
+   "stamp": {
+    "text": "HỦY ÁN",
+    "at": [
+     8,
+     "hủy"
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "at": 9,
+   "prefix": "£",
+   "to": 6000,
+   "label": "BỒI THƯỜNG",
+   "until": [
+    9,
+    "nghìn"
+   ]
+  },
+  {
+   "type": "hero",
+   "at": 10,
+   "img": "slater",
+   "frame": "print",
+   "tone": "bw",
+   "loop": true,
+   "head": "TIỀN ÁN PHÍ",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Oscar_Slater"
+ ]
+}
