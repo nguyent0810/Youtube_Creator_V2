@@ -1,12 +1,16 @@
+# Trạng thái sản xuất — 3 kênh
+
+_Cập nhật 21/09/2026 17:45 · `python scripts/status_report.py`_
+
 # Trạng thái kênh Phong Thủy (FS)
 
-_Cập nhật 21/09/2026 15:20 (giờ máy) · sinh bằng `python scripts/status_report.py`_
+_Cập nhật 21/09/2026 17:45 (giờ máy) · sinh bằng `python scripts/status_report.py`_
 
 Giờ trong bảng là giờ Việt Nam. Mọi video đều **riêng tư + hẹn giờ**; YouTube tự công khai đúng giờ.
 
 ## Tóm tắt
 
-- Khoảng 30/09 → 31/12: **23 ngày đủ 5/5**, 69 ngày đăng dở, 1 ngày chưa có video nào.
+- Khoảng 30/09 → 30/12: **23 ngày đủ 5/5**, 69 ngày đăng dở, 0 ngày chưa có video nào.
 - Đã lên kênh theo dòng: Lịch Hoàng Đạo **92** (tới 30/12) · 12 Con Giáp **23** (tới 22/10) · Lục Trụ **23** (tới 22/10) · Kinh Dịch **23** (tới 22/10) · Mệnh số **23** (tới 22/10)
 - Trong hàng đợi chưa đăng: **0** item
 
@@ -108,24 +112,93 @@ Ký hiệu: ✅ đã lên kênh · 🎬 dựng xong, chờ đăng · 🔊 có gi
 | Mon 28/12 | ✅ 29/12 — Sao hắc đạo mà cửa vẫn mở — Hu | — | — | — | — | 1/5 |
 | Tue 29/12 | ✅ 30/12 — Hoàng đạo mà chỉ được ba việc  | — | — | — | — | 1/5 |
 | Wed 30/12 | ✅ 31/12 — Sao hắc đạo mà cửa vẫn mở — Câ | — | — | — | — | 1/5 |
-| Thu 31/12 | — | — | — | — | — | 0/5 |
 
-## Làm tiếp
+### Làm tiếp
 
 1. Ngày đầu tiên chưa đủ 5/5: **23/10/2026**.
-2. Quota upload reset **14:00 giờ VN** (07:00 UTC mùa hè, 08:00 UTC mùa đông); trần thực tế ~92 video/ngày.
+2. Quota upload reset **14:00 giờ VN** (07:00 UTC mùa hè, 08:00 UTC mùa đông); trần thực tế ~92 video/ngày, RIÊNG cho từng kênh.
 4. Nạp tiếp 4 dòng pillar (18 ngày ≈ 72 upload ≈ 1 ngày quota):
    `python scripts/run_pipeline.py 2026-10-23 18 --only pillars`
 5. Lịch đã phủ tới 30/12. Nạp tiếp tháng 1/2027:
    `python scripts/run_pipeline.py 2027-01-01 31 --only lich` (Lịch đăng trước 1 ngày)
-6. Sau mỗi lần đăng: `python scripts/verify_published.py` phải ra XÁC MINH ĐẠT.
-7. Còn treo: tác vụ `resume` tự chạy hằng ngày (chờ bạn đồng ý) · Kinh Dịch cần thêm bản dịch khi Wikisource bổ sung (`fetch_kinhdich.py`).
+6. Kinh Dịch: chạy lại `python scripts/fetch_kinhdich.py` định kỳ để nhận thêm quẻ có bản dịch.
+7. Sau mỗi lần đăng: `python scripts/verify_published.py --channel FS` phải ra XÁC MINH ĐẠT.
 
-## Ghi chú kỹ thuật (đọc trước khi chạy)
+---
 
-- **Trần upload ~92/ngày/project Google.** Một lần nạp 18 ngày × 4 dòng = 72 video, cộng phần thử lại là vừa hết quota một ngày. Vượt trần thì item tự hoãn sang sau giờ reset (không tính là hỏng).
-- **Pexels ~200 lượt tìm/giờ.** Lô 72 video từng hỏng 15 bài vì chạm trần này. Đã thêm cache tìm kiếm 7 ngày (`cache/pexels/`) và thử lại khi tải ảnh lỗi 5xx; item hỏng tự quay về đúng chặng khi chạy `resume`.
+# Trạng thái kênh Phong Thủy (FS)
+
+_Cập nhật 21/09/2026 17:45 (giờ máy) · sinh bằng `python scripts/status_report.py`_
+
+Giờ trong bảng là giờ Việt Nam. Mọi video đều **riêng tư + hẹn giờ**; YouTube tự công khai đúng giờ.
+
+## Tóm tắt
+
+- Khoảng 25/09 → 01/10: **0 ngày đủ 5/5**, 0 ngày đăng dở, 7 ngày chưa có video nào.
+- Đã lên kênh theo dòng: Hỏi đáp luật, bẻ hiểu lầm 0 · Một điều luật trong 60 giây 0 · Nhận diện lừa đảo 0 · Hồ sơ tổ chức tội phạm, vụ án lịch sử 0 · Truyện đêm (hư cấu) 0
+- Trong hàng đợi chưa đăng: **35** item
+
+Ký hiệu: ✅ đã lên kênh · 🎬 dựng xong, chờ đăng · 🔊 có giọng · 📝 có kịch bản · ⏳ chờ quota · ❌ hỏng · — chưa có
+
+## Theo ngày
+
+| Ngày | Hỏi đáp luật, bẻ hiểu lầm (07:00) | Một điều luật trong 60 giây (11:30) | Nhận diện lừa đảo (15:00) | Hồ sơ tổ chức tội phạm, vụ án lịch sử (19:00) | Truyện đêm (hư cấu) (22:00) | Đủ |
+|---|---|---|---|---|---|---|
+| Fri 25/09 | 🔊 Án treo có phải là trắng án? | 🔊 Điều 125: Tội giết người trong trạng t | 🔊 Lãi 30%/tháng: vì sao càng cao càng đá | 🔊 Hội Tam Hoàng ban đầu không phải băng  | 🔊 Phòng trọ giá rẻ và cửa sổ tầng bốn | 0/5 |
+| Sat 26/09 | 🔊 14 tuổi phạm tội có bị xử lý hình sự? | 🔊 Điều 128: Tội vô ý làm chết người | 📝 Công an gọi điện bắt chuyển tiền? | 📝 Al Capone ngồi tù vì tội gì? | 📝 Chuyến xe buýt cuối lúc 11 giờ đêm | 0/5 |
+| Sun 27/09 | 📝 Bị tấn công mà đánh trả có phạm tội? | 📝 Điều 130: Tội bức tử | 📝 Việc nhẹ lương cao: càng làm càng mất  | 📝 Mật mã Zodiac: 51 năm mới giải | 📝 Cuộn băng trong chiếc máy quay cũ | 0/5 |
+| Mon 28/09 | 📝 Trốn đủ lâu thì thoát tội? | 📝 Điều 131: Tội xúi giục hoặc giúp người | 📝 Lừa bao nhiêu tiền thì thành tội hình  | 📝 Omertà: luật im lặng của Mafia bị phá | 📝 Thang máy dừng ở tầng không tồn tại | 0/5 |
+| Tue 29/09 | 📝 Say rượu phạm tội có được giảm nhẹ? | 📝 Điều 133: Tội đe dọa giết người | 📝 Ngân hàng nhắn xin mã OTP để hoàn tiền | 📝 Vì sao thành viên Yakuza cụt ngón tay? | 📝 Cuộc gọi lúc 3 giờ sáng từ số của mẹ | 0/5 |
+| Wed 30/09 | 📝 Nhặt được của rơi không trả có phạm tộ | 📝 Điều 141: Tội hiếp dâm | 📝 Nhóm đầu tư có chuyên gia báo kèo mỗi  | 📝 Vụ trộm tranh lớn nhất nước Mỹ chưa ph | 📝 Người xin quá giang trên con đèo sương | 0/5 |
+| Thu 01/10 | 📝 Ra tù là hết án tích? | 📝 Điều 142: Tội hiếp dâm người dưới 16 t | 📝 Người lạ yêu nhanh rồi gửi quà từ nước | 📝 D.B. Cooper: cướp máy bay rồi biến mất | 📝 Bức ảnh gia đình mỗi năm thiếu một ngư | 0/5 |
+
+### Làm tiếp
+
+1. Ngày đầu tiên chưa đủ 5/5: **25/09/2026**.
+2. Quota upload reset **14:00 giờ VN** (07:00 UTC mùa hè, 08:00 UTC mùa đông); trần thực tế ~92 video/ngày, RIÊNG cho từng kênh.
+4. Gói kịch bản còn lại: hieusai: còn 0 kịch bản chưa dùng · dieu: khuôn tự động · luadao: còn 0 kịch bản chưa dùng · hoso: còn 0 kịch bản chưa dùng · truyen: còn 0 kịch bản chưa dùng
+   Hết gói thì viết thêm vào `data/packs/CL/<dòng>.json` (Claude viết trong chat), rồi chạy:
+   `python scripts/run_pipeline.py 2026-10-02 7 --channel CL`
+7. Sau mỗi lần đăng: `python scripts/verify_published.py --channel CL` phải ra XÁC MINH ĐẠT.
+
+---
+
+# Trạng thái kênh Phong Thủy (FS)
+
+_Cập nhật 21/09/2026 17:45 (giờ máy) · sinh bằng `python scripts/status_report.py`_
+
+Giờ trong bảng là giờ Việt Nam. Mọi video đều **riêng tư + hẹn giờ**; YouTube tự công khai đúng giờ.
+
+## Tóm tắt
+
+- Khoảng 21/09 → 21/09: **0 ngày đủ 5/5**, 0 ngày đăng dở, 1 ngày chưa có video nào.
+- Đã lên kênh theo dòng: Lịch Phật giáo hằng ngày 0 · Vì sao — biểu tượng 0 · Hiểu đúng, hiểu lầm 0 · Pháp Cú mỗi ngày 0 · Số pháp 0
+- Trong hàng đợi chưa đăng: **0** item
+
+Ký hiệu: ✅ đã lên kênh · 🎬 dựng xong, chờ đăng · 🔊 có giọng · 📝 có kịch bản · ⏳ chờ quota · ❌ hỏng · — chưa có
+
+## Theo ngày
+
+| Ngày | Lịch Phật giáo hằng ngày (06:30) | Vì sao — biểu tượng (10:30) | Hiểu đúng, hiểu lầm (14:30) | Pháp Cú mỗi ngày (18:30) | Số pháp (21:00) | Đủ |
+|---|---|---|---|---|---|---|
+| Mon 21/09 | — | — | — | — | — | 0/5 |
+
+### Làm tiếp
+
+1. Ngày đầu tiên chưa đủ 5/5: **21/09/2026**.
+2. Quota upload reset **14:00 giờ VN** (07:00 UTC mùa hè, 08:00 UTC mùa đông); trần thực tế ~92 video/ngày, RIÊNG cho từng kênh.
+4. Gói kịch bản còn lại: lich: khuôn tự động · visao: còn 7 kịch bản chưa dùng · hieulam: còn 7 kịch bản chưa dùng · phapcu: còn 7 kịch bản chưa dùng · sophap: còn 7 kịch bản chưa dùng
+   Hết gói thì viết thêm vào `data/packs/BUD/<dòng>.json` (Claude viết trong chat), rồi chạy:
+   `python scripts/run_pipeline.py 2026-09-21 7 --channel BUD`
+7. Sau mỗi lần đăng: `python scripts/verify_published.py --channel BUD` phải ra XÁC MINH ĐẠT.
+
+---
+
+## Ghi chú kỹ thuật chung
+
+- **Trần upload ~92/ngày cho MỖI kênh** (3 kênh = 3 Google Cloud project riêng). Vượt trần thì item tự hoãn sang sau giờ reset (không tính là hỏng); chạy `run_pipeline.py resume --channel X`.
+- **Pexels ~200 lượt tìm/giờ.** Đã có cache tìm kiếm 7 ngày (`cache/pexels/`) + thử lại khi tải ảnh lỗi 5xx.
 - **Không bao giờ** chạy `reset_items.py` mà không có pattern (script đã chặn); item đã có video_id không bị đụng.
 - Bundle đã có thì không bị ghi đè; chạy lại cùng dải ngày là vô hại.
-- Lỗi đã chấp nhận, không sửa lại video đã đăng: 11 video Lịch đọc sai con vật của tú; 92 video Lịch dùng B-roll theo đường dịch máy cũ.
-- Hai video demo (`mau-hop-menh-kim`, `huong-bep-quan-trong-hon`) nằm trong hàng đợi nhưng luôn bị loại khi đăng.
+- BLHS: chỉ dùng bản 2017 cho điều KHÔNG bị Luật 86/2025/QH15 sửa (48 điều bị gắn cờ, khuôn tự bỏ qua).
+- FS: lỗi đã chấp nhận, không sửa video đã đăng — 11 video Lịch đọc sai con vật của tú; 92 video Lịch dùng B-roll theo đường dịch máy cũ.

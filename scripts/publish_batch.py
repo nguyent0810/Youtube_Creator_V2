@@ -24,10 +24,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from factory import publish, store  # noqa: E402
+from factory import channels, publish, store  # noqa: E402
 
-CREDS = Path(r"C:\Tools\Youtuber\vietneu-tts\.youtube_channels\phong_thuy.json")
-CHANNEL = "FS"
+CHANNEL = channels.pick()
+CREDS = channels.creds_path(CHANNEL)
 MODE = sys.argv[1] if len(sys.argv) > 1 else "check"
 
 # CHỈ đăng item khớp tiền tố này. Không có nó, `check` vừa cho thấy hàng đợi
@@ -38,7 +38,7 @@ MODE = sys.argv[1] if len(sys.argv) > 1 else "check"
 # Hàng đợi là nơi mọi thứ dồn về, gồm cả thứ chỉ để thử. Bước đăng phải tự
 # lọc, không được cho rằng mọi thứ trong hàng đợi đều đáng đăng.
 # 21/09/2026: thêm 4 dòng pillar. Demo (mau-hop-menh-kim, ...) vẫn bị loại.
-SLUG_PREFIX = ("lich-", "giap-", "tru-", "dich-", "menh-")
+SLUG_PREFIX = channels.prefixes(CHANNEL)
 
 
 def _creds() -> dict:
@@ -169,6 +169,7 @@ elif MODE == "probe":
     do_probe(sys.argv[2] if len(sys.argv) > 2 else "lich-20261001")
 elif MODE == "run":
     lim = int(sys.argv[sys.argv.index("--limit") + 1]) if "--limit" in sys.argv else 500
+    print(f"kênh {CHANNEL} ({channels.CHANNELS[CHANNEL]['ten']})")
     do_run(lim)
 else:
     sys.exit(__doc__)

@@ -22,11 +22,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from factory import publish, store  # noqa: E402
+from factory import channels, publish, store  # noqa: E402
 
-CREDS = Path(r"C:\Tools\Youtuber\vietneu-tts\.youtube_channels\phong_thuy.json")
-ALL = ["lich-", "giap-", "tru-", "dich-", "menh-"]
-PREFIXES = [sys.argv[1]] if len(sys.argv) > 1 else ALL
+CH = channels.pick()
+CREDS = channels.creds_path(CH)
+ALL = list(channels.prefixes(CH))
+_args = [a for a in sys.argv[1:] if a != "--channel" and a != CH]
+PREFIXES = [_args[0]] if _args else ALL
 
 
 def verify(prefix: str, tok: str) -> list[str]:
@@ -62,7 +64,7 @@ def verify(prefix: str, tok: str) -> list[str]:
                 problems.append((vid, ["KHÔNG TỒN TẠI trên kênh"]))
         for it in data["items"]:
             r = next(x for x in rows if x["video_id"] == it["id"])
-            b = store.load_bundle("FS", r["slug"])
+            b = store.load_bundle(CH, r["slug"])
             st, sn = it["status"], it["snippet"]
             p = []
             # Trước giờ hẹn: phải private + đúng publishAt. Sau giờ hẹn YouTube

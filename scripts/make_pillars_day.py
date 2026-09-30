@@ -3,6 +3,7 @@
     python scripts/make_pillars_day.py 2026-09-30          # ngày đăng (giờ VN)
     python scripts/make_pillars_day.py 2026-09-30 --dry    # chỉ in, không ghi
     python scripts/make_pillars_day.py 2026-10-01 31       # 31 ngày × 4 = 124 bundle
+    python scripts/make_pillars_day.py 2026-09-25 7 --channel CL   # kênh Hình Sự (5 dòng)
 
 Mỗi pillar lấy chủ đề kế tiếp chưa làm (lịch sử đọc từ bundles/). Bản nào
 không qua bộ kiểm thì KHÔNG ghi ra -- fail-closed như Lịch. Sau đó kiểm chéo
@@ -19,7 +20,10 @@ from factory import store  # noqa: E402
 from factory.batchcheck import report_batch  # noqa: E402
 from factory.bundle import Bundle, make_slug  # noqa: E402
 from factory.pillars import check as C  # noqa: E402
-from factory.pillars import topics as P  # noqa: E402
+from factory import channels  # noqa: E402
+
+CH = channels.pick()
+P = channels.lines(CH)
 
 # Bốn cảm giác khác nhau -> giọng + nhạc khác nhau.
 STYLE = {
@@ -35,15 +39,23 @@ TAGS = {
     "menh": ["cung hoang dao", "chiem tinh", "huyen hoc", "thien van"],
 }
 VN_UTC = timedelta(hours=7)
+DISCLAIMER = {
+    "FS": "Kiến thức truyền thống, để tham khảo — không phải kết luận khoa học.",
+    "CL": "Nội dung phổ biến kiến thức pháp luật, không phải tư vấn pháp lý cho vụ việc cụ thể.",
+    "BUD": "Nội dung chia sẻ giáo lý phổ thông; lời kinh là diễn ý từ bản dịch có ghi nguồn.",
+}
 
 start = date.fromisoformat(sys.argv[1]) if len(sys.argv) > 1 else date.today() + timedelta(days=1)
 DAYS = int(sys.argv[2]) if len(sys.argv) > 2 and sys.argv[2].isdigit() else 1
 DRY = "--dry" in sys.argv
 QUIET = DAYS > 1
 
+STYLE = getattr(P, "STYLE", STYLE)
+TAGS = getattr(P, "TAGS", TAGS)
+FICTION = getattr(P, "FICTION", set())
 history = P.load_history(store.BUNDLE_DIR)
 made, blocked = [], []
-done_slugs = {f.stem for f in (store.BUNDLE_DIR / "FS").glob("*.json")}
+done_slugs = {f.stem for f in (store.BUNDLE_DIR / CH).glob("*.json")}
 # Mỗi dòng đúng MỘT bài mỗi ngày: ngày nào dòng đó đã có bài thì bỏ qua
 # (chạy lại cùng dải ngày phải vô hại, không đẻ bài thứ hai).
 have = {(h["pillar"], h["publish_at"]) for h in history}
@@ -60,15 +72,17 @@ for n in range(DAYS):
         if d is None:
             blocked += [f"{day}: {w}" for w in why]
             continue
-        findings = C.check(d, P.ALL_NAMES, history)
+        findings = (P.check_draft(d, history) if hasattr(P, "check_draft")
+                    else C.check(d, P.ALL_NAMES, history))
         ok = C.verdict(findings)
         h, m = map(int, hhmm.split(":"))
         when = (datetime(day.year, day.month, day.day, h, m) - VN_UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
         voice, bgm = STYLE[pillar]
         b = Bundle(
-            channel="FS", kind="short", slug=f"{prefix}{make_slug(d.key)}", script=d.script, title=d.title,
-            description=d.title + ".\n\nNguồn: " + "; ".join(d.sources)
-            + "\n\nKiến thức truyền thống, để tham khảo — không phải kết luận khoa học.",
+            channel=CH, kind="short", slug=f"{prefix}{make_slug(d.key)}", script=d.script, title=d.title,
+            description=(d.title + ".\n\nTruyện hư cấu, mọi nhân vật và tình tiết đều do tưởng tượng."
+                         if pillar in FICTION else
+                         d.title + ".\n\nNguồn: " + "; ".join(d.sources) + "\n\n" + DISCLAIMER.get(CH, "")),
             # Beat text cảnh đầu = tiêu đề (ngắn), không phải cả câu hook dài.
             tags=TAGS[pillar], thumbnail_text=d.title, publish_at=when, voice=voice, bgm=bgm,
             broll_queries=d.broll,
@@ -112,5 +126,5 @@ if not DRY:
     for *_, b, _, _ in made:
         store.save_bundle(b)
     with store.connect() as conn:
-        added, total = store.sync_from_disk(conn, channel="FS")
+        added, total = store.sync_from_disk(conn, channel=CH)
     print(f"\nGhi {len(made)} bundle mới, giữ nguyên {kept} slot đã có, hàng đợi thêm {added}")

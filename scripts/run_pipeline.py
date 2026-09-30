@@ -38,7 +38,10 @@ sys.path.insert(0, str(ROOT))
 PY_TTS = Path(r"C:\Tools\Youtuber\vietneu-tts\.venv\Scripts\python.exe")
 PY_VID = Path(r"C:\Tools\Youtuber\video-editor\.venv-video\Scripts\python.exe")
 
-from factory import store  # noqa: E402
+from factory import channels, store  # noqa: E402
+
+CH = channels.pick()
+CHARG = ["--channel", CH]
 
 RESUME = len(sys.argv) > 1 and sys.argv[1] == "resume"
 start = sys.argv[1] if len(sys.argv) > 1 and not RESUME else "2026-12-01"
@@ -80,33 +83,33 @@ print(f"Thử lại {len(back)} item hỏng: {back[:5]}" if back else "Không c�
 if wait:
     print(f"Đang hoãn chờ quota: {len(wait)} item, tự chạy lại từ {wait[0]['retry_after']}")
 
-if not RESUME and ONLY in ("all", "lich"):
+if not RESUME and ONLY in ("all", "lich") and CH == "FS":
     timings["1a. sinh Lịch"] = run(
         "CHẶNG 1a — Lịch: sinh kịch bản + kiểm từng bản + kiểm chéo lô",
         PY_TTS, ["scripts/make_lich_month.py", start, days])
 if not RESUME and ONLY in ("all", "pillars"):
     timings["1b. sinh 4 pillar"] = run(
         "CHẶNG 1b — 4 pillar: chọn chủ đề theo lịch sử + kiểm + kiểm chéo",
-        PY_TTS, ["scripts/make_pillars_day.py", start, days])
+        PY_TTS, ["scripts/make_pillars_day.py", start, days, *CHARG])
 
 timings["2. TTS"] = run(
     "CHẶNG 2 — TTS (venv vieneu)",
-    PY_TTS, ["scripts/run_batch.py", "tts", "FS"])
+    PY_TTS, ["scripts/run_batch.py", "tts", CH])
 
 timings["3. dựng video"] = run(
     "CHẶNG 3 — dựng video (venv video-editor)",
-    PY_VID, ["scripts/run_batch.py", "assemble", "FS"])
+    PY_VID, ["scripts/run_batch.py", "assemble", CH])
 
 if do_publish:
     timings["4. kiểm trước đăng"] = run(
         "CHẶNG 4 — kiểm trước khi đăng (không ghi gì)",
-        PY_TTS, ["scripts/publish_batch.py", "check"])
+        PY_TTS, ["scripts/publish_batch.py", "check", *CHARG])
     timings["5. đăng"] = run(
         "CHẶNG 5 — đăng (private + hẹn giờ)",
-        PY_TTS, ["scripts/publish_batch.py", "run"])
+        PY_TTS, ["scripts/publish_batch.py", "run", *CHARG])
     timings["6. xác minh"] = run(
         "CHẶNG 6 — xác minh lại trên YouTube",
-        PY_TTS, ["scripts/verify_published.py"])
+        PY_TTS, ["scripts/verify_published.py", *CHARG])
 
 total = time.perf_counter() - T0
 print(f"\n{'=' * 62}\nTỔNG KẾT\n{'=' * 62}")
@@ -114,5 +117,6 @@ for k, v in timings.items():
     print(f"  {k:24s} {v:6.0f}s  ({v / total:4.0%})")
 print(f"  {'TỔNG':24s} {total:6.0f}s  ({total / 60:.1f} phút)")
 if not RESUME:
-    n = int(days) * (5 if ONLY == "all" else 4 if ONLY == "pillars" else 1)
+    n = int(days) * (len(channels.prefixes(CH)) if CH != "FS" else
+                     5 if ONLY == "all" else 4 if ONLY == "pillars" else 1)
     print(f"\n  {n} video → {total / n:.0f}s mỗi video")
