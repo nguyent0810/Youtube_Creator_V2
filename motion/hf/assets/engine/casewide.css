@@ -165,7 +165,7 @@ html, body { width:1920px; height:1080px; overflow:hidden; background:#060505; }
 /* split */
 .splitw { position:absolute; top:185px; width:560px; }
 .splitw .print { position:relative; padding:16px 16px 70px; }
-.splitw img { width:528px; height:560px; object-fit:cover; object-position:50% 25%; display:block; }
+.splitw img { position:relative; width:528px; height:560px; object-fit:cover; object-position:50% 25%; display:block; }
 .splitw .lb { position:absolute; left:16px; right:16px; bottom:18px; text-align:center; font-weight:900; font-size:26px; color:#1b1714; white-space:nowrap; overflow:hidden; }
 .sign { position:absolute; left:0; right:0; top:360px; text-align:center; font-family:'Playfair Display',serif; font-weight:900; font-size:170px; color:var(--red); opacity:0; }
 .spt { position:absolute; left:100px; right:100px; top:96px; text-align:center; font-weight:900; font-size:44px; opacity:0; white-space:nowrap; }
