@@ -101,3 +101,19 @@ def test_signals_are_record_only():
     from factory.script_signals import signals
     s = signals("Án treo có phải là trắng án? Không. Án treo vẫn là một bản án tù.")
     assert s["hook_is_question"] and s["first_answer_sec"] is not None and "score" not in s
+
+
+def test_novelty_catches_real_duplicates_not_false_ones():
+    """Các cặp lấy từ kênh thật 30/09/2026."""
+    from factory.lines.novelty import similar
+    dup = [("Vì sao tượng Phật có dái tai dài?", "Vì sao tượng Phật có đôi tai dài?"),
+           ("Vì sao Địa Tạng cầm tích trượng có vòng?", "Vì sao Bồ Tát Địa Tạng cầm tích trượng?"),
+           ("Niết-bàn có phải là thiên đường?", "Niết bàn có phải là thiên đường sau khi chết?"),
+           ("Tứ vô lượng tâm: từ, bi, hỷ, xả", "Tứ vô lượng tâm là gì?"),
+           ("Năm giới: vì sao không có giới phải đi chùa?", "Năm giới của Phật tử là gì?")]
+    ok = [("Pháp Cú kệ 50: đừng soi lỗi người", "Cha mẹ già kể mãi chuyện cũ, mình có đủ kiên nhẫn?"),
+          ("Điều 125: Tội giết người trong trạng thái tinh thần bị kích động mạnh", "Điều 172: Tội công nhiên chiếm đoạt tài sản"),
+          ("Chuyến xe buýt cuối lúc 11 giờ đêm", "Cuộc gọi lúc 3 giờ sáng từ số của mẹ"),
+          ("14 tuổi phạm tội có bị xử lý hình sự?", "Nhặt được của rơi không trả có phạm tội?")]
+    assert all(similar(a, b) for a, b in dup)
+    assert not any(similar(a, b) for a, b in ok)

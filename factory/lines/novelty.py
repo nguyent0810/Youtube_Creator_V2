@@ -52,9 +52,11 @@ def bigrams(t: str) -> set[str]:
 
 
 def _head(t: str) -> str | None:
-    """Cụm chủ thể mở đầu tiêu đề (2 âm tiết đầu không phải hư từ)."""
-    s = [w for w in syllables(t) if w not in STOP]
-    return f"{s[0]} {s[1]}" if len(s) >= 2 else None
+    """Cụm chủ thể mở đầu: cặp âm tiết LIỀN NHAU đầu tiên, không hư từ, không bị
+    số ngắt. (Lỗi thật: "Điều 172: Tội…" bỏ số thành "điều tội" -> mọi bài
+    điều luật đều bị coi là trùng nhau.)"""
+    s = [w if (w and w not in STOP) else None for w in _tokens(t)]
+    return next((f"{a} {b}" for a, b in zip(s, s[1:]) if a and b), None)
 
 
 @lru_cache(maxsize=None)
