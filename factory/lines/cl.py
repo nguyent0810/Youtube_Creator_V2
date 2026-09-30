@@ -153,7 +153,10 @@ def dieu_luat(history, day) -> Draft | None:
                   [f"Bộ luật Hình sự 2015 (sửa đổi 2017), Điều {so} — vi.wikisource.org; "
                    f"điều này không bị Luật 86/2025/QH15 sửa"],
                   pick_broll(BROLL["dieu"], key), "dieu", set())
-        # Điều nào không qua kiểm thì thử điều kế tiếp, không chặn cả dòng.
+        # Điều nào không qua kiểm, hoặc kênh đã có video về điều đó, thì thử điều kế tiếp.
+        from factory.lines import novelty
+        if novelty.duplicate_on_channel(CHANNEL, d.title):
+            continue
         if verdict(packs.check(d, history)):
             return d
     return None

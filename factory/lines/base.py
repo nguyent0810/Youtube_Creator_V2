@@ -39,8 +39,12 @@ def make_next_draft(mod):
             if d is not None and d.key not in done and verdict(check_draft(mod, d, history)):
                 return d, []
             return None, [f"{mod.CHANNEL}/{pillar}: khuôn không cho bài hợp lệ ngày {day}"]
+        from factory.lines import novelty
         for e in packs.load(mod.CHANNEL, pillar):
             if e["key"] in done:
+                continue
+            # Trùng chủ đề với video BẤT KỲ trên kênh (kể cả nguồn khác) -> bỏ.
+            if novelty.duplicate_on_channel(mod.CHANNEL, e["title"]):
                 continue
             d = packs.to_draft(e, pillar, mod.BROLL[pillar])
             d.cite_ke = e.get("cite_ke")

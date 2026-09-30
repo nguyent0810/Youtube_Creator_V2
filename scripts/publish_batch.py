@@ -19,6 +19,7 @@ thật, không rút lại được.
 import json
 import sys
 import time
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -118,6 +119,16 @@ def do_probe(slug: str) -> None:
     print("  Vào xem, kiểm hình/tiếng/mô tả. Đạt thì chạy `run`; không đạt thì xoá.")
 
 
+def _foreign_days(tok: str, conn) -> set:
+    """Các ngày (giờ VN, từ hôm nay) mà video KHÔNG do v2 đăng sẽ/đang lên sóng."""
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from schedule_audit import all_videos
+    mine = {r[0] for r in conn.execute("SELECT video_id FROM item WHERE video_id IS NOT NULL")}
+    today = (datetime.now(timezone.utc) + timedelta(hours=7)).date()
+    return {(v["live_at"] + timedelta(hours=7)).date() for v in all_videos(tok)
+            if v["id"] not in mine and (v["live_at"] + timedelta(hours=7)).date() >= today}
+
+
 def do_run(limit: int) -> None:
     creds = _creds()
     tok = publish.access_token(creds)
@@ -136,8 +147,23 @@ def do_run(limit: int) -> None:
         titles = publish.channel_titles(publish.uploads_playlist_id(tok), tok)
         print(f"chống trùng: đã chụp {len(titles)} tiêu đề gần nhất trên kênh")
 
+        # CHỐT CHẶN NGUỒN KHÁC (30/09/2026): v1/máy khác vẫn hẹn giờ lên CÙNG
+        # kênh với kho trạng thái riêng -- store v2 không biết. Ngày 30/09 06:00
+        # kênh FS đã lên 2 video Lịch cùng lúc. Nên trước khi upload: đọc lịch
+        # thật của kênh; ngày (giờ VN) nào nguồn khác đã có video sắp/đang lên
+        # sóng thì v2 KHÔNG đăng vào ngày đó -- để lại hàng đợi, báo rõ.
+        busy = _foreign_days(tok, conn) if "--ignore-other" not in sys.argv else set()
+        if busy:
+            print(f"nguồn khác đã chiếm {len(busy)} ngày: "
+                  f"{', '.join(d.strftime('%d/%m') for d in sorted(busy)[:12])}{'…' if len(busy) > 12 else ''}")
+
         for i, r in enumerate(rows, 1):
             b = store.load_bundle(r["channel"], r["slug"])
+            vn_day = (datetime.strptime(r["publish_at"], "%Y-%m-%dT%H:%M:%SZ") + timedelta(hours=7)).date()
+            if vn_day in busy:
+                print(f"  [{i}/{len(rows)}] {b.slug}  BỎ QUA: ngày {vn_day:%d/%m} nguồn khác đã có video "
+                      f"(dời lịch lô này, hoặc --ignore-other nếu chắc chắn)")
+                continue
             # access_token sống 60 phút; 92 upload mất ~20 phút, nhưng lô
             # lớn hơn hoặc mạng chậm thì vượt -- làm mới trước khi hết hạn.
             if time.monotonic() - tok_at > 40 * 60:
