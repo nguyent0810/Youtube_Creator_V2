@@ -25,13 +25,14 @@ def main(topic):
     for c in spec["chapters"]:
         ch = json.loads((sd / f"{c}.json").read_text(encoding="utf-8"))
         for s in ch["scenes"]:
-            for k in (s.get("img"), s.get("bg"), (s.get("a") or {}).get("img"), (s.get("b") or {}).get("img")):
+            for k in (s.get("img"), s.get("bg"), (s.get("a") or {}).get("img"), (s.get("b") or {}).get("img"), *[q.get("img") for q in s.get("pins") or []]):
                 if k:
                     used.add(k)
-        b = (ch.get("bgm") or {}).get("file")
-        if b and b not in music:
-            music.append(b)
-        title = ch["hud"]["t"].title() if c != "ch00" else "Mở đầu: Kobe, 5 giờ 46 phút"
+        bg = ch.get("bgm") or []
+        for b in [q.get("file") for q in ([bg] if isinstance(bg, dict) else bg)]:
+            if b and b not in music:
+                music.append(b)
+        title = ch["hud"]["t"].title() if c != "ch00" else meta.get("ch00_title", "Mở đầu")
         if c == spec["chapters"][-1]:
             title = "Kết: " + title
         chapters.append(f"{int(t // 60):02d}:{int(t % 60):02d} {title}")
@@ -40,7 +41,7 @@ def main(topic):
              *meta.get("sources", [])[:8], "và các bài Wikipedia liên quan.", "",
              "Lời dẫn là bản viết mới dựa trên tư liệu công khai; những câu có nhãn DIỄN Ý là diễn đạt lại, không phải nguyên văn.",
              "Hình ảnh/video có nhãn MINH HỌA chỉ mang tính minh họa bối cảnh.", "", "🖼 ẢNH (Wikimedia Commons)"]
-    pd = 0
+    pd, bylic = 0, {}
     for k in sorted(used):
         f = spec["imgs"][k]
         mp = od / "img" / f"{k}.json"
@@ -49,12 +50,22 @@ def main(topic):
             pd += 1
             continue
         by = re.sub(r"\s*\d\d:\d\d, .*UTC\)", "", m["artist"].split("\n")[0]).strip() or "không rõ tác giả"
-        name = re.sub(r"\s*\(\d{6,}\)|\.(jpe?g|png|tif)$", "", f[5:], flags=re.I)[:48]
-        lines.append(f"• {name} — {by[:40]} — {m['license']}")
+        name = re.sub(r"\s*\(\d{6,}\)|\.(jpe?g|png|tif)$|, Sicily, Italy| - panoramio", "", f[5:], flags=re.I)[:meta.get("credit_name_len", 48)]
+        by = re.sub(r"^The original uploader was |No machine-readable author provided\. ", "", by)
+        bylic.setdefault(m["license"], []).append(f"{name.strip()} ({by[:meta.get('credit_by_len', 40)].strip()})")
+    lines += [f"• {lic}: " + "; ".join(v) for lic, v in sorted(bylic.items())]   # gom theo giấy phép: đủ tác giả + giấy phép, ít byte hơn
     lines += [f"• Và {pd} ảnh tư liệu thuộc phạm vi công cộng (Public domain / CC0).", "",
               "🎬 VIDEO B-ROLL: Pexels (pexels.com) — giấy phép Pexels, dùng tự do.", "", "🎵 NHẠC NỀN"]
-    lines.append(", ".join(f"\"{MUSIC.get(b, b)}\"" for b in music) + " by Kevin MacLeod (incompetech.com)")
-    lines.append("Licensed under Creative Commons: By Attribution 4.0 License — http://creativecommons.org/licenses/by/4.0/")
+    mac = [b for b in music if b in MUSIC]
+    if mac:
+        lines.append(", ".join(f"\"{MUSIC[b]}\"" for b in mac) + " by Kevin MacLeod (incompetech.com)")
+        lines.append("Licensed under Creative Commons: By Attribution 4.0 License — http://creativecommons.org/licenses/by/4.0/")
+    for b in music:   # bản thu tự do từ Commons: ghi tên file + giấy phép (json cạnh file nhạc)
+        mj = od / "bgm" / (Path(b).stem + ".json")
+        if b not in MUSIC and mj.exists():
+            m = json.loads(mj.read_text(encoding="utf-8"))
+            name = re.sub(r"\.(flac|ogg|oga|wav|mp3)$", "", m["file"][5:], flags=re.I)
+            lines.append(f"Mascagni — Intermezzo (Cavalleria rusticana) · {m.get('short', name[:40])} — Wikimedia Commons — {m['license']}")
     lines += ["", " ".join("#" + x for x in meta.get("hashtags", []))]
     (od / "description.txt").write_text("\n".join(lines).strip() + "\n", encoding="utf-8")
     print((od / "description.txt").read_text(encoding="utf-8"))

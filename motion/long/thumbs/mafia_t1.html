@@ -1,0 +1,26 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800;900&family=Playfair+Display:wght@900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#050404}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;color:#fff}
+.abs{position:absolute}
+.grain{position:absolute;inset:0;opacity:.12;mix-blend-mode:overlay}
+.glow{position:absolute;border-radius:50%;filter:blur(100px);background:rgba(200,16,46,.6)}
+.brand{position:absolute;font-family:'Playfair Display';font-weight:900;color:#ff2a3d;line-height:.9;white-space:nowrap;
+  text-shadow:0 0 60px rgba(255,20,40,.55),0 14px 40px #000,-5px -5px 0 #000,5px 5px 0 #000}
+.big{position:absolute;font-weight:900;line-height:1;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.tag{position:absolute;font-family:'JetBrains Mono';font-weight:700;letter-spacing:.25em;color:#ff6a6a;white-space:nowrap}
+</style></head><body>
+<!-- T1: Falcone & Borsellino (tranh chì) + "MAFIA Ý" + "57 NGÀY" -->
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<img class="abs" src="assets/long/mafia/img/falcone_borsellino.jpg" style="left:-120px;top:-40px;width:1360px;height:1160px;object-fit:cover;object-position:40% 30%;filter:grayscale(1) contrast(1.45) brightness(.92)"/>
+<div class="abs" style="inset:0;background:linear-gradient(90deg,rgba(5,4,4,0) 0%,rgba(5,4,4,.1) 40%,rgba(5,4,4,.95) 58%,#050404 68%)"></div>
+<div class="abs" style="left:0;top:0;width:1200px;height:1080px;background:radial-gradient(60% 70% at 45% 50%,transparent 55%,rgba(5,4,4,.85) 100%)"></div>
+<div class="glow" style="left:1080px;top:180px;width:820px;height:460px"></div>
+<div class="brand" style="left:1010px;top:170px;font-size:210px">MAFIA Ý</div>
+<div class="big" style="left:1020px;top:470px;font-size:150px;color:#fff">CHỈ</div>
+<div class="big" style="left:1020px;top:630px;font-size:170px;color:#ffd23a">57 NGÀY</div>
+<div class="tag" style="left:1030px;top:860px;font-size:30px">CAPACI → VIA D'AMELIO · 1992</div>
+<svg class="grain" width="1920" height="1080"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3" seed="4"/></filter><rect width="100%" height="100%" filter="url(#g)"/></svg>
+</div><script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

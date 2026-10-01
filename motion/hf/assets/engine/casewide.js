@@ -9,6 +9,9 @@
   if (C.accent) document.documentElement.style.setProperty("--red", C.accent);
   const $ = (s) => document.querySelector(s);
   const el = (tag, cls, html, parent) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; if (parent) parent.appendChild(e); return e; };
+  const ROOT = document.getElementById("root");
+  if (C.theme) ROOT.classList.add("th-" + C.theme);
+  if (C.theme === "noir") { el("div", "lbx t", null, ROOT); el("div", "lbx b", null, ROOT); el("div", "layer", null, ROOT).id = "flick"; }   // khung điện ảnh + nhấp nháy phim
   const NS = "http://www.w3.org/2000/svg";
   const sv = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
   let seed = C.seed || 1995; const rnd = () => { seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; };
@@ -62,6 +65,12 @@
     if (s.illus) el("div", "illus", s.illus === true ? "ẢNH MINH HỌA" : esc(s.illus), d);
     if (s.stamp) { const st = el("div", "stamp" + (s.stamp.ink ? " ink" : ""), esc(s.stamp.text), d); st.style.fontSize = px(fsz(s.stamp.text, 84, 760, 0.72));
       st.style.left = px(s.stamp.x ?? 1150); st.style.top = px(s.stamp.y ?? 560); stamp(st, s.stamp.at, s.stamp.rot ?? -8); }
+    // film: tư liệu cũ -> nhấp nháy sáng tối 12 hình/giây + vệt xước dọc (sfx: tiếng máy chiếu)
+    if (s.film && $("#flick")) { const n = Math.ceil((s.t1 - s.t0) * 12);
+      for (let k = 0; k < n; k++) tl.set("#flick", { opacity: rnd() * 0.07 }, s.t0 + k / 12);
+      tl.set("#flick", { opacity: 0 }, s.t1);
+      for (let j = 0; j < 2; j++) { const sc = el("div", "scr", null, d); sc.style.left = px(200 + rnd() * 1500);
+        for (let k = 0; k < n; k += 2) tl.set(sc, { opacity: rnd() > 0.55 ? 0.6 : 0, x: (rnd() - 0.5) * 30 }, s.t0 + k / 12); } }
   };
 
   /* ---- nền video (B-roll) cho mọi cảnh có s.vid: đẩy máy chậm + màn che ---- */
@@ -183,7 +192,10 @@
       Object.assign(e.style, { fontSize: px(sizes[k]), top: px(y) }); y += sizes[k] * 1.22;
       tl.fromTo(e, { opacity: 0, scale: 1.3, y: -16 }, { opacity: 1, scale: 1, y: 0, duration: 0.2, ease: "power4.in", immediateRender: false }, q.at - 0.08); });
   };
-  B.kinetic = (s, d) => { bg(s, d, 0.62); kinetic(s.items, d, s.align); common(s, d); };
+  B.kinetic = (s, d) => { bg(s, d, 0.62);
+    const it = s.items.map((q) => ({ ...q })), f = it.reduce((a, q) => (q.at < a.at ? q : a), it[0]);
+    if (f.at - s.t0 > 2.0) f.at = s.t0 + 0.5;   // dòng đầu đến muộn -> hiện sớm làm tiêu đề, tránh màn trống
+    kinetic(it, d, s.align); common(s, d); };
 
   /* ---------- slam: một dòng chữ đập mạnh trên nền tư liệu tối ----------
      sfx: at -> boom */
@@ -191,7 +203,11 @@
     bg(s, d, 0.6);
     const lines = s.text.split("\n"), fs = fsz(lines.reduce((a, b) => (a.length > b.length ? a : b)), 190, 1700, 0.66);
     const sl = el("div", "slam", lines.map(esc).join("<br/>"), d); Object.assign(sl.style, { fontSize: px(fs), top: px(460 - fs * lines.length / 2), lineHeight: 1.02, color: s.white ? "#fff" : "" });
-    tl.fromTo(sl, { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 0.18, ease: "power4.in", immediateRender: false }, s.at - 0.13);
+    if (s.at - s.t0 > 1.6) {   // cú đập đến muộn -> chữ hiện mờ trước (khỏi trống màn), rồi mới đập
+      tl.fromTo(sl, { opacity: 0, scale: 1.04 }, { opacity: 0.16, scale: 1, duration: 0.6, immediateRender: false }, s.t0 + 0.2);
+      tl.to(sl, { scale: 1.6, duration: 0.01 }, s.at - 0.14);
+      tl.to(sl, { opacity: 1, scale: 1, duration: 0.18, ease: "power4.in" }, s.at - 0.13);
+    } else tl.fromTo(sl, { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 0.18, ease: "power4.in", immediateRender: false }, s.at - 0.13);
     if (s.sub) { const sb = el("div", "dsub", esc(s.sub), d); sb.style.top = px(480 + fs * lines.length / 2 + 20); tl.to(sb, { opacity: 1, duration: 0.3 }, s.at + 0.3); }
     tl.to("#stage", { x: 10, duration: 0.03, yoyo: true, repeat: 5 }, s.at + 0.05);
     common(s, d);
@@ -296,7 +312,13 @@
     const qt = el("div", "qt", null, pp); const L = [...s.text].length; qt.style.fontSize = px(L < 70 ? 50 : L < 140 ? 40 : 32);
     const spans = [...s.text].map((ch) => el("span", null, esc(ch), qt));
     spans.forEach((sp, k) => tl.set(sp, { opacity: 1 }, s.at + (k / L) * s.typeDur));
-    if (s.by) { const by = el("div", "by", "— " + esc(s.by), pp); tl.to(by, { opacity: 1, duration: 0.3 }, s.at + s.typeDur); }
+    if (s.by) { const by = el("div", "by", "— " + esc(s.by), pp); tl.to(by, { opacity: 1, duration: 0.3 }, s.at - s.t0 > 2.0 ? s.t0 + 0.6 : s.at + s.typeDur); }
+    // radio: câu này đọc bằng GIỌNG TRÍCH lọc radio -> sóng âm + nhãn "giọng đọc minh hoạ" (không phải băng ghi âm thật)
+    if (s.radio) { el("div", "vt", "GIỌNG ĐỌC MINH HỌA", pp); const wv = el("div", "qwave", null, pp), bars = [];
+      for (let k = 0; k < 18; k++) bars.push(el("i", null, null, wv));
+      const a = s.voiceAt ?? s.at - 0.2, z = Math.min(s.t1, s.voiceEnd ?? s.at + s.typeDur / 0.75);
+      for (let t = a; t < z; t += 0.1) bars.forEach((b) => tl.to(b, { scaleY: 0.15 + rnd() * 0.85, duration: 0.1, ease: "none" }, t));
+      tl.to(bars, { scaleY: 0.12, duration: 0.2 }, z); }
     tl.fromTo(pp, { opacity: 0, y: 80, rotation: 1.5 }, { opacity: 1, y: 0, rotation: -1, duration: 0.45, ease: "power3.out", immediateRender: false }, s.t0);
     tl.to(pp, { scale: 1.03, duration: Math.max(0.2, s.t1 - s.t0 - 0.45), ease: "none" }, s.t0 + 0.45);
     common(s, d);
@@ -400,6 +422,178 @@
       draw(ln, c.at, 0.25);
       const co = el("div", "co", esc(c.text), d); Object.assign(co.style, right ? { left: px(lx + 6), top: px(y - 22) } : { right: px(W - lx + 6), top: px(y - 22) });
       tl.to(co, { opacity: 1, duration: 0.2 }, c.at + 0.2); });
+    common(s, d);
+  };
+
+  /* ================= cảnh riêng của theme noir (Mafia Ý) ================= */
+  let UID = 0;
+
+  /* ---------- seismo: băng địa chấn cuộn dưới kim; vụ nổ thành cú vọt đúng hitAt ----------
+     {label, read, hit, hitAt}. sfx: kim cào giấy suốt cảnh; hitAt -> boom lớn */
+  B.seismo = (s, d) => {
+    bg(s, d, 0.85);
+    const box = el("div", "seis", null, d);
+    if (s.label) el("div", "lb", esc(s.label), box);
+    if (s.read) el("div", "rd", esc(s.read), box);
+    const NX = 1400, v = 230, dur = s.t1 - s.t0 + 0.5, hitX = NX + v * (s.hitAt - s.t0), L = NX + v * dur + 60, cy = 320;
+    let dd = `M0 ${cy}`;
+    for (let x = 4; x <= L; x += 4) {
+      const r = x - hitX; let a = 2.5 + rnd() * 3;
+      if (r > -30 && r < 0) a = 6 + (30 + r) * 0.6;
+      if (r >= 0) a = 270 * Math.exp(-r / 260) + 4;
+      dd += ` L${x} ${(cy + (rnd() * 2 - 1) * a * (r >= 0 ? 0.6 + 0.4 * Math.abs(Math.sin(r / 9)) : 1)).toFixed(1)}`;
+    }
+    const svg = sv("svg", { width: W, height: 640, style: "position:absolute;left:0;top:0;overflow:hidden" }, box), id = "sc" + (++UID);
+    sv("rect", { x: 0, y: 0, width: NX, height: 640 }, sv("clipPath", { id }, sv("defs", {}, svg)));
+    const g = sv("g", {}, sv("g", { "clip-path": `url(#${id})` }, svg));
+    sv("path", { d: dd, stroke: "#1a1412", "stroke-width": 2.4, fill: "none", "stroke-linejoin": "round" }, g);
+    sv("line", { x1: NX, y1: 40, x2: NX, y2: 600, stroke: "rgba(90,29,22,.5)", "stroke-width": 2 }, svg);
+    const pen = sv("circle", { cx: NX, cy, r: 9, fill: "var(--red)" }, svg);
+    tl.fromTo(g, { x: 0 }, { x: -v * dur, duration: dur, ease: "none", immediateRender: false }, s.t0);
+    for (let k = 0; k < 14; k++) tl.set(pen, { attr: { cy: cy + (rnd() * 2 - 1) * 260 * Math.exp(-k / 5) } }, s.hitAt + k * 0.05);
+    tl.set(pen, { attr: { cy } }, s.hitAt + 0.75);
+    if (s.hit) { const h = el("div", "hit", esc(s.hit), box); tl.fromTo(h, { opacity: 0, scale: 1.3 }, { opacity: 1, scale: 1, duration: 0.25, ease: "power4.in", immediateRender: false }, s.hitAt + 0.35); }
+    flash(s.hitAt, 0.35); tl.to("#stage", { x: 14, duration: 0.03, yoyo: true, repeat: 9 }, s.hitAt);
+    tl.fromTo(box, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.4, immediateRender: false }, s.t0);
+    common(s, d);
+  };
+
+  /* ---------- saint: thẻ hình thánh bốc cháy từ đáy lên (lời thề nhập hội) ----------
+     {img, burnAt, burnDur, burnTo (% bán kính cháy, mặc định 135 = cháy hết), kin}. sfx: burnAt-0.5 quẹt diêm; burnAt..+burnDur lửa lách tách */
+  B.saint = (s, d) => {
+    bg(s, d, 0.85);
+    const glow = el("div", "glowfire", null, d);
+    const c = el("div", "saint", null, d), im = el("img", toneCls(s.tone || "sepia"), null, c); im.src = IM(s.img).src; if (s.pos) im.style.objectPosition = s.pos;
+    if (!document.getElementById("burnwarp")) {   // mép cháy răng cưa: bẻ cong vòng lửa bằng nhiễu (mặt nạ vẫn tròn nhưng bị vòng lửa che)
+      const svg = sv("svg", { width: 0, height: 0, style: "position:absolute" }, ROOT), f = sv("filter", { id: "burnwarp" }, svg);
+      sv("feTurbulence", { type: "fractalNoise", baseFrequency: ".02", numOctaves: 3, seed: 11 }, f); sv("feDisplacementMap", { in: "SourceGraphic", scale: 60 }, f); }
+    el("div", "fr", null, c); el("div", "burn", null, c).style.filter = "url(#burnwarp)";
+    tl.fromTo(c, { opacity: 0, y: 60, rotation: -3 }, { opacity: 1, y: 0, rotation: -1, duration: 0.6, ease: "power3.out", immediateRender: false }, s.t0);
+    tl.to(c, { scale: 1.05, duration: Math.max(0.3, s.t1 - s.t0), ease: "none" }, s.t0 + 0.6);
+    tl.fromTo(c, { "--b": "0%" }, { "--b": (s.burnTo ?? 135) + "%", duration: s.burnDur, ease: "power1.in", immediateRender: false }, s.burnAt);
+    tl.fromTo(glow, { opacity: 0 }, { opacity: 1, duration: 0.6, immediateRender: false }, s.burnAt - 0.2);
+    for (let k = 0; k < Math.round(s.burnDur * 10); k++) tl.set(glow, { opacity: 0.7 + rnd() * 0.3 }, s.burnAt + 0.4 + k * 0.1);
+    tl.to(glow, { opacity: 0, duration: 0.8 }, s.burnAt + s.burnDur);
+    for (let k = 0; k < 46; k++) { const e = el("div", "ember", null, d), f = k / 46, t = s.burnAt + f * s.burnDur * 0.95;
+      Object.assign(e.style, { left: px(W / 2 - 230 + rnd() * 460), top: px(870 - f * 760 + rnd() * 40) });
+      tl.fromTo(e, { opacity: 0, x: 0, y: 0 }, { opacity: 1, duration: 0.1, immediateRender: false }, t);
+      tl.to(e, { x: (rnd() - 0.5) * 160, y: -(160 + rnd() * 260), opacity: 0, duration: 1.2 + rnd() * 0.8, ease: "power1.out" }, t + 0.1); }
+    if (s.kin) kinetic(s.kin, d, s.align);
+    common(s, d);
+  };
+
+  /* ---------- paper: trang nhất báo MÔ PHỎNG xoáy vào (kiểu phim cũ) ----------
+     {mast, date, ed, head (tiếng Ý), vi (dịch), img}. sfx: whoosh xoáy; t0+0.9 -> thud + giấy */
+  B.paper = (s, d) => {
+    bg(s, d, 0.85);
+    const p = el("div", "npaper", null, d);
+    el("div", "ms", esc(s.mast || "LA CRONACA"), p);
+    el("div", "dl", `<span>${esc(s.date || "")}</span><span>${esc(s.ed || "EDIZIONE STRAORDINARIA")}</span>`, p);
+    const hl = s.head.split("\n"), hd = el("div", "hd", hl.map(esc).join("<br/>"), p);
+    hd.style.fontSize = px(fsz(hl.reduce((a, b) => (a.length > b.length ? a : b)), 118, 1060, 0.62));
+    if (s.vi) el("div", "vi", esc(s.vi), p);
+    const cols = el("div", "cols", null, p); el("div", null, null, cols);
+    if (s.img) { const ph = el("div", "ph", null, cols); ph.style.backgroundImage = `url(${IM(s.img).src})`; }
+    el("div", null, null, cols); el("div", null, null, cols);
+    tl.fromTo(p, { opacity: 0, rotation: -540, scale: 0.08 }, { opacity: 1, rotation: -2, scale: 1, duration: 0.9, ease: "power3.out", immediateRender: false }, s.t0);
+    tl.to(p, { scale: 1.06, rotation: 0, duration: Math.max(0.3, s.t1 - s.t0 - 0.9), ease: "none" }, s.t0 + 0.9);
+    common({ ...s, illus: s.illus ?? "MÔ PHỎNG TRANG BÁO" }, d);
+  };
+
+  /* ---------- pizzini: mẩu giấy đánh máy + mật mã chữ -> số (bảng chữ Ý 21 chữ, cộng 3: A=4 … Z=24) ----------
+     {notes:[{text, at, x, y, rot, typeDur}], cipher:{word, key, at, decodeAt}}. sfx: key theo ký tự; mỗi số -> tick; decode -> thud */
+  const IT = "ABCDEFGHILMNOPQRSTUVZ";
+  B.pizzini = (s, d) => {
+    bg(s, d, 0.82);
+    (s.notes || []).forEach((n) => { const z = el("div", "pz" + (n.text.length < 40 ? " big" : ""), null, d); Object.assign(z.style, { left: px(n.x ?? 700), top: px(n.y ?? 170) });
+      const tx = el("div", "tx", null, z), sp = [...n.text].map((ch) => el("span", null, ch === "\n" ? "<br/>" : esc(ch), tx));
+      tl.fromTo(z, { opacity: 0, y: 40, rotation: (n.rot ?? -2) * 3 }, { opacity: 1, y: 0, rotation: n.rot ?? -2, duration: 0.35, ease: "power3.out", immediateRender: false }, n.at - 0.4);
+      sp.forEach((e, k) => tl.set(e, { opacity: 1 }, n.at + (k / sp.length) * n.typeDur)); });
+    if (s.cipher) { const c = s.cipher, row = el("div", "ciph", null, d);
+      if (c.key) { const kk = el("div", "ciphk", esc(c.key), d); tl.to(kk, { opacity: 1, duration: 0.3 }, c.at - 0.3); }
+      [...c.word].forEach((ch, k) => { const b = el("div", "c", `<div class="n">${IT.indexOf(ch) + 4}</div><div class="l">${esc(ch)}</div>`, row);
+        tl.fromTo(b, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.2, immediateRender: false }, c.at + k * 0.18);
+        tl.to(b.querySelector(".l"), { opacity: 1, duration: 0.2 }, c.decodeAt + k * 0.15); }); }
+    common(s, d);
+  };
+
+  /* ---------- dots: mỗi chấm một người; nhóm đổi màu theo lời ----------
+     {total, title, cols, groups:[{from, n, cls: red|hollow|gold|ghost, label, at}]}. sfx: rào tick khi hiện; group.at -> tone + thud */
+  B.dots = (s, d) => {
+    bg(s, d, 0.88);
+    const N = s.total, cols = s.cols || Math.ceil(Math.sqrt(N * 2.8)), rows = Math.ceil(N / cols);
+    const cell = Math.min(1500 / cols, (s.gh || 500) / rows), r = cell * 0.36, x0 = W / 2 - cols * cell / 2, y0 = s.y0 ?? 230, dots = [];
+    for (let k = 0; k < N; k++) { const e = el("div", "dt", null, d);
+      Object.assign(e.style, { left: px(x0 + (k % cols) * cell + cell / 2 - r), top: px(y0 + Math.floor(k / cols) * cell + cell / 2 - r), width: px(r * 2), height: px(r * 2), opacity: 0 });
+      dots.push(e); tl.set(e, { opacity: 1 }, s.t0 + 0.2 + (k / N) * (s.appearDur ?? 1.2)); }
+    if (s.title) { const t = el("div", "dtt", esc(s.title), d); t.style.fontSize = px(fsz(s.title, 60, 1700, 0.6)); tl.to(t, { opacity: 1, duration: 0.3 }, s.t0 + 0.1); }
+    const leg = el("div", "dleg", null, d); leg.style.top = px(y0 + rows * cell + 34);
+    (s.groups || []).forEach((g) => { const part = dots.slice(g.from || 0, (g.from || 0) + g.n);
+      part.forEach((e, k) => tl.set(e, { attr: { class: "dt " + g.cls } }, g.at + (k / part.length) * 0.8));
+      if (g.label) { const it = el("div", "g", `<i class="dt ${g.cls}" style="position:static"></i>${esc(g.label)}`, leg); tl.to(it, { opacity: 1, duration: 0.3 }, g.at); } });
+    common(s, d);
+  };
+
+  /* ---------- board: bảng điều tra — ảnh polaroid ghim, dây đỏ nối ----------
+     {pins:[{id, img?, label, x, y, w, h, rot, at, note}], links:[{a, b, at}]}. sfx: pin.at -> thud; link.at -> scratch */
+  B.board = (s, d) => {
+    el("div", "cork", null, d);
+    const svg = sv("svg", { class: "layer", viewBox: `0 0 ${W} ${H}`, style: "z-index:3" }, d), P = {};
+    (s.pins || []).forEach((q) => { const w = q.w || 230, h = q.img ? (q.h || 270) : 0, e = el("div", "pol" + (q.note ? " note" : ""), null, d);
+      Object.assign(e.style, { left: px(q.x - w / 2 - 14), top: px(q.y - h / 2 - 14), zIndex: 2, width: q.img ? "auto" : px(w + 28) });
+      if (q.img) { const im = el("img", toneCls(q.tone || "bw"), null, e); im.src = IM(q.img).src; Object.assign(im.style, { width: px(w), height: px(h) }); if (q.pos) im.style.objectPosition = q.pos; }
+      el("div", "pl", esc(q.label || ""), e); el("div", "pin", null, e);
+      P[q.id] = { x: q.x, y: q.y - h / 2 - 2 };
+      const rot = q.rot ?? Math.round((rnd() * 6 - 3) * 10) / 10;
+      tl.fromTo(e, { opacity: 0, scale: 1.25, rotation: rot * 3 }, { opacity: 1, scale: 1, rotation: rot, duration: 0.25, ease: "power3.in", immediateRender: false }, q.at - 0.2); });
+    (s.links || []).forEach((l) => { const a = P[l.a], b = P[l.b]; if (!a || !b) throw new Error("dây nối thiếu ghim " + l.a + "/" + l.b);
+      const p = sv("path", { d: `M${a.x} ${a.y} Q${(a.x + b.x) / 2} ${Math.max(a.y, b.y) + 70} ${b.x} ${b.y}`, class: "bstr" }, svg); draw(p, l.at, 0.45, "power1.inOut"); });
+    common(s, d);
+  };
+
+  /* ---------- memorial: tên khắc trên đá + ánh nến ----------
+     {title, names:[{n, s, at}], fs}. sfx: t0+0.2 -> chuông nhà thờ; name.at -> thud rất nhẹ */
+  B.memorial = (s, d) => {
+    el("div", "marble", null, d);
+    const cdl = el("div", "candle", null, d); cdl.style.left = px(W / 2);
+    for (let k = 0; k < Math.ceil((s.t1 - s.t0) * 8); k++) tl.set(cdl, { opacity: 0.7 + rnd() * 0.3 }, s.t0 + k / 8);
+    if (s.title) { const t = el("div", "mtt", esc(s.title), d); tl.to(t, { opacity: 1, duration: 0.6 }, s.t0 + 0.2); }
+    const n = s.names.length, cols = n > 6 ? 2 : 1, per = Math.ceil(n / cols), fs = s.fs || (n > 6 ? 48 : 60), gap = fs * (s.names.some((q) => q.s) ? 1.95 : 1.45);
+    const y0 = Math.max(205, 520 - (per * gap) / 2);
+    s.names.forEach((q, k) => { const c = Math.floor(k / per), e = el("div", "mnm", esc(q.n) + (q.s ? `<small>${esc(q.s)}</small>` : ""), d);
+      Object.assign(e.style, { fontSize: px(fs), top: px(y0 + (k % per) * gap) });
+      if (cols === 2) Object.assign(e.style, { left: px(c === 0 ? 120 : 980), right: "auto", width: "820px" });
+      tl.fromTo(e, { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.7, immediateRender: false }, q.at - 0.1); });
+    common(s, d);
+  };
+
+  /* ---------- calendar: lịch xé từ ngày `from`, xé `days` trang, dừng đúng endAt ----------
+     {from:[d, m, y], days, endAt, label}. sfx: mỗi trang -> tick giấy; nhịp tim dồn; endAt -> boom */
+  const MON = ["GENNAIO", "FEBBRAIO", "MARZO", "APRILE", "MAGGIO", "GIUGNO", "LUGLIO", "AGOSTO", "SETTEMBRE", "OTTOBRE", "NOVEMBRE", "DICEMBRE"];
+  const MDAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  const addDays = ([dd, mm, yy], k) => { dd += k; while (dd > MDAYS[mm - 1] + (mm === 2 && yy % 4 === 0 ? 1 : 0)) { dd -= MDAYS[mm - 1] + (mm === 2 && yy % 4 === 0 ? 1 : 0); mm++; if (mm > 12) { mm = 1; yy++; } } return [dd, mm, yy]; };
+  B.calendar = (s, d) => {
+    bg(s, d, 0.85);
+    const cal = el("div", "cal", null, d), N = s.days, a = s.t0 + 0.7, span = s.endAt - a, pages = [];
+    for (let k = N; k >= 0; k--) { const [dd, mm, yy] = addDays(s.from, k), pg = el("div", "pg", `<div class="mo">${MON[mm - 1]}</div><div class="dd">${dd}</div><div class="yy">${yy}</div>`, cal); pages[k] = pg; }
+    tl.fromTo(cal, { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out", immediateRender: false }, s.t0);
+    const cnt = el("div", "calc", `${esc(s.label || "NGÀY")} <b>0</b>`, d), b = cnt.querySelector("b");
+    tl.to(cnt, { opacity: 1, duration: 0.3 }, a - 0.2);
+    for (let k = 0; k < N; k++) { const t = a + span * (0.5 - 0.5 * Math.cos(Math.PI * (k + 1) / N)) - 0.3;
+      tl.to(pages[k], { rotationX: -110, y: -120, opacity: 0, duration: 0.3, ease: "power2.in" }, t);
+      tl.set(b, { textContent: String(k + 1) }, t + 0.15); }
+    tl.fromTo(pages[N], { boxShadow: "0 40px 100px rgba(0,0,0,.8)" }, { boxShadow: "0 0 0 10px #c8102e, 0 40px 100px rgba(0,0,0,.8)", duration: 0.2, immediateRender: false }, s.endAt);
+    tl.to("#stage", { x: 10, duration: 0.03, yoyo: true, repeat: 5 }, s.endAt);
+    common(s, d);
+  };
+
+  /* ---------- sticker: tờ dán kiểu cáo phó đập lên tường ----------
+     {items:[{it, vi, at, x, y, rot, sm}]}. sfx: item.at -> slap */
+  B.sticker = (s, d) => {
+    bg(s, d, s.veil ?? 0.55);
+    s.items.forEach((q) => { const w = q.sm ? 420 : 760, e = el("div", "stk" + (q.sm ? " sm" : ""), `<div class="it">${esc(q.it).replace(/\n/g, "<br/>")}</div>${q.vi ? `<div class="vi">${esc(q.vi)}</div>` : ""}`, d);
+      Object.assign(e.style, { left: px((q.x ?? W / 2) - w / 2), top: px(q.y ?? 300) });
+      tl.fromTo(e, { opacity: 0, scale: 1.35, rotation: (q.rot ?? -2) * 2 }, { opacity: 1, scale: 1, rotation: q.rot ?? -2, duration: 0.16, ease: "power4.in", immediateRender: false }, q.at - 0.16); });
     common(s, d);
   };
 

@@ -1,0 +1,708 @@
+{
+ "title": "MAFIA Ý: Lời Thề Im Lặng 150 Năm — Và Những Người Dám Phá Vỡ Nó",
+ "accent": "#c8102e",
+ "theme": "noir",
+ "master": true,
+ "acc": [
+  "mafia",
+  "cosa nostra",
+  "omertà",
+  "corleone",
+  "capaci",
+  "falcone",
+  "borsellino",
+  "riina",
+  "provenzano",
+  "buscetta",
+  "pizzo",
+  "pizzini",
+  "'ndrangheta",
+  "camorra",
+  "addiopizzo"
+ ],
+ "say": {
+  "Borsellino": "Boóc xe li nô",
+  "Riina": "Ri i na",
+  "Totò": "Tô tô",
+  "Capaci": "Ca pa chi",
+  "Ciaculli": "Cha cu li",
+  "Cinisi": "Chi ni xi",
+  "Chinnici": "Ki ni chi",
+  "Ucciardone": "U chác đô nê",
+  "Uffizi": "U phít xi",
+  "Badalamenti": "Ba đa la men ti",
+  "Pisciotta": "Pi sốt ta",
+  "Leggio": "Lết giô",
+  "Baldassare": "Ban đa xa rê",
+  "Castellammarese": "Ca xten la ma rê dê",
+  "Rizzotto": "Rít xốt tô",
+  "Ciancimino": "Chan chi mi nô",
+  "Cancemi": "Can chê mi",
+  "Ciotti": "Chốt ti",
+  "Gangi": "Gan gi",
+  "pizzini": "pít xi ni",
+  "Mussolini": "Mút xô li ni",
+  "Cesare": "Chê da rê",
+  "Bontade": "Bôn ta đê",
+  "Schifani": "Xki pha ni",
+  "Dicillo": "Đi chi lô",
+  "Peppino": "Pếp pi nô",
+  "Dewey": "Điu i",
+  "Maggio": "Ma giô",
+  "Matteo": "Mát tê ô",
+  "=Di": "Đi",
+  "mafiusu": "ma phi u xu",
+  "mafiusa": "ma phi u da",
+  "mafiusi": "ma phi u xi",
+  "Gaetano": "Ga ê ta nô",
+  "Calò": "Ca lô"
+ },
+ "imgs": {
+  "capaci_svincolo": "File:Svincolo Capaci.jpg",
+  "falcone": "File:Giovanni Falcone (cropped).jpg",
+  "escort_car": "File:Resti dell'automobile della scorta di Giovanni Falcone (2).jpg",
+  "strage92": "File:Strage di capaci.jpg",
+  "riina": "File:Totò Riina il capo dei capi sorride.jpg",
+  "capaci_stele": "File:Capaci (Palermo) Monumento a Falcone, alla moglie e alla scorta - panoramio.jpg",
+  "buscetta": "File:Tommaso Buscetta 1.jpg",
+  "duisburg": "File:Duisburg Hauptbahnhof Panorama.jpg",
+  "palermo1890": "File:Josef Püttner - Ansicht der Bucht von Palermo mit dem Monte Pellegrino (1870).jpg",
+  "falcone_borsellino": "File:Giovanni Falcone e Paolo Borsellino.jpg",
+  "fearnley_view": "File:Thomas Fearnley - View of Palermo - NG.M.01627 - National Museum of Art, Architecture and Design.jpg",
+  "penny1836": "File:Penny Magazine 1836 361 The City of Palermo.jpg",
+  "conca1903": "File:Palermo (NBY 444054).jpg",
+  "palermo1890b": "File:Interguglielmi, Eugenio (1850-1911) - n. 0093 - Palermo - Villa Trabia - Fossa e ponte, RP-F-F16881.jpg",
+  "mafia19c": "File:Mafia (Cosa nostra) in Sicily, late 19th century.jpg",
+  "cutrera": "File:SicilianMafia1900Cutrera.jpg",
+  "conca_map": "File:Palermo, la Conca d'Oro e dintorni. Disegnata e incisa nell'Uff. Cartografico - del T. C. I., Capo cartografo P. Corbellini - btv1b531212688.jpg",
+  "maxi1901": "File:Sicilian mafia 1901 maxi trial.jpg",
+  "corleone": "File:Corleone, Palermo, Sicily, Italy - panoramio (1).jpg",
+  "santino": "File:Santino santa Petronilla.jpg",
+  "cascioferro": "File:Vito Cascioferro.jpg",
+  "blackhand_poster": "File:Black Hand Wanted Poster.jpg",
+  "mulberry": "File:Mulberry Street NYC c1900 LOC 3g04637u edit.jpg",
+  "ellis_family": "File:Italian family in the baggage room, Ellis Island, 1905.jpg",
+  "caruso": "File:Enrico Caruso tenor.jpg",
+  "petrosino": "File:Joe petrosino.jpg",
+  "petrosino_big": "File:Detective Lt. Joseph Petrosiino( left) , Inspector Carey and Inspector McCafferty escorting Mafia hitman Petto the Ox (Tomasso Petto, second from left) LCCN2007686607.jpg",
+  "roosevelt": "File:Theodore Roosevelt when he was a New York police commissioner LCCN2013650911.jpg",
+  "piazza_marina1885": "File:La piazza Marina, a Palermo.jpg",
+  "petrosino_funeral": "File:Joe-petrosino-funerali.jpg",
+  "morello": "File:Giuseppe Morello 1902.jpg",
+  "petrosino_plaque": "File:Joe-petrosino GiardinoGaribaldi fiocco.jpg",
+  "mussolini_siracusa": "File:Mussolini siracusa.PNG",
+  "mussolini1924": "File:Benito Mussolini Portrait 1924 (3x4 cropped).jpg",
+  "gangi_panorama": "File:Panorama Gangi.jpg",
+  "slogan_gangi": "File:Slogan faciste, Gangi - Nessuno pensa.jpg",
+  "gangi2": "File:Gangi 18 10 2020 09.jpg",
+  "tank1943": "File:Local children crowd aboard a Sherman Mk III tank of the County of London Yeomanry in the village of Belpasso near Catania in Sicily, August 1943. TR1244.jpg",
+  "mori": "File:Cesare Mori.jpg",
+  "provenzano": "File:Bernardo Provenzano.jpg",
+  "troops1943": "File:Troops from 51st Highland Division unloading stores from tank landing craft on the opening day of the Allied invasion of Sicily, 10 July 1943. A17916.jpg",
+  "paratroops": "File:US paratroops bound for Sicily.jpg",
+  "luciano_mug": "File:Lucky Luciano mugshot 1931 (cropped).jpg",
+  "concert1943": "File:Musicians preparing for concert at Palermo symphony orchestra for Allied soldiers, September 1943 (24689567040).jpg",
+  "genovese": "File:Vito Genovese NYWTS (cropped).jpg",
+  "giuliano_poster": "File:Taglia Salvatore Giuliano Rosario Avila.jpg",
+  "giuliano_pisciotta": "File:Salvatore Giuliano e Pisciotta.jpg",
+  "portella": "File:Portella della Ginestra 01.jpg",
+  "lansky": "File:Meyer Lansky NYWTS 1.jpg",
+  "lucky": "File:LuckyLucianoSmaller (hq).jpeg",
+  "prohibition": "File:New York City Deputy Police Commissioner John A. Leach, right, watching agents pour liquor into sewer following a raid during the height of prohibition LCCN99405169.jpg",
+  "nydn1930": "File:NYDN August 1930.png",
+  "masseria": "File:Giuseppe „Joe“ Masseria.jpg",
+  "maranzano": "File:Salvatore Maranzano (cropped).jpg",
+  "coney": "File:Steeplechase Park at night, Coney Island, N. Y.jpg",
+  "joe_boss": "File:And That Was the End of Joe the Boss (Daily News, 1931).png",
+  "inspector_door": "File:AT INSPECTOR'S DOOR (Daily News, 1931).png",
+  "commission_chart": "File:CommissionChart1963.jpg",
+  "murderinc": "File:Louis Buchalter sentencing.jpg",
+  "schultz": "File:Dutch Schultz Wanted Poster.jpg",
+  "dewey": "File:Thomas E. Dewey press conference December 9, 1939 (cropped1).jpg",
+  "lucky_1936": "File:Charles Luciano.jpg",
+  "luciano_rome": "File:Charles Lucky Luciano (Excelsior Hotel, Rome).jpg",
+  "hoover": "File:Hoover-JEdgar-LOC.jpg",
+  "hoover2": "File:J. Edgar Hoover cph.3b10753.jpg",
+  "valachi": "File:Joseph Valachi of the Genovese crime family, testifying about organized crime and the Mafia with Mafia organizational charts hanging in the room.jpg",
+  "valachi2": "File:Mafioso Joseph Valachi of the Genovese crime family, testifying about organized crime and the Mafia with a chart of mafia organizations in the background.jpg",
+  "genovese_chart": "File:Genovese Crime Family.jpg",
+  "rfk": "File:Attorney General Robert Kennedy testifying before a Senate subcommittee hearing on crime.jpg",
+  "conca2012": "File:La Conca dOro en 2012 (Sicile) (7073734849).jpg",
+  "lima": "File:Salvo Lima 2.png",
+  "ciaculli": "File:Ciaculli e Monte Grifone.jpg",
+  "ambrosiano100": "File:Banco Ambrosiano 100 lire.jpg",
+  "calvi": "File:Roberto Calvi.jpg",
+  "blackfriars": "File:Blackfriars Bridge 2012-09-20 18-36-05.jpg",
+  "corleone2": "File:Corleone, Palermo, Sicily, Italy - panoramio (2).jpg",
+  "leggio": "File:L'arresto nel 1964 di Luciano Liggio.jpg",
+  "rizzotto": "File:Placido Rizzotto, militare.jpg",
+  "navarra_funeral": "File:Funerale degli uomini del boss Michele Navarra.jpg",
+  "riina_old": "File:Salvatore Riina.jpg",
+  "dallachiesa_memorial": "File:Memoriale Generale Carlo Alberto dalla Chiesa ed Emanuela Setti Carraro.jpg",
+  "borsellino": "File:Paolo Borsellino.jpg",
+  "chinnici": "File:Chinnici.jpg",
+  "caponnetto_fb": "File:Caponnetto Falcone Borsellino.jpg",
+  "bunker1986": "File:MaxiprocessoPalermoBunkr.jpg",
+  "maxiprocesso": "File:MaxiprocessoPalermo.jpg",
+  "via_damelio": "File:Via d'amelio.jpg",
+  "borsellino_tree": "File:Paolo Borsellino tree.jpg",
+  "riina_cctv": "File:Surveillance footage of Toto Riina car.jpg",
+  "uffizi_mark": "File:Mark in the Uffizi from the via dei Georgofili bombing (71660).jpg",
+  "georgofili_memorial": "File:Via dei georgofili, memoriale alla strage del 1993, 2008, 01.jpg",
+  "pizzino_real": "File:Pizzino Provenzanos.jpg",
+  "san_luca": "File:San Luca (Reggio Calabria) - Italy - 10 May 2009.jpg",
+  "ndr_struct": "File:Struttura ndrangheta.jpg",
+  "gioia_tauro": "File:View of Port of Gioia Tauro from Monte Sant'Elia (Palmi) - Province of Reggio Calabria, Italy - 10 April 2016.jpg",
+  "camorra_trial": "File:Camorra Trial, Viterbo LCCN2014688985.jpg",
+  "scampia": "File:Vele di Scampia.jpg",
+  "saviano": "File:Roberto Saviano.jpg",
+  "anti_camorra": "File:Anti-Camorra graffiti, Naples 01.jpg",
+  "cinisi": "File:Cinisi-bjs2007-01.jpg",
+  "radio_aut": "File:Salvo Vitale a Radio Aut.jpg",
+  "badalamenti_house": "File:Gaetano Badalamenti's house.JPG",
+  "cento_passi": "File:Cento passi a Cinisi.jpg",
+  "felicia_house": "File:Casa Memoria Felicia e Peppino Impastato.jpg",
+  "pizzo_free": "File:Emporio pizzo free.jpg",
+  "libera_flag": "File:Bandiera Libera viola.jpg",
+  "libera_terra": "File:Dalle terre liberate dalla mafia.JPG",
+  "airport": "File:Attacco pista aeroporto \"Falcone e Borsellino\" - Flickr - Rino Porrovecchio.jpg"
+ },
+ "geo": {
+  "sicily": {
+   "countries": [
+    "Italy"
+   ],
+   "context": [
+    "Malta",
+    "Tunisia"
+   ],
+   "labels": {
+    "Italy": ""
+   },
+   "bbox": [
+    12.3,
+    36.6,
+    15.7,
+    38.35
+   ],
+   "box": [
+    200,
+    150,
+    1720,
+    900
+   ],
+   "pins": [
+    {
+     "name": "Palermo",
+     "lon": 13.36,
+     "lat": 38.12,
+     "label": "PALERMO"
+    },
+    {
+     "name": "Corleone",
+     "lon": 13.3,
+     "lat": 37.81,
+     "label": "CORLEONE"
+    },
+    {
+     "name": "Capaci",
+     "lon": 13.24,
+     "lat": 38.17,
+     "label": "CAPACI"
+    },
+    {
+     "name": "Cinisi",
+     "lon": 13.1,
+     "lat": 38.16,
+     "label": "CINISI"
+    },
+    {
+     "name": "Villalba",
+     "lon": 13.84,
+     "lat": 37.65,
+     "label": "VILLALBA"
+    },
+    {
+     "name": "Gangi",
+     "lon": 14.21,
+     "lat": 37.8,
+     "label": "GANGI"
+    },
+    {
+     "name": "Piana dei Greci",
+     "lon": 13.28,
+     "lat": 37.99,
+     "label": "PIANA DEI GRECI"
+    },
+    {
+     "name": "Portella della Ginestra",
+     "lon": 13.25,
+     "lat": 37.95,
+     "label": "PORTELLA DELLA GINESTRA"
+    },
+    {
+     "name": "Ciaculli",
+     "lon": 13.42,
+     "lat": 38.08,
+     "label": "CIACULLI"
+    },
+    {
+     "name": "Messina",
+     "lon": 15.55,
+     "lat": 38.19,
+     "label": "MESSINA"
+    },
+    {
+     "name": "Catania",
+     "lon": 15.09,
+     "lat": 37.5,
+     "label": "CATANIA"
+    },
+    {
+     "name": "Trapani",
+     "lon": 12.51,
+     "lat": 38.02,
+     "label": "TRAPANI"
+    },
+    {
+     "name": "Castellammare",
+     "lon": 12.88,
+     "lat": 38.03,
+     "label": "CASTELLAMMARE"
+    },
+    {
+     "name": "Licata",
+     "lon": 13.94,
+     "lat": 37.1,
+     "label": "LICATA"
+    },
+    {
+     "name": "Gela",
+     "lon": 14.25,
+     "lat": 37.07,
+     "label": "GELA"
+    }
+   ]
+  },
+  "italy": {
+   "countries": [
+    "Italy"
+   ],
+   "context": [
+    "France",
+    "Switzerland",
+    "Austria",
+    "Slovenia",
+    "Croatia",
+    "Tunisia",
+    "Malta",
+    "San Marino",
+    "Bosnia and Herz.",
+    "Algeria"
+   ],
+   "labels": {
+    "Italy": "NƯỚC Ý"
+   },
+   "bbox": [
+    6.6,
+    36.4,
+    18.6,
+    47.1
+   ],
+   "box": [
+    200,
+    150,
+    1720,
+    900
+   ],
+   "pins": [
+    {
+     "name": "Palermo",
+     "lon": 13.36,
+     "lat": 38.12,
+     "label": "PALERMO"
+    },
+    {
+     "name": "Corleone",
+     "lon": 13.3,
+     "lat": 37.81,
+     "label": "CORLEONE"
+    },
+    {
+     "name": "Rome",
+     "lon": 12.5,
+     "lat": 41.9,
+     "label": "ROME"
+    },
+    {
+     "name": "Milan",
+     "lon": 9.19,
+     "lat": 45.46,
+     "label": "MILAN"
+    },
+    {
+     "name": "Florence",
+     "lon": 11.26,
+     "lat": 43.77,
+     "label": "FLORENCE"
+    },
+    {
+     "name": "Naples",
+     "lon": 14.27,
+     "lat": 40.85,
+     "label": "NAPLES"
+    },
+    {
+     "name": "San Luca",
+     "lon": 16.07,
+     "lat": 38.15,
+     "label": "SAN LUCA"
+    },
+    {
+     "name": "Gioia Tauro",
+     "lon": 15.9,
+     "lat": 38.42,
+     "label": "GIOIA TAURO"
+    },
+    {
+     "name": "Reggio Calabria",
+     "lon": 15.65,
+     "lat": 38.11,
+     "label": "REGGIO CALABRIA"
+    }
+   ]
+  },
+  "atlantic": {
+   "countries": [
+    "United States of America",
+    "Italy"
+   ],
+   "context": [
+    "Canada",
+    "Mexico",
+    "France",
+    "Spain",
+    "Portugal",
+    "United Kingdom",
+    "Morocco",
+    "Algeria",
+    "Tunisia",
+    "Cuba",
+    "Germany",
+    "Switzerland",
+    "Ireland"
+   ],
+   "labels": {
+    "United States of America": "MỸ",
+    "Italy": "Ý"
+   },
+   "bbox": [
+    -82.0,
+    24.0,
+    22.0,
+    52.0
+   ],
+   "box": [
+    200,
+    150,
+    1720,
+    900
+   ],
+   "pins": [
+    {
+     "name": "New York",
+     "lon": -74.0,
+     "lat": 40.71,
+     "label": "NEW YORK"
+    },
+    {
+     "name": "Palermo",
+     "lon": 13.36,
+     "lat": 38.12,
+     "label": "PALERMO"
+    },
+    {
+     "name": "Marseille",
+     "lon": 5.37,
+     "lat": 43.3,
+     "label": "MARSEILLE"
+    },
+    {
+     "name": "Naples",
+     "lon": 14.27,
+     "lat": 40.85,
+     "label": "NAPLES"
+    },
+    {
+     "name": "London",
+     "lon": -0.1,
+     "lat": 51.51,
+     "label": "LONDON"
+    }
+   ]
+  },
+  "europe": {
+   "countries": [
+    "Italy",
+    "Germany"
+   ],
+   "context": [
+    "France",
+    "Switzerland",
+    "Austria",
+    "Belgium",
+    "Netherlands",
+    "Luxembourg",
+    "Czechia",
+    "Poland",
+    "Denmark",
+    "Slovenia",
+    "Croatia",
+    "Hungary",
+    "Slovakia",
+    "Tunisia"
+   ],
+   "labels": {
+    "Italy": "Ý",
+    "Germany": "ĐỨC"
+   },
+   "bbox": [
+    3.0,
+    37.5,
+    19.0,
+    54.5
+   ],
+   "box": [
+    200,
+    150,
+    1720,
+    900
+   ],
+   "pins": [
+    {
+     "name": "San Luca",
+     "lon": 16.07,
+     "lat": 38.15,
+     "label": "SAN LUCA"
+    },
+    {
+     "name": "Duisburg",
+     "lon": 6.76,
+     "lat": 51.43,
+     "label": "DUISBURG"
+    },
+    {
+     "name": "Palermo",
+     "lon": 13.36,
+     "lat": 38.12,
+     "label": "PALERMO"
+    },
+    {
+     "name": "Amsterdam",
+     "lon": 4.9,
+     "lat": 52.37,
+     "label": "HÀ LAN"
+    },
+    {
+     "name": "Brussels",
+     "lon": 4.35,
+     "lat": 50.85,
+     "label": "BỈ"
+    },
+    {
+     "name": "Naples",
+     "lon": 14.27,
+     "lat": 40.85,
+     "label": "NAPLES"
+    }
+   ]
+  },
+  "world": {
+   "countries": [
+    "Italy"
+   ],
+   "context": [
+    "United States of America",
+    "Canada",
+    "Mexico",
+    "Brazil",
+    "Argentina",
+    "Colombia",
+    "Venezuela",
+    "Peru",
+    "Bolivia",
+    "Chile",
+    "France",
+    "Spain",
+    "Germany",
+    "United Kingdom",
+    "Australia",
+    "Russia",
+    "China",
+    "India",
+    "Algeria",
+    "Libya",
+    "Egypt",
+    "Nigeria",
+    "South Africa",
+    "Turkey",
+    "Iran",
+    "Kazakhstan"
+   ],
+   "labels": {
+    "Italy": ""
+   },
+   "bbox": [
+    -125.0,
+    -45.0,
+    155.0,
+    62.0
+   ],
+   "box": [
+    200,
+    150,
+    1720,
+    900
+   ],
+   "pins": [
+    {
+     "name": "Palermo",
+     "lon": 13.36,
+     "lat": 38.12,
+     "label": "PALERMO"
+    },
+    {
+     "name": "New York",
+     "lon": -74.0,
+     "lat": 40.71,
+     "label": "NEW YORK"
+    },
+    {
+     "name": "Sao Paulo",
+     "lon": -46.63,
+     "lat": -23.55,
+     "label": "SÃO PAULO"
+    },
+    {
+     "name": "Toronto",
+     "lon": -79.38,
+     "lat": 43.65,
+     "label": "CANADA"
+    },
+    {
+     "name": "Melbourne",
+     "lon": 144.96,
+     "lat": -37.81,
+     "label": "ÚC"
+    },
+    {
+     "name": "Bogota",
+     "lon": -74.07,
+     "lat": 4.71,
+     "label": "COLOMBIA"
+    },
+    {
+     "name": "Duisburg",
+     "lon": 6.76,
+     "lat": 51.43,
+     "label": "DUISBURG"
+    },
+    {
+     "name": "Amsterdam",
+     "lon": 4.9,
+     "lat": 52.37,
+     "label": "HÀ LAN"
+    },
+    {
+     "name": "Brussels",
+     "lon": 4.35,
+     "lat": 50.85,
+     "label": "BỈ"
+    }
+   ]
+  }
+ },
+ "chapters": [
+  "ch00",
+  "ch01",
+  "ch02",
+  "ch03",
+  "ch04",
+  "ch05",
+  "ch06",
+  "ch07",
+  "ch08",
+  "ch09",
+  "ch10",
+  "ch11",
+  "ch12",
+  "ch13",
+  "ch14",
+  "ch15"
+ ],
+ "youtube": {
+  "titles": [
+   "MAFIA Ý: Lời Thề Im Lặng 150 Năm — Và Những Người Dám Phá Vỡ Nó",
+   "MAFIA Ý: Vụ Nổ Làm Rung Cả Máy Đo Động Đất — Và Sự Sụp Đổ Của Cosa Nostra",
+   "Hồ Sơ Mafia Ý Đầy Đủ: Từ Lời Thề Đốt Hình Thánh Đến Ông Trùm Cuối Cùng"
+  ],
+  "summary": "Mafia Ý (Cosa Nostra) — hồ sơ đầy đủ về thế giới ngầm Sicily, nơi sinh ra những \"Bố Già\" ngoài đời thật ở Corleone. Năm 1992, vụ nổ Capaci mạnh đến mức máy đo động đất ghi nhận được; mục tiêu là thẩm phán Giovanni Falcone. Đêm đó, ông trùm Totò Riina nâng ly sâm panh. Nhưng chính vụ nổ ấy đã phá vỡ thứ giữ Mafia sống sót hơn một trăm năm: sự im lặng (omertà).\n\nGần một giờ: lời thề đốt hình thánh, Joe Petrosino, Lucky Luciano, phe Corleone của Riina, kẻ phản bội Tommaso Buscetta, Đại án Maxi Processo, 57 ngày giữa Capaci và Via D'Amelio, Provenzano, 'Ndrangheta, Camorra — và những người dân thường dám lên tiếng.",
+  "more": [
+   "▶ Xem tiếp — Yakuza: https://youtu.be/uYuCapU-0hw",
+   "▶ Hội Tam Hoàng: https://youtu.be/sv9N1EUsn5Q"
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Sicilian_Mafia",
+   "https://en.wikipedia.org/wiki/Omert%C3%A0",
+   "https://en.wikipedia.org/wiki/Capaci_bombing",
+   "https://en.wikipedia.org/wiki/Giovanni_Falcone",
+   "https://en.wikipedia.org/wiki/Paolo_Borsellino",
+   "https://en.wikipedia.org/wiki/Maxi_Trial",
+   "https://en.wikipedia.org/wiki/Tommaso_Buscetta",
+   "https://en.wikipedia.org/wiki/Salvatore_Riina",
+   "https://en.wikipedia.org/wiki/Bernardo_Provenzano",
+   "https://en.wikipedia.org/wiki/Joseph_Petrosino",
+   "https://en.wikipedia.org/wiki/Lucky_Luciano",
+   "https://en.wikipedia.org/wiki/%27Ndrangheta",
+   "https://en.wikipedia.org/wiki/Camorra",
+   "https://en.wikipedia.org/wiki/Addiopizzo"
+  ],
+  "hashtags": [
+   "MafiaY",
+   "CosaNostra",
+   "HoSoToiPham"
+  ],
+  "tags": [
+   "mafia ý",
+   "mafia sicily",
+   "cosa nostra",
+   "mafia là gì",
+   "mafia ý là gì",
+   "bố già ngoài đời thật",
+   "bố già",
+   "corleone",
+   "omerta",
+   "luật im lặng",
+   "giovanni falcone",
+   "paolo borsellino",
+   "toto riina",
+   "bernardo provenzano",
+   "tommaso buscetta",
+   "lucky luciano",
+   "maxi trial",
+   "capaci 1992",
+   "ndrangheta",
+   "camorra",
+   "thế giới ngầm",
+   "tội phạm có tổ chức",
+   "lịch sử mafia",
+   "hồ sơ tội phạm",
+   "phim tài liệu tội phạm",
+   "into the killer's mind"
+  ],
+  "category": "24",
+  "ch00_title": "Mở đầu: Tiếng nổ ở Capaci",
+  "credit_name_len": 30,
+  "credit_by_len": 22
+ }
+}

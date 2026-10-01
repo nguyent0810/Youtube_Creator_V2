@@ -1,0 +1,34 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800;900&family=Playfair+Display:wght@900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#050404}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;color:#fff}
+.abs{position:absolute}
+.grain{position:absolute;inset:0;opacity:.12;mix-blend-mode:overlay}
+.card{position:absolute;left:250px;top:120px;width:560px;height:860px;padding:24px;background:#efe6cf;border-radius:14px;transform:rotate(-6deg);
+  box-shadow:0 0 120px rgba(255,110,20,.55),0 50px 120px #000;
+  -webkit-mask-image:radial-gradient(circle at 45% 112%,transparent 30%,#000 34%);mask-image:radial-gradient(circle at 45% 112%,transparent 30%,#000 34%)}
+.card img{width:100%;height:100%;object-fit:cover;border-radius:6px;filter:sepia(.6) contrast(1.15)}
+.burn{position:absolute;inset:0;border-radius:14px;background:radial-gradient(circle at 45% 112%,transparent 28%,rgba(255,230,140,1) 29%,rgba(255,110,20,.95) 29%,rgba(70,22,6,.95) 32%,rgba(40,14,4,.4) 37%,transparent 44%)}
+.fire{position:absolute;left:120px;top:640px;width:900px;height:600px;border-radius:50%;filter:blur(70px);background:radial-gradient(closest-side,rgba(255,140,30,.85),rgba(200,40,10,.4),transparent)}
+.brand{position:absolute;font-family:'Playfair Display';font-weight:900;color:#ff2a3d;line-height:.9;white-space:nowrap;
+  text-shadow:0 0 60px rgba(255,20,40,.55),0 14px 40px #000,-5px -5px 0 #000,5px 5px 0 #000}
+.big{position:absolute;font-weight:900;line-height:1;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.tag{position:absolute;font-family:'JetBrains Mono';font-weight:700;letter-spacing:.25em;color:#ffb347;white-space:nowrap}
+</style></head><body>
+<!-- T2: thẻ hình thánh đang cháy (nghi lễ nhập hội) + "OMERTÀ" + "LỜI THỀ MÁU" -->
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<div class="abs" style="inset:0;background:radial-gradient(70% 80% at 28% 60%,#2a1208 0%,#0b0605 60%,#050404 100%)"></div>
+<div class="fire"></div>
+<svg width="0" height="0" style="position:absolute"><filter id="warp"><feTurbulence type="fractalNoise" baseFrequency=".018" numOctaves="3" seed="11"/><feDisplacementMap in="SourceGraphic" scale="70"/></filter></svg>
+<div class="card"><img src="assets/long/mafia/img/santino.jpg"/><div class="burn" style="filter:url(#warp)"></div></div>
+<div class="abs" style="left:300px;top:760px;width:180px;height:260px;border-radius:50%;filter:blur(30px);background:rgba(255,200,80,.85);mix-blend-mode:screen"></div>
+<div class="abs" style="left:470px;top:700px;width:220px;height:320px;border-radius:50%;filter:blur(34px);background:rgba(255,120,30,.8);mix-blend-mode:screen"></div>
+<div class="abs" style="left:640px;top:780px;width:170px;height:240px;border-radius:50%;filter:blur(30px);background:rgba(255,170,60,.8);mix-blend-mode:screen"></div>
+<div class="brand" style="left:930px;top:200px;font-size:210px">OMERTÀ</div>
+<div class="big" style="left:950px;top:520px;font-size:150px;color:#fff">LỜI THỀ</div>
+<div class="big" style="left:950px;top:680px;font-size:150px;color:#ffd23a">BẰNG MÁU</div>
+<div class="tag" style="left:960px;top:880px;font-size:36px">MAFIA Ý · COSA NOSTRA</div>
+<svg class="grain" width="1920" height="1080"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3" seed="4"/></filter><rect width="100%" height="100%" filter="url(#g)"/></svg>
+</div><script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

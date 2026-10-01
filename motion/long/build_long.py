@@ -39,15 +39,20 @@ import hf_geo  # noqa: E402
 import build as BLD  # noqa: E402
 from build import Anchors, resolve, norm  # noqa: E402  (cùng cú pháp mốc với Short S-tier)
 
-BLD.ANCHORS |= {"sumAt", "zeroAt", "titleAt", "hAt", "countAt", "hitAt", "typeAt"}      # mốc riêng của cảnh video dài
+BLD.ANCHORS |= {"sumAt", "zeroAt", "titleAt", "hAt", "countAt", "hitAt", "typeAt", "burnAt", "decodeAt", "endAt", "voiceAt", "voiceEnd"}      # mốc riêng của cảnh video dài
 BLD.ANCHOR_LISTS |= {"flips", "readAt"}
 import sfx_long  # noqa: E402
 
 FF = r"C:\Tools\Youtuber\video-editor\vendor\ffmpeg"
 FFMPEG = FF + r"\ffmpeg.exe"
 VOICE = "Anh Khôi"
+QUOTE_VOICE = "Minh Đức"     # câu {"q": 1}: lời trích nguyên văn/diễn ý, giọng khác + lọc radio
 UA = {"User-Agent": "yt-factory/1.0 (documentary research; contact via channel)"}
 FREE = re.compile(r"public domain|^pd|cc0|no restrictions|^cc by(-sa)? ?\d|^cc-by", re.I)
+# mastering giọng đọc (đã duyệt ở bản thử Mafia): cắt ù, bớt đục 200Hz, sáng 3.2kHz, khử xì, nén nhẹ.
+# Chỉ áp ở bước trộn — mốc chữ vẫn lấy từ voice.wav thô. spec "master": false để tắt (Yakuza đã đăng bản thô).
+VOICE_FX = ("highpass=f=70,equalizer=f=200:t=q:w=1:g=-2,equalizer=f=3200:t=q:w=1.4:g=2.5,deesser=i=0.4,"
+            "acompressor=threshold=-20dB:ratio=3:attack=5:release=120:makeup=2")
 TAIL = 0.9          # giây thở cuối mỗi chương
 _engine = None
 
@@ -56,6 +61,7 @@ def paths(topic):
     return ROOT / "data" / "long" / topic, ROOT / "output" / "long" / topic
 
 
+SAY_EXACT = {}
 SAY = {}   # chữ hiển thị -> cách đọc cho TTS (spec["say"]); phụ đề vẫn giữ chữ gốc
 
 
@@ -63,7 +69,9 @@ def load(topic):
     sd, od = paths(topic)
     spec = json.loads((sd / "spec.json").read_text(encoding="utf-8"))
     SAY.clear()
-    SAY.update({k.lower(): v for k, v in (spec.get("say") or {}).items()})
+    SAY_EXACT.clear()
+    for k, v in (spec.get("say") or {}).items():   # "=Di": khớp ĐÚNG hoa/thường (tránh "di cư" thành "Đi cư")
+        (SAY_EXACT.__setitem__(k[1:], v) if k.startswith("=") else SAY.__setitem__(k.lower(), v))
     chs = [(c, json.loads((sd / f"{c}.json").read_text(encoding="utf-8"))) for c in spec["chapters"] if (sd / f"{c}.json").exists()]
     return spec, chs, od
 
@@ -81,7 +89,7 @@ def spoken(text: str) -> str:
     out = []
     for tok in text.split():
         a, c, z = _core(tok)
-        out.append(a + SAY.get(c.lower(), c) + z)
+        out.append(a + SAY_EXACT.get(c, SAY.get(c.lower(), c)) + z)
     return " ".join(out)
 
 
@@ -93,28 +101,52 @@ def line_pause(x):
 
 
 # ---------------- giọng đọc: cache THEO CÂU (sửa một câu không phải đọc lại cả chương) ----------------
-def tts_line(text: str, cache: Path):
+def _key(text: str, take: int = 0, voice: str = VOICE) -> str:
+    """take 0 giữ đúng hash cũ (cache Yakuza còn dùng được); take k>0 là bản đọc lại khác của cùng câu."""
+    return hashlib.sha1((voice + "|" + text + (f"|t{take}" if take else "")).encode("utf-8")).hexdigest()[:16]
+
+
+def line_voice(x) -> str:
+    return QUOTE_VOICE if isinstance(x, dict) and x.get("q") else VOICE
+
+
+def radio(a, sr):
+    """Lời trích: băng thông điện thoại/radio cũ 300-3400 Hz -> tách hẳn khỏi giọng kể."""
+    from scipy.signal import butter, sosfilt
+    sos = butter(4, [300, 3400], btype="bandpass", fs=sr, output="sos")
+    return (sosfilt(sos, a) * 1.4).astype("float32")
+
+
+def tts_line(text: str, cache: Path, take: int = 0, voice: str = VOICE):
     import soundfile as sf
     global _engine
-    h = hashlib.sha1((VOICE + "|" + text).encode("utf-8")).hexdigest()[:16]
-    p = cache / f"{h}.wav"
+    p = cache / f"{_key(text, take, voice)}.wav"
     if not p.exists():
         from factory import speak as SP
         if _engine is None:
             _engine = SP._load_engine()
-        a = _engine.infer(text, voice=VOICE)
+        a = _engine.infer(text, voice=voice)     # vieneu 3.8.3: "Anh Khôi" là alias của "Thiện Minh" (cùng embedding)
         cache.mkdir(parents=True, exist_ok=True)
         sf.write(str(p), a, SP.SAMPLE_RATE)
     a, sr = sf.read(str(p), dtype="float32")
     return a, sr
 
 
+def _picks(cache: Path) -> dict:
+    f = cache / "picks.json"
+    return json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
+
+
 def speak(ch_lines, od: Path, name: str) -> dict:
     import numpy as np
     import soundfile as sf
+    picks = _picks(od / "tts")       # câu nào đã chấm best-of-N thì dùng bản thắng, chưa chấm thì take 0
     parts, segs, cur, sr0 = [], [], 0.0, None
     for i, x in enumerate(ch_lines):
-        a, sr = tts_line(spoken(line_text(x)), od / "tts")
+        sp, v = spoken(line_text(x)), line_voice(x)
+        a, sr = tts_line(sp, od / "tts", picks.get(_key(sp, 0, v), 0), v)
+        if v != VOICE:
+            a = radio(a, sr)
         sr0 = sr
         d = len(a) / sr
         segs.append({"index": i, "text": line_text(x), "start": round(cur, 3), "end": round(cur + d, 3)})
@@ -126,6 +158,78 @@ def speak(ch_lines, od: Path, name: str) -> dict:
     wav.parent.mkdir(parents=True, exist_ok=True)
     sf.write(str(wav), np.concatenate(parts), sr0)
     return {"duration": round(cur + TAIL, 3), "segments": segs}
+
+
+# ---------------- best-of-N: đọc mỗi câu N lần, Whisper nghe lại, chọn bản khớp chữ nhất ----------------
+# vieneu không tất định: cùng câu mỗi lần đọc một khác, đôi khi đọc sai số ("57" -> "27") hay nuốt chữ.
+#   1) build_long.py <topic> takes [N=3]      (venv vieneu)  -> tts/takes.json
+#   2) stt_takes.py <topic>                   (.venv-video, CUDA) -> tts/transcripts.json
+#   3) build_long.py <topic> pick             (venv vieneu)  -> tts/picks.json, rồi chạy lại `tts`
+def do_takes(topic, n=3, only=None):
+    spec, chs, od = load(topic)
+    cache, rows, t0 = od / "tts", [], time.time()
+    for name, ch in chs:
+        if only and name not in only:
+            continue
+        for x in ch["lines"]:
+            sp, v = spoken(line_text(x)), line_voice(x)
+            files = []
+            for k in range(n):
+                tts_line(sp, cache, k, v)
+                files.append(f"{_key(sp, k, v)}.wav")
+            rows.append({"key": _key(sp, 0, v), "ch": name, "text": sp, "files": files})
+        print(f"{name}: {len(ch['lines'])} câu x{n} ({time.time() - t0:.0f}s)", flush=True)
+    (cache / "takes.json").write_text(json.dumps(rows, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"takes.json: {len(rows)} câu")
+
+
+def _chars(text: str, nz) -> str:
+    """So theo KÝ TỰ, bỏ khoảng trắng/dấu câu: tên Ý Whisper viết dính ("Capachy" ~ "Ca pa chi") chỉ lệch 1-2 ký tự,
+    còn đọc sai số ("hai mươi bảy" thay "năm mươi bảy") vẫn lệch rõ."""
+    return "".join(re.findall(r"[^\W_]+", nz.normalize(text).lower()))
+
+
+def _edit(a, b) -> int:
+    prev = list(range(len(b) + 1))
+    for i, x in enumerate(a, 1):
+        cur = [i]
+        for j, y in enumerate(b, 1):
+            cur.append(min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (x != y)))
+        prev = cur
+    return prev[-1]
+
+
+def do_pick(topic):
+    """Lỗi = khoảng cách sửa theo KÝ TỰ / độ dài (cả hai phía qua cùng bộ chuẩn hoá của vieneu: số -> chữ).
+    Hoà thì chọn bản có độ dài gần trung vị nhất (tránh bản kéo lê / đọc vội)."""
+    import soundfile as sf
+    from vieneu_utils.phonemize_text import PuncNormalizer
+    nz = PuncNormalizer()
+    spec, chs, od = load(topic)
+    cache = od / "tts"
+    rows = json.loads((cache / "takes.json").read_text(encoding="utf-8"))
+    hyp = json.loads((cache / "transcripts.json").read_text(encoding="utf-8"))
+    picks, bad, gain = _picks(cache), [], 0
+    for r in rows:
+        ref = _chars(r["text"], nz)
+        sc = []
+        for k, f in enumerate(r["files"]):
+            if f not in hyp:
+                continue
+            e = _edit(ref, _chars(hyp[f], nz)) / max(1, len(ref))
+            sc.append((k, e, sf.info(str(cache / f)).duration))
+        if not sc:
+            continue
+        med = sorted(d for _, _, d in sc)[len(sc) // 2]
+        k, e, _ = min(sc, key=lambda z: (round(z[1], 3), abs(z[2] - med)))
+        gain += sc[0][1] > e
+        picks[r["key"]] = k
+        if e > 0.08:
+            bad.append((r["ch"], e, r["text"], hyp[r["files"][k]]))
+    (cache / "picks.json").write_text(json.dumps(picks, indent=1), encoding="utf-8")
+    print(f"picks.json: {len(picks)} câu; {gain} câu bản 0 kém hơn bản được chọn")
+    for ch, e, t, h in sorted(bad, key=lambda z: -z[1]):
+        print(f"  ! {ch} {e:.0%}\n    viết: {t}\n    nghe: {h}")
 
 
 def word_lines(t: dict, wav: Path) -> list[dict]:
@@ -252,6 +356,37 @@ def plan(ch: dict, lines: list[dict], dur: float) -> list[dict]:
         if ty == "print" and r.get("side"):
             for k, q in enumerate(r["side"].get("lines") or []):
                 q.setdefault("at", round(t0 + 0.8 + 0.6 * k, 3))
+        if ty == "quote" and r.get("qline") is not None:     # câu đọc giọng trích -> sóng âm chạy đúng lúc giọng vang
+            q = lines[r["qline"]]
+            r.setdefault("voiceAt", q["start"]); r.setdefault("voiceEnd", q["end"]); r["radio"] = True
+        if ty == "seismo":
+            r.setdefault("hitAt", round(t0 + 2.0, 3))
+        if ty == "saint":
+            r.setdefault("burnAt", round(t0 + 1.5, 3))
+            r.setdefault("burnDur", round(max(1.5, min(4.5, t1 - r["burnAt"] - 0.4)), 3))
+        if ty == "pizzini":
+            for k, q in enumerate(r.get("notes") or []):
+                q.setdefault("at", round(t0 + 0.5 + 1.2 * k, 3))
+                q.setdefault("typeDur", round(min(len(q["text"]) * 0.045, 2.6), 3))
+            if r.get("cipher"):
+                r["cipher"].setdefault("at", round(t0 + 0.6, 3))
+                r["cipher"].setdefault("decodeAt", round(r["cipher"]["at"] + 0.3 + 0.18 * len(r["cipher"]["word"]), 3))
+        if ty == "dots":
+            for k, q in enumerate(r.get("groups") or []):
+                q.setdefault("at", round(t0 + 1.8 + 1.2 * k, 3))
+        if ty == "board":
+            for k, q in enumerate(r.get("pins") or []):
+                q.setdefault("at", round(t0 + 0.3 + 0.45 * k, 3))
+            for k, q in enumerate(r.get("links") or []):
+                q.setdefault("at", round(t0 + 0.6 + 0.45 * k, 3))
+        if ty == "memorial":
+            for k, q in enumerate(r["names"]):
+                q.setdefault("at", round(t0 + 0.8 + 0.7 * k, 3))
+        if ty == "calendar":
+            r.setdefault("endAt", round(t1 - 1.0, 3))
+        if ty == "sticker":
+            for k, q in enumerate(r["items"]):
+                q.setdefault("at", round(t0 + 0.4 + 0.7 * k, 3))
         if ty == "file":
             for k, q in enumerate(r.get("rows") or []):
                 q.setdefault("at", round(t0 + 0.9 + 0.5 * k, 3))
@@ -361,7 +496,7 @@ def do_html(topic, only=None):
                 vids.append(f'  <video id="v{k}" class="clip bv {tone}" src="assets/long/{topic}/broll/{vid}.mp4" data-start="{st:.3f}" '
                             f'data-duration="{min(need, d - st):.3f}" data-media-start="{ms:.2f}" muted playsinline data-track-index="1"></video>')
         seed = sum(ord(c) * (i + 1) for i, c in enumerate(topic + name)) % 100000 + 7
-        case = {"topic": topic, "ch": name, "dur": d, "seed": seed, "accent": spec.get("accent", "#e2402d"), "hud": ch.get("hud", {}),
+        case = {"topic": topic, "ch": name, "dur": d, "seed": seed, "accent": spec.get("accent", "#e2402d"), "theme": spec.get("theme"), "hud": ch.get("hud", {}),
                 "acc": spec.get("acc", []) + ch.get("acc", []), "lines": lines, "imgs": imgs, "geo": geo, "scenes": scenes,
                 "prog0": round(acc_t / total, 5), "prog1": round((acc_t + d) / total, 5)}
         (od / name / "data.js").write_text("window.CASE = " + json.dumps(case, ensure_ascii=False) + ";\n", encoding="utf-8")
@@ -370,24 +505,47 @@ def do_html(topic, only=None):
         comp.write_text(HTML.replace("{data}", f"assets/long/{topic}/{name}/data.js").replace("{dur}", f"{d:.3f}")
                         .replace("{title}", spec["title"]).replace("{videos}", "\n".join(vids)), encoding="utf-8")
         sfx_long.build(case, od / name / "sfx.wav")
-        mix_chapter(ch, od / name, d, [(s["t0"], s["t1"]) for s in scenes if s["type"] == "question"])
+        mix_chapter(ch, od / name, d, [(s["t0"], s["t1"]) for s in scenes if s["type"] == "question"], spec.get("master", True),
+                    bgm_items(ch, lines, d))
         print(f"{name}: {len(scenes)} cảnh, {len(vids)} clip, {d:.1f}s -> {comp.name}", flush=True)
         acc_t += d
 
 
-def mix_chapter(ch, cd: Path, dur: float, quiet=()):
+def bgm_items(ch, lines, dur) -> list[dict]:
+    """bgm: một dict (cả chương) hoặc danh sách đoạn {file, at (giây trong file), gain, start, end (mốc lời), fin, fout}."""
+    b = ch.get("bgm") or []
+    A = Anchors(lines)
+    out = []
+    for q in ([b] if isinstance(b, dict) else b):
+        if not q.get("file"):
+            continue
+        st = A(q["start"]) if q.get("start") is not None else 0.0
+        en = A(q["end"]) if q.get("end") is not None else dur
+        out.append({**q, "start": round(st, 3), "end": round(min(en, dur), 3)})
+    return out
+
+
+def mix_chapter(ch, cd: Path, dur: float, quiet=(), master=True, items=None):
     """voice + sfx + nhạc nền (né giọng) -> mix.wav 48k stereo, CHƯA loudnorm (làm một lần cho cả video).
-    Cảnh `question`: nhạc nền gần như tắt (khoảng lặng là cú đấm)."""
-    b = ch.get("bgm") or {}
-    bgm = cd.parent / "bgm" / b["file"] if b.get("file") else None
+    Nhạc nền có thể nhiều đoạn (bgm_items). Cảnh `question`: nhạc nền gần như tắt (khoảng lặng là cú đấm)."""
+    if items is None:
+        b = ch.get("bgm") or {}
+        items = [{**b, "start": 0.0, "end": dur}] if b.get("file") else []
     duck = "".join(f",volume=enable='between(t,{a - 0.1:.2f},{z:.2f})':volume=0.12" for a, z in quiet)
     inputs = ["-i", str(cd / "voice.wav"), "-i", str(cd / "sfx.wav")]
-    fc = "[0:a]aresample=48000,pan=stereo|c0=c0|c1=c0,apad,asplit=3[v][vk][vk2];[1:a]volume=0.42[s0];[s0][vk]sidechaincompress=threshold=0.05:ratio=4:attack=20:release=300[s];"
-    if bgm:
-        inputs += ["-ss", str(b.get("at", 0)), "-i", str(bgm)]
-        g = b.get("gain", 0.16)
-        fc += (f"[2:a]aresample=48000,atrim=0:{dur:.3f},afade=t=in:d=1.5,afade=t=out:st={max(0, dur - 2.0):.3f}:d=2.0,volume={g}{duck}[m0];"
-               "[m0][vk2]sidechaincompress=threshold=0.03:ratio=6:attack=40:release=600[m];"
+    fc = "[0:a]aresample=48000," + (VOICE_FX + "," if master else "") + "pan=stereo|c0=c0|c1=c0,apad," + ("asplit=3[v][vk][vk2];" if items else "asplit=2[v][vk];") + "[1:a]volume=0.42[s0];[s0][vk]sidechaincompress=threshold=0.05:ratio=4:attack=20:release=300[s];"
+    if items:
+        tags = []
+        for k, q in enumerate(items):
+            inputs += ["-ss", str(q.get("at", 0)), "-i", str(cd.parent / "bgm" / q["file"])]
+            L = max(0.5, q["end"] - q["start"])
+            fi, fo = q.get("fin", 1.5), q.get("fout", 2.0)
+            ms = int(q["start"] * 1000)
+            fc += (f"[{k + 2}:a]aresample=48000,aformat=channel_layouts=stereo,atrim=0:{L:.3f},asetpts=PTS-STARTPTS,afade=t=in:d={fi},"
+                   f"afade=t=out:st={max(0, L - fo):.3f}:d={fo},volume={q.get('gain', 0.16)},adelay={ms}|{ms},apad[b{k}];")
+            tags.append(f"[b{k}]")
+        fc += "".join(tags) + f"amix=inputs={len(tags)}:normalize=0:duration=longest,atrim=0:{dur:.3f}{duck}[m0];"
+        fc += ("[m0][vk2]sidechaincompress=threshold=0.03:ratio=6:attack=40:release=600[m];"
                "[v][s][m]amix=inputs=3:weights='1 1 1':normalize=0:duration=first[a]")
     else:
         fc += "[v][s]amix=inputs=2:weights='1 1':normalize=0:duration=first[a]"
@@ -444,5 +602,10 @@ if __name__ == "__main__":
         do_html(topic, only)
     elif cmd == "render":
         do_render(topic, only, draft="--draft" in rest)
+    elif cmd == "takes":
+        nums = [x for x in rest if x.isdigit()]
+        do_takes(topic, int(nums[0]) if nums else 3, [x for x in (only or []) if not x.isdigit()] or None)
+    elif cmd == "pick":
+        do_pick(topic)
     elif cmd == "final":
         do_final(topic)

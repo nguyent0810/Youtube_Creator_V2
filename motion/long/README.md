@@ -17,13 +17,20 @@ python motion/long/research_long.py yakuza "Yakuza" "Yamaguchi-gumi" "?Sugamo Pr
 python motion/long/pexels.py search yakuza "tokyo night rain" ...                      # B-roll ngang
 python motion/long/pexels.py get yakuza <id> <id> ...
 # viết data/long/yakuza/spec.json + ch00.json … chNN.json
-python motion/long/build_long.py yakuza tts            # đọc giọng, cache theo từng câu, in thời lượng từng chương
+python motion/long/build_long.py yakuza takes 3        # (tuỳ chọn) đọc mỗi câu 3 lần -> tts/takes.json
+<.venv-video python> motion/long/stt_takes.py yakuza   # Whisper nghe lại mọi bản -> tts/transcripts.json
+python motion/long/build_long.py yakuza pick           # chọn bản khớp chữ nhất -> tts/picks.json, in câu đáng nghe lại
+python motion/long/build_long.py yakuza tts            # đọc giọng, cache theo từng câu (dùng picks nếu có), in thời lượng từng chương
 python motion/long/build_long.py yakuza html           # ảnh, bản đồ, data.js, composition, sfx, mix từng chương
 python motion/long/build_long.py yakuza render ch03 --draft   # nháp có tiếng: chNN/draft_av.mp4
 python motion/long/build_long.py yakuza render         # bản thật, từng chương
 python motion/long/build_long.py yakuza final          # nối chương + loudnorm -14 LUFS -> final.mp4
 python motion/long/describe.py yakuza                  # mô tả: mốc chương + nguồn + ghi công ảnh/nhạc/video
 ```
+
+Giọng: vieneu 3.8.3, `VOICE = "Anh Khôi"` (3.8.3 đổi tên thành "Thiện Minh", tên cũ là alias, embedding y hệt).
+Bước trộn áp `VOICE_FX` (highpass 70, -2dB@200, +2.5dB@3.2k, de-esser, nén 3:1) lên giọng; spec `"master": false` để tắt
+(Yakuza đặt false vì bản đã đăng dùng giọng thô). Mốc chữ luôn lấy từ voice.wav thô.
 
 ## Spec
 
@@ -50,6 +57,17 @@ Mốc thời gian dùng giống Short:
 | `[i, null, 0, lệch]` | đầu câu i cộng độ lệch |
 
 Sai chữ neo là lỗi cứng: build dừng ngay, không để lỗi lọt vào render.
+
+## Kịch bản → dữ liệu dựng, theme noir
+
+- `python motion/long/script_lines.py <topic>`: chuyển `data/long/<topic>/script.md` (đã duyệt) thành `lines` của từng `chNN.json`.
+  `‖` = nghỉ dài, `**[DIỄN Ý]**` = trích diễn ý, `»` = lời trích, đọc bằng `QUOTE_VOICE` (Minh Đức) qua bộ lọc radio, cảnh quote có `qline` sẽ hiện sóng âm và nhãn "GIỌNG ĐỌC MINH HỌA".
+- `spec.theme = "noir"`: khung điện ảnh 96px, phụ đề nằm trong dải đen dưới, cảnh `film: true` có nhấp nháy và tiếng máy chiếu.
+- Cảnh riêng của noir: `seismo` (băng địa chấn, `hitAt`), `saint` (thẻ thánh cháy, `burnAt/burnDur/burnTo`), `paper` (trang báo mô phỏng),
+  `pizzini` (giấy đánh máy + `cipher` chữ→số kiểu Provenzano), `dots` (mỗi chấm một người, `groups`), `board` (bảng ghim + dây đỏ),
+  `memorial` (tên khắc đá), `calendar` (lịch xé `from/days/endAt`), `sticker` (tờ dán Addiopizzo).
+- Mọi cảnh nhận `sfx: [{k: "gavel"|"bell"|"heart"|"match"|"slap"|…, at}]` để đặt tiếng tay.
+- `bgm` có thể là danh sách đoạn `{file, at, gain, start, end, fin, fout}` (start/end là mốc lời) để đổi nhạc giữa chương.
 
 ## Loại cảnh (casewide.js)
 

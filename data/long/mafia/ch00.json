@@ -1,0 +1,654 @@
+{
+ "title": "MỞ ĐẦU: Tiếng nổ ở Capaci",
+ "lines": [
+  "Chiều thứ Bảy, ngày 23 tháng 5 năm 1992.",
+  "Trên một quả đồi nhỏ nhìn xuống đường cao tốc nối sân bay Palermo với thành phố, có một người đàn ông đang cầm ống nhòm.",
+  "Hắn tên là Giovanni Brusca.",
+  "Trong tay hắn là một chiếc điều khiển từ xa.",
+  "Ngay dưới mặt đường, trong lòng một đường cống thoát nước, là mười ba thùng thuốc nổ. Khoảng 400 ký.",
+  "Hai tuần trước, chúng đã được đẩy vào đó, trên một tấm ván trượt.",
+  "Từ phía sân bay, một đoàn xe bọc thép đang lao tới.",
+  "Trong chiếc xe thứ hai là người đàn ông mà Mafia Sicily sợ nhất: thẩm phán Giovanni Falcone, cùng vợ ông, bà Francesca Morvillo.",
+  {
+   "t": "Brusca bấm nút.",
+   "p": 1.0
+  },
+  "Vụ nổ mạnh đến mức các trạm đo động đất trong vùng ghi nhận được.",
+  "Chiếc xe đi đầu bị hất văng vào một vườn ô liu cách đó hàng chục mét. Ba cảnh sát bên trong chết ngay lập tức.",
+  "Chiếc xe của Falcone lao vào khối bê tông và đống đổ nát. Ông và vợ bị văng qua kính chắn gió.",
+  {
+   "t": "Cả hai không qua khỏi.",
+   "p": 1.0
+  },
+  "Tối hôm đó, theo lời khai của một kẻ có mặt, ông trùm Totò Riina mở tiệc, nâng ly sâm panh mừng cái chết của Falcone.",
+  "Với Cosa Nostra, đó là chiến thắng lớn nhất trong lịch sử.",
+  {
+   "t": "Nhưng chính ly sâm panh ấy sẽ mở đầu cho sự sụp đổ của chúng.",
+   "p": 1.0
+  },
+  "Bởi vì suốt hơn một trăm năm, Mafia Sicily sống sót nhờ một thứ duy nhất.",
+  "Không phải súng. Không phải tiền.",
+  {
+   "t": "Mà là sự im lặng.",
+   "p": 1.0
+  },
+  "Người Sicily gọi nó là omertà: không ai được nói với nhà chức trách. Dù là nạn nhân. Dù là nhân chứng. Dù phải ngồi tù oan.",
+  "Và vụ nổ ở Capaci lớn đến mức không ai còn có thể im lặng được nữa.",
+  "Trong gần một giờ tới, bạn sẽ đi qua một trăm năm mươi năm của thế giới ngầm nước Ý.",
+  "Bạn sẽ gặp một người đàn ông mất chín người thân vào tay Mafia, rồi làm điều mà gần như chưa ai trong Cosa Nostra dám làm: phá vỡ lời thề im lặng.",
+  "Một ông trùm trốn chạy suốt 43 năm, ra lệnh bằng những mẩu giấy nhỏ nhân danh Chúa, và cuối cùng bị tóm vì một túi quần áo giặt sạch.",
+  "Và một sự thật mà các nhà điều tra châu Âu đã phải thừa nhận: thế lực Mafia đáng sợ nhất hôm nay không còn ở Sicily.",
+  {
+   "t": "Đây là hồ sơ Mafia Ý.",
+   "p": 1.0
+  },
+  "Và câu chuyện bắt đầu ở một hòn đảo, nơi nhà nước gần như không tồn tại."
+ ],
+ "scenes": [
+  {
+   "type": "date",
+   "vid": "2519446",
+   "ms": 2,
+   "tone": "noir",
+   "day": "SABATO · THỨ BẢY",
+   "date": "23.05.1992",
+   "sub": {
+    "text": "PALERMO · SICILY",
+    "at": [
+     0,
+     "1992."
+    ]
+   }
+  },
+  {
+   "type": "broll",
+   "at": 1,
+   "vid": "18828531",
+   "tone": "noir",
+   "veil": 0.35,
+   "kin": [
+    {
+     "text": "SÂN BAY → PALERMO",
+     "at": [
+      1,
+      "sân"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": [
+    1,
+    "có"
+   ],
+   "vid": "10431445",
+   "ms": 3,
+   "tone": "noir",
+   "veil": 0.3,
+   "illus": "VIDEO MINH HỌA"
+  },
+  {
+   "type": "file",
+   "at": 2,
+   "k": "HỒ SƠ · COSA NOSTRA",
+   "name": "GIOVANNI\nBRUSCA",
+   "desc": "Đứng trên quả đồi nhìn xuống cao tốc",
+   "vid": "28652281",
+   "tone": "noir",
+   "rows": [
+    {
+     "k": "VAI TRÒ",
+     "v": "*Người bấm nút*",
+     "at": [
+      2,
+      "Brusca."
+     ]
+    },
+    {
+     "k": "TRONG TAY",
+     "v": "Điều khiển từ xa",
+     "at": [
+      3,
+      "điều"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "bg": "capaci_svincolo",
+   "from": 0,
+   "to": 400,
+   "suffix": " KG",
+   "countAt": [
+    4,
+    "Khoảng"
+   ],
+   "label": "THUỐC NỔ DƯỚI MẶT ĐƯỜNG",
+   "sub": {
+    "text": "13 THÙNG · TRONG LÒNG ĐƯỜNG CỐNG",
+    "at": [
+     4,
+     "mười"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "bg": "capaci_svincolo",
+   "items": [
+    {
+     "text": "HAI TUẦN TRƯỚC",
+     "serif": true,
+     "at": [
+      5,
+      "Hai"
+     ]
+    },
+    {
+     "text": "ĐẨY VÀO TRÊN MỘT TẤM VÁN TRƯỢT",
+     "sm": true,
+     "at": [
+      5,
+      "ván"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 6,
+   "vid": "9702205",
+   "ms": 4,
+   "tone": "noir",
+   "veil": 0.35,
+   "kin": [
+    {
+     "text": "ĐOÀN XE BỌC THÉP",
+     "at": [
+      6,
+      "đoàn"
+     ]
+    }
+   ],
+   "illus": "VIDEO MINH HỌA"
+  },
+  {
+   "type": "print",
+   "at": 7,
+   "img": "falcone",
+   "tone": "bw",
+   "side": {
+    "k": "XE THỨ HAI",
+    "h": "GIOVANNI\nFALCONE",
+    "hAt": [
+     7,
+     "Giovanni"
+    ],
+    "lines": [
+     {
+      "text": "Người Mafia Sicily *sợ nhất*",
+      "at": [
+       7,
+       "sợ"
+      ]
+     },
+     {
+      "text": "Cùng vợ: *Francesca Morvillo*",
+      "at": [
+       7,
+       "Francesca"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "seismo",
+   "at": 8,
+   "label": "TRẠM ĐO ĐỊA CHẤN",
+   "read": "23 · 05 · 1992",
+   "hit": "CAPACI",
+   "hitAt": [
+    8,
+    "nút."
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 10,
+   "img": "escort_car",
+   "tone": "bw",
+   "move": "in",
+   "kin": [
+    {
+     "text": "BA CẢNH SÁT TỬ NẠN NGAY LẬP TỨC",
+     "at": [
+      10,
+      "Ba"
+     ]
+    }
+   ],
+   "veil": 0.3
+  },
+  {
+   "type": "print",
+   "at": 11,
+   "img": "strage92",
+   "tone": "bw",
+   "maxW": 900,
+   "caption": "CAPACI · 23.05.1992",
+   "side": {
+    "k": "XE CỦA FALCONE",
+    "lines": [
+     {
+      "text": "Lao vào *khối bê tông* và đống đổ nát",
+      "at": [
+       11,
+       "khối"
+      ]
+     },
+     {
+      "text": "Hai vợ chồng văng qua *kính chắn gió*",
+      "at": [
+       11,
+       "kính"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "broll",
+   "at": 12,
+   "vid": "5767251",
+   "ms": 2,
+   "tone": "night",
+   "veil": 0.45,
+   "kin": [
+    {
+     "text": "CẢ HAI KHÔNG QUA KHỎI",
+     "at": [
+      12,
+      "Cả"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": 13,
+   "img": "riina",
+   "tone": "bw",
+   "right": true,
+   "side": {
+    "k": "ÔNG TRÙM",
+    "h": "TOTÒ RIINA",
+    "hAt": [
+     13,
+     "Totò"
+    ],
+    "lines": [
+     {
+      "text": "Theo *lời khai* của một kẻ có mặt",
+      "at": [
+       13,
+       "lời"
+      ]
+     },
+     {
+      "text": "Mở tiệc, *nâng ly sâm panh*",
+      "at": [
+       13,
+       "nâng"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "broll",
+   "at": 14,
+   "vid": "38917693",
+   "ms": 3,
+   "tone": "noir",
+   "veil": 0.4,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "CHIẾN THẮNG LỚN NHẤT",
+     "at": [
+      14,
+      "chiến"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 15,
+   "bg": "capaci_stele",
+   "text": "KHỞI ĐẦU\nCỦA SỰ SỤP ĐỔ",
+   "hitAt": [
+    15,
+    "sụp"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "vid": "2836356",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "HƠN 100 NĂM",
+     "serif": true,
+     "at": [
+      16,
+      "hơn"
+     ]
+    },
+    {
+     "text": "SỐNG SÓT NHỜ MỘT THỨ DUY NHẤT",
+     "sm": true,
+     "at": [
+      16,
+      "duy"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "vid": "2836356",
+   "ms": 8,
+   "tone": "noir",
+   "items": [
+    {
+     "text": "KHÔNG PHẢI SÚNG",
+     "at": [
+      17,
+      "súng."
+     ]
+    },
+    {
+     "text": "KHÔNG PHẢI TIỀN",
+     "at": [
+      17,
+      "tiền."
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 18,
+   "text": "SỰ IM LẶNG",
+   "white": true,
+   "hitAt": [
+    18,
+    "im"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "bg": "palermo1890",
+   "items": [
+    {
+     "text": "OMERTÀ",
+     "serif": true,
+     "acc": true,
+     "at": [
+      19,
+      "omertà:"
+     ]
+    },
+    {
+     "text": "KHÔNG AI NÓI VỚI NHÀ CHỨC TRÁCH",
+     "sm": true,
+     "at": [
+      19,
+      "không"
+     ]
+    },
+    {
+     "text": "DÙ LÀ NẠN NHÂN",
+     "sm": true,
+     "at": [
+      19,
+      "nạn"
+     ]
+    },
+    {
+     "text": "DÙ LÀ NHÂN CHỨNG",
+     "sm": true,
+     "at": [
+      19,
+      "chứng."
+     ]
+    },
+    {
+     "text": "DÙ PHẢI NGỒI TÙ OAN",
+     "sm": true,
+     "at": [
+      19,
+      "tù"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": 20,
+   "img": "capaci_stele",
+   "tone": "bw",
+   "maxH": 720,
+   "side": {
+    "k": "CAPACI",
+    "h": "KHÔNG AI\nCÒN IM LẶNG",
+    "hAt": [
+     20,
+     "im"
+    ]
+   }
+  },
+  {
+   "type": "timeline",
+   "at": 21,
+   "vid": "855120",
+   "tone": "noir",
+   "items": [
+    {
+     "year": "1863",
+     "text": "Chữ *mafiusi*"
+    },
+    {
+     "year": "1925",
+     "text": "Tỉnh trưởng sắt"
+    },
+    {
+     "year": "1943",
+     "text": "Đồng Minh đổ bộ"
+    },
+    {
+     "year": "1986",
+     "text": "Đại án"
+    },
+    {
+     "year": "1992",
+     "text": "Capaci"
+    },
+    {
+     "year": "2023",
+     "text": "Bóng ma cuối"
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": 22,
+   "img": "buscetta",
+   "tone": "noir",
+   "maxH": 700,
+   "side": {
+    "k": "KẺ PHẢN BỘI",
+    "h": "MẤT 9\nNGƯỜI THÂN",
+    "hAt": [
+     22,
+     "chín"
+    ],
+    "lines": [
+     {
+      "text": "Phá vỡ *lời thề im lặng*",
+      "at": [
+       22,
+       "phá"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "pizzini",
+   "at": 23,
+   "vid": "34187599",
+   "tone": "noir",
+   "notes": [
+    {
+     "text": "…con il volere\ndi Dio…",
+     "at": [
+      23,
+      "mẩu"
+     ],
+     "x": 300,
+     "y": 230,
+     "rot": -4
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": [
+    23,
+    "túi"
+   ],
+   "vid": "39598589",
+   "tone": "noir",
+   "veil": 0.35,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "43 NĂM TRỐN CHẠY",
+     "at": [
+      23,
+      "túi"
+     ]
+    },
+    {
+     "text": "MỘT TÚI ĐỒ GIẶT",
+     "acc": true,
+     "at": [
+      23,
+      "giặt"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 24,
+   "img": "duisburg",
+   "tone": "noir",
+   "move": "pan",
+   "veil": 0.35,
+   "kin": [
+    {
+     "text": "KHÔNG CÒN Ở SICILY",
+     "at": [
+      24,
+      "không"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 25,
+   "bg": "palermo1890",
+   "text": "MAFIA Ý",
+   "white": true,
+   "hitAt": [
+    25,
+    "Mafia"
+   ],
+   "sub": "HỒ SƠ · 1863 — 2023",
+   "stamp": {
+    "text": "HỒ SƠ MẬT",
+    "at": [
+     25,
+     "Ý."
+    ],
+    "x": 1240,
+    "y": 640,
+    "rot": -9
+   }
+  },
+  {
+   "type": "broll",
+   "at": 26,
+   "vid": "13240831",
+   "ms": 3,
+   "tone": "color",
+   "veil": 0.35,
+   "kin": [
+    {
+     "text": "MỘT HÒN ĐẢO",
+     "serif": true,
+     "at": [
+      26,
+      "hòn"
+     ]
+    },
+    {
+     "text": "NƠI NHÀ NƯỚC GẦN NHƯ KHÔNG TỒN TẠI",
+     "sm": true,
+     "at": [
+      26,
+      "nhà"
+     ]
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "TIẾNG NỔ Ở CAPACI"
+ },
+ "bgm": [
+  {
+   "file": "oppressive_gloom.mp3",
+   "at": 0,
+   "gain": 0.14,
+   "end": [
+    21,
+    null,
+    0,
+    1.5
+   ],
+   "fout": 3.0
+  },
+  {
+   "file": "intermezzo_dob.wav",
+   "at": 40,
+   "gain": 0.6,
+   "start": 21,
+   "fin": 3.0,
+   "fout": 3.0
+  }
+ ]
+}
