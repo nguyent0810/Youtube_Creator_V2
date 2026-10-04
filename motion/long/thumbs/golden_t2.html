@@ -1,0 +1,27 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800;900&family=Playfair+Display:wght@900&family=JetBrains+Mono:wght@700&family=Noto+Serif+SC:wght@900&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#070504}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;color:#fff}
+.abs{position:absolute}
+.grain{position:absolute;inset:0;opacity:.12;mix-blend-mode:overlay}
+.glow{position:absolute;border-radius:50%;filter:blur(110px);background:rgba(214,53,43,.55)}
+.brand{position:absolute;font-family:'Playfair Display';font-weight:900;color:#e9c46a;line-height:.92;white-space:nowrap;
+  text-shadow:0 0 50px rgba(233,196,106,.45),0 14px 40px #000,-5px -5px 0 #000,5px 5px 0 #000}
+.big{position:absolute;font-weight:900;line-height:1;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.han{position:absolute;font-family:'Noto Serif SC';font-weight:900;color:rgba(214,53,43,.9);line-height:1;white-space:nowrap;text-shadow:0 8px 30px #000}
+.tag{position:absolute;font-family:'JetBrains Mono';font-weight:700;letter-spacing:.25em;color:#e9c46a;white-space:nowrap}
+.deco{position:absolute;border:3px solid #e9c46a;opacity:.85}
+</style></head><body>
+<!-- T2: sông Mekong nhìn từ trên cao + hoa anh túc + "16 TẤN" -->
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<img class="abs" src="assets/long/golden/img/mekong_pano.jpg" style="left:0;top:0;width:1920px;height:1080px;object-fit:cover;object-position:50% 50%;filter:contrast(1.3) saturate(.7) brightness(.78) sepia(.3)"/>
+<div class="abs" style="inset:0;background:linear-gradient(180deg,rgba(7,5,4,.55) 0%,rgba(7,5,4,.1) 35%,rgba(7,5,4,.35) 60%,rgba(7,5,4,.95) 100%)"></div>
+<div class="glow" style="left:1150px;top:80px;width:700px;height:600px;background:rgba(214,53,43,.45)"></div>
+<img class="abs" src="assets/long/golden/img/poppy.jpg" style="left:1230px;top:70px;width:580px;height:620px;object-fit:cover;object-position:50% 60%;border:10px solid #efe3c8;transform:rotate(3deg);box-shadow:0 30px 80px #000;filter:contrast(1.15) saturate(1.2)"/>
+<div class="big" style="left:80px;top:600px;font-size:250px;color:#ff4b3a">16 TẤN</div>
+<div class="big" style="left:90px;top:870px;font-size:92px;color:#fff">THUỐC PHIỆN · 1967</div>
+<div class="tag" style="left:90px;top:70px;font-size:34px">TAM GIÁC VÀNG · NGOÀI ĐỜI THẬT</div>
+<svg class="grain" width="1920" height="1080"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3" seed="4"/></filter><rect width="100%" height="100%" filter="url(#g)"/></svg>
+</div><script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

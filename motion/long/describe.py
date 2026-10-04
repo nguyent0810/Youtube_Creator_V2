@@ -41,13 +41,16 @@ def main(topic):
              *meta.get("sources", [])[:8], "và các bài Wikipedia liên quan.", "",
              "Lời dẫn là bản viết mới dựa trên tư liệu công khai; những câu có nhãn DIỄN Ý là diễn đạt lại, không phải nguyên văn.",
              "Hình ảnh/video có nhãn MINH HỌA chỉ mang tính minh họa bối cảnh.", "", "🖼 ẢNH (Wikimedia Commons và các kho tư liệu mở)"]
-    pd, bylic = 0, {}
+    pd, bylic, pdsrc = 0, {}, set()
+    INST = {"wellcome": "Wellcome Collection", "artic": "Art Institute of Chicago"}
     for k in sorted(used):
         f = spec["imgs"][k]
         mp = od / "img" / f"{k}.json"
         m = json.loads(mp.read_text(encoding="utf-8"))
         if m["license"].lower().startswith(("public", "pd", "cc0", "no restr")):
             pd += 1
+            if m.get("source", "").split(":")[0] in INST:   # PD từ kho bảo tàng: vẫn ghi tên kho (lịch sự, không bắt buộc)
+                pdsrc.add(INST[m["source"].split(":")[0]])
             continue
         by = re.sub(r"\s*\d\d:\d\d, .*UTC\)", "", m["artist"].split("\n")[0]).strip() or "không rõ tác giả"
         src = {"wellcome": " · Wellcome Collection", "artic": " · Art Institute of Chicago"}.get(m.get("source", "").split(":")[0], "")
@@ -62,7 +65,7 @@ def main(topic):
     if not any(str(spec["imgs"][k]).startswith("EXT:") for k in used):   # chỉ Commons -> giữ tiêu đề cũ
         lines = [x.replace("🖼 ẢNH (Wikimedia Commons và các kho tư liệu mở)", "🖼 ẢNH (Wikimedia Commons)") for x in lines]
     lines += [f"• {lic}: " + "; ".join(v) for lic, v in sorted(bylic.items())]   # gom theo giấy phép: đủ tác giả + giấy phép, ít byte hơn
-    lines += [f"• Và {pd} ảnh tư liệu thuộc phạm vi công cộng (Public domain / CC0).", "",
+    lines += [f"• Và {pd} ảnh tư liệu thuộc phạm vi công cộng (Public domain / CC0)" + (f", gồm ảnh từ {', '.join(sorted(pdsrc))}." if pdsrc else "."), "",
               "🎬 VIDEO B-ROLL: Pexels (pexels.com) — giấy phép Pexels, dùng tự do.", "", "🎵 NHẠC NỀN"]
     mac = [b for b in music if b in MUSIC]
     if mac:

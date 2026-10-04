@@ -1,0 +1,622 @@
+{
+ "title": "Đầu hàng",
+ "lines": [
+  {
+   "t": "Chương mười một. Đầu hàng.",
+   "p": 0.8
+  },
+  "Những năm 1990, thế giới của Khun Sa bắt đầu co lại.",
+  "Các tuyến buôn mới mở ra, từ Vân Nam thẳng xuống các cảng phía nam Trung Quốc, sang Ấn Độ, Lào, Campuchia. Ông không kiểm soát những tuyến ấy.",
+  "Ở phía bắc, Quân đội Nhà nước Wa Thống nhất bắt đầu tấn công ông.",
+  {
+   "t": "Năm 1991, cánh tay phải của ông qua đời. Nhiều thủ lĩnh Shan quay lưng, nói ông chỉ dùng chiêu bài độc lập để che việc buôn ma túy.",
+   "p": 1.0
+  },
+  "Năm 1995, Cơ quan Chống ma túy Mỹ phát hiện và cắt đứt mạng lưới môi giới của ông ở nước ngoài.",
+  "Tiền bắt đầu ngừng chảy.",
+  {
+   "t": "Ông bắt đầu nghĩ tới chuyện về hưu.",
+   "p": 1.0
+  },
+  "Ngoài mặt, quân đội Miến Điện tuyên bố muốn treo cổ Khun Sa.",
+  "Họ tổ chức những buổi đốt \"heroin\" công khai trước báo chí.",
+  {
+   "t": "Phần lớn thứ bị đốt là đá và cỏ.",
+   "p": 1.0
+  },
+  "Nhưng các tướng lĩnh hiểu rõ: ông đang nắm mặt hàng xuất khẩu béo bở nhất của đất nước, ước tính sáu trăm triệu đô mỗi năm vào năm 1997.",
+  "Và ông đã mua chuộc được nhiều người có chức quyền cao nhất trong quân đội.",
+  "Sau hậu trường, hai bên đạt một thỏa thuận bí mật.",
+  "Ngày 5 tháng 1 năm 1996, Khun Sa đầu hàng.",
+  "Ông giải tán quân đội, và dọn về thủ đô Yangon với một gia tài lớn.",
+  {
+   "t": "Điều kiện: được chính phủ bảo vệ, và không bị dẫn độ sang Mỹ.",
+   "p": 1.0
+  },
+  "Nhiều người lính từng tin ông là người yêu nước Shan cảm thấy bị phản bội. Họ không chịu buông súng, và tiếp tục chiến đấu dưới một cái tên mới.",
+  {
+   "t": "Còn ông sống lặng lẽ ở Yangon, mọi cuộc gặp gỡ và liên lạc đều bị tình báo quân đội theo dõi.",
+   "p": 1.0
+  },
+  "Những năm cuối đời, ông tự giới thiệu mình là một người môi giới bất động sản, có chân trong ngành xây dựng.",
+  "Ông khai thác một mỏ hồng ngọc, đầu tư vào đường cao tốc Yangon–Mandalay.",
+  "Ngày 26 tháng 10 năm 2007, Khun Sa qua đời tại Yangon, thọ 73 tuổi. Bốn ngày sau, ông được hỏa táng.",
+  "Ông chưa từng ngồi tù một ngày nào vì ma túy.",
+  {
+   "t": "Đó là câu trả lời cho câu hỏi thứ hai.",
+   "p": 1.0
+  },
+  "Trước khi mất, ông dặn không chôn mình ở bang Shan, vì sợ mộ bị đào phá.",
+  "Ở Thoed Thai, căn cứ cũ của ông bên đất Thái, người dân vẫn làm lễ tưởng niệm.",
+  "Họ nói ông làm con đường nhựa đầu tiên, ngôi trường đầu tiên, và một bệnh viện sáu mươi giường.",
+  {
+   "t": "Còn ở New York, ở Sydney, ở Amsterdam, không ai đếm được bao nhiêu người đã chết vì thứ hàng đi ra từ những ngọn núi của ông.",
+   "p": 1.0
+  },
+  "Khun Sa ra đi.",
+  "Nhưng những con đường mà ông từng thu thuế thì không ai phá bỏ.",
+  "Chỉ là thứ chạy trên đó đã thay đổi."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "11",
+   "k": "CHƯƠNG MƯỜI MỘT",
+   "title": "ĐẦU HÀNG",
+   "sub": "1990 — 2007",
+   "titleAt": [
+    0,
+    "Đầu"
+   ],
+   "bg": "khunsa_9"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "bg": "khunsa_9",
+   "items": [
+    {
+     "text": "THẬP NIÊN 1990",
+     "at": [
+      1,
+      "1990,"
+     ],
+     "sm": true
+    },
+    {
+     "text": "THẾ GIỚI CO LẠI",
+     "at": [
+      1,
+      "co"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "at": 2,
+   "geo": "asia",
+   "pins": [
+    {
+     "name": "Vân Nam",
+     "label": "TUYẾN BUÔN MỚI",
+     "at": [
+      2,
+      "Vân"
+     ]
+    },
+    {
+     "name": "Hồng Kông",
+     "label": "CẢNG NAM TRUNG QUỐC",
+     "at": [
+      2,
+      "cảng"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "from": "Vân Nam",
+     "to": "Hồng Kông",
+     "at": [
+      2,
+      "thẳng"
+     ],
+     "until": [
+      2,
+      "Quốc,"
+     ],
+     "bend": 0.1
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 3,
+   "img": "uwsa",
+   "tone": "color",
+   "move": "in",
+   "kin": [
+    {
+     "text": "QUÂN ĐỘI NHÀ NƯỚC WA THỐNG NHẤT",
+     "at": [
+      3,
+      "Wa"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "QUÂN ĐỘI NHÀ NƯỚC WA THỐNG NHẤT",
+    "v": "ẢNH NGÀY NAY",
+    "at": [
+     3,
+     "tấn"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "bg": "ssa_south",
+   "items": [
+    {
+     "text": "1991 · CÁNH TAY PHẢI QUA ĐỜI",
+     "at": [
+      4,
+      "cánh"
+     ]
+    },
+    {
+     "text": "“CHIÊU BÀI ĐỘC LẬP”",
+     "at": [
+      4,
+      "chiêu"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 5,
+   "k": "CƠ QUAN CHỐNG MA TÚY MỸ · 1995",
+   "name": "CẮT ĐỨT MẠNG LƯỚI\nMÔI GIỚI",
+   "desc": "Các đầu mối của Khun Sa ở nước ngoài",
+   "bg": "khunsa_9",
+   "rows": [
+    {
+     "k": "HỆ QUẢ",
+     "v": "*Tiền ngừng chảy*",
+     "at": [
+      6,
+      "Tiền"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "bg": "khunsa_9",
+   "items": [
+    {
+     "text": "NGHĨ TỚI CHUYỆN VỀ HƯU",
+     "at": [
+      7,
+      "hưu."
+     ],
+     "serif": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "bg": "burma1954",
+   "items": [
+    {
+     "text": "NGOÀI MẶT",
+     "at": [
+      8,
+      "Ngoài"
+     ],
+     "sm": true
+    },
+    {
+     "text": "“TREO CỔ KHUN SA”",
+     "at": [
+      8,
+      "treo"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 9,
+   "vid": "6900893",
+   "tone": "noir",
+   "veil": 0.4,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "ĐỐT “HEROIN” TRƯỚC BÁO CHÍ",
+     "at": [
+      9,
+      "đốt"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 10,
+   "bg": "field_fuzhou",
+   "text": "ĐÁ VÀ CỎ",
+   "white": true,
+   "hitAt": [
+    10,
+    "đá"
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 11,
+   "bg": "khunsa",
+   "from": 0,
+   "to": 600,
+   "prefix": "$",
+   "suffix": " TRIỆU",
+   "countAt": [
+    11,
+    "sáu"
+   ],
+   "label": "MỖI NĂM · MẶT HÀNG XUẤT KHẨU BÉO BỞ NHẤT (1997)"
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "bg": "burma1954",
+   "items": [
+    {
+     "text": "MUA CHUỘC",
+     "at": [
+      12,
+      "mua"
+     ]
+    },
+    {
+     "text": "NHỮNG NGƯỜI QUYỀN CAO NHẤT",
+     "at": [
+      12,
+      "cao"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "bg": "khunsa_9",
+   "items": [
+    {
+     "text": "HẬU TRƯỜNG",
+     "at": [
+      13,
+      "hậu"
+     ],
+     "sm": true
+    },
+    {
+     "text": "THỎA THUẬN BÍ MẬT",
+     "at": [
+      13,
+      "bí"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 14,
+   "bg": "khunsa_9",
+   "day": "KHUN SA ĐẦU HÀNG",
+   "date": "05.01.1996",
+   "stamp": {
+    "text": "ĐẦU HÀNG",
+    "at": [
+     14,
+     "đầu"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 15,
+   "k": "ĐIỀU KIỆN ĐẦU HÀNG",
+   "name": "YANGON",
+   "desc": "Dọn về thủ đô với một gia tài lớn",
+   "bg": "khunsa",
+   "rows": [
+    {
+     "k": "BẢO VỆ",
+     "v": "Chính phủ bảo vệ",
+     "at": [
+      16,
+      "bảo"
+     ]
+    },
+    {
+     "k": "DẪN ĐỘ SANG MỸ",
+     "v": "*Không*",
+     "at": [
+      16,
+      "dẫn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 17,
+   "img": "ssa_south",
+   "tone": "color",
+   "move": "in",
+   "kin": [
+    {
+     "text": "BỊ PHẢN BỘI",
+     "at": [
+      17,
+      "phản"
+     ]
+    },
+    {
+     "text": "TIẾP TỤC CHIẾN ĐẤU",
+     "at": [
+      17,
+      "tiếp"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "QUÂN ĐỘI BANG SHAN — NAM",
+    "v": "ẢNH NGÀY NAY",
+    "at": [
+     17,
+     "tên"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "kinetic",
+   "at": 18,
+   "bg": "khunsa_9",
+   "items": [
+    {
+     "text": "SỐNG LẶNG LẼ Ở YANGON",
+     "at": [
+      18,
+      "lặng"
+     ]
+    },
+    {
+     "text": "BỊ TÌNH BÁO THEO DÕI",
+     "at": [
+      18,
+      "theo"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 19,
+   "title": "NHỮNG NĂM CUỐI ĐỜI",
+   "rows": [
+    {
+     "k": "TỰ GIỚI THIỆU",
+     "v": "MÔI GIỚI BẤT ĐỘNG SẢN",
+     "at": [
+      19,
+      "môi"
+     ]
+    },
+    {
+     "k": "MỎ",
+     "v": "HỒNG NGỌC",
+     "at": [
+      20,
+      "hồng"
+     ]
+    },
+    {
+     "k": "ĐẦU TƯ",
+     "v": "CAO TỐC YANGON–MANDALAY",
+     "at": [
+      20,
+      "cao"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 21,
+   "bg": "khunsa_9",
+   "day": "QUA ĐỜI TẠI YANGON · 73 TUỔI",
+   "date": "26.10.2007"
+  },
+  {
+   "type": "slam",
+   "at": 22,
+   "bg": "khunsa_crop",
+   "text": "CHƯA MỘT NGÀY\nNGỒI TÙ VÌ MA TÚY",
+   "white": true,
+   "hitAt": [
+    22,
+    "tù"
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 23,
+   "bg": "khunsa",
+   "text": "CÂU HỎI THỨ HAI",
+   "white": true,
+   "hitAt": [
+    23,
+    "hai."
+   ],
+   "sub": "ĐÃ CÓ CÂU TRẢ LỜI"
+  },
+  {
+   "type": "kinetic",
+   "at": 24,
+   "bg": "taunggyi",
+   "items": [
+    {
+     "text": "KHÔNG CHÔN Ở BANG SHAN",
+     "at": [
+      24,
+      "chôn"
+     ]
+    },
+    {
+     "text": "SỢ MỘ BỊ ĐÀO PHÁ",
+     "at": [
+      24,
+      "đào"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 25,
+   "title": "THOED THAI · CĂN CỨ CŨ BÊN ĐẤT THÁI",
+   "bg": "maesalong_tea",
+   "rows": [
+    {
+     "k": "ĐƯỜNG NHỰA",
+     "v": "ĐẦU TIÊN",
+     "at": [
+      26,
+      "nhựa"
+     ]
+    },
+    {
+     "k": "TRƯỜNG HỌC",
+     "v": "ĐẦU TIÊN",
+     "at": [
+      26,
+      "trường"
+     ]
+    },
+    {
+     "k": "BỆNH VIỆN",
+     "v": "60 GIƯỜNG",
+     "at": [
+      26,
+      "bệnh"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 27,
+   "bg": "harlem125",
+   "items": [
+    {
+     "text": "NEW YORK · SYDNEY · AMSTERDAM",
+     "at": [
+      27,
+      "New"
+     ]
+    },
+    {
+     "text": "KHÔNG AI ĐẾM ĐƯỢC",
+     "at": [
+      27,
+      "đếm"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 28,
+   "bg": "khunsa_9",
+   "text": "KHUN SA RA ĐI",
+   "white": true,
+   "hitAt": [
+    28,
+    "ra"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 29,
+   "bg": "mekong_pano",
+   "items": [
+    {
+     "text": "NHỮNG CON ĐƯỜNG",
+     "at": [
+      29,
+      "con"
+     ]
+    },
+    {
+     "text": "KHÔNG AI PHÁ BỎ",
+     "at": [
+      29,
+      "phá"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 30,
+   "bg": "meth_bust",
+   "items": [
+    {
+     "text": "CHỈ LÀ THỨ CHẠY TRÊN ĐÓ",
+     "at": [
+      30,
+      "chạy"
+     ]
+    },
+    {
+     "text": "ĐÃ THAY ĐỔI",
+     "at": [
+      30,
+      "thay"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 11",
+  "t": "ĐẦU HÀNG"
+ },
+ "bgm": {
+  "file": "long_note_four.mp3",
+  "at": 0,
+  "gain": 0.12
+ }
+}

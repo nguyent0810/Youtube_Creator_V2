@@ -102,6 +102,25 @@ class NoirMix(Mix):
         n = int(dur * SR); t = np.arange(n) / SR
         return self.lowp(self.rng.standard_normal(n), 90) * np.minimum(1, t / 0.02) * np.exp(-t / (dur / 3)) * 4
 
+    def note(self, f, dur=1.6, bright=0.5):
+        """Một nốt trầm kiểu piano/đàn dây gảy: hài âm tắt dần."""
+        n = int(dur * SR); t = np.arange(n) / SR
+        s = sum(a * np.sin(2 * np.pi * f * k * t) * np.exp(-t / (dur / (1 + k * 0.8))) for k, a in ((1, 1), (2, 0.5 * bright), (3, 0.28 * bright), (4, 0.12 * bright)))
+        return s * np.minimum(1, t / 0.004) * 0.55
+
+    def logo(self):
+        """Âm hiệu kênh: hai nốt (Rê–La trầm) + ngân chuông cao + một nhịp trống trầm. Giữ cố định cho mọi video."""
+        out = np.zeros(int(2.6 * SR))
+        a = self.note(73.4, 2.2, 0.6)
+        out[:len(a)] += a
+        k = int(0.42 * SR); b = self.note(110.0, 2.2, 0.8)
+        out[k:k + len(b)] += b[: len(out) - k]
+        bl = self.bell(1760, 1.8) * 0.18 if hasattr(self, "bell") else self.tone(1.2, 1760, 1760) * 0.5
+        out[k:k + len(bl)] += bl[: len(out) - k]
+        bm = self.boom(1.6, 55, 32) * 0.7
+        out[k:k + len(bm)] += bm[: len(out) - k]
+        return out
+
     CUES = ("match", "bell", "gavel", "slap", "heart", "paper", "boom", "thud", "whoosh", "shutter", "clank")
 
 
@@ -148,6 +167,11 @@ def build(case: dict, dst: Path) -> None:
         elif ty == "kinetic":
             for q in s["items"]:
                 beat_sfx(M, q, 1.0)
+        elif ty == "brand":
+            M.put(T0 - 0.5, M.whoosh(0.55), 0.3)
+            M.put(T0 + 0.3, M.logo(), 0.9)
+        elif ty == "endcard":
+            M.put(T0 + 0.2, M.note(73.4, 3.0, 0.4), 0.5)
         elif ty == "slam":
             fx = s.get("fx", "punch")
             if fx == "glitch":

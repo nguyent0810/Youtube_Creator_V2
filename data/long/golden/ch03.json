@@ -1,0 +1,453 @@
+{
+ "title": "Chiến dịch Giấy",
+ "lines": [
+  {
+   "t": "Chương ba. Chiến dịch Giấy.",
+   "p": 0.8
+  },
+  "Năm 1950, chiến tranh Triều Tiên bùng nổ.",
+  "Washington lo sợ cả Đông Nam Á sẽ rơi vào tay cộng sản.",
+  {
+   "t": "Họ nghĩ tới đội quân của Lý Di: nếu đội quân ấy quấy rối miền nam Trung Quốc, Bắc Kinh sẽ phải rút bớt lực lượng khỏi Triều Tiên.",
+   "p": 1.0
+  },
+  "Cơ quan Tình báo Trung ương Mỹ, CIA, mở một chiến dịch bí mật mang mật danh \"Chiến dịch Giấy\".",
+  "Tổng thống Truman phê duyệt. Thủ tướng Thái Lan Phibun đồng ý cho mượn đường.",
+  {
+   "t": "Nhưng có một cơ quan không hề được báo: Bộ Ngoại giao Mỹ.",
+   "p": 1.0
+  },
+  "Từ đầu năm 1951, những chiếc máy bay vận tải C-46 và C-47 không sơn phù hiệu bắt đầu thả dù tiếp tế xuống Mong Hsat, ít nhất năm chuyến mỗi tuần.",
+  {
+   "t": "Đường băng cũ thời Thế chiến được sửa lại, đủ cho máy bay bốn động cơ hạ cánh, chở vũ khí Mỹ mới tinh từ Đài Loan sang.",
+   "p": 1.0
+  },
+  "Tháng 5 năm 1951, Lý Di tung khoảng hai mươi nghìn quân đánh ngược vào Vân Nam.",
+  "Họ chiếm được một thị trấn và một sân bay, sâu trong lãnh thổ Trung Quốc chừng một trăm cây số.",
+  "Rồi bốn mươi nghìn quân Giải phóng phản công.",
+  {
+   "t": "Chưa đầy một tháng, tàn quân tháo chạy về Miến Điện, tổn thất nặng nề. Một số cố vấn CIA đi cùng đã tử trận.",
+   "p": 1.0
+  },
+  "Họ còn thử thêm hai lần nữa, tháng 7 năm 1951 và tháng 8 năm 1952.",
+  "Cả hai lần đều thất bại.",
+  "Cuối năm 1951, Chiến dịch Giấy bị lộ, chỉ vì chính phủ Thái Lan tưởng người Anh đã được báo trước, nên nói hớ với họ.",
+  {
+   "t": "Đại sứ Mỹ tại Miến Điện, người bị chính chính phủ mình giấu chuyện, đã từ chức.",
+   "p": 1.0
+  },
+  "Trớ trêu hơn, tàn quân còn liên minh với quân nổi dậy người Karen.",
+  {
+   "t": "Và một phần vũ khí Mỹ, qua tay họ, cuối cùng lọt vào tay chính những người cộng sản Miến Điện.",
+   "p": 1.0
+  },
+  "Sau năm 1952, đội quân của Lý Di không bao giờ đánh vào Trung Quốc nữa.",
+  "Nhưng họ cũng không bỏ đi.",
+  "Họ đã tìm ra một thứ để làm, đem lại nhiều tiền hơn chiến tranh."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "CHIẾN DỊCH GIẤY",
+   "sub": "CIA · 1950 — 1953",
+   "titleAt": [
+    0,
+    "Chiến"
+   ],
+   "bg": "cat_c46"
+  },
+  {
+   "type": "map",
+   "at": 1,
+   "geo": "asia",
+   "pins": [
+    {
+     "name": "Triều Tiên",
+     "label": "CHIẾN TRANH TRIỀU TIÊN",
+     "at": [
+      1,
+      "Triều"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "vid": "18308549",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "WASHINGTON LO SỢ",
+     "at": [
+      2,
+      "Washington"
+     ]
+    },
+    {
+     "text": "ĐÔNG NAM Á → CỘNG SẢN",
+     "at": [
+      2,
+      "cộng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "at": 3,
+   "geo": "asia",
+   "pins": [
+    {
+     "name": "Tam Giác Vàng",
+     "label": "ĐỘI QUÂN LÝ DI",
+     "at": [
+      3,
+      "Lý"
+     ]
+    },
+    {
+     "name": "Vân Nam",
+     "label": "QUẤY RỐI NAM TRUNG QUỐC",
+     "at": [
+      3,
+      "quấy"
+     ]
+    },
+    {
+     "name": "Triều Tiên",
+     "at": [
+      3,
+      "Triều"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "from": "Tam Giác Vàng",
+     "to": "Vân Nam",
+     "at": [
+      3,
+      "quấy"
+     ],
+     "until": [
+      3,
+      "Quốc,"
+     ],
+     "bend": 0.1
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 4,
+   "k": "CIA · MẬT DANH",
+   "name": "CHIẾN DỊCH\nGIẤY",
+   "desc": "Operation Paper",
+   "bg": "cat_c46",
+   "rows": [
+    {
+     "k": "PHÊ DUYỆT",
+     "v": "*Tổng thống Truman*",
+     "at": [
+      5,
+      "Truman"
+     ]
+    },
+    {
+     "k": "MƯỢN ĐƯỜNG",
+     "v": "Thủ tướng Thái Phibun",
+     "at": [
+      5,
+      "Phibun"
+     ]
+    },
+    {
+     "k": "KHÔNG ĐƯỢC BÁO",
+     "v": "*Bộ Ngoại giao Mỹ*",
+     "at": [
+      6,
+      "Ngoại"
+     ]
+    }
+   ],
+   "stamp": {
+    "text": "MẬT",
+    "at": [
+     6,
+     "báo:"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 7,
+   "img": "cat_c46",
+   "tone": "color",
+   "move": "in",
+   "kin": [
+    {
+     "text": "C-46 · C-47 KHÔNG PHÙ HIỆU",
+     "at": [
+      7,
+      "phù"
+     ]
+    },
+    {
+     "text": "≥ 5 CHUYẾN THẢ DÙ / TUẦN",
+     "at": [
+      7,
+      "năm"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "C-46 CỦA HÃNG CAT · HÃNG BAY CỦA CIA",
+    "v": "ẢNH TƯ LIỆU · ĐÔNG DƯƠNG",
+    "at": [
+     7,
+     "máy"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "sketch",
+   "at": [
+    7,
+    "thả"
+   ],
+   "art": "airdrop",
+   "title": "Thả dù tiếp tế xuống Mong Hsat"
+  },
+  {
+   "type": "photo",
+   "at": 8,
+   "img": "c46_hainan",
+   "tone": "bw",
+   "move": "pan",
+   "film": true,
+   "kin": [
+    {
+     "text": "ĐƯỜNG BĂNG CHO MÁY BAY 4 ĐỘNG CƠ",
+     "at": [
+      8,
+      "bốn"
+     ]
+    },
+    {
+     "text": "VŨ KHÍ MỸ TỪ ĐÀI LOAN",
+     "at": [
+      8,
+      "vũ"
+     ],
+     "acc": true
+    }
+   ],
+   "veil": 0.52
+  },
+  {
+   "type": "date",
+   "at": 9,
+   "bg": "li_mi",
+   "day": "~20.000 QUÂN ĐÁNH NGƯỢC VÀO VÂN NAM",
+   "date": "05.1951"
+  },
+  {
+   "type": "map",
+   "at": 10,
+   "geo": "asia",
+   "pins": [
+    {
+     "name": "Vân Nam",
+     "label": "CHIẾM 1 THỊ TRẤN + SÂN BAY",
+     "at": [
+      10,
+      "chiếm"
+     ]
+    }
+   ],
+   "zoom": "Vân Nam",
+   "zoomK": 1.3
+  },
+  {
+   "type": "counter",
+   "at": 11,
+   "vid": "9508953",
+   "tone": "noir",
+   "from": 0,
+   "to": 40000,
+   "countAt": [
+    11,
+    "bốn"
+   ],
+   "label": "QUÂN GIẢI PHÓNG PHẢN CÔNG"
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "bg": "burma1954",
+   "items": [
+    {
+     "text": "CHƯA ĐẦY MỘT THÁNG",
+     "at": [
+      12,
+      "tháng,"
+     ]
+    },
+    {
+     "text": "THÁO CHẠY · CỐ VẤN CIA TỬ TRẬN",
+     "at": [
+      12,
+      "cố"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 13,
+   "bg": "burma1953",
+   "items": [
+    {
+     "year": "05.1951",
+     "text": "Thất bại"
+    },
+    {
+     "year": "07.1951",
+     "text": "*Thất bại*"
+    },
+    {
+     "year": "08.1952",
+     "text": "*Thất bại*"
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 15,
+   "k": "CUỐI 1951",
+   "name": "CHIẾN DỊCH\nBỊ LỘ",
+   "desc": "Thái Lan tưởng người Anh đã biết, nên nói hớ",
+   "bg": "cat_c46_1950",
+   "rows": [
+    {
+     "k": "HỆ QUẢ",
+     "v": "Đại sứ Mỹ tại Miến Điện *từ chức*",
+     "at": [
+      16,
+      "từ"
+     ]
+    }
+   ],
+   "stamp": {
+    "text": "BỊ LỘ",
+    "at": [
+     15,
+     "lộ,"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "bg": "burma1953",
+   "items": [
+    {
+     "text": "TRỚ TRÊU HƠN",
+     "at": [
+      17,
+      "Trớ"
+     ],
+     "sm": true
+    },
+    {
+     "text": "LIÊN MINH QUÂN NỔI DẬY KAREN",
+     "at": [
+      17,
+      "Karen."
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 18,
+   "bg": "burma1954",
+   "text": "VŨ KHÍ MỸ\nTRONG TAY CỘNG SẢN",
+   "hitAt": [
+    18,
+    "cộng"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "bg": "li_mi",
+   "items": [
+    {
+     "text": "SAU 1952",
+     "at": [
+      19,
+      "1952,"
+     ],
+     "sm": true
+    },
+    {
+     "text": "KHÔNG BAO GIỜ ĐÁNH VÀO TRUNG QUỐC NỮA",
+     "at": [
+      19,
+      "không"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 20,
+   "bg": "maesalong_view",
+   "items": [
+    {
+     "text": "NHƯNG CŨNG KHÔNG BỎ ĐI",
+     "at": [
+      20,
+      "bỏ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 21,
+   "vid": "27090146",
+   "tone": "noir",
+   "veil": 0.4,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "NHIỀU TIỀN HƠN CHIẾN TRANH",
+     "at": [
+      21,
+      "tiền"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "CHIẾN DỊCH GIẤY"
+ },
+ "bgm": {
+  "file": "dark_times.mp3",
+  "at": 0,
+  "gain": 0.12
+ }
+}

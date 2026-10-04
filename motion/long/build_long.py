@@ -496,6 +496,10 @@ def do_html(topic, only=None):
         t = json.loads((od / name / "timing.json").read_text(encoding="utf-8"))
         lines = word_lines(t, od / name / "voice.wav")
         scenes = plan(ch, lines, d)
+        ec = spec.get("endcard", 0) if name == spec["chapters"][-1] else 0
+        if ec:   # 20 giây cuối cho end screen: kéo dài chương cuối, nhạc nền chạy tiếp rồi tắt dần
+            scenes.append({"type": "endcard", "t0": d, "t1": d + ec, "bg": spec.get("endcardBg"), "sub": spec.get("endcardSub", "HỒ SƠ TIẾP THEO")})
+            d = d + ec
         vids = []
         for k, s in enumerate(scenes):
             if s.get("vid"):
@@ -515,7 +519,7 @@ def do_html(topic, only=None):
         seed = sum(ord(c) * (i + 1) for i, c in enumerate(topic + name)) % 100000 + 7
         case = {"topic": topic, "ch": name, "dur": d, "seed": seed, "accent": spec.get("accent", "#e2402d"), "theme": spec.get("theme"), "autoTr": spec.get("autoTr", spec.get("theme") == "shanghai"), "hud": ch.get("hud", {}),
                 "acc": spec.get("acc", []) + ch.get("acc", []), "lines": lines, "imgs": imgs, "geo": geo, "scenes": scenes,
-                "prog0": round(acc_t / total, 5), "prog1": round((acc_t + d) / total, 5)}
+                "prog0": round(acc_t / total, 5), "prog1": min(1.0, round((acc_t + d) / total, 5))}
         (od / name / "data.js").write_text("window.CASE = " + json.dumps(case, ensure_ascii=False) + ";\n", encoding="utf-8")
         comp = HF / "compositions" / "long" / f"{topic}_{name}.html"
         comp.parent.mkdir(parents=True, exist_ok=True)
@@ -524,6 +528,7 @@ def do_html(topic, only=None):
         sfx_long.build(case, od / name / "sfx.wav")
         quiet = [(s["t0"], s["t1"]) for s in scenes if s["type"] == "question"]
         quiet += [(s["at"] - 1.0, s["at"] + 0.4) for s in scenes if s["type"] == "slam" and spec.get("slamDrop", True)]
+        quiet += [(s["t0"] - 0.2, s["t1"]) for s in scenes if s["type"] == "brand"]   # né nhạc nền cho âm hiệu kênh
         mix_chapter(ch, od / name, d, quiet, spec.get("master", True), bgm_items(ch, lines, d))
         print(f"{name}: {len(scenes)} cảnh, {len(vids)} clip, {d:.1f}s -> {comp.name}", flush=True)
         acc_t += d

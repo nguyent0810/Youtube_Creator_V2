@@ -1,0 +1,463 @@
+{
+ "title": "Đội quân không còn đường về",
+ "lines": [
+  {
+   "t": "Chương hai. Đội quân không còn đường về.",
+   "p": 0.8
+  },
+  "Tháng 12 năm 1949, Quân Giải phóng Nhân dân Trung Quốc tiến vào tỉnh Vân Nam.",
+  "Nội chiến gần như đã kết thúc. Tưởng Giới Thạch đã chạy ra Đài Loan.",
+  {
+   "t": "Nhưng ở cực tây nam Trung Quốc, vẫn còn những đơn vị Quốc Dân Đảng không có đường ra biển.",
+   "p": 1.0
+  },
+  "Họ chọn con đường duy nhất còn mở: đi bộ sang Miến Điện, tên gọi khi ấy của Myanmar.",
+  "Tập đoàn quân số 8 của trung tướng Lý Di, Quân đoàn 26, Sư đoàn 93.",
+  "Cùng vợ con, họ băng rừng qua biên giới, dừng chân ở Tachileik, một thị trấn nhỏ sát biên giới Thái Lan.",
+  "Miến Điện lúc ấy vừa giành độc lập được hai năm, và đang chìm trong nội chiến.",
+  "Chưa đầy một năm sau độc lập, người Karen, người Mon, người Karenni và những người cộng sản đã cầm súng chống chính quyền.",
+  {
+   "t": "Quân đội chính phủ vừa mới giành lại thế thượng phong, thì một đội quân lạ xuất hiện ở biên giới đông bắc.",
+   "p": 1.0
+  },
+  "Tháng 3 năm 1950, tàn quân có khoảng một nghìn rưỡi người.",
+  "Một năm sau, hơn bốn nghìn. Cuối năm 1951, sáu nghìn.",
+  {
+   "t": "Năm 1952, con số ấy lại tăng gấp đôi.",
+   "p": 1.0
+  },
+  "Chính phủ Miến Điện yêu cầu họ đầu hàng, hoặc rời đi ngay.",
+  "Viên chỉ huy Quốc Dân Đảng trả lời: không đầu hàng, không rời đi, và nếu bị tấn công thì sẽ đánh trả.",
+  "Quân đội Miến Điện đánh đuổi họ khỏi Tachileik.",
+  "Họ rút lên Mong Hsat, một thung lũng màu mỡ được núi bao quanh, chỉ cách biên giới Thái Lan khoảng 130 cây số.",
+  {
+   "t": "Quân đội Miến Điện tấn công nhiều lần trong hai năm. Không lần nào đuổi được họ.",
+   "p": 1.0
+  },
+  "Một đội quân thua trận, không có hậu phương, không có lương, lại có thể đứng vững trên đất nước người khác.",
+  "Bởi vì phía sau họ có một người bạn rất giàu.",
+  "Một người bạn ở cách đó nửa vòng Trái Đất."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "ĐỘI QUÂN\nKHÔNG CÒN ĐƯỜNG VỀ",
+   "sub": "VÂN NAM → MIẾN ĐIỆN · 1949 — 1952",
+   "titleAt": [
+    0,
+    "Đội"
+   ],
+   "bg": "li_mi"
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "vid": "15506601",
+   "tone": "noir",
+   "day": "QUÂN GIẢI PHÓNG TIẾN VÀO VÂN NAM",
+   "date": "12.1949"
+  },
+  {
+   "type": "photo",
+   "at": 2,
+   "img": "chiang",
+   "tone": "bw",
+   "move": "in",
+   "film": true,
+   "kin": [
+    {
+     "text": "NỘI CHIẾN GẦN KẾT THÚC",
+     "at": [
+      2,
+      "Nội"
+     ]
+    },
+    {
+     "text": "TƯỞNG GIỚI THẠCH → ĐÀI LOAN",
+     "at": [
+      2,
+      "Đài"
+     ],
+     "acc": true
+    }
+   ],
+   "veil": 0.52
+  },
+  {
+   "type": "map",
+   "at": 3,
+   "geo": "asia",
+   "pins": [
+    {
+     "name": "Vân Nam",
+     "label": "KHÔNG CÓ ĐƯỜNG RA BIỂN",
+     "at": [
+      3,
+      "biển."
+     ]
+    },
+    {
+     "name": "Đài Bắc",
+     "at": [
+      2,
+      "Đài"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "at": 4,
+   "geo": "gt",
+   "pins": [
+    {
+     "name": "Vân Nam",
+     "at": [
+      4,
+      "con"
+     ]
+    },
+    {
+     "name": "Tachileik",
+     "at": [
+      4,
+      "Miến"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "from": "Vân Nam",
+     "to": "Tachileik",
+     "at": [
+      4,
+      "đi"
+     ],
+     "until": [
+      4,
+      "Myanmar."
+     ],
+     "bend": 0.2
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": 5,
+   "img": "li_mi",
+   "tone": "bw",
+   "side": {
+    "k": "TẬP ĐOÀN QUÂN SỐ 8",
+    "h": "LÝ DI",
+    "hAt": [
+     5,
+     "Lý"
+    ],
+    "lines": [
+     {
+      "text": "*Quân đoàn 26*",
+      "at": [
+       5,
+       "Quân"
+      ]
+     },
+     {
+      "text": "*Sư đoàn 93*",
+      "at": [
+       5,
+       "Sư"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "sketch",
+   "at": 6,
+   "art": "convoy",
+   "title": "Cùng vợ con băng rừng qua biên giới"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "bg": "burma1953",
+   "items": [
+    {
+     "text": "MIẾN ĐIỆN · ĐỘC LẬP 1948",
+     "at": [
+      7,
+      "độc"
+     ]
+    },
+    {
+     "text": "CHÌM TRONG NỘI CHIẾN",
+     "at": [
+      7,
+      "nội"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "evidence",
+   "at": 8,
+   "img": "burma1953",
+   "tone": "color",
+   "maxW": 620,
+   "maxH": 760,
+   "callouts": [
+    {
+     "x": 0.6,
+     "y": 0.5,
+     "text": "QUÂN NỔI DẬY & CỘNG SẢN",
+     "at": [
+      8,
+      "Karen,"
+     ],
+     "side": "r"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "bg": "burma1954",
+   "items": [
+    {
+     "text": "VỪA GIÀNH LẠI THẾ THƯỢNG PHONG",
+     "at": [
+      9,
+      "thượng"
+     ]
+    },
+    {
+     "text": "MỘT ĐỘI QUÂN LẠ",
+     "at": [
+      9,
+      "lạ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 10,
+   "title": "TÀN QUÂN QUỐC DÂN ĐẢNG Ở MIẾN ĐIỆN",
+   "unit": "NGƯỜI",
+   "items": [
+    {
+     "k": "3.1950",
+     "v": 1500,
+     "at": [
+      10,
+      "nghìn"
+     ]
+    },
+    {
+     "k": "4.1951",
+     "v": 4000,
+     "at": [
+      11,
+      "bốn"
+     ]
+    },
+    {
+     "k": "CUỐI 1951",
+     "v": 6000,
+     "at": [
+      11,
+      "sáu"
+     ]
+    },
+    {
+     "k": "1952",
+     "v": 12000,
+     "acc": true,
+     "at": [
+      12,
+      "gấp"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 13,
+   "k": "CHÍNH PHỦ MIẾN ĐIỆN · 6.1950",
+   "name": "ĐẦU HÀNG\nHOẶC RỜI ĐI",
+   "desc": "Yêu cầu gửi tàn quân Quốc Dân Đảng",
+   "bg": "burma1954",
+   "rows": [
+    {
+     "k": "TRẢ LỜI",
+     "v": "*Không đầu hàng · không rời đi*",
+     "at": [
+      14,
+      "không"
+     ]
+    },
+    {
+     "k": "NẾU BỊ TẤN CÔNG",
+     "v": "Đánh trả",
+     "at": [
+      14,
+      "đánh"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "at": 15,
+   "geo": "gt",
+   "pins": [
+    {
+     "name": "Tachileik",
+     "label": "BỊ ĐÁNH ĐUỔI",
+     "at": [
+      15,
+      "đuổi"
+     ]
+    },
+    {
+     "name": "Mong Hsat",
+     "at": [
+      16,
+      "Mong"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "from": "Tachileik",
+     "to": "Mong Hsat",
+     "at": [
+      16,
+      "rút"
+     ],
+     "until": [
+      16,
+      "Hsat,"
+     ],
+     "bend": 0.3
+    }
+   ],
+   "zoom": "Mong Hsat",
+   "zoomK": 1.4
+  },
+  {
+   "type": "broll",
+   "at": 16,
+   "vid": "15506601",
+   "tone": "noir",
+   "veil": 0.35,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "THUNG LŨNG MÀU MỠ",
+     "at": [
+      16,
+      "thung"
+     ]
+    },
+    {
+     "text": "~130 KM TỚI BIÊN GIỚI THÁI",
+     "at": [
+      16,
+      "130"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "bg": "burma1954",
+   "items": [
+    {
+     "text": "TẤN CÔNG NHIỀU LẦN",
+     "at": [
+      17,
+      "tấn"
+     ]
+    },
+    {
+     "text": "KHÔNG LẦN NÀO ĐUỔI ĐƯỢC",
+     "at": [
+      17,
+      "Không"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 18,
+   "bg": "li_mi",
+   "items": [
+    {
+     "text": "KHÔNG HẬU PHƯƠNG",
+     "at": [
+      18,
+      "hậu"
+     ]
+    },
+    {
+     "text": "KHÔNG LƯƠNG",
+     "at": [
+      18,
+      "lương,"
+     ]
+    },
+    {
+     "text": "VẪN ĐỨNG VỮNG",
+     "at": [
+      18,
+      "vững"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 19,
+   "bg": "cat_c46_1950",
+   "text": "MỘT NGƯỜI BẠN\nRẤT GIÀU",
+   "hitAt": [
+    19,
+    "giàu."
+   ]
+  },
+  {
+   "type": "map",
+   "at": 20,
+   "geo": "asia",
+   "pins": [
+    {
+     "name": "Tam Giác Vàng",
+     "label": "NỬA VÒNG TRÁI ĐẤT",
+     "at": [
+      20,
+      "nửa"
+     ]
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "ĐỘI QUÂN KHÔNG CÒN ĐƯỜNG VỀ"
+ },
+ "bgm": {
+  "file": "deep_haze.mp3",
+  "at": 0,
+  "gain": 0.12
+ }
+}

@@ -79,3 +79,36 @@ Các nguồn này cần đăng ký khóa API miễn phí, hoặc phải tìm b�
 1. Mở YouTube Studio, vào mục Nội dung, chọn "Xem chi tiết" ở claim, rồi bấm "Kháng nghị". Lý do: có giấy phép hoặc tư liệu thuộc phạm vi công cộng.
 2. Dán link trang gốc của tư liệu (`page` trong file `.json` của ảnh, `slug` trong `broll/index.json` của Pexels) và tên giấy phép.
 3. Bên claim có 30 ngày để trả lời. Trong thời gian kháng nghị, doanh thu được giữ lại và trả cho bên thắng.
+
+## 7. Quy tắc khi dùng tư liệu trong video có kiếm tiền (tra cứu ngày 04/10/2026)
+
+Có ba lớp luật áp dụng cùng lúc:
+1. Luật bản quyền: Mỹ (YouTube xử lý khiếu nại theo DMCA) và Việt Nam (Luật SHTT, Điều 25).
+2. Hệ thống tự động Content ID.
+3. Chính sách kiếm tiền YPP: "reused content" và "inauthentic content".
+
+| Loại tư liệu | Dùng trong video có kiếm tiền? | Ghi chú |
+|---|---|---|
+| Public domain thật (Mỹ: xuất bản trước 1931; ảnh của chính phủ liên bang Mỹ; CC0/PDM) | ✅ | Riêng phim thời sự cũ vẫn có thể bị Content ID nhận nhầm (mục 3) |
+| CC BY / CC BY-SA | ✅ ghi công | Không dùng NC/ND |
+| Pexels, Pixabay, Mixkit Free | ✅ | Giữ link nguồn để kháng nghị |
+| Ảnh của chính phủ nước khác (Hồng Kông, Thái, Trung Quốc, Việt Nam…) | ⚠️ | KHÔNG tự động là public domain như ảnh liên bang Mỹ. Chỉ dùng khi Commons đã xác nhận giấy phép |
+| Trích dẫn văn bản ngắn (câu nói, công hàm, phát biểu) | ✅ trích dẫn hợp lý | Ngắn, đúng nguyên ý, ghi nguồn. Luật SHTT Điều 25 cho phép trích dẫn hợp lý để bình luận, minh họa trong phim tài liệu |
+| Đọc lại nguyên văn bài viết hay sách của người khác | ❌ | YPP gọi là "exclusive readings of materials you didn't create". Kịch bản của kênh phải là lời viết mới dựa trên dữ kiện (dữ kiện không có bản quyền, câu chữ thì có) |
+| Đoạn trích phim điện ảnh (Vây Thành, Dị Vực, American Gangster…), poster, ảnh still | ❌ cho kênh này | Về luật, có thể bào chữa là fair use (đoạn ngắn, có bình luận). Nhưng hãng phim gần như chắc chắn đã đăng ký Content ID, video sẽ bị chuyển doanh thu cho họ hoặc bị chặn ở một số nước. Chỉ nhắc tên phim |
+| Đoạn trích bản tin truyền hình (CNN, BBC, VTV, TVB…) | ❌ | Rủi ro Content ID và khiếu nại cao nhất, kể cả đoạn vài giây. Ghi nguồn hay chú thích "không có ý vi phạm" đều không có tác dụng |
+| Ảnh báo chí hiện đại (AP, Reuters, Getty, báo Việt Nam) | ❌ | Có thể bị gỡ hẳn video (strike), không chỉ bị claim |
+| Nhạc thương mại | ❌ | Chỉ dùng Kevin MacLeod (CC BY), YouTube Audio Library, Pixabay |
+
+**Content ID claim và gậy bản quyền (strike) khác nhau:**
+- **Claim** là đối sánh tự động. Kênh không bị phạt; video có thể bị chia hoặc mất doanh thu, hoặc bị chặn ở một số nước. Có thể kháng nghị.
+- **Strike** là khi chủ sở hữu gửi yêu cầu gỡ có giá trị pháp lý. Video bị gỡ; 3 strike trong 90 ngày thì kênh bị xóa. Ảnh báo chí và đoạn trích phim là hai nguồn strike phổ biến nhất.
+
+**Chính sách kiếm tiền (YPP):**
+- **Reused content:** đã cho phép dùng lại tư liệu nếu có "bình luận, chỉnh sửa đáng kể, hoặc giá trị giáo dục". Video của kênh (kịch bản riêng, dựng đồ họa, dẫn chuyện) đáp ứng điều này.
+- **Inauthentic content** (cập nhật 15/07/2025): rủi ro thật nằm ở đây. Video đúc khuôn hàng loạt, ít khác biệt giữa các video sẽ bị loại khỏi kiếm tiền. Loạt Shorts S-tier đăng dồn ngày 30/09 thuộc đúng vùng rủi ro này. Cần giữ mỗi video có góc kể riêng và không đăng hàng loạt.
+
+**Giọng AI:**
+- Giọng TTS dẫn chuyện không bắt buộc gắn nhãn.
+- Phải khai báo "nội dung đã chỉnh sửa hoặc tổng hợp" nếu khiến người thật trông như nói hoặc làm điều họ không làm, hoặc dựng cảnh thật như đã xảy ra.
+- Lời trích của nhân vật thật đọc bằng giọng minh họa phải luôn gắn nhãn "GIỌNG ĐỌC MINH HỌA" (engine đã làm) và không giả giọng nhân vật.

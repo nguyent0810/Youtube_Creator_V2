@@ -347,3 +347,20 @@ html, body { width:1920px; height:1080px; overflow:hidden; background:#060505; }
 .th-shanghai .sktitle { top:104px; bottom:auto; }   /* phụ đề Thượng Hải nằm ở y=930: đưa chú thích tranh lên trên cho khỏi đè */
 
 .qpaper .vt { position:absolute; left:26px; top:22px; font-family:'JetBrains Mono'; font-weight:700; font-size:16px; letter-spacing:.2em; color:#7d6f60; }
+
+/* ---------- brand (logo kênh sau cold open) + endcard (20 giây cuối cho end screen) ---------- */
+.brbg { position:absolute; inset:0; background:radial-gradient(80% 70% at 50% 46%, #1b1210 0%, #0a0706 60%, #030202 100%); }
+.brbar { position:absolute; left:958px; top:300px; width:4px; height:420px; background:var(--red); transform-origin:50% 50%; box-shadow:0 0 30px rgba(226,64,45,.7); }
+.brwm { position:absolute; left:0; right:0; top:418px; text-align:center; font-family:'Playfair Display',serif; font-weight:900; font-size:96px;
+        letter-spacing:.14em; color:#f4efe6; white-space:nowrap; text-shadow:0 0 40px rgba(0,0,0,.9); opacity:0; }
+.brrule { position:absolute; left:660px; width:600px; top:552px; height:3px; background:var(--red); transform-origin:50% 50%; }
+.brsub { position:absolute; left:0; right:0; top:578px; text-align:center; font-family:'JetBrains Mono',monospace; font-weight:700; font-size:34px;
+         letter-spacing:.32em; color:var(--red); white-space:nowrap; }
+.ecwm { position:absolute; left:0; right:0; top:150px; text-align:center; font-family:'Playfair Display',serif; font-weight:900; font-size:64px; letter-spacing:.12em; color:#f4efe6; opacity:0; }
+.ecsub { position:absolute; left:0; right:0; top:236px; text-align:center; font-family:'JetBrains Mono'; font-weight:700; font-size:24px; letter-spacing:.34em; color:var(--red); opacity:0; }
+.ecbox { position:absolute; left:250px; top:350px; width:760px; height:428px; border:2px solid rgba(244,239,230,.35); background:rgba(0,0,0,.35); opacity:0; }
+.eccir { position:absolute; left:1250px; top:404px; width:320px; height:320px; border-radius:50%; border:2px solid rgba(244,239,230,.35); background:rgba(0,0,0,.35); opacity:0; }
+.ecbox span, .eccir span { position:absolute; left:0; right:0; top:50%; transform:translateY(-50%); text-align:center; font-family:'JetBrains Mono'; font-weight:700;
+                           font-size:26px; letter-spacing:.3em; color:rgba(244,239,230,.55); }
+.ecnote { position:absolute; left:0; right:0; top:842px; text-align:center; font-family:'Playfair Display',serif; font-style:italic; font-weight:700; font-size:36px; color:#e6dccb; opacity:0; }
+.th-noir .ecnote { top:830px; }

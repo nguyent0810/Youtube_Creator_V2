@@ -241,6 +241,38 @@
     common(s, d);
   };
 
+  /* ---------- brand: logo kênh 2–3 giây, đặt ngay sau cold open (câu "Đây là hồ sơ X") ----------
+     {sub: "HỒ SƠ · TAM GIÁC VÀNG", bg?}. Vạch đỏ mọc giữa màn, chữ tên kênh tách từ tâm ra, dòng hồ sơ gõ chữ.
+     sfx (sfx_long): whoosh trước t0, âm hiệu 2 nốt + ngân chuông; nhạc nền được né trong cảnh này. */
+  const BRAND = "INTO THE KILLER’S MIND";
+  B.brand = (s, d) => {
+    if (s.bg) bg(s, d, 0.86); else el("div", "brbg", null, d);
+    const t0 = s.t0, bar = el("div", "brbar", null, d), wm = el("div", "brwm", esc(s.name || BRAND), d);
+    const sub = el("div", "brsub", "", d), rule = el("div", "brrule", null, d), txt = s.sub || "";
+    tl.fromTo(bar, { scaleY: 0 }, { scaleY: 1, duration: 0.28, ease: "power3.out", immediateRender: false }, t0 + 0.02);
+    tl.to(bar, { scaleX: 60, opacity: 0, duration: 0.35, ease: "power2.in" }, t0 + 0.32);
+    tl.fromTo(wm, { opacity: 0, letterSpacing: "0.6em", clipPath: "inset(0 50% 0 50%)", filter: "blur(10px)" },
+      { opacity: 1, letterSpacing: "0.14em", clipPath: "inset(0 0% 0 0%)", filter: "blur(0px)", duration: 0.7, ease: "expo.out", immediateRender: false }, t0 + 0.38);
+    tl.fromTo(rule, { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: "power3.inOut", immediateRender: false }, t0 + 0.75);
+    const chars = [...txt], span = Math.min(0.7, 0.04 * chars.length);
+    for (let k = 1; k <= chars.length; k++) tl.set(sub, { textContent: chars.slice(0, k).join("") }, t0 + 0.95 + span * (k / chars.length));
+    tl.to(wm, { scale: 1.035, duration: Math.max(0.3, s.t1 - t0 - 0.4), ease: "none" }, t0 + 0.4);
+    if ($("#flick")) for (let k = 0; k < 10; k++) tl.set("#flick", { opacity: rnd() * 0.06 }, t0 + 0.38 + k / 12);
+  };
+
+  /* ---------- endcard: 20 giây cuối cho end screen của YouTube (gắn trong Studio) ----------
+     Chừa ô video "XEM TIẾP" bên trái và ô tròn "ĐĂNG KÝ" bên phải đúng chỗ YouTube đặt phần tử; nền ảnh tư liệu tối dần. */
+  B.endcard = (s, d) => {
+    if (s.bg) bg(s, d, 0.88); else el("div", "brbg", null, d);
+    const wm = el("div", "ecwm", esc(BRAND), d), sub = el("div", "ecsub", esc(s.sub || "HỒ SƠ TIẾP THEO"), d);
+    const box = el("div", "ecbox", "<span>XEM TIẾP</span>", d), cir = el("div", "eccir", "<span>ĐĂNG KÝ</span>", d);
+    const note = el("div", "ecnote", esc(s.note || "Cảm ơn bạn đã xem hồ sơ này"), d);
+    tl.fromTo(wm, { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out", immediateRender: false }, s.t0 + 0.2);
+    tl.fromTo(sub, { opacity: 0 }, { opacity: 1, duration: 0.5, immediateRender: false }, s.t0 + 0.5);
+    tl.fromTo([box, cir], { opacity: 0, scale: 0.94 }, { opacity: 1, scale: 1, duration: 0.6, ease: "power3.out", stagger: 0.15, immediateRender: false }, s.t0 + 0.6);
+    tl.fromTo(note, { opacity: 0 }, { opacity: 1, duration: 0.6, immediateRender: false }, s.t0 + 1.2);
+  };
+
   /* ---------- question: câu hỏi lặng (sfx: tắt nền) ---------- */
   B.question = (s, d) => { bg(s, d, 0.75); const a = el("div", "ask", esc(s.text).replace(/\n/g, "<br/>"), d);
     a.style.fontSize = px(fsz(s.text.split("\n").reduce((x, y) => (x.length > y.length ? x : y)), 92, 1600, 0.5));
@@ -628,6 +660,18 @@
   /* ---------- sketch: tranh minh hoạ nét mực, vẽ dần từng nét (on twos) ----------
      {art: boy|dinner|boat, title, drawDur}. Luôn gắn nhãn TRANH MINH HỌA. sfx: tiếng bút sột soạt suốt lúc vẽ */
   const C2 = (x, y, r) => `M${x + r} ${y} a${r} ${r} 0 1 1 ${-2 * r} 0 a${r} ${r} 0 1 1 ${2 * r} 0`;
+  // nét người/la kiểu storyboard (không vẽ mặt) cho các tranh minh họa
+  const MAN = (x, y, gun) => `M${x + 9} ${y} a9 9 0 1 1 -18 0 a9 9 0 1 1 18 0 M${x - 14} ${y - 6} L${x + 14} ${y - 6} M${x} ${y + 9} L${x - 2} ${y + 55}`
+    + ` M${x} ${y + 22} L${x - 16} ${y + 44} M${x} ${y + 22} L${x + 16} ${y + 40} M${x - 2} ${y + 55} L${x - 14} ${y + 92} M${x - 2} ${y + 55} L${x + 12} ${y + 92}`
+    + (gun ? ` M${x + 10} ${y + 14} L${x - 12} ${y + 60}` : "");
+  const MULE = (x, y) => `M${x} ${y} Q${x + 45} ${y - 18} ${x + 90} ${y} L${x + 92} ${y + 26} Q${x + 45} ${y + 36} ${x} ${y + 26} Z M${x + 90} ${y + 4} L${x + 112} ${y - 24} L${x + 124} ${y - 16} L${x + 104} ${y + 12}`
+    + ` M${x + 8} ${y + 26} L${x + 4} ${y + 64} M${x + 24} ${y + 28} L${x + 26} ${y + 64} M${x + 70} ${y + 28} L${x + 66} ${y + 64} M${x + 86} ${y + 26} L${x + 90} ${y + 64}`
+    + ` M${x + 18} ${y - 6} L${x + 18} ${y - 34} L${x + 72} ${y - 34} L${x + 72} ${y - 6} M${x + 18} ${y - 20} L${x + 72} ${y - 20}`;
+  const CHUTE = (x, y) => `M${x - 46} ${y} Q${x} ${y - 70} ${x + 46} ${y} Q${x + 23} ${y - 12} ${x} ${y} Q${x - 23} ${y - 12} ${x - 46} ${y} M${x - 46} ${y} L${x - 12} ${y + 70} M${x + 46} ${y} L${x + 12} ${y + 70} M${x} ${y} L${x} ${y + 70}`
+    + ` M${x - 16} ${y + 70} L${x + 16} ${y + 70} L${x + 16} ${y + 98} L${x - 16} ${y + 98} Z`;
+  const DESK = (x, y) => `M${x} ${y} L${x + 150} ${y} M${x + 10} ${y} L${x + 10} ${y + 60} M${x + 140} ${y} L${x + 140} ${y + 60} M${x + 40} ${y - 62} L${x + 110} ${y - 62} L${x + 110} ${y - 12} L${x + 40} ${y - 12} Z M${x + 75} ${y - 12} L${x + 75} ${y}`
+    + ` M${x + 84} ${y + 34} a14 14 0 1 1 -28 0 a14 14 0 1 1 28 0 M${x + 70} ${y + 48} L${x + 70} ${y + 96} M${x + 50} ${y + 96} L${x + 92} ${y + 96}`;
+  const POPPY = (x, y, h) => `M${x} ${y} Q${x - 6} ${y - h / 2} ${x + 2} ${y - h} M${x + 2} ${y - h} a9 11 0 1 1 0.1 0 M${x - 2} ${y - h * 0.4} q-16 -6 -22 -20`;
   const SKETCH = {
     boy: [
       ["M80 700 L1420 700", 3], ["M150 700 L150 300 L430 250 L430 700", 3], ["M190 360 L270 350 L270 430 L190 440 Z", 2], ["M320 340 L400 330 L400 410 L320 420 Z", 2],
@@ -738,6 +782,54 @@
       [C2(1250, 620, 90), 3.5], ["M1100 520 L1420 520 L1420 450 L1100 450 Z", 3], ["M1250 530 L1250 710 M1160 620 L1340 620", 2],
       ["M100 600 Q400 580 700 600 M800 640 Q1100 620 1400 640", 1.5],
     ],
+    // đoàn la thồ và người cầm súng lội qua sông, núi phía sau (trận Ban Khwan 1967)
+    convoy: [
+      ["M80 300 L250 190 L400 260 L560 160 L740 250 L900 180 L1080 250 L1240 170 L1420 260", 2],
+      ["M80 560 Q400 540 750 560 T1420 560", 2], ["M80 640 Q420 620 760 640 T1420 640", 1.5], ["M80 710 Q450 690 820 710 T1420 710", 1.5],
+      [MULE(160, 470), 3], [MAN(330, 420, 1), 3], [MULE(470, 486), 3], [MAN(640, 436, 1), 3], [MULE(780, 470), 3], [MAN(950, 420, 1), 3],
+      [MULE(1090, 486), 3], [MAN(1270, 436, 1), 3],
+    ],
+    // máy bay vận tải không phù hiệu thả dù tiếp tế xuống thung lũng rừng (Chiến dịch Giấy)
+    airdrop: [
+      ["M80 720 L260 600 L420 680 L600 560 L780 660 L960 580 L1160 670 L1420 590", 2.5],
+      ["M150 720 q20 -40 40 0 M330 700 q20 -40 40 0 M700 690 q20 -40 40 0 M1050 700 q20 -40 40 0 M1300 690 q20 -40 40 0", 2],
+      ["M520 150 Q760 120 1000 150 Q1040 160 1000 172 Q760 195 540 170 Z", 4], ["M700 156 L640 230 L700 230 L800 162", 3.5], ["M760 150 L820 100 L860 102 L800 152", 2.5],
+      ["M540 160 L480 120 L520 120 L590 156", 3],
+      [CHUTE(560, 300), 3], [CHUTE(760, 340), 3], [CHUTE(960, 290), 3], [CHUTE(1140, 360), 3],
+    ],
+    // phòng giam: song sắt, cửa sổ nhỏ trên cao, một người ngồi đọc sách (nhà tù Mandalay 1969)
+    prison: [
+      ["M80 720 L1420 720", 3], ["M300 120 L300 720 M1200 120 L1200 720 M300 120 L1200 120", 3],
+      ["M640 200 L860 200 L860 320 L640 320 Z M695 200 L695 320 M750 200 L750 320 M805 200 L805 320", 2.5],
+      ["M350 120 L350 720 M430 120 L430 720 M510 120 L510 720 M1000 120 L1000 720 M1080 120 L1080 720 M1150 120 L1150 720", 4],
+      ["M600 560 L900 560 L900 590 L600 590 Z M620 590 L620 720 M880 590 L880 720", 3],
+      [C2(750, 420, 26), 3.5], ["M750 446 L746 556 M748 476 L712 516 L760 520 M750 476 L786 512 L740 522", 3.5],
+      ["M712 510 L790 510 L800 540 L702 540 Z", 2.5], ["M746 556 L700 560 L690 640 M746 556 L800 560 L810 640", 3.5],
+    ],
+    // phòng lừa đảo trực tuyến: dãy bàn máy tính, người ngồi quay lưng, cửa sổ chấn song, đồng hồ trên tường
+    scamroom: [
+      ["M80 720 L1420 720", 3], ["M80 150 L1420 150", 2], ["M1180 190 L1340 190 L1340 330 L1180 330 Z M1220 190 L1220 330 M1260 190 L1260 330 M1300 190 L1300 330", 3],
+      [C2(260, 230, 40), 3], ["M260 230 L260 204 M260 230 L282 240", 2.5],
+      [DESK(140, 470), 3], [DESK(420, 470), 3], [DESK(700, 470), 3], [DESK(980, 470), 3],
+      ["M140 600 L1260 600", 1.5],
+    ],
+    // nông dân đội nón lá thu hoạch nhựa anh túc trên sườn núi
+    harvest: [
+      ["M80 720 Q500 520 1420 600", 3], ["M80 300 L260 210 L420 270 L620 190 L820 260 L1040 200 L1260 260 L1420 220", 2],
+      [POPPY(200, 700, 120) + " " + POPPY(270, 690, 140) + " " + POPPY(340, 676, 110) + " " + POPPY(420, 664, 130), 2.5],
+      [POPPY(980, 590, 130) + " " + POPPY(1060, 588, 110) + " " + POPPY(1140, 590, 140) + " " + POPPY(1220, 594, 120) + " " + POPPY(1300, 600, 130), 2.5],
+      ["M640 420 L760 420 L700 380 Z", 3.5], ["M700 420 Q690 470 650 500 M700 430 Q720 480 760 520 L780 600 M650 500 L630 610", 3.5],
+      ["M676 470 L620 520 M720 470 L770 470 L790 500", 3], ["M760 520 L840 520 L830 590 L770 590 Z", 3],
+    ],
+    // tháp sòng bạc mái vòm bên bờ sông, phà chạy ngang (đặc khu hôm nay)
+    casino: [
+      ["M80 600 Q400 580 750 600 T1420 600", 2], ["M80 680 Q450 660 800 680 T1420 680", 1.5],
+      ["M80 560 L1420 560", 2.5], ["M640 560 L640 260 L860 260 L860 560", 3.5], ["M620 260 L880 260 L860 230 L640 230 Z", 3],
+      ["M690 230 Q750 120 810 230", 3.5], ["M750 150 L750 100", 2.5],
+      ["M670 300 L830 300 M670 350 L830 350 M670 400 L830 400 M670 450 L830 450 M670 500 L830 500", 1.5],
+      ["M420 560 L420 380 L560 380 L560 560 M960 560 L960 400 L1120 400 L1120 560 M1160 560 L1160 450 L1260 450 L1260 560", 3],
+      ["M300 640 L460 640 L440 662 L320 662 Z M350 640 L350 615 L410 615 L410 640", 3],
+    ],
     // máy bay chao đảo giữa mưa trên dãy núi
     plane: [
       ["M80 720 L300 480 L460 640 L640 400 L860 660 L1040 460 L1250 640 L1420 520", 3],
@@ -836,7 +928,8 @@
     box.style.fontSize = px(fsz(c.map((w) => w.w).join(" "), 44, 1560, 0.52));
     const t0 = c[0].t - 0.06, nx = chunks[n + 1], t1 = nx ? Math.min(nx[0].t - 0.06, c[c.length - 1].t + c[c.length - 1].d + 0.6) : DUR;
     tl.set(box, { opacity: 1 }, t0); tl.set(box, { opacity: 0 }, t1); });
-  C.scenes.filter((s) => s.type === "question" || s.type === "chapter" || s.nocaps).forEach((s) => { tl.set("#caps", { opacity: 0 }, s.t0 - 0.01); tl.set("#caps", { opacity: 1 }, s.t1); });
+  C.scenes.filter((s) => s.type === "question" || s.type === "chapter" || s.type === "endcard" || s.nocaps).forEach((s) => { tl.set("#caps", { opacity: 0 }, s.t0 - 0.01); tl.set("#caps", { opacity: 1 }, s.t1); });
+  C.scenes.filter((s) => s.type === "endcard").forEach((s) => tl.to(["#hud", "#prog"], { opacity: 0, duration: 0.4 }, s.t0));
 
   window.__timelines = window.__timelines || {};
   window.__timelines["main"] = tl;

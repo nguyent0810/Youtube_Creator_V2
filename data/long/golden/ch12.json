@@ -1,0 +1,399 @@
+{
+ "title": "Từ thuốc phiện đến viên nén",
+ "lines": [
+  {
+   "t": "Chương mười hai. Từ thuốc phiện đến viên nén.",
+   "p": 0.8
+  },
+  "Sau khi Khun Sa đầu hàng, sản lượng thuốc phiện ở Tam Giác Vàng giảm xuống.",
+  "Cùng lúc đó, Afghanistan vươn lên thành nơi trồng anh túc lớn nhất thế giới.",
+  "Ở Myanmar, người nắm thuốc phiện lớn nhất giờ là Quân đội Nhà nước Wa Thống nhất, chính đối thủ cũ của ông.",
+  {
+   "t": "Năm 2005, diện tích trồng anh túc ở Myanmar chỉ còn khoảng bốn trăm ba mươi ki-lô-mét vuông.",
+   "p": 1.0
+  },
+  "Nhưng Tam Giác Vàng không chết.",
+  "Nó đổi sản phẩm.",
+  "Thay cho cánh đồng anh túc cần cả mùa để trồng, là những xưởng hóa chất có thể dựng lên trong vài tuần.",
+  "Ma túy tổng hợp. Viên nén methamphetamine mà người Thái gọi là \"yaba\", và ma túy đá.",
+  {
+   "t": "Tam Giác Vàng giờ là một trong những nơi sản xuất ma túy tổng hợp lớn nhất thế giới, xuất đi khắp châu Á, sang tận Úc và New Zealand.",
+   "p": 1.0
+  },
+  "Còn cây thuốc phiện thì quay trở lại.",
+  "Sau đại dịch và cuộc đảo chính năm 2021, nông dân nghèo đi, và anh túc lại được trồng nhiều hơn.",
+  "Năm 2022, diện tích trồng tăng ba mươi ba phần trăm, sản lượng ước tính tăng gần gấp đôi.",
+  "Năm 2023, theo Văn phòng Liên Hợp Quốc về Ma túy và Tội phạm, Myanmar sản xuất khoảng một nghìn không trăm tám mươi tấn thuốc phiện.",
+  "Cùng năm ấy, lệnh cấm của Taliban khiến sản lượng Afghanistan giảm khoảng chín mươi lăm phần trăm.",
+  {
+   "t": "Myanmar trở lại vị trí nơi sản xuất thuốc phiện lớn nhất thế giới.",
+   "p": 1.0
+  },
+  "Bảy mươi năm sau khi đội quân của Lý Di vượt biên giới, những sườn núi ấy vẫn trổ hoa anh túc.",
+  "Nhưng ngay bên bờ sông, nơi ba nước gặp nhau, có những thứ mới mọc lên.",
+  "Không phải hoa.",
+  "Mà là những tòa nhà cao tầng."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "12",
+   "k": "CHƯƠNG MƯỜI HAI",
+   "title": "TỪ THUỐC PHIỆN\nĐẾN VIÊN NÉN",
+   "sub": "1996 — 2023",
+   "titleAt": [
+    0,
+    "Từ"
+   ],
+   "bg": "meth_bust"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "bg": "poppy_turkey",
+   "items": [
+    {
+     "text": "SAU 1996",
+     "at": [
+      1,
+      "Khun"
+     ],
+     "sm": true
+    },
+    {
+     "text": "THUỐC PHIỆN GIẢM XUỐNG",
+     "at": [
+      1,
+      "giảm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "at": 2,
+   "geo": "asia",
+   "pins": [
+    {
+     "name": "Tam Giác Vàng",
+     "at": [
+      2,
+      "Cùng"
+     ]
+    }
+   ],
+   "zoom": "Tam Giác Vàng",
+   "zoomK": 1.05
+  },
+  {
+   "type": "photo",
+   "at": 3,
+   "img": "uwsa",
+   "tone": "color",
+   "move": "in",
+   "kin": [
+    {
+     "text": "NGƯỜI NẮM THUỐC PHIỆN LỚN NHẤT",
+     "at": [
+      3,
+      "lớn"
+     ]
+    },
+    {
+     "text": "QUÂN ĐỘI NHÀ NƯỚC WA",
+     "at": [
+      3,
+      "Wa"
+     ],
+     "acc": true
+    }
+   ],
+   "veil": 0.52
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "bg": "poppy_turkey",
+   "from": 0,
+   "to": 430,
+   "suffix": " KM²",
+   "countAt": [
+    4,
+    "bốn"
+   ],
+   "label": "DIỆN TÍCH ANH TÚC Ở MYANMAR · 2005"
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "bg": "meth_bust",
+   "text": "KHÔNG CHẾT",
+   "white": true,
+   "hitAt": [
+    5,
+    "chết."
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "bg": "meth_bust",
+   "text": "ĐỔI SẢN PHẨM",
+   "hitAt": [
+    6,
+    "đổi"
+   ]
+  },
+  {
+   "type": "split",
+   "at": 7,
+   "title": "TỪ CÁNH ĐỒNG ĐẾN XƯỞNG",
+   "a": {
+    "img": "poppy_turkey",
+    "label": "CÂY ANH TÚC: CẢ MÙA",
+    "at": [
+     7,
+     "cánh"
+    ]
+   },
+   "b": {
+    "img": "meth_bust",
+    "label": "XƯỞNG HÓA CHẤT: VÀI TUẦN",
+    "at": [
+     7,
+     "xưởng"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 8,
+   "img": "meth_bust",
+   "tone": "color",
+   "move": "in",
+   "illus": "ẢNH MINH HỌA · MA TÚY ĐÁ BỊ THU GIỮ (HẢI QUAN MỸ)",
+   "kin": [
+    {
+     "text": "YABA",
+     "at": [
+      8,
+      "yaba"
+     ],
+     "acc": true
+    },
+    {
+     "text": "MA TÚY ĐÁ",
+     "at": [
+      8,
+      "đá."
+     ]
+    }
+   ],
+   "veil": 0.52
+  },
+  {
+   "type": "map",
+   "at": 9,
+   "geo": "asia",
+   "pins": [
+    {
+     "name": "Tam Giác Vàng",
+     "label": "→ CHÂU Á · ÚC · NEW ZEALAND",
+     "at": [
+      9,
+      "xuất"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "bg": "poppy",
+   "items": [
+    {
+     "text": "CÂY THUỐC PHIỆN",
+     "at": [
+      10,
+      "cây"
+     ],
+     "sm": true
+    },
+    {
+     "text": "QUAY TRỞ LẠI",
+     "at": [
+      10,
+      "trở"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "bg": "maesalong_tea",
+   "items": [
+    {
+     "text": "ĐẠI DỊCH · ĐẢO CHÍNH 2021",
+     "at": [
+      11,
+      "đảo"
+     ]
+    },
+    {
+     "text": "NÔNG DÂN NGHÈO ĐI",
+     "at": [
+      11,
+      "nghèo"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 12,
+   "title": "MYANMAR · 2022",
+   "rows": [
+    {
+     "k": "DIỆN TÍCH TRỒNG",
+     "v": "+33%",
+     "at": [
+      12,
+      "ba"
+     ]
+    },
+    {
+     "k": "SẢN LƯỢNG",
+     "v": "≈ GẤP ĐÔI",
+     "at": [
+      12,
+      "gấp"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 13,
+   "title": "SẢN LƯỢNG THUỐC PHIỆN NĂM 2023 (TẤN)",
+   "unit": "TẤN",
+   "items": [
+    {
+     "k": "MYANMAR",
+     "v": 1080,
+     "acc": true,
+     "at": [
+      13,
+      "nghìn"
+     ]
+    },
+    {
+     "k": "AFGHANISTAN",
+     "v": 330,
+     "at": [
+      14,
+      "Afghanistan"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 15,
+   "bg": "poppy",
+   "text": "LỚN NHẤT\nTHẾ GIỚI",
+   "white": true,
+   "hitAt": [
+    15,
+    "lớn"
+   ],
+   "sub": "MYANMAR · 2023 · UNODC"
+  },
+  {
+   "type": "photo",
+   "at": 16,
+   "img": "poppy",
+   "tone": "color",
+   "move": "in",
+   "kin": [
+    {
+     "text": "70 NĂM SAU",
+     "at": [
+      16,
+      "Bảy"
+     ]
+    },
+    {
+     "text": "VẪN TRỔ HOA ANH TÚC",
+     "at": [
+      16,
+      "hoa"
+     ],
+     "acc": true
+    }
+   ],
+   "veil": 0.52
+  },
+  {
+   "type": "photo",
+   "at": 17,
+   "img": "gtsez1",
+   "tone": "color",
+   "move": "in",
+   "kin": [
+    {
+     "text": "NGAY BÊN BỜ SÔNG",
+     "at": [
+      17,
+      "bờ"
+     ]
+    },
+    {
+     "text": "NHỮNG THỨ MỚI MỌC LÊN",
+     "at": [
+      17,
+      "mọc"
+     ],
+     "acc": true
+    }
+   ],
+   "veil": 0.52
+  },
+  {
+   "type": "kinetic",
+   "at": 18,
+   "bg": "gtsez1",
+   "items": [
+    {
+     "text": "KHÔNG PHẢI HOA",
+     "at": [
+      18,
+      "hoa."
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 19,
+   "bg": "gtsez_tower",
+   "text": "NHỮNG TÒA NHÀ\nCAO TẦNG",
+   "white": true,
+   "hitAt": [
+    19,
+    "cao"
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 12",
+  "t": "TỪ THUỐC PHIỆN ĐẾN VIÊN NÉN"
+ },
+ "bgm": {
+  "file": "darkest_child.mp3",
+  "at": 0,
+  "gain": 0.12
+ }
+}
