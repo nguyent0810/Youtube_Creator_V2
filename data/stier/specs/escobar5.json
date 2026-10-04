@@ -1,0 +1,187 @@
+{
+ "title": "Pablo Escobar: 5 sự thật, từ nhà tù tự xây tới 200 con hà mã",
+ "description": "Pablo Escobar, ông vua cocaine: tài sản 30 tỷ đô, tự xây nhà tù cho mình rồi bỏ trốn, và 4 con hà mã trong sở thú riêng nay đã thành đàn khoảng 200 con ở Colombia.",
+ "tags": [
+  "Pablo Escobar",
+  "Escobar",
+  "ông trùm ma túy",
+  "hà mã Escobar",
+  "La Catedral",
+  "Colombia",
+  "băng đảng",
+  "5 sự thật"
+ ],
+ "kicker": "5 SỰ THẬT",
+ "sub": "PABLO ESCOBAR",
+ "acc": [
+  "escobar",
+  "catedral",
+  "hà",
+  "mã",
+  "30",
+  "200",
+  "sông"
+ ],
+ "lines": [
+  "Pablo Escobar: năm sự thật khó tin về ông vua cocaine.",
+  "Một: khi chết, hắn có khối tài sản ước tính ba mươi tỷ đô la.",
+  "Hai: hắn chịu ra đầu thú, với điều kiện được ở trong nhà tù do chính hắn xây, tên là La Catedral.",
+  "Ba: năm 1992, khi chính phủ định chuyển hắn sang nhà tù thật, hắn trốn luôn.",
+  "Bốn: hắn bị cảnh sát bắn chết năm 1993, một ngày sau sinh nhật thứ bốn mươi bốn.",
+  "Năm: hắn từng mua bốn con hà mã cho sở thú riêng. Hắn chết, chúng xổng chuồng.",
+  "Đến năm 2026, đàn hà mã ấy đã lên khoảng hai trăm con.",
+  "Ông trùm chết hơn ba mươi năm, nhưng di sản to nhất của hắn vẫn đang bơi ngoài sông."
+ ],
+ "imgs": {
+  "mug": "File:Pablo Escobar Mug (cropped)(b).jpg",
+  "coke": "File:CocaineHydrochloridePowder.jpg"
+ },
+ "map": {
+  "countries": [
+   "Colombia"
+  ],
+  "context": [
+   "Venezuela",
+   "Ecuador",
+   "Peru",
+   "Brazil",
+   "Panama"
+  ],
+  "labels": {
+   "Colombia": "COLOMBIA"
+  },
+  "bbox": [
+   -80,
+   -3,
+   -66,
+   12
+  ],
+  "pins": [
+   {
+    "name": "Nápoles",
+    "lon": -74.73,
+    "lat": 5.88,
+    "label": "SỞ THÚ RIÊNG CỦA ESCOBAR"
+   }
+  ]
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "mug",
+   "frame": "print",
+   "tone": "bw",
+   "intro": true,
+   "head": "VUA COCAINE"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 30,
+   "prefix": "$",
+   "suffix": " TỶ",
+   "label": "1 · TÀI SẢN ƯỚC TÍNH",
+   "until": [
+    1,
+    "đô"
+   ]
+  },
+  {
+   "type": "file",
+   "at": 2,
+   "k": "2 · THỎA THUẬN ĐẦU THÚ",
+   "name": "LA CATEDRAL",
+   "desc": "Nhà tù do chính Escobar xây",
+   "stamp": {
+    "text": "TỰ XÂY",
+    "at": [
+     2,
+     "xây,"
+    ]
+   }
+  },
+  {
+   "type": "date",
+   "at": 3,
+   "day": "3 · ĐÀO TẨU",
+   "date": "1992",
+   "groupAt": [
+    [
+     3,
+     "1992,"
+    ]
+   ],
+   "stamp": {
+    "text": "ĐÀO TẨU",
+    "at": [
+     3,
+     "trốn"
+    ]
+   }
+  },
+  {
+   "type": "mug",
+   "at": 4,
+   "ghost": "02.12.1993",
+   "mug": {
+    "img": "mug",
+    "name": "4 · PABLO ESCOBAR",
+    "at": [
+     4,
+     null,
+     0,
+     0.2
+    ]
+   },
+   "stamp": {
+    "text": "BỊ BẮN CHẾT",
+    "at": [
+     4,
+     "bắn"
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "at": 5,
+   "pins": [
+    {
+     "name": "Nápoles",
+     "at": [
+      5,
+      "sở"
+     ],
+     "side": "r"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "to": 200,
+   "label": "5 · CON HÀ MÃ · 2026",
+   "until": [
+    6,
+    "hai"
+   ],
+   "sub": {
+    "text": "TỪ 4 CON BAN ĐẦU",
+    "at": [
+     6,
+     "đàn"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "DI SẢN TO NHẤT\nĐANG BƠI NGOÀI SÔNG",
+   "bg": "mug"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Pablo_Escobar",
+  "https://en.wikipedia.org/wiki/Hippopotamuses_in_Colombia"
+ ],
+ "hashtags": "#Shorts #PabloEscobar #trùmmatúy #băngđảng"
+}

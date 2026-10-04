@@ -1,0 +1,187 @@
+{
+ "title": "Chuyện ma: tin nhắn thoại lúc 2 giờ sáng từ số của người đã mất",
+ "description": "Truyện hư cấu, không dựa trên sự kiện có thật. Ba tháng sau đám tang, điện thoại tôi nhận một tin nhắn thoại lúc 2 giờ 17 sáng, từ số của người đã mất. Nhà mạng nói số ấy đã bị cắt.",
+ "tags": [
+  "chuyện ma",
+  "truyện ma",
+  "tin nhắn ma",
+  "nhắn tin chuyện ma",
+  "truyện kinh dị",
+  "chuyện tâm linh",
+  "2 giờ sáng"
+ ],
+ "kicker": "TRUYỆN HƯ CẤU",
+ "sub": "02:17 · 11 GIÂY",
+ "acc": [
+  "11",
+  "giây",
+  "gõ",
+  "ba",
+  "rèm",
+  "ngón"
+ ],
+ "lines": [
+  "Ba tháng sau đám tang của ông, điện thoại tôi báo có một tin nhắn thoại. Từ số của ông.",
+  "Hai giờ mười bảy phút sáng. Dài đúng mười một giây.",
+  "Tôi bấm nghe. Chỉ có tiếng mưa, và tiếng ai đó thở rất chậm.",
+  "Ở giây thứ chín, có tiếng gõ nhẹ ba lần, như gõ vào cửa kính.",
+  "Nhà mạng nói số ấy đã bị cắt từ ngày ông mất.",
+  "Tối đó, đúng hai giờ mười bảy phút, có ba tiếng gõ vào cửa sổ phòng tôi.",
+  "Tôi không dám mở rèm.",
+  "Sáng ra, trên lớp bụi ngoài cửa kính có ba vết ngón tay.",
+  "Và điện thoại tôi lại báo: một tin nhắn thoại mới, dài mười một giây."
+ ],
+ "imgs": {},
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "1 TIN NHẮN THOẠI",
+     "at": [
+      0,
+      "tin"
+     ]
+    },
+    {
+     "text": "TỪ SỐ CỦA ÔNG",
+     "acc": true,
+     "at": [
+      0,
+      "số"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "clock",
+   "at": 1,
+   "from": "02:17",
+   "plus": "11 GIÂY",
+   "plusAt": [
+    1,
+    "mười",
+    1
+   ],
+   "turns": 1
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "TIẾNG MƯA",
+     "at": [
+      2,
+      "mưa,"
+     ]
+    },
+    {
+     "text": "TIẾNG THỞ RẤT CHẬM",
+     "acc": true,
+     "at": [
+      2,
+      "thở"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 9,
+   "prefix": "GIÂY ",
+   "label": "TIẾNG GÕ · 3 LẦN",
+   "until": [
+    3,
+    "chín,"
+   ],
+   "sub": {
+    "text": "NHƯ GÕ VÀO CỬA KÍNH",
+    "at": [
+     3,
+     "cửa"
+    ]
+   }
+  },
+  {
+   "type": "file",
+   "at": 4,
+   "k": "NHÀ MẠNG",
+   "name": "SỐ ĐÃ\nBỊ CẮT",
+   "desc": "Từ ngày ông mất",
+   "stamp": {
+    "text": "KHÔNG HOẠT ĐỘNG",
+    "at": [
+     4,
+     "cắt"
+    ]
+   }
+  },
+  {
+   "type": "clock",
+   "at": 5,
+   "from": "02:17",
+   "plus": "3 TIẾNG GÕ",
+   "plusAt": [
+    5,
+    "ba"
+   ],
+   "turns": 1
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "TÔI KHÔNG DÁM\nMỞ RÈM"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "3 VẾT",
+     "acc": true,
+     "size": 260,
+     "at": [
+      7,
+      "ba"
+     ]
+    },
+    {
+     "text": "NGÓN TAY",
+     "at": [
+      7,
+      "ngón"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "1 TIN NHẮN THOẠI MỚI",
+     "at": [
+      8,
+      "tin"
+     ]
+    },
+    {
+     "text": "11 GIÂY",
+     "acc": true,
+     "size": 200,
+     "at": [
+      8,
+      "mười"
+     ]
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "Truyện hư cấu do kênh sáng tác"
+ ],
+ "hashtags": "#Shorts #chuyệnma #truyệnma #truyệnkinhdị",
+ "fiction": true
+}

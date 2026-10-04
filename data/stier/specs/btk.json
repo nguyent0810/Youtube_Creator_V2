@@ -1,0 +1,233 @@
+{
+ "title": "Sát nhân BTK trốn 30 năm, sa lưới vì tin lời cảnh sát",
+ "description": "Sát nhân BTK giết ít nhất 10 người ở Kansas và trốn suốt 30 năm. Năm 2005, hắn hỏi cảnh sát đĩa mềm có bị truy vết không. Họ nói không. Hắn tin.",
+ "tags": [
+  "BTK",
+  "Dennis Rader",
+  "sát nhân hàng loạt",
+  "kẻ sát nhân",
+  "FBI",
+  "vụ án có thật ở mỹ",
+  "hồ sơ vụ án",
+  "vụ án có thật"
+ ],
+ "kicker": "HỒ SƠ 2005",
+ "sub": "SÁT NHÂN BTK",
+ "acc": [
+  "btk",
+  "đĩa",
+  "mềm",
+  "rex",
+  "dennis",
+  "rader",
+  "câu",
+  "hỏi"
+ ],
+ "lines": [
+  "Kẻ sát nhân BTK giết ít nhất mười người ở bang Kansas, rồi gửi thư khiêu khích cảnh sát.",
+  "Năm 1979, hắn đột nhiên im lặng.",
+  "Hai mươi lăm năm sau, BTK quay lại. Và hỏi cảnh sát một câu.",
+  "Nếu tôi gửi một chiếc đĩa mềm, các ông có truy ra tôi không?",
+  "Cảnh sát trả lời trên báo: Rex, sẽ ổn thôi.",
+  "Hắn tin. Và gửi một chiếc đĩa mềm màu tím.",
+  "Trên đĩa còn sót một file Word đã xóa, sửa lần cuối bởi Dennis.",
+  "Dennis Rader, chủ tịch hội đồng một nhà thờ, bị bắt chín ngày sau.",
+  "Ba mươi năm trốn tránh, kết thúc bằng một câu hỏi."
+ ],
+ "imgs": {
+  "young": "File:Dennis Rader 1963.jpg",
+  "floppy": "File:Floppy Disk Drives 8 5 3.jpg",
+  "interro": "File:Dennis Rader interrogation.jpg"
+ },
+ "map": {
+  "countries": [
+   "United States of America"
+  ],
+  "context": [
+   "Canada",
+   "Mexico"
+  ],
+  "labels": {
+   "United States of America": "MỸ"
+  },
+  "bbox": [
+   -110,
+   30,
+   -85,
+   45
+  ],
+  "pins": [
+   {
+    "name": "Wichita",
+    "lon": -97.34,
+    "lat": 37.69,
+    "label": "WICHITA · KANSAS"
+   }
+  ]
+ },
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "BTK",
+     "acc": true,
+     "size": 320,
+     "at": [
+      0,
+      "BTK"
+     ]
+    },
+    {
+     "text": "≥ 10 NẠN NHÂN · KANSAS",
+     "at": [
+      0,
+      "mười"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "day": "BTK IM LẶNG",
+   "date": "1979",
+   "groupAt": [
+    [
+     1,
+     "1979,"
+    ]
+   ],
+   "stamp": {
+    "text": "HỒ SƠ LẠNH",
+    "at": [
+     1,
+     "im"
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 25,
+   "suffix": " NĂM",
+   "label": "IM LẶNG",
+   "until": [
+    2,
+    "sau,"
+   ],
+   "sub": {
+    "text": "RỒI HẮN QUAY LẠI",
+    "at": [
+     2,
+     "quay"
+    ]
+   }
+  },
+  {
+   "type": "quote",
+   "at": 3,
+   "text": "Nếu tôi gửi một chiếc đĩa mềm, các ông có truy ra tôi không?",
+   "by": "BTK HỎI CẢNH SÁT · DIỄN Ý"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "“REX,",
+     "at": [
+      4,
+      "Rex,"
+     ]
+    },
+    {
+     "text": "SẼ ỔN THÔI.”",
+     "acc": true,
+     "at": [
+      4,
+      "ổn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 5,
+   "img": "floppy",
+   "tone": "bw",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": {
+    "text": "ĐĨA MỀM MÀU TÍM · 16.02.2005",
+    "at": [
+     5,
+     "tím."
+    ]
+   },
+   "credit": "ẢNH MINH HỌA · Ổ ĐĨA MỀM"
+  },
+  {
+   "type": "file",
+   "at": 6,
+   "k": "METADATA · FILE ĐÃ XÓA",
+   "name": "SỬA LẦN CUỐI:\nDENNIS",
+   "desc": "Biên bản họp của một nhà thờ",
+   "stamp": {
+    "text": "LỘ DIỆN",
+    "at": [
+     6,
+     "Dennis."
+    ]
+   }
+  },
+  {
+   "type": "mug",
+   "at": 7,
+   "ghost": "25.02.2005",
+   "mug": {
+    "img": "young",
+    "name": "DENNIS RADER · ẢNH 1963",
+    "at": [
+     7,
+     "Dennis"
+    ]
+   },
+   "stamp": {
+    "text": "BỊ BẮT",
+    "at": [
+     7,
+     "bắt"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "30 NĂM",
+     "at": [
+      8,
+      "Ba"
+     ]
+    },
+    {
+     "text": "1 CÂU HỎI",
+     "acc": true,
+     "size": 150,
+     "at": [
+      8,
+      "câu"
+     ]
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Dennis_Rader"
+ ],
+ "hashtags": "#Shorts #BTK #sátnhânhàngloạt #vụáncóthậtởmỹ"
+}

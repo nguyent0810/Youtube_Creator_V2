@@ -1,0 +1,207 @@
+{
+ "title": "Chuyện ma đèo Hải Vân: chiếc ghế số 13 luôn để trống",
+ "description": "Truyện hư cấu, không dựa trên sự kiện có thật. Chuyện ma đèo Hải Vân: chuyến xe khách đêm từ Đà Nẵng ra Huế luôn để trống ghế số 13, vì ghế ấy đã có người đặt, trả đủ tiền mỗi đêm.",
+ "tags": [
+  "chuyện ma",
+  "đèo hải vân chuyện ma",
+  "truyện ma",
+  "đèo Hải Vân",
+  "truyện kinh dị",
+  "chuyện tâm linh",
+  "xe khách đêm"
+ ],
+ "kicker": "TRUYỆN HƯ CẤU",
+ "sub": "ĐÈO HẢI VÂN · 23:00",
+ "acc": [
+  "13",
+  "trống",
+  "hải",
+  "vân",
+  "khoảng",
+  "không",
+  "12"
+ ],
+ "lines": [
+  "Chuyến xe khách cuối cùng từ Đà Nẵng ra Huế, khởi hành lúc mười một giờ đêm, qua đèo Hải Vân.",
+  "Xe kín chỗ. Chỉ có ghế số mười ba là trống.",
+  "Tôi hỏi phụ xe. Anh ta nói ghế ấy có người đặt rồi, trả đủ tiền mỗi đêm.",
+  "Lên đến đỉnh đèo, xe dừng lại. Không ai xuống. Không ai lên.",
+  "Phụ xe vẫn bước ra cửa, cúi chào vào khoảng không, rồi kéo cửa lại.",
+  "Lúc ấy tôi mới để ý: đệm ghế số mười ba đã lõm xuống, như có ai vừa ngồi.",
+  "Về đến Huế, phụ xe nói nhỏ: mai anh lại đi, nhớ chào ông ấy một tiếng.",
+  "Tối mai, tôi lại có vé chuyến cuối. Ghế số mười hai."
+ ],
+ "imgs": {},
+ "map": {
+  "countries": [
+   "Vietnam"
+  ],
+  "context": [
+   "Laos",
+   "Cambodia",
+   "China",
+   "Thailand"
+  ],
+  "labels": {
+   "Vietnam": "VIỆT NAM"
+  },
+  "bbox": [
+   104,
+   14,
+   110.5,
+   19
+  ],
+  "pins": [
+   {
+    "name": "Hải Vân",
+    "lon": 108.13,
+    "lat": 16.2,
+    "label": "ĐÈO HẢI VÂN"
+   }
+  ]
+ },
+ "scenes": [
+  {
+   "type": "clock",
+   "from": "23:00",
+   "plus": "ĐÀ NẴNG → HUẾ",
+   "plusAt": [
+    0,
+    "Huế,"
+   ],
+   "turns": 1
+  },
+  {
+   "type": "map",
+   "at": [
+    0,
+    "đèo"
+   ],
+   "pins": [
+    {
+     "name": "Hải Vân",
+     "at": [
+      0,
+      "Hải"
+     ],
+     "side": "r"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "XE KÍN CHỖ",
+     "at": [
+      1,
+      "kín"
+     ]
+    },
+    {
+     "text": "GHẾ 13: TRỐNG",
+     "acc": true,
+     "size": 150,
+     "at": [
+      1,
+      "trống."
+     ]
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 2,
+   "text": "Ghế ấy có người đặt rồi, trả đủ tiền mỗi đêm.",
+   "by": "PHỤ XE"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "ĐỈNH ĐÈO",
+     "at": [
+      3,
+      "đỉnh"
+     ]
+    },
+    {
+     "text": "KHÔNG AI XUỐNG",
+     "at": [
+      3,
+      "xuống."
+     ]
+    },
+    {
+     "text": "KHÔNG AI LÊN",
+     "acc": true,
+     "at": [
+      3,
+      "lên."
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "CÚI CHÀO",
+     "at": [
+      4,
+      "cúi"
+     ]
+    },
+    {
+     "text": "VÀO KHOẢNG KHÔNG",
+     "acc": true,
+     "at": [
+      4,
+      "khoảng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "ĐỆM GHẾ 13\nĐÃ LÕM XUỐNG"
+  },
+  {
+   "type": "quote",
+   "at": 6,
+   "text": "Mai anh lại đi, nhớ chào ông ấy một tiếng.",
+   "by": "PHỤ XE · KHI VỀ ĐẾN HUẾ"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "CHUYẾN CUỐI",
+     "at": [
+      7,
+      "chuyến"
+     ]
+    },
+    {
+     "text": "GHẾ 12",
+     "acc": true,
+     "size": 220,
+     "at": [
+      7,
+      "Ghế"
+     ]
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "Truyện hư cấu do kênh sáng tác"
+ ],
+ "hashtags": "#Shorts #chuyệnma #đèoHảiVân #truyệnma",
+ "fiction": true
+}

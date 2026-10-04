@@ -1,0 +1,219 @@
+{
+ "title": "Golden State Killer: từng là cảnh sát, sa lưới nhờ ADN họ hàng",
+ "description": "Golden State Killer gây ra 13 vụ giết người ở California. Hắn từng là cảnh sát, và bị bắt năm 2018 nhờ ADN của những người họ hàng xa trên một trang web gia phả.",
+ "tags": [
+  "Golden State Killer",
+  "Joseph DeAngelo",
+  "sát nhân hàng loạt",
+  "ADN",
+  "vụ án có thật ở mỹ",
+  "FBI",
+  "hồ sơ vụ án",
+  "vụ án có thật"
+ ],
+ "kicker": "HỒ SƠ 2018",
+ "sub": "GOLDEN STATE KILLER",
+ "acc": [
+  "cảnh",
+  "sát",
+  "adn",
+  "gia",
+  "phả",
+  "72",
+  "deangelo",
+  "búa"
+ ],
+ "lines": [
+  "Golden State Killer gây ra mười ba vụ giết người khắp bang California, từ năm 1974 đến 1986.",
+  "Không ai biết mặt hắn.",
+  "Điều không ai ngờ: những năm đầu, hắn là cảnh sát.",
+  "Năm 1979, hắn bị đuổi khỏi ngành vì ăn trộm một cái búa và một bình xịt đuổi chó.",
+  "Gần bốn mươi năm sau, điều tra viên đưa ADN hiện trường lên một trang web tìm họ hàng.",
+  "Họ tìm ra những người bà con xa, dựng lại cả cây gia phả, loại dần từng người.",
+  "Chỉ còn lại một ông già 72 tuổi.",
+  "ADN trên tay nắm cửa xe và một mẩu khăn giấy trong thùng rác của ông ta: trùng khớp.",
+  "Joseph DeAngelo. Người từng đi bắt tội phạm, hóa ra là kẻ cả bang truy lùng."
+ ],
+ "imgs": {
+  "composite": "File:ONS composites.jpg",
+  "mug": "File:Joseph DeAngelo mugshot.jpg",
+  "attacks": "File:East Area Rapist Attacks Map.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "composite",
+   "frame": "print",
+   "tone": "bw",
+   "intro": true,
+   "head": "GOLDEN STATE KILLER"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "bg": "composite",
+   "items": [
+    {
+     "text": "KHÔNG AI",
+     "at": [
+      1,
+      "Không"
+     ]
+    },
+    {
+     "text": "BIẾT MẶT",
+     "acc": true,
+     "at": [
+      1,
+      "mặt"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "HẮN LÀ\nCẢNH SÁT",
+   "bg": "composite"
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "1979 · BỊ ĐUỔI KHỎI NGÀNH",
+   "rows": [
+    {
+     "k": "TRỘM",
+     "v": "1 CÁI BÚA",
+     "at": [
+      3,
+      "búa"
+     ]
+    },
+    {
+     "k": "VÀ",
+     "v": "1 BÌNH XỊT ĐUỔI CHÓ",
+     "at": [
+      3,
+      "bình"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "to": 39,
+   "suffix": " NĂM",
+   "label": "SAU",
+   "until": [
+    4,
+    "năm"
+   ],
+   "sub": {
+    "text": "ADN → TRANG WEB TÌM HỌ HÀNG",
+    "at": [
+     4,
+     "họ"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "BÀ CON XA",
+     "at": [
+      5,
+      "bà"
+     ]
+    },
+    {
+     "text": "CÂY GIA PHẢ",
+     "at": [
+      5,
+      "gia"
+     ]
+    },
+    {
+     "text": "LOẠI DẦN TỪNG NGƯỜI",
+     "acc": true,
+     "at": [
+      5,
+      "loại"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "72 TUỔI",
+     "acc": true,
+     "size": 200,
+     "at": [
+      6,
+      "72"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "18.04.2018 · MẪU ADN",
+   "rows": [
+    {
+     "k": "TAY NẮM CỬA XE",
+     "v": "✓",
+     "at": [
+      7,
+      "tay"
+     ]
+    },
+    {
+     "k": "KHĂN GIẤY TRONG THÙNG RÁC",
+     "v": "✓",
+     "at": [
+      7,
+      "khăn"
+     ]
+    },
+    {
+     "k": "KẾT QUẢ",
+     "v": "TRÙNG KHỚP",
+     "at": [
+      7,
+      "trùng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "mug",
+   "at": 8,
+   "ghost": "24.04.2018",
+   "mug": {
+    "img": "mug",
+    "name": "JOSEPH DeANGELO",
+    "at": [
+     8,
+     "Joseph"
+    ]
+   },
+   "stamp": {
+    "text": "BỊ TRUY TỐ",
+    "at": [
+     8,
+     "truy"
+    ]
+   }
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Joseph_James_DeAngelo"
+ ],
+ "hashtags": "#Shorts #GoldenStateKiller #ADN #vụáncóthậtởmỹ"
+}

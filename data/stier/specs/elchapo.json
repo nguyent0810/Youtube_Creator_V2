@@ -1,0 +1,257 @@
+{
+ "title": "El Chapo vượt ngục qua góc duy nhất camera không nhìn thấy",
+ "description": "El Chapo vượt ngục khỏi nhà tù an ninh cao nhất Mexico ngày 11/7/2015, qua một đường hầm dài 1,5 km nằm ngay dưới vòi sen. Sáu tháng sau, hắn sa lưới vì một suất taco.",
+ "tags": [
+  "El Chapo",
+  "El Chapo vượt ngục",
+  "vượt ngục",
+  "Joaquín Guzmán",
+  "trùm ma túy",
+  "Sinaloa",
+  "vụ án có thật",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 2015",
+ "sub": "EL CHAPO VƯỢT NGỤC",
+ "acc": [
+  "chapo",
+  "camera",
+  "vòi",
+  "sen",
+  "hầm",
+  "taco",
+  "vượt",
+  "ngục"
+ ],
+ "lines": [
+  "20 giờ 52 phút, ngày 11 tháng 7 năm 2015, El Chapo bước vào khu vòi sen trong phòng giam.",
+  "Đó là góc duy nhất camera không nhìn thấy.",
+  "Hai mươi lăm phút sau, lính gác chạy vào. Phòng trống trơn.",
+  "Dưới vòi sen là một cái lỗ, dẫn xuống một đường hầm dài một cây số rưỡi.",
+  "Có đèn, có ống thông gió, và một chiếc xe máy chạy trên đường ray.",
+  "Đầu kia đường hầm là một căn nhà đang xây dở.",
+  "Đây là lần vượt ngục thứ hai của ông trùm ma túy khét tiếng nhất Mexico.",
+  "Sáu tháng sau, hắn sa lưới, sau khi người của hắn đặt một suất taco cực lớn gần nơi ẩn náu.",
+  "Một đường hầm giúp hắn thoát. Một suất taco khiến hắn bị bắt."
+ ],
+ "imgs": {
+  "mug": "File:Booking photo of Joaquin “El Chapo“ Guzman (front).jpg",
+  "side": "File:Booking photo of Joaquin “El Chapo“ Guzman (side and front).jpg",
+  "us": "File:El Chapo in U.S. 1.jpg"
+ },
+ "map": {
+  "countries": [
+   "Mexico"
+  ],
+  "context": [
+   "United States of America",
+   "Guatemala",
+   "Belize",
+   "Honduras"
+  ],
+  "labels": {
+   "Mexico": "MEXICO"
+  },
+  "bbox": [
+   -118,
+   14,
+   -86,
+   33
+  ],
+  "pins": [
+   {
+    "name": "Altiplano",
+    "lon": -99.76,
+    "lat": 19.36,
+    "label": "NHÀ TÙ ALTIPLANO"
+   }
+  ]
+ },
+ "scenes": [
+  {
+   "type": "mug",
+   "ghost": "20:52",
+   "mug": {
+    "img": "mug",
+    "name": "JOAQUÍN “EL CHAPO” GUZMÁN",
+    "at": [
+     0,
+     "El"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "GÓC DUY NHẤT",
+     "at": [
+      1,
+      "duy"
+     ]
+    },
+    {
+     "text": "CAMERA KHÔNG THẤY",
+     "acc": true,
+     "at": [
+      1,
+      "camera"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "clock",
+   "at": 2,
+   "from": "20:52",
+   "plus": "+25 PHÚT",
+   "plusAt": [
+    2,
+    "phút"
+   ],
+   "turns": 1
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    2,
+    "Phòng"
+   ],
+   "items": [
+    {
+     "text": "PHÒNG TRỐNG TRƠN",
+     "acc": true,
+     "at": [
+      2,
+      "trống"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 1500,
+   "suffix": " MÉT",
+   "label": "ĐƯỜNG HẦM DƯỚI VÒI SEN",
+   "until": [
+    3,
+    "rưỡi."
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "TRONG ĐƯỜNG HẦM",
+   "rows": [
+    {
+     "k": "ĐÈN",
+     "v": "✓",
+     "at": [
+      4,
+      "đèn,"
+     ]
+    },
+    {
+     "k": "ỐNG THÔNG GIÓ",
+     "v": "✓",
+     "at": [
+      4,
+      "ống"
+     ]
+    },
+    {
+     "k": "XE MÁY TRÊN RAY",
+     "v": "✓",
+     "at": [
+      4,
+      "xe"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "at": 5,
+   "pins": [
+    {
+     "name": "Altiplano",
+     "at": [
+      5,
+      null,
+      0,
+      0.2
+     ],
+     "side": "r"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "LẦN VƯỢT NGỤC\nTHỨ HAI",
+   "bg": "side"
+  },
+  {
+   "type": "date",
+   "at": 7,
+   "bg": "mug",
+   "day": "LOS MOCHIS · SINALOA",
+   "date": "08.01.2016",
+   "groupAt": [
+    [
+     7,
+     "Sáu"
+    ],
+    [
+     7,
+     "tháng"
+    ],
+    [
+     7,
+     "sau,"
+    ]
+   ],
+   "sub": {
+    "text": "MỘT SUẤT TACO CỰC LỚN",
+    "at": [
+     7,
+     "taco"
+    ]
+   },
+   "stamp": {
+    "text": "SA LƯỚI",
+    "at": [
+     7,
+     "lưới,"
+    ]
+   }
+  },
+  {
+   "type": "split",
+   "at": 8,
+   "title": "EL CHAPO",
+   "a": {
+    "img": "mug",
+    "label": "ĐƯỜNG HẦM: THOÁT",
+    "at": [
+     8,
+     "thoát."
+    ]
+   },
+   "b": {
+    "img": "us",
+    "label": "SUẤT TACO: BỊ BẮT",
+    "at": [
+     8,
+     "bắt."
+    ]
+   }
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/El_Chapo"
+ ],
+ "hashtags": "#Shorts #ElChapo #vượtngục #vụáncóthật"
+}

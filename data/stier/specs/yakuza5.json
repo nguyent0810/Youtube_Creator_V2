@@ -1,0 +1,153 @@
+{
+ "title": "Yakuza: 5 sự thật khó tin về mafia Nhật Bản",
+ "description": "Yakuza, mafia Nhật Bản: từ tục chặt ngón út, cứu trợ động đất Kobe 1995, tới việc mất 70% thành viên chỉ vì những đạo luật siết tài khoản ngân hàng và hợp đồng thuê nhà.",
+ "tags": [
+  "Yakuza",
+  "yakuza nhật bản",
+  "mafia Nhật",
+  "Yamaguchi-gumi",
+  "băng đảng",
+  "thế giới ngầm",
+  "hồ sơ vụ án",
+  "5 sự thật"
+ ],
+ "kicker": "5 SỰ THẬT",
+ "sub": "YAKUZA · MAFIA NHẬT BẢN",
+ "acc": [
+  "yakuza",
+  "ngón",
+  "út",
+  "kobe",
+  "giấy",
+  "tờ",
+  "70"
+ ],
+ "lines": [
+  "Yakuza, mafia Nhật Bản: năm sự thật khó tin.",
+  "Một: cảnh sát gọi họ là bạo lực đoàn. Họ tự gọi mình là tổ chức hiệp nghĩa.",
+  "Hai: chặt đốt ngón út để chuộc lỗi. Mất ngón út, tay cầm kiếm yếu hẳn, càng phải dựa vào ông trùm.",
+  "Ba: năm 1995, động đất tàn phá Kobe, băng Yamaguchi-gumi phát đồ cứu trợ nhanh hơn cả chính phủ.",
+  "Bốn: năm 1963, Yakuza có hơn một trăm tám mươi nghìn thành viên và người đi theo.",
+  "Năm: từ 1990 đến 2020, con số ấy giảm bảy mươi phần trăm, vì những đạo luật siết từng tài khoản ngân hàng, từng hợp đồng thuê nhà.",
+  "Đế chế ngầm đáng sợ nhất châu Á không sụp vì súng đạn, mà vì giấy tờ."
+ ],
+ "imgs": {
+  "tattoo": "File:Beato, Felice (1834 – 1907) - Tattooed japanese men - ca. 1870.jpg",
+  "ukiyo": "File:Tattooed-Helper-Yakuza-Ukiyo-e-by-Suzuki-Kinsen-1900.png",
+  "kobe": "File:Hanshin-Awaji earthquake 1995 Hyogo-ku Kobe city Hyogo prefecture 001.jpg",
+  "jirocho": "File:Portrait-Chogoro-Yamamoto-(Shimizu-Jirocho).png"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "tattoo",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "YAKUZA"
+  },
+  {
+   "type": "split",
+   "at": 1,
+   "title": "1 · HAI CÁI TÊN",
+   "a": {
+    "img": "ukiyo",
+    "label": "“BẠO LỰC ĐOÀN”",
+    "at": [
+     1,
+     "bạo"
+    ]
+   },
+   "b": {
+    "img": "jirocho",
+    "label": "“HIỆP NGHĨA”",
+    "at": [
+     1,
+     "hiệp"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "2 · CHẶT NGÓN ÚT",
+     "at": [
+      2,
+      "ngón"
+     ]
+    },
+    {
+     "text": "CẦM KIẾM YẾU ĐI",
+     "acc": true,
+     "at": [
+      2,
+      "kiếm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 3,
+   "img": "kobe",
+   "tone": "bw",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "label": {
+    "text": "3 · KOBE 1995 · YAMAGUCHI-GUMI CỨU TRỢ",
+    "at": [
+     3,
+     "Yamaguchi-gumi"
+    ]
+   },
+   "credit": "ĐỘNG ĐẤT HANSHIN-AWAJI · 17.01.1995"
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "to": 184100,
+   "label": "4 · THÀNH VIÊN & NGƯỜI ĐI THEO · 1963",
+   "until": [
+    4,
+    "nghìn"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "5 · 1990 → 2020",
+     "at": [
+      5,
+      "1990"
+     ]
+    },
+    {
+     "text": "−70%",
+     "acc": true,
+     "size": 300,
+     "at": [
+      5,
+      "bảy"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "KHÔNG PHẢI SÚNG ĐẠN\nMÀ LÀ GIẤY TỜ",
+   "bg": "ukiyo"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Yakuza",
+  "https://en.wikipedia.org/wiki/Yubitsume"
+ ],
+ "hashtags": "#Shorts #Yakuza #mafiaNhật #băngđảng"
+}
