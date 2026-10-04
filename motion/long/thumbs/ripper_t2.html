@@ -1,0 +1,23 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800;900&family=Playfair+Display:wght@900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#050404}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;color:#fff}
+.abs{position:absolute}
+.grain{position:absolute;inset:0;opacity:.12;mix-blend-mode:overlay}
+.big{position:absolute;font-weight:900;line-height:1;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.tag{position:absolute;font-family:'JetBrains Mono';font-weight:700;letter-spacing:.2em;color:#e9d9b0;white-space:nowrap}
+.serif{position:absolute;font-family:'Playfair Display';font-weight:900;white-space:nowrap;text-shadow:0 10px 40px #000,-5px -5px 0 #000,5px 5px 0 #000}
+</style></head><body>
+<!-- T2: lá thư "From Hell" + "NỬA QUẢ THẬN NGƯỜI" -->
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<div class="abs" style="inset:0;background:radial-gradient(80% 90% at 70% 50%,#2a0f0f 0%,#050404 70%)"></div>
+<img class="abs" src="assets/long/ripper/img/fromhell.jpg" style="left:1130px;top:50px;width:690px;height:985px;object-fit:cover;filter:contrast(1.25) saturate(1.2);border:12px solid #efe6d2;box-shadow:0 40px 120px #000;transform:rotate(3deg)"/>
+<div class="tag" style="left:90px;top:120px;font-size:34px">16 · 10 · 1888</div>
+<div class="big" style="left:80px;top:210px;font-size:150px">NỬA QUẢ</div>
+<div class="big" style="left:80px;top:370px;font-size:150px;color:#ff3a3a">THẬN NGƯỜI</div>
+<div class="serif" style="left:84px;top:580px;font-size:110px;color:#e9d9b0">“Từ địa ngục”</div>
+<div class="big" style="left:86px;top:790px;font-size:58px;color:#ffd23a">HỒ SƠ JACK ĐỒ TỂ</div>
+<svg class="grain" width="1920" height="1080"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3" seed="7"/></filter><rect width="100%" height="100%" filter="url(#g)"/></svg>
+</div><script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

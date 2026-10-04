@@ -1,0 +1,441 @@
+{
+ "title": "Từ địa ngục",
+ "lines": [
+  {
+   "t": "Chương tám. Từ địa ngục.",
+   "p": 0.8
+  },
+  "George Lusk, chủ tịch Ủy ban Cảnh giác, mở gói bưu phẩm.",
+  "Bên trong là một chiếc hộp các-tông nhỏ.",
+  {
+   "t": "Trong hộp là nửa quả thận người, ngâm trong rượu.",
+   "p": 1.0
+  },
+  "Kèm theo là một lá thư, nét chữ hoàn toàn khác lá thư mực đỏ.",
+  "Không có ngày tháng. Không có địa chỉ người gửi. Chỉ có dòng đầu tiên:",
+  {
+   "t": "Từ địa ngục.",
+   "q": 1,
+   "p": 1.0
+  },
+  {
+   "t": "Ông Lusk, tôi gửi ông một nửa quả thận tôi lấy từ một người đàn bà.",
+   "q": 1
+  },
+  {
+   "t": "Nửa kia tôi rán lên ăn rồi, ngon lắm.",
+   "q": 1
+  },
+  {
+   "t": "Ông chịu khó đợi thêm ít lâu, có khi tôi gửi luôn con dao đẫm máu đã lấy nó ra.",
+   "q": 1
+  },
+  {
+   "t": "Bắt tôi đi, nếu ông bắt được, ông Lusk.",
+   "q": 1,
+   "p": 1.0
+  },
+  "Lá thư không ký tên Jack the Ripper.",
+  "Chính vì vậy, nhiều nhà nghiên cứu coi nó là một trong số ít lá thư đáng để nghi là thật.",
+  "Ban đầu, Lusk tưởng đó là trò đùa. Ủy ban của ông thuyết phục ông mang tới bác sĩ.",
+  "Bác sĩ Thomas Openshaw ở Bệnh viện London xác nhận đó là thận người, ở bên trái.",
+  {
+   "t": "Và quả thận trái của Kate Eddowes đã bị lấy mất.",
+   "p": 1.0
+  },
+  "Báo chí lập tức thêu dệt rằng quả thận là của một người phụ nữ nghiện rượu, đúng như Kate.",
+  "Thật ra bác sĩ không thể xác định gì thêm.",
+  "Có người nói đó là thận của Kate. Có người nói đó chỉ là trò đùa ác của một sinh viên y khoa, vốn dễ dàng kiếm được nội tạng người.",
+  {
+   "t": "Tới hôm nay, câu hỏi vẫn bỏ ngỏ.",
+   "p": 1.0
+  },
+  "Có lúc, cảnh sát phải xử lý khoảng một nghìn lá thư liên quan tới vụ án.",
+  "Có người góp ý cách bắt hung thủ. Có người tố cáo hàng xóm.",
+  {
+   "t": "Và hàng trăm người tự nhận mình là Jack.",
+   "p": 1.0
+  },
+  "Thành phố sống trong một mùa thu sợ hãi.",
+  "Rồi suốt tháng 10, không có thêm thi thể nào.",
+  "Một số người bắt đầu thở phào.",
+  "Họ không biết rằng vụ khủng khiếp nhất vẫn còn ở phía trước.",
+  {
+   "t": "Và lần này, nó không xảy ra ngoài đường.",
+   "p": 1.0
+  }
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "08",
+   "k": "CHƯƠNG TÁM",
+   "title": "TỪ ĐỊA NGỤC",
+   "sub": "“FROM HELL” · 16.10.1888",
+   "bg": "fromhell",
+   "titleAt": [
+    0,
+    "Từ"
+   ]
+  },
+  {
+   "type": "print",
+   "at": 1,
+   "img": "lusk",
+   "tone": "sepia",
+   "side": {
+    "k": "CHỦ TỊCH ỦY BAN CẢNH GIÁC",
+    "h": "GEORGE LUSK",
+    "hAt": [
+     1,
+     "George"
+    ],
+    "lines": [
+     {
+      "text": "Mở *gói bưu phẩm*",
+      "at": [
+       1,
+       "bưu"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "sketch",
+   "at": 2,
+   "art": "parcel",
+   "drawDur": 2.0,
+   "title": "Một chiếc hộp các-tông nhỏ"
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "bg": "vigilance_box",
+   "text": "NỬA QUẢ\nTHẬN NGƯỜI",
+   "white": true,
+   "hitAt": [
+    3,
+    "thận"
+   ],
+   "sub": "NGÂM TRONG RƯỢU"
+  },
+  {
+   "type": "photo",
+   "at": 4,
+   "img": "fromhell",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.2,
+   "kin": [
+    {
+     "text": "NÉT CHỮ HOÀN TOÀN KHÁC",
+     "at": [
+      4,
+      "khác"
+     ]
+    },
+    {
+     "text": "KHÔNG NGÀY · KHÔNG ĐỊA CHỈ",
+     "sm": true,
+     "acc": true,
+     "at": [
+      5,
+      "ngày"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "bg": "fromhell",
+   "text": "“TỪ ĐỊA NGỤC”",
+   "white": true,
+   "hitAt": [
+    6,
+    "Từ"
+   ],
+   "sub": "“FROM HELL”"
+  },
+  {
+   "type": "sticker",
+   "at": 7,
+   "bg": "fromhell",
+   "veil": 0.7,
+   "items": [
+    {
+     "it": "I send you half the Kidne\nI took from one women",
+     "vi": "Tôi gửi ông nửa quả thận tôi lấy từ một người đàn bà.",
+     "at": [
+      7,
+      "Ông"
+     ],
+     "x": 520,
+     "y": 240,
+     "rot": -3
+    },
+    {
+     "it": "tother piece I fried\nand ate it",
+     "vi": "Nửa kia tôi rán lên ăn rồi.",
+     "at": [
+      8,
+      "Nửa"
+     ],
+     "x": 1400,
+     "y": 330,
+     "rot": 4
+    },
+    {
+     "it": "I may send you the bloody\nknif that took it out",
+     "vi": "Có khi tôi gửi luôn con dao đẫm máu.",
+     "at": [
+      9,
+      "Ông"
+     ],
+     "x": 600,
+     "y": 640,
+     "rot": 2
+    },
+    {
+     "it": "Catch me when\nyou can Mishter Lusk",
+     "vi": "Bắt tôi đi, nếu ông bắt được.",
+     "at": [
+      10,
+      "Bắt"
+     ],
+     "x": 1350,
+     "y": 690,
+     "rot": -4
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "bg": "fromhell",
+   "items": [
+    {
+     "text": "KHÔNG KÝ TÊN JACK THE RIPPER",
+     "at": [
+      11,
+      "ký"
+     ]
+    },
+    {
+     "text": "ĐÁNG ĐỂ NGHI LÀ THẬT",
+     "acc": true,
+     "at": [
+      12,
+      "thật."
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 13,
+   "img": "vigilance_box",
+   "tone": "sepia",
+   "move": "in",
+   "veil": 0.3,
+   "illus": "TRANH BÁO 1888 · ỦY BAN XEM CHIẾC HỘP",
+   "kin": [
+    {
+     "text": "LUSK TƯỞNG LÀ TRÒ ĐÙA",
+     "at": [
+      13,
+      "trò"
+     ]
+    },
+    {
+     "text": "MANG TỚI BÁC SĨ",
+     "acc": true,
+     "at": [
+      13,
+      "bác"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 14,
+   "img": "london_hospital",
+   "tone": "sepia",
+   "move": "in",
+   "veil": 0.3,
+   "label": {
+    "k": "BÁC SĨ THOMAS OPENSHAW · BỆNH VIỆN LONDON",
+    "v": "THẬN NGƯỜI · BÊN TRÁI",
+    "at": [
+     14,
+     "trái."
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 15,
+   "bg": "kate_sketch",
+   "text": "THẬN TRÁI CỦA KATE\nĐÃ BỊ LẤY MẤT",
+   "white": true,
+   "hitAt": [
+    15,
+    "lấy"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "vid": "29975898",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "BÁO CHÍ THÊU DỆT",
+     "at": [
+      16,
+      "thêu"
+     ]
+    },
+    {
+     "text": "BÁC SĨ KHÔNG XÁC ĐỊNH GÌ THÊM",
+     "acc": true,
+     "at": [
+      17,
+      "xác"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "split",
+   "at": 18,
+   "title": "QUẢ THẬN CỦA AI?",
+   "a": {
+    "img": "kate_sketch",
+    "label": "CỦA KATE?",
+    "at": [
+     18,
+     "Kate."
+    ]
+   },
+   "b": {
+    "img": "london_hospital",
+    "label": "TRÒ ĐÙA CỦA SINH VIÊN Y?",
+    "at": [
+     18,
+     "sinh"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "vid": "5767251",
+   "tone": "night",
+   "items": [
+    {
+     "text": "CÂU HỎI VẪN BỎ NGỎ",
+     "serif": true,
+     "acc": true,
+     "at": [
+      19,
+      "bỏ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 20,
+   "bg": "ipn_oct20",
+   "from": 0,
+   "to": 1000,
+   "prefix": "~",
+   "suffix": " LÁ THƯ",
+   "countAt": [
+    20,
+    "một"
+   ],
+   "label": "CẢNH SÁT PHẢI XỬ LÝ",
+   "sub": {
+    "text": "HÀNG TRĂM NGƯỜI TỰ NHẬN LÀ JACK",
+    "at": [
+     22,
+     "trăm"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 23,
+   "vid": "11839732",
+   "ms": 6,
+   "tone": "noir",
+   "items": [
+    {
+     "text": "MỘT MÙA THU SỢ HÃI",
+     "serif": true,
+     "at": [
+      23,
+      "mùa"
+     ]
+    },
+    {
+     "text": "THÁNG 10: KHÔNG THÊM THI THỂ NÀO",
+     "acc": true,
+     "sm": true,
+     "at": [
+      24,
+      "thi"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 25,
+   "vid": "4061884",
+   "ms": 15,
+   "tone": "night",
+   "items": [
+    {
+     "text": "NGƯỜI TA THỞ PHÀO",
+     "at": [
+      25,
+      "thở"
+     ]
+    },
+    {
+     "text": "VỤ KHỦNG KHIẾP NHẤT CÒN Ở PHÍA TRƯỚC",
+     "acc": true,
+     "at": [
+      26,
+      "khủng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 27,
+   "bg": "millers_court",
+   "text": "KHÔNG XẢY RA\nNGOÀI ĐƯỜNG",
+   "white": true,
+   "hitAt": [
+    27,
+    "ngoài"
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 08",
+  "t": "TỪ ĐỊA NGỤC"
+ },
+ "bgm": {
+  "file": "dark_times.mp3",
+  "at": 0,
+  "gain": 0.27
+ }
+}

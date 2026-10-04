@@ -253,6 +253,9 @@ def build(case: dict, dst: Path) -> None:
                 M.put(t, M.heart(), 0.55)
                 t += gap; gap = max(0.5, gap * 0.94)
             M.put(s["endAt"], M.boom(2.4, 50, 28), 0.9)
+        elif ty == "sketch":
+            dd = s.get("drawDur") or min(4.5, (T1 - T0) * 0.7)
+            M.put(T0 + 0.3, M.needle(dd), 0.22)
         elif ty == "sticker":
             for q in s["items"]:
                 M.put(q["at"], M.slap(), 0.6, ((q.get("x", 960) - 960) / 960) * 0.5)

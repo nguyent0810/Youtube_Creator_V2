@@ -1,0 +1,496 @@
+{
+ "title": "Hội của những người chèo thuyền",
+ "lines": [
+  {
+   "t": "Chương hai. Hội của những người chèo thuyền.",
+   "p": 0.8
+  },
+  "Hàng trăm năm, lúa gạo từ phương nam được chở lên kinh đô phương bắc theo một con kênh đào vĩ đại: Đại Vận Hà.",
+  "Trên con kênh ấy là những đoàn người chèo thuyền chở lương thực.",
+  "Họ sống trên nước, xa nhà, không ai che chở.",
+  "Giữa thời nhà Minh, một người tên là La Thanh lập ra một giáo phái Phật giáo dân gian, gọi là La giáo.",
+  "Đầu thế kỷ 18, giáo phái ấy lan tới những người chèo thuyền, qua ba người anh em kết nghĩa.",
+  "Hãy để ý: ngay từ thuở ban đầu, hội này đã bắt đầu bằng một lời thề của ba anh em.",
+  "Giáo phái lo cho họ những thứ triều đình không lo: một chỗ ngủ khi cập bến, một đám tang tử tế khi chết trên sông.",
+  "Năm 1768, hoàng đế Càn Long thấy mối nguy, ra lệnh phá đền và cấm giáo phái ấy.",
+  "Lệnh cấm không xóa được nó. Chỉ đẩy nó xuống bóng tối, sống ngay trên những đoàn thuyền chở lúa.",
+  "Rồi thế kỷ 19 đến, mang theo hỗn loạn.",
+  "Loạn Thái Bình nổ ra. Khoảng năm 1855, sông Hoàng Hà đổi dòng, và việc chở lúa trên Đại Vận Hà dần chấm dứt.",
+  "Những người chèo thuyền bỗng mất kế sinh nhai.",
+  {
+   "t": "Một số theo quân nổi loạn. Một số khác dạt ra bờ biển và tìm được một nghề mới: buôn lậu muối.",
+   "p": 1.0
+  },
+  "Những năm 1870, ở phía bắc tỉnh Giang Tô, đám người chèo thuyền và buôn muối lậu ấy lập ra một hội riêng.",
+  "Tên của nó nghe hiền lành đến lạ: An Thanh đạo hữu, nghĩa là những người bạn trên con đường bình yên và trong sạch.",
+  "Đó là tiền thân trực tiếp của Thanh Bang.",
+  "Khi những chuyến lúa chuyển sang đường biển, Thượng Hải trở thành điểm trung chuyển. Và người của hội theo dòng hàng mà về.",
+  "Thanh Bang được tổ chức theo vai vế thầy trò, lấy chữ làm thứ bậc. Người vào sau phải bái người vào trước làm thầy.",
+  "Từ một hội tương trợ của những người chèo thuyền, nó trở thành một thứ mạnh hơn mọi băng đảng trên bến cảng.",
+  "Và nó sớm nhúng tay vào chính trị.",
+  "Năm 1913, một thủ lĩnh của Thanh Bang dính líu tới vụ ám sát chính khách Tống Giáo Nhân, đối thủ của Viên Thế Khải, ngay tại nhà ga Thượng Hải.",
+  {
+   "t": "Bên dưới những con thuyền và bao muối, hội kín này đã học được rằng máu cũng là một thứ hàng có thể mua bán.",
+   "p": 1.0
+  },
+  "Nhưng một hội kín vẫn chỉ là một hội kín.",
+  "Phải cần tới một con người, nó mới trở thành một đế chế.",
+  {
+   "t": "Và con người ấy sinh ra vào một ngày mà người Trung Hoa tin rằng cửa âm phủ mở toang.",
+   "p": 1.0
+  }
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "HỘI CỦA NHỮNG\nNGƯỜI CHÈO THUYỀN",
+   "sub": "ĐẠI VẬN HÀ · THẾ KỶ 18 — 1913",
+   "bg": "trading_junk",
+   "titleAt": [
+    0,
+    "Hội"
+   ]
+  },
+  {
+   "type": "map",
+   "at": 1,
+   "geo": "canal",
+   "pins": [
+    {
+     "name": "Hàng Châu",
+     "at": [
+      1,
+      "phương"
+     ],
+     "side": "l"
+    },
+    {
+     "name": "Bắc Kinh",
+     "at": [
+      1,
+      "kinh"
+     ],
+     "side": "l"
+    }
+   ],
+   "routes": [
+    {
+     "from": "Hàng Châu",
+     "to": "Bắc Kinh",
+     "at": [
+      1,
+      "kênh"
+     ],
+     "until": [
+      1,
+      "Hà."
+     ],
+     "bend": 0.05
+    }
+   ],
+   "label": {
+    "k": "ĐƯỜNG VẼ MINH HỌA",
+    "v": "ĐẠI VẬN HÀ",
+    "s": "CHỞ LÚA GẠO LÊN KINH ĐÔ",
+    "at": [
+     1,
+     "Đại"
+    ]
+   }
+  },
+  {
+   "type": "sketch",
+   "at": 2,
+   "art": "boat",
+   "title": "Những người chèo thuyền chở lúa"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "bg": "trading_junk",
+   "items": [
+    {
+     "text": "GIỮA THỜI NHÀ MINH",
+     "sm": true,
+     "at": [
+      4,
+      "Minh,"
+     ]
+    },
+    {
+     "text": "LA THANH · LA GIÁO",
+     "serif": true,
+     "at": [
+      4,
+      "La"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "bg": "trading_junk",
+   "items": [
+    {
+     "text": "BA ANH EM KẾT NGHĨA",
+     "serif": true,
+     "acc": true,
+     "at": [
+      5,
+      "ba"
+     ]
+    },
+    {
+     "text": "MỘT LỜI THỀ",
+     "sm": true,
+     "at": [
+      6,
+      "lời"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "vid": "2865316",
+   "tone": "night",
+   "items": [
+    {
+     "text": "CHỖ NGỦ KHI CẬP BẾN",
+     "at": [
+      7,
+      "ngủ"
+     ]
+    },
+    {
+     "text": "ĐÁM TANG KHI CHẾT TRÊN SÔNG",
+     "acc": true,
+     "at": [
+      7,
+      "tang"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 8,
+   "bg": "trading_junk",
+   "day": "CÀN LONG RA LỆNH CẤM",
+   "date": "1768",
+   "stamp": {
+    "text": "CẤM",
+    "at": [
+     8,
+     "cấm"
+    ],
+    "x": 1180,
+    "y": 600,
+    "rot": -10
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "vid": "6470615",
+   "ms": 14,
+   "tone": "noir",
+   "items": [
+    {
+     "text": "LỆNH CẤM KHÔNG XÓA ĐƯỢC NÓ",
+     "at": [
+      9,
+      "xóa"
+     ]
+    },
+    {
+     "text": "CHỈ ĐẨY NÓ XUỐNG BÓNG TỐI",
+     "acc": true,
+     "at": [
+      9,
+      "bóng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 10,
+   "bg": "trading_junk",
+   "items": [
+    {
+     "year": "1850s",
+     "text": "Loạn *Thái Bình*",
+     "at": [
+      11,
+      "Thái"
+     ]
+    },
+    {
+     "year": "~1855",
+     "text": "Hoàng Hà *đổi dòng*",
+     "at": [
+      11,
+      "đổi"
+     ]
+    },
+    {
+     "year": "→",
+     "text": "Chở lúa trên kênh *chấm dứt*",
+     "at": [
+      11,
+      "chấm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "vid": "2123151",
+   "ms": 12,
+   "tone": "noir",
+   "items": [
+    {
+     "text": "MẤT KẾ SINH NHAI",
+     "at": [
+      12,
+      "mất"
+     ]
+    },
+    {
+     "text": "THEO QUÂN NỔI LOẠN",
+     "sm": true,
+     "at": [
+      13,
+      "nổi"
+     ]
+    },
+    {
+     "text": "BUÔN LẬU MUỐI",
+     "acc": true,
+     "serif": true,
+     "at": [
+      13,
+      "muối."
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "bg": "junk_sh",
+   "items": [
+    {
+     "text": "NHỮNG NĂM 1870 · BẮC GIANG TÔ",
+     "sm": true,
+     "at": [
+      14,
+      "1870,"
+     ]
+    },
+    {
+     "text": "AN THANH ĐẠO HỮU",
+     "serif": true,
+     "at": [
+      15,
+      "An"
+     ]
+    },
+    {
+     "text": "“BẠN TRÊN CON ĐƯỜNG BÌNH YÊN”",
+     "sm": true,
+     "acc": true,
+     "at": [
+      15,
+      "bình"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 16,
+   "bg": "junk_sh",
+   "text": "THANH BANG",
+   "white": true,
+   "hitAt": [
+    16,
+    "Thanh"
+   ],
+   "sub": "青幫 · GREEN GANG"
+  },
+  {
+   "type": "photo",
+   "at": 17,
+   "img": "bund1930",
+   "tone": "sepia",
+   "move": "pan",
+   "veil": 0.3,
+   "film": true,
+   "kin": [
+    {
+     "text": "LÚA CHUYỂN SANG ĐƯỜNG BIỂN",
+     "at": [
+      17,
+      "đường"
+     ]
+    },
+    {
+     "text": "NGƯỜI CỦA HỘI VỀ THƯỢNG HẢI",
+     "acc": true,
+     "at": [
+      17,
+      "người"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "org",
+   "at": 18,
+   "nodes": [
+    {
+     "id": "a",
+     "t": "THẦY",
+     "s": "VAI VẾ TRƯỚC",
+     "cls": "top",
+     "at": [
+      18,
+      "thầy"
+     ]
+    },
+    {
+     "id": "b",
+     "t": "TRÒ",
+     "s": "BÁI THẦY",
+     "p": "a",
+     "at": [
+      18,
+      "bái"
+     ]
+    },
+    {
+     "id": "c",
+     "t": "TRÒ CỦA TRÒ",
+     "p": "b",
+     "at": [
+      18,
+      "thầy.",
+      0,
+      0.2
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "bg": "bund1928",
+   "items": [
+    {
+     "text": "MẠNH HƠN MỌI BĂNG ĐẢNG",
+     "at": [
+      19,
+      "mạnh"
+     ]
+    },
+    {
+     "text": "NHÚNG TAY VÀO CHÍNH TRỊ",
+     "acc": true,
+     "at": [
+      20,
+      "chính"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 21,
+   "bg": "sh1920s",
+   "day": "VỤ ÁM SÁT TỐNG GIÁO NHÂN · GA THƯỢNG HẢI",
+   "date": "1913",
+   "sub": {
+    "text": "MỘT THỦ LĨNH THANH BANG DÍNH LÍU",
+    "at": [
+     21,
+     "thủ"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 22,
+   "vid": "17795659",
+   "tone": "night",
+   "text": "MÁU CŨNG LÀ\nMỘT THỨ HÀNG",
+   "hitAt": [
+    22,
+    "máu"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 23,
+   "bg": "bund_postcard",
+   "items": [
+    {
+     "text": "MỘT HỘI KÍN",
+     "sm": true,
+     "at": [
+      23,
+      "hội"
+     ]
+    },
+    {
+     "text": "CẦN MỘT CON NGƯỜI",
+     "at": [
+      24,
+      "người"
+     ]
+    },
+    {
+     "text": "ĐỂ THÀNH ĐẾ CHẾ",
+     "acc": true,
+     "serif": true,
+     "at": [
+      24,
+      "đế"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 25,
+   "vid": "2865339",
+   "tone": "night",
+   "veil": 0.4,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "NGÀY CỬA ÂM PHỦ MỞ TOANG",
+     "at": [
+      25,
+      "âm"
+     ]
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "HỘI CỦA NHỮNG NGƯỜI CHÈO THUYỀN"
+ },
+ "bgm": {
+  "file": "deep_haze.mp3",
+  "at": 0,
+  "gain": 0.11
+ }
+}

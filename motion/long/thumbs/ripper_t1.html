@@ -1,0 +1,27 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800;900&family=Playfair+Display:wght@900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#050404}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;color:#fff}
+.abs{position:absolute}
+.grain{position:absolute;inset:0;opacity:.13;mix-blend-mode:overlay}
+.glow{position:absolute;border-radius:50%;filter:blur(110px);background:rgba(200,16,46,.55)}
+.brand{position:absolute;font-family:'Playfair Display';font-weight:900;color:#ff2a3d;line-height:1.08;white-space:nowrap;
+  text-shadow:0 0 60px rgba(255,20,40,.55),0 14px 40px #000,-5px -5px 0 #000,5px 5px 0 #000}
+.big{position:absolute;font-weight:900;line-height:1;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.tag{position:absolute;font-family:'JetBrains Mono';font-weight:700;letter-spacing:.2em;color:#e9d9b0;white-space:nowrap}
+</style></head><body>
+<!-- T1: bóng ma Punch 1888 + "JACK ĐỒ TỂ LÀ AI?" + 5 · 100+ · 0 -->
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<img class="abs" src="assets/long/ripper/img/nemesis.jpg" style="left:-40px;top:-60px;width:1000px;height:1220px;object-fit:cover;object-position:50% 30%;filter:grayscale(1) contrast(1.5) brightness(.95)"/>
+<div class="abs" style="inset:0;background:linear-gradient(90deg,rgba(5,4,4,0) 0%,rgba(5,4,4,.15) 34%,rgba(5,4,4,.95) 50%,#050404 60%)"></div>
+<div class="abs" style="left:0;top:0;width:1000px;height:1080px;background:radial-gradient(60% 70% at 45% 45%,transparent 50%,rgba(5,4,4,.85) 100%)"></div>
+<div class="glow" style="left:1000px;top:200px;width:860px;height:440px"></div>
+<div class="tag" style="left:1010px;top:150px;font-size:32px">LONDON · 1888</div>
+<div class="brand" style="left:1000px;top:200px;font-size:160px">JACK<br/>ĐỒ TỂ</div>
+<div class="big" style="left:1010px;top:580px;font-size:150px;color:#fff">LÀ AI?</div>
+<div class="big" style="left:1012px;top:770px;font-size:54px;color:#ffd23a">5 NẠN NHÂN · 100+ NGHI PHẠM</div>
+<div class="big" style="left:1012px;top:850px;font-size:54px;color:#ff4b3a">0 LỜI GIẢI</div>
+<svg class="grain" width="1920" height="1080"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3" seed="4"/></filter><rect width="100%" height="100%" filter="url(#g)"/></svg>
+</div><script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

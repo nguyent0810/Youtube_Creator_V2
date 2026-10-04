@@ -1,0 +1,462 @@
+{
+ "title": "Thành phố bốn xu",
+ "lines": [
+  {
+   "t": "Chương một. Thành phố bốn xu.",
+   "p": 0.8
+  },
+  "Whitechapel nằm ở khu East End, phía đông thành phố London, chỉ cách khu tài chính giàu nhất thế giới vài con phố.",
+  "Năm 1888, khoảng tám mươi nghìn người chen chúc trong khu này.",
+  "Người Ireland tới tìm việc. Người Do Thái chạy trốn những cuộc thảm sát ở Đế quốc Nga.",
+  "Nhà cửa xuống cấp, việc làm thì bấp bênh.",
+  {
+   "t": "Hơn một nửa số trẻ em sinh ra ở East End chết trước năm tuổi.",
+   "p": 1.0
+  },
+  "Mỗi đêm, khoảng tám nghìn rưỡi người ngủ trong hai trăm ba mươi ba nhà trọ tập thể của Whitechapel.",
+  "Bốn xu, bạn có một chiếc giường hẹp như cỗ quan tài.",
+  "Không có bốn xu, vẫn còn một cách rẻ hơn.",
+  "Với hai xu, bạn được ngồi trên ghế dài, ngủ gục trên một sợi dây thừng căng ngang phòng.",
+  {
+   "t": "Sáng ra, người ta tháo dây.",
+   "p": 1.0
+  },
+  "Với nhiều phụ nữ ở đây, nghèo đói chỉ để lại một con đường.",
+  "Tháng 10 năm 1888, cảnh sát ước tính Whitechapel có khoảng một nghìn hai trăm phụ nữ hành nghề mại dâm.",
+  "Phần lớn họ không chọn nghề ấy từ đầu.",
+  "Họ là những người vợ bị bỏ, những người mẹ mất con, những người nghiện rượu không còn chỗ dựa.",
+  {
+   "t": "Họ ra đường vào lúc nửa đêm, kiếm cho đủ tiền giường, rồi quay về nhà trọ.",
+   "p": 1.0
+  },
+  "Mùa xuân năm 1888, nỗi sợ bắt đầu.",
+  "Ngày 3 tháng 4, một phụ nữ tên Emma Smith bị tấn công và cướp ở phố Osborn.",
+  "Bà chết ở bệnh viện ngày hôm sau, kịp kể rằng mình bị hai, ba gã đàn ông tấn công, một tên còn rất trẻ.",
+  "Phần lớn các nhà nghiên cứu cho rằng đó là bạo lực băng đảng, không liên quan tới những gì xảy ra sau này.",
+  "Ngày 7 tháng 8, Martha Tabram bị đâm ba mươi chín nhát trên một chiếu nghỉ cầu thang.",
+  {
+   "t": "Cảnh sát nghi ngờ hai vụ có liên quan. Nhưng bức tranh vẫn chưa rõ ràng.",
+   "p": 1.0
+  },
+  "Cho tới gần bốn giờ sáng ngày 31 tháng 8.",
+  "Một người đánh xe chở hàng đang đi bộ tới chỗ làm thì thấy một vật nằm trước cổng chuồng ngựa.",
+  "Thoạt nhìn, ông tưởng đó là một tấm bạt.",
+  "Hãy nhớ người đàn ông này.",
+  {
+   "t": "Ông ta sẽ quay lại câu chuyện của chúng ta, vào lúc bạn không ngờ nhất.",
+   "p": 1.0
+  }
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "01",
+   "k": "CHƯƠNG MỘT",
+   "title": "THÀNH PHỐ\nBỐN XU",
+   "sub": "WHITECHAPEL · 1888",
+   "bg": "slum1880",
+   "titleAt": [
+    0,
+    "Thành"
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 1,
+   "img": "eastend_map",
+   "tone": "sepia",
+   "move": "in",
+   "veil": 0.2,
+   "kin": [
+    {
+     "text": "EAST END",
+     "serif": true,
+     "at": [
+      1,
+      "East"
+     ]
+    },
+    {
+     "text": "SÁT KHU TÀI CHÍNH GIÀU NHẤT THẾ GIỚI",
+     "sm": true,
+     "acc": true,
+     "at": [
+      1,
+      "tài"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "bg": "women1890",
+   "from": 0,
+   "to": 80000,
+   "suffix": " NGƯỜI",
+   "prefix": "~",
+   "countAt": [
+    2,
+    "tám"
+   ],
+   "label": "WHITECHAPEL · 1888"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "bg": "club_row",
+   "items": [
+    {
+     "text": "NGƯỜI IRELAND TÌM VIỆC",
+     "at": [
+      3,
+      "Ireland"
+     ]
+    },
+    {
+     "text": "NGƯỜI DO THÁI CHẠY TRỐN ĐẾ QUỐC NGA",
+     "acc": true,
+     "at": [
+      3,
+      "Do"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 4,
+   "img": "alley_poor",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.35,
+   "kin": [
+    {
+     "text": "NHÀ XUỐNG CẤP · VIỆC BẤP BÊNH",
+     "at": [
+      4,
+      "xuống"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "dots",
+   "at": 5,
+   "total": 100,
+   "cols": 20,
+   "title": "TRẺ EM SINH RA Ở EAST END",
+   "gh": 420,
+   "y0": 250,
+   "groups": [
+    {
+     "from": 0,
+     "n": 55,
+     "cls": "red",
+     "label": "HƠN 1 NỬA CHẾT TRƯỚC 5 TUỔI",
+     "at": [
+      5,
+      "chết"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 6,
+   "title": "WHITECHAPEL · MỖI ĐÊM",
+   "rows": [
+    {
+     "k": "NGƯỜI NGỦ NHÀ TRỌ",
+     "v": "~8.500",
+     "at": [
+      6,
+      "tám"
+     ]
+    },
+    {
+     "k": "NHÀ TRỌ TẬP THỂ",
+     "v": "233",
+     "at": [
+      6,
+      "hai"
+     ]
+    }
+   ],
+   "total": {
+    "k": "GIƯỜNG “QUAN TÀI”",
+    "v": "4 XU",
+    "at": [
+     7,
+     "Bốn"
+    ]
+   }
+  },
+  {
+   "type": "sketch",
+   "at": 8,
+   "art": "rope",
+   "title": "Hai xu: ngủ gục trên một sợi dây thừng"
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "vid": "6029490",
+   "tone": "night",
+   "items": [
+    {
+     "text": "NGHÈO ĐÓI",
+     "at": [
+      11,
+      "nghèo"
+     ]
+    },
+    {
+     "text": "CHỈ ĐỂ LẠI MỘT CON ĐƯỜNG",
+     "acc": true,
+     "at": [
+      11,
+      "con"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 12,
+   "bg": "women1890",
+   "from": 0,
+   "to": 1200,
+   "prefix": "~",
+   "suffix": " PHỤ NỮ",
+   "countAt": [
+    12,
+    "một"
+   ],
+   "label": "HÀNH NGHỀ MẠI DÂM · ƯỚC TÍNH CỦA CẢNH SÁT",
+   "sub": {
+    "text": "THÁNG 10 · 1888",
+    "at": [
+     12,
+     "mại"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "bg": "outcast2",
+   "items": [
+    {
+     "text": "KHÔNG CHỌN NGHỀ ẤY TỪ ĐẦU",
+     "sm": true,
+     "at": [
+      13,
+      "không"
+     ]
+    },
+    {
+     "text": "VỢ BỊ BỎ",
+     "at": [
+      14,
+      "vợ"
+     ]
+    },
+    {
+     "text": "MẸ MẤT CON",
+     "at": [
+      14,
+      "mẹ"
+     ]
+    },
+    {
+     "text": "NGHIỆN RƯỢU",
+     "acc": true,
+     "at": [
+      14,
+      "nghiện"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 15,
+   "vid": "11839716",
+   "tone": "noir",
+   "veil": 0.4,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "NỬA ĐÊM · KIẾM CHO ĐỦ TIỀN GIƯỜNG",
+     "at": [
+      15,
+      "tiền"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "vid": "30339954",
+   "tone": "night",
+   "items": [
+    {
+     "text": "MÙA XUÂN 1888",
+     "serif": true,
+     "at": [
+      16,
+      "1888,"
+     ]
+    },
+    {
+     "text": "NỖI SỢ BẮT ĐẦU",
+     "acc": true,
+     "at": [
+      16,
+      "sợ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 17,
+   "bg": "whitechapel_map",
+   "day": "EMMA SMITH · PHỐ OSBORN",
+   "date": "03.04.1888",
+   "sub": {
+    "text": "BỊ HAI, BA GÃ ĐÀN ÔNG TẤN CÔNG",
+    "at": [
+     18,
+     "hai"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "bg": "slum1880",
+   "items": [
+    {
+     "text": "BẠO LỰC BĂNG ĐẢNG",
+     "at": [
+      19,
+      "bạo"
+     ]
+    },
+    {
+     "text": "KHÔNG LIÊN QUAN?",
+     "acc": true,
+     "at": [
+      19,
+      "không"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 20,
+   "img": "george_yard",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.35,
+   "label": {
+    "k": "07.08.1888 · GEORGE YARD",
+    "v": "MARTHA TABRAM",
+    "at": [
+     20,
+     "Martha"
+    ]
+   },
+   "stamp": {
+    "text": "39 NHÁT DAO",
+    "at": [
+     20,
+     "nhát"
+    ],
+    "x": 1000,
+    "y": 560,
+    "rot": -7
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 21,
+   "bg": "tabram_ipn",
+   "items": [
+    {
+     "text": "HAI VỤ CÓ LIÊN QUAN?",
+     "at": [
+      21,
+      "liên"
+     ]
+    },
+    {
+     "text": "BỨC TRANH CHƯA RÕ",
+     "acc": true,
+     "at": [
+      21,
+      "rõ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 22,
+   "vid": "37137791",
+   "tone": "night",
+   "day": "GẦN 4 GIỜ SÁNG",
+   "date": "31.08.1888"
+  },
+  {
+   "type": "photo",
+   "at": 23,
+   "img": "bucks_row",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.35,
+   "kin": [
+    {
+     "text": "MỘT VẬT TRƯỚC CỔNG CHUỒNG NGỰA",
+     "at": [
+      23,
+      "cổng"
+     ]
+    },
+    {
+     "text": "“MỘT TẤM BẠT”",
+     "serif": true,
+     "acc": true,
+     "at": [
+      24,
+      "bạt."
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 25,
+   "bg": "bucks_row",
+   "text": "HÃY NHỚ\nNGƯỜI ĐÀN ÔNG NÀY",
+   "white": true,
+   "hitAt": [
+    25,
+    "nhớ"
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "THÀNH PHỐ BỐN XU"
+ },
+ "bgm": {
+  "file": "lightless_dawn.mp3",
+  "at": 0,
+  "gain": 0.3
+ }
+}

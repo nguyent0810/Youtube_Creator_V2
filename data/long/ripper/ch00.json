@@ -1,0 +1,683 @@
+{
+ "title": "MỞ ĐẦU: Chúc ngủ ngon",
+ "lines": [
+  "London, đêm thứ Bảy, ngày 29 tháng 9 năm 1888.",
+  "Trên vỉa hè phố Aldgate, một người phụ nữ say khướt nằm gục giữa đám đông.",
+  "Hai viên cảnh sát dìu bà về đồn Bishopsgate cho tỉnh rượu.",
+  {
+   "t": "Hỏi tên, bà đáp: \"Chẳng là ai cả.\"",
+   "p": 1.0
+  },
+  "Bà tên là Catherine Eddowes. Bạn bè gọi bà là Kate.",
+  "Kate ngủ một giấc trong phòng giam.",
+  "Gần một giờ sáng, bà đã tỉnh, và được thả ra.",
+  {
+   "t": "Ra tới cửa, Kate quay lại nói với viên cảnh sát trực: \"Được rồi. Chúc ngủ ngon nhé, anh bạn già.\"",
+   "p": 1.0
+  },
+  "Cũng đúng một giờ sáng ấy, cách đó không xa, một người đánh xe ngựa rẽ vào một khoảng sân tối.",
+  "Con ngựa bỗng chồm sang một bên, né một vật gì nằm dưới đất.",
+  {
+   "t": "Đó là thi thể một người phụ nữ khác. Máu vẫn còn đang chảy.",
+   "p": 1.0
+  },
+  "Kate không biết gì về chuyện đó.",
+  "Ra khỏi đồn, đáng lẽ phải rẽ phải để về nhà trọ, bà lại rẽ trái.",
+  "Một giờ ba mươi lăm phút, ba người đàn ông thấy bà đứng nói chuyện với một người lạ ở đầu một lối đi hẹp.",
+  "Một giờ bốn mươi bốn phút, viên cảnh sát tuần tra đi qua quảng trường Mitre lần thứ hai.",
+  "Mười bốn phút trước, nơi ấy vẫn trống không.",
+  {
+   "t": "Giờ thì Kate nằm đó.",
+   "p": 1.0
+  },
+  "Hai người phụ nữ. Một đêm. Chưa đầy một giờ đồng hồ.",
+  "Kẻ đã làm việc ấy biến mất vào bóng tối của Whitechapel.",
+  {
+   "t": "Và hắn chưa bao giờ bị bắt.",
+   "p": 1.0
+  },
+  "Hơn một trăm ba mươi năm sau, người ta đã nêu tên hơn một trăm nghi phạm.",
+  "Một bác sĩ của Nữ hoàng. Một họa sĩ nổi tiếng. Thậm chí cả tác giả của \"Alice ở xứ sở thần tiên\".",
+  "Nhưng không ai biết hắn thật sự là ai.",
+  {
+   "t": "Thế giới chỉ biết một cái tên.",
+   "p": 1.0
+  },
+  {
+   "t": "Jack the Ripper. Jack Kẻ Phanh Thây.",
+   "p": 1.0
+  },
+  "Trong hơn nửa giờ tới, chúng ta sẽ mở lại hồ sơ này.",
+  "Bạn sẽ đọc lá thư đã đặt ra cái tên ấy, và nghe giả thuyết về người thật sự đã viết nó.",
+  "Bạn sẽ thấy một chiếc hộp nhỏ gửi qua bưu điện, bên trong là nửa quả thận người.",
+  "Bạn sẽ gặp nhân chứng duy nhất được cho là đã nhìn rõ mặt hung thủ, rồi từ chối làm chứng.",
+  {
+   "t": "Và bạn sẽ gặp người đàn ông đã tìm thấy thi thể đầu tiên, người mà một trăm ba mươi năm sau bị chính các nhà nghiên cứu chỉ mặt.",
+   "p": 1.0
+  },
+  "Nhưng trước hết, hãy nhớ một con số.",
+  "Bốn xu.",
+  "Ở Whitechapel năm 1888, đó là giá của một chỗ ngủ cho một đêm.",
+  {
+   "t": "Và đêm nào cũng vậy, có những người phụ nữ phải ra đường vì không có bốn xu ấy.",
+   "p": 1.0
+  }
+ ],
+ "scenes": [
+  {
+   "type": "date",
+   "vid": "30339959",
+   "tone": "night",
+   "day": "LONDON · ĐÊM THỨ BẢY",
+   "date": "29.09.1888"
+  },
+  {
+   "type": "photo",
+   "at": 1,
+   "img": "lantern_police",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.35,
+   "illus": "TRANH KHẮC · WHITECHAPEL 1888",
+   "kin": [
+    {
+     "text": "PHỐ ALDGATE",
+     "at": [
+      1,
+      "Aldgate,"
+     ]
+    },
+    {
+     "text": "MỘT NGƯỜI PHỤ NỮ SAY KHƯỚT",
+     "acc": true,
+     "at": [
+      1,
+      "say"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "vid": "11839732",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "ĐỒN CẢNH SÁT BISHOPSGATE",
+     "at": [
+      2,
+      "Bishopsgate"
+     ]
+    },
+    {
+     "text": "CHO TỈNH RƯỢU",
+     "sm": true,
+     "acc": true,
+     "at": [
+      2,
+      "tỉnh"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "bg": "kate_sketch",
+   "text": "“CHẲNG LÀ AI CẢ”",
+   "white": true,
+   "hitAt": [
+    3,
+    "Chẳng"
+   ],
+   "sub": "“NOTHING”"
+  },
+  {
+   "type": "print",
+   "at": 4,
+   "img": "kate_sketch",
+   "tone": "bw",
+   "caption": "TRANH BÁO PENNY ILLUSTRATED · 13.10.1888",
+   "side": {
+    "k": "1842 — 1888",
+    "h": "CATHERINE EDDOWES",
+    "hAt": [
+     4,
+     "Catherine"
+    ],
+    "lines": [
+     {
+      "text": "Bạn bè gọi là *Kate*",
+      "at": [
+       4,
+       "Kate."
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "broll",
+   "at": 5,
+   "vid": "9945249",
+   "tone": "noir",
+   "veil": 0.4,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MỘT GIẤC TRONG PHÒNG GIAM",
+     "at": [
+      5,
+      "phòng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "vid": "6143768",
+   "tone": "night",
+   "items": [
+    {
+     "text": "GẦN 1:00 SÁNG",
+     "serif": true,
+     "at": [
+      6,
+      "một"
+     ]
+    },
+    {
+     "text": "ĐƯỢC THẢ RA",
+     "acc": true,
+     "at": [
+      6,
+      "thả"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 7,
+   "text": "Được rồi. Chúc ngủ ngon nhé, anh bạn già.",
+   "by": "KATE EDDOWES · “ALL RIGHT. GOOD NIGHT, OLD COCK.”",
+   "typeAt": [
+    7,
+    "Được"
+   ]
+  },
+  {
+   "type": "sketch",
+   "at": 8,
+   "art": "horse",
+   "title": "1:00 sáng · sân Dutfield, phố Berner"
+  },
+  {
+   "type": "slam",
+   "at": [
+    10,
+    "Máu"
+   ],
+   "bg": "dutfield",
+   "text": "MÁU VẪN CÒN\nĐANG CHẢY",
+   "white": true,
+   "hitAt": [
+    10,
+    "chảy."
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "vid": "15040626",
+   "tone": "night",
+   "items": [
+    {
+     "text": "KATE KHÔNG BIẾT GÌ",
+     "at": [
+      11,
+      "không"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 12,
+   "img": "map7",
+   "tone": "sepia",
+   "move": "in",
+   "focus": [
+    0.45,
+    0.6
+   ],
+   "veil": 0.25,
+   "kin": [
+    {
+     "text": "RẼ PHẢI: VỀ NHÀ TRỌ",
+     "sm": true,
+     "at": [
+      12,
+      "phải"
+     ]
+    },
+    {
+     "text": "BÀ RẼ TRÁI",
+     "serif": true,
+     "acc": true,
+     "at": [
+      12,
+      "trái."
+     ]
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 13,
+   "bg": "mitre_old",
+   "day": "LỐI ĐI CHURCH PASSAGE",
+   "date": "01:35",
+   "sub": {
+    "text": "KATE VÀ MỘT NGƯỜI LẠ",
+    "at": [
+     13,
+     "người",
+     1
+    ]
+   }
+  },
+  {
+   "type": "date",
+   "at": 14,
+   "bg": "mitre_old",
+   "day": "QUẢNG TRƯỜNG MITRE · VÒNG TUẦN TRA THỨ HAI",
+   "date": "01:44"
+  },
+  {
+   "type": "counter",
+   "at": 15,
+   "bg": "mitre_old",
+   "from": 0,
+   "to": 14,
+   "suffix": " PHÚT",
+   "countAt": [
+    15,
+    "Mười"
+   ],
+   "label": "GIỮA HAI VÒNG TUẦN TRA",
+   "sub": {
+    "text": "1:30 — QUẢNG TRƯỜNG VẪN TRỐNG KHÔNG",
+    "at": [
+     15,
+     "trống"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 16,
+   "bg": "ipn_mitre",
+   "text": "GIỜ THÌ\nKATE NẰM ĐÓ",
+   "white": true,
+   "hitAt": [
+    16,
+    "nằm"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "vid": "30339960",
+   "tone": "night",
+   "items": [
+    {
+     "text": "HAI NGƯỜI PHỤ NỮ",
+     "at": [
+      17,
+      "Hai"
+     ]
+    },
+    {
+     "text": "MỘT ĐÊM",
+     "at": [
+      17,
+      "Một"
+     ]
+    },
+    {
+     "text": "CHƯA ĐẦY MỘT GIỜ",
+     "serif": true,
+     "acc": true,
+     "at": [
+      17,
+      "Chưa"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 18,
+   "vid": "11792112",
+   "tone": "noir",
+   "veil": 0.4,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "BIẾN MẤT VÀO BÓNG TỐI",
+     "at": [
+      18,
+      "biến"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 19,
+   "bg": "suspect_sketch",
+   "text": "CHƯA BAO GIỜ\nBỊ BẮT",
+   "white": true,
+   "hitAt": [
+    19,
+    "bắt."
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 20,
+   "bg": "puck",
+   "from": 0,
+   "to": 100,
+   "prefix": "HƠN ",
+   "suffix": " NGHI PHẠM",
+   "countAt": [
+    20,
+    "trăm",
+    1
+   ],
+   "label": "SAU HƠN 130 NĂM",
+   "sub": {
+    "text": "KHÔNG MỘT BẢN ÁN",
+    "at": [
+     20,
+     "nghi"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 21,
+   "pins": [
+    {
+     "id": "g",
+     "img": "gull",
+     "label": "BÁC SĨ CỦA NỮ HOÀNG",
+     "x": 470,
+     "y": 460,
+     "at": [
+      21,
+      "bác"
+     ]
+    },
+    {
+     "id": "s",
+     "img": "sickert",
+     "label": "HỌA SĨ NỔI TIẾNG",
+     "x": 960,
+     "y": 460,
+     "at": [
+      21,
+      "họa"
+     ]
+    },
+    {
+     "id": "c",
+     "img": "carroll",
+     "label": "TÁC GIẢ “ALICE”",
+     "x": 1450,
+     "y": 460,
+     "at": [
+      21,
+      "Alice"
+     ]
+    }
+   ],
+   "stamp": {
+    "text": "?",
+    "at": [
+     22,
+     "biết"
+    ],
+    "x": 960,
+    "y": 790,
+    "rot": -6
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 23,
+   "vid": "4061884",
+   "tone": "night",
+   "items": [
+    {
+     "text": "THẾ GIỚI CHỈ BIẾT",
+     "sm": true,
+     "at": [
+      23,
+      "biết"
+     ]
+    },
+    {
+     "text": "MỘT CÁI TÊN",
+     "serif": true,
+     "acc": true,
+     "at": [
+      23,
+      "tên."
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 24,
+   "bg": "nemesis",
+   "text": "JACK THE RIPPER",
+   "white": true,
+   "hitAt": [
+    24,
+    "Jack"
+   ],
+   "sub": "JACK KẺ PHANH THÂY · JACK ĐỒ TỂ",
+   "stamp": {
+    "text": "HỒ SƠ CHƯA ĐÓNG",
+    "at": [
+     24,
+     "Phanh"
+    ],
+    "x": 960,
+    "y": 660,
+    "rot": -9
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 25,
+   "bg": "ipn_sep22",
+   "items": [
+    {
+     "text": "MỞ LẠI HỒ SƠ",
+     "serif": true,
+     "acc": true,
+     "at": [
+      25,
+      "mở"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 26,
+   "img": "dearboss",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.3,
+   "kin": [
+    {
+     "text": "LÁ THƯ ĐẶT RA CÁI TÊN",
+     "at": [
+      26,
+      "lá"
+     ]
+    },
+    {
+     "text": "AI THẬT SỰ ĐÃ VIẾT NÓ?",
+     "acc": true,
+     "at": [
+      26,
+      "viết"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 27,
+   "img": "vigilance_box",
+   "tone": "sepia",
+   "move": "in",
+   "veil": 0.3,
+   "kin": [
+    {
+     "text": "MỘT CHIẾC HỘP NHỎ",
+     "at": [
+      27,
+      "hộp"
+     ]
+    },
+    {
+     "text": "NỬA QUẢ THẬN NGƯỜI",
+     "acc": true,
+     "at": [
+      27,
+      "thận"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 28,
+   "bg": "ipn_oct20",
+   "items": [
+    {
+     "text": "NHÂN CHỨNG DUY NHẤT",
+     "at": [
+      28,
+      "nhân"
+     ]
+    },
+    {
+     "text": "TỪ CHỐI LÀM CHỨNG",
+     "acc": true,
+     "at": [
+      28,
+      "từ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 29,
+   "img": "bucks_row",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.35,
+   "kin": [
+    {
+     "text": "NGƯỜI TÌM THẤY THI THỂ ĐẦU TIÊN",
+     "at": [
+      29,
+      "thi"
+     ]
+    },
+    {
+     "text": "130 NĂM SAU BỊ CHỈ MẶT",
+     "acc": true,
+     "at": [
+      29,
+      "chỉ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 30,
+   "vid": "5767251",
+   "tone": "night",
+   "items": [
+    {
+     "text": "HÃY NHỚ MỘT CON SỐ",
+     "at": [
+      30,
+      "nhớ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 31,
+   "bg": "outcast_sheds",
+   "text": "4 XU",
+   "white": true,
+   "hitAt": [
+    31,
+    "Bốn"
+   ],
+   "sub": "FOURPENCE"
+  },
+  {
+   "type": "photo",
+   "at": 32,
+   "img": "outcast_sheds",
+   "tone": "sepia",
+   "move": "pan",
+   "veil": 0.35,
+   "film": true,
+   "kin": [
+    {
+     "text": "GIÁ MỘT CHỖ NGỦ CHO MỘT ĐÊM",
+     "at": [
+      32,
+      "giá"
+     ]
+    },
+    {
+     "text": "VÀ HỌ KHÔNG CÓ BỐN XU ẤY",
+     "acc": true,
+     "at": [
+      33,
+      "không"
+     ]
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "CHÚC NGỦ NGON"
+ },
+ "bgm": {
+  "file": "gathering_darkness.mp3",
+  "at": 0,
+  "gain": 0.13
+ }
+}

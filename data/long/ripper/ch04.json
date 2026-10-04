@@ -1,0 +1,399 @@
+{
+ "title": "Thân gửi Ông chủ",
+ "lines": [
+  {
+   "t": "Chương bốn. Thân gửi Ông chủ.",
+   "p": 0.8
+  },
+  "Lá thư đề ngày 25 tháng 9, gửi tới Hãng tin Trung ương, nơi cung cấp tin cho các tờ báo.",
+  "Nó dài hai trang, viết bằng mực đỏ, đầy lỗi chính tả. Người viết mở đầu bằng hai chữ: \"Ông chủ thân mến.\"",
+  "Rồi hắn viết:",
+  {
+   "t": "Tôi cứ nghe nói cảnh sát đã bắt được tôi, nhưng chúng chưa tóm được tôi đâu.",
+   "q": 1
+  },
+  {
+   "t": "Cái trò đùa về Tạp Dề Da làm tôi cười muốn chết.",
+   "q": 1
+  },
+  {
+   "t": "Tôi sẽ không dừng tay cho tới khi bị tóm.",
+   "q": 1,
+   "p": 1.0
+  },
+  "Người viết kể rằng hắn đã để dành một ít \"thứ chất đỏ đúng điệu\" trong một chai bia gừng để viết thư.",
+  "Nhưng nó đặc lại như keo, nên hắn đành dùng mực đỏ.",
+  "Hắn hứa lần tới sẽ cắt tai nạn nhân, gửi cho cảnh sát.",
+  {
+   "t": "Và hắn ký tên.",
+   "p": 1.0
+  },
+  {
+   "t": "Thân ái, Jack the Ripper.",
+   "q": 1
+  },
+  {
+   "t": "Đừng phiền lòng vì tôi dùng nghệ danh.",
+   "q": 1,
+   "p": 1.0
+  },
+  "Đó là lần đầu tiên trong lịch sử cái tên ấy xuất hiện.",
+  "Ở hãng tin, người ta nghĩ đây chỉ là trò đùa.",
+  "Họ giữ lá thư hai ngày, rồi mới chuyển tới Scotland Yard, trụ sở cảnh sát London, vào ngày 29 tháng 9.",
+  {
+   "t": "Cảnh sát cũng nghĩ đó là trò đùa.",
+   "p": 1.0
+  },
+  "Hai mươi bốn giờ sau, mọi thứ thay đổi.",
+  "Đêm hôm ấy chính là đêm mà bạn đã thấy ở đầu video.",
+  "Kate Eddowes sắp được thả ra khỏi đồn cảnh sát.",
+  {
+   "t": "Còn ở phố Berner, một người phụ nữ Thụy Điển cài một bông hồng đỏ lên áo.",
+   "p": 1.0
+  }
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "04",
+   "k": "CHƯƠNG BỐN",
+   "title": "THÂN GỬI\nÔNG CHỦ",
+   "sub": "“DEAR BOSS” · 25.09.1888",
+   "bg": "dearboss",
+   "titleAt": [
+    0,
+    "Thân"
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 1,
+   "img": "dearboss",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.25,
+   "label": {
+    "k": "HÃNG TIN TRUNG ƯƠNG · CENTRAL NEWS",
+    "v": "ĐỀ NGÀY 25.09.1888",
+    "at": [
+     1,
+     "25"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "bg": "dearboss",
+   "items": [
+    {
+     "text": "2 TRANG · MỰC ĐỎ · ĐẦY LỖI CHÍNH TẢ",
+     "sm": true,
+     "at": [
+      2,
+      "mực"
+     ]
+    },
+    {
+     "text": "“DEAR BOSS”",
+     "serif": true,
+     "acc": true,
+     "at": [
+      2,
+      "Ông"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "sticker",
+   "at": 3,
+   "bg": "dearboss",
+   "veil": 0.7,
+   "items": [
+    {
+     "it": "I keep on hearing the police\nhave caught me but they\nwont fix me just yet.",
+     "vi": "Cảnh sát chưa tóm được tôi đâu.",
+     "at": [
+      4,
+      "Tôi"
+     ],
+     "x": 470,
+     "y": 250,
+     "rot": -4
+    },
+    {
+     "it": "That joke about Leather Apron\ngave me real fits.",
+     "vi": "Trò đùa Tạp Dề Da làm tôi cười muốn chết.",
+     "at": [
+      5,
+      "Cái"
+     ],
+     "x": 1430,
+     "y": 300,
+     "rot": 3
+    },
+    {
+     "it": "I shant quit ripping them\ntill I do get buckled.",
+     "vi": "Tôi sẽ không dừng tay cho tới khi bị tóm.",
+     "at": [
+      6,
+      "Tôi"
+     ],
+     "x": 960,
+     "y": 600,
+     "rot": -2
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "vid": "9388054",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "“THỨ CHẤT ĐỎ ĐÚNG ĐIỆU”",
+     "serif": true,
+     "at": [
+      7,
+      "chất"
+     ]
+    },
+    {
+     "text": "ĐỂ DÀNH TRONG CHAI BIA GỪNG",
+     "acc": true,
+     "sm": true,
+     "at": [
+      7,
+      "chai"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "vid": "7341243",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "ĐẶC LẠI NHƯ KEO",
+     "at": [
+      8,
+      "keo,"
+     ]
+    },
+    {
+     "text": "ĐÀNH DÙNG MỰC ĐỎ",
+     "acc": true,
+     "at": [
+      8,
+      "mực"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 9,
+   "bg": "dearboss2",
+   "text": "LẦN TỚI:\nCẮT TAI",
+   "hitAt": [
+    9,
+    "tai"
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 10,
+   "img": "dearboss2",
+   "tone": "color",
+   "move": "in",
+   "focus": [
+    0.5,
+    0.35
+   ],
+   "veil": 0.2,
+   "kin": [
+    {
+     "text": "VÀ HẮN KÝ TÊN",
+     "at": [
+      10,
+      "ký"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 11,
+   "bg": "dearboss2",
+   "text": "JACK THE RIPPER",
+   "white": true,
+   "hitAt": [
+    11,
+    "Jack"
+   ],
+   "sub": "“YOURS TRULY” · THÂN ÁI"
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "bg": "dearboss2",
+   "items": [
+    {
+     "text": "“DONT MIND ME GIVING THE TRADE NAME”",
+     "sm": true,
+     "at": [
+      12,
+      "Đừng"
+     ]
+    },
+    {
+     "text": "ĐỪNG PHIỀN LÒNG VÌ TÔI DÙNG NGHỆ DANH",
+     "acc": true,
+     "at": [
+      12,
+      "nghệ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "bg": "nemesis",
+   "items": [
+    {
+     "text": "LẦN ĐẦU TIÊN TRONG LỊCH SỬ",
+     "serif": true,
+     "acc": true,
+     "at": [
+      13,
+      "lần"
+     ]
+    },
+    {
+     "text": "CÁI TÊN ẤY XUẤT HIỆN",
+     "sm": true,
+     "at": [
+      13,
+      "xuất"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "vid": "29906414",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "HÃNG TIN: “CHỈ LÀ TRÒ ĐÙA”",
+     "at": [
+      14,
+      "trò"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 15,
+   "bg": "dearboss",
+   "items": [
+    {
+     "year": "27.09",
+     "text": "Hãng tin *nhận thư*",
+     "at": [
+      15,
+      "Họ"
+     ]
+    },
+    {
+     "year": "29.09",
+     "text": "Chuyển tới *Scotland Yard*",
+     "at": [
+      15,
+      "Scotland"
+     ]
+    },
+    {
+     "year": "30.09",
+     "text": "*Sự kiện kép*",
+     "at": [
+      17,
+      "Hai"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 18,
+   "vid": "30339959",
+   "ms": 6,
+   "tone": "night",
+   "items": [
+    {
+     "text": "ĐÊM MÀ BẠN ĐÃ THẤY Ở ĐẦU VIDEO",
+     "at": [
+      18,
+      "đầu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "bg": "kate_sketch",
+   "items": [
+    {
+     "text": "KATE SẮP ĐƯỢC THẢ",
+     "at": [
+      19,
+      "thả"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 20,
+   "img": "berner",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.35,
+   "kin": [
+    {
+     "text": "PHỐ BERNER",
+     "at": [
+      20,
+      "Berner,"
+     ]
+    },
+    {
+     "text": "MỘT BÔNG HỒNG ĐỎ",
+     "serif": true,
+     "acc": true,
+     "at": [
+      20,
+      "hồng"
+     ]
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "THÂN GỬI ÔNG CHỦ"
+ },
+ "bgm": {
+  "file": "lightless_dawn.mp3",
+  "at": 0,
+  "gain": 0.3
+ }
+}

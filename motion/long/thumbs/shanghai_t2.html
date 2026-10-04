@@ -1,0 +1,26 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800;900&family=Playfair+Display:wght@900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#070504}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;color:#fff}
+.abs{position:absolute}
+.grain{position:absolute;inset:0;opacity:.12;mix-blend-mode:overlay}
+.big{position:absolute;font-weight:900;line-height:1;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.tag{position:absolute;font-family:'JetBrains Mono';font-weight:700;letter-spacing:.22em;color:#e9c46a;white-space:nowrap}
+.stamp{position:absolute;font-weight:900;color:#d6352b;border:8px solid #d6352b;padding:6px 26px;transform:rotate(-8deg);letter-spacing:.06em;white-space:nowrap;
+  text-shadow:none;background:rgba(7,5,4,.35);mix-blend-mode:screen}
+</style></head><body>
+<!-- T2: nghịch lý — ông trùm thuốc phiện = trưởng Cục Cấm thuốc phiện -->
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<img class="abs" src="assets/long/shanghai/img/opium_den.jpg" style="left:0;top:0;width:1920px;height:1080px;object-fit:cover;filter:grayscale(1) sepia(.6) contrast(1.2) brightness(.45) blur(2px)"/>
+<div class="abs" style="inset:0;background:radial-gradient(70% 80% at 30% 50%,rgba(7,5,4,.1),rgba(7,5,4,.9))"></div>
+<img class="abs" src="assets/long/shanghai/img/du_1947.jpg" style="left:1180px;top:60px;width:680px;height:960px;object-fit:cover;object-position:50% 20%;filter:grayscale(1) contrast(1.35);border:14px solid #efe6d2;box-shadow:0 40px 120px #000;transform:rotate(3deg)"/>
+<div class="tag" style="left:90px;top:120px;font-size:34px">THƯỢNG HẢI · 1930s</div>
+<div class="big" style="left:80px;top:200px;font-size:128px;color:#fff">ÔNG TRÙM</div>
+<div class="big" style="left:80px;top:340px;font-size:128px;color:#fff">THUỐC PHIỆN</div>
+<div class="big" style="left:84px;top:520px;font-size:72px;color:#e9c46a">= TRƯỞNG CỤC</div>
+<div class="big" style="left:80px;top:610px;font-size:118px;color:#ff4b3a">CẤM THUỐC PHIỆN</div>
+<div class="stamp" style="left:1240px;top:820px;font-size:64px">CÓ THẬT</div>
+<svg class="grain" width="1920" height="1080"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3" seed="7"/></filter><rect width="100%" height="100%" filter="url(#g)"/></svg>
+</div><script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>
