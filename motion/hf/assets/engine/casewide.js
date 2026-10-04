@@ -208,12 +208,14 @@
 
   /* ---------- kinetic: chữ lớn xếp tầng, từng dòng đập vào theo lời ----------
      sfx: mỗi item.at -> thud nhẹ */
+  const { BEAT, SLAM, beat } = makeBeat({ tl, el, esc, rnd });   // beat.js: thư viện hiệu ứng chữ dùng chung với casefile
+
   const kinetic = (items, d, align) => {
     const sizes = items.map((q) => q.size || fsz(q.text, q.sm ? 56 : 130, 1650, q.serif ? 0.62 : 0.66)), total = sizes.reduce((a, b) => a + b * 1.22, 0);
     let y = Math.max(130, 470 - total / 2);
     items.forEach((q, k) => { const e = el("div", "kin" + (q.acc ? " acc" : "") + (q.serif ? " serif" : "") + (q.sm ? " sm" : "") + (align === "l" ? " l" : ""), esc(q.text), d);
       Object.assign(e.style, { fontSize: px(sizes[k]), top: px(y) }); y += sizes[k] * 1.22;
-      tl.fromTo(e, { opacity: 0, scale: 1.3, y: -16 }, { opacity: 1, scale: 1, y: 0, duration: 0.2, ease: "power4.in", immediateRender: false }, q.at - 0.08); });
+      beat(e, q); });
   };
   B.kinetic = (s, d) => { bg(s, d, 0.62);
     const it = s.items.map((q) => ({ ...q })), f = it.reduce((a, q) => (q.at < a.at ? q : a), it[0]);
@@ -221,11 +223,14 @@
     kinetic(it, d, s.align); common(s, d); };
 
   /* ---------- slam: một dòng chữ đập mạnh trên nền tư liệu tối ----------
-     sfx: at -> boom */
+     sfx: at -> boom (theo fx, xem sfx_long.py) */
   B.slam = (s, d) => {
     bg(s, d, 0.6);
     const lines = s.text.split("\n"), fs = fsz(lines.reduce((a, b) => (a.length > b.length ? a : b)), 190, 1700, 0.66);
     const sl = el("div", "slam", lines.map(esc).join("<br/>"), d); Object.assign(sl.style, { fontSize: px(fs), top: px(460 - fs * lines.length / 2), lineHeight: 1.02, color: s.white ? "#fff" : "" });
+    if (s.fx && s.fx !== "punch" && SLAM[s.fx]) { SLAM[s.fx](sl, s, fs, lines);
+      if (s.sub) { const sb = el("div", "dsub", esc(s.sub), d); sb.style.top = px(480 + fs * lines.length / 2 + 20); tl.to(sb, { opacity: 1, duration: 0.3 }, s.at + 0.3); }
+      common(s, d); return; }
     if (s.at - s.t0 > 1.6) {   // cú đập đến muộn -> chữ hiện mờ trước (khỏi trống màn), rồi mới đập
       tl.fromTo(sl, { opacity: 0, scale: 1.04 }, { opacity: 0.16, scale: 1, duration: 0.6, immediateRender: false }, s.t0 + 0.2);
       tl.to(sl, { scale: 1.6, duration: 0.01 }, s.at - 0.14);

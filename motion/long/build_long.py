@@ -68,6 +68,7 @@ SAY = {}   # chữ hiển thị -> cách đọc cho TTS (spec["say"]); phụ đ�
 def load(topic):
     sd, od = paths(topic)
     spec = json.loads((sd / "spec.json").read_text(encoding="utf-8"))
+    THEME["name"] = spec.get("theme", "")
     SAY.clear()
     SAY_EXACT.clear()
     for k, v in (spec.get("say") or {}).items():   # "=Di": khớp ĐÚNG hoa/thường (tránh "di cư" thành "Đi cư")
@@ -301,6 +302,16 @@ def probe_dur(p: Path) -> float:
     return float(r.stdout.strip())
 
 
+# ---------------- beat text: motion/beatfx.py chọn hiệu ứng chữ (engine/beat.js), dùng chung với Short ----------------
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from beatfx import assign_beats as _assign_beats  # noqa: E402
+THEME = {"name": ""}
+
+
+def assign_beats(sc: list[dict], ch: dict) -> None:
+    _assign_beats(sc, THEME["name"] + "|" + ch.get("title", ""))
+
+
 # ---------------- kế hoạch cảnh ----------------
 def plan(ch: dict, lines: list[dict], dur: float) -> list[dict]:
     A = Anchors(lines)
@@ -395,6 +406,7 @@ def plan(ch: dict, lines: list[dict], dur: float) -> list[dict]:
         if ty == "ledger":
             for k, q in enumerate(r.get("rows") or []):
                 q.setdefault("at", round(t0 + 0.6 + 0.5 * k, 3))
+    assign_beats(sc, ch)
     return sc
 
 
@@ -407,6 +419,7 @@ HTML = """<!doctype html>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,600;0,700;0,800;0,900;1,600&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=JetBrains+Mono:wght@500;700&family=Noto+Serif+SC:wght@900&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/engine/casewide.css" />
+<link rel="stylesheet" href="assets/engine/beat.css" />
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
 <script src="{data}"></script>
 </head>
@@ -426,6 +439,7 @@ HTML = """<!doctype html>
   <div id="caps"></div>
   <div class="layer" id="flash"></div>
 </div>
+<script src="assets/engine/beat.js"></script>
 <script src="assets/engine/casewide.js"></script>
 </body>
 </html>
@@ -562,7 +576,7 @@ def render_key(topic, name, od, draft) -> str:
     """Băm mọi thứ quyết định hình của chương: data.js, composition, engine js/css, các clip B-roll dùng tới."""
     hsh = hashlib.sha1(b"draft" if draft else b"final")
     comp = HF / "compositions" / "long" / f"{topic}_{name}.html"
-    for f in [od / name / "data.js", comp, HF / "assets" / "engine" / "casewide.js", HF / "assets" / "engine" / "casewide.css"]:
+    for f in [od / name / "data.js", comp] + [HF / "assets" / "engine" / n for n in ("casewide.js", "casewide.css", "beat.js", "beat.css")]:
         hsh.update(f.read_bytes())
     for vid in sorted(set(re.findall(r"broll/(\d+)\.mp4", comp.read_text(encoding="utf-8")))):
         hsh.update(vid.encode())

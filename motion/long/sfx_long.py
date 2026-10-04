@@ -12,6 +12,7 @@ from pathlib import Path
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "stier"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from sfx import Mix, SR  # noqa: E402
 from scipy.signal import butter, sosfilt  # noqa: E402
 
@@ -104,6 +105,9 @@ class NoirMix(Mix):
     CUES = ("match", "bell", "gavel", "slap", "heart", "paper", "boom", "thud", "whoosh", "shutter", "clank")
 
 
+from beatfx import beat_sfx  # noqa: E402  (motion/beatfx.py)
+
+
 def build(case: dict, dst: Path) -> None:
     dur = case["dur"]
     M = NoirMix(dur, case.get("seed", 1995))
@@ -112,7 +116,7 @@ def build(case: dict, dst: Path) -> None:
         if i > 0 and ty not in ("question", "broll", "chapter"):
             M.put(T0 - 0.3, M.whoosh(0.45), 0.16, 0.3 if i % 2 else -0.3)
         for q in s.get("kin") or []:
-            M.put(q["at"] - 0.02, M.thud(0.35), 0.3)
+            beat_sfx(M, q, 0.75)
         if isinstance(s.get("label"), dict):
             M.put(s["label"]["at"], M.tick(2600, 0.04), 0.35)
         if s.get("stamp"):
@@ -143,9 +147,16 @@ def build(case: dict, dst: Path) -> None:
                     M.put(r["at"] + k * 0.06, M.key(), 0.3)
         elif ty == "kinetic":
             for q in s["items"]:
-                M.put(q["at"] - 0.02, M.thud(0.4), 0.42)
+                beat_sfx(M, q, 1.0)
         elif ty == "slam":
-            M.put(s["at"] + 0.05, M.boom(1.8), 0.85)
+            fx = s.get("fx", "punch")
+            if fx == "glitch":
+                M.put(s["at"] - 0.05, M.static(0.4), 0.5)
+            elif fx == "slice":
+                M.put(s["at"] - 0.3, M.whoosh(0.35), 0.4)
+            elif fx == "zoom":
+                M.put(s["at"] - 0.45, M.whoosh(0.5), 0.45)
+            M.put(s["at"] + 0.05, M.boom(1.8 if fx != "outline" else 1.4), 0.85)
         elif ty == "counter":
             n = 28
             span = s["until"] - s["at"]

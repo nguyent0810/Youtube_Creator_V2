@@ -127,3 +127,19 @@ Credit ảnh tự hiện theo giấy phép.
   4. phụ đề
   5. playlist mới
   - Chạy lại thì các bước đã xong được bỏ qua.
+
+## Beat text (hiệu ứng chữ) — dùng chung Long và Short
+
+- Engine: `motion/hf/assets/engine/beat.js` + `beat.css` (nạp trước `casewide.js` / `casefile.js`). Bộ chọn và tiếng tay nằm ở `motion/beatfx.py`.
+- Mỗi dòng chữ (`kinetic.items`, `kin` phủ trên ảnh/clip) và mỗi `slam` được gán `fx` tự động khi dựng. Việc gán là tất định theo tên chương, không lặp kiểu vừa dùng:
+
+| Loại dòng | Các kiểu |
+|---|---|
+| Dòng thường (cả cảnh dùng chung một kiểu) | `rise` (trồi từ mép che), `blur` (nhòe→nét), `slice` (2 nửa ghép), `drop` (rơi nảy), `pop` |
+| Dòng nhấn `acc` | `marker` (bút dạ quang quét), `redact` (bôi đen rồi lộ), `stamp` (con dấu), `tape` (băng phong tỏa), `outline` (viền→đổ màu), `flicker` (neon chập chờn) |
+| Dòng nhỏ `sm` | `type` (máy đánh chữ), `rise`, `blur` |
+| Dòng ngắn có số | `scramble` (giải mã ký tự), `type` |
+| Slam | `punch` (cũ), `glitch` (tách kênh màu), `zoom` (lao tới), `slice` (3 dải so le), `outline` |
+
+- Muốn ép một kiểu thì ghi `"fx": "redact"` vào item hoặc slam. Riêng `"fx": "strike", "strikeAt": [i, "từ"]` gạch ngang câu "không phải X".
+- `stamp` và `tape` có khung, nên chỉ được gán cho dòng ≤18 ký tự (Short: ≤12).

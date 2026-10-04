@@ -176,6 +176,10 @@ def resolve(obj, A):
     return obj
 
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from beatfx import assign_beats  # noqa: E402  (motion/beatfx.py — dùng chung với video dài)
+
+
 def plan(spec: dict, lines: list[dict], dur: float) -> list[dict]:
     A = Anchors(lines)
     sc = []
@@ -226,6 +230,7 @@ def plan(spec: dict, lines: list[dict], dur: float) -> list[dict]:
             r["a"].setdefault("at", t0 + 0.1); r["b"].setdefault("at", t0 + 0.4)
             if r.get("sign"):
                 r.setdefault("signAt", t0 + 0.8)
+    assign_beats(sc, spec.get("title", ""), boxed_max=12)   # màn dọc hẹp: con dấu/băng dán chỉ cho dòng thật ngắn
     return sc
 
 
@@ -238,6 +243,7 @@ HTML = """<!doctype html>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,600;0,700;0,800;0,900;1,600&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/engine/casefile.css" />
+<link rel="stylesheet" href="assets/engine/beat.css" />
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
 <script src="assets/cases/{slug}/data.js"></script>
 </head>
@@ -256,6 +262,7 @@ HTML = """<!doctype html>
   <div id="caps"></div>
   <div class="layer" id="flash"></div>
 </div>
+<script src="assets/engine/beat.js"></script>
 <script src="assets/engine/casefile.js"></script>
 </body>
 </html>

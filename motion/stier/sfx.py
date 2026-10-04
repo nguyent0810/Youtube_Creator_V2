@@ -6,6 +6,7 @@ khoảnh khắc lật, cảnh `question` thì LẶNG hẳn.
 """
 from __future__ import annotations
 
+import sys
 import wave
 from pathlib import Path
 
@@ -110,6 +111,10 @@ class Mix:
         out = (self.bed / peak * 0.9 * 32767).astype("<i2")
         with wave.open(str(dst), "wb") as w:
             w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes(out.tobytes())
+
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from beatfx import beat_sfx  # noqa: E402
 
 
 def build(case: dict, dst: Path) -> None:
@@ -221,7 +226,7 @@ def build(case: dict, dst: Path) -> None:
                 M.put(s["at"] + (k / n) * s["typeDur"], M.key(), 0.4, ((k % 5) - 2) * 0.08)
         elif ty == "kinetic":
             for q in s["items"]:
-                M.put(q["at"] - 0.02, M.thud(0.4), 0.5)
+                beat_sfx(M, q, 1.15)
         elif ty == "evidence":
             M.put(T0, M.shutter(), 0.5)
             for c in s.get("callouts") or []:
@@ -242,5 +247,10 @@ def build(case: dict, dst: Path) -> None:
             if s.get("total"):
                 M.put(s["total"]["at"], M.thud(0.6), 0.9)
         elif ty == "slam":
-            M.put(s["at"] + 0.05, M.boom(1.8), 1.0)
+            fx = s.get("fx", "punch")
+            if fx in ("slice", "zoom"):
+                M.put(s["at"] - 0.35, M.whoosh(0.4), 0.5)
+            elif fx == "glitch":
+                M.put(s["at"] - 0.05, M.scratch(0.35), 0.6)
+            M.put(s["at"] + 0.05, M.boom(1.8 if fx != "outline" else 1.4), 1.0)
     M.write(dst)

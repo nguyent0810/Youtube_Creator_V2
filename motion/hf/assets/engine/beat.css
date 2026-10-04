@@ -1,0 +1,23 @@
+/* ---------- BEAT: thư viện hiệu ứng chữ (xem BEAT / SLAM trong casewide.js) ---------- */
+.kin .rw { display:inline-block; overflow:hidden; vertical-align:bottom; line-height:1.14; padding:0 .03em; }
+.kin .rw > span, .kin .dw { display:inline-block; }
+.kin .kt { display:inline-block; position:relative; padding:0 .16em; }
+.kin .mk { color:#fff; text-shadow:none; background-image:linear-gradient(var(--red), var(--red)); background-repeat:no-repeat; background-position:0 62%; background-size:0% 78%; }
+.kin .rdb { position:absolute; left:-.04em; right:-.04em; top:10%; bottom:6%; background:#0b0908; display:block; box-shadow:0 0 0 2px #0b0908; }
+.kin .stp { color:var(--red); border:.075em solid var(--red); border-radius:.08em; padding:.02em .32em .06em; letter-spacing:.05em; text-shadow:none;
+            box-shadow:inset 0 0 .4em rgba(226,64,45,.25); }
+.kin .tp { color:#121010; text-shadow:none; letter-spacing:.06em; padding:.08em .42em .1em; box-shadow:0 12px 34px rgba(0,0,0,.65);
+           background:#f2c230 repeating-linear-gradient(-45deg, transparent 0 .55em, rgba(0,0,0,.09) .55em 1.1em); }
+.kin.neo { color:#ffe9e2; text-shadow:0 0 .06em #fff, 0 0 .25em var(--red), 0 0 .7em var(--red), 0 0 1.4em rgba(226,64,45,.6); }
+.kin.otl .kt { -webkit-text-stroke:.024em #f4efe6; }
+.kin.acc.otl .kt { -webkit-text-stroke-color:var(--red); }
+.kin.typ, .kin.scr2 { font-family:'JetBrains Mono', monospace; font-weight:700; letter-spacing:-.03em; }
+.kin .cur { color:var(--red); margin-left:.04em; }
+.kin .stl { position:absolute; left:-.04em; right:-.04em; top:54%; height:.085em; background:var(--red); display:block; transform-origin:0 50%; }
+.kin .sl { position:absolute; left:0; right:0; top:0; }
+.kin .sl.a { clip-path:inset(0 0 50% 0); } .kin .sl.b { clip-path:inset(50% 0 0 0); } .kin .sl0 { visibility:hidden; }
+.slam .gl, .slam .sx { position:absolute; left:0; right:0; top:0; }
+.slam .gl { opacity:0; mix-blend-mode:screen; text-shadow:none; } .slam .gl.r { color:#ff2b2b; } .slam .gl.c { color:#27e3ff; }
+.slam .s0 { clip-path:inset(0 0 66% 0); } .slam .s1 { clip-path:inset(34% 0 33% 0); } .slam .s2 { clip-path:inset(67% 0 0 0); }
+.slam .sx0 { visibility:hidden; }
+.slam.otl { -webkit-text-stroke:.02em #f4efe6; text-shadow:none; }

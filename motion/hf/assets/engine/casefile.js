@@ -337,11 +337,12 @@
 
   /* ---------- kinetic: chữ lớn xếp tầng, từng dòng đập vào theo lời ----------
      sfx: mỗi item.at -> thud nhẹ */
+  const { SLAM, beat } = makeBeat({ tl, el, esc, rnd });   // beat.js: thư viện hiệu ứng chữ dùng chung với casewide
   B.kinetic = (s, d) => {
     const it = s.items, sizes = it.map((q) => q.size || fsz(q.text, 150, 960, 0.8)), total = sizes.reduce((a, b) => a + b * 1.08, 0);
     let y = Math.max(300, 820 - total / 2);
     it.forEach((q, k) => { const e = el("div", "kin" + (q.acc ? " acc" : "") + (q.serif ? " serif" : ""), esc(q.text), d); Object.assign(e.style, { fontSize: px(sizes[k]), top: px(y) }); y += sizes[k] * 1.08;
-      tl.fromTo(e, { opacity: 0, scale: 1.35, y: -20 }, { opacity: 1, scale: 1, y: 0, duration: 0.2, ease: "power4.in", immediateRender: false }, q.at - 0.08); });
+      beat(e, q); });
     if (s.bg) { const m = IM(s.bg), im = el("img", "abs " + toneCls("dim"), null, d); im.src = m.src; const k = Math.max(1080 / m.w, 1920 / m.h);
       Object.assign(im.style, { width: px(m.w * k), height: px(m.h * k), left: px(540 - m.w * k / 2), top: px(960 - m.h * k / 2), zIndex: -1, opacity: 0.55 });
       d.insertBefore(im, d.firstChild); tl.fromTo(im, { scale: 1.1 }, { scale: 1.0, duration: s.t1 - s.t0, ease: "none", immediateRender: false }, s.t0); }
@@ -404,7 +405,8 @@
       tl.fromTo(im, { scale: 1.12 }, { scale: 1.0, duration: s.t1 - s.t0, ease: "none", immediateRender: false }, s.t0); }
     const lines = s.text.split("\n"), fs = fsz(lines.reduce((a, b) => (a.length > b.length ? a : b)), 170, 960, 0.8);
     const sl = el("div", "slam", lines.map(esc).join("<br/>"), d); Object.assign(sl.style, { fontSize: px(fs), top: px(820 - fs * lines.length / 2), lineHeight: 1.02, color: s.white ? "#fff" : "" });
-    tl.fromTo(sl, { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 0.18, ease: "power4.in", immediateRender: false }, s.at - 0.13);
+    if (s.fx && s.fx !== "punch" && SLAM[s.fx]) SLAM[s.fx](sl, s);
+    else tl.fromTo(sl, { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 0.18, ease: "power4.in", immediateRender: false }, s.at - 0.13);
     if (s.sub) { const sb = el("div", "dsub mono", esc(s.sub), d); sb.style.top = px(840 + fs * lines.length / 2 + 30); tl.to(sb, { opacity: 1, duration: 0.3 }, s.at + 0.3); }
     tl.to("#stage", { x: 12, duration: 0.03, yoyo: true, repeat: 5 }, s.at + 0.05);
   };
