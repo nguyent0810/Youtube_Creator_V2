@@ -1,10 +1,10 @@
 # Trạng thái sản xuất — 3 kênh
 
-_Cập nhật 21/09/2026 17:45 · `python scripts/status_report.py`_
+_Cập nhật 30/09/2026 14:20 · `python scripts/status_report.py`_
 
 # Trạng thái kênh Phong Thủy (FS)
 
-_Cập nhật 21/09/2026 17:45 (giờ máy) · sinh bằng `python scripts/status_report.py`_
+_Cập nhật 30/09/2026 14:20 (giờ máy) · sinh bằng `python scripts/status_report.py`_
 
 Giờ trong bảng là giờ Việt Nam. Mọi video đều **riêng tư + hẹn giờ**; YouTube tự công khai đúng giờ.
 
@@ -128,15 +128,15 @@ Ký hiệu: ✅ đã lên kênh · 🎬 dựng xong, chờ đăng · 🔊 có gi
 
 # Trạng thái kênh Phong Thủy (FS)
 
-_Cập nhật 21/09/2026 17:45 (giờ máy) · sinh bằng `python scripts/status_report.py`_
+_Cập nhật 30/09/2026 14:20 (giờ máy) · sinh bằng `python scripts/status_report.py`_
 
 Giờ trong bảng là giờ Việt Nam. Mọi video đều **riêng tư + hẹn giờ**; YouTube tự công khai đúng giờ.
 
 ## Tóm tắt
 
-- Khoảng 25/09 → 01/10: **0 ngày đủ 5/5**, 0 ngày đăng dở, 7 ngày chưa có video nào.
-- Đã lên kênh theo dòng: Hỏi đáp luật, bẻ hiểu lầm 0 · Một điều luật trong 60 giây 0 · Nhận diện lừa đảo 0 · Hồ sơ tổ chức tội phạm, vụ án lịch sử 0 · Truyện đêm (hư cấu) 0
-- Trong hàng đợi chưa đăng: **35** item
+- Khoảng 25/09 → 01/10: **7 ngày đủ 5/5**, 0 ngày đăng dở, 0 ngày chưa có video nào.
+- Đã lên kênh theo dòng: Hỏi đáp luật, bẻ hiểu lầm **7** (tới 01/10) · Một điều luật trong 60 giây **7** (tới 01/10) · Nhận diện lừa đảo **7** (tới 01/10) · Hồ sơ tổ chức tội phạm, vụ án lịch sử **7** (tới 01/10) · Truyện đêm (hư cấu) **7** (tới 01/10)
+- Trong hàng đợi chưa đăng: **0** item
 
 Ký hiệu: ✅ đã lên kênh · 🎬 dựng xong, chờ đăng · 🔊 có giọng · 📝 có kịch bản · ⏳ chờ quota · ❌ hỏng · — chưa có
 
@@ -144,17 +144,17 @@ Ký hiệu: ✅ đã lên kênh · 🎬 dựng xong, chờ đăng · 🔊 có gi
 
 | Ngày | Hỏi đáp luật, bẻ hiểu lầm (07:00) | Một điều luật trong 60 giây (11:30) | Nhận diện lừa đảo (15:00) | Hồ sơ tổ chức tội phạm, vụ án lịch sử (19:00) | Truyện đêm (hư cấu) (22:00) | Đủ |
 |---|---|---|---|---|---|---|
-| Fri 25/09 | 🔊 Án treo có phải là trắng án? | 🔊 Điều 125: Tội giết người trong trạng t | 🔊 Lãi 30%/tháng: vì sao càng cao càng đá | 🔊 Hội Tam Hoàng ban đầu không phải băng  | 🔊 Phòng trọ giá rẻ và cửa sổ tầng bốn | 0/5 |
-| Sat 26/09 | 🔊 14 tuổi phạm tội có bị xử lý hình sự? | 🔊 Điều 128: Tội vô ý làm chết người | 📝 Công an gọi điện bắt chuyển tiền? | 📝 Al Capone ngồi tù vì tội gì? | 📝 Chuyến xe buýt cuối lúc 11 giờ đêm | 0/5 |
-| Sun 27/09 | 📝 Bị tấn công mà đánh trả có phạm tội? | 📝 Điều 130: Tội bức tử | 📝 Việc nhẹ lương cao: càng làm càng mất  | 📝 Mật mã Zodiac: 51 năm mới giải | 📝 Cuộn băng trong chiếc máy quay cũ | 0/5 |
-| Mon 28/09 | 📝 Trốn đủ lâu thì thoát tội? | 📝 Điều 131: Tội xúi giục hoặc giúp người | 📝 Lừa bao nhiêu tiền thì thành tội hình  | 📝 Omertà: luật im lặng của Mafia bị phá | 📝 Thang máy dừng ở tầng không tồn tại | 0/5 |
-| Tue 29/09 | 📝 Say rượu phạm tội có được giảm nhẹ? | 📝 Điều 133: Tội đe dọa giết người | 📝 Ngân hàng nhắn xin mã OTP để hoàn tiền | 📝 Vì sao thành viên Yakuza cụt ngón tay? | 📝 Cuộc gọi lúc 3 giờ sáng từ số của mẹ | 0/5 |
-| Wed 30/09 | 📝 Nhặt được của rơi không trả có phạm tộ | 📝 Điều 141: Tội hiếp dâm | 📝 Nhóm đầu tư có chuyên gia báo kèo mỗi  | 📝 Vụ trộm tranh lớn nhất nước Mỹ chưa ph | 📝 Người xin quá giang trên con đèo sương | 0/5 |
-| Thu 01/10 | 📝 Ra tù là hết án tích? | 📝 Điều 142: Tội hiếp dâm người dưới 16 t | 📝 Người lạ yêu nhanh rồi gửi quà từ nước | 📝 D.B. Cooper: cướp máy bay rồi biến mất | 📝 Bức ảnh gia đình mỗi năm thiếu một ngư | 0/5 |
+| Fri 25/09 | ✅ Án treo có phải là trắng án? | ✅ Điều 125: Tội giết người trong trạng t | ✅ Lãi 30%/tháng: vì sao càng cao càng đá | ✅ Hội Tam Hoàng ban đầu không phải băng  | ✅ Phòng trọ giá rẻ và cửa sổ tầng bốn | 5/5 |
+| Sat 26/09 | ✅ 14 tuổi phạm tội có bị xử lý hình sự? | ✅ Điều 128: Tội vô ý làm chết người | ✅ Công an gọi điện bắt chuyển tiền? | ✅ Al Capone ngồi tù vì tội gì? | ✅ Chuyến xe buýt cuối lúc 11 giờ đêm | 5/5 |
+| Sun 27/09 | ✅ Bị tấn công mà đánh trả có phạm tội? | ✅ Điều 130: Tội bức tử | ✅ Việc nhẹ lương cao: càng làm càng mất  | ✅ Mật mã Zodiac: 51 năm mới giải | ✅ Cuộn băng trong chiếc máy quay cũ | 5/5 |
+| Mon 28/09 | ✅ Trốn đủ lâu thì thoát tội? | ✅ Điều 131: Tội xúi giục hoặc giúp người | ✅ Lừa bao nhiêu tiền thì thành tội hình  | ✅ Omertà: luật im lặng của Mafia bị phá | ✅ Thang máy dừng ở tầng không tồn tại | 5/5 |
+| Tue 29/09 | ✅ Say rượu phạm tội có được giảm nhẹ? | ✅ Điều 133: Tội đe dọa giết người | ✅ Ngân hàng nhắn xin mã OTP để hoàn tiền | ✅ Vì sao thành viên Yakuza cụt ngón tay? | ✅ Cuộc gọi lúc 3 giờ sáng từ số của mẹ | 5/5 |
+| Wed 30/09 | ✅ Nhặt được của rơi không trả có phạm tộ | ✅ Điều 141: Tội hiếp dâm | ✅ Nhóm đầu tư có chuyên gia báo kèo mỗi  | ✅ Vụ trộm tranh lớn nhất nước Mỹ chưa ph | ✅ Người xin quá giang trên con đèo sương | 5/5 |
+| Thu 01/10 | ✅ Ra tù là hết án tích? | ✅ Điều 142: Tội hiếp dâm người dưới 16 t | ✅ Người lạ yêu nhanh rồi gửi quà từ nước | ✅ D.B. Cooper: cướp máy bay rồi biến mất | ✅ Bức ảnh gia đình mỗi năm thiếu một ngư | 5/5 |
 
 ### Làm tiếp
 
-1. Ngày đầu tiên chưa đủ 5/5: **25/09/2026**.
+1. Mọi ngày trong khoảng đã đủ 5/5.
 2. Quota upload reset **14:00 giờ VN** (07:00 UTC mùa hè, 08:00 UTC mùa đông); trần thực tế ~92 video/ngày, RIÊNG cho từng kênh.
 4. Gói kịch bản còn lại: hieusai: còn 0 kịch bản chưa dùng · dieu: khuôn tự động · luadao: còn 0 kịch bản chưa dùng · hoso: còn 0 kịch bản chưa dùng · truyen: còn 0 kịch bản chưa dùng
    Hết gói thì viết thêm vào `data/packs/CL/<dòng>.json` (Claude viết trong chat), rồi chạy:
@@ -165,15 +165,15 @@ Ký hiệu: ✅ đã lên kênh · 🎬 dựng xong, chờ đăng · 🔊 có gi
 
 # Trạng thái kênh Phong Thủy (FS)
 
-_Cập nhật 21/09/2026 17:45 (giờ máy) · sinh bằng `python scripts/status_report.py`_
+_Cập nhật 30/09/2026 14:20 (giờ máy) · sinh bằng `python scripts/status_report.py`_
 
 Giờ trong bảng là giờ Việt Nam. Mọi video đều **riêng tư + hẹn giờ**; YouTube tự công khai đúng giờ.
 
 ## Tóm tắt
 
-- Khoảng 21/09 → 21/09: **0 ngày đủ 5/5**, 0 ngày đăng dở, 1 ngày chưa có video nào.
+- Khoảng 26/10 → 01/11: **0 ngày đủ 5/5**, 0 ngày đăng dở, 7 ngày chưa có video nào.
 - Đã lên kênh theo dòng: Lịch Phật giáo hằng ngày 0 · Vì sao — biểu tượng 0 · Hiểu đúng, hiểu lầm 0 · Pháp Cú mỗi ngày 0 · Số pháp 0
-- Trong hàng đợi chưa đăng: **0** item
+- Trong hàng đợi chưa đăng: **35** item
 
 Ký hiệu: ✅ đã lên kênh · 🎬 dựng xong, chờ đăng · 🔊 có giọng · 📝 có kịch bản · ⏳ chờ quota · ❌ hỏng · — chưa có
 
@@ -181,15 +181,21 @@ Ký hiệu: ✅ đã lên kênh · 🎬 dựng xong, chờ đăng · 🔊 có gi
 
 | Ngày | Lịch Phật giáo hằng ngày (06:30) | Vì sao — biểu tượng (10:30) | Hiểu đúng, hiểu lầm (14:30) | Pháp Cú mỗi ngày (18:30) | Số pháp (21:00) | Đủ |
 |---|---|---|---|---|---|---|
-| Mon 21/09 | — | — | — | — | — | 0/5 |
+| Mon 26/10 | 📝 Còn 13 ngày tới vía Phật Dược Sư thành | 🎬 Vì sao Quán Âm cầm bình và cành dương  | 🎬 Ăn mặn có phải phạm giới? | 🎬 Pháp Cú kệ 5: hận thù không dập được h | 🎬 Bài giảng đầu tiên của Đức Phật nói gì | 0/5 |
+| Tue 27/10 | 📝 Còn 12 ngày tới vía Phật Dược Sư thành | 🎬 Vì sao Phổ Hiền cưỡi voi trắng sáu ngà | 🎬 Nghiệp có phải là định mệnh? | 🎬 Pháp Cú kệ 103: thắng chính mình | 🎬 Năm giới: vì sao không có giới phải đi | 0/5 |
+| Wed 28/10 | 📝 Còn 11 ngày tới vía Phật Dược Sư thành | 🎬 Vì sao Địa Tạng cầm tích trượng có vòn | 🎬 Niết-bàn có phải là thiên đường? | 🎬 Pháp Cú kệ 50: đừng soi lỗi người | 🎬 Tam pháp ấn: ba dấu ấn của Phật pháp | 0/5 |
+| Thu 29/10 | 📝 Còn 10 ngày tới vía Phật Dược Sư thành | 🎬 Vì sao Đức Phật ngồi trên hoa sen? | 🎬 Tu theo Phật có phải xuất gia? | 🎬 Pháp Cú kệ 223: thắng giận bằng tử tế | 🎬 Tứ vô lượng tâm: từ, bi, hỷ, xả | 0/5 |
+| Fri 30/10 | 📝 Còn 9 ngày tới vía Phật Dược Sư thành  | 🎬 Vì sao tượng Phật có dái tai dài? | 🎬 Thắp hương cầu xin, Phật có ban cho? | 🎬 Pháp Cú kệ 183: lời dạy gói trong ba đ | 🎬 Năm uẩn: cái tôi nằm ở đâu? | 0/5 |
+| Sat 31/10 | 📝 Còn 8 ngày tới vía Phật Dược Sư thành  | 🎬 Khối nhô trên đầu tượng Phật là gì? | 🎬 Đức Phật sinh ra ở Ấn Độ? | 🎬 Pháp Cú kệ 251: không lửa nào bằng lửa | 🎬 Sáu ba-la-mật: vì sao bố thí đứng đầu? | 0/5 |
+| Sun 01/11 | 📝 Còn 7 ngày tới vía Phật Dược Sư thành  | 🎬 Chấm tròn giữa trán tượng Phật là gì? | 🎬 Niệm Phật có phải chỉ là đọc thuộc lòn | 🎬 Pháp Cú kệ 204: biết đủ là giàu | 🎬 Thất giác chi: bảy bậc thang tỉnh thức | 0/5 |
 
 ### Làm tiếp
 
-1. Ngày đầu tiên chưa đủ 5/5: **21/09/2026**.
+1. Ngày đầu tiên chưa đủ 5/5: **26/10/2026**.
 2. Quota upload reset **14:00 giờ VN** (07:00 UTC mùa hè, 08:00 UTC mùa đông); trần thực tế ~92 video/ngày, RIÊNG cho từng kênh.
-4. Gói kịch bản còn lại: lich: khuôn tự động · visao: còn 7 kịch bản chưa dùng · hieulam: còn 7 kịch bản chưa dùng · phapcu: còn 7 kịch bản chưa dùng · sophap: còn 7 kịch bản chưa dùng
+4. Gói kịch bản còn lại: lich: khuôn tự động · visao: còn 0 kịch bản chưa dùng · hieulam: còn 0 kịch bản chưa dùng · phapcu: còn 0 kịch bản chưa dùng · sophap: còn 0 kịch bản chưa dùng
    Hết gói thì viết thêm vào `data/packs/BUD/<dòng>.json` (Claude viết trong chat), rồi chạy:
-   `python scripts/run_pipeline.py 2026-09-21 7 --channel BUD`
+   `python scripts/run_pipeline.py 2026-11-02 7 --channel BUD`
 7. Sau mỗi lần đăng: `python scripts/verify_published.py --channel BUD` phải ra XÁC MINH ĐẠT.
 
 ---
