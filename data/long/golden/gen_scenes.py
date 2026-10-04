@@ -262,7 +262,7 @@ CH["ch05"] = dict(hud={"k": "CHƯƠNG 05", "t": "CẬU BÉ TRƯƠNG KỲ PHU"}, 
 
 CH["ch06"] = dict(hud={"k": "CHƯƠNG 06", "t": "MƯỜI SÁU TẤN"}, bgm={"file": "impact_lento.mp3", "at": 0, "gain": 0.12}, scenes=[
     chapter("6", "CHƯƠNG SÁU", "MƯỜI SÁU TẤN", "TRẬN CHIẾN THUỐC PHIỆN · 1967", "Mười", vid="6900893", tone="noir"),
-    sc("file", 1, k="TUYÊN BỐ · 2.1967", name="TRƯƠNG KỲ PHU\nTHU THUẾ QUÁ CẢNH", desc="Với thuốc phiện của Quốc Dân Đảng đi qua vùng mình", bg="khunsa1974"),
+    sc("file", 1, k="TUYÊN BỐ · 2.1967", name="THU THUẾ\nQUÁ CẢNH", desc="Trương Kỳ Phu đòi thuế với thuốc phiện Quốc Dân Đảng đi qua vùng mình", bg="khunsa1974"),
     sc("slam", 2, bg="khunsa1974", text="LỜI TUYÊN CHIẾN", hitAt=[2, "tuyên"]),
     sc("kinetic", 3, bg="field_fuzhou", items=kin(("MỘT VIỆC TÁO BẠO HƠN", [3, "táo"]))),
     sc("ledger", 4, title="LÔ HÀNG 1967", bg="field_fuzhou", rows=[{"k": "THUỐC PHIỆN", "v": "16 TẤN", "at": [4, "mười"]}, {"k": "LỚN CHƯA TỪNG CÓ", "v": "✓", "at": [4, "chưa"]},
@@ -314,5 +314,12 @@ if __name__ == "__main__":
         f = D / f"{name}.json"
         d = json.loads(f.read_text(encoding="utf-8"))
         d.update(v)
+        for x in d["scenes"]:   # con dấu trên thẻ giấy: screen blend làm nhạt màu đỏ -> dùng mực (multiply)
+            if x["type"] == "file" and x.get("stamp"):
+                x["stamp"].setdefault("ink", True)
+                if not x.get("img"):   # thẻ không ảnh nằm ở x 460–1460: giữ con dấu trong thẻ
+                    x["stamp"].setdefault("x", 960); x["stamp"].setdefault("y", 600)
+                if not x.get("img"):   # thẻ không ảnh nằm ở x 460–1460: giữ con dấu trong thẻ
+                    x["stamp"].setdefault("x", 960); x["stamp"].setdefault("y", 600)
         f.write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
         print(name, len(d["lines"]), "câu", len(d["scenes"]), "cảnh")
