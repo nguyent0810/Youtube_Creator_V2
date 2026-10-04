@@ -1,0 +1,523 @@
+{
+ "title": "MỞ ĐẦU: Mái nhà dưới cánh máy bay",
+ "lines": [
+  "Một chiếc máy bay chở khách nghiêng cánh, cua gấp sang phải, ở độ cao chưa tới 200 mét.",
+  "Bên dưới bụng nó là một khối bê tông không giống bất cứ thứ gì trên Trái Đất.",
+  "Ba trăm năm mươi tòa nhà dính chặt vào nhau, thành một bức tường cao mười bốn tầng.",
+  {
+   "t": "Không có khe hở. Không có quảng trường. Gần như không có cả bầu trời.",
+   "p": 1.0
+  },
+  "Trên mảnh đất chỉ rộng bằng ba sân bóng đá, có 33.000 người sống.",
+  "Mật độ cao nhất từng được ghi nhận trên hành tinh.",
+  "Ở tầng dưới cùng, ánh mặt trời không bao giờ chạm tới.",
+  {
+   "t": "Người ta phải bật đèn huỳnh quang cả vào giữa trưa.",
+   "p": 1.0
+  },
+  "Ở nơi này từng có những con phố thắp nến suốt đêm, để những người nghiện tìm đường tới quầy bán ma túy.",
+  "Có những phòng khám nha khoa không giấy phép, những xưởng làm cá viên, những sòng bạc và những nhà thổ.",
+  {
+   "t": "Và có một thời gian dài, cảnh sát chỉ dám bước vào khi đi thành đoàn đông người.",
+   "p": 1.0
+  },
+  "Nhiều khán giả Việt Nam biết nơi này qua một bộ phim năm 2024: Cửu Long Thành Trại, Vây Thành.",
+  "Cổ Thiên Lạc, Hồng Kim Bảo, những trận đánh trong những con hẻm chỉ rộng một sải tay.",
+  "Nhưng thành trại ngoài đời thật còn kỳ lạ hơn phim rất nhiều.",
+  "Vì trên giấy tờ, mảnh đất này không thuộc về Hồng Kông.",
+  "Nó nằm giữa lòng Hồng Kông thuộc Anh, nhưng nước Anh không cai trị nó.",
+  "Trung Quốc tuyên bố chủ quyền, nhưng không một viên chức Trung Quốc nào đặt chân vào cai quản.",
+  {
+   "t": "Người Hồng Kông có một câu để gọi nó: ba không quản.",
+   "p": 1.0
+  },
+  "Trong khoảng nửa giờ tới, bạn sẽ biết vì sao một pháo đài nhỏ của nhà Thanh khiến Anh và Trung Quốc giằng co suốt nửa thế kỷ.",
+  "Giằng co tới mức một lãnh sự quán Anh bị đốt cháy.",
+  "Bạn sẽ biết phải cần bao nhiêu cuộc đột kích của cảnh sát mới lấy lại được thành trại từ tay Tam Hoàng.",
+  "Và bạn sẽ biết hai tấm bia đá đã biến mất trong chiến tranh, rồi nửa thế kỷ sau được tìm thấy ở đâu.",
+  {
+   "t": "Hai tấm bia ấy cho thấy một điều bất ngờ: cả thế giới đến nay vẫn đang gọi sai tên nơi này.",
+   "p": 1.0
+  },
+  "Đây là hồ sơ Cửu Long Thành Trại.",
+  "Muốn hiểu vì sao có một vùng đất không ai quản, ta phải quay lại lúc nó còn là một pháo đài, được dựng lên để canh chừng chính người Anh."
+ ],
+ "scenes": [
+  {
+   "type": "photo",
+   "img": "kaitak_sign",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.52,
+   "kin": [
+    {
+     "text": "DƯỚI 200 MÉT",
+     "at": [
+      0,
+      "200"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "SÂN BAY KHẢI ĐỨC · HỒNG KÔNG",
+    "v": "CUA GẤP SANG PHẢI",
+    "at": [
+     0,
+     "cua"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 1,
+   "img": "aerial1989",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.52,
+   "kin": [
+    {
+     "text": "MỘT KHỐI BÊ TÔNG",
+     "at": [
+      1,
+      "khối"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "bg": "kwc_tif",
+   "from": 0,
+   "to": 350,
+   "countAt": [
+    2,
+    "Ba"
+   ],
+   "label": "TÒA NHÀ DÍNH CHẶT VÀO NHAU",
+   "sub": {
+    "text": "CAO MƯỜI BỐN TẦNG",
+    "at": [
+     2,
+     "mười"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "bg": "kwc1989",
+   "items": [
+    {
+     "text": "KHÔNG KHE HỞ",
+     "at": [
+      3,
+      "khe"
+     ]
+    },
+    {
+     "text": "KHÔNG QUẢNG TRƯỜNG",
+     "at": [
+      3,
+      "quảng"
+     ]
+    },
+    {
+     "text": "GẦN NHƯ KHÔNG CÓ BẦU TRỜI",
+     "at": [
+      3,
+      "bầu"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "bg": "aerial_crop",
+   "from": 0,
+   "to": 33000,
+   "countAt": [
+    4,
+    "33.000"
+   ],
+   "label": "NGƯỜI · TRÊN 2,6 HECTA",
+   "sub": {
+    "text": "≈ BA SÂN BÓNG ĐÁ",
+    "at": [
+     4,
+     "ba"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "bg": "aerial1989b",
+   "text": "MẬT ĐỘ CAO NHẤT\nHÀNH TINH",
+   "hitAt": [
+    5,
+    "cao"
+   ],
+   "sub": "≈ 1,2 TRIỆU NGƯỜI / KM² · 1987"
+  },
+  {
+   "type": "photo",
+   "at": 6,
+   "img": "alley",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.52,
+   "kin": [
+    {
+     "text": "ÁNH MẶT TRỜI KHÔNG CHẠM TỚI",
+     "at": [
+      6,
+      "mặt"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 7,
+   "vid": "4761733",
+   "tone": "noir",
+   "veil": 0.35,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "ĐÈN HUỲNH QUANG · GIỮA TRƯA",
+     "at": [
+      7,
+      "huỳnh"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 8,
+   "vid": "14090580",
+   "tone": "night",
+   "veil": 0.35,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "NHỮNG CON PHỐ THẮP NẾN",
+     "at": [
+      8,
+      "thắp"
+     ]
+    },
+    {
+     "text": "CHO NGƯỜI NGHIỆN",
+     "at": [
+      8,
+      "nghiện"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "bg": "night",
+   "items": [
+    {
+     "text": "NHA SĨ KHÔNG GIẤY PHÉP",
+     "at": [
+      9,
+      "nha"
+     ]
+    },
+    {
+     "text": "XƯỞNG CÁ VIÊN",
+     "at": [
+      9,
+      "cá"
+     ]
+    },
+    {
+     "text": "SÒNG BẠC · NHÀ THỔ",
+     "at": [
+      9,
+      "sòng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 10,
+   "vid": "3350820",
+   "tone": "noir",
+   "veil": 0.4,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "CẢNH SÁT CHỈ VÀO",
+     "at": [
+      10,
+      "cảnh"
+     ]
+    },
+    {
+     "text": "KHI ĐI THÀNH ĐOÀN",
+     "at": [
+      10,
+      "đoàn"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "vid": "10244482",
+   "tone": "night",
+   "items": [
+    {
+     "text": "2024",
+     "at": [
+      11,
+      "2024:"
+     ],
+     "sm": true
+    },
+    {
+     "text": "CỬU LONG THÀNH TRẠI",
+     "at": [
+      11,
+      "Cửu"
+     ],
+     "serif": true
+    },
+    {
+     "text": "VÂY THÀNH",
+     "at": [
+      11,
+      "Vây"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 12,
+   "vid": "13633629",
+   "tone": "night",
+   "veil": 0.35,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "CỔ THIÊN LẠC · HỒNG KIM BẢO",
+     "at": [
+      12,
+      "Cổ"
+     ]
+    },
+    {
+     "text": "HẺM RỘNG MỘT SẢI TAY",
+     "at": [
+      12,
+      "sải"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 13,
+   "bg": "street1991",
+   "text": "NGOÀI ĐỜI THẬT\nCÒN KỲ LẠ HƠN",
+   "white": true,
+   "hitAt": [
+    13,
+    "kỳ"
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 14,
+   "img": "map1915",
+   "tone": "sepia",
+   "move": "in",
+   "veil": 0.55,
+   "kin": [
+    {
+     "text": "TRÊN GIẤY TỜ",
+     "at": [
+      14,
+      "giấy"
+     ]
+    },
+    {
+     "text": "KHÔNG THUỘC VỀ HỒNG KÔNG",
+     "at": [
+      14,
+      "không"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "split",
+   "at": 15,
+   "title": "MỘT MẢNH ĐẤT · HAI CHỦ QUYỀN",
+   "a": {
+    "img": "nt_takeover",
+    "label": "ANH: KHÔNG CAI TRỊ",
+    "at": [
+     15,
+     "Anh"
+    ]
+   },
+   "b": {
+    "img": "li_1896",
+    "label": "TRUNG QUỐC: KHÔNG CAI QUẢN",
+    "at": [
+     16,
+     "Trung"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 17,
+   "bg": "kwc1989",
+   "text": "BA KHÔNG QUẢN",
+   "white": true,
+   "hitAt": [
+    17,
+    "ba"
+   ],
+   "sub": "三不管"
+  },
+  {
+   "type": "kinetic",
+   "at": 18,
+   "bg": "kwc1898",
+   "items": [
+    {
+     "text": "MỘT PHÁO ĐÀI NHỎ CỦA NHÀ THANH",
+     "at": [
+      18,
+      "pháo"
+     ]
+    },
+    {
+     "text": "NỬA THẾ KỶ GIẰNG CO",
+     "at": [
+      18,
+      "giằng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 19,
+   "vid": "7285454",
+   "tone": "noir",
+   "veil": 0.4,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MỘT LÃNH SỰ QUÁN BỊ ĐỐT",
+     "at": [
+      19,
+      "đốt"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 20,
+   "bg": "night",
+   "text": "Bao nhiêu cuộc đột kích\nđể lấy lại thành trại?"
+  },
+  {
+   "type": "photo",
+   "at": 21,
+   "img": "southgate_bw",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.52,
+   "kin": [
+    {
+     "text": "HAI TẤM BIA ĐÁ",
+     "at": [
+      21,
+      "bia"
+     ]
+    },
+    {
+     "text": "BIẾN MẤT TRONG CHIẾN TRANH",
+     "at": [
+      21,
+      "biến"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 22,
+   "bg": "gate_plaques",
+   "text": "CẢ THẾ GIỚI\nĐANG GỌI SAI TÊN",
+   "hitAt": [
+    22,
+    "sai"
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 23,
+   "bg": "aerial1989",
+   "text": "CỬU LONG THÀNH TRẠI",
+   "white": true,
+   "hitAt": [
+    23,
+    "Cửu"
+   ],
+   "sub": "HỒ SƠ · 1847 — 1994",
+   "stamp": {
+    "text": "BA KHÔNG QUẢN",
+    "at": [
+     23,
+     "Trại."
+    ],
+    "x": 1080,
+    "y": 650,
+    "rot": -9
+   }
+  },
+  {
+   "type": "sketch",
+   "at": 24,
+   "art": "fort",
+   "title": "Một pháo đài canh chừng người Anh"
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "MÁI NHÀ DƯỚI CÁNH MÁY BAY"
+ },
+ "bgm": {
+  "file": "gathering_darkness.mp3",
+  "at": 0,
+  "gain": 0.13
+ }
+}

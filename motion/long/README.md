@@ -6,7 +6,7 @@ Anh em ngang của `motion/stier/` (Short dọc). Cùng ngôn ngữ hình: hồ 
 - chia theo chương;
 - có video B-roll Pexels và nhạc nền thật.
 
-Bộ kỹ năng giữ chân người nghe: **[RETENTION.md](RETENTION.md)**. Đọc file này TRƯỚC khi viết kịch bản.
+Bộ kỹ năng giữ chân người nghe: **[RETENTION.md](RETENTION.md)**. Nguồn tư liệu dùng tự do lâu dài: **[SOURCES.md](SOURCES.md)**. Đọc file này TRƯỚC khi viết kịch bản.
 
 ## Quy trình
 
@@ -14,6 +14,9 @@ Dùng python của `vietneu-tts/.venv`, vì bước TTS cần gói `vieneu`.
 
 ```
 python motion/long/research_long.py yakuza "Yakuza" "Yamaguchi-gumi" "?Sugamo Prison"   # bài Wikipedia + ảnh Commons tự do ("?"= tìm ảnh)
+python motion/long/media_search.py search yakuza "tattoo" --src wellcome,openverse,artic,europeana   # kho mở ngoài Commons (xem SOURCES.md)
+python motion/long/media_search.py get yakuza tattoo1 X3        # tải ứng viên X3 thành ảnh "tattoo1" (tự ghi vào spec + credit)
+python motion/long/media_search.py sat yakuza kobe_sat 135.15 34.66 135.25 34.72   # ảnh vệ tinh Sentinel-2 (Copernicus, ghi nguồn tự động)
 python motion/long/pexels.py search yakuza "tokyo night rain" ...                      # B-roll ngang
 python motion/long/pexels.py get yakuza <id> <id> ...
 # viết data/long/yakuza/spec.json + ch00.json … chNN.json

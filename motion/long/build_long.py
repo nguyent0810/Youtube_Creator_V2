@@ -248,6 +248,8 @@ def word_lines(t: dict, wav: Path) -> list[dict]:
 def fetch_img(file: str, dst: Path, credits: dict) -> dict:
     from PIL import Image
     meta = dst.with_suffix(".json")
+    if file.startswith("EXT:") and not (dst.exists() and meta.exists()):   # ảnh ngoài Commons: tải trước bằng media_search.py
+        raise SystemExit(f"{file}: chưa có {dst.name} — chạy motion/long/media_search.py get/sat trước")
     if not dst.exists() or not meta.exists():
         def info(width=None):
             prm = {"action": "query", "prop": "imageinfo", "titles": file, "iiprop": "url|size|extmetadata", "format": "json", "formatversion": "2"}
@@ -403,7 +405,7 @@ HTML = """<!doctype html>
 <meta name="viewport" content="width=1920, height=1080" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,600;0,700;0,800;0,900;1,600&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,600;0,700;0,800;0,900;1,600&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=JetBrains+Mono:wght@500;700&family=Noto+Serif+SC:wght@900&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/engine/casewide.css" />
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
 <script src="{data}"></script>
@@ -430,9 +432,10 @@ HTML = """<!doctype html>
 """
 
 
-def run(cmd, **kw):
+def run(cmd, extra_env=None, **kw):
     env = os.environ.copy()
     env["PATH"] = FF + os.pathsep + env["PATH"]
+    env.update(extra_env or {})
     return subprocess.run(cmd, env=env, capture_output=True, text=True, encoding="utf-8", errors="replace", **kw)
 
 
@@ -496,7 +499,7 @@ def do_html(topic, only=None):
                 vids.append(f'  <video id="v{k}" class="clip bv {tone}" src="assets/long/{topic}/broll/{vid}.mp4" data-start="{st:.3f}" '
                             f'data-duration="{min(need, d - st):.3f}" data-media-start="{ms:.2f}" muted playsinline data-track-index="1"></video>')
         seed = sum(ord(c) * (i + 1) for i, c in enumerate(topic + name)) % 100000 + 7
-        case = {"topic": topic, "ch": name, "dur": d, "seed": seed, "accent": spec.get("accent", "#e2402d"), "theme": spec.get("theme"), "hud": ch.get("hud", {}),
+        case = {"topic": topic, "ch": name, "dur": d, "seed": seed, "accent": spec.get("accent", "#e2402d"), "theme": spec.get("theme"), "autoTr": spec.get("autoTr", spec.get("theme") == "shanghai"), "hud": ch.get("hud", {}),
                 "acc": spec.get("acc", []) + ch.get("acc", []), "lines": lines, "imgs": imgs, "geo": geo, "scenes": scenes,
                 "prog0": round(acc_t / total, 5), "prog1": round((acc_t + d) / total, 5)}
         (od / name / "data.js").write_text("window.CASE = " + json.dumps(case, ensure_ascii=False) + ";\n", encoding="utf-8")
@@ -505,8 +508,9 @@ def do_html(topic, only=None):
         comp.write_text(HTML.replace("{data}", f"assets/long/{topic}/{name}/data.js").replace("{dur}", f"{d:.3f}")
                         .replace("{title}", spec["title"]).replace("{videos}", "\n".join(vids)), encoding="utf-8")
         sfx_long.build(case, od / name / "sfx.wav")
-        mix_chapter(ch, od / name, d, [(s["t0"], s["t1"]) for s in scenes if s["type"] == "question"], spec.get("master", True),
-                    bgm_items(ch, lines, d))
+        quiet = [(s["t0"], s["t1"]) for s in scenes if s["type"] == "question"]
+        quiet += [(s["at"] - 1.0, s["at"] + 0.4) for s in scenes if s["type"] == "slam" and spec.get("slamDrop", True)]
+        mix_chapter(ch, od / name, d, quiet, spec.get("master", True), bgm_items(ch, lines, d))
         print(f"{name}: {len(scenes)} cảnh, {len(vids)} clip, {d:.1f}s -> {comp.name}", flush=True)
         acc_t += d
 
@@ -554,19 +558,35 @@ def mix_chapter(ch, cd: Path, dur: float, quiet=(), master=True, items=None):
         raise SystemExit(f"mix hỏng {cd}: {r.stderr[-1500:]}")
 
 
-def do_render(topic, only=None, draft=False):
+def render_key(topic, name, od, draft) -> str:
+    """Băm mọi thứ quyết định hình của chương: data.js, composition, engine js/css, các clip B-roll dùng tới."""
+    hsh = hashlib.sha1(b"draft" if draft else b"final")
+    comp = HF / "compositions" / "long" / f"{topic}_{name}.html"
+    for f in [od / name / "data.js", comp, HF / "assets" / "engine" / "casewide.js", HF / "assets" / "engine" / "casewide.css"]:
+        hsh.update(f.read_bytes())
+    for vid in sorted(set(re.findall(r"broll/(\d+)\.mp4", comp.read_text(encoding="utf-8")))):
+        hsh.update(vid.encode())
+    return hsh.hexdigest()[:16]
+
+
+def do_render(topic, only=None, draft=False, force=False):
     spec, chs, od = load(topic)
     for name, ch in chs:
         if only and name not in only:
             continue
         t0 = time.time()
         out = od / name / ("draft.mp4" if draft else "silent.mp4")
+        key, kf = render_key(topic, name, od, draft), out.with_suffix(".key")
+        if not force and out.exists() and kf.exists() and kf.read_text() == key:
+            print(f"{name}: không đổi, bỏ qua", flush=True)
+            continue
         cmd = ["npx.cmd", "-y", "-p", "node@22", "-p", "hyperframes@0.8.75", "hyperframes", "render", ".", "-c",
                f"compositions/long/{topic}_{name}.html", "-o", str(out), "--fps", "30", "--quiet"]
         cmd += ["-q", "draft"] if draft else ["--crf", "20"]
-        r = run(cmd, cwd=HF)
+        r = run(cmd, cwd=HF, extra_env={"HF_CAPTURE_PARALLEL_STREAM": "true"} if spec.get("stream", True) else None)
         if r.returncode != 0 or not out.exists():
             raise SystemExit(f"{name}: render hỏng\n{r.stdout[-3000:]}\n{r.stderr[-3000:]}")
+        kf.write_text(key)
         if draft:   # bản nháp có tiếng để xem nhanh
             run([FFMPEG, "-v", "error", "-y", "-i", str(out), "-i", str(od / name / "mix.wav"), "-map", "0:v", "-map", "1:a", "-c:v", "copy",
                  "-c:a", "aac", "-b:a", "160k", "-shortest", str(od / name / "draft_av.mp4")])
@@ -601,7 +621,7 @@ if __name__ == "__main__":
     elif cmd == "html":
         do_html(topic, only)
     elif cmd == "render":
-        do_render(topic, only, draft="--draft" in rest)
+        do_render(topic, only, draft="--draft" in rest, force="--force" in rest)
     elif cmd == "takes":
         nums = [x for x in rest if x.isdigit()]
         do_takes(topic, int(nums[0]) if nums else 3, [x for x in (only or []) if not x.isdigit()] or None)

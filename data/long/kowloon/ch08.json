@@ -1,0 +1,641 @@
+{
+ "title": "Thành phố không chạm đất",
+ "lines": [
+  {
+   "t": "Chương tám. Thành phố không chạm đất.",
+   "p": 0.8
+  },
+  "Bạn còn nhớ chiếc máy bay ở đầu video chứ?",
+  {
+   "t": "Bây giờ bạn đã biết vì sao bên dưới nó lại có một khối bê tông kỳ lạ đến thế.",
+   "p": 1.0
+  },
+  "Những năm 1960, các nhà đầu cơ phát hiện ra một điều.",
+  "Trong thành trại, không ai đòi giấy phép xây dựng. Không có kỹ sư thẩm định. Không có thanh tra.",
+  "Thế là họ xây. Nhà gỗ hai tầng bị đập đi, thay bằng nhà bê tông mười tầng.",
+  "Rồi người ta xây chồng lên trên nhà cũ, xây lấn sang hai bên, xây nối sang nhà bên cạnh.",
+  {
+   "t": "Tới cuối những năm 1970, thành trại đạt tới hình dạng cuối cùng: khoảng 350 tòa nhà, gần như tất cả đều từ mười tầng trở lên.",
+   "p": 1.0
+  },
+  "Chỉ có một thứ ngăn được nó cao thêm.",
+  "Sân bay Khải Đức nằm cách đó chỉ 800 mét về phía nam.",
+  "Máy bay hạ cánh phải bay ngang qua khu Cửu Long Thành, nên nhà trong thành trại không được cao quá mười bốn tầng.",
+  "Đây là một trong những đường hạ cánh nổi tiếng khó nhất thế giới.",
+  "Phi công phải tìm một ngọn đồi sơn ô bàn cờ màu cam trắng.",
+  "Thấy bàn cờ rồi, họ cua gấp sang phải 47 độ ở độ cao dưới 180 mét, rồi mới thẳng hàng với đường băng.",
+  {
+   "t": "Mỗi lần như thế, tiếng động cơ dội xuống những mái nhà của thành trại.",
+   "p": 1.0
+  },
+  "Bên trong, những con hẻm chỉ rộng một tới hai mét.",
+  "Ánh sáng gần như không lọt xuống. Đèn huỳnh quang cháy cả ngày.",
+  "Một căn hộ thông thường rộng khoảng 23 mét vuông.",
+  "Để có thêm chỗ, người ta làm tầng trên rộng hơn tầng dưới, lắp ban công lồng sắt, dựng thêm phòng trên sân thượng.",
+  "Các tầng trên nối với nhau bằng một mạng cầu thang và lối đi chằng chịt.",
+  {
+   "t": "Mạng lưới ấy rộng tới mức người ta có thể đi xuyên thành trại từ bắc xuống nam mà chân không hề chạm đất.",
+   "p": 1.0
+  },
+  "Nước là thứ khó nhất.",
+  "Ngày xưa cả thành uống chung một cái giếng lớn, ở con phố mang tên Đại Tỉnh, nghĩa là giếng lớn.",
+  "Thập niên 1950, giếng bị lấp vì dịch tả.",
+  "Từ đó, nước cho cả 33.000 người chủ yếu chảy vào từ tám đường ống công cộng.",
+  {
+   "t": "Tám vòi nước. Cho một thành phố thẳng đứng.",
+   "p": 1.0
+  },
+  "Có một con phố tên là phố Người Già, vì ở đó có trại dưỡng lão đặt trong dinh quan cũ.",
+  "Người trong thành kể rằng đó là nơi duy nhất trong thành trại còn nhìn thấy mặt trời.",
+  {
+   "t": "Ba vạn người, và một con phố có nắng.",
+   "p": 1.0
+  },
+  "Bạn sẽ nghĩ một nơi như vậy sẽ mãi mãi thuộc về Tam Hoàng.",
+  "Nhưng đầu những năm 1970, cảnh sát Hồng Kông quyết định quay lại.",
+  "Và lần này, họ không đến vài chục người."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "8",
+   "k": "CHƯƠNG TÁM",
+   "title": "THÀNH PHỐ\nKHÔNG CHẠM ĐẤT",
+   "sub": "1960 — 1990",
+   "titleAt": [
+    0,
+    "Thành"
+   ],
+   "bg": "aerial1989"
+  },
+  {
+   "type": "photo",
+   "at": 1,
+   "img": "kaitak1991",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.52,
+   "kin": [
+    {
+     "text": "CÒN NHỚ CHIẾC MÁY BAY?",
+     "at": [
+      1,
+      "máy"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 2,
+   "img": "aerial1989b",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.52,
+   "kin": [
+    {
+     "text": "GIỜ BẠN ĐÃ BIẾT VÌ SAO",
+     "at": [
+      2,
+      "vì"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "bg": "kwc1975",
+   "items": [
+    {
+     "text": "THẬP NIÊN 1960",
+     "at": [
+      3,
+      "1960,"
+     ],
+     "sm": true
+    },
+    {
+     "text": "CÁC NHÀ ĐẦU CƠ",
+     "at": [
+      3,
+      "đầu"
+     ],
+     "serif": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "bg": "kwc1975",
+   "items": [
+    {
+     "text": "KHÔNG GIẤY PHÉP XÂY DỰNG",
+     "at": [
+      4,
+      "giấy"
+     ]
+    },
+    {
+     "text": "KHÔNG KỸ SƯ",
+     "at": [
+      4,
+      "kỹ"
+     ]
+    },
+    {
+     "text": "KHÔNG THANH TRA",
+     "at": [
+      4,
+      "thanh"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "split",
+   "at": 5,
+   "title": "THẾ LÀ HỌ XÂY",
+   "a": {
+    "img": "kowloon1930s",
+    "label": "NHÀ GỖ 2 TẦNG",
+    "at": [
+     5,
+     "gỗ"
+    ]
+   },
+   "b": {
+    "img": "kwc1975",
+    "label": "BÊ TÔNG 10 TẦNG",
+    "at": [
+     5,
+     "mười"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 6,
+   "img": "model_bronze",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.52,
+   "kin": [
+    {
+     "text": "XÂY CHỒNG · XÂY LẤN · XÂY NỐI",
+     "at": [
+      6,
+      "chồng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "bg": "kwc_tif",
+   "from": 0,
+   "to": 350,
+   "countAt": [
+    7,
+    "350"
+   ],
+   "label": "TÒA NHÀ · CUỐI THẬP NIÊN 1970",
+   "sub": {
+    "text": "GẦN NHƯ TẤT CẢ ≥ 10 TẦNG",
+    "at": [
+     7,
+     "mười"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "bg": "kwc1989",
+   "text": "CHỈ MỘT THỨ\nNGĂN NÓ CAO THÊM",
+   "hitAt": [
+    8,
+    "ngăn"
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 9,
+   "img": "kaitak1971",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.52,
+   "kin": [
+    {
+     "text": "SÂN BAY KHẢI ĐỨC",
+     "at": [
+      9,
+      "Khải"
+     ]
+    },
+    {
+     "text": "CÁCH 800 MÉT",
+     "at": [
+      9,
+      "800"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 10,
+   "img": "plane_road",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.52,
+   "kin": [
+    {
+     "text": "BAY NGANG KHU CỬU LONG THÀNH",
+     "at": [
+      10,
+      "ngang"
+     ]
+    },
+    {
+     "text": "TỐI ĐA 14 TẦNG",
+     "at": [
+      10,
+      "mười"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 11,
+   "vid": "31909689",
+   "tone": "color",
+   "veil": 0.3,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MỘT TRONG NHỮNG ĐƯỜNG HẠ CÁNH KHÓ NHẤT THẾ GIỚI",
+     "at": [
+      11,
+      "khó"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 12,
+   "img": "checker",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.52,
+   "kin": [
+    {
+     "text": "ĐỒI BÀN CỜ CAM TRẮNG",
+     "at": [
+      12,
+      "bàn"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 13,
+   "img": "cockpit1953",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.52,
+   "kin": [
+    {
+     "text": "CUA PHẢI 47°",
+     "at": [
+      13,
+      "47"
+     ]
+    },
+    {
+     "text": "DƯỚI 180 MÉT",
+     "at": [
+      13,
+      "180"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 14,
+   "img": "kaitak_sign",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.52,
+   "kin": [
+    {
+     "text": "TIẾNG ĐỘNG CƠ DỘI XUỐNG MÁI NHÀ",
+     "at": [
+      14,
+      "dội"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 15,
+   "img": "alley",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.52,
+   "kin": [
+    {
+     "text": "HẺM RỘNG 1–2 MÉT",
+     "at": [
+      15,
+      "một"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 16,
+   "vid": "9945020",
+   "tone": "noir",
+   "veil": 0.35,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "ĐÈN HUỲNH QUANG CẢ NGÀY",
+     "at": [
+      16,
+      "huỳnh"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 17,
+   "bg": "street1991",
+   "from": 0,
+   "to": 23,
+   "suffix": " M²",
+   "countAt": [
+    17,
+    "23"
+   ],
+   "label": "MỘT CĂN HỘ THÔNG THƯỜNG"
+  },
+  {
+   "type": "photo",
+   "at": 18,
+   "img": "street1991",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.52,
+   "kin": [
+    {
+     "text": "TẦNG TRÊN RỘNG HƠN TẦNG DƯỚI",
+     "at": [
+      18,
+      "rộng"
+     ]
+    },
+    {
+     "text": "BAN CÔNG LỒNG SẮT",
+     "at": [
+      18,
+      "lồng"
+     ]
+    },
+    {
+     "text": "PHÒNG TRÊN SÂN THƯỢNG",
+     "at": [
+      18,
+      "sân"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 19,
+   "vid": "4728113",
+   "tone": "noir",
+   "veil": 0.4,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MẠNG CẦU THANG CHẰNG CHỊT",
+     "at": [
+      19,
+      "cầu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 20,
+   "bg": "aerial1989",
+   "text": "KHÔNG HỀ\nCHẠM ĐẤT",
+   "white": true,
+   "hitAt": [
+    20,
+    "chạm"
+   ],
+   "sub": "ĐI XUYÊN TỪ BẮC XUỐNG NAM"
+  },
+  {
+   "type": "broll",
+   "at": 21,
+   "vid": "30615528",
+   "tone": "noir",
+   "veil": 0.35,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "NƯỚC",
+     "at": [
+      21,
+      "Nước"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "evidence",
+   "at": 22,
+   "img": "streetmap",
+   "tone": "color",
+   "maxW": 900,
+   "maxH": 700,
+   "callouts": [
+    {
+     "x": 0.45,
+     "y": 0.4,
+     "text": "PHỐ ĐẠI TỈNH · “GIẾNG LỚN”",
+     "at": [
+      22,
+      "Đại"
+     ],
+     "side": "r"
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 23,
+   "bg": "kwc1975",
+   "day": "GIẾNG BỊ LẤP VÌ DỊCH TẢ",
+   "date": "1950s"
+  },
+  {
+   "type": "counter",
+   "at": 24,
+   "bg": "kwc_tif",
+   "from": 0,
+   "to": 8,
+   "countAt": [
+    24,
+    "tám"
+   ],
+   "label": "ĐƯỜNG ỐNG NƯỚC CÔNG CỘNG",
+   "sub": {
+    "text": "CHO 33.000 NGƯỜI",
+    "at": [
+     24,
+     "33.000"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 25,
+   "bg": "kwc_tif",
+   "text": "TÁM VÒI NƯỚC",
+   "white": true,
+   "hitAt": [
+    25,
+    "Tám"
+   ],
+   "sub": "CHO MỘT THÀNH PHỐ THẲNG ĐỨNG"
+  },
+  {
+   "type": "photo",
+   "at": 26,
+   "img": "yamen",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.52,
+   "kin": [
+    {
+     "text": "PHỐ NGƯỜI GIÀ",
+     "at": [
+      26,
+      "Người"
+     ]
+    },
+    {
+     "text": "TRẠI DƯỠNG LÃO TRONG DINH QUAN CŨ",
+     "at": [
+      26,
+      "dưỡng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 27,
+   "img": "frontage",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.52,
+   "kin": [
+    {
+     "text": "NƠI DUY NHẤT CÒN THẤY MẶT TRỜI",
+     "at": [
+      27,
+      "mặt"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 28,
+   "bg": "yamen",
+   "text": "BA VẠN NGƯỜI\nMỘT CON PHỐ CÓ NẮNG",
+   "white": true,
+   "hitAt": [
+    28,
+    "nắng."
+   ]
+  },
+  {
+   "type": "question",
+   "at": 29,
+   "bg": "night",
+   "text": "Mãi mãi thuộc về Tam Hoàng?"
+  },
+  {
+   "type": "broll",
+   "at": 30,
+   "vid": "3350820",
+   "tone": "noir",
+   "veil": 0.4,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "ĐẦU THẬP NIÊN 1970",
+     "at": [
+      30,
+      "1970,"
+     ]
+    },
+    {
+     "text": "CẢNH SÁT QUAY LẠI",
+     "at": [
+      30,
+      "quay"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 31,
+   "vid": "7714378",
+   "tone": "noir",
+   "text": "KHÔNG PHẢI\nVÀI CHỤC NGƯỜI",
+   "hitAt": [
+    31,
+    "chục"
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 08",
+  "t": "THÀNH PHỐ KHÔNG CHẠM ĐẤT"
+ },
+ "bgm": {
+  "file": "lightless_dawn.mp3",
+  "at": 0,
+  "gain": 0.12
+ }
+}

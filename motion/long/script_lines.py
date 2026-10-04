@@ -2,7 +2,7 @@
 
     python motion/long/script_lines.py <topic>
 
-Quy ước script.md: "## CHnn · Tên chương"; mỗi dòng một câu; "‖" cuối dòng = nghỉ dài; "**[DIỄN Ý]**" = trích diễn ý;
+Quy ước script.md: "## CHnn · Tên chương"; mỗi dòng một câu; "‖" cuối dòng = nghỉ dài; "**[DIỄN Ý]**" = trích diễn ý; "[TRÍCH DỊCH]" = văn bản thật đã dịch;
 "»" = phần sau là LỜI TRÍCH (đọc giọng trích, xem build_long.QUOTE_VOICE). Dòng "a: » b" tách thành 2 câu.
 Dừng ở "## Ghi chú". Câu -> chuỗi, hoặc {"t", "p": nghỉ, "q": 1 (lời trích), "diy": 1}.
 """
@@ -29,7 +29,8 @@ def parse(md: str):
         if not cur or not s or s == "---" or s.startswith("#"):
             continue
         diy = "**[DIỄN Ý]**" in s
-        s = s.replace("**[DIỄN Ý]**", "").strip()
+        tr = "[TRÍCH DỊCH]" in s            # văn bản thật dịch sang tiếng Việt (nhãn TRÍCH DỊCH trên cảnh quote)
+        s = s.replace("**[DIỄN Ý]**", "").replace("[TRÍCH DỊCH]", "").strip()
         pause = s.endswith("‖")
         s = s.rstrip("‖").strip()
         parts = [p.strip() for p in s.split("»")]
@@ -38,7 +39,7 @@ def parse(md: str):
             if parts[0]:
                 out.append({"t": parts[0]})
             q = parts[1][:1].upper() + parts[1][1:]
-            out.append({"t": q, "q": 1, **({"diy": 1} if diy else {})})
+            out.append({"t": q, "q": 1, **({"diy": 1} if diy else {}), **({"tr": 1} if tr else {})})
         else:
             out.append({"t": s, **({"diy": 1} if diy else {})})
         if pause:

@@ -1,0 +1,472 @@
+{
+ "title": "Bức tường bị tháo đi",
+ "lines": [
+  {
+   "t": "Chương ba. Bức tường bị tháo đi.",
+   "p": 0.8
+  },
+  "Những năm 1930, Hồng Kông phát triển nhanh, và tòa thành cũ trở thành một khu nhà ổ chuột.",
+  "Năm 1933, chính quyền Hồng Kông thông báo sẽ phá dỡ phần lớn nhà cửa trong thành để làm công viên.",
+  "Họ đề nghị đổi đất, cấp nhà mới cho người dân ở nơi khác.",
+  "Nhưng chỗ ở mới quá xa, nhiều người không chịu đi.",
+  "Hơn hai mươi hộ gửi đơn kêu cứu thẳng tới chính phủ Trung Hoa Dân Quốc.",
+  {
+   "t": "Nam Kinh lập tức lên tiếng: thành Cửu Long là đất Trung Hoa.",
+   "p": 1.0
+  },
+  "Lại một lần giằng co.",
+  "Lần này người Anh mạnh tay hơn, và chiến tranh Trung Nhật khiến Trung Hoa Dân Quốc không còn sức để ý.",
+  "Năm 1940, nhà cửa trong thành bị san phẳng.",
+  {
+   "t": "Chỉ còn lại dinh quan, ngôi trường và một ngôi nhà cổ.",
+   "p": 1.0
+  },
+  "Rồi tháng 12 năm 1941, quân Nhật chiếm Hồng Kông.",
+  "Họ cần mở rộng sân bay Khải Đức, nằm ngay phía nam tòa thành.",
+  "Để có đá xây đường băng, người Nhật dỡ toàn bộ tường thành Cửu Long.",
+  "Những khối đá hoa cương xếp từ năm 1847 bị cạy ra, chở đi, và chôn xuống làm nền sân bay.",
+  "Người làm công việc đó phần lớn là tù binh chiến tranh của quân Đồng minh.",
+  {
+   "t": "Cùng đợt ấy, khối đá Tống Vương Đài cao hơn bốn mươi mét gần đó, nơi tưởng niệm vị hoàng đế cuối cùng nhà Tống, cũng bị phá để lấy vật liệu.",
+   "p": 1.0
+  },
+  "Tới năm 1945, thành Cửu Long không còn tường.",
+  "Cũng không còn cổng.",
+  "Và tấm bia đá trên cổng nam, tấm bia khắc tên tòa thành, đã không còn ở đó.",
+  {
+   "t": "Không ai nói nó đã đi đâu.",
+   "p": 1.0
+  },
+  "Một tòa thành mất tường, về lý thuyết, chỉ còn là một khoảnh đất trống.",
+  "Nhưng khoảnh đất này vẫn mang theo một thứ vô hình mà không quân đội nào dỡ được: câu hỏi nó thuộc về ai.",
+  "Và chỉ ba năm sau chiến tranh, câu hỏi ấy đã làm cháy một tòa nhà ở cách đó hơn một trăm cây số."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "BỨC TƯỜNG\nBỊ THÁO ĐI",
+   "sub": "1933 — 1945",
+   "titleAt": [
+    0,
+    "Bức"
+   ],
+   "bg": "kowloon1930s"
+  },
+  {
+   "type": "photo",
+   "at": 1,
+   "img": "kowloon1930s",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.52,
+   "film": true,
+   "kin": [
+    {
+     "text": "THẬP NIÊN 1930",
+     "at": [
+      1,
+      "1930,"
+     ]
+    },
+    {
+     "text": "KHU NHÀ Ổ CHUỘT",
+     "at": [
+      1,
+      "ổ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 2,
+   "bg": "map1915",
+   "day": "KẾ HOẠCH PHÁ DỠ · LÀM CÔNG VIÊN",
+   "date": "1933"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "bg": "kowloon1930s",
+   "items": [
+    {
+     "text": "ĐỔI ĐẤT · CẤP NHÀ MỚI",
+     "at": [
+      3,
+      "đổi"
+     ]
+    },
+    {
+     "text": "NHƯNG QUÁ XA",
+     "at": [
+      4,
+      "xa,"
+     ],
+     "acc": true
+    },
+    {
+     "text": "KHÔNG CHỊU ĐI",
+     "at": [
+      4,
+      "chịu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 5,
+   "k": "ĐƠN KÊU CỨU",
+   "name": "HƠN 20 HỘ",
+   "desc": "Gửi thẳng tới chính phủ Trung Hoa Dân Quốc",
+   "bg": "kowloon1930s",
+   "rows": [
+    {
+     "k": "NAM KINH",
+     "v": "“*Đất Trung Hoa*”",
+     "at": [
+      6,
+      "đất"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "bg": "kwc1898",
+   "text": "LẠI MỘT LẦN\nGIẰNG CO",
+   "hitAt": [
+    7,
+    "giằng"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "bg": "jp1942",
+   "items": [
+    {
+     "text": "ANH MẠNH TAY HƠN",
+     "at": [
+      8,
+      "mạnh"
+     ]
+    },
+    {
+     "text": "CHIẾN TRANH TRUNG NHẬT",
+     "at": [
+      8,
+      "Trung"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 9,
+   "bg": "kowloon1930s",
+   "day": "NHÀ CỬA TRONG THÀNH BỊ SAN PHẲNG",
+   "date": "1940"
+  },
+  {
+   "type": "ledger",
+   "at": 10,
+   "title": "CÒN LẠI · 1940",
+   "rows": [
+    {
+     "k": "DINH QUAN",
+     "v": "✓",
+     "at": [
+      10,
+      "dinh"
+     ]
+    },
+    {
+     "k": "NGÔI TRƯỜNG",
+     "v": "✓",
+     "at": [
+      10,
+      "trường"
+     ]
+    },
+    {
+     "k": "NHÀ CỔ",
+     "v": "1",
+     "at": [
+      10,
+      "cổ."
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 11,
+   "img": "jp1942",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.52,
+   "film": true,
+   "kin": [
+    {
+     "text": "12.1941",
+     "at": [
+      11,
+      "tháng"
+     ]
+    },
+    {
+     "text": "NHẬT CHIẾM HỒNG KÔNG",
+     "at": [
+      11,
+      "Nhật"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 12,
+   "img": "canal1950s",
+   "tone": "bw",
+   "move": "pan",
+   "veil": 0.52,
+   "kin": [
+    {
+     "text": "MỞ RỘNG SÂN BAY KHẢI ĐỨC",
+     "at": [
+      12,
+      "Khải"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 13,
+   "bg": "kwc1898",
+   "text": "DỠ TOÀN BỘ\nTƯỜNG THÀNH",
+   "hitAt": [
+    13,
+    "dỡ"
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 14,
+   "img": "kaitak_hist",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.52,
+   "kin": [
+    {
+     "text": "ĐÁ XẾP TỪ 1847",
+     "at": [
+      14,
+      "1847"
+     ]
+    },
+    {
+     "text": "CHÔN LÀM NỀN SÂN BAY",
+     "at": [
+      14,
+      "chôn"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "bg": "jp1942",
+   "items": [
+    {
+     "text": "NGƯỜI LÀM",
+     "at": [
+      15,
+      "Người"
+     ],
+     "sm": true
+    },
+    {
+     "text": "TÙ BINH ĐỒNG MINH",
+     "at": [
+      15,
+      "tù"
+     ],
+     "serif": true,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 16,
+   "img": "swt1950",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.52,
+   "kin": [
+    {
+     "text": "TỐNG VƯƠNG ĐÀI",
+     "at": [
+      16,
+      "Tống"
+     ]
+    },
+    {
+     "text": "CŨNG BỊ PHÁ",
+     "at": [
+      16,
+      "phá"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "KHỐI ĐÁ TƯỞNG NIỆM VUA TỐNG",
+    "v": "ẢNH 1950 · PHẦN CÒN SÓT LẠI",
+    "at": [
+     16,
+     "hoàng"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "bg": "liberation1945",
+   "items": [
+    {
+     "text": "1945",
+     "at": [
+      17,
+      "1945,"
+     ],
+     "sm": true
+    },
+    {
+     "text": "KHÔNG CÒN TƯỜNG",
+     "at": [
+      17,
+      "tường."
+     ]
+    },
+    {
+     "text": "KHÔNG CÒN CỔNG",
+     "at": [
+      18,
+      "cổng."
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 19,
+   "img": "kwc1898",
+   "tone": "sepia",
+   "move": "in",
+   "veil": 0.52,
+   "kin": [
+    {
+     "text": "TẤM BIA TRÊN CỔNG NAM",
+     "at": [
+      19,
+      "bia"
+     ]
+    },
+    {
+     "text": "KHÔNG CÒN Ở ĐÓ",
+     "at": [
+      19,
+      "còn"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 20,
+   "bg": "kwc1898",
+   "text": "Tấm bia đã đi đâu?"
+  },
+  {
+   "type": "kinetic",
+   "at": 21,
+   "vid": "9442282",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "MẤT TƯỜNG",
+     "at": [
+      21,
+      "mất"
+     ]
+    },
+    {
+     "text": "CHỈ CÒN KHOẢNH ĐẤT TRỐNG",
+     "at": [
+      21,
+      "trống."
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 22,
+   "bg": "map1915",
+   "text": "NÓ THUỘC VỀ AI?",
+   "white": true,
+   "hitAt": [
+    22,
+    "thuộc"
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 23,
+   "vid": "9508953",
+   "tone": "noir",
+   "veil": 0.4,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "BA NĂM SAU CHIẾN TRANH",
+     "at": [
+      23,
+      "ba"
+     ]
+    },
+    {
+     "text": "MỘT TÒA NHÀ BỐC CHÁY",
+     "at": [
+      23,
+      "cháy"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "BỨC TƯỜNG BỊ THÁO ĐI"
+ },
+ "bgm": {
+  "file": "dark_times.mp3",
+  "at": 0,
+  "gain": 0.12
+ }
+}

@@ -40,7 +40,7 @@ def main(topic):
     lines = [meta.get("summary", ""), "", *meta.get("more", []), "", "⏱ CHƯƠNG", *chapters, "", "📚 NGUỒN THAM KHẢO (Wikipedia tiếng Anh và các nguồn được trích trong đó)",
              *meta.get("sources", [])[:8], "và các bài Wikipedia liên quan.", "",
              "Lời dẫn là bản viết mới dựa trên tư liệu công khai; những câu có nhãn DIỄN Ý là diễn đạt lại, không phải nguyên văn.",
-             "Hình ảnh/video có nhãn MINH HỌA chỉ mang tính minh họa bối cảnh.", "", "🖼 ẢNH (Wikimedia Commons)"]
+             "Hình ảnh/video có nhãn MINH HỌA chỉ mang tính minh họa bối cảnh.", "", "🖼 ẢNH (Wikimedia Commons và các kho tư liệu mở)"]
     pd, bylic = 0, {}
     for k in sorted(used):
         f = spec["imgs"][k]
@@ -50,9 +50,17 @@ def main(topic):
             pd += 1
             continue
         by = re.sub(r"\s*\d\d:\d\d, .*UTC\)", "", m["artist"].split("\n")[0]).strip() or "không rõ tác giả"
-        name = re.sub(r"\s*\(\d{6,}\)|\.(jpe?g|png|tif)$|, Sicily, Italy| - panoramio", "", f[5:], flags=re.I)[:meta.get("credit_name_len", 48)]
+        src = {"wellcome": " · Wellcome Collection", "artic": " · Art Institute of Chicago"}.get(m.get("source", "").split(":")[0], "")
+        if m.get("source", "").startswith("europeana:"):
+            src = " · " + m["source"].split(":", 1)[1]
+        if m.get("source") == "sentinel2":                        # Copernicus: ghi đúng câu bắt buộc
+            bylic.setdefault("Copernicus Sentinel data", []).append(m["artist"])
+            continue
+        name = re.sub(r"\s*\(\d{6,}\)|\.(jpe?g|png|tif)$|, Sicily, Italy| - panoramio", "", m.get("title") or f[5:], flags=re.I)[:meta.get("credit_name_len", 48)]
         by = re.sub(r"^The original uploader was |No machine-readable author provided\. ", "", by)
-        bylic.setdefault(m["license"], []).append(f"{name.strip()} ({by[:meta.get('credit_by_len', 40)].strip()})")
+        bylic.setdefault(m["license"], []).append(f"{name.strip()} ({by[:meta.get('credit_by_len', 40)].strip()}{src})")
+    if not any(str(spec["imgs"][k]).startswith("EXT:") for k in used):   # chỉ Commons -> giữ tiêu đề cũ
+        lines = [x.replace("🖼 ẢNH (Wikimedia Commons và các kho tư liệu mở)", "🖼 ẢNH (Wikimedia Commons)") for x in lines]
     lines += [f"• {lic}: " + "; ".join(v) for lic, v in sorted(bylic.items())]   # gom theo giấy phép: đủ tác giả + giấy phép, ít byte hơn
     lines += [f"• Và {pd} ảnh tư liệu thuộc phạm vi công cộng (Public domain / CC0).", "",
               "🎬 VIDEO B-ROLL: Pexels (pexels.com) — giấy phép Pexels, dùng tự do.", "", "🎵 NHẠC NỀN"]
