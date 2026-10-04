@@ -1,6 +1,6 @@
 """Đăng video dài lên kênh: upload (private + publishAt) → thumbnail → phụ đề SRT → playlist mới.
 
-    python motion/long/publish_long.py <topic> <CH> <publishAt ISO UTC> [--playlist "Tên" "mô tả" id1 id2 ...]
+    python motion/long/publish_long.py <topic> <CH> <publishAt ISO UTC> [--playlist "Tên" "mô tả" id1 id2 ...] [--add-to <playlistId>]
 
 Mỗi bước ghi vào output/long/<topic>/pub/result.json: chạy lại sẽ BỎ QUA bước đã xong
 (không upload trùng, không tạo playlist trùng). Không bao giờ public ngay.
@@ -14,6 +14,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(ROOT / "motion"))
 from factory import channels, publish as P  # noqa: E402
 
 
@@ -110,6 +111,16 @@ def main():
             res["playlist_items"].append(v)
             save()
         print("playlist items", len(res["playlist_items"]), flush=True)
+    if "--add-to" in rest:   # thêm vào playlist CÓ SẴN (vd. PLM35iHclYa34 "Thế Giới Ngầm Toàn Cầu")
+        pid = rest[rest.index("--add-to") + 1]
+        done = res.setdefault("added_to", [])
+        if pid not in done:
+            P.add_to_playlist(vid, pid, tok)
+            done.append(pid)
+            save()
+            print("added to playlist", pid, flush=True)
+    import variety   # sổ đa dạng: video sau sẽ được so với video này (nhạc nền, look)
+    variety.record(topic, publish_at[:10])
     print(json.dumps(res, ensure_ascii=False))
 
 

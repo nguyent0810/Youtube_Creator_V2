@@ -15,6 +15,11 @@ MUSIC = {  # file -> tên gốc trên incompetech (Kevin MacLeod, CC BY 4.0)
     "dark_times.mp3": "Dark Times", "crypto.mp3": "Crypto", "heart_of_nowhere.mp3": "Heart of Nowhere", "deep_haze.mp3": "Deep Haze",
     "long_note_four.mp3": "Long Note Four", "despair_and_triumph.mp3": "Despair and Triumph", "night_cave.mp3": "Night Cave",
     "impact_lento.mp3": "Impact Lento"}
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import variety  # noqa: E402
+for _m in variety.catalog()["tracks"].values():   # bài mới thêm vào danh mục nhạc cũng được ghi công
+    if _m.get("author") == "Kevin MacLeod":
+        MUSIC.setdefault(_m["file"], _m["title"])
 
 
 def main(topic):
@@ -29,7 +34,8 @@ def main(topic):
                 if k:
                     used.add(k)
         bg = ch.get("bgm") or []
-        for b in [q.get("file") for q in ([bg] if isinstance(bg, dict) else bg)]:
+        picks = variety._picks(topic)   # bgm chọn theo mood: file nằm trong bgm_picks.json
+        for b in [q.get("file") or picks.get(f"{c}.{k}") for k, q in enumerate([bg] if isinstance(bg, dict) else bg)]:
             if b and b not in music:
                 music.append(b)
         title = ch["hud"]["t"].title() if c != "ch00" else meta.get("ch00_title", "Mở đầu")

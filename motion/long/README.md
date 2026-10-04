@@ -143,3 +143,19 @@ Credit ảnh tự hiện theo giấy phép.
 
 - Muốn ép một kiểu thì ghi `"fx": "redact"` vào item hoặc slam. Riêng `"fx": "strike", "strikeAt": [i, "từ"]` gạch ngang câu "không phải X".
 - `stamp` và `tape` có khung, nên chỉ được gán cho dòng ≤18 ký tự (Short: ≤12).
+
+## Đa dạng giữa các video (chống "repetitive content")
+
+Chính sách Spam của YouTube lấy đúng ví dụ "the exact same background music and repetitive AI generated imagery across many videos". Sáu Long đầu tiên (Yakuza → Tam Giác Vàng) dùng chung 13 bài nhạc và cùng một diện mạo, nên mỗi video mới phải khác các video gần đây. Nghiên cứu nằm ở `RESEARCH-million-views.md`.
+
+- `motion/variety.py` quản lý việc này.
+  - Sổ `data/variety/ledger.json` (có commit) ghi mỗi video: nhạc nền, theme, look. `publish_long.py` tự ghi sau khi upload.
+  - `python motion/variety.py audit <topic>` so video với 3 video gần nhất cùng kênh. Báo lỗi khi nhạc nền trùng trên 35% (Jaccard), hoặc look giống video ngay trước.
+  - `build_long.py html` in cảnh báo. `build_long.py final` **từ chối** dựng nếu chưa sửa (có thể bỏ qua bằng `--allow-repeat`).
+- **Look**: ghi `"look"` trong spec. Có các look `classic | amber | steel | jade | rose | sulfur`, mỗi look là một bảng màu, một cặp font có tiếng Việt và một màu nền. `python motion/variety.py next-look` gợi ý look ít dùng nhất. Spec không ghi look thì render y như cũ (`classic`).
+- **Nhạc theo mood**: trong chNN.json (hoặc gen_scenes) ghi `bgm={"mood": "tense", "gain": .12}` thay vì `"file"`.
+  - Các mood: tense | dark | sad | epic | mystery | quiet.
+  - Picker chọn bài ít dùng nhất trong các video gần đây và không lặp trong cùng video.
+  - Kết quả được cache ở `output/long/<topic>/bgm_picks.json`, nên render lại vẫn ra bài cũ.
+  - Danh mục nhạc: `motion/long/music_catalog.json`. File nhạc: `output/music/`. `python motion/variety.py library` cho biết mỗi bài đã dùng bao nhiêu lần.
+  - Kho hiện chỉ có 14 bài, chưa đủ để tránh trùng. Phải thêm bài (Kevin MacLeod CC BY, YouTube Audio Library…) vào cả danh mục lẫn `output/music/`.

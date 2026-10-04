@@ -305,6 +305,7 @@ def probe_dur(p: Path) -> float:
 # ---------------- beat text: motion/beatfx.py chọn hiệu ứng chữ (engine/beat.js), dùng chung với Short ----------------
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from beatfx import assign_beats as _assign_beats  # noqa: E402
+import variety  # noqa: E402  (nhạc nền theo mood + diện mạo riêng từng video, chống "repetitive content")
 THEME = {"name": ""}
 
 
@@ -417,7 +418,7 @@ HTML = """<!doctype html>
 <meta name="viewport" content="width=1920, height=1080" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,600;0,700;0,800;0,900;1,600&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=JetBrains+Mono:wght@500;700&family=Noto+Serif+SC:wght@900&display=swap" rel="stylesheet" />
+<link href="{fonts}" rel="stylesheet" />
 <link rel="stylesheet" href="assets/engine/casewide.css" />
 <link rel="stylesheet" href="assets/engine/beat.css" />
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
@@ -478,6 +479,8 @@ def do_html(topic, only=None):
     total, acc_t = sum(durs.values()), 0.0
     credits = {}
     imgs = {}
+    variety.resolve_bgm(topic, spec, chs, od)   # bgm {"mood": ...} -> file cụ thể, ít dùng nhất gần đây
+    look = variety.look(spec.get("look"))
     for key, file in spec.get("imgs", {}).items():
         wh = fetch_img(file, od / "img" / f"{key}.jpg", credits)
         imgs[key] = {"src": f"assets/long/{topic}/img/{key}.jpg", **wh}
@@ -517,13 +520,13 @@ def do_html(topic, only=None):
                 vids.append(f'  <video id="v{k}" class="clip bv {tone}" src="assets/long/{topic}/broll/{vid}.mp4" data-start="{st:.3f}" '
                             f'data-duration="{min(need, d - st):.3f}" data-media-start="{ms:.2f}" muted playsinline data-track-index="1"></video>')
         seed = sum(ord(c) * (i + 1) for i, c in enumerate(topic + name)) % 100000 + 7
-        case = {"topic": topic, "ch": name, "dur": d, "seed": seed, "accent": spec.get("accent", "#e2402d"), "theme": spec.get("theme"), "autoTr": spec.get("autoTr", spec.get("theme") == "shanghai"), "hud": ch.get("hud", {}),
+        case = {"topic": topic, "ch": name, "dur": d, "seed": seed, "accent": spec.get("accent", "#e2402d"), "look": look, "theme": spec.get("theme"), "autoTr": spec.get("autoTr", spec.get("theme") == "shanghai"), "hud": ch.get("hud", {}),
                 "acc": spec.get("acc", []) + ch.get("acc", []), "lines": lines, "imgs": imgs, "geo": geo, "scenes": scenes,
                 "prog0": round(acc_t / total, 5), "prog1": min(1.0, round((acc_t + d) / total, 5))}
         (od / name / "data.js").write_text("window.CASE = " + json.dumps(case, ensure_ascii=False) + ";\n", encoding="utf-8")
         comp = HF / "compositions" / "long" / f"{topic}_{name}.html"
         comp.parent.mkdir(parents=True, exist_ok=True)
-        comp.write_text(HTML.replace("{data}", f"assets/long/{topic}/{name}/data.js").replace("{dur}", f"{d:.3f}")
+        comp.write_text(HTML.replace("{fonts}", variety.fonts_url(spec.get("look"))).replace("{data}", f"assets/long/{topic}/{name}/data.js").replace("{dur}", f"{d:.3f}")
                         .replace("{title}", spec["title"]).replace("{videos}", "\n".join(vids)), encoding="utf-8")
         sfx_long.build(case, od / name / "sfx.wav")
         quiet = [(s["t0"], s["t1"]) for s in scenes if s["type"] == "question"]
@@ -639,6 +642,8 @@ if __name__ == "__main__":
         do_tts(topic, only)
     elif cmd == "html":
         do_html(topic, only)
+        for x in variety.audit(topic):
+            print("  ! variety:", x)
     elif cmd == "render":
         do_render(topic, only, draft="--draft" in rest, force="--force" in rest)
     elif cmd == "takes":
@@ -647,4 +652,7 @@ if __name__ == "__main__":
     elif cmd == "pick":
         do_pick(topic)
     elif cmd == "final":
+        bad = variety.audit(topic)
+        if bad and "--allow-repeat" not in rest:   # quá giống video gần đây: rủi ro "repetitive content" cho cả kênh
+            raise SystemExit("variety audit:\n  " + "\n  ".join(bad) + "\nĐổi nhạc/look rồi dựng lại, hoặc thêm --allow-repeat nếu chấp nhận.")
         do_final(topic)

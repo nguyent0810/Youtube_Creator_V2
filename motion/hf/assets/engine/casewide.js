@@ -7,6 +7,9 @@
 (function () {
   const C = window.CASE, DUR = C.dur;
   if (C.accent) document.documentElement.style.setProperty("--red", C.accent);
+  if (C.look) Object.entries(C.look.vars || {}).forEach(([k, v]) => document.documentElement.style.setProperty(k, v));   // diện mạo riêng từng video (motion/variety.py)
+  if (C.look && C.look.vars && C.look.vars["--bed1"])   // nền theo look, kể cả theme noir/shanghai (vốn ghi cứng màu nền)
+    document.getElementById("bed").style.background = `radial-gradient(110% 90% at 50% 30%, ${C.look.vars["--bed1"]} 0%, ${C.look.vars["--bed2"]} 55%, #040303 100%)`;
   const $ = (s) => document.querySelector(s);
   const el = (tag, cls, html, parent) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; if (parent) parent.appendChild(e); return e; };
   const ROOT = document.getElementById("root");
