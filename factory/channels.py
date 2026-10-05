@@ -19,16 +19,22 @@ CREDS_DIR = Path(r"C:\Tools\Youtuber\vietneu-tts\.youtube_channels")
 #   FS/BUD: không giãn phút (run_pipeline giết chặng sau 2 giờ, chưa có lịch tự
 #   chạy `resume`), nhưng tối đa 24/ngày -- nhỏ hơn cú dồn đã làm CL dính.
 # Lý do: docs/audit/2026-10-05-channel-design.md.
+#
+# rotate / pinned = thí nghiệm xoay giờ của vòng phản hồi (factory/rotation.py):
+# mỗi ngày các dòng không ghim đổi giờ đăng cho nhau, để tách "dòng kém" khỏi
+# "giờ kém". Dòng Lịch ghim giờ hẹn quen (FS Lịch nằm ngoài PILLARS, do
+# make_lich_month sinh, nên không cần ghim). CL TẮT trong giai đoạn cứu kênh.
+# Lý do: docs/audit/2026-10-05-feedback-loop-design.md.
 CHANNELS = {
     "FS": {"ten": "Phong Thủy", "creds": "phong_thuy.json", "lines": "factory.pillars.topics",
            "prefixes": ("lich-", "giap-", "tru-", "dich-", "menh-"),
-           "pacing": (0, 24)},
+           "pacing": (0, 24), "rotate": True},
     "CL": {"ten": "Hình Sự", "creds": "hinh_su.json", "lines": "factory.lines.cl",
            "prefixes": ("cl-hieusai-", "cl-dieu-", "cl-luadao-", "cl-hoso-", "cl-truyen-", "cl-hs-"),
-           "pacing": (180, 8)},
+           "pacing": (180, 8), "rotate": False},
     "BUD": {"ten": "Phật Giáo", "creds": "phat_giao.json", "lines": "factory.lines.bud",
             "prefixes": ("bud-lich-", "bud-visao-", "bud-hieulam-", "bud-phapcu-", "bud-sophap-"),
-            "pacing": (0, 24)},
+            "pacing": (0, 24), "rotate": True, "pinned": ("lich",)},
 }
 
 

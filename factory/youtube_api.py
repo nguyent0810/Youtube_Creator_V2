@@ -147,8 +147,15 @@ class HttpYouTube:
                                e.read().decode(errors="replace"))
                 wait = next(backoff, None) if isinstance(err, RateLimited) else None
                 if wait is None:
+                    err.status = e.code
                     raise err from e
                 self._sleep(wait)
+
+    def get_json(self, url: str) -> dict:
+        """GET một URL Google API bất kỳ bằng token của kênh này (đọc
+        Analytics, videos.list...). Lỗi mang `.status` = mã HTTP."""
+        raw, _ = self._send("GET", url)
+        return json.loads(raw) if raw else {}
 
     def _json(self, method: str, path: str, params: dict, payload: dict | None = None) -> dict:
         url = f"{API}/{path}?{urllib.parse.urlencode(params)}"

@@ -126,6 +126,7 @@ TTS chạy **CPU**, không GPU — có chủ đích. Tài liệu upstream nói t
 | `thumbnail.py` — khung hình + chữ | ✅ |
 | `publish.py` — YouTube API, hẹn giờ | ✅ **đã chạy thật** (probe 20/09/2026); từ 05/10 chỉ còn phần ĐỌC |
 | `channel.py` — mọi lần GHI lên YouTube: giãn nhịp, sổ upload, merge khi sửa | ✅ test trên FakeYouTube, **chưa chạy thật** |
+| `scoreboard.py` + `rotation.py` — vòng phản hồi: đo 7 ngày đầu, xếp hạng trong tuần, xoay giờ đăng, brief cho pha sinh (`scripts/feedback_loop.py`) | ✅ test trên FakeAnalytics, **chưa chạy thật** |
 | CLI gói lại | ⬜ sau cùng |
 
 ```bash
@@ -176,4 +177,4 @@ Chống đăng trùng với video không có trong sổ (v1, đăng tay) bằng 
 
 ---
 
-129 test (7 test cần `vnlunar`). Mỗi test khoá lại một cách hỏng thật — hoặc đã xảy ra ở v1, hoặc là giả định mà cả kiến trúc dựa vào.
+176 test (7 test cần `vnlunar`). Mỗi test khoá lại một cách hỏng thật — hoặc đã xảy ra ở v1, hoặc là giả định mà cả kiến trúc dựa vào.
