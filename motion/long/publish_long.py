@@ -4,6 +4,9 @@
 
 Mỗi bước ghi vào output/long/<topic>/pub/result.json: chạy lại sẽ BỎ QUA bước đã xong
 (không upload trùng, không tạo playlist trùng). Không bao giờ public ngay.
+
+Upload (video + category + thumbnail) đi qua factory/channel.py: cùng luật giãn nhịp,
+cùng sổ chống upload trùng (slug "long-<topic>") với mọi đường đăng khác.
 """
 import json
 import sys
@@ -15,11 +18,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "motion"))
-from factory import channels, publish as P  # noqa: E402
-
-
-class B:  # Bundle tối thiểu cho P.upload_video
-    kind = "long"
+from factory import channels, publish as P, store  # noqa: E402
+from factory.channel import Channel, Upload  # noqa: E402
 
 
 def captions_insert(tok, vid, srt: Path, name="Tiếng Việt"):
@@ -46,44 +46,47 @@ def main():
     res = json.loads(rp.read_text(encoding="utf-8")) if rp.exists() else {}
     save = lambda: rp.write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
     creds = json.loads(channels.creds_path(ch).read_text(encoding="utf-8"))
-    tok = P.access_token(creds)
+    tok = P.access_token(creds)       # cho các bước còn lại (phụ đề, playlist)
+    thumb = od / "pub" / y.get("thumb", "t1.jpg")
 
-    if not res.get("video_id"):
-        b = B()
-        b.title = spec["title"]
-        b.description = (od / "description.txt").read_text(encoding="utf-8")
-        b.tags = y["tags"]
-        b.publish_at = publish_at
-        up = P.uploads_playlist_id(tok)
-        dup = P.already_published(b.title, up, tok)
-        if dup:
-            raise SystemExit(f"đã có video cùng tiêu đề trên kênh: {dup}")
-        print("upload…", flush=True)
-        res["video_id"] = P.upload_video(b, od / "final.mp4", tok)
-        res["publish_at"] = publish_at
-        save()
-        print("video", res["video_id"], flush=True)
-        tok = P.access_token(creds)   # upload lâu -> token mới
-    vid = res["video_id"]
+    with store.connect() as conn:
+        if not res.get("video_id"):
+            titles = P.channel_titles(P.uploads_playlist_id(tok), tok)
+            chan = Channel.open(ch, conn, channel_titles=titles)
+            print("upload…", flush=True)
+            try:
+                up = chan.upload(Upload(
+                    slug=f"long-{topic}", video=od / "final.mp4", title=spec["title"],
+                    description=(od / "description.txt").read_text(encoding="utf-8"),
+                    tags=tuple(y["tags"]), kind="long", publish_at=publish_at,
+                    category=y.get("category", "24"), thumbnail=thumb))
+            except P.PublishError as e:
+                # PacingHold / UploadInterrupted: chạy lại lệnh này là đủ (nối
+                # tiếp phiên cũ, không upload lại). UploadInDoubt: xem Studio rồi
+                # `publish_batch.py resolve long-<topic> <video_id|none> --channel <CH>`.
+                raise SystemExit(f"{type(e).__name__}: {e}")
+            res.update(video_id=up.video_id, publish_at=up.publish_at, meta_fixed=True)
+            if up.thumbnail_error is None and not up.reused:
+                res["thumb"] = thumb.name
+            save()
+            print("video", res["video_id"], flush=True)
+        else:
+            chan = Channel.open(ch, conn)
+        vid = res["video_id"]
 
-    if not res.get("meta_fixed"):   # upload_video mặc định category 22 -> đổi sang category của spec, giữ nguyên lịch
-        cur = P._api(tok, "GET", "videos", {"part": "snippet,status", "id": vid})["items"][0]
-        sn = cur["snippet"]
-        P._api(tok, "PUT", "videos", {"part": "snippet,status"}, {"id": vid, "snippet": {
-            "title": sn["title"], "description": sn["description"], "tags": sn.get("tags", []), "categoryId": y.get("category", "24"),
-            "defaultLanguage": "vi", "defaultAudioLanguage": "vi"},
-            "status": {"privacyStatus": "private", "publishAt": res["publish_at"], "selfDeclaredMadeForKids": False,
-                       "embeddable": True, "publicStatsViewable": True}})
-        res["meta_fixed"] = True
-        save()
-        print("category/lịch OK", flush=True)
+        if not res.get("meta_fixed"):   # video upload trước khi có Channel: category còn là 22
+            chan.edit(vid, categoryId=y.get("category", "24"))
+            res["meta_fixed"] = True
+            save()
+            print("category OK", flush=True)
 
-    if not res.get("thumb"):
-        P.set_thumbnail(vid, od / "pub" / y.get("thumb", "t1.jpg"), tok)
-        res["thumb"] = y.get("thumb", "t1.jpg")
-        save()
-        print("thumbnail OK", flush=True)
+        if not res.get("thumb"):
+            chan.set_thumbnail(vid, thumb)
+            res["thumb"] = thumb.name
+            save()
+            print("thumbnail OK", flush=True)
 
+    tok = P.access_token(creds)       # upload dài có thể quá hạn token cũ
     if not res.get("captions"):
         try:
             res["captions"] = captions_insert(tok, vid, od / "captions.vi.srt")

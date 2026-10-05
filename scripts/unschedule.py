@@ -20,6 +20,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 from factory import channels, publish, store  # noqa: E402
+from factory.channel import Channel  # noqa: E402
 
 CH = channels.pick()
 APPLY = "--apply" in sys.argv
@@ -49,16 +50,10 @@ if not APPLY:
 
 done = 0
 with store.connect() as conn:
-    for r, st in todo:
-        # videos.update part=status GHI ĐÈ toàn bộ status: bỏ publishAt = gỡ lịch.
-        publish._api(tok, "PUT", "videos", {"part": "status"}, {
-            "id": r["video_id"],
-            "status": {"privacyStatus": "private",
-                       "selfDeclaredMadeForKids": st.get("selfDeclaredMadeForKids", False),
-                       "embeddable": st.get("embeddable", True),
-                       "publicStatsViewable": st.get("publicStatsViewable", True),
-                       "license": st.get("license", "youtube")},
-        })
+    chan = Channel.open(CH, conn)
+    for r, _st in todo:
+        # Gỡ lịch = private không publishAt. Channel merge mọi trường status khác.
+        chan.reschedule(r["video_id"], None)
         conn.execute("UPDATE item SET stage='failed', attempts=99, error=?, updated_at=? WHERE id=?",
                      (f"UNSCHEDULED {now:%Y-%m-%d}: nhường kênh cho nguồn khác theo yêu cầu người dùng",
                       now.strftime("%Y-%m-%dT%H:%M:%SZ"), r["id"]))

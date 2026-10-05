@@ -12,13 +12,23 @@ from pathlib import Path
 
 CREDS_DIR = Path(r"C:\Tools\Youtuber\vietneu-tts\.youtube_channels")
 
+# pacing = (khoảng cách tối thiểu giữa hai lần UPLOAD, tính bằng phút; số upload
+# tối đa trong 24 giờ trượt). Channel (factory/channel.py) cưỡng chế cho MỌI
+# đường đăng. Tính theo giờ upload, không theo giờ lên sóng.
+#   CL: chính sách sau sự cố 30/09 (61 upload/ngày -> rơi khỏi feed): 3 giờ/lần.
+#   FS/BUD: không giãn phút (run_pipeline giết chặng sau 2 giờ, chưa có lịch tự
+#   chạy `resume`), nhưng tối đa 24/ngày -- nhỏ hơn cú dồn đã làm CL dính.
+# Lý do: docs/audit/2026-10-05-channel-design.md.
 CHANNELS = {
     "FS": {"ten": "Phong Thủy", "creds": "phong_thuy.json", "lines": "factory.pillars.topics",
-           "prefixes": ("lich-", "giap-", "tru-", "dich-", "menh-")},
+           "prefixes": ("lich-", "giap-", "tru-", "dich-", "menh-"),
+           "pacing": (0, 24)},
     "CL": {"ten": "Hình Sự", "creds": "hinh_su.json", "lines": "factory.lines.cl",
-           "prefixes": ("cl-hieusai-", "cl-dieu-", "cl-luadao-", "cl-hoso-", "cl-truyen-", "cl-hs-")},
+           "prefixes": ("cl-hieusai-", "cl-dieu-", "cl-luadao-", "cl-hoso-", "cl-truyen-", "cl-hs-"),
+           "pacing": (180, 8)},
     "BUD": {"ten": "Phật Giáo", "creds": "phat_giao.json", "lines": "factory.lines.bud",
-            "prefixes": ("bud-lich-", "bud-visao-", "bud-hieulam-", "bud-phapcu-", "bud-sophap-")},
+            "prefixes": ("bud-lich-", "bud-visao-", "bud-hieulam-", "bud-phapcu-", "bud-sophap-"),
+            "pacing": (0, 24)},
 }
 
 
