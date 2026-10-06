@@ -1,6 +1,6 @@
 """Tư liệu hình NGOÀI Wikimedia Commons cho video dài — chỉ các nguồn đã kiểm tra giấy phép dùng thương mại (04/10/2026).
 
-    python motion/long/media_search.py search <topic> "opium den" [--src openverse,wellcome,artic,europeana]
+    python motion/long/media_search.py search <topic> "opium den" [--src openverse,wellcome,artic,europeana,nasa,smithsonian]
     python motion/long/media_search.py get <topic> <key> X12          # tải ứng viên X12 thành ảnh <key>
     python motion/long/media_search.py sat <topic> <key> <minlon> <minlat> <maxlon> <maxlat> [2023-11-15/2024-01-31]   (mùa khô ít khói đốt nương: tháng 11–1)
 
@@ -9,6 +9,12 @@ Nguồn (xem motion/long/SOURCES.md):
               Ảnh Flickr: cẩn thận "rửa giấy phép" (người đăng không phải tác giả) — xem kỹ trước khi dùng.
 - wellcome  : Wellcome Collection — lịch sử y học, thuốc phiện, châu Á thế kỷ 19 (PDM / CC0 / CC BY).
 - artic     : Art Institute of Chicago — tác phẩm phạm vi công cộng, CC0 (có ảnh Hồng Kông, Trung Hoa thế kỷ 19).
+              Bắt buộc header AIC-User-Agent; IIIF công khai tối đa 843px (1686 -> 403).
+- nasa      : NASA Image and Video Library — không cần key; ảnh NASA không có bản quyền ở Mỹ. KHÔNG dùng logo NASA
+              (meatball/worm), không gợi ý NASA bảo trợ; một số ảnh có bên thứ ba -> xem mô tả trước khi dùng.
+              https://www.nasa.gov/nasa-brand-center/images-and-media/
+- smithsonian: Smithsonian Open Access — chỉ nhận media có usage.access = "CC0". Cần key miễn phí api.data.gov
+              (SI_API_KEY hoặc DATA_GOV_API_KEY trong môi trường hoặc ../.local.env). https://www.si.edu/openaccess
 - europeana : thư viện/bảo tàng châu Âu (ảnh thuộc địa châu Á của KITLV, Tropenmuseum…). reusability=open.
               Đặt EUROPEANA_KEY (đăng ký miễn phí), không có thì dùng khóa demo "api2demo".
 - sat       : ảnh vệ tinh Sentinel-2 L2A qua Microsoft Planetary Computer (truy cập ẩn danh).
@@ -33,7 +39,8 @@ import requests
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[2]
-H = {"User-Agent": "yt-factory-research/1.0 (Into the Killer's Mind; educational documentaries)"}
+H = {"User-Agent": "yt-factory-research/1.0 (https://github.com/nguyent0810/Youtube_Creator_V2)"}
+KEY_FILES = (ROOT.parent / ".local.env",)
 OK_LIC = re.compile(r"^(cc0|pdm|by|by-sa)$")
 
 
@@ -43,10 +50,13 @@ def out(topic):
     return d
 
 
-def jget(url, **kw):
+AIC_H = {**H, "AIC-User-Agent": "yt-factory-research (https://github.com/nguyent0810/Youtube_Creator_V2)"}
+
+
+def jget(url, headers=None, **kw):
     for k in range(4):
         try:
-            r = requests.get(url, headers=H, timeout=60, **kw)
+            r = requests.get(url, headers=headers or H, timeout=60, **kw)
             if r.status_code == 429:
                 time.sleep(5 * (k + 1)); continue
             r.raise_for_status()
@@ -59,7 +69,8 @@ def jget(url, **kw):
 
 # ---------- nguồn: mỗi hàm trả về list ứng viên {src, id, title, license, artist, thumb, full, w, h, page} ----------
 def s_openverse(q):
-    d = jget("https://api.openverse.org/v1/images/", params={"q": q, "license": "cc0,pdm,by,by-sa", "page_size": 30, "mature": "false"})
+    # Phiên ẩn danh: page_size tối đa 20, lớn hơn -> 401 (v1 hf_openverse đã gặp; nguồn này hỏng từ đó tới 06/10/2026).
+    d = jget("https://api.openverse.org/v1/images/", params={"q": q, "license": "cc0,pdm,by,by-sa", "page_size": 20, "mature": "false"})
     res = []
     for i in d.get("results", []):
         lic = i.get("license", "")
@@ -90,7 +101,8 @@ def s_wellcome(q):
 
 
 def s_artic(q):
-    d = jget("https://api.artic.edu/api/v1/artworks/search", params={"q": q, "limit": 40, "fields": "id,title,image_id,artist_display,is_public_domain,thumbnail"})
+    d = jget("https://api.artic.edu/api/v1/artworks/search", headers=AIC_H,
+             params={"q": q, "limit": 40, "fields": "id,title,image_id,artist_display,is_public_domain,thumbnail"})
     res = []
     for i in d.get("data", []):
         if not i.get("is_public_domain") or not i.get("image_id"):
@@ -100,7 +112,7 @@ def s_artic(q):
         base = f"https://www.artic.edu/iiif/2/{i['image_id']}"
         res.append({"src": "artic", "id": str(i["id"]), "title": i.get("title", ""), "license": "CC0",
                     "artist": (i.get("artist_display") or "").split("\n")[0], "thumb": base + "/full/300,/0/default.jpg",
-                    "full": base + "/full/1686,/0/default.jpg", "w": w, "h": h, "page": f"https://www.artic.edu/artworks/{i['id']}"})
+                    "full": base + "/full/843,/0/default.jpg", "w": w, "h": h, "page": f"https://www.artic.edu/artworks/{i['id']}"})
     return res
 
 
@@ -128,7 +140,52 @@ def s_europeana(q):
     return res
 
 
-SRC = {"openverse": s_openverse, "wellcome": s_wellcome, "artic": s_artic, "europeana": s_europeana}
+def s_nasa(q):
+    d = jget("https://images-api.nasa.gov/search", params={"q": q, "media_type": "image", "page_size": 40})
+    res = []
+    for i in (d.get("collection") or {}).get("items", []):
+        m = (i.get("data") or [{}])[0]
+        nid, thumb = m.get("nasa_id"), ((i.get("links") or [{}])[0]).get("href", "")
+        if not nid or not thumb:
+            continue
+        who = " — ".join(x for x in (f"NASA/{m['center']}" if m.get("center") else "NASA", m.get("photographer") or "") if x)
+        res.append({"src": "nasa", "id": nid, "title": m.get("title", ""), "license": "Public domain (NASA)",
+                    "artist": who, "thumb": thumb, "full": thumb.replace("~medium", "~large").replace("~thumb", "~large"),
+                    "w": 0, "h": 0, "page": f"https://images.nasa.gov/details/{nid}"})
+    return res
+
+
+def si_key() -> str:
+    for k in ("SI_API_KEY", "DATA_GOV_API_KEY"):
+        if os.environ.get(k):
+            return os.environ[k].strip()
+    for f in KEY_FILES:
+        if f.exists():
+            m = re.search(r"^(?:SI_API_KEY|DATA_GOV_API_KEY|SMITHSONIAN[A-Z_]*)\s*=\s*(.+)$", f.read_text(encoding="utf-8-sig"), re.M)
+            if m and m.group(1).strip().strip('"'):
+                return m.group(1).strip().strip('"')
+    raise SystemExit("Smithsonian cần key miễn phí: đăng ký ở https://api.data.gov/signup/ rồi ghi SI_API_KEY=... vào .local.env")
+
+
+def s_smithsonian(q):
+    # key trong header (api.data.gov nhận X-Api-Key): để trong URL thì thông báo lỗi requests in ra cả key
+    d = jget("https://api.si.edu/openaccess/api/v1.0/search", headers={**H, "X-Api-Key": si_key()}, params={"q": q, "rows": 40})
+    res = []
+    for row in (d.get("response") or {}).get("rows", []):
+        c = row.get("content") or {}
+        dn = c.get("descriptiveNonRepeating") or {}
+        who = (((c.get("freetext") or {}).get("name") or [{}])[0]).get("content", "") or "Smithsonian Institution"
+        for m in (dn.get("online_media") or {}).get("media", []):
+            if (m.get("usage") or {}).get("access") != "CC0" or not m.get("content"):
+                continue
+            res.append({"src": "smithsonian", "id": m.get("idsId") or m["content"], "title": row.get("title", ""),
+                        "license": "CC0", "artist": who, "thumb": m.get("thumbnail") or m["content"],
+                        "full": m["content"], "w": 0, "h": 0, "page": dn.get("record_link", "")})
+    return res
+
+
+SRC = {"openverse": s_openverse, "wellcome": s_wellcome, "artic": s_artic, "europeana": s_europeana,
+       "nasa": s_nasa, "smithsonian": s_smithsonian}
 
 
 def sheet(path: Path, cands: list[dict], start: int):
@@ -212,7 +269,12 @@ def cmd_get(topic, key, x):
     c = next((c for c in db if c["x"] == x), None)
     if not c:
         raise SystemExit(f"không có {x} trong ext.json")
-    raw = requests.get(c["full"], headers=H, timeout=120).content
+    if c["src"].startswith("openverse"):
+        # Openverse chỉ tổng hợp: giấy phép có thể đổi/bị gỡ sau lúc tìm -> kiểm lại ngay trước khi tải (như v1).
+        r = jget(f"https://api.openverse.org/v1/images/{c['id']}/")
+        if not OK_LIC.match((r.get("license") or "").lower()):
+            raise SystemExit(f"{x}: giấy phép giờ là '{r.get('license')}' -- không dùng được (cần CC0/PDM/CC BY/CC BY-SA)")
+    raw = requests.get(c["full"], headers=AIC_H if c["src"] == "artic" else H, timeout=120).content
     w, h = save_img(raw, od / "img" / f"{key}.jpg")
     ref = f"EXT:{c['src'].split(':')[0]}:{c['id']}"
     (od / "img" / f"{key}.json").write_text(json.dumps({"file": ref, "license": c["license"], "artist": c["artist"], "title": c["title"],

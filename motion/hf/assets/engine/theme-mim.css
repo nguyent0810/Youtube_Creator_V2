@@ -1,0 +1,49 @@
+/* Giao diện kênh Mind in the Machine (MIM) cho engine S-tier (casefile.js).
+   Chỉ có tác dụng khi #root có class "theme-mim" (motion/stier/themes.py) -- kênh Hình Sự không đổi.
+   Ngôn ngữ hình: phòng thí nghiệm tối, lưới mảnh, MỘT màu nhấn cyan, thẻ kính tối chữ sáng.
+   Không Playfair (chất báo cũ) -> Be Vietnam Pro đậm; không hạt phim, không sepia. */
+.theme-mim { --red:#22d3ee; --gold:#7dd3fc; --paper:#0f1b2d; --ink:#e6f1ff; --dim:#7f93ad; --glow:rgba(34,211,238,.55); }
+.theme-mim #bed { background:
+    linear-gradient(rgba(125,211,252,.06) 1px, transparent 1px) 0 0 / 60px 60px,
+    linear-gradient(90deg, rgba(125,211,252,.06) 1px, transparent 1px) 0 0 / 60px 60px,
+    radial-gradient(120% 70% at 50% 18%, #0f2236 0%, #081221 55%, #04070d 100%); }
+.theme-mim #grain { display:none; }
+/* dòng lệnh kiểu terminal (fx "type"): canh trái + dấu nhắc, để dòng không nhảy tâm khi gõ từng ký tự */
+.theme-mim .kin.typ { text-align:left; left:90px; right:40px; }
+.theme-mim .kin.typ::before { content:"> "; color:var(--red); }
+.theme-mim #leak { background: radial-gradient(40% 30% at 50% 50%, rgba(34,211,238,.45), transparent 70%); }
+.theme-mim .mote { width:4px; height:4px; background:rgba(125,211,252,.6); filter:blur(1px); }
+.theme-mim #vig { background: radial-gradient(115% 85% at 50% 45%, transparent 60%, rgba(0,0,0,.6) 100%); }
+
+/* chữ "serif" của hồ sơ -> sans đậm, chữ hẹp lại một chút */
+.theme-mim .serif, .theme-mim .hw, .theme-mim .count, .theme-mim .cell b, .theme-mim .card .n, .theme-mim .big,
+.theme-mim .ask, .theme-mim .tli .yr, .theme-mim .ledger .lt, .theme-mim .sign, .theme-mim .dg .reel div,
+.theme-mim .dsep, .theme-mim .qpaper .qm, .theme-mim .tape {
+  font-family:'Be Vietnam Pro', system-ui, sans-serif; font-style:normal; letter-spacing:-.02em; }
+
+/* ánh đỏ cứng trong casefile.css -> ánh cyan */
+.theme-mim .strike { box-shadow:0 0 18px var(--glow); }
+.theme-mim .slam { text-shadow:0 0 60px var(--glow), 0 20px 60px rgba(0,0,0,.8); }
+.theme-mim .tli .dot { box-shadow:0 0 20px var(--glow); }
+.theme-mim .stamp { text-shadow:0 0 6px var(--glow); }
+.theme-mim .cw.acc { text-shadow:0 0 22px var(--glow), 0 6px 28px rgba(0,0,0,.95); }
+
+/* thẻ giấy -> thẻ kính tối, chữ sáng, viền cyan mảnh */
+.theme-mim .card, .theme-mim .ledger, .theme-mim .qpaper {
+  background:rgba(15,27,45,.92); color:var(--ink); border:2px solid rgba(34,211,238,.35); border-radius:18px;
+  box-shadow:0 0 0 1px rgba(34,211,238,.08), 0 40px 120px rgba(0,0,0,.8), 0 0 60px rgba(34,211,238,.12); }
+.theme-mim .ledger { background-image:repeating-linear-gradient(0deg, transparent 0 91px, rgba(125,211,252,.12) 91px 93px); }
+.theme-mim .ledger .row.tot { border-top-color:rgba(230,241,255,.6); }
+.theme-mim .card .k, .theme-mim .qpaper .by { color:var(--dim); }
+.theme-mim .card .d { color:#b8c7da; }
+.theme-mim .card .ln { background:repeating-linear-gradient(90deg, rgba(125,211,252,.5) 0 16px, transparent 16px 26px); }
+.theme-mim .card .clip { display:none; }
+.theme-mim .tli .tx { color:#c4d2e4; }
+.theme-mim .tlx { background:rgba(125,211,252,.3); }
+.theme-mim .cell { background:rgba(125,211,252,.06); border-color:rgba(125,211,252,.25); }
+.theme-mim .dg { background:rgba(8,18,33,.75); border-color:rgba(125,211,252,.25); }
+
+/* ảnh in -> khung màn hình mảnh */
+.theme-mim .printf, .theme-mim .print, .theme-mim .mug { background:#0b1626; box-shadow:0 0 0 2px rgba(34,211,238,.35), 0 50px 120px rgba(0,0,0,.85); }
+.theme-mim .splitw .lb { color:var(--ink); }
+.theme-mim .credit { color:rgba(230,241,255,.85); }
