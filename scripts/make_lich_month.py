@@ -17,14 +17,20 @@ sys.path.insert(0, str(ROOT))
 
 from factory import store  # noqa: E402
 from factory.bundle import Bundle  # noqa: E402
-from factory.compose import script_for  # noqa: E402
+from factory.compose import LICH_BGM, lich_bgm, script_for  # noqa: E402
 from factory.batchcheck import report_batch  # noqa: E402
 from factory.factcheck import report  # noqa: E402
 from factory.lunar import facts_range  # noqa: E402
-from factory.vocab import broll_for  # noqa: E402
+from factory.vocab import VIEC_BROLL, broll_for  # noqa: E402
 
 VOICE = "Anh Khôi"
-BGM = "asian_drums.mp3"
+# Nhạc nền xoay theo ngày (compose.lich_bgm, bước 5): trước đó 92/92 bài một file.
+# Chỉ chọn file có thật trong thư mục run_batch đọc -- thiếu file thì run_batch
+# lặng lẽ dựng video KHÔNG nhạc.
+BGM_DIR = ROOT.parent / "vietneu-tts" / "bgm"
+BGM_FILES = [t for t in LICH_BGM if (BGM_DIR / t).exists()]
+if not BGM_FILES:
+    sys.exit(f"không thấy file nhạc nền Lịch nào trong {BGM_DIR}")
 
 # B-roll theo THẾ của ngày, không theo từng ngày: thế quyết định tông của
 # kịch bản (siết / mở / cùng thuận / cùng đóng) nên hình cũng nên theo đó.
@@ -69,7 +75,7 @@ for f in facts_range(start, days):
         tags=["phong thuy", "lich van nien", "ngay tot", "lich am"],
         thumbnail_text="",
         publish_at=f.publish_at,
-        voice=VOICE, bgm=BGM,
+        voice=VOICE, bgm=lich_bgm(f.target, BGM_FILES),
         # Hình bám DANH MỤC VIỆC THẬT của ngày, không bám thế: chỉ có 4
         # thế nên 61 video trước đó dùng chung đúng 4 bộ từ khoá.
         broll_queries=broll_for(f.truc_good_for, BROLL[sc["the"]],
@@ -90,6 +96,11 @@ with store.connect() as conn:
     added, total = store.sync_from_disk(conn, channel="FS")
 
 print(f"Sinh {len(made)}/{days} bundle mới, giữ nguyên {len(kept)} đã có, hàng đợi thêm {added} (tổng {total})")
+# Việc chưa có hình riêng trong VIEC_BROLL -> ngày đó bù bằng bộ hình theo thế
+# (đúng thứ làm 61 video tháng 10-11 dùng chung 4 bộ hình). Báo để bổ sung.
+thieu = sorted({v.lower().strip() for f, _, _ in made for v in f.truc_good_for} - set(VIEC_BROLL))
+if thieu:
+    print(f"\nVIỆC CHƯA CÓ HÌNH RIÊNG (thêm vào factory/vocab.py VIEC_BROLL): {', '.join(thieu)}")
 if skipped:
     print(f"\nBỎ QUA {len(skipped)} ngày không qua đối chiếu:")
     for d, t in skipped:

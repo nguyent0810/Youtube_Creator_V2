@@ -22,14 +22,15 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from factory import channels, demand, scoreboard, store  # noqa: E402
+from factory import channels, demand, sameness, scoreboard, store  # noqa: E402
 
 BRIEFS = ROOT / "data" / "briefs"          # gitignore: brief chứa từ khoá tìm kiếm của kênh
 DEMAND = ROOT / "data" / "demand"          # <KÊNH>.json = danh sách chủ đề theo dõi (commit)
 
 
 def run(code: str, conn, api, *, now: datetime, out_dir: Path = BRIEFS,
-        collect: bool = True, wiki=None, demand_dir: Path = DEMAND, sleep=time.sleep) -> tuple[Path, dict]:
+        collect: bool = True, wiki=None, demand_dir: Path = DEMAND, sleep=time.sleep,
+        bundle_dir: Path | None = None) -> tuple[Path, dict]:
     summary = (scoreboard.collect(conn, code, api, now=now) if collect
                else {"stored": 0, "open": 0, "not_live": 0, "gone": 0, "failed": 0, "frontier": None})
     b = scoreboard.board(conn, code, frontier=summary["frontier"])
@@ -41,6 +42,8 @@ def run(code: str, conn, api, *, now: datetime, out_dir: Path = BRIEFS,
             conn, code, api, wiki, frontier=b.frontier, today=now.date(),
             watchlist=demand.load_watchlist(demand_dir / f"{code}.json"),
             studio_file=demand_dir / f"{code}-studio.md", sleep=sleep)
+    # Bước 5: độ lặp khuôn theo dòng (đo, không chặn). Không bao giờ ném.
+    md += sameness.render_for(code, bundle_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     path = out_dir / f"{code}.md"
     path.write_text(md, encoding="utf-8")
