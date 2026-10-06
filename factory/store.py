@@ -22,7 +22,7 @@ from __future__ import annotations
 import json
 import sqlite3
 from contextlib import contextmanager
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from factory.bundle import Bundle, BundleInvalid
@@ -94,7 +94,32 @@ def connect(db_path: Path | None = None):
 #                  làm lại TTS + dựng cho một lỗi chỉ xảy ra lúc upload.
 #   retry_after -- lỗi TẠM (hết quota): item giữ nguyên chặng, chỉ ẩn khỏi
 #                  hàng đợi tới mốc này. Không tính là một lần hỏng.
-_MIGRATIONS = {"fail_stage": "TEXT", "retry_after": "TEXT"}
+#   engine      -- cách dựng (bundle.ENGINES). Lần đầu thêm cột: suy từ slug cho
+#                  hàng cũ (cl-hs- = hồ sơ S-tier, long- = video dài).
+#   claimed_by / lease_until -- worker đang giữ hàng (TTS / dựng); lease hết hạn
+#                  thì worker khác được nhận. Thay LOCK/FAILED/STOP2 của queue2.sh.
+_MIGRATIONS = {"fail_stage": "TEXT", "retry_after": "TEXT", "engine": "TEXT",
+               "claimed_by": "TEXT", "lease_until": "TEXT"}
+
+# Một item short qua TTS hoặc dựng xong dưới vài phút; 30 phút là thừa. Worker
+# chết giữa chừng thì sau 30 phút worker khác nhận lại.
+CLAIM_LEASE = timedelta(minutes=30)
+
+_RELEASE = "claimed_by = NULL, lease_until = NULL"
+
+# Bundle cũ (trước 05/10/2026) không có `render`: suy engine từ slug -- cùng luật
+# cho hàng cũ (migration) lẫn bundle cũ nạp lại (enqueue/sync_from_disk). 91 hồ
+# sơ cl-hs- trên đĩa thuộc loại này; coi là assemble thì run_batch đi tìm B-roll
+# Pexels cho từ khoá "hyperframes-casefile".
+_LEGACY = (("cl-hs-", "casefile"), ("long-", "casewide"))
+_LEGACY_ENGINE = ("CASE " + " ".join(f"WHEN slug LIKE '{p}%' THEN '{e}'" for p, e in _LEGACY)
+                  + " ELSE 'assemble' END")
+
+
+def _engine(bundle: Bundle) -> str:
+    if bundle.render:
+        return bundle.engine
+    return next((e for p, e in _LEGACY if bundle.slug.startswith(p)), "assemble")
 
 
 def _migrate(conn: sqlite3.Connection) -> None:
@@ -102,6 +127,8 @@ def _migrate(conn: sqlite3.Connection) -> None:
     for col, typ in _MIGRATIONS.items():
         if col not in have:
             conn.execute(f"ALTER TABLE item ADD COLUMN {col} {typ}")
+            if col == "engine":
+                conn.execute(f"UPDATE item SET engine = {_LEGACY_ENGINE}")
 
 
 # ─── Bundle trên đĩa ──────────────────────────────────────────────────────
@@ -154,9 +181,9 @@ def enqueue(bundle: Bundle, conn: sqlite3.Connection) -> bool:
     Đây chính là cái v1 phải dựng 'production-write guard' để đạt được."""
     bundle.validate()
     cur = conn.execute(
-        "INSERT INTO item (id, channel, kind, slug, publish_at, stage, updated_at) "
-        "VALUES (?, ?, ?, ?, ?, 'pending', ?) ON CONFLICT(id) DO NOTHING",
-        (bundle.id, bundle.channel, bundle.kind, bundle.slug, bundle.publish_at, _now()),
+        "INSERT INTO item (id, channel, kind, slug, publish_at, stage, engine, updated_at) "
+        "VALUES (?, ?, ?, ?, ?, 'pending', ?, ?) ON CONFLICT(id) DO NOTHING",
+        (bundle.id, bundle.channel, bundle.kind, bundle.slug, bundle.publish_at, _engine(bundle), _now()),
     )
     return cur.rowcount > 0
 
@@ -171,7 +198,7 @@ def mark(conn: sqlite3.Connection, item_id: str, stage: str, **fields) -> None:
         raise ValueError(f"trường lạ: {sorted(bad)}")
     cols = ", ".join(f"{k} = ?" for k in fields)
     # Tiến được một chặng thì mọi lỗi tạm trước đó hết ý nghĩa.
-    sql = (f"UPDATE item SET stage = ?, updated_at = ?, retry_after = NULL"
+    sql = (f"UPDATE item SET stage = ?, updated_at = ?, retry_after = NULL, {_RELEASE}"
            f"{', ' + cols if cols else ''} WHERE id = ?")
     conn.execute(sql, (stage, _now(), *fields.values(), item_id))
 
@@ -185,7 +212,7 @@ def bump_attempt(conn: sqlite3.Connection, item_id: str, error: str) -> int:
     conn.execute(
         "UPDATE item SET attempts = attempts + 1, error = ?, "
         "fail_stage = CASE WHEN stage = 'failed' THEN fail_stage ELSE stage END, "
-        "stage = 'failed', updated_at = ? WHERE id = ?",
+        f"stage = 'failed', updated_at = ?, {_RELEASE} WHERE id = ?",
         (error[:2000], _now(), item_id),
     )
     row = conn.execute("SELECT attempts FROM item WHERE id = ?", (item_id,)).fetchone()
@@ -198,7 +225,7 @@ def reject(conn: sqlite3.Connection, item_id: str, error: str) -> None:
     conn.execute(
         "UPDATE item SET attempts = 99, error = ?, "
         "fail_stage = CASE WHEN stage = 'failed' THEN fail_stage ELSE stage END, "
-        "stage = 'failed', updated_at = ? WHERE id = ?",
+        f"stage = 'failed', updated_at = ?, {_RELEASE} WHERE id = ?",
         (error[:2000], _now(), item_id),
     )
 
@@ -210,7 +237,7 @@ def defer(conn: sqlite3.Connection, item_id: str, error: str, retry_after: str) 
     hạn mức upload. Video không có gì sai -- chỉ là đến lượt quá muộn. Nếu
     tính đó là một lần HỎNG thì ba ngày quota đầy liên tiếp là item bị loại
     vĩnh viễn, trong khi nó hoàn toàn hợp lệ."""
-    conn.execute("UPDATE item SET error = ?, retry_after = ?, updated_at = ? WHERE id = ?",
+    conn.execute(f"UPDATE item SET error = ?, retry_after = ?, updated_at = ?, {_RELEASE} WHERE id = ?",
                  (error[:2000], retry_after, _now(), item_id))
 
 
@@ -225,24 +252,65 @@ def requeue_failed(conn: sqlite3.Connection, max_attempts: int = 3) -> list[str]
     for r in rows:
         back = r["fail_stage"] or ("assembled" if r["video_path"]
                                    else "spoken" if r["wav_path"] else "pending")
-        conn.execute("UPDATE item SET stage = ?, fail_stage = NULL, updated_at = ? "
+        conn.execute(f"UPDATE item SET stage = ?, fail_stage = NULL, updated_at = ?, {_RELEASE} "
                      "WHERE id = ?", (back, _now(), r["id"]))
     return [r["slug"] for r in rows]
 
 
 def next_batch(conn: sqlite3.Connection, stage: str, limit: int = 10,
-               channel: str | None = None, max_attempts: int = 3) -> list[sqlite3.Row]:
+               channel: str | None = None, max_attempts: int = 3,
+               engine: str | None = None) -> list[sqlite3.Row]:
     """Lấy lô việc kế tiếp, cũ nhất trước (theo publish_at).
 
     Bỏ qua item đã thử quá max_attempts -- một kịch bản hỏng không được
     phép chặn hàng đợi mãi mãi. Sắp theo publish_at để việc sắp tới hạn
     được làm trước, không phải theo thứ tự ngẫu nhiên của bảng."""
-    sql = ("SELECT * FROM item WHERE stage = ? AND attempts < ?"
-           " AND (retry_after IS NULL OR retry_after <= ?)"
-           + (" AND channel = ?" if channel else "")
-           + " ORDER BY publish_at ASC LIMIT ?")
-    args = [stage, max_attempts, _now()] + ([channel] if channel else []) + [limit]
-    return list(conn.execute(sql, args))
+    where, args = _ready(stage, max_attempts, _now(), channel, engine)
+    return list(conn.execute(f"SELECT * FROM item WHERE {where} ORDER BY publish_at ASC LIMIT ?", args + [limit]))
+
+
+def _ready(stage: str, max_attempts: int, now: str, channel: str | None,
+           engine: str | None) -> tuple[str, list]:
+    """Điều kiện "hàng sẵn sàng làm": đúng chặng, chưa quá số lần thử, hết hoãn,
+    không ai đang giữ. engine=None = mọi engine (publish_batch đăng cả S-tier)."""
+    where = ("stage = ? AND attempts < ? AND (retry_after IS NULL OR retry_after <= ?)"
+             " AND (lease_until IS NULL OR lease_until <= ?)")
+    args = [stage, max_attempts, now, now]
+    if channel:
+        where += " AND channel = ?"
+        args.append(channel)
+    if engine:
+        where += " AND COALESCE(engine, 'assemble') = ?"
+        args.append(engine)
+    return where, args
+
+
+def claim(conn: sqlite3.Connection, stage: str, worker: str, *, channel: str | None = None,
+          engine: str | None = None, max_attempts: int = 3, now: datetime | None = None) -> sqlite3.Row | None:
+    """Giành MỘT hàng sẵn sàng ở `stage` cho `worker` trong một transaction ghi.
+
+    Trước đây next_batch không giành gì: hai worker TTS cùng nhận một lô, làm hai
+    lần, lần ghi sau thắng. Mọi cách kết thúc hàng (mark, bump_attempt, reject,
+    defer, requeue_failed) đều thả lease."""
+    t = now or datetime.now(timezone.utc)
+    stamp = t.strftime("%Y-%m-%dT%H:%M:%SZ")
+    until = (t + CLAIM_LEASE).strftime("%Y-%m-%dT%H:%M:%SZ")
+    where, args = _ready(stage, max_attempts, stamp, channel, engine)
+    conn.execute("BEGIN IMMEDIATE")
+    try:
+        row = conn.execute(f"SELECT id FROM item WHERE {where} ORDER BY publish_at ASC LIMIT 1", args).fetchone()
+        if row is not None:
+            conn.execute("UPDATE item SET claimed_by = ?, lease_until = ? WHERE id = ?", (worker, until, row["id"]))
+    except BaseException:
+        conn.execute("ROLLBACK")
+        raise
+    conn.execute("COMMIT")
+    return None if row is None else conn.execute("SELECT * FROM item WHERE id = ?", (row["id"],)).fetchone()
+
+
+def release(conn: sqlite3.Connection, item_id: str, worker: str) -> None:
+    """Thả hàng mà không đổi chặng (worker dừng giữa chừng một cách có kiểm soát)."""
+    conn.execute(f"UPDATE item SET {_RELEASE} WHERE id = ? AND claimed_by = ?", (item_id, worker))
 
 
 def deferred(conn: sqlite3.Connection, channel: str | None = None) -> list[sqlite3.Row]:

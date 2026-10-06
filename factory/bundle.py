@@ -48,6 +48,13 @@ SHORT_MAX_WORDS = 140   # hồ sơ S-tier ~35 giây vẫn nằm trong khung Shor
 
 _ILLEGAL_TITLE = re.compile(r"[<>]")
 
+# Cách dựng video. assemble = short thường (TTS + B-roll, factory/assemble.py);
+# casefile = hồ sơ S-tier (motion/stier, HyperFrames); casewide = video dài 16:9
+# (motion/long). Hai engine sau dựng từ file spec riêng, không cần broll_queries.
+# Thêm 05/10/2026 (đề xuất 2 của audit): trước đó S-tier lách validate bằng
+# broll_queries=["hyperframes-casefile"], còn video dài không có Bundle nào.
+ENGINES = ("assemble", "casefile", "casewide")
+
 
 class BundleInvalid(ValueError):
     """Bundle không đủ điều kiện đưa vào sản xuất.
@@ -74,6 +81,9 @@ class Bundle:
     bgm: str                  # tên file trong bgm/, hoặc "" nếu không nhạc nền
     broll_queries: list[str]  # từ khoá tìm B-roll, tiếng Anh, theo thứ tự cảnh
     source_note: str = ""     # nguồn/căn cứ -- để truy vết, không lên video
+    # {"engine": ..., "spec": "<đường dẫn spec>"}; rỗng = assemble. Trường TUỲ CHỌN,
+    # schema_version vẫn là 1: bundle cũ không có khoá này vẫn đọc được.
+    render: dict = field(default_factory=dict)
     schema_version: int = SCHEMA_VERSION
     created_at: str = field(default_factory=lambda: datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"))
 
@@ -90,6 +100,10 @@ class Bundle:
         return hashlib.sha256(f"{self.channel}|{self.kind}|{self.slug}".encode("utf-8")).hexdigest()[:16]
 
     @property
+    def engine(self) -> str:
+        return self.render.get("engine", "assemble")
+
+    @property
     def word_count(self) -> int:
         return len(self.script.split())
 
@@ -102,8 +116,13 @@ class Bundle:
         phải kiểm tra cho có."""
         err = []
 
-        if self.channel not in ("FS", "BUD", "CL"):
+        from factory.channels import CHANNELS
+        if self.channel not in CHANNELS:
             err.append(f"channel lạ: {self.channel!r}")
+        if self.engine not in ENGINES:
+            err.append(f"render.engine lạ: {self.engine!r} (có: {', '.join(ENGINES)})")
+        elif self.engine != "assemble" and not str(self.render.get("spec", "")).strip():
+            err.append(f"render.engine={self.engine} cần render.spec (file spec để dựng)")
         if self.kind not in ("short", "long"):
             err.append(f"kind lạ: {self.kind!r}")
         if not self.slug or not re.fullmatch(r"[A-Za-z0-9_-]{3,80}", self.slug):
@@ -146,7 +165,7 @@ class Bundle:
 
         if not self.voice.strip():
             err.append("voice rỗng -- pha sản xuất không có cách nào tự chọn giọng")
-        if not self.broll_queries:
+        if self.engine == "assemble" and not self.broll_queries:
             err.append("broll_queries rỗng -- không có gì để dựng hình")
         if any(not q.strip() for q in self.broll_queries):
             err.append("có broll_query rỗng")

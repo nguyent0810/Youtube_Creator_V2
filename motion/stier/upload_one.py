@@ -9,8 +9,10 @@ VÌ SAO CÓ FILE NÀY (04/10/2026): ngày 30/09 kênh CL nhận 61 video trong m
 thường là trong ngày phát sóng -- không bao giờ đổ cả lô lên kênh.
 
 - Slug trong store: "cl-hs-<slug>", giống enqueue.py (không upload trùng nếu đã có video_id).
-- Chống trùng tiêu đề với toàn bộ video trên kênh (publish_bundle known_titles + novelty).
+- Chống trùng tiêu đề với toàn bộ video trên kênh (Channel + channel_titles + novelty).
 - Không bao giờ public ngay.
+- Upload đi qua factory/channel.py: luật 3 giờ/lần của CL áp cho MỌI đường đăng
+  (cả publish_batch), sổ upload_log thay cho output/stier/uploads.json.
 """
 from __future__ import annotations
 
@@ -24,12 +26,11 @@ sys.path.insert(0, str(ROOT))
 
 from factory import channels, publish, store  # noqa: E402
 from factory.bundle import Bundle  # noqa: E402
+from factory.channel import Channel, PacingHold, Upload  # noqa: E402
 from factory.lines import novelty  # noqa: E402
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from enqueue import FOOT, OUT, SPECS  # noqa: E402
-
-LOG = OUT / "uploads.json"
 
 
 def main():
@@ -60,7 +61,8 @@ def main():
                     + FOOT.split("\n\n")[0].replace("dưới đây", "trên") + "\n\n" + tags)
         b = Bundle(channel="CL", kind="short", slug=slug, script=" ".join(spec["lines"]), title=spec["title"][:100],
                    description=desc[:5000], tags=spec.get("tags", [])[:12], thumbnail_text=spec["title"][:60],
-                   publish_at=when, voice="Anh Khôi", bgm="", broll_queries=["hyperframes-casefile"],
+                   publish_at=when, voice="Anh Khôi", bgm="", broll_queries=[],
+                   render={"engine": "casefile", "spec": f"data/stier/specs/{s}.json"},
                    source_note="; ".join(spec.get("sources", [])))
         b.validate()
         print(f"{vn} VN ({when})  {slug}  {spec['title']}")
@@ -74,14 +76,14 @@ def main():
         store.mark(conn, b.id, "assembled", video_path=str(fin))
         creds = json.loads(channels.creds_path("CL").read_text(encoding="utf-8"))
         tok = publish.access_token(creds)
-        titles = publish.channel_titles(publish.uploads_playlist_id(tok), tok)
-        res = publish.publish_bundle(b, fin, creds, token=tok, known_titles=titles)
+        chan = Channel.open("CL", conn, channel_titles=publish.channel_titles(publish.uploads_playlist_id(tok), tok))
+        try:
+            res = chan.upload(Upload(slug=slug, video=fin, title=b.title, description=b.description,
+                                     tags=tuple(b.tags), kind="short", publish_at=when))
+        except PacingHold as exc:       # tiến trình khác vừa giành slot
+            raise SystemExit(f"CHƯA TỚI LƯỢT: {exc}")
         store.mark(conn, b.id, "published", video_id=res.video_id)
-    log = json.loads(LOG.read_text(encoding="utf-8")) if LOG.exists() else []
-    log.append({"slug": s, "video_id": res.video_id, "publish_at": when, "uploaded": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
-                "title": spec["title"]})
-    LOG.write_text(json.dumps(log, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"OK {res.url}  hẹn {res.scheduled_at}")
+    print(f"OK {res.url}  hẹn {res.publish_at}")
 
 
 if __name__ == "__main__":

@@ -28,9 +28,10 @@ def parse(md: str):
             continue
         if not cur or not s or s == "---" or s.startswith("#"):
             continue
-        diy = "**[DIỄN Ý]**" in s
+        # Nhãn có hoặc không có ** (ripper ch12 ghi "[DIỄN Ý]" trần -> lọt vào lời đọc, TTS đọc thành tiếng).
+        diy = bool(re.search(r"\**\[DIỄN Ý\]\**", s))
         tr = "[TRÍCH DỊCH]" in s            # văn bản thật dịch sang tiếng Việt (nhãn TRÍCH DỊCH trên cảnh quote)
-        s = s.replace("**[DIỄN Ý]**", "").replace("[TRÍCH DỊCH]", "").strip()
+        s = re.sub(r"\**\[DIỄN Ý\]\**", "", s).replace("[TRÍCH DỊCH]", "").strip()
         pause = s.endswith("‖")
         s = s.rstrip("‖").strip()
         parts = [p.strip() for p in s.split("»")]

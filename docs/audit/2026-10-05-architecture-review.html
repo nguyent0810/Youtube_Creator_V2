@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Architecture review — Youtube_Creator_V2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module">
+      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+      mermaid.initialize({ startOnLoad: true, theme: "neutral", securityLevel: "loose" });
+    </script>
+    <style>
+      .seam { stroke-dasharray: 4 4; }
+      .leak { stroke: #dc2626; }
+      .deep { background: linear-gradient(135deg, #0f172a, #1e293b); }
+      .mermaid { display: flex; justify-content: center; }
+      pre.mermaid { background: transparent; overflow-x: auto; }
+      pre.mermaid svg { max-width: 100%; height: auto; }
+      .font-mono, code { overflow-wrap: anywhere; }
+      body { overflow-x: hidden; }
+    </style>
+  </head>
+  <body class="bg-stone-50 text-slate-900 font-sans">
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 py-12 space-y-14">
+
+      <!-- HEADER -->
+      <header class="space-y-4">
+        <p class="text-xs uppercase tracking-wider text-slate-500">nguyent0810/Youtube_Creator_V2 · main @ eb34350 · 05/10/2026 · quy trình /improve-codebase-architecture (mattpocock/skills)</p>
+        <h1 class="font-serif text-4xl">Đã đủ để build video trending và scale chưa?</h1>
+        <div class="flex flex-wrap gap-4 text-xs text-slate-600">
+          <span class="flex items-center gap-2"><span class="inline-block w-5 h-4 border-2 border-slate-500 bg-white"></span>module</span>
+          <span class="flex items-center gap-2"><svg width="28" height="8"><line x1="0" y1="4" x2="28" y2="4" stroke="#475569" stroke-width="2" class="seam"/></svg>seam</span>
+          <span class="flex items-center gap-2"><svg width="28" height="8"><line x1="0" y1="4" x2="28" y2="4" stroke-width="2" class="leak"/></svg>leak / bypass</span>
+          <span class="flex items-center gap-2"><span class="inline-block w-5 h-4 deep"></span>deep module</span>
+        </div>
+      </header>
+
+      <!-- VERDICT -->
+      <section id="verdict" class="space-y-6">
+        <div class="rounded-xl border-2 border-slate-900 bg-white p-6 space-y-3">
+          <p class="text-xs uppercase tracking-wider text-slate-500">Kết luận</p>
+          <p class="font-serif text-2xl leading-snug"><span class="text-red-700">Chưa.</span> Hệ thống sản xuất video rất tốt và còn dư công suất. Nhưng nó <b>chưa biết người xem đang muốn gì</b>, <b>chưa học được từ số liệu</b>, và <b>đầu ra hàng loạt đang đi đúng vào vùng YouTube phạt</b>.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-3 gap-4">
+          <div class="rounded-lg border border-slate-200 bg-white p-5 space-y-2">
+            <div class="flex items-center justify-between"><span class="text-xs uppercase tracking-wider text-slate-500">Sản xuất</span><span class="text-xs font-semibold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">Tốt</span></div>
+            <ul class="text-sm space-y-1 text-slate-700">
+              <li>~35 giây/short từ đầu đến cuối</li>
+              <li>Bundle + SQLite, tách khỏi LLM</li>
+              <li>Long và S-tier có chất lượng hình ảnh thật</li>
+            </ul>
+          </div>
+          <div class="rounded-lg border border-slate-200 bg-white p-5 space-y-2">
+            <div class="flex items-center justify-between"><span class="text-xs uppercase tracking-wider text-slate-500">Trending</span><span class="text-xs font-semibold px-2 py-0.5 rounded bg-red-100 text-red-800">Thiếu</span></div>
+            <ul class="text-sm space-y-1 text-slate-700">
+              <li>Chủ đề = "dòng chưa dùng tiếp theo"</li>
+              <li>Analytics chỉ ra báo cáo, không quay lại hệ thống</li>
+              <li>Short không có thumbnail riêng, tag chung chung</li>
+            </ul>
+          </div>
+          <div class="rounded-lg border border-slate-200 bg-white p-5 space-y-2">
+            <div class="flex items-center justify-between"><span class="text-xs uppercase tracking-wider text-slate-500">Scale</span><span class="text-xs font-semibold px-2 py-0.5 rounded bg-amber-100 text-amber-800">Một phần</span></div>
+            <ul class="text-sm space-y-1 text-slate-700">
+              <li>Máy chạy được >1.000 short/ngày</li>
+              <li>Bị chặn bởi phân phối, người viết, 1 máy Windows</li>
+              <li>3 hệ trạng thái, 4 đường upload</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rounded-lg border border-slate-200 bg-white p-5">
+          <p class="text-xs uppercase tracking-wider text-slate-500 mb-3">Số liệu thật trong repo</p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm">
+            <div><div class="font-serif text-2xl">61</div><div class="text-slate-600">video CL trong 1 ngày (30/09), 1–2 ngày sau Shorts về ~0</div></div>
+            <div><div class="font-serif text-2xl">8,4K</div><div class="text-slate-600">view, video Long tốt nhất (Hội Tam Hoàng)</div></div>
+            <div><div class="font-serif text-2xl">~1.000</div><div class="text-slate-600">view, mức phần lớn Shorts dừng lại</div></div>
+            <div><div class="font-serif text-2xl">43–49%</div><div class="text-slate-600">AVP của format Điều luật / Vụ án</div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CANDIDATES -->
+      <section id="candidates" class="space-y-10">
+        <h2 class="font-serif text-3xl">Deepening candidates</h2>
+
+        <!-- 1 -->
+        <article id="c1" class="rounded-xl border border-slate-200 bg-white p-6 space-y-4">
+          <h3 class="font-serif text-2xl">1 · Một Channel module sâu cho YouTube</h3>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-semibold">Strong</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700">ports &amp; adapters</span>
+          </div>
+          <p class="font-mono text-sm text-slate-600">factory/publish.py · scripts/{publish_batch, reschedule, unschedule, repair_titles, schedule_audit, verify_published, analytics_report}.py · motion/stier/{upload_one, drip, monitor, week_2026-10-05}.py · motion/long/publish_long.py</p>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="rounded-lg border border-slate-200 p-3"><p class="text-xs uppercase tracking-wider text-slate-500 mb-2">Before</p>
+<pre class="mermaid">
+flowchart LR
+  PB[publish_batch] --> API["publish._api"]
+  U1[upload_one] --> API
+  DR[drip] --> U1
+  PL[publish_long] --> API
+  PL -.raw HTTP.-> YT[(YouTube)]
+  MO[monitor] -.raw HTTP.-> YT
+  WK[week_2026-10-05] -.raw HTTP.-> YT
+  AR[analytics_report] -.raw HTTP.-> YT
+  API --> YT
+  classDef leak stroke:#dc2626,stroke-width:2px;
+  class PL,MO,WK,AR leak
+</pre></div>
+            <div class="rounded-lg border border-slate-200 p-3"><p class="text-xs uppercase tracking-wider text-slate-500 mb-2">After</p>
+<pre class="mermaid">
+flowchart LR
+  PB[publish_batch] --> CH
+  ST[stier] --> CH
+  LG[long] --> CH
+  AN[analytics] --> CH
+  CH["Channel<br/>upload · reschedule · stats<br/>pacing · idempotency"]
+  CH -.seam.-> H[HTTP adapter]
+  CH -.seam.-> F[in-memory adapter]
+  H --> YT[(YouTube)]
+  classDef deep fill:#0f172a,color:#fff,stroke:#0f172a;
+  class CH deep
+</pre></div>
+          </div>
+          <p><b>Problem:</b> 11 file gọi YouTube, 14 lần gọi hàm private <code>_api</code>, 4 file tự gọi HTTP; quy tắc giãn nhịp đăng nằm trong <code>drip.py</code> nên <code>publish_batch</code> vẫn đẩy được 500 video một lô, đúng kiểu sự cố 61 video ngày 30/09.</p>
+          <p><b>Solution:</b> gom vào một Channel module giữ luôn sổ chống trùng, quy tắc giãn nhịp và category theo từng item.</p>
+          <ul class="text-sm list-disc pl-5 text-slate-700">
+            <li>leverage: một interface, 11 call site</li>
+            <li>locality: luật pacing chỉ ở một chỗ</li>
+            <li>Hai adapter thật: HTTP và in-memory</li>
+            <li>Đường upload lần đầu có test</li>
+            <li>Bỏ categoryId "22" cứng</li>
+          </ul>
+        </article>
+
+        <!-- 2 -->
+        <article id="c2" class="rounded-xl border border-slate-200 bg-white p-6 space-y-4">
+          <h3 class="font-serif text-2xl">2 · Bundle thành hợp đồng thật cho mọi format</h3>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-semibold">Strong</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700">local-substitutable</span>
+          </div>
+          <p class="font-mono text-sm text-slate-600">factory/bundle.py · factory/store.py · motion/stier/{enqueue, upload_one, drip}.py · queue2.sh · pending.sh · motion/long/*</p>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="rounded-lg border border-slate-200 p-3"><p class="text-xs uppercase tracking-wider text-slate-500 mb-2">Before</p>
+<pre class="mermaid">
+flowchart TB
+  S1[Short thường] --> DB[(state.sqlite)]
+  S2[S-tier] --> LK[/"LOCK · FAILED · STOP2<br/>uploads.json"/]
+  S2 -.chỉ lúc upload.-> DB
+  S3[Long] --> RJ[/"result.json"/]
+  S3 --> VL[/"variety ledger.json"/]
+  classDef leak stroke:#dc2626,stroke-width:2px;
+  class S2,S3 leak
+</pre></div>
+            <div class="rounded-lg border border-slate-200 p-3"><p class="text-xs uppercase tracking-wider text-slate-500 mb-2">After</p>
+<pre class="mermaid">
+flowchart TB
+  S1[Short thường] --> B
+  S2[S-tier] --> B
+  S3[Long] --> B
+  B["Bundle<br/>render: assemble | casefile | casewide"] --> DB["Store<br/>pending → spoken → rendered → published"]
+  classDef deep fill:#0f172a,color:#fff,stroke:#0f172a;
+  class DB deep
+</pre></div>
+          </div>
+          <p><b>Problem:</b> README nói Bundle là hợp đồng giữa hai pha, nhưng S-tier chỉ tạo Bundle lúc upload (lách <code>validate</code> bằng <code>broll_queries=["hyperframes-casefile"]</code>) và Long không bao giờ tạo Bundle.</p>
+          <p><b>Solution:</b> thêm trường <code>render</code> vào Bundle để Store theo dõi mọi stage của cả ba format; thay <code>queue2.sh</code>/<code>pending.sh</code> bằng <code>store.next_batch</code>.</p>
+          <ul class="text-sm list-disc pl-5 text-slate-700">
+            <li>locality: một hệ trạng thái thay vì ba</li>
+            <li>Analytics nối được với mọi video</li>
+            <li>Chạy nhiều máy cần claim/lease một chỗ</li>
+            <li>Test bằng SQLite trong temp dir</li>
+          </ul>
+        </article>
+
+        <!-- 3 -->
+        <article id="c3" class="rounded-xl border border-slate-200 bg-white p-6 space-y-4">
+          <h3 class="font-serif text-2xl">3 · Một module render HyperFrames dùng chung</h3>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-semibold">Strong</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700">local-substitutable</span>
+          </div>
+          <p class="font-mono text-sm text-slate-600">motion/stier/build.py · motion/long/build_long.py · motion/stier/sfx.py · motion/long/sfx_long.py · factory/assemble.py</p>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="rounded-lg border border-slate-200 p-3"><p class="text-xs uppercase tracking-wider text-slate-500 mb-2">Before</p>
+<pre class="mermaid">
+flowchart LR
+  BL[build_long] -. "sys.path + sửa globals<br/>BLD.ANCHORS |= ..." .-> BS[stier/build]
+  BL --> F2[fetch_img: CC BY ok]
+  BS --> F1[fetch_img: chỉ PD]
+  BL --> N2["npx hyperframes render"]
+  BS --> N1["npx hyperframes render"]
+  AS[assemble] -. "monkeypatch 5 attr" .-> VE[video-editor repo]
+  classDef leak stroke:#dc2626,stroke-width:2px;
+  class BL,AS leak
+</pre></div>
+            <div class="rounded-lg border border-slate-200 p-3"><p class="text-xs uppercase tracking-wider text-slate-500 mb-2">After</p>
+<pre class="mermaid">
+flowchart LR
+  ST[stier] --> R
+  LG[long] --> R
+  SH[short] --> R
+  R["Renderer<br/>render(case, layout, out)<br/>anchor registry · license policy"]
+  R --> HF[hyperframes + ffmpeg]
+  classDef deep fill:#0f172a,color:#fff,stroke:#0f172a;
+  class R deep
+</pre></div>
+          </div>
+          <p><b>Problem:</b> 3 đường render không chung interface; <code>build_long</code> import S-tier qua <code>sys.path</code> rồi sửa globals của nó; hai bản <code>fetch_img</code> với luật license khác nhau.</p>
+          <p><b>Solution:</b> một <code>Renderer</code> nhận <code>layout=short|wide</code>, sở hữu anchor registry và một Commons fetcher nhận license policy làm tham số.</p>
+          <ul class="text-sm list-disc pl-5 text-slate-700">
+            <li>leverage: thêm format mới không copy</li>
+            <li>locality: luật license ở một chỗ</li>
+            <li>Bỏ 49 lần sys.path.insert dần</li>
+            <li>Variety engine phủ cả Shorts</li>
+          </ul>
+        </article>
+
+        <!-- 4 -->
+        <article id="c4" class="rounded-xl border border-slate-200 bg-white p-6 space-y-4">
+          <h3 class="font-serif text-2xl">4 · Gom TTS vào một Voice module</h3>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-semibold">Strong</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700">ports &amp; adapters</span>
+          </div>
+          <p class="font-mono text-sm text-slate-600">factory/speak.py · motion/stier/build.py:55 · motion/long/build_long.py:105-235 · motion/hf_align.py</p>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="rounded-lg border border-slate-200 p-3"><p class="text-xs uppercase tracking-wider text-slate-500 mb-2">Before · cross-section</p>
+              <div class="space-y-1 text-xs uppercase tracking-wider">
+                <div class="h-10 border-l-4 border-slate-400 bg-slate-50 px-3 flex items-center">speak.py · infer từng câu · strip_emphasis</div>
+                <div class="h-10 border-l-4 border-red-500 bg-red-50 px-3 flex items-center">stier/build · infer từng câu · gọi _load_engine private</div>
+                <div class="h-10 border-l-4 border-red-500 bg-red-50 px-3 flex items-center">build_long · cache · best-of-N · say-map · giọng radio</div>
+                <div class="h-10 border-l-4 border-slate-400 bg-slate-50 px-3 flex items-center">hf_align · timing từng từ (chỉ motion)</div>
+              </div>
+            </div>
+            <div class="rounded-lg border border-slate-200 p-3"><p class="text-xs uppercase tracking-wider text-slate-500 mb-2">After</p>
+              <div class="deep text-white rounded-lg p-4 h-full flex flex-col justify-center space-y-2">
+                <div class="text-xs uppercase tracking-wider text-slate-300">Voice</div>
+                <div class="font-mono text-sm">say(lines, voice, say_map, takes) → Timing</div>
+                <div class="text-xs text-slate-400">bên trong: cache · best-of-N · strip_emphasis · word timing · engine adapter</div>
+              </div>
+            </div>
+          </div>
+          <p><b>Problem:</b> 3 vòng "đọc từng câu, nối, ghi timing"; chỉ một vòng gọi <code>strip_emphasis</code>; best-of-N và cache chỉ có ở Long.</p>
+          <p><b>Solution:</b> một Voice module trả timing cấp câu và cấp từ; engine thành adapter, test dùng engine giả trả khoảng lặng.</p>
+          <ul class="text-sm list-disc pl-5 text-slate-700">
+            <li>Shorts được best-of-N như Long</li>
+            <li>locality: lỗi phát âm sửa một chỗ</li>
+            <li>Test không cần nạp model</li>
+          </ul>
+        </article>
+
+        <!-- 5 -->
+        <article id="c5" class="rounded-xl border border-slate-200 bg-white p-6 space-y-4">
+          <h3 class="font-serif text-2xl">5 · Cổng chất lượng tại một seam</h3>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-semibold">Strong</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700">in-process</span>
+          </div>
+          <p class="font-mono text-sm text-slate-600">factory/{integrity, factcheck, claims, batchcheck, hooks, script_craft, script_signals}.py · factory/pillars/check.py · scripts/run_batch.py:46</p>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="rounded-lg border border-slate-200 p-3"><p class="text-xs uppercase tracking-wider text-slate-500 mb-2">Before</p>
+<pre class="mermaid">
+flowchart LR
+  RB[run_batch] --> IN[integrity]
+  ML[make_lich_month] --> FC[factcheck]
+  ML --> BC[batchcheck]
+  MO[make_lich_oct] -.bỏ qua.-> SB[save_bundle]
+  ST["S-tier: 94 spec"] -.bỏ qua.-> SB
+  LG["Long: 6 video"] -.bỏ qua.-> SB
+  HK["hooks.py<br/>không ai import"]
+  classDef leak stroke:#dc2626,stroke-width:2px;
+  class MO,ST,LG leak
+</pre></div>
+            <div class="rounded-lg border border-slate-200 p-3"><p class="text-xs uppercase tracking-wider text-slate-500 mb-2">After</p>
+<pre class="mermaid">
+flowchart LR
+  A[mọi đường sinh] --> G["gate(lines, channel, history)<br/>integrity · factcheck · claims<br/>batch · hook · novelty"]
+  G --> SB[save_bundle / enqueue]
+  classDef deep fill:#0f172a,color:#fff,stroke:#0f172a;
+  class G deep
+</pre></div>
+          </div>
+          <p><b>Problem:</b> <code>integrity.py</code> tự nhận là "một điểm cho mọi kênh, mọi dòng" nhưng chỉ <code>run_batch.py</code> gọi; motion/ không import cổng nào; <code>hooks.py</code> trượt deletion test (xoá đi không ai biết).</p>
+          <p><b>Solution:</b> một hàm <code>gate</code> thuần, gọi bên trong <code>save_bundle</code>/<code>enqueue</code>, nên không đường nào lách được.</p>
+          <ul class="text-sm list-disc pl-5 text-slate-700">
+            <li>locality: một chỗ quyết định đạt/trượt</li>
+            <li>S-tier và Long được kiểm như Shorts</li>
+            <li>Chỗ cắm luật hook dựa trên số liệu</li>
+          </ul>
+        </article>
+
+        <!-- 6 -->
+        <article id="c6" class="rounded-xl border border-slate-200 bg-white p-6 space-y-4">
+          <h3 class="font-serif text-2xl">6 · Schedule module, và nội dung đang biến thành code</h3>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-semibold">Worth exploring</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700">in-process</span>
+          </div>
+          <p class="font-mono text-sm text-slate-600">data/long/{golden,kowloon}/gen_scenes*.py · scripts/make_lich_oct.py · motion/stier/week_2026-10-05.py · drip_2026-10.json · enqueue.SLOTS_VN · lines/cl.py:21 · pillars/topics.py:26 · status_report.py:29</p>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="rounded-lg border border-slate-200 p-3"><p class="text-xs uppercase tracking-wider text-slate-500 mb-2">Before · mass</p>
+              <div class="flex items-end gap-6 h-48">
+                <div class="flex flex-col items-center gap-1"><div class="w-14 h-32 border-2 border-red-500 bg-red-50"></div><span class="text-xs uppercase tracking-wider">bảng slot ×4</span></div>
+                <div class="flex flex-col items-center gap-1"><div class="w-14 h-40 border-2 border-red-500 bg-red-50"></div><span class="text-xs uppercase tracking-wider">+7h ×11 file</span></div>
+                <div class="flex flex-col items-center gap-1"><div class="w-14 h-44 border-2 border-red-500 bg-red-50"></div><span class="text-xs uppercase tracking-wider">gen_scenes 1.092 dòng</span></div>
+              </div>
+            </div>
+            <div class="rounded-lg border border-slate-200 p-3"><p class="text-xs uppercase tracking-wider text-slate-500 mb-2">After</p>
+              <div class="flex items-end gap-6 h-48">
+                <div class="flex flex-col items-center gap-1"><div class="w-20 h-12 border-2 border-slate-900 bg-white"></div><div class="w-20 h-28 deep"></div><span class="text-xs uppercase tracking-wider">schedule</span></div>
+                <div class="flex flex-col items-center gap-1"><div class="w-20 h-12 border-2 border-slate-900 bg-white"></div><div class="w-20 h-28 deep"></div><span class="text-xs uppercase tracking-wider">scenes DSL</span></div>
+              </div>
+            </div>
+          </div>
+          <p><b>Problem:</b> script có ngày cứng (<code>make_lich_oct</code>, <code>week_2026-10-05</code>) và mỗi video dài có generator riêng chép từ video trước.</p>
+          <p><b>Solution:</b> một schedule module (slot theo kênh/dòng, đổi giờ VN↔UTC, kế hoạch giãn nhịp) đọc từ file dữ liệu; gom helper cảnh vào <code>motion/long/scenes.py</code>.</p>
+          <ul class="text-sm list-disc pl-5 text-slate-700">
+            <li>Thêm tuần mới không cần file .py</li>
+            <li>locality: giờ đăng ở một chỗ</li>
+            <li>Thư mục video chỉ còn dữ liệu</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- CAPABILITY GAPS -->
+      <section id="gaps" class="space-y-4">
+        <h2 class="font-serif text-3xl">Khoảng trống năng lực (không phải deepening)</h2>
+        <p class="text-sm text-slate-600">Đây là những thứ chưa tồn tại, nên refactor không giải quyết được. Chúng mới là phần quyết định "trending".</p>
+        <div class="grid sm:grid-cols-2 gap-4 text-sm">
+          <div class="rounded-lg border border-red-200 bg-white p-4"><b>Không đọc nhu cầu.</b> Không gọi <code>mostPopular regionCode=VN</code>, video đối thủ, Trends hay autocomplete. Chủ đề = dòng chưa dùng tiếp theo trong bảng.</div>
+          <div class="rounded-lg border border-red-200 bg-white p-4"><b>Không có vòng phản hồi.</b> <code>analytics_report.py</code> ghi số liệu vào thư mục gitignored; không module nào trong <code>factory/</code> đọc lại để đổi chủ đề, slot, hook hay tiêu đề.</div>
+          <div class="rounded-lg border border-amber-200 bg-white p-4"><b>Đóng gói Shorts yếu.</b> Chữ thumbnail trùng tiêu đề; 4 tag cố định không dấu; 61 bundle FS có <code>factory/pillars/tables.py</code> trong mô tả công khai.</div>
+          <div class="rounded-lg border border-amber-200 bg-white p-4"><b>Mẫu lặp đúng kiểu bị phạt.</b> 94/94 bundle Lịch dùng chung <code>asian_drums.mp3</code>; 5 dòng BUD dùng chung 14 query B-roll. Chính tài liệu nghiên cứu trong repo trích spam policy mô tả đúng mẫu này.</div>
+          <div class="rounded-lg border border-amber-200 bg-white p-4"><b>Người viết là nút cổ chai.</b> Pack CL/BUD chỉ 7 kịch bản/dòng (~1 tuần); S-tier và Long viết tay trong chat.</div>
+          <div class="rounded-lg border border-amber-200 bg-white p-4"><b>Một máy, chạy tay.</b> Đường dẫn <code>C:\Tools\Youtuber</code> cứng; không lịch chạy <code>run_pipeline</code>; không cảnh báo; 7/78 test hỏng vì thiếu <code>vnlunar</code>, không CI.</div>
+        </div>
+      </section>
+
+      <!-- TOP RECOMMENDATION -->
+      <section id="top-recommendation">
+        <div class="deep text-white rounded-xl p-8 space-y-3">
+          <p class="text-xs uppercase tracking-wider text-slate-400">Top recommendation</p>
+          <h2 class="font-serif text-3xl"><a href="#c1" class="underline decoration-slate-500 underline-offset-4">1 · Một Channel module sâu cho YouTube</a></h2>
+          <p class="text-slate-200">Đây là seam nơi ba thứ quyết định scale gặp nhau: luật giãn nhịp (thứ đã làm kênh CL rơi feed), sổ chống trùng, và <code>stats</code>, đầu vào của vòng phản hồi analytics. Làm module này trước thì candidate 2 và vòng phản hồi trending đều có chỗ để cắm vào.</p>
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>

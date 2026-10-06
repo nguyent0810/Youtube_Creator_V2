@@ -21,6 +21,7 @@ from factory.batchcheck import report_batch  # noqa: E402
 from factory.bundle import Bundle, make_slug  # noqa: E402
 from factory.pillars import check as C  # noqa: E402
 from factory import channels  # noqa: E402
+from factory.rotation import plan_day  # noqa: E402
 
 CH = channels.pick()
 P = channels.lines(CH)
@@ -55,19 +56,16 @@ TAGS = getattr(P, "TAGS", TAGS)
 FICTION = getattr(P, "FICTION", set())
 history = P.load_history(store.BUNDLE_DIR)
 made, blocked = [], []
-done_slugs = {f.stem for f in (store.BUNDLE_DIR / CH).glob("*.json")}
-# Mỗi dòng đúng MỘT bài mỗi ngày: ngày nào dòng đó đã có bài thì bỏ qua
-# (chạy lại cùng dải ngày phải vô hại, không đẻ bài thứ hai).
-have = {(h["pillar"], h["publish_at"]) for h in history}
 kept = 0
 for n in range(DAYS):
     day = start + timedelta(days=n)
-    for pillar, (prefix, hhmm, feel) in P.PILLARS.items():
-        hh, mm = map(int, hhmm.split(":"))
-        slot = (datetime(day.year, day.month, day.day, hh, mm) - VN_UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
-        if (pillar, slot) in have:
-            kept += 1
-            continue
+    # Mỗi dòng đúng MỘT bài mỗi ngày: ngày nào dòng đó đã có bài thì bỏ qua
+    # (chạy lại cùng dải ngày phải vô hại, không đẻ bài thứ hai). Giờ đăng do
+    # thí nghiệm xoay giờ quyết (factory/rotation.py; tắt thì như cũ).
+    todo = plan_day(CH, P.PILLARS, history, day)
+    kept += len(P.PILLARS) - len(todo)
+    for pillar, hhmm in todo:
+        prefix = P.PILLARS[pillar][0]
         d, why = P.next_draft(pillar, history, day)
         if d is None:
             blocked += [f"{day}: {w}" for w in why]

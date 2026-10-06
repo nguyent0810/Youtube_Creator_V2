@@ -11,7 +11,6 @@ private và báo lại (YouTube không nhận publishAt trong quá khứ).
 """
 from __future__ import annotations
 
-import json
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -20,12 +19,13 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 from factory import channels, publish, store  # noqa: E402
+from factory.channel import Channel  # noqa: E402
 
 CH = channels.pick()
-tok = publish.access_token(json.loads(channels.creds_path(CH).read_text(encoding="utf-8")))
 now = datetime.now(timezone.utc)
 done, missed = 0, []
 with store.connect() as conn:
+    chan = Channel.open(CH, conn)
     rows = [dict(r) for r in conn.execute(
         "SELECT id, slug, video_id, publish_at FROM item WHERE channel=? AND error LIKE 'UNSCHEDULED%' "
         "ORDER BY publish_at", (CH,))]
@@ -36,11 +36,9 @@ with store.connect() as conn:
             missed.append(r["slug"])
             continue
         try:
-            publish._api(tok, "PUT", "videos", {"part": "status"}, {
-                "id": r["video_id"],
-                "status": {"privacyStatus": "private", "publishAt": r["publish_at"],
-                           "selfDeclaredMadeForKids": False, "embeddable": True,
-                           "publicStatsViewable": True, "license": "youtube"}})
+            # Channel đọc status hiện tại rồi chỉ đổi lịch (merge), từ chối
+            # video đã public -- không còn phải tự nhớ gửi lại embeddable/license.
+            chan.reschedule(r["video_id"], r["publish_at"])
         except publish.QuotaExceeded:
             print(f"HẾT QUOTA sau {done} video — chạy lại sau 14:00 VN để làm nốt {len(rows) - done - len(missed)}.")
             break

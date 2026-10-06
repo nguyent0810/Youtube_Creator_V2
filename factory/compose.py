@@ -34,9 +34,8 @@ from factory.vocab import SAO, TRUC
 NARROW_MAX = 3
 BROAD_MIN = 6
 
-# Số biến thể mở bài mỗi thế. Tháng 11 có 10 ngày cùng một thế mà chỉ 3
-# biến thể -> mở bài lặp 11/31 lần (35%). Nâng lên 6 để trải rộng hơn.
-_N_HOOKS = 6
+# Mỗi thế có 6 biến thể mở bài (tháng 11 có 10 ngày cùng một thế mà chỉ 3
+# biến thể -> mở bài lặp 11/31 lần). Chọn qua _pick.
 
 
 def the_cua_ngay(f: DayFacts) -> str:
@@ -64,12 +63,34 @@ def _liet_ke(items, limit: int = 4) -> str:
     return ", ".join(xs)
 
 
+def _pick(f: DayFacts, salt: str, xs: list[str]) -> str:
+    """Chọn một cách nói, tất định, cho MỘT danh sách.
+
+    Băm theo cặp (sao, trực) + tên danh sách, cộng `ordinal // 12`: cặp
+    (sao, trực) thường lặp sau 12 ngày, nên lần xuất hiện sau lệch lần trước
+    (không phụ thuộc may rủi của hàm băm), kể cả qua ranh giới tháng (`day //
+    12` thì về 0 mỗi đầu tháng). Không tuyệt đối: trực lặp một ngày ở mỗi tiết
+    khí và sao dịch ở ranh giới tháng âm, nên khoảng cách thật có lúc khác 12. Mỗi danh sách tự lấy chỉ số theo độ
+    dài của chính nó -- bản cũ lấy v % 6 rồi % 4 nên câu chốt 0 và 1 trúng
+    gấp đôi (đo 05/10/2026: "Hoàng đạo không có nghĩa..." 21/92 bài)."""
+    h = int(hashlib.sha256(f"{f.god_name}|{f.truc_name}|{salt}".encode("utf-8")).hexdigest(), 16)
+    return xs[(h + f.target.toordinal() // 12) % len(xs)]
+
+
 def _kieng(f: DayFacts) -> str:
     """Câu về phần kiêng. 17/30 ngày nguồn ghi 'Mọi việc khác' — nói thẳng
-    như vậy, không diễn giải thành 'ngày xấu'."""
+    như vậy, không diễn giải thành 'ngày xấu'. Câu này có mặt ở MỌI bài nên
+    xoay cách nói (bước 5: câu 'Ngoài danh mục ấy...' lặp 34/92 bài);
+    danh mục kiêng luôn lấy nguyên từ nguồn."""
     if f.truc_bad_for == ("Mọi việc khác",):
-        return "Ngoài danh mục ấy, lịch ghi gọn là mọi việc khác."
-    return f"Phần kiêng ghi rõ: {_liet_ke(f.truc_bad_for, 3)}."
+        return _pick(f, "kieng-khac", [
+            "Ngoài danh mục ấy, lịch ghi gọn là mọi việc khác.",
+            "Phần kiêng, lịch chỉ ghi gọn: mọi việc khác.",
+            "Còn lại, lịch gộp hết vào phần kiêng: mọi việc khác.",
+            "Việc nằm ngoài danh mục, lịch ghi kiêng: mọi việc khác."])
+    ds = _liet_ke(f.truc_bad_for, 3)
+    return _pick(f, "kieng", [f"Phần kiêng ghi rõ: {ds}.", f"Lịch ghi kiêng: {ds}.",
+                              f"Bên phần kiêng có: {ds}."])
 
 
 
@@ -108,7 +129,12 @@ def _cau_gio(f: DayFacts) -> str:
     # vì chúng gần như luôn là suy diễn. Ở đây "đầu tiên" lại đúng theo
     # nghĩa đen -- nguồn trả danh sách đã sắp theo thứ tự giờ trong ngày.
     dau = f.auspicious_hours.split(",")[0].strip()
-    return f"Giờ tốt đầu tiên trong ngày là giờ {dau}"
+    # Các cách nói không dài hơn bản gốc: dài hơn thì _fit bỏ câu giờ thường
+    # hơn (review bước 5: 249 so với 271 / 400 ngày) -- mà đây là ô người xem làm theo.
+    return _pick(f, "gio", [f"Giờ tốt đầu tiên trong ngày là giờ {dau}",
+                            f"Giờ tốt đầu tiên trong ngày: giờ {dau}",
+                            f"Giờ tốt mở đầu ngày mai là giờ {dau}",
+                            f"Giờ tốt đầu tiên là giờ {dau}"])
 
 
 def _cau_xung(f: DayFacts) -> str:
@@ -159,8 +185,8 @@ def _compose(f: DayFacts) -> tuple[str, str, str, str]:
     # hash KHÁC nhau, cộng offset vào vẫn có thể va cùng dư -- đã xảy ra
     # thật với 3/9 cặp. Băm theo cặp thì phần băm giống hệt nhau, nên offset
     # một mình quyết định, và lệch được ĐẢM BẢO cho tới 3 lần xuất hiện.
-    h = int(hashlib.sha256(f"{f.god_name}|{f.truc_name}".encode("utf-8")).hexdigest(), 16)
-    v = (h + f.target.day // 12) % _N_HOOKS
+    # Từ 05/10/2026 (bước 5): mỗi danh sách chọn riêng qua _pick, theo
+    # `ordinal // 12` thay cho `day // 12` (không reset đầu tháng).
 
     if the == "sao_mo_truc_siet":
         hooks = [
@@ -171,9 +197,11 @@ def _compose(f: DayFacts) -> tuple[str, str, str, str]:
             f"Cả ngày mai, lịch chỉ mở đầu danh mục bằng {dau}.",
             f"Ngày mai tú {f.mansion_name}, mà danh mục chỉ {_so(n)} việc.",
         ]
+        siet = _pick(f, "siet", ["Sao mở, trực siết", "Sao thì mở, trực thì siết",
+                                 "Sao mở, trực thì hẹp", "Một tầng mở, một tầng siết"])
         than = (f"Sao là {f.god_name}, thường được xếp vào nhóm {nhom}. "
                 f"Trực lại là {f.truc_name} — {truc.han}, nghĩa là {truc.gloss}. "
-                f"Sao mở, trực siết. "
+                f"{siet}. "
                 f"Danh mục nên làm: {viec}. "
                 f"{_kieng(f)}")
         chots = ["Hoàng đạo không có nghĩa là muốn làm gì cũng được.",
@@ -211,9 +239,13 @@ def _compose(f: DayFacts) -> tuple[str, str, str, str]:
             f"Việc lịch cho làm ngày mai chỉ vỏn vẹn {_so(n)}, đếm chưa hết một bàn tay.",
             f"Ngày mai tú {f.mansion_name}, mà trực thì cũng đóng nốt.",
         ]
+        dong = _pick(f, "dong", ["Hai tầng cùng một hướng, nên lịch siết khá chặt",
+                                 "Cả hai tầng cùng nghiêng về phía đóng",
+                                 "Sao và trực, không tầng nào nới tay",
+                                 "Hai tầng cùng siết, nên danh mục khá hẹp"])
         than = (f"Sao là {f.god_name}, thuộc nhóm {nhom}. "
                 f"Trực là {f.truc_name} — {truc.han}, nghĩa là {truc.gloss}. "
-                f"Hai tầng cùng một hướng, nên lịch siết khá chặt. "
+                f"{dong}. "
                 f"Danh mục nên làm chỉ còn: {viec}. "
                 f"{_kieng(f)} "
                 f"Nếu có việc đang định làm mà không nằm trong đó, lùi một hôm cũng được.")
@@ -245,7 +277,32 @@ def _compose(f: DayFacts) -> tuple[str, str, str, str]:
                  "Cả sao lẫn trực đều thuận, hiếm hơn ta tưởng."]
         tieu_de = f"Sao và trực cùng thuận — {f.god_name} gặp {f.truc_name}"
 
-    return hooks[v % len(hooks)], than, chots[v % len(chots)], tieu_de
+    return _pick(f, "hook", hooks), than, _pick(f, "chot", chots), tieu_de
+
+
+# Nhạc nền Lịch xoay theo ngày (bước 5): trước đó 92/92 bài cùng asian_drums.mp3.
+# KHÔNG dùng nhạc riêng của các dòng FS khác (giáp thinking_music, trụ
+# deliberate_thought, mệnh comfortable_mystery_4, dịch meditation_impromptu_02):
+# Lịch không được nghe như series khác. Hai file còn lại đã có trên máy sản xuất
+# (kênh BUD dùng), khác kênh nên không lẫn bản sắc.
+LICH_BGM = ("asian_drums.mp3", "meditation_impromptu_01.mp3", "meditation_impromptu_03.mp3")
+
+
+def lich_bgm(target, available) -> str:
+    """Nhạc nền cho ngày `target`, chỉ trong `available` (file có thật trên máy).
+
+    Chỉ số `ordinal + ordinal // 12`: bước 1 ngày dịch 1 (hoặc 2), bước 12 ngày
+    dịch 13. Pool 3 file (đủ, hoặc thiếu đến còn 3): hai ngày liền nhau và cặp
+    (sao, trực) lặp sau 12 ngày đều khác nhạc. Còn 2 file thì không thể có cả
+    hai (đổi mỗi ngày -> D và D+12 cùng chẵn lẻ): giữ "đổi mỗi ngày"."""
+    have = set(available)
+    pool = [t for t in LICH_BGM if t in have] or sorted(have)
+    if not pool:
+        raise ValueError("không có file nhạc nền nào cho Lịch")
+    o = target.toordinal()
+    if len(pool) == 2:
+        return pool[o % 2]
+    return pool[(o + o // 12) % len(pool)]
 
 
 _SO = {1: "một", 2: "hai", 3: "ba", 4: "bốn", 5: "năm",

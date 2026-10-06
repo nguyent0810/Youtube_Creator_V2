@@ -70,3 +70,19 @@ def check(script: str) -> list[Finding]:
 
 def blocking(script: str) -> list[Finding]:
     return [f for f in check(script) if f.blocking]
+
+
+def leftover_markup(text: str) -> list[Finding]:
+    """Chỉ markup sót -- cho motion/stier và motion/long (bước 5). Ở đó câu lặp
+    có thể cố ý (câu chốt nhắc lại tên vụ án), nên không soi. Soi chuỗi THÔ:
+    hai bộ dựng đó không bóc `**nhấn mạnh**` như speak.strip_emphasis."""
+    return [Finding(f"INT_LEFTOVER_MARKUP:{kind}", m.group(0), True)
+            for kind, pat in _MARKUP for m in pat.finditer(text or "")]
+
+
+def require_speakable(text: str) -> None:
+    """Ném ValueError nếu chuỗi SẮP ĐƯA VÀO TTS còn markup (*, [], URL...).
+    Gọi ngay trước engine.infer -- không soi spec (tiêu đề cảnh, nguồn)."""
+    bad = leftover_markup(text)
+    if bad:
+        raise ValueError(f"markup sót trong câu sắp đọc ({bad[0].code} «{bad[0].span}»): {text[:80]!r}")

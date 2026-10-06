@@ -102,7 +102,7 @@ def fmt(v, mine):
 
 
 if __name__ == "__main__":
-    chs = [channels.pick()] if "--channel" in sys.argv else list(channels.CHANNELS)
+    chs = [channels.pick()] if "--channel" in sys.argv else channels.available()
     bad = 0
     for ch in chs:
         a = audit(ch)

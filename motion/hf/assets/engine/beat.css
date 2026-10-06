@@ -13,6 +13,10 @@
 .kin.acc.otl .kt { -webkit-text-stroke-color:var(--red); }
 .kin.typ, .kin.scr2 { font-family:'JetBrains Mono', monospace; font-weight:700; letter-spacing:-.03em; }
 .kin .cur { color:var(--red); margin-left:.04em; }
+.kin .sw { display:inline-block; opacity:0; }
+.kin .glw { position:relative; display:inline-block; }
+.kin .glw .gl { position:absolute; left:0; top:0; opacity:0; mix-blend-mode:screen; text-shadow:none; white-space:nowrap; }
+.kin .glw .gl.r { color:#ff2b6a; } .kin .glw .gl.c { color:#27e3ff; }
 .kin .stl { position:absolute; left:-.04em; right:-.04em; top:54%; height:.085em; background:var(--red); display:block; transform-origin:0 50%; }
 .kin .sl { position:absolute; left:0; right:0; top:0; }
 .kin .sl.a { clip-path:inset(0 0 50% 0); } .kin .sl.b { clip-path:inset(50% 0 0 0); } .kin .sl0 { visibility:hidden; }

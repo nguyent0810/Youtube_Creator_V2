@@ -1,0 +1,188 @@
+{
+  "theme": "mim",
+  "title": "2 chữ cái đầu tiên đi qua ARPANET, tổ tiên của Internet: L và O",
+  "description": "Tối 29/10/1969, sinh viên Charley Kline ở UCLA gõ lệnh \"login\" sang máy tính của Viện nghiên cứu Stanford qua mạng ARPANET — tổ tiên của Internet. Chữ L đi qua, chữ O đi qua, rồi máy bên kia sập.",
+  "tags": [
+    "internet",
+    "arpanet",
+    "lịch sử internet",
+    "lịch sử công nghệ",
+    "công nghệ",
+    "tin nhắn đầu tiên",
+    "1969"
+  ],
+  "kicker": "CÔNG NGHỆ ĐỔI THẾ GIỚI",
+  "sub": "29.10.1969",
+  "acc": [
+    "lo",
+    "sập",
+    "arpanet",
+    "hai"
+  ],
+  "lines": [
+    "Lần đầu hai máy tính nói chuyện qua ARPANET, tổ tiên của Internet, chỉ có hai chữ cái đi qua.",
+    "Tối 29 tháng 10 năm 1969, tại Đại học UCLA, sinh viên Charley Kline ngồi trước máy tính.",
+    "Anh định đăng nhập vào một máy tính ở Viện nghiên cứu Stanford, qua mạng ARPANET.",
+    "Anh gõ lệnh login.",
+    "Chữ L đi qua.",
+    "Chữ O đi qua.",
+    "Rồi máy tính bên kia sập.",
+    "Khoảng một giờ sau, kỹ sư Bill Duvall chỉnh lại máy, và lần đăng nhập thứ hai thành công.",
+    "ARPANET chính là tổ tiên của Internet bạn đang dùng.",
+    "Và hai chữ cái đầu tiên nó truyền đi là: L, O."
+  ],
+  "scenes": [
+    {
+      "type": "slam",
+      "text": "2 CHỮ CÁI",
+      "sub": "QUA ARPANET · 1969"
+    },
+    {
+      "type": "date",
+      "at": 1,
+      "date": "29.10.1969",
+      "day": "TỐI · UCLA",
+      "sub": {
+        "text": "CHARLEY KLINE",
+        "at": [
+          1,
+          "Charley"
+        ]
+      }
+    },
+    {
+      "type": "photo",
+      "at": 2,
+      "img": "sketch",
+      "mode": "print",
+      "label": {
+        "text": "ARPANET · BẢN VẼ 12.1969",
+        "at": [
+          2,
+          "ARPANET"
+        ]
+      }
+    },
+    {
+      "type": "kinetic",
+      "at": 3,
+      "clip": "pexels:8888529",
+      "veil": 0.72,
+      "items": [
+        {
+          "text": "login",
+          "at": [
+            3,
+            "lệnh"
+          ],
+          "fx": "type",
+          "acc": true,
+          "size": 150
+        }
+      ]
+    },
+    {
+      "type": "kinetic",
+      "at": 4,
+      "items": [
+        {
+          "text": "L",
+          "at": [
+            4,
+            "L"
+          ],
+          "acc": true,
+          "size": 300
+        }
+      ]
+    },
+    {
+      "type": "kinetic",
+      "at": 5,
+      "items": [
+        {
+          "text": "L O",
+          "at": [
+            5,
+            "O"
+          ],
+          "acc": true,
+          "size": 300
+        }
+      ]
+    },
+    {
+      "type": "slam",
+      "at": 6,
+      "text": "SẬP",
+      "white": true
+    },
+    {
+      "type": "timeline",
+      "at": 7,
+      "items": [
+        {
+          "year": "~1 GIỜ SAU",
+          "text": "Bill Duvall chỉnh lại máy",
+          "at": [
+            7,
+            "Bill"
+          ]
+        },
+        {
+          "year": "LẦN 2",
+          "text": "đăng nhập thành công",
+          "at": [
+            7,
+            "thành"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kinetic",
+      "at": 8,
+      "bg": "imp",
+      "items": [
+        {
+          "text": "ARPANET",
+          "at": [
+            8,
+            "ARPANET"
+          ],
+          "acc": true
+        },
+        {
+          "text": "tổ tiên của Internet",
+          "at": [
+            8,
+            "tổ"
+          ],
+          "sm": true
+        }
+      ]
+    },
+    {
+      "type": "kinetic",
+      "at": 9,
+      "items": [
+        {
+          "text": "LO",
+          "at": [
+            9,
+            "L"
+          ],
+          "acc": true,
+          "size": 340
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/ARPANET"
+  ],
+  "imgs": {
+    "sketch": "File:A sketch of the ARPANET in December 1969.png",
+    "imp": "File:Interface Message Processor (\"IMP\") (2586235502).jpg"
+  }
+}

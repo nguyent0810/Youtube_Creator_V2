@@ -18,6 +18,7 @@ import hashlib
 import io
 import json
 import os
+import shutil
 import re
 import subprocess
 import sys
@@ -43,7 +44,10 @@ BLD.ANCHORS |= {"sumAt", "zeroAt", "titleAt", "hAt", "countAt", "hitAt", "typeAt
 BLD.ANCHOR_LISTS |= {"flips", "readAt"}
 import sfx_long  # noqa: E402
 
-FF = r"C:\Tools\Youtuber\video-editor\vendor\ffmpeg"
+# ffmpeg: FFMPEG_DIR, rồi bản vendor của máy sản xuất, rồi ffmpeg trong PATH (máy khác).
+_FF_VENDOR = r"C:\Tools\Youtuber\video-editor\vendor\ffmpeg"
+FF = (os.environ.get("FFMPEG_DIR") or (_FF_VENDOR if os.path.isdir(_FF_VENDOR) else None)
+      or os.path.dirname(shutil.which("ffmpeg") or "") or _FF_VENDOR)
 FFMPEG = FF + r"\ffmpeg.exe"
 VOICE = "Anh Khôi"
 QUOTE_VOICE = "Minh Đức"     # câu {"q": 1}: lời trích nguyên văn/diễn ý, giọng khác + lọc radio
@@ -123,7 +127,8 @@ def tts_line(text: str, cache: Path, take: int = 0, voice: str = VOICE):
     global _engine
     p = cache / f"{_key(text, take, voice)}.wav"
     if not p.exists():
-        from factory import speak as SP
+        from factory import integrity, speak as SP
+        integrity.require_speakable(text)    # trước engine VÀ trước cache: câu hỏng không được lưu lại
         if _engine is None:
             _engine = SP._load_engine()
         a = _engine.infer(text, voice=voice)     # vieneu 3.8.3: "Anh Khôi" là alias của "Thiện Minh" (cùng embedding)
