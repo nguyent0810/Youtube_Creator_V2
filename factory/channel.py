@@ -80,6 +80,11 @@ class DuplicateTitle(PublishError):
         self.video_id = video_id
 
 
+class ManualChannel(PublishError):
+    """Kênh upload="manual" (factory/channels.py): máy KHÔNG upload. Xuất gói
+    bằng scripts/export_manual.py, người upload qua Studio, rồi adopt_manual.py."""
+
+
 class PacingHold(PublishError):
     """Chưa tới lượt upload theo luật giãn nhịp của kênh. Lỗi tạm: caller
     hoãn tới `until` (store.defer), không tính là hỏng."""
@@ -225,7 +230,10 @@ class Channel:
 
         Ném: PacingHold, QuotaExceeded, UploadInterrupted, UploadInDoubt (đều
         là lỗi tạm hoặc chờ người, caller KHÔNG tính là hỏng), DuplicateTitle,
-        PublishError."""
+        PublishError, ManualChannel."""
+        if channels.upload_mode(self.code) == "manual":
+            raise ManualChannel(f"kênh {self.code} upload TAY: chạy scripts/export_manual.py --channel "
+                                f"{self.code}, upload qua Studio, rồi scripts/adopt_manual.py")
         self._check(u, unscheduled)
         row = self._row(u.slug)
         if row and row["state"] == "done":
@@ -299,6 +307,25 @@ class Channel:
             raise PublishError(f"video {video_id} đang {st.get('privacyStatus')} -- không đặt lịch lại")
         if publish_at is not None:
             self._check_future(publish_at)
+        self._set_private(video_id, st, publish_at)
+
+    def hide(self, video_id: str) -> None:
+        """Chuyển một video (kể cả đang public) sang private, không lịch.
+
+        Dùng khi đổi hướng kênh: ẩn chứ không xoá -- đảo ngược được, số liệu
+        Analytics vẫn giữ. Merge mọi trường status ghi được như reschedule.
+        Đã private và không lịch thì không gọi API (50 đơn vị quota/lần)."""
+        cur = self.api.get_video(video_id, "status")
+        if cur is None:
+            raise PublishError(f"không thấy video {video_id} trên kênh")
+        st = cur["status"]
+        if st.get("privacyStatus") == "private" and not st.get("publishAt"):
+            return
+        self._set_private(video_id, st, None)
+
+    def _set_private(self, video_id: str, st: dict, publish_at: str | None) -> None:
+        """Ghi status = private (+ publishAt nếu có), giữ mọi trường ghi được khác,
+        và đồng bộ lịch trong sổ."""
         body = _writable(st, _STATUS_WRITABLE)
         body["selfDeclaredMadeForKids"] = st.get("selfDeclaredMadeForKids", st.get("madeForKids", False))
         body["privacyStatus"] = "private"
@@ -320,6 +347,47 @@ class Channel:
             raise PublishError(f"không thấy video {video_id} trên kênh")
         body = {**_writable(cur["snippet"], _SNIPPET_WRITABLE), **changes}
         self.api.update_video("snippet", {"id": video_id, "snippet": body})
+
+    def adopt(self, slug: str, video_id: str) -> None:
+        """Ghi vào sổ một video người upload TAY qua YouTube Studio (kênh upload=manual).
+
+        Không có bước này thì vòng phản hồi không thấy video (nó chỉ đo video trong
+        sổ), và giãn nhịp không biết kênh vừa đăng. Không kiểm trùng tiêu đề: video
+        đã nằm trên kênh rồi. Giờ upload = snippet.publishedAt nếu ≤ bây giờ, không
+        thì bây giờ -- Studio đặt lịch xong, publishedAt có thể nhảy sang giờ lên
+        sóng (tương lai), mà giãn nhịp tính theo giờ UPLOAD."""
+        v = self.api.get_video(video_id, "snippet,status")      # HTTP trước, ngoài transaction
+        if v is None:
+            raise PublishError(f"không thấy video {video_id} trên kênh -- không ghi sổ")
+        now = self.now()
+        published = v["snippet"].get("publishedAt")
+        started = _iso(now)
+        if published and published[:19] + "Z" <= started:
+            started = published[:19] + "Z"
+        # Kiểm + ghi trong MỘT transaction: hai lần adopt chạy chồng nhau không
+        # được gán một video cho hai slug.
+        self.conn.execute("BEGIN IMMEDIATE")
+        try:
+            row = self._row(slug)
+            if row is not None:
+                if row["state"] == "done" and row["video_id"] == video_id:
+                    self.conn.execute("COMMIT")
+                    return                               # chạy lại: không đổi gì
+                raise PublishError(f"{self.code}/{slug} đã có trong sổ ({row['state']}, video "
+                                   f"{row['video_id']}) -- không gán {video_id}")
+            owner = self.conn.execute("SELECT channel, slug FROM upload_log WHERE video_id = ?",
+                                      (video_id,)).fetchone()
+            if owner:
+                raise PublishError(f"video {video_id} đã là của {owner[0]}/{owner[1]} -- không gán cho {slug}")
+            self.conn.execute(
+                "INSERT INTO upload_log (channel, slug, title, state, video_id, publish_at, started_at, done_at) "
+                "VALUES (?, ?, ?, 'done', ?, ?, ?, ?)",
+                (self.code, slug, v["snippet"].get("title"), video_id, v["status"].get("publishAt"),
+                 started, _iso(now)))
+        except BaseException:
+            self.conn.execute("ROLLBACK")
+            raise
+        self.conn.execute("COMMIT")
 
     def resolve(self, slug: str, video_id: str | None) -> None:
         """Người xử lý một upload UploadInDoubt sau khi đã nhìn kênh.

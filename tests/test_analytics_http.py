@@ -92,3 +92,13 @@ def test_id_filtered_reports_send_no_sort_the_api_could_reject():
     make(net).report(start=date(2026, 10, 6), end=date(2026, 10, 12), metrics="engagedViews,views",
                      dimensions="video", video_ids=["a"])
     assert "sort" not in net.params(0)
+
+
+def test_top_search_terms_is_a_single_capped_sorted_request():
+    net = Net({"columnHeaders": [{"name": "insightTrafficSourceDetail"}, {"name": "views"}],
+               "rows": [["ai là gì", 9]]})
+    rows = make(net, page_size=2).top_search_terms(start=date(2026, 9, 5), end=date(2026, 10, 2))
+    assert rows == [{"insightTrafficSourceDetail": "ai là gì", "views": 9}]
+    p = net.params(0)
+    assert (p["filters"], p["sort"], p["maxResults"]) == ("insightTrafficSourceType==YT_SEARCH", "-views", "25")
+    assert "startIndex" not in p and len(net.urls) == 1

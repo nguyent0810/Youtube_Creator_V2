@@ -21,6 +21,7 @@ class FakeAnalytics:
         self.videos: dict[str, dict] = {}
         self.daily: list[tuple[str, date, str, int, int, float]] = []
         self.queries: list[dict] = []
+        self.search_terms: list[tuple[str, int]] = []   # (từ khoá, view) cho top_search_terms
 
     def add_video(self, video_id: str, *, privacy: str = "public", published_at: str | None = None,
                   publish_at: str | None = None, duration_s: int = 30) -> None:
@@ -34,6 +35,13 @@ class FakeAnalytics:
         self.daily.append((video_id, day, source, views, engaged, watch_s))
 
     # ── port ─────────────────────────────────────────────────────────────
+    def top_search_terms(self, *, start: date, end: date) -> list[dict]:
+        self.queries.append({"start": start, "end": end, "metrics": "views",
+                             "dimensions": "insightTrafficSourceDetail", "search": True})
+        if "insightTrafficSourceDetail" in self.reject_dimensions:
+            raise ReportRejected("400: insightTrafficSourceDetail")
+        return [{"insightTrafficSourceDetail": t, "views": v} for t, v in self.search_terms[:25]]
+
     def video_facts(self, video_ids: list[str]) -> dict[str, dict]:
         return {v: dict(self.videos[v]) for v in video_ids if v in self.videos}
 

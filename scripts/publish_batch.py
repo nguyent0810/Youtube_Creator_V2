@@ -34,7 +34,7 @@ sys.path.insert(0, str(ROOT))
 
 from factory import channels, publish, store  # noqa: E402
 from factory.channel import Channel, DuplicateTitle, PacingHold, Upload  # noqa: E402
-from factory.youtube_api import RateLimited, UploadInDoubt, UploadInterrupted  # noqa: E402
+from factory.youtube_api import NetworkDown, RateLimited, UploadInDoubt, UploadInterrupted  # noqa: E402
 
 CHANNEL = channels.pick()
 CREDS = channels.creds_path(CHANNEL)
@@ -197,7 +197,7 @@ def do_run(limit: int) -> None:
                     store.defer(conn, rr["id"], f"PacingHold: {exc}", when)
                 print(f"  [{i}/{len(rows)}] ĐỦ NHỊP — hoãn {len(rows) - i + 1} item tới {when}")
                 break
-            except (UploadInterrupted, RateLimited) as exc:
+            except (UploadInterrupted, RateLimited, NetworkDown) as exc:
                 # Đứt sau khi đã có phiên: video có thể đã tạo xong. Lần sau
                 # Channel hỏi lại phiên, không upload lại. Mạng / API đang
                 # nghẽn -> dừng lô, thử lại sau 15 phút.
@@ -232,6 +232,10 @@ def do_run(limit: int) -> None:
 
 
 if __name__ == "__main__":
+    if MODE in ("probe", "run") and channels.upload_mode(CHANNEL) == "manual":
+        # Không để Channel ném ManualChannel giữa lô rồi bị đếm là "hỏng".
+        sys.exit(f"kênh {CHANNEL} upload TAY: scripts/export_manual.py --channel {CHANNEL}, "
+                 f"upload qua Studio, rồi scripts/adopt_manual.py --channel {CHANNEL}")
     if MODE == "check":
         do_check()
     elif MODE == "probe":

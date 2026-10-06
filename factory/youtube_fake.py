@@ -115,6 +115,10 @@ class FakeYouTube:
             raise self._thumb_failures.pop(0)
         self.thumbnails[video_id] = jpg
 
+    def list_uploads(self, limit: int) -> list[dict]:
+        newest = list(self.videos)[::-1][:limit]
+        return [self.get_video(v, "snippet,status") for v in newest]
+
     def _create(self, meta: dict) -> str:
         self.inserts += 1
         vid = f"vid{self.inserts:04d}"

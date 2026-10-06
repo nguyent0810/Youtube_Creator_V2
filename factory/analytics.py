@@ -29,6 +29,10 @@ class AnalyticsApi(Protocol):
         """Một truy vấn reports.query (ids=channel==MINE), MỌI trang. Mỗi dòng
         là dict tên cột -> giá trị. Ném ReportRejected nếu API trả 400."""
 
+    def top_search_terms(self, *, start: date, end: date) -> list[dict]:
+        """Top 25 từ khoá YT_SEARCH đã dẫn người xem tới kênh: MỘT truy vấn, không đi
+        trang (báo cáo này buộc sort và tối đa 25 dòng). Ném ReportRejected nếu 400."""
+
 
 ANALYTICS = "https://youtubeanalytics.googleapis.com/v2/reports"
 VIDEOS = "https://www.googleapis.com/youtube/v3/videos"
@@ -77,6 +81,15 @@ class HttpAnalytics:
                                  "published_at": sn.get("publishedAt"),
                                  "duration_s": _seconds(it.get("contentDetails", {}).get("duration"))}
         return out
+
+    def top_search_terms(self, *, start: date, end: date) -> list[dict]:
+        q = urllib.parse.urlencode({
+            "ids": "channel==MINE", "startDate": start.isoformat(), "endDate": end.isoformat(),
+            "metrics": "views", "dimensions": "insightTrafficSourceDetail",
+            "filters": "insightTrafficSourceType==YT_SEARCH", "sort": "-views", "maxResults": 25})
+        d = self._get(f"{ANALYTICS}?{q}")
+        names = [h["name"] for h in d.get("columnHeaders", [])]
+        return [dict(zip(names, r)) for r in d.get("rows") or []]
 
     def report(self, *, start: date, end: date, metrics: str, dimensions: str,
                video_ids: list[str] | None = None) -> list[dict]:

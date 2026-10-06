@@ -250,3 +250,57 @@ def test_progress_is_reported_after_every_accepted_chunk(video):
     make(net).insert_video({}, video, resume_uri=None, on_session=lambda u: None,
                            on_progress=lambda: beats.append(1))
     assert len(beats) == 2
+
+
+def test_a_dns_blip_on_a_read_is_retried_instead_of_killing_the_whole_run():
+    # Lỗi thật lúc phân tích kênh MIM 05/10: getaddrinfo failed giữa chừng -> cả script chết.
+    slept = []
+    net = Net(urllib.error.URLError("getaddrinfo failed"), Resp(200, {"items": [{"id": "v1", "status": {}}]}))
+    yt = HttpYouTube(CREDS, urlopen=net, sleep=slept.append)
+
+    assert yt.get_video("v1", "status")["id"] == "v1"
+    assert slept == [2]
+
+
+def test_a_network_that_stays_down_ends_in_a_temporary_error_not_a_crash():
+    from factory.youtube_api import NetworkDown
+    net = Net(*[urllib.error.URLError("getaddrinfo failed") for _ in range(4)])
+    with pytest.raises(NetworkDown):
+        HttpYouTube(CREDS, urlopen=net, sleep=lambda s: None).get_video("v1", "status")
+
+
+def test_a_dns_blip_while_fetching_the_first_token_is_retried_too():
+    # Review: trong tiến trình mới, lời gọi mạng ĐẦU TIÊN là đổi token -- trước đây không được thử lại.
+    calls = []
+
+    def urlopen(req, timeout=None):
+        calls.append(req.full_url)
+        if "oauth2" in req.full_url and len(calls) == 1:
+            raise urllib.error.URLError("getaddrinfo failed")
+        if "oauth2" in req.full_url:
+            return Resp(200, {"access_token": "tok"})
+        return Resp(200, {"items": []})
+
+    assert HttpYouTube(CREDS, urlopen=urlopen, sleep=lambda s: None).get_video("v", "status") is None
+    assert sum("oauth2" in c for c in calls) == 2
+
+
+def test_list_uploads_pages_the_uploads_playlist_and_reads_tags_in_batches_of_50():
+    # Chế độ upload tay (factory/manual.py) nhận video bằng tag -> phải đi
+    # qua videos.list (playlistItems không có tags). 3 unit cho 50 video,
+    # không dùng search.list (100 unit).
+    ids = [f"v{i:03d}" for i in range(60)]
+    net = Net(
+        Resp(200, {"items": [{"contentDetails": {"relatedPlaylists": {"uploads": "UUx"}}}]}),
+        Resp(200, {"items": [{"contentDetails": {"videoId": v}} for v in ids[:50]], "nextPageToken": "p2"}),
+        Resp(200, {"items": [{"contentDetails": {"videoId": v}} for v in ids[50:]]}),
+        Resp(200, {"items": [{"id": v, "snippet": {"tags": [f"yf-{v}"]}, "status": {}} for v in ids[:50]]}),
+        Resp(200, {"items": [{"id": v, "snippet": {}, "status": {}} for v in ids[50:55]]}),
+    )
+    got = make(net).list_uploads(55)
+    assert [v["id"] for v in got] == ids[:55]
+    assert got[0]["snippet"]["tags"] == ["yf-v000"]
+    calls = [c[1] for c in net.uploads()]
+    assert "pageToken=p2" in calls[2]
+    assert calls[3].split("id=")[1].count("%2C") == 49 and "part=snippet%2Cstatus" in calls[3]
+    assert all("search" not in c for c in calls)

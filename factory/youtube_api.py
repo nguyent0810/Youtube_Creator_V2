@@ -56,11 +56,20 @@ class YouTubeApi(Protocol):
 
     def set_thumbnail(self, video_id: str, jpg: Path) -> None: ...
 
+    def list_uploads(self, limit: int) -> list[dict]:
+        """`limit` video upload gần nhất của kênh, mới nhất trước, mỗi cái
+        {"id", "snippet", "status"} -- snippet có tags (playlistItems thì không)."""
+
 
 class RateLimited(PublishError):
     """rateLimitExceeded vẫn còn sau khi đã lùi 2/6/18 giây. Lỗi TẠM: chậm
     lại vài phút là hết -- caller hoãn ngắn, không tính là hỏng, và tuyệt
     đối không coi là hết quota tới ngày mai."""
+
+
+class NetworkDown(PublishError):
+    """Mất mạng / DNS / timeout vẫn còn sau khi đã thử lại. Lỗi TẠM, không
+    phải lỗi của video: caller hoãn, không tính là hỏng."""
 
 
 def classify(prefix: str, code: int, body: str) -> PublishError:
@@ -109,12 +118,19 @@ class HttpYouTube:
             body = urllib.parse.urlencode({
                 "client_id": self._creds["client_id"], "client_secret": self._creds["client_secret"],
                 "refresh_token": self._creds["refresh_token"], "grant_type": "refresh_token"}).encode()
-            try:
-                with self._urlopen(urllib.request.Request(TOKEN_URL, data=body), timeout=60) as r:
-                    self._token = json.loads(r.read())["access_token"]
-            except urllib.error.HTTPError as e:
-                raise PublishError(f"đổi token lỗi HTTP {e.code}: "
-                                   f"{e.read().decode(errors='replace')[:400]}") from e
+            for wait in (*_BACKOFF, None):
+                try:
+                    with self._urlopen(urllib.request.Request(TOKEN_URL, data=body), timeout=60) as r:
+                        self._token = json.loads(r.read())["access_token"]
+                    break
+                except urllib.error.HTTPError as e:
+                    raise PublishError(f"đổi token lỗi HTTP {e.code}: "
+                                       f"{e.read().decode(errors='replace')[:400]}") from e
+                except _NETWORK as e:
+                    # Trong tiến trình mới, lời gọi mạng ĐẦU TIÊN là đổi token.
+                    if wait is None:
+                        raise NetworkDown(f"đổi token: {e}") from e
+                    self._sleep(wait)
             self._token_at = self._clock()
         return self._token
 
@@ -133,6 +149,7 @@ class HttpYouTube:
         phân loại rồi ném."""
         refreshed = False
         backoff = iter(_BACKOFF)
+        net_backoff = iter(_BACKOFF)
         while True:
             req = self._request(method, url, data=data, headers=headers)
             try:
@@ -149,6 +166,14 @@ class HttpYouTube:
                 if wait is None:
                     err.status = e.code
                     raise err from e
+                self._sleep(wait)
+            except _NETWORK as e:
+                # DNS chập chờn một lần không được làm chết cả lệnh (lỗi thật
+                # 05/10). Lời gọi ở đây đều an toàn để gửi lại: đọc, PUT ghi
+                # đè cả part, đặt thumbnail, mở phiên upload (chưa có byte nào).
+                wait = next(net_backoff, None)
+                if wait is None:
+                    raise NetworkDown(f"{method} {url.split('?')[0]}: {e}") from e
                 self._sleep(wait)
 
     def get_json(self, url: str) -> dict:
@@ -171,6 +196,29 @@ class HttpYouTube:
 
     def update_video(self, part: str, body: dict) -> None:
         self._json("PUT", "videos", {"part": part}, body)
+
+    def list_uploads(self, limit: int) -> list[dict]:
+        # channels.list (1 unit) -> playlistItems 50/trang (1 unit) -> videos.list
+        # 50 id/lần (1 unit). 50 video gần nhất = 3 unit, không dùng search.list.
+        ch = self._json("GET", "channels", {"part": "contentDetails", "mine": "true"})
+        uploads = ch["items"][0]["contentDetails"]["relatedPlaylists"]["uploads"]
+        ids, page = [], None
+        while len(ids) < limit:
+            params = {"part": "contentDetails", "playlistId": uploads, "maxResults": 50}
+            if page:
+                params["pageToken"] = page
+            r = self._json("GET", "playlistItems", params)
+            ids += [it["contentDetails"]["videoId"] for it in r.get("items") or []]
+            page = r.get("nextPageToken")
+            if not page:
+                break
+        ids = ids[:limit]
+        got = {}
+        for i in range(0, len(ids), 50):
+            for v in self._json("GET", "videos", {"part": "snippet,status",
+                                                  "id": ",".join(ids[i:i + 50])}).get("items") or []:
+                got[v["id"]] = v
+        return [got[i] for i in ids if i in got]
 
     def set_thumbnail(self, video_id: str, jpg: Path) -> None:
         url = ("https://www.googleapis.com/upload/youtube/v3/thumbnails/set?"

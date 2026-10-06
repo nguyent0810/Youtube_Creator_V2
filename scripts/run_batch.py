@@ -11,9 +11,16 @@ lại mỗi lần thì riêng việc nạp đã hơn một giờ.
 
 Item lỗi không làm dừng lô: ghi lại rồi đi tiếp. Một kịch bản hỏng không
 được phép chặn 464 cái còn lại.
+
+Mỗi worker GIÀNH từng hàng (store.claim, lease 30 phút) thay vì cùng đọc một lô:
+chạy hai worker song song không còn làm trùng việc. Chỉ nhận engine "assemble"
+(short thường) -- hồ sơ S-tier và video dài có đường dựng riêng, cổng toàn vẹn
+của short sẽ loại nhầm chúng.
 """
 import json
+import os
 import re
+import socket
 import sys
 import time
 from pathlib import Path
@@ -26,6 +33,18 @@ from factory import store  # noqa: E402
 STAGE = sys.argv[1] if len(sys.argv) > 1 else "tts"
 CHANNEL = sys.argv[2] if len(sys.argv) > 2 else None
 OUT = ROOT / "output"
+WORKER = f"{socket.gethostname()}:{os.getpid()}"
+
+
+def _claimed(conn, stage):
+    """Lần lượt từng hàng đã giành được. Bị dừng giữa chừng (Ctrl+C) thì thả hàng
+    đang giữ ngay, khỏi chờ hết lease."""
+    while (row := store.claim(conn, stage, WORKER, channel=CHANNEL, engine="assemble")) is not None:
+        try:
+            yield row
+        except BaseException:
+            store.release(conn, row["id"], WORKER)
+            raise
 
 
 def _pexels_key() -> str:
@@ -35,42 +54,39 @@ def _pexels_key() -> str:
 
 def run_tts(conn):
     from factory import speak
-    rows = store.next_batch(conn, "pending", limit=200, channel=CHANNEL)
-    if not rows:
-        print("Khong co item nao o trang thai pending.")
-        return
-    print(f"{len(rows)} item. Nap model TTS...")
-    engine = speak._load_engine()
     from factory import integrity
-    for i, row in enumerate(rows, 1):
+    engine = None
+    for i, row in enumerate(_claimed(conn, "pending"), 1):
+        if engine is None:
+            print("Nap model TTS...")
+            engine = speak._load_engine()   # một lần cho cả lô
         b = store.load_bundle(row["channel"], row["slug"])
         t0 = time.perf_counter()
         # Cổng toàn vẹn văn bản: MỘT điểm trước TTS cho mọi kênh/dòng.
         bad = integrity.blocking(b.script)
         if bad:
             store.reject(conn, b.id, "INTEGRITY: " + "; ".join(f"{f.code} «{f.span[:40]}»" for f in bad))
-            print(f"  [{i}/{len(rows)}] {b.slug:16s} CHAN (toan ven van ban): {bad[0].code}")
+            print(f"  [{i}] {b.slug:16s} CHAN (toan ven van ban): {bad[0].code}")
             continue
         try:
             res = speak.speak_bundle(b, OUT, engine=engine)
             store.mark(conn, b.id, "spoken",
                        wav_path=res["wav_path"], timing_path=res["timing_path"])
-            print(f"  [{i}/{len(rows)}] {b.slug:16s} {res['duration']:5.1f}s audio "
+            print(f"  [{i}] {b.slug:16s} {res['duration']:5.1f}s audio "
                   f"({time.perf_counter()-t0:.1f}s)")
         except Exception as exc:
             n = store.bump_attempt(conn, b.id, f"{type(exc).__name__}: {exc}")
-            print(f"  [{i}/{len(rows)}] {b.slug:16s} LOI (lan {n}): {exc}")
+            print(f"  [{i}] {b.slug:16s} LOI (lan {n}): {exc}")
+    if engine is None:
+        print("Khong co item nao o trang thai pending.")
 
 
 def run_assemble(conn):
     from factory import assemble
     key = _pexels_key()
-    rows = store.next_batch(conn, "spoken", limit=200, channel=CHANNEL)
-    if not rows:
-        print("Khong co item nao o trang thai spoken.")
-        return
-    print(f"{len(rows)} item can dung video.")
-    for i, row in enumerate(rows, 1):
+    done = 0
+    for i, row in enumerate(_claimed(conn, "spoken"), 1):
+        done = i
         b = store.load_bundle(row["channel"], row["slug"])
         t0 = time.perf_counter()
         try:
@@ -82,11 +98,13 @@ def run_assemble(conn):
                                          bgm_path=bgm if bgm.exists() else None)
             store.mark(conn, b.id, "assembled", video_path=ar.video_path)
             size = Path(ar.video_path).stat().st_size / 1024 / 1024
-            print(f"  [{i}/{len(rows)}] {b.slug:16s} {ar.scene_count} canh  "
+            print(f"  [{i}] {b.slug:16s} {ar.scene_count} canh  "
                   f"{size:4.1f} MB  ({time.perf_counter()-t0:.0f}s)")
         except Exception as exc:
             n = store.bump_attempt(conn, b.id, f"{type(exc).__name__}: {exc}")
-            print(f"  [{i}/{len(rows)}] {b.slug:16s} LOI (lan {n}): {exc}")
+            print(f"  [{i}] {b.slug:16s} LOI (lan {n}): {exc}")
+    if not done:
+        print("Khong co item nao o trang thai spoken.")
 
 
 with store.connect() as conn:

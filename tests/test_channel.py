@@ -437,3 +437,81 @@ def test_a_process_that_lost_its_lease_stops_sending(env):
     with pytest.raises(UploadInterrupted):
         ch(env).upload(up(env))
     assert env["yt"].inserts == 0
+
+
+def test_hide_takes_a_public_video_private_and_keeps_every_other_status_field(env):
+    # Đổi hướng kênh: ẩn video cũ. Đảo ngược được, không xoá.
+    c = ch(env)
+    vid = c.upload(up(env)).video_id
+    env["yt"].go_live(vid)
+    env["yt"].videos[vid]["status"].update(embeddable=False, license="creativeCommon")
+
+    c.hide(vid)
+
+    st = env["yt"].get_video(vid, "status")["status"]
+    assert st["privacyStatus"] == "private" and "publishAt" not in st
+    assert (st["embeddable"], st["license"]) == (False, "creativeCommon")
+
+
+def test_hide_on_a_video_that_is_already_private_and_unscheduled_changes_nothing(env):
+    c = ch(env)
+    vid = c.upload(up(env, when=None), unscheduled=True).video_id
+    calls = []
+    real = env["yt"].update_video
+    env["yt"].update_video = lambda part, body: (calls.append(part), real(part, body))
+
+    c.hide(vid)
+
+    assert calls == []
+
+
+def test_hide_clears_the_schedule_in_the_ledger_too(env):
+    c = ch(env)
+    vid = c.upload(up(env)).video_id
+    c.hide(vid)
+    assert env["conn"].execute("SELECT publish_at FROM upload_log WHERE video_id = ?", (vid,)).fetchone()[0] is None
+
+
+# ── nhận video upload tay (kênh upload = manual) ──────────────────────────
+
+def test_adopt_records_a_manual_upload_with_its_real_upload_time(env):
+    env["clock"].t = T0 - timedelta(minutes=100)              # 01:20 UTC
+    vid = env["yt"].add_video({"title": "AI là gì?", "publishedAt": "2026-10-05T01:00:00Z"},
+                              {"privacyStatus": "private"})
+    ch(env, "MIM").adopt("mim-ai-la-gi", vid)
+    row = env["conn"].execute("SELECT state, video_id, started_at FROM upload_log WHERE slug = 'mim-ai-la-gi'").fetchone()
+    assert tuple(row) == ("done", vid, "2026-10-05T01:00:00Z")
+    # Giãn nhịp MIM (60 phút) tính cả video upload tay: lượt kế tiếp sớm nhất 02:00.
+    assert ch(env, "MIM").next_upload_at() == T0 - timedelta(hours=1)
+
+
+def test_adopt_uses_now_when_published_at_is_in_the_future(env):
+    # Studio đã đặt lịch: publishedAt có thể nhảy sang giờ lên sóng (tương lai) -- không phải giờ upload.
+    vid = env["yt"].add_video({"title": "X", "publishedAt": "2026-10-20T01:00:00Z"}, {"privacyStatus": "private"})
+    ch(env, "MIM").adopt("mim-x", vid)
+    assert env["conn"].execute("SELECT started_at FROM upload_log WHERE slug='mim-x'").fetchone()[0] == "2026-10-05T03:00:00Z"
+
+
+def test_adopt_refuses_a_video_that_does_not_exist(env):
+    from factory.youtube_api import PublishError
+    with pytest.raises(PublishError):
+        ch(env, "MIM").adopt("mim-x", "vidNOPE")
+
+
+def test_adopt_refuses_a_video_already_owned_by_another_slug(env):
+    from factory.youtube_api import PublishError
+    vid = env["yt"].add_video({"title": "X", "publishedAt": "2026-10-05T01:00:00Z"}, {"privacyStatus": "private"})
+    ch(env, "MIM").adopt("mim-a", vid)
+    with pytest.raises(PublishError):
+        ch(env, "MIM").adopt("mim-b", vid)
+
+
+def test_adopt_is_idempotent_for_the_same_video_and_refuses_a_different_one(env):
+    from factory.youtube_api import PublishError
+    v1 = env["yt"].add_video({"title": "X", "publishedAt": "2026-10-05T01:00:00Z"}, {"privacyStatus": "private"})
+    v2 = env["yt"].add_video({"title": "Y", "publishedAt": "2026-10-05T01:00:00Z"}, {"privacyStatus": "private"})
+    c = ch(env, "MIM")
+    c.adopt("mim-a", v1)
+    c.adopt("mim-a", v1)                                  # chạy lại: không đổi gì
+    with pytest.raises(PublishError):
+        c.adopt("mim-a", v2)

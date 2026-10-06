@@ -7,10 +7,13 @@ Mỗi kênh: file credential YouTube, module "dòng nội dung", các tiền t�
 from __future__ import annotations
 
 import importlib
+import os
 import sys
 from pathlib import Path
 
-CREDS_DIR = Path(r"C:\Tools\Youtuber\vietneu-tts\.youtube_channels")
+# Máy sản xuất: C:\Tools\Youtuber\... Máy khác đặt biến môi trường YT_CREDS_DIR.
+# Credential (refresh_token) không bao giờ nằm trong repo này.
+CREDS_DIR = Path(os.environ.get("YT_CREDS_DIR", r"C:\Tools\Youtuber\vietneu-tts\.youtube_channels"))
 
 # pacing = (khoảng cách tối thiểu giữa hai lần UPLOAD, tính bằng phút; số upload
 # tối đa trong 24 giờ trượt). Channel (factory/channel.py) cưỡng chế cho MỌI
@@ -35,6 +38,14 @@ CHANNELS = {
     "BUD": {"ten": "Phật Giáo", "creds": "phat_giao.json", "lines": "factory.lines.bud",
             "prefixes": ("bud-lich-", "bud-visao-", "bud-hieulam-", "bud-phapcu-", "bud-sophap-"),
             "pacing": (0, 24), "rotate": True, "pinned": ("lich",)},
+    # Kênh công nghệ, đổi hướng 05/10/2026 (docs/channels/mind-in-the-machine/2026-10-05-analysis.md):
+    # AI dễ hiểu + công nghệ đã thay đổi thế giới. Chưa có dòng nội dung -> lines=None;
+    # bật rotate khi có 3 dòng Short.
+    # upload="manual": credential nằm trên GCP project CHƯA audit -> video upload
+    # bằng API bị khoá private vĩnh viễn. Token chỉ dùng để ĐỌC (phân tích, nhận
+    # video); người upload qua Studio. Quy trình: factory/manual.py.
+    "MIM": {"ten": "Mind in the Machine", "creds": "mind_machine.json", "lines": None,
+            "prefixes": ("mim-",), "pacing": (60, 6), "rotate": False, "upload": "manual"},
 }
 
 
@@ -51,9 +62,29 @@ def creds_path(ch: str) -> Path:
     return CREDS_DIR / CHANNELS[ch]["creds"]
 
 
+def upload_mode(ch: str) -> str:
+    """"api" (mặc định): máy upload qua Channel. "manual": người upload qua Studio."""
+    return CHANNELS[ch].get("upload", "api")
+
+
 def prefixes(ch: str) -> tuple[str, ...]:
     return CHANNELS[ch]["prefixes"]
 
 
 def lines(ch: str):
-    return importlib.import_module(CHANNELS[ch]["lines"])
+    mod = CHANNELS[ch]["lines"]
+    if mod is None:
+        sys.exit(f"kênh {ch} chưa có dòng nội dung (factory/channels.py: lines=None)")
+    return importlib.import_module(mod)
+
+
+def available() -> list[str]:
+    """Kênh có credential trên MÁY NÀY. Script "chạy cho mọi kênh" dùng cái
+    này: máy sản xuất không có credential MIM, máy này không có FS/BUD/CL."""
+    have = [ch for ch in CHANNELS if creds_path(ch).exists()]
+    skipped = [ch for ch in CHANNELS if ch not in have]
+    if not have:
+        sys.exit(f"không thấy credential kênh nào trong {CREDS_DIR} (đặt YT_CREDS_DIR?)")
+    if skipped:
+        print(f"bỏ qua (không có credential trên máy này): {', '.join(skipped)}", file=sys.stderr)
+    return have
