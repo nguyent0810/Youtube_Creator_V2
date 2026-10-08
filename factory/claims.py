@@ -149,6 +149,10 @@ SPECULATIVE = (
     r"\bdường như\b",
     r"\bbị kiêng nhiều\b",
     r"\bai cũng\b",
+    # "Sáu ngày nữa mới lại có ngày như ngày mai" -- claim sai thật đã lọt:
+    # "ngày như ngày mai" không định nghĩa được (cùng sao? cùng trực?), nên
+    # không đếm lại được. Cấm hẳn.
+    r"\bmới lại có ngày như\b",
 )
 
 
@@ -188,12 +192,15 @@ def check_declared(script: str) -> list[ClaimIssue]:
 
 # ─── Thống kê: TỰ ĐẾM LẠI, không tin lời khai ─────────────────────────────
 
-# "cả tháng Mười chỉ có ba ngày Trực thành"
+# "cả tháng Mười chỉ có ba ngày Trực thành", "tháng này có tới chín ngày Trực trừ",
+# "cả tháng mười một chỉ có năm ngày Trực trừ". Bản đầu chỉ nhận ĐÚNG một lối
+# nói và tháng một chữ -- các lối khác lọt qua mà không ai đếm lại.
+_NUM = r"(mười một|mười hai|\w+|\d{1,2})"
 _STAT_MONTH = re.compile(
-    r"cả tháng\s+(\w+)\s+chỉ có\s+(\w+)\s+ngày\s+(trực\s+\w+)", re.IGNORECASE)
-# "thuộc nhóm sáu sao hắc đạo"
-_STAT_GODS = re.compile(
-    r"nhóm\s+(\w+)\s+sao\s+(hoàng đạo|hắc đạo)", re.IGNORECASE)
+    r"(?:cả\s+)?tháng\s+(này|mười một|mười hai|\w+|\d{1,2})\s+(?:chỉ\s+)?có\s+"
+    r"(?:tới\s+|đúng\s+|cả\s+)?" + _NUM + r"\s+ngày\s+(trực\s+\w+)", re.IGNORECASE)
+# "thuộc nhóm sáu sao hắc đạo", "nhóm 8 sao hắc đạo"
+_STAT_GODS = re.compile(r"nhóm\s+" + _NUM + r"\s+sao\s+(hoàng đạo|hắc đạo)", re.IGNORECASE)
 
 WORD_NUM = {"một": 1, "hai": 2, "ba": 3, "bốn": 4, "năm": 5, "sáu": 6,
             "bảy": 7, "tám": 8, "chín": 9, "mười": 10, "mười một": 11, "mười hai": 12}
@@ -201,21 +208,30 @@ MONTH_NUM = {"một": 1, "hai": 2, "ba": 3, "tư": 4, "năm": 5, "sáu": 6,
              "bảy": 7, "tám": 8, "chín": 9, "mười": 10, "mười một": 11, "mười hai": 12}
 
 
+def _num(word: str, table: dict[str, int]) -> int | None:
+    return int(word) if word.isdigit() else table.get(word)
+
+
 def check_statistics(script: str, target: date) -> list[ClaimIssue]:
     """Đếm lại mọi thống kê trên TOÀN BỘ khoảng thời gian được nhắc tới.
 
     Đây là nửa còn lại của luật: thống kê chưa kiểm tra toàn bộ dữ liệu thì
-    không được đánh ĐẠT. Nên ta không kiểm 'có hợp lý không' mà đếm lại thật."""
-    import vnlunar
+    không được đánh ĐẠT. Nên ta không kiểm 'có hợp lý không' mà đếm lại thật.
+
+    Đếm bằng factory.lunar (đã đối chiếu kép với phép tính độc lập), KHÔNG đếm
+    thẳng bằng vnlunar: bản cũ đếm bằng chính thư viện đang tính sai, nên
+    "tháng 10/2026 có ba ngày Trực thành" (thật: hai, 11 và 23/10) được ĐẠT."""
+    from factory.lunar import AUSPICIOUS_GODS, truc_name_of
     out: list[ClaimIssue] = []
     low = script.lower()
 
     for m in _STAT_MONTH.finditer(low):
         month_word, count_word, truc = m.group(1), m.group(2), m.group(3).strip()
-        if month_word not in MONTH_NUM or count_word not in WORD_NUM:
+        mon = target.month if month_word == "này" else _num(month_word, MONTH_NUM)
+        claimed = _num(count_word, WORD_NUM)
+        if mon is None or claimed is None:
             out.append(ClaimIssue(False, f"thống kê tháng không đọc được: {m.group(0)!r}"))
             continue
-        mon = MONTH_NUM[month_word]
         if mon != target.month:
             out.append(ClaimIssue(False,
                                   f"nói về tháng {mon} nhưng ngày lịch thuộc tháng {target.month}"))
@@ -223,22 +239,21 @@ def check_statistics(script: str, target: date) -> list[ClaimIssue]:
         # Đếm THẬT, cả tháng.
         d, n, days = date(target.year, mon, 1), 0, []
         while d.month == mon:
-            got = vnlunar.get_full_info(d.day, d.month, d.year)["12_constructions"]["name"]
-            if _norm(got) == _norm(truc):
+            if _norm(truc_name_of(d)) == _norm(truc):
                 n += 1
                 days.append(d.isoformat())
             d += timedelta(days=1)
-        claimed = WORD_NUM[count_word]
         out.append(ClaimIssue(claimed == n,
                               f"nói '{count_word} ngày {truc}' trong tháng {mon} — "
                               f"đếm thật: {n} ngày {days}"))
 
     for m in _STAT_GODS.finditer(low):
         count_word, kind = m.group(1), m.group(2)
-        if count_word not in WORD_NUM:
-            continue
-        from factory.lunar import AUSPICIOUS_GODS
+        claimed = _num(count_word, WORD_NUM)
         actual = len(AUSPICIOUS_GODS) if "hoàng" in kind else 12 - len(AUSPICIOUS_GODS)
-        out.append(ClaimIssue(WORD_NUM[count_word] == actual,
+        if claimed is None:
+            out.append(ClaimIssue(False, f"thống kê sao không đọc được: {m.group(0)!r}"))
+            continue
+        out.append(ClaimIssue(claimed == actual,
                               f"nói 'nhóm {count_word} sao {kind}' — hệ 12 sao có {actual}"))
     return out

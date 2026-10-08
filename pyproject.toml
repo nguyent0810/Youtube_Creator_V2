@@ -5,7 +5,10 @@ description = "Xưởng nội dung YouTube — sinh trong chat, sản xuất t�
 requires-python = ">=3.11"
 dependencies = [
     "vieneu>=3.8.1",   # TTS tiếng Việt, torch-free trên CPU/ONNX
-    "httpx>=0.27",     # YouTube Data API + tải B-roll
+    "httpx>=0.27",     # tải B-roll
+    # GHIM CỨNG: 1.0.3/1.0.4 tính sai Trực và 12 thần (92 video Lịch sai);
+    # factory/lunar.py đối chiếu kép và DỪNG nếu bản cài đặt nói khác.
+    "vnlunar==1.0.5",
 ]
 
 [project.optional-dependencies]

@@ -322,6 +322,14 @@ TU28 = tuple(zip(
      "Én", "Lợn", "Du", "Sói", "Chó", "Trĩ", "Gà", "Quạ", "Khỉ", "Vượn", "Hãn", "Dê", "Hoẵng",
      "Ngựa", "Hươu", "Rắn", "Giun"),
 ))
+# Cát tú / hung tú, cùng thứ tự TU28: 14 cát, 14 hung theo lệ lịch Việt.
+# Đối chiếu vnlunar 1.0.5 (MANSIONS_28.good). vnlunar 1.0.4 xếp sai 26 ngày
+# của năm 2026 (vd Lâu bị ghi xấu, Mão bị ghi tốt) -- factory/lunar.py so
+# hai nguồn với nhau, lệch là dừng.
+TU_GOOD = (True, False, False, True, False, True, True, True, False, False, False, False,
+           True, True, False, True, True, False, True, False, True, True, False, False,
+           False, True, False, True)
+assert len(TU_GOOD) == 28 and sum(TU_GOOD) == 14
 TU_PHUONG = ("phương Đông", "phương Bắc", "phương Tây", "phương Nam")
 TU_TUONG = ("Thanh Long", "Huyền Vũ", "Bạch Hổ", "Chu Tước")
 TU_BY = {n: (i, h, a) for i, (n, h, a) in enumerate(TU28)}

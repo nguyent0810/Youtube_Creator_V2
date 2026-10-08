@@ -96,6 +96,56 @@ SAO: dict[str, Term] = {t.name: t for t in (
 assert len(TRUC) == 12 and len(SAO) == 12, "tập đóng: phải đúng 12 và 12"
 
 
+# ─── Danh mục nên làm / kiêng của 12 trực — BẢNG GHIM ─────────────────────
+#
+# VÌ SAO GHIM TRONG REPO: danh mục từng lấy thẳng từ vnlunar. Bản 1.0.5 thay
+# TOÀN BỘ danh mục của cả 12 trực -- từ lối thông thư cổ (an phủ biên cảnh,
+# quan đái, lên sách lên chương biểu...) sang diễn ý hiện đại (cầu tài, gặp
+# gỡ đối tác...), có chỗ ngược hẳn (Trực kiến: bản cũ cho động thổ, bản mới
+# kiêng động thổ). Đổi nguồn nội dung phải là QUYẾT ĐỊNH có chủ đích của
+# người làm kênh, không phải tác dụng phụ của một lần nâng cấp thư viện.
+#
+# Bảng dưới là danh mục kênh đã dùng từ đầu (vnlunar <= 1.0.4, lối thông thư
+# cổ), gắn vào trực ĐÚNG của ngày (tính độc lập trong factory/lunar.py).
+# Đã sửa hai lỗi chép của nguồn: "tu sửa tường tường" -> "tu sửa tường",
+# "đắp lỗ lỗ rác" -> "đắp lỗ".
+TRUC_VIEC: dict[str, tuple[tuple[str, ...], tuple[str, ...]]] = {
+    "Trực kiến": (("Động thổ", "san nền đắp nền", "lên quan nhậm chức", "xuất hành",
+                   "khai trương tàu thuyền", "khởi công làm lò"),
+                  ("Khai trương", "khởi công xây cất và chôn cất")),
+    "Trực trừ": (("Giải trừ", "tắm gội", "chỉnh dung", "cạo đầu", "chỉnh tay chân móng",
+                  "cầu y trị bệnh", "quét dọn nhà cửa"),
+                 ("Mọi việc khác",)),
+    "Trực mãn": (("Tiến người", "may cắt", "dựng cột lên đòn dông", "kinh vệ", "khai trương",
+                  "lập khoán giao dịch", "nạp tài", "mở kho", "đắp lỗ", "sửa tường"),
+                 ("Tế tự", "cầu phúc", "cầu tự", "lên sách chương biểu", "ban chiếu", "ban ơn",
+                  "chiêu hiền cử nhân")),
+    "Trực bình": (("Tu sửa tường", "bình trị đạo đồ"),
+                  ("Cầu phúc cầu tự", "lên sách lên chương biểu")),
+    "Trực định": (("Quan đái",), ("Mọi việc khác",)),
+    "Trực chấp": (("Bắt bớ",), ("Mọi việc khác",)),
+    "Trực phá": (("Cầu y trị bệnh",), ("Mọi việc khác",)),
+    "Trực nguy": (("An phủ biên cảnh", "tuyển tướng", "an sàng"), ("Mọi việc khác",)),
+    "Trực thành": (("Nhập học", "an phủ biên cảnh", "di chuyển", "trúc đê phòng", "khai trương"),
+                   ("Mọi việc khác",)),
+    "Trực thu": (("Tiến người", "nạp tài", "bắt bớ", "thu tất"),
+                 ("Cầu phúc cầu tự", "lên sách lên chương biểu")),
+    "Trực khai": (("Tế tự", "cầu phúc", "cầu tự", "lên sách lên chương biểu", "xuất hành",
+                   "lên quan lâm chính", "di chuyển"),
+                  ("Mọi việc khác",)),
+    "Trực bế": (("Trúc đê phòng", "đắp lỗ", "sửa tường"),
+                ("Lên sách lên chương biểu", "xuất hành", "khai trương")),
+}
+assert set(TRUC_VIEC) == set(TRUC), "TRUC_VIEC phải phủ đúng 12 trực"
+
+
+def lich_terms() -> tuple[str, ...]:
+    """Tập đóng mọi tên việc trong danh mục, để bộ kiểm soi việc 'bịa thêm'."""
+    out = {v.lower() for good, bad in TRUC_VIEC.values() for v in good + bad}
+    out.discard("mọi việc khác")
+    return tuple(sorted(out, key=len, reverse=True))
+
+
 def gloss_phrases() -> tuple[str, ...]:
     """Mọi cụm chú giải hợp lệ, để bộ kiểm claim nhận là đã khai báo."""
     out = []
@@ -150,6 +200,8 @@ VIEC_BROLL: dict[str, list[str]] = {
     "đắp lỗ lỗ rác": ["patching hole in wall", "filling cracks cement"],
     "sửa tường": ["repairing wall plaster hands", "cement trowel work detail"],
     "tu sửa tường tường": ["repairing wall plaster hands", "painting wall roller"],
+    "tu sửa tường": ["repairing wall plaster hands", "painting wall roller"],
+    "khởi công xây cất và chôn cất": ["construction site groundbreaking", "quiet cemetery morning"],
     "bình trị đạo đồ": ["paving road workers", "flattening dirt path"],
     "giải trừ": ["sweeping floor broom", "clearing clutter room"],
     "tắm gội": ["water pouring hands close up", "clean bathroom daylight"],

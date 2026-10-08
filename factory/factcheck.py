@@ -27,18 +27,15 @@ from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 
 from factory.claims import check_declared, check_statistics
-from factory.lunar import DayFacts
+from factory.lunar import CHI, GOD_ALIAS, GOD_ORDER, TRUC_ORDER, DayFacts
+from factory.pillars.tables import TU28, TU_ALIAS
+from factory.vocab import TRUC, lich_terms
 
 # 12 sao hoàng đạo/hắc đạo. Dùng để bắt trường hợp kịch bản nhắc TÊN SAO
 # của một ngày khác -- lỗi dễ xảy ra khi viết hàng loạt rồi copy nhầm.
-ALL_GODS = (
-    "Thanh Long", "Minh Đường", "Kim Quỹ", "Ngọc Đường", "Thiên Đức", "Tư Mệnh",
-    "Bạch Hổ", "Chu Tước", "Câu Trần", "Huyền Vũ", "Thiên Hình", "Thiên Lao",
-)
-ALL_TRUC = (
-    "Trực kiến", "Trực trừ", "Trực mãn", "Trực bình", "Trực định", "Trực chấp",
-    "Trực phá", "Trực nguy", "Trực thành", "Trực thu", "Trực khai", "Trực bế",
-)
+# Tên phụ ("Câu Trận", "Bảo Quang") quy về tên chuẩn trước khi so.
+ALL_GODS = GOD_ORDER
+ALL_TRUC = TRUC_ORDER
 
 # Số viết bằng chữ -> số. Kịch bản nói "ba việc", phải khớp len(good_for).
 WORD_NUM = {"một": 1, "hai": 2, "ba": 3, "bốn": 4, "năm": 5, "sáu": 6,
@@ -80,7 +77,8 @@ def check(script: str, facts: DayFacts, publish_at: str) -> list[Finding]:
     # tốt/việc hợp vào NHẦM NGÀY.
     pub = datetime.strptime(publish_at, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
     viewer_day = (pub + timedelta(hours=7)).date()      # giờ VN
-    says_tomorrow = "ngày mai" in low or " mai " in low
+    # "mai" đứng riêng cũng tính ("Ngày Rắn mai..."), nhưng "mai táng" thì không.
+    says_tomorrow = bool(re.search(r"\bngày mai\b|\bmai\b(?!\s+táng)", low))
     if says_tomorrow:
         out.append(Finding(
             viewer_day + timedelta(days=1) == facts.target, "NGÀY",
@@ -95,13 +93,14 @@ def check(script: str, facts: DayFacts, publish_at: str) -> list[Finding]:
         out.append(Finding(False, "NGÀY", "có chữ 'hôm nay' — sai, video đăng trước một ngày"))
 
     # ─── FACT: sao ────────────────────────────────────────────────────────
-    named = [g for g in ALL_GODS if g.lower() in low]
+    named = sorted({GOD_ALIAS.get(g, g) for g in (*ALL_GODS, *GOD_ALIAS) if g.lower() in low})
     out.append(Finding(named == [facts.god_name], "FACT",
                        f"sao nhắc trong bài {named or '(không nhắc)'} — nguồn ghi {facts.god_name}"))
-    # Nhãn hoàng đạo/hắc đạo phải khớp loại sao.
-    if "hoàng đạo" in low and not facts.is_auspicious_star:
+    # Nhãn hoàng đạo/hắc đạo phải khớp loại sao. "giờ hoàng đạo" là nhãn của
+    # GIỜ, không phải của ngày -- không tính vào đây.
+    if re.search(r"(?<!giờ )hoàng đạo", low) and not facts.is_auspicious_star:
         out.append(Finding(False, "FACT", f"gọi là hoàng đạo nhưng {facts.god_name} là sao hắc đạo"))
-    if "hắc đạo" in low and facts.is_auspicious_star:
+    if re.search(r"(?<!giờ )hắc đạo", low) and facts.is_auspicious_star:
         out.append(Finding(False, "FACT", f"gọi là hắc đạo nhưng {facts.god_name} là sao hoàng đạo"))
 
     # ─── FACT: khung diễn giải không được chỏi với loại sao ───────────────
@@ -115,23 +114,84 @@ def check(script: str, facts: DayFacts, publish_at: str) -> list[Finding]:
                            f"khung 'thuận' {hits} nhưng {facts.god_name} là sao hắc đạo"))
 
     # ─── FACT: trực ───────────────────────────────────────────────────────
-    truc_named = [t for t in ALL_TRUC if t.lower() in low]
+    # So khớp KHÔNG phân biệt hoa/thường: "Trực Bình" và "Trực bình" là một.
+    truc_named = [t for t in ALL_TRUC if t.casefold() in low]
     out.append(Finding(truc_named == [facts.truc_name], "FACT",
                        f"trực nhắc trong bài {truc_named or '(không nhắc)'} — nguồn ghi {facts.truc_name}"))
 
+    # ─── FACT: chú giải chữ Hán phải đúng của CHÍNH trực đó ───────────────
+    # Lỗi cũ: chú giải được so theo bao hàm hai chiều với cả sổ, nên
+    # "Trực trừ — 除, nghĩa là gom về" (nghĩa của Trực thu) vẫn ĐẠT.
+    for m in re.finditer(r"(trực\s+\w+)\s+—\s+(\S+?),\s+nghĩa là\s+([^.]+)", low):
+        canon = next((t for t in ALL_TRUC if t.casefold() == m.group(1)), None)
+        term = TRUC.get(canon) if canon else None
+        ok = bool(term) and m.group(2) == term.han and m.group(3).strip() == term.gloss
+        out.append(Finding(ok, "FACT",
+                           f"chú giải {m.group(0)!r} — từ điển: "
+                           + (f"{term.han}, nghĩa là {term.gloss}" if term else "không có trực này")))
+
     # ─── FACT: tên việc phải có trong nguồn ───────────────────────────────
     src = _norm(" | ".join(list(facts.truc_good_for) + list(facts.truc_bad_for)))
-    # Chỉ soi những cụm đặc thù của lịch, không soi từ đời thường.
-    LICH_TERMS = ("an sàng", "an phủ biên cảnh", "tuyển tướng", "nhập học",
-                  "trúc đê phòng", "khai trương", "tiến người", "nạp tài",
-                  "bắt bớ", "thu tất", "tế tự", "cầu phúc", "cầu tự",
-                  "xuất hành", "di chuyển", "động thổ", "san nền", "đắp lỗ",
-                  "sửa tường", "giải trừ", "tắm gội", "chỉnh dung", "cạo đầu",
-                  "cầu y trị bệnh", "quét dọn nhà cửa", "khởi công")
-    bogus = [t for t in LICH_TERMS if t in low and _norm(t) not in src]
+    # Soi MỌI tên việc của tập đóng (danh mục 12 trực), không chỉ một danh
+    # sách tay -- việc nào của trực khác mà lọt vào bài là bị bắt.
+    LICH_TERMS = tuple(dict.fromkeys(lich_terms() + (
+        "an sàng", "an phủ biên cảnh", "tuyển tướng", "nhập học", "trúc đê phòng", "khai trương",
+        "tiến người", "nạp tài", "bắt bớ", "thu tất", "tế tự", "cầu phúc", "cầu tự", "xuất hành",
+        "di chuyển", "động thổ", "san nền", "đắp lỗ", "sửa tường", "giải trừ", "tắm gội",
+        "chỉnh dung", "cạo đầu", "cầu y trị bệnh", "quét dọn nhà cửa", "khởi công",
+        "cưới hỏi", "an táng", "chôn cất", "mai táng", "ký kết", "chuyển nhà", "nhập trạch")))
+    bogus = [t for t in LICH_TERMS
+             if re.search(rf"(?<!\w){re.escape(t)}(?!\w)", low) and _norm(t) not in src]
     out.append(Finding(not bogus, "FACT",
                        f"việc nhắc nhưng KHÔNG có trong nguồn: {bogus}" if bogus
                        else "mọi tên việc đều có trong nguồn"))
+
+    # ─── FACT: các tầng bổ sung (giờ, tú, tuổi xung, hướng) ───────────────
+    # Bản trước KHÔNG soi những câu này: sửa "giờ Tý" thành "giờ Sửu", hay
+    # chèn "tú Khuê... nhóm tốt", vẫn ĐẠT. Chúng là dữ kiện người xem làm
+    # theo trực tiếp, nên phải khớp nguồn đúng từng chữ.
+    hours = facts.auspicious_hours.lower()
+    good_chi = {h.split(" (")[0] for h in hours.split(", ") if h}
+    for s in sents:
+        sl = s.lower()
+        if not re.search(r"giờ (tốt|hoàng đạo)", sl):
+            continue
+        for m in re.finditer(r"\bgiờ (" + "|".join(c.lower() for c in CHI) + r")\b(?:\s*\(([^)]*)\))?", sl):
+            chi, span = m.group(1), m.group(2)
+            ok = chi in good_chi and (span is None or f"{chi} ({span})" in hours)
+            out.append(Finding(ok, "FACT", f"nhắc giờ {m.group(0)!r} — giờ hoàng đạo của nguồn: "
+                                           f"{facts.auspicious_hours}"))
+        if "đầu tiên" in sl:
+            first = hours.split(",")[0].strip()
+            m = re.search(r"giờ\s+(\w+\s*\([^)]*\))", sl)
+            if m:
+                out.append(Finding(m.group(1).strip() == first, "FACT",
+                                   f"nói giờ tốt đầu tiên là {m.group(1)!r} — nguồn: {first}"))
+    tu_names = "|".join(sorted({*(n.lower() for n, _, _ in TU28), *(a.lower() for a in TU_ALIAS)},
+                               key=len, reverse=True))
+    for m in re.finditer(rf"\btú ({tu_names})\b", low):
+        said = TU_ALIAS.get(m.group(1).capitalize(), m.group(1).capitalize())
+        out.append(Finding(said.lower() == facts.mansion_name.lower(), "FACT",
+                           f"nhắc tú {m.group(1)!r} — nguồn: tú {facts.mansion_name}"))
+    m = re.search(r"\btú \w+, con ([^,]+), lịch xếp vào nhóm (tốt|xấu)", low)
+    if m:
+        nhom = "tốt" if facts.mansion_good else "xấu"
+        out.append(Finding(m.group(1).strip() == facts.mansion_animal.lower() and m.group(2) == nhom,
+                           "FACT", f"tú: con {m.group(1)!r}, nhóm {m.group(2)!r} — nguồn: con "
+                                   f"{facts.mansion_animal}, nhóm {nhom}"))
+    m = re.search(r"xung với tuổi (\w+)", low)
+    if m:
+        out.append(Finding(m.group(1) == facts.conflict_animal.lower(), "FACT",
+                           f"tuổi xung {m.group(1)!r} — nguồn: {facts.conflict_animal}"))
+    m = re.search(r"ngày (\w+) thì theo lịch cũ xung", low)
+    if m:
+        out.append(Finding(m.group(1) == facts.day_animal.lower(), "FACT",
+                           f"con giáp của ngày {m.group(1)!r} — nguồn: {facts.day_animal}"))
+    for label, want in (("tài thần", facts.wealth_god_dir), ("hỷ thần", facts.joy_god_dir)):
+        m = re.search(rf"hướng {label}[^.]*?là hướng ([^.,]+)", low)
+        if m:
+            out.append(Finding(m.group(1).strip() == want.lower(), "FACT",
+                               f"hướng {label} {m.group(1).strip()!r} — nguồn: {want}"))
 
     # ─── LOGIC: con số đếm được ───────────────────────────────────────────
     n_good = len(facts.truc_good_for)
@@ -145,6 +205,10 @@ def check(script: str, facts: DayFacts, publish_at: str) -> list[Finding]:
         (r"(?:chỉ|đúng)\s+cho\s+làm\s+(?:đúng\s+)?(\w+)\s+việc", n_good, "good_for"),
         (r"cả\s+(\w+)\s+việc\s+lịch\s+cho\s+làm", n_good, "good_for"),
         (r"(\w+)\s+việc\s+nên\s+làm", n_good, "good_for"),
+        # Bản trước để lọt "danh mục mở tới chín việc" (thật 7) và "vỏn vẹn
+        # ba, đếm chưa hết một bàn tay": số không đứng sát "danh mục".
+        (r"(?:cho làm tới|mở tới|lên tới|chỉ còn)\s+(\w+)\s+việc", n_good, "good_for"),
+        (r"vỏn vẹn\s+(\w+)(?=,)", n_good, "good_for"),
         (r"kiêng\s+(?:đúng\s+)?(\w+)\s+việc", n_bad, "bad_for"),
     )
     for pat, actual, label in claims:
