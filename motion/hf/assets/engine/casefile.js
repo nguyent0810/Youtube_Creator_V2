@@ -18,6 +18,13 @@
   const px = (v) => v + "px";
 
   const tl = gsap.timeline({ paused: true });
+  // GSAP không cho phần tử con có thời điểm âm: chỉ MỘT tween ở "t0 - 0.15" với t0 = 0 là CẢ timeline
+  // bị dời trễ theo (phụ đề, hiệu ứng lệch tiếng; audit 08/10/2026, đo bằng GSAP 3.14.2). Kẹp mọi vị trí
+  // dạng số về >= 0 tại một chỗ thay vì sửa từng "t0 - x" (vị trí dạng chuỗi như "+=0.5" giữ nguyên).
+  for (const [m, i] of [["to", 2], ["from", 2], ["fromTo", 3], ["set", 2], ["call", 2], ["add", 1]]) {
+    const f = tl[m].bind(tl);
+    tl[m] = (...a) => { if (typeof a[i] === "number" && a[i] < 0) a[i] = 0; return f(...a); };
+  }
   const show = (node, t0, t1, fade = 0.1) => {
     if (t0 > 0.001) tl.set(node, { autoAlpha: 0 }, 0);
     if (t0 <= 0.001) { node.style.opacity = 1; node.style.visibility = "visible"; tl.set(node, { autoAlpha: 1 }, 0); }   // khung 0 phải có hình (thumbnail)

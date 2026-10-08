@@ -2,7 +2,7 @@
 
     python motion/long/script_lines.py <topic>
 
-Quy ước script.md: "## CHnn · Tên chương"; mỗi dòng một câu; "‖" cuối dòng = nghỉ dài; "**[DIỄN Ý]**" = trích diễn ý; "[TRÍCH DỊCH]" = văn bản thật đã dịch;
+Quy ước script.md: "## CHnn · Tên chương"; mỗi dòng một câu; "‖" cuối dòng = nghỉ dài; "[DIỄN Ý]" (in đậm hay không) = trích diễn ý; "[TRÍCH DỊCH]" = văn bản thật đã dịch;
 "»" = phần sau là LỜI TRÍCH (đọc giọng trích, xem build_long.QUOTE_VOICE). Dòng "a: » b" tách thành 2 câu.
 Dừng ở "## Ghi chú". Câu -> chuỗi, hoặc {"t", "p": nghỉ, "q": 1 (lời trích), "diy": 1}.
 """
@@ -13,11 +13,15 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 LONG_PAUSE = 1.0
+# Nhãn DIỄN Ý in đậm hay không đều là nhãn biên tập: bản cũ chỉ bóc "**[DIỄN Ý]**", nên
+# "... [DIỄN Ý]" (ripper ch12) bị TTS đọc thành tiếng và đốt vào phụ đề (audit 08/10/2026).
+DIY = re.compile(r"\*{0,2}\[DIỄN Ý\]\*{0,2}")
+MARKUP = re.compile(r"[\[\]*_<>{}]")
 
 
 def parse(md: str):
     chs, cur = [], None
-    for raw in md.split("\n"):
+    for no, raw in enumerate(md.split("\n"), 1):
         s = raw.strip()
         if s.startswith("## Ghi chú"):
             break
@@ -28,9 +32,11 @@ def parse(md: str):
             continue
         if not cur or not s or s == "---" or s.startswith("#"):
             continue
-        diy = "**[DIỄN Ý]**" in s
+        diy = bool(DIY.search(s))
         tr = "[TRÍCH DỊCH]" in s            # văn bản thật dịch sang tiếng Việt (nhãn TRÍCH DỊCH trên cảnh quote)
-        s = s.replace("**[DIỄN Ý]**", "").replace("[TRÍCH DỊCH]", "").strip()
+        s = DIY.sub("", s).replace("[TRÍCH DỊCH]", "").strip()
+        if MARKUP.search(s):                # nhãn/định dạng lạ còn sót -> sẽ bị đọc thành tiếng
+            raise SystemExit(f"script.md dòng {no}: còn ký hiệu biên tập trong câu đọc: {s[:80]!r}")
         pause = s.endswith("‖")
         s = s.rstrip("‖").strip()
         parts = [p.strip() for p in s.split("»")]

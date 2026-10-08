@@ -11,7 +11,13 @@ while [ ! -f output/stier/STOP2 ]; do
     if [ ! -f "$fin" ] || [ "$f" -nt "$fin" ]; then
       [ -f output/stier/$s/FAILED ] && [ ! "$f" -nt output/stier/$s/FAILED ] && continue
       mkdir -p output/stier/$s
+      # LOCK bỏ lại bởi build bị giết giữa chừng (quá 3 giờ) -> gỡ, có ghi log.
+      # Bản cũ: spec đó bị bỏ qua vĩnh viễn mà không một dòng log nào.
+      if [ -n "$(find output/stier/$s/LOCK -maxdepth 0 -mmin +180 2>/dev/null)" ]; then
+        echo "[$(date +%H:%M:%S)] $W gỡ LOCK cũ (>3h) của $s"; rmdir output/stier/$s/LOCK
+      fi
       mkdir output/stier/$s/LOCK 2>/dev/null || continue
+      trap 'rmdir "output/stier/$s/LOCK" 2>/dev/null; exit 1' INT TERM
       echo "[$(date +%H:%M:%S)] $W build $s"
       if PYTHONIOENCODING=utf-8 $PY motion/stier/build.py "$s" > output/stier/$s.log 2>&1; then
         echo "[$(date +%H:%M:%S)] $W OK $s"; rm -f output/stier/$s/FAILED

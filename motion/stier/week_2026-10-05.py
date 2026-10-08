@@ -8,6 +8,14 @@
   vì playlist uploads chỉ trả tối đa 500 mục; từ nay quét theo store (item.video_id), không theo playlist.
 - Video mới (btk, yakuza5, …) KHÔNG upload ở đây: dùng upload_one.py, mỗi lần một video, cách nhau vài giờ.
 Trạng thái gốc lưu ở output/analysis/cl_week_before_2026-10-04.json.
+
+HAI CHỐT (audit 08/10/2026):
+- Chỉ gỡ lịch video S-tier CŨ (có trong snapshot 04/10), không bao giờ đụng
+  video drip (btk, yakuza5, haivan, goldenstate, escobar5, elchapo, voicemail
+  -- đăng bằng upload_one.py SAU snapshot): bản trước chạy lại là gỡ lịch cả
+  chúng, nằm private vĩnh viễn.
+- Video trong WEEK có giờ đã qua/quá sát thì BỎ QUA, không gửi publishAt:
+  publishAt quá khứ = YouTube công khai NGAY.
 """
 from __future__ import annotations
 
@@ -137,10 +145,19 @@ def main():
                 for s, v in vid.items() if v in items}
         snapf.write_text(json.dumps(snap, ensure_ascii=False, indent=1), encoding="utf-8")
     week_ids = {vid[s] for s in WEEK}
+    # Chỉ video có trong snapshot (S-tier cũ, upload 30/09) mới được gỡ lịch; video
+    # drip (trong mọi drip_*.json) thì không bao giờ.
+    snap_ids = ({x["id"] for x in json.loads(snapf.read_text(encoding="utf-8")).values()}
+                if snapf.exists() else set())
+    drip = {p["slug"] for f in Path(__file__).resolve().parent.glob("drip_*.json")
+            for p in json.loads(f.read_text(encoding="utf-8"))}
     n = 0
     for s, v in sorted(vid.items()):
         it = items.get(v)
         if not it or v in week_ids or it["status"]["privacyStatus"] != "private" or not it["status"].get("publishAt"):
+            continue
+        if s in drip or v not in snap_ids:
+            print(f"GIỮ LỊCH {s:14s} {v}  (video drip / ngoài snapshot 04/10)")
             continue
         n += 1
         print(f"GỠ LỊCH  {s:14s} {v}  (đang hẹn {it['status']['publishAt']})")
@@ -152,6 +169,11 @@ def main():
         it = items[v]
         if it["status"]["privacyStatus"] != "private":
             print(f"BỎ QUA {s}: đã {it['status']['privacyStatus']}")
+            continue
+        try:
+            publish.check_publish_at(utc(vn))
+        except publish.PublishAtPassed:
+            print(f"BỎ QUA {s}: giờ hẹn {vn} VN đã qua/quá sát -- không gửi publishAt quá khứ (sẽ công khai ngay)")
             continue
         sn = it["snippet"]
         src = next((ln for ln in sn["description"].split("\n") if ln.startswith("Nguồn:")), "")

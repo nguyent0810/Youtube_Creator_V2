@@ -43,18 +43,27 @@ def out(topic):
     return d
 
 
+def redact(msg: str) -> str:
+    """Khoá Europeana (wskey) đi trong query string: lỗi của requests in nguyên URL -> che trước khi in."""
+    return re.sub(r"(wskey=)[^&\s'\"]+", r"\1***", msg)
+
+
 def jget(url, **kw):
+    last = ""
     for k in range(4):
         try:
             r = requests.get(url, headers=H, timeout=60, **kw)
             if r.status_code == 429:
+                last = "HTTP 429 (quá giới hạn tốc độ)"
                 time.sleep(5 * (k + 1)); continue
             r.raise_for_status()
             return r.json()
-        except requests.RequestException:
-            if k == 3:
-                raise
-            time.sleep(3 * (k + 1))
+        except (requests.RequestException, ValueError) as e:   # ValueError: trả về không phải JSON
+            last = str(e)
+            if k < 3:
+                time.sleep(3 * (k + 1))
+    # bản cũ: 4 lần 429 liền thì trả None (lỗi khó hiểu ở chỗ khác), lỗi khác thì in cả khoá ra màn hình
+    raise RuntimeError(redact(f"{url}: hỏng sau 4 lần: {last}"))
 
 
 # ---------- nguồn: mỗi hàm trả về list ứng viên {src, id, title, license, artist, thumb, full, w, h, page} ----------
@@ -167,7 +176,7 @@ def cmd_search(topic, q, srcs):
         try:
             got = SRC[s](q)
         except Exception as e:
-            print(f"  {s}: LỖI {e}")
+            print(f"  {s}: LỖI {redact(str(e))}")
             continue
         got = [c for c in got if (c["src"], c["id"]) not in seen]
         print(f"  {s}: {len(got)} ứng viên mới")
@@ -212,8 +221,9 @@ def cmd_get(topic, key, x):
     c = next((c for c in db if c["x"] == x), None)
     if not c:
         raise SystemExit(f"không có {x} trong ext.json")
-    raw = requests.get(c["full"], headers=H, timeout=120).content
-    w, h = save_img(raw, od / "img" / f"{key}.jpg")
+    r = requests.get(c["full"], headers=H, timeout=120)
+    r.raise_for_status()                # trang lỗi 403/404 không được lưu thành "ảnh"
+    w, h = save_img(r.content, od / "img" / f"{key}.jpg")
     ref = f"EXT:{c['src'].split(':')[0]}:{c['id']}"
     (od / "img" / f"{key}.json").write_text(json.dumps({"file": ref, "license": c["license"], "artist": c["artist"], "title": c["title"],
                                                         "source": c["src"], "page": c["page"]}, ensure_ascii=False), encoding="utf-8")
@@ -223,9 +233,11 @@ def cmd_get(topic, key, x):
 
 def cmd_sat(topic, key, bbox, dates):
     """Sentinel-2 L2A ít mây nhất, chọn cảnh mà ô ảnh phủ trọn bbox; xuất ảnh màu thật theo đúng bbox."""
-    st = requests.post("https://planetarycomputer.microsoft.com/api/stac/v1/search", headers=H, timeout=60, json={
+    rs = requests.post("https://planetarycomputer.microsoft.com/api/stac/v1/search", headers=H, timeout=60, json={
         "collections": ["sentinel-2-l2a"], "bbox": bbox, "datetime": dates, "query": {"eo:cloud_cover": {"lt": 10}},
-        "limit": 50, "sortby": [{"field": "eo:cloud_cover", "direction": "asc"}]}).json()
+        "limit": 50, "sortby": [{"field": "eo:cloud_cover", "direction": "asc"}]})
+    rs.raise_for_status()               # lỗi máy chủ không được hiểu thành "không có cảnh nào phủ vùng này"
+    st = rs.json()
     pick = None
     for f in st.get("features", []):
         b = f["bbox"]

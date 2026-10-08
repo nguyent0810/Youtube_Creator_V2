@@ -249,6 +249,16 @@ def word_lines(t: dict, wav: Path) -> list[dict]:
 def fetch_img(file: str, dst: Path, credits: dict) -> dict:
     from PIL import Image
     meta = dst.with_suffix(".json")
+    if dst.exists() and meta.exists():
+        # Cache theo KHOÁ spec ("ripper1"), không theo file: spec đổi ảnh cho cùng khoá thì bản cũ vẫn
+        # được dùng -> hiện ẢNH KHÁC (có khi người khác) với ghi công sai (audit 08/10/2026, L16).
+        cached = json.loads(meta.read_text(encoding="utf-8")).get("file")
+        if cached != file:
+            if file.startswith("EXT:"):
+                raise SystemExit(f"{dst.name}: cache là {cached!r} nhưng spec cần {file!r} — chạy lại media_search.py get/sat")
+            print(f"  ảnh {dst.stem}: spec đổi {cached!r} -> {file!r}, tải lại")
+            dst.unlink()
+            meta.unlink()
     if file.startswith("EXT:") and not (dst.exists() and meta.exists()):   # ảnh ngoài Commons: tải trước bằng media_search.py
         raise SystemExit(f"{file}: chưa có {dst.name} — chạy motion/long/media_search.py get/sat trước")
     if not dst.exists() or not meta.exists():
@@ -367,6 +377,13 @@ def plan(ch: dict, lines: list[dict], dur: float) -> list[dict]:
         if ty in ("kinetic",) or r.get("kin"):
             for k, q in enumerate(r.get("items") or r.get("kin") or []):
                 q.setdefault("at", round(t0 + 0.2 + 0.4 * k, 3))
+        if ty == "kinetic" and r.get("items"):
+            # Dòng đầu đến muộn -> hiện sớm làm tiêu đề (tránh màn trống). Chỉnh TẠI ĐÂY để casewide.js
+            # và sfx_long.py dùng CÙNG mốc: trước đây chỉ JS chỉnh, tiếng của dòng đầu vẫn rơi vào mốc
+            # cũ, trễ hơn chữ vài giây (audit 08/10/2026). Bản kiểm trong JS giờ không còn tác dụng.
+            f = min(r["items"], key=lambda q: q["at"])
+            if f["at"] - t0 > 2.0:
+                f["at"] = round(t0 + 0.5, 3)
         if ty == "print" and r.get("side"):
             for k, q in enumerate(r["side"].get("lines") or []):
                 q.setdefault("at", round(t0 + 0.8 + 0.6 * k, 3))
@@ -421,7 +438,7 @@ HTML = """<!doctype html>
 <link href="{fonts}" rel="stylesheet" />
 <link rel="stylesheet" href="assets/engine/casewide.css" />
 <link rel="stylesheet" href="assets/engine/beat.css" />
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script src="assets/vendor/gsap.min.js"></script>
 <script src="{data}"></script>
 </head>
 <body>
@@ -527,7 +544,7 @@ def do_html(topic, only=None):
         comp = HF / "compositions" / "long" / f"{topic}_{name}.html"
         comp.parent.mkdir(parents=True, exist_ok=True)
         comp.write_text(HTML.replace("{fonts}", variety.fonts_url(spec.get("look"))).replace("{data}", f"assets/long/{topic}/{name}/data.js").replace("{dur}", f"{d:.3f}")
-                        .replace("{title}", spec["title"]).replace("{videos}", "\n".join(vids)), encoding="utf-8")
+                        .replace("{title}", re.sub(r"-{2,}", "—", spec["title"])).replace("{videos}", "\n".join(vids)), encoding="utf-8")   # "--" đóng comment HTML sớm
         sfx_long.build(case, od / name / "sfx.wav")
         quiet = [(s["t0"], s["t1"]) for s in scenes if s["type"] == "question"]
         quiet += [(s["at"] - 1.0, s["at"] + 0.4) for s in scenes if s["type"] == "slam" and spec.get("slamDrop", True)]
@@ -615,8 +632,16 @@ def do_render(topic, only=None, draft=False, force=False):
         print(f"{name}: {out.name} ({time.time() - t0:.0f}s)", flush=True)
 
 
-def do_final(topic):
+def do_final(topic, allow_stale=False):
     spec, chs, od = load(topic)
+    # `html` dựng lại data.js + mix.wav nhưng KHÔNG render: ghép silent.mp4 cũ với mix.wav mới là lệch
+    # hình-tiếng cả chương. Chỉ ghép khi hình của mọi chương khớp khoá render hiện tại.
+    stale = [n for n, _ in chs if not (od / n / "silent.key").exists()
+             or (od / n / "silent.key").read_text() != render_key(topic, n, od, False)]
+    if stale and not allow_stale:
+        raise SystemExit(f"hình chưa render lại theo dữ liệu mới: {' '.join(stale)}\n"
+                         f"  chạy: python motion/long/build_long.py {topic} render {' '.join(stale)}\n"
+                         f"  (chắc chắn hình cũ vẫn khớp tiếng, vd chỉ đổi engine: thêm --allow-stale)")
     lst = od / "concat.txt"
     lst.write_text("".join(f"file '{(od / n / 'silent.mp4').as_posix()}'\n" for n, _ in chs), encoding="utf-8")
     # hình render làm tròn lên khung 1/30s -> đệm tiếng từng chương cho ĐÚNG bằng hình, không thì lệch cộng dồn (~0,2s ở chương cuối)
@@ -655,4 +680,4 @@ if __name__ == "__main__":
         bad = variety.audit(topic)
         if bad and "--allow-repeat" not in rest:   # quá giống video gần đây: rủi ro "repetitive content" cho cả kênh
             raise SystemExit("variety audit:\n  " + "\n  ".join(bad) + "\nĐổi nhạc/look rồi dựng lại, hoặc thêm --allow-repeat nếu chấp nhận.")
-        do_final(topic)
+        do_final(topic, allow_stale="--allow-stale" in rest)

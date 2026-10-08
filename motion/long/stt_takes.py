@@ -1,4 +1,4 @@
-"""Bước 2 của best-of-N: Whisper (large-v3-turbo, CUDA) nghe lại mọi bản đọc trong tts/takes.json.
+r"""Bước 2 của best-of-N: Whisper (large-v3-turbo, CUDA) nghe lại mọi bản đọc trong tts/takes.json.
 
     C:\Tools\Youtuber\video-editor\.venv-video\Scripts\python.exe motion/long/stt_takes.py <topic>
 

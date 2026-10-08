@@ -7,6 +7,7 @@
 Chỉ lấy bản HD ≤1920 rộng (4K làm Chrome giải mã chậm, render lâu gấp nhiều lần).
 """
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -14,8 +15,19 @@ from pathlib import Path
 import httpx
 
 ROOT = Path(__file__).resolve().parents[2]
-KEY = re.search(r"PEXELS_API_KEY=(.+)", (ROOT.parent / "video-editor" / ".env").read_text(encoding="utf-8-sig")).group(1).strip()
-H = {"Authorization": KEY}
+
+
+def headers() -> dict:
+    """Khoá Pexels: biến môi trường PEXELS_API_KEY, không có thì đọc ../video-editor/.env (như cũ).
+    Đọc lúc cần, không đọc lúc import (import không còn chết khi máy không có file .env)."""
+    key = os.environ.get("PEXELS_API_KEY")
+    env = ROOT.parent / "video-editor" / ".env"
+    if not key and env.exists():
+        m = re.search(r"PEXELS_API_KEY=(.+)", env.read_text(encoding="utf-8-sig"))
+        key = m.group(1).strip() if m else None
+    if not key:
+        raise SystemExit("thiếu PEXELS_API_KEY (biến môi trường hoặc ../video-editor/.env)")
+    return {"Authorization": key}
 
 
 def out(topic):
@@ -28,7 +40,7 @@ def search(topic, queries):
     idx_p = out(topic) / "index.json"
     idx = json.loads(idx_p.read_text(encoding="utf-8")) if idx_p.exists() else {}
     for q in queries:
-        r = httpx.get("https://api.pexels.com/videos/search", headers=H, timeout=30,
+        r = httpx.get("https://api.pexels.com/videos/search", headers=headers(), timeout=30,
                       params={"query": q, "orientation": "landscape", "per_page": 30, "size": "medium"})
         r.raise_for_status()
         print(f"\n== {q} ({r.json().get('total_results')})")
@@ -49,11 +61,16 @@ def get(topic, ids):
         v = idx[i]
         fs = sorted((f for f in v["files"] if f["w"] <= 1920 and f["w"] >= f["h"]), key=lambda f: -f["w"])
         f = fs[0]
-        with httpx.stream("GET", f["link"], timeout=120, allow_redirects=True) as r:
+        # httpx dùng follow_redirects (allow_redirects là tham số của requests -> TypeError
+        # ngay lần tải đầu). Tải vào .part rồi mới đổi tên: một lần đứt mạng không để lại
+        # .mp4 cụt mà lần chạy sau tưởng là đã tải xong (dst.exists() ở trên).
+        part = dst.with_suffix(".mp4.part")
+        with httpx.stream("GET", f["link"], timeout=120, follow_redirects=True) as r:
             r.raise_for_status()
-            with open(dst, "wb") as fh:
+            with open(part, "wb") as fh:
                 for ch in r.iter_bytes():
                     fh.write(ch)
+        part.replace(dst)
         print(f"{i}: {f['w']}x{f['h']} {v['dur']}s {dst.stat().st_size // 1024}KB  {v['slug'][:50]}")
 
 

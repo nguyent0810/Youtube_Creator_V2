@@ -21,7 +21,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent
 CACHE = ROOT / "chunks_cache" / "geo" / "countries-50m.json"
-SOURCE = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json"
+SOURCE = "https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-50m.json"   # ghim bản chính xác: "@2" trôi theo bản mới
 # Khung vẽ bản đồ trong khung 1920x1080 (chừa đáy cho phụ đề, trái cho tiêu đề)
 BOX = (150, 120, 1770, 860)
 
@@ -30,7 +30,11 @@ def _topology() -> dict:
     if not CACHE.exists():
         CACHE.parent.mkdir(parents=True, exist_ok=True)
         with urllib.request.urlopen(SOURCE, timeout=60) as r:
-            CACHE.write_bytes(r.read())
+            data = r.read()
+        json.loads(data)                                   # tải dở/hỏng thì dừng ở đây, không cache rác
+        tmp = CACHE.with_suffix(".part")
+        tmp.write_bytes(data)
+        tmp.replace(CACHE)
     return json.loads(CACHE.read_text(encoding="utf-8"))
 
 

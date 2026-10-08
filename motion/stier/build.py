@@ -90,6 +90,11 @@ def word_lines(t: dict, wav: Path) -> list[dict]:
 # ---------------- ảnh (Commons, phạm vi công cộng) ----------------
 def fetch_img(file: str, dst: Path) -> dict:
     from PIL import Image
+    src = dst.with_suffix(".src")       # tên file Commons của ảnh đang cache (ảnh cache theo KHOÁ spec)
+    if dst.exists() and (not src.exists() or src.read_text(encoding="utf-8").strip() != file):
+        # spec đổi ảnh cho cùng khoá -> bản cũ là ảnh khác (audit 08/10/2026, L16). Cache cũ chưa
+        # ghi nguồn thì không kiểm được -> tải lại một lần cho chắc.
+        dst.unlink()
     if not dst.exists():
         def info(width=None):
             prm = {"action": "query", "prop": "imageinfo", "titles": file, "iiprop": "url|size|extmetadata",
@@ -127,6 +132,7 @@ def fetch_img(file: str, dst: Path) -> dict:
             im.thumbnail((2400, 2400))
         dst.parent.mkdir(parents=True, exist_ok=True)
         im.save(dst, quality=90)
+        src.write_text(file, encoding="utf-8")
         time.sleep(1.0)
     with Image.open(dst) as im:
         return {"w": im.size[0], "h": im.size[1]}
@@ -244,7 +250,7 @@ HTML = """<!doctype html>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,600;0,700;0,800;0,900;1,600&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/engine/casefile.css" />
 <link rel="stylesheet" href="assets/engine/beat.css" />
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script src="assets/vendor/gsap.min.js"></script>
 <script src="assets/cases/{slug}/data.js"></script>
 </head>
 <body>
@@ -305,7 +311,7 @@ def build(slug: str, render: bool = True, draft: bool = False) -> Path:
     (adir / "data.js").write_text("window.CASE = " + json.dumps(case, ensure_ascii=False) + ";\n", encoding="utf-8")
     comp = HF / "compositions" / "cases" / f"{slug}.html"
     comp.parent.mkdir(parents=True, exist_ok=True)
-    comp.write_text(HTML.replace("{slug}", slug).replace("{dur}", str(dur)).replace("{title}", spec["title"]), encoding="utf-8")
+    comp.write_text(HTML.replace("{slug}", slug).replace("{dur}", str(dur)).replace("{title}", re.sub(r"-{2,}", "—", spec["title"])), encoding="utf-8")   # "--" trong tiêu đề sẽ đóng comment HTML sớm
     sfx.build(case, od / "sfx.wav")
     if not render:
         return comp

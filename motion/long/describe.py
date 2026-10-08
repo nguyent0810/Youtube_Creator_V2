@@ -9,6 +9,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+MAX_DESCRIPTION_BYTES = 5000
 MUSIC = {  # file -> tên gốc trên incompetech (Kevin MacLeod, CC BY 4.0)
     "oppressive_gloom.mp3": "Oppressive Gloom", "ossuary_6_air.mp3": "Ossuary 6 - Air", "echoes_of_time_v2.mp3": "Echoes of Time v2",
     "darkest_child.mp3": "Darkest Child", "gathering_darkness.mp3": "Gathering Darkness", "lightless_dawn.mp3": "Lightless Dawn",
@@ -53,6 +54,8 @@ def main(topic):
         f = spec["imgs"][k]
         mp = od / "img" / f"{k}.json"
         m = json.loads(mp.read_text(encoding="utf-8"))
+        if m.get("file") != f:      # ảnh cache của khoá này là file khác -> ghi công sai người
+            raise SystemExit(f"describe: ảnh {k} đang cache {m.get('file')!r}, spec cần {f!r} — chạy build_long.py html trước")
         if m["license"].lower().startswith(("public", "pd", "cc0", "no restr")):
             pd += 1
             if m.get("source", "").split(":")[0] in INST:   # PD từ kho bảo tàng: vẫn ghi tên kho (lịch sự, không bắt buộc)
@@ -82,10 +85,27 @@ def main(topic):
         if b not in MUSIC and mj.exists():
             m = json.loads(mj.read_text(encoding="utf-8"))
             name = re.sub(r"\.(flac|ogg|oga|wav|mp3)$", "", m["file"][5:], flags=re.I)
-            lines.append(f"Mascagni — Intermezzo (Cavalleria rusticana) · {m.get('short', name[:40])} — Wikimedia Commons — {m['license']}")
+            # Tên tác phẩm lấy từ json ("work") -- trước đây MỌI bản thu Commons đều bị ghi là
+            # Intermezzo của Mascagni, bản thu khác sẽ bị ghi công sai.
+            work = m.get("work") or ("Mascagni — Intermezzo (Cavalleria rusticana)"
+                                     if re.search(r"intermezzo|cavalleria", name, re.I) else name[:60])
+            lines.append(f"{work} · {m.get('short', name[:40])} — Wikimedia Commons — {m['license']}")
     lines += ["", " ".join("#" + x for x in meta.get("hashtags", []))]
-    (od / "description.txt").write_text("\n".join(lines).strip() + "\n", encoding="utf-8")
-    print((od / "description.txt").read_text(encoding="utf-8"))
+    text = "\n".join(lines).strip() + "\n"
+    (od / "description.txt").write_text(text, encoding="utf-8")
+    print(text)
+    # YouTube đếm 5.000 BYTE (chữ Việt có dấu 2-3 byte) và từ chối '<' '>'. Báo ngay ở đây,
+    # không để tới lúc upload sau nhiều giờ render (publish_long.py cũng chặn lại lần nữa).
+    problems = []
+    n = len(text.encode("utf-8"))
+    if n > MAX_DESCRIPTION_BYTES:
+        problems.append(f"mô tả {n} byte > {MAX_DESCRIPTION_BYTES}: giảm credit_name_len/credit_by_len "
+                        f"(đang {meta.get('credit_name_len', 48)}/{meta.get('credit_by_len', 40)}) hoặc bớt nguồn")
+    if "<" in text or ">" in text:
+        problems.append("mô tả có ký tự '<' hoặc '>' (YouTube từ chối): sửa summary/more/sources hoặc tên ảnh")
+    if problems:
+        raise SystemExit("describe: " + "; ".join(problems))
+    print(f"OK: {n}/{MAX_DESCRIPTION_BYTES} byte")
 
 
 if __name__ == "__main__":

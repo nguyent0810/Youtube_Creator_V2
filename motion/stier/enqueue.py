@@ -30,7 +30,10 @@ FOOT = ("Ảnh tư liệu: Wikimedia Commons (phạm vi công cộng). Dữ ki�
 
 def args():
     a = sys.argv[1:]
-    start = a[a.index("--start") + 1] if "--start" in a else "2026-10-15"
+    if "--start" not in a:
+        # Bản cũ mặc định 2026-10-15: sau ngày đó là xếp lịch vào quá khứ.
+        raise SystemExit("cần --start YYYY-MM-DD (ngày bắt đầu xếp lịch, từ ngày mai trở đi)")
+    start = a[a.index("--start") + 1]
     limit = int(a[a.index("--limit") + 1]) if "--limit" in a else 999
     only = a[a.index("--only") + 1].split(",") if "--only" in a else None
     return start, "--dry" in a, limit, only

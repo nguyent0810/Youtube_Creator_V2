@@ -29,6 +29,13 @@
   const W = 1920, H = 1080;
 
   const tl = gsap.timeline({ paused: true });
+  // GSAP không cho phần tử con có thời điểm âm: chỉ MỘT tween ở "t0 - 0.15" với t0 = 0 là CẢ timeline
+  // bị dời trễ theo (phụ đề, hiệu ứng lệch tiếng; audit 08/10/2026, đo bằng GSAP 3.14.2). Kẹp mọi vị trí
+  // dạng số về >= 0 tại một chỗ thay vì sửa từng "t0 - x" (vị trí dạng chuỗi như "+=0.5" giữ nguyên).
+  for (const [m, i] of [["to", 2], ["from", 2], ["fromTo", 3], ["set", 2], ["call", 2], ["add", 1]]) {
+    const f = tl[m].bind(tl);
+    tl[m] = (...a) => { if (typeof a[i] === "number" && a[i] < 0) a[i] = 0; return f(...a); };
+  }
   const show = (node, t0, t1, fade = 0.25) => {
     if (t0 > 0.001) tl.set(node, { autoAlpha: 0 }, 0);
     if (t0 <= 0.001) { node.style.opacity = 1; node.style.visibility = "visible"; tl.set(node, { autoAlpha: 1 }, 0); }   // khung 0 phải có hình
@@ -222,7 +229,7 @@
   };
   B.kinetic = (s, d) => { bg(s, d, 0.62);
     const it = s.items.map((q) => ({ ...q })), f = it.reduce((a, q) => (q.at < a.at ? q : a), it[0]);
-    if (f.at - s.t0 > 2.0) f.at = s.t0 + 0.5;   // dòng đầu đến muộn -> hiện sớm làm tiêu đề, tránh màn trống
+    if (f.at - s.t0 > 2.0) f.at = s.t0 + 0.5;   // dòng đầu đến muộn -> hiện sớm làm tiêu đề; build_long.plan đã chỉnh sẵn (để SFX cùng mốc), đây chỉ là lưới an toàn
     kinetic(it, d, s.align); common(s, d); };
 
   /* ---------- slam: một dòng chữ đập mạnh trên nền tư liệu tối ----------
@@ -371,7 +378,7 @@
      dy=true -> nhãn "DIỄN Ý" (không phải nguyên văn). sfx: key mỗi ký tự (tối đa 40) từ at trong typeDur */
   B.quote = (s, d) => {
     bg(s, d, 0.8);
-    const pp = el("div", "qpaper", null, d); el("div", "qm", "“", pp); if (s.dy || s.lbl) el("div", "dy", s.lbl || "DIỄN Ý", pp);
+    const pp = el("div", "qpaper", null, d); el("div", "qm", "“", pp); if (s.dy || s.lbl) el("div", "dy", esc(s.lbl || "DIỄN Ý"), pp);
     const qt = el("div", "qt", null, pp); const L = [...s.text].length; qt.style.fontSize = px(L < 70 ? 50 : L < 140 ? 40 : 32);
     const spans = [...s.text].map((ch) => el("span", null, esc(ch), qt));
     spans.forEach((sp, k) => tl.set(sp, { opacity: 1 }, s.at + (k / L) * s.typeDur));
@@ -593,7 +600,7 @@
     const leg = el("div", "dleg", null, d); leg.style.top = px(y0 + rows * cell + 34);
     (s.groups || []).forEach((g) => { const part = dots.slice(g.from || 0, (g.from || 0) + g.n);
       part.forEach((e, k) => tl.set(e, { attr: { class: "dt " + g.cls } }, g.at + (k / part.length) * 0.8));
-      if (g.label) { const it = el("div", "g", `<i class="dt ${g.cls}" style="position:static"></i>${esc(g.label)}`, leg); tl.to(it, { opacity: 1, duration: 0.3 }, g.at); } });
+      if (g.label) { const it = el("div", "g", `<i class="dt ${String(g.cls).replace(/[^\w -]/g, "")}" style="position:static"></i>${esc(g.label)}`, leg); tl.to(it, { opacity: 1, duration: 0.3 }, g.at); } });
     common(s, d);
   };
 
