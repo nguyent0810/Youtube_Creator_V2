@@ -2,7 +2,7 @@
 
 Xưởng nội dung YouTube cho ba kênh: **Phong Thủy (FS)**, **Phật Giáo (BUD)**, **Hình Sự (CL)**.
 
-Viết lại từ đầu. Không kế thừa code của v1.
+Viết lại từ đầu. Không kế thừa code của v1. Ngoại lệ: dựng video 9:16 (`factory/assemble.py`) vẫn gọi gói `core.*` của repo anh em video-editor, chạy trong venv của nó (`PY_VID`).
 
 ---
 
@@ -139,6 +139,8 @@ with store.connect() as conn:
 
 TTS xuất timing **trong lúc** tổng hợp, không đoán lại bao giờ.
 
+Phạm vi: điều này đúng cho Shorts (`factory/`). Video dài (`motion/long`) có dùng faster-whisper, nhưng chỉ để **chấm** các bản đọc (best-of-N: nghe lại, so với văn bản gốc, chọn bản đọc đúng nhất). Mốc từng từ của phụ đề vẫn lấy từ văn bản gốc.
+
 v1 để video-editor chạy Whisper phiên âm ngược từ audio — tốn ~13 giây mỗi short, và tệ hơn, Whisper đoán sai dấu tiếng Việt nên phụ đề lệch với lời đọc. Vô lý: ta có sẵn văn bản gốc chính xác 100%, vì chính ta vừa đọc nó ra.
 
 Kết quả đo thật trên máy Windows (i5-12400F, CPU/ONNX):
@@ -164,6 +166,8 @@ TTS chạy **CPU**, không GPU — có chủ đích. Tài liệu upstream nói t
 | `thumbnail.py` — khung hình + chữ | ✅ |
 | `publish.py` — YouTube API, hẹn giờ | ✅ **đã chạy thật** (probe 20/09/2026) |
 | `run_pipeline.py` — một lệnh cho cả đường ống | ✅ |
+| `motion/stier/` — Short hồ sơ S-tier (HyperFrames, đăng lẻ bằng `upload_one.py`/`drip.py`) | ✅ chạy thật |
+| `motion/long/` — video dài 16:9 theo chương (`build_long.py`, `publish_long.py`) | ✅ chạy thật |
 
 ```bash
 python -m pytest tests -q
