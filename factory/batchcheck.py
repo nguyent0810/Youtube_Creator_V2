@@ -91,8 +91,13 @@ def check_batch(bundles) -> list[BatchIssue]:
             else f"mở bài đa dạng (kiểu lặp nhiều nhất chỉ {cnt}/{n})"))
 
     # ─── LẶP CÂU CHỐT ─────────────────────────────────────────────────────
-    closers = collections.Counter(b.script.rsplit(".", 2)[-2].strip().lower()
-                                  for b in bs if b.script.count(".") >= 2)
+    # Câu chốt = câu CUỐI thật sự. Bản cũ lấy rsplit(".") -- kịch bản kết bằng
+    # "?" (34/35 BUD, 73/186 FS) thì ra câu áp chót, nên 6 kịch bản cùng một
+    # câu hỏi kết vẫn được báo "câu chốt đa dạng".
+    def _last(script: str) -> str:
+        parts = [x.strip() for x in re.split(r"(?<=[.!?…])\s+", script.strip()) if x.strip()]
+        return parts[-1].lower() if len(parts) >= 2 else ""
+    closers = collections.Counter(c for c in (_last(b.script) for b in bs) if c)
     if closers and n >= MIN_BATCH_FOR_RATIO:
         ctop, ccnt = closers.most_common(1)[0]
         cr = ccnt / n

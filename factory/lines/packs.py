@@ -68,19 +68,29 @@ _PENALTY = re.compile(r"(phạt tù|tù chung thân|tử hình|cải tạo khôn
 
 
 def check_citations(script: str, cite_ke: list | None = None) -> list[str]:
-    """Trích dẫn kiểm được thì máy kiểm. Trả danh sách lỗi."""
+    """Trích dẫn kiểm được thì máy kiểm. Trả danh sách lỗi.
+
+    Siết thêm (audit 08/10/2026): "điều 999" viết thường và "Ðiều" (chữ Ð
+    U+00D0 nhìn y hệt Đ) từng lọt; điều bị Luật 86/2025 sửa mà khung phạt nằm
+    ở CÂU KẾ TIẾP ("Điều 353 quy định tội tham ô. Mức cao nhất vẫn là tử
+    hình.") cũng lọt; số kệ đọc trong lời ("kệ 500") không được đối chiếu."""
     errs = []
     law = blhs()
-    for s in sentences(script):
-        for so in re.findall(r"Điều (\d+[a-z]?)", s):
+    text = script.replace("\u00d0", "\u0110").replace("\u00f0", "\u0111")
+    sents = sentences(text)
+    for i, s in enumerate(sents):
+        for so in re.findall(r"\b[Đđ]iều (\d+[a-z]?)\b", s):
             if law and so not in law:
                 errs.append(f"Điều {so} không có trong BLHS")
-            elif law and law[so].get("sua_2025") and _PENALTY.search(s):
+            elif law and law[so].get("sua_2025") and _PENALTY.search(" ".join(sents[i:i + 2])):
                 errs.append(f"Điều {so} bị Luật 86/2025 sửa — không nêu khung phạt từ bản 2017")
     ke = phapcu()
-    for n in (cite_ke or []):
+    said = {int(n) for n in re.findall(r"\bkệ (?:số )?(\d{1,3})\b", text, re.IGNORECASE)}
+    for n in sorted(set(int(x) for x in (cite_ke or [])) | said):
         if ke and str(n) not in ke:
             errs.append(f"kệ {n} không có trong Pháp Cú")
+    if said and cite_ke is not None and not said <= {int(x) for x in cite_ke}:
+        errs.append(f"lời đọc nhắc kệ {sorted(said)} nhưng nguồn ghi kệ {sorted(cite_ke)}")
     return errs
 
 

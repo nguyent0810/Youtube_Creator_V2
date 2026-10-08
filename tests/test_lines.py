@@ -117,3 +117,29 @@ def test_novelty_catches_real_duplicates_not_false_ones():
           ("14 tuổi phạm tội có bị xử lý hình sự?", "Nhặt được của rơi không trả có phạm tội?")]
     assert all(similar(a, b) for a, b in dup)
     assert not any(similar(a, b) for a, b in ok)
+
+
+def test_penalty_sentence_wrapped_across_lines_is_read_in_full():
+    """Lỗi thật (audit 08/10/2026): chỉ đọc dòng vật lý đầu của khoản, nên
+    Điều 301 bị viết 'khoản 1: 3–7 năm, luật chia 3 khung' (thật: 01–04 năm, 4 khung)."""
+    law = packs.blhs()
+    ks = [k for k in cl._khoan(law["301"]["noi_dung"]) if not k.startswith("Pháp nhân")]
+    assert cl._phat(ks[0]) == "phạt tù từ 1 năm đến 4 năm"
+    hist = [{"pillar": "dieu", "key": k, "angle": "", "script": "", "publish_at": ""} for k in law if k != "301"]
+    d = cl.dieu_luat(hist, None)
+    assert d.key == "301"
+    assert "khoản 1, mức nhẹ nhất là phạt tù từ 1 năm đến 4 năm" in d.script
+    assert "Luật chia 4 khung" in d.script
+
+
+def test_split_number_typo_in_source_is_rejoined():
+    ks = cl._khoan(packs.blhs()["205"]["noi_dung"])
+    assert cl._phat(ks[1]) == "phạt tiền từ 100 triệu đồng đến 500 triệu đồng hoặc phạt tù từ 1 năm đến 5 năm"
+
+
+def test_article_317_is_its_own_article():
+    """Tiêu đề 'Ðiều 317.' (chữ Ð U+00D0) từng làm Điều 317 dính vào Điều 316."""
+    law = packs.blhs()
+    assert law["317"]["ten"] == "Tội vi phạm quy định về an toàn thực phẩm"
+    assert "an toàn thực phẩm" not in law["316"]["noi_dung"]
+    assert not any("không có trong" in m for m in packs.check_citations("Theo Điều 317 Bộ luật Hình sự."))

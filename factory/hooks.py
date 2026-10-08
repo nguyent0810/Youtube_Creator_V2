@@ -60,7 +60,7 @@ HOOKS: tuple[Hook, ...] = (
         name="Con số / kết quả ngay",
         what="Cụ thể hoá ngay lập tức, não bám vào con số nhanh hơn khái niệm.",
         how="Đưa số liệu hoặc mốc cụ thể vào câu đầu.",
-        example="Có đúng 5 khung giờ trong ngày mai được xem là giờ hoàng đạo.",
+        example="Ngày nào cũng có đúng sáu khung giờ hoàng đạo -- ngày mai là những giờ nào?",
         avoid_on=(),
         trap="Con số bịa hoặc không kiểm chứng được -- sai số liệu là sai khách quan.",
     ),

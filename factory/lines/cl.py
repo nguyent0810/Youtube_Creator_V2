@@ -86,9 +86,24 @@ def _khoan(noi_dung: str) -> list[str]:
 
 
 def _phat(k: str) -> str | None:
-    # Dừng ở ":" / ";" / hết dòng -- KHÔNG dừng ở "." vì số tiền "10.000.000"
-    # có dấu chấm (lỗi thật: ra "phạt tiền từ 10.").
-    m = re.search(r"thì bị (.+?)\s*(?::|;|$)", k.split("\n")[0])
+    """Câu phạt của một khoản: "thì bị ..." trong CÂU DẪN của khoản.
+
+    Câu dẫn = mọi dòng trước điểm a), b)... Bản cũ chỉ đọc DÒNG VẬT LÝ ĐẦU,
+    mà văn bản BLHS xuống dòng giữa câu: khoản 1 Điều 301 bị bỏ, khoản 2 bị
+    gọi là "khoản 1" ("mức nhẹ nhất 3–7 năm", thật là 01–04 năm) và "luật
+    chia 3 khung" (thật 4) -- vẫn qua kiểm vì chốt "khoản 1 phải nhẹ nhất"
+    so nhầm trên khoản 2.
+
+    Dừng ở ":" / ";" / hết câu dẫn / ". " -- KHÔNG dừng ở mọi dấu "." vì số
+    tiền "10.000.000" có dấu chấm (lỗi thật: ra "phạt tiền từ 10.")."""
+    lead = []
+    for ln in k.split("\n"):
+        if lead and re.match(r"\s*[a-zđ]\)\s", ln):
+            break
+        lead.append(ln.strip())
+    # Nguồn có lỗi gõ "100.000. 000 đồng" (Điều 205): nối lại số trước khi tách câu.
+    text = re.sub(r"(\d)\.\s+(\d{3})\b", r"\1.\2", " ".join(lead))
+    m = re.search(r"thì bị (.+?)\s*(?::|;|$|\.\s+(?=[^\d\s]))", text)
     return _speak(m.group(1).strip().rstrip(".")) if m else None
 
 

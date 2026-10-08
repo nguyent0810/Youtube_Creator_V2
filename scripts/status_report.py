@@ -21,7 +21,21 @@ from factory import channels, store  # noqa: E402
 VN = timedelta(hours=7)
 ICON = {"published": "✅", "assembled": "🎬", "spoken": "🔊", "pending": "📝", "failed": "❌"}
 POS = [a for a in sys.argv[1:] if a[:1].isdigit()]
-ALL_CH = "--channel" not in sys.argv
+ALL_CH = not any(a.startswith("--chan") for a in sys.argv[1:])
+
+
+def quota_reset_vn(day: date) -> str:
+    """Giờ VN của mốc reset quota (nửa đêm giờ Thái Bình Dương) cho ngày `day`.
+
+    Việt Nam không đổi giờ; Mỹ thì có: giờ mùa hè (PDT, UTC-7) từ Chủ nhật
+    thứ hai của tháng 3 tới Chủ nhật đầu tiên của tháng 11 -> 14:00 VN; còn
+    lại (PST, UTC-8) -> 15:00 VN. Bản cũ ghi cứng "14:00 giờ VN" quanh năm."""
+    def nth_sunday(y, m, n):
+        d = date(y, m, 1)
+        d += timedelta(days=(6 - d.weekday()) % 7)
+        return d + timedelta(weeks=n - 1)
+    dst = nth_sunday(day.year, 3, 2) < day <= nth_sunday(day.year, 11, 1)
+    return "14:00" if dst else "15:00"
 
 
 def lines_of(ch):
@@ -67,7 +81,7 @@ def report(CH):
               for p, _, _ in LINES}
 
   out = []
-  out.append(f"# Trạng thái kênh Phong Thủy (FS)\n")
+  out.append(f"# Trạng thái kênh {channels.CHANNELS[CH]['ten']} ({CH})\n")
   out.append(f"_Cập nhật {datetime.now():%d/%m/%Y %H:%M} (giờ máy) · sinh bằng `python scripts/status_report.py`_\n")
   out.append("Giờ trong bảng là giờ Việt Nam. Mọi video đều **riêng tư + hẹn giờ**; YouTube tự công khai đúng giờ.\n")
   out.append("## Tóm tắt\n")
@@ -101,23 +115,28 @@ def report(CH):
       out.append(f"| {d:%a %d/%m} | " + " | ".join(cells) + f" | {n}/{N} |")
 
   out.append("\n### Làm tiếp\n")
+  todo = []
   nxt = min((d for d in days if d not in full), default=None)
-  out.append(f"1. Ngày đầu tiên chưa đủ {N}/{N}: **{nxt:%d/%m/%Y}**." if nxt else f"1. Mọi ngày trong khoảng đã đủ {N}/{N}.")
-  out.append("2. Quota upload reset **14:00 giờ VN** (07:00 UTC mùa hè, 08:00 UTC mùa đông); "
-             "trần thực tế ~92 video/ngày, RIÊNG cho từng kênh.")
+  todo.append(f"Ngày đầu tiên chưa đủ {N}/{N}: **{nxt:%d/%m/%Y}**." if nxt else f"Mọi ngày trong khoảng đã đủ {N}/{N}.")
+  today = (datetime.utcnow() + VN).date()
+  todo.append(f"Quota upload reset **{quota_reset_vn(today)} giờ VN** hôm nay (nửa đêm giờ Thái Bình Dương: "
+              "14:00 VN khi Mỹ dùng giờ mùa hè, 15:00 VN khi giờ mùa đông); trần thực tế ~92 video/ngày, "
+              "RIÊNG cho từng kênh.")
   if waiting:
-      out.append(f"3. Có item chờ quota → sau giờ reset: `python scripts/run_pipeline.py resume --channel {CH}`")
+      todo.append(f"Có item chờ quota → sau giờ reset: `python scripts/run_pipeline.py resume --channel {CH}`")
   if CH == "FS":
       pill_last = min((last_pub[p] for p, _, _ in LINES[1:] if last_pub[p]), default=None)
       if pill_last:
           d0 = pill_last + timedelta(days=1)
-          out.append(f"4. Nạp tiếp 4 dòng pillar (18 ngày ≈ 72 upload ≈ 1 ngày quota):\n"
-                     f"   `python scripts/run_pipeline.py {d0:%Y-%m-%d} 18 --only pillars`")
+          todo.append(f"Nạp tiếp 4 dòng pillar (18 ngày ≈ 72 upload ≈ 1 ngày quota):\n"
+                      f"   `python scripts/run_pipeline.py {d0:%Y-%m-%d} 18 --channel FS --only pillars`")
       lich_last = last_pub["lich-"]
       if lich_last:
-          out.append(f"5. Lịch đã phủ tới {lich_last:%d/%m}. Nạp tiếp tháng 1/2027:\n"
-                     f"   `python scripts/run_pipeline.py 2027-01-01 31 --only lich` (Lịch đăng trước 1 ngày)")
-      out.append("6. Kinh Dịch: chạy lại `python scripts/fetch_kinhdich.py` định kỳ để nhận thêm quẻ có bản dịch.")
+          d1 = lich_last + timedelta(days=1)
+          todo.append(f"Lịch đã phủ tới {lich_last:%d/%m/%Y}. Nạp tiếp từ {d1:%d/%m/%Y}:\n"
+                      f"   `python scripts/run_pipeline.py {d1:%Y-%m-%d} 31 --channel FS --only lich` "
+                      "(Lịch đăng trước 1 ngày)")
+      todo.append("Kinh Dịch: chạy lại `python scripts/fetch_kinhdich.py` định kỳ để nhận thêm quẻ có bản dịch.")
   else:
       L = channels.lines(CH)
       from factory.lines import packs
@@ -131,10 +150,11 @@ def report(CH):
               left.append(f"{line}: còn {n_left} kịch bản chưa dùng")
       last_any = max((d for (d, pp), r in slot.items()), default=None)
       d0 = (last_any + timedelta(days=1)) if last_any else date.today()
-      out.append(f"4. Gói kịch bản còn lại: " + " · ".join(left))
-      out.append(f"   Hết gói thì viết thêm vào `data/packs/{CH}/<dòng>.json` (Claude viết trong chat), rồi chạy:\n"
-                 f"   `python scripts/run_pipeline.py {d0:%Y-%m-%d} 7 --channel {CH}`")
-  out.append(f"7. Sau mỗi lần đăng: `python scripts/verify_published.py --channel {CH}` phải ra XÁC MINH ĐẠT.")
+      todo.append("Gói kịch bản còn lại: " + " · ".join(left) + "\n"
+                  f"   Hết gói thì viết thêm vào `data/packs/{CH}/<dòng>.json` (Claude viết trong chat), rồi chạy:\n"
+                  f"   `python scripts/run_pipeline.py {d0:%Y-%m-%d} 7 --channel {CH}`")
+  todo.append(f"Sau mỗi lần đăng: `python scripts/verify_published.py --channel {CH}` phải ra XÁC MINH ĐẠT.")
+  out += [f"{i}. {t}" for i, t in enumerate(todo, 1)]
   return out, (len(full), len(partial), len(empty))
 
 
@@ -144,8 +164,10 @@ NOTES = [
     "- **Pexels ~200 lượt tìm/giờ.** Đã có cache tìm kiếm 7 ngày (`cache/pexels/`) + thử lại khi tải ảnh lỗi 5xx.",
     "- **Không bao giờ** chạy `reset_items.py` mà không có pattern (script đã chặn); item đã có video_id không bị đụng.",
     "- Bundle đã có thì không bị ghi đè; chạy lại cùng dải ngày là vô hại.",
-    "- BLHS: chỉ dùng bản 2017 cho điều KHÔNG bị Luật 86/2025/QH15 sửa (48 điều bị gắn cờ, khuôn tự bỏ qua).",
-    "- FS: lỗi đã chấp nhận, không sửa video đã đăng — 11 video Lịch đọc sai con vật của tú; 92 video Lịch dùng B-roll theo đường dịch máy cũ.",
+    "- BLHS: chỉ dùng bản 2017 cho điều KHÔNG bị Luật 86/2025/QH15 sửa (điều bị gắn cờ `sua_2025`, khuôn tự bỏ qua).",
+    "- FS: 92 video Lịch 01/10–31/12/2026 sinh bằng vnlunar <= 1.0.4 nói SAI Trực (92/92) và sai sao ở 62/92 ngày "
+    "(audit 08/10/2026). Thay video chưa lên sóng theo `docs/RUNBOOK-lich.md`.",
+    "- FS: 11 video Lịch đầu đọc sai con vật của tú; 92 video Lịch dùng B-roll theo đường dịch máy cũ.",
 ]
 
 chs = list(channels.CHANNELS) if ALL_CH else [channels.pick()]

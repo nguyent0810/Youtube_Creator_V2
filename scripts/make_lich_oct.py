@@ -22,6 +22,11 @@ cũng hành động được hơn: TRỰC của ngày và danh sách việc hợ
 XƯNG HÔ: mọi kịch bản nói "ngày mai", vì video đăng trước một ngày. Lùi
 lịch mà giữ câu chữ cũ thì người xem làm theo vào SAI NGÀY.
 """
+
+# SCRIPT MỘT LẦN (01–07/10/2026), đã thay bằng make_lich_month.py. Chạy lại sẽ
+# ghi đè 7 bundle ĐÃ LÊN SÓNG bằng tiêu đề cũ (audit 08/10/2026) -- chặn hẳn.
+raise SystemExit("make_lich_oct.py là script một lần đã hết hạn; dùng scripts/make_lich_month.py")
+
 import sys
 from datetime import date
 from pathlib import Path

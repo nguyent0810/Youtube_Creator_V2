@@ -18,7 +18,10 @@ def signals(script: str) -> dict:
     words = script.split()
     first = s[0] if s else ""
     nums = re.findall(r"\d+", script)
-    caps = re.findall(r"(?<![.!?]\s)(?<!^)\b[A-ZĐÀ-Ỹ][a-zà-ỹđ]+", script)
+    # Chữ HOA thật (str.isupper): lớp [A-ZĐÀ-Ỹ] cũ chứa cả chữ thường có dấu,
+    # nên "đây", "đã", "được" bị đếm là thuật ngữ viết hoa.
+    caps = [m.group(0) for m in re.finditer(r"(?<![.!?]\s)(?<!^)\b\w+", script)
+            if m.group(0)[0].isupper()]
     return {
         "words": len(words),
         "sentences": len(s),

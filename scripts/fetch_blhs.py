@@ -11,6 +11,14 @@ VÌ SAO PHẢI ĐÁNH DẤU 2025: bản hợp nhất trên Wikisource dừng ở
 nguồn đã gặp với vnlunar. Điều nào có số xuất hiện trong phần sửa đổi thì
 gắn `sua_2025 = true`; khuôn "điều luật" CHẶN các điều này. Đánh dấu thừa
 (điều chỉ được nhắc tới) còn hơn bỏ sót.
+
+DỪNG CHỨ KHÔNG GHI BỪA (audit 08/10/2026): bản cũ bỏ qua chương tải lỗi, và
+nếu không tìm thấy "Điều 1."/"Điều 2." trong luật sửa đổi thì KHÔNG điều nào
+được gắn cờ -- rồi vẫn ghi đè data/blhs.json. Khuôn "điều luật" khi đó sẽ
+đọc khung phạt 2017 như luật hiện hành (vd tử hình tội tham ô, đã bỏ năm
+2025). Giờ: thiếu chương, thiếu phần sửa đổi, hay số điều/số cờ bất thường
+là dừng, file cũ giữ nguyên. Chữ "Ð" (U+00D0, nhìn y hệt "Đ") trong nguồn
+từng làm Điều 317 dính vào Điều 316 -- giờ được chuẩn hoá trước khi tách.
 """
 import html
 import json
@@ -45,7 +53,9 @@ def page_text(title: str) -> str:
     h = re.sub(r"<(script|style)[^>]*>.*?</\1>", "", h, flags=re.S)
     h = re.sub(r"<sup[^>]*>.*?</sup>", "", h, flags=re.S)          # chú thích [12]
     h = re.sub(r"<br\s*/?>|</p>|</div>|</li>|</h\d>", "\n", h)
-    t = html.unescape(re.sub(r"<[^>]+>", "", h)).replace("​", "")
+    t = html.unescape(re.sub(r"<[^>]+>", "", h)).replace("\u200b", "")
+    # Ký tự nhìn giống: Ð/ð (U+00D0/U+00F0) -> Đ/đ; khoảng trắng không ngắt -> thường.
+    t = t.replace("\u00d0", "\u0110").replace("\u00f0", "\u0111").replace("\u00a0", " ")
     return re.sub(r"\n\s*\n+", "\n", t)
 
 
@@ -72,27 +82,37 @@ def main() -> None:
         try:
             t = page_text(title)
         except Exception as exc:
-            print(f"  lỗi {title}: {exc}")
-            continue
+            raise SystemExit(f"DỪNG: không tải được {title}: {exc} -- data/blhs.json giữ nguyên")
         got = parse_articles(t, f"Chương {r}")
+        if not got:
+            raise SystemExit(f"DỪNG: {title} không tách được điều nào -- data/blhs.json giữ nguyên")
         arts.update(got)
         print(f"  Chương {r:5s} {len(got):3d} điều")
         time.sleep(2)
 
     amend = page_text(AMEND)
     i, j = amend.find("Điều 1."), amend.find("Điều 2.")
+    if i < 0 or j <= i:
+        raise SystemExit("DỪNG: không tìm thấy 'Điều 1.'/'Điều 2.' trong luật sửa đổi 2025 -- không gắn "
+                         "được cờ sua_2025, data/blhs.json giữ nguyên")
     body = amend[i:j]
     touched = set(re.findall(r"Điều (\d+[a-z]?)", body))
     for m in re.finditer(r"các điều ([\d,\s và]+)", body):
         touched |= set(re.findall(r"\d+", m.group(1)))
     for so, a in arts.items():
         a["sua_2025"] = so in touched
+    n_flag = sum(a["sua_2025"] for a in arts.values())
+    if len(arts) < 420 or n_flag < 30:
+        raise SystemExit(f"DỪNG: bất thường -- {len(arts)} điều (cần >= 420), {n_flag} điều gắn cờ 2025 "
+                         "(cần >= 30). data/blhs.json giữ nguyên.")
     data = {"nguon": f"https://vi.wikisource.org/wiki/{urllib.parse.quote(BASE)}",
             "nguon_sua_doi": "Luật 86/2025/QH15, https://vi.wikisource.org/wiki/" + urllib.parse.quote(AMEND),
             "ghi_chu": "sua_2025=true: điều bị Luật 86/2025 sửa hoặc nhắc tới — KHÔNG đọc khung phạt từ bản 2017",
             "dieu": arts}
     OUT.parent.mkdir(exist_ok=True)
-    OUT.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+    tmp = OUT.with_suffix(".json.tmp")
+    tmp.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+    tmp.replace(OUT)
     print(f"{len(arts)} điều · {sum(a['sua_2025'] for a in arts.values())} điều gắn sua_2025 -> {OUT.relative_to(ROOT)}")
 
 

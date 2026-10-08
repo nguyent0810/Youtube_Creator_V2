@@ -49,9 +49,23 @@ def _norm(s: str) -> str:
     return re.sub(r"\s+", " ", re.sub(r"[^\w\s]", " ", s)).strip()
 
 
+_NUM_DOT = "\u2024"   # thay tạm dấu chấm GIỮA HAI CHỮ SỐ ("1.000") để không bị cắt câu
+
+
+def sentences(text: str) -> list[str]:
+    """Tách câu, KHÔNG cắt ở dấu chấm phân cách hàng nghìn / thập phân.
+
+    Lỗi thật (audit 08/10/2026): "hơn 1.000 thành viên ... tới 3.000 thành
+    viên" bị cắt ra hai mảnh "000 thành viên." giống nhau -> chặn cứng là
+    câu lặp và loại vĩnh viễn một kịch bản hoàn toàn đúng."""
+    protected = re.sub(r"(?<=\d)\.(?=\d)", _NUM_DOT, text)
+    return [m.group(0).strip().replace(_NUM_DOT, ".")
+            for m in _SENT.finditer(protected) if m.group(0).strip()]
+
+
 def check(script: str) -> list[Finding]:
     text = spoken(script)
-    sents = [m.group(0).strip() for m in _SENT.finditer(text) if m.group(0).strip()]
+    sents = sentences(text)
     out: list[Finding] = []
     seen: set[str] = set()
     for s in sents:

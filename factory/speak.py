@@ -52,6 +52,19 @@ def strip_emphasis(text: str) -> str:
     return _EMPHASIS.sub(r"\1", text)
 
 
+# Chữ Hán là để NHÌN (phụ đề "Trực bế — 閉"), không phải để ĐỌC: giọng tiếng
+# Việt gặp "閉" thì hoặc im, hoặc đọc sai. Cả 92 kịch bản Lịch đều có chữ Hán.
+_CJK = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\U00020000-\U0002ffff]+")
+
+
+def strip_unspeakable(text: str) -> str:
+    """Bỏ chữ Hán khỏi lời đọc và dọn dấu câu còn sót ("bế — , nghĩa" -> "bế, nghĩa")."""
+    t = _CJK.sub("", text)
+    t = re.sub(r"\s*[—–]\s*([,.;:!?])", r"\1", t)
+    t = re.sub(r"\s+([,.;:!?])", r"\1", t)
+    return re.sub(r"\s{2,}", " ", t).strip()
+
+
 def split_sentences(script: str) -> list[str]:
     """Tách kịch bản thành câu để tổng hợp riêng từng câu.
 
@@ -89,10 +102,12 @@ def synthesize(script: str, voice: str, out_wav: Path, engine=None) -> list[Utte
     utterances: list[Utterance] = []
     cursor = 0.0
     for i, sent in enumerate(sentences):
-        spoken = strip_emphasis(sent)
+        spoken = strip_unspeakable(strip_emphasis(sent))
+        if not spoken:
+            continue
         audio = eng.infer(spoken, voice=voice)
         dur = len(audio) / SAMPLE_RATE
-        utterances.append(Utterance(index=i, text=sent, spoken=spoken,
+        utterances.append(Utterance(index=len(utterances), text=sent, spoken=spoken,
                                     start=round(cursor, 3), end=round(cursor + dur, 3)))
         chunks.append(audio)
         cursor += dur

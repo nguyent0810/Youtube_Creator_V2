@@ -85,15 +85,24 @@ CLOSE = ["Hôm nay bạn định làm một việc tốt nào?", "Bạn thườn
          "Comment một điều bạn biết ơn hôm nay.", "Bạn có hay đi chùa ngày rằm, mùng một không?"]
 
 
+def _thang(f) -> str:
+    """'tháng 5' hoặc 'tháng 5 nhuận'. Bản cũ bỏ cờ nhuận: năm 2028 (nhuận
+    tháng 5) sẽ có hai video "rằm tháng 5" cách nhau một tháng."""
+    return f"tháng {f.lunar_month}{' nhuận' if f.lunar_leap else ''}"
+
+
 def _event(f):
-    """Sự kiện của một ngày âm (nếu có): ngày vía, rằm, mùng 1."""
+    """Sự kiện của một ngày âm (nếu có): ngày vía, rằm, mùng 1.
+
+    Ngày vía chỉ tính ở tháng THƯỜNG; rằm và mùng 1 của tháng nhuận vẫn là
+    rằm/mùng 1, nhưng gọi đúng tên "tháng ... nhuận"."""
     key = (f.lunar_month, f.lunar_day)
-    if key in VIA:
+    if key in VIA and not f.lunar_leap:
         return VIA[key]
     if f.lunar_day == 15:
-        return (f"rằm tháng {f.lunar_month} âm lịch", "ngày trăng tròn, nhiều gia đình đi chùa, ăn chay, tụng kinh")
+        return (f"rằm {_thang(f)} âm lịch", "ngày trăng tròn, nhiều gia đình đi chùa, ăn chay, tụng kinh")
     if f.lunar_day == 1:
-        return (f"mùng 1 tháng {f.lunar_month} âm lịch", "ngày đầu tháng âm, nhiều người đi chùa cầu an")
+        return (f"mùng 1 {_thang(f)} âm lịch", "ngày đầu tháng âm, nhiều người đi chùa cầu an")
     return None
 
 
@@ -103,14 +112,14 @@ def lich_ngay(history, day) -> Draft | None:
     from factory.lunar import facts_for
     f = facts_for(day)
     ev = _event(f)
-    ld, lm = f.lunar_day, f.lunar_month
+    ld = f.lunar_day
     am = f"mùng {ld}" if ld <= 10 else f"ngày {ld}"
     tip = PRACTICE[day.toordinal() % len(PRACTICE)]
     close = CLOSE[day.toordinal() % len(CLOSE)]
     if ev:
         name, gloss = ev
         s = [f"Hôm nay là {name}, nhưng ý nghĩa thật của ngày này là gì?",
-             f"Ngày {day.day} tháng {day.month} dương lịch, nhằm {am} tháng {lm} âm lịch.",
+             f"Ngày {day.day} tháng {day.month} dương lịch, nhằm {am} {_thang(f)} âm lịch.",
              f"Đây là {gloss}.", tip,
              "Không cần mâm cao cỗ đầy, một tâm thành là đủ để bắt đầu.", close]
         key = day.isoformat()
@@ -128,14 +137,16 @@ def lich_ngay(history, day) -> Draft | None:
             return None
         name, gloss = nxt
         nam = f"mùng {nf.lunar_day}" if nf.lunar_day <= 10 else f"ngày {nf.lunar_day}"
-        when = "" if "âm lịch" in name else f", nhằm {nam} tháng {nf.lunar_month} âm lịch"
+        when = "" if "âm lịch" in name else f", nhằm {nam} {_thang(nf)} âm lịch"
         s = [f"Còn {n} ngày nữa là {name}{when}.",
-             f"Hôm nay {day.day} tháng {day.month} là {am} tháng {lm} âm lịch.",
+             f"Hôm nay {day.day} tháng {day.month} là {am} {_thang(f)} âm lịch.",
              f"{name[0].upper() + name[1:]} là {gloss}.", tip, close]
         if len(" ".join(s).split()) < 62:        # ngày ngắn chữ -> thêm một lời nhắc thứ hai
             s.insert(-1, PRACTICE[(day.toordinal() + 5) % len(PRACTICE)])
         key = day.isoformat()
-        title = f"Còn {n} ngày tới {name}"
+        # Có NGÀY trong tiêu đề: "Còn 13 ngày tới vía Phật Dược Sư" lặp lại đúng
+        # sau một năm âm lịch, và chống trùng theo tiêu đề sẽ chặn video năm sau.
+        title = f"{day.day}/{day.month}: Còn {n} ngày tới {name}"
     from factory.pillars.expand import pick_broll
     return Draft("lich", key, title, " ".join(s), [],
                  ["Lịch âm: vnlunar", f"Ngày vía: {SRC_VIA}"], pick_broll(BROLL["lich"], key), "lich", set())
