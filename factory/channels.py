@@ -18,11 +18,12 @@ from __future__ import annotations
 import difflib
 import importlib
 import json
-import os
 import sys
 from pathlib import Path
 
-CREDS_DIR = Path(os.environ.get("YF_CREDS_DIR", r"C:\Tools\Youtuber\vietneu-tts\.youtube_channels"))
+from factory import paths
+
+CREDS_DIR = paths.CREDS_DIR      # YF_CREDS_DIR / YF_TOOLS_DIR (factory/paths.py)
 
 CHANNELS = {
     "FS": {"ten": "Phong Thủy", "creds": "phong_thuy.json", "lines": "factory.pillars.topics",

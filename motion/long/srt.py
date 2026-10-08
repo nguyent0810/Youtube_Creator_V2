@@ -10,7 +10,8 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-FFPROBE = r"C:\Tools\Youtuber\video-editor\vendor\ffmpeg\ffprobe.exe"
+sys.path.insert(0, str(ROOT))
+from factory.paths import FFPROBE  # noqa: E402  (YF_FFMPEG_DIR)
 
 
 def ts(t):

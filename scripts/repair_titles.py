@@ -12,8 +12,13 @@ Hai việc phải làm, theo đúng thứ tự:
 
 videos.update tốn 50 đơn vị/lần: 21 × 50 = 1.050, thừa sức trong 10.000/ngày.
 """
-import collections
-import json
+
+# SCRIPT MỘT LẦN (tháng 10/2026), đã chạy xong. Chạy lại sẽ PHÁ hàng đợi (audit
+# 08/10/2026): mọi item Lịch chưa có video (video_id NULL, vd 83 ngày vừa được
+# replace_lich.py đưa về pending) đều thành "bị bỏ sót" và bị ép về `assembled`
+# mà không có file video -- chặn hẳn.
+raise SystemExit("repair_titles.py là script một lần đã hết hạn; thay video Lịch dùng scripts/replace_lich.py")
+
 import sys
 import time
 from pathlib import Path
@@ -21,10 +26,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from factory import publish, store  # noqa: E402
+from factory import channels, publish, store  # noqa: E402
 
-CREDS = Path(r"C:\Tools\Youtuber\vietneu-tts\.youtube_channels\phong_thuy.json")
-tok = publish.access_token(json.loads(CREDS.read_text(encoding="utf-8")))
+tok = publish.access_token(channels.load_creds("FS"))
 
 with store.connect() as conn:
     rows = [dict(r) for r in conn.execute(

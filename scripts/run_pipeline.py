@@ -40,10 +40,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-PY_TTS = Path(r"C:\Tools\Youtuber\vietneu-tts\.venv\Scripts\python.exe")
-PY_VID = Path(r"C:\Tools\Youtuber\video-editor\.venv-video\Scripts\python.exe")
+from factory import channels, paths, store  # noqa: E402
 
-from factory import channels, store  # noqa: E402
+PY_TTS, PY_VID = paths.PY_TTS, paths.PY_VID     # YF_PY_TTS / YF_PY_VID (factory/paths.py)
 
 CH = channels.pick(required=True)
 CHARG = ["--channel", CH]

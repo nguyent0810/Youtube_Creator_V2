@@ -1,0 +1,33 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.13"]   # 3.11 = máy sản xuất
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - uses: actions/setup-node@v4        # test GSAP chạy engine thật bằng node
+        with:
+          node-version: "22"
+      # Không cài extra "tts" (vieneu) và "stt" (faster-whisper): nặng, và test không cần.
+      # vnlunar ghim 1.0.5 trong pyproject: bản khác thì test Lịch đỏ -- đúng ý đồ.
+      - run: pip install -e ".[dev,motion]"
+      - name: Cú pháp mọi file Python
+        run: python -m compileall -q factory scripts motion tests
+      - name: Cú pháp engine JS
+        run: for f in motion/hf/assets/engine/*.js; do node --check "$f"; done
+      - run: python -m pytest -q

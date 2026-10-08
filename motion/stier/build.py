@@ -36,10 +36,11 @@ sys.path.insert(0, str(HERE))
 import hf_align  # noqa: E402
 import hf_geo  # noqa: E402
 import sfx  # noqa: E402
+from factory import paths  # noqa: E402
 
 SPECS = ROOT / "data" / "stier" / "specs"
 OUT = ROOT / "output" / "stier"
-FF = r"C:\Tools\Youtuber\video-editor\vendor\ffmpeg"
+FF, FFMPEG = str(paths.FFMPEG_DIR), paths.FFMPEG   # YF_FFMPEG_DIR (factory/paths.py)
 VOICE = "Anh Khôi"
 UA = {"User-Agent": "yt-factory/1.0 (documentary research; contact via channel)"}
 ANCHORS = {"at", "until", "reveal", "strike", "swap", "plusAt", "dayAt", "headAt", "signAt", "labelAt", "imgAt", "dimAt"}
@@ -326,7 +327,7 @@ def build(slug: str, render: bool = True, draft: bool = False) -> Path:
     fc = ("[1:a]aresample=48000,pan=stereo|c0=c0|c1=c0,apad,asplit=2[v][vk];[2:a]volume=0.5[s0];"
           "[s0][vk]sidechaincompress=threshold=0.05:ratio=4:attack=20:release=300[s];"
           "[v][s]amix=inputs=2:weights='1 1':normalize=0:duration=first,loudnorm=I=-14:TP=-1.5:LRA=11[a]")
-    r = run([FF + r"\ffmpeg.exe", "-v", "error", "-y", "-i", str(silent), "-i", str(od / "voice.wav"), "-i", str(od / "sfx.wav"),
+    r = run([FFMPEG, "-v", "error", "-y", "-i", str(silent), "-i", str(od / "voice.wav"), "-i", str(od / "sfx.wav"),
              "-filter_complex", fc, "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
              "-shortest", "-movflags", "+faststart", str(final)])
     if r.returncode != 0:

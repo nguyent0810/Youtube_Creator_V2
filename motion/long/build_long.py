@@ -42,9 +42,9 @@ from build import Anchors, resolve, norm  # noqa: E402  (cùng cú pháp mốc v
 BLD.ANCHORS |= {"sumAt", "zeroAt", "titleAt", "hAt", "countAt", "hitAt", "typeAt", "burnAt", "decodeAt", "endAt", "voiceAt", "voiceEnd"}      # mốc riêng của cảnh video dài
 BLD.ANCHOR_LISTS |= {"flips", "readAt"}
 import sfx_long  # noqa: E402
+from factory import paths  # noqa: E402
 
-FF = r"C:\Tools\Youtuber\video-editor\vendor\ffmpeg"
-FFMPEG = FF + r"\ffmpeg.exe"
+FF, FFMPEG, FFPROBE = str(paths.FFMPEG_DIR), paths.FFMPEG, paths.FFPROBE   # YF_FFMPEG_DIR (factory/paths.py)
 VOICE = "Anh Khôi"
 QUOTE_VOICE = "Minh Đức"     # câu {"q": 1}: lời trích nguyên văn/diễn ý, giọng khác + lọc radio
 UA = {"User-Agent": "yt-factory/1.0 (documentary research; contact via channel)"}
@@ -308,7 +308,7 @@ def fetch_img(file: str, dst: Path, credits: dict) -> dict:
 
 
 def probe_dur(p: Path) -> float:
-    r = subprocess.run([FF + r"\ffprobe.exe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(p)], capture_output=True, text=True)
+    r = subprocess.run([FFPROBE, "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(p)], capture_output=True, text=True)
     return float(r.stdout.strip())
 
 

@@ -1,18 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "yt-factory"
 version = "2.0.0"
 description = "Xưởng nội dung YouTube — sinh trong chat, sản xuất tự động"
 requires-python = ">=3.11"
+# Lõi: mọi thứ factory/ và scripts/ import (trừ TTS). Cài được vào CẢ HAI venv
+# (TTS và video) -- vieneu tách ra extra "tts" vì nó pin phiên bản xung đột với
+# venv video-editor (xem run_pipeline.py: "HAI VENV, KHÔNG THỂ GỘP").
 dependencies = [
-    "vieneu>=3.8.1",   # TTS tiếng Việt, torch-free trên CPU/ONNX
     "httpx>=0.27",     # tải B-roll
     # GHIM CỨNG: 1.0.3/1.0.4 tính sai Trực và 12 thần (92 video Lịch sai);
     # factory/lunar.py đối chiếu kép và DỪNG nếu bản cài đặt nói khác.
     "vnlunar==1.0.5",
+    "numpy>=1.26",
+    "soundfile>=0.12",
+    "Pillow>=10.0",
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=8.0"]
+tts = ["vieneu>=3.8.1"]                      # TTS tiếng Việt, torch-free trên CPU/ONNX (venv PY_TTS)
+motion = ["scipy>=1.11", "requests>=2.31"]   # motion/long, motion/stier
+stt = ["faster-whisper>=1.0"]                # motion/long/stt_takes.py, transcribe.py (CUDA)
+dev = ["pytest>=8.0", "pyflakes>=3.0"]
+# Không có trên PyPI: gói core.* của repo anh em video-editor (factory/assemble.py,
+# factory/providers.py) -- chạy bằng venv của video-editor (PY_VID).
+
+[tool.setuptools.packages.find]
+include = ["factory*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

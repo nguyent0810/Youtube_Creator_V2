@@ -52,6 +52,44 @@ v1 gộp vào `registry.json` rải rác theo kênh và trả giá đúng ở đ
 
 ---
 
+## Cài đặt
+
+Hai venv, không gộp được (vieneu và video-editor ghim phiên bản xung đột nhau):
+
+```bash
+pip install -e ".[tts]"          # venv TTS (PY_TTS): sinh bundle, TTS, đăng
+pip install -e ".[motion]"       # venv video (PY_VID): dựng; thêm ".[stt]" nếu chạy Whisper cho video dài
+pip install -e ".[dev]"          # chạy test
+```
+
+`vnlunar` được ghim `==1.0.5`. Bản 1.0.3/1.0.4 tính sai Trực và 12 thần, và mọi lệnh Lịch sẽ DỪNG nếu thư viện nói khác phép tính độc lập (`factory/lunar.py`).
+
+Đường dẫn ngoài repo nằm ở **một chỗ**, `factory/paths.py`. Mặc định là máy sản xuất `C:\Tools\Youtuber`; máy khác đặt biến môi trường:
+
+| Biến | Dùng cho |
+|---|---|
+| `YF_TOOLS_DIR` | gốc chung cho mọi đường dẫn dưới đây |
+| `YF_CREDS_DIR` | credential YouTube (`phong_thuy.json`, `hinh_su.json`, `phat_giao.json`) |
+| `YF_PY_TTS` / `YF_PY_VID` | python của hai venv, cho `run_pipeline.py` |
+| `YF_FFMPEG_DIR` | thư mục chứa `ffmpeg` / `ffprobe` |
+
+## Lệnh thường dùng
+
+Mọi lệnh ghi lên kênh đều **bắt buộc `--channel`** (FS, CL, BUD). Gõ sai cờ hoặc thiếu kênh thì lệnh dừng, không còn tự hiểu là FS.
+
+```bash
+python scripts/run_pipeline.py 2027-01-01 31 --channel FS     # sinh + TTS + dựng + đăng + xác minh
+python scripts/run_pipeline.py resume --channel FS            # chỉ rút hàng đợi, thử lại item hỏng
+python scripts/publish_batch.py check --channel FS            # không ghi gì
+python scripts/verify_published.py --channel FS
+python scripts/replace_lich.py --channel FS                   # thay video Lịch sai (chạy khô; --apply để làm)
+python scripts/unschedule.py --channel FS --prefix lich-      # gỡ lịch một phần (chạy khô; --apply)
+python scripts/reschedule.py --channel FS                     # đặt lại lịch (chạy khô; --apply)
+python scripts/reset_items.py "giap-%" --channel FS --dry     # đưa item về pending (không đụng item đã đăng)
+```
+
+Sự cố Lịch tháng 10/2026 (N1) và cách thay video sai: `docs/RUNBOOK-lich.md`. Báo cáo audit: `docs/AUDIT-2026-10-08.md`.
+
 ## Dùng thế nào
 
 ### Trong chat (pha sinh)
@@ -125,7 +163,7 @@ TTS chạy **CPU**, không GPU — có chủ đích. Tài liệu upstream nói t
 | `assemble.py` — dựng video 9:16 | ✅ chạy thật |
 | `thumbnail.py` — khung hình + chữ | ✅ |
 | `publish.py` — YouTube API, hẹn giờ | ✅ **đã chạy thật** (probe 20/09/2026) |
-| CLI gói lại | ⬜ sau cùng |
+| `run_pipeline.py` — một lệnh cho cả đường ống | ✅ |
 
 ```bash
 python -m pytest tests -q
@@ -166,6 +204,15 @@ Chạy `check` lần đầu bắt được ngay hai lỗi thật: một bug thi�
 
 Chống đăng trùng bằng `playlistItems.list` (1 đơn vị quota) chứ không `search.list` (chỉ 100 lần/ngày cho cả project).
 
+Các chốt thêm sau audit 08/10/2026. Mỗi chốt có test riêng trong `tests/`:
+
+- **Giờ hẹn phải ở tương lai, xa hơn 15 phút.** Gửi `publishAt` đã qua thì YouTube công khai NGAY. Item lỡ giờ bị loại, không upload.
+- **Chỉ "nhận" video của chính mình.** Mỗi upload mang tag `yf<bundle.id>`. Trùng tiêu đề với video không mang tag đó thì dừng (`DuplicateTitle`), không đánh dấu "đã đăng".
+- **Đúng kênh.** Lần đầu ghi nhận kênh mà credential trỏ tới, các lần sau khớp lại (`channel_identity` trong store). Có thể ghim `channel_id` trong file credential.
+- **Một tiến trình mỗi kênh.** `publish_batch`, `upload_one`, `drip`, `replace_lich` cùng dùng khoá trong `state.sqlite`.
+- **Kiểm theo cách YouTube đếm.** Mô tả tối đa 5.000 **byte**, không có `<` `>`. Tag tối đa 500 ký tự, tag có dấu cách tính thêm 2. Nhạc CC BY tự ghi công.
+- **Resumable upload thật sự resume** từ byte server đã nhận. Rate limit không bị coi là hết quota ngày.
+
 ---
 
-24 test, tất cả đạt. Mỗi test khoá lại một cách hỏng thật — hoặc đã xảy ra ở v1, hoặc là giả định mà cả kiến trúc dựa vào.
+Bộ test (`python -m pytest -q`, CI chạy trên Python 3.11 và 3.13 ở mỗi lần push) tất cả đạt. Mỗi test khoá lại một cách hỏng thật — hoặc đã xảy ra ở v1, hoặc là giả định mà cả kiến trúc dựa vào.
