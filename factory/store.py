@@ -19,10 +19,13 @@ SQLite làm việc đó sẵn, đúng, và miễn phí.
 """
 from __future__ import annotations
 
+import hashlib
 import json
+import os
 import sqlite3
+import uuid
 from contextlib import contextmanager
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from factory.bundle import Bundle, BundleInvalid
@@ -56,6 +59,20 @@ CREATE TABLE IF NOT EXISTS item (
 );
 CREATE INDEX IF NOT EXISTS idx_item_queue ON item (stage, publish_at);
 CREATE INDEX IF NOT EXISTS idx_item_channel ON item (channel, publish_at);
+-- Kênh YouTube mà credential của từng kênh trỏ tới (channels.verify_identity).
+CREATE TABLE IF NOT EXISTS channel_identity (
+    channel     TEXT PRIMARY KEY,
+    channel_id  TEXT NOT NULL,
+    title       TEXT,
+    first_seen  TEXT NOT NULL
+);
+-- Khoá liên tiến trình: hai lần đăng chạy chồng nhau là upload trùng.
+CREATE TABLE IF NOT EXISTS lock (
+    name        TEXT PRIMARY KEY,
+    owner       TEXT NOT NULL,
+    acquired_at TEXT NOT NULL,
+    expires_at  TEXT NOT NULL
+);
 """
 
 
@@ -94,7 +111,13 @@ def connect(db_path: Path | None = None):
 #                  làm lại TTS + dựng cho một lỗi chỉ xảy ra lúc upload.
 #   retry_after -- lỗi TẠM (hết quota): item giữ nguyên chặng, chỉ ẩn khỏi
 #                  hàng đợi tới mốc này. Không tính là một lần hỏng.
-_MIGRATIONS = {"fail_stage": "TEXT", "retry_after": "TEXT"}
+#   script_sha  -- băm kịch bản lúc TTS/dựng. Kịch bản đổi sau đó thì video
+#                  đã dựng là LỖI THỜI: không được đăng với metadata mới.
+_MIGRATIONS = {"fail_stage": "TEXT", "retry_after": "TEXT", "script_sha": "TEXT"}
+
+
+def script_sha(script: str) -> str:
+    return hashlib.sha256(script.encode("utf-8")).hexdigest()[:16]
 
 
 def _migrate(conn: sqlite3.Connection) -> None:
@@ -110,11 +133,22 @@ def bundle_path(bundle: Bundle, base: Path | None = None) -> Path:
     return (base or BUNDLE_DIR) / bundle.channel / f"{bundle.slug}.json"
 
 
-def save_bundle(bundle: Bundle, base: Path | None = None) -> Path:
+def save_bundle(bundle: Bundle, base: Path | None = None, overwrite: bool = False) -> Path:
     """Ghi Bundle ra đĩa. Validate TRƯỚC khi ghi -- không bao giờ để một
-    bundle hỏng nằm trong hàng đợi chờ hỏng tiếp ở bước đắt tiền hơn."""
+    bundle hỏng nằm trong hàng đợi chờ hỏng tiếp ở bước đắt tiền hơn.
+
+    Bundle là BẤT BIẾN: đã có file khác nội dung thì KHÔNG ghi đè, trừ khi
+    gọi rõ overwrite=True. Bản cũ ghi đè âm thầm -- sửa tiêu đề/kịch bản sau
+    khi đã dựng là đăng VIDEO CŨ với METADATA MỚI (Bundle.id không băm
+    kịch bản nên hàng đợi không biết có gì đổi)."""
     bundle.validate()
     path = bundle_path(bundle, base)
+    if path.exists() and not overwrite:
+        old = Bundle.from_json(path.read_text(encoding="utf-8"))
+        if {**old.to_dict(), "created_at": ""} == {**bundle.to_dict(), "created_at": ""}:
+            return path               # y hệt -> vô hại
+        raise BundleInvalid(f"bundle đã tồn tại và khác nội dung: {path} -- bundle bất biến; "
+                            "muốn thay thật thì dùng overwrite=True (và reset item để dựng lại)")
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_suffix(".json.tmp")
     tmp.write_text(bundle.to_json(), encoding="utf-8")
@@ -153,19 +187,31 @@ def enqueue(bundle: Bundle, conn: sqlite3.Connection) -> bool:
     bundle phải là thao tác vô hại, không được reset công việc đã làm xong.
     Đây chính là cái v1 phải dựng 'production-write guard' để đạt được."""
     bundle.validate()
-    cur = conn.execute(
-        "INSERT INTO item (id, channel, kind, slug, publish_at, stage, updated_at) "
-        "VALUES (?, ?, ?, ?, ?, 'pending', ?) ON CONFLICT(id) DO NOTHING",
-        (bundle.id, bundle.channel, bundle.kind, bundle.slug, bundle.publish_at, _now()),
-    )
-    return cur.rowcount > 0
+    try:
+        cur = conn.execute(
+            "INSERT INTO item (id, channel, kind, slug, publish_at, stage, updated_at) "
+            "VALUES (?, ?, ?, ?, ?, 'pending', ?) ON CONFLICT(id) DO NOTHING",
+            (bundle.id, bundle.channel, bundle.kind, bundle.slug, bundle.publish_at, _now()),
+        )
+    except sqlite3.IntegrityError as exc:
+        raise BundleInvalid(f"{bundle.channel}/{bundle.slug}: đã có item cùng slug nhưng khác kind "
+                            "-- đổi kind là một content item khác, phải đổi slug") from exc
+    if cur.rowcount > 0:
+        return True
+    # Đã có: KHÔNG đụng stage/đường dẫn. Riêng publish_at thì đồng bộ theo file
+    # khi item CHƯA lên kênh -- bản cũ giữ giờ cũ trong DB trong khi upload lại
+    # đọc giờ mới từ file, và mọi script soát lịch đọc nhầm giờ.
+    conn.execute("UPDATE item SET publish_at = ?, updated_at = ? "
+                 "WHERE id = ? AND video_id IS NULL AND publish_at != ?",
+                 (bundle.publish_at, _now(), bundle.id, bundle.publish_at))
+    return False
 
 
 def mark(conn: sqlite3.Connection, item_id: str, stage: str, **fields) -> None:
     """Cập nhật trạng thái + đường dẫn kết quả trong MỘT câu lệnh."""
     if stage not in STAGES:
         raise ValueError(f"stage lạ: {stage!r} (hợp lệ: {STAGES})")
-    allowed = {"wav_path", "timing_path", "video_path", "thumb_path", "video_id", "error"}
+    allowed = {"wav_path", "timing_path", "video_path", "thumb_path", "video_id", "error", "script_sha"}
     bad = set(fields) - allowed
     if bad:
         raise ValueError(f"trường lạ: {sorted(bad)}")
@@ -173,7 +219,11 @@ def mark(conn: sqlite3.Connection, item_id: str, stage: str, **fields) -> None:
     # Tiến được một chặng thì mọi lỗi tạm trước đó hết ý nghĩa.
     sql = (f"UPDATE item SET stage = ?, updated_at = ?, retry_after = NULL"
            f"{', ' + cols if cols else ''} WHERE id = ?")
-    conn.execute(sql, (stage, _now(), *fields.values(), item_id))
+    cur = conn.execute(sql, (stage, _now(), *fields.values(), item_id))
+    if cur.rowcount == 0:
+        # Lỗi thật đã gặp: id tính lại từ bundle đã đổi kind -> cập nhật 0 dòng,
+        # video đã upload mà store không biết.
+        raise KeyError(f"không có item {item_id} trong store -- không ghi được trạng thái {stage!r}")
 
 
 def bump_attempt(conn: sqlite3.Connection, item_id: str, error: str) -> int:
@@ -214,14 +264,16 @@ def defer(conn: sqlite3.Connection, item_id: str, error: str, retry_after: str) 
                  (error[:2000], retry_after, _now(), item_id))
 
 
-def requeue_failed(conn: sqlite3.Connection, max_attempts: int = 3) -> list[str]:
+def requeue_failed(conn: sqlite3.Connection, max_attempts: int = 3,
+                   channel: str | None = None) -> list[str]:
     """Đưa item hỏng (chưa quá max_attempts) về lại ĐÚNG chặng đã hỏng.
 
     Item cũ chưa có fail_stage thì suy từ kết quả đã có: có video thì hỏng
     lúc đăng, có wav thì hỏng lúc dựng, không có gì thì hỏng lúc TTS."""
     rows = list(conn.execute(
         "SELECT id, slug, fail_stage, wav_path, video_path FROM item "
-        "WHERE stage = 'failed' AND attempts < ?", (max_attempts,)))
+        "WHERE stage = 'failed' AND attempts < ?" + (" AND channel = ?" if channel else ""),
+        (max_attempts, channel) if channel else (max_attempts,)))
     for r in rows:
         back = r["fail_stage"] or ("assembled" if r["video_path"]
                                    else "spoken" if r["wav_path"] else "pending")
@@ -276,3 +328,35 @@ def sync_from_disk(conn: sqlite3.Connection, base: Path | None = None,
         if enqueue(b, conn):
             added += 1
     return added, total
+
+
+# ─── Khoá liên tiến trình ─────────────────────────────────────────────────
+
+class LockBusy(RuntimeError):
+    pass
+
+
+@contextmanager
+def locked(conn: sqlite3.Connection, name: str, ttl_minutes: int = 180):
+    """Giữ khoá `name` trong lúc chạy khối lệnh. Đã có người giữ thì ném LockBusy.
+
+    Vì sao cần: `run_pipeline resume` chạy định kỳ chồng lên một lần chạy tay,
+    hay drip/upload_one chồng lên publish_batch, sẽ cùng lấy MỘT hàng đợi và
+    upload trùng video. Khoá có hạn (ttl) để tiến trình chết giữa chừng không
+    khoá vĩnh viễn."""
+    owner = f"{os.getpid()}-{uuid.uuid4().hex[:8]}"
+    now = datetime.now(timezone.utc)
+    conn.execute("DELETE FROM lock WHERE name = ? AND expires_at <= ?", (name, _now()))
+    cur = conn.execute(
+        "INSERT INTO lock (name, owner, acquired_at, expires_at) VALUES (?, ?, ?, ?) "
+        "ON CONFLICT(name) DO NOTHING",
+        (name, owner, _now(), (now + timedelta(minutes=ttl_minutes)).strftime("%Y-%m-%dT%H:%M:%SZ")))
+    if cur.rowcount == 0:
+        row = conn.execute("SELECT owner, acquired_at, expires_at FROM lock WHERE name = ?", (name,)).fetchone()
+        raise LockBusy(f"đang có tiến trình khác giữ khoá {name!r} (từ {row['acquired_at']}, hết hạn "
+                       f"{row['expires_at']}). Chờ nó xong; nếu chắc chắn nó đã chết thì xoá dòng "
+                       f"{name!r} trong bảng lock.")
+    try:
+        yield owner
+    finally:
+        conn.execute("DELETE FROM lock WHERE name = ? AND owner = ?", (name, owner))

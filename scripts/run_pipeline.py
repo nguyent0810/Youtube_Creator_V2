@@ -1,10 +1,14 @@
 """Chạy TRỌN đường ống bằng MỘT lệnh: sinh → TTS → dựng → đăng → xác minh.
 
-    python scripts/run_pipeline.py 2026-12-01 31
-    python scripts/run_pipeline.py 2026-12-01 31 --no-publish
-    python scripts/run_pipeline.py resume     # chỉ rút hàng đợi + thử lại item hỏng
-    python scripts/run_pipeline.py 2026-10-02 30 --only pillars   # chỉ 4 dòng pillar
-    python scripts/run_pipeline.py 2026-10-02 30 --only lich      # chỉ Lịch
+    python scripts/run_pipeline.py 2026-12-01 31 --channel FS
+    python scripts/run_pipeline.py 2026-12-01 31 --channel FS --no-publish
+    python scripts/run_pipeline.py resume --channel FS     # chỉ rút hàng đợi + thử lại item hỏng
+    python scripts/run_pipeline.py 2026-10-02 30 --channel FS --only pillars   # chỉ 4 dòng pillar
+    python scripts/run_pipeline.py 2026-10-02 30 --channel FS --only lich      # chỉ Lịch
+
+Bắt buộc --channel và (trừ `resume`) ngày bắt đầu + số ngày: bản cũ gọi trần
+là sinh + ĐĂNG kênh FS cho 2026-12-01 + 31 ngày, và sau 31/12/2026 thì cùng
+lệnh đó sinh nội dung cho ngày đã qua.
 
 Mặc định sinh CẢ 5 dòng cho dải ngày: Lịch + Con Giáp + Lục Trụ + Kinh Dịch
 + Mệnh số = 5 short/ngày.
@@ -30,6 +34,7 @@ với dữ liệu sai.
 import subprocess
 import sys
 import time
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -40,23 +45,39 @@ PY_VID = Path(r"C:\Tools\Youtuber\video-editor\.venv-video\Scripts\python.exe")
 
 from factory import channels, store  # noqa: E402
 
-CH = channels.pick()
+CH = channels.pick(required=True)
 CHARG = ["--channel", CH]
 
-RESUME = len(sys.argv) > 1 and sys.argv[1] == "resume"
-start = sys.argv[1] if len(sys.argv) > 1 and not RESUME else "2026-12-01"
-days = sys.argv[2] if len(sys.argv) > 2 and not RESUME else "31"
-do_publish = "--no-publish" not in sys.argv
+_POS = [a for a in channels.args_without_channel() if not a.startswith("--")]
 ONLY = sys.argv[sys.argv.index("--only") + 1] if "--only" in sys.argv else "all"
+_POS = [a for a in _POS if a != ONLY]
+RESUME = bool(_POS) and _POS[0] == "resume"
+do_publish = "--no-publish" not in sys.argv
+if not RESUME:
+    if len(_POS) < 2:
+        sys.exit(__doc__)
+    start, days = _POS[0], _POS[1]
+    try:
+        _d0, _n = date.fromisoformat(start), int(days)
+    except ValueError:
+        sys.exit(f"ngày bắt đầu phải là YYYY-MM-DD và số ngày là số nguyên, nhận {start!r} {days!r}")
+    _tomorrow_vn = (datetime.now(timezone.utc) + timedelta(hours=7)).date() + timedelta(days=1)
+    if _n <= 0 or _d0 < _tomorrow_vn:
+        sys.exit(f"ngày bắt đầu {start} đã qua hoặc là hôm nay (giờ VN) -- nội dung cho ngày đã qua "
+                 "không được sinh/đăng. Chọn từ ngày mai trở đi.")
 
 
 def run(label: str, py: Path, args: list[str]) -> float:
     """Chạy một chặng. Hỏng thì dừng cả đường ống."""
     print(f"\n{'=' * 62}\n{label}\n{'=' * 62}", flush=True)
     t0 = time.perf_counter()
-    proc = subprocess.run([str(py), *args], cwd=ROOT, text=True,
-                          encoding="utf-8", errors="replace",
-                          capture_output=True, timeout=7200)
+    try:
+        proc = subprocess.run([str(py), *args], cwd=ROOT, text=True,
+                              encoding="utf-8", errors="replace",
+                              capture_output=True, timeout=7200)
+    except subprocess.TimeoutExpired:
+        sys.exit(f"\nDỪNG ở chặng {label!r}: quá 2 giờ, tiến trình con đã bị dừng. Kiểm tra "
+                 "`publish_batch.py check` trước khi chạy lại (có thể đã upload dở).")
     dt = time.perf_counter() - t0
     tail = [ln for ln in (proc.stdout or "").splitlines() if ln.strip()][-8:]
     for ln in tail:
@@ -77,8 +98,8 @@ T0 = time.perf_counter()
 
 # CHẶNG 0 — item hỏng lần trước quay về đúng chặng đã hỏng (tối đa 3 lần).
 with store.connect() as _c:
-    back = store.requeue_failed(_c)
-    wait = store.deferred(_c)
+    back = store.requeue_failed(_c, channel=CH)
+    wait = store.deferred(_c, CH)
 print(f"Thử lại {len(back)} item hỏng: {back[:5]}" if back else "Không có item hỏng cần thử lại")
 if wait:
     print(f"Đang hoãn chờ quota: {len(wait)} item, tự chạy lại từ {wait[0]['retry_after']}")

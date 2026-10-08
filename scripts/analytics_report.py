@@ -125,7 +125,7 @@ def summarize(ch: str, vids: list[dict]) -> list[str]:
 
 
 if __name__ == "__main__":
-    chs = [channels.pick()] if "--channel" in sys.argv else list(channels.CHANNELS)
+    chs = [channels.pick()] if any(a.startswith("--chan") for a in sys.argv[1:]) else list(channels.CHANNELS)
     report = []
     for ch in chs:
         report += summarize(ch, fetch_channel(ch))

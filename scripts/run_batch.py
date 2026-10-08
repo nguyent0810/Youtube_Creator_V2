@@ -22,6 +22,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 from factory import store  # noqa: E402
+from factory.bundle import BundleInvalid  # noqa: E402
 
 STAGE = sys.argv[1] if len(sys.argv) > 1 else "tts"
 CHANNEL = sys.argv[2] if len(sys.argv) > 2 else None
@@ -43,22 +44,29 @@ def run_tts(conn):
     engine = speak._load_engine()
     from factory import integrity
     for i, row in enumerate(rows, 1):
-        b = store.load_bundle(row["channel"], row["slug"])
         t0 = time.perf_counter()
+        # Bundle hỏng/mất chỉ loại ĐÚNG item đó: bản cũ đọc bundle ngoài try,
+        # nên một file lỗi làm chết cả lô ở mọi lần chạy lại.
+        try:
+            b = store.load_bundle(row["channel"], row["slug"])
+        except (BundleInvalid, OSError) as exc:
+            store.reject(conn, row["id"], f"BUNDLE HỎNG/MẤT: {exc}")
+            print(f"  [{i}/{len(rows)}] {row['slug']:16s} LOAI: bundle khong doc duoc ({exc})")
+            continue
         # Cổng toàn vẹn văn bản: MỘT điểm trước TTS cho mọi kênh/dòng.
         bad = integrity.blocking(b.script)
         if bad:
-            store.reject(conn, b.id, "INTEGRITY: " + "; ".join(f"{f.code} «{f.span[:40]}»" for f in bad))
+            store.reject(conn, row["id"], "INTEGRITY: " + "; ".join(f"{f.code} «{f.span[:40]}»" for f in bad))
             print(f"  [{i}/{len(rows)}] {b.slug:16s} CHAN (toan ven van ban): {bad[0].code}")
             continue
         try:
             res = speak.speak_bundle(b, OUT, engine=engine)
-            store.mark(conn, b.id, "spoken",
+            store.mark(conn, row["id"], "spoken", script_sha=store.script_sha(b.script),
                        wav_path=res["wav_path"], timing_path=res["timing_path"])
             print(f"  [{i}/{len(rows)}] {b.slug:16s} {res['duration']:5.1f}s audio "
                   f"({time.perf_counter()-t0:.1f}s)")
         except Exception as exc:
-            n = store.bump_attempt(conn, b.id, f"{type(exc).__name__}: {exc}")
+            n = store.bump_attempt(conn, row["id"], f"{type(exc).__name__}: {exc}")
             print(f"  [{i}/{len(rows)}] {b.slug:16s} LOI (lan {n}): {exc}")
 
 
@@ -71,21 +79,33 @@ def run_assemble(conn):
         return
     print(f"{len(rows)} item can dung video.")
     for i, row in enumerate(rows, 1):
-        b = store.load_bundle(row["channel"], row["slug"])
         t0 = time.perf_counter()
         try:
+            b = store.load_bundle(row["channel"], row["slug"])
+        except (BundleInvalid, OSError) as exc:
+            store.reject(conn, row["id"], f"BUNDLE HỎNG/MẤT: {exc}")
+            print(f"  [{i}/{len(rows)}] {row['slug']:16s} LOAI: bundle khong doc duoc ({exc})")
+            continue
+        if row["script_sha"] and row["script_sha"] != store.script_sha(b.script):
+            # Kịch bản đổi sau TTS: giọng đọc là bản cũ, dựng tiếp là video sai lời.
+            store.reject(conn, row["id"], "KỊCH BẢN ĐÃ ĐỔI SAU TTS -- reset_items để đọc lại")
+            print(f"  [{i}/{len(rows)}] {b.slug:16s} LOAI: kich ban da doi sau TTS")
+            continue
+        try:
             timing = json.loads(Path(row["timing_path"]).read_text(encoding="utf-8"))
-            bgm = ROOT.parent / "vietneu-tts" / "bgm" / b.bgm
+            # bgm="" nghĩa là KHÔNG nhạc nền. Bản cũ nối "" vào đường dẫn ra chính
+            # THƯ MỤC bgm -- exists() đúng -- và truyền thư mục như một file nhạc.
+            bgm = (ROOT.parent / "vietneu-tts" / "bgm" / b.bgm) if b.bgm else None
             mp4 = OUT / b.channel / f"{b.slug}.mp4"
             ar = assemble.assemble_short(b, Path(row["wav_path"]), timing, mp4,
                                          pexels_key=key,
-                                         bgm_path=bgm if bgm.exists() else None)
-            store.mark(conn, b.id, "assembled", video_path=ar.video_path)
+                                         bgm_path=bgm if bgm and bgm.is_file() else None)
+            store.mark(conn, row["id"], "assembled", video_path=ar.video_path)
             size = Path(ar.video_path).stat().st_size / 1024 / 1024
             print(f"  [{i}/{len(rows)}] {b.slug:16s} {ar.scene_count} canh  "
                   f"{size:4.1f} MB  ({time.perf_counter()-t0:.0f}s)")
         except Exception as exc:
-            n = store.bump_attempt(conn, b.id, f"{type(exc).__name__}: {exc}")
+            n = store.bump_attempt(conn, row["id"], f"{type(exc).__name__}: {exc}")
             print(f"  [{i}/{len(rows)}] {b.slug:16s} LOI (lan {n}): {exc}")
 
 

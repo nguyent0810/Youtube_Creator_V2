@@ -139,7 +139,7 @@ def test_every_topic_makes_a_valid_bundle():
         for d in P.all_drafts(pillar):
             b = Bundle(channel="FS", kind="short", slug=f"{prefix}{make_slug(d.key)}", script=d.script,
                        title=d.title, description=d.title, tags=["x"], thumbnail_text=d.title,
-                       publish_at="2026-10-01T04:30:00Z", voice="Anh Khôi", bgm="x.mp3",
+                       publish_at="2026-10-01T04:30:00Z", voice="Anh Khôi", bgm="asian_drums.mp3",
                        broll_queries=d.broll)
             b.validate()
             assert b.slug not in slugs, b.slug

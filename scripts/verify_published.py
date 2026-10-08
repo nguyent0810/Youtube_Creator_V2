@@ -1,7 +1,7 @@
 """Xác minh trạng thái thật trên YouTube — không tin store.
 
-    python scripts/verify_published.py            # mọi dòng
-    python scripts/verify_published.py giap-      # một dòng
+    python scripts/verify_published.py --channel FS          # mọi dòng
+    python scripts/verify_published.py giap- --channel FS    # một dòng
 
 Store chỉ ghi lại thứ ta NGHĨ đã xảy ra. Lần chạy `run` đầu tiên là ví dụ:
 store ghi 30 item "đã đăng" trong khi thực tế chỉ 21 video lên kênh, 9 cái
@@ -12,9 +12,15 @@ Mỗi dòng (Lịch + 4 pillar) đăng một bài mỗi ngày, nên kiểm RIÊN
 đúng privacy/lịch/tiêu đề, không trùng id, không đứt ngày, không thiếu đuôi.
 
 Thoát khác 0 nếu có bất kỳ sai lệch nào -- để bộ điều phối dừng lại.
+
+Bắt buộc --channel, và tiền tố phải là một dòng của kênh đó: bản cũ coi
+`--channel=CL` là tiền tố slug, không thấy item nào, rồi in "XÁC MINH ĐẠT".
+Dòng chỉ-đăng-lẻ (S-tier `cl-hs-`, nhiều video/ngày) không bị áp luật "mỗi
+ngày đúng một video" -- bản cũ báo 89 "đứt quãng" nên kênh CL KHÔNG BAO GIỜ
+đạt, và người vận hành quen bỏ qua cảnh báo. Dòng đó kiểm "không hai video
+nào cách nhau dưới 30 phút" thay thế.
 """
 import collections
-import json
 import sys
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -24,11 +30,13 @@ sys.path.insert(0, str(ROOT))
 
 from factory import channels, publish, store  # noqa: E402
 
-CH = channels.pick()
-CREDS = channels.creds_path(CH)
+CH = channels.pick(required=True)
 ALL = list(channels.prefixes(CH))
-_args = [a for a in sys.argv[1:] if a != "--channel" and a != CH]
+_args = [a for a in channels.args_without_channel() if not a.startswith("--")]
+if _args and not any(_args[0].startswith(p) or p.startswith(_args[0]) for p in ALL):
+    sys.exit(f"tiền tố {_args[0]!r} không thuộc kênh {CH} (có: {', '.join(ALL)})")
 PREFIXES = [_args[0]] if _args else ALL
+DRIP = channels.drip_only(CH)
 
 
 def verify(prefix: str, tok: str) -> list[str]:
@@ -36,9 +44,9 @@ def verify(prefix: str, tok: str) -> list[str]:
     with store.connect() as conn:
         rows = [dict(r) for r in conn.execute(
             "SELECT slug, video_id, publish_at FROM item "
-            "WHERE slug LIKE ? AND video_id IS NOT NULL ORDER BY publish_at", (prefix + "%",))]
+            "WHERE channel = ? AND slug LIKE ? AND video_id IS NOT NULL ORDER BY publish_at", (CH, prefix + "%"))]
         allrows = [dict(r) for r in conn.execute(
-            "SELECT slug, stage, publish_at FROM item WHERE slug LIKE ?", (prefix + "%",))]
+            "SELECT slug, stage, publish_at FROM item WHERE channel = ? AND slug LIKE ?", (CH, prefix + "%"))]
         expected = {r["slug"] for r in allrows}
         # Hoãn vì hết quota là trạng thái HỢP LỆ, có mốc tự thử lại -- không
         # phải thiếu. Quá mốc mà vẫn chưa lên kênh thì mới là thiếu.
@@ -87,10 +95,16 @@ def verify(prefix: str, tok: str) -> list[str]:
     # Đứt ngày -- ngày đang chờ quota được tính là "có", vì nó sẽ tự lấp.
     ds = sorted(datetime.strptime(x, "%Y-%m-%dT%H:%M:%SZ")
                 for x in [r["publish_at"] for r in rows] + [r["publish_at"] for r in wrows])
-    gaps = [(ds[i], ds[i + 1]) for i in range(len(ds) - 1) if (ds[i + 1] - ds[i]) != timedelta(days=1)]
-    print(f"   Lịch {ds[0]:%d/%m} → {ds[-1]:%d/%m} · đứt quãng: {len(gaps)}")
+    is_drip = bool(DRIP) and prefix.startswith(DRIP)
+    if is_drip:
+        # Dòng đăng lẻ, nhiều video/ngày: chỉ cấm chồng khung giờ (< 30 phút).
+        gaps = [(ds[i], ds[i + 1]) for i in range(len(ds) - 1) if (ds[i + 1] - ds[i]) < timedelta(minutes=30)]
+        print(f"   Lịch {ds[0]:%d/%m} → {ds[-1]:%d/%m} · chồng khung giờ (<30'): {len(gaps)}")
+    else:
+        gaps = [(ds[i], ds[i + 1]) for i in range(len(ds) - 1) if (ds[i + 1] - ds[i]) != timedelta(days=1)]
+        print(f"   Lịch {ds[0]:%d/%m} → {ds[-1]:%d/%m} · đứt quãng: {len(gaps)}")
     for a, b_ in gaps[:5]:
-        print(f"      {a:%d/%m} → {b_:%d/%m}")
+        print(f"      {a:%d/%m %H:%M} → {b_:%d/%m %H:%M}")
 
     # THIẾU Ở ĐUÔI -- lỗ hổng thật của bản đầu: nó chỉ soi khoảng GIỮA hai mốc
     # có thật, nên khi video cuối không đăng được (hết quota) verify vẫn ĐẠT.
@@ -115,13 +129,14 @@ def verify(prefix: str, tok: str) -> list[str]:
     if dup:
         errs.append(f"{len(dup)} trùng id")
     if gaps:
-        errs.append(f"{len(gaps)} đứt quãng")
+        errs.append(f"{len(gaps)} {'chồng giờ' if is_drip else 'đứt quãng'}")
     if missing:
         errs.append(f"{len(missing)} thiếu")
     return errs
 
 
-tok = publish.access_token(json.loads(CREDS.read_text(encoding="utf-8")))
+tok = publish.access_token(channels.load_creds(CH))
+channels.verify_identity(CH, tok)
 fails = []
 for pf in PREFIXES:
     print(f"\n── {pf}")

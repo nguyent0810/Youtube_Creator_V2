@@ -39,6 +39,15 @@ def norm(t: str) -> str:
     return re.sub(r"\s+", " ", re.sub(r"[^\w\s]", " ", t)).strip()
 
 
+def iso_seconds(dur: str) -> int | None:
+    """'PT1M5S' -> 65. Không đọc được thì None."""
+    m = re.fullmatch(r"P(?:(\d+)D)?(?:T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?)?", dur or "")
+    if not m:
+        return None
+    d, h, mi, s = (int(x) if x else 0 for x in m.groups())
+    return ((d * 24 + h) * 60 + mi) * 60 + s
+
+
 def all_videos(tok: str) -> list[dict]:
     up = publish.uploads_playlist_id(tok)
     ids, page = [], None
@@ -56,11 +65,13 @@ def all_videos(tok: str) -> list[dict]:
     ids = list(dict.fromkeys(ids))
     out = []
     for i in range(0, len(ids), 50):
-        d = publish._api(tok, "GET", "videos", {"part": "snippet,status", "id": ",".join(ids[i:i + 50])})
+        d = publish._api(tok, "GET", "videos", {"part": "snippet,status,contentDetails",
+                                                 "id": ",".join(ids[i:i + 50])})
         for v in d.get("items", []):
             st, sn = v["status"], v["snippet"]
             when = st.get("publishAt") if st["privacyStatus"] == "private" and st.get("publishAt") else sn["publishedAt"]
             out.append({"id": v["id"], "title": sn["title"], "privacy": st["privacyStatus"],
+                        "seconds": iso_seconds((v.get("contentDetails") or {}).get("duration", "")),
                         "scheduled": bool(st.get("publishAt")) and st["privacyStatus"] == "private",
                         "live_at": datetime.strptime(when[:19], "%Y-%m-%dT%H:%M:%S").replace(tzinfo=timezone.utc)})
     return out
@@ -102,7 +113,8 @@ def fmt(v, mine):
 
 
 if __name__ == "__main__":
-    chs = [channels.pick()] if "--channel" in sys.argv else list(channels.CHANNELS)
+    chs = ([channels.pick()] if any(a.startswith("--chan") for a in sys.argv[1:])
+           else list(channels.CHANNELS))
     bad = 0
     for ch in chs:
         a = audit(ch)

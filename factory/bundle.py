@@ -38,7 +38,11 @@ SCHEMA_VERSION = 1
 # phát hiện ở bước CUỐI, sau khi đã tốn TTS + render. Validate ngay lúc sinh
 # để hỏng thì hỏng sớm và rẻ.
 MAX_TITLE_CHARS = 100
-MAX_DESCRIPTION_CHARS = 5000
+# Mô tả: YouTube giới hạn 5.000 BYTE (UTF-8), không phải ký tự. Tiếng Việt có
+# dấu ~1,3-1,5 byte/ký tự, nên đếm ký tự là cho lọt mô tả bị từ chối lúc
+# upload -- sau khi đã tốn TTS và render.
+MAX_DESCRIPTION_BYTES = 5000
+MAX_DESCRIPTION_CHARS = MAX_DESCRIPTION_BYTES   # tên cũ, giữ cho tương thích
 MAX_TAGS_TOTAL_CHARS = 500
 
 # Short phải <= 3 phút mới được YouTube xếp vào Shorts. Ta nhắm 25-45 giây:
@@ -47,6 +51,14 @@ SHORT_MIN_WORDS = 35
 SHORT_MAX_WORDS = 140   # hồ sơ S-tier ~35 giây vẫn nằm trong khung Short
 
 _ILLEGAL_TITLE = re.compile(r"[<>]")
+_STR_FIELDS = ("channel", "kind", "slug", "script", "title", "description", "thumbnail_text",
+               "publish_at", "voice", "bgm", "source_note", "created_at")
+
+
+def tags_total_chars(tags) -> int:
+    """Độ dài tag THEO CÁCH YOUTUBE ĐẾM: có dấu phẩy giữa các tag, và tag chứa
+    khoảng trắng được coi như bọc trong ngoặc kép (+2 ký tự)."""
+    return sum(len(t) + (2 if " " in t else 0) for t in tags) + max(0, len(tags) - 1)
 
 
 class BundleInvalid(ValueError):
@@ -102,6 +114,17 @@ class Bundle:
         phải kiểm tra cho có."""
         err = []
 
+        # Kiểu dữ liệu trước tiên: `tags="phongthuy"` từng qua validate và lên
+        # YouTube thành ['p','h','o',...].
+        bad_types = [f for f in _STR_FIELDS if not isinstance(getattr(self, f), str)]
+        for f in ("tags", "broll_queries"):
+            v = getattr(self, f)
+            if not isinstance(v, (list, tuple)) or not all(isinstance(x, str) for x in v):
+                bad_types.append(f)
+        if bad_types:
+            raise BundleInvalid(f"Bundle {self.channel}/{self.slug}: sai kiểu dữ liệu ở {bad_types} "
+                                "(chuỗi phải là str; tags/broll_queries phải là list[str])")
+
         if self.channel not in ("FS", "BUD", "CL"):
             err.append(f"channel lạ: {self.channel!r}")
         if self.kind not in ("short", "long"):
@@ -125,15 +148,26 @@ class Bundle:
         if _ILLEGAL_TITLE.search(self.title):
             err.append("title chứa ký tự YouTube từ chối: < hoặc >")
 
-        if len(self.description) > MAX_DESCRIPTION_CHARS:
-            err.append(f"description {len(self.description)} ký tự > {MAX_DESCRIPTION_CHARS}")
+        # Mô tả: kiểm đúng văn bản SẼ GỬI ĐI (gốc + #Shorts + ghi công nhạc).
+        from factory.credits import final_description, music_title
+        if self.bgm and music_title(self.bgm) is None:
+            err.append(f"bgm {self.bgm!r} chưa có giấy phép/ghi công trong factory/credits.py")
+        final = final_description(self)
+        nbytes = len(final.encode("utf-8"))
+        if nbytes > MAX_DESCRIPTION_BYTES:
+            err.append(f"description {nbytes} byte (đã gồm #Shorts + ghi công) > {MAX_DESCRIPTION_BYTES}")
+        if _ILLEGAL_TITLE.search(final):
+            err.append("description chứa ký tự YouTube từ chối: < hoặc >")
 
-        # Tag: YouTube tính TỔNG độ dài, không phải từng cái.
-        total_tags = sum(len(t) for t in self.tags) + max(0, len(self.tags) - 1)
+        # Tag: YouTube tính TỔNG độ dài, không phải từng cái -- và còn một tag
+        # dấu `yf<id>` do publish.py thêm vào để chống trùng.
+        total_tags = tags_total_chars(list(self.tags) + [f"yf{self.id}"])
         if total_tags > MAX_TAGS_TOTAL_CHARS:
-            err.append(f"tổng tag {total_tags} ký tự > {MAX_TAGS_TOTAL_CHARS}")
+            err.append(f"tổng tag {total_tags} ký tự (cách YouTube đếm, gồm tag dấu) > {MAX_TAGS_TOTAL_CHARS}")
         if any(not t.strip() for t in self.tags):
             err.append("có tag rỗng")
+        if any(_ILLEGAL_TITLE.search(t) for t in self.tags):
+            err.append("tag chứa < hoặc >")
 
         # publish_at: sai múi giờ là đăng nhầm giờ, im lặng và khó phát hiện.
         if not re.fullmatch(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z", self.publish_at):
@@ -178,7 +212,10 @@ class Bundle:
         unknown = set(data) - known
         if unknown:
             raise BundleInvalid(f"trường lạ trong bundle: {sorted(unknown)}")
-        return cls(**{k: v for k, v in data.items() if k in known})
+        try:
+            return cls(**{k: v for k, v in data.items() if k in known})
+        except TypeError as exc:      # thiếu trường bắt buộc
+            raise BundleInvalid(f"bundle thiếu trường: {exc}") from exc
 
     @classmethod
     def from_json(cls, text: str) -> "Bundle":

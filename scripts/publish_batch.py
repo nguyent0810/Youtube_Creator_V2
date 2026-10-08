@@ -1,22 +1,27 @@
 """Đăng lên YouTube — ba chế độ, mặc định là chế độ an toàn nhất.
 
-    python scripts/publish_batch.py check              # không đăng gì
-    python scripts/publish_batch.py probe  <slug>      # đăng 1 video, KHÔNG hẹn giờ
-    python scripts/publish_batch.py run    [--limit N] # đăng thật, có hẹn giờ
+    python scripts/publish_batch.py check --channel FS             # không đăng gì
+    python scripts/publish_batch.py probe <slug> --channel FS      # đăng 1 video, KHÔNG hẹn giờ
+    python scripts/publish_batch.py run --channel FS [--limit N]   # đăng thật, có hẹn giờ
 
-VÌ SAO CÓ `probe`: upload_video() chưa từng chạy lần nào. Lần chạy đầu của
-một đường ghi không nên là 30 video lên kênh đang có 1.650 người theo dõi.
+VÌ SAO CÓ `probe`: lần chạy đầu của một đường ghi không nên là 30 video lên
+kênh đang có 1.650 người theo dõi. `probe` đăng ĐÚNG MỘT video private và
+KHÔNG có publishAt -- YouTube không bao giờ tự công khai nó. Duyệt xong thì
+chạy `run`: video probe mang tag dấu của bundle, nên `run` NHẬN LẠI nó và
+gán lịch (publish.set_schedule), không upload bản thứ hai.
 
-`probe` đăng ĐÚNG MỘT video ở chế độ private và CỐ Ý BỎ publishAt. Không có
-publishAt thì YouTube không bao giờ tự chuyển sang công khai -- video nằm
-im trong kênh cho tới khi con người vào xem rồi tự quyết. Nếu có gì sai
-(encode hỏng, dấu tiếng Việt vỡ, mô tả lệch), nó sai ở chỗ không ai thấy.
+`run` là chế độ thật: private + publishAt, YouTube tự chuyển công khai đúng
+giờ. Vẫn KHÔNG BAO GIỜ đăng public ngay.
 
-`run` mới là chế độ thật: private + publishAt, YouTube tự chuyển công khai
-đúng giờ. Vẫn KHÔNG BAO GIỜ đăng public ngay -- một lần nhầm là công khai
-thật, không rút lại được.
+CÁC CHỐT (audit 08/10/2026):
+  - `probe`/`run` bắt buộc --channel, và kiểm credential đúng kênh trước khi ghi.
+  - Item có giờ hẹn đã qua bị LOẠI (không upload): publishAt quá khứ = công
+    khai ngay. Item bị loại cần dời lịch rồi reset.
+  - Trùng tiêu đề với video KHÔNG mang dấu của bundle -> loại, không tự nhận.
+  - Dòng chỉ-đăng-lẻ (S-tier `cl-hs-`) không bao giờ đăng hàng loạt ở đây.
+  - Một bundle hỏng/mất chỉ loại đúng item đó, không làm chết cả lô.
+  - Khoá theo kênh: hai lần `run` chồng nhau không upload trùng.
 """
-import json
 import sys
 import time
 from datetime import datetime, timedelta, timezone
@@ -26,176 +31,219 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 from factory import channels, publish, store  # noqa: E402
+from factory.bundle import BundleInvalid  # noqa: E402
 
-CHANNEL = channels.pick()
-CREDS = channels.creds_path(CHANNEL)
-MODE = sys.argv[1] if len(sys.argv) > 1 else "check"
+ARGS = channels.args_without_channel()
+MODE = ARGS[0] if ARGS else "check"
+CHANNEL = channels.pick(required=MODE in ("probe", "run"))
 
-# CHỈ đăng item khớp tiền tố này. Không có nó, `check` vừa cho thấy hàng đợi
-# có 32 item chứ không phải 30 -- hai cái thừa là video DEMO dựng lúc thử
-# nghiệm (mau-hop-menh-kim, huong-bep-quan-trong-hon). Chúng đã lọt vào
-# hàng đợi qua sync_from_disk và sẽ bị đăng lên kênh thật.
-#
-# Hàng đợi là nơi mọi thứ dồn về, gồm cả thứ chỉ để thử. Bước đăng phải tự
-# lọc, không được cho rằng mọi thứ trong hàng đợi đều đáng đăng.
-# 21/09/2026: thêm 4 dòng pillar. Demo (mau-hop-menh-kim, ...) vẫn bị loại.
-SLUG_PREFIX = channels.prefixes(CHANNEL)
+# CHỈ đăng item khớp tiền tố này. `check` từng cho thấy hàng đợi có 32 item chứ
+# không phải 30 -- hai cái thừa là video DEMO dựng lúc thử nghiệm. Hàng đợi là
+# nơi mọi thứ dồn về, gồm cả thứ chỉ để thử; bước đăng phải tự lọc.
+SLUG_PREFIX = channels.bulk_prefixes(CHANNEL)
+DRIP_ONLY = channels.drip_only(CHANNEL)
 
 
-def _creds() -> dict:
-    return json.loads(CREDS.read_text(encoding="utf-8"))
+def _split(rows):
+    bulk = [r for r in rows if r["slug"].startswith(SLUG_PREFIX)]
+    drip = [r for r in rows if DRIP_ONLY and r["slug"].startswith(DRIP_ONLY)]
+    other = [r for r in rows if r not in bulk and r not in drip]
+    return bulk, drip, other
+
+
+def _session(conn):
+    creds = channels.load_creds(CHANNEL)
+    tok = publish.access_token(creds)
+    ident = channels.verify_identity(CHANNEL, tok, conn)
+    return creds, tok, ident
+
+
+def _missed(publish_at: str) -> bool:
+    try:
+        publish.check_publish_at(publish_at)
+        return False
+    except publish.PublishAtPassed:
+        return True
 
 
 def do_check() -> None:
     """Mọi thứ kiểm được mà không ghi gì lên kênh."""
-    tok = publish.access_token(_creds())
-    up = publish.uploads_playlist_id(tok)
-    info = publish._api(tok, "GET", "channels",
-                        {"part": "snippet,statistics", "mine": "true"}, None)
-    it = info["items"][0]
-    print(f"kênh   : {it['snippet']['title']}")
-    print(f"hiện có: {it['statistics'].get('videoCount')} video, "
-          f"{it['statistics'].get('subscriberCount')} sub")
     with store.connect() as conn:
+        _, tok, ident = _session(conn)
+        info = publish._api(tok, "GET", "channels", {"part": "statistics", "mine": "true"}, None)
+        stats = info["items"][0]["statistics"]
+        print(f"kênh   : {ident['title']} ({ident['id']}) -- cấu hình {CHANNEL} "
+              f"({channels.CHANNELS[CHANNEL]['ten']})")
+        print(f"hiện có: {stats.get('videoCount')} video, {stats.get('subscriberCount')} sub")
         allr = store.next_batch(conn, "assembled", limit=500, channel=CHANNEL)
-    rows = [r for r in allr if r["slug"].startswith(SLUG_PREFIX)]
-    bỏ = [r["slug"] for r in allr if not r["slug"].startswith(SLUG_PREFIX)]
-    print(f"sẵn sàng đăng: {len(rows)} item (khớp {', '.join(SLUG_PREFIX)})")
-    if bỏ:
-        print(f"BỎ QUA {len(bỏ)} item không khớp tiền tố: {bỏ}")
-    titles = publish.channel_titles(up, tok)
-    for r in rows[:3]:
-        b = store.load_bundle(r["channel"], r["slug"])
-        dup = titles.get(b.title.strip())
-        print(f"   {r['slug']}  {r['publish_at']}  "
-              f"{'ĐÃ CÓ TRÊN KÊNH -> sẽ bỏ qua' if dup else 'chưa có'}")
-    with store.connect() as conn:
+        rows, drip, other = _split(allr)
+        print(f"sẵn sàng đăng: {len(rows)} item (khớp {', '.join(SLUG_PREFIX)})")
+        if drip:
+            print(f"BỎ QUA {len(drip)} item dòng chỉ-đăng-lẻ ({', '.join(DRIP_ONLY)}): "
+                  "dùng motion/stier/upload_one.py / drip.py")
+        if other:
+            print(f"BỎ QUA {len(other)} item không khớp tiền tố: {[r['slug'] for r in other]}")
+        late = [r["slug"] for r in rows if _missed(r["publish_at"])]
+        if late:
+            print(f"LỠ GIỜ {len(late)} item (giờ hẹn đã qua/quá sát) -> `run` sẽ LOẠI, cần dời lịch: {late[:10]}")
+        titles = publish.channel_titles(ident["uploads"], tok)
+        for r in rows[:3]:
+            b = store.load_bundle(r["channel"], r["slug"])
+            dup = titles.get(b.title.strip())
+            print(f"   {r['slug']}  {r['publish_at']}  "
+                  f"{'TRÙNG TIÊU ĐỀ trên kênh (' + dup + ') -> run sẽ kiểm tag dấu' if dup else 'chưa có'}")
         dl = store.deferred(conn, CHANNEL)
     if dl:
-        print(f"đang hoãn chờ quota: {len(dl)} item, thử lại từ {dl[0]['retry_after']}")
-    print(f"\nquota: mỗi video 1 lượt upload, trần THỰC TẾ ~92 lượt/ngày/project "
-          f"(tài liệu ghi 100)")
+        print(f"đang hoãn: {len(dl)} item, thử lại từ {dl[0]['retry_after']}")
+    print("\nquota: mỗi video 1 lượt upload, trần THỰC TẾ ~92 lượt/ngày/project (tài liệu ghi 100)")
 
 
-def do_probe(slug: str) -> None:
+def do_probe(slug: str | None) -> None:
     """Đăng ĐÚNG một video, private, KHÔNG hẹn giờ -> không bao giờ tự công khai."""
+    if not slug:
+        sys.exit("probe cần slug cụ thể: python scripts/publish_batch.py probe <slug> --channel X")
     b = store.load_bundle(CHANNEL, slug)
     with store.connect() as conn:
-        row = conn.execute("SELECT * FROM item WHERE channel=? AND slug=?",
-                           (CHANNEL, slug)).fetchone()
-    if not row or not row["video_path"]:
-        sys.exit(f"chưa dựng video cho {slug}")
-
-    # Bỏ publishAt: dựng bản sao bundle với publish_at rỗng thì validate sẽ
-    # chặn, nên can thiệp thẳng vào payload qua tham số của upload_video.
-    tok = publish.access_token(_creds())
-    print(f"đăng THỬ (private, KHÔNG hẹn giờ): {b.title}")
-    print(f"  file: {row['video_path']}")
-
-    import factory.publish as P
-    orig = P.upload_video
-
-    def _no_schedule(bundle, video_path, token):
-        # Vá đúng một lần, chỉ trong lệnh probe: bỏ publishAt khỏi payload.
-        real_meta = {}
-        saved = P.json.dumps
-
-        def spy(obj, *a, **kw):
-            if isinstance(obj, dict) and "status" in obj:
-                obj["status"].pop("publishAt", None)
-                real_meta.update(obj)
-            return saved(obj, *a, **kw)
-
-        P.json.dumps = spy
-        try:
-            return orig(bundle, video_path, token)
-        finally:
-            P.json.dumps = saved
-
-    vid = _no_schedule(b, Path(row["video_path"]), tok)
+        row = conn.execute("SELECT * FROM item WHERE channel=? AND slug=?", (CHANNEL, slug)).fetchone()
+        if not row or not row["video_path"]:
+            sys.exit(f"chưa dựng video cho {slug}")
+        if row["video_id"] or row["stage"] == "published":
+            sys.exit(f"{slug} đã có video trên kênh ({row['video_id']}) -- probe sẽ tạo bản trùng")
+        with store.locked(conn, f"publish-{CHANNEL}"):
+            _, tok, ident = _session(conn)
+            print(f"đăng THỬ lên {ident['title']} (private, KHÔNG hẹn giờ): {b.title}")
+            print(f"  file: {row['video_path']}")
+            vid = publish.upload_video(b, Path(row["video_path"]), tok, schedule=False)
+            conn.execute("UPDATE item SET error = ?, updated_at = ? WHERE id = ?",
+                         (f"PROBE {vid}: private, chưa hẹn giờ -- duyệt xong chạy `run`", store._now(), row["id"]))
     print(f"\n  XONG. video_id = {vid}")
     print(f"  https://studio.youtube.com/video/{vid}/edit")
     print("  Video đang PRIVATE và KHÔNG có lịch -> sẽ không bao giờ tự công khai.")
-    print("  Vào xem, kiểm hình/tiếng/mô tả. Đạt thì chạy `run`; không đạt thì xoá.")
+    print("  Đạt thì chạy `run` (nó nhận lại video này và gán lịch); không đạt thì xoá video.")
 
 
 def _foreign_days(tok: str, conn) -> set:
-    """Các ngày (giờ VN, từ hôm nay) mà video KHÔNG do v2 đăng sẽ/đang lên sóng."""
+    """Các ngày (giờ VN, từ hôm nay) mà SHORT không do v2 đăng sẽ/đang lên sóng.
+
+    Chỉ tính Shorts (<= 3 phút): video dài của chính kênh (publish_long.py
+    không ghi vào store) từng làm cả ngày Shorts CL bị coi là "bận"."""
     sys.path.insert(0, str(ROOT / "scripts"))
     from schedule_audit import all_videos
-    mine = {r[0] for r in conn.execute("SELECT video_id FROM item WHERE video_id IS NOT NULL")}
+    mine = {r[0] for r in conn.execute(
+        "SELECT video_id FROM item WHERE channel = ? AND video_id IS NOT NULL", (CHANNEL,))}
     today = (datetime.now(timezone.utc) + timedelta(hours=7)).date()
     return {(v["live_at"] + timedelta(hours=7)).date() for v in all_videos(tok)
-            if v["id"] not in mine and (v["live_at"] + timedelta(hours=7)).date() >= today}
+            if v["id"] not in mine and (v["live_at"] + timedelta(hours=7)).date() >= today
+            and (v.get("seconds") is None or v["seconds"] <= 180)}
+
+
+def _publish_with_backoff(b, path, creds, tok, titles):
+    """Giới hạn tốc độ (RateLimited) là chuyện vài chục giây: chờ rồi thử lại."""
+    for attempt in range(3):
+        try:
+            return publish.publish_bundle(b, path, creds, token=tok, known_titles=titles)
+        except publish.RateLimited:
+            if attempt == 2:
+                raise
+            time.sleep(30 * 2 ** attempt)
 
 
 def do_run(limit: int) -> None:
-    creds = _creds()
-    tok = publish.access_token(creds)
-    tok_at = time.monotonic()
-    with store.connect() as conn:
+    with store.connect() as conn, store.locked(conn, f"publish-{CHANNEL}"):
+        creds, tok, ident = _session(conn)
+        tok_at = time.monotonic()
         allr = store.next_batch(conn, "assembled", limit=500, channel=CHANNEL)
-        match = [r for r in allr if r["slug"].startswith(SLUG_PREFIX)]
+        match, drip, other = _split(allr)
         rows = match[:limit]
-        print(f"{len(rows)} item sẽ đăng (private + hẹn giờ), "
-              f"bỏ qua {len(allr) - len(match)} item không khớp")
+        print(f"kênh {ident['title']}: {len(rows)} item sẽ đăng (private + hẹn giờ), "
+              f"bỏ qua {len(other)} không khớp tiền tố, {len(drip)} item chỉ-đăng-lẻ")
         if not rows:
             print("trạng thái:", store.summary(conn))
             return
 
         # Chụp danh sách tiêu đề trên kênh MỘT lần cho cả lô.
-        titles = publish.channel_titles(publish.uploads_playlist_id(tok), tok)
+        titles = publish.channel_titles(ident["uploads"], tok)
         print(f"chống trùng: đã chụp {len(titles)} tiêu đề gần nhất trên kênh")
 
-        # CHỐT CHẶN NGUỒN KHÁC (30/09/2026): v1/máy khác vẫn hẹn giờ lên CÙNG
-        # kênh với kho trạng thái riêng -- store v2 không biết. Ngày 30/09 06:00
-        # kênh FS đã lên 2 video Lịch cùng lúc. Nên trước khi upload: đọc lịch
-        # thật của kênh; ngày (giờ VN) nào nguồn khác đã có video sắp/đang lên
-        # sóng thì v2 KHÔNG đăng vào ngày đó -- để lại hàng đợi, báo rõ.
+        # CHỐT NGUỒN KHÁC (30/09/2026): v1/máy khác vẫn hẹn giờ lên CÙNG kênh với
+        # kho trạng thái riêng. Ngày (giờ VN) nào nguồn khác đã có Short sắp/đang
+        # lên sóng thì v2 không đăng vào ngày đó -- để lại hàng đợi, báo rõ. Item
+        # bị bỏ qua mà để quá giờ sẽ bị LOẠI ở lần chạy sau (chốt giờ đã qua),
+        # không bao giờ lên sóng muộn.
         busy = _foreign_days(tok, conn) if "--ignore-other" not in sys.argv else set()
         if busy:
             print(f"nguồn khác đã chiếm {len(busy)} ngày: "
                   f"{', '.join(d.strftime('%d/%m') for d in sorted(busy)[:12])}{'…' if len(busy) > 12 else ''}")
 
         for i, r in enumerate(rows, 1):
-            b = store.load_bundle(r["channel"], r["slug"])
-            vn_day = (datetime.strptime(r["publish_at"], "%Y-%m-%dT%H:%M:%SZ") + timedelta(hours=7)).date()
+            tag = f"  [{i}/{len(rows)}] {r['slug']}"
+            try:
+                b = store.load_bundle(r["channel"], r["slug"])
+            except (BundleInvalid, OSError) as exc:
+                store.reject(conn, r["id"], f"BUNDLE HỎNG/MẤT: {exc}")
+                print(f"{tag}  LOẠI: bundle không đọc được ({exc})")
+                continue
+            # Giờ hẹn lấy từ BUNDLE (thứ sẽ gửi lên YouTube), không từ DB.
+            vn_day = (publish.parse_publish_at(b.publish_at) + timedelta(hours=7)).date()
             if vn_day in busy:
-                print(f"  [{i}/{len(rows)}] {b.slug}  BỎ QUA: ngày {vn_day:%d/%m} nguồn khác đã có video "
+                print(f"{tag}  BỎ QUA: ngày {vn_day:%d/%m} nguồn khác đã có Short "
                       f"(dời lịch lô này, hoặc --ignore-other nếu chắc chắn)")
                 continue
-            # access_token sống 60 phút; 92 upload mất ~20 phút, nhưng lô
-            # lớn hơn hoặc mạng chậm thì vượt -- làm mới trước khi hết hạn.
+            if _missed(b.publish_at):
+                store.reject(conn, r["id"], f"LỠ GIỜ: hẹn {b.publish_at} đã qua/quá sát -- không upload "
+                                            "(publishAt quá khứ = công khai ngay). Dời lịch rồi reset item.")
+                print(f"{tag}  LOẠI: giờ hẹn {b.publish_at} đã qua -- cần dời lịch")
+                continue
+            if r["script_sha"] and r["script_sha"] != store.script_sha(b.script):
+                store.reject(conn, r["id"], "KỊCH BẢN ĐÃ ĐỔI SAU KHI DỰNG: video là bản cũ. "
+                                            "reset_items để dựng lại.")
+                print(f"{tag}  LOẠI: kịch bản đã đổi sau khi dựng video")
+                continue
+            # access_token sống 60 phút; lô lớn hoặc mạng chậm thì vượt -- làm mới sớm.
             if time.monotonic() - tok_at > 40 * 60:
                 tok, tok_at = publish.access_token(creds), time.monotonic()
             try:
-                res = publish.publish_bundle(b, Path(r["video_path"]), creds,
-                                             token=tok, known_titles=titles)
-                store.mark(conn, b.id, "published", video_id=res.video_id)
-                print(f"  [{i}/{len(rows)}] {b.slug}  {res.url}  hẹn {res.scheduled_at}")
+                res = _publish_with_backoff(b, Path(r["video_path"]), creds, tok, titles)
             except publish.QuotaExceeded as exc:
-                # Hết hạn mức: item này VÀ mọi item sau đều hoãn tới lúc
-                # reset, không tính là hỏng. Gọi tiếp chỉ nhận lại đúng lỗi.
+                # Hết hạn mức NGÀY: item này VÀ mọi item sau đều hoãn tới lúc reset,
+                # không tính là hỏng. Gọi tiếp chỉ nhận lại đúng lỗi.
                 when = publish.next_quota_reset()
                 for rr in rows[i - 1:]:
                     store.defer(conn, rr["id"], f"QuotaExceeded: {exc}", when)
-                print(f"  [{i}/{len(rows)}] HẾT QUOTA — hoãn {len(rows) - i + 1} item "
-                      f"tới {when} (không tính là hỏng)")
+                print(f"{tag}  HẾT QUOTA — hoãn {len(rows) - i + 1} item tới {when} (không tính là hỏng)")
                 break
+            except publish.RateLimited as exc:
+                later = (datetime.now(timezone.utc) + timedelta(hours=1)).strftime("%Y-%m-%dT%H:%M:%SZ")
+                store.defer(conn, r["id"], f"RateLimited: {exc}", later)
+                print(f"{tag}  GIỚI HẠN TỐC ĐỘ — hoãn item này tới {later}")
+                continue
+            except (publish.PublishAtPassed, publish.DuplicateTitle) as exc:
+                store.reject(conn, r["id"], f"{type(exc).__name__}: {exc}")
+                print(f"{tag}  LOẠI: {exc}")
+                continue
             except Exception as exc:
-                n = store.bump_attempt(conn, b.id, f"{type(exc).__name__}: {exc}")
-                print(f"  [{i}/{len(rows)}] {b.slug}  LỖI (lần {n}): {exc}")
+                n = store.bump_attempt(conn, r["id"], f"{type(exc).__name__}: {exc}")
+                print(f"{tag}  LỖI (lần {n}): {exc}")
+                continue
+            store.mark(conn, r["id"], "published", video_id=res.video_id)
+            note = " (NHẬN LẠI bản đã upload)" if res.adopted else ""
+            print(f"{tag}  {res.url}  hẹn {res.scheduled_at}{note}")
+            for w in res.warnings:
+                print(f"      cảnh báo: {w}")
             time.sleep(2)   # nhẹ tay với API
         print("\ntrạng thái:", store.summary(conn))
 
 
-if MODE == "check":
-    do_check()
-elif MODE == "probe":
-    do_probe(sys.argv[2] if len(sys.argv) > 2 else "lich-20261001")
-elif MODE == "run":
-    lim = int(sys.argv[sys.argv.index("--limit") + 1]) if "--limit" in sys.argv else 500
-    print(f"kênh {CHANNEL} ({channels.CHANNELS[CHANNEL]['ten']})")
-    do_run(lim)
-else:
-    sys.exit(__doc__)
+if __name__ == "__main__":
+    if MODE == "check":
+        do_check()
+    elif MODE == "probe":
+        do_probe(ARGS[1] if len(ARGS) > 1 else None)
+    elif MODE == "run":
+        lim = int(ARGS[ARGS.index("--limit") + 1]) if "--limit" in ARGS else 500
+        try:
+            do_run(lim)
+        except store.LockBusy as exc:
+            sys.exit(str(exc))
+    else:
+        sys.exit(__doc__)
