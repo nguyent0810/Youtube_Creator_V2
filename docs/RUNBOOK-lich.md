@@ -66,6 +66,16 @@ Không ngày nào đúng hoàn toàn. Hôm nay (08/10), các video 01–09/10 đ
    python scripts/verify_published.py --channel FS
    ```
    Hàng đợi chạy theo giờ hẹn, gần nhất trước. Hết quota ngày thì item tự hoãn tới giờ reset (14:00 hoặc 15:00 VN, tuỳ giờ mùa hè ở Mỹ); chạy `resume` lại sau mốc đó.
+
+   **Cân nhắc giãn upload.** Lệnh trên upload cả 83 video trong một ngày (nếu đủ quota).
+   - Tiền lệ: ngày 30/09, kênh CL nhận 61 video trong một ngày và YouTube ngừng đẩy Shorts của kênh (xem `DRIP_ONLY` trong `factory/channels.py`). Quan hệ nhân quả chưa được chứng minh, nhưng đáng tránh lặp lại.
+   - Muốn an toàn hơn thì dựng trước, rồi đăng dần:
+     ```
+     python scripts/run_pipeline.py resume --channel FS --no-publish   # dựng hết, chưa đăng
+     python scripts/publish_batch.py run --channel FS --limit 15        # mỗi ngày một lần
+     ```
+     `--limit` lấy các video có giờ hẹn gần nhất trước, nên luôn có sẵn video cho khoảng 15 ngày tới.
+   - Nếu máy đang có tác vụ định kỳ chạy `run_pipeline.py resume` (có đăng), tác vụ đó sẽ upload hết một lượt: tạm tắt nó trong thời gian giãn.
 4. Dọn video cũ: trong YouTube Studio, lọc tiêu đề `[ĐÃ THAY]`, kiểm vài video, rồi xoá hàng loạt. Công cụ cố ý **không xoá** video, vì xoá là vĩnh viễn.
 
 Các nhóm khác có thể gặp, tuỳ thời điểm chạy:
