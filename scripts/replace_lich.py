@@ -128,6 +128,8 @@ def classify(days: list[Day], now: datetime, lead: timedelta, keep_near: bool) -
                 continue
         it, v = day.item, day.yt
         has_video = bool(it and it.get("video_id")) and v is not None
+        if it and it.get("video_id") and v is None:
+            day.note = f"video cũ {it['video_id']} không còn trên kênh (đã xoá?) -- coi như chưa đăng"
         can_upload = day.slot > now + publish.MIN_LEAD
         if has_video and v["privacyStatus"] != "private":
             day.group = "ĐÃ PHÁT"
@@ -195,6 +197,10 @@ def apply(days: list[Day], token: str | None, now: datetime, unschedule_fn=publi
                     done["gỡ lịch"] += 1
                 except publish.QuotaExceeded:
                     print(f"HẾT QUOTA ở {day.slug} -- chạy lại cùng lệnh sau giờ reset để làm nốt.")
+                    break
+                except (publish.RateLimited, OSError) as e:   # bị giới hạn tốc độ / mất mạng: dừng, đừng trượt qua cả lô
+                    print(f"DỪNG ở {day.slug}: {e} -- chạy lại cùng lệnh sau ít phút để làm nốt.")
+                    done["lỗi"] += 1
                     break
                 except publish.PublishError as e:
                     print(f"   {day.slug}: LỖI gỡ lịch {e} -- bỏ qua ngày này, video cũ giữ nguyên")

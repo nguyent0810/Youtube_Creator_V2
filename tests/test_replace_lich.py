@@ -188,3 +188,16 @@ def test_unschedule_never_touches_live_or_about_to_go_live_videos(monkeypatch, s
     with pytest.raises(publish.PublishError):
         publish.unschedule("V", "tok", R.TITLE_TAG)
     assert sent == {}
+
+
+def test_rate_limit_stops_the_run_instead_of_skipping_every_day(env):
+    now = _slot("lich-20261015") - timedelta(days=2)
+    for s in SLUGS[:3]:
+        _upload(env, s)
+    days, _, _ = _plan(env, now)
+
+    def limited(vid, tok, prefix):
+        env["calls"].append(vid)
+        raise publish.RateLimited("rateLimitExceeded")
+    done = R.apply(list(days.values()), "tok", now, unschedule_fn=limited)
+    assert env["calls"] == ["V1015"] and done["bundle mới"] == 0     # dừng ở ngày đầu, không trượt qua cả lô
