@@ -14,8 +14,9 @@ một phần: bản cũ chỉ có "gỡ hết" -- muốn gỡ riêng 83 video L�
 thì sẽ kéo theo cả 4 dòng pillar.
 
 Item bị gỡ được đánh dấu UNSCHEDULED trong store; `reschedule.py` đặt lại
-đúng giờ gốc nếu đổi ý. Muốn THAY bằng video mới thì xoá video cũ trong
-Studio rồi reset item (xem docs/RUNBOOK-lich.md).
+đúng giờ gốc nếu đổi ý. Muốn THAY video Lịch sai bằng bản mới thì dùng
+`scripts/replace_lich.py` (gỡ lịch + dựng lại + đăng đúng giờ cũ; xem
+docs/RUNBOOK-lich.md), không cần chạy script này trước.
 """
 from __future__ import annotations
 

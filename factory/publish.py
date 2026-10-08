@@ -464,6 +464,37 @@ def publish_bundle(bundle, video_path: Path, creds: dict,
     return res
 
 
+def unschedule(video_id: str, token: str, title_prefix: str = "") -> dict:
+    """Gỡ lịch video ĐÃ upload: private, KHÔNG publishAt -> không bao giờ tự công khai.
+
+    Không xoá gì (xoá là vĩnh viễn). `title_prefix` (vd "[ĐÃ THAY] ") gắn vào đầu
+    tiêu đề để lọc rồi xoá hàng loạt trong Studio; đã có thì không gắn lại.
+    Video đã công khai, hoặc sắp tự công khai trong 2 phút (đang đua với giờ hẹn),
+    thì KHÔNG đụng: gỡ lịch không phải là gỡ video đang phát. Mọi trường khác
+    được gửi lại nguyên vẹn như set_schedule (update ghi đè toàn phần)."""
+    it = video_status(video_id, token)
+    if it is None:
+        raise PublishError(f"không thấy video {video_id} trên kênh")
+    sn, st = it["snippet"], it["status"]
+    if st.get("privacyStatus") != "private":
+        raise PublishError(f"video {video_id} đang {st.get('privacyStatus')} -- không gỡ lịch video đã công khai")
+    pa = st.get("publishAt")
+    if pa and datetime.fromisoformat(pa.replace("Z", "+00:00")) < datetime.now(timezone.utc) + timedelta(minutes=2):
+        raise PublishError(f"video {video_id} sắp tự công khai ({pa}) -- không đua với giờ hẹn")
+    snippet = {k: sn[k] for k in ("title", "description", "tags", "categoryId",
+                                  "defaultLanguage", "defaultAudioLanguage") if k in sn}
+    snippet.setdefault("categoryId", "22")
+    if title_prefix and not snippet.get("title", "").startswith(title_prefix):
+        snippet["title"] = (title_prefix + snippet.get("title", ""))[:100]
+    status = {k: st[k] for k in ("embeddable", "license", "publicStatsViewable",
+                                 "containsSyntheticMedia") if k in st}
+    status.update({"privacyStatus": "private",
+                   "selfDeclaredMadeForKids": st.get("selfDeclaredMadeForKids", st.get("madeForKids", False))})
+    _api(token, "PUT", "videos", {"part": "snippet,status"},
+         {"id": video_id, "snippet": snippet, "status": status})
+    return {"title": snippet.get("title", ""), "was_scheduled": pa}
+
+
 def set_schedule(video_id: str, publish_at: str, token: str) -> None:
     """Gán publishAt cho video ĐÃ upload, không phải upload lại.
 

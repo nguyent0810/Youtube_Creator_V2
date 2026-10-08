@@ -15,35 +15,16 @@ coi là "đã có", lô rỗng nên qua kiểm, rồi sync đưa tất cả vào
 cả lô sinh trong bộ nhớ, qua kiểm chéo rồi mới ghi.
 """
 import sys
-from datetime import date, timedelta
+from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 from factory import store  # noqa: E402
-from factory.bundle import Bundle  # noqa: E402
-from factory.compose import script_for  # noqa: E402
 from factory.batchcheck import report_batch  # noqa: E402
-from factory.factcheck import report  # noqa: E402
+from factory.lich import CHANNEL, build_bundle  # noqa: E402
 from factory.lunar import facts_range  # noqa: E402
-from factory.vocab import broll_for  # noqa: E402
-
-VOICE = "Anh Khôi"
-BGM = "asian_drums.mp3"
-
-# B-roll theo THẾ của ngày, không theo từng ngày: thế quyết định tông của
-# kịch bản (siết / mở / cùng thuận / cùng đóng) nên hình cũng nên theo đó.
-BROLL = {
-    "sao_mo_truc_siet": ["calm vietnamese home interior", "wooden door closed detail",
-                         "morning light through window", "quiet traditional house"],
-    "sao_du_truc_mo":   ["open road sunrise vietnam", "busy market morning",
-                         "hands counting money", "wooden gate opening"],
-    "cung_dong":        ["repairing wall plaster hands", "closed wooden shutters",
-                         "cement trowel work detail", "quiet empty room"],
-    "cung_thuan":       ["vietnamese shop opening morning", "sunrise over rice field",
-                         "incense smoke altar close up", "warm home interior daylight"],
-}
 
 if len(sys.argv) < 2:
     sys.exit(__doc__)
@@ -55,38 +36,14 @@ for f in facts_range(start, days):
     # BẤT BIẾN: bundle đã có (có thể đã lên kênh) thì KHÔNG ghi đè. Khuôn câu
     # đổi theo thời gian; ghi đè sẽ làm bundle lệch với video đang ở trên
     # kênh (tiêu đề lệch -> verify báo sai, chống trùng theo tiêu đề hỏng).
-    if (store.BUNDLE_DIR / "FS" / f"{f.slug}.json").exists():
+    if (store.BUNDLE_DIR / CHANNEL / f"{f.slug}.json").exists():
         kept.append(f.slug)
         continue
-    sc = script_for(f)
-    ok, text = report(sc["script"], f, f.publish_at, label=str(f.target))
-    if not ok:
+    b, text, the = build_bundle(f)
+    if b is None:
         skipped.append((f.target, text))
         continue
-    b = Bundle(
-        channel="FS", kind="short", slug=f.slug,
-        script=sc["script"],
-        title=sc["title"],
-        description=(
-            f"Lịch ngày {f.target.strftime('%d/%m/%Y')} — âm lịch {f.lunar_day}/{f.lunar_month}, "
-            f"ngày {f.can_chi_day}, sao {f.god_name}, {f.truc_name}.\n"
-            f"Nên làm: {', '.join(f.truc_good_for)}.\n"
-            f"Kiêng: {', '.join(f.truc_bad_for)}.\n\n"
-            "Ghi chép theo lịch pháp truyền thống, để tham khảo."
-        ),
-        tags=["phong thuy", "lich van nien", "ngay tot", "lich am"],
-        thumbnail_text="",
-        publish_at=f.publish_at,
-        voice=VOICE, bgm=BGM,
-        # Hình bám DANH MỤC VIỆC THẬT của ngày, không bám thế: chỉ có 4
-        # thế nên 61 video trước đó dùng chung đúng 4 bộ từ khoá.
-        broll_queries=broll_for(f.truc_good_for, BROLL[sc["the"]],
-                                offset=f.target.day),
-        source_note=(f"lịch {f.target}: {f.can_chi_day}, sao {f.god_name}, {f.truc_name} "
-                     f"(tính độc lập + vnlunar, khớp)"),
-    )
-    b.validate()
-    made.append((f, b, sc["the"]))
+    made.append((f, b, the))
 
 # KIỂM CHÉO CẢ LÔ trước khi đưa vào hàng đợi. Kiểm từng bundle riêng lẻ
 # không bao giờ thấy tiêu đề trùng -- lỗi đó đã làm mất 9 video.
@@ -99,7 +56,7 @@ for _, b, _ in made:
     store.save_bundle(b)
 
 with store.connect() as conn:
-    added, total = store.sync_from_disk(conn, channel="FS")
+    added, total = store.sync_from_disk(conn, channel=CHANNEL)
 
 print(f"Sinh {len(made)}/{days} bundle mới, giữ nguyên {len(kept)} đã có, hàng đợi thêm {added} (tổng {total})")
 if skipped:

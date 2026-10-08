@@ -6,6 +6,7 @@ dữ kiện sai. Test ở đây so với giá trị TRA TAY theo quy tắc truy�
 (và đã đối chiếu với vnlunar 1.0.5), cùng các tính chất mà bất kỳ lịch
 đúng nào cũng phải thoả.
 """
+import re
 from datetime import date, timedelta
 
 import pytest
@@ -134,5 +135,6 @@ def test_factcheck_catches_wrong_mansion_claim():
 def test_mai_tang_is_not_tomorrow():
     """'mai táng' không phải 'ngày mai'."""
     f = facts_for(date(2026, 10, 1))
-    script = script_for(f)["script"].replace("Ngày mai", "Hôm ấy").replace("ngày mai", "hôm ấy") + " Kiêng mai táng."
+    # bỏ MỌI chữ chỉ ngày mai ("Ngày mai ...", "... mai làm việc nhỏ"), chỉ để lại "mai táng"
+    script = re.sub(r"(?i)\b(ngày )?mai\b", "hôm ấy", script_for(f)["script"]) + " Kiêng mai táng."
     assert any("ngày mai" in m for m in _fails(script, f))

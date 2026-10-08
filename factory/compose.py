@@ -159,8 +159,16 @@ def _compose(f: DayFacts) -> tuple[str, str, str, str]:
     # hash KHÁC nhau, cộng offset vào vẫn có thể va cùng dư -- đã xảy ra
     # thật với 3/9 cặp. Băm theo cặp thì phần băm giống hệt nhau, nên offset
     # một mình quyết định, và lệch được ĐẢM BẢO cho tới 3 lần xuất hiện.
+    #
+    # Offset theo SỐ NGÀY TUYỆT ĐỐI // 12 chứ không theo `day // 12` (audit
+    # 08/10/2026): `day // 12` reset mỗi tháng, nên cùng cặp ở tháng sau rơi
+    # lại đúng biến thể cũ -- 09/11 và 03/12/2026 (cùng chi Hợi, cùng tháng
+    # tiết) ra kịch bản TRÙNG NGUYÊN VĂN. Kiểm chéo từng tháng không thấy; lô
+    # thay 83 ngày Lịch thì thấy. Trong tháng vẫn lệch như cũ ((o+12)//12 =
+    # o//12 + 1); trên 2026-10..2028 hai kịch bản giống hệt nhau giờ cách nhau
+    # ít nhất 360 ngày (trước: 24 ngày).
     h = int(hashlib.sha256(f"{f.god_name}|{f.truc_name}".encode("utf-8")).hexdigest(), 16)
-    v = (h + f.target.day // 12) % _N_HOOKS
+    v = (h + f.target.toordinal() // 12) % _N_HOOKS
 
     if the == "sao_mo_truc_siet":
         hooks = [
