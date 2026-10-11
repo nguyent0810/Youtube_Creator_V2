@@ -5,6 +5,8 @@
 Quy ước script.md: "## CHnn · Tên chương"; mỗi dòng một câu; "‖" cuối dòng = nghỉ dài; "**[DIỄN Ý]**" = trích diễn ý; "[TRÍCH DỊCH]" = văn bản thật đã dịch;
 "»" = phần sau là LỜI TRÍCH (đọc giọng trích, xem build_long.QUOTE_VOICE). Dòng "a: » b" tách thành 2 câu.
 Dừng ở "## Ghi chú". Câu -> chuỗi, hoặc {"t", "p": nghỉ, "q": 1 (lời trích), "diy": 1}.
+Cuối câu được phép có một dấu cảnh `{loại: nội dung}` (sau cả `‖`). Dấu bị gỡ khỏi lời đọc
+và nằm ở `marks` của chương: `{"i": chỉ số câu, "raw": "date: 29.07.1967"}`.
 """
 import json
 import re
@@ -13,6 +15,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 LONG_PAUSE = 1.0
+_MARK = re.compile(r"\s*\{([^{}]+)\}\s*$")
+
+
+def _split_mark(s: str):
+    m = _MARK.search(s)
+    if not m:
+        return s, None
+    return s[:m.start()].rstrip(), m.group(1).strip()
 
 
 def parse(md: str):
@@ -23,7 +33,7 @@ def parse(md: str):
             break
         m = re.match(r"^## (CH\d\d) · (.+)$", s)
         if m:
-            cur = {"name": m.group(1).lower(), "title": m.group(2), "lines": []}
+            cur = {"name": m.group(1).lower(), "title": m.group(2), "lines": [], "marks": []}
             chs.append(cur)
             continue
         if not cur or not s or s == "---" or s.startswith("#"):
@@ -31,6 +41,9 @@ def parse(md: str):
         diy = "**[DIỄN Ý]**" in s
         tr = "[TRÍCH DỊCH]" in s            # văn bản thật dịch sang tiếng Việt (nhãn TRÍCH DỊCH trên cảnh quote)
         s = s.replace("**[DIỄN Ý]**", "").replace("[TRÍCH DỊCH]", "").strip()
+        s, mark = _split_mark(s)
+        if not s:
+            continue
         pause = s.endswith("‖")
         s = s.rstrip("‖").strip()
         parts = [p.strip() for p in s.split("»")]
@@ -45,6 +58,8 @@ def parse(md: str):
         if pause:
             out[-1]["p"] = LONG_PAUSE
         cur["lines"] += out
+        if mark:
+            cur["marks"].append({"i": len(cur["lines"]) - 1, "raw": mark})
     for c in chs:
         x0 = c["lines"][0]
         if c["name"] != "ch00" and set(x0) == {"t"}:     # "Chương N. Tên." -> nghỉ để màn tên chương thở

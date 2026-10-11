@@ -31,6 +31,8 @@ python motion/long/build_long.py yakuza final          # nối chương + loudno
 python motion/long/describe.py yakuza                  # mô tả: mốc chương + nguồn + ghi công ảnh/nhạc/video
 ```
 
+`html` và `render` dừng lại, trước khi render, nếu một thẻ giấy có con dấu mà không bật mực, con dấu tràn khỏi thẻ, tiêu đề thẻ rộng hơn lòng thẻ, hoặc clip B-roll là HDR (`color_transfer` PQ/HLG hoặc bt.2020).
+
 Giọng: vieneu 3.8.3, `VOICE = "Anh Khôi"` (3.8.3 đổi tên thành "Thiện Minh", tên cũ là alias, embedding y hệt).
 Bước trộn áp `VOICE_FX` (highpass 70, -2dB@200, +2.5dB@3.2k, de-esser, nén 3:1) lên giọng; spec `"master": false` để tắt
 (Yakuza đặt false vì bản đã đăng dùng giọng thô). Mốc chữ luôn lấy từ voice.wav thô.
@@ -65,6 +67,8 @@ Sai chữ neo là lỗi cứng: build dừng ngay, không để lỗi lọt vào
 
 - `python motion/long/script_lines.py <topic>`: chuyển `data/long/<topic>/script.md` (đã duyệt) thành `lines` của từng `chNN.json`.
   `‖` = nghỉ dài, `**[DIỄN Ý]**` = trích diễn ý, `»` = lời trích, đọc bằng `QUOTE_VOICE` (Minh Đức) qua bộ lọc radio, cảnh quote có `qline` sẽ hiện sóng âm và nhãn "GIỌNG ĐỌC MINH HỌA".
+  Cuối câu được phép có một dấu `{...}`. Dấu bị gỡ khỏi lời đọc. `scenes_from(lines, marks)` dựng cảnh: không dấu ra `kinetic` và được đếm để khỏi ra một video toàn một kiểu; `slam`, `quote`, `date`, `counter`, `question`, `chapter` ra đúng loại đó. `anchors.check` soi chữ neo trước khi ghi.
+  Spec `"craft": true` (chỉ video mới) thì `html` / `render` / `final` từ chối câu dài hơn 35 âm tiết, cách gọi "quý vị", liệt kê quá 3 mục, chương mở không có câu hỏi, cả bài không nghỉ dài, sáu cảnh cùng loại liên tiếp, hoặc một chương không có cảnh ngắt nhịp. Video cũ không ghi cờ này.
 - `spec.theme = "noir"`: khung điện ảnh 96px, phụ đề nằm trong dải đen dưới, cảnh `film: true` có nhấp nháy và tiếng máy chiếu.
 - Cảnh riêng của noir: `seismo` (băng địa chấn, `hitAt`), `saint` (thẻ thánh cháy, `burnAt/burnDur/burnTo`), `paper` (trang báo mô phỏng),
   `pizzini` (giấy đánh máy + `cipher` chữ→số kiểu Provenzano), `dots` (mỗi chấm một người, `groups`), `board` (bảng ghim + dây đỏ),
