@@ -1,0 +1,118 @@
+{
+ "title": "Công ty Scotland gom bốn trăm nghìn bảng, chừng một phần năm của cải xứ, cho vụ Darien",
+ "description": "Công ty Scotland gom 400.000 bảng trong vài tuần, khoảng một phần năm của cải xứ. Tháng 7/1698 năm tàu rời cảng Leith, khoảng 1.200 người, để lập New Caledonia ở eo Darien. Hơn 80 phần trăm chết trong một năm. Khu định cư bị bỏ hai lần. Thất bại làm vùng Lowlands kiệt quệ và là một lý do dẫn tới Đạo luật Hợp nhất năm 1707.",
+ "tags": [
+  "Darien",
+  "Scotland",
+  "1698",
+  "New Caledonia",
+  "Công ty Scotland",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1698",
+ "sub": "DARIEN",
+ "acc": [
+  "darien",
+  "scotland",
+  "bảng",
+  "tàu",
+  "1707"
+ ],
+ "lines": [
+  "Công ty Scotland gom bốn trăm nghìn bảng trong vài tuần.",
+  "Số ấy chừng một phần năm của cải đang có ở Scotland.",
+  "Tháng 7 năm 1698, năm tàu rời cảng Leith.",
+  "Trên tàu khoảng một nghìn hai trăm người.",
+  "Họ đi lập khu New Caledonia ở eo đất Darien.",
+  "Eo ấy nay thuộc Panama, giữa Đại Tây Dương và Thái Bình Dương.",
+  "Hơn tám mươi phần trăm người trong đoàn chết trong một năm.",
+  "Khu định cư bị bỏ, rồi có người quay lại, rồi lại bị bỏ.",
+  "Thất bại làm vùng đất thấp Scotland kiệt quệ.",
+  "Đó là một lý do dẫn tới Đạo luật Hợp nhất năm 1707."
+ ],
+ "imgs": {
+  "map": "File:New Caledonia in Darien.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "map",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "BỐN TRĂM"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {"text": "MỘT PHẦN NĂM", "at": [1, "năm"], "size": 200, "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {"text": "NĂM TÀU", "at": [2, "năm"], "acc": true},
+    {"text": "LEITH", "at": [2, "Leith"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {"text": "1.200", "at": [3, "nghìn"], "size": 220, "serif": true}
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 4,
+   "img": "map",
+   "tone": "sepia",
+   "focus": [0.5, 0.45],
+   "label": {"text": "EO ĐẤT", "at": [4, "eo"]},
+   "credit": "BẢN ĐỒ NEW CALEDONIA, 1699"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {"text": "PANAMA", "at": [5, "Panama"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {"text": "TÁM MƯƠI", "at": [6, "tám"], "size": 220, "acc": true, "serif": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {"text": "BỎ HAI LẦN", "at": [7, "bỏ"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {"text": "KIỆT QUỆ", "at": [8, "kiệt"], "acc": true}
+   ]
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "map",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "NĂM 1707",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Darien_scheme"
+ ]
+}

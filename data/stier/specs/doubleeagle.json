@@ -1,0 +1,49 @@
+{
+ "title": "Ngày 30 tháng 7 năm 2002, đồng 1933 Double Eagle bán 7.590.020 đô, gồm 20 đô để hợp pháp",
+ "description": "Năm 1933 xưởng đúc Mỹ đúc 445.500 đồng xu vàng mệnh giá 20 đô, gọi là Double Eagle. Không đồng nào được phát hành. Gần như toàn bộ bị lệnh nấu chảy; hai đồng được đưa vào bộ sưu tập tiền quốc gia. Ngày 30/7/2002 một đồng bán đấu giá tại New York. Giá cuối 7.590.020 đô: giá búa 6,6 triệu đô, cộng phí người mua, cộng 20 đô để biến đồng xu thành tiền hợp pháp. Đó là đồng 1933 duy nhất tư nhân được phép giữ. Ngày 8/6/2021 đồng ấy bán lại với giá 18.872.250 đô. Ảnh là mặt trước do Xưởng đúc Mỹ phát, không phải ảnh phiên bán năm 2002.",
+ "tags": ["1933 Double Eagle", "2002", "7.590.020", "đồng vàng", "xưởng đúc Mỹ", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 1933",
+ "sub": "DOUBLE EAGLE",
+ "acc": ["1933", "eagle", "bảy", "hai", "đô", "duy"],
+ "lines": [
+  "Năm 1933, xưởng đúc Mỹ đúc bốn trăm bốn mươi lăm nghìn năm trăm đồng xu, mệnh giá hai mươi đô.",
+  "Đồng ấy gọi là Double Eagle.",
+  "Không đồng nào được phát hành.",
+  "Gần như toàn bộ bị lệnh nấu chảy.",
+  "Ngày 30 tháng 7 năm 2002, một đồng bán đấu giá tại New York.",
+  "Giá cuối là bảy triệu năm trăm chín mươi nghìn không trăm hai mươi đô.",
+  "Hai mươi đô trong số đó để biến đồng xu thành tiền hợp pháp.",
+  "Đó là đồng duy nhất một tư nhân được phép giữ.",
+  "Ảnh mặt trước do xưởng đúc Mỹ phát, không phải đồng bán năm 2002.",
+  "Hai mươi đô ấy nằm trong giá bán."
+ ],
+ "imgs": {
+  "coin": "File:Specimen1Obv.jpg"
+ },
+ "scenes": [
+  {"type": "hero", "img": "coin", "frame": "print", "tone": "color", "intro": true, "head": "1933"},
+  {"type": "kinetic", "at": 1, "items": [
+    {"text": "DOUBLE EAGLE", "at": [1, "Eagle"]}
+  ]},
+  {"type": "slam", "at": 2, "text": "KHÔNG PHÁT HÀNH", "sub": "1933", "bg": "coin"},
+  {"type": "kinetic", "at": 3, "items": [
+    {"text": "NẤU CHẢY", "at": [3, "nấu"], "acc": true}
+  ]},
+  {"type": "date", "at": 4, "bg": "coin", "day": "ĐẤU GIÁ", "date": "30.07.2002",
+   "dayAt": [4, "bán"],
+   "groupAt": [[4, "30"], [4, "7"], [4, "2002"]],
+   "sub": {"text": "NEW YORK", "at": [4, "New"]}},
+  {"type": "kinetic", "at": 5, "items": [
+    {"text": "7.590.020", "at": [5, "bảy"], "size": 170, "acc": true}
+  ]},
+  {"type": "slam", "at": 6, "text": "20 ĐÔ", "sub": "ĐỂ THÀNH TIỀN HỢP PHÁP", "white": true},
+  {"type": "kinetic", "at": 7, "items": [
+    {"text": "DUY NHẤT", "at": [7, "duy"]}
+  ]},
+  {"type": "photo", "at": 8, "img": "coin", "tone": "color", "focus": [0.5, 0.5],
+   "label": {"text": "MẶT TRƯỚC", "at": [8, "mặt"]},
+   "credit": "ĐỒNG 1933, XƯỞNG ĐÚC MỸ"},
+  {"type": "hero", "at": 9, "img": "coin", "frame": "print", "tone": "color", "loop": true, "head": "HAI MƯƠI", "tr": "cut"}
+ ],
+ "sources": ["https://en.wikipedia.org/wiki/1933_double_eagle"]
+}

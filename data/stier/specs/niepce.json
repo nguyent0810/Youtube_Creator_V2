@@ -1,0 +1,49 @@
+{
+  "title": "Mùa hè năm 1827, tấm thiếc Niépce ghi nắng ở cả hai phía nhà",
+  "description": "Joseph Nicéphore Niépce làm bức Point de vue du Gras ở điền trang Le Gras, Saint-Loup-de-Varennes, từ cửa sổ tầng hai. Wikipedia ghi khoảng từ ngày 4 tháng 6 đến ngày 18 tháng 7 năm 1827. Gernsheim từng ghi năm 1826, sau nhận năm 1827. Video lấy khoảng năm 1827, không chọn một ngày. Tấm thiếc khoảng 16,2 x 20,2 cm, phủ nhựa đường Judea. Nắng làm chỗ sáng cứng. Nắng chiếu mái ở cả hai phía, nên ước lượng cũ là khoảng tám giờ. Một nhà nghiên cứu đọc sổ của ông và dựng lại thì cho rằng phải vài ngày. Video không chọn. Đây là bức ảnh máy còn lại cổ nhất, không phải mọi lần thử trước đó. Tháng 9 năm 1827 ông đem tấm này sang Anh, đưa Francis Bauer xem. Năm 1952, Helmut và Alison Gernsheim tìm lại tấm. Helmut tô một bản in cho dễ nhìn, và lâu năm chỉ cho in bản tô ấy. Ảnh trong video là bản tô khoảng năm 1952, không phải mặt thiếc gốc. Sau lần chụp năm 1952, tấm bị phồng gần ba góc. Tấm gốc nay ở Trung tâm Harry Ransom, Austin. Năm 2002–2003, Viện Bảo tồn Getty xác nhận lớp hình là nhựa đường và nền là thiếc. Không mô tả cách rửa.",
+  "tags": ["Niépce", "1827", "ảnh cổ", "Le Gras", "Gernsheim", "hồ sơ vụ án"],
+  "kicker": "HỒ SƠ 1827",
+  "sub": "TẤM THIẾC NIÉPCE",
+  "acc": ["niépce", "nắng", "tám", "gernsheim", "1952", "austin"],
+  "lines": [
+    "Từ ngày 4 tháng 6 đến 18 tháng 7 năm 1827, Niépce để tấm thiếc ở cửa Le Gras.",
+    "Tấm phủ nhựa đường. Nắng làm chỗ sáng cứng lại.",
+    "Không phải lần thử đầu. Là tấm còn lại cổ nhất.",
+    "Nắng chiếu mái nhà từ cả hai phía.",
+    "Ước lượng cũ nói khoảng tám giờ.",
+    "Người dựng lại thì nói vài ngày. Bản này không chọn.",
+    "Ở tầng hai, thị trấn Saint Loup.",
+    "Tháng 9 năm 1827, ông đem tấm này sang Anh.",
+    "Ảnh là bản Helmut Gernsheim tô khoảng năm 1952.",
+    "Không phải mặt thiếc gốc đang ở Austin."
+  ],
+  "imgs": {
+    "plate": "File:View from the Window at Le Gras, Joseph Nicéphore Niépce.jpg"
+  },
+  "scenes": [
+    {"type": "hero", "img": "plate", "frame": "print", "tone": "sepia", "intro": true, "head": "1827"},
+    {"type": "kinetic", "at": 1, "items": [
+      {"text": "NHỰA ĐƯỜNG", "at": [1, "nhựa"], "size": 180}
+    ]},
+    {"type": "slam", "at": 2, "text": "CÒN LẠI", "sub": "CỔ NHẤT", "white": true},
+    {"type": "slam", "at": 3, "text": "HAI PHÍA", "sub": "MÁI NHÀ", "bg": "plate"},
+    {"type": "kinetic", "at": 4, "items": [
+      {"text": "TÁM GIỜ", "at": [4, "tám"], "acc": true}
+    ]},
+    {"type": "slam", "at": 5, "text": "KHÔNG CHỌN", "sub": "VÀI NGÀY"},
+    {"type": "kinetic", "at": 6, "items": [
+      {"text": "TẦNG HAI", "at": [6, "hai"]}
+    ]},
+    {"type": "date", "at": 7, "bg": "plate", "day": "SANG ANH", "date": "09.1827",
+     "dayAt": [7, "Anh"],
+     "groupAt": [[7, "9"], [7, "1827"]],
+     "sub": {"text": "ĐEM TẤM ĐI", "at": [7, "đem"]}},
+    {"type": "photo", "at": 8, "img": "plate", "tone": "sepia", "focus": [0.5, 0.42],
+     "label": {"text": "BẢN TÔ", "at": [8, "tô"]},
+     "credit": "GERNSHEIM, KHOẢNG 1952"},
+    {"type": "slam", "at": 9, "text": "KHÔNG PHẢI GỐC", "sub": "ĐANG Ở AUSTIN", "white": true, "bg": "plate"}
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/View_from_the_Window_at_Le_Gras"
+  ]
+}

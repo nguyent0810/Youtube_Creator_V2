@@ -1,0 +1,115 @@
+{
+ "title": "Bức điện Zimmermann hứa trả Texas cho Mexico nếu Mỹ vào chiến tranh",
+ "description": "Ngày 17/1/1917, Bộ Ngoại giao Đức gửi điện mật cho đại sứ ở Mexico: nếu Mỹ vào chiến tranh, Mexico đánh lại và sẽ nhận Texas, Arizona và New Mexico. Tình báo Anh chặn và giải mã. Ngày 3/3, Arthur Zimmermann công nhận bức điện là thật. Tháng 4/1917 Mỹ tuyên chiến với Đức.",
+ "tags": [
+  "Zimmermann",
+  "điện tín 1917",
+  "Texas",
+  "Mexico",
+  "Thế chiến thứ nhất",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1917",
+ "sub": "ZIMMERMANN",
+ "acc": [
+  "zimmermann",
+  "texas",
+  "mexico",
+  "anh",
+  "1917"
+ ],
+ "lines": [
+  "Ngày 17 tháng 1 năm 1917, Bộ Ngoại giao Đức gửi một bức điện mật.",
+  "Điện gửi đại sứ Đức ở Mexico.",
+  "Nếu Mỹ vào chiến tranh, Đức đề nghị Mexico đánh lại.",
+  "Phần thưởng là Texas, Arizona và New Mexico.",
+  "Tình báo Anh chặn được bức điện và giải mã.",
+  "Ngày 3 tháng 3, Arthur Zimmermann nhận bức điện là thật.",
+  "Tháng 4 năm 1917, Mỹ tuyên chiến với Đức.",
+  "Đó là chiến công tình báo lớn của Anh trong thế chiến.",
+  "Một mảnh giấy đã đẩy nước Mỹ vào cuộc chiến."
+ ],
+ "imgs": {
+  "cable": "File:Zimmermann Telegram as Received by the German Ambassador to Mexico - NARA - 302025.jpg",
+  "sheet": "File:Zimmermann Telegram.jpeg",
+  "cartoon": "File:Cartoon for a Telegram.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "cable",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "ĐIỆN MẬT"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {"text": "GỬI MEXICO", "at": [1, "Mexico"], "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {"text": "NẾU MỸ VÀO", "at": [2, "Mỹ"]},
+    {"text": "CHIẾN TRANH", "at": [2, "chiến"], "acc": true}
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 3,
+   "img": "cartoon",
+   "tone": "sepia",
+   "focus": [0.5, 0.4],
+   "label": {"text": "TEXAS", "at": [3, "Texas"]},
+   "credit": "BIẾM HỌA BỨC ĐIỆN, 1917"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {"text": "ANH CHẶN", "at": [4, "Anh"], "acc": true},
+    {"text": "GIẢI MÃ", "at": [4, "giải"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {"text": "LÀ THẬT", "at": [5, "thật"], "size": 240, "acc": true},
+    {"text": "ZIMMERMANN", "at": [5, "Zimmermann"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {"text": "THÁNG 4", "at": [6, "4"], "size": 220, "acc": true, "serif": true},
+    {"text": "MỸ TUYÊN CHIẾN", "at": [6, "tuyên"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {"text": "TÌNH BÁO ANH", "at": [7, "Anh"]}
+   ]
+  },
+  {
+   "type": "hero",
+   "at": 8,
+   "img": "sheet",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "MỘT MẢNH GIẤY",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Zimmermann_telegram"
+ ]
+}

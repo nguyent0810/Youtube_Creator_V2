@@ -1,0 +1,54 @@
+{
+ "title": "Chiều 7 tháng 2 năm 1845, William Lloyd đập vỡ bình Portland trong Viện bảo tàng Anh",
+ "description": "Bình Portland là bình thủy tinh cameo của La Mã, cao khoảng 24 xăng-ti-mét, đứng trong tủ kính ở Viện bảo tàng Anh. 15 giờ 45 ngày 7/2/1845, William Lloyd, sau một tuần uống rượu, ném một pho tượng vào tủ. Tủ và bình cùng vỡ. Luật sư chỉ ra luật cố ý phá hoại chỉ khép khi vật không quá 5 bảng, nên tòa xử ông về cái tủ kính. Ngay năm 1845, John Doubleday của bảo tàng ghép các mảnh lại.",
+ "tags": ["Portland Vase", "William Lloyd", "1845", "British Museum", "John Doubleday", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 1845",
+ "sub": "PORTLAND",
+ "acc": ["portland", "lloyd", "bình", "1845", "doubleday"],
+ "lines": [
+  "Chiều ngày 7 tháng 2 năm 1845, bình Portland đứng trong tủ kính.",
+  "Đó là bình thủy tinh La Mã, cao khoảng hai mươi tư xăng-ti-mét.",
+  "Lúc ba giờ bốn mươi lăm, William Lloyd ném một pho tượng vào tủ.",
+  "Cả tủ kính và bình đều vỡ.",
+  "Lloyd đã uống suốt tuần trước đó.",
+  "Ông bị bắt với tội cố ý phá hoại.",
+  "Luật chỉ khép tội này khi món đồ không quá năm bảng.",
+  "Tòa xử ông về cái tủ kính, không phải về cái bình.",
+  "John Doubleday của bảo tàng ghép các mảnh lại ngay năm ấy.",
+  "Bình Portland được ghép xong, và vẫn nằm trong Viện bảo tàng Anh."
+ ],
+ "imgs": {
+  "bits": "File:Thomas H. Shepherd - The Portland Vase fragments.jpg"
+ },
+ "scenes": [
+  {"type": "hero", "img": "bits", "frame": "print", "tone": "sepia", "intro": true, "head": "PORTLAND"},
+  {"type": "kinetic", "at": 1, "items": [
+    {"text": "LA MÃ", "at": [1, "La"]},
+    {"text": "24 CM", "at": [1, "tư"]}
+  ]},
+  {"type": "kinetic", "at": 2, "items": [
+    {"text": "3 GIỜ 45", "at": [2, "ba"], "size": 200, "acc": true},
+    {"text": "LLOYD", "at": [2, "Lloyd"]}
+  ]},
+  {"type": "kinetic", "at": 3, "items": [
+    {"text": "ĐỀU VỠ", "at": [3, "vỡ"], "size": 240, "acc": true}
+  ]},
+  {"type": "kinetic", "at": 4, "items": [
+    {"text": "SUỐT TUẦN", "at": [4, "tuần"]}
+  ]},
+  {"type": "kinetic", "at": 5, "items": [
+    {"text": "BỊ BẮT", "at": [5, "bắt"]}
+  ]},
+  {"type": "kinetic", "at": 6, "items": [
+    {"text": "NĂM BẢNG", "at": [6, "năm"], "size": 220, "acc": true}
+  ]},
+  {"type": "kinetic", "at": 7, "items": [
+    {"text": "CÁI TỦ", "at": [7, "tủ"], "acc": true}
+  ]},
+  {"type": "photo", "at": 8, "img": "bits", "tone": "sepia", "focus": [0.5, 0.45],
+   "label": {"text": "DOUBLEDAY", "at": [8, "Doubleday"]},
+   "credit": "THOMAS SHEPHERD, 1845"},
+  {"type": "hero", "at": 9, "img": "bits", "frame": "print", "tone": "sepia", "loop": true, "head": "BẢO TÀNG", "tr": "cut"}
+ ],
+ "sources": ["https://en.wikipedia.org/wiki/Portland_Vase"]
+}

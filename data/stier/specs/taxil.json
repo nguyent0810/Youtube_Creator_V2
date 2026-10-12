@@ -1,0 +1,122 @@
+{
+ "title": "Năm 1897 Taxil hẹn đưa Diana Vaughan ra mắt, rồi nhận mọi chuyện là bịa",
+ "description": "Léo Taxil, bút danh của một người viết bài chống giáo hoàng, khoảng năm 1884 giả vờ theo Công giáo. Ông bịa bác sĩ Bataille, phẫu thuật viên tàu buôn, kể là đã lọt vào hội Tam điểm, và bịa Diana Vaughan, nữ tư tế đã bỏ hội. Vaughan không có người thật. Năm 1897 ông mời báo chí để gặp bà, rồi không đưa ai ra và nhận mọi chuyện là bịa. Chín năm sau ông kể với một tạp chí Mỹ rằng mình viết tiếp vì truyện này kiếm được tiền.",
+ "tags": [
+  "Léo Taxil",
+  "Diana Vaughan",
+  "1897",
+  "trò bịa",
+  "báo chí",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1897",
+ "sub": "TAXIL",
+ "acc": [
+  "taxil",
+  "vaughan",
+  "bịa",
+  "1897",
+  "bác"
+ ],
+ "lines": [
+  "Léo Taxil là bút danh của một người viết bài chống giáo hoàng.",
+  "Khoảng năm 1884, ông giả vờ theo đạo Công giáo.",
+  "Ông bịa ra bác sĩ Bataille, phẫu thuật viên trên tàu buôn Pháp.",
+  "Bataille được kể là đã lọt vào hội Tam điểm.",
+  "Rồi ông bịa thêm Diana Vaughan, nữ tư tế đã bỏ hội.",
+  "Vaughan không có người thật. Bà chỉ có trên sách.",
+  "Năm 1897, Taxil mời báo chí đến để gặp bà.",
+  "Ông không đưa ai ra, và nhận mọi chuyện ấy là bịa.",
+  "Chín năm sau, ông kể với một tạp chí Mỹ.",
+  "Ông viết tiếp vì truyện bịa này kiếm được nhiều tiền."
+ ],
+ "imgs": {
+  "face": "File:Léo Taxil (Melandri).jpg",
+  "vaughan": "File:Diana Vaughan - Mémoires d'une ex-palladiste parfaite, initiée, indépendante.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "face",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "TAXIL"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {"text": "1884", "at": [1, "1884"], "size": 240, "serif": true},
+    {"text": "GIẢ VỜ", "at": [1, "giả"], "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {"text": "BATAILLE", "at": [2, "Bataille"]},
+    {"text": "TÀU BUÔN", "at": [2, "tàu"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {"text": "TAM ĐIỂM", "at": [3, "Tam"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {"text": "VAUGHAN", "at": [4, "Vaughan"], "acc": true}
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 5,
+   "img": "vaughan",
+   "tone": "sepia",
+   "focus": [0.5, 0.35],
+   "label": {"text": "KHÔNG CÓ THẬT", "at": [5, "không"]},
+   "credit": "ẢNH GÁN CHO VAUGHAN"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {"text": "1897", "at": [6, "1897"], "size": 260, "acc": true, "serif": true},
+    {"text": "MỜI BÁO", "at": [6, "báo"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {"text": "LÀ BỊA", "at": [7, "bịa"], "size": 240, "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {"text": "CHÍN NĂM", "at": [8, "Chín"]},
+    {"text": "TẠP CHÍ MỸ", "at": [8, "Mỹ"]}
+   ]
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "face",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "KIẾM TIỀN",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Taxil_hoax"
+ ]
+}

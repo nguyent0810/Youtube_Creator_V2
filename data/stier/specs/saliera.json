@@ -1,0 +1,60 @@
+{
+ "title": "Ngày 21 tháng 1 năm 2006, Saliera nằm trong hộp chì chôn ở rừng gần Zwettl",
+ "description": "Saliera là bình muối vàng Benvenuto Cellini làm xong năm 1543 cho François I. Ngày 11/5/2003 bình bị lấy khỏi Kunsthistorisches Museum ở Viên, lúc mặt nhà đang dựng giàn giáo. Chuông báo động kêu nhưng bị coi là báo giả. Mãi 8 giờ 20 sáng mới biết mất. Bảo tàng treo thưởng 1 triệu euro. Ngày 21/1/2006 bình được tìm trong hộp chì, chôn ở rừng gần Zwettl, khoảng 90 km bắc Viên. Robert Mang ra thú sau khi ảnh giám sát bị người quen nhận ra.",
+ "tags": ["Saliera", "Cellini", "2006", "Zwettl", "hộp chì", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 2006",
+ "sub": "SALIERA",
+ "acc": ["saliera", "chì", "zwettl", "2006", "mang"],
+ "lines": [
+  "Saliera là bình muối vàng của Benvenuto Cellini.",
+  "Ông làm xong năm 1543, cho vua François đệ nhất.",
+  "Bình đứng ở bảo tàng Kunsthistorisches, thành Viên.",
+  "Ngày 11 tháng 5 năm 2003, bình bị lấy đi.",
+  "Lúc ấy mặt bảo tàng đang dựng giàn giáo.",
+  "Chuông báo động kêu, và bị coi là báo giả.",
+  "Mãi 8 giờ 20 sáng người ta mới biết bình mất.",
+  "Bảo tàng treo thưởng một triệu euro.",
+  "Ngày 21 tháng 1 năm 2006, bình được tìm thấy.",
+  "Nó nằm trong một hộp chì, chôn ở rừng gần Zwettl.",
+  "Zwettl cách Viên khoảng chín mươi cây số về phía bắc.",
+  "Robert Mang ra thú sau khi ảnh giám sát bị người quen nhận ra."
+ ],
+ "imgs": {
+  "salt": "File:Cellini, Benvenuto - Saliera.jpg"
+ },
+ "scenes": [
+  {"type": "hero", "img": "salt", "frame": "print", "tone": "sepia", "intro": true, "head": "SALIERA"},
+  {"type": "kinetic", "at": 1, "items": [
+    {"text": "1543", "at": [1, "1543"], "size": 240, "serif": true}
+  ]},
+  {"type": "photo", "at": 2, "img": "salt", "tone": "sepia", "focus": [0.5, 0.45],
+   "label": {"text": "VIÊN", "at": [2, "Viên"]},
+   "credit": "SALIERA, CELLINI, 1543"},
+  {"type": "kinetic", "at": 3, "items": [
+    {"text": "11 THÁNG 5", "at": [3, "11"], "acc": true}
+  ]},
+  {"type": "kinetic", "at": 4, "items": [
+    {"text": "GIÀN GIÁO", "at": [4, "giàn"]}
+  ]},
+  {"type": "kinetic", "at": 5, "items": [
+    {"text": "BÁO GIẢ", "at": [5, "giả"], "size": 220, "acc": true}
+  ]},
+  {"type": "kinetic", "at": 6, "items": [
+    {"text": "8 GIỜ 20", "at": [6, "20"], "size": 220}
+  ]},
+  {"type": "kinetic", "at": 7, "items": [
+    {"text": "1 TRIỆU", "at": [7, "triệu"], "acc": true}
+  ]},
+  {"type": "kinetic", "at": 8, "items": [
+    {"text": "2006", "at": [8, "2006"], "size": 240, "serif": true}
+  ]},
+  {"type": "kinetic", "at": 9, "items": [
+    {"text": "HỘP CHÌ", "at": [9, "chì"], "size": 240, "acc": true}
+  ]},
+  {"type": "kinetic", "at": 10, "items": [
+    {"text": "90 CÂY", "at": [10, "chín"]}
+  ]},
+  {"type": "hero", "at": 11, "img": "salt", "frame": "print", "tone": "sepia", "loop": true, "head": "MANG", "tr": "cut"}
+ ],
+ "sources": ["https://en.wikipedia.org/wiki/Cellini_Salt_Cellar"]
+}

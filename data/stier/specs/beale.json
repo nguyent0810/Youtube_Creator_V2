@@ -1,0 +1,121 @@
+{
+ "title": "Mật thư thứ hai trong Beale Papers giải bằng Tuyên ngôn Độc lập Mỹ",
+ "description": "Năm 1885 James Ward in tập The Beale Papers: ba mật thư, kể về vàng chôn ở hạt Bedford, Virginia. Mật thư thứ hai được giải bằng Tuyên ngôn Độc lập, kể những gì được chôn chứ không kể chỗ chôn. Hai mật thư kia chưa giải. Tập nói người giấu là Thomas Beale. Joe Nickell không thấy hồ sơ của Thomas Beale ấy, chỉ ra chữ không hợp thời, và kết luận người viết gần như chắc là chính Ward.",
+ "tags": [
+  "Beale Papers",
+  "mật thư",
+  "Tuyên ngôn Độc lập",
+  "1885",
+  "Bedford",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1885",
+ "sub": "BEALE",
+ "acc": [
+  "beale",
+  "ward",
+  "tuyên",
+  "mật",
+  "bedford"
+ ],
+ "lines": [
+  "Năm 1885, James Ward in tập The Beale Papers.",
+  "Trong đó có ba mật thư, kể về vàng chôn ở hạt Bedford, Virginia.",
+  "Mật thư thứ hai được giải bằng Tuyên ngôn Độc lập của Mỹ.",
+  "Bản giải kể những gì được chôn, không kể chỗ chôn.",
+  "Mật thư chỗ chôn, và mật thư tên chủ, vẫn chưa giải.",
+  "Tập nói người giấu vàng ấy là Thomas Beale.",
+  "Joe Nickell đối chiếu hồ sơ và không thấy Thomas Beale ấy.",
+  "Ông chỉ ra những chữ không thể có ở thời được kể.",
+  "Lối viết, theo Nickell, gần như chắc là của chính Ward.",
+  "Bìa tập in năm 1885 vẫn là vật người ta cầm trong tay."
+ ],
+ "imgs": {
+  "cover": "File:Beale Papers (1885) - Cover.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "cover",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "BEALE"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {"text": "BA MẬT THƯ", "at": [1, "ba"]},
+    {"text": "BEDFORD", "at": [1, "Bedford"], "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {"text": "TUYÊN NGÔN", "at": [2, "Tuyên"], "acc": true},
+    {"text": "ĐỘC LẬP", "at": [2, "Độc"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {"text": "KHÔNG KỂ", "at": [3, "không"]},
+    {"text": "CHỖ CHÔN", "at": [3, "chỗ"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {"text": "CHƯA GIẢI", "at": [4, "chưa"], "size": 220, "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {"text": "THOMAS BEALE", "at": [5, "Beale"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {"text": "KHÔNG THẤY", "at": [6, "không"], "acc": true},
+    {"text": "HỒ SƠ", "at": [6, "hồ"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {"text": "CHỮ LẠ", "at": [7, "chữ"]}
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 8,
+   "img": "cover",
+   "tone": "sepia",
+   "focus": [0.5, 0.4],
+   "label": {"text": "CHÍNH WARD", "at": [8, "Ward"]},
+   "credit": "BÌA BEALE PAPERS, 1885"
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "cover",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "TRONG TAY",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Beale_ciphers"
+ ]
+}

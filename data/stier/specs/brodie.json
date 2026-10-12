@@ -1,0 +1,123 @@
+{
+ "title": "Dưới tảng đá Salisbury Crags là kho chìa khóa Brodie đã sao",
+ "description": "Ban ngày William Brodie là thợ khóa hàng đầu Edinburgh, trưởng hội thợ mộc và uỷ viên hội đồng. Ban đêm ông lấy ấn sáp để sao chìa của khách. Đêm 5/3/1788 băng của ông vào sở thuế; cửa mở bằng chìa đã lấy dấu bằng bột trét. Họ chỉ lấy được 16 bảng. John Brown dẫn nhà chức trách tới Salisbury Crags: dưới một tảng đá là cả kho chìa khóa sao.",
+ "tags": [
+  "Deacon Brodie",
+  "Salisbury Crags",
+  "chìa khóa",
+  "Edinburgh 1788",
+  "thợ khóa",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1788",
+ "sub": "BRODIE",
+ "acc": [
+  "brodie",
+  "sáp",
+  "chìa",
+  "salisbury",
+  "đá"
+ ],
+ "lines": [
+  "Ban ngày William Brodie là thợ khóa danh giá nhất Edinburgh.",
+  "Ban đêm ông lấy ấn sáp để sao chìa khóa của khách.",
+  "Ông là trưởng hội thợ mộc và ngồi trong hội đồng thành phố.",
+  "Đêm 5 tháng 3 năm 1788, băng của ông vào sở thuế.",
+  "Cửa mở bằng chìa ông đã lấy dấu bằng bột trét.",
+  "Họ chỉ lấy được mười sáu bảng rồi bỏ chạy.",
+  "John Brown dẫn nhà chức trách tới chân Salisbury Crags.",
+  "Dưới một tảng đá là cả kho chìa khóa sao.",
+  "Trong nhà và xưởng của ông có chìa đã sao, đồ cải trang và súng.",
+  "Kho chìa ấy thuộc về người thợ khóa đứng đầu thành phố."
+ ],
+ "imgs": {
+  "face": "File:William Brodie - Scottish Cabinet Maker.png"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "face",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "BRODIE"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {"text": "ẤN SÁP", "at": [1, "sáp"], "acc": true},
+    {"text": "SAO CHÌA", "at": [1, "chìa"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {"text": "TRƯỞNG HỘI", "at": [2, "trưởng"]},
+    {"text": "HỘI ĐỒNG", "at": [2, "hội"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {"text": "5 THÁNG 3", "at": [3, "5"], "size": 220, "acc": true, "serif": true},
+    {"text": "SỞ THUẾ", "at": [3, "thuế"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {"text": "BỘT TRÉT", "at": [4, "bột"], "acc": true},
+    {"text": "LẤY DẤU", "at": [4, "dấu"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {"text": "16 BẢNG", "at": [5, "mười"], "size": 240, "acc": true, "serif": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {"text": "SALISBURY", "at": [6, "Salisbury"], "acc": true},
+    {"text": "CRAGS", "at": [6, "Crags"]}
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 7,
+   "img": "face",
+   "tone": "sepia",
+   "focus": [0.5, 0.35],
+   "label": {"text": "TẢNG ĐÁ", "at": [7, "đá"]},
+   "credit": "CHÂN DUNG BRODIE, 1788"
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {"text": "TRONG XƯỞNG", "at": [8, "xưởng"]},
+    {"text": "CẢI TRANG", "at": [8, "cải"]}
+   ]
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "face",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "THỢ KHÓA",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/William_Brodie"
+ ]
+}

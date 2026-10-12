@@ -1,0 +1,123 @@
+{
+ "title": "Cỗ máy Turk giấu kỳ thủ sau lớp bánh răng chỉ sâu một phần ba",
+ "description": "Năm 1770 Wolfgang von Kempelen ra mắt cỗ máy Turk: tượng mặc áo Ottoman ngồi đánh cờ trên một tủ gỗ. Kempelen mở hết cửa, khán giả thấy bánh răng. Bánh răng chỉ ăn sâu một phần ba tủ. Phía sau là ghế trượt và một kỳ thủ. Mỗi quân cờ có nam châm. Tay tượng nhấc quân bằng đòn bẩy. Bản vẽ Racknitz đặt người ngồi sai chỗ. Máy cháy năm 1854. Năm 1857 mới có lời giải đầy đủ.",
+ "tags": [
+  "Mechanical Turk",
+  "Kempelen",
+  "cỗ máy đánh cờ",
+  "1770",
+  "ảo thuật",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1770",
+ "sub": "TURK",
+ "acc": [
+  "turk",
+  "kempelen",
+  "bánh",
+  "châm",
+  "kỳ"
+ ],
+ "lines": [
+  "Năm 1770, Wolfgang von Kempelen mang cỗ máy Turk ra mắt.",
+  "Tượng mặc áo Ottoman và khăn xếp, ngồi trước bàn cờ.",
+  "Kempelen mở hết cửa tủ, khán giả thấy bánh răng.",
+  "Bánh răng chỉ ăn sâu một phần ba chiếc tủ.",
+  "Phía sau là một ghế trượt, và một kỳ thủ ngồi đó.",
+  "Mỗi quân cờ có nam châm, người trong tủ biết quân nào vừa đi.",
+  "Tay tượng nhấc quân bằng đòn bẩy, không phải bằng máy.",
+  "Khi người trong tủ dịch ghế, máy giả trượt vào đúng chỗ ấy.",
+  "Bản vẽ Racknitz đặt người ngồi sai chỗ trong tủ.",
+  "Máy cháy năm 1854, mãi năm 1857 mới có lời giải thật."
+ ],
+ "imgs": {
+  "cut": "File:Racknitz - The Turk 3.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "cut",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "TURK"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {"text": "ÁO OTTOMAN", "at": [1, "Ottoman"]},
+    {"text": "BÀN CỜ", "at": [1, "cờ"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {"text": "MỞ HẾT CỬA", "at": [2, "mở"]},
+    {"text": "BÁNH RĂNG", "at": [2, "bánh"], "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {"text": "MỘT PHẦN BA", "at": [3, "ba"], "size": 200, "acc": true, "serif": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {"text": "GHẾ TRƯỢT", "at": [4, "ghế"]},
+    {"text": "KỲ THỦ", "at": [4, "kỳ"], "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {"text": "NAM CHÂM", "at": [5, "châm"], "acc": true},
+    {"text": "DƯỚI QUÂN", "at": [5, "quân"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {"text": "ĐÒN BẨY", "at": [6, "đòn"], "acc": true},
+    {"text": "KHÔNG PHẢI MÁY", "at": [6, "máy"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {"text": "MÁY GIẢ", "at": [7, "giả"], "acc": true},
+    {"text": "TRƯỢT VÀO", "at": [7, "trượt"]}
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 8,
+   "img": "cut",
+   "tone": "sepia",
+   "focus": [0.45, 0.45],
+   "label": {"text": "SAI CHỖ", "at": [8, "sai"]},
+   "credit": "RACKNITZ ĐOÁN SAI CHỖ NGỒI"
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "cut",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "LỜI GIẢI",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Mechanical_Turk"
+ ]
+}

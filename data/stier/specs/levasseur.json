@@ -1,0 +1,52 @@
+{
+ "title": "La Buse lên tàu Cabo không bắn một loạt, vì tàu đã ném bảy mươi hai khẩu pháo",
+ "description": "Tàu Nossa Senhora do Cabo đã ném 72 khẩu pháo xuống biển để khỏi lật, rồi Olivier Levasseur, biệt danh La Buse, lên tàu mà không bắn một loạt pháo. Phần của ông có một cây thánh giá vàng. Ngày 7/7/1730 ông bị xử treo. Chuyện ông ném vòng cổ mang mật thư 17 dòng xuống đám đông, và kho báu đi kèm, được Wikipedia gọi là gần như chắc bịa. Vòng cổ đã mất.",
+ "tags": ["La Buse", "Olivier Levasseur", "Cabo", "72 pháo", "thánh giá vàng", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ LA BUSE",
+ "sub": "LEVASSEUR",
+ "acc": ["buse", "cabo", "pháo", "thánh", "mật"],
+ "lines": [
+  "Ngày 7 tháng 7 năm 1730, Olivier Levasseur bị xử treo.",
+  "Biệt danh của ông là La Buse.",
+  "Chuyện kể, trên giá treo ông đeo vòng cổ có mật thư mười bảy dòng.",
+  "Ông ném vòng vào đám đông, bảo ai hiểu thì tìm kho.",
+  "Vòng ấy đã mất, mà chuyện kho gần như chắc là bịa.",
+  "Tàu Nossa Senhora do Cabo mới là vụ có thật.",
+  "Tàu đã ném bảy mươi hai khẩu pháo xuống biển để khỏi lật.",
+  "Levasseur lên tàu mà không bắn một loạt pháo nào.",
+  "Ông lấy một cây thánh giá vàng trong khoang.",
+  "Mật thư mười bảy dòng thì không phải manh mối đã kiểm được."
+ ],
+ "imgs": {
+  "cipher": "File:Crypto de la buse.jpg"
+ },
+ "scenes": [
+  {"type": "hero", "img": "cipher", "frame": "print", "tone": "sepia", "intro": true, "head": "LEVASSEUR"},
+  {"type": "kinetic", "at": 1, "items": [
+    {"text": "LA BUSE", "at": [1, "Buse"], "size": 220, "acc": true}
+  ]},
+  {"type": "kinetic", "at": 2, "items": [
+    {"text": "17 DÒNG", "at": [2, "bảy"]}
+  ]},
+  {"type": "kinetic", "at": 3, "items": [
+    {"text": "NÉM VÒNG", "at": [3, "ném"]}
+  ]},
+  {"type": "photo", "at": 4, "img": "cipher", "tone": "sepia", "focus": [0.5, 0.4],
+   "label": {"text": "GẦN NHƯ BỊA", "at": [4, "bịa"]},
+   "credit": "MẬT THƯ GÁN CHO LA BUSE"},
+  {"type": "kinetic", "at": 5, "items": [
+    {"text": "CÓ THẬT", "at": [5, "thật"], "acc": true}
+  ]},
+  {"type": "kinetic", "at": 6, "items": [
+    {"text": "72 PHÁO", "at": [6, "hai"], "size": 240, "acc": true}
+  ]},
+  {"type": "kinetic", "at": 7, "items": [
+    {"text": "KHÔNG BẮN", "at": [7, "không"]}
+  ]},
+  {"type": "kinetic", "at": 8, "items": [
+    {"text": "THÁNH GIÁ", "at": [8, "thánh"], "acc": true}
+  ]},
+  {"type": "hero", "at": 9, "img": "cipher", "frame": "print", "tone": "sepia", "loop": true, "head": "MẬT THƯ", "tr": "cut"}
+ ],
+ "sources": ["https://en.wikipedia.org/wiki/Olivier_Levasseur"]
+}

@@ -1,0 +1,104 @@
+{
+ "title": "Năm 1910, Locard mở phòng thí nghiệm đầu tiên trong hai căn gác ở Lyon",
+ "description": "Năm 1910, Edmond Locard xin Sở Cảnh sát Lyon hai căn phòng trên gác và hai phụ tá. Đó là phòng thí nghiệm cảnh sát đầu tiên ở châu Âu. Nguyên lý của ông: mọi tiếp xúc đều để lại dấu vết. Khi hai vật chạm nhau, luôn có chất liệu đi từ vật này sang vật kia. Ông làm việc ở Lyon đến năm 1966.",
+ "tags": [
+  "Edmond Locard",
+  "khoa học hình sự",
+  "Lyon 1910",
+  "dấu vết",
+  "phòng thí nghiệm",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1910",
+ "sub": "LOCARD",
+ "acc": [
+  "locard",
+  "lyon",
+  "gác",
+  "dấu",
+  "1910"
+ ],
+ "lines": [
+  "Năm 1910, Edmond Locard xin Sở Cảnh sát Lyon hai căn phòng trên gác.",
+  "Ông có hai phụ tá. Đó là phòng thí nghiệm cảnh sát đầu tiên ở châu Âu.",
+  "Trước đó ông học y và luật, rồi làm trợ lý cho Alexandre Lacassagne.",
+  "Nguyên lý của ông: mọi tiếp xúc đều để lại dấu vết.",
+  "Khi hai vật chạm nhau, chất liệu đi từ vật này sang vật kia.",
+  "Người ta gọi đó là nguyên lý trao đổi của Locard.",
+  "Ông làm việc ở Lyon cho đến khi mất năm 1966.",
+  "Căn gác ấy là nơi khoa học hình sự hiện đại bắt đầu."
+ ],
+ "imgs": {
+  "face": "File:Kriminalisten Locard.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "face",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "LOCARD"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {"text": "HAI PHỤ TÁ", "at": [1, "hai"]},
+    {"text": "ĐẦU TIÊN", "at": [1, "đầu"], "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {"text": "Y VÀ LUẬT", "at": [2, "y"]},
+    {"text": "LACASSAGNE", "at": [2, "Lacassagne"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {"text": "MỌI TIẾP XÚC", "at": [3, "tiếp"], "acc": true},
+    {"text": "ĐỂ LẠI DẤU", "at": [3, "dấu"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {"text": "CHẤT LIỆU", "at": [4, "chất"], "acc": true},
+    {"text": "ĐI SANG", "at": [4, "sang"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {"text": "TRAO ĐỔI", "at": [5, "trao"], "size": 220, "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {"text": "1966", "at": [6, "1966"], "size": 260, "acc": true, "serif": true},
+    {"text": "LYON", "at": [6, "Lyon"]}
+   ]
+  },
+  {
+   "type": "hero",
+   "at": 7,
+   "img": "face",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "CĂN GÁC",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Edmond_Locard"
+ ]
+}

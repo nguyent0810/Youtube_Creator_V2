@@ -1,0 +1,52 @@
+{
+ "title": "Ngày 28 tháng 3 năm 1901, Adam Worth trả tranh Gainsborough tại Chicago, lấy 25.000 đô",
+ "description": "Tranh chân dung Georgiana của Thomas Gainsborough, vẽ khoảng 1785–1787. Thập niên 1830 một cô giáo già cắt bớt tranh cho vừa lò sưởi. Năm 1876 William Agnew mua với giá 10.000 ghi-nê. Ba tuần sau Adam Worth, cùng hai người khác, lấy tranh khỏi phòng tranh Agnew ở London. Ông định bán để nộp bảo lãnh cho em trai; em trai được thả không cần tiền. Worth giữ tranh khoảng 25 năm. Ngày 28/3/1901, qua hãng Pinkerton, ông đổi tranh tại Chicago lấy 25.000 đô. J. P. Morgan sau đó nói mình mua tranh với 150.000 đô. Năm 1994 tranh về Chatsworth với giá 408.870 đô. Ảnh là chính bức tranh đã cắt bớt. Không quy đổi ra tiền ngày nay.",
+ "tags": ["Adam Worth", "Gainsborough", "1876", "Chicago", "25.000 đô", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 1876",
+ "sub": "GAINSBOROUGH",
+ "acc": ["worth", "ghi-nê", "lăm", "đô", "sưởi"],
+ "lines": [
+  "Năm 1876, William Agnew mua tranh Gainsborough, mười nghìn ghi-nê.",
+  "Ba tuần sau, Adam Worth lấy tranh khỏi phòng tranh Agnew ở London.",
+  "Hai người khác giúp ông lấy.",
+  "Worth định bán để nộp bảo lãnh cho em trai.",
+  "Em trai được thả, không cần tiền.",
+  "Worth giữ tranh khoảng hai mươi lăm năm.",
+  "Ngày 28 tháng 3 năm 1901, qua Pinkerton, ông đổi tranh tại Chicago lấy hai mươi lăm nghìn đô.",
+  "Ảnh là chính bức tranh ấy, Gainsborough vẽ khoảng 1785 đến 1787.",
+  "Tranh bị cắt từ thập niên 1830, để vừa lò sưởi.",
+  "Người cắt là một cô giáo già, không phải Worth."
+ ],
+ "imgs": {
+  "paint": "File:GeorgianaofDevonshire.jpg"
+ },
+ "scenes": [
+  {"type": "hero", "img": "paint", "frame": "print", "tone": "color", "intro": true, "head": "1876"},
+  {"type": "kinetic", "at": 1, "items": [
+    {"text": "BA TUẦN", "at": [1, "tuần"]}
+  ]},
+  {"type": "kinetic", "at": 2, "items": [
+    {"text": "HAI NGƯỜI", "at": [2, "Hai"]}
+  ]},
+  {"type": "slam", "at": 3, "text": "BẢO LÃNH", "sub": "CHO EM TRAI", "bg": "paint"},
+  {"type": "kinetic", "at": 4, "items": [
+    {"text": "ĐƯỢC THẢ", "at": [4, "thả"], "acc": true}
+  ]},
+  {"type": "kinetic", "at": 5, "items": [
+    {"text": "25 NĂM", "at": [5, "lăm"], "size": 220, "acc": true}
+  ]},
+  {"type": "date", "at": 6, "bg": "paint", "day": "CHICAGO", "date": "28.03.1901",
+   "dayAt": [6, "Chicago"],
+   "groupAt": [[6, "28"], [6, "3"], [6, "1901"]],
+   "sub": {"text": "PINKERTON", "at": [6, "Pinkerton"]}},
+  {"type": "photo", "at": 7, "img": "paint", "tone": "color", "focus": [0.5, 0.35],
+   "label": {"text": "GEORGIANA", "at": [7, "Gainsborough"]},
+   "credit": "GAINSBOROUGH, 1785–1787"},
+  {"type": "slam", "at": 8, "text": "LÒ SƯỞI", "sub": "CẮT TỪ THẬP NIÊN 1830", "white": true},
+  {"type": "hero", "at": 9, "img": "paint", "frame": "print", "tone": "color", "loop": true, "head": "CÔ GIÁO", "tr": "cut"}
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Portrait_of_Georgiana,_Duchess_of_Devonshire",
+  "https://en.wikipedia.org/wiki/Adam_Worth"
+ ]
+}

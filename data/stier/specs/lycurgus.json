@@ -1,0 +1,57 @@
+{
+  "title": "Cốc Lycurgus xanh khi nhìn, đỏ khi ánh sáng xuyên qua",
+  "description": "Cốc lồng kính La Mã, thế kỷ 4. Bài Wikipedia nói có thể làm ở Alexandria hoặc Rome khoảng năm 290 đến 325. Video không chọn nơi. Kính đổi màu: xanh khi nhìn bằng ánh sáng phản chiếu, đỏ khi ánh sáng đi xuyên từ phía sau. Đây là vật bằng thứ kính ấy của La Mã còn nguyên. Trong kính có hạt vàng và bạc rất nhỏ. Cách làm không rõ, nhiều khả năng kim loại lẫn vào chứ không phải pha đúng liều. Video không nêu liều. Vành và chân kim loại gắn khoảng năm 1800, không phải phần kính. Năm 1950 người ta mới chắc đây là kính; trước đó có người tưởng là đá quý. Lịch sử sớm không rõ. Lần được nhắc in năm 1845. Lionel de Rothschild giữ trước năm 1857. Năm 1958 Victor Rothschild bán cho Bảo tàng Anh với giá 20.000 bảng của năm ấy. Không quy đổi. Một mảnh cốc khác ở Met đổi từ xanh ô-liu sang hổ phách, không phải cốc này. Ảnh chụp ngày 30 tháng 3 năm 2019 ở phòng 41, là màu xanh lúc nhìn ngoài, không phải lúc soi đỏ.",
+  "tags": ["Lycurgus Cup", "Bảo tàng Anh", "kính La Mã", "đổi màu", "thế kỷ 4", "hồ sơ vụ án"],
+  "kicker": "HỒ SƠ THẾ KỶ 4",
+  "sub": "CỐC LYCURGUS",
+  "acc": ["lycurgus", "xanh", "đỏ", "vàng", "1800", "1950", "2019"],
+  "lines": [
+    "Cốc Lycurgus là kính La Mã thế kỷ thứ tư.",
+    "Nhìn ánh sáng phản chiếu thì kính xanh.",
+    "Soi từ phía sau, ánh sáng xuyên qua thì kính đỏ.",
+    "Đây là cốc La Mã còn nguyên bằng thứ kính ấy.",
+    "Hình nổi được mài ra từ khối kính.",
+    "Cốc nay ở Bảo tàng Anh.",
+    "Trong kính có một ít vàng và bạc, hạt rất nhỏ.",
+    "Cách làm thì không rõ, có lẽ không cố ý.",
+    "Vành và chân kim loại gắn khoảng năm 1800.",
+    "Năm 1950 người ta mới chắc đây là kính, không phải đá quý.",
+    "Ảnh chụp năm 2019, là màu xanh lúc nhìn ngoài.",
+    "Không phải lúc soi đỏ từ phía sau."
+  ],
+  "imgs": {
+    "cup": "File:British Museum The Lycurgus Cup 01 15022019 4376.jpg"
+  },
+  "scenes": [
+    {"type": "hero", "img": "cup", "frame": "print", "tone": "color", "intro": true, "head": "Lycurgus"},
+    {"type": "slam", "at": 1, "text": "XANH", "sub": "ÁNH PHẢN CHIẾU", "bg": "cup"},
+    {"type": "slam", "at": 2, "text": "ĐỎ", "sub": "SOI TỪ SAU", "white": true},
+    {"type": "kinetic", "at": 3, "items": [
+      {"text": "CÒN NGUYÊN", "at": [3, "nguyên"], "acc": true}
+    ]},
+    {"type": "kinetic", "at": 4, "items": [
+      {"text": "MÀI KHỐI", "at": [4, "mài"], "size": 200}
+    ]},
+    {"type": "kinetic", "at": 5, "items": [
+      {"text": "BẢO TÀNG ANH", "at": [5, "Bảo"]}
+    ]},
+    {"type": "kinetic", "at": 6, "items": [
+      {"text": "VÀNG VÀ BẠC", "at": [6, "vàng"], "size": 170}
+    ]},
+    {"type": "slam", "at": 7, "text": "KHÔNG RÕ", "sub": "CÓ LẼ KHÔNG CỐ Ý"},
+    {"type": "kinetic", "at": 8, "items": [
+      {"text": "NĂM 1800", "at": [8, "1800"]}
+    ]},
+    {"type": "date", "at": 9, "bg": "cup", "day": "LÀ KÍNH", "date": "1950",
+     "dayAt": [9, "kính"],
+     "groupAt": [[9, "1950"]],
+     "sub": {"text": "KHÔNG PHẢI ĐÁ", "at": [9, "đá"]}},
+    {"type": "photo", "at": 10, "img": "cup", "tone": "color", "focus": [0.5, 0.36],
+     "label": {"text": "MÀU XANH", "at": [10, "xanh"]},
+     "credit": "PHÒNG 41, 2019"},
+    {"type": "slam", "at": 11, "text": "KHÔNG PHẢI ĐỎ", "sub": "SOI TỪ SAU", "white": true}
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Lycurgus_Cup"
+  ]
+}

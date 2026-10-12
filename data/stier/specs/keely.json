@@ -1,0 +1,124 @@
+{
+ "title": "Dưới hầm xưởng Keely có quả cầu ba tấn khí nén và ống giấu trong tường",
+ "description": "John Keely bảo động cơ của ông chạy bằng một lực rung mới. Ông mất ngày 18/11/1898. Ngày 19/1/1899, báo Philadelphia Press cho lật sàn xưởng. Trong tường có đai nối xuống một động cơ nước hai tầng dưới. Dưới hầm là quả cầu ba tấn khí nén. Ống cao áp giấu trong tường, trần và dầm. Carl Hering ký giấy: Keely dùng khí nén và nhiều khả năng đã nói dối. Ngày 25/1 hội đồng công ty phủ nhận bài báo.",
+ "tags": [
+  "John Keely",
+  "Keely motor",
+  "khí nén",
+  "1899",
+  "động cơ vĩnh cửu",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1899",
+ "sub": "KEELY",
+ "acc": [
+  "keely",
+  "tấn",
+  "khí",
+  "ống",
+  "hering"
+ ],
+ "lines": [
+  "Dưới hầm xưởng của John Keely có một quả cầu nặng ba tấn.",
+  "Ông bảo động cơ chạy bằng một lực rung mới.",
+  "Keely mất ngày 18 tháng 11 năm 1898.",
+  "Ngày 19 tháng 1 năm 1899, báo Philadelphia Press cho lật sàn xưởng.",
+  "Trong tường có đai nối xuống một động cơ nước hai tầng dưới.",
+  "Quả cầu trong hầm chứa khí nén.",
+  "Ống cao áp giấu trong tường, trần và cả những dầm đặc.",
+  "Khí từ quả cầu chạy các máy phía trên qua những ống ấy.",
+  "Carl Hering ký giấy: Keely dùng khí nén và nhiều khả năng đã nói dối.",
+  "Ngày 25 tháng 1, hội đồng công ty phủ nhận bài báo."
+ ],
+ "imgs": {
+  "sphere": "File:Sphere under Keely's laboratory.jpg",
+  "tubes": "File:Diagram of Keely's laboratory.jpg",
+  "face": "File:John Ernst Worrell Keely (ca. 1895).jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "sphere",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "BA TẤN"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {"text": "LỰC RUNG", "at": [1, "rung"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {"text": "1898", "at": [2, "1898"], "size": 240, "serif": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {"text": "19 THÁNG 1", "at": [3, "19"], "serif": true},
+    {"text": "LẬT SÀN", "at": [3, "lật"], "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {"text": "HAI TẦNG", "at": [4, "hai"]},
+    {"text": "ĐỘNG CƠ NƯỚC", "at": [4, "nước"]}
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 5,
+   "img": "sphere",
+   "tone": "sepia",
+   "focus": [0.5, 0.5],
+   "label": {"text": "KHÍ NÉN", "at": [5, "khí"]},
+   "credit": "QUẢ CẦU DƯỚI HẦM, 1899"
+  },
+  {
+   "type": "photo",
+   "at": 6,
+   "img": "tubes",
+   "tone": "sepia",
+   "focus": [0.5, 0.4],
+   "label": {"text": "ỐNG GIẤU", "at": [6, "Ống"]},
+   "credit": "SƠ ĐỒ ỐNG TRONG TƯỜNG"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {"text": "CHẠY MÁY", "at": [7, "chạy"], "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {"text": "HERING", "at": [8, "Hering"], "acc": true},
+    {"text": "NÓI DỐI", "at": [8, "dối"]}
+   ]
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "face",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "PHỦ NHẬN",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/John_Ernst_Worrell_Keely"
+ ]
+}

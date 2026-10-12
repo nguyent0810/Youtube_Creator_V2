@@ -1,0 +1,60 @@
+{
+ "title": "Năm 2009, Arizona định tuổi da bê sách Voynich trong khoảng 1404 đến 1438",
+ "description": "Năm 1912 Wilfrid Voynich mua cuốn sách của dòng Tên. Nay là MS 408 tại thư viện Beinecke, Yale. Năm 2009 đại học Arizona định tuổi bốn mẫu da bê: 1404–1438. Đó là tuổi con bê, không phải tuổi mực. Chữ không thuộc ngôn ngữ nào đã biết và đến nay chưa ai đọc được. Voynich từng gán sách cho Roger Bacon, nhưng da làm ra sau khi Bacon đã mất hơn một thế kỷ.",
+ "tags": ["Voynich", "1404", "Beinecke", "Arizona", "da bê", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 1404",
+ "sub": "VOYNICH",
+ "acc": ["voynich", "bê", "1438", "bacon", "đọc"],
+ "lines": [
+  "Năm 1912, Wilfrid Voynich mua một cuốn sách của dòng Tên.",
+  "Cuốn sách nay mang số bốn không tám ở thư viện Beinecke.",
+  "Năm 2009, đại học Arizona định tuổi da bê.",
+  "Bốn mẫu da cho khoảng từ năm 1404 đến năm 1438.",
+  "Kết quả ấy là tuổi của con bê, không phải tuổi mực.",
+  "Mực chưa được định tuổi bằng cùng cách ấy.",
+  "Chữ trong sách không thuộc ngôn ngữ nào đã biết.",
+  "Đến nay chưa ai đọc được.",
+  "Voynich từng gán sách cho Roger Bacon.",
+  "Da bê làm ra sau khi Bacon đã mất hơn một thế kỷ.",
+  "Nên Bacon không thể là người viết.",
+  "Trang chữ ấy đến nay vẫn chưa ai đọc được."
+ ],
+ "imgs": {
+  "page": "File:Voynich.png"
+ },
+ "scenes": [
+  {"type": "hero", "img": "page", "frame": "print", "tone": "sepia", "intro": true, "head": "VOYNICH"},
+  {"type": "kinetic", "at": 1, "items": [
+    {"text": "BEINECKE", "at": [1, "Beinecke"]}
+  ]},
+  {"type": "kinetic", "at": 2, "items": [
+    {"text": "2009", "at": [2, "2009"], "size": 240, "serif": true}
+  ]},
+  {"type": "kinetic", "at": 3, "items": [
+    {"text": "1404–1438", "at": [3, "1404"], "size": 200, "acc": true}
+  ]},
+  {"type": "kinetic", "at": 4, "items": [
+    {"text": "TUỔI DA BÊ", "at": [4, "bê"]}
+  ]},
+  {"type": "kinetic", "at": 5, "items": [
+    {"text": "CHƯA ĐỊNH TUỔI", "at": [5, "tuổi"]}
+  ]},
+  {"type": "photo", "at": 6, "img": "page", "tone": "sepia", "focus": [0.5, 0.45],
+   "label": {"text": "CHỮ LẠ", "at": [6, "Chữ"]},
+   "credit": "CHỮ TRONG SÁCH VOYNICH"},
+  {"type": "kinetic", "at": 7, "items": [
+    {"text": "CHƯA ĐỌC", "at": [7, "đọc"], "acc": true}
+  ]},
+  {"type": "kinetic", "at": 8, "items": [
+    {"text": "BACON", "at": [8, "Bacon"]}
+  ]},
+  {"type": "kinetic", "at": 9, "items": [
+    {"text": "SAU MỘT THẾ KỶ", "at": [9, "thế"]}
+  ]},
+  {"type": "kinetic", "at": 10, "items": [
+    {"text": "KHÔNG PHẢI BACON", "at": [10, "không"]}
+  ]},
+  {"type": "hero", "at": 11, "img": "page", "frame": "print", "tone": "sepia", "loop": true, "head": "CHƯA ĐỌC", "tr": "cut"}
+ ],
+ "sources": ["https://en.wikipedia.org/wiki/Voynich_manuscript"]
+}

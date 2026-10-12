@@ -1,0 +1,57 @@
+{
+  "title": "Năm 1851, Foucault treo quả 28 ki-lô dưới mái vòm Panthéon",
+  "description": "Tháng 2 năm 1851, Léon Foucault treo quả lắc ở kinh tuyến Đài thiên văn Paris, buổi cho công chúng đầu tiên. Ít tuần sau ông treo quả khác dưới mái Panthéon: chì bọc đồng thau, 28 ki-lô, dây 67 mét. Bài cũng ghi 220 feet, cùng số đo ấy. Mặt lắc ở vĩ độ đó dịch khoảng 11,3 độ mỗi giờ. Bảng danh sách ghi một vòng khoảng 31 giờ 50 phút. Vincenzo Viviani từng dùng cách treo tương tự; buổi công chúng biết rộng là của Foucault. Tháng 12 năm 1851 quả ở Panthéon bị tháo sau khi nhà thờ phàn nàn. Năm 1855 quả gốc chuyển tới Bảo tàng Nghệ thuật và Nghề. Bản treo ở Panthéon bây giờ là bản sao, dựng lại từ năm 1995. Ảnh chụp ngày 8 tháng 8 năm 2023 là bản sao ấy, không phải quả chì năm 1851.",
+  "tags": ["Foucault", "1851", "Panthéon", "quả lắc", "Paris", "hồ sơ vụ án"],
+  "kicker": "HỒ SƠ 1851",
+  "sub": "QUẢ LẮC FOUCAULT",
+  "acc": ["foucault", "chì", "mét", "độ", "viviani", "2023"],
+  "lines": [
+    "Tháng 2 năm 1851, Foucault treo quả lắc ở đài thiên văn Paris.",
+    "Ít tuần sau, ông treo quả khác dưới mái Panthéon.",
+    "Quả bằng chì bọc đồng thau, nặng 28 ki-lô.",
+    "Dây dài 67 mét.",
+    "Mặt lắc dịch khoảng 11 độ mỗi giờ.",
+    "Đó là cách cho công chúng thấy đất quay.",
+    "Viviani từng thử, chưa phải buổi công chúng.",
+    "Tháng 12 năm 1851, quả bị tháo vì nhà thờ phàn nàn.",
+    "Quả gốc năm 1855 chuyển sang bảo tàng Nghệ thuật và Nghề.",
+    "Ảnh chụp tháng 8 năm 2023 là bản sao ở Panthéon.",
+    "Không phải quả chì năm 1851."
+  ],
+  "imgs": {
+    "bob": "File:Foucault pendulum at Panthéon de Paris, August 2023 (2).JPG"
+  },
+  "scenes": [
+    {"type": "date", "at": 0, "bg": "bob", "day": "THÁNG 2", "date": "02.1851",
+     "dayAt": [0, "Paris"],
+     "groupAt": [[0, "2"], [0, "1851"]],
+     "sub": {"text": "ĐÀI THIÊN VĂN", "at": [0, "đài"]}},
+    {"type": "kinetic", "at": 1, "items": [
+      {"text": "PANTHÉON", "at": [1, "Panthéon"], "size": 160}
+    ]},
+    {"type": "slam", "at": 2, "text": "28 KI-LÔ", "sub": "CHÌ BỌC ĐỒNG"},
+    {"type": "kinetic", "at": 3, "items": [
+      {"text": "67 MÉT", "at": [3, "67"], "acc": true, "size": 220}
+    ]},
+    {"type": "slam", "at": 4, "text": "11 ĐỘ", "sub": "MỖI GIỜ", "bg": "bob"},
+    {"type": "kinetic", "at": 5, "items": [
+      {"text": "ĐẤT QUAY", "at": [5, "quay"]}
+    ]},
+    {"type": "slam", "at": 6, "text": "CHƯA PHẢI", "sub": "VIVIANI", "white": true},
+    {"type": "date", "at": 7, "bg": "bob", "day": "THÁO", "date": "12.1851",
+     "dayAt": [7, "tháo"],
+     "groupAt": [[7, "12"], [7, "1851"]],
+     "sub": {"text": "NHÀ THỜ PHÀN NÀN", "at": [7, "thờ"]}},
+    {"type": "kinetic", "at": 8, "items": [
+      {"text": "NĂM 1855", "at": [8, "1855"]}
+    ]},
+    {"type": "photo", "at": 9, "img": "bob", "tone": "color", "focus": [0.5, 0.55],
+     "label": {"text": "THÁNG 8 2023", "at": [9, "2023"]},
+     "credit": "BẢN SAO, 2023"},
+    {"type": "slam", "at": 10, "text": "KHÔNG PHẢI GỐC", "sub": "QUẢ NĂM 1851", "white": true}
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Foucault_pendulum",
+    "https://en.wikipedia.org/wiki/Panth%C3%A9on"
+  ]
+}

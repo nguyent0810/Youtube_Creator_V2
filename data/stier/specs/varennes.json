@@ -1,0 +1,123 @@
+{
+ "title": "Bưu tá Drouet nhận ra Louis XVI, có thể nhờ chân dung trên tờ assignat",
+ "description": "Đêm 20/6/1791 Louis XVI rời Paris cùng gia đình, để lại một bản tuyên ngôn viết tay. Đoàn đi về pháo đài Montmédy. Ở Sainte-Menehould, bưu tá Jean-Baptiste Drouet nhận ra nhà vua, có thể nhờ chân dung in trên tờ assignat ông đang giữ. Bảy toán kỵ binh trên đường đã bị rút hoặc bị đám đông chặn. Đến Varennes, cách Montmédy 50 km, cả đoàn bị bắt và bị đưa về Paris trong im lặng. Đàn ông không bỏ mũ.",
+ "tags": [
+  "Varennes",
+  "Louis XVI",
+  "Drouet",
+  "assignat",
+  "1791",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1791",
+ "sub": "VARENNES",
+ "acc": [
+  "drouet",
+  "louis",
+  "assignat",
+  "varennes",
+  "tay"
+ ],
+ "lines": [
+  "Đêm 20 tháng 6 năm 1791, Louis XVI rời Paris cùng gia đình.",
+  "Ông để lại một bản tuyên ngôn viết tay gửi người Pháp.",
+  "Đoàn đi về pháo đài Montmédy, nơi có quân trung thành.",
+  "Ở trạm Sainte-Menehould, bưu tá Jean-Baptiste Drouet nhận ra nhà vua.",
+  "Có thể ông nhận ra nhờ chân dung in trên tờ assignat đang giữ.",
+  "Bảy toán kỵ binh trên đường đã bị rút, hoặc bị đám đông chặn.",
+  "Đến Varennes, cách Montmédy năm mươi cây số, cả đoàn bị bắt.",
+  "Họ bị đưa về Paris trong im lặng.",
+  "Đàn ông không bỏ mũ, một dấu tỏ ý coi thường.",
+  "Từ đó nhà vua không còn được tin là ủng hộ cách mạng."
+ ],
+ "imgs": {
+  "letter": "File:Déclaration autographe de Louis XVI adressée aux Français à sa sortie de Paris le 20 juin 1791. 1 sur 27 - Archives Nationales - AE-II-1218.jpg",
+  "note": "File:France-500Livres-1790-uni.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "letter",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "LOUIS"
+  },
+  {
+   "type": "photo",
+   "at": 1,
+   "img": "letter",
+   "tone": "sepia",
+   "focus": [0.5, 0.4],
+   "label": {"text": "VIẾT TAY", "at": [1, "tay"]},
+   "credit": "TUYÊN NGÔN ĐÊM 20 THÁNG 6"
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {"text": "MONTMÉDY", "at": [2, "Montmédy"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {"text": "DROUET", "at": [3, "Drouet"], "acc": true},
+    {"text": "BƯU TÁ", "at": [3, "bưu"]}
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 4,
+   "img": "note",
+   "tone": "sepia",
+   "focus": [0.5, 0.5],
+   "label": {"text": "CÓ THỂ", "at": [4, "Có"]},
+   "credit": "TỜ 500 LIVRES, 1790"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {"text": "BẢY TOÁN", "at": [5, "Bảy"]},
+    {"text": "BỊ CHẶN", "at": [5, "chặn"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {"text": "50 CÂY", "at": [6, "năm"], "size": 220, "serif": true},
+    {"text": "VARENNES", "at": [6, "Varennes"], "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {"text": "IM LẶNG", "at": [7, "im"], "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {"text": "KHÔNG BỎ MŨ", "at": [8, "mũ"]}
+   ]
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "letter",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "CÁCH MẠNG",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Flight_to_Varennes"
+ ]
+}

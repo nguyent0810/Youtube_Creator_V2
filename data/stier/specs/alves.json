@@ -1,0 +1,123 @@
+{
+ "title": "Waterlow in hai trăm nghìn tờ 500 escudo trùng số sê-ri với tiền thật",
+ "description": "Năm 1924 Artur Alves dos Reis làm giả thư của Ngân hàng Bồ Đào Nha, bảo nhà in Waterlow ở London in tờ 500 escudo cho Angola. Ngày 4/12 Karel Marang đưa thư cho William Waterlow. Hãng đã giữ bản in của tờ ấy. Reis tính được dãy số sê-ri nhưng quên bỏ số đã dùng. Waterlow thấy số trùng, báo cho ngân hàng, và người nhận chính là Reis. Hãng in 200.000 tờ hình Vasco da Gama, đề ngày 17/11/1922, tổng mệnh giá 100 triệu escudo. Số tờ giả gần bằng số tờ thật.",
+ "tags": [
+  "Alves dos Reis",
+  "Waterlow",
+  "500 escudo",
+  "1925",
+  "tiền giả",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1924",
+ "sub": "ALVES",
+ "acc": [
+  "waterlow",
+  "reis",
+  "escudo",
+  "sê-ri",
+  "trùng"
+ ],
+ "lines": [
+  "Năm 1924, Artur Alves dos Reis làm giả thư của Ngân hàng Bồ Đào Nha.",
+  "Thư bảo nhà in Waterlow ở London in tờ 500 escudo cho Angola.",
+  "Ngày 4 tháng 12, Karel Marang đưa thư ấy cho William Waterlow.",
+  "Waterlow giữ sẵn bản in của chính tờ 500 escudo ấy.",
+  "Reis tính được dãy số sê-ri, nhưng quên bỏ số đã dùng.",
+  "Waterlow thấy số trùng tờ cũ và báo cho ngân hàng.",
+  "Người nhận lá thư báo ấy chính là Reis.",
+  "Hãng in hai trăm nghìn tờ, hình Vasco da Gama, đề ngày 17 tháng 11 năm 1922.",
+  "Tổng mệnh giá là một trăm triệu escudo.",
+  "Số sê-ri trùng, và số tờ giả gần bằng số tờ thật."
+ ],
+ "imgs": {
+  "note": "File:Quinhentos Escudos, 1922 - Emissão Alves dos Reis.png",
+  "face": "File:Alves dos Reis.png"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "note",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "GIẢ THƯ"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {"text": "WATERLOW", "at": [1, "Waterlow"], "acc": true},
+    {"text": "500", "at": [1, "500"], "size": 220, "serif": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {"text": "4 THÁNG 12", "at": [2, "4"], "serif": true},
+    {"text": "MARANG", "at": [2, "Marang"]}
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 3,
+   "img": "note",
+   "tone": "sepia",
+   "focus": [0.5, 0.45],
+   "label": {"text": "BẢN IN", "at": [3, "bản"]},
+   "credit": "TỜ 500 ESCUDO, 1922"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {"text": "SỐ SÊ-RI", "at": [4, "sê-ri"], "acc": true},
+    {"text": "QUÊN BỎ", "at": [4, "quên"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {"text": "SỐ TRÙNG", "at": [5, "trùng"], "acc": true},
+    {"text": "BÁO NGÂN HÀNG", "at": [5, "ngân"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {"text": "CHÍNH LÀ REIS", "at": [6, "Reis"], "size": 200, "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {"text": "200 NGHÌN", "at": [7, "trăm"], "size": 200, "serif": true},
+    {"text": "DA GAMA", "at": [7, "Gama"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {"text": "100 TRIỆU", "at": [8, "trăm"], "size": 220, "acc": true, "serif": true}
+   ]
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "face",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "SỐ TRÙNG",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Portuguese_Bank_Note_Crisis"
+ ]
+}

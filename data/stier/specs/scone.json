@@ -1,0 +1,126 @@
+{
+ "title": "Đêm Giáng sinh 1950, bốn sinh viên khiêng Đá Định Mệnh khỏi Westminster",
+ "description": "Ngày 25/12/1950, Ian Hamilton, Gavin Vernon, Kay Matheson và Alan Stuart lấy Đá Scone ra khỏi ghế đăng quang ở Westminster. Tảng đá khoảng 152 kg gãy làm đôi. Mảnh lớn được chôn ở Kent, rồi xuất hiện trên bàn thờ tu viện Arbroath ngày 11/4/1951. Bốn tháng sau đá được trả về Westminster.",
+ "tags": [
+  "Đá Scone",
+  "Westminster",
+  "Ian Hamilton",
+  "Arbroath",
+  "Giáng sinh 1950",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1950",
+ "sub": "ĐÁ SCONE",
+ "acc": [
+  "westminster",
+  "hamilton",
+  "arbroath",
+  "kent",
+  "152"
+ ],
+ "lines": [
+  "Đêm Giáng sinh năm 1950, bốn sinh viên Scotland vào Westminster.",
+  "Họ khiêng Đá Định Mệnh ra khỏi ghế đăng quang.",
+  "Tảng đá nặng 152 ký, và gãy làm đôi trên đường đi.",
+  "Mảnh lớn được chôn ở một cánh đồng hạt Kent.",
+  "Ian Hamilton, Gavin Vernon, Kay Matheson và Alan Stuart.",
+  "Cảnh sát London lục soát mà không thấy.",
+  "Ngày 11 tháng 4 năm 1951, đá nằm trên bàn thờ tu viện Arbroath.",
+  "Bốn tháng sau, đá được đưa trả về Westminster.",
+  "Người ta đồn bản trả về chỉ là bản sao.",
+  "Tảng đá ấy đã nằm dưới ghế đăng quang của vua Anh từ năm 1296."
+ ],
+ "imgs": {
+  "chair": "File:Coronation Chair and Stone of Scone.jpg",
+  "abbey": "File:Coronation Chair - DPLA - 95ea2a51a3d9ecaecce7298e3b6fc5f1.jpg",
+  "seat": "File:Coronation Chair with Stone of Scone, Westminster Abbey (3611549960).jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "chair",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "WESTMINSTER"
+  },
+  {
+   "type": "photo",
+   "at": 1,
+   "img": "seat",
+   "tone": "sepia",
+   "focus": [0.5, 0.55],
+   "label": {
+    "text": "KHIÊNG KHỎI GHẾ",
+    "at": [1, "khiêng"]
+   },
+   "credit": "GHẾ ĐĂNG QUANG VÀ ĐÁ SCONE"
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {"text": "152 KÝ", "at": [2, "152"], "size": 240, "acc": true, "serif": true},
+    {"text": "GÃY LÀM ĐÔI", "at": [2, "gãy"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {"text": "CHÔN Ở KENT", "at": [3, "Kent"], "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {"text": "4 SINH VIÊN", "at": [4, "Ian"], "size": 220, "acc": true},
+    {"text": "HAMILTON", "at": [4, "Hamilton"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {"text": "KHÔNG THẤY", "at": [5, "không"], "acc": true}
+   ]
+  },
+  {
+   "type": "date",
+   "at": 6,
+   "day": "ARBROATH",
+   "date": "11.04.1951",
+   "groupAt": [[6, "11"], [6, "4"], [6, "1951"]],
+   "stamp": {"text": "TRÊN BÀN THỜ", "at": [6, "bàn"]}
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {"text": "4 THÁNG", "at": [7, "Bốn"], "size": 240, "acc": true, "serif": true},
+    {"text": "TRẢ VỀ", "at": [7, "trả"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {"text": "BẢN SAO?", "at": [8, "sao"], "acc": true}
+   ]
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "abbey",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "1296",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Stone_of_Scone"
+ ]
+}

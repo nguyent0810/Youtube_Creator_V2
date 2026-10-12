@@ -1,0 +1,60 @@
+{
+ "title": "Gương Hubble lệch vì thước đo null corrector sai một phẩy ba milimét",
+ "description": "Kính Hubble phóng ngày 24/4/1990. Ngày 27/6/1990 NASA công bố ảnh bị mờ vì quang sai cầu: gương chính mài quá phẳng ở rìa. Thước kiểm gương, gọi là null corrector, đặt sai khoảng cách 1,3 milimét. Gương được mài cho khớp thước sai ấy. Tháng 12/1993 phi hành đoàn lắp kính sửa. Ảnh kính trong video chụp năm 2009, sau các lần sửa.",
+ "tags": ["Hubble", "1990", "null corrector", "1,3 milimét", "NASA", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 1990",
+ "sub": "HUBBLE",
+ "acc": ["hubble", "gương", "milimét", "thước", "1990"],
+ "lines": [
+  "Ngày 24 tháng 4 năm 1990, kính Hubble được phóng lên quỹ đạo.",
+  "Hai tháng sau, ảnh của kính bị mờ.",
+  "NASA công bố lỗi ngày 27 tháng 6 năm 1990.",
+  "Gương chính bị mài quá phẳng ở phía rìa.",
+  "Lỗi ấy là quang sai cầu.",
+  "Thước kiểm gương, gọi là null corrector, đặt sai khoảng cách.",
+  "Khoảng cách ấy lệch một phẩy ba milimét.",
+  "Gương được mài cho khớp với thước sai.",
+  "Gương khớp thước, nên người ta tưởng gương đúng.",
+  "Ánh sáng từ rìa gương không hội tụ một điểm.",
+  "Tháng 12 năm 1993, phi hành đoàn lắp kính sửa lên Hubble.",
+  "Thước sai một phẩy ba milimét là gốc của ảnh mờ."
+ ],
+ "imgs": {
+  "scope": "File:Hubble 2009 close-up.jpg"
+ },
+ "scenes": [
+  {"type": "hero", "img": "scope", "frame": "print", "tone": "color", "intro": true, "head": "HUBBLE"},
+  {"type": "kinetic", "at": 1, "items": [
+    {"text": "HAI THÁNG", "at": [1, "Hai"]}
+  ]},
+  {"type": "kinetic", "at": 2, "items": [
+    {"text": "27 THÁNG 6", "at": [2, "27"], "size": 220, "serif": true}
+  ]},
+  {"type": "kinetic", "at": 3, "items": [
+    {"text": "QUÁ PHẲNG", "at": [3, "phẳng"]}
+  ]},
+  {"type": "kinetic", "at": 4, "items": [
+    {"text": "QUANG SAI", "at": [4, "quang"]}
+  ]},
+  {"type": "kinetic", "at": 5, "items": [
+    {"text": "NULL CORRECTOR", "at": [5, "null"]}
+  ]},
+  {"type": "kinetic", "at": 6, "items": [
+    {"text": "1,3 MILIMÉT", "at": [6, "milimét"], "size": 200, "acc": true}
+  ]},
+  {"type": "kinetic", "at": 7, "items": [
+    {"text": "THƯỚC SAI", "at": [7, "thước"]}
+  ]},
+  {"type": "kinetic", "at": 8, "items": [
+    {"text": "TƯỞNG ĐÚNG", "at": [8, "tưởng"]}
+  ]},
+  {"type": "kinetic", "at": 9, "items": [
+    {"text": "KHÔNG HỘI TỤ", "at": [9, "hội"]}
+  ]},
+  {"type": "photo", "at": 10, "img": "scope", "tone": "color", "focus": [0.55, 0.45],
+   "label": {"text": "KÍNH HUBBLE", "at": [10, "Hubble"]},
+   "credit": "HUBBLE, NASA, 2009"},
+  {"type": "hero", "at": 11, "img": "scope", "frame": "print", "tone": "color", "loop": true, "head": "MILIMÉT", "tr": "cut"}
+ ],
+ "sources": ["https://science.nasa.gov/mission/hubble/observatory/design/optics/hubbles-mirror-flaw/"]
+}

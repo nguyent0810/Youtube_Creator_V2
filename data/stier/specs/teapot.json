@@ -1,0 +1,129 @@
+{
+ "title": "Tháng 11 năm 1921, Albert Fall nhận của Doheny khoản vay không lãi một trăm nghìn đô",
+ "description": "Albert Fall, Bộ trưởng Nội vụ dưới Harding, tháng 11/1921 nhận của Edward Doheny một khoản vay không lãi 100.000 đô. Ông còn nhận 90.000 đô trái phiếu Liberty từ một công ty có dây với Harry Sinclair. Trong thời ông tại chức, mỏ dầu dự trữ của hải quân được cho tư nhân thuê. Công tố Atlee Pomerene và Owen Roberts lần ra các khoản này. Hợp đồng thuê thì hợp lệ. Tiền vay và trái phiếu thì không.",
+ "tags": [
+  "Teapot Dome",
+  "Albert Fall",
+  "Doheny",
+  "1921",
+  "trái phiếu",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1921",
+ "sub": "TEAPOT",
+ "acc": [
+  "fall",
+  "doheny",
+  "nghìn",
+  "liberty",
+  "thuê"
+ ],
+ "lines": [
+  "Albert Fall là Bộ trưởng Nội vụ dưới tổng thống Harding.",
+  "Tháng 11 năm 1921, Edward Doheny cho ông vay, không lấy lãi.",
+  "Khoản vay là một trăm nghìn đô.",
+  "Fall còn nhận chín mươi nghìn đô trái phiếu Liberty.",
+  "Trái phiếu từ một công ty có dây với Harry Sinclair.",
+  "Trong thời ông tại chức, mỏ dầu hải quân được cho tư nhân thuê.",
+  "Công tố Pomerene và Roberts lần ra các khoản này.",
+  "Hợp đồng thuê thì hợp lệ.",
+  "Tiền vay và trái phiếu thì không.",
+  "Fall là người đầu tiên trong nội các phải ngồi tù vì nhận hối lộ.",
+  "Vụ này về sau mang tên Teapot Dome."
+ ],
+ "imgs": {
+  "fall": "File:Albert B. Fall with map background.jpg",
+  "wells": "File:OIL WELLS NEAR TEAPOT DOME, WYOMING - NARA - 549209.jpg",
+  "doheny": "File:Edward Doheny Testifying 2 crop.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "fall",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "FALL"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {"text": "KHÔNG LÃI", "at": [1, "không"], "acc": true},
+    {"text": "DOHENY", "at": [1, "Doheny"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {"text": "100 NGHÌN", "at": [2, "trăm"], "size": 220, "acc": true, "serif": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {"text": "90 NGHÌN", "at": [3, "chín"], "serif": true},
+    {"text": "LIBERTY", "at": [3, "Liberty"], "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {"text": "SINCLAIR", "at": [4, "Sinclair"], "acc": true}
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 5,
+   "img": "wells",
+   "tone": "sepia",
+   "focus": [0.5, 0.45],
+   "label": {"text": "MỎ DẦU", "at": [5, "mỏ"]},
+   "credit": "GIẾNG DẦU TEAPOT DOME"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {"text": "POMERENE", "at": [6, "Pomerene"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {"text": "HỢP LỆ", "at": [7, "hợp"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {"text": "THÌ KHÔNG", "at": [8, "không"], "size": 220, "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {"text": "NGỒI TÙ", "at": [9, "tù"], "size": 240, "acc": true}
+   ]
+  },
+  {
+   "type": "hero",
+   "at": 10,
+   "img": "wells",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "TEAPOT DOME",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Teapot_Dome_scandal"
+ ]
+}

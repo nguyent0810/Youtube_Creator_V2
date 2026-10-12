@@ -1,0 +1,56 @@
+{
+ "title": "Chiều 13 tháng 9 năm 1848, thanh sắt dài một mét một xuyên qua đầu Phineas Gage",
+ "description": "Khoảng 4 giờ 30 chiều 13/9/1848, ở Cavendish, Vermont, thanh sắt đầm của đốc công Phineas Gage xuyên từ má trái lên đỉnh sọ. Thanh dài 1,1 mét, đường kính 3,2 cm, nặng 6 kg, đầu nhọn, không phải xà beng. Vài phút sau ông nói được. Bác sĩ John Harlow ghi rằng bạn bè một thời gian thấy ông không còn là Gage. Nhiều lời kể về sau phóng đại sự đổi tính ấy. Thanh sắt nay ở bảo tàng giải phẫu Warren.",
+ "tags": ["Phineas Gage", "1848", "Cavendish", "thanh sắt", "Harlow", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 1848",
+ "sub": "GAGE",
+ "acc": ["gage", "sắt", "mét", "harlow", "warren"],
+ "lines": [
+  "Chiều 13 tháng 9 năm 1848, một thanh sắt xuyên qua đầu Phineas Gage.",
+  "Ông là đốc công đường sắt Rutland và Burlington, ở Cavendish.",
+  "Thanh dài một mét một, đường kính ba phẩy hai xăng-ti-mét.",
+  "Thanh nặng sáu cân, đầu nhọn, không phải xà beng.",
+  "Thanh vào má trái và đi ra đỉnh sọ.",
+  "Vài phút sau Gage đã nói được.",
+  "Bác sĩ John Harlow tiếp nhận ông tối hôm đó.",
+  "Harlow ghi rằng bạn bè một thời gian thấy Gage không còn là Gage.",
+  "Nhiều lời kể về sau phóng đại sự đổi tính ấy.",
+  "Ảnh chụp ông cầm chính thanh sắt đó.",
+  "Thanh ấy nay ở bảo tàng giải phẫu Warren."
+ ],
+ "imgs": {
+  "gage": "File:Phineas Gage.jpg"
+ },
+ "scenes": [
+  {"type": "hero", "img": "gage", "frame": "print", "tone": "bw", "intro": true, "head": "GAGE"},
+  {"type": "kinetic", "at": 1, "items": [
+    {"text": "CAVENDISH", "at": [1, "Cavendish"]}
+  ]},
+  {"type": "kinetic", "at": 2, "items": [
+    {"text": "MỘT MÉT MỘT", "at": [2, "mét"], "size": 200, "acc": true}
+  ]},
+  {"type": "kinetic", "at": 3, "items": [
+    {"text": "SÁU CÂN", "at": [3, "sáu"], "size": 220}
+  ]},
+  {"type": "kinetic", "at": 4, "items": [
+    {"text": "MÁ TRÁI", "at": [4, "má"]}
+  ]},
+  {"type": "kinetic", "at": 5, "items": [
+    {"text": "NÓI ĐƯỢC", "at": [5, "nói"], "acc": true}
+  ]},
+  {"type": "kinetic", "at": 6, "items": [
+    {"text": "HARLOW", "at": [6, "Harlow"]}
+  ]},
+  {"type": "kinetic", "at": 7, "items": [
+    {"text": "KHÔNG CÒN", "at": [7, "không"]}
+  ]},
+  {"type": "kinetic", "at": 8, "items": [
+    {"text": "PHÓNG ĐẠI", "at": [8, "phóng"], "acc": true}
+  ]},
+  {"type": "photo", "at": 9, "img": "gage", "tone": "bw", "focus": [0.5, 0.35],
+   "label": {"text": "THANH SẮT", "at": [9, "thanh"]},
+   "credit": "GAGE VÀ THANH SẮT"},
+  {"type": "hero", "at": 10, "img": "gage", "frame": "print", "tone": "bw", "loop": true, "head": "WARREN", "tr": "cut"}
+ ],
+ "sources": ["https://en.wikipedia.org/wiki/Phineas_Gage"]
+}

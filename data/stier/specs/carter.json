@@ -1,0 +1,50 @@
+{
+ "title": "Ngày 26 tháng 11 năm 1922, nhật ký Carter ghi Có, thật kỳ diệu, không phải câu nổi tiếng",
+ "description": "Ngày 26/11/1922 Howard Carter đục một lỗ trên cửa trong mộ Tutankhamun. Lord Carnarvon hỏi ông có thấy gì không. Nhật ký hôm đó ghi câu đáp tiếng Anh là Yes, it is wonderful, dịch ý: Có, thật kỳ diệu. Sách in sau này ghi Yes, wonderful things, dịch ý: Có, những thứ kỳ diệu. Hai câu không giống nhau. Qua lỗ ông thấy phòng ngoài, có tượng, giường và rương. Mặt nạ vàng chưa nằm trong tầm nhìn hôm đó. Ảnh là phòng ngoài do Harry Burton chụp khoảng 18 đến 27 tháng 12 năm 1922, không phải khoảnh khắc ngọn nến.",
+ "tags": ["Howard Carter", "Tutankhamun", "1922", "nhật ký", "Harry Burton", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 1922",
+ "sub": "CARTER",
+ "acc": ["carter", "kỳ", "diệu", "nến", "burton"],
+ "lines": [
+  "Ngày 26 tháng 11 năm 1922, Howard Carter đục một lỗ trên cửa trong của mộ Tutankhamun.",
+  "Lord Carnarvon hỏi ông có thấy gì không.",
+  "Ông soi bằng một ngọn nến.",
+  "Nhật ký hôm đó ghi câu đáp: Có, thật kỳ diệu.",
+  "Sách in sau này đổi thành: Có, những thứ kỳ diệu.",
+  "Hai câu không giống nhau.",
+  "Qua lỗ ấy, ông thấy phòng ngoài, có tượng, giường và rương.",
+  "Ông chưa thấy mặt nạ vàng.",
+  "Ảnh này do Harry Burton chụp phòng ngoài, khoảng giữa tháng 12 năm 1922.",
+  "Không phải khoảnh khắc ngọn nến ngày 26 tháng 11.",
+  "Câu trong nhật ký mới là câu của ngày hôm đó."
+ ],
+ "imgs": {
+  "ante": "File:Tutankhamun tomb photographs 2 020.jpg"
+ },
+ "scenes": [
+  {"type": "hero", "img": "ante", "frame": "print", "tone": "bw", "intro": true, "head": "1922"},
+  {"type": "kinetic", "at": 1, "items": [
+    {"text": "CARNARVON", "at": [1, "Carnarvon"]}
+  ]},
+  {"type": "kinetic", "at": 2, "items": [
+    {"text": "NGỌN NẾN", "at": [2, "nến"], "acc": true}
+  ]},
+  {"type": "quote", "at": 3, "text": "CÓ, THẬT KỲ DIỆU", "by": "NHẬT KÝ · DỊCH Ý"},
+  {"type": "kinetic", "at": 4, "items": [
+    {"text": "SÁCH SAU", "at": [4, "Sách"]}
+  ]},
+  {"type": "slam", "at": 5, "text": "HAI CÂU", "sub": "KHÔNG GIỐNG NHAU", "white": true},
+  {"type": "kinetic", "at": 6, "items": [
+    {"text": "PHÒNG NGOÀI", "at": [6, "phòng"]}
+  ]},
+  {"type": "slam", "at": 7, "text": "CHƯA THẤY MẶT NẠ", "bg": "ante"},
+  {"type": "photo", "at": 8, "img": "ante", "tone": "bw", "focus": [0.5, 0.45],
+   "label": {"text": "BURTON", "at": [8, "Burton"]},
+   "credit": "PHÒNG NGOÀI, HARRY BURTON, THÁNG 12 1922"},
+  {"type": "hero", "at": 10, "img": "ante", "frame": "print", "tone": "bw", "loop": true, "head": "NHẬT KÝ", "tr": "cut"}
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Howard_Carter",
+  "http://www.griffith.ox.ac.uk/discoveringtut/journals-and-diaries/season-1/journal.html"
+ ]
+}

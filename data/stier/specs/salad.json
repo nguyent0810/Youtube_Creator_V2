@@ -1,0 +1,121 @@
+{
+ "title": "Bể của Tino De Angelis đầy nước, trên mặt chỉ một lớp dầu",
+ "description": "Năm 1963, Tino De Angelis vay khoảng 180 triệu đô bằng dầu ăn đem thế chấp. Một kho khai nhiều dầu hơn cả nước Mỹ đang có. Bể chứa đầy nước, phía trên một lớp dầu; có bể làm ngăn kín; cùng một mẻ dầu được bơm qua nhiều bể để đếm lại. Ông khai 900.000 tấn, trong kho chỉ khoảng 55.000. American Express phải đền khoảng 60 triệu đô. Năm 1965 ông lĩnh 20 năm tù.",
+ "tags": [
+  "Tino De Angelis",
+  "dầu ăn",
+  "American Express",
+  "scandal 1963",
+  "thế chấp khống",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1963",
+ "sub": "DE ANGELIS",
+ "acc": [
+  "angelis",
+  "nước",
+  "dầu",
+  "express",
+  "tấn"
+ ],
+ "lines": [
+  "Năm 1963, Tino De Angelis vay một trăm tám mươi triệu đô bằng dầu ăn.",
+  "Một kho của ông khai nhiều dầu hơn cả nước Mỹ đang có.",
+  "Giám định mở bể thì thấy nước. Phía trên chỉ là một lớp dầu.",
+  "Có bể còn làm ngăn kín để đỡ phải đổ đầy.",
+  "Cùng một mẻ dầu được bơm từ bể này sang bể kia để đếm nhiều lần.",
+  "Ông khai chín trăm nghìn tấn. Trong kho chỉ có năm mươi lăm nghìn.",
+  "Ngày 15 tháng 11, giá dầu tương lai sụp.",
+  "American Express, bên giữ kho, phải đền khoảng sáu mươi triệu đô.",
+  "Năm 1965, De Angelis lĩnh hai mươi năm tù.",
+  "Ông ra tù năm 1972."
+ ],
+ "imgs": {
+  "face": "File:Anthony \"Tino\" De Angelis.png"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "face",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "ANGELIS"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {"text": "HƠN CẢ", "at": [1, "nhiều"]},
+    {"text": "NƯỚC MỸ", "at": [1, "Mỹ"], "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {"text": "ĐẦY NƯỚC", "at": [2, "nước"], "size": 220, "acc": true},
+    {"text": "MỘT LỚP DẦU", "at": [2, "lớp"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {"text": "NGĂN KÍN", "at": [3, "ngăn"], "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {"text": "BƠM QUA BỂ", "at": [4, "bơm"], "acc": true},
+    {"text": "ĐẾM LẠI", "at": [4, "đếm"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {"text": "900.000", "at": [5, "chín"], "size": 200, "acc": true, "serif": true},
+    {"text": "CHỈ CÒN 55.000", "at": [5, "năm"]}
+   ]
+  },
+  {
+   "type": "date",
+   "at": 6,
+   "day": "GIÁ SỤP",
+   "date": "15.11.1963",
+   "groupAt": [[6, "15"], [6, "11"], [6, "11", 0, 0.4]],
+   "stamp": {"text": "DẦU TƯƠNG LAI", "at": [6, "sụp"]}
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {"text": "60 TRIỆU", "at": [7, "sáu"], "size": 220, "acc": true, "serif": true},
+    {"text": "EXPRESS ĐỀN", "at": [7, "Express"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {"text": "20 NĂM", "at": [8, "hai"], "size": 260, "acc": true, "serif": true}
+   ]
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "face",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "1972",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Salad_oil_scandal"
+ ]
+}
