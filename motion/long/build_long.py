@@ -866,6 +866,9 @@ def render_key(topic, name, od, draft) -> str:
     if "beat2.js" in comp.read_text(encoding="utf-8"):     # chỉ video beat2 nạp 2 file này -> key video cũ không đổi
         for n in ("beat2.js", "beat2.css"):
             hsh.update((HF / "assets" / "engine" / n).read_bytes())
+    for n in ("lab.js", "chart.js"):                        # 12/10/2026: sửa cảnh qr (lab.js) mà key không đổi -> chương không render lại
+        if n in comp.read_text(encoding="utf-8"):
+            hsh.update((HF / "assets" / "engine" / n).read_bytes())
     for vid in sorted(set(re.findall(r"broll/(\d+(?:fit)?)\.mp4", comp.read_text(encoding="utf-8")))):
         hsh.update(vid.encode())
     return hsh.hexdigest()[:16]

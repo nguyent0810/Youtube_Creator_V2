@@ -455,6 +455,12 @@ def plan(spec: dict, lines: list[dict], dur: float) -> list[dict]:
                 if q.get("size") and q["size"] * text_em(q["text"]) > 980]
         if wide:
             raise SystemExit("chữ kinetic rộng hơn khung (bỏ \"size\" để engine tự co): " + "; ".join(wide))
+    # Cảnh chart cần khối CSS ".ch*" của theme (theme-ck.css, theme-mim.css). Theme chưa có khối ấy -> cột và chữ dồn lên
+    # góc trên trái mà không lỗi nào báo (lô Short 3, 12/10/2026: 2 Short MIM đầu tiên dùng chart).
+    if any(r["type"] == "chart" for r in sc):
+        css = HF / "assets" / "engine" / f"theme-{spec.get('theme')}.css"
+        if not (css.exists() and ".chbar" in css.read_text(encoding="utf-8")):
+            raise SystemExit(f"cảnh chart: theme {spec.get('theme')!r} chưa có CSS biểu đồ (.chbar) trong {css.name}")
     if spec.get("theme") in ("mim", "ck") and spec.get("mix"):
         bad = mix_lint(sc)
         if bad:

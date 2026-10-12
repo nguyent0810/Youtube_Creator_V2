@@ -1,0 +1,199 @@
+{
+ "theme": "mim",
+ "title": "Flappy Bird kiếm 50.000 đô mỗi ngày, rồi bị chính tác giả gỡ",
+ "description": "Ngày 08/02/2014, lập trình viên Nguyễn Hà Đông đăng Twitter rằng 22 giờ nữa anh sẽ gỡ Flappy Bird. Khi ấy trò chơi đứng đầu bảng ứng dụng miễn phí ở nhiều nước và theo lời anh kể với The Verge, mang về khoảng 50.000 USD tiền quảng cáo mỗi ngày. Ngày 10/02/2014 trò chơi biến mất khỏi hai kho ứng dụng. Anh nói với Forbes rằng trò chơi được thiết kế để chơi vài phút lúc thư giãn nhưng đã thành một sản phẩm gây nghiện, và sau khi gỡ, anh ngủ lại được. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.",
+ "tags": [
+  "flappy bird",
+  "nguyễn hà đông",
+  "game việt nam",
+  "lịch sử công nghệ",
+  "ứng dụng di động",
+  "mind in the machine"
+ ],
+ "kicker": "CHUYỆN CÔNG NGHỆ",
+ "sub": "HÀ NỘI · 02/2014",
+ "acc": [
+  "năm",
+  "gỡ",
+  "hai",
+  "nghiện",
+  "ngủ"
+ ],
+ "lines": [
+  "Kiếm năm mươi nghìn đô mỗi ngày, rồi tự tay gỡ bỏ.",
+  "Ngày 8 tháng 2 năm 2014, một lập trình viên ở Hà Nội viết lên Twitter.",
+  "Hai mươi hai giờ nữa, tôi sẽ gỡ Flappy Bird xuống.",
+  "Lúc ấy, trò chơi đứng đầu bảng ứng dụng miễn phí ở nhiều nước.",
+  "Không ai ép. Không ai kiện. Đúng hẹn, nó biến mất.",
+  "Anh nói, trò chơi làm ra để chơi vài phút, nhưng đã thành một thứ gây nghiện.",
+  "Và từ khi gỡ nó xuống, anh ngủ lại được."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "50.000 ĐÔ MỖI NGÀY",
+     "at": 0.0
+    },
+    {
+     "text": "RỒI TỰ TAY GỠ BỎ",
+     "at": [
+      0,
+      "rồi"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:6145416",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "08.02.2014",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "một dòng trên Twitter",
+     "at": [
+      1,
+      "viết"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6944076",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 22,
+   "suffix": " GIỜ",
+   "label": "NỮA, TÔI SẼ GỠ NÓ XUỐNG",
+   "until": [
+    2,
+    "giờ"
+   ],
+   "sub": {
+    "text": "DIỄN Ý DÒNG TWEET NGÀY 08/02/2014",
+    "at": [
+     2,
+     "gỡ"
+    ]
+   }
+  },
+  {
+   "type": "chart",
+   "at": 3,
+   "kind": "bars",
+   "title": "TIỀN QUẢNG CÁO MỖI NGÀY",
+   "unit": "USD · THEO LỜI TÁC GIẢ (THE VERGE, 02/2014)",
+   "bars": [
+    {
+     "label": "LÚC\nĐỨNG ĐẦU",
+     "v": 50000,
+     "text": "~50.000",
+     "c": "ref",
+     "at": [
+      3,
+      "đứng"
+     ]
+    },
+    {
+     "label": "SAU KHI\nGỠ",
+     "v": 0,
+     "text": "0",
+     "c": "dim",
+     "at": [
+      4,
+      "biến"
+     ]
+    }
+   ],
+   "note": "GỠ KHỎI HAI KHO ỨNG DỤNG NGÀY 10/02/2014"
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Lời tác giả với Forbes",
+   "nodes": [
+    {
+     "text": "làm ra để chơi vài phút",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      5,
+      "chơi"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "đã thành thứ gây nghiện",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      5,
+      "thành"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 760
+    }
+   ],
+   "note": "DIỄN Ý · FORBES, 11/02/2014"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "GỠ XUỐNG",
+     "at": 6,
+     "sm": true
+    },
+    {
+     "text": "ANH NGỦ LẠI ĐƯỢC",
+     "at": [
+      6,
+      "anh"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:6943535",
+   "ms": 4,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 6
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Flappy_Bird"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "flappy": "Phờ-láp-pi",
+  "bird": "bớt",
+  "twitter": "Tuýt-tơ"
+ },
+ "imgs": {}
+}

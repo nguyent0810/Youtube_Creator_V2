@@ -1,0 +1,185 @@
+{
+ "theme": "ck",
+ "title": "3 tỷ của 30 năm sau không phải 3 tỷ hôm nay: lạm phát cũng là lãi kép",
+ "description": "VÍ DỤ GIẢ ĐỊNH: để dành 3 triệu mỗi tháng, lãi 6%/năm không đổi, sau 30 năm bảng tính cho ra khoảng 3.014 triệu (nộp 1.080 triệu). Nếu giá cả tăng bình quân khoảng 3,1%/năm — mức trung bình của CPI bình quân năm 2018–2025 theo Cục Thống kê — thì số tiền ấy chỉ tương đương khoảng 1.206 triệu theo sức mua hôm nay. Với lạm phát 3,1%/năm, sức mua của một đồng còn một nửa sau khoảng 23 năm. Mức lãi và mức lạm phát trong ví dụ là giả định cho tương lai, không phải dự báo.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.",
+ "tags": [
+  "lạm phát",
+  "lãi kép",
+  "sức mua",
+  "lãi suất thực",
+  "tiết kiệm",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "kicker": "1 CẢNH BÁO",
+ "sub": "LẠM PHÁT",
+ "acc": [
+  "không",
+  "ngược",
+  "nửa",
+  "một",
+  "trừ"
+ ],
+ "lines": [
+  "Ba tỷ của ba mươi năm sau, không phải ba tỷ của hôm nay.",
+  "Ví dụ giả định. Để dành ba triệu mỗi tháng, lãi sáu phần trăm, ba mươi năm. Bảng tính ra hơn ba tỷ.",
+  "Nhưng tám năm qua, giá cả ở Việt Nam tăng bình quân khoảng ba phẩy một phần trăm mỗi năm.",
+  "Lạm phát cũng là lãi kép. Chỉ có điều, nó chạy ngược chiều.",
+  "Với mức ấy, sau khoảng hai mươi ba năm, sức mua của một đồng còn một nửa.",
+  "Và hơn ba tỷ kia, chỉ còn tương đương khoảng một tỷ hai của hôm nay.",
+  "Nên trước một bảng tính lãi kép, câu đầu tiên cần hỏi, là đã trừ lạm phát chưa."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "3 TỶ CỦA 30 NĂM SAU",
+     "at": 0.0
+    },
+    {
+     "text": "KHÔNG PHẢI 3 TỶ HÔM NAY",
+     "at": [
+      0,
+      "không"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:35590093",
+   "veil": 0.58
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "VÍ DỤ GIẢ ĐỊNH",
+   "cards": [
+    {
+     "k": "MỖI THÁNG",
+     "v": "3 TRIỆU",
+     "at": [
+      1,
+      "ba"
+     ]
+    },
+    {
+     "k": "LÃI · 30 NĂM",
+     "v": "6%/NĂM",
+     "at": [
+      1,
+      "lãi"
+     ]
+    },
+    {
+     "k": "BẢNG TÍNH RA",
+     "v": "> 3 TỶ",
+     "at": [
+      1,
+      "Bảng"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "KHÔNG PHẢI DỰ BÁO"
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 3.1,
+   "suffix": "%",
+   "label": "MỖI NĂM · GIÁ CẢ TĂNG BÌNH QUÂN 2018–2025",
+   "until": [
+    2,
+    "một"
+   ],
+   "sub": {
+    "text": "TRUNG BÌNH CPI BÌNH QUÂN NĂM · CỤC THỐNG KÊ",
+    "at": [
+     2,
+     "mỗi"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": [
+    3,
+    "Chỉ"
+   ],
+   "text": "CHẠY NGƯỢC CHIỀU",
+   "sub": "LẠM PHÁT CŨNG LÀ LÃI KÉP"
+  },
+  {
+   "type": "chart",
+   "at": 4,
+   "kind": "bars",
+   "title": "SAU 30 NĂM",
+   "unit": "TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH · LẠM PHÁT 3,1%/NĂM",
+   "bars": [
+    {
+     "label": "TRÊN\nBẢNG TÍNH",
+     "v": 3014,
+     "text": "~3.014",
+     "c": "dim",
+     "at": [
+      4,
+      null,
+      0,
+      0.1
+     ]
+    },
+    {
+     "label": "THEO SỨC MUA\nHÔM NAY",
+     "v": 1206,
+     "text": "~1.206",
+     "c": "down",
+     "at": [
+      5,
+      "chỉ"
+     ]
+    }
+   ],
+   "note": "SỨC MUA CÒN MỘT NỬA SAU ~23 NĂM"
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Hỏi trước một bảng tính",
+   "nodes": [
+    {
+     "text": "đã trừ lạm phát chưa?",
+     "x": 0.5,
+     "y": 0.5,
+     "at": [
+      6,
+      "đã"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 800
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://topi.vn/ty-le-lam-phat-o-viet-nam-qua-cac-nam.html",
+  "https://baoquangninh.vn/cpi-binh-quan-nam-2024-tang-3-63-dat-muc-tieu-quoc-hoi-de-ra-3338442.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

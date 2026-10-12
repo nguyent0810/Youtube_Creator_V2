@@ -48,3 +48,28 @@
 .theme-mim .splitw .lb { color:var(--ink); }
 .theme-mim .credit { color:rgba(230,241,255,.85); }
 .theme-mim .kin.sm:not(.acc) { color:#cfe3f5; }   /* dòng phụ nhỏ: sáng lạnh thay màu giấy */
+
+/* ---- cảnh chart (casefile.js B.chart) -- chép từ theme-ck.css 12/10/2026: thiếu khối này thì biểu đồ Short MIM vỡ bố cục ---- */
+.theme-mim .chtitle { position:absolute; left:40px; right:40px; text-align:center; font-weight:900; letter-spacing:-.01em; white-space:nowrap; opacity:0; }
+.theme-mim .chunit { position:absolute; left:0; right:0; text-align:center; font-size:28px; letter-spacing:.2em; color:var(--dim,#94a3b8); white-space:nowrap; opacity:0; }
+.theme-mim .chaxis { stroke:rgba(241,245,249,.55); stroke-width:4; }
+.theme-mim .chgrid { stroke:rgba(148,163,184,.18); stroke-width:2; stroke-dasharray:8 10; }
+.theme-mim .chgl { font-family:'JetBrains Mono'; font-weight:500; font-size:26px; fill:#94a3b8; }
+.theme-mim .chtick { font-family:'JetBrains Mono'; font-weight:700; font-size:30px; fill:#cbd5e1; letter-spacing:.06em; }
+.theme-mim .chtag { font-family:'Be Vietnam Pro'; font-weight:900; font-size:50px; fill:#fff; paint-order:stroke; stroke:#0a1426; stroke-width:10px; }
+.theme-mim .chref { stroke:var(--red,#f87171); stroke-width:4; stroke-dasharray:14 12; }
+.theme-mim .chreft { font-family:'JetBrains Mono'; font-weight:700; font-size:30px; fill:var(--red,#f87171); letter-spacing:.08em; paint-order:stroke; stroke:#0a1426; stroke-width:8px; }
+.theme-mim .chbar { position:absolute; border-radius:14px 14px 4px 4px; transform:scaleY(0); }
+.theme-mim .chghost { position:absolute; border:4px dashed rgba(241,245,249,.45); border-radius:14px 14px 4px 4px; opacity:0; }
+.theme-mim .chgap { position:absolute; border-radius:14px 14px 0 0; opacity:0;
+  background:repeating-linear-gradient(135deg, rgba(239,68,68,.85) 0 14px, rgba(239,68,68,.35) 14px 28px); box-shadow:0 0 40px rgba(239,68,68,.45); }
+.theme-mim .chgapt { position:absolute; font-weight:900; font-size:46px; color:var(--down,#ef4444); white-space:nowrap; opacity:0;
+  text-shadow:0 6px 24px rgba(0,0,0,.9); }
+.theme-mim .chval { position:absolute; text-align:center; font-weight:900; line-height:1; white-space:nowrap; opacity:0;
+  text-shadow:0 8px 30px rgba(0,0,0,.85); }
+.theme-mim .chlbl { position:absolute; text-align:center; font-family:'JetBrains Mono'; font-weight:700; font-size:30px; line-height:1.45;
+  letter-spacing:.06em; color:#e2e8f0; opacity:0; }
+.theme-mim .chbadge { position:absolute; left:20px; right:20px; text-align:center; font-weight:900; line-height:1; color:var(--red,#f87171); white-space:nowrap; opacity:0;
+  text-shadow:0 0 50px var(--glow), 0 12px 40px rgba(0,0,0,.85); }
+.theme-mim .chnote { position:absolute; left:0; right:0; text-align:center; font-size:22px; letter-spacing:.16em; color:#94a3b8; white-space:nowrap; opacity:0; }
+.theme-mim .chgapt { text-align:center; }

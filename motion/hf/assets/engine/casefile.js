@@ -179,6 +179,9 @@
      sfx: tick theo từng bước (tối đa 28) theo ease power2.out từ at tới until; until -> thud */
   const vn = (n) => String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
   B.counter = (s, d) => {
+    // số thập phân (vd. "to": 3.1) giữ đúng số chữ số sau dấu phẩy; trước 12/10/2026 bị làm tròn thành "3"
+    const dp = s.dec ?? Math.max(...[s.to, s.from || 0].map((n) => (String(n).split(".")[1] || "").length));
+    const vn = (n) => { const [a, b] = Number(n).toFixed(dp).split("."); return a.replace(/\B(?=(\d{3})+(?!\d))/g, ".") + (b ? "," + b : ""); };
     const str = (s.prefix || "") + vn(s.to) + (s.suffix || ""), fs = fsz(str, 300, 1000, 0.62);
     const ct = el("div", "count", esc((s.prefix || "") + vn(s.from || 0) + (s.suffix || "")), d); ct.style.fontSize = px(fs); if (s.top) ct.style.top = px(s.top);
     const top = (s.top || 360) + fs + 20;

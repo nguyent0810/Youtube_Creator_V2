@@ -55,8 +55,9 @@ CH["ch00"] = {"hud": {"k": "MỞ ĐẦU", "t": "HAI NGƯỜI BẠN, MỘT CÂU �
 
 CH["ch01"] = {"hud": {"k": "CHƯƠNG 01", "t": "LÃI ĐẺ RA LÃI"}, "bgm": {"mood": "calm", "gain": 0.11}, "scenes": [
     {"type": "chapter", "no": "1", "k": "CHƯƠNG MỘT", "title": "LÃI ĐẺ RA LÃI", "sub": "LÃI KÉP LÀ GÌ?", "vid": "8479054", "illus": VM, "titleAt": [0, "Lãi"]},
-    {"type": "ledger", "at": 2, "title": "100 TRIỆU · LÃI 6%/NĂM", "srcnote": HYPO,
-     "rows": [{"k": "HẾT NĂM 1", "v": "106 TRIỆU", "at": 3}, {"k": "NĂM 2: 6% TÍNH TRÊN", "v": "106 TRIỆU, KHÔNG PHẢI 100", "at": 5}],
+    {"type": "ledger", "at": 2, "title": "THỬ MỘT PHÉP TÍNH", "srcnote": HYPO,
+     "rows": [{"k": "GỐC", "v": "100 TRIỆU", "at": [2, "một"]}, {"k": "LÃI GIẢ ĐỊNH", "v": "6%/NĂM", "at": [2, "sáu"]},
+              {"k": "HẾT NĂM 1", "v": "106 TRIỆU", "at": 3}, {"k": "NĂM 2: 6% TÍNH TRÊN", "v": "106 TRIỆU, KHÔNG PHẢI 100", "at": 5}],
      "total": {"k": "LÃI NĂM 2", "v": "6,36 TRIỆU", "at": 6}},
     {"type": "counter", "at": 7, "from": 0, "to": 360000, "suffix": " đ", "until": [7, "nghìn"], "label": "LÃI CỦA TIỀN LÃI", "sub": {"text": "nghe chẳng đáng là bao", "at": 8}},
     {"type": "kinetic", "at": 9, "items": [{"text": "HÃY CHO NÓ", "at": 9, "sm": True}, {"text": "THỜI GIAN", "at": [9, "thời"], "acc": True}]},
@@ -100,7 +101,7 @@ CH["ch03"] = {"hud": {"k": "CHƯƠNG 03", "t": "LỜI GIẢI CHO LAN VÀ MINH"},
     {"type": "ledger", "at": 7, "title": "LAN Ở TUỔI 35", "srcnote": HYPO,
      "rows": [{"k": "ĐÃ CÓ SẴN", "v": "GẦN 500 TRIỆU", "at": [7, "gần"]}, {"k": "CÒN", "v": "20 NĂM ĐỂ LĂN", "at": 8}], "total": {"k": "20 NĂM · 6%", "v": "GẤP HƠN 3 LẦN", "at": 9}},
     {"type": "kinetic", "at": 10, "items": [{"text": "TIỀN MINH NỘP NĂM CUỐI", "at": 10, "sm": True}, {"text": "MỚI LĂN VÀI THÁNG", "at": [10, "mới"], "acc": True}]},
-    {"type": "counter", "at": 11, "from": 3.0, "to": 3.5, "suffix": " TRIỆU/THÁNG", "until": [11, "rưỡi,"], "label": "MINH PHẢI NỘP ĐỂ ĐUỔI KỊP LAN", "sub": {"text": "SUỐT 20 NĂM · " + HYPO, "at": 11}},
+    {"type": "counter", "at": 11, "from": 3.0, "to": 3.5, "suffix": " TRIỆU", "until": [11, "rưỡi,"], "label": "MỖI THÁNG · MINH PHẢI NỘP ĐỂ ĐUỔI KỊP LAN", "sub": {"text": "SUỐT 20 NĂM · " + HYPO, "at": 11}},
     {"type": "slam", "at": 12, "text": "10 NĂM ĐI TRƯỚC", "sub": "THỨ QUÝ NHẤT KHÔNG PHẢI SỐ TIỀN", "subAt": 12},
     {"type": "kinetic", "at": 14, "items": [{"text": "KHOAN KẾT LUẬN", "at": 14, "acc": True}, {"text": "còn hai thứ phép tính này chưa nhắc tới", "at": [14, "Vì"], "sm": True}]},
 ]}

@@ -1,0 +1,220 @@
+{
+ "theme": "ck",
+ "title": "Lãi kép: năm thứ mấy thì tiền lãi vượt tiền bạn nộp? (ví dụ 3 triệu mỗi tháng)",
+ "description": "VÍ DỤ GIẢ ĐỊNH: mỗi tháng để dành 3 triệu đồng (36 triệu một năm), lãi 6%/năm không đổi, nhập gốc hằng tháng, không rút. Tới năm thứ 13, tiền lãi sinh ra trong năm bắt đầu lớn hơn 36 triệu bạn nộp trong năm. Sau 10 năm có khoảng 492 triệu (nộp 360), sau 30 năm khoảng 3.014 triệu (nộp 1.080). Mức 6% là giả định để minh hoạ phép tính, không phải lãi của sản phẩm nào và không phải dự báo; chưa trừ lạm phát.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.",
+ "tags": [
+  "lãi kép",
+  "lãi kép là gì",
+  "để dành mỗi tháng",
+  "tiết kiệm",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "kicker": "1 CON SỐ",
+ "sub": "LÃI KÉP",
+ "acc": [
+  "mười",
+  "ba",
+  "vượt",
+  "vô",
+  "giả"
+ ],
+ "lines": [
+  "Lãi kép có một cột mốc, mà ít ai tính thử.",
+  "Ví dụ giả định nhé. Mỗi tháng bạn để dành ba triệu, lãi sáu phần trăm một năm, không rút.",
+  "Mỗi năm, bạn nộp vào ba mươi sáu triệu.",
+  "Tới năm thứ mười ba, tiền lãi sinh ra trong năm, bắt đầu vượt số bạn nộp.",
+  "Từ đó, tiền làm việc chăm hơn cả bạn.",
+  "Nhưng mười năm đầu, lãi kép gần như vô hình. Nhiều người bỏ cuộc trước khi thấy nó.",
+  "Và nhớ, sáu phần trăm chỉ là giả định, chưa trừ lạm phát."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "LÃI KÉP",
+     "at": 0.0
+    },
+    {
+     "text": "CÓ MỘT CỘT MỐC",
+     "at": [
+      0,
+      "một"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7703941",
+   "ms": 3,
+   "veil": 0.58
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "VÍ DỤ GIẢ ĐỊNH",
+   "cards": [
+    {
+     "k": "MỖI THÁNG",
+     "v": "3 TRIỆU",
+     "at": [
+      1,
+      "ba"
+     ]
+    },
+    {
+     "k": "LÃI",
+     "v": "6%/NĂM",
+     "at": [
+      1,
+      "lãi"
+     ],
+     "c": "acc"
+    },
+    {
+     "k": "MỖI NĂM NỘP",
+     "v": "36 TRIỆU",
+     "at": [
+      2,
+      "ba"
+     ]
+    }
+   ],
+   "note": "KHÔNG RÚT · KHÔNG PHẢI DỰ BÁO"
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 13,
+   "suffix": "",
+   "label": "NĂM THỨ · TIỀN LÃI TRONG NĂM VƯỢT 36 TRIỆU BẠN NỘP",
+   "until": [
+    3,
+    "ba,"
+   ],
+   "sub": {
+    "text": "VÍ DỤ GIẢ ĐỊNH · LÃI 6%/NĂM KHÔNG ĐỔI · KHÔNG PHẢI DỰ BÁO",
+    "at": [
+     3,
+     "tiền"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "TỪ ĐÓ",
+     "at": 4,
+     "sm": true
+    },
+    {
+     "text": "TIỀN LÀM VIỆC CHĂM HƠN BẠN",
+     "at": [
+      4,
+      "tiền"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7010551",
+   "ms": 6,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 4
+  },
+  {
+   "type": "chart",
+   "at": 5,
+   "kind": "bars",
+   "title": "TIỀN LÃI SINH RA TRONG NĂM",
+   "unit": "TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH · LÃI 6%/NĂM KHÔNG ĐỔI · KHÔNG PHẢI DỰ BÁO",
+   "bars": [
+    {
+     "label": "NĂM 1",
+     "v": 1.0,
+     "text": "~1",
+     "c": "dim",
+     "at": [
+      5,
+      null,
+      0,
+      0.1
+     ]
+    },
+    {
+     "label": "NĂM 5",
+     "v": 11.0,
+     "text": "~11",
+     "c": "dim",
+     "at": [
+      5,
+      "gần"
+     ]
+    },
+    {
+     "label": "NĂM 13",
+     "v": 36.5,
+     "text": "> 36",
+     "c": "ref",
+     "at": [
+      5,
+      "Nhiều"
+     ]
+    }
+   ],
+   "note": "MƯỜI NĂM ĐẦU GẦN NHƯ VÔ HÌNH"
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Đừng quên",
+   "nodes": [
+    {
+     "text": "6% chỉ là giả định",
+     "x": 0.5,
+     "y": 0.32,
+     "at": [
+      6,
+      "sáu"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "chưa trừ lạm phát",
+     "x": 0.5,
+     "y": 0.66,
+     "at": [
+      6,
+      "chưa"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 640
+    }
+   ],
+   "note": "GIÁO DỤC · KHÔNG PHẢI KHUYẾN NGHỊ"
+  }
+ ],
+ "sources": [
+  "https://topi.vn/ty-le-lam-phat-o-viet-nam-qua-cac-nam.html",
+  "https://baoquangninh.vn/cpi-binh-quan-nam-2024-tang-3-63-dat-muc-tieu-quoc-hoi-de-ra-3338442.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

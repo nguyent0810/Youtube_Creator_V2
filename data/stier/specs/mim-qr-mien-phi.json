@@ -1,0 +1,185 @@
+{
+ "theme": "mim",
+ "title": "Vì sao bạn quét mã QR mà không ai thu một đồng nào?",
+ "description": "Mã QR do Denso Wave (Nhật) phát triển và ra mắt năm 1994. Theo trang lịch sử của chính Denso Wave, công ty giữ bằng sáng chế nhưng tuyên bố không thực thi quyền ấy; năm 2000 mã QR trở thành tiêu chuẩn quốc tế (ISO). Ai cũng được dùng, được in mà không cần xin phép. Kỹ sư Masahiro Hara từng nói đùa với báo chí rằng nhóm ông không nhận đồng hoa hồng nào mỗi lần mã được dùng (The Guardian, 2020). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.",
+ "tags": [
+  "mã qr",
+  "qr code",
+  "bằng sáng chế",
+  "denso wave",
+  "masahiro hara",
+  "công nghệ quanh ta",
+  "mind in the machine"
+ ],
+ "kicker": "CÔNG NGHỆ QUANH TA",
+ "sub": "MÃ QR · MIỄN PHÍ",
+ "acc": [
+  "không",
+  "miễn",
+  "chuẩn",
+  "phép",
+  "lan"
+ ],
+ "lines": [
+  "Bạn quét mã QR mỗi ngày, mà không ai thu của bạn một đồng nào.",
+  "Năm 1994, công ty Nhật làm ra nó nắm trong tay bằng sáng chế.",
+  "Họ có thể thu tiền mỗi lần ai đó dùng. Họ đã không làm thế.",
+  "Công ty giữ bằng sáng chế, nhưng tuyên bố không thực thi quyền ấy.",
+  "Năm 2000, mã QR thành một tiêu chuẩn quốc tế.",
+  "Ai cũng được dùng. Ai cũng được in. Không cần xin phép.",
+  "Một thứ miễn phí, lan đi theo cách mà thứ phải trả tiền khó làm được."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "QUÉT MỖI NGÀY",
+     "at": 0.0
+    },
+    {
+     "text": "KHÔNG AI THU MỘT ĐỒNG",
+     "at": [
+      0,
+      "không"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:8830587",
+   "ms": 3,
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "1994",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "công ty Nhật nắm bằng sáng chế",
+     "at": [
+      1,
+      "nắm"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:38052460",
+   "ms": 4,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "HỌ ĐÃ KHÔNG THU",
+   "sub": "DÙ CÓ THỂ THU TIỀN MỖI LẦN DÙNG"
+  },
+  {
+   "type": "timeline",
+   "at": 3,
+   "items": [
+    {
+     "year": "1994",
+     "text": "ra mắt · giữ bằng sáng chế",
+     "at": [
+      3,
+      null,
+      0,
+      0.1
+     ]
+    },
+    {
+     "year": "lựa chọn",
+     "text": "tuyên bố không thực thi quyền ấy",
+     "at": [
+      3,
+      "tuyên"
+     ]
+    },
+    {
+     "year": "2000",
+     "text": "thành tiêu chuẩn quốc tế",
+     "at": [
+      4,
+      "thành"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "KHÔNG CẦN XIN PHÉP",
+   "cards": [
+    {
+     "k": "AI CŨNG",
+     "v": "ĐƯỢC DÙNG",
+     "at": [
+      5,
+      "dùng."
+     ]
+    },
+    {
+     "k": "AI CŨNG",
+     "v": "ĐƯỢC IN",
+     "at": [
+      5,
+      "in."
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MIỄN PHÍ",
+     "at": 6,
+     "acc": true
+    },
+    {
+     "text": "lan đi theo cách thứ trả tiền khó làm được",
+     "at": [
+      6,
+      "lan"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7287317",
+   "ms": 4,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 6
+  }
+ ],
+ "sources": [
+  "https://www.qrcode.com/en/history/",
+  "https://spectrum.ieee.org/how-a-board-game-and-skyscrapers-inspired-the-development-of-the-qr-code"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "qr": "quy a"
+ },
+ "imgs": {}
+}
