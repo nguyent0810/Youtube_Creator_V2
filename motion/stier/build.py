@@ -465,14 +465,14 @@ def plan(spec: dict, lines: list[dict], dur: float) -> list[dict]:
                 q["fx"] = "hold"
     if pools and pools.get("sync"):   # Beat Text MIM: dòng chữ lớn được đọc trọn -> hiện từng chữ theo giọng
         apply_sync(sc, lines)
-    if spec.get("mix"):   # dòng sync không phải dòng nhấn: chữ nằm trong "acc" của spec -> hộp màu quét sau chữ (beat.js q.em)
+    if spec.get("mix"):   # dòng sync không phải dòng nhấn: chữ nằm trong "acc" của spec -> hộp màu quét sau chữ (beat.js q.emw; KHÔNG phải q.em của beat2 video dài)
         accs = {norm(a) for a in spec.get("acc", [])}
         for r in sc:
             for q in (r.get("items") or []) if r["type"] == "kinetic" else []:
                 if q.get("fx") == "sync" and q.get("wt") and not q.get("acc") and not q.get("c"):
                     em = [k for k, w in enumerate(q["text"].split()) if norm(w) in accs][:2]
                     if em:
-                        q["em"] = em
+                        q["emw"] = em
     assign_beats(sc, spec.get("title", ""), boxed_max=12,      # màn dọc hẹp: con dấu/băng dán chỉ cho dòng thật ngắn
                  pools=pools)
     return sc

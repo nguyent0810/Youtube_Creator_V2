@@ -68,7 +68,9 @@ window.makeBeat = ({ tl, el, esc, rnd }) => {
     sync: (e, q) => { if (!q.wt || !q.wt.length) return BEAT.rise(e, q);   // "sync" ghi tay mà không có mốc chữ
       e.innerHTML = words(q.text).map((w) => `<span class="sw">${w}</span>`).join(" ");
       const sw = e.querySelectorAll(".sw"), pre = q.t0 != null && q.wt[0] - q.t0 > 1.2;
-      (q.em || []).forEach((k) => { const w = sw[k]; if (!w) return; w.classList.add("emw");   // chữ nhấn: hộp màu quét đúng lúc đọc
+      // q.emw (Short phối): mảng chỉ số chữ nhấn. KHÔNG dùng lại khoá q.em -- beat2 của video dài đã dùng q.em với kiểu khác
+      // (12/10/2026: dùng chung khoá làm vỡ mọi cảnh sync của video dài, cảnh sau không dựng).
+      (Array.isArray(q.emw) ? q.emw : []).forEach((k) => { const w = sw[k]; if (!w) return; w.classList.add("emw");
         tl.fromTo(w, { backgroundSize: "0% 84%" }, { backgroundSize: "100% 84%", duration: 0.24, ease: "power2.out", immediateRender: false }, q.wt[k] + 0.1);
         tl.to(w, { color: "#04121a", duration: 0.12 }, q.wt[k] + 0.16); });
       tl.set(e, { opacity: 1 }, pre ? q.t0 + 0.1 : q.wt[0] - 0.08);
