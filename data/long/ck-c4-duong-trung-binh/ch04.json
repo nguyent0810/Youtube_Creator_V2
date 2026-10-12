@@ -1,0 +1,259 @@
+{
+ "title": "Bắn tên rồi vẽ hồng tâm",
+ "lines": [
+  {
+   "t": "Có một phép thử mà kênh muốn bạn tự nhìn.",
+   "p": 0.8
+  },
+  "Giả sử một quy tắc rất đơn giản: phiên hôm trước giá đóng cửa trên đường MA thì giữ chỉ số, dưới thì đứng ngoài.",
+  {
+   "t": "Đây là phép thử minh hoạ trên chỉ số, không thể mua trực tiếp, và là quá khứ.",
+   "p": 1.0
+  },
+  "Từ tháng mười năm hai nghìn không trăm mười chín tới nay, nếu cứ giữ suốt, chỉ số tăng khoảng bảy mươi tám phần trăm.",
+  "Với MA hai trăm, quy tắc ấy lãi khoảng một trăm phần trăm, trước phí và thuế.",
+  {
+   "t": "Nghe hấp dẫn.",
+   "p": 1.0
+  },
+  "Nhưng thay hai trăm bằng một trăm, quy tắc chỉ còn lãi khoảng năm mươi lăm phần trăm, thua xa việc giữ suốt.",
+  "Tính thêm phí giao dịch giả định và thuế bán, MA một trăm còn khoảng ba mươi ba phần trăm.",
+  {
+   "t": "MA hai mươi trước phí trông rất đẹp, khoảng một trăm ba mươi hai phần trăm. Nhưng nó đổi phía quá nhiều lần, trừ phí và thuế, chỉ còn khoảng bảy mươi phần trăm.",
+   "p": 1.0
+  },
+  "Trong sáu độ dài kênh thử, sau phí và thuế, chỉ có MA hai trăm nhỉnh hơn giữ suốt một chút.",
+  "Và mình chỉ biết điều đó sau khi đã nhìn hết dữ liệu.",
+  {
+   "t": "Chọn con số đẹp nhất sau khi biết kết quả, giống như bắn tên trước, rồi vẽ hồng tâm quanh mũi tên.",
+   "p": 1.0
+  },
+  "Giới nghiên cứu gọi chuyện này là đào dữ liệu.",
+  "Năm một nghìn chín trăm chín mươi hai, ba nhà nghiên cứu Brock, Lakonishok và LeBaron thử các quy tắc đường trung bình trên chỉ số Dow Jones của Mỹ, gần chín mươi năm dữ liệu, và thấy kết quả khá tốt, chưa tính phí.",
+  "Bảy năm sau, Sullivan, Timmermann và White thử lại với gần tám nghìn quy tắc, và tính tới việc chọn quy tắc tốt nhất sau khi đã biết kết quả.",
+  "Trên mười năm dữ liệu mới, sau khi nghiên cứu đầu tiên đã công bố, họ kết luận hầu như không còn bằng chứng các quy tắc ấy mang lại giá trị kinh tế."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "CHƯƠNG BỐN",
+   "title": "BẮN TÊN\nRỒI VẼ HỒNG TÂM",
+   "sub": "KÊNH THỬ 6 ĐỘ DÀI MA",
+   "vid": "5028622",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "có"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "QUY TẮC MINH HOẠ",
+   "srcnote": "TRÊN CHỈ SỐ · KHÔNG MUA TRỰC TIẾP ĐƯỢC · QUÁ KHỨ",
+   "rows": [
+    {
+     "k": "TRÊN MA",
+     "v": "GIỮ CHỈ SỐ",
+     "at": [
+      1,
+      "trên"
+     ]
+    },
+    {
+     "k": "DƯỚI MA",
+     "v": "ĐỨNG NGOÀI (LÃI 0)",
+     "at": [
+      1,
+      "dưới"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 3,
+   "title": "10/2019 → 10/2026 · TRƯỚC PHÍ VÀ THUẾ",
+   "items": [
+    {
+     "k": "GIỮ SUỐT",
+     "v": 78.0,
+     "lbl": "+78%",
+     "at": 3
+    },
+    {
+     "k": "MA200",
+     "v": 99.8,
+     "lbl": "+100%",
+     "at": 4,
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "",
+    "v": "KÊNH TỰ TÍNH · QUÁ KHỨ · KHÔNG PHẢI TÍN HIỆU",
+    "at": 3
+   }
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "NGHE HẤP DẪN"
+  },
+  {
+   "type": "bars",
+   "at": 6,
+   "title": "SÁU ĐỘ DÀI MA · TRƯỚC PHÍ → SAU PHÍ VÀ THUẾ",
+   "items": [
+    {
+     "k": "GIỮ SUỐT",
+     "v": 78.0,
+     "lbl": "+78%",
+     "at": 6
+    },
+    {
+     "k": "MA20",
+     "v": 70.3,
+     "lbl": "+132% → +70%",
+     "at": 8
+    },
+    {
+     "k": "MA50",
+     "v": 45.8,
+     "lbl": "+80% → +46%",
+     "at": 7
+    },
+    {
+     "k": "MA100",
+     "v": 32.5,
+     "lbl": "+55% → +32%",
+     "at": 6
+    },
+    {
+     "k": "MA150",
+     "v": 60.3,
+     "lbl": "+82% → +60%",
+     "at": 9
+    },
+    {
+     "k": "MA200",
+     "v": 82.2,
+     "lbl": "+100% → +82%",
+     "at": 9,
+     "acc": true
+    },
+    {
+     "k": "MA250",
+     "v": 69.2,
+     "lbl": "+81% → +69%",
+     "at": 9
+    }
+   ],
+   "label": {
+    "k": "PHÍ GIẢ ĐỊNH",
+    "v": "0,15%/CHIỀU + THUẾ BÁN 0,1% · KÊNH TỰ TÍNH · QUÁ KHỨ · KHÔNG PHẢI TÍN HIỆU",
+    "at": 7
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "CHỈ BIẾT SAU KHI",
+     "at": 10,
+     "sm": true
+    },
+    {
+     "text": "ĐÃ NHÌN HẾT DỮ LIỆU",
+     "at": [
+      10,
+      "đã"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 11,
+   "text": "BẮN TÊN TRƯỚC",
+   "sub": "RỒI VẼ HỒNG TÂM QUANH MŨI TÊN"
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "ĐÀO DỮ LIỆU",
+     "at": 12,
+     "acc": true
+    },
+    {
+     "text": "data snooping",
+     "at": [
+      12,
+      "đào"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 13,
+   "k": "JOURNAL OF FINANCE · 1992",
+   "name": "Brock, Lakonishok, LeBaron",
+   "desc": "Dow Jones 1897–1986",
+   "rows": [
+    {
+     "k": "QUY TẮC",
+     "v": "đường trung bình · phá vùng giá",
+     "at": [
+      13,
+      "thử"
+     ]
+    },
+    {
+     "k": "KẾT QUẢ",
+     "v": "*khá tốt* · chưa tính phí",
+     "at": [
+      13,
+      "thấy"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 14,
+   "k": "JOURNAL OF FINANCE · 1999",
+   "name": "Sullivan, Timmermann, White",
+   "desc": "Kiểm tra lại, tính tới đào dữ liệu",
+   "rows": [
+    {
+     "k": "SỐ QUY TẮC",
+     "v": "*7.846*",
+     "at": [
+      14,
+      "gần"
+     ]
+    },
+    {
+     "k": "1987–1996",
+     "v": "*hầu như không* còn giá trị kinh tế",
+     "at": 15
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "BẮN TÊN RỒI VẼ HỒNG TÂM"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.1
+ }
+}

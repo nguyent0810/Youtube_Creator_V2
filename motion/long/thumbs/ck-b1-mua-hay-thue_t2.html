@@ -1,0 +1,29 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#050912}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:"Be Vietnam Pro",sans-serif;color:#fff;
+ background:linear-gradient(rgba(125,211,252,.06) 1px,transparent 1px) 0 0/80px 80px,linear-gradient(90deg,rgba(125,211,252,.06) 1px,transparent 1px) 0 0/80px 80px,radial-gradient(80% 70% at 50% 40%,#16263f 0%,#0a1426 60%,#04080f 100%)}
+.big{position:absolute;font-weight:900;line-height:1.05;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.lb{position:absolute;font-weight:900;white-space:nowrap;text-shadow:0 4px 18px #000}
+.tag{position:absolute;font-family:"JetBrains Mono";font-weight:700;letter-spacing:.16em;white-space:nowrap;color:#fbbf24}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<!-- T2: hai số dư 10 năm (mô hình ví dụ, gen_scenes.paths): tím = thuê + để dành; cam = mua ở 0 / 3 / 5 %/năm; vàng đứt = mức hoà vốn ≈ 7,5%/năm gặp đường tím ở năm 10 -->
+<svg style="position:absolute;left:0;top:0" width="1920" height="1080" viewBox="0 0 1920 1080">
+ <polyline points="110,952 144,949 177,947 210,944 244,941 278,938 311,935 344,933 378,930 412,927 445,924 478,922 512,919 546,916 579,913 612,910 646,908 680,905 713,902 746,899 780,896 814,894 847,891 880,888 914,885 948,882 981,880 1014,877 1048,874 1082,871 1115,869 1148,866 1182,863 1216,860 1249,857 1282,855 1316,852 1350,849 1383,846 1416,844 1450,841" fill="none" stroke="#fed7aa" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity=".75"/>
+ <polyline points="110,952 144,946 177,940 210,934 244,927 278,921 311,915 344,908 378,902 412,896 445,889 478,883 512,877 546,870 579,864 612,857 646,850 680,844 713,837 746,831 780,824 814,817 847,811 880,804 914,797 948,790 981,783 1014,776 1048,770 1082,763 1115,756 1148,749 1182,742 1216,735 1249,727 1282,720 1316,713 1350,706 1383,699 1416,692 1450,684" fill="none" stroke="#fdba74" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/>
+ <polyline points="110,952 144,944 177,935 210,927 244,918 278,910 311,901 344,892 378,883 412,874 445,865 478,856 512,847 546,838 579,828 612,819 646,810 680,800 713,790 746,781 780,771 814,761 847,751 880,741 914,731 948,720 981,710 1014,699 1048,689 1082,678 1115,668 1148,657 1182,646 1216,635 1249,624 1282,612 1316,601 1350,590 1383,578 1416,566 1450,555" fill="none" stroke="#fb923c" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+ <polyline points="110,952 144,941 177,930 210,919 244,907 278,895 311,884 344,872 378,860 412,847 445,835 478,822 512,809 546,796 579,783 612,770 646,756 680,742 713,728 746,714 780,700 814,685 847,670 880,655 914,640 948,625 981,609 1014,593 1048,577 1082,560 1115,544 1148,527 1182,510 1216,492 1249,475 1282,457 1316,438 1350,420 1383,401 1416,382 1450,362" fill="none" stroke="#fbbf24" stroke-width="10" stroke-dasharray="26 18" stroke-linecap="round"/>
+ <polyline points="110,938 144,927 177,916 210,905 244,894 278,883 311,872 344,860 378,849 412,836 445,822 478,808 512,795 546,781 579,767 612,753 646,738 680,724 713,710 746,695 780,681 814,666 847,651 880,636 914,621 948,606 981,591 1014,575 1048,560 1082,544 1115,528 1148,512 1182,496 1216,480 1249,464 1282,447 1316,430 1350,414 1383,397 1416,380 1450,362" fill="none" stroke="#a78bfa" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" style="filter:drop-shadow(0 0 16px rgba(167,139,250,.8))"/>
+ <circle cx="1450" cy="362" r="30" fill="#fbbf24" stroke="#0a1426" stroke-width="8"/>
+</svg>
+<div class="lb" style="left:1490px;top:300px;font-size:56px;color:#c4b5fd">THUÊ</div>
+<div class="lb" style="left:1490px;top:372px;font-size:40px;color:#fbbf24">= MUA +7,5%</div>
+<div class="lb" style="left:1490px;top:520px;font-size:48px;color:#fb923c">MUA +5%</div>
+<div class="lb" style="left:1490px;top:650px;font-size:48px;color:#fdba74">MUA +3%</div>
+<div class="lb" style="left:1490px;top:806px;font-size:48px;color:#fed7aa">MUA +0%</div>
+<div class="big" style="left:90px;top:40px;font-size:120px">GIÁ NHÀ PHẢI TĂNG</div>
+<div class="big" style="left:90px;top:170px;font-size:150px;color:#fbbf24">≈ 7,5%/NĂM?</div>
+<div class="tag" style="left:110px;top:1000px;font-size:28px;color:#94a3b8;letter-spacing:.12em">10 NĂM · VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH</div>
+</div><script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

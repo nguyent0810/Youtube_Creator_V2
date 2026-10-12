@@ -1,0 +1,373 @@
+{
+ "title": "Cú nhấp biết nói dối",
+ "lines": [
+  {
+   "t": "Năm 2021, ông Cristos Goodrow, người hơn mười năm xây hệ thống đề xuất của YouTube, kể lại.",
+   "p": 0.8
+  },
+  "Năm 2008, YouTube xếp video theo độ phổ biến, thành một trang Thịnh hành chung cho mọi người.",
+  {
+   "t": "Rồi họ dựa vào cú nhấp: bấm vào tức là muốn xem.",
+   "p": 1.0
+  },
+  "Năm 2011, họ nhận ra bấm vào không có nghĩa là đã thật sự xem.",
+  "Ví dụ của chính ông: bạn tìm đoạn video trận đấu ở Wimbledon.",
+  "Ảnh và tiêu đề hứa có cảnh trận đấu. Bấm vào, chỉ là một người ngồi trong phòng ngủ bình luận.",
+  {
+   "t": "Năm 2012, YouTube đưa thời gian xem vào hệ thống.",
+   "p": 1.0
+  },
+  "Năm 2016, ba kỹ sư Google mô tả hệ thống đề xuất của YouTube tại hội nghị chuyên ngành RecSys.",
+  "Họ viết thẳng:",
+  {
+   "t": "Xếp hạng theo tỉ lệ nhấp thường đẩy lên những video đánh lừa, mà người xem không xem hết. Còn thời gian xem phản ánh sự quan tâm tốt hơn.",
+   "q": 1,
+   "tr": 1
+  },
+  "Dù có nút thích, nút không thích và khảo sát, mô hình trong bài được dạy chủ yếu bằng việc xem.",
+  {
+   "t": "Người dùng xem hết một video được tính là một ví dụ tích cực, vì dấu vết xem nhiều hơn những cú bấm chủ động gấp bội.",
+   "p": 1.0
+  },
+  "Hệ thống chạy qua hai vòng.",
+  "Vòng một lọc từ hàng triệu video xuống còn vài trăm.",
+  {
+   "t": "Vòng hai chấm điểm từng video, xếp lại, để vài chục video hiện lên màn hình của bạn.",
+   "p": 1.0
+  },
+  "Và có một chi tiết làm mình bất ngờ.",
+  "Để biết video có thật sự đáng xem không, YouTube hỏi lại: chấm từ một đến năm sao.",
+  "Chỉ những video được bốn hoặc năm sao mới tính là thời gian xem có giá trị. Ai không trả lời, máy đoán hộ câu trả lời.",
+  {
+   "t": "Những ngôi sao của Netflix chưa biến mất. Chúng chỉ lùi xuống làm giám khảo.",
+   "p": 1.0
+  },
+  "Còn ở TikTok, câu chuyện bắt đầu từ ngón tay cái của bạn."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "CÚ NHẤP\nBIẾT NÓI DỐI",
+   "sub": "YOUTUBE · 2008 — 2016",
+   "vid": "4973409",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "goodrow"
+   ]
+  },
+  {
+   "type": "print",
+   "at": 1,
+   "img": "ythq",
+   "tone": "color",
+   "maxH": 560,
+   "maxW": 700,
+   "caption": "TRỤ SỞ YOUTUBE, SAN BRUNO · ẢNH 2010",
+   "side": {
+    "k": "YOUTUBE · 2008",
+    "h": "Xếp theo\nđộ phổ biến",
+    "lines": [
+     {
+      "text": "Một trang *Thịnh hành* chung cho mọi người",
+      "at": [
+       1,
+       "thịnh"
+      ]
+     },
+     {
+      "text": "Rồi: *bấm vào = muốn xem*",
+      "at": 2
+     }
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "2011",
+     "at": 3,
+     "sm": true,
+     "fx": "rise"
+    },
+    {
+     "text": "BẤM VÀO ≠ ĐÃ THẬT SỰ XEM",
+     "at": [
+      3,
+      "bấm"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 4,
+   "img": "centre2009",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.45,
+   "illus": "ẢNH MINH HỌA",
+   "kin": [
+    {
+     "text": "BẠN TÌM VIDEO TRẬN ĐẤU Ở WIMBLEDON",
+     "at": 4
+    }
+   ],
+   "label": {
+    "k": "SÂN TRUNG TÂM WIMBLEDON",
+    "v": "26.06.2009",
+    "at": 4
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "ẢNH + TIÊU ĐỀ: CẢNH TRẬN ĐẤU",
+     "at": 5
+    },
+    {
+     "text": "BẤM VÀO: MỘT NGƯỜI NGỒI BÌNH LUẬN",
+     "at": [
+      5,
+      "bấm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "ví dụ của Goodrow · YouTube Blog, 15.09.2021",
+     "at": [
+      5,
+      "phòng"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "THỜI GIAN XEM",
+   "sub": "YOUTUBE ĐƯA VÀO HỆ THỐNG · 2012"
+  },
+  {
+   "type": "file",
+   "at": 7,
+   "k": "RECSYS 2016 · BA KỸ SƯ GOOGLE",
+   "name": "Covington,\nAdams, Sargin",
+   "desc": "“Deep Neural Networks for YouTube Recommendations”",
+   "rows": [
+    {
+     "k": "HỘI NGHỊ",
+     "v": "*RecSys* · 15–19.09.2016",
+     "at": [
+      7,
+      "recsys"
+     ]
+    },
+    {
+     "k": "HỌ VIẾT THẲNG",
+     "v": "về *tỉ lệ nhấp*",
+     "at": 8
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 9,
+   "text": "Ranking by click-through rate often promotes deceptive videos that the user does not complete (“clickbait”) whereas watch time better captures engagement.",
+   "by": "COVINGTON, ADAMS, SARGIN · RECSYS 2016, §4",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 9
+  },
+  {
+   "type": "ledger",
+   "at": 10,
+   "title": "DẠY MÔ HÌNH BẰNG GÌ?",
+   "srcnote": "COVINGTON ET AL. 2016 · §3",
+   "rows": [
+    {
+     "k": "THÍCH",
+     "v": "CÓ NÚT",
+     "at": [
+      10,
+      "thích"
+     ]
+    },
+    {
+     "k": "KHẢO SÁT",
+     "v": "CÓ",
+     "at": [
+      10,
+      "khảo"
+     ]
+    }
+   ],
+   "total": {
+    "k": "CHỦ YẾU",
+    "v": "VIỆC XEM",
+    "at": [
+     10,
+     "việc"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "XEM HẾT = MỘT VÍ DỤ TÍCH CỰC",
+     "at": 11,
+     "acc": true
+    },
+    {
+     "text": "dấu vết xem nhiều hơn cú bấm chủ động gấp bội · “orders of magnitude”",
+     "at": [
+      11,
+      "vì"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 12,
+   "title": "HAI VÒNG LỌC",
+   "unit": "VẼ LẠI THEO HÌNH 2, COVINGTON ET AL. 2016 · KHÔNG THEO TỈ LỆ",
+   "max": 100,
+   "items": [
+    {
+     "k": "KHO VIDEO",
+     "v": 100,
+     "lbl": "HÀNG TRIỆU",
+     "at": 12
+    },
+    {
+     "k": "SAU VÒNG 1",
+     "v": 38,
+     "lbl": "VÀI TRĂM",
+     "at": [
+      13,
+      "vài"
+     ]
+    },
+    {
+     "k": "SAU VÒNG 2",
+     "v": 12,
+     "lbl": "VÀI CHỤC",
+     "at": [
+      14,
+      "vài"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "MỘT CHI TIẾT BẤT NGỜ",
+     "at": 15,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "items": [
+    {
+     "text": "YOUTUBE HỎI LẠI",
+     "at": 16,
+     "sm": true
+    },
+    {
+     "text": "CHẤM TỪ 1 ĐẾN 5 SAO",
+     "at": [
+      16,
+      "chấm"
+     ],
+     "acc": true,
+     "fx": "rise"
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 17,
+   "title": "KHẢO SÁT SAU KHI XEM",
+   "srcnote": "GOODROW · YOUTUBE BLOG, 15.09.2021",
+   "rows": [
+    {
+     "k": "4–5 SAO",
+     "v": "XEM CÓ GIÁ TRỊ",
+     "at": [
+      17,
+      "bốn"
+     ]
+    },
+    {
+     "k": "1–3 SAO",
+     "v": "KHÔNG TÍNH",
+     "at": [
+      17,
+      "giá"
+     ]
+    }
+   ],
+   "total": {
+    "k": "IM LẶNG",
+    "v": "MÁY ĐOÁN HỘ",
+    "at": [
+     17,
+     "ai"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 18,
+   "text": "NGÔI SAO\nLÙI XUỐNG LÀM GIÁM KHẢO"
+  },
+  {
+   "type": "broll",
+   "at": 19,
+   "vid": "6968278",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "CÒN Ở TIKTOK",
+     "at": 19,
+     "sm": true
+    },
+    {
+     "text": "NGÓN TAY CÁI CỦA BẠN",
+     "at": [
+      19,
+      "ngón"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "CÚ NHẤP BIẾT NÓI DỐI"
+ },
+ "bgm": {
+  "mood": "upbeat",
+  "gain": 0.1
+ }
+}

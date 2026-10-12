@@ -1,0 +1,329 @@
+{
+  "theme": "ck",
+  "title": "Biểu Đồ Biết Nói: tiền bạc, giải thích bằng dữ liệu",
+  "description": "Năm nay chứng khoán, vàng, Bitcoin, nhà đất đều đỏ, giá cả vẫn tăng. Biểu Đồ Biết Nói là người bạn đồng hành biết đọc số: mỗi tuần một câu hỏi tiền bạc thật của người Việt, trả lời bằng dữ liệu có nguồn — để bạn tự quyết định.\n\nBốn chuỗi video dài: Tiền bạc 2026 nói gì · Quyết định lớn · Chứng khoán từ số 0 · Tâm lý tiền bạc.\nKênh không bán khoá học, không có nhóm Zalo/Telegram/VIP, không link mở tài khoản, không khuyến nghị mua bán — chỉ giải thích bằng dữ liệu.\n\nVideo đầu tiên (sắp ra mắt trên kênh): \"Năm 2026: chứng khoán, vàng, coin, nhà đất đều đỏ — chỉ sổ tiết kiệm xanh. Vì sao?\"\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo giá. Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.",
+  "tags": [
+    "biểu đồ biết nói",
+    "tài chính cá nhân",
+    "tiền bạc",
+    "giải thích bằng dữ liệu",
+    "lạm phát",
+    "lãi suất tiết kiệm",
+    "giá vàng",
+    "chứng khoán cho người mới",
+    "quản lý tiền",
+    "kiến thức tài chính"
+  ],
+  "kicker": "BIỂU ĐỒ BIẾT NÓI",
+  "sub": "TIỀN BẠC · GIẢI THÍCH BẰNG DỮ LIỆU",
+  "acc": [
+    "đỏ",
+    "tăng",
+    "dữ",
+    "liệu",
+    "không",
+    "tự",
+    "xanh"
+  ],
+  "imgs": {
+    "logo": "local:output/channels/CK/logo.png"
+  },
+  "lines": [
+    "Năm nay, chứng khoán, vàng, Bitcoin, nhà đất đều đỏ.",
+    "Giá cả vẫn tăng.",
+    "Tiền của mình đang đi đâu?",
+    "Mình là Biểu Đồ Biết Nói.",
+    "Tiền bạc, giải thích bằng dữ liệu.",
+    "Mỗi tuần, một câu hỏi tiền bạc thật của người Việt, trả lời bằng số liệu có nguồn.",
+    "Tiền bạc năm nay nói gì.",
+    "Những quyết định lớn, như mua nhà hay thuê nhà.",
+    "Chứng khoán từ số không.",
+    "Và tâm lý: vì sao người thông minh vẫn mất tiền.",
+    "Mình không bán khoá học, không lập nhóm kín, không khuyên mua bán.",
+    "Mình chỉ giải thích bằng dữ liệu, để bạn tự quyết định.",
+    "Video đầu tiên: vì sao năm nay chỉ sổ tiết kiệm còn xanh?",
+    "Còn bạn, năm nay bạn đang cất tiền ở đâu?"
+  ],
+  "scenes": [
+    {
+      "type": "kinetic",
+      "items": [
+        {
+          "text": "2026",
+          "at": 0.0,
+          "acc": true
+        },
+        {
+          "text": "CHỨNG KHOÁN",
+          "c": "down",
+          "at": [
+            0,
+            "chứng"
+          ]
+        },
+        {
+          "text": "VÀNG",
+          "c": "down",
+          "at": [
+            0,
+            "vàng"
+          ]
+        },
+        {
+          "text": "BITCOIN",
+          "c": "down",
+          "at": [
+            0,
+            "bitcoin"
+          ]
+        },
+        {
+          "text": "NHÀ ĐẤT",
+          "c": "down",
+          "at": [
+            0,
+            "nhà"
+          ]
+        },
+        {
+          "text": "ĐỀU ĐỎ",
+          "c": "down",
+          "at": [
+            0,
+            "đỏ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "slam",
+      "at": 1,
+      "text": "GIÁ CẢ\nVẪN TĂNG",
+      "sub": "CPI 9 THÁNG 2026 · +4,52%"
+    },
+    {
+      "type": "question",
+      "at": 2,
+      "text": "Tiền của mình đang đi đâu?"
+    },
+    {
+      "type": "hero",
+      "at": 3,
+      "img": "logo",
+      "head": "BIỂU ĐỒ BIẾT NÓI",
+      "tape": {
+        "text": "Tiền bạc, giải thích bằng dữ liệu",
+        "at": [
+          4,
+          "tiền"
+        ]
+      }
+    },
+    {
+      "type": "kinetic",
+      "at": 5,
+      "items": [
+        {
+          "text": "MỖI TUẦN",
+          "at": [
+            5,
+            "mỗi"
+          ]
+        },
+        {
+          "text": "1 CÂU HỎI TIỀN BẠC",
+          "acc": true,
+          "at": [
+            5,
+            "câu"
+          ]
+        },
+        {
+          "text": "của người Việt",
+          "sm": true,
+          "at": [
+            5,
+            "người"
+          ]
+        },
+        {
+          "text": "SỐ LIỆU CÓ NGUỒN",
+          "at": [
+            5,
+            "số"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ledger",
+      "at": 6,
+      "title": "4 CHUỖI VIDEO DÀI",
+      "rows": [
+        {
+          "k": "01",
+          "v": "TIỀN BẠC 2026 NÓI GÌ",
+          "at": [
+            6,
+            "tiền"
+          ]
+        },
+        {
+          "k": "02",
+          "v": "QUYẾT ĐỊNH LỚN",
+          "at": [
+            7,
+            "quyết"
+          ]
+        },
+        {
+          "k": "03",
+          "v": "CHỨNG KHOÁN TỪ SỐ 0",
+          "at": [
+            8,
+            "chứng"
+          ]
+        },
+        {
+          "k": "04",
+          "v": "TÂM LÝ TIỀN BẠC",
+          "at": [
+            9,
+            "tâm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ledger",
+      "at": 10,
+      "title": "MÌNH KHÔNG",
+      "rows": [
+        {
+          "k": "BÁN KHOÁ HỌC",
+          "v": "✗",
+          "at": [
+            10,
+            "bán",
+            0
+          ]
+        },
+        {
+          "k": "NHÓM KÍN / VIP",
+          "v": "✗",
+          "at": [
+            10,
+            "nhóm"
+          ]
+        },
+        {
+          "k": "KHUYÊN MUA / BÁN",
+          "v": "✗",
+          "at": [
+            10,
+            "khuyên"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kinetic",
+      "at": 11,
+      "items": [
+        {
+          "text": "CHỈ GIẢI THÍCH",
+          "at": [
+            11,
+            "chỉ"
+          ]
+        },
+        {
+          "text": "BẰNG DỮ LIỆU",
+          "acc": true,
+          "at": [
+            11,
+            "bằng"
+          ]
+        },
+        {
+          "text": "BẠN TỰ QUYẾT ĐỊNH",
+          "at": [
+            11,
+            "để"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "at": 12,
+      "kind": "bars",
+      "title": "VIDEO ĐẦU TIÊN",
+      "unit": "% · 01/01 → 30/09/2026",
+      "bottom": 1150,
+      "bars": [
+        {
+          "label": "CHỨNG\nKHOÁN",
+          "v": -0.9,
+          "text": "−0,9%",
+          "at": [
+            12,
+            "vì"
+          ]
+        },
+        {
+          "label": "VÀNG",
+          "v": -7.7,
+          "text": "−7,7%",
+          "at": [
+            12,
+            "năm"
+          ]
+        },
+        {
+          "label": "BITCOIN",
+          "v": -4.3,
+          "text": "−4,3%",
+          "at": [
+            12,
+            "nay"
+          ]
+        },
+        {
+          "label": "TIẾT\nKIỆM",
+          "v": 3.9,
+          "text": "+3,9%",
+          "at": [
+            12,
+            "sổ"
+          ]
+        }
+      ],
+      "badge": {
+        "text": "VÌ SAO CHỈ SỔ TIẾT KIỆM XANH?",
+        "at": [
+          12,
+          "xanh"
+        ],
+        "y": 1320
+      },
+      "note": "MINH HOẠ QUÁ KHỨ · TÍNH TỪ DỮ LIỆU CÓ NGUỒN"
+    },
+    {
+      "type": "question",
+      "at": 13,
+      "text": "Năm nay bạn cất tiền ở đâu?"
+    }
+  ],
+  "sources": [
+    "https://tuoitre.vn/kenh-dau-tu-vnd-dang-sang-hon-dat-vang-chung-khoan-100260930194210942.htm",
+    "https://doanhnhan.baophapluat.vn/kenh-tiet-kiem-hut-dong-tien-khi-chung-khoan-vang-va-tien-ao-dong-loat-dieu-chinh-sau.html",
+    "https://www.nso.gov.vn/wp-content/uploads/2026/10/Tong-quan-CPI-chi-so-gia-vang-do-la-My-thang-9-QIII-va-9-thang-nam-2026.pdf",
+    "https://tuoitre.vn/vn-index-mat-hon-63-diem-trong-thang-9-co-phieu-nao-giam-manh-nhat-100261001125805176.htm",
+    "https://congluan.vn/gia-vang-hom-nay-01-01-2026-gia-vang-mieng-vang-nhan-trong-nuoc-va-gia-vang-the-gioi-post326855.html",
+    "https://baonghean.vn/en/gia-vang-hom-nay-30092026-sjc-tang-len-1411-1441-trieu-dongluong-10352437.html",
+    "https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-wednesday-september-30-2026-red-september-a-thing-of-the-past-monthly-gains-holding-for-crypto-113317483.html",
+    "https://247wallst.com/investing/cryptocurrency/2026/09/19/bitcoin-is-11-days-from-its-first-winning-quarter-in-a-year-what-needs-to-hold-until-september-30/",
+    "https://thoibaotaichinhvietnam.vn/big-4-dong-loat-nang-lai-suat-dang-song-huy-dong-tien-gui-toan-thi-truong-188916.html"
+  ]
+}

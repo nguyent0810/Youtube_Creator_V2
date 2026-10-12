@@ -1,0 +1,440 @@
+{
+ "title": "Ba khoản trả thêm của người đứng trong hàng",
+ "lines": [
+  {
+   "t": "Giả sử bạn đã tới đầu hàng. Ngoài giá vàng, bạn còn trả ba thứ ít ai nhìn thấy.",
+   "p": 0.8
+  },
+  "Thứ nhất: chênh lệch giữa giá bán và giá mua.",
+  "Ngày hai mươi chín tháng một, tiệm bán ra một trăm chín mươi mốt triệu ba trăm nghìn, nhưng mua lại chỉ một trăm tám mươi tám triệu ba trăm nghìn.",
+  {
+   "t": "Bước ra khỏi cửa, bạn đã lỗ ba triệu, khoảng một phẩy sáu phần trăm. Như phí vào cửa.",
+   "p": 1.0
+  },
+  {
+   "t": "Ba triệu trên gần hai trăm triệu thì có đáng gì đâu?",
+   "ask": 1
+  },
+  "Riêng nó thì nhỏ. Nhưng khoảng chênh này không đứng yên.",
+  "Ngày hai mươi ba tháng bảy, khi giá rơi mạnh, chênh lệch mua bán của SJC lên năm triệu, có lúc sáu triệu. Các chuyên gia được báo Thanh Niên dẫn lời gọi mức đó là cao bất thường.",
+  {
+   "t": "Nó nới rộng đúng lúc người ta hoảng muốn bán.",
+   "p": 1.0
+  },
+  "Thứ hai: phần trả thêm so với thế giới.",
+  "Giá vàng miếng SJC bằng giá vàng thế giới quy đổi, cộng một khoản chênh trong nước.",
+  "Ngày vía Thần Tài năm hai nghìn không trăm hai mươi sáu, khoản chênh này khoảng hai mươi triệu một lượng.",
+  "Tức là người mua hôm đó trả thêm khoảng một phần mười, chỉ vì đó là vàng miếng ở Việt Nam.",
+  "Ngày mười chín tháng tám, khoản chênh co lại, chỉ còn hơn hai triệu.",
+  "Phần trả thêm ấy có thể bốc hơi, kể cả khi giá thế giới đứng yên.",
+  "Như vé xe Tết mua lại giá cao: qua Tết, không ai trả lại phần chênh cho bạn.",
+  {
+   "t": "Và khoản chênh cũng không đi một chiều: đầu tháng mười, nó lại nới ra khoảng mười hai, mười ba triệu.",
+   "p": 1.0
+  },
+  "Thứ ba: khan hàng, và \"mua trên giấy\".",
+  "Quanh đợt sốt cuối tháng một, đầu tháng hai, nhiều nơi thu đủ tiền rồi hẹn giao vàng sau bảy đến mười ngày, có đơn phải chờ tới chín mươi ngày.",
+  {
+   "t": "Nếu giá rơi trong lúc chờ, người mua trên giấy không có vàng trong tay để bán.",
+   "p": 1.0
+  },
+  "Quy về đồng lương: quý một năm hai nghìn không trăm hai mươi sáu, thu nhập bình quân của người lao động là chín triệu đồng một tháng.",
+  "Một chỉ vàng, quy theo giá vàng miếng, mua ngày hai mươi chín tháng một hết mười chín triệu một trăm ba mươi nghìn.",
+  "Đầu tháng mười bán lại, nhận mười bốn triệu không trăm năm mươi nghìn.",
+  "Mất khoảng năm triệu. Hơn nửa tháng lương."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "CHƯƠNG BỐN",
+   "title": "BA KHOẢN\nTRẢ THÊM",
+   "sub": "CỦA NGƯỜI ĐỨNG TRONG HÀNG · CHÊNH MUA–BÁN · CHÊNH THẾ GIỚI · MUA TRÊN GIẤY",
+   "vid": "5705007",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Giả"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "01 · CHÊNH MUA – BÁN",
+   "rows": [
+    {
+     "k": "29/01 · TIỆM BÁN RA",
+     "v": "191,3 TR",
+     "at": [
+      2,
+      "bán"
+     ]
+    },
+    {
+     "k": "29/01 · TIỆM MUA VÀO",
+     "v": "188,3 TR",
+     "at": [
+      2,
+      "mua"
+     ]
+    }
+   ],
+   "total": {
+    "k": "BƯỚC RA KHỎI CỬA",
+    "v": "−3 TR ≈ 1,6%",
+    "at": [
+     3,
+     "lỗ"
+    ]
+   },
+   "srcnote": "Giá SJC lúc 13:25 ngày 29/01/2026 (webgia) · đơn vị: triệu đồng/lượng"
+  },
+  {
+   "type": "question",
+   "at": 4,
+   "text": "Ba triệu trên gần 200 triệu\nthì có đáng gì đâu?"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "RIÊNG NÓ THÌ NHỎ",
+     "at": [
+      5,
+      "Riêng"
+     ]
+    },
+    {
+     "text": "NHƯNG KHÔNG ĐỨNG YÊN",
+     "at": [
+      5,
+      "Nhưng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 6,
+   "title": "CHÊNH MUA – BÁN VÀNG MIẾNG SJC",
+   "unit": "TRIỆU Đ/LƯỢNG · BÁO CHÍ",
+   "items": [
+    {
+     "k": "01/01/2026",
+     "v": 2,
+     "lbl": "2",
+     "at": [
+      6,
+      "Ngày"
+     ]
+    },
+    {
+     "k": "29/01/2026",
+     "v": 3,
+     "lbl": "3",
+     "at": [
+      6,
+      "Ngày",
+      0,
+      0.35
+     ]
+    },
+    {
+     "k": "10/06/2026",
+     "v": 5,
+     "lbl": "5",
+     "at": [
+      6,
+      "năm"
+     ]
+    },
+    {
+     "k": "23/07/2026",
+     "v": 6,
+     "lbl": "5 – 6",
+     "at": [
+      6,
+      "sáu"
+     ],
+     "acc": true
+    }
+   ],
+   "srcnote": "23/07/2026: chuyên gia gọi là \"cao bất thường\" (Thanh Niên) · số liệu báo chí, minh hoạ quá khứ"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "NÓ NỚI RỘNG",
+     "at": [
+      7,
+      "Nó"
+     ]
+    },
+    {
+     "text": "ĐÚNG LÚC NGƯỜI TA HOẢNG MUỐN BÁN",
+     "at": [
+      7,
+      "đúng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "02 · PHẦN TRẢ THÊM SO VỚI THẾ GIỚI",
+     "at": [
+      8,
+      "Thứ"
+     ]
+    },
+    {
+     "text": "GIÁ SJC = THẾ GIỚI QUY ĐỔI + CHÊNH TRONG NƯỚC",
+     "at": [
+      9,
+      "Giá"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 10,
+   "title": "VÀNG MIẾNG SJC CAO HƠN THẾ GIỚI",
+   "unit": "TRIỆU Đ/LƯỢNG · BÁO CHÍ",
+   "items": [
+    {
+     "k": "06/09/2025",
+     "v": 20.8,
+     "lbl": "20,8",
+     "at": [
+      10,
+      "Ngày"
+     ]
+    },
+    {
+     "k": "26/02/2026 · VÍA",
+     "v": 20,
+     "lbl": "≈ 20 (≈ 1/10 GIÁ)",
+     "at": [
+      10,
+      "hai"
+     ],
+     "acc": true
+    },
+    {
+     "k": "19/08/2026",
+     "v": 2,
+     "lbl": "≈ 2",
+     "at": [
+      12,
+      "Ngày"
+     ]
+    }
+   ],
+   "srcnote": "Số liệu báo chí (SGGP, VnExpress, Dân trí) · minh hoạ quá khứ, không phải khuyến nghị"
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "PHẦN TRẢ THÊM CÓ THỂ BỐC HƠI",
+     "at": [
+      13,
+      "Phần"
+     ],
+     "acc": true
+    },
+    {
+     "text": "kể cả khi giá thế giới đứng yên",
+     "at": [
+      13,
+      "kể"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 14,
+   "vid": "39431258",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "VÉ XE TẾT MUA LẠI GIÁ CAO",
+     "at": [
+      14,
+      "Như"
+     ]
+    },
+    {
+     "text": "QUA TẾT, KHÔNG AI TRẢ LẠI PHẦN CHÊNH",
+     "at": [
+      14,
+      "qua"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "KHOẢN CHÊNH KHÔNG ĐI MỘT CHIỀU",
+     "at": [
+      15,
+      "Và"
+     ]
+    },
+    {
+     "text": "ĐẦU THÁNG 10: KHOẢNG 12–13 TRIỆU",
+     "at": [
+      15,
+      "đầu"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "items": [
+    {
+     "text": "03 · KHAN HÀNG & \"MUA TRÊN GIẤY\"",
+     "at": [
+      16,
+      "Thứ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "MUA TRÊN GIẤY · CUỐI 01 – ĐẦU 02/2026",
+     "at": [
+      17,
+      "Quanh"
+     ],
+     "sm": true
+    },
+    {
+     "text": "ĐẶT CỌC HOẶC TRẢ ĐỦ 100%",
+     "at": [
+      17,
+      "thu"
+     ]
+    },
+    {
+     "text": "GIAO SAU 7–10 NGÀY · ĐƠN LỚN TỚI 90 NGÀY",
+     "at": [
+      17,
+      "bảy"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 18,
+   "text": "CHƯA CÓ VÀNG ĐỂ BÁN",
+   "sub": "NẾU GIÁ RƠI TRONG LÚC CHỜ"
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "items": [
+    {
+     "text": "THU NHẬP BÌNH QUÂN · QUÝ I/2026",
+     "at": [
+      19,
+      "Quy"
+     ],
+     "sm": true
+    },
+    {
+     "text": "9 TRIỆU / THÁNG",
+     "at": [
+      19,
+      "chín"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 20,
+   "title": "1 CHỈ · QUY THEO GIÁ VÀNG MIẾNG",
+   "rows": [
+    {
+     "k": "MUA 29/01/2026",
+     "v": "19,13 TR",
+     "at": [
+      20,
+      "mua"
+     ]
+    },
+    {
+     "k": "BÁN LẠI ĐẦU THÁNG 10",
+     "v": "14,05 TR",
+     "at": [
+      21,
+      "Đầu"
+     ]
+    }
+   ],
+   "srcnote": "1 chỉ = 1/10 lượng vàng miếng SJC · vàng nhẫn, vàng miếng 1 chỉ có giá khác"
+  },
+  {
+   "type": "counter",
+   "at": 22,
+   "from": 0,
+   "to": 5080000,
+   "suffix": " đ",
+   "countAt": [
+    22,
+    "Mất"
+   ],
+   "until": [
+    22,
+    "triệu."
+   ],
+   "label": "MẤT TRÊN 1 CHỈ",
+   "sub": {
+    "text": "≈ 56% THÁNG LƯƠNG 9 TRIỆU (THU NHẬP BÌNH QUÂN QUÝ I/2026)",
+    "at": [
+     22,
+     "Hơn"
+    ]
+   },
+   "srcnote": "Vàng nhẫn, vàng miếng 1 chỉ có giá khác · kênh tự tính"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "BA KHOẢN TRẢ THÊM"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.1
+ }
+}

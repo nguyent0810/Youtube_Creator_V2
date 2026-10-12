@@ -1,0 +1,363 @@
+{
+ "title": "Daisy",
+ "lines": [
+  {
+   "t": "Đầu thập niên 1960, ở Phòng thí nghiệm Bell, một chiếc máy tính IBM được lập trình để hát.",
+   "p": 0.8
+  },
+  "Đó được xem là bài hát đầu tiên do máy tính hát bằng giọng tổng hợp.",
+  "Đó là bài \"Daisy Bell\", viết từ năm 1892.",
+  "Giọng nó rè rè, đều đều, chẳng giống giọng của ai.",
+  "Nhà văn Arthur C. Clarke từng nghe màn trình diễn ấy, và đưa nó vào \"2001: A Space Odyssey\".",
+  {
+   "t": "Nếu đã xem video đầu tiên của kênh, chắc bạn còn nhớ HAL 9000. Khi bị tắt dần, HAL hát lại chính bài Daisy.",
+   "p": 1.0
+  },
+  "Hơn hai trăm năm trước, cỗ máy đánh cờ của Kempelen giả làm người, nhờ một con người giấu bên trong.",
+  {
+   "t": "Hôm nay thì ngược lại: một giọng người thân quen, mà bên trong là một cỗ máy.",
+   "p": 1.0
+  },
+  "Giọng nói từng là mật khẩu của loài người.",
+  "Mật khẩu ấy giờ đã lộ.",
+  "Bà DeStefano nói đúng: mẹ thì nhận ra con mình.",
+  "Nhưng từ nay, tình thương cần thêm một bước kiểm tra: cúp máy, gọi lại, và một từ bí mật.",
+  "Vậy mình hỏi bạn: nhà bạn đã có mật khẩu gia đình chưa?",
+  "Đừng viết từ thật vào phần bình luận nhé.",
+  {
+   "t": "Chỉ cần kể: bạn sẽ nói chuyện này với ai đầu tiên? Bố mẹ, vợ, hay con?",
+   "p": 1.0
+  }
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "8",
+   "k": "CHƯƠNG TÁM",
+   "title": "DAISY",
+   "sub": "BELL LABS · ĐẦU THẬP NIÊN 1960",
+   "bg": "belllabs",
+   "titleAt": [
+    0,
+    "Đầu"
+   ]
+  },
+  {
+   "type": "print",
+   "at": 1,
+   "img": "ibm7090",
+   "tone": "bw",
+   "caption": "IBM 7090 · NASA AMES · 06.09.1961",
+   "illus": "ẢNH MINH HỌA · KHÔNG PHẢI CHIẾC MÁY ĐÃ HÁT",
+   "side": {
+    "k": "MÁY TÍNH IBM HÁT",
+    "h": "Bài hát đầu tiên\ngiọng tổng hợp",
+    "lines": [
+     {
+      "text": "Theo cách *thường được ghi nhận*",
+      "at": 1
+     },
+     {
+      "text": "Nguồn vênh: *1960 hay 1961* · IBM 704 / 7090 / 7094",
+      "at": [
+       1,
+       "giọng"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "print",
+   "at": 2,
+   "img": "daisy",
+   "tone": "bw",
+   "maxH": 600,
+   "caption": "BẢN IN Ở ÚC · SAU 1921",
+   "side": {
+    "k": "HARRY DACRE",
+    "h": "“Daisy Bell”",
+    "lines": [
+     {
+      "text": "Viết từ năm *1892*",
+      "at": 2
+     }
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "bg": "belllabs",
+   "items": [
+    {
+     "text": "GIỌNG NÓ",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "RÈ RÈ · ĐỀU ĐỀU",
+     "at": [
+      3,
+      "rè"
+     ]
+    },
+    {
+     "text": "CHẲNG GIỐNG GIỌNG CỦA AI",
+     "at": [
+      3,
+      "chẳng"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "BELL LABS · MURRAY HILL",
+    "v": "ẢNH NĂM 1942",
+    "at": 3
+   }
+  },
+  {
+   "type": "print",
+   "at": 4,
+   "img": "clarke",
+   "tone": "bw",
+   "caption": "ARTHUR C. CLARKE · 1965",
+   "side": {
+    "k": "NHÀ VĂN",
+    "h": "Arthur C.\nClarke",
+    "lines": [
+     {
+      "text": "Từng nghe *màn trình diễn ấy*",
+      "at": 4
+     },
+     {
+      "text": "→ đưa vào *2001: A Space Odyssey*",
+      "at": [
+       4,
+       "đưa"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "bg": "ibm7094",
+   "illus": "ẢNH MINH HỌA · IBM 7094",
+   "items": [
+    {
+     "text": "VIDEO ĐẦU TIÊN CỦA KÊNH",
+     "at": 5,
+     "sm": true
+    },
+    {
+     "text": "NHỚ HAL 9000?",
+     "at": [
+      5,
+      "nhớ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "khi bị tắt dần, HAL hát lại chính bài Daisy",
+     "at": [
+      5,
+      "khi"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 6,
+   "img": "racknitz",
+   "tone": "bw",
+   "move": "out",
+   "veil": 0.5,
+   "focus": [
+    0.5,
+    0.6
+   ],
+   "kin": [
+    {
+     "text": "HƠN 200 NĂM TRƯỚC",
+     "at": 6,
+     "sm": true
+    },
+    {
+     "text": "NGƯỜI GIẤU TRONG MÁY",
+     "at": [
+      6,
+      "nhờ"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "RACKNITZ · 1789",
+    "v": "HÌNH VẼ PHỎNG ĐOÁN",
+    "at": 6
+   }
+  },
+  {
+   "type": "broll",
+   "at": 7,
+   "vid": "34645273",
+   "ms": 2,
+   "veil": 0.45,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "HÔM NAY",
+     "at": 7,
+     "sm": true
+    },
+    {
+     "text": "GIỌNG NGƯỜI THÂN QUEN",
+     "at": [
+      7,
+      "giọng"
+     ]
+    },
+    {
+     "text": "BÊN TRONG LÀ CỖ MÁY",
+     "at": [
+      7,
+      "bên"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "GIỌNG NÓI TỪNG LÀ MẬT KHẨU",
+     "at": 8
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 9,
+   "text": "MẬT KHẨU ẤY\nĐÃ LỘ"
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "BÀ DESTEFANO NÓI ĐÚNG",
+     "at": 10,
+     "sm": true
+    },
+    {
+     "text": "MẸ THÌ NHẬN RA CON MÌNH",
+     "at": [
+      10,
+      "mẹ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 11,
+   "title": "THÊM MỘT BƯỚC KIỂM TRA",
+   "rows": [
+    {
+     "k": "1",
+     "v": "CÚP MÁY",
+     "at": [
+      11,
+      "cúp"
+     ]
+    },
+    {
+     "k": "2",
+     "v": "GỌI LẠI",
+     "at": [
+      11,
+      "gọi"
+     ]
+    },
+    {
+     "k": "3",
+     "v": "MỘT TỪ BÍ MẬT",
+     "at": [
+      11,
+      "bí"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 12,
+   "text": "Nhà bạn đã có\nmật khẩu gia đình chưa?"
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "ĐỪNG VIẾT TỪ THẬT",
+     "at": 13,
+     "acc": true
+    },
+    {
+     "text": "vào phần bình luận",
+     "at": [
+      13,
+      "vào"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 14,
+   "vid": "9243207",
+   "ms": 18,
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "CHỈ CẦN KỂ",
+     "at": 14,
+     "sm": true
+    },
+    {
+     "text": "BẠN SẼ NÓI VỚI AI ĐẦU TIÊN?",
+     "at": [
+      14,
+      "bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "BỐ MẸ · VỢ · HAY CON?",
+     "at": [
+      14,
+      "bố"
+     ]
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 08",
+  "t": "DAISY"
+ },
+ "bgm": {
+  "mood": "epic",
+  "gain": 0.3
+ }
+}

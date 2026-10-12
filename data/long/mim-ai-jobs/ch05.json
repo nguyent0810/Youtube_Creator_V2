@@ -1,0 +1,416 @@
+{
+ "title": "Những \"máy tính\" đã đi đâu?",
+ "lines": [
+  {
+   "t": "Tháng 12 năm 1943, Dorothy Vaughan tới làm \"máy tính\" ở phòng thí nghiệm Langley.",
+   "p": 0.8
+  },
+  "Bà được xếp vào nhóm West Area Computing, nhóm những nữ toán học gia da đen, bị buộc làm việc tách riêng theo luật phân biệt chủng tộc thời ấy.",
+  {
+   "t": "Năm 1949, bà trở thành người giám sát da đen đầu tiên của NACA.",
+   "p": 1.0
+  },
+  "Năm 1958, NACA trở thành NASA. Những văn phòng tách biệt bị xoá bỏ.",
+  "Ở tuổi bốn mươi tám, Dorothy Vaughan chuyển sang Phòng Phân tích và Tính toán, và trở thành một lập trình viên FORTRAN thành thạo.",
+  {
+   "t": "Thứ ngôn ngữ của chính những cỗ máy đang làm thay việc của nhóm bà.",
+   "p": 1.0
+  },
+  "Nhưng đừng vội kể đây là chuyện cổ tích.",
+  "Theo NASA, bà đã tìm kiếm, nhưng không bao giờ được giao lại một vị trí quản lý nào nữa, cho tới khi nghỉ hưu năm 1971.",
+  {
+   "t": "Chuyển nghề thành công. Nhưng không phải không có giá.",
+   "p": 1.0
+  },
+  "Câu chuyện ấy không chỉ có ở Langley.",
+  "Trong Thế chiến thứ hai, ở Đại học Pennsylvania, nhiều phụ nữ được thuê làm \"máy tính\" để tính quỹ đạo đạn pháo.",
+  "Sáu người trong số họ trở thành những lập trình viên đầu tiên của ENIAC, cỗ máy tính điện tử đa năng đầu tiên, được công bố tháng 2 năm 1946.",
+  {
+   "t": "Một bài toán đạn đạo mất mười hai giờ tính tay, ENIAC giải trong ba mươi giây.",
+   "p": 1.0
+  },
+  "Còn những tấm thẻ đục lỗ của khung cửi Jacquard?",
+  "Cũng ý tưởng \"có lỗ là có, không lỗ là không\" ấy, về sau xuất hiện trong máy đục thẻ của điều tra dân số Mỹ.",
+  "Rồi trong những cỗ máy IBM, như chiếc IBM 704 ở video trước của kênh.",
+  {
+   "t": "Từ sợi vải, tới con số.",
+   "p": 1.0
+  },
+  "Giờ bạn đã biết một vài người như họ đã đi đâu.",
+  "Nghề của họ biến mất. Còn những người mình vừa kể thì đi theo chính cỗ máy đã thay họ.",
+  "Nhưng năm 2016, một trong những người được gọi là \"cha đẻ\" của học sâu đưa ra một lời tiên tri về một nghề rất cụ thể."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "CHƯƠNG NĂM",
+   "title": "NHỮNG “MÁY TÍNH”\nĐÃ ĐI ĐÂU?",
+   "sub": "1943 — 1971",
+   "bg": "langley43",
+   "titleAt": [
+    0,
+    "Tháng"
+   ]
+  },
+  {
+   "type": "print",
+   "at": 1,
+   "img": "vaughan3",
+   "tone": "bw",
+   "caption": "TRÁI: DOROTHY VAUGHAN · L. HUNTER · V. ADAIR",
+   "side": {
+    "k": "WEST AREA COMPUTING",
+    "h": "Nữ toán học gia\nda đen",
+    "lines": [
+     {
+      "text": "Bị buộc làm việc *tách riêng*",
+      "at": [
+       1,
+       "bị"
+      ]
+     },
+     {
+      "text": "theo *luật phân biệt chủng tộc*",
+      "at": [
+       1,
+       "luật"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "date",
+   "at": 2,
+   "bg": "vaughan",
+   "day": "DOROTHY VAUGHAN",
+   "date": "1949",
+   "label": {
+    "k": "NĂM 1949",
+    "v": "NGƯỜI GIÁM SÁT DA ĐEN ĐẦU TIÊN CỦA NACA",
+    "at": [
+     2,
+     "người"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "1958: NACA → NASA",
+     "at": 3,
+     "acc": true
+    },
+    {
+     "text": "văn phòng tách biệt bị xoá bỏ",
+     "at": [
+      3,
+      "Những"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": 4,
+   "img": "vaughan",
+   "tone": "bw",
+   "side": {
+    "k": "DOROTHY VAUGHAN",
+    "h": "Ở tuổi 48",
+    "lines": [
+     {
+      "text": "Sang *Phòng Phân tích và Tính toán*",
+      "at": [
+       4,
+       "Phòng"
+      ]
+     },
+     {
+      "text": "Lập trình viên *FORTRAN* thành thạo",
+      "at": [
+       4,
+       "lập"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "bg": "ibm704",
+   "items": [
+    {
+     "text": "NGÔN NGỮ CỦA CHÍNH CỖ MÁY",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "đang làm thay việc của nhóm bà",
+     "at": [
+      5,
+      "đang"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "ĐỪNG VỘI KỂ\nCHUYỆN CỔ TÍCH",
+   "white": true
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "bg": "vaughan3",
+   "items": [
+    {
+     "text": "THEO NASA",
+     "at": 7,
+     "sm": true
+    },
+    {
+     "text": "KHÔNG ĐƯỢC GIAO LẠI VỊ TRÍ QUẢN LÝ NÀO",
+     "at": [
+      7,
+      "không"
+     ],
+     "acc": true
+    },
+    {
+     "text": "cho tới khi nghỉ hưu · 1971",
+     "at": [
+      7,
+      "nghỉ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "CHUYỂN NGHỀ THÀNH CÔNG",
+     "at": 8
+    },
+    {
+     "text": "NHƯNG KHÔNG PHẢI KHÔNG CÓ GIÁ",
+     "at": [
+      8,
+      "Nhưng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "bg": "langley51",
+   "items": [
+    {
+     "text": "KHÔNG CHỈ Ở LANGLEY",
+     "at": 9,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "bg": "eniac2",
+   "items": [
+    {
+     "text": "ĐẠI HỌC PENNSYLVANIA · THẾ CHIẾN II",
+     "at": 10,
+     "sm": true
+    },
+    {
+     "text": "PHỤ NỮ LÀM “MÁY TÍNH”",
+     "at": [
+      10,
+      "phụ"
+     ]
+    },
+    {
+     "text": "tính quỹ đạo đạn pháo",
+     "at": [
+      10,
+      "quỹ"
+     ],
+     "sm": true,
+     "acc": true,
+     "fx": "rise"
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 11,
+   "img": "eniac2",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.45,
+   "kin": [
+    {
+     "text": "6 LẬP TRÌNH VIÊN ĐẦU TIÊN",
+     "at": 11
+    },
+    {
+     "text": "ENIAC · CÔNG BỐ 02.1946",
+     "at": [
+      11,
+      "công"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "ENIAC · 1946",
+    "v": "ẢNH LỤC QUÂN MỸ",
+    "at": 11
+   }
+  },
+  {
+   "type": "bars",
+   "at": 12,
+   "bg": "eniacrep",
+   "title": "MỘT BÀI TOÁN ĐẠN ĐẠO",
+   "items": [
+    {
+     "k": "TÍNH TAY",
+     "v": 43200,
+     "lbl": "12 GIỜ",
+     "at": [
+      12,
+      "mười"
+     ]
+    },
+    {
+     "k": "ENIAC",
+     "v": 30,
+     "lbl": "30 GIÂY",
+     "at": [
+      12,
+      "ba"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 13,
+   "img": "jcards",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.5,
+   "kin": [
+    {
+     "text": "CÒN NHỮNG TẤM THẺ ĐỤC LỖ?",
+     "at": 13,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": 14,
+   "img": "cardpunch",
+   "tone": "bw",
+   "side": {
+    "k": "ĐIỀU TRA DÂN SỐ MỸ",
+    "h": "Máy\nđục thẻ",
+    "lines": [
+     {
+      "text": "*Có lỗ* là có · *không lỗ* là không",
+      "at": 14
+     }
+    ]
+   }
+  },
+  {
+   "type": "print",
+   "at": 15,
+   "img": "ibm704",
+   "tone": "bw",
+   "side": {
+    "k": "IBM 704 · NASA, 1957",
+    "h": "Ở video trước\ncủa kênh",
+    "lines": [
+     {
+      "text": "Cũng nuôi bằng *thẻ đục lỗ*",
+      "at": 15
+     }
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 16,
+   "bg": "punchcard",
+   "text": "TỪ SỢI VẢI,\nTỚI CON SỐ."
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "bg": "vaughan3",
+   "items": [
+    {
+     "text": "MỘT VÀI NGƯỜI NHƯ HỌ",
+     "at": 17,
+     "acc": true
+    },
+    {
+     "text": "nghề biến mất · người đi theo chính cỗ máy đã thay họ",
+     "at": 18,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "bg": "xraypa",
+   "items": [
+    {
+     "text": "2016",
+     "at": 19,
+     "acc": true
+    },
+    {
+     "text": "“CHA ĐẺ” CỦA HỌC SÂU",
+     "at": [
+      19,
+      "cha"
+     ]
+    },
+    {
+     "text": "một lời tiên tri về một nghề rất cụ thể",
+     "at": [
+      19,
+      "lời"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "NHỮNG “MÁY TÍNH” ĐÃ ĐI ĐÂU?"
+ },
+ "bgm": {
+  "mood": "warm",
+  "gain": 0.3
+ }
+}

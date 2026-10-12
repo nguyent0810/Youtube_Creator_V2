@@ -1,0 +1,181 @@
+{
+ "theme": "ck",
+ "title": "Nhà đất quý II/2026: giá giảm vài phần trăm, giao dịch chỉ bằng 64% cùng kỳ",
+ "description": "Theo Bộ Xây dựng, quý II/2026 cả nước có khoảng 100.005 giao dịch bất động sản, bằng 63,7% cùng kỳ 2025; riêng đất nền 73.438 giao dịch, bằng 59,9% cùng kỳ. Giá rao đất nền cả nước quý II giảm khoảng 2–3% so với quý I (giá rao, không phải giá giao dịch; không đúng với mọi phân khúc, giá sơ cấp căn hộ một số nơi vẫn tăng).\n\nBức tranh đủ năm kênh nằm trong video dài trên kênh: \"Năm 2026: Chứng Khoán, Vàng, Coin, Nhà Đất Đều Đỏ — Chỉ Sổ Tiết Kiệm Xanh. Nhưng Thắng Thật Không?\"\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.",
+ "tags": [
+  "bất động sản 2026",
+  "nhà đất",
+  "đất nền",
+  "thanh khoản",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "kicker": "1 BIỂU ĐỒ",
+ "sub": "NHÀ ĐẤT · QUÝ II/2026",
+ "acc": [
+  "khó",
+  "bán",
+  "sáu",
+  "tư",
+  "bốn",
+  "giá",
+  "lâu"
+ ],
+ "lines": [
+  "Nhà đất: giá giảm ít, nhưng rất khó bán.",
+  "Quý hai năm nay, cả nước có khoảng một trăm nghìn giao dịch bất động sản.",
+  "Chỉ bằng sáu mươi tư phần trăm cùng kỳ năm ngoái, theo Bộ Xây dựng.",
+  "Riêng đất nền, giao dịch giảm khoảng bốn mươi phần trăm.",
+  "Trong khi giá đất nền chỉ giảm hai đến ba phần trăm so với quý một.",
+  "Với nhà đất, con số cần nhìn không chỉ là giá.",
+  "Mà là bán được không, và mất bao lâu."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NHÀ ĐẤT 2026",
+     "at": 0.0
+    },
+    {
+     "text": "GIÁ GIẢM ÍT",
+     "at": [
+      0,
+      "giá"
+     ]
+    },
+    {
+     "text": "RẤT KHÓ BÁN",
+     "at": [
+      0,
+      "rất"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7066735",
+   "veil": 0.58
+  },
+  {
+   "type": "chart",
+   "at": 1,
+   "kind": "bars",
+   "title": "GIAO DỊCH BẤT ĐỘNG SẢN",
+   "unit": "QUÝ II · CÙNG KỲ 2025 = 100",
+   "bars": [
+    {
+     "label": "QUÝ II\n2025",
+     "v": 100,
+     "text": "100",
+     "c": "ref",
+     "at": [
+      1,
+      "cả"
+     ]
+    },
+    {
+     "label": "QUÝ II\n2026",
+     "v": 63.7,
+     "text": "63,7",
+     "c": "down",
+     "ghost": 100,
+     "gapAt": [
+      2,
+      "sáu"
+     ],
+     "gapText": "−36%",
+     "at": [
+      1,
+      "một"
+     ]
+    }
+   ],
+   "badge": {
+    "text": "= 64% CÙNG KỲ",
+    "at": [
+     2,
+     "cùng"
+    ],
+    "c": "down"
+   },
+   "note": "NGUỒN: BỘ XÂY DỰNG · ~100.005 GIAO DỊCH"
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "ĐẤT NỀN · QUÝ II/2026",
+   "cards": [
+    {
+     "k": "GIAO DỊCH · SO CÙNG KỲ",
+     "v": "−40%",
+     "at": [
+      3,
+      "giảm"
+     ],
+     "c": "down"
+    },
+    {
+     "k": "GIÁ RAO · SO QUÝ I",
+     "v": "−2–3%",
+     "at": [
+      4,
+      "hai"
+     ],
+     "c": "#fb923c"
+    }
+   ],
+   "note": "NGUỒN: BỘ XÂY DỰNG, CAFEF"
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Với nhà đất, nhìn con số nào?",
+   "nodes": [
+    {
+     "text": "giá",
+     "x": 0.5,
+     "y": 0.26,
+     "at": [
+      5,
+      "con"
+     ],
+     "cross": [
+      5,
+      "không"
+     ]
+    },
+    {
+     "text": "bán được không?",
+     "x": 0.5,
+     "y": 0.54,
+     "at": [
+      6,
+      "bán"
+     ],
+     "c": "acc",
+     "shape": "circle"
+    },
+    {
+     "text": "mất bao lâu?",
+     "x": 0.5,
+     "y": 0.82,
+     "at": [
+      6,
+      "mất"
+     ],
+     "c": "acc",
+     "shape": "circle"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://baochinhphu.vn/giao-dich-giam-ton-kho-bat-dong-san-tang-trong-quy-ii-2026-102260821161433075.htm",
+  "https://cafef.vn/ton-kho-bds-quy-ii-2026-tang-22-46-dat-nen-mat-gia-thanh-khoan-tram-lang-188260905092338811.chn"
+ ],
+ "say": {},
+ "mix": true,
+ "imgs": {},
+ "rules": 2
+}

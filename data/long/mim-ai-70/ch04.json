@@ -1,0 +1,288 @@
+{
+ "title": "Máy thắng người, nhưng không học gì",
+ "lines": [
+  {
+   "t": "Những năm 1980, trí tuệ nhân tạo hồi sinh dưới một cái tên mới: hệ chuyên gia.",
+   "p": 0.8
+  },
+  "Ý tưởng vẫn là viết luật.",
+  "Lần này, người ta mời các chuyên gia thật, bác sĩ, kỹ sư, rồi chép kinh nghiệm của họ thành hàng nghìn dòng \"nếu thế này thì làm thế kia\".",
+  "Doanh nghiệp đổ tiền vào. Cả những chiếc máy tính chuyên dụng được chế tạo riêng để chạy AI.",
+  "Rồi đến cuối thập niên, bong bóng vỡ.",
+  {
+   "t": "Mùa đông thứ hai.",
+   "p": 1.0
+  },
+  "Thế còn lời hứa năm 1958, rằng trong mười năm máy sẽ vô địch cờ vua?",
+  "Tháng 2 năm 1996, ở Philadelphia, nhà vô địch thế giới Garry Kasparov đấu với máy tính Deep Blue của IBM.",
+  "Kasparov thắng, bốn trên hai.",
+  "Một năm sau, tháng 5 năm 1997, ở New York, họ đấu lại.",
+  {
+   "t": "Lần này, Deep Blue thắng ba ván rưỡi trên hai ván rưỡi.",
+   "p": 1.0
+  },
+  "Lần đầu tiên, một nhà vô địch cờ vua thế giới đương nhiệm thua máy trong một trận đấu theo thể thức chuẩn.",
+  "Lời hứa \"mười năm\" đã thành ba mươi chín năm.",
+  "Nhưng Deep Blue có học không?",
+  "Gần như không.",
+  "Nó mạnh nhờ sức tính: hai trăm triệu thế cờ mỗi giây, cộng với một bộ tiêu chí đánh giá do con người chỉnh tay.",
+  {
+   "t": "Đó vẫn là con đường viết luật, chỉ là với một cỗ máy cực nhanh.",
+   "p": 1.0
+  },
+  "Và có một trò chơi mà sức tính như vậy không bao giờ đủ.",
+  "Một bàn cờ mười chín nhân mười chín, với những quân đen trắng giản dị.",
+  "Muốn thắng ở đó, máy phải học được thứ mà con người gọi là trực giác."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "CHƯƠNG BỐN",
+   "title": "MÁY THẮNG NGƯỜI\nNHƯNG KHÔNG HỌC",
+   "sub": "1980 — 1997",
+   "bg": "lisp",
+   "titleAt": [
+    0,
+    "Những"
+   ]
+  },
+  {
+   "type": "print",
+   "at": 1,
+   "img": "lisp",
+   "tone": "color",
+   "side": {
+    "k": "HỆ CHUYÊN GIA",
+    "h": "Hàng nghìn dòng\n“nếu… thì…”",
+    "lines": [
+     {
+      "text": "Ý tưởng vẫn là *viết luật*",
+      "at": [
+       1,
+       "viết"
+      ]
+     },
+     {
+      "text": "Chép kinh nghiệm *chuyên gia*",
+      "at": [
+       2,
+       "chép"
+      ]
+     },
+     {
+      "text": "Máy *chuyên dụng* để chạy AI",
+      "at": [
+       3,
+       "chuyên"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "BONG BÓNG VỠ"
+  },
+  {
+   "type": "broll",
+   "at": 5,
+   "vid": "6647520",
+   "veil": 0.45,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MÙA ĐÔNG THỨ HAI",
+     "at": [
+      5,
+      "Mùa"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "LỜI HỨA 1958",
+     "at": [
+      6,
+      "1958,"
+     ]
+    },
+    {
+     "text": "10 NĂM → VÔ ĐỊCH CỜ VUA?",
+     "at": [
+      6,
+      "vô"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 7,
+   "vid": "6599643",
+   "day": "PHILADELPHIA",
+   "date": "02.1996",
+   "sub": {
+    "text": "KASPAROV 4 – 2 DEEP BLUE",
+    "at": [
+     8,
+     "bốn"
+    ]
+   },
+   "illus": "VIDEO MINH HỌA"
+  },
+  {
+   "type": "photo",
+   "at": 9,
+   "img": "deepblue",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.5,
+   "kin": [
+    {
+     "text": "05.1997 · NEW YORK",
+     "at": [
+      9,
+      "1997,"
+     ]
+    },
+    {
+     "text": "DEEP BLUE 3½ – 2½",
+     "at": [
+      10,
+      "ba"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "DEEP BLUE",
+    "v": "TỦ MÁY · BẢO TÀNG LỊCH SỬ MÁY TÍNH",
+    "at": [
+     9,
+     "đấu"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "LẦN ĐẦU TIÊN",
+     "at": [
+      11,
+      "Lần"
+     ],
+     "acc": true
+    },
+    {
+     "text": "nhà vô địch đương nhiệm thua máy · thể thức chuẩn",
+     "at": [
+      11,
+      "thua"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 12,
+   "from": 10,
+   "to": 39,
+   "suffix": " NĂM",
+   "countAt": [
+    12,
+    "ba"
+   ],
+   "label": "LỜI HỨA “MƯỜI NĂM”"
+  },
+  {
+   "type": "question",
+   "at": 13,
+   "text": "Deep Blue có học không?"
+  },
+  {
+   "type": "slam",
+   "at": 14,
+   "text": "GẦN NHƯ KHÔNG"
+  },
+  {
+   "type": "print",
+   "at": 15,
+   "img": "dbchip",
+   "tone": "color",
+   "side": {
+    "k": "SỨC TÍNH",
+    "h": "200 triệu\nthế cờ / giây",
+    "lines": [
+     {
+      "text": "Tiêu chí do *người chỉnh tay*",
+      "at": [
+       15,
+       "chỉnh"
+      ]
+     },
+     {
+      "text": "Vẫn là *viết luật*",
+      "at": [
+       16,
+       "viết"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "go",
+   "at": 17,
+   "stones": 70,
+   "label": {
+    "k": "CỜ VÂY · 19 × 19",
+    "v": "SỨC TÍNH KHÔNG BAO GIỜ ĐỦ",
+    "at": [
+     18,
+     "mười"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "items": [
+    {
+     "text": "TRỰC GIÁC",
+     "at": [
+      19,
+      "trực"
+     ],
+     "acc": true
+    },
+    {
+     "text": "máy phải học được thứ này",
+     "at": [
+      19,
+      "học"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "MÁY THẮNG NGƯỜI, NHƯNG KHÔNG HỌC GÌ"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.12
+ }
+}

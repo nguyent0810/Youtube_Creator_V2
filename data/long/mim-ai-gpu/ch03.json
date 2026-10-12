@@ -1,0 +1,256 @@
+{
+ "title": "Giả làm bức tranh",
+ "lines": [
+  {
+   "t": "Những năm đầu thập niên 2000, card đồ hoạ đã mạnh hơn nhiều so với nhu cầu của phần lớn công việc văn phòng.",
+   "p": 0.8
+  },
+  "Một số nhà khoa học nhìn sức mạnh ấy và thấy tiếc.",
+  {
+   "t": "Họ muốn dùng nó để tính thứ khác: dòng chảy của chất lỏng, sóng địa chấn, phân tử thuốc.",
+   "p": 1.0
+  },
+  "Khó ở chỗ, con chip chỉ hiểu một ngôn ngữ: hình vẽ.",
+  "Thế là họ phải giả dạng phép tính của mình thành một bức tranh.",
+  "Con số được nhét vào màu của điểm ảnh, bài toán được viết như một hiệu ứng ánh sáng.",
+  {
+   "t": "Chip tưởng mình đang vẽ, thật ra đang làm toán.",
+   "p": 1.0
+  },
+  "Cách ấy chạy được, nhưng rất khổ.",
+  "Muốn dùng, nhà khoa học phải hiểu cả vật lý của mình lẫn mẹo vặt của dân làm game.",
+  "Ở Đại học Stanford, một nghiên cứu sinh tên là Ian Buck quyết định làm cho việc ấy dễ hơn.",
+  "Anh mê card đồ hoạ từ hồi chơi game thời sinh viên.",
+  {
+   "t": "Anh viết một ngôn ngữ lập trình tên là Brook, để người ta viết phép tính như phép tính, còn phần giả làm bức tranh thì máy tự lo.",
+   "p": 1.0
+  },
+  "Năm 2004, Ian Buck về làm cho Nvidia, dẫn một nhóm nhỏ.",
+  "Ngày 8 tháng 11 năm 2006, Nvidia ra mắt một dòng card mới, cùng một công cụ tên là CUDA.",
+  {
+   "t": "Với CUDA, lập trình viên có thể ra lệnh cho GPU tính toán trực tiếp, không cần giả làm bức tranh nữa.",
+   "p": 1.0
+  },
+  "Lúc ấy, đây là một canh bạc.",
+  "Theo lời chính Jensen Huang kể lại sau này, mỗi con chip phải gánh thêm chi phí cho phần tính toán, trong khi phần lớn người mua chỉ cần chơi game.",
+  "Phần chi phí ấy ăn gần hết lợi nhuận của hãng trong nhiều năm.",
+  "Trong nhiều năm, khách hàng của CUDA chủ yếu là các phòng thí nghiệm khoa học.",
+  "Rồi một nhóm người khác tìm đến. Họ cần một núi phép nhân."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "GIẢ LÀM\nBỨC TRANH",
+   "sub": "ĐẦU NHỮNG NĂM 2000 · GPGPU",
+   "vid": "7140937",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "card"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "SỨC MẠNH BỎ PHÍ",
+     "at": 1,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "MUỐN TÍNH THỨ KHÁC",
+   "rows": [
+    {
+     "k": "1",
+     "v": "DÒNG CHẢY CHẤT LỎNG",
+     "at": [
+      2,
+      "dòng"
+     ]
+    },
+    {
+     "k": "2",
+     "v": "SÓNG ĐỊA CHẤN",
+     "at": [
+      2,
+      "sóng"
+     ]
+    },
+    {
+     "k": "3",
+     "v": "PHÂN TỬ THUỐC",
+     "at": [
+      2,
+      "phân"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "CHỈ HIỂU MỘT NGÔN NGỮ",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "HÌNH VẼ",
+     "at": [
+      3,
+      "hình"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "CON SỐ → MÀU ĐIỂM ẢNH",
+     "at": 5
+    },
+    {
+     "text": "BÀI TOÁN → HIỆU ỨNG ÁNH SÁNG",
+     "at": [
+      5,
+      "bài"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "TƯỞNG ĐANG VẼ",
+   "sub": "THẬT RA ĐANG LÀM TOÁN"
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "VẬT LÝ",
+     "at": 8
+    },
+    {
+     "text": "+ MẸO DÂN LÀM GAME",
+     "at": [
+      8,
+      "mẹo"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 9,
+   "k": "STANFORD · NGHIÊN CỨU SINH",
+   "name": "Ian Buck",
+   "desc": "Mê card đồ hoạ từ hồi chơi game",
+   "rows": [
+    {
+     "k": "VIẾT",
+     "v": "ngôn ngữ *Brook*",
+     "at": 11
+    },
+    {
+     "k": "2004",
+     "v": "về *Nvidia*, dẫn một nhóm nhỏ",
+     "at": 12
+    }
+   ],
+   "label": {
+    "k": "NGUỒN",
+    "v": "HPCWIRE · 35 HPC LEGENDS",
+    "at": 12
+   }
+  },
+  {
+   "type": "date",
+   "at": 13,
+   "day": "NVIDIA RA MẮT CUDA · GEFORCE 8800",
+   "date": "08.11.2006"
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "RA LỆNH TÍNH TRỰC TIẾP",
+     "at": 14,
+     "acc": true
+    },
+    {
+     "text": "GIẢ LÀM BỨC TRANH",
+     "at": [
+      14,
+      "giả"
+     ],
+     "fx": "strike",
+     "strikeAt": [
+      14,
+      "nữa"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 15,
+   "text": "MỘT CANH BẠC"
+  },
+  {
+   "type": "quote",
+   "at": 16,
+   "text": "Mỗi con chip gánh thêm chi phí cho phần tính toán, trong khi phần lớn người mua chỉ cần chơi game.",
+   "by": "JENSEN HUANG KỂ LẠI · LEX FRIDMAN PODCAST",
+   "lbl": "DIỄN Ý",
+   "qline": 16
+  },
+  {
+   "type": "kinetic",
+   "at": 18,
+   "items": [
+    {
+     "text": "KHÁCH HÀNG CUDA",
+     "at": 18,
+     "sm": true
+    },
+    {
+     "text": "PHÒNG THÍ NGHIỆM KHOA HỌC",
+     "at": [
+      18,
+      "phòng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 19,
+   "text": "Ai cần\nmột núi phép nhân?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "GIẢ LÀM BỨC TRANH"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

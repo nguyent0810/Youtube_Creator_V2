@@ -1,0 +1,320 @@
+{
+ "theme": "ck",
+ "title": "Mua cổ phiếu thứ Sáu, cả ngày thứ Hai chưa được bán: T+2 hoạt động thế nào?",
+ "description": "Ở Việt Nam, cổ phiếu khớp mua hôm nay chưa về tài khoản ngay. Chu kỳ thanh toán là T+2: hai ngày làm việc sau ngày khớp. Từ 29/08/2022, cổ phiếu về tài khoản trước 13:00 ngày T+2, bán được từ phiên chiều hôm đó (thông báo VSD, qua LSVN và VnBusiness). Áp vào tuần VN-Index mất 115 điểm (thứ Hai 09/03/2026), VÍ DỤ GIẢ ĐỊNH: người A mua thứ Năm 05/03 được bán từ chiều thứ Hai 09/03, nhưng ở giá sàn phải xếp sau những lệnh đặt từ sáng; người B mua thứ Sáu 06/03 phải tới chiều thứ Ba 10/03 mới bán được — cả ngày thứ Hai chỉ đứng nhìn. Mua sáng bán chiều (giao dịch trong ngày, T+0) và bán cổ phiếu đang chờ về: tới 10/2026 vẫn chưa triển khai (UBCKNN, ssc.gov.vn).\n\nLịch tính theo ngày làm việc; 05–10/03/2026 đều có phiên, không có ngày nghỉ. VN-Index 06/03 → 09/03/2026: 1.767,84 → 1.652,79 (−115,05 điểm; kênh tự tính, giá đóng cửa qua vnstock/VCI). Thứ tự ưu tiên ở giá sàn: Quy chế VNX, QĐ 22/QĐ-HĐTV ngày 18/04/2025. Người A, người B là ví dụ, không phải người thật.\n\nCả một phiên, từ 9 giờ sáng tới hai ngày sau tiếng chuông — video dài trên kênh: \"Vì Sao Có Ngày Muốn Bán Cổ Phiếu Mà Không Bán Được?\" (Chứng khoán từ số 0 · Bài 2)\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ cổ phiếu nào và không dự báo thị trường; không nêu tên mã cổ phiếu, công ty chứng khoán hay ứng dụng giao dịch. Quy định mô tả theo thời điểm làm video (10/2026) và có thể thay đổi. Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.",
+ "tags": [
+  "chứng khoán",
+  "T+2",
+  "chu kỳ thanh toán",
+  "chứng khoán cho người mới",
+  "khi nào bán được cổ phiếu",
+  "giao dịch trong ngày",
+  "VN-Index",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "kicker": "CHỨNG KHOÁN TỪ SỐ 0",
+ "sub": "T+2",
+ "acc": [
+  "chưa",
+  "bán",
+  "chiều",
+  "nhìn",
+  "t"
+ ],
+ "say": {
+  "vn-index": "Vi En In-đéc",
+  "=T": "tê"
+ },
+ "lines": [
+  "Mua cổ phiếu hôm thứ Sáu, cả ngày thứ Hai bạn chưa được bán.",
+  "Vì chu kỳ thanh toán là T cộng hai: hai ngày làm việc sau ngày khớp.",
+  "Cổ phiếu về trước một giờ chiều ngày T cộng hai, bán được từ phiên chiều.",
+  "Áp vào tuần VN-Index mất một trăm mười lăm điểm.",
+  "Người A mua thứ Năm: chiều thứ Hai được bán, nhưng ở giá sàn phải xếp sau lệnh đặt từ sáng.",
+  "Người B mua thứ Sáu: tới chiều thứ Ba mới bán được.",
+  "Cả ngày thứ Hai, họ chỉ đứng nhìn.",
+  "Mua sáng bán chiều thì tới tháng mười vẫn chưa triển khai.",
+  "Chi tiết trong video dài trên kênh.",
+  "Còn bạn: có biết mua xong phải chờ tới T cộng hai?"
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MUA THỨ SÁU",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "CẢ NGÀY THỨ HAI",
+     "at": [
+      0,
+      "cả"
+     ]
+    },
+    {
+     "text": "CHƯA ĐƯỢC BÁN",
+     "at": [
+      0,
+      "chưa"
+     ],
+     "c": "down"
+    },
+    {
+     "text": "quy định tại thời điểm làm video (10/2026)",
+     "at": [
+      0,
+      "bán"
+     ],
+     "sm": true,
+     "size": 40
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "CHU KỲ THANH TOÁN",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "T+2",
+     "at": [
+      1,
+      "T"
+     ],
+     "acc": true,
+     "size": 300
+    },
+    {
+     "text": "T = NGÀY KHỚP · +2 NGÀY LÀM VIỆC",
+     "at": [
+      1,
+      "ngày"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "TỪ 29/08/2022",
+     "at": 2,
+     "sm": true
+    },
+    {
+     "text": "VỀ TÀI KHOẢN",
+     "at": [
+      2,
+      "về"
+     ]
+    },
+    {
+     "text": "TRƯỚC 13:00 NGÀY T+2",
+     "at": [
+      2,
+      "trước"
+     ],
+     "acc": true
+    },
+    {
+     "text": "→ BÁN ĐƯỢC TỪ PHIÊN CHIỀU",
+     "at": [
+      2,
+      "bán"
+     ],
+     "sm": true
+    },
+    {
+     "text": "nguồn: thông báo VSD, hiệu lực 29/08/2022",
+     "at": [
+      2,
+      "chiều",
+      1
+     ],
+     "sm": true,
+     "size": 40
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "TUẦN 05–10/03/2026",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "THỨ HAI 09/03",
+     "at": [
+      3,
+      "VN-Index"
+     ]
+    },
+    {
+     "text": "VN-INDEX −115 ĐIỂM",
+     "at": [
+      3,
+      "mất"
+     ],
+     "c": "down"
+    },
+    {
+     "text": "vnstock/VCI, kênh tự tính",
+     "at": [
+      3,
+      "điểm"
+     ],
+     "sm": true,
+     "size": 40
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "VÍ DỤ GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "T5 05/03",
+     "v": "A MUA",
+     "at": [
+      4,
+      "mua"
+     ]
+    },
+    {
+     "k": "T2 09/03 CHIỀU",
+     "v": "A ĐƯỢC BÁN",
+     "at": [
+      4,
+      "chiều"
+     ]
+    },
+    {
+     "k": "Ở GIÁ SÀN",
+     "v": "XẾP SAU LỆNH SÁNG",
+     "at": [
+      4,
+      "xếp"
+     ]
+    },
+    {
+     "k": "T6 06/03",
+     "v": "B MUA",
+     "at": [
+      5,
+      "mua"
+     ]
+    },
+    {
+     "k": "T3 10/03 CHIỀU",
+     "v": "B ĐƯỢC BÁN",
+     "at": [
+      5,
+      "chiều"
+     ]
+    }
+   ],
+   "total": {
+    "k": "T2 09/03",
+    "v": "B CHỈ ĐỨNG NHÌN",
+    "at": [
+     6,
+     "Cả"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "MUA SÁNG BÁN CHIỀU (T+0)",
+     "at": 7,
+     "sm": true
+    },
+    {
+     "text": "TỚI THÁNG 10/2026",
+     "at": [
+      7,
+      "tháng"
+     ]
+    },
+    {
+     "text": "CHƯA TRIỂN KHAI",
+     "at": [
+      7,
+      "chưa"
+     ],
+     "acc": true
+    },
+    {
+     "text": "nguồn: UBCKNN (ssc.gov.vn), 2026",
+     "at": [
+      7,
+      "khai"
+     ],
+     "sm": true,
+     "size": 40
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "CẢ MỘT PHIÊN · 9:00 → T+2",
+     "at": 8
+    },
+    {
+     "text": "VIDEO DÀI TRÊN KÊNH",
+     "acc": true,
+     "at": [
+      8,
+      "video"
+     ]
+    },
+    {
+     "text": "Vì sao có ngày muốn bán cổ phiếu",
+     "sm": true,
+     "at": [
+      8,
+      "kênh"
+     ]
+    },
+    {
+     "text": "mà không bán được?",
+     "sm": true,
+     "at": [
+      8,
+      "kênh"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 9,
+   "text": "Bạn có biết mua xong\nphải chờ tới T+2?"
+  }
+ ],
+ "sources": [
+  "https://lsvn.vn/nha-dau-tu-duoc-ban-co-phieu-nhan-tien-som-hon-1-ngay1661739512-a123157.html",
+  "https://vnbusiness.vn/tu-hom-nay-nha-dau-tu-mua-co-phieu-se-duoc-ban-trong-chieu-ngay-t2.html",
+  "https://ssc.gov.vn/cs/idcplg?IdcService=GET_FILE&allowInterrupt=1&dDocName=APPSSCGOVVN1620170388&dID=180856&filename=Ban+tiep+thu+giai+trinh+y+kien.pdf",
+  "https://luatvietnam.vn/chung-khoan/quyet-dinh-22-qd-hdtv-2025-ban-hanh-quy-che-niem-yet-va-giao-dich-chung-khoan-399805-d1.html",
+  "https://nhandan.vn/ocop/chung-khoan-ngay-93-hon-230-co-phieu-xanh-lo-vn-index-giam-ky-luc-post947238.html"
+ ]
+}

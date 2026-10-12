@@ -1,0 +1,18 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>*{margin:0;padding:0;box-sizing:border-box}html,body{width:800px;height:800px;overflow:hidden;background:#0b1220}
+#root{position:relative;width:800px;height:800px;overflow:hidden}</style></head><body>
+<!-- Logo B — "cây nến biết nói": thân nến xanh chính là bong bóng thoại, ba chấm "đang gõ" -->
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="800" data-height="800" data-fps="30">
+<svg width="800" height="800" viewBox="0 0 800 800">
+ <defs>
+  <radialGradient id="bg" cx="50%" cy="42%" r="70%"><stop offset="0" stop-color="#16243b"/><stop offset="1" stop-color="#070d18"/></radialGradient>
+  <linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34d97a"/><stop offset="1" stop-color="#16a34a"/></linearGradient>
+ </defs>
+ <rect width="800" height="800" fill="url(#bg)"/>
+ <line x1="400" y1="110" x2="400" y2="690" stroke="#e2e8f0" stroke-width="22" stroke-linecap="round"/>
+ <path d="M310 200 H490 Q560 200 560 270 V480 Q560 550 490 550 H360 L262 640 L290 550 Q240 545 240 480 V270 Q240 200 310 200 Z"
+       fill="url(#g)" stroke="#0b1220" stroke-width="14" stroke-linejoin="round"/>
+ <circle cx="330" cy="376" r="30" fill="#f8fafc"/><circle cx="400" cy="376" r="30" fill="#f8fafc"/><circle cx="470" cy="376" r="30" fill="#fbbf24"/>
+</svg>
+</div><script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

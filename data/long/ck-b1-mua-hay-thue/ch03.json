@@ -1,0 +1,322 @@
+{
+ "title": "Những khoản không nằm trong giá",
+ "lines": [
+  {
+   "t": "Mua một căn nhà, bạn không chỉ trả đúng con số ghi trên hợp đồng.",
+   "p": 0.8
+  },
+  "Lệ phí trước bạ là không phẩy năm phần trăm.",
+  "Thêm phí công chứng, thẩm định, đăng ký thế chấp.",
+  "Ví dụ của mình làm tròn tất cả thành một phần trăm, khoảng hai mươi lăm triệu.",
+  "Nếu mua căn mới của chủ đầu tư, còn hai phần trăm kinh phí bảo trì, tính riêng ngoài giá bán.",
+  "Tới lúc bán lại, thuế thu nhập cá nhân là hai phần trăm giá bán, thường do người bán nộp.",
+  {
+   "t": "Nếu đó là căn nhà duy nhất, khoản thuế này có thể được miễn, nhưng ví dụ của mình vẫn tính vào.",
+   "p": 1.0
+  },
+  "Ở trong nhà cũng tốn tiền.",
+  "Phí quản lý chung cư ở Hà Nội, với nhà có thang máy, có một khung giá riêng.",
+  "Khung ấy từ một nghìn hai trăm tới mười sáu nghìn năm trăm đồng một mét vuông mỗi tháng.",
+  "Khoản này ai ở thì trả, dù là chủ hay người thuê, nên mình để nó ra ngoài phép so.",
+  "Tiền sửa chữa thì khác: vỡ ống nước, hỏng điều hoà, thấm tường, chủ nhà tự lo.",
+  {
+   "t": "Mình giả định khoản ấy tốn khoảng nửa phần trăm giá trị căn nhà mỗi năm.",
+   "p": 1.0
+  },
+  {
+   "t": "Còn người thuê thì sao? Đâu phải không mất gì.",
+   "ask": 1
+  },
+  "Đúng vậy, người thuê có cái giá riêng.",
+  "Thứ nhất, tiền thuê tăng.",
+  "Chín tháng đầu năm nay, giá thuê nhà trong rổ chỉ số giá tiêu dùng cao hơn cùng kỳ năm ngoái khoảng năm phần trăm.",
+  "Thứ hai, hết hợp đồng có thể phải chuyển đi, vì chủ nhà muốn bán, hoặc muốn tăng giá.",
+  {
+   "t": "Thứ ba, mỗi lần chuyển là một lần tốn tiền, tốn sức, có khi đổi cả đường đi làm.",
+   "p": 1.0
+  },
+  "Ví dụ của mình cho tiền thuê tăng năm phần trăm mỗi năm.",
+  "Sau mười năm, sáu triệu hai đã thành gần chín triệu bảy.",
+  "Hai bên đều có chi phí. Câu hỏi là chi phí của bên nào được bù lại."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "NHỮNG KHOẢN\nKHÔNG NẰM TRONG GIÁ",
+   "sub": "PHÍ · THUẾ · SỬA CHỮA · TIỀN THUÊ TĂNG",
+   "vid": "8293019",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Mua"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "KHI MUA",
+   "rows": [
+    {
+     "k": "LỆ PHÍ TRƯỚC BẠ",
+     "v": "0,5%",
+     "at": [
+      1,
+      "Lệ"
+     ]
+    },
+    {
+     "k": "CÔNG CHỨNG · THẨM ĐỊNH · THẾ CHẤP",
+     "v": "+",
+     "at": [
+      2,
+      "Thêm"
+     ]
+    },
+    {
+     "k": "MUA CỦA CHỦ ĐẦU TƯ: BẢO TRÌ",
+     "v": "+ 2%",
+     "at": [
+      4,
+      "hai"
+     ]
+    }
+   ],
+   "total": {
+    "k": "VÍ DỤ GỘP · LÀM TRÒN",
+    "v": "≈ 1% = 25 TR",
+    "at": [
+     3,
+     "một"
+    ]
+   },
+   "srcnote": "NĐ 10/2022/NĐ-CP (0,5%) · Luật Nhà ở 2023, Đ152 k1 (bảo trì 2%, tính riêng với tiền bán) · bảo trì 2%: CHƯA GỒM TRONG VÍ DỤ"
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "KHI BÁN",
+   "rows": [
+    {
+     "k": "THUẾ TNCN",
+     "v": "2% GIÁ BÁN",
+     "at": [
+      5,
+      "thuế"
+     ]
+    },
+    {
+     "k": "AI NỘP",
+     "v": "THƯỜNG LÀ BÊN BÁN",
+     "at": [
+      5,
+      "người"
+     ]
+    },
+    {
+     "k": "NHÀ Ở DUY NHẤT",
+     "v": "CÓ THỂ ĐƯỢC MIỄN",
+     "at": [
+      6,
+      "căn"
+     ]
+    }
+   ],
+   "total": {
+    "k": "VÍ DỤ CỦA KÊNH",
+    "v": "VẪN TÍNH 2%",
+    "at": [
+     6,
+     "ví"
+    ]
+   },
+   "srcnote": "Luật Thuế TNCN 109/2025/QH15, Đ14 k1 (2%), Đ4 k2 (miễn: nhà ở duy nhất, có điều kiện) · hiệu lực 01/07/2026"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "Ở TRONG NHÀ CŨNG TỐN TIỀN",
+     "at": [
+      7,
+      "Ở"
+     ]
+    },
+    {
+     "text": "phí quản lý chung cư Hà Nội · có thang máy",
+     "at": [
+      8,
+      "Phí"
+     ],
+     "sm": true
+    },
+    {
+     "text": "1.200–16.500 Đ/M²/THÁNG",
+     "at": [
+      9,
+      "Khung"
+     ],
+     "acc": true
+    },
+    {
+     "text": "ai ở thì trả → để ra ngoài phép so",
+     "at": [
+      10,
+      "Khoản"
+     ],
+     "sm": true
+    }
+   ],
+   "srcnote": "QĐ 25/2026/QĐ-UBND Hà Nội (hiệu lực 23/02/2026), qua VnEconomy"
+  },
+  {
+   "type": "broll",
+   "at": 11,
+   "vid": "9890448",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "SỬA CHỮA: CHỦ NHÀ TỰ LO",
+     "at": [
+      11,
+      "Tiền"
+     ]
+    },
+    {
+     "text": "≈ 0,5% GIÁ TRỊ / NĂM",
+     "at": [
+      12,
+      "nửa"
+     ],
+     "acc": true
+    },
+    {
+     "text": "giả định của kênh",
+     "at": [
+      12,
+      "giả"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 13,
+   "text": "Còn người thuê thì sao?\nĐâu phải không mất gì."
+  },
+  {
+   "type": "ledger",
+   "at": 14,
+   "title": "GIÁ CỦA NGƯỜI THUÊ",
+   "rows": [
+    {
+     "k": "01 · TIỀN THUÊ TĂNG",
+     "v": "+4,91%",
+     "at": [
+      15,
+      "Thứ"
+     ]
+    },
+    {
+     "k": "02 · HẾT HỢP ĐỒNG",
+     "v": "CÓ THỂ PHẢI CHUYỂN",
+     "at": [
+      17,
+      "Thứ"
+     ]
+    }
+   ],
+   "srcnote": "CPI nhóm nhà ở thuê 9 tháng 2026: +4,91% so cùng kỳ (bình quân) — NSO 30/09/2026"
+  },
+  {
+   "type": "broll",
+   "at": 18,
+   "vid": "4569393",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "03 · MỖI LẦN CHUYỂN NHÀ",
+     "at": [
+      18,
+      "Thứ"
+     ]
+    },
+    {
+     "text": "TIỀN · SỨC · ĐƯỜNG ĐI LÀM",
+     "at": [
+      18,
+      "tốn"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 19,
+   "title": "TIỀN THUÊ CĂN VÍ DỤ · +5%/NĂM",
+   "unit": "TRIỆU Đ / THÁNG",
+   "items": [
+    {
+     "k": "NĂM 1",
+     "v": 6.25,
+     "lbl": "6,25",
+     "at": [
+      19,
+      "Ví"
+     ]
+    },
+    {
+     "k": "NĂM 4",
+     "v": 7.235156250000001,
+     "lbl": "7,24",
+     "at": [
+      19,
+      "tăng"
+     ]
+    },
+    {
+     "k": "NĂM 7",
+     "v": 8.375597753906252,
+     "lbl": "8,38",
+     "at": [
+      19,
+      "mỗi"
+     ]
+    },
+    {
+     "k": "NĂM 10",
+     "v": 9.695801349865727,
+     "lbl": "9,70",
+     "at": [
+      20,
+      "chín"
+     ],
+     "acc": true
+    }
+   ],
+   "illus": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "srcnote": "6,25 × 1,05^(năm − 1) · kênh tự tính"
+  },
+  {
+   "type": "slam",
+   "at": 21,
+   "text": "BÊN NÀO ĐƯỢC BÙ LẠI?",
+   "sub": "HAI BÊN ĐỀU CÓ CHI PHÍ",
+   "fx": "zoom"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "NHỮNG KHOẢN KHÔNG NẰM TRONG GIÁ"
+ },
+ "bgm": {
+  "mood": "warm",
+  "gain": 0.14
+ }
+}

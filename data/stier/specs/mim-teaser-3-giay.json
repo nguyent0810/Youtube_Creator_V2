@@ -1,0 +1,279 @@
+{
+  "theme": "mim",
+  "title": "Một mô hình AI chỉ cần 3 giây ghi âm để nói bằng giọng một người lạ",
+  "description": "Đoán thử: một cỗ máy cần nghe giọng một người lạ bao lâu để bắt chước? Tháng 1/2023, một nhóm nghiên cứu của Microsoft công bố mô hình VALL-E. Nó được cho nghe 60.000 giờ tiếng Anh của hơn 7.000 người nói (gần 7 năm nghe liên tục: 60.000 ÷ 24 ÷ 365 ≈ 6,85 năm). Sau đó, để nói bằng giọng một người nó chưa từng nghe, nó chỉ cần một đoạn ghi âm dài 3 giây (arXiv 2301.02111). Chính các tác giả viết mô hình có thể bị lạm dụng để giả mạo một người cụ thể. Năm 2024, Microsoft nói VALL-E 2 thuần tuý là dự án nghiên cứu, chưa có kế hoạch đưa ra công chúng. Video không hướng dẫn cách làm giả giọng. Toàn bộ câu chuyện có trong video dài \"AI Giả Giọng Người Thân Để Lừa Tiền: Một Từ Bí Mật Có Thể Cứu Cả Nhà\" trên kênh Mind in the Machine. Giọng đọc tổng hợp; lời trích được đọc bằng giọng máy của kênh (GIỌNG MÁY TẠO), không phải ghi âm thật.",
+  "tags": [
+    "vall-e",
+    "giả giọng",
+    "ai giả giọng",
+    "nhân bản giọng nói",
+    "microsoft",
+    "trí tuệ nhân tạo",
+    "deepfake giọng nói",
+    "lừa đảo",
+    "mind in the machine"
+  ],
+  "kicker": "AI & LỪA ĐẢO",
+  "sub": "VALL-E · 01.2023",
+  "acc": [
+    "bao",
+    "lâu",
+    "ba",
+    "giây",
+    "lạm",
+    "dụng"
+  ],
+  "say": {
+    "=AI": "ây ai",
+    "microsoft": "Mai-crô-xốp",
+    "=VALL-E": "Van-i"
+  },
+  "lines": [
+    "Đoán thử: một cỗ máy cần nghe giọng một người lạ bao lâu để bắt chước?",
+    "Một giờ? Mười phút? Hay một phút?",
+    "Tháng 1 năm 2023, Microsoft công bố mô hình nghiên cứu VALL-E.",
+    "Nó được cho nghe sáu mươi nghìn giờ tiếng Anh của hơn bảy nghìn người.",
+    "Rồi để nói bằng giọng một người nó chưa từng nghe, nó chỉ cần một đoạn ghi âm ba giây.",
+    "Ba giây. Bạn đã đoán bao nhiêu?",
+    "Chính các tác giả viết: mô hình có thể bị lạm dụng để giả mạo một người cụ thể.",
+    "Năm 2024, Microsoft nói đây thuần tuý là nghiên cứu, chưa có kế hoạch ra công chúng.",
+    "Vậy ngoài đời, tai người còn phân biệt được không?",
+    "Xem video AI giả giọng người thân, trên kênh."
+  ],
+  "scenes": [
+    {
+      "type": "kinetic",
+      "items": [
+        {
+          "text": "BAO LÂU?",
+          "at": 0.0,
+          "acc": true,
+          "size": 160
+        },
+        {
+          "text": "máy cần nghe giọng một người lạ",
+          "at": [
+            0,
+            "cỗ"
+          ],
+          "sm": true
+        },
+        {
+          "text": "ĐỂ BẮT CHƯỚC",
+          "at": [
+            0,
+            "bắt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kinetic",
+      "at": 1,
+      "items": [
+        {
+          "text": "MỘT GIỜ?",
+          "at": 1
+        },
+        {
+          "text": "MƯỜI PHÚT?",
+          "at": [
+            1,
+            "Mười"
+          ]
+        },
+        {
+          "text": "MỘT PHÚT?",
+          "at": [
+            1,
+            "hay"
+          ],
+          "acc": true
+        }
+      ]
+    },
+    {
+      "type": "kinetic",
+      "at": 2,
+      "items": [
+        {
+          "text": "MICROSOFT · 01.2023",
+          "at": 2,
+          "sm": true
+        },
+        {
+          "text": "CÔNG BỐ MÔ HÌNH",
+          "at": [
+            2,
+            "công"
+          ]
+        },
+        {
+          "text": "VALL-E",
+          "at": [
+            2,
+            "VALL-E"
+          ],
+          "acc": true,
+          "size": 220
+        },
+        {
+          "text": "mô hình nghiên cứu · arXiv 2301.02111",
+          "at": [
+            2,
+            "VALL-E",
+            0,
+            0.3
+          ],
+          "sm": true
+        }
+      ]
+    },
+    {
+      "type": "counter",
+      "at": 3,
+      "to": 60000,
+      "suffix": " GIỜ",
+      "label": "TIẾNG ANH VALL-E ĐƯỢC CHO NGHE",
+      "until": [
+        3,
+        "giờ"
+      ],
+      "sub": {
+        "text": "> 7.000 NGƯỜI NÓI · ARXIV 2301.02111",
+        "at": [
+          3,
+          "hơn"
+        ]
+      }
+    },
+    {
+      "type": "ledger",
+      "at": 4,
+      "title": "GIỌNG MỘT NGƯỜI NÓ CHƯA TỪNG NGHE",
+      "rows": [
+        {
+          "k": "BẠN ĐOÁN?",
+          "v": "1 GIỜ",
+          "at": [
+            4,
+            null,
+            0,
+            0.3
+          ]
+        },
+        {
+          "k": "",
+          "v": "10 PHÚT",
+          "at": [
+            4,
+            null,
+            0,
+            0.7
+          ]
+        },
+        {
+          "k": "",
+          "v": "1 PHÚT",
+          "at": [
+            4,
+            null,
+            0,
+            1.1
+          ]
+        }
+      ],
+      "total": {
+        "k": "VALL-E CẦN",
+        "v": "3 GIÂY",
+        "at": [
+          4,
+          "ba"
+        ]
+      }
+    },
+    {
+      "type": "slam",
+      "at": 5,
+      "text": "3 GIÂY",
+      "sub": "BẠN ĐÃ ĐOÁN BAO NHIÊU?"
+    },
+    {
+      "type": "quote",
+      "at": 6,
+      "text": "…potential risks in misuse of the model, such as … impersonating a specific speaker.",
+      "by": "NHÓM TÁC GIẢ VALL-E · ARXIV, 01.2023 · NGUYÊN VĂN"
+    },
+    {
+      "type": "kinetic",
+      "at": 7,
+      "items": [
+        {
+          "text": "VALL-E 2 · 2024",
+          "at": 7,
+          "sm": true
+        },
+        {
+          "text": "“THUẦN TUÝ LÀ",
+          "at": [
+            7,
+            "thuần"
+          ],
+          "acc": true
+        },
+        {
+          "text": "DỰ ÁN NGHIÊN CỨU”",
+          "at": [
+            7,
+            "nghiên"
+          ],
+          "acc": true
+        },
+        {
+          "text": "chưa có kế hoạch ra công chúng · Microsoft",
+          "at": [
+            7,
+            "chưa"
+          ],
+          "sm": true
+        }
+      ]
+    },
+    {
+      "type": "question",
+      "at": 8,
+      "text": "Tai người\ncòn nhận ra?"
+    },
+    {
+      "type": "kinetic",
+      "at": 9,
+      "items": [
+        {
+          "text": "VIDEO DÀI TRÊN KÊNH",
+          "sm": true,
+          "size": 52,
+          "at": 9
+        },
+        {
+          "text": "AI GIẢ GIỌNG NGƯỜI THÂN",
+          "at": [
+            9,
+            "AI"
+          ]
+        },
+        {
+          "text": "MỘT TỪ BÍ MẬT",
+          "acc": true,
+          "at": [
+            9,
+            "trên"
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "https://arxiv.org/abs/2301.02111v1",
+    "https://www.microsoft.com/en-us/research/project/vall-e-x/vall-e-2/"
+  ]
+}

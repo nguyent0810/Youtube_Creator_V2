@@ -1,0 +1,321 @@
+{
+ "title": "Điểm trung bình học kỳ",
+ "lines": [
+  {
+   "t": "Hồi đi học, bạn có điểm từng bài kiểm tra, và có điểm trung bình học kỳ.",
+   "p": 0.8
+  },
+  "Một bài điểm kém không kéo điểm trung bình xuống nhiều.",
+  {
+   "t": "Nhưng nếu điểm kém cứ lặp lại, điểm trung bình sẽ đi xuống dần.",
+   "p": 1.0
+  },
+  "Đường trung bình động làm đúng như vậy với giá.",
+  "Chữ MA là viết tắt của moving average, nghĩa là trung bình trượt.",
+  {
+   "t": "Hãy tính thử một đường MA năm phiên, bằng số thật.",
+   "p": 1.0
+  },
+  "Năm phiên cuối cùng trước đỉnh, từ ngày ba mươi tháng mười hai năm hai nghìn không trăm hai mươi mốt.",
+  "Giá đóng cửa lần lượt khoảng một nghìn bốn trăm tám mươi sáu, một nghìn bốn trăm chín mươi tám, một nghìn năm trăm hai mươi sáu, một nghìn năm trăm hai mươi ba, và một nghìn năm trăm hai mươi chín điểm.",
+  "Cộng lại, chia năm.",
+  "Ra khoảng một nghìn năm trăm mười hai điểm.",
+  {
+   "t": "Đó là một điểm trên đường MA năm, đặt ở ngày sáu tháng một.",
+   "p": 1.0
+  },
+  "Sang phiên sau, bỏ phiên cũ nhất ra, thêm phiên mới nhất vào, rồi chia năm lần nữa.",
+  "Cửa sổ năm phiên trượt dần sang phải, mỗi ngày một bước.",
+  {
+   "t": "Nối các điểm ấy lại, ta có đường trung bình động.",
+   "p": 1.0
+  },
+  {
+   "t": "Vậy MA hai mươi, MA năm mươi, MA hai trăm khác nhau ở đâu?",
+   "ask": 1
+  },
+  "Chỉ ở độ rộng của cửa sổ.",
+  "Hai mươi phiên là khoảng một tháng giao dịch. Hai trăm phiên là gần một năm.",
+  {
+   "t": "Mà sao lại là hai mươi, năm mươi, hai trăm, chứ không phải hai mươi ba hay một trăm tám mươi bảy?",
+   "ask": 1
+  },
+  "Không có định luật nào cả. Đó là những con số tròn, dễ nhớ, được nhiều người dùng lâu thành quen.",
+  {
+   "t": "Và vì nhiều người cùng nhìn một con số, nó được nhắc nhiều hơn những con số khác.",
+   "p": 1.0
+  },
+  "Có hai cách đọc một đường trung bình mà bạn nên biết.",
+  "Cách thứ nhất là nhìn độ dốc của chính đường ấy: đang đi lên, đi ngang, hay đi xuống.",
+  "Cách thứ hai là nhìn giá đang nằm trên hay dưới đường ấy, và cách bao xa.",
+  "Cửa sổ càng rộng, đường càng mượt. Và như bạn sắp thấy, càng chậm."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "ĐIỂM TRUNG BÌNH\nHỌC KỲ",
+   "sub": "MA = MOVING AVERAGE",
+   "vid": "7140937",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "hồi"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "ĐIỂM KIỂM TRA · VÍ DỤ GIẢ ĐỊNH",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "1 BÀI KÉM",
+     "v": "TB GẦN NHƯ KHÔNG ĐỔI",
+     "at": 1
+    },
+    {
+     "k": "KÉM LIÊN TỤC",
+     "v": "TB ĐI XUỐNG DẦN",
+     "at": 2
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "MA",
+     "at": 4,
+     "acc": true
+    },
+    {
+     "text": "moving average · trung bình trượt",
+     "at": [
+      4,
+      "moving"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 6,
+   "title": "MA5 · TÍNH TAY BẰNG SỐ THẬT",
+   "srcnote": "VN-INDEX ĐÓNG CỬA · KÊNH TỰ TÍNH · QUÁ KHỨ · KHÔNG PHẢI TÍN HIỆU",
+   "rows": [
+    {
+     "k": "30/12",
+     "v": "1.485,97",
+     "at": 7
+    },
+    {
+     "k": "31/12",
+     "v": "1.498,28",
+     "at": 7
+    },
+    {
+     "k": "04/01",
+     "v": "1.525,58",
+     "at": 7
+    },
+    {
+     "k": "05/01",
+     "v": "1.522,50",
+     "at": 7
+    },
+    {
+     "k": "06/01",
+     "v": "1.528,57",
+     "at": 7
+    }
+   ],
+   "total": {
+    "k": "÷ 5",
+    "v": "≈ 1.512",
+    "at": 9
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "1 ĐIỂM TRÊN MA5",
+     "at": 10,
+     "acc": true
+    },
+    {
+     "text": "đặt ở ngày 06/01/2022",
+     "at": [
+      10,
+      "đặt"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "BỎ PHIÊN CŨ NHẤT",
+     "at": 11
+    },
+    {
+     "text": "THÊM PHIÊN MỚI NHẤT",
+     "at": [
+      11,
+      "thêm"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "candles",
+   "at": 12,
+   "series": "vnindex",
+   "from": "2021-12-01",
+   "to": "2022-01-31",
+   "drawAt": [
+    12,
+    null,
+    0,
+    0.1
+   ],
+   "until": [
+    13,
+    "nối"
+   ],
+   "title": "VN-INDEX + MA5",
+   "range": "12/2021 → 01/2022",
+   "ind": [
+    {
+     "k": "sma",
+     "n": 5,
+     "color": "#38bdf8",
+     "at": [
+      13,
+      "nối"
+     ]
+    }
+   ],
+   "source": "DỮ LIỆU: HOSE (VNSTOCK/VCI), KÊNH TỰ TÍNH. MINH HOẠ QUÁ KHỨ, KHÔNG PHẢI KHUYẾN NGHỊ."
+  },
+  {
+   "type": "question",
+   "at": 14,
+   "text": "MA20, MA50, MA200\nkhác nhau ở đâu?"
+  },
+  {
+   "type": "ledger",
+   "at": 15,
+   "title": "CHỈ KHÁC ĐỘ RỘNG CỬA SỔ",
+   "rows": [
+    {
+     "k": "MA20",
+     "v": "≈ 1 THÁNG GIAO DỊCH",
+     "at": 16
+    },
+    {
+     "k": "MA200",
+     "v": "≈ GẦN 1 NĂM",
+     "at": [
+      16,
+      "hai"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "20 · 50 · 200",
+     "at": 17,
+     "acc": true
+    },
+    {
+     "text": "23? 187?",
+     "at": [
+      17,
+      "chứ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 18,
+   "items": [
+    {
+     "text": "ĐỊNH LUẬT",
+     "at": 18,
+     "fx": "strike",
+     "strikeAt": [
+      18,
+      "đó"
+     ]
+    },
+    {
+     "text": "THÓI QUEN",
+     "at": [
+      18,
+      "quen"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 20,
+   "title": "HAI CÁCH ĐỌC MỘT ĐƯỜNG MA",
+   "rows": [
+    {
+     "k": "1",
+     "v": "ĐỘ DỐC: LÊN · NGANG · XUỐNG",
+     "at": 21
+    },
+    {
+     "k": "2",
+     "v": "GIÁ TRÊN HAY DƯỚI · CÁCH BAO XA",
+     "at": 22
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 23,
+   "items": [
+    {
+     "text": "CỬA SỔ RỘNG",
+     "at": 23,
+     "sm": true
+    },
+    {
+     "text": "MƯỢT HƠN · CHẬM HƠN",
+     "at": [
+      23,
+      "mượt"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "ĐIỂM TRUNG BÌNH HỌC KỲ"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

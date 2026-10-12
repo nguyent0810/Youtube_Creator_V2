@@ -1,0 +1,400 @@
+{
+ "title": "Bốn con số làm nên một cây nến",
+ "lines": [
+  {
+   "t": "Ở bài hai, mình đã đi hết một phiên HOSE, từ chín giờ sáng tới ba giờ chiều.",
+   "p": 0.8
+  },
+  "Nếu chỉ được giữ lại bốn con số của cả phiên ấy, bạn sẽ giữ những số nào?",
+  {
+   "t": "Người vẽ biểu đồ chọn giá mở cửa, giá cao nhất, giá thấp nhất, và giá đóng cửa.",
+   "p": 1.0
+  },
+  "Hãy nghĩ tới nhiệt độ một ngày ở nhà bạn.",
+  "Sáng mở cửa ra là bao nhiêu độ, lúc nóng nhất bao nhiêu, lúc mát nhất bao nhiêu, và tối về còn bao nhiêu.",
+  "Nếu chỉ ghi nhiệt độ buổi tối, bạn biết ngày hôm ấy kết thúc ra sao, nhưng không biết nó đã trải qua những gì.",
+  {
+   "t": "Biểu đồ đường bạn hay thấy trên báo giống như vậy: nó thường chỉ nối các giá đóng cửa với nhau.",
+   "p": 1.0
+  },
+  "Cây nến thì giữ đủ cả bốn con số.",
+  "Phần thân là đoạn từ giá mở cửa tới giá đóng cửa.",
+  "Hai sợi mảnh ở trên và dưới gọi là bóng nến, hay râu nến, kéo tới giá cao nhất và giá thấp nhất của phiên.",
+  "Vậy một cây nến là một phiên.",
+  {
+   "t": "Biểu đồ nến ngày là nhiều phiên như thế đặt cạnh nhau, từ trái sang phải.",
+   "p": 1.0
+  },
+  {
+   "t": "Mà sao lại gọi là nến?",
+   "ask": 1
+  },
+  "Vì phần thân trông như thân cây nến, còn bóng phía trên giống sợi bấc.",
+  "Cách vẽ này đến từ Nhật Bản, và đi kèm một câu chuyện rất hay.",
+  "Người ta kể rằng một thương nhân buôn gạo người Nhật ở thế kỷ mười tám đã nghĩ ra nó.",
+  "Người làm cho biểu đồ nến trở nên phổ biến ở phương Tây là Steve Nison, qua một cuốn sách năm một nghìn chín trăm chín mươi mốt.",
+  "Vài năm sau, chính ông viết rằng, theo tìm hiểu của ông, nhiều khả năng thương nhân ấy chưa từng dùng biểu đồ nến.",
+  {
+   "t": "Theo ông, nến nhiều khả năng ra đời muộn hơn, vào cuối thế kỷ mười chín.",
+   "p": 1.0
+  },
+  "Một câu chuyện đẹp chưa chắc là chuyện thật. Giữ ý ấy trong đầu nhé, lát nữa nó sẽ quay lại."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "BỐN CON SỐ\nLÀM NÊN MỘT CÂY NẾN",
+   "sub": "MỞ CỬA · CAO NHẤT · THẤP NHẤT · ĐÓNG CỬA",
+   "vid": "5767251",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Ở"
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 1,
+   "tag": {
+    "text": "MỘT PHIÊN HOSE · 9:00 → 15:00 · GIỮ LẠI 4 CON SỐ",
+    "at": [
+     1,
+     "Nếu"
+    ]
+   },
+   "items": [
+    {
+     "year": "O",
+     "text": "GIÁ MỞ CỬA",
+     "at": [
+      2,
+      "mở"
+     ]
+    },
+    {
+     "year": "H",
+     "text": "GIÁ CAO NHẤT",
+     "at": [
+      2,
+      "cao"
+     ]
+    },
+    {
+     "year": "L",
+     "text": "GIÁ THẤP NHẤT",
+     "at": [
+      2,
+      "thấp"
+     ]
+    },
+    {
+     "year": "C",
+     "text": "GIÁ ĐÓNG CỬA",
+     "at": [
+      2,
+      "đóng"
+     ]
+    }
+   ],
+   "srcnote": "O · H · L · C = open, high, low, close"
+  },
+  {
+   "type": "broll",
+   "at": 3,
+   "vid": "16294424",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "NHIỆT ĐỘ MỘT NGÀY Ở NHÀ BẠN",
+     "at": [
+      3,
+      "Hãy"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "NHIỆT ĐỘ MỘT NGÀY · VÍ DỤ GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "SÁNG MỞ CỬA RA",
+     "v": "27°",
+     "at": [
+      4,
+      "Sáng"
+     ]
+    },
+    {
+     "k": "LÚC NÓNG NHẤT",
+     "v": "35°",
+     "at": [
+      4,
+      "nóng"
+     ]
+    },
+    {
+     "k": "LÚC MÁT NHẤT",
+     "v": "26°",
+     "at": [
+      4,
+      "mát"
+     ]
+    },
+    {
+     "k": "TỐI VỀ",
+     "v": "29°",
+     "at": [
+      4,
+      "tối"
+     ]
+    }
+   ],
+   "total": {
+    "k": "CHỈ GHI BUỔI TỐI",
+    "v": "29° — KHÔNG BIẾT CẢ NGÀY",
+    "at": [
+     5,
+     "buổi"
+    ]
+   },
+   "srcnote": "Ví dụ giả định để minh hoạ, không phải số đo thật"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "BIỂU ĐỒ ĐƯỜNG TRÊN BÁO",
+     "at": [
+      6,
+      "Biểu"
+     ],
+     "sm": true
+    },
+    {
+     "text": "THƯỜNG CHỈ NỐI GIÁ ĐÓNG CỬA",
+     "at": [
+      6,
+      "thường"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "candles",
+   "at": 7,
+   "series": "vnindex",
+   "from": "2026-03-09",
+   "to": "2026-03-13",
+   "drawAt": [
+    7,
+    "Cây",
+    0,
+    0.1
+   ],
+   "until": [
+    7,
+    "giữ"
+   ],
+   "title": "GIẢI PHẪU CÂY NẾN",
+   "range": "VN-INDEX · 09–13/03/2026 · O · H · L · C",
+   "ind": [],
+   "source": "DỮ LIỆU: VN-INDEX · HOSE (VNSTOCK/VCI) · KÊNH TỰ TÍNH · MINH HOẠ QUÁ KHỨ, KHÔNG PHẢI KHUYẾN NGHỊ",
+   "marks": [
+    {
+     "date": "2026-03-09",
+     "text": "THÂN = MỞ CỬA → ĐÓNG CỬA",
+     "pos": "above",
+     "tone": "gold",
+     "at": [
+      8,
+      "Phần"
+     ],
+     "dx": 450,
+     "dy": 40
+    },
+    {
+     "date": "2026-03-10",
+     "text": "BÓNG TRÊN → CAO NHẤT",
+     "pos": "above",
+     "tone": "up",
+     "at": [
+      9,
+      "trên"
+     ],
+     "dx": 60
+    },
+    {
+     "date": "2026-03-10",
+     "text": "BÓNG DƯỚI → THẤP NHẤT",
+     "pos": "below",
+     "tone": "down",
+     "at": [
+      9,
+      "dưới"
+     ],
+     "dx": 400
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "1 CÂY NẾN = 1 PHIÊN",
+     "at": [
+      10,
+      "Vậy"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "candles",
+   "at": 11,
+   "series": "vnindex",
+   "from": "2026-02-02",
+   "to": "2026-04-03",
+   "drawAt": [
+    11,
+    "Biểu",
+    0,
+    0.1
+   ],
+   "until": [
+    11,
+    "phải"
+   ],
+   "title": "BIỂU ĐỒ NẾN NGÀY · VN-INDEX",
+   "range": "02/2026 – 04/2026 · TỪ TRÁI SANG PHẢI",
+   "ind": [],
+   "source": "DỮ LIỆU: VN-INDEX · HOSE (VNSTOCK/VCI) · KÊNH TỰ TÍNH · MINH HOẠ QUÁ KHỨ, KHÔNG PHẢI KHUYẾN NGHỊ"
+  },
+  {
+   "type": "question",
+   "at": 12,
+   "text": "Mà sao lại\ngọi là nến?"
+  },
+  {
+   "type": "broll",
+   "at": 13,
+   "vid": "12550702",
+   "veil": 0.45,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "THÂN NẾN",
+     "at": [
+      13,
+      "Vì"
+     ]
+    },
+    {
+     "text": "BÓNG PHÍA TRÊN ≈ SỢI BẤC",
+     "at": [
+      13,
+      "bóng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 14,
+   "vid": "6365257",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "CÁCH VẼ ĐẾN TỪ NHẬT BẢN",
+     "at": [
+      14,
+      "Cách"
+     ]
+    },
+    {
+     "text": "CHUYỆN KỂ: THƯƠNG NHÂN GẠO, THẾ KỶ 18",
+     "at": [
+      15,
+      "thương"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 16,
+   "title": "CHUYỆN KỂ vs NGUỒN",
+   "rows": [
+    {
+     "k": "CHUYỆN KỂ",
+     "v": "THƯƠNG NHÂN GẠO, THẾ KỶ 18",
+     "at": [
+      16,
+      "Người",
+      0,
+      0.05
+     ]
+    },
+    {
+     "k": "STEVE NISON (1991)",
+     "v": "PHỔ BIẾN NẾN Ở PHƯƠNG TÂY",
+     "at": [
+      16,
+      "Steve"
+     ]
+    },
+    {
+     "k": "NISON (1994)",
+     "v": "KHÓ CÓ CHUYỆN THƯƠNG NHÂN ẤY DÙNG NẾN",
+     "at": [
+      17,
+      "chưa"
+     ]
+    }
+   ],
+   "total": {
+    "k": "NHIỀU KHẢ NĂNG",
+    "v": "ĐẦU THỜI MINH TRỊ, CUỐI THẾ KỶ 19",
+    "at": [
+     18,
+     "muộn"
+    ]
+   },
+   "srcnote": "Nison, Beyond Candlesticks (Wiley, 1994), qua Wikipedia \"Candlestick chart\""
+  },
+  {
+   "type": "slam",
+   "at": [
+    19,
+    "Một",
+    0,
+    -0.3
+   ],
+   "hitAt": [
+    19,
+    "Một"
+   ],
+   "text": "CHUYỆN ĐẸP\nCHƯA CHẮC LÀ CHUYỆN THẬT",
+   "sub": "GIỮ Ý NÀY · LÁT NỮA NÓ QUAY LẠI"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "BỐN CON SỐ LÀM NÊN MỘT CÂY NẾN"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.076
+ }
+}

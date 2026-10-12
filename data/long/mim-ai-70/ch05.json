@@ -1,0 +1,447 @@
+{
+ "title": "Con chip chơi game cứu AI",
+ "lines": [
+  {
+   "t": "Quay lại năm 1986.",
+   "p": 0.8
+  },
+  "Đúng vào khoảng giữa hai mùa đông, ba nhà nghiên cứu, David Rumelhart, Geoffrey Hinton và Ronald Williams, đăng một bài trên tạp chí Nature.",
+  "Bài báo mô tả cách huấn luyện mạng nơ-ron nhiều lớp: lan truyền ngược.",
+  {
+   "t": "Nói gọn là: mỗi lần mạng đoán sai, lỗi được truyền ngược lại qua từng lớp, để từng mối nối tự sửa một chút.",
+   "p": 1.0
+  },
+  "Ý tưởng đã có. Nhưng máy tính thời đó quá chậm, và dữ liệu quá ít, để mạng học được điều gì lớn.",
+  "Thứ còn thiếu, hoá ra lại nằm trong máy chơi game.",
+  "Card đồ hoạ, hay GPU, được chế ra để vẽ hàng triệu điểm ảnh cùng một lúc.",
+  {
+   "t": "Và tính toán của mạng nơ-ron, về bản chất, cũng là hàng triệu phép nhân làm song song.",
+   "p": 1.0
+  },
+  "Năm 2012, ở cuộc thi nhận dạng ảnh ImageNet, một nhóm ở Đại học Toronto, trong đó có Hinton, mang tới một mạng nơ-ron tên là AlexNet.",
+  "Họ huấn luyện nó trong năm, sáu ngày, trên đúng hai chiếc card chơi game GTX 580.",
+  "Kết quả: tỉ lệ đoán sai mười lăm phần trăm.",
+  {
+   "t": "Đội đứng thứ hai: hai mươi sáu phần trăm.",
+   "p": 1.0
+  },
+  "Khoảng cách đó làm cả ngành quay đầu.",
+  "Bây giờ, bạn đã hiểu vì sao chiếc perceptron năm 1958 được nhắc lại.",
+  "Ý tưởng \"ngõ cụt\" ấy, cho máy tự học qua từng lần sai, chính là nền móng của thứ mà ngày nay gọi là học sâu.",
+  {
+   "t": "Nhiều người nay cho rằng Rosenblatt đã được minh oan. Ông chỉ đi trước cỗ máy của mình quá xa.",
+   "p": 1.0
+  },
+  "Rồi tới bàn cờ mười chín nhân mười chín.",
+  "Tháng 3 năm 2016, ở Seoul, chương trình AlphaGo của DeepMind đấu với kỳ thủ Lee Sedol, một trong những người giỏi nhất thế giới.",
+  "Hơn hai trăm triệu người theo dõi.",
+  "Ván thứ hai, AlphaGo đi nước thứ ba mươi bảy, một nước mà theo chính nó, cứ mười nghìn kỳ thủ mới có một người đi.",
+  {
+   "t": "Lee Sedol thua ba ván liền.",
+   "p": 1.0
+  },
+  "Rồi ván thứ tư.",
+  "Lee Sedol đặt quân ở nước thứ bảy mươi tám.",
+  {
+   "t": "Một nước mà theo AlphaGo, xác suất một người đi là khoảng một phần mười nghìn.",
+   "p": 1.0
+  },
+  "AlphaGo đáp sai ngay nước sau, và phải gần mười nước nữa nó mới nhận ra.",
+  "Lee Sedol thắng ván đó.",
+  "Kết quả chung cuộc: AlphaGo bốn, con người một.",
+  "Máy đã biết nhìn. Đã biết chơi.",
+  "Nhưng nói chuyện với con người, thì cần thêm một mẹo nữa."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "CHƯƠNG NĂM",
+   "title": "CON CHIP CHƠI GAME\nCỨU AI",
+   "sub": "1986 — 2016",
+   "bg": "gtx580",
+   "titleAt": [
+    0,
+    "Quay"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "GIỮA HAI MÙA ĐÔNG",
+     "at": [
+      1,
+      "giữa"
+     ]
+    },
+    {
+     "text": "RUMELHART · HINTON · WILLIAMS",
+     "at": [
+      1,
+      "Rumelhart,"
+     ],
+     "sm": true
+    },
+    {
+     "text": "TẠP CHÍ NATURE",
+     "at": [
+      1,
+      "Nature."
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "nn",
+   "at": 2,
+   "fwdAt": [
+    3,
+    "đoán"
+   ],
+   "backAt": [
+    3,
+    "truyền"
+   ],
+   "label": {
+    "k": "NATURE · 1986",
+    "v": "LAN TRUYỀN NGƯỢC",
+    "at": [
+     2,
+     "lan"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "MÁY QUÁ CHẬM",
+     "at": [
+      4,
+      "chậm,"
+     ]
+    },
+    {
+     "text": "DỮ LIỆU QUÁ ÍT",
+     "at": [
+      4,
+      "dữ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": 5,
+   "img": "gtx580",
+   "tone": "color",
+   "side": {
+    "k": "GPU",
+    "h": "Chip đồ hoạ\ncho game",
+    "lines": [
+     {
+      "text": "Vẽ *hàng triệu* điểm ảnh cùng lúc",
+      "at": [
+       6,
+       "triệu"
+      ]
+     },
+     {
+      "text": "Mạng nơ-ron: *hàng triệu* phép nhân song song",
+      "at": [
+       7,
+       "phép"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "date",
+   "at": 8,
+   "day": "IMAGENET · ĐẠI HỌC TORONTO",
+   "date": "2012",
+   "sub": {
+    "text": "ALEXNET",
+    "at": [
+     8,
+     "AlexNet."
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "2 × GTX 580",
+     "at": [
+      9,
+      "hai"
+     ],
+     "acc": true
+    },
+    {
+     "text": "5–6 NGÀY HUẤN LUYỆN",
+     "at": [
+      9,
+      "năm,"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 10,
+   "title": "TỈ LỆ ĐOÁN SAI (TOP-5) · ILSVRC 2012",
+   "unit": "%",
+   "items": [
+    {
+     "k": "ALEXNET",
+     "v": 15.3,
+     "lbl": "15,3%",
+     "at": [
+      10,
+      "mười"
+     ],
+     "acc": true
+    },
+    {
+     "k": "ĐỘI THỨ HAI",
+     "v": 26.2,
+     "lbl": "26,2%",
+     "at": [
+      11,
+      "hai"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 12,
+   "text": "CẢ NGÀNH\nQUAY ĐẦU"
+  },
+  {
+   "type": "photo",
+   "at": 13,
+   "img": "perceptron",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.5,
+   "kin": [
+    {
+     "text": "PERCEPTRON · 1958",
+     "at": [
+      13,
+      "perceptron"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "MARK I PERCEPTRON",
+    "v": "ẢNH HẢI QUÂN MỸ",
+    "at": [
+     13,
+     "hiểu"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "“NGÕ CỤT”",
+     "at": [
+      14,
+      "cụt"
+     ]
+    },
+    {
+     "text": "= NỀN MÓNG CỦA HỌC SÂU",
+     "at": [
+      14,
+      "sâu."
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 15,
+   "text": "ĐI TRƯỚC\nCỖ MÁY CỦA MÌNH",
+   "sub": "FRANK ROSENBLATT"
+  },
+  {
+   "type": "go",
+   "at": 16,
+   "stones": 40,
+   "label": {
+    "k": "CỜ VÂY · 19 × 19",
+    "at": [
+     16,
+     "bàn"
+    ]
+   }
+  },
+  {
+   "type": "date",
+   "at": 17,
+   "day": "SEOUL · ALPHAGO vs LEE SEDOL",
+   "date": "03.2016",
+   "sub": {
+    "text": "DEEPMIND",
+    "at": [
+     17,
+     "DeepMind"
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "at": 18,
+   "from": 0,
+   "to": 200000000,
+   "prefix": "> ",
+   "countAt": [
+    18,
+    "hai"
+   ],
+   "label": "NGƯỜI THEO DÕI"
+  },
+  {
+   "type": "go",
+   "at": 19,
+   "stones": 48,
+   "hitAt": [
+    19,
+    "ba"
+   ],
+   "move": "37",
+   "prob": "≈ 1/10.000",
+   "label": {
+    "k": "VÁN 2 · ALPHAGO",
+    "at": [
+     19,
+     "Ván"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 20,
+   "text": "0 – 3",
+   "sub": "LEE SEDOL THUA BA VÁN LIỀN",
+   "white": true
+  },
+  {
+   "type": "print",
+   "at": 21,
+   "img": "leesedol",
+   "tone": "color",
+   "side": {
+    "k": "VÁN 4",
+    "h": "Lee Sedol"
+   }
+  },
+  {
+   "type": "go",
+   "at": 22,
+   "stones": 56,
+   "hitAt": [
+    22,
+    "bảy"
+   ],
+   "move": "78",
+   "prob": "≈ 1/10.000",
+   "label": {
+    "k": "VÁN 4 · LEE SEDOL",
+    "at": [
+     22,
+     "Lee"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 24,
+   "items": [
+    {
+     "text": "NƯỚC 79: ALPHAGO ĐI SAI",
+     "at": [
+      24,
+      "sai"
+     ],
+     "acc": true
+    },
+    {
+     "text": "gần mười nước sau mới nhận ra",
+     "at": [
+      24,
+      "nhận"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 25,
+   "text": "LEE SEDOL THẮNG"
+  },
+  {
+   "type": "slam",
+   "at": 26,
+   "text": "4 – 1",
+   "sub": "ALPHAGO · CON NGƯỜI",
+   "white": true
+  },
+  {
+   "type": "broll",
+   "at": 27,
+   "vid": "29890356",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "BIẾT NHÌN ✓",
+     "at": [
+      27,
+      "nhìn."
+     ]
+    },
+    {
+     "text": "BIẾT CHƠI ✓",
+     "at": [
+      27,
+      "chơi."
+     ]
+    },
+    {
+     "text": "BIẾT NÓI CHUYỆN?",
+     "at": [
+      28,
+      "nói"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "CON CHIP CHƠI GAME CỨU AI"
+ },
+ "bgm": {
+  "mood": "upbeat",
+  "gain": 0.12
+ }
+}

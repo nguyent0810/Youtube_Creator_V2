@@ -1,0 +1,316 @@
+{
+ "title": "Hai chiếc card trong phòng ngủ",
+ "lines": [
+  "Toronto, năm 2012.",
+  "Trong một phòng ngủ ở nhà bố mẹ, một chiếc máy tính chạy liên tục suốt nhiều ngày.",
+  {
+   "t": "Bên trong có hai card đồ hoạ, loại người ta mua để chơi game, mỗi chiếc khoảng năm trăm đô lúc ra mắt.",
+   "p": 1.0
+  },
+  "Chủ căn phòng là Alex Krizhevsky, một nghiên cứu sinh của Đại học Toronto.",
+  "Anh không chơi game.",
+  {
+   "t": "Anh đang dạy một cỗ máy nhìn ảnh.",
+   "p": 1.0
+  },
+  "Đề bài đến từ một cuộc thi: cho máy xem hơn một triệu bức ảnh, rồi bắt nó gọi tên thứ có trong ảnh, giữa một nghìn loại khác nhau.",
+  "Mèo, nấm, xe cứu hoả, một con ve bé xíu.",
+  {
+   "t": "Mỗi bức ảnh, máy được đoán năm lần. Không trúng lần nào, tính là sai.",
+   "p": 1.0
+  },
+  "Năm, sáu ngày huấn luyện trên hai chiếc card ấy.",
+  "Rồi kết quả được công bố.",
+  "Đội đứng thứ hai sai hai mươi sáu phần trăm.",
+  {
+   "t": "Cỗ máy của Alex chỉ sai mười lăm phần trăm.",
+   "p": 1.0
+  },
+  "Trong một cuộc thi mà các đội thường hơn nhau vài điểm, đây là một cú nhảy.",
+  "Các đội khác dùng những phương pháp mà con người phải tự tay chỉ cho máy nhìn vào đâu: cạnh, góc, mảng màu.",
+  "Cỗ máy của Alex tự học lấy, từ ảnh.",
+  "Nhiều người coi năm ấy là lúc trí tuệ nhân tạo hiện đại bắt đầu.",
+  {
+   "t": "Và câu hỏi của video này nằm ngay trong căn phòng ngủ ấy.",
+   "p": 1.0
+  },
+  "Vì sao một món đồ sinh ra để vẽ súng ống, xe đua trong game lại trở thành thứ quý nhất của cả ngành trí tuệ nhân tạo?",
+  "Để trả lời, phải quay lại hai mươi năm trước đó, ở một quán ăn ven đường."
+ ],
+ "scenes": [
+  {
+   "type": "date",
+   "day": "TORONTO · CANADA",
+   "date": "2012"
+  },
+  {
+   "type": "broll",
+   "at": 1,
+   "vid": "10620285",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "PHÒNG NGỦ · NHÀ BỐ MẸ",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "CHẠY SUỐT NHIỀU NGÀY",
+     "at": [
+      1,
+      "chạy"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 2,
+   "img": "gf110",
+   "tone": "color",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "move": "in",
+   "veil": 0.45,
+   "kin": [
+    {
+     "text": "2 × GTX 580",
+     "at": [
+      2,
+      "hai"
+     ]
+    },
+    {
+     "text": "card chơi game · ~499 USD mỗi chiếc lúc ra mắt (2010)",
+     "at": [
+      2,
+      "năm"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "ALEX KRIZHEVSKY",
+     "at": 3,
+     "acc": true
+    },
+    {
+     "text": "nghiên cứu sinh · Đại học Toronto",
+     "at": [
+      3,
+      "nghiên"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "KHÔNG CHƠI GAME",
+     "at": 4,
+     "fx": "strike",
+     "strikeAt": [
+      5,
+      "dạy"
+     ]
+    },
+    {
+     "text": "DẠY MÁY NHÌN ẢNH",
+     "at": [
+      5,
+      "dạy"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "from": 0,
+   "to": 1200000,
+   "prefix": "> ",
+   "suffix": " ẢNH",
+   "label": "GỌI TÊN · 1.000 LOẠI",
+   "sub": {
+    "text": "CUỘC THI ILSVRC 2012 · DỮ LIỆU IMAGENET",
+    "at": 6
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "MÈO",
+     "at": [
+      7,
+      "mèo"
+     ]
+    },
+    {
+     "text": "NẤM",
+     "at": [
+      7,
+      "nấm"
+     ]
+    },
+    {
+     "text": "XE CỨU HOẢ",
+     "at": [
+      7,
+      "xe"
+     ]
+    },
+    {
+     "text": "CON VE",
+     "at": [
+      7,
+      "ve"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "ĐOÁN 5 LẦN",
+     "at": 8,
+     "acc": true
+    },
+    {
+     "text": "trượt cả năm = sai",
+     "at": [
+      8,
+      "không"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "5–6 NGÀY",
+     "at": 9,
+     "acc": true
+    },
+    {
+     "text": "huấn luyện trên 2 card · KRIZHEVSKY, SUTSKEVER, HINTON · NEURIPS 2012",
+     "at": [
+      9,
+      "huấn"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 11,
+   "title": "TỈ LỆ SAI (TOP-5) · CÀNG THẤP CÀNG TỐT",
+   "items": [
+    {
+     "k": "ĐỘI THỨ HAI",
+     "v": 26.2,
+     "lbl": "26,2%",
+     "at": 11
+    },
+    {
+     "k": "ALEXNET",
+     "v": 15.3,
+     "lbl": "15,3%",
+     "at": 12,
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "NGUỒN",
+    "v": "KRIZHEVSKY, SUTSKEVER, HINTON · NEURIPS 2012",
+    "at": 11
+   }
+  },
+  {
+   "type": "slam",
+   "at": 13,
+   "text": "MỘT CÚ NHẢY",
+   "sub": "CÁC ĐỘI THƯỜNG HƠN NHAU VÀI ĐIỂM"
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "NGƯỜI CHỈ CHO MÁY",
+     "at": 14
+    },
+    {
+     "text": "cạnh · góc · mảng màu",
+     "at": [
+      14,
+      "cạnh"
+     ],
+     "sm": true
+    },
+    {
+     "text": "MÁY TỰ HỌC",
+     "at": 15,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "items": [
+    {
+     "text": "2012",
+     "at": 16,
+     "acc": true
+    },
+    {
+     "text": "AI HIỆN ĐẠI BẮT ĐẦU",
+     "at": [
+      16,
+      "trí"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 18,
+   "text": "Đồ vẽ game\nsao thành thứ quý nhất của AI?"
+  },
+  {
+   "type": "brand",
+   "at": 19,
+   "sub": "QUAY LẠI 20 NĂM · MỘT QUÁN ĂN VEN ĐƯỜNG"
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "HAI CHIẾC CARD TRONG PHÒNG NGỦ"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

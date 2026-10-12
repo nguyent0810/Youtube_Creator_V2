@@ -1,0 +1,39 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700;800;900&family=JetBrains+Mono:wght@700&family=Noto+Serif:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#02050a}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;color:#fff}
+.grid{position:absolute;inset:0;background:linear-gradient(rgba(125,211,252,.07) 1px,transparent 1px) 0 0/64px 64px,linear-gradient(90deg,rgba(125,211,252,.07) 1px,transparent 1px) 0 0/64px 64px}
+.glow{position:absolute;border-radius:50%;filter:blur(120px)}
+.big{position:absolute;font-weight:900;line-height:1.02;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.cy{color:#22d3ee;text-shadow:0 0 50px rgba(34,211,238,.75),0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.paper{position:absolute;width:640px;height:820px;background:#eef2f6;border-radius:6px;box-shadow:0 40px 100px #000;padding:60px 56px;color:#1e293b;font-family:'Noto Serif',serif}
+.paper .t{font-size:34px;font-weight:700;letter-spacing:.06em;text-align:center;margin-bottom:34px}
+.paper i{display:block;height:20px;border-radius:4px;background:#94a3b8;margin:22px 0;opacity:.55}
+.stamp{position:absolute;padding:12px 30px;border:12px solid #e11d48;color:#e11d48;font-weight:900;font-size:88px;transform:rotate(-14deg);white-space:nowrap;background:rgba(238,242,246,.4)}
+.bub{position:absolute;padding:28px 44px;border-radius:30px;font-family:'JetBrains Mono';font-weight:700;font-size:56px;color:#22d3ee;background:rgba(10,20,36,.95);border:3px solid rgba(34,211,238,.6);box-shadow:0 30px 80px #000,0 0 50px rgba(34,211,238,.35);border-bottom-left-radius:8px;white-space:nowrap}
+</style></head><body>
+<!-- T2: tờ hồ sơ toà (giấy trắng, không chữ thật) + dấu đỏ GIẢ + búa gỗ (SVG) + bong bóng chat "real case." ; chữ lớn "6 VỤ ÁN MA" -->
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<div class="grid"></div>
+<div class="glow" style="left:80px;top:200px;width:800px;height:700px;background:rgba(34,211,238,.25)"></div>
+<div class="glow" style="left:1200px;top:520px;width:600px;height:420px;background:rgba(225,29,72,.30)"></div>
+<div class="paper" style="left:150px;top:150px;transform:rotate(-4deg)">
+  <div class="t">UNITED STATES DISTRICT COURT</div>
+  <i style="width:90%"></i><i></i><i style="width:80%"></i><i></i><i style="width:70%"></i><i></i><i style="width:85%"></i><i></i><i style="width:60%"></i><i></i><i style="width:90%"></i><i style="width:75%"></i>
+</div>
+<div class="stamp" style="left:260px;top:520px">GIẢ ×6</div>
+<svg style="position:absolute;left:560px;top:600px" width="520" height="420" viewBox="0 0 520 420">
+  <g transform="rotate(-28 260 210)">
+    <rect x="60" y="150" width="300" height="34" rx="12" fill="#7c3f1d" stroke="#000" stroke-width="5"/>
+    <rect x="300" y="70" width="110" height="200" rx="26" fill="#9a5326" stroke="#000" stroke-width="6"/>
+    <rect x="300" y="100" width="110" height="20" fill="#d4a017"/><rect x="300" y="220" width="110" height="20" fill="#d4a017"/>
+  </g>
+  <ellipse cx="300" cy="380" rx="170" ry="30" fill="#5b2e14" stroke="#000" stroke-width="5"/>
+</svg>
+<div class="bub" style="left:820px;top:110px">“… is a real case.”</div>
+<div class="big cy" style="left:1110px;top:300px;font-size:230px">6 VỤ</div>
+<div class="big" style="left:1110px;top:560px;font-size:230px">ÁN MA</div>
+</div>
+<script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

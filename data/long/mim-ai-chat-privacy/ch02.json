@@ -1,0 +1,192 @@
+{
+ "title": "Ngả thứ nhất: trí nhớ",
+ "lines": [
+  {
+   "t": "Nhiều trợ lý AI bây giờ có tính năng nhớ.",
+   "p": 0.8
+  },
+  "Theo trang trợ giúp của OpenAI, khi bật, ChatGPT có thể nhớ những sở thích và chi tiết liên quan từ các cuộc trò chuyện của bạn.",
+  {
+   "t": "Để lần sau, bạn đỡ phải nhắc lại.",
+   "p": 1.0
+  },
+  "Trí nhớ ấy có thể đến từ những điều bạn bảo nó ghi lại, và từ chính lịch sử trò chuyện cũ.",
+  "Bạn nói một lần rằng mình ăn chay, tuần sau nó gợi ý thực đơn không có thịt.",
+  {
+   "t": "Tiện, nhưng cũng là một hồ sơ nhỏ về bạn, được ghi lại dần dần.",
+   "p": 1.0
+  },
+  "Theo chính trang trợ giúp ấy, trí nhớ không giữ từng chi tiết của từng cuộc trò chuyện.",
+  "Máy tự quyết định thông tin nào liên quan để dùng, và điều nó nhớ có thể thay đổi theo thời gian.",
+  {
+   "t": "Nghĩa là bạn không phải lúc nào cũng biết chính xác câu trả lời đang dựa vào điều gì về mình.",
+   "p": 1.0
+  },
+  "Tin tốt là ngả này bạn kiểm soát được nhiều nhất.",
+  "Trong phần cài đặt, bạn xem được nó đang nhớ gì, xoá từng mục, hoặc tắt hẳn.",
+  {
+   "t": "Theo OpenAI, khi bạn xoá một mục trí nhớ, nhật ký về mục ấy vẫn có thể được giữ thêm tối đa ba mươi ngày, vì lý do an toàn.",
+   "p": 1.0
+  },
+  "Trí nhớ chỉ phục vụ riêng bạn.",
+  "Ngả thứ hai thì khác: những gì bạn gõ có thể góp vào bài học cho cả phiên bản sau."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "NGẢ THỨ NHẤT",
+   "title": "TRÍ NHỚ",
+   "sub": "MEMORY · THEO OPENAI HELP CENTER",
+   "vid": "6963823",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "nhiều"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "SỞ THÍCH · CHI TIẾT",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "từ các cuộc trò chuyện · theo OPENAI HELP CENTER",
+     "at": [
+      1,
+      "chatgpt"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "TRÍ NHỚ LẤY TỪ",
+   "rows": [
+    {
+     "k": "1",
+     "v": "ĐIỀU BẠN BẢO NÓ GHI LẠI",
+     "at": 3
+    },
+    {
+     "k": "2",
+     "v": "LỊCH SỬ TRÒ CHUYỆN CŨ",
+     "at": [
+      3,
+      "lịch"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "“MÌNH ĂN CHAY”",
+     "at": 4
+    },
+    {
+     "text": "→ THỰC ĐƠN KHÔNG THỊT",
+     "at": [
+      4,
+      "tuần"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "MỘT HỒ SƠ NHỎ VỀ BẠN",
+   "sub": "GHI LẠI DẦN DẦN"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "MÁY TỰ QUYẾT",
+     "at": 7,
+     "acc": true
+    },
+    {
+     "text": "điều nó nhớ có thể thay đổi",
+     "at": [
+      7,
+      "điều"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 9,
+   "k": "MÔ PHỎNG · DỰNG BẰNG CHỮ THEO TRANG TRỢ GIÚP, ĐỌC 09.10.2026",
+   "name": "Cài đặt → Trí nhớ",
+   "desc": "Tên mục có thể khác theo gói / phiên bản",
+   "rows": [
+    {
+     "k": "XEM",
+     "v": "đang nhớ gì",
+     "at": [
+      10,
+      "xem"
+     ]
+    },
+    {
+     "k": "XOÁ",
+     "v": "từng mục",
+     "at": [
+      10,
+      "xoá"
+     ]
+    },
+    {
+     "k": "TẮT",
+     "v": "hẳn",
+     "at": [
+      10,
+      "tắt"
+     ]
+    }
+   ],
+   "label": {
+    "k": "LƯU Ý",
+    "v": "NHẬT KÝ MỤC ĐÃ XOÁ CÓ THỂ GIỮ TỚI 30 NGÀY · OPENAI HELP CENTER",
+    "at": 11
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "CHỈ PHỤC VỤ BẠN",
+     "at": 12
+    },
+    {
+     "text": "NGẢ HAI: BÀI HỌC CHO PHIÊN BẢN SAU",
+     "at": 13,
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "NGẢ 01",
+  "t": "TRÍ NHỚ"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

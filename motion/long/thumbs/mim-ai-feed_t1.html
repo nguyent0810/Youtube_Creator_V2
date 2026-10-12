@@ -1,0 +1,30 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700;800;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#02050a}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;color:#fff}
+.grid{position:absolute;inset:0;background:linear-gradient(rgba(125,211,252,.07) 1px,transparent 1px) 0 0/64px 64px,linear-gradient(90deg,rgba(125,211,252,.07) 1px,transparent 1px) 0 0/64px 64px}
+.glow{position:absolute;border-radius:50%;filter:blur(120px)}
+.big{position:absolute;font-weight:900;line-height:1.02;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.cy{color:#22d3ee;text-shadow:0 0 50px rgba(34,211,238,.75),0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.phone{position:absolute;left:150px;top:70px;width:520px;height:940px;border-radius:70px;background:#0b1626;border:14px solid #1e2b3d;box-shadow:0 40px 120px #000,0 0 120px rgba(34,211,238,.25);overflow:hidden;transform:rotate(-6deg)}
+.card{position:absolute;left:26px;right:26px;border-radius:28px;background:linear-gradient(160deg,#16314d,#0d1d31)}
+.card i{position:absolute;left:28px;height:18px;border-radius:9px;background:rgba(230,241,255,.35)}
+.play{position:absolute;left:50%;top:50%;width:0;height:0;margin:-40px 0 0 -26px;border-left:70px solid rgba(230,241,255,.55);border-top:40px solid transparent;border-bottom:40px solid transparent}
+.q{position:absolute;left:470px;top:40px;font-size:760px;font-weight:900;color:#22d3ee;line-height:1;text-shadow:0 0 90px rgba(34,211,238,.8),0 20px 60px #000,-10px -10px 0 #000,10px 10px 0 #000,10px -10px 0 #000,-10px 10px 0 #000}
+</style></head><body>
+<!-- T1: điện thoại với bảng tin chung chung (không logo, không giao diện app thật) + dấu "?" cyan khổng lồ; chữ "CHƯA BẤM GÌ / VẪN BIẾT?" -->
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<div class="grid"></div>
+<div class="glow" style="left:80px;top:200px;width:700px;height:700px;background:rgba(34,211,238,.30)"></div>
+<div class="glow" style="left:1200px;top:300px;width:600px;height:500px;background:rgba(56,189,248,.18)"></div>
+<div class="phone">
+  <div class="card" style="top:40px;height:520px"><div class="play"></div><i style="top:450px;width:300px"></i><i style="top:480px;width:200px;background:rgba(230,241,255,.2)"></i></div>
+  <div class="card" style="top:590px;height:400px"><div class="play"></div></div>
+</div>
+<div class="q">?</div>
+<div class="big" style="left:1000px;top:250px;font-size:150px">CHƯA BẤM GÌ</div>
+<div class="big cy" style="left:1000px;top:460px;font-size:230px">VẪN BIẾT</div>
+</div>
+<script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

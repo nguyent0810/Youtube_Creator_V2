@@ -1,0 +1,307 @@
+{
+ "title": "Nghề tên là \"máy tính\"",
+ "lines": [
+  "Hampton, bang Virginia, năm 1952.",
+  "Một căn phòng dài, kê kín những chiếc bàn.",
+  "Trên mỗi bàn là một chiếc máy tính cơ, loại máy bấm phím để cộng trừ nhân chia.",
+  {
+   "t": "Và ngồi trước mỗi chiếc máy là một người phụ nữ.",
+   "p": 1.0
+  },
+  "Họ làm việc cho NACA, cơ quan nghiên cứu hàng không của Mỹ, tiền thân của NASA.",
+  "Họ nhận những trang số liệu từ máy bay thử nghiệm, rồi tính, tính, và tính.",
+  "Chức danh của họ trên giấy tờ là: computer.",
+  {
+   "t": "Tức là: máy tính.",
+   "p": 1.0
+  },
+  "Hồi ấy, chữ \"máy tính\" chưa chỉ một cái máy.",
+  "\"Máy tính\" là một nghề. Một nghề của con người.",
+  "Chỉ trong một thế hệ, nghề ấy biến mất.",
+  "Cái tên của nó được trao cho chính cỗ máy đã làm thay họ.",
+  {
+   "t": "Còn những người phụ nữ trong căn phòng này thì sao?",
+   "p": 1.0
+  },
+  "Hôm nay, có lẽ bạn cũng đang tự hỏi một câu tương tự, về AI.",
+  "Và chắc bạn đã nghe ai đó nói: lần này khác.",
+  "Câu ấy, loài người đã nói suốt hai trăm năm.",
+  "Nên trước khi đoán về AI, mình sẽ đi lại ba chặng mà máy móc đã đi trước nó.",
+  "Những người thợ dệt đập máy ở nước Anh, hơn hai trăm năm trước.",
+  "Cô tổng đài, và cây ATM mà ai cũng đoán sẽ xoá sổ nghề giao dịch viên ngân hàng.",
+  "Và một lời tiên tri về bác sĩ X-quang, mới mười năm trước. Ở mỗi chặng, có người mất việc, có người không. Chuyện đáng hỏi là: vì sao?"
+ ],
+ "scenes": [
+  {
+   "type": "date",
+   "bg": "langley51",
+   "day": "HAMPTON · VIRGINIA",
+   "date": "1952",
+   "illus": "ẢNH: PHÒNG “MÁY TÍNH” NACA LANGLEY · 1951"
+  },
+  {
+   "type": "photo",
+   "at": 1,
+   "img": "x4",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.42,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "kin": [
+    {
+     "text": "MỘT CĂN PHÒNG DÀI",
+     "at": 1
+    },
+    {
+     "text": "MỖI MÁY · MỘT NGƯỜI PHỤ NỮ",
+     "at": 3,
+     "acc": true
+    },
+    {
+     "text": "máy tính cơ · bấm phím · cộng trừ nhân chia",
+     "at": 2,
+     "sm": true
+    }
+   ],
+   "label": {
+    "k": "ẢNH NACA · 24.03.1952",
+    "v": "BÊN MÁY TÍNH FRIDEN",
+    "at": 2
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "NACA",
+     "at": 4,
+     "acc": true
+    },
+    {
+     "text": "TIỀN THÂN CỦA NASA",
+     "at": [
+      4,
+      "tiền"
+     ]
+    },
+    {
+     "text": "cơ quan nghiên cứu hàng không của Mỹ",
+     "at": [
+      4,
+      "cơ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 5,
+   "img": "langley51",
+   "tone": "bw",
+   "move": "pan",
+   "veil": 0.45,
+   "kin": [
+    {
+     "text": "SỐ LIỆU MÁY BAY THỬ NGHIỆM",
+     "at": 5,
+     "sm": true
+    },
+    {
+     "text": "TÍNH · TÍNH · VÀ TÍNH",
+     "at": [
+      5,
+      "tính,"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "NACA LANGLEY · 1951",
+    "v": "PHÒNG “MÁY TÍNH”",
+    "at": 5
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "CHỨC DANH TRÊN GIẤY TỜ",
+     "at": 6,
+     "sm": true
+    },
+    {
+     "text": "COMPUTER",
+     "at": [
+      6,
+      "computer."
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "bg": "x4",
+   "items": [
+    {
+     "text": "= MÁY TÍNH",
+     "at": 7,
+     "acc": true,
+     "fx": "pop"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "HỒI ẤY, “MÁY TÍNH”",
+     "at": 8,
+     "sm": true
+    },
+    {
+     "text": "CHƯA PHẢI CÁI MÁY",
+     "at": [
+      8,
+      "chưa"
+     ]
+    },
+    {
+     "text": "MÀ LÀ MỘT NGHỀ CỦA CON NGƯỜI",
+     "at": 9,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 10,
+   "bg": "langley51",
+   "text": "NGHỀ ẤY\nBIẾN MẤT",
+   "sub": "CHỈ TRONG MỘT THẾ HỆ"
+  },
+  {
+   "type": "print",
+   "at": 11,
+   "img": "ibm704",
+   "tone": "bw",
+   "side": {
+    "k": "IBM 704 · NASA, 1957",
+    "h": "Cái tên\nđổi chủ",
+    "lines": [
+     {
+      "text": "Từ *con người* → sang *cỗ máy*",
+      "at": 11
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "at": 12,
+   "bg": "x4",
+   "text": "Còn những người phụ nữ\ntrong căn phòng này?"
+  },
+  {
+   "type": "broll",
+   "at": 13,
+   "vid": "9898442",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "HÔM NAY",
+     "at": 13,
+     "sm": true
+    },
+    {
+     "text": "MỘT CÂU TƯƠNG TỰ · VỀ AI",
+     "at": [
+      13,
+      "câu"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "BẠN ĐÃ NGHE AI ĐÓ NÓI",
+     "at": 14
+    },
+    {
+     "text": "“LẦN NÀY KHÁC.”",
+     "at": [
+      14,
+      "lần"
+     ],
+     "acc": true,
+     "fx": "type"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 15,
+   "bg": "luddite",
+   "from": 0,
+   "to": 200,
+   "suffix": " NĂM",
+   "label": "LOÀI NGƯỜI ĐÃ NÓI CÂU ẤY"
+  },
+  {
+   "type": "brand",
+   "at": 16,
+   "sub": "AI · VIỆC LÀM · 200 NĂM NỖI SỢ"
+  },
+  {
+   "type": "ledger",
+   "at": 17,
+   "title": "BA CHẶNG ĐƯỜNG",
+   "rows": [
+    {
+     "k": "1811",
+     "v": "THỢ DỆT ĐẬP MÁY · NƯỚC ANH",
+     "at": 17
+    },
+    {
+     "k": "1970s",
+     "v": "TỔNG ĐÀI · CÂY ATM",
+     "at": 18
+    },
+    {
+     "k": "2016",
+     "v": "LỜI TIÊN TRI VỀ BÁC SĨ X-QUANG",
+     "at": 19
+    }
+   ],
+   "total": {
+    "k": "CÂU HỎI",
+    "v": "VÌ SAO?",
+    "at": [
+     19,
+     "Chuyện"
+    ]
+   }
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "NGHỀ TÊN LÀ “MÁY TÍNH”"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.14
+ }
+}

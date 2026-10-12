@@ -1,0 +1,252 @@
+{
+  "theme": "mim",
+  "title": "Nghịch lý ATM và đoạn kết thứ hai của nghề giao dịch viên ngân hàng",
+  "description": "Theo nhà kinh tế James Bessen, trong lúc máy ATM lan rộng ở Mỹ, số giao dịch viên ngân hàng không hề giảm. Giai đoạn 1988–2004, một chi nhánh đô thị trung bình chỉ cần 13 giao dịch viên thay vì 20; chi nhánh rẻ hơn nên ngân hàng mở thêm, số chi nhánh ở đô thị tăng 43%. Máy lấy đi việc đếm tiền, giao dịch viên chuyển sang tư vấn. Nhưng câu chuyện có đoạn kết thứ hai: theo Cục Thống kê Lao động Mỹ (BLS), năm 2014 nước này có khoảng 520.500 giao dịch viên, năm 2025 còn khoảng 339.200 — mất hơn một phần ba. Điều gì đã thay đổi? Toàn bộ câu chuyện có trong video dài \"AI Có Cướp Việc Của Bạn? 200 Năm Trước Người Ta Cũng Sợ Y Như Vậy\" trên kênh Mind in the Machine.",
+  "tags": [
+    "atm",
+    "giao dịch viên ngân hàng",
+    "nghịch lý atm",
+    "ai cướp việc",
+    "tự động hoá",
+    "việc làm",
+    "james bessen",
+    "trí tuệ nhân tạo",
+    "lịch sử công nghệ"
+  ],
+  "kicker": "AI & VIỆC LÀM",
+  "sub": "NGHỊCH LÝ ATM",
+  "acc": [
+    "atm",
+    "không",
+    "giảm",
+    "thứ",
+    "hai"
+  ],
+  "say": {
+    "=ATM": "Ây-ti-em",
+    "james": "Giêm",
+    "bessen": "Bét-xần",
+    "=AI": "ây ai"
+  },
+  "lines": [
+    "Máy ATM lan rộng ở Mỹ, vậy mà số giao dịch viên ngân hàng không hề giảm.",
+    "Theo số liệu của nhà kinh tế James Bessen.",
+    "Vì sao?",
+    "Một chi nhánh đô thị trung bình cần ít giao dịch viên hơn: từ hai mươi xuống mười ba.",
+    "Chi nhánh rẻ hơn, ngân hàng mở thêm: ở đô thị, tăng bốn mươi ba phần trăm.",
+    "Máy lấy việc đếm tiền, người chuyển sang tư vấn.",
+    "Nhưng ATM có một đoạn kết thứ hai.",
+    "Theo Cục Thống kê Lao động Mỹ, năm 2014 có khoảng năm trăm hai mươi nghìn giao dịch viên.",
+    "Năm 2025, còn khoảng ba trăm ba mươi chín nghìn: mất hơn một phần ba.",
+    "Điều gì đã thay đổi?",
+    "Xem video AI có cướp việc của bạn, trên kênh."
+  ],
+  "scenes": [
+    {
+      "type": "kinetic",
+      "items": [
+        {
+          "text": "ATM",
+          "at": 0.0,
+          "acc": true,
+          "size": 260
+        },
+        {
+          "text": "GIAO DỊCH VIÊN",
+          "at": [
+            0,
+            "giao"
+          ]
+        },
+        {
+          "text": "KHÔNG HỀ GIẢM",
+          "at": [
+            0,
+            "không"
+          ],
+          "acc": true
+        },
+        {
+          "text": "Mỹ · thập niên 1970 → 2015: hơn 400.000 máy",
+          "at": [
+            0,
+            "Mỹ"
+          ],
+          "sm": true,
+          "size": 44
+        }
+      ]
+    },
+    {
+      "type": "kinetic",
+      "at": 1,
+      "items": [
+        {
+          "text": "JAMES BESSEN",
+          "at": [
+            1,
+            "James"
+          ]
+        },
+        {
+          "text": "nhà kinh tế · IMF F&D 2015",
+          "at": [
+            1,
+            "kinh"
+          ],
+          "sm": true
+        }
+      ]
+    },
+    {
+      "type": "slam",
+      "at": 2,
+      "text": "VÌ SAO?",
+      "white": true
+    },
+    {
+      "type": "ledger",
+      "at": 3,
+      "title": "1 CHI NHÁNH ĐÔ THỊ TRUNG BÌNH",
+      "rows": [
+        {
+          "k": "1988 · GIAO DỊCH VIÊN",
+          "v": "20",
+          "at": [
+            3,
+            "hai"
+          ]
+        },
+        {
+          "k": "2004 · GIAO DỊCH VIÊN",
+          "v": "13",
+          "at": [
+            3,
+            "ba"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "counter",
+      "at": 4,
+      "to": 43,
+      "prefix": "+",
+      "suffix": "%",
+      "label": "SỐ CHI NHÁNH Ở ĐÔ THỊ",
+      "until": [
+        4,
+        "phần"
+      ],
+      "sub": {
+        "text": "1988–2004 · JAMES BESSEN",
+        "at": [
+          4,
+          "đô"
+        ]
+      }
+    },
+    {
+      "type": "kinetic",
+      "at": 5,
+      "items": [
+        {
+          "text": "ĐẾM TIỀN → MÁY",
+          "at": [
+            5,
+            "đếm"
+          ]
+        },
+        {
+          "text": "TƯ VẤN → NGƯỜI",
+          "at": [
+            5,
+            "tư"
+          ],
+          "acc": true
+        }
+      ]
+    },
+    {
+      "type": "slam",
+      "at": 6,
+      "text": "ĐOẠN KẾT\nTHỨ HAI"
+    },
+    {
+      "type": "counter",
+      "at": 7,
+      "to": 520500,
+      "label": "GIAO DỊCH VIÊN · MỸ · 2014",
+      "until": [
+        7,
+        "nghìn"
+      ],
+      "sub": {
+        "text": "CỤC THỐNG KÊ LAO ĐỘNG MỸ (BLS)",
+        "at": [
+          7,
+          "Cục"
+        ]
+      }
+    },
+    {
+      "type": "counter",
+      "at": 8,
+      "from": 520500,
+      "to": 339200,
+      "label": "2025 · −34,8%",
+      "until": [
+        8,
+        "nghìn"
+      ],
+      "sub": {
+        "text": "MẤT HƠN 1/3 · BLS",
+        "at": [
+          8,
+          "mất"
+        ]
+      }
+    },
+    {
+      "type": "question",
+      "at": 9,
+      "text": "Điều gì đã thay đổi?"
+    },
+    {
+      "type": "kinetic",
+      "at": 10,
+      "items": [
+        {
+          "text": "VIDEO DÀI TRÊN KÊNH",
+          "sm": true,
+          "size": 52,
+          "at": [
+            10,
+            "video"
+          ]
+        },
+        {
+          "text": "AI CÓ CƯỚP VIỆC",
+          "at": [
+            10,
+            "cướp"
+          ]
+        },
+        {
+          "text": "CỦA BẠN?",
+          "acc": true,
+          "at": [
+            10,
+            "bạn"
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "https://www.imf.org/external/pubs/ft/fandd/2015/03/bessen.htm",
+    "https://conversableeconomist.com/2015/03/03/atms-and-a-rising-number-of-bank-tellers/",
+    "https://www.bls.gov/opub/mlr/2015/article/occupational-employment-projections-to-2024.htm",
+    "https://www.bls.gov/ooh/office-and-administrative-support/tellers.htm"
+  ]
+}

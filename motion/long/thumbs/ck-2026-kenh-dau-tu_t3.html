@@ -1,0 +1,19 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#050912}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;color:#fff}
+.abs{position:absolute}
+.big{position:absolute;font-weight:900;line-height:.95;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.card{position:absolute;width:700px;height:300px;border-radius:30px;padding:40px 50px;box-shadow:0 30px 80px rgba(0,0,0,.7)}
+.card b{display:block;font-size:48px;letter-spacing:.04em}.card span{display:block;font-family:'JetBrains Mono';font-weight:700;font-size:150px;line-height:1.1}
+</style></head><body>
+<!-- T3: sổ tiết kiệm +3,9% vs giá cả +4,2% -> "THẮNG THẬT?" -->
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<img class="abs" src="assets/long/ck-2026-kenh-dau-tu/img/_cash.jpg" style="left:0;top:0;width:1920px;height:1080px;object-fit:cover;filter:brightness(.45) saturate(.6)"/>
+<div class="abs" style="inset:0;background:radial-gradient(80% 80% at 50% 50%,rgba(10,20,38,.55),rgba(4,8,15,.95))"></div>
+<div class="card" style="left:150px;top:200px;background:linear-gradient(160deg,#0f3b25,#08200f);border:5px solid #22c55e"><b style="color:#bbf7d0">SỔ TIẾT KIỆM</b><span style="color:#4ade80">+3,9%</span></div>
+<div class="card" style="left:1070px;top:200px;background:linear-gradient(160deg,#3b1219,#1c0a0f);border:5px solid #ef4444"><b style="color:#fecaca">GIÁ CẢ</b><span style="color:#f87171">+4,2%</span></div>
+<div class="big" style="left:0;right:0;text-align:center;top:640px;font-size:180px;color:#fbbf24">THẮNG THẬT?</div>
+</div><script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

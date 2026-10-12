@@ -1,0 +1,30 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#050912}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:"Be Vietnam Pro",sans-serif;color:#fff;
+ background:linear-gradient(rgba(125,211,252,.06) 1px,transparent 1px) 0 0/80px 80px,linear-gradient(90deg,rgba(125,211,252,.06) 1px,transparent 1px) 0 0/80px 80px,radial-gradient(80% 70% at 50% 40%,#16263f 0%,#0a1426 60%,#04080f 100%)}
+.abs{position:absolute}.big{position:absolute;font-weight:900;line-height:1.05;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.tag{position:absolute;font-family:"JetBrains Mono";font-weight:700;letter-spacing:.16em;white-space:nowrap;color:#fbbf24}
+.q{position:absolute;width:150px;height:150px;border-radius:20px;border:5px solid rgba(34,211,238,.85);background:rgba(34,211,238,.16);
+ display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:"JetBrains Mono";font-weight:700;font-size:34px;color:#e0f2fe}
+.q i{font-style:normal;font-family:"Be Vietnam Pro";font-weight:900;font-size:30px;color:#67e8f9;line-height:1.3}
+.q.me{border:8px solid #fbbf24;background:rgba(251,191,36,.2);color:#fbbf24;box-shadow:0 0 60px rgba(251,191,36,.55)}.q.me i{color:#fbbf24}
+.price{position:absolute;padding:14px 34px 18px;border-radius:22px;border:5px solid #22d3ee;background:#0a1426;text-align:center;box-shadow:0 0 60px rgba(34,211,238,.4)}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<!-- T1: hàng đợi ở giá sàn (ô "BẠN" vàng ở cuối hàng) + "MUỐN BÁN / KHÔNG BÁN ĐƯỢC" -->
+<div class="big" style="left:90px;top:70px;font-size:150px">MUỐN BÁN</div>
+<div class="big" style="left:90px;top:240px;font-size:150px;color:#22d3ee">KHÔNG BÁN ĐƯỢC?</div>
+<div class="price" style="left:90px;top:560px"><div style="font-weight:900;font-size:44px;color:#22d3ee;line-height:1.3">GIÁ SÀN</div><div style="font-family:'JetBrains Mono';font-weight:700;font-size:72px;color:#22d3ee;line-height:1.2">−7%</div></div>
+<div class="q" style="left:430px;top:580px"><i>BÁN</i>09:00</div>
+<div class="q" style="left:600px;top:580px"><i>BÁN</i>09:02</div>
+<div class="q" style="left:770px;top:580px"><i>BÁN</i>09:05</div>
+<div class="q" style="left:940px;top:580px"><i>BÁN</i>09:12</div>
+<div class="q" style="left:1110px;top:580px"><i>BÁN</i>09:30</div>
+<div class="q" style="left:1280px;top:580px"><i>BÁN</i>09:48</div>
+<div class="q me" style="left:1450px;top:565px;width:180px;height:180px"><i>BẠN</i>10:05</div>
+<div class="q" style="left:1660px;top:580px"><i>BÁN</i>10:20</div>
+<div class="tag" style="left:430px;top:790px;font-size:40px;color:#94a3b8">← HÀNG ĐỢI Ở GIÁ SÀN</div>
+<div class="tag" style="left:90px;top:920px;font-size:52px">PHIÊN HOSE 9:00 → 15:00 · 09/03/2026</div>
+</div><script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

@@ -1,0 +1,222 @@
+{
+ "theme": "ck",
+ "title": "Bảo hiểm tiền gửi: từ 13/07/2026 hạn mức chi trả là 350 triệu đồng",
+ "description": "Từ ngày 13/07/2026, hạn mức chi trả bảo hiểm tiền gửi là 350 triệu đồng (trước đó 125 triệu), tính cho mỗi người tại mỗi tổ chức tham gia bảo hiểm tiền gửi, gồm cả gốc và lãi (Bảo hiểm tiền gửi Việt Nam; Thông tư 05/2026/TT-NHNN). Phần tiền gửi vượt hạn mức không nằm trong khoản bảo hiểm chi trả. Quy định mô tả theo thời điểm làm video và có thể thay đổi.\n\nBức tranh đủ năm kênh nằm trong video dài trên kênh: \"Năm 2026: Chứng Khoán, Vàng, Coin, Nhà Đất Đều Đỏ — Chỉ Sổ Tiết Kiệm Xanh. Nhưng Thắng Thật Không?\"\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.",
+ "tags": [
+  "bảo hiểm tiền gửi",
+  "350 triệu",
+  "gửi tiết kiệm",
+  "hạn mức chi trả",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "kicker": "1 CON SỐ",
+ "sub": "350 TRIỆU",
+ "acc": [
+  "mức",
+  "ba",
+  "trăm",
+  "mỗi",
+  "gốc",
+  "lãi",
+  "vượt"
+ ],
+ "lines": [
+  "Tiền gửi chỉ được bảo hiểm tới một mức.",
+  "Từ ngày 13 tháng 7 năm 2026, mức đó là ba trăm năm mươi triệu đồng.",
+  "Tính cho mỗi người, tại mỗi ngân hàng.",
+  "Gồm cả gốc lẫn lãi.",
+  "Trước đó, hạn mức là một trăm hai mươi lăm triệu.",
+  "Phần vượt hạn mức không nằm trong khoản bảo hiểm chi trả.",
+  "Con số nên biết trước khi dồn tiền vào một chỗ."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "BẢO HIỂM TIỀN GỬI",
+     "at": 0.0
+    },
+    {
+     "text": "CÓ HẠN MỨC",
+     "at": [
+      0,
+      "tới"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:6763403",
+   "veil": 0.62
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 350,
+   "suffix": " TRIỆU",
+   "label": "HẠN MỨC CHI TRẢ TỪ 13/07/2026",
+   "until": [
+    1,
+    "triệu"
+   ],
+   "sub": {
+    "text": "NGUỒN: BẢO HIỂM TIỀN GỬI VIỆT NAM",
+    "at": [
+     1,
+     "mức"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "350 triệu tính thế nào?",
+   "nodes": [
+    {
+     "text": "mỗi người",
+     "x": 0.26,
+     "y": 0.3,
+     "at": [
+      2,
+      "mỗi"
+     ]
+    },
+    {
+     "text": "mỗi ngân hàng",
+     "x": 0.72,
+     "y": 0.3,
+     "at": [
+      2,
+      "mỗi",
+      1
+     ]
+    },
+    {
+     "text": "gốc + lãi",
+     "x": 0.5,
+     "y": 0.56,
+     "at": [
+      3,
+      "gốc"
+     ]
+    },
+    {
+     "text": "tối đa 350 triệu",
+     "x": 0.5,
+     "y": 0.84,
+     "at": [
+      3,
+      "lãi"
+     ],
+     "c": "acc",
+     "shape": "circle"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 2,
+     "at": [
+      2,
+      "người"
+     ]
+    },
+    {
+     "from": 1,
+     "to": 2,
+     "at": [
+      2,
+      "ngân"
+     ],
+     "bend": -0.12
+    },
+    {
+     "from": 2,
+     "to": 3,
+     "at": [
+      3,
+      "lẫn"
+     ],
+     "bend": 0
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "at": 4,
+   "kind": "bars",
+   "title": "HẠN MỨC CHI TRẢ",
+   "unit": "TRIỆU ĐỒNG",
+   "bars": [
+    {
+     "label": "TRƯỚC\n13/07/2026",
+     "v": 125,
+     "text": "125",
+     "c": "ref",
+     "at": [
+      4,
+      "một"
+     ]
+    },
+    {
+     "label": "TỪ\n13/07/2026",
+     "v": 350,
+     "text": "350",
+     "c": "up",
+     "at": [
+      4,
+      "triệu"
+     ]
+    }
+   ],
+   "note": "NGUỒN: DIV · TT 05/2026/TT-NHNN"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "PHẦN VƯỢT HẠN MỨC",
+     "at": 5
+    },
+    {
+     "text": "KHÔNG ĐƯỢC CHI TRẢ",
+     "at": [
+      5,
+      "không"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7710775",
+   "ms": 8,
+   "veil": 0.68,
+   "at": 5
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "CON SỐ NÊN BIẾT",
+   "cards": [
+    {
+     "k": "MỖI NGƯỜI · MỖI NGÂN HÀNG",
+     "v": "350 TRIỆU",
+     "sub": "trước khi dồn tiền vào một chỗ",
+     "at": [
+      6,
+      "nên"
+     ],
+     "c": "acc"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://div.gov.vn/tu-ngay-13-7-2026-han-muc-chi-tra-tien-bao-hiem-cua-bao-hiem-tien-gui-viet-nam-la-350-trieu-dong",
+  "https://luatvietnam.vn/bao-hiem/luat-bao-hiem-tien-gui-2025-va-4-diem-moi-dang-chu-y-563-105890-article.html"
+ ],
+ "say": {},
+ "mix": true,
+ "imgs": {},
+ "rules": 2
+}

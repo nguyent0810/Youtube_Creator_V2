@@ -1,0 +1,291 @@
+{
+ "title": "Một cây nến đỏ",
+ "lines": [
+  "Nhìn cây nến đỏ rất dài này.",
+  "Nó không có một chữ nào, không có một con số nào.",
+  {
+   "t": "Nhưng nếu biết đọc, bạn sẽ thấy cả một ngày giao dịch nằm trong đó.",
+   "p": 1.0
+  },
+  "Bạn biết ngày này rồi: thứ Hai, chín tháng ba năm nay, ngày VN-Index mất một trăm mười lăm điểm.",
+  "Cây nến kể rằng hôm ấy chỉ số mở cửa ở đúng mức cao nhất của ngày.",
+  "Sau đó nó gần như chỉ đi xuống, và đóng cửa chỉ cách đáy của phiên khoảng hai điểm.",
+  {
+   "t": "Suốt phiên, chưa lúc nào chỉ số lên được cao hơn giá mở cửa.",
+   "p": 1.0
+  },
+  "Đó là việc một cây nến làm rất giỏi: kể lại một phiên đã qua, gọn trong một hình.",
+  "Nhưng trên mạng, người ta hay hứa với bạn nhiều hơn thế:",
+  {
+   "t": "Thấy cây búa là đáy đã tới, thấy ba chàng lính trắng là sóng tăng bắt đầu.",
+   "q": 1,
+   "diy": 1
+  },
+  {
+   "t": "Vậy nhìn nến, mình có đoán được ngày mai không?",
+   "ask": 1
+  },
+  {
+   "t": "Đó chính là điều video này sẽ đi tìm, bằng dữ liệu thật.",
+   "p": 1.0
+  },
+  "Cuối video, mình sẽ đưa bạn quay lại cây nến thứ Sáu của cùng tuần ấy, một cây nến mà sách gọi là dấu hiệu lưỡng lự.",
+  "Lúc đó bạn sẽ tự đọc được nó, và sẽ thấy tám năm dữ liệu VN-Index nói gì về những lời hứa kia.",
+  "Đây là Biểu Đồ Biết Nói. Tiền bạc, giải thích bằng dữ liệu.",
+  "Và đây là bài ba của khoá Chứng khoán từ số không.",
+  "Video chỉ nhằm giáo dục, không phải lời khuyên mua hay bán, và không dự báo thị trường."
+ ],
+ "scenes": [
+  {
+   "type": "candles",
+   "series": "vnindex",
+   "from": "2026-03-09",
+   "to": "2026-03-13",
+   "drawAt": [
+    0,
+    "Nhìn",
+    0,
+    0.1
+   ],
+   "until": [
+    0,
+    "đỏ"
+   ],
+   "title": "VN-INDEX",
+   "range": "MỘT CÂY NẾN = MỘT NGÀY GIAO DỊCH",
+   "ind": [],
+   "source": "VIDEO GIÁO DỤC · KHÔNG PHẢI LỜI KHUYÊN MUA, BÁN · DỮ LIỆU: HOSE (VNSTOCK/VCI), MINH HOẠ QUÁ KHỨ",
+   "marks": [
+    {
+     "date": "2026-03-09",
+     "text": "CẢ MỘT NGÀY GIAO DỊCH",
+     "pos": "above",
+     "tone": "gold",
+     "at": [
+      2,
+      "cả"
+     ],
+     "dx": 450,
+     "dy": 40
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 3,
+   "day": "THỨ HAI",
+   "date": "09.03.2026",
+   "sub": {
+    "text": "VN-INDEX −115,05 ĐIỂM · NGÀY CỦA BÀI 2",
+    "at": [
+     3,
+     "mất"
+    ]
+   },
+   "srcnote": "Giá đóng cửa VN-Index (vnstock/VCI) · −115,05 điểm: báo Nhân Dân 09/03/2026"
+  },
+  {
+   "type": "candles",
+   "at": 4,
+   "series": "vnindex",
+   "from": "2026-03-09",
+   "to": "2026-03-13",
+   "drawAt": [
+    4,
+    "Cây",
+    0,
+    0.1
+   ],
+   "until": [
+    4,
+    "Cây",
+    0,
+    0.5
+   ],
+   "title": "VN-INDEX · 09/03/2026",
+   "range": "ĐỌC MỘT CÂY NẾN",
+   "ind": [],
+   "source": "DỮ LIỆU: VN-INDEX · HOSE (VNSTOCK/VCI) · KÊNH TỰ TÍNH · MINH HOẠ QUÁ KHỨ, KHÔNG PHẢI KHUYẾN NGHỊ",
+   "marks": [
+    {
+     "date": "2026-03-09",
+     "text": "MỞ CỬA = CAO NHẤT · 1.757,73",
+     "pos": "above",
+     "tone": "gold",
+     "at": [
+      4,
+      "mở"
+     ],
+     "dx": 500,
+     "dy": 40
+    },
+    {
+     "date": "2026-03-09",
+     "text": "ĐÓNG CỬA 1.652,79 · CÁCH ĐÁY ≈ 2 ĐIỂM",
+     "pos": "below",
+     "tone": "down",
+     "at": [
+      5,
+      "đóng"
+     ],
+     "dx": 200
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "VIỆC CÂY NẾN LÀM RẤT GIỎI",
+     "at": [
+      7,
+      "Đó"
+     ],
+     "sm": true
+    },
+    {
+     "text": "KỂ LẠI MỘT PHIÊN ĐÃ QUA",
+     "at": [
+      7,
+      "kể"
+     ]
+    },
+    {
+     "text": "GỌN TRONG MỘT HÌNH",
+     "at": [
+      7,
+      "gọn"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 8,
+   "typeAt": [
+    9,
+    "Thấy"
+   ],
+   "qline": 9,
+   "lbl": "LỜI TRUYỀN MIỆNG · DIỄN Ý",
+   "text": "Thấy cây búa là đáy đã tới, thấy ba chàng lính trắng là sóng tăng bắt đầu.",
+   "by": "Lời hay gặp trên mạng (diễn ý)"
+  },
+  {
+   "type": "question",
+   "at": 10,
+   "text": "Nhìn nến,\nmình có đoán được\nngày mai không?"
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "VIDEO NÀY SẼ ĐI TÌM",
+     "at": [
+      11,
+      "Đó"
+     ]
+    },
+    {
+     "text": "BẰNG DỮ LIỆU THẬT",
+     "at": [
+      11,
+      "bằng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "candles",
+   "at": 12,
+   "series": "vnindex",
+   "from": "2026-03-09",
+   "to": "2026-03-13",
+   "drawAt": [
+    12,
+    null,
+    0,
+    0.15
+   ],
+   "until": [
+    12,
+    "quay"
+   ],
+   "title": "CUỐI VIDEO · CÂY NẾN THỨ SÁU",
+   "range": "VN-INDEX · 09–13/03/2026",
+   "ind": [],
+   "source": "DỮ LIỆU: VN-INDEX · HOSE (VNSTOCK/VCI) · KÊNH TỰ TÍNH · MINH HOẠ QUÁ KHỨ, KHÔNG PHẢI KHUYẾN NGHỊ",
+   "marks": [
+    {
+     "date": "2026-03-13",
+     "text": "THỨ SÁU · ?",
+     "pos": "above",
+     "tone": "gold",
+     "at": [
+      12,
+      "thứ"
+     ],
+     "dx": -60
+    },
+    {
+     "date": "2026-03-13",
+     "text": "CUỐI VIDEO: QUAY LẠI ĐÂY",
+     "pos": "below",
+     "tone": "gold",
+     "at": [
+      13,
+      "Lúc"
+     ],
+     "dx": -260
+    }
+   ]
+  },
+  {
+   "type": "brand",
+   "at": 14,
+   "sub": "TIỀN BẠC · GIẢI THÍCH BẰNG DỮ LIỆU"
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "BÀI 3 · CHỨNG KHOÁN TỪ SỐ 0",
+     "at": [
+      15,
+      "Và"
+     ],
+     "acc": true
+    },
+    {
+     "text": "chỉ nhằm giáo dục · không phải lời khuyên mua hay bán",
+     "at": [
+      16,
+      "Video"
+     ],
+     "sm": true
+    },
+    {
+     "text": "không dự báo thị trường",
+     "at": [
+      16,
+      "dự"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "MỘT CÂY NẾN KỂ GÌ"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.143
+ }
+}

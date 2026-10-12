@@ -1,0 +1,290 @@
+{
+ "title": "Người gác cổng",
+ "lines": [
+  {
+   "t": "Quay lại New York, ngày 22 tháng 6 năm 2023.",
+   "p": 0.8
+  },
+  "Thẩm phán Castel phạt hai luật sư và văn phòng của họ năm nghìn đô la, tức là hơn một trăm hai mươi triệu đồng.",
+  "Nhưng hình phạt mình thấy đáng nhớ nhất là mấy lá thư.",
+  {
+   "t": "Họ phải gửi thư cho từng thẩm phán có thật đã bị ghi tên là tác giả của những phán quyết giả, kèm theo bản phán quyết bịa mang tên người ấy.",
+   "p": 1.0
+  },
+  "Cùng ngày, vụ kiện của ông Mata bị bác, vì đã nộp quá thời hạn hai năm. Lý do ấy không liên quan gì tới ChatGPT.",
+  {
+   "t": "Tính tới ngày 5 tháng 10 năm 2026, cơ sở dữ liệu của nhà nghiên cứu luật Damien Charlotin đã ghi hơn hai nghìn quyết định của các toà án trên thế giới, nơi toà nhận thấy, hoặc ngầm cho rằng, có người đã dựa vào nội dung do AI bịa ra.",
+   "p": 1.0
+  },
+  "Cỗ máy không nói dối theo nghĩa của con người. Nó không có ý lừa ai, và nhiều khi không biết là mình đang bịa.",
+  "Nó chỉ viết tiếp câu chữ nghe hợp lý nhất. Và ở hầu hết các kỳ thi, nó được dạy rằng: đừng bỏ trống.",
+  "Nên người gác cổng cuối cùng vẫn là bạn.",
+  "\"Có thật không?\" vẫn là câu hỏi đáng giá nhất.",
+  "Chỉ cần hỏi đúng chỗ: một nguồn bạn tự mở ra, không phải cỗ máy vừa trả lời bạn.",
+  "Vậy mình hỏi bạn: lần gần nhất một AI trả lời bạn rất chắc chắn, mà hoá ra lại sai, là chuyện gì?",
+  {
+   "t": "Kể ở phần bình luận nhé.",
+   "p": 1.0
+  }
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "8",
+   "k": "CHƯƠNG TÁM",
+   "title": "NGƯỜI\nGÁC CỔNG",
+   "sub": "NEW YORK · 22.06.2023",
+   "bg": "moynihan",
+   "illus": "TOÀ MOYNIHAN, MANHATTAN · ẢNH 2026",
+   "titleAt": [
+    0,
+    "quay"
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 0,
+   "to": 5000,
+   "prefix": "$",
+   "label": "TIỀN PHẠT · HAI LUẬT SƯ VÀ VĂN PHÒNG (MỘT KHOẢN CHUNG)",
+   "sub": {
+    "text": "HƠN 120 TRIỆU ĐỒNG (TỈ GIÁ ≥ 24.000 Đ/USD) · ECF 54",
+    "at": [
+     1,
+     "tức"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "HÌNH PHẠT ĐÁNG NHỚ NHẤT",
+     "at": 2,
+     "sm": true
+    },
+    {
+     "text": "MẤY LÁ THƯ",
+     "at": [
+      2,
+      "mấy"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 3,
+   "k": "KẾT LUẬN (b) · ECF 54",
+   "name": "Thư gửi từng\nthẩm phán",
+   "tag": {
+    "text": "TRÍCH HỒ SƠ TOÀ"
+   },
+   "rows": [
+    {
+     "k": "GỬI",
+     "v": "từng *thẩm phán có thật*",
+     "at": 3
+    },
+    {
+     "k": "BỊ GHI TÊN",
+     "v": "tác giả *phán quyết giả*",
+     "at": [
+      3,
+      "tác"
+     ]
+    },
+    {
+     "k": "KÈM THEO",
+     "v": "*bản phán quyết bịa* mang tên họ",
+     "at": [
+      3,
+      "kèm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "CÙNG NGÀY: VỤ KIỆN CỦA ÔNG MATA BỊ BÁC",
+     "at": 4
+    },
+    {
+     "text": "VÌ QUÁ HẠN HAI NĂM",
+     "at": [
+      4,
+      "vì"
+     ],
+     "acc": true
+    },
+    {
+     "text": "không liên quan gì tới ChatGPT",
+     "at": [
+      4,
+      "lý"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 0,
+   "to": 2149,
+   "suffix": " QUYẾT ĐỊNH",
+   "label": "CỦA CÁC TOÀ ÁN TRÊN THẾ GIỚI · TÍNH TỚI 05.10.2026",
+   "sub": {
+    "text": "CƠ SỞ DỮ LIỆU CỦA NHÀ NGHIÊN CỨU LUẬT DAMIEN CHARLOTIN",
+    "at": [
+     5,
+     "cơ"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    5,
+    "nơi"
+   ],
+   "items": [
+    {
+     "text": "TOÀ NHẬN THẤY — HOẶC NGẦM CHO RẰNG",
+     "at": [
+      5,
+      "nơi"
+     ],
+     "sm": true
+    },
+    {
+     "text": "CÓ NGƯỜI DỰA VÀO NỘI DUNG DO AI BỊA",
+     "at": [
+      5,
+      "có"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "KHÔNG NÓI DỐI THEO NGHĨA CON NGƯỜI",
+     "at": 6
+    },
+    {
+     "text": "NHIỀU KHI KHÔNG BIẾT MÌNH ĐANG BỊA",
+     "at": [
+      6,
+      "nhiều"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 7,
+   "vid": "6672451",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "VIẾT TIẾP CÂU NGHE HỢP LÝ NHẤT",
+     "at": 7,
+     "sm": true
+    },
+    {
+     "text": "ĐỪNG BỎ TRỐNG",
+     "at": [
+      7,
+      "đừng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "text": "NGƯỜI GÁC CỔNG VẪN LÀ BẠN"
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "“CÓ THẬT KHÔNG?”",
+     "at": 9,
+     "acc": true
+    },
+    {
+     "text": "vẫn là câu hỏi đáng giá nhất",
+     "at": [
+      9,
+      "vẫn"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 10,
+   "vid": "5636977",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "HỎI ĐÚNG CHỖ",
+     "at": 10,
+     "acc": true
+    },
+    {
+     "text": "một nguồn bạn tự mở ra — không phải cỗ máy vừa trả lời bạn",
+     "at": [
+      10,
+      "một"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 11,
+   "text": "Lần gần nhất AI trả lời rất chắc chắn\nmà hoá ra sai, là chuyện gì?"
+  },
+  {
+   "type": "broll",
+   "at": 12,
+   "vid": "13375774",
+   "veil": 0.35,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "KỂ Ở PHẦN BÌNH LUẬN",
+     "at": 12,
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 08",
+  "t": "NGƯỜI GÁC CỔNG"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.14
+ }
+}

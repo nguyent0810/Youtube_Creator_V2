@@ -1,0 +1,579 @@
+{
+ "title": "Tài khoản của bạn không phải là VN-Index",
+ "lines": [
+  {
+   "t": "Giờ quay lại tài khoản của bạn: năm cơ chế khiến nó đi khác chỉ số.",
+   "p": 0.8
+  },
+  "Thứ nhất: bạn không sở hữu chỉ số, bạn sở hữu vài mã.",
+  "Năm nay nhóm cổ phiếu giảm đông hơn hẳn, nên cầm ba, bốn mã chọn gần như ngẫu nhiên thì dễ rơi vào nhóm giảm hơn.",
+  {
+   "t": "Ngay cả các quỹ cổ phiếu, nửa đầu năm trung bình âm khoảng một phần trăm, trong khi VN-Index tăng hơn bốn phần trăm.",
+   "p": 1.0
+  },
+  "Thứ hai: thời điểm bỏ tiền vào.",
+  "Giả sử cuối năm ngoái bạn bỏ mười triệu, lời lỗ đúng theo VN-Index.",
+  "Ngày mười tám tháng năm, thấy thị trường đang lên, bạn bỏ thêm năm mươi triệu.",
+  "Đến ba mươi tháng chín, sáu mươi triệu đó còn khoảng năm mươi lăm phẩy tám triệu: âm khoảng bảy phần trăm, dù chỉ số âm chưa tới một phần trăm.",
+  "Giống như lên xe buýt ở đỉnh đồi: cả chuyến gần như về chỗ cũ, còn bạn chỉ đi đúng quãng xuống dốc.",
+  "Ai bỏ thêm năm mươi triệu đúng ngày đáy hai mươi ba tháng ba thì ngược lại: tới cuối tháng chín, cả tài khoản lãi khoảng chín phần trăm.",
+  {
+   "t": "Nhưng không ai biết trước đâu là đỉnh, đâu là đáy. Ví dụ này để hiểu cơ chế, không phải để canh đáy.",
+   "p": 1.0
+  },
+  "Thứ ba: phí và thuế.",
+  "Mỗi lần bán, bạn nộp thuế không phẩy một phần trăm giá bán, kể cả khi bán lỗ.",
+  "Mỗi chiều mua hay bán, phí môi giới thường khoảng không phẩy mười lăm tới không phẩy ba mươi lăm phần trăm, có nơi thấp hơn, tuỳ công ty.",
+  {
+   "t": "Phí có không phẩy mấy phần trăm, sao mà ăn mòn được nhiều?",
+   "ask": 1
+  },
+  "Vì nó cộng dồn theo số lần giao dịch.",
+  "Lấy mức phí không phẩy mười lăm phần trăm mỗi chiều, một vòng mua rồi bán tốn khoảng không phẩy bốn phần trăm số tiền.",
+  "Tài khoản năm mươi triệu, mỗi tháng xoay hết vốn hai lần, một năm trả khoảng bốn triệu tám trăm nghìn đồng phí và thuế.",
+  {
+   "t": "Gần mười phần trăm số vốn, hơn nửa tháng lương của người thu nhập chín triệu.",
+   "p": 1.0
+  },
+  "Thứ tư: vay ký quỹ, hay margin.",
+  "Nó giống một chiếc kính lúp, phóng to cả lãi lẫn lỗ, và kính lúp này phải trả tiền thuê.",
+  "Giả sử bạn có năm mươi triệu, vay thêm năm mươi triệu với lãi mười ba phẩy năm phần trăm một năm, mức phổ biến đầu năm nay.",
+  "Sáu tháng sau, cổ phiếu giảm mười phần trăm.",
+  "Không vay, bạn mất mười phần trăm. Có vay, bạn mất gần hai mươi bảy phần trăm vốn của mình.",
+  "Kể cả khi cổ phiếu đứng yên suốt sáu tháng, tiền lãi vẫn lấy đi gần bảy phần trăm vốn.",
+  {
+   "t": "Giảm sâu hơn, bạn có thể bị bán bớt cổ phiếu để thu nợ, đúng lúc giá đang thấp.",
+   "p": 1.0
+  },
+  "Thứ năm: cảm xúc.",
+  "Mua đuổi khi chỉ số lên đỉnh, bán tháo khi chỉ số rơi, mỗi lần lại cộng thêm phí, thuế và rủi ro thời điểm.",
+  "Ở Việt Nam, mình không tìm thấy số liệu công khai nào về tỷ lệ nhà đầu tư đang lãi hay lỗ, nên sẽ không đưa ra con số nào."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "CHƯƠNG NĂM",
+   "title": "TÀI KHOẢN CỦA BẠN\nKHÔNG PHẢI LÀ VN-INDEX",
+   "sub": "CHỌN MÃ · THỜI ĐIỂM · PHÍ & THUẾ · MARGIN · CẢM XÚC",
+   "vid": "7681176",
+   "titleAt": [
+    0,
+    "Giờ"
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 1,
+   "vid": "7681176",
+   "ms": 8,
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "01 · CHỌN MÃ",
+     "at": [
+      1,
+      "Thứ"
+     ]
+    },
+    {
+     "text": "BẠN SỞ HỮU VÀI MÃ, KHÔNG SỞ HỮU CHỈ SỐ",
+     "at": [
+      1,
+      "bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "nhóm giảm đông hơn hẳn → vài mã dễ rơi vào nhóm giảm",
+     "at": [
+      2,
+      "Năm"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "NỬA ĐẦU 2026",
+     "at": [
+      3,
+      "Ngay"
+     ],
+     "sm": true
+    },
+    {
+     "text": "28 QUỸ MỞ CỔ PHIẾU (TB): −1,12%",
+     "at": [
+      3,
+      "quỹ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "VN-INDEX: +4,23%",
+     "at": [
+      3,
+      "VN-Index"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "candles",
+   "at": 4,
+   "series": "vnindex",
+   "from": "2025-12-01",
+   "to": "2026-09-30",
+   "drawAt": [
+    4,
+    "Thứ"
+   ],
+   "until": [
+    5,
+    "Giả"
+   ],
+   "title": "02 · THỜI ĐIỂM BỎ TIỀN VÀO",
+   "range": "VN-INDEX · 12/2025 – 09/2026",
+   "ind": [],
+   "source": "VÍ DỤ GIẢ ĐỊNH, LỜI LỖ THEO ĐÚNG VN-INDEX · MINH HOẠ, KHÔNG PHẢI CANH ĐÁY",
+   "marks": [
+    {
+     "date": "2025-12-31",
+     "text": "+10 triệu",
+     "pos": "below",
+     "tone": "gold",
+     "at": [
+      5,
+      "mười"
+     ],
+     "dx": 200,
+     "dy": 40
+    },
+    {
+     "date": "2026-05-18",
+     "text": "+50 triệu",
+     "pos": "above",
+     "tone": "gold",
+     "at": [
+      6,
+      "thêm"
+     ],
+     "dx": 220,
+     "dy": -10
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "VÍ DỤ GIẢ ĐỊNH · 30/09",
+   "rows": [
+    {
+     "k": "BỎ VÀO (31/12 + 18/05)",
+     "v": "60 TRIỆU",
+     "at": [
+      7,
+      "Đến"
+     ]
+    },
+    {
+     "k": "CÒN LẠI 30/09",
+     "v": "≈ 55,8 TRIỆU",
+     "at": [
+      7,
+      "năm"
+     ]
+    },
+    {
+     "k": "VN-INDEX CÙNG KỲ",
+     "v": "−0,9%",
+     "at": [
+      7,
+      "dù"
+     ]
+    }
+   ],
+   "total": {
+    "k": "TÀI KHOẢN",
+    "v": "≈ −7,0%",
+    "at": [
+     7,
+     "âm"
+    ]
+   }
+  },
+  {
+   "type": "broll",
+   "at": 8,
+   "vid": "36133125",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "LÊN XE Ở ĐỈNH ĐỒI",
+     "at": [
+      8,
+      "lên"
+     ]
+    },
+    {
+     "text": "CHỈ ĐI ĐÚNG QUÃNG XUỐNG DỐC",
+     "at": [
+      8,
+      "xuống"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 9,
+   "title": "60 TRIỆU BỎ VÀO · GIÁ TRỊ NGÀY 30/09",
+   "unit": "TRIỆU ĐỒNG",
+   "items": [
+    {
+     "k": "VỐN BỎ VÀO",
+     "v": 60,
+     "lbl": "60 TR",
+     "at": [
+      9,
+      "Ai"
+     ]
+    },
+    {
+     "k": "THÊM TIỀN 18/05 (ĐỈNH)",
+     "v": 55.78,
+     "lbl": "≈ 55,8 TR",
+     "at": [
+      9,
+      "Ai",
+      0,
+      0.35
+     ]
+    },
+    {
+     "k": "THÊM TIỀN 23/03 (ĐÁY)",
+     "v": 65.49,
+     "lbl": "≈ 65,5 TR (≈ +9%)",
+     "at": [
+      9,
+      "đáy"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 10,
+   "text": "ĐỂ HIỂU CƠ CHẾ,\nKHÔNG PHẢI ĐỂ CANH ĐÁY",
+   "sub": "KHÔNG AI BIẾT TRƯỚC ĐÂU LÀ ĐỈNH, ĐÂU LÀ ĐÁY"
+  },
+  {
+   "type": "ledger",
+   "at": 11,
+   "title": "03 · PHÍ VÀ THUẾ",
+   "rows": [
+    {
+     "k": "THUẾ MỖI LẦN BÁN",
+     "v": "0,1% GIÁ BÁN",
+     "at": [
+      12,
+      "Mỗi"
+     ]
+    },
+    {
+     "k": "→ KỂ CẢ KHI",
+     "v": "BÁN LỖ",
+     "at": [
+      12,
+      "kể"
+     ]
+    },
+    {
+     "k": "PHÍ MÔI GIỚI / CHIỀU",
+     "v": "≈ 0,15–0,35%",
+     "at": [
+      13,
+      "Mỗi"
+     ]
+    },
+    {
+     "k": "→ CÓ NƠI",
+     "v": "THẤP HƠN",
+     "at": [
+      13,
+      "có"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 14,
+   "text": "Phí chỉ không phẩy mấy phần trăm,\nsao ăn mòn được nhiều?"
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "CỘNG DỒN THEO SỐ LẦN GIAO DỊCH",
+     "at": [
+      15,
+      "Vì"
+     ]
+    },
+    {
+     "text": "0,15% MUA + 0,15% BÁN + 0,1% THUẾ",
+     "at": [
+      16,
+      "Lấy"
+     ]
+    },
+    {
+     "text": "≈ 0,4% MỖI VÒNG",
+     "at": [
+      16,
+      "bốn"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 17,
+   "from": 0,
+   "to": 4800000,
+   "suffix": " đ",
+   "countAt": [
+    17,
+    "Tài"
+   ],
+   "until": [
+    17,
+    "bốn"
+   ],
+   "label": "PHÍ + THUẾ 1 NĂM · 50 TRIỆU, XOAY VỐN 2 LẦN/THÁNG",
+   "sub": {
+    "text": "≈ 9,6% VỐN · HƠN NỬA THÁNG LƯƠNG 9 TRIỆU",
+    "at": [
+     18,
+     "Gần"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "items": [
+    {
+     "text": "04 · VAY KÝ QUỸ (MARGIN)",
+     "at": [
+      19,
+      "Thứ"
+     ]
+    },
+    {
+     "text": "KÍNH LÚP: PHÓNG TO CẢ LÃI LẪN LỖ",
+     "at": [
+      20,
+      "kính"
+     ],
+     "acc": true
+    },
+    {
+     "text": "và kính lúp này phải trả tiền thuê",
+     "at": [
+      20,
+      "thuê."
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 21,
+   "title": "VÍ DỤ MARGIN (GIẢ ĐỊNH)",
+   "rows": [
+    {
+     "k": "VỐN CỦA BẠN",
+     "v": "50 TRIỆU",
+     "at": [
+      21,
+      "Giả"
+     ]
+    },
+    {
+     "k": "VAY THÊM",
+     "v": "50 TRIỆU",
+     "at": [
+      21,
+      "vay"
+     ]
+    },
+    {
+     "k": "LÃI VAY",
+     "v": "13,5%/NĂM",
+     "at": [
+      21,
+      "lãi"
+     ]
+    },
+    {
+     "k": "6 THÁNG SAU",
+     "v": "CỔ PHIẾU −10%",
+     "at": [
+      22,
+      "Sáu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 23,
+   "title": "VỐN CÒN LẠI SAU 6 THÁNG · CỔ PHIẾU −10%",
+   "unit": "TRIỆU ĐỒNG · ĐÃ TRỪ LÃI VAY",
+   "items": [
+    {
+     "k": "VỐN BAN ĐẦU",
+     "v": 50,
+     "lbl": "50 TR",
+     "at": [
+      23,
+      "Không"
+     ]
+    },
+    {
+     "k": "KHÔNG VAY",
+     "v": 45,
+     "lbl": "45 TR (−10%)",
+     "at": [
+      23,
+      "mất"
+     ]
+    },
+    {
+     "k": "VAY 1:1",
+     "v": 36.63,
+     "lbl": "≈ 36,6 TR (≈ −27%)",
+     "at": [
+      23,
+      "Có"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 24,
+   "items": [
+    {
+     "text": "LÃI 13,5%/NĂM CHẠY KỂ CẢ KHI GIÁ ĐỨNG YÊN",
+     "at": [
+      24,
+      "Kể"
+     ]
+    },
+    {
+     "text": "→ −6,75% VỐN SAU 6 THÁNG",
+     "at": [
+      24,
+      "gần"
+     ],
+     "acc": true
+    },
+    {
+     "text": "giảm sâu hơn: có thể bị bán bớt để thu nợ, đúng lúc giá thấp",
+     "at": [
+      25,
+      "Giảm"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 26,
+   "vid": "39494572",
+   "ms": 12,
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "05 · CẢM XÚC",
+     "at": [
+      26,
+      "Thứ"
+     ]
+    },
+    {
+     "text": "MUA ĐUỔI KHI LÊN ĐỈNH · BÁN THÁO KHI RƠI",
+     "at": [
+      27,
+      "Mua"
+     ],
+     "acc": true
+    },
+    {
+     "text": "mỗi lần: thêm phí, thuế và rủi ro thời điểm",
+     "at": [
+      27,
+      "mỗi"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 28,
+   "items": [
+    {
+     "text": "VIỆT NAM: KÊNH CHƯA TÌM THẤY SỐ LIỆU CÔNG KHAI",
+     "at": [
+      28,
+      "Ở"
+     ]
+    },
+    {
+     "text": "VỀ TỶ LỆ NHÀ ĐẦU TƯ LÃI / LỖ",
+     "at": [
+      28,
+      "tỷ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "nên không đưa ra con số nào",
+     "at": [
+      28,
+      "không",
+      1
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "TÀI KHOẢN ≠ VN-INDEX"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

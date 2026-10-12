@@ -1,0 +1,287 @@
+{
+ "theme": "mim",
+ "title": "Phép thử Turing 2025: GPT-4.5 bị chọn là “người” 73% số lần",
+ "description": "Năm 2025, Cameron Jones và Benjamin Bergen (Đại học California, San Diego) làm lại phép thử Turing ba bên: người tham gia nhắn tin 5 phút cùng lúc với một người thật và một máy, rồi chọn bên nào là người. GPT-4.5, khi được dặn đóng vai một con người, bị chọn là người 73% số lần; người thật trong cùng lượt chơi vì thế chỉ được chọn 27% (mỗi lượt phải chọn MỘT bên: 100% − 73%). Đây là bản preprint trên arXiv (2503.23674), chưa qua bình duyệt tại thời điểm kênh kiểm. Phép thử đo việc máy có bị nhầm là người hay không, không đo việc máy có hiểu. Giọng đọc tổng hợp.",
+ "tags": [
+  "phép thử turing",
+  "turing test",
+  "gpt-4.5",
+  "eliza",
+  "chatgpt",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "AI HÔM NAY",
+ "sub": "TURING TEST · 2025",
+ "acc": [
+  "nhầm",
+  "thật",
+  "ba",
+  "bảy",
+  "chưa",
+  "chắc"
+ ],
+ "lines": [
+  "AI bị nhầm là người, nhiều hơn cả người thật.",
+  "Chuyện là thế này.",
+  "Bạn nhắn tin năm phút, với hai bên cùng lúc.",
+  "Một bên là người. Bên kia là máy.",
+  "Hết giờ, bạn phải chỉ ra, ai là người.",
+  "Cỗ máy là GPT-4.5, được dặn hãy đóng vai một con người.",
+  "Và bảy mươi ba phần trăm số lần, người ta chọn nó.",
+  "Còn người thật ngồi bên kia? Chỉ hai mươi bảy.",
+  "Nhưng khoan. Đây mới là một nghiên cứu năm 2025, chưa qua bình duyệt.",
+  "Và giống người, chưa chắc là hiểu như người."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "AI BỊ NHẦM LÀ NGƯỜI",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "NHIỀU HƠN CẢ NGƯỜI THẬT",
+     "at": [
+      0,
+      "nhiều"
+     ]
+    },
+    {
+     "text": "chuyện là thế này…",
+     "at": 1,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7362704",
+   "veil": 0.5
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Luật chơi: nhắn tin 5 phút",
+   "nodes": [
+    {
+     "text": "bạn",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      2,
+      "Bạn"
+     ],
+     "shape": "circle"
+    },
+    {
+     "text": "người",
+     "x": 0.24,
+     "y": 0.56,
+     "at": [
+      3,
+      "người"
+     ]
+    },
+    {
+     "text": "máy",
+     "x": 0.76,
+     "y": 0.56,
+     "at": [
+      3,
+      "máy"
+     ]
+    },
+    {
+     "text": "ai là người?",
+     "x": 0.5,
+     "y": 0.86,
+     "at": [
+      4,
+      "ai"
+     ],
+     "c": "acc",
+     "shape": "none",
+     "size": 76
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      3,
+      "Một"
+     ]
+    },
+    {
+     "from": 0,
+     "to": 2,
+     "at": [
+      3,
+      "Bên"
+     ],
+     "bend": -0.12
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "CỖ MÁY: GPT-4.5",
+     "at": 5
+    },
+    {
+     "text": "được dặn",
+     "at": [
+      5,
+      "dặn"
+     ],
+     "sm": true
+    },
+    {
+     "text": "ĐÓNG VAI NGƯỜI",
+     "at": [
+      5,
+      "đóng"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7362704",
+   "ms": 8,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "to": 73,
+   "suffix": "%",
+   "label": "SỐ LẦN NGƯỜI TA CHỌN NÓ",
+   "until": [
+    6,
+    "ba"
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 7,
+   "title": "BỊ CHỌN LÀ “NGƯỜI”",
+   "cards": [
+    {
+     "k": "GPT-4.5 · ĐÓNG VAI",
+     "v": "73%",
+     "at": [
+      7,
+      null,
+      0,
+      0.05
+     ],
+     "c": "acc"
+    },
+    {
+     "k": "NGƯỜI THẬT",
+     "v": "27%",
+     "at": [
+      7,
+      "hai"
+     ]
+    }
+   ],
+   "note": "arXiv 2503.23674 · UC SAN DIEGO · 2025"
+  },
+  {
+   "type": "photo",
+   "at": 8,
+   "img": "turing",
+   "mode": "print",
+   "tone": "bw",
+   "label": {
+    "text": "PHÉP THỬ TURING · ALAN TURING, 1951",
+    "at": [
+     8,
+     "Đây"
+    ],
+    "y": 1290
+   },
+   "stamp": {
+    "text": "CHƯA BÌNH DUYỆT",
+    "at": [
+     8,
+     "chưa"
+    ],
+    "x": 230,
+    "y": 1090
+   }
+  },
+  {
+   "type": "board",
+   "at": 9,
+   "title": "Giống người ≠ hiểu",
+   "nodes": [
+    {
+     "text": "giống người",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      9,
+      "giống"
+     ],
+     "shape": "circle"
+    },
+    {
+     "text": "hiểu như người?",
+     "x": 0.5,
+     "y": 0.74,
+     "at": [
+      9,
+      "hiểu"
+     ],
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      9,
+      "chưa"
+     ],
+     "label": "chưa chắc",
+     "bend": 0
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://arxiv.org/abs/2503.23674"
+ ],
+ "say": {
+  "=AI": "ây ai",
+  "gpt-4.5": "gi pi ti bốn chấm năm"
+ },
+ "imgs": {
+  "turing": "File:Alan Turing (1951).jpg"
+ },
+ "mix": true,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.15,
+   "2": 0.18,
+   "3": 0.2,
+   "4": 0.35,
+   "5": 0.2,
+   "6": 0.4,
+   "7": 0.45,
+   "8": 0.25
+  }
+ },
+ "sfx_gain": 0.36,
+ "rules": 2
+}

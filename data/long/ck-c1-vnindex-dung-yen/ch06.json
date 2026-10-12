@@ -1,0 +1,355 @@
+{
+ "title": "Áp dụng cho bạn, và khi nào không đúng",
+ "lines": [
+  {
+   "t": "Mình không bảo bạn nên mua, bán hay giữ gì.",
+   "p": 0.8
+  },
+  "Chỉ có năm câu hỏi, để bạn tự soi tài khoản của mình.",
+  "Một: tài khoản của mình có mấy mã, và mỗi mã chiếm bao nhiêu phần tiền?",
+  "Hai: mình đang so với VN-Index, hay với chính số tiền mình đã bỏ vào, theo từng lần nạp?",
+  "Ba: từ đầu năm, mình mua bán bao nhiêu lượt, và đã trả bao nhiêu phí, thuế?",
+  "Bốn: mình có vay margin không, và nếu cổ phiếu giảm hai mươi phần trăm thì tài khoản còn bao nhiêu?",
+  {
+   "t": "Năm: lần gần nhất mình mua, là vì hiểu doanh nghiệp đó, hay vì thấy chỉ số đang lên?",
+   "p": 1.0
+  },
+  "Và đây là những lúc điều mình vừa nói không đúng với bạn.",
+  "Nếu tài khoản của bạn có những mã lớn đã tăng mạnh năm nay, nó có thể tốt hơn chỉ số. Độ lệch của chiếc giỏ cắt cả hai chiều.",
+  "Nếu bạn mua quỹ ETF mô phỏng chỉ số, kết quả bám chỉ số mà quỹ theo, trừ phí, và nhiều quỹ không theo VN-Index.",
+  "Mốc tính cũng đổi kết quả: tính từ đáy tháng ba, VN-Index tăng hơn mười một phần trăm, dù hai phần ba số cổ phiếu vẫn thấp hơn giá hôm đó. Đầu năm chỉ là một mốc trên lịch.",
+  {
+   "t": "Và số liệu ở đây chỉ gồm cổ phiếu trên HOSE, chưa tính HNX và UPCoM.",
+   "p": 1.0
+  },
+  "Tóm lại, VN-Index không nói sai.",
+  "Nó chỉ đo một chiếc giỏ có trọng số, trong đó vài mã rất lớn quyết định phần lớn.",
+  "Còn tài khoản của bạn là vài mã bạn chọn, thời điểm bạn bỏ tiền vào, phí và thuế mỗi lần mua bán, và tiền vay nếu có.",
+  "Nếu năm nay tài khoản của bạn đỏ trong khi chỉ số gần như đứng yên, điều đó không có nghĩa bạn kém cỏi.",
+  {
+   "t": "Có khi bạn chỉ đang chấm điểm mình bằng một thước đo không dành cho mình.",
+   "p": 1.0
+  },
+  "Bài hai của khoá học: một phiên giao dịch ở HOSE diễn ra thế nào.",
+  "Lệnh của bạn đi đâu, giá được khớp ra sao, và vì sao mua hôm nay mà chưa bán ngay được.",
+  {
+   "t": "Còn bây giờ, mình muốn nghe bạn: từ đầu năm, tài khoản của bạn đi cùng chiều hay ngược chiều VN-Index, và bạn nghĩ lý do chính là chọn mã, thời điểm, hay phí? Không cần nêu tên mã nhé.",
+   "p": 1.0
+  }
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "CHƯƠNG SÁU",
+   "title": "ÁP DỤNG CHO BẠN —\nVÀ KHI NÀO KHÔNG ĐÚNG",
+   "sub": "KHÔNG PHẢI LỜI KHUYÊN MUA, BÁN HAY GIỮ",
+   "titleAt": [
+    0,
+    "Mình"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "5 CÂU HỎI",
+     "at": [
+      1,
+      "Chỉ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "để bạn tự soi tài khoản của mình",
+     "at": [
+      1,
+      "tự"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "5 CÂU TỰ KIỂM",
+   "rows": [
+    {
+     "k": "01",
+     "v": "MẤY MÃ? MỖI MÃ CHIẾM BAO NHIÊU?",
+     "at": [
+      2,
+      "Một:"
+     ]
+    },
+    {
+     "k": "02",
+     "v": "SO VỚI VN-INDEX HAY TIỀN ĐÃ NẠP?",
+     "at": [
+      3,
+      "Hai:"
+     ]
+    },
+    {
+     "k": "03",
+     "v": "BAO NHIÊU LƯỢT? BAO NHIÊU PHÍ, THUẾ?",
+     "at": [
+      4,
+      "Ba:"
+     ]
+    },
+    {
+     "k": "04",
+     "v": "CÓ MARGIN? GIẢM 20% CÒN BAO NHIÊU?",
+     "at": [
+      5,
+      "Bốn:"
+     ]
+    },
+    {
+     "k": "05",
+     "v": "VÌ HIỂU DOANH NGHIỆP, HAY VÌ CHỈ SỐ?",
+     "at": [
+      6,
+      "Năm:"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "KHI NÀO KHÔNG ĐÚNG VỚI BẠN?",
+     "at": [
+      7,
+      "những"
+     ]
+    },
+    {
+     "text": "CÓ MÃ LỚN ĐÃ TĂNG MẠNH → CÓ THỂ TỐT HƠN CHỈ SỐ",
+     "at": [
+      8,
+      "Nếu"
+     ]
+    },
+    {
+     "text": "ĐỘ LỆCH CỦA GIỎ CẮT CẢ HAI CHIỀU",
+     "at": [
+      8,
+      "Độ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 9,
+   "vid": "7578628",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "QUỸ ETF MÔ PHỎNG CHỈ SỐ",
+     "at": [
+      9,
+      "Nếu"
+     ]
+    },
+    {
+     "text": "BÁM CHỈ SỐ MÀ QUỸ THEO, TRỪ PHÍ",
+     "at": [
+      9,
+      "bám"
+     ],
+     "acc": true
+    },
+    {
+     "text": "nhiều quỹ không theo VN-Index",
+     "at": [
+      9,
+      "nhiều"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 10,
+   "title": "MỐC TÍNH ĐỔI KẾT QUẢ",
+   "rows": [
+    {
+     "k": "ĐÁY 23/03 → 30/09: VN-INDEX",
+     "v": "+11,15%",
+     "at": [
+      10,
+      "VN-Index"
+     ]
+    },
+    {
+     "k": "MÃ VẪN DƯỚI GIÁ 23/03",
+     "v": "266/400 ≈ 2/3",
+     "at": [
+      10,
+      "hai"
+     ]
+    }
+   ],
+   "total": {
+    "k": "ĐẦU NĂM",
+    "v": "CHỈ LÀ MỘT MỐC TRÊN LỊCH",
+    "at": [
+     10,
+     "Đầu"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "CHỈ GỒM CỔ PHIẾU TRÊN HOSE",
+     "at": [
+      11,
+      "Và"
+     ]
+    },
+    {
+     "text": "chưa tính HNX và UPCoM",
+     "at": [
+      11,
+      "chưa"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 12,
+   "text": "VN-INDEX KHÔNG NÓI SAI",
+   "sub": "NÓ ĐO MỘT CHIẾC GIỎ CÓ TRỌNG SỐ"
+  },
+  {
+   "type": "ledger",
+   "at": 14,
+   "title": "TÀI KHOẢN CỦA BẠN LÀ",
+   "rows": [
+    {
+     "k": "01",
+     "v": "VÀI MÃ BẠN CHỌN",
+     "at": [
+      14,
+      "vài"
+     ]
+    },
+    {
+     "k": "02",
+     "v": "THỜI ĐIỂM BỎ TIỀN VÀO",
+     "at": [
+      14,
+      "thời"
+     ]
+    },
+    {
+     "k": "03",
+     "v": "PHÍ & THUẾ MỖI LẦN MUA BÁN",
+     "at": [
+      14,
+      "phí"
+     ]
+    },
+    {
+     "k": "04",
+     "v": "TIỀN VAY (NẾU CÓ)",
+     "at": [
+      14,
+      "vay"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 15,
+   "vid": "6689151",
+   "ms": 2,
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "TÀI KHOẢN ĐỎ KHI CHỈ SỐ ĐỨNG YÊN",
+     "at": [
+      15,
+      "Nếu"
+     ]
+    },
+    {
+     "text": "≠ BẠN KÉM CỎI",
+     "at": [
+      15,
+      "không"
+     ],
+     "acc": true
+    },
+    {
+     "text": "có khi chỉ là một thước đo không dành cho mình",
+     "at": [
+      16,
+      "thước"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "BÀI 2",
+     "at": [
+      17,
+      "Bài"
+     ],
+     "sm": true
+    },
+    {
+     "text": "MỘT PHIÊN GIAO DỊCH Ở HOSE DIỄN RA THẾ NÀO?",
+     "at": [
+      17,
+      "phiên"
+     ],
+     "acc": true
+    },
+    {
+     "text": "lệnh đi đâu · khớp giá ra sao · vì sao chưa bán ngay được",
+     "at": [
+      18,
+      "Lệnh"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 19,
+   "text": "Từ đầu năm, tài khoản của bạn đi\ncùng chiều hay ngược chiều VN-Index?\nVì chọn mã, thời điểm, hay phí?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 06",
+  "t": "ÁP DỤNG CHO BẠN"
+ },
+ "bgm": {
+  "mood": "warm",
+  "gain": 0.11
+ }
+}

@@ -1,0 +1,27 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#050912}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:"Be Vietnam Pro",sans-serif;color:#fff;background:#050912}
+.half{position:absolute;top:0;height:1080px;width:960px}
+.big{position:absolute;font-weight:900;line-height:1.05;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.num{position:absolute;left:0;width:960px;text-align:center;font-family:"JetBrains Mono";font-weight:700;white-space:nowrap;text-shadow:0 10px 40px #000}
+.cap{position:absolute;left:0;width:960px;text-align:center;font-weight:900;letter-spacing:.1em;white-space:nowrap;text-shadow:0 6px 24px #000}
+.tag{position:absolute;font-family:"JetBrains Mono";font-weight:700;letter-spacing:.14em;white-space:nowrap}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<!-- T3: hai nửa màn hình = hai cánh cửa; khoản trả tháng 25 của ví dụ (21,1 tr) vs tiền thuê (6,25 tr) + "SAU 10 NĂM: ?" -->
+<div class="half" style="left:0;background:radial-gradient(90% 80% at 50% 45%,#7c2d12 0%,#2a1206 60%,#0b0603 100%)"></div>
+<div class="half" style="left:960px;background:radial-gradient(90% 80% at 50% 45%,#4c1d95 0%,#1e0b3d 60%,#08040f 100%)"></div>
+<div style="position:absolute;left:952px;top:0;width:16px;height:1080px;background:#0a1426"></div>
+<div class="cap" style="left:0;top:120px;font-size:96px;color:#fb923c">MUA</div>
+<div class="cap" style="left:960px;top:120px;font-size:96px;color:#c4b5fd">THUÊ</div>
+<div class="num" style="left:0;top:350px;font-size:180px;color:#fdba74">21 TR</div>
+<div class="num" style="left:960px;top:350px;font-size:180px;color:#ddd6fe">6 TR</div>
+<div class="cap" style="left:0;top:600px;font-size:40px;color:#fed7aa">KHOẢN TRẢ THÁNG 25</div>
+<div class="cap" style="left:960px;top:600px;font-size:40px;color:#ede9fe">TIỀN THUÊ MỖI THÁNG</div>
+<div style="position:absolute;left:860px;top:380px;width:200px;height:130px;border-radius:65px;background:#0a1426;border:6px solid #fbbf24;
+ display:flex;align-items:center;justify-content:center;font-weight:900;font-size:70px;color:#fbbf24">VS</div>
+<div class="big" style="left:0;right:0;top:760px;text-align:center;font-size:150px">AI GIÀU HƠN<span style="color:#fbbf24">?</span></div>
+<div class="tag" style="right:40px;top:1030px;font-size:26px;color:#94a3b8">VÍ DỤ GIẢ ĐỊNH · CÙNG MỘT CĂN 2,5 TỶ</div>
+</div><script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

@@ -1,0 +1,214 @@
+{
+ "theme": "ck",
+ "title": "100 đồng sau 8 năm: tiết kiệm 156, VN-Index 177, vàng miếng 385",
+ "description": "Kênh tự tính từ 10/2018 đến 10/2026: 100 đồng gửi tiết kiệm 12 tháng ở nhóm ngân hàng lớn, đáo hạn gửi tiếp → khoảng 156 đồng; theo VN-Index (996,12 → 1.759,08, chỉ số giá, chưa gồm cổ tức, phí, thuế) → khoảng 177 đồng; vàng miếng SJC (mua 36,57 triệu/lượng → bán lại 141,1 triệu/lượng) → khoảng 385 đồng. Trên đường đi: VN-Index từng giảm khoảng 40% từ đỉnh xuống đáy năm 2022 (1.528,57 → 911,9); vàng miếng năm 2026 giảm hơn một phần tư từ đỉnh 191,3 triệu. Dữ liệu thị trường và giá vàng miếng qua vnstock; lãi suất tiết kiệm có mốc suy từ tháng lân cận. Đây là phép tính nhìn lại, không phải dự báo, và không cho biết kênh nào sẽ hơn trong tương lai.\n\nBức tranh đủ năm kênh nằm trong video dài trên kênh: \"Năm 2026: Chứng Khoán, Vàng, Coin, Nhà Đất Đều Đỏ — Chỉ Sổ Tiết Kiệm Xanh. Nhưng Thắng Thật Không?\"\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.",
+ "tags": [
+  "tiết kiệm",
+  "vn-index",
+  "vàng miếng",
+  "so sánh kênh giữ tiền",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "kicker": "1 BIỂU ĐỒ",
+ "sub": "10/2018 → 10/2026",
+ "acc": [
+  "tám",
+  "sáu",
+  "bảy",
+  "lăm",
+  "mất",
+  "sâu"
+ ],
+ "lines": [
+  "Một trăm đồng, tám năm, ba kết quả.",
+  "Từ tháng mười năm 2018 đến tháng mười năm nay.",
+  "Gửi tiết kiệm mười hai tháng ở ngân hàng lớn, đáo hạn gửi tiếp: thành khoảng một trăm năm mươi sáu đồng.",
+  "Theo VN-Index, chưa tính cổ tức: khoảng một trăm bảy mươi bảy đồng.",
+  "Mua vàng miếng: khoảng ba trăm tám mươi lăm đồng.",
+  "Nhưng trên đường đi, VN-Index từng mất khoảng bốn mươi phần trăm trong năm 2022.",
+  "Vàng năm nay mất hơn một phần tư từ đỉnh.",
+  "Kênh tăng nhiều cũng là kênh từng rơi sâu. Quá khứ không bảo đảm tương lai."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "100 ĐỒNG",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "8 NĂM · 3 KẾT QUẢ",
+     "at": [
+      0,
+      "tám"
+     ]
+    }
+   ],
+   "clip": "pexels:7710775",
+   "veil": 0.6
+  },
+  {
+   "type": "chart",
+   "at": 1,
+   "kind": "bars",
+   "title": "100 ĐỒNG SAU 8 NĂM",
+   "unit": "10/2018 → 10/2026",
+   "bars": [
+    {
+     "label": "TIẾT KIỆM\n12 THÁNG",
+     "v": 156,
+     "text": "~156",
+     "c": "ref",
+     "at": [
+      2,
+      "thành"
+     ]
+    },
+    {
+     "label": "VN-INDEX\n(chưa cổ tức)",
+     "v": 177,
+     "text": "~177",
+     "c": "up",
+     "at": [
+      3,
+      "khoảng"
+     ]
+    }
+   ],
+   "ref": {
+    "v": 100,
+    "label": "GỐC 100",
+    "at": [
+     1,
+     "đến"
+    ]
+   },
+   "max": 420,
+   "note": "KÊNH TỰ TÍNH · DỮ LIỆU QUA VNSTOCK; LÃI NGÂN HÀNG LỚN"
+  },
+  {
+   "type": "chart",
+   "at": 4,
+   "kind": "bars",
+   "title": "100 ĐỒNG SAU 8 NĂM",
+   "unit": "10/2018 → 10/2026",
+   "bars": [
+    {
+     "label": "TIẾT KIỆM",
+     "v": 156,
+     "text": "~156",
+     "c": "ref",
+     "at": [
+      4,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "label": "VN-INDEX",
+     "v": 177,
+     "text": "~177",
+     "c": "up",
+     "at": [
+      4,
+      null,
+      0,
+      0.1
+     ]
+    },
+    {
+     "label": "VÀNG\nMIẾNG",
+     "v": 385,
+     "text": "~385",
+     "c": "#fbbf24",
+     "at": [
+      4,
+      "khoảng"
+     ]
+    }
+   ],
+   "ref": {
+    "v": 100,
+    "label": "GỐC 100",
+    "at": [
+     4,
+     null,
+     0,
+     0.05
+    ]
+   },
+   "max": 420,
+   "tr": "cut",
+   "note": "KÊNH TỰ TÍNH · SJC QUA VNSTOCK"
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "NHƯNG TRÊN ĐƯỜNG ĐI",
+   "cards": [
+    {
+     "k": "VN-INDEX · NĂM 2022",
+     "v": "−40%",
+     "sub": "từ đỉnh xuống đáy",
+     "at": [
+      5,
+      "mất"
+     ],
+     "c": "down"
+    },
+    {
+     "k": "VÀNG MIẾNG · NĂM 2026",
+     "v": "HƠN −25%",
+     "sub": "từ đỉnh",
+     "at": [
+      6,
+      "mất"
+     ],
+     "c": "down"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "TĂNG NHIỀU",
+     "at": 7
+    },
+    {
+     "text": "CŨNG TỪNG RƠI SÂU",
+     "at": [
+      7,
+      "rơi"
+     ],
+     "acc": true
+    },
+    {
+     "text": "quá khứ không bảo đảm tương lai",
+     "at": [
+      7,
+      "Quá"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:3943961",
+   "veil": 0.68,
+   "at": 7
+  }
+ ],
+ "sources": [
+  "https://www.vietnamplus.vn/gia-vang-ngay-610-bang-gia-tai-cac-cong-ty-vang-bac-da-quy-trong-nuoc-post1140249.vnp",
+  "https://cafef.vn/hieu-suat-cac-kenh-dau-tu-nam-2025-vang-bac-len-ngoi-chung-khoan-vuot-dinh-nhung-la-lam-188260101230517861.chn"
+ ],
+ "say": {
+  "vn-index": "Vi En In-đéc"
+ },
+ "mix": true,
+ "imgs": {},
+ "rules": 2
+}

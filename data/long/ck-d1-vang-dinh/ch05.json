@@ -1,0 +1,306 @@
+{
+ "title": "Khi chẳng may là đỉnh: vì sao khó buông",
+ "lines": [
+  {
+   "t": "Giả sử bạn đã mua đúng hôm đó. Vì sao quyết định tiếp theo lại khó đến vậy?",
+   "p": 0.8
+  },
+  "Đánh rơi năm trăm nghìn, bạn tiếc cả tuần. Nhặt được năm trăm nghìn, bạn vui một buổi.",
+  "Kahneman và Tversky mô tả điều này, thường gọi là tâm lý sợ thua lỗ: người ta đo được mất so với một điểm mốc, và mất thì đau hơn được.",
+  {
+   "t": "Ước lượng của hai ông năm một nghìn chín trăm chín mươi hai: với người được khảo sát điển hình, một khoản lỗ nặng khoảng gấp đôi một khoản lãi cùng cỡ.",
+   "p": 1.0
+  },
+  "Với người mua đỉnh, điểm mốc là một trăm chín mươi mốt triệu ba trăm nghìn.",
+  "Bán lại ở khoảng một trăm bốn mươi triệu là phải nhìn thẳng vào khoản lỗ hơn năm mươi triệu. Nên rất dễ hiểu khi người ta muốn chờ.",
+  "Kênh không nói chờ là đúng hay sai. Chỉ là chờ bao lâu thì lịch sử trả lời rất khác nhau.",
+  "Theo dữ liệu giá SJC kênh tự tính, người mua đỉnh năm hai nghìn không trăm hai mươi chờ khoảng mười chín tháng mới về lại giá đã trả.",
+  {
+   "t": "Người mua đỉnh năm hai nghìn không trăm mười một chờ gần chín năm. Hai lần ấy giá đều về lại, nhưng không có gì bảo đảm lần nào cũng vậy.",
+   "p": 1.0
+  },
+  {
+   "t": "Vậy ai lỡ mua đúng đỉnh thì nên bán hay nên giữ?",
+   "ask": 1
+  },
+  "Câu đó mình không trả lời thay bạn được, vì nó tuỳ khoản tiền ấy có ý nghĩa gì với bạn.",
+  "Nhưng có một câu hỏi giúp tách điểm mốc ra khỏi quyết định.",
+  "Nếu lúc này mình đang cầm tiền mặt thay vì vàng, mình có dùng nó mua đúng chừng ấy vàng không? Và khoản tiền này, mình cần lại khi nào?",
+  {
+   "t": "Trả lời có hay không cũng không tự thành quyết định bán hay giữ; và nhớ rằng bán ra rồi mua lại cũng mất phần chênh lệch mua bán.",
+   "p": 1.0
+  }
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "CHƯƠNG NĂM",
+   "title": "KHI CHẲNG MAY LÀ ĐỈNH:\nVÌ SAO KHÓ BUÔNG",
+   "sub": "ĐIỂM MỐC · TÂM LÝ SỢ THUA LỖ",
+   "titleAt": [
+    0,
+    "Giả"
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 1,
+   "vid": "7594029",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "ĐÁNH RƠI 500 NGHÌN: TIẾC CẢ TUẦN",
+     "at": [
+      1,
+      "Đánh"
+     ]
+    },
+    {
+     "text": "NHẶT ĐƯỢC 500 NGHÌN: VUI MỘT BUỔI",
+     "at": [
+      1,
+      "Nhặt"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "Kahneman & Tversky (1979) · tâm lý sợ thua lỗ",
+     "at": [
+      2,
+      "Kahneman"
+     ],
+     "sm": true
+    },
+    {
+     "text": "ĐO ĐƯỢC – MẤT SO VỚI MỘT ĐIỂM MỐC",
+     "at": [
+      2,
+      "đo"
+     ]
+    },
+    {
+     "text": "MẤT ĐAU HƠN ĐƯỢC",
+     "at": [
+      2,
+      "mất",
+      1
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "Tversky & Kahneman (1992) · trung vị λ ≈ 2,25",
+     "at": [
+      3,
+      "Ước"
+     ],
+     "sm": true
+    },
+    {
+     "text": "LỖ 500 NGHÌN ≈ ĐAU GẤP ĐÔI",
+     "at": [
+      3,
+      "lỗ"
+     ]
+    },
+    {
+     "text": "NIỀM VUI LÃI 500 NGHÌN",
+     "at": [
+      3,
+      "lãi"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "race",
+   "at": 4,
+   "from": "2026-01-29",
+   "to": "2026-09-30",
+   "series": [
+    {
+     "key": "sjc",
+     "label": "MUA 29/01",
+     "color": "#fbbf24"
+    }
+   ],
+   "source": "Tính từ dữ liệu giá niêm yết SJC (kênh tự tính). Minh hoạ quá khứ, không phải khuyến nghị.",
+   "title": "ĐIỂM MỐC: GIÁ ĐÃ TRẢ NGÀY 29/01",
+   "range": "29/01 → 30/09/2026 · BÁN LẠI CHO TIỆM",
+   "drawAt": [
+    4,
+    "Với"
+   ],
+   "until": [
+    5,
+    "Bán"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "KÊNH KHÔNG NÓI CHỜ LÀ ĐÚNG HAY SAI",
+     "at": [
+      6,
+      "Kênh"
+     ]
+    },
+    {
+     "text": "CHỜ BAO LÂU? LỊCH SỬ TRẢ LỜI RẤT KHÁC NHAU",
+     "at": [
+      6,
+      "Chỉ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 7,
+   "items": [
+    {
+     "year": "08/2011",
+     "text": "ĐỈNH 49,12 TRIỆU",
+     "at": [
+      8,
+      "Người"
+     ]
+    },
+    {
+     "year": "07/2020",
+     "text": "GẦN 9 NĂM SAU: VỀ LẠI",
+     "at": [
+      8,
+      "gần"
+     ],
+     "color": "#4ade80"
+    },
+    {
+     "year": "08/2020",
+     "text": "ĐỈNH 62,45 TRIỆU",
+     "at": [
+      7,
+      "Theo"
+     ]
+    },
+    {
+     "year": "03/2022",
+     "text": "≈ 19 THÁNG SAU: VỀ LẠI",
+     "at": [
+      7,
+      "mười"
+     ],
+     "color": "#4ade80"
+    }
+   ],
+   "srcnote": "Về lại = giá mua vào SJC vượt giá đỉnh đã trả · kênh tự tính · hai lần này giá đều về lại, không bảo đảm lần sau"
+  },
+  {
+   "type": "question",
+   "at": 9,
+   "text": "Lỡ mua đúng đỉnh:\nnên bán hay nên giữ?"
+  },
+  {
+   "type": "slam",
+   "at": 10,
+   "text": "KÊNH KHÔNG TRẢ LỜI THAY BẠN",
+   "white": true,
+   "sub": "TUỲ KHOẢN TIỀN ẤY CÓ Ý NGHĨA GÌ VỚI BẠN"
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "MỘT CÂU HỎI",
+     "at": [
+      11,
+      "Nhưng"
+     ]
+    },
+    {
+     "text": "TÁCH ĐIỂM MỐC KHỎI QUYẾT ĐỊNH",
+     "at": [
+      11,
+      "tách"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "NẾU ĐANG CẦM TIỀN MẶT,",
+     "at": [
+      12,
+      "Nếu"
+     ]
+    },
+    {
+     "text": "MÌNH CÓ MUA ĐÚNG CHỪNG NÀY VÀNG?",
+     "at": [
+      12,
+      "mua"
+     ],
+     "acc": true
+    },
+    {
+     "text": "TIỀN NÀY CẦN LẠI KHI NÀO?",
+     "at": [
+      12,
+      "Và"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "CÓ HAY KHÔNG ≠ TỰ THÀNH QUYẾT ĐỊNH BÁN HAY GIỮ",
+     "at": [
+      13,
+      "Trả"
+     ]
+    },
+    {
+     "text": "BÁN RỒI MUA LẠI: MẤT THÊM CHÊNH MUA – BÁN",
+     "at": [
+      13,
+      "và"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "KHI CHẲNG MAY LÀ ĐỈNH"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.27
+ }
+}

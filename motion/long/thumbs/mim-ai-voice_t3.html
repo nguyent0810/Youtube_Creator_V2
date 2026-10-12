@@ -1,0 +1,36 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700;800;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#02050a}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;color:#fff}
+.abs{position:absolute}
+.grid{position:absolute;inset:0;background:linear-gradient(rgba(125,211,252,.07) 1px,transparent 1px) 0 0/64px 64px,linear-gradient(90deg,rgba(125,211,252,.07) 1px,transparent 1px) 0 0/64px 64px}
+.glow{position:absolute;border-radius:50%;filter:blur(120px)}
+.big{position:absolute;font-weight:900;line-height:1.02;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.cy{color:#22d3ee;text-shadow:0 0 50px rgba(34,211,238,.75),0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.phone{position:absolute;left:170px;top:110px;width:500px;height:900px;border-radius:70px;background:#0b1220;border:10px solid #1f2a3d;box-shadow:0 40px 120px #000,0 0 90px rgba(225,29,72,.3);overflow:hidden}
+.phone .scr{position:absolute;inset:0;background:linear-gradient(180deg,#1a0b14 0%,#071019 100%)}
+.who{position:absolute;left:0;right:0;text-align:center;font-weight:900}
+.lock{position:absolute;left:1180px;top:110px;width:220px;height:300px}
+.lock .sh{position:absolute;left:40px;top:0;width:140px;height:150px;border:28px solid #22d3ee;border-bottom:none;border-radius:80px 80px 0 0;box-shadow:0 0 40px rgba(34,211,238,.6)}
+.lock .bd{position:absolute;left:0;top:120px;width:220px;height:180px;border-radius:26px;background:#22d3ee;box-shadow:0 0 70px rgba(34,211,238,.7)}
+.lock .kh{position:absolute;left:96px;top:175px;width:28px;height:70px;border-radius:14px;background:#02050a}
+.pw{position:absolute;padding:24px 50px;border-radius:24px;background:#0f1b2d;border:6px solid #22d3ee;font-family:'JetBrains Mono';font-weight:700;color:#22d3ee;white-space:nowrap;letter-spacing:.25em;box-shadow:0 0 60px rgba(34,211,238,.5),0 30px 80px #000}
+</style></head><body>
+<!-- T3: điện thoại "SỐ LẠ" màu đỏ + ổ khoá cyan + ô mật khẩu "• • • •" -> "MẬT KHẨU GIA ĐÌNH" -->
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<div class="grid"></div>
+<div class="glow" style="left:80px;top:300px;width:650px;height:520px;background:rgba(225,29,72,.35)"></div>
+<div class="glow" style="left:1000px;top:120px;width:620px;height:420px;background:rgba(34,211,238,.3)"></div>
+<div class="phone"><div class="scr"></div>
+  <div class="who" style="top:120px;font-size:34px;color:#fda4af;font-family:'JetBrains Mono';letter-spacing:.2em">CUỘC GỌI ĐẾN</div>
+  <div class="who" style="top:190px;font-size:110px;color:#fb7185">SỐ LẠ</div>
+  <div class="who" style="top:420px;font-size:64px;line-height:1.25;color:#e6f1ff">“Con cần<br/>tiền gấp…”</div>
+</div>
+<div class="lock"><div class="sh"></div><div class="bd"></div><div class="kh"></div></div>
+<div class="pw" style="left:820px;top:470px;font-size:84px">• • • • •</div>
+<div class="big" style="left:800px;top:640px;font-size:180px">MẬT KHẨU</div>
+<div class="big cy" style="left:800px;top:830px;font-size:180px">GIA ĐÌNH</div>
+</div>
+<script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

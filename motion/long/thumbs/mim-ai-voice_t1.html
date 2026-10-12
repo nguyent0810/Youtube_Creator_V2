@@ -1,0 +1,41 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700;800;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#02050a}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;color:#fff}
+.abs{position:absolute}
+.grid{position:absolute;inset:0;background:linear-gradient(rgba(125,211,252,.07) 1px,transparent 1px) 0 0/64px 64px,linear-gradient(90deg,rgba(125,211,252,.07) 1px,transparent 1px) 0 0/64px 64px}
+.glow{position:absolute;border-radius:50%;filter:blur(120px)}
+.big{position:absolute;font-weight:900;line-height:1.02;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.cy{color:#22d3ee;text-shadow:0 0 50px rgba(34,211,238,.75),0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.tag{position:absolute;font-family:'JetBrains Mono';font-weight:700;letter-spacing:.22em;color:#7dd3fc;white-space:nowrap;text-shadow:0 4px 20px #000}
+.phone{position:absolute;left:150px;top:90px;width:520px;height:930px;border-radius:70px;background:#0b1220;border:10px solid #1f2a3d;box-shadow:0 40px 120px #000,0 0 90px rgba(34,211,238,.25);overflow:hidden}
+.phone .scr{position:absolute;inset:0;background:linear-gradient(180deg,#0f1b2d 0%,#071019 100%)}
+.who{position:absolute;left:0;right:0;text-align:center;font-weight:900}
+.btn{position:absolute;width:150px;height:150px;border-radius:50%;bottom:90px;display:flex;align-items:center;justify-content:center;font-size:70px;font-weight:900}
+.wave{position:absolute;left:60px;right:60px;top:420px;height:240px;display:flex;align-items:center;justify-content:space-between}
+.wave i{display:block;width:16px;border-radius:8px;background:#22d3ee;box-shadow:0 0 24px rgba(34,211,238,.8)}
+.bub{position:absolute;padding:30px 50px;border-radius:40px;font-weight:900;white-space:nowrap;background:#e11d48;color:#fff;box-shadow:0 30px 80px #000;border-bottom-left-radius:8px}
+</style></head><body>
+<!-- T1: điện thoại "CON GÁI" đang gọi + sóng âm cyan; bong bóng đỏ "MẸ ƠI, CỨU CON!" + chữ lớn "GIỌNG GIẢ" (không mặt người thật) -->
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<div class="grid"></div>
+<div class="glow" style="left:60px;top:250px;width:700px;height:600px;background:rgba(34,211,238,.35)"></div>
+<div class="glow" style="left:1100px;top:120px;width:700px;height:300px;background:rgba(225,29,72,.35)"></div>
+<div class="phone"><div class="scr"></div>
+  <div class="who" style="top:110px;font-size:34px;color:#7dd3fc;font-family:'JetBrains Mono';letter-spacing:.2em">CUỘC GỌI ĐẾN</div>
+  <div class="who" style="top:175px;font-size:92px">CON GÁI</div>
+  <div class="wave" id="wv"></div>
+  <div class="btn" style="left:70px;background:#e11d48">✕</div>
+  <div class="btn" style="right:70px;background:#16a34a">✓</div>
+</div>
+<div class="bub" style="left:780px;top:110px;font-size:92px">“MẸ ƠI, CỨU CON!”</div>
+<div class="big" style="left:790px;top:380px;font-size:230px">GIỌNG</div>
+<div class="big cy" style="left:790px;top:690px;font-size:230px">GIẢ?</div>
+</div>
+<script>
+const wv=document.getElementById("wv");const h=[30,70,120,200,150,90,210,240,170,110,60,140,220,180,100,50,130,190,80,40];
+h.forEach(v=>{const i=document.createElement("i");i.style.height=v+"px";wv.appendChild(i);});
+window.__timelines={main:gsap.timeline({paused:true})};
+</script></body></html>
