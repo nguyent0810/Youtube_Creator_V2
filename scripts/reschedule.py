@@ -10,6 +10,10 @@ chỉ đụng item còn đánh dấu UNSCHEDULED. Video có giờ gốc đã qua
 private và báo lại (YouTube không nhận publishAt trong quá khứ).
 """
 from __future__ import annotations
+import pathlib, sys  # noqa: E401
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
+from factory.console import utf8_console  # noqa: E402
+utf8_console()  # console Windows cp1252 không in được tiếng Việt (retro 2 mục 7)
 
 import sys
 from datetime import datetime, timedelta, timezone

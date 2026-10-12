@@ -88,4 +88,8 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    import pathlib, sys  # noqa: E401
+    sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
+    from factory.console import utf8_console  # noqa: E402
+    utf8_console()  # console Windows cp1252 không in được tiếng Việt (retro 2 mục 7)
     sys.exit(main())

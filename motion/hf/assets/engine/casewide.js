@@ -43,7 +43,7 @@
                                          tl.to("#stage", { x: 8, duration: 0.03, yoyo: true, repeat: 3 }, t + 0.16); };
   const draw = (node, t, d, ease = "power2.inOut") => { const len = node.getTotalLength(); node.style.strokeDasharray = len; node.style.strokeDashoffset = len;
                                                          tl.to(node, { strokeDashoffset: 0, duration: d, ease }, t); };
-  const toneCls = (t) => ({ bw: "bw", sepia: "sepia", color: "color", dim: "dimbg", noir: "noir", night: "night" }[t || "sepia"]);
+  const toneCls = (t) => ({ bw: "bw", sepia: "sepia", color: "color", dim: "dimbg", noir: "noir", night: "night" }[t || (C.theme === "lab" ? "color" : "sepia")]);
   const circleMark = (svg, x, y, r, t) => {
     const p = sv("path", { d: `M${x + r} ${y - 2} C${x + r} ${y - r - 6} ${x - r - 4} ${y - r} ${x - r} ${y + 2} C${x - r + 2} ${y + r + 4} ${x + r + 6} ${y + r} ${x + r - 2} ${y - 6}`,
       stroke: "var(--red)", "stroke-width": Math.max(4, r / 7), fill: "none", "stroke-linecap": "round" }, svg);
@@ -68,6 +68,7 @@
     const ctext = typeof s.credit === "string" ? s.credit : (s.credit !== false && ci && ci.lic) ? ("ẢNH: " + (ci.pd ? "TƯ LIỆU · PHẠM VI CÔNG CỘNG" : (ci.by ? ci.by.toUpperCase().slice(0, 40) + " · " : "") + ci.lic.toUpperCase())) : null;
     if (ctext) { const c = el("div", "credit", esc(ctext), d); tl.to(c, { opacity: 1, duration: 0.4 }, s.t0 + 0.3); }
     if (s.illus) el("div", "illus", s.illus === true ? "ẢNH MINH HỌA" : esc(s.illus), d);
+    if (s.srcnote) el("div", "cdsrc", esc(s.srcnote), d);   // dòng ghi nguồn/miễn trừ góc dưới phải (kênh CK: mọi biểu đồ vàng)
     if (s.stamp) { const st = el("div", "stamp" + (s.stamp.ink ? " ink" : ""), esc(s.stamp.text), d); st.style.fontSize = px(fsz(s.stamp.text, 84, 760, 0.72));
       st.style.left = px(s.stamp.x ?? 1150); st.style.top = px(s.stamp.y ?? 560); stamp(st, s.stamp.at, s.stamp.rot ?? -8); }
     // film: tư liệu cũ -> nhấp nháy sáng tối 12 hình/giây + vệt xước dọc (sfx: tiếng máy chiếu)
@@ -128,7 +129,7 @@
     tl.fromTo(no, { opacity: 0, x: -80 }, { opacity: 1, x: 0, duration: 0.8, ease: "power3.out", immediateRender: false }, s.t0 + 0.05);
     tl.to(no, { x: 40, duration: Math.max(0.3, s.t1 - s.t0 - 0.8), ease: "none" }, s.t0 + 0.85);
     tl.fromTo(k, { opacity: 0 }, { opacity: 1, duration: 0.3, immediateRender: false }, s.t0 + 0.2);
-    tl.fromTo(tt, { opacity: 0, y: 40, clipPath: "inset(0% 0% 100% 0%)" }, { opacity: 1, y: 0, clipPath: "inset(0% 0% 0% 0%)", duration: 0.5, ease: "power3.out", immediateRender: false }, ta - 0.05);
+    tl.fromTo(tt, { opacity: 0, y: 40, clipPath: "inset(-30% -5% 100% -5%)" }, { opacity: 1, y: 0, clipPath: "inset(-30% -5% -30% -5%)", duration: 0.5, ease: "power3.out", immediateRender: false }, ta - 0.05);
     tl.fromTo(bar, { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power3.inOut", immediateRender: false }, ta + 0.25);
     if (sb) tl.fromTo(sb, { opacity: 0 }, { opacity: 1, duration: 0.4, immediateRender: false }, ta + 0.5);
   };
@@ -214,10 +215,10 @@
   const { BEAT, SLAM, beat } = makeBeat({ tl, el, esc, rnd });   // beat.js: thư viện hiệu ứng chữ dùng chung với casefile
 
   const kinetic = (items, d, align) => {
-    const sizes = items.map((q) => q.size || fsz(q.text, q.sm ? 56 : 130, 1650, q.serif ? 0.62 : 0.66)), total = sizes.reduce((a, b) => a + b * 1.22, 0);
+    const sizes = items.map((q) => q.size || fsz(q.text, q.sm ? 56 : 130, 1650, q.serif ? 0.62 : 0.66)), total = sizes.reduce((a, b) => a + b * 1.32, 0);
     let y = Math.max(130, 470 - total / 2);
     items.forEach((q, k) => { const e = el("div", "kin" + (q.acc ? " acc" : "") + (q.serif ? " serif" : "") + (q.sm ? " sm" : "") + (align === "l" ? " l" : ""), esc(q.text), d);
-      Object.assign(e.style, { fontSize: px(sizes[k]), top: px(y) }); y += sizes[k] * 1.22;
+      Object.assign(e.style, { fontSize: px(sizes[k]), top: px(y) }); y += sizes[k] * 1.32;   // 1.32: chừa chỗ dấu dưới (Ệ, Ộ) dòng trên + dấu chồng (Ề, Ế) dòng dưới
       beat(e, q); });
   };
   B.kinetic = (s, d) => { bg(s, d, 0.62);
@@ -229,7 +230,7 @@
      sfx: at -> boom (theo fx, xem sfx_long.py) */
   B.slam = (s, d) => {
     bg(s, d, 0.6);
-    const lines = s.text.split("\n"), fs = fsz(lines.reduce((a, b) => (a.length > b.length ? a : b)), 190, 1700, 0.66);
+    const lines = s.text.split("\n"), fs = fsz(lines.reduce((a, b) => (a.length > b.length ? a : b)), 190, 1700, C.theme === "lab" ? 0.8 : 0.66);
     const sl = el("div", "slam", lines.map(esc).join("<br/>"), d); Object.assign(sl.style, { fontSize: px(fs), top: px(460 - fs * lines.length / 2), lineHeight: 1.02, color: s.white ? "#fff" : "" });
     if (s.fx && s.fx !== "punch" && SLAM[s.fx]) { SLAM[s.fx](sl, s, fs, lines);
       if (s.sub) { const sb = el("div", "dsub", esc(s.sub), d); sb.style.top = px(480 + fs * lines.length / 2 + 20); tl.to(sb, { opacity: 1, duration: 0.3 }, s.at + 0.3); }
@@ -247,8 +248,35 @@
   /* ---------- brand: logo kênh 2–3 giây, đặt ngay sau cold open (câu "Đây là hồ sơ X") ----------
      {sub: "HỒ SƠ · TAM GIÁC VÀNG", bg?}. Vạch đỏ mọc giữa màn, chữ tên kênh tách từ tâm ra, dòng hồ sơ gõ chữ.
      sfx (sfx_long): whoosh trước t0, âm hiệu 2 nốt + ngân chuông; nhạc nền được né trong cảnh này. */
-  const BRAND = "INTO THE KILLER’S MIND";
+  const BRAND = C.brand || "INTO THE KILLER’S MIND";
+  /* nhận diện kênh theme "lab" (~3 s): quét sáng ngang, các nút mạng sáng lên, tên kênh GIẢI MÃ từ ký tự ngẫu nhiên
+     (tất định: rnd có hạt), con trỏ nhấp nháy, dòng phụ gõ chữ. sfx_long: tick theo nhịp giải mã + âm hiệu điện tử. */
+  const GLY = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#%&@<>/";
+  const labBrand = (s, d) => {
+    el("div", "brbg", null, d);
+    const t0 = s.t0, name = s.name || BRAND, wm = el("div", "lbwm", "", d), sub = el("div", "lbsub", "", d), txt = s.sub || "";
+    const scan = el("div", "lbscan", null, d);
+    tl.fromTo(scan, { top: 300, opacity: 0 }, { top: 780, opacity: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false }, t0);
+    tl.to(scan, { opacity: 0, duration: 0.15 }, t0 + 0.5);
+    [[560, 380], [1360, 380], [520, 700], [1400, 700], [960, 330], [960, 760]].forEach(([x, y], k) => {
+      const n = el("div", "lbnode", null, d); Object.assign(n.style, { left: px(x), top: px(y) });
+      tl.fromTo(n, { opacity: 0, scale: 0 }, { opacity: 0.9, scale: 1, duration: 0.18, ease: "back.out(3)", immediateRender: false }, t0 + 0.1 + k * 0.06);
+      tl.to(n, { opacity: 0, duration: 0.4 }, t0 + 1.4); });
+    const chars = [...name], n = chars.length, steps = 16, t1 = t0 + 0.35, span = 0.95;
+    tl.set(wm, { opacity: 1 }, t1);
+    const word = (k) => chars.map((c, i) => (i < k || c === " " ? c : GLY[Math.floor(rnd() * GLY.length)])).join("");
+    for (let k = 0; k <= steps; k++) {
+      const done = Math.round(n * k / steps), w = word(done);
+      tl.set(wm, { innerHTML: esc(w.slice(0, done)) + "<b>" + esc(w.slice(done)) + "</b>" + (k < steps ? '<i class="lbcur"></i>' : "") }, t1 + span * (k / steps));
+    }
+    const cur = '<i class="lbcur"></i>';
+    for (let k = 0; k < 4; k++) tl.set(wm, { innerHTML: esc(name) + (k % 2 ? "" : cur) }, t1 + span + 0.2 + k * 0.22);
+    tl.fromTo(wm, { scale: 1 }, { scale: 1.03, duration: Math.max(0.4, s.t1 - t1), ease: "none", immediateRender: false }, t1);
+    const sc = [...txt], ss = Math.min(0.6, 0.035 * sc.length);
+    for (let k = 1; k <= sc.length; k++) tl.set(sub, { textContent: sc.slice(0, k).join("") }, t1 + span + 0.1 + ss * (k / sc.length));
+  };
   B.brand = (s, d) => {
+    if (C.theme === "lab") return labBrand(s, d);
     if (s.bg) bg(s, d, 0.86); else el("div", "brbg", null, d);
     const t0 = s.t0, bar = el("div", "brbar", null, d), wm = el("div", "brwm", esc(s.name || BRAND), d);
     const sub = el("div", "brsub", "", d), rule = el("div", "brrule", null, d), txt = s.sub || "";
@@ -267,9 +295,9 @@
      Chừa ô video "XEM TIẾP" bên trái và ô tròn "ĐĂNG KÝ" bên phải đúng chỗ YouTube đặt phần tử; nền ảnh tư liệu tối dần. */
   B.endcard = (s, d) => {
     if (s.bg) bg(s, d, 0.88); else el("div", "brbg", null, d);
-    const wm = el("div", "ecwm", esc(BRAND), d), sub = el("div", "ecsub", esc(s.sub || "HỒ SƠ TIẾP THEO"), d);
+    const wm = el("div", "ecwm", esc(BRAND), d), sub = el("div", "ecsub", esc(s.sub || (C.theme === "lab" || C.theme === "chart" ? "VIDEO TIẾP THEO" : "HỒ SƠ TIẾP THEO")), d);
     const box = el("div", "ecbox", "<span>XEM TIẾP</span>", d), cir = el("div", "eccir", "<span>ĐĂNG KÝ</span>", d);
-    const note = el("div", "ecnote", esc(s.note || "Cảm ơn bạn đã xem hồ sơ này"), d);
+    const note = el("div", "ecnote", esc(s.note || (C.theme === "lab" || C.theme === "chart" ? "Cảm ơn bạn đã xem" : "Cảm ơn bạn đã xem hồ sơ này")), d);
     tl.fromTo(wm, { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out", immediateRender: false }, s.t0 + 0.2);
     tl.fromTo(sub, { opacity: 0 }, { opacity: 1, duration: 0.5, immediateRender: false }, s.t0 + 0.5);
     tl.fromTo([box, cir], { opacity: 0, scale: 0.94 }, { opacity: 1, scale: 1, duration: 0.6, ease: "power3.out", stagger: 0.15, immediateRender: false }, s.t0 + 0.6);
@@ -332,6 +360,7 @@
       e.innerHTML = up ? `<div class="yr">${esc(q.year)}</div><div class="tx">${rich(q.text || "")}</div><div class="dot" style="margin-top:22px"></div>`
                        : `<div class="dot" style="margin-bottom:22px"></div><div class="yr">${esc(q.year)}</div><div class="tx">${rich(q.text || "")}</div>`;
       Object.assign(e.style, { left: px(x0 + gap * k) }); if (up) e.style.bottom = px(H - 533); else e.style.top = px(507);
+      if (q.color) { const dt = e.querySelector(".dot"); dt.style.background = q.color; dt.style.boxShadow = `0 0 20px ${q.color}`; e.querySelector(".yr").style.color = q.color; }   // màu riêng từng mốc (tuỳ chọn)
       tl.fromTo(e, { opacity: 0, y: up ? -30 : 30 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out", immediateRender: false }, q.at - 0.1); });
     common(s, d);
   };
@@ -372,7 +401,7 @@
   B.quote = (s, d) => {
     bg(s, d, 0.8);
     const pp = el("div", "qpaper", null, d); el("div", "qm", "“", pp); if (s.dy || s.lbl) el("div", "dy", s.lbl || "DIỄN Ý", pp);
-    const qt = el("div", "qt", null, pp); const L = [...s.text].length; qt.style.fontSize = px(L < 70 ? 50 : L < 140 ? 40 : 32);
+    const qt = el("div", "qt", null, pp); const L = [...s.text].length; qt.style.fontSize = px(C.theme === "lab" ? (L < 30 ? 76 : L < 70 ? 58 : L < 140 ? 46 : 36) : L < 70 ? 50 : L < 140 ? 40 : 32);
     const spans = [...s.text].map((ch) => el("span", null, esc(ch), qt));
     spans.forEach((sp, k) => tl.set(sp, { opacity: 1 }, s.at + (k / L) * s.typeDur));
     if (s.by) { const by = el("div", "by", "— " + esc(s.by), pp); tl.to(by, { opacity: 1, duration: 0.3 }, s.at - s.t0 > 2.0 ? s.t0 + 0.6 : s.at + s.typeDur); }
@@ -899,6 +928,10 @@
   const pickTr = () => { const ks = Object.keys(TR).filter((k) => k !== trLast); let best = null, bu = 1e9;
     ks.forEach((k) => { const u = (trUse[k] || 0) + rnd() * 0.9; if (u < bu) { bu = u; best = k; } }); trUse[best] = (trUse[best] || 0) + 1; trLast = best; return best; };
 
+  // cảnh riêng kênh MIM (assets/engine/lab.js, nạp trước file này) -- không có file thì kênh khác y như cũ
+  if (window.labScenes) window.labScenes({ B, tl, el, sv, esc, px, fsz, rnd, bg, common, W, H, C });
+  if (window.chartScenes) window.chartScenes({ B, tl, el, sv, esc, px, fsz, rnd, bg, common, W, H, C });
+
   // ---------- dựng cảnh ----------
   C.scenes.forEach((s, i) => {
     const d = el("div", "scene", null, stage); show(d, s.t0, s.t1, s.type === "question" ? 0.12 : s.fade ?? 0.3);
@@ -921,18 +954,22 @@
 
   // ---------- phụ đề: cụm tối đa 7 từ, một màu nhấn ----------
   const ACC = new Set((C.acc || []).map(norm));
-  const caps = $("#caps"), chunks = [];
+  const caps = $("#caps"), chunks = [], ALLW = C.lines.flatMap((ln) => ln.words);
   C.lines.forEach((ln) => { let cur = []; ln.words.forEach((w, k) => { cur.push(w);
     const n = cur.length, punct = /[.,…?!:;]$/.test(w.w);
-    if ((punct && n >= 2) || n >= 7 || k === ln.words.length - 1) { chunks.push(cur); cur = []; } }); });
-  chunks.forEach((c, n) => { const box = el("div", "cap", null, caps);
+    if ((punct && n >= 2) || n >= 7 || k === ln.words.length - 1) { cur.ask = !!ln.ask; chunks.push(cur); cur = []; } }); });
+  chunks.forEach((c, n) => { const box = el("div", "cap" + (c.ask ? " ask" : ""), null, caps);
+    if (c.ask) el("i", "askk", "BẠN HỎI", box);
     c.forEach((w) => { const clean = w.w.replace(/["“”]/g, ""), acc = ACC.has(norm(w.w)) || /\d/.test(w.w);
-      const sp = el("span", "cw" + (acc ? " acc" : ""), esc(clean), box); tl.to(sp, { opacity: 1, duration: 0.08 }, w.t); });
+      const sp = el("span", "cw" + (acc ? " acc" : ""), esc(clean), box); tl.to(sp, { opacity: 1, duration: 0.08 }, w.t);
+      // theme lab (MIM): karaoke -- chữ đang đọc màu nhấn, đọc xong về màu cũ (đổi tức thì). Chữ nhấn + số giữ màu nhấn.
+      if (C.theme === "lab" && !acc) { const base = getComputedStyle(sp).color, nx = ALLW[ALLW.indexOf(w) + 1];
+        tl.set(sp, { color: C.accent || "#22d3ee" }, w.t); tl.set(sp, { color: base }, nx ? nx.t : w.t + 0.4); } });
     box.style.fontSize = px(fsz(c.map((w) => w.w).join(" "), 44, 1560, 0.52));
     const t0 = c[0].t - 0.06, nx = chunks[n + 1], t1 = nx ? Math.min(nx[0].t - 0.06, c[c.length - 1].t + c[c.length - 1].d + 0.6) : DUR;
     tl.set(box, { opacity: 1 }, t0); tl.set(box, { opacity: 0 }, t1); });
   C.scenes.filter((s) => s.type === "question" || s.type === "chapter" || s.type === "endcard" || s.nocaps).forEach((s) => { tl.set("#caps", { opacity: 0 }, s.t0 - 0.01); tl.set("#caps", { opacity: 1 }, s.t1); });
-  C.scenes.filter((s) => s.type === "endcard").forEach((s) => tl.to(["#hud", "#prog"], { opacity: 0, duration: 0.4 }, s.t0));
+  C.scenes.filter((s) => s.type === "endcard").forEach((s) => { tl.to(["#hud", "#prog"], { opacity: 0, duration: 0.4 }, s.t0); tl.set("#caps", { opacity: 0 }, s.t0 + 0.01); });
 
   window.__timelines = window.__timelines || {};
   window.__timelines["main"] = tl;

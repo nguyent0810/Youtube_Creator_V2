@@ -12,6 +12,10 @@ Hai việc phải làm, theo đúng thứ tự:
 
 videos.update tốn 50 đơn vị/lần: 21 × 50 = 1.050, thừa sức trong 10.000/ngày.
 """
+import pathlib, sys  # noqa: E401
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
+from factory.console import utf8_console  # noqa: E402
+utf8_console()  # console Windows cp1252 không in được tiếng Việt (retro 2 mục 7)
 import collections
 import json
 import sys

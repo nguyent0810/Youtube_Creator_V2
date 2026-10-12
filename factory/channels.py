@@ -41,11 +41,17 @@ CHANNELS = {
     # Kênh công nghệ, đổi hướng 05/10/2026 (docs/channels/mind-in-the-machine/2026-10-05-analysis.md):
     # AI dễ hiểu + công nghệ đã thay đổi thế giới. Chưa có dòng nội dung -> lines=None;
     # bật rotate khi có 3 dòng Short.
-    # upload="manual": credential nằm trên GCP project CHƯA audit -> video upload
-    # bằng API bị khoá private vĩnh viễn. Token chỉ dùng để ĐỌC (phân tích, nhận
-    # video); người upload qua Studio. Quy trình: factory/manual.py.
-    "MIM": {"ten": "Mind in the Machine", "creds": "mind_machine.json", "lines": None,
-            "prefixes": ("mim-",), "pacing": (60, 6), "rotate": False, "upload": "manual"},
+    # 06/10/2026: upload bằng API qua OAuth client của GCP project kênh CL (đã audit) ->
+    # mind_machine_cl.json. (mind_machine.json cũ thuộc project CHƯA audit: video upload
+    # bằng nó bị khoá private vĩnh viễn -- chỉ dùng để đọc.) Muốn quay lại upload tay qua
+    # Studio: thêm "upload": "manual" (quy trình factory/manual.py).
+    "MIM": {"ten": "Mind in the Machine", "creds": "mind_machine_cl.json", "lines": None,
+            "prefixes": ("mim-", "long-"), "pacing": (60, 6), "rotate": False},
+    # Kênh tài chính cá nhân "Biểu Đồ Biết Nói" -- tiền bạc, giải thích bằng dữ liệu (cũ: VN-Index Overview, khởi động lại 06/10/2026; 45 video cũ đã ẩn,
+    # trạng thái gốc: output/channels/CK/hidden_2026-10-06.json). Chỉ GIẢI THÍCH bằng dữ liệu quá khứ -- không
+    # khuyến nghị mua/bán tài sản nào (docs/channels/chung-khoan/). Upload API qua project CL.
+    "CK": {"ten": "Biểu Đồ Biết Nói", "creds": "chung_khoan.json", "lines": None,
+           "prefixes": ("ck-", "long-"), "pacing": (60, 6), "rotate": False},
 }
 
 

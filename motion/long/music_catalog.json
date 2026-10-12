@@ -1,5 +1,5 @@
 {
- "_doc": "Nhạc nền dùng được (CC BY 4.0, Kevin MacLeod / incompetech.com — describe.py tự ghi công). mood: tense | dark | sad | epic | mystery | quiet. File ở output/music/.",
+ "_doc": "Nhạc nền dùng được (CC BY 4.0, Kevin MacLeod / incompetech.com — describe.py tự ghi công). mood: tense | dark | sad | epic | mystery | quiet. File ở output/music/. Bài có \"channel\" (một mã hoặc danh sách, vd [\"MIM\", \"CK\"]) chỉ dùng cho các kênh đó (mood: curious | upbeat | calm | epic | warm | mystery); bài không gắn kênh là của kênh Hình Sự.",
  "tracks": {
   "crypto": {
    "file": "crypto.mp3",
@@ -486,6 +486,446 @@
    ],
    "source": "https://incompetech.com",
    "length": "00:03:17"
+  },
+  "bit_shift": {
+   "file": "bit_shift.mp3",
+   "title": "Bit Shift",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "curious",
+    "upbeat"
+   ],
+   "channel": "MIM"
+  },
+  "digital_lemonade": {
+   "file": "digital_lemonade.mp3",
+   "title": "Digital Lemonade",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "upbeat",
+    "curious"
+   ],
+   "channel": "MIM"
+  },
+  "inspired": {
+   "file": "inspired.mp3",
+   "title": "Inspired",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "epic",
+    "warm"
+   ],
+   "channel": "MIM"
+  },
+  "chill_wave": {
+   "file": "chill_wave.mp3",
+   "title": "Chill Wave",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "calm",
+    "curious"
+   ],
+   "channel": "MIM"
+  },
+  "hyperfun": {
+   "file": "hyperfun.mp3",
+   "title": "Hyperfun",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "upbeat"
+   ],
+   "channel": "MIM"
+  },
+  "ouroboros": {
+   "file": "ouroboros.mp3",
+   "title": "Ouroboros",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "mystery",
+    "curious"
+   ],
+   "channel": "MIM"
+  },
+  "local_forecast_elevator": {
+   "file": "local_forecast_elevator.mp3",
+   "title": "Local Forecast - Elevator",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "curious",
+    "calm"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:03:09",
+   "channel": "CK"
+  },
+  "lobby_time": {
+   "file": "lobby_time.mp3",
+   "title": "Lobby Time",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "curious",
+    "upbeat"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:03:13",
+   "channel": "CK"
+  },
+  "backbay_lounge": {
+   "file": "backbay_lounge.mp3",
+   "title": "Backbay Lounge",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "calm",
+    "warm"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:04:26",
+   "channel": "CK"
+  },
+  "airport_lounge": {
+   "file": "airport_lounge.mp3",
+   "title": "Airport Lounge",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "calm"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:05:07",
+   "channel": "CK"
+  },
+  "investigations": {
+   "file": "investigations.mp3",
+   "title": "Investigations",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "mystery",
+    "curious"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:01:33",
+   "channel": "CK"
+  },
+  "wholesome": {
+   "file": "wholesome.mp3",
+   "title": "Wholesome",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "warm",
+    "upbeat"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:06:03",
+   "channel": "CK"
+  },
+  "easy_lemon": {
+   "file": "easy_lemon.mp3",
+   "title": "Easy Lemon",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "upbeat",
+    "warm"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:02:06",
+   "channel": "CK"
+  },
+  "daily_beetle": {
+   "file": "daily_beetle.mp3",
+   "title": "Daily Beetle",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "upbeat",
+    "curious"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:05:16",
+   "channel": "CK"
+  },
+  "carefree": {
+   "file": "carefree.mp3",
+   "title": "Carefree",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "upbeat"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:03:25",
+   "channel": "CK"
+  },
+  "bright_wish": {
+   "file": "bright_wish.mp3",
+   "title": "Bright Wish",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "warm",
+    "epic"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:00:40",
+   "channel": "CK"
+  },
+  "dreamer": {
+   "file": "dreamer.mp3",
+   "title": "Dreamer",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "calm",
+    "warm"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:03:24",
+   "channel": "CK"
+  },
+  "somewhere_sunny": {
+   "file": "somewhere_sunny.mp3",
+   "title": "Somewhere Sunny",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "warm",
+    "calm"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:00:59",
+   "channel": "CK"
+  },
+  "late_night_radio": {
+   "file": "late_night_radio.mp3",
+   "title": "Late Night Radio",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "mystery",
+    "calm"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:04:23",
+   "channel": "CK"
+  },
+  "wallpaper": {
+   "file": "wallpaper.mp3",
+   "title": "Wallpaper",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "curious",
+    "calm"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:03:40",
+   "channel": "MIM"
+  },
+  "ice_flow": {
+   "file": "ice_flow.mp3",
+   "title": "Ice Flow",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "mystery",
+    "curious"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:02:22",
+   "channel": "MIM"
+  },
+  "fluidscape": {
+   "file": "fluidscape.mp3",
+   "title": "Fluidscape",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "calm",
+    "mystery"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:30:21",
+   "channel": "MIM"
+  },
+  "floating_cities": {
+   "file": "floating_cities.mp3",
+   "title": "Floating Cities",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "warm",
+    "epic"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:03:04",
+   "channel": "MIM"
+  },
+  "clean_soul": {
+   "file": "clean_soul.mp3",
+   "title": "Clean Soul",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "calm",
+    "warm"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:05:07",
+   "channel": "MIM"
+  },
+  "hackbeat": {
+   "file": "hackbeat.mp3",
+   "title": "Hackbeat",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "upbeat",
+    "curious"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:04:02",
+   "channel": "MIM"
+  },
+  "equatorial_complex": {
+   "file": "equatorial_complex.mp3",
+   "title": "Equatorial Complex",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "mystery",
+    "calm"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:04:00",
+   "channel": "MIM"
+  },
+  "ether_vox": {
+   "file": "ether_vox.mp3",
+   "title": "Ether Vox",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "curious",
+    "calm"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:03:26",
+   "channel": "MIM"
+  },
+  "bossa_antigua": {
+   "file": "bossa_antigua.mp3",
+   "title": "Bossa Antigua",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "calm",
+    "warm"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:04:43",
+   "channel": "CK"
+  },
+  "sidewalk_shade": {
+   "file": "sidewalk_shade.mp3",
+   "title": "Sidewalk Shade",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "calm",
+    "curious"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:02:38",
+   "channel": "CK"
+  },
+  "george_street_shuffle": {
+   "file": "george_street_shuffle.mp3",
+   "title": "George Street Shuffle",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "curious",
+    "warm"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:04:28",
+   "channel": "CK"
+  },
+  "perspectives": {
+   "file": "perspectives.mp3",
+   "title": "Perspectives",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "calm",
+    "curious"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:11:58",
+   "channel": "CK"
+  },
+  "at_rest": {
+   "file": "at_rest.mp3",
+   "title": "At Rest",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "calm",
+    "warm"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:03:27",
+   "channel": "CK"
+  },
+  "healing": {
+   "file": "healing.mp3",
+   "title": "Healing",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "calm",
+    "warm"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:08:40",
+   "channel": "CK"
+  },
+  "frost_waltz": {
+   "file": "frost_waltz.mp3",
+   "title": "Frost Waltz",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "warm",
+    "calm"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:02:15",
+   "channel": "CK"
+  },
+  "arcadia": {
+   "file": "arcadia.mp3",
+   "title": "Arcadia",
+   "author": "Kevin MacLeod",
+   "license": "CC BY 4.0",
+   "mood": [
+    "warm",
+    "upbeat"
+   ],
+   "source": "https://incompetech.com",
+   "length": "00:01:38",
+   "channel": "CK"
   }
  }
 }

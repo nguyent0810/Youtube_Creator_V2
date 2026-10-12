@@ -1,6 +1,9 @@
 """Đăng video dài lên kênh: upload (private + publishAt) → thumbnail → phụ đề SRT → playlist mới.
 
-    python motion/long/publish_long.py <topic> <CH> <publishAt ISO UTC> [--playlist "Tên" "mô tả" id1 id2 ...] [--add-to <playlistId>]
+    python motion/long/publish_long.py <topic> <CH> <publishAt ISO UTC> [--wait] [--playlist "Tên" "mô tả" id1 id2 ...] [--add-to <playlistId>]
+
+--wait (retro 2 mục 15): chưa tới lượt giãn nhịp thì NGỦ tới Channel.next_upload_at() (in mốc đích) rồi upload, thay vì
+ném PacingHold. Chuỗi tự động dùng cờ này, không viết vòng "thử lại N lần".
 
 Mỗi bước ghi vào output/long/<topic>/pub/result.json: chạy lại sẽ BỎ QUA bước đã xong
 (không upload trùng, không tạo playlist trùng). Không bao giờ public ngay.
@@ -25,7 +28,7 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "motion"))
 from factory import channels, publish as P, store  # noqa: E402
 from factory.bundle import Bundle  # noqa: E402
-from factory.channel import Channel, Upload  # noqa: E402
+from factory.channel import Channel, Upload, upload_when_free, wait_turn  # noqa: E402
 
 
 def long_bundle(topic: str, ch: str, publish_at: str, sd: Path, od: Path) -> Bundle:
@@ -42,7 +45,8 @@ def long_bundle(topic: str, ch: str, publish_at: str, sd: Path, od: Path) -> Bun
     return Bundle(channel=ch, kind="long", slug=f"long-{topic}", script=" ".join(said), title=spec["title"],
                   description=(od / "description.txt").read_text(encoding="utf-8"), tags=list(y["tags"]),
                   # thumbnail dựng sẵn (pub/<thumb>); chữ trên đó là tiêu đề hồ sơ
-                  thumbnail_text=spec["title"][:60], publish_at=publish_at, voice="Anh Khôi", bgm="",
+                  thumbnail_text=spec["title"][:60], publish_at=publish_at,
+                  voice={"MIM": "Thanh Bình", "CK": "Ngọc Huyền"}.get(spec.get("channel", "CL"), "Anh Khôi"), bgm="",
                   broll_queries=[], render={"engine": "casewide", "spec": f"data/long/{topic}/spec.json"},
                   source_note="; ".join(y.get("sources", [])))
 
@@ -80,31 +84,65 @@ def captions_insert(tok, vid, srt: Path, name="Tiếng Việt"):
         raise P.PublishError(f"captions HTTP {e.code}: {e.read().decode()[:400]}")
 
 
+def find_thumb(od: Path, name: str = "t1.jpg") -> Path:
+    """Thumbnail: pub/<name> (C1 trở về trước, PM chép vào pub/) hoặc <topic>/<name> (thumb.py ghi thẳng, từ D1 07/10).
+    Trước đây chỉ nhìn pub/ -> MIM #2 lên kênh KHÔNG có thumbnail rồi sập (retro 2 mục 19)."""
+    p = od / "pub" / name
+    return p if p.exists() or not (od / name).exists() else od / name
+
+
+def preflight(od: Path, thumb: Path) -> list[str]:
+    """Đủ đồ trước khi upload: video, mô tả, phụ đề, thumbnail. Trả về tên file thiếu (rỗng = đi tiếp)."""
+    return [p.name for p in (od / "final.mp4", od / "description.txt", od / "captions.vi.srt", thumb) if not p.exists()]
+
+
 def main():
     topic, ch, publish_at, *rest = sys.argv[1:]
+    wait = "--wait" in rest
+    rest = [x for x in rest if x != "--wait"]      # --playlist đọc các đối số SAU nó theo vị trí
     sd, od = ROOT / "data" / "long" / topic, ROOT / "output" / "long" / topic
     spec = json.loads((sd / "spec.json").read_text(encoding="utf-8"))
     y = spec["youtube"]
     rp = od / "pub" / "result.json"
+    rp.parent.mkdir(parents=True, exist_ok=True)     # MIM #2 07/10: pub/ chưa có -> upload XONG rồi sập ở save()
     res = json.loads(rp.read_text(encoding="utf-8")) if rp.exists() else {}
     save = lambda: rp.write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
+    thumb = find_thumb(od, y.get("thumb", "t1.jpg"))
+    if channels.upload_mode(ch) == "manual":
+        # Kênh upload TAY (MIM): ghi kho (bundle + video + thumbnail), ghi sổ đa dạng, rồi xuất gói -- KHÔNG gọi API upload.
+        b = long_bundle(topic, ch, publish_at, sd, od)
+        with store.connect() as conn:
+            register(conn, b, res, od / "final.mp4", Channel.open(ch, conn))
+            if thumb.exists():
+                conn.execute("UPDATE item SET thumb_path = ? WHERE id = ?", (str(thumb), b.id))
+        import variety
+        variety.record(topic, publish_at[:10])
+        print(f"đã vào kho: {b.slug}. Xuất gói upload tay:  python scripts/export_manual.py --channel {ch}")
+        return
     creds = json.loads(channels.creds_path(ch).read_text(encoding="utf-8"))
     tok = P.access_token(creds)       # cho các bước còn lại (phụ đề, playlist)
-    thumb = od / "pub" / y.get("thumb", "t1.jpg")
 
+    if not res.get("video_id"):
+        missing = preflight(od, thumb)
+        if missing:      # upload là bước KHÔNG rút lại được: thiếu gì thì dừng TRƯỚC, không đăng nửa vời
+            raise SystemExit(f"preflight: thiếu {', '.join(missing)} trong {od} — chưa upload gì")
     b = long_bundle(topic, ch, publish_at, sd, od)
     with store.connect() as conn:
         register(conn, b, res, od / "final.mp4", Channel.open(ch, conn))
         if not res.get("video_id"):
+            if wait:      # ngủ tới lượt TRƯỚC khi chụp tiêu đề kênh + lấy token mới (chờ có thể nhiều giờ)
+                wait_turn(Channel.open(ch, conn))
+                tok = P.access_token(creds)
             titles = P.channel_titles(P.uploads_playlist_id(tok), tok)
             chan = Channel.open(ch, conn, channel_titles=titles)
             print("upload…", flush=True)
             try:
-                up = chan.upload(Upload(
+                u = Upload(
                     slug=f"long-{topic}", video=od / "final.mp4", title=spec["title"],
                     description=(od / "description.txt").read_text(encoding="utf-8"),
                     tags=tuple(y["tags"]), kind="long", publish_at=publish_at,
-                    category=y.get("category", "24"), thumbnail=thumb))
+                    category=y.get("category", "24"), thumbnail=thumb)
+                up = upload_when_free(chan, u) if wait else chan.upload(u)
             except P.PublishError as e:
                 # PacingHold / UploadInterrupted: chạy lại lệnh này là đủ (nối
                 # tiếp phiên cũ, không upload lại). UploadInDoubt: xem Studio rồi
@@ -136,6 +174,7 @@ def main():
     if not res.get("captions"):
         try:
             res["captions"] = captions_insert(tok, vid, od / "captions.vi.srt")
+            res.pop("captions_error", None)
             print("phụ đề OK", flush=True)
         except P.PublishError as e:
             res["captions_error"] = str(e)
@@ -168,10 +207,18 @@ def main():
             done.append(pid)
             save()
             print("added to playlist", pid, flush=True)
+    try:     # playlist theo chuỗi (data/playlists.json): video vừa đăng tự vào đúng playlist; lỗi ở đây KHÔNG làm hỏng lần đăng
+        sys.path.insert(0, str(ROOT / "scripts"))
+        import playlists
+        playlists.add_for_topic(topic, ch, tok, P, res, save)
+    except Exception as e:      # noqa: BLE001
+        print(f"! playlist chưa thêm được ({e}) — chạy: python scripts/playlists.py sync --channel {ch}", flush=True)
     import variety   # sổ đa dạng: video sau sẽ được so với video này (nhạc nền, look)
     variety.record(topic, publish_at[:10])
     print(json.dumps(res, ensure_ascii=False))
 
 
 if __name__ == "__main__":
+    from factory.console import utf8_console  # noqa: E402
+    utf8_console()  # console Windows cp1252 không in được tiếng Việt (retro 2 mục 7)
     main()

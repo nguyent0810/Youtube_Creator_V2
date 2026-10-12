@@ -1,0 +1,15 @@
+/* beat2.css — bố cục cảnh chữ + từ nhấn (beat2.js). Chỉ nạp cho video có spec "beat2": true. */
+.kin.kL { left:90px; right:1010px; }
+.kin.kR { left:1010px; right:90px; }
+.kin.kC { left:190px; right:80px; text-align:left; }
+.b2split { position:absolute; left:958px; top:290px; width:4px; height:440px; background:var(--red); transform-origin:50% 0; }
+.b2bar { position:absolute; left:150px; width:10px; background:var(--red); transform-origin:50% 100%; }
+.b2rule { position:absolute; left:760px; width:400px; height:8px; background:var(--red); }
+.b2frame { position:absolute; }
+.b2frame i { position:absolute; width:64px; height:64px; border:6px solid var(--red); }
+.b2frame i:nth-child(1) { left:0; top:0; border-right:0; border-bottom:0; }
+.b2frame i:nth-child(2) { right:0; top:0; border-left:0; border-bottom:0; }
+.b2frame i:nth-child(3) { left:0; bottom:0; border-right:0; border-top:0; }
+.b2frame i:nth-child(4) { right:0; bottom:0; border-left:0; border-top:0; }
+.kin .em { color:var(--red); background-image:linear-gradient(currentColor, currentColor); background-repeat:no-repeat; background-position:0 96%; background-size:0% .09em; }
+.kin.acc .em { color:#fff; }

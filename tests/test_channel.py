@@ -515,3 +515,21 @@ def test_adopt_is_idempotent_for_the_same_video_and_refuses_a_different_one(env)
     c.adopt("mim-a", v1)                                  # chạy lại: không đổi gì
     with pytest.raises(PublishError):
         c.adopt("mim-a", v2)
+
+
+class TickingClock(Clock):
+    """Đồng hồ thật: mỗi lần đọc trễ hơn lần trước một chút (như datetime.now)."""
+
+    def __call__(self):
+        self.t += timedelta(microseconds=7)
+        return self.t
+
+
+def test_a_channel_with_nothing_recent_uploads_now_even_on_a_ticking_clock(tmp_path):
+    """Lỗi thật 06/10/2026 (kênh MIM): _take đọc `now`, rồi next_upload_at() đọc đồng hồ LẦN NỮA -> mốc luôn
+    trễ hơn `now` vài micro-giây -> PacingHold vô hạn dù 24h qua kênh không vượt nhịp."""
+    video = tmp_path / "final.mp4"
+    video.write_bytes(b"\0" * 64)
+    with store.connect(tmp_path / "state.sqlite") as conn:
+        env = {"clock": TickingClock(), "yt": FakeYouTube(), "conn": conn, "video": video, "tmp": tmp_path}
+        assert ch(env).upload(up(env)).video_id

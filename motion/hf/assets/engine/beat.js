@@ -10,6 +10,9 @@ window.makeBeat = ({ tl, el, esc, rnd }) => {
   const inner = (e, cls) => { const s = el("span", "kt" + (cls ? " " + cls : ""), e.innerHTML); e.innerHTML = ""; e.appendChild(s); return s; };
   const GLY = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#%&$@";
   const BEAT = {
+    // dòng mở Short: hiện SẴN từ khung 0 (hook + thumbnail), chỉ lùi máy nhẹ -- không có mốc âm, không có khung trống
+    hold: (e, q) => { e.style.opacity = 1; tl.set(e, { opacity: 1 }, 0);
+      tl.fromTo(e, { scale: 1.07 }, { scale: 1, duration: 0.6, ease: "power2.out", immediateRender: true }, Math.max(0, q.at)); },
     pop: (e, q) => tl.fromTo(e, { opacity: 0, scale: 1.3, y: -16 }, { opacity: 1, scale: 1, y: 0, duration: 0.2, ease: "power4.in", immediateRender: false }, q.at - 0.08),
     // từng chữ trồi lên từ sau một mép che (kiểu Vox)
     rise: (e, q) => { e.innerHTML = words(q.text).map((w) => `<span class="rw"><span>${w}</span></span>`).join(" ");
@@ -39,7 +42,7 @@ window.makeBeat = ({ tl, el, esc, rnd }) => {
       tl.to("#stage", { x: 7, duration: 0.03, yoyo: true, repeat: 3 }, q.at + 0.02); },
     // băng dán vàng kiểu dây phong tỏa hiện trường
     tape: (e, q) => { const s = inner(e, "tp"), rot = -2.5 + rnd() * 1.5; tl.set(e, { opacity: 1 }, q.at - 0.22);
-      tl.fromTo(s, { clipPath: "inset(0 100% 0 0)", rotation: rot }, { clipPath: "inset(0 0% 0 0)", rotation: rot, duration: 0.3, ease: "power3.out", immediateRender: false }, q.at - 0.22); },
+      tl.fromTo(s, { clipPath: "inset(-40% 100% -40% 0)", rotation: rot }, { clipPath: "inset(-40% 0% -40% 0)", rotation: rot, duration: 0.3, ease: "power3.out", immediateRender: false }, q.at - 0.22); },
     // bảng neon chập chờn rồi sáng hẳn
     flicker: (e, q) => { e.classList.add("neo"); const seq = [0, 0.9, 0.1, 0.8, 0, 1, 0.35, 1];
       seq.forEach((o, k) => tl.set(e, { opacity: o }, q.at - 0.2 + k * 0.055)); },
@@ -65,6 +68,9 @@ window.makeBeat = ({ tl, el, esc, rnd }) => {
     sync: (e, q) => { if (!q.wt || !q.wt.length) return BEAT.rise(e, q);   // "sync" ghi tay mà không có mốc chữ
       e.innerHTML = words(q.text).map((w) => `<span class="sw">${w}</span>`).join(" ");
       const sw = e.querySelectorAll(".sw"), pre = q.t0 != null && q.wt[0] - q.t0 > 1.2;
+      (q.em || []).forEach((k) => { const w = sw[k]; if (!w) return; w.classList.add("emw");   // chữ nhấn: hộp màu quét đúng lúc đọc
+        tl.fromTo(w, { backgroundSize: "0% 84%" }, { backgroundSize: "100% 84%", duration: 0.24, ease: "power2.out", immediateRender: false }, q.wt[k] + 0.1);
+        tl.to(w, { color: "#04121a", duration: 0.12 }, q.wt[k] + 0.16); });
       tl.set(e, { opacity: 1 }, pre ? q.t0 + 0.1 : q.wt[0] - 0.08);
       if (pre) tl.fromTo(sw, { opacity: 0 }, { opacity: 0.16, duration: 0.5, immediateRender: false }, q.t0 + 0.1);
       sw.forEach((s, k) => tl.fromTo(s, { opacity: pre ? 0.16 : 0, y: pre ? 0 : 40, filter: "blur(6px)" },

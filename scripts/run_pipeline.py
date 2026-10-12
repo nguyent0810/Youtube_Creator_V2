@@ -27,6 +27,10 @@ FAIL-CLOSED TỪNG CHẶNG: bước nào hỏng thì DỪNG, không chạy tiế
 lên kênh thật không rút lại được, nên thà dừng giữa chừng còn hơn đi tiếp
 với dữ liệu sai.
 """
+import pathlib, sys  # noqa: E401
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
+from factory.console import utf8_console  # noqa: E402
+utf8_console()  # console Windows cp1252 không in được tiếng Việt (retro 2 mục 7)
 import subprocess
 import sys
 import time

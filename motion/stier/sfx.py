@@ -249,6 +249,27 @@ def build(case: dict, dst: Path, drone: bool = True) -> None:
                     M.put(r["at"] + k * 0.05, M.key(), 0.4)
             if s.get("total"):
                 M.put(s["total"]["at"], M.thud(0.6), 0.9)
+        elif ty == "chart":      # kênh CK: cột mọc / đường vẽ dần (casefile.js B.chart)
+            for b in s.get("bars") or []:
+                M.put(b["at"] - 0.1, M.whoosh(0.35), 0.18)
+                M.put(b["at"] + 0.3, M.thud(0.35), 0.35)
+                if b.get("gapAt") is not None:
+                    M.put(b["gapAt"], M.scratch(0.3), 0.5)
+            for k, p in enumerate(s.get("points") or []):
+                M.put(p["at"], M.blip(), 0.35 if k else 0.2, 0.2)
+            if s.get("badge"):
+                M.put(s["badge"]["at"] - 0.1, M.thud(0.5), 0.7)
+        elif ty == "board":      # bảng trắng: tiếng bút theo từng ô, vút theo mũi tên (casefile.js B.board)
+            for q in s.get("nodes") or []:
+                M.put(q["at"] - 0.1, M.scratch(0.3), 0.4)
+                if q.get("cross") is not None:
+                    M.put(q["cross"], M.scratch(0.3), 0.6)
+            for a in s.get("arrows") or []:
+                M.put(a["at"] - 0.05, M.whoosh(0.3), 0.2)
+        elif ty == "cards3d":    # thẻ 3D lật lên
+            for c in s["cards"]:
+                M.put(c["at"] - 0.15, M.whoosh(0.35), 0.22)
+                M.put(c["at"] + 0.25, M.thud(0.4), 0.5)
         elif ty == "slam":
             fx = s.get("fx", "punch")
             if fx in ("slice", "zoom"):
