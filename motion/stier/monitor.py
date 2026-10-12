@@ -1,4 +1,7 @@
-"""Theo dõi hằng ngày tuần test 3 short/ngày trên CL (05–11/10/2026). Chỉ ĐỌC, không sửa gì trên kênh.
+"""Theo dõi hằng ngày tuần test 3 short/ngày trên CL (05–11/10/2026). Chỉ ĐỌC kênh, không sửa video.
+
+Ngoại lệ trên máy: Long đã public đủ 9 ngày thì ghi một lần ret1 và % đề xuất của 7 ngày đầu
+vào data/variety/ledger.json (so với video ngay trước). Không ghi đè số đã chốt.
 
     python motion/stier/monitor.py            # chụp số liệu + viết báo cáo
     python motion/stier/monitor.py --quiet    # chỉ ghi file (dùng cho lịch chạy tự động)
@@ -23,8 +26,10 @@ import requests
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(ROOT / "motion"))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from factory import channels, publish, store  # noqa: E402
+import variety  # noqa: E402
 import importlib.util  # noqa: E402
 
 _spec = importlib.util.spec_from_file_location("week", Path(__file__).resolve().parent / "week_2026-10-05.py")
@@ -92,16 +97,92 @@ def long_section(H, cid, now) -> list[str]:
         cur = ana(H, cid, startDate=start, endDate=end, metrics="audienceWatchRatio", dimensions="elapsedVideoTimeRatio", filters=f"video=={vid}") or []
         src = ana(H, cid, startDate=start, endDate=end, metrics="views", dimensions="insightTrafficSourceType", filters=f"video=={vid}") or []
 
-        def at(sec):
-            if not cur or not dur:
-                return "—"
-            x = min(cur, key=lambda c: abs(float(c["elapsedVideoTimeRatio"]) * dur - sec))
-            return f"{float(x['audienceWatchRatio']) * 100:.0f}%"
-        sv = sum(int(s["views"]) for s in src)
-        rel = next((int(s["views"]) for s in src if s["insightTrafficSourceType"] == "RELATED_VIDEO"), 0)
+        def pct(x):
+            return "—" if x is None else f"{x:.0f}%"
         avp = f"{float(tot[0]['averageViewPercentage']):.1f}" if tot else "—"
-        L.append(f"| [{topic}](https://youtu.be/{vid}) | {live} | {int(it['statistics'].get('viewCount', 0)):,} | {avp} | {at(60)} | {at(120)} | "
-                 f"{(f'{rel / sv * 100:.0f}%') if sv else '—'} |")
+        L.append(f"| [{topic}](https://youtu.be/{vid}) | {live} | {int(it['statistics'].get('viewCount', 0)):,} | {avp} | "
+                 f"{pct(variety.minute_retention(cur, dur, 60))} | {pct(variety.minute_retention(cur, dur, 120))} | {pct(variety.suggested_share(src))} |")
+    return L
+
+
+def _published(it) -> datetime:
+    return datetime.strptime(it["snippet"]["publishedAt"][:19], "%Y-%m-%dT%H:%M:%S").replace(tzinfo=timezone.utc)
+
+
+def _duration_s(it) -> int:
+    m = __import__("re").match(r"PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?", it["contentDetails"]["duration"])
+    if not m:
+        return 0
+    return int(m.group(1) or 0) * 3600 + int(m.group(2) or 0) * 60 + int(m.group(3) or 0)
+
+
+def sync_long_feedback(H, cid, now) -> list[str]:
+    """Ghi một lần số 7 ngày đầu vào sổ. Bỏ qua video chưa đủ hạn, đã chốt, hoặc Analytics còn trống."""
+    found = []
+    for rp in sorted((ROOT / "output/long").glob("*/pub/result.json")):
+        vid = json.loads(rp.read_text(encoding="utf-8")).get("video_id")
+        if vid:
+            found.append((rp.parts[-3], vid))
+    if not found:
+        return []
+    r = requests.get(DATA, params={"part": "snippet,status,contentDetails", "id": ",".join(v for _, v in found)}, headers=H, timeout=60)
+    items = {it["id"]: it for it in r.json()["items"]} if r.ok else {}
+    rows = variety.ledger()
+    by_topic = {row["topic"]: row for row in rows}
+    pending = []
+    notes = []
+    for topic, vid in found:
+        it = items.get(vid)
+        if not it or it["status"]["privacyStatus"] != "public":
+            continue
+        published = _published(it)
+        if not variety.feedback_ready(published, now):
+            continue
+        row = by_topic.get(topic)
+        if row is None:
+            notes.append(f"{topic}: chưa có trong sổ, chưa ghi")
+            continue
+        if row.get("ret1") is not None:
+            continue
+        pending.append((row.get("date", ""), topic, vid, published, _duration_s(it)))
+    changed = False
+    for _, topic, vid, published, dur in sorted(pending):
+        start, end = variety.feedback_window(published)
+        cur = ana(H, cid, startDate=start, endDate=end, metrics="audienceWatchRatio", dimensions="elapsedVideoTimeRatio", filters=f"video=={vid}")
+        src = ana(H, cid, startDate=start, endDate=end, metrics="views", dimensions="insightTrafficSourceType", filters=f"video=={vid}")
+        ret1 = variety.minute_retention(cur, dur, 60)
+        suggested = variety.suggested_share(src)
+        if ret1 is None or suggested is None:
+            notes.append(f"{topic}: Analytics chưa có đủ số 7 ngày đầu ({start} → {end}), để lần sau")
+            continue
+        age_days = round((now - published).total_seconds() / 86400, 1)
+        rows, stamped = variety.stamp_feedback(rows, topic, ret1=ret1, suggested=suggested, age_days=age_days, today=now.date().isoformat())
+        if stamped is None:
+            continue
+        changed = True
+        vs = ""
+        if stamped.get("ret1_vs_prev") is not None and stamped.get("suggested_vs_prev") is not None:
+            vs = f", phút 1 {stamped['ret1_vs_prev']:+.1f} điểm, đề xuất {stamped['suggested_vs_prev']:+.1f} điểm so với video trước"
+        notes.append(f"{topic}: ghi sổ {ret1:.0f}% còn ở phút 1, {suggested:.0f}% từ đề xuất{vs}")
+    if changed:
+        variety.save_ledger(rows)
+    return notes
+
+
+def feedback_table() -> list[str]:
+    """Bảng số đã chốt trong sổ, để lần nghiên cứu sau đọc cùng báo cáo."""
+    rows = sorted((r for r in variety.ledger() if r.get("ret1") is not None), key=lambda r: r.get("date", ""))
+    L = ["", "### Sổ giữ chân (7 ngày đầu, đã chốt)", ""]
+    if not rows:
+        L.append("Chưa có số 7 ngày trong sổ.")
+        return L
+    L += ["| Long | Ngày sổ | Còn ở phút 1 | Từ đề xuất | So với video trước |", "|---|---|---:|---:|---|"]
+    for r in rows:
+        if r.get("ret1_vs_prev") is None:
+            vs = "—"
+        else:
+            vs = f"phút 1 {r['ret1_vs_prev']:+.1f} điểm, đề xuất {r['suggested_vs_prev']:+.1f} điểm"
+        L.append(f"| {r['topic']} | {r['date']} | {r['ret1']:.0f}% | {r['suggested']:.0f}% | {vs} |")
     return L
 
 
@@ -202,8 +283,12 @@ def main():
         d = (now.date() - timedelta(days=k)).isoformat()
         fb = feed_by_day.get(d)
         L.append(f"| {d} | {'chưa có số' if d not in by_day else f'{by_day[d]:,}'} | {'—' if fb is None else f'{fb:,}'} |")
+    notes = sync_long_feedback(H, cid, now)
     L += long_section(H, cid, now)
-    L += ["", "_Analytics trễ 1–2 ngày; ngày gần nhất thường thiếu số._"]
+    L += feedback_table()
+    L += ["", "### Lần chạy này", ""]
+    L += [f"- {n}" for n in notes] or ["- Không có số mới để ghi."]
+    L += ["", "_Analytics trễ 1–2 ngày; ngày gần nhất thường thiếu số. Sổ giữ chân chỉ lấy 7 ngày đầu và ghi một lần._"]
     md = "\n".join(L) + "\n"
     (OUT / f"report_{now:%Y-%m-%d}.md").write_text(md, encoding="utf-8")
     (OUT / "latest.md").write_text(md, encoding="utf-8")

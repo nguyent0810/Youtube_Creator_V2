@@ -41,6 +41,7 @@ from build import Anchors, resolve, norm  # noqa: E402  (cùng cú pháp mốc v
 
 BLD.ANCHORS |= {"sumAt", "zeroAt", "titleAt", "hAt", "countAt", "hitAt", "typeAt", "burnAt", "decodeAt", "endAt", "voiceAt", "voiceEnd"}      # mốc riêng của cảnh video dài
 BLD.ANCHOR_LISTS |= {"flips", "readAt"}
+import floor  # noqa: E402
 import lint_html  # noqa: E402
 import sfx_long  # noqa: E402
 
@@ -545,6 +546,13 @@ def _refuse_craft(topic: str, spec: dict, chs) -> None:
         raise SystemExit("craft:\n  " + "\n  ".join(bad))
 
 
+def _refuse_floor(topic: str, chs) -> None:
+    """Sàn sản xuất (floor.py): độ dài kịch bản, ảnh, b-roll, độ đa dạng cảnh. Áp cho mọi topic."""
+    bad = floor.problems(chs)
+    if bad:
+        raise SystemExit(f"floor ({topic}): video này kém các Long đã đăng, không dựng bản thật:\n  " + "\n  ".join(bad))
+
+
 def do_html(topic, only=None):
     _refuse_html_lint(topic, only)   # chặn trước khi tải ảnh và trộn tiếng
     spec, chs, od = load(topic)
@@ -671,6 +679,8 @@ def render_key(topic, name, od, draft) -> str:
 def do_render(topic, only=None, draft=False, force=False):
     _refuse_html_lint(topic, only)   # không render 70 phút một bản html đã biết là hỏng
     spec, chs, od = load(topic)
+    if not draft:
+        _refuse_floor(topic, chs)   # bản nháp (--draft) vẫn cho chạy để soi từng chương khi đang viết
     _refuse_craft(topic, spec, chs)
     for name, ch in chs:
         if only and name not in only:
@@ -696,6 +706,7 @@ def do_render(topic, only=None, draft=False, force=False):
 
 def do_final(topic):
     spec, chs, od = load(topic)
+    _refuse_floor(topic, chs)
     _refuse_craft(topic, spec, chs)
     lst = od / "concat.txt"
     lst.write_text("".join(f"file '{(od / n / 'silent.mp4').as_posix()}'\n" for n, _ in chs), encoding="utf-8")
@@ -724,6 +735,10 @@ if __name__ == "__main__":
         do_html(topic, only)
         for x in variety.audit(topic):
             print("  ! variety:", x)
+        _chs = load(topic)[1]
+        print("  floor:", floor.report(_chs))
+        for x in floor.problems(_chs):
+            print("  ! floor:", x)
     elif cmd == "render":
         do_render(topic, only, draft="--draft" in rest, force="--force" in rest)
     elif cmd == "takes":

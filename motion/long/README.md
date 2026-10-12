@@ -163,3 +163,22 @@ Chính sách Spam của YouTube lấy đúng ví dụ "the exact same background
   - Kết quả được cache ở `output/long/<topic>/bgm_picks.json`, nên render lại vẫn ra bài cũ.
   - Danh mục nhạc: `motion/long/music_catalog.json`. File nhạc: `output/music/`. `python motion/variety.py library` cho biết mỗi bài đã dùng bao nhiêu lần.
   - Kho hiện chỉ có 14 bài, chưa đủ để tránh trùng. Phải thêm bài (Kevin MacLeod CC BY, YouTube Audio Library…) vào cả danh mục lẫn `output/music/`.
+
+## Sàn sản xuất (`floor.py`)
+
+Một Long mới không được kém sáu Long đã đăng. `floor.py` đo kịch bản và cảnh, rồi từ chối `render` (bản thật), `final` và `publish_long.py` khi dưới sàn. `html` chỉ in cảnh báo, `render --draft` vẫn chạy để soi từng chương lúc đang viết.
+
+| Chỉ số | Thấp nhất trong 6 Long | Sàn |
+|---|---:|---:|
+| Âm tiết kịch bản | 5.610 | 5.000 |
+| Số chương | 12 | 10 |
+| Số loại cảnh | 19 | 14 |
+| Ảnh khác nhau | 49 | 40 |
+| Cảnh có b-roll | 35 | 30 |
+| Tỷ lệ kinetic | cao nhất 34% | tối đa 38% |
+| Chữ trên nền trống | cao nhất 10% | tối đa 12% |
+
+- `scenes_from.py` gắn `"auto": true` cho mọi câu không có dấu. Đó là bộ khung nháp; còn một cảnh `auto` là sàn chặn.
+- `publish_long.py` còn đòi spec có `"approved"` (ngày và lời duyệt của chủ kênh) trước lần upload đầu.
+- `python motion/long/unschedule.py <CH> <topic…> [--dry]` gỡ lịch public, giữ video private, không xóa.
+- Bị chặn thì bổ sung tư liệu và kịch bản. Đừng hạ ngưỡng. Quy trình đầy đủ nằm ở `CLAUDE.md` gốc repo.

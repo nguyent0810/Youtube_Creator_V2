@@ -10,6 +10,9 @@ video dài khác các video trước về NHẠC NỀN và DIỆN MẠO (bảng 
   python motion/variety.py library           kho nhạc: số lần mỗi bài đã dùng trong sổ
 
 Sổ: data/variety/ledger.json (commit). Danh mục nhạc + mood: motion/long/music_catalog.json (commit).
+Sau khi một Long đã public đủ 9 ngày, monitor.py ghi một lần số 7 ngày đầu vào đúng dòng sổ:
+ret1 (% còn xem ở phút 1), suggested (% view từ đề xuất / RELATED_VIDEO), và chênh so với video
+ngay trước cùng kênh (ret1_vs_prev, suggested_vs_prev). record() giữ các số này.
 File nhạc: output/music/ (không commit; tải về theo danh mục).
 Trong chNN.json, bgm có thể ghi {"mood": "tense", "gain": .., "at": ..} thay vì "file": build_long chọn bài
 qua resolve_bgm() — ít dùng nhất trong các video gần đây, không lặp trong cùng video — và cache vào
@@ -19,7 +22,7 @@ import hashlib
 import json
 import shutil
 import sys
-from datetime import date
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -28,6 +31,9 @@ CATALOG = ROOT / "motion" / "long" / "music_catalog.json"
 LIB = ROOT / "output" / "music"
 WINDOW = 3            # so với bao nhiêu video gần nhất cùng kênh
 MAX_BGM_OVERLAP = 0.35  # Jaccard bộ nhạc nền giữa hai video
+WINDOW_DAYS = 7       # cửa sổ số liệu giữ chân / đề xuất
+LAG_DAYS = 2          # Analytics trễ 1–2 ngày; chỉ ghi sổ khi cửa sổ đã khép
+FEEDBACK_FIELDS = ("ret1", "suggested", "ret1_vs_prev", "suggested_vs_prev", "feedback_on", "feedback_age_days")
 
 # Diện mạo: chỉ font có bộ ký tự tiếng Việt trên Google Fonts (đã kiểm 04/10/2026).
 # "classic" = diện mạo của mọi video trước ngày có module này (spec không ghi look -> classic, render y như cũ).
@@ -179,10 +185,75 @@ def next_look(channel: str = "CL", exclude: str = "") -> str:
 
 
 def record(topic: str, when: str | None = None) -> dict:
-    row = {**profile(topic), "date": when or date.today().isoformat()}
+    old = next((r for r in ledger() if r["topic"] == topic), None)
+    row = keep_feedback({**profile(topic), "date": when or date.today().isoformat()}, old)
     rows = [r for r in ledger() if r["topic"] != topic] + [row]
     save_ledger(rows)
     return row
+
+
+def keep_feedback(fresh: dict, old: dict | None) -> dict:
+    """record() ghi lại look/nhạc/ngày, và giữ số giữ chân đã chốt."""
+    row = dict(fresh)
+    if old:
+        for k in FEEDBACK_FIELDS:
+            if k in old:
+                row[k] = old[k]
+    return row
+
+
+def feedback_ready(published: datetime, now: datetime) -> bool:
+    """Đủ 7 ngày phát sóng cộng 2 ngày Analytics trễ thì cửa sổ số liệu đã khép."""
+    return now - published >= timedelta(days=WINDOW_DAYS + LAG_DAYS)
+
+
+def feedback_window(published: datetime) -> tuple[str, str]:
+    """startDate, endDate (UTC) của 7 ngày đầu. Lùi 1 ngày để khỏi cắt mất giờ Thái Bình Dương."""
+    d = published.date()
+    return (d - timedelta(days=1)).isoformat(), (d + timedelta(days=WINDOW_DAYS)).isoformat()
+
+
+def minute_retention(curve, dur: float, sec: float):
+    """% người xem còn lại ở giây `sec`. None nếu chưa có đường giữ chân hoặc không có độ dài."""
+    if not curve or not dur:
+        return None
+    hit = min(curve, key=lambda c: abs(float(c["elapsedVideoTimeRatio"]) * dur - sec))
+    return round(float(hit["audienceWatchRatio"]) * 100, 1)
+
+
+def suggested_share(sources):
+    """% view từ RELATED_VIDEO. 0 nếu có view mà không có đề xuất. None nếu chưa có số."""
+    if not sources:
+        return None
+    total = sum(int(s["views"]) for s in sources)
+    if not total:
+        return None
+    related = next((int(s["views"]) for s in sources if s["insightTrafficSourceType"] == "RELATED_VIDEO"), 0)
+    return round(related / total * 100, 1)
+
+
+def stamp_feedback(rows: list[dict], topic: str, *, ret1: float, suggested: float, age_days: float, today: str):
+    """Ghi một lần số 7 ngày vào dòng `topic`. Không đè số đã có. Không tạo dòng mới.
+
+    Video trước = dòng cùng kênh có ngày sổ sớm hơn. Chênh chỉ có khi video đó đã có số.
+    Trả (danh sách mới, dòng đã ghi hoặc None).
+    """
+    idx = next((i for i, r in enumerate(rows) if r["topic"] == topic), None)
+    if idx is None or rows[idx].get("ret1") is not None:
+        return rows, None
+    row = rows[idx]
+    prevs = [r for r in rows if r.get("channel") == row.get("channel") and r["topic"] != topic and r.get("date", "") < row.get("date", "")]
+    prev = max(prevs, key=lambda r: r.get("date", "")) if prevs else None
+    patch = {"ret1": ret1, "suggested": suggested, "feedback_on": today, "feedback_age_days": age_days}
+    if prev is not None and prev.get("ret1") is not None:
+        patch["ret1_vs_prev"] = round(ret1 - prev["ret1"], 1)
+    if prev is not None and prev.get("suggested") is not None:
+        patch["suggested_vs_prev"] = round(suggested - prev["suggested"], 1)
+    updated = dict(row)
+    updated.update(patch)
+    out = list(rows)
+    out[idx] = updated
+    return out, updated
 
 
 def main():

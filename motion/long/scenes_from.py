@@ -1,7 +1,8 @@
 """Dựng ``scenes`` từ lời đọc và dấu cuối câu. Hàm thuần: không đọc, không ghi đĩa.
 
-Dấu không có thì ra ``kinetic`` (cụm chữ cắt từ chính câu đó). Lệnh in số câu không dấu
-để khỏi dựng một video toàn một kiểu mà không ai thấy.
+Dấu không có thì ra ``kinetic`` NHÁP (cụm chữ cắt từ chính câu đó, gắn ``"auto": true``). Đây là bộ khung để
+người viết biên tập tiếp, KHÔNG phải cảnh hoàn chỉnh: ``floor.py`` chặn render/final/publish khi còn cảnh auto.
+Bốn Long ngày 11/10/2026 hỏng vì dùng thẳng đầu ra này (72% kinetic trên nền trống, không một tấm ảnh).
 """
 from __future__ import annotations
 
@@ -28,7 +29,9 @@ def _kinetic(i: int, line) -> dict:
     phrase = " ".join(words[:4]).strip(".,;:!?…\"“”").upper()
     if len(phrase) > 32 and " " in phrase:
         phrase = phrase[:32].rsplit(" ", 1)[0]
-    return {"type": "kinetic", "at": i, "items": [{"text": phrase, "at": [i, words[0]]}]}
+    # "auto": bản nháp máy cắt 4 từ đầu câu. floor.py từ chối render/final/publish khi còn cảnh auto:
+    # người viết phải thay bằng cảnh thật (ảnh, bản đồ, hồ sơ…) hoặc ít nhất một cụm chữ có nghĩa trên nền tư liệu.
+    return {"type": "kinetic", "at": i, "auto": True, "items": [{"text": phrase, "at": [i, words[0]]}]}
 
 
 def _marked(i: int, line, raw: str, lines) -> dict:

@@ -44,6 +44,16 @@ def main():
     y = spec["youtube"]
     rp = od / "pub" / "result.json"
     res = json.loads(rp.read_text(encoding="utf-8")) if rp.exists() else {}
+    # Sàn sản xuất + duyệt của chủ kênh: không đăng một Long kém các Long đã đăng, không đăng kịch bản chưa ai duyệt.
+    sys.path.insert(0, str(ROOT / "motion" / "long"))
+    import floor
+    _spec = json.loads((ROOT / "data" / "long" / topic / "spec.json").read_text(encoding="utf-8"))
+    _chs = [(n, json.loads((ROOT / "data" / "long" / topic / f"{n}.json").read_text(encoding="utf-8"))) for n in _spec["chapters"]]
+    _bad = floor.problems(_chs)
+    if not _spec.get("approved"):
+        _bad.append('spec thiếu "approved": chủ kênh chưa duyệt kịch bản + lịch đăng (ghi ngày và lời duyệt của họ, không tự điền)')
+    if _bad and not res.get("video_id"):   # video đã upload từ trước thì chạy lại các bước sau vẫn được
+        raise SystemExit(f"KHÔNG ĐĂNG {topic}:\n  " + "\n  ".join(_bad))
     save = lambda: rp.write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
     creds = json.loads(channels.creds_path(ch).read_text(encoding="utf-8"))
     tok = P.access_token(creds)
