@@ -1,0 +1,217 @@
+{
+ "title": "Tờ tiền không chọn số",
+ "lines": [
+  {
+   "t": "Ngày 30 tháng 10 năm 2018, ông chết trong tù.",
+   "p": 0.8
+  },
+  "Hồ sơ dừng ở câu ấy.",
+  "Không kể giờ chết.",
+  "Không kể ai ở trong phòng.",
+  "Bạn có thể ra về với hai triệu đô la tiền thưởng.",
+  "Hoặc với tóc vàng và cái tên ông ghét.",
+  "Căn hộ thì giữ một việc khác.",
+  "Hơn 800.000 đô la, theo hãng tin được trang hồ sơ dẫn.",
+  "822.000 đô la trong tường, theo bài báo tháng 9 năm 2011.",
+  "Hai con số vẫn đứng cạnh nhau.",
+  "Mười sáu năm truy tìm.",
+  "Mười lăm năm trong một tòa nhà gần biển.",
+  "Người đưa tin là một hoa hậu cũ, sống cùng khu.",
+  "Người báo cho ông chạy, năm 1994, là đặc vụ phụ trách chính ông.",
+  "Bạn đang xem một hồ sơ về một chỉ điểm mà cục không giữ được.",
+  {
+   "t": "Tờ tiền trong căn hộ không chọn giúp bạn số nào đúng.",
+   "p": 1.0
+  }
+ ],
+ "hud": {
+  "k": "HỒ SƠ",
+  "t": "30.10.2018"
+ },
+ "bgm": {
+  "mood": "quiet",
+  "gain": 0.11
+ },
+ "scenes": [
+  {
+   "type": "chapter",
+   "at": 0,
+   "no": "9",
+   "k": "CHƯƠNG 9",
+   "title": "TRONG TÙ"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "HỒ SƠ DỪNG Ở",
+     "at": [
+      1,
+      "Hồ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "KHÔNG KỂ GIỜ CHẾT",
+     "at": [
+      2,
+      "Không"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "KHÔNG KỂ AI Ở",
+     "at": [
+      3,
+      "Không"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "BẠN CÓ THỂ RA",
+     "at": [
+      4,
+      "Bạn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "HOẶC VỚI TÓC VÀNG",
+   "white": true
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "CĂN HỘ THÌ GIỮ",
+     "at": [
+      6,
+      "Căn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "HƠN 800.000 ĐÔ LA",
+     "at": [
+      7,
+      "Hơn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "822.000 ĐÔ LA TRONG",
+     "at": [
+      8,
+      "822.000"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 9,
+   "text": "Bạn giữ số nào?"
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "MƯỜI SÁU NĂM TRUY",
+     "at": [
+      10,
+      "Mười"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "MƯỜI LĂM NĂM TRONG",
+     "at": [
+      11,
+      "Mười"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "NGƯỜI ĐƯA TIN LÀ",
+     "at": [
+      12,
+      "Người"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "NGƯỜI BÁO CHO ÔNG",
+     "at": [
+      13,
+      "Người"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 14,
+   "text": "BẠN ĐANG XEM MỘT",
+   "white": true
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "TỜ TIỀN TRONG CĂN",
+     "at": [
+      15,
+      "Tờ"
+     ]
+    }
+   ]
+  }
+ ]
+}

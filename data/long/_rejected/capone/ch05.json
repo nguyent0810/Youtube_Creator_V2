@@ -1,0 +1,344 @@
+{
+ "title": "Cửa hàng hoa, quán Hawthorne",
+ "lines": [
+  {
+   "t": "Ngày 10 tháng 11 năm 1924, Torrio sắp xếp cái chết của Dean O'Banion.",
+   "p": 0.8
+  },
+  "Địa điểm là cửa hàng hoa của chính O'Banion.",
+  "Hồ sơ dừng ở câu ấy.",
+  "Không kể người cầm súng.",
+  "Không kể vết thương.",
+  "Hymie Weiss lên cầm băng phía bắc.",
+  "Weiss muốn trả thù.",
+  "Ngày 20 tháng 9 năm 1926, băng ấy dựng một màn trước quán Hawthorne Inn.",
+  "Đó là trụ sở của Capone.",
+  "Mục đích là kéo ông ra cửa sổ.",
+  "Rồi nổ súng vào cửa sổ tầng một của quán.",
+  "Capone không bị thương.",
+  "Ông gọi một cuộc ngừng bắn.",
+  "Cuộc thương lượng không thành.",
+  "Wikipedia ghi một câu rộng, về cả thập niên 1920.",
+  "Quán nào không chịu mua rượu của ông thường bị đặt bom.",
+  "Và có thể tới một trăm người chết trong các vụ nổ ấy.",
+  "Chữ \"có thể tới\" là chữ của trang hồ sơ.",
+  "Đó không phải một sổ có tên từng người.",
+  "Giữa lúc ấy, Capone đã có câu ông hay dùng khi bị hỏi.",
+  {
+   "t": "Tôi chỉ là một doanh nhân, đưa cho người ta thứ họ muốn.",
+   "q": 1,
+   "tr": 1
+  },
+  "Một câu nữa cũng được ghi lại.",
+  "Tất cả những gì tôi làm là đáp ứng một nhu cầu của công chúng.",
+  "Hai câu không có ngày.",
+  "Không có phòng xử.",
+  {
+   "t": "Bạn đừng nghe chúng như lời khai trước tòa. {question: Doanh nhân của cái gì?}",
+   "p": 1.0
+  }
+ ],
+ "hud": {
+  "k": "HỒ SƠ",
+  "t": "CỬA HÀNG HOA"
+ },
+ "bgm": {
+  "mood": "epic",
+  "gain": 0.11
+ },
+ "scenes": [
+  {
+   "type": "chapter",
+   "at": 0,
+   "no": "5",
+   "k": "CHƯƠNG 5",
+   "title": "CỬA HÀNG HOA"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "ĐỊA ĐIỂM LÀ CỬA",
+     "at": [
+      1,
+      "Địa"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "HỒ SƠ DỪNG Ở",
+     "at": [
+      2,
+      "Hồ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "KHÔNG KỂ NGƯỜI CẦM",
+     "at": [
+      3,
+      "Không"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "KHÔNG KỂ VẾT THƯƠNG",
+     "at": [
+      4,
+      "Không"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "HYMIE WEISS LÊN CẦM",
+   "white": true
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "WEISS MUỐN TRẢ THÙ",
+     "at": [
+      6,
+      "Weiss"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "NGÀY 20 THÁNG 9",
+     "at": [
+      7,
+      "Ngày"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "ĐÓ LÀ TRỤ SỞ",
+     "at": [
+      8,
+      "Đó"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "MỤC ĐÍCH LÀ KÉO",
+     "at": [
+      9,
+      "Mục"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 10,
+   "text": "RỒI NỔ SÚNG VÀO",
+   "white": true
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "CAPONE KHÔNG BỊ THƯƠNG",
+     "at": [
+      11,
+      "Capone"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "ÔNG GỌI MỘT CUỘC",
+     "at": [
+      12,
+      "Ông"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 13,
+   "day": "HAWTHORNE",
+   "date": "20.09.1926"
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "WIKIPEDIA GHI MỘT CÂU",
+     "at": [
+      14,
+      "Wikipedia"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "QUÁN NÀO KHÔNG CHỊU",
+     "at": [
+      15,
+      "Quán"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "items": [
+    {
+     "text": "VÀ CÓ THỂ TỚI",
+     "at": [
+      16,
+      "Và"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "CHỮ \"CÓ THỂ TỚI",
+     "at": [
+      17,
+      "Chữ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 18,
+   "from": 0,
+   "to": 100,
+   "suffix": " NGƯỜI",
+   "label": "NGƯỜI"
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "items": [
+    {
+     "text": "GIỮA LÚC ẤY, CAPONE",
+     "at": [
+      19,
+      "Giữa"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 20,
+   "text": "Tôi chỉ là một doanh nhân, đưa cho người ta thứ họ muốn.",
+   "qline": 20,
+   "by": "TRÍCH DỊCH"
+  },
+  {
+   "type": "kinetic",
+   "at": 21,
+   "items": [
+    {
+     "text": "MỘT CÂU NỮA CŨNG",
+     "at": [
+      21,
+      "Một"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 22,
+   "items": [
+    {
+     "text": "TẤT CẢ NHỮNG GÌ",
+     "at": [
+      22,
+      "Tất"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 23,
+   "items": [
+    {
+     "text": "HAI CÂU KHÔNG CÓ",
+     "at": [
+      23,
+      "Hai"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 24,
+   "items": [
+    {
+     "text": "KHÔNG CÓ PHÒNG XỬ",
+     "at": [
+      24,
+      "Không"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 25,
+   "text": "BẠN ĐỪNG NGHE CHÚNG",
+   "white": true
+  }
+ ]
+}

@@ -1,0 +1,625 @@
+{
+ "title": "Chuyến bay 203",
+ "lines": [
+  {
+   "t": "Chương tám. Chuyến bay 203.",
+   "p": 1.0
+  },
+  "Sáng thứ Hai, ngày 27 tháng 11 năm 1989, tại sân bay El Dorado ở Bogotá.",
+  "Chuyến bay 203 của hãng Avianca chuẩn bị cất cánh đi Cali.",
+  "Đó là một chuyến bay nội địa bình thường, dài chưa đầy một giờ.",
+  "Trên máy bay có một trăm lẻ một hành khách và sáu thành viên phi hành đoàn.",
+  "Sau cái chết của Galán, người kế tục ông tranh cử tổng thống là César Gaviria.",
+  "Gaviria có kế hoạch bay tới Cali sáng hôm đó.",
+  "Các cố vấn an ninh khuyên ông đừng đi máy bay thương mại.",
+  {
+   "t": "Ông nghe theo. Ông không lên chuyến bay ấy.",
+   "p": 1.0
+  },
+  "Khoảng 7 giờ 13 phút, chiếc Boeing 727 rời đường băng.",
+  "Năm phút sau, ở độ cao khoảng bốn nghìn mét, phía trên thị trấn Soacha, một quả bom phát nổ trong khoang hành khách.",
+  "Soacha. Chính thị trấn nơi Galán ngã xuống ba tháng trước.",
+  "Toàn bộ một trăm lẻ bảy người trên máy bay thiệt mạng.",
+  "Ba người dưới mặt đất cũng chết vì mảnh vỡ rơi xuống.",
+  {
+   "t": "Tổng cộng một trăm mười người.",
+   "p": 1.0
+  },
+  "Không ai trong số họ là mục tiêu.",
+  "Mục tiêu là một người đã không lên máy bay.",
+  "Năm sau, César Gaviria đắc cử tổng thống Colombia.",
+  "Có một chi tiết khiến vụ này khác mọi vụ trước.",
+  "Trong số nạn nhân có hai công dân Mỹ.",
+  "Điều đó cho phép các công tố viên Mỹ mở hồ sơ của riêng họ.",
+  "Năm 1994, một tòa án ở New York kết án một tay súng của cartel, biệt danh La Quica, vì vụ đánh bom.",
+  "Mười án chung thân. Hắn luôn nói mình vô tội.",
+  "Còn bản thân Escobar chưa bao giờ ra trước một tòa án nào về chuyến bay 203.",
+  "Ở đầu video, tôi đã hứa với bạn về một chuyến bay nổ tung vì một hành khách vắng mặt.",
+  "Đây chính là nó.",
+  "Và từ sau ngày ấy, với chính quyền Mỹ, Pablo Escobar không còn là một kẻ buôn ma túy.",
+  "Ông ta là kẻ khủng bố.",
+  "Nhưng ở Colombia, ông vẫn còn một lá bài cuối.",
+  "Lá bài ấy không phải thuốc nổ.",
+  "Nó là con người."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "8",
+   "k": "CHƯƠNG TÁM",
+   "title": "CHUYẾN BAY\n203",
+   "sub": "BOGOTÁ · 27.11.1989",
+   "titleAt": [
+    0,
+    "Chuyến"
+   ],
+   "bg": "avianca"
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "bg": "eldorado",
+   "day": "SÂN BAY EL DORADO · BOGOTÁ · SÁNG THỨ HAI",
+   "date": "27.11.1989"
+  },
+  {
+   "type": "photo",
+   "at": 2,
+   "img": "avianca",
+   "tone": "color",
+   "move": "pan",
+   "kin": [
+    {
+     "text": "AVIANCA 203",
+     "at": [
+      2,
+      "203"
+     ]
+    },
+    {
+     "text": "BOGOTÁ → CALI",
+     "at": [
+      2,
+      "Cali"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "BOEING 727 · SỐ ĐĂNG KÝ HK-1803",
+    "v": "CHÍNH CHIẾC MÁY BAY CỦA CHUYẾN 203",
+    "at": [
+     2,
+     "Chuyến"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "map",
+   "at": 3,
+   "geo": "co",
+   "pins": [
+    {
+     "name": "Bogotá",
+     "at": [
+      3,
+      "chuyến"
+     ]
+    },
+    {
+     "name": "Cali",
+     "at": [
+      3,
+      "nội"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "from": "Bogotá",
+     "to": "Cali",
+     "at": [
+      3,
+      "dài"
+     ],
+     "until": [
+      3,
+      "giờ"
+     ],
+     "bend": 0.15
+    }
+   ]
+  },
+  {
+   "type": "dots",
+   "at": 4,
+   "bg": "eldorado",
+   "total": 107,
+   "title": "NHỮNG NGƯỜI TRÊN MÁY BAY",
+   "groups": [
+    {
+     "from": 0,
+     "n": 101,
+     "cls": "hollow",
+     "label": "101 HÀNH KHÁCH",
+     "at": [
+      4,
+      "một"
+     ]
+    },
+    {
+     "from": 101,
+     "n": 6,
+     "cls": "gold",
+     "label": "6 THÀNH VIÊN PHI HÀNH ĐOÀN",
+     "at": [
+      4,
+      "sáu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": 5,
+   "img": "gaviria",
+   "tone": "bw",
+   "side": {
+    "k": "NGƯỜI KẾ TỤC GALÁN",
+    "h": "CÉSAR GAVIRIA",
+    "hAt": [
+     5,
+     "César"
+    ],
+    "lines": [
+     {
+      "text": "Có kế hoạch *bay tới Cali* sáng hôm đó",
+      "at": [
+       6,
+       "bay"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "vid": "19593286",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "CỐ VẤN AN NINH KHUYÊN",
+     "at": [
+      7,
+      "cố"
+     ],
+     "sm": true
+    },
+    {
+     "text": "ĐỪNG ĐI MÁY BAY THƯƠNG MẠI",
+     "at": [
+      7,
+      "đừng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "bg": "gaviria",
+   "text": "ÔNG KHÔNG LÊN\nCHUYẾN BAY ẤY",
+   "hitAt": [
+    8,
+    "không"
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 9,
+   "vid": "11130977",
+   "tone": "noir",
+   "veil": 0.35,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "KHOẢNG 7 GIỜ 13",
+     "at": [
+      9,
+      "7"
+     ]
+    },
+    {
+     "text": "CHIẾC BOEING RỜI ĐƯỜNG BĂNG",
+     "at": [
+      9,
+      "rời"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "seismo",
+   "at": 10,
+   "bg": "soacha",
+   "label": "PHÍA TRÊN THỊ TRẤN SOACHA · ĐỘ CAO KHOẢNG 4.000 MÉT",
+   "read": "NĂM PHÚT SAU KHI CẤT CÁNH",
+   "hitAt": [
+    10,
+    "nổ"
+   ]
+  },
+  {
+   "type": "map",
+   "at": 11,
+   "geo": "co",
+   "pins": [
+    {
+     "name": "Soacha",
+     "label": "NƠI GALÁN NGÃ XUỐNG",
+     "at": [
+      11,
+      "Soacha"
+     ]
+    }
+   ],
+   "zoom": "Bogotá",
+   "zoomK": 2.4
+  },
+  {
+   "type": "dots",
+   "at": 12,
+   "bg": "soacha",
+   "total": 110,
+   "title": "KHÔNG AI SỐNG SÓT",
+   "groups": [
+    {
+     "from": 0,
+     "n": 107,
+     "cls": "red",
+     "label": "107 NGƯỜI TRÊN MÁY BAY",
+     "at": [
+      12,
+      "một"
+     ]
+    },
+    {
+     "from": 107,
+     "n": 3,
+     "cls": "red",
+     "label": "3 NGƯỜI DƯỚI MẶT ĐẤT",
+     "at": [
+      13,
+      "Ba"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 14,
+   "bg": "avianca2",
+   "from": 0,
+   "to": 110,
+   "countAt": [
+    14,
+    "một"
+   ],
+   "label": "NGƯỜI THIỆT MẠNG"
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "vid": "5555359",
+   "tone": "night",
+   "items": [
+    {
+     "text": "KHÔNG AI TRONG SỐ HỌ",
+     "at": [
+      15,
+      "Không"
+     ]
+    },
+    {
+     "text": "LÀ MỤC TIÊU",
+     "at": [
+      15,
+      "mục"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 16,
+   "bg": "gav92",
+   "text": "MỤC TIÊU ĐÃ KHÔNG\nLÊN MÁY BAY",
+   "hitAt": [
+    16,
+    "không"
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 17,
+   "img": "gav92",
+   "tone": "color",
+   "move": "in",
+   "kin": [
+    {
+     "text": "NĂM SAU",
+     "at": [
+      17,
+      "Năm"
+     ],
+     "sm": true
+    },
+    {
+     "text": "GAVIRIA ĐẮC CỬ TỔNG THỐNG",
+     "at": [
+      17,
+      "đắc"
+     ]
+    }
+   ],
+   "label": {
+    "k": "TỔNG THỐNG CÉSAR GAVIRIA",
+    "v": "ẢNH NĂM 1992",
+    "at": [
+     17,
+     "César"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "kinetic",
+   "at": 18,
+   "vid": "4296589",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "MỘT CHI TIẾT",
+     "at": [
+      18,
+      "chi"
+     ],
+     "sm": true
+    },
+    {
+     "text": "KHÁC MỌI VỤ TRƯỚC",
+     "at": [
+      18,
+      "khác"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "dots",
+   "at": 19,
+   "bg": "avianca2",
+   "total": 110,
+   "title": "TRONG SỐ NẠN NHÂN",
+   "groups": [
+    {
+     "from": 0,
+     "n": 2,
+     "cls": "gold",
+     "label": "2 CÔNG DÂN MỸ",
+     "at": [
+      19,
+      "hai"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 20,
+   "img": "bush",
+   "tone": "color",
+   "move": "in",
+   "kin": [
+    {
+     "text": "CÔNG TỐ VIÊN MỸ",
+     "at": [
+      20,
+      "công"
+     ]
+    },
+    {
+     "text": "MỞ HỒ SƠ CỦA RIÊNG HỌ",
+     "at": [
+      20,
+      "mở"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "TỔNG THỐNG GEORGE H. W. BUSH · 9.1989",
+    "v": "BÀI PHÁT BIỂU VỀ CHIẾN LƯỢC CHỐNG MA TÚY",
+    "at": [
+     20,
+     "Điều"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "file",
+   "at": 21,
+   "k": "TÒA ÁN LIÊN BANG · NEW YORK · 1994",
+   "name": "LA QUICA",
+   "desc": "Một tay súng của cartel Medellín",
+   "bg": "med_pano",
+   "rows": [
+    {
+     "k": "BẢN ÁN",
+     "v": "*Mười án chung thân*",
+     "at": [
+      22,
+      "Mười"
+     ]
+    },
+    {
+     "k": "HẮN NÓI",
+     "v": "Mình vô tội",
+     "at": [
+      22,
+      "vô"
+     ]
+    }
+   ],
+   "stamp": {
+    "text": "KẾT ÁN",
+    "at": [
+     21,
+     "kết"
+    ],
+    "ink": true,
+    "x": 978,
+    "y": 550
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 23,
+   "bg": "mugc",
+   "items": [
+    {
+     "text": "CÒN BẢN THÂN ESCOBAR",
+     "at": [
+      23,
+      "Escobar"
+     ],
+     "sm": true
+    },
+    {
+     "text": "CHƯA BAO GIỜ RA TÒA VỀ CHUYẾN 203",
+     "at": [
+      23,
+      "chưa"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 24,
+   "bg": "avianca",
+   "items": [
+    {
+     "text": "LỜI HỨA Ở ĐẦU VIDEO",
+     "at": [
+      24,
+      "hứa"
+     ],
+     "sm": true
+    },
+    {
+     "text": "MỘT HÀNH KHÁCH VẮNG MẶT",
+     "at": [
+      24,
+      "hành"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 25,
+   "bg": "avianca",
+   "text": "ĐÂY CHÍNH LÀ NÓ",
+   "hitAt": [
+    25,
+    "chính"
+   ]
+  },
+  {
+   "type": "split",
+   "at": 26,
+   "title": "TRONG MẮT CHÍNH QUYỀN MỸ",
+   "a": {
+    "img": "cocaine",
+    "label": "TRƯỚC: KẺ BUÔN MA TÚY",
+    "at": [
+     26,
+     "buôn"
+    ]
+   },
+   "b": {
+    "img": "avianca2",
+    "label": "SAU: KẺ KHỦNG BỐ",
+    "at": [
+     27,
+     "khủng"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 28,
+   "vid": "40130401",
+   "tone": "night",
+   "items": [
+    {
+     "text": "Ở COLOMBIA",
+     "at": [
+      28,
+      "Colombia"
+     ],
+     "sm": true
+    },
+    {
+     "text": "ÔNG CÒN MỘT LÁ BÀI CUỐI",
+     "at": [
+      28,
+      "lá"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 29,
+   "vid": "6581406",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "KHÔNG PHẢI THUỐC NỔ",
+     "at": [
+      29,
+      "thuốc"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 30,
+   "vid": "4553807",
+   "tone": "noir",
+   "text": "NÓ LÀ CON NGƯỜI",
+   "white": true,
+   "hitAt": [
+    30,
+    "con"
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 08",
+  "t": "CHUYẾN BAY 203"
+ },
+ "bgm": {
+  "mood": "sad",
+  "at": 0,
+  "gain": 0.12
+ }
+}

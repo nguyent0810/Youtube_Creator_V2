@@ -1,0 +1,546 @@
+{
+ "title": "Cậu bé mười hai tuổi ở Palm Island",
+ "lines": [
+  {
+   "t": "Chương mười hai. Cậu bé mười hai tuổi ở đảo Palm.",
+   "p": 1.0
+  },
+  "Gia đình đưa hắn tới một bệnh viện ở Baltimore.",
+  "Bệnh viện danh tiếng nhất thành phố đã từ chối nhận một bệnh nhân mang cái tên ấy.",
+  "Tháng 3 năm 1940, hắn về lại biệt thự trên đảo Palm.",
+  "Lệnh cấm rượu đã bị bãi bỏ từ cuối năm 1933.",
+  "Tổ chức ở Chicago có những ông chủ mới, và họ không cần hắn.",
+  "Việc bãi bỏ lệnh cấm rượu đã lấy đi nguồn tiền lớn nhất của các băng đảng. Họ chuyển sang cờ bạc, cho vay nặng lãi, và các công đoàn.",
+  "Họ chỉ gửi tiền chu cấp đều đặn, và cử người xuống xem hắn có nói gì lung tung không.",
+  "Theo các tiểu sử, hắn là một trong những thường dân Mỹ đầu tiên được điều trị bằng penicillin.",
+  {
+   "t": "Thuốc đến quá muộn để cứu bộ não của hắn.",
+   "p": 1.0
+  },
+  "Cảnh sát liên bang vẫn cho người theo dõi căn biệt thự, phòng khi hắn còn điều hành gì đó.",
+  "Họ sớm nhận ra không còn gì để theo dõi.",
+  "Năm 1946, bác sĩ riêng và một bác sĩ tâm thần khám cho hắn.",
+  "Họ kết luận trí lực của hắn tương đương một đứa trẻ mười hai tuổi.",
+  "Mae, người vợ đã ở bên hắn từ năm hắn mười chín tuổi, chăm sóc hắn tới ngày cuối.",
+  "Theo lời kể, người từng điều hành một nghìn tay súng giờ ngồi câu cá trong bể bơi nhà mình.",
+  "Hắn mặc đồ ngủ suốt ngày, trò chuyện với những người đã chết từ lâu.",
+  "Ngày 21 tháng 1 năm 1947, hắn bị đột quỵ, rồi viêm phổi.",
+  "7 giờ 25 phút tối ngày 25 tháng 1, Al Capone qua đời tại nhà.",
+  "Hắn bốn mươi tám tuổi.",
+  "Bạn có để ý không?",
+  "Hắn sinh ngày 17 tháng 1, đúng ngày lệnh cấm rượu có hiệu lực.",
+  "Và hắn chết trên chiếc giường của chính mình.",
+  "Không một viên đạn. Không một bản án giết người.",
+  "Gia đình chôn hắn ở Chicago, rồi lặng lẽ dời mộ vì quá nhiều người tò mò kéo đến.",
+  "Trên bia đá chỉ có tên, năm sinh, năm mất, và một dòng chữ.",
+  "Lạy Chúa thương xót."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "12",
+   "k": "CHƯƠNG MƯỜI HAI",
+   "title": "CẬU BÉ 12 TUỔI\nỞ ĐẢO PALM",
+   "sub": "1939 — 1947",
+   "titleAt": [
+    0,
+    "Cậu"
+   ],
+   "bg": "palm"
+  },
+  {
+   "type": "map",
+   "at": 1,
+   "geo": "us",
+   "pins": [
+    {
+     "name": "Los Angeles",
+     "at": [
+      1,
+      "Gia"
+     ]
+    },
+    {
+     "name": "Baltimore",
+     "at": [
+      1,
+      "Baltimore"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "from": "Los Angeles",
+     "to": "Baltimore",
+     "at": [
+      1,
+      "đưa"
+     ],
+     "until": [
+      1,
+      "Baltimore"
+     ],
+     "bend": 0.12
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "vid": "3192916",
+   "tone": "noir",
+   "text": "BỆNH VIỆN DANH TIẾNG NHẤT\nTỪ CHỐI",
+   "hitAt": [
+    2,
+    "từ"
+   ]
+  },
+  {
+   "type": "date",
+   "at": 3,
+   "bg": "palm1938",
+   "day": "VỀ LẠI BIỆT THỰ TRÊN ĐẢO PALM",
+   "date": "03.1940"
+  },
+  {
+   "type": "photo",
+   "at": 4,
+   "img": "nyt1933",
+   "tone": "bw",
+   "move": "in",
+   "kin": [
+    {
+     "text": "LỆNH CẤM RƯỢU",
+     "at": [
+      4,
+      "cấm"
+     ]
+    },
+    {
+     "text": "ĐÃ BỊ BÃI BỎ · CUỐI 1933",
+     "at": [
+      4,
+      "bãi"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "THE NEW YORK TIMES · 12.1933",
+    "v": "ẢNH TƯ LIỆU",
+    "at": [
+     4,
+     "Lệnh"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "vid": "36244318",
+   "tone": "night",
+   "items": [
+    {
+     "text": "NHỮNG ÔNG CHỦ MỚI Ở CHICAGO",
+     "at": [
+      5,
+      "ông"
+     ]
+    },
+    {
+     "text": "KHÔNG CẦN HẮN",
+     "at": [
+      5,
+      "không"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 6,
+   "title": "SAU LỆNH CẤM RƯỢU · BĂNG ĐẢNG CHUYỂN SANG",
+   "bg": "chi_lasalle",
+   "rows": [
+    {
+     "k": "CỜ BẠC",
+     "v": "●",
+     "at": [
+      6,
+      "cờ"
+     ]
+    },
+    {
+     "k": "CHO VAY NẶNG LÃI",
+     "v": "●",
+     "at": [
+      6,
+      "vay"
+     ]
+    },
+    {
+     "k": "CÔNG ĐOÀN",
+     "v": "●",
+     "at": [
+      6,
+      "công"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "vid": "6266764",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "TIỀN CHU CẤP ĐỀU ĐẶN",
+     "at": [
+      7,
+      "chu"
+     ]
+    },
+    {
+     "text": "VÀ NGƯỜI XUỐNG XEM HẮN CÓ NÓI GÌ",
+     "at": [
+      7,
+      "xem"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "vid": "3192916",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "MỘT TRONG NHỮNG THƯỜNG DÂN ĐẦU TIÊN",
+     "at": [
+      8,
+      "thường"
+     ],
+     "sm": true
+    },
+    {
+     "text": "ĐƯỢC ĐIỀU TRỊ BẰNG PENICILLIN",
+     "at": [
+      8,
+      "penicillin"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 9,
+   "bg": "al1930c",
+   "text": "THUỐC ĐẾN QUÁ MUỘN",
+   "hitAt": [
+    9,
+    "muộn"
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 10,
+   "img": "mansion",
+   "tone": "bw",
+   "move": "in",
+   "kin": [
+    {
+     "text": "CẢNH SÁT LIÊN BANG VẪN THEO DÕI",
+     "at": [
+      10,
+      "theo"
+     ]
+    },
+    {
+     "text": "KHÔNG CÒN GÌ ĐỂ THEO DÕI",
+     "at": [
+      11,
+      "không"
+     ],
+     "acc": true
+    }
+   ],
+   "veil": 0.52
+  },
+  {
+   "type": "date",
+   "at": 12,
+   "bg": "pool",
+   "day": "BÁC SĨ RIÊNG VÀ MỘT BÁC SĨ TÂM THẦN KHÁM CHO HẮN",
+   "date": "1946"
+  },
+  {
+   "type": "slam",
+   "at": 13,
+   "bg": "al1929",
+   "text": "TRÍ LỰC CỦA MỘT ĐỨA TRẺ\n12 TUỔI",
+   "white": true,
+   "hitAt": [
+    13,
+    "mười"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "bg": "mansion",
+   "items": [
+    {
+     "text": "MAE",
+     "at": [
+      14,
+      "Mae"
+     ]
+    },
+    {
+     "text": "CHĂM SÓC HẮN TỚI NGÀY CUỐI",
+     "at": [
+      14,
+      "chăm"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 15,
+   "img": "pool",
+   "tone": "color",
+   "move": "in",
+   "kin": [
+    {
+     "text": "THEO LỜI KỂ",
+     "at": [
+      15,
+      "Theo"
+     ],
+     "sm": true
+    },
+    {
+     "text": "NGỒI CÂU CÁ TRONG BỂ BƠI NHÀ MÌNH",
+     "at": [
+      15,
+      "câu"
+     ]
+    }
+   ],
+   "label": {
+    "k": "BỂ BƠI BIỆT THỰ CỦA CAPONE · ĐẢO PALM",
+    "v": "ẢNH NGÀY NAY",
+    "at": [
+     15,
+     "người"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "broll",
+   "at": 16,
+   "vid": "8336610",
+   "tone": "noir",
+   "veil": 0.4,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MẶC ĐỒ NGỦ SUỐT NGÀY",
+     "at": [
+      16,
+      "đồ"
+     ]
+    },
+    {
+     "text": "TRÒ CHUYỆN VỚI NHỮNG NGƯỜI ĐÃ CHẾT",
+     "at": [
+      16,
+      "trò"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 17,
+   "vid": "31673932",
+   "tone": "noir",
+   "day": "ĐỘT QUỴ · RỒI VIÊM PHỔI",
+   "date": "21.01.1947"
+  },
+  {
+   "type": "evidence",
+   "at": 18,
+   "img": "deathcert",
+   "tone": "bw",
+   "callouts": [
+    {
+     "x": 0.5,
+     "y": 0.3,
+     "text": "25.01.1947 · 7 GIỜ 25 TỐI",
+     "at": [
+      18,
+      "7"
+     ],
+     "side": "r"
+    },
+    {
+     "x": 0.5,
+     "y": 0.62,
+     "text": "QUA ĐỜI TẠI NHÀ",
+     "at": [
+      18,
+      "qua"
+     ],
+     "side": "l"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 19,
+   "bg": "al1930",
+   "text": "48 TUỔI",
+   "hitAt": [
+    19,
+    "bốn"
+   ]
+  },
+  {
+   "type": "question",
+   "at": 20,
+   "bg": "al1929",
+   "text": "Bạn có để ý không?"
+  },
+  {
+   "type": "split",
+   "at": 21,
+   "title": "HAI NGÀY THÁNG GIÊNG",
+   "a": {
+    "img": "nyt1919",
+    "label": "17.01: SINH NHẬT · NGÀY CẤM RƯỢU",
+    "at": [
+     21,
+     "17"
+    ]
+   },
+   "b": {
+    "img": "mansion",
+    "label": "CHẾT TRÊN GIƯỜNG CỦA MÌNH",
+    "at": [
+     22,
+     "giường"
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 23,
+   "title": "CÁI KẾT",
+   "bg": "al1930c",
+   "rows": [
+    {
+     "k": "VIÊN ĐẠN",
+     "v": "KHÔNG",
+     "at": [
+      23,
+      "viên"
+     ]
+    },
+    {
+     "k": "BẢN ÁN GIẾT NGƯỜI",
+     "v": "KHÔNG",
+     "at": [
+      23,
+      "bản"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 24,
+   "img": "grave",
+   "tone": "color",
+   "move": "in",
+   "kin": [
+    {
+     "text": "CHÔN Ở CHICAGO",
+     "at": [
+      24,
+      "chôn"
+     ]
+    },
+    {
+     "text": "RỒI LẶNG LẼ DỜI MỘ",
+     "at": [
+      24,
+      "dời"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "MỘ AL CAPONE · NGHĨA TRANG MOUNT CARMEL",
+    "v": "ẢNH NGÀY NAY",
+    "at": [
+     24,
+     "Gia"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "kinetic",
+   "at": 25,
+   "bg": "grave_mc",
+   "items": [
+    {
+     "text": "TÊN · NĂM SINH · NĂM MẤT",
+     "at": [
+      25,
+      "tên"
+     ]
+    },
+    {
+     "text": "VÀ MỘT DÒNG CHỮ",
+     "at": [
+      25,
+      "dòng"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 26,
+   "bg": "grave",
+   "text": "LẠY CHÚA\nTHƯƠNG XÓT",
+   "white": true,
+   "hitAt": [
+    26,
+    "Lạy"
+   ],
+   "sub": "MY JESUS MERCY"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 12",
+  "t": "CẬU BÉ MƯỜI HAI TUỔI Ở ĐẢO PALM"
+ },
+ "bgm": {
+  "mood": "sad",
+  "at": 0,
+  "gain": 0.12
+ }
+}

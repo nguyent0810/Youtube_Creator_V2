@@ -41,10 +41,13 @@ LOOKS = {
     "classic": {"serif": ("Playfair Display", "0,700;0,900;1,700"), "sans": ("Be Vietnam Pro", "0,400;0,600;0,700;0,800;0,900;1,600"),
                 "vars": {}},
     "amber": {"serif": ("Literata", "0,700;0,900;1,700"), "sans": ("Montserrat", "0,400;0,600;0,700;0,800;0,900;1,600"),
+              "kw": 1.07,   # Montserrat đậm rộng hơn Be Vietnam Pro ~7%: engine thu chữ kinetic lại cho vừa khung (đo bằng font thật, Escobar ch13)
               "vars": {"--red": "#e39a2d", "--gold": "#f2cf86", "--paper": "#f2e7cf", "--bed1": "#1d150c", "--bed2": "#0c0905"}},
     "steel": {"serif": ("Noto Serif Display", "0,700;0,900;1,700"), "sans": ("Inter", "0,400;0,600;0,700;0,800;0,900;1,600"),
+              "kw": 1.02, "kws": 1.15,   # Noto Serif Display rộng hơn Playfair: câu hỏi 35 ký tự bị rớt một chữ xuống dòng (Capone ch00)
               "vars": {"--red": "#3d9ad6", "--gold": "#bcd0dc", "--paper": "#e8ecef", "--ink": "#121619", "--bed1": "#0f151b", "--bed2": "#07090c"}},
     "jade": {"serif": ("Source Serif 4", "0,700;0,900;1,700"), "sans": ("Barlow Condensed", "0,400;0,600;0,700;0,800;0,900;1,600"),
+             "kw": 0.74,   # Barlow Condensed hẹp: không nới thì chữ kinetic chỉ chiếm nửa khung (Bulger ch00); dòng dài nhất đo được vẫn < 1720px
              "vars": {"--red": "#2fb489", "--gold": "#d6c07a", "--paper": "#ebe5d0", "--bed1": "#0e1713", "--bed2": "#060a08"}},
     "rose": {"serif": ("Spectral", "0,700;0,800;1,700"), "sans": ("Archivo", "0,400;0,600;0,700;0,800;0,900;1,600"),
              "vars": {"--red": "#c9457d", "--gold": "#e7c58f", "--paper": "#efe3d6", "--bed1": "#170d12", "--bed2": "#09060a"}},
@@ -59,7 +62,11 @@ def look(name: str | None) -> dict:
     v = dict(L["vars"])
     v["--serif"] = f"'{L['serif'][0]}'"
     v["--sans"] = f"'{L['sans'][0]}'"
-    return {"name": name or "classic", "vars": v}
+    out = {"name": name or "classic", "vars": v}
+    for k in ("kw", "kws"):
+        if L.get(k):
+            out[k] = L[k]
+    return out
 
 
 def fonts_url(name: str | None) -> str:

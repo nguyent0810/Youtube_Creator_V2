@@ -113,6 +113,18 @@ Credit ảnh tự hiện theo giấy phép.
 - Anh Khôi đọc "8-9-3" thành "8 đến 9 ba", nên phải viết bằng chữ. Đuôi "-kai" bị đọc thành "ki", nên cần map `say`.
 - Tốc độ render khoảng 2,7 lần thời lượng thực (video 34 phút mất khoảng 90 phút).
 - `motion/hf/assets/long` là junction trỏ tới `output/long`, nên ảnh và video không phải copy.
+- **Bề rộng chữ phụ thuộc look.** Font của look khác `classic` rộng hoặc hẹp hơn Be Vietnam Pro / Playfair, nên `variety.LOOKS` có hệ số `kw` (chữ kinetic) và `kws` (tiêu đề `print`, câu hỏi) để `casewide.js` co giãn cỡ chữ. Thêm look mới thì bỏ file TTF vào `motion/long/fonts/`, khai trong `lint_html.KIN_FONTS`, rồi chạy `html`: lint sẽ báo dòng kinetic nào tràn khung.
+- **Bản đồ có `zoom`**: nhãn ghim phóng to cùng bản đồ và bị cắt ở mép phải. Lint tính theo toạ độ ghim và báo số ký tự còn chỗ. Hai ghim sát nhau thì gộp vào một nhãn.
+- Nhãn `day` của cảnh `date` dài quá 45 ký tự thì engine tự co chữ; vẫn nên viết ngắn.
+- Đừng lấy bản scan giấy trắng (sơ đồ tổ chức, thông báo truy nã) làm nền cho kinetic, bars hay câu hỏi: chữ đè lên chữ. Muốn cho xem thì dùng `photo` với `frame=True`.
+- Ảnh dọc trong `photo` tự vào khung (w/h < 1,25); chữ `kin` đi kèm nằm bên trái và được thu hẹp để khung không che.
+
+## Bộ đồ nghề viết cảnh tay
+
+- `scenekit.py`: `sc`, `kin`, `chapter`, `write` cho `data/long/<topic>/gen_scenes.py` (mẫu: `capone`, `bulger`). Ảnh khai bằng một đoạn tên `File:…` qua `find()`, không dùng số thứ tự trong `research.json`.
+- `commons_find.py <topic> "từ khóa" …`: tìm thêm ảnh tự do trên Commons, ghi `commons.json` và contact sheet `csheet_N.jpg`.
+- `dryplan.py <topic>`: soát mọi chữ neo trước khi thu giọng, in luôn báo cáo sàn sản xuất.
+- Máy hiện tại chạy được 2–3 lệnh `render` song song (mỗi lệnh chậm đi khoảng 25%). `--draft` không nhanh hơn bao nhiêu, chỉ dùng cho chương có sketch hoặc bản đồ mới.
 
 ## Đăng: thumbnail, SEO, phụ đề, playlist
 

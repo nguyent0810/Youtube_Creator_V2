@@ -325,6 +325,10 @@ def collect_html_lint(topic: str, only=None) -> list[str]:
     spec, chs, od = load(topic)
     problems: list[str] = []
     seen: set[str] = set()
+    geo_pins: dict = {}   # toạ độ ghim trên sân khấu, cho kiểm tra nhãn bản đồ zoom
+    for g, v in (spec.get("geo") or {}).items():
+        hf_geo.BOX = tuple(v.get("box", (180, 130, 1740, 850)))
+        geo_pins[g] = {p["name"]: (p["x"], p.get("label", "")) for p in hf_geo.bake({"countries": [], "bbox": v["bbox"], "pins": v["pins"]})["_geo"]["pins"]}
     for name, ch in chs:
         if only and name not in only:
             continue
@@ -338,7 +342,8 @@ def collect_html_lint(topic: str, only=None) -> list[str]:
         if ec:
             scenes.append({"type": "endcard", "t0": d, "t1": d + ec, "bg": spec.get("endcardBg"),
                            "sub": spec.get("endcardSub", "HỒ SƠ TIẾP THEO")})
-        problems.extend(lint_html.check_scenes(name, scenes))
+        problems.extend(lint_html.check_scenes(name, scenes, geo_pins))
+        problems.extend(lint_html.kinetic_problems(name, scenes, variety.LOOKS[spec.get("look") or "classic"]["sans"][0], variety.LOOKS[spec.get("look") or "classic"].get("kw", 1.0)))
         for i, s in enumerate(scenes):
             if not s.get("vid"):
                 continue
@@ -352,6 +357,10 @@ def collect_html_lint(topic: str, only=None) -> list[str]:
             msg = lint_html.hdr_problem(name, i, vid, probe_color(src))
             if msg:
                 problems.append(msg)
+            wh = subprocess.run([FF + chr(92) + "ffprobe.exe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height",
+                                 "-of", "csv=p=0", str(src)], capture_output=True, text=True).stdout.strip().split(",")
+            if len(wh) == 2 and wh[0].isdigit() and int(wh[1]) > int(wh[0]):   # clip quay dọc tràn khung 16:9 sẽ mất 2/3 hình
+                problems.append(f"{name} cảnh {i}: clip {vid} quay dọc ({wh[0]}x{wh[1]}), sẽ bị cắt trên khung ngang — đổi clip ngang")
     return problems
 
 

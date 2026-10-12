@@ -1,0 +1,220 @@
+{
+ "title": "Hai lần đếm tiền",
+ "lines": [
+  {
+   "t": "Trang hồ sơ dẫn một hãng tin.",
+   "p": 0.8
+  },
+  "Trong căn hộ có hơn 800.000 đô la tiền mặt.",
+  "Ba mươi khẩu súng.",
+  "Và giấy tờ giả.",
+  "Một bài của Santa Monica Mirror ngày 24 tháng 9 năm 2011 nói một con số khác.",
+  "822.000 đô la, giấu trong các lỗ trên tường.",
+  "Khoảng ba mươi khẩu súng.",
+  "Hồ sơ này không gộp 800.000 với 822.000.",
+  "Cũng không biến \"hơn\" thành một số tròn.",
+  "Ngày 6 tháng 7 năm 2011, ông ra tòa liên bang.",
+  "Ông nhận không có tội.",
+  "Bốn mươi tám cáo buộc.",
+  "Trong đó có mười chín tội giết người.",
+  "Bạn sẽ gặp một bộ số khác ở chương sau.",
+  "Ba mươi hai tội ở phiên xử năm 2013 không phải là bốn mươi tám tội của ngày ra tòa này.",
+  {
+   "t": "Hai mốc. Hai danh sách. {question: Bốn mươi tám hay ba mươi hai?}",
+   "p": 1.0
+  }
+ ],
+ "hud": {
+  "k": "HỒ SƠ",
+  "t": "HAI LẦN ĐẾM"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ },
+ "scenes": [
+  {
+   "type": "chapter",
+   "at": 0,
+   "no": "7",
+   "k": "CHƯƠNG 7",
+   "title": "HAI LẦN ĐẾM"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "TRONG CĂN HỘ CÓ",
+     "at": [
+      1,
+      "Trong"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "BA MƯƠI KHẨU SÚNG",
+     "at": [
+      2,
+      "Ba"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "from": 0,
+   "to": 30,
+   "suffix": " KHẨU",
+   "label": "KHẨU"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "MỘT BÀI CỦA SANTA",
+     "at": [
+      4,
+      "Một"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "822.000 ĐÔ LA, GIẤU",
+     "at": [
+      5,
+      "822.000"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "KHOẢNG BA MƯƠI KHẨU",
+     "at": [
+      6,
+      "Khoảng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "HỒ SƠ NÀY KHÔNG",
+     "at": [
+      7,
+      "Hồ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "text": "KHÔNG GỘP",
+   "white": true
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "NGÀY 6 THÁNG 7",
+     "at": [
+      9,
+      "Ngày"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "ÔNG NHẬN KHÔNG CÓ",
+     "at": [
+      10,
+      "Ông"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "BỐN MƯƠI TÁM CÁO",
+     "at": [
+      11,
+      "Bốn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "TRONG ĐÓ CÓ MƯỜI",
+     "at": [
+      12,
+      "Trong"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 13,
+   "text": "BẠN SẼ GẶP MỘT",
+   "white": true
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "BA MƯƠI HAI TỘI",
+     "at": [
+      14,
+      "Ba"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "HAI MỐC. HAI DANH",
+     "at": [
+      15,
+      "Hai"
+     ]
+    }
+   ]
+  }
+ ]
+}

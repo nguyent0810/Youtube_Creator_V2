@@ -1,0 +1,627 @@
+{
+ "title": "Alcatraz và những mũi tiêm",
+ "lines": [
+  {
+   "t": "Chương hai. Alcatraz và những mũi tiêm.",
+   "p": 1.0
+  },
+  "Giữa thập niên 1950, một băng cướp đi từ bang này sang bang khác.",
+  "Chúng cướp ngân hàng ở Massachusetts, Rhode Island, rồi Indiana.",
+  "Năm 1956, cảnh sát liên bang bắt Whitey Bulger trong một hộp đêm ở ngoại ô Boston.",
+  "Hắn lãnh án hai mươi năm tù.",
+  "Hắn hai mươi bảy tuổi.",
+  "Nơi đầu tiên hắn bị đưa tới là nhà tù liên bang Atlanta.",
+  "Ở đó, năm 1957, có một lời đề nghị dành cho tù nhân.",
+  "Ai tình nguyện tham gia một nghiên cứu y khoa thì sẽ được xét giảm án.",
+  {
+   "t": "Người ta bảo họ rằng nghiên cứu ấy nhằm tìm thuốc chữa bệnh tâm thần phân liệt.",
+   "p": 1.0
+  },
+  "Sự thật thì khác.",
+  "Đó là một phần của MK-Ultra, chương trình bí mật của Cơ quan Tình báo Trung ương Mỹ.",
+  "Thứ được tiêm vào người các tù nhân là LSD, một chất gây ảo giác cực mạnh.",
+  "Người phụ trách thí nghiệm là bác sĩ của một trường đại học danh tiếng. Các tù nhân không được biết ai trả tiền cho nghiên cứu ấy.",
+  "Theo lời Bulger kể về sau, hắn bị tiêm hơn năm mươi lần trong khoảng một năm rưỡi.",
+  "Hắn kể mình thấy máu chảy ra từ những bức tường, và suốt đời không ngủ được yên.",
+  "Con số năm mươi lần chỉ có lời của chính hắn.",
+  "Nhưng việc chương trình ấy tồn tại là điều chính phủ Mỹ đã thừa nhận.",
+  "Tháng 11 năm 1959, sau khi bị nghi mưu vượt ngục, hắn bị chuyển tới Alcatraz.",
+  "Hắn mang số tù 1428.",
+  "Alcatraz lúc ấy đã gần ngày đóng cửa. Al Capone, tù nhân nổi tiếng nhất của nó, đã rời đảo từ hai mươi năm trước.",
+  "Hắn ở trên hòn đảo ấy khoảng ba năm, đọc sách và tập thể lực.",
+  "Về sau hắn viết rằng đó là quãng thời gian hắn nhớ nhất trong đời.",
+  "Tháng 3 năm 1965, sau khoảng chín năm, hắn được tha có điều kiện.",
+  "Hắn ba mươi lăm tuổi, và trở về Southie.",
+  "Trong lúc hắn ngồi tù, người em Billy đã đắc cử vào nghị viện bang.",
+  {
+   "t": "Hai anh em, hai con đường.",
+   "p": 1.0
+  },
+  "Và cả hai con đường ấy đều sẽ dẫn tới quyền lực."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "ALCATRAZ VÀ\nNHỮNG MŨI TIÊM",
+   "sub": "1956 — 1965",
+   "titleAt": [
+    0,
+    "Alcatraz"
+   ],
+   "bg": "alc_island"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "bg": "kenmore",
+   "items": [
+    {
+     "text": "GIỮA THẬP NIÊN 1950",
+     "at": [
+      1,
+      "1950"
+     ],
+     "sm": true
+    },
+    {
+     "text": "MỘT BĂNG CƯỚP ĐI TỪ BANG NÀY SANG BANG KHÁC",
+     "at": [
+      1,
+      "băng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "at": 2,
+   "geo": "us",
+   "pins": [
+    {
+     "name": "Boston",
+     "label": "MASSACHUSETTS · RHODE ISLAND",
+     "at": [
+      2,
+      "Massachusetts"
+     ]
+    },
+    {
+     "name": "Indiana",
+     "at": [
+      2,
+      "Indiana"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "from": "Boston",
+     "to": "Indiana",
+     "at": [
+      2,
+      "rồi"
+     ],
+     "until": [
+      2,
+      "Indiana"
+     ],
+     "bend": 0.15
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 3,
+   "bg": "mug1956",
+   "day": "BỊ BẮT TRONG MỘT HỘP ĐÊM Ở NGOẠI Ô BOSTON",
+   "date": "1956"
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "vid": "6699964",
+   "tone": "noir",
+   "from": 0,
+   "to": 20,
+   "suffix": " NĂM TÙ",
+   "countAt": [
+    4,
+    "hai"
+   ],
+   "label": "BẢN ÁN CHO TỘI CƯỚP NGÂN HÀNG"
+  },
+  {
+   "type": "photo",
+   "at": 5,
+   "img": "mug1956",
+   "tone": "bw",
+   "kin": [
+    {
+     "text": "27 TUỔI",
+     "at": [
+      5,
+      "hai"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "JAMES BULGER · ẢNH HỒ SƠ NHÀ TÙ",
+    "v": "NĂM 1956",
+    "at": [
+     5,
+     "Hắn"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "photo",
+   "at": 6,
+   "img": "atlanta",
+   "tone": "bw",
+   "film": true,
+   "move": "in",
+   "kin": [
+    {
+     "text": "NHÀ TÙ LIÊN BANG ATLANTA",
+     "at": [
+      6,
+      "Atlanta"
+     ]
+    }
+   ],
+   "label": {
+    "k": "CỔNG NHÀ TÙ LIÊN BANG ATLANTA",
+    "v": "ẢNH TƯ LIỆU",
+    "at": [
+     6,
+     "Nơi"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "bg": "atl_loc",
+   "items": [
+    {
+     "text": "NĂM 1957",
+     "at": [
+      7,
+      "1957"
+     ],
+     "sm": true
+    },
+    {
+     "text": "MỘT LỜI ĐỀ NGHỊ DÀNH CHO TÙ NHÂN",
+     "at": [
+      7,
+      "lời"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 8,
+   "vid": "8534418",
+   "tone": "noir",
+   "veil": 0.4,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "TÌNH NGUYỆN THAM GIA NGHIÊN CỨU Y KHOA",
+     "at": [
+      8,
+      "tình"
+     ]
+    },
+    {
+     "text": "SẼ ĐƯỢC XÉT GIẢM ÁN",
+     "at": [
+      8,
+      "giảm"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "vid": "6290576",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "NGƯỜI TA BẢO HỌ",
+     "at": [
+      9,
+      "bảo"
+     ],
+     "sm": true
+    },
+    {
+     "text": "TÌM THUỐC CHỮA TÂM THẦN PHÂN LIỆT",
+     "at": [
+      9,
+      "tâm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 10,
+   "vid": "3578210",
+   "tone": "noir",
+   "text": "SỰ THẬT THÌ KHÁC",
+   "hitAt": [
+    10,
+    "khác"
+   ]
+  },
+  {
+   "type": "file",
+   "at": 11,
+   "k": "CHƯƠNG TRÌNH BÍ MẬT CỦA CIA",
+   "name": "MK-ULTRA",
+   "desc": "Cơ quan Tình báo Trung ương Mỹ",
+   "bg": "atl_loc",
+   "stamp": {
+    "text": "BÍ MẬT",
+    "at": [
+     11,
+     "bí"
+    ],
+    "ink": true,
+    "x": 978,
+    "y": 550
+   }
+  },
+  {
+   "type": "photo",
+   "at": 12,
+   "img": "lsd",
+   "tone": "color",
+   "move": "in",
+   "illus": "ẢNH MINH HỌA · GIẤY THẤM LSD",
+   "kin": [
+    {
+     "text": "LSD",
+     "at": [
+      12,
+      "LSD"
+     ],
+     "acc": true
+    },
+    {
+     "text": "CHẤT GÂY ẢO GIÁC CỰC MẠNH",
+     "at": [
+      12,
+      "ảo"
+     ]
+    }
+   ],
+   "veil": 0.52
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "vid": "6290576",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "BÁC SĨ CỦA MỘT ĐẠI HỌC DANH TIẾNG",
+     "at": [
+      13,
+      "bác"
+     ]
+    },
+    {
+     "text": "TÙ NHÂN KHÔNG BIẾT AI TRẢ TIỀN",
+     "at": [
+      13,
+      "trả"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 14,
+   "vid": "3582427",
+   "tone": "noir",
+   "from": 0,
+   "to": 50,
+   "prefix": "> ",
+   "countAt": [
+    14,
+    "năm"
+   ],
+   "label": "LẦN TIÊM TRONG KHOẢNG 18 THÁNG · THEO LỜI BULGER"
+  },
+  {
+   "type": "broll",
+   "at": 15,
+   "vid": "3578210",
+   "tone": "noir",
+   "veil": 0.4,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "THẤY MÁU CHẢY RA TỪ TƯỜNG",
+     "at": [
+      15,
+      "máu"
+     ]
+    },
+    {
+     "text": "SUỐT ĐỜI KHÔNG NGỦ ĐƯỢC YÊN",
+     "at": [
+      15,
+      "ngủ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "split",
+   "at": 16,
+   "title": "LỜI KỂ VÀ HỒ SƠ",
+   "a": {
+    "img": "mug1956",
+    "label": "“50 LẦN”: CHỈ CÓ LỜI HẮN",
+    "at": [
+     16,
+     "năm"
+    ]
+   },
+   "b": {
+    "img": "atl_loc",
+    "label": "CHƯƠNG TRÌNH: MỸ ĐÃ THỪA NHẬN",
+    "at": [
+     17,
+     "thừa"
+    ]
+   }
+  },
+  {
+   "type": "date",
+   "at": 18,
+   "bg": "alc_1962",
+   "day": "BỊ NGHI MƯU VƯỢT NGỤC · CHUYỂN TỚI ALCATRAZ",
+   "date": "11.1959"
+  },
+  {
+   "type": "photo",
+   "at": 19,
+   "img": "alc1959",
+   "tone": "bw",
+   "kin": [
+    {
+     "text": "SỐ TÙ",
+     "at": [
+      19,
+      "số"
+     ],
+     "sm": true
+    },
+    {
+     "text": "1428",
+     "at": [
+      19,
+      "1428"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "JAMES BULGER · ALCATRAZ",
+    "v": "ẢNH HỒ SƠ · 11.1959",
+    "at": [
+     19,
+     "Hắn"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "photo",
+   "at": 20,
+   "img": "alc_island",
+   "tone": "color",
+   "move": "pan",
+   "kin": [
+    {
+     "text": "ALCATRAZ ĐÃ GẦN NGÀY ĐÓNG CỬA",
+     "at": [
+      20,
+      "đóng"
+     ]
+    },
+    {
+     "text": "AL CAPONE RỜI ĐẢO 20 NĂM TRƯỚC",
+     "at": [
+      20,
+      "Capone"
+     ],
+     "sm": true
+    }
+   ],
+   "label": {
+    "k": "ĐẢO ALCATRAZ · VỊNH SAN FRANCISCO",
+    "v": "ẢNH NGÀY NAY",
+    "at": [
+     20,
+     "Alcatraz"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "photo",
+   "at": 21,
+   "img": "alc_broadway",
+   "tone": "color",
+   "move": "in",
+   "kin": [
+    {
+     "text": "KHOẢNG BA NĂM",
+     "at": [
+      21,
+      "ba"
+     ]
+    },
+    {
+     "text": "ĐỌC SÁCH VÀ TẬP THỂ LỰC",
+     "at": [
+      21,
+      "đọc"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "DÃY BUỒNG GIAM “BROADWAY” · ALCATRAZ",
+    "v": "ẢNH NGÀY NAY",
+    "at": [
+     21,
+     "Hắn"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "kinetic",
+   "at": 22,
+   "vid": "29024923",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "VỀ SAU HẮN VIẾT",
+     "at": [
+      22,
+      "viết"
+     ],
+     "sm": true
+    },
+    {
+     "text": "QUÃNG THỜI GIAN HẮN NHỚ NHẤT TRONG ĐỜI",
+     "at": [
+      22,
+      "nhớ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 23,
+   "vid": "36434849",
+   "tone": "noir",
+   "day": "ĐƯỢC THA CÓ ĐIỀU KIỆN · SAU KHOẢNG CHÍN NĂM",
+   "date": "03.1965"
+  },
+  {
+   "type": "kinetic",
+   "at": 24,
+   "bg": "southie_pan",
+   "items": [
+    {
+     "text": "35 TUỔI",
+     "at": [
+      24,
+      "ba"
+     ]
+    },
+    {
+     "text": "TRỞ VỀ SOUTHIE",
+     "at": [
+      24,
+      "trở"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 25,
+   "img": "statehouse",
+   "tone": "color",
+   "move": "in",
+   "kin": [
+    {
+     "text": "NGƯỜI EM BILLY",
+     "at": [
+      25,
+      "Billy"
+     ]
+    },
+    {
+     "text": "ĐÃ ĐẮC CỬ VÀO NGHỊ VIỆN BANG",
+     "at": [
+      25,
+      "đắc"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "TÒA NGHỊ VIỆN BANG MASSACHUSETTS",
+    "v": "ẢNH NGÀY NAY",
+    "at": [
+     25,
+     "Trong"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "split",
+   "at": 26,
+   "title": "HAI ANH EM, HAI CON ĐƯỜNG",
+   "a": {
+    "img": "mug1959",
+    "label": "JAMES: ALCATRAZ",
+    "at": [
+     26,
+     "anh"
+    ]
+   },
+   "b": {
+    "img": "billy",
+    "label": "WILLIAM: NGHỊ VIỆN",
+    "at": [
+     26,
+     "con"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 27,
+   "bg": "statehouse",
+   "text": "CẢ HAI ĐỀU DẪN TỚI\nQUYỀN LỰC",
+   "hitAt": [
+    27,
+    "quyền"
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "ALCATRAZ VÀ NHỮNG MŨI TIÊM"
+ },
+ "bgm": {
+  "mood": "dark",
+  "at": 0,
+  "gain": 0.12
+ }
+}

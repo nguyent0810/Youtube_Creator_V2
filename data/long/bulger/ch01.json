@@ -1,0 +1,602 @@
+{
+ "title": "Cậu bé ở Old Harbor",
+ "lines": [
+  {
+   "t": "Chương một. Cậu bé ở Old Harbor.",
+   "p": 1.0
+  },
+  "Ngày 3 tháng 9 năm 1929, James Joseph Bulger chào đời trong một gia đình gốc Ireland ở vùng Boston.",
+  "Nơi sinh chính xác thì mỗi tài liệu ghi một khác.",
+  "Cha cậu là công nhân, mất một cánh tay vì tai nạn lao động.",
+  "Mẹ cậu ở nhà trông sáu đứa con.",
+  "Tháng 5 năm 1938, gia đình chuyển vào Old Harbor, khu nhà ở xã hội đầu tiên của Nam Boston.",
+  "Dân ở đó gọi quê mình bằng một cái tên thân mật: Southie.",
+  "Southie là một bán đảo của người lao động gốc Ireland.",
+  "Những dãy nhà ba tầng chen nhau, nhà thờ ở góc phố này, quán rượu ở góc phố kia.",
+  "Ở đó, người ta trung thành với khu phố trước, rồi mới tới thứ gì khác.",
+  {
+   "t": "Và có một luật bất thành văn: không ai nói chuyện với cảnh sát.",
+   "p": 1.0
+  },
+  "Vì mái tóc vàng nhạt, cậu bé James được gọi là Whitey.",
+  "Cậu ghét cái tên ấy.",
+  "Người thân gọi cậu là Jim. Chỉ cảnh sát và báo chí mới dùng chữ Whitey.",
+  "Cậu có một người em trai tên William, mọi người gọi là Billy.",
+  "Billy chăm học, mê tiếng La-tinh, và muốn làm chính trị.",
+  "Hãy nhớ người em này.",
+  "Cách nhà Bulger vài cánh cửa là một gia đình khác, cũng gốc Ireland.",
+  "Họ có một cậu con trai kém Whitey mười một tuổi.",
+  "Tên cậu bé là John Connolly.",
+  "Theo lời Connolly kể về sau, hồi nhỏ ông ta từng được Whitey mua cho một que kem, và từng được hắn cứu khỏi một trận đòn.",
+  "Cũng hãy nhớ cái tên này. Vì bốn mươi năm sau, cậu sẽ là người mở hồ sơ chỉ điểm ở FBI.",
+  "Năm 1943, Whitey bị bắt lần đầu. Cậu mười bốn tuổi.",
+  "Theo các tiểu sử, cậu còn có lần bỏ nhà đi theo một gánh xiếc.",
+  "Những năm sau đó là trộm cắp, đánh nhau, rồi cướp.",
+  "Năm 1948, cậu vào Không quân Mỹ.",
+  "Cậu mấy lần bị giam kỷ luật, nhưng vẫn được giải ngũ danh dự năm 1952.",
+  "Trở về Boston, cậu không tìm việc.",
+  "Cậu tìm ngân hàng."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "CẬU BÉ Ở\nOLD HARBOR",
+   "sub": "BOSTON · 1929 — 1952",
+   "titleAt": [
+    0,
+    "Cậu"
+   ],
+   "bg": "southie_air"
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "bg": "map1890",
+   "day": "JAMES JOSEPH BULGER CHÀO ĐỜI · VÙNG BOSTON",
+   "date": "03.09.1929"
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "bg": "map1890",
+   "items": [
+    {
+     "text": "NƠI SINH CHÍNH XÁC",
+     "at": [
+      2,
+      "Nơi"
+     ],
+     "sm": true
+    },
+    {
+     "text": "MỖI TÀI LIỆU GHI MỘT KHÁC",
+     "at": [
+      2,
+      "mỗi"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "vid": "12595890",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "CHA LÀ CÔNG NHÂN",
+     "at": [
+      3,
+      "công"
+     ]
+    },
+    {
+     "text": "MẤT MỘT CÁNH TAY VÌ TAI NẠN",
+     "at": [
+      3,
+      "cánh"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "bg": "triple",
+   "from": 0,
+   "to": 6,
+   "countAt": [
+    4,
+    "sáu"
+   ],
+   "label": "ĐỨA CON · MẸ Ở NHÀ TRÔNG"
+  },
+  {
+   "type": "photo",
+   "at": 5,
+   "img": "oldcolony",
+   "tone": "bw",
+   "move": "in",
+   "kin": [
+    {
+     "text": "THÁNG 5.1938",
+     "at": [
+      5,
+      "1938"
+     ],
+     "sm": true
+    },
+    {
+     "text": "KHU NHÀ Ở XÃ HỘI OLD HARBOR",
+     "at": [
+      5,
+      "Old"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "ĐẠI LỘ OLD COLONY · KHU OLD HARBOR BÊN PHẢI",
+    "v": "ẢNH NĂM 2013",
+    "at": [
+     5,
+     "Tháng"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "bg": "mural",
+   "text": "SOUTHIE",
+   "white": true,
+   "hitAt": [
+    6,
+    "Southie"
+   ],
+   "sub": "CÁI TÊN THÂN MẬT CỦA NAM BOSTON"
+  },
+  {
+   "type": "photo",
+   "at": 7,
+   "img": "southie_air",
+   "tone": "color",
+   "move": "in",
+   "kin": [
+    {
+     "text": "BÁN ĐẢO CỦA NGƯỜI LAO ĐỘNG",
+     "at": [
+      7,
+      "bán"
+     ]
+    },
+    {
+     "text": "GỐC IRELAND",
+     "at": [
+      7,
+      "Ireland"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "NAM BOSTON NHÌN TỪ TRÊN CAO",
+    "v": "ẢNH NGÀY NAY",
+    "at": [
+     7,
+     "Southie"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "photo",
+   "at": 8,
+   "img": "triple",
+   "tone": "color",
+   "move": "pan",
+   "illus": "ẢNH MINH HỌA · NHÀ BA TẦNG KIỂU BOSTON",
+   "kin": [
+    {
+     "text": "NHÀ BA TẦNG CHEN NHAU",
+     "at": [
+      8,
+      "ba"
+     ]
+    },
+    {
+     "text": "NHÀ THỜ GÓC NÀY · QUÁN RƯỢU GÓC KIA",
+     "at": [
+      8,
+      "thờ"
+     ],
+     "sm": true
+    }
+   ],
+   "veil": 0.52
+  },
+  {
+   "type": "broll",
+   "at": 9,
+   "vid": "5481220",
+   "tone": "noir",
+   "veil": 0.4,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "TRUNG THÀNH VỚI KHU PHỐ TRƯỚC",
+     "at": [
+      9,
+      "trung"
+     ]
+    },
+    {
+     "text": "RỒI MỚI TỚI THỨ GÌ KHÁC",
+     "at": [
+      9,
+      "rồi"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 10,
+   "bg": "mural",
+   "text": "KHÔNG AI NÓI CHUYỆN\nVỚI CẢNH SÁT",
+   "hitAt": [
+    10,
+    "không"
+   ],
+   "sub": "LUẬT BẤT THÀNH VĂN CỦA SOUTHIE"
+  },
+  {
+   "type": "photo",
+   "at": 11,
+   "img": "mug1947",
+   "tone": "bw",
+   "kin": [
+    {
+     "text": "TÓC VÀNG NHẠT",
+     "at": [
+      11,
+      "tóc"
+     ],
+     "sm": true
+    },
+    {
+     "text": "“WHITEY”",
+     "at": [
+      11,
+      "Whitey"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "JAMES BULGER · ẢNH HỒ SƠ CẢNH SÁT BOSTON",
+    "v": "NĂM 1947",
+    "at": [
+     11,
+     "Vì"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "slam",
+   "at": 12,
+   "bg": "mug1947",
+   "text": "CẬU GHÉT CÁI TÊN ẤY",
+   "hitAt": [
+    12,
+    "ghét"
+   ]
+  },
+  {
+   "type": "split",
+   "at": 13,
+   "title": "HAI CÁI TÊN",
+   "a": {
+    "img": "mug1953",
+    "label": "NGƯỜI THÂN GỌI: JIM",
+    "at": [
+     13,
+     "Jim"
+    ]
+   },
+   "b": {
+    "img": "poster",
+    "label": "CẢNH SÁT VÀ BÁO CHÍ: WHITEY",
+    "at": [
+     13,
+     "Chỉ"
+    ]
+   }
+  },
+  {
+   "type": "print",
+   "at": 14,
+   "img": "billy",
+   "tone": "bw",
+   "side": {
+    "k": "NGƯỜI EM TRAI",
+    "h": "WILLIAM BULGER",
+    "hAt": [
+     14,
+     "William"
+    ],
+    "lines": [
+     {
+      "text": "Mọi người gọi là *Billy*",
+      "at": [
+       14,
+       "Billy"
+      ]
+     },
+     {
+      "text": "Chăm học · mê *tiếng La-tinh*",
+      "at": [
+       15,
+       "chăm"
+      ]
+     },
+     {
+      "text": "Muốn *làm chính trị*",
+      "at": [
+       15,
+       "chính"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 16,
+   "bg": "billy_flynn",
+   "text": "HÃY NHỚ NGƯỜI EM NÀY",
+   "hitAt": [
+    16,
+    "nhớ"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "bg": "oldcolony",
+   "items": [
+    {
+     "text": "CÁCH NHÀ BULGER VÀI CÁNH CỬA",
+     "at": [
+      17,
+      "vài"
+     ]
+    },
+    {
+     "text": "MỘT GIA ĐÌNH GỐC IRELAND KHÁC",
+     "at": [
+      17,
+      "gia"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 18,
+   "bg": "southie_pan",
+   "from": 0,
+   "to": 11,
+   "suffix": " TUỔI",
+   "countAt": [
+    18,
+    "mười"
+   ],
+   "label": "CẬU CON TRAI NHÀ ẤY KÉM WHITEY"
+  },
+  {
+   "type": "print",
+   "at": 19,
+   "img": "connolly",
+   "tone": "bw",
+   "side": {
+    "k": "TÊN CẬU BÉ · ẢNH NĂM 1983",
+    "h": "JOHN CONNOLLY",
+    "hAt": [
+     19,
+     "John"
+    ],
+    "lines": [
+     {
+      "text": "Theo lời ông ta kể về sau",
+      "at": [
+       20,
+       "Theo"
+      ]
+     },
+     {
+      "text": "Được Whitey mua cho *một que kem*",
+      "at": [
+       20,
+       "que"
+      ]
+     },
+     {
+      "text": "Được cứu khỏi *một trận đòn*",
+      "at": [
+       20,
+       "cứu"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 21,
+   "vid": "6549976",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "40 NĂM SAU",
+     "at": [
+      21,
+      "bốn"
+     ],
+     "sm": true
+    },
+    {
+     "text": "NGƯỜI MỞ HỒ SƠ CHỈ ĐIỂM Ở FBI",
+     "at": [
+      21,
+      "mở"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 22,
+   "bg": "mug1947",
+   "day": "WHITEY BỊ BẮT LẦN ĐẦU · 14 TUỔI",
+   "date": "1943"
+  },
+  {
+   "type": "kinetic",
+   "at": 23,
+   "vid": "12595890",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "THEO CÁC TIỂU SỬ",
+     "at": [
+      23,
+      "Theo"
+     ],
+     "sm": true
+    },
+    {
+     "text": "BỎ NHÀ ĐI THEO MỘT GÁNH XIẾC",
+     "at": [
+      23,
+      "gánh"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 24,
+   "title": "NHỮNG NĂM SAU ĐÓ",
+   "bg": "mug1953",
+   "rows": [
+    {
+     "k": "TRỘM CẮP",
+     "v": "●",
+     "at": [
+      24,
+      "trộm"
+     ]
+    },
+    {
+     "k": "ĐÁNH NHAU",
+     "v": "●",
+     "at": [
+      24,
+      "đánh"
+     ]
+    },
+    {
+     "k": "CƯỚP",
+     "v": "●",
+     "at": [
+      24,
+      "cướp"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 25,
+   "img": "mug1953",
+   "tone": "bw",
+   "kin": [
+    {
+     "text": "1948 · VÀO KHÔNG QUÂN MỸ",
+     "at": [
+      25,
+      "Không"
+     ]
+    },
+    {
+     "text": "GIẢI NGŨ DANH DỰ NĂM 1952",
+     "at": [
+      26,
+      "giải"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "JAMES BULGER · ẢNH HỒ SƠ CẢNH SÁT BOSTON",
+    "v": "16.03.1953",
+    "at": [
+     25,
+     "Năm"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "kinetic",
+   "at": 27,
+   "bg": "b1950",
+   "items": [
+    {
+     "text": "TRỞ VỀ BOSTON",
+     "at": [
+      27,
+      "Trở"
+     ]
+    },
+    {
+     "text": "CẬU KHÔNG TÌM VIỆC",
+     "at": [
+      27,
+      "không"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 28,
+   "vid": "39060937",
+   "tone": "noir",
+   "text": "CẬU TÌM NGÂN HÀNG",
+   "hitAt": [
+    28,
+    "ngân"
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "CẬU BÉ Ở OLD HARBOR"
+ },
+ "bgm": {
+  "mood": "quiet",
+  "at": 0,
+  "gain": 0.12
+ }
+}

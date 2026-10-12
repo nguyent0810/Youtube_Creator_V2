@@ -1,0 +1,360 @@
+{
+ "title": "Phòng 181",
+ "lines": [
+  {
+   "t": "Tháng 5 năm 1932, Capone bị đưa tới nhà tù liên bang Atlanta.",
+   "p": 0.8
+  },
+  "Ông ba mươi ba tuổi.",
+  "Tháng 8 năm 1934, ông tới Alcatraz.",
+  "Nhà tù mới, ngoài khơi San Francisco.",
+  "Ông tới cùng sáu mươi sáu tù nhân liên bang khác.",
+  "Báo điện tín lúc ấy gọi nơi này là đảo quỷ của nước Mỹ.",
+  "Trang hồ sơ gắn ông với phòng số 181.",
+  "Đó là chú thích của bức ảnh căn phòng.",
+  "Không phải một biển tên treo từ năm ông còn sống.",
+  "Trong thời gian ở Alcatraz, ông được chơi banjo trong ban nhạc của tù.",
+  "Tên ban nhạc là Rock Islanders.",
+  "Họ chơi mỗi chủ nhật cho các bạn tù.",
+  "Ông còn chép lại bài Madonna Mia.",
+  "Một ông trùm, một cây đàn, một nhà tù dựng để cắt liên lạc.",
+  "Ngày 6 tháng 1 năm 1939, ông mãn hạn ở Alcatraz.",
+  "Ông bị chuyển tới Terminal Island, ở California.",
+  "Để ngồi nốt án khinh mạn tòa.",
+  "Ngày 16 tháng 11 năm 1939, ông được ân xá.",
+  "Mae đã kháng cáo.",
+  "Căn cứ là năng lực tinh thần của ông đã giảm.",
+  "Bệnh giang mai thần kinh hiện rõ ở Alcatraz.",
+  "Hồ sơ không kể triệu chứng.",
+  "Chỉ kể kết quả.",
+  "Gần tám năm, rồi ra.",
+  "Frank Nitti cũng đã ngồi tù vì trốn thuế.",
+  "Nitti ra tù tháng 3 năm 1932, rồi cầm tổ chức.",
+  "Tổ chức không tan khi Capone vào tù.",
+  {
+   "t": "Nó chỉ bớt ồn.",
+   "p": 1.0
+  }
+ ],
+ "hud": {
+  "k": "HỒ SƠ",
+  "t": "PHÒNG 181"
+ },
+ "bgm": {
+  "mood": "dark",
+  "gain": 0.11
+ },
+ "scenes": [
+  {
+   "type": "chapter",
+   "at": 0,
+   "no": "8",
+   "k": "CHƯƠNG 8",
+   "title": "PHÒNG 181"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "ÔNG BA MƯƠI BA",
+     "at": [
+      1,
+      "Ông"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "THÁNG 8 NĂM 1934",
+     "at": [
+      2,
+      "Tháng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "NHÀ TÙ MỚI, NGOÀI",
+     "at": [
+      3,
+      "Nhà"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "ÔNG TỚI CÙNG SÁU",
+     "at": [
+      4,
+      "Ông"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "BÁO ĐIỆN TÍN LÚC",
+   "white": true
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "from": 0,
+   "to": 181,
+   "suffix": " PHÒNG",
+   "label": "PHÒNG"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "ĐÓ LÀ CHÚ THÍCH",
+     "at": [
+      7,
+      "Đó"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "KHÔNG PHẢI MỘT BIỂN",
+     "at": [
+      8,
+      "Không"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "TRONG THỜI GIAN Ở",
+     "at": [
+      9,
+      "Trong"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "TÊN BAN NHẠC LÀ",
+     "at": [
+      10,
+      "Tên"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 11,
+   "text": "HỌ CHƠI MỖI CHỦ",
+   "white": true
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "ÔNG CÒN CHÉP LẠI",
+     "at": [
+      12,
+      "Ông"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 13,
+   "text": "CÂY ĐÀN",
+   "white": true
+  },
+  {
+   "type": "date",
+   "at": 14,
+   "day": "ALCATRAZ",
+   "date": "06.01.1939"
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "ÔNG BỊ CHUYỂN TỚI",
+     "at": [
+      15,
+      "Ông"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "items": [
+    {
+     "text": "ĐỂ NGỒI NỐT ÁN",
+     "at": [
+      16,
+      "Để"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "NGÀY 16 THÁNG 11",
+     "at": [
+      17,
+      "Ngày"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 18,
+   "items": [
+    {
+     "text": "MAE ĐÃ KHÁNG CÁO",
+     "at": [
+      18,
+      "Mae"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 19,
+   "text": "CĂN CỨ LÀ NĂNG",
+   "white": true
+  },
+  {
+   "type": "kinetic",
+   "at": 20,
+   "items": [
+    {
+     "text": "BỆNH GIANG MAI THẦN",
+     "at": [
+      20,
+      "Bệnh"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 21,
+   "items": [
+    {
+     "text": "HỒ SƠ KHÔNG KỂ",
+     "at": [
+      21,
+      "Hồ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 22,
+   "items": [
+    {
+     "text": "CHỈ KỂ KẾT QUẢ",
+     "at": [
+      22,
+      "Chỉ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 23,
+   "text": "16.11.1939",
+   "white": true
+  },
+  {
+   "type": "kinetic",
+   "at": 24,
+   "items": [
+    {
+     "text": "FRANK NITTI CŨNG ĐÃ",
+     "at": [
+      24,
+      "Frank"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 25,
+   "items": [
+    {
+     "text": "NITTI RA TÙ THÁNG",
+     "at": [
+      25,
+      "Nitti"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 26,
+   "items": [
+    {
+     "text": "TỔ CHỨC KHÔNG TAN",
+     "at": [
+      26,
+      "Tổ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 27,
+   "items": [
+    {
+     "text": "NÓ CHỈ BỚT ỒN",
+     "at": [
+      27,
+      "Nó"
+     ]
+    }
+   ]
+  }
+ ]
+}

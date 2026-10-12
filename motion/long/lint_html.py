@@ -1,11 +1,13 @@
-"""Bốn kiểm tra cơ học chạy trước render (bước html và render).
+"""Sáu kiểm tra cơ học chạy trước render (bước html và render).
 
 Bắt lỗi từng phải soi contact sheet mới thấy:
 
 - thẻ ``file`` có con dấu mà không bật ``stamp.ink`` — trên giấy ``mix-blend-mode: screen`` làm nhạt mực;
 - con dấu (kể cả khi xoay) tràn ra ngoài thẻ giấy;
 - tiêu đề thẻ ``name`` rộng hơn lòng thẻ ở cỡ chữ engine sẽ chọn, nên tự xuống dòng;
-- clip B-roll HDR (PQ, HLG, hoặc primaries/matrix bt.2020) — lỗi màu của tập Thượng Hải.
+- clip B-roll HDR (PQ, HLG, hoặc primaries/matrix bt.2020) — lỗi màu của tập Thượng Hải;
+- bản đồ có ``zoom`` mà nhãn ghim quá dài, bị cắt ở mép phải khi phóng to;
+- dòng chữ kinetic rộng hơn hộp chữ khi đo bằng font thật của look (``kinetic_problems``).
 
 Số đo bám ``casewide.css`` / ``casewide.js``: thẻ 1000×tối thiểu 600, padding 54/64,
 lòng chữ 872px; con dấu padding 10/34, viền 10, ``letter-spacing: .04em``.
@@ -212,13 +214,68 @@ def _fmt_box(poly: list[tuple[float, float]]) -> str:
     return f"{min(xs):.0f}–{max(xs):.0f} × {min(ys):.0f}–{max(ys):.0f}"
 
 
-def check_scenes(chapter: str, scenes: list[dict]) -> list[str]:
+def check_scenes(chapter: str, scenes: list[dict], geo_pins: dict | None = None) -> list[str]:
     """Lỗi con dấu và tiêu đề trên các cảnh ``file``. Cảnh khác không bị bắt mực."""
     out: list[str] = []
     for i, scene in enumerate(scenes):
+        if scene.get("type") == "map":
+            out.extend(_map_problems(chapter, i, scene, (geo_pins or {}).get(scene.get("geo"))))
         if scene.get("type") != "file":
             continue
         out.extend(_file_problems(chapter, i, scene))
+    return out
+
+
+# Chữ kinetic căn giữa: engine chọn cỡ bằng fsz(text, 130|56, 1650, 0.66·kw), hộp chữ rộng 1720px (left/right 100).
+# Font rộng hơn ước lượng thì dòng dài tràn sang phải và bị cắt ở mép khung (Escobar ch13, look amber/Montserrat).
+KIN_FONTS = {"Be Vietnam Pro": "BeVietnamPro-Black.ttf", "Montserrat": "Montserrat-{w}.ttf", "Inter": "Inter-{w}.ttf",
+             "Barlow Condensed": "BarlowCondensed-{w}.ttf"}
+KIN_BOX, KIN_GRACE = 1720, 20
+
+
+def kinetic_problems(chapter: str, scenes: list[dict], sans: str = "Be Vietnam Pro", kw: float = 1.0) -> list[str]:
+    """Dòng kinetic (cảnh kinetic, chữ đè trên broll/ảnh nền) rộng hơn hộp chữ khi đo bằng font thật của look.
+
+    Look chưa có file font trong motion/long/fonts thì bỏ qua (thêm font rồi ghi vào KIN_FONTS).
+    """
+    pat = KIN_FONTS.get(sans)
+    if not pat or not (FONT_DIR / pat.format(w=900)).exists():
+        return []
+    out: list[str] = []
+    for i, scene in enumerate(scenes):
+        items = scene.get("items") if scene.get("type") == "kinetic" else scene.get("kin") if scene.get("type") == "broll" else None
+        for q in items or []:
+            if q.get("serif") or not q.get("text"):
+                continue
+            px = int(q.get("size") or fsz(q["text"], 56 if q.get("sm") else 130, 1650, 0.66 * kw))
+            f = FONT_DIR / pat.format(w=700 if q.get("sm") else 900)
+            w = ImageFont.truetype(str(f if f.exists() else FONT_DIR / pat.format(w=900)), px).getlength(q["text"])
+            if w > KIN_BOX + KIN_GRACE:
+                out.append(f"{chapter} cảnh {i} ({scene['type']}): dòng “{q['text']}” rộng {w:.0f}px, hộp chữ chỉ {KIN_BOX}px — rút ngắn hoặc tách làm hai dòng.")
+    return out
+
+
+def _map_problems(chapter: str, index: int, scene: dict, pins: dict | None) -> list[str]:
+    """Bản đồ có zoom: nhãn ghim phóng to cùng bản đồ, nhãn dài chạy ra ngoài mép phải (Escobar ch07/ch08/ch10, Capone ch07).
+
+    Engine phóng quanh ghim ``zoom`` (transform-origin = toạ độ ghim ấy) tới ``zoomK`` ở cuối cảnh. Đo trên bản render:
+    nhãn bắt đầu cách ghim ~43px và mỗi ký tự rộng ~19,4px ở tỉ lệ 1, cả hai nhân với zoomK.
+    ``pins``: {tên ghim: (x trên sân khấu 1920, nhãn mặc định)} của geo này; không có thì bỏ qua.
+    """
+    k = _num(scene.get("zoomK"), 1.15)
+    if not scene.get("zoom") or not pins or scene["zoom"] not in pins:
+        return []
+    zx = pins[scene["zoom"]][0]
+    out = []
+    for p in scene.get("pins", []):
+        if p.get("name") not in pins:
+            continue
+        x0, default = pins[p["name"]]
+        label = p.get("label") or default or ""
+        right = zx + (x0 - zx) * k + 43 * k + len(label) * 19.4 * k
+        if right > 1900:
+            room = int((1900 - zx - (x0 - zx) * k - 43 * k) / (19.4 * k))
+            out.append(f"{chapter} cảnh {index} (map): nhãn “{label}” dài {len(label)} ký tự, ở zoomK {k:g} chỉ còn chỗ cho {max(room, 0)} — rút ngắn nhãn hoặc giảm zoomK.")
     return out
 
 

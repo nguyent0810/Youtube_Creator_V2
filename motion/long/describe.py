@@ -22,10 +22,15 @@ for _m in variety.catalog()["tracks"].values():   # bài mới thêm vào danh m
         MUSIC.setdefault(_m["file"], _m["title"])
 
 
-def main(topic):
+LIMIT = 4900   # YouTube cắt mô tả ở 5.000 byte; tiếng Việt có dấu tốn 2–3 byte mỗi ký tự
+
+
+def main(topic, shrink=0):
     sd, od = ROOT / "data" / "long" / topic, ROOT / "output" / "long" / topic
     spec = json.loads((sd / "spec.json").read_text(encoding="utf-8"))
-    meta = spec.get("youtube", {})
+    meta = dict(spec.get("youtube", {}))
+    if shrink:   # mô tả quá dài (video nhiều ảnh): bỏ tên ảnh, ghi tác giả đầy đủ + số ảnh theo từng giấy phép (CC cần tác giả và giấy phép)
+        meta["credit_by_len"] = max(16, 44 - 8 * shrink)
     used, music, chapters, t = set(), [], [], 0.0
     for c in spec["chapters"]:
         ch = json.loads((sd / f"{c}.json").read_text(encoding="utf-8"))
@@ -67,9 +72,11 @@ def main(topic):
             continue
         name = re.sub(r"\s*\(\d{6,}\)|\.(jpe?g|png|tif)$|, Sicily, Italy| - panoramio", "", m.get("title") or f[5:], flags=re.I)[:meta.get("credit_name_len", 48)]
         by = re.sub(r"^The original uploader was |No machine-readable author provided\. ", "", by)
-        bylic.setdefault(m["license"], []).append(f"{name.strip()} ({by[:meta.get('credit_by_len', 40)].strip()}{src})")
+        bylic.setdefault(m["license"], []).append(by[:meta["credit_by_len"]].strip() + src if shrink else f"{name.strip()} ({by[:meta.get('credit_by_len', 40)].strip()}{src})")
     if not any(str(spec["imgs"][k]).startswith("EXT:") for k in used):   # chỉ Commons -> giữ tiêu đề cũ
         lines = [x.replace("🖼 ẢNH (Wikimedia Commons và các kho tư liệu mở)", "🖼 ẢNH (Wikimedia Commons)") for x in lines]
+    if shrink:   # gộp tác giả trùng: "Tên (3 ảnh)"
+        bylic = {lic: [a + (f" ({v.count(a)} ảnh)" if v.count(a) > 1 else "") for a in dict.fromkeys(v)] for lic, v in bylic.items()}
     lines += [f"• {lic}: " + "; ".join(v) for lic, v in sorted(bylic.items())]   # gom theo giấy phép: đủ tác giả + giấy phép, ít byte hơn
     lines += [f"• Và {pd} ảnh tư liệu thuộc phạm vi công cộng (Public domain / CC0)" + (f", gồm ảnh từ {', '.join(sorted(pdsrc))}." if pdsrc else "."), "",
               "🎬 VIDEO B-ROLL: Pexels (pexels.com) — giấy phép Pexels, dùng tự do.", "", "🎵 NHẠC NỀN"]
@@ -84,8 +91,13 @@ def main(topic):
             name = re.sub(r"\.(flac|ogg|oga|wav|mp3)$", "", m["file"][5:], flags=re.I)
             lines.append(f"Mascagni — Intermezzo (Cavalleria rusticana) · {m.get('short', name[:40])} — Wikimedia Commons — {m['license']}")
     lines += ["", " ".join("#" + x for x in meta.get("hashtags", []))]
-    (od / "description.txt").write_text("\n".join(lines).strip() + "\n", encoding="utf-8")
-    print((od / "description.txt").read_text(encoding="utf-8"))
+    text = "\n".join(lines).strip() + "\n"
+    if len(text.encode("utf-8")) > LIMIT and shrink < 8:
+        return main(topic, shrink + 1)
+    (od / "description.txt").write_text(text, encoding="utf-8")
+    print(text)
+    n = len(text.encode("utf-8"))
+    print(f"[{n} byte" + (", ghi công rút gọn theo tác giả" if shrink else "") + ("" if n <= LIMIT else " — VẪN QUÁ 5.000 BYTE, phải bớt tay") + "]")
 
 
 if __name__ == "__main__":

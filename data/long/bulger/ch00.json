@@ -1,0 +1,579 @@
+{
+ "title": "MỞ ĐẦU: Ông già ở căn hộ 303",
+ "lines": [
+  "Santa Monica, California. Thứ Tư, ngày 22 tháng 6 năm 2011.",
+  "Ở căn hộ 303 của một chung cư cũ cách bãi biển vài dãy phố, có một cặp vợ chồng già tên Charlie và Carol Gasko.",
+  "Họ trả tiền thuê nhà bằng tiền mặt, luôn đúng hạn.",
+  "Hàng xóm biết gì về họ? Gần như không gì cả.",
+  "Chỉ biết người vợ hay cho một con mèo hoang ăn trước cửa.",
+  "Khoảng 4 giờ chiều hôm ấy, người quản lý chung cư nhận một yêu cầu lạ từ các đặc vụ liên bang.",
+  "Anh gọi lên căn 303, báo rằng ngăn chứa đồ của ông Gasko dưới ga-ra vừa bị cạy.",
+  {
+   "t": "Khoảng 5 giờ 45, một ông già mặc đồ trắng, đội mũ, bước ra khỏi thang máy.",
+   "p": 1.0
+  },
+  "Những khẩu súng chĩa về phía ông.",
+  "Ông không chịu quỳ xuống. Ông nói mình tên là Charles Gasko.",
+  "Rồi ông đổi ý.",
+  {
+   "t": "Các anh biết tôi là ai mà. Tôi là Whitey Bulger.",
+   "q": 1,
+   "tr": 1
+  },
+  "Ông ta tám mươi mốt tuổi.",
+  "Ông ta đã lẩn trốn mười sáu năm, và có tên trong danh sách mười kẻ bị truy nã gắt gao nhất nước Mỹ.",
+  {
+   "t": "Tiền thưởng cho ai chỉ ra ông ta là hai triệu đô.",
+   "p": 1.0
+  },
+  "Trên lầu, các đặc vụ khoét những bức tường của căn hộ 303.",
+  "Bên trong có ba mươi khẩu súng.",
+  "Và tám trăm hai mươi hai nghìn một trăm chín mươi tám đô tiền mặt.",
+  "Nhiều khán giả Việt Nam biết bộ phim Hồng Kông Vô Gian Đạo, với Lưu Đức Hoa và Lương Triều Vỹ.",
+  "Năm 2006, Hollywood làm lại nó thành Điệp Vụ Boston, và thắng giải Oscar Phim hay nhất.",
+  "Trong bản Mỹ, nhân vật ông trùm được xây dựng từ một người có thật.",
+  "Chính là ông già ở căn hộ 303.",
+  "Trong gần nửa giờ tới, bạn sẽ gặp một ông trùm có hồ sơ chỉ điểm dày bảy trăm trang ở FBI.",
+  "Một đặc vụ lớn lên cách nhà ông ta vài cánh cửa.",
+  "Và một cựu hoa hậu ở bên kia đại dương, người đã làm được điều mà FBI không làm nổi suốt mười sáu năm.",
+  {
+   "t": "Đây là hồ sơ Whitey Bulger.",
+   "p": 1.0
+  },
+  "Vì sao kẻ bị FBI truy nã gắt gao nhất lại từng là người của chính FBI?",
+  "Để trả lời, chúng ta phải quay về một khu nhà ở xã hội tại Boston, hơn bảy mươi năm trước đó."
+ ],
+ "scenes": [
+  {
+   "type": "date",
+   "vid": "9699835",
+   "tone": "noir",
+   "day": "SANTA MONICA · CALIFORNIA · THỨ TƯ",
+   "date": "22.06.2011"
+  },
+  {
+   "type": "photo",
+   "at": 1,
+   "img": "apt",
+   "tone": "color",
+   "move": "in",
+   "kin": [
+    {
+     "text": "CĂN HỘ 303",
+     "at": [
+      1,
+      "303"
+     ]
+    },
+    {
+     "text": "CHARLIE VÀ CAROL GASKO",
+     "at": [
+      1,
+      "Charlie"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "SỐ 1012 PHỐ 3 · SANTA MONICA",
+    "v": "ẢNH NGÀY NAY",
+    "at": [
+     1,
+     "Ở"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "broll",
+   "at": 2,
+   "vid": "5466769",
+   "tone": "noir",
+   "veil": 0.4,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "TRẢ TIỀN THUÊ BẰNG TIỀN MẶT",
+     "at": [
+      2,
+      "tiền"
+     ]
+    },
+    {
+     "text": "LUÔN ĐÚNG HẠN",
+     "at": [
+      2,
+      "đúng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "bg": "apt",
+   "items": [
+    {
+     "text": "HÀNG XÓM BIẾT GÌ VỀ HỌ?",
+     "at": [
+      3,
+      "Hàng"
+     ]
+    },
+    {
+     "text": "GẦN NHƯ KHÔNG GÌ CẢ",
+     "at": [
+      3,
+      "Gần"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "sketch",
+   "at": 4,
+   "art": "catfeed",
+   "title": "Người vợ hay cho một con mèo hoang ăn trước cửa"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "vid": "30971952",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "KHOẢNG 4 GIỜ CHIỀU",
+     "at": [
+      5,
+      "giờ"
+     ],
+     "sm": true
+    },
+    {
+     "text": "MỘT YÊU CẦU LẠ TỪ ĐẶC VỤ LIÊN BANG",
+     "at": [
+      5,
+      "yêu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 6,
+   "vid": "10397452",
+   "tone": "noir",
+   "veil": 0.4,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "GỌI LÊN CĂN 303",
+     "at": [
+      6,
+      "gọi"
+     ]
+    },
+    {
+     "text": "NGĂN CHỨA ĐỒ DƯỚI GA-RA VỪA BỊ CẠY",
+     "at": [
+      6,
+      "ngăn"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "sketch",
+   "at": 7,
+   "art": "elevator",
+   "title": "Khoảng 5 giờ 45 · một ông già mặc đồ trắng bước ra khỏi thang máy"
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "vid": "34779661",
+   "tone": "noir",
+   "text": "NHỮNG KHẨU SÚNG\nCHĨA VỀ PHÍA ÔNG",
+   "hitAt": [
+    8,
+    "súng"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "bg": "apt",
+   "items": [
+    {
+     "text": "KHÔNG CHỊU QUỲ XUỐNG",
+     "at": [
+      9,
+      "quỳ"
+     ]
+    },
+    {
+     "text": "XƯNG TÊN: CHARLES GASKO",
+     "at": [
+      9,
+      "Charles"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 10,
+   "vid": "16960302",
+   "tone": "night",
+   "text": "RỒI ÔNG ĐỔI Ý",
+   "hitAt": [
+    10,
+    "đổi"
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 11,
+   "text": "Các anh biết tôi là ai mà. Tôi là Whitey Bulger.",
+   "by": "JAMES “WHITEY” BULGER · THEO LỜI THUẬT CỦA FBI, 22.06.2011",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 11,
+   "typeAt": [
+    11,
+    "Các"
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 12,
+   "img": "mug2011",
+   "tone": "color",
+   "kin": [
+    {
+     "text": "81 TUỔI",
+     "at": [
+      12,
+      "tám"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "JAMES “WHITEY” BULGER",
+    "v": "ẢNH HỒ SƠ · 2011",
+    "at": [
+     12,
+     "Ông"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "photo",
+   "at": 13,
+   "img": "poster",
+   "tone": "color",
+   "frame": true,
+   "kin": [
+    {
+     "text": "LẨN TRỐN 16 NĂM",
+     "at": [
+      13,
+      "mười"
+     ]
+    },
+    {
+     "text": "TOP 10 TRUY NÃ CỦA FBI",
+     "at": [
+      13,
+      "danh"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "THÔNG BÁO TRUY NÃ CỦA FBI",
+    "v": "TƯ LIỆU",
+    "at": [
+     13,
+     "Ông"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "counter",
+   "at": 14,
+   "vid": "6326929",
+   "tone": "noir",
+   "from": 0,
+   "to": 2,
+   "prefix": "$",
+   "suffix": " TRIỆU",
+   "countAt": [
+    14,
+    "hai"
+   ],
+   "label": "TIỀN THƯỞNG CHO AI CHỈ RA ÔNG TA"
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "vid": "6175387",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "CÁC ĐẶC VỤ KHOÉT TƯỜNG",
+     "at": [
+      15,
+      "khoét"
+     ]
+    },
+    {
+     "text": "CĂN HỘ 303",
+     "at": [
+      15,
+      "303"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 16,
+   "bg": "apt",
+   "from": 0,
+   "to": 30,
+   "countAt": [
+    16,
+    "ba"
+   ],
+   "label": "KHẨU SÚNG GIẤU TRONG TƯỜNG"
+  },
+  {
+   "type": "counter",
+   "at": 17,
+   "vid": "5466769",
+   "tone": "noir",
+   "from": 0,
+   "to": 822198,
+   "prefix": "$",
+   "countAt": [
+    17,
+    "tám"
+   ],
+   "label": "TIỀN MẶT"
+  },
+  {
+   "type": "broll",
+   "at": 18,
+   "vid": "2856781",
+   "tone": "night",
+   "veil": 0.4,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "VÔ GIAN ĐẠO",
+     "at": [
+      18,
+      "Vô"
+     ],
+     "serif": true
+    },
+    {
+     "text": "HỒNG KÔNG · 2002",
+     "at": [
+      18,
+      "Hồng"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 19,
+   "bg": "dolby",
+   "items": [
+    {
+     "year": "2002",
+     "text": "Vô Gian Đạo"
+    },
+    {
+     "year": "2006",
+     "text": "*Điệp Vụ Boston*"
+    },
+    {
+     "year": "2007",
+     "text": "Oscar *Phim hay nhất*"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 20,
+   "vid": "855120",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "NHÂN VẬT ÔNG TRÙM",
+     "at": [
+      20,
+      "ông"
+     ]
+    },
+    {
+     "text": "XÂY DỰNG TỪ MỘT NGƯỜI CÓ THẬT",
+     "at": [
+      20,
+      "thật"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 21,
+   "bg": "mug2011",
+   "text": "ÔNG GIÀ Ở\nCĂN HỘ 303",
+   "hitAt": [
+    21,
+    "303"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 22,
+   "vid": "6549976",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "HỒ SƠ CHỈ ĐIỂM",
+     "at": [
+      22,
+      "hồ"
+     ]
+    },
+    {
+     "text": "DÀY 700 TRANG Ở FBI",
+     "at": [
+      22,
+      "bảy"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": 23,
+   "img": "connolly",
+   "tone": "bw",
+   "side": {
+    "k": "LỜI HỨA THỨ HAI",
+    "h": "MỘT ĐẶC VỤ",
+    "hAt": [
+     23,
+     "đặc"
+    ],
+    "lines": [
+     {
+      "text": "Lớn lên cách nhà ông ta *vài cánh cửa*",
+      "at": [
+       23,
+       "cách"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "broll",
+   "at": 24,
+   "vid": "38551466",
+   "tone": "noir",
+   "veil": 0.4,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MỘT CỰU HOA HẬU",
+     "at": [
+      24,
+      "hoa"
+     ]
+    },
+    {
+     "text": "LÀM ĐƯỢC ĐIỀU FBI KHÔNG LÀM NỔI",
+     "at": [
+      24,
+      "điều"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "brand",
+   "at": 25,
+   "sub": "HỒ SƠ · WHITEY BULGER"
+  },
+  {
+   "type": "question",
+   "at": 26,
+   "bg": "fbi_hq",
+   "text": "Vì sao kẻ bị FBI truy nã gắt gao nhất\nlại từng là người của chính FBI?"
+  },
+  {
+   "type": "map",
+   "at": 27,
+   "geo": "us",
+   "pins": [
+    {
+     "name": "Santa Monica",
+     "at": [
+      27,
+      "Để"
+     ]
+    },
+    {
+     "name": "Boston",
+     "label": "BOSTON · HƠN 70 NĂM TRƯỚC",
+     "at": [
+      27,
+      "Boston"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "from": "Santa Monica",
+     "to": "Boston",
+     "at": [
+      27,
+      "quay"
+     ],
+     "until": [
+      27,
+      "Boston"
+     ],
+     "bend": 0.15
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "CĂN HỘ 303"
+ },
+ "bgm": {
+  "mood": "tense",
+  "at": 0,
+  "gain": 0.13
+ }
+}

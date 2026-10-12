@@ -1,0 +1,217 @@
+{
+ "title": "Nhà tù không có then",
+ "lines": [
+  {
+   "t": "Năm 1991, Escobar đầu hàng.",
+   "p": 0.8
+  },
+  "Tòa xử năm năm tù.",
+  "Tổng thống César Gaviria nhận một thỏa thuận: không dẫn độ sang Mỹ.",
+  "Đổi lại, ông được ở trong nhà tù tự xây, tên La Catedral.",
+  "Năm 1992, nhà chức trách muốn chuyển ông sang một nhà tù đúng nghĩa.",
+  "Ông trốn.",
+  "Cartel Medellín bắt đầu vỡ từ chỗ ấy.",
+  "Cuộc săn chạy khắp cả nước.",
+  "Ngày 2 tháng 12 năm 1993, một ngày sau sinh nhật thứ bốn mươi tư, cảnh sát quốc gia bắn chết ông tại Medellín.",
+  "Hồ sơ không mô tả mái nhà, không mô tả thi thể.",
+  "Hơn hai mươi lăm nghìn người dự đám tang.",
+  "Bạn vừa đi qua cái chết của một người.",
+  {
+   "t": "Bốn con hà mã thì chưa đi đâu cả.",
+   "p": 1.0
+  },
+  "Sở thú không còn người giữ.",
+  "Chuồng mở.",
+  "Sông Magdalena ở ngay cạnh."
+ ],
+ "hud": {
+  "k": "HỒ SƠ",
+  "t": "LA CATEDRAL"
+ },
+ "bgm": {
+  "mood": "epic",
+  "gain": 0.11
+ },
+ "scenes": [
+  {
+   "type": "chapter",
+   "at": 0,
+   "no": "5",
+   "k": "CHƯƠNG 5",
+   "title": "LA CATEDRAL"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "TÒA XỬ NĂM NĂM",
+     "at": [
+      1,
+      "Tòa"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "TỔNG THỐNG CÉSAR GAVIRIA",
+     "at": [
+      2,
+      "Tổng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "ĐỔI LẠI, ÔNG ĐƯỢC",
+     "at": [
+      3,
+      "Đổi"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "NĂM 1992, NHÀ CHỨC",
+     "at": [
+      4,
+      "Năm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "ÔNG TRỐN",
+   "white": true
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "CARTEL MEDELLÍN BẮT ĐẦU",
+     "at": [
+      6,
+      "Cartel"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "CUỘC SĂN CHẠY KHẮP",
+     "at": [
+      7,
+      "Cuộc"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 8,
+   "day": "MEDELLÍN",
+   "date": "02.12.1993"
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "HỒ SƠ KHÔNG MÔ",
+     "at": [
+      9,
+      "Hồ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "HƠN HAI MƯƠI LĂM",
+     "at": [
+      10,
+      "Hơn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "BẠN VỪA ĐI QUA",
+     "at": [
+      11,
+      "Bạn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 12,
+   "text": "Bốn con thì sao?"
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "SỞ THÚ KHÔNG CÒN",
+     "at": [
+      13,
+      "Sở"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "CHUỒNG MỞ",
+     "at": [
+      14,
+      "Chuồng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "SÔNG MAGDALENA Ở NGAY",
+     "at": [
+      15,
+      "Sông"
+     ]
+    }
+   ]
+  }
+ ]
+}

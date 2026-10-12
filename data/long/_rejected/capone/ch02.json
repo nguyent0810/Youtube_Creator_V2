@@ -1,0 +1,163 @@
+{
+ "title": "Vết sẹo và cái tên ông ghét",
+ "lines": [
+  {
+   "t": "Ở quán Harvard Inn, ông đứng cửa.",
+   "p": 0.8
+  },
+  "Ông lỡ lời với một người phụ nữ.",
+  "Anh của bà, Frank Galluccio, rạch ba nhát vào má trái.",
+  "Cái tên Scarface mọc ra từ những nhát ấy.",
+  "Capone ghét tên này.",
+  "Khi bị chụp, ông giấu má trái.",
+  "Ông nói đó là vết thương chiến tranh.",
+  "Ngày xảy ra vụ rạch thì các nguồn không thống nhất.",
+  "Hồ sơ không chọn một ngày.",
+  "Bạn chỉ cần giữ một việc.",
+  "Cái tên trên áp phích là cái tên ông không muốn.",
+  {
+   "t": "Bạn bè thân gọi ông là Snorky, nghĩa là người ăn mặc sắc.",
+   "p": 1.0
+  }
+ ],
+ "hud": {
+  "k": "HỒ SƠ",
+  "t": "VẾT SẸO"
+ },
+ "bgm": {
+  "mood": "tense",
+  "gain": 0.11
+ },
+ "scenes": [
+  {
+   "type": "chapter",
+   "at": 0,
+   "no": "2",
+   "k": "CHƯƠNG 2",
+   "title": "VẾT SẸO"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "ÔNG LỠ LỜI VỚI",
+     "at": [
+      1,
+      "Ông"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "from": 0,
+   "to": 3,
+   "suffix": " NHÁT",
+   "label": "NHÁT"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "CÁI TÊN SCARFACE MỌC",
+     "at": [
+      3,
+      "Cái"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "CAPONE GHÉT TÊN NÀY",
+     "at": [
+      4,
+      "Capone"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "KHI BỊ CHỤP, ÔNG",
+     "at": [
+      5,
+      "Khi"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "ÔNG NÓI ĐÓ LÀ",
+     "at": [
+      6,
+      "Ông"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "NGÀY XẢY RA VỤ",
+   "white": true
+  },
+  {
+   "type": "question",
+   "at": 8,
+   "text": "Vết sẹo từ ngày nào?"
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "BẠN CHỈ CẦN GIỮ",
+     "at": [
+      9,
+      "Bạn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "CÁI TÊN TRÊN ÁP",
+     "at": [
+      10,
+      "Cái"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "BẠN BÈ THÂN GỌI",
+     "at": [
+      11,
+      "Bạn"
+     ]
+    }
+   ]
+  }
+ ]
+}
