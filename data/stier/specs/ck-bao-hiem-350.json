@@ -22,13 +22,13 @@
   "vượt"
  ],
  "lines": [
-  "Tiền gửi chỉ được bảo hiểm tới một mức.",
+  "Tiền gửi ngân hàng, chỉ được bảo hiểm tới một mức thôi.",
   "Từ ngày 13 tháng 7 năm 2026, mức đó là ba trăm năm mươi triệu đồng.",
-  "Tính cho mỗi người, tại mỗi ngân hàng.",
-  "Gồm cả gốc lẫn lãi.",
-  "Trước đó, hạn mức là một trăm hai mươi lăm triệu.",
-  "Phần vượt hạn mức không nằm trong khoản bảo hiểm chi trả.",
-  "Con số nên biết trước khi dồn tiền vào một chỗ."
+  "Tính thế nào? Cho mỗi người, tại mỗi ngân hàng.",
+  "Và gồm cả gốc lẫn lãi.",
+  "Trước đó, hạn mức chỉ là một trăm hai mươi lăm triệu.",
+  "Còn phần vượt hạn mức? Không nằm trong khoản bảo hiểm chi trả.",
+  "Một con số nên biết, trước khi dồn tiền vào một chỗ."
  ],
  "scenes": [
   {
@@ -48,7 +48,7 @@
     }
    ],
    "clip": "pexels:6763403",
-   "veil": 0.62
+   "veil": 0.6
   },
   {
    "type": "counter",
@@ -183,14 +183,15 @@
      "text": "KHÔNG ĐƯỢC CHI TRẢ",
      "at": [
       5,
-      "không"
+      "Không"
      ],
      "acc": true
     }
    ],
    "clip": "pexels:7710775",
    "ms": 8,
-   "veil": 0.68,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
    "at": 5
   },
   {
@@ -215,8 +216,23 @@
   "https://div.gov.vn/tu-ngay-13-7-2026-han-muc-chi-tra-tien-bao-hiem-cua-bao-hiem-tien-gui-viet-nam-la-350-trieu-dong",
   "https://luatvietnam.vn/bao-hiem/luat-bao-hiem-tien-gui-2025-va-4-diem-moi-dang-chu-y-563-105890-article.html"
  ],
- "say": {},
+ "say": {
+  "=AI": "ây ai"
+ },
  "mix": true,
  "imgs": {},
- "rules": 2
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ }
 }

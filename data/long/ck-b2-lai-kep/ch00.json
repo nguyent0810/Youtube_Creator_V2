@@ -1,0 +1,216 @@
+{
+ "title": "Hai người bạn, một câu đố",
+ "lines": [
+  "Mình có một câu đố về hai người bạn giả định, Lan và Minh.",
+  {
+   "t": "Cả hai đều để dành ba triệu đồng mỗi tháng, với cùng một mức lãi.",
+   "p": 1.0
+  },
+  "Lan bắt đầu năm hai mươi lăm tuổi.",
+  {
+   "t": "Cô để dành đúng mười năm, rồi dừng hẳn. Không nộp thêm đồng nào nữa. Tiền cứ để yên đấy.",
+   "p": 1.0
+  },
+  "Minh thì bắt đầu muộn hơn, năm ba mươi lăm tuổi.",
+  {
+   "t": "Nhưng anh rất kiên trì. Tháng nào cũng nộp, suốt hai mươi năm, không nghỉ.",
+   "p": 1.0
+  },
+  "Tới năm cả hai năm mươi lăm tuổi.",
+  "Lan đã nộp tổng cộng ba trăm sáu mươi triệu.",
+  {
+   "t": "Minh đã nộp bảy trăm hai mươi triệu. Gấp đôi.",
+   "p": 1.0
+  },
+  {
+   "t": "Vậy ai có nhiều tiền hơn?",
+   "ask": 1
+  },
+  {
+   "t": "Câu trả lời có thể làm bạn bất ngờ. Và nó nằm trong hai chữ, lãi kép.",
+   "p": 1.0
+  },
+  "Trong video này, mình sẽ đưa bạn một con số để mang về.",
+  "Đó là năm thứ mấy, thì tiền lãi một năm bắt đầu lớn hơn chính số tiền bạn nộp vào trong năm.",
+  {
+   "t": "Và sau đó, mình sẽ kể về một thứ lặng lẽ ăn mòn lãi kép, mà các bảng tính đẹp đẽ thường bỏ quên.",
+   "p": 1.0
+  },
+  "Đây là Biểu Đồ Biết Nói. Tiền bạc, giải thích bằng dữ liệu.",
+  "Video chỉ nhằm giáo dục. Mức lãi trong các ví dụ là giả định, không phải lời khuyên, và không phải dự báo."
+ ],
+ "scenes": [
+  {
+   "type": "broll",
+   "vid": "7010559",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA · NHÂN VẬT GIẢ ĐỊNH",
+   "kin": [
+    {
+     "text": "LAN VÀ MINH",
+     "at": [
+      0,
+      "Lan"
+     ],
+     "acc": true
+    },
+    {
+     "text": "mỗi người 3 triệu mỗi tháng · cùng một mức lãi",
+     "at": 1,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "LAN",
+   "srcnote": "NHÂN VẬT GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "BẮT ĐẦU",
+     "v": "NĂM 25 TUỔI",
+     "at": 2
+    },
+    {
+     "k": "ĐỂ DÀNH",
+     "v": "ĐÚNG 10 NĂM",
+     "at": 3
+    }
+   ],
+   "total": {
+    "k": "RỒI",
+    "v": "DỪNG HẲN · ĐỂ YÊN",
+    "at": [
+     3,
+     "rồi"
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "MINH",
+   "srcnote": "NHÂN VẬT GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "BẮT ĐẦU",
+     "v": "NĂM 35 TUỔI",
+     "at": 4
+    }
+   ],
+   "total": {
+    "k": "NỘP",
+    "v": "SUỐT 20 NĂM · KHÔNG NGHỈ",
+    "at": [
+     5,
+     "suốt"
+    ]
+   }
+  },
+  {
+   "type": "bars",
+   "at": 6,
+   "title": "TỚI NĂM 55 TUỔI · TỔNG TIỀN ĐÃ NỘP (TRIỆU ĐỒNG)",
+   "items": [
+    {
+     "k": "LAN · NỘP 10 NĂM",
+     "v": 360,
+     "lbl": "360",
+     "at": 7
+    },
+    {
+     "k": "MINH · NỘP 20 NĂM",
+     "v": 720,
+     "lbl": "720",
+     "at": 8,
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "GẤP ĐÔI",
+    "v": "VÍ DỤ GIẢ ĐỊNH",
+    "at": [
+     8,
+     "Gấp"
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "at": 9,
+   "text": "Ai có nhiều tiền hơn?"
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "CÂU TRẢ LỜI NẰM TRONG HAI CHỮ",
+     "at": [
+      10,
+      "Và"
+     ],
+     "sm": true
+    },
+    {
+     "text": "LÃI KÉP",
+     "at": [
+      10,
+      "lãi"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 11,
+   "title": "TRONG VIDEO NÀY",
+   "rows": [
+    {
+     "k": "1 CON SỐ",
+     "v": "NĂM THỨ MẤY LÃI VƯỢT TIỀN NỘP?",
+     "at": 12
+    },
+    {
+     "k": "1 CẢNH BÁO",
+     "v": "THỨ LẶNG LẼ ĂN MÒN LÃI KÉP",
+     "at": 13
+    }
+   ]
+  },
+  {
+   "type": "brand",
+   "at": 14,
+   "sub": "TIỀN BẠC · GIẢI THÍCH BẰNG DỮ LIỆU"
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "CHỈ NHẰM GIÁO DỤC",
+     "at": 15,
+     "acc": true
+    },
+    {
+     "text": "mức lãi trong ví dụ là giả định · không phải lời khuyên · không dự báo",
+     "at": [
+      15,
+      "Mức"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "HAI NGƯỜI BẠN, MỘT CÂU ĐỐ"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.1
+ }
+}

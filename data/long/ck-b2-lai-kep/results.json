@@ -1,0 +1,273 @@
+{
+ "assume": {
+  "rate": 0.06,
+  "monthly": 3.0
+ },
+ "simple_vs_compound": [
+  {
+   "year": 1,
+   "simple": 106.0,
+   "compound": 106.0
+  },
+  {
+   "year": 2,
+   "simple": 112.0,
+   "compound": 112.4
+  },
+  {
+   "year": 10,
+   "simple": 160.0,
+   "compound": 179.1
+  },
+  {
+   "year": 20,
+   "simple": 220.0,
+   "compound": 320.7
+  },
+  {
+   "year": 30,
+   "simple": 280.0,
+   "compound": 574.3
+  }
+ ],
+ "year2_interest": 6.36,
+ "monthly": [
+  {
+   "years": 10,
+   "paid": 360.0,
+   "value": 491.6,
+   "interest": 131.6,
+   "interest_share_pct": 26.8
+  },
+  {
+   "years": 20,
+   "paid": 720.0,
+   "value": 1386.1,
+   "interest": 666.1,
+   "interest_share_pct": 48.1
+  },
+  {
+   "years": 30,
+   "paid": 1080.0,
+   "value": 3013.5,
+   "interest": 1933.5,
+   "interest_share_pct": 64.2
+  }
+ ],
+ "cross_year": 13,
+ "yearly": [
+  {
+   "year": 1,
+   "value": 37.0,
+   "interest_in_year": 1.0
+  },
+  {
+   "year": 2,
+   "value": 76.3,
+   "interest_in_year": 3.3
+  },
+  {
+   "year": 3,
+   "value": 118.0,
+   "interest_in_year": 5.7
+  },
+  {
+   "year": 4,
+   "value": 162.3,
+   "interest_in_year": 8.3
+  },
+  {
+   "year": 5,
+   "value": 209.3,
+   "interest_in_year": 11.0
+  },
+  {
+   "year": 6,
+   "value": 259.2,
+   "interest_in_year": 13.9
+  },
+  {
+   "year": 7,
+   "value": 312.2,
+   "interest_in_year": 17.0
+  },
+  {
+   "year": 8,
+   "value": 368.5,
+   "interest_in_year": 20.3
+  },
+  {
+   "year": 9,
+   "value": 428.2,
+   "interest_in_year": 23.7
+  },
+  {
+   "year": 10,
+   "value": 491.6,
+   "interest_in_year": 27.4
+  },
+  {
+   "year": 11,
+   "value": 559.0,
+   "interest_in_year": 31.3
+  },
+  {
+   "year": 12,
+   "value": 630.5,
+   "interest_in_year": 35.5
+  },
+  {
+   "year": 13,
+   "value": 706.3,
+   "interest_in_year": 39.9
+  },
+  {
+   "year": 14,
+   "value": 786.9,
+   "interest_in_year": 44.6
+  },
+  {
+   "year": 15,
+   "value": 872.5,
+   "interest_in_year": 49.5
+  },
+  {
+   "year": 16,
+   "value": 963.3,
+   "interest_in_year": 54.8
+  },
+  {
+   "year": 17,
+   "value": 1059.7,
+   "interest_in_year": 60.4
+  },
+  {
+   "year": 18,
+   "value": 1162.1,
+   "interest_in_year": 66.4
+  },
+  {
+   "year": 19,
+   "value": 1270.7,
+   "interest_in_year": 72.7
+  },
+  {
+   "year": 20,
+   "value": 1386.1,
+   "interest_in_year": 79.4
+  },
+  {
+   "year": 21,
+   "value": 1508.6,
+   "interest_in_year": 86.5
+  },
+  {
+   "year": 22,
+   "value": 1638.7,
+   "interest_in_year": 94.1
+  },
+  {
+   "year": 23,
+   "value": 1776.8,
+   "interest_in_year": 102.1
+  },
+  {
+   "year": 24,
+   "value": 1923.3,
+   "interest_in_year": 110.6
+  },
+  {
+   "year": 25,
+   "value": 2079.0,
+   "interest_in_year": 119.6
+  },
+  {
+   "year": 26,
+   "value": 2244.2,
+   "interest_in_year": 129.2
+  },
+  {
+   "year": 27,
+   "value": 2419.6,
+   "interest_in_year": 139.4
+  },
+  {
+   "year": 28,
+   "value": 2605.9,
+   "interest_in_year": 150.2
+  },
+  {
+   "year": 29,
+   "value": 2803.6,
+   "interest_in_year": 161.7
+  },
+  {
+   "year": 30,
+   "value": 3013.5,
+   "interest_in_year": 173.9
+  }
+ ],
+ "lan_minh": {
+  "lan_paid": 360.0,
+  "lan_at10": 491.6,
+  "lan_final": 1627.4,
+  "minh_paid": 720.0,
+  "minh_final": 1386.1,
+  "minh_needs_monthly_to_match": 3.52
+ },
+ "rule72": {
+  "at6_exact_years": 11.9,
+  "rule": 12.0,
+  "inflation_3_1_halves_years": 22.7
+ },
+ "inflation": {
+  "avg_pct": 3.09,
+  "cum_2018_2025_pct": 27.6,
+  "real_value_30y": 1205.9,
+  "real_value_20y": 752.7,
+  "paid_real_note": "so với sức mua hôm nay",
+  "actual_8y_nominal_x": 1.56,
+  "actual_8y_cpi_pct": 29,
+  "actual_8y_real_x": 1.21
+ },
+ "debt": [
+  {
+   "year": 1,
+   "value": 38.4
+  },
+  {
+   "year": 2,
+   "value": 49.2
+  },
+  {
+   "year": 3,
+   "value": 63.0
+  },
+  {
+   "year": 5,
+   "value": 103.4
+  }
+ ],
+ "sens_rate": [
+  {
+   "rate": 0.04,
+   "value": 2082.1
+  },
+  {
+   "rate": 0.05,
+   "value": 2496.8
+  },
+  {
+   "rate": 0.06,
+   "value": 3013.5
+  },
+  {
+   "rate": 0.07,
+   "value": 3659.9
+  },
+  {
+   "rate": 0.08,
+   "value": 4471.1
+  }
+ ]
+}

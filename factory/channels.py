@@ -46,12 +46,15 @@ CHANNELS = {
     # bằng nó bị khoá private vĩnh viễn -- chỉ dùng để đọc.) Muốn quay lại upload tay qua
     # Studio: thêm "upload": "manual" (quy trình factory/manual.py).
     "MIM": {"ten": "Mind in the Machine", "creds": "mind_machine_cl.json", "lines": None,
-            "prefixes": ("mim-", "long-"), "pacing": (60, 6), "rotate": False},
+            # pacing 12/10/2026 (chủ kênh): giãn 60 -> 1 phút. Sự cố 30/09 là do nhiều agent upload song song; nay một chuỗi mỗi kênh
+            # (scripts/run_chain.py khoá theo tên chuỗi). Trần 6/24 giờ cũng BỎ (chủ kênh, cùng ngày): giới hạn thật là quota ngày của
+            # GCP project (~92 upload/ngày, MIM + CK + CL dùng CHUNG project CL) -- hết quota thì publish_batch tự hoãn. 90 = "không chặn".
+            "prefixes": ("mim-", "long-"), "pacing": (1, 90), "rotate": False},
     # Kênh tài chính cá nhân "Biểu Đồ Biết Nói" -- tiền bạc, giải thích bằng dữ liệu (cũ: VN-Index Overview, khởi động lại 06/10/2026; 45 video cũ đã ẩn,
     # trạng thái gốc: output/channels/CK/hidden_2026-10-06.json). Chỉ GIẢI THÍCH bằng dữ liệu quá khứ -- không
     # khuyến nghị mua/bán tài sản nào (docs/channels/chung-khoan/). Upload API qua project CL.
     "CK": {"ten": "Biểu Đồ Biết Nói", "creds": "chung_khoan.json", "lines": None,
-           "prefixes": ("ck-", "long-"), "pacing": (60, 6), "rotate": False},
+           "prefixes": ("ck-", "long-"), "pacing": (1, 90), "rotate": False},   # như MIM (12/10/2026)
 }
 
 

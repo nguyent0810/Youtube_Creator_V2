@@ -1,0 +1,305 @@
+{
+ "title": "Năm thứ mười ba",
+ "lines": [
+  {
+   "t": "Vẫn với mức lãi giả định sáu phần trăm một năm. Mỗi tháng, bạn nộp ba triệu.",
+   "p": 0.8
+  },
+  "Sau mười năm, bạn đã nộp ba trăm sáu mươi triệu, và có khoảng bốn trăm chín mươi triệu.",
+  {
+   "t": "Tiền lãi mới chiếm hơn một phần tư. Chưa có gì ghê gớm.",
+   "p": 1.0
+  },
+  "Sau hai mươi năm, bạn nộp bảy trăm hai mươi triệu, và có gần một tỷ bốn.",
+  {
+   "t": "Tiền lãi lúc này đã gần bằng tiền bạn nộp.",
+   "p": 1.0
+  },
+  "Sau ba mươi năm, bạn nộp một tỷ không trăm tám mươi triệu.",
+  "Và có khoảng ba tỷ.",
+  {
+   "t": "Gần hai phần ba số ấy là tiền lãi, không phải tiền bạn bỏ ra.",
+   "p": 1.0
+  },
+  "Và đây là con số mình hứa.",
+  "Năm thứ mười ba.",
+  "Từ năm ấy, tiền lãi sinh ra trong một năm bắt đầu lớn hơn ba mươi sáu triệu bạn nộp vào trong năm.",
+  {
+   "t": "Nói cách khác, từ năm thứ mười ba, tiền của bạn làm việc chăm hơn cả bạn.",
+   "p": 1.0
+  },
+  {
+   "t": "Mười ba năm cơ à? Lâu thế.",
+   "ask": 1
+  },
+  "Đúng vậy. Và đó là điều ít ai nói về lãi kép.",
+  {
+   "t": "Mười năm đầu, nó gần như vô hình. Phần lớn người ta bỏ cuộc trước khi thấy nó.",
+   "p": 1.0
+  },
+  "Có một mẹo tính nhẩm nổi tiếng, gọi là quy tắc bảy mươi hai.",
+  "Lấy bảy mươi hai chia cho lãi suất, ra số năm để tiền gấp đôi.",
+  "Sáu phần trăm, thì khoảng mười hai năm."
+ ],
+ "scenes": [
+  {
+   "type": "race",
+   "abs": true,
+   "unit": "TRIỆU",
+   "xlab": "NĂM ",
+   "xstep": 5,
+   "dates": [
+    "nam__00",
+    "nam__01",
+    "nam__02",
+    "nam__03",
+    "nam__04",
+    "nam__05",
+    "nam__06",
+    "nam__07",
+    "nam__08",
+    "nam__09",
+    "nam__10",
+    "nam__11",
+    "nam__12",
+    "nam__13",
+    "nam__14",
+    "nam__15",
+    "nam__16",
+    "nam__17",
+    "nam__18",
+    "nam__19",
+    "nam__20",
+    "nam__21",
+    "nam__22",
+    "nam__23",
+    "nam__24",
+    "nam__25",
+    "nam__26",
+    "nam__27",
+    "nam__28",
+    "nam__29",
+    "nam__30"
+   ],
+   "title": "NỘP 3 TRIỆU MỖI THÁNG · 30 NĂM",
+   "range": "NĂM 0 → 30 · TRIỆU ĐỒNG",
+   "drawAt": [
+    0,
+    null,
+    0,
+    0.1
+   ],
+   "until": [
+    5,
+    "nộp"
+   ],
+   "series": [
+    {
+     "label": "TÀI KHOẢN (LÃI 6%)",
+     "color": "#fbbf24",
+     "vals": [
+      0.0,
+      37.0,
+      76.3,
+      118.0,
+      162.3,
+      209.3,
+      259.2,
+      312.2,
+      368.5,
+      428.2,
+      491.6,
+      559.0,
+      630.5,
+      706.3,
+      786.9,
+      872.5,
+      963.3,
+      1059.7,
+      1162.1,
+      1270.7,
+      1386.1,
+      1508.6,
+      1638.7,
+      1776.8,
+      1923.3,
+      2079.0,
+      2244.2,
+      2419.6,
+      2605.9,
+      2803.6,
+      3013.5
+     ]
+    },
+    {
+     "label": "TIỀN ĐÃ NỘP",
+     "color": "#38bdf8",
+     "vals": [
+      0.0,
+      36.0,
+      72.0,
+      108.0,
+      144.0,
+      180.0,
+      216.0,
+      252.0,
+      288.0,
+      324.0,
+      360.0,
+      396.0,
+      432.0,
+      468.0,
+      504.0,
+      540.0,
+      576.0,
+      612.0,
+      648.0,
+      684.0,
+      720.0,
+      756.0,
+      792.0,
+      828.0,
+      864.0,
+      900.0,
+      936.0,
+      972.0,
+      1008.0,
+      1044.0,
+      1080.0
+     ]
+    }
+   ],
+   "source": "VÍ DỤ GIẢ ĐỊNH · LÃI 6%/NĂM KHÔNG ĐỔI, KHÔNG RÚT · KHÔNG PHẢI DỰ BÁO"
+  },
+  {
+   "type": "bars",
+   "at": 6,
+   "title": "SAU 10 · 20 · 30 NĂM (TRIỆU ĐỒNG)",
+   "items": [
+    {
+     "k": "10 NĂM · NỘP 360",
+     "v": 492,
+     "lbl": "≈ 492",
+     "at": [
+      6,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "k": "20 NĂM · NỘP 720",
+     "v": 1386,
+     "lbl": "≈ 1.386",
+     "at": [
+      6,
+      null,
+      0,
+      0.25
+     ]
+    },
+    {
+     "k": "30 NĂM · NỘP 1.080",
+     "v": 3014,
+     "lbl": "≈ 3.014",
+     "at": [
+      6,
+      "ba"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "GẦN 2/3 LÀ TIỀN LÃI",
+    "v": "VÍ DỤ GIẢ ĐỊNH · LÃI 6%/NĂM KHÔNG ĐỔI, KHÔNG RÚT · KHÔNG PHẢI DỰ BÁO",
+    "at": 7
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "CON SỐ MÌNH HỨA",
+     "at": 8,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 9,
+   "from": 1,
+   "to": 13,
+   "prefix": "NĂM THỨ ",
+   "until": [
+    9,
+    "ba"
+   ],
+   "label": "TIỀN LÃI MỘT NĂM > 36 TRIỆU BẠN NỘP TRONG NĂM",
+   "sub": {
+    "text": "VÍ DỤ GIẢ ĐỊNH · LÃI 6%/NĂM KHÔNG ĐỔI, KHÔNG RÚT · KHÔNG PHẢI DỰ BÁO",
+    "at": 10
+   }
+  },
+  {
+   "type": "slam",
+   "at": 11,
+   "text": "TIỀN LÀM VIỆC CHĂM HƠN BẠN",
+   "sub": "TỪ NĂM THỨ 13 · VÍ DỤ GIẢ ĐỊNH"
+  },
+  {
+   "type": "question",
+   "at": 12,
+   "text": "Mười ba năm cơ à?"
+  },
+  {
+   "type": "broll",
+   "at": 13,
+   "vid": "37127207",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "10 NĂM ĐẦU: GẦN NHƯ VÔ HÌNH",
+     "at": 14,
+     "acc": true
+    },
+    {
+     "text": "phần lớn người ta bỏ cuộc trước khi thấy nó",
+     "at": [
+      14,
+      "Phần"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 15,
+   "title": "QUY TẮC 72 · TÍNH NHẨM",
+   "srcnote": "MẸO ƯỚC LƯỢNG · 6% → CHÍNH XÁC LÀ 11,9 NĂM",
+   "rows": [
+    {
+     "k": "72 ÷ LÃI SUẤT",
+     "v": "SỐ NĂM ĐỂ TIỀN GẤP ĐÔI",
+     "at": 16
+    }
+   ],
+   "total": {
+    "k": "72 ÷ 6",
+    "v": "≈ 12 NĂM",
+    "at": 17
+   }
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "NĂM THỨ MƯỜI BA"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

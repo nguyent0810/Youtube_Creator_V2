@@ -481,8 +481,11 @@ def test_adopt_records_a_manual_upload_with_its_real_upload_time(env):
     ch(env, "MIM").adopt("mim-ai-la-gi", vid)
     row = env["conn"].execute("SELECT state, video_id, started_at FROM upload_log WHERE slug = 'mim-ai-la-gi'").fetchone()
     assert tuple(row) == ("done", vid, "2026-10-05T01:00:00Z")
-    # Giãn nhịp MIM (60 phút) tính cả video upload tay: lượt kế tiếp sớm nhất 02:00.
-    assert ch(env, "MIM").next_upload_at() == T0 - timedelta(hours=1)
+    # Giãn nhịp MIM tính cả video upload tay: lượt kế tiếp = giờ upload thật (01:00) + khoảng giãn của kênh
+    # (60 phút tới 12/10/2026, nay 1 phút), không sớm hơn "bây giờ".
+    from factory import channels
+    gap = timedelta(minutes=channels.CHANNELS["MIM"]["pacing"][0])
+    assert ch(env, "MIM").next_upload_at() == max(env["clock"].t, T0 - timedelta(hours=2) + gap)
 
 
 def test_adopt_uses_now_when_published_at_is_in_the_future(env):

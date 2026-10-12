@@ -1,0 +1,270 @@
+{
+ "title": "Bẩn một phần ba vẫn đọc được",
+ "lines": [
+  {
+   "t": "Chi tiết thứ hai, những chấm đen trắng ở giữa.",
+   "p": 0.8
+  },
+  "Một mã QR lớn nhất chứa được hơn bảy nghìn chữ số.",
+  {
+   "t": "So với mười hai chữ số của mã vạch phổ biến, đó là một khoảng cách rất xa.",
+   "p": 1.0
+  },
+  "Nhưng thứ làm mình nể nhất là chi tiết thứ ba.",
+  "Nhà máy ô tô không phải phòng sạch. Ở đó có dầu, có bụi, thùng hàng thì trầy xước.",
+  {
+   "t": "Một mã vạch bị bẩn một sọc là coi như hỏng.",
+   "p": 1.0
+  },
+  "Mã QR thì khác.",
+  {
+   "t": "Nó có thể bị bẩn, hoặc rách tới ba mươi phần trăm diện tích, mà vẫn đọc ra đúng.",
+   "p": 1.0
+  },
+  "Bí quyết là thông tin không được ghi một lần duy nhất.",
+  "Mã chứa thêm dữ liệu dự phòng, đủ để tính ngược lại phần đã mất.",
+  {
+   "t": "Giống như bạn nghe một câu nói bị nhiễu mất vài chữ, mà vẫn đoán ra cả câu.",
+   "p": 1.0
+  },
+  "Chính nhờ thế mà hôm nay, người ta dám đặt cả cái logo vào giữa mã.",
+  "Cái logo ấy thật ra đang che mất một phần dữ liệu. Và mã vẫn chạy.",
+  "Một thiết kế cho nhà xưởng dầu mỡ, hoá ra lại rất hợp với tờ giấy ép nhựa nhàu nát trên quầy trà đá."
+ ],
+ "scenes": [
+  {
+   "type": "qr",
+   "modulesAt": [
+    0,
+    null,
+    0,
+    0.1
+   ],
+   "modulesUntil": [
+    0,
+    "ở"
+   ],
+   "side": {
+    "k": "CHI TIẾT THỨ HAI",
+    "v": "những chấm đen trắng",
+    "at": [
+     0,
+     "những"
+    ]
+   },
+   "label": {
+    "k": "",
+    "v": "HÌNH MINH HOẠ · KHÔNG PHẢI MÃ THẬT",
+    "at": 0
+   }
+  },
+  {
+   "type": "bars",
+   "at": 1,
+   "title": "CHỨA ĐƯỢC BAO NHIÊU CHỮ SỐ?",
+   "unit": "",
+   "items": [
+    {
+     "k": "MÃ VẠCH PHỔ BIẾN",
+     "v": 12,
+     "lbl": "12",
+     "at": [
+      2,
+      "mười"
+     ]
+    },
+    {
+     "k": "MÃ QR LỚN NHẤT",
+     "v": 7089,
+     "lbl": "> 7.000",
+     "at": [
+      1,
+      "hơn"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "",
+    "v": "NGUỒN: IEEE SPECTRUM, 11.2020",
+    "at": 1
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "CHI TIẾT THỨ BA",
+     "at": [
+      3,
+      "chi"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 4,
+   "vid": "6447409",
+   "ms": 3,
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "NHÀ MÁY KHÔNG PHẢI PHÒNG SẠCH",
+     "at": 4
+    },
+    {
+     "text": "dầu · bụi · trầy xước",
+     "at": [
+      4,
+      "dầu,"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "barcode",
+   "at": 5,
+   "n": 1,
+   "digits": "BẨN MỘT SỌC = HỎNG",
+   "label": {
+    "k": "MÃ VẠCH",
+    "v": "BẨN MỘT SỌC LÀ COI NHƯ HỎNG",
+    "at": [
+     5,
+     "bẩn"
+    ]
+   }
+  },
+  {
+   "type": "print",
+   "at": 6,
+   "img": "qrdamaged",
+   "tone": "color",
+   "illus": "ẢNH: MÃ QR BỊ HỎNG MỘT PHẦN (CC0)",
+   "side": {
+    "k": "MÃ QR",
+    "h": "BẨN / RÁCH\nTỚI 30%",
+    "lines": [
+     {
+      "text": "*vẫn đọc ra đúng*",
+      "at": [
+       7,
+       "vẫn"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 8,
+   "title": "BÍ QUYẾT",
+   "rows": [
+    {
+     "k": "KHÔNG GHI",
+     "v": "MỘT LẦN DUY NHẤT",
+     "at": 8
+    },
+    {
+     "k": "THÊM",
+     "v": "DỮ LIỆU DỰ PHÒNG",
+     "at": 9
+    },
+    {
+     "k": "ĐỦ ĐỂ",
+     "v": "TÍNH NGƯỢC LẠI PHẦN ĐÃ MẤT",
+     "at": [
+      9,
+      "đủ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "nghe mất vài chữ",
+     "at": [
+      10,
+      "nhiễu"
+     ],
+     "sm": true
+    },
+    {
+     "text": "VẪN ĐOÁN RA CẢ CÂU",
+     "at": [
+      10,
+      "vẫn"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "qr",
+   "at": 11,
+   "damage": {
+    "at": [
+     12,
+     "che"
+    ],
+    "okAt": [
+     12,
+     "vẫn"
+    ],
+    "text": "LOGO CHE MẤT DỮ LIỆU"
+   },
+   "side": {
+    "k": "LOGO GIỮA MÃ",
+    "v": "",
+    "at": [
+     11,
+     "logo"
+    ]
+   },
+   "label": {
+    "k": "",
+    "v": "HÌNH MINH HOẠ · KHÔNG PHẢI MÃ THẬT",
+    "at": 11
+   }
+  },
+  {
+   "type": "broll",
+   "at": 13,
+   "vid": "30320695",
+   "ms": 9,
+   "veil": 0.45,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "THIẾT KẾ CHO NHÀ XƯỞNG DẦU MỠ",
+     "at": 13,
+     "sm": true
+    },
+    {
+     "text": "HỢP VỚI QUẦY TRÀ ĐÁ",
+     "at": [
+      13,
+      "hợp"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "BẨN MỘT PHẦN BA VẪN ĐỌC ĐƯỢC"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

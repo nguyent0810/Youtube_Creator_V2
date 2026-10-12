@@ -1,0 +1,203 @@
+{
+ "theme": "mim",
+ "title": "700 triệu người mỗi tuần: thói quen hỏi máy hình thành trong chưa đầy 3 năm",
+ "description": "Theo bài nghiên cứu của chính OpenAI “How People Use ChatGPT” (15/09/2025): tới tháng 7/2025, khoảng 700 triệu người dùng ChatGPT mỗi tuần, gửi khoảng 18 tỷ tin nhắn mỗi tuần, tương đương khoảng 10% người trưởng thành trên thế giới. ChatGPT mở cho công chúng dùng thử ngày 30/11/2022, tức khoảng 2 năm 8 tháng trước mốc này. Số liệu do công ty tự công bố. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.",
+ "tags": [
+  "chatgpt",
+  "openai",
+  "700 triệu người dùng",
+  "ai trong đời sống",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "AI HÔM NAY",
+ "sub": "CHATGPT · 07.2025",
+ "acc": [
+  "bảy",
+  "trăm",
+  "triệu",
+  "mười",
+  "tám",
+  "ba"
+ ],
+ "lines": [
+  "Mỗi tuần, bảy trăm triệu người hỏi một cỗ máy.",
+  "Con số ấy do chính OpenAI công bố, tính tới tháng 7 năm 2025.",
+  "Tức là khoảng một phần mười người trưởng thành trên thế giới.",
+  "Họ gửi mười tám tỷ tin nhắn mỗi tuần.",
+  "Mà ChatGPT mới mở cho mọi người dùng thử từ cuối tháng 11 năm 2022.",
+  "Chưa đầy ba năm.",
+  "Một thói quen mới, hình thành nhanh như thế đấy."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MỖI TUẦN",
+     "at": 0.0
+    },
+    {
+     "text": "700 TRIỆU NGƯỜI",
+     "at": [
+      0,
+      "bảy"
+     ],
+     "acc": true
+    },
+    {
+     "text": "HỎI MỘT CỖ MÁY",
+     "at": [
+      0,
+      "hỏi"
+     ]
+    }
+   ],
+   "clip": "pexels:7362704",
+   "ms": 11,
+   "veil": 0.55
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 700,
+   "suffix": " TRIỆU",
+   "label": "NGƯỜI DÙNG MỖI TUẦN",
+   "until": [
+    1,
+    "công"
+   ],
+   "sub": {
+    "text": "NGUỒN: OPENAI · TÍNH TỚI 07/2025",
+    "at": [
+     1,
+     "tháng"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "SO VỚI THẾ GIỚI",
+   "cards": [
+    {
+     "k": "NGƯỜI TRƯỞNG THÀNH",
+     "v": "≈ 1 / 10",
+     "at": [
+      2,
+      "một"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "NGUỒN: OPENAI, 15.09.2025"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "18 TỶ",
+     "at": 3,
+     "acc": true
+    },
+    {
+     "text": "TIN NHẮN MỖI TUẦN",
+     "at": [
+      3,
+      "tin"
+     ]
+    }
+   ],
+   "clip": "pexels:12893579",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 3
+  },
+  {
+   "type": "timeline",
+   "at": 4,
+   "items": [
+    {
+     "year": "11.2022",
+     "text": "mở cho mọi người dùng thử",
+     "at": [
+      4,
+      "mở"
+     ]
+    },
+    {
+     "year": "07.2025",
+     "text": "700 triệu người mỗi tuần",
+     "at": [
+      5,
+      "Chưa"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Chưa đầy 3 năm",
+   "nodes": [
+    {
+     "text": "việc lạ",
+     "x": 0.24,
+     "y": 0.5,
+     "at": [
+      6,
+      null,
+      0,
+      0.1
+     ]
+    },
+    {
+     "text": "thói quen",
+     "x": 0.74,
+     "y": 0.5,
+     "at": [
+      6,
+      "thói"
+     ],
+     "c": "acc",
+     "shape": "circle"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      6,
+      "hình"
+     ],
+     "bend": -0.2
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://cdn.openai.com/pdf/a253471f-8260-40c6-a2cc-aa93fe9f142e/economic-research-chatgpt-usage-paper.pdf",
+  "https://techcrunch.com/2025/11/30/chatgpt-launched-three-years-ago-today/"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "openai": "Ô-pần ây ai",
+  "chatgpt": "chát gi pi ti"
+ },
+ "imgs": {}
+}

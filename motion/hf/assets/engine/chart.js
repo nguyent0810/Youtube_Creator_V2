@@ -145,15 +145,21 @@ window.chartScenes = ({ B, tl, el, esc, px, common, W, H, C, bg }) => {
     let lo = 0, hi = 0;
     s.series.forEach((q) => q.vals.forEach((v) => { lo = Math.min(lo, v); hi = Math.max(hi, v); }));
     const pad = Math.max(2, (hi - lo) * 0.12); lo -= pad; hi += pad;
+    // "abs": vals là GIÁ TRỊ TUYỆT ĐỐI (vd. triệu đồng theo năm của một ví dụ giả định), không phải % so với ngày đầu:
+    // trục và nhãn ghi số + đơn vị; "xlab" + "xstep": nhãn trục ngang theo thứ tự điểm (vd. "NĂM 5").
+    const A = !!s.abs, num = (v) => String(Math.round(v)).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    if (A) lo = Math.min(0, ...s.series.map((q) => Math.min(...q.vals)));
     const y = (v) => PB - (v - lo) / (hi - lo) * (PB - T), x = (i) => L + (R - L) * i / Math.max(1, n - 1);
     const g = svgEl("svg", { class: "layer", viewBox: `0 0 ${W} ${H}` }, d);
     const step = nice(hi - lo);
     for (let v = Math.ceil(lo / step) * step; v < hi; v += step) {
       svgEl("line", { x1: L, x2: R, y1: y(v), y2: y(v), stroke: Math.abs(v) < 1e-9 ? "rgba(241,245,249,.55)" : "rgba(148,163,184,.14)",
         "stroke-width": Math.abs(v) < 1e-9 ? 3 : 1.5, "stroke-dasharray": Math.abs(v) < 1e-9 ? "10 8" : "" }, g);
-      const t = svgEl("text", { x: L - 18, y: y(v) + 9, class: "cdax", "text-anchor": "end" }, g); t.textContent = pct(v); }
+      const t = svgEl("text", { x: L - 18, y: y(v) + 9, class: "cdax", "text-anchor": "end" }, g); t.textContent = A ? num(v) : pct(v); }
     let lastM = "", lastX = -1e9;
-    s.dates.forEach((dt, i) => { const m = dt.slice(0, 7); if (m !== lastM && x(i) - lastX > 110) { lastM = m; lastX = x(i);
+    s.dates.forEach((dt, i) => { if (s.xstep) { if (i % s.xstep === 0) {
+        const t = svgEl("text", { x: x(i), y: PB + 44, class: "cdax", "text-anchor": "middle" }, g); t.textContent = (s.xlab || "") + i; } return; }
+      const m = dt.slice(0, 7); if (m !== lastM && x(i) - lastX > 110) { lastM = m; lastX = x(i);
       const t = svgEl("text", { x: x(i), y: PB + 44, class: "cdax", "text-anchor": "middle" }, g); t.textContent = "T" + (+dt.slice(5, 7)); } });
     const a0 = s.drawAt ?? s.t0 + 0.5, a1 = s.until ?? Math.min(s.t1 - 1, a0 + 4);
     const clip = svgEl("clipPath", { id: "rc" + Math.round(s.t0 * 1000) }, svgEl("defs", {}, g)), cr = svgEl("rect", { x: L - 10, y: 0, width: 0, height: H }, clip);
@@ -174,8 +180,8 @@ window.chartScenes = ({ B, tl, el, esc, px, common, W, H, C, bg }) => {
       heads.forEach((h) => { const v = h.q.vals[i], yy = ly.get(h);
         h.dot.setAttribute("cx", x(i)); h.dot.setAttribute("cy", y(v));
         h.lb.style.left = px(x(i) + 26); h.lb.style.top = px(yy - 26);
-        h.span.textContent = s.money ? `${s.money} ${s.unit || "tr"} → ${money(s.money, v, s.unit || "tr")}` : pct(v);
-        h.span.style.color = v > 0.05 ? "#4ade80" : v < -0.05 ? "#f87171" : "#cbd5e1"; }); };
+        h.span.textContent = A ? `${num(v)} ${s.unit || ""}` : s.money ? `${s.money} ${s.unit || "tr"} → ${money(s.money, v, s.unit || "tr")}` : pct(v);
+        h.span.style.color = A ? "#e2e8f0" : v > 0.05 ? "#4ade80" : v < -0.05 ? "#f87171" : "#cbd5e1"; }); };
     tl.set(heads.map((h) => h.dot), { opacity: 1 }, a0);
     tl.fromTo(heads.map((h) => h.lb), { opacity: 0 }, { opacity: 1, duration: 0.3, immediateRender: true }, a0);
     tl.fromTo(o, { p: 0 }, { p: 0.999, duration: a1 - a0, ease: "none", immediateRender: true, onUpdate: draw }, a0);

@@ -14,22 +14,22 @@
  "sub": "VÀNG 2011 → 2020",
  "acc": [
   "chín",
-  "năm",
   "đỉnh",
   "lăm",
   "thắng"
  ],
  "say": {
+  "=AI": "ây ai",
   "ounce": "ao-xơ"
  },
  "lines": [
-  "Vàng từng mất chín năm mới về lại đỉnh cũ.",
+  "Vàng từng mất chín năm, mới về lại đỉnh cũ.",
   "Tháng chín năm 2011, vàng thế giới lên đỉnh, khoảng một nghìn chín trăm hai mươi đô một ounce.",
-  "Cuối năm 2015, còn khoảng một nghìn không trăm bốn mươi sáu đô.",
-  "Mất khoảng bốn mươi lăm phần trăm.",
+  "Bốn năm sau, cuối 2015, chỉ còn khoảng một nghìn không trăm bốn mươi sáu.",
+  "Tức là mất khoảng bốn mươi lăm phần trăm.",
   "Phải tới tháng bảy năm 2020, giá mới vượt lại mức một nghìn chín trăm.",
   "Gần chín năm chờ đợi.",
-  "Vàng không phải lúc nào cũng thắng. Quá khứ không bảo đảm tương lai."
+  "Vàng không phải lúc nào cũng thắng. Và quá khứ, không bảo đảm tương lai."
  ],
  "scenes": [
   {
@@ -57,7 +57,7 @@
     }
    ],
    "clip": "pexels:7361127",
-   "veil": 0.58
+   "veil": 0.55
   },
   {
    "type": "chart",
@@ -65,6 +65,8 @@
    "kind": "line",
    "title": "VÀNG THẾ GIỚI",
    "unit": "USD / OUNCE",
+   "min": 800,
+   "max": 2100,
    "points": [
     {
      "x": 2011.68,
@@ -82,6 +84,74 @@
      "at": [
       2,
       "còn"
+     ],
+     "tag": "~1.046",
+     "pos": "b"
+    },
+    {
+     "x": 2020.55,
+     "v": 1046,
+     "at": [
+      2,
+      "sáu"
+     ],
+     "c": "dim"
+    }
+   ],
+   "ticks": [
+    {
+     "x": 2011.68,
+     "label": "9/2011"
+    },
+    {
+     "x": 2015.95,
+     "label": "12/2015"
+    },
+    {
+     "x": 2020.55,
+     "label": "7/2020"
+    }
+   ],
+   "note": "NGUỒN: FORTUNE, GULF NEWS"
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "−45%",
+   "sub": "SAU BỐN NĂM",
+   "clip": "pexels:7361127",
+   "ms": 5,
+   "veil": 0.62
+  },
+  {
+   "type": "chart",
+   "at": 4,
+   "kind": "line",
+   "title": "VÀNG THẾ GIỚI",
+   "unit": "USD / OUNCE",
+   "min": 800,
+   "max": 2100,
+   "points": [
+    {
+     "x": 2011.68,
+     "v": 1921,
+     "at": [
+      4,
+      null,
+      0,
+      0.02
+     ],
+     "tag": "~1.921",
+     "pos": "t"
+    },
+    {
+     "x": 2015.95,
+     "v": 1046,
+     "at": [
+      4,
+      null,
+      0,
+      0.06
      ],
      "tag": "~1.046",
      "pos": "b"
@@ -111,14 +181,6 @@
      "label": "7/2020"
     }
    ],
-   "badge": {
-    "text": "−45%",
-    "at": [
-     3,
-     "bốn"
-    ],
-    "c": "down"
-   },
    "note": "NGUỒN: FORTUNE, GULF NEWS"
   },
   {
@@ -127,7 +189,6 @@
    "text": "GẦN 9 NĂM",
    "sub": "CHỜ VỀ ĐỈNH CŨ",
    "clip": "pexels:7361127",
-   "ms": 5,
    "veil": 0.64
   },
   {
@@ -137,26 +198,26 @@
    "nodes": [
     {
      "text": "quá khứ",
-     "x": 0.26,
-     "y": 0.4,
+     "x": 0.34,
+     "y": 0.3,
      "at": [
       6,
-      "Quá"
+      "quá"
      ]
     },
     {
      "text": "tương lai",
-     "x": 0.74,
-     "y": 0.4,
+     "x": 0.34,
+     "y": 0.62,
      "at": [
       6,
       "tương"
      ]
     },
     {
-     "text": "vàng không phải lúc nào cũng thắng",
+     "text": "không phải lúc nào cũng thắng",
      "x": 0.5,
-     "y": 0.76,
+     "y": 0.87,
      "at": [
       6,
       null,
@@ -165,7 +226,8 @@
      ],
      "c": "acc",
      "shape": "none",
-     "size": 50
+     "size": 48,
+     "w": 900
     }
    ],
    "arrows": [
@@ -179,7 +241,7 @@
      ],
      "label": "không bảo đảm",
      "c": "acc",
-     "bend": -0.25
+     "bend": 0
     }
    ]
   }
@@ -190,5 +252,18 @@
  ],
  "mix": true,
  "imgs": {},
- "rules": 2
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ }
 }

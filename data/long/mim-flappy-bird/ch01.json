@@ -1,0 +1,190 @@
+{
+ "title": "Hai, ba ngày",
+ "lines": [
+  {
+   "t": "Người đăng dòng tweet ấy là Nguyễn Hà Đông.",
+   "p": 0.8
+  },
+  {
+   "t": "Anh lớn lên ở Vạn Phúc, gần Hà Nội, và tự viết game từ năm mười sáu tuổi.",
+   "p": 1.0
+  },
+  "Năm 2012, anh vẽ một chú chim nhỏ cho một trò chơi khác.",
+  {
+   "t": "Trò chơi ấy bị bỏ dở. Chú chim nằm lại trong máy.",
+   "p": 1.0
+  },
+  "Tới năm 2013, anh làm một trò mới.",
+  "Ý tưởng đến từ một việc rất quen. Tâng quả bóng bàn trên mặt vợt, cố giữ cho nó đừng rơi.",
+  {
+   "t": "Anh làm xong trong khoảng hai, ba ngày.",
+   "p": 1.0
+  },
+  "Có một chi tiết thú vị.",
+  "Bản đầu tiên dễ hơn nhiều. Chính anh chơi thử, và thấy chán.",
+  {
+   "t": "Thế là anh chỉnh cho nó khó lên.",
+   "p": 1.0
+  },
+  "Ngày 24 tháng 5 năm 2013, trò chơi lên kho ứng dụng.",
+  "Cách chơi chỉ có một động tác. Chạm vào màn hình để chú chim vỗ cánh, lách qua khe giữa những chiếc ống.",
+  {
+   "t": "Chạm vào ống là hết ván.",
+   "p": 1.0
+  },
+  "Rồi gần như không có gì xảy ra.",
+  "Suốt nhiều tháng, hầu như chẳng ai biết tới nó."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "HAI, BA NGÀY",
+   "sub": "NGUYỄN HÀ ĐÔNG · VẠN PHÚC, HÀ NỘI",
+   "vid": "40120664",
+   "illus": "VIDEO MINH HỌA · HÀ NỘI",
+   "titleAt": [
+    0,
+    "Người"
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 2,
+   "items": [
+    {
+     "year": "16 tuổi",
+     "text": "tự viết game",
+     "at": [
+      1,
+      "tự"
+     ]
+    },
+    {
+     "year": "2012",
+     "text": "vẽ *một chú chim* cho trò chơi khác",
+     "at": 2
+    },
+    {
+     "year": "—",
+     "text": "trò ấy *bị bỏ dở*",
+     "at": 3
+    },
+    {
+     "year": "2013",
+     "text": "làm *một trò mới*",
+     "at": 4
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "Ý TƯỞNG",
+     "at": 5,
+     "sm": true
+    },
+    {
+     "text": "TÂNG QUẢ BÓNG BÀN",
+     "at": [
+      5,
+      "Tâng"
+     ],
+     "acc": true
+    },
+    {
+     "text": "cố giữ cho nó đừng rơi",
+     "at": [
+      5,
+      "cố"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "from": 0,
+   "to": 3,
+   "suffix": " NGÀY",
+   "until": [
+    6,
+    "ba"
+   ],
+   "label": "LÀM XONG TRONG KHOẢNG 2–3 NGÀY",
+   "sub": {
+    "text": "THEO LỜI TÁC GIẢ",
+    "at": 6
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "MỘT CHI TIẾT THÚ VỊ",
+   "rows": [
+    {
+     "k": "BẢN ĐẦU",
+     "v": "DỄ HƠN NHIỀU → TÁC GIẢ THẤY CHÁN",
+     "at": 8
+    }
+   ],
+   "total": {
+    "k": "NÊN",
+    "v": "CHỈNH CHO KHÓ LÊN",
+    "at": 9
+   }
+  },
+  {
+   "type": "date",
+   "at": 10,
+   "day": "LÊN KHO ỨNG DỤNG",
+   "date": "24.05.2013"
+  },
+  {
+   "type": "flap",
+   "at": 11,
+   "crashAt": [
+    12,
+    "hết"
+   ],
+   "label": {
+    "k": "MỘT ĐỘNG TÁC: CHẠM",
+    "v": "HÌNH MINH HOẠ DO KÊNH TỰ VẼ · KHÔNG PHẢI HÌNH CỦA TRÒ CHƠI",
+    "at": [
+     11,
+     "Chạm"
+    ]
+   }
+  },
+  {
+   "type": "broll",
+   "at": 13,
+   "vid": "34268782",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "GẦN NHƯ KHÔNG CÓ GÌ XẢY RA",
+     "at": 13
+    },
+    {
+     "text": "NHIỀU THÁNG KHÔNG AI BIẾT TỚI",
+     "at": 14,
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "HAI, BA NGÀY"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

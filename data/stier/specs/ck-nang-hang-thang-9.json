@@ -1,0 +1,206 @@
+{
+ "theme": "ck",
+ "title": "Được nâng hạng ngày 21/09, cả tháng 9 VN-Index vẫn giảm khoảng 3,5%",
+ "description": "Việc nâng hạng thị trường chứng khoán Việt Nam có hiệu lực từ 21/09/2026. Trong tháng 9/2026, VN-Index giảm 3,47% (còn 1.768,62 điểm), thanh khoản bình quân xuống thấp nhất 19 tháng (Tuổi Trẻ, VietnamFinance). Theo báo chí, dòng tiền từ các quỹ mô phỏng chỉ số mới vào đợt đầu khoảng 10% tỉ trọng dự kiến. Video mô tả diễn biến đã xảy ra, không dự báo giai đoạn tiếp theo.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.",
+ "tags": [
+  "nâng hạng thị trường",
+  "vn-index tháng 9",
+  "chứng khoán 2026",
+  "chứng khoán cho người mới",
+  "biểu đồ biết nói"
+ ],
+ "kicker": "CHỨNG KHOÁN TỪ SỐ 0",
+ "sub": "NÂNG HẠNG · 09.2026",
+ "acc": [
+  "nâng",
+  "hạng",
+  "giảm",
+  "thấp",
+  "mười",
+  "ngay"
+ ],
+ "lines": [
+  "Được nâng hạng, mà chỉ số vẫn giảm.",
+  "Ngày 21 tháng 9 năm nay, thị trường Việt Nam chính thức được nâng hạng.",
+  "Nhiều người chờ một cú tăng.",
+  "Nhưng cả tháng chín, VN-Index giảm khoảng ba phẩy năm phần trăm.",
+  "Thanh khoản xuống thấp nhất mười chín tháng.",
+  "Vì sao? Tiền từ các quỹ chỉ số mới vào đợt đầu, khoảng mười phần trăm.",
+  "Tin tốt đã biết trước, không đồng nghĩa với giá tăng ngay."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "ĐƯỢC NÂNG HẠNG",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "MÀ CHỈ SỐ VẪN GIẢM",
+     "at": [
+      0,
+      "mà"
+     ],
+     "c": "down"
+    }
+   ],
+   "clip": "pexels:7579943",
+   "ms": 12,
+   "veil": 0.58
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "21.09.2026",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "NÂNG HẠNG CÓ HIỆU LỰC",
+     "at": [
+      1,
+      "chính"
+     ]
+    }
+   ],
+   "at": 1
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NHIỀU NGƯỜI CHỜ",
+     "at": 2
+    },
+    {
+     "text": "MỘT CÚ TĂNG",
+     "at": [
+      2,
+      "một"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:8480284",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 2
+  },
+  {
+   "type": "chart",
+   "at": 3,
+   "kind": "bars",
+   "title": "THÁNG 9/2026",
+   "unit": "% THAY ĐỔI TRONG THÁNG",
+   "bars": [
+    {
+     "label": "VN-INDEX",
+     "v": -3.47,
+     "text": "−3,5%",
+     "c": "down",
+     "at": [
+      3,
+      "giảm"
+     ]
+    }
+   ],
+   "min": -5,
+   "max": 1,
+   "badge": {
+    "text": "THANH KHOẢN THẤP NHẤT 19 THÁNG",
+    "at": [
+     4,
+     "thấp"
+    ],
+    "c": "down"
+   },
+   "note": "NGUỒN: TUỔI TRẺ 01/10/2026"
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "TIỀN TỪ QUỸ CHỈ SỐ",
+   "cards": [
+    {
+     "k": "MỚI VÀO ĐỢT ĐẦU",
+     "v": "~10%",
+     "at": [
+      5,
+      "mười"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "NGUỒN: BÁO CHÍ, 09/2026"
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Hai chuyện khác nhau",
+   "nodes": [
+    {
+     "text": "tin tốt đã biết trước",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      6,
+      "Tin"
+     ]
+    },
+    {
+     "text": "giá tăng ngay",
+     "x": 0.5,
+     "y": 0.7,
+     "at": [
+      6,
+      "giá"
+     ],
+     "cross": [
+      6,
+      "ngay"
+     ]
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      6,
+      "không"
+     ],
+     "label": "không đồng nghĩa",
+     "c": "acc",
+     "bend": 0
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://tuoitre.vn/vn-index-mat-hon-63-diem-trong-thang-9-co-phieu-nao-giam-manh-nhat-100261001125805176.htm",
+  "https://vietnamfinance.vn/vn-index-thang-9-su-kien-nang-hang-co-du-suc-xoa-dop-giam-diem-d149948.html",
+  "https://dantri.com.vn/kinh-doanh/sau-mot-tuan-nang-hang-vn-index-giam-nha-dau-tu-hut-hang-vi-dau-20260929124545916.htm"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "vn-index": "Vi En In-đéc"
+ },
+ "imgs": {}
+}

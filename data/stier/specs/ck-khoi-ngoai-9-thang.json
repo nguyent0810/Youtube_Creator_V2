@@ -1,0 +1,208 @@
+{
+ "theme": "ck",
+ "title": "Khối ngoại bán ròng 9 tháng liên tiếp: con số này nói gì, không nói gì",
+ "description": "Nhà đầu tư nước ngoài bán ròng 9 tháng liên tiếp trong năm 2026, luỹ kế khoảng 95.480 tỷ đồng trên sàn giao dịch lớn nhất; riêng tháng 5/2026 khoảng 18.991 tỷ đồng, mức cao nhất năm (CafeF, Vietstock). “Bán ròng” = giá trị bán ra trừ giá trị mua vào của nhóm này; phần cổ phiếu đó được các nhà đầu tư khác (chủ yếu trong nước) mua lại. Con số mô tả hành vi đã xảy ra của một nhóm nhà đầu tư, không phải tín hiệu về giá sắp tới.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.",
+ "tags": [
+  "khối ngoại bán ròng",
+  "nhà đầu tư nước ngoài",
+  "chứng khoán 2026",
+  "chứng khoán cho người mới",
+  "biểu đồ biết nói"
+ ],
+ "kicker": "CHỨNG KHOÁN TỪ SỐ 0",
+ "sub": "KHỐI NGOẠI 2026",
+ "acc": [
+  "chín",
+  "lăm",
+  "ròng",
+  "trong",
+  "nước",
+  "đâu"
+ ],
+ "lines": [
+  "Khối ngoại bán ròng, chín tháng liền.",
+  "Từ tháng một tới tháng chín năm nay, tháng nào nhà đầu tư nước ngoài cũng bán nhiều hơn mua.",
+  "Cộng lại, hơn chín mươi lăm nghìn tỷ đồng, trên sàn lớn nhất.",
+  "Riêng tháng năm, lúc chỉ số lập đỉnh, họ bán ròng gần mười chín nghìn tỷ, cao nhất năm.",
+  "Mà bán ròng là gì? Là giá trị bán ra, trừ đi giá trị mua vào.",
+  "Số cổ phiếu ấy vẫn có người mua lại: nhà đầu tư trong nước.",
+  "Nên con số này cho biết ai đang bán, chứ không tự nó nói giá sẽ đi đâu."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "KHỐI NGOẠI BÁN RÒNG",
+     "at": 0.0
+    },
+    {
+     "text": "9 THÁNG LIỀN",
+     "at": [
+      0,
+      "chín"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7579943",
+   "veil": 0.58
+  },
+  {
+   "type": "calendar",
+   "at": 1,
+   "n": 9,
+   "unit": "THÁNG",
+   "title": "*9 tháng* bán nhiều hơn mua"
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 95,
+   "suffix": " NGHÌN TỶ",
+   "label": "ĐỒNG BÁN RÒNG · 9 THÁNG 2026",
+   "until": [
+    2,
+    "lăm"
+   ],
+   "sub": {
+    "text": "NGUỒN: CAFEF 05/10/2026",
+    "at": [
+     2,
+     "trên"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "RIÊNG THÁNG 5",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "~19 NGHÌN TỶ",
+     "at": [
+      3,
+      "gần"
+     ],
+     "acc": true
+    },
+    {
+     "text": "cao nhất năm",
+     "at": [
+      3,
+      "cao"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7579943",
+   "ms": 7,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 3
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Bán ròng là gì?",
+   "nodes": [
+    {
+     "text": "bán ra",
+     "x": 0.24,
+     "y": 0.3,
+     "at": [
+      4,
+      "bán",
+      1
+     ]
+    },
+    {
+     "text": "mua vào",
+     "x": 0.76,
+     "y": 0.3,
+     "at": [
+      4,
+      "mua"
+     ]
+    },
+    {
+     "text": "bán ròng = bán ra − mua vào",
+     "x": 0.5,
+     "y": 0.56,
+     "at": [
+      4,
+      "trừ"
+     ],
+     "c": "acc",
+     "shape": "none",
+     "size": 50,
+     "w": 880
+    },
+    {
+     "text": "người mua lại: nhà đầu tư trong nước",
+     "x": 0.5,
+     "y": 0.86,
+     "at": [
+      5,
+      "nhà"
+     ],
+     "shape": "none",
+     "size": 44,
+     "w": 880
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "CON SỐ NÀY",
+   "cards": [
+    {
+     "k": "CHO BIẾT",
+     "v": "AI ĐANG BÁN",
+     "at": [
+      6,
+      "ai"
+     ],
+     "c": "up"
+    },
+    {
+     "k": "KHÔNG TỰ NÓ NÓI",
+     "v": "GIÁ SẼ ĐI ĐÂU",
+     "at": [
+      6,
+      "giá"
+     ],
+     "c": "down"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://cafef.vn/von-hoa-co-phieu-tren-hose-boc-hoi-298000-ty-dong-trong-thang-9-188261005202836242.chn",
+  "https://cafef.vn/khoi-ngoai-ban-rong-thang-thu-9-lien-tiep-tien-vao-chung-khoan-xuong-thap-nhat-hon-mot-nam-ruoi-188261005220735644.chn",
+  "https://vietstock.vn/2026/06/vn-index-tang-nhe-trong-thang-5-khoi-ngoai-ban-rong-gan-19000-ty-dong-830-1450106.htm"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "=AI": "ây ai"
+ },
+ "imgs": {}
+}

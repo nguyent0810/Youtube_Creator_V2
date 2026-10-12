@@ -57,7 +57,7 @@ def _is_hdr(ffmpeg: str, f: Path) -> tuple[bool, str]:
     pr = subprocess.run([ffprobe_for(ffmpeg), "-v", "error", "-select_streams", "v:0", "-show_entries",
                          "stream=pix_fmt,color_transfer,color_primaries", "-of", "default=nw=1", str(f)],
                         capture_output=True, text=True)
-    kv = dict(ln.split("=", 1) for ln in pr.stdout.splitlines() if "=" in ln)
+    kv = dict(ln.split("=", 1) for ln in (getattr(pr, "stdout", "") or "").splitlines() if "=" in ln)
     trc, prim, pix = kv.get("color_transfer", ""), kv.get("color_primaries", ""), kv.get("pix_fmt", "")
     hdr = trc in _HDR_TRC or prim == "bt2020" or "10" in pix or "12" in pix
     return hdr, trc

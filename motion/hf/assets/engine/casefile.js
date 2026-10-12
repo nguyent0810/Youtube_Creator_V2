@@ -544,7 +544,8 @@
       const tx = x2 - mx, ty = y2 - my, tL = Math.hypot(tx, ty) || 1, hx = tx / tL, hy = tL ? ty / tL : 0;
       [0.5, -0.5].forEach((r) => { const cs = Math.cos(r), sn = Math.sin(r), bx = -(hx * cs - hy * sn), by = -(hx * sn + hy * cs);
         const hd = sv("path", { d: `M${x2} ${y2} L${x2 + bx * 34} ${y2 + by * 34}`, stroke: c, "stroke-width": 6, fill: "none", "stroke-linecap": "round" }, svg); draw(hd, a.at + 0.28, 0.12); });
-      if (a.label) { const lb = el("div", "bdl", esc(a.label), bd); Object.assign(lb.style, { left: px(mx - 200 - uy * 34), top: px(my - 30 + ux * 34), width: px(400), color: c });
+      if (a.label) { const lb = el("div", "bdl", esc(a.label), bd); const off = Math.abs(bend) < 1 ? -250 : 34;   // mũi tên thẳng: nhãn đứng hẳn sang một bên, không đè lên nét
+        Object.assign(lb.style, { left: px(mx - 200 - uy * off), top: px(my - 30 + ux * off), width: px(400), color: c });
         tl.fromTo(lb, { opacity: 0 }, { opacity: 1, duration: 0.25, immediateRender: false }, a.at + 0.2); } });
     if (s.note) { const nt = el("div", "bdnote mono", esc(s.note), d); nt.style.top = px(Y0 + H + 26); tl.to(nt, { opacity: 1, duration: 0.3 }, s.t0 + 0.4); }
   };

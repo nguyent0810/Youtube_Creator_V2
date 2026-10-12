@@ -22,13 +22,13 @@
   "bảy"
  ],
  "lines": [
-  "Cái tên AI ra đời trong một lá đơn.",
-  "Ngày 31 tháng 8 năm 1955, bốn nhà khoa học ký đơn xin tài trợ.",
-  "Trong đó lần đầu xuất hiện cụm từ: trí tuệ nhân tạo.",
-  "Họ xin mười người, hai tháng, mười ba nghìn năm trăm đô la.",
-  "Và tin rằng một mùa hè là đủ để tạo bước tiến lớn.",
+  "Cái tên AI ra đời, trong một lá đơn xin tiền.",
+  "Ngày 31 tháng 8 năm 1955, bốn nhà khoa học ký một lá đơn xin tài trợ.",
+  "Và trong lá đơn ấy, lần đầu có cụm từ: trí tuệ nhân tạo.",
+  "Họ xin gì? Mười người. Hai tháng. Mười ba nghìn năm trăm đô la.",
+  "Họ tin, chỉ một mùa hè là đủ để tạo bước tiến lớn.",
   "Mùa hè ấy là năm 1956, ở trường Dartmouth.",
-  "Đến nay đã là bảy mươi mùa hè."
+  "Còn bây giờ? Đã là mùa hè thứ bảy mươi."
  ],
  "scenes": [
   {
@@ -48,7 +48,7 @@
     }
    ],
    "clip": "pexels:6037662",
-   "veil": 0.58
+   "veil": 0.55
   },
   {
    "type": "kinetic",
@@ -95,7 +95,7 @@
      "y": 0.3,
      "at": [
       2,
-      "lần"
+      "lá"
      ],
      "shape": "none",
      "size": 50
@@ -106,7 +106,7 @@
      "y": 0.45,
      "at": [
       2,
-      "xuất"
+      "lần"
      ],
      "shape": "none",
      "size": 50
@@ -114,14 +114,14 @@
     {
      "text": "Artificial Intelligence",
      "x": 0.5,
-     "y": 0.66,
+     "y": 0.68,
      "at": [
       2,
       "trí"
      ],
      "c": "acc",
      "shape": "circle",
-     "size": 70
+     "size": 66
     }
    ],
    "note": "TÊN LÁ ĐƠN · NGUYÊN VĂN"
@@ -136,7 +136,7 @@
      "v": "10",
      "at": [
       3,
-      "mười"
+      "Mười"
      ]
     },
     {
@@ -144,7 +144,7 @@
      "v": "2 THÁNG",
      "at": [
       3,
-      "hai"
+      "Hai"
      ]
     },
     {
@@ -152,7 +152,7 @@
      "v": "13.500 USD",
      "at": [
       3,
-      "mười",
+      "Mười",
       1
      ],
      "c": "acc"
@@ -163,7 +163,10 @@
    "type": "slam",
    "at": 4,
    "text": "MỘT MÙA HÈ",
-   "sub": "HỌ TIN LÀ ĐỦ"
+   "sub": "HỌ TIN LÀ ĐỦ",
+   "clip": "pexels:6037662",
+   "ms": 6,
+   "veil": 0.66
   },
   {
    "type": "photo",
@@ -188,15 +191,15 @@
      5,
      "năm"
     ],
-    "x": 230
+    "x": 230,
+    "y": 1090
    }
   },
   {
    "type": "counter",
    "at": 6,
    "to": 70,
-   "suffix": " MÙA HÈ",
-   "label": "ĐẾN NAY",
+   "label": "MÙA HÈ THỨ BẢY MƯƠI",
    "until": [
     6,
     "mươi"
@@ -215,5 +218,18 @@
   "dartmouth": "File:Baker Memorial Library, Dartmouth College - DSC09058.JPG"
  },
  "mix": true,
- "rules": 2
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ }
 }

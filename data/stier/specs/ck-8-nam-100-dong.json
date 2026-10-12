@@ -21,14 +21,14 @@
   "sâu"
  ],
  "lines": [
-  "Một trăm đồng, tám năm, ba kết quả.",
-  "Từ tháng mười năm 2018 đến tháng mười năm nay.",
-  "Gửi tiết kiệm mười hai tháng ở ngân hàng lớn, đáo hạn gửi tiếp: thành khoảng một trăm năm mươi sáu đồng.",
-  "Theo VN-Index, chưa tính cổ tức: khoảng một trăm bảy mươi bảy đồng.",
-  "Mua vàng miếng: khoảng ba trăm tám mươi lăm đồng.",
-  "Nhưng trên đường đi, VN-Index từng mất khoảng bốn mươi phần trăm trong năm 2022.",
-  "Vàng năm nay mất hơn một phần tư từ đỉnh.",
-  "Kênh tăng nhiều cũng là kênh từng rơi sâu. Quá khứ không bảo đảm tương lai."
+  "Một trăm đồng, tám năm, ba kết quả rất khác nhau.",
+  "Mốc tính là từ tháng mười năm 2018, đến tháng mười năm nay.",
+  "Gửi tiết kiệm mười hai tháng ở ngân hàng lớn, đáo hạn lại gửi tiếp. Thành khoảng một trăm năm mươi sáu đồng.",
+  "Đi theo VN-Index, chưa tính cổ tức. Khoảng một trăm bảy mươi bảy đồng.",
+  "Còn mua vàng miếng? Khoảng ba trăm tám mươi lăm đồng.",
+  "Nhưng khoan. Trên đường đi, VN-Index từng mất khoảng bốn mươi phần trăm trong năm 2022.",
+  "Vàng thì năm nay mất hơn một phần tư từ đỉnh.",
+  "Kênh tăng nhiều, cũng là kênh từng rơi sâu. Quá khứ không bảo đảm tương lai."
  ],
  "scenes": [
   {
@@ -48,11 +48,34 @@
     }
    ],
    "clip": "pexels:7710775",
-   "veil": 0.6
+   "veil": 0.58
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MỐC TÍNH",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "10/2018 → 10/2026",
+     "at": [
+      1,
+      "từ"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7710775",
+   "ms": 8,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
   },
   {
    "type": "chart",
-   "at": 1,
+   "at": 2,
    "kind": "bars",
    "title": "100 ĐỒNG SAU 8 NĂM",
    "unit": "10/2018 → 10/2026",
@@ -64,7 +87,7 @@
      "c": "ref",
      "at": [
       2,
-      "thành"
+      "Thành"
      ]
     },
     {
@@ -74,7 +97,7 @@
      "c": "up",
      "at": [
       3,
-      "khoảng"
+      "Khoảng"
      ]
     }
    ],
@@ -82,8 +105,10 @@
     "v": 100,
     "label": "GỐC 100",
     "at": [
-     1,
-     "đến"
+     2,
+     null,
+     0,
+     0.3
     ]
    },
    "max": 420,
@@ -127,7 +152,7 @@
      "c": "#fbbf24",
      "at": [
       4,
-      "khoảng"
+      "Khoảng"
      ]
     }
    ],
@@ -143,7 +168,7 @@
    },
    "max": 420,
    "tr": "cut",
-   "note": "KÊNH TỰ TÍNH · SJC QUA VNSTOCK"
+   "note": "KÊNH TỰ TÍNH · GIÁ VÀNG MIẾNG QUA VNSTOCK"
   },
   {
    "type": "cards3d",
@@ -197,7 +222,7 @@
     }
    ],
    "clip": "pexels:3943961",
-   "veil": 0.68,
+   "veil": 0.66,
    "at": 7
   }
  ],
@@ -206,9 +231,24 @@
   "https://cafef.vn/hieu-suat-cac-kenh-dau-tu-nam-2025-vang-bac-len-ngoi-chung-khoan-vuot-dinh-nhung-la-lam-188260101230517861.chn"
  ],
  "say": {
+  "=AI": "ây ai",
   "vn-index": "Vi En In-đéc"
  },
  "mix": true,
  "imgs": {},
- "rules": 2
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.4
+  }
+ }
 }

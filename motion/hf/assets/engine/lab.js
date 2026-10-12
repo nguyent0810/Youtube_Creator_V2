@@ -107,4 +107,78 @@ window.labScenes = ({ B, tl, el, sv, esc, px, fsz, rnd, bg, common, W, H, C }) =
       const lb = el("div", "golbl", `<b>NƯỚC ${esc(s.move || "")}</b>${s.prob ? `<span>${esc(s.prob)}</span>` : ""}`, d);
       tl.fromTo(lb, { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out", immediateRender: false }, s.hitAt + 0.2); }
     common(s, d); };
+
+  /* qr      : "giải phẫu" một mã QR (MINH HOẠ, không phải mã thật): ô vuông 25x25, ba ô định vị ở góc, tỷ lệ 1:1:3:1:1,
+               vết bẩn ~30%, vạch quét. {modulesAt?, modulesUntil?, hl? (lúc ba góc sáng lên), ratio?: {at}, damage?: {at, okAt?, text?},
+               scanAt?, side?: {k, v, at} (nhãn bên phải)}
+     barcode : n mã vạch 1 chiều hiện dần (n = 1: một mã lớn + dãy 12 số). {n?, until?, digits?} */
+  B.qr = (s, d) => { bg(s, d, 0.85);
+    // S = 600, cy = 140: đáy khung trắng (cy + S + 36 = 776) nằm TRÊN dải chú thích "HÌNH MINH HOẠ" (~800 px); bản 700 bị dải ấy đè lên ô góc dưới.
+    const N = 25, S = 600, cx = W / 2 - S / 2 - (s.side || s.ratio || s.damage ? 300 : 0), cy = 140, c = S / N;
+    const g = sv("svg", { class: "layer", viewBox: `0 0 ${W} ${H}` }, d);
+    sv("rect", { x: cx - 36, y: cy - 36, width: S + 72, height: S + 72, rx: 14, fill: "#f8fafc" }, g);
+    const inF = (i, j) => (i < 8 && j < 8) || (i >= N - 8 && j < 8) || (i < 8 && j >= N - 8);
+    const t0 = s.modulesAt ?? s.t0 + 0.25, span = Math.max(0.3, (s.modulesUntil ?? t0 + 1.2) - t0), mods = [];
+    for (let j = 0; j < N; j++) for (let i = 0; i < N; i++) { if (inF(i, j) || rnd() > 0.48) continue;
+      mods.push(sv("rect", { x: cx + i * c, y: cy + j * c, width: c + 0.6, height: c + 0.6, fill: "#0a0f18", opacity: 0 }, g)); }
+    mods.forEach((m, k) => tl.fromTo(m, { opacity: 0 }, { opacity: 1, duration: 0.06, immediateRender: false }, t0 + span * (k / mods.length)));
+    [[0, 0], [N - 7, 0], [0, N - 7]].forEach(([a, b], k) => { const x = cx + a * c, y = cy + b * c, f = sv("g", { opacity: 0 }, g);
+      sv("rect", { x, y, width: 7 * c, height: 7 * c, fill: "#0a0f18" }, f); sv("rect", { x: x + c, y: y + c, width: 5 * c, height: 5 * c, fill: "#f8fafc" }, f);
+      sv("rect", { x: x + 2 * c, y: y + 2 * c, width: 3 * c, height: 3 * c, fill: "#0a0f18" }, f);
+      tl.fromTo(f, { opacity: 0, scale: 1.5, svgOrigin: `${x + 3.5 * c} ${y + 3.5 * c}` }, { opacity: 1, scale: 1, duration: 0.2, ease: "power3.out", immediateRender: false }, s.t0 + 0.12 + k * 0.08);
+      if (s.hlAt != null) { const r = sv("rect", { x: x - 10, y: y - 10, width: 7 * c + 20, height: 7 * c + 20, rx: 8, fill: "none", stroke: acc, "stroke-width": 9, opacity: 0 }, g);
+        tl.fromTo(r, { opacity: 0, scale: 1.35, svgOrigin: `${x + 3.5 * c} ${y + 3.5 * c}` }, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(2)", immediateRender: false }, s.hlAt + k * 0.18); } });
+    const RX = cx + S + 90;
+    if (s.ratio) { const y = cy + 3.5 * c, ln = sv("line", { x1: cx - 20, y1: y, x2: cx + 7 * c + 20, y2: y, stroke: "#f59e0b", "stroke-width": 8, opacity: 0 }, g);
+      tl.fromTo(ln, { opacity: 0 }, { opacity: 1, duration: 0.2, immediateRender: false }, s.ratio.at);
+      const t = sv("text", { x: RX, y: cy + 130, fill: "#e6f1ff", "font-size": 92, "font-weight": 900, "font-family": "Be Vietnam Pro, sans-serif", opacity: 0 }, g); t.textContent = "1 : 1 : 3 : 1 : 1";
+      const t2 = sv("text", { x: RX, y: cy + 200, fill: "#f59e0b", "font-size": 36, "font-weight": 700, "font-family": "JetBrains Mono, monospace", opacity: 0 }, g); t2.textContent = "ĐEN : TRẮNG : ĐEN : TRẮNG : ĐEN";
+      tl.fromTo([t, t2], { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out", immediateRender: false }, s.ratio.at + 0.15); }
+    if (s.damage) { const bl = sv("ellipse", { cx: cx + 0.66 * S, cy: cy + 0.66 * S, rx: 0.33 * S, ry: 0.29 * S, fill: "rgba(92,58,26,.94)", opacity: 0, transform: `rotate(-18 ${cx + 0.66 * S} ${cy + 0.66 * S})` }, g);
+      tl.fromTo(bl, { opacity: 0 }, { opacity: 1, duration: 0.3, immediateRender: false }, s.damage.at);
+      const t = sv("text", { x: RX, y: cy + 250, fill: "#fca5a5", "font-size": 58, "font-weight": 900, "font-family": "Be Vietnam Pro, sans-serif", opacity: 0 }, g); t.textContent = s.damage.text || "BẨN ~30%";
+      tl.fromTo(t, { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.3, immediateRender: false }, s.damage.at + 0.1);
+      if (s.damage.okAt != null) { const ok = sv("text", { x: RX, y: cy + 350, fill: acc, "font-size": 72, "font-weight": 900, "font-family": "Be Vietnam Pro, sans-serif", opacity: 0 }, g); ok.textContent = "✓ VẪN ĐỌC ĐƯỢC";
+        tl.fromTo(ok, { opacity: 0, scale: 1.3, svgOrigin: `${RX} ${cy + 330}` }, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(2)", immediateRender: false }, s.damage.okAt); } }
+    if (s.scanAt != null) { const sc = sv("rect", { x: cx - 36, y: cy - 36, width: S + 72, height: 14, fill: acc, opacity: 0 }, g);
+      tl.fromTo(sc, { opacity: 0.95, y: cy - 36 }, { y: cy + S + 22, duration: 0.55, ease: "power1.inOut", immediateRender: false }, s.scanAt);
+      tl.to(sc, { opacity: 0, duration: 0.1 }, s.scanAt + 0.55); }
+    if (s.side) { const lb = el("div", "golbl", `<b>${esc(s.side.k || "")}</b>${s.side.v ? `<span>${esc(s.side.v)}</span>` : ""}`, d); lb.style.left = px(RX); lb.style.top = px(cy + 400);
+      tl.fromTo(lb, { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out", immediateRender: false }, s.side.at); }
+    common(s, d); };
+
+  B.barcode = (s, d) => { bg(s, d, 0.85);
+    const n = s.n || 1, g = sv("svg", { class: "layer", viewBox: `0 0 ${W} ${H}` }, d), cols = n > 1 ? 5 : 1, rows = Math.ceil(n / cols);
+    const bw = n > 1 ? 280 : 980, bh = n > 1 ? 170 : 330, gx = 36, gy = 44, X0 = W / 2 - (cols * bw + (cols - 1) * gx) / 2, Y0 = n > 1 ? 250 : 250;
+    const t0 = s.t0 + 0.2, span = Math.max(0.3, (s.until ?? s.t1 - 0.6) - t0);
+    for (let k = 0; k < n; k++) { const x = X0 + (k % cols) * (bw + gx), y = Y0 + Math.floor(k / cols) * (bh + gy), f = sv("g", { opacity: 0 }, g);
+      sv("rect", { x, y, width: bw, height: bh, rx: 8, fill: "#f8fafc" }, f);
+      let px0 = x + bw * 0.06; const end = x + bw * 0.94;
+      while (px0 < end) { const w = (1 + Math.floor(rnd() * 3)) * (bw / 190); sv("rect", { x: px0, y: y + bh * 0.1, width: w, height: bh * (n > 1 ? 0.8 : 0.66), fill: "#0a0f18" }, f); px0 += w + (1 + Math.floor(rnd() * 3)) * (bw / 190); }
+      if (n === 1) { const t = sv("text", { x: x + bw / 2, y: y + bh * 0.93, fill: "#0a0f18", "font-size": 46, "font-weight": 700, "font-family": "JetBrains Mono, monospace", "text-anchor": "middle" }, f); t.textContent = s.digits || "1 2 3 4 5 6 7 8 9 0 1 2"; }
+      tl.fromTo(f, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.22, ease: "power3.out", immediateRender: false }, n > 1 ? t0 + span * (k / n) : t0); }
+    common(s, d); };
+
+  /* flap : MINH HOẠ cơ chế "một chạm, lách qua khe" bằng hình khối (không dùng hình ảnh, nhân vật của trò chơi thật):
+            một chấm tròn lách qua các cặp thanh chắn trôi từ phải sang; điểm tăng dần; crashAt -> chạm thanh, "HẾT VÁN".
+            {crashAt?, speed? (px/giây), label?} */
+  B.flap = (s, d) => { bg(s, d, 0.85);
+    const PW = 1180, PH = 620, PX = W / 2 - PW / 2, PY = 150, g = sv("svg", { class: "layer", viewBox: `0 0 ${W} ${H}` }, d);
+    sv("rect", { x: PX, y: PY, width: PW, height: PH, rx: 16, fill: "rgba(15,27,45,.94)", stroke: "rgba(34,211,238,.35)", "stroke-width": 2 }, g);
+    const clip = sv("clipPath", { id: "flapc" + Math.round(s.t0 * 100) }, g); sv("rect", { x: PX, y: PY, width: PW, height: PH, rx: 16 }, clip);
+    const strip = sv("g", { "clip-path": `url(#${clip.getAttribute("id")})` }, g), mv = sv("g", {}, strip);
+    const t0 = s.t0 + 0.3, end = s.crashAt ?? s.t1 - 0.2, sp = s.speed || 260, bx = PX + 300, gapH = 190, step = 330, bw = 96;
+    const n = Math.ceil(((end - t0) * sp + PW) / step) + 1, gaps = [];
+    for (let k = 0; k < n; k++) { const x = PX + PW * 0.75 + k * step, gc = PY + 150 + rnd() * (PH - 300); gaps.push({ x, gc });
+      sv("rect", { x, y: PY, width: bw, height: gc - gapH / 2 - PY, fill: "#1f6f8b" }, mv); sv("rect", { x, y: gc + gapH / 2, width: bw, height: PY + PH - gc - gapH / 2, fill: "#1f6f8b" }, mv); }
+    tl.fromTo(mv, { x: 0 }, { x: -(end - t0) * sp, duration: end - t0, ease: "none", immediateRender: false }, t0);
+    const dot = sv("circle", { cx: bx, cy: PY + PH / 2, r: 26, fill: acc }, g), sc = sv("text", { x: PX + PW / 2, y: PY + 100, fill: "#e6f1ff", "font-size": 96, "font-weight": 900, "font-family": "Be Vietnam Pro, sans-serif", "text-anchor": "middle" }, g); sc.textContent = "0";
+    let prevT = t0, score = 0;
+    gaps.forEach((p, k) => { const tp = t0 + (p.x + bw / 2 - bx) / sp; if (tp > end) { if (s.crashAt != null && prevT < end) { tl.to(dot, { attr: { cy: p.gc - gapH / 2 - 60 }, duration: Math.max(0.1, end - prevT), ease: "sine.inOut" }, prevT); prevT = end; } return; }
+      tl.to(dot, { attr: { cy: p.gc }, duration: Math.max(0.12, tp - prevT), ease: "sine.inOut" }, prevT); prevT = tp;
+      const v = ++score; tl.set(sc, { textContent: String(v) }, tp); });
+    if (s.crashAt != null) { tl.set(dot, { attr: { fill: "#ef4444" } }, s.crashAt);
+      const over = sv("text", { x: PX + PW / 2, y: PY + PH / 2 + 30, fill: "#ef4444", "font-size": 120, "font-weight": 900, "font-family": "Be Vietnam Pro, sans-serif", "text-anchor": "middle", opacity: 0 }, g); over.textContent = "HẾT VÁN";
+      tl.fromTo(over, { opacity: 0, scale: 1.4, svgOrigin: `${PX + PW / 2} ${PY + PH / 2}` }, { opacity: 1, scale: 1, duration: 0.2, ease: "power4.in", immediateRender: false }, s.crashAt + 0.05); }
+    common(s, d); };
 };

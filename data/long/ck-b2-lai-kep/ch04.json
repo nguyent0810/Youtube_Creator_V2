@@ -1,0 +1,306 @@
+{
+ "title": "Thứ lặng lẽ ăn mòn",
+ "lines": [
+  {
+   "t": "Thứ đầu tiên là lạm phát.",
+   "p": 0.8
+  },
+  {
+   "t": "Ba tỷ của ba mươi năm sau, không mua được nhiều như ba tỷ hôm nay.",
+   "p": 1.0
+  },
+  "Hãy nhìn số thật của tám năm vừa qua.",
+  "Từ năm hai nghìn không trăm mười tám tới năm hai nghìn không trăm hai mươi lăm, giá cả ở Việt Nam tăng bình quân khoảng ba phẩy một phần trăm mỗi năm.",
+  {
+   "t": "Nghe thì ít. Nhưng nó cũng là lãi kép, chỉ có điều chạy ngược chiều.",
+   "p": 1.0
+  },
+  "Với tốc độ ấy, cứ khoảng hai mươi ba năm, sức mua của một đồng tiền còn lại một nửa.",
+  {
+   "t": "Vậy ba tỷ của ba mươi năm sau, tính theo sức mua hôm nay, chỉ còn khoảng một tỷ hai.",
+   "p": 1.0
+  },
+  "Vẫn hơn số tiền bạn đã nộp. Nhưng khác xa con số ba tỷ trên bảng tính.",
+  "Và đây là một con số thật nữa, để bạn so.",
+  "Tám năm qua, một cuốn sổ tiết kiệm mười hai tháng ở nhóm ngân hàng lớn, cứ đáo hạn lại gửi tiếp, biến một trăm đồng thành khoảng một trăm năm mươi sáu đồng.",
+  {
+   "t": "Trừ đi lạm phát, còn lại khoảng một trăm hai mươi mốt đồng.",
+   "p": 1.0
+  },
+  "Tức là lãi thật, sau khi giá cả đã tăng, chỉ hơn hai phần trăm một năm.",
+  "Không phải sáu.",
+  "Lãi kép vẫn chạy. Nhưng chậm hơn nhiều so với những bảng tính bạn hay thấy trên mạng."
+ ],
+ "scenes": [
+  {
+   "type": "broll",
+   "vid": "37127207",
+   "ms": 12,
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "LẠM PHÁT",
+     "at": [
+      0,
+      "lạm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "3 tỷ của 30 năm sau ≠ 3 tỷ hôm nay",
+     "at": 1,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 2,
+   "title": "GIÁ CẢ TĂNG BÌNH QUÂN MỖI NĂM (%) · VIỆT NAM",
+   "unit": "",
+   "items": [
+    {
+     "k": "2018",
+     "v": 3.54,
+     "lbl": "3,54",
+     "at": [
+      3,
+      null,
+      0,
+      0.1
+     ]
+    },
+    {
+     "k": "2019",
+     "v": 2.79,
+     "lbl": "2,79",
+     "at": [
+      3,
+      null,
+      0,
+      0.28
+     ]
+    },
+    {
+     "k": "2020",
+     "v": 3.23,
+     "lbl": "3,23",
+     "at": [
+      3,
+      null,
+      0,
+      0.45999999999999996
+     ]
+    },
+    {
+     "k": "2021",
+     "v": 1.84,
+     "lbl": "1,84",
+     "at": [
+      3,
+      null,
+      0,
+      0.64
+     ]
+    },
+    {
+     "k": "2022",
+     "v": 3.15,
+     "lbl": "3,15",
+     "at": [
+      3,
+      null,
+      0,
+      0.82
+     ]
+    },
+    {
+     "k": "2023",
+     "v": 3.25,
+     "lbl": "3,25",
+     "at": [
+      3,
+      null,
+      0,
+      0.9999999999999999
+     ]
+    },
+    {
+     "k": "2024",
+     "v": 3.63,
+     "lbl": "3,63",
+     "at": [
+      3,
+      null,
+      0,
+      1.1800000000000002
+     ]
+    },
+    {
+     "k": "2025",
+     "v": 3.31,
+     "lbl": "3,31",
+     "at": [
+      3,
+      null,
+      0,
+      1.36
+     ]
+    }
+   ],
+   "label": {
+    "k": "BÌNH QUÂN ≈ 3,1%/NĂM",
+    "v": "NGUỒN: CỤC THỐNG KÊ (QUA BÁO CHÍ)",
+    "at": [
+     3,
+     "khoảng"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "CŨNG LÀ LÃI KÉP",
+     "at": [
+      4,
+      "Nhưng"
+     ]
+    },
+    {
+     "text": "CHẠY NGƯỢC CHIỀU",
+     "at": [
+      4,
+      "chạy"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 0,
+   "to": 23,
+   "suffix": " NĂM",
+   "until": [
+    5,
+    "ba"
+   ],
+   "label": "SỨC MUA CỦA MỘT ĐỒNG CÒN MỘT NỬA",
+   "sub": {
+    "text": "VỚI LẠM PHÁT 3,1%/NĂM · PHÉP TÍNH",
+    "at": 5
+   }
+  },
+  {
+   "type": "bars",
+   "at": 6,
+   "title": "3 TRIỆU/THÁNG SAU 30 NĂM (TRIỆU ĐỒNG)",
+   "items": [
+    {
+     "k": "TRÊN BẢNG TÍNH",
+     "v": 3014,
+     "lbl": "≈ 3.014",
+     "at": [
+      6,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "k": "THEO SỨC MUA HÔM NAY",
+     "v": 1206,
+     "lbl": "≈ 1.206",
+     "at": [
+      6,
+      "chỉ"
+     ],
+     "acc": true
+    },
+    {
+     "k": "TIỀN ĐÃ NỘP",
+     "v": 1080,
+     "lbl": "1.080",
+     "at": 7
+    }
+   ],
+   "label": {
+    "k": "",
+    "v": "VÍ DỤ GIẢ ĐỊNH · LÃI 6%/NĂM KHÔNG ĐỔI, KHÔNG RÚT · KHÔNG PHẢI DỰ BÁO · LẠM PHÁT 3,1%",
+    "at": 6
+   }
+  },
+  {
+   "type": "bars",
+   "at": 8,
+   "title": "SỐ THẬT 8 NĂM QUA: 100 ĐỒNG GỬI 12 THÁNG, ĐÁO HẠN GỬI TIẾP",
+   "items": [
+    {
+     "k": "GỐC 10/2018",
+     "v": 100,
+     "lbl": "100",
+     "at": 8
+    },
+    {
+     "k": "10/2026 · DANH NGHĨA",
+     "v": 156,
+     "lbl": "≈ 156",
+     "at": [
+      9,
+      "một",
+      1
+     ]
+    },
+    {
+     "k": "SAU LẠM PHÁT",
+     "v": 121,
+     "lbl": "≈ 121",
+     "at": 10,
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "NHÓM NGÂN HÀNG LỚN",
+    "v": "SỐ THẬT · KÊNH TỰ TÍNH TỪ NGUỒN CÔNG KHAI · QUÁ KHỨ",
+    "at": 9
+   }
+  },
+  {
+   "type": "slam",
+   "at": 11,
+   "text": "HƠN 2%/NĂM",
+   "sub": "LÃI THẬT SAU LẠM PHÁT · KHÔNG PHẢI 6",
+   "subAt": 12
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "LÃI KÉP VẪN CHẠY",
+     "at": 13
+    },
+    {
+     "text": "NHƯNG CHẬM HƠN BẢNG TÍNH TRÊN MẠNG",
+     "at": [
+      13,
+      "Nhưng"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "THỨ LẶNG LẼ ĂN MÒN"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

@@ -1,0 +1,165 @@
+{
+ "title": "Vì sao khó bỏ",
+ "lines": [
+  {
+   "t": "Hãy thử nhìn trò chơi này như một cỗ máy.",
+   "p": 0.8
+  },
+  {
+   "t": "Phần này là cách kênh mình diễn giải, không phải lời của tác giả.",
+   "p": 1.0
+  },
+  "Thứ nhất, luật chơi học trong một giây. Chỉ có một nút bấm.",
+  "Thứ hai, nó rất khó. Phần lớn các ván kết thúc sau vài giây.",
+  {
+   "t": "Thứ ba, thua xong, chạm một cái là chơi lại ngay. Không chờ, không tốn gì.",
+   "p": 1.0
+  },
+  "Ghép ba thứ ấy lại.",
+  "Mỗi lần thua, bạn đều thấy mình suýt làm được.",
+  {
+   "t": "Và lần thử tiếp theo chỉ cách đúng một cú chạm.",
+   "p": 1.0
+  },
+  "Thêm một thứ nữa. Điểm số.",
+  {
+   "t": "Một con số nhỏ, rất dễ đem khoe, và rất dễ làm người khác ngứa tay muốn vượt.",
+   "p": 1.0
+  },
+  "Giới phê bình thì không mấy thiện cảm.",
+  "Điểm trung bình các bài đánh giá chỉ khoảng năm mươi hai trên một trăm.",
+  "Nhưng người chơi không chấm điểm. Họ chỉ bấm chơi lại."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "VÌ SAO\nKHÓ BỎ",
+   "sub": "DIỄN GIẢI CỦA KÊNH · KHÔNG PHẢI LỜI TÁC GIẢ",
+   "vid": "3913496",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Hãy"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "BA BÁNH RĂNG",
+   "srcnote": "DIỄN GIẢI CỦA KÊNH",
+   "rows": [
+    {
+     "k": "1",
+     "v": "HỌC TRONG MỘT GIÂY · MỘT NÚT BẤM",
+     "at": 2
+    },
+    {
+     "k": "2",
+     "v": "RẤT KHÓ · VÀI GIÂY LÀ THUA",
+     "at": 3
+    },
+    {
+     "k": "3",
+     "v": "CHƠI LẠI NGAY · KHÔNG CHỜ",
+     "at": 4
+    }
+   ]
+  },
+  {
+   "type": "flap",
+   "at": 5,
+   "crashAt": [
+    6,
+    "suýt"
+   ],
+   "speed": 300,
+   "label": {
+    "k": "“SUÝT LÀM ĐƯỢC”",
+    "v": "HÌNH MINH HOẠ DO KÊNH TỰ VẼ · KHÔNG PHẢI HÌNH CỦA TRÒ CHƠI",
+    "at": [
+     6,
+     "suýt"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "LẦN THỬ TIẾP THEO",
+     "at": 7,
+     "sm": true
+    },
+    {
+     "text": "CÁCH ĐÚNG MỘT CÚ CHẠM",
+     "at": [
+      7,
+      "cách"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 8,
+   "from": 0,
+   "to": 12,
+   "until": [
+    9,
+    "khoe,"
+   ],
+   "label": "ĐIỂM SỐ: NHỎ · DỄ KHOE · DỄ GÂY NGỨA TAY",
+   "sub": {
+    "text": "CON SỐ MINH HOẠ",
+    "at": 8
+   }
+  },
+  {
+   "type": "bars",
+   "at": 10,
+   "title": "GIỚI PHÊ BÌNH CHẤM",
+   "unit": "",
+   "items": [
+    {
+     "k": "ĐIỂM TRUNG BÌNH CÁC BÀI ĐÁNH GIÁ",
+     "v": 52,
+     "lbl": "52 / 100",
+     "at": [
+      11,
+      "năm"
+     ],
+     "acc": true
+    },
+    {
+     "k": "THANG ĐIỂM",
+     "v": 100,
+     "lbl": "100",
+     "at": 10
+    }
+   ],
+   "label": {
+    "k": "NGUỒN",
+    "v": "METACRITIC · 7 BÀI",
+    "at": 10
+   }
+  },
+  {
+   "type": "slam",
+   "at": 12,
+   "text": "CHƠI LẠI",
+   "sub": "NGƯỜI CHƠI KHÔNG CHẤM ĐIỂM"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "VÌ SAO KHÓ BỎ"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

@@ -42,7 +42,8 @@ import build as BLD  # noqa: E402
 from build import Anchors, resolve, norm  # noqa: E402  (cùng cú pháp mốc với Short S-tier)
 
 BLD.ANCHORS |= {"sumAt", "zeroAt", "titleAt", "hAt", "countAt", "hitAt", "typeAt", "burnAt", "decodeAt", "endAt", "voiceAt", "voiceEnd", "startAt", "statAt", "fwdAt", "backAt", "drawAt",
-                "chipAt", "medianAt", "hlAt", "colorAt", "strikeAt"}      # mốc riêng của cảnh video dài (breadth/basket theme chart; strikeAt: fx strike)
+                "chipAt", "medianAt", "hlAt", "colorAt", "strikeAt",
+                "modulesAt", "modulesUntil", "scanAt", "okAt", "crashAt"}   # lab.js qr/flap (12/10/2026)      # mốc riêng của cảnh video dài (breadth/basket theme chart; strikeAt: fx strike)
 BLD.ANCHOR_LISTS |= {"flips", "readAt"}
 import sfx_long  # noqa: E402
 import chartdata  # noqa: E402
@@ -488,9 +489,28 @@ LATE_MAX = 1.0
 # Loại cảnh mà engine tự dựng khung/tiêu đề trong ≤ 0,5 s đầu cảnh, độc lập với mốc neo (casewide.js/lab.js/chart.js):
 # thẻ chương, logo, màn kết, câu hỏi, giấy trích, sổ, khung biểu đồ (tiêu đề t0+0.1), cửa sổ chat, ảnh in/ảnh, hồ sơ, bản đồ.
 FRAME_TYPES = {"chapter", "brand", "endcard", "question", "quote", "ledger", "bars", "chat", "print", "photo", "broll", "file",
-               "candles", "race", "breadth", "basket", "book", "map", "guess", "nn", "go"}   # 3 cuối: lab.js (khung ≤ t0+0.2)
+               "candles", "race", "breadth", "basket", "book", "map", "guess", "nn", "go", "qr", "barcode", "flap"}   # 3 cuối: lab.js (khung ≤ t0+0.2)
 _NOT_START = {"t0", "t1", "until", "voiceEnd", "endAt", "typeDur", "burnDur", "dur"}
 _DATA_LISTS = {"dots", "rects", "vals", "bars", "candles", "ohlc", "series"}     # mảng số liệu biểu đồ, không phải mốc
+
+
+def unresolved_cues(o, path=""):
+    """Mốc còn ở dạng [dòng, "từ", …] sau khi plan = khoá chưa khai trong BLD.ANCHORS -> engine nhận mảng thay vì giây.
+    Retro 12/10/2026 (MIM "Mã QR"): modulesAt/hl/okAt của cảnh qr và crashAt của cảnh flap không được đổi ra giây,
+    chấm đen không hiện, chữ "vẫn đọc được" hiện ngay đầu cảnh; qa_blank và freezedetect đều không bắt được."""
+    out = []
+    if isinstance(o, dict):
+        for k, v in o.items():
+            if k in _DATA_LISTS:
+                continue
+            if isinstance(v, list) and len(v) >= 2 and isinstance(v[0], int) and not isinstance(v[0], bool) and (v[1] is None or isinstance(v[1], str)):
+                out.append(f"{path}.{k}={v}")
+            else:
+                out += unresolved_cues(v, f"{path}.{k}")
+    elif isinstance(o, list):
+        for i, v in enumerate(o):
+            out += unresolved_cues(v, f"{path}[{i}]")
+    return out
 
 
 def _starts(o, key=None):
@@ -757,6 +777,9 @@ def do_html(topic, only=None):
                 st = max(0.0, s["t0"] - 0.2)
                 vids.append(f'  <video id="v{k}" class="clip bv {tone}" src="assets/long/{topic}/broll/{vid}.mp4" data-start="{st:.3f}" '
                             f'data-duration="{min(need, d - st):.3f}" data-media-start="{ms:.2f}" muted playsinline data-track-index="1"></video>')
+        bad = [c for k, sc in enumerate(scenes) for c in unresolved_cues(sc, f"{sc['type']}#{k}")]
+        if bad:
+            raise SystemExit(f"{name}: mốc chưa đổi ra giây (thêm khoá vào BLD.ANCHORS): " + "; ".join(bad))
         seed = sum(ord(c) * (i + 1) for i, c in enumerate(topic + name)) % 100000 + 7
         case = {"topic": topic, "ch": name, "dur": d, "seed": seed, "accent": spec.get("accent", CHAN.get("accent", "#e2402d")), "look": look,
                 "theme": THEME["name"] or None, **({"brand": CHAN["brand"]} if CHAN.get("brand") else {}), "autoTr": spec.get("autoTr", spec.get("theme") == "shanghai"), "hud": ch.get("hud", {}),

@@ -1,0 +1,143 @@
+{
+ "title": "Đồng hồ về không",
+ "lines": [
+  {
+   "t": "Quay lại ngày 8 tháng 2.",
+   "p": 0.8
+  },
+  {
+   "t": "Dòng tweet được đăng. Hai mươi hai giờ nữa.",
+   "p": 1.0
+  },
+  "Cả thế giới công nghệ đoán già đoán non.",
+  "Bị kiện à? Hay một chiêu quảng cáo?",
+  {
+   "t": "Anh viết thêm một dòng. Chuyện này không liên quan gì tới pháp lý.",
+   "p": 1.0
+  },
+  "Hai mươi hai giờ trôi qua.",
+  {
+   "t": "Và ngày 10 tháng 2 năm 2014, đúng như đã hẹn, Flappy Bird biến mất khỏi cả hai kho ứng dụng.",
+   "p": 1.0
+  },
+  "Một ngày sau, anh trả lời tạp chí Forbes.",
+  {
+   "t": "Flappy Bird được thiết kế để chơi trong vài phút, lúc bạn thư giãn. Nhưng nó đã thành một sản phẩm gây nghiện. Tôi nghĩ nó đã thành một vấn đề.",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Anh nói thêm, trò chơi đã ra đi mãi mãi.",
+  {
+   "t": "Và từ khi gỡ nó xuống, lương tâm anh nhẹ hơn. Anh ngủ lại được.",
+   "p": 1.0
+  },
+  "Năm mươi nghìn đô mỗi ngày.",
+  "Đổi lấy một giấc ngủ."
+ ],
+ "scenes": [
+  {
+   "type": "date",
+   "day": "DÒNG TWEET ĐƯỢC ĐĂNG",
+   "date": "08.02.2014"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 22,
+   "to": 21,
+   "suffix": " GIỜ",
+   "until": [
+    2,
+    "đoán"
+   ],
+   "label": "CÒN LẠI"
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "CẢ THẾ GIỚI CÔNG NGHỆ ĐOÁN",
+   "rows": [
+    {
+     "k": "?",
+     "v": "BỊ KIỆN",
+     "at": 3
+    },
+    {
+     "k": "?",
+     "v": "MỘT CHIÊU QUẢNG CÁO",
+     "at": [
+      3,
+      "Hay"
+     ]
+    }
+   ],
+   "total": {
+    "k": "TÁC GIẢ",
+    "v": "“KHÔNG LIÊN QUAN GÌ TỚI PHÁP LÝ”",
+    "at": [
+     4,
+     "Chuyện"
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 21,
+   "to": 0,
+   "suffix": " GIỜ",
+   "until": [
+    5,
+    "qua."
+   ],
+   "label": "ĐỒNG HỒ VỀ KHÔNG"
+  },
+  {
+   "type": "date",
+   "at": 6,
+   "day": "BIẾN MẤT KHỎI CẢ HAI KHO ỨNG DỤNG",
+   "date": "10.02.2014"
+  },
+  {
+   "type": "quote",
+   "at": 7,
+   "text": "Flappy Bird được thiết kế để chơi trong vài phút, lúc bạn thư giãn. Nhưng nó đã thành một sản phẩm gây nghiện. Tôi nghĩ nó đã thành một vấn đề.",
+   "by": "NGUYỄN HÀ ĐÔNG · FORBES, 11.02.2014 · TRÍCH DỊCH",
+   "qline": 8
+  },
+  {
+   "type": "ledger",
+   "at": 9,
+   "title": "ANH NÓI THÊM",
+   "srcnote": "FORBES, 02.2014 · DIỄN Ý",
+   "rows": [
+    {
+     "k": "TRÒ CHƠI",
+     "v": "ĐÃ RA ĐI MÃI MÃI",
+     "at": 9
+    },
+    {
+     "k": "LƯƠNG TÂM",
+     "v": "NHẸ HƠN · NGỦ LẠI ĐƯỢC",
+     "at": 10
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 11,
+   "text": "50.000 USD / NGÀY",
+   "sub": "ĐỔI LẤY MỘT GIẤC NGỦ",
+   "subAt": 12
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "ĐỒNG HỒ VỀ KHÔNG"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.12
+ }
+}

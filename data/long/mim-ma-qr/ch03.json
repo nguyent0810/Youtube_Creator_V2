@@ -1,0 +1,269 @@
+{
+ "title": "Ba ô vuông ở góc",
+ "lines": [
+  {
+   "t": "Hãy nghĩ thử xem.",
+   "p": 0.8
+  },
+  "Một máy quét nhìn vào tờ giấy. Trên đó có chữ, có hình, có đủ thứ.",
+  {
+   "t": "Làm sao nó biết mã nằm ở đâu, và đầu nào là đầu trên?",
+   "p": 1.0
+  },
+  "Với mã vạch, công nhân phải xoay thùng hàng cho đúng chiều.",
+  {
+   "t": "Hara muốn một loại mã quét được từ mọi góc, trong chớp mắt.",
+   "p": 1.0
+  },
+  "Lời giải lại đến ở ngoài phòng thí nghiệm.",
+  "Một hôm, ông ngồi trên tàu, nhìn ra cửa sổ.",
+  {
+   "t": "Tôi thấy một toà nhà cao nổi bật giữa xung quanh. Và tôi nhận ra, cái mã cũng cần một ký hiệu đặc biệt, để nổi bật giữa chữ nghĩa.",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Ký hiệu ấy phải là một hình mà gần như không bao giờ xuất hiện trong chữ in bình thường.",
+  "Tìm bằng cách nào?",
+  "Nhóm của ông quét hàng loạt trang báo, tờ rơi, rồi viết phần mềm để đếm.",
+  {
+   "t": "Họ đếm tỷ lệ giữa các vùng đen và trắng trên giấy in.",
+   "p": 1.0
+  },
+  "Sau ba tháng, họ tìm ra một tỷ lệ hiếm gặp nhất.",
+  "Một phần đen, một phần trắng, ba phần đen, một phần trắng, một phần đen.",
+  {
+   "t": "Đó chính là hình ô vuông lồng trong ô vuông, mà bạn thấy ở ba góc của mọi mã QR.",
+   "p": 1.0
+  },
+  "Máy quét chỉ cần tìm ba hình ấy.",
+  "Thấy ba góc, nó biết ngay mã nằm đâu, to bao nhiêu, đang xoay hướng nào.",
+  "Nhờ thế, mã mới này được đọc nhanh gấp khoảng năm lần mã vạch thông thường.",
+  "Và cái tên QR ra đời từ đó. Quick response. Phản hồi nhanh."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "BA Ô VUÔNG\nỞ GÓC",
+   "sub": "MÁY BIẾT MÃ NẰM Ở ĐÂU BẰNG CÁCH NÀO?",
+   "vid": "7287312",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Hãy"
+   ]
+  },
+  {
+   "type": "question",
+   "at": 2,
+   "text": "Mã nằm ở đâu?\nĐầu nào là đầu trên?"
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "HAI ĐỜI MÃ",
+   "rows": [
+    {
+     "k": "MÃ VẠCH",
+     "v": "PHẢI XOAY THÙNG CHO ĐÚNG CHIỀU",
+     "at": 3
+    },
+    {
+     "k": "HARA MUỐN",
+     "v": "QUÉT TỪ MỌI GÓC · TRONG CHỚP MẮT",
+     "at": 4
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 5,
+   "vid": "4832768",
+   "veil": 0.4,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "NGOÀI PHÒNG THÍ NGHIỆM",
+     "at": 5,
+     "sm": true
+    },
+    {
+     "text": "TRÊN MỘT CHUYẾN TÀU",
+     "at": [
+      6,
+      "ngồi"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 7,
+   "text": "Tôi thấy một toà nhà cao nổi bật giữa xung quanh. Cái mã cũng cần một ký hiệu đặc biệt, để nổi bật giữa chữ nghĩa.",
+   "by": "MASAHIRO HARA · IEEE SPECTRUM, 2020 · TRÍCH DỊCH",
+   "qline": 7
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "MỘT HÌNH",
+     "at": 8,
+     "sm": true
+    },
+    {
+     "text": "GẦN NHƯ KHÔNG CÓ TRONG CHỮ IN",
+     "at": [
+      8,
+      "gần"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 9,
+   "title": "TÌM BẰNG CÁCH NÀO?",
+   "srcnote": "NGUỒN: IEEE SPECTRUM, 11.2020",
+   "rows": [
+    {
+     "k": "QUÉT",
+     "v": "HÀNG LOẠT TRANG BÁO, TỜ RƠI",
+     "at": [
+      10,
+      "quét"
+     ]
+    },
+    {
+     "k": "VIẾT PHẦN MỀM",
+     "v": "ĐẾM TỶ LỆ ĐEN / TRẮNG",
+     "at": [
+      11,
+      "đếm"
+     ]
+    }
+   ],
+   "total": {
+    "k": "SAU 3 THÁNG",
+    "v": "MỘT TỶ LỆ HIẾM GẶP NHẤT",
+    "at": 12
+   }
+  },
+  {
+   "type": "qr",
+   "at": 13,
+   "ratio": {
+    "at": [
+     13,
+     "Một"
+    ]
+   },
+   "hlAt": [
+    14,
+    "ô"
+   ],
+   "side": {
+    "k": "Ô VUÔNG LỒNG Ô VUÔNG",
+    "v": "ở ba góc của mọi mã QR",
+    "at": [
+     14,
+     "ba"
+    ]
+   },
+   "label": {
+    "k": "",
+    "v": "HÌNH MINH HOẠ · KHÔNG PHẢI MÃ THẬT · NGUỒN: IEEE SPECTRUM, 11.2020",
+    "at": 13
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 15,
+   "title": "THẤY BA GÓC LÀ BIẾT",
+   "rows": [
+    {
+     "k": "1",
+     "v": "MÃ NẰM Ở ĐÂU",
+     "at": [
+      16,
+      "mã"
+     ]
+    },
+    {
+     "k": "2",
+     "v": "TO BAO NHIÊU",
+     "at": [
+      16,
+      "to"
+     ]
+    },
+    {
+     "k": "3",
+     "v": "ĐANG XOAY HƯỚNG NÀO",
+     "at": [
+      16,
+      "đang"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 17,
+   "from": 1,
+   "to": 5,
+   "prefix": "×",
+   "until": [
+    17,
+    "năm"
+   ],
+   "label": "NHANH HƠN MÃ VẠCH THÔNG THƯỜNG",
+   "sub": {
+    "text": "NGUỒN: IEEE SPECTRUM, 11.2020",
+    "at": 17
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 18,
+   "items": [
+    {
+     "text": "QR",
+     "at": [
+      18,
+      "QR"
+     ],
+     "acc": true
+    },
+    {
+     "text": "QUICK RESPONSE",
+     "at": [
+      18,
+      "Quick"
+     ]
+    },
+    {
+     "text": "phản hồi nhanh",
+     "at": [
+      18,
+      "Phản"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "BA Ô VUÔNG Ở GÓC"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

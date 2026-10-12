@@ -22,13 +22,13 @@
   "lâu"
  ],
  "lines": [
-  "Nhà đất: giá giảm ít, nhưng rất khó bán.",
-  "Quý hai năm nay, cả nước có khoảng một trăm nghìn giao dịch bất động sản.",
-  "Chỉ bằng sáu mươi tư phần trăm cùng kỳ năm ngoái, theo Bộ Xây dựng.",
+  "Nhà đất năm nay, giá giảm ít thôi, nhưng rất khó bán.",
+  "Quý hai, cả nước có khoảng một trăm nghìn giao dịch bất động sản.",
+  "Nghe thì nhiều. Nhưng chỉ bằng sáu mươi tư phần trăm cùng kỳ năm ngoái.",
   "Riêng đất nền, giao dịch giảm khoảng bốn mươi phần trăm.",
-  "Trong khi giá đất nền chỉ giảm hai đến ba phần trăm so với quý một.",
-  "Với nhà đất, con số cần nhìn không chỉ là giá.",
-  "Mà là bán được không, và mất bao lâu."
+  "Còn giá đất nền? Chỉ giảm hai đến ba phần trăm so với quý một.",
+  "Nên với nhà đất, đừng chỉ nhìn giá.",
+  "Hãy nhìn thêm: bán được không, và mất bao lâu."
  ],
  "scenes": [
   {
@@ -39,7 +39,7 @@
      "at": 0.0
     },
     {
-     "text": "GIÁ GIẢM ÍT",
+     "text": "GIÁ GIẢM ÍT THÔI",
      "at": [
       0,
       "giá"
@@ -55,7 +55,7 @@
     }
    ],
    "clip": "pexels:7066735",
-   "veil": 0.58
+   "veil": 0.55
   },
   {
    "type": "chart",
@@ -128,27 +128,48 @@
    "note": "NGUỒN: BỘ XÂY DỰNG, CAFEF"
   },
   {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "VỚI NHÀ ĐẤT",
+     "at": 5,
+     "sm": true
+    },
+    {
+     "text": "ĐỪNG CHỈ NHÌN GIÁ",
+     "at": [
+      5,
+      "đừng"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:17303434",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 5
+  },
+  {
    "type": "board",
-   "at": 5,
-   "title": "Với nhà đất, nhìn con số nào?",
+   "at": 6,
+   "title": "Nhìn thêm hai điều",
    "nodes": [
     {
      "text": "giá",
      "x": 0.5,
-     "y": 0.26,
+     "y": 0.24,
      "at": [
-      5,
-      "con"
+      6,
+      null,
+      0,
+      0.1
      ],
-     "cross": [
-      5,
-      "không"
-     ]
+     "shape": "none"
     },
     {
-     "text": "bán được không?",
+     "text": "bán được không",
      "x": 0.5,
-     "y": 0.54,
+     "y": 0.52,
      "at": [
       6,
       "bán"
@@ -157,7 +178,7 @@
      "shape": "circle"
     },
     {
-     "text": "mất bao lâu?",
+     "text": "mất bao lâu",
      "x": 0.5,
      "y": 0.82,
      "at": [
@@ -167,6 +188,26 @@
      "c": "acc",
      "shape": "circle"
     }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      6,
+      "được"
+     ],
+     "bend": 0
+    },
+    {
+     "from": 1,
+     "to": 2,
+     "at": [
+      6,
+      "và"
+     ],
+     "bend": 0
+    }
    ]
   }
  ],
@@ -174,8 +215,23 @@
   "https://baochinhphu.vn/giao-dich-giam-ton-kho-bat-dong-san-tang-trong-quy-ii-2026-102260821161433075.htm",
   "https://cafef.vn/ton-kho-bds-quy-ii-2026-tang-22-46-dat-nen-mat-gia-thanh-khoan-tram-lang-188260905092338811.chn"
  ],
- "say": {},
+ "say": {
+  "=AI": "ây ai"
+ },
  "mix": true,
  "imgs": {},
- "rules": 2
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ }
 }

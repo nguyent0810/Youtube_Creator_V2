@@ -22,13 +22,13 @@
   "lớn"
  ],
  "lines": [
-  "Từng bị coi là ngõ cụt, nay nhận Nobel.",
-  "Năm 1958, perceptron ra đời: cỗ máy tự học qua từng lần sai.",
-  "Năm 1969, một cuốn sách chỉ ra giới hạn của nó, và tiền tài trợ cạn dần.",
-  "Năm 1986, lan truyền ngược giúp mạng nhiều lớp tự sửa lỗi.",
+  "Từng bị coi là ngõ cụt. Giờ thì nhận Nobel.",
+  "Năm 1958, perceptron ra đời. Một cỗ máy tự học, qua từng lần sai.",
+  "Đến 1969, một cuốn sách chỉ ra giới hạn của nó. Tiền tài trợ cạn dần.",
+  "Năm 1986, có lối ra: lan truyền ngược, giúp mạng nhiều lớp tự sửa lỗi.",
   "Năm 2012, mạng nơ-ron thắng lớn ở cuộc thi nhận dạng ảnh.",
-  "Tháng 10 năm 2024, Nobel Vật lý về tay John Hopfield và Geoffrey Hinton.",
-  "Vì những phát minh nền tảng giúp máy học bằng mạng nơ-ron."
+  "Và tháng 10 năm 2024, Nobel Vật lý về tay John Hopfield và Geoffrey Hinton.",
+  "Lý do? Những phát minh nền tảng, giúp máy học bằng mạng nơ-ron."
  ],
  "scenes": [
   {
@@ -39,17 +39,17 @@
      "at": 0.0
     },
     {
-     "text": "NAY NHẬN NOBEL",
+     "text": "GIỜ NHẬN NOBEL",
      "at": [
       0,
-      "nay"
+      "Giờ"
      ],
      "acc": true
     }
    ],
    "clip": "pexels:6755168",
    "ms": 9,
-   "veil": 0.6
+   "veil": 0.58
   },
   {
    "type": "photo",
@@ -83,7 +83,7 @@
     {
      "text": "1969 · bị chỉ ra giới hạn",
      "x": 0.5,
-     "y": 0.26,
+     "y": 0.32,
      "at": [
       2,
       null,
@@ -98,20 +98,9 @@
     {
      "text": "1986 · lan truyền ngược",
      "x": 0.5,
-     "y": 0.52,
+     "y": 0.7,
      "at": [
       3,
-      null,
-      0,
-      0.15
-     ]
-    },
-    {
-     "text": "2012 · thắng nhận dạng ảnh",
-     "x": 0.5,
-     "y": 0.78,
-     "at": [
-      4,
       null,
       0,
       0.15
@@ -125,20 +114,41 @@
      "to": 1,
      "at": [
       3,
-      "lan"
-     ],
-     "bend": 0
-    },
-    {
-     "from": 1,
-     "to": 2,
-     "at": [
-      4,
-      "mạng"
+      "lối"
      ],
      "bend": 0
     }
    ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "2012",
+     "at": 4
+    },
+    {
+     "text": "MẠNG NƠ-RON",
+     "at": [
+      4,
+      "mạng"
+     ],
+     "sm": true
+    },
+    {
+     "text": "THẮNG LỚN",
+     "at": [
+      4,
+      "thắng"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:6755168",
+   "ms": 14,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 4
   },
   {
    "type": "photo",
@@ -165,22 +175,56 @@
    }
   },
   {
-   "type": "cards3d",
+   "type": "timeline",
    "at": 6,
-   "title": "NOBEL VẬT LÝ 2024",
-   "cards": [
+   "items": [
     {
-     "k": "JOHN HOPFIELD · GEOFFREY HINTON",
-     "v": "MẠNG NƠ-RON",
-     "sub": "phát minh nền tảng giúp máy học",
+     "year": "1958",
+     "text": "perceptron",
+     "at": [
+      6,
+      null,
+      0,
+      0.1
+     ]
+    },
+    {
+     "year": "1969",
+     "text": "“ngõ cụt”",
+     "at": [
+      6,
+      null,
+      0,
+      0.35
+     ]
+    },
+    {
+     "year": "1986",
+     "text": "lan truyền ngược",
+     "at": [
+      6,
+      null,
+      0,
+      0.6
+     ]
+    },
+    {
+     "year": "2012",
+     "text": "thắng nhận dạng ảnh",
      "at": [
       6,
       "phát"
-     ],
-     "c": "acc"
+     ]
+    },
+    {
+     "year": "2024",
+     "text": "Nobel Vật lý",
+     "at": [
+      6,
+      "giúp"
+     ]
     }
-   ],
-   "note": "NGUỒN: NOBELPRIZE.ORG · 08.10.2024"
+   ]
   }
  ],
  "sources": [
@@ -201,5 +245,18 @@
   "perceptron": "File:330-PSA-80-60 (USN 710739) (20897323365).jpg"
  },
  "mix": true,
- "rules": 2
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ }
 }

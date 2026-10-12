@@ -17,20 +17,19 @@
  "acc": [
   "hai",
   "card",
-  "mười",
   "lăm",
   "sáu",
   "song"
  ],
  "lines": [
-  "Hai card chơi game làm ngành AI quay đầu.",
-  "Năm 2012, cuộc thi nhận dạng ảnh ImageNet.",
+  "Hai chiếc card chơi game, làm cả ngành AI quay đầu.",
+  "Năm 2012, có một cuộc thi nhận dạng ảnh, tên là ImageNet.",
   "Một nhóm ở Đại học Toronto mang tới mạng nơ-ron AlexNet.",
   "Họ huấn luyện nó năm, sáu ngày, trên đúng hai chiếc card GTX 580.",
-  "Kết quả: tỉ lệ đoán sai mười lăm phần trăm.",
-  "Đội đứng thứ hai: hai mươi sáu phần trăm.",
-  "Card đồ hoạ vốn để vẽ hàng triệu điểm ảnh cùng lúc.",
-  "Mạng nơ-ron cũng cần đúng kiểu tính song song ấy."
+  "Kết quả? AlexNet đoán sai mười lăm phần trăm.",
+  "Đội đứng thứ hai, sai tới hai mươi sáu.",
+  "Vì sao lại là card chơi game? Vì nó sinh ra để vẽ hàng triệu điểm ảnh cùng một lúc.",
+  "Mà mạng nơ-ron thì cần đúng kiểu tính song song ấy."
  ],
  "scenes": [
   {
@@ -42,7 +41,7 @@
      "acc": true
     },
     {
-     "text": "LÀM NGÀNH AI QUAY ĐẦU",
+     "text": "LÀM CẢ NGÀNH AI QUAY ĐẦU",
      "at": [
       0,
       "làm"
@@ -50,7 +49,7 @@
     }
    ],
    "clip": "pexels:6755168",
-   "veil": 0.58
+   "veil": 0.55
   },
   {
    "type": "kinetic",
@@ -111,16 +110,36 @@
    }
   },
   {
-   "type": "cards3d",
+   "type": "counter",
    "at": 4,
+   "to": 15,
+   "suffix": "%",
+   "label": "ALEXNET ĐOÁN SAI",
+   "until": [
+    4,
+    "lăm"
+   ],
+   "sub": {
+    "text": "LỖI TOP-5: 15,3% · BÀI BÁO NIPS 2012",
+    "at": [
+     4,
+     "phần"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
    "title": "TỈ LỆ ĐOÁN SAI · IMAGENET 2012",
    "cards": [
     {
      "k": "ALEXNET",
      "v": "15,3%",
      "at": [
-      4,
-      "mười"
+      5,
+      null,
+      0,
+      0.05
      ],
      "c": "acc"
     },
@@ -147,16 +166,16 @@
      "y": 0.26,
      "at": [
       6,
-      "hàng"
+      "vẽ"
      ]
     },
     {
      "text": "TÍNH SONG SONG",
      "x": 0.5,
-     "y": 0.52,
+     "y": 0.54,
      "at": [
-      6,
-      "cùng"
+      7,
+      "song"
      ],
      "c": "acc",
      "shape": "circle"
@@ -164,10 +183,10 @@
     {
      "text": "mạng nơ-ron",
      "x": 0.5,
-     "y": 0.8,
+     "y": 0.82,
      "at": [
       7,
-      "cũng"
+      "mạng"
      ]
     }
    ],
@@ -177,7 +196,7 @@
      "to": 1,
      "at": [
       6,
-      "lúc"
+      "cùng"
      ],
      "bend": 0
     },
@@ -186,7 +205,7 @@
      "to": 1,
      "at": [
       7,
-      "đúng"
+      "cần"
      ],
      "bend": 0
     }
@@ -208,5 +227,19 @@
   "gtx580": "File:NVIDIA@40nm@Fermi@GF110@GeForce GTX 580@UA10B338 1041A1 N2Y540.000 GF110-375-A1 DSC04152 (27576804994).jpg"
  },
  "mix": true,
- "rules": 2
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.4
+  }
+ }
 }

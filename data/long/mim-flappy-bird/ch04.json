@@ -1,0 +1,127 @@
+{
+ "title": "Cái giá của vị trí số một",
+ "lines": [
+  {
+   "t": "Đứng đầu thế giới thì có rất nhiều người nhìn vào.",
+   "p": 0.8
+  },
+  {
+   "t": "Và không phải ai cũng nhìn với thiện cảm.",
+   "p": 1.0
+  },
+  "Một trang tin game gọi hình ảnh trong trò chơi là đồ đi mượn, vì những chiếc ống xanh trông quen mắt.",
+  {
+   "t": "Về sau, chính trang ấy đăng lời đính chính.",
+   "p": 1.0
+  },
+  "Có báo viết rằng trò chơi giống một game khác ra đời từ năm 2011.",
+  {
+   "t": "Có tin đồn một hãng game lớn của Nhật sắp kiện. Hãng ấy đã lên tiếng phủ nhận.",
+   "p": 1.0
+  },
+  "Rồi tới những thứ nặng nề hơn.",
+  {
+   "t": "Một tờ báo Anh đưa tin, tác giả nhận được cả những lời doạ giết trên mạng.",
+   "p": 1.0
+  },
+  "Về phần mình, anh kể rằng mình mất ngủ.",
+  "Thứ anh làm ra để người ta chơi vài phút lúc rảnh, giờ có người chơi hàng giờ liền.",
+  "Và đó là lúc đồng hồ bắt đầu chạy lại."
+ ],
+ "scenes": [
+  {
+   "type": "broll",
+   "vid": "31801550",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "RẤT NHIỀU NGƯỜI NHÌN VÀO",
+     "at": [
+      0,
+      "rất"
+     ],
+     "acc": true
+    },
+    {
+     "text": "không phải ai cũng có thiện cảm",
+     "at": 1,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": [
+    1,
+    "thiện"
+   ],
+   "title": "NHỮNG LỜI CHÊ",
+   "srcnote": "THEO BÁO CHÍ ĐẦU 2014",
+   "rows": [
+    {
+     "k": "MỘT TRANG TIN GAME",
+     "v": "“HÌNH ĐI MƯỢN” → SAU ĐÓ ĐÍNH CHÍNH",
+     "at": 2
+    },
+    {
+     "k": "CÓ BÁO",
+     "v": "“GIỐNG MỘT GAME NĂM 2011”",
+     "at": 4
+    },
+    {
+     "k": "TIN ĐỒN BỊ KIỆN",
+     "v": "HÃNG GAME ẤY PHỦ NHẬN",
+     "at": 5
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "NẶNG NỀ HƠN",
+   "sub": "CÓ CẢ LỜI DOẠ GIẾT TRÊN MẠNG · THE INDEPENDENT, 10.02.2014",
+   "subAt": 7
+  },
+  {
+   "type": "broll",
+   "at": 8,
+   "vid": "6944070",
+   "ms": 14,
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "ANH KỂ: MẤT NGỦ",
+     "at": 8,
+     "acc": true
+    },
+    {
+     "text": "làm để chơi vài phút · có người chơi hàng giờ",
+     "at": 9,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 10,
+   "from": 22,
+   "to": 22,
+   "suffix": " GIỜ",
+   "until": [
+    10,
+    "chạy"
+   ],
+   "label": "ĐỒNG HỒ BẮT ĐẦU CHẠY LẠI"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "CÁI GIÁ CỦA VỊ TRÍ SỐ MỘT"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

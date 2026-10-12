@@ -20,13 +20,13 @@
   "tiền"
  ],
  "lines": [
-  "Bitcoin từng mất hơn nửa giá trong chín tháng.",
-  "Đỉnh tháng mười năm ngoái: khoảng một trăm hai mươi sáu nghìn đô la.",
-  "Cuối tháng sáu năm nay: khoảng năm mươi tám nghìn đô.",
-  "Rồi quý ba bật lên hơn bốn mươi phần trăm.",
+  "Bitcoin từng mất hơn nửa giá, chỉ trong chín tháng.",
+  "Tháng mười năm ngoái, nó lên đỉnh, khoảng một trăm hai mươi sáu nghìn đô.",
+  "Cuối tháng sáu năm nay? Còn khoảng năm mươi tám nghìn.",
+  "Rồi quý ba, nó bật lại hơn bốn mươi phần trăm.",
   "Cuối tháng chín, quanh tám mươi tư nghìn đô, vẫn thấp hơn đầu năm khoảng bốn phần trăm.",
   "Ở Việt Nam, tài sản mã hoá được công nhận là tài sản, nhưng không phải là tiền.",
-  "Và không có bảo hiểm tiền gửi cho nó."
+  "Và không có bảo hiểm tiền gửi nào cho nó."
  ],
  "scenes": [
   {
@@ -54,7 +54,7 @@
     }
    ],
    "clip": "pexels:8370542",
-   "veil": 0.58
+   "veil": 0.55
   },
   {
    "type": "chart",
@@ -62,6 +62,8 @@
    "kind": "line",
    "title": "BITCOIN",
    "unit": "NGHÌN USD",
+   "min": 40,
+   "max": 140,
    "points": [
     {
      "x": 0,
@@ -79,6 +81,74 @@
      "at": [
       2,
       "tám"
+     ],
+     "tag": "~58",
+     "pos": "b"
+    },
+    {
+     "x": 11.8,
+     "v": 58.4,
+     "at": [
+      2,
+      "nghìn"
+     ],
+     "c": "dim"
+    }
+   ],
+   "ticks": [
+    {
+     "x": 0,
+     "label": "10/2025"
+    },
+    {
+     "x": 8.8,
+     "label": "6/2026"
+    },
+    {
+     "x": 11.8,
+     "label": "9/2026"
+    }
+   ],
+   "badge": {
+    "text": "−54% TỪ ĐỈNH",
+    "at": [
+     2,
+     "Còn"
+    ],
+    "c": "down"
+   },
+   "note": "NGUỒN: YAHOO FINANCE, KUCOIN · KÊNH TỰ TÍNH"
+  },
+  {
+   "type": "chart",
+   "at": 3,
+   "kind": "line",
+   "title": "BITCOIN",
+   "unit": "NGHÌN USD",
+   "min": 40,
+   "max": 140,
+   "tr": "cut",
+   "points": [
+    {
+     "x": 0,
+     "v": 126.2,
+     "at": [
+      3,
+      null,
+      0,
+      0.02
+     ],
+     "tag": "~126",
+     "pos": "t"
+    },
+    {
+     "x": 8.8,
+     "v": 58.4,
+     "at": [
+      3,
+      null,
+      0,
+      0.06
      ],
      "tag": "~58",
      "pos": "b"
@@ -149,7 +219,7 @@
    "text": "KHÔNG CÓ",
    "sub": "BẢO HIỂM TIỀN GỬI",
    "clip": "pexels:8370540",
-   "veil": 0.66
+   "veil": 0.64
   }
  ],
  "sources": [
@@ -158,9 +228,23 @@
   "https://luatvietnam.vn/tin-van-ban-moi/quy-dinh-chinh-thuc-ve-tai-san-so-tai-san-ma-hoa-tu-01-01-2026-186-103070-article.html"
  ],
  "say": {
+  "=AI": "ây ai",
   "bitcoin": "Bít-coi"
  },
  "mix": true,
  "imgs": {},
- "rules": 2
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ }
 }

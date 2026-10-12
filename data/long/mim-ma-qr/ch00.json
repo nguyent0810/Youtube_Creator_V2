@@ -1,0 +1,276 @@
+{
+ "title": "Tờ giấy trên quầy trà đá",
+ "lines": [
+  "Một quán trà đá vỉa hè.",
+  "Trên chiếc bàn nhựa, cạnh hũ kẹo lạc, có một tờ giấy ép nhựa.",
+  {
+   "t": "Bạn giơ điện thoại lên. Một giây. Ting.",
+   "p": 1.0
+  },
+  "Bạn vừa trả năm nghìn đồng, mà không cần ví, không cần tiền lẻ, không cần cả cái máy cà thẻ.",
+  {
+   "t": "Ở Việt Nam, chuyện này diễn ra khoảng mười lăm triệu lần mỗi ngày.",
+   "p": 1.0
+  },
+  "Nhưng cái ô vuông đen trắng trên tờ giấy ấy không sinh ra cho quán trà đá.",
+  "Nó cũng không sinh ra cho điện thoại.",
+  "Nó sinh ra năm 1994, trong một nhà máy linh kiện ô tô ở Nhật Bản.",
+  {
+   "t": "Và ý tưởng đến với người làm ra nó trong một ván cờ, vào giờ nghỉ trưa.",
+   "p": 1.0
+  },
+  "Lần tới, trước khi quét, bạn hãy nhìn kỹ ô vuông ấy một lần.",
+  "Có ba chi tiết mà hầu như ai cũng thấy, nhưng ít ai hỏi vì sao.",
+  "Ba ô vuông nhỏ nằm ở ba góc.",
+  "Những chấm đen trắng lộn xộn ở giữa.",
+  {
+   "t": "Và chuyện nó dính bẩn, nhàu nát, mà vẫn quét được.",
+   "p": 1.0
+  },
+  "Mỗi chi tiết là một bài toán, và một lời giải rất đời thường.",
+  "Còn một câu hỏi nữa, mình để dành tới gần cuối.",
+  "Vì sao người làm ra thứ được cả thế giới dùng mỗi ngày, lại không thu một đồng nào?"
+ ],
+ "scenes": [
+  {
+   "type": "broll",
+   "vid": "30320695",
+   "veil": 0.45,
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI QUÁN TRONG LỜI KỂ",
+   "kin": [
+    {
+     "text": "QUÁN TRÀ ĐÁ VỈA HÈ",
+     "at": 0,
+     "acc": true
+    },
+    {
+     "text": "một tờ giấy ép nhựa",
+     "at": [
+      1,
+      "có"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "qr",
+   "at": 2,
+   "modulesAt": [
+    2,
+    null,
+    0,
+    0.1
+   ],
+   "modulesUntil": [
+    2,
+    "Một"
+   ],
+   "scanAt": [
+    2,
+    "Ting."
+   ],
+   "side": {
+    "k": "1 GIÂY",
+    "v": "TING",
+    "at": [
+     2,
+     "Ting."
+    ]
+   },
+   "label": {
+    "k": "",
+    "v": "HÌNH MINH HOẠ · KHÔNG PHẢI MÃ THẬT",
+    "at": 2
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "5.000 ĐỒNG",
+   "rows": [
+    {
+     "k": "VÍ",
+     "v": "KHÔNG CẦN",
+     "at": [
+      3,
+      "ví,"
+     ]
+    },
+    {
+     "k": "TIỀN LẺ",
+     "v": "KHÔNG CẦN",
+     "at": [
+      3,
+      "lẻ,"
+     ]
+    },
+    {
+     "k": "MÁY CÀ THẺ",
+     "v": "KHÔNG CẦN",
+     "at": [
+      3,
+      "máy"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 0,
+   "to": 15,
+   "suffix": " TRIỆU",
+   "until": [
+    4,
+    "triệu"
+   ],
+   "label": "LẦN QUÉT MỖI NGÀY Ở VIỆT NAM",
+   "sub": {
+    "text": "ƯỚC TÍNH · NGUỒN: NAPAS (QUA BÁO CHÍ), 2025",
+    "at": 4
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "KHÔNG SINH RA CHO QUÁN TRÀ ĐÁ",
+     "at": [
+      5,
+      "không"
+     ]
+    },
+    {
+     "text": "KHÔNG SINH RA CHO ĐIỆN THOẠI",
+     "at": [
+      6,
+      "không"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 7,
+   "vid": "6447409",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "1994",
+     "at": [
+      7,
+      "năm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "nhà máy linh kiện ô tô · Nhật Bản",
+     "at": [
+      7,
+      "trong"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "go",
+   "at": 8,
+   "stones": 34,
+   "label": {
+    "k": "Ý TƯỞNG",
+    "v": "TỪ MỘT VÁN CỜ GIỜ NGHỈ TRƯA",
+    "at": [
+     8,
+     "trong"
+    ]
+   }
+  },
+  {
+   "type": "qr",
+   "at": 9,
+   "modulesAt": [
+    12,
+    null,
+    0,
+    0.05
+   ],
+   "modulesUntil": [
+    12,
+    "ở"
+   ],
+   "hlAt": [
+    11,
+    "Ba"
+   ],
+   "damage": {
+    "at": [
+     13,
+     "dính"
+    ],
+    "okAt": [
+     13,
+     "vẫn"
+    ],
+    "text": "DÍNH BẨN · NHÀU NÁT"
+   },
+   "side": {
+    "k": "3 CHI TIẾT",
+    "v": "ít ai hỏi vì sao",
+    "at": [
+     10,
+     "ba"
+    ]
+   },
+   "label": {
+    "k": "",
+    "v": "HÌNH MINH HOẠ · KHÔNG PHẢI MÃ THẬT",
+    "at": 9
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "MỖI CHI TIẾT",
+     "at": 14,
+     "sm": true
+    },
+    {
+     "text": "MỘT BÀI TOÁN",
+     "at": [
+      14,
+      "một"
+     ]
+    },
+    {
+     "text": "MỘT LỜI GIẢI RẤT ĐỜI THƯỜNG",
+     "at": [
+      14,
+      "lời"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 15,
+   "text": "Vì sao người làm ra nó\nkhông thu một đồng nào?",
+   "showAt": 16
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "TỜ GIẤY TRÊN QUẦY TRÀ ĐÁ"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.1
+ }
+}

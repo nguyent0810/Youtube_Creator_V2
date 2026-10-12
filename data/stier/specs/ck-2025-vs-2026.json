@@ -1,0 +1,202 @@
+{
+ "theme": "ck",
+ "title": "2025: chứng khoán +41%, vàng +65%. 9 tháng 2026: bảng xếp hạng đảo ngược",
+ "description": "Năm 2025: VN-Index +40,87%; vàng thế giới +65%; tiền gửi 12 tháng ở nhóm ngân hàng lớn dưới 5%/năm (CafeF 01/01/2026). 9 tháng đầu 2026 (tới 30/09): VN-Index −0,9%; vàng miếng trong nước −7,7% (mua đầu năm 152,8 → bán lại 141,1 triệu/lượng); tiền gửi 12 tháng mở đầu năm lãi dồn tích +3,9% (5,2% × 9/12) — kênh tự tính. Lưu ý hai cột vàng khác nhau: 2025 là vàng thế giới (USD), 2026 là vàng miếng trong nước (đã tính chênh lệch mua–bán). Thứ hạng một năm không cho biết thứ hạng năm sau.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.",
+ "tags": [
+  "kênh giữ tiền 2026",
+  "vn-index 2025",
+  "giá vàng 2025",
+  "tiết kiệm",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "kicker": "1 BIỂU ĐỒ",
+ "sub": "2025 ↔ 2026",
+ "acc": [
+  "đảo",
+  "ngược",
+  "mốt",
+  "lăm",
+  "tám",
+  "chắc"
+ ],
+ "lines": [
+  "Năm ngoái thắng lớn, năm nay đảo ngược.",
+  "Năm 2025, VN-Index tăng gần bốn mươi mốt phần trăm.",
+  "Vàng thế giới tăng sáu mươi lăm phần trăm.",
+  "Còn sổ tiết kiệm ở ngân hàng lớn, chưa tới năm phần trăm.",
+  "Chín tháng đầu năm nay thì ngược lại.",
+  "VN-Index gần như đứng yên. Vàng miếng giảm gần tám phần trăm. Chỉ sổ tiết kiệm còn dương.",
+  "Kênh dẫn đầu năm trước, chưa chắc dẫn đầu năm sau."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NĂM NGOÁI THẮNG LỚN",
+     "at": 0.0
+    },
+    {
+     "text": "NĂM NAY ĐẢO NGƯỢC",
+     "at": [
+      0,
+      "năm",
+      1
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:8369982",
+   "ms": 6,
+   "veil": 0.58
+  },
+  {
+   "type": "chart",
+   "at": 1,
+   "kind": "bars",
+   "title": "CẢ NĂM 2025",
+   "unit": "% THAY ĐỔI",
+   "bars": [
+    {
+     "label": "VN-INDEX",
+     "v": 40.9,
+     "text": "+40,9%",
+     "c": "up",
+     "at": [
+      1,
+      "bốn"
+     ]
+    },
+    {
+     "label": "VÀNG\nTHẾ GIỚI",
+     "v": 65,
+     "text": "+65%",
+     "c": "#fbbf24",
+     "at": [
+      2,
+      "sáu"
+     ]
+    },
+    {
+     "label": "TIẾT KIỆM\n12 THÁNG",
+     "v": 4.8,
+     "text": "< 5%",
+     "c": "ref",
+     "at": [
+      3,
+      "chưa"
+     ]
+    }
+   ],
+   "note": "NGUỒN: CAFEF 01/01/2026"
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "NGƯỢC LẠI",
+   "sub": "9 THÁNG ĐẦU 2026",
+   "clip": "pexels:8369982",
+   "ms": 14,
+   "veil": 0.64
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "9 THÁNG ĐẦU 2026",
+   "cards": [
+    {
+     "k": "VN-INDEX",
+     "v": "−0,9%",
+     "at": [
+      5,
+      "đứng"
+     ],
+     "c": "down"
+    },
+    {
+     "k": "VÀNG MIẾNG · MUA ĐẦU NĂM, BÁN LẠI",
+     "v": "−7,7%",
+     "at": [
+      5,
+      "giảm"
+     ],
+     "c": "down"
+    },
+    {
+     "k": "TIẾT KIỆM 12 THÁNG · LÃI DỒN",
+     "v": "+3,9%",
+     "at": [
+      5,
+      "sổ"
+     ],
+     "c": "up"
+    }
+   ],
+   "note": "KÊNH TỰ TÍNH · TỚI 30/09/2026"
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Điều hai biểu đồ nhắc",
+   "nodes": [
+    {
+     "text": "dẫn đầu năm trước",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      6,
+      "dẫn"
+     ]
+    },
+    {
+     "text": "dẫn đầu năm sau",
+     "x": 0.5,
+     "y": 0.7,
+     "at": [
+      6,
+      "dẫn",
+      1
+     ]
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      6,
+      "chưa"
+     ],
+     "label": "chưa chắc",
+     "c": "acc",
+     "bend": 0
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://cafef.vn/hieu-suat-cac-kenh-dau-tu-nam-2025-vang-bac-len-ngoi-chung-khoan-vuot-dinh-nhung-la-lam-188260101230517861.chn",
+  "https://www.vietnamplus.vn/gia-vang-ngay-610-bang-gia-tai-cac-cong-ty-vang-bac-da-quy-trong-nuoc-post1140249.vnp",
+  "https://tuoitre.vn/vn-index-mat-hon-63-diem-trong-thang-9-co-phieu-nao-giam-manh-nhat-100261001125805176.htm"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "vn-index": "Vi En In-đéc"
+ },
+ "imgs": {}
+}
