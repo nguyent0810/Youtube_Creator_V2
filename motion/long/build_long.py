@@ -513,6 +513,27 @@ def unresolved_cues(o, path=""):
     return out
 
 
+# Thẻ sổ (ledger): mỗi dòng là "khoá  giá trị" trên MỘT hàng, chữ JetBrains Mono (rộng 0,6 em), không xuống dòng.
+# (ô trong, cỡ chữ dòng, cỡ chữ dòng tổng, khoảng cách, bề rộng tối thiểu của khoá tính theo em) -- lấy từ casewide.css.
+LEDGER_BOX = {"lab": (1128, 46, 52, 48, 2.2), "chart": (1208, 34, 40, 24, 0), None: (968, 34, 40, 24, 0)}
+
+
+def ledger_overflow(scenes, theme) -> list[str]:
+    """Dòng sổ dài hơn ô -> khoá và giá trị đè lên nhau / tràn khỏi thẻ. Retro 4 (12/10/2026): MIM "Flappy Bird" đã upload với
+    2 dòng như vậy (ch02, ch05); soi khung hình chỉ bắt được 1 dòng (ch04). Chốt: đo trước khi render, vượt là dừng."""
+    box, fs, fst, gap, kmin = LEDGER_BOX.get(theme, LEDGER_BOX[None])
+    out = []
+    for k, sc in enumerate(scenes):
+        if sc["type"] != "ledger":
+            continue
+        for r in [*sc.get("rows", []), *([{**sc["total"], "tot": True}] if sc.get("total") else [])]:
+            f = fst if r.get("tot") else fs
+            w = (max(len(str(r.get("k", ""))) * 0.6, kmin) + len(str(r.get("v", ""))) * 0.6) * f + gap
+            if w > box:
+                out.append(f"ledger#{k} \"{r.get('k')} | {r.get('v')}\" ≈ {w:.0f}px > {box}px")
+    return out
+
+
 def _starts(o, key=None):
     """Mọi mốc BẮT ĐẦU hiện (at, *At, flips, wt[0]) trong một cảnh đã plan."""
     if isinstance(o, dict):
@@ -780,6 +801,9 @@ def do_html(topic, only=None):
         bad = [c for k, sc in enumerate(scenes) for c in unresolved_cues(sc, f"{sc['type']}#{k}")]
         if bad:
             raise SystemExit(f"{name}: mốc chưa đổi ra giây (thêm khoá vào BLD.ANCHORS): " + "; ".join(bad))
+        wide = ledger_overflow(scenes, THEME["name"])
+        if wide:
+            raise SystemExit(f"{name}: dòng sổ dài hơn thẻ (rút gọn khoá/giá trị): " + "; ".join(wide))
         seed = sum(ord(c) * (i + 1) for i, c in enumerate(topic + name)) % 100000 + 7
         case = {"topic": topic, "ch": name, "dur": d, "seed": seed, "accent": spec.get("accent", CHAN.get("accent", "#e2402d")), "look": look,
                 "theme": THEME["name"] or None, **({"brand": CHAN["brand"]} if CHAN.get("brand") else {}), "autoTr": spec.get("autoTr", spec.get("theme") == "shanghai"), "hud": ch.get("hud", {}),

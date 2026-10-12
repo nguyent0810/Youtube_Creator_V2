@@ -82,7 +82,7 @@ CH["ch03"] = {"hud": {"k": "CHƯƠNG 03", "t": "BA Ô VUÔNG Ở GÓC"}, "bgm": 
      "titleAt": [0, "Hãy"]},
     {"type": "question", "at": 2, "text": "Mã nằm ở đâu?\nĐầu nào là đầu trên?"},
     {"type": "ledger", "at": 3, "title": "HAI ĐỜI MÃ", "rows": [{"k": "MÃ VẠCH", "v": "PHẢI XOAY THÙNG CHO ĐÚNG CHIỀU", "at": 3},
-                                                             {"k": "HARA MUỐN", "v": "QUÉT TỪ MỌI GÓC · TRONG CHỚP MẮT", "at": 4}]},
+                                                             {"k": "HARA MUỐN", "v": "QUÉT MỌI GÓC · TRONG CHỚP MẮT", "at": 4}]},
     {"type": "broll", "at": 5, "vid": "4832768", "veil": 0.4, "illus": VM,
      "kin": [{"text": "NGOÀI PHÒNG THÍ NGHIỆM", "at": 5, "sm": True}, {"text": "TRÊN MỘT CHUYẾN TÀU", "at": [6, "ngồi"], "acc": True}]},
     {"type": "quote", "at": 7, "text": "Tôi thấy một toà nhà cao nổi bật giữa xung quanh. Cái mã cũng cần một ký hiệu đặc biệt, để nổi bật giữa chữ nghĩa.",

@@ -1,0 +1,155 @@
+{
+ "theme": "mim",
+ "title": "Mã QR giả dán đè lên mã thật: ba thói quen nhỏ trước khi chuyển tiền",
+ "description": "Mã QR dễ in nên kẻ gian cũng in được: thủ đoạn đơn giản nhất là dán một mã giả chồng lên mã thật của cửa hàng, khách quét và tiền đi sang tài khoản người lạ. Công an Hà Nội đã cảnh báo về các kiểu lừa đảo dùng mã QR độc hại (mã dẫn tới trang web giả, mã gửi qua tin nhắn giả danh). Ba thói quen: nhìn tên người nhận trước khi bấm chuyển; thấy mã dán chồng thì hỏi lại người bán; không quét mã lạ gửi qua tin nhắn, nhất là khi bị giục. Video không hướng dẫn cách tạo mã giả. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.",
+ "tags": [
+  "mã qr",
+  "lừa đảo mã qr",
+  "mã qr giả",
+  "an toàn chuyển khoản",
+  "công nghệ quanh ta",
+  "mind in the machine"
+ ],
+ "kicker": "CÔNG NGHỆ QUANH TA",
+ "sub": "MÃ QR · CẢNH GIÁC",
+ "acc": [
+  "giả",
+  "đè",
+  "tên",
+  "hỏi",
+  "giục"
+ ],
+ "lines": [
+  "Mắt người không đọc được mã QR. Kẻ gian biết điều đó.",
+  "Thủ đoạn đơn giản nhất, là dán đè. Một mã giả chồng lên mã thật của cửa hàng.",
+  "Khách quét, và tiền đi sang tài khoản người lạ.",
+  "Có ba thói quen nhỏ, bạn tập được ngay.",
+  "Một. Trước khi bấm chuyển, nhìn tên người nhận trên màn hình.",
+  "Hai. Thấy mã dán chồng lên mã khác, hỏi lại người bán.",
+  "Ba. Đừng quét mã lạ gửi qua tin nhắn, nhất là khi bị giục."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MẮT NGƯỜI KHÔNG ĐỌC ĐƯỢC",
+     "at": 0.0
+    },
+    {
+     "text": "KẺ GIAN BIẾT ĐIỀU ĐÓ",
+     "at": [
+      0,
+      "Kẻ"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:8384432",
+   "ms": 2,
+   "veil": 0.55
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "DÁN ĐÈ",
+   "sub": "MÃ GIẢ CHỒNG LÊN MÃ THẬT"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "KHÁCH QUÉT",
+     "at": 2,
+     "sm": true
+    },
+    {
+     "text": "TIỀN SANG TÀI KHOẢN LẠ",
+     "at": [
+      2,
+      "tiền"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:8830587",
+   "ms": 6,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 2
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 3,
+   "suffix": " THÓI QUEN",
+   "label": "NHỎ · TẬP ĐƯỢC NGAY",
+   "until": [
+    3,
+    "thói"
+   ],
+   "sub": {
+    "text": "TRƯỚC KHI CHUYỂN TIỀN",
+    "at": [
+     3,
+     "bạn"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "TRƯỚC KHI BẤM CHUYỂN",
+   "cards": [
+    {
+     "k": "1",
+     "v": "NHÌN TÊN NGƯỜI NHẬN",
+     "at": [
+      4,
+      "nhìn"
+     ]
+    },
+    {
+     "k": "2",
+     "v": "MÃ DÁN CHỒNG → HỎI LẠI",
+     "at": [
+      5,
+      "hỏi"
+     ]
+    },
+    {
+     "k": "3",
+     "v": "KHÔNG QUÉT MÃ LẠ BỊ GIỤC",
+     "at": [
+      6,
+      "Đừng"
+     ],
+     "c": "acc"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://www.qrcode.com/en/history/",
+  "https://spectrum.ieee.org/how-a-board-game-and-skyscrapers-inspired-the-development-of-the-qr-code"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "qr": "quy a"
+ },
+ "imgs": {}
+}

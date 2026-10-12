@@ -1,0 +1,236 @@
+{
+ "theme": "ck",
+ "title": "Cùng 3 triệu, tháng rẻ mua được gấp 2,7 lần tháng đắt: cơ chế của mua đều mỗi tháng",
+ "description": "PHÉP THỬ TRÊN SỐ LIỆU QUÁ KHỨ (VN-Index): cùng 3 triệu đồng, mua ở phiên đầu tháng 4/2020 (chỉ số quanh 680 điểm) được khoảng 4,41 “phần chỉ số” (quy ước 3 triệu ÷ điểm × 1.000); mua ở phiên đầu tháng 7/2026 (quanh 1.867 điểm) chỉ được khoảng 1,61 — chênh khoảng 2,7 lần. Số tiền cố định tự mua nhiều hơn khi giá thấp và ít hơn khi giá cao, nên giá mua bình quân (khoảng 1.170 điểm) thấp hơn trung bình giá các ngày mua (khoảng 1.231 điểm). Minh hoạ trên chỉ số; chưa tính phí, thuế, cổ tức.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.",
+ "tags": [
+  "mua đều mỗi tháng",
+  "trung bình giá",
+  "giá vốn bình quân",
+  "vn-index",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "kicker": "1 CƠ CHẾ",
+ "sub": "MUA ĐỀU MỖI THÁNG",
+ "acc": [
+  "nhiều",
+  "rẻ",
+  "đắt",
+  "bảy",
+  "thấp"
+ ],
+ "lines": [
+  "Mua đều mỗi tháng có một cơ chế, ít người để ý.",
+  "Số tiền thì cố định. Nhưng thứ bạn mua được, thì không.",
+  "Kênh mình thử trên số liệu quá khứ của VN-Index, với ba triệu mỗi tháng.",
+  "Tháng 4 năm 2020, chỉ số quanh sáu trăm tám mươi điểm. Ba triệu mua được rất nhiều.",
+  "Tháng 7 năm 2026, chỉ số gần một nghìn chín trăm điểm. Cũng ba triệu, mua được ít hơn khoảng hai phẩy bảy lần.",
+  "Tức là tiền của bạn tự mua nhiều lúc rẻ, và mua ít lúc đắt.",
+  "Nên giá mua bình quân, thấp hơn trung bình giá của các ngày mua."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MUA ĐỀU MỖI THÁNG",
+     "at": 0.0
+    },
+    {
+     "text": "MỘT CƠ CHẾ ÍT NGƯỜI ĐỂ Ý",
+     "at": [
+      0,
+      "ít"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7010551",
+   "ms": 14,
+   "veil": 0.58
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "CỐ ĐỊNH VÀ KHÔNG CỐ ĐỊNH",
+   "cards": [
+    {
+     "k": "SỐ TIỀN",
+     "v": "CỐ ĐỊNH · 3 TRIỆU",
+     "at": [
+      1,
+      "cố"
+     ]
+    },
+    {
+     "k": "THỨ MUA ĐƯỢC",
+     "v": "THAY ĐỔI THEO GIÁ",
+     "at": [
+      1,
+      "Nhưng"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "PHÉP THỬ",
+     "at": 2,
+     "sm": true
+    },
+    {
+     "text": "SỐ LIỆU QUÁ KHỨ",
+     "at": [
+      2,
+      "số"
+     ],
+     "acc": true
+    },
+    {
+     "text": "VN-Index · 3 triệu mỗi tháng",
+     "at": [
+      2,
+      "với"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7356018",
+   "ms": 12,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 2
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "THÁNG 4/2020 · ~680 ĐIỂM",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "3 TRIỆU MUA ĐƯỢC RẤT NHIỀU",
+     "at": [
+      3,
+      "Ba"
+     ],
+     "acc": true
+    }
+   ],
+   "at": 3
+  },
+  {
+   "type": "chart",
+   "at": 4,
+   "kind": "bars",
+   "title": "CÙNG 3 TRIỆU MUA ĐƯỢC BAO NHIÊU",
+   "unit": "“PHẦN CHỈ SỐ” · QUY ƯỚC 3 TRIỆU ÷ ĐIỂM × 1.000",
+   "bars": [
+    {
+     "label": "04/2020\n~680 ĐIỂM",
+     "v": 4.41,
+     "text": "4,41",
+     "c": "up",
+     "at": [
+      4,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "label": "07/2026\n~1.867 ĐIỂM",
+     "v": 1.61,
+     "text": "1,61",
+     "c": "down",
+     "at": [
+      4,
+      "Cũng"
+     ]
+    }
+   ],
+   "note": "CHÊNH ~2,7 LẦN · KÊNH TỰ TÍNH · QUÁ KHỨ"
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Tiền tự làm việc này",
+   "nodes": [
+    {
+     "text": "mua nhiều lúc rẻ",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      5,
+      "mua"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "mua ít lúc đắt",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      5,
+      "mua",
+      1
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 600
+    }
+   ],
+   "note": "CƠ CHẾ · KHÔNG PHẢI LỜI KHUYÊN"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "GIÁ MUA BÌNH QUÂN ~1.170",
+     "at": 6,
+     "acc": true
+    },
+    {
+     "text": "thấp hơn trung bình giá các ngày mua ~1.231",
+     "at": [
+      6,
+      "thấp"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7703941",
+   "ms": 2,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 6
+  }
+ ],
+ "sources": [
+  "https://benefitspro.com/2012/10/31/lump-sum-investing-vs-dollar-cost-averaging",
+  "https://robberger.com/lump-sum-investing-vs-dollar-cost-averaging"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "vn-index": "Vi En In-đéc"
+ },
+ "imgs": {}
+}

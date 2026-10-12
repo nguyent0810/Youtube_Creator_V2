@@ -1,0 +1,179 @@
+{
+ "theme": "mim",
+ "title": "Mười mã vạch trên một thùng hàng: bài toán đẻ ra mã QR",
+ "description": "Đầu thập niên 1990 ở Denso (Nhật), mỗi thùng linh kiện đi qua nhà máy đều phải quét mã vạch. Loại mã vạch phổ biến chỉ chứa khoảng 12 chữ số nên người ta dán thêm mã; kỹ sư Masahiro Hara kể có thùng mang hơn mười mã vạch, công nhân phát mệt vì quét đi quét lại. Năm 1992 ông lập một nhóm nhỏ với đề bài: một loại mã chứa thật nhiều thông tin mà chỉ cần quét một lần. Mã QR ra mắt năm 1994 (IEEE Spectrum, 11/2020; lời Hara qua Nippon.com). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.",
+ "tags": [
+  "mã qr",
+  "mã vạch",
+  "masahiro hara",
+  "denso",
+  "lịch sử công nghệ",
+  "công nghệ quanh ta",
+  "mind in the machine"
+ ],
+ "kicker": "CÔNG NGHỆ QUANH TA",
+ "sub": "DENSO · 1992",
+ "acc": [
+  "mười",
+  "hai",
+  "mệt",
+  "một",
+  "bốn"
+ ],
+ "lines": [
+  "Mã QR sinh ra, vì công nhân quá mệt với mã vạch.",
+  "Đầu những năm 1990, ở một hãng linh kiện ô tô Nhật, thùng hàng nào cũng phải quét mã.",
+  "Nhưng mã vạch phổ biến chỉ chứa khoảng mười hai chữ số.",
+  "Không đủ, nên người ta dán thêm. Có thùng mang hơn mười mã vạch.",
+  "Mười lần quét cho một thùng hàng. Nhân với cả một nhà máy.",
+  "Năm 1992, kỹ sư Masahiro Hara nhận một đề bài nghe rất đơn giản.",
+  "Chứa thật nhiều thông tin, mà chỉ cần quét một lần. Hai năm sau, mã QR ra mắt."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MÃ QR SINH RA",
+     "at": 0.0
+    },
+    {
+     "text": "VÌ CÔNG NHÂN QUÁ MỆT",
+     "at": [
+      0,
+      "vì"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:38052460",
+   "ms": 8,
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "ĐẦU NHỮNG NĂM 1990",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "THÙNG NÀO CŨNG PHẢI QUÉT",
+     "at": [
+      1,
+      "thùng"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7287317",
+   "ms": 6,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 12,
+   "suffix": " CHỮ SỐ",
+   "label": "SỨC CHỨA CỦA MÃ VẠCH PHỔ BIẾN",
+   "until": [
+    2,
+    "hai"
+   ],
+   "sub": {
+    "text": "KHOẢNG · THEO IEEE SPECTRUM",
+    "at": [
+     2,
+     "chữ"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Không đủ thì dán thêm",
+   "nodes": [
+    {
+     "text": "một thùng hàng",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      3,
+      "dán"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "hơn 10 mã vạch",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      3,
+      "hơn"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 620
+    }
+   ],
+   "note": "THEO LỜI KỂ CỦA MASAHIRO HARA"
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "10 LẦN QUÉT",
+   "sub": "CHO MỘT THÙNG HÀNG"
+  },
+  {
+   "type": "timeline",
+   "at": 5,
+   "items": [
+    {
+     "year": "1992",
+     "text": "đề bài: nhiều thông tin, quét một lần",
+     "at": [
+      5,
+      null,
+      0,
+      0.1
+     ]
+    },
+    {
+     "year": "1994",
+     "text": "mã QR ra mắt",
+     "at": [
+      6,
+      "Hai"
+     ]
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://spectrum.ieee.org/how-a-board-game-and-skyscrapers-inspired-the-development-of-the-qr-code"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "qr": "quy a",
+  "masahiro": "Ma-xa-hi-rô",
+  "hara": "Ha-ra"
+ },
+ "imgs": {}
+}

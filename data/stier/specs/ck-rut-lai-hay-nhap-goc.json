@@ -1,0 +1,207 @@
+{
+ "theme": "ck",
+ "title": "100 triệu sau 30 năm: rút lãi ra tiêu được 280 triệu, để lãi nhập gốc được khoảng 574 triệu",
+ "description": "VÍ DỤ GIẢ ĐỊNH: 100 triệu đồng, lãi 6%/năm không đổi, 30 năm. Nếu năm nào cũng rút tiền lãi ra tiêu (lãi đơn): gốc 100 triệu cộng 180 triệu tiền lãi = 280 triệu. Nếu để lãi nhập vào gốc mỗi năm (lãi kép): khoảng 574 triệu. Khác biệt đến từ “lãi của tiền lãi”: năm thứ hai, 6% tính trên 106 triệu chứ không phải 100 triệu. Mức 6% là giả định để minh hoạ phép tính, không phải lãi của sản phẩm nào, không phải dự báo; chưa trừ lạm phát.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.",
+ "tags": [
+  "lãi kép",
+  "lãi đơn",
+  "lãi nhập gốc",
+  "tiết kiệm",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "kicker": "1 PHÉP SO",
+ "sub": "LÃI ĐƠN · LÃI KÉP",
+ "acc": [
+  "lãi",
+  "sáu",
+  "đôi",
+  "năm",
+  "giả"
+ ],
+ "lines": [
+  "Cùng một trăm triệu, cùng một mức lãi. Hai cách làm, hai kết quả rất xa nhau.",
+  "Ví dụ giả định, lãi sáu phần trăm một năm, trong ba mươi năm.",
+  "Cách một. Năm nào cũng rút tiền lãi ra tiêu. Cuối cùng bạn có hai trăm tám mươi triệu.",
+  "Cách hai. Để lãi nhập vào gốc. Khoảng năm trăm bảy mươi tư triệu.",
+  "Hơn gấp đôi. Vì năm thứ hai, lãi tính trên một trăm lẻ sáu triệu, không phải một trăm.",
+  "Phần chênh ấy, là lãi của tiền lãi.",
+  "Và nhớ, sáu phần trăm chỉ là giả định, chưa trừ lạm phát."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CÙNG 100 TRIỆU",
+     "at": 0.0
+    },
+    {
+     "text": "HAI KẾT QUẢ RẤT XA NHAU",
+     "at": [
+      0,
+      "hai",
+      1
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:8369982",
+   "ms": 4,
+   "veil": 0.58
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "VÍ DỤ GIẢ ĐỊNH",
+   "cards": [
+    {
+     "k": "GỐC",
+     "v": "100 TRIỆU",
+     "at": [
+      1,
+      null,
+      0,
+      0.1
+     ]
+    },
+    {
+     "k": "LÃI",
+     "v": "6%/NĂM",
+     "at": [
+      1,
+      "lãi"
+     ],
+     "c": "acc"
+    },
+    {
+     "k": "THỜI GIAN",
+     "v": "30 NĂM",
+     "at": [
+      1,
+      "trong"
+     ]
+    }
+   ],
+   "note": "KHÔNG PHẢI DỰ BÁO"
+  },
+  {
+   "type": "chart",
+   "at": 2,
+   "kind": "bars",
+   "title": "100 TRIỆU SAU 30 NĂM",
+   "unit": "TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH · LÃI 6%/NĂM KHÔNG ĐỔI · KHÔNG PHẢI DỰ BÁO",
+   "bars": [
+    {
+     "label": "RÚT LÃI\nRA TIÊU",
+     "v": 280,
+     "text": "280",
+     "c": "dim",
+     "at": [
+      2,
+      "hai"
+     ]
+    },
+    {
+     "label": "ĐỂ LÃI\nNHẬP GỐC",
+     "v": 574,
+     "text": "~574",
+     "c": "ref",
+     "at": [
+      3,
+      "Khoảng"
+     ]
+    }
+   ],
+   "note": "HƠN GẤP ĐÔI · CHƯA TRỪ LẠM PHÁT"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NĂM THỨ HAI",
+     "at": 4,
+     "sm": true
+    },
+    {
+     "text": "LÃI TÍNH TRÊN 106 TRIỆU",
+     "at": [
+      4,
+      "lãi"
+     ],
+     "acc": true
+    },
+    {
+     "text": "không phải 100",
+     "at": [
+      4,
+      "không"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7010551",
+   "ms": 3,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 4
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "LÃI CỦA TIỀN LÃI",
+   "sub": "PHẦN CHÊNH GIỮA HAI CÁCH"
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Đừng quên",
+   "nodes": [
+    {
+     "text": "6% chỉ là giả định",
+     "x": 0.5,
+     "y": 0.32,
+     "at": [
+      6,
+      "sáu"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "chưa trừ lạm phát",
+     "x": 0.5,
+     "y": 0.66,
+     "at": [
+      6,
+      "chưa"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 640
+    }
+   ],
+   "note": "GIÁO DỤC · KHÔNG PHẢI KHUYẾN NGHỊ"
+  }
+ ],
+ "sources": [
+  "https://topi.vn/ty-le-lam-phat-o-viet-nam-qua-cac-nam.html",
+  "https://baoquangninh.vn/cpi-binh-quan-nam-2024-tang-3-63-dat-muc-tieu-quoc-hoi-de-ra-3338442.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {},
+ "imgs": {}
+}
