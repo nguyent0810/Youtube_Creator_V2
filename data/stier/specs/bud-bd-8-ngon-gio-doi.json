@@ -1,0 +1,177 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "ba-dieu",
+ "hook_type": "con-so",
+ "open_shot": "co-gio",
+ "voice": "Thiền Tâm Đức",
+ "music": "fluidscape.mp3",
+ "gap": 0.1,
+ "title": "8 ngọn gió đời ai cũng gặp",
+ "kicker": "BA ĐIỀU",
+ "sub": "KINH TĂNG CHI 8.6",
+ "acc": [
+  "gió",
+  "vô"
+ ],
+ "lines": [
+  "Có tám ngọn gió thổi vào đời mỗi người. Không ai tránh được.",
+  "Kinh Tăng Chi tám chấm sáu: được và mất, danh và không danh.",
+  "Khen và chê, sướng và khổ.",
+  "Người không hiểu thì bị cuốn đi. Người hiểu biết thấy vô thường, nên không lay.",
+  "Hôm nay khen hay chê, cũng chỉ là gió.",
+  "Ngọn gió nào đang thổi vào bạn? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "8 NGỌN GIÓ ĐỜI",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "không ai tránh được",
+     "at": [
+      0,
+      "Không"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:30639171"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 8,
+   "suffix": " NGỌN GIÓ",
+   "label": "ĐƯỢC · MẤT · DANH · KHÔNG DANH",
+   "until": [
+    1,
+    "được"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "KHEN · CHÊ",
+     "at": [
+      2,
+      "Khen"
+     ],
+     "acc": true
+    },
+    {
+     "text": "sướng · khổ",
+     "at": [
+      2,
+      "sướng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:19280141"
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Trước gió",
+   "nodes": [
+    {
+     "text": "BỊ CUỐN ĐI",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      3,
+      "cuốn"
+     ],
+     "shape": "box",
+     "cross": [
+      3,
+      "biết"
+     ]
+    },
+    {
+     "text": "VÔ THƯỜNG · KHÔNG LAY",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      3,
+      "vô"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "AN 8.6"
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "CHỈ LÀ GIÓ",
+   "cards": [
+    {
+     "k": "KHEN",
+     "v": "GIÓ",
+     "at": [
+      4,
+      "khen"
+     ]
+    },
+    {
+     "k": "CHÊ",
+     "v": "GIÓ",
+     "at": [
+      4,
+      "chê,"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "NGỌN GIÓ NÀO?",
+     "at": [
+      5,
+      "Ngọn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "đang thổi vào bạn",
+     "at": [
+      5,
+      "thổi"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:38162924"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/an8.6/en/sujato"
+ ],
+ "description": "8 ngọn gió đời ai cũng gặp\n\nNguồn: https://suttacentral.net/an8.6/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

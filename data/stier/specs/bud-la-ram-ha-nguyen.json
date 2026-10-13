@@ -1,0 +1,152 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "lich-am",
+ "hook_type": "menh-lenh",
+ "open_shot": "trang-ram",
+ "voice": "Ngọc Huyền",
+ "music": "clean_soul.mp3",
+ "gap": 0.2,
+ "ambience": {
+  "bed": "water",
+  "gain": 0.35,
+  "hits": [
+   {
+    "at": 0.1,
+    "kind": "bell",
+    "gain": 0.8
+   }
+  ]
+ },
+ "title": "Rằm tháng 10: Tết Hạ Nguyên là gì?",
+ "kicker": "RẰM THÁNG MƯỜI",
+ "sub": "TẾT HẠ NGUYÊN · 23/11/2026",
+ "acc": [
+  "cảm",
+  "ơn"
+ ],
+ "lines": [
+  "Hôm nay Rằm tháng Mười, Tết Hạ Nguyên. Dành một phút để cảm ơn.",
+  "Hai mươi ba tháng mười một năm nay, là ngày mười lăm tháng mười âm lịch.",
+  "Hạ Nguyên, còn gọi là Tết cơm mới: tạ ơn trời đất và tổ tiên, sau mùa gặt.",
+  "Phật tử thì tri ân và làm việc thiện. Gợi ý: cảm ơn người nấu cơm.",
+  "Bình luận chữ cảm ơn, gửi một người nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "DÀNH 1 PHÚT CẢM ƠN",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "Rằm tháng Mười · Hạ Nguyên",
+     "at": [
+      0,
+      "Tết"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:30894034"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 15,
+   "suffix": "/10 ÂM",
+   "label": "HÔM NAY · 23/11/2026",
+   "until": [
+    1,
+    "lăm"
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "TẾT\nCƠM MỚI",
+   "fx": "zoom",
+   "sub": "TẠ ƠN SAU MÙA GẶT"
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Rằm Hạ Nguyên",
+   "nodes": [
+    {
+     "text": "TRI ÂN",
+     "x": 0.5,
+     "y": 0.2,
+     "at": [
+      3,
+      "tri"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "LÀM VIỆC THIỆN",
+     "x": 0.5,
+     "y": 0.47,
+     "at": [
+      3,
+      "thiện."
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "CẢM ƠN NGƯỜI NẤU",
+     "x": 0.5,
+     "y": 0.74,
+     "at": [
+      3,
+      "nấu"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "GIÁC NGỘ ONLINE"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "CẢM ƠN AI?",
+     "at": [
+      4,
+      "Bình"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận gửi một người",
+     "at": [
+      4,
+      "gửi"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:35995794"
+  }
+ ],
+ "sources": [
+  "https://giacngo.vn/gia-tri-tam-linh-cua-le-hoi-ram-thang-muoi-post6635.html"
+ ],
+ "description": "Rằm tháng 10: Tết Hạ Nguyên là gì?\n\nNguồn: https://giacngo.vn/gia-tri-tam-linh-cua-le-hoi-ram-thang-muoi-post6635.html",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

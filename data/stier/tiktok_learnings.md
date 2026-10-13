@@ -143,3 +143,11 @@
 - CTA có highlight: tiếp tục giữ ≤ 16 ký tự.
 - File lịch đăng: `sched_75_82.txt`.
 
+
+## 15. Lô #83–#90 (20–23/11, có Rằm tháng 10 = Tết Hạ Nguyên)
+- Ước lượng words/3.4 hụt ~2.5–3 s với video 6 dòng/gap 0.2 (dự 22–23 s → thực 25–26 s). Với 6 dòng: nhắm ≤ 65 từ, gap 0.1–0.15.
+- Kinetic có 2 item: anchor của dòng nhỏ (sm) phải nằm SAU anchor của dòng chính, nếu không frame đầu hiện dòng nhỏ trước, chồng lên tiêu đề (#83, #90).
+- Ngày đặc biệt (Rằm Hạ Nguyên): ambience water + bell/gong mở đầu, clip trăng tròn + đồng lúa VN thu hoạch; counter dạng ngày "15/10 ÂM" làm D-scene rất hợp.
+- Đã xác minh 23/11/2026 = 15/10 âm (lunardate). Tên riêng Pali trên màn hình nên dùng phiên âm Việt (La Hầu La, Mạt Lợi) để tránh lỗi dấu ā/ṅ; giữ Pali trong caption.
+- Thứ tự cảnh lên kế hoạch trước cho cả lô → 0 cảnh báo lặp.
+

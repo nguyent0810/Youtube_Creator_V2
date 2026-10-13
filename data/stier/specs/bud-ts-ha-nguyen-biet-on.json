@@ -1,0 +1,170 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "truoc-sau",
+ "hook_type": "noi-dau",
+ "open_shot": "trang-len",
+ "voice": "Mỹ Duyên",
+ "music": "ether_vox.mp3",
+ "gap": 0.15,
+ "ambience": {
+  "bed": "water",
+  "gain": 0.3,
+  "hits": [
+   {
+    "at": 0.1,
+    "kind": "gong",
+    "gain": 0.6
+   }
+  ]
+ },
+ "title": "Rằm Hạ Nguyên: từ thấy thiếu đến biết ơn",
+ "kicker": "RẰM HẠ NGUYÊN",
+ "sub": "KINH TĂNG CHI 2.32",
+ "acc": [
+  "ơn",
+  "đã"
+ ],
+ "lines": [
+  "Cả năm cố gắng, mà vẫn thấy thiếu?",
+  "Rằm tháng Mười, người xưa tạ ơn sau mùa gặt.",
+  "Kinh Tăng Chi, diễn ý: người tốt biết ơn và nhớ ơn.",
+  "Trước: đếm những gì chưa có. Sau: đếm những gì đã có.",
+  "Một bữa cơm, một người thân, một hơi thở bình yên.",
+  "Năm nay bạn biết ơn điều gì? Bình luận một điều nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "CẢ NĂM VẪN THIẾU?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "Rằm tháng Mười",
+     "at": [
+      0,
+      "mà"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:33839739"
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "TẠ ƠN\nSAU MÙA GẶT",
+   "fx": "zoom",
+   "sub": "NGƯỜI XƯA LÀM VẬY"
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 2,
+   "suffix": " ĐIỀU",
+   "label": "BIẾT ƠN · NHỚ ƠN",
+   "until": [
+    2,
+    "nhớ"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "ĐẾM CÁI ĐÃ CÓ",
+     "at": [
+      3,
+      "Sau:"
+     ],
+     "acc": true
+    },
+    {
+     "text": "thay vì cái chưa có",
+     "at": [
+      3,
+      "đã"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34781879"
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "ĐÃ CÓ",
+   "cards": [
+    {
+     "k": "1",
+     "v": "BỮA CƠM",
+     "at": [
+      4,
+      "bữa"
+     ]
+    },
+    {
+     "k": "2",
+     "v": "NGƯỜI THÂN",
+     "at": [
+      4,
+      "người"
+     ]
+    },
+    {
+     "k": "3",
+     "v": "BÌNH YÊN",
+     "at": [
+      4,
+      "bình"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "BIẾT ƠN ĐIỀU GÌ?",
+     "at": [
+      5,
+      "Năm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận một điều",
+     "at": [
+      5,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34579328"
+  }
+ ],
+ "sources": [
+  "https://giacngo.vn/gia-tri-tam-linh-cua-le-hoi-ram-thang-muoi-post6635.html",
+  "https://suttacentral.net/an2.32-41/en/sujato"
+ ],
+ "description": "Rằm Hạ Nguyên: từ thấy thiếu đến biết ơn\n\nNguồn: https://giacngo.vn/gia-tri-tam-linh-cua-le-hoi-ram-thang-muoi-post6635.html ; https://suttacentral.net/an2.32-41/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}
