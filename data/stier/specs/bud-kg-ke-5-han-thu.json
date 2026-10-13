@@ -1,0 +1,177 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "kinh-giai",
+ "hook_type": "noi-dau",
+ "open_shot": "lua",
+ "voice": "Đoan Trang",
+ "music": "at_rest.mp3",
+ "gap": 0.5,
+ "ambience": {
+  "bed": "rain",
+  "gain": 0.6
+ },
+ "title": "Pháp Cú 5: hận thù không dập được hận thù",
+ "kicker": "KINH PHÁP CÚ · KỆ 5",
+ "sub": "DIỄN Ý",
+ "acc": [
+  "hận",
+  "thương"
+ ],
+ "lines": [
+  "Lửa có dập được lửa không? Càng đổ thêm, càng cháy.",
+  "Kinh Pháp Cú, kệ năm, diễn ý: hận thù không bao giờ dứt bằng hận thù. Chỉ dứt bằng không hận thù. Đó là luật từ xưa.",
+  "Buông không phải là chịu thua.",
+  "Mà là không để cơn giận của người khác điều khiển mình.",
+  "Bạn muốn thử buông với ai? Bình luận chữ buông nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "LỬA DẬP ĐƯỢC LỬA?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "hận thù cũng vậy",
+     "at": [
+      0,
+      "Lửa"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6401825"
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Kệ 5 (diễn ý)",
+   "nodes": [
+    {
+     "text": "HẬN → HẬN",
+     "x": 0.5,
+     "y": 0.22,
+     "at": [
+      1,
+      "hận"
+     ],
+     "shape": "box",
+     "cross": [
+      1,
+      "Chỉ"
+     ]
+    },
+    {
+     "text": "KHÔNG HẬN THÙ",
+     "x": 0.5,
+     "y": 0.52,
+     "at": [
+      1,
+      "Chỉ"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    },
+    {
+     "text": "LUẬT TỪ XƯA",
+     "x": 0.5,
+     "y": 0.8,
+     "at": [
+      1,
+      "luật"
+     ],
+     "shape": "none"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      1,
+      "Chỉ"
+     ]
+    }
+   ],
+   "note": "DHP 5 · SUTTACENTRAL"
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 0,
+   "suffix": " LẦN THUA",
+   "label": "KHÔNG PHẢI CHỊU THUA",
+   "until": [
+    2,
+    "thua."
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "KHÔNG ĐỂ BỊ ĐIỀU KHIỂN",
+     "at": [
+      3,
+      "điều"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bởi cơn giận của người khác",
+     "at": [
+      3,
+      "cơn"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6146497",
+   "win": true,
+   "winLabel": "CƠN GIẬN"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "BÌNH LUẬN: BUÔNG",
+     "at": [
+      4,
+      "Bình"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bạn muốn buông với ai?",
+     "at": [
+      4,
+      "Bạn"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7681532"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp1-20/en/sujato"
+ ],
+ "description": "Pháp Cú 5: hận thù không dập được hận thù\n\nNguồn: https://suttacentral.net/dhp1-20/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

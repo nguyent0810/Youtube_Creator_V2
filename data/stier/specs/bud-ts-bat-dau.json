@@ -1,0 +1,165 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "truoc-sau",
+ "hook_type": "pov",
+ "open_shot": "ban-lam-viec",
+ "voice": "Ngọc Trân",
+ "music": "clean_soul.mp3",
+ "gap": 0.1,
+ "title": "Trước/Sau: bát dầu đầy",
+ "kicker": "TRƯỚC / SAU",
+ "sub": "KINH TƯƠNG ƯNG 47.20",
+ "acc": [
+  "một",
+  "dầu"
+ ],
+ "lines": [
+  "Làm ba việc một lúc, mà không việc nào xong?",
+  "Trước: mở mười thứ, đầu óc tràn ra như bát nước đầy.",
+  "Kinh Tương Ưng kể: một người bưng bát dầu đầy đến miệng, đi giữa đám đông. Chỉ sơ ý một chút là đổ.",
+  "Bát dầu ấy, Đức Phật nói, là sự chú tâm.",
+  "Sau: một việc, một lúc, trọn vẹn.",
+  "Thử một giờ tới, chỉ làm một việc. Bình luận kết quả nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "3 VIỆC MỘT LÚC?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "không việc nào xong",
+     "at": [
+      0,
+      "mà"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:12909799"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 10,
+   "suffix": " THỨ ĐANG MỞ",
+   "label": "TRƯỚC: TRÀN RA",
+   "until": [
+    1,
+    "thứ,"
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "BÁT DẦU\nĐẦY",
+   "sub": "ĐI GIỮA ĐÁM ĐÔNG · SN 47.20",
+   "fx": "zoom"
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Bát dầu",
+   "nodes": [
+    {
+     "text": "BÁT DẦU",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      3,
+      "Bát"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "SỰ CHÚ TÂM",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      3,
+      "chú"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      3,
+      "chú"
+     ]
+    }
+   ],
+   "note": "SN 47.20"
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "SAU",
+   "cards": [
+    {
+     "k": "MỘT",
+     "v": "VIỆC",
+     "at": [
+      4,
+      "một"
+     ]
+    },
+    {
+     "k": "TRỌN",
+     "v": "VẸN",
+     "at": [
+      4,
+      "trọn"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "THỬ 1 GIỜ?",
+     "at": [
+      5,
+      "Thử"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận kết quả",
+     "at": [
+      5,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:4625679"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/sn47.20/en/sujato"
+ ],
+ "description": "Trước/Sau: bát dầu đầy\n\nNguồn: https://suttacentral.net/sn47.20/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

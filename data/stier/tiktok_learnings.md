@@ -103,3 +103,33 @@
 - Credit Pexels gộp theo tác giả (2 clip cùng tác giả → 1 tên), nên số tên có thể ít hơn số clip. Luôn lấy từ credits.json của bản render cuối.
 - File lịch đăng: `sched_59_66.txt`, cùng định dạng.
 
+## 13. Lượt 15:50 — 13/10/2026 (UTC+7)
+
+### Analytics (TikTok Studio Home, @hanhtrinhgiaithoat)
+- Followers ~932; 7-day video views ~1.8K (+4.2%).
+- Mới đăng #7 (13/10 11:40, kệ 252): ~81 views / 7 likes (còn sớm).
+- #6 (12/10 21:10, Hakuin): ~126 views / 2 likes.
+- Vẫn kẹt ~110–150 views/video; avg watch trước đó ~4s, drop 0:01–0:03.
+
+### Thuật toán 2026 (nghiên cứu ngoài + khớp analytics kênh)
+- Tín hiệu chính: giữ chân 0–3s, completion, rewatch; like/follow yếu hơn.
+- Hook phải có (1) chuyển động/chữ to 0–0.5s, (2) câu nói/keyword ≤1.5s, (3) "đây là cho ai" trước 3s. Cấm logo/chào/intro chậm.
+- Search TikTok: nhét từ khóa vào 3s đầu (voice + chữ), caption, hashtag — vòng đời dài hơn FYP.
+- Video ngắn 18–27s (đã áp từ #35) dễ completion hơn 35–45s chuyện xưa; chuyện xưa cần payoff sớm + loopable cuối.
+- Pattern interrupt ~giây 3 (đổi góc/zoom/sfx) giúp qua ngưỡng scroll.
+
+### Pipeline trạng thái lúc 15:50
+- Ready trên box: #1–#66 (tới 11/11). Lịch PC: #35–#66 = rendered, #67+ = planned (specs đã có).
+- Cần xác minh hàng đợi Schedule trên Studio; giữ ≥2–3 ngày lịch đăng.
+- Render tiếp #67–#74 qua grokbot-stage/nolock_build_args.py (lock đang giữ bởi kênh MIM khác).
+
+## 13. Lô #67–#74 (12–15/11/2026)
+
+- **Vượt 60% một kiểu cảnh:** #68 có 3 clip cộng 1 clip đóng khung (win) → 60%. Đổi cảnh đóng khung thành slam không clip là đạt. Quy tắc nhanh: tối đa 3 cảnh M trong video 6 cảnh.
+- **Số lời (tốc độ giọng ~3,8 từ/giây):** 58–62 từ + gap 0,3 → chỉ ~17,7 s (#74 bị ngắn); 73 từ + gap 0,3 → 26 s (#70 bị dài). Mục tiêu 65–72 từ với gap ≤ 0,2, hoặc ~60 từ nếu gap 0,5–1,0.
+- Counter `to: 0` tiếp tục dùng được làm cảnh số liệu có nghĩa ("0 QUẢNG CÁO", "0 LẦN CHÁN ĐỜI", "0 CÔNG ĐỨC?").
+- Cảnh báo "chuỗi cảnh trùng 1 trong 3 Short gần nhất" xuất hiện ở #70 và #74: chấp nhận được, nhưng lô sau nên đảo vị trí board/counter.
+- **Nền ambience:** #69 dùng chuông lúc mở, #72 dùng sóng/suối, #74 dùng mưa nhẹ (gain 0.6).
+- CTA ≤ 16 ký tự vẫn là an toàn nhất trong look có highlight ("BẠN NGHĨ LÀ GÌ?").
+- File lịch đăng: `sched_67_74.txt`.
+

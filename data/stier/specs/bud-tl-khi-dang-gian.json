@@ -1,0 +1,166 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "tinh-lang",
+ "hook_type": "noi-thang",
+ "open_shot": "song-bien",
+ "voice": "Ngọc Linh",
+ "music": "fluidscape.mp3",
+ "gap": 1.0,
+ "ambience": {
+  "bed": "water",
+  "gain": 0.8
+ },
+ "title": "Tĩnh lặng: khi đang giận",
+ "kicker": "TĨNH LẶNG",
+ "sub": "KHI ĐANG GIẬN",
+ "acc": [
+  "giận",
+  "qua"
+ ],
+ "lines": [
+  "Đang giận? Khoan nói gì. Chỉ thở cùng mình hai mươi giây.",
+  "Thở vào. Thở ra dài hơn.",
+  "Nhận ra: đây là cơn giận. Nó sẽ qua.",
+  "Kinh Pháp Cú, kệ hai trăm hai mươi ba, diễn ý: thắng giận bằng không giận.",
+  "Lưu lại cho lần sau. Điều gì hay làm bạn giận nhất?"
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "ĐANG GIẬN?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "khoan nói gì · thở 20 giây",
+     "at": [
+      0,
+      "Khoan"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8724452"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 2,
+   "suffix": " LẦN DÀI HƠN",
+   "label": "THỞ RA DÀI HƠN THỞ VÀO",
+   "until": [
+    1,
+    "dài"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "NÓ SẼ QUA",
+     "at": [
+      2,
+      "Nó"
+     ],
+     "acc": true
+    },
+    {
+     "text": "đây là cơn giận",
+     "at": [
+      2,
+      "đây"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:39321060"
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Kệ 223",
+   "nodes": [
+    {
+     "text": "GIẬN",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      3,
+      "thắng"
+     ],
+     "shape": "box",
+     "cross": [
+      3,
+      "không"
+     ]
+    },
+    {
+     "text": "KHÔNG GIẬN",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      3,
+      "không"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      3,
+      "không"
+     ]
+    }
+   ],
+   "note": "DHP 223 · DIỄN Ý"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "ĐIỀU GÌ LÀM BẠN GIẬN?",
+     "at": [
+      4,
+      "Điều"
+     ],
+     "acc": true
+    },
+    {
+     "text": "lưu lại cho lần sau",
+     "at": [
+      4,
+      "Lưu"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:9039054"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/mn118/en/sujato",
+  "https://suttacentral.net/dhp221-234/en/sujato"
+ ],
+ "description": "Tĩnh lặng: khi đang giận\n\nNguồn: https://suttacentral.net/mn118/en/sujato ; https://suttacentral.net/dhp221-234/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}
