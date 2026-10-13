@@ -83,3 +83,11 @@
 - cards3d: giữ ≤3 thẻ, chữ "k" là nhãn nhỏ — ý chính phải nằm ở "v". Counter dùng làm số liệu (4 PHẦN, 10 PHÚT, 22) khi bài không có số thật -> chọn số có nghĩa, tránh số trích dẫn khô (vd "22" kinh số).
 - Tất cả 8 video 17–27 s; mở bằng clip có chuyển động + câu đau/đố.
 
+
+## 11. Lô #51–#58 (4–7/11)
+- Không bài nào trong lô cần chuông/chuông xoay -> chưa thêm file chuông CC0. Bài #52 "nghe mưa" chỉ có nhạc + giọng: tiếng mưa thật sẽ tốt hơn, cần hỗ trợ "ambience" (file CC0) trong sfx.py — việc nên làm trước bài tĩnh lặng tiếp theo.
+- mix_lint >60% M: Short 5 cảnh với 2–3 câu dài trên clip dễ vượt. Đếm thời lượng theo câu, không theo số cảnh; đổi 1 cảnh clip sang board hoặc bỏ clip của slam.
+- Look "terminal"/"left": kinetic chữ một dòng không clip trông nhỏ, lệch trái -> câu nhấn riêng dùng slam (to, giữa) thay vì kinetic không clip.
+- Chuyện xưa 6 câu với Thiền Tâm Đức + gap 0,35 ra 28 s; cắt câu xuống ≤ 60 từ và gap 0,25 -> 24,6 s.
+- File lịch đăng: /workspace/tiktok/ready/sched_A_B.txt ('#N | post_at | path', caption, '---').
+

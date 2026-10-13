@@ -1,0 +1,194 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "hieu-lam",
+ "hook_type": "nghich-ly",
+ "open_shot": "ban-tay",
+ "voice": "Thiện Minh",
+ "music": "floating_cities.mp3",
+ "gap": 0.0,
+ "series": "Hiểu đúng #6",
+ "title": "Hiểu đúng #6: Tu là phải ép mình thật khổ?",
+ "kicker": "HIỂU ĐÚNG #6",
+ "sub": "KINH TĂNG CHI 6.55",
+ "acc": [
+  "căng",
+  "chùng",
+  "vừa"
+ ],
+ "lines": [
+  "Ép mình thật khổ, mới là tu? Đức Phật nói: không.",
+  "Có vị tỳ kheo đi thiền đến chân rỉ máu, rồi muốn bỏ cuộc.",
+  "Đức Phật hỏi: dây đàn căng quá, có hay không? Chùng quá thì sao?",
+  "Căng quá thì đứt. Chùng quá thì không kêu. Vừa đủ mới thành tiếng hay.",
+  "Học, làm, tập, đều cần lên dây vừa đủ.",
+  "Bạn đang căng quá, hay chùng quá? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "items": [
+    {
+     "text": "ÉP MÌNH KHỔ MỚI LÀ TU?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "Đức Phật nói: không",
+     "at": [
+      0,
+      "Đức"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7722347"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "CHÂN RỈ MÁU",
+     "at": [
+      1,
+      "chân"
+     ],
+     "acc": true
+    },
+    {
+     "text": "muốn bỏ cuộc",
+     "at": [
+      1,
+      "muốn"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6389829",
+   "win": true,
+   "winLabel": "KINH TĂNG CHI 6.55"
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Dây đàn",
+   "nodes": [
+    {
+     "text": "CĂNG QUÁ?",
+     "x": 0.3,
+     "y": 0.35,
+     "at": [
+      2,
+      "căng"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "CHÙNG QUÁ?",
+     "x": 0.7,
+     "y": 0.65,
+     "at": [
+      2,
+      "Chùng"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      2,
+      "Chùng"
+     ]
+    }
+   ],
+   "note": "VÍ DỤ CÂY ĐÀN CỦA SÔ NA"
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "LÊN DÂY",
+   "cards": [
+    {
+     "k": "CĂNG QUÁ",
+     "v": "ĐỨT",
+     "at": [
+      3,
+      "Căng"
+     ]
+    },
+    {
+     "k": "CHÙNG QUÁ",
+     "v": "KHÔNG KÊU",
+     "at": [
+      3,
+      "Chùng"
+     ]
+    },
+    {
+     "k": "VỪA ĐỦ",
+     "v": "TIẾNG HAY",
+     "at": [
+      3,
+      "Vừa"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "to": 3,
+   "suffix": " VIỆC",
+   "label": "HỌC · LÀM · TẬP · VỪA ĐỦ",
+   "until": [
+    4,
+    "tập,"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "CĂNG QUÁ HAY CHÙNG QUÁ?",
+     "at": [
+      5,
+      "Bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận nhé",
+     "at": [
+      5,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8927987"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/an6.55/en/sujato"
+ ],
+ "description": "Hiểu đúng #6: Tu là phải ép mình thật khổ?\n\nNguồn: https://suttacentral.net/an6.55/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

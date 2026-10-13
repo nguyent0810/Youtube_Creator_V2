@@ -1,0 +1,186 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "chuyen-xua",
+ "hook_type": "giua-truyen",
+ "open_shot": "trang",
+ "voice": "Thiền Tâm Đức",
+ "music": "perspectives.mp3",
+ "gap": 0.25,
+ "series": "Chuyện xưa · Tập 7",
+ "title": "Chuyện xưa · Tập 7: Con thỏ trên mặt trăng (chuyện tiền thân)",
+ "kicker": "CHUYỆN XƯA · TẬP 7",
+ "sub": "CHUYỆN TIỀN THÂN · JA 316",
+ "acc": [
+  "thỏ",
+  "lửa",
+  "trăng"
+ ],
+ "lines": [
+  "Một con thỏ không có gì để cho, nên nó nhảy vào lửa.",
+  "Chuyện tiền thân: bốn con vật giữ ngày trai giới.",
+  "Khách đói xin ăn. Thỏ chỉ có cỏ.",
+  "Nó nói: hãy nhóm lửa, tôi sẽ là bữa ăn.",
+  "Khách hiện nguyên là trời Đế Thích. Lửa không nóng. Hình thỏ được vẽ lên trăng.",
+  "Bạn từng cho đi điều gì quý nhất? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "NHẢY VÀO LỬA",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "một con thỏ không có gì để cho",
+     "at": [
+      0,
+      "Một"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:11210466"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 4,
+   "suffix": " CON VẬT",
+   "label": "THỎ · KHỈ · CHÓ RỪNG · RÁI CÁ",
+   "until": [
+    1,
+    "bốn"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "CHỈ CÓ CỎ",
+     "at": [
+      2,
+      "Thỏ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "khách đói xin ăn",
+     "at": [
+      2,
+      "khách"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:36757432"
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "TÔI SẼ LÀ\nBỮA ĂN",
+   "veil": 0.55,
+   "fx": "zoom"
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Kết truyện",
+   "nodes": [
+    {
+     "text": "TRỜI ĐẾ THÍCH",
+     "x": 0.5,
+     "y": 0.22,
+     "at": [
+      4,
+      "Khách"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "LỬA KHÔNG NÓNG",
+     "x": 0.5,
+     "y": 0.5,
+     "at": [
+      4,
+      "Lửa"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "THỎ TRÊN TRĂNG",
+     "x": 0.5,
+     "y": 0.78,
+     "at": [
+      4,
+      "Hình"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      4,
+      "Lửa"
+     ]
+    },
+    {
+     "from": 1,
+     "to": 2,
+     "at": [
+      4,
+      "Hình"
+     ]
+    }
+   ],
+   "note": "TRUYỆN TIỀN THÂN · NGỤ NGÔN"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "BẠN TỪNG CHO ĐI GÌ?",
+     "at": [
+      5,
+      "Bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận nhé",
+     "at": [
+      5,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:10524870"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/ja316",
+  "https://en.wikipedia.org/wiki/Moon_rabbit"
+ ],
+ "description": "Chuyện xưa · Tập 7: Con thỏ trên mặt trăng (chuyện tiền thân)\n\nNguồn: https://suttacentral.net/ja316 ; https://en.wikipedia.org/wiki/Moon_rabbit",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}
