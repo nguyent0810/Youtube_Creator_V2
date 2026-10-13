@@ -1,0 +1,180 @@
+{
+ "theme": "mim",
+ "title": "Năm 2013, Oxford nói 47% việc làm ở Mỹ có rủi ro cao bị máy thay. 13 năm sau thì sao?",
+ "description": "Năm 2013, hai nhà nghiên cứu ở Đại học Oxford (Frey và Osborne) xem xét 702 nghề ở Mỹ và ước tính 47% việc làm thuộc nhóm rủi ro cao, có thể bị máy tính làm thay “có lẽ trong một hoặc hai thập kỷ”. Tháng 9/2013 nước Mỹ có khoảng 137 triệu việc làm ngoài nông nghiệp; tháng 9/2026 khoảng 159 triệu (chuỗi PAYEMS). Nói cho công bằng: bài báo chỉ nói những việc ấy CÓ THỂ bị tự động hoá, không đoán bao nhiêu người sẽ thất nghiệp, và mốc hai thập kỷ chưa tới. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (13 phút): https://youtu.be/sP0ch8-NYec (công khai từ 20:00 ngày 19/10).",
+ "tags": [
+  "frey osborne",
+  "47% việc làm",
+  "oxford 2013",
+  "ai và việc làm",
+  "tự động hoá",
+  "lịch sử công nghệ",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "AI VÀ VIỆC LÀM",
+ "sub": "OXFORD · 2013",
+ "acc": [
+  "bốn",
+  "bảy",
+  "thập",
+  "chín",
+  "thể"
+ ],
+ "lines": [
+  "Bốn mươi bảy phần trăm việc làm ở Mỹ, có rủi ro cao bị máy thay.",
+  "Đó là ước tính của hai nhà nghiên cứu ở Oxford, năm 2013, sau khi xem xét bảy trăm lẻ hai nghề.",
+  "Họ viết, có lẽ trong một hoặc hai thập kỷ.",
+  "Đã mười ba năm trôi qua.",
+  "Năm 2013, nước Mỹ có khoảng một trăm ba mươi bảy triệu việc làm.",
+  "Năm 2026, khoảng một trăm năm mươi chín triệu.",
+  "Nhưng nói cho công bằng, họ chỉ nói có thể bị thay. Không đoán bao nhiêu người thất nghiệp."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "47% VIỆC LÀM Ở MỸ",
+     "at": 0.0
+    },
+    {
+     "text": "RỦI RO CAO BỊ MÁY THAY",
+     "at": [
+      0,
+      "có"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:34775736",
+   "veil": 0.55
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "OXFORD · 2013",
+   "cards": [
+    {
+     "k": "XEM XÉT",
+     "v": "702 NGHỀ Ở MỸ",
+     "at": [
+      1,
+      "bảy"
+     ]
+    },
+    {
+     "k": "KHI NÀO?",
+     "v": "“MỘT HOẶC HAI THẬP KỶ”",
+     "at": [
+      2,
+      "một"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "FREY & OSBORNE"
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 13,
+   "suffix": " NĂM",
+   "label": "ĐÃ TRÔI QUA KỂ TỪ 2013",
+   "until": [
+    3,
+    "ba"
+   ],
+   "sub": {
+    "text": "MỐC HAI THẬP KỶ CHƯA TỚI",
+    "at": [
+     3,
+     "trôi"
+    ]
+   }
+  },
+  {
+   "type": "chart",
+   "at": 4,
+   "kind": "bars",
+   "title": "VIỆC LÀM NGOÀI NÔNG NGHIỆP Ở MỸ",
+   "unit": "TRIỆU · THÁNG 9 MỖI NĂM",
+   "min": 0,
+   "bars": [
+    {
+     "label": "2013",
+     "v": 137,
+     "text": "~137",
+     "c": "dim",
+     "at": [
+      4,
+      "khoảng"
+     ]
+    },
+    {
+     "label": "2026",
+     "v": 159,
+     "text": "~159",
+     "c": "ref",
+     "at": [
+      5,
+      "khoảng"
+     ]
+    }
+   ],
+   "note": "CHUỖI PAYEMS · KHÔNG CHỨNG MINH BÀI BÁO SAI"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NÓI CHO CÔNG BẰNG",
+     "at": 6,
+     "sm": true
+    },
+    {
+     "text": "HỌ CHỈ NÓI “CÓ THỂ”",
+     "at": [
+      6,
+      "có"
+     ],
+     "acc": true
+    },
+    {
+     "text": "không đoán bao nhiêu người thất nghiệp",
+     "at": [
+      6,
+      "Không"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8889197",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 6
+  }
+ ],
+ "sources": [
+  "https://www.oxfordmartin.ox.ac.uk/downloads/academic/The_Future_of_Employment.pdf"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "oxford": "Ốc-phợt"
+ },
+ "imgs": {}
+}

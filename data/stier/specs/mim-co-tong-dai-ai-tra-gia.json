@@ -1,0 +1,179 @@
+{
+ "theme": "mim",
+ "title": "Khi máy thay cô tổng đài điện thoại: ai là người trả giá?",
+ "description": "Từ năm 1920 đến 1940, AT&T thay cô tổng đài bằng tổng đài cơ khí ở hơn một nửa mạng điện thoại nước Mỹ. Nghiên cứu của James Feigenbaum và Daniel Gross (đăng 2024) lần theo từng người qua các cuộc điều tra dân số: lớp phụ nữ trẻ đến sau không thiếu việc, họ chuyển sang việc văn phòng và dịch vụ; nhưng những người đang làm tổng đài khi máy tới thì chịu thiệt nhất, mười năm sau dễ phải làm nghề lương thấp hơn hoặc không còn đi làm. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (13 phút): https://youtu.be/sP0ch8-NYec (công khai từ 20:00 ngày 19/10).",
+ "tags": [
+  "cô tổng đài",
+  "at&t",
+  "feigenbaum gross",
+  "ai và việc làm",
+  "tự động hoá",
+  "lịch sử công nghệ",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "AI VÀ VIỆC LÀM",
+ "sub": "MỸ · 1920–1940",
+ "acc": [
+  "nửa",
+  "sau",
+  "thiệt",
+  "thấp",
+  "đúng"
+ ],
+ "lines": [
+  "Một trăm năm trước, nhấc điện thoại ở Mỹ, bạn nghe giọng một cô tổng đài.",
+  "Từ năm 1920 đến 1940, máy thay các cô ở hơn một nửa mạng điện thoại nước Mỹ.",
+  "Gần một thế kỷ sau, hai nhà kinh tế lần theo từng người, xem chuyện gì đã xảy ra.",
+  "Kết quả có hai mặt.",
+  "Lớp phụ nữ trẻ đến sau, không thiếu việc. Họ chuyển sang văn phòng, dịch vụ.",
+  "Còn người đang làm tổng đài khi máy tới, mười năm sau dễ phải làm nghề lương thấp hơn.",
+  "Người trả giá, là người đứng đúng chỗ cỗ máy đi qua."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "100 NĂM TRƯỚC",
+     "at": 0.0
+    },
+    {
+     "text": "GIỌNG MỘT CÔ TỔNG ĐÀI",
+     "at": [
+      0,
+      "giọng"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:39447506",
+   "veil": 0.55
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 50,
+   "prefix": ">",
+   "suffix": "%",
+   "label": "MẠNG ĐIỆN THOẠI MỸ CHUYỂN SANG MÁY · 1920–1940",
+   "until": [
+    1,
+    "nửa"
+   ],
+   "sub": {
+    "text": "HƠN MỘT NỬA · THEO FEIGENBAUM & GROSS",
+    "at": [
+     1,
+     "mạng"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "GẦN MỘT THẾ KỶ SAU",
+     "at": 2,
+     "sm": true
+    },
+    {
+     "text": "LẦN THEO TỪNG NGƯỜI",
+     "at": [
+      2,
+      "lần"
+     ],
+     "acc": true
+    },
+    {
+     "text": "qua các cuộc điều tra dân số",
+     "at": [
+      2,
+      "xem"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6037662",
+   "ms": 4,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 2
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "KẾT QUẢ CÓ HAI MẶT",
+   "cards": [
+    {
+     "k": "LỚP ĐẾN SAU",
+     "v": "KHÔNG THIẾU VIỆC",
+     "at": [
+      4,
+      "không"
+     ]
+    },
+    {
+     "k": "NGƯỜI ĐANG LÀM",
+     "v": "DỄ XUỐNG NGHỀ LƯƠNG THẤP",
+     "at": [
+      5,
+      "mười"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "NGHIÊN CỨU ĐĂNG NĂM 2024"
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Ai trả giá?",
+   "nodes": [
+    {
+     "text": "người đứng đúng chỗ",
+     "x": 0.5,
+     "y": 0.32,
+     "at": [
+      6,
+      "người",
+      1
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "cỗ máy đi qua",
+     "x": 0.5,
+     "y": 0.66,
+     "at": [
+      6,
+      "cỗ"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 560
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://www.nber.org/papers/w28061"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

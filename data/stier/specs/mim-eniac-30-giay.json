@@ -1,0 +1,195 @@
+{
+ "theme": "mim",
+ "title": "12 giờ tính tay, ENIAC giải trong 30 giây: sáu người phụ nữ lập trình cỗ máy ấy",
+ "description": "Trong Thế chiến thứ hai, ở Đại học Pennsylvania, nhiều phụ nữ được thuê làm “máy tính” (computer) để tính quỹ đạo đạn pháo. Sáu người trong số họ trở thành những lập trình viên đầu tiên của ENIAC, cỗ máy tính điện tử đa năng đầu tiên, công bố tháng 2/1946. Theo Penn Engineering, một bài toán đạn đạo mất khoảng 12 giờ tính tay, ENIAC giải trong 30 giây. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (13 phút): https://youtu.be/sP0ch8-NYec (công khai từ 20:00 ngày 19/10).",
+ "tags": [
+  "eniac",
+  "nữ lập trình viên đầu tiên",
+  "lịch sử máy tính",
+  "ai và việc làm",
+  "tự động hoá",
+  "lịch sử công nghệ",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "LỊCH SỬ MÁY TÍNH",
+ "sub": "ENIAC · 1946",
+ "acc": [
+  "hai",
+  "ba",
+  "sáu",
+  "nghề",
+  "theo"
+ ],
+ "lines": [
+  "Mười hai giờ tính tay, cỗ máy giải trong ba mươi giây.",
+  "Thế chiến thứ hai. Ở Đại học Pennsylvania, nhiều phụ nữ được thuê để tính quỹ đạo đạn pháo.",
+  "Chức danh của họ là, máy tính.",
+  "Tháng 2 năm 1946, ENIAC được công bố. Cỗ máy tính điện tử đa năng đầu tiên.",
+  "Và những người lập trình đầu tiên cho nó, là sáu người phụ nữ trong số họ.",
+  "Nghề của họ biến mất.",
+  "Còn họ, đi theo chính cỗ máy đã thay mình."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "12 GIỜ TÍNH TAY",
+     "at": 0.0
+    },
+    {
+     "text": "MÁY GIẢI TRONG 30 GIÂY",
+     "at": [
+      0,
+      "cỗ"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:8889197",
+   "ms": 6,
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "THẾ CHIẾN THỨ HAI",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "TÍNH QUỸ ĐẠO ĐẠN PHÁO",
+     "at": [
+      1,
+      "tính"
+     ],
+     "acc": true
+    },
+    {
+     "text": "Đại học Pennsylvania",
+     "at": [
+      1,
+      "Ở"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7969254",
+   "ms": 8,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "“MÁY TÍNH”",
+   "sub": "LÀ CHỨC DANH CỦA CON NGƯỜI"
+  },
+  {
+   "type": "chart",
+   "at": 3,
+   "kind": "bars",
+   "title": "MỘT BÀI TOÁN ĐẠN ĐẠO",
+   "unit": "PHÚT · THEO PENN ENGINEERING",
+   "bars": [
+    {
+     "label": "TÍNH TAY\n12 GIỜ",
+     "v": 720,
+     "text": "720",
+     "c": "dim",
+     "at": [
+      3,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "label": "ENIAC\n30 GIÂY",
+     "v": 0.5,
+     "text": "0,5",
+     "c": "ref",
+     "at": [
+      3,
+      "ENIAC"
+     ]
+    }
+   ],
+   "note": "ENIAC CÔNG BỐ THÁNG 2/1946"
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "to": 6,
+   "suffix": " NGƯỜI",
+   "label": "NHỮNG LẬP TRÌNH VIÊN ĐẦU TIÊN CỦA ENIAC",
+   "until": [
+    4,
+    "sáu"
+   ],
+   "sub": {
+    "text": "ĐỀU LÀ PHỤ NỮ · TỪNG LÀM “MÁY TÍNH”",
+    "at": [
+     4,
+     "người",
+     1
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Nghề biến mất",
+   "nodes": [
+    {
+     "text": "còn họ",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      6,
+      "Còn"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "đi theo cỗ máy đã thay mình",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "đi"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 820
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://www.engineering.upenn.edu/about/history-heritage/eniac/"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "pennsylvania": "Pen-xin-vê-ni-a",
+  "eniac": "Ê-ni-ác"
+ },
+ "imgs": {}
+}
