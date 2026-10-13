@@ -224,9 +224,20 @@ def do_run(limit: int) -> None:
                 # Hết hạn mức: item này VÀ mọi item sau đều hoãn tới lúc
                 # reset, không tính là hỏng. Gọi tiếp chỉ nhận lại đúng lỗi.
                 when = publish.next_quota_reset()
+                what = "HẾT QUOTA"
+                if "uploadLimitExceeded" in str(exc):
+                    # KHÔNG phải quota API của project: YouTube giới hạn số video MỖI KÊNH được tải lên trong ~24 giờ
+                    # trượt (CK: 10 video; 12-13/10/2026 mở lại đúng ~24 giờ sau video đầu của đợt). Mốc reset quota
+                    # (nửa đêm Pacific) không liên quan -> hoãn tới 24 giờ sau video cũ nhất của 24 giờ qua.
+                    what = "KÊNH CHẠM TRẦN TẢI LÊN CỦA YOUTUBE (uploadLimitExceeded, không phải quota API)"
+                    lo = _iso(datetime.now(timezone.utc) - timedelta(hours=24))
+                    first = conn.execute("SELECT MIN(started_at) FROM upload_log WHERE channel = ? AND state = 'done' "
+                                         "AND started_at >= ?", (CHANNEL, lo)).fetchone()[0]
+                    if first:
+                        when = _iso(datetime.fromisoformat(first.replace("Z", "+00:00")) + timedelta(hours=24, minutes=10))
                 for rr in rows[i - 1:]:
                     store.defer(conn, rr["id"], f"QuotaExceeded: {exc}", when)
-                print(f"  [{i}/{len(rows)}] HẾT QUOTA — hoãn {len(rows) - i + 1} item "
+                print(f"  [{i}/{len(rows)}] {what} — hoãn {len(rows) - i + 1} item "
                       f"tới {when} (không tính là hỏng)")
                 break
             except Exception as exc:
