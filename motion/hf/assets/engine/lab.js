@@ -95,12 +95,14 @@ window.labScenes = ({ B, tl, el, sv, esc, px, fsz, rnd, bg, common, W, H, C }) =
     sv("rect", { x: cx - 30, y: cy - 30, width: S + 60, height: S + 60, rx: 10, fill: "rgba(15,27,45,.92)", stroke: "rgba(34,211,238,.35)", "stroke-width": 2 }, g);
     for (let i = 0; i < N; i++) { sv("line", { x1: cx, y1: cy + i * cell, x2: cx + S, y2: cy + i * cell, stroke: "rgba(125,211,252,.35)", "stroke-width": 1.5 }, g);
       sv("line", { x1: cx + i * cell, y1: cy, x2: cx + i * cell, y2: cy + S, stroke: "rgba(125,211,252,.35)", "stroke-width": 1.5 }, g); }
-    const used = new Set(), m = s.stones || 46, t0 = s.t0 + 0.2, span = Math.max(0.6, (s.hitAt ?? s.t1 - 1) - t0 - 0.4);
-    for (let k = 0; k < m; k++) { let i, j; do { i = 2 + Math.floor(rnd() * 15); j = 2 + Math.floor(rnd() * 15); } while (used.has(i * N + j)); used.add(i * N + j);
-      const st = sv("circle", { cx: cx + i * cell, cy: cy + j * cell, r: cell * 0.45, fill: k % 2 ? "#e6f1ff" : "#0a0f18", stroke: k % 2 ? "#9fb3c8" : "#5b6b80", "stroke-width": 1.5 }, g);
+    // "pos": [[x, y, "B"|"W"], …] = THẾ CỜ THẬT (dựng từ biên bản ván đấu, theo thứ tự đặt quân); thiếu thì quân đặt ngẫu nhiên để minh hoạ.
+    const used = new Set(), pos = s.pos, m = pos ? pos.length : (s.stones || 46), t0 = s.t0 + 0.2, span = Math.max(0.6, (s.hitAt ?? s.t1 - 1) - t0 - 0.4);
+    for (let k = 0; k < m; k++) { let i, j, wh = k % 2; if (pos) { [i, j] = pos[k]; wh = pos[k][2] === "W"; }
+      else do { i = 2 + Math.floor(rnd() * 15); j = 2 + Math.floor(rnd() * 15); } while (used.has(i * N + j)); used.add(i * N + j);
+      const st = sv("circle", { cx: cx + i * cell, cy: cy + j * cell, r: cell * 0.45, fill: wh ? "#e6f1ff" : "#0a0f18", stroke: wh ? "#9fb3c8" : "#5b6b80", "stroke-width": 1.5 }, g);
       tl.fromTo(st, { opacity: 0, scale: 1.6, svgOrigin: `${cx + i * cell} ${cy + j * cell}` }, { opacity: 1, scale: 1, duration: 0.12, immediateRender: false }, t0 + span * (k / m)); }
-    if (s.hitAt != null) { let i = 9, j = 9; while (used.has(i * N + j)) i++;
-      const X = cx + i * cell, Y = cy + j * cell, st = sv("circle", { cx: X, cy: Y, r: cell * 0.45, fill: "#e6f1ff", stroke: acc, "stroke-width": 3 }, g);
+    if (s.hitAt != null) { let i = 9, j = 9; if (s.hit) { i = s.hit[0]; j = s.hit[1]; } else while (used.has(i * N + j)) i++;
+      const X = cx + i * cell, Y = cy + j * cell, st = sv("circle", { cx: X, cy: Y, r: cell * 0.45, fill: (s.hit ? s.hit[2] === "B" : s.black) ? "#0a0f18" : "#e6f1ff", stroke: acc, "stroke-width": 3 }, g);
       const ring = sv("circle", { cx: X, cy: Y, r: cell * 0.9, fill: "none", stroke: acc, "stroke-width": 4 }, g);
       tl.fromTo(st, { opacity: 0, scale: 2, svgOrigin: `${X} ${Y}` }, { opacity: 1, scale: 1, duration: 0.18, ease: "power4.in", immediateRender: false }, s.hitAt - 0.12);
       tl.fromTo(ring, { opacity: 0, scale: 0.5, svgOrigin: `${X} ${Y}` }, { opacity: 1, scale: 1.4, duration: 0.6, ease: "power2.out", immediateRender: false }, s.hitAt);
@@ -180,5 +182,62 @@ window.labScenes = ({ B, tl, el, sv, esc, px, fsz, rnd, bg, common, W, H, C }) =
     if (s.crashAt != null) { tl.set(dot, { attr: { fill: "#ef4444" } }, s.crashAt);
       const over = sv("text", { x: PX + PW / 2, y: PY + PH / 2 + 30, fill: "#ef4444", "font-size": 120, "font-weight": 900, "font-family": "Be Vietnam Pro, sans-serif", "text-anchor": "middle", opacity: 0 }, g); over.textContent = "HẾT VÁN";
       tl.fromTo(over, { opacity: 0, scale: 1.4, svgOrigin: `${PX + PW / 2} ${PY + PH / 2}` }, { opacity: 1, scale: 1, duration: 0.2, ease: "power4.in", immediateRender: false }, s.crashAt + 0.05); }
+    common(s, d); };
+
+  /* captcha : hình MINH HOẠ một ô mã xác nhận do kênh tự vẽ (không phải giao diện của dịch vụ nào).
+       mode "tick" : ô vuông + dòng chữ; tickAt = lúc dấu tick hiện
+       mode "text" : hai từ méo (words: [a, b]) + ô gõ đáp án từ typeAt tới until; labels: [nhãn a, nhãn b] hiện ở labelAt
+       mode "grid" : lưới 3x3, tiêu đề head; các ô trong pick sáng lần lượt từ selAt */
+  B.captcha = (s, d) => { bg(s, d, 0.85);
+    const g = sv("svg", { class: "layer", viewBox: `0 0 ${W} ${H}` }, d), mode = s.mode || "tick", F = "Be Vietnam Pro, sans-serif", M = "JetBrains Mono, monospace";
+    const card = (x, y, w, h) => sv("rect", { x, y, width: w, height: h, rx: 18, fill: "#f8fafc", stroke: "#cbd5e1", "stroke-width": 3 }, g);
+    const txt = (x, y, t, o = {}) => { const e = sv("text", { x, y, fill: "#0f172a", "font-size": 54, "font-weight": 800, "font-family": F, ...o }, g); e.textContent = t; return e; };
+    const tickPath = (x, y, k) => sv("path", { d: `M${x} ${y + 30 * k} l${26 * k} ${28 * k} l${52 * k} ${-62 * k}`, fill: "none", stroke: "#16a34a", "stroke-width": 14 * k, "stroke-linecap": "round", "stroke-linejoin": "round", opacity: 0 }, g);
+    if (mode === "tick") { const w = 1100, h = 230, x = W / 2 - w / 2, y = s.y ?? 330; card(x, y, w, h);
+      sv("rect", { x: x + 60, y: y + 60, width: 110, height: 110, rx: 10, fill: "#fff", stroke: "#475569", "stroke-width": 6 }, g);
+      txt(x + 220, y + 135, s.text || "Tôi không phải người máy");
+      if (s.tickAt != null) { const t = tickPath(x + 78, y + 82, 1.1); tl.fromTo(t, { opacity: 0, scale: 0.4, svgOrigin: `${x + 115} ${y + 115}` }, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(2.5)", immediateRender: false }, s.tickAt); } }
+    if (mode === "text") { const w = 1240, h = 520, x = W / 2 - w / 2, y = 150; card(x, y, w, h);
+      (s.words || ["morning", "upon"]).forEach((wd, k) => { const cx = x + (k ? 860 : 330), cy = y + 190, grp = sv("g", {}, g);
+        [...wd].forEach((ch, i) => { const e = sv("text", { x: cx + (i - (wd.length - 1) / 2) * 62, y: cy + Math.sin(i * 1.7 + k) * 22, fill: "#0f172a", "font-size": 104, "font-weight": 700, "font-family": "Georgia, serif", "text-anchor": "middle",
+          transform: `rotate(${(rnd() - 0.5) * 34} ${cx + (i - (wd.length - 1) / 2) * 62} ${cy})` }, grp); e.textContent = ch; });
+        sv("path", { d: `M${cx - 250} ${cy - 30 + k * 26} q125 ${k ? 70 : -70} 250 0 t250 0`, fill: "none", stroke: "#0f172a", "stroke-width": 5, opacity: 0.75 }, grp);
+        if (s.labels && s.labels[k]) { const col = k ? "#f59e0b" : acc, r = sv("rect", { x: cx - 290, y: cy - 130, width: 580, height: 210, rx: 14, fill: "none", stroke: col, "stroke-width": 7, opacity: 0 }, g);
+          const lb = sv("text", { x: cx, y: y - 30, fill: col, "font-size": 40, "font-weight": 800, "font-family": M, "text-anchor": "middle", opacity: 0 }, g); lb.textContent = s.labels[k];
+          tl.fromTo([r, lb], { opacity: 0 }, { opacity: 1, duration: 0.25, immediateRender: false }, (s.labelAt ?? s.t0 + 1) + k * (s.labelGap ?? 0.5)); } });
+      sv("rect", { x: x + 70, y: y + 350, width: w - 140, height: 110, rx: 10, fill: "#fff", stroke: "#475569", "stroke-width": 5 }, g);
+      const ans = (s.words || ["morning", "upon"]).join(" "), a0 = s.typeAt ?? s.t0 + 0.8, a1 = Math.max(a0 + 0.4, s.until ?? a0 + 1.6);
+      const inp = txt(x + 100, y + 428, "", { "font-family": M, "font-size": 60, "font-weight": 700 }), o = { n: 0 };
+      tl.to(o, { n: ans.length, duration: a1 - a0, ease: "none", onUpdate: () => { inp.textContent = ans.slice(0, Math.round(o.n)); } }, a0); }
+    if (mode === "grid") { const c = 160, gp = 14, w = 3 * c + 4 * gp, x = W / 2 - w / 2 - (s.side ? 260 : 0), y = 230;   // đáy thẻ = 786 px, trên dải chú thích (~793) card(x - 20, y - 150, w + 40, 3 * c + 4 * gp + 170);
+      sv("rect", { x: x - 20, y: y - 150, width: w + 40, height: 130, rx: 18, fill: "#1d4ed8" }, g); txt(x + 6, y - 72, s.head || "Chọn tất cả ô có đèn giao thông", { fill: "#fff", "font-size": 31 });
+      const pick = s.pick || [1, 4, 5], a0 = s.selAt ?? s.t0 + 0.8;
+      for (let k = 0; k < 9; k++) { const tx = x + gp + (k % 3) * (c + gp), ty = y + gp + Math.floor(k / 3) * (c + gp), on = pick.includes(k);
+        sv("rect", { x: tx, y: ty, width: c, height: c, fill: on ? "#94a3b8" : ["#64748b", "#475569", "#7c8aa0"][k % 3] }, g);
+        sv("rect", { x: tx, y: ty + c * 0.72, width: c, height: c * 0.28, fill: "#334155" }, g);
+        if (on) { sv("rect", { x: tx + c / 2 - 20, y: ty + 16, width: 40, height: 96, rx: 10, fill: "#0f172a" }, g);
+          ["#ef4444", "#f59e0b", "#22c55e"].forEach((col, i) => sv("circle", { cx: tx + c / 2, cy: ty + 35 + i * 29, r: 10, fill: col }, g));
+          const i = pick.indexOf(k), r = sv("rect", { x: tx + 5, y: ty + 5, width: c - 10, height: c - 10, fill: "none", stroke: "#2563eb", "stroke-width": 12, opacity: 0 }, g), t = tickPath(tx + c - 58, ty + 10, 0.45);
+          tl.fromTo([r, t], { opacity: 0 }, { opacity: 1, duration: 0.15, immediateRender: false }, a0 + i * (s.selGap ?? 0.45)); } } }
+    if (s.side) { const lb = el("div", "golbl", `<b>${esc(s.side.k || "")}</b>${s.side.v ? `<span>${esc(s.side.v)}</span>` : ""}`, d); lb.style.left = px(s.side.x ?? W / 2 + 200); lb.style.top = px(s.side.y ?? 420);
+      tl.fromTo(lb, { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out", immediateRender: false }, s.side.at); }
+    common(s, d); };
+
+  /* keyboard : bàn phím chữ do kênh tự vẽ. layout "qwerty" | "abc" (hai hàng theo thứ tự chữ cái) | "dvorak" (chỉ phím chữ).
+       hl: chuỗi chữ sáng lần lượt từ hlAt (cách nhau hlGap giây); row: chỉ số hàng được tô từ rowAt; dim: chuỗi chữ làm mờ. */
+  B.keyboard = (s, d) => { bg(s, d, 0.85);
+    const L = { qwerty: ["QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"], abc: ["ABCDEFGHIJKLM", "NOPQRSTUVWXYZ"], dvorak: ["PYFGCRL", "AOEUIDHTNS", "QJKXBMWVZ"] }[s.layout || "qwerty"];
+    const g = sv("svg", { class: "layer", viewBox: `0 0 ${W} ${H}` }, d), n = Math.max(...L.map((r) => r.length)), K = Math.min(132, Math.floor(1500 / n) - 14), gp = 14;
+    const y0 = (s.y ?? 250) + (3 - L.length) * (K + gp) / 2, keys = {};
+    L.forEach((row, j) => { const off = (s.layout === "abc" ? 0 : j * K * 0.3) + (s.layout === "dvorak" && j === 0 ? 3 * (K + gp) : 0), x0 = W / 2 - (n * (K + gp) - gp) / 2 + off;
+      if (s.row === j) { const r = sv("rect", { x: x0 - 14, y: y0 + j * (K + gp) - 14, width: row.length * (K + gp) - gp + 28, height: K + 28, rx: 20, fill: "none", stroke: "#f59e0b", "stroke-width": 7, opacity: 0 }, g);
+        tl.fromTo(r, { opacity: 0 }, { opacity: 1, duration: 0.25, immediateRender: false }, s.rowAt ?? s.t0 + 0.6); }
+      [...row].forEach((ch, i) => { const x = x0 + i * (K + gp), y = y0 + j * (K + gp), grp = sv("g", { opacity: 0 }, g);
+        const r = sv("rect", { x, y, width: K, height: K, rx: 16, fill: "rgba(15,27,45,.96)", stroke: "rgba(148,163,184,.55)", "stroke-width": 3 }, grp);
+        const t = sv("text", { x: x + K / 2, y: y + K * 0.66, fill: (s.dim || "").includes(ch) ? "#475569" : "#e6f1ff", "font-size": K * 0.5, "font-weight": 800, "font-family": "Be Vietnam Pro, sans-serif", "text-anchor": "middle" }, grp); t.textContent = ch;
+        tl.fromTo(grp, { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.18, ease: "power2.out", immediateRender: false }, s.t0 + 0.1 + (j * n + i) * 0.012);
+        keys[ch] = { r, t }; }); });
+    [...(s.hl || "")].forEach((ch, i) => { const k = keys[ch]; if (!k) return; const at = (s.hlAt ?? s.t0 + 0.8) + i * (s.hlGap ?? 0.16);
+      tl.to(k.r, { attr: { fill: acc, stroke: acc }, duration: 0.08 }, at); tl.to(k.t, { attr: { fill: "#04121c" }, duration: 0.08 }, at); });
     common(s, d); };
 };

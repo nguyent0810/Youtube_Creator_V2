@@ -1,0 +1,162 @@
+{
+ "title": "Hãng súng và chữ TYPEWRITER",
+ "lines": [
+  {
+   "t": "Sholes có máy, nhưng không có tiền để sản xuất.",
+   "p": 0.8
+  },
+  "Ngày 1 tháng 3 năm 1873, một hãng lớn ký hợp đồng làm một nghìn chiếc đầu tiên.",
+  {
+   "t": "Hãng ấy tên là Remington. Một hãng sản xuất súng.",
+   "p": 1.0
+  },
+  "Thợ của Remington sửa bố cục thêm vài chỗ.",
+  "Trong đó có một chi tiết rất đáng yêu.",
+  "Người ta kể rằng họ dời chữ R lên hàng trên, để nhân viên bán hàng gõ được chữ typewriter, nghĩa là máy đánh chữ, chỉ bằng một hàng phím.",
+  {
+   "t": "Bạn thử nhìn lại hàng trên cùng xem. Đủ cả mười chữ cái của từ ấy.",
+   "p": 1.0
+  },
+  "Ngày 1 tháng 7 năm 1874, chiếc máy được bán ra, giá khoảng một trăm hai mươi lăm đô la.",
+  "Nó chỉ gõ được chữ in hoa.",
+  {
+   "t": "Và nó bán rất chậm. Tới cuối năm ấy, chỉ được khoảng bốn trăm chiếc.",
+   "p": 1.0
+  },
+  "Phải tới năm 1878, với đời máy thứ hai, có phím Shift để gõ cả chữ thường, nó mới thật sự phổ biến.",
+  "Nhưng lúc ấy, QWERTY chưa hề thắng.",
+  "Trên thị trường còn nhiều chiếc máy khác, với những bàn phím khác hẳn.",
+  "Thứ quyết định cuộc đua, lại là một cuộc thi."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "HÃNG SÚNG VÀ\nCHỮ TYPEWRITER",
+   "sub": "CÓ MÁY · KHÔNG CÓ TIỀN",
+   "vid": "3977979",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Sholes"
+   ]
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "day": "HỢP ĐỒNG LÀM 1.000 CHIẾC ĐẦU TIÊN",
+   "date": "01.03.1873"
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "REMINGTON",
+   "sub": "MỘT HÃNG SẢN XUẤT SÚNG"
+  },
+  {
+   "type": "keyboard",
+   "at": 3,
+   "layout": "qwerty",
+   "hl": "TYPEWRITER",
+   "hlAt": [
+    5,
+    "gõ"
+   ],
+   "hlGap": 0.32,
+   "label": {
+    "k": "T-Y-P-E-W-R-I-T-E-R: TRỌN TRÊN MỘT HÀNG",
+    "v": "BÀN PHÍM DO KÊNH TỰ VẼ · THEO LỜI KỂ",
+    "at": [
+     5,
+     "để"
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "CHIẾC MÁY BÁN RA",
+   "srcnote": "THEO TƯ LIỆU VỀ MÁY SHOLES & GLIDDEN",
+   "rows": [
+    {
+     "k": "NGÀY",
+     "v": "01.07.1874",
+     "at": 7
+    },
+    {
+     "k": "GIÁ",
+     "v": "KHOẢNG 125 ĐÔ LA",
+     "at": [
+      7,
+      "giá"
+     ]
+    },
+    {
+     "k": "CHỮ",
+     "v": "CHỈ CÓ CHỮ IN HOA",
+     "at": 8
+    }
+   ],
+   "total": {
+    "k": "CUỐI NĂM",
+    "v": "CHỈ ~400 CHIẾC",
+    "at": [
+     9,
+     "chỉ"
+    ]
+   }
+  },
+  {
+   "type": "timeline",
+   "at": 10,
+   "items": [
+    {
+     "year": "1874",
+     "text": "bán ra · *rất chậm*",
+     "at": 10
+    },
+    {
+     "year": "1878",
+     "text": "đời hai: có *phím Shift*, gõ cả chữ thường",
+     "at": [
+      10,
+      "có"
+     ]
+    },
+    {
+     "year": "nhưng",
+     "text": "QWERTY *chưa hề thắng*",
+     "at": 11
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "NHIỀU MÁY KHÁC · NHIỀU BÀN PHÍM KHÁC",
+     "at": 12,
+     "sm": true
+    },
+    {
+     "text": "QUYẾT ĐỊNH: MỘT CUỘC THI",
+     "at": [
+      13,
+      "một"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "HÃNG SÚNG VÀ CHỮ TYPEWRITER"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

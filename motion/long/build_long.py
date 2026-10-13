@@ -43,7 +43,7 @@ from build import Anchors, resolve, norm  # noqa: E402  (cùng cú pháp mốc v
 
 BLD.ANCHORS |= {"sumAt", "zeroAt", "titleAt", "hAt", "countAt", "hitAt", "typeAt", "burnAt", "decodeAt", "endAt", "voiceAt", "voiceEnd", "startAt", "statAt", "fwdAt", "backAt", "drawAt",
                 "chipAt", "medianAt", "hlAt", "colorAt", "strikeAt",
-                "modulesAt", "modulesUntil", "scanAt", "okAt", "crashAt"}   # lab.js qr/flap (12/10/2026)      # mốc riêng của cảnh video dài (breadth/basket theme chart; strikeAt: fx strike)
+                "modulesAt", "modulesUntil", "scanAt", "okAt", "crashAt", "tickAt", "selAt", "rowAt"}   # lab.js qr/flap (12/10/2026)      # mốc riêng của cảnh video dài (breadth/basket theme chart; strikeAt: fx strike)
 BLD.ANCHOR_LISTS |= {"flips", "readAt"}
 import sfx_long  # noqa: E402
 import chartdata  # noqa: E402
@@ -489,7 +489,7 @@ LATE_MAX = 1.0
 # Loại cảnh mà engine tự dựng khung/tiêu đề trong ≤ 0,5 s đầu cảnh, độc lập với mốc neo (casewide.js/lab.js/chart.js):
 # thẻ chương, logo, màn kết, câu hỏi, giấy trích, sổ, khung biểu đồ (tiêu đề t0+0.1), cửa sổ chat, ảnh in/ảnh, hồ sơ, bản đồ.
 FRAME_TYPES = {"chapter", "brand", "endcard", "question", "quote", "ledger", "bars", "chat", "print", "photo", "broll", "file",
-               "candles", "race", "breadth", "basket", "book", "map", "guess", "nn", "go", "qr", "barcode", "flap"}   # 3 cuối: lab.js (khung ≤ t0+0.2)
+               "candles", "race", "breadth", "basket", "book", "map", "guess", "nn", "go", "qr", "barcode", "flap", "captcha", "keyboard"}   # 3 cuối: lab.js (khung ≤ t0+0.2)
 _NOT_START = {"t0", "t1", "until", "voiceEnd", "endAt", "typeDur", "burnDur", "dur"}
 _DATA_LISTS = {"dots", "rects", "vals", "bars", "candles", "ohlc", "series"}     # mảng số liệu biểu đồ, không phải mốc
 

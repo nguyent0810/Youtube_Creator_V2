@@ -1,0 +1,216 @@
+{
+ "title": "Khi đề thi biến mất",
+ "lines": [
+  {
+   "t": "Tháng 10 năm 2018, Google ra thêm một phiên bản nữa.",
+   "p": 0.8
+  },
+  {
+   "t": "Lần này, không còn chữ méo. Không còn ô ảnh. Cũng không còn ô vuông nào để tick.",
+   "p": 1.0
+  },
+  "Bài kiểm tra chạy ngầm trong trang web.",
+  "Nó không hỏi bạn câu nào cả.",
+  "Nó chỉ lặng lẽ chấm cho mỗi lượt truy cập một điểm số, cho biết lượt ấy đáng ngờ tới đâu.",
+  {
+   "t": "Còn làm gì với điểm số ấy, là việc của chủ trang web.",
+   "p": 1.0
+  },
+  "Nghe thì rất tiện. Bạn không còn bị làm phiền.",
+  "Nhưng hãy để ý điều vừa đổi.",
+  "Trước đây, bạn biết mình đang bị kiểm tra, và bạn biết đề bài là gì.",
+  {
+   "t": "Giờ thì bạn bị chấm điểm, mà không hề hay biết.",
+   "p": 1.0
+  },
+  "Còn người đã nghĩ ra tất cả chuyện này thì sao?",
+  "Luis von Ahn không dừng ở những cuốn sách cũ.",
+  "Ông mang đúng ý tưởng ấy sang một dự án mới.",
+  "Nếu hàng triệu người chịu bỏ ra mười giây để gõ một từ, thì họ còn làm chung được việc gì lớn hơn?",
+  "Năm 2012, khi Duolingo mới ra mắt, người học ngoại ngữ luyện tập bằng cách dịch những câu lấy từ các trang web thật.",
+  {
+   "t": "Nhiều người cùng dịch một câu, và bản hay nhất được chọn.",
+   "p": 1.0
+  },
+  "Vẫn là công thức cũ.",
+  "Cho bạn một thứ bạn cần. Và trong lúc bạn dùng nó, công sức của bạn làm nên một thứ khác.",
+  "Lần đầu, là một cuốn sách cũ được đọc lại.",
+  "Lần sau, là một trang web được dịch.",
+  "Còn với những ô ảnh, là một tấm bản đồ chính xác hơn."
+ ],
+ "scenes": [
+  {
+   "type": "date",
+   "day": "THÊM MỘT PHIÊN BẢN NỮA",
+   "date": "10.2018"
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "LẦN NÀY",
+   "rows": [
+    {
+     "k": "KHÔNG CÒN",
+     "v": "CHỮ MÉO",
+     "at": [
+      1,
+      "không"
+     ]
+    },
+    {
+     "k": "KHÔNG CÒN",
+     "v": "Ô ẢNH",
+     "at": [
+      1,
+      "Không"
+     ]
+    },
+    {
+     "k": "KHÔNG CÒN",
+     "v": "Ô VUÔNG ĐỂ TICK",
+     "at": [
+      1,
+      "Cũng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 2,
+   "vid": "1085656",
+   "ms": 8,
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "CHẠY NGẦM TRONG TRANG WEB",
+     "at": [
+      2,
+      "chạy"
+     ],
+     "acc": true
+    },
+    {
+     "text": "không hỏi bạn câu nào",
+     "at": 3,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 0.0,
+   "to": 0.9,
+   "until": [
+    4,
+    "số,"
+   ],
+   "label": "ĐIỂM SỐ CHO MỖI LƯỢT TRUY CẬP · CON SỐ MINH HOẠ",
+   "sub": {
+    "text": "ĐÁNG NGỜ TỚI ĐÂU · CHỦ TRANG WEB TỰ QUYẾT",
+    "at": 5
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 6,
+   "title": "ĐIỀU VỪA ĐỔI",
+   "rows": [
+    {
+     "k": "TRƯỚC ĐÂY",
+     "v": "BẠN BIẾT MÌNH ĐANG THI",
+     "at": 8
+    }
+   ],
+   "total": {
+    "k": "GIỜ",
+    "v": "BỊ CHẤM MÀ KHÔNG HAY BIẾT",
+    "at": 9
+   }
+  },
+  {
+   "type": "question",
+   "at": 10,
+   "text": "Còn người nghĩ ra\ntất cả chuyện này thì sao?"
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "KHÔNG DỪNG Ở SÁCH CŨ",
+     "at": 11,
+     "sm": true
+    },
+    {
+     "text": "CÙNG Ý TƯỞNG · DỰ ÁN MỚI",
+     "at": 12,
+     "acc": true
+    },
+    {
+     "text": "hàng triệu người · mỗi người mười giây",
+     "at": 13,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 14,
+   "vid": "6963836",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "DUOLINGO · 2012",
+     "at": [
+      14,
+      "Duolingo"
+     ],
+     "acc": true
+    },
+    {
+     "text": "người học dịch câu từ trang web thật",
+     "at": [
+      14,
+      "dịch"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 16,
+   "title": "VẪN LÀ CÔNG THỨC CŨ",
+   "srcnote": "Ô ẢNH: THEO LỜI ĐẠI DIỆN GOOGLE, 2021",
+   "rows": [
+    {
+     "k": "CHỮ MÉO",
+     "v": "→ SÁCH CŨ ĐƯỢC ĐỌC LẠI",
+     "at": 18
+    },
+    {
+     "k": "BÀI TẬP DỊCH",
+     "v": "→ TRANG WEB ĐƯỢC DỊCH",
+     "at": 19
+    }
+   ],
+   "total": {
+    "k": "Ô ẢNH",
+    "v": "→ BẢN ĐỒ CHÍNH XÁC HƠN",
+    "at": 20
+   }
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 07",
+  "t": "KHI ĐỀ THI BIẾN MẤT"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

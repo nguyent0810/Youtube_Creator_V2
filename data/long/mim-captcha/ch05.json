@@ -1,0 +1,151 @@
+{
+ "title": "Một đô cho một nghìn mã",
+ "lines": [
+  {
+   "t": "Nếu máy không qua được bài kiểm tra dành cho người, thì thuê người.",
+   "p": 1.0
+  },
+  "Năm 2010, một nhóm nghiên cứu ở Mỹ lần theo những dịch vụ giải mã thuê.",
+  "Ở đó, người thật ngồi trước màn hình, gõ mã xác nhận thay cho các chương trình tự động.",
+  {
+   "t": "Giá khi ấy, khoảng một đô la cho một nghìn mã.",
+   "p": 1.0
+  },
+  "Một nghìn lần chứng minh mình là người, giá một đô.",
+  {
+   "t": "Còn người ngồi gõ, theo các tác giả, mỗi ngày kiếm được chừng hai, ba đô.",
+   "p": 1.0
+  },
+  "Hãy nhìn lại bài kiểm tra này.",
+  "Nó sinh ra để phân biệt người với máy.",
+  {
+   "t": "Nhưng nó không phân biệt được một người đang dùng trang web, với một người được thuê để mở cửa cho máy.",
+   "p": 1.0
+  },
+  "Bài thi hỏi: bạn có phải là người không?",
+  "Nó chưa bao giờ hỏi: bạn là người, nhưng bạn đang làm việc cho ai?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "CHƯƠNG NĂM",
+   "title": "MỘT ĐÔ CHO\nMỘT NGHÌN MÃ",
+   "sub": "MÁY KHÔNG QUA ĐƯỢC THÌ THUÊ NGƯỜI",
+   "vid": "8865787",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Nếu"
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 1,
+   "vid": "8865787",
+   "ms": 6,
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "NGƯỜI THẬT NGỒI GÕ MÃ",
+     "at": [
+      2,
+      "người"
+     ],
+     "acc": true
+    },
+    {
+     "text": "thay cho các chương trình tự động",
+     "at": [
+      2,
+      "thay"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "from": 0,
+   "to": 1000,
+   "suffix": " MÃ",
+   "until": [
+    3,
+    "nghìn"
+   ],
+   "label": "GIÁ KHOẢNG 1 ĐÔ LA",
+   "sub": {
+    "text": "NGHIÊN CỨU USENIX SECURITY, 2010",
+    "at": 4
+   }
+  },
+  {
+   "type": "bars",
+   "at": 5,
+   "title": "THU NHẬP MỘT NGÀY CỦA NGƯỜI GÕ MÃ (USD)",
+   "unit": "",
+   "items": [
+    {
+     "k": "THẤP",
+     "v": 2,
+     "lbl": "~2",
+     "at": [
+      5,
+      "hai,"
+     ]
+    },
+    {
+     "k": "CAO",
+     "v": 3,
+     "lbl": "~3",
+     "at": [
+      5,
+      "ba"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "",
+    "v": "THEO LỜI ĐỒNG TÁC GIẢ NGHIÊN CỨU · NPR, 2010",
+    "at": 5
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 6,
+   "title": "BÀI KIỂM TRA NÀY",
+   "rows": [
+    {
+     "k": "SINH RA ĐỂ",
+     "v": "PHÂN BIỆT NGƯỜI VỚI MÁY",
+     "at": 7
+    },
+    {
+     "k": "KHÔNG THẤY",
+     "v": "NGƯỜI MỞ CỬA CHO MÁY",
+     "at": [
+      8,
+      "với"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 9,
+   "text": "Bạn là người.\nNhưng bạn đang làm việc cho ai?",
+   "showAt": 10
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "MỘT ĐÔ CHO MỘT NGHÌN MÃ"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

@@ -1,0 +1,164 @@
+{
+ "title": "Con người thắng lại",
+ "lines": [
+  {
+   "t": "Còn trên bàn cờ thì sao? Con người có bao giờ thắng lại máy không?",
+   "p": 1.0
+  },
+  "Tháng 2 năm 2023, có.",
+  "Một kỳ thủ nghiệp dư người Mỹ, tên là Kellin Pelrine, đấu mười lăm ván với một trong những cỗ máy cờ vây mạnh nhất lúc ấy.",
+  "Không phải AlphaGo, mà là một cỗ máy đời sau, học theo cùng cách.",
+  {
+   "t": "Anh thắng mười bốn ván.",
+   "p": 1.0
+  },
+  "Anh không giỏi hơn Lee Sedol.",
+  "Bí quyết của anh đến từ một chương trình máy tính khác.",
+  "Một nhóm nghiên cứu đã cho chương trình ấy đấu hơn một triệu ván với cỗ máy kia, chỉ để tìm ra một điểm mù.",
+  "Và nó tìm ra.",
+  "Hãy xếp quân thành một vòng lớn, bao quanh một đám quân của máy, trong lúc đánh lạc hướng nó ở chỗ khác.",
+  "Một người chơi khá sẽ nhận ra ngay.",
+  {
+   "t": "Còn cỗ máy thì không thấy, cho tới khi quá muộn.",
+   "p": 1.0
+  },
+  "Theo lời Pelrine, mẹo ấy không quá khó để một con người học.",
+  {
+   "t": "Chỉ là trước đó, chưa ai biết để thử.",
+   "p": 1.0
+  },
+  "Câu chuyện ấy giống hệt nước bảy mươi tám.",
+  "Cỗ máy giỏi hơn con người, ở gần như mọi thế cờ.",
+  "Nhưng nó vẫn có những chỗ không nhìn thấy.",
+  "Và thứ tìm ra những chỗ ấy, lần này, lại là con người cùng với một cỗ máy khác."
+ ],
+ "scenes": [
+  {
+   "type": "question",
+   "text": "Con người có bao giờ\nthắng lại máy không?"
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "day": "CÓ",
+   "date": "02.2023"
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "MƯỜI LĂM VÁN",
+   "srcnote": "THEO FINANCIAL TIMES, 02.2023",
+   "rows": [
+    {
+     "k": "NGƯỜI",
+     "v": "KELLIN PELRINE · NGHIỆP DƯ",
+     "at": 2
+    },
+    {
+     "k": "MÁY",
+     "v": "ĐỜI SAU · KHÔNG PHẢI ALPHAGO",
+     "at": 3
+    }
+   ],
+   "total": {
+    "k": "KẾT QUẢ",
+    "v": "NGƯỜI THẮNG 14 VÁN",
+    "at": 4
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "ANH KHÔNG GIỎI HƠN LEE SEDOL",
+     "at": 5,
+     "sm": true
+    },
+    {
+     "text": "BÍ QUYẾT TỪ MỘT CHƯƠNG TRÌNH KHÁC",
+     "at": 6,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "from": 0,
+   "to": 1,
+   "prefix": "> ",
+   "suffix": " TRIỆU VÁN",
+   "until": [
+    7,
+    "triệu"
+   ],
+   "label": "ĐẤU THỬ CHỈ ĐỂ TÌM MỘT ĐIỂM MÙ",
+   "sub": {
+    "text": "VÀ NÓ TÌM RA",
+    "at": 8
+   }
+  },
+  {
+   "type": "go",
+   "at": 9,
+   "stones": 84,
+   "label": {
+    "k": "XẾP MỘT VÒNG LỚN QUANH QUÂN CỦA MÁY · ĐÁNH LẠC HƯỚNG CHỖ KHÁC",
+    "v": "BÀN CỜ MINH HOẠ · KHÔNG PHẢI THẾ CỜ THẬT",
+    "at": 9
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "NGƯỜI CHƠI KHÁ: NHẬN RA NGAY",
+     "at": 10,
+     "sm": true
+    },
+    {
+     "text": "CỖ MÁY: KHÔNG THẤY",
+     "at": 11,
+     "acc": true
+    },
+    {
+     "text": "trước đó chưa ai biết để thử",
+     "at": 13,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 14,
+   "title": "GIỐNG HỆT NƯỚC 78",
+   "rows": [
+    {
+     "k": "CỖ MÁY",
+     "v": "GIỎI HƠN Ở HẦU HẾT THẾ CỜ",
+     "at": 15
+    },
+    {
+     "k": "NHƯNG",
+     "v": "VẪN CÓ CHỖ KHÔNG NHÌN THẤY",
+     "at": 16
+    }
+   ],
+   "total": {
+    "k": "AI TÌM RA",
+    "v": "NGƯỜI + MỘT CỖ MÁY KHÁC",
+    "at": 17
+   }
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 12",
+  "t": "CON NGƯỜI THẮNG LẠI"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

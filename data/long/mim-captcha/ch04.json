@@ -1,0 +1,209 @@
+{
+ "title": "Vòng hai: ô ảnh",
+ "lines": [
+  {
+   "t": "Tháng 12 năm 2014, Google công bố một con số.",
+   "p": 0.8
+  },
+  {
+   "t": "Trí tuệ nhân tạo của họ giải được loại chữ méo khó nhất, đúng tới chín mươi chín phẩy tám phần trăm.",
+   "p": 1.0
+  },
+  "Tức là vòng thi thứ nhất đã vỡ.",
+  "Cái đề từng chỉ con người làm được, giờ máy làm gần như hoàn hảo.",
+  {
+   "t": "Trớ trêu ở chỗ, hàng tỷ lần gõ của chúng ta, lại chính là thứ dạy máy đọc giỏi lên.",
+   "p": 1.0
+  },
+  "Thế là đề thi phải đổi. Vòng hai: ô ảnh.",
+  "Chọn tất cả các ô có đèn giao thông. Có vạch qua đường. Có xe buýt.",
+  {
+   "t": "Những bức ảnh ấy, một phần lấy từ ảnh chụp đường phố của Google, từ năm 2012.",
+   "p": 1.0
+  },
+  "Nhiều người tin rằng, mỗi lần bấm chọn, bạn đang dạy cho xe tự lái nhận ra đường phố.",
+  "Nghe rất hợp lý. Nhưng chuyện này chưa được xác nhận.",
+  "Một đại diện của Google nói, dữ liệu ấy chỉ dùng để cải thiện bản đồ.",
+  {
+   "t": "Điều chắc chắn là, bạn lại đang dán nhãn hộ cho máy, một lần nữa.",
+   "p": 1.0
+  },
+  "Nhưng trước khi kể vòng ba, có một lối tắt mà kẻ gian đã tìm ra từ lâu.",
+  "Và lối tắt ấy, chẳng cần tới trí tuệ nhân tạo nào cả."
+ ],
+ "scenes": [
+  {
+   "type": "date",
+   "day": "GOOGLE CÔNG BỐ MỘT CON SỐ",
+   "date": "12.2014"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 0,
+   "to": 99.8,
+   "suffix": "%",
+   "until": [
+    1,
+    "tám"
+   ],
+   "label": "AI GIẢI ĐÚNG LOẠI CHỮ MÉO KHÓ NHẤT",
+   "sub": {
+    "text": "GOOGLE SECURITY BLOG · 03.12.2014",
+    "at": [
+     1,
+     "phần"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "VÒNG MỘT ĐÃ VỠ",
+   "sub": "ĐỀ CHỈ NGƯỜI LÀM ĐƯỢC · GIỜ MÁY LÀM GẦN NHƯ HOÀN HẢO",
+   "subAt": 3
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "TRỚ TRÊU",
+     "at": 4,
+     "sm": true
+    },
+    {
+     "text": "HÀNG TỶ LẦN GÕ CỦA TA",
+     "at": [
+      4,
+      "hàng"
+     ]
+    },
+    {
+     "text": "DẠY MÁY ĐỌC GIỎI LÊN",
+     "at": [
+      4,
+      "lại"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "captcha",
+   "at": 5,
+   "mode": "grid",
+   "head": "Chọn tất cả ô có đèn giao thông",
+   "pick": [
+    1,
+    3,
+    8
+   ],
+   "selAt": [
+    6,
+    "Chọn"
+   ],
+   "selGap": 0.9,
+   "label": {
+    "k": "VÒNG HAI: Ô ẢNH",
+    "v": "HÌNH MINH HOẠ DO KÊNH TỰ VẼ · KHÔNG PHẢI GIAO DIỆN CỦA DỊCH VỤ NÀO",
+    "at": [
+     5,
+     "Vòng"
+    ]
+   }
+  },
+  {
+   "type": "broll",
+   "at": 7,
+   "vid": "12570193",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "ẢNH CHỤP ĐƯỜNG PHỐ",
+     "at": [
+      7,
+      "ảnh"
+     ],
+     "acc": true
+    },
+    {
+     "text": "một phần · từ năm 2012",
+     "at": [
+      7,
+      "từ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 8,
+   "title": "DẠY XE TỰ LÁI?",
+   "srcnote": "LỜI ĐẠI DIỆN GOOGLE: THEO BÁO CHÍ, 2021",
+   "rows": [
+    {
+     "k": "NHIỀU NGƯỜI TIN",
+     "v": "DẠY XE NHẬN RA ĐƯỜNG",
+     "at": [
+      8,
+      "bạn"
+     ]
+    },
+    {
+     "k": "THỰC TẾ",
+     "v": "CHƯA ĐƯỢC XÁC NHẬN",
+     "at": [
+      9,
+      "Nhưng"
+     ]
+    },
+    {
+     "k": "GOOGLE NÓI",
+     "v": "CHỈ ĐỂ CẢI THIỆN BẢN ĐỒ",
+     "at": [
+      10,
+      "chỉ"
+     ]
+    }
+   ],
+   "total": {
+    "k": "CHẮC CHẮN",
+    "v": "BẠN LẠI DÁN NHÃN HỘ MÁY",
+    "at": [
+     11,
+     "bạn"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "MỘT LỐI TẮT",
+     "at": [
+      12,
+      "một"
+     ],
+     "acc": true
+    },
+    {
+     "text": "chẳng cần tới trí tuệ nhân tạo nào",
+     "at": 13,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "VÒNG HAI: Ô ẢNH"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

@@ -1,0 +1,139 @@
+{
+ "title": "Ô vuông nhỏ",
+ "lines": [
+  "Một ô vuông nhỏ. Bên cạnh là dòng chữ: tôi không phải người máy.",
+  {
+   "t": "Bạn đã tick vào nó bao nhiêu lần rồi?",
+   "p": 1.0
+  },
+  "Hãy nghĩ lại xem, chuyện này lạ thế nào.",
+  "Một cỗ máy hỏi bạn có phải là người không.",
+  {
+   "t": "Và bạn, một con người, phải chứng minh điều đó. Cho một cỗ máy.",
+   "p": 1.0
+  },
+  "Nhưng đó chưa phải phần lạ nhất.",
+  "Suốt nhiều năm, mỗi lần gõ mấy chữ méo mó ấy, bạn đã làm một việc không công mà không hề biết.",
+  {
+   "t": "Việc gì thì lát nữa mình kể.",
+   "p": 1.0
+  },
+  "Bài kiểm tra này đã đổi đề ba lần. Chữ méo. Ô ảnh. Rồi một dấu tick.",
+  "Mình sẽ đi qua cả ba vòng thi ấy.",
+  "Và ở mỗi vòng, bạn hãy để ý xem ai đang chấm ai."
+ ],
+ "scenes": [
+  {
+   "type": "captcha",
+   "mode": "tick",
+   "tickAt": [
+    1,
+    "tick"
+   ],
+   "label": {
+    "k": "",
+    "v": "HÌNH MINH HOẠ DO KÊNH TỰ VẼ · KHÔNG PHẢI GIAO DIỆN CỦA DỊCH VỤ NÀO",
+    "at": [
+     0,
+     "Bên"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "MÁY HỎI: BẠN CÓ PHẢI NGƯỜI KHÔNG?",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "NGƯỜI PHẢI CHỨNG MINH",
+     "at": [
+      4,
+      "phải"
+     ],
+     "acc": true
+    },
+    {
+     "text": "cho một cỗ máy",
+     "at": [
+      4,
+      "Cho"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 5,
+   "vid": "7999451",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MỘT VIỆC KHÔNG CÔNG",
+     "at": [
+      6,
+      "một"
+     ],
+     "acc": true
+    },
+    {
+     "text": "mà bạn không hề biết",
+     "at": [
+      6,
+      "mà"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 8,
+   "title": "BA VÒNG THI",
+   "rows": [
+    {
+     "k": "1",
+     "v": "CHỮ MÉO",
+     "at": [
+      8,
+      "Chữ"
+     ]
+    },
+    {
+     "k": "2",
+     "v": "Ô ẢNH",
+     "at": [
+      8,
+      "Ô"
+     ]
+    },
+    {
+     "k": "3",
+     "v": "MỘT DẤU TICK",
+     "at": [
+      8,
+      "Rồi"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 10,
+   "text": "Ai đang chấm ai?"
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "Ô VUÔNG NHỎ"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.1
+ }
+}

@@ -1,0 +1,222 @@
+{
+ "title": "Vì sao lại là cờ vây",
+ "lines": [
+  {
+   "t": "Để hiểu vì sao cả thế giới nín thở, mình phải lùi lại gần hai mươi năm.",
+   "p": 0.8
+  },
+  "Năm 1997, cỗ máy Deep Blue của hãng IBM thắng nhà vô địch cờ vua Garry Kasparov.",
+  {
+   "t": "Nhiều người nghĩ, thế là xong. Máy đã thắng con người ở trò chơi trí tuệ.",
+   "p": 1.0
+  },
+  "Nhưng còn một trò chơi mà máy vẫn chơi rất tệ. Cờ vây.",
+  "Luật cờ vây đơn giản tới bất ngờ.",
+  "Hai người lần lượt đặt quân đen và quân trắng lên một bàn mười chín đường ngang, mười chín đường dọc.",
+  {
+   "t": "Ai vây được nhiều đất hơn thì thắng.",
+   "p": 1.0
+  },
+  "Cái khó nằm ở số khả năng.",
+  "Ở cờ vua, mỗi lượt bạn có khoảng vài chục nước để chọn.",
+  "Ở cờ vây, mỗi lượt có vài trăm nước.",
+  "Số thế cờ hợp lệ trên bàn là một con số có một trăm bảy mươi mốt chữ số.",
+  {
+   "t": "Nhiều hơn số nguyên tử trong vũ trụ mà ta quan sát được.",
+   "p": 1.0
+  },
+  "Deep Blue thắng cờ vua bằng cách tính thật nhiều nước đi.",
+  {
+   "t": "Với cờ vây, cách ấy vô dụng. Không cỗ máy nào tính xuể.",
+   "p": 1.0
+  },
+  "Còn một cái khó nữa, ít được nhắc tới.",
+  "Trong cờ vua, đếm quân là biết ai đang hơn. Mất hậu thì gần như thua.",
+  "Trong cờ vây, mọi quân đều giống hệt nhau.",
+  "Một quân đặt xuống hôm nay, có khi năm mươi nước sau mới lộ ra là hay hay dở.",
+  {
+   "t": "Nên ngay cả việc nhìn một thế cờ rồi nói ai đang thắng, cũng đã là việc khó với máy tính.",
+   "p": 1.0
+  },
+  "Gần hai mươi năm sau Deep Blue, phần mềm cờ vây giỏi nhất vẫn chỉ ngang một người chơi nghiệp dư khá.",
+  "Các kỳ thủ chuyên nghiệp thì nói về một thứ rất khó viết thành công thức. Cảm giác về hình cờ.",
+  "Và giới chuyên gia tin rằng, phải ít nhất mười năm nữa, máy mới thắng nổi một kỳ thủ hàng đầu."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "VÌ SAO LẠI LÀ\nCỜ VÂY",
+   "sub": "LÙI LẠI GẦN HAI MƯƠI NĂM",
+   "vid": "855386",
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU",
+   "titleAt": [
+    0,
+    "Để"
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 1,
+   "items": [
+    {
+     "year": "1997",
+     "text": "*Deep Blue* thắng nhà vô địch cờ vua",
+     "at": 1
+    },
+    {
+     "year": "nhiều người nghĩ",
+     "text": "*thế là xong*",
+     "at": 2
+    },
+    {
+     "year": "nhưng",
+     "text": "còn *cờ vây*",
+     "at": 3
+    }
+   ]
+  },
+  {
+   "type": "go",
+   "at": 4,
+   "stones": 30,
+   "label": {
+    "k": "19 × 19 ĐƯỜNG · VÂY NHIỀU ĐẤT HƠN THÌ THẮNG",
+    "v": "BÀN CỜ MINH HOẠ · KHÔNG PHẢI THẾ CỜ THẬT",
+    "at": 5
+   }
+  },
+  {
+   "type": "bars",
+   "at": 7,
+   "title": "SỐ NƯỚC CÓ THỂ CHỌN MỖI LƯỢT · ƯỚC LƯỢNG",
+   "unit": "",
+   "items": [
+    {
+     "k": "CỜ VUA",
+     "v": 35,
+     "lbl": "VÀI CHỤC",
+     "at": 8
+    },
+    {
+     "k": "CỜ VÂY",
+     "v": 250,
+     "lbl": "VÀI TRĂM",
+     "at": 9,
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "CÁI KHÓ NẰM Ở SỐ KHẢ NĂNG",
+    "v": "CON SỐ MINH HOẠ CHO HAI MỨC ĐỘ",
+    "at": 7
+   }
+  },
+  {
+   "type": "counter",
+   "at": 10,
+   "from": 1,
+   "to": 171,
+   "suffix": " CHỮ SỐ",
+   "until": [
+    10,
+    "mốt"
+   ],
+   "label": "ĐỘ DÀI CỦA CON SỐ ĐẾM THẾ CỜ HỢP LỆ",
+   "sub": {
+    "text": "NHIỀU HƠN SỐ NGUYÊN TỬ TRONG VŨ TRỤ QUAN SÁT ĐƯỢC",
+    "at": 11
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "DEEP BLUE: TÍNH THẬT NHIỀU NƯỚC",
+     "at": 12,
+     "sm": true
+    },
+    {
+     "text": "VỚI CỜ VÂY: VÔ DỤNG",
+     "at": 13,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 14,
+   "title": "CÁI KHÓ THỨ HAI",
+   "rows": [
+    {
+     "k": "CỜ VUA",
+     "v": "ĐẾM QUÂN LÀ BIẾT AI HƠN",
+     "at": 15
+    },
+    {
+     "k": "CỜ VÂY",
+     "v": "MỌI QUÂN GIỐNG HỆT NHAU",
+     "at": 16
+    }
+   ],
+   "total": {
+    "k": "NÊN",
+    "v": "KHÓ BIẾT AI ĐANG THẮNG",
+    "at": 18
+   }
+  },
+  {
+   "type": "broll",
+   "at": 19,
+   "vid": "39277761",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU",
+   "kin": [
+    {
+     "text": "GẦN 20 NĂM SAU DEEP BLUE",
+     "at": 19,
+     "sm": true
+    },
+    {
+     "text": "MÁY VẪN CHỈ NGANG NGHIỆP DƯ",
+     "at": [
+      19,
+      "vẫn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "“cảm giác về hình cờ”",
+     "at": [
+      20,
+      "Cảm"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 21,
+   "from": 0,
+   "to": 10,
+   "prefix": "≥ ",
+   "suffix": " NĂM NỮA",
+   "until": [
+    21,
+    "năm"
+   ],
+   "label": "DỰ ĐOÁN CỦA GIỚI CHUYÊN GIA TRƯỚC NĂM 2016"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "VÌ SAO LẠI LÀ CỜ VÂY"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

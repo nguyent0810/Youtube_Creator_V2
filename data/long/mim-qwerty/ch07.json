@@ -1,0 +1,203 @@
+{
+ "title": "Vì sao không ai đổi được",
+ "lines": [
+  {
+   "t": "Năm 1985, nhà kinh tế học Paul David viết một bài báo ngắn, lấy chính QWERTY làm ví dụ.",
+   "p": 0.8
+  },
+  "Ông gọi tên một hiện tượng: sự phụ thuộc vào lối mòn.",
+  {
+   "t": "Một lựa chọn nhỏ từ rất sớm, có thể khoá chặt cả tương lai.",
+   "p": 1.0
+  },
+  "Vì đổi bàn phím không phải chuyện của riêng bạn.",
+  "Bạn đổi, thì máy ở chỗ làm vẫn thế. Máy của bạn bè vẫn thế.",
+  {
+   "t": "Còn muốn mọi người cùng đổi một lúc, thì chẳng ai đứng ra tổ chức nổi.",
+   "p": 1.0
+  },
+  "Thử nhìn sang nước Pháp.",
+  "Người Pháp gõ một bàn phím khác, tên là AZERTY.",
+  "Và nhiều người kêu nó bất tiện. Muốn gõ một chữ hoa có dấu cũng khó.",
+  "Năm 2019, nước Pháp công bố một tiêu chuẩn bàn phím mới.",
+  "Nhưng tiêu chuẩn ấy chỉ là tự nguyện.",
+  {
+   "t": "Và trong bản cải tiến của nó, các chữ cái vẫn nằm nguyên chỗ cũ. Chỉ dấu và ký hiệu được dời đi.",
+   "p": 1.0
+  },
+  "Rồi tới chiếc điện thoại.",
+  "Năm 2013, một nhóm nghiên cứu ở châu Âu thiết kế lại từ đầu, một bàn phím cho hai ngón cái.",
+  "Trong thử nghiệm của họ, sau khi luyện tập, người dùng gõ nhanh hơn khoảng một phần ba.",
+  {
+   "t": "Hơn mười năm sau, bạn đã thấy ai dùng nó chưa?",
+   "p": 1.0
+  },
+  "Hai câu chuyện cho thấy cùng một điều.",
+  "Thứ giữ QWERTY ở lại, không còn là chiếc máy.",
+  "Mà là hàng tỷ đôi tay đã quen."
+ ],
+ "scenes": [
+  {
+   "type": "date",
+   "day": "MỘT BÀI BÁO NGẮN CỦA NHÀ KINH TẾ PAUL DAVID",
+   "date": "1985"
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "PHỤ THUỘC VÀO LỐI MÒN",
+   "sub": "MỘT LỰA CHỌN NHỎ TỪ SỚM · KHOÁ CHẶT CẢ TƯƠNG LAI",
+   "subAt": 2
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "ĐỔI BÀN PHÍM: KHÔNG CHỈ MÌNH BẠN",
+   "rows": [
+    {
+     "k": "BẠN ĐỔI",
+     "v": "MÁY Ở CHỖ LÀM VẪN THẾ",
+     "at": [
+      4,
+      "máy"
+     ]
+    },
+    {
+     "k": "",
+     "v": "MÁY CỦA BẠN BÈ VẪN THẾ",
+     "at": [
+      4,
+      "Máy"
+     ]
+    }
+   ],
+   "total": {
+    "k": "CÙNG ĐỔI",
+    "v": "KHÔNG AI TỔ CHỨC NỔI",
+    "at": 5
+   }
+  },
+  {
+   "type": "keyboard",
+   "at": 6,
+   "layout": "qwerty",
+   "hl": "QWAZ",
+   "hlAt": [
+    7,
+    "AZERTY."
+   ],
+   "hlGap": 0.2,
+   "label": {
+    "k": "PHÁP: AZERTY ĐỔI CHỖ MẤY PHÍM NÀY",
+    "v": "BÀN PHÍM DO KÊNH TỰ VẼ · VẼ TRÊN NỀN QWERTY",
+    "at": 7
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 8,
+   "title": "NƯỚC PHÁP · 2019",
+   "srcnote": "AFNOR · TIÊU CHUẨN NF Z71-300, 04.2019",
+   "rows": [
+    {
+     "k": "PHÀN NÀN",
+     "v": "KHÓ GÕ CHỮ HOA CÓ DẤU",
+     "at": [
+      8,
+      "Muốn"
+     ]
+    },
+    {
+     "k": "TIÊU CHUẨN MỚI",
+     "v": "CHỈ LÀ TỰ NGUYỆN",
+     "at": 10
+    }
+   ],
+   "total": {
+    "k": "CHỮ CÁI",
+    "v": "VẪN NẰM NGUYÊN CHỖ CŨ",
+    "at": [
+     11,
+     "các"
+    ]
+   }
+  },
+  {
+   "type": "broll",
+   "at": 12,
+   "vid": "6963836",
+   "ms": 8,
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "BÀN PHÍM CHO HAI NGÓN CÁI",
+     "at": [
+      13,
+      "một",
+      1
+     ],
+     "acc": true
+    },
+    {
+     "text": "thiết kế lại từ đầu · 2013",
+     "at": 13,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 14,
+   "from": 0,
+   "to": 34,
+   "prefix": "+",
+   "suffix": "%",
+   "until": [
+    14,
+    "ba."
+   ],
+   "label": "TỐC ĐỘ GÕ SAU KHI LUYỆN TẬP · THỬ NGHIỆM CỦA NHÓM",
+   "sub": {
+    "text": "ĐH ST ANDREWS · VIỆN MAX PLANCK, 2013",
+    "at": 14
+   }
+  },
+  {
+   "type": "question",
+   "at": 15,
+   "text": "Hơn mười năm sau,\nbạn đã thấy ai dùng nó chưa?"
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "items": [
+    {
+     "text": "THỨ GIỮ QWERTY Ở LẠI",
+     "at": 17,
+     "sm": true
+    },
+    {
+     "text": "KHÔNG CÒN LÀ CHIẾC MÁY",
+     "at": [
+      17,
+      "không"
+     ]
+    },
+    {
+     "text": "HÀNG TỶ ĐÔI TAY ĐÃ QUEN",
+     "at": 18,
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 07",
+  "t": "VÌ SAO KHÔNG AI ĐỔI ĐƯỢC"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

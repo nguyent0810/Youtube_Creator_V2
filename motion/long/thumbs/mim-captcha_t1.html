@@ -1,0 +1,27 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#050912}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:"Be Vietnam Pro",sans-serif;color:#fff;
+ background:linear-gradient(rgba(34,211,238,.06) 1px,transparent 1px) 0 0/80px 80px,linear-gradient(90deg,rgba(34,211,238,.06) 1px,transparent 1px) 0 0/80px 80px,radial-gradient(80% 70% at 60% 40%,#12283a 0%,#08131f 60%,#04080f 100%)}
+.big{position:absolute;font-weight:900;line-height:1.12;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.tag{position:absolute;font-family:"JetBrains Mono";font-weight:700;letter-spacing:.12em;white-space:nowrap;color:#22d3ee}
+.pill{position:absolute;padding:10px 30px 14px;border-radius:40px;border:5px solid;background:#08131f;font-weight:900;font-size:44px;white-space:nowrap;line-height:1.25}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<!-- T1: ô "Tôi không phải người máy" do kênh TỰ VẼ (không phải giao diện dịch vụ nào), dấu tick xanh; chữ "MỖI LẦN TICK / BẠN LÀM / KHÔNG CÔNG?" -->
+<svg style="position:absolute;left:0;top:0" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <g transform="translate(95 14) rotate(-4 1420 520)">
+    <rect x="1010" y="330" width="820" height="360" rx="26" fill="#f8fafc" stroke="#22d3ee" stroke-width="10"/>
+    <rect x="1070" y="410" width="200" height="200" rx="18" fill="#fff" stroke="#334155" stroke-width="12"/>
+    <path d="M1105 505 l52 58 l110 -128" fill="none" stroke="#16a34a" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1310" y="485" font-family="Be Vietnam Pro, sans-serif" font-weight="900" font-size="62" fill="#0f172a">Tôi không phải</text>
+    <text x="1310" y="570" font-family="Be Vietnam Pro, sans-serif" font-weight="900" font-size="62" fill="#0f172a">người máy</text>
+  </g>
+</svg>
+<div class="big" style="left:80px;top:120px;font-size:128px">MỖI LẦN TICK</div>
+<div class="big" style="left:80px;top:300px;font-size:150px;color:#22d3ee">BẠN ĐÃ LÀM</div>
+<div class="big" style="left:80px;top:500px;font-size:205px;color:#f59e0b">KHÔNG</div>
+<div class="big" style="left:80px;top:720px;font-size:205px;color:#f59e0b">CÔNG?</div>
+<div class="tag" style="left:1010px;top:800px;font-size:44px">CAPTCHA · 2000 → NAY</div>
+</div><script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>
