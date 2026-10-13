@@ -1,0 +1,166 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "do-vui",
+ "hook_type": "do-vui",
+ "open_shot": "rua-bien",
+ "voice": "Mỹ Duyên",
+ "music": "arcadia.mp3",
+ "gap": 0.1,
+ "series": "Đố vui Phật pháp #10",
+ "title": "Đố vui Phật pháp #10: Con rùa mù và cái ách",
+ "kicker": "ĐỐ VUI PHẬT PHÁP #10",
+ "sub": "KINH TƯƠNG ƯNG 56.47",
+ "acc": [
+  "rùa",
+  "người"
+ ],
+ "lines": [
+  "Đố bạn: Đức Phật ví việc được làm người, với điều gì?",
+  "Gợi ý: một con rùa mù, dưới biển sâu.",
+  "Kinh Tương Ưng kể: cứ một trăm năm, rùa mới nổi lên một lần.",
+  "Trên biển có một cái ách trôi, chỉ có một lỗ.",
+  "Chui đúng lỗ ấy, còn dễ hơn được làm người.",
+  "Bạn biết ơn điều gì khi được làm người? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "LÀM NGƯỜI = GÌ?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "Phật ví với điều gì",
+     "at": [
+      0,
+      "ví"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:28639826"
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "GỢI Ý",
+   "cards": [
+    {
+     "k": "1",
+     "v": "RÙA MÙ",
+     "at": [
+      1,
+      "rùa"
+     ]
+    },
+    {
+     "k": "2",
+     "v": "BIỂN SÂU",
+     "at": [
+      1,
+      "biển"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 100,
+   "suffix": " NĂM",
+   "label": "MỚI NỔI LÊN 1 LẦN",
+   "until": [
+    2,
+    "nổi"
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "1 CÁI ÁCH\n1 CÁI LỖ",
+   "fx": "zoom",
+   "sub": "TRÔI GIỮA BIỂN"
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Còn khó hơn",
+   "nodes": [
+    {
+     "text": "RÙA CHUI ĐÚNG LỖ",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      4,
+      "Chui"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "ĐƯỢC LÀM NGƯỜI",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      4,
+      "làm"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      4,
+      "làm"
+     ]
+    }
+   ],
+   "note": "SN 56.47"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "BIẾT ƠN ĐIỀU GÌ?",
+     "at": [
+      5,
+      "Bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận nhé",
+     "at": [
+      5,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7280839"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/sn56.47/en/sujato"
+ ],
+ "description": "Đố vui Phật pháp #10: Con rùa mù và cái ách\n\nNguồn: https://suttacentral.net/sn56.47/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

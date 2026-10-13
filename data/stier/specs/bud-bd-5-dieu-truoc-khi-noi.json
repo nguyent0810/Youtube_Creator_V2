@@ -1,0 +1,189 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "ba-dieu",
+ "hook_type": "con-so",
+ "open_shot": "go-phim",
+ "voice": "Thanh Bình",
+ "music": "ether_vox.mp3",
+ "gap": 0.35,
+ "title": "5 câu hỏi trước khi nói (hoặc bình luận)",
+ "kicker": "BA ĐIỀU",
+ "sub": "KINH TĂNG CHI 5.198",
+ "acc": [
+  "thật",
+  "thương"
+ ],
+ "lines": [
+  "Năm câu hỏi nên tự hỏi, trước khi bấm gửi một bình luận.",
+  "Kinh Tăng Chi năm chấm một chín tám. Một: đúng lúc chưa?",
+  "Hai: có thật không? Ba: có nhẹ nhàng không?",
+  "Bốn: có ích không, cho người nghe?",
+  "Năm: có xuất phát từ lòng thương, không phải từ cơn giận?",
+  "Câu nào bạn hay quên nhất? Lưu lại trước khi tranh luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "TRƯỚC KHI BẤM GỬI",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "5 câu hỏi",
+     "at": [
+      0,
+      "gửi"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6962433"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 5,
+   "suffix": " CÂU HỎI",
+   "label": "TRƯỚC KHI NÓI",
+   "until": [
+    1,
+    "Một:"
+   ],
+   "sub": {
+    "text": "1 · ĐÚNG LÚC CHƯA?",
+    "at": [
+     1,
+     "lúc"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "HỎI TIẾP",
+   "cards": [
+    {
+     "k": "2",
+     "v": "CÓ THẬT?",
+     "at": [
+      2,
+      "thật"
+     ]
+    },
+    {
+     "k": "3",
+     "v": "NHẸ NHÀNG?",
+     "at": [
+      2,
+      "nhẹ"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "4 · CÓ ÍCH KHÔNG?",
+     "at": [
+      3,
+      "Bốn:"
+     ],
+     "acc": true
+    },
+    {
+     "text": "có giúp được ai",
+     "at": [
+      3,
+      "cho"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:4439224"
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Câu 5",
+   "nodes": [
+    {
+     "text": "LỜI NÓI",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      4,
+      "Năm:"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "TỪ LÒNG THƯƠNG",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      4,
+      "thương,"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      4,
+      "thương,"
+     ]
+    }
+   ],
+   "note": "AN 5.198"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "CÂU NÀO HAY QUÊN?",
+     "at": [
+      5,
+      "Câu"
+     ],
+     "acc": true
+    },
+    {
+     "text": "lưu trước khi tranh luận",
+     "at": [
+      5,
+      "Lưu"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:9187960"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/an5.198/en/sujato"
+ ],
+ "description": "5 câu hỏi trước khi nói (hoặc bình luận)\n\nNguồn: https://suttacentral.net/an5.198/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

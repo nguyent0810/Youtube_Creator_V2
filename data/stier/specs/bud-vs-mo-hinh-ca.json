@@ -1,0 +1,140 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "vi-sao",
+ "hook_type": "vi-sao",
+ "open_shot": "mat-ca",
+ "voice": "Thiền Tâm Đức",
+ "music": "perspectives.mp3",
+ "gap": 0.15,
+ "title": "Vì sao cái mõ có hình con cá?",
+ "kicker": "VÌ SAO?",
+ "sub": "CÁI MÕ · MOKUGYO",
+ "acc": [
+  "cá",
+  "tỉnh"
+ ],
+ "lines": [
+  "Vì sao cái mõ trong chùa lại tạc hình con cá?",
+  "Mõ giữ nhịp khi tụng kinh. Gõ một tiếng, đọc một chữ.",
+  "Theo cách giải thích truyền thống, cá không bao giờ nhắm mắt, kể cả khi ngủ.",
+  "Nên tiếng mõ nhắc người tu: luôn tỉnh thức.",
+  "Bạn đã biết điều này chưa? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "VÌ SAO HÌNH CON CÁ?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "cái mõ trong chùa",
+     "at": [
+      0,
+      "cái"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34908364"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 1,
+   "suffix": " TIẾNG",
+   "label": "MỘT CHỮ KINH",
+   "until": [
+    1,
+    "chữ."
+   ]
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Con cá",
+   "nodes": [
+    {
+     "text": "KHÔNG NHẮM MẮT",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      2,
+      "nhắm"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "KỂ CẢ KHI NGỦ",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      2,
+      "ngủ."
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      2,
+      "ngủ."
+     ]
+    }
+   ],
+   "note": "WIKIPEDIA · MOKUGYO"
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "LUÔN\nTỈNH THỨC",
+   "fx": "zoom",
+   "sub": "TIẾNG MÕ NHẮC VẬY"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "BẠN BIẾT CHƯA?",
+     "at": [
+      4,
+      "Bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận nhé",
+     "at": [
+      4,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:38348294"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Mokugyo"
+ ],
+ "description": "Vì sao cái mõ có hình con cá?\n\nNguồn: https://en.wikipedia.org/wiki/Mokugyo",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

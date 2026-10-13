@@ -151,3 +151,11 @@
 - Đã xác minh 23/11/2026 = 15/10 âm (lunardate). Tên riêng Pali trên màn hình nên dùng phiên âm Việt (La Hầu La, Mạt Lợi) để tránh lỗi dấu ā/ṅ; giữ Pali trong caption.
 - Thứ tự cảnh lên kế hoạch trước cho cả lô → 0 cảnh báo lặp.
 
+
+## 16. Lô #91–#104 (24–30/11, kết thúc lịch tháng 11)
+- Ước lượng hiệu chỉnh: words/3.4 + gap×(lines−1) + 1 + (1.5 nếu 5 dòng, 2 nếu 6 dòng) — khớp thực tế lô #83–#90.
+- gen.py nay tự assert: anchor tồn tại, dòng nhỏ (sm) có anchor SAU dòng chính, số cảnh = số dòng.
+- PowerShell không phân biệt hoa/thường tên biến: $S và $s là MỘT biến → đã làm hỏng r91.cmd lần đầu (tự dừng trước khi render). Dùng tên biến khác hẳn ($SL, $L).
+- Tĩnh lặng (#98, #100): gap 0.5–0.6, ≤ 56 từ, ambience rain/water; vẫn cần 1 D-scene (đếm hơi thở / giây). Hook "30 giây" đổi thành "20 giây" cho khớp độ dài video thật.
+- Pexels không có clip mõ gỗ (mokugyo) → dùng cận cảnh mắt cá mở cho hook "vì sao hình con cá".
+

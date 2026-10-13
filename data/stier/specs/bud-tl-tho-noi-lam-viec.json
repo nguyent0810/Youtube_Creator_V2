@@ -1,0 +1,129 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "tinh-lang",
+ "hook_type": "menh-lenh",
+ "open_shot": "ban-lam-viec",
+ "voice": "Mỹ Duyên",
+ "music": "at_rest.mp3",
+ "gap": 0.5,
+ "ambience": {
+  "bed": "rain",
+  "gain": 0.4
+ },
+ "title": "Tĩnh lặng: 4 hơi thở ở bàn làm việc",
+ "kicker": "TĨNH LẶNG",
+ "sub": "KINH TRUNG BỘ 118 · DIỄN Ý",
+ "acc": [
+  "thở",
+  "thả"
+ ],
+ "lines": [
+  "Đang ở bàn làm việc? Thả vai xuống. Bốn hơi thở thôi.",
+  "Thả lỏng hàm. Thả lỏng hai bàn tay.",
+  "Hít vào thật dài, biết mình hít vào. Thở ra thật dài, biết mình thở ra.",
+  "Bốn lần như vậy.",
+  "Giờ quay lại, làm một việc thôi. Đồng nghiệp nào đang căng? Gửi cho họ nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "THẢ VAI XUỐNG",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "4 hơi thở thôi",
+     "at": [
+      0,
+      "Bốn"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:9063506"
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "THẢ LỎNG",
+   "cards": [
+    {
+     "k": "1",
+     "v": "HÀM",
+     "at": [
+      1,
+      "hàm."
+     ]
+    },
+    {
+     "k": "2",
+     "v": "BÀN TAY",
+     "at": [
+      1,
+      "tay."
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "HÍT VÀO\nBIẾT HÍT VÀO",
+   "fx": "zoom",
+   "sub": "THỞ RA · BIẾT THỞ RA"
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 4,
+   "suffix": " HƠI THỞ",
+   "label": "DÀI · CHẬM",
+   "until": [
+    3,
+    "vậy."
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "AI ĐANG CĂNG?",
+     "at": [
+      4,
+      "Đồng"
+     ],
+     "acc": true
+    },
+    {
+     "text": "gửi cho đồng nghiệp",
+     "at": [
+      4,
+      "Gửi"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:35170762"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/mn118/en/sujato"
+ ],
+ "description": "Tĩnh lặng: 4 hơi thở ở bàn làm việc\n\nNguồn: https://suttacentral.net/mn118/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

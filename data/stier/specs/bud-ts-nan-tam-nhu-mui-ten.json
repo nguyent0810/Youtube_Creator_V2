@@ -1,0 +1,150 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "truoc-sau",
+ "hook_type": "noi-dau",
+ "open_shot": "cung-ten",
+ "voice": "Quang Sơn",
+ "music": "floating_cities.mp3",
+ "gap": 0.15,
+ "title": "Trước/Sau: nắn tâm như nắn mũi tên",
+ "kicker": "TRƯỚC / SAU",
+ "sub": "KINH PHÁP CÚ · KỆ 33",
+ "acc": [
+  "nắn",
+  "thẳng"
+ ],
+ "lines": [
+  "Tâm bạn cũng có lúc cong như vậy không?",
+  "Trước: tâm dao động, nay vui mai buồn, khó giữ.",
+  "Kệ ba mươi ba, diễn ý: tâm khó giữ, người trí nắn thẳng nó, như thợ nắn mũi tên.",
+  "Sau: kiên nhẫn nắn thẳng, từng chút một.",
+  "Không cần thẳng ngay. Chỉ cần nắn mỗi ngày.",
+  "Hôm nay tâm bạn cong chỗ nào? Lưu lại nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "TÂM CÓ LÚC CONG?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "như mũi tên",
+     "at": [
+      0,
+      "như"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6668845"
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "NAY VUI\nMAI BUỒN",
+   "fx": "zoom",
+   "sub": "TRƯỚC: KHÓ GIỮ"
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 1,
+   "suffix": " MŨI TÊN",
+   "label": "NẮN THẲNG · KỆ 33",
+   "until": [
+    2,
+    "thẳng"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "NẮN TỪNG CHÚT",
+     "at": [
+      3,
+      "Sau:"
+     ],
+     "acc": true
+    },
+    {
+     "text": "kiên nhẫn",
+     "at": [
+      3,
+      "kiên"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:5058605"
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "MỖI NGÀY",
+   "cards": [
+    {
+     "k": "KHÔNG CẦN",
+     "v": "THẲNG NGAY",
+     "at": [
+      4,
+      "Không"
+     ]
+    },
+    {
+     "k": "CHỈ CẦN",
+     "v": "NẮN MỖI NGÀY",
+     "at": [
+      4,
+      "Chỉ"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "CONG CHỖ NÀO?",
+     "at": [
+      5,
+      "Hôm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "lưu lại nhé",
+     "at": [
+      5,
+      "Lưu"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34159262"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp33-43/en/sujato"
+ ],
+ "description": "Trước/Sau: nắn tâm như nắn mũi tên\n\nNguồn: https://suttacentral.net/dhp33-43/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

@@ -1,0 +1,135 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "nhan-gui",
+ "hook_type": "noi-thang",
+ "open_shot": "cua-so",
+ "voice": "Ngọc Huyền",
+ "music": "healing.mp3",
+ "gap": 0.35,
+ "title": "Nếu bạn đang tự trách mình mãi",
+ "kicker": "NHẮN GỬI",
+ "sub": "KINH TƯƠNG ƯNG 36.6",
+ "acc": [
+  "mũi",
+  "tên"
+ ],
+ "lines": [
+  "Nếu bạn vẫn đang tự trách, vì một chuyện đã qua.",
+  "Kinh Tương Ưng kể: trúng một mũi tên, đã đau.",
+  "Rồi ta tự bắn thêm mũi tên thứ hai, vào đúng chỗ ấy. Đau gấp đôi.",
+  "Tự trách là mũi tên thứ hai. Chỉ cần chăm vết thương thứ nhất.",
+  "Bạn đang bắn mũi tên nào? Lưu lại cho ngày khắt khe với mình."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "VẪN TỰ TRÁCH?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "vì chuyện đã qua",
+     "at": [
+      0,
+      "chuyện"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6381014"
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "MŨI TÊN\nTHỨ NHẤT",
+   "fx": "zoom",
+   "sub": "ĐÃ ĐAU"
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 2,
+   "suffix": " MŨI TÊN",
+   "label": "ĐAU GẤP ĐÔI",
+   "until": [
+    2,
+    "ấy."
+   ]
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Mũi tên thứ hai",
+   "nodes": [
+    {
+     "text": "TỰ TRÁCH",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      3,
+      "Tự"
+     ],
+     "shape": "box",
+     "cross": [
+      3,
+      "Chỉ"
+     ]
+    },
+    {
+     "text": "CHĂM VẾT THƯƠNG",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      3,
+      "chăm"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "SN 36.6"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "MŨI TÊN NÀO?",
+     "at": [
+      4,
+      "Bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "lưu cho ngày khắt khe",
+     "at": [
+      4,
+      "Lưu"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6217274"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/sn36.6/en/sujato"
+ ],
+ "description": "Nếu bạn đang tự trách mình mãi\n\nNguồn: https://suttacentral.net/sn36.6/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}
