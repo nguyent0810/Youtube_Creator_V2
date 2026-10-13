@@ -1,0 +1,192 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "do-vui",
+ "hook_type": "do-vui",
+ "open_shot": "tuong-phat",
+ "voice": "Quang Sơn",
+ "music": "floating_cities.mp3",
+ "gap": 0.0,
+ "series": "Đố vui Phật pháp #7",
+ "title": "Đố vui Phật pháp #7: Bài pháp đầu tiên có mấy người nghe?",
+ "kicker": "ĐỐ VUI PHẬT PHÁP #7",
+ "sub": "KINH TƯƠNG ƯNG 56.11",
+ "acc": [
+  "năm",
+  "trung"
+ ],
+ "lines": [
+  "Đố bạn: bài pháp đầu tiên của Đức Phật có bao nhiêu người nghe? Một, năm, hay năm trăm?",
+  "Ba, hai, một.",
+  "Đáp án: năm. Năm vị tu sĩ ở vườn Nai, Isipatana.",
+  "Ngài dạy con đường trung đạo, tránh hai cực đoan: hưởng thụ và ép xác. Rồi bốn sự thật cao quý.",
+  "Bạn đoán đúng không? Bình luận đáp án, và theo dõi để chơi câu tiếp theo."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "BAO NHIÊU NGƯỜI NGHE?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "A. 1 · B. 5 · C. 500",
+     "at": [
+      0,
+      "Một,"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:38351571"
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "3 · 2 · 1",
+   "cards": [
+    {
+     "k": "A",
+     "v": "1",
+     "at": [
+      1,
+      "Ba,"
+     ]
+    },
+    {
+     "k": "B",
+     "v": "5",
+     "at": [
+      1,
+      "hai,"
+     ]
+    },
+    {
+     "k": "C",
+     "v": "500",
+     "at": [
+      1,
+      "một."
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 5,
+   "suffix": " VỊ TU SĨ",
+   "label": "VƯỜN NAI · ISIPATANA",
+   "until": [
+    2,
+    "Năm"
+   ]
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Bài pháp đầu tiên",
+   "nodes": [
+    {
+     "text": "HƯỞNG THỤ",
+     "x": 0.27,
+     "y": 0.28,
+     "at": [
+      3,
+      "hưởng"
+     ],
+     "shape": "box",
+     "cross": [
+      3,
+      "Rồi"
+     ]
+    },
+    {
+     "text": "ÉP XÁC",
+     "x": 0.73,
+     "y": 0.28,
+     "at": [
+      3,
+      "ép"
+     ],
+     "shape": "box",
+     "cross": [
+      3,
+      "Rồi"
+     ]
+    },
+    {
+     "text": "TRUNG ĐẠO",
+     "x": 0.5,
+     "y": 0.66,
+     "at": [
+      3,
+      "trung"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 2,
+     "at": [
+      3,
+      "Rồi"
+     ]
+    },
+    {
+     "from": 1,
+     "to": 2,
+     "at": [
+      3,
+      "Rồi"
+     ]
+    }
+   ],
+   "note": "SN 56.11 · TỨ DIỆU ĐẾ"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "BẠN ĐOÁN ĐÚNG KHÔNG?",
+     "at": [
+      4,
+      "Bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận đáp án",
+     "at": [
+      4,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34894928"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/sn56.11/en/sujato"
+ ],
+ "description": "Đố vui Phật pháp #7: Bài pháp đầu tiên có mấy người nghe?\n\nNguồn: https://suttacentral.net/sn56.11/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

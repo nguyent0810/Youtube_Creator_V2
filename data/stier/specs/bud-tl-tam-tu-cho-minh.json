@@ -1,0 +1,170 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "tinh-lang",
+ "hook_type": "noi-thang",
+ "open_shot": "hoa-sen",
+ "voice": "Ngọc Huyền",
+ "music": "fluidscape.mp3",
+ "gap": 1.2,
+ "ambience": {
+  "bed": "water",
+  "gain": 1.0,
+  "hits": [
+   {
+    "at": 0.1,
+    "kind": "gong",
+    "gain": 0.6
+   }
+  ]
+ },
+ "title": "Tĩnh lặng: gửi lời thương cho chính mình",
+ "kicker": "TĨNH LẶNG",
+ "sub": "KINH TỪ BI · SNP 1.8",
+ "acc": [
+  "an",
+  "khổ",
+  "bạn"
+ ],
+ "lines": [
+  "Bạn đã bao lâu rồi chưa nói một lời tử tế với chính mình?",
+  "Đặt tay lên ngực. Thở vào thật chậm.",
+  "Mong mình bình an. Mong mình bớt khổ.",
+  "Kinh Từ Bi, diễn ý: mong mọi loài được an vui. Mọi loài, gồm cả bạn.",
+  "Lưu lại để thở cùng. Hôm nay bạn muốn gửi lời thương cho ai?"
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "TỬ TẾ VỚI CHÍNH MÌNH?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "bao lâu rồi bạn chưa…",
+     "at": [
+      0,
+      "bao"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:38548497"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 1,
+   "suffix": " HƠI THỞ",
+   "label": "ĐẶT TAY LÊN NGỰC",
+   "until": [
+    1,
+    "Thở"
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "NÓI VỚI MÌNH",
+   "cards": [
+    {
+     "k": "MONG MÌNH",
+     "v": "BÌNH AN",
+     "at": [
+      2,
+      "Mong"
+     ]
+    },
+    {
+     "k": "MONG MÌNH",
+     "v": "BỚT KHỔ",
+     "at": [
+      2,
+      "Mong",
+      1
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Kinh Từ Bi",
+   "nodes": [
+    {
+     "text": "MỌI LOÀI AN VUI",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      3,
+      "mong"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "GỒM CẢ BẠN",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      3,
+      "gồm"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      3,
+      "gồm"
+     ]
+    }
+   ],
+   "note": "SNP 1.8 · DIỄN Ý"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "GỬI LỜI THƯƠNG CHO AI?",
+     "at": [
+      4,
+      "Hôm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "lưu lại để thở cùng",
+     "at": [
+      4,
+      "Lưu"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:35433009"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/snp1.8/en/sujato"
+ ],
+ "description": "Tĩnh lặng: gửi lời thương cho chính mình\n\nNguồn: https://suttacentral.net/snp1.8/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

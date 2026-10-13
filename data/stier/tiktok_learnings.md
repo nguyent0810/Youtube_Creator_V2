@@ -91,3 +91,15 @@
 - Chuyện xưa 6 câu với Thiền Tâm Đức + gap 0,35 ra 28 s; cắt câu xuống ≤ 60 từ và gap 0,25 -> 24,6 s.
 - File lịch đăng: /workspace/tiktok/ready/sched_A_B.txt ('#N | post_at | path', caption, '---').
 
+
+## 12. Lô #59–#66 (8–11/11/2026)
+
+- **Nền môi trường CC0 (mới):** spec có thể ghi `"ambience": "rain"` hoặc `{"bed": "rain"|"water", "gain": 1.0, "hits": [{"at": giây, "kind": "bell"|"gong", "gain": 1.0}]}`. File nằm ở `motion/stier/ambience/` (rain, water, bell, gong; đều CC0 1.0, nguồn ghi trong `LICENSES.json`). Nền được lặp với crossfade 1,5 s và cộng SAU bước chuẩn hoá đỉnh của sfx, nên mức không đổi giữa các video; `build.py` tự ghi dòng "Sound: …" vào credits.json → caption thêm dòng "Âm thanh: …".
+  - Đã dùng: #60 mưa (gain 0.9), #61 chuông chùa ở 0,1 s, #62 suối + gong. Mức sfx.wav trung bình −24…−26 dB (so với −30 dB khi không có nền).
+- **Lặp chủ đề:** lịch cũ cho #59 cũng là "vía Dược Sư 30/9" – trùng #58. Đã đổi thành "30/9 âm – ngày cuối tháng: tự hỏi" (AN 10.48). Nhớ dò trùng với lô trước khi soạn.
+- **Lint lô này:** `nhan-gui` và `chuyen-xua` đều bị chặn vì "thiếu cảnh số liệu" → cần ≥1 counter/date/ledger. Counter `to: 0` ("0 NHÀ – chưa từng có ai mất") dùng được và đúng nội dung.
+- Không được lặp hook_type với video liền trước (#63 noi-dau → #64 đổi sang nghich-ly).
+- **CTA dài ≥ 22 ký tự trong look notebook/terminal bị co nhỏ** (nhỏ hơn cả dòng sm). Giữ CTA ≤ 18 ký tự ("BẠN NGHĨ GÌ NHIỀU?", "GIỮ VIỆC TỐT NÀO?", "ĐIỀU ĐẦU TIÊN?"); phần còn lại đưa xuống dòng sm.
+- Credit Pexels gộp theo tác giả (2 clip cùng tác giả → 1 tên), nên số tên có thể ít hơn số clip. Luôn lấy từ credits.json của bản render cuối.
+- File lịch đăng: `sched_59_66.txt`, cùng định dạng.
+

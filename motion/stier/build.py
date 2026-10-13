@@ -599,11 +599,14 @@ def build(slug: str, render: bool = True, draft: bool = False) -> Path:
             if not any(c["text"] == cinfo[s["ckey"]]["credit"] for c in credits):
                 credits.append({"kind": "clip", "text": cinfo[s["ckey"]]["credit"]})
     vtags, scenes = clips.video_tags(scenes, cinfo, dur)
+    for cr in sfx.ambience_credits(spec.get("ambience")):   # nen mua/nuoc/chuong CC0
+        credits.append({"kind": "sound", "text": cr})
     (od / "credits.json").write_text(json.dumps(credits, ensure_ascii=False, indent=1), encoding="utf-8")
     seed = sum(ord(c) * (i + 1) for i, c in enumerate(slug)) % 100000 + 7
     case = {"slug": slug, "dur": dur, "seed": seed, "accent": spec.get("accent", th["accent"]), "kicker": spec["kicker"],
             "sub": spec.get("sub", ""), "acc": spec.get("acc", []), "lines": lines, "imgs": imgs, "geo": geo, "scenes": scenes,
-            "theme": th["js"], **({"mix": True} if spec.get("mix") else {})}
+            "theme": th["js"], **({"mix": True} if spec.get("mix") else {}),
+            **({"ambience": spec["ambience"]} if spec.get("ambience") else {})}
     if look is not None:
         case["look"] = look
     adir.mkdir(parents=True, exist_ok=True)

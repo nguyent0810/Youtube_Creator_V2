@@ -1,0 +1,150 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "ba-dieu",
+ "hook_type": "noi-dau",
+ "open_shot": "ban-be",
+ "voice": "Ngọc Trân",
+ "music": "arcadia.mp3",
+ "gap": 0.15,
+ "title": "4 kiểu bạn thật lòng (Kinh Trường Bộ 31)",
+ "kicker": "4 KIỂU BẠN THẬT",
+ "sub": "KINH TRƯỜNG BỘ 31",
+ "acc": [
+  "bạn",
+  "thật"
+ ],
+ "lines": [
+  "Có người bạn chỉ xuất hiện khi bạn vui? Kinh Trường Bộ ba mươi mốt kể bốn kiểu bạn thật.",
+  "Một: người giúp đỡ, che chở khi bạn sơ suất.",
+  "Hai: người vui buồn có nhau, không bỏ đi lúc bạn gặp nạn.",
+  "Ba: người khuyên điều tốt, ngăn bạn làm điều xấu.",
+  "Bốn: người thương bạn, vui khi bạn tốt lên.",
+  "Bạn của bạn là kiểu số mấy? Tag người ấy nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "BẠN CHỈ ĐẾN KHI VUI?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "4 kiểu bạn thật · DN 31",
+     "at": [
+      0,
+      "Kinh"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:9187880"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 4,
+   "suffix": " KIỂU BẠN",
+   "label": "KINH TRƯỜNG BỘ 31",
+   "until": [
+    1,
+    "Một:"
+   ],
+   "sub": {
+    "text": "1 · NGƯỜI GIÚP ĐỠ",
+    "at": [
+     1,
+     "giúp"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "2 · VUI BUỒN CÓ NHAU",
+     "at": [
+      2,
+      "vui"
+     ],
+     "acc": true
+    },
+    {
+     "text": "không bỏ đi lúc gặp nạn",
+     "at": [
+      2,
+      "không"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8098143"
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "BẠN THẬT",
+   "cards": [
+    {
+     "k": "3",
+     "v": "KHUYÊN ĐIỀU TỐT",
+     "at": [
+      3,
+      "khuyên"
+     ]
+    },
+    {
+     "k": "4",
+     "v": "THƯƠNG BẠN",
+     "at": [
+      4,
+      "thương"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "KIỂU SỐ MẤY?",
+     "at": [
+      5,
+      "Bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "tag người ấy nhé",
+     "at": [
+      5,
+      "Tag"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7516765"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dn31/en/sujato"
+ ],
+ "description": "4 kiểu bạn thật lòng (Kinh Trường Bộ 31)\n\nNguồn: https://suttacentral.net/dn31/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}
