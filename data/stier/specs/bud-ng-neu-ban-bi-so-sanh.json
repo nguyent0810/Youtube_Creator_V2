@@ -1,0 +1,135 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "nhan-gui",
+ "hook_type": "noi-thang",
+ "open_shot": "dien-thoai",
+ "voice": "Ngọc Huyền",
+ "music": "healing.mp3",
+ "gap": 0.5,
+ "title": "Nếu bạn đang bị so sánh",
+ "kicker": "NHẮN GỬI",
+ "sub": "KINH PHÁP CÚ · KỆ 50",
+ "acc": [
+  "mình",
+  "qua"
+ ],
+ "lines": [
+  "Nếu bạn đang lướt điện thoại, và thấy ai cũng hơn mình.",
+  "Mạng chỉ cho bạn thấy phần đẹp nhất của người khác.",
+  "Kinh Pháp Cú, kệ năm mươi, diễn ý: đừng soi việc của người. Hãy xét việc mình đã làm, và chưa làm.",
+  "So với mình hôm qua, là đủ.",
+  "Lưu lại, gửi cho người bạn đang mệt. Hôm nay bạn hơn hôm qua điều gì?"
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "AI CŨNG HƠN MÌNH?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "khi lướt điện thoại",
+     "at": [
+      0,
+      "lướt"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:10374888"
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "CHỈ LÀ\nPHẦN ĐẸP NHẤT",
+   "fx": "zoom",
+   "sub": "CỦA NGƯỜI KHÁC"
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Kệ 50 (diễn ý)",
+   "nodes": [
+    {
+     "text": "VIỆC CỦA NGƯỜI",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      2,
+      "người."
+     ],
+     "shape": "box",
+     "cross": [
+      2,
+      "Hãy"
+     ]
+    },
+    {
+     "text": "VIỆC CỦA MÌNH",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      2,
+      "mình"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "DHP 50 · SUTTACENTRAL"
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 1,
+   "suffix": " NGƯỜI ĐỂ SO",
+   "label": "MÌNH HÔM QUA",
+   "until": [
+    3,
+    "qua,"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "HÔM NAY HƠN GÌ?",
+     "at": [
+      4,
+      "Hôm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "gửi cho bạn đang mệt",
+     "at": [
+      4,
+      "gửi"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34611148"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp44-59/en/sujato"
+ ],
+ "description": "Nếu bạn đang bị so sánh\n\nNguồn: https://suttacentral.net/dhp44-59/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

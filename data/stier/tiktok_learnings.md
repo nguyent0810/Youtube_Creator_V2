@@ -133,3 +133,13 @@
 - CTA ≤ 16 ký tự vẫn là an toàn nhất trong look có highlight ("BẠN NGHĨ LÀ GÌ?").
 - File lịch đăng: `sched_67_74.txt`.
 
+
+## 14. Lô #75–#82 (16–19/11/2026)
+
+- **Đổi vị trí board/counter để tránh lặp thứ tự cảnh:** lên sẵn chuỗi cảnh cho cả lô trước khi viết lời. Chuỗi phải khác nhau trong lô và khác 3 Short gần nhất. Lô này dùng: M G D G M · M T D G M · M G D M G M · M G M T D M · M D G G M · M G T D M · M D G M G M · M T G D M → **không còn cảnh báo trùng**.
+- Đưa slam không clip (T) vào vị trí 2 hoặc 4 vừa đổi nhịp, vừa giữ M ≤ 60%.
+- **Độ dài:** nhan-gui với gap 0,5 + 69 từ = 26,2 s (quá dài) → gap 0,25. chuyen-xua 66 từ + gap 0,15 = 17,8 s (quá ngắn) → thêm 5 từ, gap 0,3. Công thức ước lượng: giây ≈ từ/3,4 + gap×(số câu−1) + 1.
+- **Clip đúng nghĩa:** tìm "wheel wooden" ra vòng đu quay (ferris wheel), không hợp với bánh xe Pháp → đổi sang guồng nước gỗ. Cũng không dùng ống "prayer wheel" (Tây Tạng) để minh hoạ Dharmacakra, vì đó là hai vật khác nhau.
+- CTA có highlight: tiếp tục giữ ≤ 16 ký tự.
+- File lịch đăng: `sched_75_82.txt`.
+

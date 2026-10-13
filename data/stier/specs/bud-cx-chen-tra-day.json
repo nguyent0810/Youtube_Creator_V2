@@ -1,0 +1,165 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "chuyen-xua",
+ "hook_type": "pov",
+ "open_shot": "rot-tra",
+ "voice": "Thanh Bình",
+ "music": "perspectives.mp3",
+ "gap": 0.3,
+ "series": "Chuyện xưa · Tập 10",
+ "title": "Chuyện xưa · Tập 10: Chén trà đầy (chuyện Thiền)",
+ "kicker": "CHUYỆN XƯA · TẬP 10",
+ "sub": "CHUYỆN THIỀN · NAN-IN",
+ "acc": [
+  "đầy",
+  "trống"
+ ],
+ "lines": [
+  "Trà đã tràn ra bàn, mà thầy vẫn rót.",
+  "Chuyện Thiền kể: một học giả đến hỏi Thiền sư Nan-in về Thiền, nói không ngừng về những gì mình biết.",
+  "Thầy rót trà. Chén đầy, thầy vẫn rót.",
+  "Thầy nói: tâm ông như chén trà này. Đầy rồi, rót gì vào được?",
+  "Muốn học, trước hết hãy để trống một chỗ.",
+  "Chén của bạn đang đầy điều gì? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "TRÀN RỒI VẪN RÓT?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "chuyện Thiền: chén trà đầy",
+     "at": [
+      0,
+      "Trà"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:17512964"
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Học giả",
+   "nodes": [
+    {
+     "text": "ĐẾN HỎI THIỀN",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      1,
+      "hỏi"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "NÓI KHÔNG NGỪNG",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      1,
+      "nói"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      1,
+      "nói"
+     ]
+    }
+   ],
+   "note": "ZEN FLESH, ZEN BONES"
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "CHÉN ĐẦY",
+     "at": [
+      2,
+      "Chén"
+     ],
+     "acc": true
+    },
+    {
+     "text": "thầy vẫn rót",
+     "at": [
+      2,
+      "thầy"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8507900"
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "ĐẦY RỒI,\nRÓT GÌ VÀO?",
+   "fx": "zoom"
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "to": 1,
+   "suffix": " CHỖ TRỐNG",
+   "label": "ĐỂ HỌC ĐIỀU MỚI",
+   "until": [
+    4,
+    "trống"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "CHÉN BẠN ĐẦY GÌ?",
+     "at": [
+      5,
+      "Chén"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận nhé",
+     "at": [
+      5,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6343936"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Zen_Flesh,_Zen_Bones"
+ ],
+ "description": "Chuyện xưa · Tập 10: Chén trà đầy (chuyện Thiền)\n\nNguồn: https://en.wikipedia.org/wiki/Zen_Flesh,_Zen_Bones",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}
