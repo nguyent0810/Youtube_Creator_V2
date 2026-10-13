@@ -1,0 +1,184 @@
+{
+ "theme": "mim",
+ "title": "Điều phối viên 911 không nghe giọng cô bé, vẫn biết ngay đó là lừa đảo",
+ "description": "Trong vụ cuộc gọi đòi tiền chuộc ở Arizona (01/2023), một phụ huynh gọi cấp cứu kể lại sự việc và điều phối viên nhận ra ngay: “Đó là một kiểu lừa đảo rất phổ biến.” Cô không nghe giọng cô bé; cô nghe ra kịch bản. Kịch bản ấy có ba nhịp: GẤP (phải làm ngay), GIẤU (không được nói với ai), TIỀN (chuyển theo cách khó đòi lại: chuyển khoản, tiền mã hoá, thẻ quà tặng — theo cảnh báo của Ủy ban Thương mại Liên bang Mỹ). Giọng nói có thể giả, nhưng kịch bản thì lặp lại. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ về AI giả giọng lên kênh tối 26/10.",
+ "tags": [
+  "lừa đảo qua điện thoại",
+  "gấp giấu tiền",
+  "ftc",
+  "ai giả giọng",
+  "deepfake giọng nói",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "AI VÀ GIỌNG NÓI",
+ "sub": "ARIZONA · 2023",
+ "acc": [
+  "kịch",
+  "gấp",
+  "giấu",
+  "tiền",
+  "lặp"
+ ],
+ "lines": [
+  "Người điều phối viên không hề nghe giọng cô bé. Vậy mà cô biết ngay, đó là lừa đảo.",
+  "Tháng 1 năm 2023, một người mẹ ở Mỹ nhận cuộc gọi đòi tiền chuộc, với tiếng khóc giống hệt con mình.",
+  "Một phụ huynh đứng cạnh gọi cấp cứu, và kể lại.",
+  "Người điều phối nói, đó là một kiểu lừa đảo rất phổ biến.",
+  "Cô ấy không nghe giọng. Cô ấy nghe ra kịch bản.",
+  "Kịch bản ấy có ba nhịp. Gấp. Giấu. Và tiền.",
+  "Giọng nói có thể giả. Nhưng kịch bản thì lặp lại."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "KHÔNG NGHE GIỌNG CÔ BÉ",
+     "at": 0.0
+    },
+    {
+     "text": "VẪN BIẾT LÀ LỪA ĐẢO",
+     "at": [
+      0,
+      "Vậy"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7597594",
+   "veil": 0.58
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "THÁNG 1 NĂM 2023",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "CUỘC GỌI ĐÒI TIỀN CHUỘC",
+     "at": [
+      1,
+      "cuộc"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7597600",
+   "ms": 10,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Cuộc gọi cấp cứu",
+   "nodes": [
+    {
+     "text": "“một kiểu lừa đảo",
+     "x": 0.5,
+     "y": 0.32,
+     "at": [
+      3,
+      "một"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "rất phổ biến”",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      3,
+      "rất"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 520
+    }
+   ],
+   "note": "TRÍCH DỊCH LỜI ĐIỀU PHỐI VIÊN"
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "CÔ NGHE RA KỊCH BẢN",
+   "sub": "KHÔNG PHẢI GIỌNG NÓI"
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "KỊCH BẢN CÓ BA NHỊP",
+   "cards": [
+    {
+     "k": "GẤP",
+     "v": "PHẢI LÀM NGAY",
+     "at": [
+      5,
+      "Gấp."
+     ]
+    },
+    {
+     "k": "GIẤU",
+     "v": "KHÔNG ĐƯỢC NÓI VỚI AI",
+     "at": [
+      5,
+      "Giấu."
+     ]
+    },
+    {
+     "k": "TIỀN",
+     "v": "CHUYỂN KIỂU KHÓ ĐÒI LẠI",
+     "at": [
+      5,
+      "Và"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "THEO CẢNH BÁO CỦA FTC (MỸ)"
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "to": 3,
+   "suffix": " NHỊP",
+   "label": "GIỌNG CÓ THỂ GIẢ · KỊCH BẢN THÌ LẶP LẠI",
+   "until": [
+    6,
+    "giả."
+   ],
+   "sub": {
+    "text": "GẤP · GIẤU · TIỀN",
+    "at": [
+     6,
+     "Nhưng"
+    ]
+   }
+  }
+ ],
+ "sources": [
+  "https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes",
+  "https://edition.cnn.com/2023/04/29/us/ai-scam-calls-kidnapping-cec/index.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

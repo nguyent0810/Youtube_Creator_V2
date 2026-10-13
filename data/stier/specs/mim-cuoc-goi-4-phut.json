@@ -1,0 +1,188 @@
+{
+ "theme": "mim",
+ "title": "Cuộc gọi 4 phút ở Arizona: tiếng con gái khóc, và một triệu đô tiền chuộc",
+ "description": "Chiều 20/01/2023 ở Scottsdale (Arizona, Mỹ), bà Jennifer DeStefano nghe một số lạ: tiếng khóc giống hệt con gái 15 tuổi, rồi một giọng đàn ông đòi một triệu USD, sau hạ xuống 50.000 USD. Khoảng bốn phút sau, bà nói chuyện được với con gái: cô bé an toàn. Tháng 6/2023 bà kể lại trước một tiểu ban Thượng viện Mỹ. Theo CNN, cơ quan thực thi pháp luật CHƯA xác minh vụ này có dùng AI hay không; bà DeStefano tin là có. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ về AI giả giọng lên kênh tối 26/10.",
+ "tags": [
+  "jennifer destefano",
+  "lừa đảo bắt cóc ảo",
+  "cuộc gọi giả giọng",
+  "ai giả giọng",
+  "deepfake giọng nói",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "AI VÀ GIỌNG NÓI",
+ "sub": "ARIZONA · 2023",
+ "acc": [
+  "khóc",
+  "triệu",
+  "bốn",
+  "chưa",
+  "mẹ"
+ ],
+ "lines": [
+  "Một người mẹ nghe tiếng con gái khóc trong điện thoại, từ một số lạ.",
+  "Chiều 20 tháng 1 năm 2023, ở bang Arizona, nước Mỹ.",
+  "Một giọng đàn ông chen vào. Hắn nói đang giữ con bà, và đòi một triệu đô la.",
+  "Bốn phút sau, bà gọi được cho con. Con bé đang nằm trên giường, an toàn.",
+  "Tiếng khóc ấy có phải do AI tạo ra không?",
+  "Theo báo chí Mỹ, cơ quan chức năng chưa xác minh được.",
+  "Nhưng với một người mẹ đang hoảng loạn, chuyện ấy gần như không còn quan trọng."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "TIẾNG CON GÁI KHÓC",
+     "at": 0.0
+    },
+    {
+     "text": "TỪ MỘT SỐ LẠ",
+     "at": [
+      0,
+      "từ"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7597600",
+   "veil": 0.58
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "20.01.2023",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "Arizona, nước Mỹ",
+     "at": [
+      1,
+      "ở"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7119833",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 1000000,
+   "suffix": " USD",
+   "label": "TIỀN CHUỘC HẮN ĐÒI",
+   "until": [
+    2,
+    "triệu"
+   ],
+   "sub": {
+    "text": "SAU ĐÓ HẠ XUỐNG 50.000 USD · THEO LỜI KỂ CỦA NGƯỜI MẸ",
+    "at": [
+     2,
+     "đô"
+    ]
+   }
+  },
+  {
+   "type": "timeline",
+   "at": 3,
+   "items": [
+    {
+     "year": "phút 0",
+     "text": "tiếng khóc · giọng đàn ông đòi tiền",
+     "at": [
+      3,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "year": "phút 4",
+     "text": "gọi được cho con: an toàn",
+     "at": [
+      3,
+      "Con"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Có phải AI không?",
+   "nodes": [
+    {
+     "text": "tiếng khóc ấy do AI tạo ra?",
+     "x": 0.5,
+     "y": 0.24,
+     "at": [
+      4,
+      "có"
+     ],
+     "shape": "none",
+     "w": 800
+    },
+    {
+     "text": "cơ quan chức năng",
+     "x": 0.5,
+     "y": 0.48,
+     "at": [
+      5,
+      "cơ"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "chưa xác minh được",
+     "x": 0.5,
+     "y": 0.74,
+     "at": [
+      5,
+      "chưa"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 640
+    }
+   ],
+   "note": "THEO CNN, 04/2023"
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "NỖI SỢ LÀM NỐT PHẦN CÒN LẠI",
+   "sub": "GIỌNG THẬT HAY GIẢ, LÚC ẤY KHÓ MÀ KỊP HỎI"
+  }
+ ],
+ "sources": [
+  "https://edition.cnn.com/2023/04/29/us/ai-scam-calls-kidnapping-cec/index.html",
+  "https://www.govinfo.gov/content/pkg/CHRG-118shrg52709/html/CHRG-118shrg52709.htm"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "=AI": "ây ai",
+  "arizona": "A-ri-dô-na"
+ },
+ "imgs": {}
+}

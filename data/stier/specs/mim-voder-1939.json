@@ -1,0 +1,173 @@
+{
+ "theme": "mim",
+ "title": "Năm 1939, muốn máy nói một câu, người ta phải tập nhiều tháng",
+ "description": "Tại Hội chợ Thế giới New York 1939, Phòng thí nghiệm Bell trình diễn Voder, một cỗ máy biết nói. Người vận hành phải bấm phím để tạo từng âm, gạt cổ tay để đổi giữa tiếng rít và tiếng ù, và đạp chân để lên xuống giọng; họ luyện tập nhiều tháng mới làm máy nói được những câu nghe ra chữ. Giọng của nó không giống giọng một ai cả. Hơn 80 năm sau, có mô hình nghiên cứu chỉ cần 3 giây giọng mẫu để nói bằng giọng một người cụ thể. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ về AI giả giọng lên kênh tối 26/10.",
+ "tags": [
+  "voder",
+  "bell labs",
+  "tổng hợp giọng nói",
+  "lịch sử công nghệ",
+  "ai giả giọng",
+  "deepfake giọng nói",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "LỊCH SỬ CÔNG NGHỆ",
+ "sub": "NEW YORK · 1939",
+ "acc": [
+  "tháng",
+  "phím",
+  "chân",
+  "ai",
+  "ba"
+ ],
+ "lines": [
+  "Năm 1939, muốn một cỗ máy nói được một câu, người ta phải tập nhiều tháng.",
+  "Ở Hội chợ Thế giới New York, hàng triệu khách kéo tới nghe cỗ máy ấy. Tên nó là Voder.",
+  "Người vận hành bấm phím, để tạo từng âm.",
+  "Gạt cổ tay, để đổi giữa tiếng rít và tiếng ù.",
+  "Và đạp chân, để lên xuống giọng.",
+  "Giọng của nó, không giống giọng của một ai cả.",
+  "Hơn tám mươi năm sau, có cỗ máy chỉ cần nghe bạn ba giây."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NĂM 1939",
+     "at": 0.0
+    },
+    {
+     "text": "TẬP NHIỀU THÁNG ĐỂ MÁY NÓI",
+     "at": [
+      0,
+      "người"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:8118112",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "HỘI CHỢ THẾ GIỚI NEW YORK",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "VODER",
+     "at": [
+      1,
+      "Tên"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:8197837",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "MUỐN NÓ NÓI, PHẢI",
+   "cards": [
+    {
+     "k": "TAY",
+     "v": "BẤM PHÍM TẠO TỪNG ÂM",
+     "at": [
+      2,
+      "bấm"
+     ]
+    },
+    {
+     "k": "CỔ TAY",
+     "v": "ĐỔI TIẾNG RÍT · TIẾNG Ù",
+     "at": [
+      3,
+      "đổi"
+     ]
+    },
+    {
+     "k": "CHÂN",
+     "v": "LÊN XUỐNG GIỌNG",
+     "at": [
+      4,
+      "lên"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "THEO TẠP CHÍ CỦA BELL, 1940"
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "KHÔNG GIỐNG GIỌNG AI CẢ",
+   "sub": "MÁY BIẾT NÓI ĐỜI ĐẦU"
+  },
+  {
+   "type": "chart",
+   "at": 6,
+   "kind": "bars",
+   "title": "ĐỂ MÁY NÓI ĐƯỢC",
+   "unit": "MINH HOẠ · KHÔNG CÙNG THANG ĐO",
+   "bars": [
+    {
+     "label": "1939\nVODER",
+     "v": 100,
+     "text": "NHIỀU THÁNG",
+     "c": "dim",
+     "at": [
+      6,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "label": "2023\nMẪU GIỌNG",
+     "v": 3,
+     "text": "3 GIÂY",
+     "c": "ref",
+     "at": [
+      6,
+      "ba"
+     ]
+    }
+   ],
+   "note": "2023: MÔ HÌNH NGHIÊN CỨU, CHƯA ĐƯA RA CÔNG CHÚNG"
+  }
+ ],
+ "sources": [
+  "https://archive.org/details/belltelephonemag19amerrich",
+  "https://arxiv.org/abs/2301.02111v1"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "=AI": "ây ai",
+  "york": "Doóc",
+  "new": "Niu",
+  "voder": "Vô-đơ"
+ },
+ "imgs": {}
+}

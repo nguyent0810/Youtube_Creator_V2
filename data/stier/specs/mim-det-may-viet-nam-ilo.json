@@ -1,0 +1,178 @@
+{
+ "theme": "mim",
+ "title": "Năm 2016, ILO cảnh báo robot đe doạ phần lớn việc dệt may ở Việt Nam. Rồi sao?",
+ "description": "Năm 2016, một nghiên cứu của Tổ chức Lao động Quốc tế (ILO) ước tính ở Campuchia, Indonesia và Việt Nam, 64–88% lao động dệt may và giày da có rủi ro cao bị tự động hoá; các tác giả nói rõ rủi ro không có nghĩa là chắc chắn. Năm 2017, ngành may mặc và giày da Việt Nam có gần 3 triệu lao động chính thức, gấp gần sáu lần so với khoảng năm 2000. Năm 2020, một nghiên cứu khác do ILO đồng xuất bản vẫn thấy tự động hoá trong ngành may còn hạn chế. Ít nhất tới 2020, lời cảnh báo chưa thành sự thật; video không dự báo tương lai. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ về AI và việc làm (13 phút): https://youtu.be/sP0ch8-NYec",
+ "tags": [
+  "dệt may việt nam",
+  "ilo",
+  "tự động hoá",
+  "ai và việc làm",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "AI VÀ VIỆC LÀM",
+ "sub": "VIỆT NAM · 2016",
+ "acc": [
+  "tám",
+  "rủi",
+  "ba",
+  "sáu",
+  "chưa"
+ ],
+ "lines": [
+  "Sáu mươi tư đến tám mươi tám phần trăm lao động dệt may, có rủi ro cao bị máy thay.",
+  "Đó là ước tính của Tổ chức Lao động Quốc tế, năm 2016, cho Campuchia, Indonesia và Việt Nam.",
+  "Các tác giả nói rõ. Rủi ro, không có nghĩa là chắc chắn.",
+  "Một năm sau, ngành may mặc và giày da Việt Nam có gần ba triệu lao động.",
+  "Gấp gần sáu lần so với khoảng năm 2000.",
+  "Năm 2020, một nghiên cứu khác vẫn thấy tự động hoá trong ngành may còn hạn chế.",
+  "Ít nhất tới lúc ấy, lời cảnh báo chưa thành sự thật."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "64–88% LAO ĐỘNG DỆT MAY",
+     "at": 0.0
+    },
+    {
+     "text": "RỦI RO CAO BỊ MÁY THAY",
+     "at": [
+      0,
+      "có"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:4622428",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "ILO · 2016",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "CAMPUCHIA · INDONESIA · VIỆT NAM",
+     "at": [
+      1,
+      "cho"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:4622440",
+   "ms": 6,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Các tác giả nói rõ",
+   "nodes": [
+    {
+     "text": "rủi ro",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      2,
+      "Rủi"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "không có nghĩa là chắc chắn",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      2,
+      "không"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 820
+    }
+   ],
+   "note": "ILO, 2016"
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 3,
+   "prefix": "~",
+   "suffix": " TRIỆU",
+   "label": "LAO ĐỘNG MAY MẶC VÀ GIÀY DA VIỆT NAM · 2017",
+   "until": [
+    3,
+    "ba"
+   ],
+   "sub": {
+    "text": "GẤP GẦN 6 LẦN SO VỚI KHOẢNG NĂM 2000",
+    "at": [
+     4,
+     "Gấp"
+    ]
+   }
+  },
+  {
+   "type": "timeline",
+   "at": 5,
+   "items": [
+    {
+     "year": "2016",
+     "text": "ILO: 64–88% có rủi ro cao",
+     "at": [
+      5,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "year": "2020",
+     "text": "tự động hoá ngành may còn hạn chế",
+     "at": [
+      5,
+      "vẫn"
+     ]
+    },
+    {
+     "year": "tới lúc ấy",
+     "text": "cảnh báo chưa thành sự thật",
+     "at": [
+      6,
+      "lời"
+     ]
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://www.ilo.org/sites/default/files/wcmsp5/groups/public/@ed_dialogue/@act_emp/documents/publication/wcms_579554.pdf"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "indonesia": "In-đô-nê-xi-a"
+ },
+ "imgs": {}
+}
