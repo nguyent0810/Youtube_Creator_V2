@@ -1,0 +1,227 @@
+{
+ "theme": "bud",
+ "format": "do-vui",
+ "hook_type": "do-vui",
+ "open_shot": "nen-huong",
+ "voice": "Quang Sơn",
+ "music": "frost_waltz.mp3",
+ "series": "Đố vui Phật pháp #3",
+ "title": "Đố vui Phật pháp #3: Lời cuối cùng của Đức Phật là gì?",
+ "kicker": "ĐỐ VUI PHẬT PHÁP #3",
+ "sub": "TRƯỜNG BỘ 16",
+ "acc": [
+  "tinh",
+  "tấn",
+  "cuối"
+ ],
+ "lines": [
+  "Đố bạn: câu cuối cùng Đức Phật nói trước khi nhập diệt là gì?",
+  "A: hãy tôn thờ ta. B: các pháp hữu vi đều hoại diệt, hãy tinh tấn. C: hãy xây chùa.",
+  "Ba, hai, một.",
+  "Đáp án: B.",
+  "Trong Kinh Đại Bát Niết-bàn, lời cuối của Ngài, diễn ý:",
+  "Các pháp hữu vi đều hoại diệt. Hãy tinh tấn, chớ buông lung.",
+  "Không xin thờ phụng. Chỉ nhắc ta tự bước đi.",
+  "Bình luận A, B hay C, và theo dõi câu đố sau."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "clip": "pexels:37000786",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "ĐỐ BẠN",
+     "at": 0.0,
+     "acc": true,
+     "size": 170
+    },
+    {
+     "text": "LỜI CUỐI CỦA ĐỨC PHẬT?",
+     "at": [
+      0,
+      "cuối"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "clip": "pexels:19997487",
+   "veil": 0.6,
+   "items": [
+    {
+     "text": "A · HÃY TÔN THỜ TA",
+     "at": [
+      1,
+      "A"
+     ]
+    },
+    {
+     "text": "B · HÃY TINH TẤN",
+     "at": [
+      1,
+      "B"
+     ]
+    },
+    {
+     "text": "C · HÃY XÂY CHÙA",
+     "at": [
+      1,
+      "C"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "clip": "pexels:6782216",
+   "veil": 0.6,
+   "items": [
+    {
+     "text": "BA",
+     "at": [
+      2,
+      "Ba"
+     ],
+     "size": 150
+    },
+    {
+     "text": "HAI",
+     "at": [
+      2,
+      "hai"
+     ],
+     "size": 150
+    },
+    {
+     "text": "MỘT",
+     "at": [
+      2,
+      "một"
+     ],
+     "acc": true,
+     "size": 150
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "ĐÁP ÁN B",
+   "clip": "pexels:34807255",
+   "veil": 0.55,
+   "fx": "zoom",
+   "sub": "HÃY TINH TẤN"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "clip": "pexels:29544759",
+   "veil": 0.6,
+   "items": [
+    {
+     "text": "KINH ĐẠI BÁT NIẾT-BÀN",
+     "at": [
+      4,
+      "Kinh"
+     ],
+     "acc": true
+    },
+    {
+     "text": "TRƯỜNG BỘ 16 · diễn ý",
+     "at": [
+      4,
+      "lời"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 5,
+   "text": "Các pháp hữu vi đều hoại diệt. Hãy tinh tấn, chớ buông lung.",
+   "by": "DN 16 · DIỄN Ý",
+   "clip": "pexels:28291403",
+   "veil": 0.6
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "clip": "pexels:5418503",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "KHÔNG XIN THỜ PHỤNG",
+     "at": [
+      6,
+      "Không"
+     ]
+    },
+    {
+     "text": "TỰ BƯỚC ĐI",
+     "at": [
+      6,
+      "tự"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "clip": "pexels:35458018",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "A · B · C?",
+     "at": [
+      7,
+      "Bình"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận",
+     "at": [
+      7,
+      "Bình"
+     ],
+     "sm": true
+    },
+    {
+     "text": "THEO DÕI",
+     "at": [
+      7,
+      "theo"
+     ],
+     "acc": true
+    },
+    {
+     "text": "câu đố sau",
+     "at": [
+      7,
+      "câu"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "description": "Đố vui Phật pháp #3. Kinh Trường Bộ 16 (Đại Bát Niết-bàn), lời cuối của Đức Phật, diễn ý: 'Các pháp hữu vi đều hoại diệt. Hãy tinh tấn, chớ buông lung.'\n\nNguồn: DN 16, bản dịch Bhikkhu Sujato (CC0): https://suttacentral.net/dn16/en/sujato\nLời kinh là diễn ý.",
+ "tags": [
+  "đố vui phật pháp",
+  "lời cuối của đức phật",
+  "kinh đại bát niết bàn",
+  "vô thường",
+  "lời phật dạy"
+ ],
+ "sources": [
+  "https://suttacentral.net/dn16/en/sujato"
+ ]
+}

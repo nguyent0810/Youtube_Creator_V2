@@ -448,7 +448,7 @@ def plan(spec: dict, lines: list[dict], dur: float) -> list[dict]:
     # Khung 0 PHẢI có chữ (12/10/2026, quy tắc Short 1): dòng mở (at < 0,3 s) của cảnh kinetic đầu, kênh MIM/CK, chưa ghi
     # fx -> "hold" (hiện sẵn từ khung 0). Trước đây nó nhận rise/outline/scramble: khung 0 trống, và scramble đặt mốc ÂM
     # (at - 0,35) làm cảnh mở đè lên cảnh sau (ck-nha-dat-kho-ban). Spec "hold_open": false -> giữ cách cũ.
-    if spec.get("theme") in ("mim", "ck"):   # "size" ghi tay vượt khung 980 px -> chữ bị cắt mép (100 ĐỒNG, NOBEL VẬT LÝ)
+    if spec.get("theme") in ("mim", "ck", "bud"):   # "size" ghi tay vượt khung 980 px -> chữ bị cắt mép (100 ĐỒNG, NOBEL VẬT LÝ)
         from beatfx import text_em
         wide = [f'"{q["text"]}" size {q["size"]} ≈ {q["size"] * text_em(q["text"]):.0f}px'
                 for r in sc if r["type"] == "kinetic" for q in r["items"]
@@ -461,11 +461,11 @@ def plan(spec: dict, lines: list[dict], dur: float) -> list[dict]:
         css = HF / "assets" / "engine" / f"theme-{spec.get('theme')}.css"
         if not (css.exists() and ".chbar" in css.read_text(encoding="utf-8")):
             raise SystemExit(f"cảnh chart: theme {spec.get('theme')!r} chưa có CSS biểu đồ (.chbar) trong {css.name}")
-    if spec.get("theme") in ("mim", "ck") and spec.get("mix"):
+    if spec.get("theme") in ("mim", "ck", "bud") and spec.get("mix"):
         bad = mix_lint(sc)
         if bad:
             raise SystemExit("phối cảnh chưa đạt (luật mix 12/10/2026): " + "; ".join(bad))
-    if spec.get("theme") in ("mim", "ck") and spec.get("hold_open", True) and sc and sc[0]["type"] == "kinetic":
+    if spec.get("theme") in ("mim", "ck", "bud") and spec.get("hold_open", True) and sc and sc[0]["type"] == "kinetic":
         for q in sc[0]["items"]:
             if q["at"] < 0.3 and not q.get("fx"):
                 q["fx"] = "hold"

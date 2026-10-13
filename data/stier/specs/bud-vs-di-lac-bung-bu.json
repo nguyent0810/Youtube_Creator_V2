@@ -1,0 +1,183 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "vi-sao",
+ "hook_type": "do-vui",
+ "open_shot": "nguoi-than",
+ "voice": "Quang Sơn",
+ "music": "ether_vox.mp3",
+ "gap": 0.0,
+ "title": "Vì sao tượng Di Lặc bụng to, cười lớn?",
+ "kicker": "VÌ SAO?",
+ "sub": "GIẢI MÃ BIỂU TƯỢNG",
+ "acc": [
+  "Bố",
+  "Di",
+  "hoan"
+ ],
+ "lines": [
+  "Đố bạn: ông Phật bụng to, cười lớn này, thật ra là ai?",
+  "Hình tượng này dựa trên Bố Đại, một thiền sư Trung Hoa thế kỷ mười.",
+  "Ông đeo túi vải, đi khắp nơi, cười đùa với trẻ con.",
+  "Dân gian xem ông là hoá thân của Bồ Tát Di Lặc.",
+  "Ý nghĩa: hoan hỷ, buông nhẹ. Không phải thần tài.",
+  "Bạn từng nhầm chưa? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "items": [
+    {
+     "text": "THẬT RA LÀ AI?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "ông Phật bụng to, cười lớn",
+     "at": [
+      0,
+      "ông"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:12475219"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 10,
+   "suffix": "",
+   "label": "THẾ KỶ · THIỀN SƯ BỐ ĐẠI",
+   "until": [
+    1,
+    "thế"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "TÚI VẢI · NỤ CƯỜI",
+     "at": [
+      2,
+      "túi"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:8513135"
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Dân gian",
+   "nodes": [
+    {
+     "text": "BỐ ĐẠI",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      3,
+      "ông"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "DI LẶC",
+     "x": 0.5,
+     "y": 0.65,
+     "at": [
+      3,
+      "Di"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      3,
+      "hoá"
+     ]
+    }
+   ],
+   "note": "THEO WIKIPEDIA · BUDAI"
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "Ý NGHĨA",
+   "cards": [
+    {
+     "k": "1",
+     "v": "HOAN HỶ",
+     "at": [
+      4,
+      "hoan"
+     ]
+    },
+    {
+     "k": "2",
+     "v": "BUÔNG NHẸ",
+     "at": [
+      4,
+      "buông"
+     ]
+    },
+    {
+     "k": "KHÔNG PHẢI",
+     "v": "THẦN TÀI",
+     "at": [
+      4,
+      "Không"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "BẠN TỪNG NHẦM?",
+     "at": [
+      5,
+      "Bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận nhé",
+     "at": [
+      5,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:36534706"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Budai"
+ ],
+ "description": "Vì sao tượng Di Lặc bụng to, cười lớn?\n\nNguồn: https://en.wikipedia.org/wiki/Budai",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

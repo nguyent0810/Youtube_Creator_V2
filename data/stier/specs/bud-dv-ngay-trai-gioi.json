@@ -1,0 +1,255 @@
+{
+ "theme": "bud",
+ "format": "do-vui",
+ "hook_type": "do-vui",
+ "open_shot": "trang",
+ "voice": "Thục Đoan",
+ "music": "floating_cities.mp3",
+ "series": "Đố vui Phật pháp #2",
+ "title": "Đố vui Phật pháp #2: Một tháng có mấy ngày trai giới?",
+ "kicker": "ĐỐ VUI PHẬT PHÁP #2",
+ "sub": "TĂNG CHI 3.37 · 3.70",
+ "acc": [
+  "trăng",
+  "bốn",
+  "giới"
+ ],
+ "lines": [
+  "Hôm nay mùng tám âm. Đố bạn: theo truyền thống, một tháng có mấy ngày trai giới?",
+  "Một ngày, hai ngày, hay bốn ngày?",
+  "Ba, hai, một.",
+  "Đáp án: bốn ngày.",
+  "Theo trăng: trăng non, trăng tròn, và hai ngày bán nguyệt, như mùng tám, hai mươi ba âm.",
+  "Ngày giữ tám giới, nghe pháp, sống chậm lại.",
+  "Nhiều nơi còn giữ sáu hay mười ngày trai mỗi tháng.",
+  "Bình luận xem bạn đoán đúng không, và theo dõi câu đố sau."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "clip": "pexels:31938687",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "MÙNG 8 ÂM",
+     "at": 0.0,
+     "acc": true,
+     "size": 140
+    },
+    {
+     "text": "ĐỐ: MỖI THÁNG",
+     "at": 0.8
+    },
+    {
+     "text": "BAO NHIÊU NGÀY TRAI?",
+     "at": 1.4,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "clip": "pexels:38345559",
+   "veil": 0.6,
+   "items": [
+    {
+     "text": "A · MỘT NGÀY",
+     "at": [
+      1,
+      "Một"
+     ]
+    },
+    {
+     "text": "B · HAI NGÀY",
+     "at": [
+      1,
+      "hai"
+     ]
+    },
+    {
+     "text": "C · BỐN NGÀY",
+     "at": [
+      1,
+      "bốn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "clip": "pexels:9376344",
+   "veil": 0.6,
+   "items": [
+    {
+     "text": "BA",
+     "at": [
+      2,
+      "Ba"
+     ],
+     "size": 150
+    },
+    {
+     "text": "HAI",
+     "at": [
+      2,
+      "hai"
+     ],
+     "size": 150
+    },
+    {
+     "text": "MỘT",
+     "at": [
+      2,
+      "một"
+     ],
+     "acc": true,
+     "size": 150
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "BỐN NGÀY",
+   "clip": "pexels:33730754",
+   "veil": 0.55,
+   "fx": "zoom",
+   "sub": "ĐÁP ÁN C"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "clip": "pexels:28123327",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "TRĂNG NON · TRĂNG TRÒN",
+     "at": [
+      4,
+      "trăng"
+     ]
+    },
+    {
+     "text": "+ HAI NGÀY BÁN NGUYỆT",
+     "at": [
+      4,
+      "hai"
+     ],
+     "acc": true
+    },
+    {
+     "text": "như mùng 8 · 23 âm",
+     "at": [
+      4,
+      "như"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "clip": "pexels:38348297",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "GIỮ TÁM GIỚI",
+     "at": [
+      5,
+      "giữ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "nghe pháp · sống chậm",
+     "at": [
+      5,
+      "nghe"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "clip": "pexels:34717533",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "NHIỀU NƠI",
+     "at": [
+      6,
+      "Nhiều"
+     ],
+     "sm": true
+    },
+    {
+     "text": "SÁU HAY MƯỜI NGÀY",
+     "at": [
+      6,
+      "sáu"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "clip": "pexels:39181586",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "ĐÁP ÁN CỦA BẠN?",
+     "at": [
+      7,
+      "đoán"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận",
+     "at": [
+      7,
+      "Bình"
+     ],
+     "sm": true
+    },
+    {
+     "text": "THEO DÕI",
+     "at": [
+      7,
+      "theo"
+     ],
+     "acc": true
+    },
+    {
+     "text": "câu đố sau",
+     "at": [
+      7,
+      "câu"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "description": "Đố vui Phật pháp #2. Theo truyền thống ngày trai giới (Uposatha) thời Đức Phật, mỗi tháng có bốn ngày theo trăng: trăng non, trăng tròn và hai ngày bán nguyệt (mùng 8, 23 âm). Kinh Tăng Chi 3.37 nhắc các ngày 8, 14, 15 của mỗi nửa tháng; Kinh Tăng Chi 3.70 dạy giữ ngày trai giới với tám chi phần. Nhiều nơi còn giữ sáu (lục trai) hay mười ngày trai.\n\nNguồn: AN 3.70 https://suttacentral.net/an3.70/en/sujato · AN 3.37 https://suttacentral.net/an3.37/en/sujato (bản dịch Bhikkhu Sujato, CC0) · https://en.wikipedia.org/wiki/Uposatha",
+ "tags": [
+  "đố vui phật pháp",
+  "ngày trai giới",
+  "bát quan trai",
+  "mùng 8 âm",
+  "phật giáo"
+ ],
+ "sources": [
+  "https://suttacentral.net/an3.70/en/sujato",
+  "https://suttacentral.net/an3.37/en/sujato",
+  "https://en.wikipedia.org/wiki/Uposatha"
+ ]
+}

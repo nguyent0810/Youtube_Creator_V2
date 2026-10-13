@@ -1,0 +1,80 @@
+/* Giao diện kênh Phật Giáo (BUD) cho engine S-tier (casefile.js) -- Short 9:16 "chữa lành".
+   Chỉ có tác dụng khi #root có class "theme-bud" (motion/stier/themes.py); build.py chỉ nạp file này cho theme "bud".
+   Ngôn ngữ hình: nền nâu trầm ấm như gỗ chùa / ánh nến, MỘT màu nhấn vàng nghệ (saffron), sen hồng nhạt làm phụ.
+   Chữ: Be Vietnam Pro đậm (không Playfair hồ sơ, không glitch/flicker -- tĩnh, ấm, dễ đọc). */
+.theme-bud { --red:#f5b041; --gold:#ffd98a; --paper:#1d140c; --ink:#fbf3e4; --dim:#c9b89c; --glow:rgba(245,176,65,.5);
+             --lotus:#f4a6b8; color:#fbf3e4; }
+.theme-bud #bed { background:
+    radial-gradient(60% 34% at 50% 30%, rgba(245,176,65,.16) 0%, transparent 70%),
+    radial-gradient(40% 22% at 50% 78%, rgba(244,166,184,.10) 0%, transparent 70%),
+    radial-gradient(120% 70% at 50% 20%, #2a1a0e 0%, #140c06 55%, #070403 100%); }
+.theme-bud #grain { opacity:.05; }
+.theme-bud #leak { background: radial-gradient(42% 32% at 50% 50%, rgba(255,196,110,.5), transparent 70%); }
+.theme-bud .mote { width:5px; height:5px; background:rgba(255,214,140,.65); filter:blur(1.5px); }
+.theme-bud #vig { background: radial-gradient(115% 85% at 50% 45%, transparent 58%, rgba(10,5,2,.66) 100%); }
+/* màn che clip: phủ thêm một lớp ấm (inline gradient của engine là xanh than) */
+.theme-bud .vveil::after { content:''; position:absolute; inset:0; background:rgba(70,36,8,.28); mix-blend-mode:multiply; }
+.theme-bud #kicker .t small { color:#e8d6b5; }
+.theme-bud #prog i { background:linear-gradient(90deg, var(--lotus), var(--red)); }
+
+/* chữ "serif" của hồ sơ -> sans đậm */
+.theme-bud .serif, .theme-bud .hw, .theme-bud .count, .theme-bud .cell b, .theme-bud .card .n, .theme-bud .big,
+.theme-bud .ask, .theme-bud .tli .yr, .theme-bud .ledger .lt, .theme-bud .sign, .theme-bud .dg .reel div,
+.theme-bud .dsep, .theme-bud .qpaper .qm, .theme-bud .tape {
+  font-family:'Be Vietnam Pro', system-ui, sans-serif; font-style:normal; letter-spacing:-.02em; }
+.theme-bud .ask { font-weight:800; line-height:1.15; }
+
+/* ánh đỏ cứng trong casefile.css -> ánh vàng nghệ ấm */
+.theme-bud .kin { text-shadow:0 8px 40px rgba(0,0,0,.85), 0 0 2px rgba(0,0,0,.6); }
+.theme-bud .kin.acc { text-shadow:0 0 50px var(--glow), 0 10px 40px rgba(0,0,0,.85); }
+.theme-bud .kin.sm:not(.acc) { color:#f1e3c8; }
+.theme-bud .kin .mk { color:#1d140c; }
+.theme-bud .kin .rw { padding-top:.2em; margin-top:-.2em; }
+.theme-bud .slam { text-shadow:0 0 70px var(--glow), 0 20px 60px rgba(0,0,0,.85); line-height:1.08 !important; }
+.theme-bud .strike { box-shadow:0 0 18px var(--glow); }
+.theme-bud .stamp { text-shadow:0 0 6px var(--glow); }
+.theme-bud .cw.acc { text-shadow:0 0 22px rgba(245,176,65,.4), 0 6px 28px rgba(0,0,0,.95); }
+.theme-bud .dsub { color:#f1e3c8; text-shadow:0 4px 18px rgba(0,0,0,.9); }
+
+/* thẻ giấy -> thẻ gỗ trầm, viền vàng mảnh */
+.theme-bud .card, .theme-bud .ledger, .theme-bud .qpaper {
+  background:rgba(29,20,12,.92); color:var(--ink); border:2px solid rgba(245,176,65,.4); border-radius:22px;
+  box-shadow:0 0 0 1px rgba(245,176,65,.08), 0 40px 120px rgba(0,0,0,.8), 0 0 60px rgba(245,176,65,.12); }
+.theme-bud .ledger .lt { color:var(--red); }
+.theme-bud .ledger .row span:last-child { color:#fff; }
+.theme-bud .qpaper .by, .theme-bud .card .k { color:var(--dim); }
+.theme-bud .card .clip { display:none; }
+.theme-bud .printf, .theme-bud .print, .theme-bud .mug { background:#1d140c; box-shadow:0 0 0 2px rgba(245,176,65,.4), 0 50px 120px rgba(0,0,0,.85); }
+.theme-bud .credit { color:rgba(251,243,228,.85); }
+
+
+/* 13/10/2026: Short BUD dùng chuẩn mix (board/cards3d/chart). Khối biểu đồ .ch* (bài học ec85ff8: theme thiếu CSS -> chart dồn góc) */
+/* ---- cảnh chart (casefile.js B.chart) -- chép từ theme-ck.css 12/10/2026: thiếu khối này thì biểu đồ Short MIM vỡ bố cục ---- */
+.theme-bud .chtitle { position:absolute; left:40px; right:40px; text-align:center; font-weight:900; letter-spacing:-.01em; white-space:nowrap; opacity:0; }
+.theme-bud .chunit { position:absolute; left:0; right:0; text-align:center; font-size:28px; letter-spacing:.2em; color:var(--dim,#c9b89c); white-space:nowrap; opacity:0; }
+.theme-bud .chaxis { stroke:rgba(241,245,249,.55); stroke-width:4; }
+.theme-bud .chgrid { stroke:rgba(201,184,156,.18); stroke-width:2; stroke-dasharray:8 10; }
+.theme-bud .chgl { font-family:'JetBrains Mono'; font-weight:500; font-size:26px; fill:#c9b89c; }
+.theme-bud .chtick { font-family:'JetBrains Mono'; font-weight:700; font-size:30px; fill:#f1e3c8; letter-spacing:.06em; }
+.theme-bud .chtag { font-family:'Be Vietnam Pro'; font-weight:900; font-size:50px; fill:#fff; paint-order:stroke; stroke:#1d140c; stroke-width:10px; }
+.theme-bud .chref { stroke:var(--red,#f87171); stroke-width:4; stroke-dasharray:14 12; }
+.theme-bud .chreft { font-family:'JetBrains Mono'; font-weight:700; font-size:30px; fill:var(--red,#f87171); letter-spacing:.08em; paint-order:stroke; stroke:#1d140c; stroke-width:8px; }
+.theme-bud .chbar { position:absolute; border-radius:14px 14px 4px 4px; transform:scaleY(0); }
+.theme-bud .chghost { position:absolute; border:4px dashed rgba(241,245,249,.45); border-radius:14px 14px 4px 4px; opacity:0; }
+.theme-bud .chgap { position:absolute; border-radius:14px 14px 0 0; opacity:0;
+  background:repeating-linear-gradient(135deg, rgba(239,68,68,.85) 0 14px, rgba(239,68,68,.35) 14px 28px); box-shadow:0 0 40px rgba(239,68,68,.45); }
+.theme-bud .chgapt { position:absolute; font-weight:900; font-size:46px; color:var(--down,#ef4444); white-space:nowrap; opacity:0;
+  text-shadow:0 6px 24px rgba(0,0,0,.9); }
+.theme-bud .chval { position:absolute; text-align:center; font-weight:900; line-height:1; white-space:nowrap; opacity:0;
+  text-shadow:0 8px 30px rgba(0,0,0,.85); }
+.theme-bud .chlbl { position:absolute; text-align:center; font-family:'JetBrains Mono'; font-weight:700; font-size:30px; line-height:1.45;
+  letter-spacing:.06em; color:#fbf3e4; opacity:0; }
+.theme-bud .chbadge { position:absolute; left:20px; right:20px; text-align:center; font-weight:900; line-height:1; color:var(--red,#f87171); white-space:nowrap; opacity:0;
+  text-shadow:0 0 50px var(--glow), 0 12px 40px rgba(0,0,0,.85); }
+.theme-bud .chnote { position:absolute; left:0; right:0; text-align:center; font-size:22px; letter-spacing:.16em; color:#c9b89c; white-space:nowrap; opacity:0; }
+.theme-bud .chgapt { text-align:center; }
+/* thẻ 3D + bảng vẽ: tông gỗ/nến của kênh thay xanh than */
+.theme-bud .c3 { border-color:rgba(245,176,65,.75); }
+.theme-bud .c3k, .theme-bud .c3s { color:rgba(241,227,200,.85); }
+.theme-bud .c3t { text-shadow:0 0 40px var(--glow), 0 8px 30px rgba(0,0,0,.85); }
+.theme-bud .board.bd-glass { background:linear-gradient(160deg, rgba(255,214,140,.14), rgba(255,214,140,.03)); border-color:rgba(245,176,65,.4); }

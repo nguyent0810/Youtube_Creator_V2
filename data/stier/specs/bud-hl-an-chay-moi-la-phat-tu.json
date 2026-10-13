@@ -1,0 +1,254 @@
+{
+ "theme": "bud",
+ "format": "hieu-lam",
+ "hook_type": "nghich-ly",
+ "open_shot": "chu-tren-nen",
+ "voice": "Quang Sơn",
+ "music": "arcadia.mp3",
+ "gap": 0.0,
+ "series": "Hiểu đúng #4",
+ "title": "Hiểu đúng #4: Không ăn chay thì không phải Phật tử? (Kinh Trung Bộ 55)",
+ "kicker": "HIỂU ĐÚNG #4",
+ "sub": "TRUNG BỘ 55 · KỲ-BÀ",
+ "acc": [
+  "chay",
+  "từ",
+  "sát"
+ ],
+ "lines": [
+  "Ăn mặn thì không được theo Phật? Câu trả lời phức tạp hơn bạn nghĩ.",
+  "Nhiều người tin vậy.",
+  "Sai.",
+  "Phật tử quy y Tam bảo, giữ năm giới. Không giới nào bắt ăn chay.",
+  "Nhưng giới đầu: không sát sinh.",
+  "Kinh Kỳ-bà, diễn ý: tu sĩ không dùng thịt nếu thấy, nghe, hay nghi con vật bị giết vì mình.",
+  "Bắc truyền, phổ biến ở Việt Nam, khuyến khích ăn chay vì lòng từ.",
+  "Hai cách, một gốc: không gây hại.",
+  "Bạn ăn chay ngày nào? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "items": [
+    {
+     "text": "ĂN MẶN",
+     "at": 0.0,
+     "acc": true,
+     "fx": "outline",
+     "size": 170
+    },
+    {
+     "text": "KHÔNG ĐƯỢC THEO PHẬT?",
+     "at": 0.5
+    },
+    {
+     "text": "phức tạp hơn bạn nghĩ",
+     "at": [
+      0,
+      "phức"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "KHÔNG ĂN CHAY",
+     "at": [
+      1,
+      "Nhiều"
+     ]
+    },
+    {
+     "text": "= KHÔNG PHẢI PHẬT TỬ?",
+     "at": [
+      1,
+      "tin"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:33338725"
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "SAI",
+   "veil": 0.6,
+   "fx": "zoom",
+   "clip": "pexels:37413885"
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "PHẬT TỬ TẠI GIA",
+   "rows": [
+    {
+     "k": "QUY Y TAM BẢO",
+     "v": "✓",
+     "at": [
+      3,
+      "quy"
+     ]
+    },
+    {
+     "k": "GIỮ NĂM GIỚI",
+     "v": "✓",
+     "at": [
+      3,
+      "giữ"
+     ]
+    },
+    {
+     "k": "BẮT ĂN CHAY",
+     "v": "✗",
+     "at": [
+      3,
+      "bắt"
+     ]
+    }
+   ],
+   "clip": "pexels:5385956",
+   "veil": 0.65
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "GIỚI ĐẦU",
+     "at": [
+      4,
+      "giới"
+     ],
+     "sm": true
+    },
+    {
+     "text": "KHÔNG SÁT SINH",
+     "at": [
+      4,
+      "không"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:36303735"
+  },
+  {
+   "type": "quote",
+   "at": 5,
+   "text": "Tu sĩ không dùng thịt nếu thấy, nghe, hay nghi con vật bị giết vì mình.",
+   "by": "TRUNG BỘ 55 · DIỄN Ý",
+   "veil": 0.6,
+   "clip": "pexels:37564244"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "BẮC TRUYỀN",
+     "at": [
+      6,
+      "Bắc"
+     ],
+     "acc": true,
+     "size": 140
+    },
+    {
+     "text": "KHUYẾN KHÍCH ĂN CHAY",
+     "at": [
+      6,
+      "khuyến"
+     ]
+    },
+    {
+     "text": "vì lòng từ",
+     "at": [
+      6,
+      "vì"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6327114"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "HAI CÁCH · MỘT GỐC",
+     "at": [
+      7,
+      "Hai"
+     ],
+     "acc": true
+    },
+    {
+     "text": "không gây hại",
+     "at": [
+      7,
+      "không"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6798968"
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "NGÀY NÀO?",
+     "at": [
+      8,
+      "ngày"
+     ],
+     "acc": true,
+     "size": 150
+    },
+    {
+     "text": "bạn ăn chay trong tháng",
+     "at": [
+      8,
+      "Bạn"
+     ],
+     "sm": true
+    },
+    {
+     "text": "BÌNH LUẬN",
+     "at": [
+      8,
+      "Bình"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:36272126"
+  }
+ ],
+ "description": "Hiểu đúng #4: không ăn chay thì không phải Phật tử? Phật tử tại gia là người quy y Tam bảo và giữ năm giới; năm giới không có điều bắt buộc ăn chay, nhưng giới thứ nhất là không sát sinh. Kinh Trung Bộ 55 (Jīvaka/Kỳ-bà), diễn ý: Đức Phật dạy tu sĩ không dùng thịt khi thấy, nghe hoặc nghi con vật bị giết vì mình; ai giết con vật để dâng cúng thì tạo nhiều điều bất thiện. Phật giáo Bắc truyền (phổ biến ở Việt Nam) khuyến khích ăn chay vì lòng từ (giới Bồ-tát).\n\nNguồn: MN 55, bản dịch Bhikkhu Sujato (CC0): https://suttacentral.net/mn55/en/sujato · https://en.wikipedia.org/wiki/Buddhist_vegetarianism\nLời kinh là diễn ý.",
+ "tags": [
+  "hiểu đúng phật giáo",
+  "ăn chay",
+  "phật tử",
+  "lời phật dạy",
+  "phật pháp"
+ ],
+ "sources": [
+  "https://suttacentral.net/mn55/en/sujato",
+  "https://en.wikipedia.org/wiki/Buddhist_vegetarianism"
+ ]
+}
