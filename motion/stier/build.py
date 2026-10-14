@@ -656,6 +656,13 @@ def build(slug: str, render: bool = True, draft: bool = False) -> Path:
         mp = spec["map"]
         geo = hf_geo.bake({"countries": mp["countries"], "context": mp.get("context", []), "labels": mp.get("labels", {}),
                            "bbox": mp["bbox"], "pins": mp["pins"]})["_geo"]
+    if spec.get("theme") == "bud":   # lint kịch bản (14/10/2026): 10 luật hook/vòng mở/móc lại/CTA/nhịp/TTS/lặp/nguồn -- v2 = lỗi
+        import script_lint
+        lerr, lwarn = script_lint.lint(slug, spec, lines, dur)
+        for x in lwarn + ([] if spec.get("v2") else lerr):
+            print(f"  ! script_lint: {x}", flush=True)
+        if lerr and spec.get("v2"):
+            raise SystemExit(f"{slug}: kịch bản chưa đạt script_lint -> " + " | ".join(lerr))
     loop_main = None
     if spec.get("theme") == "bud" and spec.get("loop"):   # BUD v2: khung cuối quay về móc (studio loop) -> xem lại liền mạch
         loop_main, dur = dur, round(dur + 0.5, 2)
