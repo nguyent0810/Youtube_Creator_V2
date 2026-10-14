@@ -1,0 +1,127 @@
+{
+ "title": "Con ngựa đá con ngựa đá",
+ "lines": [
+  {
+   "t": "Để hiểu vì sao ngôn ngữ khó cho máy, thử một câu tiếng Việt quen thuộc.",
+   "p": 0.8
+  },
+  "Con ngựa đá con ngựa đá.",
+  "Bạn hiểu ngay: một con ngựa thật đá một con ngựa bằng đá.",
+  {
+   "t": "Hoặc ngược lại.",
+   "p": 1.0
+  },
+  "Cùng một chữ đá, xuất hiện hai lần, mang hai nghĩa.",
+  "Không có dấu hiệu nào trên mặt chữ cho bạn biết lần nào là gì.",
+  {
+   "t": "Bạn hiểu nhờ biết thế giới: ngựa thật thì biết đá, ngựa đá thì không.",
+   "p": 1.0
+  },
+  "Hay một câu khác. Ông già đi nhanh quá.",
+  "Ông cụ đi bộ rất nhanh? Hay ông ấy già đi rất nhanh?",
+  {
+   "t": "Con người chọn nghĩa nhờ ngữ cảnh, gần như không cần nghĩ.",
+   "p": 1.0
+  },
+  "Máy thì không có những hiểu biết ấy sẵn trong đầu.",
+  "Nó chỉ có chữ, và những gì nó đã đọc.",
+  "Mỗi gợi ý trong Jeopardy đầy những cái bẫy như vậy, bằng tiếng Anh.",
+  "Và đó chính là thứ IBM muốn máy vượt qua."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG 03",
+   "title": "CON NGỰA ĐÁ\nCON NGỰA ĐÁ",
+   "sub": "VÌ SAO NGÔN NGỮ KHÓ CHO MÁY",
+   "vid": "11833936",
+   "ms": 30,
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH CHƯƠNG TRÌNH",
+   "titleAt": [
+    0,
+    "Để"
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "CON NGỰA ĐÁ CON NGỰA ĐÁ",
+   "sub": "MỘT CHỮ “ĐÁ” · HAI NGHĨA",
+   "subAt": 4
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "BẠN HIỂU NGAY",
+   "rows": [
+    {
+     "k": "NGỰA THẬT",
+     "v": "ĐÁ",
+     "at": [
+      2,
+      "một"
+     ]
+    },
+    {
+     "k": "NGỰA BẰNG ĐÁ",
+     "v": "BỊ ĐÁ",
+     "at": [
+      2,
+      "bằng"
+     ]
+    }
+   ],
+   "total": {
+    "k": "NHỜ HIỂU ĐỜI",
+    "v": "NGỰA ĐÁ KHÔNG ĐÁ",
+    "at": 6
+   }
+  },
+  {
+   "type": "myth",
+   "at": 7,
+   "mythLab": "“ÔNG GIÀ ĐI NHANH QUÁ”",
+   "myth": "ÔNG CỤ ĐI BỘ RẤT NHANH?",
+   "truthLab": "HAY LÀ",
+   "truth": "ÔNG ẤY GIÀ ĐI RẤT NHANH?",
+   "strikeAt": [
+    8,
+    "Hay"
+   ],
+   "truthAt": [
+    8,
+    "già"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "MÁY KHÔNG CÓ HIỂU BIẾT ẤY SẴN",
+     "at": 10,
+     "acc": true
+    },
+    {
+     "text": "nó chỉ có chữ, và những gì nó đã đọc",
+     "at": 11,
+     "sm": true
+    },
+    {
+     "text": "mỗi gợi ý Jeopardy đầy bẫy như vậy",
+     "at": 12,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "CON NGỰA ĐÁ CON NGỰA ĐÁ"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

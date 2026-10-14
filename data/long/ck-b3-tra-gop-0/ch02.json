@@ -1,0 +1,152 @@
+{
+ "title": "Cái giá thứ nhất và thứ hai",
+ "lines": [
+  {
+   "t": "Cái giá thứ nhất dễ thấy nhất.",
+   "p": 0.8
+  },
+  {
+   "t": "Trả thẳng, được giảm một triệu rưỡi. Bạn trả mười tám triệu rưỡi.",
+   "p": 1.0
+  },
+  "Cái giá thứ hai nằm trên tấm biển trả góp.",
+  "Hai mươi triệu, chia mười hai tháng, lãi suất không.",
+  {
+   "t": "Tổng cộng vẫn là hai mươi triệu. Không thêm một đồng lãi nào.",
+   "p": 1.0
+  },
+  "Nhưng hãy đặt hai cột cạnh nhau.",
+  "Chọn trả góp, bạn không còn được giảm một triệu rưỡi kia nữa.",
+  {
+   "t": "Một triệu rưỡi ấy chính là cái giá của việc được trả chậm.",
+   "p": 1.0
+  },
+  "Không ai gọi nó là lãi.",
+  "Nhưng về mặt con số, nó làm đúng việc của tiền lãi.",
+  {
+   "t": "Bạn trả thêm tiền, để được trả muộn hơn.",
+   "p": 1.0
+  },
+  "Báo chí từng ghi lại những trường hợp như vậy.",
+  "Năm hai nghìn không trăm mười ba, một tờ báo so giá cùng một mẫu điện thoại.",
+  "Mua trả góp, khách được báo giá cao hơn giá mua đứt ngoài thị trường khoảng hai triệu đồng.",
+  {
+   "t": "Chuyện đã cũ, nhưng cách kiểm tra thì vẫn dùng được: hãy so với giá trả thẳng, ở chính nơi đó và ở nơi khác.",
+   "p": 1.0
+  },
+  "Vậy là ta có hai cột. Nhưng tờ hợp đồng còn những dòng chữ nhỏ."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "CÁI GIÁ THỨ NHẤT\nVÀ THỨ HAI",
+   "sub": "TRẢ THẲNG · TRẢ GÓP",
+   "vid": "5644247",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Cái"
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 1,
+   "title": "CÙNG MỘT CHIẾC MÁY (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "① TRẢ THẲNG · GIẢM 1,5",
+     "v": 18.5,
+     "lbl": "18,5",
+     "at": [
+      1,
+      "Bạn"
+     ]
+    },
+    {
+     "k": "② TRẢ GÓP 0% · 12 THÁNG",
+     "v": 20,
+     "lbl": "20",
+     "at": [
+      4,
+      "Tổng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 1.5,
+   "to": 1.5,
+   "suffix": " TRIỆU",
+   "label": "KHOẢN GIẢM GIÁ BẠN KHÔNG CÒN ĐƯỢC NHẬN",
+   "sub": {
+    "text": "CÁI GIÁ CỦA VIỆC ĐƯỢC TRẢ CHẬM · VÍ DỤ GIẢ ĐỊNH",
+    "at": 7
+   }
+  },
+  {
+   "type": "myth",
+   "at": 8,
+   "mythLab": "KHÔNG AI GỌI NÓ LÀ",
+   "myth": "TIỀN LÃI",
+   "truthLab": "NHƯNG NÓ LÀM ĐÚNG VIỆC ẤY",
+   "truth": "TRẢ THÊM ĐỂ TRẢ MUỘN",
+   "strikeAt": [
+    9,
+    "Nhưng"
+   ],
+   "truthAt": [
+    10,
+    "Bạn"
+   ]
+  },
+  {
+   "type": "source",
+   "at": 11,
+   "source": "BÁO CHÍ · NĂM 2013 · SO GIÁ MỘT MẪU ĐIỆN THOẠI",
+   "ref": "GIÁ TRẢ GÓP ĐƯỢC BÁO",
+   "snippet": "cao hơn giá mua đứt ngoài thị trường [[khoảng 2 triệu đồng]]",
+   "hlAt": [
+    13,
+    "cao"
+   ],
+   "seal": "CHUYỆN CŨ · CÁCH KIỂM TRA VẪN DÙNG ĐƯỢC",
+   "sealAt": [
+    14,
+    "Chuyện"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "TA CÓ HAI CỘT",
+     "at": 15,
+     "sm": true
+    },
+    {
+     "text": "NHƯNG CÒN NHỮNG DÒNG CHỮ NHỎ",
+     "at": [
+      15,
+      "Nhưng"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "CÁI GIÁ THỨ NHẤT VÀ THỨ HAI"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

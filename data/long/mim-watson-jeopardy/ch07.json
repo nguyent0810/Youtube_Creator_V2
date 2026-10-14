@@ -1,0 +1,178 @@
+{
+ "title": "Thanh thứ hai: biết mình chắc tới đâu",
+ "lines": [
+  {
+   "t": "Hãy nhớ lại luật chơi: trả lời sai bị trừ tiền.",
+   "p": 0.8
+  },
+  "Nên Watson cần một điều mà nhiều cỗ máy không có.",
+  {
+   "t": "Nó cần biết khi nào mình không biết.",
+   "p": 1.0
+  },
+  "Theo tài liệu về hệ thống, Watson chỉ bấm chuông khi độ tự tin của đáp án tốt nhất vượt qua một ngưỡng.",
+  "Ngưỡng ấy khoảng năm mươi phần trăm.",
+  {
+   "t": "Và nó còn tự điều chỉnh theo tình hình ván đấu.",
+   "p": 1.0
+  },
+  "Nếu đang dẫn xa, nó có thể thận trọng hơn.",
+  "Nếu đang bị bám đuổi, nó có thể liều hơn.",
+  {
+   "t": "Một cỗ máy biết cân nhắc rủi ro.",
+   "p": 1.0
+  },
+  "Đó là lý do khán giả thấy ba thanh trên màn hình.",
+  "Đáp án hàng đầu, đáp án thứ hai, đáp án thứ ba, mỗi cái một độ dài.",
+  "Khi thanh đầu tiên dài vượt hẳn, Watson bấm chuông.",
+  {
+   "t": "Khi ba thanh đều ngắn, nó im lặng.",
+   "p": 1.0
+  },
+  "Một cỗ máy biết im lặng khi không chắc.",
+  "Hãy nhớ điều này. Nó sẽ quay lại ở cuối video."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "7",
+   "k": "THANH THỨ HAI",
+   "title": "BIẾT MÌNH\nCHẮC TỚI ĐÂU",
+   "sub": "TRẢ LỜI SAI BỊ TRỪ TIỀN",
+   "vid": "1085656",
+   "ms": 6,
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH CHƯƠNG TRÌNH",
+   "titleAt": [
+    0,
+    "Hãy"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "WATSON CẦN BIẾT",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "KHI NÀO MÌNH KHÔNG BIẾT",
+     "at": 2,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "from": 50,
+   "to": 50,
+   "suffix": "%",
+   "prefix": "~",
+   "label": "NGƯỠNG ĐỘ TỰ TIN ĐỂ BẤM CHUÔNG",
+   "sub": {
+    "text": "THEO TÀI LIỆU VỀ HỆ THỐNG · TỰ ĐIỀU CHỈNH THEO VÁN",
+    "at": 5
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 6,
+   "title": "MỘT CỖ MÁY BIẾT CÂN NHẮC RỦI RO",
+   "rows": [
+    {
+     "k": "DẪN XA",
+     "v": "THẬN TRỌNG HƠN",
+     "at": 6
+    },
+    {
+     "k": "BỊ BÁM ĐUỔI",
+     "v": "LIỀU HƠN",
+     "at": 7
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 9,
+   "title": "KHI THANH ĐẦU DÀI VƯỢT HẲN → BẤM CHUÔNG",
+   "unit": "MINH HOẠ CÁCH WATSON HIỆN ĐÁP ÁN · KHÔNG PHẢI SỐ ĐO THẬT",
+   "items": [
+    {
+     "k": "ĐÁP ÁN HÀNG ĐẦU",
+     "v": 88,
+     "lbl": "88%",
+     "at": 11,
+     "acc": true
+    },
+    {
+     "k": "THỨ HAI",
+     "v": 9,
+     "lbl": "9%",
+     "at": [
+      10,
+      "đáp"
+     ]
+    },
+    {
+     "k": "THỨ BA",
+     "v": 3,
+     "lbl": "3%",
+     "at": [
+      10,
+      "ba"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 12,
+   "title": "KHI BA THANH ĐỀU NGẮN → IM LẶNG",
+   "unit": "MINH HOẠ CÁCH WATSON HIỆN ĐÁP ÁN · KHÔNG PHẢI SỐ ĐO THẬT",
+   "items": [
+    {
+     "k": "ĐÁP ÁN HÀNG ĐẦU",
+     "v": 31,
+     "lbl": "31%",
+     "at": 12,
+     "acc": true
+    },
+    {
+     "k": "THỨ HAI",
+     "v": 26,
+     "lbl": "26%",
+     "at": [
+      12,
+      "nó"
+     ]
+    },
+    {
+     "k": "THỨ BA",
+     "v": 22,
+     "lbl": "22%",
+     "at": [
+      12,
+      "im"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 13,
+   "text": "BIẾT IM LẶNG KHI KHÔNG CHẮC",
+   "sub": "HÃY NHỚ ĐIỀU NÀY",
+   "subAt": 14
+  }
+ ],
+ "hud": {
+  "k": "THANH 02",
+  "t": "BIẾT MÌNH CHẮC TỚI ĐÂU"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

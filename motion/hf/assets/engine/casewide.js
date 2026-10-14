@@ -357,6 +357,59 @@
     else common(s, d);
   };
 
+  /* ---------- myth / source / units: ý từ skill shorts-studio (vietneu-tts feat/shorts-studio, 14/10/2026), viết lại cho 16:9 ----------
+     myth  : {mythLab?, myth, truthLab?, truth, strikeAt, truthAt}  -- gạch chéo ngộ nhận, sự thật đến sau (đúng MỘT nhịp tĩnh trước sự thật)
+     source: {source, ref, snippet ("… [[cụm sáng]] …"), hlAt, seal?, sealAt}  -- thẻ dẫn nguồn TRƯỚC phán định
+     units : {title, total, cols?, lit (số ô sáng), litAt, unitLabel}  -- "k trên N" bằng lưới ô
+     sfx: strikeAt -> scratch; truthAt/sealAt -> thud; litAt -> tick */
+  const abs = (cls, html, d, st) => { const e = el("div", cls, html, d); Object.assign(e.style, { position: "absolute" }, st); return e; };
+  B.myth = (s, d) => {
+    bg(s, d, 0.84);
+    const ml = abs("mono", esc(s.mythLab || "NHIỀU NGƯỜI NGHĨ"), d, { left: "160px", top: "200px", fontSize: "28px", letterSpacing: ".2em", color: "var(--dim)" });
+    const m = abs("", esc(s.myth), d, { left: "160px", top: "250px", fontWeight: 900, whiteSpace: "nowrap", fontSize: px(fsz(s.myth, 104, 1560, 0.56)), color: "#fff" });
+    const mk = (rot) => { const x = el("div", "", null, m); Object.assign(x.style, { position: "absolute", left: "-14px", right: "-14px", top: "50%", height: "10px", background: "var(--red)", transformOrigin: "0 50%", transform: `rotate(${rot}deg) scaleX(0)` }); return x; };
+    const x1 = mk(-4), x2 = mk(4);
+    const tlb = abs("mono", esc(s.truthLab || "THẬT RA"), d, { left: "160px", top: "560px", fontSize: "28px", letterSpacing: ".2em", color: "var(--red)", opacity: 0 });
+    const t = abs("", esc(s.truth), d, { left: "160px", top: "610px", fontWeight: 900, whiteSpace: "nowrap", fontSize: px(fsz(s.truth, 132, 1600, 0.56)), color: "var(--red)", opacity: 0, transformOrigin: "0 50%" });
+    tl.fromTo([ml, m], { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.4, ease: "power3.out", immediateRender: false }, s.t0 + 0.05);
+    const ts = Math.max(0, s.strikeAt ?? s.t0 + 1.5), tt = Math.max(ts + 0.5, s.truthAt ?? ts + 0.9);
+    tl.fromTo(x1, { scaleX: 0, rotation: -4 }, { scaleX: 1, rotation: -4, duration: 0.3, ease: "power2.out", immediateRender: false }, ts);
+    tl.fromTo(x2, { scaleX: 0, rotation: 4 }, { scaleX: 1, rotation: 4, duration: 0.3, ease: "power2.out", immediateRender: false }, ts + 0.15);
+    tl.to(m, { opacity: 0.5, duration: 0.3 }, ts + 0.15);
+    tl.to(tlb, { opacity: 1, duration: 0.2 }, tt);
+    tl.fromTo(t, { opacity: 0, scale: 1.2 }, { opacity: 1, scale: 1, duration: 0.5, ease: "expo.out", immediateRender: false }, tt);
+    common(s, d);
+  };
+  B.source = (s, d) => {
+    bg(s, d, 0.84);
+    const card = abs("", null, d, { left: "260px", width: "1400px", top: "190px", padding: "50px 60px 56px", background: "rgba(12,20,34,.92)", border: "2px solid var(--red)", borderRadius: "10px", boxSizing: "border-box" });
+    const sr = el("div", "mono", esc(s.source || ""), card); Object.assign(sr.style, { fontSize: "26px", letterSpacing: ".18em", color: "var(--red)", whiteSpace: "nowrap" });
+    const rf = el("div", "", esc(s.ref || ""), card); Object.assign(rf.style, { fontWeight: 900, fontSize: px(fsz(s.ref || " ", 72, 1260, 0.56)), lineHeight: 1.1, margin: "14px 0 24px", color: "#fff", whiteSpace: "nowrap" });
+    const sn = el("div", "", null, card); Object.assign(sn.style, { fontSize: "44px", lineHeight: 1.36, color: "#e6edf7", fontStyle: "italic" });
+    let hl = null;
+    String(s.snippet || "").split(/\[\[|\]\]/).forEach((p, k) => { if (k % 2) { hl = el("span", "", esc(p), sn);
+        Object.assign(hl.style, { backgroundImage: "linear-gradient(var(--red), var(--red))", backgroundRepeat: "no-repeat", backgroundPosition: "0 100%", backgroundSize: "0% 22%", fontStyle: "normal", fontWeight: 800, color: "#fff" }); }
+      else sn.appendChild(document.createTextNode(p)); });
+    tl.fromTo(card, { opacity: 0, y: 70 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out", immediateRender: false }, s.t0 + 0.05);
+    if (hl) tl.to(hl, { backgroundSize: "100% 22%", duration: 0.6, ease: "power2.out" }, Math.max(0, s.hlAt ?? s.t0 + 1.4));
+    if (s.seal !== false) { const se = abs("mono", esc(s.seal || "ĐÃ ĐỐI CHIẾU NGUỒN"), d, { right: "280px", top: "820px", padding: "10px 22px", border: "4px solid var(--red)", color: "var(--red)", fontSize: "30px", fontWeight: 800, letterSpacing: ".14em", opacity: 0, whiteSpace: "nowrap" });
+      tl.fromTo(se, { opacity: 0, scale: 1.8, rotation: -14 }, { opacity: 1, scale: 1, rotation: -6, duration: 0.22, ease: "power4.in", immediateRender: false }, Math.max(0, s.sealAt ?? s.t0 + 2.2)); }
+    common(s, d);
+  };
+  B.units = (s, d) => {
+    bg(s, d, 0.84);
+    if (s.title) { const t = abs("", esc(s.title), d, { left: "120px", right: "120px", top: "110px", textAlign: "center", fontWeight: 900, whiteSpace: "nowrap", fontSize: px(fsz(s.title, 56, 1640, 0.58)), color: "#fff", opacity: 0 });
+      tl.to(t, { opacity: 1, duration: 0.3 }, s.t0 + 0.02); }
+    const n = s.total, cols = s.cols || Math.min(n, 10), rows = Math.ceil(n / cols), gap = 16, cw = Math.min(118, Math.floor((1500 - (cols - 1) * gap) / cols), Math.floor((560 - (rows - 1) * gap) / rows));
+    const gw = cols * cw + (cols - 1) * gap, x0 = 960 - gw / 2, y0 = 250, lit = Math.min(n, s.lit || 0), at = Math.max(0, s.litAt ?? s.t0 + 0.8), step = Math.min(0.09, 1.2 / Math.max(1, lit));
+    for (let k = 0; k < n; k++) { const c = abs("mono", "", d, { left: px(x0 + (k % cols) * (cw + gap)), top: px(y0 + Math.floor(k / cols) * (cw + gap)), width: px(cw), height: px(cw), border: "3px solid rgba(226,232,240,.55)", borderRadius: "8px", boxSizing: "border-box", opacity: 0 });
+      tl.to(c, { opacity: 1, duration: 0.18 }, s.t0 + 0.08 + k * Math.min(0.02, 0.5 / n));
+      if (k < lit) tl.to(c, { backgroundColor: "var(--red)", borderColor: "var(--red)", duration: 0.16 }, at + k * step); }
+    const lb = abs("", `<b style="color:var(--red);font-family:'JetBrains Mono',monospace">${lit}</b> / ${n} ${esc(s.unitLabel || "")}`, d, { left: "120px", right: "120px", top: px(y0 + rows * (cw + gap) + 26), textAlign: "center", fontWeight: 900, fontSize: "60px", color: "#fff", opacity: 0, whiteSpace: "nowrap" });
+    tl.to(lb, { opacity: 1, duration: 0.3 }, at + lit * step + 0.15);
+    common(s, d);
+  };
+
   /* ---------- timeline: mốc năm nằm ngang ----------
      sfx: mỗi item.at -> tick + thud nhẹ */
   B.timeline = (s, d) => {

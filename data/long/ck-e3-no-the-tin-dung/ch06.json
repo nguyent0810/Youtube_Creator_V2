@@ -1,0 +1,165 @@
+{
+ "title": "Khi nào phép tính này không đúng với bạn",
+ "lines": [
+  {
+   "t": "Và như mọi video của kênh, đây là phần nói rõ giới hạn.",
+   "p": 0.8
+  },
+  "Thứ nhất, ba mươi phần trăm là con số mình giả định.",
+  "Thẻ của bạn có thể thấp hơn, hoặc cao hơn. Đáp số sẽ đổi theo.",
+  "Thứ hai, mình giả định bạn không tiêu thêm.",
+  {
+   "t": "Ngoài đời, người đang trả tối thiểu thường vẫn tiếp tục quẹt thẻ. Khi ấy, mười năm có thể thành không bao giờ.",
+   "p": 1.0
+  },
+  "Thứ ba, mỗi hợp đồng một cách tính.",
+  {
+   "t": "Mức tối thiểu, phí phạt và cách tính ngày, đều có thể khác ví dụ này.",
+   "p": 1.0
+  },
+  "Nên thay vì tin một con số trên mạng, hãy tự hỏi ba câu trước tờ sao kê của chính mình.",
+  "Một: nếu chỉ trả tối thiểu, tháng này mình trả bao nhiêu tiền lãi?",
+  "Hai: lãi suất một năm của thẻ mình là bao nhiêu?",
+  {
+   "t": "Ba: nếu lỡ một kỳ, phí và lãi quá hạn là bao nhiêu?",
+   "p": 1.0
+  },
+  "Tấm thẻ tự nó không xấu.",
+  "Trả đủ mỗi kỳ, nó là một khoản mượn miễn phí.",
+  {
+   "t": "Chỉ trả tối thiểu, nó là một trong những khoản vay đắt nhất mà bạn có thể có.",
+   "p": 1.0
+  },
+  "Cùng một tấm thẻ. Khác nhau ở một dòng trên tờ sao kê.",
+  "Vậy mình hỏi bạn: bạn đã bao giờ đọc hết tờ sao kê của mình chưa?",
+  "Kể cho mình nghe ở phần bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "PHẦN CUỐI",
+   "title": "KHI NÀO PHÉP TÍNH\nKHÔNG ĐÚNG VỚI BẠN",
+   "sub": "PHẦN GIỮ Ở CUỐI MỖI VIDEO",
+   "vid": "6631688",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Và"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "PHÉP TÍNH CÒN GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "1",
+     "v": "LÃI 30%: THẺ BẠN CÓ THỂ KHÁC",
+     "at": 1
+    },
+    {
+     "k": "2",
+     "v": "KHÔNG TIÊU THÊM ĐỒNG NÀO",
+     "at": 3
+    },
+    {
+     "k": "3",
+     "v": "MỖI HỢP ĐỒNG MỘT CÁCH TÍNH",
+     "at": 5
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "BA CÂU TỰ HỎI TRƯỚC TỜ SAO KÊ",
+   "rows": [
+    {
+     "k": "1",
+     "v": "TRẢ TỐI THIỂU: THÁNG NÀY BAO NHIÊU TIỀN LÃI?",
+     "at": 8
+    },
+    {
+     "k": "2",
+     "v": "LÃI SUẤT MỘT NĂM CỦA THẺ MÌNH?",
+     "at": 9
+    },
+    {
+     "k": "3",
+     "v": "LỠ MỘT KỲ: PHÍ VÀ LÃI QUÁ HẠN?",
+     "at": 10
+    }
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 11,
+   "mythLab": "TRẢ ĐỦ MỖI KỲ",
+   "myth": "MƯỢN MIỄN PHÍ",
+   "truthLab": "CHỈ TRẢ TỐI THIỂU",
+   "truth": "KHOẢN VAY RẤT ĐẮT",
+   "strikeAt": [
+    13,
+    "Chỉ"
+   ],
+   "truthAt": [
+    13,
+    "nó"
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 14,
+   "vid": "11158789",
+   "ms": 4,
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "CÙNG MỘT TẤM THẺ",
+     "at": 14
+    },
+    {
+     "text": "KHÁC NHAU Ở MỘT DÒNG TRÊN SAO KÊ",
+     "at": [
+      14,
+      "Khác"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 15,
+   "text": "Bạn đã bao giờ đọc hết\ntờ sao kê của mình chưa?"
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "items": [
+    {
+     "text": "KỂ CHO MÌNH NGHE",
+     "at": 16
+    },
+    {
+     "text": "Ở PHẦN BÌNH LUẬN",
+     "at": [
+      16,
+      "ở"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "GIỚI HẠN",
+  "t": "KHI NÀO KHÔNG ĐÚNG VỚI BẠN"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

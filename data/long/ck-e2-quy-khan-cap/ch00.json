@@ -1,0 +1,153 @@
+{
+ "title": "Một hoá đơn mười lăm triệu",
+ "lines": [
+  "An hai mươi tám tuổi, lương mười hai triệu một tháng.",
+  "Một tối thứ ba, An phải vào viện.",
+  {
+   "t": "Ba ngày sau, An ra viện với một tờ hoá đơn mười lăm triệu đồng.",
+   "p": 1.0
+  },
+  "Giờ hãy hình dung hai phiên bản của An.",
+  "Cùng mức lương. Cùng tờ hoá đơn ấy.",
+  "Ở phiên bản thứ nhất, An có sẵn một khoản để riêng cho những lúc thế này.",
+  {
+   "t": "An trả tiền, về nhà nghỉ, và tháng sau để dành bù lại.",
+   "p": 1.0
+  },
+  "Ở phiên bản thứ hai, An không có khoản ấy.",
+  "An quẹt thẻ tín dụng, rồi mỗi tháng chỉ trả nổi mức tối thiểu.",
+  {
+   "t": "Cùng một tờ hoá đơn. Hai con đường rất khác nhau.",
+   "p": 1.0
+  },
+  "Khoản tiền tạo ra khác biệt ấy có một cái tên khô khan.",
+  "Quỹ khẩn cấp.",
+  {
+   "t": "Nhưng cần bao nhiêu thì đủ? Và lương mười hai triệu thì lấy đâu ra?",
+   "ask": 1
+  },
+  "Video này không đưa bạn một con số có sẵn.",
+  "Mình đưa bạn một tờ phiếu, có ba ô trống.",
+  "Ô thứ nhất: một tháng thiết yếu của bạn là bao nhiêu.",
+  "Ô thứ hai: bạn cần mấy tháng.",
+  {
+   "t": "Ô thứ ba: mỗi tháng bạn để dành được bao nhiêu.",
+   "p": 1.0
+  },
+  "Điền xong ba ô, bạn sẽ có hai câu trả lời của riêng mình: cần bao nhiêu, và mất bao lâu.",
+  "An là nhân vật giả định. Mọi con số của An là ví dụ, không phải lời khuyên tài chính."
+ ],
+ "scenes": [
+  {
+   "type": "broll",
+   "vid": "3192916",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA · NHÂN VẬT GIẢ ĐỊNH",
+   "kin": [
+    {
+     "text": "AN · 28 TUỔI · LƯƠNG 12 TRIỆU",
+     "at": [
+      0,
+      "An"
+     ],
+     "sm": true
+    },
+    {
+     "text": "MỘT TỜ HOÁ ĐƠN 15 TRIỆU",
+     "at": [
+      2,
+      "một"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "HAI PHIÊN BẢN CỦA AN",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · AN LÀ NHÂN VẬT GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "PHIÊN BẢN 1",
+     "v": "CÓ SẴN MỘT KHOẢN ĐỂ RIÊNG",
+     "at": 5
+    },
+    {
+     "k": "PHIÊN BẢN 2",
+     "v": "KHÔNG CÓ · QUẸT THẺ, TRẢ TỐI THIỂU",
+     "at": 7
+    }
+   ],
+   "total": {
+    "k": "CÙNG LƯƠNG · CÙNG HOÁ ĐƠN",
+    "v": "HAI CON ĐƯỜNG",
+    "at": 9
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "KHOẢN TIỀN TẠO RA KHÁC BIỆT",
+     "at": 10,
+     "sm": true
+    },
+    {
+     "text": "QUỸ KHẨN CẤP",
+     "at": [
+      11,
+      "Quỹ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 12,
+   "text": "Cần bao nhiêu thì đủ?\nLương 12 triệu thì lấy đâu ra?"
+  },
+  {
+   "type": "ledger",
+   "at": 13,
+   "title": "TỜ PHIẾU BA Ô TRỐNG",
+   "rows": [
+    {
+     "k": "Ô 1",
+     "v": "MỘT THÁNG THIẾT YẾU = ?",
+     "at": 15
+    },
+    {
+     "k": "Ô 2",
+     "v": "CẦN MẤY THÁNG = ?",
+     "at": 16
+    },
+    {
+     "k": "Ô 3",
+     "v": "MỖI THÁNG ĐỂ DÀNH = ?",
+     "at": 17
+    }
+   ],
+   "total": {
+    "k": "ĐIỀN XONG",
+    "v": "CẦN BAO NHIÊU · MẤT BAO LÂU",
+    "at": 18
+   }
+  },
+  {
+   "type": "brand",
+   "at": 19,
+   "sub": "TIỀN BẠC · GIẢI THÍCH BẰNG DỮ LIỆU"
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "MỘT HOÁ ĐƠN 15 TRIỆU"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

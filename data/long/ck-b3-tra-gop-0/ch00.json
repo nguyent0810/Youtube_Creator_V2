@@ -1,0 +1,177 @@
+{
+ "title": "Hai tấm biển",
+ "lines": [
+  "Bạn bước vào một cửa hàng điện thoại.",
+  "Chiếc máy bạn thích có giá hai mươi triệu đồng.",
+  {
+   "t": "Bên cạnh nó là hai tấm biển.",
+   "p": 1.0
+  },
+  "Tấm thứ nhất ghi: trả thẳng, giảm ngay một triệu rưỡi.",
+  "Tấm thứ hai ghi: trả góp không phần trăm lãi suất, mười hai tháng.",
+  {
+   "t": "Mỗi tháng chỉ khoảng một triệu bảy. Nghe rất nhẹ.",
+   "p": 1.0
+  },
+  "Một triệu bảy mỗi tháng, nghe nhẹ hơn hẳn mười tám triệu rưỡi một lần.",
+  "Và lãi suất lại là số không. Một số không tròn trĩnh.",
+  "Vậy trả góp có phải là lựa chọn không mất gì?",
+  {
+   "t": "Nếu lãi là không, thì ai trả tiền lãi?",
+   "ask": 1
+  },
+  {
+   "t": "Đó là câu hỏi đầu tiên của video này.",
+   "p": 1.0
+  },
+  "Câu hỏi thứ hai thực tế hơn.",
+  "Cùng một chiếc điện thoại, bạn có thể đang đứng trước bốn cái giá khác nhau.",
+  "Mình sẽ dựng bốn cái giá ấy lên, từng cột một. Từ thấp tới cao.",
+  {
+   "t": "Tới cột thứ tư, bạn sẽ thấy con số không trên tấm biển tương đương bao nhiêu phần trăm một năm.",
+   "p": 1.0
+  },
+  "Chiếc điện thoại và các mức phí trong video là ví dụ giả định, để hiểu cách tính. Đây không phải lời khuyên tài chính."
+ ],
+ "scenes": [
+  {
+   "type": "broll",
+   "vid": "7568745",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MỘT CHIẾC ĐIỆN THOẠI",
+     "at": [
+      0,
+      "Bạn"
+     ],
+     "sm": true
+    },
+    {
+     "text": "20 TRIỆU ĐỒNG",
+     "at": [
+      1,
+      "hai"
+     ],
+     "acc": true
+    },
+    {
+     "text": "và hai tấm biển",
+     "at": 2,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "HAI TẤM BIỂN",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "BIỂN 1 · TRẢ THẲNG",
+     "v": "GIẢM NGAY 1,5 TRIỆU",
+     "at": 3
+    },
+    {
+     "k": "BIỂN 2 · TRẢ GÓP",
+     "v": "0% LÃI SUẤT · 12 THÁNG",
+     "at": 4
+    }
+   ],
+   "total": {
+    "k": "MỖI THÁNG",
+    "v": "KHOẢNG 1,7 TRIỆU",
+    "at": 5
+   }
+  },
+  {
+   "type": "bars",
+   "at": 6,
+   "title": "NGHE THÌ NHẸ HƠN HẲN (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "TRẢ MỘT LẦN",
+     "v": 18.5,
+     "lbl": "18,5",
+     "at": [
+      6,
+      "mười"
+     ]
+    },
+    {
+     "k": "MỖI THÁNG",
+     "v": 1.7,
+     "lbl": "≈ 1,7",
+     "at": [
+      6,
+      null,
+      0,
+      0.05
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 8,
+   "text": "Nếu lãi là 0,\nthì ai trả tiền lãi?"
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "CÙNG MỘT CHIẾC ĐIỆN THOẠI",
+     "at": [
+      12,
+      "Cùng"
+     ],
+     "sm": true
+    },
+    {
+     "text": "BỐN CÁI GIÁ",
+     "at": [
+      12,
+      "bốn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "dựng lên từng cột một",
+     "at": 13,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "units",
+   "at": 14,
+   "title": "TỚI CỘT THỨ TƯ: SỐ 0 TƯƠNG ĐƯƠNG BAO NHIÊU % MỘT NĂM?",
+   "total": 4,
+   "cols": 4,
+   "lit": 4,
+   "litAt": [
+    14,
+    "Tới"
+   ],
+   "unitLabel": "CÁI GIÁ"
+  },
+  {
+   "type": "brand",
+   "at": 15,
+   "sub": "TIỀN BẠC · GIẢI THÍCH BẰNG DỮ LIỆU"
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "HAI TẤM BIỂN"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.1
+ }
+}

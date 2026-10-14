@@ -1,0 +1,256 @@
+{
+ "title": "Con số không tương đương bao nhiêu?",
+ "lines": [
+  {
+   "t": "Hãy nhìn lại món này như một khoản vay.",
+   "p": 0.8
+  },
+  "Thứ bạn thật sự vay không phải hai mươi triệu.",
+  {
+   "t": "Nó là mười tám triệu rưỡi, số tiền đủ để mang chiếc máy về hôm nay.",
+   "p": 1.0
+  },
+  "Bạn trả lại hai mươi triệu sáu, chia đều mười hai tháng.",
+  "Một khoản vay như thế có lãi suất bao nhiêu?",
+  "Mình đã tính.",
+  {
+   "t": "Khoảng hai mươi phần trăm một năm.",
+   "p": 1.0
+  },
+  "Hai mươi phần trăm.",
+  "Tấm biển vẫn ghi số không, và tấm biển không sai.",
+  "Lãi suất ghi trong hợp đồng đúng là không.",
+  {
+   "t": "Chỉ là chi phí của bạn không nằm ở dòng lãi suất.",
+   "p": 1.0
+  },
+  "Bạn không cần máy tính để ước lượng con số này.",
+  "Lấy phần trả thêm, chia cho số tiền thật sự vay.",
+  "Hai triệu một chia cho mười tám triệu rưỡi, ra khoảng mười một phần trăm.",
+  "Rồi nhân gần gấp đôi.",
+  "Vì sao lại nhân đôi?",
+  "Vì bạn trả dần mỗi tháng, nên tính trung bình cả năm, bạn chỉ nợ khoảng một nửa số tiền ấy.",
+  {
+   "t": "Mười một nhân gần hai, ra khoảng hai mươi.",
+   "p": 1.0
+  },
+  "Giờ thử gỡ từng thứ ra.",
+  "Nếu không có phí, chỉ mất khoản giảm giá, con số là khoảng mười lăm phần trăm.",
+  "Nếu vẫn được giảm giá, chỉ chịu phí, nó còn khoảng năm phần trăm rưỡi.",
+  "Còn nếu không mất giảm giá và cũng không có phí?",
+  {
+   "t": "Khi ấy, không phần trăm đúng là không phần trăm.",
+   "p": 1.0
+  },
+  "Trường hợp ấy có thật, và không hiếm.",
+  "Lúc đó, trả góp còn có lợi: tiền của bạn vẫn nằm trong tài khoản và sinh lãi thêm vài tháng.",
+  "Nên con số không không phải lời nói dối. Nó chỉ chưa phải cả câu chuyện.",
+  "Và câu chuyện còn một chương mà tấm biển không bao giờ nhắc."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "CHƯƠNG BỐN",
+   "title": "CON SỐ 0\nTƯƠNG ĐƯƠNG BAO NHIÊU?",
+   "sub": "NHÌN NÓ NHƯ MỘT KHOẢN VAY",
+   "vid": "8479058",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Hãy"
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 1,
+   "mythLab": "TƯỞNG LÀ VAY",
+   "myth": "20 TRIỆU",
+   "truthLab": "THẬT SỰ VAY",
+   "truth": "18,5 TRIỆU",
+   "strikeAt": [
+    1,
+    "không"
+   ],
+   "truthAt": [
+    2,
+    "mười"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "KHOẢN VAY NÀY",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · MÁY 20 TRIỆU, GIẢM 1,5 TRIỆU KHI TRẢ THẲNG, PHÍ 3%",
+   "rows": [
+    {
+     "k": "NHẬN HÔM NAY",
+     "v": "18,5 TRIỆU",
+     "at": [
+      3,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "k": "TRẢ LẠI",
+     "v": "20,6 TRIỆU · 12 THÁNG ĐỀU",
+     "at": [
+      3,
+      "hai"
+     ]
+    }
+   ],
+   "total": {
+    "k": "LÃI SUẤT?",
+    "v": "…",
+    "at": 4
+   }
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 0,
+   "to": 20,
+   "prefix": "≈ ",
+   "suffix": "%",
+   "until": [
+    6,
+    "hai"
+   ],
+   "label": "MỘT NĂM · LÃI SUẤT TƯƠNG ĐƯƠNG",
+   "sub": {
+    "text": "KÊNH TỰ TÍNH · VÍ DỤ GIẢ ĐỊNH · MÁY 20 TRIỆU, GIẢM 1,5 TRIỆU KHI TRẢ THẲNG, PHÍ 3%",
+    "at": 7
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "TẤM BIỂN KHÔNG SAI",
+     "at": [
+      8,
+      "và"
+     ],
+     "acc": true
+    },
+    {
+     "text": "lãi suất trong hợp đồng đúng là 0",
+     "at": 9,
+     "sm": true
+    },
+    {
+     "text": "chi phí của bạn không nằm ở dòng lãi suất",
+     "at": 10,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 11,
+   "title": "ƯỚC LƯỢNG KHÔNG CẦN MÁY TÍNH",
+   "srcnote": "CÁCH TÍNH GẦN ĐÚNG CHO TRẢ GÓP ĐỀU · VÍ DỤ GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "PHẦN TRẢ THÊM ÷ SỐ THẬT SỰ VAY",
+     "v": "2,1 ÷ 18,5 ≈ 11%",
+     "at": 13
+    },
+    {
+     "k": "NHÂN GẦN GẤP ĐÔI",
+     "v": "VÌ TRUNG BÌNH CHỈ NỢ MỘT NỬA",
+     "at": 16
+    }
+   ],
+   "total": {
+    "k": "KẾT QUẢ",
+    "v": "≈ 20%/NĂM",
+    "at": 17
+   }
+  },
+  {
+   "type": "bars",
+   "at": 18,
+   "title": "LÃI SUẤT TƯƠNG ĐƯƠNG (% MỘT NĂM)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · MÁY 20 TRIỆU, GIẢM 1,5 TRIỆU KHI TRẢ THẲNG, PHÍ 3%",
+   "items": [
+    {
+     "k": "MẤT GIẢM GIÁ + PHÍ",
+     "v": 20.3,
+     "lbl": "≈ 20",
+     "at": [
+      18,
+      null,
+      0,
+      0.05
+     ],
+     "acc": true
+    },
+    {
+     "k": "CHỈ MẤT GIẢM GIÁ",
+     "v": 14.6,
+     "lbl": "≈ 15",
+     "at": [
+      19,
+      "mười"
+     ]
+    },
+    {
+     "k": "CHỈ CHỊU PHÍ",
+     "v": 5.5,
+     "lbl": "≈ 5,5",
+     "at": [
+      20,
+      "năm"
+     ]
+    },
+    {
+     "k": "KHÔNG MẤT GÌ",
+     "v": 0.2,
+     "lbl": "0",
+     "at": [
+      22,
+      "không"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 23,
+   "vid": "6114643",
+   "ms": 2,
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "0% THẬT CŨNG CÓ · VÀ KHÔNG HIẾM",
+     "at": 23,
+     "acc": true
+    },
+    {
+     "text": "khi ấy tiền của bạn còn sinh lãi thêm vài tháng",
+     "at": 24,
+     "sm": true
+    },
+    {
+     "text": "con số 0 không nói dối · nó chưa phải cả câu chuyện",
+     "at": 25,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "SỐ 0 TƯƠNG ĐƯƠNG BAO NHIÊU?"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

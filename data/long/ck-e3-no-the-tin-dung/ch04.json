@@ -1,0 +1,212 @@
+{
+ "title": "Dòng ba: lãi suất",
+ "lines": [
+  {
+   "t": "Dòng thứ ba là lãi suất.",
+   "p": 0.8
+  },
+  "Theo các biểu phí được báo chí tổng hợp, lãi thẻ tín dụng ở Việt Nam thường từ hai mươi tới bốn mươi phần trăm một năm.",
+  {
+   "t": "Mỗi thẻ một mức. Con số của bạn nằm trong hợp đồng và trên sao kê.",
+   "p": 1.0
+  },
+  "Hãy đặt nó cạnh một con số quen thuộc.",
+  "Tiền gửi tiết kiệm mười hai tháng những năm qua thường quanh mức năm tới bảy phần trăm.",
+  {
+   "t": "Lãi thẻ cao gấp bốn, năm lần.",
+   "p": 1.0
+  },
+  "Ở bài về lãi kép, mình có nhắc quy tắc bảy mươi hai.",
+  "Lấy bảy mươi hai chia cho lãi suất, ra số năm để một khoản tiền gấp đôi.",
+  "Với sáu phần trăm, là mười hai năm.",
+  {
+   "t": "Với ba mươi phần trăm, chỉ khoảng hai năm rưỡi.",
+   "p": 1.0
+  },
+  "Cùng một quả cầu tuyết. Nhưng lần này nó lăn về phía bạn.",
+  "Còn một điều nữa về dòng này.",
+  "Rút tiền mặt bằng thẻ tín dụng thường là giao dịch đắt nhất.",
+  {
+   "t": "Ở nhiều thẻ, nó có phí rút, và bị tính lãi ngay từ ngày rút, không có ngày miễn lãi nào.",
+   "p": 1.0
+  },
+  "Vậy là ta có đủ ba dòng. Nhưng ba dòng ấy chưa đủ để tám triệu thành tám tỷ.",
+  "Phải cần tới dòng thứ tư."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "DÒNG BA",
+   "title": "LÃI SUẤT",
+   "sub": "20 – 40% MỘT NĂM",
+   "vid": "7568745",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "lãi"
+   ]
+  },
+  {
+   "type": "source",
+   "at": 1,
+   "source": "BIỂU PHÍ THẺ TÍN DỤNG · BÁO CHÍ TỔNG HỢP",
+   "ref": "LÃI THẺ TÍN DỤNG",
+   "snippet": "thường từ [[20 tới 40% một năm]] · mỗi thẻ một mức",
+   "hlAt": [
+    1,
+    "hai"
+   ],
+   "seal": "XEM HỢP ĐỒNG CỦA BẠN",
+   "sealAt": [
+    2,
+    "Con"
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 3,
+   "title": "LÃI MỘT NĂM (%)",
+   "unit": "KHOẢNG THƯỜNG GẶP · KHÔNG PHẢI MỨC CỦA SẢN PHẨM NÀO",
+   "items": [
+    {
+     "k": "TIỀN GỬI 12 THÁNG",
+     "v": 6,
+     "lbl": "5 – 7",
+     "at": [
+      4,
+      "năm"
+     ]
+    },
+    {
+     "k": "LÃI THẺ · MỨC THẤP",
+     "v": 20,
+     "lbl": "20",
+     "at": [
+      5,
+      "Lãi"
+     ]
+    },
+    {
+     "k": "LÃI THẺ · MỨC CAO",
+     "v": 40,
+     "lbl": "40",
+     "at": [
+      5,
+      "bốn,"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 6,
+   "title": "QUY TẮC 72",
+   "srcnote": "72 ÷ LÃI SUẤT = SỐ NĂM ĐỂ GẤP ĐÔI",
+   "rows": [
+    {
+     "k": "LÃI 6%/NĂM",
+     "v": "≈ 12 NĂM",
+     "at": [
+      8,
+      "mười"
+     ]
+    },
+    {
+     "k": "LÃI 30%/NĂM",
+     "v": "≈ 2,5 NĂM",
+     "at": [
+      9,
+      "chỉ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 10,
+   "vid": "5981296",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "CÙNG MỘT QUẢ CẦU TUYẾT",
+     "at": 10
+    },
+    {
+     "text": "LẦN NÀY LĂN VỀ PHÍA BẠN",
+     "at": [
+      10,
+      "Nhưng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 11,
+   "title": "RÚT TIỀN MẶT BẰNG THẺ TÍN DỤNG",
+   "srcnote": "Ở NHIỀU THẺ · XEM BIỂU PHÍ CỦA BẠN",
+   "rows": [
+    {
+     "k": "CÓ",
+     "v": "PHÍ RÚT TIỀN",
+     "at": [
+      13,
+      "phí"
+     ]
+    },
+    {
+     "k": "LÃI TÍNH",
+     "v": "NGAY TỪ NGÀY RÚT",
+     "at": [
+      13,
+      "bị"
+     ]
+    }
+   ],
+   "total": {
+    "k": "NGÀY MIỄN LÃI",
+    "v": "KHÔNG CÓ",
+    "at": [
+     13,
+     "không"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "BA DÒNG CHƯA ĐỦ",
+     "at": 14,
+     "sm": true
+    },
+    {
+     "text": "ĐỂ 8 TRIỆU THÀNH 8 TỶ",
+     "at": [
+      14,
+      "để"
+     ],
+     "acc": true
+    },
+    {
+     "text": "phải cần tới dòng thứ tư",
+     "at": 15,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "DÒNG 03",
+  "t": "LÃI SUẤT"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

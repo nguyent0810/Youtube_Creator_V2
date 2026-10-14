@@ -1,0 +1,191 @@
+{
+ "title": "Hai mươi năm sau, một cách nghĩ khác",
+ "lines": [
+  {
+   "t": "Tháng mười hai năm hai nghìn không trăm mười bảy, có một tin khiến giới cờ vua sững sờ lần nữa.",
+   "p": 0.8
+  },
+  "Nhóm làm ra AlphaGo công bố một cỗ máy mới, tên là AlphaZero.",
+  "Nó không có kho khai cuộc do người soạn.",
+  {
+   "t": "Không có cách chấm điểm do đại kiện tướng viết.",
+   "p": 1.0
+  },
+  "Người ta chỉ cho nó biết luật chơi.",
+  "Rồi nó tự chơi với chính mình.",
+  "Sau khoảng bốn giờ tự học, nó đã vượt phần mềm cờ vua mạnh nhất lúc ấy.",
+  {
+   "t": "Trong một trăm ván giữa hai bên, nó thắng hai mươi tám, hoà bảy mươi hai, không thua ván nào.",
+   "p": 1.0
+  },
+  "Nhưng chi tiết đáng nhớ nhất lại là một con số khác.",
+  "AlphaZero chỉ xem khoảng tám mươi nghìn thế cờ mỗi giây.",
+  {
+   "t": "Ít hơn Deep Blue hàng nghìn lần.",
+   "p": 1.0
+  },
+  "Deep Blue thắng nhờ nhìn rất rộng.",
+  "AlphaZero thắng nhờ biết nên nhìn vào đâu.",
+  {
+   "t": "Nghe giống điều mà các kỳ thủ con người vẫn làm.",
+   "p": 1.0
+  },
+  "Hai mươi năm trước, Kasparov thua một cỗ máy tính rất nhanh.",
+  "Hai mươi năm sau, máy bắt đầu chơi cờ theo một cách gần với con người hơn.",
+  "Không phải vì nó được dạy như người.",
+  "Mà vì nó tự tìm ra.",
+  {
+   "t": "Còn nếu bạn tò mò về cách học ấy, video về AlphaGo của kênh kể rất kỹ.",
+   "p": 1.0
+  },
+  "Còn con người thì sao?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "16",
+   "k": "CHƯƠNG MƯỜI SÁU",
+   "title": "HAI MƯƠI NĂM SAU,\nMỘT CÁCH NGHĨ KHÁC",
+   "sub": "ALPHAZERO · 12.2017",
+   "vid": "6599643",
+   "ms": 8,
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU",
+   "titleAt": [
+    0,
+    "Tháng"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "ALPHAZERO KHÔNG CÓ",
+   "rows": [
+    {
+     "k": "1",
+     "v": "KHO KHAI CUỘC DO NGƯỜI SOẠN",
+     "at": 2
+    },
+    {
+     "k": "2",
+     "v": "CÁCH CHẤM ĐIỂM DO NGƯỜI VIẾT",
+     "at": 3
+    }
+   ],
+   "total": {
+    "k": "CHỈ CÓ",
+    "v": "LUẬT CHƠI · RỒI TỰ CHƠI",
+    "at": 4
+   }
+  },
+  {
+   "type": "bars",
+   "at": 6,
+   "title": "100 VÁN VỚI PHẦN MỀM MẠNH NHẤT",
+   "unit": "SAU KHOẢNG 4 GIỜ TỰ HỌC · THEO DEEPMIND",
+   "items": [
+    {
+     "k": "THẮNG",
+     "v": 28,
+     "lbl": "28",
+     "at": [
+      7,
+      "hai"
+     ],
+     "acc": true
+    },
+    {
+     "k": "HOÀ",
+     "v": 72,
+     "lbl": "72",
+     "at": [
+      7,
+      "hoà"
+     ]
+    },
+    {
+     "k": "THUA",
+     "v": 0.5,
+     "lbl": "0",
+     "at": [
+      7,
+      "không"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 8,
+   "title": "THẾ CỜ XEM MỖI GIÂY",
+   "unit": "THEO TƯ LIỆU VỀ HAI CỖ MÁY",
+   "items": [
+    {
+     "k": "DEEP BLUE · 1997",
+     "v": 200000,
+     "lbl": "~200 TRIỆU",
+     "at": [
+      9,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "k": "ALPHAZERO · 2017",
+     "v": 80,
+     "lbl": "~80 NGHÌN",
+     "at": [
+      9,
+      "tám"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 11,
+   "mythLab": "DEEP BLUE THẮNG NHỜ",
+   "myth": "NHÌN RẤT RỘNG",
+   "truthLab": "ALPHAZERO THẮNG NHỜ",
+   "truth": "BIẾT NHÌN VÀO ĐÂU",
+   "strikeAt": [
+    12,
+    "AlphaZero"
+   ],
+   "truthAt": [
+    12,
+    "biết"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "KHÔNG PHẢI ĐƯỢC DẠY NHƯ NGƯỜI",
+     "at": 16,
+     "sm": true
+    },
+    {
+     "text": "MÀ TỰ TÌM RA",
+     "at": 17,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 19,
+   "text": "Còn con người thì sao?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 16",
+  "t": "MỘT CÁCH NGHĨ KHÁC"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

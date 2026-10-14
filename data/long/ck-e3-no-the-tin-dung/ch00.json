@@ -1,0 +1,256 @@
+{
+ "title": "Tám triệu rưỡi thành tám tỷ tám",
+ "lines": [
+  "Tháng ba năm hai nghìn không trăm hai mươi tư, báo chí Việt Nam đăng một con số khiến nhiều người giật mình.",
+  "Một khoản nợ thẻ tín dụng, gốc khoảng tám triệu rưỡi.",
+  {
+   "t": "Sau mười một năm, ngân hàng thông báo số phải trả là hơn tám tỷ tám trăm triệu đồng.",
+   "p": 1.0
+  },
+  "Gấp hơn một nghìn lần.",
+  "Người chủ thẻ nói mình không hề tiêu khoản ấy.",
+  "Ngân hàng nói họ tính đúng theo thoả thuận lúc mở thẻ.",
+  {
+   "t": "Ai đúng, ai sai, video này không phán.",
+   "p": 1.0
+  },
+  "Mình chỉ hỏi một câu khác.",
+  {
+   "t": "Về mặt con số, làm sao tám triệu có thể thành tám tỷ?",
+   "ask": 1
+  },
+  "Câu trả lời nằm trên một tờ giấy mà chủ thẻ nào cũng nhận mỗi tháng.",
+  {
+   "t": "Tờ sao kê.",
+   "p": 1.0
+  },
+  "Trên tờ ấy có bốn dòng đáng đọc.",
+  "Ngày đến hạn. Số tiền tối thiểu. Lãi suất. Và phí chậm trả.",
+  {
+   "t": "Mình sẽ đọc cùng bạn, từng dòng một, từ trên xuống.",
+   "p": 1.0
+  },
+  "Nhưng trước hết, mời bạn đoán một con số.",
+  "Bạn nợ thẻ hai mươi triệu, không tiêu thêm đồng nào.",
+  "Mỗi tháng, bạn chỉ trả đúng số tiền tối thiểu ghi trên sao kê.",
+  "Bao lâu thì hết nợ? Một năm? Ba năm? Hay lâu hơn?",
+  "Giữ con số ấy trong đầu nhé.",
+  "Mọi phép tính trong video là ví dụ giả định, chỉ để hiểu cách tính. Đây không phải lời khuyên tài chính."
+ ],
+ "scenes": [
+  {
+   "type": "broll",
+   "vid": "5916730",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "THÁNG 3 NĂM 2024",
+     "at": [
+      0,
+      "Tháng"
+     ],
+     "sm": true
+    },
+    {
+     "text": "MỘT KHOẢN NỢ THẺ TÍN DỤNG",
+     "at": [
+      1,
+      "Một"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 1,
+   "title": "MỘT KHOẢN NỢ THẺ (TRIỆU ĐỒNG)",
+   "items": [
+    {
+     "k": "NỢ GỐC",
+     "v": 8.55,
+     "lbl": "≈ 8,5",
+     "at": [
+      1,
+      "gốc"
+     ]
+    },
+    {
+     "k": "SAU 11 NĂM",
+     "v": 8830,
+     "lbl": "≈ 8.830",
+     "at": [
+      2,
+      "hơn"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "THEO BÁO CHÍ, 03/2024 · KÊNH KHÔNG PHÁN ĐÚNG SAI",
+    "v": "",
+    "at": 2
+   }
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "HƠN 1.000 LẦN",
+   "sub": "TỪ 8,5 TRIỆU TỚI 8,8 TỶ",
+   "subAt": 3
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "HAI PHÍA NÓI GÌ",
+   "srcnote": "DIỄN Ý THEO BÁO CHÍ, 03/2024",
+   "rows": [
+    {
+     "k": "CHỦ THẺ",
+     "v": "KHÔNG TIÊU KHOẢN ẤY",
+     "at": 4
+    },
+    {
+     "k": "NGÂN HÀNG",
+     "v": "TÍNH ĐÚNG THOẢ THUẬN",
+     "at": 5
+    }
+   ],
+   "total": {
+    "k": "VIDEO NÀY",
+    "v": "KHÔNG PHÁN AI ĐÚNG",
+    "at": 6
+   }
+  },
+  {
+   "type": "question",
+   "at": 7,
+   "text": "Về con số, làm sao 8 triệu\ncó thể thành 8 tỷ?"
+  },
+  {
+   "type": "broll",
+   "at": 9,
+   "vid": "6700014",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "CÂU TRẢ LỜI NẰM TRÊN",
+     "at": 9,
+     "sm": true
+    },
+    {
+     "text": "TỜ SAO KÊ",
+     "at": [
+      10,
+      "Tờ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 11,
+   "title": "BỐN DÒNG ĐÁNG ĐỌC",
+   "rows": [
+    {
+     "k": "1",
+     "v": "NGÀY ĐẾN HẠN",
+     "at": [
+      12,
+      "Ngày"
+     ]
+    },
+    {
+     "k": "2",
+     "v": "SỐ TIỀN TỐI THIỂU",
+     "at": [
+      12,
+      "Số"
+     ]
+    },
+    {
+     "k": "3",
+     "v": "LÃI SUẤT",
+     "at": [
+      12,
+      "Lãi"
+     ]
+    },
+    {
+     "k": "4",
+     "v": "PHÍ CHẬM TRẢ",
+     "at": [
+      12,
+      "Và"
+     ]
+    }
+   ],
+   "total": {
+    "k": "ĐỌC",
+    "v": "TỪNG DÒNG · TỪ TRÊN XUỐNG",
+    "at": 13
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 14,
+   "title": "MỜI BẠN ĐOÁN",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · LÃI 30%/NĂM, KHÔNG TIÊU THÊM, KHÔNG PHÍ",
+   "rows": [
+    {
+     "k": "NỢ THẺ",
+     "v": "20 TRIỆU · KHÔNG TIÊU THÊM",
+     "at": 15
+    },
+    {
+     "k": "MỖI THÁNG",
+     "v": "CHỈ TRẢ MỨC TỐI THIỂU",
+     "at": 16
+    }
+   ],
+   "total": {
+    "k": "BAO LÂU",
+    "v": "THÌ HẾT NỢ?",
+    "at": [
+     17,
+     "Bao"
+    ]
+   }
+  },
+  {
+   "type": "brand",
+   "at": 18,
+   "sub": "TIỀN BẠC · GIẢI THÍCH BẰNG DỮ LIỆU"
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "items": [
+    {
+     "text": "CHỈ NHẰM GIÁO DỤC",
+     "at": 19,
+     "acc": true
+    },
+    {
+     "text": "phép tính là ví dụ giả định · không phải lời khuyên tài chính",
+     "at": [
+      19,
+      "Đây"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "8,5 TRIỆU THÀNH 8,8 TỶ"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

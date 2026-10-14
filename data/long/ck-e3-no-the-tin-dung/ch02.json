@@ -1,0 +1,171 @@
+{
+ "title": "Dòng hai: số tiền tối thiểu",
+ "lines": [
+  {
+   "t": "Dòng thứ hai là con số nhỏ nhất trên tờ sao kê.",
+   "p": 0.8
+  },
+  {
+   "t": "Số tiền thanh toán tối thiểu.",
+   "p": 1.0
+  },
+  "Ở Việt Nam, mức này thường vào khoảng năm phần trăm số nợ.",
+  "Nợ hai mươi triệu, tối thiểu chỉ khoảng một triệu.",
+  "Nghe thật nhẹ nhàng.",
+  {
+   "t": "Và nhiều người hiểu rằng: trả một triệu ấy là xong nghĩa vụ của tháng này.",
+   "p": 1.0
+  },
+  "Thật ra, trả tối thiểu chỉ giúp bạn một việc.",
+  "Bạn không bị phạt chậm trả, và không bị ghi nợ quá hạn.",
+  {
+   "t": "Chỉ vậy thôi.",
+   "p": 1.0
+  },
+  "Mười chín triệu còn lại vẫn bị tính lãi.",
+  "Và có một chi tiết ít người để ý.",
+  "Khi bạn không trả đủ, ưu đãi miễn lãi của kỳ ấy cũng mất.",
+  {
+   "t": "Ở nhiều thẻ, tiền lãi được tính ngược về tận ngày bạn quẹt thẻ.",
+   "p": 1.0
+  },
+  "Tức là con số tối thiểu không phải số tiền bạn nợ tháng này.",
+  "Nó là mức thấp nhất để khoản nợ không bị gọi là quá hạn.",
+  "Vậy nếu tháng nào cũng chỉ trả mức ấy, chuyện gì xảy ra?",
+  "Đã tới lúc mở đáp án."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "DÒNG HAI",
+   "title": "SỐ TIỀN\nTỐI THIỂU",
+   "sub": "CON SỐ NHỎ NHẤT TRÊN SAO KÊ",
+   "vid": "6962707",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    1,
+    "Số"
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "from": 5,
+   "to": 5,
+   "suffix": "%",
+   "label": "SỐ NỢ · MỨC TỐI THIỂU THƯỜNG GẶP Ở VIỆT NAM",
+   "sub": {
+    "text": "MỖI THẺ MỘT MỨC · THƯỜNG 2–5%",
+    "at": 2
+   }
+  },
+  {
+   "type": "bars",
+   "at": 3,
+   "title": "NỢ 20 TRIỆU (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · TỐI THIỂU 5%",
+   "items": [
+    {
+     "k": "SỐ NỢ",
+     "v": 20,
+     "lbl": "20",
+     "at": [
+      3,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "k": "TỐI THIỂU THÁNG NÀY",
+     "v": 1,
+     "lbl": "≈ 1",
+     "at": [
+      3,
+      "tối"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 5,
+   "mythLab": "NHIỀU NGƯỜI HIỂU",
+   "myth": "TRẢ TỐI THIỂU LÀ XONG",
+   "truthLab": "THẬT RA",
+   "truth": "CHỈ LÀ KHÔNG BỊ PHẠT",
+   "strikeAt": [
+    6,
+    "Thật"
+   ],
+   "truthAt": [
+    7,
+    "không"
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 9,
+   "from": 19,
+   "to": 19,
+   "suffix": " TRIỆU",
+   "label": "CÒN LẠI · VẪN BỊ TÍNH LÃI",
+   "sub": {
+    "text": "VÍ DỤ GIẢ ĐỊNH",
+    "at": 9
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 10,
+   "title": "CHI TIẾT ÍT NGƯỜI ĐỂ Ý",
+   "srcnote": "Ở NHIỀU THẺ · XEM HỢP ĐỒNG CỦA BẠN",
+   "rows": [
+    {
+     "k": "KHÔNG TRẢ ĐỦ",
+     "v": "MẤT MIỄN LÃI CỦA KỲ ẤY",
+     "at": 11
+    },
+    {
+     "k": "LÃI TÍNH TỪ",
+     "v": "NGÀY BẠN QUẸT THẺ",
+     "at": [
+      12,
+      "tiền"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "TỐI THIỂU ≠ SỐ BẠN NỢ THÁNG NÀY",
+     "at": 13,
+     "acc": true
+    },
+    {
+     "text": "nó là mức thấp nhất để chưa bị gọi là quá hạn",
+     "at": 14,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 15,
+   "text": "Tháng nào cũng chỉ trả mức ấy\nthì chuyện gì xảy ra?"
+  }
+ ],
+ "hud": {
+  "k": "DÒNG 02",
+  "t": "SỐ TIỀN TỐI THIỂU"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

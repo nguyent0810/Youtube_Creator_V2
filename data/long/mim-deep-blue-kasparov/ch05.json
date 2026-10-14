@@ -1,0 +1,171 @@
+{
+ "title": "Cỗ máy thứ hai",
+ "lines": [
+  {
+   "t": "Mười lăm tháng sau, Deep Blue trở lại với một phiên bản mạnh hơn.",
+   "p": 0.8
+  },
+  "Nó chạy trên một siêu máy tính của IBM, kèm hàng trăm con chip làm riêng cho việc chơi cờ.",
+  {
+   "t": "Tốc độ gấp đôi bản cũ: khoảng hai trăm triệu thế cờ mỗi giây.",
+   "p": 1.0
+  },
+  "Hai trăm triệu thế cờ, chỉ trong một giây.",
+  "Một kỳ thủ hàng đầu không tính theo cách ấy.",
+  "Họ nhìn thế cờ, và chỉ cân nhắc kỹ vài nước đáng xem.",
+  {
+   "t": "Nhóm Deep Blue còn mời các đại kiện tướng cờ vua giúp cỗ máy chấm điểm thế cờ, và chuẩn bị các nước khai cuộc.",
+   "p": 1.0
+  },
+  "Trận tái đấu diễn ra ở New York, tháng năm năm một nghìn chín trăm chín mươi bảy.",
+  "Sáu ván. Người thắng nhận bảy trăm nghìn đô la, người thua bốn trăm nghìn.",
+  {
+   "t": "Ngoài ra, một giải thưởng một trăm nghìn đô la, lập từ năm một nghìn chín trăm tám mươi, đang chờ chương trình đầu tiên thắng một nhà vô địch thế giới.",
+   "p": 1.0
+  },
+  "Lần này, khán phòng đông nghẹt.",
+  "Và lần này, Kasparov không còn nói về việc bảo vệ loài người nữa.",
+  "Ông chỉ muốn thắng. Như mọi lần."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "CHƯƠNG NĂM",
+   "title": "CỖ MÁY THỨ HAI",
+   "sub": "15 THÁNG SAU",
+   "vid": "6804656",
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU",
+   "titleAt": [
+    0,
+    "Mười"
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 1,
+   "title": "THẾ CỜ DEEP BLUE DUYỆT MỖI GIÂY (TRIỆU)",
+   "unit": "THEO TƯ LIỆU VỀ TRẬN ĐẤU",
+   "items": [
+    {
+     "k": "1996",
+     "v": 100,
+     "lbl": "~100",
+     "at": [
+      2,
+      "gấp"
+     ]
+    },
+    {
+     "k": "1997",
+     "v": 200,
+     "lbl": "~200",
+     "at": [
+      2,
+      "hai"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "from": 200,
+   "to": 200,
+   "suffix": " TRIỆU",
+   "label": "THẾ CỜ · CHỈ TRONG MỘT GIÂY",
+   "sub": {
+    "text": "MỘT KỲ THỦ CHỈ CÂN NHẮC KỸ VÀI NƯỚC ĐÁNG XEM",
+    "at": 5
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "ĐẠI KIỆN TƯỚNG GIÚP CỖ MÁY",
+     "at": 6,
+     "acc": true
+    },
+    {
+     "text": "chấm điểm thế cờ · chuẩn bị khai cuộc",
+     "at": [
+      6,
+      "chấm"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "TÁI ĐẤU · NEW YORK · 05.1997",
+   "rows": [
+    {
+     "k": "SỐ VÁN",
+     "v": "SÁU",
+     "at": [
+      8,
+      "Sáu"
+     ]
+    },
+    {
+     "k": "NGƯỜI THẮNG",
+     "v": "700.000 ĐÔ LA",
+     "at": [
+      8,
+      "bảy"
+     ]
+    },
+    {
+     "k": "NGƯỜI THUA",
+     "v": "400.000 ĐÔ LA",
+     "at": [
+      8,
+      "bốn"
+     ]
+    }
+   ],
+   "total": {
+    "k": "GIẢI TỪ 1980",
+    "v": "+100.000 ĐÔ LA",
+    "at": 9
+   }
+  },
+  {
+   "type": "broll",
+   "at": 10,
+   "vid": "4954316",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU",
+   "kin": [
+    {
+     "text": "KHÁN PHÒNG ĐÔNG NGHẸT",
+     "at": 10,
+     "sm": true
+    },
+    {
+     "text": "KHÔNG CÒN “BẢO VỆ LOÀI NGƯỜI”",
+     "at": 11,
+     "acc": true
+    },
+    {
+     "text": "ông chỉ muốn thắng · như mọi lần",
+     "at": 12,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "CỖ MÁY THỨ HAI"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

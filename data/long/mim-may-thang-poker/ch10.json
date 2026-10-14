@@ -1,0 +1,122 @@
+{
+ "title": "Làm sao loại bỏ may mắn?",
+ "lines": [
+  {
+   "t": "Poker có một vấn đề mà cờ vua không có.",
+   "p": 0.8
+  },
+  "May mắn.",
+  {
+   "t": "Một người chơi tồi vẫn có thể thắng vài ván nhờ được chia bài đẹp.",
+   "p": 1.0
+  },
+  "Vậy làm sao biết cỗ máy thắng vì giỏi, chứ không vì hên?",
+  "Các nhà nghiên cứu dùng hai cách.",
+  {
+   "t": "Cách thứ nhất là chơi thật nhiều ván. Một trăm hai mươi nghìn ván, để may rủi bù trừ cho nhau.",
+   "p": 1.0
+  },
+  "Cách thứ hai khéo hơn: chia bài đối xứng.",
+  "Bốn người chơi được ghép thành từng cặp.",
+  {
+   "t": "Khi một người nhận một tay bài, thì ở một phòng khác, người kia nhận đúng tay bài mà cỗ máy đã nhận, và cỗ máy nhận tay bài của người thứ nhất.",
+   "p": 1.0
+  },
+  "Nếu cỗ máy được chia bài đẹp ở bàn này, nó sẽ phải cầm bài xấu ở bàn kia.",
+  "Phần hên xui gần như bị triệt tiêu.",
+  {
+   "t": "Cái còn lại, là kỹ năng.",
+   "p": 1.0
+  },
+  "Đó là lý do nhóm nghiên cứu có thể nói chắc rằng chiến thắng của Libratus có ý nghĩa thống kê.",
+  "Không phải một đêm hên. Mà là hai mươi ngày giỏi hơn."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "10",
+   "k": "CHƯƠNG 10",
+   "title": "LÀM SAO LOẠI BỎ\nMAY MẮN?",
+   "sub": "HAI CÁCH CỦA CÁC NHÀ NGHIÊN CỨU",
+   "vid": "6813811",
+   "ms": 8,
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU",
+   "titleAt": [
+    0,
+    "Poker"
+   ]
+  },
+  {
+   "type": "question",
+   "at": 3,
+   "text": "Thắng vì giỏi,\nhay vì hên?"
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "HAI CÁCH",
+   "rows": [
+    {
+     "k": "1",
+     "v": "CHƠI THẬT NHIỀU VÁN · 120.000",
+     "at": 5
+    },
+    {
+     "k": "2",
+     "v": "CHIA BÀI ĐỐI XỨNG",
+     "at": 6
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 7,
+   "items": [
+    {
+     "year": "PHÒNG A",
+     "text": "người 1 nhận tay bài X · máy nhận tay bài Y",
+     "at": 8
+    },
+    {
+     "year": "PHÒNG B",
+     "text": "người 2 nhận tay bài Y · máy nhận tay bài X",
+     "at": [
+      8,
+      "người"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 9,
+   "mythLab": "BÀI ĐẸP Ở BÀN NÀY",
+   "myth": "CỖ MÁY HÊN",
+   "truthLab": "THÌ Ở BÀN KIA",
+   "truth": "PHẢI CẦM BÀI XẤU",
+   "strikeAt": [
+    10,
+    "Phần"
+   ],
+   "truthAt": [
+    11,
+    "Cái"
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 12,
+   "text": "KHÔNG PHẢI MỘT ĐÊM HÊN",
+   "sub": "MÀ LÀ HAI MƯƠI NGÀY GIỎI HƠN",
+   "subAt": 13
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 10",
+  "t": "LÀM SAO LOẠI BỎ MAY MẮN?"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

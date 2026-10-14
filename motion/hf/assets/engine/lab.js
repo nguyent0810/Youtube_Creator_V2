@@ -110,6 +110,33 @@ window.labScenes = ({ B, tl, el, sv, esc, px, fsz, rnd, bg, common, W, H, C }) =
       tl.fromTo(lb, { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out", immediateRender: false }, s.hitAt + 0.2); }
     common(s, d); };
 
+  /* chess : bàn cờ vua 8x8. {fen (THẾ CỜ THẬT dựng từ biên bản, hoặc thế ban đầu), hit?: "e6" (ô được nhấn), hitAt?, move?: "8", prob?: chú thích,
+             flip?: true (nhìn từ phía quân đen)}. Quân vẽ bằng ký tự cờ Unicode (♚♛♜♝♞♟) tô trắng/đen, có viền. (14/10/2026, MIM Deep Blue) */
+  B.chess = (s, d) => { bg(s, d, 0.85);
+    const S = 720, c = S / 8, cx = W / 2 - S / 2, cy = 110, g = sv("svg", { class: "layer", viewBox: `0 0 ${W} ${H}` }, d);
+    sv("rect", { x: cx - 26, y: cy - 26, width: S + 52, height: S + 52, rx: 10, fill: "rgba(15,27,45,.94)", stroke: "rgba(34,211,238,.4)", "stroke-width": 2 }, g);
+    for (let r = 0; r < 8; r++) for (let f = 0; f < 8; f++)
+      sv("rect", { x: cx + f * c, y: cy + r * c, width: c, height: c, fill: (r + f) % 2 ? "#3b5a7a" : "#c9d6e3" }, g);
+    const GL = { k: "♚", q: "♛", r: "♜", b: "♝", n: "♞", p: "♟" }, sq = (name) => { const f = name.charCodeAt(0) - 97, r = 8 - +name[1];
+      return s.flip ? [7 - f, 7 - r] : [f, r]; };
+    const rows = String(s.fen || "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR").split(" ")[0].split("/"), pcs = [];
+    rows.forEach((row, r) => { let f = 0; for (const ch of row) { if (/\d/.test(ch)) { f += +ch; continue; }
+      const white = ch === ch.toUpperCase(), name = String.fromCharCode(97 + f) + (8 - r), [x, y] = sq(name);
+      const t = sv("text", { x: cx + x * c + c / 2, y: cy + y * c + c * 0.78, "text-anchor": "middle", "font-size": c * 0.82, "font-family": "'Segoe UI Symbol','DejaVu Sans','Noto Sans Symbols 2',serif",
+        fill: white ? "#f8fafc" : "#0a0f18", stroke: white ? "#0a0f18" : "#e2e8f0", "stroke-width": 1.6, "paint-order": "stroke" }, g);
+      t.textContent = GL[ch.toLowerCase()]; pcs.push(t); f++; } });
+    const t0 = s.t0 + 0.15; pcs.forEach((p, k) => tl.fromTo(p, { opacity: 0 }, { opacity: 1, duration: 0.12, immediateRender: false }, t0 + Math.min(0.9, k * 0.03)));
+    for (let i = 0; i < 8; i++) { const fl = sv("text", { x: cx + i * c + c / 2, y: cy + S + 20, "text-anchor": "middle", "font-size": 18, fill: "rgba(148,163,184,.9)", "font-family": "'JetBrains Mono',monospace" }, g);
+      fl.textContent = String.fromCharCode(97 + (s.flip ? 7 - i : i));
+      const rk = sv("text", { x: cx - 14, y: cy + i * c + c / 2 + 6, "text-anchor": "middle", "font-size": 18, fill: "rgba(148,163,184,.9)", "font-family": "'JetBrains Mono',monospace" }, g);
+      rk.textContent = String(s.flip ? i + 1 : 8 - i); }
+    if (s.hit) { const [x, y] = sq(s.hit), X = cx + x * c + c / 2, Y = cy + y * c + c / 2, at = Math.max(0, s.hitAt ?? s.t0 + 1);
+      const ring = sv("rect", { x: X - c / 2 + 3, y: Y - c / 2 + 3, width: c - 6, height: c - 6, fill: "none", stroke: acc, "stroke-width": 6, rx: 6 }, g);
+      tl.fromTo(ring, { opacity: 0, scale: 1.8, svgOrigin: `${X} ${Y}` }, { opacity: 1, scale: 1, duration: 0.35, ease: "power3.out", immediateRender: false }, at);
+      if (s.move || s.prob) { const lb = el("div", "golbl", `<b>NƯỚC ${esc(s.move || "")}</b>${s.prob ? `<span>${esc(s.prob)}</span>` : ""}`, d);
+        tl.fromTo(lb, { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out", immediateRender: false }, at + 0.2); } }
+    common(s, d); };
+
   /* qr      : "giải phẫu" một mã QR (MINH HOẠ, không phải mã thật): ô vuông 25x25, ba ô định vị ở góc, tỷ lệ 1:1:3:1:1,
                vết bẩn ~30%, vạch quét. {modulesAt?, modulesUntil?, hl? (lúc ba góc sáng lên), ratio?: {at}, damage?: {at, okAt?, text?},
                scanAt?, side?: {k, v, at} (nhãn bên phải)}

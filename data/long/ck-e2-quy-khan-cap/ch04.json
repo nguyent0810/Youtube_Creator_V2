@@ -1,0 +1,187 @@
+{
+ "title": "Cái giá của việc không có tấm đệm",
+ "lines": [
+  {
+   "t": "Ở phiên bản thứ hai, An quẹt thẻ mười lăm triệu.",
+   "p": 0.8
+  },
+  "Rồi mỗi tháng, An chỉ trả mức tối thiểu.",
+  {
+   "t": "Ở video về nợ thẻ, mình đã làm phép tính này với lãi giả định ba mươi phần trăm một năm.",
+   "p": 1.0
+  },
+  "Với mười lăm triệu, đáp số là hơn tám năm mới hết nợ.",
+  {
+   "t": "Và tổng tiền lãi là khoảng mười ba triệu.",
+   "p": 1.0
+  },
+  "Mười ba triệu tiền lãi, cho một hoá đơn mười lăm triệu.",
+  "Ở phiên bản thứ nhất, con số ấy là không.",
+  {
+   "t": "Cùng một lần ốm. Cùng một mức lương.",
+   "p": 1.0
+  },
+  "Khác biệt không nằm ở việc ai giỏi kiếm tiền hơn.",
+  "Nó nằm ở chỗ, tiền đã có sẵn trước khi chuyện xảy ra, hay phải đi vay sau khi chuyện xảy ra.",
+  "Quỹ khẩn cấp vì thế không sinh lời nhiều.",
+  {
+   "t": "Việc của nó là giúp bạn khỏi phải trả lãi cho người khác.",
+   "p": 1.0
+  },
+  "Còn một thứ nữa, không đo được bằng tiền.",
+  "Hơn tám năm, tháng nào cũng có một khoản nợ đi cùng.",
+  "Một nỗi lo nhỏ, nhưng dai dẳng.",
+  {
+   "t": "Tấm đệm mua cho bạn cả sự yên tâm ấy.",
+   "p": 1.0
+  },
+  "Và điều ấy dẫn tới câu hỏi cuối: khoản tiền này nên nằm ở đâu?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "PHIÊN BẢN HAI",
+   "title": "CÁI GIÁ CỦA VIỆC\nKHÔNG CÓ TẤM ĐỆM",
+   "sub": "QUAY LẠI TỜ HOÁ ĐƠN 15 TRIỆU",
+   "vid": "5466772",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Ở"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "AN Ở PHIÊN BẢN THỨ HAI",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · LÃI 30%/NĂM, TỐI THIỂU 5%, KHÔNG TIÊU THÊM · CÁCH TÍNH NHƯ BÀI NỢ THẺ",
+   "rows": [
+    {
+     "k": "QUẸT THẺ",
+     "v": "15 TRIỆU",
+     "at": [
+      1,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "k": "MỖI THÁNG",
+     "v": "CHỈ TRẢ MỨC TỐI THIỂU",
+     "at": [
+      1,
+      "chỉ"
+     ]
+    }
+   ],
+   "total": {
+    "k": "HẾT NỢ SAU",
+    "v": "HƠN 8 NĂM",
+    "at": [
+     3,
+     "hơn"
+    ]
+   }
+  },
+  {
+   "type": "bars",
+   "at": 4,
+   "title": "TIỀN LÃI PHẢI TRẢ CHO HOÁ ĐƠN 15 TRIỆU (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · LÃI THẺ 30%/NĂM",
+   "items": [
+    {
+     "k": "PHIÊN BẢN 2 · KHÔNG CÓ QUỸ",
+     "v": 13.2,
+     "lbl": "≈ 13",
+     "at": [
+      4,
+      "khoảng"
+     ],
+     "acc": true
+    },
+    {
+     "k": "PHIÊN BẢN 1 · CÓ QUỸ",
+     "v": 0.1,
+     "lbl": "0",
+     "at": [
+      6,
+      "không."
+     ]
+    }
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 8,
+   "mythLab": "KHÁC BIỆT KHÔNG PHẢI Ở",
+   "myth": "AI KIẾM TIỀN GIỎI HƠN",
+   "truthLab": "MÀ Ở CHỖ",
+   "truth": "TIỀN CÓ TRƯỚC HAY VAY SAU",
+   "strikeAt": [
+    8,
+    "không"
+   ],
+   "truthAt": [
+    9,
+    "tiền"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "QUỸ KHẨN CẤP KHÔNG SINH LỜI NHIỀU",
+     "at": 10,
+     "sm": true
+    },
+    {
+     "text": "NÓ GIÚP BẠN KHỎI TRẢ LÃI CHO NGƯỜI KHÁC",
+     "at": [
+      11,
+      "giúp"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 12,
+   "vid": "7490451",
+   "ms": 6,
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "HƠN 8 NĂM · THÁNG NÀO CŨNG CÓ MỘT KHOẢN NỢ",
+     "at": 13,
+     "sm": true
+    },
+    {
+     "text": "TẤM ĐỆM MUA CẢ SỰ YÊN TÂM",
+     "at": [
+      15,
+      "mua"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 16,
+   "text": "Khoản tiền này\nnên nằm ở đâu?"
+  }
+ ],
+ "hud": {
+  "k": "CÁI GIÁ",
+  "t": "KHI KHÔNG CÓ TẤM ĐỆM"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

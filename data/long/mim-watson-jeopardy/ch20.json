@@ -1,0 +1,116 @@
+{
+ "title": "Ba thanh độ tự tin",
+ "lines": [
+  {
+   "t": "Hãy đặt ba thanh của video này cạnh nhau.",
+   "p": 0.8
+  },
+  "Thanh thứ nhất: máy hiểu câu hỏi bằng cách tạo rất nhiều đáp án, rồi tìm bằng chứng cho từng cái.",
+  "Thanh thứ hai: máy biết mình chắc tới đâu, và chỉ bấm chuông khi đủ chắc.",
+  {
+   "t": "Thanh thứ ba: độ tự tin ấy chỉ đáng tin trên đúng loại câu hỏi mà máy đã được thử.",
+   "p": 1.0
+  },
+  "Ba thanh ấy không chỉ dành cho máy.",
+  "Mỗi lần bạn hỏi một trợ lý trí tuệ nhân tạo, bạn có thể tự hỏi ba câu tương tự.",
+  {
+   "t": "Nó lấy câu trả lời từ đâu? Nó có cho thấy nó chắc tới đâu không? Câu hỏi của mình có phải loại nó làm tốt không?",
+   "p": 1.0
+  },
+  "Một câu trả lời trơn tru chưa chắc là một câu trả lời đúng.",
+  "Một chuỗi dấu hỏi, đôi khi lại là điều trung thực nhất."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "20",
+   "k": "CHƯƠNG 20",
+   "title": "BA THANH\nĐỘ TỰ TIN",
+   "sub": "ĐẶT CẠNH NHAU",
+   "vid": "33684363",
+   "ms": 2,
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH CHƯƠNG TRÌNH",
+   "titleAt": [
+    0,
+    "Hãy"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "BA THANH CỦA VIDEO NÀY",
+   "rows": [
+    {
+     "k": "1",
+     "v": "NHIỀU ĐÁP ÁN · TÌM BẰNG CHỨNG",
+     "at": 1
+    },
+    {
+     "k": "2",
+     "v": "CHỈ BẤM KHI ĐỦ CHẮC",
+     "at": 2
+    },
+    {
+     "k": "3",
+     "v": "CHỈ TIN Ở NƠI ĐÃ THỬ",
+     "at": 3
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "BA CÂU TỰ HỎI KHI DÙNG TRỢ LÝ AI",
+   "rows": [
+    {
+     "k": "1",
+     "v": "CÂU TRẢ LỜI LẤY TỪ ĐÂU?",
+     "at": [
+      6,
+      "Nó"
+     ]
+    },
+    {
+     "k": "2",
+     "v": "NÓ CHO THẤY NÓ CHẮC TỚI ĐÂU?",
+     "at": [
+      6,
+      "có"
+     ]
+    },
+    {
+     "k": "3",
+     "v": "CÂU HỎI CỦA MÌNH CÓ HỢP NÓ?",
+     "at": [
+      6,
+      "Câu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 7,
+   "mythLab": "CHƯA CHẮC ĐÚNG",
+   "myth": "CÂU TRẢ LỜI TRƠN TRU",
+   "truthLab": "ĐÔI KHI TRUNG THỰC NHẤT",
+   "truth": "MỘT CHUỖI DẤU HỎI",
+   "strikeAt": [
+    8,
+    "Một"
+   ],
+   "truthAt": [
+    8,
+    "dấu"
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 20",
+  "t": "BA THANH ĐỘ TỰ TIN"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

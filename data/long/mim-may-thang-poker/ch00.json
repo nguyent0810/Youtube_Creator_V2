@@ -1,0 +1,182 @@
+{
+ "title": "Hai mươi ngày ở Pittsburgh",
+ "lines": [
+  "Tháng một năm hai nghìn không trăm mười bảy, ở một sòng bài tại Pittsburgh, nước Mỹ.",
+  "Bốn người chơi poker chuyên nghiệp ngồi trước màn hình.",
+  {
+   "t": "Mỗi người đấu tay đôi với cùng một đối thủ.",
+   "p": 1.0
+  },
+  "Họ chơi nhiều giờ mỗi ngày, suốt hai mươi ngày.",
+  "Tổng cộng một trăm hai mươi nghìn ván bài.",
+  "Đối thủ của họ không ăn, không ngủ, không mệt.",
+  {
+   "t": "Nó là một chương trình máy tính tên là Libratus.",
+   "p": 1.0
+  },
+  "Khi ván cuối cùng kết thúc, cỗ máy dẫn gần một triệu tám trăm nghìn phỉnh.",
+  "Không phải tiền thật. Phỉnh là đơn vị tính điểm trong thử nghiệm.",
+  {
+   "t": "Nhưng các nhà nghiên cứu nói rằng khoảng cách ấy đủ lớn để không thể là may mắn.",
+   "p": 1.0
+  },
+  "Một trong bốn người chơi về sau kể lại cảm giác của mình.",
+  {
+   "t": "Cứ như đang chơi với một kẻ gian lận, như thể nó nhìn thấy bài của tôi.",
+   "q": 1,
+   "diy": 1
+  },
+  {
+   "t": "Nó không nhìn thấy. Đó mới là điều đáng nói.",
+   "p": 1.0
+  },
+  "Ở các video trước của chuỗi này, máy thắng cờ vua, thắng cờ vây, thắng cả trò đố vui.",
+  "Nhưng poker khác hẳn. Nhiều nhà nghiên cứu từng coi nó là một trong những trò khó nhất cho máy.",
+  "Vì sao? Vì poker có những lá bài úp.",
+  "Mình sẽ lật ba lá bài úp ấy, lần lượt từng lá.",
+  "Lá thứ nhất: những gì bạn không được thấy.",
+  "Lá thứ hai: nghệ thuật tố bịp.",
+  {
+   "t": "Lá thứ ba: một đối thủ biết học từ chính bạn.",
+   "p": 1.0
+  },
+  "Video nói về nghiên cứu trí tuệ nhân tạo. Nó không hướng dẫn chơi bài, và không cổ vũ cờ bạc."
+ ],
+ "scenes": [
+  {
+   "type": "broll",
+   "vid": "6813541",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU",
+   "kin": [
+    {
+     "text": "01.2017 · PITTSBURGH",
+     "at": [
+      0,
+      "Tháng"
+     ],
+     "sm": true
+    },
+    {
+     "text": "BỐN CAO THỦ POKER",
+     "at": [
+      1,
+      "Bốn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "cùng đấu tay đôi với một đối thủ",
+     "at": 2,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "THỬ NGHIỆM",
+   "rows": [
+    {
+     "k": "THỜI GIAN",
+     "v": "20 NGÀY",
+     "at": 3
+    },
+    {
+     "k": "SỐ VÁN",
+     "v": "120.000",
+     "at": 4
+    },
+    {
+     "k": "ĐỐI THỦ",
+     "v": "KHÔNG ĂN · KHÔNG NGỦ · KHÔNG MỆT",
+     "at": 5
+    }
+   ],
+   "total": {
+    "k": "TÊN",
+    "v": "LIBRATUS",
+    "at": 6
+   }
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "from": 0,
+   "to": 1766250,
+   "suffix": " PHỈNH",
+   "until": [
+    7,
+    "trăm"
+   ],
+   "label": "CỖ MÁY DẪN TRƯỚC KHI VÁN CUỐI KẾT THÚC",
+   "sub": {
+    "text": "PHỈNH LÀ ĐƠN VỊ TÍNH ĐIỂM CỦA THỬ NGHIỆM · KHÔNG PHẢI TIỀN THẬT",
+    "at": 8
+   }
+  },
+  {
+   "type": "quote",
+   "at": 10,
+   "text": "Cứ như đang chơi với một kẻ gian lận, như thể nó nhìn thấy bài của tôi.",
+   "qline": 11,
+   "by": "MỘT TRONG BỐN NGƯỜI CHƠI · DIỄN Ý · THEO BÁO CHÍ, 2017"
+  },
+  {
+   "type": "slam",
+   "at": 12,
+   "text": "NÓ KHÔNG NHÌN THẤY",
+   "sub": "ĐÓ MỚI LÀ ĐIỀU ĐÁNG NÓI",
+   "subAt": 12
+  },
+  {
+   "type": "ledger",
+   "at": 15,
+   "title": "BA LÁ BÀI ÚP",
+   "rows": [
+    {
+     "k": "1",
+     "v": "NHỮNG GÌ BẠN KHÔNG ĐƯỢC THẤY",
+     "at": 17
+    },
+    {
+     "k": "2",
+     "v": "NGHỆ THUẬT TỐ BỊP",
+     "at": 18
+    },
+    {
+     "k": "3",
+     "v": "ĐỐI THỦ BIẾT HỌC TỪ BẠN",
+     "at": 19
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 20,
+   "items": [
+    {
+     "text": "VIDEO VỀ NGHIÊN CỨU AI",
+     "at": 20,
+     "acc": true
+    },
+    {
+     "text": "không hướng dẫn chơi bài · không cổ vũ cờ bạc",
+     "at": [
+      20,
+      "Nó"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "HAI MƯƠI NGÀY Ở PITTSBURGH"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

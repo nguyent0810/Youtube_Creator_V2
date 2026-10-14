@@ -1,0 +1,174 @@
+{
+ "title": "Một trò chơi đã có lời giải",
+ "lines": [
+  {
+   "t": "Có một câu hỏi mà Deep Blue không trả lời được.",
+   "p": 0.8
+  },
+  "Nếu cả hai bên đều chơi hoàn hảo, ván cờ vua sẽ kết thúc thế nào?",
+  {
+   "t": "Trắng thắng? Đen thắng? Hay hoà?",
+   "p": 1.0
+  },
+  "Không ai biết.",
+  "Shannon từng ước tính số ván cờ vua có thể xảy ra là một con số có khoảng một trăm hai mươi chữ số.",
+  "Trong khi số nguyên tử trong vũ trụ mà ta quan sát được chỉ có khoảng tám mươi chữ số.",
+  {
+   "t": "Nên tới nay, cờ vua vẫn chưa được giải.",
+   "p": 1.0
+  },
+  "Nhưng có một trò chơi đã được giải.",
+  "Cờ đam, loại cờ có những quân tròn nhảy chéo trên bàn tám nhân tám.",
+  "Năm hai nghìn không trăm lẻ bảy, một nhóm ở Đại học Alberta, Canada, công bố kết quả trên tạp chí Science.",
+  {
+   "t": "Họ đã chứng minh rằng nếu cả hai bên chơi hoàn hảo, cờ đam luôn hoà.",
+   "p": 1.0
+  },
+  "Họ mất mười tám năm.",
+  "Chương trình của họ tên là Chinook.",
+  "Ba năm trước trận Deep Blue, Chinook đấu với nhà vô địch cờ đam huyền thoại Marion Tinsley.",
+  {
+   "t": "Trận đấu dừng giữa chừng, vì ông phải rút lui do bệnh.",
+   "p": 1.0
+  },
+  "Người dẫn đầu nhóm ấy là giáo sư Jonathan Schaeffer.",
+  "Và hai mươi năm sau trận Deep Blue, chính ông là người viết bài điểm sách cho cuốn sách của Kasparov.",
+  {
+   "t": "Thế giới máy chơi cờ, hoá ra rất nhỏ.",
+   "p": 1.0
+  },
+  "Còn với cờ vua, máy đã mạnh hơn người từ lâu.",
+  "Nhưng ngay cả máy mạnh nhất cũng chưa biết lời giải cuối cùng.",
+  "Nó chỉ chơi tốt hơn ta. Nó chưa biết hết."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "12",
+   "k": "CHƯƠNG MƯỜI HAI",
+   "title": "MỘT TRÒ CHƠI\nĐÃ CÓ LỜI GIẢI",
+   "sub": "CỜ VUA THÌ CHƯA",
+   "vid": "8888818",
+   "ms": 2,
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU",
+   "titleAt": [
+    0,
+    "Có"
+   ]
+  },
+  {
+   "type": "question",
+   "at": 1,
+   "text": "Nếu cả hai chơi hoàn hảo,\nván cờ vua kết thúc thế nào?"
+  },
+  {
+   "type": "bars",
+   "at": 4,
+   "title": "SỐ CHỮ SỐ CỦA HAI CON SỐ",
+   "unit": "ƯỚC TÍNH CỦA SHANNON · ƯỚC TÍNH THƯỜNG DÙNG",
+   "items": [
+    {
+     "k": "SỐ VÁN CỜ VUA CÓ THỂ XẢY RA",
+     "v": 120,
+     "lbl": "~120",
+     "at": [
+      4,
+      "một"
+     ],
+     "acc": true
+    },
+    {
+     "k": "SỐ NGUYÊN TỬ TRONG VŨ TRỤ QUAN SÁT ĐƯỢC",
+     "v": 80,
+     "lbl": "~80",
+     "at": [
+      5,
+      "tám"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "CỜ VUA CHƯA ĐƯỢC GIẢI",
+   "sub": "KHÔNG AI BIẾT KẾT QUẢ CỦA VÁN CỜ HOÀN HẢO",
+   "subAt": 6
+  },
+  {
+   "type": "source",
+   "at": 7,
+   "source": "TẠP CHÍ SCIENCE · 2007 · ĐẠI HỌC ALBERTA",
+   "ref": "CỜ ĐAM ĐÃ ĐƯỢC GIẢI",
+   "snippet": "nếu cả hai chơi hoàn hảo, [[cờ đam luôn hoà]]",
+   "hlAt": [
+    10,
+    "cờ"
+   ],
+   "seal": "MẤT 18 NĂM",
+   "sealAt": 11
+  },
+  {
+   "type": "ledger",
+   "at": 12,
+   "title": "CHINOOK",
+   "rows": [
+    {
+     "k": "1994",
+     "v": "ĐẤU NHÀ VÔ ĐỊCH MARION TINSLEY",
+     "at": 13
+    },
+    {
+     "k": "GIỮA CHỪNG",
+     "v": "ÔNG RÚT LUI VÌ BỆNH",
+     "at": 14
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "JONATHAN SCHAEFFER",
+     "at": 15,
+     "acc": true
+    },
+    {
+     "text": "người viết bài điểm sách cho Kasparov, 20 năm sau",
+     "at": 16,
+     "sm": true
+    },
+    {
+     "text": "thế giới máy chơi cờ hoá ra rất nhỏ",
+     "at": 17,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 18,
+   "mythLab": "MÁY MẠNH NHẤT",
+   "myth": "BIẾT LỜI GIẢI",
+   "truthLab": "THẬT RA",
+   "truth": "CHỈ CHƠI TỐT HƠN TA",
+   "strikeAt": [
+    19,
+    "Nhưng"
+   ],
+   "truthAt": [
+    20,
+    "Nó"
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 12",
+  "t": "MỘT TRÒ CHƠI ĐÃ CÓ LỜI GIẢI"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}
