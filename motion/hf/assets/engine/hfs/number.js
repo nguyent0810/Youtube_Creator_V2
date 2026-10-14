@@ -67,7 +67,7 @@ HFS.device("unit_grid", {
   build(c, s, st) {
     c.el("div", "ug-title", c.esc(s.title || ""), st);
     const g = c.el("div", "ug", null, st), cols = s.cols || 5; g.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
-    const cells = Array.from({ length: s.total }, (_, i) => c.el("div", "ug-c", String(i + 1), g));
+    const cells = Array.from({ length: s.total }, (_, i) => c.el("div", "ug-c", s.glyph || String(i + 1), g));
     const lab = c.el("div", "ug-lab", `<b>0</b> ${c.esc(s.unitLabel || "")}`, st);
     return { cells, lab, n: lab.querySelector("b") };
   },

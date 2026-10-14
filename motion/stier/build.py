@@ -820,7 +820,7 @@ def check_gate(slug: str, comp: Path, scenes: list[dict], od: Path, strict: bool
         a, c = _sc(f.get("selector")), _sc(f.get("containerSelector"))
         if f.get("code") == "content_overlap" and a is not None and a == c and a < len(scenes) and scenes[a]["type"] == "kinetic":
             print(f"  check: bỏ qua chồng dòng kinetic (cảnh {a}, {f.get('text')!r})", flush=True); continue
-        keep.append(f)
+        keep.append(f); print(f"  check layout: {f.get('selector')} vs {f.get('containerSelector')} t={f.get('time')} {f.get('text')!r}", flush=True)
     rep["layout"] = keep
     if not (cj.get("layout") or {}).get("duration"):
         rep["runtime"].append({"code": "no_timeline", "message": "trình kiểm không đọc được timeline (duration 0)"})

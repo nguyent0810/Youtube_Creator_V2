@@ -128,6 +128,10 @@ def lint(slug: str, spec: dict, lines: list[dict] | None = None, dur: float | No
         E.append("R10 thiếu sources")
     if ci is not None and "diễn ý" not in nfc(" ".join(L)).lower() and not any(s.get("type") == "source" for s in spec.get("scenes", [])):
         bad.append("R10 có trích kinh nhưng không ghi 'diễn ý' (lời hoặc thẻ nguồn)")
+    wv = tuple(spec.get("lint_waive") or ())   # miễn có ghi lý do trong spec (lint_waive_why), chỉ hạ thành cảnh báo
+    if wv:
+        W += [f"(miễn) {e}" for e in E if e.split()[0] in wv]
+        E[:] = [e for e in E if e.split()[0] not in wv]
     return E, W
 
 
