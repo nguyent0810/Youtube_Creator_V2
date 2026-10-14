@@ -363,7 +363,10 @@ from beatfx import apply_sync, assign_beats  # noqa: E402  (motion/beatfx.py —
 MODE = {"kinetic": "T", "slam": "T", "question": "T", "quote": "T",
         "photo": "M", "doc": "M", "hero": "M", "evidence": "M", "mug": "M", "split": "M", "file": "M", "crowd": "M",
         "chart": "D", "counter": "D", "ledger": "D", "timeline": "D", "calendar": "D", "clock": "D", "date": "D",
-        "map": "G", "board": "G", "cards3d": "G", "source": "G"}
+        "map": "G", "board": "G", "cards3d": "G", "source": "G",
+        # BUD v2.1: thiết bị Shorts Studio (tiền tố hf_ để không đụng split/calendar của MIM/CK)
+        "hf_wheel": "G", "hf_cycle_draw": "G", "hf_myth_strike": "G", "hf_split": "G", "hf_list_build": "D",
+        "hf_time_spine": "D", "hf_calendar": "D", "hf_count_ring": "D", "hf_unit_grid": "D", "hf_stamp": "T"}
 
 
 def scene_mode(r: dict) -> str:
@@ -399,7 +402,38 @@ def mix_lint(sc: list[dict]) -> list[str]:
 # >= 3 framing khác nhau mỗi video. Spec "v2": true -> lỗi chặn; Short bud cũ -> chỉ cảnh báo.
 BUD_FRAME = {"kinetic": ("full-media", "Y"), "slam": ("center-hero", "Z"), "quote": ("card", "in-glyph"),
              "source": ("card-on-field", "X"), "board": ("card", "draw"), "cards3d": ("stack-3d", "3D"),
-             "counter": ("center-hero", "count"), "question": ("center-hero", "Y")}
+             "counter": ("center-hero", "count"), "question": ("center-hero", "Y"),
+             # meta từ devices/*.js (Shorts Studio engine 1.0)
+             "hf_wheel": ("center-hero", "3D"), "hf_cycle_draw": ("center-hero", "draw"), "hf_myth_strike": ("center-hero", "X"),
+             "hf_split": ("stacked-split", "mask"), "hf_time_spine": ("world-camera", "draw"), "hf_calendar": ("card-on-field", "3D"),
+             "hf_count_ring": ("center-hero", "count"), "hf_unit_grid": ("grid", "Z"), "hf_list_build": ("grid", "X"), "hf_stamp": ("edge-band", "X")}
+BUD_CIRCLE = {"hf_wheel", "hf_cycle_draw", "hf_count_ring"}   # tối đa 1 cơ chế tròn / video
+HFS_DEVICES = {"wheel": "cycle", "cycle_draw": "cycle", "myth_strike": "compare", "split": "compare", "time_spine": "time",
+               "calendar": "time", "count_ring": "number", "unit_grid": "number", "list_build": "table", "stamp": "mark"}
+
+
+def hfs_tags(spec: dict, sc: list[dict]) -> str:
+    """Nạp bridge + file thiết bị chỉ khi bud có cảnh hf_* (MIM/CK không đổi một byte)."""
+    if spec.get("theme") != "bud":
+        return ""
+    files = sorted({HFS_DEVICES[r["type"][3:]] for r in sc if r["type"].startswith("hf_")})
+    if not files:
+        return ""
+    return "".join(f'<script src="assets/engine/hfs/{f}.js"></script>\n' for f in ["bridge"] + files)
+
+
+def _is_anchor(v, n):
+    return (isinstance(v, list) and 2 <= len(v) <= 4 and isinstance(v[0], int) and not isinstance(v[0], bool)
+            and 0 <= v[0] < n and isinstance(v[1], str))
+
+
+def resolve_hf(node, A, n):
+    """Thiết bị hf_*: mọi [câu, "từ"(, lần, lệch)] ở bất kỳ độ sâu -> giây (mốc từ đo từ giọng)."""
+    if isinstance(node, dict):
+        return {k: (A(v) if _is_anchor(v, n) else resolve_hf(v, A, n)) for k, v in node.items()}
+    if isinstance(node, list):
+        return [A(v) if _is_anchor(v, n) else resolve_hf(v, A, n) for v in node]
+    return node
 
 
 def bud_layout_lint(sc: list[dict]) -> list[str]:
@@ -412,6 +446,8 @@ def bud_layout_lint(sc: list[dict]) -> list[str]:
             out.append(f"cảnh {i - 1}-{i} cùng bố cục {fr[i][0]}")
         if fr[i][1] == fr[i - 1][1]:
             out.append(f"cảnh {i - 1}-{i} cùng hướng chuyển động {fr[i][1]}")
+    if sum(r["type"] in BUD_CIRCLE for r in sc) > 1:
+        out.append("quá 1 cơ chế tròn (wheel/cycle_draw/count_ring)")
     if len({f[0] for f in fr}) < 3:
         out.append(f"chỉ {len({f[0] for f in fr})} kiểu bố cục (< 3)")
     return out
@@ -422,6 +458,10 @@ def plan(spec: dict, lines: list[dict], dur: float) -> list[dict]:
     sc = []
     for i, s in enumerate(spec["scenes"]):
         r = resolve({k: v for k, v in s.items() if k != "at"}, A)
+        if s["type"].startswith("hf_"):
+            if spec.get("theme") != "bud" or s["type"][3:] not in HFS_DEVICES:
+                raise SystemExit(f"cảnh {s['type']}: chỉ dùng cho theme bud, thiết bị: {sorted(HFS_DEVICES)}")
+            r = resolve_hf(r, A, len(lines))
         r["t0"] = 0.0 if i == 0 else A(s["at"])
         sc.append(r)
     for i, r in enumerate(sc):
@@ -567,7 +607,7 @@ HTML = """<!doctype html>
   <div class="layer" id="flash"></div>
 </div>
 <script src="assets/engine/beat.js"></script>
-<script src="assets/engine/casefile.js"></script>
+{hfs}<script src="assets/engine/casefile.js"></script>
 </body>
 </html>
 """
@@ -665,6 +705,8 @@ def build(slug: str, render: bool = True, draft: bool = False) -> Path:
             if not any(c["text"] == cinfo[s["ckey"]]["credit"] for c in credits):
                 credits.append({"kind": "clip", "text": cinfo[s["ckey"]]["credit"]})
     vtags, scenes = clips.video_tags(scenes, cinfo, dur)
+    if loop_main is not None and vtags and scenes[-1].get("loop"):   # loop: clip móc vào ĐÚNG lúc cảnh loop (không sớm 0,2 s đè lên CTA)
+        vtags[-1] = re.sub(r'data-start="[0-9.]+" data-duration="[0-9.]+"', f'data-start="{loop_main:.3f}" data-duration="{dur - loop_main:.3f}"', vtags[-1], count=1)
     for cr in sfx.ambience_credits(spec.get("ambience")):   # nen mua/nuoc/chuong CC0
         credits.append({"kind": "sound", "text": cr})
     (od / "credits.json").write_text(json.dumps(credits, ensure_ascii=False, indent=1), encoding="utf-8")
@@ -679,7 +721,7 @@ def build(slug: str, render: bool = True, draft: bool = False) -> Path:
     (adir / "data.js").write_text("window.CASE = " + json.dumps(case, ensure_ascii=False) + ";\n", encoding="utf-8")
     comp = HF / "compositions" / "cases" / f"{slug}.html"
     comp.parent.mkdir(parents=True, exist_ok=True)
-    comp.write_text(HTML.replace("{slug}", slug).replace("{dur}", str(dur)).replace("{title}", spec["title"])
+    comp.write_text(HTML.replace("{hfs}", hfs_tags(spec, scenes)).replace("{slug}", slug).replace("{dur}", str(dur)).replace("{title}", spec["title"])
                     .replace("{cls}", th["js"].get("cls", "") + look_cls).replace("{videos}", "\n".join(vtags))
                     # CSS riêng của theme (CK: theme-ck.css); theme không khai báo -> HTML y hệt cũ
                     .replace("{css}", f'\n<link rel="stylesheet" href="assets/engine/{th["js"]["css"]}" />' if th["js"].get("css") else ""),

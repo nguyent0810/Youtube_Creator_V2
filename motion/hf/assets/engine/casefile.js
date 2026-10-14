@@ -612,6 +612,7 @@
   };
 
   // ---------- dựng cảnh ----------
+  if (window.HFS && window.HFS.mount) window.HFS.mount(tl, C, B);   // BUD v2.1: thiết bị Shorts Studio -> B.hf_* (chỉ khi bridge được nạp)
   C.scenes.forEach((s, i) => {
     const d = el("div", "scene", null, stage); show(d, s.t0, s.t1, s.type === "question" ? 0.06 : 0.1);
     if (!B[s.type]) throw new Error("loại cảnh lạ: " + s.type);

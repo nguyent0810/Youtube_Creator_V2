@@ -78,3 +78,38 @@
 .theme-bud .c3k, .theme-bud .c3s { color:rgba(241,227,200,.85); }
 .theme-bud .c3t { text-shadow:0 0 40px var(--glow), 0 8px 30px rgba(0,0,0,.85); }
 .theme-bud .board.bd-glass { background:linear-gradient(160deg, rgba(255,214,140,.14), rgba(255,214,140,.03)); border-color:rgba(245,176,65,.4); }
+
+/* ---------- HFS devices trong BUD (14/10/2026, port Shorts Studio "saffron"): giấy da + mực chàm + nghệ, chỉ áp vào .hfs ---------- */
+.theme-bud .hfs { position: absolute; inset: 0;
+  --ground: #ECE6D8; --ground2: #E1D9C6; --card: #F4EFE3; --ink: #1B2566; --ink-soft: #3A4380; --soft-text: #4A4D68; --mute: #6B6E86;
+  --accent: #A0561A; --accent2: #7A2E1E; --on-accent: #F4EFE3; --on-accent2: #F4EFE3; --glow: #E09F3E; --glow-soft: #F3D9A6;
+  --line: rgba(27,37,102,.18); --radius: 4px; --seal-bg: rgba(244,239,227,.85);
+  --font-display: "Playfair Display", serif; --font-body: "Be Vietnam Pro", sans-serif; --font-mono: "JetBrains Mono", monospace;
+  --font-quote: "Playfair Display", serif; --font-cjk: "Songti SC", "Noto Serif CJK SC", serif; --display-weight: 900;
+  color: var(--ink); font-family: var(--font-body); }
+/* tấm giấy: chừa dải trên (kicker) và dải dưới (phụ đề trắng trên nền tối) */
+.theme-bud .hfs::before { content: ""; position: absolute; left: 40px; right: 40px; top: 210px; height: 1230px; border-radius: 14px;
+  background: radial-gradient(60% 40% at 50% 38%, rgba(224,159,62,.30), rgba(224,159,62,0) 72%), linear-gradient(#EFE9DC, #E6DECB);
+  box-shadow: 0 30px 90px rgba(0,0,0,.55); }
+.theme-bud .hfs .stage { position: absolute; inset: 0; }
+.theme-bud .hfs .wd { display: inline-block; white-space: nowrap; position: relative; }
+.theme-bud .hfs .wd.mask { overflow: hidden; vertical-align: bottom; padding: .36em .04em .16em; margin: -.36em -.04em -.16em; }
+.theme-bud .hfs .wd > .in { display: inline-block; } .theme-bud .hfs .in.hot { color: var(--accent); }
+.theme-bud .hfs .disp { font-family: var(--font-display); font-weight: var(--display-weight); letter-spacing: -.01em; }
+.theme-bud .hfs .mono { font-family: var(--font-mono); font-weight: 700; letter-spacing: .12em; }
+.theme-bud .hfs .heavy { font-weight: 900; letter-spacing: -.015em; line-height: 1.18; }
+.theme-bud .hfs .u-line { position: absolute; left: -4px; right: -4px; bottom: .02em; height: .14em; background: var(--glow); opacity: .8; transform-origin: 0 50%; z-index: 0; }
+.theme-bud .hfs .u-line.u-accent { background: var(--accent); opacity: 1; height: .1em; }
+.theme-bud .hfs .dot { position: absolute; width: 14px; height: 14px; border-radius: 50%; background: var(--accent); }
+.theme-bud .hfs .pill { display: inline-block; padding: 14px 30px; background: var(--accent); color: var(--on-accent); font-weight: 900; font-size: 60px; border-radius: var(--radius); }
+.theme-bud .hfs .seal { position: absolute; padding: 16px 28px; border: 8px solid var(--accent2); color: var(--accent2); font-weight: 900; font-size: 58px;
+  letter-spacing: .04em; background: var(--seal-bg); border-radius: var(--radius); white-space: nowrap; }
+/* chỉnh theo font BUD (Playfair cao hơn Newsreader): số và đơn vị không chạm nhau */
+.theme-bud .hfs .cr-suf { top: 1050px; }
+/* list_build trong BUD: chữ lớn đọc được trên điện thoại (không có chữ phụ nhỏ) */
+.theme-bud .hfs .lb { top: 430px; gap: 44px; }
+.theme-bud .hfs .lb-i { grid-template-columns: 150px 1fr; }
+.theme-bud .hfs .lb-k { width: 130px; height: 130px; font-size: 60px; }
+.theme-bud .hfs .lb-t { font-size: 104px; }
+.theme-bud .hfs .lb-t small { font-size: 46px; }
+.theme-bud .hfs .lb-title { font-size: 40px; }

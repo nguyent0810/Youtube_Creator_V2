@@ -191,3 +191,11 @@
 - `hyperframes check` 0.8.75 không chạy được engine casefile qua <script src> (DOM chưa có) và tách thẻ <video> -> bản sao kiểm phải nhúng engine nội tuyến + cờ __HF_CHECK (thay video bằng khung giữ chỗ) + hard-link clip. Đừng dùng junction cho assets (rmtree xuyên junction là xoá thật).
 - Check bắt được lỗi thật: nhãn vàng (--red của bud) trên thẻ kem chỉ 1,64:1 -> đổi nâu đậm #7a3f10. #scrims phủ thẻ là có chủ đích -> data-layout-allow-occlusion.
 - Render lại bản v2 của video đã có: đặt BUD_VARIETY=off (luật "clip mở đầu đã dùng" sẽ bắt chính bản gốc).
+
+## 14/10/2026 — BUD v2.1: thiết bị Shorts Studio trong bud (hf_*)
+- 10 thiết bị: hf_wheel, hf_cycle_draw, hf_myth_strike, hf_split, hf_time_spine, hf_calendar, hf_count_ring, hf_unit_grid, hf_list_build, hf_stamp (tiền tố hf_ vì split/calendar đã có ở MIM/CK). File: motion/hf/assets/engine/hfs/*.js (chép nguyên từ feat/shorts-studio) + bridge.js; chỉ nạp khi spec bud có cảnh hf_*.
+- Mọi [câu,"từ"] ở bất kỳ độ sâu trong cảnh hf_* được đổi ra giây (strikeAt, truthAt, noteAt, items[].at...). KHÔNG đặt "at" thứ hai trong cảnh (trùng khoá "at" = mốc bắt đầu cảnh).
+- Nền giấy da saffron chỉ là tấm 210–1440 px: chừa kicker trên và dải phụ đề trắng dưới (nếu phủ toàn khung -> phụ đề trắng mất tương phản).
+- Font BUD (Playfair) cao hơn Newsreader: count_ring cần đẩy đơn vị xuống (.cr-suf 1050px); list_build phóng chữ 104px, bỏ dòng phụ nhỏ.
+- Luật mix: hf_list_build tính là D (bảng/danh sách như ledger); tối đa 1 cơ chế tròn (wheel/cycle_draw/count_ring).
+- Loop: clip móc của cảnh loop giờ bắt đầu đúng lúc loop (trước đây sớm 0,2 s đè lên CTA).
