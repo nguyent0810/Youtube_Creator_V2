@@ -350,7 +350,11 @@
       tl.to(b, { scaleY: 1, duration: 0.5, ease: "power3.out" }, q.at);
       tl.fromTo(v, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, immediateRender: false }, q.at + 0.35); });
     tl.fromTo(ch, { opacity: 0 }, { opacity: 1, duration: 0.3, immediateRender: false }, s.t0);
-    common(s, d);
+    // Retro 5 (14/10/2026): "label" của bars từng là thẻ .lower góc dưới trái, đè lên nhãn trục. Giờ là một dòng chú thích ngay dưới tiêu đề.
+    if (s.label && typeof s.label === "object") { const txt = [s.label.k, s.label.v, s.label.s].filter(Boolean).join(" · ");
+      const cap = el("div", "mono", esc(txt), ch); Object.assign(cap.style, { position: "absolute", left: "0", top: "-4px", fontSize: px(fsz(txt, 22, 1600, 0.74)), letterSpacing: ".14em", color: "var(--dim)", whiteSpace: "nowrap", opacity: 0 });
+      tl.to(cap, { opacity: 1, duration: 0.3 }, s.label.at ?? s.t0 + 0.4); }
+    else common(s, d);
   };
 
   /* ---------- timeline: mốc năm nằm ngang ----------

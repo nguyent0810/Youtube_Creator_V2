@@ -1,0 +1,168 @@
+{
+ "theme": "mim",
+ "title": "Nước cờ thứ 102 của máy khiến Lee Sedol ngồi nghĩ hơn 10 phút: ván đầu tiên, 09/03/2016",
+ "description": "Ván một trận AlphaGo – Lee Sedol (Seoul, 09/03/2016): Lee Sedol cầm đen, thử một nước ít gặp ngay từ đầu để xem máy có lúng túng không; máy đáp lại bình thản. Giữa ván, các nhà phân tích cho rằng có lúc ông đã cân bằng thế cờ. Rồi AlphaGo đi nước 102, đánh thẳng vào vùng đất của ông; theo một bình luận viên Hàn Quốc, ông trông như sững lại và nghĩ hơn 10 phút. Sau 186 nước, Lee Sedol xin thua (Wikipedia: AlphaGo versus Lee Sedol). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (20 phút): https://youtu.be/cNwIMli7nOc (công khai từ 20:00 ngày 29/10).",
+ "tags": [
+  "ván một",
+  "seoul 2016",
+  "alphago",
+  "lee sedol",
+  "cờ vây",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "VÁN MỘT · 09/03/2016",
+ "acc": [
+  "mười",
+  "lúng",
+  "hai",
+  "sững",
+  "sáu"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Một nước cờ của máy, khiến nhà vô địch ngồi nghĩ hơn mười phút.",
+  "Ngày 9 tháng 3 năm 2016. Ván đầu tiên giữa Lee Sedol và AlphaGo.",
+  "Ông thử ngay một nước ít gặp, để xem máy có lúng túng không.",
+  "Máy không lúng túng.",
+  "Giữa ván, ông gỡ lại. Rồi tới nước thứ một trăm lẻ hai của máy.",
+  "Nó đánh thẳng vào vùng đất của ông. Ông trông như sững lại.",
+  "Sau một trăm tám mươi sáu nước, Lee Sedol xin thua. Tỉ số: không, một."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MỘT NƯỚC CỜ CỦA MÁY",
+     "at": 0.0
+    },
+    {
+     "text": "NGHĨ HƠN 10 PHÚT",
+     "at": [
+      0,
+      "khiến"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:39270835",
+   "veil": 0.5
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "09/03/2016",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "VÁN ĐẦU TIÊN",
+     "at": [
+      1,
+      "Ván"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:39474349",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "ÔNG THỬ MỘT NƯỚC ÍT GẶP",
+   "cards": [
+    {
+     "k": "ĐỂ XEM",
+     "v": "MÁY CÓ LÚNG TÚNG?",
+     "at": [
+      2,
+      "để"
+     ]
+    },
+    {
+     "k": "KẾT QUẢ",
+     "v": "KHÔNG",
+     "at": [
+      3,
+      "Máy"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 102,
+   "to": 102,
+   "prefix": "NƯỚC ",
+   "label": "CỦA MÁY · ĐÁNH THẲNG VÀO ĐẤT CỦA ÔNG",
+   "until": [
+    4,
+    "lẻ"
+   ],
+   "sub": {
+    "text": "LEE SEDOL NGHĨ HƠN 10 PHÚT",
+    "at": [
+     5,
+     "Ông"
+    ]
+   }
+  },
+  {
+   "type": "timeline",
+   "at": 6,
+   "items": [
+    {
+     "year": "nước 186",
+     "text": "Lee Sedol xin thua",
+     "at": [
+      6,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "year": "tỉ số",
+     "text": "con người 0 – 1 cỗ máy",
+     "at": [
+      6,
+      "Tỉ"
+     ]
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "lee": "Li",
+  "sedol": "Xê-đôn",
+  "alphago": "An-pha Gô",
+  "=AlphaGo": "An-pha Gô"
+ },
+ "imgs": {}
+}

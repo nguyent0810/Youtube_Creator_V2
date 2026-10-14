@@ -1,0 +1,194 @@
+{
+ "theme": "mim",
+ "title": "Anh ta đã nghi ngờ, đã kiểm tra, và vẫn mất hơn 600 tỷ đồng: sai ở đúng một chỗ",
+ "description": "Hồng Kông, 01/2024: nhân viên tài chính của công ty kỹ thuật Arup nghi email của “giám đốc tài chính” là lừa đảo. Rồi anh được mời vào một cuộc họp video, thấy mặt quen, nghe giọng quen, hết nghi, và chuyển khoảng 200 triệu đô la Hồng Kông (khoảng 25 triệu USD). Theo nhà chức trách Hồng Kông, cuộc họp được ghi hình sẵn. Anh không cả tin: anh có kiểm tra, nhưng qua kênh do chính kẻ gian đưa ra, bằng đúng hai thứ đã bị làm giả. Vụ việc chỉ lộ khi anh tự liên hệ trụ sở (CNN; chính quyền Hồng Kông). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (13 phút): https://youtu.be/sywk-F-yW7k (công khai từ 20:00 ngày 26/10).",
+ "tags": [
+  "arup",
+  "hồng kông",
+  "họp video giả",
+  "ai giả giọng",
+  "lừa đảo",
+  "deepfake",
+  "an toàn mạng",
+  "mind in the machine"
+ ],
+ "sub": "HỒNG KÔNG · 2024",
+ "acc": [
+  "nghi",
+  "sáu",
+  "kẻ",
+  "mặt",
+  "tự"
+ ],
+ "kicker": "AI VÀ LỪA ĐẢO",
+ "lines": [
+  "Anh ta đã nghi ngờ. Đã kiểm tra. Và vẫn mất hơn sáu trăm tỷ đồng.",
+  "Hồng Kông, năm 2024. Một nhân viên tài chính nhận email lạ từ sếp, và nghi ngay.",
+  "Rồi anh được mời vào một cuộc họp video để xác nhận.",
+  "Mặt quen. Giọng quen. Anh hết nghi.",
+  "Anh không hề cả tin. Anh chỉ sai ở một chỗ.",
+  "Anh để chính kẻ gian chọn cách kiểm tra. Bằng đúng hai thứ chúng đã làm giả: khuôn mặt, và giọng nói.",
+  "Vụ lừa chỉ lộ ra, khi anh tự gọi về trụ sở."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "ĐÃ NGHI · ĐÃ KIỂM TRA",
+     "at": 0.0
+    },
+    {
+     "text": "VẪN MẤT HƠN 600 TỶ",
+     "at": [
+      0,
+      "Và"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:8125750",
+   "veil": 0.6
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "HỒNG KÔNG · 2024",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "EMAIL LẠ TỪ SẾP",
+     "at": [
+      1,
+      "nhận"
+     ],
+     "acc": true
+    },
+    {
+     "text": "anh nghi ngay",
+     "at": [
+      1,
+      "và"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34771072",
+   "ms": 3,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "timeline",
+   "at": 2,
+   "items": [
+    {
+     "year": "bước 1",
+     "text": "được mời vào họp video để xác nhận",
+     "at": [
+      2,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "year": "bước 2",
+     "text": "mặt quen, giọng quen: hết nghi",
+     "at": [
+      3,
+      null,
+      0,
+      0.05
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "ANH KHÔNG HỀ CẢ TIN",
+   "sub": "ANH CHỈ SAI Ở MỘT CHỖ"
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "KẺ GIAN CHỌN CÁCH KIỂM TRA",
+   "cards": [
+    {
+     "k": "THỨ BỊ LÀM GIẢ",
+     "v": "KHUÔN MẶT",
+     "at": [
+      5,
+      "khuôn"
+     ]
+    },
+    {
+     "k": "THỨ BỊ LÀM GIẢ",
+     "v": "GIỌNG NÓI",
+     "at": [
+      5,
+      "và"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "CUỘC HỌP ĐƯỢC GHI HÌNH SẴN · THEO NHÀ CHỨC TRÁCH"
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Vụ lừa chỉ lộ ra",
+   "nodes": [
+    {
+     "text": "khi anh tự gọi",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      6,
+      "khi"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "về trụ sở",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "về"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 460
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://edition.cnn.com/2024/05/16/tech/arup-deepfake-scam-loss-hong-kong-intl-hnk/index.html",
+  "https://www.info.gov.hk/gia/general/202406/26/P2024062600192.htm"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.9
+  }
+ },
+ "say": {
+  "email": "i-meo"
+ },
+ "imgs": {}
+}

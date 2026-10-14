@@ -1,0 +1,206 @@
+{
+ "theme": "mim",
+ "title": "Năm 2023, một kỳ thủ nghiệp dư thắng cỗ máy cờ vây hàng đầu 14 trên 15 ván",
+ "description": "Tháng 2/2023, kỳ thủ nghiệp dư người Mỹ Kellin Pelrine đấu 15 ván với KataGo, một trong những cỗ máy cờ vây mạnh nhất lúc ấy (không phải AlphaGo, nhưng học theo cùng cách), và thắng 14 ván. Bí quyết đến từ một chương trình máy tính khác: một nhóm nghiên cứu cho nó đấu hơn một triệu ván với cỗ máy kia để tìm điểm mù: xếp quân thành một vòng lớn bao quanh một đám quân của máy trong lúc đánh lạc hướng ở chỗ khác. Theo Pelrine, mẹo ấy không quá khó để con người học (Financial Times; The Register, 20/02/2023). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (20 phút): https://youtu.be/cNwIMli7nOc",
+ "tags": [
+  "katago",
+  "kellin pelrine",
+  "điểm mù của ai",
+  "alphago",
+  "lee sedol",
+  "cờ vây",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "02/2023",
+ "acc": [
+  "mười",
+  "nghiệp",
+  "triệu",
+  "mù",
+  "vòng"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Mười bốn trên mười lăm ván. Một người chơi nghiệp dư, thắng cỗ máy cờ vây hàng đầu.",
+  "Chuyện xảy ra tháng 2 năm 2023.",
+  "Anh không giỏi hơn các nhà vô địch.",
+  "Bí quyết của anh đến từ một chương trình máy tính khác.",
+  "Người ta cho nó đấu hơn một triệu ván với cỗ máy kia, chỉ để tìm một điểm mù.",
+  "Và nó tìm ra. Hãy xếp quân thành một vòng lớn, bao quanh một đám quân của máy.",
+  "Một người chơi khá sẽ nhận ra ngay. Còn cỗ máy thì không thấy, cho tới khi quá muộn."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "14 / 15 VÁN",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "nghiệp dư thắng cỗ máy cờ vây hàng đầu",
+     "at": [
+      0,
+      "Một"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:39270835",
+   "veil": 0.5
+  },
+  {
+   "type": "chart",
+   "at": 1,
+   "kind": "bars",
+   "title": "15 VÁN: AI THẮNG?",
+   "unit": "THÁNG 2 NĂM 2023",
+   "min": 0,
+   "bars": [
+    {
+     "label": "NGƯỜI\nNGHIỆP DƯ",
+     "v": 14,
+     "text": "14",
+     "c": "ref",
+     "at": [
+      1,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "label": "CỖ MÁY",
+     "v": 1,
+     "text": "1",
+     "c": "dim",
+     "at": [
+      2,
+      null,
+      0,
+      0.05
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "BÍ QUYẾT",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "TỪ MỘT CHƯƠNG TRÌNH KHÁC",
+     "at": [
+      3,
+      "đến"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:28709421",
+   "ms": 3,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 3
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "to": 1,
+   "prefix": "> ",
+   "suffix": " TRIỆU VÁN",
+   "label": "ĐẤU THỬ · CHỈ ĐỂ TÌM MỘT ĐIỂM MÙ",
+   "until": [
+    4,
+    "triệu"
+   ],
+   "sub": {
+    "text": "THEO NHÓM NGHIÊN CỨU TÌM RA MẸO ẤY",
+    "at": [
+     4,
+     "chỉ"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Điểm mù ấy",
+   "nodes": [
+    {
+     "text": "xếp quân thành một vòng lớn",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      5,
+      "Hãy"
+     ],
+     "shape": "none",
+     "w": 800
+    },
+    {
+     "text": "bao quanh quân của máy",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      5,
+      "bao"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 720
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "AI NHẬN RA?",
+   "cards": [
+    {
+     "k": "NGƯỜI CHƠI KHÁ",
+     "v": "THẤY NGAY",
+     "at": [
+      6,
+      "Một"
+     ]
+    },
+    {
+     "k": "CỖ MÁY",
+     "v": "KHÔNG THẤY",
+     "at": [
+      6,
+      "Còn"
+     ],
+     "c": "acc"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://www.theregister.com/2023/02/20/human_go_ai_defeat/"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

@@ -1,0 +1,189 @@
+{
+ "theme": "mim",
+ "title": "“Nó không thắng nổi tôi”: kỳ thủ số một thế giới nói vậy, rồi thua AlphaGo 0–3",
+ "description": "Tháng 3/2016, khi trận AlphaGo – Lee Sedol mới bắt đầu, Kha Khiết (Ke Jie), kỳ thủ số một thế giới lúc ấy, từng nói cỗ máy này không thắng nổi mình; sau ba ván đầu của trận ấy, anh nói rất có thể mình sẽ thua. Tháng 5/2017, anh gặp phiên bản Master và thua 0–3. Sau trận, DeepMind tuyên bố AlphaGo giải nghệ, không đấu với con người nữa. Lời Kha Khiết: “Chưa một con người nào chạm tới rìa của chân lý cờ vây” (trích dịch; Wikipedia: AlphaGo versus Lee Sedol, AlphaGo). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (20 phút): https://youtu.be/cNwIMli7nOc (công khai từ 20:00 ngày 29/10).",
+ "tags": [
+  "kha khiết",
+  "ke jie",
+  "alphago master",
+  "alphago",
+  "lee sedol",
+  "cờ vây",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "05/2017",
+ "acc": [
+  "thắng",
+  "ba",
+  "thua",
+  "rìa",
+  "nghệ"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Kỳ thủ số một thế giới từng nói: cỗ máy này không thắng nổi tôi.",
+  "Đó là tháng 3 năm 2016, khi AlphaGo mới bắt đầu đấu với Lee Sedol.",
+  "Chỉ sau ba ván của trận ấy, anh đổi giọng. Rất có thể, mình sẽ thua.",
+  "Tháng 5 năm 2017, tới lượt anh ngồi trước cỗ máy.",
+  "Tỉ số là ba không. Nghiêng về cỗ máy.",
+  "Sau trận, anh nói: chưa một con người nào chạm tới rìa của chân lý cờ vây.",
+  "Còn AlphaGo thì giải nghệ. Nó không đấu với con người nữa."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "“NÓ KHÔNG THẮNG NỔI TÔI”",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "ý lời kỳ thủ số một thế giới, 03/2016",
+     "at": [
+      0,
+      "cỗ"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:39262883",
+   "veil": 0.5
+  },
+  {
+   "type": "timeline",
+   "at": 1,
+   "items": [
+    {
+     "year": "03/2016",
+     "text": "“cỗ máy này không thắng nổi tôi”",
+     "at": [
+      1,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "year": "3 ván sau",
+     "text": "“rất có thể mình sẽ thua”",
+     "at": [
+      2,
+      "anh"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "THÁNG 5 NĂM 2017",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "TỚI LƯỢT ANH",
+     "at": [
+      3,
+      "tới"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:39474349",
+   "ms": 2,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 3
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "TỈ SỐ",
+   "cards": [
+    {
+     "k": "ALPHAGO",
+     "v": "3",
+     "at": [
+      4,
+      "ba"
+     ],
+     "c": "acc"
+    },
+    {
+     "k": "KHA KHIẾT",
+     "v": "0",
+     "at": [
+      4,
+      "không."
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "“CHƯA AI CHẠM TỚI RÌA”",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "“của chân lý cờ vây”",
+     "at": [
+      5,
+      "của"
+     ],
+     "sm": true
+    },
+    {
+     "text": "trích dịch lời Kha Khiết",
+     "at": [
+      5,
+      "vây."
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:39270835",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 5
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "ALPHAGO GIẢI NGHỆ",
+   "sub": "KHÔNG ĐẤU VỚI CON NGƯỜI NỮA"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol",
+  "https://en.wikipedia.org/wiki/AlphaGo"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "lee": "Li",
+  "sedol": "Xê-đôn",
+  "alphago": "An-pha Gô",
+  "=AlphaGo": "An-pha Gô"
+ },
+ "imgs": {}
+}

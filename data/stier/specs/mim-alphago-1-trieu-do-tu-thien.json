@@ -1,0 +1,173 @@
+{
+ "theme": "mim",
+ "title": "Cỗ máy thắng giải 1 triệu đô la: tiền thưởng của AlphaGo đi đâu?",
+ "description": "Trận AlphaGo – Lee Sedol (03/2016) có giải thưởng 1 triệu USD cho bên thắng. AlphaGo thắng 4–1; khoản tiền ấy được đem làm từ thiện. Lee Sedol nhận 170.000 USD, gồm tiền tham dự và tiền thưởng cho ván thắng duy nhất. Hiệp hội Cờ vây Hàn Quốc trao cho AlphaGo danh hiệu 9 đẳng danh dự, bậc cao nhất của kỳ thủ chuyên nghiệp (Wikipedia: AlphaGo versus Lee Sedol). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (20 phút): https://youtu.be/cNwIMli7nOc (công khai từ 20:00 ngày 29/10).",
+ "tags": [
+  "giải thưởng",
+  "9 đẳng",
+  "alphago",
+  "lee sedol",
+  "cờ vây",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "SEOUL · 03/2016",
+ "acc": [
+  "triệu",
+  "thiện",
+  "bảy",
+  "chín",
+  "máy"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Một triệu đô la tiền thưởng. Và người thắng là một cỗ máy.",
+  "Tháng 3 năm 2016, AlphaGo thắng Lee Sedol bốn một.",
+  "Cỗ máy thì không tiêu tiền. Khoản thưởng ấy được đem làm từ thiện.",
+  "Lee Sedol nhận một trăm bảy mươi nghìn đô la.",
+  "Gồm tiền tham dự, và tiền thưởng cho ván thắng duy nhất.",
+  "Còn cỗ máy, nhận thêm một thứ không mua được.",
+  "Hiệp hội cờ vây Hàn Quốc trao cho nó danh hiệu chín đẳng danh dự. Bậc cao nhất của nghề."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "1 TRIỆU ĐÔ LA",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "và người thắng là một cỗ máy",
+     "at": [
+      0,
+      "Và"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:39270835",
+   "ms": 1,
+   "veil": 0.5
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "THÁNG 3 NĂM 2016",
+   "cards": [
+    {
+     "k": "ALPHAGO",
+     "v": "4",
+     "at": [
+      1,
+      "bốn"
+     ],
+     "c": "acc"
+    },
+    {
+     "k": "LEE SEDOL",
+     "v": "1",
+     "at": [
+      1,
+      "một."
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "ĐEM LÀM TỪ THIỆN",
+   "sub": "CỖ MÁY THÌ KHÔNG TIÊU TIỀN"
+  },
+  {
+   "type": "chart",
+   "at": 3,
+   "kind": "bars",
+   "title": "TIỀN TỪ TRẬN ĐẤU (NGHÌN ĐÔ LA)",
+   "unit": "THEO TƯỜNG THUẬT TRẬN ĐẤU",
+   "min": 0,
+   "bars": [
+    {
+     "label": "GIẢI CHO\nBÊN THẮNG",
+     "v": 1000,
+     "text": "1.000",
+     "c": "dim",
+     "at": [
+      3,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "label": "LEE SEDOL\nNHẬN",
+     "v": 170,
+     "text": "170",
+     "c": "ref",
+     "at": [
+      3,
+      "một"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "THỨ KHÔNG MUA ĐƯỢC",
+     "at": 5,
+     "sm": true
+    },
+    {
+     "text": "9 ĐẲNG DANH DỰ",
+     "at": [
+      6,
+      "danh"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bậc cao nhất của nghề",
+     "at": [
+      6,
+      "Bậc"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:39474349",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 5
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "lee": "Li",
+  "sedol": "Xê-đôn",
+  "alphago": "An-pha Gô",
+  "=AlphaGo": "An-pha Gô"
+ },
+ "imgs": {}
+}

@@ -1,0 +1,195 @@
+{
+ "theme": "mim",
+ "title": "Hỏi 3 chatbot một câu về chính tác giả bài báo: 3 câu trả lời khác nhau, không cái nào đúng",
+ "description": "Bài báo “Vì sao mô hình ngôn ngữ bị ảo giác” (09/2025, ba nhà nghiên cứu của OpenAI và một giáo sư ở Georgia Tech) mở đầu bằng một phép thử: hỏi ba chatbot phổ biến tên luận án tiến sĩ của Adam Kalai, tác giả đứng tên đầu. Ba cỗ máy cho ba tên luận án, ở ba trường, ba năm khác nhau; không cái nào đúng. Lý do họ nêu: có những sự thật không có quy luật để suy ra (như ngày sinh, tên luận án); máy chỉ biết nếu đã đọc thấy đủ nhiều, còn không thì nó vẫn viết ra một câu “đúng hình dáng” (arXiv 2509.04664). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/H9nlRjxfmPw (công khai từ 20:00 ngày 02/11).",
+ "tags": [
+  "vì sao ai bịa",
+  "openai",
+  "ai bịa",
+  "ảo giác ai",
+  "chatgpt",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "NGHIÊN CỨU · 09/2025",
+ "acc": [
+  "ba",
+  "đúng",
+  "quy",
+  "hiếm",
+  "hình"
+ ],
+ "kicker": "AI QUANH TA",
+ "lines": [
+  "Ba chatbot, một câu hỏi. Ba câu trả lời khác nhau, và không cái nào đúng.",
+  "Tháng 9 năm 2025, một nhóm nghiên cứu hỏi máy về chính một người trong nhóm.",
+  "Luận án tiến sĩ của ông ấy tên là gì?",
+  "Ba cỗ máy cho ba tên luận án, ở ba trường đại học, ba năm khác nhau.",
+  "Vì sao? Có những sự thật không theo quy luật nào, như một ngày sinh, hay tên một luận án.",
+  "Không suy ra được. Chỉ biết, nếu đã đọc thấy đủ nhiều.",
+  "Còn nếu hiếm quá, máy vẫn viết ra một câu, trông đúng hình dáng của câu trả lời."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "3 CHATBOT · 1 CÂU HỎI",
+     "at": 0.0
+    },
+    {
+     "text": "KHÔNG CÁI NÀO ĐÚNG",
+     "at": [
+      0,
+      "và"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7362704",
+   "veil": 0.58
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "THÁNG 9 NĂM 2025",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "HỎI VỀ CHÍNH NGƯỜI TRONG NHÓM",
+     "at": [
+      1,
+      "về"
+     ],
+     "acc": true
+    },
+    {
+     "text": "luận án tiến sĩ của ông tên gì?",
+     "at": 2,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8567113",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "BA CỖ MÁY TRẢ LỜI",
+   "cards": [
+    {
+     "k": "BA",
+     "v": "TÊN LUẬN ÁN",
+     "at": [
+      3,
+      "tên"
+     ]
+    },
+    {
+     "k": "BA",
+     "v": "TRƯỜNG ĐẠI HỌC",
+     "at": [
+      3,
+      "trường"
+     ]
+    },
+    {
+     "k": "BA",
+     "v": "NĂM KHÁC NHAU",
+     "at": [
+      3,
+      "năm"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "KHÔNG CÁI NÀO ĐÚNG"
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Vì sao?",
+   "nodes": [
+    {
+     "text": "sự thật không theo quy luật",
+     "x": 0.5,
+     "y": 0.26,
+     "at": [
+      4,
+      "Có"
+     ],
+     "shape": "none",
+     "w": 800
+    },
+    {
+     "text": "không suy ra được",
+     "x": 0.5,
+     "y": 0.5,
+     "at": [
+      5,
+      "Không"
+     ],
+     "shape": "none",
+     "w": 600
+    },
+    {
+     "text": "chỉ biết nếu đã đọc đủ nhiều",
+     "x": 0.5,
+     "y": 0.74,
+     "at": [
+      5,
+      "Chỉ"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 820
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "from": 0,
+   "to": 0,
+   "suffix": " / 3",
+   "label": "CÂU TRẢ LỜI ĐÚNG",
+   "until": [
+    6,
+    "máy"
+   ],
+   "sub": {
+    "text": "MÁY VẪN VIẾT · TRÔNG ĐÚNG HÌNH DÁNG",
+    "at": [
+     6,
+     "trông"
+    ]
+   }
+  }
+ ],
+ "sources": [
+  "https://arxiv.org/abs/2509.04664"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "chatbot": "chát bót"
+ },
+ "imgs": {}
+}

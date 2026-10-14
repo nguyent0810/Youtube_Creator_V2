@@ -1,0 +1,186 @@
+{
+ "theme": "mim",
+ "title": "1/220 rồi 1/555: lần đầu sau nhiều năm, tỉ lệ nạn nhân lừa đảo trực tuyến ở Việt Nam giảm",
+ "description": "Khảo sát trực tuyến cuối năm của Hiệp hội An ninh mạng Quốc gia: năm 2024, cứ khoảng 220 người trả lời có 1 người nói mình là nạn nhân lừa đảo trực tuyến (0,45%); năm 2025 là 1 trên 555 (0,18%), lần đầu giảm sau nhiều năm. Hiệp hội cho rằng một phần nhờ các chuyên án của công an và quy định xác thực sinh trắc học khi chuyển tiền. Lưu ý: đây là khảo sát trực tuyến tự trả lời, không phải thống kê toàn dân; và chỉ khoảng một phần ba nạn nhân báo cơ quan chức năng (VietNamNet). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (13 phút): https://youtu.be/sywk-F-yW7k (công khai từ 20:00 ngày 26/10).",
+ "tags": [
+  "khảo sát an ninh mạng",
+  "lừa đảo trực tuyến",
+  "ai giả giọng",
+  "lừa đảo",
+  "deepfake",
+  "an toàn mạng",
+  "mind in the machine"
+ ],
+ "sub": "KHẢO SÁT · 2024–2025",
+ "acc": [
+  "hai",
+  "năm",
+  "giảm",
+  "khảo",
+  "ba"
+ ],
+ "kicker": "AI VÀ LỪA ĐẢO",
+ "lines": [
+  "Một trên hai trăm hai mươi. Rồi một trên năm trăm năm mươi lăm.",
+  "Đó là tỉ lệ người Việt nói mình là nạn nhân lừa đảo trực tuyến, trong khảo sát cuối năm của Hiệp hội An ninh mạng.",
+  "Con số đầu là của năm 2024.",
+  "Con số sau, là năm 2025.",
+  "Lần đầu tiên sau nhiều năm, tỉ lệ này giảm.",
+  "Hiệp hội cho rằng một phần nhờ các chuyên án, và nhờ quy định quét khuôn mặt khi chuyển tiền.",
+  "Nhưng đây là khảo sát trực tuyến. Và chỉ khoảng một phần ba nạn nhân, báo cho cơ quan chức năng."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "1 / 220",
+     "at": 0.0
+    },
+    {
+     "text": "RỒI 1 / 555",
+     "at": [
+      0,
+      "Rồi"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:6964003",
+   "veil": 0.6
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NẠN NHÂN LỪA ĐẢO TRỰC TUYẾN",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "khảo sát cuối năm của Hiệp hội An ninh mạng",
+     "at": [
+      1,
+      "trong"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6980602",
+   "ms": 10,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "chart",
+   "at": 2,
+   "kind": "bars",
+   "title": "NGƯỜI NÓI MÌNH LÀ NẠN NHÂN (%)",
+   "unit": "KHẢO SÁT TRỰC TUYẾN · TỰ TRẢ LỜI",
+   "min": 0,
+   "bars": [
+    {
+     "label": "2024",
+     "v": 0.45,
+     "text": "1 / 220",
+     "c": "dim",
+     "at": [
+      2,
+      "năm"
+     ]
+    },
+    {
+     "label": "2025",
+     "v": 0.18,
+     "text": "1 / 555",
+     "c": "ref",
+     "at": [
+      3,
+      "năm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "LẦN ĐẦU SAU NHIỀU NĂM",
+   "sub": "TỈ LỆ NÀY GIẢM"
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "HIỆP HỘI CHO RẰNG NHỜ",
+   "cards": [
+    {
+     "k": "MỘT PHẦN",
+     "v": "CÁC CHUYÊN ÁN",
+     "at": [
+      5,
+      "nhờ"
+     ]
+    },
+    {
+     "k": "MỘT PHẦN",
+     "v": "QUÉT KHUÔN MẶT",
+     "at": [
+      5,
+      "quy"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Nhưng nhớ rằng",
+   "nodes": [
+    {
+     "text": "đây là khảo sát trực tuyến",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      6,
+      "đây"
+     ],
+     "shape": "none",
+     "w": 760
+    },
+    {
+     "text": "chỉ 1/3 nạn nhân đi báo",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "chỉ"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 720
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://vietnamnet.vn/chi-32-12-nan-nhan-bi-lua-dao-truc-tuyen-co-bao-co-quan-chuc-nang-2479618.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

@@ -459,12 +459,13 @@ def plan(spec: dict, lines: list[dict], dur: float) -> list[dict]:
     # 22 px, không đọc được trên điện thoại ("…NEW YORK, 1" bị cắt mất năm); (b) "prefix" có chữ số + số đếm chạy -> khung giữa
     # chừng hiện "1 / 7.698" như một dữ kiện thật.
     long_sub = [f'cảnh {i} ({r["type"]}): "{t}" ({len(t)} ký tự)' for i, r in enumerate(sc)
-                for t in [(r.get("sub") or {}).get("text") if r["type"] == "counter" else r.get("sub") if r["type"] == "slam" else None]
+                for t in [(r.get("sub") or {}).get("text") if r["type"] == "counter" else r.get("sub") if r["type"] == "slam"
+                          else r.get("unit") if r["type"] == "chart" else None]   # chart.unit: "…KHÔNG PHẢI DỰ BÁO" từng bị cắt mép phải (14/10)
                 if isinstance(t, str) and len(t) > 52]
     if long_sub:
         raise SystemExit("dòng phụ dài quá 52 ký tự (rút gọn hoặc đưa vào mô tả): " + "; ".join(long_sub))
     bad_pre = [f"cảnh {i}: prefix {r['prefix']!r}" for i, r in enumerate(sc)
-               if r["type"] == "counter" and any(ch.isdigit() for ch in str(r.get("prefix") or "")) and r.get("from", 0) != r["to"]]
+               if r["type"] == "counter" and any(ch.isdigit() or ch == "<" for ch in str(r.get("prefix") or "")) and r.get("from", 0) != r["to"]]   # "<": "< 9 GIÂY" giữa chừng là sai chiều
     if bad_pre:
         raise SystemExit("counter có chữ số trong prefix: số trung gian sẽ đọc như dữ kiện thật (dùng kinetic/cards3d): " + "; ".join(bad_pre))
     # Cảnh chart cần khối CSS ".ch*" của theme (theme-ck.css, theme-mim.css). Theme chưa có khối ấy -> cột và chữ dồn lên

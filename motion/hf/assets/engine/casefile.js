@@ -182,7 +182,7 @@
     // số thập phân (vd. "to": 3.1) giữ đúng số chữ số sau dấu phẩy; trước 12/10/2026 bị làm tròn thành "3"
     const dp = s.dec ?? Math.max(...[s.to, s.from || 0].map((n) => (String(n).split(".")[1] || "").length));
     const vn = (n) => { const [a, b] = Number(n).toFixed(dp).split("."); return a.replace(/\B(?=(\d{3})+(?!\d))/g, ".") + (b ? "," + b : ""); };
-    const str = (s.prefix || "") + vn(s.to) + (s.suffix || ""), fs = fsz(str, 300, 1000, /[MWmw]/.test(str) ? 0.72 : 0.62);   // chữ có M/W rộng hơn hẳn: "500 NĂM" từng chạm hai mép khung (14/10/2026)
+    const str = (s.prefix || "") + vn(s.to) + (s.suffix || ""), fs = fsz(str, 300, 1000, /[MWmw]/.test(str) ? 0.72 : 0.66);   // chữ có M/W rộng hơn hẳn: "500 NĂM" từng chạm hai mép khung (14/10/2026)
     const ct = el("div", "count", esc((s.prefix || "") + vn(s.from || 0) + (s.suffix || "")), d); ct.style.fontSize = px(fs); if (s.top) ct.style.top = px(s.top);
     const top = (s.top || 360) + fs + 20;
     const o = { v: s.from || 0 };
@@ -454,7 +454,7 @@
     tl.fromTo(d, { scale: 1.0 }, { scale: 1.03, transformOrigin: "50% 45%", duration: Math.max(0.3, s.t1 - s.t0), ease: "none", immediateRender: false }, s.t0);
     if (s.title) { const t = el("div", "chtitle", esc(s.title), d); t.style.fontSize = px(fsz(s.title, 60, 960, 0.72)); t.style.top = px(s.titleY || Y0 - 210);
       tl.fromTo(t, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out", immediateRender: false }, s.t0 + 0.02); }
-    if (s.unit) { const u = el("div", "chunit mono", esc(s.unit), d); u.style.top = px(s.titleY ? s.titleY + 84 : Y0 - 122); tl.to(u, { opacity: 1, duration: 0.3 }, s.t0 + 0.15); }
+    if (s.unit) { const u = el("div", "chunit mono", esc(s.unit), d); u.style.fontSize = px(fsz(s.unit, 28, 1000, 0.82)); u.style.top = px(s.titleY ? s.titleY + 84 : Y0 - 122); tl.to(u, { opacity: 1, duration: 0.3 }, s.t0 + 0.15); }
     const svg = sv("svg", { class: "layer", viewBox: "0 0 1080 1920" }, d);
     (s.grid || []).forEach((g) => { const y = Y(g), gl = sv("line", { x1: X0, y1: y, x2: X1, y2: y, class: "chgrid", opacity: 0 }, svg);
       const t = sv("text", { x: X0 - 16, y: y + 9, class: "chgl", "text-anchor": "end", opacity: 0 }, svg); t.textContent = nfmt(g);

@@ -804,7 +804,7 @@ def do_html(topic, only=None):
         # Retro 5 (14/10/2026): (a) "label" của cảnh bars/chart là thẻ góc dưới trái, đè lên nhãn trục (che chữ "MÁY", "99% THẮNG");
         # nguồn/ghi chú của biểu đồ đặt vào "unit". (b) counter có chữ số trong "prefix": số trung gian "1 / 7.698" đọc như dữ kiện thật.
         over = [f"{sc['type']}#{k}: label {sc['label'].get('k') or sc['label'].get('v')!r}" for k, sc in enumerate(scenes)
-                if sc["type"] in ("bars", "chart") and isinstance(sc.get("label"), dict)]
+                if sc["type"] == "chart" and isinstance(sc.get("label"), dict)]   # bars: engine đã vẽ label thành dòng chú thích dưới tiêu đề
         if over:
             raise SystemExit(f"{name}: label đè nhãn trục biểu đồ (chuyển sang \"unit\"): " + "; ".join(over))
         pre = [f"counter#{k}: prefix {sc['prefix']!r}" for k, sc in enumerate(scenes)

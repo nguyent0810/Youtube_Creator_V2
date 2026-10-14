@@ -1,0 +1,210 @@
+{
+ "theme": "mim",
+ "title": "4 giờ tự học, rồi vượt phần mềm cờ vua mạnh nhất thế giới: AlphaZero, 12/2017",
+ "description": "Tháng 12/2017, nhóm làm ra AlphaGo bỏ chữ “Go” trong tên: AlphaZero dùng cùng cách học (chỉ biết luật, tự chơi với chính mình) nhưng học cả cờ vua. Sau khoảng 4 giờ tự học, nó vượt phần mềm cờ vua mạnh nhất lúc ấy; trong 100 ván giữa hai bên, AlphaZero thắng 28, hoà 72, không thua ván nào (DeepMind; bài trên Science 12/2018). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (20 phút): https://youtu.be/cNwIMli7nOc (công khai từ 20:00 ngày 29/10).",
+ "tags": [
+  "alphazero",
+  "cờ vua",
+  "stockfish",
+  "deepmind",
+  "alphago",
+  "lee sedol",
+  "cờ vây",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "DEEPMIND · 12/2017",
+ "acc": [
+  "bốn",
+  "luật",
+  "hai",
+  "bảy",
+  "không"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Bốn giờ tự học. Rồi vượt phần mềm cờ vua mạnh nhất thế giới.",
+  "Tháng 12 năm 2017, nhóm làm ra AlphaGo bỏ chữ Go trong cái tên.",
+  "Cỗ máy mới tên là AlphaZero.",
+  "Vẫn cách học ấy. Chỉ biết luật, rồi tự chơi với chính mình. Nhưng lần này là cờ vua.",
+  "Không ai dạy nó một thế khai cuộc nào.",
+  "Sau khoảng bốn giờ, nó gặp phần mềm cờ vua mạnh nhất lúc ấy. Một trăm ván.",
+  "Nó thắng hai mươi tám, hoà bảy mươi hai. Và không thua ván nào."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "4 GIỜ TỰ HỌC",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "rồi vượt phần mềm cờ vua mạnh nhất",
+     "at": [
+      0,
+      "Rồi"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6058628",
+   "veil": 0.5
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "THÁNG 12 NĂM 2017",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "ALPHAZERO",
+     "at": [
+      2,
+      "tên"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:6058906",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Vẫn cách học ấy",
+   "nodes": [
+    {
+     "text": "chỉ biết luật",
+     "x": 0.5,
+     "y": 0.26,
+     "at": [
+      3,
+      "Chỉ"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "tự chơi với chính mình",
+     "x": 0.5,
+     "y": 0.5,
+     "at": [
+      3,
+      "rồi"
+     ],
+     "shape": "none",
+     "w": 700
+    },
+    {
+     "text": "lần này là cờ vua",
+     "x": 0.5,
+     "y": 0.74,
+     "at": [
+      3,
+      "Nhưng"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 600
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "KHÔNG AI DẠY KHAI CUỘC",
+   "sub": "KHÔNG MỘT THẾ NÀO"
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "to": 100,
+   "suffix": " VÁN",
+   "label": "VỚI PHẦN MỀM CỜ VUA MẠNH NHẤT LÚC ẤY",
+   "until": [
+    5,
+    "trăm"
+   ],
+   "sub": {
+    "text": "SAU KHOẢNG 4 GIỜ TỰ HỌC",
+    "at": [
+     5,
+     "ván."
+    ]
+   }
+  },
+  {
+   "type": "chart",
+   "at": 6,
+   "kind": "bars",
+   "title": "100 VÁN VỚI PHẦN MỀM MẠNH NHẤT",
+   "unit": "KẾT QUẢ CỦA ALPHAZERO",
+   "min": 0,
+   "bars": [
+    {
+     "label": "THẮNG",
+     "v": 28,
+     "text": "28",
+     "c": "ref",
+     "at": [
+      6,
+      "hai"
+     ]
+    },
+    {
+     "label": "HOÀ",
+     "v": 72,
+     "text": "72",
+     "c": "dim",
+     "at": [
+      6,
+      "hoà"
+     ]
+    },
+    {
+     "label": "THUA",
+     "v": 1,
+     "text": "0",
+     "c": "dim",
+     "at": [
+      6,
+      "Và"
+     ]
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/AlphaZero",
+  "https://en.wikipedia.org/wiki/AlphaGo"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "alphago": "An-pha Gô",
+  "=AlphaGo": "An-pha Gô",
+  "alphazero": "An-pha Di-rô",
+  "=AI": "ây ai",
+  "=Go": "Gô"
+ },
+ "imgs": {}
+}

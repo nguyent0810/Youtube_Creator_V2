@@ -1,0 +1,170 @@
+{
+ "theme": "mim",
+ "title": "Hơn 6.000 tỷ đồng trong 11 tháng: và phần lớn nạn nhân lừa đảo trực tuyến không đi báo",
+ "description": "Theo Bộ Công an, trong 11 tháng đầu năm 2025, thiệt hại do lừa đảo trực tuyến ở Việt Nam ước tính trên 6.000 tỷ đồng. Theo khảo sát trực tuyến của Hiệp hội An ninh mạng Quốc gia, chỉ 32,12% nạn nhân báo cho cơ quan chức năng. Hai con số đến từ hai nguồn và hai cách đo khác nhau, nên không cộng hay nhân với nhau được; chúng chỉ cùng cho thấy phần đã được ghi nhận chưa phải toàn bộ (VietNamNet). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (13 phút): https://youtu.be/sywk-F-yW7k (công khai từ 20:00 ngày 26/10).",
+ "tags": [
+  "bộ công an",
+  "thiệt hại lừa đảo",
+  "ai giả giọng",
+  "lừa đảo",
+  "deepfake",
+  "an toàn mạng",
+  "mind in the machine"
+ ],
+ "sub": "VIỆT NAM · 2025",
+ "acc": [
+  "sáu",
+  "mười",
+  "ba",
+  "báo",
+  "bạn"
+ ],
+ "kicker": "AI VÀ LỪA ĐẢO",
+ "lines": [
+  "Hơn sáu nghìn tỷ đồng, trong mười một tháng.",
+  "Đó là thiệt hại do lừa đảo trực tuyến ở Việt Nam, năm 2025, theo ước tính của Bộ Công an.",
+  "Còn một con số nữa, từ một khảo sát khác.",
+  "Chỉ khoảng một phần ba nạn nhân, báo cho cơ quan chức năng.",
+  "Hai con số đo theo hai cách, nên không ghép vào nhau được.",
+  "Nhưng chúng cùng nói một điều. Phần ta thấy, chưa phải là tất cả.",
+  "Và ở bước cuối cùng, người đứng giữa kẻ gian và tài khoản, vẫn là chính bạn."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "HƠN 6.000 TỶ ĐỒNG",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "trong mười một tháng",
+     "at": [
+      0,
+      "trong"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8052328",
+   "veil": 0.6
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 6000,
+   "suffix": " TỶ",
+   "prefix": "> ",
+   "label": "THIỆT HẠI DO LỪA ĐẢO TRỰC TUYẾN · 11 THÁNG 2025",
+   "until": [
+    1,
+    "năm"
+   ],
+   "sub": {
+    "text": "ƯỚC TÍNH CỦA BỘ CÔNG AN",
+    "at": [
+     1,
+     "theo"
+    ]
+   }
+  },
+  {
+   "type": "chart",
+   "at": 2,
+   "kind": "bars",
+   "title": "NẠN NHÂN CÓ BÁO CƠ QUAN CHỨC NĂNG?",
+   "unit": "% · KHẢO SÁT TRỰC TUYẾN CỦA HIỆP HỘI AN NINH MẠNG",
+   "min": 0,
+   "bars": [
+    {
+     "label": "CÓ BÁO",
+     "v": 32,
+     "text": "~1/3",
+     "c": "ref",
+     "at": [
+      3,
+      "một"
+     ]
+    },
+    {
+     "label": "KHÔNG BÁO",
+     "v": 68,
+     "text": "~2/3",
+     "c": "dim",
+     "at": [
+      3,
+      "báo"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "HAI CON SỐ · HAI CÁCH ĐO",
+   "cards": [
+    {
+     "k": "KHÔNG",
+     "v": "GHÉP VÀO NHAU",
+     "at": [
+      4,
+      "không"
+     ]
+    },
+    {
+     "k": "NHƯNG CÙNG NÓI",
+     "v": "CHƯA PHẢI TẤT CẢ",
+     "at": [
+      5,
+      "Phần"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "Ở BƯỚC CUỐI CÙNG",
+     "at": 6,
+     "sm": true
+    },
+    {
+     "text": "VẪN LÀ CHÍNH BẠN",
+     "at": [
+      6,
+      "vẫn"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:6980602",
+   "ms": 16,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 6
+  }
+ ],
+ "sources": [
+  "https://vietnamnet.vn/chi-32-12-nan-nhan-bi-lua-dao-truc-tuyen-co-bao-co-quan-chuc-nang-2479618.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

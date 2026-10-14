@@ -258,8 +258,8 @@ Và một lần, khi con người đi nước mà cỗ máy không tin là có a
 ## CH08 · Ván năm
 
 Ngày 15 tháng 3. Ván cuối cùng.
-Theo thể thức, Lee Sedol được cầm quân trắng.
-Nhưng ông xin đổi sang quân đen.
+Theo thể thức, màu quân của ván này sẽ được chọn ngẫu nhiên.
+Nhưng Lee Sedol xin được cầm quân đen.
 Ở ván bốn, ông đã thắng bằng quân trắng.
 Và ông cho rằng AlphaGo mạnh hơn khi nó cầm trắng.
 Thắng nó bằng quân đen, theo ông, mới thật sự đáng giá. ‖
@@ -407,7 +407,7 @@ Kể cho mình nghe ở phần bình luận nhé.
 
 **Nguồn khung:** Wikipedia (en) *AlphaGo versus Lee Sedol*, *AlphaGo*, *Lee Sedol* (đọc 13/10/2026): Four Seasons Seoul, 9–15/03/2016, bắt đầu
 13:00; luật Trung Quốc, mỗi bên 2 giờ; Aja Huang đặt quân; ván 1 Lee đen, xin thua nước 186; ván 2 AlphaGo đen, 211; ván 3 Lee đen, 176; ván
-4 Lee trắng, AlphaGo xin thua nước 180; ván 5 Lee xin cầm đen, xin thua nước 280; 4–1; thưởng 1 triệu USD đem làm từ thiện; AlphaGo ước
+4 Lee trắng, AlphaGo xin thua nước 180; ván 5 màu quân theo luật là chọn ngẫu nhiên, Lee xin cầm đen và Hassabis đồng ý (bản 13/10 ghi nhầm "được cầm trắng"; sửa 14/10 theo chú thích 1 bảng tổng kết của Wikipedia), xin thua nước 280; 4–1; thưởng 1 triệu USD đem làm từ thiện; AlphaGo ước
 tính 70% trước nước 79, sụp ở nước 87, đi yếu 87–101; Cổ Lực (Gu Li) gọi nước 78 là "divine move"; Redmond: nước 37 "creative", "unique"; danh
 hiệu 9 đẳng danh dự (Hiệp hội Cờ vây Hàn Quốc); 17/03/2016 Hàn Quốc công bố 1.000 tỷ won cho AI; lời Lee: "played a nearly perfect game",
 "I misjudged the capabilities of AlphaGo and felt powerless", "priceless win that I (would) not exchange for anything"; Hassabis: "bad mistake"

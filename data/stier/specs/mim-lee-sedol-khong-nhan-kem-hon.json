@@ -1,0 +1,171 @@
+{
+ "theme": "mim",
+ "title": "Thua 1–4, Lee Sedol vẫn nói: “Tôi không hẳn nghĩ AlphaGo giỏi hơn tôi”",
+ "description": "Họp báo sau ván năm (15/03/2016): Lee Sedol nói ông không hẳn nghĩ AlphaGo giỏi hơn mình, và tin con người vẫn còn làm được nhiều hơn thế khi đấu với trí tuệ nhân tạo (AP, qua CBC; trích dịch). Ông cho rằng cỗ máy hơn ở chỗ khác: nó không mệt, không bị tâm lý chi phối và không mất tập trung. Ba năm sau, khi giải nghệ, ông nói vẫn có một thực thể không thể bị đánh bại. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (20 phút): https://youtu.be/cNwIMli7nOc",
+ "tags": [
+  "họp báo",
+  "seoul 2016",
+  "alphago",
+  "lee sedol",
+  "cờ vây",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "SEOUL · 15/03/2016",
+ "acc": [
+  "bốn",
+  "giỏi",
+  "mệt",
+  "tập",
+  "bại"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Thua bốn trên năm ván. Và ông vẫn không chịu nhận mình kém hơn.",
+  "Ngày 15 tháng 3 năm 2016, ở buổi họp báo cuối, Lee Sedol nói một câu.",
+  "Tôi không hẳn nghĩ rằng AlphaGo giỏi hơn tôi.",
+  "Tôi tin con người vẫn còn làm được nhiều hơn thế.",
+  "Theo ông, cỗ máy hơn mình ở chỗ khác.",
+  "Nó không mệt. Không run. Và không bao giờ mất tập trung.",
+  "Ba năm sau, khi giải nghệ, ông nói khác đi. Vẫn có một thực thể không thể bị đánh bại."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "THUA 4 TRÊN 5 VÁN",
+     "at": 0.0
+    },
+    {
+     "text": "VẪN KHÔNG NHẬN KÉM HƠN",
+     "at": [
+      0,
+      "Và"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:39474349",
+   "veil": 0.55
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "CHUNG CUỘC · 15/03/2016",
+   "cards": [
+    {
+     "k": "ALPHAGO",
+     "v": "4",
+     "at": [
+      1,
+      null,
+      0,
+      0.05
+     ],
+     "c": "acc"
+    },
+    {
+     "k": "LEE SEDOL",
+     "v": "1",
+     "at": [
+      1,
+      "ở"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "“TÔI KHÔNG HẲN NGHĨ”",
+     "at": 2,
+     "sm": true
+    },
+    {
+     "text": "“ALPHAGO GIỎI HƠN TÔI”",
+     "at": [
+      2,
+      "AlphaGo"
+     ],
+     "acc": true
+    },
+    {
+     "text": "trích dịch · họp báo sau ván năm",
+     "at": 3,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:35701014",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 2
+  },
+  {
+   "type": "timeline",
+   "at": 4,
+   "items": [
+    {
+     "year": "máy hơn ở chỗ",
+     "text": "không mệt",
+     "at": [
+      5,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "year": " ",
+     "text": "không run",
+     "at": [
+      5,
+      "Không"
+     ]
+    },
+    {
+     "year": " ",
+     "text": "không bao giờ mất tập trung",
+     "at": [
+      5,
+      "Và"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "BA NĂM SAU, ÔNG NÓI KHÁC",
+   "sub": "“MỘT THỰC THỂ KHÔNG THỂ BỊ ĐÁNH BẠI”"
+  }
+ ],
+ "sources": [
+  "https://www.cbc.ca/news/science/google-deepmind-go-final-1.3491693",
+  "https://en.wikipedia.org/wiki/Lee_Sedol"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "lee": "Li",
+  "sedol": "Xê-đôn",
+  "alphago": "An-pha Gô",
+  "=AlphaGo": "An-pha Gô"
+ },
+ "imgs": {}
+}
