@@ -1,0 +1,178 @@
+{
+ "theme": "ck",
+ "kicker": "1 THÓI QUEN",
+ "sub": "ĐỂ DÀNH",
+ "title": "“Trả cho mình trước”: để dành ngay ngày nhận lương, đừng chờ cuối tháng",
+ "description": "Một mẹo nhiều người dùng: thay vì để dành phần còn lại sau khi tiêu, hãy chuyển khoản để dành sang một tài khoản riêng ngay trong ngày nhận lương. Tiền không nằm trước mắt thì khó bị tiêu hơn. VÍ DỤ GIẢ ĐỊNH: 1,5 triệu mỗi tháng → 16 tháng có 24 triệu; 1 triệu mỗi tháng → 24 tháng. Kênh không chỉ định sản phẩm hay nơi gửi tiền.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (8 phút): https://youtu.be/iOxDRCkFbYY (công khai từ 20:00 ngày 04/11)",
+ "tags": [
+  "để dành",
+  "quản lý chi tiêu",
+  "trả cho mình trước",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "trước",
+  "ngay",
+  "lương",
+  "riêng",
+  "mười"
+ ],
+ "lines": [
+  "Để dành phần còn lại sau khi tiêu, thường là chẳng còn lại bao nhiêu.",
+  "Có một mẹo nhỏ, gọi là trả cho mình trước.",
+  "Ngay trong ngày nhận lương, chuyển khoản để dành sang một tài khoản riêng.",
+  "Rồi mới tiêu phần còn lại.",
+  "Tiền không nằm trước mắt, thì khó bị tiêu hơn.",
+  "Ví dụ giả định, một triệu rưỡi mỗi tháng, mười sáu tháng là hai mươi tư triệu.",
+  "Mỗi tháng chỉ một lần chuyển. Nhưng nó làm thay cho cả tháng tự nhắc mình."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "ĐỂ DÀNH PHẦN CÒN LẠI",
+     "at": 0.0
+    },
+    {
+     "text": "= THƯỜNG CHẲNG CÒN BAO NHIÊU",
+     "at": [
+      0,
+      "thường"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:5981446",
+   "ms": 4,
+   "veil": 0.58
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "TRẢ CHO MÌNH TRƯỚC",
+   "sub": "MỘT MẸO NHỎ"
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Ngày nhận lương",
+   "nodes": [
+    {
+     "text": "chuyển khoản để dành trước",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      2,
+      "chuyển"
+     ],
+     "shape": "none",
+     "w": 820
+    },
+    {
+     "text": "rồi mới tiêu phần còn lại",
+     "x": 0.5,
+     "y": 0.64,
+     "at": 3,
+     "c": "acc",
+     "shape": "circle",
+     "w": 760
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "KHÔNG NẰM TRƯỚC MẮT",
+     "at": 4,
+     "acc": true
+    },
+    {
+     "text": "thì khó bị tiêu hơn",
+     "at": [
+      4,
+      "thì"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7534961",
+   "ms": 8,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 4
+  },
+  {
+   "type": "chart",
+   "at": 5,
+   "kind": "bars",
+   "title": "SỐ THÁNG ĐỂ CÓ 24 TRIỆU",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · KHÔNG TÍNH LÃI",
+   "bars": [
+    {
+     "label": "1,5 TRIỆU\nMỖI THÁNG",
+     "v": 16,
+     "text": "16",
+     "c": "up",
+     "at": [
+      5,
+      "mười"
+     ]
+    },
+    {
+     "label": "1 TRIỆU\nMỖI THÁNG",
+     "v": 24,
+     "text": "24",
+     "c": "ref",
+     "at": [
+      5,
+      "hai"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "MỖI THÁNG",
+   "cards": [
+    {
+     "k": "CHỈ",
+     "v": "MỘT LẦN CHUYỂN",
+     "at": 6
+    },
+    {
+     "k": "THAY CHO",
+     "v": "CẢ THÁNG TỰ NHẮC",
+     "at": [
+      6,
+      "Nhưng"
+     ],
+     "c": "acc"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://www.vietnam-briefing.com/news/rising-confidence-vietnam-tops-asean-in-consumer-sentiment.html/"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

@@ -1,0 +1,175 @@
+{
+ "theme": "mim",
+ "title": "62 triệu đô la và một dự án tạm dừng: Watson ở một trung tâm ung thư Mỹ, theo báo cáo kiểm toán 2017",
+ "description": "Đầu 2017, một báo cáo kiểm toán của Đại học Texas cho biết dự án dùng Watson tư vấn điều trị ung thư ở một trung tâm ung thư lớn đã bị tạm dừng, chi phí khoảng 62 triệu đô la; một vấn đề là bệnh viện đổi sang hệ thống hồ sơ bệnh án điện tử mới mà Watson không làm việc được. Kiểm toán không đánh giá năng lực khoa học của hệ thống; IBM nói khuyến nghị của công cụ trùng ý kiến chuyên gia khoảng 90% số lần (MedCity News, Engadget). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: {LINK_WT} (công khai từ 20:00 ngày 19/11).",
+ "tags": [
+  "watson ung thư",
+  "ai trong y tế",
+  "ibm watson",
+  "jeopardy",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "KIỂM TOÁN · 2017",
+ "acc": [
+  "sáu",
+  "hai",
+  "tạm",
+  "dừng",
+  "khác"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Sáu mươi hai triệu đô la, và một dự án bị tạm dừng.",
+  "Sau trò đố vui, IBM muốn Watson gợi ý cách điều trị ung thư.",
+  "Khoảng năm 2012, họ bắt tay với một trung tâm ung thư lớn ở bang Texas.",
+  "Năm năm sau, một báo cáo kiểm toán cho biết dự án đã tạm dừng, chi phí khoảng sáu mươi hai triệu đô la.",
+  "Một vấn đề đời thường: bệnh viện đổi hệ thống bệnh án điện tử, và Watson không làm việc được với nó.",
+  "Kiểm toán không chấm năng lực khoa học. IBM nói khuyến nghị trùng ý kiến chuyên gia khoảng chín mươi phần trăm.",
+  "Thắng một trò đố vui là một chuyện. Làm việc trong bệnh viện thật là chuyện khác hẳn."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "62 TRIỆU ĐÔ LA",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "và một dự án bị tạm dừng",
+     "at": [
+      0,
+      "và"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:30365276",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "TỪ TRƯỜNG QUAY",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "TỚI BỆNH VIỆN",
+     "at": [
+      1,
+      "ung"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:5406022",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "from": 62,
+   "to": 62,
+   "prefix": "~",
+   "suffix": " TRIỆU ĐÔ LA",
+   "label": "CHI PHÍ DỰ ÁN · TẠM DỪNG",
+   "sub": {
+    "text": "KIỂM TOÁN ĐẠI HỌC TEXAS · 2017",
+    "at": [
+     3,
+     "báo"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Vấn đề đời thường",
+   "nodes": [
+    {
+     "text": "hồ sơ bệnh án điện tử mới",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      4,
+      "bệnh"
+     ],
+     "shape": "none",
+     "w": 800
+    },
+    {
+     "text": "Watson không làm việc được",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      4,
+      "Watson"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 780
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "NÓI CHO CÔNG BẰNG",
+   "cards": [
+    {
+     "k": "KIỂM TOÁN",
+     "v": "KHÔNG CHẤM KHOA HỌC",
+     "at": 5
+    },
+    {
+     "k": "IBM NÓI",
+     "v": "TRÙNG CHUYÊN GIA ~90%",
+     "at": [
+      5,
+      "IBM"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "TRÒ CHƠI ≠ BỆNH VIỆN",
+   "sub": "HAI CHUYỆN KHÁC HẲN"
+  }
+ ],
+ "sources": [
+  "https://medcitynews.com/2017/02/rometty-himss-md-anderson-watson/",
+  "https://www.engadget.com/2017-02-20-watson-cancer-research-runs-into-trouble.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "watson": "Oát-xần",
+  "ibm": "ai bi em",
+  "=IBM": "ai bi em",
+  "texas": "Tếch-xát"
+ },
+ "imgs": {}
+}

@@ -1,0 +1,175 @@
+{
+ "theme": "mim",
+ "title": "Năm 2015, con người thắng cỗ máy poker hơn 730.000 phỉnh. Hai năm sau, mọi thứ đảo ngược",
+ "description": "Năm 2015, Đại học Carnegie Mellon đưa chương trình Claudico đấu với bốn người chơi chuyên nghiệp (poker không giới hạn, tay đôi); con người thắng 732.713 phỉnh. Nhóm của Tuomas Sandholm và Noam Brown quay lại tháng 1/2017 với Libratus; hai người chơi từng thắng Claudico cũng trở lại, và lần này thua (CMU News, Engadget).\n\nVideo nói về nghiên cứu trí tuệ nhân tạo; không hướng dẫn chơi bài, không cổ vũ cờ bạc. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: {LINK_PK} (công khai từ 20:00 ngày 26/11).",
+ "tags": [
+  "claudico",
+  "tuomas sandholm",
+  "noam brown",
+  "ai chơi poker",
+  "libratus",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "2015 → 2017",
+ "acc": [
+  "bảy",
+  "trăm",
+  "thua",
+  "hai",
+  "năm"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Năm 2015, con người thắng cỗ máy poker hơn bảy trăm ba mươi nghìn phỉnh.",
+  "Chương trình ấy tên là Claudico, của Đại học Carnegie Mellon.",
+  "Bốn người chơi chuyên nghiệp tìm ra những chỗ yếu của nó, và khai thác không thương tiếc.",
+  "Nhóm nghiên cứu trở về phòng thí nghiệm. Họ không bỏ cuộc.",
+  "Chưa đầy hai năm sau, họ quay lại với một chương trình mới tên là Libratus.",
+  "Hai người chơi từng thắng Claudico cũng quay lại. Lần này, họ không tìm ra cách.",
+  "Khoảng cách giữa một lần thua và một lần thắng chỉ là hai năm nghiên cứu."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "2015 · NGƯỜI THẮNG",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "hơn 730.000 phỉnh",
+     "at": [
+      0,
+      "hơn"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6664998",
+   "ms": 5,
+   "veil": 0.55
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 732713,
+   "to": 732713,
+   "prefix": "+",
+   "suffix": "",
+   "label": "PHỈNH · CON NGƯỜI THẮNG CLAUDICO",
+   "sub": {
+    "text": "CARNEGIE MELLON · 2015",
+    "at": [
+     1,
+     "Carnegie"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "TÌM RA CHỖ YẾU",
+     "at": 2,
+     "acc": true
+    },
+    {
+     "text": "và khai thác không thương tiếc",
+     "at": [
+      2,
+      "và"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6259147",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 2
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "KHÔNG BỎ CUỘC",
+   "sub": "NHÓM NGHIÊN CỨU TRỞ VỀ PHÒNG THÍ NGHIỆM"
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "HAI NĂM SAU",
+   "cards": [
+    {
+     "k": "CHƯƠNG TRÌNH MỚI",
+     "v": "LIBRATUS",
+     "at": [
+      4,
+      "Libratus"
+     ]
+    },
+    {
+     "k": "HAI NGƯỜI CŨ",
+     "v": "QUAY LẠI · THUA",
+     "at": 5,
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Khoảng cách",
+   "nodes": [
+    {
+     "text": "một lần thua → một lần thắng",
+     "x": 0.5,
+     "y": 0.3,
+     "at": 6,
+     "shape": "none",
+     "w": 820
+    },
+    {
+     "text": "hai năm nghiên cứu",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "hai"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 620
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://www.cmu.edu/news/stories/archives/2017/january/AI-beats-poker-pros.html",
+  "https://www.engadget.com/2017-02-10-libratus-ai-poker-winner.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "libratus": "Li-bra-tút",
+  "claudico": "Clo-đi-cô",
+  "carnegie": "Các-nơ-ghi",
+  "mellon": "Me-lần",
+  "poker": "pô-cơ"
+ },
+ "imgs": {}
+}

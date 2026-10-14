@@ -1,0 +1,201 @@
+{
+ "title": "Tiền thuê nhà tăng khoảng 5% một năm: sau 10 năm, 6,2 triệu thành gần 9,7 triệu (ví dụ giả định)",
+ "description": "Chín tháng đầu 2026, chỉ số giá thuê nhà trong rổ CPI cao hơn cùng kỳ khoảng 4,9% (Cục Thống kê). VÍ DỤ GIẢ ĐỊNH của kênh cho tiền thuê tăng 5% mỗi năm: 6,25 triệu thành khoảng 9,7 triệu ở năm thứ 10. Người thuê còn những chi phí không nằm trong hợp đồng: chuyển nhà khi chủ muốn bán hoặc tăng giá, tốn tiền, tốn sức.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ: https://youtu.be/pXKfIo_nyVM (công khai từ 20:00 ngày 07/11)",
+ "tags": [
+  "giá thuê nhà tăng",
+  "cpi thuê nhà",
+  "mua hay thuê nhà",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "năm",
+  "chín",
+  "bảy",
+  "chuyển",
+  "giá"
+ ],
+ "kicker": "QUYẾT ĐỊNH LỚN",
+ "sub": "MUA HAY THUÊ",
+ "lines": [
+  "Sáu triệu hai hôm nay, mười năm nữa thành gần chín triệu bảy. Người đi thuê cũng có chi phí tăng dần.",
+  "Chín tháng đầu năm nay, giá thuê nhà trong rổ chỉ số giá tiêu dùng cao hơn cùng kỳ khoảng năm phần trăm.",
+  "Ví dụ giả định của kênh cho tiền thuê tăng năm phần trăm mỗi năm.",
+  "Sau mười năm, căn sáu triệu hai đã thành gần chín triệu bảy mỗi tháng.",
+  "Rồi hết hợp đồng, có khi phải chuyển đi vì chủ nhà muốn bán, hoặc muốn tăng giá.",
+  "Mỗi lần chuyển là một lần tốn tiền, tốn sức, có khi đổi cả đường đi làm.",
+  "Người mua trả lãi, người thuê trả giá tăng dần. Bên nào cũng có chi phí, chỉ khác chỗ nằm."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "6,2 → 9,7 TRIỆU",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "tiền thuê sau mười năm",
+     "at": [
+      0,
+      "mười"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:4553195",
+   "ms": 3,
+   "veil": 0.58
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 4.9,
+   "to": 4.9,
+   "prefix": "+",
+   "suffix": "%",
+   "label": "GIÁ THUÊ NHÀ · 9 THÁNG 2026",
+   "sub": {
+    "text": "SO CÙNG KỲ · CỤC THỐNG KÊ",
+    "at": [
+     1,
+     "cao"
+    ]
+   }
+  },
+  {
+   "type": "chart",
+   "at": 2,
+   "kind": "bars",
+   "title": "TIỀN THUÊ MỖI THÁNG (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · TĂNG 5%/NĂM",
+   "bars": [
+    {
+     "label": "NĂM 1",
+     "v": 6.25,
+     "text": "6,25",
+     "c": "ref",
+     "at": [
+      2,
+      "Ví"
+     ]
+    },
+    {
+     "label": "NĂM 5",
+     "v": 7.6,
+     "text": "~7,6",
+     "c": "ref",
+     "at": [
+      3,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "label": "NĂM 10",
+     "v": 9.7,
+     "text": "~9,7",
+     "c": "down",
+     "at": [
+      3,
+      "gần"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "HẾT HỢP ĐỒNG",
+     "at": 4,
+     "sm": true
+    },
+    {
+     "text": "CHỦ MUỐN BÁN HOẶC TĂNG GIÁ",
+     "at": [
+      4,
+      "chủ"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:4553294",
+   "ms": 2,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 4
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Mỗi lần chuyển",
+   "nodes": [
+    {
+     "text": "tốn tiền · tốn sức",
+     "x": 0.5,
+     "y": 0.3,
+     "at": 5,
+     "shape": "none",
+     "w": 620
+    },
+    {
+     "text": "đổi cả đường đi làm",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      5,
+      "đổi"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 680
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "AI CŨNG CÓ CHI PHÍ",
+   "cards": [
+    {
+     "k": "NGƯỜI MUA",
+     "v": "TRẢ LÃI",
+     "at": 6
+    },
+    {
+     "k": "NGƯỜI THUÊ",
+     "v": "TRẢ GIÁ TĂNG DẦN",
+     "at": [
+      6,
+      "người"
+     ],
+     "c": "acc"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://www.nso.gov.vn/wp-content/uploads/2026/10/Tong-quan-CPI-chi-so-gia-vang-do-la-My-thang-9-QIII-va-9-thang-nam-2026.pdf"
+ ],
+ "theme": "ck",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

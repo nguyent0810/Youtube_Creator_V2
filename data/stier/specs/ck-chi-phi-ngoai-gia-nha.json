@@ -1,0 +1,179 @@
+{
+ "title": "Mua căn hộ không chỉ trả đúng giá ghi trên hợp đồng: bốn khoản ít ai cộng vào",
+ "description": "Lệ phí trước bạ nhà đất 0,5%; thêm phí công chứng, thẩm định, đăng ký thế chấp (ví dụ của kênh làm tròn tổng cộng 1%, khoảng 25 triệu với căn 2,5 tỷ). Mua căn mới của chủ đầu tư còn 2% kinh phí bảo trì. Khi bán lại, thuế thu nhập cá nhân 2% giá bán (có thể được miễn nếu là nhà ở duy nhất, theo điều kiện của luật). Tiền sửa chữa: ví dụ giả định 0,5% giá trị căn nhà mỗi năm.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ: https://youtu.be/pXKfIo_nyVM (công khai từ 20:00 ngày 07/11)",
+ "tags": [
+  "lệ phí trước bạ",
+  "phí bảo trì chung cư",
+  "thuế bán nhà",
+  "mua hay thuê nhà",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "không",
+  "hai",
+  "phần",
+  "trăm",
+  "sửa"
+ ],
+ "kicker": "QUYẾT ĐỊNH LỚN",
+ "sub": "MUA HAY THUÊ",
+ "lines": [
+  "Mua một căn hộ, bạn không chỉ trả đúng con số ghi trên hợp đồng.",
+  "Lệ phí trước bạ là không phẩy năm phần trăm. Thêm phí công chứng, thẩm định, đăng ký thế chấp.",
+  "Ví dụ của mình làm tròn tất cả thành một phần trăm, khoảng hai mươi lăm triệu.",
+  "Mua căn mới của chủ đầu tư, còn hai phần trăm kinh phí bảo trì, tính riêng ngoài giá bán.",
+  "Khi bán lại, thuế thu nhập cá nhân là hai phần trăm, trừ khi được miễn vì là nhà ở duy nhất.",
+  "Rồi tiền sửa chữa: ống nước, điều hoà, thấm tường. Ví dụ giả định khoảng nửa phần trăm mỗi năm.",
+  "Giá căn nhà chỉ là dòng đầu tiên trong danh sách chi phí của người mua."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "KHÔNG CHỈ GIÁ GHI TRÊN HỢP ĐỒNG",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "bốn khoản ít ai cộng vào",
+     "at": [
+      0,
+      "đúng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7247875",
+   "veil": 0.58
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "LÚC MUA",
+   "cards": [
+    {
+     "k": "LỆ PHÍ TRƯỚC BẠ",
+     "v": "0,5%",
+     "at": 1
+    },
+    {
+     "k": "CÔNG CHỨNG · THẨM ĐỊNH",
+     "v": "+ ĐĂNG KÝ THẾ CHẤP",
+     "at": [
+      1,
+      "Thêm"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "from": 25,
+   "to": 25,
+   "prefix": "~",
+   "suffix": " TRIỆU",
+   "label": "LÀM TRÒN 1% · CĂN 2,5 TỶ",
+   "sub": {
+    "text": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+    "at": [
+     2,
+     "khoảng"
+    ]
+   }
+  },
+  {
+   "type": "chart",
+   "at": 3,
+   "kind": "bars",
+   "title": "CÁC KHOẢN THEO % GIÁ NHÀ",
+   "unit": "THEO QUY ĐỊNH · SỬA CHỮA LÀ GIẢ ĐỊNH",
+   "bars": [
+    {
+     "label": "BẢO TRÌ\n(CĂN MỚI)",
+     "v": 2,
+     "text": "2%",
+     "c": "ref",
+     "at": [
+      3,
+      "hai"
+     ]
+    },
+    {
+     "label": "THUẾ TNCN\nKHI BÁN",
+     "v": 2,
+     "text": "2%",
+     "c": "ref",
+     "at": [
+      4,
+      "thuế"
+     ]
+    },
+    {
+     "label": "SỬA CHỮA\nMỖI NĂM",
+     "v": 0.5,
+     "text": "0,5%",
+     "c": "down",
+     "at": [
+      5,
+      "Ví"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "ỐNG NƯỚC · ĐIỀU HOÀ · THẤM TƯỜNG",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "chủ nhà tự lo",
+     "at": [
+      5,
+      "Ví"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:4553294",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 5
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "GIÁ NHÀ = DÒNG ĐẦU TIÊN",
+   "sub": "TRONG DANH SÁCH CHI PHÍ CỦA NGƯỜI MUA"
+  }
+ ],
+ "sources": [
+  "https://thuvienphapluat.vn/phap-luat-nha-dat/le-phi-truoc-ba-nha-dat-nam-2026-hien-nay-la-bao-nhieu-14934.html",
+  "https://thuvienphapluat.vn/phap-luat-nha-dat/nguoi-mua-can-ho-chung-cu-co-bat-buoc-phai-dong-phi-bao-tri-chung-cu-khong-8987.html",
+  "https://thuvienphapluat.vn/van-ban/thue-phi-le-phi/Luat-Thue-thu-nhap-ca-nhan-2025-so-109-2025-QH15-665870.aspx"
+ ],
+ "theme": "ck",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

@@ -117,7 +117,7 @@ CH["ch06"] = {"hud": {"k": "GIỚI HẠN", "t": "KHI NÀO KHÔNG ĐÚNG VỚI B�
 Y4 = C4["youtube"]
 SPEC = {
     "title": "Quỹ Khẩn Cấp: Cần Bao Nhiêu, Mất Bao Lâu, Để Ở Đâu? Tờ Phiếu Ba Ô Trống",
-    "channel": "CK", "accent": "#fbbf24", "master": True, "endcard": 20, "endcardSub": "VIDEO TIẾP THEO", "beat2": True,
+    "channel": "CK", "accent": "#fbbf24", "master": True, "endcard": 25, "endcardSub": "VIDEO TIẾP THEO", "beat2": True,
     "acc": ["quỹ", "khẩn", "cấp", "đệm", "thiết", "yếu", "tháng"],
     "say": SAY, "imgs": {}, "chapters": [f"ch{i:02d}" for i in range(7)],
     "youtube": {

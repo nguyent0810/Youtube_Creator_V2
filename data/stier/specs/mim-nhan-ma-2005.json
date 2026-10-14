@@ -1,0 +1,197 @@
+{
+ "theme": "mim",
+ "title": "Hai tay chơi nghiệp dư và ba máy tính thường thắng giải cờ có cả đại kiện tướng: cờ nhân mã 2005",
+ "description": "Năm 2005, một giải cờ “freestyle” trên mạng cho phép người chơi dùng máy tính. Đội thắng là hai tay chơi nghiệp dư người Mỹ, hệ số thấp hơn hẳn đại kiện tướng, dùng ba máy tính bình thường (ChessBase, 19/06/2005). Kasparov, người đề xuất cờ “nhân mã” năm 1998, rút ra bài học: người bình thường + máy + cách làm việc tốt có thể thắng người rất giỏi làm việc tồi. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: {LINK_DB} (công khai từ 20:00 ngày 12/11).",
+ "tags": [
+  "cờ nhân mã",
+  "centaur chess",
+  "người và máy",
+  "deep blue",
+  "kasparov",
+  "máy tính chơi cờ",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "FREESTYLE · 2005",
+ "acc": [
+  "nghiệp",
+  "dư",
+  "ba",
+  "cách",
+  "tin"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Hai tay chơi nghiệp dư, ba chiếc máy tính bình thường, và một chức vô địch.",
+  "Năm 2005, một giải cờ trên mạng cho phép người chơi dùng máy tính suốt ván đấu.",
+  "Có những đội có đại kiện tướng. Có cả những siêu máy tính chơi cờ mạnh nhất lúc ấy.",
+  "Người thắng là hai người Mỹ chơi nghiệp dư, hệ số thấp hơn hẳn các đại kiện tướng.",
+  "Họ thắng vì biết rất rõ khi nào nên tin máy, và khi nào nên dùng phán đoán của mình.",
+  "Kasparov gọi kiểu cờ người cùng máy này là cờ nhân mã.",
+  "Người bình thường biết làm việc cùng máy, có thể thắng người rất giỏi mà làm việc tồi."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "2 NGHIỆP DƯ · 3 MÁY",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "và một chức vô địch",
+     "at": [
+      0,
+      "và"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8720746",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "GIẢI CỜ 2005",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "được dùng máy tính suốt ván",
+     "at": [
+      1,
+      "dùng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8427425",
+   "ms": 6,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "ĐỐI THỦ",
+   "cards": [
+    {
+     "k": "CÓ",
+     "v": "ĐẠI KIỆN TƯỚNG",
+     "at": 2
+    },
+    {
+     "k": "CÓ CẢ",
+     "v": "SIÊU MÁY TÍNH",
+     "at": [
+      2,
+      "Có",
+      1
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "from": 3,
+   "to": 3,
+   "suffix": " MÁY TÍNH",
+   "label": "BÌNH THƯỜNG · CỦA ĐỘI VÔ ĐỊCH",
+   "sub": {
+    "text": "HAI NGƯỜI MỸ CHƠI NGHIỆP DƯ",
+    "at": [
+     3,
+     "hệ"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Vì sao thắng",
+   "nodes": [
+    {
+     "text": "khi nào nên tin máy",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      4,
+      "khi"
+     ],
+     "shape": "none",
+     "w": 700
+    },
+    {
+     "text": "khi nào dùng phán đoán",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      4,
+      "khi",
+      1
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 760
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "CỜ NHÂN MÃ",
+   "sub": "NỬA NGƯỜI · NỬA MÁY"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CÁCH LÀM VIỆC",
+     "at": 6,
+     "acc": true
+    },
+    {
+     "text": "quan trọng hơn tài năng thuần tuý",
+     "at": [
+      6,
+      "có"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:28709421",
+   "ms": 6,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 6
+  }
+ ],
+ "sources": [
+  "https://en.chessbase.com/post/dark-horse-zacks-wins-freestyle-che-tournament/8"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "kasparov": "Cát-xpa-rốp"
+ },
+ "imgs": {}
+}

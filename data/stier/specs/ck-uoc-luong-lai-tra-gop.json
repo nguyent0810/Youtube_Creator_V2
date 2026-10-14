@@ -1,0 +1,154 @@
+{
+ "theme": "ck",
+ "kicker": "1 MẸO TÍNH",
+ "sub": "TRẢ GÓP",
+ "title": "Mẹo nhẩm lãi suất thật của một món trả góp, không cần máy tính",
+ "description": "Cách ước lượng gần đúng cho khoản trả góp chia đều: lấy phần trả thêm chia cho số tiền thật sự vay, rồi nhân gần gấp đôi (vì trả dần, trung bình cả kỳ bạn chỉ nợ khoảng một nửa). VÍ DỤ GIẢ ĐỊNH: trả thêm 2,1 triệu so với giá trả thẳng 18,5 triệu, 12 tháng: 2,1 ÷ 18,5 ≈ 11%, nhân gần đôi ≈ 20%/năm (tính chính xác ≈ 20,3%). Đây là mẹo ước lượng, không chính xác tuyệt đối.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (8 phút): https://youtu.be/An95weKtrPA (công khai từ 20:00 ngày 28/10)",
+ "tags": [
+  "tính lãi trả góp",
+  "mẹo tính nhẩm",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "chia",
+  "đôi",
+  "mười",
+  "hai",
+  "nửa"
+ ],
+ "lines": [
+  "Một mẹo nhẩm lãi suất thật của món trả góp, không cần máy tính.",
+  "Bước một, lấy phần trả thêm, chia cho số tiền thật sự vay.",
+  "Ví dụ giả định, trả thêm hai triệu một, so với giá trả thẳng mười tám triệu rưỡi. Ra khoảng mười một phần trăm.",
+  "Bước hai, nhân gần gấp đôi.",
+  "Vì bạn trả dần mỗi tháng, nên trung bình cả năm, bạn chỉ nợ khoảng một nửa.",
+  "Mười một nhân gần hai, ra khoảng hai mươi phần trăm một năm.",
+  "Chỉ là ước lượng. Nhưng đủ để biết một con số không, có thật sự là không."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NHẨM LÃI SUẤT THẬT",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "không cần máy tính",
+     "at": [
+      0,
+      "không"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34828872",
+   "veil": 0.58
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Bước một",
+   "nodes": [
+    {
+     "text": "phần trả thêm",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      1,
+      "phần"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "÷ số thật sự vay",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      1,
+      "chia"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 600
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "from": 11,
+   "to": 11,
+   "prefix": "~",
+   "suffix": "%",
+   "label": "2,1 ÷ 18,5 · VÍ DỤ GIẢ ĐỊNH",
+   "sub": {
+    "text": "TRẢ GÓP CHIA ĐỀU 12 THÁNG",
+    "at": 2
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "BƯỚC HAI · NHÂN GẦN ĐÔI",
+   "cards": [
+    {
+     "k": "VÌ TRẢ DẦN",
+     "v": "NỢ TRUNG BÌNH ~1/2",
+     "at": 4
+    },
+    {
+     "k": "KẾT QUẢ",
+     "v": "~20%/NĂM",
+     "at": 5,
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CHỈ LÀ ƯỚC LƯỢNG",
+     "at": 6,
+     "sm": true
+    },
+    {
+     "text": "ĐỦ ĐỂ BIẾT SỐ 0 CÓ PHẢI LÀ 0",
+     "at": [
+      6,
+      "Nhưng"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7710747",
+   "ms": 12,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 6
+  }
+ ],
+ "sources": [
+  "https://vov.vn/kinh-te/su-that-lai-suat-tra-gop-0-cai-bay-bi-an-614131.vov"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

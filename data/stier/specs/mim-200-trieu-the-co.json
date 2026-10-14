@@ -1,0 +1,185 @@
+{
+ "theme": "mim",
+ "title": "Deep Blue xem 200 triệu thế cờ mỗi giây, AlphaZero chỉ khoảng 80 nghìn: hai cách thắng con người",
+ "description": "Năm 1997, Deep Blue duyệt khoảng 200 triệu thế cờ mỗi giây, với cách chấm điểm do kỹ sư và đại kiện tướng viết. Năm 2017, AlphaZero chỉ được biết luật, tự chơi với chính mình, và trong bài báo của nhóm DeepMind, nó xem khoảng 80 nghìn thế cờ mỗi giây khi chơi cờ vua (Wikipedia; arXiv 1712.01815). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: {LINK_DB} (công khai từ 20:00 ngày 12/11).",
+ "tags": [
+  "alphazero",
+  "200 triệu thế cờ",
+  "deep blue",
+  "kasparov",
+  "máy tính chơi cờ",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "1997 · 2017",
+ "acc": [
+  "triệu",
+  "nghìn",
+  "rộng",
+  "đâu",
+  "nhìn"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Hai trăm triệu thế cờ mỗi giây. Đó là tốc độ của Deep Blue năm 1997.",
+  "Nó xét mọi nước của mình, mọi nước đáp lại, nhiều tầng như thế, rồi chấm điểm từng thế cờ.",
+  "Cách chấm điểm ấy do các kỹ sư và đại kiện tướng viết ra.",
+  "Hai mươi năm sau, AlphaZero chỉ được cho biết luật chơi, rồi tự chơi với chính mình.",
+  "Khi chơi cờ vua, nó chỉ xem khoảng tám mươi nghìn thế cờ mỗi giây.",
+  "Ít hơn Deep Blue hàng nghìn lần.",
+  "Deep Blue thắng nhờ nhìn rất rộng. AlphaZero thắng nhờ biết nên nhìn vào đâu."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "200 TRIỆU",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "thế cờ mỗi giây · Deep Blue 1997",
+     "at": [
+      0,
+      "Đó"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:28709421",
+   "veil": 0.55
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Cách Deep Blue tính",
+   "nodes": [
+    {
+     "text": "xét mọi nước · nhiều tầng",
+     "x": 0.5,
+     "y": 0.3,
+     "at": 1,
+     "shape": "none",
+     "w": 760
+    },
+    {
+     "text": "chấm điểm do người viết",
+     "x": 0.5,
+     "y": 0.64,
+     "at": 2,
+     "c": "acc",
+     "shape": "circle",
+     "w": 760
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "ALPHAZERO · 2017",
+     "at": 3,
+     "acc": true
+    },
+    {
+     "text": "chỉ biết luật · tự chơi với mình",
+     "at": [
+      3,
+      "rồi"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6600370",
+   "ms": 4,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 3
+  },
+  {
+   "type": "chart",
+   "at": 4,
+   "kind": "bars",
+   "title": "SỐ THẾ CỜ XEM MỖI GIÂY",
+   "unit": "XẤP XỈ · CỜ VUA",
+   "bars": [
+    {
+     "label": "DEEP BLUE",
+     "v": 200,
+     "text": "200 TRIỆU",
+     "c": "ref",
+     "at": [
+      4,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "label": "ALPHAZERO",
+     "v": 1,
+     "text": "80 NGHÌN",
+     "c": "up",
+     "at": [
+      4,
+      "tám"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "ÍT HƠN HÀNG NGHÌN LẦN",
+   "sub": "NHƯNG VẪN THẮNG"
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "HAI CÁCH THẮNG",
+   "cards": [
+    {
+     "k": "DEEP BLUE",
+     "v": "NHÌN RẤT RỘNG",
+     "at": 6
+    },
+    {
+     "k": "ALPHAZERO",
+     "v": "BIẾT NHÌN VÀO ĐÂU",
+     "at": [
+      6,
+      "AlphaZero"
+     ],
+     "c": "acc"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)",
+  "https://arxiv.org/abs/1712.01815"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "deep": "Đíp",
+  "blue": "Blu",
+  "alphazero": "An-pha Di-rô",
+  "=AlphaZero": "An-pha Di-rô"
+ },
+ "imgs": {}
+}

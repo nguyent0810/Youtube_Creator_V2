@@ -1,0 +1,177 @@
+{
+ "theme": "mim",
+ "title": "Thử nghiệm Hải quân Mỹ 1944: Dvorak nhanh hơn 74%, nhưng người chấm thi là ai?",
+ "description": "Năm 1944, Hải quân Mỹ cho 14 nhân viên đánh máy luyện bàn phím Dvorak; theo tường thuật của chính Dvorak, họ nhanh hơn 74%. Năm 1990, Liebowitz và Margolis (“The Fable of the Keys”) chỉ ra người phụ trách nghiên cứu là Thiếu tá August Dvorak. Thử nghiệm của chính phủ Mỹ năm 1956 không thấy Dvorak hơn QWERTY; phía ủng hộ Dvorak cho rằng thử nghiệm ấy thiên vị. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/KJ5y_Ypnc4U (công khai từ 20:00 ngày 05/11).",
+ "tags": [
+  "dvorak vs qwerty",
+  "fable of the keys",
+  "bàn phím qwerty",
+  "lịch sử bàn phím",
+  "máy đánh chữ",
+  "công nghệ",
+  "mind in the machine"
+ ],
+ "sub": "HẢI QUÂN MỸ · 1944",
+ "acc": [
+  "74",
+  "chấm",
+  "Dvorak",
+  "1956",
+  "chắc"
+ ],
+ "kicker": "CHUYỆN CÔNG NGHỆ",
+ "lines": [
+  "Nhanh hơn bảy mươi tư phần trăm. Nhưng ai là người chấm thi?",
+  "Năm 1944, Hải quân Mỹ cho mười bốn nhân viên đánh máy luyện bàn phím Dvorak.",
+  "Theo tường thuật của chính Dvorak, họ gõ nhanh hơn bảy mươi tư phần trăm.",
+  "Năm 1990, hai nhà kinh tế học lật lại hồ sơ.",
+  "Người phụ trách nghiên cứu năng suất của Hải quân lúc đó là thiếu tá August Dvorak.",
+  "Năm 1956, một thử nghiệm khác của chính phủ Mỹ không thấy Dvorak hơn QWERTY. Phía ủng hộ Dvorak thì cho rằng thử nghiệm ấy thiên vị.",
+  "Hai thử nghiệm, hai kết luận ngược nhau. Bàn phím nào nhanh hơn vẫn chưa có lời đáp chắc chắn."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "+74%",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "nhưng ai là người chấm thi",
+     "at": [
+      0,
+      "Nhưng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6037662",
+   "veil": 0.55
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 14,
+   "to": 14,
+   "suffix": " NGƯỜI",
+   "label": "HẢI QUÂN MỸ · 1944",
+   "sub": {
+    "text": "LUYỆN BÀN PHÍM DVORAK",
+    "at": [
+     1,
+     "luyện"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "+74%",
+   "sub": "THEO TƯỜNG THUẬT CỦA CHÍNH DVORAK"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "1990",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "LẬT LẠI HỒ SƠ",
+     "at": [
+      3,
+      "lật"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:8731320",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 3
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Người phụ trách",
+   "nodes": [
+    {
+     "text": "nghiên cứu của Hải quân",
+     "x": 0.5,
+     "y": 0.3,
+     "at": 4,
+     "shape": "none",
+     "w": 760
+    },
+    {
+     "text": "thiếu tá August Dvorak",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      4,
+      "thiếu"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 780
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "THỬ NGHIỆM 1956",
+   "cards": [
+    {
+     "k": "CHÍNH PHỦ MỸ",
+     "v": "DVORAK KHÔNG HƠN",
+     "at": 5
+    },
+    {
+     "k": "PHÍA DVORAK",
+     "v": "“THIÊN VỊ”",
+     "at": [
+      5,
+      "Phía"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "CHƯA CÓ LỜI ĐÁP",
+   "sub": "HAI THỬ NGHIỆM · HAI KẾT LUẬN"
+  }
+ ],
+ "sources": [
+  "https://papers.ssrn.com/abstract=1069950",
+  "https://en.wikipedia.org/wiki/Dvorak_keyboard_layout"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "=QWERTY": "quớt-ti",
+  "qwerty": "quớt-ti",
+  "august": "Âu-gớt",
+  "dvorak": "Đờ-vo-rắc"
+ },
+ "imgs": {}
+}

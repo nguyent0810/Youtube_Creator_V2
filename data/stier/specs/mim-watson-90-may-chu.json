@@ -1,0 +1,194 @@
+{
+ "theme": "mim",
+ "title": "Watson năm 2011: 90 máy chủ, 2.880 lõi xử lý và 200 triệu trang văn bản nạp sẵn để chơi đố vui",
+ "description": "Để thi Jeopardy năm 2011, Watson chạy trên 90 máy chủ IBM Power 750, tổng cộng 2.880 lõi xử lý và 16 terabyte bộ nhớ. Khoảng 200 triệu trang văn bản (bách khoa toàn thư, từ điển, sách, báo) được nạp sẵn vào bộ nhớ; khi thi, nó không kết nối Internet. Tên dự án đặt theo người sáng lập IBM, Thomas Watson (Wikipedia: IBM Watson). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: {LINK_WT} (công khai từ 20:00 ngày 19/11).",
+ "tags": [
+  "watson phần cứng",
+  "siêu máy tính",
+  "ibm watson",
+  "jeopardy",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "2011",
+ "acc": [
+  "chín",
+  "mươi",
+  "hai",
+  "trăm",
+  "phòng"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Chín mươi máy chủ, để chơi một trò đố vui trên truyền hình.",
+  "Năm 2011, cỗ máy Watson của IBM chiếm hết một căn phòng.",
+  "Tổng cộng hai nghìn tám trăm tám mươi lõi xử lý, và mười sáu terabyte bộ nhớ.",
+  "Trong bộ nhớ ấy là khoảng hai trăm triệu trang văn bản: bách khoa toàn thư, từ điển, sách, báo.",
+  "Tất cả được nạp sẵn để tìm cho nhanh, vì nó phải trả lời trong vài giây.",
+  "Tên của nó không theo nhân vật thám tử, mà theo người sáng lập IBM, Thomas Watson.",
+  "Một căn phòng máy chủ đã được dựng lên chỉ để thắng một trò chơi của con người."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "90 MÁY CHỦ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "để chơi một trò đố vui",
+     "at": [
+      0,
+      "để"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:4841217",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MỘT CĂN PHÒNG",
+     "at": [
+      1,
+      "căn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "IBM Watson · 2011",
+     "at": 1,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:28709421",
+   "ms": 4,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "PHẦN CỨNG",
+   "cards": [
+    {
+     "k": "LÕI XỬ LÝ",
+     "v": "2.880",
+     "at": 2
+    },
+    {
+     "k": "BỘ NHỚ",
+     "v": "16 TERABYTE",
+     "at": [
+      2,
+      "mười"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "from": 200,
+   "to": 200,
+   "prefix": "~",
+   "suffix": " TRIỆU",
+   "label": "TRANG VĂN BẢN NẠP SẴN",
+   "sub": {
+    "text": "BÁCH KHOA · TỪ ĐIỂN · SÁCH · BÁO",
+    "at": [
+     3,
+     "bách"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "TRẢ LỜI TRONG VÀI GIÂY",
+     "at": 4,
+     "acc": true
+    },
+    {
+     "text": "nên mọi thứ nạp sẵn",
+     "at": [
+      4,
+      "Tất"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8720746",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 4
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "THOMAS WATSON",
+   "sub": "NGƯỜI SÁNG LẬP IBM · KHÔNG PHẢI THÁM TỬ"
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Một căn phòng máy chủ",
+   "nodes": [
+    {
+     "text": "dựng lên chỉ để",
+     "x": 0.5,
+     "y": 0.3,
+     "at": 6,
+     "shape": "none",
+     "w": 600
+    },
+    {
+     "text": "thắng một trò chơi",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "thắng"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 640
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/IBM_Watson"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "watson": "Oát-xần",
+  "ibm": "ai bi em",
+  "=IBM": "ai bi em",
+  "thomas": "Tô-mát"
+ },
+ "imgs": {}
+}

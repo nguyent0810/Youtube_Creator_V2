@@ -123,7 +123,7 @@ CH["ch06"] = {"hud": {"k": "GIỚI HẠN", "t": "KHI NÀO KHÔNG ĐÚNG VỚI B�
 Y4 = C4["youtube"]
 SPEC = {
     "title": "Trả Góp 0%: Bạn Thật Sự Trả Bao Nhiêu? Một Chiếc Điện Thoại, Bốn Cái Giá",
-    "channel": "CK", "accent": "#fbbf24", "master": True, "endcard": 20, "endcardSub": "VIDEO TIẾP THEO", "beat2": True,
+    "channel": "CK", "accent": "#fbbf24", "master": True, "endcard": 25, "endcardSub": "VIDEO TIẾP THEO", "beat2": True,
     "acc": ["không", "phí", "giá", "lãi", "thẳng", "góp", "tổng"],
     "say": SAY, "imgs": {}, "chapters": [f"ch{i:02d}" for i in range(7)],
     "youtube": {

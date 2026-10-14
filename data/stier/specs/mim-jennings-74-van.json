@@ -1,0 +1,168 @@
+{
+ "theme": "mim",
+ "title": "Ken Jennings thắng liền 74 ván Jeopardy, thua máy năm 2011, rồi trở thành người dẫn chương trình",
+ "description": "Năm 2004, Ken Jennings thắng liền 74 ván Jeopardy, một kỷ lục. Năm 2011, ông thua Watson; ở câu cuối, ông viết thêm “I for one welcome our new computer overlords”. Năm 2013 trên sân khấu TED, ông kể mình là người đầu tiên bị máy lấy mất công việc mà mình giỏi nhất (diễn ý). Từ 2021–2022, ông trở thành người dẫn chính chương trình ấy (Wikipedia: Ken Jennings). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: {LINK_WT} (công khai từ 20:00 ngày 19/11).",
+ "tags": [
+  "ken jennings",
+  "computer overlords",
+  "ibm watson",
+  "jeopardy",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "2004 → 2021",
+ "acc": [
+  "bảy",
+  "mươi",
+  "tư",
+  "dẫn",
+  "chỗ"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Bảy mươi tư ván thắng liền. Rồi một ngày, anh thua một cỗ máy.",
+  "Năm 2004, Ken Jennings lập kỷ lục ở chương trình đố vui Jeopardy.",
+  "Năm 2011, anh đấu với Watson của IBM, và thua.",
+  "Ở câu cuối, anh viết thêm một câu đùa: tôi, về phần mình, xin chào đón những ông chủ máy tính mới.",
+  "Hai năm sau, anh kể mình là người đầu tiên bị máy lấy mất công việc mà mình giỏi nhất.",
+  "Nhưng nhiều năm sau, anh trở thành người dẫn của chính chương trình ấy.",
+  "Thua máy không có nghĩa là hết chỗ cho người. Chỗ ấy chỉ thay đổi."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "74 VÁN THẮNG LIỀN",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "rồi thua một cỗ máy",
+     "at": [
+      0,
+      "Rồi"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7005884",
+   "veil": 0.55
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 74,
+   "to": 74,
+   "suffix": " VÁN",
+   "label": "THẮNG LIỀN · KỶ LỤC 2004",
+   "sub": {
+    "text": "KEN JENNINGS · JEOPARDY",
+    "at": [
+     1,
+     "Ken"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "2011 · THUA WATSON",
+     "at": 2,
+     "acc": true
+    },
+    {
+     "text": "cỗ máy của IBM",
+     "at": [
+      2,
+      "Watson"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:4841217",
+   "ms": 6,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 2
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "“CHÀO ĐÓN NHỮNG ÔNG CHỦ MÁY TÍNH MỚI”",
+   "sub": "CÂU ĐÙA Ở CÂU CUỐI"
+  },
+  {
+   "type": "timeline",
+   "at": 4,
+   "items": [
+    {
+     "year": "2013",
+     "text": "“bị máy lấy mất việc mình giỏi nhất”",
+     "at": [
+      4,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "year": "2021",
+     "text": "dẫn chính chương trình ấy",
+     "at": 5
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "THUA MÁY",
+   "cards": [
+    {
+     "k": "KHÔNG PHẢI",
+     "v": "HẾT CHỖ CHO NGƯỜI",
+     "at": 6
+    },
+    {
+     "k": "MÀ LÀ",
+     "v": "CHỖ ẤY THAY ĐỔI",
+     "at": [
+      6,
+      "Chỗ"
+     ],
+     "c": "acc"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Ken_Jennings",
+  "https://techcrunch.com/2011/02/16/the-final-night-of-ibms-jeopardy-challenge-how-did-watson-do"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "watson": "Oát-xần",
+  "ibm": "ai bi em",
+  "=IBM": "ai bi em",
+  "jeopardy": "Gie-pơ-đi",
+  "ken": "Ken",
+  "jennings": "Gien-ninh"
+ },
+ "imgs": {}
+}

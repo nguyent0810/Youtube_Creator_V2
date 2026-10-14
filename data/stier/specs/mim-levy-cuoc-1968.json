@@ -1,0 +1,171 @@
+{
+ "theme": "mim",
+ "title": "Lời cược 1.250 bảng Anh của David Levy: mười năm không máy tính nào thắng nổi ông",
+ "description": "Năm 1968, kỳ thủ người Anh David Levy cược với vài nhà nghiên cứu trí tuệ nhân tạo rằng trong mười năm không máy tính nào thắng nổi ông; tổng tiền cược lên tới 1.250 bảng. Năm 1978, ông thắng chương trình mạnh nhất lúc ấy và giữ được lời cược, nhưng viết rằng cỗ máy mạnh hơn ông tưởng. Năm 1989, Deep Thought thắng ông (Computer History Museum). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: {LINK_DB} (công khai từ 20:00 ngày 12/11).",
+ "tags": [
+  "david levy",
+  "lời cược cờ vua",
+  "deep blue",
+  "kasparov",
+  "máy tính chơi cờ",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "1968 → 1978",
+ "acc": [
+  "cược",
+  "mười",
+  "thắng",
+  "mạnh",
+  "Levy"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Một nghìn hai trăm năm mươi bảng Anh, cược rằng không máy tính nào thắng nổi một người.",
+  "Năm 1968, kỳ thủ người Anh David Levy đánh cược với vài nhà nghiên cứu trí tuệ nhân tạo.",
+  "Trong mười năm, không máy tính nào thắng nổi ông.",
+  "Năm 1978, Levy đấu với chương trình mạnh nhất lúc ấy. Và ông thắng.",
+  "Ông giữ được lời cược. Nhưng chính ông viết rằng cỗ máy ấy mạnh hơn nhiều so với ông tưởng.",
+  "Năm 1989, một cỗ máy tên là Deep Thought đã thắng ông.",
+  "Mười năm đầu, con người thắng cược. Mười một năm sau đó, máy đã đuổi kịp."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "1.250 BẢNG ANH",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "cược rằng máy không thắng nổi",
+     "at": [
+      0,
+      "cược"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6600019",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "DAVID LEVY · 1968",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "cược với các nhà nghiên cứu AI",
+     "at": [
+      1,
+      "đánh"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8758291",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "from": 10,
+   "to": 10,
+   "suffix": " NĂM",
+   "label": "KHÔNG MÁY NÀO THẮNG NỔI ÔNG",
+   "sub": {
+    "text": "NỘI DUNG LỜI CƯỢC",
+    "at": 2
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "NĂM 1978",
+   "cards": [
+    {
+     "k": "LEVY",
+     "v": "THẮNG CƯỢC",
+     "at": [
+      3,
+      "Và"
+     ]
+    },
+    {
+     "k": "NHƯNG VIẾT",
+     "v": "MÁY MẠNH HƠN ÔNG TƯỞNG",
+     "at": [
+      4,
+      "Nhưng"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "1989",
+   "sub": "DEEP THOUGHT THẮNG DAVID LEVY"
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Hai chặng",
+   "nodes": [
+    {
+     "text": "10 năm đầu: người thắng",
+     "x": 0.5,
+     "y": 0.3,
+     "at": 6,
+     "shape": "none",
+     "w": 760
+    },
+    {
+     "text": "11 năm sau: máy đuổi kịp",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "Mười",
+      1
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 780
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://www.computerhistory.org/chess/levys-bet/"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "deep": "Đíp",
+  "david": "Đây-vít",
+  "levy": "Li-vai",
+  "thought": "Thót"
+ },
+ "imgs": {}
+}

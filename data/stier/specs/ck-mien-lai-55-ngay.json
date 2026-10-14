@@ -1,0 +1,179 @@
+{
+ "theme": "ck",
+ "kicker": "1 ĐIỀU KIỆN",
+ "sub": "THẺ TÍN DỤNG",
+ "title": "“Miễn lãi 55 ngày” thật ra là bao nhiêu ngày? Một điều kiện ít người đọc",
+ "description": "Ví dụ loại thẻ “miễn lãi tới 55 ngày”: con số gồm khoảng 30 ngày của một kỳ sao kê cộng khoảng 25 ngày để thanh toán. Quẹt thẻ ngày đầu kỳ thì có đủ 55 ngày; quẹt ngày cuối kỳ thì chỉ còn khoảng 25 ngày. Và chỉ được miễn lãi khi trả ĐỦ toàn bộ dư nợ của kỳ, đúng hạn. Mỗi thẻ một khác: xem hợp đồng của bạn.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (8 phút): https://youtu.be/xIfNPP1PLl8 (công khai từ 20:00 ngày 21/10)",
+ "tags": [
+  "miễn lãi 55 ngày",
+  "thẻ tín dụng",
+  "sao kê",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "năm",
+  "ba",
+  "hai",
+  "đủ",
+  "cuối"
+ ],
+ "lines": [
+  "Miễn lãi năm mươi lăm ngày. Lời hứa ấy là thật, nhưng có điều kiện.",
+  "Năm mươi lăm ngày gồm hai phần.",
+  "Ba mươi ngày của một kỳ sao kê, cộng hai mươi lăm ngày để bạn trả tiền.",
+  "Quẹt thẻ ngày đầu kỳ, bạn có đủ năm mươi lăm ngày.",
+  "Quẹt ngày cuối kỳ, chỉ còn hai mươi lăm ngày.",
+  "Và điều kiện quan trọng nhất: phải trả đủ toàn bộ số nợ của kỳ ấy, đúng hạn.",
+  "Trả đủ, tấm thẻ là khoản mượn miễn phí. Trả thiếu, ưu đãi ấy không còn."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MIỄN LÃI 55 NGÀY",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "thật, nhưng có điều kiện",
+     "at": [
+      0,
+      "nhưng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7534961",
+   "veil": 0.58
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "55 NGÀY GỒM",
+   "cards": [
+    {
+     "k": "KỲ SAO KÊ",
+     "v": "~30 NGÀY",
+     "at": [
+      2,
+      "Ba"
+     ]
+    },
+    {
+     "k": "ĐỂ TRẢ TIỀN",
+     "v": "~25 NGÀY",
+     "at": [
+      2,
+      "cộng"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "VÍ DỤ LOẠI 55 NGÀY · MỖI THẺ MỘT KHÁC"
+  },
+  {
+   "type": "chart",
+   "at": 3,
+   "kind": "bars",
+   "title": "SỐ NGÀY MIỄN LÃI THẬT SỰ",
+   "unit": "VÍ DỤ LOẠI 55 NGÀY",
+   "bars": [
+    {
+     "label": "QUẸT\nĐẦU KỲ",
+     "v": 55,
+     "text": "55",
+     "c": "up",
+     "at": [
+      3,
+      "đủ"
+     ]
+    },
+    {
+     "label": "QUẸT\nCUỐI KỲ",
+     "v": 25,
+     "text": "25",
+     "c": "down",
+     "at": [
+      4,
+      "hai"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "ĐIỀU KIỆN QUAN TRỌNG NHẤT",
+     "at": 5,
+     "sm": true
+    },
+    {
+     "text": "TRẢ ĐỦ · ĐÚNG HẠN",
+     "at": [
+      5,
+      "trả"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:6898096",
+   "ms": 2,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 5
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Cùng một tấm thẻ",
+   "nodes": [
+    {
+     "text": "trả đủ: mượn miễn phí",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      6,
+      "Trả"
+     ],
+     "shape": "none",
+     "w": 720
+    },
+    {
+     "text": "trả thiếu: mất ưu đãi",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "thiếu"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 680
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://thitruongtaichinhtiente.vn/vu-no-8-5-trieu-bi-tinh-lai-hon-8-8-ty-nhung-dieu-can-biet-khi-dung-the-tin-dung-57760.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

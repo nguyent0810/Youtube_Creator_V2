@@ -1,0 +1,191 @@
+{
+ "title": "Giá nhà phải tăng bao nhiêu mỗi năm thì mua và thuê ngang nhau? Khoảng 7,5% trong ví dụ của kênh",
+ "description": "VÍ DỤ GIẢ ĐỊNH (kênh tự tính), cùng ngân sách nhà ở trong 10 năm: nhà thuê để dành đủ phần chênh và gửi tiết kiệm 6,8% có khoảng 4 tỷ. Nhà mua, sau khi bán, nộp thuế, trả nợ: còn ~1,55 tỷ nếu giá nhà đứng yên, ~2,4 tỷ nếu tăng 3%/năm, ~3,1 tỷ nếu tăng 5%/năm. Mức hoà vốn ≈ 7,5%/năm; đổi một giả định, dải từ hơn 6% tới hơn 8%. Ở càng lâu, mức hoà vốn càng thấp. Không phải dự báo giá nhà.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ: https://youtu.be/pXKfIo_nyVM (công khai từ 20:00 ngày 07/11)",
+ "tags": [
+  "hoà vốn mua nhà",
+  "giá nhà tăng",
+  "mua hay thuê nhà",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "bảy",
+  "năm",
+  "hoà",
+  "vốn",
+  "cược"
+ ],
+ "kicker": "QUYẾT ĐỊNH LỚN",
+ "sub": "MUA HAY THUÊ",
+ "lines": [
+  "Bảy phẩy năm phần trăm mỗi năm, suốt mười năm: mức giá nhà phải tăng để mua và thuê ngang nhau, trong ví dụ của kênh.",
+  "Nhà thuê để dành đủ phần chênh, mười năm sau có khoảng bốn tỷ.",
+  "Nhà mua bán căn hộ, nộp thuế, trả nợ. Giá đứng yên, còn khoảng một tỷ rưỡi.",
+  "Giá tăng ba phần trăm mỗi năm, khoảng hai tỷ bốn. Tăng năm phần trăm, khoảng ba tỷ mốt.",
+  "Đổi vài giả định, mức hoà vốn chạy từ hơn sáu tới hơn tám phần trăm. Ở càng lâu, nó càng thấp.",
+  "Đây không phải dự báo, mà là ngưỡng để bạn tự so với niềm tin của mình.",
+  "Mua nhà, về mặt tiền bạc, là cược rằng giá tăng nhanh hơn ngưỡng ấy."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "~7,5% MỖI NĂM",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "giá nhà phải tăng để mua = thuê",
+     "at": [
+      0,
+      "mức"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6221103",
+   "ms": 6,
+   "veil": 0.58
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 4,
+   "to": 4,
+   "prefix": "~",
+   "suffix": " TỶ",
+   "label": "NHÀ THUÊ SAU 10 NĂM · ĐỂ DÀNH ĐỦ",
+   "sub": {
+    "text": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+    "at": [
+     1,
+     "mười"
+    ]
+   }
+  },
+  {
+   "type": "chart",
+   "at": 2,
+   "kind": "bars",
+   "title": "NHÀ MUA SAU 10 NĂM (TỶ ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH · KHÔNG DỰ BÁO",
+   "bars": [
+    {
+     "label": "GIÁ\nĐỨNG YÊN",
+     "v": 1.55,
+     "text": "~1,55",
+     "c": "down",
+     "at": [
+      2,
+      "Giá"
+     ]
+    },
+    {
+     "label": "+3%/NĂM",
+     "v": 2.39,
+     "text": "~2,4",
+     "c": "ref",
+     "at": [
+      3,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "label": "+5%/NĂM",
+     "v": 3.09,
+     "text": "~3,1",
+     "c": "ref",
+     "at": [
+      3,
+      "Tăng"
+     ]
+    },
+    {
+     "label": "NHÀ THUÊ",
+     "v": 4.05,
+     "text": "~4",
+     "c": "up",
+     "at": [
+      3,
+      "ba",
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "MỨC HOÀ VỐN",
+   "cards": [
+    {
+     "k": "ĐỔI GIẢ ĐỊNH",
+     "v": "HƠN 6% → HƠN 8%",
+     "at": 4
+    },
+    {
+     "k": "Ở CÀNG LÂU",
+     "v": "CÀNG THẤP",
+     "at": [
+      4,
+      "Ở"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "KHÔNG PHẢI DỰ BÁO",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "một ngưỡng để tự so",
+     "at": [
+      5,
+      "mà"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34828872",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 5
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "ĐẶT CƯỢC VÀO GIÁ NHÀ",
+   "sub": "TĂNG NHANH HƠN NGƯỠNG HOÀ VỐN"
+  }
+ ],
+ "sources": [
+  "https://nguoiquansat.vn/gia-chung-cu-ha-noi-tang-hon-200-so-voi-nam-2019-268972.html",
+  "https://tapchikinhtetaichinh.vn/nguon-cung-can-ho-ha-noi-lap-ky-luc-gia-thu-cap-lan-dau-giam-sau-gan-4-nam-161086.html"
+ ],
+ "theme": "ck",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

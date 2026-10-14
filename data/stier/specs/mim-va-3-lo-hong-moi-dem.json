@@ -1,0 +1,172 @@
+{
+ "theme": "mim",
+ "title": "Mỗi đêm, cỗ máy vá ba lỗ hổng mà các cao thủ poker tìm ra trong ngày: Libratus 2017",
+ "description": "Trong trận Brains vs AI tháng 1/2017, bốn người chơi làm việc như một đội: mỗi tối so ghi chép, tìm điểm yếu của Libratus. Mỗi đêm, một thuật toán phân tích những lỗ hổng người chơi đã khai thác trong ngày, rồi siêu máy tính vá ba lỗ hổng quan trọng nhất trước sáng hôm sau (CMU News).\n\nVideo nói về nghiên cứu trí tuệ nhân tạo; không hướng dẫn chơi bài, không cổ vũ cờ bạc. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: {LINK_PK} (công khai từ 20:00 ngày 26/11).",
+ "tags": [
+  "libratus vá lỗi",
+  "máy tự học",
+  "ai chơi poker",
+  "libratus",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "MỖI ĐÊM · 2017",
+ "acc": [
+  "ba",
+  "vá",
+  "đêm",
+  "sáng",
+  "học"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Mỗi đêm, cỗ máy vá ba lỗ hổng mà con người tìm ra trong ngày.",
+  "Tháng 1 năm 2017, bốn cao thủ poker đấu với Libratus không chỉ như bốn người, mà như một đội.",
+  "Mỗi tối, họ ngồi lại so ghi chép, tìm điểm yếu của cỗ máy. Và họ tìm được.",
+  "Nhưng cỗ máy cũng có đội của nó.",
+  "Mỗi đêm, một thuật toán phân tích những lỗ hổng bị khai thác, rồi siêu máy tính vá ba lỗ hổng quan trọng nhất.",
+  "Sáng hôm sau, những chỗ yếu ấy đã biến mất. Các cao thủ phải tìm lại từ đầu.",
+  "Đối thủ đáng sợ nhất là đối thủ học từ chính bạn, nhanh hơn bạn."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "3 LỖ HỔNG MỖI ĐÊM",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "vá trước khi trời sáng",
+     "at": [
+      0,
+      "vá"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:28709421",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "4 CAO THỦ = 1 ĐỘI",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "Libratus · 01/2017",
+     "at": [
+      1,
+      "Libratus"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6962281",
+   "ms": 10,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "MỖI TỐI",
+   "cards": [
+    {
+     "k": "SO GHI CHÉP",
+     "v": "TÌM ĐIỂM YẾU",
+     "at": 2
+    },
+    {
+     "k": "KẾT QUẢ",
+     "v": "TÌM ĐƯỢC",
+     "at": [
+      2,
+      "Và"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 3,
+   "to": 3,
+   "suffix": " LỖ HỔNG",
+   "label": "VÁ MỖI ĐÊM · QUAN TRỌNG NHẤT",
+   "sub": {
+    "text": "TRÊN SIÊU MÁY TÍNH PITTSBURGH",
+    "at": [
+     4,
+     "siêu"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "SÁNG HÔM SAU",
+   "sub": "NHỮNG CHỖ YẾU ĐÃ BIẾN MẤT"
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Đối thủ đáng sợ nhất",
+   "nodes": [
+    {
+     "text": "học từ chính bạn",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      6,
+      "học"
+     ],
+     "shape": "none",
+     "w": 620
+    },
+    {
+     "text": "nhanh hơn bạn",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "nhanh"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 560
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://www.cmu.edu/news/stories/archives/2017/january/AI-beats-poker-pros.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "libratus": "Li-bra-tút",
+  "poker": "pô-cơ"
+ },
+ "imgs": {}
+}

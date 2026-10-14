@@ -1,0 +1,164 @@
+{
+ "title": "Nỗi sợ bị bỏ lỡ không đến khi thị trường rẻ: vì sao FOMO thường xuất hiện lúc giá đã cao",
+ "description": "FOMO (fear of missing out) là nỗi sợ bị bỏ lỡ. Khi thấy người quen lãi, ta không chỉ thấy tiền của họ tăng mà thấy mình tụt lại phía sau (diễn giải của kênh về so sánh xã hội). Cảm giác ấy không đến khi thị trường rẻ, vì lúc ấy ít ai nói về nó; nó đến khi ai cũng lãi, tức khi giá đã cao. Ví dụ: kỷ lục tài khoản mới tháng 3/2022 đến hai tháng sau đỉnh VN-Index. Nội dung giáo dục, không khuyến nghị.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ: https://youtu.be/ULLEUHkYz9g (công khai từ 20:00 ngày 21/11)",
+ "tags": [
+  "fomo là gì",
+  "nỗi sợ bị bỏ lỡ",
+  "fomo",
+  "tâm lý đầu tư",
+  "vn-index",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "sợ",
+  "bỏ",
+  "lỡ",
+  "rẻ",
+  "cao"
+ ],
+ "kicker": "TÂM LÝ TIỀN BẠC",
+ "sub": "FOMO",
+ "lines": [
+  "Nỗi sợ bị bỏ lỡ không bao giờ đến khi thị trường đang rẻ.",
+  "Khi thấy người quen lãi, ta không chỉ thấy tiền của họ tăng. Ta thấy mình tụt lại phía sau.",
+  "Cảm giác ấy khó chịu hơn cả việc mất tiền. Và cách nhanh nhất để thoát khỏi nó, là làm giống họ.",
+  "Lúc thị trường rẻ, chẳng ai nói về nó, nên cũng chẳng ai sợ bỏ lỡ.",
+  "Nỗi sợ ấy chỉ đến khi ai cũng lãi, tức là khi giá đã cao.",
+  "Tháng 3 năm 2022, số tài khoản mới lập kỷ lục, hai tháng sau khi chỉ số đã qua đỉnh.",
+  "Cảm giác sợ bị bỏ lỡ, thường là dấu hiệu giá đã đi được một đoạn dài."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "FOMO",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "không bao giờ đến khi thị trường rẻ",
+     "at": [
+      0,
+      "không"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:13929693",
+   "ms": 2,
+   "veil": 0.58
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Khi người quen lãi",
+   "nodes": [
+    {
+     "text": "tiền của họ tăng",
+     "x": 0.5,
+     "y": 0.3,
+     "at": 1,
+     "shape": "none",
+     "w": 600
+    },
+    {
+     "text": "mình tụt lại phía sau",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      1,
+      "Ta",
+      1
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 680
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "LÀM GIỐNG HỌ",
+     "at": [
+      2,
+      "làm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "cách nhanh nhất để hết khó chịu",
+     "at": 2,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7703941",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 2
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "NỖI SỢ BỊ BỎ LỠ",
+   "cards": [
+    {
+     "k": "KHI GIÁ RẺ",
+     "v": "CHẲNG AI NÓI",
+     "at": 3
+    },
+    {
+     "k": "KHI AI CŨNG LÃI",
+     "v": "GIÁ ĐÃ CAO",
+     "at": 4,
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 2,
+   "to": 2,
+   "suffix": " THÁNG",
+   "label": "KỶ LỤC TÀI KHOẢN MỚI · SAU ĐỈNH",
+   "sub": {
+    "text": "THÁNG 3/2022 · VN-INDEX ĐỈNH 06/01",
+    "at": [
+     5,
+     "hai"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "MỘT DẤU HIỆU",
+   "sub": "GIÁ ĐÃ ĐI ĐƯỢC MỘT ĐOẠN DÀI"
+  }
+ ],
+ "sources": [
+  "https://thoibaotaichinhvietnam.vn/thang-3-lap-ky-luc-khi-co-toi-270000-tai-khoan-chung-khoan-duoc-mo-moi-103199.html",
+  "https://vnstocks.com/docs/vnstock-data/du-lieu-giao-dich"
+ ],
+ "theme": "ck",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

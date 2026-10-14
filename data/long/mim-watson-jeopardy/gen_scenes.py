@@ -138,8 +138,8 @@ CH["ch11"] = {"hud": {"k": "CHƯƠNG 10", "t": "NGƯỜI THUA LÊN TIẾNG"}, "b
     {"type": "chapter", "no": "10", "k": "CHƯƠNG MƯỜI", "title": "NGƯỜI THUA\nLÊN TIẾNG", "sub": "KEN JENNINGS", "vid": "6951391", "illus": VM, "titleAt": [0, "Hai"]},
     {"type": "kinetic", "at": 1, "items": [{"text": "NGƯỜI ĐẦU TIÊN", "at": 2, "sm": True}, {"text": "BỊ MÁY LẤY MẤT VIỆC MÌNH GIỎI NHẤT", "at": [2, "bị"], "acc": True}, {"text": "diễn ý lời Ken Jennings, 2013", "at": [2, "giỏi"], "sm": True}]},
     {"type": "myth", "at": 3, "mythLab": "TƯỞNG LÀ", "myth": "HẾT CHỖ CHO NGƯỜI", "truthLab": "NHIỀU NĂM SAU", "truth": "ÔNG DẪN CHÍNH CHƯƠNG TRÌNH ẤY", "strikeAt": [4, "Nhiều"], "truthAt": [4, "dẫn"]},
-    {"type": "timeline", "at": 6, "items": [{"year": "KASPAROV", "text": "cờ vua · 1997", "at": 8}, {"year": "JENNINGS", "text": "đố vui · 2011", "at": [8, "từ"]}, {"year": "LEE SEDOL", "text": "cờ vây · 2016", "at": [8, "Lee"]}],
-     "tag": {"text": "CHỖ CỦA CON NGƯỜI THAY ĐỔI", "at": 7}},
+    {"type": "timeline", "at": 8, "items": [{"year": "KASPAROV", "text": "cờ vua · 1997", "at": 8}, {"year": "JENNINGS", "text": "đố vui · 2011", "at": [8, "từ"]}, {"year": "LEE SEDOL", "text": "cờ vây · 2016", "at": [8, "Lee"]}],
+     "tag": {"text": "CHỖ CỦA CON NGƯỜI THAY ĐỔI", "at": [8, None, 0, 0.6]}},
 ]}
 
 CH["ch12"] = {"hud": {"k": "CHƯƠNG 12", "t": "MỘT TRẬN NHỎ Ở WASHINGTON"}, "bgm": {"mood": "curious", "gain": 0.11}, "scenes": [
@@ -190,7 +190,7 @@ CH["ch17"] = {"hud": {"k": "CHƯƠNG 17", "t": "MỘT CỖ MÁY BIẾT TRANH LU�
     {"type": "chapter", "no": "17", "k": "CHƯƠNG MƯỜI BẢY", "title": "MỘT CỖ MÁY\nBIẾT TRANH LUẬN", "sub": "PROJECT DEBATER · 02.2019", "vid": "8089117", "ms": 16, "illus": VM, "titleAt": [0, "IBM"]},
     {"type": "ledger", "at": 3, "title": "SAN FRANCISCO · 02.2019", "rows": [{"k": "CON NGƯỜI", "v": "HARISH NATARAJAN", "at": 3}, {"k": "CHỦ ĐỀ", "v": "TRỢ CẤP MẦM NON?", "at": 4}, {"k": "CHUẨN BỊ", "v": "15 PHÚT", "at": [4, "mười"]}],
      "total": {"k": "MÁY · NGƯỜI", "v": "ỦNG HỘ · PHẢN ĐỐI", "at": 5}},
-    {"type": "timeline", "at": 6, "items": [{"year": "TRƯỚC", "text": "khán giả bỏ phiếu", "at": 7}, {"year": "SAU", "text": "bỏ phiếu lần nữa", "at": [7, "sau"]}, {"year": "THẮNG", "text": "bên làm nhiều người đổi ý về phía mình", "at": 8}]},
+    {"type": "timeline", "at": 7, "items": [{"year": "TRƯỚC", "text": "khán giả bỏ phiếu", "at": 7}, {"year": "SAU", "text": "bỏ phiếu lần nữa", "at": [7, "sau"]}, {"year": "THẮNG", "text": "bên làm nhiều người đổi ý về phía mình", "at": 8}]},
     {"type": "bars", "at": 9, "title": "KHÁN GIẢ ỦNG HỘ TRỢ CẤP (%)", "unit": "THEO AFP, 02.2019",
      "items": [{"k": "TRƯỚC TRANH LUẬN", "v": 79, "lbl": "79", "at": [10, "bảy"]}, {"k": "SAU TRANH LUẬN", "v": 62, "lbl": "62", "at": [10, "sáu"], "acc": True}]},
     {"type": "slam", "at": 12, "text": "CON NGƯỜI THẮNG", "sub": "TRÊN SÂN KHẤU CỦA NGÔN NGỮ", "subAt": 12},

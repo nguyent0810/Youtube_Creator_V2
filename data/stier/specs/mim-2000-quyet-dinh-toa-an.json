@@ -1,0 +1,163 @@
+{
+ "theme": "mim",
+ "title": "Hơn 2.000 quyết định của toà án trên thế giới liên quan tới nội dung do AI bịa (tính tới 10/2026)",
+ "description": "Tính tới ngày 05/10/2026, cơ sở dữ liệu của nhà nghiên cứu luật Damien Charlotin đã ghi hơn 2.000 quyết định của các toà án trên thế giới, nơi toà nhận thấy, hoặc ngầm cho rằng, có người đã dựa vào nội dung do AI bịa ra. Cỗ máy không nói dối theo nghĩa của con người: nó viết tiếp chữ nghe hợp lý nhất, nhiều khi không biết mình đang bịa; người gác cổng cuối cùng vẫn là người dùng. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/H9nlRjxfmPw (công khai từ 20:00 ngày 02/11).",
+ "tags": [
+  "ai trong toà án",
+  "cơ sở dữ liệu ảo giác ai",
+  "ai bịa",
+  "ảo giác ai",
+  "chatgpt",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "10/2026",
+ "acc": [
+  "hai",
+  "nghìn",
+  "gác",
+  "bịa",
+  "bạn"
+ ],
+ "kicker": "AI QUANH TA",
+ "lines": [
+  "Hơn hai nghìn quyết định của toà án, liên quan tới nội dung do AI bịa.",
+  "Đó là con số trong cơ sở dữ liệu của nhà nghiên cứu luật Damien Charlotin, tính tới tháng 10 năm 2026.",
+  "Mỗi mục là một lần toà nhận thấy, hoặc ngầm cho rằng, có người đã dựa vào nội dung AI bịa ra.",
+  "Từ một vụ ở New York năm 2023, tới hơn hai nghìn vụ trên khắp thế giới.",
+  "Cỗ máy không nói dối theo nghĩa của con người. Nó không có ý lừa ai.",
+  "Nó chỉ viết tiếp câu chữ nghe hợp lý nhất.",
+  "Nên người gác cổng cuối cùng, vẫn là bạn."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "HƠN 2.000",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "quyết định của toà án · nội dung AI bịa",
+     "at": [
+      0,
+      "quyết"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6101349",
+   "ms": 12,
+   "veil": 0.55
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 0,
+   "to": 2000,
+   "prefix": "> ",
+   "suffix": " QUYẾT ĐỊNH",
+   "until": [
+    1,
+    "tháng"
+   ],
+   "label": "CƠ SỞ DỮ LIỆU CỦA DAMIEN CHARLOTIN",
+   "sub": {
+    "text": "TÍNH TỚI 05/10/2026",
+    "at": [
+     1,
+     "tháng"
+    ]
+   }
+  },
+  {
+   "type": "timeline",
+   "at": 2,
+   "items": [
+    {
+     "year": "MỖI MỤC",
+     "text": "toà thấy có người dựa vào nội dung AI bịa",
+     "at": [
+      2,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "year": "2023 → 10/2026",
+     "text": "từ một vụ ở New York tới hơn 2.000 vụ",
+     "at": 3
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "CỖ MÁY",
+   "cards": [
+    {
+     "k": "KHÔNG",
+     "v": "CÓ Ý LỪA AI",
+     "at": 4
+    },
+    {
+     "k": "CHỈ",
+     "v": "VIẾT CHỮ NGHE HỢP LÝ",
+     "at": 5,
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NGƯỜI GÁC CỔNG CUỐI CÙNG",
+     "at": 6,
+     "sm": true
+    },
+    {
+     "text": "VẪN LÀ BẠN",
+     "at": [
+      6,
+      "vẫn"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:8731320",
+   "ms": 4,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 6
+  }
+ ],
+ "sources": [
+  "https://www.damiencharlotin.com/hallucinations/"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "=AI": "ây ai",
+  "new": "Niu",
+  "york": "Doóc",
+  "damien": "Đa-mi-en",
+  "charlotin": "Sác-lô-tanh"
+ },
+ "imgs": {}
+}

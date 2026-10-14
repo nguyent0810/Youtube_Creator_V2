@@ -1,0 +1,222 @@
+{
+ "theme": "mim",
+ "title": "Watson 77.147 đô la, hai nhà vô địch cộng lại 45.600: tỉ số trận Jeopardy năm 2011",
+ "description": "Sau hai ván phát sóng 14–16/02/2011, Watson có 77.147 đô la, Ken Jennings 24.000, Brad Rutter 21.600 (báo chí 16–17/02/2011). Watson gấp hơn ba lần người về nhì (kênh tự tính). Giải nhất một triệu đô la, IBM đem làm từ thiện. Mười bốn năm sau Deep Blue, lần thứ hai một cỗ máy IBM thắng con người trên sân chơi của con người. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: {LINK_WT} (công khai từ 20:00 ngày 19/11).",
+ "tags": [
+  "watson jeopardy kết quả",
+  "brad rutter",
+  "ibm watson",
+  "jeopardy",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "16/02/2011",
+ "acc": [
+  "bảy",
+  "ba",
+  "triệu",
+  "từ",
+  "thiện"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Bảy mươi bảy nghìn đô la, so với hai mươi tư nghìn. Đó là khoảng cách giữa cỗ máy và người về nhì.",
+  "Tháng hai năm 2011, Watson đấu với hai nhà vô địch giỏi nhất lịch sử chương trình Jeopardy.",
+  "Ngày đầu, nó chơi ngang ngửa. Từ ngày thứ hai, nó bứt lên.",
+  "Tổng sau hai ván: Watson hơn bảy mươi bảy nghìn, Ken Jennings hai mươi tư nghìn, Brad Rutter hai mươi mốt nghìn sáu.",
+  "Gấp hơn ba lần người về nhì.",
+  "Giải nhất một triệu đô la, IBM đem làm từ thiện.",
+  "Mười bốn năm sau Deep Blue, máy của IBM lại thắng người, lần này bằng ngôn ngữ."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "77.147 ↔ 24.000",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "cỗ máy và người về nhì",
+     "at": [
+      0,
+      "Đó"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7005884",
+   "ms": 4,
+   "veil": 0.55
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Ba người chơi",
+   "nodes": [
+    {
+     "text": "hai nhà vô địch giỏi nhất",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      1,
+      "hai"
+     ],
+     "shape": "none",
+     "w": 780
+    },
+    {
+     "text": "và Watson",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      1,
+      "Watson"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 480
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NGÀY HAI · BỨT LÊN",
+     "at": [
+      2,
+      "Từ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "ngày đầu ngang ngửa",
+     "at": 2,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:4841217",
+   "ms": 12,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 2
+  },
+  {
+   "type": "chart",
+   "at": 3,
+   "kind": "bars",
+   "title": "TỔNG SAU HAI VÁN (ĐÔ LA)",
+   "unit": "BÁO CHÍ · 16–17/02/2011",
+   "bars": [
+    {
+     "label": "WATSON",
+     "v": 77147,
+     "text": "77.147",
+     "c": "up",
+     "at": [
+      3,
+      "Watson"
+     ]
+    },
+    {
+     "label": "JENNINGS",
+     "v": 24000,
+     "text": "24.000",
+     "c": "ref",
+     "at": [
+      3,
+      "Ken"
+     ]
+    },
+    {
+     "label": "RUTTER",
+     "v": 21600,
+     "text": "21.600",
+     "c": "ref",
+     "at": [
+      3,
+      "Brad"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "GẤP HƠN BA LẦN",
+   "sub": "NGƯỜI VỀ NHÌ · KÊNH TỰ TÍNH"
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 1,
+   "to": 1,
+   "suffix": " TRIỆU ĐÔ LA",
+   "label": "GIẢI NHẤT · IBM LÀM TỪ THIỆN",
+   "sub": {
+    "text": "JEOPARDY · 2011",
+    "at": [
+     5,
+     "IBM"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "LẦN NÀY BẰNG NGÔN NGỮ",
+     "at": [
+      6,
+      "lần"
+     ],
+     "acc": true
+    },
+    {
+     "text": "14 năm sau Deep Blue",
+     "at": 6,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8567113",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 6
+  }
+ ],
+ "sources": [
+  "https://techcrunch.com/2011/02/16/the-final-night-of-ibms-jeopardy-challenge-how-did-watson-do",
+  "https://www.pcworld.com/article/494966/ibm_watson_wins_jeopardy_humans_rally_back.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "watson": "Oát-xần",
+  "ibm": "ai bi em",
+  "=IBM": "ai bi em",
+  "jeopardy": "Gie-pơ-đi",
+  "ken": "Ken",
+  "jennings": "Gien-ninh",
+  "brad": "Brát",
+  "rutter": "Rắt-tơ",
+  "deep": "Đíp",
+  "blue": "Blu"
+ },
+ "imgs": {}
+}

@@ -1,0 +1,170 @@
+{
+ "theme": "mim",
+ "title": "Kasparov đấu cùng lúc 32 máy chơi cờ và thắng cả 32 ván: Hamburg, 1985",
+ "description": "Ngày 06/06/1985 ở Hamburg (Tây Đức), Garry Kasparov đấu cùng lúc với 32 máy chơi cờ, đi từ bàn này sang bàn khác hơn năm giờ, và thắng 32–0. Sau này ông kể trận ấy không dễ, có một ván ông lâm vào thế khó. Mười hai năm sau, ông thua Deep Blue (Chessprogramming wiki). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: {LINK_DB} (công khai từ 20:00 ngày 12/11).",
+ "tags": [
+  "kasparov hamburg",
+  "32 máy",
+  "deep blue",
+  "kasparov",
+  "máy tính chơi cờ",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "HAMBURG · 1985",
+ "acc": [
+  "32",
+  "thắng",
+  "năm",
+  "giờ",
+  "mười"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Ba mươi hai máy chơi cờ, ba mươi hai ván thắng, cho một con người.",
+  "Tháng 6 năm 1985, ở Hamburg, Garry Kasparov đấu cùng lúc với ba mươi hai máy chơi cờ.",
+  "Ông đi từ bàn này sang bàn khác, đặt nước của mình, suốt hơn năm giờ đồng hồ.",
+  "Kết quả: ba mươi hai thắng, không thua ván nào.",
+  "Sau này ông kể trận ấy không hề dễ: có một ván, ông đã lâm vào thế khó.",
+  "Nhưng thông điệp rất rõ: trước nhà vô địch, máy vẫn chỉ là đối thủ nghiệp dư.",
+  "Mười hai năm sau, chính ông thua một cỗ máy. Khoảng cách ấy khép lại nhanh hơn mọi người nghĩ."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "32 – 0",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "một người đấu ba mươi hai máy",
+     "at": [
+      0,
+      "cho"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6600370",
+   "ms": 3,
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "HAMBURG · 1985",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "đấu cùng lúc với 32 máy",
+     "at": [
+      1,
+      "đấu"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8427425",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "from": 5,
+   "to": 5,
+   "prefix": "HƠN ",
+   "suffix": " GIỜ",
+   "label": "ĐI TỪ BÀN NÀY SANG BÀN KHÁC",
+   "sub": {
+    "text": "MỘT NGƯỜI · BA MƯƠI HAI BÀN",
+    "at": [
+     2,
+     "suốt"
+    ]
+   }
+  },
+  {
+   "type": "chart",
+   "at": 3,
+   "kind": "bars",
+   "title": "KẾT QUẢ · HAMBURG 1985",
+   "unit": "SỐ VÁN",
+   "bars": [
+    {
+     "label": "KASPAROV THẮNG",
+     "v": 32,
+     "text": "32",
+     "c": "up",
+     "at": [
+      3,
+      "ba"
+     ]
+    },
+    {
+     "label": "MÁY THẮNG",
+     "v": 0,
+     "text": "0",
+     "c": "ref",
+     "at": [
+      3,
+      "không"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "NHÌN LẠI",
+   "cards": [
+    {
+     "k": "LỜI KASPAROV",
+     "v": "KHÔNG HỀ DỄ",
+     "at": 4
+    },
+    {
+     "k": "THÔNG ĐIỆP",
+     "v": "MÁY VẪN NGHIỆP DƯ",
+     "at": 5,
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "12 NĂM SAU",
+   "sub": "CHÍNH ÔNG THUA MỘT CỖ MÁY"
+  }
+ ],
+ "sources": [
+  "https://chessprogramming.org/Kasparov_Simul_vs_32_Micros_Hamburg_1985"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "garry": "Ga-ri",
+  "kasparov": "Cát-xpa-rốp",
+  "hamburg": "Hăm-buốc"
+ },
+ "imgs": {}
+}

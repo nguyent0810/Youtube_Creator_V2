@@ -1,0 +1,168 @@
+{
+ "theme": "ck",
+ "kicker": "1 Ô HAY ĐIỀN SAI",
+ "sub": "QUỸ KHẨN CẤP",
+ "title": "Tính quỹ khẩn cấp: đừng nhân mức lương, hãy nhân chi tiêu thiết yếu",
+ "description": "Quỹ khẩn cấp dùng để sống qua giai đoạn khó, không phải để sống như bình thường: con số cần nhân là chi tiêu thiết yếu (nhà, ăn, điện nước, đi lại, các khoản nợ phải trả), không phải mức lương. VÍ DỤ GIẢ ĐỊNH: lương 12 triệu, thiết yếu 8 triệu → quỹ ba tháng 24 triệu thay vì 36 triệu. Mẹo: xem sao kê ba tháng gần nhất, đánh dấu khoản vẫn phải trả dù mất việc, cộng lại rồi chia ba.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (8 phút): https://youtu.be/iOxDRCkFbYY (công khai từ 20:00 ngày 04/11)",
+ "tags": [
+  "quỹ khẩn cấp",
+  "chi tiêu thiết yếu",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "lương",
+  "thiết",
+  "yếu",
+  "ba",
+  "tám"
+ ],
+ "lines": [
+  "Tính quỹ khẩn cấp, ô đầu tiên hay bị điền sai nhất.",
+  "Nhiều người lấy luôn mức lương của mình.",
+  "Nhưng quỹ này dùng để sống qua giai đoạn khó, không phải để sống như bình thường.",
+  "Con số cần điền là chi tiêu thiết yếu: nhà, ăn, điện nước, đi lại.",
+  "Ví dụ giả định, lương mười hai triệu, thiết yếu tám triệu. Quỹ ba tháng là hai mươi tư triệu, không phải ba mươi sáu.",
+  "Mẹo: xem sao kê ba tháng gần nhất, đánh dấu những khoản vẫn phải trả dù mất việc.",
+  "Cộng lại, rồi chia ba. Con số ấy thật hơn mọi ước đoán."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "Ô HAY BỊ ĐIỀN SAI NHẤT",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "khi tính quỹ khẩn cấp",
+     "at": [
+      0,
+      "Tính"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7247875",
+   "ms": 2,
+   "veil": 0.58
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "CON SỐ CẦN NHÂN",
+   "cards": [
+    {
+     "k": "NHIỀU NGƯỜI LẤY",
+     "v": "MỨC LƯƠNG",
+     "at": 1
+    },
+    {
+     "k": "CẦN LẤY",
+     "v": "CHI TIÊU THIẾT YẾU",
+     "at": 3,
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Thiết yếu gồm",
+   "nodes": [
+    {
+     "text": "nhà · ăn",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      3,
+      "nhà"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "điện nước · đi lại",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      3,
+      "điện"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 640
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "at": 4,
+   "kind": "bars",
+   "title": "QUỸ BA THÁNG (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH",
+   "bars": [
+    {
+     "label": "NHÂN LƯƠNG\n12 × 3",
+     "v": 36,
+     "text": "36",
+     "c": "ref",
+     "at": [
+      4,
+      "sáu"
+     ]
+    },
+    {
+     "label": "NHÂN THIẾT YẾU\n8 × 3",
+     "v": 24,
+     "text": "24",
+     "c": "up",
+     "at": [
+      4,
+      "hai"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MẸO: SAO KÊ 3 THÁNG",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "đánh dấu khoản vẫn phải trả · cộng lại · chia ba",
+     "at": 6,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34828872",
+   "ms": 6,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 5
+  }
+ ],
+ "sources": [
+  "https://www.vietnam-briefing.com/news/rising-confidence-vietnam-tops-asean-in-consumer-sentiment.html/"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

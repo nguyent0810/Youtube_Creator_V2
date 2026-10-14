@@ -1,0 +1,197 @@
+{
+ "theme": "mim",
+ "title": "Watson cho ung thư được dạy bằng ca bệnh giả định: điều tài liệu nội bộ IBM tiết lộ năm 2018",
+ "description": "Năm 2018, trang tin y khoa STAT công bố tài liệu nội bộ của IBM về Watson for Oncology: chuyên gia đã thấy những khuyến nghị không an toàn và không chính xác trong quá trình thử nghiệm; hệ thống được dạy chủ yếu bằng một số ít ca bệnh giả định do bác sĩ soạn, thay vì dữ liệu thật của nhiều bệnh nhân. IBM cho biết chưa bệnh nhân nào bị tổn hại và bác sĩ luôn quyết định cuối cùng (Wikipedia: IBM Watson). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: {LINK_WT} (công khai từ 20:00 ngày 19/11).",
+ "tags": [
+  "watson for oncology",
+  "dữ liệu huấn luyện",
+  "ibm watson",
+  "jeopardy",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "STAT · 2018",
+ "acc": [
+  "giả",
+  "định",
+  "thật",
+  "tự",
+  "tin"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Một cỗ máy tư vấn ung thư, được dạy chủ yếu bằng những ca bệnh không có thật.",
+  "Năm 2018, trang tin y khoa STAT công bố một loạt tài liệu nội bộ của IBM.",
+  "Theo đó, chuyên gia đã thấy những khuyến nghị không an toàn, không chính xác khi thử nghiệm.",
+  "Nguyên nhân được nêu: nó học từ một số ít ca bệnh giả định do bác sĩ soạn, không phải dữ liệu thật của nhiều bệnh nhân.",
+  "IBM cho biết chưa bệnh nhân nào bị tổn hại, và bác sĩ luôn là người quyết định cuối cùng.",
+  "Vậy là nó học cách nghĩ của một nhóm nhỏ chuyên gia, ở một bệnh viện.",
+  "Độ tự tin của một cỗ máy chỉ đáng tin bằng dữ liệu mà nó đã học."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CA BỆNH KHÔNG CÓ THẬT",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "dạy một cỗ máy tư vấn ung thư",
+     "at": [
+      0,
+      "tư"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:30365276",
+   "ms": 6,
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "STAT · 2018",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "tài liệu nội bộ của IBM",
+     "at": [
+      1,
+      "tài"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:5406022",
+   "ms": 8,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "KHÔNG AN TOÀN · KHÔNG CHÍNH XÁC",
+   "sub": "KHUYẾN NGHỊ CHUYÊN GIA THẤY KHI THỬ NGHIỆM"
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "DỮ LIỆU HỌC",
+   "cards": [
+    {
+     "k": "CHỦ YẾU",
+     "v": "CA BỆNH GIẢ ĐỊNH",
+     "at": [
+      3,
+      "ca"
+     ]
+    },
+    {
+     "k": "KHÔNG PHẢI",
+     "v": "DỮ LIỆU THẬT",
+     "at": [
+      3,
+      "không"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Phía IBM",
+   "nodes": [
+    {
+     "text": "chưa bệnh nhân nào bị hại",
+     "x": 0.5,
+     "y": 0.3,
+     "at": 4,
+     "shape": "none",
+     "w": 780
+    },
+    {
+     "text": "bác sĩ quyết định cuối",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      4,
+      "bác"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 720
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 1,
+   "to": 1,
+   "suffix": " BỆNH VIỆN",
+   "label": "NƠI HỆ THỐNG HỌC CÁCH NGHĨ",
+   "sub": {
+    "text": "MỘT NHÓM NHỎ CHUYÊN GIA",
+    "at": [
+     5,
+     "một"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "ĐỘ TỰ TIN = DỮ LIỆU",
+     "at": 6,
+     "acc": true
+    },
+    {
+     "text": "chỉ đáng tin bằng thứ nó đã học",
+     "at": [
+      6,
+      "chỉ"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:28709421",
+   "ms": 8,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 6
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/IBM_Watson"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "ibm": "ai bi em",
+  "=IBM": "ai bi em",
+  "stat": "Xtát"
+ },
+ "imgs": {}
+}

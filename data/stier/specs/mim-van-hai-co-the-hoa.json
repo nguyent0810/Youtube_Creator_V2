@@ -1,0 +1,172 @@
+{
+ "theme": "mim",
+ "title": "Kasparov xin thua ở một thế cờ có thể hoà: ván hai năm 1997 và lời buộc tội Deep Blue",
+ "description": "Ván hai trận tái đấu năm 1997, Deep Blue từ chối những miếng mồi và chơi những nước chậm rãi như một đại kiện tướng. Kasparov xin thua. Sau trận, các nhà phân tích tìm ra cách để quân đen chiếu tướng liên tục, buộc hoà. Kasparov nghi có người can thiệp vào máy trong lúc thi đấu; IBM khẳng định mọi can thiệp của con người chỉ diễn ra giữa các ván (Wikipedia). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: {LINK_DB} (công khai từ 20:00 ngày 12/11).",
+ "tags": [
+  "kasparov buộc tội",
+  "ván hai",
+  "deep blue",
+  "kasparov",
+  "máy tính chơi cờ",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "VÁN HAI · 04/05/1997",
+ "acc": [
+  "hoà",
+  "mồi",
+  "nghi",
+  "chiếu",
+  "thua"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Nhà vô địch thế giới đã xin thua, ở một thế cờ có thể hoà.",
+  "Ván hai trận tái đấu năm 1997, Deep Blue chơi theo một cách khiến cả khán phòng sững sờ.",
+  "Máy thời ấy nổi tiếng tham lam: thấy quân hở là ăn ngay. Lần này, nó từ chối những miếng mồi.",
+  "Kasparov bị dồn ép dần, rồi xin thua.",
+  "Sau trận, các nhà phân tích tìm ra cách để quân đen chiếu tướng liên tục, buộc ván cờ phải hoà.",
+  "Kasparov nghi đã có người can thiệp vào máy trong lúc thi đấu. IBM khẳng định điều ấy không hề xảy ra.",
+  "Một ván thua có thể hoà, đã sinh ra một lời buộc tội kéo dài suốt hai mươi năm."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "THUA Ở THẾ HOÀ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "ván hai · 1997",
+     "at": [
+      0,
+      "xin"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8758291",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "KHÁN PHÒNG SỮNG SỜ",
+     "at": [
+      1,
+      "khiến"
+     ],
+     "acc": true
+    },
+    {
+     "text": "ván hai trận tái đấu",
+     "at": 1,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8427425",
+   "ms": 10,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "CÁCH CHƠI CỦA MÁY",
+   "cards": [
+    {
+     "k": "THƯỜNG LỆ",
+     "v": "THẤY HỞ LÀ ĂN",
+     "at": 2
+    },
+    {
+     "k": "VÁN NÀY",
+     "v": "TỪ CHỐI MIẾNG MỒI",
+     "at": [
+      2,
+      "Lần"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "CHIẾU TƯỚNG LIÊN TỤC",
+   "sub": "PHÂN TÍCH SAU TRẬN · LẼ RA HOÀ ĐƯỢC"
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Hai phía",
+   "nodes": [
+    {
+     "text": "Kasparov: có người can thiệp",
+     "x": 0.5,
+     "y": 0.3,
+     "at": 5,
+     "shape": "none",
+     "w": 860
+    },
+    {
+     "text": "IBM: không hề xảy ra",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      5,
+      "IBM"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 720
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "from": 20,
+   "to": 20,
+   "suffix": " NĂM",
+   "label": "LỜI BUỘC TỘI KÉO DÀI",
+   "sub": {
+    "text": "TỚI CUỐN SÁCH NĂM 2017",
+    "at": [
+     6,
+     "kéo"
+    ]
+   }
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Deep_Blue_versus_Garry_Kasparov"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "deep": "Đíp",
+  "blue": "Blu",
+  "ibm": "ai bi em",
+  "=IBM": "ai bi em",
+  "kasparov": "Cát-xpa-rốp"
+ },
+ "imgs": {}
+}

@@ -1,0 +1,155 @@
+{
+ "theme": "mim",
+ "title": "AI sai, rồi bảo người hỏi “có lẽ bạn đang nhầm với một bộ phim”: chuyện phi hành gia NASA",
+ "description": "Trong phép thử của EBU và BBC (cuối 05 – đầu 06/2025), một câu hỏi là: vì sao các phi hành gia NASA bị kẹt ngoài không gian? Hai phi hành gia lẽ ra chỉ ở trạm vũ trụ quốc tế khoảng tám ngày đã phải ở lại hơn chín tháng vì tàu trục trặc. Một trợ lý AI trả lời rằng họ không hề bị kẹt, rồi nhắc người hỏi: có lẽ bạn đang nhầm với một bộ phim khoa học viễn tưởng (trích dịch theo báo cáo). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/H9nlRjxfmPw (công khai từ 20:00 ngày 02/11).",
+ "tags": [
+  "ebu bbc",
+  "ai và tin tức",
+  "nasa",
+  "ai bịa",
+  "ảo giác ai",
+  "chatgpt",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "EBU · BBC · 2025",
+ "acc": [
+  "tám",
+  "chín",
+  "phim",
+  "nhầm",
+  "sai"
+ ],
+ "kicker": "AI QUANH TA",
+ "lines": [
+  "Tám ngày thành hơn chín tháng. Và một AI bảo đó là chuyện trong phim.",
+  "Năm 2025, các đài công cộng châu Âu hỏi bốn trợ lý AI những câu về thời sự.",
+  "Một câu là: vì sao các phi hành gia NASA bị kẹt ngoài không gian?",
+  "Họ lẽ ra chỉ ở trạm vũ trụ quốc tế khoảng tám ngày. Tàu trục trặc, họ phải ở lại hơn chín tháng.",
+  "Một trợ lý trả lời: các phi hành gia không hề bị kẹt.",
+  "Rồi nó nhắc người hỏi: có lẽ bạn đang nhầm với một bộ phim khoa học viễn tưởng.",
+  "Máy sai. Rồi bảo người đúng là đang nhầm."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "8 NGÀY → HƠN 9 THÁNG",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "và một AI bảo đó là chuyện trong phim",
+     "at": [
+      0,
+      "Và"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:39428970",
+   "veil": 0.5
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "EBU · BBC · 2025",
+   "sub": "4 TRỢ LÝ AI · CÂU HỎI THỜI SỰ"
+  },
+  {
+   "type": "chart",
+   "at": 3,
+   "kind": "bars",
+   "title": "THỜI GIAN Ở TRẠM VŨ TRỤ",
+   "unit": "THEO BÁO CÁO EBU – BBC",
+   "bars": [
+    {
+     "label": "DỰ KIẾN",
+     "v": 8,
+     "text": "~8 NGÀY",
+     "c": "ref",
+     "at": [
+      3,
+      "tám"
+     ]
+    },
+    {
+     "label": "THỰC TẾ",
+     "v": 280,
+     "text": "> 9 THÁNG",
+     "c": "down",
+     "at": [
+      3,
+      "chín"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "MỘT TRỢ LÝ TRẢ LỜI",
+   "cards": [
+    {
+     "k": "1",
+     "v": "“KHÔNG HỀ BỊ KẸT”",
+     "at": 4
+    },
+    {
+     "k": "2",
+     "v": "“BẠN ĐANG NHẦM VỚI PHIM”",
+     "at": 5,
+     "c": "acc"
+    }
+   ],
+   "note": "TRÍCH DỊCH THEO BÁO CÁO"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MÁY SAI",
+     "at": 6,
+     "sm": true
+    },
+    {
+     "text": "RỒI BẢO NGƯỜI ĐÚNG ĐANG NHẦM",
+     "at": [
+      6,
+      "Rồi"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7362704",
+   "ms": 8,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 6
+  }
+ ],
+ "sources": [
+  "https://www.ebu.ch/files/live/sites/ebu/files/Publications/Intelligence/open/EBU-Intelligence-BBC_News_Integrity_in_AI_Assistants_Report_2025.pdf"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "=AI": "ây ai",
+  "nasa": "Na-xa"
+ },
+ "imgs": {}
+}

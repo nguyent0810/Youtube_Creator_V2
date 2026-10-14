@@ -1,0 +1,180 @@
+{
+ "theme": "mim",
+ "title": "125 đô la và chỉ gõ được chữ hoa: chiếc máy đánh chữ bán ra ngày 01/07/1874",
+ "description": "Ngày 01/07/1874, máy đánh chữ Sholes and Glidden được bán ra, giá khoảng 125 đô la, chỉ gõ được chữ in hoa. Tới cuối năm ấy chỉ bán được khoảng 400 chiếc. Phải tới năm 1878, đời máy thứ hai mới có phím Shift để gõ chữ thường (Wikipedia: Sholes and Glidden typewriter). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/KJ5y_Ypnc4U (công khai từ 20:00 ngày 05/11).",
+ "tags": [
+  "sholes and glidden",
+  "phím shift",
+  "bàn phím qwerty",
+  "lịch sử bàn phím",
+  "máy đánh chữ",
+  "công nghệ",
+  "mind in the machine"
+ ],
+ "sub": "01/07/1874",
+ "acc": [
+  "125",
+  "hoa",
+  "chậm",
+  "Shift",
+  "bốn"
+ ],
+ "kicker": "CHUYỆN CÔNG NGHỆ",
+ "lines": [
+  "Một trăm hai mươi lăm đô la, và chỉ gõ được chữ hoa.",
+  "Ngày 1 tháng 7 năm 1874, chiếc máy đánh chữ của Sholes được bán ra.",
+  "Giá khoảng một trăm hai mươi lăm đô la Mỹ thời ấy.",
+  "Nó chỉ gõ được chữ in hoa.",
+  "Và nó bán rất chậm: tới cuối năm, chỉ được khoảng bốn trăm chiếc.",
+  "Phải tới năm 1878, đời máy thứ hai mới có phím Shift để gõ chữ thường.",
+  "Phím Shift bạn bấm mỗi ngày, đến sau chiếc máy ấy bốn năm."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "125 ĐÔ LA",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "và chỉ gõ được chữ hoa",
+     "at": [
+      0,
+      "chỉ"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6037662",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "01/07/1874",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "máy đánh chữ của Sholes bán ra",
+     "at": [
+      1,
+      "bán"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7888283",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "from": 125,
+   "to": 125,
+   "suffix": " ĐÔ LA",
+   "label": "GIÁ BÁN · KHOẢNG",
+   "sub": {
+    "text": "WIKIPEDIA · SHOLES AND GLIDDEN",
+    "at": 2
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CHỈ CHỮ IN HOA",
+     "at": 3,
+     "acc": true
+    },
+    {
+     "text": "không có chữ thường",
+     "at": [
+      3,
+      "chữ"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:31176143",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 3
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 400,
+   "to": 400,
+   "suffix": " CHIẾC",
+   "label": "BÁN ĐƯỢC TỚI CUỐI NĂM 1874",
+   "sub": {
+    "text": "KHOẢNG · BÁN RẤT CHẬM",
+    "at": [
+     4,
+     "chỉ"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "PHÍM SHIFT",
+   "cards": [
+    {
+     "k": "1874",
+     "v": "CHỈ CHỮ HOA",
+     "at": [
+      5,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "k": "1878",
+     "v": "CÓ PHÍM SHIFT",
+     "at": [
+      5,
+      "Shift"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "SHIFT",
+   "sub": "ĐẾN SAU BỐN NĂM"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Sholes_and_Glidden_typewriter"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "sholes": "Sôn",
+  "shift": "síp"
+ },
+ "imgs": {}
+}

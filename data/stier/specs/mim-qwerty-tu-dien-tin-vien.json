@@ -1,0 +1,197 @@
+{
+ "theme": "mim",
+ "title": "Bàn phím QWERTY có thể được xếp theo ý những điện tín viên: giả thuyết Kyoto 2011",
+ "description": "Năm 2011, Koichi và Motoko Yasuoka (Đại học Kyoto) lần lại những người dùng thử chiếc máy đánh chữ đầu tiên: các điện tín viên nghe mã Morse rồi chép lại thành chữ. Theo hai tác giả, bố cục phím được sửa nhiều lần theo yêu cầu của họ và thành QWERTY khá tình cờ. Đây là một giả thuyết; giới sử học chưa ngã ngũ (ZINBUN số 42, 03/2011). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/KJ5y_Ypnc4U (công khai từ 20:00 ngày 05/11).",
+ "tags": [
+  "điện tín",
+  "mã morse",
+  "bàn phím qwerty",
+  "lịch sử bàn phím",
+  "máy đánh chữ",
+  "công nghệ",
+  "mind in the machine"
+ ],
+ "sub": "KYOTO · 2011",
+ "acc": [
+  "điện",
+  "Morse",
+  "tình",
+  "giả",
+  "thuyết"
+ ],
+ "kicker": "CHUYỆN CÔNG NGHỆ",
+ "lines": [
+  "Bàn phím bạn gõ mỗi ngày có thể đã được sắp xếp theo ý của những điện tín viên.",
+  "Năm 2011, hai nhà nghiên cứu ở Đại học Kyoto lần lại những người dùng thử chiếc máy đánh chữ đầu tiên.",
+  "Đó là các điện tín viên, những người nghe mã Morse rồi chép lại thành chữ.",
+  "Bố cục phím được sửa đi sửa lại suốt khoảng năm năm. Theo hai tác giả, đó là theo yêu cầu của chính những người ấy.",
+  "Và nó thành ra QWERTY một cách khá tình cờ.",
+  "Đó là một giả thuyết, và giới sử học vẫn chưa ngã ngũ.",
+  "Nhưng nếu nó đúng, bàn phím của bạn là dấu vết của nghề điện tín, chứ không phải của một ý đồ."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "ĐIỆN TÍN VIÊN",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "người xếp bàn phím của bạn",
+     "at": [
+      0,
+      "sắp"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:31176143",
+   "veil": 0.55
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "ĐẠI HỌC KYOTO",
+   "sub": "YASUOKA & YASUOKA · 2011"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MÃ MORSE → CHỮ",
+     "at": 2,
+     "acc": true
+    },
+    {
+     "text": "nghe rồi chép lại",
+     "at": [
+      2,
+      "chép"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7888283",
+   "ms": 10,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 2
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "from": 5,
+   "to": 5,
+   "suffix": " NĂM",
+   "label": "SỬA ĐI SỬA LẠI BỐ CỤC · KHOẢNG",
+   "sub": {
+    "text": "THEO YÊU CẦU CỦA ĐIỆN TÍN VIÊN",
+    "at": [
+     3,
+     "Theo"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Kết quả",
+   "nodes": [
+    {
+     "text": "sửa nhiều lần",
+     "x": 0.5,
+     "y": 0.3,
+     "at": 4,
+     "shape": "none",
+     "w": 640
+    },
+    {
+     "text": "QWERTY · khá tình cờ",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      4,
+      "tình"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 720
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "MỨC ĐỘ CHẮC CHẮN",
+   "cards": [
+    {
+     "k": "ĐÂY LÀ",
+     "v": "MỘT GIẢ THUYẾT",
+     "at": 5
+    },
+    {
+     "k": "GIỚI SỬ HỌC",
+     "v": "CHƯA NGÃ NGŨ",
+     "at": [
+      5,
+      "giới"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "DẤU VẾT NGHỀ ĐIỆN TÍN",
+     "at": [
+      6,
+      "dấu"
+     ],
+     "acc": true
+    },
+    {
+     "text": "không phải một ý đồ",
+     "at": [
+      6,
+      "chứ"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:3945445",
+   "ms": 6,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 6
+  }
+ ],
+ "sources": [
+  "https://repository.kulib.kyoto-u.ac.jp/dspace/handle/2433/139379"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "=QWERTY": "quớt-ti",
+  "qwerty": "quớt-ti",
+  "kyoto": "Ki-ô-tô",
+  "morse": "Moóc-xơ"
+ },
+ "imgs": {}
+}

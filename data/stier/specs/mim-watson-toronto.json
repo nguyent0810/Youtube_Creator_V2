@@ -1,0 +1,174 @@
+{
+ "theme": "mim",
+ "title": "Watson trả lời “Toronto?????” cho câu hỏi về thành phố Mỹ, và cược đúng 947 đô la",
+ "description": "Final Jeopardy ván một, 14/02/2011, chủ đề các thành phố Mỹ. Đáp án đúng là Chicago; Watson viết “What is Toronto?????” và chỉ cược 947 đô la. Trưởng nhóm David Ferrucci giải thích: tên chủ đề thường chỉ gợi ý lỏng lẻo nên Watson được dạy không quá tin vào nó; Mỹ cũng có vài nơi tên Toronto, và Toronto của Canada có đội bóng chày chơi ở một giải của Mỹ (CTV, PCWorld). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: {LINK_WT} (công khai từ 20:00 ngày 19/11).",
+ "tags": [
+  "watson toronto",
+  "final jeopardy",
+  "ibm watson",
+  "jeopardy",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "JEOPARDY · 2011",
+ "acc": [
+  "Toronto",
+  "947",
+  "ít",
+  "sai",
+  "chắc"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Toronto, kèm năm dấu hỏi. Đó là câu trả lời của một cỗ máy cho câu hỏi về một thành phố nước Mỹ.",
+  "Tháng hai năm 2011, IBM đưa cỗ máy Watson lên chương trình đố vui Jeopardy.",
+  "Câu cuối của ván đầu hỏi về hai sân bay của một thành phố Mỹ. Đáp án đúng là Chicago.",
+  "Watson viết Toronto. Mà Toronto thì ở Canada.",
+  "Nhưng nó chỉ cược chín trăm bốn mươi bảy đô la, một con số nhỏ, vì nó không tin vào đáp án của mình.",
+  "Trưởng nhóm giải thích: tên chủ đề thường chỉ gợi ý lỏng lẻo, và nước Mỹ cũng có vài nơi tên là Toronto.",
+  "Cỗ máy đã sai. Nhưng nó biết mình có thể sai, và nó cược ít."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "TORONTO?????",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "câu trả lời cho một thành phố Mỹ",
+     "at": [
+      0,
+      "câu"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:4841217",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "JEOPARDY · 02/2011",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "IBM Watson lên sóng truyền hình",
+     "at": [
+      1,
+      "Watson"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7005884",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "CÂU CUỐI · VÁN ĐẦU",
+   "cards": [
+    {
+     "k": "ĐÁP ÁN ĐÚNG",
+     "v": "CHICAGO",
+     "at": [
+      2,
+      "Đáp"
+     ]
+    },
+    {
+     "k": "WATSON VIẾT",
+     "v": "TORONTO",
+     "at": 3,
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 947,
+   "to": 947,
+   "suffix": " ĐÔ LA",
+   "label": "SỐ TIỀN WATSON ĐẶT CƯỢC",
+   "sub": {
+    "text": "VÌ NÓ KHÔNG TIN ĐÁP ÁN CỦA MÌNH",
+    "at": [
+     4,
+     "vì"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Vì sao Toronto",
+   "nodes": [
+    {
+     "text": "tên chủ đề chỉ gợi ý lỏng lẻo",
+     "x": 0.5,
+     "y": 0.3,
+     "at": 5,
+     "shape": "none",
+     "w": 860
+    },
+    {
+     "text": "Mỹ cũng có nơi tên Toronto",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      5,
+      "nước"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 780
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "SAI · NHƯNG CƯỢC ÍT",
+   "sub": "VÌ BIẾT MÌNH CÓ THỂ SAI"
+  }
+ ],
+ "sources": [
+  "https://www.ctvnews.ca/ibm-s-computer-wins-jeopardy-but-toronto-1.608022",
+  "https://www.pcworld.com/article/494966/ibm_watson_wins_jeopardy_humans_rally_back.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "watson": "Oát-xần",
+  "ibm": "ai bi em",
+  "=IBM": "ai bi em",
+  "jeopardy": "Gie-pơ-đi",
+  "toronto": "To-rôn-tô",
+  "chicago": "Si-ca-gô",
+  "canada": "Ca-na-đa"
+ },
+ "imgs": {}
+}

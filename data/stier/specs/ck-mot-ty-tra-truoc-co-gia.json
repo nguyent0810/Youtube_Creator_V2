@@ -1,0 +1,165 @@
+{
+ "title": "Một tỷ trả trước mua nhà cũng có giá: tiền lãi của nó gần bằng tiền thuê căn y hệt (ví dụ giả định)",
+ "description": "Một tỷ trả trước nếu gửi tiết kiệm 12 tháng ở mức 6,8%/năm (mức của nhóm ngân hàng lớn, 09/2026) cho khoảng 68 triệu/năm, tức khoảng 5,7 triệu/tháng; lãi tiền gửi của cá nhân hiện không chịu thuế thu nhập cá nhân. Đặt cạnh tiền thuê căn y hệt khoảng 6,25 triệu/tháng (ví dụ giả định 3%/năm của 2,5 tỷ). Đây là chi phí cơ hội: khoản chi không ai gửi hoá đơn.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ: https://youtu.be/pXKfIo_nyVM (công khai từ 20:00 ngày 07/11)",
+ "tags": [
+  "chi phí cơ hội",
+  "tiền trả trước mua nhà",
+  "mua hay thuê nhà",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "một",
+  "tỷ",
+  "năm",
+  "sáu",
+  "hoá"
+ ],
+ "kicker": "QUYẾT ĐỊNH LỚN",
+ "sub": "MUA HAY THUÊ",
+ "lines": [
+  "Một tỷ trả trước mua nhà cũng có giá, chỉ là không ai gửi hoá đơn.",
+  "Nếu không đặt vào căn nhà, một tỷ ấy có thể nằm trong sổ tiết kiệm.",
+  "Ở mức sáu phẩy tám phần trăm một năm, mỗi năm nó sinh ra khoảng sáu mươi tám triệu tiền lãi.",
+  "Chia ra, khoảng năm triệu bảy mỗi tháng.",
+  "Đặt cạnh tiền thuê một căn y hệt trong ví dụ giả định, khoảng sáu triệu hai.",
+  "Gần bằng nhau. Riêng tiền lãi của khoản trả trước đã gần đủ trả tiền thuê.",
+  "Khi tỷ suất cho thuê thấp hơn lãi tiết kiệm, nếu chỉ tính tiền ra tiền vào, đi thuê thường rẻ hơn."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "1 TỶ TRẢ TRƯỚC",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "cũng có giá · không ai gửi hoá đơn",
+     "at": [
+      0,
+      "chỉ"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7817154",
+   "veil": 0.58
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "HOẶC NẰM TRONG SỔ TIẾT KIỆM",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "nếu không đặt vào căn nhà",
+     "at": [
+      1,
+      "Nếu"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7735913",
+   "ms": 2,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "from": 68,
+   "to": 68,
+   "suffix": " TRIỆU",
+   "label": "TIỀN LÃI MỖI NĂM · Ở MỨC 6,8%",
+   "sub": {
+    "text": "KHOẢNG 5,7 TRIỆU MỖI THÁNG",
+    "at": 3
+   }
+  },
+  {
+   "type": "chart",
+   "at": 4,
+   "kind": "bars",
+   "title": "MỖI THÁNG (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "bars": [
+    {
+     "label": "LÃI CỦA 1 TỶ",
+     "v": 5.67,
+     "text": "~5,7",
+     "c": "up",
+     "at": [
+      4,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "label": "TIỀN THUÊ\nCĂN Y HỆT",
+     "v": 6.25,
+     "text": "~6,2",
+     "c": "ref",
+     "at": [
+      4,
+      "sáu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "GẦN BẰNG NHAU",
+   "sub": "LÃI KHOẢN TRẢ TRƯỚC ≈ TIỀN THUÊ"
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "KHI NÀO ĐI THUÊ RẺ HƠN",
+   "cards": [
+    {
+     "k": "TỶ SUẤT CHO THUÊ",
+     "v": "THẤP HƠN",
+     "at": 6
+    },
+    {
+     "k": "LÃI TIẾT KIỆM",
+     "v": "CAO HƠN",
+     "at": [
+      6,
+      "lãi"
+     ],
+     "c": "acc"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://cafebiz.vn/loi-suat-cho-thue-nha-chi-con-tu-2-3-bat-dong-san-con-hap-dan-176260829091836212.chn"
+ ],
+ "theme": "ck",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

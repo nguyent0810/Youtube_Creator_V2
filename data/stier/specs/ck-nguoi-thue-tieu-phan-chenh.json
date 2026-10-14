@@ -1,0 +1,168 @@
+{
+ "title": "Lợi thế của người đi thuê chỉ thành tiền khi phần chênh thật sự được để dành (ví dụ giả định)",
+ "description": "VÍ DỤ GIẢ ĐỊNH (kênh tự tính): nhà thuê để dành đủ phần chênh mỗi tháng (khoảng 13,5 triệu tháng đầu) có khoảng 4 tỷ sau 10 năm. Nếu tiêu hết phần chênh, chỉ còn khoảng 2 tỷ (1 tỷ trả trước cộng lãi); khi ấy giá nhà chỉ cần tăng gần 2%/năm là nhà mua đã đuổi kịp. Người mua bị ép để dành: sau 10 năm đã trả 600 triệu tiền gốc.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ: https://youtu.be/pXKfIo_nyVM (công khai từ 20:00 ngày 07/11)",
+ "tags": [
+  "kỷ luật tài chính",
+  "đi thuê nhà",
+  "mua hay thuê nhà",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "để",
+  "dành",
+  "hai",
+  "ép",
+  "chênh"
+ ],
+ "kicker": "QUYẾT ĐỊNH LỚN",
+ "sub": "MUA HAY THUÊ",
+ "lines": [
+  "Người đi thuê chỉ thắng khi làm được một việc: để dành phần chênh.",
+  "Ví dụ giả định: tháng đầu, phần chênh giữa khoản trả của người mua và tiền thuê là khoảng mười ba triệu rưỡi.",
+  "Để dành đủ suốt mười năm, nhà thuê có khoảng bốn tỷ.",
+  "Nếu tiêu mất phần chênh, họ chỉ còn khoảng hai tỷ: một tỷ trả trước, cộng tiền lãi.",
+  "Khi ấy, giá nhà chỉ cần tăng chừng gần hai phần trăm mỗi năm là nhà mua đã đuổi kịp.",
+  "Người mua bị ép để dành: sau mười năm, họ đã trả sáu trăm triệu tiền gốc. Người thuê thì phải tự ép mình.",
+  "Đi thuê là đặt cược vào kỷ luật của chính mình, chứ không phải vào giá nhà."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "ĐỂ DÀNH PHẦN CHÊNH",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "điều kiện để người thuê thắng",
+     "at": [
+      0,
+      "chỉ"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:4553195",
+   "veil": 0.58
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 13.5,
+   "to": 13.5,
+   "prefix": "~",
+   "suffix": " TRIỆU",
+   "label": "PHẦN CHÊNH THÁNG ĐẦU",
+   "sub": {
+    "text": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+    "at": [
+     1,
+     "khoảng"
+    ]
+   }
+  },
+  {
+   "type": "chart",
+   "at": 2,
+   "kind": "bars",
+   "title": "NHÀ THUÊ SAU 10 NĂM (TỶ ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "bars": [
+    {
+     "label": "ĐỂ DÀNH ĐỦ",
+     "v": 4.05,
+     "text": "~4",
+     "c": "up",
+     "at": [
+      2,
+      "bốn"
+     ]
+    },
+    {
+     "label": "TIÊU HẾT\nPHẦN CHÊNH",
+     "v": 2.02,
+     "text": "~2",
+     "c": "down",
+     "at": [
+      3,
+      "hai"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "~2%/NĂM",
+     "at": 4,
+     "acc": true
+    },
+    {
+     "text": "đủ để nhà mua đuổi kịp",
+     "at": [
+      4,
+      "là"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6221103",
+   "ms": 12,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 4
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "AI ÉP AI ĐỂ DÀNH",
+   "cards": [
+    {
+     "k": "NGƯỜI MUA",
+     "v": "BỊ ÉP · 600 TRIỆU GỐC",
+     "at": 5
+    },
+    {
+     "k": "NGƯỜI THUÊ",
+     "v": "PHẢI TỰ ÉP MÌNH",
+     "at": [
+      5,
+      "Người",
+      1
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "CƯỢC VÀO KỶ LUẬT",
+   "sub": "KHÔNG PHẢI VÀO GIÁ NHÀ"
+  }
+ ],
+ "sources": [
+  "https://cafebiz.vn/loi-suat-cho-thue-nha-chi-con-tu-2-3-bat-dong-san-con-hap-dan-176260829091836212.chn"
+ ],
+ "theme": "ck",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

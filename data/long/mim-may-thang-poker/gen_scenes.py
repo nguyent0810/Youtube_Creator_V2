@@ -80,7 +80,7 @@ CH["ch05"] = {"hud": {"k": "CHƯƠNG 05", "t": "LẦN THUA NĂM 2015"}, "bgm": {
 CH["ch06"] = {"hud": {"k": "CHƯƠNG 06", "t": "HỌC BẰNG SỰ HỐI TIẾC"}, "bgm": {"mood": "calm", "gain": 0.11}, "scenes": [
     {"type": "chapter", "no": "6", "k": "CHƯƠNG 06", "title": "HỌC BẰNG\nSỰ HỐI TIẾC", "sub": "TỰ CHƠI VỚI CHÍNH MÌNH", "vid": "5028622", "illus": VM, "titleAt": [0, "Libratus"]},
     {"type": "myth", "at": 1, "mythLab": "KHÔNG HỌC BẰNG", "myth": "XEM NGƯỜI KHÁC CHƠI", "truthLab": "MÀ", "truth": "TỰ CHƠI VỚI CHÍNH MÌNH", "strikeAt": [1, "Nó"], "truthAt": [1, "tự"]},
-    {"type": "timeline", "at": 3, "items": [{"year": "SAU MỖI VÁN", "text": "giá như chọn cách khác, được thêm bao nhiêu?", "at": 4}, {"year": "CON SỐ ẤY", "text": "gọi là sự hối tiếc", "at": 5},
+    {"type": "timeline", "at": 4, "items": [{"year": "SAU MỖI VÁN", "text": "giá như chọn cách khác, được thêm bao nhiêu?", "at": 4}, {"year": "CON SỐ ẤY", "text": "gọi là sự hối tiếc", "at": 5},
                                            {"year": "LẦN SAU", "text": "chọn nhiều hơn cách mình hối tiếc đã bỏ qua", "at": 6}]},
     {"type": "slam", "at": 7, "text": "CÂN BẰNG", "sub": "ĐỐI THỦ KHÓ TÌM CHỖ ĐỂ KHAI THÁC", "subAt": 8},
     {"type": "kinetic", "at": 9, "items": [{"text": "GIỐNG CON NGƯỜI HỌC TỪ SAI LẦM", "at": 9, "sm": True}, {"text": "NHƯNG SAI VÀ HỌC LẠI VÔ SỐ LẦN", "at": 10, "acc": True}]},
@@ -117,7 +117,7 @@ CH["ch10"] = {"hud": {"k": "CHƯƠNG 10", "t": "LÀM SAO LOẠI BỎ MAY MẮN?"
     {"type": "chapter", "no": "10", "k": "CHƯƠNG 10", "title": "LÀM SAO LOẠI BỎ\nMAY MẮN?", "sub": "HAI CÁCH CỦA CÁC NHÀ NGHIÊN CỨU", "vid": "6813811", "ms": 8, "illus": VM, "titleAt": [0, "Poker"]},
     {"type": "question", "at": 3, "text": "Thắng vì giỏi,\nhay vì hên?"},
     {"type": "ledger", "at": 4, "title": "HAI CÁCH", "rows": [{"k": "1", "v": "CHƠI THẬT NHIỀU VÁN · 120.000", "at": 5}, {"k": "2", "v": "CHIA BÀI ĐỐI XỨNG", "at": 6}]},
-    {"type": "timeline", "at": 7, "items": [{"year": "PHÒNG A", "text": "người 1 nhận tay bài X · máy nhận tay bài Y", "at": 8}, {"year": "PHÒNG B", "text": "người 2 nhận tay bài Y · máy nhận tay bài X", "at": [8, "người"]}]},
+    {"type": "timeline", "at": 8, "items": [{"year": "PHÒNG A", "text": "người 1 nhận tay bài X · máy nhận tay bài Y", "at": 8}, {"year": "PHÒNG B", "text": "người 2 nhận tay bài Y · máy nhận tay bài X", "at": [8, "người"]}]},
     {"type": "myth", "at": 9, "mythLab": "BÀI ĐẸP Ở BÀN NÀY", "myth": "CỖ MÁY HÊN", "truthLab": "THÌ Ở BÀN KIA", "truth": "PHẢI CẦM BÀI XẤU", "strikeAt": [10, "Phần"], "truthAt": [11, "Cái"]},
     {"type": "slam", "at": 12, "text": "KHÔNG PHẢI MỘT ĐÊM HÊN", "sub": "MÀ LÀ HAI MƯƠI NGÀY GIỎI HƠN", "subAt": 13},
 ]}

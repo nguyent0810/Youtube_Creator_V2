@@ -1,0 +1,166 @@
+{
+ "theme": "ck",
+ "kicker": "1 PHÉP TÍNH",
+ "sub": "TRẢ GÓP 0%",
+ "title": "Trả góp 0% nhưng tương đương khoảng 20% một năm: ví dụ chiếc điện thoại 20 triệu",
+ "description": "VÍ DỤ GIẢ ĐỊNH: máy 20 triệu; trả thẳng được giảm 1,5 triệu (trả 18,5); trả góp 0% 12 tháng (trả 20) kèm phí chuyển đổi 3% (trả 20,6). Nhìn như một khoản vay: nhận 18,5 hôm nay, trả 20,6 chia đều 12 tháng → lãi suất tương đương ≈ 20%/năm (kênh tự tính). Nếu không mất giảm giá và không phí thì 0% đúng là 0%. Mức giảm giá và mức phí là giả định, không phải của chương trình nào.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (8 phút): https://youtu.be/An95weKtrPA (công khai từ 20:00 ngày 28/10)",
+ "tags": [
+  "trả góp 0%",
+  "trả góp",
+  "phí chuyển đổi trả góp",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "không",
+  "hai",
+  "rưỡi",
+  "sáu",
+  "thẳng"
+ ],
+ "lines": [
+  "Trả góp không phần trăm. Nhưng tính ra, có khi tương đương hai mươi phần trăm một năm.",
+  "Ví dụ giả định, chiếc điện thoại hai mươi triệu.",
+  "Trả thẳng, bạn được giảm một triệu rưỡi. Mười tám triệu rưỡi.",
+  "Trả góp không phần trăm, không được giảm, cộng phí chuyển đổi ba phần trăm. Hai mươi triệu sáu.",
+  "Vậy bạn đang vay mười tám triệu rưỡi, và trả lại hai mươi triệu sáu trong mười hai tháng.",
+  "Lãi suất tương đương, khoảng hai mươi phần trăm một năm.",
+  "Tấm biển ghi số không là thật. Chi phí của bạn chỉ không nằm ở dòng lãi suất."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "TRẢ GÓP 0%",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "có khi tương đương ~20%/năm",
+     "at": [
+      0,
+      "Nhưng"
+     ],
+     "sm": true
+    },
+    {
+     "text": "ví dụ: chiếc điện thoại 20 triệu",
+     "at": 1,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6898096",
+   "veil": 0.58
+  },
+  {
+   "type": "chart",
+   "at": 2,
+   "kind": "bars",
+   "title": "CÙNG MỘT CHIẾC MÁY (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · PHÍ 3%",
+   "bars": [
+    {
+     "label": "TRẢ THẲNG",
+     "v": 18.5,
+     "text": "18,5",
+     "c": "up",
+     "at": [
+      2,
+      "Mười"
+     ]
+    },
+    {
+     "label": "TRẢ GÓP\n+ PHÍ",
+     "v": 20.6,
+     "text": "20,6",
+     "c": "down",
+     "at": [
+      3,
+      "Hai"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "NHÌN NHƯ MỘT KHOẢN VAY",
+   "cards": [
+    {
+     "k": "NHẬN HÔM NAY",
+     "v": "18,5 TRIỆU",
+     "at": [
+      4,
+      "mười"
+     ]
+    },
+    {
+     "k": "TRẢ LẠI · 12 THÁNG",
+     "v": "20,6 TRIỆU",
+     "at": [
+      4,
+      "trả"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 20,
+   "to": 20,
+   "prefix": "~",
+   "suffix": "%",
+   "label": "MỘT NĂM · LÃI SUẤT TƯƠNG ĐƯƠNG",
+   "sub": {
+    "text": "KÊNH TỰ TÍNH · VÍ DỤ GIẢ ĐỊNH",
+    "at": 5
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "SỐ 0 LÀ THẬT",
+     "at": 6,
+     "sm": true
+    },
+    {
+     "text": "CHI PHÍ NẰM NGOÀI DÒNG LÃI SUẤT",
+     "at": [
+      6,
+      "Chi"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7710747",
+   "ms": 8,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 6
+  }
+ ],
+ "sources": [
+  "https://vov.vn/kinh-te/su-that-lai-suat-tra-gop-0-cai-bay-bi-an-614131.vov"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

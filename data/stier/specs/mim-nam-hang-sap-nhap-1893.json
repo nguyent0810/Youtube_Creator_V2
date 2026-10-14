@@ -1,0 +1,169 @@
+{
+ "theme": "mim",
+ "title": "Năm hãng máy đánh chữ sáp nhập năm 1893 và chọn QWERTY: cuộc đua bàn phím khép lại",
+ "description": "Sau cuộc thi năm 1888, các trường dạy đánh máy dạy theo máy Remington; người đã học QWERTY muốn mua máy QWERTY; hãng nào muốn bán máy phải làm QWERTY. Năm 1893, Remington, Caligraph, Yost, Densmore và Smith-Premier sáp nhập thành Union Typewriter Company và chọn QWERTY làm bàn phím chung (Wikipedia: QWERTY). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/KJ5y_Ypnc4U (công khai từ 20:00 ngày 05/11).",
+ "tags": [
+  "union typewriter",
+  "chuẩn bàn phím",
+  "bàn phím qwerty",
+  "lịch sử bàn phím",
+  "máy đánh chữ",
+  "công nghệ",
+  "mind in the machine"
+ ],
+ "sub": "1893",
+ "acc": [
+  "năm",
+  "hãng",
+  "quen",
+  "chung",
+  "tốt"
+ ],
+ "kicker": "CHUYỆN CÔNG NGHỆ",
+ "lines": [
+  "Năm hãng máy đánh chữ sáp nhập, và cuộc đua bàn phím khép lại.",
+  "Sau cuộc thi năm 1888, các trường dạy đánh máy bắt đầu dạy theo máy Remington.",
+  "Người đã học QWERTY thì muốn mua máy QWERTY.",
+  "Hãng nào muốn bán được máy, phải làm bàn phím QWERTY.",
+  "Năm 1893, năm hãng máy đánh chữ lớn của Mỹ sáp nhập thành một công ty.",
+  "Họ chọn QWERTY làm bàn phím chung.",
+  "QWERTY không thắng vì được chứng minh là tốt nhất. Nó thắng vì ai cũng đã quen."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "5 HÃNG · 1 BÀN PHÍM",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "cuộc đua khép lại năm 1893",
+     "at": [
+      0,
+      "cuộc"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6037662",
+   "veil": 0.55
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Vòng lặp",
+   "nodes": [
+    {
+     "text": "trường dạy theo Remington",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      1,
+      "trường"
+     ],
+     "shape": "none",
+     "w": 760
+    },
+    {
+     "text": "người học muốn mua QWERTY",
+     "x": 0.5,
+     "y": 0.64,
+     "at": 2,
+     "c": "acc",
+     "shape": "circle",
+     "w": 780
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MUỐN BÁN MÁY?",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "PHẢI LÀM QWERTY",
+     "at": [
+      3,
+      "phải"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:31176143",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 3
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 5,
+   "to": 5,
+   "suffix": " HÃNG",
+   "label": "SÁP NHẬP · 1893",
+   "sub": {
+    "text": "UNION TYPEWRITER COMPANY",
+    "at": [
+     4,
+     "sáp"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "QWERTY",
+   "sub": "BÀN PHÍM CHUNG CỦA NĂM HÃNG"
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "VÌ SAO THẮNG",
+   "cards": [
+    {
+     "k": "KHÔNG PHẢI VÌ",
+     "v": "TỐT NHẤT",
+     "at": 6
+    },
+    {
+     "k": "MÀ VÌ",
+     "v": "AI CŨNG ĐÃ QUEN",
+     "at": [
+      6,
+      "Nó"
+     ],
+     "c": "acc"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/QWERTY"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "=QWERTY": "quớt-ti",
+  "qwerty": "quớt-ti",
+  "remington": "Rem-minh-tần"
+ },
+ "imgs": {}
+}

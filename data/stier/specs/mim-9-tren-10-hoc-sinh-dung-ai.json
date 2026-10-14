@@ -1,0 +1,190 @@
+{
+ "theme": "mim",
+ "title": "Hơn 9 trên 10 học sinh 15 tuổi ở Việt Nam dùng chatbot AI để học: thuộc hàng cao nhất thế giới",
+ "description": "Theo báo cáo PISA 2025 của OECD, hơn chín trên mười học sinh 15 tuổi ở Việt Nam dùng chatbot AI để học, thuộc hàng cao nhất thế giới. Tháng 10/2026, VTV kể chuyện một giáo viên ở Hà Nội cho học sinh xem một chatbot giải sai một bài toán cơ bản vì tính lần lượt từ trái sang phải, thay vì nhân chia trước, cộng trừ sau; một ứng dụng AI khác giải đúng. Ba thói quen: bắt ghi nguồn rồi tự mở; hỏi lại; dùng AI làm nháp. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/H9nlRjxfmPw (công khai từ 20:00 ngày 02/11).",
+ "tags": [
+  "pisa 2025",
+  "học sinh dùng ai",
+  "ai trong giáo dục",
+  "ai bịa",
+  "ảo giác ai",
+  "chatgpt",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "PISA 2025",
+ "acc": [
+  "chín",
+  "mười",
+  "sai",
+  "nguồn",
+  "nháp"
+ ],
+ "kicker": "AI QUANH TA",
+ "lines": [
+  "Hơn chín trên mười học sinh mười lăm tuổi ở Việt Nam dùng chatbot AI để học.",
+  "Đó là số liệu trong báo cáo PISA 2025, thuộc hàng cao nhất thế giới.",
+  "Tháng 10 năm 2026, đài VTV kể chuyện một giáo viên ở Hà Nội.",
+  "Cô cho học sinh xem một chatbot giải sai một bài toán cơ bản. Nó tính từ trái sang phải, thay vì nhân chia trước.",
+  "Một ứng dụng AI khác thì giải đúng.",
+  "Ba thói quen đáng giữ: bắt nó ghi nguồn rồi tự mở, hỏi lại một lần nữa, và chỉ dùng nó làm nháp.",
+  "Dùng AI để học không sai. Tin nó mà không kiểm, mới là sai."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "> 9 / 10 HỌC SINH",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "15 tuổi ở Việt Nam dùng chatbot AI để học",
+     "at": [
+      0,
+      "mười"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:9198577",
+   "veil": 0.55
+  },
+  {
+   "type": "chart",
+   "at": 1,
+   "kind": "bars",
+   "title": "HỌC SINH 15 TUỔI DÙNG CHATBOT AI ĐỂ HỌC",
+   "unit": "OECD · PISA 2025",
+   "bars": [
+    {
+     "label": "VIỆT NAM",
+     "v": 92,
+     "text": "> 9/10",
+     "c": "up",
+     "at": [
+      1,
+      "PISA"
+     ]
+    },
+    {
+     "label": "HÀNG CAO\nNHẤT THẾ GIỚI",
+     "v": 92,
+     "text": "✓",
+     "c": "ref",
+     "at": [
+      1,
+      "cao"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "VTV · 10/2026",
+     "at": 2,
+     "sm": true
+    },
+    {
+     "text": "MỘT CHATBOT GIẢI SAI BÀI TOÁN CƠ BẢN",
+     "at": 3,
+     "acc": true
+    }
+   ],
+   "clip": "pexels:9198577",
+   "ms": 12,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 2
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "VÌ SAO SAI",
+   "cards": [
+    {
+     "k": "NÓ TÍNH",
+     "v": "TỪ TRÁI SANG PHẢI",
+     "at": [
+      3,
+      "Nó"
+     ]
+    },
+    {
+     "k": "ĐÚNG RA",
+     "v": "NHÂN CHIA TRƯỚC",
+     "at": [
+      3,
+      "thay"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 5,
+   "items": [
+    {
+     "year": "1",
+     "text": "bắt ghi nguồn · rồi tự mở",
+     "at": [
+      5,
+      "bắt"
+     ]
+    },
+    {
+     "year": "2",
+     "text": "hỏi lại một lần nữa",
+     "at": [
+      5,
+      "hỏi"
+     ]
+    },
+    {
+     "year": "3",
+     "text": "chỉ dùng làm nháp",
+     "at": [
+      5,
+      "chỉ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "TIN MÀ KHÔNG KIỂM",
+   "sub": "MỚI LÀ SAI"
+  }
+ ],
+ "sources": [
+  "https://www.oecd.org/en/publications/pisa-2025-results-volume-i-country-notes_2d4ff9ea-en/viet-nam_d652623e-en.html",
+  "https://vtv.vn/hoc-sinh-lam-dung-ai-khi-cong-cu-ho-tro-lam-suy-giam-tu-duy-100261003225835725.htm"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "=AI": "ây ai",
+  "=VTV": "Vê-tê-vê",
+  "=PISA": "Pi-da",
+  "chatbot": "chát bót"
+ },
+ "imgs": {}
+}

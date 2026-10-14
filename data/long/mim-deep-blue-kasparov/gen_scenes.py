@@ -35,7 +35,7 @@ CH["ch00"] = {"hud": {"k": "MỞ ĐẦU", "t": "MƯỜI CHÍN NƯỚC"}, "bgm": 
     {"type": "slam", "at": 8, "text": "XIN THUA SAU 19 NƯỚC", "sub": "NHÀ VÔ ĐỊCH THẾ GIỚI ĐỨNG DẬY", "subAt": 9},
     {"type": "broll", "at": 10, "vid": "5028622", "veil": 0.55, "illus": VM,
      "kin": [{"text": "DEEP BLUE", "at": [10, "Deep"], "acc": True}, {"text": "lần đầu máy tính thắng nhà vô địch cờ vua thế giới · thể thức chuẩn", "at": 11, "sm": True}]},
-    {"type": "timeline", "at": 12, "items": [{"year": "1950", "text": "một bài báo về máy chơi cờ", "at": 13}, {"year": "1997", "text": "mười chín nước ở New York", "at": [13, "và"]},
+    {"type": "timeline", "at": 13, "items": [{"year": "1950", "text": "một bài báo về máy chơi cờ", "at": 13}, {"year": "1997", "text": "mười chín nước ở New York", "at": [13, "và"]},
                                             {"year": "2017", "text": "một cuốn sách, hai mươi năm sau", "at": [13, "trong"]}]},
     {"type": "ledger", "at": 14, "title": "BA CÂU NÓI CỦA KASPAROV", "rows": [{"k": "1", "v": "NĂM 26 TUỔI", "at": [15, "Một"]}, {"k": "2", "v": "NĂM 34 TUỔI", "at": [15, "ba"]},
                                                                            {"k": "3", "v": "NĂM 54 TUỔI", "at": [15, "Và"]}], "total": {"k": "MỘT CON NGƯỜI", "v": "TRƯỚC MỘT CỖ MÁY", "at": 16}},
