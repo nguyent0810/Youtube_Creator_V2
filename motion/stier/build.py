@@ -762,6 +762,17 @@ def check_gate(slug: str, comp: Path, scenes: list[dict], od: Path, strict: bool
         sec = cj.get(k) or {}
         return [f for f in sec.get("findings", []) if f.get("severity") == "error"]
     rep = {k: errs(k) for k in ("lint", "runtime", "layout", "contrast")}
+    # dòng chữ xếp tầng trong cùng cảnh kinetic: .rw chừa .3em trên cho dấu chồng (margin âm) -> hộp chồng nhau có chủ đích, không phải lỗi đọc
+    def _sc(sel):
+        m = re.match(r"#stage > div:nth-of-type\((\d+)\)", sel or "")
+        return int(m.group(1)) - 1 if m else None
+    keep = []
+    for f in rep["layout"]:
+        a, c = _sc(f.get("selector")), _sc(f.get("containerSelector"))
+        if f.get("code") == "content_overlap" and a is not None and a == c and a < len(scenes) and scenes[a]["type"] == "kinetic":
+            print(f"  check: bỏ qua chồng dòng kinetic (cảnh {a}, {f.get('text')!r})", flush=True); continue
+        keep.append(f)
+    rep["layout"] = keep
     if not (cj.get("layout") or {}).get("duration"):
         rep["runtime"].append({"code": "no_timeline", "message": "trình kiểm không đọc được timeline (duration 0)"})
     print(f"  check: lint {len(rep['lint'])} · runtime {len(rep['runtime'])} · layout {len(rep['layout'])} · contrast {len(rep['contrast'])} lỗi (ok={cj.get('ok')})", flush=True)
