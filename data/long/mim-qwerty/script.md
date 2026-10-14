@@ -116,7 +116,7 @@ Năm 1936, một giáo sư ở Mỹ tên là August Dvorak nhận bằng sáng c
 Ông cho rằng QWERTY bắt các ngón tay chạy quá nhiều. ‖
 Hãy nhìn hàng phím giữa, nơi các ngón tay của bạn nghỉ.
 Trên QWERTY, hàng ấy chỉ có đúng một nguyên âm, là chữ A.
-Dvorak dồn những chữ hay dùng nhất về hàng giữa. Ông đổi chỗ hai mươi ba trên hai mươi sáu chữ cái. ‖
+Dvorak dồn những chữ hay dùng nhất về hàng giữa. Ông đổi chỗ hai mươi tư trên hai mươi sáu chữ cái. ‖
 Rồi tới một thử nghiệm nổi tiếng.
 Năm 1944, Hải quân Mỹ cho mười bốn nhân viên đánh máy học lại theo bàn phím Dvorak.
 Kết quả được công bố rất ấn tượng. Họ gõ nhanh hơn tới bảy mươi tư phần trăm. ‖
@@ -194,7 +194,7 @@ Magazine qua tường thuật) · Koichi Yasuoka & Motoko Yasuoka, "On the Prehi
 **Cuộc thi 1888:** Wikipedia *Frank Edward McGurrin*: Cincinnati, 25/07/1888, thắng Louis Traub (máy Caligraph, bàn phím đôi, gõ nhìn phím); giải
 500 USD; kết quả lên trang nhất nhiều báo. Con số 98 từ/phút lệch giữa các nguồn → không đọc.
 **Sáp nhập 1893:** Union Typewriter Company — Remington, Caligraph, Yost, Densmore, Smith-Premier, chọn QWERTY (Smithsonian / Hagley Museum).
-**Dvorak:** bằng sáng chế Mỹ 2.040.248 (05/1936, Dvorak và Dealey), đổi 23/26 chữ cái; thử nghiệm Hải quân 1944: 14 người, nhanh hơn 74% (theo
+**Dvorak:** bằng sáng chế Mỹ 2.040.248 (05/1936, Dvorak và Dealey), đổi 24/26 chữ cái (kênh tự đếm trên bố cục chuẩn: chỉ A và M giữ chỗ; bản 13/10 ghi nhầm 23, retro 5 phát hiện); thử nghiệm Hải quân 1944: 14 người, nhanh hơn 74% (theo
 tường thuật của chính Dvorak) · Liebowitz & Margolis, "The Fable of the Keys", *Journal of Law and Economics*, 04/1990: người giám sát là Thiếu
 tá August Dvorak; luyện lại trên bố cục nào cũng tăng tốc; thử nghiệm Strong 1956 (GSA) không thấy Dvorak hơn · phía ủng hộ Dvorak phản bác thử
 nghiệm 1956 (NPR Planet Money, 2019).

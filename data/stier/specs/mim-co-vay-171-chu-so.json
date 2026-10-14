@@ -1,0 +1,189 @@
+{
+ "theme": "mim",
+ "title": "Số thế cờ vây là một con số có 171 chữ số: vì sao máy từng bó tay",
+ "description": "Năm 1997 máy Deep Blue thắng nhà vô địch cờ vua Garry Kasparov bằng cách tính thật nhiều nước đi. Với cờ vây, cách ấy vô dụng: mỗi lượt có vài trăm nước để chọn (cờ vua: vài chục), và số thế cờ hợp lệ trên bàn 19×19 vào khoảng 2 × 10^170, một con số có 171 chữ số, nhiều hơn số nguyên tử trong vũ trụ quan sát được (DeepMind). Gần hai mươi năm sau Deep Blue, phần mềm cờ vây giỏi nhất vẫn chỉ ngang người chơi nghiệp dư khá. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (20 phút): https://youtu.be/cNwIMli7nOc (công khai từ 20:00 ngày 29/10).",
+ "tags": [
+  "deep blue",
+  "cờ vua",
+  "alphago",
+  "lee sedol",
+  "cờ vây",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "CỜ VÂY · 19 × 19",
+ "acc": [
+  "bảy",
+  "trăm",
+  "chục",
+  "vô",
+  "nghiệp"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Một con số có một trăm bảy mươi mốt chữ số. Đó là số thế cờ vây.",
+  "Năm 1997, máy tính thắng nhà vô địch cờ vua, bằng cách tính thật nhiều nước đi.",
+  "Ở cờ vua, mỗi lượt bạn có vài chục nước để chọn.",
+  "Ở cờ vây, là vài trăm nước.",
+  "Số thế cờ hợp lệ, nhiều hơn số nguyên tử trong vũ trụ mà ta quan sát được.",
+  "Tính hết là điều vô vọng. Không cỗ máy nào tính xuể.",
+  "Nên gần hai mươi năm sau, phần mềm cờ vây giỏi nhất, vẫn chỉ ngang một người chơi nghiệp dư khá."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "171 CHỮ SỐ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "số thế cờ của một bàn cờ vây",
+     "at": [
+      0,
+      "Đó"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:39270835",
+   "veil": 0.5
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NĂM 1997",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "MÁY THẮNG VUA CỜ VUA",
+     "at": [
+      1,
+      "máy"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bằng cách tính thật nhiều",
+     "at": [
+      1,
+      "bằng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6058628",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "chart",
+   "at": 2,
+   "kind": "bars",
+   "title": "MỖI LƯỢT CÓ BAO NHIÊU NƯỚC ĐỂ CHỌN",
+   "unit": "ƯỚC LƯỢNG THƯỜNG DÙNG",
+   "bars": [
+    {
+     "label": "CỜ VUA",
+     "v": 35,
+     "text": "VÀI CHỤC",
+     "c": "dim",
+     "at": [
+      2,
+      "vài"
+     ]
+    },
+    {
+     "label": "CỜ VÂY",
+     "v": 250,
+     "text": "VÀI TRĂM",
+     "c": "ref",
+     "at": [
+      3,
+      "vài"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "to": 171,
+   "suffix": " CHỮ SỐ",
+   "label": "SỐ THẾ CỜ HỢP LỆ · NHIỀU HƠN SỐ NGUYÊN TỬ TRONG VŨ TRỤ",
+   "until": [
+    4,
+    "nhiều"
+   ],
+   "sub": {
+    "text": "KHOẢNG 2 × 10^170 · THEO DEEPMIND",
+    "at": [
+     4,
+     "nguyên"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "KHÔNG MÁY NÀO TÍNH XUỂ",
+   "sub": "TÍNH HẾT LÀ VÔ VỌNG"
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Gần 20 năm sau",
+   "nodes": [
+    {
+     "text": "phần mềm cờ vây giỏi nhất",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      6,
+      "phần"
+     ],
+     "shape": "none",
+     "w": 760
+    },
+    {
+     "text": "ngang nghiệp dư khá",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "vẫn"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 680
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://deepmind.google/research/alphago/",
+  "https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

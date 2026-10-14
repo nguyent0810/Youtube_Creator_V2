@@ -324,7 +324,7 @@
       const im = el("img", toneCls(s.tone || "bw"), null, pr); im.src = m.src; Object.assign(im.style, { left: px(18), top: px(18), width: px(w), height: px(h) });
       tl.fromTo(pr, { opacity: 0, y: 80, rotation: 6 }, { opacity: 1, y: 0, rotation: -2, duration: 0.45, ease: "power3.out", immediateRender: false }, s.imgAt ?? s.t0 + 0.1);
       cx0 = w + 220; cw = W - cx0 - 60; }
-    const str = (s.prefix || "") + vn(s.to) + (s.suffix || ""), fs = fsz(str, 260, cw - 80, 0.6);
+    const str = (s.prefix || "") + vn(s.to) + (s.suffix || ""), fs = fsz(str, 260, cw - 80, /[MWmw]/.test(str) ? 0.7 : 0.6);
     const ct = el("div", "count", esc((s.prefix || "") + vn(s.from || 0) + (s.suffix || "")), d); Object.assign(ct.style, { fontSize: px(fs), top: px(s.top ?? 360 - fs / 2 + 40), left: px(cx0), width: px(cw), right: "auto" });
     const top = (s.top ?? 360 - fs / 2 + 40) + fs * 1.06 + 34, o = { v: s.from || 0 };
     tl.fromTo(ct, { opacity: 0 }, { opacity: 1, duration: 0.2, immediateRender: false }, s.at - 0.15);

@@ -1,0 +1,182 @@
+{
+ "theme": "mim",
+ "title": "“Tôi, Lee Sedol, đã thua. Chứ không phải loài người”: họp báo ngày 12/03/2016",
+ "description": "Ngày 12/03/2016, Lee Sedol thua ván ba sau 176 nước, tỉ số 0–3: trận năm ván với AlphaGo ngã ngũ. Ở họp báo, ông nói mình đã đánh giá sai khả năng của AlphaGo và cảm thấy bất lực, xin lỗi vì không đáp ứng kỳ vọng, rồi nói: “Tôi, Lee Sedol, đã thua, chứ không phải loài người” (The Korea Times, 13/03/2016; trích dịch). Hôm sau, ông thắng ván bốn. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (20 phút): https://youtu.be/cNwIMli7nOc (công khai từ 20:00 ngày 29/10).",
+ "tags": [
+  "họp báo",
+  "seoul 2016",
+  "alphago",
+  "lee sedol",
+  "cờ vây",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "SEOUL · 12/03/2016",
+ "acc": [
+  "ba",
+  "bất",
+  "thua",
+  "loài",
+  "bốn"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Ngày 12 tháng 3 năm 2016. Tỉ số là không, ba.",
+  "Lee Sedol vừa thua ván thứ ba liên tiếp. Trận năm ván đã ngã ngũ.",
+  "Ở họp báo, ông cúi đầu.",
+  "Ông nói mình đã đánh giá sai cỗ máy, và cảm thấy bất lực.",
+  "Ông xin lỗi vì đã không đáp ứng được kỳ vọng.",
+  "Rồi ông nói thêm một câu. Tôi, Lee Sedol, đã thua. Chứ không phải loài người.",
+  "Hôm sau, ông thắng ván thứ tư."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "12/03/2016",
+     "at": 0.0,
+     "sm": true
+    },
+    {
+     "text": "TỈ SỐ 0 – 3",
+     "at": [
+      0,
+      "Tỉ"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:39474349",
+   "veil": 0.55
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "SAU BA VÁN",
+   "cards": [
+    {
+     "k": "ALPHAGO",
+     "v": "3",
+     "at": [
+      1,
+      "thua"
+     ],
+     "c": "acc"
+    },
+    {
+     "k": "LEE SEDOL",
+     "v": "0",
+     "at": [
+      1,
+      "ván"
+     ]
+    }
+   ],
+   "note": "TRẬN NĂM VÁN ĐÃ NGÃ NGŨ"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "Ở HỌP BÁO",
+     "at": 2,
+     "sm": true
+    },
+    {
+     "text": "ÔNG CÚI ĐẦU",
+     "at": [
+      2,
+      "ông"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:35701014",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 2
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Lời ông nói",
+   "nodes": [
+    {
+     "text": "“tôi đã đánh giá sai”",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      3,
+      "đánh"
+     ],
+     "shape": "none",
+     "w": 700
+    },
+    {
+     "text": "“và cảm thấy bất lực”",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      3,
+      "và"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 700
+    }
+   ],
+   "note": "TRÍCH DỊCH · HỌP BÁO SAU VÁN BA"
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "“TÔI, LEE SEDOL, ĐÃ THUA”",
+   "sub": "“CHỨ KHÔNG PHẢI LOÀI NGƯỜI”"
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "from": 4,
+   "to": 4,
+   "prefix": "VÁN ",
+   "label": "HÔM SAU · ÔNG THẮNG",
+   "until": [
+    6,
+    "thắng"
+   ],
+   "sub": {
+    "text": "13/03/2016",
+    "at": [
+     6,
+     "ván"
+    ]
+   }
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol",
+  "https://en.wikipedia.org/wiki/Lee_Sedol"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "lee": "Li",
+  "sedol": "Xê-đôn"
+ },
+ "imgs": {}
+}

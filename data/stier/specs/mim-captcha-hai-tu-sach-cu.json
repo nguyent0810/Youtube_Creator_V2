@@ -1,0 +1,172 @@
+{
+ "theme": "mim",
+ "title": "Mỗi lần gõ mã xác nhận hai từ, bạn đã đọc hộ một từ trong sách cũ",
+ "description": "Phiên bản mã xác nhận ra đời năm 2007 (reCAPTCHA) cho người dùng gõ hai từ: một từ máy đã biết đáp án để kiểm tra, từ còn lại lấy từ sách báo cũ mà máy quét đọc không ra (với sách cũ, máy có khi đọc sai tới một phần năm số từ). Khi nhiều người gõ ra cùng một đáp án, từ ấy được chấp nhận. Năm đầu tiên: hơn 440 triệu từ, tương đương hơn 17.600 cuốn sách, chính xác trên 99% (Carnegie Mellon, bài trên Science 2008). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (9 phút): https://youtu.be/CAYQtYA1NJA (công khai từ 20:00 ngày 22/10).",
+ "tags": [
+  "recaptcha",
+  "số hoá sách",
+  "luis von ahn",
+  "captcha",
+  "mã xác nhận",
+  "tôi không phải người máy",
+  "công nghệ quanh ta",
+  "mind in the machine"
+ ],
+ "sub": "RECAPTCHA · 2007",
+ "acc": [
+  "hai",
+  "biết",
+  "cũ",
+  "bốn",
+  "bảy"
+ ],
+ "kicker": "CÔNG NGHỆ QUANH TA",
+ "lines": [
+  "Suốt nhiều năm, bạn đã làm một việc không công mà không hề biết.",
+  "Năm 2007, mã xác nhận đổi sang kiểu mới. Bạn phải gõ hai từ.",
+  "Một từ, máy đã biết đáp án. Từ ấy dùng để kiểm tra bạn.",
+  "Từ còn lại, lấy từ một trang sách cũ, mà máy đọc không ra.",
+  "Bạn không biết từ nào là từ nào, nên gõ cẩn thận cả hai.",
+  "Chỉ trong năm đầu, người dùng mạng đã đọc hộ hơn bốn trăm bốn mươi triệu từ.",
+  "Tương đương hơn mười bảy nghìn cuốn sách."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MỘT VIỆC KHÔNG CÔNG",
+     "at": 0.0
+    },
+    {
+     "text": "BẠN KHÔNG HỀ BIẾT",
+     "at": [
+      0,
+      "mà"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:11384843",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NĂM 2007",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "BẠN PHẢI GÕ HAI TỪ",
+     "at": [
+      1,
+      "Bạn"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:34124550",
+   "ms": 5,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "HAI TỪ, HAI VAI TRÒ",
+   "cards": [
+    {
+     "k": "TỪ THỨ NHẤT",
+     "v": "MÁY ĐÃ BIẾT ĐÁP ÁN",
+     "at": [
+      2,
+      "máy"
+     ]
+    },
+    {
+     "k": "TỪ THỨ HAI",
+     "v": "TỪ SÁCH CŨ · MÁY CHỊU",
+     "at": [
+      3,
+      "lấy"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "BẠN KHÔNG BIẾT TỪ NÀO LÀ TỪ NÀO"
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Nên bạn",
+   "nodes": [
+    {
+     "text": "gõ cẩn thận cả hai",
+     "x": 0.5,
+     "y": 0.5,
+     "at": [
+      4,
+      "gõ"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 700
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "at": 5,
+   "kind": "bars",
+   "title": "NĂM ĐẦU TIÊN",
+   "unit": "CARNEGIE MELLON · SCIENCE, 2008",
+   "bars": [
+    {
+     "label": "TRIỆU TỪ\nĐÃ ĐỌC HỘ",
+     "v": 440,
+     "text": "> 440",
+     "c": "ref",
+     "at": [
+      5,
+      "hơn"
+     ]
+    },
+    {
+     "label": "NGHÌN CUỐN\nSÁCH",
+     "v": 17.6,
+     "text": "> 17",
+     "c": "dim",
+     "at": [
+      6,
+      "hơn"
+     ]
+    }
+   ],
+   "note": "ĐỘ CHÍNH XÁC TRÊN 99%"
+  }
+ ],
+ "sources": [
+  "https://www.sciencedaily.com/releases/2008/08/080814154329.htm",
+  "https://en.wikipedia.org/wiki/ReCAPTCHA"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

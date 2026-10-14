@@ -182,14 +182,14 @@
     // số thập phân (vd. "to": 3.1) giữ đúng số chữ số sau dấu phẩy; trước 12/10/2026 bị làm tròn thành "3"
     const dp = s.dec ?? Math.max(...[s.to, s.from || 0].map((n) => (String(n).split(".")[1] || "").length));
     const vn = (n) => { const [a, b] = Number(n).toFixed(dp).split("."); return a.replace(/\B(?=(\d{3})+(?!\d))/g, ".") + (b ? "," + b : ""); };
-    const str = (s.prefix || "") + vn(s.to) + (s.suffix || ""), fs = fsz(str, 300, 1000, 0.62);
+    const str = (s.prefix || "") + vn(s.to) + (s.suffix || ""), fs = fsz(str, 300, 1000, /[MWmw]/.test(str) ? 0.72 : 0.62);   // chữ có M/W rộng hơn hẳn: "500 NĂM" từng chạm hai mép khung (14/10/2026)
     const ct = el("div", "count", esc((s.prefix || "") + vn(s.from || 0) + (s.suffix || "")), d); ct.style.fontSize = px(fs); if (s.top) ct.style.top = px(s.top);
     const top = (s.top || 360) + fs + 20;
     const o = { v: s.from || 0 };
     tl.to(o, { v: s.to, duration: Math.max(0.2, s.until - s.at), ease: "power2.out", onUpdate: () => { ct.textContent = (s.prefix || "") + vn(o.v) + (s.suffix || ""); } }, s.at);
     if (s.label) { const lb = el("div", "countlbl", esc(s.label), d); lb.style.top = px(top); lb.style.fontSize = px(fsz(s.label, 52, 980, 0.9));
       tl.fromTo(lb, { opacity: 0, scale: 1.25 }, { opacity: 1, scale: 1, duration: 0.4, ease: "power3.out", immediateRender: false }, s.labelAt ?? s.until - 0.1); }
-    if (s.sub) { const sb = el("div", "countsub mono", esc(s.sub.text), d); sb.style.top = px(top + 90); tl.to(sb, { opacity: 1, duration: 0.3 }, s.sub.at); }
+    if (s.sub) { const sb = el("div", "countsub mono", esc(s.sub.text), d); sb.style.top = px(top + 90); sb.style.fontSize = px(fsz(s.sub.text, 30, 980, 0.86)); tl.to(sb, { opacity: 1, duration: 0.3 }, s.sub.at); }
     if (s.img) { const m = IM(s.img), k = Math.min(520 / m.w, 480 / m.h), w = m.w * k, h = m.h * k;
       const pr = el("div", "print", null, d); Object.assign(pr.style, { left: px(540 - (w + 36) / 2), top: px(top + 170), width: px(w + 36), height: px(h + 84) });
       const im = el("img", "abs " + toneCls(s.tone || "bw"), null, pr); im.src = m.src; Object.assign(im.style, { left: px(18), top: px(18), width: px(w), height: px(h) });
@@ -430,7 +430,7 @@
     const sl = el("div", "slam", lines.map(esc).join("<br/>"), d); Object.assign(sl.style, { fontSize: px(fs), top: px(820 - fs * lines.length / 2), lineHeight: 1.02, color: s.white ? "#fff" : "" });
     if (s.fx && s.fx !== "punch" && SLAM[s.fx]) SLAM[s.fx](sl, s);
     else tl.fromTo(sl, { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 0.18, ease: "power4.in", immediateRender: false }, s.at - 0.13);
-    if (s.sub) { const sb = el("div", "dsub mono", esc(s.sub), d); sb.style.top = px(840 + fs * lines.length / 2 + 30); tl.to(sb, { opacity: 1, duration: 0.3 }, s.at + 0.3); }
+    if (s.sub) { const sb = el("div", "dsub mono", esc(s.sub), d); sb.style.top = px(840 + fs * lines.length / 2 + 30); sb.style.fontSize = px(fsz(s.sub, 30, 980, 0.84)); tl.to(sb, { opacity: 1, duration: 0.3 }, s.at + 0.3); }
     tl.to("#stage", { x: 12, duration: 0.03, yoyo: true, repeat: 5 }, s.at + 0.05);
   };
 
@@ -558,13 +558,13 @@
      sfx: card.at -> whoosh(-0.15) + thud */
   B.cards3d = (s, d) => {
     const n = s.cards.length, Hc = n <= 2 ? 370 : 280, gap = 46, tot = n * Hc + (n - 1) * gap, top = Math.max(430, 900 - tot / 2);
-    if (s.title) { const t = el("div", "c3t", esc(s.title), d); t.style.fontSize = px(fsz(s.title, 60, 960, 0.6)); t.style.top = px(top - 130);
+    if (s.title) { const t = el("div", "c3t", esc(s.title), d); t.style.fontSize = px(fsz(s.title, 60, 940, /[MW]/.test(s.title) ? 0.7 : 0.64)); t.style.top = px(top - 130);
       tl.fromTo(t, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out", immediateRender: false }, s.t0 + 0.02); }
     s.cards.forEach((c, k) => { const col = c.c === "acc" ? "var(--red)" : c.c ? ccol(c.c) : "#fff", dir = k % 2 ? 1 : -1;
       const CS = LK.cards || "glass";
       const e = el("div", "c3 c3-" + CS, `<div class="c3k">${esc(c.k)}</div><div class="c3v">${esc(c.v)}</div>${c.sub ? `<div class="c3s">${esc(c.sub)}</div>` : ""}`, d);
       Object.assign(e.style, { top: px(top + k * (Hc + gap)), height: px(Hc), borderColor: col });
-      const v = e.querySelector(".c3v"); v.style.color = col; v.style.fontSize = px(fsz(c.v, n <= 2 ? 170 : 130, 700, 0.62));
+      const v = e.querySelector(".c3v"); v.style.color = col; v.style.fontSize = px(fsz(c.v, n <= 2 ? 170 : 130, 700, /[MW]/.test(c.v) ? 0.72 : 0.66));
       if (CS === "solid") { e.style.background = c.c ? col : "#e2e8f0"; v.style.color = "#06121a"; }
       else if (CS === "index") { v.style.color = c.c ? col : "#111827"; gsap.set(e, { rotation: dir * 1.6 }); }
       else if (CS === "gradient") { e.style.background = `linear-gradient(135deg, color-mix(in srgb, ${col} 82%, #000) 0%, color-mix(in srgb, ${col} 30%, #0b1220) 100%)`; v.style.color = "#fff"; }

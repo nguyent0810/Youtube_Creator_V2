@@ -455,6 +455,18 @@ def plan(spec: dict, lines: list[dict], dur: float) -> list[dict]:
                 if q.get("size") and q["size"] * text_em(q["text"]) > 980]
         if wide:
             raise SystemExit("chữ kinetic rộng hơn khung (bỏ \"size\" để engine tự co): " + "; ".join(wide))
+    # Retro 5 (14/10/2026): (a) dòng phụ của counter/slam là mono một dòng: engine tự co, nhưng dài quá 52 ký tự thì chữ nhỏ hơn
+    # 22 px, không đọc được trên điện thoại ("…NEW YORK, 1" bị cắt mất năm); (b) "prefix" có chữ số + số đếm chạy -> khung giữa
+    # chừng hiện "1 / 7.698" như một dữ kiện thật.
+    long_sub = [f'cảnh {i} ({r["type"]}): "{t}" ({len(t)} ký tự)' for i, r in enumerate(sc)
+                for t in [(r.get("sub") or {}).get("text") if r["type"] == "counter" else r.get("sub") if r["type"] == "slam" else None]
+                if isinstance(t, str) and len(t) > 52]
+    if long_sub:
+        raise SystemExit("dòng phụ dài quá 52 ký tự (rút gọn hoặc đưa vào mô tả): " + "; ".join(long_sub))
+    bad_pre = [f"cảnh {i}: prefix {r['prefix']!r}" for i, r in enumerate(sc)
+               if r["type"] == "counter" and any(ch.isdigit() for ch in str(r.get("prefix") or "")) and r.get("from", 0) != r["to"]]
+    if bad_pre:
+        raise SystemExit("counter có chữ số trong prefix: số trung gian sẽ đọc như dữ kiện thật (dùng kinetic/cards3d): " + "; ".join(bad_pre))
     # Cảnh chart cần khối CSS ".ch*" của theme (theme-ck.css, theme-mim.css). Theme chưa có khối ấy -> cột và chữ dồn lên
     # góc trên trái mà không lỗi nào báo (lô Short 3, 12/10/2026: 2 Short MIM đầu tiên dùng chart).
     if any(r["type"] == "chart" for r in sc):
@@ -535,6 +547,8 @@ def build(slug: str, render: bool = True, draft: bool = False) -> Path:
     nw = sum(len(l.split()) for l in lines_txt)
     if not 55 <= nw <= 135:
         raise SystemExit(f"{slug}: {nw} từ — ngoài 55-135")
+    if spec.get("rules") == 2 and lines_txt[-1].rstrip().endswith("?"):   # retro 5: luật chỉ nằm trong tài liệu nên đã lọt 1 Short
+        raise SystemExit(f"{slug}: Short rules-2 không kết bằng câu hỏi: {lines_txt[-1]!r}")
     th = themes.theme(spec)
     if spec.get("theme") == "bud":   # BUD: luật đa dạng (format/hook/cảnh mở/nhạc/giọng) -- bud_variety.py
         import bud_variety

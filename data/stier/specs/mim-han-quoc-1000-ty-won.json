@@ -1,0 +1,181 @@
+{
+ "theme": "mim",
+ "title": "Hai ngày sau khi thua máy, Hàn Quốc chi 1.000 tỷ won cho trí tuệ nhân tạo",
+ "description": "Trận AlphaGo – Lee Sedol kết thúc ngày 15/03/2016 với tỉ số 4–1 cho cỗ máy. Ngày 17/03/2016, chính phủ Hàn Quốc công bố khoản đầu tư 1.000 tỷ won cho nghiên cứu trí tuệ nhân tạo trong 5 năm. Ở Hàn Quốc, cờ vây có kênh truyền hình riêng và kỳ thủ hàng đầu nổi tiếng như ngôi sao thể thao; theo DeepMind, hơn 200 triệu người đã theo dõi trận đấu (Wikipedia: AlphaGo versus Lee Sedol; DeepMind). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (20 phút): https://youtu.be/cNwIMli7nOc (công khai từ 20:00 ngày 29/10).",
+ "tags": [
+  "hàn quốc",
+  "đầu tư ai",
+  "alphago",
+  "lee sedol",
+  "cờ vây",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "HÀN QUỐC · 17/03/2016",
+ "acc": [
+  "hai",
+  "nghìn",
+  "triệu",
+  "bốn",
+  "nước"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Hai ngày sau một trận cờ, một đất nước chi một nghìn tỷ won.",
+  "Ở Hàn Quốc, cờ vây có kênh truyền hình riêng.",
+  "Kỳ thủ hàng đầu nổi tiếng như ngôi sao thể thao.",
+  "Tháng 3 năm 2016, theo công ty làm ra cỗ máy, hơn hai trăm triệu người xem kỳ thủ số một của họ đấu với AlphaGo.",
+  "Ngày 15 tháng 3, trận đấu kết thúc. Bốn một, cho cỗ máy.",
+  "Ngày 17, chính phủ công bố khoản đầu tư cho trí tuệ nhân tạo.",
+  "Một trận cờ, đã đổi hướng đi của cả một nước."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "2 NGÀY SAU MỘT TRẬN CỜ",
+     "at": 0.0
+    },
+    {
+     "text": "1.000 TỶ WON",
+     "at": [
+      0,
+      "một"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:26690701",
+   "ms": 4,
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CỜ VÂY Ở HÀN QUỐC",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "có kênh truyền hình riêng",
+     "at": [
+      1,
+      "có"
+     ],
+     "sm": true
+    },
+    {
+     "text": "kỳ thủ như ngôi sao thể thao",
+     "at": 2,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:39270835",
+   "ms": 1,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 200,
+   "suffix": " TRIỆU",
+   "label": "NGƯỜI THEO DÕI TRẬN ĐẤU · THEO DEEPMIND",
+   "until": [
+    3,
+    "triệu"
+   ],
+   "sub": {
+    "text": "SEOUL · 9–15/03/2016",
+    "at": [
+     3,
+     "người"
+    ]
+   }
+  },
+  {
+   "type": "timeline",
+   "at": 4,
+   "items": [
+    {
+     "year": "15/03",
+     "text": "trận đấu kết thúc: 4–1 cho cỗ máy",
+     "at": [
+      4,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "year": "17/03",
+     "text": "công bố 1.000 tỷ won cho nghiên cứu AI",
+     "at": [
+      5,
+      null,
+      0,
+      0.05
+     ]
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Một trận cờ",
+   "nodes": [
+    {
+     "text": "đã đổi hướng đi",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      6,
+      "đã"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "của cả một nước",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "của"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 560
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol",
+  "https://deepmind.google/research/alphago/"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "alphago": "An-pha Gô",
+  "=AlphaGo": "An-pha Gô",
+  "won": "uôn"
+ },
+ "imgs": {}
+}

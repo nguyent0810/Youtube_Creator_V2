@@ -1,0 +1,178 @@
+{
+ "theme": "mim",
+ "title": "Năm 2014, máy giải chữ méo đúng 99,8%: bài kiểm tra “bạn có phải người không” vỡ",
+ "description": "Ngày 03/12/2014, Google cho biết công nghệ trí tuệ nhân tạo khi ấy giải được cả loại chữ méo khó nhất với độ chính xác 99,8%, nên chữ méo không còn là phép thử đáng tin để phân biệt người với máy (Google Security Blog). Đề thi được đổi sang ô ảnh và ô tick “Tôi không phải người máy”. Trớ trêu: hàng tỷ lần gõ của người dùng trước đó chính là một phần thứ dạy máy đọc. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (9 phút): https://youtu.be/CAYQtYA1NJA (công khai từ 20:00 ngày 22/10).",
+ "tags": [
+  "recaptcha",
+  "google",
+  "trí tuệ nhân tạo",
+  "captcha",
+  "mã xác nhận",
+  "tôi không phải người máy",
+  "công nghệ quanh ta",
+  "mind in the machine"
+ ],
+ "sub": "GOOGLE · 12/2014",
+ "acc": [
+  "chín",
+  "tám",
+  "vỡ",
+  "dạy",
+  "ảnh"
+ ],
+ "kicker": "CÔNG NGHỆ QUANH TA",
+ "lines": [
+  "Chín mươi chín phẩy tám phần trăm. Con số làm vỡ một bài kiểm tra.",
+  "Chữ méo từng là thứ con người đọc dễ, còn máy thì chịu.",
+  "Nên suốt nhiều năm, nó được dùng để hỏi: bạn có phải là người không?",
+  "Tháng 12 năm 2014, Google công bố một kết quả.",
+  "Trí tuệ nhân tạo của họ giải đúng loại chữ méo khó nhất, tới chín mươi chín phẩy tám phần trăm.",
+  "Trớ trêu ở chỗ, hàng tỷ lần gõ của chúng ta, lại là thứ đã dạy máy đọc.",
+  "Thế là đề thi phải đổi. Sang những ô ảnh."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "99,8%",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "con số làm vỡ một bài kiểm tra",
+     "at": [
+      0,
+      "Con"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8480685",
+   "ms": 6,
+   "veil": 0.55
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "CHỮ MÉO NGÀY TRƯỚC",
+   "cards": [
+    {
+     "k": "CON NGƯỜI",
+     "v": "ĐỌC DỄ",
+     "at": [
+      1,
+      "con"
+     ]
+    },
+    {
+     "k": "MÁY",
+     "v": "CHỊU",
+     "at": [
+      1,
+      "còn"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "NÊN ĐƯỢC DÙNG ĐỂ HỎI: BẠN CÓ PHẢI NGƯỜI KHÔNG?"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "THÁNG 12 NĂM 2014",
+     "at": 3,
+     "acc": true
+    },
+    {
+     "text": "Google công bố một kết quả",
+     "at": [
+      3,
+      "Google"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34771072",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 3
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "to": 99.8,
+   "suffix": "%",
+   "label": "AI GIẢI ĐÚNG LOẠI CHỮ MÉO KHÓ NHẤT",
+   "until": [
+    4,
+    "tám"
+   ],
+   "sub": {
+    "text": "GOOGLE SECURITY BLOG · 03/12/2014",
+    "at": [
+     4,
+     "phần"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Trớ trêu",
+   "nodes": [
+    {
+     "text": "hàng tỷ lần gõ của ta",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      5,
+      "hàng"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "đã dạy máy đọc",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      5,
+      "dạy"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 560
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "ĐỀ THI PHẢI ĐỔI",
+   "sub": "SANG NHỮNG Ô ẢNH"
+  }
+ ],
+ "sources": [
+  "https://security.googleblog.com/2014/12/are-you-robot-introducing-no-captcha.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "google": "Gu-gồ"
+ },
+ "imgs": {}
+}

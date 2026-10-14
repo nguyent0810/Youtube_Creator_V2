@@ -801,6 +801,16 @@ def do_html(topic, only=None):
         bad = [c for k, sc in enumerate(scenes) for c in unresolved_cues(sc, f"{sc['type']}#{k}")]
         if bad:
             raise SystemExit(f"{name}: mốc chưa đổi ra giây (thêm khoá vào BLD.ANCHORS): " + "; ".join(bad))
+        # Retro 5 (14/10/2026): (a) "label" của cảnh bars/chart là thẻ góc dưới trái, đè lên nhãn trục (che chữ "MÁY", "99% THẮNG");
+        # nguồn/ghi chú của biểu đồ đặt vào "unit". (b) counter có chữ số trong "prefix": số trung gian "1 / 7.698" đọc như dữ kiện thật.
+        over = [f"{sc['type']}#{k}: label {sc['label'].get('k') or sc['label'].get('v')!r}" for k, sc in enumerate(scenes)
+                if sc["type"] in ("bars", "chart") and isinstance(sc.get("label"), dict)]
+        if over:
+            raise SystemExit(f"{name}: label đè nhãn trục biểu đồ (chuyển sang \"unit\"): " + "; ".join(over))
+        pre = [f"counter#{k}: prefix {sc['prefix']!r}" for k, sc in enumerate(scenes)
+               if sc["type"] == "counter" and any(c.isdigit() for c in str(sc.get("prefix") or "")) and sc.get("from", 0) != sc["to"]]
+        if pre:
+            raise SystemExit(f"{name}: counter có chữ số trong prefix (đặt \"from\" = \"to\" hoặc dùng kinetic): " + "; ".join(pre))
         wide = ledger_overflow(scenes, THEME["name"])
         if wide:
             raise SystemExit(f"{name}: dòng sổ dài hơn thẻ (rút gọn khoá/giá trị): " + "; ".join(wide))

@@ -1,0 +1,183 @@
+{
+ "theme": "mim",
+ "title": "AlphaGo học cờ vây thế nào: xem 30 triệu nước cờ, rồi tự đánh với chính mình",
+ "description": "Nhóm DeepMind không dạy AlphaGo mẹo đánh cờ. Họ cho nó xem khoảng 30 triệu nước cờ từ các ván đấu của con người, với nhiệm vụ đoán: ở thế cờ này, người chơi giỏi sẽ đi nước nào. Sau đó nó tự chơi với chính mình hết ván này tới ván khác. Kết quả là hai mạng nơ-ron: một cái gợi ý nước đáng xét, một cái ước lượng ai đang thắng; nhờ thế nó không cần tính mọi khả năng (Wikipedia: AlphaGo; DeepMind). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (20 phút): https://youtu.be/cNwIMli7nOc (công khai từ 20:00 ngày 29/10).",
+ "tags": [
+  "deepmind",
+  "mạng nơ-ron",
+  "học sâu",
+  "alphago",
+  "lee sedol",
+  "cờ vây",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "DEEPMIND · 2014–2016",
+ "acc": [
+  "ba",
+  "đoán",
+  "chính",
+  "hai",
+  "vài"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Ba mươi triệu nước cờ. Đó là thứ đầu tiên AlphaGo được xem.",
+  "Người ta không dạy nó mẹo đánh.",
+  "Họ chỉ giao một việc: đoán. Ở thế cờ này, một người chơi giỏi sẽ đi nước nào?",
+  "Sau đó, nó tự chơi với chính mình. Thắng thì nhớ. Thua thì sửa.",
+  "Cuối cùng, nó có hai bộ não nhỏ.",
+  "Một cái gợi ý những nước đáng xem. Cái kia ước lượng ai đang thắng.",
+  "Nhờ thế, nó không tính mọi khả năng. Nó chỉ đào sâu vào vài hướng hứa hẹn nhất."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "30 TRIỆU NƯỚC CỜ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "thứ đầu tiên AlphaGo được xem",
+     "at": [
+      0,
+      "Đó"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:39262883",
+   "veil": 0.5
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "KHÔNG DẠY MẸO ĐÁNH",
+   "sub": "CHỈ GIAO MỘT VIỆC: ĐOÁN"
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Việc được giao",
+   "nodes": [
+    {
+     "text": "ở thế cờ này",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      2,
+      "Ở"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "người giỏi sẽ đi nước nào?",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      2,
+      "một"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 780
+    }
+   ],
+   "note": "HỌC TỪ CÁC VÁN ĐẤU CỦA CON NGƯỜI"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "RỒI TỰ CHƠI VỚI CHÍNH MÌNH",
+     "at": 3,
+     "acc": true
+    },
+    {
+     "text": "thắng thì nhớ · thua thì sửa",
+     "at": [
+      3,
+      "Thắng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:39270835",
+   "ms": 2,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 3
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "HAI BỘ NÃO NHỎ",
+   "cards": [
+    {
+     "k": "BỘ NÃO 1",
+     "v": "GỢI Ý NƯỚC ĐÁNG XEM",
+     "at": [
+      5,
+      "Một"
+     ]
+    },
+    {
+     "k": "BỘ NÃO 2",
+     "v": "AI ĐANG THẮNG?",
+     "at": [
+      5,
+      "Cái"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "HAI MẠNG NƠ-RON + TÌM KIẾM"
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "to": 30,
+   "suffix": " TRIỆU",
+   "label": "NƯỚC CỜ ĐÃ HỌC · NHƯNG KHÔNG TÍNH MỌI KHẢ NĂNG",
+   "until": [
+    6,
+    "khả"
+   ],
+   "sub": {
+    "text": "CHỈ ĐÀO SÂU VÀI HƯỚNG HỨA HẸN NHẤT",
+    "at": [
+     6,
+     "đào"
+    ]
+   }
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/AlphaGo",
+  "https://deepmind.google/research/alphago/"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "alphago": "An-pha Gô",
+  "=AlphaGo": "An-pha Gô",
+  "=AI": "ây ai"
+ },
+ "imgs": {}
+}

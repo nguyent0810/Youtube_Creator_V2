@@ -1,0 +1,189 @@
+{
+ "theme": "mim",
+ "title": "AlphaGo được cài sẵn một quy tắc: dưới 20% khả năng thắng thì xin thua",
+ "description": "Như một kỳ thủ chuyên nghiệp, AlphaGo được lập trình để xin thua khi nó ước tính khả năng thắng của mình tụt dưới 20%. Trong trận với Lee Sedol, quy tắc ấy chỉ dùng tới đúng một lần: ván bốn, ngày 13/03/2016. Trước nước 78 của Lee Sedol, cỗ máy còn ước tính mình thắng khoảng 70%; sau đó con số sụp dần, và ở nước thứ 180, màn hình hiện thông báo AlphaGo xin thua (Wikipedia: AlphaGo versus Lee Sedol). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (20 phút): https://youtu.be/cNwIMli7nOc (công khai từ 20:00 ngày 29/10).",
+ "tags": [
+  "nước 78",
+  "xin thua",
+  "alphago",
+  "lee sedol",
+  "cờ vây",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "VÁN BỐN · 13/03/2016",
+ "acc": [
+  "hai",
+  "một",
+  "bảy",
+  "sụp",
+  "thua"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Dưới hai mươi phần trăm, thì xin thua. Đó là quy tắc cài sẵn trong AlphaGo.",
+  "Một kỳ thủ chuyên nghiệp không đánh tới cùng khi đã hết hy vọng. Cỗ máy cũng vậy.",
+  "Trong năm ván với Lee Sedol, quy tắc ấy chỉ được dùng đúng một lần.",
+  "Ván bốn. Giữa ván, cỗ máy còn tin mình thắng tới bảy mươi phần trăm.",
+  "Rồi Lee Sedol đi một nước mà nó không ngờ tới.",
+  "Chỉ sau vài nước, con số ấy sụp đổ.",
+  "Đến nước thứ một trăm tám mươi, màn hình hiện lên: AlphaGo xin thua."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "DƯỚI 20%",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "THÌ XIN THUA",
+     "at": [
+      0,
+      "thì"
+     ]
+    },
+    {
+     "text": "quy tắc cài sẵn trong AlphaGo",
+     "at": [
+      0,
+      "Đó"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:39270835",
+   "ms": 2,
+   "veil": 0.5
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "HẾT HY VỌNG THÌ DỪNG",
+   "cards": [
+    {
+     "k": "KỲ THỦ CHUYÊN NGHIỆP",
+     "v": "XIN THUA",
+     "at": [
+      1,
+      "không"
+     ]
+    },
+    {
+     "k": "CỖ MÁY",
+     "v": "CŨNG VẬY",
+     "at": [
+      1,
+      "Cỗ"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 1,
+   "suffix": " LẦN",
+   "label": "QUY TẮC ẤY ĐƯỢC DÙNG · TRONG CẢ NĂM VÁN",
+   "until": [
+    2,
+    "một"
+   ],
+   "sub": {
+    "text": "VÁN BỐN · 13/03/2016",
+    "at": [
+     2,
+     "lần."
+    ]
+   }
+  },
+  {
+   "type": "chart",
+   "at": 3,
+   "kind": "bars",
+   "title": "MÁY TỰ ƯỚC TÍNH KHẢ NĂNG THẮNG (%)",
+   "unit": "VÁN BỐN · THEO TƯỜNG THUẬT TRẬN ĐẤU",
+   "min": 0,
+   "bars": [
+    {
+     "label": "GIỮA VÁN",
+     "v": 70,
+     "text": "~70",
+     "c": "ref",
+     "at": [
+      3,
+      "bảy"
+     ]
+    },
+    {
+     "label": "NGƯỠNG\nXIN THUA",
+     "v": 20,
+     "text": "20",
+     "c": "dim",
+     "at": [
+      5,
+      "con"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MỘT NƯỚC NÓ KHÔNG NGỜ TỚI",
+     "at": 4,
+     "acc": true
+    },
+    {
+     "text": "rồi con số sụp đổ",
+     "at": [
+      5,
+      "con"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:39262883",
+   "ms": 3,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 4
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "ALPHAGO XIN THUA",
+   "sub": "NƯỚC THỨ 180 · VÁN BỐN"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "lee": "Li",
+  "sedol": "Xê-đôn",
+  "alphago": "An-pha Gô",
+  "=AlphaGo": "An-pha Gô"
+ },
+ "imgs": {}
+}
