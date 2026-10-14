@@ -347,6 +347,43 @@
     tl.to(pp, { scale: 1.03, duration: Math.max(0.2, s.t1 - s.t0 - 0.4), ease: "none" }, s.t0 + 0.4);
   };
 
+  /* ---------- quote karaoke (BUD v2, Shorts Studio port): cả câu hiện mờ, từng chữ sáng đúng lúc được đọc (s.wt từ build.py) ---------- */
+  const quoteKaraoke = (s, d) => {
+    const pp = el("div", "qkara", null, d);
+    Object.assign(pp.style, { position: "absolute", left: "90px", right: "90px", top: "430px", textAlign: "left" });
+    const qm = el("div", null, "“", pp); qm.setAttribute("data-layout-allow-overlap", ""); Object.assign(qm.style, { fontFamily: "'Playfair Display',serif", fontSize: "200px", lineHeight: "0.8", color: "var(--red)" });
+    const qt = el("div", null, null, pp); const ws = s.text.split(/\s+/), L = s.text.length;
+    Object.assign(qt.style, { fontFamily: "'Playfair Display',serif", fontStyle: "italic", fontWeight: "700", fontSize: px(L < 70 ? 78 : L < 110 ? 68 : 58), lineHeight: "1.3", color: "#f4efe3" });
+    const sp = ws.map((w) => { const e = el("span", null, esc(w) + " ", qt); e.style.opacity = 0.28; return e; });
+    sp.forEach((e, k) => { const t = (s.wt && s.wt[k] != null) ? s.wt[k] : s.t0 + k * 0.25; tl.to(e, { opacity: 1, duration: 0.15, ease: "none" }, Math.max(s.t0, t - 0.03)); });
+    if (s.by) { const by = el("div", "mono", "— " + esc(s.by), pp); Object.assign(by.style, { marginTop: "36px", fontSize: "34px", letterSpacing: ".08em", color: "var(--red)", opacity: 0 });
+      tl.to(by, { opacity: 1, duration: 0.3 }, s.t0 + 0.3); }
+    tl.fromTo(pp, { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out", immediateRender: false }, s.t0);
+  };
+  const quoteType = B.quote;
+  B.quote = (s, d) => (s.mode === "karaoke" ? quoteKaraoke(s, d) : quoteType(s, d));
+
+  /* ---------- source: thẻ dẫn kinh (BUD v2, Shorts Studio source_card) -- chữ lớn đọc được, "diễn ý" cùng dòng nguồn ----------
+     sfx: sealAt -> thud (con dấu) */
+  B.source = (s, d) => {
+    const card = el("div", "srccard", null, d); card.setAttribute("data-layout-allow-occlusion", "");   // #scrims phủ mờ có chủ đích
+    Object.assign(card.style, { position: "absolute", left: "80px", right: "80px", top: px(s.top || 400), padding: "56px 56px 64px",
+      background: "rgba(250,246,236,0.97)", borderLeft: "14px solid var(--red)", borderRadius: "10px", boxShadow: "0 30px 80px rgba(0,0,0,.45)", color: "#1c1a17" });
+    const src = el("div", "mono", esc(s.source || "") + (s.paraphrase === false ? "" : ' <span style="color:#7a5c2e">· DIỄN Ý</span>'), card);
+    Object.assign(src.style, { fontSize: "36px", fontWeight: "700", letterSpacing: ".06em", color: "#7a3f10", whiteSpace: "nowrap" });   // nâu đậm trên kem: đạt WCAG AA
+    if (s.ref) { const rf = el("div", null, esc(s.ref), card); Object.assign(rf.style, { fontFamily: "'Playfair Display',serif", fontWeight: "900", fontSize: px(fsz(s.ref, 92, 880, 0.55)), lineHeight: "1.1", margin: "20px 0 28px" }); }
+    const sn = el("div", null, null, card); Object.assign(sn.style, { fontFamily: "'Playfair Display',serif", fontStyle: "italic", fontWeight: "700", fontSize: px(s.size || 64), lineHeight: "1.32" });
+    let hl = null; String(s.snippet || "").split(/\[\[|\]\]/).forEach((p, k) => { if (k % 2) { hl = el("span", null, esc(p), sn);
+      Object.assign(hl.style, { backgroundImage: "linear-gradient(transparent 58%, rgba(224,159,62,.55) 58%)", backgroundRepeat: "no-repeat", backgroundSize: "0% 100%" }); }
+      else sn.appendChild(document.createTextNode(p)); });
+    tl.fromTo(card, { opacity: 0, x: 140 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out", immediateRender: false }, s.t0 + 0.02);
+    if (hl) tl.to(hl, { backgroundSize: "100% 100%", duration: 0.5, ease: "power2.inOut" }, s.hlAt);
+    if (s.seal !== false) { const se = el("div", "mono", esc(s.seal || "ĐÃ ĐỐI CHIẾU"), d);
+      Object.assign(se.style, { position: "absolute", right: "110px", top: px((s.top || 400) - 70), padding: "14px 22px", border: "5px solid var(--red)", color: "var(--red)",
+        fontSize: "34px", fontWeight: "700", letterSpacing: ".08em", borderRadius: "8px", opacity: 0 });
+      stamp(se, s.sealAt, -7); }
+  };
+
   /* ---------- kinetic: chữ lớn xếp tầng, từng dòng đập vào theo lời ----------
      sfx: mỗi item.at -> thud nhẹ */
   const { SLAM, beat } = makeBeat({ tl, el, esc, rnd });   // beat.js: thư viện hiệu ứng chữ dùng chung với casewide
@@ -579,7 +616,7 @@
     const d = el("div", "scene", null, stage); show(d, s.t0, s.t1, s.type === "question" ? 0.06 : 0.1);
     if (!B[s.type]) throw new Error("loại cảnh lạ: " + s.type);
     if (s.vid) {   // nền video: đẩy máy chậm + màn che (chữ phía trên vẫn đọc rõ); thẻ <video> do build.py nướng sẵn
-      const v = document.getElementById(s.vid); if (!v) throw new Error("thiếu video " + s.vid);
+      const v = document.getElementById(s.vid) || (window.__HF_CHECK ? el("div", "clip bv", null, document.getElementById("root")) : null); if (!v) throw new Error("thiếu video " + s.vid);   // __HF_CHECK: bản sao cho `hyperframes check` (BUD v2) -- trình kiểm tách thẻ video
       if (s.win) {   // cửa sổ video (12/10/2026): hình chiếm nửa trên, chữ/số nằm dưới -- hình và chữ cùng lúc, không che nhau
         const WS = LK.win || "top", G = { top: [215, 1010, 56, 1024, 40], tilt: [250, 980, 120, 960, 6], band: [330, 930, 0, 1080, 0], circle: [220, 1000, 150, 930, 390] }[WS] || [215, 1010, 56, 1024, 40];
         const T = G[0], Bt = G[1], L = G[2], R = G[3];
@@ -630,7 +667,7 @@
       if (TH.pop && ACC.has(norm(w.w))) tl.fromTo(sp, { scale: 1 }, { scale: 1.06, duration: 0.06, yoyo: true, repeat: 1, ease: "power2.out", immediateRender: false }, w.t); });
     const t0 = c[0].t - 0.06, nx = chunks[n + 1], t1 = nx ? nx[0].t - 0.06 : DUR;
     tl.set(box, { opacity: 1 }, t0); tl.set(box, { opacity: 0 }, t1); });
-  C.scenes.filter((s) => s.type === "question").forEach((s) => { tl.set("#caps", { opacity: 0 }, s.t0 - 0.01); tl.set("#caps", { opacity: 1 }, s.t1); });
+  C.scenes.filter((s) => s.type === "question" || (s.type === "quote" && s.mode === "karaoke") || s.loop).forEach((s) => { tl.set("#caps", { opacity: 0 }, s.t0 - 0.01); tl.set("#caps", { opacity: 1 }, s.t1); });
 
   window.__timelines = window.__timelines || {};
   window.__timelines["main"] = tl;

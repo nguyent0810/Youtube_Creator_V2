@@ -363,7 +363,7 @@ from beatfx import apply_sync, assign_beats  # noqa: E402  (motion/beatfx.py —
 MODE = {"kinetic": "T", "slam": "T", "question": "T", "quote": "T",
         "photo": "M", "doc": "M", "hero": "M", "evidence": "M", "mug": "M", "split": "M", "file": "M", "crowd": "M",
         "chart": "D", "counter": "D", "ledger": "D", "timeline": "D", "calendar": "D", "clock": "D", "date": "D",
-        "map": "G", "board": "G", "cards3d": "G"}
+        "map": "G", "board": "G", "cards3d": "G", "source": "G"}
 
 
 def scene_mode(r: dict) -> str:
@@ -391,6 +391,29 @@ def mix_lint(sc: list[dict]) -> list[str]:
     longest = max(sc, key=lambda r: r["t1"] - r["t0"])
     if longest["t1"] - longest["t0"] > 11:
         out.append(f"cảnh {longest['type']} dài {longest['t1'] - longest['t0']:.1f}s (> 11s): tách ra")
+    return out
+
+
+# ---- BUD v2 (Shorts Studio port, 14/10/2026): luật bố cục/hướng chuyển động (studio.py variety) -- chỉ theme bud ----
+# framing = cách chiếm khung; axis = hướng chuyển động chính khi vào. Hai cảnh liền nhau không cùng framing, không cùng axis;
+# >= 3 framing khác nhau mỗi video. Spec "v2": true -> lỗi chặn; Short bud cũ -> chỉ cảnh báo.
+BUD_FRAME = {"kinetic": ("full-media", "Y"), "slam": ("center-hero", "Z"), "quote": ("card", "in-glyph"),
+             "source": ("card-on-field", "X"), "board": ("card", "draw"), "cards3d": ("stack-3d", "3D"),
+             "counter": ("center-hero", "count"), "question": ("center-hero", "Y")}
+
+
+def bud_layout_lint(sc: list[dict]) -> list[str]:
+    fr = [BUD_FRAME.get(r["type"], (r["type"], r["type"])) for r in sc if not r.get("loop")]
+    fr = [("text-hero", "Y") if r["type"] == "kinetic" and not (r.get("clip") or r.get("vid")) else f
+          for r, f in zip([r for r in sc if not r.get("loop")], fr)]
+    out = []
+    for i in range(1, len(fr)):
+        if fr[i][0] == fr[i - 1][0]:
+            out.append(f"cảnh {i - 1}-{i} cùng bố cục {fr[i][0]}")
+        if fr[i][1] == fr[i - 1][1]:
+            out.append(f"cảnh {i - 1}-{i} cùng hướng chuyển động {fr[i][1]}")
+    if len({f[0] for f in fr}) < 3:
+        out.append(f"chỉ {len({f[0] for f in fr})} kiểu bố cục (< 3)")
     return out
 
 
@@ -424,6 +447,16 @@ def plan(spec: dict, lines: list[dict], dur: float) -> list[dict]:
         if ty == "calendar":
             r.setdefault("at", t0 + 0.45)
             r.setdefault("step", round(min(0.1, 1.2 / r["n"]), 3))
+        if ty == "quote" and r.get("mode") == "karaoke":   # BUD v2: karaoke theo mốc từng chữ đo từ giọng (studio quote)
+            ln = lines[r["line"]]
+            r.setdefault("text", ln["text"])
+            if r["text"] != ln["text"]:
+                raise ValueError(f"quote karaoke: text phải trùng câu {r['line']} (để khớp mốc chữ)")
+            r["wt"] = [w["t"] for w in ln["words"]]
+            r.setdefault("at", t0)
+            r.setdefault("typeDur", 0.0)
+        if ty == "source":
+            r.setdefault("hlAt", round(t0 + (t1 - t0) * 0.45, 3)); r.setdefault("sealAt", round(t0 + (t1 - t0) * 0.7, 3))
         if ty == "quote":
             r.setdefault("at", t0 + 0.4)
             r.setdefault("typeDur", round(min(len(r["text"]) * 0.035, (t1 - r["at"]) * 0.75), 3))
@@ -478,6 +511,12 @@ def plan(spec: dict, lines: list[dict], dur: float) -> list[dict]:
         bad = mix_lint(sc)
         if bad:
             raise SystemExit("phối cảnh chưa đạt (luật mix 12/10/2026): " + "; ".join(bad))
+    if spec.get("theme") == "bud":
+        bad = bud_layout_lint(sc)
+        if bad and spec.get("v2"):
+            raise SystemExit("bố cục/hướng chuyển động chưa đạt (BUD v2): " + "; ".join(bad))
+        for w in bad:
+            print(f"  ! WARNING bố cục: {w}", flush=True)
     if spec.get("theme") in ("mim", "ck", "bud") and spec.get("hold_open", True) and sc and sc[0]["type"] == "kinetic":
         for q in sc[0]["items"]:
             if q["at"] < 0.3 and not q.get("fx"):
@@ -577,7 +616,19 @@ def build(slug: str, render: bool = True, draft: bool = False) -> Path:
         mp = spec["map"]
         geo = hf_geo.bake({"countries": mp["countries"], "context": mp.get("context", []), "labels": mp.get("labels", {}),
                            "bbox": mp["bbox"], "pins": mp["pins"]})["_geo"]
+    loop_main = None
+    if spec.get("theme") == "bud" and spec.get("loop"):   # BUD v2: khung cuối quay về móc (studio loop) -> xem lại liền mạch
+        loop_main, dur = dur, round(dur + 0.5, 2)
     scenes = plan(spec, lines, dur)
+    if loop_main is not None:
+        s0 = scenes[0]
+        if s0["type"] != "kinetic" or not s0.get("clip"):
+            raise SystemExit(f"{slug}: loop cần cảnh 0 là kinetic có clip")
+        scenes[-1]["t1"] = loop_main
+        lp = json.loads(json.dumps(s0)); lp.update({"t0": loop_main, "t1": dur, "loop": True, "tr": "cut"})
+        for q in lp["items"]:
+            q["at"] = round(loop_main + 0.02, 3); q["fx"] = "hold"
+        scenes.append(lp)
     if th["sound"] == "music" and not any((themes.MUSIC_DIR / f).exists() for f in themes.tracks(th)):
         raise SystemExit(f"không có file nhạc nền nào trong {themes.MUSIC_DIR} -- kiểm tra trước khi render")
     look_cls, look = "", None
@@ -634,6 +685,8 @@ def build(slug: str, render: bool = True, draft: bool = False) -> Path:
                     .replace("{css}", f'\n<link rel="stylesheet" href="assets/engine/{th["js"]["css"]}" />' if th["js"].get("css") else ""),
                     encoding="utf-8")
     sfx.build(case, od / "sfx.wav", drone=th["sound"] == "drone")
+    if spec.get("theme") == "bud" and spec.get("v2"):
+        check_gate(slug, comp, scenes, od, strict=True)
     if not render:
         return comp
     silent = od / ("draft.mp4" if draft else "silent.mp4")
@@ -670,6 +723,52 @@ def build(slug: str, render: bool = True, draft: bool = False) -> Path:
     for m in qa_short(final):
         print(f"  {m}", flush=True)
     return final
+
+
+def check_gate(slug: str, comp: Path, scenes: list[dict], od: Path, strict: bool = True) -> dict:
+    """BUD v2 (Shorts Studio port): `hyperframes check` (runtime JS / layout / contrast WCAG AA) ở giữa mỗi cảnh, TRƯỚC render.
+    check chỉ nhận thư mục dự án -> dựng thư mục tạm od/check (index.html + junction assets -> motion/hf/assets)."""
+    cd = od / "check"
+    cd.mkdir(parents=True, exist_ok=True)
+    html = comp.read_text(encoding="utf-8")
+    # khai báo __timelines nội tuyến (StaticGuard chỉ quét HTML) + cờ __HF_CHECK (engine thay <video> bằng khung giữ chỗ)
+    (cd / "index.html").write_text(html.replace("</head>", "<script>window.__HF_CHECK = 1; window.__timelines = window.__timelines || {};</script>\n</head>", 1), encoding="utf-8")
+    shutil.copy(HF / "hyperframes.json", cd / "hyperframes.json")
+    # trình kiểm chạy script ngoài trước khi có DOM -> nhúng nội tuyến engine (chỉ trong bản sao kiểm)
+    for nm in re.findall(r'<script src="assets/engine/([^"]+\.js)"></script>', html):
+        js = (HF / "assets/engine" / nm).read_text(encoding="utf-8")
+        html = html.replace(f'<script src="assets/engine/{nm}"></script>', "<script>\n" + js + "\n</script>")
+    (cd / "index.html").write_text(html.replace("</head>", "<script>window.__HF_CHECK = 1; window.__timelines = window.__timelines || {};</script>\n</head>", 1), encoding="utf-8")
+    for rel in ["assets/engine", f"assets/cases/{slug}"]:   # check không theo junction -> chép thật (nhỏ)
+        shutil.rmtree(cd / rel, ignore_errors=True); shutil.copytree(HF / rel, cd / rel)
+    with open(cd / f"assets/cases/{slug}/data.js", "a", encoding="utf-8") as f:   # cờ đặt trong data.js (script nội tuyến bị trình kiểm sắp lại)
+        f.write("\nwindow.__HF_CHECK = 1;\n")
+    for m in set(re.findall(r'src="(assets/clips/[^"]+)"', html)):   # clip: hard link (cùng ổ, không tốn chỗ)
+        dst = cd / m; dst.parent.mkdir(parents=True, exist_ok=True)
+        if not dst.exists():
+            try:
+                os.link(HF / m, dst)
+            except OSError:
+                shutil.copy(HF / m, dst)
+    mids = ",".join(f"{(s['t0'] + s['t1']) / 2:.2f}" for s in scenes)
+    r = subprocess.run(["npx.cmd", "-y", "-p", "node@22", "-p", "hyperframes@0.8.75", "hyperframes", "check", ".", "--json", "--at", mids],
+                       cwd=cd, timeout=900, capture_output=True, text=True, encoding="utf-8", errors="replace")
+    try:
+        cj = json.loads(r.stdout[r.stdout.find("{"):])
+    except Exception:      # noqa: BLE001
+        raise SystemExit(f"{slug}: check không đọc được JSON\n{(r.stdout + r.stderr)[-1500:]}")
+    (od / "check.json").write_text(json.dumps(cj, ensure_ascii=False, indent=1), encoding="utf-8")
+    def errs(k):
+        sec = cj.get(k) or {}
+        return [f for f in sec.get("findings", []) if f.get("severity") == "error"]
+    rep = {k: errs(k) for k in ("lint", "runtime", "layout", "contrast")}
+    if not (cj.get("layout") or {}).get("duration"):
+        rep["runtime"].append({"code": "no_timeline", "message": "trình kiểm không đọc được timeline (duration 0)"})
+    print(f"  check: lint {len(rep['lint'])} · runtime {len(rep['runtime'])} · layout {len(rep['layout'])} · contrast {len(rep['contrast'])} lỗi (ok={cj.get('ok')})", flush=True)
+    bad = [f"{k}: {f.get('code') or f.get('rule')} {str(f.get('message') or f.get('selector') or '')[:120]}" for k, v in rep.items() for f in v]
+    if bad and strict:
+        raise SystemExit(f"{slug}: check chưa đạt -> " + " | ".join(bad[:8]))
+    return rep
 
 
 def qa_short(final: Path, ffmpeg: str | None = None) -> list[str]:

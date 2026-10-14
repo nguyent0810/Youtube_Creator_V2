@@ -159,3 +159,35 @@
 - Tĩnh lặng (#98, #100): gap 0.5–0.6, ≤ 56 từ, ambience rain/water; vẫn cần 1 D-scene (đếm hơi thở / giây). Hook "30 giây" đổi thành "20 giây" cho khớp độ dài video thật.
 - Pexels không có clip mõ gỗ (mokugyo) → dùng cận cảnh mắt cá mở cho hook "vì sao hình con cá".
 
+## 17. Lượt 09:50 — 14/10/2026 (UTC+7)
+
+### Analytics (Studio Home + Posts, @hanhtrinhgiaithoat)
+- Followers 932; 7-day views 1.8K (+4.2%); likes 7d 107 (−51%); comments 8; shares 0.
+- #9 (14/10 06:35, Kalama / Hiểu đúng #2): ~51 views early / 0 likes.
+- #8 (13/10 20:30, Ba Vedehika): 124 views / 1 like.
+- #7 (13/10 11:40, kệ 252): 122 views / 8 likes (best likes in recent set).
+- Baseline vẫn ~110–127 views/video; #9 buổi sáng còn sớm.
+
+### Hàng đợi Studio
+- Logged in OK. Scheduled filter: queue còn tới **03/11/2026 20:45** (POV “ai cũng tìm đến bạn…” = #50).
+- Đêm nay #10 (Nếu bạn sắp đi ngủ) đã schedule 14/10 19:45.
+- Buffer >> 2–3 ngày; chưa cần đẩy lô #51+ trong lượt sáng.
+
+### Nghiên cứu thuật toán (xác nhận lại 14/10)
+- Tín hiệu chính vẫn: watch-time ratio / completion / rewatch > like/follow.
+- Hook 3 lớp 0–3s: chuyển động/chữ to → câu nói ≤1.5s → “cho ai + được gì”.
+- VN healing/Phật: lời đời thường ngắn (mối quan hệ, lo âu) thắng thuật ngữ nặng — mẫu Thầy Giác Minh Luật.
+- Giữ 18–27s + keyword search trong 3s đầu + caption (đã áp từ #35). Shares = 0 trên 7 ngày → thử CTA “gửi cho người đang…” trên vài bài chưa render lại / caption sắp xếp (không đụng video đã schedule).
+
+### Việc tiếp
+- 15:50: kiểm tra #9 mature views + #10 còn schedule; nếu ổn mới xét schedule #51–#58.
+- 21:50: báo cáo VN cho user.
+
+
+## 14/10/2026 — BUD v2 (port Shorts Studio vào motion/stier, chỉ theme bud)
+- Cảnh mới: `source` (thẻ dẫn kinh chữ lớn, "· DIỄN Ý" cùng dòng nguồn, [[tô sáng]], dấu "ĐÃ ĐỐI CHIẾU"); `quote` + `"mode":"karaoke","line":n` (chữ sáng theo mốc từ đo từ giọng; ẩn dòng phụ đề trong cảnh). Text karaoke phải trùng nguyên câu thoại.
+- `"loop": true`: +0,5 s cuối lặp lại cảnh móc (kinetic+clip, hold) -> xem lại liền mạch; khung 0 vẫn là footage chạy.
+- `"v2": true`: chặn khi 2 cảnh liền nhau cùng bố cục/hướng chuyển động hoặc < 3 kiểu bố cục; chạy `hyperframes check` (lint/runtime/layout/contrast) trước render, lỗi = dừng. Báo cáo: output/stier/<slug>/check.json.
+- `hyperframes check` 0.8.75 không chạy được engine casefile qua <script src> (DOM chưa có) và tách thẻ <video> -> bản sao kiểm phải nhúng engine nội tuyến + cờ __HF_CHECK (thay video bằng khung giữ chỗ) + hard-link clip. Đừng dùng junction cho assets (rmtree xuyên junction là xoá thật).
+- Check bắt được lỗi thật: nhãn vàng (--red của bud) trên thẻ kem chỉ 1,64:1 -> đổi nâu đậm #7a3f10. #scrims phủ thẻ là có chủ đích -> data-layout-allow-occlusion.
+- Render lại bản v2 của video đã có: đặt BUD_VARIETY=off (luật "clip mở đầu đã dùng" sẽ bắt chính bản gốc).
