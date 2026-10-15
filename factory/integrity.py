@@ -17,7 +17,9 @@ import re
 import unicodedata
 from dataclasses import dataclass
 
-_SENT = re.compile(r"[^.!?…\n]+(?:[.!?…]+[\"'”’»)]*)?")
+# "2.000", "6,68" không phải ranh giới câu: trước đây "Hơn 2.000 người." bị cắt thành "Hơn 2." + "000 người." -> hai video
+# cùng có "000 người." bị báo câu lặp giả (kowloon, mafia; retro 2 mục 16).
+_SENT = re.compile(r"(?:(?<=\d)\.(?=\d)|[^.!?…\n])+(?:[.!?…]+[\"'”’»)]*)?")
 _TERMINAL = re.compile(r"[.!?…][\"'”’»)]*\s*$")
 _MARKUP = [
     ("asterisk", re.compile(r"\*+")),

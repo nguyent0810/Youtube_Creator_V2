@@ -1,0 +1,309 @@
+{
+ "theme": "bud",
+ "format": "kinh-giai",
+ "hook_type": "nghich-ly",
+ "open_shot": "ban-tay",
+ "voice": "Đoan Trang",
+ "music": "healing.mp3",
+ "title": "Vì sao lỗi người luôn to hơn lỗi mình? Pháp Cú kệ 252",
+ "kicker": "LỜI PHẬT DẠY",
+ "sub": "PHÁP CÚ · KỆ 252",
+ "acc": [
+  "lỗi",
+  "người",
+  "mình",
+  "giấu",
+  "bài"
+ ],
+ "lines": [
+  "Vì sao lỗi người khác luôn to hơn lỗi của mình?",
+  "Ta soi người bằng kính lúp, soi mình bằng kính mờ.",
+  "Đồng nghiệp trễ năm phút, ta nhớ cả tuần. Mình trễ nửa tiếng, là tại kẹt xe.",
+  "Đức Phật có một hình ảnh rất lạ cho chuyện này.",
+  "Kinh Pháp Cú, diễn ý:",
+  "Lỗi người thì dễ thấy, lỗi mình thì khó thấy.",
+  "Lỗi người, ta tung lên như người sàng trấu.",
+  "Lỗi mình, ta giấu kỹ như con bạc gian giấu lá bài xấu.",
+  "Lần tới, trước khi chê ai, hỏi mình một câu:",
+  "Mình có đang giấu lá bài nào không?",
+  "Lưu lại để nhắc mình, và chia sẻ cho một người bạn."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "clip": "pexels:8116820",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "LỖI NGƯỜI",
+     "at": 0.0,
+     "acc": true,
+     "size": 170
+    },
+    {
+     "text": "LUÔN TO HƠN",
+     "at": [
+      0,
+      "to"
+     ]
+    },
+    {
+     "text": "LỖI MÌNH?",
+     "at": [
+      0,
+      "mình"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "clip": "pexels:11245736",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "SOI NGƯỜI: KÍNH LÚP",
+     "at": [
+      1,
+      "soi"
+     ]
+    },
+    {
+     "text": "SOI MÌNH: KÍNH MỜ",
+     "at": [
+      1,
+      "soi",
+      1
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "clip": "pexels:35530181",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "HỌ TRỄ 5 PHÚT",
+     "at": [
+      2,
+      "Đồng"
+     ]
+    },
+    {
+     "text": "nhớ cả tuần",
+     "at": [
+      2,
+      "nhớ"
+     ],
+     "sm": true
+    },
+    {
+     "text": "MÌNH TRỄ 30 PHÚT",
+     "at": [
+      2,
+      "Mình"
+     ]
+    },
+    {
+     "text": "= TẠI KẸT XE",
+     "at": [
+      2,
+      "kẹt"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "MỘT HÌNH ẢNH\nRẤT LẠ",
+   "clip": "pexels:29064708",
+   "veil": 0.55,
+   "fx": "zoom"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "clip": "pexels:36862846",
+   "veil": 0.6,
+   "items": [
+    {
+     "text": "KINH PHÁP CÚ",
+     "at": [
+      4,
+      "Kinh"
+     ],
+     "acc": true
+    },
+    {
+     "text": "KỆ 252",
+     "at": [
+      4,
+      "Pháp"
+     ]
+    },
+    {
+     "text": "diễn ý · bản dịch Bhikkhu Sujato",
+     "at": [
+      4,
+      "diễn"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "clip": "pexels:5494229",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "LỖI NGƯỜI: DỄ THẤY",
+     "at": [
+      5,
+      "Lỗi"
+     ]
+    },
+    {
+     "text": "LỖI MÌNH: KHÓ THẤY",
+     "at": [
+      5,
+      "lỗi",
+      1
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "clip": "pexels:8107426",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "LỖI NGƯỜI",
+     "at": [
+      6,
+      "Lỗi"
+     ]
+    },
+    {
+     "text": "TUNG LÊN",
+     "at": [
+      6,
+      "tung"
+     ],
+     "acc": true
+    },
+    {
+     "text": "như sàng trấu",
+     "at": [
+      6,
+      "sàng"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 7,
+   "text": "Lỗi người tung lên như trấu; lỗi mình giấu như con bạc gian giấu lá bài xấu.",
+   "by": "PHÁP CÚ 252 · DIỄN Ý",
+   "clip": "pexels:6813640",
+   "veil": 0.6
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "clip": "pexels:9790383",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "TRƯỚC KHI CHÊ AI",
+     "at": [
+      8,
+      "trước"
+     ],
+     "acc": true
+    },
+    {
+     "text": "hỏi mình một câu",
+     "at": [
+      8,
+      "hỏi"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 9,
+   "text": "MÌNH ĐANG GIẤU\nLÁ BÀI NÀO?",
+   "clip": "pexels:6259133",
+   "veil": 0.6,
+   "fx": "zoom"
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "clip": "pexels:5192033",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "LƯU LẠI",
+     "at": [
+      10,
+      "Lưu"
+     ],
+     "acc": true
+    },
+    {
+     "text": "để nhắc mình",
+     "at": [
+      10,
+      "nhắc"
+     ],
+     "sm": true
+    },
+    {
+     "text": "CHIA SẺ",
+     "at": [
+      10,
+      "chia"
+     ],
+     "acc": true
+    },
+    {
+     "text": "cho một người bạn",
+     "at": [
+      10,
+      "bạn"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "description": "Kinh Pháp Cú, kệ 252 (diễn ý): lỗi người dễ thấy, lỗi mình khó thấy; lỗi người ta tung lên như sàng trấu, lỗi mình ta giấu như con bạc gian giấu lá bài xấu.\n\nNguồn: Dhammapada 252, bản dịch Bhikkhu Sujato (CC0): https://suttacentral.net/dhp235-255/en/sujato\nLời kinh là diễn ý; phần bình giải là của kênh.",
+ "tags": [
+  "kinh pháp cú",
+  "lời phật dạy",
+  "phật pháp",
+  "chữa lành",
+  "soi lỗi người"
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp235-255/en/sujato"
+ ]
+}

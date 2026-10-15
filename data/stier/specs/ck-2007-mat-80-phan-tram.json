@@ -1,0 +1,167 @@
+{
+ "title": "VN-Index 2007 lên 1.170 điểm rồi còn khoảng 236 điểm năm 2009: cơn sốt chứng khoán đầu tiên",
+ "description": "Thị trường chứng khoán Việt Nam mở cửa năm 2000. Ngày 12/03/2007, VN-Index lên 1.170,67 điểm; ngày 24/02/2009 còn khoảng 235,5 điểm, mất khoảng 80% (VnExpress: Những dấu mốc để đời của VN-Index). Mức đỉnh 2007 đứng như một cột mốc suốt hơn mười năm. Nội dung giáo dục, số liệu quá khứ, không dự báo.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ: https://youtu.be/ULLEUHkYz9g (công khai từ 20:00 ngày 21/11)",
+ "tags": [
+  "vn-index 2007",
+  "khủng hoảng 2008",
+  "fomo",
+  "tâm lý đầu tư",
+  "vn-index",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "tám",
+  "mươi",
+  "một",
+  "nghìn",
+  "mốc"
+ ],
+ "kicker": "TÂM LÝ TIỀN BẠC",
+ "sub": "FOMO",
+ "lines": [
+  "Một trăm triệu còn chừng hai mươi triệu, nếu đi đúng theo VN-Index từ đỉnh năm 2007.",
+  "Thị trường chứng khoán Việt Nam mở cửa năm 2000. Bảy năm sau, nó có cơn sốt đầu tiên.",
+  "Ngày 12 tháng 3 năm 2007, VN-Index lên tới một nghìn một trăm bảy mươi điểm.",
+  "Rồi khủng hoảng tài chính thế giới ập tới.",
+  "Tháng 2 năm 2009, chỉ số chỉ còn khoảng hai trăm ba mươi sáu điểm. Mất khoảng tám mươi phần trăm.",
+  "Mức đỉnh năm ấy đứng yên như một cột mốc suốt hơn mười năm.",
+  "Cơn sốt đầu tiên để lại một con số mà thị trường phải mất cả thập kỷ mới vượt qua."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "100 → ≈20 TRIỆU",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "đi đúng theo VN-Index từ đỉnh 2007",
+     "at": [
+      0,
+      "nếu"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7579943",
+   "veil": 0.58
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "MỞ CỬA NĂM 2000",
+   "sub": "BẢY NĂM SAU · CƠN SỐT ĐẦU TIÊN"
+  },
+  {
+   "type": "chart",
+   "at": 2,
+   "kind": "bars",
+   "title": "VN-INDEX (ĐIỂM)",
+   "unit": "THEO VNEXPRESS · LÀM TRÒN",
+   "bars": [
+    {
+     "label": "12/03/2007",
+     "v": 1170,
+     "text": "1.170",
+     "c": "ref",
+     "at": [
+      2,
+      "VN-Index"
+     ]
+    },
+    {
+     "label": "02/2009",
+     "v": 236,
+     "text": "≈236",
+     "c": "down",
+     "at": [
+      4,
+      "hai"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "KHỦNG HOẢNG TÀI CHÍNH",
+     "at": 3,
+     "acc": true
+    },
+    {
+     "text": "thế giới · 2008",
+     "at": [
+      3,
+      "thế"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8052328",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 3
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 80,
+   "to": 80,
+   "prefix": "−",
+   "suffix": "%",
+   "label": "TỪ ĐỈNH 2007 TỚI ĐÁY 2009",
+   "sub": {
+    "text": "KHOẢNG · SỐ QUÁ KHỨ",
+    "at": [
+     4,
+     "Mất"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "ĐỈNH 2007",
+   "cards": [
+    {
+     "k": "THÀNH",
+     "v": "MỘT CỘT MỐC",
+     "at": 5
+    },
+    {
+     "k": "SUỐT",
+     "v": "HƠN MƯỜI NĂM",
+     "at": [
+      5,
+      "suốt"
+     ],
+     "c": "acc"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://vnexpress.net/nhung-dau-moc-de-doi-cua-vn-index-2822965.html"
+ ],
+ "theme": "ck",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

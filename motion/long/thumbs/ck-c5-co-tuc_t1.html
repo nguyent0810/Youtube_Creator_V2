@@ -1,0 +1,27 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#050912}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:"Be Vietnam Pro",sans-serif;color:#fff;
+ background:linear-gradient(rgba(125,211,252,.06) 1px,transparent 1px) 0 0/80px 80px,linear-gradient(90deg,rgba(125,211,252,.06) 1px,transparent 1px) 0 0/80px 80px,radial-gradient(80% 70% at 60% 40%,#16263f 0%,#0a1426 60%,#04080f 100%)}
+.big{position:absolute;font-weight:900;line-height:1.12;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.tag{position:absolute;font-family:"JetBrains Mono";font-weight:700;letter-spacing:.12em;white-space:nowrap;color:#fbbf24}
+.pill{position:absolute;padding:10px 30px 14px;border-radius:40px;border:5px solid;background:#0a1426;font-weight:900;font-size:44px;white-space:nowrap;line-height:1.25}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<!-- T1: tờ thông báo "cổ tức 10%" và tỷ suất thật 2,5% (VÍ DỤ GIẢ ĐỊNH: giá 40.000 đ, mệnh giá 10.000 đ) -->
+<svg style="position:absolute;left:0;top:0" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <rect x="1190" y="170" width="620" height="760" rx="18" fill="#f8fafc"/>
+  <rect x="1250" y="240" width="380" height="26" rx="8" fill="#cbd5e1"/><rect x="1250" y="300" width="500" height="22" rx="8" fill="#e2e8f0"/>
+  <text x="1250" y="440" font-family="Be Vietnam Pro" font-weight="900" font-size="74" fill="#0f172a">CỔ TỨC</text>
+  <text x="1250" y="560" font-family="Be Vietnam Pro" font-weight="900" font-size="120" fill="#0f172a">10%</text>
+  <line x1="1240" y1="530" x2="1500" y2="490" stroke="#ef4444" stroke-width="14" stroke-linecap="round"/>
+  <rect x="1250" y="640" width="500" height="22" rx="8" fill="#e2e8f0"/><rect x="1250" y="690" width="420" height="22" rx="8" fill="#e2e8f0"/>
+  <text x="1500" y="850" text-anchor="middle" font-family="Be Vietnam Pro" font-weight="900" font-size="96" fill="#ef4444">≈ 2,5%</text>
+</svg>
+<div class="big" style="left:80px;top:120px;font-size:150px">CỔ TỨC 10%</div>
+<div class="big" style="left:80px;top:300px;font-size:150px">LÀ 10%</div>
+<div class="big" style="left:80px;top:480px;font-size:170px;color:#fbbf24">CỦA CÁI GÌ?</div>
+<div class="tag" style="left:80px;top:760px;font-size:38px">MỆNH GIÁ 10.000 Đ · GIÁ MUA 40.000 Đ</div>
+<div class="tag" style="left:80px;top:930px;font-size:36px">VÍ DỤ GIẢ ĐỊNH</div>
+</div><script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

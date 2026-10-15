@@ -1,0 +1,174 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "tinh-lang",
+ "hook_type": "menh-lenh",
+ "open_shot": "mat-nuoc",
+ "voice": "Ngọc Linh",
+ "music": "fluidscape.mp3",
+ "gap": 1.0,
+ "title": "Tĩnh lặng: nghe mưa 20 giây",
+ "kicker": "TĨNH LẶNG",
+ "sub": "NGHE MƯA",
+ "acc": [
+  "mưa",
+  "thở"
+ ],
+ "lines": [
+  "Hai mươi giây. Chỉ nghe mưa, và thở.",
+  "Thở vào, biết mình đang thở vào.",
+  "Thở ra, để vai rơi xuống.",
+  "Mỗi giọt mưa rơi một lần, rồi thôi. Suy nghĩ cũng vậy.",
+  "Không cần làm gì thêm. Chỉ ở đây.",
+  "Lưu lại để nghe khi mệt. Chỗ bạn đang ngồi có tiếng gì? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "ĐANG RỐI?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "20 giây · chỉ nghe mưa và thở",
+     "at": [
+      0,
+      "Chỉ"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:9764649"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 20,
+   "suffix": " GIÂY",
+   "label": "THỞ VÀO · THỞ RA",
+   "until": [
+    2,
+    "Thở"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "THẢ VAI",
+     "at": [
+      2,
+      "vai"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:19802056"
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Giọt mưa",
+   "nodes": [
+    {
+     "text": "RƠI MỘT LẦN",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      3,
+      "Mỗi"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "RỒI THÔI",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      3,
+      "rồi"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      3,
+      "rồi"
+     ]
+    }
+   ],
+   "note": "SUY NGHĨ CŨNG VẬY"
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "CHỈ Ở ĐÂY",
+   "cards": [
+    {
+     "k": "KHÔNG CẦN",
+     "v": "LÀM GÌ THÊM",
+     "at": [
+      4,
+      "Không"
+     ]
+    },
+    {
+     "k": "CHỈ",
+     "v": "Ở ĐÂY",
+     "at": [
+      4,
+      "Chỉ"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "CHỖ BẠN CÓ TIẾNG GÌ?",
+     "at": [
+      5,
+      "Chỗ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "lưu lại khi mệt",
+     "at": [
+      5,
+      "Lưu"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:12322878"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/mn118/en/sujato"
+ ],
+ "description": "Tĩnh lặng: nghe mưa 20 giây\n\nNguồn: https://suttacentral.net/mn118/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

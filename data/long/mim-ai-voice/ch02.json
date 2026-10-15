@@ -1,0 +1,429 @@
+{
+ "title": "Ba giây",
+ "lines": [
+  {
+   "t": "Tháng 1 năm 2023, cũng là tháng bà DeStefano nhận cuộc gọi ấy, một nhóm nghiên cứu của Microsoft công bố mô hình VALL-E.",
+   "p": 0.8
+  },
+  {
+   "t": "Hai chuyện này không liên quan tới nhau. Nhưng thời điểm thì trùng nhau đến lạ.",
+   "p": 1.0
+  },
+  "VALL-E được cho nghe sáu mươi nghìn giờ tiếng Anh, của hơn bảy nghìn người nói.",
+  "Sáu mươi nghìn giờ, tức là gần bảy năm nghe liên tục, không ngủ.",
+  {
+   "t": "Sau đó, để nói bằng giọng của một người nó chưa từng nghe, nó chỉ cần một đoạn ghi âm dài ba giây.",
+   "p": 1.0
+  },
+  "Ba giây. Bạn đã đoán bao nhiêu?",
+  "Cách nó làm, có lẽ bạn đã nghe ở video đầu tiên của kênh.",
+  "ChatGPT đoán từng mẩu chữ tiếp theo. VALL-E làm y như vậy, nhưng với âm thanh.",
+  "Nó cắt giọng nói thành những mẩu âm nhỏ, rồi đoán mẩu tiếp theo, rồi mẩu tiếp theo nữa.",
+  "Bảy nghìn giọng người dạy nó cách con người nói nói chung.",
+  {
+   "t": "Ba giây của bạn chỉ cho nó biết: lần này, hãy nói như ai.",
+   "p": 1.0
+  },
+  "Các tác giả còn thấy nó giữ được cả cảm xúc trong đoạn mẫu, như sự giận dữ, và cả tiếng vang của căn phòng.",
+  "Chính họ viết trong bài báo: mô hình có thể bị lạm dụng để giả mạo một người cụ thể.",
+  "Năm 2024, khi ra phiên bản thứ hai, nhóm của Microsoft nói đây thuần tuý là dự án nghiên cứu, chưa có kế hoạch đưa ra công chúng.",
+  "Tháng 3 năm 2024, OpenAI giới thiệu một mô hình chỉ cần mười lăm giây giọng mẫu, và cũng chưa mở rộng ra công chúng.",
+  {
+   "t": "Họ còn khuyên các ngân hàng dần bỏ việc dùng giọng nói để xác thực tài khoản.",
+   "p": 1.0
+  },
+  "Nhưng các phòng thí nghiệm lớn dè dặt, không có nghĩa là ngoài kia đã an toàn.",
+  "Tháng 3 năm 2025, tổ chức Consumer Reports kiểm tra sáu dịch vụ nhân bản giọng nói đang bán trên thị trường.",
+  "Bốn trong sáu dịch vụ không có bước cơ bản nào để ngăn người dùng sao chép giọng của người khác.",
+  "Vậy nếu máy đã nói giống đến thế, tai người còn phân biệt được không?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "BA GIÂY",
+   "sub": "MICROSOFT · VALL-E · 01.2023",
+   "vid": "34645273",
+   "titleAt": [
+    0,
+    "Tháng"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "HAI CHUYỆN KHÔNG LIÊN QUAN",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "NHƯNG CÙNG MỘT THÁNG",
+     "at": [
+      1,
+      "nhưng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "vid": "6892725",
+   "illus": "VIDEO MINH HỌA",
+   "from": 0,
+   "to": 60000,
+   "suffix": " GIỜ",
+   "label": "TIẾNG ANH VALL-E ĐƯỢC CHO NGHE",
+   "sub": {
+    "text": "CỦA HƠN 7.000 NGƯỜI NÓI · ARXIV 2301.02111",
+    "at": [
+     2,
+     "hơn"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "60.000 GIỜ",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "≈ GẦN 7 NĂM NGHE LIÊN TỤC",
+     "at": [
+      3,
+      "gần"
+     ],
+     "acc": true
+    },
+    {
+     "text": "không ngủ · 60.000 ÷ 24 ÷ 365 ≈ 6,85 năm",
+     "at": [
+      3,
+      "không"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "GIỌNG MỘT NGƯỜI NÓ CHƯA TỪNG NGHE",
+     "at": 4,
+     "sm": true
+    },
+    {
+     "text": "CHỈ CẦN 3 GIÂY GHI ÂM",
+     "at": [
+      4,
+      "chỉ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 5,
+   "title": "BẠN ĐÃ ĐOÁN BAO NHIÊU?",
+   "unit": "VALL-E · MICROSOFT · 01.2023",
+   "items": [
+    {
+     "k": "MỘT GIỜ",
+     "v": 3600,
+     "lbl": "3.600 GIÂY"
+    },
+    {
+     "k": "MƯỜI PHÚT",
+     "v": 600,
+     "lbl": "600 GIÂY"
+    },
+    {
+     "k": "MỘT PHÚT",
+     "v": 60,
+     "lbl": "60 GIÂY"
+    },
+    {
+     "k": "VALL-E",
+     "v": 3,
+     "lbl": "3 GIÂY",
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "CÁCH NÓ LÀM",
+     "at": 6,
+     "acc": true
+    },
+    {
+     "text": "có lẽ bạn đã nghe ở video đầu tiên của kênh",
+     "at": [
+      6,
+      "có"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "CHATGPT: ĐOÁN MẨU CHỮ TIẾP THEO",
+     "at": 7
+    },
+    {
+     "text": "VALL-E: ĐOÁN MẨU ÂM TIẾP THEO",
+     "at": [
+      7,
+      "vall-e"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 8,
+   "vid": "6892725",
+   "ms": 8,
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "GIỌNG NÓI → NHỮNG MẨU ÂM NHỎ",
+     "at": 8
+    },
+    {
+     "text": "ĐOÁN MẨU TIẾP THEO… RỒI TIẾP THEO NỮA",
+     "at": [
+      8,
+      "đoán"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "7.000 GIỌNG NGƯỜI",
+     "at": 9,
+     "acc": true
+    },
+    {
+     "text": "dạy nó cách con người nói nói chung",
+     "at": [
+      9,
+      "dạy"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "3 GIÂY CỦA BẠN",
+     "at": 10,
+     "sm": true
+    },
+    {
+     "text": "“LẦN NÀY, HÃY NÓI NHƯ AI”",
+     "at": [
+      10,
+      "lần"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "vid": "13283744",
+   "illus": "VIDEO MINH HỌA",
+   "items": [
+    {
+     "text": "CÁC TÁC GIẢ CÒN THẤY",
+     "at": 11,
+     "sm": true
+    },
+    {
+     "text": "GIỮ CẢ CẢM XÚC",
+     "at": [
+      11,
+      "giữ"
+     ]
+    },
+    {
+     "text": "như sự giận dữ",
+     "at": [
+      11,
+      "như"
+     ],
+     "sm": true
+    },
+    {
+     "text": "VÀ TIẾNG VANG CĂN PHÒNG",
+     "at": [
+      11,
+      "tiếng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 12,
+   "text": "…potential risks in misuse of the model, such as spoofing voice identification or impersonating a specific speaker.",
+   "by": "NHÓM TÁC GIẢ VALL-E · ARXIV, 01.2023",
+   "lbl": "TRÍCH BÀI BÁO"
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "VALL-E 2 · 2024",
+     "at": 13,
+     "sm": true
+    },
+    {
+     "text": "“THUẦN TUÝ LÀ DỰ ÁN NGHIÊN CỨU”",
+     "at": [
+      13,
+      "thuần"
+     ],
+     "acc": true
+    },
+    {
+     "text": "chưa có kế hoạch đưa ra công chúng · Microsoft Research",
+     "at": [
+      13,
+      "chưa"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "OPENAI · 03.2024",
+     "at": 14,
+     "sm": true
+    },
+    {
+     "text": "15 GIÂY GIỌNG MẪU",
+     "at": [
+      14,
+      "mười"
+     ],
+     "acc": true
+    },
+    {
+     "text": "cũng chưa mở rộng ra công chúng",
+     "at": [
+      14,
+      "cũng"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "OPENAI CÒN KHUYÊN",
+     "at": 15,
+     "sm": true
+    },
+    {
+     "text": "BỎ DẦN XÁC THỰC TÀI KHOẢN BẰNG GIỌNG NÓI",
+     "at": [
+      15,
+      "bỏ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "items": [
+    {
+     "text": "PHÒNG THÍ NGHIỆM LỚN: DÈ DẶT",
+     "at": 16
+    },
+    {
+     "text": "NGOÀI KIA: CHƯA AN TOÀN",
+     "at": [
+      16,
+      "ngoài"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 17,
+   "day": "CONSUMER REPORTS · 6 DỊCH VỤ",
+   "date": "03.2025"
+  },
+  {
+   "type": "counter",
+   "at": 18,
+   "from": 0,
+   "to": 4,
+   "suffix": " / 6",
+   "label": "DỊCH VỤ KHÔNG CÓ BƯỚC CƠ BẢN ĐỂ NGĂN SAO CHÉP GIỌNG NGƯỜI KHÁC",
+   "sub": {
+    "text": "CONSUMER REPORTS · 10.03.2025",
+    "at": 18
+   }
+  },
+  {
+   "type": "question",
+   "at": 19,
+   "vid": "34645273",
+   "ms": 6,
+   "text": "Tai người\ncòn phân biệt được không?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "BA GIÂY"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

@@ -1,0 +1,387 @@
+{
+ "title": "Những điều chỉ gặp một lần",
+ "lines": [
+  {
+   "t": "Tháng 9 năm 2025, ba nhà nghiên cứu của OpenAI và một giáo sư ở Viện Công nghệ Georgia công bố bài báo \"Vì sao mô hình ngôn ngữ bị ảo giác\".",
+   "p": 0.8
+  },
+  "\"Ảo giác\" là chữ giới AI dùng cho kiểu lỗi này: những câu sai mà nghe rất hợp lý.",
+  "Họ hỏi ba chatbot phổ biến: luận án tiến sĩ của Adam Kalai, người đứng tên đầu tiên của bài báo, có tên là gì?",
+  "Ba cỗ máy cho ba tên luận án, ở ba trường đại học, ba năm khác nhau.",
+  {
+   "t": "Không cái nào đúng.",
+   "p": 1.0
+  },
+  "Để giải thích, họ đặt cạnh nhau hai loại sự thật.",
+  "Loại thứ nhất có quy luật, như chính tả. Đọc đủ nhiều thì nắm được quy luật, nên máy gần như không viết sai chính tả.",
+  "Loại thứ hai không có quy luật nào, như ngày sinh của một người.",
+  {
+   "t": "Không suy ra được từ điều gì khác. Chỉ biết nếu đã đọc thấy, và nhớ được.",
+   "p": 1.0
+  },
+  "Với loại này, các tác giả đưa ra một mốc dễ hiểu.",
+  "Giả sử trong dữ liệu dạy máy, hai mươi phần trăm số ngày sinh chỉ xuất hiện đúng một lần.",
+  {
+   "t": "Thì mô hình gốc sẽ trả lời sai ít nhất khoảng hai mươi phần trăm số câu hỏi về ngày sinh.",
+   "p": 1.0
+  },
+  "Giờ hãy nghĩ tới tiếng Việt. Đây là suy luận của mình, không phải của bài báo.",
+  "Những chi tiết nhỏ của văn học Việt có mặt trên mạng ít hơn rất nhiều so với chuyện của nước Mỹ.",
+  "Tháng 12 năm 2024, kênh truyền hình ANTV phản ánh: được hỏi về tuỳ bút \"Người lái đò Sông Đà\" của Nguyễn Tuân, AI đưa ra thông tin sai về tên nhân vật người lái đò.",
+  {
+   "t": "Được hỏi về cuốn \"Thương nhớ mười hai\" của Vũ Bằng, nó trả lời sai tên các chương sách.",
+   "p": 1.0
+  },
+  "Nhưng cỗ máy không nói \"tôi không biết\". Nó vẫn trả lời, giọng rất chắc chắn.",
+  "Vì sao? Hãy nhớ lại một kỳ thi mà gần như ai cũng từng ngồi."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "NHỮNG ĐIỀU\nCHỈ GẶP MỘT LẦN",
+   "sub": "KALAI ET AL. · OPENAI + GEORGIA TECH · 09.2025",
+   "vid": "1580502",
+   "titleAt": [
+    0,
+    "tháng"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    0,
+    "công"
+   ],
+   "items": [
+    {
+     "text": "“WHY LANGUAGE MODELS HALLUCINATE”",
+     "at": [
+      0,
+      "công"
+     ],
+     "sm": true
+    },
+    {
+     "text": "VÌ SAO MÔ HÌNH NGÔN NGỮ BỊ ẢO GIÁC",
+     "at": [
+      0,
+      "vì"
+     ],
+     "acc": true
+    },
+    {
+     "text": "Kalai · Nachum · Zhang (OpenAI) · Vempala (Georgia Tech) · 09.2025",
+     "at": [
+      0,
+      "vì"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "“ẢO GIÁC” · HALLUCINATION",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "những câu sai mà nghe rất hợp lý",
+     "at": [
+      1,
+      "những"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "HỎI BA CHATBOT PHỔ BIẾN",
+     "at": 2,
+     "sm": true
+    },
+    {
+     "text": "LUẬN ÁN TIẾN SĨ CỦA ADAM KALAI TÊN GÌ?",
+     "at": [
+      2,
+      "luận"
+     ],
+     "acc": true
+    },
+    {
+     "text": "người đứng tên đầu tiên của bài báo",
+     "at": [
+      2,
+      "người"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "BA CỖ MÁY · BA ĐÁP ÁN",
+   "srcnote": "KALAI ET AL. 2025 · BẢNG 1 · THỬ 09.05.2025, KHÔNG TÌM WEB",
+   "rows": [
+    {
+     "k": "ĐÁP ÁN 1",
+     "v": "CMU · 2002",
+     "at": [
+      3,
+      "tên"
+     ]
+    },
+    {
+     "k": "ĐÁP ÁN 2",
+     "v": "HARVARD · 2005",
+     "at": [
+      3,
+      "trường"
+     ]
+    },
+    {
+     "k": "ĐÁP ÁN 3",
+     "v": "MIT · 2007",
+     "at": [
+      3,
+      "năm"
+     ]
+    }
+   ],
+   "total": {
+    "k": "THẬT",
+    "v": "2001 · KHÔNG CÁI NÀO ĐÚNG",
+    "at": 4
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "HAI LOẠI SỰ THẬT",
+     "at": 5,
+     "acc": true,
+     "fx": "rise"
+    },
+    {
+     "text": "đặt cạnh nhau · hình 1 của bài báo",
+     "at": [
+      5,
+      "đặt"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "CÓ QUY LUẬT: CHÍNH TẢ",
+     "at": 6,
+     "fx": "rise"
+    },
+    {
+     "text": "đọc đủ nhiều → nắm quy luật → gần như không viết sai",
+     "at": [
+      6,
+      "đọc"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "KHÔNG CÓ QUY LUẬT: NGÀY SINH",
+     "at": 7,
+     "acc": true,
+     "fx": "rise"
+    },
+    {
+     "text": "không suy ra được · chỉ biết nếu đã đọc thấy và nhớ được",
+     "at": 8,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "MỘT MỐC DỄ HIỂU",
+     "at": 9,
+     "acc": true,
+     "fx": "rise"
+    },
+    {
+     "text": "ví dụ giả sử của các tác giả",
+     "at": [
+      9,
+      "các"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 10,
+   "from": 0,
+   "to": 20,
+   "suffix": "%",
+   "label": "SỐ NGÀY SINH CHỈ XUẤT HIỆN ĐÚNG MỘT LẦN TRONG DỮ LIỆU",
+   "sub": {
+    "text": "GIẢ SỬ · VÍ DỤ CỦA KALAI ET AL. 2025",
+    "at": 10
+   }
+  },
+  {
+   "type": "slam",
+   "at": 11,
+   "text": "SAI ÍT NHẤT KHOẢNG 20%",
+   "sub": "MÔ HÌNH GỐC · CÂU HỎI VỀ NGÀY SINH · THEO TÍNH TOÁN CỦA BÀI BÁO"
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "GIỜ NGHĨ TỚI TIẾNG VIỆT",
+     "at": 12
+    },
+    {
+     "text": "suy luận của kênh, không phải của bài báo",
+     "at": [
+      12,
+      "đây"
+     ],
+     "sm": true,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 13,
+   "vid": "9198046",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "CHI TIẾT NHỎ CỦA VĂN HỌC VIỆT",
+     "at": 13,
+     "sm": true
+    },
+    {
+     "text": "ÍT HƠN RẤT NHIỀU TRÊN MẠNG",
+     "at": [
+      13,
+      "ít"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 14,
+   "vid": "1580502",
+   "ms": 20,
+   "veil": 0.6,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "ANTV PHẢN ÁNH · 22.12.2024",
+     "at": 14,
+     "sm": true,
+     "fx": "rise"
+    },
+    {
+     "text": "“NGƯỜI LÁI ĐÒ SÔNG ĐÀ” · NGUYỄN TUÂN",
+     "at": [
+      14,
+      "lái"
+     ]
+    },
+    {
+     "text": "SAI TÊN NHÂN VẬT NGƯỜI LÁI ĐÒ",
+     "at": [
+      14,
+      "thông"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 15,
+   "title": "ANTV PHẢN ÁNH · 22.12.2024",
+   "srcnote": "THEO ANTV · BÀI KHÔNG GHI MÔ HÌNH, NGÀY THỬ",
+   "rows": [
+    {
+     "k": "“NGƯỜI LÁI ĐÒ SÔNG ĐÀ”",
+     "v": "SAI TÊN NHÂN VẬT",
+     "at": 15
+    },
+    {
+     "k": "“THƯƠNG NHỚ MƯỜI HAI”",
+     "v": "SAI TÊN CÁC CHƯƠNG",
+     "at": [
+      15,
+      "nó"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "items": [
+    {
+     "text": "KHÔNG NÓI “TÔI KHÔNG BIẾT”",
+     "at": 16,
+     "fx": "rise"
+    },
+    {
+     "text": "VẪN TRẢ LỜI · GIỌNG RẤT CHẮC CHẮN",
+     "at": [
+      16,
+      "nó"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 17,
+   "text": "Vì sao máy\nkhông nói “không biết”?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "NHỮNG ĐIỀU CHỈ GẶP MỘT LẦN"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.12
+ }
+}

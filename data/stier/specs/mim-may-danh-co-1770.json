@@ -1,0 +1,176 @@
+{
+ "theme": "mim",
+ "title": "Cỗ máy đánh cờ năm 1770 thắng cả Napoléon, và nó là một trò lừa",
+ "description": "Năm 1770 ở triều đình nước Áo, Wolfgang von Kempelen ra mắt một cỗ máy đánh cờ: hình nộm mặc áo kiểu Thổ Nhĩ Kỳ ngồi sau chiếc tủ gỗ. Nó đi khắp châu Âu và nước Mỹ, thắng phần lớn các ván, có cả ván với Napoléon. Nhưng người đi cờ thật là một kỳ thủ giỏi ngồi giấu trong tủ. Cũng chính Kempelen dành gần 20 năm nghiên cứu giọng nói và làm một cỗ máy biết nói thật: ống bễ thay cho phổi, cùng mô hình lưỡi và môi. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ về AI giả giọng lên kênh tối 26/10.",
+ "tags": [
+  "the turk",
+  "cỗ máy đánh cờ",
+  "kempelen",
+  "lịch sử công nghệ",
+  "ai giả giọng",
+  "deepfake giọng nói",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "LỊCH SỬ CÔNG NGHỆ",
+ "sub": "ÁO · 1770",
+ "acc": [
+  "lừa",
+  "giấu",
+  "thật",
+  "hai",
+  "người"
+ ],
+ "lines": [
+  "Năm 1770, một cỗ máy đánh cờ thắng cả Napoléon.",
+  "Đó là một hình nộm mặc áo kiểu Thổ Nhĩ Kỳ, ngồi sau một chiếc tủ gỗ.",
+  "Nó đi khắp châu Âu, và thắng phần lớn các ván cờ.",
+  "Nhưng cỗ máy ấy là một trò lừa.",
+  "Người đi cờ thật, là một kỳ thủ giỏi, ngồi giấu kín trong tủ.",
+  "Điều ít người biết, là chính người làm ra nó còn chế một cỗ máy biết nói thật, sau gần hai mươi năm nghiên cứu.",
+  "Một cỗ máy giả làm người. Và một cỗ máy thật, học nói như người."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NĂM 1770",
+     "at": 0.0
+    },
+    {
+     "text": "MÁY ĐÁNH CỜ THẮNG NAPOLÉON",
+     "at": [
+      0,
+      "thắng"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:6600370",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "HÌNH NỘM SAU TỦ GỖ",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "đi khắp châu Âu · thắng phần lớn các ván",
+     "at": [
+      2,
+      "thắng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6689890",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "MỘT TRÒ LỪA",
+   "sub": "CỖ MÁY ĐÁNH CỜ NĂM 1770"
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Bên trong chiếc tủ",
+   "nodes": [
+    {
+     "text": "một kỳ thủ giỏi",
+     "x": 0.5,
+     "y": 0.32,
+     "at": [
+      4,
+      "một"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "ngồi giấu kín",
+     "x": 0.5,
+     "y": 0.66,
+     "at": [
+      4,
+      "ngồi"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 520
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "to": 20,
+   "prefix": "~",
+   "suffix": " NĂM",
+   "label": "NGHIÊN CỨU GIỌNG NÓI CỦA CHÍNH NGƯỜI LÀM RA NÓ",
+   "until": [
+    5,
+    "hai"
+   ],
+   "sub": {
+    "text": "VÀ MỘT CỖ MÁY BIẾT NÓI THẬT",
+    "at": [
+     5,
+     "nghiên"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "HAI CỖ MÁY CỦA MỘT NGƯỜI",
+   "cards": [
+    {
+     "k": "MÁY ĐÁNH CỜ",
+     "v": "GIẢ LÀM NGƯỜI",
+     "at": [
+      6,
+      "giả"
+     ]
+    },
+    {
+     "k": "MÁY BIẾT NÓI",
+     "v": "THẬT · HỌC NÓI NHƯ NGƯỜI",
+     "at": [
+      6,
+      "Và"
+     ],
+     "c": "acc"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://archive.org/details/belltelephonemag19amerrich"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "napoléon": "Na-pô-lê-ông"
+ },
+ "imgs": {}
+}

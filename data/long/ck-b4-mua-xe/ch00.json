@@ -1,0 +1,153 @@
+{
+ "title": "Chiếc đồng hồ tính tiền",
+ "lines": [
+  "Bạn đặt một chuyến xe công nghệ đi làm.",
+  {
+   "t": "Trên màn hình điện thoại, có một con số nhảy dần theo từng cây số.",
+   "p": 1.0
+  },
+  "Ai cũng nhìn thấy chiếc đồng hồ ấy, và ai cũng biết mỗi chuyến tốn bao nhiêu.",
+  "Giả sử cả tháng, bạn tốn khoảng bốn triệu cho những chuyến như vậy.",
+  {
+   "t": "Rồi một ngày bạn nghĩ: bốn triệu một tháng, sao không mua hẳn một chiếc xe?",
+   "p": 1.0
+  },
+  "Nhưng chiếc xe của chính mình cũng có một đồng hồ tính tiền.",
+  "Chỉ là nó không hiện lên màn hình nào cả.",
+  {
+   "t": "Nó chạy cả khi xe nằm im trong bãi.",
+   "p": 1.0
+  },
+  "Video này sẽ bật chiếc đồng hồ ấy lên, cho một chiếc xe ví dụ giá bảy trăm triệu đồng.",
+  "Mỗi chương, đồng hồ cộng thêm một khoản.",
+  {
+   "t": "Tới cuối, bạn sẽ thấy nó dừng ở đâu, với ba lối đi: trả thẳng, trả góp, và chưa mua.",
+   "p": 1.0
+  },
+  "Đây là Biểu Đồ Biết Nói. Tiền bạc, giải thích bằng dữ liệu.",
+  "Video chỉ nhằm giáo dục, không phải lời khuyên mua hay không mua, và các con số ví dụ là giả định."
+ ],
+ "scenes": [
+  {
+   "type": "broll",
+   "vid": "34539090",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MỘT CHUYẾN XE CÔNG NGHỆ",
+     "at": [
+      0,
+      "Bạn"
+     ],
+     "sm": true
+    },
+    {
+     "text": "CON SỐ NHẢY THEO TỪNG CÂY SỐ",
+     "at": [
+      1,
+      "có"
+     ],
+     "acc": true
+    },
+    {
+     "text": "ai cũng thấy chiếc đồng hồ ấy",
+     "at": 2,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "from": 4,
+   "to": 4,
+   "suffix": " TRIỆU",
+   "label": "MỖI THÁNG · TIỀN XE CÔNG NGHỆ",
+   "sub": {
+    "text": "VÍ DỤ GIẢ ĐỊNH",
+    "at": 3
+   }
+  },
+  {
+   "type": "question",
+   "at": 4,
+   "text": "Bốn triệu một tháng,\nsao không mua hẳn một chiếc xe?"
+  },
+  {
+   "type": "broll",
+   "at": 5,
+   "vid": "9100884",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "XE CỦA BẠN CŨNG CÓ ĐỒNG HỒ",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "chỉ là không hiện lên màn hình nào",
+     "at": 6,
+     "sm": true
+    },
+    {
+     "text": "và nó chạy cả khi xe nằm im",
+     "at": 7,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 8,
+   "title": "BA LỐI ĐI · MỘT CHIẾC XE 700 TRIỆU",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "1",
+     "v": "TRẢ THẲNG",
+     "at": [
+      10,
+      "trả"
+     ]
+    },
+    {
+     "k": "2",
+     "v": "TRẢ GÓP",
+     "at": [
+      10,
+      "trả",
+      1
+     ]
+    },
+    {
+     "k": "3",
+     "v": "CHƯA MUA",
+     "at": [
+      10,
+      "chưa"
+     ]
+    }
+   ],
+   "total": {
+    "k": "MỖI CHƯƠNG",
+    "v": "ĐỒNG HỒ CỘNG THÊM MỘT KHOẢN",
+    "at": 9
+   }
+  },
+  {
+   "type": "brand",
+   "at": 11,
+   "sub": "TIỀN BẠC · GIẢI THÍCH BẰNG DỮ LIỆU"
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "CHIẾC ĐỒNG HỒ TÍNH TIỀN"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.1
+ }
+}

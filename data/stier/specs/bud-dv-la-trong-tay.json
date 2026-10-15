@@ -1,0 +1,159 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "do-vui",
+ "hook_type": "vi-sao",
+ "open_shot": "ban-tay",
+ "voice": "Thục Đoan",
+ "music": "arcadia.mp3",
+ "gap": 0.0,
+ "series": "Đố vui Phật pháp #6",
+ "title": "Đố vui Phật pháp #6: Lá trong tay hay lá trong rừng?",
+ "kicker": "ĐỐ VUI PHẬT PHÁP #6",
+ "sub": "KINH TƯƠNG ƯNG 56.31",
+ "acc": [
+  "lá",
+  "rừng",
+  "khổ"
+ ],
+ "lines": [
+  "Đức Phật nắm một nắm lá, rồi hỏi: lá trong tay ta, hay lá trong rừng, nhiều hơn?",
+  "Đáp án: lá trong rừng, nhiều hơn rất nhiều.",
+  "Ngài nói: điều ta biết như lá trong rừng. Điều ta dạy, chỉ như nắm lá này.",
+  "Vì ta chỉ dạy điều giúp hết khổ.",
+  "Điều thiết thực nhất bạn từng học được là gì? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "items": [
+    {
+     "text": "LÁ NÀO NHIỀU HƠN?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "trong tay hay trong rừng",
+     "at": [
+      0,
+      "lá"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:12213852"
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "ĐÁP ÁN",
+   "cards": [
+    {
+     "k": "TRONG TAY",
+     "v": "MỘT NẮM",
+     "at": [
+      1,
+      "Đáp"
+     ]
+    },
+    {
+     "k": "TRONG RỪNG",
+     "v": "VÔ SỐ",
+     "at": [
+      1,
+      "rừng,"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Lời Đức Phật",
+   "nodes": [
+    {
+     "text": "BIẾT = LÁ RỪNG",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      2,
+      "biết"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "DẠY = NẮM LÁ",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      2,
+      "dạy,"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      2,
+      "dạy,"
+     ]
+    }
+   ],
+   "note": "KINH TƯƠNG ƯNG 56.31"
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 1,
+   "suffix": " ĐIỀU CẦN",
+   "label": "GIÚP HẾT KHỔ",
+   "until": [
+    3,
+    "giúp"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "ĐIỀU THIẾT THỰC NHẤT?",
+     "at": [
+      4,
+      "Điều"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận nhé",
+     "at": [
+      4,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34640983"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/sn56.31/en/sujato"
+ ],
+ "description": "Đố vui Phật pháp #6: Lá trong tay hay lá trong rừng?\n\nNguồn: https://suttacentral.net/sn56.31/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

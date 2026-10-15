@@ -8,6 +8,10 @@ lịch sử tăng dần (kể cả lịch sử thật trên đĩa). KHÔNG ghi g
   - ngày đầu tiên pillar bị chặn hẳn (nếu có)
   - bài nào trượt bộ kiểm trong lúc mô phỏng (phải là 0)
 """
+import pathlib, sys  # noqa: E401
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
+from factory.console import utf8_console  # noqa: E402
+utf8_console()  # console Windows cp1252 không in được tiếng Việt (retro 2 mục 7)
 import collections
 import sys
 from datetime import date, datetime, timedelta

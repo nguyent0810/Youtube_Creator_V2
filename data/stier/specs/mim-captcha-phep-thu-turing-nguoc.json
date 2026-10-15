@@ -1,0 +1,169 @@
+{
+ "theme": "mim",
+ "title": "CAPTCHA là phép thử Turing đảo chiều: máy ngồi chấm, người đi thi",
+ "description": "Năm 1950, Alan Turing hình dung một phép thử nơi con người chấm xem máy có giống người không. Mùa thu năm 2000, sau một buổi nói chuyện của Yahoo ở Carnegie Mellon về chuyện máy đăng ký hàng triệu hộp thư để gửi thư rác, nghiên cứu sinh 22 tuổi Luis von Ahn cùng giáo sư Manuel Blum làm ra CAPTCHA: “Completely Automated Public Turing test to tell Computers and Humans Apart”. Lần này máy chấm, người đi thi (The New Yorker, NPR). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (9 phút): https://youtu.be/CAYQtYA1NJA (công khai từ 20:00 ngày 22/10).",
+ "tags": [
+  "phép thử turing",
+  "luis von ahn",
+  "yahoo",
+  "captcha",
+  "mã xác nhận",
+  "tôi không phải người máy",
+  "công nghệ quanh ta",
+  "mind in the machine"
+ ],
+ "sub": "CARNEGIE MELLON · 2000",
+ "acc": [
+  "ngược",
+  "máy",
+  "hai",
+  "chấm",
+  "thi"
+ ],
+ "kicker": "CÔNG NGHỆ QUANH TA",
+ "lines": [
+  "Mỗi lần gõ mã xác nhận, bạn đang làm một bài thi do máy chấm.",
+  "Năm 1950, Alan Turing hình dung một phép thử.",
+  "Con người ngồi chấm, xem cỗ máy có giống người không.",
+  "Năm mươi năm sau, một nghiên cứu sinh hai mươi hai tuổi đảo ngược nó lại.",
+  "Lúc ấy, máy đang đăng ký hàng triệu hộp thư miễn phí, để gửi thư rác.",
+  "Lời giải của anh: ra một đề mà người làm rất dễ, còn máy thì chưa làm được.",
+  "Từ đó, máy ngồi chấm. Và con người đi thi."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MỘT BÀI THI",
+     "at": 0.0
+    },
+    {
+     "text": "DO MÁY CHẤM",
+     "at": [
+      0,
+      "do"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:34124550",
+   "ms": 8,
+   "veil": 0.55
+  },
+  {
+   "type": "timeline",
+   "at": 1,
+   "items": [
+    {
+     "year": "1950",
+     "text": "Turing: người chấm, máy đi thi",
+     "at": [
+      1,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "year": "2000",
+     "text": "nghiên cứu sinh 22 tuổi đảo ngược lại",
+     "at": [
+      3,
+      "một"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "HÀNG TRIỆU HỘP THƯ",
+     "at": 4,
+     "acc": true
+    },
+    {
+     "text": "máy tự đăng ký để gửi thư rác",
+     "at": [
+      4,
+      "để"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8480685",
+   "ms": 12,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 4
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "LỜI GIẢI: MỘT ĐỀ THI",
+   "cards": [
+    {
+     "k": "NGƯỜI",
+     "v": "LÀM RẤT DỄ",
+     "at": [
+      5,
+      "người"
+     ]
+    },
+    {
+     "k": "MÁY",
+     "v": "CHƯA LÀM ĐƯỢC",
+     "at": [
+      5,
+      "còn"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "THEO THE NEW YORKER · NPR"
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "to": 50,
+   "suffix": " NĂM",
+   "label": "TỪ PHÉP THỬ TURING TỚI CAPTCHA",
+   "until": [
+    6,
+    "chấm."
+   ],
+   "sub": {
+    "text": "MÁY NGỒI CHẤM · NGƯỜI ĐI THI",
+    "at": [
+     6,
+     "Và"
+    ]
+   }
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/ReCAPTCHA",
+  "https://www.sciencedaily.com/releases/2008/08/080814154329.htm"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "alan": "A-lần",
+  "turing": "Tiu-rinh"
+ },
+ "imgs": {}
+}

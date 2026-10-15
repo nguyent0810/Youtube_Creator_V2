@@ -1,0 +1,135 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "kinh-giai",
+ "hook_type": "nghich-ly",
+ "open_shot": "dem-tien",
+ "voice": "Ngọc Huyền",
+ "music": "healing.mp3",
+ "gap": 0.15,
+ "title": "Pháp Cú 62: ngay cả thân này cũng không phải của ta",
+ "kicker": "KINH PHÁP CÚ · KỆ 62",
+ "sub": "DIỄN Ý",
+ "acc": [
+  "của",
+  "chặt"
+ ],
+ "lines": [
+  "Ngay cả bản thân bạn, cũng không thật sự là của bạn.",
+  "Con tôi. Tiền tôi. Và nỗi lo đi kèm.",
+  "Kệ sáu mươi hai, diễn ý: thân mình còn chẳng phải của mình, huống gì con cái, tài sản.",
+  "Không phải bỏ mặc. Mà là thương, mà không nắm chặt.",
+  "Nắm càng chặt, càng lo.",
+  "Bạn đang nắm chặt điều gì? Lưu lại cho ngày lo âu."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "CŨNG KHÔNG CỦA BẠN?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "ngay cả bản thân",
+     "at": [
+      0,
+      "bản"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6700265"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 2,
+   "suffix": " CHỮ “TÔI”",
+   "label": "VÀ NỖI LO ĐI KÈM",
+   "until": [
+    1,
+    "tôi."
+   ]
+  },
+  {
+   "type": "source",
+   "at": 2,
+   "source": "KINH PHÁP CÚ · KỆ 62",
+   "ref": "Dhammapada 62",
+   "snippet": "Thân mình còn chẳng phải của mình, [[huống gì con cái, tài sản]]."
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "ĐỪNG NẮM CHẶT",
+     "at": [
+      3,
+      "thương,"
+     ],
+     "acc": true
+    },
+    {
+     "text": "thương, không bỏ mặc",
+     "at": [
+      3,
+      "nắm"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6392153"
+  },
+  {
+   "type": "quote",
+   "at": 4,
+   "mode": "karaoke",
+   "line": 4
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "NẮM CHẶT ĐIỀU GÌ?",
+     "at": [
+      5,
+      "Bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "lưu cho ngày lo âu",
+     "at": [
+      5,
+      "Lưu"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34653039"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp60-75/en/sujato"
+ ],
+ "description": "Pháp Cú 62: ngay cả thân này cũng không phải của ta\n\nNguồn: https://suttacentral.net/dhp60-75/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "v2": true,
+ "loop": true,
+ "based_on": "bud-kg-ke-62-cua-toi"
+}

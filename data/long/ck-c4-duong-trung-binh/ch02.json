@@ -1,0 +1,305 @@
+{
+ "title": "Mượt nhưng chậm",
+ "lines": [
+  {
+   "t": "Hãy đặt ba đường lên cùng một biểu đồ VN-Index năm hai nghìn không trăm hai mươi hai.",
+   "p": 0.8
+  },
+  "MA hai mươi bám sát giá, uốn theo từng nhịp lên xuống.",
+  {
+   "t": "MA hai trăm thì gần như một đường cong thoai thoải, phẳng lặng.",
+   "p": 1.0
+  },
+  "Ở đỉnh tháng một, giá cắt xuống MA hai mươi và MA năm mươi sau bảy phiên, khi chỉ số đã thấp hơn đỉnh năm phần trăm.",
+  {
+   "t": "Với MA hai trăm, phải mất sáu mươi bảy phiên.",
+   "p": 1.0
+  },
+  "Ở chiều ngược lại, sau đáy ngày mười lăm tháng mười một năm ấy, chuyện cũng vậy.",
+  "Giá vượt lên MA hai mươi sau chín phiên, khi chỉ số đã cao hơn đáy mười phần trăm.",
+  "Vượt lên MA năm mươi sau mười một phiên.",
+  {
+   "t": "Còn MA hai trăm, phải tới tháng sáu năm sau, một trăm ba mươi ba phiên, khi chỉ số đã cao hơn đáy mười tám phần trăm.",
+   "p": 1.0
+  },
+  "Còn độ dốc của chính đường MA hai trăm thì sao?",
+  "Sau đáy tháng mười một, đường ấy vẫn cắm đầu đi xuống thêm hơn bảy tháng.",
+  "Phải tới giữa tháng bảy năm hai nghìn không trăm hai mươi ba, một trăm sáu mươi lăm phiên sau đáy, nó mới bắt đầu ngóc lên.",
+  {
+   "t": "Ai chờ đường MA hai trăm quay đầu mới yên tâm, sẽ thấy đáy từ rất xa phía sau.",
+   "p": 1.0
+  },
+  "Không có gì bí ẩn ở đây.",
+  "Đường trung bình được tính từ những ngày đã qua, nên nó luôn đi sau giá.",
+  {
+   "t": "Cửa sổ hai trăm phiên chứa gần một năm quá khứ. Một cú quay đầu mới vài tuần chưa đủ sức kéo nó đổi hướng.",
+   "p": 1.0
+  },
+  "Giống điểm trung bình học kỳ: một học sinh tiến bộ vượt bậc từ tháng này, điểm trung bình vẫn còn mang theo những bài kém của mấy tháng trước.",
+  "Vậy câu trả lời cho câu hỏi đầu video là:",
+  "MA không biết gì về ngày mai.",
+  {
+   "t": "Nó chỉ tóm tắt quá khứ cho gọn, để mắt người dễ nhìn ra hướng đi chung.",
+   "p": 1.0
+  },
+  {
+   "t": "Nếu chậm như vậy, sao người ta vẫn dùng?",
+   "ask": 1
+  },
+  "Vì cái giá của việc nhanh hơn, như bạn sắp thấy, là sai nhiều hơn."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "MƯỢT\nNHƯNG CHẬM",
+   "sub": "MA20 · MA50 · MA200 · NĂM 2022",
+   "vid": "1085656",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "hãy"
+   ]
+  },
+  {
+   "type": "candles",
+   "at": 1,
+   "series": "vnindex",
+   "from": "2021-11-01",
+   "to": "2023-07-31",
+   "drawAt": [
+    1,
+    null,
+    0,
+    0.1
+   ],
+   "until": [
+    2,
+    "phẳng"
+   ],
+   "title": "VN-INDEX + MA20 · MA50 · MA200",
+   "range": "11/2021 → 07/2023",
+   "ind": [
+    {
+     "k": "sma",
+     "n": 20,
+     "color": "#38bdf8",
+     "at": [
+      1,
+      "bám"
+     ]
+    },
+    {
+     "k": "sma",
+     "n": 50,
+     "color": "#a78bfa",
+     "at": [
+      1,
+      "uốn"
+     ]
+    },
+    {
+     "k": "sma",
+     "n": 200,
+     "color": "#fbbf24",
+     "at": [
+      2,
+      "thoai"
+     ]
+    }
+   ],
+   "source": "DỮ LIỆU: HOSE (VNSTOCK/VCI), KÊNH TỰ TÍNH. MINH HOẠ QUÁ KHỨ, KHÔNG PHẢI KHUYẾN NGHỊ."
+  },
+  {
+   "type": "bars",
+   "at": 3,
+   "title": "SAU ĐỈNH 06/01/2022: BAO NHIÊU PHIÊN GIÁ MỚI THỦNG?",
+   "items": [
+    {
+     "k": "MA20",
+     "v": 7,
+     "lbl": "7 phiên · −5%",
+     "at": 3
+    },
+    {
+     "k": "MA50",
+     "v": 7,
+     "lbl": "7 phiên · −5%",
+     "at": [
+      3,
+      "năm"
+     ]
+    },
+    {
+     "k": "MA200",
+     "v": 67,
+     "lbl": "67 phiên · −8%",
+     "at": 4,
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "",
+    "v": "KÊNH TỰ TÍNH · QUÁ KHỨ · KHÔNG PHẢI TÍN HIỆU",
+    "at": 3
+   }
+  },
+  {
+   "type": "bars",
+   "at": 5,
+   "title": "SAU ĐÁY 15/11/2022: BAO NHIÊU PHIÊN GIÁ MỚI VƯỢT LÊN?",
+   "items": [
+    {
+     "k": "MA20",
+     "v": 9,
+     "lbl": "9 phiên · +10%",
+     "at": 6
+    },
+    {
+     "k": "MA50",
+     "v": 11,
+     "lbl": "11 phiên · +15%",
+     "at": 7
+    },
+    {
+     "k": "MA200",
+     "v": 133,
+     "lbl": "133 phiên · +18%",
+     "at": 8,
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "",
+    "v": "KÊNH TỰ TÍNH · QUÁ KHỨ · KHÔNG PHẢI TÍN HIỆU",
+    "at": 5
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "ĐỘ DỐC MA200",
+     "at": 9,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "VẪN CẮM ĐẦU",
+     "at": 10,
+     "acc": true
+    },
+    {
+     "text": "thêm hơn 7 tháng sau đáy",
+     "at": [
+      10,
+      "thêm"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "17/07/2023",
+     "at": 11,
+     "acc": true
+    },
+    {
+     "text": "165 phiên sau đáy · mới ngóc lên",
+     "at": [
+      11,
+      "một"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 12,
+   "text": "ĐÁY Ở RẤT XA PHÍA SAU"
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "TÍNH TỪ NGÀY ĐÃ QUA",
+     "at": 14
+    },
+    {
+     "text": "→ LUÔN ĐI SAU GIÁ",
+     "at": [
+      14,
+      "nên"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "200 PHIÊN ≈ 1 NĂM QUÁ KHỨ",
+     "at": 15,
+     "acc": true
+    },
+    {
+     "text": "vài tuần chưa đủ kéo nó đổi hướng",
+     "at": [
+      15,
+      "một"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 17,
+   "text": "MA biết gì\nvề ngày mai?"
+  },
+  {
+   "type": "slam",
+   "at": 18,
+   "text": "KHÔNG GÌ CẢ",
+   "sub": "NÓ TÓM TẮT QUÁ KHỨ CHO GỌN"
+  },
+  {
+   "type": "kinetic",
+   "at": 20,
+   "items": [
+    {
+     "text": "CHẬM VẬY SAO VẪN DÙNG?",
+     "at": 20
+    },
+    {
+     "text": "NHANH HƠN = SAI NHIỀU HƠN",
+     "at": 21,
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "MƯỢT NHƯNG CHẬM"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

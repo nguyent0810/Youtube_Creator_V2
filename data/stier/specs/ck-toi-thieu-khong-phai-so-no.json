@@ -1,0 +1,161 @@
+{
+ "theme": "ck",
+ "kicker": "1 HIỂU NHẦM",
+ "sub": "THẺ TÍN DỤNG",
+ "title": "Trả “tối thiểu” không phải là xong nợ tháng này: điều ít người để ý",
+ "description": "Mức thanh toán tối thiểu thường khoảng 5% dư nợ (theo báo chí tổng hợp; mỗi thẻ một khác). Trả đủ mức ấy giúp bạn không bị phạt chậm trả, nhưng phần còn lại vẫn bị tính lãi; và ở nhiều thẻ, khi không trả đủ, ưu đãi miễn lãi của kỳ cũng mất, lãi tính từ ngày giao dịch. Ví dụ giả định: nợ 20 triệu, tối thiểu khoảng 1 triệu, 19 triệu còn lại vẫn chịu lãi.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (8 phút): https://youtu.be/xIfNPP1PLl8 (công khai từ 20:00 ngày 21/10)",
+ "tags": [
+  "thanh toán tối thiểu",
+  "thẻ tín dụng",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "năm",
+  "mười",
+  "phạt",
+  "ngày",
+  "thấp"
+ ],
+ "lines": [
+  "Trả tối thiểu không có nghĩa là xong nợ tháng này.",
+  "Mức tối thiểu thường khoảng năm phần trăm số nợ. Nợ hai mươi triệu, tối thiểu chỉ khoảng một triệu.",
+  "Trả mức ấy, bạn chỉ tránh được một điều: bị phạt chậm trả.",
+  "Mười chín triệu còn lại vẫn bị tính lãi.",
+  "Và ở nhiều thẻ, khi không trả đủ, ưu đãi miễn lãi cũng mất. Lãi tính ngược về tận ngày bạn quẹt thẻ.",
+  "Con số tối thiểu không phải số tiền bạn nợ.",
+  "Nó chỉ là mức thấp nhất, để khoản nợ chưa bị gọi là quá hạn."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "TRẢ TỐI THIỂU",
+     "at": 0.0
+    },
+    {
+     "text": "≠ XONG NỢ THÁNG NÀY",
+     "at": [
+      0,
+      "không"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:8052328",
+   "veil": 0.58
+  },
+  {
+   "type": "chart",
+   "at": 1,
+   "kind": "bars",
+   "title": "NỢ 20 TRIỆU (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · TỐI THIỂU ≈5%",
+   "bars": [
+    {
+     "label": "SỐ NỢ",
+     "v": 20,
+     "text": "20",
+     "c": "ref",
+     "at": [
+      1,
+      "Nợ"
+     ]
+    },
+    {
+     "label": "TỐI THIỂU",
+     "v": 1,
+     "text": "≈1",
+     "c": "up",
+     "at": [
+      1,
+      "chỉ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "CHỈ TRÁNH ĐƯỢC PHẠT",
+   "sub": "CHẬM TRẢ"
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "from": 19,
+   "to": 19,
+   "suffix": " TRIỆU",
+   "label": "CÒN LẠI · VẪN BỊ TÍNH LÃI",
+   "sub": {
+    "text": "VÍ DỤ GIẢ ĐỊNH",
+    "at": 3
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "Ở NHIỀU THẺ · KHI TRẢ THIẾU",
+   "cards": [
+    {
+     "k": "ƯU ĐÃI MIỄN LÃI",
+     "v": "MẤT",
+     "at": [
+      4,
+      "ưu"
+     ]
+    },
+    {
+     "k": "LÃI TÍNH TỪ",
+     "v": "NGÀY QUẸT THẺ",
+     "at": [
+      4,
+      "Lãi"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "TỐI THIỂU",
+     "at": 5,
+     "sm": true
+    },
+    {
+     "text": "= MỨC THẤP NHẤT ĐỂ CHƯA QUÁ HẠN",
+     "at": 6,
+     "acc": true
+    }
+   ],
+   "clip": "pexels:34828872",
+   "ms": 2,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 5
+  }
+ ],
+ "sources": [
+  "https://thitruongtaichinhtiente.vn/vu-no-8-5-trieu-bi-tinh-lai-hon-8-8-ty-nhung-dieu-can-biet-khi-dung-the-tin-dung-57760.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

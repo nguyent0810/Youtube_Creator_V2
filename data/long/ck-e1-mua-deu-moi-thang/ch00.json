@@ -1,0 +1,219 @@
+{
+ "title": "Tin nhắn ngày hai mươi bốn tháng ba",
+ "lines": [
+  "Ngày hai mươi bốn tháng ba năm hai nghìn không trăm hai mươi.",
+  {
+   "t": "Giả sử điện thoại của bạn báo một con số.",
+   "p": 1.0
+  },
+  "Mười tám tháng qua, tháng nào bạn cũng để ra ba triệu đồng, mua theo chỉ số VN-Index.",
+  "Tổng cộng, bạn đã nộp năm mươi tư triệu.",
+  {
+   "t": "Và hôm nay, tài khoản chỉ còn khoảng ba mươi bảy triệu.",
+   "p": 1.0
+  },
+  "Mười bảy triệu đã bốc hơi.",
+  "Gần sáu tháng tiền để dành của bạn.",
+  "Tuần sau là tới kỳ nộp tiếp.",
+  {
+   "t": "Nếu là bạn, bạn có nộp tiếp ba triệu nữa không?",
+   "ask": 1
+  },
+  {
+   "t": "Hãy giữ câu trả lời trong đầu. Cuối video, mình sẽ cho bạn xem chuyện gì xảy ra sau ngày hôm đó.",
+   "p": 1.0
+  },
+  "Còn bây giờ, mình giới thiệu ba nhân vật giả định.",
+  "Cả ba cùng có đúng một số tiền như nhau, trong đúng tám năm.",
+  "Cô Đều, tháng nào cũng mua, không cần nhìn giá.",
+  "Anh Xui, năm nào cũng mua đúng ngày đắt nhất của năm.",
+  {
+   "t": "Và chị May, năm nào cũng mua đúng ngày rẻ nhất.",
+   "p": 1.0
+  },
+  "Ai về đích với bao nhiêu tiền? Và trên đường đi, ai mất ngủ nhiều nhất?",
+  "Đây là Biểu Đồ Biết Nói. Tiền bạc, giải thích bằng dữ liệu.",
+  "Video chỉ nhằm giáo dục, không phải lời khuyên mua hay bán, và không dự báo thị trường."
+ ],
+ "scenes": [
+  {
+   "type": "date",
+   "day": "MỘT TIN NHẮN",
+   "date": "24.03.2020"
+  },
+  {
+   "type": "broll",
+   "at": 1,
+   "vid": "6466354",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "ĐIỆN THOẠI BÁO MỘT CON SỐ",
+     "at": 1,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "18 THÁNG · MỖI THÁNG 3 TRIỆU",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · MINH HOẠ TRÊN CHỈ SỐ · KHÔNG PHÍ, THUẾ, CỔ TỨC · KÊNH TỰ TÍNH · QUÁ KHỨ · KHÔNG PHẢI KHUYẾN NGHỊ",
+   "rows": [
+    {
+     "k": "ĐÃ NỘP",
+     "v": "54 TRIỆU",
+     "at": 3
+    }
+   ],
+   "total": {
+    "k": "TÀI KHOẢN CÒN",
+    "v": "≈ 37 TRIỆU",
+    "at": 4
+   }
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 54000000,
+   "to": 37200000,
+   "suffix": " đ",
+   "countAt": [
+    5,
+    "Mười"
+   ],
+   "until": [
+    5,
+    "hơi"
+   ],
+   "label": "17 TRIỆU ĐÃ BỐC HƠI",
+   "sub": {
+    "text": "≈ 6 THÁNG TIỀN ĐỂ DÀNH",
+    "at": 6
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "TUẦN SAU",
+     "at": 7,
+     "sm": true
+    },
+    {
+     "text": "TỚI KỲ NỘP TIẾP",
+     "at": [
+      7,
+      "tới"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 8,
+   "text": "Bạn có nộp tiếp\n3 triệu nữa không?"
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "GIỮ CÂU TRẢ LỜI",
+     "at": 9,
+     "acc": true
+    },
+    {
+     "text": "cuối video: chuyện xảy ra sau ngày hôm đó",
+     "at": [
+      9,
+      "Cuối"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "BA NHÂN VẬT GIẢ ĐỊNH",
+     "at": [
+      10,
+      "ba"
+     ],
+     "acc": true
+    },
+    {
+     "text": "cùng một số tiền · trong đúng 8 năm",
+     "at": 11,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 12,
+   "title": "BA NHÂN VẬT · CÙNG SỐ TIỀN · 8 NĂM",
+   "srcnote": "NHÂN VẬT GIẢ ĐỊNH · KÊNH TỰ TÍNH · QUÁ KHỨ · KHÔNG PHẢI KHUYẾN NGHỊ",
+   "rows": [
+    {
+     "k": "CÔ ĐỀU",
+     "v": "THÁNG NÀO CŨNG MUA",
+     "at": 12
+    },
+    {
+     "k": "ANH XUI",
+     "v": "MUA ĐÚNG NGÀY ĐẮT NHẤT NĂM",
+     "at": 13
+    },
+    {
+     "k": "CHỊ MAY",
+     "v": "MUA ĐÚNG NGÀY RẺ NHẤT NĂM",
+     "at": 14
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 15,
+   "text": "Ai về đích với bao nhiêu?\nAi mất ngủ nhiều nhất?"
+  },
+  {
+   "type": "brand",
+   "at": 16,
+   "sub": "TIỀN BẠC · GIẢI THÍCH BẰNG DỮ LIỆU"
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "CHỈ NHẰM GIÁO DỤC",
+     "at": 17,
+     "acc": true
+    },
+    {
+     "text": "không khuyên mua/bán · không dự báo thị trường",
+     "at": [
+      17,
+      "không"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "TIN NHẮN NGÀY 24 THÁNG 3"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

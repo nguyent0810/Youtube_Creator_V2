@@ -1,0 +1,150 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "nhan-gui",
+ "hook_type": "noi-thang",
+ "open_shot": "tuong-phat",
+ "voice": "Mỹ Duyên",
+ "music": "healing.mp3",
+ "gap": 0.5,
+ "title": "Vía Quán Âm: nếu bạn đang cần ai đó lắng nghe",
+ "kicker": "NHẮN GỬI",
+ "sub": "VÍA QUÁN THẾ ÂM",
+ "acc": [
+  "nghe",
+  "một"
+ ],
+ "lines": [
+  "Nếu bạn đang cần một người chỉ lắng nghe, mà không phán xét.",
+  "Hôm nay là ngày vía Bồ Tát Quán Thế Âm, vị lắng nghe tiếng kêu của cuộc đời.",
+  "Mình không chữa được nỗi buồn của bạn. Nhưng mình đang nghe đây.",
+  "Hít vào một hơi thật chậm. Thở ra. Bạn không một mình.",
+  "Gửi video này cho người luôn lắng nghe bạn. Còn bạn đang mang điều gì, kể mình nghe nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "CẦN AI ĐÓ LẮNG NGHE?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "không phán xét",
+     "at": [
+      0,
+      "không"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8724225"
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "19/9 âm · vía Quán Âm",
+   "nodes": [
+    {
+     "text": "QUÁN THẾ ÂM",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      1,
+      "Bồ"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "tiếng kêu của đời",
+     "x": 0.5,
+     "y": 0.7,
+     "at": [
+      1,
+      "tiếng"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      1,
+      "lắng"
+     ]
+    }
+   ],
+   "note": "VÍA BỒ TÁT XUẤT GIA"
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "MÌNH ĐANG NGHE ĐÂY",
+     "at": [
+      2,
+      "Nhưng"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:27516060"
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 1,
+   "suffix": " HƠI THỞ",
+   "label": "BẠN KHÔNG MỘT MÌNH",
+   "until": [
+    3,
+    "Thở"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "GỬI NGƯỜI LẮNG NGHE BẠN",
+     "at": [
+      4,
+      "Gửi"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bạn đang mang điều gì?",
+     "at": [
+      4,
+      "Còn"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6380993"
+  }
+ ],
+ "sources": [
+  "https://tapchinghiencuuphathoc.vn/cac-ngay-via-phat-bo-tat.html",
+  "https://en.wikipedia.org/wiki/Guanyin"
+ ],
+ "description": "Vía Quán Âm: nếu bạn đang cần ai đó lắng nghe\n\nNguồn: https://tapchinghiencuuphathoc.vn/cac-ngay-via-phat-bo-tat.html ; https://en.wikipedia.org/wiki/Guanyin",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

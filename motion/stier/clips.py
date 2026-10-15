@@ -45,10 +45,35 @@ def ffprobe_for(ffmpeg: str) -> str:
     return os.path.join(d, "ffprobe") if d else (shutil.which("ffprobe") or "ffprobe")
 
 
+# HDR (Pexels 10-bit HEVC / HLG / PQ / BT.2020): Chrome trong HyperFrames ve clip HDR thi lop chu/overlay bi mat.
+# -> moi clip HDR duoc tonemap ve SDR 8-bit H.264 yuv420p BT.709 (Grok Bot, 09/10/2026; ban goc: clips.py.bak-20261009).
+_HDR_TRC = ("smpte2084", "arib-std-b67")
+_SDR_VF = ("zscale=tin={tin}:min=bt2020nc:pin=bt2020:t=linear:npl=203,format=gbrpf32le,zscale=p=bt709,"
+           "tonemap=tonemap=hable:desat=0,zscale=t=bt709:m=bt709:r=tv,format=yuv420p")
+
+
+def _is_hdr(ffmpeg: str, f: Path) -> tuple[bool, str]:
+    """(co phai HDR, transfer goc). HDR = transfer PQ/HLG, primaries BT.2020 hoac pixel 10/12-bit."""
+    pr = subprocess.run([ffprobe_for(ffmpeg), "-v", "error", "-select_streams", "v:0", "-show_entries",
+                         "stream=pix_fmt,color_transfer,color_primaries", "-of", "default=nw=1", str(f)],
+                        capture_output=True, text=True)
+    kv = dict(ln.split("=", 1) for ln in (getattr(pr, "stdout", "") or "").splitlines() if "=" in ln)
+    trc, prim, pix = kv.get("color_transfer", ""), kv.get("color_primaries", ""), kv.get("pix_fmt", "")
+    hdr = trc in _HDR_TRC or prim == "bt2020" or "10" in pix or "12" in pix
+    return hdr, trc
+
+
 def transcode(ffmpeg: str, src: Path, dst: Path) -> None:
     """Cắt vào file tạm rồi đổi tên: ffmpeg chết giữa chừng không để lại file trông như đã xong."""
     tmp = dst.with_name(dst.stem + ".tmp.mp4")
-    p = subprocess.run(transcode_cmd(ffmpeg, src, tmp), capture_output=True, text=True)
+    cmd = transcode_cmd(ffmpeg, src, tmp)
+    hdr, trc = _is_hdr(ffmpeg, src)
+    if hdr:     # tonemap truoc khi scale/crop; gan nhan BT.709 cho ro
+        vi = cmd.index("-vf")
+        tin = trc if trc in _HDR_TRC else "bt709"   # 10-bit BT.2020 khong nhan transfer: coi nhu SDR gamma
+        cmd[vi + 1] = _SDR_VF.format(tin=tin) + "," + cmd[vi + 1]
+        cmd[-1:-1] = ["-color_primaries", "bt709", "-color_trc", "bt709", "-colorspace", "bt709"]
+    p = subprocess.run(cmd, capture_output=True, text=True)
     if p.returncode != 0 or not tmp.exists():
         tmp.unlink(missing_ok=True)
         dst.unlink(missing_ok=True)
@@ -69,7 +94,7 @@ def video_tags(scenes: list[dict], info: dict, dur: float) -> tuple[list[str], l
     for k, s in enumerate(scenes):
         if not s.get("clip"):
             continue
-        ref, ms = s["clip"], float(s.get("ms", 0))
+        ref, ms = s.get("ckey", s["clip"]), float(s.get("ms", 0))
         st = max(0.0, s["t0"] - 0.2)
         need = s["t1"] - st + 0.3
         if ms + need > info[ref]["dur"] + 0.05:
@@ -149,11 +174,14 @@ def credit(c: dict) -> str:
     return f"Video: Pexels — {c['author']}" if prov == "pexels" else f"Video: Coverr — {c['title']}"
 
 
-def ensure(ref: str, ffmpeg: str = "ffmpeg") -> dict:
-    """Clip đã cắt sẵn (tải + cắt nếu chưa có). Trả {src (đường dẫn trong project HyperFrames), dur, credit}."""
+def ensure(ref: str, ffmpeg: str = "ffmpeg", slot: dict | None = None) -> dict:
+    """Clip đã cắt sẵn (tải + cắt nếu chưa có). Trả {src (đường dẫn trong project HyperFrames), dur, credit}.
+    slot (Short phối, 12/10/2026): {"name", "box": (x, y, w, h)} -- ô clip sẽ hiện (toàn khung hoặc cửa sổ của look).
+    motion/mediafit.py quyết định phủ kín hay đặt trọn hình trên nền nhoè theo TỈ LỆ NGUỒN so với ô; kết quả nằm đúng
+    vị trí ô trên khung 1080x1920 (file <id>.<name>.mp4). Không có slot -> cắt giữa 1080x1920 như cũ."""
     import httpx
     prov, cid = parse(ref)
-    dst = CLIPS / f"{prov}-{cid}.mp4"
+    dst = CLIPS / (f"{prov}-{cid}.{slot['name']}.mp4" if slot else f"{prov}-{cid}.mp4")
     idx = _index()
     c = idx.get(ref)
     if c is None:
@@ -174,9 +202,17 @@ def ensure(ref: str, ffmpeg: str = "ffmpeg") -> dict:
                             "link": (v.get("urls") or {}).get("mp4_download") or (v.get("urls") or {}).get("mp4")}]}
         idx[ref] = c
         _save_index(idx)
+    if dst.exists() and _is_hdr(ffmpeg, dst)[0]:   # clip cu da cat nhung van HDR -> chuyen SDR (giu ban .hdr.bak.mp4)
+        bak = CLIPS / f"{prov}-{cid}.hdr.bak.mp4"
+        if not bak.exists():
+            shutil.copy2(dst, bak)
+        transcode(ffmpeg, bak, dst)
     if not dst.exists():
         # bản nhẹ nhất mà vẫn phủ được 1080x1920 sau khi cắt
         fs = sorted((f for f in c["files"] if f.get("link")), key=lambda f: (min(f["w"], f["h"]) < 1080, max(f["w"], f["h"])))
+        if slot:   # bản đủ nét cho ô (cạnh ngắn >= cạnh ngắn của ô, tối đa 1080), nhẹ nhất
+            need = min(1080, min(slot["box"][2], slot["box"][3]))
+            fs = sorted((f for f in c["files"] if f.get("link")), key=lambda f: (min(f["w"], f["h"]) < need, max(f["w"], f["h"])))
         if not fs:
             raise SystemExit(f"{ref}: không có file tải được")
         raw = CLIPS / f"{prov}-{cid}.src.mp4"
@@ -187,7 +223,18 @@ def ensure(ref: str, ffmpeg: str = "ffmpeg") -> dict:
                 for ch in r.iter_bytes():
                     fh.write(ch)
         try:
-            transcode(ffmpeg, raw, dst)
+            if slot:
+                sys.path.insert(0, str(ROOT / "motion"))
+                import mediafit
+                x, y, bw, bh = slot["box"]
+                hdr, trc = _is_hdr(ffmpeg, raw)
+                pre = _SDR_VF.format(tin=trc if trc in _HDR_TRC else "bt709") if hdr else ""
+                mode = mediafit.fit_video(raw, dst, bw, bh, canvas=(1080, 1920), pos=(x, y), ffmpeg=ffmpeg, pre_vf=pre)
+                sw, sh = mediafit.probe(raw, ffprobe_for(ffmpeg))
+                print(f"  mediafit: {ref} {sw}x{sh} ({mediafit.orientation(sw, sh)}) -> ô {slot['name']} {bw}x{bh}: "
+                      f"{'phủ kín' if mode == 'cover' else 'đặt trọn hình trên nền nhoè'} (cắt mất nếu phủ: {mediafit.crop_loss(sw, sh, bw, bh):.0%})", flush=True)
+            else:
+                transcode(ffmpeg, raw, dst)
         finally:
             raw.unlink(missing_ok=True)
     pr = subprocess.run([ffprobe_for(ffmpeg), "-v", "error", "-show_entries", "format=duration",
@@ -223,6 +270,10 @@ def sheet(cands: list[dict], path: Path) -> None:
 
 
 if __name__ == "__main__":
+    import pathlib, sys  # noqa: E401
+    sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[2]))
+    from factory.console import utf8_console  # noqa: E402
+    utf8_console()  # console Windows cp1252 không in được tiếng Việt (retro 2 mục 7)
     a = sys.argv[1:]
     if not a or a[0] not in ("search", "get"):
         raise SystemExit(__doc__)

@@ -1,0 +1,310 @@
+{
+  "theme": "mim",
+  "title": "Chống AI giả giọng người thân: cúp máy, gọi lại, và một từ bí mật",
+  "description": "Giọng con bạn gọi tới, khóc, xin chuyển tiền gấp. Giọng có thể giả, nhưng kịch bản lừa thì lặp lại: gấp, giấu, tiền (MIM tổng hợp từ cảnh báo của FTC và FBI). Tháng 12/2024, FBI khuyên: \"Hãy cùng gia đình đặt một từ hoặc một câu bí mật để xác minh danh tính của nhau\" (PSA I-120324-PSA, trích dịch). Thống nhất khi gặp mặt, không đăng lên mạng, không gõ vào tin nhắn. Khi nghe gấp, giấu, tiền: dừng lại, cúp máy; tự bấm số đã lưu của người thân để gọi lại, đừng gọi vào số vừa gọi tới (FBI, FTC); rồi hỏi mật khẩu gia đình. Kẻ gian mượn được giọng, nhưng không biết từ cả nhà nói với nhau bên mâm cơm. Đừng viết từ thật của nhà bạn vào phần bình luận. Toàn bộ câu chuyện có trong video dài \"AI Giả Giọng Người Thân Để Lừa Tiền: Một Từ Bí Mật Có Thể Cứu Cả Nhà\" trên kênh Mind in the Machine. Giọng đọc tổng hợp; lời trích được đọc bằng giọng máy của kênh (GIỌNG MÁY TẠO), không phải ghi âm thật.",
+  "tags": [
+    "mật khẩu gia đình",
+    "giả giọng",
+    "ai giả giọng",
+    "lừa đảo",
+    "chống lừa đảo",
+    "fbi",
+    "deepfake giọng nói",
+    "an toàn mạng",
+    "mind in the machine"
+  ],
+  "kicker": "AI & LỪA ĐẢO",
+  "sub": "MẬT KHẨU GIA ĐÌNH",
+  "acc": [
+    "gấp",
+    "giấu",
+    "tiền",
+    "cúp",
+    "mật",
+    "khẩu"
+  ],
+  "say": {
+    "=AI": "ây ai",
+    "=FBI": "Ép-bi-ai"
+  },
+  "lines": [
+    "Giọng con bạn gọi tới, khóc, xin chuyển tiền gấp.",
+    "Giọng có thể giả, nhưng kịch bản thì lặp lại: gấp, giấu, tiền.",
+    "FBI khuyên một điều nghe như trò chơi trẻ con.",
+    "Hãy cùng gia đình đặt một từ hoặc một câu bí mật để xác minh danh tính của nhau.",
+    "Thống nhất khi gặp mặt, không đăng lên mạng, không gõ vào tin nhắn.",
+    "Khi nghe thấy gấp, giấu, tiền: dừng lại, cúp máy.",
+    "Tự bấm số đã lưu để gọi lại, đừng gọi vào số vừa gọi tới.",
+    "Rồi hỏi mật khẩu gia đình.",
+    "Kẻ gian mượn được giọng, nhưng không biết từ cả nhà nói bên mâm cơm.",
+    "Nhà bạn đã có mật khẩu gia đình chưa?",
+    "Xem video AI giả giọng người thân, trên kênh."
+  ],
+  "scenes": [
+    {
+      "type": "kinetic",
+      "clip": "pexels:7447927",
+      "veil": 0.62,
+      "items": [
+        {
+          "text": "GIỌNG CON BẠN",
+          "at": 0.0
+        },
+        {
+          "text": "XIN CHUYỂN TIỀN GẤP",
+          "at": [
+            0,
+            "xin"
+          ],
+          "acc": true
+        },
+        {
+          "text": "video minh hoạ",
+          "at": 0.0,
+          "sm": true,
+          "size": 40
+        }
+      ]
+    },
+    {
+      "type": "ledger",
+      "at": 1,
+      "title": "KỊCH BẢN BA NHỊP",
+      "rows": [
+        {
+          "k": "GẤP",
+          "v": "PHẢI LÀM NGAY",
+          "at": [
+            1,
+            "gấp"
+          ]
+        },
+        {
+          "k": "GIẤU",
+          "v": "ĐỪNG NÓI VỚI AI",
+          "at": [
+            1,
+            "giấu"
+          ]
+        },
+        {
+          "k": "TIỀN",
+          "v": "CÁCH KHÓ ĐÒI LẠI",
+          "at": [
+            1,
+            "tiền"
+          ]
+        }
+      ],
+      "total": {
+        "k": "NGUỒN",
+        "v": "FTC, FBI",
+        "at": [
+          1,
+          "tiền",
+          0,
+          0.3
+        ]
+      }
+    },
+    {
+      "type": "kinetic",
+      "at": 2,
+      "items": [
+        {
+          "text": "FBI · 03.12.2024",
+          "at": 2,
+          "acc": true
+        },
+        {
+          "text": "NGHE NHƯ",
+          "at": [
+            2,
+            "nghe"
+          ],
+          "sm": true
+        },
+        {
+          "text": "TRÒ CHƠI TRẺ CON",
+          "at": [
+            2,
+            "trò"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "at": 3,
+      "text": "Create a secret word or phrase with your family to verify their identity.",
+      "by": "FBI · PSA I-120324-PSA, 03.12.2024 · TRÍCH DỊCH · GIỌNG MÁY TẠO"
+    },
+    {
+      "type": "ledger",
+      "at": 4,
+      "title": "MẬT KHẨU GIA ĐÌNH",
+      "rows": [
+        {
+          "k": "1",
+          "v": "THỐNG NHẤT KHI GẶP MẶT",
+          "at": [
+            4,
+            "Thống"
+          ]
+        },
+        {
+          "k": "2",
+          "v": "KHÔNG ĐĂNG LÊN MẠNG",
+          "at": [
+            4,
+            "đăng"
+          ]
+        },
+        {
+          "k": "3",
+          "v": "KHÔNG GÕ VÀO TIN NHẮN",
+          "at": [
+            4,
+            "gõ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kinetic",
+      "at": 5,
+      "items": [
+        {
+          "text": "KHI NGHE: GẤP · GIẤU · TIỀN",
+          "at": 5,
+          "sm": true
+        },
+        {
+          "text": "BƯỚC 1",
+          "at": [
+            5,
+            "dừng"
+          ]
+        },
+        {
+          "text": "DỪNG LẠI, CÚP MÁY",
+          "at": [
+            5,
+            "dừng"
+          ],
+          "acc": true
+        }
+      ]
+    },
+    {
+      "type": "kinetic",
+      "at": 6,
+      "clip": "pexels:6931573",
+      "veil": 0.66,
+      "items": [
+        {
+          "text": "BƯỚC 2",
+          "at": 6
+        },
+        {
+          "text": "TỰ GỌI LẠI SỐ ĐÃ LƯU",
+          "at": [
+            6,
+            "gọi"
+          ],
+          "acc": true
+        },
+        {
+          "text": "đừng gọi vào số vừa gọi tới · FBI, FTC",
+          "at": [
+            6,
+            "đừng"
+          ],
+          "sm": true
+        },
+        {
+          "text": "video minh hoạ",
+          "at": 6,
+          "sm": true,
+          "size": 36
+        }
+      ]
+    },
+    {
+      "type": "slam",
+      "at": 7,
+      "text": "BƯỚC 3:\nHỎI MẬT KHẨU",
+      "sub": "MẬT KHẨU GIA ĐÌNH"
+    },
+    {
+      "type": "kinetic",
+      "at": 8,
+      "items": [
+        {
+          "text": "KẺ GIAN MƯỢN ĐƯỢC GIỌNG",
+          "at": 8,
+          "sm": true
+        },
+        {
+          "text": "NHƯNG KHÔNG BIẾT",
+          "at": [
+            8,
+            "nhưng"
+          ]
+        },
+        {
+          "text": "TỪ CẢ NHÀ NÓI",
+          "at": [
+            8,
+            "từ"
+          ],
+          "acc": true
+        },
+        {
+          "text": "BÊN MÂM CƠM",
+          "at": [
+            8,
+            "mâm"
+          ],
+          "acc": true
+        }
+      ]
+    },
+    {
+      "type": "question",
+      "at": 9,
+      "text": "Nhà bạn\ncó mật khẩu chưa?"
+    },
+    {
+      "type": "kinetic",
+      "at": 10,
+      "items": [
+        {
+          "text": "VIDEO DÀI TRÊN KÊNH",
+          "sm": true,
+          "size": 52,
+          "at": 10
+        },
+        {
+          "text": "AI GIẢ GIỌNG NGƯỜI THÂN",
+          "at": [
+            10,
+            "AI"
+          ]
+        },
+        {
+          "text": "MỘT TỪ BÍ MẬT",
+          "acc": true,
+          "at": [
+            10,
+            "trên"
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "https://www.ic3.gov/PSA/2024/PSA241203",
+    "https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes"
+  ]
+}

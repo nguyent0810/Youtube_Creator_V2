@@ -1,0 +1,316 @@
+{
+ "title": "Hai cánh cửa cạnh nhau",
+ "lines": [
+  "Giả sử trên cùng một hành lang chung cư, có hai căn hộ giống hệt nhau, cửa sát cửa.",
+  "Cùng hai phòng ngủ, cùng hướng, cùng thang máy, mỗi căn khoảng hai tỷ rưỡi.",
+  "Cặp vợ chồng sau cánh cửa bên trái đã mua, và mỗi tháng chuyển cho ngân hàng gần mười chín triệu đồng.",
+  "Cặp sau cánh cửa bên phải đi thuê, và mỗi tháng trả chủ nhà khoảng sáu triệu.",
+  {
+   "t": "Hai nhà có cùng thu nhập, khoảng ba mươi triệu một tháng.",
+   "p": 1.0
+  },
+  {
+   "t": "Vậy mười năm sau, nhà nào khá hơn?",
+   "ask": 1
+  },
+  "Câu trả lời quen tai nhất là mua chứ, tiền thuê là tiền mất.",
+  "Nhưng nhìn kỹ hai con số ấy, bạn sẽ thấy có gì đó lạ.",
+  "Tiền thuê cả năm chỉ bằng khoảng ba phần trăm giá căn nhà.",
+  {
+   "t": "Còn lãi vay mua nhà năm nay, sau thời gian ưu đãi, vào khoảng mười ba tới mười lăm phần trăm một năm.",
+   "p": 1.0
+  },
+  "Vậy mà trong năm năm qua, người mua căn hộ ở Hà Nội lại thắng rất đậm.",
+  "Một bên trả ít hơn hẳn, bên kia lại giàu lên nhanh hơn.",
+  "Video này đi gỡ đúng nghịch lý ấy.",
+  "Mình sẽ tìm xem điều gì phải đúng để cánh cửa bên trái thắng, và điều gì phải đúng để cánh cửa bên phải thắng.",
+  "Đây là Biểu Đồ Biết Nói. Tiền bạc, giải thích bằng dữ liệu.",
+  "Và đây là bài đầu tiên của chuỗi Quyết định lớn.",
+  "Video chỉ nhằm giáo dục, không phải lời khuyên mua hay thuê, và không dự báo giá nhà."
+ ],
+ "scenes": [
+  {
+   "type": "broll",
+   "vid": "1509536",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "HAI CĂN HỘ GIỐNG HỆT NHAU",
+     "at": [
+      0,
+      "Giả"
+     ]
+    },
+    {
+     "text": "CỬA SÁT CỬA",
+     "at": [
+      0,
+      "cửa"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "VIDEO GIÁO DỤC",
+    "v": "KHÔNG PHẢI LỜI KHUYÊN MUA HAY THUÊ NHÀ",
+    "s": "KHÔNG DỰ BÁO GIÁ NHÀ · VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+    "at": [
+     0,
+     "Giả",
+     0,
+     0.3
+    ]
+   }
+  },
+  {
+   "type": "broll",
+   "at": 1,
+   "vid": "31751335",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "tag": {
+    "text": "VÍ DỤ GIẢ ĐỊNH",
+    "at": [
+     1,
+     "Cùng"
+    ]
+   },
+   "kin": [
+    {
+     "text": "CÙNG 2 PHÒNG NGỦ · CÙNG HƯỚNG · CÙNG THANG MÁY",
+     "at": [
+      1,
+      "Cùng"
+     ],
+     "sm": true
+    },
+    {
+     "text": "≈ 2,5 TỶ MỖI CĂN",
+     "at": [
+      1,
+      "hai",
+      1
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "MỖI THÁNG",
+   "illus": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "rows": [
+    {
+     "k": "TRÁI · MUA → NGÂN HÀNG",
+     "v": "≈ 18,75 TR",
+     "at": [
+      2,
+      "chuyển"
+     ]
+    },
+    {
+     "k": "PHẢI · THUÊ → CHỦ NHÀ",
+     "v": "≈ 6,25 TR",
+     "at": [
+      3,
+      "trả"
+     ]
+    }
+   ],
+   "total": {
+    "k": "THU NHẬP · CẢ HAI NHÀ",
+    "v": "≈ 30 TR",
+    "at": [
+     4,
+     "cùng"
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "at": 5,
+   "text": "Mười năm sau,\nnhà nào khá hơn?"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "CÂU TRẢ LỜI QUEN TAI",
+     "at": [
+      6,
+      "Câu"
+     ],
+     "sm": true
+    },
+    {
+     "text": "MUA CHỨ · TIỀN THUÊ LÀ TIỀN MẤT",
+     "at": [
+      6,
+      "mua"
+     ]
+    },
+    {
+     "text": "nhìn kỹ hai con số ấy…",
+     "at": [
+      7,
+      "Nhưng"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "TIỀN THUÊ CẢ NĂM ≈ 3% GIÁ NHÀ",
+     "at": [
+      8,
+      "Tiền"
+     ]
+    },
+    {
+     "text": "LÃI VAY SAU ƯU ĐÃI ≈ 13–15%/NĂM",
+     "at": [
+      9,
+      "lãi"
+     ],
+     "acc": true
+    }
+   ],
+   "srcnote": "Tỷ suất: REFI qua CafeBiz 29/08/2026 (cả nước 3,05%) · lãi: VARS-IRE qua VnExpress 04/08/2026"
+  },
+  {
+   "type": "counter",
+   "at": 10,
+   "from": 0,
+   "to": 26,
+   "suffix": "%/NĂM",
+   "until": [
+    10,
+    "đậm"
+   ],
+   "label": "GIÁ CĂN HỘ HÀ NỘI · 5 NĂM QUA",
+   "sub": {
+    "text": "SAVILLS · 2019 → 2025",
+    "at": [
+     10,
+     "thắng"
+    ]
+   },
+   "srcnote": "Savills qua Người Quan Sát 16/01/2026 · giá căn hộ, chưa trừ lãi vay, chưa gồm tiền thuê"
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "BÊN PHẢI TRẢ ÍT HƠN HẲN",
+     "at": [
+      11,
+      "Một"
+     ]
+    },
+    {
+     "text": "BÊN TRÁI GIÀU LÊN NHANH HƠN",
+     "at": [
+      11,
+      "bên",
+      1
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": [
+    12,
+    "nghịch"
+   ],
+   "text": "NGHỊCH LÝ",
+   "sub": "TRẢ ÍT HƠN · NHƯNG GIÀU CHẬM HƠN?"
+  },
+  {
+   "type": "broll",
+   "at": 13,
+   "vid": "10577994",
+   "veil": 0.6,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "ĐIỀU GÌ PHẢI ĐÚNG",
+     "at": [
+      13,
+      "Mình"
+     ],
+     "sm": true
+    },
+    {
+     "text": "ĐỂ CÁNH CỬA TRÁI THẮNG?",
+     "at": [
+      13,
+      "trái"
+     ]
+    },
+    {
+     "text": "ĐỂ CÁNH CỬA PHẢI THẮNG?",
+     "at": [
+      13,
+      "phải",
+      2
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "brand",
+   "at": 14,
+   "sub": "TIỀN BẠC · GIẢI THÍCH BẰNG DỮ LIỆU"
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "QUYẾT ĐỊNH LỚN · BÀI 1",
+     "at": [
+      15,
+      "Và"
+     ],
+     "acc": true
+    },
+    {
+     "text": "chỉ nhằm giáo dục · không phải lời khuyên mua hay thuê",
+     "at": [
+      16,
+      "Video"
+     ],
+     "sm": true
+    },
+    {
+     "text": "không dự báo giá nhà",
+     "at": [
+      16,
+      "không",
+      1
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "HAI CÁNH CỬA CẠNH NHAU"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.057
+ }
+}

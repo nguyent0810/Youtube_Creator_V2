@@ -1,0 +1,257 @@
+{
+ "theme": "bud",
+ "format": "do-vui",
+ "hook_type": "vi-sao",
+ "open_shot": "chu-tren-nen",
+ "voice": "Mỹ Duyên",
+ "music": "floating_cities.mp3",
+ "gap": 0.0,
+ "series": "Đố vui Phật pháp #4",
+ "title": "Đố vui Phật pháp #4: 'Chư ác mạc tác' nằm ở đâu? (Pháp Cú 183)",
+ "kicker": "ĐỐ VUI PHẬT PHÁP #4",
+ "sub": "PHÁP CÚ · KỆ 183",
+ "acc": [
+  "ác",
+  "lành",
+  "tâm"
+ ],
+ "lines": [
+  "Vì sao câu chư ác mạc tác được gọi là lời dạy của mọi Đức Phật?",
+  "Đố bạn: câu này trong kinh nào?",
+  "Pháp Cú, Kim Cang, hay A Di Đà?",
+  "Ba, hai, một.",
+  "Đáp án: Pháp Cú.",
+  "Diễn ý: không làm điều ác, làm các việc lành, giữ tâm trong sạch, là lời chư Phật dạy.",
+  "Phật quá khứ Tỳ-bà-thi cũng dạy câu ấy.",
+  "Việc thứ ba khó nhất: chỉ mình bạn thấy.",
+  "Bình luận đáp án, và việc khó nhất."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "items": [
+    {
+     "text": "VÌ SAO?",
+     "at": 0.0,
+     "acc": true,
+     "fx": "outline",
+     "size": 170
+    },
+    {
+     "text": "CHƯ ÁC MẠC TÁC",
+     "at": [
+      0,
+      "chư"
+     ]
+    },
+    {
+     "text": "lời dạy của mọi Đức Phật",
+     "at": [
+      0,
+      "lời"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "ĐỐ BẠN",
+     "at": [
+      1,
+      "Đố"
+     ],
+     "acc": true,
+     "size": 160
+    },
+    {
+     "text": "trong kinh nào?",
+     "at": [
+      1,
+      "trong"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:36864123"
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "A · PHÁP CÚ",
+     "at": [
+      2,
+      "Pháp"
+     ]
+    },
+    {
+     "text": "B · KIM CANG",
+     "at": [
+      2,
+      "Kim"
+     ]
+    },
+    {
+     "text": "C · A DI ĐÀ",
+     "at": [
+      2,
+      "Di"
+     ]
+    }
+   ],
+   "clip": "pexels:6746602"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "veil": 0.6,
+   "items": [
+    {
+     "text": "BA",
+     "at": [
+      3,
+      "Ba"
+     ],
+     "size": 150
+    },
+    {
+     "text": "HAI",
+     "at": [
+      3,
+      "hai"
+     ],
+     "size": 150
+    },
+    {
+     "text": "MỘT",
+     "at": [
+      3,
+      "một"
+     ],
+     "acc": true,
+     "size": 150
+    }
+   ],
+   "clip": "pexels:16272692"
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "PHÁP CÚ",
+   "veil": 0.55,
+   "fx": "zoom",
+   "sub": "ĐÁP ÁN A · KỆ 183",
+   "clip": "pexels:31195496"
+  },
+  {
+   "type": "quote",
+   "at": 5,
+   "text": "Không làm điều ác, làm các việc lành, giữ tâm trong sạch: đó là lời chư Phật dạy.",
+   "by": "PHÁP CÚ 183 · DIỄN Ý",
+   "veil": 0.6,
+   "clip": "pexels:38459428"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "PHẬT TỲ-BÀ-THI",
+     "at": [
+      6,
+      "quá"
+     ],
+     "acc": true
+    },
+    {
+     "text": "Trường Bộ 14 · Đức Phật quá khứ",
+     "at": [
+      6,
+      "cũng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:13040446"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "VIỆC THỨ BA",
+     "at": [
+      7,
+      "Việc"
+     ],
+     "acc": true,
+     "size": 130
+    },
+    {
+     "text": "chỉ mình bạn thấy",
+     "at": [
+      7,
+      "chỉ"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7576281"
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "ĐÁP ÁN?",
+     "at": [
+      8,
+      "đáp"
+     ],
+     "acc": true,
+     "size": 160
+    },
+    {
+     "text": "bình luận",
+     "at": [
+      8,
+      "Bình"
+     ],
+     "sm": true
+    },
+    {
+     "text": "VIỆC KHÓ NHẤT?",
+     "at": [
+      8,
+      "việc"
+     ]
+    }
+   ],
+   "clip": "pexels:8862328"
+  }
+ ],
+ "description": "Đố vui Phật pháp #4. 'Chư ác mạc tác, chúng thiện phụng hành, tự tịnh kỳ ý, thị chư Phật giáo' là Kinh Pháp Cú, kệ 183 (diễn ý): không làm điều ác, làm các việc lành, giữ tâm trong sạch — đó là lời dạy của chư Phật. Kinh Trường Bộ 14 (Đại Bổn) kể Đức Phật quá khứ Vipassī (Tỳ-bà-thi) cũng đọc lời giáo giới này.\n\nNguồn: Dhammapada 183 https://suttacentral.net/dhp179-196/en/sujato · DN 14 https://suttacentral.net/dn14/en/sujato (bản dịch Bhikkhu Sujato, CC0)\nLời kinh là diễn ý.",
+ "tags": [
+  "đố vui phật pháp",
+  "chư ác mạc tác",
+  "kinh pháp cú",
+  "lời phật dạy",
+  "phật giáo"
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp179-196/en/sujato",
+  "https://suttacentral.net/dn14/en/sujato"
+ ]
+}

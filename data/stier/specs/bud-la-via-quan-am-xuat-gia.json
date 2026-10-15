@@ -1,0 +1,212 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "lich-am",
+ "hook_type": "con-so",
+ "open_shot": "nen-huong",
+ "voice": "Thục Đoan",
+ "music": "at_rest.mp3",
+ "gap": 0.05,
+ "title": "19/9 âm: vía Quán Thế Âm xuất gia",
+ "kicker": "HÔM NAY 19/9 ÂM",
+ "sub": "VÍA QUÁN THẾ ÂM",
+ "acc": [
+  "ba",
+  "lắng",
+  "nghe",
+  "một"
+ ],
+ "lines": [
+  "Một năm có ba ngày vía Quán Thế Âm. Hôm nay là ngày thứ ba.",
+  "Hôm nay, hai mươi tám tháng mười, là mười chín tháng chín âm lịch.",
+  "Quán Thế Âm nghĩa là lắng nghe tiếng kêu của cuộc đời.",
+  "Hôm nay, đừng chỉ cầu xin. Hãy làm Quán Âm cho một người.",
+  "Nghe họ nói hết. Không ngắt lời. Không phán xét.",
+  "Bạn sẽ lắng nghe ai hôm nay? Tag người đó nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "items": [
+    {
+     "text": "3 NGÀY VÍA / NĂM",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "HÔM NAY LÀ NGÀY THỨ 3",
+     "at": [
+      0,
+      "Hôm"
+     ]
+    }
+   ],
+   "clip": "pexels:36073801"
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "VÍA QUÁN ÂM",
+   "rows": [
+    {
+     "k": "19/2 ÂM",
+     "v": "ĐẢN SANH",
+     "at": [
+      1,
+      "Hôm"
+     ]
+    },
+    {
+     "k": "19/6 ÂM",
+     "v": "THÀNH ĐẠO",
+     "at": [
+      1,
+      "hai"
+     ]
+    },
+    {
+     "k": "19/9 ÂM",
+     "v": "XUẤT GIA ✓",
+     "at": [
+      1,
+      "mười"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Quán Thế Âm",
+   "nodes": [
+    {
+     "text": "QUÁN = LẮNG NGHE",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      2,
+      "lắng"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "THẾ ÂM = TIẾNG ĐỜI",
+     "x": 0.5,
+     "y": 0.7,
+     "at": [
+      2,
+      "tiếng"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      2,
+      "tiếng"
+     ]
+    }
+   ],
+   "note": "THEO TẠP CHÍ NGHIÊN CỨU PHẬT HỌC"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "LÀM QUÁN ÂM",
+     "at": [
+      3,
+      "Hãy"
+     ],
+     "acc": true
+    },
+    {
+     "text": "cho một người",
+     "at": [
+      3,
+      "cho"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:15860507"
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "LẮNG NGHE THẬT",
+   "cards": [
+    {
+     "k": "1",
+     "v": "NGHE HẾT",
+     "at": [
+      4,
+      "Nghe"
+     ]
+    },
+    {
+     "k": "2",
+     "v": "KHÔNG NGẮT LỜI",
+     "at": [
+      4,
+      "ngắt"
+     ]
+    },
+    {
+     "k": "3",
+     "v": "KHÔNG PHÁN XÉT",
+     "at": [
+      4,
+      "phán"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "BẠN SẼ NGHE AI?",
+     "at": [
+      5,
+      "Bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "tag người đó",
+     "at": [
+      5,
+      "Tag"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:9787350"
+  }
+ ],
+ "sources": [
+  "https://tapchinghiencuuphathoc.vn/cac-ngay-via-phat-bo-tat.html",
+  "https://en.wikipedia.org/wiki/Guanyin"
+ ],
+ "description": "19/9 âm: vía Quán Thế Âm xuất gia\n\nNguồn: https://tapchinghiencuuphathoc.vn/cac-ngay-via-phat-bo-tat.html ; https://en.wikipedia.org/wiki/Guanyin",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

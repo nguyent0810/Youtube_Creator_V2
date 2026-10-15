@@ -1,0 +1,202 @@
+{
+ "theme": "ck",
+ "kicker": "1 PHÉP TÍNH",
+ "sub": "THẺ TÍN DỤNG",
+ "title": "Nợ thẻ 20 triệu, chỉ trả tối thiểu: 115 tháng mới hết nợ (ví dụ giả định)",
+ "description": "VÍ DỤ GIẢ ĐỊNH: nợ thẻ 20 triệu, lãi 30%/năm (2,5%/tháng), mỗi tháng chỉ trả tối thiểu 5% dư nợ (sàn 100 nghìn), không tiêu thêm, không phí. Tháng đầu trả khoảng 1 triệu nhưng 500 nghìn là tiền lãi. Hết nợ sau 115 tháng (gần 10 năm), tổng lãi ≈ 17,9 triệu. Nếu trả đều 2 triệu/tháng: 12 tháng, lãi ≈ 3,3 triệu. Lãi suất, mức tối thiểu và phí khác nhau theo từng hợp đồng.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (8 phút): https://youtu.be/xIfNPP1PLl8 (công khai từ 20:00 ngày 21/10)",
+ "tags": [
+  "thanh toán tối thiểu",
+  "nợ thẻ tín dụng",
+  "lãi thẻ",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "một",
+  "mười",
+  "nửa",
+  "hai",
+  "chín"
+ ],
+ "lines": [
+  "Một trăm mười lăm tháng. Đó là thời gian trả hết hai mươi triệu nợ thẻ, nếu chỉ trả tối thiểu.",
+  "Ví dụ giả định, lãi ba mươi phần trăm một năm, không tiêu thêm.",
+  "Tháng đầu, bạn trả một triệu. Nhưng năm trăm nghìn trong đó là tiền lãi.",
+  "Nợ giảm chậm, nên mức tối thiểu cũng giảm, và bạn trả ít dần.",
+  "Gần mười năm sau mới hết nợ. Tiền lãi gần mười tám triệu.",
+  "Còn nếu tháng nào cũng trả đều hai triệu, mười hai tháng là xong. Lãi khoảng ba triệu ba.",
+  "Cùng một món nợ. Chín năm và gần mười lăm triệu, nằm ở cách trả."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "115 THÁNG",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "để trả hết 20 triệu nợ thẻ",
+     "at": [
+      0,
+      "Đó"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:4872944",
+   "veil": 0.58
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "ĐỀ BÀI",
+   "cards": [
+    {
+     "k": "NỢ",
+     "v": "20 TRIỆU",
+     "at": 1
+    },
+    {
+     "k": "LÃI GIẢ ĐỊNH",
+     "v": "30%/NĂM",
+     "at": [
+      1,
+      "ba"
+     ]
+    },
+    {
+     "k": "MỖI THÁNG",
+     "v": "CHỈ TỐI THIỂU",
+     "at": [
+      1,
+      "không"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "at": 2,
+   "kind": "bars",
+   "title": "THÁNG ĐẦU TIÊN (NGHÌN ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · LÃI 30%/NĂM · KHÔNG TIÊU THÊM",
+   "bars": [
+    {
+     "label": "BẠN TRẢ",
+     "v": 1000,
+     "text": "1.000",
+     "c": "ref",
+     "at": [
+      2,
+      "trả"
+     ]
+    },
+    {
+     "label": "LÀ TIỀN LÃI",
+     "v": 500,
+     "text": "500",
+     "c": "down",
+     "at": [
+      2,
+      "năm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "TRẢ ÍT DẦN",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "NỢ VƠI CHẬM DẦN",
+     "at": [
+      3,
+      "và"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7710747",
+   "ms": 3,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 3
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 17.9,
+   "to": 17.9,
+   "suffix": " TRIỆU",
+   "label": "TỔNG TIỀN LÃI · GẦN 10 NĂM",
+   "sub": {
+    "text": "VÍ DỤ GIẢ ĐỊNH · LÃI 30%/NĂM · KHÔNG TIÊU THÊM",
+    "at": 4
+   }
+  },
+  {
+   "type": "chart",
+   "at": 5,
+   "kind": "bars",
+   "title": "CÙNG MÓN NỢ · HAI CÁCH TRẢ (THÁNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · LÃI 30%/NĂM · KHÔNG TIÊU THÊM",
+   "bars": [
+    {
+     "label": "TỐI THIỂU",
+     "v": 115,
+     "text": "115",
+     "c": "down",
+     "at": [
+      5,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "label": "ĐỀU 2 TRIỆU",
+     "v": 12,
+     "text": "12",
+     "c": "up",
+     "at": [
+      5,
+      "mười"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "9 NĂM · GẦN 15 TRIỆU",
+   "sub": "NẰM Ở CÁCH TRẢ"
+  }
+ ],
+ "sources": [
+  "https://thitruongtaichinhtiente.vn/vu-no-8-5-trieu-bi-tinh-lai-hon-8-8-ty-nhung-dieu-can-biet-khi-dung-the-tin-dung-57760.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

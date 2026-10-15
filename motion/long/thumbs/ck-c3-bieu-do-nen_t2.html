@@ -1,0 +1,31 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#050912}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:"Be Vietnam Pro",sans-serif;color:#fff;
+ background:linear-gradient(rgba(125,211,252,.06) 1px,transparent 1px) 0 0/80px 80px,linear-gradient(90deg,rgba(125,211,252,.06) 1px,transparent 1px) 0 0/80px 80px,radial-gradient(80% 70% at 65% 45%,#16263f 0%,#0a1426 60%,#04080f 100%)}
+.big{position:absolute;font-weight:900;line-height:1.12;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.tag{position:absolute;font-family:"JetBrains Mono";font-weight:700;letter-spacing:.12em;white-space:nowrap;color:#fbbf24}
+.pill{position:absolute;padding:10px 34px 14px;border-radius:40px;border:6px solid;background:#0a1426;font-weight:900;font-size:64px;white-space:nowrap;line-height:1.2}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<!-- T2: ba cây nến thật VN-Index 11–13/03/2026, tỉ lệ thật; cây DOJI thứ Sáu 13/03 khoanh vàng (cảnh hẹn của video) -->
+<svg style="position:absolute;left:0;top:0" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs><filter id="gl" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="22" /></filter></defs>
+  <!-- 11/03: O 1.675,87 H 1.729,67 L 1.675,17 C 1.728,34 (xanh) -->
+  <line x1="1120" y1="230" x2="1120" y2="842" stroke="#22c55e" stroke-width="12" />
+  <rect x="1045" y="245" width="150" height="589" rx="8" fill="#22c55e" />
+  <!-- 12/03: O 1.716,62 H 1.725,52 L 1.701,59 C 1.709,61 (đỏ) -->
+  <line x1="1370" y1="277" x2="1370" y2="545" stroke="#ef4444" stroke-width="12" />
+  <rect x="1295" y="376" width="150" height="79" rx="8" fill="#ef4444" />
+  <!-- 13/03 doji: O 1.697,72 H 1.716,75 L 1.688,67 C 1.696,24 -->
+  <circle cx="1620" cy="532" r="215" fill="none" stroke="#fbbf24" stroke-width="12" opacity=".5" filter="url(#gl)" />
+  <circle cx="1620" cy="532" r="215" fill="none" stroke="#fbbf24" stroke-width="9" />
+  <line x1="1620" y1="375" x2="1620" y2="690" stroke="#ef4444" stroke-width="12" />
+  <rect x="1545" y="589" width="150" height="17" rx="4" fill="#ef4444" />
+</svg>
+<div class="pill" style="left:1620px;top:200px;border-color:#fbbf24;color:#fbbf24;transform:translateX(-50%)">DOJI</div>
+<div class="big" style="left:80px;top:170px;font-size:128px">ĐOÁN ĐƯỢC</div>
+<div class="big" style="left:80px;top:330px;font-size:128px;color:#fbbf24">NGÀY MAI?</div>
+<div class="tag" style="left:80px;top:900px;font-size:46px">VN-INDEX · 11–13/03/2026</div>
+</div><script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

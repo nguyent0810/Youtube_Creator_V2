@@ -42,7 +42,7 @@ def bundle_for(slug: str, when_vn: str) -> Bundle:
     # KHÔNG cắt cụt: cắt đuôi là mất đúng dòng ghi công CC BY bắt buộc -> để validate() báo lỗi.
     return Bundle(channel="MIM", kind="short", slug=slug, script=" ".join(spec["lines"]), title=spec["title"],
                   description=desc, tags=spec["tags"][:15], thumbnail_text="", publish_at=when,
-                  voice=spec.get("voice", "Hải Đăng"), bgm=music["file"], broll_queries=[],
+                  voice=spec.get("voice", "Thanh Bình"), bgm=music["file"], broll_queries=[],
                   render={"engine": "casefile", "spec": f"data/stier/specs/{slug}.json"},
                   source_note="; ".join(spec["sources"]))
 
@@ -68,4 +68,6 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    from factory.console import utf8_console  # noqa: E402
+    utf8_console()  # console Windows cp1252 không in được tiếng Việt (retro 2 mục 7)
     main()

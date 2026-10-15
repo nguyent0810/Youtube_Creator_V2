@@ -1,0 +1,100 @@
+{
+ "title": "Vòng một: chữ méo",
+ "lines": [
+  {
+   "t": "Vòng thi thứ nhất thành công rực rỡ.",
+   "p": 0.8
+  },
+  {
+   "t": "Thành công tới mức, chính người làm ra nó bắt đầu thấy áy náy.",
+   "p": 1.0
+  },
+  "Von Ahn ngồi tính.",
+  "Mỗi ngày, cả thế giới gõ khoảng hai trăm triệu mã như thế.",
+  "Mỗi lần mất chừng mười giây.",
+  {
+   "t": "Nhân lên, là khoảng năm trăm nghìn giờ. Mỗi ngày.",
+   "p": 1.0
+  },
+  "Nửa triệu giờ của con người, đổ vào việc gõ những chữ vô nghĩa.",
+  "Ông tự hỏi một câu.",
+  "Có cách nào để mười giây ấy làm được việc gì có ích không?"
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "VÒNG MỘT",
+     "at": [
+      0,
+      "Vòng"
+     ],
+     "sm": true
+    },
+    {
+     "text": "THÀNH CÔNG RỰC RỠ",
+     "at": [
+      0,
+      "thành"
+     ],
+     "acc": true
+    },
+    {
+     "text": "tới mức người làm ra nó thấy áy náy",
+     "at": [
+      1,
+      "chính"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "from": 0,
+   "to": 200,
+   "suffix": " TRIỆU",
+   "until": [
+    3,
+    "triệu"
+   ],
+   "label": "MÃ ĐƯỢC GÕ MỖI NGÀY · MỖI MÃ ~10 GIÂY",
+   "sub": {
+    "text": "THEO LUIS VON AHN · NPR, 08.2008",
+    "at": 4
+   }
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 0,
+   "to": 500000,
+   "suffix": " GIỜ",
+   "until": [
+    5,
+    "giờ."
+   ],
+   "label": "CỦA CON NGƯỜI · MỖI NGÀY",
+   "sub": {
+    "text": "GÕ NHỮNG CHỮ VÔ NGHĨA",
+    "at": 6
+   }
+  },
+  {
+   "type": "question",
+   "at": 7,
+   "text": "Mười giây ấy\nlàm được việc gì có ích không?",
+   "showAt": 8
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "VÒNG MỘT: CHỮ MÉO"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

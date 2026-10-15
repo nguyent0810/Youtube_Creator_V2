@@ -1,0 +1,391 @@
+{
+ "title": "Áp dụng cho bạn, và khi nào không đúng",
+ "lines": [
+  {
+   "t": "Mình không bảo bạn nên mua hay bán lúc nào.",
+   "p": 0.8
+  },
+  "Chỉ có năm câu, để bạn tự hỏi trước khi bấm lệnh đầu tiên.",
+  "Một: hôm nay mã này tham chiếu bao nhiêu, trần bao nhiêu, sàn bao nhiêu?",
+  "Hai: lệnh của mình đã đúng lô, đúng bước giá chưa, và mình có chấp nhận nếu nó không khớp?",
+  "Ba: mình đang đặt trong phiên nào, và lệnh này còn sửa, huỷ được không?",
+  "Bốn: số tiền này, vài ngày tới mình có cần dùng không? Mua hôm nay, phải đợi hai ngày làm việc, tới phiên chiều mới bán được, và tiền bán còn chờ thêm hai ngày nữa.",
+  {
+   "t": "Năm: tính cả phí và thuế, giá phải lên mấy bước thì mình mới hoà vốn?",
+   "p": 1.0
+  },
+  "Và đây là những lúc điều vừa nói không đúng hoàn toàn.",
+  "Biên độ bảy phần trăm là của HOSE. Sàn HNX là mười phần trăm, sàn UPCoM là mười lăm phần trăm.",
+  "Ngày đầu niêm yết, hoặc ngày giao dịch lại sau khi bị tạm ngừng từ hai mươi lăm phiên trở lên, biên độ trên HOSE là hai mươi phần trăm.",
+  "Cổ phiếu bị hạn chế giao dịch thì không khớp liên tục, mà khớp định kỳ, mười lăm phút một lần.",
+  "Nhà đầu tư tổ chức nước ngoài có cơ chế riêng. Họ có thể được đặt lệnh mua cổ phiếu khi chưa có đủ tiền trong tài khoản.",
+  "Và quy định còn đang thay đổi.",
+  "Một thông tư mới về bù trừ, thanh toán có hiệu lực từ mười sáu tháng mười một năm nay.",
+  "Cuối tháng mười hai, cổ phiếu niêm yết trên HNX cũng dự kiến chuyển hết sang HOSE.",
+  {
+   "t": "Nên trước khi đặt lệnh, hãy kiểm lại quy định hiện hành.",
+   "p": 1.0
+  },
+  "Tóm lại, một phiên HOSE không phải cái chợ ai đến là mua bán được ngay.",
+  "Nó có giờ khớp lệnh riêng, một khung giá mỗi ngày, và hai ngày chờ sau tiếng chuông.",
+  "Hôm chín tháng ba, những luật ấy khiến nhiều người không bán được đúng lúc họ muốn.",
+  "Cũng chính những luật ấy giữ cho mỗi cổ phiếu, mỗi ngày, chỉ rơi tối đa bảy phần trăm.",
+  {
+   "t": "Hiểu luật chơi trước, bạn sẽ bớt bất ngờ khi một ngày như thế đến.",
+   "p": 1.0
+  },
+  "Bài ba của khoá học: đọc biểu đồ đầu tiên, gồm đường, cột và nến.",
+  {
+   "t": "Còn bây giờ, mình muốn nghe bạn: lần đầu đặt lệnh, điều gì làm bạn bất ngờ nhất? Lô một trăm cổ phiếu, bước giá, hay hai ngày chờ cổ phiếu về?",
+   "p": 1.0
+  }
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "CHƯƠNG SÁU",
+   "title": "ÁP DỤNG CHO BẠN —\nVÀ KHI NÀO KHÔNG ĐÚNG",
+   "sub": "KHÔNG PHẢI LỜI KHUYÊN MUA HAY BÁN",
+   "titleAt": [
+    0,
+    "Mình"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "5 CÂU TRƯỚC LỆNH ĐẦU TIÊN",
+   "rows": [
+    {
+     "k": "01",
+     "v": "THAM CHIẾU · TRẦN · SÀN HÔM NAY?",
+     "at": [
+      2,
+      "Một"
+     ]
+    },
+    {
+     "k": "02",
+     "v": "ĐÚNG LÔ, BƯỚC GIÁ? KHÔNG KHỚP THÌ SAO?",
+     "at": [
+      3,
+      "Hai"
+     ]
+    },
+    {
+     "k": "03",
+     "v": "PHIÊN NÀO? CÒN SỬA, HUỶ ĐƯỢC KHÔNG?",
+     "at": [
+      4,
+      "Ba"
+     ]
+    },
+    {
+     "k": "04",
+     "v": "CÓ CẦN TIỀN NÀY TRONG VÀI NGÀY?",
+     "at": [
+      5,
+      "Bốn"
+     ]
+    },
+    {
+     "k": "05",
+     "v": "PHÍ + THUẾ: MẤY BƯỚC MỚI HOÀ VỐN?",
+     "at": [
+      6,
+      "Năm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "BIÊN ĐỘ MỖI NGÀY · KHI NÀO KHÁC",
+   "rows": [
+    {
+     "k": "HOSE",
+     "v": "±7%",
+     "at": [
+      8,
+      "Biên"
+     ]
+    },
+    {
+     "k": "HNX (TỚI 23/12/2026)",
+     "v": "±10%",
+     "at": [
+      8,
+      "Sàn"
+     ]
+    },
+    {
+     "k": "UPCOM",
+     "v": "±15%",
+     "at": [
+      8,
+      "sàn",
+      1
+     ]
+    },
+    {
+     "k": "NGÀY ĐẦU · SAU NGỪNG ≥ 25 PHIÊN",
+     "v": "±20%",
+     "at": [
+      9,
+      "Ngày"
+     ]
+    }
+   ],
+   "srcnote": "HOSE ±7%, ±20%: tài liệu thành viên (05/2025) · HNX, UPCoM: tổng hợp (Thư viện Pháp luật)"
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "CỔ PHIẾU BỊ HẠN CHẾ: KHỚP ĐỊNH KỲ 15 PHÚT",
+     "at": [
+      10,
+      "Cổ"
+     ]
+    },
+    {
+     "text": "TỔ CHỨC NƯỚC NGOÀI",
+     "at": [
+      11,
+      "Nhà"
+     ],
+     "sm": true
+    },
+    {
+     "text": "CÓ THỂ MUA KHÔNG CẦN ĐỦ TIỀN TRƯỚC",
+     "at": [
+      11,
+      "có"
+     ],
+     "acc": true
+    }
+   ],
+   "srcnote": "Thông báo HOSE 13/03/2025 · TT 68/2024/TT-BTC (NPF)"
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "QUY ĐỊNH ĐANG ĐỔI",
+     "at": [
+      12,
+      "Và"
+     ],
+     "acc": true
+    },
+    {
+     "text": "TT 145/2026 · HIỆU LỰC 16/11/2026",
+     "at": [
+      13,
+      "Một"
+     ]
+    },
+    {
+     "text": "CỔ PHIẾU NIÊM YẾT HNX → HOSE TỪ 28/12/2026 (DỰ KIẾN)",
+     "at": [
+      14,
+      "Cuối"
+     ]
+    },
+    {
+     "text": "kiểm lại quy định hiện hành trước khi đặt lệnh",
+     "at": [
+      15,
+      "Nên"
+     ],
+     "sm": true
+    }
+   ],
+   "srcnote": "TT 145/2026/TT-BTC (chinhphu.vn) · TT 139/2025/TT-BTC (Thời báo Tài chính, 30/09/2026)"
+  },
+  {
+   "type": "timeline",
+   "at": [
+    16,
+    "Tóm"
+   ],
+   "items": [
+    {
+     "year": "9:00",
+     "text": "MỞ CỬA · ATO",
+     "at": [
+      16,
+      "Tóm",
+      0,
+      0.1
+     ]
+    },
+    {
+     "year": "9:15",
+     "text": "KHỚP LIÊN TỤC",
+     "at": [
+      16,
+      "Tóm",
+      0,
+      0.35
+     ]
+    },
+    {
+     "year": "11:30",
+     "text": "NGHỈ TRƯA",
+     "at": [
+      16,
+      "Tóm",
+      0,
+      0.6
+     ]
+    },
+    {
+     "year": "13:00",
+     "text": "KHỚP LIÊN TỤC",
+     "at": [
+      16,
+      "Tóm",
+      0,
+      0.85
+     ]
+    },
+    {
+     "year": "14:30",
+     "text": "ĐÓNG CỬA · ATC",
+     "at": [
+      16,
+      "Tóm",
+      0,
+      1.1
+     ]
+    },
+    {
+     "year": "14:45",
+     "text": "THOẢ THUẬN",
+     "at": [
+      16,
+      "Tóm",
+      0,
+      1.35
+     ]
+    },
+    {
+     "year": "15:00",
+     "text": "HẾT GIỜ",
+     "at": [
+      16,
+      "Tóm",
+      0,
+      1.6
+     ]
+    },
+    {
+     "year": "T+2",
+     "text": "CỔ PHIẾU, TIỀN VỀ",
+     "at": [
+      17,
+      "hai"
+     ]
+    }
+   ],
+   "tag": {
+    "text": "ĐỒNG HỒ PHIÊN · TRỌN VẸN",
+    "at": [
+     16,
+     "Tóm"
+    ]
+   },
+   "srcnote": "Giờ giao dịch cổ phiếu HOSE (tài liệu thành viên, 05/2025) · T+2: VSD · quy định tại thời điểm làm video (10/2026)"
+  },
+  {
+   "type": "kinetic",
+   "at": 18,
+   "items": [
+    {
+     "text": "09/03/2026",
+     "at": [
+      18,
+      "Hôm"
+     ],
+     "sm": true
+    },
+    {
+     "text": "NHIỀU NGƯỜI KHÔNG BÁN ĐƯỢC ĐÚNG LÚC",
+     "at": [
+      18,
+      "những"
+     ]
+    },
+    {
+     "text": "NHƯNG MỖI NGÀY CHỈ RƠI TỐI ĐA 7%",
+     "at": [
+      19,
+      "Cũng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 20,
+   "text": "HIỂU LUẬT CHƠI TRƯỚC",
+   "hitAt": [
+    20,
+    "Hiểu"
+   ],
+   "sub": "TRƯỚC KHI BẤM NÚT"
+  },
+  {
+   "type": "broll",
+   "at": 21,
+   "vid": "3191576",
+   "ms": 10,
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "BÀI 3",
+     "at": [
+      21,
+      "Bài"
+     ],
+     "sm": true
+    },
+    {
+     "text": "ĐỌC BIỂU ĐỒ ĐẦU TIÊN",
+     "at": [
+      21,
+      "đọc"
+     ]
+    },
+    {
+     "text": "ĐƯỜNG · CỘT · NẾN",
+     "at": [
+      21,
+      "đường"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 22,
+   "text": "Lần đầu đặt lệnh, điều gì\nlàm bạn bất ngờ nhất?\nLô 100 cổ phiếu, bước giá,\nhay hai ngày chờ?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 06",
+  "t": "ÁP DỤNG CHO BẠN"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.16
+ }
+}

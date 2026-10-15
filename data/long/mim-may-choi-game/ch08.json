@@ -1,0 +1,175 @@
+{
+ "title": "Giải đấu của những cỗ máy",
+ "lines": [
+  {
+   "t": "DeepMind gọi nó là AlphaStar League, giải đấu của AlphaStar.",
+   "p": 0.8
+  },
+  {
+   "t": "Thay vì một cỗ máy tự chơi với bản sao của chính nó, họ tạo ra rất nhiều phiên bản, đấu với nhau liên tục.",
+   "p": 1.0
+  },
+  "Vì sao lại cần cả một giải đấu?",
+  "Vì trong StarCraft, mỗi chiến thuật đều có cách khắc chế.",
+  {
+   "t": "Nếu chỉ tự chơi với chính mình, cỗ máy dễ rơi vào một vòng lặp: tìm ra một mẹo, rồi chỉ giỏi chống lại đúng cái mẹo ấy.",
+   "p": 1.0
+  },
+  "Có những phiên bản được giao nhiệm vụ riêng: chuyên đi tìm điểm yếu của các phiên bản khác.",
+  "Có phiên bản thích tấn công sớm. Có phiên bản thích phòng thủ rồi phát triển kinh tế.",
+  {
+   "t": "Giải đấu buộc mọi phiên bản phải đối phó với đủ kiểu đối thủ.",
+   "p": 1.0
+  },
+  "Theo DeepMind, giải đấu ấy chạy trong mười bốn ngày.",
+  "Mỗi phiên bản dùng mười sáu bộ xử lý chuyên dụng của Google.",
+  {
+   "t": "Và trong thời gian ấy, mỗi phiên bản đã trải qua tới hai trăm năm chơi StarCraft, tính theo thời gian thật.",
+   "p": 1.0
+  },
+  "Hai trăm năm, trong hai tuần.",
+  "Không tuyển thủ nào có thể luyện tập nhiều đến thế, dù chơi cả đời.",
+  "Và khi giải đấu kết thúc, cỗ máy được đưa ra gặp con người."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "8",
+   "k": "CHƯƠNG TÁM",
+   "title": "GIẢI ĐẤU CỦA\nNHỮNG CỖ MÁY",
+   "sub": "ALPHASTAR LEAGUE",
+   "vid": "5028622",
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU",
+   "titleAt": [
+    0,
+    null,
+    0,
+    0.05
+   ],
+   "ms": 10
+  },
+  {
+   "type": "myth",
+   "at": 1,
+   "mythLab": "KHÔNG PHẢI",
+   "myth": "MỘT CỖ MÁY ĐẤU BẢN SAO",
+   "truthLab": "MÀ LÀ",
+   "truth": "RẤT NHIỀU PHIÊN BẢN",
+   "strikeAt": [
+    1,
+    null,
+    0,
+    0.4
+   ],
+   "truthAt": [
+    1,
+    null,
+    0,
+    0.7
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "MỖI CHIẾN THUẬT ĐỀU CÓ CÁCH KHẮC CHẾ",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "TỰ CHƠI MỘT MÌNH DỄ KẸT VÒNG LẶP",
+     "at": 4,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "TRONG GIẢI ĐẤU",
+   "rows": [
+    {
+     "k": "CÓ PHIÊN BẢN",
+     "v": "CHUYÊN TÌM ĐIỂM YẾU",
+     "at": 5
+    },
+    {
+     "k": "CÓ PHIÊN BẢN",
+     "v": "THÍCH TẤN CÔNG SỚM",
+     "at": 6
+    },
+    {
+     "k": "CÓ PHIÊN BẢN",
+     "v": "PHÒNG THỦ · KINH TẾ",
+     "at": [
+      6,
+      null,
+      0,
+      0.6
+     ]
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 8,
+   "title": "ALPHASTAR LEAGUE · 2018",
+   "srcnote": "DEEPMIND · 01/2019",
+   "rows": [
+    {
+     "k": "THỜI GIAN",
+     "v": "14 NGÀY",
+     "at": 8
+    },
+    {
+     "k": "MỖI PHIÊN BẢN",
+     "v": "16 BỘ XỬ LÝ TPU",
+     "at": 9
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 10,
+   "from": 200,
+   "to": 200,
+   "prefix": "TỚI ",
+   "suffix": " NĂM",
+   "label": "CHƠI STARCRAFT · MỖI PHIÊN BẢN",
+   "sub": {
+    "text": "TÍNH THEO THỜI GIAN THẬT · TRONG HAI TUẦN",
+    "at": 11
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "KHÔNG TUYỂN THỦ NÀO",
+     "at": 12,
+     "sm": true
+    },
+    {
+     "text": "LUYỆN NHIỀU ĐẾN THẾ",
+     "at": [
+      12,
+      null,
+      0,
+      0.4
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 08",
+  "t": "GIẢI ĐẤU CỦA NHỮNG CỖ MÁY"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

@@ -1,0 +1,161 @@
+{
+ "theme": "mim",
+ "title": "Nước cờ “thiên tài” của Deep Blue có thể chỉ là một con bọ phần mềm: chuyện ván một năm 1997",
+ "description": "Ở nước 44 ván một trận tái đấu năm 1997, Deep Blue đi một nước xe khó hiểu. Kasparov và đội của ông đọc ra trong đó một trí tuệ đáng lo. Theo lời Murray Campbell, thành viên đội Deep Blue, được Nate Silver ghi lại trong cuốn The Signal and the Noise (2012), nước ấy do một lỗi phần mềm: cỗ máy kẹt trong vòng lặp và chọn đại một nước hợp lệ. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/TG7ZShLM4LA (công khai từ 20:00 ngày 12/11).",
+ "tags": [
+  "deep blue bug",
+  "nước cờ 44",
+  "deep blue",
+  "kasparov",
+  "máy tính chơi cờ",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "VÁN MỘT · 1997",
+ "acc": [
+  "bọ",
+  "lỗi",
+  "thiên",
+  "tài",
+  "tin"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Nước cờ khiến nhà vô địch thế giới lo sợ, có thể chỉ là một lỗi phần mềm.",
+  "Ván một trận tái đấu năm 1997, ở nước thứ bốn mươi tư, Deep Blue đi một nước xe rất khó hiểu.",
+  "Kasparov và đội của ông đọc ra trong đó một điều đáng lo.",
+  "Có lẽ cỗ máy đã nhìn thấy thứ gì đó rất sâu, mà con người không thấy.",
+  "Nhiều năm sau, một thành viên đội Deep Blue kể lại: nước ấy là do một con bọ trong phần mềm.",
+  "Cỗ máy kẹt trong một vòng lặp, và để thoát ra, nó chọn đại một nước đi hợp lệ.",
+  "Cỗ máy chưa cần thông minh hơn ông. Nó chỉ cần khiến ông tin rằng nó thông minh hơn."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MỘT CON BỌ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "khiến nhà vô địch thế giới lo sợ",
+     "at": [
+      0,
+      "khiến"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8720746",
+   "veil": 0.55
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 44,
+   "to": 44,
+   "prefix": "NƯỚC ",
+   "suffix": "",
+   "label": "VÁN MỘT · TRẬN TÁI ĐẤU 1997",
+   "sub": {
+    "text": "MỘT NƯỚC XE RẤT KHÓ HIỂU",
+    "at": [
+     1,
+     "xe"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "“NÓ THẤY GÌ ĐÓ RẤT SÂU”",
+     "at": 3,
+     "acc": true
+    },
+    {
+     "text": "cách đội Kasparov đọc nước cờ",
+     "at": 2,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6600019",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 2
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Sự thật về sau",
+   "nodes": [
+    {
+     "text": "một con bọ phần mềm",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      4,
+      "con"
+     ],
+     "shape": "none",
+     "w": 700
+    },
+    {
+     "text": "kẹt vòng lặp → chọn đại một nước",
+     "x": 0.5,
+     "y": 0.64,
+     "at": 5,
+     "c": "acc",
+     "shape": "circle",
+     "w": 860
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "BÀI HỌC LẠ",
+   "cards": [
+    {
+     "k": "CHƯA CẦN",
+     "v": "THÔNG MINH HƠN",
+     "at": 6
+    },
+    {
+     "k": "CHỈ CẦN",
+     "v": "KHIẾN ÔNG TIN THẾ",
+     "at": [
+      6,
+      "Nó"
+     ],
+     "c": "acc"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Deep_Blue_versus_Garry_Kasparov"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "deep": "Đíp",
+  "blue": "Blu",
+  "kasparov": "Cát-xpa-rốp"
+ },
+ "imgs": {}
+}

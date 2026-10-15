@@ -1,0 +1,184 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "kinh-giai",
+ "hook_type": "nghich-ly",
+ "open_shot": "pho-dem",
+ "voice": "Ngọc Huyền",
+ "music": "clean_soul.mp3",
+ "gap": 0.0,
+ "title": "Pháp Cú 1–2: tâm dẫn đầu",
+ "kicker": "KINH PHÁP CÚ · KỆ 1–2",
+ "sub": "DIỄN Ý",
+ "acc": [
+  "ý",
+  "khổ",
+  "vui"
+ ],
+ "lines": [
+  "Không phải chuyện xảy ra làm bạn khổ. Mà là thứ đi trước nó.",
+  "Cùng một chuyện, người nổi nóng, người mỉm cười.",
+  "Kinh Pháp Cú, kệ một và hai, diễn ý: ý dẫn đầu mọi việc.",
+  "Nói hay làm với ý xấu, khổ theo sau như bánh xe theo chân bò.",
+  "Với ý trong sạch, an vui theo sau như bóng không rời.",
+  "Lưu lại cho lần sắp nổi nóng nhé. Bạn hay nóng vì điều gì?"
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "items": [
+    {
+     "text": "THỨ ĐI TRƯỚC NỖI KHỔ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "không phải chuyện xảy ra",
+     "at": [
+      0,
+      "Không"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:18138660"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "NỔI NÓNG",
+     "at": [
+      1,
+      "nổi"
+     ]
+    },
+    {
+     "text": "MỈM CƯỜI",
+     "at": [
+      1,
+      "mỉm"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:18503891",
+   "win": true,
+   "winLabel": "CÙNG MỘT CHUYỆN"
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 2,
+   "suffix": " CÂU KỆ",
+   "label": "Ý DẪN ĐẦU MỌI VIỆC",
+   "until": [
+    2,
+    "ý"
+   ]
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Ý xấu",
+   "nodes": [
+    {
+     "text": "Ý XẤU",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      3,
+      "ý"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "KHỔ THEO SAU",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      3,
+      "khổ"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      3,
+      "khổ"
+     ]
+    }
+   ],
+   "note": "NHƯ BÁNH XE THEO CHÂN BÒ"
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "Ý TRONG SẠCH",
+   "cards": [
+    {
+     "k": "AN VUI",
+     "v": "THEO SAU",
+     "at": [
+      4,
+      "an"
+     ]
+    },
+    {
+     "k": "NHƯ BÓNG",
+     "v": "KHÔNG RỜI",
+     "at": [
+      4,
+      "bóng"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "BẠN HAY NÓNG VÌ ĐIỀU GÌ?",
+     "at": [
+      5,
+      "Bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "lưu lại cho lần sau",
+     "at": [
+      5,
+      "Lưu"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:27844618"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp1-20/en/sujato"
+ ],
+ "description": "Pháp Cú 1–2: tâm dẫn đầu\n\nNguồn: https://suttacentral.net/dhp1-20/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

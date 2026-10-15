@@ -1,0 +1,158 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "vi-sao",
+ "hook_type": "vi-sao",
+ "open_shot": "banh-xe",
+ "voice": "Thiền Tâm Đức",
+ "music": "fluidscape.mp3",
+ "gap": 0.25,
+ "title": "Vì sao biểu tượng Phật giáo là một bánh xe?",
+ "kicker": "VÌ SAO?",
+ "sub": "BÁNH XE PHÁP · DHARMACAKRA",
+ "acc": [
+  "bánh",
+  "tám"
+ ],
+ "lines": [
+  "Vì sao biểu tượng của Phật giáo lại là một bánh xe, mà không phải một bông sen?",
+  "Bánh xe Pháp thường có tám nan.",
+  "Tám nan tượng trưng cho Bát chánh đạo: con đường tám nhánh dẫn đến hết khổ.",
+  "Bài pháp đầu tiên, ở vườn Nai, gọi là Chuyển Pháp Luân: nghĩa là Đức Phật bắt đầu lăn bánh xe ấy.",
+  "Bạn đã biết điều này chưa? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "VÌ SAO LÀ BÁNH XE?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "biểu tượng của Phật giáo",
+     "at": [
+      0,
+      "biểu"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:37482183"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 8,
+   "suffix": " NAN",
+   "label": "BÁNH XE PHÁP",
+   "until": [
+    1,
+    "nan."
+   ]
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Tám nan",
+   "nodes": [
+    {
+     "text": "8 NAN",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      2,
+      "Tám"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "BÁT CHÁNH ĐẠO",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      2,
+      "Bát"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      2,
+      "Bát"
+     ]
+    }
+   ],
+   "note": "WIKIPEDIA · DHARMACHAKRA"
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "CHUYỂN PHÁP LUÂN",
+   "cards": [
+    {
+     "k": "BÀI PHÁP",
+     "v": "ĐẦU TIÊN",
+     "at": [
+      3,
+      "Bài"
+     ]
+    },
+    {
+     "k": "LĂN",
+     "v": "BÁNH XE",
+     "at": [
+      3,
+      "lăn"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "BẠN ĐÃ BIẾT CHƯA?",
+     "at": [
+      4,
+      "Bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận nhé",
+     "at": [
+      4,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:37917575"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Dharmachakra",
+  "https://suttacentral.net/sn56.11/en/sujato"
+ ],
+ "description": "Vì sao biểu tượng Phật giáo là một bánh xe?\n\nNguồn: https://en.wikipedia.org/wiki/Dharmachakra ; https://suttacentral.net/sn56.11/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

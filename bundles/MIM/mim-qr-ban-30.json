@@ -1,0 +1,29 @@
+{
+  "bgm": "blip_stream.mp3",
+  "broll_queries": [],
+  "channel": "MIM",
+  "created_at": "2026-10-12T09:03:53Z",
+  "description": "Mã QR được thiết kế cho nhà xưởng ô tô, nơi có dầu, bụi và thùng hàng trầy xước. Mã chứa thêm dữ liệu dự phòng (mã sửa lỗi) nên có thể bị bẩn hoặc hỏng tới khoảng 30% diện tích mà vẫn đọc ra đúng (IEEE Spectrum, 11/2020). Đó cũng là lý do người ta đặt được logo vào giữa mã: logo che mất một phần dữ liệu và mã vẫn chạy. Hình mã trong video là hình minh hoạ. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nNguồn:\nhttps://spectrum.ieee.org/how-a-board-game-and-skyscrapers-inspired-the-development-of-the-qr-code\n\nVideo: Pexels — Leeloo The First\nVideo: Pexels — Ann H\nVideo: Pexels — Nataliya Vaitkevich\nMusic: \"Blip Stream\" by Kevin MacLeod (incompetech.com). Licensed under Creative Commons: By Attribution 4.0 — http://creativecommons.org/licenses/by/4.0/\n\n#AI #CôngNghệ #MindInTheMachine",
+  "kind": "short",
+  "publish_at": "2026-10-16T12:00:00Z",
+  "render": {
+    "engine": "casefile",
+    "spec": "data/stier/specs/mim-qr-ban-30.json"
+  },
+  "schema_version": 1,
+  "script": "Mã QR bẩn tới ba mươi phần trăm, vẫn quét được. Vì nó sinh ra cho nhà xưởng ô tô. Ở đó có dầu, có bụi, thùng hàng thì trầy xước. Một mã vạch bẩn một sọc, là coi như hỏng. Mã QR thì chứa thêm dữ liệu dự phòng, đủ để tính ngược lại phần đã mất. Giống như bạn nghe một câu bị nhiễu vài chữ, mà vẫn đoán ra cả câu. Nên người ta mới dám đặt logo vào giữa mã. Cái logo ấy đang che mất một phần dữ liệu. Và mã vẫn chạy.",
+  "slug": "mim-qr-ban-30",
+  "source_note": "https://spectrum.ieee.org/how-a-board-game-and-skyscrapers-inspired-the-development-of-the-qr-code",
+  "tags": [
+    "mã qr",
+    "qr code",
+    "sửa lỗi",
+    "error correction",
+    "logo giữa mã qr",
+    "công nghệ quanh ta",
+    "mind in the machine"
+  ],
+  "thumbnail_text": "",
+  "title": "Mã QR bẩn tới 30% vẫn đọc được: vì sao?",
+  "voice": "Thanh Bình"
+}

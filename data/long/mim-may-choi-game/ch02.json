@@ -1,0 +1,111 @@
+{
+ "title": "Một phòng thí nghiệm an toàn",
+ "lines": [
+  {
+   "t": "Có một câu hỏi bạn có thể đang nghĩ tới.",
+   "p": 0.8
+  },
+  {
+   "t": "Sao những phòng thí nghiệm hàng đầu lại tốn nhiều công sức đến thế, chỉ để thắng một trò chơi?",
+   "p": 1.0
+  },
+  "Câu trả lời nằm ở ba điều mà trò chơi điện tử có, còn thế giới thật thì không.",
+  "Thứ nhất, kết quả rõ ràng. Thắng hay thua, không ai phải tranh cãi.",
+  "Thứ hai, có thể chơi lại vô số lần, nhanh hơn thời gian thật rất nhiều.",
+  {
+   "t": "Thứ ba, sai lầm không làm ai bị thương.",
+   "p": 1.0
+  },
+  "Thử hình dung dạy một chiếc xe tự lái bằng cách cho nó tự thử và tự sai, ngoài đường thật.",
+  "Không ai cho phép điều đó.",
+  {
+   "t": "Nhưng trong một trò chơi, cỗ máy có thể sai hàng tỷ lần, và chẳng ai bị làm sao.",
+   "p": 1.0
+  },
+  "Đồng thời, những trò chơi chiến thuật lại có đủ những thứ khó nhất của thế giới thật.",
+  "Thông tin bị che. Đối thủ biết suy nghĩ. Kế hoạch phải kéo dài hàng giờ.",
+  {
+   "t": "Nên trò chơi trở thành một phòng thí nghiệm hoàn hảo: đủ khó để đáng thử, đủ an toàn để được sai.",
+   "p": 1.0
+  },
+  "Và đó là lý do câu chuyện về những trò chơi này không chỉ là chuyện của game thủ."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "MỘT PHÒNG THÍ NGHIỆM\nAN TOÀN",
+   "sub": "VÌ SAO LẠI LÀ TRÒ CHƠI?",
+   "vid": "5028622",
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU",
+   "titleAt": [
+    0,
+    null,
+    0,
+    0.05
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "BA ĐIỀU TRÒ CHƠI CÓ",
+   "rows": [
+    {
+     "k": "1",
+     "v": "KẾT QUẢ RÕ RÀNG",
+     "at": 3
+    },
+    {
+     "k": "2",
+     "v": "CHƠI LẠI VÔ SỐ LẦN",
+     "at": 4
+    },
+    {
+     "k": "3",
+     "v": "SAI KHÔNG LÀM AI BỊ THƯƠNG",
+     "at": 5
+    }
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 6,
+   "mythLab": "XE TỰ LÁI",
+   "myth": "TỰ THỬ, TỰ SAI NGOÀI ĐƯỜNG",
+   "truthLab": "TRONG TRÒ CHƠI",
+   "truth": "SAI HÀNG TỶ LẦN",
+   "strikeAt": 7,
+   "truthAt": 8
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "MÀ VẪN ĐỦ KHÓ",
+     "at": 9,
+     "sm": true
+    },
+    {
+     "text": "THÔNG TIN BỊ CHE · ĐỐI THỦ BIẾT NGHĨ",
+     "at": 10,
+     "acc": true
+    },
+    {
+     "text": "đủ khó để đáng thử · đủ an toàn để được sai",
+     "at": 11,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "MỘT PHÒNG THÍ NGHIỆM AN TOÀN"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

@@ -1,0 +1,237 @@
+{
+ "title": "Mặt trái của một tờ giấy",
+ "lines": [
+  {
+   "t": "Nhưng một thứ dễ in, thì kẻ gian cũng in được.",
+   "p": 0.8
+  },
+  "Thủ đoạn đơn giản nhất là dán đè.",
+  {
+   "t": "Một mã giả được dán chồng lên mã thật của cửa hàng. Khách quét, và tiền đi sang tài khoản người lạ.",
+   "p": 1.0
+  },
+  "Công an Hà Nội đã cảnh báo về kiểu lừa đảo dùng mã QR độc hại.",
+  {
+   "t": "Có mã dẫn tới trang web giả. Có mã đến qua tin nhắn, giả danh ngân hàng, cơ quan nhà nước.",
+   "p": 1.0
+  },
+  "Mắt người không đọc được một ô vuông đen trắng. Đó là điểm yếu của nó.",
+  "Nên có ba thói quen nhỏ, bạn có thể tập.",
+  "Một, trước khi bấm chuyển, nhìn tên người nhận hiện trên màn hình.",
+  "Hai, thấy mã dán chồng lên một mã khác, hãy hỏi lại người bán.",
+  {
+   "t": "Ba, đừng quét những mã lạ gửi qua tin nhắn, nhất là khi bị giục phải làm ngay.",
+   "p": 1.0
+  },
+  "Lần tới, khi giơ điện thoại lên trước một ô vuông, bạn hãy nhớ.",
+  "Ba ô ở góc là một toà nhà cao nhìn từ cửa sổ tàu.",
+  "Những chấm đen trắng là một ván cờ giờ nghỉ trưa.",
+  {
+   "t": "Và việc bạn quét được nó miễn phí, là một lựa chọn của những người làm ra nó.",
+   "p": 1.0
+  },
+  "Còn bạn, lần gần nhất bạn trả tiền mặt là khi nào?",
+  "Kể cho mình nghe ở phần bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "DỄ IN",
+     "at": [
+      0,
+      "dễ"
+     ]
+    },
+    {
+     "text": "KẺ GIAN CŨNG IN ĐƯỢC",
+     "at": [
+      0,
+      "kẻ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "qr",
+   "at": 1,
+   "modulesAt": [
+    1,
+    null,
+    0,
+    0.1
+   ],
+   "modulesUntil": [
+    1,
+    "là"
+   ],
+   "damage": {
+    "at": [
+     2,
+     "dán"
+    ],
+    "text": "MÃ GIẢ DÁN ĐÈ"
+   },
+   "side": {
+    "k": "KHÁCH QUÉT",
+    "v": "tiền sang tài khoản người lạ",
+    "at": [
+     2,
+     "tiền"
+    ]
+   },
+   "label": {
+    "k": "",
+    "v": "HÌNH MINH HOẠ · KHÔNG PHẢI MÃ THẬT",
+    "at": 1
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "CÔNG AN HÀ NỘI CẢNH BÁO",
+   "srcnote": "NGUỒN: CÔNG AN TP HÀ NỘI (QUA BÁO CHÍ)",
+   "rows": [
+    {
+     "k": "MÃ",
+     "v": "DẪN TỚI TRANG WEB GIẢ",
+     "at": [
+      4,
+      "Có"
+     ]
+    },
+    {
+     "k": "MÃ",
+     "v": "QUA TIN NHẮN GIẢ DANH",
+     "at": [
+      4,
+      "tin"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "MẮT NGƯỜI KHÔNG ĐỌC ĐƯỢC",
+     "at": 5
+    },
+    {
+     "text": "ĐIỂM YẾU CỦA NÓ",
+     "at": [
+      5,
+      "điểm"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 6,
+   "title": "BA THÓI QUEN NHỎ",
+   "rows": [
+    {
+     "k": "1",
+     "v": "NHÌN TÊN NGƯỜI NHẬN TRƯỚC KHI BẤM",
+     "at": 7
+    },
+    {
+     "k": "2",
+     "v": "MÃ DÁN CHỒNG? HỎI LẠI NGƯỜI BÁN",
+     "at": 8
+    },
+    {
+     "k": "3",
+     "v": "KHÔNG QUÉT MÃ LẠ BỊ GIỤC LÀM NGAY",
+     "at": 9
+    }
+   ]
+  },
+  {
+   "type": "qr",
+   "at": 10,
+   "modulesAt": [
+    10,
+    null,
+    0,
+    0.1
+   ],
+   "modulesUntil": [
+    10,
+    "bạn"
+   ],
+   "hlAt": [
+    11,
+    "Ba"
+   ],
+   "side": {
+    "k": "BA Ô Ở GÓC",
+    "v": "toà nhà cao nhìn từ cửa sổ tàu",
+    "at": [
+     11,
+     "là"
+    ]
+   },
+   "label": {
+    "k": "",
+    "v": "HÌNH MINH HOẠ · KHÔNG PHẢI MÃ THẬT",
+    "at": 10
+   }
+  },
+  {
+   "type": "go",
+   "at": 12,
+   "stones": 44,
+   "label": {
+    "k": "NHỮNG CHẤM ĐEN TRẮNG",
+    "v": "MỘT VÁN CỜ GIỜ NGHỈ TRƯA",
+    "at": [
+     12,
+     "là"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 13,
+   "text": "MIỄN PHÍ",
+   "sub": "MỘT LỰA CHỌN CỦA NHỮNG NGƯỜI LÀM RA NÓ"
+  },
+  {
+   "type": "question",
+   "at": 14,
+   "text": "Lần gần nhất bạn\ntrả tiền mặt là khi nào?"
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "KỂ CHO MÌNH NGHE",
+     "at": 15
+    },
+    {
+     "text": "Ở PHẦN BÌNH LUẬN",
+     "at": [
+      15,
+      "ở"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 07",
+  "t": "MẶT TRÁI CỦA MỘT TỜ GIẤY"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

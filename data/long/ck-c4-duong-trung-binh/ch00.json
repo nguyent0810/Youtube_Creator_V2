@@ -1,0 +1,227 @@
+{
+ "title": "Đường kẻ đến sau",
+ "lines": [
+  "Ngày sáu tháng một năm hai nghìn không trăm hai mươi hai, VN-Index đóng cửa ở một nghìn năm trăm hai mươi tám điểm.",
+  {
+   "t": "Đó là đỉnh cao nhất của cả chu kỳ ấy.",
+   "p": 1.0
+  },
+  "Trên mạng, có một câu được nhắc đi nhắc lại.",
+  {
+   "t": "Giá thủng đường MA hai trăm là phải chạy.",
+   "q": 1,
+   "diy": 1
+  },
+  {
+   "t": "Đường MA hai trăm là đường trung bình của hai trăm phiên gần nhất, và gần như phần mềm biểu đồ nào cũng vẽ được nó.",
+   "p": 1.0
+  },
+  "Vậy lần ấy, giá thủng đường MA hai trăm vào lúc nào?",
+  "Ngày mười chín tháng tư.",
+  {
+   "t": "Sáu mươi bảy phiên sau đỉnh, khi chỉ số đã thấp hơn đỉnh tám phần trăm.",
+   "p": 1.0
+  },
+  "Đường kẻ không sai. Nó chỉ đến sau.",
+  {
+   "t": "Và đó không phải lỗi của riêng lần ấy, mà là bản chất của nó.",
+   "p": 1.0
+  },
+  "Một đường kẻ chỉ là trung bình cộng của những ngày đã qua.",
+  "Vậy nó biết gì về ngày mai?",
+  {
+   "t": "Đó là câu hỏi của video này.",
+   "p": 1.0
+  },
+  "Đây là Biểu Đồ Biết Nói. Tiền bạc, giải thích bằng dữ liệu.",
+  "Và đây là bài bốn của khoá Chứng khoán từ số không.",
+  "Video chỉ nhằm giáo dục, không phải lời khuyên mua hay bán, và không dự báo thị trường."
+ ],
+ "scenes": [
+  {
+   "type": "candles",
+   "series": "vnindex",
+   "from": "2021-11-01",
+   "to": "2022-04-29",
+   "drawAt": [
+    0,
+    null,
+    0,
+    0.1
+   ],
+   "until": [
+    1,
+    "chu"
+   ],
+   "title": "VN-INDEX · KHUNG NGÀY",
+   "range": "11/2021 → 04/2022",
+   "ind": [],
+   "marks": [
+    {
+     "date": "2022-01-06",
+     "text": "ĐỈNH 1.528,57",
+     "at": [
+      0,
+      "đóng"
+     ],
+     "pos": "above",
+     "tone": "gold"
+    }
+   ],
+   "source": "DỮ LIỆU: HOSE (VNSTOCK/VCI), KÊNH TỰ TÍNH. MINH HOẠ QUÁ KHỨ, KHÔNG PHẢI KHUYẾN NGHỊ."
+  },
+  {
+   "type": "quote",
+   "at": 3,
+   "text": "Giá thủng đường MA hai trăm là phải chạy.",
+   "by": "LỜI TRUYỀN MIỆNG",
+   "dy": true,
+   "qline": 3
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "MA200",
+     "at": 4,
+     "acc": true
+    },
+    {
+     "text": "trung bình 200 phiên gần nhất",
+     "at": [
+      4,
+      "trung"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 5,
+   "text": "Lần ấy, giá thủng\nMA200 lúc nào?"
+  },
+  {
+   "type": "candles",
+   "at": 6,
+   "series": "vnindex",
+   "from": "2021-11-01",
+   "to": "2022-04-29",
+   "drawAt": [
+    6,
+    null,
+    0,
+    0.1
+   ],
+   "until": [
+    6,
+    "tư"
+   ],
+   "title": "VN-INDEX + MA200",
+   "range": "11/2021 → 04/2022",
+   "ind": [
+    {
+     "k": "sma",
+     "n": 200,
+     "color": "#fbbf24",
+     "at": [
+      6,
+      "ngày"
+     ]
+    }
+   ],
+   "marks": [
+    {
+     "date": "2022-01-06",
+     "text": "ĐỈNH",
+     "at": [
+      6,
+      "ngày"
+     ],
+     "pos": "above",
+     "tone": "gold"
+    },
+    {
+     "date": "2022-04-19",
+     "text": "THỦNG MA200 · 19/04",
+     "at": [
+      6,
+      "tư"
+     ],
+     "pos": "below",
+     "tone": "down"
+    }
+   ],
+   "source": "DỮ LIỆU: HOSE (VNSTOCK/VCI), KÊNH TỰ TÍNH. MINH HOẠ QUÁ KHỨ, KHÔNG PHẢI KHUYẾN NGHỊ."
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "+67 PHIÊN",
+     "at": 7,
+     "acc": true
+    },
+    {
+     "text": "−8% từ đỉnh",
+     "at": [
+      7,
+      "tám"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "text": "NÓ CHỈ ĐẾN SAU",
+   "sub": "ĐƯỜNG KẺ KHÔNG SAI"
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "TRUNG BÌNH CỦA NGÀY ĐÃ QUA",
+     "at": 10
+    },
+    {
+     "text": "NGÀY MAI?",
+     "at": 11,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "brand",
+   "at": 13,
+   "sub": "TIỀN BẠC · GIẢI THÍCH BẰNG DỮ LIỆU"
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "CHỨNG KHOÁN TỪ SỐ 0 · BÀI 4",
+     "at": 14,
+     "acc": true
+    },
+    {
+     "text": "chỉ giáo dục · không khuyên mua/bán · không dự báo",
+     "at": 15,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "ĐƯỜNG KẺ ĐẾN SAU"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

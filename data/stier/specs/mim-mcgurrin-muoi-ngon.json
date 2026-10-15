@@ -1,0 +1,172 @@
+{
+ "theme": "mim",
+ "title": "Cuộc thi gõ máy năm 1888 ở Cincinnati: mười ngón tay thắng, nhưng bàn phím QWERTY được tiếng",
+ "description": "Ngày 25/07/1888 ở Cincinnati, Frank McGurrin (máy Remington, bàn phím QWERTY, gõ mười ngón không nhìn phím) thi với Louis Traub (máy Caligraph, bàn phím lớn mỗi chữ hoa và thường một phím, gõ nhìn phím). McGurrin thắng áp đảo, kết quả lên trang nhất nhiều báo (Wikipedia: Frank Edward McGurrin). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/KJ5y_Ypnc4U (công khai từ 20:00 ngày 05/11).",
+ "tags": [
+  "frank mcgurrin",
+  "gõ mười ngón",
+  "bàn phím qwerty",
+  "lịch sử bàn phím",
+  "máy đánh chữ",
+  "công nghệ",
+  "mind in the machine"
+ ],
+ "sub": "CINCINNATI · 1888",
+ "acc": [
+  "mười",
+  "ngón",
+  "thắng",
+  "nhìn",
+  "tiếng"
+ ],
+ "kicker": "CHUYỆN CÔNG NGHỆ",
+ "lines": [
+  "Một cuộc thi gõ máy năm 1888 đã góp phần chọn bàn phím cho cả thế giới.",
+  "Ngày 25 tháng 7 năm 1888, ở thành phố Cincinnati, nước Mỹ, hai người thi xem ai gõ nhanh hơn.",
+  "Một người dùng máy có bàn phím lớn, mỗi chữ hoa, chữ thường một phím. Anh gõ vài ngón và phải nhìn phím.",
+  "Người kia, Frank McGurrin, dùng máy Remington, bàn phím QWERTY.",
+  "Anh gõ bằng mười ngón, và không nhìn xuống.",
+  "McGurrin thắng áp đảo, và kết quả lên trang nhất nhiều tờ báo.",
+  "Thứ thắng hôm ấy là cách gõ mười ngón. Nhưng tiếng thơm lại thuộc về bàn phím."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CUỘC THI 1888",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "góp phần chọn bàn phím cho cả thế giới",
+     "at": [
+      0,
+      "góp"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6037662",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "25/07/1888",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "Cincinnati · thi gõ máy",
+     "at": [
+      1,
+      "Cincinnati"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7888283",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "HAI ĐẤU THỦ",
+   "cards": [
+    {
+     "k": "BÀN PHÍM LỚN",
+     "v": "VÀI NGÓN · NHÌN PHÍM",
+     "at": 2
+    },
+    {
+     "k": "QWERTY",
+     "v": "FRANK MCGURRIN",
+     "at": 3,
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 10,
+   "to": 10,
+   "suffix": " NGÓN",
+   "label": "GÕ KHÔNG NHÌN PHÍM",
+   "sub": {
+    "text": "FRANK MCGURRIN · 1888",
+    "at": [
+     4,
+     "không"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Kết quả",
+   "nodes": [
+    {
+     "text": "thắng áp đảo",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      5,
+      "thắng"
+     ],
+     "shape": "none",
+     "w": 640
+    },
+    {
+     "text": "lên trang nhất nhiều báo",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      5,
+      "trang"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 760
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "CÁCH GÕ THẮNG",
+   "sub": "BÀN PHÍM ĐƯỢC TIẾNG"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Frank_Edward_McGurrin"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "=QWERTY": "quớt-ti",
+  "qwerty": "quớt-ti",
+  "remington": "Rem-minh-tần",
+  "cincinnati": "Xin-xi-na-ti",
+  "frank": "Phreng",
+  "mcgurrin": "Mác Gơ-rin"
+ },
+ "imgs": {}
+}

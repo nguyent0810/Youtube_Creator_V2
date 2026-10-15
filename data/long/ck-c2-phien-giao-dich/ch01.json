@@ -1,0 +1,365 @@
+{
+ "title": "Trước chín giờ: một lệnh gồm những gì",
+ "lines": [
+  {
+   "t": "Ở bài một, mình ví HOSE như một khu chợ có ban quản lý, và bạn nhờ công ty chứng khoán đi chợ hộ.",
+   "p": 0.8
+  },
+  "Lệnh của bạn đi từ ứng dụng, qua công ty chứng khoán, vào hệ thống của sở giao dịch.",
+  "Một lệnh thông thường có bốn thứ: mã cổ phiếu, mua hay bán, bao nhiêu cổ phiếu, và giá.",
+  "Loại lệnh phổ biến nhất gọi là lệnh giới hạn.",
+  {
+   "t": "Bạn nói rõ: mình mua với giá cao nhất là bao nhiêu, hoặc bán với giá thấp nhất là bao nhiêu.",
+   "p": 1.0
+  },
+  "Số lượng thì không tuỳ ý.",
+  "Trên HOSE, một lô chẵn là một trăm cổ phiếu.",
+  "Muốn mua ít hơn, từ một tới chín mươi chín cổ phiếu, bạn dùng lô lẻ.",
+  "Từ khi HOSE chạy hệ thống mới, lô lẻ được khớp trong cùng các phiên như lô chẵn, nhưng chỉ đặt được lệnh giới hạn.",
+  {
+   "t": "Một lô một trăm cổ phiếu thì tốn bao nhiêu tiền?",
+   "ask": 1
+  },
+  "Tuỳ mã.",
+  "Theo kênh tự tính, cuối tháng chín, cổ phiếu đứng giữa sàn HOSE có giá khoảng mười lăm nghìn đồng.",
+  {
+   "t": "Vậy một lô khoảng một triệu rưỡi, chưa tính phí, chưa tới một phần năm thu nhập bình quân một tháng, khoảng chín triệu.",
+   "p": 1.0
+  },
+  "Giá cũng không tuỳ ý: mỗi mức giá phải đi theo bước giá.",
+  "Cổ phiếu dưới mười nghìn đồng, mỗi bước là mười đồng.",
+  "Từ mười nghìn tới dưới năm mươi nghìn, mỗi bước năm mươi đồng.",
+  {
+   "t": "Từ năm mươi nghìn trở lên, mỗi bước một trăm đồng.",
+   "p": 1.0
+  },
+  "Và giá chỉ được nằm trong một khung.",
+  "Mỗi sáng, mỗi cổ phiếu có một giá tham chiếu, thường là giá đóng cửa của phiên trước.",
+  "Trên HOSE, giá được phép lên tối đa bảy phần trăm so với tham chiếu, gọi là giá trần.",
+  "Và xuống tối đa bảy phần trăm, gọi là giá sàn.",
+  "Ví dụ, tham chiếu hai mươi nghìn đồng thì trần là hai mươi mốt nghìn bốn trăm, sàn là mười tám nghìn sáu trăm.",
+  {
+   "t": "Bảng giá thường tô giá trần màu tím, giá sàn màu xanh lơ, giá tham chiếu màu vàng.",
+   "p": 1.0
+  },
+  "Giữ hai chữ giá sàn trong đầu nhé. Lát nữa nó sẽ quay lại."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "TRƯỚC CHÍN GIỜ:\nMỘT LỆNH GỒM NHỮNG GÌ",
+   "sub": "LỆNH · LÔ · BƯỚC GIÁ · KHUNG GIÁ",
+   "vid": "15169256",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Ở"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "ỨNG DỤNG",
+     "at": [
+      1,
+      "Lệnh"
+     ]
+    },
+    {
+     "text": "→ CÔNG TY CHỨNG KHOÁN",
+     "at": [
+      1,
+      "qua"
+     ]
+    },
+    {
+     "text": "→ HỆ THỐNG CỦA SỞ GIAO DỊCH (KRX)",
+     "at": [
+      1,
+      "vào"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "MỘT LỆNH · VÍ DỤ GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "MÃ CỔ PHIẾU",
+     "v": "MÃ A",
+     "at": [
+      2,
+      "mã"
+     ]
+    },
+    {
+     "k": "MUA HAY BÁN",
+     "v": "MUA",
+     "at": [
+      2,
+      "mua"
+     ]
+    },
+    {
+     "k": "BAO NHIÊU CỔ PHIẾU",
+     "v": "100",
+     "at": [
+      2,
+      "bao"
+     ]
+    },
+    {
+     "k": "GIÁ",
+     "v": "20.000 Đ",
+     "at": [
+      2,
+      "giá"
+     ]
+    }
+   ],
+   "total": {
+    "k": "LOẠI LỆNH",
+    "v": "GIỚI HẠN (LO)",
+    "at": [
+     3,
+     "Loại"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "SỐ LƯỢNG KHÔNG TUỲ Ý",
+     "at": [
+      5,
+      "Số"
+     ]
+    },
+    {
+     "text": "LÔ CHẴN = 100 CỔ PHIẾU",
+     "at": [
+      6,
+      "Trên"
+     ]
+    },
+    {
+     "text": "LÔ LẺ = 1–99 CỔ PHIẾU",
+     "at": [
+      7,
+      "Muốn"
+     ]
+    },
+    {
+     "text": "LÔ LẺ: KHỚP CÙNG PHIÊN · CHỈ LỆNH GIỚI HẠN (LO)",
+     "at": [
+      8,
+      "Từ"
+     ],
+     "acc": true
+    }
+   ],
+   "srcnote": "Quy chế Niêm yết và giao dịch CK niêm yết — VNX, QĐ 22/QĐ-HĐTV ngày 18/04/2025, Điều 32 · lô 100: HOSE"
+  },
+  {
+   "type": "question",
+   "at": 9,
+   "text": "Một lô 100 cổ phiếu\nthì tốn bao nhiêu tiền?"
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "TUỲ MÃ",
+     "at": [
+      10,
+      "Tuỳ"
+     ]
+    },
+    {
+     "text": "CỔ PHIẾU ĐỨNG GIỮA SÀN HOSE · CUỐI THÁNG 9",
+     "at": [
+      11,
+      "Theo"
+     ],
+     "sm": true
+    },
+    {
+     "text": "≈ 15.400 Đ",
+     "at": [
+      11,
+      "mười"
+     ],
+     "acc": true
+    }
+   ],
+   "srcnote": "Trung vị giá 406 cổ phiếu HOSE, giá đóng cửa gần nhất tới 30/09/2026 (vnstock/VCI) · kênh tự tính"
+  },
+  {
+   "type": "counter",
+   "at": 12,
+   "from": 0,
+   "to": 1540000,
+   "suffix": " đ",
+   "countAt": [
+    12,
+    "Vậy"
+   ],
+   "until": [
+    12,
+    "rưỡi"
+   ],
+   "label": "1 LÔ · 100 × ≈ 15.400 Đ · CHƯA GỒM PHÍ",
+   "sub": {
+    "text": "CHƯA TỚI 1/5 THU NHẬP BÌNH QUÂN THÁNG ≈ 9 TRIỆU",
+    "at": [
+     12,
+     "chưa",
+     1
+    ]
+   },
+   "srcnote": "Kênh tự tính · thu nhập bình quân lao động quý I/2026: Tổng cục Thống kê (NSO)"
+  },
+  {
+   "type": "bars",
+   "at": 13,
+   "title": "BƯỚC GIÁ · CỔ PHIẾU HOSE",
+   "unit": "SỐ MÃ · KÊNH TỰ TÍNH · n = 406",
+   "items": [
+    {
+     "k": "DƯỚI 10.000 Đ · BƯỚC 10 Đ",
+     "v": 126,
+     "lbl": "126 MÃ",
+     "at": [
+      14,
+      "Cổ"
+     ]
+    },
+    {
+     "k": "10.000–49.950 Đ · BƯỚC 50 Đ",
+     "v": 234,
+     "lbl": "234 MÃ",
+     "at": [
+      15,
+      "Từ"
+     ]
+    },
+    {
+     "k": "TỪ 50.000 Đ · BƯỚC 100 Đ",
+     "v": 46,
+     "lbl": "46 MÃ",
+     "at": [
+      16,
+      "Từ"
+     ]
+    }
+   ],
+   "srcnote": "Bước giá: quy định HOSE · số mã: giá đóng cửa gần nhất tới 30/09/2026 (vnstock/VCI), kênh tự tính"
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "MỘT KHUNG GIÁ MỖI NGÀY",
+     "at": [
+      17,
+      "Và"
+     ],
+     "sm": true
+    },
+    {
+     "text": "THAM CHIẾU = GIÁ ĐÓNG CỬA PHIÊN TRƯỚC",
+     "at": [
+      18,
+      "Mỗi"
+     ]
+    },
+    {
+     "text": "thường vậy · trừ ngày điều chỉnh quyền",
+     "at": [
+      18,
+      "thường"
+     ],
+     "sm": true
+    },
+    {
+     "text": "TRẦN +7% · SÀN −7%",
+     "at": [
+      19,
+      "Trên"
+     ],
+     "acc": true
+    }
+   ],
+   "srcnote": "Quy chế Niêm yết và giao dịch CK niêm yết — VNX, QĐ 22/QĐ-HĐTV ngày 18/04/2025, Điều 31 · biên độ ±7%: HOSE"
+  },
+  {
+   "type": "ledger",
+   "at": 21,
+   "title": "KHUNG GIÁ · VÍ DỤ GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "TRẦN · MÀU TÍM",
+     "v": "21.400",
+     "at": [
+      21,
+      "trần"
+     ]
+    },
+    {
+     "k": "THAM CHIẾU · MÀU VÀNG",
+     "v": "20.000",
+     "at": [
+      21,
+      "Ví"
+     ]
+    },
+    {
+     "k": "SÀN · MÀU XANH LƠ",
+     "v": "18.600",
+     "at": [
+      21,
+      "sàn"
+     ]
+    }
+   ],
+   "total": {
+    "k": "HOSE",
+    "v": "±7% MỖI NGÀY",
+    "at": [
+     22,
+     "Bảng"
+    ]
+   },
+   "srcnote": "20.000 × 1,07 = 21.400 · × 0,93 = 18.600 · màu: quy ước hiển thị phổ biến của bảng giá"
+  },
+  {
+   "type": "slam",
+   "at": 23,
+   "text": "GIÁ SÀN",
+   "hitAt": [
+    23,
+    "giá"
+   ],
+   "sub": "GIỮ HAI CHỮ NÀY TRONG ĐẦU"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "TRƯỚC CHÍN GIỜ: MỘT LỆNH GỒM NHỮNG GÌ"
+ },
+ "bgm": {
+  "mood": "upbeat",
+  "gain": 0.083
+ }
+}

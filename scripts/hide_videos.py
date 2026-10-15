@@ -22,7 +22,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
-sys.stdout.reconfigure(encoding="utf-8")
 
 from factory import channels, publish, store  # noqa: E402
 from factory.channel import Channel  # noqa: E402
@@ -87,4 +86,6 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    from factory.console import utf8_console  # noqa: E402
+    utf8_console()  # console Windows cp1252 không in được tiếng Việt (retro 2 mục 7)
     main()

@@ -1,0 +1,229 @@
+{
+ "title": "Áp dụng cho bạn, và khi nào không đúng",
+ "lines": [
+  {
+   "t": "Mình không bảo bạn bỏ qua biểu đồ nến. Nó là cách gọn nhất để xem lại một phiên, một tuần.",
+   "p": 0.8
+  },
+  "Chỉ có bốn câu, để bạn tự hỏi mỗi khi nhìn một cây nến.",
+  "Một: đây là nến ngày, nến tuần, hay một khung nào khác?",
+  "Hai: màu này so với giá mở cửa, hay so với giá tham chiếu?",
+  "Ba: thân dài hay ngắn, bóng dài ở phía nào, và nó kể gì về phiên đã qua?",
+  "Bốn: mình đang đọc lại quá khứ, hay đang cố đoán ngày mai?",
+  {
+   "t": "Nếu là đoán, hãy hỏi tiếp: đã có ai đếm xem cách đoán ấy đúng bao nhiêu lần, so với một ngày bất kỳ chưa?",
+   "p": 1.0
+  },
+  "Và đây là những lúc điều vừa nói không đúng hoàn toàn.",
+  "Phép đếm của kênh chỉ làm trên VN-Index, trong tám năm, chưa tính phí. Một cổ phiếu riêng lẻ, hay một giai đoạn khác, có thể cho kết quả khác.",
+  "Với cổ phiếu ít người giao dịch, một cây nến có khi chỉ là vài lệnh nhỏ, nên hình dạng của nó nói rất ít.",
+  "Giá mở cửa của một cổ phiếu là giá khớp trong phiên mở cửa, như bài hai đã kể, nên có thể cách xa giá đóng cửa hôm trước.",
+  "Và nhiều ứng dụng tự điều chỉnh giá cũ sau khi công ty chia cổ tức hay thưởng cổ phiếu.",
+  {
+   "t": "Nên cây nến năm xưa trên màn hình có thể khác con số bạn còn nhớ.",
+   "p": 1.0
+  },
+  "Tóm lại, một cây nến là bốn con số của một phiên, vẽ thành một hình.",
+  "Nó kể rất giỏi chuyện đã xảy ra: ai thắng, giằng co ra sao, đã đi xa tới đâu.",
+  "Nhưng nó không hứa được chuyện sẽ xảy ra.",
+  "Ở những bài tới, mình sẽ nối nhiều cây nến lại với nhau để xem xu hướng, rồi làm quen với đường trung bình động.",
+  {
+   "t": "Còn bây giờ, mình muốn nghe bạn: mẫu nến nào bạn từng được nghe là chắc ăn nhất? Biết đâu, nó sẽ là phép đếm tiếp theo của kênh.",
+   "p": 1.0
+  }
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "CHƯƠNG SÁU",
+   "title": "ÁP DỤNG CHO BẠN —\nVÀ KHI NÀO KHÔNG ĐÚNG",
+   "sub": "KHÔNG PHẢI LỜI KHUYÊN MUA HAY BÁN",
+   "titleAt": [
+    0,
+    "Mình"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "4 CÂU KHI NHÌN MỘT CÂY NẾN",
+   "rows": [
+    {
+     "k": "01",
+     "v": "NẾN NGÀY, NẾN TUẦN, HAY KHUNG KHÁC?",
+     "at": [
+      2,
+      "Một"
+     ]
+    },
+    {
+     "k": "02",
+     "v": "MÀU SO VỚI MỞ CỬA HAY THAM CHIẾU?",
+     "at": [
+      3,
+      "Hai"
+     ]
+    },
+    {
+     "k": "03",
+     "v": "THÂN, BÓNG KỂ GÌ VỀ PHIÊN ĐÃ QUA?",
+     "at": [
+      4,
+      "Ba"
+     ]
+    },
+    {
+     "k": "04",
+     "v": "ĐỌC LẠI QUÁ KHỨ, HAY ĐOÁN NGÀY MAI?",
+     "at": [
+      5,
+      "Bốn"
+     ]
+    }
+   ],
+   "total": {
+    "k": "NẾU LÀ ĐOÁN",
+    "v": "ĐÃ AI ĐẾM, SO VỚI MỐC?",
+    "at": [
+     6,
+     "Nếu"
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "KHI NÀO KHÔNG ĐÚNG",
+   "rows": [
+    {
+     "k": "01",
+     "v": "CHỈ ĐẾM TRÊN VN-INDEX · 8 NĂM · CHƯA PHÍ",
+     "at": [
+      8,
+      "Phép"
+     ]
+    },
+    {
+     "k": "02",
+     "v": "CỔ PHIẾU ÍT GIAO DỊCH: NẾN = VÀI LỆNH",
+     "at": [
+      9,
+      "Với"
+     ]
+    },
+    {
+     "k": "03",
+     "v": "GIÁ MỞ CỬA = GIÁ KHỚP ATO (BÀI 2)",
+     "at": [
+      10,
+      "Giá"
+     ]
+    },
+    {
+     "k": "04",
+     "v": "GIÁ CŨ BỊ ĐIỀU CHỈNH SAU CỔ TỨC / THƯỞNG",
+     "at": [
+      11,
+      "Và"
+     ]
+    }
+   ],
+   "srcnote": "Giá tham chiếu, giá mở cửa (ATO): Quy chế giao dịch VNX, QĐ 22/QĐ-HĐTV ngày 18/04/2025"
+  },
+  {
+   "type": "candles",
+   "at": 13,
+   "series": "vnindex",
+   "from": "2026-03-09",
+   "to": "2026-03-13",
+   "drawAt": [
+    13,
+    "Tóm",
+    0,
+    0.1
+   ],
+   "until": [
+    13,
+    "cây"
+   ],
+   "title": "VN-INDEX · 09/03/2026",
+   "range": "MỘT CÂY NẾN, MỘT PHIÊN",
+   "ind": [],
+   "source": "DỮ LIỆU: VN-INDEX · HOSE (VNSTOCK/VCI) · KÊNH TỰ TÍNH · MINH HOẠ QUÁ KHỨ, KHÔNG PHẢI KHUYẾN NGHỊ",
+   "marks": [
+    {
+     "date": "2026-03-09",
+     "text": "4 CON SỐ · 1 PHIÊN · 1 HÌNH",
+     "pos": "above",
+     "tone": "gold",
+     "at": [
+      13,
+      "bốn"
+     ],
+     "dx": 450,
+     "dy": 40
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": [
+    14,
+    "Nó",
+    0,
+    -0.3
+   ],
+   "hitAt": [
+    14,
+    "Nó"
+   ],
+   "text": "KỂ GIỎI CHUYỆN ĐÃ QUA",
+   "sub": "KHÔNG HỨA CHUYỆN SẼ TỚI"
+  },
+  {
+   "type": "candles",
+   "at": 16,
+   "series": "vnindex",
+   "from": "2026-05-04",
+   "to": "2026-10-06",
+   "drawAt": [
+    16,
+    "Ở",
+    0,
+    0.1
+   ],
+   "until": [
+    16,
+    "nến"
+   ],
+   "title": "NHỮNG BÀI TỚI · NỐI CÁC CÂY NẾN",
+   "range": "XU HƯỚNG, RỒI ĐƯỜNG TRUNG BÌNH ĐỘNG (MA)",
+   "ind": [
+    {
+     "k": "sma",
+     "n": 20,
+     "label": "MA20",
+     "at": [
+      16,
+      "trung"
+     ]
+    }
+   ],
+   "source": "DỮ LIỆU: VN-INDEX · HOSE (VNSTOCK/VCI) · KÊNH TỰ TÍNH · MINH HOẠ QUÁ KHỨ, KHÔNG PHẢI KHUYẾN NGHỊ"
+  },
+  {
+   "type": "question",
+   "at": 17,
+   "text": "Mẫu nến nào bạn từng nghe\nlà chắc ăn nhất?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 06",
+  "t": "ÁP DỤNG CHO BẠN"
+ },
+ "bgm": {
+  "mood": "warm",
+  "gain": 0.101
+ }
+}

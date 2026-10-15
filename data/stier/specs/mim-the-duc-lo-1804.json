@@ -1,0 +1,198 @@
+{
+ "theme": "mim",
+ "title": "Tấm thẻ đục lỗ của khung cửi năm 1804 là tổ tiên của máy tính",
+ "description": "Năm 1804, Joseph-Marie Jacquard được cấp bằng sáng chế cho loại khung cửi đọc lệnh từ những tấm thẻ đục lỗ: chỗ có lỗ sợi được nâng lên, chỗ không có lỗ sợi nằm yên. Gần 40 năm sau, Ada Lovelace so sánh cỗ máy của Charles Babbage với chính khung cửi ấy: nó “dệt nên những hoa văn đại số, như khung cửi Jacquard dệt hoa và lá”. Ý tưởng “có lỗ / không lỗ” về sau xuất hiện trong máy đục thẻ của điều tra dân số Mỹ rồi trong các máy IBM. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (13 phút): https://youtu.be/sP0ch8-NYec (công khai từ 20:00 ngày 19/10).",
+ "tags": [
+  "thẻ đục lỗ",
+  "jacquard",
+  "ada lovelace",
+  "lịch sử máy tính",
+  "ai và việc làm",
+  "tự động hoá",
+  "lịch sử công nghệ",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "LỊCH SỬ MÁY TÍNH",
+ "sub": "JACQUARD · 1804",
+ "acc": [
+  "lỗ",
+  "lên",
+  "yên",
+  "đại",
+  "số"
+ ],
+ "lines": [
+  "Máy tính bắt đầu từ một chiếc khung cửi.",
+  "Năm 1804, ở Pháp, Jacquard làm ra loại khung cửi đọc lệnh từ những tấm thẻ đục lỗ.",
+  "Chỗ có lỗ, sợi được nâng lên. Chỗ không có lỗ, sợi nằm yên.",
+  "Gần bốn mươi năm sau, Ada Lovelace nhìn cỗ máy tính toán của Babbage, và nhớ tới chính khung cửi ấy.",
+  "Bà viết, nó dệt nên những hoa văn đại số, như khung cửi dệt hoa và lá.",
+  "Về sau, những tấm thẻ ấy đi vào máy đếm dân số, rồi máy IBM.",
+  "Có lỗ là có. Không lỗ là không. Từ sợi vải, tới con số."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MÁY TÍNH BẮT ĐẦU TỪ",
+     "at": 0.0
+    },
+    {
+     "text": "MỘT CHIẾC KHUNG CỬI",
+     "at": [
+      0,
+      "một"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:6117521",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "PHÁP · 1804",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "KHUNG CỬI ĐỌC THẺ ĐỤC LỖ",
+     "at": [
+      1,
+      "đọc"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:6653260",
+   "ms": 5,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "MỘT TẤM THẺ, HAI TRẠNG THÁI",
+   "cards": [
+    {
+     "k": "CÓ LỖ",
+     "v": "SỢI NÂNG LÊN",
+     "at": [
+      2,
+      "sợi"
+     ]
+    },
+    {
+     "k": "KHÔNG LỖ",
+     "v": "SỢI NẰM YÊN",
+     "at": [
+      2,
+      "sợi",
+      1
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Ada Lovelace, 1843",
+   "nodes": [
+    {
+     "text": "“dệt nên những hoa văn đại số”",
+     "x": 0.5,
+     "y": 0.32,
+     "at": [
+      4,
+      "dệt"
+     ],
+     "shape": "none",
+     "w": 860
+    },
+    {
+     "text": "như khung cửi dệt hoa và lá",
+     "x": 0.5,
+     "y": 0.66,
+     "at": [
+      4,
+      "như"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 800
+    }
+   ],
+   "note": "TRÍCH DỊCH"
+  },
+  {
+   "type": "timeline",
+   "at": 5,
+   "items": [
+    {
+     "year": "1804",
+     "text": "khung cửi Jacquard",
+     "at": [
+      5,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "year": "về sau",
+     "text": "máy đục thẻ điều tra dân số Mỹ",
+     "at": [
+      5,
+      "máy"
+     ]
+    },
+    {
+     "year": "rồi",
+     "text": "máy tính IBM",
+     "at": [
+      5,
+      "rồi"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "CÓ LỖ = 1 · KHÔNG LỖ = 0",
+   "sub": "TỪ SỢI VẢI TỚI CON SỐ"
+  }
+ ],
+ "sources": [
+  "https://www.fourmilab.ch/babbage/sketch.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "jacquard": "Gia-ca",
+  "ada": "Ây-đa",
+  "lovelace": "Lớp-lây-xơ",
+  "babbage": "Ba-bít",
+  "ibm": "ai bi em"
+ },
+ "imgs": {}
+}

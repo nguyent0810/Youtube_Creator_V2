@@ -1,0 +1,351 @@
+{
+ "title": "Viết như thật",
+ "lines": [
+  {
+   "t": "Thử chơi một trò điền chữ.",
+   "p": 0.8
+  },
+  "Thủ đô của Việt Nam là... Bạn điền ngay: Hà Nội.",
+  "Câu ấy có mặt hàng triệu lần trong sách báo, nên máy cũng điền đúng.",
+  "Giờ đến câu này: sinh nhật của người bạn thân nhất của mình là ngày...",
+  {
+   "t": "Bạn sẽ khựng lại, vì bạn không biết \"mình\" ở đây là ai.",
+   "p": 1.0
+  },
+  "Nhưng một cỗ máy đoán chữ thì không cần biết.",
+  "Sau chữ \"ngày\" thường là một con số, rồi chữ \"tháng\", rồi một con số nữa.",
+  {
+   "t": "Nó cứ thế viết tiếp: ngày mười hai tháng Ba. Trơn tru, đúng hình dáng của một ngày sinh.",
+   "p": 1.0
+  },
+  "Nói đơn giản, mô hình ngôn ngữ làm việc như thế.",
+  "Nó đã đọc một lượng chữ khổng lồ, và học xem sau một đoạn chữ, mẩu chữ nào hay đi tiếp theo.",
+  "Rồi nó đoán từng mẩu một, cho tới khi thành một câu trả lời.",
+  {
+   "t": "Nó học hình dáng của câu chữ rất giỏi. Nhưng đúng hay sai thì không nằm ở hình dáng.",
+   "p": 1.0
+  },
+  "Giờ hãy nhìn lại những án lệ giả.",
+  "Cỗ máy đã đọc vô số trích dẫn án lệ, nên những trích dẫn nó viết ra trông rất đúng khuôn.",
+  "Phán quyết giả còn ghi tên những thẩm phán có thật.",
+  "Số trang nó ghi cũng có thật, chỉ có điều ở trang ấy là một vụ án khác hẳn.",
+  "Còn phần lập luận bên trong, thẩm phán Castel nhận xét:",
+  {
+   "t": "Phần phân tích pháp lý của nó là những lời vô nghĩa.",
+   "q": 1,
+   "tr": 1
+  },
+  {
+   "t": "Trơn tru không có nghĩa là đúng.",
+   "p": 1.0
+  },
+  "Câu \"tôi đã kiểm tra lại\" của cỗ máy cũng được viết theo đúng cách ấy: một câu nghe hợp lý, ở đúng chỗ người ta hay nói câu ấy.",
+  "Nhưng vì sao máy lại đoán sai, khi nó đã đọc nhiều hơn bất kỳ ai?",
+  "Năm 2025, một nhóm nghiên cứu đi tìm câu trả lời, bắt đầu từ một câu hỏi về luận án tiến sĩ."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "VIẾT\nNHƯ THẬT",
+   "sub": "MÔ HÌNH NGÔN NGỮ · ĐOÁN MẨU CHỮ",
+   "vid": "2752278",
+   "titleAt": [
+    0,
+    "thử"
+   ]
+  },
+  {
+   "type": "chat",
+   "at": 1,
+   "head": "TRÒ ĐIỀN CHỮ · MINH HỌA",
+   "msgs": [
+    {
+     "who": "u",
+     "text": "Thủ đô của Việt Nam là…",
+     "at": 1
+    },
+    {
+     "who": "m",
+     "text": "Hà Nội.",
+     "at": [
+      1,
+      "hà"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "HÀNG TRIỆU LẦN TRONG SÁCH BÁO",
+     "at": 2,
+     "fx": "rise"
+    },
+    {
+     "text": "MÁY CŨNG ĐIỀN ĐÚNG",
+     "at": [
+      2,
+      "nên"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "chat",
+   "at": 3,
+   "head": "TRÒ ĐIỀN CHỮ · MINH HỌA",
+   "msgs": [
+    {
+     "who": "u",
+     "text": "Sinh nhật của người bạn thân nhất của mình là ngày…",
+     "at": 3
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "BẠN KHỰNG LẠI",
+     "at": 4
+    },
+    {
+     "text": "“MÌNH” LÀ AI?",
+     "at": [
+      4,
+      "vì"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "MỘT CỖ MÁY ĐOÁN CHỮ",
+     "at": 5,
+     "sm": true
+    },
+    {
+     "text": "KHÔNG CẦN BIẾT",
+     "at": [
+      5,
+      "không"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "“NGÀY” → MỘT CON SỐ",
+     "at": 6
+    },
+    {
+     "text": "→ “THÁNG” → MỘT CON SỐ NỮA",
+     "at": [
+      6,
+      "rồi"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "chat",
+   "at": 7,
+   "stream": true,
+   "head": "MINH HỌA · ĐOÁN TỪNG MẨU CHỮ",
+   "msgs": [
+    {
+     "who": "u",
+     "text": "Sinh nhật của người bạn thân nhất của mình là ngày…",
+     "at": 7
+    },
+    {
+     "who": "m",
+     "text": "…ngày 12 tháng 3. Chúc mừng sinh nhật!",
+     "at": [
+      7,
+      "ngày"
+     ],
+     "dur": 1.6
+    }
+   ]
+  },
+  {
+   "type": "nn",
+   "at": 8,
+   "fwdAt": [
+    10,
+    "rồi"
+   ],
+   "label": {
+    "k": "NÓI ĐƠN GIẢN",
+    "v": "ĐỌC RẤT NHIỀU CHỮ → ĐOÁN MẨU TIẾP THEO",
+    "at": 8
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "HÌNH DÁNG CÂU CHỮ: HỌC RẤT GIỎI",
+     "at": 11
+    },
+    {
+     "text": "ĐÚNG HAY SAI: KHÔNG NẰM Ở HÌNH DÁNG",
+     "at": [
+      11,
+      "nhưng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 12,
+   "vid": "8731388",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "NHÌN LẠI NHỮNG ÁN LỆ GIẢ",
+     "at": 12,
+     "sm": true
+    },
+    {
+     "text": "TRÔNG RẤT ĐÚNG KHUÔN",
+     "at": [
+      13,
+      "trông"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 14,
+   "k": "PHÁN QUYẾT GIẢ · ECF 54",
+   "name": "Varghese v.\nChina Southern Airlines",
+   "desc": "925 F.3d 1339 (11th Cir. 2019)",
+   "tag": {
+    "text": "TRÍCH HỒ SƠ TOÀ"
+   },
+   "rows": [
+    {
+     "k": "THẨM PHÁN",
+     "v": "tên *người có thật*",
+     "at": 14
+    },
+    {
+     "k": "SỐ TRANG",
+     "v": "có thật · nhưng là *vụ khác hẳn*",
+     "at": 15
+    },
+    {
+     "k": "LẬP LUẬN",
+     "v": "*“gibberish”*",
+     "at": 16
+    }
+   ],
+   "stamp": {
+    "text": "KHÔNG CÓ THẬT",
+    "at": [
+     15,
+     "khác"
+    ],
+    "x": 860,
+    "y": 640,
+    "rot": -10
+   }
+  },
+  {
+   "type": "quote",
+   "at": 17,
+   "text": "Its legal analysis is gibberish.",
+   "by": "THẨM PHÁN P. KEVIN CASTEL · PHÁN QUYẾT 22.06.2023 (ECF 54)",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 17
+  },
+  {
+   "type": "slam",
+   "at": 18,
+   "text": "TRƠN TRU ≠ ĐÚNG"
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "items": [
+    {
+     "text": "“UPON DOUBLE-CHECKING…”",
+     "at": 19,
+     "sm": true
+    },
+    {
+     "text": "CŨNG CHỈ LÀ CÂU ĐƯỢC ĐOÁN",
+     "at": [
+      19,
+      "cũng"
+     ],
+     "acc": true
+    },
+    {
+     "text": "nghe hợp lý, ở đúng chỗ người ta hay nói",
+     "at": [
+      19,
+      "một"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 20,
+   "text": "Đọc nhiều hơn bất kỳ ai,\nsao máy vẫn đoán sai?"
+  },
+  {
+   "type": "kinetic",
+   "at": 21,
+   "items": [
+    {
+     "text": "2025 · MỘT NHÓM NGHIÊN CỨU",
+     "at": 21,
+     "sm": true,
+     "fx": "rise"
+    },
+    {
+     "text": "BẮT ĐẦU TỪ MỘT LUẬN ÁN TIẾN SĨ",
+     "at": [
+      21,
+      "bắt"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "VIẾT NHƯ THẬT"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.14
+ }
+}

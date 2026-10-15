@@ -1,0 +1,182 @@
+{
+ "theme": "mim",
+ "title": "Cỗ máy cờ đam Chinook gặp nhà vô địch huyền thoại Marion Tinsley năm 1994: trận đấu dừng giữa chừng",
+ "description": "Ba năm trước trận Deep Blue, chương trình cờ đam Chinook của nhóm Jonathan Schaeffer (Đại học Alberta) đấu với nhà vô địch huyền thoại Marion Tinsley; trận dừng giữa chừng vì ông phải rút lui do bệnh. Năm 2007, chính nhóm ấy chứng minh cờ đam luôn hoà nếu cả hai chơi hoàn hảo (Science). Hai mươi năm sau trận Deep Blue, Schaeffer viết bài điểm sách cho cuốn sách của Kasparov. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/TG7ZShLM4LA (công khai từ 20:00 ngày 12/11).",
+ "tags": [
+  "chinook",
+  "marion tinsley",
+  "cờ đam",
+  "trận đấu người máy",
+  "trí tuệ nhân tạo",
+  "lịch sử máy tính",
+  "mind in the machine"
+ ],
+ "sub": "1994",
+ "acc": [
+  "Chinook",
+  "dừng",
+  "bệnh",
+  "nhỏ",
+  "Schaeffer"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Năm 1994, một cỗ máy cờ đam gặp nhà vô địch huyền thoại. Trận đấu không có người thắng.",
+  "Cỗ máy tên là Chinook, của nhóm giáo sư Jonathan Schaeffer ở Đại học Alberta, Canada.",
+  "Đối thủ là Marion Tinsley, nhà vô địch cờ đam huyền thoại.",
+  "Trận đấu dừng giữa chừng, vì ông phải rút lui do bệnh.",
+  "Năm 2007, sau mười tám năm, chính nhóm ấy chứng minh rằng cờ đam luôn hoà, nếu cả hai bên chơi hoàn hảo.",
+  "Và hai mươi năm sau trận Deep Blue, Schaeffer là người viết bài điểm sách cho cuốn sách của Kasparov.",
+  "Thế giới máy chơi cờ, hoá ra rất nhỏ."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "1994 · KHÔNG AI THẮNG",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "cỗ máy cờ đam gặp nhà vô địch",
+     "at": [
+      0,
+      "một"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6600019",
+   "ms": 2,
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CHINOOK",
+     "at": [
+      1,
+      "Chinook"
+     ],
+     "acc": true
+    },
+    {
+     "text": "nhóm Jonathan Schaeffer · Alberta",
+     "at": [
+      1,
+      "nhóm"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:28709421",
+   "ms": 6,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "TRẬN ĐẤU 1994",
+   "cards": [
+    {
+     "k": "ĐỐI THỦ",
+     "v": "MARION TINSLEY",
+     "at": 2
+    },
+    {
+     "k": "KẾT CỤC",
+     "v": "DỪNG GIỮA CHỪNG",
+     "at": 3,
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 18,
+   "to": 18,
+   "suffix": " NĂM",
+   "label": "ĐỂ CHỨNG MINH CỜ ĐAM LUÔN HOÀ",
+   "sub": {
+    "text": "TẠP CHÍ SCIENCE · 2007",
+    "at": [
+     4,
+     "chứng"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "20 năm sau Deep Blue",
+   "nodes": [
+    {
+     "text": "Jonathan Schaeffer",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      5,
+      "Schaeffer"
+     ],
+     "shape": "none",
+     "w": 640
+    },
+    {
+     "text": "điểm sách của Kasparov",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      5,
+      "điểm"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 700
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "THẾ GIỚI RẤT NHỎ",
+   "sub": "CỦA NHỮNG CỖ MÁY CHƠI CỜ"
+  }
+ ],
+ "sources": [
+  "https://www.science.org/doi/10.1126/science.1144079",
+  "https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "deep": "Đíp",
+  "blue": "Blu",
+  "kasparov": "Cát-xpa-rốp",
+  "chinook": "Chi-núc",
+  "alberta": "An-béc-ta",
+  "marion": "Ma-ri-ần",
+  "tinsley": "Tin-xli",
+  "jonathan": "Gio-na-thần",
+  "schaeffer": "Sép-phơ",
+  "canada": "Ca-na-đa"
+ },
+ "imgs": {}
+}

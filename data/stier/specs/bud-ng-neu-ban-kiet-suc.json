@@ -1,0 +1,157 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "nhan-gui",
+ "hook_type": "pov",
+ "open_shot": "cong-viec",
+ "voice": "Mỹ Duyên",
+ "music": "healing.mp3",
+ "gap": 0.5,
+ "title": "Nếu bạn đang kiệt sức vì lo cho mọi người",
+ "kicker": "NHẮN GỬI",
+ "sub": "KINH PHÁP CÚ 158",
+ "acc": [
+  "ổn",
+  "nghỉ"
+ ],
+ "lines": [
+  "Ai cũng tìm đến bạn. Nhưng không ai hỏi, bạn có ổn không.",
+  "Kinh Pháp Cú, kệ một trăm năm mươi tám, diễn ý: trước hết hãy tự đứng vững, rồi mới giúp người.",
+  "Nghỉ ngơi không phải ích kỷ.",
+  "Hôm nay, cho mình mười phút. Một tách trà. Một hơi thở chậm.",
+  "Lưu lại nhé. Và kể mình nghe, hôm nay bạn có ổn không?"
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "items": [
+    {
+     "text": "AI HỎI BẠN CÓ ỔN KHÔNG?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "POV: ai cũng tìm đến bạn",
+     "at": [
+      0,
+      "Ai"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8086494"
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Kệ 158 (diễn ý)",
+   "nodes": [
+    {
+     "text": "TỰ ĐỨNG VỮNG",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      1,
+      "diễn"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "RỒI GIÚP NGƯỜI",
+     "x": 0.5,
+     "y": 0.65,
+     "at": [
+      1,
+      "trước"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      1,
+      "trước"
+     ]
+    }
+   ],
+   "note": "DHP 158 · SUTTACENTRAL"
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "NGHỈ NGƠI",
+     "at": [
+      2,
+      "Nghỉ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "không phải ích kỷ",
+     "at": [
+      2,
+      "không"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7516935"
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 10,
+   "suffix": " PHÚT",
+   "label": "MỘT TÁCH TRÀ · MỘT HƠI THỞ",
+   "until": [
+    3,
+    "mười"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "BẠN CÓ ỔN KHÔNG?",
+     "at": [
+      4,
+      "bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "kể mình nghe",
+     "at": [
+      4,
+      "kể"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8295350"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp157-166/en/sujato"
+ ],
+ "description": "Nếu bạn đang kiệt sức vì lo cho mọi người\n\nNguồn: https://suttacentral.net/dhp157-166/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

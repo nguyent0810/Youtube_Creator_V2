@@ -1,0 +1,186 @@
+{
+ "theme": "mim",
+ "title": "Đã được báo trước có giọng giả, người nghe vẫn chỉ nhận ra 73% số lần",
+ "description": "Năm 2023, các nhà nghiên cứu ở University College London cho 529 người nghe lẫn giọng thật và giọng do máy tạo; người nghe được báo trước trong đó có giọng giả. Họ chỉ nhận ra giọng giả 73% số lần, tức hơn một phần tư số lần bị lừa. Kết quả như nhau với tiếng Anh và tiếng Quan Thoại; cho làm quen với ví dụ trước cũng chỉ khá hơn một chút (PLOS ONE, 2023). Đó là trong phòng thí nghiệm, khi người nghe biết mình đang bị thử. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ về AI giả giọng lên kênh tối 26/10.",
+ "tags": [
+  "nhận biết giọng giả",
+  "university college london",
+  "plos one",
+  "ai giả giọng",
+  "deepfake giọng nói",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "AI VÀ GIỌNG NÓI",
+ "sub": "LONDON · 2023",
+ "acc": [
+  "bảy",
+  "tư",
+  "lừa",
+  "trước",
+  "báo"
+ ],
+ "lines": [
+  "Biết trước là có giọng giả, người ta vẫn bị lừa hơn một phần tư số lần.",
+  "Năm 2023, ở London, năm trăm hai mươi chín người được cho nghe lẫn giọng thật và giọng do máy tạo.",
+  "Họ được báo trước. Trong này có giọng giả, hãy tìm ra.",
+  "Kết quả, họ chỉ nhận ra bảy mươi ba phần trăm số lần.",
+  "Tiếng Anh hay tiếng Quan Thoại, đều như nhau.",
+  "Và đó là trong phòng thí nghiệm, khi người ta ngồi yên, và biết mình đang bị thử.",
+  "Ngoài đời, chẳng ai báo trước cho bạn."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "BIẾT TRƯỚC CÓ GIỌNG GIẢ",
+     "at": 0.0
+    },
+    {
+     "text": "VẪN BỊ LỪA",
+     "at": [
+      0,
+      "vẫn"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:8005844",
+   "veil": 0.55
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 529,
+   "suffix": " NGƯỜI",
+   "label": "NGHE LẪN GIỌNG THẬT VÀ GIỌNG MÁY · LONDON, 2023",
+   "until": [
+    1,
+    "chín"
+   ],
+   "sub": {
+    "text": "ĐƯỢC BÁO TRƯỚC LÀ CÓ GIỌNG GIẢ",
+    "at": [
+     2,
+     "báo"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "HỌ ĐƯỢC BÁO TRƯỚC",
+     "at": 2,
+     "acc": true
+    },
+    {
+     "text": "trong này có giọng giả, hãy tìm ra",
+     "at": [
+      2,
+      "Trong"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6686334",
+   "ms": 3,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 2
+  },
+  {
+   "type": "chart",
+   "at": 3,
+   "kind": "bars",
+   "title": "NHẬN RA GIỌNG GIẢ",
+   "unit": "% SỐ LẦN · PLOS ONE, 2023",
+   "bars": [
+    {
+     "label": "NHẬN\nRA",
+     "v": 73,
+     "text": "73%",
+     "c": "ref",
+     "at": [
+      3,
+      "bảy"
+     ]
+    },
+    {
+     "label": "BỊ\nLỪA",
+     "v": 27,
+     "text": "27%",
+     "c": "down",
+     "at": [
+      3,
+      "số"
+     ]
+    }
+   ],
+   "note": "TIẾNG ANH VÀ TIẾNG QUAN THOẠI NHƯ NHAU"
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Và đó là",
+   "nodes": [
+    {
+     "text": "trong phòng thí nghiệm",
+     "x": 0.5,
+     "y": 0.26,
+     "at": [
+      5,
+      "trong"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "biết mình đang bị thử",
+     "x": 0.5,
+     "y": 0.5,
+     "at": [
+      5,
+      "biết"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "ngoài đời: không ai báo trước",
+     "x": 0.5,
+     "y": 0.74,
+     "at": [
+      6,
+      "chẳng"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 820
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0285333"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "=AI": "ây ai",
+  "london": "Luân Đôn"
+ },
+ "imgs": {}
+}

@@ -1,0 +1,256 @@
+{
+ "title": "Mùa hè thứ bảy mươi",
+ "lines": [
+  {
+   "t": "Tháng 10 năm 2024, giải Nobel Vật lý được trao cho John Hopfield và Geoffrey Hinton, vì những khám phá và phát minh nền tảng giúp máy học bằng mạng nơ-ron nhân tạo.",
+   "p": 0.8
+  },
+  {
+   "t": "Một ngày sau, một nửa giải Nobel Hoá học thuộc về Demis Hassabis và John Jumper, cho mô hình AlphaFold dự đoán cấu trúc protein.",
+   "p": 1.0
+  },
+  "Ý tưởng từng bị coi là ngõ cụt, giờ được trao giải thưởng cao nhất của khoa học.",
+  {
+   "t": "Nhưng chính Hinton, trong buổi phỏng vấn sau giải, nói rằng chúng ta đang đứng ở một ngã rẽ, và cần tìm cách giữ quyền kiểm soát.",
+   "p": 1.0
+  },
+  "Cuối tháng 10 năm nay, đúng bảy mươi năm sau, trường Dartmouth sẽ tổ chức một hội nghị kỷ niệm.",
+  "Câu hỏi đặt ra không còn là \"máy có thông minh được không\".",
+  "Mà là:",
+  {
+   "t": "Điều gì phải còn là của con người?",
+   "q": 1
+  },
+  {
+   "t": "Năm 1955, bốn nhà khoa học xin một mùa hè.",
+   "p": 1.0
+  },
+  "Đã là bảy mươi mùa hè.",
+  "Xen giữa là hai mùa đông.",
+  "Có người tin ta đang ở giữa một mùa hè rực rỡ nhất.",
+  "Có người lo một mùa đông thứ ba đang tới.",
+  "Turing từng nói, câu hỏi \"máy có suy nghĩ được không\" là quá vô nghĩa để đáng bàn.",
+  "Nhưng ông tin, đến cuối thế kỷ, người ta sẽ nói \"máy suy nghĩ\" mà không ai buồn cãi.",
+  {
+   "t": "Có lẽ lúc ấy đã tới.",
+   "p": 1.0
+  },
+  "Còn bạn, bạn nghĩ đây là mùa hè, hay sắp đến mùa đông?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "8",
+   "k": "CHƯƠNG TÁM",
+   "title": "MÙA HÈ\nTHỨ BẢY MƯƠI",
+   "sub": "2024 — 2026",
+   "bg": "hinton",
+   "titleAt": [
+    0,
+    "Tháng"
+   ]
+  },
+  {
+   "type": "photo",
+   "at": [
+    0,
+    "Nobel"
+   ],
+   "img": "hinton",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.5,
+   "kin": [
+    {
+     "text": "NOBEL VẬT LÝ 2024",
+     "at": [
+      0,
+      "Vật"
+     ],
+     "acc": true
+    },
+    {
+     "text": "HOPFIELD · HINTON",
+     "at": [
+      0,
+      "Hinton,"
+     ]
+    }
+   ],
+   "label": {
+    "k": "GEOFFREY HINTON",
+    "v": "ẢNH 2023",
+    "at": [
+     0,
+     "Hopfield"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "NOBEL HOÁ HỌC 2024 · MỘT NỬA",
+     "at": [
+      1,
+      "Hoá"
+     ],
+     "acc": true
+    },
+    {
+     "text": "Hassabis · Jumper · AlphaFold",
+     "at": [
+      1,
+      "AlphaFold"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "TỪ NGÕ CỤT\nĐẾN NOBEL"
+  },
+  {
+   "type": "quote",
+   "at": 3,
+   "text": "a kind of bifurcation point in history",
+   "by": "GEOFFREY HINTON · PHỎNG VẤN NOBEL 2024",
+   "lbl": "TRÍCH"
+  },
+  {
+   "type": "photo",
+   "at": 4,
+   "img": "dartmouth",
+   "tone": "color",
+   "move": "out",
+   "veil": 0.55,
+   "kin": [
+    {
+     "text": "29 – 31.10.2026",
+     "at": [
+      4,
+      "tháng"
+     ]
+    },
+    {
+     "text": "KHÔNG CÒN LÀ: “MÁY CÓ THÔNG MINH?”",
+     "at": [
+      5,
+      "thông"
+     ],
+     "sm": true
+    },
+    {
+     "text": "WHAT MUST REMAIN HUMAN?",
+     "at": [
+      7,
+      "Điều"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "DARTMOUTH · AI AT 70",
+    "v": "ẢNH MINH HỌA",
+    "at": [
+     4,
+     "Dartmouth"
+    ]
+   }
+  },
+  {
+   "type": "timeline",
+   "at": 8,
+   "items": [
+    {
+     "year": "HÈ",
+     "text": "1956",
+     "at": [
+      8,
+      "mùa"
+     ]
+    },
+    {
+     "year": "ĐÔNG",
+     "text": "≈ 1974",
+     "at": [
+      10,
+      "hai"
+     ]
+    },
+    {
+     "year": "ĐÔNG",
+     "text": "≈ 1987",
+     "at": [
+      10,
+      "đông."
+     ]
+    },
+    {
+     "year": "HÈ",
+     "text": "2012",
+     "at": [
+      11,
+      "hè"
+     ]
+    },
+    {
+     "year": "2026",
+     "text": "?",
+     "at": [
+      12,
+      "đông"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": 13,
+   "img": "turing16",
+   "tone": "bw",
+   "side": {
+    "k": "ALAN TURING · 1950",
+    "h": "“Máy suy nghĩ”",
+    "lines": [
+     {
+      "text": "Câu hỏi *quá vô nghĩa* để bàn",
+      "at": [
+       13,
+       "vô"
+      ]
+     },
+     {
+      "text": "Cuối thế kỷ, người ta sẽ nói *máy suy nghĩ*",
+      "at": [
+       14,
+       "máy"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 15,
+   "text": "CÓ LẼ\nLÚC ẤY ĐÃ TỚI"
+  },
+  {
+   "type": "question",
+   "at": 16,
+   "vid": "17342967",
+   "text": "Mùa hè,\nhay sắp đến mùa đông?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 08",
+  "t": "MÙA HÈ THỨ BẢY MƯƠI"
+ },
+ "bgm": {
+  "mood": "epic",
+  "gain": 0.12
+ }
+}

@@ -1,0 +1,185 @@
+{
+ "title": "Lối thứ ba: chưa mua",
+ "lines": [
+  {
+   "t": "Còn một lối đi ít ai tính đến, là chưa mua.",
+   "p": 1.0
+  },
+  "Người ấy vẫn đi lại, bằng xe công nghệ, taxi, hoặc kết hợp với xe máy.",
+  "Ví dụ giả định: bốn triệu mỗi tháng cho những chuyến ấy.",
+  "Còn tám trăm triệu lẽ ra dùng để mua xe, người ấy để trong sổ tiết kiệm.",
+  {
+   "t": "Tháng chín năm nay, kỳ hạn mười hai tháng ở nhóm ngân hàng lớn khoảng sáu phẩy tám phần trăm một năm.",
+   "p": 1.0
+  },
+  "Riêng tiền lãi của tám trăm triệu ở mức ấy, khoảng bốn triệu rưỡi mỗi tháng, gần đủ trả cho mọi chuyến xe ở đầu video.",
+  {
+   "t": "Vậy phải đi nhiều tới mức nào thì mua xe mới đáng?",
+   "ask": 1
+  },
+  "Kênh đã tính thử, có cộng cả tiền lãi mà tám trăm triệu có thể sinh ra.",
+  {
+   "t": "Kết quả: người chưa mua có thể chi tới khoảng mười lăm triệu mỗi tháng cho đi lại, mà sau năm năm vẫn ngang người trả thẳng.",
+   "p": 1.0
+  },
+  "Mười lăm triệu một tháng, là rất nhiều chuyến xe.",
+  "Nhưng con số ấy chỉ nói về tiền.",
+  "Nó không nói về một đêm con ốm phải đi viện, một chuyến về quê ngày Tết, hay những ngày mưa ngập không gọi được xe nào.",
+  "Với nhiều gia đình, đó mới là lý do thật để có một chiếc xe.",
+  "Cũng có người chọn lối ở giữa: đi xe công nghệ hằng ngày, và thuê xe tự lái cho những chuyến đi xa."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "CHƯƠNG NĂM",
+   "title": "LỐI THỨ BA:\nCHƯA MUA",
+   "sub": "ÍT AI TÍNH ĐẾN",
+   "vid": "36556681",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Còn"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "NGƯỜI CHƯA MUA",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "ĐI LẠI",
+     "v": "XE CÔNG NGHỆ · TAXI · XE MÁY",
+     "at": 1
+    },
+    {
+     "k": "MỖI THÁNG",
+     "v": "4 TRIỆU",
+     "at": 2
+    },
+    {
+     "k": "800 TRIỆU",
+     "v": "TRONG SỔ TIẾT KIỆM",
+     "at": 3
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 6.8,
+   "to": 6.8,
+   "suffix": "%/NĂM",
+   "label": "TIẾT KIỆM 12 THÁNG · NHÓM NGÂN HÀNG LỚN",
+   "sub": {
+    "text": "THÁNG 9/2026",
+    "at": 4
+   }
+  },
+  {
+   "type": "bars",
+   "at": 5,
+   "title": "MỖI THÁNG (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "LÃI CỦA 800 TRIỆU",
+     "v": 4.53,
+     "lbl": "≈ 4,5",
+     "at": [
+      5,
+      "bốn"
+     ],
+     "acc": true
+    },
+    {
+     "k": "TIỀN XE CÔNG NGHỆ",
+     "v": 4,
+     "lbl": "4",
+     "at": [
+      5,
+      "gần"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 6,
+   "text": "Phải đi nhiều tới mức nào\nthì mua xe mới đáng?"
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "from": 15,
+   "to": 15,
+   "prefix": "≈ ",
+   "suffix": " TRIỆU/THÁNG",
+   "label": "MỨC CHI ĐI LẠI ĐỂ HAI BÊN NGANG NHAU SAU 5 NĂM",
+   "sub": {
+    "text": "KÊNH TỰ TÍNH · CÓ TÍNH LÃI TIẾT KIỆM · VÍ DỤ GIẢ ĐỊNH",
+    "at": 8
+   }
+  },
+  {
+   "type": "broll",
+   "at": 10,
+   "vid": "11785816",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "CON SỐ ẤY CHỈ NÓI VỀ TIỀN",
+     "at": 10,
+     "acc": true
+    },
+    {
+     "text": "một đêm con ốm · một chuyến về quê ngày Tết",
+     "at": 11,
+     "sm": true
+    },
+    {
+     "text": "những ngày mưa ngập không gọi được xe",
+     "at": [
+      11,
+      "những"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "VỚI NHIỀU GIA ĐÌNH",
+     "at": 12,
+     "sm": true
+    },
+    {
+     "text": "ĐÓ MỚI LÀ LÝ DO THẬT",
+     "at": [
+      12,
+      "đó"
+     ],
+     "acc": true
+    },
+    {
+     "text": "có người chọn lối ở giữa: xe công nghệ + thuê xe tự lái",
+     "at": 13,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "LỐI THỨ BA: CHƯA MUA"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

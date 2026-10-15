@@ -1,0 +1,252 @@
+{
+ "title": "Lời tiên tri về bác sĩ X-quang",
+ "lines": [
+  {
+   "t": "Năm 2016, ở Toronto, Geoffrey Hinton, người tám năm sau nhận giải Nobel Vật lý, nói trước một khán phòng.",
+   "p": 0.8
+  },
+  {
+   "t": "Người ta nên ngừng đào tạo bác sĩ X-quang ngay bây giờ.",
+   "q": 1,
+   "tr": 1
+  },
+  {
+   "t": "Ông cho rằng trong khoảng năm năm, có thể là mười năm, học sâu sẽ làm tốt hơn các bác sĩ X-quang.",
+   "p": 1.0
+  },
+  "Đọc phim là nhìn ảnh và tìm điểm bất thường, đúng thứ máy vừa học giỏi.",
+  "Và một phần, ông đã đúng.",
+  {
+   "t": "Theo tạp chí Works in Progress, ở Mỹ đã có hơn bảy trăm mô hình AI cho X-quang được cơ quan quản lý FDA cho phép, chiếm khoảng ba phần tư số thiết bị y tế có AI.",
+   "p": 1.0
+  },
+  "Nhưng mười năm sau, nghề bác sĩ X-quang ở Mỹ ra sao?",
+  "Năm 2025, các chương trình nội trú X-quang mở một nghìn hai trăm lẻ tám suất, con số kỷ lục.",
+  "Thu nhập trung bình khoảng năm trăm hai mươi nghìn đô la một năm, cao thứ hai trong các chuyên khoa.",
+  {
+   "t": "Theo báo New York Times, riêng ở Mayo Clinic, số bác sĩ X-quang đã tăng năm mươi lăm phần trăm kể từ lời tiên tri.",
+   "p": 1.0
+  },
+  "Chuyện gì đã xảy ra?",
+  "Một nghiên cứu năm 2012 ở ba bệnh viện cho thấy bác sĩ X-quang chỉ dành khoảng ba mươi sáu phần trăm thời gian để trực tiếp đọc ảnh.",
+  {
+   "t": "AI mới chạm tới một phần của một việc. Nó chưa lấy được cả nghề.",
+   "p": 1.0
+  },
+  "Năm 2025, nói với báo New York Times, chính Hinton thừa nhận năm 2016 ông đã nói quá rộng.",
+  "Nhưng ông vẫn cho rằng mình chỉ sai về thời điểm, không sai về hướng đi.",
+  "Nhưng nếu một trong những người hiểu AI nhất còn đoán hụt, thì dữ liệu nói gì về chính lúc này?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "CHƯƠNG SÁU",
+   "title": "LỜI TIÊN TRI\nVỀ BÁC SĨ X-QUANG",
+   "sub": "2016 — 2026",
+   "bg": "hinton",
+   "titleAt": [
+    0,
+    "Năm"
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 1,
+   "bg": "hinton",
+   "text": "People should stop training radiologists now.",
+   "by": "GEOFFREY HINTON · TORONTO, 2016",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 1
+  },
+  {
+   "type": "print",
+   "at": 2,
+   "img": "hinton",
+   "tone": "color",
+   "side": {
+    "k": "HINTON · DIỄN Ý",
+    "h": "Nobel Vật lý\n2024",
+    "lines": [
+     {
+      "text": "Trong khoảng *5 năm*",
+      "at": 2
+     },
+     {
+      "text": "có thể là *10 năm*",
+      "at": [
+       2,
+       "có"
+      ]
+     },
+     {
+      "text": "học sâu sẽ *làm tốt hơn* bác sĩ X-quang",
+      "at": [
+       2,
+       "học"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 3,
+   "img": "xraypa",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.4,
+   "illus": "ẢNH MINH HỌA",
+   "kin": [
+    {
+     "text": "ĐỌC PHIM = NHÌN ẢNH, TÌM BẤT THƯỜNG",
+     "at": 3
+    },
+    {
+     "text": "đúng thứ máy vừa học giỏi",
+     "at": [
+      3,
+      "đúng"
+     ],
+     "sm": true,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "MỘT PHẦN,\nÔNG ĐÃ ĐÚNG"
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "bg": "xraypa",
+   "from": 0,
+   "to": 700,
+   "prefix": "> ",
+   "label": "MÔ HÌNH AI X-QUANG ĐƯỢC FDA CHO PHÉP",
+   "sub": {
+    "text": "≈ 3/4 SỐ THIẾT BỊ Y TẾ CÓ AI · THEO WORKS IN PROGRESS",
+    "at": [
+     5,
+     "chiếm"
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "at": 6,
+   "bg": "xraypa",
+   "text": "Mười năm sau,\nnghề bác sĩ X-quang ra sao?"
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "bg": "xraypa",
+   "from": 0,
+   "to": 1208,
+   "label": "SUẤT NỘI TRÚ X-QUANG Ở MỸ · 2025 · KỶ LỤC"
+  },
+  {
+   "type": "broll",
+   "at": 8,
+   "vid": "7579841",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "≈ $520.000 / NĂM",
+     "at": 8,
+     "acc": true
+    },
+    {
+     "text": "thu nhập trung bình · cao thứ hai trong các chuyên khoa",
+     "at": [
+      8,
+      "cao"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 9,
+   "bg": "hinton",
+   "from": 0,
+   "to": 55,
+   "prefix": "+",
+   "suffix": "%",
+   "label": "BÁC SĨ X-QUANG Ở MAYO CLINIC · TỪ 2016",
+   "sub": {
+    "text": "THEO BÁO NEW YORK TIMES",
+    "at": 9
+   }
+  },
+  {
+   "type": "question",
+   "at": 10,
+   "text": "Chuyện gì đã xảy ra?"
+  },
+  {
+   "type": "counter",
+   "at": 11,
+   "vid": "5724099",
+   "illus": "VIDEO MINH HỌA",
+   "from": 0,
+   "to": 36,
+   "suffix": "%",
+   "label": "THỜI GIAN TRỰC TIẾP ĐỌC ẢNH",
+   "sub": {
+    "text": "NGHIÊN CỨU 2012 · 3 BỆNH VIỆN",
+    "at": 11
+   }
+  },
+  {
+   "type": "slam",
+   "at": 12,
+   "text": "MỘT PHẦN\nCỦA MỘT VIỆC",
+   "sub": "CHƯA PHẢI CẢ NGHỀ"
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "bg": "hinton",
+   "items": [
+    {
+     "text": "2025 · THEO BÁO NEW YORK TIMES",
+     "at": 13,
+     "sm": true
+    },
+    {
+     "text": "HINTON: ĐÃ NÓI QUÁ RỘNG",
+     "at": [
+      13,
+      "nói",
+      1
+     ]
+    },
+    {
+     "text": "SAI THỜI ĐIỂM, KHÔNG SAI HƯỚNG ĐI",
+     "at": 14,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 15,
+   "bg": "xraypa",
+   "text": "Dữ liệu nói gì\nvề chính lúc này?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 06",
+  "t": "LỜI TIÊN TRI VỀ BÁC SĨ X-QUANG"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.5
+ }
+}

@@ -1,0 +1,165 @@
+# CỔ TỨC MƯỜI PHẦN TRĂM LÀ MƯỜI PHẦN TRĂM CỦA CÁI GÌ? GIẢI MÃ MỘT TỜ THÔNG BÁO CỔ TỨC (bản 1)
+
+**Kênh:** Biểu Đồ Biết Nói (CK) · **Chuỗi:** Chứng Khoán Từ Số 0 — Bài C5 · **Giọng:** Ngọc Huyền (dẫn) · Phạm Tuyên (dòng `HỎI:`)
+**Độ dài dự kiến:** ~8,5 phút, 7 chương · **Mã tính:** [analysis.py](analysis.py) → `results.json`
+**Tiêu đề (phương án):** (1) *Cổ tức 10% là 10% của cái gì? Giải mã một tờ thông báo cổ tức* · (2) *Vì sao giá cổ phiếu tự giảm đúng ngày chia
+cổ tức? Ngày không hưởng quyền giải thích bằng số* · (3) *Mua cổ phiếu để "ăn cổ tức" có lời không? Phép tính trên một nghìn cổ phiếu*
+
+Quy ước: mỗi dòng là một câu đọc · `‖` = ngừng dài · `HỎI:` = giọng người hỏi · **lời đọc không có chữ số**.
+**Luật cứng:** chỉ giáo dục — không nêu mã cổ phiếu, tên doanh nghiệp, công ty chứng khoán; không "nên mua cổ phiếu trả cổ tức cao"; không dự báo.
+Cổ phiếu bốn mươi nghìn, tỷ lệ cổ tức, mức phí giao dịch là **VÍ DỤ GIẢ ĐỊNH** — ghi trên màn hình. Quy tắc có nguồn: tỷ lệ cổ tức tính trên mệnh giá
+mười nghìn đồng; thuế thu nhập cá nhân năm phần trăm khấu trừ trên cổ tức bằng tiền; giá tham chiếu ngày giao dịch không hưởng quyền được điều
+chỉnh theo cổ tức.
+
+**Viết cho tai + luật studio (14/10/2026):** câu một hơi, không câu nào quá ba mươi lăm tiếng, câu ngắn xen kẽ, liệt kê tối đa ba mục.
+**Giữ chân:** cold open = **một tờ thông báo cổ tức với ba cụm chữ được gạch chân** · **lộ trình dạng "giải mã từng cụm chữ trên một văn bản"** (khác
+các bài trước: đồng hồ chạy dần, bốn cái giá, hai cánh cửa, con số mang về, tờ phiếu ba ô trống) · **vòng mở:** mười phần trăm của cái gì (đóng
+CH01) · vì sao giá tự giảm (đóng CH02) · mua để ăn cổ tức có lời không (đóng CH03) · **re-hook ~45%** = phép tính một nghìn cổ phiếu ·
+**mô-típ** "cái bánh": chia cổ tức là cắt bánh, không làm bánh to ra.
+
+---
+
+## CH00 · Một tờ thông báo
+
+Một buổi sáng, bạn đọc được một tờ thông báo của một công ty niêm yết.
+Trên đó có ba cụm chữ. ‖
+Cụm thứ nhất: trả cổ tức bằng tiền, tỷ lệ mười phần trăm.
+Cụm thứ hai: ngày giao dịch không hưởng quyền.
+Cụm thứ ba: và trả thêm cổ tức bằng cổ phiếu. ‖
+Nhiều người mới đọc tới cụm đầu tiên đã thấy hấp dẫn.
+Mười phần trăm, cao hơn cả lãi tiết kiệm.
+HỎI: Thế chẳng phải cứ mua vào rồi nhận mười phần trăm à?
+Câu trả lời nằm trong chính ba cụm chữ ấy. ‖
+Video này giải mã từng cụm một, bằng một cổ phiếu ví dụ giá bốn mươi nghìn đồng.
+Và tới cuối, bạn sẽ thấy vì sao chia cổ tức giống cắt một cái bánh, chứ không làm cái bánh to ra. ‖
+Đây là Biểu Đồ Biết Nói. Tiền bạc, giải thích bằng dữ liệu.
+Video chỉ nhằm giáo dục, không phải lời khuyên mua hay bán, và các con số ví dụ là giả định.
+
+## CH01 · Mười phần trăm của cái gì?
+
+Cụm chữ đầu tiên: cổ tức bằng tiền, mười phần trăm.
+Mười phần trăm ấy không tính trên số tiền bạn bỏ ra mua cổ phiếu. ‖
+Nó tính trên mệnh giá.
+Mệnh giá là một con số in sẵn cho mỗi cổ phiếu, thường là mười nghìn đồng.
+Nó gần như không liên quan gì tới giá bạn mua trên sàn.
+Giá trên sàn lên hay xuống mỗi ngày, mệnh giá vẫn đứng yên. ‖
+Vậy cổ tức mười phần trăm, là một nghìn đồng cho mỗi cổ phiếu.
+Với cổ phiếu ví dụ giá bốn mươi nghìn, một nghìn đồng chỉ bằng hai phẩy năm phần trăm số tiền bạn bỏ ra.
+HỎI: Tức là con số mười phần trăm trên thông báo, với người mua giá bốn mươi nghìn, chỉ còn hai phẩy năm?
+Đúng vậy. ‖
+Con số hai phẩy năm ấy có tên riêng, là tỷ suất cổ tức: cổ tức chia cho giá cổ phiếu.
+Cùng một nghìn đồng cổ tức, nếu giá cổ phiếu là hai mươi nghìn, tỷ suất là năm phần trăm.
+Nếu giá là một trăm nghìn, tỷ suất chỉ còn một phần trăm. ‖
+Tờ thông báo luôn ghi tỷ lệ trên mệnh giá, vì đó là cách doanh nghiệp tính.
+Còn người mua có thể tự đổi ra tỷ suất trên giá mình trả.
+Đó là cụm chữ thứ nhất. Và nó mới chỉ là chuyện số học.
+Cụm thứ hai mới là chỗ nhiều người bất ngờ.
+
+## CH02 · Ngày giá tự giảm
+
+Giờ tới cụm chữ thứ hai, ngày giao dịch không hưởng quyền.
+Nghe rất hành chính, nhưng đây là ngày quan trọng nhất. ‖
+Muốn nhận cổ tức, bạn phải có tên trong danh sách cổ đông vào một ngày gọi là ngày đăng ký cuối cùng.
+Vì cổ phiếu mua hôm nay phải vài ngày sau mới thật sự về tài khoản, nên sàn đặt ra một ngày trước đó.
+Trong các thông báo gần đây, ngày ấy thường đứng trước ngày đăng ký cuối cùng một phiên giao dịch.
+Mua từ ngày ấy trở đi, bạn không còn được nhận đợt cổ tức này nữa. Nên gọi là ngày không hưởng quyền. ‖
+Và vào đúng sáng hôm ấy, có một điều xảy ra.
+Giá tham chiếu của cổ phiếu được điều chỉnh xuống, đúng bằng phần cổ tức sắp chia.
+Cổ phiếu ví dụ đóng cửa hôm trước ở bốn mươi nghìn.
+Sáng ngày không hưởng quyền, giá tham chiếu còn ba mươi chín nghìn. ‖
+HỎI: Sao lại phải hạ giá? Doanh nghiệp đâu có làm gì sai?
+Không sai gì cả. Hãy nghĩ tới cái bánh.
+Một nghìn đồng cổ tức là tiền đi ra khỏi doanh nghiệp, chuyển sang túi cổ đông.
+Doanh nghiệp còn lại ít tiền hơn đúng bằng chừng ấy, nên mỗi cổ phiếu cũng đáng ít hơn chừng ấy. ‖
+Hãy cộng lại cho người đang cầm một nghìn cổ phiếu.
+Trước ngày ấy: bốn mươi triệu đồng giá trị cổ phiếu.
+Sau ngày ấy: ba mươi chín triệu tiền cổ phiếu, cộng một triệu tiền cổ tức sẽ nhận.
+Vẫn là bốn mươi triệu. ‖
+Bánh được cắt ra một miếng, và miếng ấy nằm trong đĩa của bạn.
+Nhưng cả cái bánh không hề to thêm.
+
+## CH03 · Mua để ăn cổ tức
+
+Vậy có một chiến thuật nghe rất hợp lý.
+Mua ngay trước ngày không hưởng quyền, nhận cổ tức, rồi bán ra. ‖
+Thử tính với một nghìn cổ phiếu ví dụ.
+Bạn mua ở bốn mươi nghìn, cộng phí giao dịch ví dụ không phẩy ba phần trăm, hết khoảng bốn mươi triệu một trăm hai mươi nghìn.
+Cổ tức một nghìn đồng mỗi cổ phiếu, nhưng thuế thu nhập cá nhân năm phần trăm được khấu trừ trước khi trả.
+Bạn thực nhận chín trăm năm mươi nghìn. ‖
+Sáng ngày không hưởng quyền, giá tham chiếu là ba mươi chín nghìn.
+Cổ phiếu mua hôm trước, hai ngày làm việc sau mới về tài khoản; giả sử khi ấy bạn bán đúng ba mươi chín nghìn, trừ phí bán và thuế bán ví dụ, bạn thu về khoảng ba mươi tám triệu tám trăm bốn mươi tư nghìn.
+Cộng tiền cổ tức, rồi trừ tiền đã bỏ ra.
+Kết quả: lỗ khoảng ba trăm hai mươi sáu nghìn đồng. ‖
+HỎI: Nhưng nếu lúc ấy giá tăng lại thì sao?
+Thì bạn lời, nhưng là nhờ giá tăng, chứ không phải nhờ cổ tức.
+Và giá cũng có thể giảm thêm, chẳng ai hứa điều gì. ‖
+Còn một chi tiết nữa: tiền cổ tức thường về tài khoản sau ngày đăng ký cuối cùng vài tuần, có khi vài tháng.
+Trong thời gian ấy, tiền của bạn không tự sinh thêm gì.
+Cổ tức không phải món quà miễn phí. Nó là tiền của chính bạn, được chuyển từ túi này sang túi kia, sau khi đã trừ thuế.
+
+## CH04 · Cổ tức bằng cổ phiếu
+
+Cụm chữ thứ ba: trả cổ tức bằng cổ phiếu.
+Lần này không có đồng tiền nào đi ra khỏi doanh nghiệp. ‖
+Ví dụ giả định, tỷ lệ hai mươi phần trăm.
+Cứ một trăm cổ phiếu bạn đang có, bạn nhận thêm hai mươi cổ phiếu mới.
+Một nghìn cổ phiếu thành một nghìn hai trăm. ‖
+Nghe như được cho không hai trăm cổ phiếu.
+Nhưng vào ngày không hưởng quyền, giá tham chiếu được chia cho một phẩy hai.
+Bốn mươi nghìn còn khoảng ba mươi ba nghìn ba trăm ba mươi ba đồng. ‖
+Nhân lên: một nghìn hai trăm cổ phiếu, mỗi cổ phiếu khoảng ba mươi ba nghìn ba, vẫn là bốn mươi triệu.
+Cái bánh không to ra. Nó chỉ được cắt thành nhiều miếng nhỏ hơn. ‖
+HỎI: Vậy sao doanh nghiệp lại làm thế?
+Thường là để giữ tiền lại cho kinh doanh, thay vì trả ra ngoài.
+Giá mỗi cổ phiếu thấp hơn cũng có thể khiến nhiều người thấy dễ mua hơn.
+Nhưng một cổ phiếu trông rẻ hơn, chưa có nghĩa là nó rẻ hơn.
+Còn chuyện tiền giữ lại ấy được dùng tốt hay không, thì phải nhìn vào kết quả kinh doanh của những năm sau.
+
+## CH05 · Vậy cổ tức có nghĩa lý gì?
+
+Nếu chia cổ tức không làm cổ đông giàu thêm ngay hôm ấy, thì nó có ý nghĩa gì?
+Ý nghĩa nằm ở chỗ khác. ‖
+Một doanh nghiệp đều đặn trả cổ tức bằng tiền nhiều năm liền, là doanh nghiệp đều đặn có tiền thật để trả.
+Lợi nhuận trên giấy có thể đẹp, nhưng tiền mặt thì khó làm đẹp hơn.
+Ngược lại, nếu một doanh nghiệp phải đi vay để trả cổ tức, thì cổ tức ấy không đến từ kết quả kinh doanh.
+Với nhiều người, cổ tức tiền mặt cũng là một dòng tiền đều, không cần phải bán cổ phiếu ra. ‖
+Và có một điều ít người để ý về chính chỉ số VN-Index.
+VN-Index là chỉ số giá.
+Mỗi lần các doanh nghiệp chia cổ tức tiền mặt, giá giảm theo, và chỉ số ghi nhận mức giảm ấy.
+Nhưng tiền cổ tức mà cổ đông nhận về thì không được cộng lại vào chỉ số. ‖
+Nên khi bạn thấy VN-Index đi ngang nhiều năm, người cầm cổ phiếu trong thời gian ấy vẫn có thể đã nhận thêm một phần cổ tức nằm ngoài biểu đồ.
+Đó là lý do trong các video trước, kênh luôn ghi chú: chưa tính cổ tức.
+Muốn so công bằng một khoản đầu tư cổ phiếu với sổ tiết kiệm, phải cộng cả phần ấy vào.
+
+## CH06 · Khi nào phép tính này không đúng với bạn
+
+Và giờ là phần mình luôn giữ ở cuối mỗi video.
+Những lúc mà các con số vừa rồi không còn đúng với bạn. ‖
+Thứ nhất, giá cổ phiếu ví dụ, mức cổ tức và mức phí giao dịch đều là giả định. Mỗi công ty chứng khoán thu một mức phí khác.
+Thứ hai, ngày giao dịch không hưởng quyền, ngày đăng ký cuối cùng và ngày trả tiền luôn ghi trong thông báo của từng doanh nghiệp. Hãy đọc đúng văn bản ấy.
+Thứ ba, giá tham chiếu chỉ là điểm xuất phát. Trong phiên, giá vẫn lên xuống theo cung cầu, như mọi ngày khác. ‖
+Nên lần tới khi gặp một tờ thông báo cổ tức, bạn có thể tự hỏi ba câu.
+Một: tỷ lệ trên mệnh giá này, đổi ra tỷ suất trên giá mình mua, là bao nhiêu?
+Hai: ngày giao dịch không hưởng quyền là ngày nào, và giá tham chiếu hôm ấy sẽ được điều chỉnh bao nhiêu?
+Ba: cổ tức trả bằng tiền hay bằng cổ phiếu, và sau thuế mình thực nhận bao nhiêu? ‖
+Ba câu ấy không nói cổ phiếu nào tốt.
+Nhưng chúng giúp bạn không nhầm một miếng bánh được cắt ra, với một cái bánh to thêm. ‖
+Còn bạn, lần đầu nhận cổ tức, bạn có bất ngờ khi thấy giá cổ phiếu giảm đúng hôm ấy không?
+Kể cho mình nghe ở phần bình luận nhé.
+
+---
+
+## Ghi chú
+
+**Phép tính ví dụ** (`analysis.py` → `results.json`; VÍ DỤ GIẢ ĐỊNH, kênh tự tính): mệnh giá 10.000 đ; cổ tức tiền 10% = 1.000 đ/cp; thuế 5% = 50 đ → thực
+nhận 950 đ · giá 40.000 → tỷ suất 2,5%; giá 20.000 → 5%; giá 100.000 → 1% · ngày không hưởng quyền: 40.000 − 1.000 = 39.000; 1.000 cp: 40 triệu → 39 triệu
++ 1 triệu cổ tức = 40 triệu · "mua để ăn cổ tức" 1.000 cp: mua 40.000 × 1.000 × 1,003 = 40.120.000; bán 39.000 × 1.000 × (1 − 0,003 − 0,001) =
+38.844.000; cổ tức thực nhận 950.000 → −326.000 · cổ tức cổ phiếu 20%: 1.000 → 1.200 cp; 40.000 / 1,2 = 33.333; 1.200 × 33.333 ≈ 40 triệu.
+**Quy tắc có nguồn:** tỷ lệ cổ tức tính trên mệnh giá 10.000 đ/cp, không tính trên giá thị trường (dsc.com.vn "Cổ tức là gì"; finhay.com.vn) · thuế TNCN
+5% trên cổ tức bằng tiền, tổ chức chi trả khấu trừ (luatminhkhue.vn; meinvoice.vn) · giá tham chiếu ngày giao dịch không hưởng quyền: giá đóng cửa
+phiên trước điều chỉnh theo giá trị cổ tức / quyền (dsc.com.vn "Giá tham chiếu là gì"; vnexpress.net "Giá tham chiếu"): tiền mặt P − D; cổ phiếu
+P / (1 + tỷ lệ) (finhay.com.vn; luatduonggia.vn) · thông báo chốt quyền 2026 trên báo chí: ngày không hưởng quyền đứng trước ngày đăng ký cuối cùng
+một phiên (lời đọc nói "trong các thông báo gần đây… thường") · VN-Index là chỉ số giá, không cộng cổ tức (các video C1, B1, E1 của kênh đều ghi
+"chưa tính cổ tức").
+**Không nói:** mã cổ phiếu, tên doanh nghiệp, công ty chứng khoán; "cổ phiếu cổ tức cao nên mua"; đề xuất đổi cách đánh thuế cổ tức bằng cổ phiếu
+(mới là đề xuất); số liệu tỷ suất cổ tức bình quân thị trường (chưa có nguồn kênh kiểm được).

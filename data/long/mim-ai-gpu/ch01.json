@@ -1,0 +1,246 @@
+{
+ "title": "Một quán ăn ven đường",
+ "lines": [
+  {
+   "t": "Cuối năm 1992, ở phía đông thành phố San Jose, bang California.",
+   "p": 0.8
+  },
+  "Ba kỹ sư ngồi trong một quán Denny's, loại quán ăn mở cửa thâu đêm, cà phê được rót thêm miễn phí.",
+  "Jensen Huang, Chris Malachowsky và Curtis Priem.",
+  {
+   "t": "Họ phác thảo ý tưởng cho một công ty mới.",
+   "p": 1.0
+  },
+  "Tháng 4 năm 1993, công ty ấy ra đời, tên là Nvidia.",
+  "Thứ họ muốn làm: chip vẽ đồ hoạ ba chiều cho máy tính cá nhân.",
+  {
+   "t": "Thời ấy, game ba chiều đang lên, và vẽ một thế giới ba chiều trên màn hình là việc cực nặng.",
+   "p": 1.0
+  },
+  "Năm 1999, Nvidia ra mắt GeForce 256.",
+  "Hãng gọi nó là bộ xử lý đồ hoạ đầu tiên trên thế giới, viết tắt là GPU.",
+  "Thật ra, cái tên ấy do chính Nvidia đặt và định nghĩa, như một lời quảng cáo.",
+  {
+   "t": "Nhưng cái tên ở lại, và giờ cả ngành đều dùng.",
+   "p": 1.0
+  },
+  "Nhiệm vụ của GPU rất rõ: vẽ hình cho game, thật nhanh, thật mượt.",
+  "Không ai trong quán ăn năm ấy nói gì về trí tuệ nhân tạo.",
+  "Muốn hiểu vì sao con chip vẽ hình về sau lại hợp với trí tuệ nhân tạo, phải xem một khung hình được vẽ ra như thế nào."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "MỘT QUÁN ĂN\nVEN ĐƯỜNG",
+   "sub": "SAN JOSE · CUỐI 1992",
+   "vid": "36139323",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "san"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "DENNY'S",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "mở thâu đêm · cà phê rót thêm miễn phí",
+     "at": [
+      1,
+      "mở"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "BA NGƯỜI SÁNG LẬP",
+   "rows": [
+    {
+     "k": "1",
+     "v": "JENSEN HUANG",
+     "at": [
+      2,
+      "jensen"
+     ]
+    },
+    {
+     "k": "2",
+     "v": "CHRIS MALACHOWSKY",
+     "at": [
+      2,
+      "chris"
+     ]
+    },
+    {
+     "k": "3",
+     "v": "CURTIS PRIEM",
+     "at": [
+      2,
+      "curtis"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 4,
+   "day": "CÔNG TY RA ĐỜI · NVIDIA",
+   "date": "04.1993"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "MỤC TIÊU",
+     "at": 5,
+     "sm": true
+    },
+    {
+     "text": "CHIP ĐỒ HOẠ 3D",
+     "at": [
+      5,
+      "chip"
+     ],
+     "acc": true
+    },
+    {
+     "text": "cho máy tính cá nhân",
+     "at": [
+      5,
+      "máy"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 6,
+   "vid": "7914862",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "GAME 3D ĐANG LÊN",
+     "at": 6
+    },
+    {
+     "text": "VIỆC CỰC NẶNG",
+     "at": [
+      6,
+      "cực"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": 7,
+   "img": "gf256",
+   "side": {
+    "k": "1999",
+    "h": "GEFORCE 256",
+    "hAt": 7,
+    "lines": [
+     {
+      "text": "“GPU đầu tiên trên thế giới”",
+      "at": 8
+     },
+     {
+      "text": "tên do chính Nvidia đặt và định nghĩa",
+      "at": 9
+     }
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "LỜI QUẢNG CÁO",
+     "at": [
+      9,
+      "quảng"
+     ],
+     "acc": true
+    },
+    {
+     "text": "→ TÊN CẢ NGÀNH DÙNG",
+     "at": 10
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "NHIỆM VỤ",
+     "at": 11,
+     "sm": true
+    },
+    {
+     "text": "NHANH · MƯỢT",
+     "at": [
+      11,
+      "nhanh"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "TRÍ TUỆ NHÂN TẠO?",
+     "at": [
+      12,
+      "trí"
+     ],
+     "fx": "strike",
+     "strikeAt": [
+      12,
+      "tạo"
+     ]
+    },
+    {
+     "text": "chưa ai nhắc tới",
+     "at": [
+      12,
+      "không"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 13,
+   "text": "Một khung hình\nđược vẽ ra thế nào?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "MỘT QUÁN ĂN VEN ĐƯỜNG"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.12
+ }
+}

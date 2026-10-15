@@ -1,0 +1,194 @@
+{
+ "title": "Hai mươi hai giờ nữa",
+ "lines": [
+  "Ngày 8 tháng 2 năm 2014.",
+  "Một lập trình viên ở Hà Nội đăng lên Twitter một dòng ngắn.",
+  {
+   "t": "Tôi xin lỗi những người chơi Flappy Bird. Hai mươi hai giờ nữa, tôi sẽ gỡ Flappy Bird xuống. Tôi không thể chịu thêm được nữa.",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Lúc ấy, Flappy Bird là ứng dụng miễn phí đứng đầu kho ứng dụng ở Mỹ, ở Anh, ở Trung Quốc.",
+  "Theo chính anh kể, riêng tiền quảng cáo trong game mang về khoảng năm mươi nghìn đô la mỗi ngày.",
+  {
+   "t": "Tính theo tỷ giá khi ấy, là hơn một tỷ đồng. Mỗi ngày.",
+   "p": 1.0
+  },
+  "Và người làm ra nó muốn tự tay tắt nó đi.",
+  {
+   "t": "Không ai ép. Không công ty nào mua lại. Không toà án nào yêu cầu.",
+   "p": 1.0
+  },
+  "Vì sao?",
+  "Để trả lời, mình sẽ cho đồng hồ dừng lại ở con số hai mươi hai giờ.",
+  "Rồi quay về lúc trò chơi này mới chỉ là một ý nghĩ.",
+  "Gần cuối video, đồng hồ sẽ chạy tiếp.",
+  "Và bạn sẽ thấy chuyện gì xảy ra khi nó về không."
+ ],
+ "scenes": [
+  {
+   "type": "date",
+   "day": "HÀ NỘI",
+   "date": "08.02.2014"
+  },
+  {
+   "type": "broll",
+   "at": 1,
+   "vid": "31155915",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MỘT DÒNG NGẮN",
+     "at": [
+      1,
+      "một"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 2,
+   "text": "Tôi xin lỗi những người chơi Flappy Bird. 22 giờ nữa, tôi sẽ gỡ Flappy Bird xuống. Tôi không thể chịu thêm được nữa.",
+   "by": "NGUYỄN HÀ ĐÔNG · TWITTER, 08.02.2014 · TRÍCH DỊCH",
+   "qline": 2
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "LÚC ẤY: ĐỨNG ĐẦU ỨNG DỤNG MIỄN PHÍ",
+   "rows": [
+    {
+     "k": "MỸ",
+     "v": "SỐ 1",
+     "at": [
+      3,
+      "Mỹ,"
+     ]
+    },
+    {
+     "k": "ANH",
+     "v": "SỐ 1",
+     "at": [
+      3,
+      "Anh,"
+     ]
+    },
+    {
+     "k": "TRUNG QUỐC",
+     "v": "SỐ 1",
+     "at": [
+      3,
+      "Trung"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 0,
+   "to": 50000,
+   "suffix": " USD",
+   "until": [
+    4,
+    "nghìn"
+   ],
+   "label": "TIỀN QUẢNG CÁO MỖI NGÀY",
+   "sub": {
+    "text": "THEO LỜI TÁC GIẢ · THE VERGE, 02.2014 · ≈ HƠN 1 TỶ ĐỒNG (KÊNH TỰ QUY ĐỔI)",
+    "at": 5
+   }
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "TỰ TAY TẮT ĐI"
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "KHÔNG AI BẮT BUỘC",
+   "rows": [
+    {
+     "k": "KHÔNG",
+     "v": "AI ÉP",
+     "at": 7
+    },
+    {
+     "k": "KHÔNG",
+     "v": "CÔNG TY NÀO MUA LẠI",
+     "at": [
+      7,
+      "công"
+     ]
+    },
+    {
+     "k": "KHÔNG",
+     "v": "TOÀ ÁN NÀO YÊU CẦU",
+     "at": [
+      7,
+      "toà"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 8,
+   "text": "Vì sao?",
+   "showAt": 8
+  },
+  {
+   "type": "counter",
+   "at": 9,
+   "from": 22,
+   "to": 22,
+   "suffix": " GIỜ",
+   "until": [
+    9,
+    "hai"
+   ],
+   "label": "ĐỒNG HỒ DỪNG Ở ĐÂY",
+   "sub": {
+    "text": "quay về lúc trò chơi mới là một ý nghĩ",
+    "at": 10
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "GẦN CUỐI VIDEO",
+     "at": 11,
+     "sm": true
+    },
+    {
+     "text": "ĐỒNG HỒ CHẠY TIẾP",
+     "at": [
+      11,
+      "đồng"
+     ],
+     "acc": true
+    },
+    {
+     "text": "và chuyện gì xảy ra khi nó về 0",
+     "at": 12,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "HAI MƯƠI HAI GIỜ NỮA"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

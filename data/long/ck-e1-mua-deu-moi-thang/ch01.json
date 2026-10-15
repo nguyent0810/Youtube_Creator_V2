@@ -1,0 +1,257 @@
+{
+ "title": "Luật chơi",
+ "lines": [
+  {
+   "t": "Trước hết, mua đều là gì?",
+   "p": 0.8
+  },
+  "Rất đơn giản. Bạn chọn một số tiền cố định, và một ngày cố định.",
+  {
+   "t": "Tới ngày, bạn mua. Giá cao cũng mua. Giá thấp cũng mua.",
+   "p": 1.0
+  },
+  "Tiếng Anh gọi cách này là dollar cost averaging.",
+  "Còn mình gọi cho dễ nhớ, là mua đều.",
+  "Với phần lớn người đi làm, đây không hẳn là một chiến lược.",
+  {
+   "t": "Nó là hoàn cảnh. Lương về theo tháng, nên tiền để dành cũng về theo tháng.",
+   "p": 1.0
+  },
+  "Bây giờ là luật chơi của phép thử.",
+  "Mỗi tháng ba triệu đồng, mua vào phiên giao dịch đầu tiên của tháng, theo giá đóng cửa.",
+  "Bắt đầu từ tháng mười năm hai nghìn không trăm mười tám, kết thúc đầu tháng mười năm nay.",
+  "Tổng cộng chín mươi bảy lần mua.",
+  {
+   "t": "Tổng tiền nộp vào, hai trăm chín mươi mốt triệu đồng.",
+   "p": 1.0
+  },
+  "Có ba điều mình phải nói rõ trước khi xem kết quả.",
+  "Một, không ai mua trực tiếp được một chỉ số. Đây là phép thử trên giấy, để nhìn cơ chế.",
+  "Hai, mình chưa tính phí giao dịch, thuế, và cổ tức.",
+  {
+   "t": "Ba, đây chỉ là một chỉ số, trong một giai đoạn. Giai đoạn khác, kết quả sẽ khác.",
+   "p": 1.0
+  },
+  "Trong tám năm ấy, VN-Index đi từ khoảng chín trăm chín mươi sáu điểm, lên khoảng một nghìn bảy trăm năm mươi chín điểm.",
+  "Tăng gần bảy mươi bảy phần trăm.",
+  "Nhưng như bạn sắp thấy, đường đi ở giữa không hề thẳng."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "LUẬT CHƠI",
+   "sub": "MUA ĐỀU LÀ GÌ?",
+   "vid": "13107027",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Trước"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "SỐ TIỀN CỐ ĐỊNH",
+     "at": [
+      1,
+      "một"
+     ]
+    },
+    {
+     "text": "NGÀY CỐ ĐỊNH",
+     "at": [
+      1,
+      "và"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "TỚI NGÀY LÀ MUA",
+   "rows": [
+    {
+     "k": "GIÁ CAO",
+     "v": "CŨNG MUA",
+     "at": [
+      2,
+      "Giá"
+     ]
+    },
+    {
+     "k": "GIÁ THẤP",
+     "v": "CŨNG MUA",
+     "at": [
+      2,
+      "thấp"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "dollar cost averaging",
+     "at": [
+      3,
+      "dollar"
+     ],
+     "sm": true
+    },
+    {
+     "text": "MUA ĐỀU",
+     "at": [
+      4,
+      "mua"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 5,
+   "vid": "6282372",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "KHÔNG HẲN LÀ CHIẾN LƯỢC",
+     "at": 5
+    },
+    {
+     "text": "LÀ HOÀN CẢNH",
+     "at": 6,
+     "acc": true
+    },
+    {
+     "text": "lương về theo tháng · tiền để dành cũng về theo tháng",
+     "at": [
+      6,
+      "Lương"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "LUẬT CHƠI CỦA PHÉP THỬ",
+   "srcnote": "MINH HOẠ TRÊN CHỈ SỐ · KHÔNG PHÍ, THUẾ, CỔ TỨC · KÊNH TỰ TÍNH · QUÁ KHỨ · KHÔNG PHẢI KHUYẾN NGHỊ",
+   "rows": [
+    {
+     "k": "MỖI THÁNG",
+     "v": "3 TRIỆU ĐỒNG",
+     "at": 8
+    },
+    {
+     "k": "NGÀY MUA",
+     "v": "PHIÊN ĐẦU THÁNG · GIÁ ĐÓNG CỬA",
+     "at": [
+      8,
+      "mua"
+     ]
+    },
+    {
+     "k": "GIAI ĐOẠN",
+     "v": "10/2018 → 10/2026",
+     "at": 9
+    },
+    {
+     "k": "SỐ LẦN MUA",
+     "v": "97",
+     "at": 10
+    }
+   ],
+   "total": {
+    "k": "TỔNG NỘP",
+    "v": "291 TRIỆU",
+    "at": 11
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 12,
+   "title": "3 ĐIỀU PHẢI NÓI RÕ",
+   "srcnote": "KÊNH TỰ TÍNH · QUÁ KHỨ · KHÔNG PHẢI KHUYẾN NGHỊ",
+   "rows": [
+    {
+     "k": "1",
+     "v": "KHÔNG AI MUA TRỰC TIẾP ĐƯỢC MỘT CHỈ SỐ",
+     "at": 13
+    },
+    {
+     "k": "2",
+     "v": "CHƯA TÍNH PHÍ · THUẾ · CỔ TỨC",
+     "at": 14
+    },
+    {
+     "k": "3",
+     "v": "MỘT CHỈ SỐ · MỘT GIAI ĐOẠN",
+     "at": 15
+    }
+   ]
+  },
+  {
+   "type": "race",
+   "at": 16,
+   "from": "2018-10-08",
+   "to": "2026-10-06",
+   "title": "VN-INDEX · 8 NĂM",
+   "range": "08/10/2018 → 06/10/2026",
+   "drawAt": [
+    16,
+    null,
+    0,
+    0.05
+   ],
+   "until": [
+    16,
+    "khoảng"
+   ],
+   "series": [
+    {
+     "key": "vnindex",
+     "label": "VN-INDEX",
+     "color": "#38bdf8"
+    }
+   ],
+   "source": "DỮ LIỆU: VN-INDEX (VNSTOCK/VCI), KÊNH TỰ TÍNH. MINH HOẠ QUÁ KHỨ, KHÔNG PHẢI KHUYẾN NGHỊ."
+  },
+  {
+   "type": "kinetic",
+   "at": 18,
+   "items": [
+    {
+     "text": "ĐƯỜNG ĐI Ở GIỮA",
+     "at": 18
+    },
+    {
+     "text": "KHÔNG HỀ THẲNG",
+     "at": [
+      18,
+      "không"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "LUẬT CHƠI"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

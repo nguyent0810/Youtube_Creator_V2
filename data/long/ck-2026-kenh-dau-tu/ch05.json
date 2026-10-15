@@ -1,0 +1,351 @@
+{
+ "title": "Một năm khác mười năm",
+ "lines": [
+  {
+   "t": "Nếu chỉ nhìn năm nay, bạn dễ rút ra kết luận: chứng khoán, vàng, coin đều nguy hiểm, cứ gửi ngân hàng là xong.",
+   "p": 0.8
+  },
+  "Nhưng hãy lùi lại một năm thôi.",
+  "Năm hai nghìn không trăm hai mươi lăm, VN-Index tăng gần bốn mươi mốt phần trăm. Vàng thế giới tăng sáu mươi lăm phần trăm.",
+  {
+   "t": "Còn sổ tiết kiệm ở ngân hàng lớn năm đó chưa được tới năm phần trăm.",
+   "p": 1.0
+  },
+  "Giờ lùi xa hơn: tám năm, từ tháng mười năm hai nghìn không trăm mười tám đến nay.",
+  "Một trăm đồng gửi tiết kiệm mười hai tháng ở ngân hàng lớn, cứ đáo hạn lại gửi tiếp, giờ thành khoảng một trăm năm mươi sáu đồng.",
+  "Một trăm đồng theo VN-Index thành khoảng một trăm bảy mươi bảy đồng, và đó là chưa tính cổ tức.",
+  {
+   "t": "Một trăm đồng mua vàng miếng thành khoảng ba trăm tám mươi lăm đồng, gần gấp bốn.",
+   "p": 1.0
+  },
+  {
+   "t": "Vậy là vàng thắng đậm, sao còn ai gửi tiết kiệm?",
+   "ask": 1
+  },
+  "Vì con đường đi tới con số đó rất khác nhau.",
+  "Trên đường tám năm ấy, VN-Index từng rơi xuống dưới bảy trăm điểm lúc đại dịch, từng mất khoảng bốn mươi phần trăm từ đỉnh xuống đáy trong năm hai nghìn không trăm hai mươi hai.",
+  "Vàng thì năm nay vừa mất hơn một phần tư giá trị từ đỉnh chỉ trong tám tháng.",
+  {
+   "t": "Còn sổ tiết kiệm thì đi một đường gần như thẳng.",
+   "p": 1.0
+  },
+  "Và cũng đừng vội tin rằng vàng lúc nào cũng thắng.",
+  "Từ đỉnh tháng chín năm hai nghìn không trăm mười một tới cuối năm hai nghìn không trăm mười lăm, vàng thế giới mất khoảng bốn mươi lăm phần trăm, và phải gần chín năm kể từ đỉnh mới vượt lại mức cũ.",
+  "Quá khứ không bảo đảm tương lai. Với bất kỳ kênh nào.",
+  "Điều tám năm dữ liệu cho thấy không phải là \"kênh nào tốt nhất\", mà là: kênh có thể tăng nhiều thì cũng có thể rơi sâu. Và thời gian bạn giữ tiền quan trọng không kém chỗ bạn để tiền."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "CHƯƠNG NĂM",
+   "title": "MỘT NĂM\nKHÁC MƯỜI NĂM",
+   "sub": "2018 — 2026",
+   "vid": "35561857",
+   "titleAt": [
+    0,
+    "Nếu"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "LÙI LẠI MỘT NĂM",
+     "at": [
+      1,
+      "lùi"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 2,
+   "title": "NĂM 2025",
+   "unit": "%",
+   "items": [
+    {
+     "k": "VN-INDEX",
+     "v": 40.9,
+     "lbl": "+40,9%",
+     "at": [
+      2,
+      "bốn"
+     ],
+     "acc": true
+    },
+    {
+     "k": "VÀNG THẾ GIỚI",
+     "v": 65,
+     "lbl": "+65%",
+     "at": [
+      2,
+      "sáu"
+     ],
+     "acc": true
+    },
+    {
+     "k": "TIẾT KIỆM 4 NH LỚN",
+     "v": 4.7,
+     "lbl": "< 5%",
+     "at": [
+      3,
+      "năm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "race",
+   "at": 4,
+   "from": "2018-10-08",
+   "to": "2026-10-06",
+   "money": 100,
+   "unit": "đ",
+   "title": "100 ĐỒNG SAU 8 NĂM",
+   "range": "10/2018 → 10/2026",
+   "drawAt": [
+    4,
+    "tám"
+   ],
+   "until": [
+    7,
+    "bốn."
+   ],
+   "series": [
+    {
+     "key": "deposit",
+     "rates": [
+      [
+       "2018-10-01",
+       0.066
+      ],
+      [
+       "2019-10-01",
+       0.068
+      ],
+      [
+       "2020-10-01",
+       0.06
+      ],
+      [
+       "2021-10-01",
+       0.055
+      ],
+      [
+       "2022-10-01",
+       0.064
+      ],
+      [
+       "2023-10-01",
+       0.053
+      ],
+      [
+       "2024-10-01",
+       0.046
+      ],
+      [
+       "2025-10-01",
+       0.047
+      ]
+     ],
+     "label": "TIẾT KIỆM CUỘN 12 THÁNG",
+     "color": "#4ade80"
+    },
+    {
+     "key": "vnindex",
+     "label": "VN-INDEX (CHƯA GỒM CỔ TỨC)",
+     "color": "#38bdf8"
+    },
+    {
+     "key": "sjc",
+     "interp": true,
+     "label": "VÀNG MIẾNG SJC",
+     "color": "#fbbf24"
+    }
+   ],
+   "source": "DỮ LIỆU: HOSE, SJC (QUA VNSTOCK) · TIẾT KIỆM: MỨC 12 THÁNG NH LỚN TỪNG NĂM, CUỘN MỖI THÁNG 10 (ƯỚC TÍNH) · MINH HOẠ"
+  },
+  {
+   "type": "question",
+   "at": 8,
+   "text": "Vàng thắng đậm,\nsao còn ai gửi tiết kiệm?"
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "CON ĐƯỜNG RẤT KHÁC NHAU",
+     "at": [
+      9,
+      "đường"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "candles",
+   "at": 10,
+   "series": "vnindex",
+   "from": "2018-10-08",
+   "to": "2026-10-06",
+   "drawAt": [
+    10,
+    "Trên"
+   ],
+   "until": [
+    10,
+    "rơi"
+   ],
+   "title": "VN-INDEX · 8 NĂM",
+   "range": "10/2018 – 10/2026",
+   "ind": [],
+   "marks": [
+    {
+     "date": "2020-03-24",
+     "text": "Đại dịch: 659",
+     "pos": "below",
+     "tone": "down",
+     "at": [
+      10,
+      "dịch,"
+     ],
+     "dx": 120,
+     "dy": 20
+    },
+    {
+     "date": "2022-11-15",
+     "text": "2022: −40% từ đỉnh",
+     "pos": "below",
+     "tone": "down",
+     "at": [
+      10,
+      "hai"
+     ],
+     "dx": 60,
+     "dy": 10
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "VÀNG 2026: −26% TỪ ĐỈNH",
+     "at": [
+      11,
+      "Vàng"
+     ],
+     "acc": true
+    },
+    {
+     "text": "trong khoảng tám tháng",
+     "at": [
+      11,
+      "tám"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "TIẾT KIỆM: GẦN NHƯ ĐƯỜNG THẲNG",
+     "at": [
+      12,
+      "Còn"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "VÀNG LÚC NÀO CŨNG THẮNG?",
+     "at": [
+      13,
+      "thắng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "09/2011 → 12/2015",
+     "at": [
+      14,
+      "Từ"
+     ],
+     "sm": true
+    },
+    {
+     "text": "VÀNG THẾ GIỚI ≈ −45%",
+     "at": [
+      14,
+      "bốn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "GẦN 9 NĂM MỚI VƯỢT LẠI ĐỈNH",
+     "at": [
+      14,
+      "vượt"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 15,
+   "text": "QUÁ KHỨ ≠ TƯƠNG LAI",
+   "sub": "VỚI BẤT KỲ KÊNH NÀO"
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "items": [
+    {
+     "text": "TĂNG NHIỀU ⇄ RƠI SÂU",
+     "at": [
+      16,
+      "tăng"
+     ],
+     "acc": true
+    },
+    {
+     "text": "thời gian giữ tiền quan trọng không kém chỗ để tiền",
+     "at": [
+      16,
+      "thời"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "MỘT NĂM KHÁC MƯỜI NĂM"
+ },
+ "bgm": {
+  "mood": "warm",
+  "gain": 0.11
+ }
+}

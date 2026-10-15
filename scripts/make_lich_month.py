@@ -8,6 +8,10 @@ lại bao nhiêu lần cũng ra y hệt (khuôn chọn theo ngày, tất định
 Bundle nào KHÔNG qua được bộ đối chiếu thì KHÔNG được ghi ra -- fail-closed.
 Thà thiếu một ngày còn hơn đăng một ngày sai, vì người xem làm theo.
 """
+import pathlib, sys  # noqa: E401
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
+from factory.console import utf8_console  # noqa: E402
+utf8_console()  # console Windows cp1252 không in được tiếng Việt (retro 2 mục 7)
 import sys
 from datetime import date, timedelta
 from pathlib import Path

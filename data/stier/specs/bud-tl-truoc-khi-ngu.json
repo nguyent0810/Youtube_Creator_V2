@@ -1,0 +1,204 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "tinh-lang",
+ "hook_type": "menh-lenh",
+ "open_shot": "trang",
+ "voice": "Ngọc Linh",
+ "music": "fluidscape.mp3",
+ "gap": 1.0,
+ "title": "Tĩnh lặng: một phút trước khi ngủ",
+ "kicker": "TĨNH LẶNG",
+ "sub": "TRƯỚC KHI NGỦ",
+ "acc": [
+  "an",
+  "thở"
+ ],
+ "lines": [
+  "Đặt điện thoại lên ngực. Nghe hết video này rồi ngủ.",
+  "Thở vào thật chậm, bốn nhịp. Thở ra, sáu nhịp.",
+  "Thả lỏng vai. Thả lỏng hàm. Để ngày hôm nay ở lại phía sau.",
+  "Thầm chúc: mong mình được an. Mong người thân được an. Mong mọi người đều được an.",
+  "Đức Phật dạy, người tu tâm từ thì ngủ an, thức dậy cũng an.",
+  "Lưu video này để nghe mỗi tối. Đêm nay, bạn muốn chúc an cho ai?"
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "MẤT NGỦ?",
+     "at": 0.0,
+     "acc": true,
+     "size": 150
+    },
+    {
+     "text": "đặt điện thoại lên ngực",
+     "at": [
+      0,
+      "Đặt"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:9035661"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 4,
+   "suffix": " NHỊP",
+   "label": "THỞ VÀO · THỞ RA 6 NHỊP",
+   "until": [
+    1,
+    "Thở",
+    1
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "THẢ LỎNG",
+     "at": [
+      2,
+      "Thả"
+     ],
+     "acc": true
+    },
+    {
+     "text": "để hôm nay ở lại",
+     "at": [
+      2,
+      "Để"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:39005014"
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Mong được an",
+   "nodes": [
+    {
+     "text": "MÌNH",
+     "x": 0.5,
+     "y": 0.2,
+     "at": [
+      3,
+      "mình"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "NGƯỜI THÂN",
+     "x": 0.5,
+     "y": 0.5,
+     "at": [
+      3,
+      "người"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "MỌI NGƯỜI",
+     "x": 0.5,
+     "y": 0.8,
+     "at": [
+      3,
+      "mọi"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      3,
+      "người"
+     ]
+    },
+    {
+     "from": 1,
+     "to": 2,
+     "at": [
+      3,
+      "mọi"
+     ]
+    }
+   ],
+   "note": "DIỄN Ý · AN 11.15"
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "TÂM TỪ",
+   "cards": [
+    {
+     "k": "NGỦ",
+     "v": "AN",
+     "at": [
+      4,
+      "ngủ"
+     ]
+    },
+    {
+     "k": "THỨC DẬY",
+     "v": "CŨNG AN",
+     "at": [
+      4,
+      "thức"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "DIỄN Ý · AN 11.15"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "CHÚC AN CHO AI?",
+     "at": [
+      5,
+      "Đêm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "lưu để nghe mỗi tối",
+     "at": [
+      5,
+      "Lưu"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7593906"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/an11.15/en/sujato",
+  "https://suttacentral.net/mn118/en/sujato"
+ ],
+ "description": "Tĩnh lặng: một phút trước khi ngủ\n\nNguồn: https://suttacentral.net/an11.15/en/sujato ; https://suttacentral.net/mn118/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

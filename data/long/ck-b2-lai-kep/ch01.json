@@ -1,0 +1,194 @@
+{
+ "title": "Lãi đẻ ra lãi",
+ "lines": [
+  {
+   "t": "Lãi kép là gì?",
+   "p": 0.8
+  },
+  {
+   "t": "Nói gọn, là lãi đẻ ra lãi.",
+   "p": 1.0
+  },
+  "Thử với một trăm triệu, và mức lãi giả định sáu phần trăm một năm.",
+  "Hết năm đầu, bạn có một trăm lẻ sáu triệu.",
+  "Sang năm thứ hai, sáu phần trăm không tính trên một trăm triệu nữa.",
+  {
+   "t": "Nó tính trên một trăm lẻ sáu triệu.",
+   "p": 1.0
+  },
+  "Nên tiền lãi năm hai không phải sáu triệu, mà là sáu triệu ba trăm sáu mươi nghìn.",
+  "Ba trăm sáu mươi nghìn ấy, là lãi của tiền lãi.",
+  {
+   "t": "Nghe chẳng đáng là bao.",
+   "p": 1.0
+  },
+  "Nhưng hãy cho nó thời gian.",
+  "Nếu năm nào bạn cũng rút tiền lãi ra tiêu, sau ba mươi năm, bạn có hai trăm tám mươi triệu.",
+  "Còn nếu để lãi nhập vào gốc, con số là khoảng năm trăm bảy mươi tư triệu.",
+  {
+   "t": "Hơn gấp đôi. Cùng một trăm triệu, cùng một mức lãi.",
+   "p": 1.0
+  },
+  "Người ta hay ví lãi kép như quả cầu tuyết.",
+  "Lúc đầu nó bé xíu. Nhưng càng lăn, mỗi vòng nó dính thêm nhiều tuyết hơn vòng trước.",
+  "Vậy với ba triệu mỗi tháng, quả cầu ấy lăn thế nào?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "LÃI ĐẺ RA LÃI",
+   "sub": "LÃI KÉP LÀ GÌ?",
+   "vid": "8479054",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Lãi"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "THỬ MỘT PHÉP TÍNH",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · LÃI 6%/NĂM KHÔNG ĐỔI, KHÔNG RÚT · KHÔNG PHẢI DỰ BÁO",
+   "rows": [
+    {
+     "k": "GỐC",
+     "v": "100 TRIỆU",
+     "at": [
+      2,
+      "một"
+     ]
+    },
+    {
+     "k": "LÃI GIẢ ĐỊNH",
+     "v": "6%/NĂM",
+     "at": [
+      2,
+      "sáu"
+     ]
+    },
+    {
+     "k": "HẾT NĂM 1",
+     "v": "106 TRIỆU",
+     "at": 3
+    },
+    {
+     "k": "NĂM 2: 6% TÍNH TRÊN",
+     "v": "106 TRIỆU, KHÔNG PHẢI 100",
+     "at": 5
+    }
+   ],
+   "total": {
+    "k": "LÃI NĂM 2",
+    "v": "6,36 TRIỆU",
+    "at": 6
+   }
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "from": 0,
+   "to": 360000,
+   "suffix": " đ",
+   "until": [
+    7,
+    "nghìn"
+   ],
+   "label": "LÃI CỦA TIỀN LÃI",
+   "sub": {
+    "text": "nghe chẳng đáng là bao",
+    "at": 8
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "HÃY CHO NÓ",
+     "at": 9,
+     "sm": true
+    },
+    {
+     "text": "THỜI GIAN",
+     "at": [
+      9,
+      "thời"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 10,
+   "title": "100 TRIỆU SAU 30 NĂM (TRIỆU ĐỒNG)",
+   "items": [
+    {
+     "k": "NĂM NÀO CŨNG RÚT LÃI RA TIÊU",
+     "v": 280,
+     "lbl": "280",
+     "at": [
+      10,
+      "hai"
+     ]
+    },
+    {
+     "k": "ĐỂ LÃI NHẬP VÀO GỐC",
+     "v": 574,
+     "lbl": "≈ 574",
+     "at": [
+      11,
+      "năm"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "HƠN GẤP ĐÔI",
+    "v": "VÍ DỤ GIẢ ĐỊNH · LÃI 6%/NĂM KHÔNG ĐỔI, KHÔNG RÚT · KHÔNG PHẢI DỰ BÁO",
+    "at": 12
+   }
+  },
+  {
+   "type": "broll",
+   "at": 13,
+   "vid": "6415314",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "QUẢ CẦU TUYẾT",
+     "at": [
+      13,
+      "quả"
+     ],
+     "acc": true
+    },
+    {
+     "text": "mỗi vòng dính thêm nhiều tuyết hơn vòng trước",
+     "at": [
+      14,
+      "mỗi"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 15,
+   "text": "3 triệu mỗi tháng:\nquả cầu ấy lăn thế nào?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "LÃI ĐẺ RA LÃI"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

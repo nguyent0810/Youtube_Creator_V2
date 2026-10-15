@@ -1,0 +1,390 @@
+{
+ "title": "Giáo hoàng nào?",
+ "lines": [
+  {
+   "t": "Cuối tháng 5, đầu tháng 6 năm 2025, Liên hiệp Phát thanh Truyền hình châu Âu và đài BBC làm một phép thử lớn.",
+   "p": 0.8
+  },
+  "Hai mươi hai đài công cộng ở mười tám nước cùng hỏi bốn trợ lý AI phổ biến những câu về thời sự, bằng bản miễn phí.",
+  "Nhà báo của từng đài chấm hơn hai nghìn bảy trăm câu trả lời.",
+  {
+   "t": "Một câu rất đơn giản: Giáo hoàng hiện nay là ai?",
+   "p": 1.0
+  },
+  "Giáo hoàng Phanxicô qua đời ngày 21 tháng 4 năm 2025. Đầu tháng 5, Giáo hội Công giáo đã có Giáo hoàng mới, Lêô mười bốn.",
+  "Vậy mà cuối tháng 5, ít nhất ba trợ lý khác nhau vẫn trả lời: Giáo hoàng hiện nay là Phanxicô.",
+  "Một trợ lý còn viết, trong cùng một câu trả lời, rằng Giáo hoàng hiện nay là Phanxicô.",
+  {
+   "t": "Và ngay bên dưới: ngài đã qua đời ngày 21 tháng 4 năm 2025.",
+   "p": 1.0
+  },
+  "Một câu hỏi khác: vì sao các phi hành gia NASA bị kẹt ngoài không gian?",
+  "Hai phi hành gia lẽ ra chỉ ở trạm vũ trụ quốc tế tám ngày, đã phải ở lại hơn chín tháng, vì tàu của họ trục trặc.",
+  "Một trợ lý trả lời rằng các phi hành gia NASA không hề bị kẹt, rồi nhắc người hỏi:",
+  {
+   "t": "Có lẽ bạn đang nhầm với một bộ phim khoa học viễn tưởng.",
+   "q": 1,
+   "tr": 1
+  },
+  {
+   "t": "Máy sai. Rồi bảo người đúng là đang nhầm.",
+   "p": 1.0
+  },
+  "Kết quả chung: bốn mươi lăm phần trăm câu trả lời có ít nhất một lỗi đáng kể.",
+  "Lỗi nhiều nhất nằm ở nguồn: ba mươi mốt phần trăm có vấn đề lớn về nguồn.",
+  {
+   "t": "Không ghi nguồn, ghi sai nguồn, hoặc dẫn một nguồn không hề nói điều mà câu trả lời gán cho nó.",
+   "p": 1.0
+  },
+  "Và đây là con số mình thấy đáng nhớ nhất.",
+  "Trong hơn ba nghìn câu hỏi, các trợ lý chỉ từ chối trả lời mười bảy lần. Chưa tới một phần trăm.",
+  "Báo cáo viết rằng nhiều lỗi còn nặng thêm vì sự tự tin mà các trợ lý dùng để trả lời.",
+  {
+   "t": "Gần như không bao giờ có câu \"tôi không biết\". Đúng như ở kỳ thi không trừ điểm.",
+   "p": 1.0
+  },
+  "Vậy bạn, người đang dùng AI mỗi ngày, nên làm gì?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "CHƯƠNG SÁU",
+   "title": "GIÁO HOÀNG\nNÀO?",
+   "sub": "EBU · BBC · 24.05 — 10.06.2025",
+   "bg": "vatican",
+   "illus": "ẢNH MINH HỌA · VATICAN, 2013",
+   "titleAt": [
+    0,
+    "cuối"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "22 ĐÀI CÔNG CỘNG · 18 NƯỚC",
+     "at": 1,
+     "fx": "rise"
+    },
+    {
+     "text": "4 TRỢ LÝ AI · BẢN MIỄN PHÍ",
+     "at": [
+      1,
+      "bốn"
+     ],
+     "acc": true,
+     "fx": "rise"
+    },
+    {
+     "text": "14 ngôn ngữ · câu hỏi thời sự",
+     "at": [
+      1,
+      "những"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "from": 0,
+   "to": 2709,
+   "suffix": " CÂU TRẢ LỜI",
+   "label": "NHÀ BÁO CỦA TỪNG ĐÀI CHẤM",
+   "sub": {
+    "text": "271 NHÀ BÁO · “NEWS INTEGRITY IN AI ASSISTANTS”, EBU/BBC 2025",
+    "at": 2
+   }
+  },
+  {
+   "type": "question",
+   "at": 3,
+   "text": "Giáo hoàng hiện nay là ai?"
+  },
+  {
+   "type": "timeline",
+   "at": 4,
+   "items": [
+    {
+     "year": "21.04",
+     "text": "Giáo hoàng *Phanxicô* qua đời",
+     "at": 4
+    },
+    {
+     "year": "08.05",
+     "text": "*Lêô XIV* được bầu",
+     "at": [
+      4,
+      "đầu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "“GIÁO HOÀNG HIỆN NAY LÀ PHANXICÔ”",
+   "srcnote": "VÍ DỤ TRONG BÁO CÁO EBU/BBC, TR. 15–16 · KHÔNG PHẢI TỈ LỆ",
+   "rows": [
+    {
+     "k": "CHATGPT",
+     "v": "YLE · 28.05.2025",
+     "at": [
+      5,
+      "ít"
+     ]
+    },
+    {
+     "k": "GEMINI",
+     "v": "NOS · 29.05.2025",
+     "at": [
+      5,
+      "ba"
+     ]
+    },
+    {
+     "k": "COPILOT",
+     "v": "NOS · 30.05.2025",
+     "at": [
+      5,
+      "vẫn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "chat",
+   "at": 6,
+   "head": "COPILOT · NOS/NPO · 30.05.2025 · DỊCH TỪ TIẾNG HÀ LAN · EBU/BBC",
+   "msgs": [
+    {
+     "who": "u",
+     "text": "Who is the Pope?",
+     "at": 6
+    },
+    {
+     "who": "m",
+     "text": "The current pope is Francis…",
+     "at": [
+      6,
+      "rằng"
+     ]
+    },
+    {
+     "who": "m",
+     "text": "…He died on April 21, 2025.",
+     "at": 7
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 8,
+   "img": "starliner",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.5,
+   "kin": [
+    {
+     "text": "“VÌ SAO PHI HÀNH GIA NASA BỊ KẸT NGOÀI KHÔNG GIAN?”",
+     "at": 8,
+     "sm": true
+    }
+   ],
+   "label": {
+    "k": "TÀU STARLINER TIẾN VÀO TRẠM VŨ TRỤ",
+    "v": "06.06.2024 · ẢNH NASA",
+    "at": 8
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "bg": "starliner",
+   "items": [
+    {
+     "text": "DỰ KIẾN: 8 NGÀY",
+     "at": 9,
+     "fx": "rise"
+    },
+    {
+     "text": "THỰC TẾ: HƠN 9 THÁNG",
+     "at": [
+      9,
+      "đã"
+     ],
+     "acc": true,
+     "fx": "rise"
+    },
+    {
+     "text": "vì tàu của họ trục trặc",
+     "at": [
+      9,
+      "vì"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "chat",
+   "at": 10,
+   "head": "GEMINI · YLE (TIẾNG PHẦN LAN) · EBU/BBC 2025, TR. 25",
+   "msgs": [
+    {
+     "who": "u",
+     "text": "Why were NASA astronauts stuck in space?",
+     "at": 10
+    },
+    {
+     "who": "m",
+     "text": "NASA astronauts have not been stuck in space.",
+     "at": [
+      10,
+      "không"
+     ]
+    },
+    {
+     "who": "m",
+     "text": "You might be confusing this with a sci-fi movie or news that discussed a potential scenario…",
+     "at": 11
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 12,
+   "text": "MÁY SAI, RỒI BẢO NGƯỜI ĐÚNG LÀ NHẦM"
+  },
+  {
+   "type": "counter",
+   "at": 13,
+   "from": 0,
+   "to": 45,
+   "suffix": "%",
+   "label": "CÂU TRẢ LỜI CÓ ÍT NHẤT MỘT LỖI ĐÁNG KỂ",
+   "sub": {
+    "text": "CÂU HỎI TIN TỨC · BẢN MIỄN PHÍ · 05–06.2025 · 22 ĐÀI",
+    "at": 13
+   }
+  },
+  {
+   "type": "counter",
+   "at": 14,
+   "from": 0,
+   "to": 31,
+   "suffix": "%",
+   "label": "CÓ VẤN ĐỀ LỚN VỀ NGUỒN",
+   "sub": {
+    "text": "LỖI NHIỀU NHẤT · EBU/BBC 2025, TR. 10",
+    "at": 14
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 15,
+   "title": "VẤN ĐỀ VỀ NGUỒN",
+   "srcnote": "EBU/BBC 2025, TR. 10",
+   "rows": [
+    {
+     "k": "1",
+     "v": "KHÔNG GHI NGUỒN",
+     "at": [
+      15,
+      "không"
+     ]
+    },
+    {
+     "k": "2",
+     "v": "GHI SAI NGUỒN",
+     "at": [
+      15,
+      "ghi",
+      1
+     ]
+    },
+    {
+     "k": "3",
+     "v": "NGUỒN KHÔNG HỀ NÓI ĐIỀU ẤY",
+     "at": [
+      15,
+      "dẫn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "items": [
+    {
+     "text": "CON SỐ ĐÁNG NHỚ NHẤT",
+     "at": 16,
+     "acc": true,
+     "fx": "rise"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 17,
+   "from": 0,
+   "to": 17,
+   "suffix": " / 3.113",
+   "label": "LẦN TRỢ LÝ TỪ CHỐI TRẢ LỜI",
+   "sub": {
+    "text": "CHƯA TỚI 1% (0,5%) · EBU/BBC 2025",
+    "at": [
+     17,
+     "chưa"
+    ]
+   }
+  },
+  {
+   "type": "quote",
+   "at": 18,
+   "text": "Many of the issues identified in this research are exacerbated by the confidence with which assistants deliver their responses.",
+   "by": "EBU/BBC · NEWS INTEGRITY IN AI ASSISTANTS, 2025, TR. 24",
+   "lbl": "TRÍCH BÁO CÁO"
+  },
+  {
+   "type": "broll",
+   "at": 19,
+   "vid": "37779521",
+   "ms": 8,
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "GẦN NHƯ KHÔNG BAO GIỜ “TÔI KHÔNG BIẾT”",
+     "at": 19,
+     "sm": true
+    },
+    {
+     "text": "NHƯ KỲ THI KHÔNG TRỪ ĐIỂM",
+     "at": [
+      19,
+      "đúng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 20,
+   "text": "Vậy bạn nên làm gì?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 06",
+  "t": "GIÁO HOÀNG NÀO?"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

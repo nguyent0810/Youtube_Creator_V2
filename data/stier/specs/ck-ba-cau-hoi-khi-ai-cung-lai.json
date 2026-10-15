@@ -1,0 +1,177 @@
+{
+ "title": "Ba câu tự hỏi mỗi khi thấy ai cũng lãi chứng khoán (nội dung giáo dục, không phải lời khuyên)",
+ "description": "Ba câu tự hỏi khi thấy ai cũng lãi: (1) ngoài việc người khác đang lãi, mình mua vì lý do gì? (2) nếu khoản tiền này giảm 40% như năm 2022, mình có phải bán ra để tiêu không? (3) mình vào một lần hay chia ra nhiều lần? VN-Index từ đỉnh 06/01/2022 tới 15/11/2022 giảm khoảng 40% (kênh tự tính). Nội dung giáo dục, không khuyến nghị mua bán, không dự báo.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ: https://youtu.be/ULLEUHkYz9g (công khai từ 20:00 ngày 21/11)",
+ "tags": [
+  "kỷ luật đầu tư",
+  "câu hỏi trước khi mua",
+  "fomo",
+  "tâm lý đầu tư",
+  "vn-index",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "ba",
+  "câu",
+  "bốn",
+  "mươi",
+  "chia"
+ ],
+ "kicker": "TÂM LÝ TIỀN BẠC",
+ "sub": "FOMO",
+ "lines": [
+  "Ba câu đáng tự hỏi, mỗi khi thấy ai cũng lãi.",
+  "Câu một: ngoài việc người khác đang lãi, mình mua vì lý do gì?",
+  "Câu hai: nếu khoản tiền này giảm bốn mươi phần trăm, mình có phải bán ra để tiêu không?",
+  "Bốn mươi phần trăm không phải con số dọa. Từ đỉnh tháng 1 năm 2022 tới tháng 11 năm ấy, VN-Index giảm đúng chừng ấy.",
+  "Câu ba: mình định vào một lần, hay chia ra nhiều lần?",
+  "Kênh không trả lời thay bạn, vì đáp án tuỳ vào tiền và hoàn cảnh của từng người.",
+  "Ba câu hỏi ấy không đoán được thị trường, nhưng giúp bạn hiểu chính mình."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "3 CÂU TỰ HỎI",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "mỗi khi thấy ai cũng lãi",
+     "at": [
+      0,
+      "mỗi"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:5822488",
+   "ms": 6,
+   "veil": 0.58
+  },
+  {
+   "type": "timeline",
+   "at": 1,
+   "items": [
+    {
+     "year": "1",
+     "text": "mình mua vì lý do gì?",
+     "at": [
+      1,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "year": "2",
+     "text": "giảm 40% có phải bán để tiêu?",
+     "at": 2
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "at": 3,
+   "kind": "bars",
+   "title": "VN-INDEX 2022 (ĐIỂM)",
+   "unit": "KÊNH TỰ TÍNH · VN-INDEX ĐÓNG CỬA",
+   "bars": [
+    {
+     "label": "06/01/2022",
+     "v": 1528.57,
+     "text": "1.529",
+     "c": "ref",
+     "at": [
+      3,
+      "Từ"
+     ]
+    },
+    {
+     "label": "15/11/2022",
+     "v": 911.9,
+     "text": "912 · −40%",
+     "c": "down",
+     "at": [
+      3,
+      "VN-Index"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "CÂU 3",
+   "cards": [
+    {
+     "k": "VÀO",
+     "v": "MỘT LẦN",
+     "at": [
+      4,
+      "một"
+     ]
+    },
+    {
+     "k": "HAY",
+     "v": "CHIA NHIỀU LẦN",
+     "at": [
+      4,
+      "chia"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "KHÔNG TRẢ LỜI THAY BẠN",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "tuỳ tiền và hoàn cảnh mỗi người",
+     "at": [
+      5,
+      "tuỳ"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7710747",
+   "ms": 4,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 5
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "HIỂU CHÍNH MÌNH",
+   "sub": "KHÔNG PHẢI ĐOÁN THỊ TRƯỜNG"
+  }
+ ],
+ "sources": [
+  "https://vnstocks.com/docs/vnstock-data/du-lieu-giao-dich"
+ ],
+ "theme": "ck",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

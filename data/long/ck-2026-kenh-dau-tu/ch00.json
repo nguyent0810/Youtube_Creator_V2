@@ -1,0 +1,193 @@
+{
+ "title": "100 triệu, năm kênh, một năm",
+ "lines": [
+  "Đầu năm hai nghìn không trăm hai mươi sáu, giả sử bạn có một trăm triệu đồng.",
+  "Bạn không muốn bỏ hết trứng vào một giỏ, nên chia đều cho năm kênh quen thuộc với nhiều người Việt.",
+  "Hai mươi triệu vào chứng khoán.",
+  "Hai mươi triệu mua vàng miếng.",
+  "Hai mươi triệu mua Bitcoin.",
+  "Hai mươi triệu cho nhà đất. Dĩ nhiên hai mươi triệu không mua được mảnh đất nào, nên kênh này mình chỉ nhìn xu hướng chung.",
+  {
+   "t": "Và hai mươi triệu gửi tiết kiệm mười hai tháng ở một ngân hàng lớn.",
+   "p": 1.0
+  },
+  "Chín tháng sau, cuối tháng chín, mình mở sổ ra xem.",
+  "Chứng khoán: gần như đứng yên, hơi âm.",
+  "Vàng: mất khoảng tám phần trăm.",
+  "Bitcoin: tính theo giá đô la, âm khoảng bốn phần trăm.",
+  "Nhà đất: giá rao giảm, và quan trọng hơn, rất khó bán.",
+  {
+   "t": "Chỉ có cuốn sổ tiết kiệm là còn màu xanh.",
+   "p": 1.0
+  },
+  {
+   "t": "Vậy năm nay cứ gửi ngân hàng là thắng à?",
+   "ask": 1
+  },
+  "Câu trả lời ngắn là: thắng trên giấy, nhưng ít hơn bạn tưởng rất nhiều.",
+  "Trong video này, mình cùng bạn trả lời ba câu hỏi.",
+  "Một, chuyện gì đã xảy ra với từng kênh trong năm nay?",
+  "Hai, vì sao lần này sổ tiết kiệm lại về nhất, và nó thắng thật hay chỉ thắng trên giấy?",
+  {
+   "t": "Ba, quan trọng nhất: một năm như thế này nói gì với tiền của chính bạn?",
+   "p": 1.0
+  },
+  "Đây là Biểu Đồ Biết Nói. Tiền bạc, giải thích bằng dữ liệu."
+ ],
+ "scenes": [
+  {
+   "type": "counter",
+   "from": 0,
+   "to": 100000000,
+   "suffix": " đ",
+   "countAt": [
+    0,
+    "một"
+   ],
+   "label": "ĐẦU NĂM 2026"
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "CHIA ĐỀU 5 KÊNH",
+   "rows": [
+    {
+     "k": "CHỨNG KHOÁN",
+     "v": "20 TRIỆU",
+     "at": [
+      2,
+      "chứng"
+     ]
+    },
+    {
+     "k": "VÀNG MIẾNG",
+     "v": "20 TRIỆU",
+     "at": [
+      3,
+      "vàng"
+     ]
+    },
+    {
+     "k": "BITCOIN",
+     "v": "20 TRIỆU",
+     "at": [
+      4,
+      "Bitcoin."
+     ]
+    },
+    {
+     "k": "NHÀ ĐẤT",
+     "v": "20 TRIỆU",
+     "at": [
+      5,
+      "nhà"
+     ]
+    },
+    {
+     "k": "TIẾT KIỆM 12 THÁNG",
+     "v": "20 TRIỆU",
+     "at": [
+      6,
+      "tiết"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "race",
+   "at": 7,
+   "from": "2026-01-01",
+   "to": "2026-09-30",
+   "money": 20,
+   "title": "100 TRIỆU, CHIA ĐỀU",
+   "range": "01/01 → 30/09/2026",
+   "drawAt": [
+    7,
+    "mở"
+   ],
+   "until": [
+    11,
+    "khó"
+   ],
+   "series": [
+    {
+     "key": "vnindex",
+     "label": "CHỨNG KHOÁN (VN-INDEX)",
+     "color": "#38bdf8"
+    },
+    {
+     "key": "sjc",
+     "label": "VÀNG MIẾNG SJC",
+     "color": "#fbbf24"
+    },
+    {
+     "key": "btc",
+     "label": "BITCOIN (GIÁ USD)",
+     "color": "#f97316"
+    },
+    {
+     "key": "deposit",
+     "rate": 0.052,
+     "label": "TIẾT KIỆM 5,2%",
+     "color": "#4ade80"
+    }
+   ],
+   "source": "DỮ LIỆU: HOSE, SJC (QUA VNSTOCK), COINGECKO · TIẾT KIỆM: 4 NH LỚN 01/2026, LÃI DỒN TÍCH · NHÀ ĐẤT: KHÔNG CÓ CHỈ SỐ NGÀY · MINH HOẠ"
+  },
+  {
+   "type": "question",
+   "at": 13,
+   "text": "Vậy năm nay cứ gửi ngân hàng\nlà thắng à?"
+  },
+  {
+   "type": "slam",
+   "at": 14,
+   "text": "THẮNG TRÊN GIẤY",
+   "sub": "NHƯNG ÍT HƠN BẠN TƯỞNG"
+  },
+  {
+   "type": "ledger",
+   "at": 15,
+   "title": "BA CÂU HỎI",
+   "rows": [
+    {
+     "k": "01",
+     "v": "CHUYỆN GÌ XẢY RA VỚI TỪNG KÊNH?",
+     "at": [
+      16,
+      "chuyện"
+     ]
+    },
+    {
+     "k": "02",
+     "v": "VÌ SAO TIẾT KIỆM VỀ NHẤT?",
+     "at": [
+      17,
+      "vì"
+     ]
+    },
+    {
+     "k": "03",
+     "v": "NÓI GÌ VỚI TIỀN CỦA BẠN?",
+     "at": [
+      18,
+      "nói"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "brand",
+   "at": 19,
+   "sub": "TIỀN BẠC · GIẢI THÍCH BẰNG DỮ LIỆU"
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "100 TRIỆU, NĂM KÊNH, MỘT NĂM"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

@@ -1,0 +1,630 @@
+{
+ "title": "Chín giờ mười lăm: khớp liên tục, và hàng đợi ở giá sàn",
+ "lines": [
+  {
+   "t": "Từ chín giờ mười lăm, chợ chuyển sang khớp lệnh liên tục.",
+   "p": 0.8
+  },
+  "Lệnh vào là được so ngay, theo hai luật.",
+  "Một: giá tốt hơn đi trước, tức là người mua trả cao hơn, người bán chịu bán thấp hơn.",
+  "Hai: cùng một giá thì ai đến trước đi trước.",
+  "Và giá khớp là giá của lệnh đang nằm chờ sẵn.",
+  "Ví dụ, bạn đặt mua hai mươi nghìn một trăm, mà đang có người chờ bán hai mươi nghìn không trăm năm mươi.",
+  "Bạn khớp ở hai mươi nghìn không trăm năm mươi, rẻ hơn giá mình đặt.",
+  {
+   "t": "Còn nếu dùng lệnh thị trường, bạn nhận ngay giá tốt nhất đang chờ, nhưng không biết trước chính xác mình sẽ trả bao nhiêu.",
+   "p": 1.0
+  },
+  "Mười một giờ rưỡi, chợ nghỉ trưa tới một giờ chiều, rồi khớp liên tục tiếp tới hai giờ rưỡi.",
+  "Trong lúc khớp liên tục, lệnh chưa khớp có thể sửa giá, sửa số lượng, hoặc huỷ.",
+  {
+   "t": "Nhưng sửa giá hay tăng số lượng thì lệnh phải xếp lại từ cuối hàng.",
+   "p": 1.0
+  },
+  "Giờ quay lại ngày chín tháng ba.",
+  "Khi gần như ai cũng muốn bán, giá có thể rơi xuống sàn, và không được thấp hơn nữa.",
+  "Ở giá sàn, người bán đứng thành một hàng dài, theo đúng thứ tự thời gian.",
+  "Trên bảng giá, cái hàng ấy hiện ở cột dư bán: khối lượng đang chờ bán ở mức giá sàn.",
+  "Lệnh của bạn chỉ khớp khi có người mua đi tới tận chỗ bạn đứng.",
+  {
+   "t": "Hôm ấy, ở nhiều mã, người mua quá ít so với người bán. Hàng đợi nhích rất chậm, và hết phiên vẫn còn dài.",
+   "p": 1.0
+  },
+  {
+   "t": "Vậy giá sàn là để bảo vệ ai? Giữ người ta không bán được thì có ích gì?",
+   "ask": 1
+  },
+  "Biên độ không chặn việc giảm giá. Nó chỉ giới hạn mỗi ngày, giá đi được bao xa.",
+  "Hết phiên, mọi người có một đêm để đọc thêm thông tin, trước khi giá lại được phép đi tiếp bảy phần trăm.",
+  {
+   "t": "Mặt trái là đúng ngày bạn cần bán nhất, bạn có thể phải xếp sau rất nhiều người, và hết ngày vẫn chưa tới lượt.",
+   "p": 1.0
+  },
+  "Giờ bạn đã hiểu vì sao hôm ấy muốn bán mà không bán được.",
+  "Nhưng phiên chưa hết. Còn mười lăm phút quyết định giá của cả sáng hôm sau."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "CHÍN GIỜ MƯỜI LĂM:\nKHỚP LIÊN TỤC",
+   "sub": "VÀ HÀNG ĐỢI Ở GIÁ SÀN",
+   "vid": "39488470",
+   "ms": 5,
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Từ"
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": [
+    1,
+    "Lệnh"
+   ],
+   "items": [
+    {
+     "year": "9:00",
+     "text": "MỞ CỬA · ATO",
+     "at": [
+      1,
+      "Lệnh",
+      0,
+      0.1
+     ],
+     "color": "#64748b"
+    },
+    {
+     "year": "9:15",
+     "text": "KHỚP LIÊN TỤC",
+     "at": [
+      1,
+      "Lệnh",
+      0,
+      0.17
+     ],
+     "color": "#fbbf24"
+    },
+    {
+     "year": "11:30",
+     "text": "NGHỈ TRƯA",
+     "at": [
+      1,
+      "Lệnh",
+      0,
+      0.24
+     ],
+     "color": "#64748b"
+    },
+    {
+     "year": "13:00",
+     "text": "KHỚP LIÊN TỤC",
+     "at": [
+      1,
+      "Lệnh",
+      0,
+      0.31
+     ],
+     "color": "#64748b"
+    },
+    {
+     "year": "14:30",
+     "text": "ĐÓNG CỬA · ATC",
+     "at": [
+      1,
+      "Lệnh",
+      0,
+      0.38
+     ],
+     "color": "#64748b"
+    },
+    {
+     "year": "14:45",
+     "text": "THOẢ THUẬN",
+     "at": [
+      1,
+      "Lệnh",
+      0,
+      0.45
+     ],
+     "color": "#64748b"
+    },
+    {
+     "year": "15:00",
+     "text": "HẾT GIỜ",
+     "at": [
+      1,
+      "Lệnh",
+      0,
+      0.52
+     ],
+     "color": "#64748b"
+    },
+    {
+     "year": "T+2",
+     "text": "CỔ PHIẾU, TIỀN VỀ",
+     "at": [
+      1,
+      "Lệnh",
+      0,
+      0.59
+     ],
+     "color": "#64748b"
+    }
+   ],
+   "tag": {
+    "text": "ĐỒNG HỒ PHIÊN · HOSE",
+    "at": [
+     1,
+     "Lệnh"
+    ]
+   },
+   "srcnote": "Giờ giao dịch cổ phiếu HOSE (tài liệu thành viên, 05/2025) · T+2: VSD · quy định tại thời điểm làm video (10/2026)"
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "HAI LUẬT KHỚP LỆNH",
+   "rows": [
+    {
+     "k": "01",
+     "v": "GIÁ TỐT HƠN ĐI TRƯỚC",
+     "at": [
+      2,
+      "Một"
+     ]
+    },
+    {
+     "k": "02",
+     "v": "CÙNG GIÁ: AI ĐẾN TRƯỚC ĐI TRƯỚC",
+     "at": [
+      3,
+      "Hai"
+     ]
+    }
+   ],
+   "total": {
+    "k": "GIÁ KHỚP",
+    "v": "= GIÁ LỆNH ĐANG CHỜ",
+    "at": [
+     4,
+     "Và"
+    ]
+   },
+   "srcnote": "Tài liệu thành viên tóm tắt quy định HOSE (05/2025)"
+  },
+  {
+   "type": "book",
+   "at": 5,
+   "title": "SỔ LỆNH GIẢ ĐỊNH · KHỚP LIÊN TỤC",
+   "ref": 20000,
+   "ceil": 21400,
+   "floor": 18600,
+   "rows": [
+    {
+     "side": "sell",
+     "price": 20100,
+     "qty": 500,
+     "at": [
+      5,
+      "Ví"
+     ]
+    },
+    {
+     "side": "buy",
+     "price": 20000,
+     "qty": 400,
+     "at": [
+      5,
+      "Ví",
+      0,
+      0.15
+     ]
+    },
+    {
+     "side": "buy",
+     "price": 20100,
+     "qty": 100,
+     "at": [
+      5,
+      "bạn"
+     ]
+    },
+    {
+     "side": "sell",
+     "price": 20050,
+     "qty": 300,
+     "at": [
+      5,
+      "đang"
+     ]
+    }
+   ],
+   "match": {
+    "price": 20050,
+    "at": [
+     6,
+     "Bạn"
+    ],
+    "text": "KHỚP Ở 20.050 · RẺ HƠN GIÁ BẠN ĐẶT"
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "LỆNH THỊ TRƯỜNG (MTL)",
+     "at": [
+      7,
+      "Còn"
+     ]
+    },
+    {
+     "text": "KHỚP NGAY GIÁ TỐT NHẤT ĐANG CHỜ",
+     "at": [
+      7,
+      "giá"
+     ]
+    },
+    {
+     "text": "KHÔNG BIẾT TRƯỚC CHÍNH XÁC GIÁ",
+     "at": [
+      7,
+      "không"
+     ],
+     "acc": true
+    },
+    {
+     "text": "phần chưa khớp chuyển thành lệnh giới hạn",
+     "at": [
+      7,
+      "nhưng"
+     ],
+     "sm": true
+    }
+   ],
+   "srcnote": "Quy chế Niêm yết và giao dịch CK niêm yết — VNX, QĐ 22/QĐ-HĐTV ngày 18/04/2025, Điều 17"
+  },
+  {
+   "type": "timeline",
+   "at": [
+    8,
+    "Mười"
+   ],
+   "items": [
+    {
+     "year": "9:00",
+     "text": "MỞ CỬA · ATO",
+     "at": [
+      8,
+      "Mười",
+      0,
+      0.1
+     ],
+     "color": "#64748b"
+    },
+    {
+     "year": "9:15",
+     "text": "KHỚP LIÊN TỤC",
+     "at": [
+      8,
+      "Mười",
+      0,
+      0.17
+     ],
+     "color": "#64748b"
+    },
+    {
+     "year": "11:30",
+     "text": "NGHỈ TRƯA",
+     "at": [
+      8,
+      "Mười",
+      0,
+      0.24
+     ],
+     "color": "#fbbf24"
+    },
+    {
+     "year": "13:00",
+     "text": "KHỚP LIÊN TỤC",
+     "at": [
+      8,
+      "Mười",
+      0,
+      0.31
+     ],
+     "color": "#fbbf24"
+    },
+    {
+     "year": "14:30",
+     "text": "ĐÓNG CỬA · ATC",
+     "at": [
+      8,
+      "Mười",
+      0,
+      0.38
+     ],
+     "color": "#64748b"
+    },
+    {
+     "year": "14:45",
+     "text": "THOẢ THUẬN",
+     "at": [
+      8,
+      "Mười",
+      0,
+      0.45
+     ],
+     "color": "#64748b"
+    },
+    {
+     "year": "15:00",
+     "text": "HẾT GIỜ",
+     "at": [
+      8,
+      "Mười",
+      0,
+      0.52
+     ],
+     "color": "#64748b"
+    },
+    {
+     "year": "T+2",
+     "text": "CỔ PHIẾU, TIỀN VỀ",
+     "at": [
+      8,
+      "Mười",
+      0,
+      0.59
+     ],
+     "color": "#64748b"
+    }
+   ],
+   "tag": {
+    "text": "ĐỒNG HỒ PHIÊN · HOSE",
+    "at": [
+     8,
+     "Mười"
+    ]
+   },
+   "srcnote": "Giờ giao dịch cổ phiếu HOSE (tài liệu thành viên, 05/2025) · T+2: VSD · quy định tại thời điểm làm video (10/2026)"
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "TRONG KHỚP LIÊN TỤC: SỬA GIÁ · SỬA SỐ LƯỢNG · HUỶ",
+     "at": [
+      9,
+      "Trong"
+     ],
+     "sm": true
+    },
+    {
+     "text": "SỬA GIÁ / TĂNG SỐ LƯỢNG",
+     "at": [
+      10,
+      "Nhưng"
+     ]
+    },
+    {
+     "text": "→ XẾP LẠI CUỐI HÀNG",
+     "at": [
+      10,
+      "xếp"
+     ],
+     "acc": true
+    },
+    {
+     "text": "giảm số lượng → giữ chỗ",
+     "at": [
+      10,
+      "xếp",
+      0,
+      0.5
+     ],
+     "sm": true
+    }
+   ],
+   "srcnote": "Quy chế Niêm yết và giao dịch CK niêm yết — VNX, QĐ 22/QĐ-HĐTV ngày 18/04/2025, Điều 21 · thông báo HOSE 13/03/2025"
+  },
+  {
+   "type": "date",
+   "at": 11,
+   "day": "QUAY LẠI THỨ HAI",
+   "date": "09.03.2026"
+  },
+  {
+   "type": "book",
+   "at": 12,
+   "title": "HÀNG ĐỢI Ở GIÁ SÀN",
+   "range": "THAM CHIẾU 20.000 · SÀN 18.600",
+   "ref": 20000,
+   "ceil": 21400,
+   "floor": 18600,
+   "queue": {
+    "price": 18600,
+    "label": "GIÁ SÀN",
+    "times": [
+     "09:00",
+     "09:00",
+     "09:03",
+     "09:07",
+     "09:12",
+     "09:16",
+     "09:21",
+     "09:30",
+     "09:42",
+     "09:55",
+     "10:08",
+     "10:20"
+    ],
+    "mine": 9,
+    "at": [
+     12,
+     "Khi",
+     0,
+     0.3
+    ],
+    "until": [
+     13,
+     "thời"
+    ],
+    "labelAt": [
+     14,
+     "Trên"
+    ],
+    "hlAt": [
+     15,
+     "Lệnh"
+    ],
+    "buy": {
+     "text": "BÊN MUA Ở GIÁ SÀN: RẤT ÍT",
+     "at": [
+      16,
+      "Hôm"
+     ]
+    },
+    "eat": [
+     {
+      "at": [
+       16,
+       "nhích"
+      ],
+      "k": 2
+     },
+     {
+      "at": [
+       16,
+       "vẫn"
+      ],
+      "k": 1
+     }
+    ]
+   },
+   "source": "VÍ DỤ GIẢ ĐỊNH · MINH HOẠ THỨ TỰ ƯU TIÊN Ở GIÁ SÀN, KHÔNG PHẢI SỔ LỆNH THẬT CỦA MÃ NÀO NGÀY 09/03"
+  },
+  {
+   "type": "question",
+   "at": 17,
+   "text": "Giá sàn để bảo vệ ai?\nGiữ người ta không bán được\nthì có ích gì?"
+  },
+  {
+   "type": "kinetic",
+   "at": 18,
+   "items": [
+    {
+     "text": "BIÊN ĐỘ KHÔNG CHẶN GIẢM GIÁ",
+     "at": [
+      18,
+      "Biên"
+     ]
+    },
+    {
+     "text": "NÓ GIỚI HẠN MỖI NGÀY GIÁ ĐI BAO XA",
+     "at": [
+      18,
+      "Nó"
+     ],
+     "acc": true
+    },
+    {
+     "text": "và cho mọi người một đêm để đọc thêm thông tin",
+     "at": [
+      19,
+      "Hết"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 20,
+   "vid": "5699953",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MẶT TRÁI",
+     "at": [
+      20,
+      "Mặt"
+     ]
+    },
+    {
+     "text": "XẾP SAU RẤT NHIỀU NGƯỜI",
+     "at": [
+      20,
+      "xếp"
+     ],
+     "acc": true
+    },
+    {
+     "text": "hết ngày vẫn chưa tới lượt",
+     "at": [
+      20,
+      "hết"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 21,
+   "items": [
+    {
+     "text": "GIỜ BẠN ĐÃ HIỂU VÌ SAO",
+     "at": [
+      21,
+      "Giờ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": [
+    21,
+    "muốn"
+   ],
+   "text": "MUỐN BÁN ≠ BÁN ĐƯỢC",
+   "sub": "KHI KHÔNG CÒN NGƯỜI MUA Ở GIÁ SÀN"
+  },
+  {
+   "type": "kinetic",
+   "at": 22,
+   "items": [
+    {
+     "text": "PHIÊN CHƯA HẾT",
+     "at": [
+      22,
+      "Nhưng"
+     ]
+    },
+    {
+     "text": "15 PHÚT QUYẾT ĐỊNH GIÁ SÁNG HÔM SAU",
+     "at": [
+      22,
+      "Còn"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "9:15 · KHỚP LIÊN TỤC, HÀNG ĐỢI GIÁ SÀN"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.12
+ }
+}

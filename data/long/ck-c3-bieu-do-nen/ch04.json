@@ -1,0 +1,467 @@
+{
+ "title": "Đọc một tuần, rồi gộp thành một cây",
+ "lines": [
+  {
+   "t": "Giờ bạn đã có đủ đồ nghề để đọc nguyên một tuần.",
+   "p": 0.8
+  },
+  "Tuần từ chín tới mười ba tháng ba: năm cây nến, năm câu chuyện.",
+  "Thứ Hai: nến đỏ dài, gần như không bóng. Bên bán thắng trọn phiên.",
+  "Thứ Ba: bóng trên dài. Bên mua kéo giá lên cao, nhưng bị đẩy lùi một đoạn dài.",
+  "Thứ Tư: nến xanh dài. Lần này, bên mua giữ được tới cuối.",
+  "Thứ Năm: chỉ số mở cửa thấp hơn giá đóng cửa hôm trước, rồi giảm thêm, thành một cây nến đỏ nhỏ.",
+  "Thứ Sáu, mười ba tháng ba: một cây nến gần như không có thân.",
+  "Giá mở cửa và giá đóng cửa cách nhau chưa tới hai điểm, dù trong phiên chỉ số đã đi lên đi xuống gần ba mươi điểm.",
+  {
+   "t": "Cây nến kiểu này có tên riêng: doji. Hãy nhớ mặt nó, cuối video mình sẽ quay lại.",
+   "p": 1.0
+  },
+  "Giờ thử một việc: gộp cả năm phiên thành một cây nến duy nhất.",
+  "Mở cửa là giá mở cửa sáng thứ Hai. Đóng cửa là giá đóng cửa chiều thứ Sáu.",
+  "Cao nhất và thấp nhất là đỉnh và đáy của cả tuần.",
+  "Ta được một cây nến tuần: thân đỏ, và một cái bóng dưới khá dài.",
+  "Nó kể rằng cả tuần, chỉ số giảm khoảng bốn phần trăm, nhưng đã lấy lại được một đoạn từ đáy hôm thứ Hai.",
+  {
+   "t": "Cùng một tuần ấy, năm cây nến ngày cho thấy một cuộc giằng co. Một cây nến tuần cho thấy một tuần giảm, có hồi lại.",
+   "p": 1.0
+  },
+  "Đó là thứ người ta gọi là khung thời gian.",
+  "Nến ngày thì mỗi cây là một phiên. Nến tuần thì mỗi cây là một tuần.",
+  "Còn có nến tháng, hay nến chỉ dài một giờ, năm phút.",
+  "Từ đầu năm nay tới đầu tháng mười, VN-Index có một trăm tám mươi sáu cây nến ngày, nhưng chỉ khoảng ba mươi chín cây nến tuần.",
+  {
+   "t": "Vậy xem khung nào mới đúng?",
+   "ask": 1
+  },
+  "Không có khung nào đúng hơn khung nào.",
+  "Khung nhỏ cho thấy nhiều chi tiết, và cũng nhiều nhiễu. Khung lớn gọn hơn, nhưng phản ứng chậm hơn.",
+  "Nên khi ai đó chỉ cho bạn một cây nến, câu đầu tiên hãy hỏi: nến ngày, hay nến tuần?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "CHƯƠNG BỐN",
+   "title": "ĐỌC MỘT TUẦN,\nRỒI GỘP THÀNH MỘT CÂY",
+   "sub": "NẾN NGÀY · NẾN TUẦN · KHUNG THỜI GIAN",
+   "titleAt": [
+    0,
+    "Giờ"
+   ]
+  },
+  {
+   "type": "candles",
+   "at": 1,
+   "series": "vnindex",
+   "from": "2026-03-09",
+   "to": "2026-03-13",
+   "drawAt": [
+    1,
+    null,
+    0,
+    0.15
+   ],
+   "until": [
+    1,
+    "năm",
+    1
+   ],
+   "title": "TUẦN 09–13/03/2026 · NĂM CÂY NẾN",
+   "range": "VN-INDEX · NẾN NGÀY",
+   "ind": [],
+   "source": "DỮ LIỆU: VN-INDEX · HOSE (VNSTOCK/VCI) · KÊNH TỰ TÍNH · MINH HOẠ QUÁ KHỨ, KHÔNG PHẢI KHUYẾN NGHỊ",
+   "marks": [
+    {
+     "date": "2026-03-09",
+     "text": "BÊN BÁN THẮNG TRỌN PHIÊN",
+     "pos": "below",
+     "tone": "down",
+     "at": [
+      2,
+      "Thứ"
+     ],
+     "dx": 40
+    },
+    {
+     "date": "2026-03-10",
+     "text": "BỊ ĐẨY LÙI TỪ TRÊN CAO",
+     "pos": "above",
+     "tone": "gold",
+     "at": [
+      3,
+      "Thứ"
+     ],
+     "dx": 100,
+     "dy": -40
+    },
+    {
+     "date": "2026-03-11",
+     "text": "BÊN MUA GIỮ TỚI CUỐI",
+     "pos": "below",
+     "tone": "up",
+     "at": [
+      4,
+      "Thứ"
+     ],
+     "dy": 60
+    },
+    {
+     "date": "2026-03-12",
+     "text": "MỞ THẤP HƠN HÔM TRƯỚC · −1,08%",
+     "pos": "below",
+     "tone": "down",
+     "at": [
+      5,
+      "Thứ"
+     ],
+     "dx": -150,
+     "dy": 80
+    },
+    {
+     "date": "2026-03-13",
+     "text": "DOJI · THÂN 1,48 / BIÊN 28 ĐIỂM",
+     "pos": "above",
+     "tone": "gold",
+     "at": [
+      7,
+      "chưa"
+     ],
+     "dx": -200,
+     "dy": -120
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": [
+    8,
+    "doji",
+    0,
+    -0.3
+   ],
+   "hitAt": [
+    8,
+    "doji"
+   ],
+   "text": "DOJI",
+   "sub": "NHỚ MẶT NÓ · CUỐI VIDEO QUAY LẠI"
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "THỬ MỘT VIỆC",
+     "at": [
+      9,
+      "Giờ"
+     ],
+     "sm": true
+    },
+    {
+     "text": "GỘP 5 PHIÊN → 1 CÂY NẾN",
+     "at": [
+      9,
+      "gộp"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 10,
+   "title": "NẾN TUẦN 09–13/03/2026",
+   "rows": [
+    {
+     "k": "MỞ CỬA = MỞ SÁNG THỨ HAI",
+     "v": "1.757,73",
+     "at": [
+      10,
+      "Mở"
+     ]
+    },
+    {
+     "k": "ĐÓNG CỬA = ĐÓNG CHIỀU THỨ SÁU",
+     "v": "1.696,24",
+     "at": [
+      10,
+      "Đóng"
+     ]
+    },
+    {
+     "k": "CAO NHẤT = ĐỈNH CẢ TUẦN",
+     "v": "1.757,73",
+     "at": [
+      11,
+      "Cao"
+     ]
+    },
+    {
+     "k": "THẤP NHẤT = ĐÁY CẢ TUẦN",
+     "v": "1.650,75",
+     "at": [
+      11,
+      "thấp"
+     ]
+    }
+   ],
+   "srcnote": "Kênh tự tính từ nến ngày VN-Index (vnstock/VCI)"
+  },
+  {
+   "type": "candles",
+   "at": 12,
+   "series": "vnindex",
+   "tf": "1w",
+   "from": "2026-02-23",
+   "to": "2026-03-27",
+   "drawAt": [
+    12,
+    "Ta",
+    0,
+    0.1
+   ],
+   "until": [
+    12,
+    "tuần"
+   ],
+   "title": "VN-INDEX · NẾN TUẦN",
+   "range": "5 TUẦN · 23/02 – 27/03/2026 · MỖI CÂY = 1 TUẦN",
+   "ind": [],
+   "source": "DỮ LIỆU: VN-INDEX (VNSTOCK/VCI) · NẾN TUẦN KÊNH TỰ GỘP TỪ NẾN NGÀY · KHÔNG PHẢI KHUYẾN NGHỊ",
+   "marks": [
+    {
+     "date": "2026-03-09",
+     "text": "THÂN ĐỎ",
+     "pos": "above",
+     "tone": "gold",
+     "at": [
+      12,
+      "thân"
+     ]
+    },
+    {
+     "date": "2026-03-09",
+     "text": "BÓNG DƯỚI KHÁ DÀI",
+     "pos": "below",
+     "tone": "down",
+     "at": [
+      12,
+      "bóng"
+     ]
+    },
+    {
+     "date": "2026-03-09",
+     "text": "TUẦN 09–13/03: −4,05% SO VỚI TUẦN TRƯỚC",
+     "pos": "below",
+     "tone": "down",
+     "at": [
+      13,
+      "bốn"
+     ],
+     "dx": 380,
+     "dy": 80
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "5 NẾN NGÀY: MỘT CUỘC GIẰNG CO",
+     "at": [
+      14,
+      "Cùng"
+     ]
+    },
+    {
+     "text": "1 NẾN TUẦN: MỘT TUẦN GIẢM, CÓ HỒI LẠI",
+     "at": [
+      14,
+      "cây",
+      1,
+      -0.2
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "KHUNG THỜI GIAN",
+     "at": [
+      15,
+      "Đó"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "candles",
+   "at": 16,
+   "series": "vnindex",
+   "from": "2026-01-05",
+   "to": "2026-10-06",
+   "drawAt": [
+    16,
+    "Nến",
+    0,
+    0.1
+   ],
+   "until": [
+    16,
+    "mỗi"
+   ],
+   "title": "NẾN NGÀY · MỖI CÂY = 1 PHIÊN",
+   "range": "VN-INDEX · 05/01 – 06/10/2026",
+   "ind": [],
+   "source": "DỮ LIỆU: VN-INDEX · HOSE (VNSTOCK/VCI) · KÊNH TỰ TÍNH · MINH HOẠ QUÁ KHỨ, KHÔNG PHẢI KHUYẾN NGHỊ"
+  },
+  {
+   "type": "candles",
+   "at": [
+    16,
+    "Nến",
+    1,
+    -0.15
+   ],
+   "series": "vnindex",
+   "tf": "1w",
+   "from": "2026-01-05",
+   "to": "2026-10-06",
+   "drawAt": [
+    16,
+    "Nến",
+    1
+   ],
+   "until": [
+    16,
+    "tuần",
+    1
+   ],
+   "title": "NẾN TUẦN · MỖI CÂY = 1 TUẦN",
+   "range": "VN-INDEX · 05/01 – 06/10/2026",
+   "ind": [],
+   "source": "DỮ LIỆU: VN-INDEX (VNSTOCK/VCI) · NẾN TUẦN KÊNH TỰ GỘP TỪ NẾN NGÀY · KHÔNG PHẢI KHUYẾN NGHỊ"
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "CÒN CÓ NẾN THÁNG",
+     "at": [
+      17,
+      "Còn"
+     ]
+    },
+    {
+     "text": "NẾN 1 GIỜ · NẾN 5 PHÚT",
+     "at": [
+      17,
+      "giờ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 18,
+   "title": "VN-INDEX · 05/01 → 06/10/2026",
+   "unit": "SỐ CÂY NẾN · KÊNH TỰ ĐẾM",
+   "items": [
+    {
+     "k": "NẾN NGÀY",
+     "v": 186,
+     "lbl": "186",
+     "at": [
+      18,
+      "trăm"
+     ]
+    },
+    {
+     "k": "NẾN TUẦN",
+     "v": 39,
+     "lbl": "≈ 39",
+     "at": [
+      18,
+      "ba",
+      0
+     ],
+     "acc": true
+    }
+   ],
+   "srcnote": "Kênh tự đếm · 186 phiên; 39 tuần (tuần cuối 05–06/10 chưa trọn) · vnstock/VCI"
+  },
+  {
+   "type": "question",
+   "at": 19,
+   "text": "Vậy xem khung nào\nmới đúng?"
+  },
+  {
+   "type": "kinetic",
+   "at": 20,
+   "items": [
+    {
+     "text": "KHÔNG KHUNG NÀO ĐÚNG HƠN",
+     "at": [
+      20,
+      "Không"
+     ],
+     "acc": true
+    },
+    {
+     "text": "KHUNG NHỎ: NHIỀU CHI TIẾT, NHIỀU NHIỄU",
+     "at": [
+      21,
+      "Khung"
+     ]
+    },
+    {
+     "text": "KHUNG LỚN: GỌN HƠN, PHẢN ỨNG CHẬM HƠN",
+     "at": [
+      21,
+      "Khung",
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 22,
+   "items": [
+    {
+     "text": "AI CHỈ CHO BẠN MỘT CÂY NẾN?",
+     "at": [
+      22,
+      "Nên"
+     ],
+     "sm": true
+    },
+    {
+     "text": "NẾN NGÀY, HAY NẾN TUẦN?",
+     "at": [
+      22,
+      "hỏi"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "ĐỌC MỘT TUẦN, RỒI GỘP THÀNH MỘT CÂY"
+ },
+ "bgm": {
+  "mood": "upbeat",
+  "gain": 0.093
+ }
+}

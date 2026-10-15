@@ -1,0 +1,360 @@
+{
+ "title": "Hai người, một tháng ba",
+ "lines": [
+  {
+   "t": "Quay lại câu hỏi ở đầu video.",
+   "p": 0.8
+  },
+  "Hãy hình dung hai người cùng quyết định vào thị trường cuối tháng ba năm hai nghìn không trăm hai mươi hai.",
+  {
+   "t": "Đây là ví dụ giả định, đi đúng theo chỉ số, không tính phí, thuế hay cổ tức.",
+   "p": 1.0
+  },
+  "Người thứ nhất dồn một lần một trăm triệu.",
+  "Tới giữa tháng mười một, khoản ấy còn khoảng sáu mươi mốt triệu.",
+  "Cuối năm hai nghìn không trăm hai mươi ba, khoảng bảy mươi sáu triệu.",
+  {
+   "t": "Phải tới tháng bảy năm hai nghìn không trăm hai mươi lăm, hơn ba năm sau, khoản ấy mới quay lại trên một trăm triệu.",
+   "p": 1.0
+  },
+  "Hãy để ý cảm giác của người ấy trong những năm đó.",
+  "Mở tài khoản ra là thấy số âm, gần bốn mươi triệu.",
+  "Không ai trong nhóm chat còn khoe lãi nữa.",
+  "Nhiều người ở đúng vị trí này đã bán ra ở gần đáy, để không phải nhìn con số ấy thêm ngày nào.",
+  {
+   "t": "Nếu bán ở tháng mười một, khoản lỗ không còn là con số trên màn hình. Nó thành thật.",
+   "p": 1.0
+  },
+  "Người thứ hai không dồn một lần.",
+  "Mỗi tháng, người ấy để ra ba triệu, đều đặn, từ tháng tư năm hai nghìn không trăm hai mươi hai tới hết năm hai nghìn không trăm hai mươi ba.",
+  "Với mức lương mười đến mười lăm triệu một tháng, ba triệu là một khoản để dành vừa sức, không ảnh hưởng tới tiền nhà, tiền ăn.",
+  {
+   "t": "Tổng cộng sáu mươi ba triệu.",
+   "p": 1.0
+  },
+  "Cuối năm hai nghìn không trăm hai mươi ba, tài khoản ấy khoảng sáu mươi hai triệu, gần như hoà vốn.",
+  "Tới tháng bảy năm hai nghìn không trăm hai mươi lăm, khoảng tám mươi tư triệu.",
+  {
+   "t": "Vì người ấy mua cả ở những tháng giá rẻ nhất, những tháng không ai muốn nói về chứng khoán.",
+   "p": 1.0
+  },
+  {
+   "t": "Vậy cứ mua dần là thắng à?",
+   "ask": 1
+  },
+  "Không hẳn. Nếu thị trường tăng một mạch, người dồn một lần sẽ hơn.",
+  "Mua dần không phải phép màu. Nó chỉ giúp bạn khỏi phải đoán đúng đỉnh, đúng đáy.",
+  "Và nó giữ cho một quyết định lúc nóng đầu không chiếm hết số tiền của bạn."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "CHƯƠNG NĂM",
+   "title": "HAI NGƯỜI,\nMỘT THÁNG BA",
+   "sub": "VÍ DỤ GIẢ ĐỊNH · THEO CHỈ SỐ",
+   "vid": "1085656",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "quay"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "31/03/2022",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "hai người cùng vào thị trường",
+     "at": [
+      1,
+      "hai"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "GIẢ ĐỊNH",
+     "at": 2,
+     "acc": true
+    },
+    {
+     "text": "theo chỉ số · không phí, thuế, cổ tức",
+     "at": [
+      2,
+      "không"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "race",
+   "at": 3,
+   "from": "2022-03-31",
+   "to": "2025-07-25",
+   "money": 100,
+   "title": "NGƯỜI THỨ NHẤT · DỒN 100 TRIỆU",
+   "range": "31/03/2022 → 25/07/2025",
+   "drawAt": [
+    3,
+    "người"
+   ],
+   "until": [
+    6,
+    "trăm"
+   ],
+   "series": [
+    {
+     "key": "vnindex",
+     "label": "100 TRIỆU THEO VN-INDEX",
+     "color": "#ef4444"
+    }
+   ],
+   "source": "DỮ LIỆU: HOSE (VNSTOCK/VCI), KÊNH TỰ TÍNH. MINH HOẠ QUÁ KHỨ, KHÔNG PHẢI KHUYẾN NGHỊ."
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "NGƯỜI THỨ NHẤT",
+   "srcnote": "KÊNH TỰ TÍNH · QUÁ KHỨ · KHÔNG PHẢI DỰ BÁO",
+   "rows": [
+    {
+     "k": "11/2022",
+     "v": "≈ 61 TRIỆU",
+     "at": 4
+    },
+    {
+     "k": "12/2023",
+     "v": "≈ 76 TRIỆU",
+     "at": 5
+    },
+    {
+     "k": "07/2025",
+     "v": "> 100 TRIỆU",
+     "at": 6
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "−39 TRIỆU",
+     "at": 8,
+     "acc": true
+    },
+    {
+     "text": "mở tài khoản là thấy số âm",
+     "at": [
+      8,
+      "mở"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "NHÓM CHAT IM LẶNG",
+     "at": 9
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 10,
+   "text": "BÁN Ở GẦN ĐÁY",
+   "sub": "ĐỂ KHỎI NHÌN CON SỐ ẤY"
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "TRÊN MÀN HÌNH",
+     "at": 11,
+     "fx": "strike",
+     "strikeAt": [
+      11,
+      "thành"
+     ]
+    },
+    {
+     "text": "→ LỖ THẬT",
+     "at": [
+      11,
+      "thật"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "NGƯỜI THỨ HAI",
+     "at": 12,
+     "sm": true
+    },
+    {
+     "text": "3 TRIỆU MỖI THÁNG",
+     "at": 13,
+     "acc": true
+    },
+    {
+     "text": "04/2022 → 12/2023",
+     "at": [
+      13,
+      "tới"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "LƯƠNG 10–15 TRIỆU",
+     "at": 14
+    },
+    {
+     "text": "→ 3 TRIỆU VỪA SỨC",
+     "at": [
+      14,
+      "ba"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 15,
+   "title": "NGƯỜI THỨ HAI · ĐÃ BỎ VÀO 63 TRIỆU",
+   "srcnote": "KÊNH TỰ TÍNH · QUÁ KHỨ · KHÔNG PHẢI DỰ BÁO",
+   "rows": [
+    {
+     "k": "12/2023",
+     "v": "≈ 62 TRIỆU · GẦN HOÀ VỐN",
+     "at": 16
+    },
+    {
+     "k": "07/2025",
+     "v": "≈ 84 TRIỆU",
+     "at": 17
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 18,
+   "items": [
+    {
+     "text": "MUA CẢ THÁNG RẺ NHẤT",
+     "at": 18,
+     "acc": true
+    },
+    {
+     "text": "khi không ai muốn nói về chứng khoán",
+     "at": [
+      18,
+      "không"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 19,
+   "text": "Cứ mua dần\nlà thắng?"
+  },
+  {
+   "type": "kinetic",
+   "at": 20,
+   "items": [
+    {
+     "text": "TĂNG MỘT MẠCH",
+     "at": 20
+    },
+    {
+     "text": "→ DỒN MỘT LẦN HƠN",
+     "at": [
+      20,
+      "người"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 21,
+   "items": [
+    {
+     "text": "PHÉP MÀU",
+     "at": 21,
+     "fx": "strike",
+     "strikeAt": [
+      21,
+      "nó"
+     ]
+    },
+    {
+     "text": "KHỎI ĐOÁN ĐỈNH, ĐOÁN ĐÁY",
+     "at": [
+      21,
+      "đoán"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 22,
+   "items": [
+    {
+     "text": "NÓNG ĐẦU",
+     "at": 22,
+     "sm": true
+    },
+    {
+     "text": "KHÔNG CHIẾM HẾT TIỀN",
+     "at": [
+      22,
+      "chiếm"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "HAI NGƯỜI, MỘT THÁNG BA"
+ },
+ "bgm": {
+  "mood": "warm",
+  "gain": 0.11
+ }
+}

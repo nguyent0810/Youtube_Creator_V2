@@ -1,0 +1,165 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "vi-sao",
+ "hook_type": "vi-sao",
+ "open_shot": "tuong-phat",
+ "voice": "Thanh Bình",
+ "music": "ether_vox.mp3",
+ "gap": 0.0,
+ "title": "Vì sao trên đầu tượng Phật có khối nhô lên?",
+ "kicker": "VÌ SAO?",
+ "sub": "GIẢI MÃ BIỂU TƯỢNG",
+ "acc": [
+  "nhục",
+  "trí"
+ ],
+ "lines": [
+  "Vì sao trên đỉnh đầu tượng Phật có một khối nhô lên? Không phải búi tóc đâu.",
+  "Nó tên là nhục kế, tiếng Phạn là u-sni-sa.",
+  "Kinh Trường Bộ ba mươi kể ba mươi hai tướng tốt của bậc đại nhân. Đỉnh đầu như đội vương miện là một tướng.",
+  "Trong nghệ thuật, nhục kế thường được hiểu là biểu tượng của trí tuệ viên mãn.",
+  "Trước giờ bạn nghĩ đó là gì? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "KHỐI NHÔ TRÊN ĐẦU?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "không phải búi tóc",
+     "at": [
+      0,
+      "Không"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8710925"
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Tên gọi",
+   "nodes": [
+    {
+     "text": "NHỤC KẾ",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      1,
+      "nhục"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "UṢṆĪṢA",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      1,
+      "tiếng"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      1,
+      "tiếng"
+     ]
+    }
+   ],
+   "note": "WIKIPEDIA · USHNISHA"
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 32,
+   "suffix": " TƯỚNG TỐT",
+   "label": "KINH TRƯỜNG BỘ 30",
+   "until": [
+    2,
+    "hai"
+   ],
+   "sub": {
+    "text": "ĐỈNH ĐẦU NHƯ ĐỘI VƯƠNG MIỆN",
+    "at": [
+     2,
+     "Đỉnh"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "BIỂU TƯỢNG",
+   "cards": [
+    {
+     "k": "NHỤC KẾ",
+     "v": "=",
+     "at": [
+      3,
+      "nhục"
+     ]
+    },
+    {
+     "k": "TRÍ TUỆ",
+     "v": "VIÊN MÃN",
+     "at": [
+      3,
+      "trí"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "BẠN NGHĨ LÀ GÌ?",
+     "at": [
+      4,
+      "Trước"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận nhé",
+     "at": [
+      4,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:36110360"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Ushnisha",
+  "https://suttacentral.net/dn30/en/sujato"
+ ],
+ "description": "Vì sao trên đầu tượng Phật có khối nhô lên?\n\nNguồn: https://en.wikipedia.org/wiki/Ushnisha ; https://suttacentral.net/dn30/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

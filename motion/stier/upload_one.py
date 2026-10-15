@@ -87,4 +87,6 @@ def main():
 
 
 if __name__ == "__main__":
+    from factory.console import utf8_console  # noqa: E402
+    utf8_console()  # console Windows cp1252 không in được tiếng Việt (retro 2 mục 7)
     main()

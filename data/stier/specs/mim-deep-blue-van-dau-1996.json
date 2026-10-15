@@ -1,0 +1,178 @@
+{
+ "theme": "mim",
+ "title": "10/02/1996: lần đầu máy tính thắng nhà vô địch cờ vua đương nhiệm trong một ván có thời gian chuẩn",
+ "description": "Ngày 10/02/1996 ở Philadelphia, ván đầu trận sáu ván, Deep Blue (cầm trắng) thắng Garry Kasparov: lần đầu máy tính đánh bại nhà vô địch thế giới đương nhiệm trong một ván có thời gian chuẩn (40 nước / 2 giờ). Kasparov thắng ba, hoà hai, thắng chung cuộc 4–2. Trận được tổ chức nhân 50 năm ENIAC ra mắt cũng ở Philadelphia (Wikipedia). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/TG7ZShLM4LA (công khai từ 20:00 ngày 12/11).",
+ "tags": [
+  "deep blue 1996",
+  "eniac",
+  "trận đấu người máy",
+  "trí tuệ nhân tạo",
+  "lịch sử máy tính",
+  "mind in the machine"
+ ],
+ "sub": "PHILADELPHIA · 1996",
+ "acc": [
+  "đầu",
+  "tiên",
+  "bốn",
+  "hai",
+  "nứt"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Ngày 10 tháng 2 năm 1996, một máy tính thắng nhà vô địch cờ vua thế giới đương nhiệm, lần đầu tiên.",
+  "Ở Philadelphia, Deep Blue gặp Garry Kasparov trong một trận sáu ván, thời gian thi đấu chuẩn.",
+  "Trận đấu được tổ chức nhân dịp năm mươi năm máy tính ENIAC ra mắt, cũng ở thành phố ấy.",
+  "Ván thứ nhất, cỗ máy đi trước. Và cỗ máy thắng.",
+  "Nhưng Kasparov lấy lại bình tĩnh rất nhanh: thắng ba ván, hoà hai.",
+  "Tỉ số chung cuộc bốn, hai, nghiêng về con người.",
+  "Ông giữ được chức vô địch, nhưng ván đầu ấy đã để lại một vết nứt."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "10/02/1996",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "máy thắng nhà vô địch · lần đầu tiên",
+     "at": [
+      0,
+      "một"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8427425",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "PHILADELPHIA",
+     "at": [
+      1,
+      "Philadelphia"
+     ],
+     "acc": true
+    },
+    {
+     "text": "trận sáu ván · thời gian chuẩn",
+     "at": [
+      1,
+      "trận"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6600370",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "from": 50,
+   "to": 50,
+   "suffix": " NĂM",
+   "label": "KỶ NIỆM MÁY TÍNH ENIAC RA MẮT",
+   "sub": {
+    "text": "CŨNG Ở PHILADELPHIA",
+    "at": [
+     2,
+     "cũng"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "VÁN 1: MÁY THẮNG",
+   "sub": "DEEP BLUE CẦM TRẮNG"
+  },
+  {
+   "type": "chart",
+   "at": 4,
+   "kind": "bars",
+   "title": "TỈ SỐ CHUNG CUỘC · 1996",
+   "unit": "ĐIỂM · SÁU VÁN",
+   "bars": [
+    {
+     "label": "KASPAROV",
+     "v": 4,
+     "text": "4",
+     "c": "up",
+     "at": [
+      4,
+      "thắng"
+     ]
+    },
+    {
+     "label": "DEEP BLUE",
+     "v": 2,
+     "text": "2",
+     "c": "ref",
+     "at": [
+      5,
+      "hai"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "SAU 1996",
+   "cards": [
+    {
+     "k": "KASPAROV",
+     "v": "GIỮ CHỨC VÔ ĐỊCH",
+     "at": 6
+    },
+    {
+     "k": "VÁN ĐẦU",
+     "v": "MỘT VẾT NỨT",
+     "at": [
+      6,
+      "vết"
+     ],
+     "c": "acc"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Deep_Blue_versus_Kasparov,_1996,_Game_1",
+  "https://en.wikipedia.org/wiki/Deep_Blue_versus_Garry_Kasparov"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "deep": "Đíp",
+  "blue": "Blu",
+  "garry": "Ga-ri",
+  "kasparov": "Cát-xpa-rốp",
+  "philadelphia": "Phi-la-đen-phi-a",
+  "eniac": "Ê-ni-ác",
+  "=ENIAC": "Ê-ni-ác"
+ },
+ "imgs": {}
+}

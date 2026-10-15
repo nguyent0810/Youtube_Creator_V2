@@ -1,0 +1,213 @@
+{
+ "theme": "mim",
+ "title": "Phim hẹn “ngày phán xét” năm 1997. Ngoài đời, năm ấy chỉ có một ván cờ",
+ "description": "Trong loạt phim Kẻ hủy diệt, hệ thống AI Skynet coi loài người là mối đe doạ; ở phần hai (1991), “ngày phán xét” được đặt vào tháng 8/1997. Ngoài đời, tháng 5/1997 ở New York, máy tính Deep Blue của IBM thắng nhà vô địch cờ vua thế giới Garry Kasparov 3,5–2,5. Video không dùng hình ảnh của phim. Câu kết là nhận xét của kênh. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.",
+ "tags": [
+  "skynet",
+  "kẻ hủy diệt",
+  "deep blue",
+  "1997",
+  "ai trong phim",
+  "lịch sử ai",
+  "mind in the machine"
+ ],
+ "kicker": "AI & PHIM ẢNH",
+ "sub": "1997",
+ "acc": [
+  "tận",
+  "thế",
+  "bảy",
+  "thắng",
+  "cờ"
+ ],
+ "lines": [
+  "Phim từng hẹn ngày tận thế vào năm 1997.",
+  "Trong loạt phim Kẻ hủy diệt, hệ thống AI tên Skynet coi loài người là mối đe doạ.",
+  "Ở phần hai, ngày phán xét rơi vào tháng 8 năm 1997.",
+  "Ngoài đời, năm ấy cũng có một cỗ máy thắng con người.",
+  "Tháng 5 năm 1997, Deep Blue thắng nhà vô địch cờ vua thế giới.",
+  "Không có tận thế. Chỉ có một ván cờ.",
+  "Nỗi sợ trên phim, thường đi nhanh hơn cỗ máy ngoài đời."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "PHIM HẸN TẬN THẾ",
+     "at": 0.0
+    },
+    {
+     "text": "VÀO NĂM 1997",
+     "at": [
+      0,
+      "vào"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7984161",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "KẺ HỦY DIỆT",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "SKYNET",
+     "at": [
+      1,
+      "Skynet"
+     ],
+     "acc": true
+    },
+    {
+     "text": "coi loài người là mối đe doạ",
+     "at": [
+      1,
+      "coi"
+     ],
+     "sm": true
+    }
+   ],
+   "at": 1
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "TRONG PHIM · PHẦN HAI",
+   "cards": [
+    {
+     "k": "NGÀY PHÁN XÉT",
+     "v": "08.1997",
+     "at": [
+      2,
+      "tháng"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 3,
+   "img": "deepblue",
+   "mode": "full",
+   "tone": "color",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "label": {
+    "text": "DEEP BLUE · IBM · ẢNH Ở BẢO TÀNG",
+    "at": [
+     4,
+     "Deep"
+    ]
+   },
+   "stamp": {
+    "text": "05.1997",
+    "at": [
+     4,
+     "Tháng"
+    ],
+    "x": 300,
+    "y": 1090
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "NĂM 1997",
+   "rows": [
+    {
+     "k": "TRONG PHIM",
+     "v": "TẬN THẾ",
+     "at": [
+      5,
+      "tận"
+     ]
+    },
+    {
+     "k": "NGOÀI ĐỜI",
+     "v": "MỘT VÁN CỜ",
+     "at": [
+      5,
+      "ván"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Ai đi nhanh hơn?",
+   "nodes": [
+    {
+     "text": "nỗi sợ trên phim",
+     "x": 0.5,
+     "y": 0.32,
+     "at": [
+      6,
+      "Nỗi"
+     ],
+     "c": "acc",
+     "shape": "circle"
+    },
+    {
+     "text": "cỗ máy ngoài đời",
+     "x": 0.5,
+     "y": 0.72,
+     "at": [
+      6,
+      "cỗ"
+     ]
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      6,
+      "nhanh"
+     ],
+     "label": "đi trước",
+     "bend": 0
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Terminator_2:_Judgment_Day",
+  "https://www.ibm.com/history/deep-blue"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "=AI": "ây ai",
+  "skynet": "Xcai-nét",
+  "deep": "Đíp",
+  "blue": "Blu"
+ },
+ "imgs": {
+  "deepblue": "File:IBM Deep Blue at Computer History Museum (9361685537).jpg"
+ }
+}

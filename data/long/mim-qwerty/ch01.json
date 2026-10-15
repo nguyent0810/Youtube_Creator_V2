@@ -1,0 +1,160 @@
+{
+ "title": "Chiếc máy của ông chủ nhà in",
+ "lines": [
+  {
+   "t": "Bị cáo sinh ra ở thành phố Milwaukee, nước Mỹ, cuối những năm 1860.",
+   "p": 0.8
+  },
+  {
+   "t": "Cha đẻ của nó là Christopher Sholes, một người làm nghề in.",
+   "p": 1.0
+  },
+  "Lúc đầu, ông chỉ định làm một cái máy đánh số trang sách.",
+  "Một người bạn gợi ý: sao không cho nó in luôn cả chữ?",
+  "Mẫu máy đầu tiên có bàn phím giống phím đàn piano.",
+  {
+   "t": "Và các chữ cái được xếp theo đúng thứ tự A, B, C, thành hai hàng.",
+   "p": 1.0
+  },
+  "Tức là lúc mới ra đời, bàn phím từng xếp đúng như bạn mong.",
+  "Rồi suốt khoảng năm năm, Sholes cứ sửa đi sửa lại.",
+  "Chữ này chuyển lên hàng trên. Chữ kia đổi sang bên phải.",
+  {
+   "t": "Đến năm 1873, bố cục ấy đã gần giống thứ đang nằm dưới tay bạn.",
+   "p": 1.0
+  },
+  "Câu hỏi là: ông sửa để làm gì?",
+  "Và đây chính là lời buộc tội thứ nhất."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "CHIẾC MÁY CỦA\nÔNG CHỦ NHÀ IN",
+   "sub": "MILWAUKEE · CUỐI NHỮNG NĂM 1860",
+   "vid": "29906414",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Bị"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "CHA ĐẺ CỦA BỊ CÁO",
+   "rows": [
+    {
+     "k": "TÊN",
+     "v": "CHRISTOPHER SHOLES",
+     "at": [
+      1,
+      "Christopher"
+     ]
+    },
+    {
+     "k": "NGHỀ",
+     "v": "LÀM NGHỀ IN",
+     "at": [
+      1,
+      "một"
+     ]
+    },
+    {
+     "k": "Ý ĐỊNH",
+     "v": "MÁY ĐÁNH SỐ TRANG SÁCH",
+     "at": 2
+    }
+   ],
+   "total": {
+    "k": "GỢI Ý",
+    "v": "SAO KHÔNG IN CẢ CHỮ?",
+    "at": [
+     3,
+     "sao"
+    ]
+   }
+  },
+  {
+   "type": "broll",
+   "at": 4,
+   "vid": "1795798",
+   "veil": 0.45,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "BÀN PHÍM NHƯ PHÍM ĐÀN PIANO",
+     "at": [
+      4,
+      "bàn"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "keyboard",
+   "at": 5,
+   "layout": "abc",
+   "hl": "ABCDEFG",
+   "hlAt": [
+    5,
+    "A,"
+   ],
+   "hlGap": 0.22,
+   "label": {
+    "k": "MẪU ĐẦU TIÊN: THEO THỨ TỰ A B C",
+    "v": "BÀN PHÍM DO KÊNH TỰ VẼ · THEO MÔ TẢ",
+    "at": 5
+   }
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "from": 0,
+   "to": 5,
+   "prefix": "~",
+   "suffix": " NĂM",
+   "until": [
+    7,
+    "năm",
+    1
+   ],
+   "label": "SỬA ĐI SỬA LẠI BỐ CỤC PHÍM",
+   "sub": {
+    "text": "chữ này lên hàng trên · chữ kia sang phải",
+    "at": 8
+   }
+  },
+  {
+   "type": "keyboard",
+   "at": 9,
+   "layout": "qwerty",
+   "hl": "QWERTYUIOP",
+   "hlAt": [
+    9,
+    "bố"
+   ],
+   "hlGap": 0.1,
+   "label": {
+    "k": "NĂM 1873: GẦN GIỐNG HÔM NAY",
+    "v": "BÀN PHÍM DO KÊNH TỰ VẼ",
+    "at": 9
+   }
+  },
+  {
+   "type": "question",
+   "at": 10,
+   "text": "Ông sửa để làm gì?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "CHIẾC MÁY CỦA ÔNG CHỦ NHÀ IN"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

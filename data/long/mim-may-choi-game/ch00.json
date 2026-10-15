@@ -1,0 +1,186 @@
+{
+ "title": "Mười một ván",
+ "lines": [
+  "Mười một ván đấu. Một cỗ máy. Hai tuyển thủ chuyên nghiệp.",
+  {
+   "t": "Cỗ máy thắng mười ván.",
+   "p": 1.0
+  },
+  "Đó là kết quả DeepMind công bố cuối tháng một năm hai nghìn không trăm mười chín.",
+  "Trò chơi lần này không phải cờ vua, cũng không phải cờ vây.",
+  {
+   "t": "Mà là StarCraft hai, một trò chơi điện tử chiến thuật thời gian thực, nơi hai người chơi xây căn cứ, gom tài nguyên, và tung quân đánh nhau.",
+   "p": 1.0
+  },
+  "Cỗ máy ấy tên là AlphaStar.",
+  "Nó thắng tuyển thủ TLO năm ván không gỡ.",
+  {
+   "t": "Rồi thắng tuyển thủ MaNa, một trong những người chơi giỏi nhất thế giới lúc ấy, cũng năm ván không gỡ.",
+   "p": 1.0
+  },
+  "Nhưng có một ván thứ mười một.",
+  "Một ván đấu biểu diễn, và lần ấy, con người thắng.",
+  {
+   "t": "Video này sẽ kể bạn nghe ván ấy diễn ra thế nào, và vì sao nó quan trọng.",
+   "p": 1.0
+  },
+  "Ở các video trước của chuỗi, máy đã thắng người ở cờ vua, cờ vây, đố vui, và poker.",
+  "Nhưng một trò chơi điện tử có những thứ mà bàn cờ không có.",
+  "Mình sẽ đếm chúng ra, từng điều một. Có tất cả năm điều.",
+  "Và mỗi điều, là một lý do vì sao các nhà nghiên cứu từng nghĩ máy còn lâu mới thắng được."
+ ],
+ "scenes": [
+  {
+   "type": "broll",
+   "vid": "9071216",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU",
+   "kin": [
+    {
+     "text": "11 VÁN · 1 CỖ MÁY · 2 TUYỂN THỦ",
+     "at": [
+      0,
+      null,
+      0,
+      0.05
+     ],
+     "acc": true
+    },
+    {
+     "text": "cỗ máy thắng mười ván",
+     "at": 1,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "STARCRAFT II · DEEPMIND · 01/2019",
+   "rows": [
+    {
+     "k": "KHÔNG PHẢI",
+     "v": "CỜ VUA · CỜ VÂY",
+     "at": 3
+    },
+    {
+     "k": "MÀ LÀ",
+     "v": "CHIẾN THUẬT THỜI GIAN THỰC",
+     "at": 4
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "ALPHASTAR",
+   "rows": [
+    {
+     "k": "VỚI TLO",
+     "v": "5 – 0",
+     "at": 6
+    },
+    {
+     "k": "VỚI MANA",
+     "v": "5 – 0",
+     "at": 7
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "text": "VÁN THỨ MƯỜI MỘT",
+   "sub": "VÁN BIỂU DIỄN · CON NGƯỜI THẮNG",
+   "subAt": 9
+  },
+  {
+   "type": "timeline",
+   "at": 11,
+   "items": [
+    {
+     "year": "1997",
+     "text": "cờ vua",
+     "at": [
+      11,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "year": "2011",
+     "text": "đố vui",
+     "at": [
+      11,
+      null,
+      0,
+      0.35
+     ]
+    },
+    {
+     "year": "2016",
+     "text": "cờ vây",
+     "at": [
+      11,
+      null,
+      0,
+      0.55
+     ]
+    },
+    {
+     "year": "2017",
+     "text": "poker",
+     "at": [
+      11,
+      null,
+      0,
+      0.8
+     ]
+    }
+   ]
+  },
+  {
+   "type": "units",
+   "at": 12,
+   "title": "NĂM ĐIỀU BÀN CỜ KHÔNG CÓ",
+   "total": 5,
+   "cols": 5,
+   "lit": 5,
+   "litAt": [
+    13,
+    "năm"
+   ],
+   "unitLabel": "ĐÃ VƯỢT QUA"
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "MỖI ĐIỀU",
+     "at": 14,
+     "sm": true
+    },
+    {
+     "text": "MỘT LÝ DO MÁY CÒN LÂU MỚI THẮNG",
+     "at": [
+      14,
+      null,
+      0,
+      0.3
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "MƯỜI MỘT VÁN"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

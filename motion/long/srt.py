@@ -10,7 +10,9 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-FFPROBE = r"C:\Tools\Youtuber\video-editor\vendor\ffmpeg\ffprobe.exe"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from build_long import FF  # noqa: E402  (cùng cách tìm ffmpeg: FFMPEG_DIR -> vendor máy sản xuất -> PATH)
+FFPROBE = FF + r"\ffprobe.exe"
 
 
 def ts(t):
@@ -42,4 +44,8 @@ def main(topic):
 
 
 if __name__ == "__main__":
+    import pathlib, sys  # noqa: E401
+    sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[2]))
+    from factory.console import utf8_console  # noqa: E402
+    utf8_console()  # console Windows cp1252 không in được tiếng Việt (retro 2 mục 7)
     main(sys.argv[1])

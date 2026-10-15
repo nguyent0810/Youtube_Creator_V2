@@ -1,0 +1,167 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "kinh-giai",
+ "hook_type": "con-so",
+ "open_shot": "giot-mua",
+ "voice": "Thục Đoan",
+ "music": "fluidscape.mp3",
+ "gap": 0.15,
+ "title": "Pháp Cú 121–122: từng giọt nước làm đầy bình",
+ "kicker": "KINH PHÁP CÚ · KỆ 121–122",
+ "sub": "DIỄN Ý",
+ "acc": [
+  "giọt",
+  "đầy"
+ ],
+ "lines": [
+  "Một giọt nước thì có gì đâu, đúng không?",
+  "Một lần thôi mà. Thói quen xấu bắt đầu như vậy.",
+  "Kinh Pháp Cú, kệ một trăm hai mươi mốt, diễn ý: đừng xem thường điều ác nhỏ. Giọt nước rơi mãi, cũng đầy bình.",
+  "Thói quen tốt cũng vậy, tích từng giọt.",
+  "Hôm nay bạn nhỏ một giọt tốt nào? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "1 GIỌT CÓ GÌ ĐÂU?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "đúng không?",
+     "at": [
+      0,
+      "đúng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:26793261"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 1,
+   "suffix": " LẦN THÔI MÀ",
+   "label": "THÓI QUEN XẤU BẮT ĐẦU",
+   "until": [
+    1,
+    "mà."
+   ]
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Kệ 121",
+   "nodes": [
+    {
+     "text": "ÁC NHỎ · CÓ GÌ ĐÂU",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      2,
+      "ác"
+     ],
+     "shape": "box",
+     "cross": [
+      2,
+      "Giọt"
+     ]
+    },
+    {
+     "text": "GIỌT RƠI MÃI · ĐẦY BÌNH",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      2,
+      "đầy"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "DHP 121 · DIỄN Ý"
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Từng giọt",
+   "nodes": [
+    {
+     "text": "THÓI QUEN TỐT",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      3,
+      "tốt"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "ĐẦY BÌNH",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      3,
+      "giọt."
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      3,
+      "giọt."
+     ]
+    }
+   ],
+   "note": "DHP 122"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "GIỌT TỐT NÀO?",
+     "at": [
+      4,
+      "Hôm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận nhé",
+     "at": [
+      4,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:4159571"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp116-128/en/sujato"
+ ],
+ "description": "Pháp Cú 121–122: từng giọt nước làm đầy bình\n\nNguồn: https://suttacentral.net/dhp116-128/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

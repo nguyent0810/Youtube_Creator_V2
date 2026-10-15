@@ -1,0 +1,162 @@
+{
+ "title": "Trạm thứ hai: căn cho thẳng",
+ "lines": [
+  {
+   "t": "Bạn không bao giờ nhìn camera theo cùng một cách hai lần.",
+   "p": 0.8
+  },
+  {
+   "t": "Hôm nay hơi nghiêng đầu, mai cúi xuống, ngày kia đứng ngược sáng.",
+   "p": 1.0
+  },
+  "Nên trạm thứ hai làm một việc giống như người thợ ảnh chỉnh lại tấm hình.",
+  "Nó tìm những điểm mốc trên khuôn mặt: hai khoé mắt, đầu mũi, hai khoé miệng.",
+  {
+   "t": "Rồi xoay, phóng to, thu nhỏ, sao cho các điểm ấy về gần đúng vị trí chuẩn.",
+   "p": 1.0
+  },
+  "Bước này nghe như chuyện vặt.",
+  "Nhưng trong bài báo về hệ thống FaceNet của Google năm hai nghìn không trăm mười lăm, nó tạo ra khác biệt rõ ràng.",
+  "Trên một bộ ảnh thử nghiệm nổi tiếng, chỉ cắt ảnh ở giữa thì hệ thống đúng khoảng chín mươi tám phẩy tám bảy phần trăm.",
+  {
+   "t": "Thêm bước căn thẳng, con số lên chín mươi chín phẩy sáu ba.",
+   "p": 1.0
+  },
+  "Nghe chỉ chênh chưa đến một phần trăm.",
+  "Nhưng tính theo số lần sai, đó là giảm hơn ba lần.",
+  "Với một hệ thống phải phân biệt hàng triệu người, chừng ấy là rất nhiều."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "TRẠM HAI",
+   "title": "CĂN CHO THẲNG",
+   "sub": "NHƯ NGƯỜI THỢ ẢNH CHỈNH HÌNH",
+   "vid": "8090193",
+   "ms": 10,
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Bạn"
+   ]
+  },
+  {
+   "type": "units",
+   "at": 1,
+   "title": "TRẠM 2/4 · HÀNH TRÌNH CỦA MỘT TẤM ẢNH",
+   "total": 4,
+   "cols": 4,
+   "lit": 2,
+   "litAt": [
+    1,
+    "Hôm"
+   ],
+   "unitLabel": "TRẠM"
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "ĐIỂM MỐC TRÊN KHUÔN MẶT",
+   "rows": [
+    {
+     "k": "HAI KHOÉ MẮT",
+     "v": "·  ·",
+     "at": [
+      3,
+      "hai"
+     ]
+    },
+    {
+     "k": "ĐẦU MŨI",
+     "v": "·",
+     "at": [
+      3,
+      "đầu"
+     ]
+    },
+    {
+     "k": "HAI KHOÉ MIỆNG",
+     "v": "·  ·",
+     "at": [
+      3,
+      "khoé",
+      1
+     ]
+    }
+   ],
+   "total": {
+    "k": "RỒI",
+    "v": "XOAY · PHÓNG · THU VỀ CHUẨN",
+    "at": 4
+   }
+  },
+  {
+   "type": "source",
+   "at": 6,
+   "source": "FACENET · GOOGLE · CVPR 2015",
+   "ref": "TRÊN BỘ ẢNH THỬ NGHIỆM LFW",
+   "snippet": "chỉ cắt giữa ảnh: 98,87% · thêm bước căn thẳng: [[99,63%]]",
+   "hlAt": [
+    8,
+    "chín"
+   ],
+   "seal": "MỘT BỘ ẢNH THỬ · KHÔNG PHẢI NGOÀI ĐỜI",
+   "sealAt": 9
+  },
+  {
+   "type": "bars",
+   "at": 9,
+   "title": "TỈ LỆ SAI TRÊN BỘ ẢNH THỬ (%)",
+   "unit": "KÊNH TỰ TÍNH TỪ BÀI BÁO FACENET 2015",
+   "items": [
+    {
+     "k": "CHỈ CẮT GIỮA",
+     "v": 1.13,
+     "lbl": "1,13",
+     "at": [
+      10,
+      "tính"
+     ]
+    },
+    {
+     "k": "CÓ CĂN THẲNG",
+     "v": 0.37,
+     "lbl": "0,37",
+     "at": [
+      10,
+      "giảm"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "SAI ÍT HƠN HƠN BA LẦN",
+     "at": 11,
+     "acc": true
+    },
+    {
+     "text": "với hàng triệu người, chừng ấy là rất nhiều",
+     "at": [
+      11,
+      "hàng"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "TRẠM 2",
+  "t": "CĂN CHO THẲNG"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

@@ -65,13 +65,31 @@ liệt kê tên dài. Nghĩa là còn nhiều dư địa tăng retention bằng 
 ```
 0:00  COLD OPEN (40–70s)   Cảnh căng nhất, kể thì hiện tại, dừng ở đỉnh điểm, chưa giải thích
       TITLE STING           Tên video + câu hứa ("để hiểu cảnh này, phải quay lại 300 năm")
-      LỘ TRÌNH (20s)        3 câu hỏi lớn video sẽ trả lời (open loop chính)
+      LỘ TRÌNH (20s)        Hứa trước những gì người xem sẽ nhận (open loop chính) -- ĐỔI HÌNH THỨC mỗi video (xem dưới)
 CH1   GỐC RỄ                Nơi cung A → B bắt đầu
 CH2…  CÁC CHƯƠNG            Mỗi chương 3–6 phút (xem khuôn chương)
 ~50%  RE-HOOK GIỮA VIDEO    Quay lại cold open: "giờ bạn đã hiểu vì sao…" (đóng 1 vòng, mở vòng mới lớn hơn)
 ~75%  CẢNH MẠNH THỨ HAI     Vụ án / cuộc chiến kịch tính nhất còn lại
 KẾT   CALLBACK + CÂU HỎI    Đóng vòng chính, trả motif, để lại một câu hỏi thật
 ```
+
+### Lời hứa lộ trình: một chức năng, nhiều hình thức (góp ý người dùng 07/10/2026)
+
+"Trong video này, mình sẽ cùng bạn trả lời ba câu hỏi" lặp ở 4 kịch bản liền (A1, C1, D1, MIM #2) → người xem thường
+xuyên nhận ra khuôn, kênh nghe như máy. Lộ trình là **chức năng** (hứa trước, mở vòng chính), không phải một câu cố định.
+Mỗi video chọn MỘT hình thức, **không lặp hình thức của video liền trước cùng kênh**, và không dùng cụm "trả lời ba câu
+hỏi" quá 1 lần / 5 video:
+
+| Hình thức | Ví dụ |
+|---|---|
+| Chặng đường | "Trước khi đoán về AI, mình đi lại ba chặng máy móc đã đi trước nó: …" (MIM #2) |
+| Cảnh hẹn trước | "Cuối video, bạn sẽ gặp lại người đứng đầu hàng này, và lần ấy họ làm khác đi." |
+| Câu hỏi duy nhất | Một câu hỏi lớn, không đếm số: "Vậy cái gì giữ chỉ số đứng yên?" |
+| Lời thách | "Thử đoán trước: trong 11 lần, bao nhiêu lần là đỉnh? Giữ con số ấy tới chương hai." |
+| Bản đồ bằng hình | Lời đọc 1 câu, màn hình hiện các mốc/chương (timeline, ledger) thay vì đọc danh sách |
+| Nghịch lý | "Máy đếm tiền đầy phố, vậy mà nghề đếm tiền lại đông người hơn. Video này đi tìm lý do." |
+
+Kịch bản ghi rõ hình thức đã chọn ở mục **Giữ chân**; agent kiểm chứng đối chiếu với video liền trước của kênh.
 
 ### Khuôn một chương (3–6 phút)
 
@@ -124,6 +142,7 @@ KẾT   CALLBACK + CÂU HỎI    Đóng vòng chính, trả motif, để lại m
 ## 7. Checklist trước khi thu âm
 
 - [ ] 30 giây đầu có cảnh cụ thể + câu hỏi chưa trả lời?
+- [ ] Lời hứa lộ trình KHÁC hình thức video liền trước cùng kênh (không mặc định "ba câu hỏi")?
 - [ ] Có ≥3 open loop được đóng ở các chương sau?
 - [ ] Mỗi chương kết bằng câu cầu nối, không phải câu tóm tắt?
 - [ ] Không có đoạn >90s thiếu pattern interrupt?

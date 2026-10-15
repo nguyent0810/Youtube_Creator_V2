@@ -1,0 +1,295 @@
+{
+ "title": "Vậy tiền của bạn thì sao?",
+ "lines": [
+  {
+   "t": "Mình không ở đây để bảo bạn nên mua gì, bán gì.",
+   "p": 0.8
+  },
+  "Mình chỉ có năm câu hỏi, để bạn tự hỏi trước khi quyết định đặt tiền ở đâu.",
+  "Một: mình đã có quỹ khẩn cấp chưa? Các trang giáo dục nhà đầu tư ở Mỹ thường gợi ý khoảng ba đến sáu tháng chi tiêu, con số cụ thể tuỳ hoàn cảnh của bạn.",
+  "Hai: khoản tiền này, bao lâu nữa mình cần dùng lại? Tiền cần trong một năm khác hẳn tiền để mười năm.",
+  "Ba: nếu nó giảm ba mươi phần trăm trong một năm, mình có phải bán đi không?",
+  "Bốn: mình có thật sự hiểu thứ mình đang mua, và ai bảo đảm cho nó không?",
+  {
+   "t": "Năm: nếu là tiền gửi, mình có đang dồn quá hạn mức bảo hiểm vào một chỗ không?",
+   "p": 1.0
+  },
+  "Và đây là những lúc mọi điều trong video này không còn đúng với bạn.",
+  "Nếu bạn đang vay nợ với lãi suất cao, lãi suất tăng là tin xấu, không phải tin vui.",
+  "Nếu bạn mua vàng từ vài năm trước, năm nay đỏ nhưng chặng dài của bạn vẫn đang xanh.",
+  {
+   "t": "Và nếu bạn đọc video này vào năm sau, có thể bức tranh đã đảo ngược hoàn toàn, như năm hai nghìn không trăm hai mươi lăm đã từng.",
+   "p": 1.0
+  },
+  "Chín tháng đầu năm hai nghìn không trăm hai mươi sáu là quãng thời gian nhiều người thấy tiền để dành của mình chững lại, dù đang giữ ở đâu.",
+  "Nếu bạn thấy vậy, bạn không đơn độc. Và đó không phải lỗi của bạn.",
+  "Ở Biểu Đồ Biết Nói, mỗi tuần mình sẽ lấy một câu hỏi tiền bạc thật, và để dữ liệu trả lời.",
+  "Tuần sau là bài đầu tiên của khoá Chứng khoán từ số không: vì sao từ đầu năm VN-Index gần như đứng yên, mà nhiều tài khoản vẫn lỗ.",
+  {
+   "t": "Còn bây giờ, mình muốn nghe bạn: năm nay, bạn đang cất tiền ở đâu, và bạn thấy thế nào?",
+   "p": 1.0
+  }
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "CHƯƠNG SÁU",
+   "title": "VẬY TIỀN CỦA BẠN\nTHÌ SAO?",
+   "sub": "5 CÂU TỰ HỎI",
+   "titleAt": [
+    0,
+    "Mình"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "5 CÂU TỰ HỎI",
+     "at": [
+      1,
+      "năm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "không phải lời khuyên mua bán",
+     "at": [
+      1,
+      "quyết"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "TRƯỚC KHI ĐẶT TIỀN",
+   "rows": [
+    {
+     "k": "01",
+     "v": "ĐÃ CÓ QUỸ KHẨN CẤP?",
+     "at": [
+      2,
+      "quỹ"
+     ]
+    },
+    {
+     "k": "02",
+     "v": "BAO LÂU NỮA CẦN DÙNG?",
+     "at": [
+      3,
+      "bao"
+     ]
+    },
+    {
+     "k": "03",
+     "v": "GIẢM 30% CÓ PHẢI BÁN?",
+     "at": [
+      4,
+      "giảm"
+     ]
+    },
+    {
+     "k": "04",
+     "v": "HIỂU THỨ MÌNH ĐANG MUA?",
+     "at": [
+      5,
+      "hiểu"
+     ]
+    },
+    {
+     "k": "05",
+     "v": "VƯỢT HẠN MỨC BẢO HIỂM?",
+     "at": [
+      6,
+      "hạn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "KHI NÀO ĐIỀU NÀY",
+     "at": [
+      7,
+      "những"
+     ]
+    },
+    {
+     "text": "KHÔNG ĐÚNG VỚI BẠN?",
+     "at": [
+      7,
+      "đúng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "ĐANG VAY LÃI CAO",
+     "at": [
+      8,
+      "vay"
+     ]
+    },
+    {
+     "text": "LÃI TĂNG = TIN XẤU",
+     "at": [
+      8,
+      "xấu"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "MUA VÀNG TỪ LÂU",
+     "at": [
+      9,
+      "vàng"
+     ]
+    },
+    {
+     "text": "CHẶNG DÀI VẪN XANH",
+     "at": [
+      9,
+      "chặng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "XEM LẠI VÀO NĂM SAU?",
+     "at": [
+      10,
+      "Và"
+     ]
+    },
+    {
+     "text": "BỨC TRANH CÓ THỂ ĐẢO NGƯỢC",
+     "at": [
+      10,
+      "đảo"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 11,
+   "vid": "34081856",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "TIỀN ĐỂ DÀNH CHỮNG LẠI",
+     "at": [
+      11,
+      "chững"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "BẠN KHÔNG ĐƠN ĐỘC",
+     "at": [
+      12,
+      "Nếu"
+     ],
+     "acc": true
+    },
+    {
+     "text": "và đó không phải lỗi của bạn",
+     "at": [
+      12,
+      "lỗi"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "MỖI TUẦN · 1 CÂU HỎI TIỀN BẠC",
+     "at": [
+      13,
+      "tuần"
+     ],
+     "acc": true
+    },
+    {
+     "text": "để dữ liệu trả lời",
+     "at": [
+      13,
+      "dữ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "TUẦN SAU · BÀI 1 · CHỨNG KHOÁN TỪ SỐ 0",
+     "at": [
+      14,
+      "Tuần"
+     ],
+     "acc": true
+    },
+    {
+     "text": "VN-Index đứng yên, sao tài khoản vẫn lỗ?",
+     "at": [
+      14,
+      "đứng"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 15,
+   "text": "Năm nay bạn đang cất tiền ở đâu,\nvà bạn thấy thế nào?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 06",
+  "t": "VẬY TIỀN CỦA BẠN THÌ SAO?"
+ },
+ "bgm": {
+  "mood": "warm",
+  "gain": 0.11
+ }
+}

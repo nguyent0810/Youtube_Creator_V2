@@ -1,0 +1,139 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "truoc-sau",
+ "hook_type": "nghich-ly",
+ "open_shot": "mat-nuoc",
+ "voice": "Ngọc Trân",
+ "music": "at_rest.mp3",
+ "gap": 0.1,
+ "title": "Trước/Sau: chiếc bè qua sông",
+ "kicker": "TRƯỚC / SAU",
+ "sub": "KINH TRUNG BỘ 22",
+ "acc": [
+  "bè",
+  "đặt"
+ ],
+ "lines": [
+  "Có những thứ từng cứu bạn, nhưng giờ nên đặt xuống.",
+  "Trước: qua sông rồi, vẫn vác chiếc bè lên vai mà đi.",
+  "Sau: đặt bè xuống bờ, nhẹ tênh đi tiếp.",
+  "Trong kinh Ví dụ con rắn, Đức Phật nói: giáo pháp như chiếc bè, để qua sông, không phải để vác theo.",
+  "Thứ bè bạn cần đặt xuống là gì? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "items": [
+    {
+     "text": "TỪNG CỨU BẠN",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "giờ nên đặt xuống",
+     "at": [
+      0,
+      "nhưng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:35259404"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "VÁC BÈ LÊN VAI",
+     "at": [
+      1,
+      "vác"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:27558386",
+   "win": true,
+   "winLabel": "TRƯỚC"
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "TRƯỚC / SAU",
+   "cards": [
+    {
+     "k": "TRƯỚC",
+     "v": "VÁC BÈ",
+     "at": [
+      2,
+      "Sau:"
+     ]
+    },
+    {
+     "k": "SAU",
+     "v": "ĐẶT XUỐNG",
+     "at": [
+      2,
+      "đặt"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 22,
+   "suffix": "",
+   "label": "KINH VÍ DỤ CON RẮN",
+   "sub": {
+    "text": "BÈ ĐỂ QUA SÔNG, KHÔNG ĐỂ VÁC THEO",
+    "at": [
+     3,
+     "giáo"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "BẠN CẦN ĐẶT XUỐNG GÌ?",
+     "at": [
+      4,
+      "Thứ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận nhé",
+     "at": [
+      4,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:39481762"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/mn22/en/sujato"
+ ],
+ "description": "Trước/Sau: chiếc bè qua sông\n\nNguồn: https://suttacentral.net/mn22/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

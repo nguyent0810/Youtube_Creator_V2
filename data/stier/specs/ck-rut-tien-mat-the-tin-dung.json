@@ -1,0 +1,144 @@
+{
+ "theme": "ck",
+ "kicker": "1 GIAO DỊCH ĐẮT",
+ "sub": "THẺ TÍN DỤNG",
+ "title": "Rút tiền mặt bằng thẻ tín dụng: vì sao thường là giao dịch đắt nhất",
+ "description": "Ở nhiều thẻ tín dụng, rút tiền mặt có phí rút và bị tính lãi ngay từ ngày rút, không có thời gian miễn lãi như khi quẹt thẻ mua hàng (theo các bài hướng dẫn và báo chí tổng hợp; mỗi thẻ một khác, hãy xem biểu phí của bạn). Lãi thẻ thường khoảng 20–40%/năm.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (8 phút): https://youtu.be/xIfNPP1PLl8 (công khai từ 20:00 ngày 21/10)",
+ "tags": [
+  "rút tiền thẻ tín dụng",
+  "phí rút tiền",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "rút",
+  "phí",
+  "ngay",
+  "hai",
+  "bốn"
+ ],
+ "lines": [
+  "Rút tiền mặt bằng thẻ tín dụng, thường là giao dịch đắt nhất của tấm thẻ.",
+  "Quẹt thẻ mua hàng, bạn có một khoảng miễn lãi, nếu trả đủ đúng hạn.",
+  "Rút tiền mặt thì khác. Ở nhiều thẻ, bạn mất phí rút ngay khi rút.",
+  "Và tiền lãi được tính từ chính ngày rút. Không có ngày miễn lãi nào.",
+  "Lãi thẻ tín dụng thường từ hai mươi tới bốn mươi phần trăm một năm.",
+  "Nên một lần rút tiền, có thể đắt hơn bạn tưởng rất nhiều.",
+  "Trước khi rút, hãy mở biểu phí của chính thẻ mình."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "RÚT TIỀN MẶT",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "giao dịch đắt nhất của tấm thẻ",
+     "at": [
+      0,
+      "giao"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6276983",
+   "veil": 0.58
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "HAI CÁCH DÙNG THẺ",
+   "cards": [
+    {
+     "k": "QUẸT MUA HÀNG",
+     "v": "CÓ MIỄN LÃI",
+     "at": 1
+    },
+    {
+     "k": "RÚT TIỀN MẶT",
+     "v": "PHÍ + LÃI NGAY",
+     "at": 2,
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "LÃI TÍNH TỪ NGÀY RÚT",
+   "sub": "KHÔNG CÓ NGÀY MIỄN LÃI NÀO · Ở NHIỀU THẺ"
+  },
+  {
+   "type": "chart",
+   "at": 4,
+   "kind": "bars",
+   "title": "LÃI THẺ TÍN DỤNG (%/NĂM)",
+   "unit": "KHOẢNG THƯỜNG GẶP · THEO BÁO CHÍ",
+   "bars": [
+    {
+     "label": "MỨC THẤP",
+     "v": 20,
+     "text": "20",
+     "c": "ref",
+     "at": [
+      4,
+      "hai"
+     ]
+    },
+    {
+     "label": "MỨC CAO",
+     "v": 40,
+     "text": "40",
+     "c": "down",
+     "at": [
+      4,
+      "bốn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "ĐẮT HƠN BẠN TƯỞNG",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "mở biểu phí của chính thẻ mình",
+     "at": 6,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7534961",
+   "ms": 4,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 5
+  }
+ ],
+ "sources": [
+  "https://thitruongtaichinhtiente.vn/vu-no-8-5-trieu-bi-tinh-lai-hon-8-8-ty-nhung-dieu-can-biet-khi-dung-the-tin-dung-57760.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

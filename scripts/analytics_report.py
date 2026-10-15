@@ -125,6 +125,8 @@ def summarize(ch: str, vids: list[dict]) -> list[str]:
 
 
 if __name__ == "__main__":
+    from factory.console import utf8_console  # noqa: E402
+    utf8_console()  # console Windows cp1252 không in được tiếng Việt (retro 2 mục 7)
     chs = [channels.pick()] if "--channel" in sys.argv else channels.available()
     report = []
     for ch in chs:

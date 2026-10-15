@@ -1,0 +1,194 @@
+{
+ "theme": "mim",
+ "title": "Máy tố bịp không cần giữ nét mặt: với Libratus, tố bịp là một phép tính tần suất",
+ "description": "Nếu chỉ cược lớn khi có bài mạnh, người chơi sẽ bị đọc vị; nên trong một tỉ lệ nhất định các lần cược lớn, phải đang cầm bài yếu. Libratus tố bịp đúng tần suất mà phép tính chỉ ra, kể cả bằng những mức cược lớn bất thường mà cao thủ ban đầu coi là sai lầm (CMU, Engadget).\n\nVideo nói về nghiên cứu trí tuệ nhân tạo; không hướng dẫn chơi bài, không cổ vũ cờ bạc. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/Mz0HwBBSBbg (công khai từ 20:00 ngày 26/11).",
+ "tags": [
+  "ai tố bịp",
+  "bluff",
+  "ai chơi poker",
+  "libratus",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "TỐ BỊP",
+ "acc": [
+  "tố",
+  "bịp",
+  "tỉ",
+  "lệ",
+  "phép"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Một cỗ máy biết tố bịp, mà không cần giữ nét mặt.",
+  "Tố bịp là cược lớn với bài yếu, để đối thủ tưởng bạn có bài mạnh và bỏ cuộc.",
+  "Với con người, đó là tâm lý: gan dạ, đọc vị, giữ nét mặt. Với Libratus, đó là toán.",
+  "Nếu chỉ cược lớn khi có bài mạnh, bạn sẽ bị đọc vị.",
+  "Nên trong một tỉ lệ nhất định các lần cược lớn, bạn phải đang cầm bài yếu. Tỉ lệ ấy được tính ra.",
+  "Libratus còn dùng những mức cược lớn bất thường, mà ban đầu các cao thủ tưởng là sai lầm.",
+  "Tố bịp hoá ra là một phép tính. Và phép tính ấy góp phần giúp nó dẫn gần một triệu tám trăm nghìn phỉnh."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MÁY BIẾT TỐ BỊP",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "không cần giữ nét mặt",
+     "at": [
+      0,
+      "không"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6962281",
+   "veil": 0.55
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Tố bịp",
+   "nodes": [
+    {
+     "text": "cược lớn với bài yếu",
+     "x": 0.5,
+     "y": 0.3,
+     "at": 1,
+     "shape": "none",
+     "w": 680
+    },
+    {
+     "text": "để đối thủ bỏ cuộc",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      1,
+      "để"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 640
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "HAI CÁCH NHÌN",
+   "cards": [
+    {
+     "k": "CON NGƯỜI",
+     "v": "TÂM LÝ",
+     "at": 2
+    },
+    {
+     "k": "LIBRATUS",
+     "v": "TOÁN",
+     "at": [
+      2,
+      "Với",
+      1
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "CHỈ CƯỢC LỚN KHI BÀI MẠNH?",
+   "sub": "SẼ BỊ ĐỌC VỊ"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "TỈ LỆ ĐƯỢC TÍNH RA",
+     "at": [
+      4,
+      "Tỉ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "cược lớn khi bài yếu",
+     "at": 4,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:28709421",
+   "ms": 3,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 4
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CƯỢC LỚN BẤT THƯỜNG",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "cao thủ tưởng là sai lầm",
+     "at": [
+      5,
+      "mà"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6259147",
+   "ms": 4,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 5
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "from": 1766250,
+   "to": 1766250,
+   "prefix": "+",
+   "suffix": "",
+   "label": "PHỈNH · LIBRATUS SAU 120.000 VÁN",
+   "sub": {
+    "text": "ĐIỂM THỬ NGHIỆM · KHÔNG PHẢI TIỀN",
+    "at": [
+     6,
+     "Và"
+    ]
+   }
+  }
+ ],
+ "sources": [
+  "https://www.cmu.edu/news/stories/archives/2017/january/AI-beats-poker-pros.html",
+  "https://www.engadget.com/2017-02-10-libratus-ai-poker-winner.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "libratus": "Li-bra-tút"
+ },
+ "imgs": {}
+}

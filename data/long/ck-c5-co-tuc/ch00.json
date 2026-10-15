@@ -1,0 +1,149 @@
+{
+ "title": "Một tờ thông báo",
+ "lines": [
+  "Một buổi sáng, bạn đọc được một tờ thông báo của một công ty niêm yết.",
+  {
+   "t": "Trên đó có ba cụm chữ.",
+   "p": 1.0
+  },
+  "Cụm thứ nhất: trả cổ tức bằng tiền, tỷ lệ mười phần trăm.",
+  "Cụm thứ hai: ngày giao dịch không hưởng quyền.",
+  {
+   "t": "Cụm thứ ba: và trả thêm cổ tức bằng cổ phiếu.",
+   "p": 1.0
+  },
+  "Nhiều người mới đọc tới cụm đầu tiên đã thấy hấp dẫn.",
+  "Mười phần trăm, cao hơn cả lãi tiết kiệm.",
+  {
+   "t": "Thế chẳng phải cứ mua vào rồi nhận mười phần trăm à?",
+   "ask": 1
+  },
+  {
+   "t": "Câu trả lời nằm trong chính ba cụm chữ ấy.",
+   "p": 1.0
+  },
+  "Video này giải mã từng cụm một, bằng một cổ phiếu ví dụ giá bốn mươi nghìn đồng.",
+  {
+   "t": "Và tới cuối, bạn sẽ thấy vì sao chia cổ tức giống cắt một cái bánh, chứ không làm cái bánh to ra.",
+   "p": 1.0
+  },
+  "Đây là Biểu Đồ Biết Nói. Tiền bạc, giải thích bằng dữ liệu.",
+  "Video chỉ nhằm giáo dục, không phải lời khuyên mua hay bán, và các con số ví dụ là giả định."
+ ],
+ "scenes": [
+  {
+   "type": "broll",
+   "vid": "8731555",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MỘT TỜ THÔNG BÁO CỔ TỨC",
+     "at": [
+      0,
+      "Một"
+     ],
+     "acc": true
+    },
+    {
+     "text": "ba cụm chữ",
+     "at": 1,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "TỜ THÔNG BÁO · BA CỤM CHỮ",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "1",
+     "v": "CỔ TỨC BẰNG TIỀN · 10%",
+     "at": 2
+    },
+    {
+     "k": "2",
+     "v": "NGÀY GIAO DỊCH KHÔNG HƯỞNG QUYỀN",
+     "at": 3
+    },
+    {
+     "k": "3",
+     "v": "CỔ TỨC BẰNG CỔ PHIẾU",
+     "at": 4
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "MƯỜI PHẦN TRĂM",
+     "at": [
+      6,
+      "Mười"
+     ],
+     "acc": true
+    },
+    {
+     "text": "cao hơn cả lãi tiết kiệm?",
+     "at": [
+      6,
+      "cao"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 7,
+   "text": "Cứ mua vào\nrồi nhận 10%?"
+  },
+  {
+   "type": "broll",
+   "at": 9,
+   "vid": "5615174",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "CỔ PHIẾU VÍ DỤ · 40.000 Đ",
+     "at": 9,
+     "sm": true
+    },
+    {
+     "text": "CHIA CỔ TỨC = CẮT BÁNH",
+     "at": [
+      10,
+      "giống"
+     ],
+     "acc": true
+    },
+    {
+     "text": "không làm cái bánh to ra",
+     "at": [
+      10,
+      "chứ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "brand",
+   "at": 11,
+   "sub": "TIỀN BẠC · GIẢI THÍCH BẰNG DỮ LIỆU"
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "MỘT TỜ THÔNG BÁO"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.1
+ }
+}

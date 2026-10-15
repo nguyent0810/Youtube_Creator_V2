@@ -1,0 +1,344 @@
+{
+ "title": "Đoán chữ tiếp theo",
+ "lines": [
+  {
+   "t": "Tháng 6 năm 2017, tám nhà nghiên cứu của Google đăng một bài báo có cái tên rất tự tin: Attention Is All You Need.",
+   "p": 0.8
+  },
+  "Họ giới thiệu một kiến trúc mới, tên là Transformer.",
+  "Nói gọn là: thay vì đọc một câu lần lượt từng chữ, máy nhìn cả câu cùng lúc và tự cân xem chữ nào cần chú ý đến chữ nào.",
+  {
+   "t": "Mô hình của họ học xong trong ba ngày rưỡi, trên tám GPU.",
+   "p": 1.0
+  },
+  "Ngày 30 tháng 11 năm 2022, OpenAI mở cho mọi người dùng thử một chương trình tên là ChatGPT.",
+  "Đến giữa năm 2025, theo chính OpenAI, mỗi tuần có khoảng bảy trăm triệu người dùng nó.",
+  "Vậy khi bạn hỏi ChatGPT một câu, bên trong nó đang làm gì?",
+  {
+   "t": "Nói gọn, và đơn giản hoá: nó đoán mẩu chữ tiếp theo.",
+   "p": 1.0
+  },
+  "Rồi mẩu tiếp theo nữa.",
+  "Lặp lại hàng trăm lần, cho đến khi thành một câu trả lời.",
+  "Có nghe quen không?",
+  "Đó chính là trò chơi của Claude Shannon năm 1951. Một người đoán từng chữ cái tiếp theo của một đoạn văn lạ.",
+  {
+   "t": "Cùng một ý tưởng. Chỉ là bảy mươi năm sau, người chơi là một cỗ máy đã đọc một lượng chữ khổng lồ.",
+   "p": 1.0
+  },
+  "Còn lời đoán của Turing?",
+  "Năm 2025, hai nhà nghiên cứu ở Đại học California, San Diego, làm lại phép thử của ông, trong một nghiên cứu chưa qua bình duyệt.",
+  "Người tham gia trò chuyện năm phút, cùng lúc với một người thật và một máy, rồi đoán xem ai là người.",
+  "Mô hình GPT-4.5, được dặn đóng vai một con người, bị chọn là người bảy mươi ba phần trăm số lần, nhiều hơn cả người thật.",
+  {
+   "t": "Còn ELIZA, chương trình năm 1966, cũng được đem vào thử: hai mươi ba phần trăm.",
+   "p": 1.0
+  },
+  "Turing hẹn năm 2000. Máy tới muộn khoảng hai mươi lăm năm.",
+  "Và theo một cách mà chính ông chắc cũng không hình dung nổi.",
+  "Nhưng trong suốt bảy mươi năm ấy, không chỉ các nhà khoa học tưởng tượng về AI."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "CHƯƠNG SÁU",
+   "title": "ĐOÁN CHỮ\nTIẾP THEO",
+   "sub": "2017 — 2025",
+   "vid": "38081600",
+   "titleAt": [
+    0,
+    "Tháng"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "TRANSFORMER",
+     "at": [
+      1,
+      "Transformer."
+     ],
+     "acc": true
+    },
+    {
+     "text": "“Attention Is All You Need” · 2017",
+     "at": [
+      1,
+      "Họ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "NHÌN CẢ CÂU CÙNG LÚC",
+     "at": [
+      2,
+      "cả"
+     ]
+    },
+    {
+     "text": "CHỮ NÀO CHÚ Ý ĐẾN CHỮ NÀO",
+     "at": [
+      2,
+      "chú"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "3,5 NGÀY · 8 GPU",
+     "at": [
+      3,
+      "ba"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 4,
+   "day": "OPENAI · CHATGPT",
+   "date": "30.11.2022",
+   "sub": {
+    "text": "MỞ CHO MỌI NGƯỜI DÙNG THỬ",
+    "at": [
+     4,
+     "dùng"
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "vid": "6963823",
+   "from": 0,
+   "to": 700000000,
+   "prefix": "≈ ",
+   "countAt": [
+    5,
+    "mỗi"
+   ],
+   "label": "NGƯỜI DÙNG MỖI TUẦN",
+   "sub": {
+    "text": "GIỮA 2025 · THEO OPENAI",
+    "at": [
+     5,
+     "OpenAI,"
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "at": 6,
+   "text": "Bên trong nó đang làm gì?"
+  },
+  {
+   "type": "chat",
+   "at": 7,
+   "head": "MÔ PHỎNG · ĐOÁN MẨU CHỮ TIẾP THEO",
+   "stream": true,
+   "msgs": [
+    {
+     "who": "u",
+     "text": "Mùa hè năm 1956 ở Dartmouth có gì đặc biệt?",
+     "at": [
+      7,
+      "Nói"
+     ]
+    },
+    {
+     "who": "m",
+     "text": "Mùa hè năm ấy, một nhóm nhà khoa học gặp nhau để bàn về cách làm cho máy biết suy nghĩ…",
+     "at": [
+      7,
+      "đoán"
+     ],
+     "dur": 4.5
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 10,
+   "text": "Có nghe quen không?"
+  },
+  {
+   "type": "guess",
+   "at": 11,
+   "text": "THE ROOM WAS NOT VERY LIGHT",
+   "startAt": [
+    11,
+    "đoán"
+   ],
+   "until": [
+    11,
+    "lạ."
+   ],
+   "statAt": [
+    12,
+    "bảy"
+   ],
+   "right": 89,
+   "total": 129,
+   "label": {
+    "k": "SHANNON · 1951 → 2022",
+    "at": [
+     11,
+     "Shannon"
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "at": 13,
+   "bg": "turing",
+   "text": "Còn lời đoán của Turing?"
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "PHÉP THỬ TURING · 2025",
+     "at": [
+      14,
+      "phép"
+     ],
+     "acc": true
+    },
+    {
+     "text": "UC San Diego · nghiên cứu chưa bình duyệt",
+     "at": [
+      14,
+      "bình"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "chat",
+   "at": 15,
+   "head": "MÔ PHỎNG · PHÉP THỬ 5 PHÚT",
+   "msgs": [
+    {
+     "who": "u",
+     "text": "Bạn là người thật chứ?",
+     "at": [
+      15,
+      "trò"
+     ]
+    },
+    {
+     "who": "m",
+     "text": "TẤT NHIÊN RỒI :)",
+     "at": [
+      15,
+      "người"
+     ]
+    },
+    {
+     "who": "u",
+     "text": "Ai trong hai người là máy?",
+     "at": [
+      15,
+      "đoán"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 16,
+   "title": "BỊ CHỌN LÀ “NGƯỜI”",
+   "unit": "%",
+   "items": [
+    {
+     "k": "GPT-4.5 (ĐÓNG VAI NGƯỜI)",
+     "v": 73,
+     "at": [
+      16,
+      "bảy"
+     ],
+     "acc": true
+    },
+    {
+     "k": "ELIZA (1966)",
+     "v": 23,
+     "at": [
+      17,
+      "hai"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 18,
+   "items": [
+    {
+     "year": "TURING HẸN",
+     "text": "2000",
+     "at": [
+      18,
+      "2000."
+     ]
+    },
+    {
+     "year": "MÁY TỚI",
+     "text": "≈ 2025",
+     "at": [
+      18,
+      "muộn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 20,
+   "vid": "34719182",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "KHÔNG CHỈ CÁC NHÀ KHOA HỌC",
+     "at": [
+      20,
+      "khoa"
+     ]
+    },
+    {
+     "text": "TƯỞNG TƯỢNG VỀ AI",
+     "at": [
+      20,
+      "tưởng"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 06",
+  "t": "ĐOÁN CHỮ TIẾP THEO"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.12
+ }
+}

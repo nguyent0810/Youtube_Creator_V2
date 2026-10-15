@@ -1,0 +1,194 @@
+{
+ "title": "Toronto?????",
+ "lines": [
+  "Ngày mười lăm tháng hai năm hai nghìn không trăm mười một, trên một kênh truyền hình Mỹ.",
+  "Ba người chơi đứng sau ba cái bục.",
+  "Hai người là những nhà vô địch đố vui giỏi nhất trong lịch sử chương trình.",
+  {
+   "t": "Người thứ ba không phải người.",
+   "p": 1.0
+  },
+  "Câu hỏi cuối của ván đấu thuộc chủ đề các thành phố của nước Mỹ.",
+  "Nó đại ý thế này.",
+  {
+   "t": "Sân bay lớn nhất của thành phố này mang tên một người hùng thời Thế chiến thứ hai. Sân bay lớn thứ hai mang tên một trận đánh trong cuộc chiến ấy.",
+   "p": 1.0
+  },
+  "Đáp án đúng là Chicago.",
+  "Cỗ máy viết: Toronto.",
+  {
+   "t": "Kèm theo một chuỗi dấu hỏi.",
+   "p": 1.0
+  },
+  "Toronto không ở nước Mỹ. Nó ở Canada.",
+  "Hàng triệu khán giả bật cười.",
+  {
+   "t": "Vậy mà cuối ba ngày thi, chính cỗ máy ấy thắng, với số tiền gấp hơn ba lần người về nhì.",
+   "p": 1.0
+  },
+  "Cỗ máy tên là Watson, của hãng IBM.",
+  "Và chuỗi dấu hỏi kia, hoá ra là chi tiết quan trọng nhất của cả câu chuyện.",
+  {
+   "t": "Nó là cách cỗ máy nói: tôi không chắc.",
+   "p": 1.0
+  },
+  "Trên màn hình của Watson, khán giả thấy ba đáp án hàng đầu, mỗi đáp án kèm một thanh độ tự tin.",
+  "Video này cũng đi qua ba thanh như thế.",
+  "Máy hiểu một câu hỏi bằng cách nào.",
+  "Máy biết mình chắc chắn tới đâu.",
+  "Và độ tự tin ấy có mang ra đời thật được không."
+ ],
+ "scenes": [
+  {
+   "type": "broll",
+   "vid": "1534965",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH CHƯƠNG TRÌNH",
+   "kin": [
+    {
+     "text": "15.02.2011 · TRUYỀN HÌNH MỸ",
+     "at": [
+      0,
+      "Ngày"
+     ],
+     "sm": true
+    },
+    {
+     "text": "BA NGƯỜI CHƠI · BA CÁI BỤC",
+     "at": [
+      1,
+      "Ba"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "BA NGƯỜI CHƠI",
+   "rows": [
+    {
+     "k": "HAI NGƯỜI",
+     "v": "NHÀ VÔ ĐỊCH GIỎI NHẤT",
+     "at": 2
+    },
+    {
+     "k": "NGƯỜI THỨ BA",
+     "v": "KHÔNG PHẢI NGƯỜI",
+     "at": 3
+    }
+   ]
+  },
+  {
+   "type": "source",
+   "at": 4,
+   "source": "CÂU HỎI CUỐI · CHỦ ĐỀ: CÁC THÀNH PHỐ CỦA NƯỚC MỸ",
+   "ref": "GỢI Ý (DIỄN Ý)",
+   "snippet": "Sân bay lớn nhất mang tên [[một người hùng]] Thế chiến II; sân bay lớn thứ hai mang tên [[một trận đánh]]",
+   "hlAt": [
+    6,
+    "người"
+   ],
+   "seal": "ĐÁP ÁN ĐÚNG: CHICAGO",
+   "sealAt": 7
+  },
+  {
+   "type": "myth",
+   "at": 8,
+   "mythLab": "CỖ MÁY VIẾT",
+   "myth": "TORONTO?????",
+   "truthLab": "TORONTO Ở ĐÂU?",
+   "truth": "CANADA, KHÔNG PHẢI MỸ",
+   "strikeAt": [
+    10,
+    "Toronto"
+   ],
+   "truthAt": [
+    10,
+    "Nó"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "HÀNG TRIỆU KHÁN GIẢ BẬT CƯỜI",
+     "at": 11,
+     "sm": true
+    },
+    {
+     "text": "VẬY MÀ CỖ MÁY THẮNG",
+     "at": [
+      12,
+      "chính"
+     ],
+     "acc": true
+    },
+    {
+     "text": "gấp hơn ba lần người về nhì",
+     "at": [
+      12,
+      "gấp"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 13,
+   "vid": "5028622",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH CHƯƠNG TRÌNH",
+   "kin": [
+    {
+     "text": "WATSON · IBM",
+     "at": 13,
+     "acc": true
+    },
+    {
+     "text": "chuỗi dấu hỏi = “tôi không chắc”",
+     "at": 15,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 16,
+   "title": "BA ĐÁP ÁN HÀNG ĐẦU · BA THANH ĐỘ TỰ TIN",
+   "unit": "MINH HOẠ CÁCH WATSON HIỆN ĐÁP ÁN · KHÔNG PHẢI SỐ ĐO THẬT",
+   "items": [
+    {
+     "k": "1 · MÁY HIỂU CÂU HỎI THẾ NÀO",
+     "v": 90,
+     "lbl": "?",
+     "at": 18,
+     "acc": true
+    },
+    {
+     "k": "2 · MÁY CHẮC TỚI ĐÂU",
+     "v": 60,
+     "lbl": "?",
+     "at": 19
+    },
+    {
+     "k": "3 · RA ĐỜI THẬT ĐƯỢC KHÔNG",
+     "v": 30,
+     "lbl": "?",
+     "at": 20
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "TORONTO?????"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

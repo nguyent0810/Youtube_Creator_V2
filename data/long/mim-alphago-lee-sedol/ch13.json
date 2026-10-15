@@ -1,0 +1,140 @@
+{
+ "title": "Lời chia tay",
+ "lines": [
+  {
+   "t": "Ngày 19 tháng 11 năm 2019, Lee Sedol tuyên bố giải nghệ.",
+   "p": 0.8
+  },
+  {
+   "t": "Ông ba mươi sáu tuổi. Đã hai mươi bốn năm làm kỳ thủ chuyên nghiệp.",
+   "p": 1.0
+  },
+  "Khi được hỏi lý do, ông nhắc tới trí tuệ nhân tạo.",
+  {
+   "t": "Dù tôi có trở thành số một, vẫn có một thực thể không thể bị đánh bại.",
+   "q": 1,
+   "tr": 1
+  },
+  "Nói cho đủ, đó không phải lý do duy nhất.",
+  {
+   "t": "Lúc ấy, ông còn có mâu thuẫn với hiệp hội cờ vây Hàn Quốc.",
+   "p": 1.0
+  },
+  "Tháng 12 năm ấy, ông đánh ba ván chia tay.",
+  "Đối thủ lại là một cỗ máy, lần này do một công ty Hàn Quốc làm ra.",
+  "Ván đầu, được chấp hai quân, ông thắng.",
+  {
+   "t": "Hai ván sau, ông thua.",
+   "p": 1.0
+  },
+  "Ván cuối cùng trong sự nghiệp của ông diễn ra ở quê nhà.",
+  "Trên chính vùng đảo nơi ông lớn lên."
+ ],
+ "scenes": [
+  {
+   "type": "date",
+   "day": "LEE SEDOL TUYÊN BỐ GIẢI NGHỆ",
+   "date": "19.11.2019"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "36 TUỔI",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "24 năm làm kỳ thủ chuyên nghiệp",
+     "at": [
+      1,
+      "Đã"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 2,
+   "text": "Dù tôi có trở thành số một, vẫn có một thực thể không thể bị đánh bại.",
+   "qline": 3,
+   "by": "LEE SEDOL · TRÍCH DỊCH · YONHAP, 11.2019"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "KHÔNG PHẢI LÝ DO DUY NHẤT",
+     "at": 4,
+     "acc": true
+    },
+    {
+     "text": "còn mâu thuẫn với hiệp hội cờ vây",
+     "at": 5,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 6,
+   "title": "BA VÁN CHIA TAY · 12.2019",
+   "rows": [
+    {
+     "k": "ĐỐI THỦ",
+     "v": "LẠI LÀ MỘT CỖ MÁY",
+     "at": 7
+    },
+    {
+     "k": "VÁN 1 · CHẤP 2 QUÂN",
+     "v": "ÔNG THẮNG",
+     "at": 8
+    }
+   ],
+   "total": {
+    "k": "HAI VÁN SAU",
+    "v": "ÔNG THUA",
+    "at": 9
+   }
+  },
+  {
+   "type": "broll",
+   "at": 10,
+   "vid": "6034203",
+   "ms": 14,
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU",
+   "kin": [
+    {
+     "text": "VÁN CUỐI CÙNG",
+     "at": 10,
+     "sm": true
+    },
+    {
+     "text": "Ở QUÊ NHÀ",
+     "at": [
+      10,
+      "ở"
+     ],
+     "acc": true
+    },
+    {
+     "text": "vùng đảo nơi ông lớn lên",
+     "at": 11,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 13",
+  "t": "LỜI CHIA TAY"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

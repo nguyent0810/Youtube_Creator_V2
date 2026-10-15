@@ -1,0 +1,211 @@
+{
+ "theme": "ck",
+ "title": "Lãi kép chạy ngược: khoản nợ 30 triệu thành hơn 100 triệu sau 5 năm (ví dụ 25%/năm)",
+ "description": "VÍ DỤ GIẢ ĐỊNH: một khoản nợ 30 triệu đồng, lãi 25%/năm, lãi nhập gốc hằng tháng và không trả đồng nào → sau 1 năm hơn 38 triệu, sau 3 năm khoảng 63 triệu, sau 5 năm hơn 100 triệu. Mức 25%/năm chỉ để minh hoạ phép tính, không gán cho loại vay hay tổ chức nào. Lãi kép chỉ là một phép nhân: bạn gửi tiền thì nó nhân cho bạn, bạn nợ tiền thì nó nhân cho người cho vay.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.",
+ "tags": [
+  "lãi kép",
+  "nợ lãi cao",
+  "lãi chồng lãi",
+  "trả nợ",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "kicker": "1 CẢNH BÁO",
+ "sub": "LÃI KÉP · NỢ",
+ "acc": [
+  "ngược",
+  "nợ",
+  "trăm",
+  "ba",
+  "nhân"
+ ],
+ "lines": [
+  "Lãi kép không đứng về phía ai cả.",
+  "Nó chỉ là một phép nhân. Bạn gửi tiền, nó nhân cho bạn.",
+  "Bạn nợ tiền, nó nhân cho người cho vay.",
+  "Ví dụ giả định. Một khoản nợ ba mươi triệu, lãi hai mươi lăm phần trăm một năm, không trả.",
+  "Sau một năm, hơn ba mươi tám triệu. Sau ba năm, sáu mươi ba triệu.",
+  "Sau năm năm, hơn một trăm triệu. Gấp hơn ba lần.",
+  "Cùng một quả cầu tuyết. Lần này, nó lăn về phía bạn."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "LÃI KÉP",
+     "at": 0.0
+    },
+    {
+     "text": "KHÔNG ĐỨNG VỀ PHÍA AI",
+     "at": [
+      0,
+      "không"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7710747",
+   "ms": 4,
+   "veil": 0.58
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "CHỈ LÀ MỘT PHÉP NHÂN",
+   "cards": [
+    {
+     "k": "BẠN GỬI TIỀN",
+     "v": "NÓ NHÂN CHO BẠN",
+     "at": [
+      1,
+      "Bạn"
+     ]
+    },
+    {
+     "k": "BẠN NỢ TIỀN",
+     "v": "NÓ NHÂN CHO NGƯỜI CHO VAY",
+     "at": [
+      2,
+      "nó"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "VÍ DỤ GIẢ ĐỊNH",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "NỢ 30 TRIỆU · LÃI 25%/NĂM",
+     "at": [
+      3,
+      "Một"
+     ],
+     "acc": true
+    },
+    {
+     "text": "không trả đồng nào",
+     "at": [
+      3,
+      "không"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6964003",
+   "ms": 6,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 3
+  },
+  {
+   "type": "chart",
+   "at": 4,
+   "kind": "bars",
+   "title": "KHOẢN NỢ LỚN DẦN",
+   "unit": "TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH · KHÔNG GÁN CHO LOẠI VAY NÀO",
+   "bars": [
+    {
+     "label": "BAN\nĐẦU",
+     "v": 30,
+     "text": "30",
+     "c": "dim",
+     "at": [
+      4,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "label": "SAU\n1 NĂM",
+     "v": 38.4,
+     "text": "> 38",
+     "c": "ref",
+     "at": [
+      4,
+      "hơn"
+     ]
+    },
+    {
+     "label": "SAU\n3 NĂM",
+     "v": 63,
+     "text": "63",
+     "c": "ref",
+     "at": [
+      4,
+      "sáu"
+     ]
+    },
+    {
+     "label": "SAU\n5 NĂM",
+     "v": 103.4,
+     "text": "> 100",
+     "c": "down",
+     "at": [
+      5,
+      "hơn"
+     ]
+    }
+   ],
+   "note": "LÃI 25%/NĂM NHẬP GỐC HẰNG THÁNG · KHÔNG TRẢ"
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Cùng một quả cầu tuyết",
+   "nodes": [
+    {
+     "text": "lần này",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      6,
+      "Lần"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "nó lăn về phía bạn",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "nó"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 700
+    }
+   ],
+   "note": "GIÁO DỤC · KHÔNG PHẢI KHUYẾN NGHỊ"
+  }
+ ],
+ "sources": [
+  "https://topi.vn/ty-le-lam-phat-o-viet-nam-qua-cac-nam.html",
+  "https://baoquangninh.vn/cpi-binh-quan-nam-2024-tang-3-63-dat-muc-tieu-quoc-hoi-de-ra-3338442.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

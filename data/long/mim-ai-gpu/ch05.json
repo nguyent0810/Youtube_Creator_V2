@@ -1,0 +1,352 @@
+{
+ "title": "Lời giải",
+ "lines": [
+  {
+   "t": "Năm 2006, giáo sư Lý Phi Phi, Fei-Fei Li, bắt đầu một dự án mà nhiều đồng nghiệp cho là quá sức.",
+   "p": 0.8
+  },
+  "Gom ảnh từ Internet cho mọi danh từ trong tiếng Anh, rồi nhờ người gọi tên từng ảnh.",
+  "Năm 2009, bộ dữ liệu ấy hoàn thành, mang tên ImageNet.",
+  {
+   "t": "Cuộc thi ở đầu video được dựng trên chính bộ ảnh này.",
+   "p": 1.0
+  },
+  "Thế là năm 2012, ba thứ gặp nhau trong một căn phòng ngủ ở Toronto.",
+  "Dữ liệu từ ImageNet.",
+  "Một thuật toán mà thầy của Alex, giáo sư Geoffrey Hinton, đã theo đuổi mấy chục năm.",
+  {
+   "t": "Và hai chiếc card chơi game, chạy bằng CUDA.",
+   "p": 1.0
+  },
+  "Có một chi tiết trong bài báo của nhóm mà mình rất thích.",
+  "Mỗi chiếc card chỉ có ba gigabyte bộ nhớ, không chứa nổi cả mạng nơ-ron.",
+  "Thế là Alex cắt đôi mạng của mình.",
+  "Một nửa nằm trên card thứ nhất, nửa kia nằm trên card thứ hai, và hai nửa chỉ trao đổi với nhau ở vài tầng nhất định.",
+  {
+   "t": "Cỗ máy thắng cuộc thi, theo đúng nghĩa đen, có hai bán cầu.",
+   "p": 1.0
+  },
+  {
+   "t": "Suốt hơn một năm, Alex chỉnh từng thông số rồi dạy lại, chỉnh rồi dạy lại, cho tới khi cỗ máy vượt mọi đối thủ.",
+   "p": 1.0
+  },
+  "Đến đây, câu hỏi của video đã có lời giải.",
+  "Con chip sinh ra để vẽ game hợp với trí tuệ nhân tạo, không phải vì nó thông minh.",
+  "Mà vì vẽ một khung hình và dạy một mạng nơ-ron, hoá ra, là cùng một kiểu việc.",
+  "Hàng triệu phép tính nhỏ, giống hệt nhau, làm cùng một lúc.",
+  {
+   "t": "Điểm ảnh và trọng số, với con chip, chỉ là những con số.",
+   "p": 1.0
+  },
+  "Mạng nơ-ron của Alex về sau được gọi theo tên anh: AlexNet.",
+  "Năm 2024, giáo sư Hinton nhận giải Nobel Vật lý.",
+  "Năm 2025, khi Bảo tàng Lịch sử Máy tính ở Mỹ công bố mã nguồn của AlexNet, ông tóm tắt dự án bằng một câu.",
+  {
+   "t": "Ilya nghĩ chúng tôi nên làm, Alex làm cho nó chạy được, còn tôi thì nhận giải Nobel.",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Ilya ở đây là Ilya Sutskever, nghiên cứu sinh thứ hai trong nhóm.",
+  "Và chỉ vài tháng sau cuộc thi, ba người ấy trở thành món hàng đắt giá nhất của ngành công nghệ."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "CHƯƠNG NĂM",
+   "title": "LỜI GIẢI",
+   "sub": "IMAGENET · ALEXNET · 2012",
+   "vid": "5028622",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "năm"
+   ]
+  },
+  {
+   "type": "print",
+   "at": [
+    0,
+    "bắt"
+   ],
+   "img": "feifei",
+   "side": {
+    "k": "2006",
+    "h": "FEI-FEI LI",
+    "hAt": [
+     0,
+     "bắt"
+    ],
+    "lines": [
+     {
+      "text": "ảnh cho mọi danh từ tiếng Anh",
+      "at": 1
+     },
+     {
+      "text": "người gọi tên từng ảnh",
+      "at": [
+       1,
+       "nhờ"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "date",
+   "at": 2,
+   "day": "IMAGENET HOÀN THÀNH",
+   "date": "2009"
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "BA THỨ GẶP NHAU · 2012",
+   "rows": [
+    {
+     "k": "1",
+     "v": "DỮ LIỆU · IMAGENET",
+     "at": 5
+    },
+    {
+     "k": "2",
+     "v": "THUẬT TOÁN · HINTON",
+     "at": 6
+    },
+    {
+     "k": "3",
+     "v": "2 CARD GAME · CUDA",
+     "at": 7
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "3 GB",
+     "at": 9,
+     "acc": true
+    },
+    {
+     "text": "không chứa nổi cả mạng",
+     "at": [
+      9,
+      "không"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "CẮT ĐÔI",
+     "at": 10,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "NỬA TRÁI · CARD 1",
+     "at": 11
+    },
+    {
+     "text": "NỬA PHẢI · CARD 2",
+     "at": [
+      11,
+      "kia"
+     ]
+    },
+    {
+     "text": "chỉ nói chuyện ở vài tầng",
+     "at": [
+      11,
+      "trao"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 12,
+   "text": "HAI BÁN CẦU",
+   "sub": "KRIZHEVSKY, SUTSKEVER, HINTON · NEURIPS 2012 · §3.2"
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "> 1 NĂM",
+     "at": 13,
+     "acc": true
+    },
+    {
+     "text": "chỉnh → dạy lại → chỉnh → dạy lại",
+     "at": [
+      13,
+      "chỉnh"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 14,
+   "text": "Vậy lời giải\nlà gì?"
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "THÔNG MINH",
+     "at": [
+      15,
+      "thông"
+     ],
+     "fx": "strike",
+     "strikeAt": [
+      16,
+      "mà"
+     ]
+    },
+    {
+     "text": "CÙNG MỘT KIỂU VIỆC",
+     "at": [
+      16,
+      "cùng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "VẼ KHUNG HÌNH = DẠY MẠNG NƠ-RON",
+     "at": 17,
+     "acc": true
+    },
+    {
+     "text": "hàng triệu phép tính nhỏ, làm cùng lúc",
+     "at": [
+      17,
+      "hàng"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 18,
+   "text": "ĐIỂM ẢNH = TRỌNG SỐ",
+   "sub": "VỚI CON CHIP, CHỈ LÀ NHỮNG CON SỐ"
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "items": [
+    {
+     "text": "ALEXNET",
+     "at": [
+      19,
+      "alexnet"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": 20,
+   "img": "hinton",
+   "side": {
+    "k": "2024",
+    "h": "NOBEL VẬT LÝ",
+    "hAt": 20,
+    "lines": [
+     {
+      "text": "Geoffrey Hinton",
+      "at": 20
+     },
+     {
+      "text": "2025: CHM công bố mã nguồn AlexNet",
+      "at": 21
+     }
+    ]
+   }
+  },
+  {
+   "type": "quote",
+   "at": 22,
+   "text": "Ilya thought we should do it, Alex made it work, and I got the Nobel prize.",
+   "by": "GEOFFREY HINTON · BẢO TÀNG LỊCH SỬ MÁY TÍNH (CHM) · IEEE SPECTRUM 03.2025",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 22
+  },
+  {
+   "type": "print",
+   "at": 23,
+   "img": "sutskever",
+   "side": {
+    "k": "NHÓM ALEXNET",
+    "h": "ILYA SUTSKEVER",
+    "hAt": [
+     23,
+     "ilya"
+    ],
+    "lines": [
+     {
+      "text": "nghiên cứu sinh thứ hai",
+      "at": [
+       23,
+       "nghiên"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 24,
+   "items": [
+    {
+     "text": "VÀI THÁNG SAU",
+     "at": 24,
+     "sm": true
+    },
+    {
+     "text": "MÓN HÀNG ĐẮT GIÁ NHẤT",
+     "at": [
+      24,
+      "món"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "LỜI GIẢI"
+ },
+ "bgm": {
+  "mood": "warm",
+  "gain": 0.12
+ }
+}

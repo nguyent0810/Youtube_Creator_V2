@@ -1,0 +1,160 @@
+{
+ "title": "Ô thứ hai: mấy tháng?",
+ "lines": [
+  {
+   "t": "Con số bạn hay nghe nhất là ba tới sáu tháng.",
+   "p": 0.8
+  },
+  "Đó là một quy tắc kinh nghiệm phổ biến trong tài chính cá nhân.",
+  {
+   "t": "Không phải một định luật.",
+   "p": 1.0
+  },
+  "Vậy ba hay sáu?",
+  "Hãy nghĩ về nó như độ dày của một tấm đệm.",
+  {
+   "t": "Tấm đệm cần dày bao nhiêu, tuỳ bạn có thể rơi từ độ cao nào.",
+   "p": 1.0
+  },
+  "Thu nhập của bạn đều đặn, nhà có hai người cùng đi làm?",
+  "Tấm đệm có thể mỏng hơn.",
+  "Thu nhập thất thường, một mình nuôi cả nhà, hay có người thân đang ốm?",
+  {
+   "t": "Tấm đệm cần dày hơn.",
+   "p": 1.0
+  },
+  "Với An, mình lấy mức ba tháng làm đích đầu tiên.",
+  "Tám triệu nhân ba, là hai mươi tư triệu.",
+  {
+   "t": "Và sáu tháng là bốn mươi tám triệu.",
+   "p": 1.0
+  },
+  "Nhìn con số ấy, nhiều người nản ngay.",
+  "Bạn không phải người duy nhất.",
+  "Một khảo sát người tiêu dùng năm hai nghìn không trăm hai mươi lăm hỏi một nghìn người Việt.",
+  "Chưa tới một nửa có khoản dự phòng đủ cho hơn ba tháng chi tiêu.",
+  {
+   "t": "Và khoảng năm phần trăm không có khoản dự phòng hay bảo hiểm nào.",
+   "p": 1.0
+  },
+  "Nên câu hỏi thật sự không phải là cần bao nhiêu.",
+  "Mà là: từ số không, đi tới đó bằng cách nào?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "Ô THỨ HAI",
+   "title": "MẤY THÁNG?",
+   "sub": "3 – 6 THÁNG: QUY TẮC, KHÔNG PHẢI ĐỊNH LUẬT",
+   "vid": "6997938",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "ba"
+   ]
+  },
+  {
+   "type": "units",
+   "at": 1,
+   "title": "QUY TẮC KINH NGHIỆM: 3 TỚI 6 THÁNG CHI TIÊU THIẾT YẾU",
+   "total": 6,
+   "cols": 6,
+   "lit": 3,
+   "litAt": [
+    1,
+    "một"
+   ],
+   "unitLabel": "THÁNG · MỨC ĐẦU TIÊN"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "BA HAY SÁU?",
+     "at": 3,
+     "acc": true
+    },
+    {
+     "text": "hãy nghĩ như độ dày của một tấm đệm",
+     "at": 4,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 6,
+   "title": "TẤM ĐỆM DÀY BAO NHIÊU?",
+   "rows": [
+    {
+     "k": "THU NHẬP ĐỀU · HAI NGƯỜI ĐI LÀM",
+     "v": "CÓ THỂ MỎNG HƠN",
+     "at": 7
+    },
+    {
+     "k": "THU NHẬP THẤT THƯỜNG · MỘT MÌNH NUÔI NHÀ",
+     "v": "CẦN DÀY HƠN",
+     "at": 9
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 10,
+   "title": "ĐÍCH CỦA AN (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · AN LÀ NHÂN VẬT GIẢ ĐỊNH · THIẾT YẾU 8 TRIỆU/THÁNG",
+   "items": [
+    {
+     "k": "3 THÁNG",
+     "v": 24,
+     "lbl": "24",
+     "at": [
+      11,
+      "hai"
+     ],
+     "acc": true
+    },
+    {
+     "k": "6 THÁNG",
+     "v": 48,
+     "lbl": "48",
+     "at": [
+      12,
+      "bốn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "source",
+   "at": 13,
+   "source": "KHẢO SÁT NGƯỜI TIÊU DÙNG · 2025 · 1.000 NGƯỜI VIỆT",
+   "ref": "CÓ DỰ PHÒNG ĐỦ HƠN 3 THÁNG CHI TIÊU",
+   "snippet": "[[chưa tới một nửa]] · khoảng 5% không có dự phòng hay bảo hiểm nào",
+   "hlAt": [
+    16,
+    "Chưa"
+   ],
+   "seal": "QUA BÁO CHÍ · 11/2025",
+   "sealAt": [
+    17,
+    "khoảng"
+   ]
+  },
+  {
+   "type": "question",
+   "at": 18,
+   "text": "Từ số 0, đi tới đó\nbằng cách nào?"
+  }
+ ],
+ "hud": {
+  "k": "Ô 02",
+  "t": "MẤY THÁNG?"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

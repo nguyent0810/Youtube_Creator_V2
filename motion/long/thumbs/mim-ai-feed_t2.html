@@ -1,0 +1,33 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700;800;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#02050a}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;color:#fff}
+.grid{position:absolute;inset:0;background:linear-gradient(rgba(125,211,252,.07) 1px,transparent 1px) 0 0/64px 64px,linear-gradient(90deg,rgba(125,211,252,.07) 1px,transparent 1px) 0 0/64px 64px}
+.glow{position:absolute;border-radius:50%;filter:blur(120px)}
+.big{position:absolute;font-weight:900;line-height:1.02;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.cy{color:#22d3ee;text-shadow:0 0 50px rgba(34,211,238,.75),0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.stars{position:absolute;left:110px;top:120px;display:flex;gap:18px}
+.strike{position:absolute;left:90px;top:225px;width:880px;height:22px;background:#e11d48;transform:rotate(-8deg);box-shadow:0 0 30px rgba(225,29,72,.7),0 0 0 6px #000}
+.thumb{position:absolute;left:250px;top:380px;filter:drop-shadow(0 0 60px rgba(34,211,238,.7)) drop-shadow(0 20px 40px #000)}
+</style></head><body>
+<!-- T2: 5 ngôi sao bị gạch (Netflix Prize: chấm sao) -> ngón tay cái cyan (hành vi); chữ "1 TRIỆU ĐÔ / ĐOÁN SAO" -->
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<div class="grid"></div>
+<div class="glow" style="left:150px;top:350px;width:700px;height:650px;background:rgba(34,211,238,.32)"></div>
+<div class="glow" style="left:100px;top:40px;width:900px;height:300px;background:rgba(250,204,21,.18)"></div>
+<div class="stars">
+  <svg width="160" height="160" viewBox="0 0 24 24"><path fill="#facc15" stroke="#000" stroke-width=".8" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+  <svg width="160" height="160" viewBox="0 0 24 24"><path fill="#facc15" stroke="#000" stroke-width=".8" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+  <svg width="160" height="160" viewBox="0 0 24 24"><path fill="#facc15" stroke="#000" stroke-width=".8" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+  <svg width="160" height="160" viewBox="0 0 24 24"><path fill="#facc15" stroke="#000" stroke-width=".8" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+  <svg width="160" height="160" viewBox="0 0 24 24"><path fill="#475569" stroke="#000" stroke-width=".8" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+</div>
+<div class="strike"></div>
+<svg class="thumb" width="560" height="560" viewBox="0 0 24 24"><path fill="#22d3ee" stroke="#02050a" stroke-width=".5" d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg>
+<div class="big" style="left:1040px;top:260px;font-size:175px">1 TRIỆU ĐÔ</div>
+<div class="big cy" style="left:1040px;top:500px;font-size:230px">ĐỂ ĐOÁN</div>
+<div class="big" style="left:1040px;top:760px;font-size:120px">MẤY SAO?</div>
+</div>
+<script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

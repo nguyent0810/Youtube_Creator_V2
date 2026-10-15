@@ -1,0 +1,433 @@
+{
+ "title": "Khoản vay, và cú nhảy năm thứ ba",
+ "lines": [
+  {
+   "t": "Giờ sang cánh cửa bên trái.",
+   "p": 0.8
+  },
+  "Căn hai tỷ rưỡi, hai vợ chồng trả trước một tỷ, là tiền tích luỹ, có khi thêm gia đình góp.",
+  "Một tỷ rưỡi còn lại, họ vay ngân hàng trong hai mươi lăm năm.",
+  "Tháng chín năm nay, lãi vay mua nhà thường được cố định trong một tới hai năm đầu.",
+  "Một khảo sát ở mười một ngân hàng cho mức phổ biến khoảng mười một phần trăm một năm.",
+  "Hết thời gian ấy, khoản vay chuyển sang lãi thả nổi.",
+  "Lãi thả nổi thường bằng lãi suất cơ sở của ngân hàng, cộng một khoản biên độ ghi trong hợp đồng.",
+  "Biên độ ấy hiện vào khoảng ba phẩy ba tới ba phẩy năm điểm phần trăm.",
+  {
+   "t": "Theo một khảo sát quý hai, mức thực trả sau ưu đãi là khoảng mười ba tới mười lăm phần trăm.",
+   "p": 1.0
+  },
+  "Thử tính với một kiểu trả hay gặp: gốc chia đều mỗi tháng, lãi tính trên số nợ còn lại.",
+  "Một tỷ rưỡi chia cho ba trăm tháng, gốc mỗi tháng là năm triệu.",
+  "Tháng đầu tiên, lãi mười một phần trăm là khoảng mười ba triệu bảy trăm năm mươi nghìn.",
+  "Cộng lại gần mười chín triệu, tức hơn sáu phần mười thu nhập của hai vợ chồng.",
+  "Mỗi tháng sau, nợ giảm đi một chút, nên khoản trả cũng nhẹ đi một chút.",
+  {
+   "t": "Tới tháng thứ hai mươi tư, còn khoảng mười bảy triệu bảy.",
+   "p": 1.0
+  },
+  "Rồi tháng thứ hai mươi lăm, ưu đãi hết. Giả sử lãi lên mười bốn phần trăm.",
+  "Khoản trả nhảy lên khoảng hai mươi mốt triệu một trăm nghìn.",
+  "Chỉ qua một tháng, mỗi kỳ phải trả thêm hơn ba triệu bốn, tức tăng gần một phần năm.",
+  {
+   "t": "Lúc này, bảy phần mười thu nhập đi thẳng vào ngân hàng.",
+   "p": 1.0
+  },
+  {
+   "t": "Đã ký hợp đồng rồi, sao lãi vẫn nhảy được?",
+   "ask": 1
+  },
+  "Vì phần thả nổi đi theo lãi suất cơ sở, mà lãi cơ sở do ngân hàng điều chỉnh theo từng kỳ.",
+  "Nó có thể lên, cũng có thể xuống.",
+  "Năm ngoái, nhiều gói ưu đãi chỉ khoảng năm phẩy năm tới sáu phẩy bảy phần trăm.",
+  "Năm nay, mức ưu đãi đã cao hơn vài điểm phần trăm.",
+  "Một chi tiết nữa: riêng hai năm đầu, nhà bên trái trả khoảng ba trăm mười bảy triệu tiền lãi.",
+  "Cũng hai năm ấy, nhà bên phải trả tổng cộng khoảng một trăm năm mươi tư triệu tiền thuê.",
+  "Nhưng khoan kết luận, vì tiền lãi chưa phải toàn bộ câu chuyện."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "KHOẢN VAY,\nVÀ CÚ NHẢY NĂM THỨ BA",
+   "sub": "CÁNH CỬA BÊN TRÁI · MUA",
+   "vid": "8293504",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Giờ"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "CÁNH CỬA TRÁI · MUA",
+   "illus": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "rows": [
+    {
+     "k": "GIÁ CĂN",
+     "v": "2,5 TỶ",
+     "at": [
+      1,
+      "Căn"
+     ]
+    },
+    {
+     "k": "TRẢ TRƯỚC",
+     "v": "1 TỶ (40%)",
+     "at": [
+      1,
+      "trả"
+     ]
+    }
+   ],
+   "total": {
+    "k": "VAY · 25 NĂM",
+    "v": "1,5 TỶ",
+    "at": [
+     2,
+     "vay"
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "LÃI VAY MUA NHÀ · 09/2026",
+   "rows": [
+    {
+     "k": "CỐ ĐỊNH",
+     "v": "1–2 NĂM ĐẦU",
+     "at": [
+      3,
+      "cố"
+     ]
+    },
+    {
+     "k": "PHỔ BIẾN (11 NH)",
+     "v": "≈ 10,9%",
+     "at": [
+      4,
+      "phổ"
+     ]
+    }
+   ],
+   "srcnote": "DKRA qua Dân trí 03/09/2026 (11 NH, cố định 12–24 tháng) · VARS-IRE qua VnExpress 04/08/2026"
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "SAU ƯU ĐÃI: THẢ NỔI",
+   "rows": [
+    {
+     "k": "LÃI CƠ SỞ",
+     "v": "NGÂN HÀNG CÔNG BỐ",
+     "at": [
+      6,
+      "lãi"
+     ]
+    },
+    {
+     "k": "+ BIÊN ĐỘ (HỢP ĐỒNG)",
+     "v": "3,3–3,5 ĐIỂM",
+     "at": [
+      7,
+      "Biên"
+     ]
+    }
+   ],
+   "total": {
+    "k": "THỰC TRẢ · QUÝ II/2026",
+    "v": "≈ 13–15%",
+    "at": [
+     8,
+     "mười"
+    ]
+   },
+   "srcnote": "VARS-IRE qua VnExpress 04/08/2026 · khảo sát 10 ngân hàng"
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "MỘT KIỂU TRẢ HAY GẶP",
+     "at": [
+      9,
+      "Thử"
+     ],
+     "sm": true
+    },
+    {
+     "text": "GỐC CHIA ĐỀU MỖI THÁNG",
+     "at": [
+      9,
+      "gốc"
+     ]
+    },
+    {
+     "text": "LÃI TÍNH TRÊN NỢ CÒN LẠI",
+     "at": [
+      9,
+      "lãi"
+     ]
+    },
+    {
+     "text": "1,5 TỶ ÷ 300 THÁNG = 5 TR GỐC",
+     "at": [
+      10,
+      "Một"
+     ],
+     "acc": true
+    }
+   ],
+   "illus": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH"
+  },
+  {
+   "type": "counter",
+   "at": 11,
+   "from": 0,
+   "to": 18750000,
+   "suffix": " Đ",
+   "until": [
+    12,
+    "mười"
+   ],
+   "label": "THÁNG 1 · LÃI 11%",
+   "sub": {
+    "text": "= 5 TR GỐC + 13,75 TR LÃI · ≈ 62% THU NHẬP 30 TR",
+    "at": [
+     12,
+     "sáu"
+    ]
+   },
+   "illus": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH"
+  },
+  {
+   "type": "bars",
+   "at": 13,
+   "title": "KHOẢN TRẢ MỖI THÁNG · BÊN TRÁI",
+   "unit": "TRIỆU Đ",
+   "items": [
+    {
+     "k": "THÁNG 1",
+     "v": 18.75,
+     "lbl": "18,75",
+     "at": [
+      13,
+      "Mỗi"
+     ]
+    },
+    {
+     "k": "THÁNG 12",
+     "v": 18.24583333333333,
+     "lbl": "18,25",
+     "at": [
+      13,
+      "nợ"
+     ]
+    },
+    {
+     "k": "THÁNG 24",
+     "v": 17.695833333333333,
+     "lbl": "17,70",
+     "at": [
+      14,
+      "hai"
+     ]
+    },
+    {
+     "k": "THÁNG 25",
+     "v": 21.1,
+     "lbl": "21,10",
+     "at": [
+      16,
+      "nhảy"
+     ],
+     "acc": true
+    },
+    {
+     "k": "THÁNG 36",
+     "v": 20.458333333333336,
+     "lbl": "20,46",
+     "at": [
+      16,
+      "triệu"
+     ]
+    },
+    {
+     "k": "THÁNG 60",
+     "v": 19.058333333333337,
+     "lbl": "19,06",
+     "at": [
+      16,
+      "trăm"
+     ]
+    },
+    {
+     "k": "THÁNG 120",
+     "v": 15.558333333333335,
+     "lbl": "15,56",
+     "at": [
+      16,
+      "nghìn"
+     ]
+    }
+   ],
+   "illus": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "srcnote": "Vay 1,5 tỷ, 25 năm, gốc đều · 11% tháng 1–24, giả sử 14% từ tháng 25 · kênh tự tính"
+  },
+  {
+   "type": "slam",
+   "at": [
+    17,
+    "thêm"
+   ],
+   "text": "+3,4 TRIỆU / THÁNG",
+   "sub": "17,70 → 21,10 TR · ≈ +19% · CHỈ SAU MỘT KỲ",
+   "illus": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH"
+  },
+  {
+   "type": "counter",
+   "at": 18,
+   "from": 0,
+   "to": 70,
+   "suffix": "%",
+   "label": "THU NHẬP ĐI VÀO NGÂN HÀNG · THÁNG 25",
+   "sub": {
+    "text": "21,10 TR ÷ 30 TR ≈ 70,3%",
+    "at": [
+     18,
+     "thu"
+    ]
+   },
+   "illus": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH"
+  },
+  {
+   "type": "question",
+   "at": 19,
+   "text": "Đã ký hợp đồng rồi,\nsao lãi vẫn nhảy được?"
+  },
+  {
+   "type": "kinetic",
+   "at": 20,
+   "items": [
+    {
+     "text": "THẢ NỔI = LÃI CƠ SỞ + BIÊN ĐỘ",
+     "at": [
+      20,
+      "Vì"
+     ]
+    },
+    {
+     "text": "lãi cơ sở: ngân hàng điều chỉnh theo kỳ",
+     "at": [
+      20,
+      "mà"
+     ],
+     "sm": true
+    },
+    {
+     "text": "biên độ: cố định theo hợp đồng",
+     "at": [
+      20,
+      "mà",
+      0,
+      0.5
+     ],
+     "sm": true
+    },
+    {
+     "text": "CÓ THỂ LÊN · CŨNG CÓ THỂ XUỐNG",
+     "at": [
+      21,
+      "Nó"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 22,
+   "title": "LÃI ƯU ĐÃI MUA NHÀ",
+   "unit": "%/NĂM · CỘT = GIỮA DẢI",
+   "items": [
+    {
+     "k": "NĂM 2025",
+     "v": 6.1,
+     "lbl": "5,5–6,7",
+     "at": [
+      22,
+      "Năm"
+     ]
+    },
+    {
+     "k": "NĂM 2026",
+     "v": 9.75,
+     "lbl": "8,5–11",
+     "at": [
+      23,
+      "Năm"
+     ],
+     "acc": true
+    }
+   ],
+   "srcnote": "VARS-IRE qua VnExpress 04/08/2026 (quý II/2026)"
+  },
+  {
+   "type": "ledger",
+   "at": 24,
+   "title": "24 THÁNG ĐẦU",
+   "illus": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "rows": [
+    {
+     "k": "TRÁI · TIỀN LÃI",
+     "v": "≈ 317 TR",
+     "at": [
+      24,
+      "ba"
+     ]
+    },
+    {
+     "k": "PHẢI · TIỀN THUÊ",
+     "v": "≈ 154 TR",
+     "at": [
+      25,
+      "một"
+     ]
+    }
+   ],
+   "srcnote": "Kênh tự tính: tổng lãi 24 tháng = 317,35 tr · thuê 6,25 × 12 + 6,5625 × 12 = 153,75 tr"
+  },
+  {
+   "type": "kinetic",
+   "at": 26,
+   "items": [
+    {
+     "text": "NHƯNG KHOAN KẾT LUẬN",
+     "at": [
+      26,
+      "Nhưng"
+     ]
+    },
+    {
+     "text": "TIỀN LÃI CHƯA PHẢI TOÀN BỘ CÂU CHUYỆN",
+     "at": [
+      26,
+      "tiền"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "KHOẢN VAY, VÀ CÚ NHẢY NĂM THỨ BA"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.145
+ }
+}

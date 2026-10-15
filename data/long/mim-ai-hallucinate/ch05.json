@@ -1,0 +1,254 @@
+{
+ "title": "Đếm những trích dẫn ma",
+ "lines": [
+  {
+   "t": "Cũng năm 2023, hai nhà nghiên cứu ở Mỹ, William Walters và Esther Wilder, nhờ ChatGPT viết tám mươi tư bài tổng quan ngắn.",
+   "p": 0.8
+  },
+  "Rồi họ dò từng tài liệu tham khảo trong đó, tổng cộng sáu trăm ba mươi sáu tài liệu.",
+  "Với GPT-3.5, năm mươi lăm phần trăm là bịa: những bài báo không hề tồn tại.",
+  {
+   "t": "Với GPT-4, con số ấy giảm còn mười tám phần trăm.",
+   "p": 1.0
+  },
+  "Ở ngành luật, một nghiên cứu đăng trên Tạp chí Phân tích Pháp luật năm 2024 hỏi các mô hình những câu có thể kiểm chứng, về những vụ án liên bang chọn ngẫu nhiên.",
+  "Tỉ lệ trả lời bịa, tuỳ mô hình, từ năm mươi tám tới tám mươi tám phần trăm.",
+  {
+   "t": "Và các mô hình nhiều khi không biết lúc nào chính mình đang bịa.",
+   "p": 1.0
+  },
+  "Đó là những mô hình của năm 2023. Các mô hình về sau đã khá hơn, nhưng chưa hết bịa.",
+  "Nhưng hãy cảnh giác với bất kỳ ai nói \"AI sai bao nhiêu phần trăm\".",
+  "Không có một con số chung cho mọi AI và mọi câu hỏi.",
+  {
+   "t": "Tỉ lệ ấy đổi theo mô hình, theo ngôn ngữ, và nhất là theo câu hỏi. Điều càng hiếm thì càng dễ bị bịa.",
+   "p": 1.0
+  },
+  "Vậy với một việc rất đời thường, như hỏi tin tức, các trợ lý AI năm 2025 làm tốt đến đâu?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "CHƯƠNG NĂM",
+   "title": "ĐẾM NHỮNG\nTRÍCH DẪN MA",
+   "sub": "2023 — 2024",
+   "vid": "1580502",
+   "ms": 12,
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "cũng"
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 0,
+   "to": 636,
+   "suffix": " TÀI LIỆU",
+   "label": "TRONG 84 BÀI TỔNG QUAN NGẮN DO CHATGPT VIẾT",
+   "sub": {
+    "text": "WALTERS & WILDER · SCIENTIFIC REPORTS, 09.2023",
+    "at": 1
+   }
+  },
+  {
+   "type": "bars",
+   "at": 2,
+   "title": "TÀI LIỆU THAM KHẢO BỊA (KHÔNG TỒN TẠI)",
+   "unit": "636 TÀI LIỆU · WALTERS & WILDER 2023",
+   "max": 100,
+   "items": [
+    {
+     "k": "GPT-3.5",
+     "v": 55,
+     "lbl": "55%",
+     "at": [
+      2,
+      "năm"
+     ]
+    },
+    {
+     "k": "GPT-4",
+     "v": 18,
+     "lbl": "18%",
+     "at": [
+      3,
+      "con"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "JOURNAL OF LEGAL ANALYSIS · 2024",
+     "at": 4,
+     "sm": true,
+     "fx": "rise"
+    },
+    {
+     "text": "CÂU HỎI KIỂM CHỨNG ĐƯỢC VỀ ÁN LIÊN BANG",
+     "at": [
+      4,
+      "hỏi"
+     ],
+     "acc": true
+    },
+    {
+     "text": "vụ án chọn ngẫu nhiên",
+     "at": [
+      4,
+      "chọn"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 5,
+   "title": "TỈ LỆ TRẢ LỜI BỊA · TUỲ MÔ HÌNH",
+   "unit": "DAHL ET AL. 2024 · ÁN LIÊN BANG · MÔ HÌNH 2023",
+   "max": 100,
+   "items": [
+    {
+     "k": "THẤP NHẤT · GPT-4",
+     "v": 58,
+     "lbl": "58%",
+     "at": [
+      5,
+      "tuỳ"
+     ]
+    },
+    {
+     "k": "CAO NHẤT · LLAMA 2",
+     "v": 88,
+     "lbl": "88%",
+     "at": [
+      5,
+      "tới"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    6,
+    "nhiều"
+   ],
+   "items": [
+    {
+     "text": "NHIỀU KHI KHÔNG BIẾT",
+     "at": [
+      6,
+      "nhiều"
+     ],
+     "acc": true,
+     "fx": "rise"
+    },
+    {
+     "text": "lúc nào chính mình đang bịa",
+     "at": [
+      6,
+      "lúc"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "ĐÓ LÀ MÔ HÌNH 2023",
+     "at": 7,
+     "sm": true,
+     "fx": "rise"
+    },
+    {
+     "text": "VỀ SAU: KHÁ HƠN",
+     "at": [
+      7,
+      "các"
+     ]
+    },
+    {
+     "text": "NHƯNG CHƯA HẾT BỊA",
+     "at": [
+      7,
+      "nhưng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "text": "“AI SAI BAO NHIÊU PHẦN TRĂM?”",
+   "white": true
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "KHÔNG CÓ MỘT CON SỐ CHUNG",
+     "at": 9
+    },
+    {
+     "text": "MÔ HÌNH · NGÔN NGỮ · CÂU HỎI",
+     "at": 10,
+     "sm": true
+    },
+    {
+     "text": "CÀNG HIẾM, CÀNG DỄ BỊ BỊA",
+     "at": [
+      10,
+      "điều"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 11,
+   "vid": "8731289",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "TRỢ LÝ AI · 2025",
+     "at": 11,
+     "sm": true,
+     "fx": "rise"
+    },
+    {
+     "text": "HỎI TIN TỨC THÌ SAO?",
+     "at": [
+      11,
+      "hỏi"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "ĐẾM NHỮNG TRÍCH DẪN MA"
+ },
+ "bgm": {
+  "mood": "upbeat",
+  "gain": 0.1
+ }
+}

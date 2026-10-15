@@ -1,0 +1,111 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "kinh-giai",
+ "hook_type": "nghich-ly",
+ "open_shot": "tro-chuyen",
+ "voice": "Quang Sơn",
+ "music": "clean_soul.mp3",
+ "gap": 0.15,
+ "title": "Pháp Cú 76: người chỉ lỗi như người chỉ kho báu",
+ "kicker": "KINH PHÁP CÚ · KỆ 76",
+ "sub": "DIỄN Ý",
+ "acc": [
+  "kho",
+  "lỗi"
+ ],
+ "lines": [
+  "Người làm bạn khó chịu nhất, có thể là người giúp bạn nhiều nhất.",
+  "Vì góp ý thật lòng thì luôn đau.",
+  "Kinh Pháp Cú, kệ bảy mươi sáu, diễn ý: hãy xem người chỉ ra lỗi mình, như người chỉ chỗ giấu kho báu.",
+  "Gần người như vậy, chỉ tốt lên, không xấu đi.",
+  "Ai từng góp ý thật lòng với bạn? Tag người ấy nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "KHÓ CHỊU NHẤT?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "lại giúp bạn nhiều nhất",
+     "at": [
+      0,
+      "giúp"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7203146"
+  },
+  {
+   "type": "quote",
+   "at": 1,
+   "mode": "karaoke",
+   "by": "lời thật",
+   "line": 1
+  },
+  {
+   "type": "source",
+   "at": 2,
+   "source": "KINH PHÁP CÚ · KỆ 76",
+   "ref": "Dhammapada 76",
+   "snippet": "Thấy người chỉ lỗi mình, hãy xem như [[người chỉ kho báu]]."
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 1,
+   "suffix": " CHIỀU",
+   "label": "CHỈ TỐT LÊN",
+   "until": [
+    3,
+    "tốt"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "AI TỪNG GÓP Ý?",
+     "at": [
+      4,
+      "Ai"
+     ],
+     "acc": true
+    },
+    {
+     "text": "tag người ấy nhé",
+     "at": [
+      4,
+      "Tag"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:40110331"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp76-89/en/sujato"
+ ],
+ "description": "Pháp Cú 76: người chỉ lỗi như người chỉ kho báu\n\nNguồn: https://suttacentral.net/dhp76-89/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "v2": true,
+ "loop": true,
+ "based_on": "bud-kg-ke-76-kho-bau"
+}

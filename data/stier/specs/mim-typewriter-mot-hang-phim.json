@@ -1,0 +1,181 @@
+{
+ "theme": "mim",
+ "title": "Chữ “typewriter” gõ được chỉ bằng hàng phím trên cùng: giai thoại về hãng Remington",
+ "description": "Mười chữ cái ở hàng phím trên cùng (Q W E R T Y U I O P) đủ để gõ chữ “typewriter”, nghĩa là máy đánh chữ. Người ta kể rằng hãng Remington dời chữ R lên hàng trên để nhân viên bán hàng gõ được tên sản phẩm chỉ bằng một hàng phím. Đó là một lời kể, nên hãy nghe như một giai thoại (Wikipedia: QWERTY). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/KJ5y_Ypnc4U (công khai từ 20:00 ngày 05/11).",
+ "tags": [
+  "typewriter",
+  "remington",
+  "bàn phím qwerty",
+  "lịch sử bàn phím",
+  "máy đánh chữ",
+  "công nghệ",
+  "mind in the machine"
+ ],
+ "sub": "HÀNG PHÍM TRÊN CÙNG",
+ "acc": [
+  "typewriter",
+  "một",
+  "R",
+  "giai",
+  "thử"
+ ],
+ "kicker": "CHUYỆN CÔNG NGHỆ",
+ "lines": [
+  "Chữ typewriter, nghĩa là máy đánh chữ, gõ được chỉ bằng một hàng phím.",
+  "Hãy nhìn hàng phím trên cùng: Q, W, E, R, T, Y, U, I, O, P.",
+  "Mười chữ cái ấy đủ để ghép thành chữ typewriter.",
+  "Người ta kể rằng hãng Remington đã dời chữ R lên hàng trên chính vì chuyện này.",
+  "Để nhân viên bán hàng gõ được tên sản phẩm chỉ bằng một hàng phím.",
+  "Đó là một lời kể, nên hãy nghe nó như một giai thoại.",
+  "Còn hàng phím trên cùng thì vẫn gõ được chữ typewriter, và bạn có thể tự thử ngay."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "TYPEWRITER",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "gõ được bằng một hàng phím",
+     "at": [
+      0,
+      "một"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:3945445",
+   "veil": 0.55
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 10,
+   "to": 10,
+   "suffix": " CHỮ CÁI",
+   "label": "HÀNG PHÍM TRÊN CÙNG",
+   "sub": {
+    "text": "Q W E R T Y U I O P",
+    "at": [
+     1,
+     "Q"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "MƯỜI CHỮ CÁI",
+   "cards": [
+    {
+     "k": "HÀNG TRÊN",
+     "v": "QWERTYUIOP",
+     "at": 2
+    },
+    {
+     "k": "GHÉP ĐƯỢC",
+     "v": "TYPEWRITER",
+     "at": [
+      2,
+      "ghép"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "DỜI CHỮ R LÊN HÀNG TRÊN",
+     "at": 3,
+     "acc": true
+    },
+    {
+     "text": "theo lời kể về hãng Remington",
+     "at": [
+      3,
+      "Remington"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7888283",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 3
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "GIAI THOẠI",
+   "sub": "MỘT LỜI KỂ · CHƯA PHẢI HỒ SƠ"
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Tự thử",
+   "nodes": [
+    {
+     "text": "hàng phím trên cùng",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      6,
+      "hàng"
+     ],
+     "shape": "none",
+     "w": 700
+    },
+    {
+     "text": "TYPEWRITER",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "typewriter"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 640
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/QWERTY"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "=Q": "quy",
+  "=W": "vê kép",
+  "=E": "e",
+  "=R": "e-rờ",
+  "=T": "tê",
+  "=Y": "i dài",
+  "remington": "Rem-minh-tần",
+  "typewriter": "tai-rai-tơ",
+  "=U": "u",
+  "=I": "i",
+  "=O": "o",
+  "=P": "pê"
+ },
+ "imgs": {}
+}

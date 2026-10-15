@@ -1,0 +1,184 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "do-vui",
+ "hook_type": "do-vui",
+ "open_shot": "ly-nuoc",
+ "voice": "Thục Đoan",
+ "music": "frost_waltz.mp3",
+ "gap": 0.0,
+ "series": "Đố vui Phật pháp #8",
+ "title": "Đố vui Phật pháp #8: 5 kiểu nước đục trong tâm",
+ "kicker": "ĐỐ VUI PHẬT PHÁP #8",
+ "sub": "KINH TƯƠNG ƯNG 46.55",
+ "acc": [
+  "nước",
+  "giận"
+ ],
+ "lines": [
+  "Đố bạn: nước đang sôi, giống tâm đang thế nào? Ham muốn, giận dữ, hay hoài nghi?",
+  "Đáp án: giận dữ.",
+  "Kinh Tương Ưng kể năm kiểu nước khiến ta không soi rõ mặt mình.",
+  "Nước pha màu là ham muốn. Nước sôi là giận dữ.",
+  "Nước phủ rêu là uể oải. Nước gợn gió là bồn chồn. Nước bùn trong tối là hoài nghi.",
+  "Hôm nay chén nước của bạn đục vì kiểu nào? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "NƯỚC SÔI = TÂM GÌ?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "ham muốn · giận dữ · hoài nghi",
+     "at": [
+      0,
+      "Ham"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7311101"
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "ĐÁP ÁN",
+   "cards": [
+    {
+     "k": "A",
+     "v": "HAM MUỐN",
+     "at": [
+      1,
+      "Đáp"
+     ]
+    },
+    {
+     "k": "B",
+     "v": "GIẬN DỮ",
+     "at": [
+      1,
+      "giận"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 5,
+   "suffix": " KIỂU NƯỚC",
+   "label": "KHÔNG SOI RÕ MẶT MÌNH",
+   "until": [
+    2,
+    "năm"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "NƯỚC SÔI = GIẬN",
+     "at": [
+      3,
+      "sôi"
+     ],
+     "acc": true
+    },
+    {
+     "text": "nước pha màu = ham muốn",
+     "at": [
+      3,
+      "Nước"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:10431976"
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Còn lại",
+   "nodes": [
+    {
+     "text": "RÊU = UỂ OẢI",
+     "x": 0.5,
+     "y": 0.2,
+     "at": [
+      4,
+      "rêu"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "GỢN GIÓ = BỒN CHỒN",
+     "x": 0.5,
+     "y": 0.47,
+     "at": [
+      4,
+      "gợn"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "BÙN TỐI = HOÀI NGHI",
+     "x": 0.5,
+     "y": 0.74,
+     "at": [
+      4,
+      "bùn"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "SN 46.55"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "BẠN ĐỤC KIỂU NÀO?",
+     "at": [
+      5,
+      "Hôm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận nhé",
+     "at": [
+      5,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:5050119"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/sn46.55/en/sujato"
+ ],
+ "description": "Đố vui Phật pháp #8: 5 kiểu nước đục trong tâm\n\nNguồn: https://suttacentral.net/sn46.55/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

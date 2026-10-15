@@ -1,0 +1,201 @@
+{
+ "title": "Hàng phím kỳ lạ",
+ "lines": [
+  "Bạn hãy nhìn xuống bàn phím một chút.",
+  {
+   "t": "Hàng chữ đầu tiên, từ trái sang. Q, W, E, R, T, Y.",
+   "p": 1.0
+  },
+  "Không phải A, B, C.",
+  "Không theo một thứ tự nào bạn từng học ở trường.",
+  {
+   "t": "Vậy mà cả thế giới gõ theo đúng thứ tự ấy, suốt gần một trăm năm mươi năm.",
+   "p": 1.0
+  },
+  "Chắc bạn đã nghe một lời giải thích.",
+  "Rằng người ta cố tình xếp lộn xộn như thế, để bạn gõ chậm lại.",
+  {
+   "t": "Nghe rất vô lý. Và cũng vì vô lý, nên nó lan đi rất xa.",
+   "p": 1.0
+  },
+  "Hôm nay, mình mở một phiên toà nhỏ, xử hàng phím này.",
+  "Có ba lời buộc tội.",
+  "Một, nó sinh ra để làm bạn gõ chậm.",
+  "Hai, nó thắng không phải vì nó tốt.",
+  {
+   "t": "Ba, có một bàn phím tốt hơn hẳn, và đã bị vùi dập.",
+   "p": 1.0
+  },
+  "Mình sẽ xét từng lời một. Còn phán quyết, bạn là người quyết."
+ ],
+ "scenes": [
+  {
+   "type": "broll",
+   "vid": "4973401",
+   "veil": 0.45,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "NHÌN XUỐNG BÀN PHÍM",
+     "at": [
+      0,
+      "nhìn"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "keyboard",
+   "at": 1,
+   "layout": "qwerty",
+   "hl": "QWERTY",
+   "hlAt": [
+    1,
+    "Q,"
+   ],
+   "hlGap": 0.42,
+   "label": {
+    "k": "HÀNG CHỮ ĐẦU TIÊN",
+    "v": "BÀN PHÍM DO KÊNH TỰ VẼ",
+    "at": 1
+   }
+  },
+  {
+   "type": "keyboard",
+   "at": 2,
+   "layout": "abc",
+   "hl": "ABC",
+   "hlAt": [
+    2,
+    "A,"
+   ],
+   "hlGap": 0.35,
+   "label": {
+    "k": "KHÔNG PHẢI A B C",
+    "v": "BÀN PHÍM DO KÊNH TỰ VẼ",
+    "at": 2
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "KHÔNG THEO THỨ TỰ NÀO",
+     "at": 3,
+     "acc": true
+    },
+    {
+     "text": "bạn từng học ở trường",
+     "at": [
+      3,
+      "bạn"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 0,
+   "to": 150,
+   "prefix": "~",
+   "suffix": " NĂM",
+   "until": [
+    4,
+    "mươi"
+   ],
+   "label": "CẢ THẾ GIỚI GÕ THEO ĐÚNG THỨ TỰ ẤY"
+  },
+  {
+   "type": "broll",
+   "at": 5,
+   "vid": "4973401",
+   "ms": 3,
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MỘT LỜI GIẢI THÍCH QUEN TAI",
+     "at": 5,
+     "sm": true
+    },
+    {
+     "text": "“ĐỂ BẠN GÕ CHẬM LẠI”",
+     "at": [
+      6,
+      "để"
+     ],
+     "acc": true
+    },
+    {
+     "text": "vô lý · nên lan rất xa",
+     "at": 7,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 8,
+   "vid": "6699964",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MỘT PHIÊN TOÀ NHỎ",
+     "at": [
+      8,
+      "một"
+     ],
+     "acc": true
+    },
+    {
+     "text": "xử hàng phím này",
+     "at": [
+      8,
+      "xử"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 9,
+   "title": "BA LỜI BUỘC TỘI",
+   "rows": [
+    {
+     "k": "1",
+     "v": "SINH RA ĐỂ LÀM BẠN GÕ CHẬM",
+     "at": 10
+    },
+    {
+     "k": "2",
+     "v": "THẮNG KHÔNG PHẢI VÌ TỐT",
+     "at": 11
+    },
+    {
+     "k": "3",
+     "v": "VÙI DẬP BÀN PHÍM TỐT HƠN",
+     "at": 12
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 13,
+   "text": "Phán quyết:\nbạn là người quyết."
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "HÀNG PHÍM KỲ LẠ"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.1
+ }
+}

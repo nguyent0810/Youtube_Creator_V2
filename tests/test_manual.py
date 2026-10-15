@@ -8,7 +8,7 @@ from datetime import datetime, timezone
 
 import pytest
 
-from factory import manual, store
+from factory import channels, manual, store
 from factory.bundle import Bundle
 from factory.channel import Channel, ManualChannel, Upload
 from factory.youtube_fake import FakeYouTube
@@ -26,7 +26,9 @@ def bundle(slug="mim-ai-la-gi", channel="MIM", **kw):
 
 
 @pytest.fixture
-def env(tmp_path):
+def env(tmp_path, monkeypatch):
+    # MIM đã chuyển sang upload API (06/10/2026); chế độ manual vẫn là tính năng -> thử trên MIM giả lập manual
+    monkeypatch.setitem(channels.CHANNELS["MIM"], "upload", "manual")
     yt = FakeYouTube()
     video = tmp_path / "final.mp4"
     video.write_bytes(b"\0" * 64)
@@ -224,3 +226,18 @@ def test_export_refuses_a_package_whose_token_would_not_fit(env):
     assembled(env, b)
     with pytest.raises(ValueError, match="token"):
         manual.export(env["conn"], "MIM", env["tmp"] / "manual", bundles=env["bundles"])
+
+
+def test_a_long_video_package_carries_its_subtitles_and_ab_thumbnails(env):
+    """Video dài (16:9): Studio cần thêm file phụ đề + 3 thumbnail cho Test & Compare -- lấy cạnh final.mp4."""
+    b = bundle("long-mim-ai-70", kind="long", broll_queries=[], thumbnail_text="AI", render={"engine": "casewide", "spec": "s.json"})
+    assembled(env, b)
+    (env["tmp"] / "captions.vi.srt").write_text("1\n00:00:00,000 --> 00:00:01,000\nXin chào\n", encoding="utf-8")
+    (env["tmp"] / "pub").mkdir()
+    for t in ("t1", "t2", "t3"):
+        (env["tmp"] / "pub" / f"{t}.jpg").write_bytes(t.encode())
+    d = manual.export(env["conn"], "MIM", env["tmp"] / "manual", bundles=env["bundles"])[0]
+    assert (d / "captions.vi.srt").read_text(encoding="utf-8").endswith("Xin chào\n")
+    assert sorted(p.name for p in d.glob("ab_*.jpg")) == ["ab_t1.jpg", "ab_t2.jpg", "ab_t3.jpg"]
+    meta = (d / "meta.txt").read_text(encoding="utf-8")
+    assert "#Shorts" not in meta and "captions.vi.srt" in meta and "ab_t1.jpg" in meta

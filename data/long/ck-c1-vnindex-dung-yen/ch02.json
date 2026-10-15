@@ -1,0 +1,354 @@
+{
+ "title": "VN-Index: giá của một chiếc giỏ có trọng số",
+ "lines": [
+  {
+   "t": "Giờ đến nhân vật chính: VN-Index.",
+   "p": 0.8
+  },
+  "VN-Index đo biến động của toàn bộ cổ phiếu niêm yết trên HOSE, bắt đầu từ một trăm điểm ngày hai mươi tám tháng bảy năm hai nghìn.",
+  "Cách tính dựa trên vốn hoá, tức giá một cổ phiếu nhân với số cổ phiếu của doanh nghiệp.",
+  {
+   "t": "Mỗi ngày, tổng vốn hoá được đem so với một mức gốc.",
+   "p": 1.0
+  },
+  {
+   "t": "Vậy VN-Index là giá trung bình của các cổ phiếu, đúng không?",
+   "ask": 1
+  },
+  "Không. Đây là chỗ người mới hay nhầm nhất.",
+  "VN-Index không cho mỗi cổ phiếu một phiếu bầu như nhau.",
+  {
+   "t": "Doanh nghiệp càng lớn, giá của nó càng kéo chỉ số mạnh.",
+   "p": 1.0
+  },
+  "Hình dung một giỏ hàng trị giá một trăm nghìn đồng: một con gà năm mươi nghìn, và mười bó rau, mỗi bó năm nghìn.",
+  "Tuần sau, gà tăng hai mươi phần trăm, lên sáu mươi nghìn. Bó rau nào cũng giảm mười phần trăm.",
+  "Cả giỏ giờ là một trăm lẻ năm nghìn: tăng năm phần trăm.",
+  {
+   "t": "Mười trên mười một món giảm giá, nhưng cả giỏ vẫn tăng.",
+   "p": 1.0
+  },
+  "VN-Index cũng là một chiếc giỏ như vậy, chỉ là con gà của nó to hơn nhiều.",
+  "Theo kênh tự tính ngày ba mươi tháng chín, riêng mã VIC chiếm khoảng một phần năm tổng vốn hoá cổ phiếu trên HOSE.",
+  "Mười mã lớn nhất chiếm khoảng một nửa.",
+  "Còn hai trăm mã nhỏ nhất, gần một nửa số cổ phiếu trên sàn, cộng lại chỉ khoảng một phẩy hai lăm phần trăm.",
+  "Mã lớn nhất nặng gần gấp mười bảy lần cả hai trăm mã đó cộng lại.",
+  {
+   "t": "Và giỏ năm nay còn lệch hơn: hồi đầu năm, mã lớn nhất chỉ chiếm khoảng mười sáu phần trăm.",
+   "p": 1.0
+  },
+  "VN-Index giống một chiếc nhiệt kế đặt cạnh cái lò lớn nhất nhà.",
+  "Nhiệt kế báo ấm, chưa chắc cả căn nhà đều ấm."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "VN-INDEX:\nGIÁ CỦA MỘT CHIẾC GIỎ",
+   "sub": "CHỈ SỐ CÓ TRỌNG SỐ",
+   "vid": "7681176",
+   "ms": 20,
+   "titleAt": [
+    0,
+    "Giờ"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "VN-INDEX",
+     "at": [
+      1,
+      "VN-Index"
+     ],
+     "acc": true
+    },
+    {
+     "text": "ĐO TOÀN BỘ CỔ PHIẾU NIÊM YẾT TRÊN HOSE",
+     "at": [
+      1,
+      "toàn"
+     ]
+    },
+    {
+     "text": "GỐC: 100 ĐIỂM · 28/07/2000",
+     "at": [
+      1,
+      "bắt"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "CÁCH TÍNH · MÔ TẢ PHỔ THÔNG",
+   "rows": [
+    {
+     "k": "VỐN HOÁ",
+     "v": "GIÁ × SỐ CỔ PHIẾU",
+     "at": [
+      2,
+      "Cách"
+     ]
+    },
+    {
+     "k": "MỖI NGÀY",
+     "v": "TỔNG VỐN HOÁ ÷ MỨC GỐC",
+     "at": [
+      3,
+      "Mỗi"
+     ]
+    },
+    {
+     "k": "GỐC 28/07/2000",
+     "v": "100 ĐIỂM",
+     "at": [
+      3,
+      "gốc."
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 4,
+   "text": "VN-Index là giá trung bình\ncủa các cổ phiếu?"
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "KHÔNG",
+   "sub": "CHỖ NGƯỜI MỚI HAY NHẦM NHẤT"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "KHÔNG PHẢI MỖI MÃ MỘT PHIẾU BẦU",
+     "at": [
+      6,
+      "không"
+     ]
+    },
+    {
+     "text": "DOANH NGHIỆP CÀNG LỚN → KÉO CHỈ SỐ CÀNG MẠNH",
+     "at": [
+      7,
+      "Doanh"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 8,
+   "title": "GIỎ HÀNG 100 NGHÌN ĐỒNG",
+   "unit": "NGHÌN ĐỒNG",
+   "items": [
+    {
+     "k": "GÀ · TUẦN NÀY",
+     "v": 50,
+     "lbl": "50",
+     "at": [
+      8,
+      "gà"
+     ]
+    },
+    {
+     "k": "10 BÓ RAU · TUẦN NÀY",
+     "v": 50,
+     "lbl": "50",
+     "at": [
+      8,
+      "mười"
+     ]
+    },
+    {
+     "k": "GÀ · TUẦN SAU",
+     "v": 60,
+     "lbl": "60 (+20%)",
+     "at": [
+      9,
+      "sáu"
+     ],
+     "acc": true
+    },
+    {
+     "k": "10 BÓ RAU · TUẦN SAU",
+     "v": 45,
+     "lbl": "45 (−10%)",
+     "at": [
+      9,
+      "giảm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 10,
+   "vid": "35878664",
+   "ms": 30,
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "CẢ GIỎ: 100 → 105 NGHÌN (+5%)",
+     "at": [
+      10,
+      "Cả"
+     ]
+    },
+    {
+     "text": "10/11 MÓN GIẢM GIÁ — GIỎ VẪN TĂNG",
+     "at": [
+      11,
+      "Mười"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "VN-INDEX CŨNG LÀ MỘT CHIẾC GIỎ",
+     "at": [
+      12,
+      "VN-Index"
+     ]
+    },
+    {
+     "text": "CHỈ LÀ \"CON GÀ\" TO HƠN NHIỀU",
+     "at": [
+      12,
+      "gà"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "basket",
+   "at": 13,
+   "date": "2026-09-30",
+   "groupSmall": 200,
+   "labels": [
+    "VIC"
+   ],
+   "title": "VỐN HOÁ HOSE · MỖI Ô MỘT CỔ PHIẾU",
+   "range": "30/09/2026 · DIỆN TÍCH Ô = VỐN HOÁ",
+   "drawAt": [
+    13,
+    "Theo"
+   ],
+   "captions": [
+    {
+     "k": "VIC",
+     "v": "≈ 21%",
+     "at": [
+      13,
+      "VIC"
+     ],
+     "mark": [
+      "VIC"
+     ]
+    },
+    {
+     "k": "10 MÃ LỚN NHẤT",
+     "v": "≈ 52%",
+     "at": [
+      14,
+      "Mười"
+     ],
+     "mark": "top10",
+     "tone": "blue"
+    },
+    {
+     "k": "200 MÃ NHỎ NHẤT",
+     "v": "≈ 1,3%",
+     "at": [
+      15,
+      "hai"
+     ],
+     "mark": "group",
+     "tone": "down"
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 16,
+   "title": "MÃ LỚN NHẤT ≈ 17 LẦN CẢ 200 MÃ NHỎ NHẤT",
+   "unit": "% VỐN HOÁ HOSE · KÊNH TỰ TÍNH",
+   "items": [
+    {
+     "k": "200 MÃ NHỎ NHẤT · 30/09",
+     "v": 1.28,
+     "lbl": "≈ 1,3%",
+     "at": [
+      16,
+      "Mã"
+     ]
+    },
+    {
+     "k": "VIC · 31/12/2025",
+     "v": 16.16,
+     "lbl": "≈ 16%",
+     "at": [
+      17,
+      "đầu"
+     ]
+    },
+    {
+     "k": "VIC · 30/09/2026",
+     "v": 21.46,
+     "lbl": "≈ 21%",
+     "at": [
+      16,
+      "mười"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 18,
+   "items": [
+    {
+     "text": "NHIỆT KẾ ĐẶT CẠNH CÁI LÒ LỚN NHẤT NHÀ",
+     "at": [
+      18,
+      "nhiệt"
+     ]
+    },
+    {
+     "text": "BÁO ẤM ≠ CẢ NHÀ ĐỀU ẤM",
+     "at": [
+      19,
+      "chưa"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "VN-INDEX: CHIẾC GIỎ CÓ TRỌNG SỐ"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

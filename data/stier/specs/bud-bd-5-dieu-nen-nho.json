@@ -1,0 +1,189 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "ba-dieu",
+ "hook_type": "menh-lenh",
+ "open_shot": "ban-tay-gia",
+ "voice": "Thiện Minh",
+ "music": "arcadia.mp3",
+ "gap": 0.25,
+ "title": "5 điều nên nhớ mỗi ngày (Kinh Tăng Chi 5.57)",
+ "kicker": "5 ĐIỀU NÊN NHỚ",
+ "sub": "KINH TĂNG CHI 5.57",
+ "acc": [
+  "nhớ",
+  "chủ"
+ ],
+ "lines": [
+  "Mỗi sáng, hãy nhớ năm điều này. Đức Phật dạy vậy.",
+  "Một: ta sẽ già.",
+  "Hai: ta sẽ có lúc bệnh. Ba: ta sẽ chết.",
+  "Bốn: mọi thứ thương yêu, sẽ có lúc chia lìa.",
+  "Năm: ta là chủ của hành động mình. Không để sợ, mà để sống tỉnh và tử tế hơn.",
+  "Điều nào khó nhớ nhất với bạn? Bình luận số nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "NHỚ 5 ĐIỀU MỖI SÁNG",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "Kinh Tăng Chi 5.57",
+     "at": [
+      0,
+      "Đức"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:4661338"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 5,
+   "suffix": " ĐIỀU",
+   "label": "NÊN NHỚ MỖI NGÀY",
+   "until": [
+    1,
+    "Một:"
+   ],
+   "sub": {
+    "text": "1 · TA SẼ GIÀ",
+    "at": [
+     1,
+     "già."
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "NÊN NHỚ",
+   "cards": [
+    {
+     "k": "2",
+     "v": "SẼ CÓ LÚC BỆNH",
+     "at": [
+      2,
+      "bệnh."
+     ]
+    },
+    {
+     "k": "3",
+     "v": "SẼ CHẾT",
+     "at": [
+      2,
+      "chết."
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "4 · SẼ CÓ LÚC CHIA LÌA",
+     "at": [
+      3,
+      "chia"
+     ],
+     "acc": true
+    },
+    {
+     "text": "mọi thứ thương yêu",
+     "at": [
+      3,
+      "thương"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:5524254"
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Điều 5",
+   "nodes": [
+    {
+     "text": "CHỦ CỦA HÀNH ĐỘNG",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      4,
+      "chủ"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "SỐNG TỈNH · TỬ TẾ",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      4,
+      "tỉnh"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      4,
+      "tỉnh"
+     ]
+    }
+   ],
+   "note": "AN 5.57"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "ĐIỀU NÀO KHÓ NHẤT?",
+     "at": [
+      5,
+      "Điều"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận số nhé",
+     "at": [
+      5,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:39481766"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/an5.57/en/sujato"
+ ],
+ "description": "5 điều nên nhớ mỗi ngày (Kinh Tăng Chi 5.57)\n\nNguồn: https://suttacentral.net/an5.57/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

@@ -1,0 +1,169 @@
+{
+ "theme": "ck",
+ "title": "“Gói tiết kiệm nội bộ” lãi 15–20%/năm: công an đã cảnh báo lừa đảo",
+ "description": "Ngày 22/06/2026, Công an Hà Nội cảnh báo thủ đoạn mời gửi “gói tiết kiệm VIP/nội bộ” lãi 15–20%/năm qua trang web, ứng dụng, mã QR giả mạo; lãi suất thật được các ngân hàng niêm yết công khai. Cùng thời điểm, lãi suất niêm yết kỳ hạn 12 tháng ở nhóm ngân hàng lớn khoảng 6,8%/năm. Video chỉ thuật lại cảnh báo của cơ quan chức năng; gặp trường hợp nghi ngờ, liên hệ trực tiếp ngân hàng qua kênh chính thức hoặc cơ quan công an.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.",
+ "tags": [
+  "lừa đảo tiết kiệm",
+  "gói tiết kiệm nội bộ",
+  "cảnh báo lừa đảo",
+  "gửi tiết kiệm",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "kicker": "CẢNH BÁO",
+ "sub": "CÔNG AN HÀ NỘI · 06.2026",
+ "acc": [
+  "chừng",
+  "nội",
+  "bộ",
+  "giả",
+  "khai",
+  "dừng"
+ ],
+ "lines": [
+  "Tiết kiệm lãi hai mươi phần trăm một năm? Coi chừng.",
+  "Tháng sáu năm nay, công an Hà Nội cảnh báo về các gói tiết kiệm gọi là nội bộ, hay VIP.",
+  "Lãi được hứa, mười lăm đến hai mươi phần trăm một năm.",
+  "Lời mời đến qua trang web, ứng dụng, hoặc mã QR giả.",
+  "Trong khi đó, nhóm ngân hàng lớn đang niêm yết khoảng sáu phẩy tám phần trăm.",
+  "Và lãi suất thật thì được niêm yết công khai.",
+  "Lãi cao gấp hai, gấp ba mức niêm yết, là lúc nên dừng lại."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "LÃI 20%/NĂM?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "COI CHỪNG",
+     "at": [
+      0,
+      "Coi"
+     ]
+    }
+   ],
+   "clip": "pexels:7362704",
+   "ms": 5,
+   "veil": 0.58
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CÔNG AN HÀ NỘI · 22/06/2026",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "CẢNH BÁO",
+     "at": [
+      1,
+      "cảnh"
+     ],
+     "acc": true
+    },
+    {
+     "text": "gói tiết kiệm “nội bộ”, “VIP”",
+     "at": [
+      1,
+      "nội"
+     ],
+     "sm": true
+    }
+   ],
+   "at": 1
+  },
+  {
+   "type": "chart",
+   "at": 2,
+   "kind": "bars",
+   "title": "LÃI SUẤT MỘT NĂM",
+   "unit": "% · KỲ HẠN 12 THÁNG",
+   "bars": [
+    {
+     "label": "GÓI “NỘI BỘ”\n(lời mời)",
+     "v": 20,
+     "text": "15–20%",
+     "c": "down",
+     "at": [
+      2,
+      "mười"
+     ]
+    },
+    {
+     "label": "NGÂN HÀNG LỚN\n(niêm yết)",
+     "v": 6.8,
+     "text": "~6,8%",
+     "c": "ref",
+     "at": [
+      4,
+      "sáu"
+     ]
+    }
+   ],
+   "badge": {
+    "text": "QUA WEB · APP · MÃ QR GIẢ",
+    "at": [
+     3,
+     "qua"
+    ],
+    "c": "down"
+   },
+   "note": "NGUỒN: CÔNG AN HÀ NỘI; BIỂU LÃI SUẤT NIÊM YẾT 09/2026"
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "LÃI SUẤT THẬT",
+   "cards": [
+    {
+     "k": "ĐƯỢC NGÂN HÀNG",
+     "v": "NIÊM YẾT CÔNG KHAI",
+     "at": [
+      5,
+      "niêm"
+     ],
+     "c": "up"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "DỪNG LẠI",
+   "sub": "KHI LÃI CAO GẤP 2–3 MỨC NIÊM YẾT",
+   "clip": "pexels:7362704",
+   "ms": 12,
+   "veil": 0.66
+  }
+ ],
+ "sources": [
+  "https://kenh14.vn/cong-an-phat-thong-bao-nong-den-nhung-nguoi-dang-gui-tiet-kiem-ngan-hang-215260622113412956.chn",
+  "https://bocongan.gov.vn/bai-viet/canh-bao-thu-doan-du-do-tham-gia-dau-tu-tai-chinh-san-chung-khoan-tien-ao-tren-khong-gian-mang-d22-t44828",
+  "https://vneconomy.vn/lai-suat-tiet-kiem-ngan-hang-nao-cao-nhat-thang-92026.htm"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "vip": "víp",
+  "qr": "quy a"
+ },
+ "imgs": {}
+}

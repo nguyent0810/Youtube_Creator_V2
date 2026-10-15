@@ -1,0 +1,177 @@
+{
+ "theme": "mim",
+ "title": "Bàn phím đầu tiên từng xếp A, B, C: QWERTY là kết quả của năm năm sửa đi sửa lại",
+ "description": "Cuối những năm 1860, ở Milwaukee (Mỹ), Christopher Sholes làm một chiếc máy đánh chữ. Mẫu đầu tiên có bàn phím kiểu phím đàn piano, các chữ cái xếp hai hàng theo thứ tự bảng chữ cái. Suốt khoảng năm năm, ông sửa bố cục nhiều lần; tới năm 1873 nó đã gần giống bàn phím ngày nay (Wikipedia: QWERTY, Sholes and Glidden typewriter). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/KJ5y_Ypnc4U (công khai từ 20:00 ngày 05/11).",
+ "tags": [
+  "christopher sholes",
+  "bàn phím abc",
+  "bàn phím qwerty",
+  "lịch sử bàn phím",
+  "máy đánh chữ",
+  "công nghệ",
+  "mind in the machine"
+ ],
+ "sub": "MILWAUKEE · 1868",
+ "acc": [
+  "năm",
+  "piano",
+  "sửa",
+  "1873",
+  "thiết"
+ ],
+ "kicker": "CHUYỆN CÔNG NGHỆ",
+ "lines": [
+  "Bàn phím đầu tiên của chiếc máy đánh chữ từng xếp theo thứ tự A, B, C.",
+  "Cuối những năm 1860, ở thành phố Milwaukee, nước Mỹ, Christopher Sholes làm một chiếc máy đánh chữ.",
+  "Mẫu đầu tiên có bàn phím giống phím đàn piano, các chữ cái xếp thành hai hàng theo đúng bảng chữ cái.",
+  "Rồi suốt khoảng năm năm, ông sửa đi sửa lại.",
+  "Chữ này chuyển lên hàng trên, chữ kia đổi sang bên phải.",
+  "Đến năm 1873, bố cục ấy đã gần giống bàn phím bạn đang dùng.",
+  "Bàn phím trông lộn xộn hôm nay là kết quả của năm năm sửa, không phải của một lần thiết kế."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "A · B · C",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "bàn phím máy đánh chữ đầu tiên",
+     "at": [
+      0,
+      "máy"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:31176143",
+   "veil": 0.55
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "MILWAUKEE",
+   "sub": "CHRISTOPHER SHOLES · CUỐI THẬP NIÊN 1860"
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Mẫu máy đầu tiên",
+   "nodes": [
+    {
+     "text": "phím kiểu đàn piano",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      2,
+      "piano"
+     ],
+     "shape": "none",
+     "w": 700
+    },
+    {
+     "text": "hai hàng · thứ tự A, B, C",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      2,
+      "hai"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 760
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "from": 5,
+   "to": 5,
+   "suffix": " NĂM",
+   "label": "SỬA ĐI SỬA LẠI BỐ CỤC · KHOẢNG",
+   "sub": {
+    "text": "CHỮ LÊN HÀNG TRÊN · CHỮ SANG PHẢI",
+    "at": 4
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "1873",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "gần giống bàn phím bạn đang dùng",
+     "at": [
+      5,
+      "gần"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6037662",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 5
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "QWERTY LÀ",
+   "cards": [
+    {
+     "k": "KHÔNG PHẢI",
+     "v": "MỘT LẦN THIẾT KẾ",
+     "at": [
+      6,
+      "không"
+     ]
+    },
+    {
+     "k": "MÀ LÀ",
+     "v": "NĂM NĂM SỬA",
+     "at": [
+      6,
+      "năm"
+     ],
+     "c": "acc"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/QWERTY",
+  "https://en.wikipedia.org/wiki/Sholes_and_Glidden_typewriter"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "=A": "a",
+  "=B": "bê",
+  "=C": "xê",
+  "milwaukee": "Miu-oa-ki",
+  "christopher": "Crít-xtô-phơ",
+  "sholes": "Sôn",
+  "piano": "pi-a-nô"
+ },
+ "imgs": {}
+}

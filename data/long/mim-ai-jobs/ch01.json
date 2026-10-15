@@ -1,0 +1,448 @@
+{
+ "title": "Những người đập máy",
+ "lines": [
+  {
+   "t": "Muốn hiểu nỗi sợ ấy, mình phải quay lại xa hơn, tới một tấm thẻ đục lỗ.",
+   "p": 0.8
+  },
+  "Năm 1804, nhà phát minh người Pháp Jacquard được cấp bằng sáng chế cho một loại khung cửi đọc lệnh từ những tấm thẻ đục lỗ.",
+  "Chỗ có lỗ, sợi được nâng lên. Chỗ không có lỗ, sợi nằm yên.",
+  "Gần bốn mươi năm sau, nhà toán học Ada Lovelace so sánh cỗ máy tính toán của Charles Babbage với chính khung cửi ấy.",
+  {
+   "t": "Nó dệt nên những hoa văn đại số, như khung cửi Jacquard dệt hoa và lá.",
+   "q": 1,
+   "tr": 1
+  },
+  {
+   "t": "Hãy nhớ những tấm thẻ này. Chúng sẽ còn đi một chặng rất dài.",
+   "p": 1.0
+  },
+  "Nhưng ở nước Anh, máy dệt đã kịp dệt ra một thứ khác: nỗi sợ.",
+  "Năm 1811, ở hạt Nottinghamshire, những người thợ dệt bắt đầu đập máy, rồi phong trào lan sang nhiều hạt khác.",
+  "Họ nhân danh một thủ lĩnh tên là Ned Ludd, một nhân vật huyền thoại, không có thật.",
+  {
+   "t": "Lịch sử gọi họ là những người Luddite.",
+   "p": 1.0
+  },
+  "Ngày nay, chữ Luddite hay được dùng để chỉ người ghét công nghệ.",
+  "Nhưng họ không ghét máy.",
+  "Họ phản đối việc máy bị dùng để ép lương và cho thợ nghỉ việc, giữa lúc chiến tranh với Napoléon làm buôn bán đình trệ.",
+  "Họ đập có chọn lọc, hiếm khi động tới tài sản khác.",
+  "Năm 1812, phá máy trở thành tội có thể bị tử hình.",
+  {
+   "t": "Đầu năm 1813, sau một phiên toà đặc biệt ở York, mười bảy người bị treo cổ, vì giết người, bạo loạn và trộm cướp.",
+   "p": 1.0
+  },
+  "Họ thua.",
+  "Theo nhà kinh tế James Bessen, máy dệt cơ khí của thế kỷ mười chín đã tự động hoá chín mươi tám phần trăm công sức để dệt mỗi thước vải.",
+  "Vậy mà số việc làm dệt trong các nhà máy lại tăng lên.",
+  "Nhưng hãy để ý ba chữ: trong nhà máy.",
+  "Những người được tuyển vào đó, có phải chính những người thợ từng cầm búa không?",
+  "Câu hỏi ấy, phải rất lâu sau mới có người đo được bằng số liệu, với một nghề khác."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "NHỮNG NGƯỜI\nĐẬP MÁY",
+   "sub": "1804 — 1813",
+   "bg": "jcards",
+   "titleAt": [
+    0,
+    "Muốn"
+   ]
+  },
+  {
+   "type": "print",
+   "at": 1,
+   "img": "jloom",
+   "tone": "bw",
+   "side": {
+    "k": "JACQUARD · PHÁP",
+    "h": "Khung cửi\nđọc thẻ đục lỗ",
+    "lines": [
+     {
+      "text": "Bằng sáng chế *1804*",
+      "at": 1
+     },
+     {
+      "text": "Đọc lệnh từ *những tấm thẻ*",
+      "at": [
+       1,
+       "đọc"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 2,
+   "img": "jcards",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.5,
+   "kin": [
+    {
+     "text": "CÓ LỖ → SỢI NÂNG LÊN",
+     "at": 2
+    },
+    {
+     "text": "KHÔNG LỖ → SỢI NẰM YÊN",
+     "at": [
+      2,
+      "Chỗ",
+      1
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "THẺ ĐỤC LỖ",
+    "v": "CỦA KHUNG CỬI JACQUARD",
+    "at": 2
+   }
+  },
+  {
+   "type": "print",
+   "at": 3,
+   "img": "lovelace",
+   "tone": "color",
+   "side": {
+    "k": "ADA LOVELACE · 1843",
+    "h": "Nhà toán học",
+    "lines": [
+     {
+      "text": "*Máy Giải tích* của Charles Babbage",
+      "at": 3
+     },
+     {
+      "text": "so với chính *khung cửi Jacquard*",
+      "at": [
+       3,
+       "khung"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "quote",
+   "at": 4,
+   "bg": "jcards",
+   "text": "…the Analytical Engine weaves algebraical patterns just as the Jacquard-loom weaves flowers and leaves.",
+   "by": "ADA LOVELACE · NOTE A, 1843",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 4
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "bg": "jcards",
+   "items": [
+    {
+     "text": "HÃY NHỚ NHỮNG TẤM THẺ NÀY",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "chúng sẽ còn đi một chặng rất dài",
+     "at": [
+      5,
+      "Chúng"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 6,
+   "img": "powerloom",
+   "tone": "bw",
+   "move": "pan",
+   "veil": 0.5,
+   "kin": [
+    {
+     "text": "NƯỚC ANH",
+     "at": 6,
+     "sm": true
+    },
+    {
+     "text": "MÁY DỆT DỆT RA… NỖI SỢ",
+     "at": [
+      6,
+      "thứ"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "DỆT BẰNG MÁY · 1835",
+    "v": "TRANH KHẮC T. ALLOM",
+    "at": 6
+   }
+  },
+  {
+   "type": "date",
+   "at": 7,
+   "bg": "powerloom",
+   "day": "NOTTINGHAMSHIRE · NƯỚC ANH",
+   "date": "1811",
+   "label": {
+    "k": "1811",
+    "v": "THỢ DỆT BẮT ĐẦU ĐẬP MÁY",
+    "at": [
+     7,
+     "đập"
+    ]
+   }
+  },
+  {
+   "type": "print",
+   "at": 8,
+   "img": "luddite",
+   "tone": "bw",
+   "side": {
+    "k": "NED LUDD",
+    "h": "“Thủ lĩnh”\nhuyền thoại",
+    "lines": [
+     {
+      "text": "Tranh khắc in năm *1812*",
+      "at": 8
+     },
+     {
+      "text": "Một nhân vật *không có thật*",
+      "at": [
+       8,
+       "không"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 9,
+   "bg": "luddite",
+   "text": "LUDDITE",
+   "sub": "NHỮNG NGƯỜI ĐẬP MÁY",
+   "hitAt": [
+    9,
+    "Luddite."
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "NGÀY NAY",
+     "at": 10,
+     "sm": true
+    },
+    {
+     "text": "LUDDITE = GHÉT CÔNG NGHỆ?",
+     "at": [
+      10,
+      "ghét"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 11,
+   "text": "HỌ KHÔNG\nGHÉT MÁY",
+   "white": true
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "bg": "powerloom",
+   "items": [
+    {
+     "text": "HỌ PHẢN ĐỐI",
+     "at": 12,
+     "sm": true
+    },
+    {
+     "text": "MÁY DÙNG ĐỂ ÉP LƯƠNG",
+     "at": [
+      12,
+      "ép"
+     ],
+     "acc": true
+    },
+    {
+     "text": "VÀ CHO THỢ NGHỈ VIỆC",
+     "at": [
+      12,
+      "nghỉ"
+     ]
+    },
+    {
+     "text": "chiến tranh với Napoléon · buôn bán đình trệ",
+     "at": [
+      12,
+      "chiến"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "ĐẬP CÓ CHỌN LỌC",
+     "at": 13,
+     "acc": true
+    },
+    {
+     "text": "hiếm khi động tới tài sản khác",
+     "at": [
+      13,
+      "hiếm"
+     ],
+     "sm": true
+    },
+    {
+     "text": "nguồn: The National Archives (Anh)",
+     "at": [
+      13,
+      "tài"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 14,
+   "day": "LUẬT MỚI",
+   "date": "1812",
+   "label": {
+    "k": "LUẬT NĂM 1812",
+    "v": "PHÁ MÁY: CÓ THỂ BỊ TỬ HÌNH",
+    "at": [
+     14,
+     "phá"
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 15,
+   "title": "YORK · ĐẦU NĂM 1813",
+   "rows": [
+    {
+     "k": "PHIÊN TOÀ",
+     "v": "ĐẶC BIỆT",
+     "at": 15
+    },
+    {
+     "k": "BỊ TREO CỔ",
+     "v": "17 NGƯỜI",
+     "at": [
+      15,
+      "mười"
+     ]
+    },
+    {
+     "k": "VÌ",
+     "v": "GIẾT NGƯỜI · BẠO LOẠN · TRỘM CƯỚP",
+     "at": [
+      15,
+      "giết"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 16,
+   "text": "HỌ THUA."
+  },
+  {
+   "type": "counter",
+   "at": 17,
+   "img": "powerloom",
+   "tone": "bw",
+   "from": 0,
+   "to": 98,
+   "suffix": "%",
+   "label": "CÔNG SỨC DỆT MỖI THƯỚC VẢI",
+   "sub": {
+    "text": "MÁY DỆT CƠ KHÍ THẾ KỶ 19 · THEO JAMES BESSEN",
+    "at": 17
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 18,
+   "items": [
+    {
+     "text": "VẬY MÀ",
+     "at": 18,
+     "sm": true
+    },
+    {
+     "text": "VIỆC LÀM DỆT TRONG NHÀ MÁY TĂNG",
+     "at": [
+      18,
+      "việc"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 19,
+   "bg": "powerloom",
+   "text": "TRONG NHÀ MÁY",
+   "sub": "HÃY ĐỂ Ý BA CHỮ NÀY",
+   "hitAt": [
+    19,
+    "trong"
+   ]
+  },
+  {
+   "type": "question",
+   "at": 20,
+   "bg": "luddite",
+   "text": "Người được tuyển vào nhà máy\ncó phải người thợ từng cầm búa?"
+  },
+  {
+   "type": "kinetic",
+   "at": 21,
+   "bg": "switchboard",
+   "items": [
+    {
+     "text": "PHẢI RẤT LÂU SAU",
+     "at": 21
+    },
+    {
+     "text": "mới có người đo bằng số liệu · với một nghề khác",
+     "at": [
+      21,
+      "đo"
+     ],
+     "sm": true,
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "NHỮNG NGƯỜI ĐẬP MÁY"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

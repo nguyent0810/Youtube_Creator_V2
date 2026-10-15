@@ -14,6 +14,69 @@ import numpy as np
 
 SR = 48000
 
+# ---- nen moi truong that (CC0): mua / nuoc / chuong -- motion/stier/ambience/LICENSES.json ----
+AMB_DIR = Path(__file__).resolve().parent / "ambience"
+
+
+def _read_wav(p: Path) -> np.ndarray:
+    with wave.open(str(p)) as w:
+        if w.getframerate() != SR or w.getsampwidth() != 2:
+            raise SystemExit(f"{p.name}: can 48 kHz / 16-bit")
+        x = np.frombuffer(w.readframes(w.getnframes()), "<i2").astype(float) / 32768
+        return x.reshape(-1, 2) if w.getnchannels() == 2 else np.repeat(x[:, None], 2, 1)
+
+
+def _loop(x: np.ndarray, n: int, xf: int) -> np.ndarray:
+    """Lap ban ghi cho du n mau, noi vong bang crossfade dang-cong-suat (khong nghe 'cu' noi)."""
+    xf = max(1, min(xf, len(x) // 3))
+    f = np.sin(np.linspace(0, np.pi / 2, xf))[:, None]
+    out = x[: min(n, len(x))].copy()
+    while len(out) < n:
+        out[-xf:] = out[-xf:] * f[::-1] + x[:xf] * f
+        out = np.concatenate([out, x[xf:]])
+    return out[:n]
+
+
+def ambience(amb, N: int):
+    """spec "ambience": "rain" | {"bed": "rain"|"water", "gain": 1.0,
+    "hits": [{"at": giay, "kind": "bell"|"gong", "gain": 1.0}]}.
+    Tra lop (N,2) o MUC TUYET DOI (khong bi chuan hoa dinh cung sfx), hoac None."""
+    if not amb:
+        return None
+    if isinstance(amb, str):
+        amb = {"bed": amb}
+    out = np.zeros((N, 2))
+    if amb.get("bed"):
+        b = _loop(_read_wav(AMB_DIR / f"{amb['bed']}.wav"), N, int(1.5 * SR))
+        i = np.arange(N)
+        env = np.minimum(1, i / (0.8 * SR)) * np.minimum(1, (N - i) / (1.2 * SR))
+        out += b * env[:, None] * float(amb.get("gain", 1.0))
+    for h in amb.get("hits") or []:
+        x = _read_wav(AMB_DIR / f"{h.get('kind', 'bell')}.wav") * float(h.get("gain", 1.0))
+        i = int(h["at"] * SR)
+        if 0 <= i < N:
+            x = x[: N - i]
+            out[i:i + len(x)] += x
+    return out
+
+
+def ambience_credits(amb) -> list[str]:
+    """Dong ghi cong cho credits.json (CC0: khong bat buoc, van ghi)."""
+    if not amb:
+        return []
+    import json
+    lic = json.loads((AMB_DIR / "LICENSES.json").read_text(encoding="utf-8"))
+    amb = {"bed": amb} if isinstance(amb, str) else amb
+    names = ([amb["bed"]] if amb.get("bed") else []) + [h.get("kind", "bell") for h in amb.get("hits") or []]
+    seen, res = set(), []
+    for k in names:
+        if k in seen:
+            continue
+        seen.add(k)
+        m = lic[f"{k}.wav"]
+        res.append(f"Sound: {m['title'].split(' (')[0]} - {m['author'].split(' (')[0]}, {m['license']} ({m['source']})")
+    return res
+
 
 class Mix:
     def __init__(self, dur: float, seed: int):
@@ -106,9 +169,12 @@ class Mix:
         s = sum(np.sin(2 * np.pi * f * t + i) for i, f in enumerate(freqs)) / len(freqs)
         return s * np.minimum(1, t / a) * np.minimum(1, np.maximum(0, (dur - t)) / r)
 
-    def write(self, dst: Path):
+    def write(self, dst: Path, extra=None):
         peak = np.max(np.abs(self.bed)) or 1.0
-        out = (self.bed / peak * 0.9 * 32767).astype("<i2")
+        mix = self.bed / peak * 0.9
+        if extra is not None:   # nen moi truong: cong SAU chuan hoa -> muc on dinh giua cac video
+            mix = np.clip(mix + extra, -0.99, 0.99)
+        out = (mix * 32767).astype("<i2")
         with wave.open(str(dst), "wb") as w:
             w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes(out.tobytes())
 
@@ -249,6 +315,27 @@ def build(case: dict, dst: Path, drone: bool = True) -> None:
                     M.put(r["at"] + k * 0.05, M.key(), 0.4)
             if s.get("total"):
                 M.put(s["total"]["at"], M.thud(0.6), 0.9)
+        elif ty == "chart":      # kênh CK: cột mọc / đường vẽ dần (casefile.js B.chart)
+            for b in s.get("bars") or []:
+                M.put(b["at"] - 0.1, M.whoosh(0.35), 0.18)
+                M.put(b["at"] + 0.3, M.thud(0.35), 0.35)
+                if b.get("gapAt") is not None:
+                    M.put(b["gapAt"], M.scratch(0.3), 0.5)
+            for k, p in enumerate(s.get("points") or []):
+                M.put(p["at"], M.blip(), 0.35 if k else 0.2, 0.2)
+            if s.get("badge"):
+                M.put(s["badge"]["at"] - 0.1, M.thud(0.5), 0.7)
+        elif ty == "board":      # bảng trắng: tiếng bút theo từng ô, vút theo mũi tên (casefile.js B.board)
+            for q in s.get("nodes") or []:
+                M.put(q["at"] - 0.1, M.scratch(0.3), 0.4)
+                if q.get("cross") is not None:
+                    M.put(q["cross"], M.scratch(0.3), 0.6)
+            for a in s.get("arrows") or []:
+                M.put(a["at"] - 0.05, M.whoosh(0.3), 0.2)
+        elif ty == "cards3d":    # thẻ 3D lật lên
+            for c in s["cards"]:
+                M.put(c["at"] - 0.15, M.whoosh(0.35), 0.22)
+                M.put(c["at"] + 0.25, M.thud(0.4), 0.5)
         elif ty == "slam":
             fx = s.get("fx", "punch")
             if fx in ("slice", "zoom"):
@@ -256,4 +343,4 @@ def build(case: dict, dst: Path, drone: bool = True) -> None:
             elif fx == "glitch":
                 M.put(s["at"] - 0.05, M.scratch(0.35), 0.6)
             M.put(s["at"] + 0.05, M.boom(1.8 if fx != "outline" else 1.4), 1.0)
-    M.write(dst)
+    M.write(dst, extra=ambience(case.get("ambience"), M.N))

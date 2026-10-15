@@ -1,0 +1,416 @@
+{
+ "title": "Ai đang giữ điểm cho VN-Index?",
+ "lines": [
+  {
+   "t": "Vậy cái gì giữ cho chỉ số gần như đứng yên?",
+   "p": 0.8
+  },
+  "Con gà to nhất trong giỏ.",
+  "Từ cuối năm ngoái tới ba mươi tháng chín, giá cổ phiếu VIC tăng khoảng một phần ba.",
+  "Theo ước tính của kênh, riêng mã này kéo VN-Index lên khoảng một trăm điểm, trong khi cả chỉ số giảm khoảng mười sáu điểm.",
+  {
+   "t": "Nói cách khác: nếu VIC chỉ đứng giá, VN-Index cuối tháng chín có thể đã thấp hơn khoảng một trăm điểm.",
+   "p": 1.0
+  },
+  "Cả nhóm bốn mã liên quan tới Vingroup cộng lại cũng chỉ giữ khoảng một trăm điểm, vì có hai trong bốn mã đó giảm.",
+  "Phần còn lại của thị trường, khoảng ba phần tư vốn hoá, kéo chỉ số xuống khoảng tám mươi điểm, tương đương giảm khoảng sáu phần trăm.",
+  "Đây là ước tính thô: cộng các phần này lại sẽ không ra đúng mức giảm mười sáu điểm của chỉ số, vì vậy bạn chỉ cần nhớ chiều và độ lớn.",
+  {
+   "t": "Một chuyên gia phân tích được báo Vietnambiz dẫn lời cũng ra kết quả cùng chiều: nửa đầu năm VN-Index tăng hơn bốn phần trăm, nhưng bỏ nhóm Vingroup ra thì âm gần hai phần trăm.",
+   "p": 1.0
+  },
+  {
+   "t": "Vậy cứ mua mấy mã lớn nhất là chắc ăn, phải không?",
+   "ask": 1
+  },
+  "Kênh không trả lời câu hỏi nên mua mã nào. Nhưng dữ liệu cho thấy hai điều.",
+  "Một, ngay trong mười mã lớn nhất sàn, năm nay có mã giảm hơn hai mươi phần trăm, và chính nó kéo chỉ số xuống nhiều nhất.",
+  {
+   "t": "Hai, đây là nhìn lại. Không ai biết trước năm nào, mã nào sẽ là con gà tăng giá.",
+   "p": 1.0
+  },
+  "Và đây là khoảnh khắc mình muốn bạn nhớ nhất.",
+  "Ngày mười tám tháng năm, VN-Index đóng cửa ở mức cao nhất từ đầu năm tới cuối tháng chín, gần một nghìn chín trăm hai mươi tám điểm, cao hơn cuối năm ngoái tám phần trăm.",
+  "Nhìn chỉ số, đó là ngày đẹp nhất trong chín tháng đầu năm.",
+  {
+   "t": "Nhưng cùng ngày hôm đó, sáu mươi tư phần trăm cổ phiếu trên HOSE vẫn thấp hơn giá đầu năm.",
+   "p": 1.0
+  },
+  "Từ đáy tháng ba tới cuối tháng chín, tỉ lệ này chưa lúc nào xuống dưới năm mươi tám phần trăm."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "CHƯƠNG BỐN",
+   "title": "AI ĐANG GIỮ ĐIỂM\nCHO VN-INDEX?",
+   "sub": "ĐÓNG GÓP ĐIỂM · 2026",
+   "titleAt": [
+    0,
+    "Vậy"
+   ]
+  },
+  {
+   "type": "basket",
+   "at": 1,
+   "date": "2026-09-30",
+   "groupSmall": 200,
+   "labels": [
+    "VIC"
+   ],
+   "tileInfo": "pct",
+   "color": "pct",
+   "title": "VỐN HOÁ HOSE · MÀU = % THAY ĐỔI",
+   "range": "31/12/2025 → 30/09/2026",
+   "drawAt": [
+    1,
+    "Con"
+   ],
+   "colorAt": [
+    2,
+    "Từ"
+   ],
+   "captions": [
+    {
+     "k": "VIC · 31/12/2025 → 30/09",
+     "v": "+34,4%",
+     "at": [
+      2,
+      "VIC"
+     ],
+     "tone": "up",
+     "mark": [
+      "VIC"
+     ]
+    },
+    {
+     "k": "KÉO VN-INDEX (ƯỚC TÍNH)",
+     "v": "≈ +100 ĐIỂM",
+     "at": [
+      3,
+      "kéo"
+     ],
+     "tone": "gold"
+    },
+    {
+     "k": "CẢ VN-INDEX",
+     "v": "≈ −16 ĐIỂM",
+     "at": [
+      3,
+      "cả"
+     ],
+     "tone": "down"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "NẾU VIC CHỈ ĐỨNG GIÁ",
+     "at": [
+      4,
+      "nếu"
+     ]
+    },
+    {
+     "text": "VN-INDEX 30/09: CÓ THỂ THẤP HƠN ≈ 100 ĐIỂM",
+     "at": [
+      4,
+      "thấp"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "basket",
+   "at": 5,
+   "date": "2026-09-30",
+   "groupSmall": 200,
+   "labels": [
+    "VIC"
+   ],
+   "tileInfo": "pct",
+   "color": "pct",
+   "title": "NHÓM VINGROUP · 4 MÃ",
+   "range": "31/12/2025 → 30/09/2026",
+   "drawAt": [
+    5,
+    "Cả"
+   ],
+   "highlight": [
+    "VIC",
+    "VHM",
+    "VRE",
+    "VPL"
+   ],
+   "hlAt": [
+    5,
+    "Vingroup"
+   ],
+   "captions": [
+    {
+     "k": "NHÓM VINGROUP (4 MÃ)",
+     "v": "≈ +105 ĐIỂM",
+     "at": [
+      5,
+      "giữ"
+     ],
+     "tone": "gold"
+    },
+    {
+     "k": "2 / 4 MÃ TRONG NHÓM",
+     "v": "GIẢM",
+     "at": [
+      5,
+      "hai"
+     ],
+     "tone": "down",
+     "mark": [
+      "VRE",
+      "VPL"
+     ]
+    },
+    {
+     "k": "PHẦN CÒN LẠI (≈ −6%)",
+     "v": "≈ −80 ĐIỂM",
+     "at": [
+      6,
+      "Phần"
+     ],
+     "tone": "down"
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "ĐÓNG GÓP ĐIỂM · ƯỚC TÍNH THÔ",
+   "rows": [
+    {
+     "k": "VIC",
+     "v": "≈ +100 ĐIỂM",
+     "at": [
+      7,
+      "Đây"
+     ]
+    },
+    {
+     "k": "NHÓM VINGROUP (4 MÃ)",
+     "v": "≈ +105 ĐIỂM",
+     "at": [
+      7,
+      "cộng"
+     ]
+    },
+    {
+     "k": "PHẦN CÒN LẠI",
+     "v": "≈ −80 ĐIỂM",
+     "at": [
+      7,
+      "phần"
+     ]
+    }
+   ],
+   "total": {
+    "k": "VN-INDEX THỰC TẾ",
+    "v": "≈ −16 ĐIỂM",
+    "at": [
+     7,
+     "mười"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "VIETNAMBIZ (DẪN CHUYÊN GIA) · NỬA ĐẦU 2026",
+     "at": [
+      8,
+      "Một"
+     ],
+     "sm": true
+    },
+    {
+     "text": "VN-INDEX: +4,23%",
+     "at": [
+      8,
+      "tăng"
+     ]
+    },
+    {
+     "text": "BỎ NHÓM VINGROUP: ≈ −1,81%",
+     "at": [
+      8,
+      "bỏ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 9,
+   "text": "Cứ mua mấy mã lớn nhất\nlà chắc ăn?"
+  },
+  {
+   "type": "slam",
+   "at": 10,
+   "text": "KÊNH KHÔNG TRẢ LỜI\n\"NÊN MUA MÃ NÀO\"",
+   "sub": "NHƯNG DỮ LIỆU CHO THẤY HAI ĐIỀU"
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "01 · TRONG 10 MÃ LỚN NHẤT: CÓ MÃ ≈ −22%",
+     "at": [
+      11,
+      "Một,"
+     ]
+    },
+    {
+     "text": "CHÍNH NÓ KÉO CHỈ SỐ XUỐNG NHIỀU NHẤT",
+     "at": [
+      11,
+      "kéo"
+     ],
+     "acc": true
+    },
+    {
+     "text": "02 · ĐÂY LÀ NHÌN LẠI",
+     "at": [
+      12,
+      "Hai,"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": [
+    12,
+    "Không"
+   ],
+   "text": "KHÔNG AI BIẾT TRƯỚC",
+   "sub": "NĂM NÀO, MÃ NÀO SẼ LÀ \"CON GÀ\" TĂNG GIÁ"
+  },
+  {
+   "type": "date",
+   "at": 13,
+   "day": "KHOẢNH KHẮC ĐÁNG NHỚ NHẤT",
+   "date": "18.05.2026"
+  },
+  {
+   "type": "candles",
+   "at": 14,
+   "series": "vnindex",
+   "from": "2025-12-01",
+   "to": "2026-09-30",
+   "drawAt": [
+    14,
+    "Ngày"
+   ],
+   "until": [
+    14,
+    "cao"
+   ],
+   "title": "VN-INDEX · KHUNG NGÀY",
+   "range": "12/2025 – 09/2026",
+   "ind": [],
+   "marks": [
+    {
+     "date": "2026-05-18",
+     "text": "Đóng cửa 1.927,94 · +8,0%",
+     "pos": "above",
+     "tone": "up",
+     "at": [
+      14,
+      "gần"
+     ],
+     "dx": 260,
+     "dy": -10
+    }
+   ]
+  },
+  {
+   "type": "breadth",
+   "at": 15,
+   "date": "2026-05-18",
+   "title": "CAO NHẤT TỪ ĐẦU NĂM TỚI 30/09 · 400 MÃ HOSE",
+   "range": "31/12/2025 → 18/05/2026",
+   "drawAt": [
+    15,
+    "Nhìn"
+   ],
+   "until": [
+    15,
+    "đó"
+   ],
+   "countAt": [
+    15,
+    "đó"
+   ],
+   "countSub": "DƯỚI GIÁ ĐẦU NĂM",
+   "chipAt": [
+    15,
+    "chỉ"
+   ],
+   "animate": {
+    "from": "2026-01-05",
+    "to": "2026-05-18",
+    "every": 3,
+    "at": [
+     15,
+     "ngày"
+    ],
+    "until": [
+     16,
+     "cùng"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "TỪ ĐÁY 23/03 → 30/09/2026",
+     "at": [
+      17,
+      "Từ"
+     ],
+     "sm": true
+    },
+    {
+     "text": "TỈ LỆ MÃ DƯỚI GIÁ ĐẦU NĂM",
+     "at": [
+      17,
+      "tỉ"
+     ]
+    },
+    {
+     "text": "CHƯA LÚC NÀO < 58%",
+     "at": [
+      17,
+      "chưa"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "AI ĐANG GIỮ ĐIỂM CHO VN-INDEX?"
+ },
+ "bgm": {
+  "mood": "epic",
+  "gain": 0.11
+ }
+}

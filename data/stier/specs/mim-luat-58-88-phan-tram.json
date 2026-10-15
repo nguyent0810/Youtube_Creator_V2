@@ -1,0 +1,182 @@
+{
+ "theme": "mim",
+ "title": "Hỏi AI về án lệ: tỉ lệ trả lời bịa từ 58 tới 88% (nghiên cứu năm 2024)",
+ "description": "Một nghiên cứu đăng trên Tạp chí Phân tích Pháp luật năm 2024 hỏi các mô hình ngôn ngữ những câu có thể kiểm chứng về các vụ án liên bang Mỹ chọn ngẫu nhiên. Tỉ lệ trả lời bịa, tuỳ mô hình, từ 58% tới 88%; và các mô hình nhiều khi không biết lúc nào mình đang bịa (arXiv 2401.01301). Đó là các mô hình đời năm 2023; mô hình về sau khá hơn nhưng chưa hết bịa, và không có một tỉ lệ chung cho mọi AI, mọi câu hỏi. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/H9nlRjxfmPw (công khai từ 20:00 ngày 02/11).",
+ "tags": [
+  "ai và luật",
+  "ảo giác pháp lý",
+  "ai bịa",
+  "ảo giác ai",
+  "chatgpt",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "NGHIÊN CỨU · 2024",
+ "acc": [
+  "năm",
+  "tám",
+  "bịa",
+  "hiếm",
+  "chung"
+ ],
+ "kicker": "AI QUANH TA",
+ "lines": [
+  "Từ năm mươi tám tới tám mươi tám phần trăm. Đó là tỉ lệ AI trả lời bịa, khi được hỏi về án lệ.",
+  "Một nghiên cứu năm 2024 hỏi các mô hình ngôn ngữ những câu có thể kiểm chứng, về những vụ án liên bang Mỹ chọn ngẫu nhiên.",
+  "Tuỳ mô hình, phần lớn câu trả lời là bịa.",
+  "Và các mô hình nhiều khi không biết, lúc nào chính mình đang bịa.",
+  "Đó là các mô hình đời năm 2023. Về sau đã khá hơn, nhưng chưa hết bịa.",
+  "Không có một con số chung cho mọi AI và mọi câu hỏi.",
+  "Điều càng hiếm, càng chuyên sâu, thì càng dễ bị bịa."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "58% → 88%",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "AI trả lời bịa khi hỏi về án lệ",
+     "at": [
+      0,
+      "Đó"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6101349",
+   "ms": 8,
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NGHIÊN CỨU NĂM 2024",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "VỤ ÁN LIÊN BANG CHỌN NGẪU NHIÊN",
+     "at": [
+      1,
+      "vụ"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:5636966",
+   "ms": 2,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "chart",
+   "at": 2,
+   "kind": "bars",
+   "title": "TỈ LỆ TRẢ LỜI BỊA (%)",
+   "unit": "TUỲ MÔ HÌNH · TẠP CHÍ PHÂN TÍCH PHÁP LUẬT, 2024",
+   "bars": [
+    {
+     "label": "THẤP NHẤT",
+     "v": 58,
+     "text": "58",
+     "c": "ref",
+     "at": [
+      2,
+      "Tuỳ"
+     ]
+    },
+    {
+     "label": "CAO NHẤT",
+     "v": 88,
+     "text": "88",
+     "c": "down",
+     "at": [
+      2,
+      "phần"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "KHÔNG BIẾT MÌNH ĐANG BỊA",
+   "sub": "NHIỀU KHI"
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "ĐỌC CON SỐ CHO ĐÚNG",
+   "cards": [
+    {
+     "k": "MÔ HÌNH",
+     "v": "ĐỜI 2023",
+     "at": 4
+    },
+    {
+     "k": "CON SỐ CHUNG",
+     "v": "KHÔNG CÓ",
+     "at": 5,
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Điều càng hiếm",
+   "nodes": [
+    {
+     "text": "càng chuyên sâu",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      6,
+      "càng"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "càng dễ bị bịa",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "dễ"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 560
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://arxiv.org/abs/2401.01301"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "=AI": "ây ai"
+ },
+ "imgs": {}
+}

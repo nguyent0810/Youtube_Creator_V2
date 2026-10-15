@@ -1,0 +1,166 @@
+{
+ "theme": "mim",
+ "title": "“Tôi tưởng nó là một siêu công cụ tìm kiếm”: lời luật sư nộp án lệ do ChatGPT bịa",
+ "description": "Tại phiên điều trần ngày 08/06/2023, luật sư Steven Schwartz kể ông đã lầm tưởng ChatGPT giống như một siêu công cụ tìm kiếm, và chưa bao giờ nghĩ vụ án có thể là bịa (trích dịch từ hồ sơ toà). Nhưng mô hình ngôn ngữ không tra cứu như công cụ tìm kiếm: nó viết tiếp chữ nghe hợp lý nhất; trơn tru không có nghĩa là đúng. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/H9nlRjxfmPw (công khai từ 20:00 ngày 02/11).",
+ "tags": [
+  "chatgpt không phải google",
+  "mô hình ngôn ngữ",
+  "ai bịa",
+  "ảo giác ai",
+  "chatgpt",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "08/06/2023",
+ "acc": [
+  "siêu",
+  "tìm",
+  "viết",
+  "đúng",
+  "trơn"
+ ],
+ "kicker": "AI QUANH TA",
+ "lines": [
+  "Tôi đã lầm tưởng nó giống như một siêu công cụ tìm kiếm.",
+  "Đó là lời một luật sư ở New York, trong phiên điều trần tháng 6 năm 2023.",
+  "Ông đã nộp lên toà những án lệ do ChatGPT viết ra, mà không vụ nào có thật.",
+  "Một công cụ tìm kiếm đưa bạn tới những trang có thật.",
+  "Một mô hình ngôn ngữ thì làm việc khác. Nó viết tiếp những chữ nghe hợp lý nhất.",
+  "Vì thế, nó có thể viết ra một án lệ rất đúng khuôn, mà chẳng hề tồn tại.",
+  "Trơn tru không có nghĩa là đúng."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "“MỘT SIÊU CÔNG CỤ TÌM KIẾM”",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "trích dịch lời luật sư · 06/2023",
+     "at": [
+      0,
+      "giống"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34771072",
+   "veil": 0.58
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "08/06/2023",
+   "sub": "PHIÊN ĐIỀU TRẦN Ở NEW YORK"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "ÁN LỆ DO CHATGPT VIẾT",
+     "at": 2,
+     "acc": true
+    },
+    {
+     "text": "không vụ nào có thật",
+     "at": [
+      2,
+      "mà"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:5636966",
+   "ms": 2,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 2
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "HAI CÔNG CỤ KHÁC NHAU",
+   "cards": [
+    {
+     "k": "CÔNG CỤ TÌM KIẾM",
+     "v": "ĐƯA TỚI TRANG CÓ THẬT",
+     "at": 3
+    },
+    {
+     "k": "MÔ HÌNH NGÔN NGỮ",
+     "v": "VIẾT CHỮ NGHE HỢP LÝ",
+     "at": 4,
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 0,
+   "to": 0,
+   "suffix": " VỤ",
+   "label": "ÁN LỆ “ĐÚNG KHUÔN” THẬT SỰ TỒN TẠI",
+   "sub": {
+    "text": "TRONG SÁU VỤ ĐƯỢC DẪN",
+    "at": 5
+   }
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Nhớ rằng",
+   "nodes": [
+    {
+     "text": "trơn tru",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      6,
+      "Trơn"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "không có nghĩa là đúng",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "không"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 680
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://storage.courtlistener.com/recap/gov.uscourts.nysd.575368/gov.uscourts.nysd.575368.54.0.pdf"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "new": "Niu",
+  "york": "Doóc",
+  "chatgpt": "chát gi pi ti"
+ },
+ "imgs": {}
+}

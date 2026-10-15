@@ -1,0 +1,194 @@
+{
+ "theme": "mim",
+ "title": "Cỗ máy thắng cao thủ poker mà không đọc vị ai: vì sao Pluribus không cần biết bạn là ai",
+ "description": "Một cao thủ poker luôn tìm thói quen của người đối diện rồi khai thác. Theo bài báo Science (07/2019), Pluribus không điều chỉnh cách chơi theo thói quen quan sát được ở đối thủ: nó chơi cân bằng sao cho ai khai thác nó cũng khó. Người cố khai thác đối thủ thì chính mình cũng để lộ sơ hở (Facebook AI).\n\nVideo nói về nghiên cứu trí tuệ nhân tạo; không hướng dẫn chơi bài, không cổ vũ cờ bạc. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/Mz0HwBBSBbg (công khai từ 20:00 ngày 26/11).",
+ "tags": [
+  "pluribus",
+  "lý thuyết trò chơi",
+  "trận đấu người máy",
+  "trí tuệ nhân tạo",
+  "lịch sử máy tính",
+  "mind in the machine"
+ ],
+ "sub": "SCIENCE · 07/2019",
+ "acc": [
+  "đọc",
+  "vị",
+  "cân",
+  "bằng",
+  "sai"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Cỗ máy thắng các cao thủ poker, mà không hề cố đọc vị ai.",
+  "Một cao thủ con người luôn tìm thói quen của người ngồi đối diện.",
+  "Người này hay doạ khi bài yếu. Người kia hay bỏ khi bị ép. Rồi họ khai thác chính những thói quen ấy.",
+  "Theo bài báo của nhóm nghiên cứu năm 2019, Pluribus không điều chỉnh cách chơi theo thói quen của đối thủ.",
+  "Nó chơi cân bằng, sao cho ai khai thác nó cũng khó.",
+  "Người cố khai thác đối thủ thì chính mình cũng để lộ sơ hở. Cỗ máy thì không để lộ gì.",
+  "Nó không cần biết bạn là ai. Nó chỉ cần không sai."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "KHÔNG ĐỌC VỊ AI",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "vẫn thắng cao thủ poker",
+     "at": [
+      0,
+      "thắng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6259147",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CAO THỦ CON NGƯỜI",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "TÌM THÓI QUEN ĐỐI THỦ",
+     "at": [
+      1,
+      "tìm"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:6962281",
+   "ms": 30,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "THÓI QUEN",
+   "cards": [
+    {
+     "k": "NGƯỜI NÀY",
+     "v": "DOẠ KHI BÀI YẾU",
+     "at": 2
+    },
+    {
+     "k": "NGƯỜI KIA",
+     "v": "BỎ KHI BỊ ÉP",
+     "at": [
+      2,
+      "Người",
+      1
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "from": 0,
+   "to": 0,
+   "suffix": " ĐIỀU CHỈNH",
+   "label": "THEO THÓI QUEN CỦA ĐỐI THỦ",
+   "sub": {
+    "text": "PLURIBUS · SCIENCE 07/2019",
+    "at": [
+     3,
+     "Pluribus"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "CHƠI CÂN BẰNG",
+   "sub": "AI KHAI THÁC CŨNG KHÓ"
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Khai thác đối thủ",
+   "nodes": [
+    {
+     "text": "cũng để lộ sơ hở",
+     "x": 0.5,
+     "y": 0.3,
+     "at": 5,
+     "shape": "none",
+     "w": 620
+    },
+    {
+     "text": "cỗ máy không để lộ gì",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      5,
+      "Cỗ"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 700
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CHỈ CẦN KHÔNG SAI",
+     "at": [
+      6,
+      "Nó",
+      1
+     ],
+     "acc": true
+    },
+    {
+     "text": "không cần biết bạn là ai",
+     "at": 6,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6664998",
+   "ms": 6,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 6
+  }
+ ],
+ "sources": [
+  "https://ai.facebook.com/blog/pluribus-first-ai-to-beat-pros-in-6-player-poker"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "=AI": "ây ai",
+  "pluribus": "Plu-ri-bút",
+  "poker": "pô-cơ"
+ },
+ "imgs": {}
+}

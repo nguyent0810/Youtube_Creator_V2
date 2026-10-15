@@ -1,0 +1,29 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700;800;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#02050a}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;color:#fff}
+.grid{position:absolute;inset:0;background:linear-gradient(rgba(125,211,252,.07) 1px,transparent 1px) 0 0/64px 64px,linear-gradient(90deg,rgba(125,211,252,.07) 1px,transparent 1px) 0 0/64px 64px}
+.glow{position:absolute;border-radius:50%;filter:blur(120px)}
+.big{position:absolute;font-weight:900;line-height:1.04;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.cy{color:#22d3ee;text-shadow:0 0 50px rgba(34,211,238,.75),0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.bub{position:absolute;padding:34px 48px;border-radius:44px;font-size:56px;font-weight:800;line-height:1.2;box-shadow:0 30px 90px #000,0 0 0 6px #000;white-space:nowrap}
+.me{background:#22d3ee;color:#02050a;border-bottom-right-radius:8px}
+.eye{position:absolute;filter:drop-shadow(0 20px 30px #000)}
+</style></head><body>
+<!-- T1: bong bóng chat chung chung (không logo, không giao diện thật) chứa "Mật khẩu của tôi là…" + con mắt nhìn trộm; chữ "AI CÓ ĐỌC / CHAT CỦA BẠN?" -->
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<div class="grid"></div>
+<div class="glow" style="left:1050px;top:250px;width:800px;height:600px;background:rgba(34,211,238,.25)"></div>
+<div class="bub me" data-fit style="left:1080px;top:330px">Mật khẩu của mình là…</div>
+<div class="bub me" data-fit style="left:1180px;top:520px">Số CCCD: 0•••••••••</div>
+<svg class="eye" style="left:1500px;top:90px" width="300" height="200" viewBox="0 0 300 200">
+  <path d="M10 100 Q150 -10 290 100 Q150 210 10 100 Z" fill="#0b1626" stroke="#22d3ee" stroke-width="12"/>
+  <circle cx="150" cy="100" r="52" fill="#22d3ee"/><circle cx="150" cy="100" r="22" fill="#02050a"/>
+</svg>
+<div class="big" style="left:80px;top:200px;font-size:170px">AI CÓ ĐỌC</div>
+<div class="big cy" style="left:80px;top:420px;font-size:170px">CHAT</div>
+<div class="big" style="left:80px;top:640px;font-size:140px">CỦA BẠN?</div>
+</div>
+<script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

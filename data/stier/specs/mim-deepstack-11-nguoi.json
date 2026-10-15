@@ -1,0 +1,167 @@
+{
+ "theme": "mim",
+ "title": "DeepStack: 33 người chơi từ 17 nước, 11 người chơi hết trận, máy thắng cả 11 (Science 2017)",
+ "description": "Nhóm Đại học Alberta mời 33 người chơi poker chuyên nghiệp từ 17 quốc gia; mỗi người một trận 3.000 ván với DeepStack trong khoảng bốn tuần. 11 người chơi hết trận, DeepStack thắng cả 11 (Science, 03/2017). Khác Libratus, DeepStack dùng mạng nơ-ron ước lượng nhanh rồi tính lại mỗi khi tới lượt (Đại học Alberta).\n\nVideo nói về nghiên cứu trí tuệ nhân tạo; không hướng dẫn chơi bài, không cổ vũ cờ bạc. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/Mz0HwBBSBbg (công khai từ 20:00 ngày 26/11).",
+ "tags": [
+  "deepstack",
+  "đại học alberta",
+  "ai chơi poker",
+  "libratus",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "SCIENCE · 03/2017",
+ "acc": [
+  "ba",
+  "mười",
+  "một",
+  "tính",
+  "lại"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Ba mươi ba người chơi từ mười bảy quốc gia. Mười một người chơi hết trận. Cỗ máy thắng cả mười một.",
+  "Cùng thời Libratus, một nhóm ở Đại học Alberta, Canada, có chương trình poker của riêng mình: DeepStack.",
+  "Mỗi người chơi một trận ba nghìn ván với nó, trong khoảng bốn tuần.",
+  "Kết quả được công bố trên tạp chí Science, tháng 3 năm 2017.",
+  "Cách làm khác Libratus: nó không chuẩn bị sẵn kế hoạch khổng lồ cho mọi tình huống.",
+  "Mỗi khi tới lượt, nó dùng một mạng nơ-ron để ước lượng nhanh, rồi tính lại cho đúng tình huống ấy.",
+  "Hai cỗ máy, hai cách làm, cùng một kết luận: ở poker tay đôi, con người đã thua."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "11 / 11",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "người chơi hết trận đều thua máy",
+     "at": [
+      0,
+      "Mười"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6259147",
+   "ms": 6,
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "DEEPSTACK",
+     "at": [
+      1,
+      "DeepStack"
+     ],
+     "acc": true
+    },
+    {
+     "text": "Đại học Alberta · Canada",
+     "at": 1,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:28709421",
+   "ms": 8,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "chart",
+   "at": 2,
+   "kind": "bars",
+   "title": "THỬ NGHIỆM DEEPSTACK",
+   "unit": "SCIENCE · 03/2017",
+   "bars": [
+    {
+     "label": "ĐƯỢC MỜI",
+     "v": 33,
+     "text": "33",
+     "c": "ref",
+     "at": [
+      2,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "label": "CHƠI HẾT\n3.000 VÁN",
+     "v": 11,
+     "text": "11",
+     "c": "ref",
+     "at": [
+      2,
+      "ba"
+     ]
+    },
+    {
+     "label": "THUA MÁY",
+     "v": 11,
+     "text": "11",
+     "c": "down",
+     "at": 3
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "CÁCH LÀM",
+   "cards": [
+    {
+     "k": "KHÔNG CÓ",
+     "v": "KẾ HOẠCH KHỔNG LỒ",
+     "at": 4
+    },
+    {
+     "k": "MỖI LƯỢT",
+     "v": "ƯỚC LƯỢNG · TÍNH LẠI",
+     "at": 5,
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "POKER TAY ĐÔI",
+   "sub": "CON NGƯỜI ĐÃ THUA"
+  }
+ ],
+ "sources": [
+  "https://www.ualberta.ca/science/news/2017/march/artificial-intelligence-deepstack-outplays-poker-professionals.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "libratus": "Li-bra-tút",
+  "deepstack": "Đíp-xtác",
+  "alberta": "An-béc-ta",
+  "canada": "Ca-na-đa",
+  "science": "Xai-ần",
+  "poker": "pô-cơ"
+ },
+ "imgs": {}
+}

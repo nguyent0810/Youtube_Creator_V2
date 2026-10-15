@@ -1,0 +1,32 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#050912}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:"Be Vietnam Pro",sans-serif;color:#fff;
+ background:linear-gradient(rgba(125,211,252,.06) 1px,transparent 1px) 0 0/80px 80px,linear-gradient(90deg,rgba(125,211,252,.06) 1px,transparent 1px) 0 0/80px 80px,radial-gradient(80% 70% at 50% 40%,#16263f 0%,#0a1426 60%,#04080f 100%)}
+.big{position:absolute;font-weight:900;line-height:1.05;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.tag{position:absolute;font-family:"JetBrains Mono";font-weight:700;letter-spacing:.16em;white-space:nowrap;color:#94a3b8}
+.wall{position:absolute;left:1180px;top:110px;display:grid;grid-template-columns:repeat(5,120px);gap:14px}
+.wall b{height:70px;border-radius:12px;background:#22d3ee;display:flex;align-items:center;justify-content:center;font-family:"JetBrains Mono";font-size:26px;color:#053445}
+.wall b.r{background:#ef4444;color:#450a0a}.wall b.y{background:#fbbf24;color:#422006}
+.chip{position:absolute;padding:18px 40px 22px;border-radius:60px;border:5px solid #38bdf8;background:#0a1426;font-weight:900;white-space:nowrap;box-shadow:0 0 60px rgba(56,189,248,.45)}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<!-- T2: "233 MÃ NẰM SÀN" + tường ô xanh lơ (mô phỏng bảng giá, không tên mã) + chip VN-INDEX −115 ĐIỂM -->
+<div class="wall">
+<b>SÀN</b><b>SÀN</b><b>SÀN</b><b>SÀN</b><b>SÀN</b>
+<b>SÀN</b><b>SÀN</b><b class="r">−5%</b><b>SÀN</b><b>SÀN</b>
+<b>SÀN</b><b>SÀN</b><b>SÀN</b><b>SÀN</b><b class="r">−6%</b>
+<b>SÀN</b><b class="r">−4%</b><b>SÀN</b><b>SÀN</b><b>SÀN</b>
+<b>SÀN</b><b>SÀN</b><b>SÀN</b><b class="y">0%</b><b>SÀN</b>
+<b>SÀN</b><b>SÀN</b><b class="r">−3%</b><b>SÀN</b><b>SÀN</b>
+<b>SÀN</b><b>SÀN</b><b>SÀN</b><b>SÀN</b><b>SÀN</b>
+<b class="r">−6%</b><b>SÀN</b><b>SÀN</b><b>SÀN</b><b class="r">−2%</b>
+<b>SÀN</b><b>SÀN</b><b>SÀN</b><b>SÀN</b><b>SÀN</b>
+</div>
+<div class="big" style="left:90px;top:110px;font-size:300px;color:#22d3ee">233</div>
+<div class="big" style="left:100px;top:430px;font-size:120px">MÃ NẰM SÀN</div>
+<div class="big" style="left:100px;top:585px;font-size:80px;color:#fbbf24">HẾT PHIÊN VẪN CHỜ BÁN</div>
+<div class="chip" style="left:100px;top:790px;font-size:76px"><span style="color:#38bdf8">VN-INDEX</span> <span style="color:#f87171">−115 ĐIỂM</span></div>
+<div class="tag" style="left:1180px;top:1000px;font-size:30px">HOSE · 09/03/2026 · MINH HOẠ</div>
+</div><script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

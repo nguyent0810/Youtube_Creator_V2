@@ -1,0 +1,296 @@
+{
+ "title": "Một triệu đô không dùng tới",
+ "lines": [
+  {
+   "t": "Năm 2012, trên blog kỹ thuật của hãng, hai chuyên gia Netflix viết về bản thắng giải.",
+   "p": 0.8
+  },
+  {
+   "t": "Phần chính xác tăng thêm mà chúng tôi đo được có vẻ không đáng với công sức kỹ thuật để đưa vào vận hành thật.",
+   "q": 1,
+   "tr": 1
+  },
+  {
+   "t": "Một lý do, theo chính bài ấy, nằm ở hai chữ: trực tuyến.",
+   "p": 1.0
+  },
+  "Năm 2007, một năm sau khi cuộc thi bắt đầu, Netflix mở dịch vụ xem phim trực tuyến.",
+  "Với phim trực tuyến, hãng thấy được điều mà số sao không bao giờ nói.",
+  {
+   "t": "Chúng tôi có thể quan sát số liệu xem, chẳng hạn một video được xem hết hay chỉ xem một phần.",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Cũng trong bài ấy, hãng tự công bố: khoảng ba phần tư những gì người ta xem đến từ đề xuất.",
+  "Thật ra, ngay hôm trao giải năm 2009, Netflix đã công bố cuộc thi thứ hai.",
+  "Lần này, đoán gu của cả những người hiếm khi chấm sao, dựa vào hành vi.",
+  {
+   "t": "Cuộc thi ấy không bao giờ diễn ra.",
+   "p": 1.0
+  },
+  "Hai nhà nghiên cứu ở Đại học Texas đã chỉ ra rằng bộ dữ liệu \"ẩn danh\" của cuộc thi thứ nhất có thể bị lần ngược.",
+  "Chỉ cần đối chiếu với những lời chấm phim công khai trên trang IMDb, họ nhận ra hồ sơ Netflix của một số người dùng.",
+  {
+   "t": "Lộ cả những sở thích có thể nhạy cảm, như quan điểm chính trị.",
+   "p": 1.0
+  },
+  "Năm 2010, sau một vụ kiện và câu hỏi từ cơ quan quản lý của Mỹ, Netflix huỷ cuộc thi ấy.",
+  "Bài học đầu tiên: dấu vết bạn để lại khi xem nói nhiều hơn số sao bạn chấm. Và cũng riêng tư hơn.",
+  "Một công ty khác học cùng bài học ấy theo cách khác: qua những cú nhấp chuột."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "MỘT TRIỆU ĐÔ\nKHÔNG DÙNG TỚI",
+   "sub": "NETFLIX TECHBLOG · 06.04.2012",
+   "vid": "35002190",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "blog"
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 1,
+   "text": "We evaluated some of the new methods offline but the additional accuracy gains that we measured did not seem to justify the engineering effort needed to bring them into a production environment.",
+   "by": "X. AMATRIAIN, J. BASILICO · NETFLIX TECHBLOG, 06.04.2012",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 1
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "MỘT LÝ DO · THEO CHÍNH BÀI ẤY",
+     "at": 2,
+     "sm": true
+    },
+    {
+     "text": "TRỰC TUYẾN",
+     "at": [
+      2,
+      "trực"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 3,
+   "items": [
+    {
+     "year": "2006",
+     "text": "Cuộc thi *bắt đầu*",
+     "at": 3
+    },
+    {
+     "year": "2007",
+     "text": "Netflix mở *xem phim trực tuyến*",
+     "at": [
+      3,
+      "netflix"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 4,
+   "vid": "6975845",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "VỚI PHIM TRỰC TUYẾN",
+     "at": 4,
+     "sm": true
+    },
+    {
+     "text": "HÃNG THẤY ĐIỀU SỐ SAO KHÔNG NÓI",
+     "at": [
+      4,
+      "hãng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 5,
+   "text": "…we can observe viewing statistics such as whether a video was watched fully or only partially.",
+   "by": "AMATRIAIN, BASILICO · NETFLIX TECHBLOG, 06.04.2012",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 5
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "from": 0,
+   "to": 75,
+   "prefix": "≈ ",
+   "suffix": "%",
+   "label": "NHỮNG GÌ NGƯỜI TA XEM ĐẾN TỪ ĐỀ XUẤT",
+   "tag": {
+    "text": "TỰ CÔNG BỐ"
+   },
+   "sub": {
+    "text": "NETFLIX TỰ CÔNG BỐ · TECHBLOG 2012",
+    "at": 6
+   }
+  },
+  {
+   "type": "date",
+   "at": 7,
+   "day": "HÔM TRAO GIẢI · CÔNG BỐ CUỘC THI THỨ HAI",
+   "date": "21.09.2009"
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "ĐOÁN GU CẢ NHỮNG NGƯỜI HIẾM KHI CHẤM SAO",
+     "at": 8
+    },
+    {
+     "text": "DỰA VÀO HÀNH VI",
+     "at": [
+      8,
+      "dựa"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 9,
+   "text": "KHÔNG BAO GIỜ DIỄN RA",
+   "white": true
+  },
+  {
+   "type": "file",
+   "at": 10,
+   "k": "NARAYANAN & SHMATIKOV · 2006–2008",
+   "name": "Đại học Texas",
+   "desc": "Dữ liệu “ẩn danh” của cuộc thi thứ nhất",
+   "rows": [
+    {
+     "k": "KẾT QUẢ",
+     "v": "*có thể bị lần ngược*",
+     "at": [
+      10,
+      "lần"
+     ]
+    },
+    {
+     "k": "ĐỐI CHIẾU",
+     "v": "lời chấm phim công khai trên *IMDb*",
+     "at": 11
+    },
+    {
+     "k": "LỘ RA",
+     "v": "sở thích *có thể nhạy cảm*, như quan điểm chính trị",
+     "at": 12
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 13,
+   "k": "NĂM 2010 · CUỘC THI THỨ HAI",
+   "name": "Bị huỷ",
+   "desc": "Netflix huỷ kế hoạch “Prize 2”",
+   "rows": [
+    {
+     "k": "VỤ KIỆN",
+     "v": "*Doe v. Netflix* · toà liên bang, California · 17.12.2009",
+     "at": [
+      13,
+      "vụ"
+     ]
+    },
+    {
+     "k": "CƠ QUAN MỸ",
+     "v": "*FTC* gửi thư nêu lo ngại · 03.11.2009",
+     "at": [
+      13,
+      "câu"
+     ]
+    },
+    {
+     "k": "KHÉP HỒ SƠ",
+     "v": "thư FTC · *12.03.2010*",
+     "at": [
+      13,
+      "huỷ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "BÀI HỌC ĐẦU TIÊN",
+     "at": 14,
+     "sm": true
+    },
+    {
+     "text": "DẤU VẾT XEM NÓI NHIỀU HƠN SỐ SAO",
+     "at": [
+      14,
+      "dấu"
+     ],
+     "acc": true
+    },
+    {
+     "text": "và cũng riêng tư hơn",
+     "at": [
+      14,
+      "riêng"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 15,
+   "vid": "36392510",
+   "veil": 0.4,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MỘT CÔNG TY KHÁC",
+     "at": 15,
+     "sm": true
+    },
+    {
+     "text": "HỌC QUA NHỮNG CÚ NHẤP CHUỘT",
+     "at": [
+      15,
+      "qua"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "MỘT TRIỆU ĐÔ KHÔNG DÙNG TỚI"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.12
+ }
+}

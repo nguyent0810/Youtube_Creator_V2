@@ -1,0 +1,126 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "do-vui",
+ "hook_type": "vi-sao",
+ "open_shot": "soi-guong",
+ "voice": "Thục Đoan",
+ "music": "frost_waltz.mp3",
+ "gap": 0.25,
+ "series": "Đố vui Phật pháp #9",
+ "title": "Đố vui Phật pháp #9: Đức Phật dạy con mình dùng gương để làm gì?",
+ "kicker": "ĐỐ VUI PHẬT PHÁP #9",
+ "sub": "KINH TRUNG BỘ 61",
+ "acc": [
+  "soi",
+  "dừng"
+ ],
+ "lines": [
+  "Đố bạn: Đức Phật hỏi cậu bé La Hầu La, cái gương dùng để làm gì?",
+  "Đáp án: để soi lại mình.",
+  "Kinh Trung Bộ sáu mươi mốt, diễn ý: hãy soi việc mình làm ba lần, trước, trong, và sau khi làm.",
+  "Hại mình hay hại người thì dừng. Có ích thì tiếp tục.",
+  "Tối nay, bạn soi lại việc nào? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "GƯƠNG ĐỂ LÀM GÌ?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "Phật hỏi cậu bé La Hầu La",
+     "at": [
+      0,
+      "Đức"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7350570"
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "ĐÁP ÁN",
+   "cards": [
+    {
+     "k": "A",
+     "v": "ĐỂ NGẮM",
+     "at": [
+      1,
+      "Đáp"
+     ]
+    },
+    {
+     "k": "B",
+     "v": "ĐỂ SOI LẠI MÌNH",
+     "at": [
+      1,
+      "soi"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 3,
+   "suffix": " LẦN SOI",
+   "label": "TRƯỚC · TRONG · SAU",
+   "until": [
+    2,
+    "lần,"
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "HẠI\nTHÌ DỪNG",
+   "fx": "zoom",
+   "sub": "CÓ ÍCH THÌ TIẾP TỤC"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "TỐI NAY SOI GÌ?",
+     "at": [
+      4,
+      "Tối"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận nhé",
+     "at": [
+      4,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6940837"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/mn61/en/sujato"
+ ],
+ "description": "Đố vui Phật pháp #9: Đức Phật dạy con mình dùng gương để làm gì?\n\nNguồn: https://suttacentral.net/mn61/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

@@ -1,0 +1,183 @@
+{
+ "title": "Khi nào phép tính này không đúng với bạn",
+ "lines": [
+  {
+   "t": "Và đây là phần nói rõ giới hạn, như mọi video của kênh.",
+   "p": 0.8
+  },
+  "Thứ nhất, chiếc điện thoại hai mươi triệu và các mức phí là mình giả định.",
+  {
+   "t": "Chương trình bạn gặp có thể không có phí, hoặc phí cao hơn. Hãy hỏi cho rõ.",
+   "p": 1.0
+  },
+  "Thứ hai, không phải lúc nào trả thẳng cũng được giảm giá.",
+  {
+   "t": "Nếu giá trả góp bằng đúng giá trả thẳng, phép so sánh của mình không còn đúng.",
+   "p": 1.0
+  },
+  "Thứ ba, trả thẳng cũng có cái giá của nó.",
+  "Dồn hết tiền dự phòng vào một món đồ, rồi gặp việc gấp, có khi còn đắt hơn mọi khoản phí.",
+  {
+   "t": "Nên mình không nói cách nào tốt hơn.",
+   "p": 1.0
+  },
+  "Mình chỉ gửi bạn ba câu hỏi để mang theo ra cửa hàng.",
+  "Một: trả thẳng thì giá bao nhiêu, ở đây và ở nơi khác?",
+  "Hai: trả góp thì tổng cộng tôi trả bao nhiêu, gồm mọi loại phí?",
+  {
+   "t": "Ba: nếu tôi trễ một kỳ, chuyện gì xảy ra?",
+   "p": 1.0
+  },
+  "Lấy câu hai trừ câu một, bạn có cái giá thật của việc trả chậm.",
+  {
+   "t": "Còn đáng hay không? Chỉ bạn trả lời được.",
+   "p": 1.0
+  },
+  "Con số không trên tấm biển là thật. Nó không nói dối.",
+  "Việc của bạn là tìm những con số nằm ngoài tấm biển.",
+  "Bạn đã bao giờ mua trả góp chưa? Lần ấy, bạn có hỏi tổng số tiền phải trả không?",
+  "Kể cho mình nghe ở phần bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "PHẦN CUỐI",
+   "title": "KHI NÀO PHÉP TÍNH\nKHÔNG ĐÚNG VỚI BẠN",
+   "sub": "PHẦN GIỮ Ở CUỐI MỖI VIDEO",
+   "vid": "8479058",
+   "ms": 8,
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Và"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "PHÉP TÍNH CÒN GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "1",
+     "v": "MÁY, MỨC GIẢM, MỨC PHÍ: GIẢ ĐỊNH",
+     "at": 1
+    },
+    {
+     "k": "2",
+     "v": "TRẢ THẲNG CHƯA CHẮC ĐƯỢC GIẢM",
+     "at": 3
+    },
+    {
+     "k": "3",
+     "v": "TRẢ THẲNG CŨNG CÓ CÁI GIÁ",
+     "at": 5
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "DỒN HẾT TIỀN DỰ PHÒNG VÀO MỘT MÓN ĐỒ",
+     "at": 6,
+     "sm": true
+    },
+    {
+     "text": "CÓ KHI CÒN ĐẮT HƠN MỌI KHOẢN PHÍ",
+     "at": [
+      6,
+      "có"
+     ],
+     "acc": true
+    },
+    {
+     "text": "kênh không nói cách nào tốt hơn",
+     "at": 7,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 8,
+   "title": "BA CÂU HỎI MANG RA CỬA HÀNG",
+   "rows": [
+    {
+     "k": "1",
+     "v": "TRẢ THẲNG: GIÁ BAO NHIÊU, Ở ĐÂY VÀ NƠI KHÁC?",
+     "at": 9
+    },
+    {
+     "k": "2",
+     "v": "TRẢ GÓP: TỔNG CỘNG TRẢ BAO NHIÊU?",
+     "at": 10
+    },
+    {
+     "k": "3",
+     "v": "TRỄ MỘT KỲ THÌ SAO?",
+     "at": 11
+    }
+   ],
+   "total": {
+    "k": "CÂU 2 − CÂU 1",
+    "v": "GIÁ THẬT CỦA VIỆC TRẢ CHẬM",
+    "at": 12
+   }
+  },
+  {
+   "type": "broll",
+   "at": 14,
+   "vid": "5644247",
+   "ms": 2,
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "CON SỐ 0 TRÊN TẤM BIỂN LÀ THẬT",
+     "at": 14
+    },
+    {
+     "text": "HÃY TÌM NHỮNG CON SỐ NGOÀI TẤM BIỂN",
+     "at": [
+      15,
+      "tìm"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 16,
+   "text": "Lần mua trả góp ấy, bạn có hỏi\ntổng số tiền phải trả không?"
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "KỂ CHO MÌNH NGHE",
+     "at": 17
+    },
+    {
+     "text": "Ở PHẦN BÌNH LUẬN",
+     "at": [
+      17,
+      "ở"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "GIỚI HẠN",
+  "t": "KHI NÀO KHÔNG ĐÚNG VỚI BẠN"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

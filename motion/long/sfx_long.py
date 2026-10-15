@@ -121,6 +121,47 @@ class NoirMix(Mix):
         out[k:k + len(bm)] += bm[: len(out) - k]
         return out
 
+    def logo_lab(self):
+        """Âm hiệu kênh Mind in the Machine: ba nốt điện tử đi lên (Mi–Si–Mi, sine + bồi âm vuông nhẹ, tắt nhanh),
+        nốt cuối có trầm đỡ + ngân sáng. Cố định cho mọi video của kênh (nhận diện bằng tai)."""
+        out = np.zeros(int(2.4 * SR))
+
+        def pluck(f, dur, g):
+            t = np.arange(int(dur * SR)) / SR
+            w = np.sin(2 * np.pi * f * t) + 0.18 * np.sign(np.sin(2 * np.pi * f * t)) + 0.25 * np.sin(2 * np.pi * 2 * f * t)
+            return w * np.exp(-t * 7.5) * g
+
+        for k, (f, g) in enumerate(((659.3, 0.32), (987.8, 0.32), (1318.5, 0.42))):
+            a = pluck(f, 0.9 if k < 2 else 1.8, g)
+            i = int(k * 0.14 * SR)
+            out[i:i + len(a)] += a[: len(out) - i]
+        i = int(0.28 * SR)
+        bm = self.boom(1.4, 82, 41) * 0.55
+        out[i:i + len(bm)] += bm[: len(out) - i]
+        sh = self.lp(self.rng.standard_normal(int(1.6 * SR)), 0.5) if hasattr(self, "lp") else np.zeros(1)
+        sh = sh * np.exp(-np.arange(len(sh)) / SR * 3.0) * 0.05
+        out[i:i + len(sh)] += sh[: len(out) - i]
+        return out
+
+    def logo_chart(self):
+        """Âm hiệu kênh Biểu Đồ Biết Nói: hợp âm Đô trưởng rải lên kiểu marimba (ấm, "đi lên" như nến tăng),
+        nốt cuối ngân + trầm đỡ nhẹ. Cố định cho mọi video của kênh."""
+        out = np.zeros(int(2.6 * SR))
+
+        def mallet(f, dur, g):
+            t = np.arange(int(dur * SR)) / SR
+            w = np.sin(2 * np.pi * f * t) + 0.35 * np.sin(2 * np.pi * 4 * f * t) * np.exp(-t * 30) + 0.12 * np.sin(2 * np.pi * 2 * f * t)
+            return w * np.exp(-t * 5.0) * g
+
+        for k, (f, g) in enumerate(((523.3, 0.3), (659.3, 0.3), (784.0, 0.32), (1046.5, 0.42))):
+            a = mallet(f, 1.0 if k < 3 else 2.2, g)
+            i = int(k * 0.09 * SR)
+            out[i:i + len(a)] += a[: len(out) - i]
+        i = int(0.27 * SR)
+        bm = self.boom(1.2, 65, 33) * 0.4
+        out[i:i + len(bm)] += bm[: len(out) - i]
+        return out
+
     CUES = ("match", "bell", "gavel", "slap", "heart", "paper", "boom", "thud", "whoosh", "shutter", "clank")
 
 
@@ -167,6 +208,99 @@ def build(case: dict, dst: Path) -> None:
         elif ty == "kinetic":
             for q in s["items"]:
                 beat_sfx(M, q, 1.0)
+        elif ty == "punch":                                 # lab.js: mỗi thẻ đục lỗ trượt vào máy
+            n, a0 = min(s.get("trials", 50), 24), s.get("startAt", T0 + 0.4)
+            a1 = max(a0 + 1.2, s.get("until", T1 - 0.8))
+            for k in range(n):
+                M.put(a0 + (a1 - a0) * k / n, M.key(), 0.22)
+            M.put(a1 + 0.05, M.thud(0.5), 0.6)
+        elif ty == "guess":                                 # lab.js: mỗi chữ cái hiện ra
+            chars = [c for c in s.get("text", "") if c != " "]
+            a0 = s.get("startAt", T0 + 0.3)
+            a1 = max(a0 + 1, s.get("until", T1 - 1.2))
+            for k in range(len(chars)):
+                M.put(a0 + (a1 - a0) * k / max(1, len(s["text"])), M.tick(2600 + 40 * (k % 5), 0.02), 0.14)
+            M.put(s.get("statAt", a1 + 0.1), M.thud(0.45), 0.5)
+        elif ty == "chat":                                  # lab.js: gõ phím theo từng tin nhắn
+            for m in s.get("msgs") or []:
+                for k in range(min(14, len(m["text"]) // 3 + 1)):
+                    M.put(m["at"] + 0.06 * k, M.key(), 0.16)
+        elif ty == "nn":                                    # lab.js: tín hiệu xuôi / lỗi ngược
+            if s.get("fwdAt") is not None:
+                M.put(s["fwdAt"] - 0.1, M.whoosh(0.7), 0.3)
+            if s.get("backAt") is not None:
+                M.put(s["backAt"] - 0.1, M.whoosh(0.7, rise=False), 0.3)
+        elif ty == "go":                                    # lab.js: tiếng quân cờ + nước then chốt
+            m, t0 = s.get("stones", 46), T0 + 0.2
+            span = max(0.6, (s.get("hitAt") or T1 - 1) - t0 - 0.4)
+            for k in range(0, m, 3):
+                M.put(t0 + span * k / m, M.thud(0.18), 0.18)
+            if s.get("hitAt") is not None:
+                M.put(s["hitAt"], M.thud(0.5), 0.7)
+                M.put(s["hitAt"] + 0.02, M.boom(1.4, 70, 40), 0.4)
+        elif ty == "brand" and case.get("theme") == "lab":
+            M.put(T0 - 0.2, M.whoosh(0.45), 0.25)
+            for k in range(16):                              # nhịp giải mã tên kênh (casewide labBrand)
+                M.put(T0 + 0.35 + 0.95 * k / 16, M.tick(2400 + 70 * k, 0.02), 0.16)
+            M.put(T0 + 1.3, M.logo_lab(), 0.85)
+        elif ty == "brand" and case.get("theme") == "chart":     # chart.js: mốc khớp chartScenes.brand
+            M.put(T0 - 0.15, M.whoosh(0.5), 0.22)                     # bong bóng vàng tự vẽ
+            for k in range(5):                                        # 5 cây nến mọc, cao dần
+                M.put(T0 + 0.47 + 0.12 * k, M.tick(1500 + 260 * k, 0.03), 0.3)
+            M.put(T0 + 0.95, M.whoosh(0.5), 0.18)                     # đường MA vẽ dần
+            M.put(T0 + 1.45, M.logo_chart(), 0.85)
+        elif ty == "breadth":                                    # chart.js B.breadth: mốc khớp drawAt/until/countAt/chipAt/medianAt
+            a0, a1 = s["drawAt"], s["until"]
+            for k in range(28):                                       # ô hiện theo thứ tự giảm mạnh -> tăng mạnh: cao độ đi lên
+                M.put(a0 + (a1 - a0) * k / 28, M.tick(1300 + 70 * k, 0.025), 0.18, -0.25 + 0.5 * k / 27)
+            if s.get("countAt") is not None:                          # số đếm 0 -> N trong 0,9 s (cùng đường cong JS)
+                for m in range(1, 28, 2):
+                    p = m / 27
+                    M.put(s["countAt"] + 0.9 * p, M.tick(2200 + 40 * m, 0.02), 0.2)
+                M.put(s["countAt"] + 0.9, M.thud(0.5), 0.6)
+            if s.get("chipAt") is not None:
+                M.put(s["chipAt"], M.thud(0.4), 0.45)
+                M.put(s["chipAt"] + 0.02, M.blip(), 0.3, 0.3)
+            if s.get("medianAt") is not None:
+                M.put(s["medianAt"], M.whoosh(0.45), 0.18)
+                M.put(s["medianAt"] + 0.3, M.thud(0.35), 0.4)
+            an = s.get("animate") or {}
+            fr = s.get("frames") or []
+            if fr and an.get("at") is not None:                       # mỗi khung ngày một tick rất nhẹ
+                for j in range(1, len(fr)):
+                    M.put(an["at"] + (an["until"] - an["at"]) * j / (len(fr) - 1), M.tick(2600, 0.015), 0.1)
+                M.put(an["until"], M.thud(0.45), 0.5)
+        elif ty == "basket":                                     # chart.js B.basket: ô lớn rơi trước, vụn nhỏ sau
+            a0, a1 = s["drawAt"], s["until"]
+            for k in range(22):
+                M.put(a0 + (a1 - a0) * (k / 22) ** 0.7, M.tick(1500 + 60 * k, 0.025), 0.2 if k < 3 else 0.14)
+            M.put(a0 + 0.02, M.thud(0.35), 0.35)                       # ô lớn nhất chạm
+            if s.get("colorAt") is not None:
+                M.put(s["colorAt"] - 0.05, M.whoosh(0.6), 0.2)
+            if s.get("hlAt") is not None:
+                M.put(s["hlAt"], M.thud(0.5), 0.55)
+            for c in s.get("captions") or []:
+                M.put(c["at"], M.thud(0.35), 0.45, 0.3)
+                M.put(c["at"] + 0.03, M.tick(2800, 0.03), 0.3, 0.3)
+        elif ty == "book":                                       # chart.js B.book: sổ lệnh giả định (mốc mặc định y như JS)
+            q = s.get("queue")
+            if q:
+                n, a0 = len(q["times"]), q.get("at", T0 + 0.4)
+                a1 = q.get("until", a0 + 1.6)
+                for k in range(n):
+                    M.put(a0 + (a1 - a0) * k / n, M.tick(1500 + 60 * k, 0.025), 0.2, -0.3 + 0.6 * k / max(1, n - 1))
+                if q.get("hlAt") is not None:
+                    M.put(q["hlAt"], M.tick(2800, 0.04), 0.4)
+                for e in q.get("eat") or []:
+                    M.put(e["at"] - 0.45, M.whoosh(0.35), 0.15, -0.3)
+                    M.put(e["at"], M.thud(0.4), 0.5)
+            else:
+                for k, r in enumerate(s.get("rows") or []):
+                    M.put(r.get("at", T0 + 0.5 + 0.12 * k), M.tick(2000 if r.get("side") == "buy" else 2600, 0.03), 0.3,
+                          -0.3 if r.get("side") == "buy" else 0.3)
+                if s.get("match"):
+                    M.put(s["match"]["at"], M.thud(0.5), 0.6)
+                    M.put(s["match"]["at"] + 0.02, M.blip(), 0.3)
         elif ty == "brand":
             M.put(T0 - 0.5, M.whoosh(0.55), 0.3)
             M.put(T0 + 0.3, M.logo(), 0.9)

@@ -1,0 +1,177 @@
+{
+ "theme": "mim",
+ "title": "Năm 2023, chuyên gia nói: máy chưa giả được tiếng khóc hoảng loạn. Ông vẫn không dám loại trừ",
+ "description": "Tháng 4/2023, nói với CNN về vụ một bà mẹ ở Mỹ nhận cuộc gọi đòi tiền chuộc với tiếng khóc giống hệt con gái, giáo sư Hany Farid (Đại học California, Berkeley) cho biết một bản sao giọng khá tốt có thể làm từ chưa tới một phút ghi âm; nhưng theo hiểu biết của ông lúc ấy, máy chưa giả được tiếng gào khóc hoảng loạn, dù ông không loại trừ hoàn toàn. Cơ quan chức năng chưa xác minh vụ ấy có dùng AI hay không. Một nhân viên FBI nói: người thân đang hoảng loạn thường không kịp hỏi giọng có thật không. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (13 phút): https://youtu.be/sywk-F-yW7k (công khai từ 20:00 ngày 26/10).",
+ "tags": [
+  "hany farid",
+  "bắt cóc ảo",
+  "ai giả giọng",
+  "lừa đảo",
+  "deepfake",
+  "an toàn mạng",
+  "mind in the machine"
+ ],
+ "sub": "CNN · 04/2023",
+ "acc": [
+  "một",
+  "khóc",
+  "trừ",
+  "sợ",
+  "kịp"
+ ],
+ "kicker": "AI VÀ LỪA ĐẢO",
+ "lines": [
+  "Chưa tới một phút ghi âm, là đủ để máy bắt chước giọng một người.",
+  "Tháng 4 năm 2023, một giáo sư chuyên về âm thanh giả nói như vậy với đài CNN.",
+  "Nhưng ông nói thêm một điều.",
+  "Theo hiểu biết của ông lúc ấy, máy chưa giả được tiếng gào khóc hoảng loạn của một đứa trẻ.",
+  "Dù vậy, ông không dám loại trừ hoàn toàn.",
+  "Và với người đang nghe máy, chuyện ấy gần như không quan trọng.",
+  "Giữa một cuộc gọi như thế, không ai kịp hỏi giọng ấy thật hay giả. Nỗi sợ làm nốt phần còn lại."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CHƯA TỚI 1 PHÚT GHI ÂM",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "là đủ để máy bắt chước giọng một người",
+     "at": [
+      0,
+      "là"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8118120",
+   "ms": 3,
+   "veil": 0.55
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 60,
+   "to": 60,
+   "prefix": "< ",
+   "suffix": " GIÂY",
+   "label": "GHI ÂM ĐỦ ĐỂ BẮT CHƯỚC MỘT GIỌNG NÓI",
+   "until": [
+    1,
+    "giáo"
+   ],
+   "sub": {
+    "text": "GS. HANY FARID NÓI VỚI CNN · 04/2023",
+    "at": [
+     1,
+     "nói"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "THEO ÔNG, LÚC ẤY",
+   "cards": [
+    {
+     "k": "GIỌNG NÓI THƯỜNG",
+     "v": "MÁY GIẢ ĐƯỢC",
+     "at": [
+      2,
+      "ông"
+     ]
+    },
+    {
+     "k": "TIẾNG KHÓC HOẢNG LOẠN",
+     "v": "CHƯA GIẢ ĐƯỢC",
+     "at": [
+      3,
+      "máy"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "GS. HANY FARID · ĐH CALIFORNIA, BERKELEY"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "DÙ VẬY",
+     "at": 4,
+     "sm": true
+    },
+    {
+     "text": "ÔNG KHÔNG DÁM LOẠI TRỪ",
+     "at": [
+      4,
+      "ông"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:6964003",
+   "ms": 2,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 4
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Với người nghe máy",
+   "nodes": [
+    {
+     "text": "không ai kịp hỏi thật hay giả",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      6,
+      "không"
+     ],
+     "shape": "none",
+     "w": 820
+    },
+    {
+     "text": "nỗi sợ làm nốt",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "Nỗi"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 560
+    }
+   ],
+   "note": "Ý LỜI MỘT NHÂN VIÊN FBI NÓI VỚI CNN"
+  }
+ ],
+ "sources": [
+  "https://edition.cnn.com/2023/04/29/us/ai-scam-calls-kidnapping-cec/index.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "=AI": "ây ai",
+  "cnn": "Xi-en-en"
+ },
+ "imgs": {}
+}

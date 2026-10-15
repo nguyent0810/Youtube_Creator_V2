@@ -1,0 +1,189 @@
+{
+ "theme": "mim",
+ "title": "“Tôi phải bảo vệ loài người”: Kasparov đấu Deep Thought năm 1989, tổ tiên của Deep Blue",
+ "description": "Tháng 10/1989 ở New York, Kasparov đấu hai ván biểu diễn với Deep Thought, nhà vô địch máy tính chơi cờ năm ấy, do nhóm nghiên cứu sinh ở Carnegie Mellon dẫn đầu bởi Hứa Phong Hùng làm ra. Trước trận, ông nói phải thách đấu Deep Thought để bảo vệ loài người (Sports Illustrated, 30/10/1989). Ông thắng 2–0. Năm 1993, Deep Thought ghép với biệt danh Big Blue của IBM thành Deep Blue. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/TG7ZShLM4LA (công khai từ 20:00 ngày 12/11).",
+ "tags": [
+  "deep thought",
+  "hứa phong hùng",
+  "deep blue",
+  "kasparov",
+  "máy tính chơi cờ",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "NEW YORK · 1989",
+ "acc": [
+  "bảo",
+  "vệ",
+  "loài",
+  "người",
+  "hai"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Tôi phải thách đấu Deep Thought để bảo vệ loài người. Kasparov nói câu ấy năm hai mươi sáu tuổi.",
+  "Deep Thought là cỗ máy do một nhóm nghiên cứu sinh ở Đại học Carnegie Mellon làm ra.",
+  "Người dẫn đầu là Hứa Phong Hùng, một kỹ sư sinh ra ở Đài Loan.",
+  "Năm 1989, nó là nhà vô địch máy tính chơi cờ.",
+  "Tháng 10 năm ấy, ở New York, Kasparov thắng nó cả hai ván, khá dễ dàng.",
+  "Nhưng IBM mời nhóm kỹ sư về làm, và đổi tên cỗ máy: Deep Thought ghép với Big Blue, thành Deep Blue.",
+  "Tám năm sau câu nói ấy, chính cỗ máy mang cái tên mới đã thắng ông."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "“BẢO VỆ LOÀI NGƯỜI”",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "Kasparov · 26 tuổi",
+     "at": [
+      0,
+      "Kasparov"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8758291",
+   "veil": 0.55
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Deep Thought",
+   "nodes": [
+    {
+     "text": "nghiên cứu sinh Carnegie Mellon",
+     "x": 0.5,
+     "y": 0.3,
+     "at": 1,
+     "shape": "none",
+     "w": 860
+    },
+    {
+     "text": "dẫn đầu: Hứa Phong Hùng",
+     "x": 0.5,
+     "y": 0.64,
+     "at": 2,
+     "c": "acc",
+     "shape": "circle",
+     "w": 760
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "VÔ ĐỊCH MÁY TÍNH",
+     "at": 3,
+     "acc": true
+    },
+    {
+     "text": "năm 1989",
+     "at": 3,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:28709421",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 3
+  },
+  {
+   "type": "chart",
+   "at": 4,
+   "kind": "bars",
+   "title": "HAI VÁN BIỂU DIỄN · 10/1989",
+   "unit": "SỐ VÁN THẮNG",
+   "bars": [
+    {
+     "label": "KASPAROV",
+     "v": 2,
+     "text": "2",
+     "c": "up",
+     "at": [
+      4,
+      "Kasparov"
+     ]
+    },
+    {
+     "label": "DEEP THOUGHT",
+     "v": 0,
+     "text": "0",
+     "c": "ref",
+     "at": [
+      4,
+      "cả"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "ĐỔI TÊN · 1993",
+   "cards": [
+    {
+     "k": "DEEP THOUGHT",
+     "v": "+ BIG BLUE",
+     "at": [
+      5,
+      "Deep"
+     ]
+    },
+    {
+     "k": "THÀNH",
+     "v": "DEEP BLUE",
+     "at": [
+      5,
+      "thành"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "TÁM NĂM SAU",
+   "sub": "CÁI TÊN MỚI ĐÃ THẮNG ÔNG"
+  }
+ ],
+ "sources": [
+  "https://vault.si.com/vault/1989/10/30/its-mind-over-matter-2-0-gary-kasparov-crushed-a-computer-for-all-of-humanity",
+  "https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "deep": "Đíp",
+  "blue": "Blu",
+  "ibm": "ai bi em",
+  "=IBM": "ai bi em",
+  "kasparov": "Cát-xpa-rốp",
+  "carnegie": "Các-nơ-ghi",
+  "mellon": "Me-lần",
+  "thought": "Thót",
+  "big": "Bích",
+  "york": "Doóc",
+  "new": "Niu"
+ },
+ "imgs": {}
+}

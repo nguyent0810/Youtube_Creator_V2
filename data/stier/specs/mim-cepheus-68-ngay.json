@@ -1,0 +1,203 @@
+{
+ "theme": "mim",
+ "title": "4.800 bộ xử lý chạy 68 ngày: cách một nhóm ở Canada gần như giải xong một kiểu poker (2015)",
+ "description": "Tháng 01/2015 (Science), nhóm Đại học Alberta công bố chương trình Cepheus đã gần như giải xong poker giới hạn chơi tay đôi: tìm ra cách chơi mà về lâu dài không ai thắng nổi đáng kể. Họ cho 4.800 bộ xử lý chạy liên tục 68 ngày. Theo nhóm, ngay cả đối thủ biết rõ cách chơi của Cepheus cũng chỉ thắng được một phần gần như bằng không. Poker không giới hạn thì lớn hơn rất nhiều (Đại học Alberta).\n\nVideo nói về nghiên cứu trí tuệ nhân tạo; không hướng dẫn chơi bài, không cổ vũ cờ bạc. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/Mz0HwBBSBbg (công khai từ 20:00 ngày 26/11).",
+ "tags": [
+  "cepheus",
+  "giải trò chơi",
+  "ai chơi poker",
+  "libratus",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "SCIENCE · 01/2015",
+ "acc": [
+  "bốn",
+  "sáu",
+  "giải",
+  "không",
+  "giới"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Bốn nghìn tám trăm bộ xử lý, chạy liên tục sáu mươi tám ngày, để giải một kiểu poker.",
+  "Tháng 1 năm 2015, một nhóm ở Đại học Alberta, Canada, công bố kết quả trên tạp chí Science.",
+  "Chương trình Cepheus của họ gần như giải xong poker giới hạn, khi chơi tay đôi.",
+  "Giải xong nghĩa là tìm ra cách chơi mà về lâu dài, không ai thắng nổi nó một cách đáng kể.",
+  "Theo nhóm, ngay cả người biết rõ cách chơi của Cepheus cũng chỉ thắng được một phần gần như bằng không.",
+  "Nhưng đó là kiểu giới hạn, mỗi lần chỉ được cược một mức cố định. Kiểu không giới hạn thì lớn hơn rất nhiều.",
+  "Giải xong một trò chơi nhỏ, là bước đầu để máy thắng trò chơi lớn."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "4.800 BỘ XỬ LÝ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "chạy liên tục 68 ngày",
+     "at": [
+      0,
+      "chạy"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:28709421",
+   "ms": 2,
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "SCIENCE · 01/2015",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "Đại học Alberta · Canada",
+     "at": [
+      1,
+      "Đại"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6259147",
+   "ms": 2,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "CEPHEUS",
+   "cards": [
+    {
+     "k": "GẦN NHƯ GIẢI XONG",
+     "v": "POKER GIỚI HẠN",
+     "at": [
+      2,
+      "giải"
+     ]
+    },
+    {
+     "k": "KHI CHƠI",
+     "v": "TAY ĐÔI",
+     "at": [
+      2,
+      "tay"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Giải xong nghĩa là",
+   "nodes": [
+    {
+     "text": "về lâu dài",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      3,
+      "về"
+     ],
+     "shape": "none",
+     "w": 520
+    },
+    {
+     "text": "không ai thắng nổi đáng kể",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      3,
+      "không"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 780
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 68,
+   "to": 68,
+   "suffix": " NGÀY",
+   "label": "4.800 BỘ XỬ LÝ CHẠY LIÊN TỤC",
+   "sub": {
+    "text": "ĐỐI THỦ GIỎI NHẤT CŨNG GẦN NHƯ HOÀ",
+    "at": [
+     4,
+     "ngay"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "KHÔNG GIỚI HẠN",
+   "sub": "LỚN HƠN RẤT NHIỀU"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "BƯỚC ĐẦU",
+     "at": [
+      6,
+      "bước"
+     ],
+     "acc": true
+    },
+    {
+     "text": "giải trò nhỏ trước, thắng trò lớn sau",
+     "at": 6,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6664998",
+   "ms": 6,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 6
+  }
+ ],
+ "sources": [
+  "https://www.ualberta.ca/computing-science/news-and-events/news/2015/january/solve-texas-holdem-poker.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "cepheus": "Xê-phê-út",
+  "alberta": "An-béc-ta",
+  "canada": "Ca-na-đa",
+  "science": "Xai-ần",
+  "poker": "pô-cơ",
+  "=AI": "ây ai"
+ },
+ "imgs": {}
+}

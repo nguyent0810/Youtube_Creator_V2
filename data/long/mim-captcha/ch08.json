@@ -1,0 +1,184 @@
+{
+ "title": "Ai đang chấm ai",
+ "lines": [
+  {
+   "t": "Vậy bài kiểm tra này đang đo cái gì?",
+   "p": 1.0
+  },
+  "Lúc đầu, nó đo một việc người làm được, mà máy thì chưa.",
+  {
+   "t": "Giờ thì cứ đề nào làm khó được máy, đề ấy cũng làm khó luôn cả người.",
+   "p": 1.0
+  },
+  "Năm 2021, công ty hạ tầng mạng Cloudflare thử làm một phép tính.",
+  "Mỗi lần giải mã mất trung bình khoảng ba mươi hai giây.",
+  "Cộng cả thế giới lại, họ ước tính mỗi ngày loài người tiêu mất khoảng năm trăm năm.",
+  {
+   "t": "Đó chỉ là ước tính. Nhưng nó cho thấy cái giá của một câu hỏi tưởng rất nhỏ.",
+   "p": 1.0
+  },
+  "Hai mươi lăm năm trước, người ta ra một đề thi để máy không qua được.",
+  "Hôm nay, máy qua đề ấy nhanh hơn chúng ta.",
+  {
+   "t": "Và trên đường đi, chính chúng ta đã dạy cho nó, từng chữ, từng ô ảnh một.",
+   "p": 1.0
+  },
+  "Lần tới, khi tick vào ô vuông nhỏ ấy, bạn hãy nhớ.",
+  "Turing từng hỏi: máy có thể giống người đến đâu?",
+  {
+   "t": "Còn ô vuông này, ngày nào cũng hỏi ngược lại bạn câu ấy.",
+   "p": 1.0
+  },
+  "Còn bạn, lần gần nhất bạn trượt một bài kiểm tra \"tôi không phải người máy\" là khi nào?",
+  "Kể cho mình nghe ở phần bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "8",
+   "k": "CHƯƠNG TÁM",
+   "title": "AI ĐANG CHẤM AI",
+   "sub": "BÀI KIỂM TRA NÀY ĐO CÁI GÌ?",
+   "vid": "1085656",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Vậy"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "ĐỀ THI ĐÃ ĐỔI NGHĨA",
+   "rows": [
+    {
+     "k": "LÚC ĐẦU",
+     "v": "NGƯỜI LÀM ĐƯỢC, MÁY CHƯA",
+     "at": 1
+    },
+    {
+     "k": "GIỜ",
+     "v": "KHÓ VỚI MÁY = KHÓ VỚI NGƯỜI",
+     "at": 2
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "from": 0,
+   "to": 32,
+   "suffix": " GIÂY",
+   "until": [
+    4,
+    "hai"
+   ],
+   "label": "TRUNG BÌNH MỖI LẦN GIẢI MÃ",
+   "sub": {
+    "text": "ƯỚC TÍNH CỦA CLOUDFLARE · 05.2021",
+    "at": 4
+   }
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 0,
+   "to": 500,
+   "suffix": " NĂM",
+   "until": [
+    5,
+    "trăm"
+   ],
+   "label": "LOÀI NGƯỜI TIÊU MẤT · MỖI NGÀY",
+   "sub": {
+    "text": "CHỈ LÀ ƯỚC TÍNH · CLOUDFLARE, 2021",
+    "at": 6
+   }
+  },
+  {
+   "type": "timeline",
+   "at": 7,
+   "items": [
+    {
+     "year": "2000",
+     "text": "ra đề để *máy không qua được*",
+     "at": 7
+    },
+    {
+     "year": "hôm nay",
+     "text": "máy qua đề ấy *nhanh hơn ta*",
+     "at": 8
+    },
+    {
+     "year": "trên đường đi",
+     "text": "*chính ta* đã dạy nó",
+     "at": 9
+    }
+   ]
+  },
+  {
+   "type": "captcha",
+   "at": 10,
+   "mode": "tick",
+   "tickAt": [
+    10,
+    "tick"
+   ],
+   "label": {
+    "k": "",
+    "v": "HÌNH MINH HOẠ DO KÊNH TỰ VẼ · KHÔNG PHẢI GIAO DIỆN CỦA DỊCH VỤ NÀO",
+    "at": 10
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "TURING HỎI: MÁY GIỐNG NGƯỜI ĐẾN ĐÂU?",
+     "at": 11,
+     "sm": true
+    },
+    {
+     "text": "Ô VUÔNG NÀY HỎI NGƯỢC LẠI BẠN",
+     "at": [
+      12,
+      "hỏi"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 13,
+   "text": "Lần gần nhất bạn trượt\n“tôi không phải người máy” là khi nào?"
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "KỂ CHO MÌNH NGHE",
+     "at": 14
+    },
+    {
+     "text": "Ở PHẦN BÌNH LUẬN",
+     "at": [
+      14,
+      "ở"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 08",
+  "t": "AI ĐANG CHẤM AI"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

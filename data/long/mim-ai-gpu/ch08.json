@@ -1,0 +1,235 @@
+{
+ "title": "Không chỉ là con chip",
+ "lines": [
+  {
+   "t": "Nhìn lại căn phòng ngủ năm 2012, con chip chỉ là một trong ba thứ.",
+   "p": 0.8
+  },
+  "Không có ImageNet, hai chiếc card chẳng có gì để học.",
+  {
+   "t": "Không có thuật toán Hinton theo đuổi mấy chục năm, chúng chỉ tính nhanh hơn một cách vô ích.",
+   "p": 1.0
+  },
+  "GPU cũng không phải con đường duy nhất.",
+  "Nhiều hãng công nghệ lớn đã thiết kế chip riêng cho trí tuệ nhân tạo, chỉ làm đúng việc nhân ma trận.",
+  {
+   "t": "Con chip chơi game thắng trước, vì nó có mặt đúng lúc, với một công cụ đã được mài giũa nhiều năm.",
+   "p": 1.0
+  },
+  "Và càng nhiều chip, càng tốn điện.",
+  "Những trung tâm dữ liệu chứa hàng nghìn GPU cần nguồn điện và nước làm mát rất lớn, một câu hỏi mà nhiều nước, kể cả Việt Nam, sẽ phải tính tới.",
+  {
+   "t": "Con chip giải được bài toán tốc độ, nhưng mở ra những bài toán khác.",
+   "p": 1.0
+  },
+  "Còn với chúng ta, có một bài học nhỏ.",
+  "Những bước ngoặt lớn đôi khi đến từ một món đồ được dùng sai mục đích.",
+  "Một card đồ hoạ được dùng để làm toán.",
+  {
+   "t": "Một công cụ cho phòng thí nghiệm được dùng để dạy máy nhìn.",
+   "p": 1.0
+  },
+  "Lần tới khi bạn thấy một tấm card đồ hoạ trong cửa hàng, hãy nhớ: thứ bạn đang nhìn là hàng nghìn phụ bếp, đang chờ một núi hành.",
+  "Có thể là hai triệu điểm ảnh của một trận game.",
+  {
+   "t": "Có thể là sáu mươi triệu trọng số của một cỗ máy đang học nhìn.",
+   "p": 1.0
+  },
+  "Còn bạn, bạn có đang dùng món đồ nào sai mục đích, theo một cách hay ho không? Kể cho mình nghe ở phần bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "8",
+   "k": "CHƯƠNG TÁM",
+   "title": "KHÔNG CHỈ\nLÀ CON CHIP",
+   "sub": "MỘT TRONG BA THỨ",
+   "vid": "5467579",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "nhìn"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "THIẾU MỘT THỨ THÌ SAO?",
+   "rows": [
+    {
+     "k": "−",
+     "v": "KHÔNG IMAGENET → CHẲNG CÓ GÌ ĐỂ HỌC",
+     "at": 1
+    },
+    {
+     "k": "−",
+     "v": "KHÔNG THUẬT TOÁN → TÍNH NHANH VÔ ÍCH",
+     "at": 2
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "CON ĐƯỜNG DUY NHẤT",
+     "at": 3,
+     "fx": "strike",
+     "strikeAt": [
+      3,
+      "duy"
+     ]
+    },
+    {
+     "text": "CHIP RIÊNG CHO AI",
+     "at": 4,
+     "acc": true
+    },
+    {
+     "text": "chỉ làm đúng việc nhân ma trận",
+     "at": [
+      4,
+      "nhân"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "ĐÚNG LÚC",
+     "at": [
+      5,
+      "đúng"
+     ],
+     "acc": true
+    },
+    {
+     "text": "+ CÔNG CỤ MÀI GIŨA NHIỀU NĂM",
+     "at": [
+      5,
+      "công"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 6,
+   "vid": "1085656",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "ĐIỆN · NƯỚC LÀM MÁT",
+     "at": 7,
+     "acc": true
+    },
+    {
+     "text": "câu hỏi cho nhiều nước, kể cả Việt Nam",
+     "at": [
+      7,
+      "việt"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "GIẢI BÀI TOÁN TỐC ĐỘ",
+     "at": 8
+    },
+    {
+     "text": "MỞ BÀI TOÁN KHÁC",
+     "at": [
+      8,
+      "mở"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 10,
+   "text": "DÙNG SAI MỤC ĐÍCH",
+   "sub": "ĐÔI KHI LÀ BƯỚC NGOẶT"
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "CARD ĐỒ HOẠ → LÀM TOÁN",
+     "at": 11
+    },
+    {
+     "text": "CÔNG CỤ THÍ NGHIỆM → DẠY MÁY NHÌN",
+     "at": 12,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 13,
+   "vid": "5466792",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "HÀNG NGHÌN PHỤ BẾP",
+     "at": [
+      13,
+      "hàng"
+     ],
+     "acc": true
+    },
+    {
+     "text": "đang chờ một núi hành",
+     "at": [
+      13,
+      "chờ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "2.073.600 ĐIỂM ẢNH",
+     "at": 14
+    },
+    {
+     "text": "60.000.000 TRỌNG SỐ",
+     "at": 15,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 16,
+   "text": "Bạn đang dùng món đồ nào\nsai mục đích?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 08",
+  "t": "KHÔNG CHỈ LÀ CON CHIP"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.12
+ }
+}

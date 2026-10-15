@@ -1,0 +1,159 @@
+{
+ "theme": "ck",
+ "kicker": "1 PHÉP CHIA",
+ "sub": "QUỸ KHẨN CẤP",
+ "title": "Lương 12 triệu, có quỹ khẩn cấp ba tháng sau 16 tháng: phép chia của An (ví dụ giả định)",
+ "description": "An là nhân vật GIẢ ĐỊNH: lương 12 triệu, chi tiêu thiết yếu khoảng 8 triệu/tháng. Quỹ khẩn cấp ba tháng = 24 triệu. Để dành 1,5 triệu mỗi tháng: khoảng 5 tháng có đủ một tháng thiết yếu, 10 tháng đủ một hoá đơn 15 triệu, 16 tháng xong quỹ ba tháng (không tính lãi). “3–6 tháng” là quy tắc kinh nghiệm, không phải định luật.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (8 phút): https://youtu.be/iOxDRCkFbYY (công khai từ 20:00 ngày 04/11)",
+ "tags": [
+  "quỹ khẩn cấp",
+  "tiết kiệm",
+  "để dành mỗi tháng",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "mười",
+  "sáu",
+  "năm",
+  "ba",
+  "đệm"
+ ],
+ "lines": [
+  "Mười sáu tháng. Đó là thời gian để có một quỹ khẩn cấp ba tháng, với lương mười hai triệu.",
+  "Ví dụ giả định. Chi tiêu thiết yếu của An khoảng tám triệu một tháng.",
+  "Ba tháng thiết yếu, là hai mươi tư triệu.",
+  "Mỗi tháng An để dành một triệu rưỡi.",
+  "Sau năm tháng, An đủ một tháng thiết yếu. Sau mười tháng, đủ một hoá đơn mười lăm triệu.",
+  "Tới tháng thứ mười sáu, tấm đệm ba tháng hoàn thành.",
+  "Quỹ không cần đầy mới có ích. Mỗi tháng, tấm đệm dày thêm một lớp."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "16 THÁNG",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "có quỹ khẩn cấp 3 tháng · lương 12 triệu",
+     "at": [
+      0,
+      "Đó"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:36639391",
+   "veil": 0.58
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "AN · NHÂN VẬT GIẢ ĐỊNH",
+   "cards": [
+    {
+     "k": "THIẾT YẾU",
+     "v": "8 TRIỆU/THÁNG",
+     "at": 1
+    },
+    {
+     "k": "3 THÁNG",
+     "v": "24 TRIỆU",
+     "at": 2
+    },
+    {
+     "k": "ĐỂ DÀNH",
+     "v": "1,5 TRIỆU/THÁNG",
+     "at": 3,
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 4,
+   "items": [
+    {
+     "year": "THÁNG 5",
+     "text": "đủ một tháng thiết yếu",
+     "at": [
+      4,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "year": "THÁNG 10",
+     "text": "đủ hoá đơn 15 triệu",
+     "at": [
+      4,
+      "mười"
+     ]
+    },
+    {
+     "year": "THÁNG 16",
+     "text": "xong tấm đệm ba tháng",
+     "at": 5
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 16,
+   "to": 16,
+   "suffix": " THÁNG",
+   "label": "24 TRIỆU ÷ 1,5 TRIỆU",
+   "sub": {
+    "text": "VÍ DỤ GIẢ ĐỊNH · KHÔNG TÍNH LÃI",
+    "at": 5
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "KHÔNG CẦN ĐẦY MỚI CÓ ÍCH",
+     "at": 6,
+     "sm": true
+    },
+    {
+     "text": "TẤM ĐỆM DÀY THÊM MỖI THÁNG",
+     "at": [
+      6,
+      "Mỗi"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7735913",
+   "ms": 4,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 6
+  }
+ ],
+ "sources": [
+  "https://www.vietnam-briefing.com/news/rising-confidence-vietnam-tops-asean-in-consumer-sentiment.html/"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

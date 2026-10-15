@@ -1,0 +1,222 @@
+{
+ "title": "Tiền nuôi xe",
+ "lines": [
+  {
+   "t": "Bây giờ chiếc xe đã lăn bánh, và đồng hồ chuyển sang tính theo tháng.",
+   "p": 0.8
+  },
+  {
+   "t": "Có hai khoản nhỏ mà ai có xe cũng phải nộp.",
+   "p": 1.0
+  },
+  "Phí sử dụng đường bộ, với xe chở người dưới mười chỗ đứng tên cá nhân, là một trăm ba mươi nghìn đồng mỗi tháng.",
+  "Bảo hiểm trách nhiệm dân sự bắt buộc, với xe dưới sáu chỗ không kinh doanh, là bốn trăm ba mươi bảy nghìn đồng một năm, chưa tính thuế.",
+  {
+   "t": "Hai khoản này cộng lại, chưa tới hai trăm nghìn một tháng. Nghe nhẹ nhàng.",
+   "p": 1.0
+  },
+  "Nhưng những khoản lớn lại nằm ở chỗ khác, và tuỳ cách bạn dùng xe.",
+  "Ví dụ giả định thế này.",
+  "Gửi xe ở chung cư hoặc gần chỗ làm, một triệu rưỡi mỗi tháng.",
+  "Đi mười hai nghìn cây số một năm, xe ăn bảy lít trên trăm cây số, xăng hai mươi tư nghìn một lít.",
+  "Tức là khoảng một triệu bảy tiền xăng mỗi tháng.",
+  {
+   "t": "Đó là chưa kể phí cầu đường, rửa xe, gửi xe khi đi chơi, những khoản nhỏ mà ít ai ghi lại.",
+   "p": 1.0
+  },
+  "Thêm bảo dưỡng, ví dụ sáu triệu một năm, tức năm trăm nghìn một tháng.",
+  {
+   "t": "Và nếu mua bảo hiểm vật chất tự nguyện, ví dụ một phẩy năm phần trăm giá trị xe mỗi năm, thì thêm gần chín trăm nghìn nữa.",
+   "p": 1.0
+  },
+  "Cộng hết lại, năm đầu tiên, khoảng bốn triệu bảy mỗi tháng.",
+  "Đã nhiều hơn bốn triệu tiền xe công nghệ ở đầu video.",
+  {
+   "t": "Nhưng đó là tiền thật, còn chiếc xe thì vẫn là của mình mà?",
+   "ask": 1
+  },
+  "Đúng. Và đó chính là khoản tiếp theo đồng hồ phải tính: chiếc xe ấy, mỗi tháng, còn đáng giá bao nhiêu."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "TIỀN NUÔI XE",
+   "sub": "ĐỒNG HỒ CHUYỂN SANG TÍNH THEO THÁNG",
+   "vid": "15341182",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Bây"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "HAI KHOẢN AI CÓ XE CŨNG NỘP",
+   "srcnote": "NĐ 90/2023 · NĐ 67/2023",
+   "rows": [
+    {
+     "k": "PHÍ ĐƯỜNG BỘ",
+     "v": "130 NGHÌN/THÁNG",
+     "at": 2
+    },
+    {
+     "k": "BẢO HIỂM TNDS",
+     "v": "437 NGHÌN/NĂM CHƯA THUẾ",
+     "at": 3
+    }
+   ],
+   "total": {
+    "k": "CỘNG LẠI",
+    "v": "< 200 NGHÌN/THÁNG",
+    "at": 4
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "KHOẢN LỚN NẰM Ở CHỖ KHÁC",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "và tuỳ cách bạn dùng xe",
+     "at": [
+      5,
+      "và"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 7,
+   "vid": "5982899",
+   "veil": 0.55,
+   "illus": "VÍ DỤ GIẢ ĐỊNH · VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "GỬI XE · 1,5 TRIỆU/THÁNG",
+     "at": 7,
+     "sm": true
+    },
+    {
+     "text": "12.000 KM · 7 LÍT/100 KM · 24.000 Đ/LÍT",
+     "at": 8,
+     "sm": true
+    },
+    {
+     "text": "≈ 1,7 TRIỆU TIỀN XĂNG MỖI THÁNG",
+     "at": 9,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "CẦU ĐƯỜNG · RỬA XE · GỬI XE KHI ĐI CHƠI",
+     "at": 10,
+     "sm": true
+    },
+    {
+     "text": "những khoản nhỏ ít ai ghi lại",
+     "at": [
+      10,
+      "những"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 11,
+   "title": "TIỀN NUÔI XE · NĂM ĐẦU (TRIỆU/THÁNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · XE 700 TRIỆU",
+   "items": [
+    {
+     "k": "XĂNG",
+     "v": 1.68,
+     "lbl": "1,7",
+     "at": [
+      11,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "k": "GỬI XE",
+     "v": 1.5,
+     "lbl": "1,5",
+     "at": [
+      11,
+      null,
+      0,
+      0.3
+     ]
+    },
+    {
+     "k": "BẢO HIỂM VẬT CHẤT",
+     "v": 0.875,
+     "lbl": "≈ 0,9",
+     "at": [
+      12,
+      "bảo"
+     ]
+    },
+    {
+     "k": "BẢO DƯỠNG",
+     "v": 0.5,
+     "lbl": "0,5",
+     "at": [
+      11,
+      "sáu"
+     ]
+    },
+    {
+     "k": "PHÍ + BẢO HIỂM BẮT BUỘC",
+     "v": 0.17,
+     "lbl": "0,2",
+     "at": [
+      12,
+      "thêm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 13,
+   "from": 4.7,
+   "to": 4.7,
+   "suffix": " TRIỆU/THÁNG",
+   "label": "ĐỒNG HỒ · TIỀN NUÔI XE NĂM ĐẦU",
+   "sub": {
+    "text": "VÍ DỤ GIẢ ĐỊNH · HƠN 4 TRIỆU TIỀN XE CÔNG NGHỆ",
+    "at": 14
+   }
+  },
+  {
+   "type": "question",
+   "at": 15,
+   "text": "Nhưng chiếc xe\nvẫn là của mình mà?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "TIỀN NUÔI XE"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

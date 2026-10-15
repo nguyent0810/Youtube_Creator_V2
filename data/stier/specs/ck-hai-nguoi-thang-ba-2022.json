@@ -1,0 +1,181 @@
+{
+ "title": "Vào thị trường cuối tháng 3/2022: dồn một lần 100 triệu hay mỗi tháng 3 triệu (ví dụ giả định)",
+ "description": "VÍ DỤ GIẢ ĐỊNH, đi đúng theo VN-Index, không tính phí, thuế, cổ tức (kênh tự tính). Người 1 dồn 100 triệu ngày 31/03/2022: còn ≈61 triệu ngày 15/11/2022, ≈76 triệu cuối 2023, phải tới 25/07/2025 mới quay lại trên 100 triệu. Người 2 mua 3 triệu mỗi tháng 04/2022 → 12/2023 (tổng 63 triệu): ≈62 triệu cuối 2023, ≈84 triệu ngày 25/07/2025. Nếu thị trường tăng một mạch, dồn một lần sẽ hơn. Không phải lời khuyên.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ: https://youtu.be/ULLEUHkYz9g (công khai từ 20:00 ngày 21/11)",
+ "tags": [
+  "mua dần",
+  "dồn một lần",
+  "dca",
+  "fomo",
+  "tâm lý đầu tư",
+  "vn-index",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "một",
+  "trăm",
+  "ba",
+  "năm",
+  "đoán"
+ ],
+ "kicker": "TÂM LÝ TIỀN BẠC",
+ "sub": "FOMO",
+ "lines": [
+  "Hai người cùng vào thị trường cuối tháng 3 năm 2022. Một người dồn một lần, một người chia nhỏ.",
+  "Ví dụ giả định, đi đúng theo chỉ số, không tính phí, thuế hay cổ tức.",
+  "Người thứ nhất dồn một trăm triệu. Tới tháng 11 năm ấy, còn khoảng sáu mươi mốt triệu.",
+  "Phải hơn ba năm sau, tới tháng 7 năm 2025, khoản ấy mới quay lại trên một trăm triệu.",
+  "Người thứ hai để ra ba triệu mỗi tháng, tới hết năm 2023, tổng cộng sáu mươi ba triệu. Tháng 7 năm 2025, khoảng tám mươi tư triệu.",
+  "Nếu thị trường tăng một mạch, người dồn một lần sẽ hơn.",
+  "Chia nhỏ không phải phép màu. Nó chỉ giúp bạn khỏi phải đoán đúng đỉnh."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "DỒN MỘT LẦN ↔ CHIA NHỎ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "cùng vào cuối tháng 3/2022",
+     "at": [
+      0,
+      "Một"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7710747",
+   "veil": 0.58
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "VÍ DỤ GIẢ ĐỊNH",
+   "cards": [
+    {
+     "k": "ĐI ĐÚNG THEO",
+     "v": "VN-INDEX",
+     "at": 1
+    },
+    {
+     "k": "KHÔNG TÍNH",
+     "v": "PHÍ · THUẾ · CỔ TỨC",
+     "at": [
+      1,
+      "không"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "at": 2,
+   "kind": "bars",
+   "title": "NGƯỜI 1 · 100 TRIỆU (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH · VN-INDEX ĐÓNG CỬA",
+   "bars": [
+    {
+     "label": "31/03/2022",
+     "v": 100,
+     "text": "100",
+     "c": "ref",
+     "at": [
+      2,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "label": "15/11/2022",
+     "v": 61.1,
+     "text": "≈61",
+     "c": "down",
+     "at": [
+      2,
+      "sáu"
+     ]
+    },
+    {
+     "label": "25/07/2025",
+     "v": 102.6,
+     "text": "≈103",
+     "c": "up",
+     "at": [
+      3,
+      "tháng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 84,
+   "to": 84,
+   "prefix": "≈",
+   "suffix": " TRIỆU",
+   "label": "NGƯỜI 2 · NỘP 63 TRIỆU · 07/2025",
+   "sub": {
+    "text": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+    "at": [
+     4,
+     "tám"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "TĂNG MỘT MẠCH?",
+     "at": 5,
+     "sm": true
+    },
+    {
+     "text": "DỒN MỘT LẦN SẼ HƠN",
+     "at": [
+      5,
+      "người"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7579943",
+   "ms": 4,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 5
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "KHÔNG PHẢI PHÉP MÀU",
+   "sub": "CHỈ KHỎI PHẢI ĐOÁN ĐÚNG ĐỈNH"
+  }
+ ],
+ "sources": [
+  "https://vnstocks.com/docs/vnstock-data/du-lieu-giao-dich"
+ ],
+ "theme": "ck",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

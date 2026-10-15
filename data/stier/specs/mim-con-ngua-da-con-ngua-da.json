@@ -1,0 +1,195 @@
+{
+ "theme": "mim",
+ "title": "“Con ngựa đá con ngựa đá”: vì sao một câu tiếng Việt quen thuộc lại là bài toán khó cho máy",
+ "description": "“Con ngựa đá con ngựa đá”: cùng chữ “đá” hai lần, hai nghĩa, không dấu hiệu nào trên mặt chữ. Người hiểu nhờ biết thế giới: ngựa thật thì biết đá, ngựa đá thì không. “Ông già đi nhanh quá” cũng có hai nghĩa. Năm 2011, để thắng Jeopardy, cỗ máy Watson của IBM phải vượt qua những cái bẫy như vậy, bằng tiếng Anh, chỉ với chữ và những gì nó đã đọc. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/Mt5hYcQxH50 (công khai từ 20:00 ngày 19/11).",
+ "tags": [
+  "ngôn ngữ và máy",
+  "xử lý ngôn ngữ tự nhiên",
+  "ibm watson",
+  "jeopardy",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "NGÔN NGỮ",
+ "acc": [
+  "đá",
+  "nghĩa",
+  "thế",
+  "giới",
+  "chữ"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Con ngựa đá con ngựa đá. Bạn hiểu ngay. Một cỗ máy thì khó hơn nhiều.",
+  "Một con ngựa thật đá một con ngựa bằng đá. Hoặc ngược lại.",
+  "Cùng một chữ đá, xuất hiện hai lần, mang hai nghĩa. Không có dấu hiệu nào trên mặt chữ.",
+  "Bạn hiểu nhờ biết thế giới: ngựa thật thì biết đá, ngựa đá thì không.",
+  "Hay câu: ông già đi nhanh quá. Ông cụ đi bộ nhanh? Hay ông ấy già đi nhanh?",
+  "Năm 2011, để thắng trò đố vui Jeopardy, cỗ máy Watson phải vượt qua những cái bẫy như thế, chỉ với chữ và những gì nó đã đọc.",
+  "Con người chọn nghĩa nhờ hiểu thế giới. Máy phải đoán nghĩa từ chính những con chữ."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CON NGỰA ĐÁ CON NGỰA ĐÁ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "bạn hiểu ngay · máy thì khó",
+     "at": [
+      0,
+      "Bạn"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8567113",
+   "veil": 0.55
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "HAI CÁCH HIỂU",
+   "cards": [
+    {
+     "k": "NGỰA THẬT",
+     "v": "ĐÁ NGỰA BẰNG ĐÁ",
+     "at": 1
+    },
+    {
+     "k": "HOẶC",
+     "v": "NGƯỢC LẠI",
+     "at": [
+      1,
+      "Hoặc"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "from": 2,
+   "to": 2,
+   "suffix": " NGHĨA",
+   "label": "MỘT CHỮ “ĐÁ” · HAI LẦN",
+   "sub": {
+    "text": "KHÔNG DẤU HIỆU TRÊN MẶT CHỮ",
+    "at": [
+     2,
+     "Không"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Người hiểu nhờ",
+   "nodes": [
+    {
+     "text": "ngựa thật thì biết đá",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      3,
+      "ngựa"
+     ],
+     "shape": "none",
+     "w": 700
+    },
+    {
+     "text": "ngựa đá thì không",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      3,
+      "ngựa",
+      1
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 640
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "“ÔNG GIÀ ĐI NHANH QUÁ”",
+   "sub": "ĐI BỘ NHANH · HAY GIÀ ĐI NHANH"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "WATSON · 2011",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "chỉ có chữ và những gì đã đọc",
+     "at": [
+      5,
+      "chỉ"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:4841217",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 5
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MÁY ĐOÁN NGHĨA TỪ CON CHỮ",
+     "at": [
+      6,
+      "Máy"
+     ],
+     "acc": true
+    },
+    {
+     "text": "người chọn nghĩa nhờ hiểu thế giới",
+     "at": 6,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8720746",
+   "ms": 6,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 6
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/IBM_Watson"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "watson": "Oát-xần",
+  "jeopardy": "Gie-pơ-đi"
+ },
+ "imgs": {}
+}

@@ -1,0 +1,166 @@
+{
+ "title": "Chiếc cân lệch",
+ "lines": [
+  {
+   "t": "Hãy đặt lên một đĩa cân niềm vui khi được một triệu.",
+   "p": 0.8
+  },
+  {
+   "t": "Và đặt lên đĩa kia nỗi buồn khi mất một triệu.",
+   "p": 1.0
+  },
+  "Về con số, hai thứ bằng nhau.",
+  {
+   "t": "Nhưng về cảm giác thì không.",
+   "p": 1.0
+  },
+  "Năm một nghìn chín trăm bảy mươi chín, hai nhà tâm lý học Daniel Kahneman và Amos Tversky công bố một lý thuyết về cách con người ra quyết định khi có rủi ro.",
+  "Một trong những ý chính của nó là: nỗi đau khi mất nặng hơn niềm vui khi được.",
+  {
+   "t": "Trong một nghiên cứu sau đó của hai ông, năm một nghìn chín trăm chín mươi hai, hệ số ấy ước tính khoảng hai phẩy hai mươi lăm.",
+   "p": 1.0
+  },
+  "Nói nôm na, mất một triệu đau gần bằng được hai triệu vui.",
+  {
+   "t": "Các nghiên cứu khác cho ra những con số hơi khác nhau, nhưng thường quanh mức gấp đôi.",
+   "p": 1.0
+  },
+  {
+   "t": "Thế thì liên quan gì tới việc bán cổ phiếu?",
+   "ask": 1
+  },
+  "Liên quan rất trực tiếp.",
+  "Chừng nào chưa bán, khoản lỗ vẫn chỉ là con số trên màn hình, và ta còn hy vọng nó quay lại.",
+  {
+   "t": "Bán đi, nó thành một khoản mất thật, và chiếc cân lệch hẳn về phía đau.",
+   "p": 1.0
+  },
+  "Nên ta trì hoãn.",
+  "Còn với cổ phiếu đang lãi thì ngược lại. Chốt lãi là được nếm niềm vui ngay, trước khi nó kịp biến mất."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "CHIẾC CÂN LỆCH",
+   "sub": "ĐƯỢC MỘT TRIỆU · MẤT MỘT TRIỆU",
+   "vid": "8431825",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Hãy"
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 2,
+   "mythLab": "VỀ CON SỐ",
+   "myth": "HAI THỨ BẰNG NHAU",
+   "truthLab": "VỀ CẢM GIÁC",
+   "truth": "THÌ KHÔNG",
+   "strikeAt": [
+    3,
+    "Nhưng"
+   ],
+   "truthAt": [
+    3,
+    "thì"
+   ]
+  },
+  {
+   "type": "source",
+   "at": 4,
+   "source": "KAHNEMAN & TVERSKY · 1979 · 1992",
+   "ref": "LÝ THUYẾT TRIỂN VỌNG",
+   "snippet": "nỗi đau khi mất nặng hơn niềm vui khi được · hệ số ước tính [[≈ 2,25]]",
+   "hlAt": [
+    6,
+    "hai"
+   ],
+   "seal": "NGHIÊN CỨU KHÁC: THƯỜNG QUANH ×2",
+   "sealAt": 8
+  },
+  {
+   "type": "bars",
+   "at": 7,
+   "title": "CẢM GIÁC · CÙNG MỘT TRIỆU",
+   "unit": "MINH HOẠ HỆ SỐ ≈ 2 · KHÔNG PHẢI SỐ ĐO CỦA RIÊNG AI",
+   "items": [
+    {
+     "k": "VUI KHI ĐƯỢC",
+     "v": 1,
+     "lbl": "×1",
+     "at": [
+      7,
+      "được"
+     ]
+    },
+    {
+     "k": "ĐAU KHI MẤT",
+     "v": 2.25,
+     "lbl": "≈ ×2",
+     "at": [
+      7,
+      "mất"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 9,
+   "text": "Liên quan gì tới\nviệc bán cổ phiếu?"
+  },
+  {
+   "type": "ledger",
+   "at": 10,
+   "title": "CHIẾC CÂN KHI BẠN BẤM BÁN",
+   "rows": [
+    {
+     "k": "CHƯA BÁN",
+     "v": "CON SỐ TRÊN MÀN HÌNH · CÒN HY VỌNG",
+     "at": 11
+    },
+    {
+     "k": "BÁN ĐI",
+     "v": "MỘT KHOẢN MẤT THẬT",
+     "at": 12
+    }
+   ],
+   "total": {
+    "k": "NÊN",
+    "v": "TA TRÌ HOÃN",
+    "at": 13
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "CỔ PHIẾU ĐANG LÃI THÌ NGƯỢC LẠI",
+     "at": 14,
+     "sm": true
+    },
+    {
+     "text": "CHỐT LÃI = NẾM NIỀM VUI NGAY",
+     "at": [
+      14,
+      "Chốt"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "CHIẾC CÂN LỆCH"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

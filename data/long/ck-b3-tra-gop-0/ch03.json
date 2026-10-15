@@ -1,0 +1,187 @@
+{
+ "title": "Cái giá thứ ba: các loại phí",
+ "lines": [
+  {
+   "t": "Lãi suất là số không. Nhưng phí thì chưa chắc.",
+   "p": 0.8
+  },
+  "Theo các bài hướng dẫn tài chính và báo chí, trả góp có thể đi kèm vài loại phí.",
+  "Phí chuyển đổi trả góp, nếu bạn dùng thẻ tín dụng.",
+  "Phí hồ sơ, hoặc phí bảo hiểm khoản vay, nếu qua công ty tài chính.",
+  {
+   "t": "Và có nơi thu thêm phí thu hộ mỗi tháng.",
+   "p": 1.0
+  },
+  "Không phải chương trình nào cũng có đủ các khoản ấy.",
+  "Có chương trình miễn hết. Có chương trình thu một, hai loại.",
+  {
+   "t": "Vì thế, câu cần hỏi không phải là lãi suất bao nhiêu.",
+   "p": 1.0
+  },
+  "Câu cần hỏi là: tổng cộng tôi phải trả bao nhiêu tiền?",
+  "Trong ví dụ của mình, mình giả định một khoản phí chuyển đổi ba phần trăm.",
+  {
+   "t": "Ba phần trăm của hai mươi triệu là sáu trăm nghìn.",
+   "p": 1.0
+  },
+  "Cột thứ ba vì thế cao thêm một chút.",
+  "Hai mươi triệu sáu trăm nghìn.",
+  {
+   "t": "So với trả thẳng, bạn đang trả nhiều hơn hai triệu một trăm nghìn.",
+   "p": 1.0
+  },
+  "Và bây giờ là câu hỏi mình hứa ở đầu video.",
+  "Hai triệu một trăm nghìn ấy, nếu gọi đúng tên, là bao nhiêu phần trăm một năm?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "CÁI GIÁ THỨ BA",
+   "sub": "LÃI LÀ 0 · PHÍ THÌ CHƯA CHẮC",
+   "vid": "8471105",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Nhưng"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "PHÍ CÓ THỂ ĐI KÈM TRẢ GÓP",
+   "srcnote": "THEO BÁO CHÍ VÀ BÀI HƯỚNG DẪN TÀI CHÍNH · MỖI CHƯƠNG TRÌNH MỘT KHÁC",
+   "rows": [
+    {
+     "k": "QUA THẺ TÍN DỤNG",
+     "v": "PHÍ CHUYỂN ĐỔI TRẢ GÓP",
+     "at": 2
+    },
+    {
+     "k": "QUA CÔNG TY TÀI CHÍNH",
+     "v": "PHÍ HỒ SƠ · BẢO HIỂM KHOẢN VAY",
+     "at": 3
+    },
+    {
+     "k": "CÓ NƠI",
+     "v": "PHÍ THU HỘ MỖI THÁNG",
+     "at": 4
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "CÓ CHƯƠNG TRÌNH MIỄN HẾT",
+     "at": [
+      6,
+      "Có"
+     ]
+    },
+    {
+     "text": "CÓ CHƯƠNG TRÌNH THU MỘT, HAI LOẠI",
+     "at": [
+      6,
+      "thu"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 7,
+   "mythLab": "CÂU HAY HỎI",
+   "myth": "LÃI SUẤT BAO NHIÊU?",
+   "truthLab": "CÂU CẦN HỎI",
+   "truth": "TỔNG CỘNG TÔI TRẢ BAO NHIÊU?",
+   "strikeAt": [
+    7,
+    "không"
+   ],
+   "truthAt": [
+    8,
+    "tổng"
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 9,
+   "from": 0,
+   "to": 600,
+   "suffix": " NGHÌN",
+   "until": [
+    10,
+    "sáu"
+   ],
+   "label": "PHÍ CHUYỂN ĐỔI 3% CỦA 20 TRIỆU",
+   "sub": {
+    "text": "VÍ DỤ GIẢ ĐỊNH · KHÔNG PHẢI MỨC CỦA CHƯƠNG TRÌNH NÀO",
+    "at": 9
+   }
+  },
+  {
+   "type": "bars",
+   "at": 11,
+   "title": "CÙNG MỘT CHIẾC MÁY (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · MÁY 20 TRIỆU, GIẢM 1,5 TRIỆU KHI TRẢ THẲNG, PHÍ 3%",
+   "items": [
+    {
+     "k": "① TRẢ THẲNG",
+     "v": 18.5,
+     "lbl": "18,5",
+     "at": [
+      11,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "k": "② TRẢ GÓP 0%",
+     "v": 20,
+     "lbl": "20",
+     "at": [
+      11,
+      null,
+      0,
+      0.3
+     ]
+    },
+    {
+     "k": "③ TRẢ GÓP + PHÍ",
+     "v": 20.6,
+     "lbl": "20,6",
+     "at": [
+      12,
+      "Hai"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 13,
+   "text": "+ 2,1 TRIỆU",
+   "sub": "SO VỚI TRẢ THẲNG · VÍ DỤ GIẢ ĐỊNH",
+   "subAt": 13
+  },
+  {
+   "type": "question",
+   "at": 14,
+   "text": "2,1 triệu ấy là\nbao nhiêu % một năm?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "CÁI GIÁ THỨ BA: CÁC LOẠI PHÍ"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

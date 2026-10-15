@@ -1,0 +1,151 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "tinh-lang",
+ "hook_type": "menh-lenh",
+ "open_shot": "song-bien",
+ "voice": "Thục Đoan",
+ "music": "frost_waltz.mp3",
+ "gap": 0.45,
+ "ambience": {
+  "bed": "water",
+  "gain": 0.4,
+  "hits": [
+   {
+    "at": 0.1,
+    "kind": "bell",
+    "gain": 0.7
+   }
+  ]
+ },
+ "title": "Tĩnh lặng: thở cùng mình 20 giây",
+ "kicker": "TĨNH LẶNG",
+ "sub": "KINH TRUNG BỘ 118 · DIỄN Ý",
+ "acc": [
+  "thở",
+  "dịu"
+ ],
+ "lines": [
+  "Dừng lướt nhé. Hai mươi giây, thở cùng mình.",
+  "Hít vào, biết mình đang hít vào. Thở ra, biết mình đang thở ra.",
+  "Thở dài, biết là dài. Thở ngắn, biết là ngắn.",
+  "Thở ra, để thân dịu xuống. Vai nhẹ, mặt giãn ra.",
+  "Thấy nhẹ hơn chưa? Lưu lại, để mai mình thở cùng nhau nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "DỪNG LƯỚT",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "20 giây thở cùng mình",
+     "at": [
+      0,
+      "Hai"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:33937728"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 20,
+   "suffix": " GIÂY",
+   "label": "THỞ CÙNG MÌNH",
+   "until": [
+    1,
+    "ra."
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "DÀI, BIẾT DÀI\nNGẮN, BIẾT NGẮN",
+   "fx": "zoom",
+   "sub": "KINH TRUNG BỘ 118"
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Thở ra",
+   "nodes": [
+    {
+     "text": "THÂN",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      3,
+      "thân"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "DỊU XUỐNG",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      3,
+      "dịu"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      3,
+      "dịu"
+     ]
+    }
+   ],
+   "note": "MN 118 · DIỄN Ý"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "NHẸ HƠN CHƯA?",
+     "at": [
+      4,
+      "Thấy"
+     ],
+     "acc": true
+    },
+    {
+     "text": "lưu để thở cùng nhau",
+     "at": [
+      4,
+      "Lưu"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:31987734"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/mn118/en/sujato"
+ ],
+ "description": "Tĩnh lặng: thở cùng mình 20 giây\n\nNguồn: https://suttacentral.net/mn118/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

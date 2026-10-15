@@ -1,0 +1,330 @@
+{
+ "title": "Lần này khác",
+ "lines": [
+  {
+   "t": "Mỗi thế hệ đều có người nhìn cỗ máy mới và nói: lần này khác.",
+   "p": 0.8
+  },
+  {
+   "t": "Mình sẽ kể ba lời tiên tri như vậy.",
+   "p": 1.0
+  },
+  "Lời thứ nhất, năm 1930.",
+  "Nhà kinh tế học người Anh John Maynard Keynes gọi tên một căn bệnh mới: thất nghiệp vì công nghệ.",
+  "Nhưng ông lạc quan.",
+  "Ông đoán một trăm năm sau, mức sống sẽ cao gấp bốn đến tám lần, và khi ấy, có lẽ mỗi tuần làm khoảng mười lăm giờ là đủ.",
+  "Một trăm năm sau năm 1930, tức là năm 2030.",
+  {
+   "t": "Hãy nhớ cái hẹn này.",
+   "p": 1.0
+  },
+  "Lời thứ hai, tháng 3 năm 1964.",
+  "Một bản ghi nhớ được gửi tới Tổng thống Mỹ Lyndon Johnson, với chữ ký của cả nhà hoá học Linus Pauling, người đoạt hai giải Nobel.",
+  "Họ cảnh báo: máy tính sẽ sớm gây ra thất nghiệp hàng loạt.",
+  "Hai năm sau, một uỷ ban quốc gia về tự động hoá, do chính quyền Johnson lập ra từ năm 1964, kết luận bằng một ý rất ngắn.",
+  {
+   "t": "Công nghệ xoá đi những công việc cụ thể, chứ không xoá đi nhu cầu lao động.",
+   "q": 1,
+   "diy": 1
+  },
+  "Lời thứ ba, có lẽ bạn đã từng nghe.",
+  "Năm 2013, hai nhà nghiên cứu ở Đại học Oxford xem xét bảy trăm lẻ hai nghề ở Mỹ.",
+  {
+   "t": "Họ ước tính: bốn mươi bảy phần trăm việc làm ở Mỹ thuộc nhóm rủi ro cao, có thể bị máy tính làm thay, có lẽ trong một hoặc hai thập kỷ.",
+   "p": 1.0
+  },
+  "Một hoặc hai thập kỷ. Hãy nhớ con số này.",
+  "Ba lời tiên tri. Ba lần \"lần này khác\".",
+  "Nhưng trước khi chấm điểm họ, mình cần xem: khi máy móc thật sự thắng, chuyện gì đã xảy ra với con người?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "LẦN NÀY KHÁC",
+   "sub": "1930 · 1964 · 2013",
+   "vid": "36337620",
+   "titleAt": [
+    0,
+    "Mỗi"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "“LẦN NÀY KHÁC.”",
+     "at": 1,
+     "acc": true,
+     "fx": "type"
+    },
+    {
+     "text": "BA LỜI TIÊN TRI",
+     "at": [
+      1,
+      "ba"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 2,
+   "bg": "keynes",
+   "day": "LỜI THỨ NHẤT",
+   "date": "1930"
+  },
+  {
+   "type": "print",
+   "at": 3,
+   "img": "keynes",
+   "tone": "bw",
+   "side": {
+    "k": "JOHN MAYNARD KEYNES",
+    "h": "Nhà kinh tế học\nngười Anh",
+    "lines": [
+     {
+      "text": "Bệnh mới: *thất nghiệp vì công nghệ*",
+      "at": [
+       3,
+       "thất"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "NHƯNG ÔNG\nLẠC QUAN",
+   "white": true
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "KEYNES HÌNH DUNG · 100 NĂM SAU",
+   "rows": [
+    {
+     "k": "MỨC SỐNG",
+     "v": "× 4 – 8",
+     "at": 5
+    },
+    {
+     "k": "TUẦN LÀM",
+     "v": "~15 GIỜ CÓ LẼ LÀ ĐỦ",
+     "at": [
+      5,
+      "mỗi"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 6,
+   "items": [
+    {
+     "year": "1930",
+     "text": "Keynes viết",
+     "at": 6
+    },
+    {
+     "year": "2030",
+     "text": "*100 năm sau*",
+     "at": [
+      6,
+      "2030."
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "HÃY NHỚ\nCÁI HẸN NÀY",
+   "sub": "2030"
+  },
+  {
+   "type": "date",
+   "at": 8,
+   "bg": "lbj",
+   "day": "LỜI THỨ HAI",
+   "date": "03.1964"
+  },
+  {
+   "type": "photo",
+   "at": 9,
+   "img": "lbj",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.5,
+   "illus": "ẢNH MINH HỌA · LBJ, ĐÊM BẦU CỬ 1964",
+   "kin": [
+    {
+     "text": "BẢN GHI NHỚ GỬI TỔNG THỐNG JOHNSON",
+     "at": 9
+    },
+    {
+     "text": "có chữ ký của Linus Pauling · người đoạt 2 giải Nobel",
+     "at": [
+      9,
+      "Linus"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "LỜI CẢNH BÁO · 1964",
+     "at": 10,
+     "sm": true
+    },
+    {
+     "text": "THẤT NGHIỆP HÀNG LOẠT",
+     "at": [
+      10,
+      "thất"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "HAI NĂM SAU · 1966",
+     "at": 11
+    },
+    {
+     "text": "ỦY BAN QUỐC GIA VỀ TỰ ĐỘNG HOÁ",
+     "at": [
+      11,
+      "uỷ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "do chính quyền Johnson lập ra từ năm 1964",
+     "at": [
+      11,
+      "chính"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 12,
+   "bg": "lbj",
+   "text": "…technology eliminates jobs, not work.",
+   "by": "BÁO CÁO ỦY BAN · 02.1966 · QUA D. AUTOR (2015)",
+   "lbl": "DIỄN Ý",
+   "qline": 12
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "LỜI THỨ BA",
+     "at": 13,
+     "acc": true
+    },
+    {
+     "text": "có lẽ bạn đã từng nghe",
+     "at": [
+      13,
+      "có"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 14,
+   "day": "ĐẠI HỌC OXFORD",
+   "date": "2013",
+   "label": {
+    "k": "FREY & OSBORNE",
+    "v": "XEM XÉT 702 NGHỀ Ở MỸ",
+    "at": [
+     14,
+     "bảy"
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "at": 15,
+   "from": 0,
+   "to": 47,
+   "suffix": "%",
+   "label": "VIỆC LÀM Ở MỸ · NHÓM RỦI RO CAO",
+   "sub": {
+    "text": "“CÓ THỂ” BỊ MÁY TÍNH LÀM THAY · CÓ LẼ TRONG 1–2 THẬP KỶ",
+    "at": [
+     15,
+     "có"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 16,
+   "text": "1 – 2 THẬP KỶ",
+   "sub": "HÃY NHỚ CON SỐ NÀY"
+  },
+  {
+   "type": "timeline",
+   "at": 17,
+   "items": [
+    {
+     "year": "1930",
+     "text": "Keynes",
+     "at": 17
+    },
+    {
+     "year": "1964",
+     "text": "Bản ghi nhớ",
+     "at": [
+      17,
+      "Ba",
+      1
+     ]
+    },
+    {
+     "year": "2013",
+     "text": "Oxford",
+     "at": [
+      17,
+      "khác"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 18,
+   "bg": "powerloom",
+   "text": "Khi máy thật sự thắng,\nchuyện gì xảy ra với con người?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "BA LỜI TIÊN TRI “LẦN NÀY KHÁC”"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.12
+ }
+}

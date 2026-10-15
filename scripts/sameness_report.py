@@ -15,6 +15,7 @@ sys.path.insert(0, str(ROOT))
 from factory import channels, sameness  # noqa: E402
 
 if __name__ == "__main__":
-    sys.stdout.reconfigure(encoding="utf-8")      # console Windows cp1252 không in được tiếng Việt
+    from factory.console import utf8_console  # noqa: E402
+    utf8_console()  # console Windows cp1252 không in được tiếng Việt (retro 2 mục 7)
     for ch in ([channels.pick()] if "--channel" in sys.argv else list(channels.CHANNELS)):
         print(f"# {ch}{sameness.render_for(ch)}")

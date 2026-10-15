@@ -1,0 +1,133 @@
+{
+ "title": "Từ những trò chơi điện tử cũ",
+ "lines": [
+  {
+   "t": "Thật ra, DeepMind không bắt đầu với StarCraft.",
+   "p": 0.8
+  },
+  {
+   "t": "Họ bắt đầu với những trò chơi điện tử cũ hơn nhiều, trên một chiếc máy chơi game từ cuối những năm bảy mươi.",
+   "p": 1.0
+  },
+  "Tháng hai năm hai nghìn không trăm mười lăm, họ công bố trên tạp chí Nature một hệ thống tên là DQN.",
+  {
+   "t": "Nó được thử với bốn mươi chín trò chơi Atari, những trò bắn súng, đánh bóng, lái xe đơn giản.",
+   "p": 1.0
+  },
+  "Điều đặc biệt là cỗ máy không được dạy luật của trò nào.",
+  "Nó chỉ nhận được hình ảnh trên màn hình, danh sách các nút có thể bấm, và điểm số.",
+  {
+   "t": "Rồi nó tự chơi, tự thử, và tự tìm ra cách để điểm số tăng lên.",
+   "p": 1.0
+  },
+  "Theo DeepMind, hệ thống ấy giỏi hơn các phương pháp máy học trước đó ở bốn mươi ba trên bốn mươi chín trò.",
+  {
+   "t": "Và ở hơn một nửa số trò, nó đạt trên bảy mươi lăm phần trăm điểm của một người thử nghiệm game chuyên nghiệp.",
+   "p": 1.0
+  },
+  "Cùng một thuật toán, cùng một cấu trúc, cho tất cả các trò chơi.",
+  "Đó là lần đầu tiên nhiều người thấy rằng một cỗ máy có thể học chơi game chỉ bằng cách nhìn màn hình, như con người.",
+  "Nhưng những trò Atari ấy chỉ kéo dài vài phút, và không có đối thủ nào biết suy nghĩ.",
+  "Từ đó tới StarCraft là một bước nhảy rất xa."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "TỪ NHỮNG TRÒ CHƠI\nĐIỆN TỬ CŨ",
+   "sub": "DQN · 2015",
+   "vid": "7986592",
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU",
+   "titleAt": [
+    0,
+    null,
+    0,
+    0.05
+   ]
+  },
+  {
+   "type": "source",
+   "at": 2,
+   "source": "NATURE · 02/2015 · DEEPMIND",
+   "ref": "DQN · 49 TRÒ CHƠI ATARI",
+   "snippet": "đầu vào chỉ gồm [[hình ảnh màn hình, các nút bấm và điểm số]]",
+   "hlAt": 5,
+   "seal": "KHÔNG ĐƯỢC DẠY LUẬT",
+   "sealAt": 4
+  },
+  {
+   "type": "bars",
+   "at": 7,
+   "title": "DQN SO VỚI CÁC PHƯƠNG PHÁP TRƯỚC (SỐ TRÒ)",
+   "unit": "DEEPMIND · 02/2015",
+   "items": [
+    {
+     "k": "GIỎI HƠN",
+     "v": 43,
+     "lbl": "43",
+     "at": [
+      7,
+      null,
+      0,
+      0.3
+     ],
+     "acc": true
+    },
+    {
+     "k": "TỔNG SỐ TRÒ",
+     "v": 49,
+     "lbl": "49",
+     "at": [
+      7,
+      null,
+      0,
+      0.6
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 8,
+   "from": 75,
+   "to": 75,
+   "prefix": "> ",
+   "suffix": "%",
+   "label": "ĐIỂM NGƯỜI THỬ GAME CHUYÊN NGHIỆP",
+   "sub": {
+    "text": "Ở HƠN MỘT NỬA SỐ TRÒ",
+    "at": 8
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "MỘT THUẬT TOÁN CHO MỌI TRÒ",
+     "at": 9,
+     "acc": true
+    },
+    {
+     "text": "nhưng chỉ vài phút · không đối thủ biết nghĩ",
+     "at": 11,
+     "sm": true
+    },
+    {
+     "text": "tới StarCraft: một bước nhảy rất xa",
+     "at": 12,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "TỪ NHỮNG TRÒ CHƠI CŨ"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

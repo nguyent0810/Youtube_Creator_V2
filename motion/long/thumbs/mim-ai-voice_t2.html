@@ -1,0 +1,34 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700;800;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#02050a}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;color:#fff}
+.abs{position:absolute}
+.grid{position:absolute;inset:0;background:linear-gradient(rgba(125,211,252,.07) 1px,transparent 1px) 0 0/64px 64px,linear-gradient(90deg,rgba(125,211,252,.07) 1px,transparent 1px) 0 0/64px 64px}
+.glow{position:absolute;border-radius:50%;filter:blur(120px)}
+.big{position:absolute;font-weight:900;line-height:1.02;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.yl{color:#fde047;text-shadow:0 0 60px rgba(253,224,71,.55),0 10px 40px #000,-7px -7px 0 #000,7px 7px 0 #000,7px -7px 0 #000,-7px 7px 0 #000}
+.tag{position:absolute;font-family:'JetBrains Mono';font-weight:700;letter-spacing:.22em;color:#7dd3fc;white-space:nowrap;text-shadow:0 4px 20px #000}
+.wave{position:absolute;left:60px;right:60px;top:300px;height:480px;display:flex;align-items:center;justify-content:space-between}
+.wave i{display:block;width:22px;border-radius:11px;background:linear-gradient(180deg,#22d3ee,#0e7490);box-shadow:0 0 30px rgba(34,211,238,.6);opacity:.9}
+.win{position:absolute;left:330px;top:330px;width:1260px;height:420px;border:8px solid #fde047;border-radius:26px;box-shadow:0 0 80px rgba(253,224,71,.5),inset 0 0 80px rgba(253,224,71,.15)}
+.cap{position:absolute;padding:16px 34px;border-radius:12px;background:#fde047;color:#02050a;font-family:'JetBrains Mono';font-weight:700;font-size:44px;letter-spacing:.12em;white-space:nowrap}
+</style></head><body>
+<!-- T2: sóng âm cả màn, khung vàng chọn "3 giây" -> chữ lớn "3 GIÂY" + "MÔ HÌNH AI" (factcheck: "ba giây" luôn gắn với một mô hình AI) -->
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<div class="grid"></div>
+<div class="glow" style="left:520px;top:260px;width:900px;height:560px;background:rgba(34,211,238,.25)"></div>
+<div class="wave" id="wv"></div>
+<div class="abs" style="left:0;top:0;width:640px;height:1080px;background:linear-gradient(90deg,rgba(2,5,10,.85),rgba(2,5,10,.45))"></div>
+<div class="abs" style="left:1280px;top:0;width:640px;height:1080px;background:linear-gradient(270deg,rgba(2,5,10,.85),rgba(2,5,10,.45))"></div>
+<div class="win"></div>
+<div class="cap" style="left:330px;top:258px">MẪU GIỌNG</div>
+<div class="big yl" style="left:0;right:0;text-align:center;top:380px;font-size:300px">3 GIÂY</div>
+<div class="big" style="left:0;right:0;text-align:center;top:850px;font-size:96px">MÔ HÌNH AI BẮT CHƯỚC GIỌNG</div>
+</div>
+<script>
+const wv=document.getElementById("wv");
+for(let k=0;k<60;k++){const i=document.createElement("i");const v=40+Math.abs(Math.sin(k*0.55)*260+Math.sin(k*1.7)*120);i.style.height=Math.round(v)+"px";wv.appendChild(i);}
+window.__timelines={main:gsap.timeline({paused:true})};
+</script></body></html>

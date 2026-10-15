@@ -1,0 +1,1125 @@
+{
+ "title": "Mười năm sau hai cánh cửa",
+ "lines": [
+  {
+   "t": "Trở lại hành lang chung cư.",
+   "p": 0.8
+  },
+  "Mình cho hai nhà đi qua mười năm, với cùng một ngân sách cho chuyện nhà ở.",
+  "Nhà bên trái trả ngân hàng, cộng tiền sửa chữa.",
+  "Nhà bên phải trả tiền thuê, phần còn lại gửi tiết kiệm sáu phẩy tám phần trăm.",
+  {
+   "t": "Còn một tỷ trả trước cùng hai mươi lăm triệu phí mua, nhà bên phải gửi luôn từ ngày đầu.",
+   "p": 1.0
+  },
+  "Tháng đầu, phần chênh mà nhà bên phải để dành là khoảng mười ba triệu rưỡi.",
+  "Đầu năm thứ ba, khi khoản trả nhảy lên, con số ấy lên khoảng mười lăm triệu, rồi nhỏ dần.",
+  "Sau mười năm, nhà bên phải có khoảng bốn tỷ trong sổ tiết kiệm.",
+  "Nhà bên trái có căn hộ, và còn nợ ngân hàng chín trăm triệu.",
+  "Nếu giá nhà đứng yên suốt mười năm, bán đi, nộp thuế, trả hết nợ, họ còn khoảng một tỷ năm trăm năm mươi triệu.",
+  "Nếu giá nhà tăng ba phần trăm mỗi năm, họ còn khoảng hai tỷ bốn.",
+  {
+   "t": "Nếu tăng năm phần trăm mỗi năm, khoảng ba tỷ mốt.",
+   "p": 1.0
+  },
+  {
+   "t": "Vậy giá phải tăng bao nhiêu thì hai nhà mới ngang nhau?",
+   "ask": 1
+  },
+  {
+   "t": "Theo phép tính của kênh, khoảng bảy phẩy năm phần trăm mỗi năm, đều đặn suốt mười năm.",
+   "p": 1.0
+  },
+  "Đổi vài giả định, như lãi thả nổi, lãi tiết kiệm, mức tăng tiền thuê hay số năm ở, con số này chạy từ hơn sáu tới hơn tám phần trăm.",
+  "Ở càng lâu thì mức hoà vốn càng thấp, vì phí mua bán được chia cho nhiều năm hơn, còn tiền thuê thì năm nào cũng tăng.",
+  "Đó là nửa thứ nhất của câu trả lời: mua nhà là đặt cược rằng giá sẽ tăng nhanh hơn mức ấy.",
+  "Năm năm qua, giá căn hộ Hà Nội tăng nhanh hơn thế rất nhiều.",
+  {
+   "t": "Còn năm nay, giá căn hộ cũ đã chững lại, quý hai còn giảm.",
+   "p": 1.0
+  },
+  "Nửa thứ hai nằm sau cánh cửa bên phải.",
+  "Phép tính vừa rồi giả định họ để dành đủ từng đồng chênh lệch, suốt một trăm hai mươi tháng.",
+  {
+   "t": "Nếu họ tiêu mất phần chênh thì sao?",
+   "ask": 1
+  },
+  "Thì sau mười năm, họ chỉ còn khoảng hai tỷ, là một tỷ trả trước cộng tiền lãi.",
+  "Khi ấy, giá nhà chỉ cần tăng chừng gần hai phần trăm mỗi năm là nhà bên trái đã đuổi kịp.",
+  "Người mua nhà bị ép để dành: sau mười năm, họ đã trả sáu trăm triệu tiền gốc.",
+  "Người thuê thì phải tự ép mình.",
+  "Lợi thế của người thuê chỉ thành tiền khi phần chênh thật sự được để dành."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "CHƯƠNG NĂM",
+   "title": "MƯỜI NĂM SAU\nHAI CÁNH CỬA",
+   "sub": "CÙNG MỘT NGÂN SÁCH NHÀ Ở",
+   "vid": "10577994",
+   "ms": 12,
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Trở"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "CÙNG MỘT NGÂN SÁCH",
+   "illus": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "rows": [
+    {
+     "k": "TRÁI · MUA",
+     "v": "NGÂN HÀNG + SỬA CHỮA",
+     "at": [
+      2,
+      "Nhà"
+     ]
+    },
+    {
+     "k": "PHẢI · THUÊ",
+     "v": "THUÊ + GỬI PHẦN CHÊNH",
+     "at": [
+      3,
+      "Nhà"
+     ]
+    }
+   ],
+   "total": {
+    "k": "PHẢI GỬI TỪ NGÀY ĐẦU",
+    "v": "1 TỶ + 25 TR",
+    "at": [
+     4,
+     "một"
+    ]
+   },
+   "srcnote": "Gửi tiết kiệm 6,8%/năm, ghép lãi hằng tháng · ví dụ giả định"
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 0,
+   "to": 13540000.0,
+   "suffix": " Đ",
+   "until": [
+    5,
+    "rưỡi"
+   ],
+   "label": "PHẦN CHÊNH THÁNG ĐẦU · BÊN PHẢI ĐỂ DÀNH",
+   "sub": {
+    "text": "THÁNG 25: ≈ 15,3 TR · THÁNG 120: ≈ 6,9 TR",
+    "at": [
+     6,
+     "Đầu"
+    ]
+   },
+   "illus": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "srcnote": "18,75 trả NH + 1,04 sửa chữa − 6,25 thuê ≈ 13,54 tr · kênh tự tính"
+  },
+  {
+   "type": "race",
+   "at": 7,
+   "title": "10 NĂM · HAI CÁNH CỬA",
+   "range": "THÁNG 0 → 120 · % SO VỚI 1,025 TỶ BAN ĐẦU",
+   "money": 1025,
+   "unit": "TR",
+   "dates": [
+    "thang01",
+    "thang01",
+    "thang01",
+    "thang01",
+    "thang01",
+    "thang01",
+    "thang01",
+    "thang01",
+    "thang01",
+    "thang01",
+    "thang01",
+    "thang01",
+    "thang01",
+    "thang01",
+    "thang01",
+    "thang01",
+    "thang01",
+    "thang01",
+    "thang01",
+    "thang01",
+    "thang01",
+    "thang01",
+    "thang01",
+    "thang01",
+    "thang01",
+    "thang25",
+    "thang25",
+    "thang25",
+    "thang25",
+    "thang25",
+    "thang25",
+    "thang25",
+    "thang25",
+    "thang25",
+    "thang25",
+    "thang25",
+    "thang25",
+    "thang25",
+    "thang25",
+    "thang25",
+    "thang25",
+    "thang25",
+    "thang25",
+    "thang25",
+    "thang25",
+    "thang25",
+    "thang25",
+    "thang25",
+    "thang25",
+    "thang49",
+    "thang49",
+    "thang49",
+    "thang49",
+    "thang49",
+    "thang49",
+    "thang49",
+    "thang49",
+    "thang49",
+    "thang49",
+    "thang49",
+    "thang49",
+    "thang49",
+    "thang49",
+    "thang49",
+    "thang49",
+    "thang49",
+    "thang49",
+    "thang49",
+    "thang49",
+    "thang49",
+    "thang49",
+    "thang49",
+    "thang49",
+    "thang73",
+    "thang73",
+    "thang73",
+    "thang73",
+    "thang73",
+    "thang73",
+    "thang73",
+    "thang73",
+    "thang73",
+    "thang73",
+    "thang73",
+    "thang73",
+    "thang73",
+    "thang73",
+    "thang73",
+    "thang73",
+    "thang73",
+    "thang73",
+    "thang73",
+    "thang73",
+    "thang73",
+    "thang73",
+    "thang73",
+    "thang73",
+    "thang97",
+    "thang97",
+    "thang97",
+    "thang97",
+    "thang97",
+    "thang97",
+    "thang97",
+    "thang97",
+    "thang97",
+    "thang97",
+    "thang97",
+    "thang97",
+    "thang97",
+    "thang97",
+    "thang97",
+    "thang97",
+    "thang97",
+    "thang97",
+    "thang97",
+    "thang97",
+    "thang97",
+    "thang97",
+    "thang97",
+    "thang97"
+   ],
+   "drawAt": [
+    7,
+    "Sau"
+   ],
+   "until": [
+    7,
+    "sổ"
+   ],
+   "illus": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "series": [
+    {
+     "label": "PHẢI · THUÊ + GỬI",
+     "color": "#a78bfa",
+     "vals": [
+      0.0,
+      1.89,
+      3.78,
+      5.68,
+      7.59,
+      9.5,
+      11.42,
+      13.35,
+      15.28,
+      17.22,
+      19.16,
+      21.11,
+      23.07,
+      25.01,
+      26.95,
+      28.9,
+      30.85,
+      32.81,
+      34.78,
+      36.75,
+      38.73,
+      40.72,
+      42.71,
+      44.71,
+      46.72,
+      49.04,
+      51.37,
+      53.7,
+      56.04,
+      58.39,
+      60.75,
+      63.12,
+      65.49,
+      67.87,
+      70.26,
+      72.65,
+      75.05,
+      77.43,
+      79.82,
+      82.21,
+      84.61,
+      87.02,
+      89.44,
+      91.87,
+      94.3,
+      96.74,
+      99.19,
+      101.65,
+      104.11,
+      106.55,
+      109.0,
+      111.46,
+      113.92,
+      116.39,
+      118.87,
+      121.36,
+      123.86,
+      126.36,
+      128.88,
+      131.4,
+      133.93,
+      136.43,
+      138.94,
+      141.46,
+      143.99,
+      146.53,
+      149.07,
+      151.63,
+      154.19,
+      156.76,
+      159.34,
+      161.93,
+      164.53,
+      167.1,
+      169.68,
+      172.27,
+      174.86,
+      177.47,
+      180.08,
+      182.7,
+      185.34,
+      187.98,
+      190.63,
+      193.29,
+      195.96,
+      198.59,
+      201.24,
+      203.9,
+      206.56,
+      209.24,
+      211.92,
+      214.62,
+      217.32,
+      220.03,
+      222.76,
+      225.49,
+      228.23,
+      230.94,
+      233.66,
+      236.39,
+      239.13,
+      241.88,
+      244.64,
+      247.4,
+      250.18,
+      252.97,
+      255.77,
+      258.58,
+      261.4,
+      264.18,
+      266.97,
+      269.78,
+      272.59,
+      275.42,
+      278.25,
+      281.1,
+      283.95,
+      286.82,
+      289.7,
+      292.59,
+      295.48
+     ]
+    },
+    {
+     "label": "TRÁI · GIÁ +5%/NĂM",
+     "color": "#fb923c",
+     "vals": [
+      -7.32,
+      -5.86,
+      -4.39,
+      -2.92,
+      -1.45,
+      0.03,
+      1.51,
+      3.0,
+      4.49,
+      5.98,
+      7.48,
+      8.98,
+      10.49,
+      12.0,
+      13.51,
+      15.03,
+      16.55,
+      18.08,
+      19.61,
+      21.15,
+      22.69,
+      24.23,
+      25.78,
+      27.33,
+      28.89,
+      30.45,
+      32.02,
+      33.59,
+      35.16,
+      36.74,
+      38.32,
+      39.91,
+      41.51,
+      43.1,
+      44.7,
+      46.31,
+      47.92,
+      49.54,
+      51.15,
+      52.78,
+      54.41,
+      56.04,
+      57.68,
+      59.32,
+      60.97,
+      62.62,
+      64.28,
+      65.94,
+      67.61,
+      69.28,
+      70.96,
+      72.64,
+      74.32,
+      76.01,
+      77.71,
+      79.41,
+      81.12,
+      82.83,
+      84.54,
+      86.26,
+      87.99,
+      89.72,
+      91.46,
+      93.2,
+      94.94,
+      96.69,
+      98.45,
+      100.21,
+      101.98,
+      103.75,
+      105.53,
+      107.31,
+      109.1,
+      110.89,
+      112.69,
+      114.49,
+      116.3,
+      118.11,
+      119.93,
+      121.76,
+      123.59,
+      125.42,
+      127.27,
+      129.11,
+      130.97,
+      132.82,
+      134.69,
+      136.56,
+      138.43,
+      140.31,
+      142.2,
+      144.09,
+      145.99,
+      147.89,
+      149.8,
+      151.71,
+      153.64,
+      155.56,
+      157.49,
+      159.43,
+      161.38,
+      163.33,
+      165.28,
+      167.25,
+      169.21,
+      171.19,
+      173.17,
+      175.15,
+      177.15,
+      179.15,
+      181.15,
+      183.16,
+      185.18,
+      187.2,
+      189.23,
+      191.27,
+      193.31,
+      195.36,
+      197.41,
+      199.47,
+      201.54
+     ]
+    },
+    {
+     "label": "TRÁI · GIÁ +3%/NĂM",
+     "color": "#fdba74",
+     "vals": [
+      -7.32,
+      -6.24,
+      -5.16,
+      -4.08,
+      -3.0,
+      -1.92,
+      -0.83,
+      0.25,
+      1.34,
+      2.43,
+      3.52,
+      4.61,
+      5.71,
+      6.8,
+      7.9,
+      9.0,
+      10.1,
+      11.2,
+      12.3,
+      13.4,
+      14.51,
+      15.62,
+      16.73,
+      17.84,
+      18.95,
+      20.06,
+      21.17,
+      22.29,
+      23.41,
+      24.53,
+      25.65,
+      26.77,
+      27.9,
+      29.02,
+      30.15,
+      31.28,
+      32.41,
+      33.54,
+      34.67,
+      35.81,
+      36.95,
+      38.08,
+      39.22,
+      40.37,
+      41.51,
+      42.65,
+      43.8,
+      44.95,
+      46.1,
+      47.25,
+      48.4,
+      49.56,
+      50.71,
+      51.87,
+      53.03,
+      54.19,
+      55.35,
+      56.52,
+      57.68,
+      58.85,
+      60.02,
+      61.19,
+      62.37,
+      63.54,
+      64.72,
+      65.89,
+      67.07,
+      68.26,
+      69.44,
+      70.62,
+      71.81,
+      73.0,
+      74.19,
+      75.38,
+      76.57,
+      77.77,
+      78.97,
+      80.16,
+      81.36,
+      82.57,
+      83.77,
+      84.98,
+      86.18,
+      87.39,
+      88.6,
+      89.82,
+      91.03,
+      92.25,
+      93.47,
+      94.69,
+      95.91,
+      97.13,
+      98.36,
+      99.58,
+      100.81,
+      102.04,
+      103.28,
+      104.51,
+      105.75,
+      106.99,
+      108.23,
+      109.47,
+      110.71,
+      111.96,
+      113.21,
+      114.45,
+      115.71,
+      116.96,
+      118.21,
+      119.47,
+      120.73,
+      121.99,
+      123.25,
+      124.52,
+      125.78,
+      127.05,
+      128.32,
+      129.6,
+      130.87,
+      132.15,
+      133.42
+     ]
+    },
+    {
+     "label": "TRÁI · GIÁ ĐỨNG YÊN",
+     "color": "#fed7aa",
+     "vals": [
+      -7.32,
+      -6.83,
+      -6.34,
+      -5.85,
+      -5.37,
+      -4.88,
+      -4.39,
+      -3.9,
+      -3.41,
+      -2.93,
+      -2.44,
+      -1.95,
+      -1.46,
+      -0.98,
+      -0.49,
+      0.0,
+      0.49,
+      0.98,
+      1.46,
+      1.95,
+      2.44,
+      2.93,
+      3.41,
+      3.9,
+      4.39,
+      4.88,
+      5.37,
+      5.85,
+      6.34,
+      6.83,
+      7.32,
+      7.8,
+      8.29,
+      8.78,
+      9.27,
+      9.76,
+      10.24,
+      10.73,
+      11.22,
+      11.71,
+      12.2,
+      12.68,
+      13.17,
+      13.66,
+      14.15,
+      14.63,
+      15.12,
+      15.61,
+      16.1,
+      16.59,
+      17.07,
+      17.56,
+      18.05,
+      18.54,
+      19.02,
+      19.51,
+      20.0,
+      20.49,
+      20.98,
+      21.46,
+      21.95,
+      22.44,
+      22.93,
+      23.41,
+      23.9,
+      24.39,
+      24.88,
+      25.37,
+      25.85,
+      26.34,
+      26.83,
+      27.32,
+      27.8,
+      28.29,
+      28.78,
+      29.27,
+      29.76,
+      30.24,
+      30.73,
+      31.22,
+      31.71,
+      32.2,
+      32.68,
+      33.17,
+      33.66,
+      34.15,
+      34.63,
+      35.12,
+      35.61,
+      36.1,
+      36.59,
+      37.07,
+      37.56,
+      38.05,
+      38.54,
+      39.02,
+      39.51,
+      40.0,
+      40.49,
+      40.98,
+      41.46,
+      41.95,
+      42.44,
+      42.93,
+      43.41,
+      43.9,
+      44.39,
+      44.88,
+      45.37,
+      45.85,
+      46.34,
+      46.83,
+      47.32,
+      47.8,
+      48.29,
+      48.78,
+      49.27,
+      49.76,
+      50.24,
+      50.73,
+      51.22
+     ]
+    }
+   ],
+   "source": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH · TRÁI: GIÁ NHÀ × 98% − NỢ CÒN LẠI (NẾU BÁN) · PHẢI: SỔ TIẾT KIỆM 6,8% · KHÔNG PHẢI DỰ BÁO"
+  },
+  {
+   "type": "ledger",
+   "at": 9,
+   "title": "BÊN TRÁI · BÁN, NỘP THUẾ, TRẢ NỢ",
+   "illus": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "rows": [
+    {
+     "k": "GIÁ ĐỨNG YÊN",
+     "v": "≈ 1,55 TỶ",
+     "at": [
+      9,
+      "đứng"
+     ]
+    },
+    {
+     "k": "GIÁ +3%/NĂM",
+     "v": "≈ 2,39 TỶ",
+     "at": [
+      10,
+      "ba"
+     ]
+    },
+    {
+     "k": "GIÁ +5%/NĂM",
+     "v": "≈ 3,09 TỶ",
+     "at": [
+      11,
+      "năm"
+     ]
+    }
+   ],
+   "total": {
+    "k": "BÊN PHẢI · SỔ TIẾT KIỆM",
+    "v": "≈ 4,05 TỶ",
+    "at": [
+     11,
+     "mốt"
+    ]
+   },
+   "srcnote": "Sau 10 năm: nợ còn 0,9 tỷ · thuế bán 2% · kênh tự tính"
+  },
+  {
+   "type": "question",
+   "at": 12,
+   "text": "Vậy giá phải tăng bao nhiêu\nthì hai nhà mới ngang nhau?"
+  },
+  {
+   "type": "slam",
+   "at": [
+    13,
+    "bảy"
+   ],
+   "text": "≈ 7,5% / NĂM",
+   "sub": "ĐỀU ĐẶN 10 NĂM · KÊNH TỰ TÍNH · VÍ DỤ GIẢ ĐỊNH",
+   "fx": "zoom",
+   "label": {
+    "k": "GIẢ ĐỊNH CỦA PHÉP TÍNH",
+    "v": "GIỮ NGUYÊN LÃI VAY 14%, LÃI GỬI 6,8%, THUÊ +5%/NĂM",
+    "s": "CHƯA GỒM MÔI GIỚI, NỘI THẤT",
+    "at": [
+     13,
+     "bảy",
+     0,
+     0.7
+    ]
+   },
+   "srcnote": "Hoà vốn = mức tăng giá làm hai bên bằng nhau sau 10 năm: 7,45%/năm · kênh tự tính"
+  },
+  {
+   "type": "bars",
+   "at": 14,
+   "title": "HOÀ VỐN KHI ĐỔI MỘT GIẢ ĐỊNH",
+   "unit": "%/NĂM · KÊNH TỰ TÍNH",
+   "items": [
+    {
+     "k": "LÃI GỬI 5,2%",
+     "v": 6.34,
+     "lbl": "6,34",
+     "at": [
+      14,
+      "tiết"
+     ]
+    },
+    {
+     "k": "Ở 20 NĂM",
+     "v": 6.64,
+     "lbl": "6,64",
+     "at": [
+      14,
+      "ở"
+     ]
+    },
+    {
+     "k": "THẢ NỔI 12%",
+     "v": 6.89,
+     "lbl": "6,89",
+     "at": [
+      14,
+      "thả"
+     ]
+    },
+    {
+     "k": "THUÊ +8%/NĂM",
+     "v": 7.06,
+     "lbl": "7,06",
+     "at": [
+      14,
+      "tăng"
+     ]
+    },
+    {
+     "k": "VÍ DỤ GỐC",
+     "v": 7.45,
+     "lbl": "7,45",
+     "at": [
+      14,
+      "Đổi"
+     ],
+     "acc": true
+    },
+    {
+     "k": "THẢ NỔI 15%",
+     "v": 7.72,
+     "lbl": "7,72",
+     "at": [
+      14,
+      "nổi"
+     ]
+    },
+    {
+     "k": "Ở 5 NĂM",
+     "v": 8.08,
+     "lbl": "8,08",
+     "at": [
+      14,
+      "ở",
+      0,
+      0.3
+     ]
+    },
+    {
+     "k": "LÃI GỬI 8%",
+     "v": 8.32,
+     "lbl": "8,32",
+     "at": [
+      14,
+      "kiệm"
+     ]
+    }
+   ],
+   "illus": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "srcnote": "Mỗi cột đổi MỘT giả định, giữ nguyên phần còn lại · ví dụ giả định · kênh tự tính"
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "Ở CÀNG LÂU · HOÀ VỐN CÀNG THẤP",
+     "at": [
+      15,
+      "Ở"
+     ]
+    },
+    {
+     "text": "5 NĂM 8,08% → 10 NĂM 7,45% → 20 NĂM 6,64%",
+     "at": [
+      15,
+      "lâu"
+     ],
+     "acc": true
+    },
+    {
+     "text": "phí mua bán chia cho nhiều năm hơn",
+     "at": [
+      15,
+      "phí"
+     ],
+     "sm": true
+    },
+    {
+     "text": "tiền thuê năm nào cũng tăng",
+     "at": [
+      15,
+      "tiền"
+     ],
+     "sm": true
+    }
+   ],
+   "illus": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH"
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "items": [
+    {
+     "text": "MUA NHÀ = ĐẶT CƯỢC",
+     "at": [
+      16,
+      "Đó"
+     ],
+     "fx": "pop"
+    },
+    {
+     "text": "GIÁ TĂNG NHANH HƠN ≈ 7,5%/NĂM",
+     "at": [
+      16,
+      "giá"
+     ],
+     "acc": true
+    },
+    {
+     "text": "5 năm qua (Hà Nội): ≈ 26%/năm",
+     "at": [
+      17,
+      "Năm"
+     ],
+     "sm": true
+    },
+    {
+     "text": "quý II/2026: căn cũ −3% so quý I",
+     "at": [
+      18,
+      "Còn"
+     ],
+     "sm": true
+    }
+   ],
+   "srcnote": "Savills qua Người Quan Sát 16/01/2026 · CBRE qua TC Kinh tế Tài chính 07/07/2026"
+  },
+  {
+   "type": "broll",
+   "at": 19,
+   "vid": "1509536",
+   "ms": 8,
+   "veil": 0.6,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "NỬA THỨ HAI",
+     "at": [
+      19,
+      "Nửa"
+     ],
+     "sm": true
+    },
+    {
+     "text": "SAU CÁNH CỬA BÊN PHẢI",
+     "at": [
+      19,
+      "cánh"
+     ],
+     "acc": true
+    },
+    {
+     "text": "giả định: để dành đủ từng đồng chênh lệch, suốt 120 tháng",
+     "at": [
+      20,
+      "Phép"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 21,
+   "text": "Nếu họ tiêu mất\nphần chênh thì sao?"
+  },
+  {
+   "type": "ledger",
+   "at": 22,
+   "title": "NẾU TIÊU MẤT PHẦN CHÊNH",
+   "illus": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "rows": [
+    {
+     "k": "SỔ TIẾT KIỆM SAU 10 NĂM",
+     "v": "≈ 2,02 TỶ",
+     "at": [
+      22,
+      "hai"
+     ]
+    },
+    {
+     "k": "= 1 TỶ + 25 TR PHÍ MUA",
+     "v": "+ TIỀN LÃI",
+     "at": [
+      22,
+      "một"
+     ]
+    }
+   ],
+   "total": {
+    "k": "HOÀ VỐN CỦA BÊN TRÁI",
+    "v": "≈ 1,8%/NĂM",
+    "at": [
+     23,
+     "hai"
+    ]
+   },
+   "srcnote": "1,025 tỷ × (1 + 6,8%/12)^120 ≈ 2,02 tỷ · hoà vốn 1,77%/năm · kênh tự tính"
+  },
+  {
+   "type": "counter",
+   "at": 24,
+   "from": 0,
+   "to": 600,
+   "suffix": " TR",
+   "until": [
+    24,
+    "trăm"
+   ],
+   "label": "TIỀN GỐC BÊN TRÁI ĐÃ TRẢ SAU 10 NĂM",
+   "sub": {
+    "text": "120 THÁNG × 5 TR · TIẾT KIỆM BẮT BUỘC",
+    "at": [
+     24,
+     "gốc"
+    ]
+   },
+   "illus": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH"
+  },
+  {
+   "type": "kinetic",
+   "at": 25,
+   "items": [
+    {
+     "text": "NGƯỜI THUÊ PHẢI TỰ ÉP MÌNH",
+     "at": [
+      25,
+      "Người"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 26,
+   "text": "PHẦN CHÊNH PHẢI\nĐƯỢC ĐỂ DÀNH THẬT",
+   "sub": "LỢI THẾ CỦA NGƯỜI THUÊ NẰM Ở ĐÓ",
+   "fx": "zoom"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "MƯỜI NĂM SAU HAI CÁNH CỬA"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.145
+ }
+}

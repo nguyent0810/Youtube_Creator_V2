@@ -1,0 +1,191 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "tinh-lang",
+ "hook_type": "noi-thang",
+ "open_shot": "nen-huong",
+ "voice": "Ngọc Huyền",
+ "music": "ether_vox.mp3",
+ "gap": 1.0,
+ "title": "Tĩnh lặng: nghe trọn ba tiếng chuông",
+ "kicker": "TĨNH LẶNG",
+ "sub": "BA TIẾNG CHUÔNG",
+ "acc": [
+  "chuông",
+  "nghe"
+ ],
+ "lines": [
+  "Bạn có nghe trọn ba tiếng chuông, mà không nghĩ gì khác không?",
+  "Ba tiếng chuông. Ba hơi thở. Mình cùng thử nhé.",
+  "Tiếng thứ nhất. Thở vào, biết mình đang thở vào.",
+  "Tiếng thứ hai. Thở ra, biết mình đang thở ra.",
+  "Tiếng thứ ba. Chỉ nghe. Không cần làm gì cả.",
+  "Bạn nghe trọn được mấy tiếng? Bình luận một con số nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "ĐẦU ÓC KHÔNG NGỪNG?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "thử nghe trọn 3 tiếng chuông",
+     "at": [
+      0,
+      "nghe"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:35581695"
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "CÙNG THỬ NHÉ",
+   "cards": [
+    {
+     "k": "BA",
+     "v": "TIẾNG CHUÔNG",
+     "at": [
+      1,
+      "Ba"
+     ]
+    },
+    {
+     "k": "BA",
+     "v": "HƠI THỞ",
+     "at": [
+      1,
+      "Ba",
+      1
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Tiếng thứ nhất",
+   "nodes": [
+    {
+     "text": "THỞ VÀO",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      2,
+      "Thở"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "biết",
+     "x": 0.5,
+     "y": 0.7,
+     "at": [
+      2,
+      "biết"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      2,
+      "biết"
+     ]
+    }
+   ],
+   "note": "DIỄN Ý · MN 118"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "TIẾNG THỨ HAI",
+     "at": [
+      3,
+      "Tiếng"
+     ],
+     "acc": true
+    },
+    {
+     "text": "thở ra, biết mình thở ra",
+     "at": [
+      3,
+      "Thở"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:37155089"
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "to": 3,
+   "suffix": "",
+   "label": "TIẾNG THỨ BA · CHỈ NGHE",
+   "until": [
+    4,
+    "Chỉ"
+   ],
+   "sub": {
+    "text": "KHÔNG CẦN LÀM GÌ CẢ",
+    "at": [
+     4,
+     "Không"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "NGHE TRỌN MẤY TIẾNG?",
+     "at": [
+      5,
+      "Bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận một con số",
+     "at": [
+      5,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:27808431"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/mn118/en/sujato",
+  "https://en.wikipedia.org/wiki/Bonsh%C5%8D"
+ ],
+ "description": "Tĩnh lặng: nghe trọn ba tiếng chuông\n\nNguồn: https://suttacentral.net/mn118/en/sujato ; https://en.wikipedia.org/wiki/Bonsh%C5%8D",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

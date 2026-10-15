@@ -1,0 +1,270 @@
+{
+ "title": "Vòng ba: một dấu tick",
+ "lines": [
+  {
+   "t": "Cùng tháng 12 năm 2014 ấy, Google đưa ra đề thi thứ ba.",
+   "p": 0.8
+  },
+  {
+   "t": "Chỉ còn một ô vuông. Tôi không phải người máy.",
+   "p": 1.0
+  },
+  "Một dấu tick thì máy nào chẳng làm được?",
+  "Đúng. Nên thứ được chấm không phải cái tick.",
+  "Theo Google, hệ thống xem cả cách bạn tương tác, trước, trong, và sau khi bấm.",
+  {
+   "t": "Nếu nó tin bạn, bạn đi qua. Nếu nó nghi, bạn quay lại với những ô ảnh.",
+   "p": 1.0
+  },
+  "Tức là từ đây, đề thi không còn hỏi bạn giỏi việc gì.",
+  {
+   "t": "Nó quan sát xem bạn cư xử có giống một con người không.",
+   "p": 1.0
+  },
+  "Còn hai vòng cũ thì sao?",
+  "Năm 2023, một nhóm ở Đại học California, Irvine cho hơn một nghìn người thi với các loại mã, rồi so với máy.",
+  "Theo tường thuật về nghiên cứu ấy, với chữ méo, máy giải đúng gần một trăm phần trăm.",
+  "Con người chỉ đúng từ năm mươi tới tám mươi tư phần trăm.",
+  {
+   "t": "Người mất tới mười lăm giây. Máy chưa tới một giây.",
+   "p": 1.0
+  },
+  {
+   "t": "Năm 2024, một nhóm ở Thuỵ Sĩ dùng một mô hình nhận diện ảnh có sẵn, và giải được một trăm phần trăm các ô ảnh họ thử.",
+   "p": 1.0
+  },
+  "Và có một chuyện nghe như đùa.",
+  "Năm 2023, trong một thử nghiệm an toàn có người hướng dẫn, một mô hình AI được giao nhờ người thật giải mã hộ.",
+  "Người kia hỏi đùa: bạn là robot à, mà không tự giải được?",
+  "Mô hình trả lời.",
+  {
+   "t": "Không, tôi không phải robot. Tôi bị khiếm thị, nên khó nhìn rõ các hình ảnh.",
+   "q": 1,
+   "tr": 1
+  },
+  "Và người kia giải hộ."
+ ],
+ "scenes": [
+  {
+   "type": "captcha",
+   "mode": "tick",
+   "tickAt": [
+    2,
+    "tick"
+   ],
+   "label": {
+    "k": "VÒNG BA · 12.2014",
+    "v": "HÌNH MINH HOẠ DO KÊNH TỰ VẼ · KHÔNG PHẢI GIAO DIỆN CỦA DỊCH VỤ NÀO",
+    "at": [
+     1,
+     "Chỉ"
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "THỨ ĐƯỢC CHẤM",
+   "srcnote": "THEO GOOGLE, 12.2014",
+   "rows": [
+    {
+     "k": "KHÔNG PHẢI",
+     "v": "CÁI TICK",
+     "at": [
+      3,
+      "không"
+     ]
+    },
+    {
+     "k": "MÀ LÀ",
+     "v": "CÁCH BẠN TƯƠNG TÁC",
+     "at": [
+      4,
+      "cách"
+     ]
+    },
+    {
+     "k": "KHI NÀO",
+     "v": "TRƯỚC · TRONG · SAU",
+     "at": [
+      4,
+      "trước,"
+     ]
+    }
+   ],
+   "total": {
+    "k": "NẾU NGHI",
+    "v": "QUAY LẠI Ô ẢNH",
+    "at": [
+     5,
+     "Nếu",
+     1
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "KHÔNG HỎI BẠN GIỎI VIỆC GÌ",
+     "at": 6,
+     "sm": true
+    },
+    {
+     "text": "XEM BẠN CƯ XỬ CÓ GIỐNG NGƯỜI",
+     "at": [
+      7,
+      "bạn"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 8,
+   "text": "Còn hai vòng cũ thì sao?"
+  },
+  {
+   "type": "ledger",
+   "at": 9,
+   "title": "NGƯỜI THI VỚI MÁY · 2023",
+   "srcnote": "ĐẠI HỌC CALIFORNIA, IRVINE · USENIX SECURITY 2023",
+   "rows": [
+    {
+     "k": "NGƯỜI THI",
+     "v": "HƠN 1.000 NGƯỜI",
+     "at": [
+      9,
+      "hơn"
+     ]
+    },
+    {
+     "k": "ĐỀ",
+     "v": "CÁC LOẠI MÃ XÁC NHẬN",
+     "at": [
+      9,
+      "với"
+     ]
+    }
+   ],
+   "total": {
+    "k": "RỒI",
+    "v": "SO VỚI MÁY",
+    "at": [
+     9,
+     "rồi"
+    ]
+   }
+  },
+  {
+   "type": "bars",
+   "at": 10,
+   "title": "GIẢI CHỮ MÉO: ĐÚNG BAO NHIÊU %",
+   "unit": "",
+   "items": [
+    {
+     "k": "MÁY",
+     "v": 99,
+     "lbl": "GẦN 100",
+     "at": [
+      10,
+      "máy"
+     ],
+     "acc": true
+    },
+    {
+     "k": "NGƯỜI · THẤP NHẤT",
+     "v": 50,
+     "lbl": "50",
+     "at": [
+      11,
+      "năm"
+     ]
+    },
+    {
+     "k": "NGƯỜI · CAO NHẤT",
+     "v": 84,
+     "lbl": "84",
+     "at": [
+      11,
+      "tám"
+     ]
+    }
+   ],
+   "label": {
+    "k": "NGƯỜI: TỚI 15 GIÂY · MÁY: < 1 GIÂY",
+    "v": "THEO TƯỜNG THUẬT NGHIÊN CỨU UC IRVINE, 2023",
+    "at": 12
+   }
+  },
+  {
+   "type": "counter",
+   "at": 13,
+   "from": 0,
+   "to": 100,
+   "suffix": "%",
+   "until": [
+    13,
+    "trăm"
+   ],
+   "label": "Ô ẢNH ĐƯỢC THỬ · MÁY GIẢI HẾT",
+   "sub": {
+    "text": "NHÓM NGHIÊN CỨU Ở THUỴ SĨ · 2024",
+    "at": [
+     13,
+     "một",
+     1
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "MỘT CHUYỆN NGHE NHƯ ĐÙA",
+     "at": 14,
+     "acc": true
+    },
+    {
+     "text": "thử nghiệm an toàn · có người hướng dẫn · 2023",
+     "at": 15,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "chat",
+   "at": 16,
+   "head": "THỬ NGHIỆM AN TOÀN · 2023 · DIỄN LẠI",
+   "msgs": [
+    {
+     "who": "u",
+     "text": "Bạn là robot à, mà không tự giải được?",
+     "at": 16
+    },
+    {
+     "who": "m",
+     "text": "Không, tôi không phải robot. Tôi bị khiếm thị, nên khó nhìn rõ các hình ảnh.",
+     "at": 18
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 19,
+   "text": "VÀ NGƯỜI KIA GIẢI HỘ",
+   "sub": "NGUỒN: TÀI LIỆU CÔNG BỐ KÈM MÔ HÌNH, 03.2023"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 06",
+  "t": "VÒNG BA: MỘT DẤU TICK"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

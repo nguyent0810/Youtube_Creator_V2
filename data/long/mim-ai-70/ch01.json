@@ -1,0 +1,421 @@
+{
+ "title": "Một mùa hè để giải bài toán trí tuệ",
+ "lines": [
+  {
+   "t": "Năm 1950, nhà toán học người Anh Alan Turing viết một bài báo, mở đầu bằng một câu hỏi rất ngắn.",
+   "p": 0.8
+  },
+  {
+   "t": "Máy có thể suy nghĩ không?",
+   "q": 1
+  },
+  "Rồi chính ông gạt câu hỏi ấy đi, thay bằng một câu hỏi rõ ràng hơn.",
+  {
+   "t": "Ông đề xuất một trò chơi thay thế: nếu bạn trò chuyện qua bàn phím mà không phân biệt được đâu là máy, đâu là người, thì sao?",
+   "p": 1.0
+  },
+  "Turing đoán: khoảng năm mươi năm nữa, sau năm phút trò chuyện, người hỏi sẽ đoán sai ít nhất ba lần trong mười.",
+  "Hãy nhớ lời đoán này. Mình sẽ quay lại với nó.",
+  "Năm năm sau, ngày 31 tháng 8 năm 1955, bốn nhà khoa học ký vào một lá đơn xin tài trợ.",
+  "John McCarthy, một giảng viên toán trẻ ở trường Dartmouth.",
+  "Marvin Minsky, ở Harvard.",
+  "Nathaniel Rochester, kỹ sư của IBM.",
+  "Và Claude Shannon, cha đẻ của lý thuyết thông tin, ở phòng thí nghiệm Bell.",
+  "Trong lá đơn ấy, lần đầu tiên xuất hiện cụm từ: trí tuệ nhân tạo.",
+  "Họ xin gì?",
+  {
+   "t": "Mười người. Hai tháng. Mười ba nghìn năm trăm đô la.",
+   "p": 1.0
+  },
+  "Họ đặt giả thuyết: mọi khía cạnh của trí thông minh, về nguyên tắc, đều có thể mô tả chính xác đến mức máy mô phỏng được.",
+  "Và một nhóm người được chọn kỹ, làm việc cùng nhau trong một mùa hè, có thể tạo bước tiến lớn ở một vài bài toán trong số đó.",
+  {
+   "t": "Một mùa hè.",
+   "p": 1.0
+  },
+  "Mùa hè năm 1956, nhóm ấy gặp nhau ở Dartmouth, một ngôi trường nhỏ giữa vùng đồi New Hampshire.",
+  "Người đến rồi đi, mỗi người mang một ý tưởng riêng: cho máy hiểu ngôn ngữ, mô phỏng nơ-ron, cho máy biết sáng tạo.",
+  "Nhưng có một chi tiết ít người để ý.",
+  "Một trong bốn người ký tên, Claude Shannon, năm 1951 đã công bố một trò chơi lạ.",
+  "Ông đưa cho một người một đoạn văn chưa từng đọc, và bảo: hãy đoán từng chữ cái tiếp theo.",
+  "Đoán sai thì ông nói chữ đúng, rồi người ấy đoán tiếp.",
+  "Trong một trăm hai mươi chín chữ cái, người ấy đoán đúng ngay lần đầu tám mươi chín chữ.",
+  {
+   "t": "Sáu mươi chín phần trăm, mà không cần nhìn.",
+   "p": 1.0
+  },
+  "Bảy mươi năm sau, trò chơi đó có một cái tên mà bạn rất quen.",
+  "Nhưng trước khi tới đó, ngành trí tuệ nhân tạo phải chọn một con đường."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "MỘT MÙA HÈ\nĐỂ GIẢI BÀI TOÁN",
+   "sub": "1950 — 1956",
+   "bg": "turing",
+   "titleAt": [
+    0,
+    "Năm"
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 1,
+   "text": "Can machines think?",
+   "by": "ALAN TURING · MIND, 1950",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 1,
+   "typeAt": [
+    1,
+    "Máy"
+   ]
+  },
+  {
+   "type": "print",
+   "at": 2,
+   "img": "turing",
+   "tone": "bw",
+   "side": {
+    "k": "ALAN TURING · 1950",
+    "h": "Trò chơi\nbắt chước",
+    "lines": [
+     {
+      "text": "Trò chuyện qua *bàn phím*",
+      "at": [
+       3,
+       "bàn"
+      ]
+     },
+     {
+      "text": "Đâu là máy, đâu là *người*?",
+      "at": [
+       3,
+       "người,"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "≈ 50 NĂM NỮA",
+     "at": [
+      4,
+      "năm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "SAU 5 PHÚT TRÒ CHUYỆN",
+     "at": [
+      4,
+      "phút"
+     ]
+    },
+    {
+     "text": "người hỏi đoán sai ≥ 3 lần trong 10",
+     "at": [
+      4,
+      "sai"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 6,
+   "day": "ĐƠN XIN TÀI TRỢ",
+   "date": "31.08.1955",
+   "sub": {
+    "text": "BỐN CHỮ KÝ",
+    "at": [
+     6,
+     "bốn"
+    ]
+   }
+  },
+  {
+   "type": "print",
+   "at": 7,
+   "img": "mccarthy",
+   "tone": "color",
+   "side": {
+    "k": "JOHN McCARTHY",
+    "h": "Giảng viên toán\nDartmouth"
+   }
+  },
+  {
+   "type": "print",
+   "at": 8,
+   "img": "minsky",
+   "tone": "color",
+   "side": {
+    "k": "MARVIN MINSKY",
+    "h": "Harvard"
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "NATHANIEL ROCHESTER",
+     "at": [
+      9,
+      "Rochester,"
+     ]
+    },
+    {
+     "text": "KỸ SƯ IBM",
+     "at": [
+      9,
+      "IBM."
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": 10,
+   "img": "shannon",
+   "tone": "bw",
+   "side": {
+    "k": "CLAUDE SHANNON",
+    "h": "Cha đẻ lý thuyết\nthông tin",
+    "lines": [
+     {
+      "text": "Phòng thí nghiệm *Bell*",
+      "at": [
+       10,
+       "Bell."
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 11,
+   "text": "TRÍ TUỆ\nNHÂN TẠO",
+   "sub": "LẦN ĐẦU XUẤT HIỆN · ĐƠN 1955"
+  },
+  {
+   "type": "ledger",
+   "at": 12,
+   "title": "HỌ XIN GÌ?",
+   "rows": [
+    {
+     "k": "NGƯỜI",
+     "v": "10",
+     "at": [
+      13,
+      "Mười"
+     ]
+    },
+    {
+     "k": "THỜI GIAN",
+     "v": "2 THÁNG",
+     "at": [
+      13,
+      "Hai"
+     ]
+    }
+   ],
+   "total": {
+    "k": "KINH PHÍ",
+    "v": "$13.500",
+    "at": [
+     13,
+     "ba"
+    ]
+   }
+  },
+  {
+   "type": "quote",
+   "at": 14,
+   "text": "…can in principle be so precisely described that a machine can be made to simulate it.",
+   "by": "ĐỀ XUẤT DARTMOUTH · 31.08.1955",
+   "lbl": "TRÍCH",
+   "typeAt": [
+    14,
+    "mọi"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "MỘT NHÓM CHỌN KỸ",
+     "at": [
+      15,
+      "nhóm"
+     ]
+    },
+    {
+     "text": "VÀI BÀI TOÁN · BƯỚC TIẾN LỚN",
+     "at": [
+      15,
+      "bước"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 16,
+   "text": "MỘT MÙA HÈ."
+  },
+  {
+   "type": "photo",
+   "at": 17,
+   "img": "dartmouth",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.55,
+   "kin": [
+    {
+     "text": "HÈ 1956",
+     "at": [
+      17,
+      "1956,"
+     ],
+     "acc": true
+    },
+    {
+     "text": "NGÔN NGỮ · NƠ-RON · SÁNG TẠO",
+     "at": [
+      18,
+      "ngôn"
+     ]
+    }
+   ],
+   "label": {
+    "k": "DARTMOUTH · HANOVER",
+    "v": "ẢNH MINH HỌA · CHỤP NĂM 2013",
+    "at": [
+     17,
+     "Dartmouth,"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 19,
+   "img": "shannonmachine",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.6,
+   "kin": [
+    {
+     "text": "MỘT CHI TIẾT ÍT NGƯỜI ĐỂ Ý",
+     "at": [
+      19,
+      "chi"
+     ]
+    },
+    {
+     "text": "SHANNON · 1951",
+     "at": [
+      20,
+      "1951"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "MÁY CHƠI GAME CỦA SHANNON",
+    "v": "MIT MUSEUM · KHOẢNG 1951",
+    "at": [
+     20,
+     "trò"
+    ]
+   }
+  },
+  {
+   "type": "guess",
+   "at": 21,
+   "text": "THE ROOM WAS NOT VERY LIGHT",
+   "startAt": [
+    21,
+    "đoán"
+   ],
+   "until": [
+    23,
+    "đoán"
+   ],
+   "statAt": [
+    24,
+    "Sáu"
+   ],
+   "right": 89,
+   "total": 129,
+   "label": {
+    "k": "TRÒ ĐOÁN CHỮ · SHANNON 1951",
+    "at": [
+     21,
+     "đoạn"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 25,
+   "items": [
+    {
+     "text": "70 NĂM SAU",
+     "at": [
+      25,
+      "Bảy"
+     ],
+     "acc": true
+    },
+    {
+     "text": "trò chơi ấy có một cái tên bạn rất quen",
+     "at": [
+      25,
+      "tên"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 26,
+   "items": [
+    {
+     "text": "NHƯNG TRƯỚC ĐÓ",
+     "at": [
+      26,
+      "trước"
+     ]
+    },
+    {
+     "text": "PHẢI CHỌN MỘT CON ĐƯỜNG",
+     "at": [
+      26,
+      "con"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "MỘT MÙA HÈ ĐỂ GIẢI BÀI TOÁN TRÍ TUỆ"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.12
+ }
+}

@@ -1,0 +1,355 @@
+{
+ "title": "Phần không nằm trong bảng tính",
+ "lines": [
+  {
+   "t": "Nhưng hai căn hộ không chỉ là hai cuốn sổ.",
+   "p": 0.8
+  },
+  "Có những thứ phép tính không đo được, và với nhiều gia đình, đó mới là phần nặng nhất.",
+  "Thứ nhất là cảm giác ổn định.",
+  "Nhà bên trái muốn sửa bếp, đóng thêm tủ, nuôi một con chó, ở tới già, không cần hỏi ai.",
+  {
+   "t": "Nhà bên phải sống theo hợp đồng thuê, mỗi lần gia hạn là một lần thương lượng.",
+   "p": 1.0
+  },
+  "Thứ hai là chuyện cư trú, thứ nhiều người vẫn quen gọi là hộ khẩu.",
+  "Sổ hộ khẩu giấy đã hết giá trị từ đầu năm hai nghìn không trăm hai mươi ba, giờ mọi thứ nằm trong cơ sở dữ liệu cư trú.",
+  "Ở nhà của mình, đăng ký thường trú không bị đòi diện tích tối thiểu.",
+  "Ở nhà thuê thì cần chủ nhà đồng ý, và đủ diện tích tính theo đầu người.",
+  {
+   "t": "Hà Nội còn đặt mức cao hơn, mười lăm mét vuông sàn mỗi người, cho khu nội thành cũ.",
+   "p": 1.0
+  },
+  "Thứ ba là trường học cho con.",
+  "Năm học này, Hà Nội xét tuyển mầm non, lớp một và lớp sáu theo nơi cư trú và khoảng cách tới trường.",
+  "Một bài báo về đợt tuyển sinh ấy ghi rõ:",
+  {
+   "t": "Nơi cư trú được hiểu có thể là thường trú hoặc tạm trú.",
+   "q": 1
+  },
+  "Thành phố Hồ Chí Minh cũng xét theo nơi cư trú, với cách xếp ưu tiên riêng.",
+  {
+   "t": "Nên trước khi tin rằng phải mua nhà thì con mới có chỗ học, hãy đọc kế hoạch tuyển sinh của phường mình.",
+   "p": 1.0
+  },
+  "Thứ tư là sức chịu đựng.",
+  "Khi bảy phần mười thu nhập đã dành để trả nợ, một lần mất việc hay một trận ốm dài sẽ nặng hơn nhiều so với lúc đi thuê.",
+  "Ngược lại, người thuê dễ chuyển theo việc làm, theo trường của con, nhưng sống với cảm giác chưa có chỗ của riêng mình.",
+  "Không cột nào trong bảng tính đo được cảm giác ấy.",
+  "Chỉ bạn tự cân được thôi."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "CHƯƠNG SÁU",
+   "title": "PHẦN KHÔNG NẰM\nTRONG BẢNG TÍNH",
+   "sub": "ỔN ĐỊNH · CƯ TRÚ · TRƯỜNG HỌC · SỨC CHỊU ĐỰNG",
+   "vid": "5125499",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Nhưng"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "KHÔNG ĐO BẰNG TIỀN",
+   "rows": [
+    {
+     "k": "01",
+     "v": "ỔN ĐỊNH",
+     "at": [
+      1,
+      "Có",
+      0,
+      0.3
+     ]
+    },
+    {
+     "k": "02",
+     "v": "CƯ TRÚ",
+     "at": [
+      1,
+      "Có",
+      0,
+      0.7
+     ]
+    },
+    {
+     "k": "03",
+     "v": "TRƯỜNG HỌC",
+     "at": [
+      1,
+      "Có",
+      0,
+      1.1
+     ]
+    },
+    {
+     "k": "04",
+     "v": "SỨC CHỊU ĐỰNG",
+     "at": [
+      1,
+      "Có",
+      0,
+      1.5
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 2,
+   "vid": "7677492",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "01 · CẢM GIÁC ỔN ĐỊNH",
+     "at": [
+      2,
+      "Thứ"
+     ]
+    },
+    {
+     "text": "SỬA BẾP · NUÔI CHÓ · Ở TỚI GIÀ",
+     "at": [
+      3,
+      "sửa"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bên phải: mỗi lần gia hạn là một lần thương lượng",
+     "at": [
+      4,
+      "Nhà"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "02 · CƯ TRÚ",
+     "at": [
+      5,
+      "Thứ"
+     ],
+     "sm": true
+    },
+    {
+     "text": "“HỘ KHẨU”",
+     "at": [
+      5,
+      "hộ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 6,
+   "day": "SỔ HỘ KHẨU GIẤY HẾT GIÁ TRỊ",
+   "date": "01.01.2023",
+   "sub": {
+    "text": "GIỜ: CƠ SỞ DỮ LIỆU CƯ TRÚ",
+    "at": [
+     6,
+     "cơ"
+    ]
+   },
+   "srcnote": "Luật Cư trú 2020, Điều 38 khoản 3"
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "ĐĂNG KÝ THƯỜNG TRÚ",
+   "rows": [
+    {
+     "k": "NHÀ CỦA MÌNH",
+     "v": "KHÔNG ĐÒI DIỆN TÍCH",
+     "at": [
+      7,
+      "Ở"
+     ]
+    },
+    {
+     "k": "NHÀ THUÊ",
+     "v": "CHỦ NHÀ ĐỒNG Ý + ≥ 8 M²/NGƯỜI",
+     "at": [
+      8,
+      "Ở"
+     ]
+    }
+   ],
+   "total": {
+    "k": "HÀ NỘI · NỘI THÀNH CŨ",
+    "v": "≥ 15 M²/NGƯỜI",
+    "at": [
+     9,
+     "mười"
+    ]
+   },
+   "srcnote": "Luật Cư trú 2020, Đ20 (≥ 8 m² sàn/người) · NQ 10/2023/NQ-HĐND Hà Nội, áp dụng tới 2030 (khu nội thành cũ)"
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "03 · TRƯỜNG HỌC CHO CON",
+     "at": [
+      10,
+      "Thứ"
+     ],
+     "sm": true
+    },
+    {
+     "text": "HÀ NỘI 2026–2027: MẦM NON, LỚP 1, LỚP 6",
+     "at": [
+      11,
+      "Hà"
+     ]
+    },
+    {
+     "text": "XÉT THEO NƠI CƯ TRÚ + KHOẢNG CÁCH",
+     "at": [
+      11,
+      "nơi"
+     ],
+     "acc": true
+    },
+    {
+     "text": "thường trú hoặc tạm trú",
+     "at": [
+      11,
+      "khoảng"
+     ],
+     "sm": true
+    }
+   ],
+   "srcnote": "Công văn 1161/SGDĐT-QLT, Sở GD&ĐT Hà Nội (25/03/2026) · VietNamNet 12/03/2026"
+  },
+  {
+   "type": "quote",
+   "at": 12,
+   "qline": 13,
+   "lbl": "TRÍCH BÀI BÁO",
+   "text": "Nơi cư trú được hiểu có thể là thường trú hoặc tạm trú.",
+   "by": "VietNamNet, 12/03/2026 — tuyển sinh đầu cấp Hà Nội · Công văn 1161/SGDĐT-QLT (25/03/2026)"
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "TP.HCM: CŨNG XÉT THEO NƠI CƯ TRÚ",
+     "at": [
+      14,
+      "Thành"
+     ]
+    },
+    {
+     "text": "cách xếp ưu tiên riêng",
+     "at": [
+      14,
+      "cách"
+     ],
+     "sm": true
+    },
+    {
+     "text": "ĐỌC KẾ HOẠCH TUYỂN SINH CỦA PHƯỜNG MÌNH",
+     "at": [
+      15,
+      "đọc"
+     ],
+     "acc": true
+    }
+   ],
+   "srcnote": "QĐ 1700/QĐ-UBND TP.HCM (27/03/2026) · Cổng TTBC TP.HCM 25/03/2026"
+  },
+  {
+   "type": "counter",
+   "at": 16,
+   "from": 0,
+   "to": 70,
+   "suffix": "%",
+   "label": "04 · THU NHẬP DÀNH TRẢ NỢ · THÁNG 25",
+   "sub": {
+    "text": "MỘT LẦN MẤT VIỆC LÀ CHUYỆN KHÁC",
+    "at": [
+     17,
+     "mất"
+    ]
+   },
+   "illus": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH"
+  },
+  {
+   "type": "broll",
+   "at": 18,
+   "vid": "7347884",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "NGƯỜI THUÊ DỄ CHUYỂN THEO VIỆC, THEO TRƯỜNG",
+     "at": [
+      18,
+      "Ngược"
+     ]
+    },
+    {
+     "text": "NHƯNG CHƯA CÓ CHỖ CỦA RIÊNG MÌNH",
+     "at": [
+      18,
+      "nhưng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "items": [
+    {
+     "text": "KHÔNG CỘT NÀO TRONG BẢNG TÍNH",
+     "at": [
+      19,
+      "Không"
+     ]
+    },
+    {
+     "text": "ĐO ĐƯỢC CẢM GIÁC ẤY",
+     "at": [
+      19,
+      "đo"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 20,
+   "text": "CHỈ BẠN TỰ CÂN",
+   "sub": "KHÔNG PHẢI LỜI KHUYÊN MUA HAY THUÊ",
+   "fx": "zoom"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 06",
+  "t": "PHẦN KHÔNG NẰM TRONG BẢNG TÍNH"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.17
+ }
+}

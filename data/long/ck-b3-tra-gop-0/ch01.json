@@ -1,0 +1,140 @@
+{
+ "title": "Ai trả tiền lãi?",
+ "lines": [
+  {
+   "t": "Trước hết, tiền không bao giờ miễn phí.",
+   "p": 0.8
+  },
+  "Khi bạn trả góp, có một bên đã ứng tiền cho cửa hàng thay bạn.",
+  "Bên ấy thường là một công ty tài chính, hoặc một ngân hàng qua thẻ tín dụng.",
+  {
+   "t": "Và họ không cho vay không công.",
+   "p": 1.0
+  },
+  "Vậy tiền lãi đi đâu?",
+  "Thường thì có người khác trả hộ bạn.",
+  "Đó có thể là hãng sản xuất, hoặc chính cửa hàng.",
+  {
+   "t": "Với họ, đây là một khoản chi để bán được hàng, giống như chi cho quảng cáo.",
+   "p": 1.0
+  },
+  "Nói cách khác, trả góp không phần trăm thường là một dạng khuyến mãi.",
+  "Thay vì giảm giá cho bạn, người bán dùng khoản ấy để trả lãi thay bạn.",
+  "Điều này hoàn toàn bình thường. Và có lúc, nó có lợi cho bạn thật.",
+  "Nhưng nó dẫn tới một hệ quả. Chỉ một thôi.",
+  {
+   "t": "Đã là khuyến mãi, thì nó thường không cộng dồn với khuyến mãi khác.",
+   "p": 1.0
+  },
+  "Và từ đây, cái giá thứ hai xuất hiện."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "AI TRẢ\nTIỀN LÃI?",
+   "sub": "TIỀN KHÔNG BAO GIỜ MIỄN PHÍ",
+   "vid": "4109601",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "tiền"
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 1,
+   "items": [
+    {
+     "year": "BƯỚC 1",
+     "text": "một bên ứng tiền cho cửa hàng thay bạn",
+     "at": 1
+    },
+    {
+     "year": "BÊN ẤY",
+     "text": "công ty tài chính, hoặc ngân hàng qua thẻ",
+     "at": 2
+    },
+    {
+     "year": "VÀ",
+     "text": "họ không cho vay không công",
+     "at": 3
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 4,
+   "text": "Vậy tiền lãi đi đâu?"
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "CÓ NGƯỜI TRẢ HỘ BẠN",
+   "rows": [
+    {
+     "k": "AI",
+     "v": "HÃNG SẢN XUẤT · HOẶC CỬA HÀNG",
+     "at": 6
+    },
+    {
+     "k": "VỚI HỌ",
+     "v": "MỘT KHOẢN CHI ĐỂ BÁN HÀNG",
+     "at": 7
+    }
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 8,
+   "mythLab": "TRÊN TẤM BIỂN",
+   "myth": "LÃI SUẤT 0%",
+   "truthLab": "VỀ BẢN CHẤT",
+   "truth": "MỘT DẠNG KHUYẾN MÃI",
+   "strikeAt": [
+    8,
+    "thường"
+   ],
+   "truthAt": [
+    8,
+    "một"
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 10,
+   "vid": "6114643",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "HOÀN TOÀN BÌNH THƯỜNG",
+     "at": 10,
+     "sm": true
+    },
+    {
+     "text": "NHƯNG KHUYẾN MÃI THƯỜNG KHÔNG CỘNG DỒN",
+     "at": [
+      12,
+      "thường"
+     ],
+     "acc": true
+    },
+    {
+     "text": "và cái giá thứ hai xuất hiện",
+     "at": 13,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "AI TRẢ TIỀN LÃI?"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

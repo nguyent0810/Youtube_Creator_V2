@@ -1,0 +1,203 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "vi-sao",
+ "hook_type": "vi-sao",
+ "open_shot": "tuong-phat",
+ "voice": "Quang Sơn",
+ "music": "ether_vox.mp3",
+ "gap": 0.0,
+ "title": "Vì sao Quán Âm cầm bình và cành dương liễu?",
+ "kicker": "VÌ SAO?",
+ "sub": "GIẢI MÃ BIỂU TƯỢNG",
+ "acc": [
+  "bình",
+  "liễu",
+  "mềm",
+  "bền"
+ ],
+ "lines": [
+  "Vì sao tượng Quán Âm luôn cầm một chiếc bình, và một cành liễu?",
+  "Mai là mười chín tháng chín âm lịch, ngày vía Quán Thế Âm xuất gia.",
+  "Chiếc bình đựng nước cam lộ, biểu tượng của sự mát lành, làm dịu khổ đau.",
+  "Cành dương liễu thì mềm, gió mạnh cũng không gãy, lại rưới nước được khắp nơi.",
+  "Mềm mỏng, mà bền bỉ. Đó là cách thương người.",
+  "Bạn đã biết ý nghĩa này chưa? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "VÌ SAO?",
+     "at": 0.0,
+     "acc": true,
+     "size": 150
+    },
+    {
+     "text": "BÌNH NƯỚC · CÀNH LIỄU",
+     "at": [
+      0,
+      "bình"
+     ]
+    }
+   ],
+   "clip": "pexels:40049124"
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "28.10.2026",
+   "day": "THỨ TƯ",
+   "sub": {
+    "text": "19/9 ÂM · VÍA XUẤT GIA",
+    "at": [
+     1,
+     "ngày"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Bình cam lộ",
+   "nodes": [
+    {
+     "text": "NƯỚC CAM LỘ",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      2,
+      "cam"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "mát lành",
+     "x": 0.28,
+     "y": 0.65,
+     "at": [
+      2,
+      "mát"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "dịu khổ đau",
+     "x": 0.7,
+     "y": 0.65,
+     "at": [
+      2,
+      "dịu"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      2,
+      "mát"
+     ]
+    },
+    {
+     "from": 0,
+     "to": 2,
+     "at": [
+      2,
+      "dịu"
+     ]
+    }
+   ],
+   "note": "Ý NGHĨA THEO TRUYỀN THỐNG NGHỆ THUẬT"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "MỀM MÀ KHÔNG GÃY",
+     "at": [
+      3,
+      "mềm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "rưới nước khắp nơi",
+     "at": [
+      3,
+      "rưới"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:38782317"
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "CÁCH THƯƠNG NGƯỜI",
+   "cards": [
+    {
+     "k": "CÀNH LIỄU",
+     "v": "MỀM MỎNG",
+     "at": [
+      4,
+      "Mềm"
+     ]
+    },
+    {
+     "k": "NƯỚC CAM LỘ",
+     "v": "BỀN BỈ",
+     "at": [
+      4,
+      "bền"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0,
+   "items": [
+    {
+     "text": "BẠN ĐÃ BIẾT CHƯA?",
+     "at": [
+      5,
+      "Bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận nhé",
+     "at": [
+      5,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Guanyin"
+ ],
+ "description": "Vì sao Quán Âm cầm bình và cành dương liễu?\n\nNguồn: https://en.wikipedia.org/wiki/Guanyin",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

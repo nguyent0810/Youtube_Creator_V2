@@ -1,0 +1,184 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "truoc-sau",
+ "hook_type": "pov",
+ "open_shot": "dien-thoai",
+ "voice": "Ngọc Trân",
+ "music": "perspectives.mp3",
+ "gap": 0.1,
+ "title": "Trước/Sau: bỏ niềm vui nhỏ, thấy niềm vui lớn",
+ "kicker": "TRƯỚC / SAU",
+ "sub": "KINH PHÁP CÚ 290",
+ "acc": [
+  "nhỏ",
+  "lớn",
+  "lặng"
+ ],
+ "lines": [
+  "Hai tiếng lướt video. Đặt máy xuống, vẫn thấy trống rỗng.",
+  "Trước: niềm vui đến nhanh, rồi hết nhanh. Sau: chỉ mười phút yên lặng, nhẹ cả buổi tối.",
+  "Vì niềm vui nhanh thì ồn. Niềm vui thật thì lặng.",
+  "Kinh Pháp Cú, kệ hai trăm chín mươi, diễn ý: bỏ niềm vui nhỏ để thấy niềm vui lớn, người trí sẽ bỏ.",
+  "Thử đi. Tối nay, mười phút không điện thoại.",
+  "Bạn dám thử không? Bình luận một chữ: thử."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "POV: 2 TIẾNG LƯỚT",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "vẫn thấy trống rỗng",
+     "at": [
+      0,
+      "vẫn"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7131726"
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "TRƯỚC / SAU",
+   "cards": [
+    {
+     "k": "TRƯỚC",
+     "v": "VUI NHANH · HẾT NHANH",
+     "at": [
+      1,
+      "Trước:"
+     ]
+    },
+    {
+     "k": "SAU",
+     "v": "10 PHÚT LẶNG · NHẸ CẢ TỐI",
+     "at": [
+      1,
+      "Sau:"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "NHANH THÌ ỒN",
+     "at": [
+      2,
+      "nhanh"
+     ]
+    },
+    {
+     "text": "THẬT THÌ LẶNG",
+     "at": [
+      2,
+      "thật"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:6952472",
+   "win": true,
+   "winLabel": "NIỀM VUI THẬT"
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Kệ 290 (diễn ý)",
+   "nodes": [
+    {
+     "text": "niềm vui nhỏ",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      3,
+      "nhỏ"
+     ],
+     "shape": "none",
+     "cross": [
+      3,
+      "lớn,"
+     ]
+    },
+    {
+     "text": "NIỀM VUI LỚN",
+     "x": 0.5,
+     "y": 0.68,
+     "at": [
+      3,
+      "lớn,"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      3,
+      "thấy"
+     ]
+    }
+   ],
+   "note": "DHP 290 · SUTTACENTRAL"
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "to": 10,
+   "suffix": " PHÚT",
+   "label": "TỐI NAY · KHÔNG ĐIỆN THOẠI"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "BẠN DÁM THỬ?",
+     "at": [
+      5,
+      "Bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận: thử",
+     "at": [
+      5,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:36656153"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp290-305/en/sujato"
+ ],
+ "description": "Trước/Sau: bỏ niềm vui nhỏ, thấy niềm vui lớn\n\nNguồn: https://suttacentral.net/dhp290-305/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

@@ -1,0 +1,171 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "nhan-gui",
+ "hook_type": "noi-thang",
+ "open_shot": "giuong-dem",
+ "voice": "Mỹ Duyên",
+ "music": "healing.mp3",
+ "gap": 0.5,
+ "ambience": {
+  "bed": "rain",
+  "gain": 0.9
+ },
+ "title": "Nếu bạn đang mất ngủ vì nghĩ quá nhiều",
+ "kicker": "NHẮN GỬI",
+ "sub": "KINH TRUNG BỘ 131",
+ "acc": [
+  "qua",
+  "đến",
+  "này"
+ ],
+ "lines": [
+  "Nếu bạn đang nằm đây lúc khuya, đầu vẫn chạy không ngừng.",
+  "Nghĩ lại chuyện hôm qua. Lo trước chuyện ngày mai.",
+  "Kinh Nhất Dạ Hiền Giả, diễn ý: quá khứ đã qua, tương lai chưa đến.",
+  "Chỉ có lúc này. Một hơi thở. Một đêm nay.",
+  "Lưu lại để nghe khi khó ngủ. Đêm nay bạn đang nghĩ về điều gì?"
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "KHUYA RỒI, VẪN NGHĨ?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "đầu chạy không ngừng",
+     "at": [
+      0,
+      "đầu"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6943536"
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "TRONG ĐẦU",
+   "cards": [
+    {
+     "k": "HÔM QUA",
+     "v": "NGHĨ LẠI",
+     "at": [
+      1,
+      "Nghĩ"
+     ]
+    },
+    {
+     "k": "NGÀY MAI",
+     "v": "LO TRƯỚC",
+     "at": [
+      1,
+      "Lo"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Nhất Dạ Hiền Giả",
+   "nodes": [
+    {
+     "text": "QUÁ KHỨ: ĐÃ QUA",
+     "x": 0.5,
+     "y": 0.22,
+     "at": [
+      2,
+      "quá"
+     ],
+     "shape": "box",
+     "cross": [
+      2,
+      "tương"
+     ]
+    },
+    {
+     "text": "TƯƠNG LAI: CHƯA ĐẾN",
+     "x": 0.5,
+     "y": 0.48,
+     "at": [
+      2,
+      "tương"
+     ],
+     "shape": "box",
+     "cross": [
+      2,
+      "đến."
+     ]
+    },
+    {
+     "text": "NGAY LÚC NÀY",
+     "x": 0.5,
+     "y": 0.76,
+     "at": [
+      2,
+      "đến."
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "MN 131 · DIỄN Ý"
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 1,
+   "suffix": " HƠI THỞ",
+   "label": "CHỈ CÓ ĐÊM NAY",
+   "until": [
+    3,
+    "thở."
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "ĐÊM NAY BẠN NGHĨ GÌ?",
+     "at": [
+      4,
+      "Đêm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "lưu lại khi khó ngủ",
+     "at": [
+      4,
+      "Lưu"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:35099181"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/mn131/en/sujato"
+ ],
+ "description": "Nếu bạn đang mất ngủ vì nghĩ quá nhiều\n\nNguồn: https://suttacentral.net/mn131/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

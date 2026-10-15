@@ -1,0 +1,203 @@
+{
+ "title": "Ván cờ giờ nghỉ trưa",
+ "lines": [
+  {
+   "t": "Câu trả lời đến từ một nơi không ai ngờ. Bàn cờ vây.",
+   "p": 0.8
+  },
+  "Hara thích chơi cờ vây vào giờ nghỉ trưa.",
+  {
+   "t": "Một hôm, khi đang xếp những quân đen trắng lên bàn cờ, tôi chợt nhận ra, đó là một cách truyền thông tin rất gọn.",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Mã vạch chỉ dùng một chiều. Bạn đọc nó từ trái sang phải, như đọc một dòng chữ.",
+  "Còn bàn cờ có hai chiều. Ngang và dọc.",
+  {
+   "t": "Cùng một diện tích, hai chiều chứa được nhiều hơn một chiều rất nhiều.",
+   "p": 1.0
+  },
+  "Mỗi ô trên bàn, hoặc có quân đen, hoặc để trắng.",
+  {
+   "t": "Với máy tính, thế là đủ. Đen là một. Trắng là không.",
+   "p": 1.0
+  },
+  "Bàn cờ còn dạy ông một điều nữa.",
+  "Khi chơi, quân cờ ít khi nằm thật chính giữa giao điểm. Nó hay lệch một chút.",
+  "Vậy mà người chơi vẫn biết nó thuộc về điểm nào.",
+  {
+   "t": "Một loại mã tốt cũng phải như thế. In hơi lệch, quét hơi nghiêng, máy vẫn phải hiểu.",
+   "p": 1.0
+  },
+  "Ý tưởng đã có.",
+  "Nhưng một bài toán khó hơn nhiều đang chờ. Và lời giải của nó, chính là ba ô vuông ở góc."
+ ],
+ "scenes": [
+  {
+   "type": "photo",
+   "img": "weiqi",
+   "tone": "color",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "move": "in",
+   "veil": 0.45,
+   "illus": "ẢNH MINH HỌA · CC BY 2.0",
+   "kin": [
+    {
+     "text": "BÀN CỜ VÂY",
+     "at": [
+      0,
+      "Bàn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "Hara chơi cờ vào giờ nghỉ trưa",
+     "at": 1,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 2,
+   "text": "Khi đang xếp những quân đen trắng lên bàn cờ, tôi chợt nhận ra, đó là một cách truyền thông tin rất gọn.",
+   "by": "MASAHIRO HARA · NIPPON.COM, 2020 · TRÍCH DỊCH",
+   "qline": 2
+  },
+  {
+   "type": "barcode",
+   "at": 3,
+   "n": 1,
+   "digits": "→  ĐỌC MỘT CHIỀU  →",
+   "label": {
+    "k": "MÃ VẠCH",
+    "v": "CHỈ DÙNG MỘT CHIỀU",
+    "at": [
+     3,
+     "một"
+    ]
+   }
+  },
+  {
+   "type": "go",
+   "at": 4,
+   "stones": 60,
+   "label": {
+    "k": "BÀN CỜ: HAI CHIỀU",
+    "v": "NGANG × DỌC → CHỨA NHIỀU HƠN",
+    "at": [
+     5,
+     "hai"
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 6,
+   "title": "VỚI MÁY TÍNH, THẾ LÀ ĐỦ",
+   "rows": [
+    {
+     "k": "Ô ĐEN",
+     "v": "1",
+     "at": [
+      7,
+      "Đen"
+     ]
+    },
+    {
+     "k": "Ô TRẮNG",
+     "v": "0",
+     "at": [
+      7,
+      "Trắng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "go",
+   "at": 8,
+   "stones": 26,
+   "hitAt": [
+    9,
+    "lệch"
+   ],
+   "move": "LỆCH MỘT CHÚT",
+   "prob": "vẫn biết thuộc điểm nào",
+   "label": {
+    "k": "BÀI HỌC THỨ HAI",
+    "v": "CHỊU ĐƯỢC SAI LỆCH",
+    "at": [
+     10,
+     "vẫn"
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 11,
+   "title": "MỘT LOẠI MÃ TỐT",
+   "rows": [
+    {
+     "k": "IN HƠI LỆCH",
+     "v": "VẪN HIỂU",
+     "at": [
+      11,
+      "In"
+     ]
+    },
+    {
+     "k": "QUÉT HƠI NGHIÊNG",
+     "v": "VẪN HIỂU",
+     "at": [
+      11,
+      "quét"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "qr",
+   "at": 12,
+   "modulesAt": [
+    12,
+    null,
+    0,
+    0.1
+   ],
+   "modulesUntil": [
+    13,
+    "đang"
+   ],
+   "hlAt": [
+    13,
+    "ba"
+   ],
+   "side": {
+    "k": "BÀI TOÁN KHÓ HƠN",
+    "v": "ba ô vuông ở góc",
+    "at": [
+     13,
+     "ba"
+    ]
+   },
+   "label": {
+    "k": "",
+    "v": "HÌNH MINH HOẠ · KHÔNG PHẢI MÃ THẬT",
+    "at": 12
+   }
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "VÁN CỜ GIỜ NGHỈ TRƯA"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

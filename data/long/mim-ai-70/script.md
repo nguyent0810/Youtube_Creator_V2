@@ -1,0 +1,233 @@
+# AI ĐÃ CHẾT HAI LẦN: kịch bản lời đọc (bản 1, gửi duyệt)
+
+**Kênh:** Mind in the Machine (MIM) · **Giọng:** Hải Đăng (lời trích: Ngọc Huyền, lọc radio)
+**Độ dài dự kiến:** khoảng 15 phút, 9 chương (≈3.300 âm tiết)
+**Hồ sơ dữ kiện + nguồn:** [docs/channels/mind-in-the-machine/2026-10-06-long-01-research.md](../../../docs/channels/mind-in-the-machine/2026-10-06-long-01-research.md)
+
+Quy ước đọc file:
+- Mỗi dòng là một câu đọc. `‖` cuối dòng = ngừng dài.
+- `»` = lời trích, đọc bằng giọng trích; nguyên văn tiếng Anh hiện trên màn hình.
+- **[DIỄN Ý]** = trích diễn đạt lại, gắn nhãn trên hình.
+- Tên nước ngoài giữ nguyên chữ trên phụ đề; cách đọc nằm trong `say` của spec.json (Dartmouth → Đát-mâu…).
+
+**Cấu trúc giữ chân người xem** (theo [RETENTION.md](../../../motion/long/RETENTION.md)):
+- **Cold open:** 1958, máy IBM 704 năm tấn học phân biệt trái và phải sau 50 lần thử; báo chí gọi là đối thủ của bộ não. Chỉ mười một năm sau, ý tưởng bị coi là ngõ cụt. Đóng ở chương 5 (giữa video).
+- **Lộ trình, 3 câu hỏi:** ai đặt tên AI và nghĩ mất bao lâu · vì sao AI chết hai lần · thứ gì hồi sinh nó, và ChatGPT thật ra đang làm gì.
+- **Vòng mở:** "một mùa hè" (đóng ch8) · trò đoán chữ của Shannon (đóng ch6) · lời hứa mười năm vô địch cờ (đóng ch4) · ELIZA (đóng ch6) · ai đào ý tưởng nơ-ron lên (đóng ch5).
+- **Mô-típ:** các mùa: hè 1956 → đông → đông → hè trở lại → mùa thứ 70?
+- **Cảnh mạnh thứ hai (~75%):** Seoul 2016, nước đi 78 của Lee Sedol.
+- **Trung thực:** không đọc câu trích chưa kiểm được bản gốc; không đọc kết quả Nobel 2026; "đoán chữ" luôn kèm "nói gọn là".
+
+---
+
+## CH00 · Cỗ máy học được trái và phải
+
+Mùa hè năm 1958, Văn phòng Nghiên cứu Hải quân Mỹ mời phóng viên tới xem một cỗ máy. ‖
+Đó là một chiếc máy tính IBM 704, nặng khoảng năm tấn, to bằng cả một căn phòng.
+Người ta cho nó ăn những tấm thẻ đục lỗ.
+Có tấm đánh dấu bên trái. Có tấm đánh dấu bên phải.
+Không ai dạy nó luật nào cả.
+Sau năm mươi lần thử, nó tự phân biệt được trái và phải. ‖
+Người tạo ra nó là Frank Rosenblatt, một nhà tâm lý học trẻ ở phòng thí nghiệm hàng không Cornell.
+Ông gọi nó là perceptron, cỗ máy đầu tiên có thể có một ý tưởng độc đáo.
+Tạp chí New Yorker viết:
+» Đối thủ nghiêm túc đầu tiên của bộ não con người từng được tạo ra.
+Chỉ mười một năm sau, ý tưởng ấy bị coi là ngõ cụt. ‖
+Còn người tạo ra nó thì không sống để thấy nó quay lại.
+Nhưng nó đã quay lại.
+Và ngay lúc này, nó đang nằm trong chiếc điện thoại của bạn. ‖
+Đây là câu chuyện bảy mươi năm của trí tuệ nhân tạo.
+Một ngành mà người ta từng nghĩ: một mùa hè là đủ để tạo bước tiến lớn.
+Trong video này, mình sẽ cùng bạn trả lời ba câu hỏi.
+Ai đã đặt cái tên trí tuệ nhân tạo, và họ nghĩ mất bao lâu?
+Vì sao AI đã chết, không phải một, mà hai lần?
+Và thứ gì đã hồi sinh nó, để hôm nay ChatGPT trả lời bạn như một con người?
+
+## CH01 · Một mùa hè để giải bài toán trí tuệ
+
+Năm 1950, nhà toán học người Anh Alan Turing viết một bài báo, mở đầu bằng một câu hỏi rất ngắn.
+» Máy có thể suy nghĩ không?
+Rồi chính ông gạt câu hỏi ấy đi, thay bằng một câu hỏi rõ ràng hơn.
+Ông đề xuất một trò chơi thay thế: nếu bạn trò chuyện qua bàn phím mà không phân biệt được đâu là máy, đâu là người, thì sao? ‖
+Turing đoán: khoảng năm mươi năm nữa, sau năm phút trò chuyện, người hỏi sẽ đoán sai ít nhất ba lần trong mười.
+Hãy nhớ lời đoán này. Mình sẽ quay lại với nó.
+Năm năm sau, ngày 31 tháng 8 năm 1955, bốn nhà khoa học ký vào một lá đơn xin tài trợ.
+John McCarthy, một giảng viên toán trẻ ở trường Dartmouth.
+Marvin Minsky, ở Harvard.
+Nathaniel Rochester, kỹ sư của IBM.
+Và Claude Shannon, cha đẻ của lý thuyết thông tin, ở phòng thí nghiệm Bell.
+Trong lá đơn ấy, lần đầu tiên xuất hiện cụm từ: trí tuệ nhân tạo.
+Họ xin gì?
+Mười người. Hai tháng. Mười ba nghìn năm trăm đô la. ‖
+Họ đặt giả thuyết: mọi khía cạnh của trí thông minh, về nguyên tắc, đều có thể mô tả chính xác đến mức máy mô phỏng được.
+Và một nhóm người được chọn kỹ, làm việc cùng nhau trong một mùa hè, có thể tạo bước tiến lớn ở một vài bài toán trong số đó.
+Một mùa hè. ‖
+Mùa hè năm 1956, nhóm ấy gặp nhau ở Dartmouth, một ngôi trường nhỏ giữa vùng đồi New Hampshire.
+Người đến rồi đi, mỗi người mang một ý tưởng riêng: cho máy hiểu ngôn ngữ, mô phỏng nơ-ron, cho máy biết sáng tạo.
+Nhưng có một chi tiết ít người để ý.
+Một trong bốn người ký tên, Claude Shannon, năm 1951 đã công bố một trò chơi lạ.
+Ông đưa cho một người một đoạn văn chưa từng đọc, và bảo: hãy đoán từng chữ cái tiếp theo.
+Đoán sai thì ông nói chữ đúng, rồi người ấy đoán tiếp.
+Trong một trăm hai mươi chín chữ cái, người ấy đoán đúng ngay lần đầu tám mươi chín chữ.
+Sáu mươi chín phần trăm, mà không cần nhìn. ‖
+Bảy mươi năm sau, trò chơi đó có một cái tên mà bạn rất quen.
+Nhưng trước khi tới đó, ngành trí tuệ nhân tạo phải chọn một con đường.
+
+## CH02 · Hai con đường
+
+Ngay từ những năm đầu, giới nghiên cứu đã chia làm hai ngả.
+Ngả thứ nhất: viết luật.
+Nếu muốn máy thông minh, hãy dạy nó các quy tắc suy luận, từng bước một, như dạy một học sinh giải toán.
+Ngả thứ hai: cho máy tự học.
+Đó là con đường của perceptron, mô phỏng một cách rất thô cách các nơ-ron trong não nối với nhau, rồi để nó tự điều chỉnh qua từng lần sai. ‖
+Thời ấy, ngả viết luật được tin hơn. Và nó hứa rất lớn.
+Năm 1958, hai nhà nghiên cứu Herbert Simon và Allen Newell dự đoán: trong vòng mười năm, máy tính sẽ vô địch cờ vua thế giới.
+Mười năm. Hãy nhớ con số này. ‖
+Rồi năm 1966, ở MIT, nhà khoa học Joseph Weizenbaum công bố một chương trình tên là ELIZA.
+ELIZA đóng vai một nhà trị liệu tâm lý.
+Bạn gõ vào một câu. Nó gõ lại một câu.
+» Đàn ông ai cũng như nhau cả.
+» Theo cách nào?
+» Bạn trai tôi bắt tôi tới đây.
+» Bạn trai bạn bắt bạn tới đây.
+Bên trong ELIZA không có chút hiểu biết nào.
+Nó chỉ bắt từ khoá, đảo "tôi" thành "bạn", rồi ghép vào một câu mẫu. ‖
+Vậy mà Weizenbaum ghi lại: có những người thử rất khó tin rằng ELIZA không phải là người.
+Chính ông gọi đó là ảo giác của sự thấu hiểu.
+Nhớ cái tên ELIZA. Gần sáu mươi năm sau, nó sẽ được đem ra đọ sức với một cỗ máy khác.
+Còn lúc này, những lời hứa đã đi quá xa so với những gì máy làm được.
+Và mùa hè sắp kết thúc.
+
+## CH03 · Mùa đông thứ nhất
+
+Năm 1969, Marvin Minsky, một trong bốn người ký lá đơn năm 1955, cùng Seymour Papert xuất bản một cuốn sách.
+Tên sách chính là: Perceptrons.
+Cuốn sách chỉ ra những giới hạn của loại máy perceptron đơn giản thời đó.
+Và nhiều người đọc nó như một bản án cho cả con đường tự học. ‖
+Tiền tài trợ cho mạng nơ-ron bắt đầu cạn.
+Hai năm sau, năm 1971, Frank Rosenblatt ra khơi trên một chiếc thuyền buồm, đúng ngày sinh nhật thứ bốn mươi ba của ông.
+Ông không trở về. ‖
+Ở bên kia Đại Tây Dương, Hội đồng Nghiên cứu Khoa học Anh nhờ nhà toán học James Lighthill đánh giá cả ngành.
+Báo cáo của ông, công bố năm 1973, kết luận: chưa có phần nào của lĩnh vực này tạo ra tác động lớn như đã từng hứa.
+Ông chỉ ra một kẻ thù chung, gọi là bùng nổ tổ hợp.
+Nghĩa là: bài toán chỉ cần lớn thêm một chút, số khả năng phải xét đã tăng vọt, vượt xa sức của mọi cỗ máy. ‖
+Các phòng thí nghiệm thu hẹp. Các dự án đóng lại.
+Giới nghiên cứu sau này gọi giai đoạn đó bằng một cái tên lạnh lẽo: mùa đông AI.
+Nhưng mùa đông không có nghĩa là không ai làm việc.
+Ở vài phòng thí nghiệm nhỏ, vẫn có người lặng lẽ giữ lại ý tưởng nơ-ron.
+Câu hỏi là: ai sẽ đào nó lên, và bằng thứ gì?
+Câu trả lời đến từ một nơi không ai ngờ.
+Nhưng trước đó, AI phải chết thêm một lần nữa.
+
+## CH04 · Máy thắng người, nhưng không học gì
+
+Những năm 1980, trí tuệ nhân tạo hồi sinh dưới một cái tên mới: hệ chuyên gia.
+Ý tưởng vẫn là viết luật.
+Lần này, người ta mời các chuyên gia thật, bác sĩ, kỹ sư, rồi chép kinh nghiệm của họ thành hàng nghìn dòng "nếu thế này thì làm thế kia".
+Doanh nghiệp đổ tiền vào. Cả những chiếc máy tính chuyên dụng được chế tạo riêng để chạy AI.
+Rồi đến cuối thập niên, bong bóng vỡ.
+Mùa đông thứ hai. ‖
+Thế còn lời hứa năm 1958, rằng trong mười năm máy sẽ vô địch cờ vua?
+Tháng 2 năm 1996, ở Philadelphia, nhà vô địch thế giới Garry Kasparov đấu với máy tính Deep Blue của IBM.
+Kasparov thắng, bốn trên hai.
+Một năm sau, tháng 5 năm 1997, ở New York, họ đấu lại.
+Lần này, Deep Blue thắng ba ván rưỡi trên hai ván rưỡi. ‖
+Lần đầu tiên, một nhà vô địch cờ vua thế giới đương nhiệm thua máy trong một trận đấu theo thể thức chuẩn.
+Lời hứa "mười năm" đã thành ba mươi chín năm.
+Nhưng Deep Blue có học không?
+Gần như không.
+Nó mạnh nhờ sức tính: hai trăm triệu thế cờ mỗi giây, cộng với một bộ tiêu chí đánh giá do con người chỉnh tay.
+Đó vẫn là con đường viết luật, chỉ là với một cỗ máy cực nhanh. ‖
+Và có một trò chơi mà sức tính như vậy không bao giờ đủ.
+Một bàn cờ mười chín nhân mười chín, với những quân đen trắng giản dị.
+Muốn thắng ở đó, máy phải học được thứ mà con người gọi là trực giác.
+
+## CH05 · Con chip chơi game cứu AI
+
+Quay lại năm 1986.
+Đúng vào khoảng giữa hai mùa đông, ba nhà nghiên cứu, David Rumelhart, Geoffrey Hinton và Ronald Williams, đăng một bài trên tạp chí Nature.
+Bài báo mô tả cách huấn luyện mạng nơ-ron nhiều lớp: lan truyền ngược.
+Nói gọn là: mỗi lần mạng đoán sai, lỗi được truyền ngược lại qua từng lớp, để từng mối nối tự sửa một chút. ‖
+Ý tưởng đã có. Nhưng máy tính thời đó quá chậm, và dữ liệu quá ít, để mạng học được điều gì lớn.
+Thứ còn thiếu, hoá ra lại nằm trong máy chơi game.
+Card đồ hoạ, hay GPU, được chế ra để vẽ hàng triệu điểm ảnh cùng một lúc.
+Và tính toán của mạng nơ-ron, về bản chất, cũng là hàng triệu phép nhân làm song song. ‖
+Năm 2012, ở cuộc thi nhận dạng ảnh ImageNet, một nhóm ở Đại học Toronto, trong đó có Hinton, mang tới một mạng nơ-ron tên là AlexNet.
+Họ huấn luyện nó trong năm, sáu ngày, trên đúng hai chiếc card chơi game GTX 580.
+Kết quả: tỉ lệ đoán sai mười lăm phần trăm.
+Đội đứng thứ hai: hai mươi sáu phần trăm. ‖
+Khoảng cách đó làm cả ngành quay đầu.
+Bây giờ, bạn đã hiểu vì sao chiếc perceptron năm 1958 được nhắc lại.
+Ý tưởng "ngõ cụt" ấy, cho máy tự học qua từng lần sai, chính là nền móng của thứ mà ngày nay gọi là học sâu.
+Nhiều người nay cho rằng Rosenblatt đã được minh oan. Ông chỉ đi trước cỗ máy của mình quá xa. ‖
+Rồi tới bàn cờ mười chín nhân mười chín.
+Tháng 3 năm 2016, ở Seoul, chương trình AlphaGo của DeepMind đấu với kỳ thủ Lee Sedol, một trong những người giỏi nhất thế giới.
+Hơn hai trăm triệu người theo dõi.
+Ván thứ hai, AlphaGo đi nước thứ ba mươi bảy, một nước mà theo chính nó, cứ mười nghìn kỳ thủ mới có một người đi.
+Lee Sedol thua ba ván liền. ‖
+Rồi ván thứ tư.
+Lee Sedol đặt quân ở nước thứ bảy mươi tám.
+Một nước mà theo AlphaGo, xác suất một người đi là khoảng một phần mười nghìn. ‖
+AlphaGo đáp sai ngay nước sau, và phải gần mười nước nữa nó mới nhận ra.
+Lee Sedol thắng ván đó.
+Kết quả chung cuộc: AlphaGo bốn, con người một.
+Máy đã biết nhìn. Đã biết chơi.
+Nhưng nói chuyện với con người, thì cần thêm một mẹo nữa.
+
+## CH06 · Đoán chữ tiếp theo
+
+Tháng 6 năm 2017, tám nhà nghiên cứu của Google đăng một bài báo có cái tên rất tự tin: Attention Is All You Need.
+Họ giới thiệu một kiến trúc mới, tên là Transformer.
+Nói gọn là: thay vì đọc một câu lần lượt từng chữ, máy nhìn cả câu cùng lúc và tự cân xem chữ nào cần chú ý đến chữ nào.
+Mô hình của họ học xong trong ba ngày rưỡi, trên tám GPU. ‖
+Ngày 30 tháng 11 năm 2022, OpenAI mở cho mọi người dùng thử một chương trình tên là ChatGPT.
+Đến giữa năm 2025, theo chính OpenAI, mỗi tuần có khoảng bảy trăm triệu người dùng nó.
+Vậy khi bạn hỏi ChatGPT một câu, bên trong nó đang làm gì?
+Nói gọn, và đơn giản hoá: nó đoán mẩu chữ tiếp theo. ‖
+Rồi mẩu tiếp theo nữa.
+Lặp lại hàng trăm lần, cho đến khi thành một câu trả lời.
+Có nghe quen không?
+Đó chính là trò chơi của Claude Shannon năm 1951. Một người đoán từng chữ cái tiếp theo của một đoạn văn lạ.
+Cùng một ý tưởng. Chỉ là bảy mươi năm sau, người chơi là một cỗ máy đã đọc một lượng chữ khổng lồ. ‖
+Còn lời đoán của Turing?
+Năm 2025, hai nhà nghiên cứu ở Đại học California, San Diego, làm lại phép thử của ông, trong một nghiên cứu chưa qua bình duyệt.
+Người tham gia trò chuyện năm phút, cùng lúc với một người thật và một máy, rồi đoán xem ai là người.
+Mô hình GPT-4.5, được dặn đóng vai một con người, bị chọn là người bảy mươi ba phần trăm số lần, nhiều hơn cả người thật.
+Còn ELIZA, chương trình năm 1966, cũng được đem vào thử: hai mươi ba phần trăm. ‖
+Turing hẹn năm 2000. Máy tới muộn khoảng hai mươi lăm năm.
+Và theo một cách mà chính ông chắc cũng không hình dung nổi.
+Nhưng trong suốt bảy mươi năm ấy, không chỉ các nhà khoa học tưởng tượng về AI.
+
+## CH07 · Phim đã dạy ta sợ, và thương, AI thế nào
+
+Trước khi AI đủ giỏi để trò chuyện, nó đã sống rất lâu trong phim ảnh.
+Năm 1968, phim 2001: A Space Odyssey cho ta HAL 9000, một cỗ máy bình thản từ chối mở cửa cho phi hành gia.
+Năm 1984, phim Kẻ hủy diệt cho ta Skynet, một hệ thống quyết định rằng loài người là mối đe doạ.
+Trong phần hai của phim, ngày phán xét rơi vào năm 1997. Đúng năm Deep Blue thắng Kasparov ngoài đời thật. ‖
+Còn với rất nhiều người Việt, hình ảnh AI đầu tiên lại không đáng sợ chút nào.
+Cuối năm 1969, cùng năm cuốn sách Perceptrons góp phần mở đường cho mùa đông AI, ở Nhật, một chú mèo máy màu xanh ra đời trên trang truyện tranh.
+Doraemon.
+Không muốn thống trị ai. Chỉ muốn giúp một cậu bé hay quên làm bài tập. ‖
+Hai hình mẫu ấy vẫn theo ta tới hôm nay.
+Một cỗ máy ta phải đề phòng. Và một người bạn ta muốn có.
+Câu hỏi là: thứ đang nằm trong điện thoại của bạn, gần với cái nào hơn?
+
+## CH08 · Mùa hè thứ bảy mươi
+
+Tháng 10 năm 2024, giải Nobel Vật lý được trao cho John Hopfield và Geoffrey Hinton, vì những khám phá và phát minh nền tảng giúp máy học bằng mạng nơ-ron nhân tạo.
+Một ngày sau, một nửa giải Nobel Hoá học thuộc về Demis Hassabis và John Jumper, cho mô hình AlphaFold dự đoán cấu trúc protein. ‖
+Ý tưởng từng bị coi là ngõ cụt, giờ được trao giải thưởng cao nhất của khoa học.
+Nhưng chính Hinton, trong buổi phỏng vấn sau giải, nói rằng chúng ta đang đứng ở một ngã rẽ, và cần tìm cách giữ quyền kiểm soát. ‖
+Cuối tháng 10 năm nay, đúng bảy mươi năm sau, trường Dartmouth sẽ tổ chức một hội nghị kỷ niệm.
+Câu hỏi đặt ra không còn là "máy có thông minh được không".
+Mà là:
+» Điều gì phải còn là của con người?
+Năm 1955, bốn nhà khoa học xin một mùa hè. ‖
+Đã là bảy mươi mùa hè.
+Xen giữa là hai mùa đông.
+Có người tin ta đang ở giữa một mùa hè rực rỡ nhất.
+Có người lo một mùa đông thứ ba đang tới.
+Turing từng nói, câu hỏi "máy có suy nghĩ được không" là quá vô nghĩa để đáng bàn.
+Nhưng ông tin, đến cuối thế kỷ, người ta sẽ nói "máy suy nghĩ" mà không ai buồn cãi.
+Có lẽ lúc ấy đã tới. ‖
+Còn bạn, bạn nghĩ đây là mùa hè, hay sắp đến mùa đông?

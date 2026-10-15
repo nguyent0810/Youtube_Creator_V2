@@ -1,0 +1,178 @@
+{
+ "theme": "mim",
+ "title": "Hơn 3.000 câu hỏi, AI chỉ từ chối trả lời 17 lần: vì sao máy hiếm khi nói “tôi không biết”",
+ "description": "Trong phép thử năm 2025 của EBU và BBC, các trợ lý AI nhận hơn 3.000 câu hỏi về tin tức và chỉ từ chối trả lời 17 lần, chưa tới 1%. Bài báo “Vì sao mô hình ngôn ngữ bị ảo giác” (09/2025) đưa ra một lý do: trong 10 bài kiểm tra phổ biến dùng để xếp hạng mô hình, 9 bài không cho điểm nào khi máy trả lời “tôi không biết”. Giống kỳ thi trắc nghiệm không trừ điểm câu sai: không biết thì cứ khoanh. Các tác giả đề nghị đổi cách chấm: sai thì bị trừ, nói không biết thì không bị phạt. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/H9nlRjxfmPw (công khai từ 20:00 ngày 02/11).",
+ "tags": [
+  "ebu bbc",
+  "tôi không biết",
+  "cách chấm điểm ai",
+  "ai bịa",
+  "ảo giác ai",
+  "chatgpt",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "2025",
+ "acc": [
+  "mười",
+  "một",
+  "chín",
+  "khoanh",
+  "trừ"
+ ],
+ "kicker": "AI QUANH TA",
+ "lines": [
+  "Hơn ba nghìn câu hỏi. Và máy chỉ từ chối trả lời mười bảy lần.",
+  "Chưa tới một phần trăm. Đó là kết quả một phép thử về tin tức, năm 2025.",
+  "Vì sao máy hiếm khi nói: tôi không biết?",
+  "Một nhóm nghiên cứu xem mười bài kiểm tra phổ biến, dùng để xếp hạng các mô hình.",
+  "Chín bài không cho điểm nào, khi máy trả lời tôi không biết.",
+  "Giống một kỳ thi trắc nghiệm không trừ điểm câu sai. Không biết thì cứ khoanh.",
+  "Họ đề nghị đổi cách chấm. Sai thì bị trừ. Nói không biết, thì không bị phạt."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "HƠN 3.000 CÂU HỎI",
+     "at": 0.0
+    },
+    {
+     "text": "CHỈ TỪ CHỐI 17 LẦN",
+     "at": [
+      0,
+      "Và"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:34771072",
+   "veil": 0.55
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 1,
+   "to": 1,
+   "prefix": "< ",
+   "suffix": "%",
+   "label": "SỐ LẦN MÁY TỪ CHỐI TRẢ LỜI",
+   "until": [
+    1,
+    "trăm."
+   ],
+   "sub": {
+    "text": "PHÉP THỬ CỦA EBU VÀ BBC · 2025",
+    "at": [
+     1,
+     "Đó"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "“TÔI KHÔNG BIẾT”",
+   "sub": "VÌ SAO MÁY HIẾM KHI NÓI CÂU NÀY?"
+  },
+  {
+   "type": "chart",
+   "at": 3,
+   "kind": "bars",
+   "title": "10 BÀI KIỂM TRA XẾP HẠNG MÔ HÌNH",
+   "unit": "CÓ CHO ĐIỂM KHI MÁY NÓI “TÔI KHÔNG BIẾT”?",
+   "min": 0,
+   "bars": [
+    {
+     "label": "KHÔNG\nCHO ĐIỂM",
+     "v": 9,
+     "text": "9",
+     "c": "ref",
+     "at": [
+      4,
+      "Chín"
+     ]
+    },
+    {
+     "label": "CÓ",
+     "v": 1,
+     "text": "1",
+     "c": "dim",
+     "at": [
+      4,
+      "khi"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "KỲ THI KHÔNG TRỪ ĐIỂM",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "không biết thì cứ khoanh",
+     "at": [
+      5,
+      "Không"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8567113",
+   "ms": 8,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 5
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "ĐỀ NGHỊ ĐỔI CÁCH CHẤM",
+   "cards": [
+    {
+     "k": "TRẢ LỜI SAI",
+     "v": "BỊ TRỪ ĐIỂM",
+     "at": [
+      6,
+      "Sai"
+     ]
+    },
+    {
+     "k": "NÓI KHÔNG BIẾT",
+     "v": "KHÔNG BỊ PHẠT",
+     "at": [
+      6,
+      "Nói"
+     ],
+     "c": "acc"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://www.ebu.ch/files/live/sites/ebu/files/Publications/Intelligence/open/EBU-Intelligence-BBC_News_Integrity_in_AI_Assistants_Report_2025.pdf",
+  "https://arxiv.org/abs/2509.04664"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

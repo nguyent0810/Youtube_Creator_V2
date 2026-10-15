@@ -1,0 +1,407 @@
+{
+ "title": "Cỗ máy biết nói",
+ "lines": [
+  {
+   "t": "Năm 1770, ở triều đình nước Áo, nhà phát minh Wolfgang von Kempelen ra mắt một cỗ máy đánh cờ.",
+   "p": 0.8
+  },
+  "Đó là một hình nộm mặc áo kiểu Thổ Nhĩ Kỳ, ngồi sau một chiếc tủ gỗ.",
+  "Nó đi khắp châu Âu và nước Mỹ, thắng phần lớn các ván cờ, có cả ván với Napoléon.",
+  "Nhưng cỗ máy ấy là một trò lừa.",
+  "Người đi cờ thật là một kỳ thủ giỏi, ngồi giấu kín bên trong chiếc tủ.",
+  {
+   "t": "Một cỗ máy giả làm người, nhờ một con người giấu bên trong. Hãy nhớ hình ảnh này.",
+   "p": 1.0
+  },
+  "Kempelen còn làm một thứ thật hơn nhiều: một cỗ máy biết nói.",
+  "Một ống bễ thổi hơi thay cho phổi, cùng mô hình lưỡi và môi, đủ để tạo ra cả nguyên âm lẫn phụ âm.",
+  {
+   "t": "Ông dành gần hai mươi năm nghiên cứu giọng nói, rồi in thành sách vào cuối thế kỷ mười tám.",
+   "p": 1.0
+  },
+  "Gần một trăm năm mươi năm sau, năm 1939, ở Hội chợ Thế giới New York, hàng triệu khách tham quan kéo tới nghe một cỗ máy của Phòng thí nghiệm Bell nói.",
+  "Nó tên là Voder.",
+  "Muốn nó nói, người vận hành phải bấm phím để tạo từng âm, gạt cổ tay để đổi giữa tiếng rít và tiếng ù, và đạp chân để lên xuống giọng.",
+  {
+   "t": "Phải luyện tập nhiều tháng, họ mới làm nó nói được những câu nghe ra chữ.",
+   "p": 1.0
+  },
+  "Từ Kempelen tới Voder, làm cho máy nói đã là chuyện rất khó.",
+  "Và giọng của chúng không giống giọng của một ai cả.",
+  "Suốt chừng ấy thời gian, giọng nói vẫn là thứ mật khẩu lâu đời nhất của con người: nghe là biết ai.",
+  "Rồi chỉ trong vài năm gần đây, mọi thứ đảo ngược."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "CỖ MÁY\nBIẾT NÓI",
+   "sub": "1770 — 1939",
+   "bg": "turk",
+   "titleAt": [
+    0,
+    "Năm"
+   ]
+  },
+  {
+   "type": "print",
+   "at": 1,
+   "img": "turk",
+   "tone": "bw",
+   "caption": "TRANH KHẮC THẾ KỶ 18",
+   "side": {
+    "k": "KEMPELEN · 1770",
+    "h": "Cỗ máy\nđánh cờ",
+    "lines": [
+     {
+      "text": "Hình nộm mặc áo *kiểu Thổ Nhĩ Kỳ*",
+      "at": 1
+     },
+     {
+      "text": "ngồi sau *một chiếc tủ gỗ*",
+      "at": [
+       1,
+       "ngồi"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "bg": "turk",
+   "items": [
+    {
+     "text": "KHẮP CHÂU ÂU · NƯỚC MỸ",
+     "at": 2,
+     "sm": true
+    },
+    {
+     "text": "THẮNG PHẦN LỚN CÁC VÁN CỜ",
+     "at": [
+      2,
+      "thắng"
+     ],
+     "acc": true
+    },
+    {
+     "text": "có cả ván với Napoléon (giai thoại phổ biến)",
+     "at": [
+      2,
+      "có"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "bg": "turk",
+   "text": "MỘT TRÒ LỪA"
+  },
+  {
+   "type": "photo",
+   "at": 4,
+   "img": "racknitz",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.45,
+   "focus": [
+    0.5,
+    0.6
+   ],
+   "kin": [
+    {
+     "text": "KỲ THỦ THẬT",
+     "at": 4,
+     "sm": true
+    },
+    {
+     "text": "GIẤU KÍN TRONG TỦ",
+     "at": [
+      4,
+      "giấu"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "RACKNITZ · 1789",
+    "v": "HÌNH VẼ PHỎNG ĐOÁN",
+    "at": 4
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "bg": "racknitz",
+   "items": [
+    {
+     "text": "MỘT CỖ MÁY GIẢ LÀM NGƯỜI",
+     "at": 5
+    },
+    {
+     "text": "NHỜ MỘT CON NGƯỜI GIẤU BÊN TRONG",
+     "at": [
+      5,
+      "nhờ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "hãy nhớ hình ảnh này",
+     "at": [
+      5,
+      "hãy"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": 6,
+   "img": "kempdraw",
+   "tone": "bw",
+   "maxH": 600,
+   "caption": "HÌNH TRONG SÁCH 1791",
+   "side": {
+    "k": "KEMPELEN",
+    "h": "Cỗ máy\nbiết nói",
+    "lines": [
+     {
+      "text": "Ống bễ *thay cho phổi*",
+      "at": [
+       7,
+       "ống"
+      ]
+     },
+     {
+      "text": "Mô hình *lưỡi và môi*",
+      "at": [
+       7,
+       "lưỡi"
+      ]
+     },
+     {
+      "text": "*Nguyên âm* lẫn *phụ âm*",
+      "at": [
+       7,
+       "nguyên"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "print",
+   "at": 8,
+   "img": "kemprecon",
+   "tone": "color",
+   "caption": "BẢN DỰNG LẠI HIỆN ĐẠI",
+   "side": {
+    "k": "GẦN 20 NĂM NGHIÊN CỨU",
+    "h": "In thành sách\nnăm 1791",
+    "lines": [
+     {
+      "text": "Ảnh: *bản dựng lại* ở Saarbrücken",
+      "at": 8
+     },
+     {
+      "text": "không phải máy thế kỷ 18",
+      "at": [
+       8,
+       "in"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 9,
+   "img": "voder",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.5,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "kin": [
+    {
+     "text": "NEW YORK · 1939",
+     "at": 9,
+     "acc": true
+    },
+    {
+     "text": "HỘI CHỢ THẾ GIỚI",
+     "at": [
+      9,
+      "hội"
+     ],
+     "sm": true
+    },
+    {
+     "text": "> 5 TRIỆU LƯỢT KHÁCH VÀO PHÒNG VODER",
+     "at": [
+      9,
+      "hàng"
+     ],
+     "sm": true
+    }
+   ],
+   "label": {
+    "k": "BELL TELEPHONE QUARTERLY · 01.1940",
+    "v": "“THE VODER FASCINATES THE CROWDS”",
+    "at": 9
+   }
+  },
+  {
+   "type": "print",
+   "at": 10,
+   "img": "voderfig",
+   "tone": "bw",
+   "maxW": 560,
+   "caption": "BSTJ 10.1940 · HỘI CHỢ NEW YORK",
+   "side": {
+    "k": "PHÒNG THÍ NGHIỆM BELL",
+    "h": "VODER",
+    "lines": [
+     {
+      "text": "*Phím*: tạo từng âm",
+      "at": [
+       11,
+       "bấm"
+      ]
+     },
+     {
+      "text": "*Cổ tay*: tiếng rít ↔ tiếng ù",
+      "at": [
+       11,
+       "gạt"
+      ]
+     },
+     {
+      "text": "*Bàn đạp*: lên xuống giọng",
+      "at": [
+       11,
+       "đạp"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "bg": "voder",
+   "items": [
+    {
+     "text": "LUYỆN TẬP NHIỀU THÁNG",
+     "at": 12,
+     "acc": true
+    },
+    {
+     "text": "mới nói được những câu nghe ra chữ",
+     "at": [
+      12,
+      "mới"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 13,
+   "items": [
+    {
+     "year": "1770",
+     "text": "Cỗ máy *đánh cờ*",
+     "at": 13
+    },
+    {
+     "year": "1791",
+     "text": "Sách về *máy nói*",
+     "at": [
+      13,
+      "tới"
+     ]
+    },
+    {
+     "year": "1939",
+     "text": "*Voder* · New York",
+     "at": [
+      13,
+      "voder"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "GIỌNG CỦA CHÚNG",
+     "at": 14,
+     "sm": true
+    },
+    {
+     "text": "KHÔNG GIỐNG GIỌNG CỦA AI CẢ",
+     "at": [
+      14,
+      "không"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "vid": "13283744",
+   "illus": "VIDEO MINH HỌA",
+   "items": [
+    {
+     "text": "SUỐT CHỪNG ẤY THỜI GIAN",
+     "at": 15,
+     "sm": true
+    },
+    {
+     "text": "GIỌNG NÓI = MẬT KHẨU",
+     "at": [
+      15,
+      "giọng"
+     ],
+     "acc": true
+    },
+    {
+     "text": "nghe là biết ai",
+     "at": [
+      15,
+      "nghe"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 16,
+   "text": "MỌI THỨ\nĐẢO NGƯỢC"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "CỖ MÁY BIẾT NÓI"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.12
+ }
+}

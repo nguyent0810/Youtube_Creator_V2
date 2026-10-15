@@ -1,0 +1,182 @@
+{
+ "title": "Cổ tức bằng cổ phiếu",
+ "lines": [
+  {
+   "t": "Cụm chữ thứ ba: trả cổ tức bằng cổ phiếu.",
+   "p": 0.8
+  },
+  {
+   "t": "Lần này không có đồng tiền nào đi ra khỏi doanh nghiệp.",
+   "p": 1.0
+  },
+  "Ví dụ giả định, tỷ lệ hai mươi phần trăm.",
+  "Cứ một trăm cổ phiếu bạn đang có, bạn nhận thêm hai mươi cổ phiếu mới.",
+  {
+   "t": "Một nghìn cổ phiếu thành một nghìn hai trăm.",
+   "p": 1.0
+  },
+  "Nghe như được cho không hai trăm cổ phiếu.",
+  "Nhưng vào ngày không hưởng quyền, giá tham chiếu được chia cho một phẩy hai.",
+  {
+   "t": "Bốn mươi nghìn còn khoảng ba mươi ba nghìn ba trăm ba mươi ba đồng.",
+   "p": 1.0
+  },
+  "Nhân lên: một nghìn hai trăm cổ phiếu, mỗi cổ phiếu khoảng ba mươi ba nghìn ba, vẫn là bốn mươi triệu.",
+  {
+   "t": "Cái bánh không to ra. Nó chỉ được cắt thành nhiều miếng nhỏ hơn.",
+   "p": 1.0
+  },
+  {
+   "t": "Vậy sao doanh nghiệp lại làm thế?",
+   "ask": 1
+  },
+  "Thường là để giữ tiền lại cho kinh doanh, thay vì trả ra ngoài.",
+  "Giá mỗi cổ phiếu thấp hơn cũng có thể khiến nhiều người thấy dễ mua hơn.",
+  "Nhưng một cổ phiếu trông rẻ hơn, chưa có nghĩa là nó rẻ hơn.",
+  "Còn chuyện tiền giữ lại ấy được dùng tốt hay không, thì phải nhìn vào kết quả kinh doanh của những năm sau."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "CỤM CHỮ THỨ BA",
+   "title": "CỔ TỨC\nBẰNG CỔ PHIẾU",
+   "sub": "KHÔNG ĐỒNG TIỀN NÀO ĐI RA",
+   "vid": "5615174",
+   "ms": 12,
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Cụm"
+   ]
+  },
+  {
+   "type": "units",
+   "at": 2,
+   "title": "CỨ 100 CỔ PHIẾU · NHẬN THÊM 20 · VÍ DỤ GIẢ ĐỊNH",
+   "total": 12,
+   "cols": 12,
+   "lit": 10,
+   "litAt": [
+    3,
+    "Cứ"
+   ],
+   "unitLabel": "PHẦN TRƯỚC KHI CHIA"
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 1200,
+   "to": 1200,
+   "suffix": " CỔ PHIẾU",
+   "label": "TỪ 1.000 CỔ PHIẾU · TỶ LỆ 20%",
+   "sub": {
+    "text": "NGHE NHƯ ĐƯỢC CHO KHÔNG 200 CỔ PHIẾU",
+    "at": 5
+   }
+  },
+  {
+   "type": "bars",
+   "at": 6,
+   "title": "GIÁ THAM CHIẾU (Đ)",
+   "unit": "GIÁ ÷ (1 + 20%) · VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "TRƯỚC",
+     "v": 40000,
+     "lbl": "40.000",
+     "at": [
+      7,
+      "Bốn"
+     ]
+    },
+    {
+     "k": "NGÀY KHÔNG HƯỞNG QUYỀN",
+     "v": 33333,
+     "lbl": "≈ 33.333",
+     "at": [
+      7,
+      "ba"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 8,
+   "title": "NHÂN LÊN",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "TRƯỚC",
+     "v": "1.000 × 40.000 = 40 TRIỆU",
+     "at": [
+      8,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "k": "SAU",
+     "v": "1.200 × ≈ 33.333 ≈ 40 TRIỆU",
+     "at": [
+      8,
+      "mỗi"
+     ]
+    }
+   ],
+   "total": {
+    "k": "CÁI BÁNH",
+    "v": "CẮT NHỎ HƠN · KHÔNG TO RA",
+    "at": 9
+   }
+  },
+  {
+   "type": "question",
+   "at": 10,
+   "text": "Vậy sao doanh nghiệp\nlại làm thế?"
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "GIỮ TIỀN LẠI CHO KINH DOANH",
+     "at": 11,
+     "acc": true
+    },
+    {
+     "text": "giá thấp hơn · trông dễ mua hơn",
+     "at": 12,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 13,
+   "mythLab": "TRÔNG",
+   "myth": "RẺ HƠN",
+   "truthLab": "CHƯA CÓ NGHĨA LÀ",
+   "truth": "RẺ HƠN",
+   "strikeAt": [
+    13,
+    "chưa"
+   ],
+   "truthAt": [
+    13,
+    "nó"
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "CỔ TỨC BẰNG CỔ PHIẾU"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

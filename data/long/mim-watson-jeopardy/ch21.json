@@ -1,0 +1,103 @@
+{
+ "title": "Dấu hỏi",
+ "lines": [
+  {
+   "t": "Watson thắng Jeopardy bằng tốc độ, bằng kiến thức, và bằng một điều ít được nhắc tới: nó biết lúc nào nên dè dặt.",
+   "p": 0.8
+  },
+  "Rồi nó vấp ở bệnh viện, nơi đời thật không có luật chơi rõ ràng.",
+  {
+   "t": "Hai chuyện ấy cùng dạy một điều.",
+   "p": 1.0
+  },
+  "Một cỗ máy giỏi không phải cỗ máy luôn có câu trả lời.",
+  "Mà là cỗ máy cho ta biết khi nào nên tin nó, và khi nào không.",
+  "Câu ấy đúng với Watson năm hai nghìn không trăm mười một.",
+  {
+   "t": "Và có lẽ còn đúng hơn với những cỗ máy ta dùng mỗi ngày hôm nay.",
+   "p": 1.0
+  },
+  "Lần gần nhất một trợ lý AI trả lời sai bạn một cách rất tự tin là khi nào?",
+  "Kể cho mình nghe ở phần bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "21",
+   "k": "PHẦN CUỐI",
+   "title": "DẤU HỎI",
+   "sub": "MỘT CỖ MÁY GIỎI LÀ GÌ?",
+   "vid": "1534965",
+   "ms": 6,
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH CHƯƠNG TRÌNH",
+   "titleAt": [
+    0,
+    "Watson"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "WATSON THẮNG BẰNG",
+   "rows": [
+    {
+     "k": "1",
+     "v": "TỐC ĐỘ · KIẾN THỨC",
+     "at": [
+      1,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "k": "2",
+     "v": "BIẾT LÚC NÊN DÈ DẶT",
+     "at": [
+      1,
+      null,
+      0,
+      0.4
+     ]
+    }
+   ],
+   "total": {
+    "k": "RỒI VẤP Ở",
+    "v": "BỆNH VIỆN",
+    "at": [
+     1,
+     "bệnh"
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "at": 3,
+   "mythLab": "CỖ MÁY GIỎI KHÔNG PHẢI",
+   "myth": "LUÔN CÓ CÂU TRẢ LỜI",
+   "truthLab": "MÀ LÀ",
+   "truth": "CHO BIẾT KHI NÀO NÊN TIN",
+   "strikeAt": [
+    4,
+    "Mà"
+   ],
+   "truthAt": [
+    4,
+    "cho"
+   ]
+  },
+  {
+   "type": "question",
+   "at": 7,
+   "text": "Lần gần nhất AI trả lời sai bạn\nmột cách rất tự tin là khi nào?"
+  }
+ ],
+ "hud": {
+  "k": "PHẦN CUỐI",
+  "t": "DẤU HỎI"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

@@ -1,0 +1,199 @@
+{
+ "theme": "mim",
+ "title": "Nước 37 của AlphaGo: nước cờ vạn người mới có một người đi",
+ "description": "Tháng 3/2016 ở Seoul, AlphaGo (DeepMind) đấu 5 ván cờ vây với Lee Sedol. Ở ván 2, AlphaGo đi nước thứ 37 — nước mà chính hệ thống ước tính xác suất một người đi là khoảng 1/10.000 (theo DeepMind). AlphaGo thắng ván đó và thắng chung cuộc 4–1. Câu “không chỉ bắt chước con người” là diễn giải của kênh từ con số xác suất này. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.",
+ "tags": [
+  "alphago",
+  "lee sedol",
+  "nước 37",
+  "move 37",
+  "cờ vây",
+  "deepmind",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "LỊCH SỬ AI",
+ "sub": "ALPHAGO · 2016",
+ "acc": [
+  "vạn",
+  "bảy",
+  "nghìn",
+  "không",
+  "bốn"
+ ],
+ "lines": [
+  "Một nước cờ, mà vạn người mới có một người đi.",
+  "Tháng 3 năm 2016, ở Seoul, AlphaGo đấu cờ vây với kỳ thủ Lee Sedol.",
+  "Ván thứ hai, máy đi nước thứ ba mươi bảy.",
+  "Theo chính AlphaGo ước tính, xác suất một người đi nước ấy, chỉ khoảng một phần mười nghìn.",
+  "Tức là nó không chỉ bắt chước con người.",
+  "Nó đi cả những nước mà con người gần như không đi.",
+  "Lee Sedol thua ván đó. Chung cuộc, máy thắng bốn một."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MỘT NƯỚC CỜ",
+     "at": 0.0
+    },
+    {
+     "text": "VẠN NGƯỜI MỚI CÓ MỘT",
+     "at": [
+      0,
+      "vạn"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:39270835",
+   "veil": 0.5
+  },
+  {
+   "type": "photo",
+   "at": 1,
+   "img": "leesedol",
+   "mode": "print",
+   "tone": "color",
+   "label": {
+    "text": "LEE SEDOL · KỲ THỦ CỜ VÂY",
+    "at": [
+     1,
+     "Lee"
+    ],
+    "y": 1290
+   },
+   "stamp": {
+    "text": "SEOUL · 03.2016",
+    "at": [
+     1,
+     "Seoul"
+    ],
+    "x": 220,
+    "y": 1090
+   }
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 37,
+   "label": "NƯỚC THỨ · VÁN 2",
+   "until": [
+    2,
+    "bảy"
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "XÁC SUẤT MỘT NGƯỜI ĐI NƯỚC ẤY",
+   "cards": [
+    {
+     "k": "ALPHAGO TỰ ƯỚC TÍNH",
+     "v": "~1 / 10.000",
+     "at": [
+      3,
+      "xác"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "NGUỒN: GOOGLE DEEPMIND"
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Vậy máy đang làm gì?",
+   "nodes": [
+    {
+     "text": "bắt chước con người",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      4,
+      "bắt"
+     ],
+     "cross": [
+      4,
+      "người"
+     ]
+    },
+    {
+     "text": "đi cả nước người gần như không đi",
+     "x": 0.5,
+     "y": 0.7,
+     "at": [
+      5,
+      "nước"
+     ],
+     "c": "acc",
+     "shape": "none",
+     "size": 50,
+     "w": 880
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      5,
+      "Nó"
+     ],
+     "bend": 0
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 6,
+   "title": "SEOUL · 03.2016",
+   "rows": [
+    {
+     "k": "ALPHAGO",
+     "v": "4",
+     "at": [
+      6,
+      "bốn"
+     ]
+    },
+    {
+     "k": "LEE SEDOL",
+     "v": "1",
+     "at": [
+      6,
+      "một"
+     ]
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://deepmind.google/research/breakthroughs/alphago/"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "alphago": "An-pha Gô",
+  "lee": "Li",
+  "sedol": "Xê-đôn",
+  "seoul": "Xơ-un"
+ },
+ "imgs": {
+  "leesedol": "File:Lee Se-Dol.jpg"
+ }
+}

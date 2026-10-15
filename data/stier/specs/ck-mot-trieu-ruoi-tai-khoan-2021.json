@@ -1,0 +1,195 @@
+{
+ "title": "Năm 2021: hơn 1,5 triệu tài khoản chứng khoán mới, nhiều hơn bốn năm trước đó cộng lại",
+ "description": "Năm 2021, nhà đầu tư cá nhân trong nước mở mới hơn 1,5 triệu tài khoản chứng khoán, nhiều hơn tổng 2017–2020 cộng lại (theo báo chí dẫn số liệu Trung tâm Lưu ký). Từ đáy 659,21 điểm ngày 24/03/2020 tới đỉnh 1.528,57 ngày 06/01/2022, VN-Index tăng khoảng 132% (kênh tự tính). Sau đó giảm khoảng 40% tới 15/11/2022. Số liệu quá khứ, không dự báo.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ: https://youtu.be/ULLEUHkYz9g (công khai từ 20:00 ngày 21/11)",
+ "tags": [
+  "tài khoản chứng khoán 2021",
+  "f0",
+  "fomo",
+  "tâm lý đầu tư",
+  "vn-index",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "triệu",
+  "rưỡi",
+  "gấp",
+  "đôi",
+  "đông"
+ ],
+ "kicker": "TÂM LÝ TIỀN BẠC",
+ "sub": "FOMO",
+ "lines": [
+  "Hơn một triệu rưỡi tài khoản chứng khoán mới, chỉ trong năm 2021.",
+  "Nhiều hơn tổng số tài khoản mở trong bốn năm trước đó cộng lại.",
+  "Người mới đến từ mọi nơi: sinh viên, nhân viên văn phòng, người về hưu.",
+  "Từ đáy tháng 3 năm 2020 tới đỉnh tháng 1 năm 2022, VN-Index tăng hơn gấp đôi, khoảng một trăm ba mươi hai phần trăm.",
+  "Một đường đi lên dốc đứng không cho bạn biết giá đắt hay rẻ. Nó chỉ cho bạn thấy ai đứng ngoài đang bị bỏ lại.",
+  "Rồi từ đỉnh, chỉ số giảm khoảng bốn mươi phần trăm trong mười tháng.",
+  "Đám đông lớn nhất thường đến sau đoạn tăng dài nhất, không phải trước nó."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "> 1,5 TRIỆU",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "tài khoản chứng khoán mới · 2021",
+     "at": [
+      0,
+      "tài"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8480284",
+   "ms": 10,
+   "veil": 0.58
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "SO SÁNH",
+   "cards": [
+    {
+     "k": "NĂM 2021",
+     "v": "> 1,5 TRIỆU",
+     "at": 1
+    },
+    {
+     "k": "2017–2020 CỘNG LẠI",
+     "v": "ÍT HƠN",
+     "at": [
+      1,
+      "bốn"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NGƯỜI MỚI TỪ MỌI NƠI",
+     "at": 2,
+     "acc": true
+    },
+    {
+     "text": "sinh viên · văn phòng · về hưu",
+     "at": [
+      2,
+      "sinh"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:13929693",
+   "ms": 4,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 2
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "from": 132,
+   "to": 132,
+   "prefix": "+",
+   "suffix": "%",
+   "label": "VN-INDEX · 24/03/2020 → 06/01/2022",
+   "sub": {
+    "text": "KÊNH TỰ TÍNH · VN-INDEX ĐÓNG CỬA",
+    "at": [
+     3,
+     "VN-Index"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "DỐC ĐỨNG ≠ ĐẮT HAY RẺ",
+   "sub": "CHỈ CHO THẤY AI ĐANG BỊ BỎ LẠI"
+  },
+  {
+   "type": "chart",
+   "at": 5,
+   "kind": "bars",
+   "title": "VN-INDEX (ĐIỂM)",
+   "unit": "KÊNH TỰ TÍNH · VN-INDEX ĐÓNG CỬA",
+   "bars": [
+    {
+     "label": "ĐỈNH\n06/01/2022",
+     "v": 1528.57,
+     "text": "1.529",
+     "c": "ref",
+     "at": [
+      5,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "label": "15/11/2022",
+     "v": 911.9,
+     "text": "912",
+     "c": "down",
+     "at": [
+      5,
+      "bốn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "SAU ĐOẠN TĂNG DÀI NHẤT",
+     "at": [
+      6,
+      "sau"
+     ],
+     "acc": true
+    },
+    {
+     "text": "đám đông lớn nhất thường đến",
+     "at": 6,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8369982",
+   "ms": 6,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 6
+  }
+ ],
+ "sources": [
+  "https://vneconomy.vn/1-5-trieu-tai-khoan-ca-nhan-mo-moi-ky-luc-chua-tung-co-tren-san-chung-khoan-viet-nam.htm",
+  "https://vnstocks.com/docs/vnstock-data/du-lieu-giao-dich"
+ ],
+ "theme": "ck",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

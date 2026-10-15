@@ -1,0 +1,440 @@
+{
+ "title": "Lần này có khác không?",
+ "lines": [
+  {
+   "t": "Quay lại lời tiên tri Oxford: một hoặc hai thập kỷ.",
+   "p": 0.8
+  },
+  "Đã mười ba năm trôi qua, dù mốc hai thập kỷ thì chưa tới.",
+  "Tháng 9 năm 2013, nước Mỹ có khoảng một trăm ba mươi bảy triệu việc làm ngoài nông nghiệp.",
+  "Tháng 9 năm 2026, khoảng một trăm năm mươi chín triệu.",
+  {
+   "t": "Nói cho công bằng: bài báo Oxford chỉ nói những việc ấy có thể bị tự động hoá, chứ không đoán bao nhiêu người sẽ thất nghiệp.",
+   "p": 1.0
+  },
+  "Còn AI tạo sinh thì sao?",
+  "Tháng 10 năm 2025, nhóm Budget Lab của Đại học Yale xem xét ba mươi ba tháng sau khi ChatGPT ra đời, và chưa thấy thị trường lao động Mỹ bị xáo trộn rõ rệt.",
+  "Nhưng tháng 8 năm nay, một nhóm ở Đại học Stanford, dùng dữ liệu bảng lương, công bố một chi tiết khác.",
+  "Họ cũng không thấy mất việc trên diện rộng.",
+  "Nhưng ở những nghề phơi nhiễm AI cao, người từ hai mươi hai đến hai mươi lăm tuổi có số việc làm thấp hơn khoảng mười chín phần trăm, so với mức lẽ ra họ có nếu theo kịp bạn cùng tuổi ở nghề ít phơi nhiễm.",
+  "Một năm trước, khoảng cách ấy là mười lăm phần trăm.",
+  {
+   "t": "Người nhiều kinh nghiệm thì không có khoảng cách tương tự.",
+   "p": 1.0
+  },
+  "Cơ chế chủ yếu không phải sa thải, mà là tuyển ít người trẻ hơn.",
+  "Và việc làm của người trẻ giảm ở những nghề dựa vào kiến thức đã được viết thành văn bản.",
+  {
+   "t": "Chính các tác giả nhấn mạnh: đây là mô tả, chưa phải bằng chứng rằng AI là nguyên nhân.",
+   "p": 1.0
+  },
+  "Bạn còn nhớ câu hỏi ở thời cô tổng đài chứ?",
+  "Hồi ấy, người đang làm chịu thiệt, còn lớp người đến sau vẫn ổn.",
+  "Lần này, nếu xu hướng ấy đúng, cánh cửa khép lại trước lại là cửa vào nghề.",
+  {
+   "t": "Cái giá có thể đang chuyển từ người cũ sang người mới.",
+   "p": 1.0
+  },
+  "Còn ở Việt Nam?",
+  "Năm 2016, một nghiên cứu của Tổ chức Lao động Quốc tế ILO ước tính: ở Campuchia, Indonesia và Việt Nam, từ sáu mươi tư đến tám mươi tám phần trăm lao động dệt may và giày da có rủi ro cao bị tự động hoá thay thế.",
+  "Các tác giả nói rõ: rủi ro, không có nghĩa là chắc chắn.",
+  "Năm 2017, ngành may mặc và giày da Việt Nam có gần ba triệu lao động chính thức, gấp gần sáu lần so với khoảng năm 2000.",
+  "Năm 2020, một nghiên cứu khác do ILO đồng xuất bản vẫn thấy tự động hoá trong ngành may còn hạn chế.",
+  "Ít nhất tới năm 2020, lời cảnh báo ấy chưa thành sự thật.",
+  {
+   "t": "Lần này có khác không? Câu trả lời trung thực nhất là: chưa ai biết chắc.",
+   "p": 1.0
+  }
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "7",
+   "k": "CHƯƠNG BẢY",
+   "title": "LẦN NÀY\nCÓ KHÁC KHÔNG?",
+   "sub": "2013 — 2026",
+   "vid": "37439076",
+   "titleAt": [
+    0,
+    "Quay"
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 1,
+   "items": [
+    {
+     "year": "2013",
+     "text": "Oxford: 1–2 thập kỷ",
+     "at": 1
+    },
+    {
+     "year": "2026",
+     "text": "*13 năm*",
+     "at": [
+      1,
+      "mười"
+     ]
+    },
+    {
+     "year": "≈ 2033",
+     "text": "mốc 2 thập kỷ · chưa tới",
+     "at": [
+      1,
+      "mốc"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 2,
+   "title": "VIỆC LÀM NGOÀI NÔNG NGHIỆP Ở MỸ",
+   "unit": "FRED · PAYEMS",
+   "items": [
+    {
+     "k": "09.2013",
+     "v": 136.8,
+     "lbl": "≈ 137 TRIỆU",
+     "at": [
+      2,
+      "một"
+     ]
+    },
+    {
+     "k": "09.2026 (SƠ BỘ)",
+     "v": 159.0,
+     "lbl": "≈ 159 TRIỆU",
+     "at": 3,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "NÓI CHO CÔNG BẰNG",
+     "at": 4,
+     "sm": true
+    },
+    {
+     "text": "OXFORD: “CÓ THỂ BỊ TỰ ĐỘNG HOÁ”",
+     "at": [
+      4,
+      "bài"
+     ]
+    },
+    {
+     "text": "KHÔNG ĐOÁN BAO NHIÊU NGƯỜI THẤT NGHIỆP",
+     "at": [
+      4,
+      "chứ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 5,
+   "vid": "9898442",
+   "ms": 1,
+   "text": "Còn AI tạo sinh thì sao?"
+  },
+  {
+   "type": "date",
+   "at": 6,
+   "day": "YALE BUDGET LAB",
+   "date": "10.2025",
+   "label": {
+    "k": "33 THÁNG SAU CHATGPT",
+    "v": "CHƯA THẤY THỊ TRƯỜNG LAO ĐỘNG MỸ XÁO TRỘN RÕ RỆT",
+    "at": [
+     6,
+     "ba"
+    ]
+   }
+  },
+  {
+   "type": "date",
+   "at": 7,
+   "day": "ĐẠI HỌC STANFORD · DỮ LIỆU BẢNG LƯƠNG",
+   "date": "08.2026",
+   "label": {
+    "k": "STANFORD DIGITAL ECONOMY LAB",
+    "v": "MỘT CHI TIẾT KHÁC",
+    "at": [
+     7,
+     "một",
+     1
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "text": "KHÔNG MẤT VIỆC\nTRÊN DIỆN RỘNG",
+   "sub": "STANFORD · 2026"
+  },
+  {
+   "type": "bars",
+   "at": 9,
+   "title": "NGƯỜI 22–25 TUỔI · NGHỀ PHƠI NHIỄM AI CAO",
+   "unit": "MÔ TẢ, CHƯA PHẢI NHÂN QUẢ",
+   "items": [
+    {
+     "k": "07.2025",
+     "v": 15,
+     "lbl": "≈ −15%",
+     "at": 10
+    },
+    {
+     "k": "06.2026",
+     "v": 19,
+     "lbl": "≈ −19%",
+     "at": [
+      9,
+      "mười"
+     ],
+     "acc": true
+    },
+    {
+     "k": "NGƯỜI NHIỀU KINH NGHIỆM",
+     "v": 0,
+     "lbl": "KHÔNG CÓ",
+     "at": 11
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 12,
+   "vid": "7685209",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "KHÔNG PHẢI SA THẢI",
+     "at": 12,
+     "sm": true
+    },
+    {
+     "text": "MÀ LÀ TUYỂN ÍT NGƯỜI TRẺ HƠN",
+     "at": [
+      12,
+      "mà"
+     ],
+     "acc": true
+    },
+    {
+     "text": "nghề dựa vào kiến thức đã viết thành văn bản",
+     "at": 13,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "CHÍNH CÁC TÁC GIẢ NHẤN MẠNH",
+     "at": 14,
+     "sm": true
+    },
+    {
+     "text": "MÔ TẢ, CHƯA PHẢI NHÂN QUẢ",
+     "at": [
+      14,
+      "mô"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 15,
+   "img": "switchboard",
+   "tone": "bw",
+   "move": "out",
+   "veil": 0.5,
+   "kin": [
+    {
+     "text": "CÒN NHỚ CÔ TỔNG ĐÀI?",
+     "at": 15,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 16,
+   "title": "HỒI ẤY · CÔ TỔNG ĐÀI",
+   "rows": [
+    {
+     "k": "NGƯỜI ĐANG LÀM",
+     "v": "CHỊU THIỆT",
+     "at": 16
+    },
+    {
+     "k": "LỚP ĐẾN SAU",
+     "v": "VẪN ỔN",
+     "at": [
+      16,
+      "còn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 17,
+   "vid": "37439076",
+   "ms": 3,
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "LẦN NÀY · NẾU XU HƯỚNG ẤY ĐÚNG",
+     "at": 17,
+     "sm": true
+    },
+    {
+     "text": "CỬA VÀO NGHỀ KHÉP LẠI TRƯỚC",
+     "at": [
+      17,
+      "cánh"
+     ],
+     "acc": true
+    },
+    {
+     "text": "CÁI GIÁ CÓ THỂ ĐANG CHUYỂN: NGƯỜI CŨ → NGƯỜI MỚI",
+     "at": 18
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 19,
+   "vid": "31359566",
+   "text": "Còn ở Việt Nam?"
+  },
+  {
+   "type": "broll",
+   "at": 20,
+   "vid": "31359566",
+   "ms": 4,
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "ILO · 2016",
+     "at": 20,
+     "sm": true
+    },
+    {
+     "text": "CAMPUCHIA · INDONESIA · VIỆT NAM",
+     "at": [
+      20,
+      "Campuchia,"
+     ]
+    },
+    {
+     "text": "64–88% LAO ĐỘNG DỆT MAY, GIÀY DA: RỦI RO CAO",
+     "at": [
+      20,
+      "sáu"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 21,
+   "items": [
+    {
+     "text": "CÁC TÁC GIẢ NÓI RÕ",
+     "at": 21,
+     "sm": true
+    },
+    {
+     "text": "RỦI RO ≠ CHẮC CHẮN",
+     "at": [
+      21,
+      "rủi"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 22,
+   "vid": "18092543",
+   "from": 511364,
+   "to": 2984980,
+   "label": "LAO ĐỘNG CHÍNH THỨC · MAY MẶC & GIÀY DA VIỆT NAM · 2017",
+   "sub": {
+    "text": "GẤP GẦN 6 LẦN SO VỚI KHOẢNG NĂM 2000 (511.364)",
+    "at": [
+     22,
+     "gấp"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 23,
+   "items": [
+    {
+     "text": "ILO–IFC · 2020",
+     "at": 23,
+     "sm": true
+    },
+    {
+     "text": "TỰ ĐỘNG HOÁ NGÀNH MAY: CÒN HẠN CHẾ",
+     "at": [
+      23,
+      "tự"
+     ]
+    },
+    {
+     "text": "ÍT NHẤT TỚI 2020: CẢNH BÁO CHƯA THÀNH SỰ THẬT",
+     "at": 24,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 25,
+   "items": [
+    {
+     "text": "“LẦN NÀY CÓ KHÁC KHÔNG?”",
+     "at": 25,
+     "fx": "type"
+    },
+    {
+     "text": "CHƯA AI BIẾT CHẮC",
+     "at": [
+      25,
+      "chưa"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 07",
+  "t": "LẦN NÀY CÓ KHÁC KHÔNG?"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.55
+ }
+}

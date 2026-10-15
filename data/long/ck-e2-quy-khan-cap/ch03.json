@@ -1,0 +1,257 @@
+{
+ "title": "Ô thứ ba: mỗi tháng bao nhiêu?",
+ "lines": [
+  {
+   "t": "Ô thứ ba là ô duy nhất bạn điều khiển được ngay từ tháng này.",
+   "p": 0.8
+  },
+  "Giả sử An để dành được một triệu rưỡi mỗi tháng.",
+  {
+   "t": "Hai mươi tư triệu chia cho một triệu rưỡi, là mười sáu tháng.",
+   "p": 1.0
+  },
+  "Mười sáu tháng nghe thật dài.",
+  "Nhưng hãy nhìn những cột mốc dọc đường.",
+  "Sau khoảng năm tháng, An đã có đủ một tháng thiết yếu.",
+  {
+   "t": "Tức là một lần hỏng xe, một lần ốm nhẹ, không còn làm An chao đảo.",
+   "p": 1.0
+  },
+  "Sau khoảng mười tháng, An có đủ tiền cho tờ hoá đơn mười lăm triệu ở đầu video.",
+  {
+   "t": "Và tới tháng thứ mười sáu, tấm đệm ba tháng đã xong.",
+   "p": 1.0
+  },
+  "Điều quan trọng là quỹ này không cần đầy mới có tác dụng.",
+  "Mỗi tháng để vào, tấm đệm dày thêm một lớp.",
+  {
+   "t": "Một tấm đệm mỏng vẫn hơn hẳn mặt đất.",
+   "p": 1.0
+  },
+  "Có một mẹo nhỏ mà nhiều người dùng.",
+  "Đừng để dành phần còn lại sau khi tiêu.",
+  "Hãy chuyển khoản ấy đi ngay trong ngày nhận lương, sang một tài khoản riêng.",
+  "Tiền không nằm trước mắt thì khó bị tiêu hơn.",
+  {
+   "t": "Trả cho mình trước.",
+   "p": 1.0
+  },
+  "Còn nếu An chỉ để được một triệu thì sao?",
+  "Hai mươi tư tháng. Chậm hơn, nhưng vẫn tới.",
+  "Và nếu chưa để được đồng nào? Khi ấy, việc đầu tiên là nhìn lại ô thứ nhất.",
+  "Nhưng nếu không có tấm đệm ấy, cái giá là bao nhiêu? Mình quay lại phiên bản thứ hai của An."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "Ô THỨ BA",
+   "title": "MỖI THÁNG\nBAO NHIÊU?",
+   "sub": "Ô DUY NHẤT BẠN ĐIỀU KHIỂN ĐƯỢC NGAY",
+   "vid": "12033695",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Ô"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "PHÉP CHIA CỦA AN",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · AN LÀ NHÂN VẬT GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "ĐÍCH 3 THÁNG",
+     "v": "24 TRIỆU",
+     "at": [
+      2,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "k": "MỖI THÁNG ĐỂ DÀNH",
+     "v": "1,5 TRIỆU",
+     "at": [
+      2,
+      "một"
+     ]
+    }
+   ],
+   "total": {
+    "k": "24 ÷ 1,5",
+    "v": "16 THÁNG",
+    "at": [
+     2,
+     "mười"
+    ]
+   }
+  },
+  {
+   "type": "race",
+   "at": 3,
+   "abs": true,
+   "unit": "TRIỆU",
+   "xlab": "THÁNG ",
+   "xstep": 4,
+   "dates": [
+    "thang__00",
+    "thang__01",
+    "thang__02",
+    "thang__03",
+    "thang__04",
+    "thang__05",
+    "thang__06",
+    "thang__07",
+    "thang__08",
+    "thang__09",
+    "thang__10",
+    "thang__11",
+    "thang__12",
+    "thang__13",
+    "thang__14",
+    "thang__15",
+    "thang__16"
+   ],
+   "title": "TẤM ĐỆM CỦA AN DÀY DẦN",
+   "range": "TRIỆU ĐỒNG · THEO THÁNG",
+   "drawAt": [
+    3,
+    null,
+    0,
+    0.1
+   ],
+   "until": [
+    8,
+    "tấm"
+   ],
+   "series": [
+    {
+     "label": "QUỸ · 1,5 TR/THÁNG",
+     "color": "#22c55e",
+     "vals": [
+      0.0,
+      1.5,
+      3.0,
+      4.5,
+      6.0,
+      7.5,
+      9.0,
+      10.5,
+      12.0,
+      13.5,
+      15.0,
+      16.5,
+      18.0,
+      19.5,
+      21.0,
+      22.5,
+      24.0
+     ]
+    }
+   ],
+   "source": "VÍ DỤ GIẢ ĐỊNH · THIẾT YẾU 8 TRIỆU, ĐỂ DÀNH 1,5 TRIỆU MỖI THÁNG"
+  },
+  {
+   "type": "timeline",
+   "at": 9,
+   "items": [
+    {
+     "year": "THÁNG 5",
+     "text": "đủ một tháng thiết yếu",
+     "at": [
+      9,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "year": "THÁNG 10",
+     "text": "đủ tờ hoá đơn 15 triệu",
+     "at": 10
+    },
+    {
+     "year": "THÁNG 16",
+     "text": "xong tấm đệm ba tháng",
+     "at": 11
+    }
+   ],
+   "tag": {
+    "text": "VÍ DỤ GIẢ ĐỊNH · THIẾT YẾU 8 TRIỆU, ĐỂ DÀNH 1,5 TRIỆU MỖI THÁNG",
+    "at": 9
+   }
+  },
+  {
+   "type": "broll",
+   "at": 12,
+   "vid": "6771532",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MỘT MẸO NHỎ",
+     "at": 12,
+     "sm": true
+    },
+    {
+     "text": "CHUYỂN ĐI NGAY NGÀY NHẬN LƯƠNG",
+     "at": [
+      14,
+      "ngay"
+     ],
+     "acc": true
+    },
+    {
+     "text": "trả cho mình trước",
+     "at": 16,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 17,
+   "title": "SỐ THÁNG ĐỂ CÓ 24 TRIỆU",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · AN LÀ NHÂN VẬT GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "ĐỂ DÀNH 1,5 TRIỆU/THÁNG",
+     "v": 16,
+     "lbl": "16",
+     "at": [
+      17,
+      null,
+      0,
+      0.05
+     ],
+     "acc": true
+    },
+    {
+     "k": "ĐỂ DÀNH 1 TRIỆU/THÁNG",
+     "v": 24,
+     "lbl": "24",
+     "at": [
+      18,
+      "Hai"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 20,
+   "text": "Không có tấm đệm ấy,\ncái giá là bao nhiêu?"
+  }
+ ],
+ "hud": {
+  "k": "Ô 03",
+  "t": "MỖI THÁNG BAO NHIÊU?"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

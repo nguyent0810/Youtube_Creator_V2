@@ -2,7 +2,9 @@
 
     python scripts/publish_batch.py check              # không đăng gì
     python scripts/publish_batch.py probe  <slug>      # đăng 1 video, KHÔNG hẹn giờ
-    python scripts/publish_batch.py run    [--limit N] # đăng thật, có hẹn giờ
+    python scripts/publish_batch.py run    [--limit N] [--wait] # đăng thật, có hẹn giờ
+                                       # --wait: chưa tới lượt giãn nhịp thì NGỦ tới next_upload_at (in mốc) rồi đăng
+                                       # tiếp, thay vì hoãn cả lô (retro 2 mục 15: chuỗi đừng tự đoán số lần thử)
     python scripts/publish_batch.py resolve <slug> <video_id|none>   # xử lý upload "không rõ"
 
 Mọi lần ghi đi qua factory/channel.py: giãn nhịp theo kênh (CL 3 giờ/lần,
@@ -33,7 +35,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 from factory import channels, publish, store  # noqa: E402
-from factory.channel import Channel, DuplicateTitle, PacingHold, Upload  # noqa: E402
+from factory.channel import Channel, DuplicateTitle, PacingHold, Upload, upload_when_free  # noqa: E402
 from factory.youtube_api import NetworkDown, RateLimited, UploadInDoubt, UploadInterrupted  # noqa: E402
 
 CHANNEL = channels.pick()
@@ -79,8 +81,8 @@ def do_check() -> None:
           f"{it['statistics'].get('subscriberCount')} sub")
     with store.connect() as conn:
         allr = store.next_batch(conn, "assembled", limit=500, channel=CHANNEL)
-    rows = [r for r in allr if r["slug"].startswith(SLUG_PREFIX)]
-    bỏ = [r["slug"] for r in allr if not r["slug"].startswith(SLUG_PREFIX)]
+    rows = [r for r in allr if r["slug"].startswith(SLUG_PREFIX) and not r["slug"].startswith("long-")]
+    bỏ = [r["slug"] for r in allr if r not in rows]
     print(f"sẵn sàng đăng: {len(rows)} item (khớp {', '.join(SLUG_PREFIX)})")
     if bỏ:
         print(f"BỎ QUA {len(bỏ)} item không khớp tiền tố: {bỏ}")
@@ -154,7 +156,9 @@ def do_run(limit: int) -> None:
     tok = publish.access_token(_creds())       # chỉ cho các lệnh ĐỌC bên dưới
     with store.connect() as conn:
         allr = store.next_batch(conn, "assembled", limit=500, channel=CHANNEL)
-        match = [r for r in allr if r["slug"].startswith(SLUG_PREFIX)]
+        # Video dài ("long-…") CHỈ đăng qua motion/long/publish_long.py (category, thumbnail, phụ đề, playlist).
+        # Lỗi 06/10/2026: lượt drip Short nhặt video dài đang chờ giãn nhịp -> lên kênh category 22, không thumbnail.
+        match = [r for r in allr if r["slug"].startswith(SLUG_PREFIX) and not r["slug"].startswith("long-")]
         rows = match[:limit]
         print(f"{len(rows)} item sẽ đăng (private + hẹn giờ), "
               f"bỏ qua {len(allr) - len(match)} item không khớp")
@@ -185,7 +189,8 @@ def do_run(limit: int) -> None:
                       f"(dời lịch lô này, hoặc --ignore-other nếu chắc chắn)")
                 continue
             try:
-                res = chan.upload(_upload_of(b, Path(r["video_path"])))
+                u = _upload_of(b, Path(r["video_path"]))
+                res = upload_when_free(chan, u) if "--wait" in sys.argv else chan.upload(u)
                 store.mark(conn, b.id, "published", video_id=res.video_id)
                 print(f"  [{i}/{len(rows)}] {b.slug}  {res.url}  hẹn {res.publish_at}"
                       f"{'  (đã có sẵn, không upload lại)' if res.reused else ''}")
@@ -219,9 +224,20 @@ def do_run(limit: int) -> None:
                 # Hết hạn mức: item này VÀ mọi item sau đều hoãn tới lúc
                 # reset, không tính là hỏng. Gọi tiếp chỉ nhận lại đúng lỗi.
                 when = publish.next_quota_reset()
+                what = "HẾT QUOTA"
+                if "uploadLimitExceeded" in str(exc):
+                    # KHÔNG phải quota API của project: YouTube giới hạn số video MỖI KÊNH được tải lên trong ~24 giờ
+                    # trượt (CK: 10 video; 12-13/10/2026 mở lại đúng ~24 giờ sau video đầu của đợt). Mốc reset quota
+                    # (nửa đêm Pacific) không liên quan -> hoãn tới 24 giờ sau video cũ nhất của 24 giờ qua.
+                    what = "KÊNH CHẠM TRẦN TẢI LÊN CỦA YOUTUBE (uploadLimitExceeded, không phải quota API)"
+                    lo = _iso(datetime.now(timezone.utc) - timedelta(hours=24))
+                    first = conn.execute("SELECT MIN(started_at) FROM upload_log WHERE channel = ? AND state = 'done' "
+                                         "AND started_at >= ?", (CHANNEL, lo)).fetchone()[0]
+                    if first:
+                        when = _iso(datetime.fromisoformat(first.replace("Z", "+00:00")) + timedelta(hours=24, minutes=10))
                 for rr in rows[i - 1:]:
                     store.defer(conn, rr["id"], f"QuotaExceeded: {exc}", when)
-                print(f"  [{i}/{len(rows)}] HẾT QUOTA — hoãn {len(rows) - i + 1} item "
+                print(f"  [{i}/{len(rows)}] {what} — hoãn {len(rows) - i + 1} item "
                       f"tới {when} (không tính là hỏng)")
                 break
             except Exception as exc:
@@ -232,6 +248,8 @@ def do_run(limit: int) -> None:
 
 
 if __name__ == "__main__":
+    from factory.console import utf8_console  # noqa: E402
+    utf8_console()  # console Windows cp1252 không in được tiếng Việt (retro 2 mục 7)
     if MODE in ("probe", "run") and channels.upload_mode(CHANNEL) == "manual":
         # Không để Channel ném ManualChannel giữa lô rồi bị đếm là "hỏng".
         sys.exit(f"kênh {CHANNEL} upload TAY: scripts/export_manual.py --channel {CHANNEL}, "

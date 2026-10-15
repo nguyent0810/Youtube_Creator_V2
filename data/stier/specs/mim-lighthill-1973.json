@@ -1,0 +1,200 @@
+{
+ "theme": "mim",
+ "title": "Bản báo cáo năm 1973 mở đầu “mùa đông AI”",
+ "description": "Hội đồng Nghiên cứu Khoa học Anh nhờ nhà toán học James Lighthill đánh giá ngành trí tuệ nhân tạo. Báo cáo của ông (viết 1972, công bố 1973) kết luận chưa phần nào của lĩnh vực tạo ra tác động lớn như đã hứa, và chỉ ra trở ngại chung: bùng nổ tổ hợp — bài toán lớn thêm một chút thì số khả năng phải xét tăng vọt. Sau đó tài trợ bị cắt giảm, nhiều phòng thí nghiệm thu hẹp; giới nghiên cứu về sau gọi giai đoạn này là “mùa đông AI”. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.",
+ "tags": [
+  "lighthill report",
+  "mùa đông ai",
+  "ai winter",
+  "bùng nổ tổ hợp",
+  "lịch sử ai",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "LỊCH SỬ AI",
+ "sub": "LIGHTHILL · 1973",
+ "acc": [
+  "đông",
+  "hứa",
+  "tổ",
+  "hợp",
+  "vọt",
+  "cạn"
+ ],
+ "lines": [
+  "Một bản báo cáo, mở đầu mùa đông của AI.",
+  "Năm 1973, nước Anh nhờ nhà toán học James Lighthill đánh giá cả ngành trí tuệ nhân tạo.",
+  "Kết luận của ông rất lạnh. Chưa phần nào tạo ra tác động lớn như đã hứa.",
+  "Ông gọi tên trở ngại chung: bùng nổ tổ hợp.",
+  "Nghĩa là bài toán chỉ lớn thêm một chút, số khả năng phải xét đã tăng vọt.",
+  "Sau đó, tiền tài trợ cạn. Phòng thí nghiệm thu hẹp.",
+  "Người ta gọi giai đoạn ấy là mùa đông AI."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MỘT BẢN BÁO CÁO",
+     "at": 0.0
+    },
+    {
+     "text": "MỞ ĐẦU MÙA ĐÔNG AI",
+     "at": [
+      0,
+      "mở"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:6550672",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NƯỚC ANH · 1973",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "BÁO CÁO LIGHTHILL",
+     "at": [
+      1,
+      "James"
+     ],
+     "acc": true
+    },
+    {
+     "text": "đánh giá cả ngành trí tuệ nhân tạo",
+     "at": [
+      1,
+      "đánh"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6550672",
+   "ms": 6,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Kết luận của Lighthill",
+   "nodes": [
+    {
+     "text": "chưa phần nào tạo ra",
+     "x": 0.5,
+     "y": 0.34,
+     "at": [
+      2,
+      "Chưa"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "tác động lớn như đã hứa",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      2,
+      "tác"
+     ],
+     "c": "acc",
+     "shape": "circle"
+    }
+   ],
+   "note": "DIỄN Ý · BÁO CÁO CÔNG BỐ 1973"
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "BÙNG NỔ TỔ HỢP",
+   "sub": "TRỞ NGẠI CHUNG"
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "BÙNG NỔ TỔ HỢP LÀ GÌ?",
+   "cards": [
+    {
+     "k": "BÀI TOÁN",
+     "v": "LỚN THÊM MỘT CHÚT",
+     "at": [
+      4,
+      "lớn"
+     ]
+    },
+    {
+     "k": "SỐ KHẢ NĂNG PHẢI XÉT",
+     "v": "TĂNG VỌT",
+     "at": [
+      4,
+      "tăng"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 5,
+   "items": [
+    {
+     "year": "1973",
+     "text": "báo cáo Lighthill",
+     "at": [
+      5,
+      null,
+      0,
+      0.1
+     ]
+    },
+    {
+     "year": "sau đó",
+     "text": "tài trợ cạn, phòng thí nghiệm thu hẹp",
+     "at": [
+      5,
+      "cạn"
+     ]
+    },
+    {
+     "year": "tên gọi",
+     "text": "“mùa đông AI”",
+     "at": [
+      6,
+      "mùa"
+     ]
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://www.chilton-computing.org.uk/inf/literature/reports/lighthill_report/p001.htm"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "=AI": "ây ai",
+  "james": "Giêm",
+  "lighthill": "Lai-hiu"
+ },
+ "imgs": {}
+}

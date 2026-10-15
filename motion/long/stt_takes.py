@@ -5,6 +5,10 @@
 Ghi tts/transcripts.json {tên_file: chữ nghe được}; file đã nghe rồi thì bỏ qua (chạy lại an toàn).
 Chấm điểm + chọn bản ở `build_long.py <topic> pick` (cần bộ chuẩn hoá số->chữ của vieneu).
 """
+import pathlib, sys  # noqa: E401
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[2]))
+from factory.console import utf8_console  # noqa: E402
+utf8_console()  # console Windows cp1252 không in được tiếng Việt (retro 2 mục 7)
 import json
 import os
 import sys

@@ -1,0 +1,294 @@
+{
+ "theme": "bud",
+ "format": "tinh-lang",
+ "hook_type": "noi-thang",
+ "open_shot": "rung-nui",
+ "voice": "Ngọc Huyền",
+ "music": "healing.mp3",
+ "gap": 1.6,
+ "title": "Tĩnh lặng: đi bộ chậm, biết từng bước chân",
+ "kicker": "TĨNH LẶNG",
+ "sub": "TĂNG CHI 5.29 · KINH HÀNH",
+ "acc": [
+  "bước",
+  "chân",
+  "biết",
+  "thở"
+ ],
+ "lines": [
+  "Lần tới đi bộ, thử biết từng bước chân.",
+  "Như thế này.",
+  "Bước chân trái. Biết.",
+  "Bước chân phải. Biết.",
+  "Hít vào, bước chậm.",
+  "Thở ra, bước chậm.",
+  "Cảm nhận gót chân chạm đất.",
+  "Tâm trôi đi, nhẹ nhàng quay về.",
+  "Không cần chùa. Hành lang cũng được.",
+  "Đức Phật dạy: đi kinh hành giúp khỏe, dễ tiêu.",
+  "Và định tâm có được khi đi, sẽ bền lâu.",
+  "Lưu lại, để đi cùng mỗi khi cần."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "clip": "pexels:33356707",
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "ĐI BỘ",
+     "at": 0.0,
+     "acc": true,
+     "size": 170
+    },
+    {
+     "text": "BIẾT TỪNG BƯỚC CHÂN",
+     "at": [
+      0,
+      "biết"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "clip": "pexels:6966116",
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "như thế này",
+     "at": [
+      1,
+      "Như"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "clip": "pexels:34981604",
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "TRÁI",
+     "at": [
+      2,
+      "trái"
+     ],
+     "acc": true
+    },
+    {
+     "text": "biết",
+     "at": [
+      2,
+      "Biết"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "clip": "pexels:8331708",
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "PHẢI",
+     "at": [
+      3,
+      "phải"
+     ],
+     "acc": true
+    },
+    {
+     "text": "biết",
+     "at": [
+      3,
+      "Biết"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "clip": "pexels:30507835",
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "HÍT VÀO",
+     "at": [
+      4,
+      "Hít"
+     ]
+    },
+    {
+     "text": "bước chậm",
+     "at": [
+      4,
+      "bước"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "clip": "pexels:32489930",
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "THỞ RA",
+     "at": [
+      5,
+      "Thở"
+     ]
+    },
+    {
+     "text": "bước chậm",
+     "at": [
+      5,
+      "bước"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "clip": "pexels:9465542",
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "GÓT CHÂN CHẠM ĐẤT",
+     "at": [
+      6,
+      "gót"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "clip": "pexels:28079464",
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "TÂM TRÔI ĐI",
+     "at": [
+      7,
+      "Tâm"
+     ]
+    },
+    {
+     "text": "nhẹ nhàng quay về",
+     "at": [
+      7,
+      "nhẹ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "clip": "pexels:29562500",
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "KHÔNG CẦN CHÙA",
+     "at": [
+      8,
+      "Không"
+     ],
+     "sm": true
+    },
+    {
+     "text": "HÀNH LANG CŨNG ĐƯỢC",
+     "at": [
+      8,
+      "Hành"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 9,
+   "text": "Đi kinh hành: khỏe, dễ tiêu, và định tâm có được khi đi sẽ bền lâu.",
+   "by": "TĂNG CHI 5.29 · DIỄN Ý",
+   "clip": "pexels:35883088",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "clip": "pexels:37469479",
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "ĐỊNH TÂM",
+     "at": [
+      10,
+      "định"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bền lâu",
+     "at": [
+      10,
+      "bền"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "clip": "pexels:5838007",
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "LƯU LẠI",
+     "at": [
+      11,
+      "Lưu"
+     ],
+     "acc": true
+    },
+    {
+     "text": "đi cùng mỗi khi cần",
+     "at": [
+      11,
+      "đi"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "description": "Tĩnh lặng: đi bộ chậm, biết từng bước chân. Kinh Tăng Chi 5.29 (diễn ý): đi kinh hành giúp đủ sức đi xa, đủ sức tinh tấn, khỏe mạnh, ăn uống dễ tiêu, và định tâm có được khi đi kinh hành sẽ bền lâu.\n\nNguồn: AN 5.29, bản dịch Bhikkhu Sujato (CC0): https://suttacentral.net/an5.29/en/sujato\nLời kinh là diễn ý; hướng dẫn là của kênh.",
+ "tags": [
+  "thiền đi",
+  "kinh hành",
+  "tĩnh lặng",
+  "chánh niệm",
+  "lời phật dạy"
+ ],
+ "sources": [
+  "https://suttacentral.net/an5.29/en/sujato"
+ ]
+}

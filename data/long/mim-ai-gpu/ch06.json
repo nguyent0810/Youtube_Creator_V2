@@ -1,0 +1,326 @@
+{
+ "title": "Từ phòng ngủ đến siêu máy tính",
+ "lines": [
+  {
+   "t": "Tháng 12 năm 2012, ở một khách sạn sòng bạc bên hồ Tahoe, nước Mỹ, có một cuộc đấu giá kín.",
+   "p": 0.8
+  },
+  "Theo lời kể của nhà báo Cade Metz, món hàng là một công ty vừa lập vội, chưa có sản phẩm nào, chỉ có ba người: Hinton, Alex và Ilya.",
+  "Bốn công ty trả giá từ xa, qua thư điện tử, mỗi lần tăng ít nhất một triệu đô.",
+  "Khi giá lên tới bốn mươi tư triệu đô, Hinton dừng cuộc đấu giá, và chọn về với Google.",
+  {
+   "t": "Ông muốn chọn nơi hợp với nghiên cứu của mình, hơn là con số cao nhất.",
+   "p": 1.0
+  },
+  "Từ lúc ấy, các phòng thí nghiệm trí tuệ nhân tạo đua nhau mua card đồ hoạ.",
+  "Tháng 8 năm 2016, Jensen Huang tự tay mang một chiếc máy tới văn phòng của một phòng thí nghiệm nhỏ ở San Francisco.",
+  "Phòng thí nghiệm ấy mới thành lập được vài tháng, tên là OpenAI. Ilya Sutskever là một trong những người sáng lập.",
+  "Chiếc máy tên là DGX-1, được Nvidia gọi là siêu máy tính đầu tiên dành riêng cho trí tuệ nhân tạo.",
+  {
+   "t": "Bên trong có tám GPU, xếp sát nhau.",
+   "p": 1.0
+  },
+  "Sáu năm sau, chính phòng thí nghiệm ấy ra mắt ChatGPT.",
+  "Từ hai chiếc card trong phòng ngủ, đến tám GPU trong một chiếc hộp, rồi đến những toà nhà chứa hàng nghìn GPU.",
+  {
+   "t": "Đó là con đường của trí tuệ nhân tạo trong một thập kỷ.",
+   "p": 1.0
+  },
+  "Chính card đồ hoạ chơi game cũng lớn lên.",
+  "Chiếc GTX 580 mà Alex dùng có năm trăm mười hai lõi tính toán.",
+  "Chiếc RTX 4090 ra mắt năm 2022 có mười sáu nghìn ba trăm tám mươi tư lõi.",
+  {
+   "t": "Gấp ba mươi hai lần, chỉ trong mười hai năm.",
+   "p": 1.0
+  },
+  "Một lưu ý nhỏ: lõi của GPU không so ngang được với lõi của CPU.",
+  "Mỗi lõi GPU nhỏ và đơn giản hơn nhiều. Vẫn là chuyện phụ bếp và đầu bếp.",
+  {
+   "t": "Điều thay đổi là số phụ bếp, và nhà bếp ngày càng giống một nhà máy.",
+   "p": 1.0
+  },
+  "Và nhà máy ấy, từ năm 2023, bắt đầu nhìn về một nơi rất gần chúng ta."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "CHƯƠNG SÁU",
+   "title": "TỪ PHÒNG NGỦ\nĐẾN SIÊU MÁY TÍNH",
+   "sub": "2012 → 2022",
+   "vid": "3147349",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "tháng"
+   ]
+  },
+  {
+   "type": "date",
+   "at": [
+    0,
+    "khách"
+   ],
+   "day": "HỒ TAHOE · ĐẤU GIÁ KÍN",
+   "date": "12.2012"
+  },
+  {
+   "type": "file",
+   "at": 1,
+   "k": "THEO LỜI KỂ CỦA CADE METZ",
+   "name": "Công ty 3 người",
+   "desc": "Lập vội · chưa có sản phẩm",
+   "rows": [
+    {
+     "k": "NGƯỜI",
+     "v": "Hinton · Alex · Ilya",
+     "at": [
+      1,
+      "hinton"
+     ]
+    },
+    {
+     "k": "TRẢ GIÁ",
+     "v": "*4 công ty* · qua thư điện tử",
+     "at": 2
+    },
+    {
+     "k": "BƯỚC GIÁ",
+     "v": "≥ 1 triệu USD",
+     "at": [
+      2,
+      "mỗi"
+     ]
+    }
+   ],
+   "label": {
+    "k": "NGUỒN",
+    "v": "WIRED 2021 · GENIUS MAKERS",
+    "at": 2
+   }
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "from": 0,
+   "to": 44000000,
+   "suffix": " USD",
+   "label": "HINTON DỪNG Ở ĐÂY · CHỌN GOOGLE"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "GIÁ CAO NHẤT",
+     "at": 4,
+     "fx": "strike",
+     "strikeAt": [
+      4,
+      "hơn"
+     ]
+    },
+    {
+     "text": "NƠI HỢP NGHIÊN CỨU",
+     "at": [
+      4,
+      "nơi"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 5,
+   "vid": "7380236",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "PHÒNG THÍ NGHIỆM AI",
+     "at": 5,
+     "sm": true
+    },
+    {
+     "text": "ĐUA NHAU MUA CARD",
+     "at": [
+      5,
+      "đua"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 6,
+   "day": "SAN FRANCISCO · GIAO TẬN TAY",
+   "date": "08.2016"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "OPENAI",
+     "at": 7,
+     "acc": true
+    },
+    {
+     "text": "mới thành lập vài tháng · Sutskever đồng sáng lập",
+     "at": [
+      7,
+      "ilya"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 8,
+   "img": "gp100",
+   "tone": "color",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "move": "in",
+   "veil": 0.5,
+   "kin": [
+    {
+     "text": "DGX-1",
+     "at": [
+      8,
+      "dgx-1"
+     ],
+     "acc": true
+    },
+    {
+     "text": "8 GPU XẾP SÁT NHAU",
+     "at": 9
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 10,
+   "day": "CHÍNH PHÒNG THÍ NGHIỆM ẤY RA MẮT CHATGPT",
+   "date": "30.11.2022"
+  },
+  {
+   "type": "timeline",
+   "at": 11,
+   "items": [
+    {
+     "year": "2012",
+     "text": "*2 card* · phòng ngủ",
+     "at": [
+      11,
+      "hai"
+     ]
+    },
+    {
+     "year": "2016",
+     "text": "*8 GPU* · một chiếc hộp",
+     "at": [
+      11,
+      "tám"
+     ]
+    },
+    {
+     "year": "NAY",
+     "text": "*hàng nghìn GPU* · toà nhà",
+     "at": [
+      11,
+      "toà"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 13,
+   "title": "LÕI TÍNH TOÁN · CARD CHƠI GAME",
+   "unit": "",
+   "items": [
+    {
+     "k": "GTX 580 · 2010",
+     "v": 512,
+     "at": 14
+    },
+    {
+     "k": "RTX 4090 · 2022",
+     "v": 16384,
+     "at": 15,
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "NGUỒN",
+    "v": "THÔNG SỐ CỦA NVIDIA",
+    "at": 14
+   }
+  },
+  {
+   "type": "slam",
+   "at": 16,
+   "text": "× 32",
+   "sub": "TRONG 12 NĂM"
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "LÕI GPU ≠ LÕI CPU",
+     "at": 17,
+     "acc": true
+    },
+    {
+     "text": "nhỏ và đơn giản hơn nhiều",
+     "at": [
+      18,
+      "nhỏ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 19,
+   "vid": "5028622",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "NHÀ BẾP",
+     "at": 19
+    },
+    {
+     "text": "→ NHÀ MÁY",
+     "at": [
+      19,
+      "nhà"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 20,
+   "text": "Nhà máy ấy\nnhìn về đâu?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 06",
+  "t": "TỪ PHÒNG NGỦ ĐẾN SIÊU MÁY TÍNH"
+ },
+ "bgm": {
+  "mood": "epic",
+  "gain": 0.1
+ }
+}

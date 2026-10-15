@@ -1,0 +1,143 @@
+{
+ "title": "Ngả thứ ba: một con người",
+ "lines": [
+  {
+   "t": "Nhiều người nghĩ cuộc trò chuyện với AI chỉ có mình và cái máy.",
+   "p": 0.8
+  },
+  "Trang quyền riêng tư của Gemini viết rõ:",
+  {
+   "t": "Một phần các cuộc trò chuyện được người đánh giá xem xét, bao gồm cả nhà cung cấp dịch vụ được Google đào tạo, để giúp cải thiện các dịch vụ của Google.",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Người đánh giá xem câu trả lời của AI có kém, sai hay gây hại không, và gợi ý câu trả lời tốt hơn.",
+  "Chi tiết đáng chú ý nằm ở thời hạn.",
+  {
+   "t": "Những cuộc trò chuyện đã được người xem xét không bị xoá khi bạn xoá lịch sử. Chúng được giữ tới ba năm.",
+   "p": 1.0
+  },
+  "Google tự đưa ra một lời khuyên ngay trên trang ấy.",
+  {
+   "t": "Xin đừng nhập thông tin bí mật mà bạn không muốn người đánh giá nhìn thấy.",
+   "q": 1,
+   "tr": 1
+  },
+  {
+   "t": "Đây là một trong những câu thật lòng nhất mà một hãng công nghệ viết cho người dùng.",
+   "p": 1.0
+  },
+  "Ngay cả khi tắt lưu hoạt động, hay dùng trò chuyện tạm thời, Google vẫn giữ cuộc trò chuyện trong bảy mươi hai giờ, để trả lời bạn và để giữ an toàn.",
+  {
+   "t": "OpenAI cũng giữ bản sao trò chuyện tạm thời tối đa ba mươi ngày, vì lý do an toàn.",
+   "p": 1.0
+  },
+  "Vậy chuyện gì xảy ra khi những gì được gõ vào không phải chuyện riêng của một người, mà là bí mật của cả một công ty?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "NGẢ THỨ BA",
+   "title": "MỘT\nCON NGƯỜI",
+   "sub": "NGƯỜI ĐÁNH GIÁ",
+   "vid": "13375774",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "nhiều"
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 2,
+   "text": "A subset of chats are reviewed by human reviewers (including Google's trained service providers) to help improve Google services.",
+   "by": "GEMINI APPS PRIVACY HUB",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 2
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "NGƯỜI ĐÁNH GIÁ LÀM GÌ",
+   "rows": [
+    {
+     "k": "1",
+     "v": "XEM CÂU TRẢ LỜI KÉM · SAI · GÂY HẠI",
+     "at": 3
+    },
+    {
+     "k": "2",
+     "v": "GỢI Ý CÂU TRẢ LỜI TỐT HƠN",
+     "at": [
+      3,
+      "gợi"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 0,
+   "to": 3,
+   "suffix": " NĂM",
+   "label": "CHAT ĐÃ ĐƯỢC NGƯỜI XEM · KHÔNG XOÁ KHI BẠN XOÁ LỊCH SỬ",
+   "sub": {
+    "text": "GEMINI APPS PRIVACY HUB",
+    "at": 5
+   }
+  },
+  {
+   "type": "quote",
+   "at": 7,
+   "text": "Please don't enter confidential information that you wouldn't want a reviewer to see…",
+   "by": "GEMINI APPS PRIVACY HUB",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 7
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "CÂU THẬT LÒNG NHẤT",
+     "at": 8,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 9,
+   "title": "DÙ ĐÃ TẮT / DÙNG TRÒ CHUYỆN TẠM THỜI",
+   "srcnote": "GEMINI APPS PRIVACY HUB · OPENAI HELP CENTER",
+   "rows": [
+    {
+     "k": "GEMINI",
+     "v": "VẪN GIỮ 72 GIỜ",
+     "at": 9
+    },
+    {
+     "k": "CHATGPT",
+     "v": "BẢN SAO TỐI ĐA 30 NGÀY · AN TOÀN",
+     "at": 10
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 11,
+   "text": "Khi đó là bí mật\ncủa cả một công ty?"
+  }
+ ],
+ "hud": {
+  "k": "NGẢ 03",
+  "t": "MỘT CON NGƯỜI"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

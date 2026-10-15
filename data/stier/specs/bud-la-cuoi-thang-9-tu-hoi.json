@@ -1,0 +1,160 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "lich-am",
+ "hook_type": "con-so",
+ "open_shot": "dong-ho-cat",
+ "voice": "Thục Đoan",
+ "music": "frost_waltz.mp3",
+ "gap": 0.1,
+ "title": "30/9 âm – ngày cuối tháng: câu hỏi Đức Phật khuyên tự hỏi",
+ "kicker": "LỊCH ÂM · 30/9",
+ "sub": "KINH TĂNG CHI 10.48",
+ "acc": [
+  "trôi",
+  "sống",
+  "chọn"
+ ],
+ "lines": [
+  "Hôm nay ba mươi tháng chín âm, ngày cuối tháng. Một tháng vừa trôi qua.",
+  "Chủ nhật, tám tháng mười một, năm hai không hai sáu.",
+  "Kinh Tăng Chi dạy, diễn ý: ngày đêm trôi qua không dừng. Ta đang sống chúng thế nào?",
+  "Không phải để trách mình. Chỉ để nhìn lại, và chọn lại.",
+  "Tháng mười âm, bạn muốn giữ một việc tốt nào? Bình luận để mình cùng giữ nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "MỘT THÁNG TRÔI QUA…",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "bạn đã sống nó thế nào?",
+     "at": [
+      0,
+      "Một"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:31112120"
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "08.11.2026",
+   "day": "CHỦ NHẬT",
+   "sub": {
+    "text": "30/9 ÂM · CUỐI THÁNG",
+    "at": [
+     1,
+     "tám"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Tự hỏi",
+   "nodes": [
+    {
+     "text": "NGÀY ĐÊM TRÔI QUA",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      2,
+      "ngày"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "TA SỐNG THẾ NÀO?",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      2,
+      "Ta"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      2,
+      "Ta"
+     ]
+    }
+   ],
+   "note": "AN 10.48 · DIỄN Ý"
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "NHÌN LẠI",
+   "cards": [
+    {
+     "k": "KHÔNG",
+     "v": "TRÁCH MÌNH",
+     "at": [
+      3,
+      "Không"
+     ]
+    },
+    {
+     "k": "MÀ",
+     "v": "CHỌN LẠI",
+     "at": [
+      3,
+      "chọn"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "GIỮ VIỆC TỐT NÀO?",
+     "at": [
+      4,
+      "Tháng"
+     ],
+     "acc": true
+    },
+    {
+     "text": "tháng 10 âm · bình luận nhé",
+     "at": [
+      4,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:39575381"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/an10.48/en/sujato"
+ ],
+ "description": "30/9 âm – ngày cuối tháng: câu hỏi Đức Phật khuyên tự hỏi\n\nNguồn: https://suttacentral.net/an10.48/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

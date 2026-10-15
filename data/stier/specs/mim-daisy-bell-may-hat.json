@@ -1,0 +1,172 @@
+{
+ "theme": "mim",
+ "title": "Bài hát đầu tiên do máy tính hát, đầu thập niên 1960: giọng rè rè, chẳng giống ai",
+ "description": "Đầu thập niên 1960, ở Phòng thí nghiệm Bell, một chiếc máy tính IBM được lập trình để hát “Daisy Bell” (bài hát viết năm 1892): được xem là bài hát đầu tiên do máy tính hát bằng giọng tổng hợp (Guinness World Records; các nguồn ghi năm 1960 hoặc 1961). Nhà văn Arthur C. Clarke từng nghe màn trình diễn ấy và đưa nó vào “2001: A Space Odyssey”: khi bị tắt dần, máy tính HAL 9000 hát lại chính bài này. Hơn 60 năm sau, máy nói được bằng giọng của một người cụ thể. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (13 phút): https://youtu.be/sywk-F-yW7k (công khai từ 20:00 ngày 26/10).",
+ "tags": [
+  "daisy bell",
+  "bell labs",
+  "hal 9000",
+  "tổng hợp giọng nói",
+  "ai giả giọng",
+  "lừa đảo",
+  "deepfake",
+  "an toàn mạng",
+  "mind in the machine"
+ ],
+ "sub": "BELL LABS · 196X",
+ "acc": [
+  "hát",
+  "rè",
+  "phim",
+  "sáu",
+  "ai"
+ ],
+ "kicker": "AI VÀ LỪA ĐẢO",
+ "lines": [
+  "Đầu thập niên 1960, lần đầu tiên, một chiếc máy tính cất tiếng hát.",
+  "Ở Phòng thí nghiệm Bell, một chiếc máy tính IBM được lập trình để hát một bài viết từ năm 1892.",
+  "Bài ấy tên là Daisy Bell.",
+  "Giọng nó rè rè, đều đều, chẳng giống giọng của ai.",
+  "Một nhà văn nghe được, và đưa nó vào một bộ phim nổi tiếng.",
+  "Trong phim, khi bị tắt dần, cỗ máy hát lại chính bài ấy.",
+  "Hơn sáu mươi năm sau, máy không còn rè nữa. Nó nói bằng giọng của một người bạn quen."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "ĐẦU THẬP NIÊN 1960",
+     "at": 0.0,
+     "sm": true
+    },
+    {
+     "text": "MÁY TÍNH CẤT TIẾNG HÁT",
+     "at": [
+      0,
+      "một"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:12271136",
+   "veil": 0.55
+  },
+  {
+   "type": "timeline",
+   "at": 1,
+   "items": [
+    {
+     "year": "1892",
+     "text": "bài hát “Daisy Bell” ra đời",
+     "at": [
+      1,
+      "viết"
+     ]
+    },
+    {
+     "year": "196x",
+     "text": "một chiếc máy tính IBM hát bài ấy",
+     "at": [
+      2,
+      null,
+      0,
+      0.05
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "GIỌNG RÈ RÈ, ĐỀU ĐỀU",
+     "at": 3,
+     "acc": true
+    },
+    {
+     "text": "chẳng giống giọng của ai",
+     "at": [
+      3,
+      "chẳng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7606358",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 3
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "TỪ PHÒNG THÍ NGHIỆM VÀO PHIM",
+   "cards": [
+    {
+     "k": "NHÀ VĂN",
+     "v": "A. C. CLARKE",
+     "at": [
+      4,
+      "Một"
+     ]
+    },
+    {
+     "k": "CỖ MÁY TRONG PHIM",
+     "v": "HAL 9000",
+     "at": [
+      5,
+      "cỗ"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "“2001: A SPACE ODYSSEY” · 1968"
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "from": 60,
+   "to": 60,
+   "prefix": "> ",
+   "suffix": " NĂM SAU",
+   "label": "MÁY NÓI BẰNG GIỌNG MỘT NGƯỜI CỤ THỂ",
+   "until": [
+    6,
+    "năm"
+   ],
+   "sub": {
+    "text": "TỪ GIỌNG RÈ RÈ TỚI GIỌNG NGƯỜI QUEN",
+    "at": [
+     6,
+     "Nó"
+    ]
+   }
+  }
+ ],
+ "sources": [
+  "https://www.guinnessworldrecords.com/world-records/454935-first-song-performed-using-computer-speech-synthesis"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "=AI": "ây ai",
+  "bell": "Ben",
+  "ibm": "ai bi em",
+  "daisy": "Đây-di"
+ },
+ "imgs": {}
+}

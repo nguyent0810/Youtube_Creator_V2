@@ -1,0 +1,166 @@
+{
+ "theme": "mim",
+ "title": "Hai mươi năm sau, Kasparov trả lời: Deep Blue không gian lận. Cuốn sách năm 2017",
+ "description": "Năm 2017, Kasparov xuất bản cuốn Deep Thinking về trí tuệ nhân tạo. Theo bài điểm sách của Jonathan Schaeffer (MIT Technology Review), sau hai mươi năm, câu trả lời của ông cho câu hỏi Deep Blue có gian lận không là: không. Ông xin lỗi, nhận mình là người thua không đẹp, nhưng vẫn phê phán việc IBM dùng trận đấu để quảng bá. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/TG7ZShLM4LA (công khai từ 20:00 ngày 12/11).",
+ "tags": [
+  "deep thinking",
+  "kasparov 2017",
+  "deep blue",
+  "kasparov",
+  "máy tính chơi cờ",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "DEEP THINKING · 2017",
+ "acc": [
+  "không",
+  "hai",
+  "mươi",
+  "xin",
+  "lỗi"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Hai mươi năm để nói một chữ: không.",
+  "Năm 1997, sau khi thua Deep Blue, Kasparov nghi đã có người giúp cỗ máy trong lúc thi đấu.",
+  "Nhiều năm, khi được hỏi, ông chỉ trả lời: tôi không biết.",
+  "Năm 2017, ông xuất bản một cuốn sách về trí tuệ nhân tạo.",
+  "Theo các bài điểm sách, câu trả lời lần này là: không, nó không gian lận.",
+  "Ông xin lỗi, và nhận mình đã là một người thua không mấy đẹp. Nhưng vẫn cho rằng IBM dùng trận đấu để quảng bá.",
+  "Từ nghi ngờ tới chấp nhận, nhà vô địch cần hai mươi năm."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "“KHÔNG”",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "câu trả lời sau hai mươi năm",
+     "at": [
+      0,
+      "Hai"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8758291",
+   "ms": 3,
+   "veil": 0.55
+  },
+  {
+   "type": "timeline",
+   "at": 1,
+   "items": [
+    {
+     "year": "1997",
+     "text": "nghi có người giúp máy",
+     "at": [
+      1,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "year": "SAU ĐÓ",
+     "text": "“tôi không biết”",
+     "at": 2
+    },
+    {
+     "year": "2017",
+     "text": "“không”",
+     "at": 4
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "DEEP THINKING",
+     "at": 3,
+     "acc": true
+    },
+    {
+     "text": "sách của Kasparov · 2017",
+     "at": [
+      3,
+      "ông"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8720746",
+   "ms": 8,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 3
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "TRONG CUỐN SÁCH",
+   "cards": [
+    {
+     "k": "ÔNG XIN LỖI",
+     "v": "THUA KHÔNG ĐẸP",
+     "at": 5
+    },
+    {
+     "k": "VẪN CHO RẰNG",
+     "v": "IBM MUỐN QUẢNG BÁ",
+     "at": [
+      5,
+      "Nhưng"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "from": 20,
+   "to": 20,
+   "suffix": " NĂM",
+   "label": "TỪ NGHI NGỜ TỚI CHẤP NHẬN",
+   "sub": {
+    "text": "1997 → 2017",
+    "at": [
+     6,
+     "nhà"
+    ]
+   }
+  }
+ ],
+ "sources": [
+  "https://www.technologyreview.com/2017/07/10/150540/kasparov-thinks-deeply-about-his-battle-with-a-machine/"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "deep": "Đíp",
+  "blue": "Blu",
+  "ibm": "ai bi em",
+  "=IBM": "ai bi em",
+  "kasparov": "Cát-xpa-rốp"
+ },
+ "imgs": {}
+}

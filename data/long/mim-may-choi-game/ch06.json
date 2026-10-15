@@ -1,0 +1,135 @@
+{
+ "title": "Một con số có hai mươi sáu chữ số không",
+ "lines": [
+  {
+   "t": "Giờ là điều thứ tư trong danh sách: số lựa chọn ở mỗi khoảnh khắc.",
+   "p": 0.8
+  },
+  {
+   "t": "Trong cờ vua, ở một thế cờ trung bình, bạn có khoảng vài chục nước hợp lệ.",
+   "p": 1.0
+  },
+  "Trong StarCraft, theo DeepMind, ở mỗi bước, trung bình có khoảng mười mũ hai mươi sáu hành động hợp lệ.",
+  {
+   "t": "Tức là số một, theo sau là hai mươi sáu chữ số không.",
+   "p": 1.0
+  },
+  "Vì sao nhiều đến thế?",
+  "Vì mỗi hành động là một tổ hợp: chọn đơn vị nào, cho nó làm gì, và làm ở vị trí nào trên bản đồ.",
+  {
+   "t": "Nhân những lựa chọn ấy với nhau, con số phình ra rất nhanh.",
+   "p": 1.0
+  },
+  "Và cỗ máy phải chọn như thế, liên tục, trong một ván có thể dài tới một giờ.",
+  "Không thể duyệt hết như Deep Blue từng duyệt cờ vua.",
+  {
+   "t": "Cũng không thể nhìn trước nhiều bước như AlphaGo, vì sương mù khiến tương lai mờ mịt hơn nhiều.",
+   "p": 1.0
+  },
+  "Vậy cỗ máy bắt đầu học từ đâu?",
+  "Câu trả lời của DeepMind là: bắt đầu từ con người."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "CHƯƠNG SÁU",
+   "title": "MỘT CON SỐ CÓ\nHAI MƯƠI SÁU SỐ KHÔNG",
+   "sub": "ĐIỀU THỨ TƯ",
+   "vid": "1085656",
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU",
+   "titleAt": [
+    0,
+    null,
+    0,
+    0.05
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 1,
+   "title": "SỐ CHỮ SỐ · LỰA CHỌN MỖI BƯỚC",
+   "unit": "THEO DEEPMIND 01/2019",
+   "items": [
+    {
+     "k": "CỜ VUA",
+     "v": 2,
+     "lbl": "VÀI CHỤC",
+     "at": 1
+    },
+    {
+     "k": "STARCRAFT",
+     "v": 27,
+     "lbl": "≈ 10^26",
+     "at": 2,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "VÌ SAO NHIỀU ĐẾN THẾ",
+   "rows": [
+    {
+     "k": "CHỌN",
+     "v": "ĐƠN VỊ NÀO",
+     "at": [
+      5,
+      null,
+      0,
+      0.3
+     ]
+    },
+    {
+     "k": "CHO NÓ",
+     "v": "LÀM GÌ",
+     "at": [
+      5,
+      null,
+      0,
+      0.5
+     ]
+    },
+    {
+     "k": "Ở",
+     "v": "VỊ TRÍ NÀO",
+     "at": [
+      5,
+      null,
+      0,
+      0.75
+     ]
+    }
+   ],
+   "total": {
+    "k": "NHÂN LẠI",
+    "v": "PHÌNH RẤT NHANH",
+    "at": 6
+   }
+  },
+  {
+   "type": "myth",
+   "at": 8,
+   "mythLab": "DEEP BLUE · ALPHAGO",
+   "myth": "DUYỆT HẾT · NHÌN TRƯỚC",
+   "truthLab": "STARCRAFT",
+   "truth": "KHÔNG THỂ",
+   "strikeAt": 8,
+   "truthAt": 9
+  },
+  {
+   "type": "question",
+   "at": 10,
+   "text": "Vậy cỗ máy\nbắt đầu học từ đâu?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 06",
+  "t": "MƯỜI MŨ HAI MƯƠI SÁU"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

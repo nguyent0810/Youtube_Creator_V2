@@ -1,0 +1,220 @@
+{
+ "title": "Bật tắt từng ngả",
+ "lines": [
+  {
+   "t": "Quay lại tấm bản đồ ba ngả. Mỗi ngả có một công tắc.",
+   "p": 0.8
+  },
+  {
+   "t": "Tên nút có thể khác theo gói, theo vùng và theo phiên bản, nhưng chức năng thì giống nhau.",
+   "p": 1.0
+  },
+  "Ngả trí nhớ: vào phần cài đặt, mục cá nhân hoá hoặc trí nhớ.",
+  {
+   "t": "Xem nó đang nhớ gì về bạn, xoá những gì không muốn giữ, hoặc tắt hẳn.",
+   "p": 1.0
+  },
+  "Ngả huấn luyện: với ChatGPT là công tắc Improve the model for everyone trong phần kiểm soát dữ liệu.",
+  "Với Claude là cài đặt cho phép dùng dữ liệu để huấn luyện trong phần quyền riêng tư.",
+  {
+   "t": "Với Gemini là Keep Activity.",
+   "p": 1.0
+  },
+  "Ngả con người: không có công tắc nào tắt được hoàn toàn.",
+  "Cách duy nhất là cẩn thận với những gì bạn gõ.",
+  {
+   "t": "Khi cần hỏi chuyện nhạy cảm, hãy dùng chế độ trò chuyện tạm thời: không lưu vào lịch sử, không dùng để huấn luyện, dù vẫn có thể được giữ một thời gian ngắn vì lý do an toàn.",
+   "p": 1.0
+  },
+  "Và có năm thứ không nên dán vào chatbot nào, dù đã tắt mọi công tắc.",
+  "Số căn cước. Mật khẩu và mã xác thực. Số tài khoản, số thẻ ngân hàng.",
+  {
+   "t": "Thông tin riêng của người khác. Và tài liệu nội bộ của nơi bạn làm.",
+   "p": 1.0
+  },
+  "Cuối cùng, nút chia sẻ.",
+  {
+   "t": "Một đường link chia sẻ là một cánh cửa mở. Ai có link đều đọc được, và bốn nghìn rưỡi cuộc trò chuyện năm 2025 là lời nhắc rằng cánh cửa ấy có thể mở rộng hơn bạn tưởng.",
+   "p": 1.0
+  },
+  "AI không học từ bạn trong từng câu trò chuyện.",
+  "Nhưng những gì bạn gõ có thể đi xa hơn cuộc trò chuyện ấy rất nhiều.",
+  "Còn bạn, bạn đã từng dán vào chatbot thứ gì mà giờ nghĩ lại thấy hơi lo không? Kể cho mình nghe ở phần bình luận nhé, nhớ đừng dán lại nó."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "7",
+   "k": "CHƯƠNG BẢY",
+   "title": "BẬT TẮT\nTỪNG NGẢ",
+   "sub": "TÊN NÚT CÓ THỂ KHÁC THEO GÓI / VÙNG / PHIÊN BẢN",
+   "vid": "6963823",
+   "ms": 20,
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "quay"
+   ]
+  },
+  {
+   "type": "file",
+   "at": 2,
+   "k": "MÔ PHỎNG · DỰNG BẰNG CHỮ THEO TRANG TRỢ GIÚP, ĐỌC 09.10.2026",
+   "name": "Ngả 1 · Trí nhớ",
+   "desc": "Cài đặt → Cá nhân hoá / Trí nhớ",
+   "rows": [
+    {
+     "k": "XEM",
+     "v": "đang nhớ gì về bạn",
+     "at": 3
+    },
+    {
+     "k": "XOÁ / TẮT",
+     "v": "những gì không muốn giữ",
+     "at": [
+      3,
+      "xoá"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 4,
+   "k": "MÔ PHỎNG · DỰNG BẰNG CHỮ THEO TRANG TRỢ GIÚP, ĐỌC 09.10.2026",
+   "name": "Ngả 2 · Huấn luyện",
+   "desc": "Mỗi ứng dụng một công tắc",
+   "rows": [
+    {
+     "k": "CHATGPT",
+     "v": "*Improve the model for everyone* · Data controls",
+     "at": 4
+    },
+    {
+     "k": "CLAUDE",
+     "v": "cài đặt huấn luyện · Privacy",
+     "at": 5
+    },
+    {
+     "k": "GEMINI",
+     "v": "*Keep Activity*",
+     "at": 6
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "NGẢ 3 · CON NGƯỜI",
+     "at": 7,
+     "sm": true
+    },
+    {
+     "text": "KHÔNG CÓ CÔNG TẮC",
+     "at": [
+      7,
+      "không"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "TRÒ CHUYỆN TẠM THỜI",
+     "at": 9,
+     "acc": true
+    },
+    {
+     "text": "không lưu lịch sử · không huấn luyện · vẫn giữ ngắn hạn",
+     "at": [
+      9,
+      "không"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 10,
+   "title": "5 THỨ KHÔNG DÁN VÀO CHATBOT NÀO",
+   "rows": [
+    {
+     "k": "1",
+     "v": "SỐ CĂN CƯỚC",
+     "at": 11
+    },
+    {
+     "k": "2",
+     "v": "MẬT KHẨU · MÃ XÁC THỰC",
+     "at": [
+      11,
+      "mật"
+     ]
+    },
+    {
+     "k": "3",
+     "v": "SỐ TÀI KHOẢN · SỐ THẺ",
+     "at": [
+      11,
+      "tài"
+     ]
+    },
+    {
+     "k": "4",
+     "v": "THÔNG TIN RIÊNG CỦA NGƯỜI KHÁC",
+     "at": 12
+    },
+    {
+     "k": "5",
+     "v": "TÀI LIỆU NỘI BỘ NƠI LÀM VIỆC",
+     "at": [
+      12,
+      "tài"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "NÚT CHIA SẺ",
+     "at": 13,
+     "sm": true
+    },
+    {
+     "text": "= CÁNH CỬA MỞ",
+     "at": 14,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 15,
+   "text": "KHÔNG HỌC TỪNG CÂU",
+   "sub": "NHƯNG ĐI XA HƠN CUỘC TRÒ CHUYỆN RẤT NHIỀU"
+  },
+  {
+   "type": "question",
+   "at": 17,
+   "text": "Bạn từng dán thứ gì\nmà giờ thấy hơi lo?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 07",
+  "t": "BẬT TẮT TỪNG NGẢ"
+ },
+ "bgm": {
+  "mood": "upbeat",
+  "gain": 0.1
+ }
+}

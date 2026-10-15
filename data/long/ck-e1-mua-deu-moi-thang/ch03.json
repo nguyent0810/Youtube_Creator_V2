@@ -1,0 +1,345 @@
+{
+ "title": "Anh Xui và chị May",
+ "lines": [
+  {
+   "t": "Bây giờ tới hai nhân vật còn lại.",
+   "p": 0.8
+  },
+  "Họ không mua hằng tháng.",
+  {
+   "t": "Mỗi năm, họ gom đủ tiền của cả năm, rồi mua đúng một lần.",
+   "p": 1.0
+  },
+  "Anh Xui là người đen đủi nhất mà bạn có thể tưởng tượng.",
+  "Năm nào anh cũng mua đúng ngày chỉ số đóng cửa cao nhất năm.",
+  "Năm hai nghìn không trăm hai mươi hai, anh mua đúng ngày sáu tháng một, đúng đỉnh của cả chu kỳ.",
+  {
+   "t": "Năm nay, anh mua đúng giữa tháng năm, lúc chỉ số lập kỷ lục.",
+   "p": 1.0
+  },
+  "Chị May thì ngược lại, như có phép.",
+  "Năm nào chị cũng mua đúng ngày thấp nhất năm.",
+  {
+   "t": "Năm hai nghìn không trăm hai mươi, chị mua đúng ngày hai mươi bốn tháng ba. Đúng cái ngày trong tin nhắn đầu video.",
+   "p": 1.0
+  },
+  "Cả ba người, cùng nộp hai trăm chín mươi mốt triệu.",
+  "Chị May về đích với khoảng năm trăm hai mươi sáu triệu.",
+  "Cô Đều, bốn trăm ba mươi bảy triệu.",
+  {
+   "t": "Còn anh Xui?",
+   "p": 1.0
+  },
+  "Ba trăm tám mươi mốt triệu.",
+  {
+   "t": "Người đen đủi nhất, tám năm liền mua đúng đỉnh, vẫn lãi khoảng ba mươi mốt phần trăm.",
+   "p": 1.0
+  },
+  {
+   "t": "Vậy là cứ mua là lãi à?",
+   "ask": 1
+  },
+  "Không. Và mình sẽ nói kỹ ở cuối video, vì sao kết quả này không phải là một lời hứa.",
+  "Nhưng nó cho thấy một điều.",
+  "Trong tám năm ấy, chuyện mua đúng ngày nào, ít quan trọng hơn mình tưởng.",
+  "Mình còn thử thêm. Thay vì phiên đầu tháng, cô Đều mua vào phiên thứ sáu, thứ mười một, hay thứ mười sáu của tháng.",
+  {
+   "t": "Kết quả gần như không đổi. Vẫn quanh năm mươi phần trăm.",
+   "p": 1.0
+  },
+  "Vậy thứ gì mới quan trọng?",
+  "Là chuyện bạn có còn ngồi trên ghế tới cuối hay không.",
+  "Và chiếc ghế ấy, có những đoạn rất nóng."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "ANH XUI\nVÀ CHỊ MAY",
+   "sub": "MỖI NĂM MUA ĐÚNG MỘT LẦN",
+   "vid": "38484636",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Bây"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "KHÔNG MUA HẰNG THÁNG",
+     "at": 1
+    },
+    {
+     "text": "MỖI NĂM · MUA ĐÚNG MỘT LẦN",
+     "at": 2,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "candles",
+   "at": 3,
+   "series": "vnindex",
+   "from": "2021-10-01",
+   "to": "2022-06-30",
+   "drawAt": [
+    3,
+    null,
+    0,
+    0.1
+   ],
+   "until": [
+    4,
+    "cao"
+   ],
+   "title": "ANH XUI · NĂM 2022",
+   "range": "10/2021 → 06/2022",
+   "ind": [],
+   "marks": [
+    {
+     "date": "2022-01-06",
+     "text": "MUA ĐÚNG ĐỈNH · 06/01",
+     "at": [
+      5,
+      "sáu"
+     ],
+     "pos": "above",
+     "tone": "down"
+    }
+   ],
+   "source": "DỮ LIỆU: VN-INDEX (VNSTOCK/VCI), KÊNH TỰ TÍNH. MINH HOẠ QUÁ KHỨ, KHÔNG PHẢI KHUYẾN NGHỊ."
+  },
+  {
+   "type": "candles",
+   "at": 6,
+   "series": "vnindex",
+   "from": "2026-02-02",
+   "to": "2026-08-31",
+   "drawAt": [
+    6,
+    null,
+    0,
+    0.1
+   ],
+   "until": [
+    6,
+    "giữa"
+   ],
+   "title": "ANH XUI · NĂM 2026",
+   "range": "02/2026 → 08/2026",
+   "ind": [],
+   "marks": [
+    {
+     "date": "2026-05-18",
+     "text": "MUA 18/05 · KỶ LỤC",
+     "at": [
+      6,
+      "lúc"
+     ],
+     "pos": "above",
+     "tone": "down"
+    }
+   ],
+   "source": "DỮ LIỆU: VN-INDEX (VNSTOCK/VCI), KÊNH TỰ TÍNH. MINH HOẠ QUÁ KHỨ, KHÔNG PHẢI KHUYẾN NGHỊ."
+  },
+  {
+   "type": "candles",
+   "at": 7,
+   "series": "vnindex",
+   "from": "2020-01-02",
+   "to": "2020-07-31",
+   "drawAt": [
+    7,
+    null,
+    0,
+    0.1
+   ],
+   "until": [
+    8,
+    "thấp"
+   ],
+   "title": "CHỊ MAY · NĂM 2020",
+   "range": "01/2020 → 07/2020",
+   "ind": [],
+   "marks": [
+    {
+     "date": "2020-03-24",
+     "text": "MUA 24/03 · ĐÁY NĂM",
+     "at": [
+      9,
+      "hai"
+     ],
+     "pos": "below",
+     "tone": "gold"
+    }
+   ],
+   "source": "DỮ LIỆU: VN-INDEX (VNSTOCK/VCI), KÊNH TỰ TÍNH. MINH HOẠ QUÁ KHỨ, KHÔNG PHẢI KHUYẾN NGHỊ."
+  },
+  {
+   "type": "bars",
+   "at": 10,
+   "title": "VỀ ĐÍCH SAU 8 NĂM (TRIỆU ĐỒNG) · CÙNG NỘP 291",
+   "items": [
+    {
+     "k": "CHỊ MAY · MUA ĐÚNG ĐÁY MỖI NĂM",
+     "v": 526,
+     "lbl": "≈ 526",
+     "at": 11
+    },
+    {
+     "k": "CÔ ĐỀU · MUA ĐỀU",
+     "v": 437,
+     "lbl": "≈ 437",
+     "at": 12
+    },
+    {
+     "k": "ANH XUI · MUA ĐÚNG ĐỈNH MỖI NĂM",
+     "v": 381,
+     "lbl": "≈ 381",
+     "at": 14,
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "",
+    "v": "MINH HOẠ TRÊN CHỈ SỐ · KHÔNG PHÍ, THUẾ, CỔ TỨC · KÊNH TỰ TÍNH · QUÁ KHỨ · KHÔNG PHẢI KHUYẾN NGHỊ",
+    "at": 10
+   }
+  },
+  {
+   "type": "slam",
+   "at": 15,
+   "text": "VẪN +31%",
+   "sub": "NGƯỜI XUI NHẤT · 8 NĂM LIỀN MUA ĐÚNG ĐỈNH · KÊNH TỰ TÍNH · QUÁ KHỨ · KHÔNG PHẢI KHUYẾN NGHỊ"
+  },
+  {
+   "type": "question",
+   "at": 16,
+   "text": "Vậy cứ mua là lãi à?"
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "KHÔNG",
+     "at": 17,
+     "acc": true
+    },
+    {
+     "text": "kết quả này không phải một lời hứa",
+     "at": [
+      17,
+      "vì"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 18,
+   "items": [
+    {
+     "text": "MUA ĐÚNG NGÀY NÀO",
+     "at": [
+      19,
+      "chuyện"
+     ]
+    },
+    {
+     "text": "ÍT QUAN TRỌNG HƠN MÌNH TƯỞNG",
+     "at": [
+      19,
+      "ít"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 20,
+   "title": "ĐỔI NGÀY MUA TRONG THÁNG · LÃI CỦA CÔ ĐỀU (%)",
+   "items": [
+    {
+     "k": "PHIÊN ĐẦU THÁNG",
+     "v": 50.3,
+     "lbl": "+50,3%",
+     "at": 20
+    },
+    {
+     "k": "PHIÊN THỨ 6",
+     "v": 49.7,
+     "lbl": "+49,7%",
+     "at": [
+      20,
+      "sáu"
+     ]
+    },
+    {
+     "k": "PHIÊN THỨ 11",
+     "v": 49.5,
+     "lbl": "+49,5%",
+     "at": [
+      20,
+      "mười"
+     ]
+    },
+    {
+     "k": "PHIÊN THỨ 16",
+     "v": 50.2,
+     "lbl": "+50,2%",
+     "at": [
+      20,
+      "hay"
+     ]
+    }
+   ],
+   "label": {
+    "k": "GẦN NHƯ KHÔNG ĐỔI",
+    "v": "KÊNH TỰ TÍNH · QUÁ KHỨ · KHÔNG PHẢI KHUYẾN NGHỊ",
+    "at": 21
+   }
+  },
+  {
+   "type": "question",
+   "at": 22,
+   "text": "Vậy thứ gì\nmới quan trọng?"
+  },
+  {
+   "type": "broll",
+   "at": 23,
+   "vid": "35830059",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "CÒN NGỒI TRÊN GHẾ TỚI CUỐI",
+     "at": [
+      23,
+      "bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "chiếc ghế ấy có những đoạn rất nóng",
+     "at": 24,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "ANH XUI VÀ CHỊ MAY"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

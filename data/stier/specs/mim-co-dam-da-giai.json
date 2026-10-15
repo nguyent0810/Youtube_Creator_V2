@@ -1,0 +1,161 @@
+{
+ "theme": "mim",
+ "title": "Cờ đam đã có lời giải: chơi hoàn hảo thì luôn hoà. Cờ vua thì chưa, và vì sao",
+ "description": "Năm 2007, nhóm của Jonathan Schaeffer (Đại học Alberta) công bố trên Science rằng cờ đam đã được giải: nếu cả hai bên chơi hoàn hảo, ván cờ luôn hoà; họ mất 18 năm. Cờ vua thì chưa: Shannon ước tính số ván cờ vua có thể xảy ra là một con số khoảng 120 chữ số, trong khi số nguyên tử trong vũ trụ quan sát được chỉ khoảng 80 chữ số. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/TG7ZShLM4LA (công khai từ 20:00 ngày 12/11).",
+ "tags": [
+  "cờ đam đã giải",
+  "chinook",
+  "deep blue",
+  "kasparov",
+  "máy tính chơi cờ",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "SCIENCE · 2007",
+ "acc": [
+  "hoà",
+  "giải",
+  "mười",
+  "tám",
+  "chưa"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Có một trò chơi mà máy đã biết lời giải: nếu cả hai bên chơi hoàn hảo, ván cờ luôn hoà.",
+  "Đó là cờ đam, loại cờ có những quân tròn nhảy chéo trên bàn tám nhân tám.",
+  "Năm 2007, một nhóm ở Đại học Alberta, Canada, công bố chứng minh ấy trên tạp chí Science.",
+  "Họ mất mười tám năm.",
+  "Cờ vua thì khác. Shannon từng ước tính số ván cờ vua có thể xảy ra là một con số có khoảng một trăm hai mươi chữ số.",
+  "Số nguyên tử trong vũ trụ mà ta quan sát được chỉ có khoảng tám mươi chữ số.",
+  "Máy đã chơi cờ vua giỏi hơn người từ lâu, nhưng nó vẫn chưa biết lời giải cuối cùng."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "LUÔN HOÀ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "nếu cả hai chơi hoàn hảo",
+     "at": [
+      0,
+      "nếu"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6600370",
+   "ms": 5,
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CỜ ĐAM",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "quân tròn nhảy chéo · bàn 8×8",
+     "at": [
+      1,
+      "quân"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6600019",
+   "ms": 3,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "from": 18,
+   "to": 18,
+   "suffix": " NĂM",
+   "label": "ĐỂ CHỨNG MINH · ĐẠI HỌC ALBERTA",
+   "sub": {
+    "text": "SCIENCE · 2007",
+    "at": 3
+   }
+  },
+  {
+   "type": "chart",
+   "at": 4,
+   "kind": "bars",
+   "title": "SO HAI CON SỐ KHỔNG LỒ",
+   "unit": "SỐ CHỮ SỐ · XẤP XỈ",
+   "bars": [
+    {
+     "label": "SỐ VÁN CỜ VUA\n(SHANNON)",
+     "v": 120,
+     "text": "≈120",
+     "c": "up",
+     "at": [
+      4,
+      "một"
+     ]
+    },
+    {
+     "label": "NGUYÊN TỬ TRONG\nVŨ TRỤ QUAN SÁT",
+     "v": 80,
+     "text": "≈80",
+     "c": "ref",
+     "at": 5
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "CỜ VUA HÔM NAY",
+   "cards": [
+    {
+     "k": "MÁY",
+     "v": "GIỎI HƠN NGƯỜI",
+     "at": 6
+    },
+    {
+     "k": "NHƯNG",
+     "v": "CHƯA CÓ LỜI GIẢI",
+     "at": [
+      6,
+      "nhưng"
+     ],
+     "c": "acc"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://www.science.org/doi/10.1126/science.1144079"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "shannon": "Sen-nần",
+  "alberta": "An-béc-ta",
+  "science": "Xai-ần"
+ },
+ "imgs": {}
+}

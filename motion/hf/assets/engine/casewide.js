@@ -21,7 +21,11 @@
   const sv = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
   let seed = C.seed || 1995; const rnd = () => { seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; };
   const norm = (w) => w.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "");
-  const fsz = (text, max, width = 1700, k = 0.6) => Math.min(max, Math.floor(width / (Math.max(1, [...text].length) * k)));
+  // Chữ IN HOA đậm (900) rộng ~0.7 em/ký tự, không phải 0.56: myth "MỘT CHIẾN THẮNG ĐỂ QUẢNG BÁ" tràn mép phải (retro 14/10/2026).
+  const fsz = (text, max, width = 1700, k = 0.6) => {
+    const cs = [...String(text)], up = cs.filter(c => c !== c.toLowerCase()).length, lo = cs.filter(c => c !== c.toUpperCase()).length;
+    return Math.min(max, Math.floor(width / (Math.max(1, cs.length) * (up > lo ? Math.max(k, 0.7) : k))));
+  };
   const esc = (t) => String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;");
   const rich = (t) => esc(t).replace(/\*(.+?)\*/g, "<b>$1</b>");
   const IM = (k) => { const m = C.imgs[k]; if (!m) throw new Error("thiếu ảnh " + k); return m; };
@@ -43,7 +47,7 @@
                                          tl.to("#stage", { x: 8, duration: 0.03, yoyo: true, repeat: 3 }, t + 0.16); };
   const draw = (node, t, d, ease = "power2.inOut") => { const len = node.getTotalLength(); node.style.strokeDasharray = len; node.style.strokeDashoffset = len;
                                                          tl.to(node, { strokeDashoffset: 0, duration: d, ease }, t); };
-  const toneCls = (t) => ({ bw: "bw", sepia: "sepia", color: "color", dim: "dimbg", noir: "noir", night: "night" }[t || "sepia"]);
+  const toneCls = (t) => ({ bw: "bw", sepia: "sepia", color: "color", dim: "dimbg", noir: "noir", night: "night" }[t || (C.theme === "lab" ? "color" : "sepia")]);
   const circleMark = (svg, x, y, r, t) => {
     const p = sv("path", { d: `M${x + r} ${y - 2} C${x + r} ${y - r - 6} ${x - r - 4} ${y - r} ${x - r} ${y + 2} C${x - r + 2} ${y + r + 4} ${x + r + 6} ${y + r} ${x + r - 2} ${y - 6}`,
       stroke: "var(--red)", "stroke-width": Math.max(4, r / 7), fill: "none", "stroke-linecap": "round" }, svg);
@@ -68,6 +72,7 @@
     const ctext = typeof s.credit === "string" ? s.credit : (s.credit !== false && ci && ci.lic) ? ("ẢNH: " + (ci.pd ? "TƯ LIỆU · PHẠM VI CÔNG CỘNG" : (ci.by ? ci.by.toUpperCase().slice(0, 40) + " · " : "") + ci.lic.toUpperCase())) : null;
     if (ctext) { const c = el("div", "credit", esc(ctext), d); tl.to(c, { opacity: 1, duration: 0.4 }, s.t0 + 0.3); }
     if (s.illus) el("div", "illus", s.illus === true ? "ẢNH MINH HỌA" : esc(s.illus), d);
+    if (s.srcnote) el("div", "cdsrc", esc(s.srcnote), d);   // dòng ghi nguồn/miễn trừ góc dưới phải (kênh CK: mọi biểu đồ vàng)
     if (s.stamp) { const st = el("div", "stamp" + (s.stamp.ink ? " ink" : ""), esc(s.stamp.text), d); st.style.fontSize = px(fsz(s.stamp.text, 84, 760, 0.72));
       st.style.left = px(s.stamp.x ?? 1150); st.style.top = px(s.stamp.y ?? 560); stamp(st, s.stamp.at, s.stamp.rot ?? -8); }
     // film: tư liệu cũ -> nhấp nháy sáng tối 12 hình/giây + vệt xước dọc (sfx: tiếng máy chiếu)
@@ -128,7 +133,7 @@
     tl.fromTo(no, { opacity: 0, x: -80 }, { opacity: 1, x: 0, duration: 0.8, ease: "power3.out", immediateRender: false }, s.t0 + 0.05);
     tl.to(no, { x: 40, duration: Math.max(0.3, s.t1 - s.t0 - 0.8), ease: "none" }, s.t0 + 0.85);
     tl.fromTo(k, { opacity: 0 }, { opacity: 1, duration: 0.3, immediateRender: false }, s.t0 + 0.2);
-    tl.fromTo(tt, { opacity: 0, y: 40, clipPath: "inset(0% 0% 100% 0%)" }, { opacity: 1, y: 0, clipPath: "inset(0% 0% 0% 0%)", duration: 0.5, ease: "power3.out", immediateRender: false }, ta - 0.05);
+    tl.fromTo(tt, { opacity: 0, y: 40, clipPath: "inset(-30% -5% 100% -5%)" }, { opacity: 1, y: 0, clipPath: "inset(-30% -5% -30% -5%)", duration: 0.5, ease: "power3.out", immediateRender: false }, ta - 0.05);
     tl.fromTo(bar, { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power3.inOut", immediateRender: false }, ta + 0.25);
     if (sb) tl.fromTo(sb, { opacity: 0 }, { opacity: 1, duration: 0.4, immediateRender: false }, ta + 0.5);
   };
@@ -214,10 +219,10 @@
   const { BEAT, SLAM, beat } = makeBeat({ tl, el, esc, rnd });   // beat.js: thư viện hiệu ứng chữ dùng chung với casefile
 
   const kinetic = (items, d, align) => {
-    const sizes = items.map((q) => q.size || fsz(q.text, q.sm ? 56 : 130, 1650, q.serif ? 0.62 : 0.66)), total = sizes.reduce((a, b) => a + b * 1.22, 0);
+    const sizes = items.map((q) => q.size || fsz(q.text, q.sm ? 56 : 130, 1650, q.serif ? 0.62 : 0.66)), total = sizes.reduce((a, b) => a + b * 1.32, 0);
     let y = Math.max(130, 470 - total / 2);
     items.forEach((q, k) => { const e = el("div", "kin" + (q.acc ? " acc" : "") + (q.serif ? " serif" : "") + (q.sm ? " sm" : "") + (align === "l" ? " l" : ""), esc(q.text), d);
-      Object.assign(e.style, { fontSize: px(sizes[k]), top: px(y) }); y += sizes[k] * 1.22;
+      Object.assign(e.style, { fontSize: px(sizes[k]), top: px(y) }); y += sizes[k] * 1.32;   // 1.32: chừa chỗ dấu dưới (Ệ, Ộ) dòng trên + dấu chồng (Ề, Ế) dòng dưới
       beat(e, q); });
   };
   B.kinetic = (s, d) => { bg(s, d, 0.62);
@@ -229,7 +234,7 @@
      sfx: at -> boom (theo fx, xem sfx_long.py) */
   B.slam = (s, d) => {
     bg(s, d, 0.6);
-    const lines = s.text.split("\n"), fs = fsz(lines.reduce((a, b) => (a.length > b.length ? a : b)), 190, 1700, 0.66);
+    const lines = s.text.split("\n"), fs = fsz(lines.reduce((a, b) => (a.length > b.length ? a : b)), 190, 1700, C.theme === "lab" ? 0.8 : 0.66);
     const sl = el("div", "slam", lines.map(esc).join("<br/>"), d); Object.assign(sl.style, { fontSize: px(fs), top: px(460 - fs * lines.length / 2), lineHeight: 1.02, color: s.white ? "#fff" : "" });
     if (s.fx && s.fx !== "punch" && SLAM[s.fx]) { SLAM[s.fx](sl, s, fs, lines);
       if (s.sub) { const sb = el("div", "dsub", esc(s.sub), d); sb.style.top = px(480 + fs * lines.length / 2 + 20); tl.to(sb, { opacity: 1, duration: 0.3 }, s.at + 0.3); }
@@ -247,8 +252,35 @@
   /* ---------- brand: logo kênh 2–3 giây, đặt ngay sau cold open (câu "Đây là hồ sơ X") ----------
      {sub: "HỒ SƠ · TAM GIÁC VÀNG", bg?}. Vạch đỏ mọc giữa màn, chữ tên kênh tách từ tâm ra, dòng hồ sơ gõ chữ.
      sfx (sfx_long): whoosh trước t0, âm hiệu 2 nốt + ngân chuông; nhạc nền được né trong cảnh này. */
-  const BRAND = "INTO THE KILLER’S MIND";
+  const BRAND = C.brand || "INTO THE KILLER’S MIND";
+  /* nhận diện kênh theme "lab" (~3 s): quét sáng ngang, các nút mạng sáng lên, tên kênh GIẢI MÃ từ ký tự ngẫu nhiên
+     (tất định: rnd có hạt), con trỏ nhấp nháy, dòng phụ gõ chữ. sfx_long: tick theo nhịp giải mã + âm hiệu điện tử. */
+  const GLY = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#%&@<>/";
+  const labBrand = (s, d) => {
+    el("div", "brbg", null, d);
+    const t0 = s.t0, name = s.name || BRAND, wm = el("div", "lbwm", "", d), sub = el("div", "lbsub", "", d), txt = s.sub || "";
+    const scan = el("div", "lbscan", null, d);
+    tl.fromTo(scan, { top: 300, opacity: 0 }, { top: 780, opacity: 1, duration: 0.5, ease: "power2.inOut", immediateRender: false }, t0);
+    tl.to(scan, { opacity: 0, duration: 0.15 }, t0 + 0.5);
+    [[560, 380], [1360, 380], [520, 700], [1400, 700], [960, 330], [960, 760]].forEach(([x, y], k) => {
+      const n = el("div", "lbnode", null, d); Object.assign(n.style, { left: px(x), top: px(y) });
+      tl.fromTo(n, { opacity: 0, scale: 0 }, { opacity: 0.9, scale: 1, duration: 0.18, ease: "back.out(3)", immediateRender: false }, t0 + 0.1 + k * 0.06);
+      tl.to(n, { opacity: 0, duration: 0.4 }, t0 + 1.4); });
+    const chars = [...name], n = chars.length, steps = 16, t1 = t0 + 0.35, span = 0.95;
+    tl.set(wm, { opacity: 1 }, t1);
+    const word = (k) => chars.map((c, i) => (i < k || c === " " ? c : GLY[Math.floor(rnd() * GLY.length)])).join("");
+    for (let k = 0; k <= steps; k++) {
+      const done = Math.round(n * k / steps), w = word(done);
+      tl.set(wm, { innerHTML: esc(w.slice(0, done)) + "<b>" + esc(w.slice(done)) + "</b>" + (k < steps ? '<i class="lbcur"></i>' : "") }, t1 + span * (k / steps));
+    }
+    const cur = '<i class="lbcur"></i>';
+    for (let k = 0; k < 4; k++) tl.set(wm, { innerHTML: esc(name) + (k % 2 ? "" : cur) }, t1 + span + 0.2 + k * 0.22);
+    tl.fromTo(wm, { scale: 1 }, { scale: 1.03, duration: Math.max(0.4, s.t1 - t1), ease: "none", immediateRender: false }, t1);
+    const sc = [...txt], ss = Math.min(0.6, 0.035 * sc.length);
+    for (let k = 1; k <= sc.length; k++) tl.set(sub, { textContent: sc.slice(0, k).join("") }, t1 + span + 0.1 + ss * (k / sc.length));
+  };
   B.brand = (s, d) => {
+    if (C.theme === "lab") return labBrand(s, d);
     if (s.bg) bg(s, d, 0.86); else el("div", "brbg", null, d);
     const t0 = s.t0, bar = el("div", "brbar", null, d), wm = el("div", "brwm", esc(s.name || BRAND), d);
     const sub = el("div", "brsub", "", d), rule = el("div", "brrule", null, d), txt = s.sub || "";
@@ -267,9 +299,9 @@
      Chừa ô video "XEM TIẾP" bên trái và ô tròn "ĐĂNG KÝ" bên phải đúng chỗ YouTube đặt phần tử; nền ảnh tư liệu tối dần. */
   B.endcard = (s, d) => {
     if (s.bg) bg(s, d, 0.88); else el("div", "brbg", null, d);
-    const wm = el("div", "ecwm", esc(BRAND), d), sub = el("div", "ecsub", esc(s.sub || "HỒ SƠ TIẾP THEO"), d);
+    const wm = el("div", "ecwm", esc(BRAND), d), sub = el("div", "ecsub", esc(s.sub || (C.theme === "lab" || C.theme === "chart" ? "VIDEO TIẾP THEO" : "HỒ SƠ TIẾP THEO")), d);
     const box = el("div", "ecbox", "<span>XEM TIẾP</span>", d), cir = el("div", "eccir", "<span>ĐĂNG KÝ</span>", d);
-    const note = el("div", "ecnote", esc(s.note || "Cảm ơn bạn đã xem hồ sơ này"), d);
+    const note = el("div", "ecnote", esc(s.note || (C.theme === "lab" || C.theme === "chart" ? "Cảm ơn bạn đã xem" : "Cảm ơn bạn đã xem hồ sơ này")), d);
     tl.fromTo(wm, { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out", immediateRender: false }, s.t0 + 0.2);
     tl.fromTo(sub, { opacity: 0 }, { opacity: 1, duration: 0.5, immediateRender: false }, s.t0 + 0.5);
     tl.fromTo([box, cir], { opacity: 0, scale: 0.94 }, { opacity: 1, scale: 1, duration: 0.6, ease: "power3.out", stagger: 0.15, immediateRender: false }, s.t0 + 0.6);
@@ -286,13 +318,17 @@
   const vn = (n) => String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
   B.counter = (s, d) => {
     bg(s, d, 0.72);
+    // Số thập phân (vd. "to": 3.6): giữ đúng số chữ số sau dấu phẩy của from/to. Trước 12/10/2026 mọi số bị làm tròn,
+    // "3,6 TỶ" hiện thành "4 TỶ" trong khi lời đọc nói "ba tỷ sáu".
+    const dp = s.dec ?? Math.max(...[s.to, s.from || 0].map((n) => (String(n).split(".")[1] || "").length));
+    const vn = (n) => { const [a, b] = Number(n).toFixed(dp).split("."); return a.replace(/\B(?=(\d{3})+(?!\d))/g, ".") + (b ? "," + b : ""); };
     let cx0 = 0, cw = W;
     if (s.img) { const m = IM(s.img), k = Math.min(600 / m.w, 640 / m.h), w = m.w * k, h = m.h * k;
       const pr = el("div", "print", null, d); Object.assign(pr.style, { left: px(140), top: px(470 - (h + 36) / 2), width: px(w + 36), height: px(h + 36) });
       const im = el("img", toneCls(s.tone || "bw"), null, pr); im.src = m.src; Object.assign(im.style, { left: px(18), top: px(18), width: px(w), height: px(h) });
       tl.fromTo(pr, { opacity: 0, y: 80, rotation: 6 }, { opacity: 1, y: 0, rotation: -2, duration: 0.45, ease: "power3.out", immediateRender: false }, s.imgAt ?? s.t0 + 0.1);
       cx0 = w + 220; cw = W - cx0 - 60; }
-    const str = (s.prefix || "") + vn(s.to) + (s.suffix || ""), fs = fsz(str, 260, cw - 80, 0.6);
+    const str = (s.prefix || "") + vn(s.to) + (s.suffix || ""), fs = fsz(str, 260, cw - 80, /[MWmw]/.test(str) ? 0.7 : 0.6);
     const ct = el("div", "count", esc((s.prefix || "") + vn(s.from || 0) + (s.suffix || "")), d); Object.assign(ct.style, { fontSize: px(fs), top: px(s.top ?? 360 - fs / 2 + 40), left: px(cx0), width: px(cw), right: "auto" });
     const top = (s.top ?? 360 - fs / 2 + 40) + fs * 1.06 + 34, o = { v: s.from || 0 };
     tl.fromTo(ct, { opacity: 0 }, { opacity: 1, duration: 0.2, immediateRender: false }, s.at - 0.15);
@@ -318,6 +354,63 @@
       tl.to(b, { scaleY: 1, duration: 0.5, ease: "power3.out" }, q.at);
       tl.fromTo(v, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, immediateRender: false }, q.at + 0.35); });
     tl.fromTo(ch, { opacity: 0 }, { opacity: 1, duration: 0.3, immediateRender: false }, s.t0);
+    // Retro 5 (14/10/2026): "label" của bars từng là thẻ .lower góc dưới trái, đè lên nhãn trục. Giờ là một dòng chú thích ngay dưới tiêu đề.
+    if (s.label && typeof s.label === "object") { const txt = [s.label.k, s.label.v, s.label.s].filter(Boolean).join(" · ");
+      const cap = el("div", "mono", esc(txt), ch); Object.assign(cap.style, { position: "absolute", left: "0", top: "-4px", fontSize: px(fsz(txt, 22, 1600, 0.74)), letterSpacing: ".14em", color: "var(--dim)", whiteSpace: "nowrap", opacity: 0 });
+      tl.to(cap, { opacity: 1, duration: 0.3 }, s.label.at ?? s.t0 + 0.4); }
+    else common(s, d);
+  };
+
+  /* ---------- myth / source / units: ý từ skill shorts-studio (vietneu-tts feat/shorts-studio, 14/10/2026), viết lại cho 16:9 ----------
+     myth  : {mythLab?, myth, truthLab?, truth, strikeAt, truthAt}  -- gạch chéo ngộ nhận, sự thật đến sau (đúng MỘT nhịp tĩnh trước sự thật)
+     source: {source, ref, snippet ("… [[cụm sáng]] …"), hlAt, seal?, sealAt}  -- thẻ dẫn nguồn TRƯỚC phán định
+     units : {title, total, cols?, lit (số ô sáng), litAt, unitLabel}  -- "k trên N" bằng lưới ô
+     sfx: strikeAt -> scratch; truthAt/sealAt -> thud; litAt -> tick */
+  const abs = (cls, html, d, st) => { const e = el("div", cls, html, d); Object.assign(e.style, { position: "absolute" }, st); return e; };
+  B.myth = (s, d) => {
+    bg(s, d, 0.84);
+    const ml = abs("mono", esc(s.mythLab || "NHIỀU NGƯỜI NGHĨ"), d, { left: "160px", top: "200px", fontSize: "28px", letterSpacing: ".2em", color: "var(--dim)" });
+    const m = abs("", esc(s.myth), d, { left: "160px", top: "250px", fontWeight: 900, whiteSpace: "nowrap", fontSize: px(fsz(s.myth, 104, 1560, 0.56)), color: "#fff" });
+    const mk = (rot) => { const x = el("div", "", null, m); Object.assign(x.style, { position: "absolute", left: "-14px", right: "-14px", top: "50%", height: "10px", background: "var(--red)", transformOrigin: "0 50%", transform: `rotate(${rot}deg) scaleX(0)` }); return x; };
+    const x1 = mk(-4), x2 = mk(4);
+    const tlb = abs("mono", esc(s.truthLab || "THẬT RA"), d, { left: "160px", top: "560px", fontSize: "28px", letterSpacing: ".2em", color: "var(--red)", opacity: 0 });
+    const t = abs("", esc(s.truth), d, { left: "160px", top: "610px", fontWeight: 900, whiteSpace: "nowrap", fontSize: px(fsz(s.truth, 132, 1600, 0.56)), color: "var(--red)", opacity: 0, transformOrigin: "0 50%" });
+    tl.fromTo([ml, m], { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.4, ease: "power3.out", immediateRender: false }, s.t0 + 0.05);
+    const ts = Math.max(0, s.strikeAt ?? s.t0 + 1.5), tt = Math.max(ts + 0.5, s.truthAt ?? ts + 0.9);
+    tl.fromTo(x1, { scaleX: 0, rotation: -4 }, { scaleX: 1, rotation: -4, duration: 0.3, ease: "power2.out", immediateRender: false }, ts);
+    tl.fromTo(x2, { scaleX: 0, rotation: 4 }, { scaleX: 1, rotation: 4, duration: 0.3, ease: "power2.out", immediateRender: false }, ts + 0.15);
+    tl.to(m, { opacity: 0.5, duration: 0.3 }, ts + 0.15);
+    tl.to(tlb, { opacity: 1, duration: 0.2 }, tt);
+    tl.fromTo(t, { opacity: 0, scale: 1.2 }, { opacity: 1, scale: 1, duration: 0.5, ease: "expo.out", immediateRender: false }, tt);
+    common(s, d);
+  };
+  B.source = (s, d) => {
+    bg(s, d, 0.84);
+    const card = abs("", null, d, { left: "260px", width: "1400px", top: "190px", padding: "50px 60px 56px", background: "rgba(12,20,34,.92)", border: "2px solid var(--red)", borderRadius: "10px", boxSizing: "border-box" });
+    const sr = el("div", "mono", esc(s.source || ""), card); Object.assign(sr.style, { fontSize: "26px", letterSpacing: ".18em", color: "var(--red)", whiteSpace: "nowrap" });
+    const rf = el("div", "", esc(s.ref || ""), card); Object.assign(rf.style, { fontWeight: 900, fontSize: px(fsz(s.ref || " ", 72, 1260, 0.56)), lineHeight: 1.1, margin: "14px 0 24px", color: "#fff", whiteSpace: "nowrap" });
+    const sn = el("div", "", null, card); Object.assign(sn.style, { fontSize: "44px", lineHeight: 1.36, color: "#e6edf7", fontStyle: "italic" });
+    let hl = null;
+    String(s.snippet || "").split(/\[\[|\]\]/).forEach((p, k) => { if (k % 2) { hl = el("span", "", esc(p), sn);
+        Object.assign(hl.style, { backgroundImage: "linear-gradient(var(--red), var(--red))", backgroundRepeat: "no-repeat", backgroundPosition: "0 100%", backgroundSize: "0% 22%", fontStyle: "normal", fontWeight: 800, color: "#fff" }); }
+      else sn.appendChild(document.createTextNode(p)); });
+    tl.fromTo(card, { opacity: 0, y: 70 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out", immediateRender: false }, s.t0 + 0.05);
+    if (hl) tl.to(hl, { backgroundSize: "100% 22%", duration: 0.6, ease: "power2.out" }, Math.max(0, s.hlAt ?? s.t0 + 1.4));
+    if (s.seal !== false) { const se = abs("mono", esc(s.seal || "ĐÃ ĐỐI CHIẾU NGUỒN"), d, { right: "280px", top: "820px", padding: "10px 22px", border: "4px solid var(--red)", color: "var(--red)", fontSize: "30px", fontWeight: 800, letterSpacing: ".14em", opacity: 0, whiteSpace: "nowrap" });
+      tl.fromTo(se, { opacity: 0, scale: 1.8, rotation: -14 }, { opacity: 1, scale: 1, rotation: -6, duration: 0.22, ease: "power4.in", immediateRender: false }, Math.max(0, s.sealAt ?? s.t0 + 2.2)); }
+    common(s, d);
+  };
+  B.units = (s, d) => {
+    bg(s, d, 0.84);
+    if (s.title) { const t = abs("", esc(s.title), d, { left: "120px", right: "120px", top: "110px", textAlign: "center", fontWeight: 900, whiteSpace: "nowrap", fontSize: px(fsz(s.title, 56, 1640, 0.58)), color: "#fff", opacity: 0 });
+      tl.to(t, { opacity: 1, duration: 0.3 }, s.t0 + 0.02); }
+    const n = s.total, cols = s.cols || Math.min(n, 10), rows = Math.ceil(n / cols), gap = 16, cw = Math.min(118, Math.floor((1500 - (cols - 1) * gap) / cols), Math.floor((560 - (rows - 1) * gap) / rows));
+    const gw = cols * cw + (cols - 1) * gap, x0 = 960 - gw / 2, y0 = 250, lit = Math.min(n, s.lit || 0), at = Math.max(0, s.litAt ?? s.t0 + 0.8), step = Math.min(0.09, 1.2 / Math.max(1, lit));
+    for (let k = 0; k < n; k++) { const c = abs("mono", "", d, { left: px(x0 + (k % cols) * (cw + gap)), top: px(y0 + Math.floor(k / cols) * (cw + gap)), width: px(cw), height: px(cw), border: "3px solid rgba(226,232,240,.55)", borderRadius: "8px", boxSizing: "border-box", opacity: 0 });
+      tl.to(c, { opacity: 1, duration: 0.18 }, s.t0 + 0.08 + k * Math.min(0.02, 0.5 / n));
+      if (k < lit) tl.to(c, { backgroundColor: "var(--red)", borderColor: "var(--red)", duration: 0.16 }, at + k * step); }
+    const lb = abs("", `<b style="color:var(--red);font-family:'JetBrains Mono',monospace">${lit}</b> / ${n} ${esc(s.unitLabel || "")}`, d, { left: "120px", right: "120px", top: px(y0 + rows * (cw + gap) + 26), textAlign: "center", fontWeight: 900, fontSize: "60px", color: "#fff", opacity: 0, whiteSpace: "nowrap" });
+    tl.to(lb, { opacity: 1, duration: 0.3 }, at + lit * step + 0.15);
     common(s, d);
   };
 
@@ -332,6 +425,7 @@
       e.innerHTML = up ? `<div class="yr">${esc(q.year)}</div><div class="tx">${rich(q.text || "")}</div><div class="dot" style="margin-top:22px"></div>`
                        : `<div class="dot" style="margin-bottom:22px"></div><div class="yr">${esc(q.year)}</div><div class="tx">${rich(q.text || "")}</div>`;
       Object.assign(e.style, { left: px(x0 + gap * k) }); if (up) e.style.bottom = px(H - 533); else e.style.top = px(507);
+      if (q.color) { const dt = e.querySelector(".dot"); dt.style.background = q.color; dt.style.boxShadow = `0 0 20px ${q.color}`; e.querySelector(".yr").style.color = q.color; }   // màu riêng từng mốc (tuỳ chọn)
       tl.fromTo(e, { opacity: 0, y: up ? -30 : 30 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out", immediateRender: false }, q.at - 0.1); });
     common(s, d);
   };
@@ -372,7 +466,7 @@
   B.quote = (s, d) => {
     bg(s, d, 0.8);
     const pp = el("div", "qpaper", null, d); el("div", "qm", "“", pp); if (s.dy || s.lbl) el("div", "dy", s.lbl || "DIỄN Ý", pp);
-    const qt = el("div", "qt", null, pp); const L = [...s.text].length; qt.style.fontSize = px(L < 70 ? 50 : L < 140 ? 40 : 32);
+    const qt = el("div", "qt", null, pp); const L = [...s.text].length; qt.style.fontSize = px(C.theme === "lab" ? (L < 30 ? 76 : L < 70 ? 58 : L < 140 ? 46 : 36) : L < 70 ? 50 : L < 140 ? 40 : 32);
     const spans = [...s.text].map((ch) => el("span", null, esc(ch), qt));
     spans.forEach((sp, k) => tl.set(sp, { opacity: 1 }, s.at + (k / L) * s.typeDur));
     if (s.by) { const by = el("div", "by", "— " + esc(s.by), pp); tl.to(by, { opacity: 1, duration: 0.3 }, s.at - s.t0 > 2.0 ? s.t0 + 0.6 : s.at + s.typeDur); }
@@ -899,6 +993,10 @@
   const pickTr = () => { const ks = Object.keys(TR).filter((k) => k !== trLast); let best = null, bu = 1e9;
     ks.forEach((k) => { const u = (trUse[k] || 0) + rnd() * 0.9; if (u < bu) { bu = u; best = k; } }); trUse[best] = (trUse[best] || 0) + 1; trLast = best; return best; };
 
+  // cảnh riêng kênh MIM (assets/engine/lab.js, nạp trước file này) -- không có file thì kênh khác y như cũ
+  if (window.labScenes) window.labScenes({ B, tl, el, sv, esc, px, fsz, rnd, bg, common, W, H, C });
+  if (window.chartScenes) window.chartScenes({ B, tl, el, sv, esc, px, fsz, rnd, bg, common, W, H, C });
+
   // ---------- dựng cảnh ----------
   C.scenes.forEach((s, i) => {
     const d = el("div", "scene", null, stage); show(d, s.t0, s.t1, s.type === "question" ? 0.12 : s.fade ?? 0.3);
@@ -921,18 +1019,22 @@
 
   // ---------- phụ đề: cụm tối đa 7 từ, một màu nhấn ----------
   const ACC = new Set((C.acc || []).map(norm));
-  const caps = $("#caps"), chunks = [];
+  const caps = $("#caps"), chunks = [], ALLW = C.lines.flatMap((ln) => ln.words);
   C.lines.forEach((ln) => { let cur = []; ln.words.forEach((w, k) => { cur.push(w);
     const n = cur.length, punct = /[.,…?!:;]$/.test(w.w);
-    if ((punct && n >= 2) || n >= 7 || k === ln.words.length - 1) { chunks.push(cur); cur = []; } }); });
-  chunks.forEach((c, n) => { const box = el("div", "cap", null, caps);
+    if ((punct && n >= 2) || n >= 7 || k === ln.words.length - 1) { cur.ask = !!ln.ask; chunks.push(cur); cur = []; } }); });
+  chunks.forEach((c, n) => { const box = el("div", "cap" + (c.ask ? " ask" : ""), null, caps);
+    if (c.ask) el("i", "askk", "BẠN HỎI", box);
     c.forEach((w) => { const clean = w.w.replace(/["“”]/g, ""), acc = ACC.has(norm(w.w)) || /\d/.test(w.w);
-      const sp = el("span", "cw" + (acc ? " acc" : ""), esc(clean), box); tl.to(sp, { opacity: 1, duration: 0.08 }, w.t); });
+      const sp = el("span", "cw" + (acc ? " acc" : ""), esc(clean), box); tl.to(sp, { opacity: 1, duration: 0.08 }, w.t);
+      // theme lab (MIM): karaoke -- chữ đang đọc màu nhấn, đọc xong về màu cũ (đổi tức thì). Chữ nhấn + số giữ màu nhấn.
+      if (C.theme === "lab" && !acc) { const base = getComputedStyle(sp).color, nx = ALLW[ALLW.indexOf(w) + 1];
+        tl.set(sp, { color: C.accent || "#22d3ee" }, w.t); tl.set(sp, { color: base }, nx ? nx.t : w.t + 0.4); } });
     box.style.fontSize = px(fsz(c.map((w) => w.w).join(" "), 44, 1560, 0.52));
     const t0 = c[0].t - 0.06, nx = chunks[n + 1], t1 = nx ? Math.min(nx[0].t - 0.06, c[c.length - 1].t + c[c.length - 1].d + 0.6) : DUR;
     tl.set(box, { opacity: 1 }, t0); tl.set(box, { opacity: 0 }, t1); });
   C.scenes.filter((s) => s.type === "question" || s.type === "chapter" || s.type === "endcard" || s.nocaps).forEach((s) => { tl.set("#caps", { opacity: 0 }, s.t0 - 0.01); tl.set("#caps", { opacity: 1 }, s.t1); });
-  C.scenes.filter((s) => s.type === "endcard").forEach((s) => tl.to(["#hud", "#prog"], { opacity: 0, duration: 0.4 }, s.t0));
+  C.scenes.filter((s) => s.type === "endcard").forEach((s) => { tl.to(["#hud", "#prog"], { opacity: 0, duration: 0.4 }, s.t0); tl.set("#caps", { opacity: 0 }, s.t0 + 0.01); });
 
   window.__timelines = window.__timelines || {};
   window.__timelines["main"] = tl;

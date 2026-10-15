@@ -1,0 +1,177 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "ba-dieu",
+ "hook_type": "con-so",
+ "open_shot": "hoa-sen",
+ "voice": "Đoan Trang",
+ "music": "frost_waltz.mp3",
+ "gap": 0.3,
+ "title": "Kinh Điềm Lành: 4 phúc lành dễ làm nhất",
+ "kicker": "KINH ĐIỀM LÀNH",
+ "sub": "SNP 2.4",
+ "acc": [
+  "phúc",
+  "làm"
+ ],
+ "lines": [
+  "Kinh Điềm Lành kể ra nhiều phúc lành. Đây là bốn điều bạn làm được ngay hôm nay.",
+  "Một: phụng dưỡng cha mẹ.",
+  "Hai: biết ơn. Ba: kiên nhẫn.",
+  "Bốn: nói lời dễ nghe.",
+  "Phúc lành không cần xin. Phúc lành cần làm.",
+  "Tuần này bạn chọn điều số mấy? Lưu lại và bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "4 PHÚC LÀNH",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "làm được ngay hôm nay",
+     "at": [
+      0,
+      "làm"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:38347130"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 4,
+   "suffix": " PHÚC LÀNH",
+   "label": "KINH ĐIỀM LÀNH · SNP 2.4",
+   "until": [
+    1,
+    "Một:"
+   ],
+   "sub": {
+    "text": "1 · PHỤNG DƯỠNG CHA MẸ",
+    "at": [
+     1,
+     "phụng"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "PHÚC LÀNH",
+   "cards": [
+    {
+     "k": "2",
+     "v": "BIẾT ƠN",
+     "at": [
+      2,
+      "biết"
+     ]
+    },
+    {
+     "k": "3",
+     "v": "KIÊN NHẪN",
+     "at": [
+      2,
+      "kiên"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "NÓI LỜI\nDỄ NGHE",
+   "sub": "PHÚC LÀNH THỨ 4",
+   "fx": "zoom"
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Phúc lành",
+   "nodes": [
+    {
+     "text": "CẦU XIN",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      4,
+      "xin."
+     ],
+     "shape": "none",
+     "cross": [
+      4,
+      "cần",
+      1
+     ]
+    },
+    {
+     "text": "LÀM",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      4,
+      "làm."
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      4,
+      "cần",
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "BẠN CHỌN SỐ MẤY?",
+     "at": [
+      5,
+      "Tuần"
+     ],
+     "acc": true
+    },
+    {
+     "text": "lưu lại · bình luận",
+     "at": [
+      5,
+      "Lưu"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:5798601"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/snp2.4/en/sujato"
+ ],
+ "description": "Kinh Điềm Lành: 4 phúc lành dễ làm nhất\n\nNguồn: https://suttacentral.net/snp2.4/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

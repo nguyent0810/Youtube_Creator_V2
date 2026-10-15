@@ -1,0 +1,187 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.16,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "do-vui",
+ "hook_type": "vi-sao",
+ "open_shot": "dien-thoai",
+ "voice": "Quang Sơn",
+ "music": "arcadia.mp3",
+ "gap": 0.15,
+ "series": "Đố vui Phật pháp #6",
+ "title": "Lá trong tay hay lá trong rừng?",
+ "kicker": "ĐỐ VUI PHẬT PHÁP #6",
+ "sub": "KINH TƯƠNG ƯNG 56.31",
+ "acc": [
+  "lá",
+  "thật"
+ ],
+ "lines": [
+  "Bạn đọc cả trăm bài về Phật pháp, mà lòng vẫn rối?",
+  "Có lần Đức Phật nhặt một nắm lá. Rồi hỏi các vị tăng một câu.",
+  "Lá trong tay ta nhiều, hay lá trong rừng nhiều?",
+  "Lá rừng nhiều hơn. Nhưng Ngài chỉ dạy nắm lá này, vì nó giúp hết khổ.",
+  "Nghĩa là: không cần biết hết. Cần một điều, làm cho thật.",
+  "Hôm nay, bạn chọn giữ lại một chiếc lá nào? Comment một chữ."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:6941383",
+   "items": [
+    {
+     "text": "ĐỌC CẢ TRĂM BÀI",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "mà lòng vẫn rối?",
+     "at": [
+      0,
+      "lòng"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "clip": "pexels:7116738",
+   "veil": 0.45,
+   "text": "MỘT CÂU HỎI",
+   "fx": "zoom",
+   "sub": "MỘT NẮM LÁ"
+  },
+  {
+   "type": "hf_split",
+   "at": 2,
+   "a": {
+    "lab": "TRONG TAY",
+    "val": "**nắm lá**",
+    "num": "?",
+    "at": [
+     2,
+     "tay"
+    ]
+   },
+   "b": {
+    "lab": "TRONG RỪNG",
+    "val": "**cả rừng**",
+    "num": "?",
+    "at": [
+     2,
+     "rừng"
+    ]
+   }
+  },
+  {
+   "type": "hf_unit_grid",
+   "at": 3,
+   "title": "Lá rừng: điều Ngài biết",
+   "total": 24,
+   "cols": 6,
+   "glyph": "🍃",
+   "lit": [
+    15
+   ],
+   "litAt": [
+    3,
+    "dạy"
+   ],
+   "unitLabel": "nắm lá Ngài dạy"
+  },
+  {
+   "type": "source",
+   "at": [
+    3,
+    "vì"
+   ],
+   "source": "KINH TƯƠNG ƯNG 56.31",
+   "ref": "Rừng Siṃsapā",
+   "snippet": "Điều ta biết như lá rừng. [[Điều ta dạy chỉ như nắm lá]], vì nó dẫn đến hết khổ.",
+   "hlAt": [
+    3,
+    "khổ."
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 4,
+   "line": 4,
+   "mode": "karaoke",
+   "by": "SN 56.31 · diễn ý"
+  },
+  {
+   "type": "hf_stamp",
+   "at": [
+    4,
+    "làm"
+   ],
+   "kick": "CẦN MỘT ĐIỀU",
+   "big": "1",
+   "stamps": [
+    {
+     "text": "LÀM CHO THẬT",
+     "at": [
+      4,
+      "thật."
+     ],
+     "x": 200,
+     "y": 880,
+     "rot": -6
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "clip": "pexels:34815135",
+   "items": [
+    {
+     "text": "GIỮ LẠI CHIẾC LÁ NÀO?",
+     "at": [
+      5,
+      "giữ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "comment một chữ",
+     "at": [
+      5,
+      "Comment"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "ambience": {
+  "bed": "water",
+  "gain": 0.35,
+  "hits": [
+   {
+    "at": 10.6,
+    "kind": "bell",
+    "gain": 0.6
+   }
+  ]
+ },
+ "sources": [
+  "https://suttacentral.net/sn56.31/en/sujato"
+ ],
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "v2": true, "lint_waive": ["R4"], "lint_waive_why": "loop là hình: cảnh cuối quay về hook; lời giữ đúng bản người dùng duyệt",
+ "loop": true,
+ "based_on": "bud-dv-la-trong-tay"
+}

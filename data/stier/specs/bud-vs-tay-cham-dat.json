@@ -1,0 +1,240 @@
+{
+ "theme": "bud",
+ "format": "vi-sao",
+ "hook_type": "vi-sao",
+ "open_shot": "tuong-phat",
+ "voice": "Thiền Tâm Đức",
+ "music": "fluidscape.mp3",
+ "gap": 0.0,
+ "title": "Vì sao tượng Phật một tay chạm đất? (ấn xúc địa)",
+ "kicker": "VÌ SAO?",
+ "sub": "ẤN XÚC ĐỊA",
+ "acc": [
+  "đất",
+  "chứng",
+  "tay"
+ ],
+ "lines": [
+  "Vì sao có tượng Phật đặt một bàn tay chạm xuống đất?",
+  "Nhiều người đoán là để trấn yểm. Không phải vậy.",
+  "Đây là ấn xúc địa, tay chạm đất.",
+  "Truyền thống kể: đêm thành đạo, ma vương thách Ngài: ai làm chứng cho ông?",
+  "Ngài không cãi. Chỉ chạm tay xuống đất.",
+  "Đất làm chứng.",
+  "Khi bị nghi ngờ, không cần cãi thắng. Việc bạn làm sẽ là nhân chứng.",
+  "Lưu lại để nhận ra khi đi chùa nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "VÌ SAO?",
+     "at": 0.0,
+     "acc": true,
+     "fx": "outline",
+     "size": 170
+    },
+    {
+     "text": "TAY CHẠM ĐẤT",
+     "at": [
+      0,
+      "chạm"
+     ]
+    },
+    {
+     "text": "tượng Phật",
+     "at": [
+      0,
+      "tượng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:27516943"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "TRẤN YỂM?",
+     "at": [
+      1,
+      "trấn"
+     ],
+     "acc": true,
+     "size": 140
+    },
+    {
+     "text": "KHÔNG PHẢI",
+     "at": [
+      1,
+      "Không"
+     ]
+    }
+   ],
+   "clip": "pexels:15126775"
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "ẤN XÚC ĐỊA",
+     "at": [
+      2,
+      "ấn"
+     ],
+     "acc": true,
+     "size": 140
+    },
+    {
+     "text": "bhūmisparśa · tay chạm đất",
+     "at": [
+      2,
+      "tay"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:36279896"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "ĐÊM THÀNH ĐẠO",
+     "at": [
+      3,
+      "đêm"
+     ]
+    },
+    {
+     "text": "MA VƯƠNG THÁCH",
+     "at": [
+      3,
+      "ma"
+     ],
+     "acc": true
+    },
+    {
+     "text": "ai làm chứng cho ông?",
+     "at": [
+      3,
+      "ai"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:33638649"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "KHÔNG CÃI",
+     "at": [
+      4,
+      "không"
+     ],
+     "acc": true,
+     "size": 150
+    },
+    {
+     "text": "chỉ chạm tay xuống đất",
+     "at": [
+      4,
+      "Chỉ"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:13466900"
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "ĐẤT LÀM\nCHỨNG",
+   "veil": 0.6,
+   "fx": "zoom",
+   "clip": "pexels:36390523"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "BỊ NGHI NGỜ?",
+     "at": [
+      6,
+      "nghi"
+     ]
+    },
+    {
+     "text": "VIỆC BẠN LÀM",
+     "at": [
+      6,
+      "Việc"
+     ],
+     "acc": true
+    },
+    {
+     "text": "là nhân chứng",
+     "at": [
+      6,
+      "nhân"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34715630"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "LƯU LẠI",
+     "at": [
+      7,
+      "Lưu"
+     ],
+     "acc": true,
+     "size": 150
+    },
+    {
+     "text": "để nhận ra khi đi chùa",
+     "at": [
+      7,
+      "nhận"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:37989261"
+  }
+ ],
+ "description": "Vì sao tượng Phật một tay chạm đất? Đó là ấn xúc địa (bhūmisparśa mudrā). Theo truyền thống, đêm thành đạo dưới cội Bồ-đề, Ma vương thách thức quyền ngồi nơi ấy và hỏi ai làm chứng; Đức Phật đưa tay phải chạm đất, gọi đất làm chứng cho các công hạnh của Ngài. Ấn này không liên quan đến trấn yểm hay bói toán.\n\nNguồn: https://en.wikipedia.org/wiki/Bh%C5%ABmisparśa_mudr%C4%81 · https://en.wikipedia.org/wiki/Mudra · https://en.wikipedia.org/wiki/Bodhi_Tree",
+ "tags": [
+  "vì sao",
+  "ấn xúc địa",
+  "tượng phật",
+  "biểu tượng phật giáo",
+  "phật pháp"
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Mudra",
+  "https://en.wikipedia.org/wiki/Bodhi_Tree"
+ ]
+}

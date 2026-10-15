@@ -1,0 +1,303 @@
+{
+ "theme": "ck",
+ "title": "Xếp hàng mua vàng: 3 khoản trả thêm ít ai nhìn thấy",
+ "description": "Một chỉ vàng, quy theo giá vàng miếng SJC, mua ngày 29/01/2026 hết 19,13 triệu; đầu tháng 10 bán lại nhận 14,05 triệu: mất khoảng 5 triệu, hơn nửa tháng lương 9 triệu (≈ 56%; thu nhập bình quân người lao động quý I/2026, Cục Thống kê). Ngoài giá vàng, người đứng trong hàng còn trả 3 khoản ít ai thấy: (1) chênh lệch mua–bán — ngày 29/01 tiệm bán ra 191,3, mua vào 188,3: ra khỏi cửa là lỗ 3 triệu/lượng (≈ 1,6%); (2) phần trả thêm so với thế giới — ngày vía Thần Tài 26/02/2026 khoảng 20 triệu/lượng, 19/08/2026 chỉ còn hơn 2 triệu; (3) mua trên giấy — đặt cọc hoặc trả đủ 100%, hẹn giao sau 7–10 ngày: nếu giá rơi lúc chờ, bạn chưa có vàng trong tay để bán.\n\nCách tính (kênh tự tính): 1 chỉ = 1/10 lượng theo giá vàng miếng SJC; mua theo giá bán ra 191,3 (29/01) → bán theo giá mua vào 140,5 (sáng 06/10/2026): 19,13 → 14,05 = −5,08 triệu; 5,08 / 9,0 ≈ 56%. Vàng nhẫn và vàng miếng 1 chỉ có giá khác. Đây là nhìn lại quá khứ, không phải dự báo giá vàng.\n\nBa khoản trả thêm và bốn cái bẫy của bộ não — video dài trên kênh: \"Xếp Hàng Mua Vàng Có Phải Là Đỉnh? Đọc Lại 11 Đợt Đổ Xô (2011–2026) Bằng Dữ Liệu\"\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo giá. SJC chỉ được dùng làm thước đo giá vàng miếng. Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.",
+ "tags": [
+  "giá vàng",
+  "chênh lệch giá mua bán vàng",
+  "mua vàng",
+  "vàng miếng SJC",
+  "xếp hàng mua vàng",
+  "mua vàng trên giấy",
+  "giá vàng 2026",
+  "tâm lý tiền bạc",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "kicker": "TÂM LÝ TIỀN BẠC",
+ "sub": "3 KHOẢN TRẢ THÊM",
+ "acc": [
+  "lương",
+  "chênh",
+  "giấy",
+  "lỗ",
+  "sjc"
+ ],
+ "lines": [
+  "Mua đúng đỉnh một chỉ vàng, quy theo giá vàng miếng, hết hơn mười chín triệu.",
+  "Đầu tháng mười bán lại, nhận hơn mười bốn triệu.",
+  "Mất khoảng năm triệu, hơn nửa tháng lương chín triệu.",
+  "Ngoài giá vàng, người trong hàng còn trả ba khoản.",
+  "Một: chênh lệch mua bán.",
+  "Ngày hai mươi chín tháng một, ra khỏi cửa là lỗ ba triệu một lượng.",
+  "Hai: trả thêm so với thế giới.",
+  "Vía Thần Tài năm nay khoảng hai mươi triệu một lượng; tháng tám chỉ còn hơn hai triệu.",
+  "Ba: mua trên giấy.",
+  "Nhiều nơi hẹn giao vàng sau bảy đến mười ngày; giá rơi lúc chờ, bạn chưa có vàng để bán.",
+  "Chi tiết trong video dài trên kênh.",
+  "Còn bạn: có hỏi giá mua lại trước khi mua không?"
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MUA ĐÚNG ĐỈNH",
+     "at": 0.0,
+     "acc": true,
+     "size": 170
+    },
+    {
+     "text": "1 CHỈ VÀNG",
+     "at": [
+      0,
+      "một"
+     ]
+    },
+    {
+     "text": "29/01/2026 · quy theo giá vàng miếng SJC",
+     "at": [
+      0,
+      "quy"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "at": [
+    0,
+    "hết",
+    0,
+    -0.1
+   ],
+   "kind": "bars",
+   "title": "1 CHỈ VÀNG MIẾNG SJC",
+   "unit": "TRIỆU ĐỒNG · 1/10 LƯỢNG · VÀNG NHẪN CÓ GIÁ KHÁC",
+   "bars": [
+    {
+     "label": "MUA\n29/01",
+     "v": 19.13,
+     "text": "19,13",
+     "c": "ref",
+     "at": [
+      0,
+      "mười"
+     ]
+    },
+    {
+     "label": "BÁN LẠI\n06/10",
+     "v": 14.05,
+     "text": "14,05",
+     "c": "down",
+     "at": [
+      1,
+      "nhận"
+     ],
+     "ghost": 19.13,
+     "gapAt": [
+      2,
+      "mất"
+     ],
+     "gapText": "−5,08"
+    }
+   ],
+   "badge": {
+    "text": "≈ 56% THÁNG LƯƠNG 9 TRIỆU",
+    "at": [
+     2,
+     "nửa"
+    ],
+    "c": "down"
+   },
+   "note": "KÊNH TỰ TÍNH TỪ GIÁ SJC · LƯƠNG 9 TR = THU NHẬP BQ QUÝ I/2026 (CỤC THỐNG KÊ)"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "NGOÀI GIÁ VÀNG",
+     "at": [
+      3,
+      "ngoài"
+     ],
+     "sm": true
+    },
+    {
+     "text": "3 KHOẢN TRẢ THÊM",
+     "at": [
+      3,
+      "ba"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "1 · CHÊNH MUA–BÁN · SJC 29/01 (WEBGIA)",
+   "rows": [
+    {
+     "k": "TIỆM BÁN RA",
+     "v": "191,3",
+     "at": [
+      5,
+      "hai"
+     ]
+    },
+    {
+     "k": "TIỆM MUA VÀO",
+     "v": "188,3",
+     "at": [
+      5,
+      "cửa"
+     ]
+    }
+   ],
+   "total": {
+    "k": "RA KHỎI CỬA",
+    "v": "−3 TR ≈ 1,6%",
+    "at": [
+     5,
+     "lỗ"
+    ]
+   }
+  },
+  {
+   "type": "chart",
+   "at": 6,
+   "kind": "bars",
+   "title": "2 · SJC CAO HƠN THẾ GIỚI",
+   "unit": "TRIỆU ĐỒNG / LƯỢNG · 2026",
+   "bars": [
+    {
+     "label": "VÍA THẦN TÀI\n26/02",
+     "v": 20,
+     "text": "~20",
+     "c": "#fb923c",
+     "at": [
+      7,
+      "hai"
+     ]
+    },
+    {
+     "label": "19/08",
+     "v": 2,
+     "text": "hơn 2",
+     "c": "#fb923c",
+     "at": [
+      7,
+      "tám"
+     ]
+    }
+   ],
+   "note": "26/02: VNEXPRESS · 19/08: DÂN TRÍ · PHẦN TRẢ THÊM CÓ THỂ CO LẠI"
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "3 · MUA TRÊN GIẤY",
+     "at": [
+      8,
+      "mua"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "đặt cọc hoặc trả đủ 100%",
+     "at": [
+      9,
+      "nhiều"
+     ],
+     "sm": true
+    },
+    {
+     "text": "GIAO SAU 7–10 NGÀY",
+     "at": [
+      9,
+      "bảy"
+     ]
+    },
+    {
+     "text": "giá rơi lúc chờ",
+     "at": [
+      9,
+      "rơi"
+     ],
+     "sm": true
+    },
+    {
+     "text": "CHƯA CÓ VÀNG ĐỂ BÁN",
+     "at": [
+      9,
+      "chưa"
+     ],
+     "acc": true
+    },
+    {
+     "text": "nguồn: Vietnambiz, 04/02/2026",
+     "at": [
+      9,
+      "bán"
+     ],
+     "sm": true,
+     "size": 44
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "3 KHOẢN TRẢ THÊM",
+     "at": [
+      10,
+      "chi"
+     ],
+     "sm": true
+    },
+    {
+     "text": "VIDEO DÀI TRÊN KÊNH",
+     "at": [
+      10,
+      "video"
+     ],
+     "acc": true
+    },
+    {
+     "text": "Xếp hàng mua vàng có phải là đỉnh?",
+     "at": [
+      10,
+      "kênh"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 11,
+   "text": "Bạn có hỏi giá mua lại trước khi mua?"
+  }
+ ],
+ "sources": [
+  "https://webgia.com/gia-vang/sjc/29-01-2026.html",
+  "https://www.vietnamplus.vn/gia-vang-ngay-610-bang-gia-tai-cac-cong-ty-vang-bac-da-quy-trong-nuoc-post1140249.vnp",
+  "https://www.nso.gov.vn/tin-tuc-thong-ke/2026/04/thong-cao-bao-chi-ve-tinh-hinh-lao-dong-viec-lam-quy-i-nam-2026/",
+  "https://vnexpress.net/gia-vang-hom-nay-26-2-ngay-via-than-tai-5044187.html",
+  "https://dantri.com.vn/kinh-doanh/khoang-cach-gia-vang-sjc-va-the-gioi-thu-hep-con-2-trieu-dongluong-20260819195145057.htm",
+  "https://vietnambiz.vn/xep-hang-mua-vang-bac-tren-giay-chua-duoc-cam-trong-tay-da-lo-nang-chuyen-gia-canh-bao-gi-202624131025160.htm"
+ ]
+}

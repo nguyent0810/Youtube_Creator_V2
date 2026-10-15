@@ -1,0 +1,25 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#02050a}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;color:#fff}
+.abs{position:absolute}
+.grid{position:absolute;inset:0;background:linear-gradient(rgba(125,211,252,.07) 1px,transparent 1px) 0 0/64px 64px,linear-gradient(90deg,rgba(125,211,252,.07) 1px,transparent 1px) 0 0/64px 64px}
+.glow{position:absolute;border-radius:50%;filter:blur(120px);background:rgba(34,211,238,.45)}
+.big{position:absolute;font-weight:900;line-height:.95;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.cy{color:#22d3ee;text-shadow:0 0 50px rgba(34,211,238,.75),0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.tag{position:absolute;font-family:'JetBrains Mono';font-weight:700;letter-spacing:.22em;color:#7dd3fc;white-space:nowrap;text-shadow:0 4px 20px #000}
+</style></head><body>
+<!-- T1: Mark I Perceptron 1958 (ảnh Hải quân Mỹ, PD) + "TỔ TIÊN CHATGPT" -->
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<div class="grid"></div>
+<img class="abs" src="assets/long/mim-ai-70/img/perceptron.jpg" style="left:900px;top:0;width:1020px;height:1080px;object-fit:cover;object-position:62% 30%;filter:grayscale(1) contrast(1.5) brightness(.95)"/>
+<div class="abs" style="left:900px;top:0;width:1020px;height:1080px;background:rgba(34,211,238,.16);mix-blend-mode:color"></div>
+<div class="abs" style="inset:0;background:linear-gradient(90deg,#02050a 0%,rgba(2,5,10,.97) 46%,rgba(2,5,10,.2) 66%,rgba(2,5,10,0) 100%)"></div>
+<div class="glow" style="left:-160px;top:380px;width:1000px;height:520px"></div>
+<div class="tag" style="left:96px;top:190px;font-size:64px;color:#22d3ee">1958</div>
+<div class="big" style="left:80px;top:350px;font-size:190px">TỔ TIÊN</div>
+<div class="big cy" style="left:80px;top:560px;font-size:190px">CHATGPT</div>
+<div class="tag" style="left:96px;top:930px;font-size:34px">MIND IN THE MACHINE</div>
+</div><script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

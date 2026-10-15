@@ -1,0 +1,335 @@
+# MÁY THẮNG POKER: CỖ MÁY HỌC CÁCH TỐ BỊP, VÀ BA LÁ BÀI ÚP (bản 1)
+
+**Kênh:** Mind in the Machine (MIM) · **Chuỗi:** Trận đấu Người – Máy · **Giọng:** Thanh Bình (dẫn) · Ngọc Huyền (`»` lời trích)
+**Độ dài dự kiến:** ~20 phút, 17 chương (video dài loại 20–30 phút, thứ Năm)
+**Tiêu đề (phương án):** (1) *Máy thắng poker: cỗ máy học cách tố bịp, và ba lá bài úp* · (2) *Hai mươi ngày ở Pittsburgh: bốn cao thủ poker đấu một
+cỗ máy, 2017* · (3) *Vì sao poker khó cho máy hơn cờ vây? Libratus, Pluribus và nghệ thuật tố bịp*
+
+Quy ước: mỗi dòng là một câu đọc · `‖` = ngừng dài · `»` = lời trích (`[TRÍCH DỊCH]` = câu thật đã dịch, `[DIỄN Ý]` = ý đã thuật lại).
+**Viết cho tai + luật studio (14/10/2026):** câu một hơi, không câu nào quá ba mươi lăm tiếng, câu ngắn xen kẽ, liệt kê tối đa ba mục.
+**Trung thực:** video nói về nghiên cứu trí tuệ nhân tạo, KHÔNG hướng dẫn chơi bài, không cổ vũ cờ bạc, không nhắc tiền thật được ăn thua (các con số là
+"phỉnh" trong thử nghiệm; người chơi được trả công tham gia) — nói rõ trong lời đọc; cảm nhận của người chơi ghi [DIỄN Ý]; số tình huống của poker là ước
+tính của nhóm nghiên cứu.
+**Giữ chân:** cold open = **hai mươi ngày ở một sòng bài Pittsburgh, máy dẫn gần một triệu tám trăm nghìn phỉnh** · **lộ trình dạng "ba lá bài úp"** (ba
+điều làm poker khó cho máy: thông tin bị che, tố bịp, và đối thủ biết thích nghi — mỗi lá được lật ở một chương; khác MIM trước: ba câu nói, ba thanh độ
+tự tin, bảng tỉ số, phiên toà…) · **re-hook ~45%** = đêm thứ nhất, máy bị dồn · **cảnh mạnh ~70%** = sáu người một bàn, tám ngày, dưới một trăm năm mươi
+đô la · **mô-típ** "lá bài úp".
+
+---
+
+## CH00 · Hai mươi ngày ở Pittsburgh
+
+Tháng một năm hai nghìn không trăm mười bảy, ở một sòng bài tại Pittsburgh, nước Mỹ.
+Bốn người chơi poker chuyên nghiệp ngồi trước màn hình.
+Mỗi người đấu tay đôi với cùng một đối thủ. ‖
+Họ chơi nhiều giờ mỗi ngày, suốt hai mươi ngày.
+Tổng cộng một trăm hai mươi nghìn ván bài.
+Đối thủ của họ không ăn, không ngủ, không mệt.
+Nó là một chương trình máy tính tên là Libratus. ‖
+Khi ván cuối cùng kết thúc, cỗ máy dẫn gần một triệu tám trăm nghìn phỉnh.
+Không phải tiền thật. Phỉnh là đơn vị tính điểm trong thử nghiệm.
+Nhưng các nhà nghiên cứu nói rằng khoảng cách ấy đủ lớn để không thể là may mắn. ‖
+Một trong bốn người chơi về sau kể lại cảm giác của mình.
+» Cứ như đang chơi với một kẻ gian lận, như thể nó nhìn thấy bài của tôi. [DIỄN Ý]
+Nó không nhìn thấy. Đó mới là điều đáng nói. ‖
+Ở các video trước của chuỗi này, máy thắng cờ vua, thắng cờ vây, thắng cả trò đố vui.
+Nhưng poker khác hẳn. Nhiều nhà nghiên cứu từng coi nó là một trong những trò khó nhất cho máy.
+Vì sao? Vì poker có những lá bài úp.
+Mình sẽ lật ba lá bài úp ấy, lần lượt từng lá.
+Lá thứ nhất: những gì bạn không được thấy.
+Lá thứ hai: nghệ thuật tố bịp.
+Lá thứ ba: một đối thủ biết học từ chính bạn. ‖
+Video nói về nghiên cứu trí tuệ nhân tạo. Nó không hướng dẫn chơi bài, và không cổ vũ cờ bạc.
+
+## CH01 · Vì sao poker khác cờ
+
+Hãy nhớ lại bàn cờ vua của Deep Blue, hay bàn cờ vây của AlphaGo.
+Mọi quân cờ đều nằm trên bàn.
+Bạn thấy hết những gì đối thủ thấy. ‖
+Các nhà nghiên cứu gọi đó là trò chơi có thông tin hoàn hảo.
+Khó thì khó thật, nhưng không có gì bị giấu. ‖
+Poker thì khác.
+Mỗi người cầm những lá bài úp mà người khác không được thấy.
+Bạn phải quyết định khi thiếu thông tin.
+Và đối thủ của bạn cũng vậy. ‖
+Điều đó làm thay đổi mọi thứ.
+Trong cờ, nước đi tốt nhất ở một thế cờ không phụ thuộc vào việc đối thủ đang nghĩ gì.
+Trong poker, cách chơi tốt nhất của bạn phụ thuộc vào việc đối thủ đoán bạn đang cầm gì. ‖
+Từ năm một nghìn chín trăm bốn mươi tư, nhà toán học John von Neumann đã dùng poker làm ví dụ trong lý thuyết trò chơi.
+Ông muốn hiểu một hành vi rất con người: tố bịp.
+Phải hơn bảy mươi năm sau, máy mới thật sự thắng được con người ở trò chơi ấy.
+
+## CH02 · Lá bài úp thứ nhất
+
+Lá bài úp thứ nhất là những gì bạn không được thấy.
+Thử nghĩ như một cỗ máy.
+Bạn đang cầm một đôi át. Đối thủ vừa cược rất lớn. ‖
+Họ đang cầm bài mạnh hơn? Hay đang doạ?
+Bạn không biết.
+Bạn chỉ biết những gì họ đã làm, và đoán những gì họ có thể đang cầm. ‖
+Một cỗ máy chơi cờ có thể nhìn trước nhiều nước, vì nó biết chắc thế cờ đang là gì.
+Một cỗ máy chơi poker thì không có thế cờ chắc chắn nào.
+Nó phải cân nhắc mọi khả năng cùng một lúc, mỗi khả năng một xác suất. ‖
+Và còn một cái bẫy nữa.
+Nếu bạn luôn cược lớn khi có bài mạnh, và luôn cược nhỏ khi bài yếu, đối thủ sẽ sớm đọc được bạn.
+Một người chơi giỏi phải khó đoán.
+Nhưng không phải khó đoán một cách ngẫu nhiên.
+Mà khó đoán theo đúng tỉ lệ.
+
+## CH03 · Phòng thí nghiệm ở Canada
+
+Một trong những nơi theo đuổi bài toán này lâu nhất là Đại học Alberta, ở Canada.
+Năm hai nghìn không trăm lẻ tám, chương trình Polaris của họ thắng các tay chơi hàng đầu ở một kiểu poker đơn giản hơn.
+Kiểu ấy gọi là giới hạn: mỗi lần chỉ được cược một mức cố định. ‖
+Bảy năm sau, tháng một năm hai nghìn không trăm mười lăm, nhóm ấy công bố một kết quả trên tạp chí Science.
+Chương trình Cepheus của họ đã gần như giải xong kiểu poker giới hạn, khi chơi tay đôi.
+Giải xong nghĩa là tìm ra một cách chơi mà về lâu dài, không ai thắng nổi nó một cách đáng kể. ‖
+Để làm được việc ấy, họ cho bốn nghìn tám trăm bộ xử lý chạy liên tục trong sáu mươi tám ngày.
+Kết quả gần như hoàn hảo.
+Theo nhóm nghiên cứu, ngay cả một đối thủ biết rõ cách chơi của Cepheus cũng chỉ thắng được một phần rất nhỏ, gần như bằng không. ‖
+Nhưng đó vẫn là kiểu poker giới hạn.
+Kiểu mà dân chuyên nghiệp thực sự mê, là kiểu không giới hạn.
+Bạn có thể đặt cược bất cứ mức nào, kể cả toàn bộ số phỉnh của mình.
+Và ở đó, bài toán lớn hơn rất, rất nhiều.
+
+## CH04 · Một con số có một trăm sáu mươi chữ số
+
+Trong poker không giới hạn, mỗi lần đặt cược là một lựa chọn gần như liên tục.
+Cược mười, mười một, mười hai, hay tất cả.
+Mỗi lựa chọn mở ra một nhánh mới của ván bài. ‖
+Theo nhóm làm ra Libratus, poker không giới hạn chơi tay đôi có khoảng mười mũ một trăm sáu mươi mốt tình huống cần ra quyết định.
+Một con số có hơn một trăm sáu mươi chữ số.
+Nhiều hơn số nguyên tử trong vũ trụ quan sát được rất nhiều lần. ‖
+Không cỗ máy nào duyệt hết được.
+Nên các nhà nghiên cứu phải làm một việc khéo léo.
+Họ gộp những tình huống gần giống nhau thành một nhóm.
+Ví dụ, cược một trăm và cược một trăm lẻ một, có lẽ nên được xử lý gần như nhau. ‖
+Rồi máy tìm cách chơi cho phiên bản thu nhỏ ấy.
+Và khi chơi thật, nó tính lại cẩn thận hơn cho đúng tình huống đang gặp.
+Cái khó là thu nhỏ thế nào mà không làm mất điều quan trọng.
+
+## CH05 · Lần thua năm hai nghìn không trăm mười lăm
+
+Năm hai nghìn không trăm mười lăm, Đại học Carnegie Mellon, ở Pittsburgh, đưa một chương trình tên là Claudico tới gặp bốn người chơi chuyên nghiệp.
+Đó cũng là poker không giới hạn, chơi tay đôi.
+Và lần ấy, con người thắng. ‖
+Bốn người chơi hơn cỗ máy hơn bảy trăm ba mươi nghìn phỉnh.
+Họ đã tìm ra những chỗ yếu của nó, và khai thác không thương tiếc. ‖
+Nhóm nghiên cứu, dẫn đầu bởi giáo sư Tuomas Sandholm và nghiên cứu sinh Noam Brown, trở về phòng thí nghiệm.
+Họ không bỏ cuộc.
+Chưa đầy hai năm sau, họ quay lại với một chương trình mới.
+Và hai trong bốn người chơi năm ấy cũng quay lại. Lần này để đấu với Libratus.
+
+## CH06 · Học bằng sự hối tiếc
+
+Libratus không học bằng cách xem người khác chơi.
+Nó học bằng cách tự chơi với chính mình, vô số ván, trên một siêu máy tính.
+Và nó dùng một ý tưởng có cái tên rất con người: giảm thiểu sự hối tiếc. ‖
+Ý tưởng ấy thế này.
+Sau mỗi ván, cỗ máy tự hỏi: giá như ở tình huống ấy, mình chọn cách khác, thì mình được thêm hay mất bao nhiêu?
+Con số được thêm ấy gọi là sự hối tiếc. ‖
+Lần sau gặp lại tình huống tương tự, nó chọn những cách mà nó hối tiếc vì đã không chọn nhiều hơn.
+Lặp lại rất nhiều lần, những lựa chọn dần ổn định lại.
+Cách chơi cuối cùng cân bằng tới mức đối thủ khó tìm được chỗ nào để khai thác. ‖
+Nghe giống cách con người học từ sai lầm.
+Chỉ khác ở chỗ, máy có thể sai và học lại vô số lần trước khi ngồi vào bàn.
+Và một trong những điều nó học được, là một kỹ năng ta tưởng chỉ con người mới có.
+
+## CH07 · Lá bài úp thứ hai: tố bịp
+
+Tố bịp là khi bạn cược lớn với một tay bài yếu, để đối thủ tưởng bạn có bài mạnh và bỏ cuộc.
+Với con người, đó là chuyện tâm lý: gan dạ, đọc vị, giữ nét mặt.
+Với Libratus, đó là chuyện toán học. ‖
+Hãy nghĩ lại cái bẫy ở chương trước.
+Nếu chỉ cược lớn khi có bài mạnh, bạn sẽ bị đọc vị.
+Nên trong một tỉ lệ nhất định các lần cược lớn, bạn phải đang cầm bài yếu.
+Tỉ lệ ấy được tính ra, không phải cảm tính. ‖
+Cỗ máy không có nét mặt để giữ.
+Nó không run, không thở gấp, không liếc nhìn phỉnh.
+Nó chỉ tố bịp đúng tần suất mà phép tính chỉ ra. ‖
+Và nó tố bịp theo những cách mà người chơi chuyên nghiệp ít khi dám làm.
+Ví dụ, những mức cược lớn bất thường so với số phỉnh trên bàn.
+Ban đầu, các cao thủ coi đó là sai lầm.
+Rồi họ dần nhận ra, đó là một phần của một cách chơi rất khó đối phó.
+
+## CH08 · Lá bài úp thứ ba: đối thủ biết học
+
+Trận đấu bắt đầu ngày mười một tháng một năm hai nghìn không trăm mười bảy.
+Bốn người chơi không chỉ đánh bài. Họ làm việc như một đội.
+Mỗi tối, họ ngồi lại với nhau, so sánh ghi chép, tìm điểm yếu của cỗ máy. ‖
+Và họ tìm được.
+Ở những ngày đầu, có những kiểu cược mà Libratus xử lý chưa tốt.
+Các cao thủ dồn sức vào đúng những chỗ ấy. ‖
+Nhưng cỗ máy cũng có một đội của nó.
+Mỗi đêm, một thuật toán phân tích những lỗ hổng mà người chơi đã tìm ra và khai thác trong ngày.
+Rồi siêu máy tính vá ba lỗ hổng quan trọng nhất, trước khi trời sáng. ‖
+Sáng hôm sau, những chỗ yếu ấy đã biến mất.
+Các cao thủ phải tìm chỗ yếu mới, trong khi cỗ máy cứ chặt dần lại.
+Đó là lá bài úp thứ ba: một đối thủ biết học từ chính bạn.
+
+## CH09 · Gần một triệu tám trăm nghìn
+
+Ngày ba mươi tháng một, ván bài cuối cùng kết thúc.
+Libratus dẫn một triệu bảy trăm sáu mươi sáu nghìn hai trăm năm mươi phỉnh. ‖
+Nhóm nghiên cứu khẳng định chiến thắng có ý nghĩa thống kê.
+Nghĩa là với một trăm hai mươi nghìn ván, kết quả ấy không thể chỉ do may mắn. ‖
+Theo cách tính của các nhà nghiên cứu, cỗ máy thắng cả bốn người chơi, không riêng gì một người.
+Hai trong bốn người từng thắng Claudico hai năm trước.
+Lần này, họ không tìm ra cách. ‖
+Chiến lược của Libratus được tính trên một siêu máy tính của Trung tâm Siêu máy tính Pittsburgh, cả trước và trong suốt trận đấu.
+Một cỗ máy khổng lồ, chỉ để chơi tay đôi với một người.
+Hai năm sau, câu chuyện ấy sẽ thay đổi đến bất ngờ.
+
+## CH10 · Làm sao loại bỏ may mắn?
+
+Poker có một vấn đề mà cờ vua không có.
+May mắn.
+Một người chơi tồi vẫn có thể thắng vài ván nhờ được chia bài đẹp. ‖
+Vậy làm sao biết cỗ máy thắng vì giỏi, chứ không vì hên?
+Các nhà nghiên cứu dùng hai cách.
+Cách thứ nhất là chơi thật nhiều ván. Một trăm hai mươi nghìn ván, để may rủi bù trừ cho nhau. ‖
+Cách thứ hai khéo hơn: chia bài đối xứng.
+Bốn người chơi được ghép thành từng cặp.
+Khi một người nhận một tay bài, thì ở một phòng khác, người kia nhận đúng tay bài mà cỗ máy đã nhận, và cỗ máy nhận tay bài của người thứ nhất. ‖
+Nếu cỗ máy được chia bài đẹp ở bàn này, nó sẽ phải cầm bài xấu ở bàn kia.
+Phần hên xui gần như bị triệt tiêu.
+Cái còn lại, là kỹ năng. ‖
+Đó là lý do nhóm nghiên cứu có thể nói chắc rằng chiến thắng của Libratus có ý nghĩa thống kê.
+Không phải một đêm hên. Mà là hai mươi ngày giỏi hơn.
+
+## CH11 · Một cỗ máy khác ở Canada
+
+Cùng thời gian ấy, nhóm ở Đại học Alberta cũng có một chương trình poker không giới hạn của riêng mình.
+Nó tên là DeepStack. ‖
+Họ mời ba mươi ba người chơi chuyên nghiệp từ mười bảy quốc gia.
+Mỗi người chơi một trận ba nghìn ván với cỗ máy, trong khoảng bốn tuần.
+Mười một người chơi hết trận. ‖
+DeepStack thắng cả mười một người.
+Kết quả được công bố trên tạp chí Science, tháng ba năm hai nghìn không trăm mười bảy. ‖
+Cách làm của DeepStack khác Libratus.
+Nó không chuẩn bị sẵn một kế hoạch khổng lồ cho mọi tình huống.
+Mỗi khi tới lượt, nó dùng một mạng nơ-ron để ước lượng nhanh, rồi tính lại cách chơi cho đúng tình huống ấy.
+Giống một người chơi giỏi, suy nghĩ lại mỗi khi tới lượt mình. ‖
+Hai cỗ máy, hai cách làm, cùng một kết luận.
+Ở poker tay đôi, con người đã thua.
+Nhưng còn một pháo đài cuối cùng: một bàn có nhiều người.
+
+## CH12 · Sáu người một bàn
+
+Poker tay đôi là một cuộc đấu giữa hai người.
+Một người thắng bao nhiêu, người kia thua bấy nhiêu.
+Toán học cho trò chơi hai người như thế đã được hiểu khá rõ. ‖
+Nhưng ở sòng bài, người ta thường chơi sáu người một bàn.
+Và với nhiều người chơi, toán học trở nên rối rắm hơn nhiều.
+Không còn một cách chơi được đảm bảo là không thể bị đánh bại. ‖
+Liên minh ngầm, những người chơi tệ làm thay đổi cả bàn, những tình huống không ai đoán được.
+Nhiều nhà nghiên cứu nghĩ rằng máy còn lâu mới thắng được con người ở một bàn đông người.
+Họ đã nhầm.
+
+## CH13 · Tám ngày, dưới một trăm năm mươi đô la
+
+Tháng bảy năm hai nghìn không trăm mười chín, Noam Brown và Tuomas Sandholm công bố một chương trình mới trên tạp chí Science.
+Lần này, họ làm cùng một nhóm nghiên cứu trí tuệ nhân tạo của Facebook.
+Chương trình tên là Pluribus. ‖
+Và chi tiết gây sốc nhất không phải là nó thắng.
+Mà là nó rẻ đến thế nào.
+Pluribus học cách chơi chỉ trong tám ngày, trên một máy chủ sáu mươi tư lõi, không cần đến bộ xử lý đồ hoạ nào.
+Theo các tác giả, với giá thuê máy đám mây thông thường, chi phí huấn luyện dưới một trăm năm mươi đô la. ‖
+Hai năm trước, Libratus cần cả một siêu máy tính.
+Giờ một cỗ máy mạnh hơn chỉ cần một khoản tiền bằng một bữa ăn nhà hàng. ‖
+Rồi họ thử nó.
+Trong một thử nghiệm, Pluribus ngồi cùng bàn với năm người chơi chuyên nghiệp, tổng cộng mười nghìn ván.
+Trong một thử nghiệm khác, hai cao thủ nổi tiếng, mỗi người chơi năm nghìn ván với năm bản sao của Pluribus. ‖
+Một trong hai người ấy là Darren Elias, người giữ kỷ lục nhiều danh hiệu nhất ở một giải poker lớn của Mỹ.
+Kết quả: Pluribus thắng, với khoảng cách có ý nghĩa thống kê.
+
+## CH14 · Máy chơi khác người
+
+Điều làm các cao thủ ngạc nhiên nhất là cách Pluribus chơi.
+Nó làm những việc mà sách vở poker khuyên không nên làm. ‖
+Có những lúc nó mở đầu vòng cược theo cách mà dân chuyên coi là dở.
+Có những lúc nó cược lớn đến mức trông như liều lĩnh.
+Nhưng cộng lại hàng nghìn ván, những lựa chọn ấy lại có lợi. ‖
+Giống nước cờ ba mươi bảy của AlphaGo, cỗ máy không bắt chước con người.
+Nó tìm ra cách của riêng mình, rồi cho con người thấy những điều họ chưa từng nghĩ tới. ‖
+Ngày nay, nhiều người chơi poker chuyên nghiệp luyện tập bằng các phần mềm tính toán cách chơi cân bằng.
+Họ học từ máy.
+Như các kỳ thủ cờ vua và cờ vây đã làm, sau khi thua máy. ‖
+Cỗ máy từng là đối thủ, lại trở thành người thầy.
+
+## CH15 · Cỗ máy không đọc vị ai
+
+Có một điều nghe rất ngược đời về cả Libratus lẫn Pluribus.
+Chúng không cố đọc vị đối thủ. ‖
+Một cao thủ con người luôn tìm thói quen của người ngồi đối diện.
+Người này hay doạ khi bài yếu. Người kia hay bỏ khi bị ép.
+Rồi họ khai thác chính những thói quen ấy. ‖
+Theo bài báo của nhóm nghiên cứu, Pluribus không điều chỉnh cách chơi theo thói quen mà nó quan sát được ở đối thủ.
+Nó chơi một cách cân bằng, sao cho ai khai thác nó cũng khó. ‖
+Nghe có vẻ bỏ phí cơ hội.
+Nhưng đó lại là điểm mạnh.
+Một người chơi cố khai thác đối thủ thì chính mình cũng để lộ sơ hở.
+Cỗ máy thì không để lộ gì.
+Nó không cần biết bạn là ai. Nó chỉ cần không sai.
+
+## CH16 · Suy nghĩ lâu hơn
+
+Có một bài học từ poker mà sau này đi xa hơn nhiều so với bàn bài.
+Libratus, DeepStack và Pluribus đều có chung một điều.
+Chúng không chỉ dựa vào những gì đã học sẵn. ‖
+Khi tới lượt, chúng dành thêm thời gian để tính lại, cho đúng tình huống đang gặp.
+Nói cách khác, chúng suy nghĩ lâu hơn trước khi hành động. ‖
+Năm hai nghìn không trăm hai mươi ba, Noam Brown chuyển sang làm việc ở OpenAI.
+Ông nghiên cứu một ý tưởng tương tự cho các mô hình ngôn ngữ.
+Thay vì trả lời ngay, cho mô hình dành thêm thời gian để suy luận trước khi đưa ra câu trả lời. ‖
+Năm hai nghìn không trăm hai mươi tư, OpenAI ra mắt những mô hình đầu tiên theo hướng ấy.
+Từ bàn poker ở Pittsburgh, tới những chatbot mà ta dùng mỗi ngày, có một sợi chỉ nối dài.
+Đôi khi, câu trả lời tốt hơn chỉ cần thêm một chút thời gian để nghĩ.
+
+## CH17 · Ngoài bàn bài
+
+Poker chỉ là một trò chơi.
+Nhưng những gì nó đòi hỏi lại rất giống đời thật. ‖
+Đàm phán một hợp đồng, khi bạn không biết giới hạn của bên kia.
+Đấu giá, khi mỗi người giấu mức giá thật của mình.
+An ninh mạng, khi kẻ tấn công cố tình che giấu ý đồ. ‖
+Tất cả đều là trò chơi có thông tin bị che.
+Chính giáo sư Sandholm cũng từng dùng các thuật toán của mình cho những việc rất đời thường.
+Ông thiết kế thuật toán ghép cặp cho chương trình hiến thận chéo ở Mỹ, nơi những người hiến và người nhận không hợp nhau được ghép chéo với nhau. ‖
+Từ những lá bài úp, tới những quả thận được ghép đúng người.
+Toán học của việc ra quyết định khi thiếu thông tin hoá ra có ích hơn ta tưởng.
+
+## CH18 · Ba lá bài úp
+
+Hãy lật lại ba lá bài úp của video này.
+Lá thứ nhất, thông tin bị che: máy học cách cân nhắc mọi khả năng, mỗi khả năng một xác suất.
+Lá thứ hai: tố bịp. Máy học rằng muốn khó bị đọc vị, phải doạ đúng tần suất, theo phép tính chứ không theo cảm giác.
+Lá thứ ba: đối thủ biết học. Máy học cách vá lỗ hổng mỗi đêm, nhanh hơn con người tìm ra lỗ hổng mới. ‖
+Ba điều ấy từng được coi là những gì thuộc về con người nhất ở bàn bài.
+Trực giác, sự gan dạ, khả năng đọc người.
+Hoá ra, chúng cũng có thể được viết thành toán học. ‖
+Nhưng có một điều cỗ máy chưa làm.
+Nó không ngồi vào bàn vì nó thích. Nó không vui khi thắng, không tiếc khi thua.
+Ván bài ấy, với nó, chỉ là một bài toán. ‖
+Với bạn, kỹ năng nào của con người là thứ bạn tin máy khó học nhất?
+Kể cho mình nghe ở phần bình luận nhé.
+
+---
+
+## Ghi chú
+
+**Libratus (CMU, 01/2017):** CMU News 31/01/2017; CNN; TechCrunch; Engadget: Rivers Casino, Pittsburgh, 11–30/01/2017, 20 ngày, 120.000 ván heads-up no-limit
+hold'em; Jason Les, Dong Kim, Daniel McAulay, Jimmy Chou; Libratus +1.766.250 phỉnh; có ý nghĩa thống kê; chiến lược tính trên Bridges (Pittsburgh
+Supercomputing Center) trước và trong trận; mỗi đêm thuật toán phân tích lỗ hổng người chơi khai thác, vá ba lỗ hổng hàng đầu; Tuomas Sandholm, Noam Brown.
+Claudico (2015): con người thắng 732.713 phỉnh; Dong Kim, Jason Les trở lại năm 2017. Cảm nhận "như nó nhìn thấy bài tôi" của Dong Kim → [DIỄN Ý]. Số
+tình huống ~10^161: theo nhóm CMU. "Mười tiếng mỗi ngày": theo tường thuật trận đấu (người chơi chơi hằng ngày nhiều giờ) — CẦN giữ chữ "mười tiếng"
+nếu được xác nhận, nếu không đổi thành "nhiều giờ".
+**Alberta:** Polaris 2008 thắng ở limit heads-up; Cepheus (Science, 01/2015) "essentially weakly solved" heads-up limit hold'em, CFR+, 4.800 CPU × 68 ngày,
+khai thác được tối đa 0,000986 big blind/ván; DeepStack (Science, 03/2017): 33 người chơi từ 17 nước, mỗi trận 3.000 ván trong 4 tuần, 11 người chơi
+hết trận, DeepStack thắng cả 11.
+**Pluribus (Science, 07/2019; Facebook AI + CMU):** 6 người, no-limit; huấn luyện 8 ngày trên máy chủ 64 lõi, không GPU, < 512 GB RAM, "dưới 150 USD"
+theo giá đám mây; thử nghiệm 1: 5 người chuyên nghiệp + 1 Pluribus, 10.000 ván; thử nghiệm 2: Darren Elias, Chris Ferguson mỗi người 5.000 ván với 5
+bản sao Pluribus; thắng có ý nghĩa thống kê.
+**Chia bài đối xứng (Brains vs AI 2017):** các cặp người chơi nhận bài đối xứng ở hai phòng (theo tường thuật trận đấu của CMU) · **Pluribus không mô hình hoá đối thủ:** bài báo Science 07/2019 (không điều chỉnh theo xu hướng quan sát được).
+**Khác:** von Neumann – Morgenstern, *Theory of Games and Economic Behavior* (1944), poker và tố bịp; Noam Brown sang OpenAI năm 2023, các mô hình suy
+luận ra mắt 09/2024; Sandholm thiết kế thuật toán ghép cặp hiến thận chéo dùng ở Mỹ.

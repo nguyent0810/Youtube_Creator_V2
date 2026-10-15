@@ -1,0 +1,243 @@
+{
+ "title": "Mở ứng dụng ngày ba mươi tháng chín",
+ "lines": [
+  "Giả sử tối thứ Tư, ba mươi tháng chín năm hai nghìn không trăm hai mươi sáu, bạn mở ứng dụng chứng khoán trên điện thoại.",
+  "Bạn kéo biểu đồ VN-Index về đầu năm: âm không phẩy chín phần trăm.",
+  "Gần như đứng yên. Bạn thở phào.",
+  {
+   "t": "Rồi bạn bấm sang tài khoản của mình.",
+   "p": 1.0
+  },
+  "Ba mã cổ phiếu, mỗi mã một khoản tiền bằng nhau.",
+  "Một mã âm mười hai phần trăm. Một mã âm hai mươi. Một mã dương ba.",
+  {
+   "t": "Cả tài khoản: âm gần mười phần trăm.",
+   "p": 1.0
+  },
+  {
+   "t": "Ủa, chỉ số gần như không giảm, sao mình lỗ gần mười phần trăm? App sai, hay mình sai?",
+   "ask": 1
+  },
+  "Không ai sai cả.",
+  "Chỉ là VN-Index đo một chuyện khác với tài khoản của bạn.",
+  {
+   "t": "Và bạn không hề đơn độc: theo số liệu kênh tự tính, ngày ba mươi tháng chín, cứ bốn cổ phiếu trên sàn HOSE thì gần ba cổ phiếu thấp hơn giá cuối năm ngoái.",
+   "p": 1.0
+  },
+  "Video này trả lời ba câu hỏi.",
+  "Một, cổ phiếu, sàn HOSE và VN-Index là gì, và chỉ số được tính ra sao?",
+  "Hai, vì sao từ đầu năm chỉ số gần như đứng yên, mà phần lớn cổ phiếu lại giảm?",
+  {
+   "t": "Ba, vì sao tài khoản của bạn có thể lỗ, và bạn tự kiểm tra thế nào?",
+   "p": 1.0
+  },
+  "Đây là Biểu Đồ Biết Nói. Tiền bạc, giải thích bằng dữ liệu.",
+  "Và đây là bài một của khoá Chứng khoán từ số không.",
+  "Video chỉ nhằm giáo dục, không phải lời khuyên mua hay bán bất kỳ cổ phiếu nào."
+ ],
+ "scenes": [
+  {
+   "type": "broll",
+   "vid": "39494572",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "TỐI THỨ TƯ · 30/09/2026",
+     "at": [
+      0,
+      "tối"
+     ]
+    },
+    {
+     "text": "giáo dục, không phải khuyến nghị · ví dụ giả định",
+     "at": [
+      0,
+      "Giả"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "VN-INDEX · TỪ ĐẦU NĂM",
+     "at": [
+      1,
+      "Bạn"
+     ],
+     "sm": true
+    },
+    {
+     "text": "−0,9%",
+     "at": [
+      1,
+      "âm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "GẦN NHƯ ĐỨNG YÊN",
+     "at": [
+      2,
+      "Gần"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 3,
+   "vid": "6689151",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "TÀI KHOẢN CỦA BẠN",
+     "at": [
+      3,
+      "Rồi"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "VÍ DỤ GIẢ ĐỊNH · 3 MÃ BẰNG TIỀN",
+   "rows": [
+    {
+     "k": "MÃ A",
+     "v": "−12%",
+     "at": [
+      5,
+      "Một"
+     ]
+    },
+    {
+     "k": "MÃ B",
+     "v": "−20%",
+     "at": [
+      5,
+      "Một",
+      1
+     ]
+    },
+    {
+     "k": "MÃ C",
+     "v": "+3%",
+     "at": [
+      5,
+      "Một",
+      2
+     ]
+    }
+   ],
+   "total": {
+    "k": "CẢ TÀI KHOẢN",
+    "v": "≈ −10%",
+    "at": [
+     6,
+     "Cả"
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "at": 7,
+   "text": "Chỉ số gần như không giảm,\nsao mình lỗ gần 10%?\nApp sai, hay mình sai?"
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "text": "KHÔNG AI SAI CẢ",
+   "sub": "VN-INDEX ĐO MỘT CHUYỆN KHÁC VỚI TÀI KHOẢN CỦA BẠN"
+  },
+  {
+   "type": "breadth",
+   "at": 10,
+   "date": "2026-09-30",
+   "title": "400 CỔ PHIẾU HOSE · MỖI Ô MỘT MÃ",
+   "range": "30/09/2026 · SO VỚI 31/12/2025",
+   "drawAt": [
+    10,
+    "theo"
+   ],
+   "chipAt": [
+    10,
+    "gần"
+   ],
+   "chip": "≈ 3/4 DƯỚI GIÁ CUỐI 2025"
+  },
+  {
+   "type": "ledger",
+   "at": 11,
+   "title": "BA CÂU HỎI",
+   "rows": [
+    {
+     "k": "01",
+     "v": "CỔ PHIẾU, HOSE, VN-INDEX LÀ GÌ?",
+     "at": [
+      12,
+      "Một,"
+     ]
+    },
+    {
+     "k": "02",
+     "v": "CHỈ SỐ ĐỨNG YÊN, SAO MÃ LẠI GIẢM?",
+     "at": [
+      13,
+      "Hai,"
+     ]
+    },
+    {
+     "k": "03",
+     "v": "VÌ SAO TÀI KHOẢN CÓ THỂ LỖ?",
+     "at": [
+      14,
+      "Ba,"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "brand",
+   "at": 15,
+   "sub": "TIỀN BẠC · GIẢI THÍCH BẰNG DỮ LIỆU"
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "items": [
+    {
+     "text": "BÀI 1 · CHỨNG KHOÁN TỪ SỐ 0",
+     "at": [
+      16,
+      "bài"
+     ],
+     "acc": true
+    },
+    {
+     "text": "chỉ nhằm giáo dục · không phải lời khuyên mua bán",
+     "at": [
+      17,
+      "Video"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "CHỈ SỐ ĐỨNG YÊN, TÀI KHOẢN ĐỎ"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

@@ -1,0 +1,24 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#050912}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:"Be Vietnam Pro",sans-serif;color:#fff;
+ background:linear-gradient(rgba(125,211,252,.06) 1px,transparent 1px) 0 0/80px 80px,linear-gradient(90deg,rgba(125,211,252,.06) 1px,transparent 1px) 0 0/80px 80px,radial-gradient(80% 70% at 50% 40%,#16263f 0%,#0a1426 60%,#04080f 100%)}
+.big{position:absolute;font-weight:900;line-height:1.05;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.line{position:absolute;left:150px;width:1620px;top:640px;height:10px;border-radius:5px;background:rgba(241,245,249,.35)}
+.m{position:absolute;top:600px;width:90px;height:90px;margin-left:-45px;border-radius:50%;background:#64748b;border:8px solid #0a1426}
+.m.on{background:#fbbf24;box-shadow:0 0 50px rgba(251,191,36,.7)}
+.t{position:absolute;width:300px;margin-left:-150px;text-align:center;font-family:"JetBrains Mono";font-weight:700;white-space:nowrap}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<!-- T3: đồng hồ phiên 9:00 → 15:00 → T+2 (mô-típ của video) + câu hỏi -->
+<div class="big" style="left:150px;top:90px;font-size:140px">MỘT PHIÊN HOSE</div>
+<div class="big" style="left:150px;top:260px;font-size:140px;color:#fbbf24">CHẠY THẾ NÀO?</div>
+<div class="line"></div>
+<div class="m on" style="left:220px"></div><div class="t" style="left:220px;top:470px;font-size:84px;color:#fbbf24">9:00</div><div class="t" style="left:220px;top:720px;font-size:44px;color:#cbd5e1">ATO</div>
+<div class="m" style="left:620px"></div><div class="t" style="left:620px;top:720px;font-size:44px;color:#94a3b8">KHỚP</div>
+<div class="m on" style="left:1020px;background:#22d3ee;box-shadow:0 0 50px rgba(34,211,238,.7)"></div><div class="t" style="left:1020px;top:720px;font-size:44px;color:#22d3ee">GIÁ SÀN?</div>
+<div class="m on" style="left:1420px"></div><div class="t" style="left:1420px;top:470px;font-size:84px;color:#fbbf24">15:00</div><div class="t" style="left:1420px;top:720px;font-size:44px;color:#cbd5e1">ATC</div>
+<div class="m" style="left:1720px"></div><div class="t" style="left:1720px;top:470px;font-size:84px;color:#f1f5f9">T+2</div>
+<div class="big" style="left:150px;top:850px;font-size:76px;color:#22d3ee">VÌ SAO CÓ NGÀY KHÔNG BÁN ĐƯỢC?</div>
+</div><script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

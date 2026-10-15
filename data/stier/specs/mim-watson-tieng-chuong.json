@@ -1,0 +1,175 @@
+{
+ "theme": "mim",
+ "title": "Như Đường lên đỉnh Olympia, Jeopardy cũng là cuộc đua bấm chuông: lợi thế của Watson có công bằng?",
+ "description": "Ở Jeopardy, người chơi chỉ được bấm chuông sau khi người dẫn đọc xong gợi ý; bấm sớm một chút, chuông bị khoá trong một khoảnh khắc. Watson bấm bằng một cánh tay cơ khí, không bao giờ run tay, nhưng phải tìm xong đáp án và độ tự tin trong vài giây. Sau trận 2011, có người cho rằng tốc độ bấm chuông là lợi thế không công bằng; người khác nói biết nhanh cũng là một phần của trò chơi (Wikipedia: IBM Watson). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/Mt5hYcQxH50 (công khai từ 20:00 ngày 19/11).",
+ "tags": [
+  "watson jeopardy",
+  "olympia",
+  "bấm chuông",
+  "trận đấu người máy",
+  "trí tuệ nhân tạo",
+  "lịch sử máy tính",
+  "mind in the machine"
+ ],
+ "sub": "JEOPARDY · 2011",
+ "acc": [
+  "chuông",
+  "khoá",
+  "run",
+  "công",
+  "bằng"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Ai bấm chuông trước, người ấy được trả lời. Với một cỗ máy, đó vừa là chỗ dễ, vừa là chỗ khó.",
+  "Giống Đường lên đỉnh Olympia, chương trình Jeopardy của Mỹ cũng là cuộc đua bấm chuông.",
+  "Nhưng người chơi chỉ được bấm sau khi người dẫn đọc xong gợi ý. Bấm sớm một chút, chuông bị khoá.",
+  "Năm 2011, Watson bấm chuông bằng một cánh tay cơ khí. Nó không bao giờ run tay.",
+  "Nhưng nó phải tìm xong đáp án, và biết mình chắc tới đâu, chỉ trong vài giây.",
+  "Sau trận, có người cho rằng tốc độ bấm chuông của Watson là lợi thế không công bằng. Người khác nói biết nhanh cũng là một phần của trò chơi.",
+  "Câu hỏi ấy tới nay vẫn còn tranh cãi."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "AI BẤM TRƯỚC",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "người ấy được trả lời",
+     "at": [
+      0,
+      "người"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7005884",
+   "ms": 2,
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NHƯ OLYMPIA",
+     "at": [
+      1,
+      "Olympia"
+     ],
+     "acc": true
+    },
+    {
+     "text": "Jeopardy · cuộc đua bấm chuông",
+     "at": [
+      1,
+      "chương"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6962281",
+   "ms": 12,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Luật bấm chuông",
+   "nodes": [
+    {
+     "text": "chỉ bấm khi đọc xong gợi ý",
+     "x": 0.5,
+     "y": 0.3,
+     "at": 2,
+     "shape": "none",
+     "w": 800
+    },
+    {
+     "text": "bấm sớm · chuông bị khoá",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      2,
+      "Bấm"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 740
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "WATSON",
+   "cards": [
+    {
+     "k": "DỄ",
+     "v": "KHÔNG BAO GIỜ RUN TAY",
+     "at": [
+      3,
+      "Nó"
+     ]
+    },
+    {
+     "k": "KHÓ",
+     "v": "ĐÁP ÁN TRONG VÀI GIÂY",
+     "at": 4,
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 2,
+   "to": 2,
+   "suffix": " Ý KIẾN",
+   "label": "SAU TRẬN · VỀ TỐC ĐỘ BẤM CHUÔNG",
+   "sub": {
+    "text": "KHÔNG CÔNG BẰNG · HAY LÀ LUẬT CHƠI",
+    "at": [
+     5,
+     "Người"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "VẪN CÒN TRANH CÃI",
+   "sub": "TỚI HÔM NAY"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/IBM_Watson"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "=AI": "ây ai",
+  "watson": "Oát-xần",
+  "jeopardy": "Gie-pơ-đi",
+  "olympia": "Ô-lim-pi-a"
+ },
+ "imgs": {}
+}

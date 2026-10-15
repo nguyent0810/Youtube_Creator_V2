@@ -1,0 +1,220 @@
+{
+ "theme": "mim",
+ "title": "Deep Blue thắng vua cờ năm 1997 mà gần như không học gì",
+ "description": "Năm 1958, Herbert Simon và Allen Newell dự đoán trong vòng mười năm máy tính sẽ vô địch cờ vua thế giới. Thực tế mất 39 năm: tháng 5/1997 ở New York, Deep Blue của IBM thắng Garry Kasparov 3,5–2,5. Theo IBM, Deep Blue đánh giá khoảng 200 triệu thế cờ mỗi giây; bộ tiêu chí đánh giá do con người chỉnh, không phải máy tự học như các mạng nơ-ron ngày nay. Toàn cảnh 70 năm nằm trong video dài \"AI Đã Chết Hai Lần\" trên kênh Mind in the Machine. Giọng đọc tổng hợp.",
+ "tags": [
+  "deep blue",
+  "kasparov",
+  "cờ vua",
+  "ibm",
+  "lịch sử ai",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "LỊCH SỬ AI",
+ "sub": "DEEP BLUE · 1997",
+ "acc": [
+  "chẳng",
+  "học",
+  "chín",
+  "triệu",
+  "tay",
+  "tự"
+ ],
+ "lines": [
+  "Máy thắng vua cờ, mà gần như chẳng học gì.",
+  "Năm 1958, người ta đoán, mười năm nữa máy sẽ vô địch cờ vua.",
+  "Thực tế thì sao? Mất ba mươi chín năm.",
+  "Tháng 5 năm 1997, Deep Blue của IBM hạ Garry Kasparov.",
+  "Bí quyết của nó là sức tính. Hai trăm triệu thế cờ, mỗi giây.",
+  "Còn cách chấm điểm từng thế cờ? Do con người chỉnh bằng tay.",
+  "Thắng nhà vô địch thế giới, mà vẫn chưa phải cỗ máy tự học."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "THẮNG VUA CỜ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "GẦN NHƯ CHẲNG HỌC GÌ",
+     "at": [
+      0,
+      "gần"
+     ]
+    }
+   ],
+   "clip": "pexels:6058628",
+   "veil": 0.52
+  },
+  {
+   "type": "timeline",
+   "at": 1,
+   "items": [
+    {
+     "year": "1958",
+     "text": "“mười năm nữa máy vô địch cờ vua”",
+     "at": [
+      1,
+      null,
+      0,
+      0.15
+     ]
+    },
+    {
+     "year": "1997",
+     "text": "thực tế: 39 năm",
+     "at": [
+      2,
+      "ba"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 3,
+   "img": "deepblue",
+   "mode": "full",
+   "tone": "color",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "label": {
+    "text": "DEEP BLUE · IBM · ẢNH Ở BẢO TÀNG",
+    "at": [
+     3,
+     "Deep"
+    ]
+   },
+   "stamp": {
+    "text": "3,5 – 2,5",
+    "at": [
+     3,
+     "hạ"
+    ],
+    "x": 250,
+    "y": 1090
+   }
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "to": 200,
+   "suffix": " TRIỆU",
+   "label": "THẾ CỜ MỖI GIÂY",
+   "until": [
+    4,
+    "triệu"
+   ],
+   "img": "dbchip",
+   "sub": {
+    "text": "NGUỒN: IBM · MỘT BỘ XỬ LÝ CỦA DEEP BLUE",
+    "at": [
+     4,
+     "mỗi"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Deep Blue chấm điểm thế nào?",
+   "nodes": [
+    {
+     "text": "bảng chấm điểm",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      5,
+      "chấm"
+     ]
+    },
+    {
+     "text": "thế cờ",
+     "x": 0.22,
+     "y": 0.62,
+     "at": [
+      5,
+      "thế"
+     ]
+    },
+    {
+     "text": "người chỉnh tay",
+     "x": 0.68,
+     "y": 0.62,
+     "at": [
+      5,
+      "người"
+     ],
+     "c": "acc",
+     "shape": "circle"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 1,
+     "to": 0,
+     "at": [
+      5,
+      "cờ"
+     ]
+    },
+    {
+     "from": 2,
+     "to": 0,
+     "at": [
+      5,
+      "chỉnh"
+     ],
+     "c": "acc",
+     "bend": -0.12
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "CHƯA TỰ HỌC",
+   "sub": "DÙ THẮNG NHÀ VÔ ĐỊCH",
+   "clip": "pexels:6058628",
+   "ms": 2,
+   "veil": 0.66
+  }
+ ],
+ "sources": [
+  "https://www.ibm.com/history/deep-blue",
+  "https://pubsonline.informs.org/doi/10.1287/opre.6.1.1"
+ ],
+ "say": {
+  "=AI": "ây ai",
+  "deep": "Đíp",
+  "blue": "Blu",
+  "ibm": "ai bi em",
+  "garry": "Ga-ri",
+  "kasparov": "Ca-xpa-rốp"
+ },
+ "imgs": {
+  "dbchip": "File:One of Deep Blue's processors (2586060990).jpg",
+  "deepblue": "File:IBM Deep Blue at Computer History Museum (9361685537).jpg"
+ },
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ }
+}

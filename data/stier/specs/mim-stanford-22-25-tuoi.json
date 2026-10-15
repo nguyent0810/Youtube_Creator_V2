@@ -1,0 +1,185 @@
+{
+ "theme": "mim",
+ "title": "Dữ liệu Stanford: ở nghề phơi nhiễm AI cao, người 22–25 tuổi có ít việc hơn khoảng 19%",
+ "description": "Tháng 8/2026, một nhóm ở Đại học Stanford dùng dữ liệu bảng lương và không thấy mất việc trên diện rộng. Nhưng ở những nghề phơi nhiễm AI cao, người 22–25 tuổi có số việc làm thấp hơn khoảng 19% so với mức lẽ ra họ có (một năm trước là khoảng 15%); người nhiều kinh nghiệm không có khoảng cách tương tự. Cơ chế chủ yếu là tuyển ít người trẻ hơn chứ không phải sa thải. Chính các tác giả nhấn mạnh: đây là mô tả, chưa phải bằng chứng rằng AI là nguyên nhân. Tháng 10/2025, Budget Lab (Yale) chưa thấy thị trường lao động Mỹ xáo trộn rõ rệt sau 33 tháng có ChatGPT. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (13 phút): https://youtu.be/sP0ch8-NYec (công khai từ 20:00 ngày 19/10).",
+ "tags": [
+  "ai và người trẻ",
+  "stanford digital economy lab",
+  "việc làm cho người mới ra trường",
+  "ai và việc làm",
+  "tự động hoá",
+  "lịch sử công nghệ",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "AI VÀ VIỆC LÀM",
+ "sub": "STANFORD · 2026",
+ "acc": [
+  "chín",
+  "trẻ",
+  "tuyển",
+  "chưa",
+  "cửa"
+ ],
+ "lines": [
+  "AI chưa gây mất việc hàng loạt. Nhưng có một nhóm, số liệu đang khác đi.",
+  "Tháng 8 năm 2026, một nhóm ở Stanford xem dữ liệu bảng lương của nước Mỹ.",
+  "Ở những nghề phơi nhiễm AI cao, người từ hai mươi hai đến hai mươi lăm tuổi, có ít việc hơn khoảng mười chín phần trăm.",
+  "Một năm trước, khoảng cách ấy là mười lăm.",
+  "Người nhiều kinh nghiệm, thì không bị như vậy.",
+  "Cơ chế chủ yếu không phải sa thải. Mà là tuyển ít người trẻ hơn.",
+  "Các tác giả nhấn mạnh, đây là mô tả, chưa phải bằng chứng AI là nguyên nhân."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CHƯA MẤT VIỆC HÀNG LOẠT",
+     "at": 0.0
+    },
+    {
+     "text": "NHƯNG CÓ MỘT NHÓM KHÁC ĐI",
+     "at": [
+      0,
+      "Nhưng"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:8889197",
+   "ms": 3,
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "STANFORD · 08/2026",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "DỮ LIỆU BẢNG LƯƠNG MỸ",
+     "at": [
+      1,
+      "dữ"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:8888773",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "chart",
+   "at": 2,
+   "kind": "bars",
+   "title": "NGƯỜI 22–25 TUỔI · NGHỀ PHƠI NHIỄM AI CAO",
+   "unit": "% VIỆC LÀM THẤP HƠN MỨC LẼ RA CÓ",
+   "bars": [
+    {
+     "label": "MỘT NĂM\nTRƯỚC",
+     "v": 15,
+     "text": "~15%",
+     "c": "dim",
+     "at": [
+      3,
+      "mười"
+     ]
+    },
+    {
+     "label": "THÁNG 8\n2026",
+     "v": 19,
+     "text": "~19%",
+     "c": "ref",
+     "at": [
+      2,
+      "khoảng"
+     ]
+    }
+   ],
+   "note": "MÔ TẢ · CHƯA PHẢI QUAN HỆ NHÂN QUẢ"
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "KHÔNG PHẢI AI CŨNG NHƯ NHAU",
+   "cards": [
+    {
+     "k": "NGƯỜI NHIỀU KINH NGHIỆM",
+     "v": "KHÔNG CÓ KHOẢNG CÁCH",
+     "at": [
+      4,
+      "không"
+     ]
+    },
+    {
+     "k": "CƠ CHẾ",
+     "v": "TUYỂN ÍT NGƯỜI TRẺ HƠN",
+     "at": [
+      5,
+      "tuyển"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Các tác giả nhấn mạnh",
+   "nodes": [
+    {
+     "text": "đây là mô tả",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      6,
+      "đây"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "chưa phải bằng chứng nhân quả",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "chưa"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 820
+    }
+   ],
+   "note": "STANFORD DIGITAL ECONOMY LAB"
+  }
+ ],
+ "sources": [
+  "https://digitaleconomy.stanford.edu/news/canariesaug26/",
+  "https://budgetlab.yale.edu/research/evaluating-impact-ai-labor-market-current-state-affairs"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "=AI": "ây ai",
+  "stanford": "Xtan-phợt"
+ },
+ "imgs": {}
+}

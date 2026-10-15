@@ -1,0 +1,173 @@
+{
+ "title": "Tỷ suất cho thuê 2,3%: giá căn hộ Hà Nội bằng khoảng 43 năm tiền thuê",
+ "description": "Tỷ suất cho thuê = tiền thuê một năm ÷ giá căn nhà. Quý II/2026, theo một đơn vị nghiên cứu thị trường (qua báo chí), tỷ suất cho thuê căn hộ ở Hà Nội khoảng 2,3%, TP.HCM khoảng 3,3%; năm 2023 ở Hà Nội còn khoảng 4–5%. Đổi ngược: 3% ≈ giá nhà bằng 33 năm tiền thuê; 2,3% ≈ 43 năm (kênh tự tính). Giá bán chạy nhanh hơn giá thuê.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ: https://youtu.be/pXKfIo_nyVM (công khai từ 20:00 ngày 07/11)",
+ "tags": [
+  "tỷ suất cho thuê",
+  "giá căn hộ hà nội",
+  "mua hay thuê nhà",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "bốn",
+  "ba",
+  "thuê",
+  "nhanh",
+  "năm"
+ ],
+ "kicker": "QUYẾT ĐỊNH LỚN",
+ "sub": "MUA HAY THUÊ",
+ "lines": [
+  "Bốn mươi ba năm tiền thuê: đó là giá một căn hộ ở Hà Nội.",
+  "Có một con số giúp đặt giá mua và giá thuê cạnh nhau, gọi là tỷ suất cho thuê.",
+  "Nó bằng tiền thuê một năm, chia cho giá căn nhà.",
+  "Quý hai năm nay, theo một đơn vị nghiên cứu thị trường, con số ấy ở Hà Nội chỉ khoảng hai phẩy ba phần trăm. Năm 2023, nó còn khoảng bốn tới năm phần trăm.",
+  "Đổi ngược lại, hai phẩy ba phần trăm nghĩa là giá căn nhà bằng khoảng bốn mươi ba năm tiền thuê.",
+  "Vì giá bán chạy nhanh hơn giá thuê rất nhiều.",
+  "Tỷ suất càng thấp, càng nên tính kỹ trước khi kết luận."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "43 NĂM TIỀN THUÊ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "= giá một căn hộ Hà Nội",
+     "at": [
+      0,
+      "giá"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6221103",
+   "veil": 0.58
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Tỷ suất cho thuê",
+   "nodes": [
+    {
+     "text": "tiền thuê một năm",
+     "x": 0.5,
+     "y": 0.3,
+     "at": 2,
+     "shape": "none",
+     "w": 640
+    },
+    {
+     "text": "÷ giá căn nhà",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      2,
+      "chia"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 560
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "at": 3,
+   "kind": "bars",
+   "title": "TỶ SUẤT CHO THUÊ CĂN HỘ HÀ NỘI",
+   "unit": "% MỖI NĂM · THEO BÁO CHÍ",
+   "bars": [
+    {
+     "label": "2023",
+     "v": 4.5,
+     "text": "4–5%",
+     "c": "ref",
+     "at": [
+      3,
+      "Năm"
+     ]
+    },
+    {
+     "label": "QUÝ II/2026",
+     "v": 2.3,
+     "text": "≈2,3%",
+     "c": "down",
+     "at": [
+      3,
+      "hai"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 43,
+   "to": 43,
+   "suffix": " NĂM",
+   "label": "TIỀN THUÊ = GIÁ NHÀ · Ở MỨC 2,3%",
+   "sub": {
+    "text": "KÊNH TỰ TÍNH · 1 ÷ 2,3%",
+    "at": [
+     4,
+     "bốn"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "GIÁ BÁN CHẠY NHANH HƠN",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "tiền thuê phải vừa túi người thuê",
+     "at": [
+      5,
+      "nhanh"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34615167",
+   "ms": 10,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 5
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "TÍNH KỸ TRƯỚC KHI KẾT LUẬN",
+   "sub": "TỶ SUẤT CÀNG THẤP CÀNG CẦN TÍNH"
+  }
+ ],
+ "sources": [
+  "https://cafebiz.vn/loi-suat-cho-thue-nha-chi-con-tu-2-3-bat-dong-san-con-hap-dan-176260829091836212.chn",
+  "https://batdongsan.baoxaydung.vn/loi-nhuan-cho-thue-can-ho-giam-192260414222043956.htm"
+ ],
+ "theme": "ck",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

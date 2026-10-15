@@ -1,0 +1,411 @@
+{
+ "title": "Con số ba phần trăm",
+ "lines": [
+  {
+   "t": "Bắt đầu từ giá nhà.",
+   "p": 0.8
+  },
+  "Hỏi giá một mét vuông căn hộ ở Hà Nội, bạn sẽ nhận về nhiều câu trả lời.",
+  "Cùng quý hai năm nay, có nguồn ghi khoảng sáu mươi triệu, có nguồn ghi hơn một trăm hai mươi triệu.",
+  "Chúng khác nhau vì người đo căn mới, người đo căn cũ, người đo giá rao, người đo giá giao dịch thật.",
+  "Có một điều hai công ty tư vấn cùng ghi nhận: quý hai năm nay, Hà Nội không có căn mới mở bán nào dưới sáu mươi triệu một mét vuông.",
+  "Vì thế căn ví dụ của mình rẻ hơn mọi mức bình quân ấy.",
+  {
+   "t": "Khoảng năm mươi mét vuông, hai tỷ rưỡi, tức là căn nhỏ, xa trung tâm, hoặc đã cũ.",
+   "p": 1.0
+  },
+  "Giờ tới giá thuê.",
+  "Có một con số giúp đặt hai thứ này cạnh nhau, gọi là tỷ suất cho thuê.",
+  "Nó bằng tiền thuê một năm, chia cho giá căn nhà.",
+  "Theo một đơn vị nghiên cứu thị trường, quý hai năm nay, tỷ suất cho thuê căn hộ ở Hà Nội chỉ khoảng hai phẩy ba phần trăm.",
+  "Ở Thành phố Hồ Chí Minh, khoảng ba phẩy ba phần trăm.",
+  "Năm hai nghìn không trăm hai mươi ba, con số này ở Hà Nội còn vào khoảng bốn tới năm phần trăm.",
+  {
+   "t": "Sao lại giảm nhanh vậy?",
+   "ask": 1
+  },
+  "Vì giá bán chạy nhanh hơn giá thuê rất nhiều.",
+  {
+   "t": "Giá căn hộ có thể tăng gấp mấy lần, còn tiền thuê thì phải vừa túi người đi thuê, mà lương không chạy kịp.",
+   "p": 1.0
+  },
+  "Đổi ngược con số ấy ra cho dễ hình dung.",
+  "Tỷ suất ba phần trăm nghĩa là giá căn nhà bằng khoảng ba mươi ba năm tiền thuê.",
+  {
+   "t": "Với mức hai phẩy ba phần trăm của Hà Nội, là khoảng bốn mươi ba năm.",
+   "p": 1.0
+  },
+  "Với căn hai tỷ rưỡi, ba phần trăm một năm tức là khoảng sáu triệu hai trăm năm mươi nghìn đồng mỗi tháng.",
+  "Đó là tiền thuê của cánh cửa bên phải.",
+  {
+   "t": "Thế thì người cho thuê lấy gì mà lãi?",
+   "ask": 1
+  },
+  "Nhiều người cho thuê chấp nhận tiền thuê thấp, vì kỳ vọng giá nhà tăng.",
+  "Giữ ý này lại nhé, vì cánh cửa bên trái cũng đang chờ đúng điều đó."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "CON SỐ\nBA PHẦN TRĂM",
+   "sub": "GIÁ NHÀ · GIÁ THUÊ · TỶ SUẤT",
+   "vid": "36287412",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Bắt"
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 1,
+   "title": "GIÁ CĂN HỘ HÀ NỘI · GIỮA NĂM 2026",
+   "unit": "TRIỆU Đ/M² · MỖI CỘT MỘT CÁCH ĐO",
+   "items": [
+    {
+     "k": "THỨ CẤP · CBRE",
+     "v": 60,
+     "lbl": "≈ 60",
+     "at": [
+      2,
+      "sáu"
+     ]
+    },
+    {
+     "k": "SƠ CẤP · CBRE",
+     "v": 95,
+     "lbl": "≈ 95",
+     "at": [
+      3,
+      "mới"
+     ]
+    },
+    {
+     "k": "GIÁ RAO · QUÝ III",
+     "v": 84,
+     "lbl": "≈ 84",
+     "at": [
+      3,
+      "rao"
+     ]
+    },
+    {
+     "k": "THỨ CẤP · BỘ XD",
+     "v": 123,
+     "lbl": "≈ 123",
+     "at": [
+      2,
+      "trăm"
+     ],
+     "acc": true
+    }
+   ],
+   "srcnote": "CBRE (TC KTTC 07/07/2026): thứ cấp TB, m² thông thủy, chưa VAT · sơ cấp chưa VAT, trước chiết khấu · Batdongsan.com.vn: giá rao · Bộ XD qua VnExpress 02/09/2026 · KHÔNG SO TRỰC TIẾP"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "QUÝ II/2026 · HÀ NỘI",
+     "at": [
+      4,
+      "Có"
+     ],
+     "sm": true
+    },
+    {
+     "text": "KHÔNG CÓ CĂN MỚI MỞ BÁN",
+     "at": [
+      4,
+      "không"
+     ]
+    },
+    {
+     "text": "DƯỚI 60 TR/M²",
+     "at": [
+      4,
+      "dưới"
+     ],
+     "acc": true
+    },
+    {
+     "text": "CBRE: quý thứ 2 liên tiếp (chưa VAT) · Savills: mọi hàng sơ cấp trên 70 tr/m²",
+     "at": [
+      4,
+      "dưới",
+      0,
+      0.6
+     ],
+     "sm": true
+    }
+   ],
+   "srcnote": "CBRE qua TC Kinh tế Tài chính, VietnamFinance 07/07/2026 · Savills qua CafeF 14/08/2026"
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "CĂN VÍ DỤ",
+   "illus": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "rows": [
+    {
+     "k": "DIỆN TÍCH",
+     "v": "≈ 50 M²",
+     "at": [
+      6,
+      "Khoảng"
+     ]
+    },
+    {
+     "k": "ĐƠN GIÁ",
+     "v": "≈ 50 TR/M²",
+     "at": [
+      6,
+      "vuông"
+     ]
+    },
+    {
+     "k": "GIÁ CĂN",
+     "v": "≈ 2,5 TỶ",
+     "at": [
+      6,
+      "hai"
+     ]
+    }
+   ],
+   "total": {
+    "k": "RẺ HƠN MỌI MỨC Ở TRÊN",
+    "v": "NHỎ · XA · CŨ",
+    "at": [
+     6,
+     "nhỏ"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "GIỜ TỚI GIÁ THUÊ",
+     "at": [
+      7,
+      "Giờ"
+     ],
+     "sm": true
+    },
+    {
+     "text": "TỶ SUẤT CHO THUÊ",
+     "at": [
+      8,
+      "tỷ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "= TIỀN THUÊ 1 NĂM ÷ GIÁ NHÀ",
+     "at": [
+      9,
+      "Nó"
+     ]
+    },
+    {
+     "text": "tỷ suất gộp · chưa trừ chi phí",
+     "at": [
+      9,
+      "chia"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 10,
+   "title": "TỶ SUẤT CHO THUÊ CĂN HỘ",
+   "unit": "% / NĂM",
+   "items": [
+    {
+     "k": "HÀ NỘI · 2023",
+     "v": 4.5,
+     "lbl": "≈ 4–5",
+     "at": [
+      12,
+      "bốn"
+     ]
+    },
+    {
+     "k": "HÀ NỘI · Q2/2026",
+     "v": 2.32,
+     "lbl": "2,32",
+     "at": [
+      10,
+      "hai"
+     ],
+     "acc": true
+    },
+    {
+     "k": "TP.HCM · Q2/2026",
+     "v": 3.3,
+     "lbl": "3,30",
+     "at": [
+      11,
+      "ba"
+     ]
+    },
+    {
+     "k": "ĐÀ NẴNG · Q2/2026",
+     "v": 4.34,
+     "lbl": "4,34",
+     "at": [
+      11,
+      "phần"
+     ]
+    },
+    {
+     "k": "CẢ NƯỚC · Q2/2026",
+     "v": 3.05,
+     "lbl": "3,05",
+     "at": [
+      11,
+      "trăm"
+     ]
+    }
+   ],
+   "srcnote": "REFI qua CafeBiz 29/08/2026 (một nguồn) · HN 2023: REFI ≈ 4,2%, Batdongsan.com.vn 4,9–5% (Báo Xây dựng 15/04/2026)"
+  },
+  {
+   "type": "question",
+   "at": 13,
+   "text": "Sao lại giảm nhanh vậy?"
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "GIÁ BÁN CHẠY NHANH",
+     "at": [
+      14,
+      "Vì"
+     ]
+    },
+    {
+     "text": "GIÁ THUÊ PHẢI VỪA TÚI NGƯỜI THUÊ",
+     "at": [
+      15,
+      "tiền"
+     ],
+     "acc": true
+    },
+    {
+     "text": "lương không chạy kịp",
+     "at": [
+      15,
+      "lương"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 16,
+   "from": 0,
+   "to": 33,
+   "suffix": " NĂM",
+   "until": [
+    17,
+    "năm"
+   ],
+   "label": "GIÁ NHÀ = 33 NĂM TIỀN THUÊ",
+   "sub": {
+    "text": "TỶ SUẤT 3% · HÀ NỘI 2,32% → ≈ 43 NĂM",
+    "at": [
+     18,
+     "Với"
+    ]
+   },
+   "srcnote": "Kênh tự tính: 1 ÷ 3% ≈ 33,3 · 1 ÷ 2,32% ≈ 43,1"
+  },
+  {
+   "type": "ledger",
+   "at": 19,
+   "title": "TIỀN THUÊ · CÁNH CỬA PHẢI",
+   "illus": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "rows": [
+    {
+     "k": "GIÁ CĂN",
+     "v": "2,5 TỶ",
+     "at": [
+      19,
+      "căn"
+     ]
+    },
+    {
+     "k": "TỶ SUẤT",
+     "v": "3% / NĂM",
+     "at": [
+      19,
+      "ba"
+     ]
+    }
+   ],
+   "total": {
+    "k": "PHẢI · THUÊ",
+    "v": "≈ 6,25 TR/THÁNG",
+    "at": [
+     19,
+     "sáu"
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "at": 21,
+   "text": "Thế thì người cho thuê\nlấy gì mà lãi?"
+  },
+  {
+   "type": "kinetic",
+   "at": 22,
+   "items": [
+    {
+     "text": "CHẤP NHẬN TIỀN THUÊ THẤP",
+     "at": [
+      22,
+      "Nhiều"
+     ]
+    },
+    {
+     "text": "KỲ VỌNG GIÁ NHÀ TĂNG",
+     "at": [
+      22,
+      "kỳ"
+     ],
+     "acc": true
+    }
+   ],
+   "srcnote": "Diễn giải từ REFI (CafeBiz 29/08/2026) và Batdongsan.com.vn (Báo Xây dựng 15/04/2026)"
+  },
+  {
+   "type": "slam",
+   "at": [
+    23,
+    "cánh"
+   ],
+   "text": "CHỜ GIÁ NHÀ TĂNG",
+   "sub": "CẢ HAI CÁNH CỬA",
+   "fx": "zoom"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "CON SỐ BA PHẦN TRĂM"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.092
+ }
+}

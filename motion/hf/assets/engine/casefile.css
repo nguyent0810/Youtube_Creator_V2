@@ -153,6 +153,9 @@ html, body { width:1080px; height:1920px; overflow:hidden; background:#060505; }
 .qpaper .qm { position:absolute; left:26px; top:-40px; font-family:'Playfair Display'; font-size:220px; line-height:1; color:var(--red); }
 .kin { position:absolute; left:50px; right:50px; text-align:center; font-weight:900; line-height:1.02; white-space:nowrap; opacity:0; }
 .kin.acc { color:var(--red); }
+/* dòng phụ nhỏ ("sm": true, như .kin.sm của casewide.css); acc vẫn thắng màu */
+.kin.sm { font-weight:700; color:#e6dccb; }
+.kin.sm.acc { color:var(--red); }
 .tlx { position:absolute; left:170px; top:430px; width:5px; background:rgba(239,228,203,.3); transform-origin:50% 0; }
 .tli { position:absolute; left:140px; right:60px; opacity:0; }
 .tli .dot { position:absolute; left:18px; top:22px; width:28px; height:28px; border-radius:50%; background:var(--red); box-shadow:0 0 20px rgba(226,64,45,.7); }
@@ -173,3 +176,49 @@ html, body { width:1080px; height:1920px; overflow:hidden; background:#060505; }
          font-size:30px; letter-spacing:.14em; transform:rotate(-3deg); box-shadow:0 14px 30px rgba(0,0,0,.6); opacity:0; z-index:5; }
 .co { position:absolute; font-family:'JetBrains Mono'; font-weight:700; font-size:28px; letter-spacing:.08em; color:#fff; white-space:nowrap;
       padding:8px 14px; background:rgba(0,0,0,.8); border-left:5px solid var(--red); opacity:0; z-index:5; }
+
+/* board (bảng trắng vẽ tay) + cards3d (thẻ kính 3D) -- 12/10/2026, Short MIM/CK phối chữ / hình / biểu đồ / sơ đồ */
+.board { position:absolute; background:#f7f2e6; border-radius:22px; box-shadow:0 34px 90px rgba(0,0,0,.6), inset 0 0 0 3px rgba(31,41,55,.12); opacity:0; overflow:hidden; }
+.board .bdsvg { position:absolute; left:0; top:0; }
+.bdt { position:absolute; left:50px; right:50px; top:34px; font-family:'Patrick Hand','Be Vietnam Pro',sans-serif; font-weight:400; color:#1f2937; letter-spacing:.02em; white-space:nowrap;
+       border-bottom:5px solid rgba(31,41,55,.75); padding-bottom:10px; }
+.bdn { position:absolute; text-align:center; font-family:'Patrick Hand','Be Vietnam Pro',sans-serif; white-space:nowrap; opacity:0; }
+.bdl { position:absolute; text-align:center; font-family:'Patrick Hand','Be Vietnam Pro',sans-serif; font-size:52px; white-space:nowrap; opacity:0; }
+.bdnote { position:absolute; left:0; right:0; text-align:center; font-size:24px; letter-spacing:.14em; color:rgba(226,232,240,.6); opacity:0; white-space:nowrap; }
+.c3t { position:absolute; left:50px; right:50px; text-align:center; font-weight:900; color:#fff; white-space:nowrap; opacity:0; }
+.c3 { position:absolute; left:130px; width:820px; box-sizing:border-box; border:3px solid #fff; border-radius:28px; opacity:0; text-align:center;
+      background:linear-gradient(160deg, rgba(255,255,255,.14), rgba(255,255,255,.03)); box-shadow:0 40px 90px rgba(0,0,0,.55);
+      display:flex; flex-direction:column; justify-content:center; backface-visibility:hidden; }
+.c3k { font-family:'JetBrains Mono',monospace; font-weight:700; font-size:36px; letter-spacing:.16em; color:rgba(226,232,240,.85); white-space:nowrap; }
+.c3v { font-weight:900; line-height:1.05; white-space:nowrap; }
+.c3s { font-size:30px; color:rgba(226,232,240,.7); margin-top:6px; white-space:nowrap; }
+
+/* cửa sổ video + vệt sáng trên ảnh in (Short phối) */
+.vwin { position:absolute; border:3px solid var(--red); border-radius:40px; box-shadow:0 30px 90px rgba(0,0,0,.55), 0 0 70px color-mix(in srgb, var(--red) 28%, transparent); opacity:0; overflow:hidden; }
+.vwlbl { position:absolute; left:26px; bottom:22px; padding:8px 16px; font-size:24px; letter-spacing:.16em; color:#fff; background:rgba(4,8,16,.72); border-left:5px solid var(--red); opacity:0; white-space:nowrap; }
+.shine { position:absolute; top:-10%; bottom:-10%; left:0; width:38%; background:linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.28) 50%, rgba(255,255,255,0) 100%); pointer-events:none; mix-blend-mode:screen; }
+
+/* ── thư viện look (motion/stier/looks.py): kiểu bảng / thẻ / cửa sổ / chữ ── */
+.kbar { position:absolute; left:58px; width:12px; background:var(--red); border-radius:6px; transform-origin:50% 0%; box-shadow:0 0 30px color-mix(in srgb, var(--red) 60%, transparent); }
+.board.bd-chalk { background:radial-gradient(120% 90% at 30% 20%, #2f4a40 0%, #20352d 70%, #182820 100%); border:16px solid #6b4a2f; border-radius:14px;
+                  box-shadow:0 34px 90px rgba(0,0,0,.6), inset 0 0 60px rgba(0,0,0,.35); }
+.board.bd-blueprint { background-color:#0b2a4a; background-image:linear-gradient(rgba(191,233,255,.13) 2px, transparent 2px), linear-gradient(90deg, rgba(191,233,255,.13) 2px, transparent 2px),
+                      linear-gradient(rgba(191,233,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(191,233,255,.06) 1px, transparent 1px);
+                      background-size:120px 120px, 120px 120px, 30px 30px, 30px 30px; border:3px solid rgba(191,233,255,.55); border-radius:6px; }
+.board.bd-blueprint .bdt, .board.bd-blueprint .bdn, .board.bd-blueprint .bdl { font-family:'JetBrains Mono',monospace; font-weight:700; letter-spacing:.01em; }
+.board.bd-lined { background-color:#fbfaf3; background-image:linear-gradient(90deg, transparent 86px, rgba(220,38,38,.55) 86px, rgba(220,38,38,.55) 90px, transparent 90px),
+                  repeating-linear-gradient(180deg, transparent 0 62px, rgba(30,58,138,.22) 62px 65px); border-radius:8px; }
+.board.bd-glass { background:linear-gradient(160deg, rgba(255,255,255,.12), rgba(255,255,255,.03)); border:2px solid rgba(255,255,255,.28); border-radius:30px;
+                  box-shadow:0 34px 90px rgba(0,0,0,.55), 0 0 80px color-mix(in srgb, var(--red) 22%, transparent); }
+.board.bd-glass .bdt, .board.bd-glass .bdn, .board.bd-glass .bdl { font-family:'Be Vietnam Pro',sans-serif; font-weight:800; }
+.c3.c3-solid { border:0; border-radius:10px; box-shadow:16px 16px 0 rgba(0,0,0,.55); }
+.c3.c3-solid .c3k, .c3.c3-solid .c3s { color:rgba(6,18,26,.8); }
+.c3.c3-wire { background:rgba(4,12,24,.55); border-style:dashed; border-width:3px; border-radius:4px; box-shadow:none; }
+.c3.c3-wire .c3v { font-family:'JetBrains Mono',monospace; font-weight:700; }
+.c3.c3-index { background:#f7f2e6; border:0; border-top:14px solid var(--red); border-radius:6px; box-shadow:0 26px 60px rgba(0,0,0,.6); }
+.c3.c3-index .c3k, .c3.c3-index .c3s { color:#4b5563; }
+.c3.c3-gradient { border:0; border-radius:34px; }
+.vwin.vw-tilt { border:14px solid #f5f1e6; border-bottom-width:54px; border-radius:6px; box-shadow:0 30px 80px rgba(0,0,0,.65); }
+.vwin.vw-band { border:0; border-top:4px solid var(--red); border-bottom:4px solid var(--red); border-radius:0; box-shadow:none; }
+.vwin.vw-circle { border-radius:50%; border-width:5px; }
+.vwin.vw-circle .vwlbl { left:50%; transform:translateX(-50%); bottom:60px; }

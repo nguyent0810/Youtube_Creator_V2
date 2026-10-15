@@ -1,0 +1,180 @@
+{
+ "theme": "mim",
+ "title": "Sau khi Flappy Bird bị gỡ: hơn 60 trò chơi nhái xuất hiện mỗi ngày",
+ "description": "Sau khi Flappy Bird bị gỡ khỏi kho ứng dụng ngày 10/02/2014, trò chơi vẫn nằm trong máy của những người đã tải. Có người rao bán cả chiếc điện thoại còn cài trò chơi; có tin rao từ khoảng 1.500 USD và có lượt trả giá vượt 90.000 USD trước khi trang đấu giá gỡ các tin ấy. Lúc cao điểm, mỗi ngày có hơn 60 trò chơi nhái xuất hiện, tới mức các kho ứng dụng bắt đầu từ chối game có chữ “Flappy” trong tên (theo báo chí khi ấy, tổng hợp qua Wikipedia). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.",
+ "tags": [
+  "flappy bird",
+  "game nhái",
+  "kho ứng dụng",
+  "nguyễn hà đông",
+  "lịch sử công nghệ",
+  "mind in the machine"
+ ],
+ "kicker": "CHUYỆN CÔNG NGHỆ",
+ "sub": "FLAPPY BIRD · 2014",
+ "acc": [
+  "gỡ",
+  "bán",
+  "chín",
+  "sáu",
+  "chối"
+ ],
+ "lines": [
+  "Flappy Bird bị gỡ, và chuyện lạ mới bắt đầu.",
+  "Trò chơi biến mất khỏi kho. Nhưng nó vẫn nằm trong máy của những người đã tải.",
+  "Thế là có người rao bán cả chiếc điện thoại, chỉ vì trong đó còn trò chơi.",
+  "Có lượt trả giá vượt chín mươi nghìn đô, trước khi trang đấu giá gỡ tin.",
+  "Rồi tới làn sóng bắt chước.",
+  "Lúc cao điểm, mỗi ngày có hơn sáu mươi trò chơi nhái.",
+  "Nhiều tới mức, kho ứng dụng từ chối cả những game có chữ Flappy trong tên."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "FLAPPY BIRD BỊ GỠ",
+     "at": 0.0
+    },
+    {
+     "text": "CHUYỆN LẠ MỚI BẮT ĐẦU",
+     "at": [
+      0,
+      "chuyện"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7047796",
+   "ms": 10,
+   "veil": 0.55
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "SAU NGÀY 10/02/2014",
+   "cards": [
+    {
+     "k": "TRÊN KHO",
+     "v": "BIẾN MẤT",
+     "at": [
+      1,
+      "biến"
+     ]
+    },
+    {
+     "k": "TRONG MÁY NGƯỜI ĐÃ TẢI",
+     "v": "VẪN CÒN",
+     "at": [
+      1,
+      "vẫn"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "RAO BÁN CẢ ĐIỆN THOẠI",
+     "at": 2,
+     "acc": true
+    },
+    {
+     "text": "chỉ vì trong đó còn trò chơi",
+     "at": [
+      2,
+      "chỉ"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6145416",
+   "ms": 4,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 2
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 90000,
+   "suffix": " USD",
+   "label": "CÓ LƯỢT TRẢ GIÁ VƯỢT MỨC NÀY",
+   "until": [
+    3,
+    "đô,"
+   ],
+   "sub": {
+    "text": "TRƯỚC KHI TRANG ĐẤU GIÁ GỠ TIN · THEO BÁO CHÍ",
+    "at": [
+     3,
+     "trước"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "LÀN SÓNG BẮT CHƯỚC",
+   "sub": "SAU KHI BẢN GỐC BỊ GỠ"
+  },
+  {
+   "type": "chart",
+   "at": 5,
+   "kind": "bars",
+   "title": "TRÒ CHƠI NHÁI MỖI NGÀY",
+   "unit": "LÚC CAO ĐIỂM · THEO BÁO CHÍ KHI ẤY",
+   "bars": [
+    {
+     "label": "BẢN GỐC\nTRÊN KHO",
+     "v": 0,
+     "text": "0",
+     "c": "dim",
+     "at": [
+      5,
+      null,
+      0,
+      0.1
+     ]
+    },
+    {
+     "label": "BẢN NHÁI\nMỖI NGÀY",
+     "v": 60,
+     "text": "> 60",
+     "c": "ref",
+     "at": [
+      5,
+      "hơn"
+     ]
+    }
+   ],
+   "note": "KHO ỨNG DỤNG TỪ CHỐI GAME CÓ CHỮ “FLAPPY”"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Flappy_Bird"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "flappy": "Phờ-láp-pi",
+  "bird": "bớt",
+  "game": "ghêm"
+ },
+ "imgs": {}
+}

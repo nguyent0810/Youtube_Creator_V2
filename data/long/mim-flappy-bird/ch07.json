@@ -1,0 +1,155 @@
+{
+ "title": "Một quyết định ngược chiều",
+ "lines": [
+  {
+   "t": "Ngành công nghệ có một phép đo quen thuộc.",
+   "p": 0.8
+  },
+  {
+   "t": "Người dùng ở lại càng lâu, sản phẩm càng thành công.",
+   "p": 1.0
+  },
+  "Flappy Bird là một lần hiếm hoi, có người nhìn vào chính con số ấy, và thấy lo.",
+  {
+   "t": "Không phải vì nó thấp. Mà vì nó quá cao.",
+   "p": 1.0
+  },
+  "Bạn có thể cho rằng anh đã quá nhạy cảm.",
+  "Bạn cũng có thể cho rằng anh đã thấy sớm một điều, mà mười năm sau cả thế giới mới bắt đầu nói tới.",
+  {
+   "t": "Rằng thứ giữ chân ta trước màn hình, chưa chắc là thứ tốt cho ta.",
+   "p": 1.0
+  },
+  "Hai mươi hai giờ.",
+  {
+   "t": "Một người, một dòng tweet, và một quyết định đi ngược mọi lời khuyên kinh doanh.",
+   "p": 1.0
+  },
+  "Còn bạn thì sao?",
+  "Nếu thứ bạn làm ra mang về năm mươi nghìn đô mỗi ngày, bạn có gỡ nó xuống không?",
+  "Kể cho mình nghe ở phần bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "bars",
+   "title": "PHÉP ĐO QUEN THUỘC CỦA NGÀNH",
+   "unit": "",
+   "items": [
+    {
+     "k": "NGƯỜI DÙNG Ở LẠI ÍT",
+     "v": 20,
+     "lbl": "“KÉM”",
+     "at": 0
+    },
+    {
+     "k": "NGƯỜI DÙNG Ở LẠI LÂU",
+     "v": 90,
+     "lbl": "“THÀNH CÔNG”",
+     "at": 1,
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "",
+    "v": "SƠ ĐỒ MINH HOẠ",
+    "at": 0
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "CÓ NGƯỜI NHÌN CON SỐ ẤY",
+     "at": [
+      2,
+      "có"
+     ]
+    },
+    {
+     "text": "VÀ THẤY LO",
+     "at": [
+      2,
+      "thấy"
+     ],
+     "acc": true
+    },
+    {
+     "text": "không phải vì thấp · mà vì quá cao",
+     "at": 3,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "HAI CÁCH NHÌN",
+   "rows": [
+    {
+     "k": "1",
+     "v": "ANH ĐÃ QUÁ NHẠY CẢM",
+     "at": 4
+    },
+    {
+     "k": "2",
+     "v": "ANH THẤY SỚM MỘT ĐIỀU",
+     "at": 5
+    }
+   ],
+   "total": {
+    "k": "ĐIỀU ẤY",
+    "v": "GIỮ CHÂN ≠ TỐT CHO TA",
+    "at": 6
+   }
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "from": 22,
+   "to": 22,
+   "suffix": " GIỜ",
+   "until": [
+    7,
+    "giờ."
+   ],
+   "label": "MỘT NGƯỜI · MỘT DÒNG TWEET",
+   "sub": {
+    "text": "một quyết định đi ngược mọi lời khuyên kinh doanh",
+    "at": 8
+   }
+  },
+  {
+   "type": "question",
+   "at": 9,
+   "text": "50.000 đô mỗi ngày.\nBạn có gỡ nó xuống không?",
+   "showAt": 10
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "KỂ CHO MÌNH NGHE",
+     "at": 11
+    },
+    {
+     "text": "Ở PHẦN BÌNH LUẬN",
+     "at": [
+      11,
+      "ở"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 07",
+  "t": "MỘT QUYẾT ĐỊNH NGƯỢC CHIỀU"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

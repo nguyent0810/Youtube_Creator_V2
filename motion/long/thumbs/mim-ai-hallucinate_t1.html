@@ -1,0 +1,33 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700;800;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#02050a}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;color:#fff}
+.grid{position:absolute;inset:0;background:linear-gradient(rgba(125,211,252,.07) 1px,transparent 1px) 0 0/64px 64px,linear-gradient(90deg,rgba(125,211,252,.07) 1px,transparent 1px) 0 0/64px 64px}
+.glow{position:absolute;border-radius:50%;filter:blur(120px)}
+.big{position:absolute;font-weight:900;line-height:1.02;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.cy{color:#22d3ee;text-shadow:0 0 50px rgba(34,211,238,.75),0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.win{position:absolute;left:90px;top:120px;width:900px;height:840px;border-radius:28px;background:rgba(10,20,36,.96);border:3px solid rgba(34,211,238,.45);box-shadow:0 40px 120px #000,0 0 90px rgba(34,211,238,.2);overflow:hidden}
+.hd{height:70px;display:flex;align-items:center;gap:14px;padding:0 30px;background:rgba(125,211,252,.08);border-bottom:2px solid rgba(125,211,252,.2)}
+.hd i{width:18px;height:18px;border-radius:50%;background:rgba(125,211,252,.4)}
+.m{position:absolute;padding:30px 40px;border-radius:30px;font-size:62px;line-height:1.25;font-weight:800}
+.u{right:40px;top:130px;background:rgba(125,211,252,.18);border-bottom-right-radius:8px}
+.a{left:40px;top:360px;width:780px;font-family:'JetBrains Mono';color:#22d3ee;background:rgba(34,211,238,.08);border:2px solid rgba(34,211,238,.35);border-bottom-left-radius:8px}
+.stamp{position:absolute;z-index:5;left:150px;top:700px;padding:30px 34px 12px;line-height:1.2;border:12px solid #e11d48;color:#e11d48;font-weight:900;font-size:84px;letter-spacing:.04em;transform:rotate(-12deg);background:rgba(2,5,10,.55);white-space:nowrap;box-shadow:0 0 40px rgba(225,29,72,.5)}
+</style></head><body>
+<!-- T1: khung chat dựng lại (không logo) "Is Varghese a real case?" -> "Yes, it is a real case." + dấu đỏ KHÔNG CÓ THẬT; chữ lớn "BỊA / MÀ VẪN CHẮC NỊCH" -->
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<div class="grid"></div>
+<div class="glow" style="left:60px;top:250px;width:800px;height:600px;background:rgba(34,211,238,.30)"></div>
+<div class="glow" style="left:1150px;top:200px;width:600px;height:500px;background:rgba(225,29,72,.30)"></div>
+<div class="win"><div class="hd"><i></i><i></i><i></i></div>
+  <div class="m u">Is varghese a real case</div>
+  <div class="m a">Yes, Varghese v. China Southern Airlines … is a real case.</div>
+</div>
+<div class="stamp">KHÔNG CÓ THẬT</div>
+<div class="big" style="left:1080px;top:150px;font-size:330px">BỊA</div>
+<div class="big cy" style="left:1080px;top:540px;font-size:130px">MÀ VẪN</div>
+<div class="big cy" style="left:1080px;top:700px;font-size:130px">CHẮC NỊCH</div>
+</div>
+<script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

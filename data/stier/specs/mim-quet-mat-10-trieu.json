@@ -1,0 +1,164 @@
+{
+ "theme": "mim",
+ "title": "Quét khuôn mặt khi chuyển trên 10 triệu: chặn được kẻ lạ, không chặn được chính bạn",
+ "description": "Từ 01/07/2024, theo quy định của Ngân hàng Nhà nước, chuyển tiền trực tuyến trên 10 triệu đồng một lần hoặc tổng trên 20 triệu đồng một ngày phải xác thực sinh trắc học (thường là quét khuôn mặt). Bước này chứng minh người đang chuyển tiền chính là chủ tài khoản, nên chặn được kẻ lạ chiếm tài khoản. Nhưng nó không chặn được trường hợp chính chủ tự chuyển vì tin một cuộc gọi giả giọng người thân. Lớp bảo vệ cuối cùng vẫn là việc dừng lại và gọi lại vào số đã lưu. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (13 phút): https://youtu.be/sywk-F-yW7k (công khai từ 20:00 ngày 26/10).",
+ "tags": [
+  "sinh trắc học",
+  "quét khuôn mặt",
+  "chuyển tiền",
+  "ai giả giọng",
+  "lừa đảo",
+  "deepfake",
+  "an toàn mạng",
+  "mind in the machine"
+ ],
+ "sub": "TỪ 01/07/2024",
+ "acc": [
+  "mười",
+  "hai",
+  "chính",
+  "lạ",
+  "tin"
+ ],
+ "kicker": "AI VÀ LỪA ĐẢO",
+ "lines": [
+  "Trên mười triệu đồng một lần, bạn phải quét khuôn mặt.",
+  "Quy định ấy có từ tháng 7 năm 2024.",
+  "Chuyển hơn mười triệu một lần, hay tổng hơn hai mươi triệu một ngày, là phải xác thực.",
+  "Nhưng quét khuôn mặt chứng minh điều gì?",
+  "Nó chứng minh người đang chuyển tiền, chính là bạn.",
+  "Nó chặn được kẻ lạ dùng tài khoản của bạn.",
+  "Nó không chặn được chính bạn, khi bạn tin rằng con mình đang cần tiền."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "TRÊN 10 TRIỆU ĐỒNG",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "bạn phải quét khuôn mặt",
+     "at": [
+      0,
+      "bạn"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6980602",
+   "veil": 0.55
+  },
+  {
+   "type": "chart",
+   "at": 1,
+   "kind": "bars",
+   "title": "CHUYỂN QUÁ MỨC NÀY PHẢI QUÉT KHUÔN MẶT",
+   "unit": "TRIỆU ĐỒNG · TỪ THÁNG 7 NĂM 2024",
+   "min": 0,
+   "bars": [
+    {
+     "label": "MỘT LẦN",
+     "v": 10,
+     "text": "> 10",
+     "c": "dim",
+     "at": [
+      2,
+      "mười"
+     ]
+    },
+    {
+     "label": "TỔNG\nMỘT NGÀY",
+     "v": 20,
+     "text": "> 20",
+     "c": "ref",
+     "at": [
+      2,
+      "hai"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "NÓ CHỨNG MINH ĐIỀU GÌ?",
+   "sub": "NGƯỜI CHUYỂN TIỀN CHÍNH LÀ BẠN"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CHẶN ĐƯỢC KẺ LẠ",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "dùng tài khoản của bạn",
+     "at": [
+      5,
+      "dùng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:5974501",
+   "ms": 3,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 5
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Nó không chặn được",
+   "nodes": [
+    {
+     "text": "chính bạn",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      6,
+      "chính"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 420
+    },
+    {
+     "text": "khi bạn tin con mình cần tiền",
+     "x": 0.5,
+     "y": 0.66,
+     "at": [
+      6,
+      "khi"
+     ],
+     "shape": "none",
+     "w": 820
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://sbv.gov.vn/en/w/sbv622877"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

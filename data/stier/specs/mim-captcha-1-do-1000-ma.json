@@ -1,0 +1,200 @@
+{
+ "theme": "mim",
+ "title": "Một đô la cho 1.000 lần “chứng minh mình là người”: nghề giải mã thuê",
+ "description": "Năm 2010, một nhóm nghiên cứu ở Mỹ (USENIX Security) lần theo các dịch vụ giải mã xác nhận thuê: người thật ngồi gõ mã thay cho chương trình tự động, giá khi ấy khoảng 1 USD cho 1.000 mã; theo lời một đồng tác giả, người gõ kiếm chừng 2–3 USD mỗi ngày. Bài kiểm tra phân biệt người với máy không phân biệt được người dùng thật với người được thuê để mở cửa cho máy. Video không nêu tên dịch vụ và không hướng dẫn cách vượt mã. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (9 phút): https://youtu.be/CAYQtYA1NJA (công khai từ 20:00 ngày 22/10).",
+ "tags": [
+  "giải captcha thuê",
+  "an ninh mạng",
+  "captcha",
+  "mã xác nhận",
+  "tôi không phải người máy",
+  "công nghệ quanh ta",
+  "mind in the machine"
+ ],
+ "sub": "NGHIÊN CỨU · 2010",
+ "acc": [
+  "thuê",
+  "đô",
+  "nghìn",
+  "ba",
+  "ai"
+ ],
+ "kicker": "CÔNG NGHỆ QUANH TA",
+ "lines": [
+  "Một đô la, cho một nghìn lần chứng minh mình là người.",
+  "Mã xác nhận sinh ra để chặn máy. Nhưng kẻ gian có một lối tắt rất đơn giản.",
+  "Máy không qua được, thì thuê người.",
+  "Năm 2010, một nhóm nghiên cứu lần theo những dịch vụ giải mã thuê.",
+  "Giá khi ấy, khoảng một đô la cho một nghìn mã.",
+  "Còn người ngồi gõ, mỗi ngày kiếm chừng hai, ba đô.",
+  "Bài kiểm tra hỏi bạn có phải người không. Nó không hỏi, bạn đang làm việc cho ai."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "1 ĐÔ LA",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "cho 1.000 lần chứng minh mình là người",
+     "at": [
+      0,
+      "cho"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8691683",
+   "veil": 0.58
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Lối tắt",
+   "nodes": [
+    {
+     "text": "máy không qua được",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      2,
+      "Máy"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "thì thuê người",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      2,
+      "thì"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 560
+    }
+   ],
+   "note": "KHÔNG CẦN TỚI TRÍ TUỆ NHÂN TẠO"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NĂM 2010",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "LẦN THEO DỊCH VỤ GIẢI MÃ THUÊ",
+     "at": [
+      3,
+      "lần"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7439776",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 3
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "to": 1000,
+   "suffix": " MÃ",
+   "label": "GIÁ KHOẢNG 1 ĐÔ LA",
+   "until": [
+    4,
+    "nghìn"
+   ],
+   "sub": {
+    "text": "NGHIÊN CỨU USENIX SECURITY, 2010",
+    "at": [
+     4,
+     "mã."
+    ]
+   }
+  },
+  {
+   "type": "chart",
+   "at": 5,
+   "kind": "bars",
+   "title": "NGƯỜI GÕ MÃ KIẾM MỖI NGÀY",
+   "unit": "USD · THEO LỜI ĐỒNG TÁC GIẢ NGHIÊN CỨU",
+   "bars": [
+    {
+     "label": "THẤP",
+     "v": 2,
+     "text": "~2",
+     "c": "dim",
+     "at": [
+      5,
+      "hai,"
+     ]
+    },
+    {
+     "label": "CAO",
+     "v": 3,
+     "text": "~3",
+     "c": "ref",
+     "at": [
+      5,
+      "ba"
+     ]
+    }
+   ],
+   "note": "NPR, 2010"
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "BÀI KIỂM TRA",
+   "cards": [
+    {
+     "k": "NÓ HỎI",
+     "v": "BẠN CÓ PHẢI NGƯỜI?",
+     "at": [
+      6,
+      "bạn"
+     ]
+    },
+    {
+     "k": "NÓ KHÔNG HỎI",
+     "v": "BẠN LÀM CHO AI?",
+     "at": [
+      6,
+      "Nó"
+     ],
+     "c": "acc"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://usenix.org/conference/usenixsecurity10/re-captchas%E2%80%94understanding-captcha-solving-services-economic-context"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "=AI": "ây ai"
+ },
+ "imgs": {}
+}

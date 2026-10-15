@@ -1,0 +1,164 @@
+{
+ "title": "Người chấm thi",
+ "lines": [
+  {
+   "t": "Năm 1990, hai nhà kinh tế học lật lại hồ sơ của thử nghiệm ấy.",
+   "p": 0.8
+  },
+  {
+   "t": "Và họ để ý tới một cái tên.",
+   "p": 1.0
+  },
+  "Người phụ trách nghiên cứu năng suất của Hải quân lúc đó, là một thiếu tá.",
+  {
+   "t": "Tên ông là August Dvorak.",
+   "p": 1.0
+  },
+  "Tức là người chấm thi, cũng chính là người làm ra bàn phím dự thi.",
+  {
+   "t": "Họ còn chỉ ra rằng, ai được luyện lại bài bản thì cũng gõ nhanh lên, dù trên bàn phím nào.",
+   "p": 1.0
+  },
+  "Năm 1956, một thử nghiệm khác của chính phủ Mỹ đã so hai bàn phím cẩn thận hơn.",
+  {
+   "t": "Và không thấy Dvorak hơn QWERTY.",
+   "p": 1.0
+  },
+  "Nói cho công bằng, những người ủng hộ Dvorak cũng cho rằng thử nghiệm năm 1956 thiên vị.",
+  "Và ngay cả hai nhà kinh tế kia cũng không nói QWERTY tốt hơn.",
+  {
+   "t": "Họ chỉ nói: chưa có bằng chứng chắc chắn rằng nó kém.",
+   "p": 1.0
+  },
+  "Phán quyết cho lời buộc tội thứ ba: chưa đủ chứng cứ.",
+  "Có thể có một bàn phím tốt hơn một chút.",
+  "Nhưng chưa ai chứng minh được nó tốt hơn tới mức đáng để cả thế giới học lại từ đầu."
+ ],
+ "scenes": [
+  {
+   "type": "date",
+   "day": "HAI NHÀ KINH TẾ LẬT LẠI HỒ SƠ",
+   "date": "1990"
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "NGƯỜI PHỤ TRÁCH THỬ NGHIỆM",
+   "srcnote": "LIEBOWITZ & MARGOLIS · 1990",
+   "rows": [
+    {
+     "k": "CHỨC VỤ",
+     "v": "THIẾU TÁ HẢI QUÂN",
+     "at": [
+      2,
+      "là"
+     ]
+    }
+   ],
+   "total": {
+    "k": "TÊN",
+    "v": "AUGUST DVORAK",
+    "at": [
+     3,
+     "August"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "NGƯỜI CHẤM = NGƯỜI DỰ THI",
+   "sub": "VÀ AI ĐƯỢC LUYỆN LẠI THÌ CŨNG GÕ NHANH LÊN",
+   "subAt": 5
+  },
+  {
+   "type": "timeline",
+   "at": 6,
+   "items": [
+    {
+     "year": "1956",
+     "text": "thử nghiệm khác: *không thấy Dvorak hơn*",
+     "at": 6
+    },
+    {
+     "year": "phía Dvorak",
+     "text": "cho rằng thử nghiệm ấy *thiên vị*",
+     "at": 8
+    },
+    {
+     "year": "hai nhà kinh tế",
+     "text": "*không nói* QWERTY tốt hơn",
+     "at": 9
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "HỌ CHỈ NÓI",
+     "at": 10,
+     "sm": true
+    },
+    {
+     "text": "CHƯA CÓ BẰNG CHỨNG NÓ KÉM",
+     "at": [
+      10,
+      "chưa"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 11,
+   "vid": "6101367",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "PHÁN QUYẾT 3",
+     "at": 11,
+     "sm": true
+    },
+    {
+     "text": "CHƯA ĐỦ CHỨNG CỨ",
+     "at": [
+      11,
+      "chưa"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "TỐT HƠN MỘT CHÚT?",
+     "at": 13,
+     "sm": true
+    },
+    {
+     "text": "CHƯA ĐÁNG ĐỂ CẢ THẾ GIỚI HỌC LẠI",
+     "at": [
+      13,
+      "đáng"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 06",
+  "t": "NGƯỜI CHẤM THI"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

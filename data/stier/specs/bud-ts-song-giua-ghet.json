@@ -1,0 +1,125 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "truoc-sau",
+ "hook_type": "noi-dau",
+ "open_shot": "van-phong",
+ "voice": "Ngọc Trân",
+ "music": "clean_soul.mp3",
+ "gap": 0.15,
+ "title": "Trước/Sau: sống giữa người ghét mình",
+ "kicker": "TRƯỚC / SAU",
+ "sub": "KINH PHÁP CÚ · KỆ 197",
+ "acc": [
+  "ghét",
+  "an"
+ ],
+ "lines": [
+  "Có người ghét bạn ở chỗ làm, và bạn mệt cả tuần?",
+  "Trước: ghét lại. Mệt gấp đôi.",
+  "Kinh Pháp Cú, kệ một trăm chín mươi bảy, diễn ý: sống giữa người thù hận, ta sống không thù hận.",
+  "Sau: họ vẫn có thể ghét. Nhưng bạn không mang cái ghét ấy về nhà.",
+  "Lưu lại cho tuần làm việc khó. Bạn đang phải sống cạnh ai?"
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "BỊ GHÉT Ở CHỖ LÀM?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "mệt cả tuần",
+     "at": [
+      0,
+      "mệt"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8141246"
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "TRƯỚC",
+   "cards": [
+    {
+     "k": "GHÉT",
+     "v": "LẠI",
+     "at": [
+      1,
+      "ghét"
+     ]
+    },
+    {
+     "k": "MỆT",
+     "v": "GẤP ĐÔI",
+     "at": [
+      1,
+      "Mệt"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "KHÔNG\nTHÙ HẬN",
+   "fx": "zoom",
+   "sub": "KỆ 197 · DIỄN Ý"
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 0,
+   "suffix": " CÁI GHÉT",
+   "label": "MANG VỀ NHÀ",
+   "until": [
+    3,
+    "Nhưng"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "SỐNG CẠNH AI?",
+     "at": [
+      4,
+      "Bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "lưu lại cho tuần khó",
+     "at": [
+      4,
+      "Lưu"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6646056"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp197-208/en/sujato"
+ ],
+ "description": "Trước/Sau: sống giữa người ghét mình\n\nNguồn: https://suttacentral.net/dhp197-208/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

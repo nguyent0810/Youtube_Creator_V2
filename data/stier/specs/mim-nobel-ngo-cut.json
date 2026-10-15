@@ -1,0 +1,262 @@
+{
+ "theme": "mim",
+ "title": "Mạng nơ-ron: từng bị coi là ngõ cụt, 2024 nhận Nobel Vật lý",
+ "description": "1958: Frank Rosenblatt giới thiệu perceptron, cỗ máy tự điều chỉnh qua từng lần sai. 1969: cuốn Perceptrons của Minsky và Papert chỉ ra giới hạn của perceptron đơn giản; tài trợ cho mạng nơ-ron cạn dần. 1986: Rumelhart, Hinton và Williams công bố lan truyền ngược trên Nature. 2012: AlexNet thắng cuộc thi ImageNet. Tháng 10/2024: Nobel Vật lý trao cho John Hopfield và Geoffrey Hinton vì những khám phá và phát minh nền tảng giúp máy học bằng mạng nơ-ron nhân tạo. Toàn cảnh 70 năm nằm trong video dài \"AI Đã Chết Hai Lần\" trên kênh Mind in the Machine. Giọng đọc tổng hợp.",
+ "tags": [
+  "nobel vật lý 2024",
+  "geoffrey hinton",
+  "mạng nơ-ron",
+  "perceptron",
+  "học sâu",
+  "lịch sử ai",
+  "mind in the machine"
+ ],
+ "kicker": "LỊCH SỬ AI",
+ "sub": "1958 → 2024",
+ "acc": [
+  "ngõ",
+  "cụt",
+  "nobel",
+  "sai",
+  "cạn",
+  "lớn"
+ ],
+ "lines": [
+  "Từng bị coi là ngõ cụt. Giờ thì nhận Nobel.",
+  "Năm 1958, perceptron ra đời. Một cỗ máy tự học, qua từng lần sai.",
+  "Đến 1969, một cuốn sách chỉ ra giới hạn của nó. Tiền tài trợ cạn dần.",
+  "Năm 1986, có lối ra: lan truyền ngược, giúp mạng nhiều lớp tự sửa lỗi.",
+  "Năm 2012, mạng nơ-ron thắng lớn ở cuộc thi nhận dạng ảnh.",
+  "Và tháng 10 năm 2024, Nobel Vật lý về tay John Hopfield và Geoffrey Hinton.",
+  "Lý do? Những phát minh nền tảng, giúp máy học bằng mạng nơ-ron."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "TỪNG LÀ “NGÕ CỤT”",
+     "at": 0.0
+    },
+    {
+     "text": "GIỜ NHẬN NOBEL",
+     "at": [
+      0,
+      "Giờ"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:6755168",
+   "ms": 9,
+   "veil": 0.58
+  },
+  {
+   "type": "photo",
+   "at": 1,
+   "img": "perceptron",
+   "mode": "print",
+   "tone": "bw",
+   "label": {
+    "text": "PERCEPTRON · HẢI QUÂN MỸ · 1958",
+    "at": [
+     1,
+     "perceptron"
+    ],
+    "y": 1290
+   },
+   "stamp": {
+    "text": "TỰ HỌC QUA LẦN SAI",
+    "at": [
+     1,
+     "tự"
+    ],
+    "x": 150,
+    "y": 1090
+   }
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Con đường của mạng nơ-ron",
+   "nodes": [
+    {
+     "text": "1969 · bị chỉ ra giới hạn",
+     "x": 0.5,
+     "y": 0.32,
+     "at": [
+      2,
+      null,
+      0,
+      0.15
+     ],
+     "cross": [
+      2,
+      "cạn"
+     ]
+    },
+    {
+     "text": "1986 · lan truyền ngược",
+     "x": 0.5,
+     "y": 0.7,
+     "at": [
+      3,
+      null,
+      0,
+      0.15
+     ],
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      3,
+      "lối"
+     ],
+     "bend": 0
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "2012",
+     "at": 4
+    },
+    {
+     "text": "MẠNG NƠ-RON",
+     "at": [
+      4,
+      "mạng"
+     ],
+     "sm": true
+    },
+    {
+     "text": "THẮNG LỚN",
+     "at": [
+      4,
+      "thắng"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:6755168",
+   "ms": 14,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 4
+  },
+  {
+   "type": "photo",
+   "at": 5,
+   "img": "hinton",
+   "mode": "print",
+   "tone": "color",
+   "label": {
+    "text": "GEOFFREY HINTON · ẢNH 2023",
+    "at": [
+     5,
+     "Geoffrey"
+    ],
+    "y": 1290
+   },
+   "stamp": {
+    "text": "NOBEL VẬT LÝ 2024",
+    "at": [
+     5,
+     "Nobel"
+    ],
+    "x": 170,
+    "y": 1090
+   }
+  },
+  {
+   "type": "timeline",
+   "at": 6,
+   "items": [
+    {
+     "year": "1958",
+     "text": "perceptron",
+     "at": [
+      6,
+      null,
+      0,
+      0.1
+     ]
+    },
+    {
+     "year": "1969",
+     "text": "“ngõ cụt”",
+     "at": [
+      6,
+      null,
+      0,
+      0.35
+     ]
+    },
+    {
+     "year": "1986",
+     "text": "lan truyền ngược",
+     "at": [
+      6,
+      null,
+      0,
+      0.6
+     ]
+    },
+    {
+     "year": "2012",
+     "text": "thắng nhận dạng ảnh",
+     "at": [
+      6,
+      "phát"
+     ]
+    },
+    {
+     "year": "2024",
+     "text": "Nobel Vật lý",
+     "at": [
+      6,
+      "giúp"
+     ]
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://www.nobelprize.org/prizes/physics/2024/press-release/",
+  "https://news.cornell.edu/stories/2019/09/professors-perceptron-paved-way-ai-60-years-too-soon"
+ ],
+ "say": {
+  "=AI": "ây ai",
+  "nobel": "Nô-ben",
+  "john": "Giôn",
+  "hopfield": "Hóp-phin",
+  "geoffrey": "Giép-phri",
+  "hinton": "Hin-tần",
+  "perceptron": "pơ-xép-trôn"
+ },
+ "imgs": {
+  "hinton": "File:Geoffrey Hinton - Collision 2023 - Centre Stage RCZ 1307 (cropped).jpg",
+  "perceptron": "File:330-PSA-80-60 (USN 710739) (20897323365).jpg"
+ },
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ }
+}

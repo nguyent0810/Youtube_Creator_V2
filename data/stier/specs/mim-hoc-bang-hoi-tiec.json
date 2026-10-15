@@ -1,0 +1,161 @@
+{
+ "theme": "mim",
+ "title": "Cỗ máy học poker bằng “sự hối tiếc”: thuật toán giảm thiểu hối tiếc của Libratus",
+ "description": "Libratus không học bằng cách xem người chơi. Nó tự chơi với chính mình trên siêu máy tính, và sau mỗi ván tự hỏi: giá như chọn cách khác thì được thêm bao nhiêu? Con số ấy gọi là sự hối tiếc (regret). Lần sau, nó chọn nhiều hơn những cách nó hối tiếc đã bỏ qua; lặp lại rất nhiều lần, cách chơi cân bằng tới mức đối thủ khó khai thác (CMU).\n\nVideo nói về nghiên cứu trí tuệ nhân tạo; không hướng dẫn chơi bài, không cổ vũ cờ bạc. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/Mz0HwBBSBbg (công khai từ 20:00 ngày 26/11).",
+ "tags": [
+  "regret minimization",
+  "tự học",
+  "ai chơi poker",
+  "libratus",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "LIBRATUS",
+ "acc": [
+  "hối",
+  "tiếc",
+  "tự",
+  "lần",
+  "sai"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Một cỗ máy học chơi bài bằng sự hối tiếc. Đó là tên thật của thuật toán.",
+  "Libratus không học bằng cách xem người khác chơi. Nó tự chơi với chính mình, vô số ván.",
+  "Sau mỗi ván, nó tự hỏi: giá như mình chọn cách khác, thì được thêm bao nhiêu?",
+  "Con số được thêm ấy, gọi là sự hối tiếc.",
+  "Lần sau, nó chọn nhiều hơn những cách mà nó hối tiếc vì đã bỏ qua.",
+  "Lặp lại rất nhiều lần, cách chơi cân bằng tới mức đối thủ khó tìm chỗ nào để khai thác.",
+  "Giống con người học từ sai lầm. Chỉ khác, máy được sai vô số lần trước khi ngồi vào bàn."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "HỌC BẰNG HỐI TIẾC",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "tên thật của một thuật toán",
+     "at": [
+      0,
+      "Đó"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8720746",
+   "veil": 0.55
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "CÁCH HỌC",
+   "cards": [
+    {
+     "k": "KHÔNG PHẢI",
+     "v": "XEM NGƯỜI KHÁC CHƠI",
+     "at": 1
+    },
+    {
+     "k": "MÀ LÀ",
+     "v": "TỰ CHƠI VỚI MÌNH",
+     "at": [
+      1,
+      "Nó"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 2,
+   "items": [
+    {
+     "year": "1",
+     "text": "giá như chọn khác: thêm bao nhiêu?",
+     "at": [
+      2,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "year": "2",
+     "text": "con số ấy = sự hối tiếc",
+     "at": 3
+    },
+    {
+     "year": "3",
+     "text": "lần sau chọn nhiều hơn cách đã bỏ qua",
+     "at": 4
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CÂN BẰNG",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "đối thủ khó tìm chỗ khai thác",
+     "at": [
+      5,
+      "đối"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6664998",
+   "ms": 4,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 5
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "from": 120000,
+   "to": 120000,
+   "suffix": " VÁN",
+   "label": "VÁN ĐẤU VỚI NGƯỜI · 2017",
+   "sub": {
+    "text": "CÒN VÁN TỰ CHƠI THÌ VÔ SỐ",
+    "at": [
+     6,
+     "Chỉ"
+    ]
+   }
+  }
+ ],
+ "sources": [
+  "https://www.cmu.edu/news/stories/archives/2017/january/AI-beats-poker-pros.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "libratus": "Li-bra-tút"
+ },
+ "imgs": {}
+}

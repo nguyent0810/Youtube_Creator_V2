@@ -1,0 +1,174 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "truoc-sau",
+ "hook_type": "nghich-ly",
+ "open_shot": "dien-thoai",
+ "voice": "Đoan Trang",
+ "music": "perspectives.mp3",
+ "gap": 0.1,
+ "title": "Trước/Sau: nghĩ gì nhiều, tâm nghiêng về đó",
+ "kicker": "TRƯỚC / SAU",
+ "sub": "KINH TRUNG BỘ 19",
+ "acc": [
+  "nghĩ",
+  "tâm"
+ ],
+ "lines": [
+  "Lướt tin xấu cả ngày, rồi thắc mắc sao lòng nặng trĩu?",
+  "Trước: cái gì cũng lướt, cái gì cũng nghĩ.",
+  "Kinh Trung Bộ mười chín, diễn ý: điều gì nghĩ đến thường xuyên, tâm sẽ nghiêng về điều ấy.",
+  "Sau: chọn điều nuôi tâm, như chọn món ăn.",
+  "Bạn thành ra điều bạn nghĩ nhiều nhất.",
+  "Hôm nay bạn đã nghĩ nhiều về điều gì? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "items": [
+    {
+     "text": "LƯỚT CẢ NGÀY · LÒNG NẶNG?",
+     "at": 0.0,
+     "acc": true
+    }
+   ],
+   "clip": "pexels:9787494"
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "TRƯỚC",
+   "cards": [
+    {
+     "k": "LƯỚT",
+     "v": "TẤT CẢ",
+     "at": [
+      1,
+      "lướt,"
+     ]
+    },
+    {
+     "k": "NGHĨ",
+     "v": "TẤT CẢ",
+     "at": [
+      1,
+      "nghĩ."
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Song Tầm (diễn ý)",
+   "nodes": [
+    {
+     "text": "NGHĨ THƯỜNG XUYÊN",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      2,
+      "điều"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "TÂM NGHIÊNG VỀ ĐÓ",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      2,
+      "tâm"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      2,
+      "tâm"
+     ]
+    }
+   ],
+   "note": "MN 19 · SUTTACENTRAL"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "SAU: CHỌN ĐIỀU NUÔI TÂM",
+     "at": [
+      3,
+      "Sau:"
+     ],
+     "acc": true
+    },
+    {
+     "text": "như chọn món ăn",
+     "at": [
+      3,
+      "như"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8334937"
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "to": 1,
+   "suffix": " ĐIỀU NGHĨ NHIỀU NHẤT",
+   "label": "= ĐIỀU BẠN THÀNH RA",
+   "until": [
+    4,
+    "nhiều"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "BẠN NGHĨ GÌ NHIỀU?",
+     "at": [
+      5,
+      "Hôm"
+     ]
+    },
+    {
+     "text": "bình luận nhé",
+     "at": [
+      5,
+      "Bình"
+     ],
+     "sm": true,
+     "acc": true
+    }
+   ],
+   "clip": "pexels:29158867"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/mn19/en/sujato"
+ ],
+ "description": "Trước/Sau: nghĩ gì nhiều, tâm nghiêng về đó\n\nNguồn: https://suttacentral.net/mn19/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

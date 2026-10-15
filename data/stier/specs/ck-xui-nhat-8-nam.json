@@ -1,0 +1,212 @@
+{
+ "theme": "ck",
+ "title": "Năm nào cũng mua đúng ngày đắt nhất: sau 8 năm phép thử cho ra bao nhiêu?",
+ "description": "PHÉP THỬ TRÊN SỐ LIỆU QUÁ KHỨ (VN-Index, 10/2018 → 10/2026), ba nhân vật giả định cùng nộp 291 triệu: người mua đều mỗi tháng về đích khoảng 437 triệu; người năm nào cũng dồn tiền mua đúng ngày chỉ số cao nhất năm về khoảng 381 triệu (lãi khoảng 31%); người năm nào cũng mua đúng ngày thấp nhất năm về khoảng 526 triệu. Phép thử minh hoạ trên chỉ số, chưa tính phí, thuế, cổ tức; giai đoạn khác có thể cho kết quả rất khác.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.",
+ "tags": [
+  "mua đúng đỉnh",
+  "chọn thời điểm",
+  "mua đều mỗi tháng",
+  "vn-index",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "kicker": "1 PHÉP THỬ",
+ "sub": "2018 → 2026",
+ "acc": [
+  "đắt",
+  "ba",
+  "rẻ",
+  "ngày",
+  "khác"
+ ],
+ "lines": [
+  "Năm nào cũng mua đúng ngày đắt nhất. Tám năm sau thì sao?",
+  "Kênh mình thử trên số liệu quá khứ của VN-Index, với một nhân vật giả định. Anh Xui.",
+  "Cả năm anh gom tiền, rồi mua đúng một lần, đúng ngày chỉ số cao nhất năm.",
+  "Tổng nộp hai trăm chín mươi mốt triệu. Về đích, khoảng ba trăm tám mươi mốt triệu.",
+  "Người mua đều mỗi tháng, khoảng bốn trăm ba mươi bảy.",
+  "Người mua đúng ngày rẻ nhất năm, khoảng năm trăm hai mươi sáu.",
+  "Trong giai đoạn này, chọn ngày ít quan trọng hơn mình tưởng. Giai đoạn khác có thể khác."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NĂM NÀO CŨNG MUA",
+     "at": 0.0
+    },
+    {
+     "text": "ĐÚNG NGÀY ĐẮT NHẤT",
+     "at": [
+      0,
+      "đúng"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:6964003",
+   "veil": 0.58
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "PHÉP THỬ · SỐ LIỆU QUÁ KHỨ",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "ANH XUI",
+     "at": [
+      1,
+      "Anh"
+     ],
+     "acc": true
+    },
+    {
+     "text": "một nhân vật giả định",
+     "at": [
+      1,
+      "với"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7710747",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "NHÂN VẬT GIẢ ĐỊNH · ANH XUI",
+   "cards": [
+    {
+     "k": "CẢ NĂM",
+     "v": "GOM TIỀN",
+     "at": [
+      2,
+      "gom"
+     ]
+    },
+    {
+     "k": "MUA",
+     "v": "ĐÚNG MỘT LẦN",
+     "at": [
+      2,
+      "mua"
+     ]
+    },
+    {
+     "k": "VÀO",
+     "v": "NGÀY CAO NHẤT NĂM",
+     "at": [
+      2,
+      "đúng",
+      1
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "PHÉP THỬ TRÊN SỐ LIỆU QUÁ KHỨ"
+  },
+  {
+   "type": "chart",
+   "at": [
+    3,
+    "Về"
+   ],
+   "kind": "bars",
+   "title": "VỀ ĐÍCH SAU 8 NĂM · CÙNG NỘP 291",
+   "unit": "TRIỆU ĐỒNG · KÊNH TỰ TÍNH · QUÁ KHỨ",
+   "bars": [
+    {
+     "label": "MUA NGÀY\nĐẮT NHẤT",
+     "v": 381,
+     "text": "~381",
+     "c": "down",
+     "at": [
+      3,
+      "khoảng"
+     ]
+    },
+    {
+     "label": "MUA ĐỀU\nMỖI THÁNG",
+     "v": 437,
+     "text": "~437",
+     "c": "ref",
+     "at": [
+      4,
+      "khoảng"
+     ]
+    },
+    {
+     "label": "MUA NGÀY\nRẺ NHẤT",
+     "v": 526,
+     "text": "~526",
+     "c": "up",
+     "at": [
+      5,
+      "khoảng"
+     ]
+    }
+   ],
+   "note": "TRÊN CHỈ SỐ · CHƯA TÍNH PHÍ, THUẾ, CỔ TỨC"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CHỌN NGÀY",
+     "at": 6,
+     "sm": true
+    },
+    {
+     "text": "ÍT QUAN TRỌNG HƠN MÌNH TƯỞNG",
+     "at": [
+      6,
+      "ít"
+     ],
+     "acc": true
+    },
+    {
+     "text": "giai đoạn khác có thể khác",
+     "at": [
+      6,
+      "Giai"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:35332817",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 6
+  }
+ ],
+ "sources": [
+  "https://benefitspro.com/2012/10/31/lump-sum-investing-vs-dollar-cost-averaging",
+  "https://robberger.com/lump-sum-investing-vs-dollar-cost-averaging"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "vn-index": "Vi En In-đéc"
+ },
+ "imgs": {}
+}

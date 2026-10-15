@@ -1,0 +1,168 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "kinh-giai",
+ "hook_type": "noi-dau",
+ "open_shot": "pho-dem",
+ "voice": "Đoan Trang",
+ "music": "clean_soul.mp3",
+ "gap": 0.0,
+ "title": "Pháp Cú 201: thắng cãi mà mất ngủ",
+ "kicker": "KINH PHÁP CÚ · KỆ 201",
+ "sub": "DIỄN Ý",
+ "acc": [
+  "thắng",
+  "thua",
+  "ngủ"
+ ],
+ "lines": [
+  "Thắng một trận cãi nhau, rồi mất ngủ cả đêm?",
+  "Thắng cãi, nhiều khi là mất một người.",
+  "Kinh Pháp Cú, kệ hai trăm lẻ một, diễn ý: chiến thắng sinh thù oán, người thua nằm ngủ không yên.",
+  "Người an tịnh, bỏ cả thắng lẫn thua, thì ngủ ngon.",
+  "Có những cuộc cãi, không cần thắng.",
+  "Bạn từng thắng mà thấy mình thua chưa? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "items": [
+    {
+     "text": "THẮNG CÃI · MẤT NGỦ?",
+     "at": 0.0,
+     "acc": true
+    }
+   ],
+   "clip": "pexels:8557555"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "MẤT MỘT NGƯỜI",
+     "at": [
+      1,
+      "mất"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:4057152",
+   "win": true,
+   "winLabel": "THẮNG CÃI"
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Kệ 201 (diễn ý)",
+   "nodes": [
+    {
+     "text": "THẮNG → THÙ OÁN",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      2,
+      "chiến"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "THUA → MẤT NGỦ",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      2,
+      "người"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "DHP 201 · SUTTACENTRAL"
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "NGƯỜI AN TỊNH",
+   "cards": [
+    {
+     "k": "BỎ",
+     "v": "THẮNG",
+     "at": [
+      3,
+      "thắng"
+     ]
+    },
+    {
+     "k": "BỎ",
+     "v": "THUA",
+     "at": [
+      3,
+      "thua,"
+     ]
+    },
+    {
+     "k": "RỒI",
+     "v": "NGỦ NGON",
+     "at": [
+      3,
+      "ngủ"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "to": 1,
+   "suffix": " LẦN NHƯỜNG",
+   "label": "CÓ CUỘC CÃI KHÔNG CẦN THẮNG",
+   "until": [
+    4,
+    "không"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "THẮNG MÀ THẤY THUA?",
+     "at": [
+      5,
+      "Bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận nhé",
+     "at": [
+      5,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:39329852"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp197-208/en/sujato"
+ ],
+ "description": "Pháp Cú 201: thắng cãi mà mất ngủ\n\nNguồn: https://suttacentral.net/dhp197-208/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

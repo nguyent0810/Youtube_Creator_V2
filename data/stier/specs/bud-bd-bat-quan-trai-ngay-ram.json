@@ -1,0 +1,302 @@
+{
+ "theme": "bud",
+ "format": "ba-dieu",
+ "hook_type": "con-so",
+ "open_shot": "nen-huong",
+ "voice": "Thiện Minh",
+ "music": "frost_waltz.mp3",
+ "gap": 0.15,
+ "title": "Mai là Rằm: 8 điều người xưa giữ trong ngày trai giới (Tăng Chi 8.41)",
+ "kicker": "TÁM ĐIỀU",
+ "sub": "TĂNG CHI 8.41 · RẰM THÁNG 9",
+ "acc": [
+  "rằm",
+  "tám",
+  "ngày"
+ ],
+ "lines": [
+  "Mai là Rằm tháng chín. Người xưa giữ tám điều này trong một ngày.",
+  "Kinh Tăng Chi gọi đó là ngày trai giới tám chi phần, diễn ý:",
+  "Một đến năm: không sát sinh, không trộm, không nói dối, không rượu bia.",
+  "Và giữ trọn phạm hạnh, trong một ngày một đêm.",
+  "Sáu: không ăn sau giờ ngọ.",
+  "Bảy: không ca múa, xem hát, không trang sức, nước hoa.",
+  "Tám: không nằm giường cao, rộng, sang.",
+  "Vì sao? Kinh nói: một ngày một đêm, sống như các bậc A-la-hán.",
+  "Không bắt buộc. Mai thử chọn một điều thôi.",
+  "Điều số mấy bạn sẽ thử? Bình luận con số, và lưu lại nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "MAI LÀ RẰM",
+     "at": 0.0,
+     "acc": true,
+     "size": 140
+    },
+    {
+     "text": "TÁM ĐIỀU",
+     "at": [
+      0,
+      "tám"
+     ],
+     "size": 130
+    },
+    {
+     "text": "giữ trong một ngày",
+     "at": [
+      0,
+      "trong"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:19060006"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "veil": 0.6,
+   "items": [
+    {
+     "text": "BÁT QUAN TRAI",
+     "at": [
+      1,
+      "Kinh"
+     ],
+     "acc": true,
+     "fx": "outline"
+    },
+    {
+     "text": "Tăng Chi 8.41 · diễn ý",
+     "at": [
+      1,
+      "diễn"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:35853514"
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "MỘT → NĂM",
+     "at": [
+      2,
+      "Một"
+     ],
+     "acc": true,
+     "size": 150
+    },
+    {
+     "text": "không sát sinh · không trộm",
+     "at": [
+      2,
+      "không"
+     ],
+     "sm": true
+    },
+    {
+     "text": "không nói dối · không rượu bia",
+     "at": [
+      2,
+      "nói"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:5416363"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "PHẠM HẠNH",
+     "at": [
+      3,
+      "phạm"
+     ],
+     "acc": true,
+     "size": 150
+    },
+    {
+     "text": "một ngày một đêm",
+     "at": [
+      3,
+      "một"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:13206265"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "SÁU",
+     "at": [
+      4,
+      "Sáu"
+     ],
+     "acc": true,
+     "size": 170
+    },
+    {
+     "text": "KHÔNG ĂN SAU GIỜ NGỌ",
+     "at": [
+      4,
+      "không"
+     ]
+    }
+   ],
+   "clip": "pexels:8051393"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "BẢY",
+     "at": [
+      5,
+      "Bảy"
+     ],
+     "acc": true,
+     "size": 170
+    },
+    {
+     "text": "KHÔNG CA MÚA",
+     "at": [
+      5,
+      "không"
+     ]
+    },
+    {
+     "text": "không trang sức, nước hoa",
+     "at": [
+      5,
+      "trang"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:29511418"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "TÁM",
+     "at": [
+      6,
+      "Tám"
+     ],
+     "acc": true,
+     "size": 170
+    },
+    {
+     "text": "KHÔNG GIƯỜNG CAO SANG",
+     "at": [
+      6,
+      "giường"
+     ]
+    }
+   ],
+   "clip": "pexels:25391808"
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "NHƯ BẬC\nA-LA-HÁN",
+   "veil": 0.6,
+   "fx": "zoom",
+   "sub": "MỘT NGÀY · MỘT ĐÊM",
+   "clip": "pexels:5415978"
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "KHÔNG BẮT BUỘC",
+     "at": [
+      8,
+      "Không"
+     ],
+     "sm": true
+    },
+    {
+     "text": "CHỌN MỘT ĐIỀU",
+     "at": [
+      8,
+      "chọn"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:11267669"
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "SỐ MẤY?",
+     "at": [
+      9,
+      "số"
+     ],
+     "acc": true,
+     "size": 150
+    },
+    {
+     "text": "bình luận con số",
+     "at": [
+      9,
+      "Bình"
+     ],
+     "sm": true
+    },
+    {
+     "text": "LƯU LẠI",
+     "at": [
+      9,
+      "lưu"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:8711367"
+  }
+ ],
+ "description": "Mai (24/10/2026) là Rằm tháng 9 âm lịch. Kinh Tăng Chi 8.41 (diễn ý) — ngày trai giới tám chi phần: trong một ngày một đêm, người cư sĩ sống như các bậc A-la-hán: không sát sinh, không lấy của không cho, giữ phạm hạnh, không nói dối, không dùng rượu bia, không ăn sai giờ (sau giờ ngọ), không ca múa xem hát và trang sức, không nằm giường cao rộng sang. Không bắt buộc; có thể bắt đầu từ một điều.\n\nNguồn: AN 8.41, bản dịch Bhikkhu Sujato (CC0): https://suttacentral.net/an8.41/en/sujato · https://en.wikipedia.org/wiki/Uposatha\nLời kinh là diễn ý.",
+ "tags": [
+  "bát quan trai",
+  "rằm tháng 9",
+  "ngày trai giới",
+  "lời phật dạy",
+  "phật giáo"
+ ],
+ "sources": [
+  "https://suttacentral.net/an8.41/en/sujato",
+  "https://en.wikipedia.org/wiki/Uposatha"
+ ]
+}

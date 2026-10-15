@@ -1,0 +1,206 @@
+{
+ "title": "Lời buộc tội thứ hai: thắng không phải vì tốt",
+ "lines": [
+  {
+   "t": "Ngày 25 tháng 7 năm 1888, ở thành phố Cincinnati.",
+   "p": 0.8
+  },
+  {
+   "t": "Hai người đàn ông ngồi vào hai chiếc máy đánh chữ, thi xem ai gõ nhanh hơn.",
+   "p": 1.0
+  },
+  "Một người dùng chiếc máy có bàn phím lớn, mỗi chữ hoa và chữ thường một phím riêng.",
+  "Anh ta gõ bằng vài ngón, và phải nhìn phím.",
+  "Người kia tên là Frank McGurrin, dùng máy Remington, bàn phím QWERTY.",
+  {
+   "t": "Anh có một bí quyết gần như chưa ai dùng. Gõ bằng mười ngón, và không nhìn xuống.",
+   "p": 1.0
+  },
+  "McGurrin thắng áp đảo.",
+  "Kết quả lên trang nhất nhiều tờ báo.",
+  {
+   "t": "Và người ta rút ra một kết luận hơi vội: bàn phím của Remington là bàn phím nhanh nhất.",
+   "p": 1.0
+  },
+  "Thật ra, thứ thắng hôm ấy là cách gõ mười ngón, chứ chưa chắc là bố cục phím.",
+  "Nhưng các trường dạy đánh máy bắt đầu dạy theo máy Remington.",
+  "Người đã học QWERTY thì muốn mua máy QWERTY.",
+  {
+   "t": "Hãng nào muốn bán được máy, phải làm bàn phím QWERTY.",
+   "p": 1.0
+  },
+  "Năm 1893, năm hãng máy đánh chữ lớn nhất nước Mỹ sáp nhập, và chọn QWERTY làm bàn phím chung.",
+  {
+   "t": "Từ đó, cuộc đua khép lại.",
+   "p": 1.0
+  },
+  "Phán quyết cho lời buộc tội thứ hai: có tội một phần.",
+  "QWERTY không thắng vì được chứng minh là tốt nhất.",
+  "Nó thắng vì tới trước, và vì hàng triệu người đã lỡ học nó rồi."
+ ],
+ "scenes": [
+  {
+   "type": "date",
+   "day": "CINCINNATI · CUỘC THI GÕ MÁY",
+   "date": "25.07.1888"
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "HAI ĐỐI THỦ",
+   "srcnote": "THEO TƯ LIỆU VỀ CUỘC THI NĂM 1888",
+   "rows": [
+    {
+     "k": "NGƯỜI THỨ NHẤT",
+     "v": "BÀN PHÍM ĐÔI, NHÌN PHÍM",
+     "at": 2
+    },
+    {
+     "k": "McGURRIN",
+     "v": "REMINGTON · QWERTY",
+     "at": 4
+    }
+   ],
+   "total": {
+    "k": "BÍ QUYẾT",
+    "v": "MƯỜI NGÓN, KHÔNG NHÌN",
+    "at": [
+     5,
+     "Gõ"
+    ]
+   }
+  },
+  {
+   "type": "broll",
+   "at": 6,
+   "vid": "6979935",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "McGURRIN THẮNG ÁP ĐẢO",
+     "at": 6,
+     "acc": true
+    },
+    {
+     "text": "kết quả lên trang nhất nhiều tờ báo",
+     "at": 7,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "KẾT LUẬN HƠI VỘI",
+     "at": 8,
+     "sm": true
+    },
+    {
+     "text": "“BÀN PHÍM NHANH NHẤT”",
+     "at": [
+      8,
+      "bàn"
+     ]
+    },
+    {
+     "text": "THẬT RA: CÁCH GÕ MƯỜI NGÓN THẮNG",
+     "at": [
+      9,
+      "thứ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 10,
+   "title": "VÒNG XOÁY",
+   "rows": [
+    {
+     "k": "TRƯỜNG DẠY",
+     "v": "DẠY THEO MÁY REMINGTON",
+     "at": 10
+    },
+    {
+     "k": "NGƯỜI HỌC",
+     "v": "MUỐN MUA MÁY QWERTY",
+     "at": 11
+    },
+    {
+     "k": "HÃNG KHÁC",
+     "v": "PHẢI LÀM BÀN PHÍM QWERTY",
+     "at": 12
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 13,
+   "from": 0,
+   "to": 5,
+   "suffix": " HÃNG",
+   "until": [
+    13,
+    "hãng"
+   ],
+   "label": "LỚN NHẤT NƯỚC MỸ SÁP NHẬP · CHỌN QWERTY",
+   "sub": {
+    "text": "NĂM 1893 · CUỘC ĐUA KHÉP LẠI",
+    "at": 14
+   }
+  },
+  {
+   "type": "broll",
+   "at": 15,
+   "vid": "6699964",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "PHÁN QUYẾT 2",
+     "at": 15,
+     "sm": true
+    },
+    {
+     "text": "CÓ TỘI MỘT PHẦN",
+     "at": [
+      15,
+      "có"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "THẮNG VÌ TỚI TRƯỚC",
+     "at": 17,
+     "acc": true
+    },
+    {
+     "text": "và vì hàng triệu người đã lỡ học nó rồi",
+     "at": [
+      17,
+      "và"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "LỜI BUỘC TỘI THỨ HAI"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

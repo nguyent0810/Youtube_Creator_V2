@@ -1,0 +1,339 @@
+{
+ "theme": "bud",
+ "format": "chuyen-xua",
+ "hook_type": "giua-truyen",
+ "open_shot": "cong-viec",
+ "voice": "Thục Đoan",
+ "music": "fluidscape.mp3",
+ "series": "Chuyện xưa · Tập 3",
+ "gap": 0.45,
+ "title": "Chuyện xưa · Tập 3: Bà chủ hiền nhất thành (Kinh Trung Bộ 21)",
+ "kicker": "CHUYỆN XƯA · TẬP 3",
+ "sub": "KINH TRUNG BỘ 21",
+ "acc": [
+  "hiền",
+  "Vedehikā",
+  "Kāḷī",
+  "muộn"
+ ],
+ "say": {
+  "vedehikā": "Vê-đê-hi-ca",
+  "kāḷī": "Ca-li",
+  "xá-vệ": "Xá Vệ"
+ },
+ "lines": [
+  "Cả thành khen bà là người hiền nhất, cho đến một buổi sáng.",
+  "Đức Phật kể: ở thành Xá-vệ có bà chủ tên Vedehikā.",
+  "Ai cũng nói bà hiền lành, điềm đạm, ôn hòa.",
+  "Người hầu Kāḷī tự hỏi: bà hiền thật, hay chỉ chưa ai chọc giận?",
+  "Kāḷī thử dậy muộn. Bà cau mày.",
+  "Hôm sau, dậy muộn hơn. Bà buông lời nặng.",
+  "Lần thứ ba, muộn hơn nữa.",
+  "Bà vớ cây then cửa, đánh vỡ đầu người hầu.",
+  "Kāḷī đầu chảy máu, chạy kể khắp xóm.",
+  "Từ đó, tiếng hiền của bà mất sạch.",
+  "Đức Phật dạy: chưa nghe lời trái tai, ai cũng hiền. Nghe rồi mới biết.",
+  "Điều gì dễ chạm vào bạn nhất? Bình luận, và theo dõi tập sau."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "clip": "pexels:34394457",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "CẢ THÀNH",
+     "at": 0.0,
+     "acc": true,
+     "size": 160
+    },
+    {
+     "text": "KHEN HIỀN NHẤT",
+     "at": [
+      0,
+      "khen"
+     ]
+    },
+    {
+     "text": "…cho đến một buổi sáng",
+     "at": [
+      0,
+      "cho"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "clip": "pexels:35265333",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "THÀNH XÁ-VỆ",
+     "at": [
+      1,
+      "thành"
+     ],
+     "sm": true
+    },
+    {
+     "text": "BÀ VEDEHIKĀ",
+     "at": [
+      1,
+      "tên"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "clip": "pexels:6645593",
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "HIỀN LÀNH",
+     "at": [
+      2,
+      "hiền"
+     ],
+     "acc": true
+    },
+    {
+     "text": "ĐIỀM ĐẠM · ÔN HÒA",
+     "at": [
+      2,
+      "điềm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "clip": "pexels:7641384",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "NGƯỜI HẦU KĀḶĪ",
+     "at": [
+      3,
+      "Người"
+     ]
+    },
+    {
+     "text": "HIỀN THẬT?",
+     "at": [
+      3,
+      "thật"
+     ],
+     "acc": true
+    },
+    {
+     "text": "hay chưa ai chọc giận",
+     "at": [
+      3,
+      "chưa"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "clip": "pexels:7593903",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "LẦN MỘT · DẬY MUỘN",
+     "at": [
+      4,
+      "dậy"
+     ]
+    },
+    {
+     "text": "BÀ CAU MÀY",
+     "at": [
+      4,
+      "cau"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "clip": "pexels:6382080",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "LẦN HAI · MUỘN HƠN",
+     "at": [
+      5,
+      "muộn"
+     ]
+    },
+    {
+     "text": "LỜI NẶNG",
+     "at": [
+      5,
+      "nặng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "clip": "pexels:27100098",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "LẦN BA",
+     "at": [
+      6,
+      "thứ"
+     ],
+     "acc": true,
+     "size": 170
+    },
+    {
+     "text": "muộn hơn nữa",
+     "at": [
+      6,
+      "muộn"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "VỠ ĐẦU",
+   "sub": "BẰNG CÂY THEN CỬA",
+   "clip": "pexels:39382086",
+   "veil": 0.6,
+   "fx": "zoom"
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "clip": "pexels:37496058",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "ĐẦU CHẢY MÁU",
+     "at": [
+      8,
+      "đầu"
+     ]
+    },
+    {
+     "text": "KỂ KHẮP XÓM",
+     "at": [
+      8,
+      "kể"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "clip": "pexels:10223234",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "TIẾNG HIỀN",
+     "at": [
+      9,
+      "tiếng"
+     ]
+    },
+    {
+     "text": "MẤT SẠCH",
+     "at": [
+      9,
+      "mất"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 10,
+   "text": "Chưa nghe lời trái tai, ai cũng hiền. Nghe rồi mới biết.",
+   "by": "MN 21 · DIỄN Ý",
+   "clip": "pexels:6227239",
+   "veil": 0.6
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "clip": "pexels:39230077",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "ĐIỀU GÌ",
+     "at": [
+      11,
+      "Điều"
+     ]
+    },
+    {
+     "text": "DỄ CHẠM BẠN NHẤT?",
+     "at": [
+      11,
+      "chạm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận",
+     "at": [
+      11,
+      "Bình"
+     ],
+     "sm": true
+    },
+    {
+     "text": "THEO DÕI",
+     "at": [
+      11,
+      "theo"
+     ],
+     "acc": true
+    },
+    {
+     "text": "tập sau",
+     "at": [
+      11,
+      "tập"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "description": "Chuyện xưa · Tập 3. Kể lại theo Kinh Trung Bộ 21 (Ví dụ cái cưa): bà chủ Vedehikā ở Xá-vệ nổi tiếng hiền hậu; người hầu Kāḷī ba lần dậy muộn để thử; lần thứ ba bà lấy then cửa đánh vỡ đầu cô, và mất tiếng hiền. Đức Phật dạy: người ta chỉ thật sự hiền khi gặp lời trái ý mà vẫn hiền.\n\nNguồn: MN 21, bản dịch Bhikkhu Sujato (CC0): https://suttacentral.net/mn21/en/sujato\nCâu chuyện kể lại bằng lời của kênh; lời Phật là diễn ý.",
+ "tags": [
+  "chuyện xưa",
+  "kinh trung bộ",
+  "nhẫn nhục",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "sources": [
+  "https://suttacentral.net/mn21/en/sujato"
+ ]
+}

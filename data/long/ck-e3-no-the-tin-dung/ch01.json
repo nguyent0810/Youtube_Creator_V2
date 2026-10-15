@@ -1,0 +1,176 @@
+{
+ "title": "Dòng một: ngày đến hạn",
+ "lines": [
+  {
+   "t": "Dòng đầu tiên là ngày đến hạn thanh toán.",
+   "p": 0.8
+  },
+  "Gắn với nó là một lời hứa bạn hay thấy trong quảng cáo.",
+  {
+   "t": "Miễn lãi tới bốn mươi lăm, hay năm mươi lăm ngày.",
+   "p": 1.0
+  },
+  "Lời hứa ấy là thật. Nhưng có điều kiện.",
+  "Hãy lấy loại năm mươi lăm ngày làm ví dụ.",
+  "Con số ấy gồm hai phần.",
+  {
+   "t": "Ba mươi ngày của một kỳ sao kê. Cộng thêm hai mươi lăm ngày để bạn trả tiền.",
+   "p": 1.0
+  },
+  "Nên nếu bạn quẹt thẻ vào ngày đầu kỳ, bạn có đủ năm mươi lăm ngày.",
+  "Còn nếu quẹt vào ngày cuối kỳ thì sao?",
+  {
+   "t": "Chỉ còn hai mươi lăm ngày.",
+   "p": 1.0
+  },
+  "Và đây là điều kiện quan trọng nhất.",
+  "Bạn chỉ được miễn lãi khi trả đủ toàn bộ số nợ của kỳ ấy, đúng hạn.",
+  {
+   "t": "Trả đủ. Không phải trả một phần.",
+   "p": 1.0
+  },
+  "Người trả đủ mỗi kỳ, thật ra đang mượn tiền miễn phí.",
+  "Với họ, tấm thẻ là một công cụ thanh toán.",
+  "Chuyện chỉ bắt đầu rắc rối ở dòng thứ hai."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "DÒNG MỘT",
+   "title": "NGÀY ĐẾN HẠN",
+   "sub": "“MIỄN LÃI 55 NGÀY” LÀ GÌ?",
+   "vid": "11158789",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "ngày"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "MIỄN LÃI TỚI",
+     "at": [
+      2,
+      "Miễn"
+     ],
+     "sm": true
+    },
+    {
+     "text": "45 – 55 NGÀY",
+     "at": [
+      2,
+      "bốn"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "LỜI HỨA ẤY LÀ THẬT",
+   "sub": "NHƯNG CÓ ĐIỀU KIỆN",
+   "subAt": 3
+  },
+  {
+   "type": "units",
+   "at": 4,
+   "title": "55 NGÀY = 30 NGÀY KỲ SAO KÊ + 25 NGÀY ĐỂ TRẢ",
+   "total": 55,
+   "cols": 11,
+   "lit": 30,
+   "litAt": [
+    6,
+    "Ba"
+   ],
+   "unitLabel": "NGÀY LÀ KỲ SAO KÊ",
+   "label": {
+    "k": "VÍ DỤ LOẠI 55 NGÀY · MỖI THẺ MỘT KHÁC",
+    "v": "",
+    "at": 5
+   }
+  },
+  {
+   "type": "bars",
+   "at": 7,
+   "title": "SỐ NGÀY MIỄN LÃI BẠN THẬT SỰ CÓ",
+   "unit": "VÍ DỤ LOẠI 55 NGÀY",
+   "items": [
+    {
+     "k": "QUẸT THẺ NGÀY ĐẦU KỲ",
+     "v": 55,
+     "lbl": "55 NGÀY",
+     "at": [
+      7,
+      "đủ"
+     ],
+     "acc": true
+    },
+    {
+     "k": "QUẸT THẺ NGÀY CUỐI KỲ",
+     "v": 25,
+     "lbl": "25 NGÀY",
+     "at": [
+      9,
+      "Chỉ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 10,
+   "mythLab": "ĐIỀU KIỆN",
+   "myth": "TRẢ MỘT PHẦN",
+   "truthLab": "PHẢI LÀ",
+   "truth": "TRẢ ĐỦ · ĐÚNG HẠN",
+   "strikeAt": [
+    12,
+    "Không"
+   ],
+   "truthAt": [
+    12,
+    "Trả"
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 13,
+   "vid": "8657613",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "TRẢ ĐỦ MỖI KỲ",
+     "at": 13,
+     "acc": true
+    },
+    {
+     "text": "= mượn tiền miễn phí",
+     "at": [
+      13,
+      "thật"
+     ],
+     "sm": true
+    },
+    {
+     "text": "rắc rối bắt đầu ở dòng thứ hai",
+     "at": 15,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "DÒNG 01",
+  "t": "NGÀY ĐẾN HẠN"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

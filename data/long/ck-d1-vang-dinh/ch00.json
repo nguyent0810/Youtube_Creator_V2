@@ -1,0 +1,240 @@
+{
+ "title": "Hai mươi chín tháng một",
+ "lines": [
+  "Ba, bốn giờ sáng ngày hai mươi chín tháng một năm hai nghìn không trăm hai mươi sáu, phố Trần Nhân Tông ở Hà Nội đã có người xếp hàng chờ mua vàng.",
+  {
+   "t": "Có tiệm treo biển hết hàng. Có nơi chỉ bán ngay cho người mua dưới bốn chỉ, mua nhiều hơn phải lấy phiếu hẹn.",
+   "p": 1.0
+  },
+  "Một giờ hai mươi lăm phút chiều hôm đó, giá bán vàng miếng SJC chạm một trăm chín mươi mốt triệu ba trăm nghìn đồng một lượng.",
+  "Đó là mức cao nhất trong lịch sử, tính tới lúc kênh làm video này.",
+  "Đầu tháng mười, nếu đem lượng vàng ấy bán lại cho tiệm, bạn nhận khoảng một trăm bốn mươi triệu năm trăm nghìn.",
+  {
+   "t": "Mất gần năm mươi mốt triệu đồng mỗi lượng. Hơn một phần tư số tiền.",
+   "p": 1.0
+  },
+  {
+   "t": "Vậy cứ thấy người ta xếp hàng mua vàng là giá sắp đỉnh, đúng không?",
+   "ask": 1
+  },
+  "Nghe rất hợp lý. Nhưng đọc lại báo chí mười lăm năm qua, câu trả lời trung thực là: không hẳn.",
+  {
+   "t": "Và chính chỗ \"không hẳn\" ấy mới là điều đáng học.",
+   "p": 1.0
+  },
+  "Trước khi xem tiếp, bạn thử đoán: mười một lần người Việt đổ xô mua vàng mà báo chí ghi lại, bao nhiêu lần rơi đúng vùng đỉnh?",
+  "Giữ con số ấy trong đầu. Ngay chương sau, mình mở bảng điểm.",
+  "Rồi mình xem vì sao cả người rất tỉnh táo cũng muốn đứng vào hàng.",
+  {
+   "t": "Và người đứng trong hàng trả thêm những gì, kèm năm câu để bạn tự kiểm tra mình.",
+   "p": 1.0
+  },
+  "Đây là Biểu Đồ Biết Nói. Tiền bạc, giải thích bằng dữ liệu.",
+  "Video chỉ nhằm giáo dục, không phải lời khuyên mua hay bán vàng."
+ ],
+ "scenes": [
+  {
+   "type": "date",
+   "vid": "6229548",
+   "illus": "VIDEO MINH HỌA, KHÔNG PHẢI CẢNH Ở VIỆT NAM",
+   "day": "3–4 GIỜ SÁNG · PHỐ TRẦN NHÂN TÔNG, HÀ NỘI",
+   "date": "29.01.2026",
+   "sub": {
+    "text": "VIDEO GIÁO DỤC · KHÔNG PHẢI LỜI KHUYÊN MUA, BÁN VÀNG",
+    "at": [
+     0,
+     "Ba,"
+    ]
+   }
+  },
+  {
+   "type": "broll",
+   "at": 1,
+   "vid": "8849053",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "CÓ TIỆM: HẾT HÀNG",
+     "at": [
+      1,
+      "Có"
+     ]
+    },
+    {
+     "text": "CÓ NƠI TRÊN 4 CHỈ: LẤY PHIẾU HẸN",
+     "at": [
+      1,
+      "Có",
+      1
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "from": 152800000,
+   "to": 191300000,
+   "suffix": " đ",
+   "countAt": [
+    2,
+    "Một"
+   ],
+   "until": [
+    2,
+    "đồng"
+   ],
+   "label": "GIÁ BÁN RA SJC · 13:25 · 29/01/2026",
+   "sub": {
+    "text": "CAO NHẤT LỊCH SỬ · TÍNH TỚI LÚC LÀM VIDEO",
+    "at": [
+     3,
+     "Đó"
+    ]
+   },
+   "srcnote": "Từ 152,8 triệu ngày 01/01/2026 · giá báo chí (webgia, Công Luận)"
+  },
+  {
+   "type": "race",
+   "at": 4,
+   "from": "2026-01-29",
+   "to": "2026-09-30",
+   "series": [
+    {
+     "key": "sjc",
+     "label": "MUA 29/01",
+     "color": "#fbbf24"
+    }
+   ],
+   "source": "Tính từ dữ liệu giá niêm yết SJC (kênh tự tính). Minh hoạ quá khứ, không phải khuyến nghị.",
+   "title": "MUA VÀNG MIẾNG NGÀY 29/01/2026",
+   "range": "29/01 → 30/09/2026 · BÁN LẠI CHO TIỆM",
+   "drawAt": [
+    4,
+    "Đầu"
+   ],
+   "until": [
+    4,
+    "nhận"
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "≈ −51 TRIỆU / LƯỢNG",
+   "hitAt": [
+    5,
+    "Mất"
+   ],
+   "sub": "BÁN LẠI ĐẦU THÁNG 10 (GIÁ MUA VÀO 140,5) · HƠN 1/4 SỐ TIỀN"
+  },
+  {
+   "type": "question",
+   "at": 6,
+   "text": "Cứ thấy xếp hàng mua vàng\nlà giá sắp đỉnh?"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "NGHE RẤT HỢP LÝ",
+     "at": [
+      7,
+      "Nghe"
+     ]
+    },
+    {
+     "text": "NHƯNG ĐỌC LẠI BÁO CHÍ 15 NĂM QUA…",
+     "at": [
+      7,
+      "Nhưng"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": [
+    7,
+    "không"
+   ],
+   "text": "KHÔNG HẲN",
+   "sub": "VÀ CHỖ \"KHÔNG HẲN\" ẤY MỚI ĐÁNG HỌC"
+  },
+  {
+   "type": "question",
+   "at": 9,
+   "text": "11 lần đổ xô mua vàng.\nBao nhiêu lần\nrơi đúng vùng đỉnh?"
+  },
+  {
+   "type": "ledger",
+   "at": 10,
+   "title": "THỬ ĐOÁN TRƯỚC",
+   "rows": [
+    {
+     "k": "?",
+     "v": "SỐ LẦN RƠI ĐÚNG VÙNG ĐỈNH · ĐÁP ÁN Ở CHƯƠNG 1",
+     "at": [
+      10,
+      "Giữ"
+     ]
+    },
+    {
+     "k": "02",
+     "v": "VÌ SAO AI CŨNG MUỐN XẾP HÀNG?",
+     "at": [
+      11,
+      "Rồi"
+     ]
+    },
+    {
+     "k": "03",
+     "v": "TRẢ THÊM GÌ? 5 CÂU TỰ KIỂM",
+     "at": [
+      12,
+      "Và"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "brand",
+   "at": 13,
+   "sub": "TIỀN BẠC · GIẢI THÍCH BẰNG DỮ LIỆU"
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "TÂM LÝ TIỀN BẠC · BÀI 1",
+     "at": [
+      14,
+      "Video"
+     ],
+     "acc": true
+    },
+    {
+     "text": "chỉ nhằm giáo dục · không phải lời khuyên mua hay bán vàng",
+     "at": [
+      14,
+      "Video"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "HÀNG DÀI VÀ ĐỈNH GIÁ"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.07
+ }
+}

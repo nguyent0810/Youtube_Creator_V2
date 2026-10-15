@@ -1,0 +1,176 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "hieu-lam",
+ "hook_type": "nghich-ly",
+ "open_shot": "la-roi",
+ "voice": "Thiện Minh",
+ "music": "arcadia.mp3",
+ "gap": 0.1,
+ "series": "Hiểu đúng #7",
+ "title": "Hiểu đúng #7: Vô thường là bi quan?",
+ "kicker": "HIỂU ĐÚNG #7",
+ "sub": "KINH PHÁP CÚ · KỆ 277",
+ "acc": [
+  "vô",
+  "trân"
+ ],
+ "lines": [
+  "Hiểu vô thường, là chán đời? Không hẳn.",
+  "Kinh Pháp Cú, kệ hai trăm bảy mươi bảy, diễn ý: thấy rõ mọi pháp hữu vi là vô thường, ta nhàm chán khổ. Đó là con đường thanh tịnh.",
+  "Chán cái khổ, không phải chán cuộc sống.",
+  "Hoa nở rồi tàn. Vì vậy, lúc hoa nở càng đáng trân trọng.",
+  "Hôm nay bạn trân trọng điều gì? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "VÔ THƯỜNG = CHÁN ĐỜI?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "không hẳn",
+     "at": [
+      0,
+      "Không"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34806988"
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Kệ 277 (diễn ý)",
+   "nodes": [
+    {
+     "text": "THẤY VÔ THƯỜNG",
+     "x": 0.5,
+     "y": 0.22,
+     "at": [
+      1,
+      "thấy"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "NHÀM CHÁN KHỔ",
+     "x": 0.5,
+     "y": 0.48,
+     "at": [
+      1,
+      "nhàm"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "THANH TỊNH",
+     "x": 0.5,
+     "y": 0.76,
+     "at": [
+      1,
+      "thanh"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      1,
+      "nhàm"
+     ]
+    },
+    {
+     "from": 1,
+     "to": 2,
+     "at": [
+      1,
+      "thanh"
+     ]
+    }
+   ],
+   "note": "DHP 277 · SUTTACENTRAL"
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 0,
+   "suffix": " LẦN CHÁN ĐỜI",
+   "label": "CHỈ CHÁN CÁI KHỔ",
+   "until": [
+    2,
+    "không"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "HOA NỞ RỒI TÀN",
+     "at": [
+      3,
+      "Hoa"
+     ],
+     "acc": true
+    },
+    {
+     "text": "nên càng đáng trân trọng",
+     "at": [
+      3,
+      "Vì"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7311794"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "BẠN TRÂN TRỌNG GÌ?",
+     "at": [
+      4,
+      "Hôm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận nhé",
+     "at": [
+      4,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:28647803"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp273-289/en/sujato"
+ ],
+ "description": "Hiểu đúng #7: Vô thường là bi quan?\n\nNguồn: https://suttacentral.net/dhp273-289/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

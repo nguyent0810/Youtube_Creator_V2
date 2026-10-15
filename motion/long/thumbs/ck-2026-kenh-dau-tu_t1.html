@@ -1,0 +1,25 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#050912}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;color:#fff;
+ background:linear-gradient(rgba(125,211,252,.06) 1px,transparent 1px) 0 0/80px 80px,linear-gradient(90deg,rgba(125,211,252,.06) 1px,transparent 1px) 0 0/80px 80px,radial-gradient(80% 70% at 50% 40%,#16263f 0%,#0a1426 60%,#04080f 100%)}
+.abs{position:absolute}
+.big{position:absolute;font-weight:900;line-height:.95;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.tile{position:absolute;width:320px;height:440px;border-radius:26px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;
+ font-weight:900;box-shadow:0 30px 60px rgba(0,0,0,.6)}
+.tile b{font-size:38px;letter-spacing:.01em;white-space:nowrap}.tile span{font-size:200px;line-height:1}
+.red{background:linear-gradient(160deg,#3b1219,#1c0a0f);border:4px solid #ef4444;color:#fecaca}.red span{color:#f87171}
+.green{background:linear-gradient(160deg,#0f3b25,#08200f);border:6px solid #22c55e;color:#dcfce7;transform:scale(1.12);box-shadow:0 0 80px rgba(34,197,94,.55),0 30px 60px rgba(0,0,0,.6)}.green span{color:#4ade80}
+</style></head><body>
+<!-- T1: 5 ô kênh — 4 đỏ, 1 xanh (sổ tiết kiệm) + "CHỈ 1 KÊNH XANH" -->
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<div class="big" style="left:0;right:0;text-align:center;top:90px;font-size:150px">CHỈ <span style="color:#4ade80">1</span> KÊNH XANH</div>
+<div class="tile red" style="left:70px;top:380px"><b>CHỨNG KHOÁN</b><span>↓</span></div>
+<div class="tile red" style="left:420px;top:380px"><b>VÀNG</b><span>↓</span></div>
+<div class="tile red" style="left:770px;top:380px"><b>BITCOIN</b><span>↓</span></div>
+<div class="tile red" style="left:1120px;top:380px"><b>NHÀ ĐẤT</b><span>↓</span></div>
+<div class="tile green" style="left:1500px;top:380px"><b>TIẾT KIỆM</b><span>↑</span></div>
+<div class="abs" style="left:0;right:0;bottom:60px;text-align:center;font-family:'JetBrains Mono';font-weight:700;font-size:48px;letter-spacing:.2em;color:#fbbf24">NĂM 2026</div>
+</div><script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

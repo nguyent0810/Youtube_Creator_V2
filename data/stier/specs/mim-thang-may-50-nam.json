@@ -1,0 +1,189 @@
+{
+ "theme": "mim",
+ "title": "Thang máy tự động có từ khoảng năm 1900, nhưng 50 năm sau người ta mới dám đi",
+ "description": "Thang máy không người lái có từ khoảng năm 1900, nhưng người ta bước vào, không thấy ai điều khiển, rồi lại bước ra. Phải sau cuộc đình công của người lái thang ở New York năm 1945, khi khoảng một triệu rưỡi nhân viên văn phòng không tới được chỗ làm, ngành thang máy mới dốc sức thuyết phục công chúng. Từ lúc ra đời tới lúc được quen dùng, thang máy tự động mất hơn 50 năm: máy móc không thắng chỉ nhờ giỏi. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (13 phút): https://youtu.be/sP0ch8-NYec (công khai từ 20:00 ngày 19/10).",
+ "tags": [
+  "thang máy tự động",
+  "người lái thang máy",
+  "new york 1945",
+  "ai và việc làm",
+  "tự động hoá",
+  "lịch sử công nghệ",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "AI VÀ VIỆC LÀM",
+ "sub": "THANG MÁY · 1900",
+ "acc": [
+  "ra",
+  "rưỡi",
+  "năm",
+  "giỏi",
+  "tin"
+ ],
+ "lines": [
+  "Thang máy tự động có từ khoảng năm 1900. Nhưng suốt mấy chục năm, không ai dám đi.",
+  "Người ta bước vào, không thấy ai điều khiển, rồi lại bước ra.",
+  "Vẫn phải có một người lái thang đứng trong đó.",
+  "Tới năm 1945, người lái thang ở New York đình công.",
+  "Một triệu rưỡi nhân viên văn phòng, không tới được chỗ làm.",
+  "Sau đó, ngành thang máy mới dốc sức thuyết phục công chúng.",
+  "Tổng cộng hơn năm mươi năm. Máy móc không thắng chỉ nhờ giỏi. Nó còn phải được tin."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CÓ TỪ KHOẢNG NĂM 1900",
+     "at": 0.0
+    },
+    {
+     "text": "KHÔNG AI DÁM ĐI",
+     "at": [
+      0,
+      "không"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:37410328",
+   "veil": 0.55
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Người ta bước vào",
+   "nodes": [
+    {
+     "text": "không thấy ai điều khiển",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      1,
+      "không"
+     ],
+     "shape": "none",
+     "w": 760
+    },
+    {
+     "text": "rồi lại bước ra",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      1,
+      "rồi"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 560
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "VẪN PHẢI CÓ",
+     "at": 2,
+     "sm": true
+    },
+    {
+     "text": "MỘT NGƯỜI LÁI THANG",
+     "at": [
+      2,
+      "một"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:15434928",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 2
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 1500000,
+   "label": "NHÂN VIÊN VĂN PHÒNG KHÔNG TỚI ĐƯỢC CHỖ LÀM",
+   "until": [
+    4,
+    "rưỡi"
+   ],
+   "sub": {
+    "text": "ĐÌNH CÔNG CỦA NGƯỜI LÁI THANG · 1945",
+    "at": [
+     4,
+     "không"
+    ]
+   }
+  },
+  {
+   "type": "timeline",
+   "at": 5,
+   "items": [
+    {
+     "year": "~1900",
+     "text": "thang máy không người lái ra đời",
+     "at": [
+      5,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "year": "1945",
+     "text": "đình công → thuyết phục công chúng",
+     "at": [
+      5,
+      "thuyết"
+     ]
+    },
+    {
+     "year": "> 50 năm",
+     "text": "mới được mọi người quen dùng",
+     "at": [
+      6,
+      "hơn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": [
+    6,
+    "Máy"
+   ],
+   "text": "KHÔNG THẮNG CHỈ NHỜ GIỎI",
+   "sub": "NÓ CÒN PHẢI ĐƯỢC TIN"
+  }
+ ],
+ "sources": [
+  "https://www.imf.org/external/pubs/ft/fandd/2015/03/bessen.htm",
+  "https://www.nber.org/papers/w28061"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "=AI": "ây ai",
+  "york": "Doóc",
+  "new": "Niu"
+ },
+ "imgs": {}
+}

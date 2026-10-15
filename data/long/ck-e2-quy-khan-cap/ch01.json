@@ -1,0 +1,179 @@
+{
+ "title": "Ô thứ nhất: một tháng thiết yếu",
+ "lines": [
+  {
+   "t": "Ô đầu tiên hay bị điền sai nhất.",
+   "p": 0.8
+  },
+  "Nhiều người lấy luôn mức lương của mình.",
+  "Nhưng quỹ khẩn cấp không dùng để sống như bình thường.",
+  {
+   "t": "Nó dùng để sống qua một giai đoạn khó.",
+   "p": 1.0
+  },
+  "Nên con số cần điền là chi tiêu thiết yếu.",
+  "Tiền nhà. Tiền ăn. Điện nước, đi lại, và những khoản nợ phải trả hằng tháng.",
+  {
+   "t": "Cà phê, quần áo mới, du lịch thì không tính.",
+   "p": 1.0
+  },
+  "Với An, lương mười hai triệu, nhưng phần thiết yếu chỉ khoảng tám triệu.",
+  "Tám triệu, chứ không phải mười hai.",
+  {
+   "t": "Chỉ riêng việc điền đúng ô này, đích đến đã gần lại một phần ba.",
+   "p": 1.0
+  },
+  "Để bạn dễ so, đây là một con số thật.",
+  "Theo Cục Thống kê, quý một năm hai nghìn không trăm hai mươi sáu, thu nhập bình quân của người lao động Việt Nam khoảng chín triệu đồng một tháng.",
+  "Nên nếu ô thứ nhất của bạn là năm, sáu hay bảy triệu, bạn không hề lẻ loi.",
+  "Một mẹo nhỏ để điền ô này.",
+  "Mở sao kê tài khoản của ba tháng gần nhất, đánh dấu những khoản mà nếu mất việc, bạn vẫn phải trả.",
+  "Cộng lại, rồi chia ba.",
+  "Con số ấy thật hơn mọi ước đoán.",
+  "Giờ sang ô thứ hai."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "Ô THỨ NHẤT",
+   "title": "MỘT THÁNG\nTHIẾT YẾU",
+   "sub": "Ô HAY BỊ ĐIỀN SAI NHẤT",
+   "vid": "7490451",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Ô"
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 1,
+   "mythLab": "NHIỀU NGƯỜI ĐIỀN",
+   "myth": "MỨC LƯƠNG",
+   "truthLab": "CON SỐ CẦN ĐIỀN",
+   "truth": "CHI TIÊU THIẾT YẾU",
+   "strikeAt": [
+    2,
+    "Nhưng"
+   ],
+   "truthAt": [
+    4,
+    "chi"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "THIẾT YẾU GỒM",
+   "rows": [
+    {
+     "k": "✓",
+     "v": "TIỀN NHÀ · TIỀN ĂN",
+     "at": [
+      5,
+      "Tiền"
+     ]
+    },
+    {
+     "k": "✓",
+     "v": "ĐIỆN NƯỚC · ĐI LẠI · NỢ HẰNG THÁNG",
+     "at": [
+      5,
+      "Điện"
+     ]
+    }
+   ],
+   "total": {
+    "k": "KHÔNG TÍNH",
+    "v": "CÀ PHÊ · QUẦN ÁO MỚI · DU LỊCH",
+    "at": 6
+   }
+  },
+  {
+   "type": "bars",
+   "at": 7,
+   "title": "MỘT THÁNG CỦA AN (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · AN LÀ NHÂN VẬT GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "LƯƠNG",
+     "v": 12,
+     "lbl": "12",
+     "at": [
+      7,
+      "lương"
+     ]
+    },
+    {
+     "k": "PHẦN THIẾT YẾU",
+     "v": 8,
+     "lbl": "≈ 8",
+     "at": [
+      7,
+      "nhưng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 9,
+   "text": "GẦN LẠI MỘT PHẦN BA",
+   "sub": "CHỈ NHỜ ĐIỀN ĐÚNG Ô THỨ NHẤT",
+   "subAt": 9
+  },
+  {
+   "type": "source",
+   "at": 10,
+   "source": "CỤC THỐNG KÊ · QUÝ I NĂM 2026",
+   "ref": "THU NHẬP BÌNH QUÂN NGƯỜI LAO ĐỘNG",
+   "snippet": "khoảng [[9 triệu đồng một tháng]]",
+   "hlAt": [
+    11,
+    "khoảng"
+   ],
+   "seal": "SỐ THẬT",
+   "sealAt": [
+    12,
+    "bạn"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 13,
+   "title": "MẸO ĐIỀN Ô THỨ NHẤT",
+   "rows": [
+    {
+     "k": "1",
+     "v": "XEM SAO KÊ BA THÁNG GẦN NHẤT",
+     "at": 13
+    },
+    {
+     "k": "2",
+     "v": "ĐÁNH DẤU KHOẢN VẪN PHẢI TRẢ DÙ MẤT VIỆC",
+     "at": 14
+    },
+    {
+     "k": "3",
+     "v": "CỘNG LẠI · CHIA BA",
+     "at": 15
+    }
+   ],
+   "total": {
+    "k": "KẾT QUẢ",
+    "v": "THẬT HƠN MỌI ƯỚC ĐOÁN",
+    "at": 16
+   }
+  }
+ ],
+ "hud": {
+  "k": "Ô 01",
+  "t": "MỘT THÁNG THIẾT YẾU"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}
