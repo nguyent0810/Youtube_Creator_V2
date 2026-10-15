@@ -1,0 +1,171 @@
+{
+ "theme": "mim",
+ "title": "Thắng Kasparov xong, Deep Blue bị tháo dỡ và không bao giờ thi đấu nữa: chuyện sau trận năm 1997",
+ "description": "Sau trận năm 1997, Kasparov nói thẳng những nghi ngờ của mình và đòi xem nhật ký hoạt động của cỗ máy; IBM từ chối đưa ngay, về sau công bố các tệp nhật ký trên mạng. Kasparov đòi đấu lại; IBM từ chối, và Deep Blue được tháo dỡ, không thi đấu nữa. Một phần cỗ máy nay được trưng bày trong bảo tàng (Wikipedia). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/TG7ZShLM4LA (công khai từ 20:00 ngày 12/11).",
+ "tags": [
+  "deep blue tháo dỡ",
+  "ibm 1997",
+  "trận đấu người máy",
+  "trí tuệ nhân tạo",
+  "lịch sử máy tính",
+  "mind in the machine"
+ ],
+ "sub": "SAU 1997",
+ "acc": [
+  "tháo",
+  "dỡ",
+  "nhật",
+  "ký",
+  "bảo"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Thắng nhà vô địch thế giới xong, cỗ máy bị tháo dỡ, và không bao giờ thi đấu nữa.",
+  "Năm 1997, sau khi thua Deep Blue, Kasparov nói thẳng những nghi ngờ của mình.",
+  "Ông đòi xem nhật ký hoạt động của cỗ máy, từng nước nó đã tính.",
+  "IBM từ chối đưa ngay. Về sau, họ công bố các tệp nhật ký ấy trên mạng.",
+  "Kasparov đòi đấu lại. IBM từ chối.",
+  "Deep Blue được tháo dỡ. Ngày nay, một phần của nó nằm trong bảo tàng.",
+  "Với IBM, đó là một dự án đã xong. Với nhiều người, đó là một câu hỏi còn bỏ ngỏ."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "THẮNG XONG · THÁO DỠ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "không bao giờ thi đấu nữa",
+     "at": [
+      0,
+      "không"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:4841217",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "KASPAROV NGHI NGỜ",
+     "at": [
+      1,
+      "Kasparov"
+     ],
+     "acc": true
+    },
+    {
+     "text": "sau trận năm 1997",
+     "at": 1,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8758291",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "KASPAROV ĐÒI",
+   "cards": [
+    {
+     "k": "XEM",
+     "v": "NHẬT KÝ CỖ MÁY",
+     "at": 2
+    },
+    {
+     "k": "IBM",
+     "v": "CÔNG BỐ VỀ SAU",
+     "at": [
+      3,
+      "Về"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "ĐẤU LẠI? IBM TỪ CHỐI",
+   "sub": "DEEP BLUE KHÔNG THI ĐẤU NỮA"
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 1,
+   "to": 1,
+   "suffix": " PHẦN CỖ MÁY",
+   "label": "NAY TRONG BẢO TÀNG",
+   "sub": {
+    "text": "SAU KHI ĐƯỢC THÁO DỠ",
+    "at": [
+     5,
+     "Ngày"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Hai cách nhìn",
+   "nodes": [
+    {
+     "text": "IBM: dự án đã xong",
+     "x": 0.5,
+     "y": 0.3,
+     "at": 6,
+     "shape": "none",
+     "w": 660
+    },
+    {
+     "text": "nhiều người: còn bỏ ngỏ",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "nhiều"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 740
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Deep_Blue_versus_Garry_Kasparov",
+  "https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "deep": "Đíp",
+  "blue": "Blu",
+  "ibm": "ai bi em",
+  "=IBM": "ai bi em",
+  "kasparov": "Cát-xpa-rốp"
+ },
+ "imgs": {}
+}

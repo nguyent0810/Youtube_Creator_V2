@@ -1,0 +1,172 @@
+{
+ "theme": "mim",
+ "title": "Từ thắng Jeopardy tới bán Watson Health năm 2022: giấc mơ bác sĩ máy của IBM khép lại thế nào",
+ "description": "Sau Jeopardy (2011), IBM đưa Watson vào y tế. Những năm sau, mảng này không đạt điều IBM hứa hẹn. Ngày 21/01/2022, IBM bán phần lớn tài sản dữ liệu và phân tích của Watson Health cho một quỹ đầu tư; giá không công bố, Bloomberg đưa tin hơn một tỷ đô la. IBM vẫn giữ công nghệ AI cốt lõi mang tên Watson (Fierce Healthcare). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/Mt5hYcQxH50 (công khai từ 20:00 ngày 19/11).",
+ "tags": [
+  "watson health",
+  "ibm bán watson",
+  "trận đấu người máy",
+  "trí tuệ nhân tạo",
+  "lịch sử máy tính",
+  "mind in the machine"
+ ],
+ "sub": "01/2022",
+ "acc": [
+  "bán",
+  "tỷ",
+  "mười",
+  "khép",
+  "thật"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Mười một năm, từ sân khấu truyền hình tới một thương vụ bán tài sản.",
+  "Năm 2011, Watson của IBM thắng trò đố vui Jeopardy.",
+  "Sau đó, IBM đưa nó vào y tế, với giấc mơ về một bác sĩ máy.",
+  "Những năm sau, mảng y tế của Watson không đạt được những gì IBM hứa hẹn.",
+  "Tháng 1 năm 2022, IBM bán phần lớn tài sản dữ liệu và phân tích của Watson Health cho một quỹ đầu tư. Theo Bloomberg, giá hơn một tỷ đô la.",
+  "IBM vẫn giữ công nghệ trí tuệ nhân tạo cốt lõi mang tên Watson.",
+  "Khoảng cách giữa một màn trình diễn và một công việc thật, đã dài hơn mười năm."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "11 NĂM",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "từ sân khấu tới thương vụ bán tài sản",
+     "at": [
+      0,
+      "từ"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7005884",
+   "veil": 0.55
+  },
+  {
+   "type": "timeline",
+   "at": 1,
+   "items": [
+    {
+     "year": "2011",
+     "text": "thắng Jeopardy",
+     "at": [
+      1,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "year": "SAU ĐÓ",
+     "text": "vào y tế · bác sĩ máy",
+     "at": 2
+    },
+    {
+     "year": "2022",
+     "text": "bán Watson Health",
+     "at": 4
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "KHÔNG ĐẠT LỜI HỨA",
+     "at": 3,
+     "acc": true
+    },
+    {
+     "text": "mảng y tế của Watson",
+     "at": [
+      3,
+      "mảng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:30365276",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 3
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 1,
+   "to": 1,
+   "prefix": "HƠN ",
+   "suffix": " TỶ ĐÔ LA",
+   "label": "GIÁ BÁN · THEO BLOOMBERG",
+   "sub": {
+    "text": "IBM KHÔNG CÔNG BỐ GIÁ",
+    "at": [
+     4,
+     "Theo"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "IBM VẪN GIỮ",
+   "cards": [
+    {
+     "k": "CÔNG NGHỆ AI",
+     "v": "CỐT LÕI",
+     "at": 5
+    },
+    {
+     "k": "CÁI TÊN",
+     "v": "WATSON",
+     "at": [
+      5,
+      "Watson"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "TRÌNH DIỄN ≠ CÔNG VIỆC THẬT",
+   "sub": "KHOẢNG CÁCH HƠN MƯỜI NĂM"
+  }
+ ],
+ "sources": [
+  "https://www.fiercehealthcare.com/tech/ibm-sells-watson-health-assets-to-investment-firm-francisco-partners",
+  "https://en.wikipedia.org/wiki/IBM_Watson"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "ibm": "ai bi em",
+  "=IBM": "ai bi em",
+  "watson": "Oát-xần",
+  "jeopardy": "Gie-pơ-đi",
+  "bloomberg": "Blum-bớc",
+  "=Y": "i dài"
+ },
+ "imgs": {}
+}

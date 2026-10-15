@@ -1,0 +1,29 @@
+{
+  "bgm": "equatorial_complex.mp3",
+  "broll_queries": [],
+  "channel": "MIM",
+  "created_at": "2026-10-15T01:56:06Z",
+  "description": "Libratus không học bằng cách xem người chơi. Nó tự chơi với chính mình trên siêu máy tính, và sau mỗi ván tự hỏi: giá như chọn cách khác thì được thêm bao nhiêu? Con số ấy gọi là sự hối tiếc (regret). Lần sau, nó chọn nhiều hơn những cách nó hối tiếc đã bỏ qua; lặp lại rất nhiều lần, cách chơi cân bằng tới mức đối thủ khó khai thác (CMU).\n\nVideo nói về nghiên cứu trí tuệ nhân tạo; không hướng dẫn chơi bài, không cổ vũ cờ bạc. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/Mz0HwBBSBbg (công khai từ 20:00 ngày 26/11).\n\nNguồn:\nhttps://www.cmu.edu/news/stories/archives/2017/january/AI-beats-poker-pros.html\n\nVideo: Pexels — cottonbro studio\nVideo: Pexels — Anna Shvets\nMusic: \"Equatorial Complex\" by Kevin MacLeod (incompetech.com). Licensed under Creative Commons: By Attribution 4.0 — http://creativecommons.org/licenses/by/4.0/\n\n#AI #CôngNghệ #MindInTheMachine",
+  "kind": "short",
+  "publish_at": "2026-11-09T10:00:00Z",
+  "render": {
+    "engine": "casefile",
+    "spec": "data/stier/specs/mim-hoc-bang-hoi-tiec.json"
+  },
+  "schema_version": 1,
+  "script": "Một cỗ máy học chơi bài bằng sự hối tiếc. Đó là tên thật của thuật toán. Libratus không học bằng cách xem người khác chơi. Nó tự chơi với chính mình, vô số ván. Sau mỗi ván, nó tự hỏi: giá như mình chọn cách khác, thì được thêm bao nhiêu? Con số được thêm ấy, gọi là sự hối tiếc. Lần sau, nó chọn nhiều hơn những cách mà nó hối tiếc vì đã bỏ qua. Lặp lại rất nhiều lần, cách chơi cân bằng tới mức đối thủ khó tìm chỗ nào để khai thác. Giống con người học từ sai lầm. Chỉ khác, máy được sai vô số lần trước khi ngồi vào bàn.",
+  "slug": "mim-hoc-bang-hoi-tiec",
+  "source_note": "https://www.cmu.edu/news/stories/archives/2017/january/AI-beats-poker-pros.html",
+  "tags": [
+    "regret minimization",
+    "tự học",
+    "ai chơi poker",
+    "libratus",
+    "trí tuệ nhân tạo",
+    "người và máy",
+    "mind in the machine"
+  ],
+  "thumbnail_text": "",
+  "title": "Cỗ máy học poker bằng “sự hối tiếc”: thuật toán giảm thiểu hối tiếc của Libratus",
+  "voice": "Thanh Bình"
+}

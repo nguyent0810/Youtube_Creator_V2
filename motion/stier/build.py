@@ -635,6 +635,11 @@ def build(slug: str, render: bool = True, draft: bool = False) -> Path:
     _tl += [f"{s.get('prefix')}{s.get('to')}" for s in spec.get("scenes", []) if spec.get("theme") in ("mim", "ck") and s.get("type") == "counter" and "~" in str(s.get("prefix", ""))]
     if _tl:
         raise SystemExit(f"{slug}: dấu ~ trước số dễ đọc thành dấu trừ: {_tl} -- dùng ≈")
+    # retro 15/10/2026: counter hiện năm "2007" thành "2.007" (dấu phân cách nghìn) -> năm dùng slam/kinetic/timeline.
+    _yr = [s["to"] for s in spec.get("scenes", []) if spec.get("theme") in ("mim", "ck") and s.get("type") == "counter"
+           and float(s["to"]).is_integer() and 1500 <= s["to"] <= 2100 and not str(s.get("suffix") or "").strip()]
+    if _yr:
+        raise SystemExit(f"{slug}: counter hiện năm {_yr} sẽ thành \"2.007\" -- dùng slam/kinetic/timeline")
     th = themes.theme(spec)
     if spec.get("theme") == "bud":   # BUD: luật đa dạng (format/hook/cảnh mở/nhạc/giọng) -- bud_variety.py
         import bud_variety
