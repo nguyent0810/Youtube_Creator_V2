@@ -538,7 +538,7 @@ def plan(spec: dict, lines: list[dict], dur: float) -> list[dict]:
     if long_sub:
         raise SystemExit("dòng phụ dài quá 52 ký tự (rút gọn hoặc đưa vào mô tả): " + "; ".join(long_sub))
     bad_pre = [f"cảnh {i}: prefix {r['prefix']!r}" for i, r in enumerate(sc)
-               if r["type"] == "counter" and any(ch.isdigit() or ch == "<" for ch in str(r.get("prefix") or "")) and r.get("from", 0) != r["to"]]   # "<": "< 9 GIÂY" giữa chừng là sai chiều
+               if r["type"] == "counter" and any(ch.isdigit() or ch in ("<>≈~" if spec.get("theme") in ("mim", "ck") else "<") for ch in str(r.get("prefix") or "")) and r.get("from", 0) != r["to"]]   # "<": "< 9 GIÂY" giữa chừng là sai chiều; ">"/"≈": "> 1.478 QUYẾT ĐỊNH" giữa chừng (retro 15/10)
     if bad_pre:
         raise SystemExit("counter có chữ số trong prefix: số trung gian sẽ đọc như dữ kiện thật (dùng kinetic/cards3d): " + "; ".join(bad_pre))
     # Cảnh chart cần khối CSS ".ch*" của theme (theme-ck.css, theme-mim.css). Theme chưa có khối ấy -> cột và chữ dồn lên
@@ -629,6 +629,12 @@ def build(slug: str, render: bool = True, draft: bool = False) -> Path:
         raise SystemExit(f"{slug}: {nw} từ — ngoài 55-135")
     if spec.get("rules") == 2 and lines_txt[-1].rstrip().endswith("?"):   # retro 5: luật chỉ nằm trong tài liệu nên đã lọt 1 Short
         raise SystemExit(f"{slug}: Short rules-2 không kết bằng câu hỏi: {lines_txt[-1]!r}")
+    # retro 15/10/2026: "~7,5% MỖI NĂM" trên khung dọc đọc thành "-7,5%" (giá nhà phải TĂNG) -> xấp xỉ trước phần trăm dùng "≈".
+    # mở rộng: "~120" trên nhãn biểu đồ cũng đọc thành "-120" -> cấm "~" trước chữ số ở mọi chữ hiển thị, kể cả prefix counter.
+    _tl = [m for m in re.findall(r"~\s*\d[\d.,]*", json.dumps(spec.get("scenes", []), ensure_ascii=False))] if spec.get("theme") in ("mim", "ck") else []
+    _tl += [f"{s.get('prefix')}{s.get('to')}" for s in spec.get("scenes", []) if spec.get("theme") in ("mim", "ck") and s.get("type") == "counter" and "~" in str(s.get("prefix", ""))]
+    if _tl:
+        raise SystemExit(f"{slug}: dấu ~ trước số dễ đọc thành dấu trừ: {_tl} -- dùng ≈")
     th = themes.theme(spec)
     if spec.get("theme") == "bud":   # BUD: luật đa dạng (format/hook/cảnh mở/nhạc/giọng) -- bud_variety.py
         import bud_variety

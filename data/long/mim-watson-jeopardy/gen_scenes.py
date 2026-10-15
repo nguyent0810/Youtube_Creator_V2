@@ -164,7 +164,7 @@ CH["ch14"] = {"hud": {"k": "CHƯƠNG 12", "t": "SÁU MƯƠI HAI TRIỆU ĐÔ LA"
     {"type": "source", "at": 1, "source": "KIỂM TOÁN ĐẠI HỌC TEXAS · ĐẦU 2017", "ref": "DỰ ÁN Ở TRUNG TÂM UNG THƯ", "snippet": "dự án [[đã bị tạm dừng]] · chi phí khoảng 62 triệu đô la",
      "hlAt": [1, "tạm"], "seal": "KHOẢNG 62 TRIỆU ĐÔ LA", "sealAt": 2},
     {"type": "ledger", "at": 3, "title": "BẢN KIỂM TOÁN NÓI VỀ", "rows": [{"k": "CHỦ YẾU", "v": "HỢP ĐỒNG · CHI TIÊU · QUY TRÌNH", "at": 3}, {"k": "MỘT VẤN ĐỀ", "v": "HỒ SƠ BỆNH ÁN KHÔNG KHỚP", "at": 5}]},
-    {"type": "ledger", "at": 6, "title": "CẦN NÓI CHO CÔNG BẰNG", "rows": [{"k": "KIỂM TOÁN", "v": "KHÔNG XÉT NĂNG LỰC KHOA HỌC", "at": 7}, {"k": "IBM", "v": "TRÙNG CHUYÊN GIA ~90% SỐ LẦN", "at": 8}]},
+    {"type": "ledger", "at": 6, "title": "CẦN NÓI CHO CÔNG BẰNG", "rows": [{"k": "KIỂM TOÁN", "v": "KHÔNG XÉT NĂNG LỰC KHOA HỌC", "at": 7}, {"k": "IBM", "v": "TRÙNG CHUYÊN GIA ≈90% SỐ LẦN", "at": 8}]},
     {"type": "myth", "at": 9, "mythLab": "THẮNG", "myth": "MỘT TRÒ ĐỐ VUI", "truthLab": "KHÁC HẲN", "truth": "LÀM VIỆC TRONG BỆNH VIỆN", "strikeAt": [11, "Làm"], "truthAt": [11, "bệnh"]},
 ]}
 

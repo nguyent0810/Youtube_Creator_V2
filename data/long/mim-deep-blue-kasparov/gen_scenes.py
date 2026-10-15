@@ -84,7 +84,7 @@ CH["ch03"] = {"hud": {"k": "CHƯƠNG 03", "t": "CÂU NÓI THỨ NHẤT"}, "bgm":
 
 CH["ch04"] = {"hud": {"k": "CHƯƠNG 04", "t": "PHILADELPHIA · 1996"}, "bgm": {"mood": "mystery", "gain": 0.11}, "scenes": [
     {"type": "chapter", "no": "4", "k": "CHƯƠNG BỐN", "title": "PHILADELPHIA,\nVÁN ĐẦU TIÊN", "sub": "THÁNG 2 NĂM 1996", "vid": "6599643", "illus": VM, "titleAt": [0, "Tháng"]},
-    {"type": "ledger", "at": 1, "title": "TRẬN ĐẤU SÁU VÁN · 1996", "rows": [{"k": "THỂ THỨC", "v": "CHUẨN · 2 GIỜ CHO 40 NƯỚC ĐẦU", "at": 1}, {"k": "DEEP BLUE", "v": "~100 TRIỆU THẾ CỜ/GIÂY", "at": 2}],
+    {"type": "ledger", "at": 1, "title": "TRẬN ĐẤU SÁU VÁN · 1996", "rows": [{"k": "THỂ THỨC", "v": "CHUẨN · 2 GIỜ CHO 40 NƯỚC ĐẦU", "at": 1}, {"k": "DEEP BLUE", "v": "≈100 TRIỆU THẾ CỜ/GIÂY", "at": 2}],
      "total": {"k": "AI CŨNG NGHĨ", "v": "KASPAROV SẼ THẮNG", "at": 4}},
     {"type": "broll", "at": 5, "vid": "4954316", "ms": 2, "veil": 0.55, "illus": VM,
      "kin": [{"text": "KỶ NIỆM 50 NĂM MÁY TÍNH HIỆN ĐẠI", "at": 6, "acc": True}, {"text": "1946 · ENIAC ra mắt ở Philadelphia", "at": 7, "sm": True},
@@ -100,7 +100,7 @@ CH["ch04"] = {"hud": {"k": "CHƯƠNG 04", "t": "PHILADELPHIA · 1996"}, "bgm": {
 CH["ch05"] = {"hud": {"k": "CHƯƠNG 05", "t": "CỖ MÁY THỨ HAI"}, "bgm": {"mood": "mystery", "gain": 0.11}, "scenes": [
     {"type": "chapter", "no": "5", "k": "CHƯƠNG NĂM", "title": "CỖ MÁY THỨ HAI", "sub": "15 THÁNG SAU", "vid": "6804656", "illus": VM, "titleAt": [0, "Mười"]},
     {"type": "bars", "at": 1, "title": "THẾ CỜ DEEP BLUE DUYỆT MỖI GIÂY (TRIỆU)", "unit": "THEO TƯ LIỆU VỀ TRẬN ĐẤU",
-     "items": [{"k": "1996", "v": 100, "lbl": "~100", "at": [2, "gấp"]}, {"k": "1997", "v": 200, "lbl": "~200", "at": [2, "hai"], "acc": True}]},
+     "items": [{"k": "1996", "v": 100, "lbl": "≈100", "at": [2, "gấp"]}, {"k": "1997", "v": 200, "lbl": "≈200", "at": [2, "hai"], "acc": True}]},
     {"type": "counter", "at": 3, "from": 200, "to": 200, "suffix": " TRIỆU", "label": "THẾ CỜ · CHỈ TRONG MỘT GIÂY", "sub": {"text": "MỘT KỲ THỦ CHỈ CÂN NHẮC KỸ VÀI NƯỚC ĐÁNG XEM", "at": 5}},
     {"type": "kinetic", "at": 6, "items": [{"text": "ĐẠI KIỆN TƯỚNG GIÚP CỖ MÁY", "at": 6, "acc": True}, {"text": "chấm điểm thế cờ · chuẩn bị khai cuộc", "at": [6, "chấm"], "sm": True}]},
     {"type": "ledger", "at": 7, "title": "TÁI ĐẤU · NEW YORK · 05.1997", "rows": [{"k": "SỐ VÁN", "v": "SÁU", "at": [8, "Sáu"]}, {"k": "NGƯỜI THẮNG", "v": "700.000 ĐÔ LA", "at": [8, "bảy"]},
@@ -171,7 +171,7 @@ CH["ch10"] = {"hud": {"k": "CHƯƠNG 10", "t": "SAU TRẬN"}, "bgm": {"mood": "m
 CH["ch11"] = {"hud": {"k": "CHƯƠNG 11", "t": "MÁY CÓ “NGHĨ” KHÔNG?"}, "bgm": {"mood": "calm", "gain": 0.11}, "scenes": [
     {"type": "chapter", "no": "11", "k": "CHƯƠNG MƯỜI MỘT", "title": "MÁY CÓ “NGHĨ”\nKHÔNG?", "sub": "BÊN TRONG MỘT NƯỚC ĐI", "vid": "6804656", "ms": 12, "illus": VM, "titleAt": [0, "Câu"]},
     {"type": "ledger", "at": 1, "title": "DEEP BLUE LÀ GÌ", "rows": [{"k": "1", "v": "TÌM KIẾM CỰC NHANH", "at": 1}, {"k": "2", "v": "CÁCH CHẤM ĐIỂM DO NGƯỜI VIẾT", "at": [1, "kèm"]}],
-     "total": {"k": "MỖI GIÂY", "v": "~200 TRIỆU THẾ CỜ", "at": 2}},
+     "total": {"k": "MỖI GIÂY", "v": "≈200 TRIỆU THẾ CỜ", "at": 2}},
     {"type": "chess", "at": 3, "fen": START, "label": {"k": "THẾ BAN ĐẦU · MINH HOẠ CÁCH MÁY “NHÌN TRƯỚC”", "v": "XÉT NƯỚC MÌNH → NƯỚC ĐÁP → NƯỚC ĐÁP LẠI …", "at": 4}},
     {"type": "bars", "at": 6, "title": "DEEP BLUE NHÌN TRƯỚC BAO NHIÊU NƯỚC", "unit": "THEO TƯ LIỆU VỀ DEEP BLUE",
      "items": [{"k": "THƯỜNG", "v": 8, "lbl": "6 – 8", "at": [6, "sáu"]}, {"k": "CÓ THẾ CỜ", "v": 20, "lbl": "> 20", "at": [6, "hơn"], "acc": True}]},
@@ -187,7 +187,7 @@ CH["ch12"] = {"hud": {"k": "CHƯƠNG 12", "t": "MỘT TRÒ CHƠI ĐÃ CÓ LỜI 
     {"type": "chapter", "no": "12", "k": "CHƯƠNG MƯỜI HAI", "title": "MỘT TRÒ CHƠI\nĐÃ CÓ LỜI GIẢI", "sub": "CỜ VUA THÌ CHƯA", "vid": "8888818", "ms": 2, "illus": VM, "titleAt": [0, "Có"]},
     {"type": "question", "at": 1, "text": "Nếu cả hai chơi hoàn hảo,\nván cờ vua kết thúc thế nào?"},
     {"type": "bars", "at": 4, "title": "SỐ CHỮ SỐ CỦA HAI CON SỐ", "unit": "ƯỚC TÍNH CỦA SHANNON · ƯỚC TÍNH THƯỜNG DÙNG",
-     "items": [{"k": "SỐ VÁN CỜ VUA CÓ THỂ XẢY RA", "v": 120, "lbl": "~120", "at": [4, "một"], "acc": True}, {"k": "SỐ NGUYÊN TỬ TRONG VŨ TRỤ QUAN SÁT ĐƯỢC", "v": 80, "lbl": "~80", "at": [5, "tám"]}]},
+     "items": [{"k": "SỐ VÁN CỜ VUA CÓ THỂ XẢY RA", "v": 120, "lbl": "≈120", "at": [4, "một"], "acc": True}, {"k": "SỐ NGUYÊN TỬ TRONG VŨ TRỤ QUAN SÁT ĐƯỢC", "v": 80, "lbl": "≈80", "at": [5, "tám"]}]},
     {"type": "slam", "at": 6, "text": "CỜ VUA CHƯA ĐƯỢC GIẢI", "sub": "KHÔNG AI BIẾT KẾT QUẢ CỦA VÁN CỜ HOÀN HẢO", "subAt": 6},
     {"type": "source", "at": 7, "source": "TẠP CHÍ SCIENCE · 2007 · ĐẠI HỌC ALBERTA", "ref": "CỜ ĐAM ĐÃ ĐƯỢC GIẢI", "snippet": "nếu cả hai chơi hoàn hảo, [[cờ đam luôn hoà]]",
      "hlAt": [10, "cờ"], "seal": "MẤT 18 NĂM", "sealAt": 11},
@@ -233,7 +233,7 @@ CH["ch16"] = {"hud": {"k": "CHƯƠNG 16", "t": "MỘT CÁCH NGHĨ KHÁC"}, "bgm"
     {"type": "bars", "at": 6, "title": "100 VÁN VỚI PHẦN MỀM MẠNH NHẤT", "unit": "SAU KHOẢNG 4 GIỜ TỰ HỌC · THEO DEEPMIND",
      "items": [{"k": "THẮNG", "v": 28, "lbl": "28", "at": [7, "hai"], "acc": True}, {"k": "HOÀ", "v": 72, "lbl": "72", "at": [7, "hoà"]}, {"k": "THUA", "v": 0.5, "lbl": "0", "at": [7, "không"]}]},
     {"type": "bars", "at": 8, "title": "THẾ CỜ XEM MỖI GIÂY", "unit": "THEO TƯ LIỆU VỀ HAI CỖ MÁY",
-     "items": [{"k": "DEEP BLUE · 1997", "v": 200000, "lbl": "~200 TRIỆU", "at": [9, None, 0, 0.05]}, {"k": "ALPHAZERO · 2017", "v": 80, "lbl": "~80 NGHÌN", "at": [9, "tám"], "acc": True}]},
+     "items": [{"k": "DEEP BLUE · 1997", "v": 200000, "lbl": "≈200 TRIỆU", "at": [9, None, 0, 0.05]}, {"k": "ALPHAZERO · 2017", "v": 80, "lbl": "≈80 NGHÌN", "at": [9, "tám"], "acc": True}]},
     {"type": "myth", "at": 11, "mythLab": "DEEP BLUE THẮNG NHỜ", "myth": "NHÌN RẤT RỘNG", "truthLab": "ALPHAZERO THẮNG NHỜ", "truth": "BIẾT NHÌN VÀO ĐÂU", "strikeAt": [12, "AlphaZero"], "truthAt": [12, "biết"]},
     {"type": "kinetic", "at": 14, "items": [{"text": "KHÔNG PHẢI ĐƯỢC DẠY NHƯ NGƯỜI", "at": 16, "sm": True}, {"text": "MÀ TỰ TÌM RA", "at": 17, "acc": True}]},
     {"type": "question", "at": 19, "text": "Còn con người thì sao?"},

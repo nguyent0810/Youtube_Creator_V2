@@ -60,7 +60,7 @@ def lint(topic: str) -> tuple[list[str], list[str]]:
             moving = s.get("from", 0) != s["to"]
             if moving and float(s["to"]).is_integer() and 1500 <= s["to"] <= 2100 and not s.get("suffix"):
                 err.append(f"{name} cảnh {i}: counter đếm tới năm {int(s['to'])} (đặt from = to hoặc dùng kinetic/date)")
-            if moving and re.search(r"[\d<]", str(s.get("prefix") or "")):
+            if moving and re.search(r"[\d<>≈~]", str(s.get("prefix") or "")):
                 err.append(f"{name} cảnh {i}: counter prefix {s['prefix']!r} mà số còn chạy")
     return err, warn
 

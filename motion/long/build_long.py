@@ -810,9 +810,12 @@ def do_html(topic, only=None):
         if over:
             raise SystemExit(f"{name}: label đè nhãn trục biểu đồ (chuyển sang \"unit\"): " + "; ".join(over))
         pre = [f"counter#{k}: prefix {sc['prefix']!r}" for k, sc in enumerate(scenes)
-               if sc["type"] == "counter" and any(c.isdigit() for c in str(sc.get("prefix") or "")) and sc.get("from", 0) != sc["to"]]
-        if pre:
-            raise SystemExit(f"{name}: counter có chữ số trong prefix (đặt \"from\" = \"to\" hoặc dùng kinetic): " + "; ".join(pre))
+               if sc["type"] == "counter" and any(c.isdigit() or c in "<>≈~" for c in str(sc.get("prefix") or "")) and sc.get("from", 0) != sc["to"]]
+        if pre:   # retro 15/10/2026: thêm "<>≈~" cho khớp gate Shorts ("> 1.478 QUYẾT ĐỊNH" giữa chừng)
+            raise SystemExit(f"{name}: counter có chữ số/dấu so sánh trong prefix (đặt \"from\" = \"to\" hoặc dùng kinetic): " + "; ".join(pre))
+        tl = re.findall(r"~\s*\d[\d.,]*", json.dumps(scenes, ensure_ascii=False))
+        if tl:    # retro 15/10/2026: "~120" trên màn hình đọc thành "-120"
+            raise SystemExit(f"{name}: dấu ~ trước số dễ đọc thành dấu trừ (dùng ≈): " + ", ".join(tl))
         wide = ledger_overflow(scenes, THEME["name"])
         if wide:
             raise SystemExit(f"{name}: dòng sổ dài hơn thẻ (rút gọn khoá/giá trị): " + "; ".join(wide))

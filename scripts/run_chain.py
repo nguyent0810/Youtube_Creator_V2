@@ -138,6 +138,10 @@ def run(script: Path, log: Path | None = None, base: Path | None = None, multi: 
         snap = base / f"{name}.{time.strftime('%Y%m%d-%H%M%S')}.sh"
         shutil.copyfile(script, snap)
         who.write_text(f"pid {os.getpid()}, bản chụp {snap.name}, từ {time.strftime('%H:%M:%S')}", encoding="utf-8")
+        # retro 15/10/2026: log ghi nối giữ "=== xong" của lượt trước -> chuỗi khác `until grep -q "=== xong" log` qua ngay
+        # khi lượt này vừa bắt đầu. Mỗi lượt một log mới; lượt trước chuyển sang <log>.prev.
+        if log and log.exists() and log.stat().st_size:
+            os.replace(log, log.with_name(log.name + ".prev"))
         out = open(log, "a", encoding="utf-8") if log else None
         try:
             return subprocess.run([bash(), snap.as_posix()], stdout=out, stderr=subprocess.STDOUT if out else None).returncode

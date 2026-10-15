@@ -21,7 +21,11 @@
   const sv = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
   let seed = C.seed || 1995; const rnd = () => { seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; };
   const norm = (w) => w.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "");
-  const fsz = (text, max, width = 1700, k = 0.6) => Math.min(max, Math.floor(width / (Math.max(1, [...text].length) * k)));
+  // Chữ IN HOA đậm (900) rộng ~0.7 em/ký tự, không phải 0.56: myth "MỘT CHIẾN THẮNG ĐỂ QUẢNG BÁ" tràn mép phải (retro 14/10/2026).
+  const fsz = (text, max, width = 1700, k = 0.6) => {
+    const cs = [...String(text)], up = cs.filter(c => c !== c.toLowerCase()).length, lo = cs.filter(c => c !== c.toUpperCase()).length;
+    return Math.min(max, Math.floor(width / (Math.max(1, cs.length) * (up > lo ? Math.max(k, 0.7) : k))));
+  };
   const esc = (t) => String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;");
   const rich = (t) => esc(t).replace(/\*(.+?)\*/g, "<b>$1</b>");
   const IM = (k) => { const m = C.imgs[k]; if (!m) throw new Error("thiếu ảnh " + k); return m; };

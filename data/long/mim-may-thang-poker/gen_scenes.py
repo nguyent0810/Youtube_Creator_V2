@@ -62,8 +62,8 @@ CH["ch04"] = {"hud": {"k": "CHƯƠNG 04", "t": "MỘT CON SỐ 160 CHỮ SỐ"},
     {"type": "chapter", "no": "4", "k": "CHƯƠNG 04", "title": "MỘT CON SỐ\nCÓ 160 CHỮ SỐ", "sub": "POKER KHÔNG GIỚI HẠN", "vid": "7608213", "illus": VM, "titleAt": [0, "Trong"]},
     {"type": "kinetic", "at": 1, "items": [{"text": "10 · 11 · 12 · … · TẤT CẢ", "at": 1, "acc": True}, {"text": "mỗi mức cược mở ra một nhánh mới", "at": 2, "sm": True}]},
     {"type": "bars", "at": 3, "title": "SỐ CHỮ SỐ CỦA HAI CON SỐ", "unit": "ƯỚC TÍNH CỦA NHÓM LIBRATUS · ƯỚC TÍNH THƯỜNG DÙNG",
-     "items": [{"k": "TÌNH HUỐNG RA QUYẾT ĐỊNH · POKER KHÔNG GIỚI HẠN TAY ĐÔI", "v": 161, "lbl": "~161", "at": [3, "mười"], "acc": True},
-               {"k": "NGUYÊN TỬ TRONG VŨ TRỤ QUAN SÁT ĐƯỢC", "v": 80, "lbl": "~80", "at": 5}]},
+     "items": [{"k": "TÌNH HUỐNG RA QUYẾT ĐỊNH · POKER KHÔNG GIỚI HẠN TAY ĐÔI", "v": 161, "lbl": "≈161", "at": [3, "mười"], "acc": True},
+               {"k": "NGUYÊN TỬ TRONG VŨ TRỤ QUAN SÁT ĐƯỢC", "v": 80, "lbl": "≈80", "at": 5}]},
     {"type": "ledger", "at": 6, "title": "CÁCH LÀM KHÉO", "rows": [{"k": "1", "v": "GỘP TÌNH HUỐNG GẦN GIỐNG NHAU", "at": 8}, {"k": "2", "v": "TÌM CÁCH CHƠI CHO BẢN THU NHỎ", "at": 10},
                                                                  {"k": "3", "v": "CHƠI THẬT: TÍNH LẠI CHO ĐÚNG", "at": 11}]},
     {"type": "slam", "at": 12, "text": "THU NHỎ MÀ KHÔNG MẤT", "sub": "ĐIỀU QUAN TRỌNG", "subAt": 12},
@@ -124,7 +124,7 @@ CH["ch10"] = {"hud": {"k": "CHƯƠNG 10", "t": "LÀM SAO LOẠI BỎ MAY MẮN?"
 
 CH["ch11"] = {"hud": {"k": "CHƯƠNG 11", "t": "MỘT CỖ MÁY KHÁC Ở CANADA"}, "bgm": {"mood": "calm", "gain": 0.11}, "scenes": [
     {"type": "chapter", "no": "11", "k": "CHƯƠNG 11", "title": "MỘT CỖ MÁY KHÁC\nỞ CANADA", "sub": "DEEPSTACK", "vid": "6346228", "illus": VM, "titleAt": [0, "Cùng"]},
-    {"type": "ledger", "at": 2, "title": "THỬ NGHIỆM CỦA DEEPSTACK", "rows": [{"k": "NGƯỜI CHƠI", "v": "33 · TỪ 17 QUỐC GIA", "at": 2}, {"k": "MỖI TRẬN", "v": "3.000 VÁN · ~4 TUẦN", "at": 3},
+    {"type": "ledger", "at": 2, "title": "THỬ NGHIỆM CỦA DEEPSTACK", "rows": [{"k": "NGƯỜI CHƠI", "v": "33 · TỪ 17 QUỐC GIA", "at": 2}, {"k": "MỖI TRẬN", "v": "3.000 VÁN · ≈4 TUẦN", "at": 3},
                                                                               {"k": "CHƠI HẾT TRẬN", "v": "11 NGƯỜI", "at": 4}], "total": {"k": "KẾT QUẢ", "v": "THẮNG CẢ 11", "at": 5}},
     {"type": "source", "at": 6, "source": "TẠP CHÍ SCIENCE · 03.2017", "ref": "DEEPSTACK", "snippet": "mỗi lượt [[tính lại cách chơi]] cho đúng tình huống đang gặp", "hlAt": [9, "tính"], "seal": "ĐẠI HỌC ALBERTA", "sealAt": 10},
     {"type": "myth", "at": 11, "mythLab": "HAI CỖ MÁY", "myth": "HAI CÁCH LÀM", "truthLab": "MỘT KẾT LUẬN", "truth": "POKER TAY ĐÔI: NGƯỜI ĐÃ THUA", "strikeAt": [12, "Ở"], "truthAt": [12, "con"]},
@@ -206,7 +206,7 @@ SPEC = {
                    "bàn sáu người với chi phí huấn luyện dưới 150 đô la, vì sao máy không cần đọc vị ai, và sợi chỉ nối từ bàn poker tới những mô hình AI "
                    "“suy nghĩ trước khi trả lời”. Video về nghiên cứu AI, không hướng dẫn chơi bài, không cổ vũ cờ bạc.",
         "more": ["Các con số thắng thua là “phỉnh”, đơn vị tính điểm của thử nghiệm, không phải tiền thật. Cảm nhận của người chơi ở đầu video là diễn ý "
-                 "theo báo chí. Số tình huống của poker không giới hạn (~10^161) là ước tính của nhóm làm ra Libratus. Video làm nền không phải hình ảnh "
+                 "theo báo chí. Số tình huống của poker không giới hạn (≈10^161) là ước tính của nhóm làm ra Libratus. Video làm nền không phải hình ảnh "
                  "trận đấu. Video không hướng dẫn chơi bài và không cổ vũ cờ bạc."],
         "chapter_titles": {"ch00": "Mở đầu: hai mươi ngày ở Pittsburgh", "ch01": "Vì sao poker khác cờ", "ch02": "Lá bài úp 1: những gì bạn không được thấy",
                            "ch03": "Phòng thí nghiệm ở Canada: Polaris, Cepheus", "ch04": "Một con số có 160 chữ số", "ch05": "Lần thua năm 2015",
