@@ -139,7 +139,8 @@ CH["ch09"] = {"hud": {"k": "CHƯƠNG 09", "t": "PHẦN THƯỞNG ĐẾN MUỘN"}
     {"type": "myth", "at": 2, "mythLab": "ATARI", "myth": "ĐIỂM TĂNG NGAY", "truthLab": "STARCRAFT", "truth": "BIẾT THẮNG THUA Ở CUỐI VÁN", "strikeAt": 4, "truthAt": 5},
     {"type": "question", "at": 6, "text": "Hành động nào\nđã dẫn tới chiến thắng?"},
     {"type": "ledger", "at": 7, "title": "BÀI TOÁN PHÂN BỔ CÔNG LAO", "rows": [{"k": "VÍ DỤ", "v": "ĐƯỜNG CHUYỀN PHÚT 10", "at": 8}, {"k": "VÀ", "v": "BÀN THẮNG PHÚT 80", "at": [8, None, 0, 0.6]}]},
-    {"type": "timeline", "at": 9, "items": [{"year": "1", "text": "bắt chước người: điểm xuất phát hợp lý", "at": 9}, {"year": "2", "text": "200 năm giải đấu: tìm điều dẫn tới thắng", "at": 11}]},
+    {"type": "kinetic", "at": 9, "items": [{"text": "VÌ SAO PHẢI HỌC NGƯỜI TRƯỚC", "at": 9, "sm": True}, {"text": "BẮT CHƯỚC TRƯỚC · TỰ CHƠI SAU", "at": [9, "bắt"], "acc": True}]},
+    {"type": "timeline", "at": 10, "items": [{"year": "1", "text": "bắt chước người: điểm xuất phát hợp lý", "at": 10}, {"year": "2", "text": "200 năm giải đấu: tìm điều dẫn tới thắng", "at": 11}]},
     {"type": "slam", "at": 12, "text": "ĐẾN MUỘN", "sub": "NHƯNG VỚI ĐỦ NHIỀU VÁN · VẪN ĐẾN", "subAt": 12},
 ]}
 
