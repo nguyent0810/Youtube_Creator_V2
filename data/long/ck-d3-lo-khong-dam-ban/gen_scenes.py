@@ -26,7 +26,7 @@ CH = {}
 CH["ch00"] = {"hud": {"k": "MỞ ĐẦU", "t": "HAI CỔ PHIẾU, MỘT CUỘC GỌI"}, "bgm": {"mood": "curious", "gain": 0.10}, "scenes": [
     {"type": "ledger", "title": "TÀI KHOẢN CỦA BẠN · MỖI MÃ MUA 50 TRIỆU", "srcnote": H1,
      "rows": [{"k": "CỔ PHIẾU A · +20%", "v": "60 TRIỆU", "at": [1, None, 0, 0.05]}, {"k": "CỔ PHIẾU B · −20%", "v": "40 TRIỆU", "at": [2, None, 0, 0.05]}]},
-    {"type": "broll", "at": 3, "vid": PHONE, "veil": 0.55, "illus": VM,
+    {"type": "broll", "at": 3, "vid": PHONE, "veil": 0.55, "illus": "VÍ DỤ GIẢ ĐỊNH · " + VM,
      "kin": [{"text": "MỘT CUỘC GỌI", "at": 3, "sm": True}, {"text": "NHÀ CẦN 40 TRIỆU", "at": [3, "Nhà"], "acc": True}, {"text": "bán cổ phiếu nào?", "at": 4, "sm": True}]},
     {"type": "ledger", "at": 5, "title": "PHẦN LỚN MỌI NGƯỜI CHỌN BÁN A", "rows": [{"k": "BÁN A", "v": "CHỐT LÃI · DỄ CHỊU", "at": 6}, {"k": "BÁN B", "v": "LỖ THÀNH THẬT · KHÓ CHỊU", "at": 7}]},
     {"type": "question", "at": 8, "text": "Bán cái đang lãi.\nCó gì sai đâu?"},
@@ -132,7 +132,7 @@ SPEC = {
                  "📐 CÁCH KÊNH TÍNH: VN-Index đóng cửa: đỉnh 06/01/2022 1.528,57; đáy 15/11/2022 911,90 (−40,3%); từ đáy cần +67,6%; vượt lại đỉnh lần "
                  "đầu 25/07/2025 (≈ 42,6 tháng sau đỉnh). Toán hoà vốn: lãi cần = lỗ ÷ (1 − lỗ). Hai cổ phiếu A, B là ví dụ giả định. Nghiên cứu: "
                  "Kahneman & Tversky (1979); Tversky & Kahneman (1992), hệ số ngại thua lỗ ≈ 2,25; Shefrin & Statman (1985); Odean (1998), Journal of "
-                 "Finance: tỷ lệ chốt lãi ≈ 14,8% so với cắt lỗ ≈ 9,8% (ngoài tháng Mười Hai)."],
+                 "Finance: tỷ lệ chốt lãi ≈ 14,8% so với cắt lỗ ≈ 9,8% (tính cả năm; riêng tháng Mười Hai thì ngược lại)."],
         "chapter_titles": {"ch00": "Mở đầu: hai cổ phiếu, một cuộc gọi", "ch01": "Chiếc cân lệch: mất đau gấp đôi được", "ch02": "Mười nghìn tài khoản: nghiên cứu Odean",
                            "ch03": "Phép toán của hố sâu: VN-Index 2022", "ch04": "Mỏ neo giá mua", "ch05": "Khi giữ lại là có lý do",
                            "ch06": "Khi nào những điều này không đúng với bạn"},

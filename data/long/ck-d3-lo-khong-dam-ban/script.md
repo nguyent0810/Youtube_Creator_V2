@@ -61,7 +61,7 @@ Họ gọi nó là hiệu ứng phân bổ: bán cổ phiếu lãi quá sớm, v
 Năm một nghìn chín trăm chín mươi tám, nhà kinh tế Terrance Odean kiểm tra điều ấy bằng dữ liệu thật.
 Ông xem giao dịch của mười nghìn tài khoản ở một công ty môi giới tại Mỹ, trong bảy năm. ‖
 Mỗi khi một nhà đầu tư bán ra, ông đếm xem trong danh mục của họ hôm ấy, bao nhiêu khoản lãi được chốt, và bao nhiêu khoản lỗ được cắt.
-Kết quả, trong phần lớn các tháng của năm: khoảng mười bốn phẩy tám phần trăm số khoản lãi được bán ra.
+Kết quả, tính chung cả năm: khoảng mười bốn phẩy tám phần trăm số khoản lãi được bán ra.
 Còn khoản lỗ, chỉ khoảng chín phẩy tám phần trăm. ‖
 Tức là một khoản đang lãi có khả năng bị bán cao hơn khoảng một lần rưỡi so với một khoản đang lỗ.
 Đúng như cách phần lớn chúng ta trả lời câu hỏi ở đầu video. ‖
@@ -155,6 +155,6 @@ từ đáy cần +67,6% · vượt lại đỉnh lần đầu 25/07/2025 (1.531,
   cứu khác thường quanh 2 → lời đọc nói "thường quanh mức gấp đôi").
 - Shefrin & Statman (1985), "The Disposition to Sell Winners Too Early and Ride Losers Too Long", *Journal of Finance* 40(3).
 - Odean (1998), "Are Investors Reluctant to Realize Their Losses?", *Journal of Finance* 53(5): 10.000 tài khoản một công ty môi giới chiết khấu ở Mỹ,
-  1987–1993; ngoài tháng Mười Hai PGR ≈ 14,8%, PLR ≈ 9,8% (≈ 1,5 lần → lời đọc "trong phần lớn các tháng của năm"); không giải thích được bằng cân bằng
+  1987–1993; cả năm PGR ≈ 14,8%, PLR ≈ 9,8% (≈ 1,5 lần; riêng tháng Mười Hai thì ngược lại); không giải thích được bằng cân bằng
   danh mục hay tránh phí; cổ phiếu lãi đã bán về sau không kém cổ phiếu lỗ giữ lại (faculty.haas.berkeley.edu/odean; Wikipedia *Disposition effect*).
 **Không nói:** mã cổ phiếu; "nên cắt lỗ ở bao nhiêu phần trăm"; con số lợi suất chênh lệch cụ thể trong nghiên cứu Odean (chưa đối chiếu toàn văn).

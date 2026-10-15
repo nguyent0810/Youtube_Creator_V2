@@ -48,7 +48,7 @@ CH["ch01"] = {"hud": {"k": "CHƯƠNG 01", "t": "BẢY TRĂM THÀNH TÁM TRĂM"},
     {"type": "ledger", "at": 13, "title": "LĂN BÁNH · XE VÍ DỤ", "srcnote": HX,
      "rows": [{"k": "GIÁ XE", "v": "700", "at": [13, None, 0, 0.05]}, {"k": "TRƯỚC BẠ + BIỂN + KHÁC", "v": "84 + 14 + 2", "at": [13, "bảy"]}],
      "total": {"k": "LĂN BÁNH (TRIỆU)", "v": "800", "at": [13, "tám"]}},
-    {"type": "counter", "at": 14, "from": 0, "to": 100, "suffix": " TRIỆU", "until": 15, "label": "ĐỒNG HỒ · KHOẢN KHÔNG MUA THÊM ĐƯỢC GÌ", "sub": {"text": "VÀ KHÔNG AI TRẢ LẠI KHI BÁN XE", "at": 15}},
+    {"type": "counter", "at": 14, "from": 0, "to": 100, "suffix": " TRIỆU", "until": 15, "label": "ĐỒNG HỒ · KHOẢN KHÔNG MUA THÊM ĐƯỢC GÌ", "sub": {"text": "VÍ DỤ GIẢ ĐỊNH · KHÔNG AI TRẢ LẠI KHI BÁN XE", "at": 15}},
 ]}
 
 CH["ch02"] = {"hud": {"k": "CHƯƠNG 02", "t": "TIỀN NUÔI XE"}, "bgm": {"mood": "curious", "gain": 0.11}, "scenes": [
@@ -57,7 +57,7 @@ CH["ch02"] = {"hud": {"k": "CHƯƠNG 02", "t": "TIỀN NUÔI XE"}, "bgm": {"mood
      "rows": [{"k": "PHÍ ĐƯỜNG BỘ", "v": "130 NGHÌN/THÁNG", "at": 2}, {"k": "BẢO HIỂM TNDS", "v": "437 NGHÌN/NĂM CHƯA THUẾ", "at": 3}],
      "total": {"k": "CỘNG LẠI", "v": "< 200 NGHÌN/THÁNG", "at": 4}},
     {"type": "kinetic", "at": 5, "items": [{"text": "KHOẢN LỚN NẰM Ở CHỖ KHÁC", "at": 5, "acc": True}, {"text": "và tuỳ cách bạn dùng xe", "at": [5, "và"], "sm": True}]},
-    {"type": "broll", "at": 7, "vid": "5982899", "veil": 0.55, "illus": VM,
+    {"type": "broll", "at": 7, "vid": "5982899", "veil": 0.55, "illus": "VÍ DỤ GIẢ ĐỊNH · " + VM,
      "kin": [{"text": "GỬI XE · 1,5 TRIỆU/THÁNG", "at": 7, "sm": True}, {"text": "12.000 KM · 7 LÍT/100 KM · 24.000 Đ/LÍT", "at": 8, "sm": True},
              {"text": "≈ 1,7 TRIỆU TIỀN XĂNG MỖI THÁNG", "at": 9, "acc": True}]},
     {"type": "kinetic", "at": 10, "items": [{"text": "CẦU ĐƯỜNG · RỬA XE · GỬI XE KHI ĐI CHƠI", "at": 10, "sm": True}, {"text": "những khoản nhỏ ít ai ghi lại", "at": [10, "những"], "acc": True}]},
@@ -65,7 +65,7 @@ CH["ch02"] = {"hud": {"k": "CHƯƠNG 02", "t": "TIỀN NUÔI XE"}, "bgm": {"mood
      "items": [{"k": "XĂNG", "v": 1.68, "lbl": "1,7", "at": [11, None, 0, 0.05]}, {"k": "GỬI XE", "v": 1.5, "lbl": "1,5", "at": [11, None, 0, 0.3]},
                {"k": "BẢO HIỂM VẬT CHẤT", "v": 0.875, "lbl": "≈ 0,9", "at": [12, "bảo"]}, {"k": "BẢO DƯỠNG", "v": 0.5, "lbl": "0,5", "at": [11, "sáu"]},
                {"k": "PHÍ + BẢO HIỂM BẮT BUỘC", "v": 0.17, "lbl": "0,2", "at": [12, "thêm"]}]},
-    {"type": "counter", "at": 13, "from": 4.7, "to": 4.7, "suffix": " TRIỆU/THÁNG", "label": "ĐỒNG HỒ · TIỀN NUÔI XE NĂM ĐẦU", "sub": {"text": "ĐÃ NHIỀU HƠN 4 TRIỆU TIỀN XE CÔNG NGHỆ", "at": 14}},
+    {"type": "counter", "at": 13, "from": 4.7, "to": 4.7, "suffix": " TRIỆU/THÁNG", "label": "ĐỒNG HỒ · TIỀN NUÔI XE NĂM ĐẦU", "sub": {"text": "VÍ DỤ GIẢ ĐỊNH · HƠN 4 TRIỆU TIỀN XE CÔNG NGHỆ", "at": 14}},
     {"type": "question", "at": 15, "text": "Nhưng chiếc xe\nvẫn là của mình mà?"},
 ]}
 
@@ -76,12 +76,12 @@ CH["ch03"] = {"hud": {"k": "CHƯƠNG 03", "t": "KHOẢN KHÔNG AI GỬI HOÁ Đ�
                                           {"text": "giá xe cũ tuỳ dòng xe · tình trạng · thị trường", "at": 4, "sm": True}]},
     {"type": "bars", "at": 6, "title": "CHIẾC XE SAU 5 NĂM (TRIỆU ĐỒNG)", "unit": H1 + " · BÁN LẠI 55% GIÁ BAN ĐẦU",
      "items": [{"k": "MUA MỚI", "v": 700, "lbl": "700", "at": [6, None, 0, 0.05]}, {"k": "BÁN LẠI", "v": 385, "lbl": "385", "at": [7, "ba"]}, {"k": "MẤT GIÁ", "v": 315, "lbl": "315", "at": [8, "ba"], "acc": True}]},
-    {"type": "counter", "at": 9, "from": 5.25, "to": 5.25, "suffix": " TRIỆU/THÁNG", "label": "TIỀN MẤT GIÁ · CHIA CHO 60 THÁNG", "sub": {"text": H1, "at": 9}},
+    {"type": "counter", "at": 9, "from": 5.2, "to": 5.2, "prefix": "≈ ", "suffix": " TRIỆU/THÁNG", "label": "TIỀN MẤT GIÁ · CHIA CHO 60 THÁNG", "sub": {"text": H1, "at": 9}},
     {"type": "kinetic", "at": 10, "items": [{"text": "CHO AI ĐÓ THUÊ XE VỚI GIÁ ẤY", "at": [10, "nếu"], "sm": True}, {"text": "CHỈ VỪA ĐỦ BÙ PHẦN MẤT GIÁ", "at": [10, "tiền"], "acc": True}]},
     {"type": "ledger", "at": 11, "title": "ĐỒNG HỒ ĐANG CHỈ · MỖI THÁNG", "srcnote": HX,
      "rows": [{"k": "TIỀN NUÔI XE", "v": "≈ 4,7 TRIỆU", "at": [12, "Tiền"]}, {"k": "TIỀN MẤT GIÁ", "v": "≈ 5,2 TRIỆU", "at": [12, "mất"]}],
      "total": {"k": "CỘNG", "v": "GẦN 10 TRIỆU", "at": 13}},
-    {"type": "counter", "at": 14, "from": 11.5, "to": 11.5, "suffix": " TRIỆU/THÁNG", "label": "TRẢ THẲNG · CHI RÒNG 5 NĂM ≈ 689 TRIỆU", "sub": {"text": "GỒM CẢ 100 TRIỆU LĂN BÁNH · KÊNH TỰ TÍNH", "at": 15}},
+    {"type": "counter", "at": 14, "from": 11.5, "to": 11.5, "suffix": " TRIỆU/THÁNG", "label": "TRẢ THẲNG · CHI RÒNG 5 NĂM ≈ 689 TRIỆU", "sub": {"text": "VÍ DỤ GIẢ ĐỊNH · GỒM 100 TRIỆU LĂN BÁNH", "at": 15}},
     {"type": "bars", "at": 17, "title": "MỖI THÁNG (TRIỆU ĐỒNG)", "unit": H1,
      "items": [{"k": "XE CÔNG NGHỆ", "v": 4, "lbl": "4", "at": [17, "bốn"]}, {"k": "TRẢ THẲNG", "v": 11.5, "lbl": "≈ 11,5", "at": [17, "Gần"], "acc": True}]},
 ]}
@@ -101,7 +101,7 @@ CH["ch04"] = {"hud": {"k": "CHƯƠNG 04", "t": "TRẢ GÓP: THÊM MỘT CHIẾC 
     {"type": "counter", "at": 13, "from": 0, "to": 184, "suffix": " TRIỆU", "until": [13, "một"], "label": "TIỀN LÃI 5 NĂM ĐẦU", "sub": {"text": "CẢ 7 NĂM ≈ 203 TRIỆU · " + H1, "at": 14}},
     {"type": "bars", "at": 15, "title": "CHI RÒNG 5 NĂM (TRIỆU ĐỒNG)", "unit": "KÊNH TỰ TÍNH · " + H1,
      "items": [{"k": "TRẢ THẲNG", "v": 689, "lbl": "689", "at": [15, None, 0, 0.05]}, {"k": "TRẢ GÓP", "v": 873, "lbl": "873", "at": [15, "tám"], "acc": True}]},
-    {"type": "counter", "at": 16, "from": 14.5, "to": 14.5, "suffix": " TRIỆU/THÁNG", "label": "ĐỒNG HỒ · NGƯỜI TRẢ GÓP", "sub": {"text": "CHƯA TRỪ LÃI GỬI CỦA PHẦN GIỮ LẠI", "at": 17}},
+    {"type": "counter", "at": 16, "from": 14.5, "to": 14.5, "suffix": " TRIỆU/THÁNG", "label": "ĐỒNG HỒ · NGƯỜI TRẢ GÓP", "sub": {"text": "VÍ DỤ GIẢ ĐỊNH · CHƯA TRỪ LÃI GỬI PHẦN GIỮ LẠI", "at": 17}},
     {"type": "myth", "at": 18, "mythLab": "TRẢ GÓP KHÔNG LÀM", "myth": "CHIẾC XE ĐẮT HƠN", "truthLab": "NÓ LÀM", "truth": "VIỆC CÓ XE ĐẮT HƠN", "strikeAt": [19, "Nó"], "truthAt": [19, "việc"]},
 ]}
 

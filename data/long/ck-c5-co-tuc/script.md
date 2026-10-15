@@ -87,10 +87,10 @@ Bạn mua ở bốn mươi nghìn, cộng phí giao dịch ví dụ không phẩ
 Cổ tức một nghìn đồng mỗi cổ phiếu, nhưng thuế thu nhập cá nhân năm phần trăm được khấu trừ trước khi trả.
 Bạn thực nhận chín trăm năm mươi nghìn. ‖
 Sáng ngày không hưởng quyền, giá tham chiếu là ba mươi chín nghìn.
-Nếu bạn bán đúng giá ấy, trừ phí bán và thuế bán ví dụ, bạn thu về khoảng ba mươi tám triệu tám trăm bốn mươi tư nghìn.
+Cổ phiếu mua hôm trước, hai ngày làm việc sau mới về tài khoản; giả sử khi ấy bạn bán đúng ba mươi chín nghìn, trừ phí bán và thuế bán ví dụ, bạn thu về khoảng ba mươi tám triệu tám trăm bốn mươi tư nghìn.
 Cộng tiền cổ tức, rồi trừ tiền đã bỏ ra.
 Kết quả: lỗ khoảng ba trăm hai mươi sáu nghìn đồng. ‖
-HỎI: Nhưng nếu hôm ấy giá tăng lại thì sao?
+HỎI: Nhưng nếu lúc ấy giá tăng lại thì sao?
 Thì bạn lời, nhưng là nhờ giá tăng, chứ không phải nhờ cổ tức.
 Và giá cũng có thể giảm thêm, chẳng ai hứa điều gì. ‖
 Còn một chi tiết nữa: tiền cổ tức thường về tài khoản sau ngày đăng ký cuối cùng vài tuần, có khi vài tháng.

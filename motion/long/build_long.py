@@ -537,6 +537,19 @@ def ledger_overflow(scenes, theme) -> list[str]:
     return out
 
 
+# Trang của công ty chứng khoán / ngân hàng / ví: không dẫn làm nguồn trên kênh CK (retro 15/10/2026: C5 dẫn dsc.com.vn).
+CK_BRAND_DOMAINS = ("dsc.com.vn", "ssi.com.vn", "vndirect", "vps.com.vn", "tcbs", "hsc.com.vn", "mbs.com.vn", "vcbs", "bsc.com.vn",
+                    "fpts", "kbsec", "kbsv", "mirae", "shs.com.vn", "techcombank", "vietcombank", "vietinbank",
+                    "bidv", "agribank", "acb.com.vn", "vpbank", "mbbank", "tpbank", "sacombank", "hdbank", "momo", "zalopay")
+
+
+def ck_source_brands(spec) -> list[str]:
+    if (spec.get("channel") or "") != "CK":
+        return []
+    srcs = (spec.get("youtube") or {}).get("sources") or spec.get("sources") or []
+    return [u for u in srcs if any(d in u.lower() for d in CK_BRAND_DOMAINS)]
+
+
 def bars_collide(scenes) -> list[str]:
     """Tiêu đề biểu đồ (.bch .t 44px, trái) và chú thích (.bch .u 22px mono +.18em, phải) cùng một hàng 1620px, không xuống
     dòng -> dài là đè nhau. Retro 15/10/2026: B4 ch02, MIM khuôn mặt ch06 đè chữ; soi khung hình mới thấy."""
@@ -765,6 +778,9 @@ def do_html(topic, only=None):
     imgs = {}
     if beat2_advice(spec):
         print(f"  ! WARNING {beat2_advice(spec)}", flush=True)
+    bad_src = ck_source_brands(spec)
+    if bad_src:
+        raise SystemExit("CK: nguồn trong mô tả là trang của công ty chứng khoán/ngân hàng (luật kênh: không tên thương hiệu): " + ", ".join(bad_src))
     variety.resolve_bgm(topic, spec, chs, od)   # bgm {"mood": ...} -> file cụ thể, tối thiểu trùng với video gần đây (retro 3 mục 9)
     look = variety.look(spec.get("look"))
     for key, file in spec.get("imgs", {}).items():

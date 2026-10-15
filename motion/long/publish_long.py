@@ -126,6 +126,12 @@ def main():
         missing = preflight(od, thumb)
         if missing:      # upload là bước KHÔNG rút lại được: thiếu gì thì dừng TRƯỚC, không đăng nửa vời
             raise SystemExit(f"preflight: thiếu {', '.join(missing)} trong {od} — chưa upload gì")
+        qa = od / "qa_ok"      # retro 15/10/2026: qa_ok đánh dấu tay, không gắn với file -> có thể đăng bản đã đổi sau QA
+        if qa.exists():
+            import hashlib
+            h = hashlib.sha256((od / "final.mp4").read_bytes()).hexdigest()
+            if qa.read_text(encoding="utf-8").strip() != h:
+                raise SystemExit(f"qa_ok không khớp final.mp4 hiện tại (đã dựng lại sau QA?) — QA lại rồi: python scripts/qa_mark.py {topic}")
     b = long_bundle(topic, ch, publish_at, sd, od)
     with store.connect() as conn:
         register(conn, b, res, od / "final.mp4", Channel.open(ch, conn))

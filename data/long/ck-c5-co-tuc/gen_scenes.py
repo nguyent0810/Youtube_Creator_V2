@@ -71,8 +71,8 @@ CH["ch03"] = {"hud": {"k": "CHƯƠNG 03", "t": "MUA ĐỂ ĂN CỔ TỨC"}, "bgm
     {"type": "ledger", "at": 2, "title": "1.000 CỔ PHIẾU · TỪNG BƯỚC (Đ)", "srcnote": H1 + " · PHÍ 0,3% MỖI CHIỀU · THUẾ BÁN 0,1%",
      "rows": [{"k": "MUA 40.000 + PHÍ", "v": "− 40.120.000", "at": 3}, {"k": "CỔ TỨC SAU THUẾ 5%", "v": "+ 950.000", "at": 5}, {"k": "BÁN 39.000 − PHÍ, THUẾ", "v": "+ 38.844.000", "at": 7}],
      "total": {"k": "KẾT QUẢ", "v": "− 326.000", "at": 8}},
-    {"type": "counter", "at": 9, "from": 326, "to": 326, "prefix": "− ", "suffix": " NGHÌN Đ", "label": "LỖ · KHI BÁN ĐÚNG GIÁ THAM CHIẾU", "sub": {"text": "KÊNH TỰ TÍNH · " + H1, "at": 9}},
-    {"type": "question", "at": 10, "text": "Nếu hôm ấy giá tăng lại?"},
+    {"type": "counter", "at": 9, "from": 326, "to": 326, "prefix": "− ", "suffix": " NGHÌN Đ", "label": "LỖ · NẾU BÁN Ở 39.000 KHI CỔ PHIẾU VỀ", "sub": {"text": "KÊNH TỰ TÍNH · " + H1, "at": 9}},
+    {"type": "question", "at": 10, "text": "Nếu lúc ấy giá tăng lại?"},
     {"type": "myth", "at": 11, "mythLab": "LỜI NHỜ", "myth": "CỔ TỨC", "truthLab": "THẬT RA NHỜ", "truth": "GIÁ TĂNG", "strikeAt": [11, "lời"], "truthAt": [11, "nhờ"]},
     {"type": "kinetic", "at": 12, "items": [{"text": "GIÁ CŨNG CÓ THỂ GIẢM THÊM", "at": 12, "acc": True}, {"text": "tiền cổ tức về sau vài tuần, có khi vài tháng", "at": 13, "sm": True}]},
     {"type": "slam", "at": 15, "text": "KHÔNG PHẢI QUÀ MIỄN PHÍ", "sub": "TIỀN CỦA BẠN · TỪ TÚI NÀY SANG TÚI KIA · ĐÃ TRỪ THUẾ"},
@@ -132,13 +132,12 @@ SPEC = {
         "more": [Y4["more"][0],
                  "📐 CÁCH KÊNH TÍNH: VÍ DỤ GIẢ ĐỊNH: mệnh giá 10.000 đ; cổ tức tiền 10% = 1.000 đ/cp; thuế TNCN 5% → thực nhận 950 đ; giá 40.000 đ → tỷ "
                  "suất 2,5%. Ngày không hưởng quyền: giá tham chiếu 40.000 − 1.000 = 39.000. “Mua để ăn cổ tức” 1.000 cp, phí 0,3% mỗi chiều, thuế bán "
-                 "0,1%, bán đúng giá tham chiếu: −326.000 đ. Cổ tức cổ phiếu 20%: 1.000 → 1.200 cp, giá 40.000 ÷ 1,2 ≈ 33.333, tổng vẫn ≈ 40 triệu. "
+                 "0,1%, bán khi cổ phiếu về tài khoản (T+2), giả sử giá vẫn 39.000: −326.000 đ. Cổ tức cổ phiếu 20%: 1.000 → 1.200 cp, giá 40.000 ÷ 1,2 ≈ 33.333, tổng vẫn ≈ 40 triệu. "
                  "Mức phí là ví dụ, mỗi công ty chứng khoán một khác; ngày chốt quyền đọc trong thông báo của từng doanh nghiệp."],
         "chapter_titles": {"ch00": "Mở đầu: một tờ thông báo, ba cụm chữ", "ch01": "Cổ tức 10% là 10% của cái gì?", "ch02": "Ngày giá tự giảm: ngày không hưởng quyền",
                            "ch03": "Mua để ăn cổ tức: phép tính 1.000 cổ phiếu", "ch04": "Cổ tức bằng cổ phiếu", "ch05": "Vậy cổ tức có nghĩa lý gì?",
                            "ch06": "Khi nào phép tính này không đúng với bạn"},
-        "sources": ["https://www.dsc.com.vn/kien-thuc/co-tuc-la-gi", "https://www.dsc.com.vn/kien-thuc/gia-tham-chieu-la-gi",
-                    "https://vnexpress.net/gia-tham-chieu-4297099.html", "https://luatminhkhue.vn/cach-tinh-thue-thu-nhap-ca-nhan-khi-nhan-co-tuc-bang-co-phieu-loi-tuc-ghi-tang-von.aspx",
+        "sources": ["https://vnexpress.net/gia-tham-chieu-4297099.html", "https://luatminhkhue.vn/cach-tinh-thue-thu-nhap-ca-nhan-khi-nhan-co-tuc-bang-co-phieu-loi-tuc-ghi-tang-von.aspx",
                     "https://luatduonggia.vn/phap-luat/co-tuc-bang-co-phieu-la-gi-cach-tinh-gia-dieu-chinh-khi-chia/"],
         "hashtags": ["ChứngKhoán", "CổTức", "NgàyKhôngHưởngQuyền", "ChứngKhoánTừSố0", "BiểuĐồBiếtNói"],
         "tags": ["cổ tức là gì", "cổ tức 10% là bao nhiêu", "ngày giao dịch không hưởng quyền", "tỷ suất cổ tức", "cổ tức bằng cổ phiếu", "giá tham chiếu",
