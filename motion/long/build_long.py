@@ -1016,6 +1016,8 @@ if __name__ == "__main__":
     elif cmd == "pick":
         do_pick(topic)
     elif cmd == "final":
+        # 15/10/2026: final hỏng ở bước audit mà final.mp4 cũ còn đó -> chuỗi vẫn QA/đăng bản cũ (MIM game). Xoá trước.
+        (ROOT / "output" / "long" / topic / "final.mp4").unlink(missing_ok=True)
         bad = variety.audit(topic)
         if bad and "--allow-repeat" not in rest:   # quá giống video gần đây: rủi ro "repetitive content" cho cả kênh
             raise SystemExit("variety audit:\n  " + "\n  ".join(bad) + "\nĐổi nhạc/look rồi dựng lại, hoặc thêm --allow-repeat nếu chấp nhận.")
