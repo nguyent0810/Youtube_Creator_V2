@@ -141,10 +141,17 @@ def optimise_picks(slots: list[tuple[str, list[str]]], fixed: set[str], prev: li
             uses[t] = uses.get(t, 0) + 1
     h = lambda key, t: int(hashlib.md5(f"{salt}|{key}|{t}".encode()).hexdigest()[:8], 16)
 
+    # 15/10/2026: video 20+ chương mà cấm lặp bài -> buộc dùng gần hết thư viện -> trùng 78% với video dài trước (MIM game).
+    # Cho mỗi bài dùng tới `cap` ô (1 với video ≤ 8 ô -- như cũ); bộ nhạc nhỏ hơn thì Jaccard với video gần đây thấp hơn.
+    cap = max(1, -(-len(slots) // 8))
+
     def score(ch: dict[str, str]):
         picked = list(ch.values())
         s = fixed | set(picked)
-        dup = len(picked) - len(set(picked)) + len(set(picked) & fixed)
+        cnt = {}
+        for t in picked:
+            cnt[t] = cnt.get(t, 0) + 1
+        dup = sum(max(0, n - cap) for n in cnt.values()) + len(set(picked) & fixed)
         js = [_jac(s, p) for p in prev] or [0.0]
         return (dup, round(max(js), 6), round(sum(js), 6), sum(uses.get(t, 0) for t in picked), sum(h(k, t) for k, t in ch.items()))
 
