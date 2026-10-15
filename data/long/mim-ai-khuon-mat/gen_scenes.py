@@ -69,12 +69,12 @@ CH["ch03"] = {"hud": {"k": "TRẠM 3", "t": "128 CON SỐ"}, "bgm": {"mood": "my
      "kin": [{"text": "MỖI KHUÔN MẶT = MỘT ĐIỂM", "at": 4, "acc": True}, {"text": "trong không gian 128 chiều", "at": [4, "trong"], "sm": True},
              {"text": "không ai vẽ được · ý tưởng thì đơn giản", "at": 5, "sm": True}]},
     {"type": "ledger", "at": 6, "title": "LUẬT CỦA KHÔNG GIAN ẤY", "rows": [{"k": "CÙNG MỘT NGƯỜI", "v": "HAI ĐIỂM GẦN NHAU", "at": 6}, {"k": "HAI NGƯỜI KHÁC", "v": "HAI ĐIỂM XA NHAU", "at": 7}]},
-    {"type": "timeline", "at": 8, "items": [{"year": "ẢNH GỐC", "text": "một khuôn mặt", "at": [9, "Một"]}, {"year": "CÙNG NGƯỜI", "text": "kéo lại gần", "at": [9, "một", 1]},
+    {"type": "timeline", "at": 8, "items": [{"year": "ẢNH GỐC", "text": "một khuôn mặt", "at": [8, None, 0, 0.3]}, {"year": "CÙNG NGƯỜI", "text": "kéo lại gần", "at": [9, "một", 1]},
                                            {"year": "NGƯỜI KHÁC", "text": "đẩy ra xa", "at": [9, "và"]}]},
-    {"type": "kinetic", "at": 11, "items": [{"text": "LẶP LẠI VỚI HÀNG TRIỆU KHUÔN MẶT", "at": 11, "sm": True}, {"text": "MẠNG TỰ TÌM RA ĐIỀU ĐÁNG ĐO", "at": [11, "mạng"], "acc": True},
+    {"type": "kinetic", "at": 11, "items": [{"text": "LẶP LẠI VỚI HÀNG TRIỆU KHUÔN MẶT", "at": 11, "sm": True}, {"text": "KHÔNG AI DẠY · MẠNG TỰ CHỌN THƯỚC ĐO", "at": [11, "mạng"], "acc": True},
                                            {"text": "mắt · gò má · đường viền hàm?", "at": 12, "sm": True}]},
     {"type": "slam", "at": 13, "text": "KHÔNG AI BIẾT CHÍNH XÁC", "sub": "TỪNG CON SỐ TRONG 128 CON SỐ ĐO CÁI GÌ", "subAt": 13},
-    {"type": "kinetic", "at": 14, "items": [{"text": "CÂU TRẢ LỜI Ở ĐẦU VIDEO", "at": 14, "sm": True}, {"text": "CỖ MÁY KHÔNG NHÌN THẤY BẠN", "at": 15, "sm": True}, {"text": "NÓ NHÌN THẤY MỘT ĐIỂM", "at": [15, "Nó"], "acc": True}]},
+    {"type": "kinetic", "at": 14, "items": [{"text": "CÂU TRẢ LỜI Ở ĐẦU VIDEO", "at": 14, "sm": True}, {"text": "CỖ MÁY KHÔNG NHÌN THẤY BẠN", "at": 15, "sm": True}, {"text": "MÁY CHỈ THẤY MỘT ĐIỂM · 128 CON SỐ", "at": [15, "Nó"], "acc": True}]},
 ]}
 
 CH["ch04"] = {"hud": {"k": "TRẠM 4", "t": "ĐO KHOẢNG CÁCH"}, "bgm": {"mood": "curious", "gain": 0.11}, "scenes": [
@@ -137,14 +137,14 @@ CH["ch08"] = {"hud": {"k": "PHẦN CUỐI", "t": "128 CON SỐ"}, "bgm": {"mood"
     {"type": "chapter", "no": "8", "k": "PHẦN CUỐI", "title": "MỘT TRĂM HAI MƯƠI\nTÁM CON SỐ", "sub": "NHÌN LẠI HÀNH TRÌNH", "vid": DIGI, "ms": 14, "illus": VM, "titleAt": [0, "Hãy"]},
     {"type": "timeline", "at": 1, "items": [{"year": "TRẠM 1", "text": "tìm khuôn mặt", "at": [1, "Trạm"]}, {"year": "TRẠM 2", "text": "căn cho thẳng", "at": [1, "Trạm", 1]},
                                            {"year": "TRẠM 3", "text": "128 con số", "at": [2, "Trạm"]}, {"year": "TRẠM 4", "text": "đo khoảng cách", "at": [2, "Trạm", 1]}]},
-    {"type": "kinetic", "at": 3, "items": [{"text": "KHÔNG TRẠM NÀO HIỂU BẠN LÀ AI", "at": 3, "acc": True}, {"text": "chỉ biết hai dãy số gần nhau tới đâu", "at": 5, "sm": True}]},
+    {"type": "kinetic", "at": 3, "items": [{"text": "4 TRẠM · 0 TRẠM HIỂU BẠN", "at": 3, "acc": True}, {"text": "chỉ biết hai dãy số gần nhau tới đâu", "at": 5, "sm": True}]},
     {"type": "ledger", "at": 6, "title": "VỪA LÀ", "rows": [{"k": "SỨC MẠNH", "v": "NHANH · CHÍNH XÁC HƠN NGƯỜI", "at": 7},
                                                           {"k": "GIỚI HẠN", "v": "SAI MÀ VẪN RẤT TỰ TIN", "at": 8}]},
     {"type": "broll", "at": 9, "vid": SCAN3, "ms": 20, "veil": 0.55, "illus": VM,
      "kin": [{"text": "NÓ KHÔNG NHÌN BẠN", "at": 10, "sm": True}, {"text": "NÓ ĐANG ĐO MỘT KHOẢNG CÁCH", "at": [10, "Nó", 1], "acc": True},
              {"text": "một con người đã chọn: gần tới mức nào thì đủ", "at": 11, "sm": True}]},
     {"type": "question", "at": 12, "text": "Yên tâm hơn, hay lo hơn,\nkhi khuôn mặt chỉ là một dãy số?"},
-    {"type": "kinetic", "at": 13, "items": [{"text": "KỂ CHO MÌNH NGHE", "at": 13}, {"text": "Ở PHẦN BÌNH LUẬN", "at": [13, "ở"], "acc": True}]},
+    {"type": "kinetic", "at": 13, "items": [{"text": "YÊN TÂM · HAY LO?", "at": 13}, {"text": "VIẾT XUỐNG BÌNH LUẬN", "at": [13, "ở"], "acc": True}]},
 ]}
 
 SPEC = {
