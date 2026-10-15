@@ -1,0 +1,204 @@
+{
+ "title": "Ngày giá tự giảm",
+ "lines": [
+  {
+   "t": "Giờ tới cụm chữ thứ hai, ngày giao dịch không hưởng quyền.",
+   "p": 0.8
+  },
+  {
+   "t": "Nghe rất hành chính, nhưng đây là ngày quan trọng nhất.",
+   "p": 1.0
+  },
+  "Muốn nhận cổ tức, bạn phải có tên trong danh sách cổ đông vào một ngày gọi là ngày đăng ký cuối cùng.",
+  "Vì cổ phiếu mua hôm nay phải vài ngày sau mới thật sự về tài khoản, nên sàn đặt ra một ngày trước đó.",
+  "Trong các thông báo gần đây, ngày ấy thường đứng trước ngày đăng ký cuối cùng một phiên giao dịch.",
+  {
+   "t": "Mua từ ngày ấy trở đi, bạn không còn được nhận đợt cổ tức này nữa. Nên gọi là ngày không hưởng quyền.",
+   "p": 1.0
+  },
+  "Và vào đúng sáng hôm ấy, có một điều xảy ra.",
+  "Giá tham chiếu của cổ phiếu được điều chỉnh xuống, đúng bằng phần cổ tức sắp chia.",
+  "Cổ phiếu ví dụ đóng cửa hôm trước ở bốn mươi nghìn.",
+  {
+   "t": "Sáng ngày không hưởng quyền, giá tham chiếu còn ba mươi chín nghìn.",
+   "p": 1.0
+  },
+  {
+   "t": "Sao lại phải hạ giá? Doanh nghiệp đâu có làm gì sai?",
+   "ask": 1
+  },
+  "Không sai gì cả. Hãy nghĩ tới cái bánh.",
+  "Một nghìn đồng cổ tức là tiền đi ra khỏi doanh nghiệp, chuyển sang túi cổ đông.",
+  {
+   "t": "Doanh nghiệp còn lại ít tiền hơn đúng bằng chừng ấy, nên mỗi cổ phiếu cũng đáng ít hơn chừng ấy.",
+   "p": 1.0
+  },
+  "Hãy cộng lại cho người đang cầm một nghìn cổ phiếu.",
+  "Trước ngày ấy: bốn mươi triệu đồng giá trị cổ phiếu.",
+  "Sau ngày ấy: ba mươi chín triệu tiền cổ phiếu, cộng một triệu tiền cổ tức sẽ nhận.",
+  {
+   "t": "Vẫn là bốn mươi triệu.",
+   "p": 1.0
+  },
+  "Bánh được cắt ra một miếng, và miếng ấy nằm trong đĩa của bạn.",
+  "Nhưng cả cái bánh không hề to thêm."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CỤM CHỮ THỨ HAI",
+   "title": "NGÀY GIÁ TỰ GIẢM",
+   "sub": "NGÀY GIAO DỊCH KHÔNG HƯỞNG QUYỀN",
+   "vid": "38905686",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Giờ"
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 2,
+   "items": [
+    {
+     "year": "NGÀY KHÔNG HƯỞNG QUYỀN",
+     "text": "mua từ ngày này: không nhận đợt cổ tức",
+     "at": [
+      2,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "year": "MỘT PHIÊN SAU",
+     "text": "ngày đăng ký cuối cùng",
+     "at": 4
+    },
+    {
+     "year": "VÀI TUẦN · VÀI THÁNG",
+     "text": "tiền cổ tức về tài khoản",
+     "at": 5
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "SÁNG HÔM ẤY",
+     "at": 6,
+     "sm": true
+    },
+    {
+     "text": "GIÁ THAM CHIẾU ĐƯỢC ĐIỀU CHỈNH XUỐNG",
+     "at": [
+      7,
+      "Giá"
+     ],
+     "acc": true
+    },
+    {
+     "text": "đúng bằng phần cổ tức sắp chia",
+     "at": [
+      7,
+      "đúng"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 8,
+   "title": "GIÁ THAM CHIẾU (Đ)",
+   "unit": "GIÁ ĐÓNG CỬA − CỔ TỨC TIỀN · VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "PHIÊN TRƯỚC",
+     "v": 40000,
+     "lbl": "40.000",
+     "at": [
+      8,
+      "bốn"
+     ]
+    },
+    {
+     "k": "NGÀY KHÔNG HƯỞNG QUYỀN",
+     "v": 39000,
+     "lbl": "39.000",
+     "at": [
+      9,
+      "ba"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 10,
+   "text": "Sao lại phải hạ giá?"
+  },
+  {
+   "type": "broll",
+   "at": 11,
+   "vid": "5615174",
+   "ms": 6,
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "TIỀN ĐI RA KHỎI DOANH NGHIỆP",
+     "at": 12,
+     "sm": true
+    },
+    {
+     "text": "MỖI CỔ PHIẾU ĐÁNG ÍT HƠN ĐÚNG CHỪNG ẤY",
+     "at": 13,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 14,
+   "title": "NGƯỜI CẦM 1.000 CỔ PHIẾU",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "TRƯỚC",
+     "v": "40 TRIỆU CỔ PHIẾU",
+     "at": 15
+    },
+    {
+     "k": "SAU",
+     "v": "39 TRIỆU + 1 TRIỆU CỔ TỨC",
+     "at": 16
+    }
+   ],
+   "total": {
+    "k": "CỘNG",
+    "v": "VẪN 40 TRIỆU",
+    "at": 17
+   }
+  },
+  {
+   "type": "slam",
+   "at": 18,
+   "text": "CẮT RA MỘT MIẾNG",
+   "sub": "CÁI BÁNH KHÔNG TO THÊM",
+   "subAt": 19
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "NGÀY GIÁ TỰ GIẢM"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

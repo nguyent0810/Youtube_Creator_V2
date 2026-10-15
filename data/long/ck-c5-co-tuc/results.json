@@ -1,0 +1,35 @@
+{
+ "div_per_share": 1000.0,
+ "net_per_share": 950.0,
+ "tax_per_share": 50.0,
+ "yield_pct": 2.5,
+ "headline_vs_yield": {
+  "headline_pct": 10.0,
+  "yield_pct": 2.5
+ },
+ "ex_cash": {
+  "before": 40000,
+  "after": 39000.0,
+  "holding_before": 40000000,
+  "holding_after_plus_div": 40000000.0,
+  "holding_after_plus_net": 39950000.0
+ },
+ "ex_stock": {
+  "before_shares": 1000,
+  "after_shares": 1200,
+  "before_price": 40000,
+  "after_price": 33333,
+  "value_before": 40000000,
+  "value_after": 40000000
+ },
+ "dividend_capture": {
+  "buy": 40120000,
+  "sell": 38844000,
+  "dividend_net": 950000,
+  "result": -326000
+ },
+ "same_yield_price": {
+  "p20000": 5.0,
+  "p100000": 1.0
+ }
+}

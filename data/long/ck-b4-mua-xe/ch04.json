@@ -1,0 +1,244 @@
+{
+ "title": "Trả góp: thêm một chiếc đồng hồ",
+ "lines": [
+  {
+   "t": "Nhưng phần lớn người mua xe không trả thẳng.",
+   "p": 0.8
+  },
+  {
+   "t": "Họ trả trước một phần, rồi vay ngân hàng phần còn lại.",
+   "p": 1.0
+  },
+  "Ví dụ giả định: trả trước ba mươi phần trăm giá xe, cộng một trăm triệu lăn bánh, tức ba trăm mười triệu.",
+  "Vay bốn trăm chín mươi triệu trong bảy năm, mỗi tháng trả gốc đều.",
+  "Tháng mười năm nay, báo chí ghi nhận lãi vay mua xe ưu đãi năm đầu phổ biến khoảng bảy tới chín phần trăm.",
+  {
+   "t": "Hết ưu đãi, nhiều khoản vay thả nổi lên khoảng mười hai tới mười lăm phần trăm, có người phải trả gần hai mươi.",
+   "p": 1.0
+  },
+  "Ví dụ của mình lấy tám phần trăm năm đầu, rồi mười ba phần trăm.",
+  "Tháng đầu tiên, bạn trả ngân hàng khoảng chín triệu một.",
+  {
+   "t": "Mỗi tháng sau, nợ giảm dần, nên tới tháng thứ mười hai còn khoảng tám triệu bảy.",
+   "p": 1.0
+  },
+  "Rồi tháng thứ mười ba, ưu đãi hết.",
+  "Khoản trả nhảy lên khoảng mười triệu bốn, chỉ sau một tháng, thêm khoảng một triệu bảy.",
+  {
+   "t": "Nhảy như thế mà không báo trước à?",
+   "ask": 1
+  },
+  {
+   "t": "Có báo, trong hợp đồng. Lãi thả nổi thường bằng lãi cơ sở của ngân hàng cộng một biên độ, và lãi cơ sở có thể lên hoặc xuống.",
+   "p": 1.0
+  },
+  "Trong năm năm đầu, tiền lãi của khoản vay này khoảng một trăm tám mươi tư triệu.",
+  "Cả bảy năm, tổng tiền lãi khoảng hai trăm lẻ ba triệu.",
+  "Cùng chiếc xe, cùng tiền nuôi, cùng mất giá, người trả góp chi ròng khoảng tám trăm bảy mươi ba triệu.",
+  {
+   "t": "Khoảng mười bốn triệu rưỡi mỗi tháng.",
+   "p": 1.0
+  },
+  "Nói cho công bằng, người trả góp giữ lại được một khoản tiền lúc đầu, và khoản ấy có thể sinh lãi nếu gửi đi.",
+  "Nhưng lãi tiết kiệm thường thấp hơn lãi vay mua xe, nên phần bù ấy nhỏ hơn tiền lãi phải trả.",
+  "Trả góp không làm chiếc xe đắt hơn. Nó làm việc có xe đắt hơn."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "CHƯƠNG BỐN",
+   "title": "TRẢ GÓP",
+   "sub": "THÊM MỘT CHIẾC ĐỒNG HỒ",
+   "vid": "7154228",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Nhưng"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "KHOẢN VAY VÍ DỤ",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "TRẢ TRƯỚC 30% + LĂN BÁNH",
+     "v": "310 TRIỆU",
+     "at": 2
+    },
+    {
+     "k": "VAY",
+     "v": "490 TRIỆU · 7 NĂM · GỐC ĐỀU",
+     "at": 3
+    }
+   ]
+  },
+  {
+   "type": "source",
+   "at": 4,
+   "source": "BÁO CHÍ · THÁNG 10/2026 · LÃI VAY MUA XE",
+   "ref": "ƯU ĐÃI NĂM ĐẦU ≈ 7–9%/NĂM",
+   "snippet": "hết ưu đãi, nhiều khoản thả nổi lên [[12–15% một năm]], có người gần 20%",
+   "hlAt": [
+    5,
+    "mười"
+   ],
+   "seal": "KHÔNG NÊU TÊN NGÂN HÀNG",
+   "sealAt": 6
+  },
+  {
+   "type": "bars",
+   "at": 7,
+   "title": "KHOẢN TRẢ MỖI THÁNG (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · 8% NĂM ĐẦU, RỒI 13%",
+   "items": [
+    {
+     "k": "THÁNG 1",
+     "v": 9.1,
+     "lbl": "9,1",
+     "at": [
+      7,
+      "chín"
+     ]
+    },
+    {
+     "k": "THÁNG 12",
+     "v": 8.67,
+     "lbl": "8,7",
+     "at": [
+      8,
+      "tám"
+     ]
+    },
+    {
+     "k": "THÁNG 13",
+     "v": 10.38,
+     "lbl": "10,4",
+     "at": [
+      9,
+      "mười"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 10,
+   "text": "+ 1,7 TRIỆU",
+   "sub": "CHỈ SAU MỘT THÁNG · VÍ DỤ GIẢ ĐỊNH",
+   "subAt": 10
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "CÓ BÁO · TRONG HỢP ĐỒNG",
+     "at": 12,
+     "acc": true
+    },
+    {
+     "text": "lãi cơ sở + biên độ",
+     "at": [
+      12,
+      "Lãi"
+     ],
+     "sm": true
+    },
+    {
+     "text": "lãi cơ sở có thể lên hoặc xuống",
+     "at": [
+      12,
+      "lãi",
+      2
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 13,
+   "from": 0,
+   "to": 184,
+   "suffix": " TRIỆU",
+   "until": [
+    13,
+    "một"
+   ],
+   "label": "TIỀN LÃI 5 NĂM ĐẦU",
+   "sub": {
+    "text": "CẢ 7 NĂM ≈ 203 TRIỆU · VÍ DỤ GIẢ ĐỊNH",
+    "at": 14
+   }
+  },
+  {
+   "type": "bars",
+   "at": 15,
+   "title": "CHI RÒNG 5 NĂM (TRIỆU ĐỒNG)",
+   "unit": "KÊNH TỰ TÍNH · VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "TRẢ THẲNG",
+     "v": 689,
+     "lbl": "689",
+     "at": [
+      15,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "k": "TRẢ GÓP",
+     "v": 873,
+     "lbl": "873",
+     "at": [
+      15,
+      "tám"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 16,
+   "from": 14.5,
+   "to": 14.5,
+   "suffix": " TRIỆU/THÁNG",
+   "label": "ĐỒNG HỒ · NGƯỜI TRẢ GÓP",
+   "sub": {
+    "text": "CHƯA TRỪ LÃI GỬI CỦA PHẦN GIỮ LẠI",
+    "at": 17
+   }
+  },
+  {
+   "type": "myth",
+   "at": 18,
+   "mythLab": "TRẢ GÓP KHÔNG LÀM",
+   "myth": "CHIẾC XE ĐẮT HƠN",
+   "truthLab": "NÓ LÀM",
+   "truth": "VIỆC CÓ XE ĐẮT HƠN",
+   "strikeAt": [
+    19,
+    "Nó"
+   ],
+   "truthAt": [
+    19,
+    "việc"
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "TRẢ GÓP: THÊM MỘT CHIẾC ĐỒNG HỒ"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

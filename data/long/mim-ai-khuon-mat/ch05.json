@@ -1,0 +1,160 @@
+{
+ "title": "Hai mươi lần giỏi hơn",
+ "lines": [
+  {
+   "t": "Cách làm vừa rồi không phải lúc nào cũng có.",
+   "p": 0.8
+  },
+  "Trước khi mạng nơ-ron sâu thống trị, các hệ thống nhận diện khuôn mặt đo những đặc điểm do con người chọn sẵn.",
+  {
+   "t": "Và chúng sai khá nhiều.",
+   "p": 1.0
+  },
+  "Viện Tiêu chuẩn và Công nghệ Quốc gia Mỹ, gọi tắt là NIST, đều đặn thử nghiệm các thuật toán nhận diện khuôn mặt.",
+  {
+   "t": "Năm hai nghìn không trăm mười tám, họ công bố kết quả thử nghiệm một trăm hai mươi bảy thuật toán, của ba mươi chín nhà phát triển.",
+   "p": 1.0
+  },
+  "Một trong các bài thử là tìm một người trong một kho ảnh lớn.",
+  "Năm hai nghìn không trăm mười bốn, các thuật toán tốt nhất thất bại khoảng bốn phần trăm số lần.",
+  {
+   "t": "Năm hai nghìn không trăm mười tám, con số ấy còn khoảng không phẩy hai phần trăm.",
+   "p": 1.0
+  },
+  "Chỉ trong bốn năm, giỏi hơn khoảng hai mươi lần.",
+  "Và NIST nói rõ nguyên nhân: các cách làm cũ được thay bằng mạng nơ-ron tích chập sâu, đúng loại mạng ở trạm thứ ba.",
+  {
+   "t": "Nhưng cũng chính NIST lưu ý: kết quả tốt nhất ấy là với ảnh chất lượng tốt, và giữa các nhà phát triển vẫn chênh nhau rất xa.",
+   "p": 1.0
+  },
+  "Ảnh chất lượng tốt. Hãy nhớ mấy chữ này.",
+  "Vì ngoài đời, không phải tấm ảnh nào cũng như ảnh chụp ở quầy làm giấy tờ."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "CHƯƠNG NĂM",
+   "title": "HAI MƯƠI LẦN\nGIỎI HƠN",
+   "sub": "BỐN NĂM CỦA MẠNG NƠ-RON SÂU",
+   "vid": "38779095",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Cách"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "TRƯỚC ĐÂY: ĐẶC ĐIỂM DO NGƯỜI CHỌN SẴN",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "VÀ SAI KHÁ NHIỀU",
+     "at": 2,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "source",
+   "at": 3,
+   "source": "NIST · NISTIR 8238 · 11/2018",
+   "ref": "127 THUẬT TOÁN · 39 NHÀ PHÁT TRIỂN",
+   "snippet": "tìm một người trong kho ảnh lớn: tỉ lệ thất bại [[≈ 4% (2014) → 0,2% (2018)]]",
+   "hlAt": [
+    5,
+    null,
+    0,
+    0.05
+   ],
+   "seal": "THỬ NGHIỆM ĐỘC LẬP",
+   "sealAt": [
+    5,
+    "kho"
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 6,
+   "title": "TỈ LỆ THẤT BẠI KHI TÌM TRONG KHO ẢNH (%)",
+   "unit": "NIST FRVT · THUẬT TOÁN TỐT NHẤT · ẢNH CHẤT LƯỢNG TỐT",
+   "items": [
+    {
+     "k": "2014",
+     "v": 4,
+     "lbl": "≈ 4",
+     "at": [
+      6,
+      "bốn"
+     ]
+    },
+    {
+     "k": "2018",
+     "v": 0.2,
+     "lbl": "0,2",
+     "at": [
+      7,
+      "không"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 8,
+   "from": 20,
+   "to": 20,
+   "prefix": "≈ ",
+   "suffix": " LẦN",
+   "label": "GIỎI HƠN TRONG BỐN NĂM",
+   "sub": {
+    "text": "NHỜ MẠNG NƠ-RON TÍCH CHẬP SÂU · NIST",
+    "at": 9
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 10,
+   "title": "NIST CŨNG LƯU Ý",
+   "rows": [
+    {
+     "k": "KẾT QUẢ TỐT NHẤT",
+     "v": "VỚI ẢNH CHẤT LƯỢNG TỐT",
+     "at": [
+      10,
+      "kết"
+     ]
+    },
+    {
+     "k": "GIỮA CÁC HÃNG",
+     "v": "CHÊNH NHAU RẤT XA",
+     "at": [
+      10,
+      "giữa"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 11,
+   "text": "ẢNH CHẤT LƯỢNG TỐT",
+   "sub": "NGOÀI ĐỜI KHÔNG PHẢI ẢNH NÀO CŨNG VẬY",
+   "subAt": 12
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "HAI MƯƠI LẦN GIỎI HƠN"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

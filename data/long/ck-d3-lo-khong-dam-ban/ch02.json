@@ -1,0 +1,180 @@
+{
+ "title": "Mười nghìn tài khoản",
+ "lines": [
+  {
+   "t": "Đó mới là lý thuyết. Vậy ngoài đời, người ta có thật sự làm thế không?",
+   "p": 1.0
+  },
+  "Năm một nghìn chín trăm tám mươi lăm, hai nhà kinh tế Hersh Shefrin và Meir Statman đặt tên cho hiện tượng này.",
+  {
+   "t": "Họ gọi nó là hiệu ứng phân bổ: bán cổ phiếu lãi quá sớm, và giữ cổ phiếu lỗ quá lâu.",
+   "p": 1.0
+  },
+  "Năm một nghìn chín trăm chín mươi tám, nhà kinh tế Terrance Odean kiểm tra điều ấy bằng dữ liệu thật.",
+  {
+   "t": "Ông xem giao dịch của mười nghìn tài khoản ở một công ty môi giới tại Mỹ, trong bảy năm.",
+   "p": 1.0
+  },
+  "Mỗi khi một nhà đầu tư bán ra, ông đếm xem trong danh mục của họ hôm ấy, bao nhiêu khoản lãi được chốt, và bao nhiêu khoản lỗ được cắt.",
+  "Kết quả, trong phần lớn các tháng của năm: khoảng mười bốn phẩy tám phần trăm số khoản lãi được bán ra.",
+  {
+   "t": "Còn khoản lỗ, chỉ khoảng chín phẩy tám phần trăm.",
+   "p": 1.0
+  },
+  "Tức là một khoản đang lãi có khả năng bị bán cao hơn khoảng một lần rưỡi so với một khoản đang lỗ.",
+  {
+   "t": "Đúng như cách phần lớn chúng ta trả lời câu hỏi ở đầu video.",
+   "p": 1.0
+  },
+  {
+   "t": "Nhưng biết đâu họ có lý do chính đáng thì sao?",
+   "ask": 1
+  },
+  "Odean cũng đã kiểm tra điều ấy.",
+  "Theo nghiên cứu, hành vi này không giải thích được bằng việc cân bằng lại danh mục, cũng không phải để tránh phí giao dịch.",
+  {
+   "t": "Và trong dữ liệu của ông, những cổ phiếu lãi đã bị bán đi, về sau lại không hề kém hơn những cổ phiếu lỗ được giữ lại.",
+   "p": 1.0
+  },
+  "Chiếc cân lệch không chỉ nằm trong phòng thí nghiệm. Nó nằm trong tài khoản thật của hàng nghìn người."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "MƯỜI NGHÌN\nTÀI KHOẢN",
+   "sub": "NGOÀI ĐỜI CÓ THẬT VẬY KHÔNG?",
+   "vid": "38736271",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Đó"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "HIỆU ỨNG PHÂN BỔ · SHEFRIN & STATMAN 1985",
+   "rows": [
+    {
+     "k": "BÁN CỔ PHIẾU LÃI",
+     "v": "QUÁ SỚM",
+     "at": [
+      2,
+      "bán"
+     ]
+    },
+    {
+     "k": "GIỮ CỔ PHIẾU LỖ",
+     "v": "QUÁ LÂU",
+     "at": [
+      2,
+      "giữ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "source",
+   "at": 3,
+   "source": "ODEAN · JOURNAL OF FINANCE · 1998",
+   "ref": "10.000 TÀI KHOẢN · 7 NĂM",
+   "snippet": "nhà đầu tư [[thích chốt lãi hơn hẳn cắt lỗ]] · dữ liệu một công ty môi giới tại Mỹ",
+   "hlAt": [
+    4,
+    "mười"
+   ],
+   "seal": "ĐO TRÊN GIAO DỊCH THẬT",
+   "sealAt": 5
+  },
+  {
+   "type": "bars",
+   "at": 6,
+   "title": "TỶ LỆ ĐƯỢC BÁN RA · PHẦN LỚN CÁC THÁNG (%)",
+   "unit": "ODEAN 1998 · 10.000 TÀI KHOẢN",
+   "items": [
+    {
+     "k": "KHOẢN ĐANG LÃI",
+     "v": 14.8,
+     "lbl": "14,8%",
+     "at": [
+      6,
+      "mười"
+     ],
+     "acc": true
+    },
+    {
+     "k": "KHOẢN ĐANG LỖ",
+     "v": 9.8,
+     "lbl": "9,8%",
+     "at": [
+      7,
+      "chín"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 8,
+   "from": 1.5,
+   "to": 1.5,
+   "prefix": "≈ ",
+   "suffix": " LẦN",
+   "label": "KHẢ NĂNG BÁN KHOẢN LÃI SO VỚI KHOẢN LỖ",
+   "sub": {
+    "text": "ĐÚNG NHƯ CÂU TRẢ LỜI Ở ĐẦU VIDEO",
+    "at": 9
+   }
+  },
+  {
+   "type": "question",
+   "at": 10,
+   "text": "Biết đâu họ có\nlý do chính đáng?"
+  },
+  {
+   "type": "ledger",
+   "at": 11,
+   "title": "ODEAN ĐÃ KIỂM TRA",
+   "rows": [
+    {
+     "k": "CÂN BẰNG DANH MỤC?",
+     "v": "KHÔNG GIẢI THÍCH ĐƯỢC",
+     "at": [
+      12,
+      "cân"
+     ]
+    },
+    {
+     "k": "TRÁNH PHÍ?",
+     "v": "KHÔNG GIẢI THÍCH ĐƯỢC",
+     "at": [
+      12,
+      "phí"
+     ]
+    },
+    {
+     "k": "CỔ PHIẾU LÃI ĐÃ BÁN",
+     "v": "VỀ SAU KHÔNG KÉM HƠN",
+     "at": 13
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 14,
+   "text": "TRONG TÀI KHOẢN THẬT",
+   "sub": "KHÔNG CHỈ TRONG PHÒNG THÍ NGHIỆM",
+   "subAt": 14
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "MƯỜI NGHÌN TÀI KHOẢN"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

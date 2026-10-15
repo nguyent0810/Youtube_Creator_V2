@@ -1,0 +1,40 @@
+{
+ "vnindex": {
+  "peak": [
+   "2022-01-06",
+   1528.57
+  ],
+  "trough": [
+   "2022-11-15",
+   911.9
+  ],
+  "drop_pct": -40.3,
+  "need_from_trough_pct": 67.6,
+  "back": [
+   "2025-07-25",
+   1531.13
+  ],
+  "months_peak_to_back": 42.6,
+  "months_trough_to_back": 32.3
+ },
+ "recovery_math": {
+  "-10%": 11.1,
+  "-20%": 25.0,
+  "-30%": 42.9,
+  "-40%": 66.7,
+  "-50%": 100.0
+ },
+ "two_stocks": {
+  "A_value": 60,
+  "B_value": 40,
+  "sell_A_left": {
+   "A": 10,
+   "B": 40
+  },
+  "sell_B_left": {
+   "A": 60,
+   "B": 0
+  },
+  "note": "mỗi mã mua 50 triệu; A +20% = 60; B −20% = 40; cần 50 triệu: bán hết B (40) + 10 của A, hoặc bán 50 của A"
+ }
+}

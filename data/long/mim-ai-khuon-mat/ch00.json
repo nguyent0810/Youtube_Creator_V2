@@ -1,0 +1,177 @@
+{
+ "title": "Khuôn mặt mười triệu đồng",
+ "lines": [
+  "Bạn mở ứng dụng ngân hàng, gõ một lệnh chuyển mười hai triệu đồng.",
+  "Thay vì một mã số gửi về điện thoại, màn hình hiện lên một khung hình bầu dục.",
+  {
+   "t": "Đưa khuôn mặt vào đây.",
+   "p": 1.0
+  },
+  "Từ ngày một tháng bảy năm hai nghìn không trăm hai mươi tư, đó là chuyện thường ngày ở Việt Nam.",
+  "Theo quy định của Ngân hàng Nhà nước, chuyển tiền trực tuyến trên mười triệu đồng một lần phải xác thực bằng sinh trắc học.",
+  {
+   "t": "Và rất nhiều người chọn cách nhanh nhất: khuôn mặt.",
+   "p": 1.0
+  },
+  "Mỗi ngày, có vô số khuôn mặt được đưa trước một cỗ máy như thế.",
+  {
+   "t": "Nhưng ít ai tự hỏi, cỗ máy ấy thật ra đang nhìn gì.",
+   "p": 1.0
+  },
+  "Nó không nhìn thấy bạn như mẹ bạn nhìn thấy bạn.",
+  "Nó không nhớ nụ cười, cũng không nhớ giọng nói.",
+  {
+   "t": "Với nó, khuôn mặt bạn là một dãy con số.",
+   "p": 1.0
+  },
+  "Trong video này, mình sẽ theo chân một tấm ảnh khuôn mặt, từ lúc camera bật lên, tới lúc cỗ máy nói: đúng là bạn.",
+  "Tấm ảnh ấy sẽ đi qua bốn trạm.",
+  "Và ở cuối hành trình, bạn sẽ thấy vì sao cỗ máy làm rất giỏi việc này, mà vẫn có lúc nhầm người."
+ ],
+ "scenes": [
+  {
+   "type": "broll",
+   "vid": "8090193",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "LỆNH CHUYỂN 12 TRIỆU",
+     "at": [
+      0,
+      "Bạn"
+     ],
+     "sm": true
+    },
+    {
+     "text": "MỘT KHUNG BẦU DỤC",
+     "at": [
+      1,
+      "màn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "đưa khuôn mặt vào đây",
+     "at": 2,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "source",
+   "at": 3,
+   "source": "QUYẾT ĐỊNH 2345/QĐ-NHNN · HIỆU LỰC 01/07/2024",
+   "ref": "CHUYỂN TIỀN TRỰC TUYẾN",
+   "snippet": "trên [[10 triệu đồng một lần]] phải xác thực bằng sinh trắc học",
+   "hlAt": [
+    4,
+    "mười"
+   ],
+   "seal": "THEO BÁO CHÍ",
+   "sealAt": 5
+  },
+  {
+   "type": "broll",
+   "at": 6,
+   "vid": "4122942",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "VÔ SỐ KHUÔN MẶT MỖI NGÀY",
+     "at": 6,
+     "sm": true
+    },
+    {
+     "text": "CỖ MÁY THẬT RA NHÌN GÌ?",
+     "at": 7,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 8,
+   "mythLab": "KHÔNG NHÌN NHƯ",
+   "myth": "MẸ BẠN NHÌN BẠN",
+   "truthLab": "VỚI CỖ MÁY",
+   "truth": "MỘT DÃY CON SỐ",
+   "strikeAt": [
+    9,
+    "Nó"
+   ],
+   "truthAt": [
+    10,
+    "một"
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 11,
+   "items": [
+    {
+     "year": "TRẠM 1",
+     "text": "tìm khuôn mặt",
+     "at": [
+      11,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "year": "TRẠM 2",
+     "text": "căn cho thẳng",
+     "at": [
+      11,
+      "từ"
+     ]
+    },
+    {
+     "year": "TRẠM 3",
+     "text": "biến thành con số",
+     "at": 12
+    },
+    {
+     "year": "TRẠM 4",
+     "text": "đo khoảng cách",
+     "at": [
+      12,
+      "bốn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "RẤT GIỎI",
+     "at": [
+      13,
+      "giỏi"
+     ],
+     "acc": true
+    },
+    {
+     "text": "mà vẫn có lúc nhầm người",
+     "at": [
+      13,
+      "mà"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "KHUÔN MẶT MƯỜI TRIỆU ĐỒNG"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.1
+ }
+}

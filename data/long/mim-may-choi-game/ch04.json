@@ -1,0 +1,138 @@
+{
+ "title": "Năm điều cờ vua không có",
+ "lines": [
+  {
+   "t": "Hãy đặt cờ vua và một trò chơi chiến thuật thời gian thực cạnh nhau.",
+   "p": 0.8
+  },
+  {
+   "t": "Rồi đếm những gì trò chơi điện tử có, mà bàn cờ không có.",
+   "p": 1.0
+  },
+  "Điều thứ nhất: sương mù.",
+  "Trong cờ vua, bạn thấy mọi quân của đối thủ.",
+  {
+   "t": "Trong StarCraft, phần lớn bản đồ bị che, bạn chỉ thấy những nơi quân mình đang đứng.",
+   "p": 1.0
+  },
+  "Điều thứ hai: không có lượt.",
+  "Cờ vua cho bạn suy nghĩ rồi mới đi.",
+  {
+   "t": "Trò chơi thời gian thực thì cứ chạy, dù bạn đã nghĩ xong hay chưa.",
+   "p": 1.0
+  },
+  "Điều thứ ba: ván đấu rất dài.",
+  "Một ván cờ vua có vài chục nước.",
+  {
+   "t": "Một ván StarCraft có thể kéo dài tới một giờ, với hàng chục nghìn hành động.",
+   "p": 1.0
+  },
+  "Điều thứ tư: số lựa chọn khổng lồ ở mỗi khoảnh khắc. Mình sẽ nói kỹ ở chương sau.",
+  {
+   "t": "Điều thứ năm: đồng đội. Có những trò chơi mà bạn không thắng một mình, mà phải phối hợp với bốn người khác.",
+   "p": 1.0
+  },
+  "Năm điều. Sương mù, không có lượt, ván dài, lựa chọn khổng lồ, đồng đội.",
+  "Hãy nhớ danh sách này. Chúng ta sẽ đánh dấu từng điều, khi cỗ máy vượt qua nó."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "CHƯƠNG BỐN",
+   "title": "NĂM ĐIỀU\nCỜ VUA KHÔNG CÓ",
+   "sub": "ĐẾM TỪNG ĐIỀU MỘT",
+   "vid": "6599643",
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU",
+   "titleAt": [
+    0,
+    null,
+    0,
+    0.05
+   ],
+   "ms": 8
+  },
+  {
+   "type": "broll",
+   "at": 2,
+   "vid": "8233026",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU",
+   "kin": [
+    {
+     "text": "1 · SƯƠNG MÙ",
+     "at": 2,
+     "acc": true
+    },
+    {
+     "text": "chỉ thấy nơi quân mình đứng",
+     "at": 4,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 5,
+   "mythLab": "CỜ VUA",
+   "myth": "NGHĨ XONG MỚI ĐI",
+   "truthLab": "2 · KHÔNG CÓ LƯỢT",
+   "truth": "ĐỒNG HỒ CỨ CHẠY",
+   "strikeAt": 6,
+   "truthAt": 7
+  },
+  {
+   "type": "ledger",
+   "at": 8,
+   "title": "3 · VÁN ĐẤU RẤT DÀI",
+   "srcnote": "STARCRAFT: THEO DEEPMIND 01/2019",
+   "rows": [
+    {
+     "k": "CỜ VUA",
+     "v": "VÀI CHỤC NƯỚC",
+     "at": 9
+    },
+    {
+     "k": "STARCRAFT",
+     "v": "TỚI 1 GIỜ · HÀNG CHỤC NGHÌN",
+     "at": 10
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 11,
+   "title": "CÒN HAI ĐIỀU",
+   "rows": [
+    {
+     "k": "4",
+     "v": "LỰA CHỌN KHỔNG LỒ MỖI KHOẢNH KHẮC",
+     "at": 11
+    },
+    {
+     "k": "5",
+     "v": "ĐỒNG ĐỘI",
+     "at": 12
+    }
+   ]
+  },
+  {
+   "type": "units",
+   "at": 13,
+   "title": "NĂM ĐIỀU CỜ VUA KHÔNG CÓ",
+   "total": 5,
+   "cols": 5,
+   "lit": 0,
+   "litAt": 13,
+   "unitLabel": "ĐÃ VƯỢT QUA"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "NĂM ĐIỀU CỜ VUA KHÔNG CÓ"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

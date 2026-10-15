@@ -1,0 +1,176 @@
+{
+ "title": "Mua để ăn cổ tức",
+ "lines": [
+  {
+   "t": "Vậy có một chiến thuật nghe rất hợp lý.",
+   "p": 0.8
+  },
+  {
+   "t": "Mua ngay trước ngày không hưởng quyền, nhận cổ tức, rồi bán ra.",
+   "p": 1.0
+  },
+  "Thử tính với một nghìn cổ phiếu ví dụ.",
+  "Bạn mua ở bốn mươi nghìn, cộng phí giao dịch ví dụ không phẩy ba phần trăm, hết khoảng bốn mươi triệu một trăm hai mươi nghìn.",
+  "Cổ tức một nghìn đồng mỗi cổ phiếu, nhưng thuế thu nhập cá nhân năm phần trăm được khấu trừ trước khi trả.",
+  {
+   "t": "Bạn thực nhận chín trăm năm mươi nghìn.",
+   "p": 1.0
+  },
+  "Sáng ngày không hưởng quyền, giá tham chiếu là ba mươi chín nghìn.",
+  "Nếu bạn bán đúng giá ấy, trừ phí bán và thuế bán ví dụ, bạn thu về khoảng ba mươi tám triệu tám trăm bốn mươi tư nghìn.",
+  "Cộng tiền cổ tức, rồi trừ tiền đã bỏ ra.",
+  {
+   "t": "Kết quả: lỗ khoảng ba trăm hai mươi sáu nghìn đồng.",
+   "p": 1.0
+  },
+  {
+   "t": "Nhưng nếu hôm ấy giá tăng lại thì sao?",
+   "ask": 1
+  },
+  "Thì bạn lời, nhưng là nhờ giá tăng, chứ không phải nhờ cổ tức.",
+  {
+   "t": "Và giá cũng có thể giảm thêm, chẳng ai hứa điều gì.",
+   "p": 1.0
+  },
+  "Còn một chi tiết nữa: tiền cổ tức thường về tài khoản sau ngày đăng ký cuối cùng vài tuần, có khi vài tháng.",
+  "Trong thời gian ấy, tiền của bạn không tự sinh thêm gì.",
+  "Cổ tức không phải món quà miễn phí. Nó là tiền của chính bạn, được chuyển từ túi này sang túi kia, sau khi đã trừ thuế."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "MUA ĐỂ\nĂN CỔ TỨC",
+   "sub": "MỘT CHIẾN THUẬT NGHE RẤT HỢP LÝ",
+   "vid": "8480232",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Vậy"
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 1,
+   "items": [
+    {
+     "year": "1",
+     "text": "mua ngay trước ngày không hưởng quyền",
+     "at": [
+      1,
+      "Mua"
+     ]
+    },
+    {
+     "year": "2",
+     "text": "nhận cổ tức",
+     "at": [
+      1,
+      "nhận"
+     ]
+    },
+    {
+     "year": "3",
+     "text": "bán ra",
+     "at": [
+      1,
+      "rồi"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "1.000 CỔ PHIẾU · TỪNG BƯỚC (Đ)",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · PHÍ 0,3% MỖI CHIỀU · THUẾ BÁN 0,1%",
+   "rows": [
+    {
+     "k": "MUA 40.000 + PHÍ",
+     "v": "− 40.120.000",
+     "at": 3
+    },
+    {
+     "k": "CỔ TỨC SAU THUẾ 5%",
+     "v": "+ 950.000",
+     "at": 5
+    },
+    {
+     "k": "BÁN 39.000 − PHÍ, THUẾ",
+     "v": "+ 38.844.000",
+     "at": 7
+    }
+   ],
+   "total": {
+    "k": "KẾT QUẢ",
+    "v": "− 326.000",
+    "at": 8
+   }
+  },
+  {
+   "type": "counter",
+   "at": 9,
+   "from": 326,
+   "to": 326,
+   "prefix": "− ",
+   "suffix": " NGHÌN Đ",
+   "label": "LỖ · KHI BÁN ĐÚNG GIÁ THAM CHIẾU",
+   "sub": {
+    "text": "KÊNH TỰ TÍNH · VÍ DỤ GIẢ ĐỊNH",
+    "at": 9
+   }
+  },
+  {
+   "type": "question",
+   "at": 10,
+   "text": "Nếu hôm ấy giá tăng lại?"
+  },
+  {
+   "type": "myth",
+   "at": 11,
+   "mythLab": "LỜI NHỜ",
+   "myth": "CỔ TỨC",
+   "truthLab": "THẬT RA NHỜ",
+   "truth": "GIÁ TĂNG",
+   "strikeAt": [
+    11,
+    "lời"
+   ],
+   "truthAt": [
+    11,
+    "nhờ"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "GIÁ CŨNG CÓ THỂ GIẢM THÊM",
+     "at": 12,
+     "acc": true
+    },
+    {
+     "text": "tiền cổ tức về sau vài tuần, có khi vài tháng",
+     "at": 13,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 15,
+   "text": "KHÔNG PHẢI QUÀ MIỄN PHÍ",
+   "sub": "TIỀN CỦA BẠN · TỪ TÚI NÀY SANG TÚI KIA · ĐÃ TRỪ THUẾ"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "MUA ĐỂ ĂN CỔ TỨC"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

@@ -1,0 +1,155 @@
+{
+ "title": "Khuôn mặt ở quầy giao dịch",
+ "lines": [
+  {
+   "t": "Quay lại chiếc điện thoại của bạn, và lệnh chuyển mười hai triệu đồng.",
+   "p": 0.8
+  },
+  "Theo quy định có hiệu lực từ giữa năm hai nghìn không trăm hai mươi tư, giao dịch trên mười triệu đồng một lần phải xác thực sinh trắc học.",
+  {
+   "t": "Tổng các lần chuyển trong ngày vượt hai mươi triệu đồng cũng vậy.",
+   "p": 1.0
+  },
+  "Dữ liệu để so có thể lấy từ con chip trên căn cước công dân, từ tài khoản định danh điện tử, hoặc từ dữ liệu ngân hàng đã thu thập trước đó.",
+  {
+   "t": "Mục tiêu được nêu rõ: chặn những tài khoản không chính chủ, thường bị dùng để nhận và chuyển tiền lừa đảo.",
+   "p": 1.0
+  },
+  "Bạn có để ý không, nhiều ứng dụng còn yêu cầu bạn quay đầu, hay chớp mắt?",
+  "Đó là để kiểm tra đây là một người thật đang đứng trước camera, chứ không phải một tấm ảnh hay một đoạn video giơ lên.",
+  "Bốn trạm vừa rồi trả lời câu hỏi: có phải người này không.",
+  {
+   "t": "Bước kiểm tra ấy trả lời một câu hỏi khác: có phải người thật không.",
+   "p": 1.0
+  },
+  "Ở đây, mọi thứ chúng ta vừa nói đều có mặt.",
+  "Một ngưỡng được chọn sẵn, giữa an toàn và tiện lợi.",
+  "Một độ chính xác rất cao, với ảnh tốt, trong điều kiện tốt.",
+  "Và một dãy số đại diện cho khuôn mặt bạn, được cất ở đâu đó."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "7",
+   "k": "CHƯƠNG BẢY",
+   "title": "KHUÔN MẶT\nỞ QUẦY GIAO DỊCH",
+   "sub": "QUAY LẠI LỆNH CHUYỂN 12 TRIỆU",
+   "vid": "8090199",
+   "ms": 12,
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Quay"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "PHẢI XÁC THỰC SINH TRẮC HỌC KHI",
+   "srcnote": "QĐ 2345/QĐ-NHNN · TỪ 01/07/2024 · THEO BÁO CHÍ",
+   "rows": [
+    {
+     "k": "MỘT LẦN CHUYỂN",
+     "v": "TRÊN 10 TRIỆU",
+     "at": [
+      1,
+      "mười"
+     ]
+    },
+    {
+     "k": "TỔNG TRONG NGÀY",
+     "v": "TRÊN 20 TRIỆU",
+     "at": 2
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "DỮ LIỆU ĐỂ SO",
+   "rows": [
+    {
+     "k": "1",
+     "v": "CHIP CĂN CƯỚC CÔNG DÂN",
+     "at": [
+      3,
+      "con"
+     ]
+    },
+    {
+     "k": "2",
+     "v": "TÀI KHOẢN ĐỊNH DANH ĐIỆN TỬ",
+     "at": [
+      3,
+      "tài"
+     ]
+    },
+    {
+     "k": "3",
+     "v": "DỮ LIỆU NGÂN HÀNG ĐÃ THU",
+     "at": [
+      3,
+      "dữ",
+      1
+     ]
+    }
+   ],
+   "total": {
+    "k": "MỤC TIÊU",
+    "v": "CHẶN TÀI KHOẢN “MƯỢN”",
+    "at": 4
+   }
+  },
+  {
+   "type": "question",
+   "at": 5,
+   "text": "Vì sao phải quay đầu,\nhay chớp mắt?"
+  },
+  {
+   "type": "myth",
+   "at": 7,
+   "mythLab": "BỐN TRẠM HỎI",
+   "myth": "CÓ PHẢI NGƯỜI NÀY?",
+   "truthLab": "BƯỚC KIỂM TRA HỎI",
+   "truth": "CÓ PHẢI NGƯỜI THẬT?",
+   "strikeAt": [
+    8,
+    "Bước"
+   ],
+   "truthAt": [
+    8,
+    "có"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 9,
+   "title": "MỌI THỨ ĐỀU CÓ MẶT",
+   "rows": [
+    {
+     "k": "1",
+     "v": "MỘT NGƯỠNG · AN TOÀN ↔ TIỆN LỢI",
+     "at": 10
+    },
+    {
+     "k": "2",
+     "v": "RẤT CHÍNH XÁC · VỚI ẢNH TỐT",
+     "at": 11
+    },
+    {
+     "k": "3",
+     "v": "MỘT DÃY SỐ CỦA BẠN · CẤT Ở ĐÂU ĐÓ",
+     "at": 12
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 07",
+  "t": "KHUÔN MẶT Ở QUẦY GIAO DỊCH"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

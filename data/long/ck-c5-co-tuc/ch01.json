@@ -1,0 +1,179 @@
+{
+ "title": "Mười phần trăm của cái gì?",
+ "lines": [
+  {
+   "t": "Cụm chữ đầu tiên: cổ tức bằng tiền, mười phần trăm.",
+   "p": 0.8
+  },
+  {
+   "t": "Mười phần trăm ấy không tính trên số tiền bạn bỏ ra mua cổ phiếu.",
+   "p": 1.0
+  },
+  "Nó tính trên mệnh giá.",
+  "Mệnh giá là một con số in sẵn cho mỗi cổ phiếu, thường là mười nghìn đồng.",
+  "Nó gần như không liên quan gì tới giá bạn mua trên sàn.",
+  {
+   "t": "Giá trên sàn lên hay xuống mỗi ngày, mệnh giá vẫn đứng yên.",
+   "p": 1.0
+  },
+  "Vậy cổ tức mười phần trăm, là một nghìn đồng cho mỗi cổ phiếu.",
+  "Với cổ phiếu ví dụ giá bốn mươi nghìn, một nghìn đồng chỉ bằng hai phẩy năm phần trăm số tiền bạn bỏ ra.",
+  {
+   "t": "Tức là con số mười phần trăm trên thông báo, với người mua giá bốn mươi nghìn, chỉ còn hai phẩy năm?",
+   "ask": 1
+  },
+  {
+   "t": "Đúng vậy.",
+   "p": 1.0
+  },
+  "Con số hai phẩy năm ấy có tên riêng, là tỷ suất cổ tức: cổ tức chia cho giá cổ phiếu.",
+  "Cùng một nghìn đồng cổ tức, nếu giá cổ phiếu là hai mươi nghìn, tỷ suất là năm phần trăm.",
+  {
+   "t": "Nếu giá là một trăm nghìn, tỷ suất chỉ còn một phần trăm.",
+   "p": 1.0
+  },
+  "Tờ thông báo luôn ghi tỷ lệ trên mệnh giá, vì đó là cách doanh nghiệp tính.",
+  "Còn người mua có thể tự đổi ra tỷ suất trên giá mình trả.",
+  "Đó là cụm chữ thứ nhất. Và nó mới chỉ là chuyện số học.",
+  "Cụm thứ hai mới là chỗ nhiều người bất ngờ."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CỤM CHỮ THỨ NHẤT",
+   "title": "MƯỜI PHẦN TRĂM\nCỦA CÁI GÌ?",
+   "sub": "CỔ TỨC BẰNG TIỀN · 10%",
+   "vid": "6980366",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Cụm"
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 1,
+   "mythLab": "KHÔNG TÍNH TRÊN",
+   "myth": "TIỀN BẠN BỎ RA",
+   "truthLab": "MÀ TÍNH TRÊN",
+   "truth": "MỆNH GIÁ",
+   "strikeAt": [
+    1,
+    "không"
+   ],
+   "truthAt": [
+    2,
+    "mệnh"
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "from": 10000,
+   "to": 10000,
+   "suffix": " Đ",
+   "label": "MỆNH GIÁ MỖI CỔ PHIẾU · THƯỜNG LÀ",
+   "sub": {
+    "text": "GẦN NHƯ KHÔNG LIÊN QUAN GIÁ TRÊN SÀN",
+    "at": 4
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 6,
+   "title": "CỔ TỨC 10% · MỖI CỔ PHIẾU",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · GIÁ 40.000 Đ · CỔ TỨC 10% MỆNH GIÁ",
+   "rows": [
+    {
+     "k": "10% × 10.000 Đ",
+     "v": "1.000 Đ",
+     "at": [
+      6,
+      "một"
+     ]
+    },
+    {
+     "k": "SO VỚI GIÁ MUA 40.000 Đ",
+     "v": "2,5%",
+     "at": [
+      7,
+      "hai"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "text": "10% → 2,5%",
+   "sub": "VỚI NGƯỜI MUA GIÁ 40.000 Đ · VÍ DỤ GIẢ ĐỊNH",
+   "subAt": 8
+  },
+  {
+   "type": "bars",
+   "at": 10,
+   "title": "TỶ SUẤT CỔ TỨC · CÙNG 1.000 Đ (% GIÁ MUA)",
+   "unit": "TỶ SUẤT = CỔ TỨC ÷ GIÁ CỔ PHIẾU · VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "GIÁ 20.000 Đ",
+     "v": 5,
+     "lbl": "5%",
+     "at": [
+      11,
+      "năm"
+     ]
+    },
+    {
+     "k": "GIÁ 40.000 Đ",
+     "v": 2.5,
+     "lbl": "2,5%",
+     "at": [
+      10,
+      "tỷ"
+     ],
+     "acc": true
+    },
+    {
+     "k": "GIÁ 100.000 Đ",
+     "v": 1,
+     "lbl": "1%",
+     "at": [
+      12,
+      "một"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "THÔNG BÁO GHI TRÊN MỆNH GIÁ",
+     "at": 13,
+     "sm": true
+    },
+    {
+     "text": "NGƯỜI MUA TỰ ĐỔI RA TỶ SUẤT",
+     "at": 14,
+     "acc": true
+    },
+    {
+     "text": "cụm thứ hai mới là chỗ bất ngờ",
+     "at": 16,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "MƯỜI PHẦN TRĂM CỦA CÁI GÌ?"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

@@ -1,0 +1,119 @@
+{
+ "title": "Phần thưởng đến muộn",
+ "lines": [
+  {
+   "t": "Có một khó khăn mà ít người nghĩ tới khi nói về chuyện máy tự học chơi game.",
+   "p": 0.8
+  },
+  {
+   "t": "Cỗ máy học bằng phần thưởng. Thắng thì được thưởng, thua thì không.",
+   "p": 1.0
+  },
+  "Với trò Atari, điểm số tăng lên gần như ngay sau mỗi hành động tốt.",
+  {
+   "t": "Cỗ máy dễ dàng nhận ra: bấm nút này lúc này, thì được điểm.",
+   "p": 1.0
+  },
+  "Nhưng một ván StarCraft có thể kéo dài tới một giờ, với hàng chục nghìn hành động.",
+  "Và chỉ đến cuối ván, cỗ máy mới biết mình thắng hay thua.",
+  {
+   "t": "Vậy trong hàng chục nghìn hành động ấy, hành động nào đã dẫn tới chiến thắng?",
+   "p": 1.0
+  },
+  "Đó là một bài toán có tên riêng trong ngành: bài toán phân bổ công lao.",
+  {
+   "t": "Giống như một đội bóng thắng một trận, và bạn phải đoán xem đường chuyền nào ở phút thứ mười đã góp phần vào bàn thắng ở phút thứ tám mươi.",
+   "p": 1.0
+  },
+  "Đây chính là lý do bước học bắt chước con người ban đầu quan trọng đến thế.",
+  "Nó cho cỗ máy một điểm xuất phát hợp lý, thay vì phải đi từ những cú bấm ngẫu nhiên.",
+  "Rồi hai trăm năm chơi trong giải đấu, giúp nó dần nhận ra những gì thật sự dẫn tới chiến thắng.",
+  "Phần thưởng đến muộn. Nhưng với đủ nhiều ván đấu, nó vẫn đến."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "9",
+   "k": "CHƯƠNG CHÍN",
+   "title": "PHẦN THƯỞNG\nĐẾN MUỘN",
+   "sub": "MỘT KHÓ KHĂN ÍT AI NGHĨ TỚI",
+   "vid": "1085656",
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU",
+   "titleAt": [
+    0,
+    null,
+    0,
+    0.05
+   ],
+   "ms": 10
+  },
+  {
+   "type": "myth",
+   "at": 2,
+   "mythLab": "ATARI",
+   "myth": "ĐIỂM TĂNG NGAY",
+   "truthLab": "STARCRAFT",
+   "truth": "BIẾT THẮNG THUA Ở CUỐI VÁN",
+   "strikeAt": 4,
+   "truthAt": 5
+  },
+  {
+   "type": "question",
+   "at": 6,
+   "text": "Hành động nào\nđã dẫn tới chiến thắng?"
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "BÀI TOÁN PHÂN BỔ CÔNG LAO",
+   "rows": [
+    {
+     "k": "VÍ DỤ",
+     "v": "ĐƯỜNG CHUYỀN PHÚT 10",
+     "at": 8
+    },
+    {
+     "k": "VÀ",
+     "v": "BÀN THẮNG PHÚT 80",
+     "at": [
+      8,
+      null,
+      0,
+      0.6
+     ]
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 9,
+   "items": [
+    {
+     "year": "1",
+     "text": "bắt chước người: điểm xuất phát hợp lý",
+     "at": 9
+    },
+    {
+     "year": "2",
+     "text": "200 năm giải đấu: tìm điều dẫn tới thắng",
+     "at": 11
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 12,
+   "text": "ĐẾN MUỘN",
+   "sub": "NHƯNG VỚI ĐỦ NHIỀU VÁN · VẪN ĐẾN",
+   "subAt": 12
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 09",
+  "t": "PHẦN THƯỞNG ĐẾN MUỘN"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}
