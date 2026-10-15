@@ -40,7 +40,7 @@ CH["ch01"] = {"hud": {"k": "CHƯƠNG 01", "t": "MƯỜI PHẦN TRĂM CỦA CÁI 
     {"type": "ledger", "at": 6, "title": "CỔ TỨC 10% · MỖI CỔ PHIẾU", "srcnote": HX,
      "rows": [{"k": "10% × 10.000 Đ", "v": "1.000 Đ", "at": [6, "một"]}, {"k": "SO VỚI GIÁ MUA 40.000 Đ", "v": "2,5%", "at": [7, "hai"]}]},
     {"type": "slam", "at": 8, "text": "10% → 2,5%", "sub": "VỚI NGƯỜI MUA GIÁ 40.000 Đ · " + H1, "subAt": 8},
-    {"type": "bars", "at": 10, "title": "TỶ SUẤT CỔ TỨC · CÙNG 1.000 Đ (% GIÁ MUA)", "unit": "TỶ SUẤT = CỔ TỨC ÷ GIÁ CỔ PHIẾU · " + H1,
+    {"type": "bars", "at": 10, "title": "TỶ SUẤT CỔ TỨC (% GIÁ MUA)", "unit": "CÙNG 1.000 Đ · " + H1,
      "items": [{"k": "GIÁ 20.000 Đ", "v": 5, "lbl": "5%", "at": [11, "năm"]}, {"k": "GIÁ 40.000 Đ", "v": 2.5, "lbl": "2,5%", "at": [10, "tỷ"], "acc": True},
                {"k": "GIÁ 100.000 Đ", "v": 1, "lbl": "1%", "at": [12, "một"]}]},
     {"type": "kinetic", "at": 13, "items": [{"text": "THÔNG BÁO GHI TRÊN MỆNH GIÁ", "at": 13, "sm": True}, {"text": "NGƯỜI MUA TỰ ĐỔI RA TỶ SUẤT", "at": 14, "acc": True},

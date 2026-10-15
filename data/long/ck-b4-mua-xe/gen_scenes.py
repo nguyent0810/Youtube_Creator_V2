@@ -16,7 +16,7 @@ R = json.loads((D / "results.json").read_text(encoding="utf-8"))
 assert R["onroad"]["lan_banh"] == 800 and round(R["own_total_month_y1"]) == 10 and round(R["breakeven_taxi"]) == 15
 assert round(R["loan"]["interest_5y"]) == 184 and round(R["net_5y"]["tra_thang"]) == 689 and round(R["net_5y"]["tra_gop"]) == 873
 H1 = "VÍ DỤ GIẢ ĐỊNH"
-HX = "VÍ DỤ GIẢ ĐỊNH · XE 700 TRIỆU · ĐĂNG KÝ HÀ NỘI"
+HX = "VÍ DỤ GIẢ ĐỊNH · XE 700 TRIỆU"
 VM = "VIDEO MINH HỌA"
 CH = {}
 
@@ -54,14 +54,14 @@ CH["ch01"] = {"hud": {"k": "CHƯƠNG 01", "t": "BẢY TRĂM THÀNH TÁM TRĂM"},
 CH["ch02"] = {"hud": {"k": "CHƯƠNG 02", "t": "TIỀN NUÔI XE"}, "bgm": {"mood": "curious", "gain": 0.11}, "scenes": [
     {"type": "chapter", "no": "2", "k": "CHƯƠNG HAI", "title": "TIỀN NUÔI XE", "sub": "ĐỒNG HỒ CHUYỂN SANG TÍNH THEO THÁNG", "vid": "15341182", "illus": VM, "titleAt": [0, "Bây"]},
     {"type": "ledger", "at": 1, "title": "HAI KHOẢN AI CÓ XE CŨNG NỘP", "srcnote": "NĐ 90/2023 · NĐ 67/2023",
-     "rows": [{"k": "PHÍ ĐƯỜNG BỘ", "v": "130 NGHÌN/THÁNG", "at": 2}, {"k": "BẢO HIỂM TNDS BẮT BUỘC", "v": "437 NGHÌN/NĂM · CHƯA THUẾ", "at": 3}],
+     "rows": [{"k": "PHÍ ĐƯỜNG BỘ", "v": "130 NGHÌN/THÁNG", "at": 2}, {"k": "BẢO HIỂM TNDS", "v": "437 NGHÌN/NĂM CHƯA THUẾ", "at": 3}],
      "total": {"k": "CỘNG LẠI", "v": "< 200 NGHÌN/THÁNG", "at": 4}},
     {"type": "kinetic", "at": 5, "items": [{"text": "KHOẢN LỚN NẰM Ở CHỖ KHÁC", "at": 5, "acc": True}, {"text": "và tuỳ cách bạn dùng xe", "at": [5, "và"], "sm": True}]},
     {"type": "broll", "at": 7, "vid": "5982899", "veil": 0.55, "illus": VM,
      "kin": [{"text": "GỬI XE · 1,5 TRIỆU/THÁNG", "at": 7, "sm": True}, {"text": "12.000 KM · 7 LÍT/100 KM · 24.000 Đ/LÍT", "at": 8, "sm": True},
              {"text": "≈ 1,7 TRIỆU TIỀN XĂNG MỖI THÁNG", "at": 9, "acc": True}]},
     {"type": "kinetic", "at": 10, "items": [{"text": "CẦU ĐƯỜNG · RỬA XE · GỬI XE KHI ĐI CHƠI", "at": 10, "sm": True}, {"text": "những khoản nhỏ ít ai ghi lại", "at": [10, "những"], "acc": True}]},
-    {"type": "bars", "at": 11, "title": "TIỀN NUÔI XE MỖI THÁNG · NĂM ĐẦU (TRIỆU ĐỒNG)", "unit": HX,
+    {"type": "bars", "at": 11, "title": "TIỀN NUÔI XE · NĂM ĐẦU (TRIỆU/THÁNG)", "unit": HX,
      "items": [{"k": "XĂNG", "v": 1.68, "lbl": "1,7", "at": [11, None, 0, 0.05]}, {"k": "GỬI XE", "v": 1.5, "lbl": "1,5", "at": [11, None, 0, 0.3]},
                {"k": "BẢO HIỂM VẬT CHẤT", "v": 0.875, "lbl": "≈ 0,9", "at": [12, "bảo"]}, {"k": "BẢO DƯỠNG", "v": 0.5, "lbl": "0,5", "at": [11, "sáu"]},
                {"k": "PHÍ + BẢO HIỂM BẮT BUỘC", "v": 0.17, "lbl": "0,2", "at": [12, "thêm"]}]},
@@ -127,7 +127,7 @@ CH["ch06"] = {"hud": {"k": "GIỚI HẠN", "t": "KHI NÀO KHÔNG ĐÚNG VỚI B�
                                                                           {"k": "3", "v": "XE ĐIỆN: TRƯỚC BẠ 0% TỚI HẾT 02/2027", "at": 4}]},
     {"type": "kinetic", "at": 5, "items": [{"text": "LÃI VAY · LÃI TIẾT KIỆM · GIÁ XE CŨ", "at": 5, "sm": True}, {"text": "ĐỀU THAY ĐỔI · KÊNH KHÔNG DỰ BÁO", "at": 6, "acc": True}]},
     {"type": "ledger", "at": 7, "title": "BA CÂU TỰ ĐIỀN", "rows": [{"k": "1", "v": "ĐI LẠI MỖI THÁNG BAO NHIÊU?", "at": 8}, {"k": "2", "v": "THÁNG ĐẦU SAU ƯU ĐÃI · % THU NHẬP?", "at": 9},
-                                                                {"k": "3", "v": "XE CŨ CÙNG LOẠI · CÒN BAO NHIÊU %?", "at": 10}], "total": {"k": "TRẢ LỜI XONG", "v": "BẠN CÓ ĐỒNG HỒ CỦA RIÊNG MÌNH", "at": 11}},
+                                                                {"k": "3", "v": "XE CŨ CÙNG LOẠI · CÒN BAO NHIÊU %?", "at": 10}], "total": {"k": "TRẢ LỜI XONG", "v": "CÓ ĐỒNG HỒ CỦA RIÊNG MÌNH", "at": 11}},
     {"type": "broll", "at": 12, "vid": "15510261", "veil": 0.5, "illus": VM,
      "kin": [{"text": "ĐỒNG HỒ XE CÔNG NGHỆ · AI CŨNG THẤY", "at": 12}, {"text": "ĐỒNG HỒ XE CỦA MÌNH · CHỈ NGƯỜI CHỊU TÍNH MỚI THẤY", "at": 13, "acc": True}]},
     {"type": "question", "at": 14, "text": "Có tám trăm triệu hôm nay,\nbạn chọn lối nào?"},

@@ -54,7 +54,7 @@ CH["ch02"] = {"hud": {"k": "CHƯƠNG 02", "t": "MƯỜI NGHÌN TÀI KHOẢN"}, "
     {"type": "ledger", "at": 1, "title": "HIỆU ỨNG PHÂN BỔ · SHEFRIN & STATMAN 1985", "rows": [{"k": "BÁN CỔ PHIẾU LÃI", "v": "QUÁ SỚM", "at": [2, "bán"]}, {"k": "GIỮ CỔ PHIẾU LỖ", "v": "QUÁ LÂU", "at": [2, "giữ"]}]},
     {"type": "source", "at": 3, "source": "ODEAN · JOURNAL OF FINANCE · 1998", "ref": "10.000 TÀI KHOẢN · 7 NĂM",
      "snippet": "nhà đầu tư [[thích chốt lãi hơn hẳn cắt lỗ]] · dữ liệu một công ty môi giới tại Mỹ", "hlAt": [4, "mười"], "seal": "ĐO TRÊN GIAO DỊCH THẬT", "sealAt": 5},
-    {"type": "bars", "at": 6, "title": "TỶ LỆ ĐƯỢC BÁN RA · PHẦN LỚN CÁC THÁNG (%)", "unit": "ODEAN 1998 · 10.000 TÀI KHOẢN",
+    {"type": "bars", "at": 6, "title": "TỶ LỆ ĐƯỢC BÁN RA (%)", "unit": "ODEAN 1998 · 10.000 TÀI KHOẢN",
      "items": [{"k": "KHOẢN ĐANG LÃI", "v": 14.8, "lbl": "14,8%", "at": [6, "mười"], "acc": True}, {"k": "KHOẢN ĐANG LỖ", "v": 9.8, "lbl": "9,8%", "at": [7, "chín"]}]},
     {"type": "counter", "at": 8, "from": 1.5, "to": 1.5, "prefix": "≈ ", "suffix": " LẦN", "label": "KHẢ NĂNG BÁN KHOẢN LÃI SO VỚI KHOẢN LỖ", "sub": {"text": "ĐÚNG NHƯ CÂU TRẢ LỜI Ở ĐẦU VIDEO", "at": 9}},
     {"type": "question", "at": 10, "text": "Biết đâu họ có\nlý do chính đáng?"},
@@ -66,7 +66,7 @@ CH["ch02"] = {"hud": {"k": "CHƯƠNG 02", "t": "MƯỜI NGHÌN TÀI KHOẢN"}, "
 
 CH["ch03"] = {"hud": {"k": "CHƯƠNG 03", "t": "PHÉP TOÁN CỦA HỐ SÂU"}, "bgm": {"mood": "mystery", "gain": 0.11}, "scenes": [
     {"type": "chapter", "no": "3", "k": "CHƯƠNG BA", "title": "PHÉP TOÁN\nCỦA HỐ SÂU", "sub": "CHỜ VỀ BỜ RỒI BÁN", "vid": CLIMB, "illus": VM, "titleAt": [0, "Giữ"]},
-    {"type": "bars", "at": 2, "title": "LỖ BAO NHIÊU · CẦN LÃI BAO NHIÊU ĐỂ VỀ CHỖ CŨ (%)", "unit": "TOÁN: LÃI CẦN = LỖ ÷ (1 − LỖ)",
+    {"type": "bars", "at": 2, "title": "CẦN LÃI BAO NHIÊU ĐỂ HOÀ VỐN (%)", "unit": "LÃI CẦN = LỖ ÷ (1 − LỖ)",
      "items": [{"k": "LỖ 10%", "v": 11.1, "lbl": "+11", "at": 3}, {"k": "LỖ 20%", "v": 25, "lbl": "+25", "at": 4}, {"k": "LỖ 40%", "v": 66.7, "lbl": "+67", "at": 5, "acc": True},
                {"k": "LỖ 50%", "v": 100, "lbl": "+100", "at": 6}]},
     {"type": "kinetic", "at": 8, "items": [{"text": "HỐ CÀNG SÂU", "at": 8, "sm": True}, {"text": "LEO LÊN DỐC HƠN RƠI XUỐNG", "at": [8, "đường"], "acc": True}]},
@@ -87,7 +87,7 @@ CH["ch04"] = {"hud": {"k": "CHƯƠNG 04", "t": "MỎ NEO GIÁ MUA"}, "bgm": {"mo
     {"type": "myth", "at": 5, "mythLab": "CÂU HỎI QUEN", "myth": "BAO GIỜ VỀ 50?", "truthLab": "CÂU HỎI CỦA TIỀN", "truth": "40 TRIỆU NÊN Ở ĐÂU?", "strikeAt": [6, "Trong"], "truthAt": [7, "từ"]},
     {"type": "question", "at": 8, "text": "Chưa bán thì chưa lỗ mà?"},
     {"type": "ledger", "at": 9, "title": "TÀI KHOẢN HÔM NAY", "srcnote": H1, "rows": [{"k": "NẾU BÁN", "v": "40 TRIỆU", "at": 10}, {"k": "NẾU KHÔNG BÁN", "v": "VẪN 40 TRIỆU", "at": [10, "dù"]}],
-     "total": {"k": "KHÔNG BÁN", "v": "KHÓ NHÌN THẤY HƠN · KHÔNG BIẾN MẤT", "at": 11}},
+     "total": {"k": "KHÔNG BÁN", "v": "KHÓ THẤY HƠN · VẪN CÒN ĐÓ", "at": 11}},
     {"type": "broll", "at": 12, "vid": WORRY, "veil": 0.55, "illus": VM,
      "kin": [{"text": "MỘT CÁCH GỠ MỎ NEO", "at": 12, "sm": True}, {"text": "CẦM 40 TRIỆU TIỀN MẶT HÔM NAY", "at": 13, "sm": True},
              {"text": "CÓ MUA LẠI ĐÚNG CỔ PHIẾU NÀY KHÔNG?", "at": 14, "acc": True}]},

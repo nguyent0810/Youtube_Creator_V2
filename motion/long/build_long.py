@@ -517,7 +517,8 @@ def unresolved_cues(o, path=""):
 
 # Thẻ sổ (ledger): mỗi dòng là "khoá  giá trị" trên MỘT hàng, chữ JetBrains Mono (rộng 0,6 em), không xuống dòng.
 # (ô trong, cỡ chữ dòng, cỡ chữ dòng tổng, khoảng cách, bề rộng tối thiểu của khoá tính theo em) -- lấy từ casewide.css.
-LEDGER_BOX = {"lab": (1128, 46, 52, 48, 2.2), "chart": (1208, 34, 40, 24, 0), None: (968, 34, 40, 24, 0)}
+# 15/10/2026: "chart" theo .th-chart .ledger .row 44px / tot 50px / gap 48 (trước ghi 34/40/24 -> B4 lọt dòng tràn thẻ)
+LEDGER_BOX = {"lab": (1128, 46, 52, 48, 2.2), "chart": (1208, 44, 50, 48, 0), None: (968, 34, 40, 24, 0)}
 
 
 def ledger_overflow(scenes, theme) -> list[str]:
@@ -533,6 +534,18 @@ def ledger_overflow(scenes, theme) -> list[str]:
             w = (max(len(str(r.get("k", ""))) * 0.6, kmin) + len(str(r.get("v", ""))) * 0.6) * f + gap
             if w > box:
                 out.append(f"ledger#{k} \"{r.get('k')} | {r.get('v')}\" ≈ {w:.0f}px > {box}px")
+    return out
+
+
+def bars_collide(scenes) -> list[str]:
+    """Tiêu đề biểu đồ (.bch .t 44px, trái) và chú thích (.bch .u 22px mono +.18em, phải) cùng một hàng 1620px, không xuống
+    dòng -> dài là đè nhau. Retro 15/10/2026: B4 ch02, MIM khuôn mặt ch06 đè chữ; soi khung hình mới thấy."""
+    out = []
+    for k, sc in enumerate(scenes):
+        if sc.get("title") and sc.get("unit") and sc["type"] in ("bars", "chart", "line"):
+            w = len(sc["title"]) * 26.8 + len(sc["unit"]) * 17.1 + 24     # đo trên khung D3 ch02: 26.7 / 17.1 px mỗi ký tự, chừa 24px
+            if w > 1620:
+                out.append(f"{sc['type']}#{k} tiêu đề {len(sc['title'])} + chú thích {len(sc['unit'])} ký tự ≈ {w:.0f}px > 1620px")
     return out
 
 
@@ -819,6 +832,9 @@ def do_html(topic, only=None):
         wide = ledger_overflow(scenes, THEME["name"])
         if wide:
             raise SystemExit(f"{name}: dòng sổ dài hơn thẻ (rút gọn khoá/giá trị): " + "; ".join(wide))
+        bc = bars_collide(scenes)
+        if bc:
+            raise SystemExit(f"{name}: tiêu đề biểu đồ đè chú thích (rút gọn một trong hai): " + "; ".join(bc))
         seed = sum(ord(c) * (i + 1) for i, c in enumerate(topic + name)) % 100000 + 7
         case = {"topic": topic, "ch": name, "dur": d, "seed": seed, "accent": spec.get("accent", CHAN.get("accent", "#e2402d")), "look": look,
                 "theme": THEME["name"] or None, **({"brand": CHAN["brand"]} if CHAN.get("brand") else {}), "autoTr": spec.get("autoTr", spec.get("theme") == "shanghai"), "hud": ch.get("hud", {}),

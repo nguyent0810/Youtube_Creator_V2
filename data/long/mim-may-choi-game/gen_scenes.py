@@ -107,7 +107,7 @@ CH["ch05"] = {"hud": {"k": "CHƯƠNG 05", "t": "STARCRAFT LÀ GÌ"}, "bgm": {"mo
 
 CH["ch06"] = {"hud": {"k": "CHƯƠNG 06", "t": "MƯỜI MŨ HAI MƯƠI SÁU"}, "bgm": {"mood": "mystery", "gain": 0.11}, "scenes": [
     chap(6, "CHƯƠNG SÁU", "MỘT CON SỐ CÓ\nHAI MƯƠI SÁU SỐ KHÔNG", "ĐIỀU THỨ TƯ", CABLES, [0, None, 0, 0.05]),
-    {"type": "bars", "at": 1, "title": "HÀNH ĐỘNG HỢP LỆ MỖI BƯỚC · SỐ CHỮ SỐ", "unit": "CỜ VUA: VÀI CHỤC · STARCRAFT: THEO DEEPMIND 01/2019",
+    {"type": "bars", "at": 1, "title": "SỐ CHỮ SỐ · LỰA CHỌN MỖI BƯỚC", "unit": "THEO DEEPMIND 01/2019",
      "items": [{"k": "CỜ VUA", "v": 2, "lbl": "VÀI CHỤC", "at": 1}, {"k": "STARCRAFT", "v": 27, "lbl": "≈ 10^26", "at": 2, "acc": True}]},
     {"type": "ledger", "at": 4, "title": "VÌ SAO NHIỀU ĐẾN THẾ", "rows": [{"k": "CHỌN", "v": "ĐƠN VỊ NÀO", "at": [5, None, 0, 0.3]}, {"k": "CHO NÓ", "v": "LÀM GÌ", "at": [5, None, 0, 0.5]},
                                                                       {"k": "Ở", "v": "VỊ TRÍ NÀO", "at": [5, None, 0, 0.75]}], "total": {"k": "NHÂN LẠI", "v": "PHÌNH RẤT NHANH", "at": 6}},
