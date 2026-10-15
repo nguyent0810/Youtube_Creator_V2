@@ -17,7 +17,7 @@ assert R["yield_pct"] == 2.5 and R["dividend_capture"]["result"] == -326000 and 
 H1 = "VÍ DỤ GIẢ ĐỊNH"
 HX = "VÍ DỤ GIẢ ĐỊNH · GIÁ 40.000 Đ · CỔ TỨC 10% MỆNH GIÁ"
 VM = "VIDEO MINH HỌA"
-CAKE, DOC, LAPTOP, MKT, MAG = "5615174", "8731555", "8480232", "38905686", "6980366"
+CAKE, DOC, LAPTOP, MKT, MAG = "5615174", "8731555", "8480232", "5253412", "6980366"   # MKT: 38905686 lộ mã cổ phiếu + tên công ty -> thay 15/10
 CH = {}
 
 CH["ch00"] = {"hud": {"k": "MỞ ĐẦU", "t": "MỘT TỜ THÔNG BÁO"}, "bgm": {"mood": "curious", "gain": 0.10}, "scenes": [

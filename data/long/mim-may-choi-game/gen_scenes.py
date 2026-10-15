@@ -18,8 +18,8 @@ SAY = {"=AI": "ây ai", "deepmind": "Đíp-mai", "=DeepMind": "Đíp-mai", "open
        "san": "Xan", "francisco": "Phran-xít-cô", "atari": "A-ta-ri", "=DQN": "Đi Kiu En", "nature": "Nê-chơ", "league": "Li", "lee": "Li",
        "sedol": "Xê-đôn", "deep": "Đíp", "blue": "Blu", "wikipedia": "Uy-ki-pê-đi-a", "google": "Gu-gồ", "ukraine": "U-crai-na", "brazil": "Bra-xin"}
 VM = "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU"
-GAMER, GAMER2, TOURN, ARCADE, SERVER, CABLES, FOG, FOG2, TEAM, CHESS, DIGI = (
-    "9071216", "7849218", "7914772", "7986592", "5028622", "1085656", "4296589", "8233026", "7551536", "6599643", "854323")
+GAMER, GAMER2, TOURN, ARCADE, SERVER, CABLES, FOG, FOG2, TEAM, CHESS, DIGI, KEYS, KEYS2 = (
+    "9071216", "7849218", "7914772", "7986592", "5028622", "1085656", "4296589", "8233026", "7551536", "6599643", "854323", "7849220", "7047256")
 
 
 def five(at, lit, lit_at, title="NĂM ĐIỀU CỜ VUA KHÔNG CÓ"):
@@ -60,7 +60,7 @@ CH["ch01"] = {"hud": {"k": "CHƯƠNG 01", "t": "SAU NHỮNG BÀN CỜ"}, "bgm": 
     {"type": "ledger", "at": 3, "title": "BÀN CỜ LÀ THẾ GIỚI GỌN GÀNG", "rows": [{"k": "1", "v": "HAI NGƯỜI", "at": [4, None, 0, 0.05]}, {"k": "2", "v": "ĐI LẦN LƯỢT", "at": [4, None, 0, 0.3]},
                                                                              {"k": "3", "v": "MỌI QUÂN NẰM TRÊN BÀN", "at": [4, None, 0, 0.6]}]},
     bro(5, FOG, [{"text": "THẾ GIỚI THẬT KHÔNG CHỜ BẠN", "at": 6, "acc": True}, {"text": "không thấy hết · không một mình", "at": 7, "sm": True}]),
-    {"type": "kinetic", "at": 9, "items": [{"text": "MỘT SÂN CHƠI MỚI", "at": 9, "sm": True}, {"text": "GIỐNG THẾ GIỚI THẬT HƠN", "at": [9, None, 0, 0.4], "acc": True},
+    {"type": "kinetic", "at": 9, "items": [{"text": "MỘT SÂN CHƠI MỚI", "at": 9, "sm": True}, {"text": "GẦN ĐỜI THẬT HƠN CỜ VUA", "at": [9, None, 0, 0.4], "acc": True},
                                           {"text": "nhưng luật rõ ràng · kết quả đo được", "at": [9, None, 0, 0.7], "sm": True}]},
     {"type": "ledger", "at": 11, "title": "HAI PHÒNG THÍ NGHIỆM · HAI TRÒ CHƠI", "rows": [{"k": "DEEPMIND", "v": "STARCRAFT II", "at": 13}, {"k": "OPENAI", "v": "DOTA 2", "at": [13, None, 0, 0.5]}]},
 ]}
@@ -101,7 +101,7 @@ CH["ch05"] = {"hud": {"k": "CHƯƠNG 05", "t": "STARCRAFT LÀ GÌ"}, "bgm": {"mo
                                            {"year": "QUÂN", "text": "do thám · phòng thủ · tấn công", "at": 4}]},
     {"type": "ledger", "at": 5, "title": "BA CHỦNG TỘC", "rows": [{"k": "MỖI CHỦNG TỘC", "v": "MỘT KIỂU CHƠI KHÁC HẲN", "at": 5}, {"k": "MỖI CHIẾN THUẬT", "v": "CÓ CÁCH KHẮC CHẾ", "at": 7}]},
     bro(8, GAMER, [{"text": "CÙNG LÚC", "at": 8, "sm": True}, {"text": "KINH TẾ · TIỀN TUYẾN · ĐOÁN Ý ĐỐI THỦ", "at": 9, "acc": True},
-                   {"text": "trong lúc đồng hồ vẫn chạy", "at": 10, "sm": True}], ms=4),
+                   {"text": "trong lúc đồng hồ vẫn chạy", "at": 10, "sm": True}], ms=2),
     {"type": "slam", "at": 11, "text": "THỬ THÁCH SAU CỜ VÂY", "sub": "MỘT TRONG NHỮNG MÔN THỂ THAO ĐIỆN TỬ KHÓ NHẤT", "subAt": 11},
 ]}
 
@@ -153,14 +153,14 @@ CH["ch10"] = {"hud": {"k": "CHƯƠNG 10", "t": "MƯỜI VÁN, MƯỜI TRẬN TH�
 ]}
 
 CH["ch11"] = {"hud": {"k": "CHƯƠNG 11", "t": "ĐÔI TAY CỦA CỖ MÁY"}, "bgm": {"mood": "mystery", "gain": 0.11}, "scenes": [
-    chap(11, "CHƯƠNG MƯỜI MỘT", "ĐÔI TAY\nCỦA CỖ MÁY", "SỐ HÀNH ĐỘNG MỖI PHÚT", GAMER, [0, None, 0, 0.05], ms=8),
+    chap(11, "CHƯƠNG MƯỜI MỘT", "ĐÔI TAY\nCỦA CỖ MÁY", "SỐ HÀNH ĐỘNG MỖI PHÚT", KEYS, [0, None, 0, 0.05], ms=8),
     {"type": "bars", "at": 2, "title": "HÀNH ĐỘNG MỖI PHÚT · TRUNG BÌNH", "unit": "DEEPMIND · 01/2019 · ALPHASTAR 277",
      "items": [{"k": "ALPHASTAR", "v": 280, "lbl": "≈ 280", "at": 2, "acc": True}, {"k": "MANA", "v": 390, "lbl": "≈ 390", "at": 3}, {"k": "TLO", "v": 678, "lbl": "≈ 678", "at": [3, None, 0, 0.6]}]},
     {"type": "ledger", "at": 5, "title": "DEEPMIND LÀM RÕ THÊM", "rows": [{"k": "SỐ CỦA TLO", "v": "ĐẨY CAO VÌ BẤM PHÍM LIÊN TỤC", "at": 6},
                                                                       {"k": "LÚC GIAO TRANH", "v": "CÓ LÚC NHANH HƠN CẢ HAI", "at": 7}]},
     bro(8, FOG, [{"text": "KHÔNG PHẢI DI CHUYỂN MÀN HÌNH", "at": 9, "acc": True}, {"text": "thấy cùng lúc mọi nơi quân mình đang thấy", "at": 10, "sm": True},
                  {"text": "sương mù vẫn còn", "at": 11, "sm": True}], ms=6),
-    {"type": "kinetic", "at": 12, "items": [{"text": "KHÔNG BAO GIỜ PHẢI QUAY ĐẦU", "at": 12, "sm": True}, {"text": "MỘT LỢI THẾ LỚN?", "at": 13, "acc": True},
+    {"type": "kinetic", "at": 12, "items": [{"text": "KHÔNG BAO GIỜ PHẢI QUAY ĐẦU", "at": 12, "sm": True}, {"text": "LỢI THẾ · HAY KHÔNG CÔNG BẰNG?", "at": 13, "acc": True},
                                            {"text": "câu trả lời: ván thứ mười một", "at": 15, "sm": True}]},
 ]}
 
@@ -183,10 +183,10 @@ CH["ch13"] = {"hud": {"k": "CHƯƠNG 13", "t": "VÁN THỨ MƯỜI MỘT"}, "bgm
 ]}
 
 CH["ch14"] = {"hud": {"k": "CHƯƠNG 14", "t": "ĐƯỜNG LÊN GRANDMASTER"}, "bgm": {"mood": "curious", "gain": 0.11}, "scenes": [
-    chap(14, "CHƯƠNG MƯỜI BỐN", "ĐƯỜNG LÊN\nGRANDMASTER", "MƯỜI THÁNG SAU · LUẬT CHẶT HƠN", GAMER2, [0, None, 0, 0.05], ms=10),
+    chap(14, "CHƯƠNG MƯỜI BỐN", "ĐƯỜNG LÊN\nGRANDMASTER", "MƯỜI THÁNG SAU · LUẬT CHẶT HƠN", GAMER2, [0, None, 0, 0.05], ms=8),
     {"type": "ledger", "at": 1, "title": "LUẬT MỚI · DEEPMIND 10/2019", "rows": [{"k": "TẦM NHÌN", "v": "QUA CAMERA NHƯ NGƯỜI", "at": 1}, {"k": "TỐI ĐA", "v": "22 HÀNH ĐỘNG / 5 GIÂY", "at": 2},
                                                                             {"k": "CHỦNG TỘC", "v": "CẢ BA", "at": 4}], "total": {"k": "LÀM CÙNG", "v": "TUYỂN THỦ TLO", "at": 3}},
-    bro(5, GAMER, [{"text": "MÁY CHỦ CHÍNH THỨC · CHƠI ẨN DANH", "at": 5, "acc": True}, {"text": "cùng bản đồ · cùng điều kiện", "at": 6, "sm": True},
+    bro(5, KEYS2, [{"text": "MÁY CHỦ CHÍNH THỨC · CHƠI ẨN DANH", "at": 5, "acc": True}, {"text": "cùng bản đồ · cùng điều kiện", "at": 6, "sm": True},
                    {"text": "đối thủ không biết mình đấu với máy", "at": 7, "sm": True}], ms=2),
     {"type": "source", "at": 8, "source": "NATURE · 10/2019", "ref": "GRANDMASTER · CẢ BA CHỦNG TỘC", "snippet": "xếp trên [[99,8% người chơi đang có thứ hạng]]",
      "hlAt": 10, "seal": "ĐIỀU KIỆN GẦN VỚI NGƯỜI HƠN", "sealAt": [10, None, 0, 0.6]},
@@ -207,7 +207,7 @@ CH["ch15"] = {"hud": {"k": "CHƯƠNG 15", "t": "NĂM NGƯỜI MỘT ĐỘI"}, "b
 ]}
 
 CH["ch16"] = {"hud": {"k": "CHƯƠNG 16", "t": "MỘT CHỌI MỘT"}, "bgm": {"mood": "curious", "gain": 0.11}, "scenes": [
-    chap(16, "CHƯƠNG MƯỜI SÁU", "MỘT CHỌI MỘT", "THE INTERNATIONAL · 08/2017", TOURN, [0, None, 0, 0.05], ms=4),
+    chap(16, "CHƯƠNG MƯỜI SÁU", "MỘT CHỌI MỘT", "THE INTERNATIONAL · 08/2017", TOURN, [0, None, 0, 0.05], ms=3),
     {"type": "ledger", "at": 1, "title": "08/2017 · THE INTERNATIONAL", "rows": [{"k": "CỖ MÁY", "v": "CHỈ CHƠI MỘT CHỌI MỘT", "at": 2}, {"k": "ĐỐI THỦ", "v": "DENDI · UKRAINE", "at": 3}],
      "total": {"k": "KẾT QUẢ", "v": "CỖ MÁY THẮNG", "at": 4}},
     {"type": "counter", "at": 5, "from": 2, "to": 2, "prefix": "≈ ", "suffix": " TUẦN", "label": "TỰ CHƠI VỚI CHÍNH MÌNH · THỜI GIAN THẬT", "sub": {"text": "THEO WIKIPEDIA", "at": 5}},
@@ -222,11 +222,11 @@ CH["ch17"] = {"hud": {"k": "CHƯƠNG 17", "t": "MỘT TRĂM TÁM MƯƠI NĂM M�
     {"type": "counter", "at": 3, "from": 180, "to": 180, "prefix": "≈ ", "suffix": " NĂM", "label": "CHƠI DOTA · MỖI NGÀY", "sub": {"text": "MỖI TƯỚNG: MỘT MẠNG NƠ-RON CÓ BỘ NHỚ", "at": 5}},
     {"type": "question", "at": 6, "text": "Còn chuyện phối hợp?"},
     {"type": "ledger", "at": 7, "title": "KHÔNG AI DẠY CHIA VIỆC", "rows": [{"k": "THƯỞNG", "v": "KHI CẢ ĐỘI THẮNG", "at": 8}, {"k": "DẦN HỌC", "v": "HY SINH CHO ĐỒNG ĐỘI", "at": [8, None, 0, 0.6]}]},
-    {"type": "kinetic", "at": 9, "items": [{"text": "MÙA HÈ 2018", "at": 9, "sm": True}, {"text": "THỬ SỨC Ở NƠI KHÓ NHẤT", "at": 10, "acc": True}]},
+    {"type": "kinetic", "at": 9, "items": [{"text": "MÙA HÈ 2018", "at": 9, "sm": True}, {"text": "GIẢI ĐẤU LỚN NHẤT · ĐỐI THỦ MẠNH NHẤT", "at": 10, "acc": True}]},
 ]}
 
 CH["ch18"] = {"hud": {"k": "CHƯƠNG 18", "t": "THẤT BẠI Ở THE INTERNATIONAL"}, "bgm": {"mood": "mystery", "gain": 0.11}, "scenes": [
-    chap(18, "CHƯƠNG MƯỜI TÁM", "THẤT BẠI Ở\nTHE INTERNATIONAL", "08/2018", TOURN, [0, None, 0, 0.05], ms=6),
+    chap(18, "CHƯƠNG MƯỜI TÁM", "THẤT BẠI Ở\nTHE INTERNATIONAL", "08/2018", TOURN, [0, None, 0, 0.05], ms=1),
     {"type": "ledger", "at": 1, "title": "HAI TRẬN · 08/2018", "srcnote": "THEO WIKIPEDIA", "rows": [{"k": "1", "v": "PAIN GAMING · BRAZIL", "at": 1}, {"k": "2", "v": "CỰU TUYỂN THỦ TRUNG QUỐC", "at": 2}],
      "total": {"k": "KẾT QUẢ", "v": "ĐỘI MÁY THUA CẢ HAI", "at": 3}},
     {"type": "myth", "at": 4, "mythLab": "NHIỀU NGƯỜI NÓI", "myth": "CHỈ GIỎI PHẢN XẠ", "truthLab": "OPENAI", "truth": "TIẾP TỤC HUẤN LUYỆN", "strikeAt": 5, "truthAt": 6},
@@ -241,11 +241,11 @@ CH["ch19"] = {"hud": {"k": "CHƯƠNG 19", "t": "OG · 04/2019"}, "bgm": {"mood":
     {"type": "ledger", "at": 5, "title": "NHỮNG DÒNG CHỮ NHỎ", "rows": [{"k": "SỐ TƯỚNG", "v": "ÍT HƠN RẤT NHIỀU", "at": 6}, {"k": "MỘT VÀI CƠ CHẾ", "v": "BỊ TẮT", "at": [6, None, 0, 0.7]}],
      "total": {"k": "CÓ BÁO GỌI LÀ", "v": "“GẦN NHƯ GIAN LẬN”", "at": 7}},
     {"type": "myth", "at": 8, "mythLab": "ĐỘI OG", "myth": "PHIÊN BẢN KHÔNG QUEN", "truthLab": "CỖ MÁY", "truth": "PHIÊN BẢN ĐÃ LUYỆN", "strikeAt": 9, "truthAt": [9, None, 0, 0.4]},
-    {"type": "kinetic", "at": 10, "items": [{"text": "NHÌN VÀO TỈ SỐ", "at": 10, "sm": True}, {"text": "HAY VÀO LUẬT CHƠI?", "at": [10, None, 0, 0.5], "acc": True}]},
+    {"type": "kinetic", "at": 10, "items": [{"text": "NHÌN VÀO TỈ SỐ", "at": 10, "sm": True}, {"text": "HAY LUẬT CHƠI ĐÃ ĐỔI?", "at": [10, None, 0, 0.5], "acc": True}]},
 ]}
 
 CH["ch20"] = {"hud": {"k": "CHƯƠNG 20", "t": "BỐN NGÀY, 42.729 VÁN"}, "bgm": {"mood": "curious", "gain": 0.11}, "scenes": [
-    chap(20, "CHƯƠNG HAI MƯƠI", "BỐN NGÀY,\nBỐN MƯƠI HAI NGHÌN VÁN", "MỞ CỬA CHO MỌI NGƯỜI", GAMER, [0, None, 0, 0.05], ms=10),
+    chap(20, "CHƯƠNG HAI MƯƠI", "BỐN NGÀY,\nBỐN MƯƠI HAI NGHÌN VÁN", "MỞ CỬA CHO MỌI NGƯỜI", KEYS2, [0, None, 0, 0.05], ms=10),
     {"type": "ledger", "at": 1, "title": "OPENAI FIVE ARENA · 04/2019", "rows": [{"k": "AI CŨNG CHƠI ĐƯỢC", "v": "BỐN NGÀY", "at": 1},
                                                                             {"k": "HAI CHẾ ĐỘ", "v": "ĐẤU VỚI MÁY · CHƠI CÙNG MÁY", "at": 3}]},
     {"type": "counter", "at": 4, "from": 42729, "to": 42729, "suffix": " VÁN", "label": "VÁN CÔNG KHAI · THẮNG 99,4%", "sub": {"text": "THEO WIKIPEDIA", "at": 5}},
@@ -256,11 +256,11 @@ CH["ch20"] = {"hud": {"k": "CHƯƠNG 20", "t": "BỐN NGÀY, 42.729 VÁN"}, "bgm
 ]}
 
 CH["ch21"] = {"hud": {"k": "CHƯƠNG 21", "t": "CHƠI CÙNG MỘT ĐỘI VỚI MÁY"}, "bgm": {"mood": "calm", "gain": 0.11}, "scenes": [
-    chap(21, "CHƯƠNG HAI MƯƠI MỐT", "CHƠI CÙNG\nMỘT ĐỘI VỚI MÁY", "CHI TIẾT ÍT ĐƯỢC NHẮC", TEAM, [0, None, 0, 0.05], ms=12),
+    chap(21, "CHƯƠNG HAI MƯƠI MỐT", "CHƠI CÙNG\nMỘT ĐỘI VỚI MÁY", "CHI TIẾT ÍT ĐƯỢC NHẮC", TEAM, [0, None, 0, 0.05], ms=10),
     {"type": "counter", "at": 2, "from": 35000, "to": 35000, "prefix": "> ", "suffix": " VÁN", "label": "VÁN HỢP TÁC · NGƯỜI VÀ MÁY CÙNG ĐỘI", "sub": {"text": "THEO SỐ LIỆU ĐƯỢC BÁO CHÍ DẪN", "at": 3}},
     {"type": "myth", "at": 4, "mythLab": "KHÔNG CÒN LÀ", "myth": "AI GIỎI HƠN AI", "truthLab": "MÀ LÀ", "truth": "LÀM VIỆC CÙNG NHAU", "strikeAt": 5, "truthAt": 6},
     {"type": "ledger", "at": 7, "title": "HAI PHÍA", "rows": [{"k": "CỖ MÁY", "v": "ĐOÁN Ý NGƯỜI CHƯA GẶP", "at": 7}, {"k": "CON NGƯỜI", "v": "TIN ĐỒNG ĐỘI KHÔNG BIẾT NÓI", "at": 8}]},
-    bro(9, CHESS, [{"text": "CỜ NHÂN MÃ · DEEP BLUE", "at": 9, "sm": True}, {"text": "NGƯỜI VÀ MÁY CÙNG MỘT PHE", "at": 10, "acc": True}], ms=10),
+    bro(9, CHESS, [{"text": "CỜ NHÂN MÃ · DEEP BLUE", "at": 9, "sm": True}, {"text": "NGƯỜI VÀ MÁY CÙNG MỘT PHE", "at": 10, "acc": True}], ms=8),
 ]}
 
 CH["ch22"] = {"hud": {"k": "CHƯƠNG 22", "t": "200 NĂM VÀ 45.000 NĂM"}, "bgm": {"mood": "calm", "gain": 0.11}, "scenes": [
@@ -279,9 +279,9 @@ CH["ch23"] = {"hud": {"k": "PHẦN CUỐI", "t": "NĂM ĐIỀU, ĐÃ ĐÁNH DẤ
                                                                                     {"k": "2", "v": "KHO TƯỚNG THU NHỎ", "at": [6, None, 0, 0.4]}, {"k": "3", "v": "TẦM NHÌN KHÁC NGƯỜI", "at": [6, None, 0, 0.7]}]},
     {"type": "ledger", "at": 7, "title": "NHỮNG GÌ HỌC ĐƯỢC", "rows": [{"k": "1", "v": "KẾ HOẠCH DÀI · THIẾU THÔNG TIN", "at": 10}, {"k": "2", "v": "PHỐI HỢP NHIỀU TÁC TỬ", "at": [10, None, 0, 0.4]},
                                                                   {"k": "3", "v": "BẮT CHƯỚC RỒI TỰ HỌC", "at": [10, None, 0, 0.7]}]},
-    bro(11, CABLES, [{"text": "ROBOT · ĐIỀU PHỐI · TRỢ LÝ AI", "at": 11, "sm": True}, {"text": "LUẬT NÀO LÀ CÔNG BẰNG?", "at": 12, "acc": True}], ms=6),
+    bro(11, SERVER, [{"text": "ROBOT · ĐIỀU PHỐI · TRỢ LÝ AI", "at": 11, "sm": True}, {"text": "LUẬT NÀO LÀ CÔNG BẰNG?", "at": 12, "acc": True}], ms=6),
     {"type": "question", "at": 15, "text": "Bạn sẽ chọn giới hạn nào\ncho cỗ máy khi đấu với người?"},
-    {"type": "kinetic", "at": 16, "items": [{"text": "KỂ CHO MÌNH NGHE", "at": 16}, {"text": "Ở PHẦN BÌNH LUẬN", "at": [16, None, 0, 0.5], "acc": True}]},
+    {"type": "kinetic", "at": 16, "items": [{"text": "BẠN CHỌN LUẬT NÀO?", "at": 16}, {"text": "VIẾT XUỐNG BÌNH LUẬN", "at": [16, None, 0, 0.5], "acc": True}]},
 ]}
 
 SPEC = {

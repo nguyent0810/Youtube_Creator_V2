@@ -20,7 +20,7 @@ assert V["drop_pct"] == -40.3 and V["need_from_trough_pct"] == 67.6 and V["back"
 H1 = "VÍ DỤ GIẢ ĐỊNH"
 KT = "KÊNH TỰ TÍNH · VN-INDEX ĐÓNG CỬA"
 VM = "VIDEO MINH HỌA"
-SCALE, MKT, WORRY, PHONE, ANCHOR, CLIMB, CHESS = "8061659", "38736271", "7534958", "6183991", "6979840", "4163540", "8431825"
+SCALE, MKT, WORRY, PHONE, ANCHOR, CLIMB, CHESS = "8061659", "8486622", "7534958", "6183991", "6979840", "4163540", "8431825"   # MKT: 38736271 lộ cặp BTC/USDT -> thay 15/10
 CH = {}
 
 CH["ch00"] = {"hud": {"k": "MỞ ĐẦU", "t": "HAI CỔ PHIẾU, MỘT CUỘC GỌI"}, "bgm": {"mood": "curious", "gain": 0.10}, "scenes": [
