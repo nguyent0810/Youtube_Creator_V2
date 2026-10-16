@@ -1,6 +1,6 @@
 # yt-factory
 
-Xưởng nội dung YouTube cho ba kênh: **Phong Thủy (FS)**, **Phật Giáo (BUD)**, **Hình Sự (CL)**.
+Xưởng nội dung YouTube cho năm kênh: **Phong Thủy (FS)**, **Phật Giáo (BUD)**, **Hình Sự (CL)**, **Mind in the Machine (MIM)** và **Chứng khoán / tài chính cá nhân (CK)**. MIM đăng bằng upload tay (xem `scripts/export_manual.py`).
 
 Viết lại từ đầu. Không kế thừa code của v1.
 

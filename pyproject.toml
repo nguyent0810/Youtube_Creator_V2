@@ -10,6 +10,8 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0"]
+# Cần cho factory/lunar.py (kênh FS/BUD) và 7 test lịch âm. Tên gói trên PyPI chưa được kiểm.
+lunar = ["vnlunar"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
