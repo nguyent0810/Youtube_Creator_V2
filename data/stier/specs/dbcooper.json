@@ -1,0 +1,126 @@
+{
+ "title": "Năm 1980, tiền chuộc của D. B. Cooper trôi lên bờ sông Columbia",
+ "description": "Tối 24/11/1971, một người ký tên Dan Cooper không tặc chuyến Northwest 305. Ông đòi 200.000 đô, mười nghìn tờ 20 đô không đánh dấu, và bốn cái dù, rồi nhảy khỏi cầu thang sau. Một tờ báo ghi nhầm thành D. B. Cooper. Năm 1980, một cậu bé thấy khoảng 6.000 đô của số tiền ấy trên bờ sông Columbia. Phần còn lại chưa tìm thấy. Boeing 727 sau đó có tấm vane khóa cầu thang sau khi đang bay.",
+ "tags": [
+  "D. B. Cooper",
+  "Northwest 305",
+  "tiền chuộc",
+  "sông Columbia",
+  "Boeing 727",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1971",
+ "sub": "D. B. COOPER",
+ "acc": [
+  "cooper",
+  "columbia",
+  "northwest",
+  "vane",
+  "dù"
+ ],
+ "lines": [
+  "Tối 24 tháng 11 năm 1971, Dan Cooper lên chuyến bay 305 của Northwest.",
+  "Ông đòi hai trăm nghìn đô và bốn cái dù.",
+  "Tiền là mười nghìn tờ hai mươi đô, không đánh dấu.",
+  "Ở Seattle, hành khách được thả. Máy bay cất cánh lần nữa.",
+  "Cooper mở cầu thang sau và nhảy vào đêm.",
+  "Một tờ báo ghi nhầm tên ông thành D. B. Cooper.",
+  "Năm 1980, một cậu bé thấy những tờ đô trên bờ sông Columbia.",
+  "Đó là sáu nghìn đô trong số tiền chuộc.",
+  "Phần còn lại chưa từng tìm thấy.",
+  "Tấm vane Cooper khóa cầu thang sau, máy bay đang bay thì không mở được."
+ ],
+ "imgs": {
+  "sketch": "File:CompositeB-FBI-1973.jpg",
+  "money": "File:Money stolen by D. B. Cooper.jpg",
+  "vane": "File:Db Cooper Vane.JPG",
+  "ticket": "File:July 2016 D.B. Cooper Plane Ticket (28379315406).jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "sketch",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "COOPER"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {"text": "200.000 ĐÔ", "at": [1, "hai"], "size": 200, "acc": true, "serif": true},
+    {"text": "4 CÁI DÙ", "at": [1, "dù"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {"text": "10.000 TỜ", "at": [2, "mười"], "size": 220, "acc": true},
+    {"text": "KHÔNG ĐÁNH DẤU", "at": [2, "không"]}
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 3,
+   "img": "ticket",
+   "tone": "sepia",
+   "focus": [0.5, 0.45],
+   "label": {"text": "SEATTLE", "at": [3, "Seattle"]},
+   "credit": "VÉ NORTHWEST 305"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {"text": "CẦU THANG SAU", "at": [4, "cầu"]},
+    {"text": "NHẢY", "at": [4, "nhảy"], "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {"text": "GHI NHẦM", "at": [5, "nhầm"], "acc": true},
+    {"text": "D. B. COOPER", "at": [5, "Cooper"]}
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 6,
+   "img": "money",
+   "tone": "sepia",
+   "focus": [0.5, 0.5],
+   "label": {"text": "BỜ SÔNG COLUMBIA", "at": [6, "Columbia"]},
+   "credit": "TIỀN CHUỘC TÌM THẤY NĂM 1980"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {"text": "6.000 ĐÔ", "at": [7, "sáu"], "size": 240, "acc": true, "serif": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {"text": "CHƯA THẤY", "at": [8, "chưa"], "acc": true}
+   ]
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "vane",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "VANE",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/D._B._Cooper"
+ ]
+}

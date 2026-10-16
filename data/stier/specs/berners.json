@@ -1,0 +1,125 @@
+{
+ "title": "Hook đặt từ một đến bốn nghìn đơn tới số 54 phố Berners trong một ngày",
+ "description": "Năm 1810 Theodore Hook cá rằng mình biến được một căn nhà bất kỳ thành địa chỉ bị nhắc nhiều nhất London. Ông mất sáu tuần gửi từ một nghìn đến bốn nghìn thư, đặt hàng tới số 54 phố Berners, Westminster, vào ngày 27/11/1810. Năm giờ sáng thợ thông ống khói đến, rồi than, bánh cưới, đàn ống và một cỗ quan tài. Chủ tịch Ngân hàng Anh và Thị trưởng London cũng được mời. Cảnh sát mãi sau 17 giờ mới giải tán phố. Hook nhận chuyện này trong một tiểu thuyết 25 năm sau.",
+ "tags": [
+  "Berners Street",
+  "Theodore Hook",
+  "1810",
+  "trò chơi khăm",
+  "London",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1810",
+ "sub": "BERNERS",
+ "acc": [
+  "hook",
+  "berners",
+  "nghìn",
+  "54",
+  "quan"
+ ],
+ "lines": [
+  "Năm 1810, Theodore Hook cá với bạn về một căn nhà bất kỳ.",
+  "Ông bảo mình biến được nó thành địa chỉ bị nhắc nhiều nhất London.",
+  "Ông mất sáu tuần viết thư đặt hàng.",
+  "Thư gửi tới số 54 phố Berners, Westminster.",
+  "Số thư từ một nghìn đến bốn nghìn.",
+  "Ngày 27 tháng 11, năm giờ sáng, thợ thông ống khói đến trước.",
+  "Rồi đến than, bánh cưới, đàn ống, và cả một cỗ quan tài.",
+  "Chủ tịch Ngân hàng Anh và Thị trưởng London cũng được mời đến.",
+  "Cảnh sát mãi sau năm giờ chiều mới giải tán được phố.",
+  "Hook nhận chuyện này trong một tiểu thuyết, hai mươi lăm năm sau."
+ ],
+ "imgs": {
+  "face": "File:Theodore Hook.jpg",
+  "street": "File:Berners Street Hoax.jpg",
+  "book": "File:The Berners Street Hoax from The Choice Humorous Works of Theodore Hook (cropped).jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "face",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "HOOK"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {"text": "ĐỊA CHỈ", "at": [1, "địa"]},
+    {"text": "LONDON", "at": [1, "London"], "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {"text": "SÁU TUẦN", "at": [2, "sáu"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {"text": "SỐ 54", "at": [3, "54"], "size": 240, "acc": true, "serif": true},
+    {"text": "BERNERS", "at": [3, "Berners"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {"text": "MỘT ĐẾN BỐN", "at": [4, "bốn"], "acc": true},
+    {"text": "NGHÌN THƯ", "at": [4, "nghìn"]}
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 5,
+   "img": "street",
+   "tone": "sepia",
+   "focus": [0.5, 0.45],
+   "label": {"text": "5 GIỜ SÁNG", "at": [5, "sáng"]},
+   "credit": "TRANH TRÒ KHUẤY PHỐ BERNERS"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {"text": "QUAN TÀI", "at": [6, "quan"], "acc": true},
+    {"text": "ĐÀN ỐNG", "at": [6, "đàn"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {"text": "THỊ TRƯỞNG", "at": [7, "Thị"]}
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 8,
+   "img": "book",
+   "tone": "sepia",
+   "focus": [0.5, 0.4],
+   "label": {"text": "5 GIỜ CHIỀU", "at": [8, "chiều"]},
+   "credit": "SÁCH CỦA THEODORE HOOK"
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "face",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "NĂM SAU",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Berners_Street_hoax"
+ ]
+}

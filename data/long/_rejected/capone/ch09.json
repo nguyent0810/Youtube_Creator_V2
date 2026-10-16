@@ -1,0 +1,217 @@
+{
+ "title": "Áp phích và tờ khai",
+ "lines": [
+  {
+   "t": "Ngày 25 tháng 1 năm 1947, ông chết tại Miami Beach.",
+   "p": 0.8
+  },
+  "Sau một cơn đột quỵ.",
+  "Vì tim ngừng.",
+  "Hồ sơ dừng ở câu ấy.",
+  "Không có giường bệnh.",
+  "Không có ảnh cuối.",
+  "Bạn có thể ra về với vết sẹo.",
+  "Vết sẹo là áp phích.",
+  "Tờ khai mới là then cửa.",
+  "Anh trai ông đi bắt rượu lậu.",
+  "Em trai ông ngồi tù vì thuế.",
+  "Còn chính ông, người ta vẫn kể bằng một buổi sáng không có tên ông trong bản án.",
+  "Cây đàn chủ nhật thì ít người kể.",
+  "Phòng 181 cũng vậy.",
+  "Hai thứ ấy không lên poster.",
+  {
+   "t": "Chúng nằm cùng hồ sơ với năm mươi nghìn đô la tiền phạt.",
+   "p": 1.0
+  }
+ ],
+ "hud": {
+  "k": "HỒ SƠ",
+  "t": "TỜ KHAI"
+ },
+ "bgm": {
+  "mood": "quiet",
+  "gain": 0.11
+ },
+ "scenes": [
+  {
+   "type": "chapter",
+   "at": 0,
+   "no": "9",
+   "k": "CHƯƠNG 9",
+   "title": "TỜ KHAI"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "SAU MỘT CƠN ĐỘT",
+     "at": [
+      1,
+      "Sau"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "VÌ TIM NGỪNG",
+     "at": [
+      2,
+      "Vì"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "HỒ SƠ DỪNG Ở",
+     "at": [
+      3,
+      "Hồ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "KHÔNG CÓ GIƯỜNG BỆNH",
+     "at": [
+      4,
+      "Không"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "KHÔNG CÓ ẢNH CUỐI",
+   "white": true
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "BẠN CÓ THỂ RA",
+     "at": [
+      6,
+      "Bạn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "VẾT SẸO LÀ ÁP",
+     "at": [
+      7,
+      "Vết"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 8,
+   "text": "Áp phích hay tờ khai?"
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "ANH TRAI ÔNG ĐI",
+     "at": [
+      9,
+      "Anh"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "EM TRAI ÔNG NGỒI",
+     "at": [
+      10,
+      "Em"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "CÒN CHÍNH ÔNG, NGƯỜI",
+     "at": [
+      11,
+      "Còn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "CÂY ĐÀN CHỦ NHẬT",
+     "at": [
+      12,
+      "Cây"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 13,
+   "text": "PHÒNG 181 CŨNG VẬY",
+   "white": true
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "HAI THỨ ẤY KHÔNG",
+     "at": [
+      14,
+      "Hai"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "CHÚNG NẰM CÙNG HỒ",
+     "at": [
+      15,
+      "Chúng"
+     ]
+    }
+   ]
+  }
+ ]
+}

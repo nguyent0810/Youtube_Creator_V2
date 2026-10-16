@@ -1,0 +1,61 @@
+{
+ "title": "Ngày 10 tháng 11 năm 1958, Winston gửi kim cương Hope bằng thư bảo đảm bọc giấy nâu",
+ "description": "Ngày 10/11/1958 Harry Winston gửi kim cương Hope, viên đá xanh khoảng 45,5 carat, tới Washington. Ông mua nó năm 1949 từ di sản Evalyn Walsh McLean. George Switzer được cho là người thuyết phục ông tặng Viện Smithsonian. Winston bỏ đá vào hộp bọc giấy nâu và gửi thư bảo đảm qua bưu điện Hoa Kỳ. Bảo hiểm một triệu đô. Cước 145,29 đô, trong đó tiền tem 2,44 đô, phần còn lại là bảo hiểm.",
+ "tags": ["Hope Diamond", "Harry Winston", "1958", "thư bảo đảm", "Smithsonian", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 1958",
+ "sub": "HOPE",
+ "acc": ["hope", "winston", "hộp", "1958", "tem"],
+ "lines": [
+  "Ngày 10 tháng 11 năm 1958, Harry Winston gửi kim cương Hope đi Washington.",
+  "Viên đá xanh này nặng bốn mươi lăm carat rưỡi.",
+  "Winston mua nó năm 1949, từ di sản của Evalyn Walsh McLean.",
+  "George Switzer được cho là người thuyết phục ông tặng Smithsonian.",
+  "Đường gửi là bưu điện Hoa Kỳ.",
+  "Ông bỏ viên đá vào hộp, bọc giấy nâu.",
+  "Rồi gửi như một kiện thư bảo đảm.",
+  "Hộp được bảo hiểm một triệu đô.",
+  "Cước là một trăm bốn mươi lăm đô và hai mươi chín xu.",
+  "Trong đó tiền tem chỉ có hai đô bốn mươi tư xu.",
+  "Phần còn lại của cước là tiền mua bảo hiểm.",
+  "Hộp đến Smithsonian, và viên đá ở lại đó."
+ ],
+ "imgs": {
+  "box": "File:Hope Diamond US Mail parcel-1958.jpg"
+ },
+ "scenes": [
+  {"type": "hero", "img": "box", "frame": "print", "tone": "sepia", "intro": true, "head": "HOPE"},
+  {"type": "kinetic", "at": 1, "items": [
+    {"text": "45 CARAT", "at": [1, "carat"], "acc": true}
+  ]},
+  {"type": "kinetic", "at": 2, "items": [
+    {"text": "1949", "at": [2, "1949"], "size": 240, "serif": true},
+    {"text": "MCLEAN", "at": [2, "McLean"]}
+  ]},
+  {"type": "kinetic", "at": 3, "items": [
+    {"text": "SWITZER", "at": [3, "Switzer"]}
+  ]},
+  {"type": "kinetic", "at": 4, "items": [
+    {"text": "BƯU ĐIỆN", "at": [4, "bưu"]}
+  ]},
+  {"type": "photo", "at": 5, "img": "box", "tone": "sepia", "focus": [0.5, 0.4],
+   "label": {"text": "GIẤY NÂU", "at": [5, "nâu"]},
+   "credit": "BƯU KIỆN HOPE, 1958"},
+  {"type": "kinetic", "at": 6, "items": [
+    {"text": "BẢO ĐẢM", "at": [6, "bảo"]}
+  ]},
+  {"type": "kinetic", "at": 7, "items": [
+    {"text": "MỘT TRIỆU", "at": [7, "triệu"], "size": 220, "acc": true}
+  ]},
+  {"type": "kinetic", "at": 8, "items": [
+    {"text": "145 ĐÔ", "at": [8, "trăm"], "size": 220, "acc": true}
+  ]},
+  {"type": "kinetic", "at": 9, "items": [
+    {"text": "2 ĐÔ 44", "at": [9, "hai"], "acc": true}
+  ]},
+  {"type": "kinetic", "at": 10, "items": [
+    {"text": "BẢO HIỂM", "at": [10, "bảo"]}
+  ]},
+  {"type": "hero", "at": 11, "img": "box", "frame": "print", "tone": "sepia", "loop": true, "head": "SMITHSONIAN", "tr": "cut"}
+ ],
+ "sources": ["https://en.wikipedia.org/wiki/Hope_Diamond"]
+}

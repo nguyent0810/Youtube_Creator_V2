@@ -1,0 +1,51 @@
+{
+ "title": "Tháng 7 năm 1799, Bouchard tìm phiến đá Rosetta khắc ba thứ chữ",
+ "description": "Giữa tháng 7 năm 1799, Pierre-François Bouchard thấy một phiến đá khi lính phá tường ở pháo đài Julien, gần Rosetta, tức Rashid. Có nguồn ghi ngày 15, có nguồn ghi ngày 19; bản này không chọn. Đá khắc ba thứ chữ của một sắc lệnh năm 196 trước Công nguyên, đời Ptolemy V: chữ tượng hình, chữ Demotic và chữ Hy Lạp. Ba bản khác nhau ít, không phải từng chữ giống hệt. Đây không phải bản duy nhất của sắc lệnh. Năm 1801, theo thư đầu hàng Alexandria, đá được giao cho Anh. Từ 1802 ở Bảo tàng Anh. Người ta từng gọi là bazan đen vì có phấn và sáp. Năm 1999 lớp ấy được gỡ, đá là granodiorit xám. Kích thước 112,3 x 75,7 x 28,4 cm, nặng khoảng 760 kg. Không dùng số đo inch cũ. Năm 1822 Champollion công bố cách đọc; Wikipedia ghi các bước nằm ở 1799, 1802, 1814 và 1822–1824, không phải một mình ông làm xong trong một ngày. Ảnh chụp năm 1993 tại Bảo tàng Anh, trước lần lau 1999.",
+ "tags": ["Rosetta", "Bouchard", "1799", "ba thứ chữ", "Bảo tàng Anh", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 1799",
+ "sub": "ROSETTA",
+ "acc": ["bouchard", "ba", "1801", "bazan", "1999"],
+ "lines": [
+  "Tháng 7 năm 1799, Bouchard thấy phiến đá ở pháo đài Julien.",
+  "Pháo đài nằm gần thành Rosetta.",
+  "Lính phá tường thì đá lộ ra.",
+  "Có nguồn ghi ngày 15, có nguồn ghi ngày 19. Bản này không chọn.",
+  "Đá khắc ba thứ chữ của một sắc lệnh.",
+  "Năm 1801, thư đầu hàng Alexandria giao đá cho Anh.",
+  "Từ năm 1802, đá ở Bảo tàng Anh.",
+  "Từng bị gọi là bazan đen.",
+  "Năm 1999, gỡ phấn và sáp, đá là granodiorit xám.",
+  "Ảnh chụp năm 1993, trước lần lau ấy.",
+  "Năm 1822 Champollion công bố cách đọc, không phải một mình."
+ ],
+ "imgs": {
+  "stone": "File:Rosetta Stone (15864563804).jpg"
+ },
+ "scenes": [
+  {"type": "hero", "img": "stone", "frame": "print", "tone": "color", "intro": true, "head": "1799"},
+  {"type": "kinetic", "at": 1, "items": [
+    {"text": "ROSETTA", "at": [1, "Rosetta"]}
+  ]},
+  {"type": "slam", "at": 2, "text": "PHÁ TƯỜNG", "sub": "ĐÁ LỘ RA", "bg": "stone"},
+  {"type": "slam", "at": 3, "text": "KHÔNG CHỌN", "sub": "NGÀY 15 HAY 19", "white": true},
+  {"type": "kinetic", "at": 4, "items": [
+    {"text": "BA THỨ CHỮ", "at": [4, "ba"], "size": 180, "acc": true}
+  ]},
+  {"type": "date", "at": 5, "bg": "stone", "day": "GIAO CHO ANH", "date": "1801",
+   "dayAt": [5, "Anh"],
+   "groupAt": [[5, "1801"]],
+   "sub": {"text": "ALEXANDRIA", "at": [5, "Alexandria"]}},
+  {"type": "kinetic", "at": 6, "items": [
+    {"text": "BẢO TÀNG", "at": [6, "Bảo"]}
+  ]},
+  {"type": "kinetic", "at": 7, "items": [
+    {"text": "BAZAN ĐEN", "at": [7, "bazan"], "acc": true}
+  ]},
+  {"type": "slam", "at": 8, "text": "GRANODIORIT", "sub": "GỠ PHẤN VÀ SÁP"},
+  {"type": "photo", "at": 9, "img": "stone", "tone": "color", "focus": [0.5, 0.42],
+   "label": {"text": "NĂM 1993", "at": [9, "1993"]},
+   "credit": "BẢO TÀNG ANH, TRƯỚC 1999"},
+  {"type": "hero", "at": 10, "img": "stone", "frame": "print", "tone": "color", "loop": true, "head": "CHAMPOLLION", "tr": "cut"}
+ ],
+ "sources": ["https://en.wikipedia.org/wiki/Rosetta_Stone"]
+}

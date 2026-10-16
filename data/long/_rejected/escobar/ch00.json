@@ -1,0 +1,179 @@
+{
+ "title": "Bốn con dưới sông",
+ "lines": [
+  "Tháng tư năm 2026, Bộ Môi trường Colombia ký một kế hoạch cho sông Magdalena.",
+  "Kế hoạch ấy là gây chết khoảng tám mươi con hà mã.",
+  "Chúng không được sinh ở châu Phi.",
+  "Tổ tiên của chúng là bốn con, chở tới một trang trại tư nhân năm 1981.",
+  "Người đặt mua chúng chết năm 1993.",
+  "Vì sao hơn ba mươi năm sau, một chính phủ vẫn phải hỏi có nên bắn đàn ấy không?",
+  "Bạn đang xem phần còn lại của một đế chế, không phải bảng kê tiền.",
+  "Đây là hồ sơ Pablo Escobar.",
+  "Nhiều bài viết gắn cho ông một con số tài sản rất lớn.",
+  "Hồ sơ này bỏ con số ấy, vì nó chỉ là ước tính, và nó không giải thích được con sông.",
+  "Ba câu hỏi sẽ đi cùng bạn đến hết phim.",
+  "Trang trại có sân bay ấy thực ra dùng để làm gì?",
+  "Nhà tù ông tự xây đã nhốt ai?",
+  {
+   "t": "Và khi ông chết, thứ gì sống tiếp mà một viên đạn không chạm tới?",
+   "p": 1.0
+  }
+ ],
+ "hud": {
+  "k": "HỒ SƠ",
+  "t": "SÔNG MAGDALENA · 2026"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ },
+ "scenes": [
+  {
+   "type": "date",
+   "at": 0,
+   "day": "COLOMBIA",
+   "date": "13.04.2026"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "KẾ HOẠCH ẤY LÀ",
+     "at": [
+      1,
+      "Kế"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "CHÚNG KHÔNG ĐƯỢC SINH",
+     "at": [
+      2,
+      "Chúng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "from": 0,
+   "to": 4,
+   "suffix": " CON",
+   "label": "CON"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "NGƯỜI ĐẶT MUA CHÚNG",
+     "at": [
+      4,
+      "Người"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 5,
+   "text": "Vì sao vẫn phải hỏi?"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "BẠN ĐANG XEM PHẦN",
+     "at": [
+      6,
+      "Bạn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "brand",
+   "at": 7,
+   "sub": "HỒ SƠ · PABLO ESCOBAR"
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "NHIỀU BÀI VIẾT GẮN",
+     "at": [
+      8,
+      "Nhiều"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 9,
+   "text": "KHÔNG PHẢI SỐ TIỀN",
+   "white": true
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "BA CÂU HỎI SẼ",
+     "at": [
+      10,
+      "Ba"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "TRANG TRẠI CÓ SÂN",
+     "at": [
+      11,
+      "Trang"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "NHÀ TÙ ÔNG TỰ",
+     "at": [
+      12,
+      "Nhà"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "VÀ KHI ÔNG CHẾT",
+     "at": [
+      13,
+      "Và"
+     ]
+    }
+   ]
+  }
+ ]
+}

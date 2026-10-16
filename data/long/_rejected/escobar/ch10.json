@@ -1,0 +1,303 @@
+{
+ "title": "Đảo Im Lặng",
+ "lines": [
+  {
+   "t": "Giữa Magdalena có một cù lao người địa phương gọi là Đảo Im Lặng.",
+   "p": 0.8
+  },
+  "Một phóng sự tháng tư năm 2026 mô tả nó là chỗ đàn tụ về.",
+  "Ban ngày chúng nằm trong nước.",
+  "Ban đêm chúng lên bờ gặm cỏ.",
+  "Nhịp ấy kéo chất từ đất liền xuống sông.",
+  "Khi đàn còn nhỏ, một nghiên cứu năm 2020 đã đo thấy hồ chúng ở giàu chất dinh dưỡng hơn.",
+  "Tảo lam có thể nở.",
+  "Cá ở dưới có thể chết vì thiếu ô xy.",
+  "Nghiên cứu nói sự thay đổi lúc ấy còn nhỏ, vì đàn chưa đông.",
+  "Bạn để ý hướng của câu ấy.",
+  "Họ không nói sông đã chết.",
+  "Họ nói dấu hiệu đến sớm, lúc mới có ít con.",
+  "Ít con của năm 2007 là mười sáu.",
+  "Ít con của năm 2026 là khoảng hai trăm.",
+  "Hà mã ở đây thành thục sớm hơn hà mã châu Phi.",
+  "Không có sư tử.",
+  "Không có mùa khô để ép đàn.",
+  "Colombia là nước duy nhất ngoài châu Phi có hà mã sống hoang từ đàn này.",
+  {
+   "t": "Bốn con trong chuồng đã thành một loài người ta không rời mắt được.",
+   "p": 1.0
+  },
+  "Hồ sơ dừng ở chỗ chính phủ vẫn chưa làm xong.",
+  "Kim tiêm, chiếc tàu, hay súng.",
+  "Bạn sẽ thấy tin ấy trên báo, sau ngày phim này lên.",
+  "Bốn con thì không chờ tiêu đề."
+ ],
+ "hud": {
+  "k": "HỒ SƠ",
+  "t": "ĐẢO IM LẶNG"
+ },
+ "bgm": {
+  "mood": "sad",
+  "gain": 0.11
+ },
+ "scenes": [
+  {
+   "type": "chapter",
+   "at": 0,
+   "no": "10",
+   "k": "CHƯƠNG 10",
+   "title": "ĐẢO IM LẶNG"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "MỘT PHÓNG SỰ THÁNG",
+     "at": [
+      1,
+      "Một"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "BAN NGÀY CHÚNG NẰM",
+     "at": [
+      2,
+      "Ban"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "BAN ĐÊM CHÚNG LÊN",
+     "at": [
+      3,
+      "Ban"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "NHỊP ẤY KÉO CHẤT",
+     "at": [
+      4,
+      "Nhịp"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 5,
+   "day": "HỒ",
+   "date": "2020"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "TẢO LAM CÓ THỂ",
+     "at": [
+      6,
+      "Tảo"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "CÁ Ở DƯỚI CÓ",
+     "at": [
+      7,
+      "Cá"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "text": "ĐÀN CHƯA ĐÔNG",
+   "white": true
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "BẠN ĐỂ Ý HƯỚNG",
+     "at": [
+      9,
+      "Bạn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "HỌ KHÔNG NÓI SÔNG",
+     "at": [
+      10,
+      "Họ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "HỌ NÓI DẤU HIỆU",
+     "at": [
+      11,
+      "Họ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "ÍT CON CỦA NĂM",
+     "at": [
+      12,
+      "Ít"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 13,
+   "from": 0,
+   "to": 200,
+   "suffix": " CON",
+   "label": "CON"
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "HÀ MÃ Ở ĐÂY",
+     "at": [
+      14,
+      "Hà"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "KHÔNG CÓ SƯ TỬ",
+     "at": [
+      15,
+      "Không"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 16,
+   "text": "KHÔNG MÙA KHÔ",
+   "white": true
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "COLOMBIA LÀ NƯỚC DUY",
+     "at": [
+      17,
+      "Colombia"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 18,
+   "items": [
+    {
+     "text": "BỐN CON TRONG CHUỒNG",
+     "at": [
+      18,
+      "Bốn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "items": [
+    {
+     "text": "HỒ SƠ DỪNG Ở",
+     "at": [
+      19,
+      "Hồ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 20,
+   "text": "Kim tiêm, tàu, hay súng?"
+  },
+  {
+   "type": "kinetic",
+   "at": 21,
+   "items": [
+    {
+     "text": "BẠN SẼ THẤY TIN",
+     "at": [
+      21,
+      "Bạn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 22,
+   "items": [
+    {
+     "text": "BỐN CON THÌ KHÔNG",
+     "at": [
+      22,
+      "Bốn"
+     ]
+    }
+   ]
+  }
+ ]
+}

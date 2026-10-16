@@ -1,0 +1,179 @@
+{
+ "title": "Lincoln lẻn qua Baltimore, bỏ lại đám đông đang đợi ở ga",
+ "description": "Tháng 2/1861, thám tử Allan Pinkerton cảnh báo một cái bẫy giữa hai nhà ga ở Baltimore. Đêm 23/2, Abraham Lincoln đi xuyên thành phố mà không ai nhận ra, và sáng hôm sau đã ở khách sạn Willard. Báo chí vẽ ông trốn trong toa tàu. Đến nay sử gia vẫn tranh cãi âm mưu ấy có thật hay không.",
+ "tags": [
+  "Abraham Lincoln",
+  "Baltimore 1861",
+  "Allan Pinkerton",
+  "âm mưu ám sát",
+  "Washington",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1861",
+ "sub": "BALTIMORE",
+ "acc": [
+  "lincoln",
+  "baltimore",
+  "pinkerton",
+  "camden",
+  "willard"
+ ],
+ "lines": [
+  "Tháng 2 năm 1861, Lincoln phải đi ngang Baltimore.",
+  "Đường ray duy nhất vào Washington cắt qua thành phố này.",
+  "Thám tử Allan Pinkerton báo một cái bẫy giữa hai nhà ga.",
+  "Đám đông sẽ vây xe ngựa của ông ở ga Camden.",
+  "Đêm ngày 23 tháng 2 năm 1861, không ai nhận ra ông.",
+  "Sáng hôm sau ông đã ở khách sạn Willard.",
+  "Báo chí vẽ ông trốn trong một toa tàu chở gia súc.",
+  "Baltimore là nơi ông chỉ nhận được hai phần trăm phiếu.",
+  "Chính Lincoln viết rằng ông không tin mình sẽ bị giết nếu dừng lại.",
+  "Sử gia đến nay vẫn chưa chốt âm mưu Baltimore có thật hay không."
+ ],
+ "imgs": {
+  "face": "File:Abraham Lincoln O-77 matte collodion print (3x4 close cropped).jpg",
+  "arrive": "File:Lincoln arriving in Washington with William H. Johnson, 1861.png",
+  "cartoon": "File:Lincoln in a cattle car.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "face",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "BALTIMORE"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "MỘT",
+     "at": [1, "duy"],
+     "size": 180
+    },
+    {
+     "text": "ĐƯỜNG RAY",
+     "at": [1, "ray"],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "PINKERTON",
+     "at": [2, "Pinkerton"],
+     "acc": true
+    },
+    {
+     "text": "CÁI BẪY",
+     "at": [2, "bẫy"],
+     "size": 220
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "GA CAMDEN",
+     "at": [3, "Camden"],
+     "acc": true
+    },
+    {
+     "text": "XE NGỰA",
+     "at": [3, "ngựa"]
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 4,
+   "day": "WASHINGTON",
+   "date": "23.02.1861",
+   "groupAt": [
+    [4, "23"],
+    [4, "2"],
+    [4, "1861"]
+   ],
+   "stamp": {
+    "text": "KHÔNG AI NHẬN RA",
+    "at": [4, "không"]
+   }
+  },
+  {
+   "type": "photo",
+   "at": 5,
+   "img": "arrive",
+   "tone": "sepia",
+   "focus": [0.45, 0.4],
+   "label": {
+    "text": "KHÁCH SẠN WILLARD",
+    "at": [5, "Willard"]
+   },
+   "credit": "LINCOLN TỚI WASHINGTON, 1861"
+  },
+  {
+   "type": "photo",
+   "at": 6,
+   "img": "cartoon",
+   "tone": "sepia",
+   "focus": [0.5, 0.35],
+   "label": {
+    "text": "BIẾM HỌA: TOA GIA SÚC",
+    "at": [6, "toa"]
+   },
+   "credit": "ADALBERT VOLCK, 1861"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "2%",
+     "at": [7, "hai"],
+     "size": 300,
+     "acc": true,
+     "serif": true
+    },
+    {
+     "text": "SỐ PHIẾU",
+     "at": [7, "phiếu"]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "KHÔNG TIN",
+     "at": [8, "không"],
+     "acc": true
+    },
+    {
+     "text": "MÌNH SẼ BỊ GIẾT",
+     "at": [8, "giết"]
+    }
+   ]
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "face",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "BALTIMORE",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Baltimore_Plot"
+ ]
+}

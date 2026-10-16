@@ -1,0 +1,219 @@
+{
+ "title": "Viên đạn không tới",
+ "lines": [
+  {
+   "t": "Ngày 13 tháng 4 năm 2026, bộ duyệt gây chết hơn tám mươi con.",
+   "p": 0.8
+  },
+  "Ngân sách ghi trong quyết định là bảy nghìn hai trăm triệu peso Colombia.",
+  "Đến tháng tư năm 2026, đàn được ước lượng khoảng hai trăm con.",
+  "Bộ cảnh báo nếu không làm gì, năm 2030 có thể vượt năm trăm.",
+  "National Geographic từng làm phim về chúng năm 2013, tên là Cocaine Hippos.",
+  "Cái tên bán được sự tò mò.",
+  "Con vật không cần tên phim để sinh sản.",
+  "Hacienda Nápoles ngày nay là công viên.",
+  "Khách đến chụp cổng.",
+  "Việc khó thì ở ngoài hàng rào, dưới một con sông không có mùa khô, không có thú nào săn hà mã.",
+  "Bốn con năm 1981 đã thành một bài toán của nhà nước.",
+  "Bạn có thể nhớ ông trùm.",
+  "Dòng sông không nhớ theo cách ấy.",
+  "Nó chỉ nhận thêm miệng ăn, và những lối bơi mới.",
+  {
+   "t": "Colombia vẫn chưa chọn xong giữa kim tiêm, chiếc tàu chở đi, và súng.",
+   "p": 1.0
+  },
+  "Câu hỏi để ngỏ.",
+  "Khi một tội ác chết, phần nào của nó vẫn biết bơi?"
+ ],
+ "hud": {
+  "k": "HỒ SƠ",
+  "t": "NGOÀI HÀNG RÀO"
+ },
+ "bgm": {
+  "mood": "dark",
+  "gain": 0.11
+ },
+ "scenes": [
+  {
+   "type": "chapter",
+   "at": 0,
+   "no": "8",
+   "k": "CHƯƠNG 8",
+   "title": "13.04.2026"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "NGÂN SÁCH GHI TRONG",
+     "at": [
+      1,
+      "Ngân"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "from": 0,
+   "to": 200,
+   "suffix": " CON",
+   "label": "CON"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "BỘ CẢNH BÁO NẾU",
+     "at": [
+      3,
+      "Bộ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 4,
+   "day": "PHIM",
+   "date": "2013"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "CÁI TÊN BÁN ĐƯỢC",
+     "at": [
+      5,
+      "Cái"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "CON VẬT KHÔNG CẦN",
+     "at": [
+      6,
+      "Con"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "HACIENDA NÁPOLES NGÀY NAY",
+     "at": [
+      7,
+      "Hacienda"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "KHÁCH ĐẾN CHỤP CỔNG",
+     "at": [
+      8,
+      "Khách"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 9,
+   "text": "NGOÀI HÀNG RÀO",
+   "white": true
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "BỐN CON NĂM 1981",
+     "at": [
+      10,
+      "Bốn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "BẠN CÓ THỂ NHỚ",
+     "at": [
+      11,
+      "Bạn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 12,
+   "text": "DÒNG SÔNG",
+   "white": true
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "NÓ CHỈ NHẬN THÊM",
+     "at": [
+      13,
+      "Nó"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "COLOMBIA VẪN CHƯA CHỌN",
+     "at": [
+      14,
+      "Colombia"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "CÂU HỎI ĐỂ NGỎ",
+     "at": [
+      15,
+      "Câu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 16,
+   "text": "Phần nào vẫn biết bơi?"
+  }
+ ]
+}

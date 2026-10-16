@@ -1,0 +1,54 @@
+{
+ "title": "Ngày 13 tháng 4 năm 1970, Swigert nói đã có sự cố, không phải câu phim",
+ "description": "Khoảng 22:06 giờ miền Đông, ngày 13/4/1970, tức khoảng 03:06 UTC ngày 14/4, Jack Swigert nói: I believe we've had a problem here, dịch ý: tôi tin là chúng tôi đã có sự cố. Jim Lovell nói lại: Houston, we've had a problem, dịch ý: Houston, chúng tôi đã có sự cố. Câu phim đổi sang thì hiện tại, we have a problem. NASA: quạt khuấy oxy trong bình số 2 được bật, dây hở trong bình chập, bình vỡ và làm bình số 1 mất oxy. Tàu không hạ cánh Mặt Trăng. Jim Lovell, Jack Swigert và Fred Haise đáp Thái Bình Dương ngày 17/4/1970. Ảnh AS13-59-8500 do NASA chụp khoang dịch vụ sau khi tách, một tấm vỏ đã bay mất, không phải khoảnh khắc nổ.",
+ "tags": ["Apollo 13", "Swigert", "1970", "bình oxy", "NASA", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 1970",
+ "sub": "APOLLO 13",
+ "acc": ["swigert", "đã", "phim", "oxy", "haise"],
+ "lines": [
+  "Khoảng 22 giờ, ngày 13 tháng 4 năm 1970, Jack Swigert nói với Houston.",
+  "Ông nói: tôi tin là chúng tôi đã có sự cố.",
+  "Jim Lovell nói lại: Houston, chúng tôi đã có sự cố.",
+  "Câu phim đổi thành thì hiện tại: đang có sự cố.",
+  "Trước đó họ bật quạt khuấy oxy trong bình số 2.",
+  "Bình ấy vỡ, bình số 1 cũng mất oxy.",
+  "Tàu không hạ cánh xuống Mặt Trăng.",
+  "Ba người về tới Thái Bình Dương ngày 17 tháng 4 năm 1970.",
+  "Ảnh là khoang dịch vụ sau khi tách, không phải lúc nổ.",
+  "Tấm vỏ một khoang đã bay mất.",
+  "Người thứ ba trên tàu là Fred Haise."
+ ],
+ "imgs": {
+  "sm": "File:View of damaged Apollo 13 Service Module from the Lunar-Command Modules (as13-59-8500).jpg"
+ },
+ "scenes": [
+  {"type": "hero", "img": "sm", "frame": "print", "tone": "color", "intro": true, "head": "1970"},
+  {"type": "quote", "at": 1, "text": "ĐÃ CÓ SỰ CỐ", "by": "SWIGERT · DỊCH Ý"},
+  {"type": "kinetic", "at": 2, "items": [
+    {"text": "LOVELL", "at": [2, "Lovell"]}
+  ]},
+  {"type": "slam", "at": 3, "text": "CÂU PHIM", "sub": "THÌ HIỆN TẠI", "white": true},
+  {"type": "kinetic", "at": 4, "items": [
+    {"text": "QUẠT KHUẤY", "at": [4, "quạt"]}
+  ]},
+  {"type": "slam", "at": 5, "text": "BÌNH VỠ", "sub": "SỐ 2", "bg": "sm"},
+  {"type": "kinetic", "at": 6, "items": [
+    {"text": "KHÔNG HẠ CÁNH", "at": [6, "hạ"], "acc": true}
+  ]},
+  {"type": "date", "at": 7, "bg": "sm", "day": "ĐÁP", "date": "17.04.1970",
+   "dayAt": [7, "về"],
+   "groupAt": [[7, "17"], [7, "4"], [7, "1970"]],
+   "sub": {"text": "THÁI BÌNH DƯƠNG", "at": [7, "Thái"]}},
+  {"type": "photo", "at": 8, "img": "sm", "tone": "color", "focus": [0.48, 0.42],
+   "label": {"text": "SAU KHI TÁCH", "at": [8, "tách"]},
+   "credit": "KHOANG DỊCH VỤ, NASA"},
+  {"type": "kinetic", "at": 9, "items": [
+    {"text": "TẤM VỎ", "at": [9, "vỏ"], "size": 200}
+  ]},
+  {"type": "hero", "at": 10, "img": "sm", "frame": "print", "tone": "color", "loop": true, "head": "HAISE", "tr": "cut"}
+ ],
+ "sources": [
+  "https://nssdc.gsfc.nasa.gov/planetary/lunar/ap13acc.html",
+  "https://www.nasa.gov/history/nasas-apollo-13-mission-challenged-crew-launch-team/"
+ ]
+}

@@ -1,0 +1,60 @@
+{
+ "title": "Năm 1623, Heminges và Condell in First Folio, mười tám vở chưa từng được in",
+ "description": "Năm 1623, bảy năm sau khi Shakespeare mất, hai diễn viên John Heminges và Henry Condell in First Folio. Tập có 36 vở. 18 vở, trong đó có Macbeth và The Tempest, chưa từng được in. Người ta ước chừng 750 bản được in. Nay biết 235 bản còn. Thư viện Folger ở Washington giữ 82 bản. Trang bìa 1623 in chân dung Shakespeare.",
+ "tags": ["First Folio", "1623", "Heminges", "Shakespeare", "Macbeth", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 1623",
+ "sub": "FOLIO",
+ "acc": ["heminges", "folio", "mười", "macbeth", "folger"],
+ "lines": [
+  "Năm 1623, John Heminges và Henry Condell in một tập kịch.",
+  "Tập mang tên First Folio của William Shakespeare.",
+  "Shakespeare đã mất bảy năm trước đó.",
+  "Hai người là diễn viên cùng đoàn với ông.",
+  "Tập gồm ba mươi sáu vở.",
+  "Mười tám vở trong đó chưa từng được in.",
+  "Không có tập này, Macbeth và The Tempest chưa có bản in nào.",
+  "Người ta ước chừng bảy trăm năm mươi bản được in.",
+  "Nay còn hai trăm ba mươi lăm bản được biết.",
+  "Thư viện Folger ở Washington giữ tám mươi hai bản.",
+  "Trang bìa năm 1623 vẫn in chân dung Shakespeare.",
+  "Mười tám vở ấy nhờ trang giấy này mà còn bản in."
+ ],
+ "imgs": {
+  "page": "File:First Folio.jpg"
+ },
+ "scenes": [
+  {"type": "hero", "img": "page", "frame": "print", "tone": "sepia", "intro": true, "head": "HEMINGES"},
+  {"type": "kinetic", "at": 1, "items": [
+    {"text": "FIRST FOLIO", "at": [1, "Folio"]}
+  ]},
+  {"type": "kinetic", "at": 2, "items": [
+    {"text": "BẢY NĂM", "at": [2, "bảy"], "size": 220}
+  ]},
+  {"type": "kinetic", "at": 3, "items": [
+    {"text": "DIỄN VIÊN", "at": [3, "diễn"]}
+  ]},
+  {"type": "kinetic", "at": 4, "items": [
+    {"text": "36 VỞ", "at": [4, "sáu"], "size": 240, "serif": true}
+  ]},
+  {"type": "kinetic", "at": 5, "items": [
+    {"text": "MƯỜI TÁM", "at": [5, "tám"], "size": 220, "acc": true}
+  ]},
+  {"type": "kinetic", "at": 6, "items": [
+    {"text": "MACBETH", "at": [6, "Macbeth"]}
+  ]},
+  {"type": "kinetic", "at": 7, "items": [
+    {"text": "ƯỚC 750", "at": [7, "bảy"]}
+  ]},
+  {"type": "kinetic", "at": 8, "items": [
+    {"text": "235 BẢN", "at": [8, "trăm"], "size": 220}
+  ]},
+  {"type": "kinetic", "at": 9, "items": [
+    {"text": "FOLGER", "at": [9, "Folger"]}
+  ]},
+  {"type": "photo", "at": 10, "img": "page", "tone": "sepia", "focus": [0.5, 0.35],
+   "label": {"text": "TRANG BÌA", "at": [10, "bìa"]},
+   "credit": "TRANG BÌA FIRST FOLIO, 1623"},
+  {"type": "hero", "at": 11, "img": "page", "frame": "print", "tone": "sepia", "loop": true, "head": "MƯỜI TÁM", "tr": "cut"}
+ ],
+ "sources": ["https://www.folger.edu/explore/shakespeare-in-print/first-folio/"]
+}

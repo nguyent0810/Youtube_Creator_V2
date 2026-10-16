@@ -1,0 +1,52 @@
+{
+  "title": "Ngày 17 tháng 12 năm 1903, Flyer bay 12 giây và Wilbur chạy bên cạnh",
+  "description": "Khoảng 10:35 sáng ngày 17/12/1903, tại Kill Devil Hills, gần Kitty Hawk, Bắc Carolina. Orville Wright nằm trên cánh dưới để lái. Wilbur chạy bên cánh phải; trong ảnh ông vừa buông cột trước của cánh. Chuyến này 12 giây, 120 feet. Smithsonian ghi 36 mét. John T. Daniels, trạm cứu hộ Kill Devil Hills, bóp bóng máy ảnh Gundlach Korona của hai anh em. Ông chưa từng dùng máy ảnh, và sau nói không chắc mình đã bóp. Tấm kính 5 x 7 được tráng khi mang về Ohio. Buổi sáng có bốn chuyến, hai anh em đổi nhau lái. Chuyến thứ tư do Wilbur lái: 59 giây, 852 feet, Smithsonian ghi 255,6 mét. Ảnh là chuyến thứ nhất, không phải chuyến dài nhất. Ngày 14/12 Wilbur đã thử, máy hỏng, sửa lại rồi mới bay ngày 17. Sau chuyến thứ tư, một cơn gió lật máy trên cát. Smithsonian gọi đây là những chuyến thành công đầu tiên của máy bay có động cơ, nặng hơn không khí. FAI mô tả là chuyến có người lái, có động cơ, được điều khiển và kéo dài, nhưng không ghi thành kỷ lục chính thức. Ảnh John T. Daniels, Thư viện Quốc hội Mỹ.",
+  "tags": ["Wright Flyer", "1903", "Orville Wright", "Wilbur Wright", "Kill Devil Hills", "hồ sơ vụ án"],
+  "kicker": "HỒ SƠ 1903",
+  "sub": "WRIGHT FLYER",
+  "acc": ["orville", "wilbur", "daniels", "giây", "ohio", "gió"],
+  "lines": [
+    "Lúc 10 giờ 35, ngày 17 tháng 12 năm 1903, Flyer rời ray ở Kill Devil Hills.",
+    "Orville nằm lái. Wilbur chạy bên, vừa buông cột cánh phải.",
+    "Chuyến ấy 12 giây, dài khoảng 36 mét.",
+    "John Daniels bấm máy. Ông chưa từng dùng máy ảnh.",
+    "Ông không chắc mình đã bóp bóng chụp.",
+    "Buổi sáng ấy có bốn chuyến. Anh em đổi nhau lái.",
+    "Chuyến cuối Wilbur lái, 59 giây, khoảng 256 mét.",
+    "Ảnh là chuyến 12 giây, không phải chuyến dài nhất.",
+    "Tấm kính âm bản mang về Ohio mới tráng.",
+    "Sau chuyến cuối, gió giật lật máy."
+  ],
+  "imgs": {
+    "fly": "File:First flight2.jpg"
+  },
+  "scenes": [
+    {"type": "date", "at": 0, "bg": "fly", "day": "CẤT CÁNH", "date": "17.12.1903",
+     "dayAt": [0, "Flyer"],
+     "groupAt": [[0, "17"], [0, "12"], [0, "1903"]],
+     "sub": {"text": "KILL DEVIL", "at": [0, "Kill"]}},
+    {"type": "kinetic", "at": 1, "items": [
+      {"text": "WILBUR CHẠY", "at": [1, "Wilbur"], "size": 170}
+    ]},
+    {"type": "slam", "at": 2, "text": "12 GIÂY", "sub": "36 MÉT", "bg": "fly"},
+    {"type": "kinetic", "at": 3, "items": [
+      {"text": "DANIELS", "at": [3, "Daniels"], "acc": true}
+    ]},
+    {"type": "slam", "at": 4, "text": "CHƯA CHẮC", "sub": "BÓP BÓNG", "white": true},
+    {"type": "kinetic", "at": 5, "items": [
+      {"text": "BỐN CHUYẾN", "at": [5, "bốn"]}
+    ]},
+    {"type": "slam", "at": 6, "text": "59 GIÂY", "sub": "256 MÉT"},
+    {"type": "photo", "at": 7, "img": "fly", "tone": "bw", "focus": [0.4, 0.48],
+     "label": {"text": "CHUYẾN 12 GIÂY", "at": [7, "12"]},
+     "credit": "JOHN DANIELS, 1903"},
+    {"type": "kinetic", "at": 8, "items": [
+      {"text": "OHIO", "at": [8, "Ohio"], "size": 220}
+    ]},
+    {"type": "slam", "at": 9, "text": "GIÓ GIẬT", "sub": "LẬT MÁY", "bg": "fly"}
+  ],
+  "sources": [
+    "https://www.si.edu/object/1903-wright-flyer%3Anasm_A19610048000",
+    "https://en.wikipedia.org/wiki/John_T._Daniels"
+  ]
+}

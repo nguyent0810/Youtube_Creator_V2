@@ -1,0 +1,18 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800;900&family=Noto+Serif+Display:wght@900&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#0f151b}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;color:#e8ecef}
+.glow{position:absolute;border-radius:50%;filter:blur(110px);background:rgba(61,154,214,.45)}
+.big{position:absolute;font-weight:900;line-height:1.05;white-space:nowrap;color:#bcd0dc;text-shadow:0 18px 40px #000}
+.tag{position:absolute;font-family:'Noto Serif Display',serif;font-weight:900;letter-spacing:.16em;color:#3d9ad6;white-space:nowrap}
+.grain{position:absolute;inset:0;opacity:.14;mix-blend-mode:overlay}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<div class="glow" style="left:80px;top:200px;width:1400px;height:700px"></div>
+<div class="tag" style="left:120px;top:170px;font-size:52px">17.10.1931</div>
+<div class="big" style="left:100px;top:320px;font-size:220px">TỜ KHAI</div>
+<div class="tag" style="left:120px;top:860px;font-size:46px">KHÔNG PHẢI KHẨU SÚNG</div>
+<svg class="grain" width="1920" height="1080"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3" seed="3"/></filter><rect width="100%" height="100%" filter="url(#g)"/></svg>
+</div><script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

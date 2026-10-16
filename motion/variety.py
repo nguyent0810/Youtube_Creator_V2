@@ -10,6 +10,9 @@ video dài khác các video trước về NHẠC NỀN và DIỆN MẠO (bảng 
   python motion/variety.py library           kho nhạc: số lần mỗi bài đã dùng trong sổ
 
 Sổ: data/variety/ledger.json (commit). Danh mục nhạc + mood: motion/long/music_catalog.json (commit).
+Sau khi một Long đã public đủ 9 ngày, monitor.py ghi một lần số 7 ngày đầu vào đúng dòng sổ:
+ret1 (% còn xem ở phút 1), suggested (% view từ đề xuất / RELATED_VIDEO), và chênh so với video
+ngay trước cùng kênh (ret1_vs_prev, suggested_vs_prev). record() giữ các số này.
 File nhạc: output/music/ (không commit; tải về theo danh mục).
 Trong chNN.json, bgm có thể ghi {"mood": "tense", "gain": .., "at": ..} thay vì "file": build_long chọn bài
 qua resolve_bgm() — cả bộ nhạc được chọn cùng lúc để Jaccard lớn nhất với các video gần đây nhỏ nhất (retro 3 mục 9),
@@ -20,7 +23,7 @@ import hashlib
 import json
 import shutil
 import sys
-from datetime import date
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -30,6 +33,9 @@ LIB = ROOT / "output" / "music"
 WINDOW = 3            # so với bao nhiêu video gần nhất cùng kênh
 MAX_BGM_OVERLAP = 0.35  # Jaccard bộ nhạc nền giữa hai video
 CHANNEL_THEME = {"MIM": "lab", "CK": "chart"}   # theme mặc định theo kênh (motion/long/build_long.py _channels) khi spec không ghi
+WINDOW_DAYS = 7       # cửa sổ số liệu giữ chân / đề xuất
+LAG_DAYS = 2          # Analytics trễ 1–2 ngày; chỉ ghi sổ khi cửa sổ đã khép
+FEEDBACK_FIELDS = ("ret1", "suggested", "ret1_vs_prev", "suggested_vs_prev", "feedback_on", "feedback_age_days")
 
 # Diện mạo: chỉ font có bộ ký tự tiếng Việt trên Google Fonts (đã kiểm 04/10/2026).
 # "classic" = diện mạo của mọi video trước ngày có module này (spec không ghi look -> classic, render y như cũ).
@@ -37,10 +43,13 @@ LOOKS = {
     "classic": {"serif": ("Playfair Display", "0,700;0,900;1,700"), "sans": ("Be Vietnam Pro", "0,400;0,600;0,700;0,800;0,900;1,600"),
                 "vars": {}},
     "amber": {"serif": ("Literata", "0,700;0,900;1,700"), "sans": ("Montserrat", "0,400;0,600;0,700;0,800;0,900;1,600"),
+              "kw": 1.07,   # Montserrat đậm rộng hơn Be Vietnam Pro ~7%: engine thu chữ kinetic lại cho vừa khung (đo bằng font thật, Escobar ch13)
               "vars": {"--red": "#e39a2d", "--gold": "#f2cf86", "--paper": "#f2e7cf", "--bed1": "#1d150c", "--bed2": "#0c0905"}},
     "steel": {"serif": ("Noto Serif Display", "0,700;0,900;1,700"), "sans": ("Inter", "0,400;0,600;0,700;0,800;0,900;1,600"),
+              "kw": 1.02, "kws": 1.15,   # Noto Serif Display rộng hơn Playfair: câu hỏi 35 ký tự bị rớt một chữ xuống dòng (Capone ch00)
               "vars": {"--red": "#3d9ad6", "--gold": "#bcd0dc", "--paper": "#e8ecef", "--ink": "#121619", "--bed1": "#0f151b", "--bed2": "#07090c"}},
     "jade": {"serif": ("Source Serif 4", "0,700;0,900;1,700"), "sans": ("Barlow Condensed", "0,400;0,600;0,700;0,800;0,900;1,600"),
+             "kw": 0.74,   # Barlow Condensed hẹp: không nới thì chữ kinetic chỉ chiếm nửa khung (Bulger ch00); dòng dài nhất đo được vẫn < 1720px
              "vars": {"--red": "#2fb489", "--gold": "#d6c07a", "--paper": "#ebe5d0", "--bed1": "#0e1713", "--bed2": "#060a08"}},
     "rose": {"serif": ("Spectral", "0,700;0,800;1,700"), "sans": ("Archivo", "0,400;0,600;0,700;0,800;0,900;1,600"),
              "vars": {"--red": "#c9457d", "--gold": "#e7c58f", "--paper": "#efe3d6", "--bed1": "#170d12", "--bed2": "#09060a"}},
@@ -55,7 +64,11 @@ def look(name: str | None) -> dict:
     v = dict(L["vars"])
     v["--serif"] = f"'{L['serif'][0]}'"
     v["--sans"] = f"'{L['sans'][0]}'"
-    return {"name": name or "classic", "vars": v}
+    out = {"name": name or "classic", "vars": v}
+    for k in ("kw", "kws"):
+        if L.get(k):
+            out[k] = L[k]
+    return out
 
 
 def fonts_url(name: str | None) -> str:
@@ -247,10 +260,75 @@ def next_look(channel: str = "CL", exclude: str = "") -> str:
 
 
 def record(topic: str, when: str | None = None) -> dict:
-    row = {**profile(topic), "date": when or date.today().isoformat()}
+    old = next((r for r in ledger() if r["topic"] == topic), None)
+    row = keep_feedback({**profile(topic), "date": when or date.today().isoformat()}, old)
     rows = [r for r in ledger() if r["topic"] != topic] + [row]
     save_ledger(rows)
     return row
+
+
+def keep_feedback(fresh: dict, old: dict | None) -> dict:
+    """record() ghi lại look/nhạc/ngày, và giữ số giữ chân đã chốt."""
+    row = dict(fresh)
+    if old:
+        for k in FEEDBACK_FIELDS:
+            if k in old:
+                row[k] = old[k]
+    return row
+
+
+def feedback_ready(published: datetime, now: datetime) -> bool:
+    """Đủ 7 ngày phát sóng cộng 2 ngày Analytics trễ thì cửa sổ số liệu đã khép."""
+    return now - published >= timedelta(days=WINDOW_DAYS + LAG_DAYS)
+
+
+def feedback_window(published: datetime) -> tuple[str, str]:
+    """startDate, endDate (UTC) của 7 ngày đầu. Lùi 1 ngày để khỏi cắt mất giờ Thái Bình Dương."""
+    d = published.date()
+    return (d - timedelta(days=1)).isoformat(), (d + timedelta(days=WINDOW_DAYS)).isoformat()
+
+
+def minute_retention(curve, dur: float, sec: float):
+    """% người xem còn lại ở giây `sec`. None nếu chưa có đường giữ chân hoặc không có độ dài."""
+    if not curve or not dur:
+        return None
+    hit = min(curve, key=lambda c: abs(float(c["elapsedVideoTimeRatio"]) * dur - sec))
+    return round(float(hit["audienceWatchRatio"]) * 100, 1)
+
+
+def suggested_share(sources):
+    """% view từ RELATED_VIDEO. 0 nếu có view mà không có đề xuất. None nếu chưa có số."""
+    if not sources:
+        return None
+    total = sum(int(s["views"]) for s in sources)
+    if not total:
+        return None
+    related = next((int(s["views"]) for s in sources if s["insightTrafficSourceType"] == "RELATED_VIDEO"), 0)
+    return round(related / total * 100, 1)
+
+
+def stamp_feedback(rows: list[dict], topic: str, *, ret1: float, suggested: float, age_days: float, today: str):
+    """Ghi một lần số 7 ngày vào dòng `topic`. Không đè số đã có. Không tạo dòng mới.
+
+    Video trước = dòng cùng kênh có ngày sổ sớm hơn. Chênh chỉ có khi video đó đã có số.
+    Trả (danh sách mới, dòng đã ghi hoặc None).
+    """
+    idx = next((i for i, r in enumerate(rows) if r["topic"] == topic), None)
+    if idx is None or rows[idx].get("ret1") is not None:
+        return rows, None
+    row = rows[idx]
+    prevs = [r for r in rows if r.get("channel") == row.get("channel") and r["topic"] != topic and r.get("date", "") < row.get("date", "")]
+    prev = max(prevs, key=lambda r: r.get("date", "")) if prevs else None
+    patch = {"ret1": ret1, "suggested": suggested, "feedback_on": today, "feedback_age_days": age_days}
+    if prev is not None and prev.get("ret1") is not None:
+        patch["ret1_vs_prev"] = round(ret1 - prev["ret1"], 1)
+    if prev is not None and prev.get("suggested") is not None:
+        patch["suggested_vs_prev"] = round(suggested - prev["suggested"], 1)
+    updated = dict(row)
+    updated.update(patch)
+    out = list(rows)
+    out[idx] = updated
+    return out, updated
 
 
 def main():

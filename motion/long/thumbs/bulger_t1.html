@@ -1,0 +1,18 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800;900&family=Source+Serif+4:wght@900&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#0e1713}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;color:#ebe5d0}
+.glow{position:absolute;border-radius:50%;filter:blur(110px);background:rgba(47,180,137,.45)}
+.big{position:absolute;font-weight:900;line-height:.88;white-space:nowrap;color:#d6c07a;text-shadow:0 10px 40px #000}
+.tag{position:absolute;font-family:'Source Serif 4',serif;font-weight:900;letter-spacing:.14em;color:#2fb489;white-space:nowrap}
+.grain{position:absolute;inset:0;opacity:.14;mix-blend-mode:overlay}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<div class="glow" style="left:40px;top:160px;width:1500px;height:800px"></div>
+<div class="tag" style="left:110px;top:230px;font-size:50px">22.06.2011</div>
+<div class="big" style="left:90px;top:360px;font-size:210px">800.000</div>
+<div class="tag" style="left:110px;top:860px;font-size:46px">SANTA MONICA</div>
+<svg class="grain" width="1920" height="1080"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3" seed="5"/></filter><rect width="100%" height="100%" filter="url(#g)"/></svg>
+</div><script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

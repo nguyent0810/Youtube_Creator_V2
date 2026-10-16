@@ -1,0 +1,202 @@
+{
+ "title": "Hai mươi sáu tuổi",
+ "lines": [
+  {
+   "t": "Năm 1919, Torrio gọi ông sang Chicago.",
+   "p": 0.8
+  },
+  "Torrio làm việc cho Jim Colosimo.",
+  "Capone bắt đầu ở một nhà chứa.",
+  "Tháng 1 năm 1925, một cuộc phục kích làm ông sợ, nhưng không trúng đạn.",
+  "Mười hai ngày sau, Torrio bị bắn nhiều phát khi đi chợ về.",
+  "Torrio sống.",
+  "Rồi Torrio rút, giao quyền.",
+  "Capone hai mươi sáu tuổi, thành ông chủ của một mạng lưới nấu rượu lậu và đường vận chuyển tới tận Canada.",
+  "Có một câu ông được kể là đã nói về Canada.",
+  {
+   "t": "Tôi còn không biết Canada nằm ở phố nào.",
+   "q": 1,
+   "tr": 1
+  },
+  "Cảnh sát Hoàng gia Canada nói không có bằng chứng ông từng đặt chân lên đất Canada.",
+  "Hai câu đứng cạnh nhau.",
+  "Một là lời đùa được ghi lại.",
+  "Một là kết luận của cảnh sát.",
+  {
+   "t": "Hồ sơ không gộp chúng thành một sự thật.",
+   "p": 1.0
+  }
+ ],
+ "hud": {
+  "k": "HỒ SƠ",
+  "t": "HAI SÁU TUỔI"
+ },
+ "bgm": {
+  "mood": "quiet",
+  "gain": 0.11
+ },
+ "scenes": [
+  {
+   "type": "chapter",
+   "at": 0,
+   "no": "3",
+   "k": "CHƯƠNG 3",
+   "title": "CHICAGO\n1919"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "TORRIO LÀM VIỆC CHO",
+     "at": [
+      1,
+      "Torrio"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "CAPONE BẮT ĐẦU Ở",
+     "at": [
+      2,
+      "Capone"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "THÁNG 1 NĂM 1925",
+     "at": [
+      3,
+      "Tháng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 4,
+   "day": "TORRIO",
+   "date": "01.1925"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "TORRIO SỐNG",
+     "at": [
+      5,
+      "Torrio"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "RỒI TORRIO RÚT, GIAO",
+     "at": [
+      6,
+      "Rồi"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "HAI SÁU TUỔI",
+   "white": true
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "CÓ MỘT CÂU ÔNG",
+     "at": [
+      8,
+      "Có"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 9,
+   "text": "Tôi còn không biết Canada nằm ở phố nào.",
+   "qline": 9,
+   "by": "TRÍCH DỊCH"
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "CẢNH SÁT HOÀNG GIA",
+     "at": [
+      10,
+      "Cảnh"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "HAI CÂU ĐỨNG CẠNH",
+     "at": [
+      11,
+      "Hai"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "MỘT LÀ LỜI ĐÙA",
+     "at": [
+      12,
+      "Một"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "MỘT LÀ KẾT LUẬN",
+     "at": [
+      13,
+      "Một"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 14,
+   "text": "HỒ SƠ KHÔNG GỘP",
+   "white": true
+  }
+ ]
+}

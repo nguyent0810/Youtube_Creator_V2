@@ -1,0 +1,627 @@
+{
+ "title": "Nápoles",
+ "lines": [
+  {
+   "t": "Chương ba. Nápoles.",
+   "p": 1.0
+  },
+  "Cách Medellín khoảng bốn giờ xe về phía đông, bên bờ sông Magdalena, có một thị trấn tên Puerto Triunfo.",
+  "Năm 1978, Escobar cùng người anh họ Gustavo gom đất ở đây.",
+  "Tổng cộng khoảng ba nghìn hecta.",
+  "Ông đặt tên cho nó là Hacienda Nápoles, trang trại Napoli.",
+  "Trên cổng vào, ông cho gắn một chiếc máy bay cánh quạt một động cơ.",
+  "Theo lời kể, đó là chiếc máy bay đã chở chuyến hàng đầu tiên của ông sang Mỹ.",
+  "Bên trong có đường băng riêng, đấu trường bò tót, hồ nhân tạo.",
+  "Có những bức tượng khủng long to bằng kích thước thật, làm cho con trai ông chơi.",
+  "Và có một vườn thú.",
+  "Ông cho nhập voi, hươu cao cổ, ngựa vằn, đà điểu.",
+  "Dân trong vùng được vào xem miễn phí.",
+  "Năm 1981, vườn thú đón thêm bốn con vật từ châu Phi.",
+  "Một con đực và ba con cái.",
+  {
+   "t": "Bốn con hà mã.",
+   "p": 1.0
+  },
+  "Lúc ấy, không ai nghĩ gì nhiều về chúng.",
+  "Ở Medellín, ông sống trong một tòa nhà tám tầng màu trắng tên là Mónaco, giữa khu phố giàu nhất thành phố.",
+  "Bên trong là tranh của các danh họa và một bộ sưu tập xe cổ.",
+  "Tháng 10 năm 1987, tạp chí Forbes công bố danh sách tỷ phú quốc tế đầu tiên của mình.",
+  "Trong đó có một cái tên Colombia.",
+  "Forbes ước tính tài sản của Pablo Escobar ở mức trên hai tỷ đô la.",
+  "Ông sẽ còn nằm trong danh sách ấy bảy năm liền, cho tới năm ông chết.",
+  "Trên mạng thường nói năm 1989 ông giàu thứ bảy thế giới.",
+  "Con số ấy không tìm thấy trong bản gốc của Forbes. Chính con trai ông cũng phủ nhận.",
+  "Nhưng kể cả con số thấp nhất cũng đủ nói lên một điều.",
+  "Một người chưa từng có một doanh nghiệp hợp pháp nào đáng kể giờ giàu hơn cả những gia tộc lâu đời nhất nước.",
+  "Và người ấy bắt đầu muốn một thứ mà tiền chưa mua được cho ông.",
+  {
+   "t": "Ông muốn được kính trọng.",
+   "p": 1.0
+  },
+  "Ông muốn đi vào Quốc hội bằng cửa chính."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "NÁPOLES",
+   "sub": "PUERTO TRIUNFO · 1978 — 1987",
+   "titleAt": [
+    0,
+    "Nápoles"
+   ],
+   "bg": "napoles_gate"
+  },
+  {
+   "type": "map",
+   "at": 1,
+   "geo": "co",
+   "pins": [
+    {
+     "name": "Puerto Triunfo",
+     "label": "PUERTO TRIUNFO",
+     "at": [
+      1,
+      "Puerto"
+     ]
+    }
+   ],
+   "zoom": "Medellín",
+   "zoomK": 1.9
+  },
+  {
+   "type": "photo",
+   "at": 2,
+   "img": "magdalena",
+   "tone": "color",
+   "move": "pan",
+   "kin": [
+    {
+     "text": "1978",
+     "at": [
+      2,
+      "1978"
+     ],
+     "sm": true
+    },
+    {
+     "text": "GOM ĐẤT BÊN SÔNG MAGDALENA",
+     "at": [
+      2,
+      "gom"
+     ]
+    }
+   ],
+   "label": {
+    "k": "SÔNG MAGDALENA",
+    "v": "ẢNH NGÀY NAY",
+    "at": [
+     2,
+     "Escobar"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "vid": "35969886",
+   "tone": "noir",
+   "from": 0,
+   "to": 3000,
+   "suffix": " HECTA",
+   "countAt": [
+    3,
+    "ba"
+   ],
+   "label": "TỔNG DIỆN TÍCH TRANG TRẠI"
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "bg": "napoles_house",
+   "text": "HACIENDA NÁPOLES",
+   "white": true,
+   "hitAt": [
+    4,
+    "Hacienda"
+   ],
+   "sub": "TRANG TRẠI NAPOLI"
+  },
+  {
+   "type": "photo",
+   "at": 5,
+   "img": "napoles_gate",
+   "tone": "color",
+   "move": "in",
+   "kin": [
+    {
+     "text": "CHIẾC MÁY BAY TRÊN CỔNG",
+     "at": [
+      5,
+      "máy"
+     ]
+    }
+   ],
+   "label": {
+    "k": "CỔNG HACIENDA NÁPOLES",
+    "v": "ẢNH NGÀY NAY",
+    "at": [
+     5,
+     "cổng"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "vid": "8723067",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "THEO LỜI KỂ",
+     "at": [
+      6,
+      "Theo"
+     ],
+     "sm": true
+    },
+    {
+     "text": "CHUYẾN HÀNG ĐẦU TIÊN SANG MỸ",
+     "at": [
+      6,
+      "chuyến"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "BÊN TRONG TRANG TRẠI",
+   "bg": "napoles_lake",
+   "rows": [
+    {
+     "k": "ĐƯỜNG BĂNG",
+     "v": "RIÊNG",
+     "at": [
+      7,
+      "đường"
+     ]
+    },
+    {
+     "k": "ĐẤU TRƯỜNG",
+     "v": "BÒ TÓT",
+     "at": [
+      7,
+      "đấu"
+     ]
+    },
+    {
+     "k": "HỒ",
+     "v": "NHÂN TẠO",
+     "at": [
+      7,
+      "hồ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 8,
+   "img": "napoles_dino",
+   "tone": "color",
+   "move": "in",
+   "kin": [
+    {
+     "text": "TƯỢNG KHỦNG LONG",
+     "at": [
+      8,
+      "khủng"
+     ]
+    },
+    {
+     "text": "LÀM CHO CON TRAI CHƠI",
+     "at": [
+      8,
+      "con"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "CÔNG VIÊN HACIENDA NÁPOLES",
+    "v": "ẢNH NGÀY NAY",
+    "at": [
+     8,
+     "tượng"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "slam",
+   "at": 9,
+   "bg": "elephant",
+   "text": "VÀ MỘT VƯỜN THÚ",
+   "hitAt": [
+    9,
+    "vườn"
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 10,
+   "img": "elephant",
+   "tone": "color",
+   "move": "pan",
+   "kin": [
+    {
+     "text": "VOI · HƯƠU CAO CỔ",
+     "at": [
+      10,
+      "voi"
+     ]
+    },
+    {
+     "text": "NGỰA VẰN · ĐÀ ĐIỂU",
+     "at": [
+      10,
+      "ngựa"
+     ]
+    }
+   ],
+   "label": {
+    "k": "VOI Ở HACIENDA NÁPOLES",
+    "v": "ẢNH NGÀY NAY",
+    "at": [
+     10,
+     "nhập"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "broll",
+   "at": 11,
+   "vid": "11829615",
+   "tone": "color",
+   "veil": 0.3,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "DÂN TRONG VÙNG VÀO XEM MIỄN PHÍ",
+     "at": [
+      11,
+      "miễn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 12,
+   "bg": "hippo_africa",
+   "day": "VƯỜN THÚ ĐÓN BỐN CON VẬT TỪ CHÂU PHI",
+   "date": "1981"
+  },
+  {
+   "type": "bars",
+   "at": 13,
+   "bg": "hippo_africa",
+   "title": "BỐN CON VẬT NĂM 1981",
+   "unit": "CON",
+   "items": [
+    {
+     "k": "ĐỰC",
+     "v": 1,
+     "at": [
+      13,
+      "đực"
+     ]
+    },
+    {
+     "k": "CÁI",
+     "v": 3,
+     "acc": true,
+     "at": [
+      13,
+      "ba"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 14,
+   "bg": "hippo2",
+   "text": "BỐN CON HÀ MÃ",
+   "white": true,
+   "hitAt": [
+    14,
+    "hà"
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 15,
+   "vid": "32861840",
+   "tone": "color",
+   "veil": 0.3,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "KHÔNG AI NGHĨ GÌ NHIỀU VỀ CHÚNG",
+     "at": [
+      15,
+      "nghĩ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 16,
+   "img": "monaco",
+   "tone": "color",
+   "kin": [
+    {
+     "text": "TÒA NHÀ MÓNACO",
+     "at": [
+      16,
+      "Mónaco"
+     ],
+     "acc": true
+    },
+    {
+     "text": "TÁM TẦNG · MÀU TRẮNG",
+     "at": [
+      16,
+      "tám"
+     ]
+    }
+   ],
+   "label": {
+    "k": "ẢNH TRƯNG BÀY TẠI HACIENDA NÁPOLES",
+    "v": "TÒA NHÀ MÓNACO · MEDELLÍN",
+    "at": [
+     16,
+     "sống"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "broll",
+   "at": 17,
+   "vid": "31220657",
+   "tone": "noir",
+   "veil": 0.35,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "TRANH CỦA CÁC DANH HỌA",
+     "at": [
+      17,
+      "tranh"
+     ]
+    },
+    {
+     "text": "MỘT BỘ SƯU TẬP XE CỔ",
+     "at": [
+      17,
+      "xe"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 18,
+   "vid": "29906414",
+   "tone": "noir",
+   "day": "FORBES · DANH SÁCH TỶ PHÚ QUỐC TẾ ĐẦU TIÊN",
+   "date": "10.1987"
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "bg": "med_milla",
+   "items": [
+    {
+     "text": "MỘT CÁI TÊN COLOMBIA",
+     "at": [
+      19,
+      "Colombia"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 20,
+   "bg": "mugc",
+   "from": 0,
+   "to": 2,
+   "prefix": "> $",
+   "suffix": " TỶ",
+   "countAt": [
+    20,
+    "hai"
+   ],
+   "label": "TÀI SẢN CỦA ESCOBAR · ƯỚC TÍNH CỦA FORBES, 1987"
+  },
+  {
+   "type": "timeline",
+   "at": 21,
+   "bg": "med_milla",
+   "items": [
+    {
+     "year": "1987",
+     "text": "Lần đầu *có tên*"
+    },
+    {
+     "year": "1989",
+     "text": "Vẫn trong danh sách"
+    },
+    {
+     "year": "1993",
+     "text": "Còn khoảng *1 tỷ đô*"
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 22,
+   "k": "CON SỐ LAN TRUYỀN TRÊN MẠNG",
+   "name": "“GIÀU THỨ 7\nTHẾ GIỚI”",
+   "desc": "Năm 1989",
+   "bg": "med_pano",
+   "rows": [
+    {
+     "k": "BẢN GỐC FORBES",
+     "v": "*Không tìm thấy*",
+     "at": [
+      23,
+      "không"
+     ]
+    },
+    {
+     "k": "CON TRAI ÔNG",
+     "v": "Phủ nhận",
+     "at": [
+      23,
+      "phủ"
+     ]
+    }
+   ],
+   "stamp": {
+    "text": "KHÔNG NGUỒN",
+    "at": [
+     23,
+     "gốc"
+    ],
+    "ink": true,
+    "x": 668,
+    "y": 550
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 24,
+   "vid": "40130401",
+   "tone": "night",
+   "items": [
+    {
+     "text": "KỂ CẢ CON SỐ THẤP NHẤT",
+     "at": [
+      24,
+      "thấp"
+     ],
+     "sm": true
+    },
+    {
+     "text": "CŨNG ĐỦ NÓI LÊN MỘT ĐIỀU",
+     "at": [
+      24,
+      "đủ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "split",
+   "at": 25,
+   "title": "TIỀN MỚI VÀ TIỀN CŨ",
+   "a": {
+    "img": "mugc",
+    "label": "KHÔNG DOANH NGHIỆP HỢP PHÁP NÀO ĐÁNG KỂ",
+    "at": [
+     25,
+     "doanh"
+    ]
+   },
+   "b": {
+    "img": "villanueva",
+    "label": "NHỮNG GIA TỘC LÂU ĐỜI NHẤT NƯỚC",
+    "at": [
+     25,
+     "gia"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 26,
+   "bg": "capitolio",
+   "items": [
+    {
+     "text": "THỨ MÀ TIỀN CHƯA MUA ĐƯỢC",
+     "at": [
+      26,
+      "tiền"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 27,
+   "bg": "capitolio",
+   "text": "ĐƯỢC KÍNH TRỌNG",
+   "white": true,
+   "hitAt": [
+    27,
+    "kính"
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 28,
+   "img": "capitolio",
+   "tone": "color",
+   "move": "in",
+   "kin": [
+    {
+     "text": "VÀO QUỐC HỘI",
+     "at": [
+      28,
+      "Quốc"
+     ]
+    },
+    {
+     "text": "BẰNG CỬA CHÍNH",
+     "at": [
+      28,
+      "cửa"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "TÒA NHÀ QUỐC HỘI COLOMBIA · BOGOTÁ",
+    "v": "ẢNH NGÀY NAY",
+    "at": [
+     28,
+     "muốn"
+    ]
+   },
+   "veil": 0.52
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "NÁPOLES"
+ },
+ "bgm": {
+  "mood": "epic",
+  "at": 0,
+  "gain": 0.11
+ }
+}

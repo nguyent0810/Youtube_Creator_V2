@@ -6,6 +6,7 @@
    sfx_long.py đặt tiếng động theo CÙNG các mốc + độ lệch ghi chú ở từng loại cảnh. */
 (function () {
   const C = window.CASE, DUR = C.dur;
+  const KWS = (C.look && C.look.kws) || 1;   // font serif của look rộng hơn Playfair bao nhiêu (variety.py): tiêu đề print và câu hỏi co lại tương ứng
   if (C.accent) document.documentElement.style.setProperty("--red", C.accent);
   if (C.look) Object.entries(C.look.vars || {}).forEach(([k, v]) => document.documentElement.style.setProperty(k, v));   // diện mạo riêng từng video (motion/variety.py)
   if (C.look && C.look.vars && C.look.vars["--bed1"])   // nền theo look, kể cả theme noir/shanghai (vốn ghi cứng màu nền)
@@ -93,7 +94,8 @@
   };
   const imgbg = (s, d, key, veil = 0.6) => {   // nền ảnh tĩnh mờ cho cảnh chữ
     const m = IM(key), im = el("img", "abs " + toneCls(s.bgTone || "dim"), null, d); im.src = m.src; const k = Math.max(W / m.w, H / m.h);
-    Object.assign(im.style, { width: px(m.w * k), height: px(m.h * k), left: px(W / 2 - m.w * k / 2), top: px(H / 2 - m.h * k / 2), opacity: 1 - veil * 0.5 });
+    const tall = m.w / m.h < 1.25, top = tall ? Math.min(0, Math.max(H - m.h * k, H / 2 - 0.3 * m.h * k)) : H / 2 - m.h * k / 2;   // ảnh dọc/vuông: giữ phần trên, không cắt mất đầu
+    Object.assign(im.style, { width: px(m.w * k), height: px(m.h * k), left: px(W / 2 - m.w * k / 2), top: px(top), opacity: 1 - veil * 0.5 });
     tl.fromTo(im, { scale: 1.1 }, { scale: 1.0, duration: Math.max(0.2, s.t1 - s.t0), ease: "none", immediateRender: false }, s.t0);
   };
   const bg = (s, d, veil) => { if (s.vid) vidbg(s, d, veil); else if (s.bg) imgbg(s, d, s.bg, veil); };
@@ -144,8 +146,31 @@
 
   /* ---------- photo: ảnh tư liệu tràn khung, Ken Burns theo tiêu điểm ----------
      sfx: t0 -> màn trập + boom nhẹ; circle.at -> scratch */
+  /* ảnh DỌC hoặc gần vuông trên khung 16:9: tràn khung sẽ cắt mất đầu/chân. Đặt nguyên ảnh vào khung giấy,
+     nền là chính ảnh đó phóng to làm mờ. Có chữ (kin) thì khung lệch phải, chữ canh trái nửa còn lại.
+     Tự bật khi w/h < 1.25; ép bằng "frame": true/false trong spec. */
+  const photoFramed = (s, d, m) => {
+    const kb = Math.max(W / m.w, H / m.h) * 1.15, bk = el("img", "abs " + toneCls(s.tone || "sepia"), null, d); bk.src = m.src;
+    Object.assign(bk.style, { width: px(m.w * kb), height: px(m.h * kb), left: px(W / 2 - m.w * kb / 2), top: px(H / 2 - m.h * kb / 2), filter: "blur(30px) brightness(.34) saturate(.7)" });
+    const dim = el("div", "veil", null, d); dim.style.background = "rgba(5,4,4,.35)";
+    const hasText = !!(s.kin && s.kin.length), P = 14;
+    const k = Math.min((hasText ? 720 : 1300) / m.w, 760 / m.h), iw = m.w * k, ih = m.h * k, cx = hasText ? 1400 : W / 2, cy = 515;
+    const fr = el("div", "phframe", null, d); Object.assign(fr.style, { left: px(cx - iw / 2 - P), top: px(cy - ih / 2 - P), width: px(iw + 2 * P), height: px(ih + 2 * P) });
+    const holder = el("div", "phw", null, fr); Object.assign(holder.style, { left: px(P), top: px(P), width: px(iw), height: px(ih), overflow: "hidden" });
+    const im = el("img", toneCls(s.tone || "sepia"), null, holder); im.src = m.src; Object.assign(im.style, { left: 0, top: 0, width: px(iw), height: px(ih) });
+    const svg = sv("svg", { width: iw, height: ih }, holder);
+    (s.circles || []).forEach((c) => circleMark(svg, c.x * iw, c.y * ih, (c.r || 60) * 0.7, c.at));
+    const dur = Math.max(0.3, s.t1 - s.t0 + 0.3), rot = hasText ? 1.4 : -1.1;
+    tl.fromTo(fr, { opacity: 0, y: 70, rotation: rot * 3, scale: 0.94 }, { opacity: 1, y: 0, rotation: rot, scale: 1, duration: 0.5, ease: "power3.out", immediateRender: false }, s.t0);
+    tl.to(fr, { scale: 1.04, duration: Math.max(0.2, dur - 0.55), ease: "none" }, s.t0 + 0.5);
+    tl.fromTo(bk, { scale: 1.0 }, { scale: 1.08, duration: dur, ease: "none", immediateRender: false }, s.t0 - 0.15);
+    if (hasText) { const box = el("div", "abs", null, d); Object.assign(box.style, { left: 0, top: 0, width: px(cx - iw / 2 - 60), height: px(H) }); kinetic(s.kin, box, "l", (cx - iw / 2 - 260) * 0.8); }   // 0.8: chữ hoa đậm (M, O, N) rộng hơn ước lượng, không để khung ảnh che chữ
+    common(s, d);
+  };
+
   B.photo = (s, d) => {
     const m = IM(s.img), fx = (s.focus || [0.5, 0.4])[0], fy = (s.focus || [0.5, 0.4])[1];
+    if (s.frame ?? (m.w / m.h < 1.25 && !s.focus)) return photoFramed(s, d, m);   // ảnh dọc: vào khung (có "focus" = người viết đã chọn cách cắt)
     const area = el("div", "abs", null, d); Object.assign(area.style, { left: 0, top: 0, width: px(W), height: px(H), overflow: "hidden" });
     const k = Math.max(W / m.w, H / m.h), iw = m.w * k, ih = m.h * k;
     const il = Math.min(0, Math.max(W - iw, W / 2 - fx * iw)), it = Math.min(0, Math.max(H - ih, H / 2 - fy * ih));
@@ -185,7 +210,7 @@
       const sd = el("div", "side", null, d); Object.assign(sd.style, { left: px(sx), width: px(sw), top: px(s.side.top ?? 200) });
       if (s.side.k) { const kk = el("div", "k", esc(s.side.k), sd); tl.to(kk, { opacity: 1, duration: 0.3 }, s.t0 + 0.25); }
       if (s.side.h) { const hl = s.side.h.split("\n"); const hh = el("div", "h", hl.map(esc).join("<br/>"), sd);
-        hh.style.fontSize = px(fsz(hl.reduce((a, b) => (a.length > b.length ? a : b)), 84, sw, 0.56));
+        hh.style.fontSize = px(fsz(hl.reduce((a, b) => (a.length > b.length ? a : b)), 84, sw, 0.56 * KWS));
         tl.fromTo(hh, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out", immediateRender: false }, s.side.hAt ?? s.t0 + 0.4); }
       (s.side.lines || []).forEach((q) => { const ln = el("div", "ln", rich(q.text), sd);
         tl.fromTo(ln, { opacity: 0, x: 30 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out", immediateRender: false }, q.at - 0.05); });
@@ -218,8 +243,8 @@
      sfx: mỗi item.at -> thud nhẹ */
   const { BEAT, SLAM, beat } = makeBeat({ tl, el, esc, rnd });   // beat.js: thư viện hiệu ứng chữ dùng chung với casefile
 
-  const kinetic = (items, d, align) => {
-    const sizes = items.map((q) => q.size || fsz(q.text, q.sm ? 56 : 130, 1650, q.serif ? 0.62 : 0.66)), total = sizes.reduce((a, b) => a + b * 1.32, 0);
+  const kinetic = (items, d, align, maxW = 1650) => {
+    const kw = (C.look && C.look.kw) || 1, sizes = items.map((q) => q.size || fsz(q.text, q.sm ? 56 : 130, maxW, q.serif ? 0.62 : 0.66 * kw)), total = sizes.reduce((a, b) => a + b * 1.32, 0);
     let y = Math.max(130, 470 - total / 2);
     items.forEach((q, k) => { const e = el("div", "kin" + (q.acc ? " acc" : "") + (q.serif ? " serif" : "") + (q.sm ? " sm" : "") + (align === "l" ? " l" : ""), esc(q.text), d);
       Object.assign(e.style, { fontSize: px(sizes[k]), top: px(y) }); y += sizes[k] * 1.32;   // 1.32: chừa chỗ dấu dưới (Ệ, Ộ) dòng trên + dấu chồng (Ề, Ế) dòng dưới
@@ -310,7 +335,7 @@
 
   /* ---------- question: câu hỏi lặng (sfx: tắt nền) ---------- */
   B.question = (s, d) => { bg(s, d, 0.75); const a = el("div", "ask", esc(s.text).replace(/\n/g, "<br/>"), d);
-    a.style.fontSize = px(fsz(s.text.split("\n").reduce((x, y) => (x.length > y.length ? x : y)), 92, 1600, 0.5));
+    a.style.fontSize = px(fsz(s.text.split("\n").reduce((x, y) => (x.length > y.length ? x : y)), 92, 1600, 0.5 * KWS));
     tl.fromTo(a, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45, immediateRender: false }, s.t0 + 0.05); };
 
   /* ---------- counter: số đếm lớn + nhãn (+ ảnh in bên trái) ----------
@@ -530,6 +555,7 @@
   B.date = (s, d) => {
     bg(s, d, 0.62);
     if (s.day) { const dy = el("div", "day", null, d);
+      dy.style.fontSize = px(Math.min(38, Math.floor(1760 / ([...s.day].length * 1.02))));   // mono 0.6em + giãn chữ 0.42em: quá 45 ký tự là tràn hai mép, nên co cỡ chữ
       [...s.day].forEach((ch, k) => { const sp = el("span", null, ch === " " ? "&nbsp;" : esc(ch), dy); sp.style.opacity = 0; tl.set(sp, { opacity: 1 }, s.dayAt + k * 0.045); }); }
     const chars = [...s.date], D = chars.filter((c) => /\d/.test(c)).length, P = chars.length - D;
     const cw = Math.min(130, Math.floor((1600 - P * 44 - chars.length * 8) / Math.max(1, D))), fz = Math.min(160, Math.floor(cw * 1.3));
@@ -578,6 +604,7 @@
       const ln = sv("path", { d: `M${x} ${y} L${lx} ${y}`, stroke: "#fff", "stroke-width": 3, fill: "none" }, svg); sv("circle", { cx: x, cy: y, r: 9, fill: "var(--red)" }, svg);
       draw(ln, c.at, 0.25);
       const co = el("div", "co", esc(c.text), d); Object.assign(co.style, right ? { left: px(lx + 6), top: px(y - 22) } : { right: px(W - lx + 6), top: px(y - 22) });
+      Object.assign(co.style, { maxWidth: px((right ? W - lx : lx) - 46), whiteSpace: "normal", lineHeight: "1.3" });   // chú thích dài thì xuống dòng, không chạy ra ngoài khung (ảnh rộng 900 chỉ còn chỗ ~25 ký tự)
       tl.to(co, { opacity: 1, duration: 0.2 }, c.at + 0.2); });
     common(s, d);
   };
@@ -732,7 +759,7 @@
   B.calendar = (s, d) => {
     bg(s, d, 0.85);
     const cal = el("div", "cal", null, d), N = s.days, a = s.t0 + 0.7, span = s.endAt - a, pages = [];
-    for (let k = N; k >= 0; k--) { const [dd, mm, yy] = addDays(s.from, k), pg = el("div", "pg", `<div class="mo">${MON[mm - 1]}</div><div class="dd">${dd}</div><div class="yy">${yy}</div>`, cal); pages[k] = pg; }
+    for (let k = N; k >= 0; k--) { const [dd, mm, yy] = addDays(s.from, k), pg = el("div", "pg", `<div class="mo">${(s.months || MON)[mm - 1]}</div><div class="dd">${dd}</div><div class="yy">${yy}</div>`, cal); pages[k] = pg; }
     tl.fromTo(cal, { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out", immediateRender: false }, s.t0);
     const cnt = el("div", "calc", `${esc(s.label || "NGÀY")} <b>0</b>`, d), b = cnt.querySelector("b");
     tl.to(cnt, { opacity: 1, duration: 0.3 }, a - 0.2);
@@ -770,6 +797,100 @@
     + ` M${x + 84} ${y + 34} a14 14 0 1 1 -28 0 a14 14 0 1 1 28 0 M${x + 70} ${y + 48} L${x + 70} ${y + 96} M${x + 50} ${y + 96} L${x + 92} ${y + 96}`;
   const POPPY = (x, y, h) => `M${x} ${y} Q${x - 6} ${y - h / 2} ${x + 2} ${y - h} M${x + 2} ${y - h} a9 11 0 1 1 0.1 0 M${x - 2} ${y - h * 0.4} q-16 -6 -22 -20`;
   const SKETCH = {
+    // --- hồ sơ Capone (10/2026): ga-ra phố Clark, con chó Highball, đoàn xe ở Hawthorne, ghế bồi thẩm ---
+    garage: [
+      ["M60 720 L1440 720", 3], ["M360 720 L360 250 L1140 250 L1140 720", 3],
+      ["M620 720 L620 430 L880 430 L880 720 M620 520 L880 520 M750 430 L750 720", 2.5],
+      ["M430 330 L560 330 L560 430 L430 430 Z M940 330 L1070 330 L1070 430 L940 430 Z", 2],
+      ["M90 700 L90 640 L130 640 L150 590 L270 590 L290 640 L330 640 L330 700 Z M150 640 L290 640 " + C2(140, 702, 22) + " " + C2(285, 702, 22), 3],
+      [MAN(420, 628, true) + " " + MAN(480, 628) + " " + MAN(540, 628) + " " + MAN(596, 628, true), 2.5],
+    ],
+    dogbark: [
+      ["M80 180 L1420 180 M80 700 L1420 700", 3], ["M300 600 L300 380 L760 380 L760 600 M760 460 L900 460 L940 520 L940 600 Z", 3],
+      [C2(400, 630, 40) + " " + C2(840, 630, 40), 3],
+      ["M560 628 Q600 606 660 622 L664 664 M572 630 L568 672 M650 626 L652 672 M660 622 L690 598 L706 606 L694 628 M556 630 L540 606", 3],
+      ["M600 612 Q580 520 620 470", 1.6], ["M724 584 q22 14 0 36 M752 568 q34 26 0 66 M784 552 q46 40 0 96", 2.5],
+    ],
+    motorcade: [
+      ["M60 740 L1440 740", 3], ["M300 560 L300 140 L1200 140 L1200 560", 3],
+      ["M400 200 L400 500 M520 200 L520 500 M640 200 L640 500 M760 200 L760 500 M880 200 L880 500 M1000 200 L1000 500 M1100 200 L1100 500 M300 300 L1200 300 M300 420 L1200 420", 1.4],
+      ["M560 560 L560 500 L940 500 L940 560", 2.5],
+      ...[120, 380, 640, 900, 1160].map((x) => [`M${x} 724 L${x} 668 L${x + 36} 668 L${x + 56} 622 L${x + 160} 622 L${x + 180} 668 L${x + 216} 668 L${x + 216} 724 Z ` + C2(x + 46, 726, 20) + " " + C2(x + 172, 726, 20), 2.5]),
+      ["M230 640 L420 480 M490 640 L620 470 M750 640 L800 470 M1010 640 L960 470 M1270 640 L1090 480", 1.4],
+    ],
+    jurybox: [
+      ["M560 250 L560 120 L940 120 L940 250 Z " + C2(750, 88, 20), 3], ["M260 640 L1240 640 M260 640 L260 740 M1240 640 L1240 740", 3],
+      ...[0, 1, 2, 3, 4, 5].map((k) => [C2(400 + k * 140, 430, 18) + ` M${370 + k * 140} 500 Q${400 + k * 140} 452 ${430 + k * 140} 500`, 2.5]),
+      ...[0, 1, 2, 3, 4, 5].map((k) => [C2(330 + k * 140, 550, 20) + ` M${296 + k * 140} 632 Q${330 + k * 140} 574 ${364 + k * 140} 632`, 2.5]),
+    ],
+    // --- hồ sơ Bulger (10/2026): thang máy ga-ra, xe đậu ở bãi biển, cho mèo ăn, tiệm rượu, xe lăn vào khu giam ---
+    elevator: [
+      ["M60 720 L1440 720", 3], ["M200 720 L200 330 L1300 330 L1300 720", 2],
+      ["M640 720 L640 450 L860 450 L860 720", 3.5], ["M676 450 L676 720 M824 450 L824 720", 2.5], ["M720 392 L780 392 L780 428 L720 428 Z M738 410 L762 410", 2],
+      [MAN(750, 628), 3.5],
+      ["M90 700 L90 640 L130 640 L150 590 L270 590 L290 640 L330 640 L330 700 Z M150 640 L290 640 " + C2(140, 702, 22) + " " + C2(285, 702, 22), 3],
+      [MAN(420, 628, true) + " " + MAN(500, 628, true) + " " + MAN(1010, 628, true) + " " + MAN(1090, 628, true), 2.5],
+      ["M1180 720 L1180 520 L1230 520 L1230 720", 2.5],
+    ],
+    beachcar: [
+      ["M60 430 L1440 430", 2], ["M60 478 Q300 462 520 478 T980 478 T1440 476 M120 530 Q380 514 620 530 T1100 530", 1.4],
+      ["M60 700 L1440 700", 3], [C2(1180, 250, 46), 2.5], ["M240 700 L240 340 Q240 310 280 310 L300 310", 2],
+      ["M480 690 L480 600 L560 600 L610 510 L890 510 L940 600 L1020 600 L1020 690 Z M560 600 L940 600 M750 510 L750 600", 3.5],
+      [C2(580, 692, 40) + " " + C2(920, 692, 40), 3], [C2(680, 562, 18) + " " + C2(830, 562, 18), 3],
+    ],
+    catfeed: [
+      ["M60 720 L1440 720", 3], ["M300 720 L300 200 L1200 200 L1200 720", 3], ["M420 720 L420 420 L600 420 L600 720 M576 572 L560 572", 3],
+      ["M940 300 L1120 300 L1120 470 L940 470 Z M1030 300 L1030 470 M940 385 L1120 385", 2],
+      [C2(700, 606, 13) + " M700 620 Q688 660 664 690 L694 718 M664 690 L650 718 M702 634 L766 690", 3.5],
+      ["M770 704 L832 704 L822 720 L780 720 Z", 2.5],
+      ["M852 700 Q884 656 932 690 L936 720 M858 702 L854 720 M932 690 Q964 636 994 656 M852 700 L838 690 L832 668 L846 678 L858 668 L862 690", 3],
+    ],
+    liquor: [
+      ["M60 720 L1440 720", 3], ["M260 720 L260 240 L1240 240 L1240 720", 3], ["M260 330 L1240 330", 2.5],
+      ["M340 400 L700 400 L700 640 L340 640 Z M460 400 L460 640 M580 400 L580 640", 2],
+      ...[372, 492, 612].map((x) => [`M${x} 620 l0 -60 l10 -24 l0 -20 l12 0 l0 20 l10 24 l0 60 Z`, 1.8]),
+      ["M820 720 L820 420 L980 420 L980 720 M958 572 L944 572 " + C2(900, 486, 22), 3], [MAN(1090, 628), 3.5],
+      ["M1330 720 L1330 380 M1300 380 L1360 380 L1350 340 L1310 340 Z", 2.5],
+    ],
+    wheelchair: [
+      ["M60 720 L1440 720", 3],
+      ["M140 720 L140 260 M200 720 L200 260 M260 720 L260 260 M320 720 L320 260 M380 720 L380 260 M120 260 L400 260", 2],
+      ["M1120 720 L1120 260 M1180 720 L1180 260 M1240 720 L1240 260 M1300 720 L1300 260 M1360 720 L1360 260 M1100 260 L1380 260", 2],
+      [C2(760, 684, 36) + " " + C2(838, 708, 12), 3], ["M736 596 L736 644 L812 644 L832 700 M736 596 L718 584", 3.5],
+      [C2(762, 590, 9) + " M762 599 L758 640 L806 640 L822 694 M760 614 L796 630", 3], [MAN(684, 628), 3], ["M700 668 L718 584", 2],   // người ngồi cùng cỡ với MAN
+    ],
+    // --- hồ sơ Escobar (10/2026): cuộc gọi cuối, mái ngói, xe tải, hà mã, mô tô ---
+    phonecall: [
+      ["M80 720 L1420 720", 3], ["M980 160 L1300 160 L1300 470 L980 470 Z M1140 160 L1140 470 M980 315 L1300 315", 3],
+      ["M300 560 L760 560 M330 560 L330 720 M730 560 L730 720", 3], ["M560 530 L660 530 L650 560 L570 560 Z M575 520 Q610 495 645 520", 2.5],
+      [MAN(470, 430), 3], ["M580 522 Q520 500 486 440", 2], [C2(700, 230, 46) + " M700 230 L700 198 M700 230 L724 240", 2.5],
+    ],
+    rooftop: [
+      ["M60 760 L1440 760", 3], ["M420 760 L420 420 L1080 420 L1080 760", 3], ["M380 420 L750 250 L1120 420", 3.5],
+      ["M470 380 L1030 380 M560 340 L940 340 M650 300 L850 300", 1.6], ["M560 470 L680 470 L680 580 L560 580 Z M620 470 L620 580", 2.5],
+      ["M1080 470 L1300 380 L1440 440", 3], [MAN(900, 227, true), 3],
+      ["M100 750 L100 680 L240 680 L270 712 L270 750 Z " + C2(140, 752, 14) + " " + C2(235, 752, 14), 2.5],
+      ["M1180 750 L1180 680 L1320 680 L1350 712 L1350 750 Z " + C2(1220, 752, 14) + " " + C2(1315, 752, 14), 2.5],
+      [MAN(330, 665, true) + " " + MAN(1130, 665, true), 2.5],
+    ],
+    truck: [
+      ["M60 380 L300 220 L520 360 L760 200 L1040 380 L1300 260 L1440 360", 2], ["M60 700 L1440 700", 3],
+      ["M300 420 L900 420 L900 660 L300 660 Z", 3], ["M900 500 L1060 500 L1120 580 L1120 660 L900 660 M930 520 L1040 520 L1080 580 L930 580 Z", 3],
+      [C2(420, 680, 44) + " " + C2(780, 680, 44) + " " + C2(1020, 680, 44), 3], [C2(600, 628, 36) + " " + C2(600, 628, 13), 3.5],
+      ["M540 570 Q600 540 660 570 M532 690 Q600 720 668 690", 1.6], [MAN(180, 605, true) + " " + MAN(1250, 605), 2.5],
+    ],
+    hippos: [
+      ["M60 300 Q400 240 760 300 T1440 280", 3], ["M60 660 Q420 720 800 660 T1440 680", 3],
+      ["M200 300 L200 190 M180 210 L200 190 L224 214 M1220 284 L1220 170 M1196 196 L1220 170 L1246 198", 2],
+      ...[[360, 430], [640, 520], [920, 440], [1160, 540]].map(([x, y]) => [`M${x - 70} ${y} Q${x - 70} ${y - 46} ${x} ${y - 50} Q${x + 60} ${y - 50} ${x + 84} ${y - 20} L${x + 96} ${y} M${x + 40} ${y - 48} l6 -14 l10 12 M${x + 62} ${y - 40} l8 -12 l8 14 M${x - 96} ${y + 8} L${x + 124} ${y + 8}`, 3]),
+      ["M260 470 L330 470 M520 560 L600 560 M1000 480 L1080 480 M760 600 L860 600", 1.6],
+    ],
+    motorbike: [
+      ["M60 690 L1440 690", 3], ["M160 690 L160 300 Q160 270 200 270 M1340 690 L1340 300 Q1340 270 1300 270", 2],
+      ["M330 610 L372 528 L590 528 L650 610 Z M290 610 L730 610 L730 668 L290 668 Z", 3], [C2(390, 672, 30) + " " + C2(640, 672, 30), 3],
+      [C2(980, 656, 34) + " " + C2(1104, 656, 34) + " M980 656 L1030 594 L1092 594 L1104 656 M1030 594 L1010 564", 3],
+      [MAN(1036, 486) + " " + MAN(1082, 494, true), 2.5],
+    ],
     boy: [
       ["M80 700 L1420 700", 3], ["M150 700 L150 300 L430 250 L430 700", 3], ["M190 360 L270 350 L270 430 L190 440 Z", 2], ["M320 340 L400 330 L400 410 L320 420 Z", 2],
       ["M120 300 L460 245 L470 275 L130 330 Z", 2.5], ["M1100 700 L1100 330 L1380 360 L1380 700", 3], ["M1150 420 L1240 425 L1240 520 L1150 515 Z", 2],

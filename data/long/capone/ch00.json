@@ -1,0 +1,566 @@
+{
+ "title": "MỞ ĐẦU: Tiếng chó sủa trên phố Clark",
+ "lines": [
+  "Chicago. Thứ Năm, ngày 14 tháng 2 năm 1929. Ngày lễ Tình nhân.",
+  "Khoảng 10 giờ 30 sáng, một chiếc Cadillac màu đen dừng trước ga-ra số 2122 phố Clark.",
+  "Nhìn từ xa, ai mà phân biệt được? Chiếc xe trông giống hệt xe của cảnh sát.",
+  "Bước xuống là bốn, có thể là sáu người đàn ông. Hai người mặc cảnh phục.",
+  "Bên trong ga-ra có bảy người.",
+  {
+   "t": "Họ nghĩ đây là một cuộc khám xét như mọi lần. Họ quay mặt vào tường.",
+   "p": 1.0
+  },
+  "Vài phút sau, chiếc Cadillac rời đi.",
+  "Cả khu phố chỉ còn nghe thấy một âm thanh.",
+  "Tiếng một con chó sủa mãi không ngừng trong ga-ra.",
+  "Nó tên là Highball. Chính tiếng sủa ấy khiến hàng xóm gọi cảnh sát.",
+  "Trong bảy người, chỉ một người còn sống khi tới bệnh viện.",
+  "Một trung sĩ cúi xuống hỏi anh ta đúng một câu.",
+  {
+   "t": "Ai bắn anh?",
+   "q": 1,
+   "tr": 1
+  },
+  {
+   "t": "Không ai cả. Không ai bắn tôi.",
+   "q": 1,
+   "tr": 1
+  },
+  {
+   "t": "Anh ta chết sau đó vài giờ, mang theo câu trả lời.",
+   "p": 1.0
+  },
+  "Người mà những tay súng thật sự tìm kiếm thì không có trong ga-ra.",
+  "Hắn đến trễ vài phút, thấy một chiếc xe giống xe cảnh sát trước cửa, và rẽ đi uống cà phê.",
+  "Còn người bị cả nước Mỹ nghi là kẻ ra lệnh thì đang ở cách đó gần hai nghìn cây số, dưới nắng Florida.",
+  "Tên ông ta là Al Capone.",
+  "Nhiều khán giả Việt Nam biết cái tên này qua bộ phim Những Kẻ Bất Khả Xâm Phạm, nơi một đặc vụ trẻ hạ gục ông trùm.",
+  "Ngoài đời, chuyện không diễn ra như vậy.",
+  "Trong gần nửa giờ tới, bạn sẽ thấy một ông trùm bị nghi dính tới hàng trăm vụ án mạng, nhưng chưa một lần bị kết tội giết người.",
+  "Thứ quật ngã ông ta không phải một viên đạn. Đó là một lá thư do chính luật sư của ông ta viết.",
+  "Và người hùng trong phim, ngoài đời, chỉ gặp Capone đúng một lần duy nhất.",
+  {
+   "t": "Đây là hồ sơ Al Capone.",
+   "p": 1.0
+  },
+  "Ai đã ra lệnh cho bốn người đàn ông trên chiếc Cadillac sáng hôm ấy?",
+  "Để trả lời, chúng ta phải quay về Brooklyn, ba mươi năm trước đó."
+ ],
+ "scenes": [
+  {
+   "type": "date",
+   "vid": "6415320",
+   "tone": "night",
+   "day": "CHICAGO · THỨ NĂM · NGÀY LỄ TÌNH NHÂN",
+   "date": "14.02.1929"
+  },
+  {
+   "type": "sketch",
+   "at": 1,
+   "art": "garage",
+   "title": "Khoảng 10 giờ 30 sáng · ga-ra số 2122 phố Clark"
+  },
+  {
+   "type": "photo",
+   "at": 2,
+   "img": "cadillac",
+   "tone": "bw",
+   "move": "in",
+   "illus": "ẢNH MINH HỌA · CADILLAC ĐỜI 1929",
+   "kin": [
+    {
+     "text": "TRÔNG GIỐNG HỆT",
+     "at": [
+      2,
+      "giống"
+     ]
+    },
+    {
+     "text": "XE CỦA CẢNH SÁT",
+     "at": [
+      2,
+      "cảnh"
+     ],
+     "acc": true
+    }
+   ],
+   "veil": 0.52
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "NHỮNG NGƯỜI BƯỚC XUỐNG",
+   "vid": "6447294",
+   "tone": "noir",
+   "rows": [
+    {
+     "k": "SỐ NGƯỜI",
+     "v": "4, CÓ THỂ 6",
+     "at": [
+      3,
+      "bốn"
+     ]
+    },
+    {
+     "k": "MẶC CẢNH PHỤC",
+     "v": "2",
+     "at": [
+      3,
+      "Hai"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "vid": "7830149",
+   "tone": "noir",
+   "from": 0,
+   "to": 7,
+   "countAt": [
+    4,
+    "bảy"
+   ],
+   "label": "NGƯỜI BÊN TRONG GA-RA"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "vid": "6447294",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "NHƯ MỘT CUỘC KHÁM XÉT",
+     "at": [
+      5,
+      "khám"
+     ]
+    },
+    {
+     "text": "HỌ QUAY MẶT VÀO TƯỜNG",
+     "at": [
+      5,
+      "quay"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 6,
+   "vid": "15136751",
+   "tone": "night",
+   "veil": 0.4,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "VÀI PHÚT SAU",
+     "at": [
+      6,
+      "Vài"
+     ],
+     "sm": true
+    },
+    {
+     "text": "CHIẾC CADILLAC RỜI ĐI",
+     "at": [
+      6,
+      "rời"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "vid": "7830149",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "CẢ KHU PHỐ",
+     "at": [
+      7,
+      "khu"
+     ],
+     "sm": true
+    },
+    {
+     "text": "CHỈ CÒN MỘT ÂM THANH",
+     "at": [
+      7,
+      "âm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "sketch",
+   "at": 8,
+   "art": "dogbark",
+   "title": "Một con chó sủa mãi không ngừng trong ga-ra"
+  },
+  {
+   "type": "slam",
+   "at": 9,
+   "vid": "6447294",
+   "tone": "noir",
+   "text": "HIGHBALL",
+   "white": true,
+   "hitAt": [
+    9,
+    "Highball"
+   ],
+   "sub": "TIẾNG SỦA KHIẾN HÀNG XÓM GỌI CẢNH SÁT"
+  },
+  {
+   "type": "dots",
+   "at": 10,
+   "vid": "3192916",
+   "tone": "noir",
+   "total": 7,
+   "cols": 7,
+   "title": "BẢY NGƯỜI TRONG GA-RA",
+   "groups": [
+    {
+     "from": 0,
+     "n": 6,
+     "cls": "ghost",
+     "at": [
+      10,
+      "bảy"
+     ]
+    },
+    {
+     "from": 6,
+     "n": 1,
+     "cls": "gold",
+     "label": "MỘT NGƯỜI CÒN SỐNG KHI TỚI BỆNH VIỆN",
+     "at": [
+      10,
+      "một"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "vid": "3192916",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "MỘT TRUNG SĨ CÚI XUỐNG",
+     "at": [
+      11,
+      "trung"
+     ]
+    },
+    {
+     "text": "HỎI ĐÚNG MỘT CÂU",
+     "at": [
+      11,
+      "đúng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 12,
+   "text": "Ai bắn anh?",
+   "by": "TRUNG SĨ SWEENEY · BỆNH VIỆN, 14.02.1929",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 12,
+   "typeAt": [
+    12,
+    "Ai"
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 13,
+   "text": "Không ai cả. Không ai bắn tôi.",
+   "by": "FRANK GUSENBERG",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 13,
+   "typeAt": [
+    13,
+    "Không"
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 14,
+   "vid": "3192916",
+   "tone": "noir",
+   "text": "MANG THEO CÂU TRẢ LỜI",
+   "hitAt": [
+    14,
+    "mang"
+   ]
+  },
+  {
+   "type": "print",
+   "at": 15,
+   "img": "moran",
+   "tone": "bw",
+   "side": {
+    "k": "NGƯỜI MÀ CÁC TAY SÚNG TÌM",
+    "h": "KHÔNG CÓ MẶT",
+    "hAt": [
+     15,
+     "không"
+    ],
+    "lines": [
+     {
+      "text": "Đến trễ *vài phút*",
+      "at": [
+       16,
+       "trễ"
+      ]
+     },
+     {
+      "text": "Thấy “xe cảnh sát” · rẽ đi *uống cà phê*",
+      "at": [
+       16,
+       "rẽ"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "at": 17,
+   "geo": "us",
+   "pins": [
+    {
+     "name": "Chicago",
+     "at": [
+      17,
+      "Còn"
+     ]
+    },
+    {
+     "name": "Miami",
+     "label": "FLORIDA · GẦN 2.000 KM",
+     "at": [
+      17,
+      "Florida"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "from": "Chicago",
+     "to": "Miami",
+     "at": [
+      17,
+      "cách"
+     ],
+     "until": [
+      17,
+      "số"
+     ],
+     "bend": 0.15
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 18,
+   "img": "al1930",
+   "tone": "bw",
+   "kin": [
+    {
+     "text": "AL",
+     "at": [
+      18,
+      "Al"
+     ]
+    },
+    {
+     "text": "CAPONE",
+     "at": [
+      18,
+      "Capone"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "AL CAPONE",
+    "v": "ẢNH NĂM 1930",
+    "at": [
+     18,
+     "Tên"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "vid": "1826904",
+   "tone": "night",
+   "items": [
+    {
+     "text": "NHỮNG KẺ BẤT KHẢ XÂM PHẠM",
+     "at": [
+      19,
+      "Bất"
+     ],
+     "serif": true
+    },
+    {
+     "text": "THE UNTOUCHABLES · 1987",
+     "at": [
+      19,
+      "phim"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 20,
+   "bg": "al1930c",
+   "text": "NGOÀI ĐỜI\nKHÔNG NHƯ VẬY",
+   "hitAt": [
+    20,
+    "không"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 21,
+   "bg": "mug",
+   "items": [
+    {
+     "text": "HÀNG TRĂM VỤ ÁN MẠNG",
+     "at": [
+      21,
+      "trăm"
+     ]
+    },
+    {
+     "text": "CHƯA MỘT LẦN BỊ KẾT TỘI GIẾT NGƯỜI",
+     "at": [
+      21,
+      "chưa"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 22,
+   "vid": "7345196",
+   "tone": "noir",
+   "veil": 0.4,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "KHÔNG PHẢI MỘT VIÊN ĐẠN",
+     "at": [
+      22,
+      "viên"
+     ]
+    },
+    {
+     "text": "MỘT LÁ THƯ CỦA CHÍNH LUẬT SƯ",
+     "at": [
+      22,
+      "lá"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": 23,
+   "img": "ness",
+   "tone": "bw",
+   "side": {
+    "k": "NGƯỜI HÙNG TRONG PHIM",
+    "h": "ELIOT NESS",
+    "hAt": [
+     23,
+     "người"
+    ],
+    "lines": [
+     {
+      "text": "Ngoài đời chỉ gặp Capone *đúng một lần*",
+      "at": [
+       23,
+       "đúng"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "brand",
+   "at": 24,
+   "sub": "HỒ SƠ · AL CAPONE"
+  },
+  {
+   "type": "question",
+   "at": 25,
+   "bg": "wall_lv",
+   "text": "Ai đã ra lệnh cho bốn người đàn ông\ntrên chiếc Cadillac sáng hôm ấy?"
+  },
+  {
+   "type": "map",
+   "at": 26,
+   "geo": "us",
+   "pins": [
+    {
+     "name": "Chicago",
+     "at": [
+      26,
+      "quay"
+     ]
+    },
+    {
+     "name": "Brooklyn",
+     "label": "BROOKLYN · 1899",
+     "at": [
+      26,
+      "Brooklyn"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "from": "Chicago",
+     "to": "Brooklyn",
+     "at": [
+      26,
+      "về"
+     ],
+     "until": [
+      26,
+      "Brooklyn"
+     ],
+     "bend": 0.15
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "TIẾNG CHÓ SỦA TRÊN PHỐ CLARK"
+ },
+ "bgm": {
+  "mood": "tense",
+  "at": 0,
+  "gain": 0.13
+ }
+}
