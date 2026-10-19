@@ -1,0 +1,125 @@
+{
+ "title": "Vết mỡ dưới khay hộp tiền kết tội hai anh em Stratton",
+ "description": "Sáng 27/3/1905, hộp tiền ở tiệm sơn Deptford rỗng. Dưới khay có một vết mỡ: dấu ngón cái. Scotland Yard đối 80.000 bộ vân tay mà không khớp, cho đến khi bắt Alfred Stratton. Dấu ngón cái phải của ông khớp 12 điểm. Đây là vụ án mạng đầu tiên ở Anh bị kết bằng vân tay.",
+ "tags": [
+  "Stratton",
+  "vân tay",
+  "Deptford 1905",
+  "Scotland Yard",
+  "hộp tiền",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1905",
+ "sub": "STRATTON",
+ "acc": [
+  "stratton",
+  "deptford",
+  "alfred",
+  "vân",
+  "hộp"
+ ],
+ "lines": [
+  "Sáng 27 tháng 3 năm 1905, cửa hiệu sơn ở Deptford vẫn đóng.",
+  "Hộp tiền nằm trên sàn, rỗng. Dưới khay có một vết mỡ.",
+  "Vết ấy là dấu ngón cái.",
+  "Scotland Yard giữ tám mươi nghìn bộ vân tay, không bộ nào khớp.",
+  "Cảnh sát bắt Alfred Stratton và em trai Albert.",
+  "Ngón cái phải của Alfred khớp mười hai điểm với vết trên hộp.",
+  "Chuyên gia phía bị cáo nói dấu không khớp.",
+  "Tòa đưa ra hai lá thư ông viết trong cùng một ngày.",
+  "Một thư xin làm chứng cho công tố. Thư kia xin làm chứng cho bên trả cao hơn.",
+  "Hai anh em Stratton thành vụ án mạng đầu tiên ở Anh bị kết bằng một dấu vân tay."
+ ],
+ "imgs": {
+  "box": "File:Geldkist en twee vingerafdrukken Finger-print found on cash-box (titel op object), RP-F-2001-7-462-16.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "box",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "DEPTFORD"
+  },
+  {
+   "type": "photo",
+   "at": 1,
+   "img": "box",
+   "tone": "sepia",
+   "focus": [0.5, 0.45],
+   "label": {
+    "text": "VẾT MỠ DƯỚI KHAY",
+    "at": [1, "mỡ"]
+   },
+   "credit": "HỘP TIỀN VỤ DEPTFORD, 1905"
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {"text": "NGÓN CÁI", "at": [2, "ngón"], "size": 220, "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {"text": "80.000", "at": [3, "tám"], "size": 240, "acc": true, "serif": true},
+    {"text": "KHÔNG KHỚP", "at": [3, "không"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {"text": "ALFRED", "at": [4, "Alfred"], "acc": true},
+    {"text": "VÀ ALBERT", "at": [4, "Albert"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {"text": "12 ĐIỂM", "at": [5, "mười"], "size": 260, "acc": true, "serif": true},
+    {"text": "KHỚP", "at": [5, "khớp"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {"text": "KHÔNG KHỚP", "at": [6, "không"], "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {"text": "HAI LÁ THƯ", "at": [7, "hai"], "size": 220, "acc": true},
+    {"text": "CÙNG MỘT NGÀY", "at": [7, "ngày"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {"text": "BÊN TRẢ", "at": [8, "trả"]},
+    {"text": "CAO HƠN", "at": [8, "cao"], "acc": true}
+   ]
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "box",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "VÂN TAY",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Stratton_Brothers_case"
+ ]
+}

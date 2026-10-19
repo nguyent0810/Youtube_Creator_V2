@@ -42,6 +42,8 @@ from build import Anchors, resolve, norm  # noqa: E402  (cùng cú pháp mốc v
 
 BLD.ANCHORS |= {"sumAt", "zeroAt", "titleAt", "hAt", "countAt", "hitAt", "typeAt", "burnAt", "decodeAt", "endAt", "voiceAt", "voiceEnd"}      # mốc riêng của cảnh video dài
 BLD.ANCHOR_LISTS |= {"flips", "readAt"}
+import floor  # noqa: E402
+import lint_html  # noqa: E402
 import sfx_long  # noqa: E402
 
 # ffmpeg: FFMPEG_DIR, rồi bản vendor của máy sản xuất, rồi ffmpeg trong PATH (máy khác).
@@ -307,6 +309,72 @@ def probe_dur(p: Path) -> float:
     return float(r.stdout.strip())
 
 
+def probe_color(p: Path) -> dict:
+    """color_transfer / primaries / matrix của stream hình. Lỗi ffprobe nằm ở khóa ``_error``."""
+    r = subprocess.run(
+        [FF + r"\ffprobe.exe", "-v", "error", "-select_streams", "v:0",
+         "-show_entries", "stream=color_transfer,color_primaries,color_space",
+         "-of", "json", str(p)],
+        capture_output=True, text=True)
+    if r.returncode != 0 or not (r.stdout or "").strip():
+        return {"_error": (r.stderr or "ffprobe không trả màu").strip()[-240:]}
+    try:
+        streams = json.loads(r.stdout).get("streams") or []
+    except json.JSONDecodeError:
+        return {"_error": "ffprobe trả JSON hỏng"}
+    return streams[0] if streams else {}
+
+
+def collect_html_lint(topic: str, only=None) -> list[str]:
+    """Con dấu, tiêu đề thẻ, clip HDR. Chương chưa có giọng thì bỏ qua (bước html sẽ báo thiếu file)."""
+    spec, chs, od = load(topic)
+    problems: list[str] = []
+    seen: set[str] = set()
+    geo_pins: dict = {}   # toạ độ ghim trên sân khấu, cho kiểm tra nhãn bản đồ zoom
+    for g, v in (spec.get("geo") or {}).items():
+        hf_geo.BOX = tuple(v.get("box", (180, 130, 1740, 850)))
+        geo_pins[g] = {p["name"]: (p["x"], p.get("label", "")) for p in hf_geo.bake({"countries": [], "bbox": v["bbox"], "pins": v["pins"]})["_geo"]["pins"]}
+    for name, ch in chs:
+        if only and name not in only:
+            continue
+        tj, wav = od / name / "timing.json", od / name / "voice.wav"
+        if not tj.exists() or not wav.exists():
+            continue
+        t = json.loads(tj.read_text(encoding="utf-8"))
+        d = float(t["duration"])
+        scenes = plan(ch, word_lines(t, wav), d)
+        ec = spec.get("endcard", 0) if name == spec["chapters"][-1] else 0
+        if ec:
+            scenes.append({"type": "endcard", "t0": d, "t1": d + ec, "bg": spec.get("endcardBg"),
+                           "sub": spec.get("endcardSub", "HỒ SƠ TIẾP THEO")})
+        problems.extend(lint_html.check_scenes(name, scenes, geo_pins))
+        problems.extend(lint_html.kinetic_problems(name, scenes, variety.LOOKS[spec.get("look") or "classic"]["sans"][0], variety.LOOKS[spec.get("look") or "classic"].get("kw", 1.0)))
+        for i, s in enumerate(scenes):
+            if not s.get("vid"):
+                continue
+            vid = str(s["vid"])
+            if vid in seen:
+                continue
+            src = od / "broll" / f"{vid}.mp4"
+            if not src.exists():
+                continue
+            seen.add(vid)
+            msg = lint_html.hdr_problem(name, i, vid, probe_color(src))
+            if msg:
+                problems.append(msg)
+            wh = subprocess.run([FF + chr(92) + "ffprobe.exe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height",
+                                 "-of", "csv=p=0", str(src)], capture_output=True, text=True).stdout.strip().split(",")
+            if len(wh) == 2 and wh[0].isdigit() and int(wh[1]) > int(wh[0]):   # clip quay dọc tràn khung 16:9 sẽ mất 2/3 hình
+                problems.append(f"{name} cảnh {i}: clip {vid} quay dọc ({wh[0]}x{wh[1]}), sẽ bị cắt trên khung ngang — đổi clip ngang")
+    return problems
+
+
+def _refuse_html_lint(topic: str, only=None) -> None:
+    bad = collect_html_lint(topic, only)
+    if bad:
+        raise SystemExit("html lint:\n  " + "\n  ".join(bad))
+
+
 # ---------------- beat text: motion/beatfx.py chọn hiệu ứng chữ (engine/beat.js), dùng chung với Short ----------------
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from beatfx import assign_beats as _assign_beats  # noqa: E402
@@ -475,8 +543,34 @@ def do_tts(topic, only=None):
     print(f"TỔNG: {sum(r[1] for r in rows)} âm tiết, {tot / 60:.2f} phút")
 
 
+def _refuse_craft(topic: str, spec: dict, chs) -> None:
+    """Video mới ghi `"craft": true`. Video cũ không bật cờ, nên không bị chặn lại."""
+    if not spec.get("craft"):
+        return
+    import craft
+    import script_lines
+    bad: list[str] = []
+    md = ROOT / "data" / "long" / topic / "script.md"
+    if md.exists():
+        bad.extend(craft.audio_problems(script_lines.parse(md.read_text(encoding="utf-8"))))
+    for name, ch in chs:
+        if ch.get("scenes"):
+            bad.extend(craft.graphic_problems(name, ch["scenes"]))
+    if bad:
+        raise SystemExit("craft:\n  " + "\n  ".join(bad))
+
+
+def _refuse_floor(topic: str, chs) -> None:
+    """Sàn sản xuất (floor.py): độ dài kịch bản, ảnh, b-roll, độ đa dạng cảnh. Áp cho mọi topic."""
+    bad = floor.problems(chs)
+    if bad:
+        raise SystemExit(f"floor ({topic}): video này kém các Long đã đăng, không dựng bản thật:\n  " + "\n  ".join(bad))
+
+
 def do_html(topic, only=None):
+    _refuse_html_lint(topic, only)   # chặn trước khi tải ảnh và trộn tiếng
     spec, chs, od = load(topic)
+    _refuse_craft(topic, spec, chs)
     durs = {}
     for name, ch in chs:
         tj = od / name / "timing.json"
@@ -597,7 +691,11 @@ def render_key(topic, name, od, draft) -> str:
 
 
 def do_render(topic, only=None, draft=False, force=False):
+    _refuse_html_lint(topic, only)   # không render 70 phút một bản html đã biết là hỏng
     spec, chs, od = load(topic)
+    if not draft:
+        _refuse_floor(topic, chs)   # bản nháp (--draft) vẫn cho chạy để soi từng chương khi đang viết
+    _refuse_craft(topic, spec, chs)
     for name, ch in chs:
         if only and name not in only:
             continue
@@ -622,6 +720,8 @@ def do_render(topic, only=None, draft=False, force=False):
 
 def do_final(topic):
     spec, chs, od = load(topic)
+    _refuse_floor(topic, chs)
+    _refuse_craft(topic, spec, chs)
     lst = od / "concat.txt"
     lst.write_text("".join(f"file '{(od / n / 'silent.mp4').as_posix()}'\n" for n, _ in chs), encoding="utf-8")
     # hình render làm tròn lên khung 1/30s -> đệm tiếng từng chương cho ĐÚNG bằng hình, không thì lệch cộng dồn (~0,2s ở chương cuối)
@@ -649,6 +749,10 @@ if __name__ == "__main__":
         do_html(topic, only)
         for x in variety.audit(topic):
             print("  ! variety:", x)
+        _chs = load(topic)[1]
+        print("  floor:", floor.report(_chs))
+        for x in floor.problems(_chs):
+            print("  ! floor:", x)
     elif cmd == "render":
         do_render(topic, only, draft="--draft" in rest, force="--force" in rest)
     elif cmd == "takes":

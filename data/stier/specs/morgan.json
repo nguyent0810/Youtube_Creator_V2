@@ -1,0 +1,60 @@
+{
+ "title": "Năm 1684, Morgan kiện Crooke và Malthus, sách Zee-Roovers bị rút, bồi hai trăm bảng",
+ "description": "Năm 1684 Alexandre Exquemelin xuất bản ở Hà Lan cuốn De Americaensche Zee-Roovers. Ông từng đi thuyền với Henry Morgan. Sách buộc Morgan tội trong vụ thành Panama. Morgan kiện hai nhà xuất bản bản tiếng Anh, William Crooke và Thomas Malthus. Ông khai mình ghê tởm hải tặc. Tòa xử ông thắng, sách bị thu hồi, hai nhà in trả 200 bảng. Morgan mất ngày 25/8/1688.",
+ "tags": ["Henry Morgan", "Exquemelin", "1684", "Zee-Roovers", "hai trăm bảng", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 1684",
+ "sub": "MORGAN",
+ "acc": ["morgan", "crooke", "roovers", "bảng", "1684"],
+ "lines": [
+  "Năm 1684, Alexandre Exquemelin in một cuốn ở Hà Lan.",
+  "Sách mang tên De Americaensche Zee-Roovers.",
+  "Ông từng là bạn thuyền của Henry Morgan.",
+  "Sách buộc Morgan tội trong vụ thành Panama.",
+  "Morgan kiện hai nhà xuất bản bản tiếng Anh.",
+  "Đó là William Crooke và Thomas Malthus.",
+  "Trước tòa, ông nói mình ghê tởm hải tặc.",
+  "Ông còn nói mình luôn ghét hạng người ấy.",
+  "Tòa xử Morgan thắng, và sách bị thu hồi.",
+  "Crooke và Malthus phải trả ông hai trăm bảng.",
+  "Morgan mất bốn năm sau, ngày 25 tháng 8 năm 1688.",
+  "Cuốn sách bị rút, nhưng vẫn đổi cách đời sau kể về ông."
+ ],
+ "imgs": {
+  "book": "File:Voorpagina Americaensche Zee-Roovers.jpg"
+ },
+ "scenes": [
+  {"type": "hero", "img": "book", "frame": "print", "tone": "sepia", "intro": true, "head": "EXQUEMELIN"},
+  {"type": "kinetic", "at": 1, "items": [
+    {"text": "ZEE-ROOVERS", "at": [1, "Zee-Roovers"], "acc": true}
+  ]},
+  {"type": "kinetic", "at": 2, "items": [
+    {"text": "BẠN THUYỀN", "at": [2, "thuyền"]}
+  ]},
+  {"type": "kinetic", "at": 3, "items": [
+    {"text": "PANAMA", "at": [3, "Panama"], "size": 220}
+  ]},
+  {"type": "kinetic", "at": 4, "items": [
+    {"text": "KIỆN", "at": [4, "kiện"], "size": 240, "acc": true}
+  ]},
+  {"type": "photo", "at": 5, "img": "book", "tone": "sepia", "focus": [0.5, 0.35],
+   "label": {"text": "CROOKE", "at": [5, "Crooke"]},
+   "credit": "BÌA ZEE-ROOVERS"},
+  {"type": "kinetic", "at": 6, "items": [
+    {"text": "GHÊ TỞM", "at": [6, "ghê"]}
+  ]},
+  {"type": "kinetic", "at": 7, "items": [
+    {"text": "LUÔN GHÉT", "at": [7, "ghét"]}
+  ]},
+  {"type": "kinetic", "at": 8, "items": [
+    {"text": "THU HỒI", "at": [8, "thu"], "acc": true}
+  ]},
+  {"type": "kinetic", "at": 9, "items": [
+    {"text": "200 BẢNG", "at": [9, "hai"], "size": 220, "acc": true}
+  ]},
+  {"type": "kinetic", "at": 10, "items": [
+    {"text": "1688", "at": [10, "1688"], "size": 240, "serif": true}
+  ]},
+  {"type": "hero", "at": 11, "img": "book", "frame": "print", "tone": "sepia", "loop": true, "head": "ĐỜI SAU", "tr": "cut"}
+ ],
+ "sources": ["https://en.wikipedia.org/wiki/Henry_Morgan"]
+}

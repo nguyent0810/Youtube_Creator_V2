@@ -1,0 +1,57 @@
+{
+ "title": "Sáng sau đêm 30 tháng 10 năm 1938, Welles xin lỗi, và cơn hoảng loạn bị gọi là phóng đại",
+ "description": "8 giờ tối giờ miền Đông, 30/10/1938, Orson Welles 23 tuổi kể Chiến tranh giữa các thế giới trên CBS theo dạng bản tin, trong chương trình Mercury Theatre. Sáng hôm sau ông gặp phóng viên và xin lỗi. Không có hình phạt. Frank Stanton, về sau đứng đầu CBS, nói phần lớn người ta không nghe. Năm 2003 sử gia W. Joseph Campbell dẫn Bartholomew: mức hoảng loạn bị đánh giá là phóng đại nhiều. Thị trưởng Trenton Paul Morton gửi thư cho FCC ngày 31/10.",
+ "tags": ["Orson Welles", "1938", "CBS", "War of the Worlds", "phóng đại", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 1938",
+ "sub": "WELLES",
+ "acc": ["welles", "1938", "xin", "phóng", "trenton"],
+ "lines": [
+  "Tối 8 giờ miền Đông, ngày 30 tháng 10 năm 1938, Orson Welles lên sóng CBS.",
+  "Chương trình thuộc sân khấu Mercury.",
+  "Ông kể Chiến tranh giữa các thế giới theo dạng bản tin.",
+  "Welles năm ấy hai mươi ba tuổi.",
+  "Sáng hôm sau ông ra gặp phóng viên và xin lỗi.",
+  "Không có hình phạt nào được đưa ra.",
+  "Người ta vẫn kể rằng cả nước Mỹ đã hoảng loạn.",
+  "Frank Stanton, về sau đứng đầu CBS, nói phần lớn không nghe chương trình.",
+  "Năm 2003, sử gia Campbell dẫn lời nhà xã hội học Bartholomew.",
+  "Thị trưởng Trenton gửi thư cho ủy ban truyền thông liên bang ngay hôm sau.",
+  "Mức hoảng loạn ấy về sau bị gọi là phóng đại nhiều."
+ ],
+ "imgs": {
+  "press": "File:Orson Welles War of the Worlds 1938.jpg",
+  "letter": "File:Letter from Paul Morton - NARA - 596224 (page 1).gif"
+ },
+ "scenes": [
+  {"type": "hero", "img": "press", "frame": "print", "tone": "sepia", "intro": true, "head": "WELLES"},
+  {"type": "kinetic", "at": 1, "items": [
+    {"text": "MERCURY", "at": [1, "Mercury"], "size": 200}
+  ]},
+  {"type": "kinetic", "at": 2, "items": [
+    {"text": "BẢN TIN", "at": [2, "bản"], "acc": true}
+  ]},
+  {"type": "kinetic", "at": 3, "items": [
+    {"text": "23 TUỔI", "at": [3, "ba"], "size": 220}
+  ]},
+  {"type": "photo", "at": 4, "img": "press", "tone": "sepia", "focus": [0.45, 0.35],
+   "label": {"text": "XIN LỖI", "at": [4, "xin"]},
+   "credit": "WELLES GẶP BÁO, 1938"},
+  {"type": "kinetic", "at": 5, "items": [
+    {"text": "KHÔNG PHẠT", "at": [5, "phạt"]}
+  ]},
+  {"type": "kinetic", "at": 6, "items": [
+    {"text": "NGƯỜI TA KỂ", "at": [6, "kể"]}
+  ]},
+  {"type": "kinetic", "at": 7, "items": [
+    {"text": "KHÔNG NGHE", "at": [7, "nghe"], "acc": true}
+  ]},
+  {"type": "kinetic", "at": 8, "items": [
+    {"text": "2003", "at": [8, "2003"], "size": 220, "serif": true}
+  ]},
+  {"type": "photo", "at": 9, "img": "letter", "tone": "sepia", "focus": [0.5, 0.3],
+   "label": {"text": "TRENTON", "at": [9, "Trenton"]},
+   "credit": "THƯ PAUL MORTON, 31/10/1938"},
+  {"type": "hero", "at": 10, "img": "press", "frame": "print", "tone": "sepia", "loop": true, "head": "PHÓNG ĐẠI", "tr": "cut"}
+ ],
+ "sources": ["https://en.wikipedia.org/wiki/The_War_of_the_Worlds_(1938_radio_drama)"]
+}

@@ -1,0 +1,173 @@
+{
+ "title": "Băng Jesse James cướp Northfield, ra về với vài túi tiền xu",
+ "description": "Chiều 7/9/1876, băng James–Younger vào First National Bank ở Northfield, Minnesota. Thủ quỹ Joseph Lee Heywood không mở két và bị giết. Dân thị trấn bắn trả. Băng bỏ chạy, chỉ mang theo vài túi tiền xu. Hai tuần sau ba anh em Younger bị bắt và lãnh án chung thân ở Stillwater. Jesse James thì thoát.",
+ "tags": [
+  "Jesse James",
+  "Northfield 1876",
+  "James-Younger",
+  "Joseph Lee Heywood",
+  "cướp ngân hàng",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1876",
+ "sub": "NORTHFIELD",
+ "acc": [
+  "james",
+  "northfield",
+  "heywood",
+  "xu",
+  "younger",
+  "stillwater"
+ ],
+ "lines": [
+  "Chiều 7 tháng 9 năm 1876, tám người vào thị trấn Northfield.",
+  "Ba người bước vào First National Bank.",
+  "Thủ quỹ Joseph Lee Heywood không chịu mở két.",
+  "Ông bị giết ngay trong ngân hàng.",
+  "Ngoài phố, dân thị trấn lấy súng bắn trả.",
+  "Băng cướp bỏ chạy, chỉ mang theo vài túi tiền xu.",
+  "Hai tay súng của băng chết trên phố. Những người còn lại đều bị thương.",
+  "Hai tuần sau, ba anh em Younger bị bắt ở đầm Hanska.",
+  "Họ nhận tội, lãnh án chung thân ở nhà tù Stillwater.",
+  "Jesse James thì thoát. Phi vụ Northfield làm băng tan."
+ ],
+ "imgs": {
+  "gang": "File:James-Younger Gang.jpg",
+  "heywood": "File:Joseph Lee Heywood.png",
+  "prison": "File:Minnesota State Prison, Stillwater, Minnesota - DPLA - 160b7cd55ef933a0cb3df63fbc3927d0.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "gang",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "NORTHFIELD"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "3 NGƯỜI",
+     "at": [1, "Ba"],
+     "size": 220,
+     "acc": true,
+     "serif": true
+    },
+    {
+     "text": "VÀO NGÂN HÀNG",
+     "at": [1, "Bank"]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 2,
+   "img": "heywood",
+   "tone": "sepia",
+   "focus": [0.5, 0.35],
+   "label": {
+    "text": "KHÔNG MỞ KÉT",
+    "at": [2, "két"]
+   },
+   "credit": "JOSEPH LEE HEYWOOD"
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "BỊ GIẾT",
+   "sub": "NGAY TRONG NGÂN HÀNG",
+   "bg": "heywood"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "DÂN THỊ TRẤN",
+     "at": [4, "dân"]
+    },
+    {
+     "text": "BẮN TRẢ",
+     "at": [4, "bắn"],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "TIỀN XU",
+     "at": [5, "xu"],
+     "size": 280,
+     "acc": true
+    },
+    {
+     "text": "VÀI TÚI",
+     "at": [5, "túi"]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "2",
+     "at": [6, "Hai"],
+     "size": 300,
+     "acc": true,
+     "serif": true
+    },
+    {
+     "text": "CHẾT TRÊN PHỐ",
+     "at": [6, "chết"]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "HAI TUẦN",
+     "at": [7, "tuần"]
+    },
+    {
+     "text": "ĐẦM HANSKA",
+     "at": [7, "Hanska"],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 8,
+   "img": "prison",
+   "tone": "sepia",
+   "focus": [0.5, 0.45],
+   "label": {
+    "text": "CHUNG THÂN · STILLWATER",
+    "at": [8, "Stillwater"]
+   },
+   "credit": "NHÀ TÙ STILLWATER, MINNESOTA"
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "gang",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "NORTHFIELD",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/James%E2%80%93Younger_Gang"
+ ]
+}

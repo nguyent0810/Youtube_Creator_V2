@@ -1,0 +1,154 @@
+{
+ "title": "Bertillon bắt tội phạm chụp cả mặt thẳng lẫn mặt nghiêng",
+ "description": "Năm 1888, Alphonse Bertillon ở Sở Cảnh sát Paris định chuẩn ảnh tội phạm: một mặt thẳng, một mặt nghiêng, kèm năm số đo trên cơ thể. Trước đó cảnh sát thường chỉ nhận người bằng tên. Dấu vân tay sau này thay chiếc thước, nhưng kiểu hai ảnh ấy vẫn còn.",
+ "tags": [
+  "Alphonse Bertillon",
+  "mugshot",
+  "ảnh tội phạm",
+  "cảnh sát Paris",
+  "nhân trắc học",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1888",
+ "sub": "BERTILLON",
+ "acc": [
+  "bertillon",
+  "1888",
+  "thẳng",
+  "nghiêng",
+  "vân"
+ ],
+ "lines": [
+  "Năm 1879, Alphonse Bertillon chỉ là người chép hồ sơ ở Paris.",
+  "Tội phạm tái phạm chỉ được nhận bằng tên, hoặc một tấm ảnh tùy tiện.",
+  "Ông đo năm chỗ: dài đầu, rộng đầu, ngón giữa, bàn chân trái và cẳng tay.",
+  "Cảnh sát và tù nhân ở nhà tù La Santé đều cười ông.",
+  "Năm 1888, mỗi hồ sơ buộc phải có hai ảnh: mặt thẳng và mặt nghiêng.",
+  "Đó là tấm ảnh tội phạm đầu tiên có quy tắc.",
+  "Tấm thẻ ấy đi từ Paris ra khắp châu Âu.",
+  "Rồi dấu vân tay thay thế chiếc thước đo.",
+  "Hai tấm ảnh ấy thì cảnh sát vẫn dùng đến hôm nay."
+ ],
+ "imgs": {
+  "card": "File:Bertillon, Alphonse, fiche anthropométrique recto-verso (cropped).jpg",
+  "chart": "File:Bertillon - Signalement Anthropometrique.png",
+  "class": "File:Parle class 2162889445 470ac18f9e o.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "card",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "BERTILLON"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "CHỈ CÓ TÊN",
+     "at": [1, "tên"],
+     "acc": true
+    },
+    {
+     "text": "ẢNH TÙY TIỆN",
+     "at": [1, "tùy"]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 2,
+   "img": "chart",
+   "tone": "sepia",
+   "focus": [0.5, 0.4],
+   "label": {
+    "text": "NĂM CHỖ ĐO",
+    "at": [2, "năm"]
+   },
+   "credit": "BẢNG NHÂN TRẮC BERTILLON"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "LA SANTÉ",
+     "at": [3, "Santé"],
+     "acc": true
+    },
+    {
+     "text": "CƯỜI ÔNG",
+     "at": [3, "cười"]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "MẶT THẲNG",
+     "at": [4, "thẳng"],
+     "size": 200,
+     "acc": true
+    },
+    {
+     "text": "MẶT NGHIÊNG",
+     "at": [4, "nghiêng"],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "CÓ QUY TẮC",
+   "sub": "1888 · PARIS",
+   "bg": "card"
+  },
+  {
+   "type": "photo",
+   "at": 6,
+   "img": "class",
+   "tone": "sepia",
+   "focus": [0.5, 0.35],
+   "label": {
+    "text": "LỚP PORTRAIT PARLÉ",
+    "at": [6, "châu"]
+   },
+   "credit": "PARIS, KHOẢNG 1910–1915"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "VÂN TAY",
+     "at": [7, "vân"],
+     "size": 240,
+     "acc": true
+    },
+    {
+     "text": "THAY THƯỚC",
+     "at": [7, "thước"]
+    }
+   ]
+  },
+  {
+   "type": "hero",
+   "at": 8,
+   "img": "card",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "HAI ẢNH",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Alphonse_Bertillon"
+ ]
+}

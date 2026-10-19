@@ -138,7 +138,8 @@
   /* ---------- photo: ảnh tư liệu tràn khung / ảnh in, vòng tròn đánh dấu ----------
      sfx: t0 -> màn trập + boom nhẹ; mỗi circle.at -> scratch */
   B.photo = (s, d) => {
-    const m = IM(s.img), mode = s.mode || "full", fx = (s.focus || [0.5, 0.4])[0], fy = (s.focus || [0.5, 0.4])[1];
+    const m = IM(s.img), fx = (s.focus || [0.5, 0.4])[0], fy = (s.focus || [0.5, 0.4])[1];
+    const mode = s.mode || (m.w / m.h > 1.05 && !s.focus ? "print" : "full");   // ảnh ngang trên khung dọc: tràn khung mất 1/3 hai bên -> vào khung in; có "focus" = người viết đã chọn cách cắt
     let area, iw, ih, il, it, holder;
     if (mode === "full") {
       area = el("div", "abs", null, d); Object.assign(area.style, { left: 0, top: px(190), width: px(1080), height: px(1540), overflow: "hidden" });

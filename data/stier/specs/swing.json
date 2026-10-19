@@ -1,0 +1,52 @@
+{
+ "title": "Đêm 28 tháng 8 năm 1830, thư ký tên Swing đòi nông dân Kent cất máy đập lúa",
+ "description": "Đêm 28/8/1830, một máy đập lúa ở thung lũng Elham, Kent, bị phá. Nông dân nhận thư ký tên Swing, bảo nếu đến thứ hai không cất máy thì sẽ có một Swing. Không có thuyền trưởng nào tên ấy. Người nhận thư sợ đến mức mang máy ra giữa đồng. Nhà chức trách lúc đầu đổ cho thợ săn trộm và kẻ buôn lậu, rồi nhận ra người viết là người làm thuê trong làng.",
+ "tags": ["Captain Swing", "1830", "Kent", "máy đập lúa", "thư đe dọa", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 1830",
+ "sub": "SWING",
+ "acc": ["swing", "elham", "kent", "máy", "1830"],
+ "lines": [
+  "Đêm 28 tháng 8 năm 1830, một máy đập lúa ở thung lũng Elham bị phá.",
+  "Elham nằm ở Kent, miền nam nước Anh.",
+  "Cùng lúc, nông dân nhận thư ký tên Swing.",
+  "Thư bảo, nếu đến thứ hai không cất máy, các ông sẽ có một Swing.",
+  "Swing không phải tên một thuyền trưởng có thật.",
+  "Nhà chức trách tìm người này, rồi hiểu đó là tên bịa.",
+  "Nông dân nhận thư sợ đến mức mang máy ra giữa đồng.",
+  "Họ đặt máy ngoài ruộng, như mời người đến phá.",
+  "Lúc đầu người ta đổ cho thợ săn trộm và kẻ buôn lậu.",
+  "Sau mới rõ người viết thư là người làm thuê trong làng."
+ ],
+ "imgs": {
+  "letter": "File:Swingletter.jpg"
+ },
+ "scenes": [
+  {"type": "hero", "img": "letter", "frame": "print", "tone": "sepia", "intro": true, "head": "ELHAM"},
+  {"type": "kinetic", "at": 1, "items": [
+    {"text": "KENT", "at": [1, "Kent"], "size": 240, "acc": true}
+  ]},
+  {"type": "kinetic", "at": 2, "items": [
+    {"text": "SWING", "at": [2, "Swing"], "size": 260, "acc": true}
+  ]},
+  {"type": "kinetic", "at": 3, "items": [
+    {"text": "THỨ HAI", "at": [3, "thứ"]}
+  ]},
+  {"type": "kinetic", "at": 4, "items": [
+    {"text": "KHÔNG THẬT", "at": [4, "thật"], "acc": true}
+  ]},
+  {"type": "kinetic", "at": 5, "items": [
+    {"text": "ĐI TÌM", "at": [5, "tìm"]}
+  ]},
+  {"type": "kinetic", "at": 6, "items": [
+    {"text": "GIỮA ĐỒNG", "at": [6, "đồng"]}
+  ]},
+  {"type": "kinetic", "at": 7, "items": [
+    {"text": "NGOÀI RUỘNG", "at": [7, "ruộng"]}
+  ]},
+  {"type": "kinetic", "at": 8, "items": [
+    {"text": "BUÔN LẬU", "at": [8, "lậu"]}
+  ]},
+  {"type": "hero", "at": 9, "img": "letter", "frame": "print", "tone": "sepia", "loop": true, "head": "LÀM THUÊ", "tr": "cut"}
+ ],
+ "sources": ["https://en.wikipedia.org/wiki/Captain_Swing"]
+}

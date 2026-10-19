@@ -1,0 +1,135 @@
+{
+ "title": "Điện tín ngày 7 tháng 2 năm 1910 đưa đoàn khách giả lên soái hạm Dreadnought",
+ "description": "Ngày 7/2/1910 một bức điện gửi tổng tư lệnh hạm đội nhà, báo có hoàng thân sắp đến thăm soái hạm HMS Dreadnought. Horace de Vere Cole sắp đặt. Trong nhóm có Virginia Woolf. Adrian Stephen đóng người phiên dịch. Hải quân đưa họ lên tàu. Hạm trưởng là Herbert Richmond. Đô đốc William May dùng Dreadnought làm soái hạm. Đây là lần thứ hai Cole đưa một đoàn khách giả đi thăm. Lần trước là ở Cambridge năm 1905.",
+ "tags": [
+  "Dreadnought",
+  "Horace de Vere Cole",
+  "1910",
+  "Virginia Woolf",
+  "điện tín",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1910",
+ "sub": "DREADNOUGHT",
+ "acc": [
+  "dreadnought",
+  "cole",
+  "điện",
+  "woolf",
+  "soái"
+ ],
+ "lines": [
+  "Ngày 7 tháng 2 năm 1910, một bức điện gửi tổng tư lệnh hạm đội nhà.",
+  "Điện báo có hoàng thân sắp đến thăm soái hạm Dreadnought.",
+  "Người sắp đặt là Horace de Vere Cole.",
+  "Trong nhóm có Virginia Woolf.",
+  "Adrian Stephen đóng vai người phiên dịch.",
+  "Hải quân đưa họ lên soái hạm.",
+  "Hạm trưởng lúc ấy là Herbert Richmond.",
+  "Đô đốc William May dùng Dreadnought làm soái hạm.",
+  "Báo Daily Mirror viết họ đeo nữ trang năm trăm bảng.",
+  "Tiểu sử Cole ngờ con số ấy, người trong cuộc không nhắc lại.",
+  "Đây là lần thứ hai Cole đưa một đoàn khách giả đi thăm.",
+  "Lần trước, năm 1905, là ở Cambridge."
+ ],
+ "imgs": {
+  "ship": "File:HMS Dreadnought 1906 H61017.jpg",
+  "wire": "File:Dreadnought hoax telegram.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "wire",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "BỨC ĐIỆN"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {"text": "HOÀNG THÂN", "at": [1, "hoàng"]},
+    {"text": "DREADNOUGHT", "at": [1, "Dreadnought"], "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {"text": "COLE", "at": [2, "Cole"], "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {"text": "WOOLF", "at": [3, "Woolf"], "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {"text": "PHIÊN DỊCH", "at": [4, "phiên"]}
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 5,
+   "img": "ship",
+   "tone": "sepia",
+   "focus": [0.5, 0.45],
+   "label": {"text": "SOÁI HẠM", "at": [5, "soái"]},
+   "credit": "HMS DREADNOUGHT, KHOẢNG 1906"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {"text": "RICHMOND", "at": [6, "Richmond"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {"text": "ĐÔ ĐỐC MAY", "at": [7, "May"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {"text": "500 BẢNG", "at": [8, "trăm"], "size": 220, "serif": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {"text": "NGỜ CON SỐ", "at": [9, "ngờ"], "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {"text": "LẦN THỨ HAI", "at": [10, "hai"]}
+   ]
+  },
+  {
+   "type": "hero",
+   "at": 11,
+   "img": "ship",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "CAMBRIDGE",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Dreadnought_hoax"
+ ]
+}

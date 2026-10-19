@@ -1,0 +1,234 @@
+{
+ "title": "Chín năm, rồi bốn mươi sáu năm",
+ "lines": [
+  {
+   "t": "Tháng 4 năm 1948, sau khi ra trại thiếu niên, ông vào không quân.",
+   "p": 0.8
+  },
+  "Ông lấy bằng trung học trong quân ngũ.",
+  "Ông học nghề thợ máy.",
+  "Năm 1952 ông được xuất ngũ danh dự.",
+  "Năm 1956 ông vào nhà tù liên bang Atlanta.",
+  "Tội là cướp có vũ khí và cướp xe tải.",
+  "Ở đó ông kể với Kevin Weeks một chuyện về chương trình thử nghiệm.",
+  "Ông và mười tám tù nhân khác tình nguyện, đổi lấy giảm án.",
+  "Họ được bảo là đang giúp tìm thuốc cho bệnh tâm thần phân liệt.",
+  "Thực ra đó là nghiên cứu kiểm soát ý nghĩ, có dùng chất gây ảo giác.",
+  "Tài liệu của cơ quan tình báo sau này xác nhận câu chuyện.",
+  "Hồ sơ không kể cơn mê.",
+  "Năm 1959 ông bị chuyển tới Alcatraz một thời gian.",
+  "Năm 1965, đơn ân xá thứ ba được chấp nhận.",
+  "Ông đã ngồi chín năm.",
+  "Rồi bốn mươi sáu năm sau đó, ông không bị bắt lần nào.",
+  {
+   "t": "Con số ấy đưa thẳng tới năm 2011.",
+   "p": 1.0
+  }
+ ],
+ "hud": {
+  "k": "HỒ SƠ",
+  "t": "46 NĂM"
+ },
+ "bgm": {
+  "mood": "tense",
+  "gain": 0.11
+ },
+ "scenes": [
+  {
+   "type": "chapter",
+   "at": 0,
+   "no": "2",
+   "k": "CHƯƠNG 2",
+   "title": "CHÍN NĂM"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "ÔNG LẤY BẰNG TRUNG",
+     "at": [
+      1,
+      "Ông"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "ÔNG HỌC NGHỀ THỢ",
+     "at": [
+      2,
+      "Ông"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "NĂM 1952 ÔNG ĐƯỢC",
+     "at": [
+      3,
+      "Năm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "NĂM 1956 ÔNG VÀO",
+     "at": [
+      4,
+      "Năm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "TỘI LÀ CƯỚP CÓ",
+   "white": true
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "Ở ĐÓ ÔNG KỂ",
+     "at": [
+      6,
+      "Ở"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "ÔNG VÀ MƯỜI TÁM",
+     "at": [
+      7,
+      "Ông"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "HỌ ĐƯỢC BẢO LÀ",
+     "at": [
+      8,
+      "Họ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "THỰC RA ĐÓ LÀ",
+     "at": [
+      9,
+      "Thực"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 10,
+   "text": "TÀI LIỆU CỦA CƠ",
+   "white": true
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "HỒ SƠ KHÔNG KỂ",
+     "at": [
+      11,
+      "Hồ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "NĂM 1959 ÔNG BỊ",
+     "at": [
+      12,
+      "Năm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "NĂM 1965, ĐƠN ÂN",
+     "at": [
+      13,
+      "Năm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "ÔNG ĐÃ NGỒI CHÍN",
+     "at": [
+      14,
+      "Ông"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 15,
+   "from": 0,
+   "to": 46,
+   "suffix": " NĂM",
+   "label": "NĂM"
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "items": [
+    {
+     "text": "CON SỐ ẤY ĐƯA",
+     "at": [
+      16,
+      "Con"
+     ]
+    }
+   ]
+  }
+ ]
+}

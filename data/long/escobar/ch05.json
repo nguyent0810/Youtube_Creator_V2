@@ -1,0 +1,623 @@
+{
+ "title": "Người dám gọi tên",
+ "lines": [
+  {
+   "t": "Chương năm. Người dám gọi tên.",
+   "p": 1.0
+  },
+  "Lara Bonilla không dừng ở những bài phát biểu.",
+  "Đầu tháng 3 năm 1984, cảnh sát Colombia, với thông tin từ phía Mỹ, bay vào vùng rừng phía nam.",
+  "Giữa rừng, họ tìm thấy một khu phức hợp có đường băng riêng và hàng loạt xưởng tinh chế.",
+  "Tên nơi ấy là Tranquilandia, xứ sở yên bình.",
+  "Trong bốn ngày, họ thu giữ khoảng mười ba tấn tám cocaine.",
+  "Đó là cú đánh lớn nhất vào cartel Medellín tính tới lúc ấy.",
+  {
+   "t": "Câu trả lời đến sau chưa đầy hai tháng.",
+   "p": 1.0
+  },
+  "Tối 30 tháng 4 năm 1984, xe của Bộ trưởng Lara chạy trên một con phố ở phía bắc Bogotá.",
+  "Một chiếc mô tô áp sát từ phía sau.",
+  "Người ngồi sau nổ súng.",
+  "Rodrigo Lara Bonilla chết ở tuổi ba mươi bảy.",
+  "Một bộ trưởng đương nhiệm bị ám sát ngay giữa thủ đô.",
+  "Ngay trong tang lễ, Tổng thống Belisario Betancur tuyên bố một điều các ông trùm sợ hơn mọi thứ khác.",
+  "Colombia sẽ dẫn độ công dân của mình sang Mỹ.",
+  "Vì sao họ sợ điều ấy đến vậy?",
+  "Ở Colombia, họ có thể mua thẩm phán, dọa nhân chứng, và biến nhà tù thành khách sạn.",
+  {
+   "t": "Ở Mỹ thì không.",
+   "p": 1.0
+  },
+  "Các ông trùm bỏ sang Panama.",
+  "Tháng 5 năm 1984, tại đó, họ gửi tới chính phủ một đề nghị.",
+  "Họ sẽ giải thể đường dây, mang tiền về nước, rút khỏi nghề.",
+  "Đổi lại, nhà nước không dẫn độ họ.",
+  "Về sau người ta hay kể rằng Escobar đề nghị trả hết nợ nước ngoài của Colombia.",
+  "Văn bản gốc không viết như vậy. Nhưng tinh thần thì đúng là một cuộc mặc cả.",
+  "Đề nghị bị bác bỏ.",
+  "Từ đây, nó không còn là chuyện buôn bán nữa.",
+  "Tháng 11 năm 1985, nhóm du kích M-19 chiếm Cung Tư pháp ở trung tâm Bogotá.",
+  "Quân đội phản công. Gần một trăm người chết, trong đó có mười một thẩm phán Tòa án Tối cao.",
+  "Hồ sơ dẫn độ cháy cùng tòa nhà.",
+  "Nhiều người tin Escobar đã trả tiền cho vụ ấy. Các cựu thành viên M-19 phủ nhận.",
+  "Đến hôm nay, câu hỏi đó vẫn chưa có lời đáp dứt khoát.",
+  "Nhưng một năm sau, những kẻ sợ dẫn độ không cần giấu mặt nữa.",
+  "Họ tự đặt cho mình một cái tên."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "CHƯƠNG NĂM",
+   "title": "NGƯỜI DÁM\nGỌI TÊN",
+   "sub": "1984 — 1985",
+   "titleAt": [
+    0,
+    "Người"
+   ],
+   "bg": "lara_bust"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "bg": "lara_bust",
+   "items": [
+    {
+     "text": "LARA BONILLA",
+     "at": [
+      1,
+      "Lara"
+     ]
+    },
+    {
+     "text": "KHÔNG DỪNG Ở BÀI PHÁT BIỂU",
+     "at": [
+      1,
+      "dừng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "at": 2,
+   "geo": "co",
+   "pins": [
+    {
+     "name": "Bogotá",
+     "at": [
+      2,
+      "cảnh"
+     ]
+    },
+    {
+     "name": "Tranquilandia",
+     "at": [
+      2,
+      "rừng"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "from": "Bogotá",
+     "to": "Tranquilandia",
+     "at": [
+      2,
+      "bay"
+     ],
+     "until": [
+      2,
+      "nam"
+     ],
+     "bend": 0.15
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 3,
+   "vid": "35969886",
+   "tone": "noir",
+   "veil": 0.35,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "ĐƯỜNG BĂNG RIÊNG GIỮA RỪNG",
+     "at": [
+      3,
+      "đường"
+     ]
+    },
+    {
+     "text": "HÀNG LOẠT XƯỞNG TINH CHẾ",
+     "at": [
+      3,
+      "xưởng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "vid": "38996148",
+   "tone": "noir",
+   "text": "TRANQUILANDIA",
+   "white": true,
+   "hitAt": [
+    4,
+    "Tranquilandia"
+   ],
+   "sub": "“XỨ SỞ YÊN BÌNH”"
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "bg": "navy_bales",
+   "from": 0,
+   "to": 13,
+   "suffix": ",8 TẤN",
+   "countAt": [
+    5,
+    "mười"
+   ],
+   "label": "COCAINE BỊ THU GIỮ TRONG BỐN NGÀY · 3.1984"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "bg": "cg",
+   "items": [
+    {
+     "text": "CÚ ĐÁNH LỚN NHẤT",
+     "at": [
+      6,
+      "lớn"
+     ]
+    },
+    {
+     "text": "VÀO CARTEL MEDELLÍN",
+     "at": [
+      6,
+      "cartel"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "vid": "4296589",
+   "tone": "noir",
+   "text": "CHƯA ĐẦY HAI THÁNG",
+   "hitAt": [
+    7,
+    "hai"
+   ]
+  },
+  {
+   "type": "date",
+   "at": 8,
+   "vid": "20042805",
+   "tone": "night",
+   "day": "PHÍA BẮC BOGOTÁ · XE CỦA BỘ TRƯỞNG LARA",
+   "date": "30.04.1984"
+  },
+  {
+   "type": "sketch",
+   "at": 9,
+   "art": "motorbike",
+   "title": "Một chiếc mô tô áp sát từ phía sau"
+  },
+  {
+   "type": "photo",
+   "at": 11,
+   "img": "lara_bust",
+   "tone": "bw",
+   "kin": [
+    {
+     "text": "RODRIGO LARA BONILLA",
+     "at": [
+      11,
+      "Rodrigo"
+     ]
+    },
+    {
+     "text": "37 TUỔI",
+     "at": [
+      11,
+      "ba"
+     ],
+     "acc": true
+    }
+   ],
+   "illus": "TƯỢNG ĐÀI",
+   "veil": 0.52
+  },
+  {
+   "type": "evidence",
+   "at": 12,
+   "img": "mac10",
+   "tone": "bw",
+   "callouts": [
+    {
+     "x": 0.62,
+     "y": 0.42,
+     "text": "KHẨU SÚNG TRONG HỒ SƠ ĐIỀU TRA",
+     "at": [
+      12,
+      "ám"
+     ],
+     "side": "r"
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": 13,
+   "img": "betancur",
+   "tone": "bw",
+   "side": {
+    "k": "TỔNG THỐNG COLOMBIA",
+    "h": "BELISARIO BETANCUR",
+    "hAt": [
+     13,
+     "Belisario"
+    ],
+    "lines": [
+     {
+      "text": "Tuyên bố ngay trong *tang lễ*",
+      "at": [
+       13,
+       "tuyên"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 14,
+   "bg": "capitolio",
+   "text": "DẪN ĐỘ SANG MỸ",
+   "white": true,
+   "hitAt": [
+    14,
+    "dẫn"
+   ]
+  },
+  {
+   "type": "question",
+   "at": 15,
+   "bg": "palacio",
+   "text": "Vì sao họ sợ điều ấy đến vậy?"
+  },
+  {
+   "type": "ledger",
+   "at": 16,
+   "title": "Ở COLOMBIA, HỌ CÓ THỂ",
+   "bg": "palacio",
+   "rows": [
+    {
+     "k": "THẨM PHÁN",
+     "v": "MUA",
+     "at": [
+      16,
+      "mua"
+     ]
+    },
+    {
+     "k": "NHÂN CHỨNG",
+     "v": "DỌA",
+     "at": [
+      16,
+      "dọa"
+     ]
+    },
+    {
+     "k": "NHÀ TÙ",
+     "v": "THÀNH KHÁCH SẠN",
+     "at": [
+      16,
+      "khách"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 17,
+   "vid": "6581406",
+   "tone": "noir",
+   "text": "Ở MỸ THÌ KHÔNG",
+   "hitAt": [
+    17,
+    "không"
+   ]
+  },
+  {
+   "type": "map",
+   "at": 18,
+   "geo": "am",
+   "pins": [
+    {
+     "name": "Medellín",
+     "at": [
+      18,
+      "Các"
+     ]
+    },
+    {
+     "name": "Panama",
+     "at": [
+      18,
+      "Panama"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "from": "Medellín",
+     "to": "Panama",
+     "at": [
+      18,
+      "bỏ"
+     ],
+     "until": [
+      18,
+      "Panama"
+     ],
+     "bend": 0.2
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 19,
+   "k": "PANAMA · 05.1984",
+   "name": "ĐỀ NGHỊ\nTỪ PANAMA",
+   "desc": "Các ông trùm gửi tới chính phủ Colombia",
+   "bg": "med_pano",
+   "rows": [
+    {
+     "k": "HỌ SẼ",
+     "v": "Giải thể đường dây · mang tiền về · rút khỏi nghề",
+     "at": [
+      20,
+      "giải"
+     ]
+    },
+    {
+     "k": "ĐỔI LẠI",
+     "v": "*Không dẫn độ*",
+     "at": [
+      21,
+      "không"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 22,
+   "vid": "4524511",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "“TRẢ HẾT NỢ NƯỚC NGOÀI”?",
+     "at": [
+      22,
+      "trả"
+     ]
+    },
+    {
+     "text": "VĂN BẢN GỐC KHÔNG VIẾT NHƯ VẬY",
+     "at": [
+      23,
+      "không"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 24,
+   "bg": "capitolio",
+   "text": "BỊ BÁC BỎ",
+   "hitAt": [
+    24,
+    "bác"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 25,
+   "vid": "1677798",
+   "tone": "night",
+   "items": [
+    {
+     "text": "TỪ ĐÂY",
+     "at": [
+      25,
+      "Từ"
+     ],
+     "sm": true
+    },
+    {
+     "text": "KHÔNG CÒN LÀ CHUYỆN BUÔN BÁN",
+     "at": [
+      25,
+      "buôn"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 26,
+   "bg": "palacio",
+   "day": "M-19 CHIẾM CUNG TƯ PHÁP · BOGOTÁ",
+   "date": "06.11.1985"
+  },
+  {
+   "type": "photo",
+   "at": 27,
+   "img": "heli1985",
+   "tone": "bw",
+   "film": true,
+   "move": "in",
+   "kin": [
+    {
+     "text": "GẦN 100 NGƯỜI CHẾT",
+     "at": [
+      27,
+      "trăm"
+     ]
+    },
+    {
+     "text": "TRONG ĐÓ 11 THẨM PHÁN TỐI CAO",
+     "at": [
+      27,
+      "mười"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "CUNG TƯ PHÁP · BOGOTÁ",
+    "v": "ẢNH TƯ LIỆU CẢNH SÁT · 1985",
+    "at": [
+     27,
+     "Quân"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "photo",
+   "at": 28,
+   "img": "sofa",
+   "tone": "color",
+   "move": "in",
+   "kin": [
+    {
+     "text": "HỒ SƠ DẪN ĐỘ",
+     "at": [
+      28,
+      "Hồ"
+     ]
+    },
+    {
+     "text": "CHÁY CÙNG TÒA NHÀ",
+     "at": [
+      28,
+      "cháy"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "CHIẾC GHẾ TỪ ĐỐNG ĐỔ NÁT CỦA CUNG TƯ PHÁP",
+    "v": "HIỆN VẬT BẢO TÀNG",
+    "at": [
+     28,
+     "dẫn"
+    ]
+   },
+   "veil": 0.52
+  },
+  {
+   "type": "split",
+   "at": 29,
+   "title": "AI TRẢ TIỀN CHO VỤ ẤY?",
+   "a": {
+    "img": "mugc",
+    "label": "NHIỀU NGƯỜI TIN: ESCOBAR",
+    "at": [
+     29,
+     "Escobar"
+    ]
+   },
+   "b": {
+    "img": "palacio",
+    "label": "CỰU THÀNH VIÊN M-19: PHỦ NHẬN",
+    "at": [
+     29,
+     "phủ"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 30,
+   "bg": "palacio",
+   "items": [
+    {
+     "text": "ĐẾN HÔM NAY",
+     "at": [
+      30,
+      "hôm"
+     ],
+     "sm": true
+    },
+    {
+     "text": "CHƯA CÓ LỜI ĐÁP DỨT KHOÁT",
+     "at": [
+      30,
+      "dứt"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 31,
+   "vid": "33068304",
+   "tone": "noir",
+   "items": [
+    {
+     "text": "MỘT NĂM SAU",
+     "at": [
+      31,
+      "năm"
+     ],
+     "sm": true
+    },
+    {
+     "text": "KHÔNG CẦN GIẤU MẶT NỮA",
+     "at": [
+      31,
+      "giấu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 32,
+   "vid": "33068304",
+   "tone": "noir",
+   "text": "MỘT CÁI TÊN",
+   "white": true,
+   "hitAt": [
+    32,
+    "tên"
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "NGƯỜI DÁM GỌI TÊN"
+ },
+ "bgm": {
+  "mood": "tense",
+  "at": 0,
+  "gain": 0.12
+ }
+}

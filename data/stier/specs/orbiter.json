@@ -1,0 +1,60 @@
+{
+ "title": "Ngày 23 tháng 9 năm 1999, Mars Climate Orbiter mất vì file mặt đất ghi pound thay vì newton",
+ "description": "Ngày 23/9/1999, Mars Climate Orbiter mất tín hiệu khi đốt động cơ vào quỹ đạo Sao Hỏa. File mặt đất ghi xung lực bằng pound-force giây, trong khi quy cách và phần mềm dẫn đường chờ newton giây. Một pound-force giây bằng khoảng 4,45 newton giây, nên file nhỏ hơn thực tế chừng bấy nhiêu lần. Phần mềm trên tàu tính theo hệ mét và tính đúng. Tàu đi thấp hơn quỹ đạo đã tính, rồi mất liên lạc.",
+ "tags": ["Mars Climate Orbiter", "1999", "newton", "pound-force", "NASA", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 1999",
+ "sub": "ORBITER",
+ "acc": ["orbiter", "newton", "giây", "mét", "hỏa"],
+ "lines": [
+  "Ngày 23 tháng 9 năm 1999, tàu Mars Climate Orbiter mất tín hiệu.",
+  "Tàu đang đốt động cơ để vào quỹ đạo Sao Hỏa.",
+  "File mặt đất ghi xung lực bằng pound-force giây.",
+  "Phần mềm dẫn đường chờ đơn vị newton giây.",
+  "Quy cách file yêu cầu newton giây.",
+  "Một pound-force giây bằng khoảng bốn phẩy bốn nhăm newton giây.",
+  "File ấy nhỏ hơn thực tế khoảng bốn phẩy bốn nhăm lần.",
+  "Phần mềm trên tàu tính theo hệ mét, và tính đúng.",
+  "Lỗi nằm ở file gửi từ mặt đất.",
+  "Tàu đi thấp hơn quỹ đạo đã tính.",
+  "Tín hiệu tắt khi tàu khuất sau Sao Hỏa.",
+  "Từ đó không còn liên lạc với tàu ở Sao Hỏa."
+ ],
+ "imgs": {
+  "craft": "File:Mars Climate Orbiter - spacecraft diagram-without-labels.png"
+ },
+ "scenes": [
+  {"type": "hero", "img": "craft", "frame": "print", "tone": "color", "intro": true, "head": "ORBITER"},
+  {"type": "kinetic", "at": 1, "items": [
+    {"text": "SAO HỎA", "at": [1, "Hỏa"]}
+  ]},
+  {"type": "kinetic", "at": 2, "items": [
+    {"text": "POUND-FORCE", "at": [2, "pound-force"], "acc": true}
+  ]},
+  {"type": "kinetic", "at": 3, "items": [
+    {"text": "NEWTON", "at": [3, "newton"]}
+  ]},
+  {"type": "kinetic", "at": 4, "items": [
+    {"text": "QUY CÁCH", "at": [4, "Quy"]}
+  ]},
+  {"type": "photo", "at": 5, "img": "craft", "tone": "color", "focus": [0.5, 0.45],
+   "label": {"text": "4,45 LẦN", "at": [5, "bốn"]},
+   "credit": "SƠ ĐỒ MARS CLIMATE ORBITER, NASA"},
+  {"type": "kinetic", "at": 6, "items": [
+    {"text": "NHỎ HƠN", "at": [6, "nhỏ"]}
+  ]},
+  {"type": "kinetic", "at": 7, "items": [
+    {"text": "HỆ MÉT", "at": [7, "mét"], "acc": true}
+  ]},
+  {"type": "kinetic", "at": 8, "items": [
+    {"text": "MẶT ĐẤT", "at": [8, "đất"]}
+  ]},
+  {"type": "kinetic", "at": 9, "items": [
+    {"text": "THẤP HƠN", "at": [9, "thấp"]}
+  ]},
+  {"type": "kinetic", "at": 10, "items": [
+    {"text": "KHUẤT", "at": [10, "khuất"]}
+  ]},
+  {"type": "hero", "at": 11, "img": "craft", "frame": "print", "tone": "color", "loop": true, "head": "SAO HỎA", "tr": "cut"}
+ ],
+ "sources": ["https://science.nasa.gov/mission/mars-climate-orbiter/"]
+}

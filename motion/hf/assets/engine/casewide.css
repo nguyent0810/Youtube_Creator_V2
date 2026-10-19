@@ -73,6 +73,7 @@ html, body { width:1920px; height:1080px; overflow:hidden; background:#060505; }
 
 /* ảnh */
 .phw { position:absolute; transform-origin:50% 50%; }
+.phframe { position:absolute; background:#f3ecdc; box-shadow:0 50px 120px rgba(0,0,0,.85); transform-origin:50% 50%; opacity:0; z-index:3; }
 .phw img, .phw video { position:absolute; display:block; }
 .phw svg { position:absolute; left:0; top:0; overflow:visible; }
 .print { position:absolute; background:#f3ecdc; box-shadow:0 50px 120px rgba(0,0,0,.85); }

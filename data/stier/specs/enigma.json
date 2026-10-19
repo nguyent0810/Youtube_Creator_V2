@@ -1,0 +1,56 @@
+{
+ "title": "Ngày 9 tháng 5 năm 1941, hải quân Anh lấy máy Enigma trên U-110 rồi đánh chìm tàu",
+ "description": "Ngày 9/5/1941, tàu ngầm Đức U-110 bị HMS Bulldog, HMS Broadway và HMS Aubretia buộc nổi. David Balme của Bulldog dẫn tổ lên tàu. William Pollock lấy một máy Enigma trong phòng vô tuyến vì máy trông lạc chỗ, cùng sổ Kurzsignale, dịch ý: sổ tín hiệu ngắn. Tàu được kéo đi rồi bị đánh chìm có chủ đích, để Đức không biết máy đã mất. Vụ việc giữ kín bảy tháng. Tháng 1/1942 Churchill mới kể với Roosevelt. Wikipedia: tài liệu giúp giải mật mã tay dự phòng Reservehandverfahren, không phải lần đầu phá Enigma hải quân. Ảnh là máy Enigma tại bảo tàng CIA, không phải máy lấy trên U-110.",
+ "tags": ["Enigma", "U-110", "1941", "David Balme", "Bulldog", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 1941",
+ "sub": "U-110",
+ "acc": ["enigma", "balme", "chìm", "bảy", "roosevelt"],
+ "lines": [
+  "Ngày 9 tháng 5 năm 1941, David Balme của tàu Bulldog lên tàu ngầm U-110.",
+  "Aubretia, Broadway và Bulldog buộc U-110 nổi.",
+  "William Pollock lấy máy Enigma trong phòng vô tuyến.",
+  "Máy trông lạc chỗ, nên ông mang lên.",
+  "Cùng máy là sổ tín hiệu ngắn.",
+  "Tàu được kéo đi, rồi bị đánh chìm có chủ đích.",
+  "Để phía Đức không biết máy đã mất.",
+  "Vụ này được giữ kín bảy tháng.",
+  "Tháng 1 năm 1942, Churchill mới kể với Roosevelt.",
+  "Ảnh là máy Enigma của bảo tàng, không phải máy trên U-110.",
+  "Tài liệu giúp giải mật mã dự phòng, không phải lần đầu phá Enigma hải quân."
+ ],
+ "imgs": {
+  "machine": "File:Enigma Machine - Flickr - The Central Intelligence Agency (1).jpg"
+ },
+ "scenes": [
+  {"type": "hero", "img": "machine", "frame": "print", "tone": "color", "intro": true, "head": "1941"},
+  {"type": "kinetic", "at": 1, "items": [
+    {"text": "BUỘC NỔI", "at": [1, "nổi"]}
+  ]},
+  {"type": "kinetic", "at": 2, "items": [
+    {"text": "POLLOCK", "at": [2, "Pollock"]}
+  ]},
+  {"type": "slam", "at": 3, "text": "LẠC CHỖ", "sub": "PHÒNG VÔ TUYẾN", "bg": "machine"},
+  {"type": "kinetic", "at": 4, "items": [
+    {"text": "SỔ TÍN HIỆU", "at": [4, "sổ"]}
+  ]},
+  {"type": "slam", "at": 5, "text": "ĐÁNH CHÌM", "sub": "CÓ CHỦ ĐÍCH", "white": true},
+  {"type": "kinetic", "at": 6, "items": [
+    {"text": "GIỮ BÍ MẬT", "at": [6, "Đức"], "acc": true}
+  ]},
+  {"type": "kinetic", "at": 7, "items": [
+    {"text": "7 THÁNG", "at": [7, "bảy"], "size": 220, "acc": true}
+  ]},
+  {"type": "date", "at": 8, "bg": "machine", "day": "CHURCHILL", "date": "01.1942",
+   "dayAt": [8, "Churchill"],
+   "groupAt": [[8, "1"], [8, "1942"]],
+   "sub": {"text": "ROOSEVELT", "at": [8, "Roosevelt"]}},
+  {"type": "photo", "at": 9, "img": "machine", "tone": "color", "focus": [0.5, 0.45],
+   "label": {"text": "BẢO TÀNG", "at": [9, "bảo"]},
+   "credit": "MÁY ENIGMA, CIA"},
+  {"type": "hero", "at": 10, "img": "machine", "frame": "print", "tone": "color", "loop": true, "head": "KHÔNG PHẢI", "tr": "cut"}
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/German_submarine_U-110_(1940)",
+  "https://en.wikipedia.org/wiki/Action_of_9_May_1941"
+ ]
+}

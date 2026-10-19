@@ -31,6 +31,8 @@ python motion/long/build_long.py yakuza final          # nối chương + loudno
 python motion/long/describe.py yakuza                  # mô tả: mốc chương + nguồn + ghi công ảnh/nhạc/video
 ```
 
+`html` và `render` dừng lại, trước khi render, nếu một thẻ giấy có con dấu mà không bật mực, con dấu tràn khỏi thẻ, tiêu đề thẻ rộng hơn lòng thẻ, hoặc clip B-roll là HDR (`color_transfer` PQ/HLG hoặc bt.2020).
+
 Giọng: vieneu 3.8.3, `VOICE = "Anh Khôi"` (3.8.3 đổi tên thành "Thiện Minh", tên cũ là alias, embedding y hệt).
 Bước trộn áp `VOICE_FX` (highpass 70, -2dB@200, +2.5dB@3.2k, de-esser, nén 3:1) lên giọng; spec `"master": false` để tắt
 (Yakuza đặt false vì bản đã đăng dùng giọng thô). Mốc chữ luôn lấy từ voice.wav thô.
@@ -65,6 +67,8 @@ Sai chữ neo là lỗi cứng: build dừng ngay, không để lỗi lọt vào
 
 - `python motion/long/script_lines.py <topic>`: chuyển `data/long/<topic>/script.md` (đã duyệt) thành `lines` của từng `chNN.json`.
   `‖` = nghỉ dài, `**[DIỄN Ý]**` = trích diễn ý, `»` = lời trích, đọc bằng `QUOTE_VOICE` (Minh Đức) qua bộ lọc radio, cảnh quote có `qline` sẽ hiện sóng âm và nhãn "GIỌNG ĐỌC MINH HỌA".
+  Cuối câu được phép có một dấu `{...}`. Dấu bị gỡ khỏi lời đọc. `scenes_from(lines, marks)` dựng cảnh: không dấu ra `kinetic` và được đếm để khỏi ra một video toàn một kiểu; `slam`, `quote`, `date`, `counter`, `question`, `chapter` ra đúng loại đó. `anchors.check` soi chữ neo trước khi ghi.
+  Spec `"craft": true` (chỉ video mới) thì `html` / `render` / `final` từ chối câu dài hơn 35 âm tiết, cách gọi "quý vị", liệt kê quá 3 mục, chương mở không có câu hỏi, cả bài không nghỉ dài, sáu cảnh cùng loại liên tiếp, hoặc một chương không có cảnh ngắt nhịp. Video cũ không ghi cờ này.
 - `spec.theme = "noir"`: khung điện ảnh 96px, phụ đề nằm trong dải đen dưới, cảnh `film: true` có nhấp nháy và tiếng máy chiếu.
 - Cảnh riêng của noir: `seismo` (băng địa chấn, `hitAt`), `saint` (thẻ thánh cháy, `burnAt/burnDur/burnTo`), `paper` (trang báo mô phỏng),
   `pizzini` (giấy đánh máy + `cipher` chữ→số kiểu Provenzano), `dots` (mỗi chấm một người, `groups`), `board` (bảng ghim + dây đỏ),
@@ -109,6 +113,18 @@ Credit ảnh tự hiện theo giấy phép.
 - Anh Khôi đọc "8-9-3" thành "8 đến 9 ba", nên phải viết bằng chữ. Đuôi "-kai" bị đọc thành "ki", nên cần map `say`.
 - Tốc độ render khoảng 2,7 lần thời lượng thực (video 34 phút mất khoảng 90 phút).
 - `motion/hf/assets/long` là junction trỏ tới `output/long`, nên ảnh và video không phải copy.
+- **Bề rộng chữ phụ thuộc look.** Font của look khác `classic` rộng hoặc hẹp hơn Be Vietnam Pro / Playfair, nên `variety.LOOKS` có hệ số `kw` (chữ kinetic) và `kws` (tiêu đề `print`, câu hỏi) để `casewide.js` co giãn cỡ chữ. Thêm look mới thì bỏ file TTF vào `motion/long/fonts/`, khai trong `lint_html.KIN_FONTS`, rồi chạy `html`: lint sẽ báo dòng kinetic nào tràn khung.
+- **Bản đồ có `zoom`**: nhãn ghim phóng to cùng bản đồ và bị cắt ở mép phải. Lint tính theo toạ độ ghim và báo số ký tự còn chỗ. Hai ghim sát nhau thì gộp vào một nhãn.
+- Nhãn `day` của cảnh `date` dài quá 45 ký tự thì engine tự co chữ; vẫn nên viết ngắn.
+- Đừng lấy bản scan giấy trắng (sơ đồ tổ chức, thông báo truy nã) làm nền cho kinetic, bars hay câu hỏi: chữ đè lên chữ. Muốn cho xem thì dùng `photo` với `frame=True`.
+- Ảnh dọc trong `photo` tự vào khung (w/h < 1,25); chữ `kin` đi kèm nằm bên trái và được thu hẹp để khung không che.
+
+## Bộ đồ nghề viết cảnh tay
+
+- `scenekit.py`: `sc`, `kin`, `chapter`, `write` cho `data/long/<topic>/gen_scenes.py` (mẫu: `capone`, `bulger`). Ảnh khai bằng một đoạn tên `File:…` qua `find()`, không dùng số thứ tự trong `research.json`.
+- `commons_find.py <topic> "từ khóa" …`: tìm thêm ảnh tự do trên Commons, ghi `commons.json` và contact sheet `csheet_N.jpg`.
+- `dryplan.py <topic>`: soát mọi chữ neo trước khi thu giọng, in luôn báo cáo sàn sản xuất.
+- Máy hiện tại chạy được 2–3 lệnh `render` song song (mỗi lệnh chậm đi khoảng 25%). `--draft` không nhanh hơn bao nhiêu, chỉ dùng cho chương có sketch hoặc bản đồ mới.
 
 ## Đăng: thumbnail, SEO, phụ đề, playlist
 
@@ -159,3 +175,22 @@ Chính sách Spam của YouTube lấy đúng ví dụ "the exact same background
   - Kết quả được cache ở `output/long/<topic>/bgm_picks.json`, nên render lại vẫn ra bài cũ.
   - Danh mục nhạc: `motion/long/music_catalog.json`. File nhạc: `output/music/`. `python motion/variety.py library` cho biết mỗi bài đã dùng bao nhiêu lần.
   - Kho hiện chỉ có 14 bài, chưa đủ để tránh trùng. Phải thêm bài (Kevin MacLeod CC BY, YouTube Audio Library…) vào cả danh mục lẫn `output/music/`.
+
+## Sàn sản xuất (`floor.py`)
+
+Một Long mới không được kém sáu Long đã đăng. `floor.py` đo kịch bản và cảnh, rồi từ chối `render` (bản thật), `final` và `publish_long.py` khi dưới sàn. `html` chỉ in cảnh báo, `render --draft` vẫn chạy để soi từng chương lúc đang viết.
+
+| Chỉ số | Thấp nhất trong 6 Long | Sàn |
+|---|---:|---:|
+| Âm tiết kịch bản | 5.610 | 5.000 |
+| Số chương | 12 | 10 |
+| Số loại cảnh | 19 | 14 |
+| Ảnh khác nhau | 49 | 40 |
+| Cảnh có b-roll | 35 | 30 |
+| Tỷ lệ kinetic | cao nhất 34% | tối đa 38% |
+| Chữ trên nền trống | cao nhất 10% | tối đa 12% |
+
+- `scenes_from.py` gắn `"auto": true` cho mọi câu không có dấu. Đó là bộ khung nháp; còn một cảnh `auto` là sàn chặn.
+- `publish_long.py` còn đòi spec có `"approved"` (ngày và lời duyệt của chủ kênh) trước lần upload đầu.
+- `python motion/long/unschedule.py <CH> <topic…> [--dry]` gỡ lịch public, giữ video private, không xóa.
+- Bị chặn thì bổ sung tư liệu và kịch bản. Đừng hạ ngưỡng. Quy trình đầy đủ nằm ở `CLAUDE.md` gốc repo.

@@ -1,0 +1,118 @@
+{
+ "title": "Bligh bị bỏ trên xuồng 7 mét, chèo hơn ba nghìn rưỡi hải lý tới Timor",
+ "description": "Sáng 28/4/1789, Fletcher Christian chiếm HMS Bounty và thả thuyền trưởng William Bligh cùng 18 người xuống xuồng dài 7 mét. Thức ăn chỉ đủ khoảng năm ngày: mỗi người một ounce bánh và một phần tư pint nước mỗi ngày. Họ vượt hơn 3.500 hải lý tới cảng Kupang trên đảo Timor. Christian đưa tàu tới Pitcairn và ném cây bánh mì xuống biển.",
+ "tags": [
+  "William Bligh",
+  "HMS Bounty",
+  "Fletcher Christian",
+  "Timor",
+  "Pitcairn",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1789",
+ "sub": "BOUNTY",
+ "acc": [
+  "bligh",
+  "bounty",
+  "christian",
+  "timor",
+  "pitcairn"
+ ],
+ "lines": [
+  "Sáng 28 tháng 4 năm 1789, Fletcher Christian chiếm tàu Bounty.",
+  "William Bligh và mười tám người trung thành bị bỏ xuống xuồng.",
+  "Chiếc xuồng dài bảy mét, chở mười chín người.",
+  "Thức ăn mang theo chỉ đủ khoảng năm ngày.",
+  "Mỗi ngày, mỗi người một ounce bánh và một phần tư pint nước.",
+  "Bligh không ghé đảo nữa. Ông nhằm thẳng Timor.",
+  "Quãng đường hơn ba nghìn rưỡi hải lý.",
+  "Họ vào được cảng Kupang, trên đảo Timor.",
+  "Christian đem tàu tới Pitcairn và ném cây bánh mì xuống biển."
+ ],
+ "imgs": {
+  "bligh": "File:Portrait of William Bligh attributed to John Webber.jpg",
+  "mutiny": "File:Mutiny on the Bounty.jpg",
+  "boat": "File:Mutiny HMS Bounty.jpg",
+  "house": "File:FMIB 36498 Wooden House Built by the Mutineers of the 'Bounty,' Pitcairn Island.jpeg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "bligh",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "BOUNTY"
+  },
+  {
+   "type": "photo",
+   "at": 1,
+   "img": "mutiny",
+   "tone": "sepia",
+   "focus": [0.5, 0.4],
+   "label": {"text": "BỎ XUỐNG XUỒNG", "at": [1, "xuồng"]},
+   "credit": "TRANH CUỘC BINH BIẾN BOUNTY"
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {"text": "7 MÉT", "at": [2, "bảy"], "size": 240, "acc": true, "serif": true},
+    {"text": "19 NGƯỜI", "at": [2, "mười"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {"text": "5 NGÀY", "at": [3, "năm"], "size": 240, "acc": true, "serif": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {"text": "1 OUNCE", "at": [4, "ounce"], "acc": true},
+    {"text": "MỘT PHẦN TƯ PINT", "at": [4, "pint"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {"text": "NHẰM THẲNG", "at": [5, "nhằm"]},
+    {"text": "TIMOR", "at": [5, "Timor"], "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {"text": "3.500", "at": [6, "ba"], "size": 240, "acc": true, "serif": true},
+    {"text": "HẢI LÝ", "at": [6, "hải"]}
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 7,
+   "img": "boat",
+   "tone": "sepia",
+   "focus": [0.5, 0.45],
+   "label": {"text": "CẢNG KUPANG", "at": [7, "Kupang"]},
+   "credit": "TRANH XUỒNG CỦA BLIGH"
+  },
+  {
+   "type": "hero",
+   "at": 8,
+   "img": "house",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "PITCAIRN",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Mutiny_on_the_Bounty"
+ ]
+}

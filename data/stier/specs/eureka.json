@@ -1,0 +1,53 @@
+{
+ "title": "Ngày 16 tháng 8 năm 1851, La Trobe đặt giấy phép đào vàng ba mươi shilling mỗi tháng",
+ "description": "Ngày 16/8/1851, vài ngày sau khi Thomas Hiscock tìm thêm vàng gần Buninyong, phó thống đốc Charles La Trobe ra hai tuyên cáo: đất mỏ vàng thuộc vương miện, và thợ mỏ phải mua giấy phép 30 shilling mỗi tháng, hiệu lực từ 1/9. Thuế tính theo tháng ở mỏ, không theo vàng đào được. Năm 1851 thuộc địa Victoria có 77.000 dân. Thợ mỏ về sau đồng loạt ngừng nộp thuế này. Tờ giấy phép là món họ phải mua trước vụ Eureka.",
+ "tags": ["Eureka", "La Trobe", "1851", "giấy phép đào vàng", "30 shilling", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 1851",
+ "sub": "EUREKA",
+ "acc": ["trobe", "shilling", "giấy", "1851", "hiscock"],
+ "lines": [
+  "Ngày 16 tháng 8 năm 1851, Charles La Trobe ra hai tuyên cáo.",
+  "Ông giữ chức phó thống đốc thuộc địa Victoria.",
+  "Đất mỏ vàng bị giữ cho vương miện.",
+  "Thợ mỏ phải mua giấy phép ba mươi shilling mỗi tháng.",
+  "Giấy có hiệu lực từ ngày 1 tháng 9.",
+  "Thuế tính theo tháng ở mỏ, không theo vàng đào được.",
+  "Vài ngày trước, Thomas Hiscock tìm thêm vàng gần Buninyong.",
+  "Năm 1851 thuộc địa có bảy mươi bảy nghìn dân.",
+  "Thợ mỏ về sau đồng loạt ngừng nộp thuế này.",
+  "Tờ giấy phép ấy là món họ phải mua trước vụ Eureka."
+ ],
+ "imgs": {
+  "lic": "File:The Eureka Stockade Gold License.jpg"
+ },
+ "scenes": [
+  {"type": "hero", "img": "lic", "frame": "print", "tone": "sepia", "intro": true, "head": "LA TROBE"},
+  {"type": "kinetic", "at": 1, "items": [
+    {"text": "VICTORIA", "at": [1, "Victoria"], "size": 200}
+  ]},
+  {"type": "kinetic", "at": 2, "items": [
+    {"text": "VƯƠNG MIỆN", "at": [2, "vương"]}
+  ]},
+  {"type": "kinetic", "at": 3, "items": [
+    {"text": "30 SHILLING", "at": [3, "shilling"], "size": 200, "acc": true}
+  ]},
+  {"type": "photo", "at": 4, "img": "lic", "tone": "sepia", "focus": [0.5, 0.4],
+   "label": {"text": "NGÀY 1 THÁNG 9", "at": [4, "1"]},
+   "credit": "GIẤY PHÉP ĐÀO VÀNG"},
+  {"type": "kinetic", "at": 5, "items": [
+    {"text": "THEO THÁNG", "at": [5, "tháng"], "acc": true}
+  ]},
+  {"type": "kinetic", "at": 6, "items": [
+    {"text": "HISCOCK", "at": [6, "Hiscock"]},
+    {"text": "BUNINYONG", "at": [6, "Buninyong"]}
+  ]},
+  {"type": "kinetic", "at": 7, "items": [
+    {"text": "77 NGHÌN", "at": [7, "bảy"], "size": 220}
+  ]},
+  {"type": "kinetic", "at": 8, "items": [
+    {"text": "NGỪNG NỘP", "at": [8, "ngừng"], "acc": true}
+  ]},
+  {"type": "hero", "at": 9, "img": "lic", "frame": "print", "tone": "sepia", "loop": true, "head": "EUREKA", "tr": "cut"}
+ ],
+ "sources": ["https://en.wikipedia.org/wiki/Eureka_Rebellion"]
+}

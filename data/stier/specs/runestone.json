@@ -1,0 +1,52 @@
+{
+ "title": "Năm 1898, Olof Ohman nói tìm được đá Kensington tự ghi năm 1362",
+ "description": "Năm 1898, Olof Ohman, người Thụy Điển di cư, nói tìm được một phiến đá khi phát quang đất ở hạt Douglas, gần Kensington, Minnesota. Ông nói đá nằm úp, rễ một cây dương bám vào. Ước lượng tuổi cây lệch nhau, từ dưới 10 đến khoảng 40 năm; bản này không chọn. Đá nặng 202 pound, khoảng 92 kg, không quy đổi. Dòng chữ tự ghi năm 1362 và kể một chuyến đi của người Scandinavia. Từ cuộc xét khoa học năm 1910, đồng thuận giới nghiên cứu xếp đây là trò giả thế kỷ 19, vì chữ gần tiếng Thụy Điển thế kỷ 19 hơn thế kỷ 14. Một số người buộc Ohman đã đẽo. Vẫn có người tin đá là thật. Hjalmar Holand nói được Ohman cho đá. Hội Sử học Minnesota giữ hóa đơn: Ohman bán 10 đô năm 1911. Không quy đổi ra tiền ngày nay. Ảnh là bản in hai mặt trong sách George Flom năm 1910, không phải lúc tìm thấy.",
+ "tags": ["Kensington", "Olof Ohman", "1898", "1362", "phiến đá", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 1898",
+ "sub": "RUNESTONE",
+ "acc": ["ohman", "1362", "giả", "mười", "1910"],
+ "lines": [
+  "Năm 1898, Olof Ohman nói tìm được phiến đá lúc phát quang đất.",
+  "Đá ở hạt Douglas, gần Kensington.",
+  "Ông nói đá nằm úp, rễ cây dương bám vào.",
+  "Dòng chữ tự ghi năm 1362.",
+  "Từ năm 1910, giới nghiên cứu gọi đây là giả mạo thế kỷ 19.",
+  "Một số người buộc chính Ohman đã đẽo.",
+  "Vẫn có người tin đá là thật.",
+  "Hjalmar Holand nói được Ohman cho đá.",
+  "Hội Sử học Minnesota giữ hóa đơn: Ohman bán mười đô, năm 1911.",
+  "Ảnh là bản in năm 1910, không phải lúc tìm thấy.",
+  "Chữ trên đá gần tiếng Thụy Điển thế kỷ 19 hơn thế kỷ 14."
+ ],
+ "imgs": {
+  "stone": "File:Kensington-runestone flom-1910.jpg"
+ },
+ "scenes": [
+  {"type": "hero", "img": "stone", "frame": "print", "tone": "sepia", "intro": true, "head": "1898"},
+  {"type": "kinetic", "at": 1, "items": [
+    {"text": "KENSINGTON", "at": [1, "Kensington"]}
+  ]},
+  {"type": "slam", "at": 2, "text": "RỄ CÂY", "sub": "ĐÁ NẰM ÚP", "bg": "stone"},
+  {"type": "date", "at": 3, "bg": "stone", "day": "TỰ GHI", "date": "1362",
+   "dayAt": [3, "ghi"],
+   "groupAt": [[3, "1362"]]},
+  {"type": "slam", "at": 4, "text": "GIẢ MẠO", "sub": "TỪ NĂM 1910", "white": true},
+  {"type": "kinetic", "at": 5, "items": [
+    {"text": "BỊ BUỘC", "at": [5, "Ohman"]}
+  ]},
+  {"type": "kinetic", "at": 6, "items": [
+    {"text": "VẪN TIN", "at": [6, "tin"], "acc": true}
+  ]},
+  {"type": "kinetic", "at": 7, "items": [
+    {"text": "HOLAND", "at": [7, "Holand"]}
+  ]},
+  {"type": "kinetic", "at": 8, "items": [
+    {"text": "10 ĐÔ", "at": [8, "mười"], "size": 220, "acc": true}
+  ]},
+  {"type": "photo", "at": 9, "img": "stone", "tone": "sepia", "focus": [0.5, 0.4],
+   "label": {"text": "BẢN IN", "at": [9, "bản"]},
+   "credit": "GEORGE FLOM, 1910"},
+  {"type": "hero", "at": 10, "img": "stone", "frame": "print", "tone": "sepia", "loop": true, "head": "THẾ KỶ", "tr": "cut"}
+ ],
+ "sources": ["https://en.wikipedia.org/wiki/Kensington_Runestone"]
+}

@@ -1,0 +1,53 @@
+{
+  "title": "Ngày 1 tháng 5 năm 1840, Anh đưa ra Penny Black nhưng thư hợp lệ từ ngày 6",
+  "description": "Ngày 1 tháng 5 năm 1840, nước Anh đưa ra Penny Black. Bán chính thức, và thư hợp lệ, thì từ ngày 6 tháng 5 năm 1840. Một số bưu cục, trong đó có Bath, bán sớm hơn. Có thư đóng dấu ngày 2 tháng 5, và một phong bì được ghi ngày 1 tháng 5. Đây là tem dính đầu tiên dùng cho một bưu chính công cộng, không phải mọi loại tem từ trước. In tại London, xưởng Perkins Bacon, tờ chưa đục lỗ, cắt bằng kéo. Chân dung Victoria do Charles Heath và con trai khắc, theo phác thảo của Henry Corbould, dựa trên huy chương năm 1834 của William Wyon. Tổng số in 68.808.000 con. Ảnh là khối bốn tem chưa dùng của Bảo tàng Nghệ thuật Metropolitan, không phải phong bì ngày 6 tháng 5. Không quy đổi giá tem.",
+  "tags": ["Penny Black", "1840", "tem", "Victoria", "Bath", "hồ sơ vụ án"],
+  "kicker": "HỒ SƠ 1840",
+  "sub": "PENNY BLACK",
+  "acc": ["penny", "black", "bath", "wyon", "met", "kéo"],
+  "lines": [
+    "Ngày 1 tháng 5 năm 1840, Anh đưa ra tem Penny Black.",
+    "Nhưng bán chính thức và hợp lệ thì từ ngày 6 tháng 5 năm 1840.",
+    "Bath bán sớm hơn, và có thư đóng dấu trước ngày ấy.",
+    "Đây là tem dính đầu tiên dùng cho một bưu chính công cộng.",
+    "In tại London, xưởng Perkins Bacon, tờ chưa đục lỗ.",
+    "Người ta cắt từng tem bằng kéo.",
+    "Mặt Victoria dựa trên huy chương của William Wyon.",
+    "Xưởng in sáu mươi tám triệu tám trăm lẻ tám nghìn con tem.",
+    "Ảnh này là khối bốn tem chưa dùng, của Bảo tàng Met.",
+    "Không phải phong bì ngày 6 tháng 5."
+  ],
+  "imgs": {
+    "block": "File:\"Penny Black\" postage stamps MET DP328201.jpg"
+  },
+  "scenes": [
+    {"type": "kinetic", "at": 0, "items": [
+      {"text": "PENNY BLACK", "at": [0, "Ngày"], "size": 120}
+    ]},
+    {"type": "date", "at": 1, "bg": "block", "day": "NGÀY 6", "date": "06.05.1840",
+     "dayAt": [1, "ngày"],
+     "groupAt": [[1, "6"], [1, "5"], [1, "1840"]],
+     "sub": {"text": "BÁN VÀ HỢP LỆ", "at": [1, "bán"]}},
+    {"type": "kinetic", "at": 2, "items": [
+      {"text": "BATH BÁN SỚM", "at": [2, "Bath"], "size": 130}
+    ]},
+    {"type": "slam", "at": 3, "text": "TEM DÍNH", "sub": "BƯU CHÍNH CÔNG"},
+    {"type": "kinetic", "at": 4, "items": [
+      {"text": "PERKINS BACON", "at": [4, "Perkins"], "size": 120}
+    ]},
+    {"type": "slam", "at": 5, "text": "CẮT BẰNG KÉO", "sub": "CHƯA ĐỤC LỖ", "bg": "block"},
+    {"type": "kinetic", "at": 6, "items": [
+      {"text": "WILLIAM WYON", "at": [6, "Wyon"], "size": 130}
+    ]},
+    {"type": "kinetic", "at": 7, "items": [
+      {"text": "68.808.000", "at": [7, "sáu"], "acc": true, "size": 120}
+    ]},
+    {"type": "photo", "at": 8, "img": "block", "tone": "color", "focus": [0.5, 0.42],
+     "label": {"text": "KHỐI BỐN", "at": [8, "bốn"]},
+     "credit": "KHỐI BỐN, MET"},
+    {"type": "slam", "at": 9, "text": "KHÔNG PHẢI THƯ", "sub": "TEM CHƯA DÙNG", "white": true}
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Penny_Black"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+ "title": "Ngày 7 tháng 5 năm 1697, Codex Gigas nặng 74,8 ki-lô bị ném qua cửa sổ",
+ "description": "Codex Gigas là bản thảo thời trung cổ lớn nhất còn lại: dài 92 cm, rộng 50 cm, dày 22 cm, nặng 74,8 kg, 310 tờ. Trang 290 vẽ một hình quỷ, nên sách bị gọi là Kinh Thánh của quỷ. Truyền thuyết nói một tu sĩ chép cả sách trong một đêm. Người nghiên cứu chữ ước tính phải hơn 20 năm, khoảng 1204–1230. Có chỗ nói da 160 con lừa, có chỗ nói da bê; bản này không chọn. Năm 1648 quân Thụy Điển lấy sách khỏi Prague như chiến lợi phẩm. Ngày 7/5/1697, cháy lâu đài Tre Kronor ở Stockholm, sách bị ném qua cửa sổ. Mục sư Johann Erichsons kể rằng sách rơi trúng và làm một người bị thương. Ảnh là trang 290, Thư viện Quốc gia Thụy Điển, không phải ảnh vụ cháy. Sách nay ở Stockholm.",
+ "tags": ["Codex Gigas", "1697", "74,8 kg", "Prague", "Stockholm", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 1697",
+ "sub": "CODEX GIGAS",
+ "acc": ["gigas", "quỷ", "ki", "cửa", "1648"],
+ "lines": [
+  "Codex Gigas là bản thảo trung cổ lớn nhất còn lại.",
+  "Sách nặng bảy mươi bốn phẩy tám ki lô gam.",
+  "Trang hai trăm chín mươi vẽ hình quỷ.",
+  "Truyền thuyết nói một tu sĩ chép cả sách một đêm.",
+  "Người nghiên cứu ước tính hơn hai mươi năm.",
+  "Năm 1648, quân Thụy Điển lấy sách khỏi Prague, chiến lợi phẩm.",
+  "Ngày 7 tháng 5 năm 1697, cháy lâu đài Tre Kronor.",
+  "Có người ném sách qua cửa sổ để cứu.",
+  "Mục sư Johann Erichsons kể sách rơi trúng, làm một người bị thương.",
+  "Ảnh là trang vẽ quỷ, không phải vụ cháy.",
+  "Nay ở Thư viện Quốc gia Thụy Điển."
+ ],
+ "imgs": {
+  "page": "File:CodexGigas 577 TheDevil.jpg"
+ },
+ "scenes": [
+  {"type": "hero", "img": "page", "frame": "print", "tone": "color", "intro": true, "head": "GIGAS"},
+  {"type": "kinetic", "at": 1, "items": [
+    {"text": "74,8", "at": [1, "bảy"], "size": 220, "acc": true}
+  ]},
+  {"type": "photo", "at": 2, "img": "page", "tone": "color", "focus": [0.5, 0.4],
+   "label": {"text": "TRANG 290", "at": [2, "trang"]},
+   "credit": "TRANG 290, THƯ VIỆN THỤY ĐIỂN"},
+  {"type": "slam", "at": 3, "text": "MỘT ĐÊM", "sub": "LÀ TRUYỀN THUYẾT", "white": true},
+  {"type": "kinetic", "at": 4, "items": [
+    {"text": "HƠN 20 NĂM", "at": [4, "hai"]}
+  ]},
+  {"type": "date", "at": 5, "bg": "page", "day": "CHIẾN LỢI PHẨM", "date": "1648",
+   "dayAt": [5, "chiến"],
+   "groupAt": [[5, "1648"]],
+   "sub": {"text": "PRAGUE", "at": [5, "Prague"]}},
+  {"type": "date", "at": 6, "bg": "page", "day": "CHÁY", "date": "07.05.1697",
+   "dayAt": [6, "cháy"],
+   "groupAt": [[6, "7"], [6, "5"], [6, "1697"]]},
+  {"type": "slam", "at": 7, "text": "CỬA SỔ", "sub": "NÉM RA ĐỂ CỨU", "bg": "page"},
+  {"type": "kinetic", "at": 8, "items": [
+    {"text": "LỜI MỤC SƯ", "at": [8, "Mục"]}
+  ]},
+  {"type": "hero", "at": 10, "img": "page", "frame": "print", "tone": "color", "loop": true, "head": "THƯ VIỆN", "tr": "cut"}
+ ],
+ "sources": ["https://en.wikipedia.org/wiki/Codex_Gigas"]
+}

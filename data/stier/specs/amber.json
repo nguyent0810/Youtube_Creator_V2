@@ -1,0 +1,55 @@
+{
+ "title": "Ngày 14 tháng 10 năm 1941, phòng hổ phách hơn sáu tấn tới Königsberg sau ba mươi sáu giờ tháo",
+ "description": "Phòng hổ phách trong cung Catherine, gần Sankt-Peterburg, làm từ thế kỷ 18, hổ phách gắn vàng lá, rộng hơn 55 mét vuông và chứa hơn 6 tấn hổ phách. Năm 1941 lính Đức tháo phòng trong 36 giờ, có hai chuyên gia giám sát. Ngày 14/10/1941 phòng tới lâu đài Königsberg. Đầu năm 1944 phòng được đóng thùng để ở tầng hầm. Tháng 8/1944 không quân Anh ném bom Königsberg và hồ sơ về chỗ của phòng dừng lại.",
+ "tags": ["phòng hổ phách", "Königsberg", "1941", "cung Catherine", "sáu tấn", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 1941",
+ "sub": "HỔ PHÁCH",
+ "acc": ["phách", "tấn", "königsberg", "1941", "tháo"],
+ "lines": [
+  "Phòng hổ phách nằm trong cung Catherine, gần Sankt-Peterburg.",
+  "Phòng làm từ thế kỷ mười tám, hổ phách gắn trên vàng lá.",
+  "Phòng rộng hơn năm mươi lăm mét vuông, chứa hơn sáu tấn hổ phách.",
+  "Năm 1941, lính Đức tháo cả phòng trong ba mươi sáu giờ.",
+  "Hai chuyên gia đứng giám sát vụ tháo.",
+  "Ngày 14 tháng 10, phòng tới lâu đài Königsberg.",
+  "Đầu năm 1944, phòng được đóng thùng, để ở tầng hầm lâu đài.",
+  "Tháng 8 năm 1944, không quân Anh ném bom Königsberg.",
+  "Hồ sơ về chỗ của phòng dừng lại ở trận bom ấy.",
+  "Từ đó, không ai chỉ được phòng hổ phách còn ở đâu."
+ ],
+ "imgs": {
+  "room": "File:Andrey Zeest - Amber Room (autochrome) (cropped).jpg"
+ },
+ "scenes": [
+  {"type": "hero", "img": "room", "frame": "print", "tone": "sepia", "intro": true, "head": "HỔ PHÁCH"},
+  {"type": "photo", "at": 1, "img": "room", "tone": "sepia", "focus": [0.5, 0.4],
+   "label": {"text": "VÀNG LÁ", "at": [1, "vàng"]},
+   "credit": "ANDREY ZEEST, 1917"},
+  {"type": "kinetic", "at": 2, "items": [
+    {"text": "55 MÉT", "at": [2, "lăm"]},
+    {"text": "6 TẤN", "at": [2, "sáu"], "size": 220, "acc": true}
+  ]},
+  {"type": "kinetic", "at": 3, "items": [
+    {"text": "36 GIỜ", "at": [3, "sáu"], "size": 240, "acc": true}
+  ]},
+  {"type": "kinetic", "at": 4, "items": [
+    {"text": "HAI NGƯỜI", "at": [4, "Hai"]}
+  ]},
+  {"type": "kinetic", "at": 5, "items": [
+    {"text": "14 THÁNG 10", "at": [5, "14"]},
+    {"text": "KÖNIGSBERG", "at": [5, "Königsberg"], "acc": true}
+  ]},
+  {"type": "kinetic", "at": 6, "items": [
+    {"text": "ĐÓNG THÙNG", "at": [6, "thùng"]}
+  ]},
+  {"type": "kinetic", "at": 7, "items": [
+    {"text": "THÁNG 8", "at": [7, "8"]},
+    {"text": "NÉM BOM", "at": [7, "bom"]}
+  ]},
+  {"type": "kinetic", "at": 8, "items": [
+    {"text": "HỒ SƠ DỪNG", "at": [8, "dừng"]}
+  ]},
+  {"type": "hero", "at": 9, "img": "room", "frame": "print", "tone": "sepia", "loop": true, "head": "Ở ĐÂU", "tr": "cut"}
+ ],
+ "sources": ["https://en.wikipedia.org/wiki/Amber_Room"]
+}

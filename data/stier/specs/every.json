@@ -1,0 +1,60 @@
+{
+ "title": "Edinburgh in giấy bắt Henry Every, khoản thưởng được nâng lên một nghìn bảng",
+ "description": "Henry Every, thủy thủ gọi là Long Ben, sinh 20/8/1659, tàu của ông tên Fancy. Chính phủ Anh treo 500 bảng cho ai bắt được ông. Công ty Đông Ấn sau nâng khoản thưởng lên 1.000 bảng. Đây được xem là cuộc săn người rộng khắp đầu tiên có hồ sơ. Lệnh truy nã in ở Edinburgh ghi tên Benjamin Bridgeman. Vài thủy thủ bị bắt. Every thì không. Ông mất dấu từ tháng 6/1696.",
+ "tags": ["Henry Every", "1696", "một nghìn bảng", "Edinburgh", "Bridgeman", "hồ sơ vụ án"],
+ "kicker": "HỒ SƠ 1696",
+ "sub": "EVERY",
+ "acc": ["every", "nghìn", "edinburgh", "bridgeman", "fancy"],
+ "lines": [
+  "Henry Every sinh ngày 20 tháng 8 năm 1659.",
+  "Thủy thủ gọi ông là Long Ben.",
+  "Tàu ông cầm mang tên Fancy.",
+  "Tháng 6 năm 1696, ông mất dấu.",
+  "Chính phủ Anh treo thưởng năm trăm bảng cho ai bắt được ông.",
+  "Công ty Đông Ấn sau nâng khoản ấy lên một nghìn bảng.",
+  "Người ta gọi đây là cuộc săn người rộng khắp đầu tiên có hồ sơ.",
+  "Lệnh truy nã in ở Edinburgh, ghi tên Benjamin Bridgeman.",
+  "Vài người trong thủy thủ đoàn bị bắt.",
+  "Every thì không có trong số ấy.",
+  "Từ tháng 6 năm 1696, không còn giấy tờ nào về ông.",
+  "Không ai biết ông ở đâu sau mốc đó."
+ ],
+ "imgs": {
+  "bill": "File:Proclamation for apprehending Henry Every.jpg"
+ },
+ "scenes": [
+  {"type": "hero", "img": "bill", "frame": "print", "tone": "sepia", "intro": true, "head": "EVERY"},
+  {"type": "kinetic", "at": 1, "items": [
+    {"text": "LONG BEN", "at": [1, "Long"]}
+  ]},
+  {"type": "kinetic", "at": 2, "items": [
+    {"text": "FANCY", "at": [2, "Fancy"], "size": 240, "acc": true}
+  ]},
+  {"type": "kinetic", "at": 3, "items": [
+    {"text": "1696", "at": [3, "1696"], "size": 240, "serif": true}
+  ]},
+  {"type": "kinetic", "at": 4, "items": [
+    {"text": "500 BẢNG", "at": [4, "trăm"]}
+  ]},
+  {"type": "kinetic", "at": 5, "items": [
+    {"text": "1.000 BẢNG", "at": [5, "nghìn"], "size": 220, "acc": true}
+  ]},
+  {"type": "kinetic", "at": 6, "items": [
+    {"text": "ĐẦU TIÊN", "at": [6, "đầu"], "acc": true}
+  ]},
+  {"type": "photo", "at": 7, "img": "bill", "tone": "sepia", "focus": [0.5, 0.3],
+   "label": {"text": "EDINBURGH", "at": [7, "Edinburgh"]},
+   "credit": "LỆNH TRUY NÃ HENRY EVERY"},
+  {"type": "kinetic", "at": 8, "items": [
+    {"text": "BỊ BẮT", "at": [8, "bắt"]}
+  ]},
+  {"type": "kinetic", "at": 9, "items": [
+    {"text": "KHÔNG CÓ", "at": [9, "không"]}
+  ]},
+  {"type": "kinetic", "at": 10, "items": [
+    {"text": "ĐỨT GIẤY", "at": [10, "giấy"]}
+  ]},
+  {"type": "hero", "at": 11, "img": "bill", "frame": "print", "tone": "sepia", "loop": true, "head": "Ở ĐÂU", "tr": "cut"}
+ ],
+ "sources": ["https://en.wikipedia.org/wiki/Henry_Every"]
+}

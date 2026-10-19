@@ -1,0 +1,185 @@
+{
+ "title": "Sáu trăm trang",
+ "lines": [
+  {
+   "t": "Một bài báo ngày 28 tháng 2 năm 2003 nói cáo trạng dày khoảng 600 trang.",
+   "p": 0.8
+  },
+  "Bạn hình dung một xấp giấy, không phải một lời đồn.",
+  "Cùng bài ấy ghi lời chính bị cáo thừa nhận trước cơ quan điều tra.",
+  "Tiền thu lợi bất chính từ các sòng xóc đĩa, trong các năm 1999 đến 2001, là 1,7 tỷ đồng.",
+  "Mỗi ngày, phí đứng ra trông sòng được gọi là phí ngoại giao.",
+  "Mức ông thừa nhận là hai triệu đồng một ngày.",
+  "Hồ sơ không đổi 1,7 tỷ đồng năm ấy ra giá hôm nay.",
+  "Cũng không nhân hai triệu với số ngày để ra một gia tài.",
+  "Lời thừa nhận là lời thừa nhận.",
+  "Phép nhân của người xem không phải chứng cứ.",
+  "Tòa còn việc khác phải đọc trong 600 trang ấy.",
+  "Giết người là một việc.",
+  {
+   "t": "Đưa hối lộ là một việc khác. {question: Tiền nào vào cáo trạng?}",
+   "p": 1.0
+  }
+ ],
+ "hud": {
+  "k": "HỒ SƠ",
+  "t": "600 TRANG"
+ },
+ "bgm": {
+  "mood": "quiet",
+  "gain": 0.11
+ },
+ "scenes": [
+  {
+   "type": "chapter",
+   "at": 0,
+   "no": "3",
+   "k": "CHƯƠNG 3",
+   "title": "600 TRANG"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "BẠN HÌNH DUNG MỘT",
+     "at": [
+      1,
+      "Bạn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "CÙNG BÀI ẤY GHI",
+     "at": [
+      2,
+      "Cùng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "TIỀN THU LỢI BẤT",
+     "at": [
+      3,
+      "Tiền"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "MỖI NGÀY, PHÍ ĐỨNG",
+     "at": [
+      4,
+      "Mỗi"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 0,
+   "to": 600,
+   "suffix": " TRANG",
+   "label": "TRANG"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "HỒ SƠ KHÔNG ĐỔI",
+     "at": [
+      6,
+      "Hồ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "CŨNG KHÔNG NHÂN HAI",
+     "at": [
+      7,
+      "Cũng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "LỜI THỪA NHẬN LÀ",
+     "at": [
+      8,
+      "Lời"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "PHÉP NHÂN CỦA NGƯỜI",
+     "at": [
+      9,
+      "Phép"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 10,
+   "text": "TÒA CÒN VIỆC KHÁC",
+   "white": true
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "GIẾT NGƯỜI LÀ MỘT",
+     "at": [
+      11,
+      "Giết"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "ĐƯA HỐI LỘ LÀ",
+     "at": [
+      12,
+      "Đưa"
+     ]
+    }
+   ]
+  }
+ ]
+}

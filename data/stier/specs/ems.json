@@ -1,0 +1,122 @@
+{
+ "title": "Bismarck bỏ câu hoà hoãn của vua Wilhelm rồi đưa điện Ems cho báo",
+ "description": "Ngày 13/7/1870, Heinrich Abeken đánh điện từ Bad Ems về Berlin: vua Wilhelm đang nghỉ mát, gặp đại sứ Pháp về ngôi vua Tây Ban Nha và từ chối yêu cầu của Pháp. Bismarck được quyền đưa tin cho báo, không phải đăng nguyên văn. Ông bỏ những câu hoà hoãn. Bản tối hôm đó khiến nhà vua có vẻ xẵng, và được gửi tới các sứ quán. Điện gốc vẫn nằm trong hồ sơ.",
+ "tags": [
+  "điện Ems",
+  "Bismarck",
+  "Wilhelm",
+  "1870",
+  "Bad Ems",
+  "hồ sơ vụ án"
+ ],
+ "kicker": "HỒ SƠ 1870",
+ "sub": "EMS",
+ "acc": [
+  "bismarck",
+  "ems",
+  "wilhelm",
+  "hoà",
+  "báo"
+ ],
+ "lines": [
+  "Ngày 13 tháng 7 năm 1870, Heinrich Abeken đánh điện từ Bad Ems về Berlin.",
+  "Nhà vua đang nghỉ mát ở Bad Ems, không ngồi ở Berlin.",
+  "Điện kể vua Wilhelm gặp đại sứ Pháp về ngôi vua Tây Ban Nha.",
+  "Nhà vua từ chối yêu cầu của nước Pháp.",
+  "Bismarck được quyền đưa tin cho báo, không phải đăng nguyên văn.",
+  "Ông bỏ những câu hoà hoãn của nhà vua.",
+  "Bản đưa báo tối hôm đó khiến nhà vua có vẻ xẵng.",
+  "Tối hôm đó bản mới còn được gửi tới các sứ quán.",
+  "Điện gốc của Abeken vẫn nằm trong hồ sơ.",
+  "Bản in tối hôm đó ngắn hơn điện Abeken gửi đi."
+ ],
+ "imgs": {
+  "king": "File:Wilhelm I at Bad Ems.jpg",
+  "cartoon": "File:La baldufa de'n Bismark.jpg"
+ },
+ "scenes": [
+  {
+   "type": "hero",
+   "img": "king",
+   "frame": "print",
+   "tone": "sepia",
+   "intro": true,
+   "head": "ĐIỆN EMS"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {"text": "NGHỈ MÁT", "at": [1, "nghỉ"]},
+    {"text": "BAD EMS", "at": [1, "Ems"], "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {"text": "WILHELM", "at": [2, "Wilhelm"]},
+    {"text": "TÂY BAN NHA", "at": [2, "Tây"], "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {"text": "TỪ CHỐI", "at": [3, "từ"], "acc": true},
+    {"text": "NƯỚC PHÁP", "at": [3, "Pháp"]}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {"text": "ĐƯA BÁO", "at": [4, "báo"], "acc": true},
+    {"text": "KHÔNG NGUYÊN VĂN", "at": [4, "nguyên"]}
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 5,
+   "img": "cartoon",
+   "tone": "sepia",
+   "focus": [0.5, 0.4],
+   "label": {"text": "BỎ CÂU", "at": [5, "bỏ"]},
+   "credit": "BIẾM HỌA ĐIỆN EMS, 1870"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {"text": "CÓ VẺ XẴNG", "at": [6, "xẵng"], "size": 220, "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {"text": "SỨ QUÁN", "at": [7, "sứ"], "acc": true}
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {"text": "TRONG HỒ SƠ", "at": [8, "hồ"]}
+   ]
+  },
+  {
+   "type": "hero",
+   "at": 9,
+   "img": "cartoon",
+   "frame": "print",
+   "tone": "sepia",
+   "loop": true,
+   "head": "NGẮN HƠN",
+   "tr": "cut"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Ems_Dispatch"
+ ]
+}

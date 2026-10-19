@@ -1,0 +1,57 @@
+{
+  "title": "Ngày 1 tháng 1 năm 1910, tháp Eiffel hết giấy phép, thành phố có thể dỡ",
+  "description": "Tháp Eiffel dựng cho Hội chợ thế giới Paris năm 1889. Gustave Eiffel chỉ được giấy phép dùng đất 20 năm. Ngày 1 tháng 1 năm 1910 tháp trả về thành phố Paris, và thành phố có thể dỡ. Trang chính thức của tháp nói năm 1906 thành phố đã phá Gallery of Machines của hội chợ 1889 vì không còn việc dùng. Ngày 5 tháng 11 năm 1898, Eugène Ducretet gửi Morse từ tháp tới Panthéon, bốn cây số. Đó là liên lạc radio giữa hai chỗ ấy, không phải radio đầu tiên của thế giới. Eiffel bỏ tiền làm ăng-ten trên đỉnh. Đại úy Gustave Ferrié thí nghiệm ở chân trụ nam. Năm 1908 tầm sóng tới sáu nghìn cây số. Năm 1909 có trạm cố định dưới Champ de Mars. Từ ngày 1 tháng 1 năm 1910 giấy phép được thêm 70 năm. Ảnh của Neurdein năm 1889 là tháp lúc hội chợ, không phải trạm sóng.",
+  "tags": ["Eiffel", "1910", "Paris", "Ferrié", "radio", "hồ sơ vụ án"],
+  "kicker": "HỒ SƠ 1910",
+  "sub": "THÁP EIFFEL",
+  "acc": ["eiffel", "ducretet", "ferrié", "panthéon", "morse", "1906"],
+  "lines": [
+    "Năm 1889, Gustave Eiffel dựng tháp cho hội chợ Paris.",
+    "Giấy phép chỉ có 20 năm.",
+    "Ngày 1 tháng 1 năm 1910, tháp trả về thành phố Paris.",
+    "Thành phố có thể dỡ tháp.",
+    "Năm 1906 họ đã phá phòng máy, tòa lớn của hội chợ.",
+    "Ngày 5 tháng 11 năm 1898, Ducretet gửi Morse tới Panthéon.",
+    "Chưa phải radio đầu tiên thế giới.",
+    "Eiffel bỏ tiền làm ăng-ten trên đỉnh.",
+    "Gustave Ferrié kéo sóng xa dần, năm 1908 tới sáu nghìn cây số.",
+    "Năm 1909, trạm cố định nằm dưới Champ de Mars.",
+    "Từ năm 1910, giấy phép thêm 70 năm."
+  ],
+  "imgs": {
+    "tower": "File:Eiffel tower at Exposition Universelle, Paris, 1889.jpg"
+  },
+  "scenes": [
+    {"type": "photo", "at": 0, "img": "tower", "tone": "bw", "focus": [0.5, 0.32],
+     "label": {"text": "HỘI CHỢ 1889", "at": [0, "1889"]},
+     "credit": "NEURDEIN, 1889"},
+    {"type": "kinetic", "at": 1, "items": [
+      {"text": "20 NĂM", "at": [1, "20"], "acc": true, "size": 220}
+    ]},
+    {"type": "date", "at": 2, "bg": "tower", "day": "NGÀY 1", "date": "01.01.1910",
+     "dayAt": [2, "Ngày"],
+     "groupAt": [[2, "1", 0], [2, "1", 1], [2, "1910"]],
+     "sub": {"text": "TRẢ VỀ PARIS", "at": [2, "Paris"]}},
+    {"type": "slam", "at": 3, "text": "CÓ THỂ DỠ", "sub": "THÀNH PHỐ"},
+    {"type": "kinetic", "at": 4, "items": [
+      {"text": "NĂM 1906", "at": [4, "1906"], "size": 180}
+    ]},
+    {"type": "kinetic", "at": 5, "items": [
+      {"text": "PANTHÉON", "at": [5, "Panthéon"], "size": 140}
+    ]},
+    {"type": "slam", "at": 6, "text": "CHƯA PHẢI", "sub": "RADIO ĐẦU", "white": true},
+    {"type": "kinetic", "at": 7, "items": [
+      {"text": "ĂNG-TEN", "at": [7, "ăng-ten"], "size": 180}
+    ]},
+    {"type": "kinetic", "at": 8, "items": [
+      {"text": "6.000 CÂY", "at": [8, "sáu"], "acc": true, "size": 170}
+    ]},
+    {"type": "kinetic", "at": 9, "items": [
+      {"text": "CHAMP DE MARS", "at": [9, "Champ"], "size": 110}
+    ]},
+    {"type": "slam", "at": 10, "text": "70 NĂM", "sub": "THÊM GIẤY PHÉP", "bg": "tower"}
+  ],
+  "sources": [
+    "https://www.toureiffel.paris/en/news/130-years/why-was-eiffel-tower-kept"
+  ]
+}
