@@ -1,0 +1,185 @@
+{
+ "theme": "mim",
+ "title": "Chính công ty làm AI giả giọng khuyên ngân hàng: đừng dùng giọng nói làm mật khẩu nữa",
+ "description": "Tháng 3/2024, OpenAI giới thiệu một mô hình tạo giọng nói chỉ cần 15 giây giọng mẫu, và cho biết chưa mở rộng ra công chúng. Cũng trong bài ấy, họ khuyến nghị xã hội dần bỏ việc dùng giọng nói để xác thực khi truy cập tài khoản ngân hàng và thông tin nhạy cảm. Trước đó, 01/2023, một mô hình nghiên cứu khác chỉ cần 3 giây giọng mẫu. Giọng nói từng là thứ “nghe là biết ai”; giờ nó không còn đủ để chứng minh bạn là bạn. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (13 phút): https://youtu.be/sywk-F-yW7k (công khai từ 20:00 ngày 26/10).",
+ "tags": [
+  "xác thực giọng nói",
+  "openai",
+  "ngân hàng",
+  "ai giả giọng",
+  "lừa đảo",
+  "deepfake",
+  "an toàn mạng",
+  "mind in the machine"
+ ],
+ "sub": "03/2024",
+ "acc": [
+  "mười",
+  "bỏ",
+  "ba",
+  "mật",
+  "đủ"
+ ],
+ "kicker": "AI VÀ LỪA ĐẢO",
+ "lines": [
+  "Mười lăm giây giọng mẫu. Và một lời khuyên lạ, từ chính nơi làm ra cỗ máy.",
+  "Tháng 3 năm 2024, OpenAI giới thiệu một mô hình bắt chước giọng nói.",
+  "Nó chỉ cần nghe bạn nói mười lăm giây.",
+  "Họ chưa đưa nó ra cho công chúng.",
+  "Và họ khuyên các ngân hàng: hãy dần bỏ việc dùng giọng nói để xác thực tài khoản.",
+  "Một năm trước đó, một mô hình nghiên cứu khác chỉ cần ba giây.",
+  "Giọng nói từng là mật khẩu lâu đời nhất của con người. Giờ thì nó không còn đủ nữa."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "15 GIÂY GIỌNG MẪU",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "và một lời khuyên lạ",
+     "at": [
+      0,
+      "Và"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8118120",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "THÁNG 3 NĂM 2024",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "MỘT MÔ HÌNH BẮT CHƯỚC GIỌNG",
+     "at": [
+      1,
+      "một"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:5974501",
+   "ms": 8,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "chart",
+   "at": 2,
+   "kind": "bars",
+   "title": "GIỌNG MẪU CẦN NGHE (GIÂY)",
+   "unit": "HAI MÔ HÌNH · ĐỀU CHƯA MỞ CHO CÔNG CHÚNG",
+   "min": 0,
+   "bars": [
+    {
+     "label": "MÔ HÌNH\n03/2024",
+     "v": 15,
+     "text": "15",
+     "c": "ref",
+     "at": [
+      2,
+      "mười"
+     ]
+    },
+    {
+     "label": "MÔ HÌNH\n01/2023",
+     "v": 3,
+     "text": "3",
+     "c": "dim",
+     "at": [
+      3,
+      "chưa"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "BỎ XÁC THỰC BẰNG GIỌNG NÓI",
+   "sub": "LỜI KHUYÊN CHO CÁC NGÂN HÀNG"
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "to": 3,
+   "suffix": " GIÂY",
+   "label": "MỘT MÔ HÌNH NGHIÊN CỨU KHÁC · 01/2023",
+   "until": [
+    5,
+    "ba"
+   ],
+   "sub": {
+    "text": "CHƯA ĐƯA RA CÔNG CHÚNG",
+    "at": [
+     5,
+     "giây."
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Giọng nói",
+   "nodes": [
+    {
+     "text": "mật khẩu lâu đời nhất",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      6,
+      "mật"
+     ],
+     "shape": "none",
+     "w": 700
+    },
+    {
+     "text": "giờ không còn đủ",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "Giờ"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 600
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://openai.com/index/navigating-the-challenges-and-opportunities-of-synthetic-voices/",
+  "https://arxiv.org/abs/2301.02111v1"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "openai": "Ô-pần Ây-ai"
+ },
+ "imgs": {}
+}

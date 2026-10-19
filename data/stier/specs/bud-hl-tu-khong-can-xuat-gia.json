@@ -1,0 +1,217 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "hieu-lam",
+ "hook_type": "nghich-ly",
+ "open_shot": "cong-viec",
+ "voice": "Thiện Minh",
+ "music": "arcadia.mp3",
+ "gap": 0.0,
+ "series": "Hiểu đúng #5",
+ "title": "Hiểu đúng #5: Tu là phải xuất gia?",
+ "kicker": "HIỂU ĐÚNG #5",
+ "sub": "KINH TĂNG CHI 8.54",
+ "acc": [
+  "tu",
+  "bốn",
+  "sửa"
+ ],
+ "lines": [
+  "Muốn tu theo Phật, không cần cạo đầu.",
+  "Có người tại gia hỏi Đức Phật: tôi còn gia đình, còn công việc, thì sống sao cho tốt?",
+  "Ngài không bảo ông bỏ nhà. Ngài dạy bốn điều cho ngay đời này.",
+  "Siêng năng. Giữ gìn thành quả. Chọn bạn tốt. Và chi tiêu cân bằng.",
+  "Tu, là sửa mình ngay giữa đời thường.",
+  "Bốn điều đó, bạn đang làm tốt điều nào? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "TU KHÔNG CẦN CẠO ĐẦU?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "hiểu đúng #5",
+     "at": [
+      0,
+      "cạo"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8719392"
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Người tại gia hỏi",
+   "nodes": [
+    {
+     "text": "GIA ĐÌNH",
+     "x": 0.27,
+     "y": 0.3,
+     "at": [
+      1,
+      "gia"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "CÔNG VIỆC",
+     "x": 0.73,
+     "y": 0.3,
+     "at": [
+      1,
+      "công"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "SỐNG SAO CHO TỐT?",
+     "x": 0.5,
+     "y": 0.72,
+     "at": [
+      1,
+      "sống"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 2,
+     "at": [
+      1,
+      "sống"
+     ]
+    },
+    {
+     "from": 1,
+     "to": 2,
+     "at": [
+      1,
+      "sống"
+     ]
+    }
+   ],
+   "note": "KINH TĂNG CHI 8.54"
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 4,
+   "suffix": " ĐIỀU",
+   "label": "CHO NGAY ĐỜI NÀY",
+   "until": [
+    2,
+    "bốn"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "4 ĐIỀU · ĐỜI NÀY",
+   "rows": [
+    {
+     "k": "1",
+     "v": "SIÊNG NĂNG",
+     "at": [
+      3,
+      "Siêng"
+     ]
+    },
+    {
+     "k": "2",
+     "v": "GIỮ GÌN THÀNH QUẢ",
+     "at": [
+      3,
+      "Giữ"
+     ]
+    },
+    {
+     "k": "3",
+     "v": "BẠN TỐT",
+     "at": [
+      3,
+      "Chọn"
+     ]
+    },
+    {
+     "k": "4",
+     "v": "CHI TIÊU CÂN BẰNG",
+     "at": [
+      3,
+      "chi"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "SỬA MÌNH",
+     "at": [
+      4,
+      "sửa"
+     ],
+     "acc": true
+    },
+    {
+     "text": "giữa đời thường",
+     "at": [
+      4,
+      "giữa"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:5842488"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "BẠN LÀM TỐT ĐIỀU NÀO?",
+     "at": [
+      5,
+      "bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận nhé",
+     "at": [
+      5,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:3198214"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/an8.54/en/sujato"
+ ],
+ "description": "Hiểu đúng #5: Tu là phải xuất gia?\n\nNguồn: https://suttacentral.net/an8.54/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

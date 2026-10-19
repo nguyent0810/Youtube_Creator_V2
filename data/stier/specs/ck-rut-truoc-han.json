@@ -1,0 +1,201 @@
+{
+ "theme": "ck",
+ "title": "Rút tiết kiệm trước hạn: tiền lãi 9 tháng từ ~3,9 triệu còn chưa tới 750 nghìn (ví dụ 100 triệu)",
+ "description": "VÍ DỤ MINH HOẠ: gửi 100 triệu đồng, kỳ hạn 12 tháng, lãi 5,2%/năm → đủ hạn nhận khoảng 5,2 triệu tiền lãi; lãi dồn tích sau 9 tháng khoảng 3,9 triệu (5,2% × 9/12). Rút trước hạn thường chỉ được hưởng lãi suất không kỳ hạn (thường dưới 1%/năm) cho thời gian đã gửi → dưới 750 nghìn đồng (100 triệu × 1% × 9/12). Mức cụ thể tuỳ từng tổ chức nhận tiền gửi và từng sản phẩm; xem biểu lãi suất và điều khoản rút trước hạn trước khi gửi.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.",
+ "tags": [
+  "rút tiết kiệm trước hạn",
+  "lãi không kỳ hạn",
+  "gửi tiết kiệm",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "kicker": "1 CON SỐ",
+ "sub": "RÚT TRƯỚC HẠN",
+ "acc": [
+  "mất",
+  "lãi",
+  "dưới",
+  "chưa",
+  "hỏi"
+ ],
+ "lines": [
+  "Rút tiết kiệm trước hạn, gần như mất hết tiền lãi.",
+  "Ví dụ nhé. Bạn gửi một trăm triệu, kỳ hạn mười hai tháng, lãi năm phẩy hai phần trăm.",
+  "Để đủ một năm, bạn nhận khoảng năm triệu hai tiền lãi.",
+  "Nhưng rút ở tháng thứ chín, thường chỉ được tính lãi không kỳ hạn, dưới một phần trăm một năm.",
+  "Chín tháng ấy, tiền lãi còn chưa tới bảy trăm năm mươi nghìn đồng.",
+  "Thay vì khoảng ba triệu chín đã dồn được.",
+  "Con số nên hỏi trước khi gửi, là lãi suất rút trước hạn."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "RÚT TRƯỚC HẠN",
+     "at": 0.0
+    },
+    {
+     "text": "GẦN NHƯ MẤT HẾT LÃI",
+     "at": [
+      0,
+      "gần"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7710775",
+   "ms": 3,
+   "veil": 0.58
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "VÍ DỤ MINH HOẠ",
+   "cards": [
+    {
+     "k": "GỬI",
+     "v": "100 TRIỆU",
+     "at": [
+      1,
+      "một"
+     ]
+    },
+    {
+     "k": "KỲ HẠN",
+     "v": "12 THÁNG",
+     "at": [
+      1,
+      "kỳ"
+     ]
+    },
+    {
+     "k": "LÃI SUẤT",
+     "v": "5,2%/NĂM",
+     "at": [
+      1,
+      "lãi"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 5200000,
+   "suffix": " Đ",
+   "label": "TIỀN LÃI NẾU ĐỂ ĐỦ NĂM",
+   "until": [
+    2,
+    "hai"
+   ],
+   "sub": {
+    "text": "VÍ DỤ · 100 TRIỆU × 5,2%",
+    "at": [
+     2,
+     "nhận"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "RÚT Ở THÁNG THỨ 9",
+     "at": 3
+    },
+    {
+     "text": "LÃI KHÔNG KỲ HẠN",
+     "at": [
+      3,
+      "lãi"
+     ],
+     "acc": true
+    },
+    {
+     "text": "thường dưới 1%/năm",
+     "at": [
+      3,
+      "dưới"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8369982",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 3
+  },
+  {
+   "type": "chart",
+   "at": 4,
+   "kind": "bars",
+   "title": "TIỀN LÃI SAU 9 THÁNG",
+   "unit": "TRIỆU ĐỒNG · VÍ DỤ GỬI 100 TRIỆU",
+   "bars": [
+    {
+     "label": "RÚT\nTRƯỚC HẠN",
+     "v": 0.75,
+     "text": "< 0,75",
+     "c": "down",
+     "at": [
+      4,
+      "chưa"
+     ]
+    },
+    {
+     "label": "LÃI\nĐÃ DỒN",
+     "v": 3.9,
+     "text": "~3,9",
+     "c": "ref",
+     "at": [
+      5,
+      "ba"
+     ]
+    }
+   ],
+   "note": "VÍ DỤ MINH HOẠ · 5,2% × 9/12 SO VỚI < 1% × 9/12"
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Hỏi trước khi gửi",
+   "nodes": [
+    {
+     "text": "lãi suất rút trước hạn?",
+     "x": 0.5,
+     "y": 0.5,
+     "at": [
+      6,
+      "lãi"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 820
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://baochinhphu.vn/quy-dinh-moi-ve-lai-suat-rut-truoc-han-tien-gui-10222062114522068.htm",
+  "https://www.div.gov.vn/5-dieu-can-biet-khi-gui-tiet-kiem"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

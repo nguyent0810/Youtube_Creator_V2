@@ -1,0 +1,320 @@
+{
+ "title": "Lời giải cho Lan và Minh",
+ "lines": [
+  {
+   "t": "Giờ thì quay lại câu đố.",
+   "p": 0.8
+  },
+  {
+   "t": "Lan nộp mười năm rồi dừng. Minh nộp hai mươi năm, số tiền gấp đôi.",
+   "p": 1.0
+  },
+  "Năm năm mươi lăm tuổi, Minh có khoảng một tỷ ba trăm tám mươi sáu triệu.",
+  "Còn Lan?",
+  {
+   "t": "Khoảng một tỷ sáu trăm hai mươi bảy triệu.",
+   "p": 1.0
+  },
+  "Người nộp ít hơn một nửa, lại có nhiều hơn hai trăm bốn mươi triệu.",
+  {
+   "t": "Sao lại thế được?",
+   "ask": 1
+  },
+  "Vì khi Lan dừng nộp ở tuổi ba mươi lăm, cô đã có sẵn gần năm trăm triệu.",
+  "Và số tiền ấy có thêm hai mươi năm để lăn.",
+  {
+   "t": "Hai mươi năm ở mức sáu phần trăm, là hơn ba lần gấp.",
+   "p": 1.0
+  },
+  "Còn Minh, những đồng tiền anh nộp ở năm cuối, mới chỉ kịp lăn có vài tháng.",
+  {
+   "t": "Muốn đuổi kịp Lan, mỗi tháng Minh phải nộp khoảng ba triệu rưỡi, suốt hai mươi năm.",
+   "p": 1.0
+  },
+  "Trong phép tính này, thứ quý nhất không phải số tiền.",
+  "Mà là mười năm đi trước.",
+  "Nhưng trước khi bạn vội kết luận, hãy nghe nốt phần còn lại. Vì có hai thứ mà phép tính đẹp đẽ này chưa nhắc tới."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "LỜI GIẢI CHO\nLAN VÀ MINH",
+   "sub": "NỘP ÍT HƠN MỘT NỬA",
+   "vid": "7010559",
+   "ms": 6,
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Giờ"
+   ]
+  },
+  {
+   "type": "race",
+   "at": 2,
+   "abs": true,
+   "unit": "TRIỆU",
+   "xlab": "NĂM ",
+   "xstep": 5,
+   "dates": [
+    "nam__00",
+    "nam__01",
+    "nam__02",
+    "nam__03",
+    "nam__04",
+    "nam__05",
+    "nam__06",
+    "nam__07",
+    "nam__08",
+    "nam__09",
+    "nam__10",
+    "nam__11",
+    "nam__12",
+    "nam__13",
+    "nam__14",
+    "nam__15",
+    "nam__16",
+    "nam__17",
+    "nam__18",
+    "nam__19",
+    "nam__20",
+    "nam__21",
+    "nam__22",
+    "nam__23",
+    "nam__24",
+    "nam__25",
+    "nam__26",
+    "nam__27",
+    "nam__28",
+    "nam__29",
+    "nam__30"
+   ],
+   "title": "LAN VÀ MINH · TỪ 25 ĐẾN 55 TUỔI",
+   "range": "NĂM 0 = 25 TUỔI · TRIỆU ĐỒNG",
+   "drawAt": [
+    2,
+    null,
+    0,
+    0.1
+   ],
+   "until": [
+    4,
+    "Khoảng"
+   ],
+   "series": [
+    {
+     "label": "LAN · NỘP 10 NĂM RỒI ĐỂ YÊN",
+     "color": "#fbbf24",
+     "vals": [
+      0.0,
+      37.0,
+      76.3,
+      118.0,
+      162.3,
+      209.3,
+      259.2,
+      312.2,
+      368.5,
+      428.2,
+      491.6,
+      522.0,
+      554.2,
+      588.3,
+      624.6,
+      663.1,
+      704.0,
+      747.5,
+      793.6,
+      842.5,
+      894.5,
+      949.7,
+      1008.2,
+      1070.4,
+      1136.4,
+      1206.5,
+      1280.9,
+      1359.9,
+      1443.8,
+      1532.9,
+      1627.4
+     ]
+    },
+    {
+     "label": "MINH · NỘP 20 NĂM",
+     "color": "#38bdf8",
+     "vals": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      37.0,
+      76.3,
+      118.0,
+      162.3,
+      209.3,
+      259.2,
+      312.2,
+      368.5,
+      428.2,
+      491.6,
+      559.0,
+      630.5,
+      706.3,
+      786.9,
+      872.5,
+      963.3,
+      1059.7,
+      1162.1,
+      1270.7,
+      1386.1
+     ]
+    }
+   ],
+   "source": "VÍ DỤ GIẢ ĐỊNH · LÃI 6%/NĂM KHÔNG ĐỔI, KHÔNG RÚT · KHÔNG PHẢI DỰ BÁO"
+  },
+  {
+   "type": "bars",
+   "at": 5,
+   "title": "NĂM 55 TUỔI (TRIỆU ĐỒNG)",
+   "items": [
+    {
+     "k": "MINH · ĐÃ NỘP 720",
+     "v": 1386,
+     "lbl": "≈ 1.386",
+     "at": [
+      5,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "k": "LAN · ĐÃ NỘP 360",
+     "v": 1627,
+     "lbl": "≈ 1.627",
+     "at": [
+      5,
+      "lại"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "NỘP ÍT HƠN MỘT NỬA",
+    "v": "CÓ NHIỀU HƠN ≈ 240 TRIỆU · VÍ DỤ GIẢ ĐỊNH · LÃI 6%/NĂM KHÔNG ĐỔI, KHÔNG RÚT · KHÔNG PHẢI DỰ BÁO",
+    "at": [
+     5,
+     "hai"
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "at": 6,
+   "text": "Sao lại thế được?"
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "LAN Ở TUỔI 35",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · LÃI 6%/NĂM KHÔNG ĐỔI, KHÔNG RÚT · KHÔNG PHẢI DỰ BÁO",
+   "rows": [
+    {
+     "k": "ĐÃ CÓ SẴN",
+     "v": "GẦN 500 TRIỆU",
+     "at": [
+      7,
+      "gần"
+     ]
+    },
+    {
+     "k": "CÒN",
+     "v": "20 NĂM ĐỂ LĂN",
+     "at": 8
+    }
+   ],
+   "total": {
+    "k": "20 NĂM · 6%",
+    "v": "GẤP HƠN 3 LẦN",
+    "at": 9
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "TIỀN MINH NỘP NĂM CUỐI",
+     "at": 10,
+     "sm": true
+    },
+    {
+     "text": "MỚI LĂN VÀI THÁNG",
+     "at": [
+      10,
+      "mới"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 11,
+   "from": 3.0,
+   "to": 3.5,
+   "suffix": " TRIỆU",
+   "until": [
+    11,
+    "rưỡi,"
+   ],
+   "label": "MỖI THÁNG · MINH PHẢI NỘP ĐỂ ĐUỔI KỊP LAN",
+   "sub": {
+    "text": "SUỐT 20 NĂM · VÍ DỤ GIẢ ĐỊNH · LÃI 6%/NĂM KHÔNG ĐỔI, KHÔNG RÚT · KHÔNG PHẢI DỰ BÁO",
+    "at": 11
+   }
+  },
+  {
+   "type": "slam",
+   "at": 12,
+   "text": "10 NĂM ĐI TRƯỚC",
+   "sub": "THỨ QUÝ NHẤT KHÔNG PHẢI SỐ TIỀN",
+   "subAt": 12
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "KHOAN KẾT LUẬN",
+     "at": 14,
+     "acc": true
+    },
+    {
+     "text": "còn hai thứ phép tính này chưa nhắc tới",
+     "at": [
+      14,
+      "Vì"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "LỜI GIẢI CHO LAN VÀ MINH"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

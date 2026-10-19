@@ -1,0 +1,159 @@
+{
+ "title": "Khi quả cầu tuyết lăn ngược",
+ "lines": [
+  {
+   "t": "Thứ hai mà phép tính kia chưa nhắc, là lãi kép không đứng về phía ai cả.",
+   "p": 0.8
+  },
+  "Nó chỉ là một phép nhân.",
+  {
+   "t": "Bạn gửi tiền, nó nhân cho bạn. Bạn nợ tiền, nó nhân cho người cho vay.",
+   "p": 1.0
+  },
+  "Thử một ví dụ giả định.",
+  "Một khoản nợ ba mươi triệu, lãi hai mươi lăm phần trăm một năm, và bạn không trả đồng nào.",
+  "Sau một năm, nó thành hơn ba mươi tám triệu.",
+  "Sau ba năm, sáu mươi ba triệu.",
+  {
+   "t": "Sau năm năm, hơn một trăm triệu. Gấp hơn ba lần.",
+   "p": 1.0
+  },
+  {
+   "t": "Cùng một quả cầu tuyết. Chỉ là lần này, nó lăn về phía bạn.",
+   "p": 1.0
+  },
+  "Nên trước khi nghĩ tới chuyện để lãi kép làm việc cho mình, có một câu đáng hỏi trước.",
+  "Mình có khoản nợ nào đang chịu lãi cao hơn mức mình có thể kiếm được không?",
+  "Vì trả bớt một khoản nợ lãi hai mươi lăm phần trăm, cũng chính là dừng một quả cầu đang lăn ngược."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "CHƯƠNG NĂM",
+   "title": "KHI QUẢ CẦU TUYẾT\nLĂN NGƯỢC",
+   "sub": "LÃI KÉP KHÔNG ĐỨNG VỀ PHÍA AI",
+   "vid": "6963972",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Thứ"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "CHỈ LÀ MỘT PHÉP NHÂN",
+   "rows": [
+    {
+     "k": "BẠN GỬI TIỀN",
+     "v": "NÓ NHÂN CHO BẠN",
+     "at": 2
+    },
+    {
+     "k": "BẠN NỢ TIỀN",
+     "v": "NÓ NHÂN CHO NGƯỜI CHO VAY",
+     "at": [
+      2,
+      "Bạn",
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 3,
+   "title": "NỢ 30 TRIỆU · LÃI 25%/NĂM · KHÔNG TRẢ (TRIỆU ĐỒNG)",
+   "items": [
+    {
+     "k": "BAN ĐẦU",
+     "v": 30,
+     "lbl": "30",
+     "at": 4
+    },
+    {
+     "k": "SAU 1 NĂM",
+     "v": 38.4,
+     "lbl": "> 38",
+     "at": 5
+    },
+    {
+     "k": "SAU 3 NĂM",
+     "v": 63,
+     "lbl": "63",
+     "at": 6
+    },
+    {
+     "k": "SAU 5 NĂM",
+     "v": 103.4,
+     "lbl": "> 100",
+     "at": 7,
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "GẤP HƠN 3 LẦN",
+    "v": "VÍ DỤ GIẢ ĐỊNH · KHÔNG GÁN CHO LOẠI VAY NÀO",
+    "at": [
+     7,
+     "Gấp"
+    ]
+   }
+  },
+  {
+   "type": "broll",
+   "at": 8,
+   "vid": "6415314",
+   "ms": 10,
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "CÙNG MỘT QUẢ CẦU TUYẾT",
+     "at": 8
+    },
+    {
+     "text": "LẦN NÀY LĂN VỀ PHÍA BẠN",
+     "at": [
+      8,
+      "lần"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 9,
+   "text": "Mình có khoản nợ nào\nlãi cao hơn mức mình kiếm được?",
+   "showAt": 10
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "TRẢ BỚT NỢ LÃI CAO",
+     "at": 11
+    },
+    {
+     "text": "= DỪNG MỘT QUẢ CẦU LĂN NGƯỢC",
+     "at": [
+      11,
+      "cũng"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "KHI QUẢ CẦU TUYẾT LĂN NGƯỢC"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

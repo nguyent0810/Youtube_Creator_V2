@@ -1,0 +1,263 @@
+{
+  "theme": "mim",
+  "title": "Năm 1952, \"máy tính\" là chức danh của những người phụ nữ này",
+  "description": "Năm 1952 ở NACA, cơ quan nghiên cứu hàng không của Mỹ, tiền thân của NASA, \"computer\" — máy tính — là chức danh của những người phụ nữ ngồi trước máy tính cơ bấm phím, tính số liệu từ máy bay thử nghiệm. Chỉ trong một thế hệ, nghề ấy biến mất, và cái tên được trao cho chính cỗ máy đã làm thay họ. Một bài toán đạn đạo mất 12 giờ tính tay, ENIAC (công bố tháng 2/1946) giải trong 30 giây; sáu người trong số những phụ nữ được thuê làm \"máy tính\" ở Đại học Pennsylvania trở thành những lập trình viên đầu tiên của nó. Còn những người khác đã đi đâu? Toàn bộ câu chuyện có trong video dài \"AI Có Cướp Việc Của Bạn? 200 Năm Trước Người Ta Cũng Sợ Y Như Vậy\" trên kênh Mind in the Machine.",
+  "tags": [
+    "máy tính",
+    "lịch sử máy tính",
+    "nasa",
+    "naca",
+    "eniac",
+    "hidden figures",
+    "ai cướp việc",
+    "trí tuệ nhân tạo",
+    "việc làm",
+    "lịch sử công nghệ"
+  ],
+  "kicker": "AI & VIỆC LÀM",
+  "sub": "1952 · NACA",
+  "acc": [
+    "computer",
+    "biến",
+    "mất",
+    "eniac",
+    "nghề"
+  ],
+  "say": {
+    "naca": "Na-ca",
+    "nasa": "Na-xa",
+    "=computer": "com-piu-tơ",
+    "eniac": "Ê-ni-ác",
+    "pennsylvania": "Pen-xin-vê-ni-a",
+    "=AI": "ây ai"
+  },
+  "lines": [
+    "Năm 1952, chữ máy tính vẫn còn là tên một nghề.",
+    "Đó là chức danh của những người phụ nữ này.",
+    "Họ làm cho NACA, tiền thân của NASA.",
+    "Mỗi người một máy tính cơ bấm phím, tính số liệu máy bay thử nghiệm.",
+    "Trên giấy tờ, chức danh của họ là: computer.",
+    "Chỉ trong một thế hệ, nghề ấy biến mất.",
+    "Cái tên được trao cho chính cỗ máy đã làm thay họ.",
+    "Một bài toán đạn đạo mất mười hai giờ tính tay, cỗ máy ENIAC giải trong ba mươi giây.",
+    "Sáu phụ nữ làm máy tính ở Đại học Pennsylvania trở thành những lập trình viên đầu tiên của nó.",
+    "Còn những người khác đã đi đâu?",
+    "Xem video AI có cướp việc của bạn, trên kênh."
+  ],
+  "imgs": {
+    "x4": "File:Langley Women Computer with X-4 with Friden machine (LRC-1952-B701 P-74769).tiff",
+    "langley51": "File:NACA Laboratory Computers Help Compile Handbook (LRC-1951-B701 P-69568).tiff",
+    "eniac2": "File:Two women operating ENIAC (full resolution).jpg"
+  },
+  "scenes": [
+    {
+      "type": "kinetic",
+      "bg": "x4",
+      "items": [
+        {
+          "text": "1952",
+          "at": 0.0,
+          "acc": true,
+          "size": 230
+        },
+        {
+          "text": "MÁY TÍNH",
+          "at": [
+            0,
+            "máy"
+          ]
+        },
+        {
+          "text": "là tên một nghề",
+          "at": [
+            0,
+            "tên"
+          ],
+          "sm": true
+        }
+      ]
+    },
+    {
+      "type": "photo",
+      "at": 1,
+      "img": "x4",
+      "mode": "full",
+      "focus": [
+        0.5,
+        0.45
+      ],
+      "label": {
+        "text": "ẢNH NACA · 1952",
+        "at": [
+          1,
+          "phụ"
+        ]
+      }
+    },
+    {
+      "type": "kinetic",
+      "at": 2,
+      "items": [
+        {
+          "text": "NACA",
+          "at": [
+            2,
+            "NACA"
+          ],
+          "acc": true,
+          "size": 200
+        },
+        {
+          "text": "tiền thân của NASA",
+          "at": [
+            2,
+            "tiền"
+          ],
+          "sm": true
+        }
+      ]
+    },
+    {
+      "type": "photo",
+      "at": 3,
+      "img": "langley51",
+      "mode": "print",
+      "tone": "color",
+      "label": {
+        "text": "PHÒNG TÍNH TOÁN NACA · 1951",
+        "at": [
+          3,
+          "bấm"
+        ]
+      }
+    },
+    {
+      "type": "kinetic",
+      "at": 4,
+      "items": [
+        {
+          "text": "CHỨC DANH",
+          "at": [
+            4,
+            "chức"
+          ],
+          "sm": true
+        },
+        {
+          "text": "COMPUTER",
+          "at": [
+            4,
+            "computer"
+          ],
+          "acc": true,
+          "fx": "type"
+        }
+      ]
+    },
+    {
+      "type": "slam",
+      "at": 5,
+      "text": "NGHỀ BIẾN MẤT",
+      "sub": "CHỈ TRONG MỘT THẾ HỆ"
+    },
+    {
+      "type": "kinetic",
+      "at": 6,
+      "items": [
+        {
+          "text": "CÁI TÊN",
+          "at": [
+            6,
+            "tên"
+          ],
+          "sm": true
+        },
+        {
+          "text": "TRAO CHO CỖ MÁY",
+          "at": [
+            6,
+            "trao"
+          ],
+          "acc": true
+        }
+      ]
+    },
+    {
+      "type": "ledger",
+      "at": 7,
+      "title": "MỘT BÀI TOÁN ĐẠN ĐẠO",
+      "rows": [
+        {
+          "k": "TÍNH TAY",
+          "v": "12 GIỜ",
+          "at": [
+            7,
+            "tay"
+          ]
+        },
+        {
+          "k": "ENIAC · 1946",
+          "v": "30 GIÂY",
+          "at": [
+            7,
+            "ba"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "photo",
+      "at": 8,
+      "img": "eniac2",
+      "mode": "print",
+      "tone": "bw",
+      "label": {
+        "text": "ENIAC · ẢNH LƯU TRỮ QUÂN ĐỘI MỸ",
+        "at": [
+          8,
+          "lập"
+        ]
+      }
+    },
+    {
+      "type": "question",
+      "at": 9,
+      "text": "Những người khác đã đi đâu?"
+    },
+    {
+      "type": "kinetic",
+      "at": 10,
+      "items": [
+        {
+          "text": "VIDEO DÀI TRÊN KÊNH",
+          "sm": true,
+          "size": 52,
+          "at": [
+            10,
+            "video"
+          ]
+        },
+        {
+          "text": "AI CÓ CƯỚP VIỆC",
+          "at": [
+            10,
+            "cướp"
+          ]
+        },
+        {
+          "text": "CỦA BẠN?",
+          "acc": true,
+          "at": [
+            10,
+            "bạn"
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "https://www.nasa.gov/centers-and-facilities/langley/she-was-a-computer-when-computers-wore-skirts/",
+    "https://www.engineering.upenn.edu/about/history-heritage/eniac/",
+    "https://www.army.mil/article/98817/"
+  ]
+}

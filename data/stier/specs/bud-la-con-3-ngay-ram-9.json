@@ -1,0 +1,255 @@
+{
+ "theme": "bud",
+ "format": "lich-am",
+ "hook_type": "dem-nguoc",
+ "open_shot": "nen-huong",
+ "voice": "Ngọc Linh",
+ "music": "frost_waltz.mp3",
+ "gap": 0.05,
+ "title": "Còn 3 ngày tới Rằm tháng 9 âm lịch (24/10/2026)",
+ "kicker": "LỊCH ÂM",
+ "sub": "RẰM THÁNG 9 · BÍNH NGỌ",
+ "acc": [
+  "rằm",
+  "ba",
+  "giới"
+ ],
+ "lines": [
+  "Còn ba ngày nữa là Rằm tháng chín âm lịch.",
+  "Thứ Bảy, hai mươi bốn tháng mười.",
+  "Ngày rằm, theo truyền thống, là ngày giữ giới, sống chậm, làm việc lành.",
+  "Kinh dạy: giữ ngày trai giới tám chi phần, đem lại quả lớn.",
+  "Ba ngày, ba việc nhỏ.",
+  "Một bữa chay.",
+  "Một lời xin lỗi.",
+  "Một cuộc gọi về nhà.",
+  "Không cần mâm cao cỗ đầy.",
+  "Lưu lịch này, và theo dõi để được nhắc ngày rằm, mùng một."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "clip": "pexels:7685287",
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "CÒN 3 NGÀY",
+     "at": 0.0,
+     "acc": true,
+     "size": 125
+    },
+    {
+     "text": "RẰM THÁNG 9 ÂM LỊCH",
+     "at": [
+      0,
+      "Rằm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "24.10.2026",
+   "day": "THỨ BẢY",
+   "sub": {
+    "text": "RẰM THÁNG 9 ÂM · TRĂNG TRÒN",
+    "at": [
+     1,
+     "hai"
+    ]
+   },
+   "clip": "pexels:31160537",
+   "veil": 0.6
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "clip": "pexels:6205680",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "GIỮ GIỚI",
+     "at": [
+      2,
+      "giữ"
+     ]
+    },
+    {
+     "text": "SỐNG CHẬM",
+     "at": [
+      2,
+      "sống"
+     ],
+     "acc": true
+    },
+    {
+     "text": "làm việc lành",
+     "at": [
+      2,
+      "làm"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 3,
+   "text": "Giữ ngày trai giới tám chi phần, đem lại quả lớn.",
+   "by": "TĂNG CHI 8.41 · DIỄN Ý",
+   "clip": "pexels:5418509",
+   "veil": 0.6
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "clip": "pexels:19798255",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "3 NGÀY",
+     "at": [
+      4,
+      "Ba"
+     ],
+     "acc": true,
+     "size": 170
+    },
+    {
+     "text": "3 VIỆC NHỎ",
+     "at": [
+      4,
+      "ba"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "clip": "pexels:37336783",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "1",
+     "at": [
+      5,
+      "Một"
+     ],
+     "acc": true,
+     "size": 220
+    },
+    {
+     "text": "MỘT BỮA CHAY",
+     "at": [
+      5,
+      "bữa"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "clip": "pexels:6973128",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "2",
+     "at": [
+      6,
+      "Một"
+     ],
+     "acc": true,
+     "size": 220
+    },
+    {
+     "text": "MỘT LỜI XIN LỖI",
+     "at": [
+      6,
+      "lời"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "clip": "pexels:5974678",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "3",
+     "at": [
+      7,
+      "Một"
+     ],
+     "acc": true,
+     "size": 220
+    },
+    {
+     "text": "MỘT CUỘC GỌI VỀ NHÀ",
+     "at": [
+      7,
+      "cuộc"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "text": "KHÔNG CẦN\nMÂM CAO CỖ ĐẦY",
+   "clip": "pexels:39181588",
+   "veil": 0.5,
+   "fx": "zoom"
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "clip": "pexels:18202294",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "LƯU LỊCH",
+     "at": [
+      9,
+      "Lưu"
+     ],
+     "acc": true,
+     "size": 150
+    },
+    {
+     "text": "THEO DÕI",
+     "at": [
+      9,
+      "theo"
+     ],
+     "acc": true
+    },
+    {
+     "text": "để được nhắc rằm, mùng một",
+     "at": [
+      9,
+      "nhắc"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "description": "Còn 3 ngày tới Rằm tháng 9 âm lịch (thứ Bảy 24/10/2026). Theo truyền thống, ngày rằm là ngày trai giới (Uposatha): giữ giới, sống chậm, làm việc lành. Kinh Tăng Chi 8.41 (diễn ý): giữ ngày trai giới tám chi phần đem lại quả lớn. Gợi ý 3 việc nhỏ: một bữa chay, một lời xin lỗi, một cuộc gọi về nhà.\n\nNguồn: AN 8.41, bản dịch Bhikkhu Sujato (CC0): https://suttacentral.net/an8.41/en/sujato · https://en.wikipedia.org/wiki/Uposatha\nKhông xem ngày, không bói toán.",
+ "tags": [
+  "rằm tháng 9",
+  "âm lịch",
+  "ngày trai giới",
+  "lời phật dạy",
+  "phật giáo"
+ ],
+ "sources": [
+  "https://suttacentral.net/an8.41/en/sujato",
+  "https://en.wikipedia.org/wiki/Uposatha"
+ ]
+}

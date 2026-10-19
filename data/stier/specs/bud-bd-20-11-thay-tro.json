@@ -1,0 +1,141 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "ba-dieu",
+ "hook_type": "con-so",
+ "open_shot": "lop-hoc",
+ "voice": "Quang Sơn",
+ "music": "at_rest.mp3",
+ "gap": 0.1,
+ "title": "20/11: Đức Phật dạy gì về thầy và trò?",
+ "kicker": "NGÀY NHÀ GIÁO 20/11",
+ "sub": "KINH TRƯỜNG BỘ 31",
+ "acc": [
+  "thầy",
+  "trò"
+ ],
+ "lines": [
+  "Hôm nay hai mươi tháng mười một. Hai nghìn năm trăm năm trước, Đức Phật đã dạy về thầy và trò.",
+  "Kinh Trường Bộ ba mươi mốt, diễn ý: trò kính thầy, đứng dậy chào, chăm chỉ và ham học.",
+  "Thầy thương trò bằng cách dạy kỹ, dạy hết nghề, và giới thiệu trò với bạn bè.",
+  "Không ai chỉ nhận. Cả hai cùng giữ nhau.",
+  "Bạn biết ơn người thầy nào? Tag người ấy nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "20/11: PHẬT DẠY GÌ?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "về thầy và trò",
+     "at": [
+      0,
+      "thầy"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:5897650"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 3,
+   "suffix": " VIỆC",
+   "label": "TRÒ KÍNH THẦY",
+   "until": [
+    1,
+    "học."
+   ]
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Thầy thương trò",
+   "nodes": [
+    {
+     "text": "DẠY KỸ",
+     "x": 0.5,
+     "y": 0.2,
+     "at": [
+      2,
+      "kỹ,"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "DẠY HẾT NGHỀ",
+     "x": 0.5,
+     "y": 0.47,
+     "at": [
+      2,
+      "hết"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "GIỚI THIỆU BẠN BÈ",
+     "x": 0.5,
+     "y": 0.74,
+     "at": [
+      2,
+      "giới"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "DN 31 · DIỄN Ý"
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "CẢ HAI\nGIỮ NHAU",
+   "fx": "zoom",
+   "sub": "KHÔNG AI CHỈ NHẬN"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "TAG THẦY CỦA BẠN",
+     "at": [
+      4,
+      "Tag"
+     ],
+     "acc": true
+    },
+    {
+     "text": "người bạn biết ơn",
+     "at": [
+      4,
+      "ấy"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:5904548"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dn31/en/sujato"
+ ],
+ "description": "20/11: Đức Phật dạy gì về thầy và trò?\n\nNguồn: https://suttacentral.net/dn31/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

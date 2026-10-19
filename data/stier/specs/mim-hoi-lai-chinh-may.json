@@ -1,0 +1,157 @@
+{
+ "theme": "mim",
+ "title": "Luật sư hỏi ChatGPT “vụ án này có thật không?”: câu hỏi đúng, nhưng hỏi nhầm người",
+ "description": "Trong vụ Mata v. Avianca (2023), luật sư nộp kèm ảnh chụp màn hình cho thấy anh từng hỏi lại ChatGPT: vụ Varghese có thật không? Nó trả lời có; hỏi nguồn ở đâu, nó nói có thể tìm trên các cơ sở dữ liệu pháp lý; hỏi các vụ khác có giả không, nó nói đều có thật. Sáu vụ không tồn tại. Bài học: câu “có thật không” phải hỏi một nguồn khác, không phải cỗ máy vừa trả lời bạn (hồ sơ toà). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/H9nlRjxfmPw (công khai từ 20:00 ngày 02/11).",
+ "tags": [
+  "chatgpt bịa",
+  "kiểm chứng thông tin",
+  "ai bịa",
+  "ảo giác ai",
+  "chatgpt",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "NEW YORK · 2023",
+ "acc": [
+  "thật",
+  "có",
+  "nguồn",
+  "khác",
+  "nhầm"
+ ],
+ "kicker": "AI QUANH TA",
+ "lines": [
+  "Có thật không? Đó là câu hỏi đúng. Chỉ là anh hỏi nhầm người.",
+  "Năm 2023, một luật sư ở New York hỏi lại ChatGPT về một án lệ nó vừa đưa ra.",
+  "Vụ này có thật không? Nó trả lời: có, đó là một vụ án có thật.",
+  "Anh hỏi tiếp: nguồn ở đâu? Nó nói có thể tìm trên các cơ sở dữ liệu pháp lý.",
+  "Anh hỏi: những vụ khác có phải giả không? Nó nói: không, đều có thật.",
+  "Sáu vụ trong số ấy không hề tồn tại.",
+  "Câu có thật không, phải đem hỏi một nguồn khác. Không phải cỗ máy vừa trả lời bạn."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "“CÓ THẬT KHÔNG?”",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "câu hỏi đúng · hỏi nhầm người",
+     "at": [
+      0,
+      "Đó"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7362704",
+   "veil": 0.58
+  },
+  {
+   "type": "timeline",
+   "at": 2,
+   "items": [
+    {
+     "year": "HỎI 1",
+     "text": "vụ này có thật không? → “có”",
+     "at": [
+      2,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "year": "HỎI 2",
+     "text": "nguồn ở đâu? → “cơ sở dữ liệu pháp lý”",
+     "at": [
+      3,
+      null,
+      0,
+      0.05
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "“KHÔNG, ĐỀU CÓ THẬT”",
+   "sub": "LẦN HỎI THỨ BA: VỤ KHÁC CÓ GIẢ KHÔNG?"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "6 VỤ KHÔNG HỀ TỒN TẠI",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "hồ sơ toà · Mata v. Avianca",
+     "at": [
+      5,
+      "không"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8567113",
+   "ms": 2,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 5
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "KIỂM CHỨNG Ở ĐÂU",
+   "cards": [
+    {
+     "k": "ĐỪNG HỎI",
+     "v": "CỖ MÁY VỪA TRẢ LỜI",
+     "at": [
+      6,
+      "Không"
+     ]
+    },
+    {
+     "k": "HÃY HỎI",
+     "v": "MỘT NGUỒN KHÁC",
+     "at": [
+      6,
+      "một"
+     ],
+     "c": "acc"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://storage.courtlistener.com/recap/gov.uscourts.nysd.575368/gov.uscourts.nysd.575368.31.0.pdf"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "new": "Niu",
+  "york": "Doóc",
+  "chatgpt": "chát gi pi ti"
+ },
+ "imgs": {}
+}

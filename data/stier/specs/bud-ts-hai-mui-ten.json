@@ -1,0 +1,251 @@
+{
+ "theme": "bud",
+ "format": "truoc-sau",
+ "hook_type": "pov",
+ "open_shot": "ban-tay",
+ "voice": "Thanh Bình",
+ "music": "at_rest.mp3",
+ "gap": 0.1,
+ "title": "Trước/Sau: mũi tên thứ hai (Kinh Tương Ưng 36.6)",
+ "kicker": "TRƯỚC / SAU",
+ "sub": "TƯƠNG ƯNG 36.6",
+ "acc": [
+  "trước",
+  "sau",
+  "mũi",
+  "tên"
+ ],
+ "lines": [
+  "Bạn làm vỡ một cái cốc… và tự mắng mình suốt buổi tối.",
+  "Trước: cốc vỡ, tay rát, thêm một tràng tự trách.",
+  "Sau: cốc vỡ, tay rát. Hết.",
+  "Trước: đau đầu, rồi lo mình bị bệnh nặng.",
+  "Sau: đau đầu, uống nước, nghỉ ngơi.",
+  "Trước: bị sếp chê một câu, cả đêm tua lại trong đầu.",
+  "Sau: nghe, sửa, rồi đi ngủ.",
+  "Kinh Tương Ưng, diễn ý: người không học trúng một mũi tên, rồi trúng thêm mũi thứ hai.",
+  "Người hiểu, chỉ trúng một mũi tên.",
+  "Bạn đang ở trước hay sau? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "clip": "pexels:13335630",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "POV",
+     "at": 0.0,
+     "acc": true,
+     "size": 160
+    },
+    {
+     "text": "CỐC VỠ = CẢ TỐI",
+     "at": 0.3
+    },
+    {
+     "text": "tự mắng mình",
+     "at": [
+      0,
+      "tự"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "clip": "pexels:36298433",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "TRƯỚC",
+     "at": [
+      1,
+      "Trước"
+     ],
+     "sm": true
+    },
+    {
+     "text": "CỐC VỠ + TỰ TRÁCH",
+     "at": [
+      1,
+      "cốc"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "clip": "pexels:7483100",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "SAU",
+     "at": [
+      2,
+      "Sau"
+     ],
+     "acc": true,
+     "size": 170
+    },
+    {
+     "text": "CỐC VỠ. HẾT.",
+     "at": [
+      2,
+      "cốc"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "clip": "pexels:6381270",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "TRƯỚC",
+     "at": [
+      3,
+      "Trước"
+     ],
+     "sm": true
+    },
+    {
+     "text": "ĐAU ĐẦU + LO BỆNH NẶNG",
+     "at": [
+      3,
+      "đau"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "clip": "pexels:36044315",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "SAU",
+     "at": [
+      4,
+      "Sau"
+     ],
+     "acc": true,
+     "size": 170
+    },
+    {
+     "text": "UỐNG NƯỚC · NGHỈ NGƠI",
+     "at": [
+      4,
+      "uống"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "clip": "pexels:8472220",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "TRƯỚC",
+     "at": [
+      5,
+      "Trước"
+     ],
+     "sm": true
+    },
+    {
+     "text": "BỊ CHÊ MỘT CÂU",
+     "at": [
+      5,
+      "bị"
+     ]
+    },
+    {
+     "text": "tua lại cả đêm",
+     "at": [
+      5,
+      "cả"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "SAU",
+   "clip": "pexels:7131825",
+   "veil": 0.6,
+   "fx": "zoom",
+   "sub": "NGHE · SỬA · ĐI NGỦ"
+  },
+  {
+   "type": "quote",
+   "at": 7,
+   "text": "Người không học trúng một mũi tên, rồi trúng thêm mũi thứ hai.",
+   "by": "TƯƠNG ƯNG 36.6 · DIỄN Ý",
+   "clip": "pexels:6603190",
+   "veil": 0.6
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "clip": "pexels:30297111",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "CHỈ MỘT MŨI TÊN",
+     "at": [
+      8,
+      "chỉ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "clip": "pexels:6628249",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "TRƯỚC HAY SAU?",
+     "at": [
+      9,
+      "trước"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận",
+     "at": [
+      9,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "description": "Trước/Sau: mũi tên thứ hai. Kinh Tương Ưng 36.6 (Mũi tên, diễn ý): người chưa học khi gặp cảm thọ khổ thì sầu muộn, than van — như trúng một mũi tên rồi trúng thêm mũi thứ hai; người đã học chỉ cảm nhận một mũi tên.\n\nNguồn: SN 36.6, bản dịch Bhikkhu Sujato (CC0): https://suttacentral.net/sn36.6/en/sujato\nLời kinh là diễn ý; ví dụ là của kênh.",
+ "tags": [
+  "mũi tên thứ hai",
+  "tự trách",
+  "lời phật dạy",
+  "chữa lành",
+  "thay đổi bản thân"
+ ],
+ "sources": [
+  "https://suttacentral.net/sn36.6/en/sujato"
+ ]
+}

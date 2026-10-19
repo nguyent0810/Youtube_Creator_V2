@@ -1,0 +1,68 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>*{margin:0;padding:0;box-sizing:border-box}html,body{width:800px;height:800px;overflow:hidden;background:#060b16}
+#root{position:relative;width:800px;height:800px;overflow:hidden}</style></head><body>
+<!-- Logo "Biểu Đồ Biết Nói" (bản A, 06/10/2026): bong bóng thoại viền vàng chuyển sắc (vàng = giá tham chiếu trên
+     bảng giá VN) chứa biểu đồ nến đi lên + đường MA phát sáng; lưới biểu đồ mờ + cột khối lượng dưới đáy.
+     Vùng an toàn: mọi chi tiết nằm trong vòng tròn r=360 quanh tâm (ảnh hồ sơ YouTube cắt tròn). -->
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="800" data-height="800" data-fps="30">
+<svg width="800" height="800" viewBox="0 0 800 800">
+ <defs>
+  <radialGradient id="bg" cx="50%" cy="40%" r="75%">
+   <stop offset="0" stop-color="#1a2b47"/><stop offset=".55" stop-color="#0c1628"/><stop offset="1" stop-color="#050912"/></radialGradient>
+  <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+   <stop offset="0" stop-color="#fbbf24" stop-opacity=".22"/><stop offset="1" stop-color="#fbbf24" stop-opacity="0"/></radialGradient>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+   <stop offset="0" stop-color="#fff1b8"/><stop offset=".35" stop-color="#fcd34d"/><stop offset=".7" stop-color="#f59e0b"/><stop offset="1" stop-color="#d97706"/></linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0" stop-color="#16263f"/><stop offset="1" stop-color="#0a1322"/></linearGradient>
+  <linearGradient id="up" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6ee7a0"/><stop offset=".45" stop-color="#22c55e"/><stop offset="1" stop-color="#15803d"/></linearGradient>
+  <linearGradient id="dn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fca5a5"/><stop offset=".45" stop-color="#ef4444"/><stop offset="1" stop-color="#b91c1c"/></linearGradient>
+  <linearGradient id="ma" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#e2e8f0" stop-opacity=".85"/><stop offset=".6" stop-color="#ffffff"/><stop offset="1" stop-color="#fde68a"/></linearGradient>
+  <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".16"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="9" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="16"/></filter>
+  <filter id="drop" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000" flood-opacity=".65"/></filter>
+  <clipPath id="inside"><path d="M248 178 H552 Q636 178 636 262 V452 Q636 536 552 536 H372 L250 630 L276 536 H248 Q164 536 164 452 V262 Q164 178 248 178 Z"/></clipPath>
+ </defs>
+
+ <rect width="800" height="800" fill="url(#bg)"/>
+ <g stroke="#7dd3fc" stroke-opacity=".05" stroke-width="2">
+  <path d="M0 160 H800 M0 260 H800 M0 360 H800 M0 460 H800 M0 560 H800 M0 660 H800 M160 0 V800 M260 0 V800 M360 0 V800 M460 0 V800 M560 0 V800 M660 0 V800"/></g>
+ <circle cx="400" cy="380" r="330" fill="url(#halo)"/>
+
+ <!-- bong bóng: bóng đổ + viền phát sáng + kính tối -->
+ <g filter="url(#drop)">
+  <path d="M248 178 H552 Q636 178 636 262 V452 Q636 536 552 536 H372 L250 630 L276 536 H248 Q164 536 164 452 V262 Q164 178 248 178 Z" fill="url(#glass)"/>
+ </g>
+ <g clip-path="url(#inside)">
+  <g stroke="#7dd3fc" stroke-opacity=".10" stroke-width="2"><path d="M164 262 H636 M164 340 H636 M164 418 H636 M260 178 V536 M356 178 V536 M452 178 V536 M548 178 V536"/></g>
+  <g fill="#7dd3fc" fill-opacity=".16">
+   <rect x="232" y="500" width="34" height="36"/><rect x="296" y="486" width="34" height="50"/><rect x="360" y="506" width="34" height="30"/>
+   <rect x="424" y="480" width="34" height="56"/><rect x="488" y="468" width="34" height="68"/></g>
+  <rect x="164" y="178" width="472" height="150" fill="url(#shine)"/>
+ </g>
+ <path d="M248 178 H552 Q636 178 636 262 V452 Q636 536 552 536 H372 L250 630 L276 536 H248 Q164 536 164 452 V262 Q164 178 248 178 Z"
+       fill="none" stroke="#fbbf24" stroke-opacity=".55" stroke-width="30" filter="url(#soft)"/>
+ <path d="M248 178 H552 Q636 178 636 262 V452 Q636 536 552 536 H372 L250 630 L276 536 H248 Q164 536 164 452 V262 Q164 178 248 178 Z"
+       fill="none" stroke="url(#gold)" stroke-width="24" stroke-linejoin="round"/>
+ <path d="M256 192 H470" fill="none" stroke="#fff7d6" stroke-opacity=".5" stroke-width="5" stroke-linecap="round"/>
+
+ <!-- nến: đỏ, xanh, đỏ nhỏ, xanh, xanh cao -> xu hướng tăng -->
+ <g stroke-linecap="round">
+  <line x1="249" y1="384" x2="249" y2="478" stroke="#f87171" stroke-width="8"/><rect x="229" y="402" width="40" height="56" rx="7" fill="url(#dn)"/>
+  <line x1="313" y1="336" x2="313" y2="452" stroke="#4ade80" stroke-width="8"/><rect x="293" y="356" width="40" height="78" rx="7" fill="url(#up)"/>
+  <line x1="377" y1="330" x2="377" y2="404" stroke="#f87171" stroke-width="8"/><rect x="357" y="346" width="40" height="40" rx="7" fill="url(#dn)"/>
+  <line x1="441" y1="276" x2="441" y2="392" stroke="#4ade80" stroke-width="8"/><rect x="421" y="296" width="40" height="76" rx="7" fill="url(#up)"/>
+  <line x1="505" y1="214" x2="505" y2="338" stroke="#4ade80" stroke-width="8"/><rect x="485" y="232" width="40" height="88" rx="7" fill="url(#up)"/>
+  <g fill="#fff" fill-opacity=".28"><rect x="234" y="406" width="8" height="40" rx="4"/><rect x="298" y="360" width="8" height="62" rx="4"/>
+   <rect x="362" y="350" width="8" height="26" rx="4"/><rect x="426" y="300" width="8" height="60" rx="4"/><rect x="490" y="236" width="8" height="72" rx="4"/></g>
+ </g>
+
+ <!-- đường MA phát sáng + điểm cuối vàng có quầng -->
+ <path d="M222 446 C276 420 318 398 360 380 S470 318 512 284 S546 260 564 252" fill="none" stroke="#fde68a" stroke-opacity=".5" stroke-width="22" stroke-linecap="round" filter="url(#soft)"/>
+ <path d="M222 446 C276 420 318 398 360 380 S470 318 512 284 S546 260 564 252" fill="none" stroke="url(#ma)" stroke-width="11" stroke-linecap="round"/>
+ <circle cx="564" cy="252" r="30" fill="#fbbf24" fill-opacity=".25"/>
+ <circle cx="564" cy="252" r="16" fill="url(#gold)" stroke="#fff7d6" stroke-width="4" filter="url(#glow)"/>
+</svg>
+</div><script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

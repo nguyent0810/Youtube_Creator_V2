@@ -1,0 +1,28 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700;800;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#02050a}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;color:#fff}
+.grid{position:absolute;inset:0;background:linear-gradient(rgba(125,211,252,.07) 1px,transparent 1px) 0 0/64px 64px,linear-gradient(90deg,rgba(125,211,252,.07) 1px,transparent 1px) 0 0/64px 64px}
+.glow{position:absolute;border-radius:50%;filter:blur(120px)}
+.big{position:absolute;font-weight:900;line-height:1.02;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.cy{color:#22d3ee;text-shadow:0 0 50px rgba(34,211,238,.75),0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.m{position:absolute;padding:30px 44px;border-radius:30px;font-weight:800;line-height:1.22;box-shadow:0 30px 80px #000}
+.u{background:#1e3a5f;border-bottom-right-radius:8px;font-size:58px}
+.a{font-family:'JetBrains Mono';font-weight:700;color:#22d3ee;background:rgba(10,20,36,.96);border:3px solid rgba(34,211,238,.6);border-bottom-left-radius:8px;font-size:52px}
+.x{position:absolute;width:150px;height:150px;border-radius:50%;background:#e11d48;display:flex;align-items:center;justify-content:center;font-size:110px;font-weight:900;box-shadow:0 0 60px rgba(225,29,72,.7)}
+</style></head><body>
+<!-- T3 (tựa 3, tin tức): hai bong bóng chat dựng lại (không logo, không tên trợ lý) — người hỏi tin, máy đáp "Có lẽ bạn đang nhầm…" + dấu ✕ đỏ; chữ lớn "GẦN NỬA CÓ LỖI" -->
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<div class="grid"></div>
+<div class="glow" style="left:100px;top:300px;width:900px;height:600px;background:rgba(34,211,238,.28)"></div>
+<div class="glow" style="left:1150px;top:150px;width:600px;height:500px;background:rgba(225,29,72,.30)"></div>
+<div class="m u" style="left:300px;top:130px;font-size:52px">Phi hành gia bị kẹt<br>ngoài không gian?</div>
+<div class="m a" style="left:110px;top:360px;width:880px">Không hề. Có lẽ bạn đang nhầm với một bộ phim khoa học viễn tưởng.</div>
+<div class="x" style="left:900px;top:330px">✕</div>
+<div class="big" style="left:1080px;top:160px;font-size:220px">GẦN</div>
+<div class="big cy" style="left:1080px;top:410px;font-size:220px">NỬA</div>
+<div class="big" style="left:1080px;top:690px;font-size:150px">CÓ LỖI</div>
+</div>
+<script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

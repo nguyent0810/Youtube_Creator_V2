@@ -1,0 +1,189 @@
+{
+ "theme": "bud",
+ "format": "nhan-gui",
+ "hook_type": "pov",
+ "open_shot": "ban-tay",
+ "voice": "Ngọc Huyền",
+ "music": "healing.mp3",
+ "gap": 0.5,
+ "title": "Nếu bạn đang giận một người (Pháp Cú kệ 223)",
+ "kicker": "NẾU BẠN ĐANG…",
+ "sub": "PHÁP CÚ · KỆ 223",
+ "acc": [
+  "giận",
+  "thắng",
+  "xoá"
+ ],
+ "lines": [
+  "Tin nhắn trả đũa đã gõ xong, chỉ còn bấm gửi.",
+  "Khoan. Thở một hơi đã.",
+  "Kinh Pháp Cú, diễn ý: thắng giận bằng không giận, thắng ác bằng thiện.",
+  "Thắng keo kiệt bằng cho đi, thắng dối trá bằng sự thật.",
+  "Xoá tin nhắn đó không phải là thua.",
+  "Mà là bạn vừa thắng chính mình.",
+  "Nếu xoá được, bình luận: đã xoá."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "clip": "pexels:7362704",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "POV",
+     "at": 0.0,
+     "acc": true,
+     "size": 160
+    },
+    {
+     "text": "TIN NHẮN TRẢ ĐŨA",
+     "at": [
+      0,
+      "Tin"
+     ]
+    },
+    {
+     "text": "chỉ còn bấm gửi",
+     "at": [
+      0,
+      "chỉ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "clip": "pexels:6521502",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "KHOAN",
+     "at": [
+      1,
+      "Khoan"
+     ],
+     "acc": true,
+     "size": 170
+    },
+    {
+     "text": "thở một hơi đã",
+     "at": [
+      1,
+      "Thở"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 2,
+   "text": "Thắng giận bằng không giận, thắng ác bằng thiện, thắng keo kiệt bằng cho đi, thắng dối trá bằng sự thật.",
+   "by": "PHÁP CÚ 223 · DIỄN Ý",
+   "clip": "pexels:8724226",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "clip": "pexels:6099390",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "CHO ĐI",
+     "at": [
+      3,
+      "cho"
+     ],
+     "acc": true
+    },
+    {
+     "text": "SỰ THẬT",
+     "at": [
+      3,
+      "sự"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "clip": "pexels:6177478",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "XOÁ TIN NHẮN",
+     "at": [
+      4,
+      "Xoá"
+     ]
+    },
+    {
+     "text": "KHÔNG PHẢI LÀ THUA",
+     "at": [
+      4,
+      "không"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "clip": "pexels:6452589",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "THẮNG CHÍNH MÌNH",
+     "at": [
+      5,
+      "thắng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "clip": "pexels:13663887",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "ĐÃ XOÁ?",
+     "at": [
+      6,
+      "xoá"
+     ],
+     "acc": true,
+     "size": 160
+    },
+    {
+     "text": "bình luận",
+     "at": [
+      6,
+      "bình"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "description": "Nếu bạn đang giận một người. Kinh Pháp Cú, kệ 223 (diễn ý): thắng giận bằng không giận, thắng ác bằng thiện, thắng keo kiệt bằng bố thí, thắng dối trá bằng sự thật.\n\nNguồn: Dhammapada 223, bản dịch Bhikkhu Sujato (CC0): https://suttacentral.net/dhp221-234/en/sujato\nLời kinh là diễn ý; phần lời gửi là của kênh.",
+ "tags": [
+  "cơn giận",
+  "kinh pháp cú",
+  "chữa lành",
+  "lời phật dạy",
+  "bình yên"
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp221-234/en/sujato"
+ ]
+}

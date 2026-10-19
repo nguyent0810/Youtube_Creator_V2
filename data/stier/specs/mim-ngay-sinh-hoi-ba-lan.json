@@ -1,0 +1,201 @@
+{
+ "theme": "mim",
+ "title": "Hỏi AI ngày sinh của một người ba lần: ba đáp án khác nhau, không lần nào đúng",
+ "description": "Trong bài báo “Vì sao mô hình ngôn ngữ bị ảo giác” (09/2025), các tác giả hỏi một mô hình mã nguồn mở hàng đầu ngày sinh của Adam Kalai, dặn chỉ trả lời nếu biết. Ba lần hỏi, ba đáp án: 03/07, 15/06, 01/01; sinh nhật thật rơi vào mùa thu. Mẹo: với chi tiết quan trọng, hãy hỏi lại trong một cuộc trò chuyện mới; hai câu trả lời lệch nhau là đèn đỏ, nhưng hai câu giống nhau chưa chắc đã đúng (arXiv 2509.04664). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/H9nlRjxfmPw (công khai từ 20:00 ngày 02/11).",
+ "tags": [
+  "hỏi lại ai",
+  "kiểm chứng",
+  "ai bịa",
+  "ảo giác ai",
+  "chatgpt",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "NGHIÊN CỨU · 09/2025",
+ "acc": [
+  "ba",
+  "đỏ",
+  "lại",
+  "mới",
+  "lệch"
+ ],
+ "kicker": "AI QUANH TA",
+ "lines": [
+  "Ba lần hỏi cùng một câu. Ba đáp án khác nhau. Không lần nào đúng.",
+  "Năm 2025, các nhà nghiên cứu hỏi một mô hình AI: Adam Kalai sinh ngày nào? Nếu biết thì mới trả lời.",
+  "Lần một: mùng 3 tháng 7. Lần hai: 15 tháng 6. Lần ba: mùng 1 tháng 1.",
+  "Sinh nhật thật của ông, rơi vào mùa thu.",
+  "Khi máy thật sự biết, hỏi mấy lần nó thường trả lời như nhau. Khi nó đoán, câu trả lời hay lung lay.",
+  "Nên với một chi tiết quan trọng, hãy hỏi lại trong một cuộc trò chuyện mới. Lệch nhau là đèn đỏ.",
+  "Nhưng hai câu giống nhau, chưa chắc đã đúng."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "3 LẦN HỎI · 3 ĐÁP ÁN",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "không lần nào đúng",
+     "at": [
+      0,
+      "Không"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7362704",
+   "ms": 4,
+   "veil": 0.58
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "“SINH NGÀY NÀO?”",
+   "sub": "CHỈ TRẢ LỜI NẾU BIẾT"
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "BA LẦN HỎI",
+   "cards": [
+    {
+     "k": "LẦN 1",
+     "v": "03/07",
+     "at": [
+      2,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "k": "LẦN 2",
+     "v": "15/06",
+     "at": [
+      2,
+      "hai"
+     ]
+    },
+    {
+     "k": "LẦN 3",
+     "v": "01/01",
+     "at": [
+      2,
+      "ba"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "SINH NHẬT THẬT: MÙA THU"
+  },
+  {
+   "type": "chart",
+   "at": 4,
+   "kind": "bars",
+   "title": "HỎI LẠI NHIỀU LẦN",
+   "unit": "MINH HOẠ CÁCH NHẬN BIẾT",
+   "bars": [
+    {
+     "label": "MÁY BIẾT",
+     "v": 1,
+     "text": "GIỐNG NHAU",
+     "c": "up",
+     "at": [
+      4,
+      "biết"
+     ]
+    },
+    {
+     "label": "MÁY ĐOÁN",
+     "v": 1,
+     "text": "LUNG LAY",
+     "c": "down",
+     "at": [
+      4,
+      "đoán"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "HỎI LẠI · CUỘC TRÒ CHUYỆN MỚI",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "lệch nhau = đèn đỏ",
+     "at": [
+      5,
+      "Lệch"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8567113",
+   "ms": 6,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 5
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Nhưng",
+   "nodes": [
+    {
+     "text": "hai câu giống nhau",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      6,
+      "hai"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "chưa chắc đã đúng",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "chưa"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 600
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://arxiv.org/abs/2509.04664"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "=AI": "ây ai",
+  "adam": "A-đam",
+  "kalai": "Ca-lai"
+ },
+ "imgs": {}
+}

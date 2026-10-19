@@ -1,0 +1,156 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "do-vui",
+ "hook_type": "do-vui",
+ "open_shot": "ban-tay",
+ "voice": "Quang Sơn",
+ "music": "floating_cities.mp3",
+ "gap": 0.0,
+ "series": "Đố vui Phật pháp #5",
+ "title": "Đố vui Phật pháp #5: Nắm muối trong chén nước",
+ "kicker": "ĐỐ VUI PHẬT PHÁP #5",
+ "sub": "KINH TĂNG CHI 3.100",
+ "acc": [
+  "mặn",
+  "sông",
+  "rộng",
+  "hẹp"
+ ],
+ "lines": [
+  "Đố bạn: một nắm muối bỏ vào chén nước, và bỏ xuống sông. Chỗ nào mặn?",
+  "Đáp án: chén nước mặn chát. Còn dòng sông, vẫn uống được.",
+  "Đức Phật dùng ví dụ này: cùng một lỗi nhỏ, tâm hẹp thì chịu khổ nặng.",
+  "Tâm rộng, nỗi khổ ấy được pha loãng.",
+  "Bạn đã đoán chén, hay sông? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "items": [
+    {
+     "text": "CHÉN HAY SÔNG?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "chỗ nào mặn?",
+     "at": [
+      0,
+      "Chỗ"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:36108441"
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "ĐÁP ÁN",
+   "cards": [
+    {
+     "k": "CHÉN NƯỚC",
+     "v": "MẶN CHÁT",
+     "at": [
+      1,
+      "chén"
+     ]
+    },
+    {
+     "k": "DÒNG SÔNG",
+     "v": "VẪN UỐNG ĐƯỢC",
+     "at": [
+      1,
+      "Còn"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Cùng một lỗi nhỏ",
+   "nodes": [
+    {
+     "text": "TÂM HẸP",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      2,
+      "tâm"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "KHỔ NẶNG",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      2,
+      "khổ"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      2,
+      "chịu"
+     ]
+    }
+   ],
+   "note": "KINH TĂNG CHI 3.100 · DIỄN Ý"
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 1,
+   "suffix": " NẮM MUỐI",
+   "label": "TÂM RỘNG · NỖI KHỔ PHA LOÃNG"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "BẠN ĐOÁN GÌ?",
+     "at": [
+      4,
+      "Bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận: chén hay sông",
+     "at": [
+      4,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:28925193"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/an3.100/en/sujato"
+ ],
+ "description": "Đố vui Phật pháp #5: Nắm muối trong chén nước\n\nNguồn: https://suttacentral.net/an3.100/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

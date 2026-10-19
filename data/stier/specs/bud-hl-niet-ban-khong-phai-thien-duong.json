@@ -1,0 +1,291 @@
+{
+ "theme": "bud",
+ "format": "hieu-lam",
+ "hook_type": "do-vui",
+ "open_shot": "mat-nuoc",
+ "voice": "Thiện Minh",
+ "music": "arcadia.mp3",
+ "series": "Hiểu đúng #1",
+ "title": "Hiểu đúng #1: Niết-bàn có phải thiên đường?",
+ "kicker": "HIỂU ĐÚNG #1",
+ "sub": "KINH TƯƠNG ƯNG 38.1",
+ "acc": [
+  "Niết-bàn",
+  "sai",
+  "tham",
+  "sân",
+  "si",
+  "dập",
+  "tắt"
+ ],
+ "say": {
+  "niết-bàn": "Niết bàn",
+  "xá-lợi-phất": "Xá Lợi Phất"
+ },
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "clip": "pexels:34197727",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "NIẾT-BÀN",
+     "at": 0.0,
+     "acc": true,
+     "size": 170
+    },
+    {
+     "text": "LÀ CÕI TRỜI?",
+     "at": [
+      0,
+      "cõi"
+     ]
+    },
+    {
+     "text": "ĐÚNG hay SAI?",
+     "at": [
+      0,
+      "đúng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "clip": "pexels:35626509",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "THIÊN ĐƯỜNG",
+     "at": [
+      1,
+      "thiên"
+     ],
+     "acc": true
+    },
+    {
+     "text": "của nhà Phật?",
+     "at": [
+      1,
+      "nhà"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "SAI",
+   "clip": "pexels:12279775",
+   "veil": 0.7
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "clip": "pexels:5416142",
+   "veil": 0.6,
+   "items": [
+    {
+     "text": "KINH TƯƠNG ƯNG",
+     "at": [
+      3,
+      "Kinh"
+     ],
+     "acc": true
+    },
+    {
+     "text": "SN 38.1",
+     "at": [
+      3,
+      "hỏi"
+     ],
+     "size": 160
+    },
+    {
+     "text": "“Niết-bàn là gì?”",
+     "at": [
+      3,
+      "gì?"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "NIẾT-BÀN LÀ (DIỄN Ý)",
+   "rows": [
+    {
+     "k": "HẾT THAM",
+     "v": "✓",
+     "at": [
+      4,
+      "tham,"
+     ]
+    },
+    {
+     "k": "HẾT SÂN",
+     "v": "✓",
+     "at": [
+      4,
+      "sân,"
+     ]
+    },
+    {
+     "k": "HẾT SI",
+     "v": "✓",
+     "at": [
+      4,
+      "si,"
+     ]
+    }
+   ],
+   "clip": "pexels:27175586",
+   "veil": 0.65
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "clip": "pexels:6752408",
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "NIẾT-BÀN",
+     "at": [
+      5,
+      "Niết-bàn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "= DẬP TẮT",
+     "at": [
+      5,
+      "dập"
+     ]
+    },
+    {
+     "text": "như ngọn lửa đã tắt",
+     "at": [
+      5,
+      "ngọn"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "clip": "pexels:38405596",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "KHÔNG PHẢI NƠI ĐẾN",
+     "at": [
+      6,
+      "Không"
+     ]
+    },
+    {
+     "text": "LỬA PHIỀN NÃO",
+     "at": [
+      6,
+      "lửa"
+     ],
+     "acc": true
+    },
+    {
+     "text": "được dập tắt",
+     "at": [
+      6,
+      "dập"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "clip": "pexels:8745485",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "CƠN GIẬN NGUỘI ĐI",
+     "at": [
+      7,
+      "cơn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "= một chút mát mẻ",
+     "at": [
+      7,
+      "nếm"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "clip": "pexels:28219468",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "BẠN ĐOÁN",
+     "at": [
+      8,
+      "Bạn"
+     ]
+    },
+    {
+     "text": "ĐÚNG HAY SAI?",
+     "at": [
+      8,
+      "đúng"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận · chia sẻ",
+     "at": [
+      8,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "description": "Hiểu đúng #1. Niết-bàn không phải một cõi trời. Kinh Tương Ưng 38.1 (diễn ý): sự chấm dứt tham, sân, si được gọi là Niết-bàn. Nibbāna nghĩa đen là sự dập tắt.\n\nNguồn: SN 38.1, bản dịch Bhikkhu Sujato (CC0): https://suttacentral.net/sn38.1/en/sujato\nLời kinh là diễn ý; phần bình giải là của kênh.",
+ "tags": [
+  "niết bàn",
+  "hiểu đúng phật giáo",
+  "kinh tương ưng",
+  "lời phật dạy",
+  "phật pháp"
+ ],
+ "sources": [
+  "https://suttacentral.net/sn38.1/en/sujato"
+ ],
+ "lines": [
+  "Đoán xem: Niết-bàn là một cõi trời để lên, đúng hay sai?",
+  "Rất nhiều người nghĩ Niết-bàn là thiên đường của nhà Phật.",
+  "Đáp án: sai.",
+  "Trong Kinh Tương Ưng, có người hỏi thẳng ngài Xá-lợi-phất: Niết-bàn là gì?",
+  "Câu trả lời, diễn ý: sự chấm dứt tham, chấm dứt sân, chấm dứt si, đó gọi là Niết-bàn.",
+  "Chữ Niết-bàn có nghĩa là dập tắt, như ngọn lửa đã tắt.",
+  "Không phải một nơi để đến, mà là lửa phiền não được dập tắt.",
+  "Vì vậy, mỗi lần cơn giận nguội đi, bạn đã nếm một chút mát mẻ ấy.",
+  "Bạn đã đoán đúng hay sai? Bình luận nhé, và chia sẻ cho người cần hiểu đúng."
+ ]
+}

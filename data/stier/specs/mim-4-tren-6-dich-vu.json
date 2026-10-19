@@ -1,0 +1,160 @@
+{
+ "theme": "mim",
+ "title": "Kiểm tra 6 dịch vụ nhân bản giọng nói: 4 cái không có rào chắn cơ bản",
+ "description": "Tháng 3/2025, tổ chức Consumer Reports kiểm tra sáu dịch vụ nhân bản giọng nói đang bán trên thị trường: bốn trong sáu không có bước cơ bản nào để ngăn người dùng sao chép giọng của người khác. Trong khi đó các phòng thí nghiệm lớn dè dặt hơn: một mô hình chỉ cần 3 giây giọng mẫu (2023) và một mô hình cần 15 giây (2024) đều chưa mở rộng ra công chúng. Video không nêu tên dịch vụ và không hướng dẫn cách làm giả giọng. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ về AI giả giọng lên kênh tối 26/10.",
+ "tags": [
+  "nhân bản giọng nói",
+  "consumer reports",
+  "an toàn ai",
+  "ai giả giọng",
+  "deepfake giọng nói",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "AI VÀ GIỌNG NÓI",
+ "sub": "THÁNG 3 · 2025",
+ "acc": [
+  "bốn",
+  "sáu",
+  "không",
+  "dè",
+  "ngoài"
+ ],
+ "lines": [
+  "Sáu dịch vụ nhân bản giọng nói được đem ra kiểm tra. Bốn cái không có rào chắn nào.",
+  "Đó là kết quả của một tổ chức bảo vệ người tiêu dùng ở Mỹ, tháng 3 năm 2025.",
+  "Bốn trong sáu dịch vụ, không có bước cơ bản nào để ngăn bạn sao chép giọng của người khác.",
+  "Trong khi đó, các phòng thí nghiệm lớn lại dè dặt.",
+  "Mô hình chỉ cần ba giây giọng mẫu, chưa đưa ra công chúng.",
+  "Mô hình cần mười lăm giây, cũng chưa.",
+  "Phòng thí nghiệm dè dặt, không có nghĩa là ngoài kia đã an toàn."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "6 DỊCH VỤ ĐƯỢC KIỂM TRA",
+     "at": 0.0
+    },
+    {
+     "text": "4 CÁI KHÔNG CÓ RÀO CHẮN",
+     "at": [
+      0,
+      "Bốn"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:8005844",
+   "ms": 5,
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "THÁNG 3 NĂM 2025",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "TỔ CHỨC BẢO VỆ NGƯỜI TIÊU DÙNG",
+     "at": [
+      1,
+      "tổ"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:8118112",
+   "ms": 4,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "chart",
+   "at": 2,
+   "kind": "bars",
+   "title": "6 DỊCH VỤ NHÂN BẢN GIỌNG NÓI",
+   "unit": "SỐ DỊCH VỤ · CONSUMER REPORTS, 03/2025",
+   "bars": [
+    {
+     "label": "KHÔNG CÓ\nRÀO CHẮN",
+     "v": 4,
+     "text": "4",
+     "c": "down",
+     "at": [
+      2,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "label": "CÓ BƯỚC\nKIỂM TRA",
+     "v": 2,
+     "text": "2",
+     "c": "ref",
+     "at": [
+      2,
+      "không"
+     ]
+    }
+   ],
+   "note": "RÀO CHẮN = BƯỚC NGĂN SAO CHÉP GIỌNG NGƯỜI KHÁC"
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "PHÒNG THÍ NGHIỆM LỚN THÌ DÈ DẶT",
+   "cards": [
+    {
+     "k": "MÔ HÌNH 3 GIÂY",
+     "v": "CHƯA RA CÔNG CHÚNG",
+     "at": [
+      4,
+      "chưa"
+     ]
+    },
+    {
+     "k": "MÔ HÌNH 15 GIÂY",
+     "v": "CŨNG CHƯA",
+     "at": [
+      5,
+      "cũng"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "CHƯA CHẮC ĐÃ AN TOÀN",
+   "sub": "PHÒNG THÍ NGHIỆM DÈ DẶT ≠ THỊ TRƯỜNG DÈ DẶT"
+  }
+ ],
+ "sources": [
+  "https://innovation.consumerreports.org/new-report-do-these-6-ai-voice-cloning-companies-do-enough-to-prevent-misuse/",
+  "https://arxiv.org/abs/2301.02111v1"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

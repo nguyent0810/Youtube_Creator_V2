@@ -1,0 +1,219 @@
+{
+ "title": "Tám tháng im lặng, rồi bùng nổ",
+ "lines": [
+  {
+   "t": "Tháng 1 năm 2014, tám tháng sau ngày ra mắt, mọi thứ đổi khác.",
+   "p": 0.8
+  },
+  "Trò chơi leo lên đầu bảng ứng dụng miễn phí ở Mỹ và Trung Quốc. Rồi tới Anh.",
+  {
+   "t": "Hết tháng 1, nó là ứng dụng được tải nhiều nhất trên kho của Apple.",
+   "p": 1.0
+  },
+  "Vì sao lại là lúc ấy?",
+  "Không ai chắc cả.",
+  "Có người cho rằng nhờ các kênh quay video chơi game. Người ta xem ai đó chơi, hét lên vì thua, rồi tự tải về thử.",
+  {
+   "t": "Có người thì nghi có gian lận.",
+   "p": 1.0
+  },
+  {
+   "t": "Còn chính tác giả, khi được hỏi, chỉ nói có lẽ là may mắn.",
+   "p": 1.0
+  },
+  "Đầu tháng 2, anh trả lời một trang công nghệ.",
+  "Trò chơi đang kiếm khoảng năm mươi nghìn đô la mỗi ngày từ quảng cáo.",
+  {
+   "t": "Theo báo chí khi ấy, nó đã được tải hơn năm mươi triệu lượt.",
+   "p": 1.0
+  },
+  "Một người, vài ngày làm việc, không quảng cáo, không nhà phát hành.",
+  "Nghe như một giấc mơ.",
+  "Nhưng thứ làm nên cơn sốt ấy, cũng chính là thứ sẽ làm anh mất ngủ."
+ ],
+ "scenes": [
+  {
+   "type": "date",
+   "day": "8 THÁNG SAU NGÀY RA MẮT",
+   "date": "01.2014"
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "ĐẦU BẢNG ỨNG DỤNG MIỄN PHÍ",
+   "rows": [
+    {
+     "k": "MỸ",
+     "v": "SỐ 1",
+     "at": [
+      1,
+      "Mỹ"
+     ]
+    },
+    {
+     "k": "TRUNG QUỐC",
+     "v": "SỐ 1",
+     "at": [
+      1,
+      "Trung"
+     ]
+    },
+    {
+     "k": "ANH",
+     "v": "SỐ 1",
+     "at": [
+      1,
+      "Anh."
+     ]
+    }
+   ],
+   "total": {
+    "k": "THÁNG 1",
+    "v": "TẢI NHIỀU NHẤT KHO APPLE",
+    "at": 2
+   }
+  },
+  {
+   "type": "question",
+   "at": 3,
+   "text": "Vì sao lại là lúc ấy?"
+  },
+  {
+   "type": "broll",
+   "at": 4,
+   "vid": "7048551",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "KHÔNG AI CHẮC",
+     "at": 4,
+     "acc": true
+    },
+    {
+     "text": "xem người khác chơi · hét lên vì thua · rồi tự tải về",
+     "at": [
+      5,
+      "Người"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 6,
+   "title": "BA CÁCH GIẢI THÍCH",
+   "rows": [
+    {
+     "k": "NGƯỜI NGOÀI",
+     "v": "NHỜ VIDEO CHƠI GAME",
+     "at": [
+      6,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "k": "NGƯỜI NGHI NGỜ",
+     "v": "CÓ GIAN LẬN?",
+     "at": [
+      6,
+      "nghi"
+     ]
+    }
+   ],
+   "total": {
+    "k": "TÁC GIẢ",
+    "v": "“CÓ LẼ LÀ MAY MẮN”",
+    "at": [
+     7,
+     "có"
+    ]
+   }
+  },
+  {
+   "type": "bars",
+   "at": 8,
+   "title": "ĐẦU THÁNG 2/2014",
+   "unit": "",
+   "items": [
+    {
+     "k": "TIỀN QUẢNG CÁO MỖI NGÀY (NGHÌN USD)",
+     "v": 50,
+     "lbl": "~50",
+     "at": [
+      9,
+      "năm"
+     ],
+     "acc": true
+    },
+    {
+     "k": "LƯỢT TẢI (TRIỆU)",
+     "v": 50,
+     "lbl": "> 50",
+     "at": [
+      10,
+      "hơn"
+     ]
+    }
+   ],
+   "label": {
+    "k": "NGUỒN",
+    "v": "THE VERGE; ABC NEWS, 02.2014",
+    "at": 8
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 11,
+   "title": "NGHE NHƯ MỘT GIẤC MƠ",
+   "rows": [
+    {
+     "k": "1 NGƯỜI",
+     "v": "VÀI NGÀY LÀM VIỆC",
+     "at": 11
+    },
+    {
+     "k": "KHÔNG",
+     "v": "QUẢNG CÁO · NHÀ PHÁT HÀNH",
+     "at": [
+      11,
+      "không"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 13,
+   "vid": "6944070",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "THỨ LÀM NÊN CƠN SỐT",
+     "at": 13,
+     "sm": true
+    },
+    {
+     "text": "CŨNG LÀM ANH MẤT NGỦ",
+     "at": [
+      13,
+      "cũng"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "TÁM THÁNG IM LẶNG, RỒI BÙNG NỔ"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

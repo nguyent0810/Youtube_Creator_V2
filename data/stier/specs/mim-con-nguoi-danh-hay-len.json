@@ -1,0 +1,183 @@
+{
+ "theme": "mim",
+ "title": "Sau khi thua máy, con người đánh cờ vây hay hẳn lên: nghiên cứu trên gần 6 triệu nước cờ",
+ "description": "Một nghiên cứu năm 2023 xem lại hơn 5,8 triệu nước cờ của các kỳ thủ cờ vây chuyên nghiệp từ 1950 tới 2021. Kết quả: từ khi có những cỗ máy vượt trội con người (sau 2016), chất lượng quyết định của kỳ thủ tăng rõ, và họ đi nhiều nước mới hơn, những nước chưa từng xuất hiện trước đó. Người ta hay kể trận AlphaGo – Lee Sedol như ngày con người thua máy; dữ liệu cho thấy một nửa còn lại của câu chuyện (arXiv 2303.07462). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (20 phút): https://youtu.be/nbNu6xYtoYg",
+ "tags": [
+  "nghiên cứu cờ vây",
+  "con người và ai",
+  "alphago",
+  "lee sedol",
+  "cờ vây",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "NGHIÊN CỨU · 2023",
+ "acc": [
+  "sáu",
+  "bảy",
+  "tốt",
+  "mới",
+  "bỏ"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Gần sáu triệu nước cờ, của hơn bảy mươi năm, được đem ra xem lại.",
+  "Năm 2023, một nhóm nghiên cứu muốn biết: sau khi thua máy, con người đánh cờ vây ra sao?",
+  "Họ xem các ván chuyên nghiệp, từ năm 1950 tới năm 2021.",
+  "Suốt nhiều thập kỷ, chất lượng nước cờ thay đổi rất ít.",
+  "Rồi từ khi có những cỗ máy vượt trội, con người bắt đầu đi những nước tốt hơn hẳn.",
+  "Và đi nhiều nước mới hơn. Những nước chưa từng xuất hiện trong lịch sử.",
+  "Sau trận thua ấy, các kỳ thủ không bỏ cờ. Họ đánh hay lên."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "GẦN 6 TRIỆU NƯỚC CỜ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "của hơn bảy mươi năm",
+     "at": [
+      0,
+      "của"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:39270835",
+   "ms": 2,
+   "veil": 0.5
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NĂM 2023",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "SAU KHI THUA MÁY",
+     "at": [
+      1,
+      "sau"
+     ],
+     "acc": true
+    },
+    {
+     "text": "con người đánh ra sao?",
+     "at": [
+      1,
+      "con"
+     ],
+     "sm": true
+    },
+    {
+     "text": "các ván chuyên nghiệp 1950–2021",
+     "at": 2,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:28709421",
+   "ms": 2,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "timeline",
+   "at": 3,
+   "items": [
+    {
+     "year": "nhiều thập kỷ",
+     "text": "chất lượng nước cờ thay đổi rất ít",
+     "at": [
+      3,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "year": "sau 2016",
+     "text": "có những cỗ máy vượt trội con người",
+     "at": [
+      4,
+      null,
+      0,
+      0.05
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "TỪ KHI CÓ MÁY VƯỢT TRỘI",
+   "cards": [
+    {
+     "k": "NƯỚC CỜ CỦA NGƯỜI",
+     "v": "TỐT HƠN HẲN",
+     "at": [
+      5,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "k": "VÀ",
+     "v": "NHIỀU NƯỚC MỚI",
+     "at": [
+      5,
+      "Những"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "THEO NGHIÊN CỨU CÔNG BỐ NĂM 2023"
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "to": 5.8,
+   "suffix": " TRIỆU",
+   "label": "NƯỚC CỜ ĐƯỢC XEM LẠI · 1950–2021",
+   "until": [
+    6,
+    "Họ"
+   ],
+   "sub": {
+    "text": "KỲ THỦ KHÔNG BỎ CỜ · HỌ ĐÁNH HAY LÊN",
+    "at": [
+     6,
+     "Họ"
+    ]
+   }
+  }
+ ],
+ "sources": [
+  "https://arxiv.org/abs/2303.07462v2"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

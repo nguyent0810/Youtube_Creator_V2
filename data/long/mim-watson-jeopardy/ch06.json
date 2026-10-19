@@ -1,0 +1,144 @@
+{
+ "title": "Thanh thứ nhất: hiểu câu hỏi",
+ "lines": [
+  {
+   "t": "Vậy Watson trả lời một câu hỏi như thế nào?",
+   "p": 0.8
+  },
+  "Nó không hiểu theo cách bạn hiểu.",
+  {
+   "t": "Nó làm một việc khác: tạo ra rất nhiều đáp án, rồi chấm điểm từng cái.",
+   "p": 1.0
+  },
+  "Bước một, nó mổ xẻ gợi ý.",
+  "Câu này đang hỏi về một người, một thành phố, hay một năm?",
+  {
+   "t": "Những từ nào là quan trọng?",
+   "p": 1.0
+  },
+  "Bước hai, nó lục tìm trong kho kiến thức của mình.",
+  "Khoảng hai trăm triệu trang văn bản: bách khoa toàn thư, từ điển, sách, báo.",
+  {
+   "t": "Tất cả được nạp sẵn vào bộ nhớ, để tìm cho nhanh.",
+   "p": 1.0
+  },
+  "Từ đó, nó gom ra hàng trăm đáp án có thể.",
+  "Bước ba, nó đi tìm bằng chứng cho từng đáp án.",
+  {
+   "t": "Đáp án này có khớp với thời gian trong gợi ý không? Có khớp với địa điểm không?",
+   "p": 1.0
+  },
+  "Mỗi phép thử cho ra một con số.",
+  "Cuối cùng, tất cả được gộp lại, thành một điểm duy nhất cho mỗi đáp án.",
+  "Và đây là phần quan trọng nhất: điểm ấy chính là độ tự tin."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "THANH THỨ NHẤT",
+   "title": "HIỂU CÂU HỎI",
+   "sub": "TẠO RẤT NHIỀU ĐÁP ÁN, RỒI CHẤM ĐIỂM",
+   "vid": "11833936",
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH CHƯƠNG TRÌNH",
+   "titleAt": [
+    0,
+    "Vậy"
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 1,
+   "mythLab": "WATSON KHÔNG",
+   "myth": "HIỂU NHƯ BẠN HIỂU",
+   "truthLab": "NÓ",
+   "truth": "TẠO NHIỀU ĐÁP ÁN · CHẤM ĐIỂM",
+   "strikeAt": [
+    2,
+    "Nó"
+   ],
+   "truthAt": [
+    2,
+    "tạo"
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 3,
+   "items": [
+    {
+     "year": "BƯỚC 1",
+     "text": "mổ xẻ gợi ý: hỏi về người, nơi chốn hay năm?",
+     "at": 3
+    },
+    {
+     "year": "BƯỚC 2",
+     "text": "lục tìm trong kho kiến thức",
+     "at": 6
+    },
+    {
+     "year": "BƯỚC 3",
+     "text": "tìm bằng chứng cho từng đáp án",
+     "at": 10
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "from": 200,
+   "to": 200,
+   "suffix": " TRIỆU",
+   "label": "TRANG VĂN BẢN · NẠP SẴN VÀO BỘ NHỚ",
+   "sub": {
+    "text": "BÁCH KHOA TOÀN THƯ · TỪ ĐIỂN · SÁCH · BÁO",
+    "at": 7
+   }
+  },
+  {
+   "type": "bars",
+   "at": 9,
+   "title": "HÀNG TRĂM ĐÁP ÁN CÓ THỂ → MỖI CÁI MỘT ĐIỂM",
+   "unit": "MINH HOẠ CÁCH WATSON HIỆN ĐÁP ÁN · KHÔNG PHẢI SỐ ĐO THẬT",
+   "items": [
+    {
+     "k": "ĐÁP ÁN A",
+     "v": 72,
+     "lbl": "72%",
+     "at": 12,
+     "acc": true
+    },
+    {
+     "k": "ĐÁP ÁN B",
+     "v": 21,
+     "lbl": "21%",
+     "at": [
+      12,
+      "cho"
+     ]
+    },
+    {
+     "k": "ĐÁP ÁN C",
+     "v": 7,
+     "lbl": "7%",
+     "at": 13
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 14,
+   "text": "ĐIỂM ẤY = ĐỘ TỰ TIN",
+   "sub": "PHẦN QUAN TRỌNG NHẤT",
+   "subAt": 14
+  }
+ ],
+ "hud": {
+  "k": "THANH 01",
+  "t": "HIỂU CÂU HỎI"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

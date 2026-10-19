@@ -1,0 +1,267 @@
+{
+ "title": "Thân và bóng: phiên ấy ai thắng",
+ "lines": [
+  {
+   "t": "Đọc một cây nến, bạn chỉ cần hỏi hai câu.",
+   "p": 0.8
+  },
+  "Câu thứ nhất: thân dài hay ngắn?",
+  "Thân dài nghĩa là từ lúc mở cửa tới lúc đóng cửa, giá đã đi được một quãng xa theo một hướng.",
+  {
+   "t": "Thân rất ngắn nghĩa là hết phiên, giá gần như quay về chỗ bắt đầu.",
+   "p": 1.0
+  },
+  "Câu thứ hai: bóng dài ở phía nào?",
+  "Bóng trên dài nghĩa là trong phiên, giá đã lên khá cao, nhưng không giữ được tới lúc đóng cửa.",
+  "Bóng dưới dài thì ngược lại: giá đã xuống khá sâu, rồi được kéo lên trở lại.",
+  "Người ta hay ví bên mua và bên bán như hai đội kéo co.",
+  {
+   "t": "Bóng nến là chỗ một bên đã kéo tới, rồi bị kéo về.",
+   "p": 1.0
+  },
+  "Thử với hai ngày ngay sau cây nến đỏ hôm thứ Hai.",
+  "Thứ Ba, mười tháng ba, chỉ số hồi lại sau cú giảm hôm thứ Hai.",
+  "Đầu phiên, nó vọt lên gần một nghìn bảy trăm hai mươi. Báo chí hôm ấy cũng ghi như vậy.",
+  "Nhưng tới lúc đóng cửa, chỉ số chỉ còn khoảng một nghìn sáu trăm bảy mươi bảy.",
+  "Nhìn cây nến hôm ấy, phần phía trên rất dài: lúc đóng cửa, chỉ số đã thấp hơn đỉnh trong phiên gần bốn mươi điểm.",
+  {
+   "t": "Nó kể rằng bên mua đã kéo giá lên rất cao, nhưng rồi bị đẩy lùi một đoạn dài.",
+   "p": 1.0
+  },
+  "Thứ Tư, mười một tháng ba, là một cây nến xanh dài, gần như không có bóng.",
+  "Chỉ số mở cửa gần đáy, đóng cửa gần đỉnh của phiên, tăng khoảng ba phần trăm.",
+  "Cả phiên ấy, bên bán gần như không kéo lại được chút nào.",
+  {
+   "t": "Vậy nến xanh dài là tốt, nến đỏ dài là xấu à?",
+   "ask": 1
+  },
+  "Cây nến chỉ cho biết phiên ấy đã diễn ra thế nào.",
+  "Còn phiên sau có đi tiếp theo hướng ấy không, đó là một câu hỏi khác. Lát nữa mình sẽ đếm thử."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "THÂN VÀ BÓNG:\nPHIÊN ẤY AI THẮNG",
+   "sub": "HAI CÂU HỎI CHO MỘT CÂY NẾN",
+   "titleAt": [
+    0,
+    "Đọc"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "CÂU 1 · THÂN DÀI HAY NGẮN?",
+     "at": [
+      1,
+      "Câu"
+     ],
+     "acc": true
+    },
+    {
+     "text": "THÂN DÀI: GIÁ ĐI XA THEO MỘT HƯỚNG",
+     "at": [
+      2,
+      "Thân"
+     ]
+    },
+    {
+     "text": "THÂN RẤT NGẮN: HẾT PHIÊN, GẦN NHƯ VỀ CHỖ CŨ",
+     "at": [
+      3,
+      "Thân"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "CÂU 2 · BÓNG DÀI Ở PHÍA NÀO?",
+     "at": [
+      4,
+      "Câu"
+     ],
+     "acc": true
+    },
+    {
+     "text": "BÓNG TRÊN DÀI: LÊN CAO, KHÔNG GIỮ ĐƯỢC",
+     "at": [
+      5,
+      "Bóng"
+     ]
+    },
+    {
+     "text": "BÓNG DƯỚI DÀI: XUỐNG SÂU, ĐƯỢC KÉO LÊN",
+     "at": [
+      6,
+      "Bóng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "BÊN MUA · KÉO CO · BÊN BÁN",
+     "at": [
+      7,
+      "Người"
+     ]
+    },
+    {
+     "text": "BÓNG = CHỖ MỘT BÊN ĐÃ KÉO TỚI, RỒI BỊ KÉO VỀ",
+     "at": [
+      8,
+      "Bóng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "candles",
+   "at": 9,
+   "series": "vnindex",
+   "from": "2026-03-09",
+   "to": "2026-03-13",
+   "drawAt": [
+    9,
+    "Thử",
+    0,
+    0.1
+   ],
+   "until": [
+    9,
+    "sau"
+   ],
+   "title": "VN-INDEX · 09–13/03/2026",
+   "range": "THỨ BA 10/03 · THỨ TƯ 11/03",
+   "ind": [],
+   "source": "DỮ LIỆU: VN-INDEX (VNSTOCK/VCI) · GIÁ MỞ 10/03 KHÁC NHAU GIỮA CÁC NGUỒN DỮ LIỆU · ĐỈNH 10/03: TBTC, VNEXPRESS · KHÔNG PHẢI KHUYẾN NGHỊ",
+   "marks": [
+    {
+     "date": "2026-03-10",
+     "text": "VỌT LÊN ≈ 1.717 · ĐÓNG 1.676,73",
+     "pos": "above",
+     "tone": "gold",
+     "at": [
+      11,
+      "vọt"
+     ],
+     "dx": 200,
+     "dy": -40
+    },
+    {
+     "date": "2026-03-10",
+     "text": "ĐỈNH − ĐÓNG CỬA ≈ 40 ĐIỂM",
+     "pos": "below",
+     "tone": "gold",
+     "at": [
+      13,
+      "bốn"
+     ],
+     "dx": 60
+    },
+    {
+     "date": "2026-03-11",
+     "text": "+3,08% · MỞ ≈ ĐÁY, ĐÓNG ≈ ĐỈNH",
+     "pos": "above",
+     "tone": "up",
+     "at": [
+      15,
+      "Thứ"
+     ],
+     "dy": -70
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "items": [
+    {
+     "text": "THỨ TƯ 11/03 · NẾN XANH DÀI",
+     "at": [
+      16,
+      "Chỉ"
+     ],
+     "sm": true
+    },
+    {
+     "text": "MỞ GẦN ĐÁY · ĐÓNG GẦN ĐỈNH · +3,08%",
+     "at": [
+      16,
+      "đóng"
+     ]
+    },
+    {
+     "text": "BÊN BÁN GẦN NHƯ KHÔNG KÉO LẠI ĐƯỢC",
+     "at": [
+      17,
+      "Cả"
+     ],
+     "acc": true
+    }
+   ],
+   "srcnote": "Giá VN-Index 11/03/2026 (vnstock/VCI) · kênh tự tính"
+  },
+  {
+   "type": "question",
+   "at": 18,
+   "text": "Nến xanh dài là tốt,\nnến đỏ dài là xấu?"
+  },
+  {
+   "type": "slam",
+   "at": [
+    19,
+    "Cây",
+    0,
+    -0.3
+   ],
+   "hitAt": [
+    19,
+    "Cây"
+   ],
+   "text": "NẾN KỂ PHIÊN ĐÃ QUA",
+   "sub": "KHÔNG HỨA PHIÊN SAU"
+  },
+  {
+   "type": "kinetic",
+   "at": 20,
+   "items": [
+    {
+     "text": "PHIÊN SAU CÓ ĐI TIẾP HƯỚNG ẤY?",
+     "at": [
+      20,
+      "Còn"
+     ]
+    },
+    {
+     "text": "LÁT NỮA KÊNH ĐẾM THỬ",
+     "at": [
+      20,
+      "Lát"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "THÂN VÀ BÓNG: PHIÊN ẤY AI THẮNG"
+ },
+ "bgm": {
+  "mood": "warm",
+  "gain": 0.129
+ }
+}

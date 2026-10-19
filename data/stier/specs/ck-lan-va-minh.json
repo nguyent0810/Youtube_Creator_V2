@@ -1,0 +1,175 @@
+{
+ "theme": "ck",
+ "title": "Nộp ít hơn một nửa mà cuối cùng có nhiều hơn? Phép tính lãi kép của Lan và Minh",
+ "description": "VÍ DỤ GIẢ ĐỊNH (lãi 6%/năm không đổi, nhập gốc hằng tháng, không rút; Lan và Minh là nhân vật giả định): Lan để dành 3 triệu mỗi tháng từ 25 tới 35 tuổi rồi dừng (nộp 360 triệu). Minh bắt đầu năm 35 tuổi, nộp 3 triệu mỗi tháng suốt 20 năm (nộp 720 triệu). Năm 55 tuổi: Lan có khoảng 1.627 triệu, Minh khoảng 1.386 triệu. Khác biệt đến từ 10 năm đi trước. Mức 6% là giả định, không phải lãi của sản phẩm nào, không phải dự báo; chưa trừ lạm phát.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.",
+ "tags": [
+  "lãi kép",
+  "bắt đầu để dành sớm",
+  "để dành mỗi tháng",
+  "tiết kiệm",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "kicker": "1 CÂU ĐỐ",
+ "sub": "LÃI KÉP",
+ "acc": [
+  "nửa",
+  "nhiều",
+  "mười",
+  "sớm",
+  "giả"
+ ],
+ "lines": [
+  "Nộp ít hơn một nửa, mà cuối cùng lại có nhiều hơn.",
+  "Ví dụ giả định, lãi sáu phần trăm một năm. Lan để dành ba triệu mỗi tháng, từ năm hai mươi lăm tuổi.",
+  "Đúng mười năm, rồi dừng hẳn, để yên.",
+  "Minh bắt đầu năm ba mươi lăm tuổi, và nộp suốt hai mươi năm.",
+  "Năm năm mươi lăm tuổi, Minh có khoảng một tỷ ba trăm tám mươi sáu triệu.",
+  "Lan, khoảng một tỷ sáu trăm hai mươi bảy triệu.",
+  "Lan không giỏi hơn. Lan chỉ sớm hơn mười năm."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NỘP ÍT HƠN MỘT NỬA",
+     "at": 0.0
+    },
+    {
+     "text": "LẠI CÓ NHIỀU HƠN",
+     "at": [
+      0,
+      "lại"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7010551",
+   "ms": 10,
+   "veil": 0.58
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "HAI NHÂN VẬT GIẢ ĐỊNH",
+   "cards": [
+    {
+     "k": "LAN · TỪ 25 TUỔI",
+     "v": "3 TRIỆU MỖI THÁNG",
+     "at": [
+      1,
+      "Lan"
+     ]
+    },
+    {
+     "k": "ĐÚNG 10 NĂM",
+     "v": "RỒI DỪNG HẲN",
+     "at": [
+      2,
+      "rồi"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "NHÂN VẬT GIẢ ĐỊNH · LÃI GIẢ ĐỊNH 6%/NĂM"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MINH · TỪ 35 TUỔI",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "NỘP SUỐT 20 NĂM",
+     "at": [
+      3,
+      "nộp"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:35332817",
+   "ms": 1,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 3
+  },
+  {
+   "type": "chart",
+   "at": 4,
+   "kind": "bars",
+   "title": "NĂM 55 TUỔI",
+   "unit": "TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH · LÃI 6%/NĂM KHÔNG ĐỔI · KHÔNG PHẢI DỰ BÁO",
+   "bars": [
+    {
+     "label": "MINH\nNỘP 720",
+     "v": 1386,
+     "text": "~1.386",
+     "c": "dim",
+     "at": [
+      4,
+      "khoảng"
+     ]
+    },
+    {
+     "label": "LAN\nNỘP 360",
+     "v": 1627,
+     "text": "~1.627",
+     "c": "ref",
+     "at": [
+      5,
+      "khoảng"
+     ]
+    }
+   ],
+   "note": "NHÂN VẬT GIẢ ĐỊNH · CHƯA TRỪ LẠM PHÁT"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "LAN KHÔNG GIỎI HƠN",
+     "at": 6,
+     "sm": true
+    },
+    {
+     "text": "CHỈ SỚM HƠN 10 NĂM",
+     "at": [
+      6,
+      "chỉ"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7703941",
+   "ms": 5,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 6
+  }
+ ],
+ "sources": [
+  "https://topi.vn/ty-le-lam-phat-o-viet-nam-qua-cac-nam.html",
+  "https://baoquangninh.vn/cpi-binh-quan-nam-2024-tang-3-63-dat-muc-tieu-quoc-hoi-de-ra-3338442.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

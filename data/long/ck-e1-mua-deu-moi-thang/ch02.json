@@ -1,0 +1,286 @@
+{
+ "title": "Cô Đều về đích",
+ "lines": [
+  {
+   "t": "Mình bắt đầu với cô Đều.",
+   "p": 0.8
+  },
+  "Chín mươi bảy lần mua, không sót tháng nào.",
+  "Hai trăm chín mươi mốt triệu nộp vào.",
+  {
+   "t": "Và đầu tháng mười năm nay, tài khoản của cô ở mức khoảng bốn trăm ba mươi bảy triệu.",
+   "p": 1.0
+  },
+  "Lãi khoảng một trăm bốn mươi sáu triệu.",
+  "Tức là khoảng năm mươi phần trăm trên tổng số tiền đã nộp.",
+  {
+   "t": "Khoan đã. Chỉ số tăng bảy mươi bảy phần trăm, sao cô ấy chỉ lãi năm mươi?",
+   "ask": 1
+  },
+  "Vì tiền của cô không nằm trong thị trường ngay từ đầu.",
+  {
+   "t": "Ba triệu đầu tiên được hưởng trọn tám năm. Còn ba triệu cuối cùng, mới vào được vài ngày.",
+   "p": 1.0
+  },
+  "Nhưng mua đều có một cơ chế rất thú vị, ít người để ý.",
+  "Cùng ba triệu đồng, lúc giá rẻ, bạn mua được nhiều hơn. Lúc giá đắt, bạn mua được ít hơn.",
+  "Tháng tư năm hai nghìn không trăm hai mươi, chỉ số ở quanh sáu trăm tám mươi điểm.",
+  "Tháng bảy năm nay, chỉ số ở quanh một nghìn tám trăm sáu mươi bảy điểm.",
+  {
+   "t": "Cùng ba triệu, ở tháng rẻ, cô Đều mua được lượng nhiều gấp gần hai phẩy bảy lần tháng đắt.",
+   "p": 1.0
+  },
+  "Kết quả là gì?",
+  "Nếu lấy trung bình cộng giá của chín mươi bảy ngày mua, ta được khoảng một nghìn hai trăm ba mươi mốt điểm.",
+  "Nhưng giá vốn thật của cô Đều thấp hơn. Khoảng một nghìn một trăm bảy mươi điểm.",
+  {
+   "t": "Không cần đoán gì cả. Chỉ vì số tiền cố định tự động mua nhiều hơn khi rẻ.",
+   "p": 1.0
+  },
+  "Nghe hay đấy. Nhưng đây chưa phải phần mình thích nhất."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "CÔ ĐỀU\nVỀ ĐÍCH",
+   "sub": "97 LẦN MUA · KHÔNG SÓT THÁNG NÀO",
+   "vid": "7710771",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Mình"
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 0,
+   "to": 97,
+   "suffix": " LẦN MUA",
+   "until": [
+    1,
+    "mua"
+   ],
+   "label": "KHÔNG SÓT THÁNG NÀO",
+   "sub": {
+    "text": "MINH HOẠ TRÊN CHỈ SỐ · KHÔNG PHÍ, THUẾ, CỔ TỨC · KÊNH TỰ TÍNH · QUÁ KHỨ · KHÔNG PHẢI KHUYẾN NGHỊ",
+    "at": 1
+   }
+  },
+  {
+   "type": "bars",
+   "at": 2,
+   "title": "CÔ ĐỀU · SAU 8 NĂM (TRIỆU ĐỒNG)",
+   "items": [
+    {
+     "k": "ĐÃ NỘP VÀO",
+     "v": 291,
+     "lbl": "291",
+     "at": 2
+    },
+    {
+     "k": "TÀI KHOẢN 10/2026",
+     "v": 437,
+     "lbl": "≈ 437",
+     "at": [
+      3,
+      "bốn"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "",
+    "v": "KÊNH TỰ TÍNH · QUÁ KHỨ · KHÔNG PHẢI KHUYẾN NGHỊ",
+    "at": 2
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "+146 TRIỆU",
+     "at": 4,
+     "acc": true
+    },
+    {
+     "text": "≈ +50% trên tổng tiền đã nộp",
+     "at": 5,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 6,
+   "text": "Chỉ số +77%,\nsao cô ấy chỉ +50%?"
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "MỖI KHOẢN 3 TRIỆU ĐƯỢC HƯỞNG BAO LÂU?",
+   "srcnote": "TIỀN KHÔNG NẰM TRONG THỊ TRƯỜNG NGAY TỪ ĐẦU",
+   "rows": [
+    {
+     "k": "KHOẢN ĐẦU TIÊN",
+     "v": "TRỌN 8 NĂM",
+     "at": 8
+    },
+    {
+     "k": "KHOẢN CUỐI CÙNG",
+     "v": "VÀI NGÀY",
+     "at": [
+      8,
+      "Còn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "MỘT CƠ CHẾ",
+     "at": 9,
+     "sm": true
+    },
+    {
+     "text": "ÍT NGƯỜI ĐỂ Ý",
+     "at": [
+      9,
+      "ít"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 10,
+   "title": "CÙNG 3 TRIỆU ĐỒNG",
+   "rows": [
+    {
+     "k": "LÚC GIÁ RẺ",
+     "v": "MUA ĐƯỢC NHIỀU HƠN",
+     "at": [
+      10,
+      "lúc"
+     ]
+    },
+    {
+     "k": "LÚC GIÁ ĐẮT",
+     "v": "MUA ĐƯỢC ÍT HƠN",
+     "at": [
+      10,
+      "Lúc"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 11,
+   "title": "CÙNG 3 TRIỆU MUA ĐƯỢC BAO NHIÊU “PHẦN CHỈ SỐ”?",
+   "items": [
+    {
+     "k": "04/2020 · CHỈ SỐ ~680",
+     "v": 4.41,
+     "lbl": "4,41",
+     "at": 11,
+     "acc": true
+    },
+    {
+     "k": "07/2026 · CHỈ SỐ ~1.867",
+     "v": 1.607,
+     "lbl": "1,61",
+     "at": 12
+    }
+   ],
+   "label": {
+    "k": "THÁNG RẺ MUA ĐƯỢC",
+    "v": "GẤP ~2,7 LẦN THÁNG ĐẮT",
+    "at": 13
+   }
+  },
+  {
+   "type": "question",
+   "at": 14,
+   "text": "Kết quả là gì?"
+  },
+  {
+   "type": "bars",
+   "at": 15,
+   "title": "GIÁ MUA CỦA CÔ ĐỀU (ĐIỂM CHỈ SỐ)",
+   "items": [
+    {
+     "k": "TRUNG BÌNH CỘNG GIÁ 97 NGÀY MUA",
+     "v": 1231,
+     "lbl": "≈ 1.231",
+     "at": 15
+    },
+    {
+     "k": "GIÁ VỐN THẬT",
+     "v": 1170,
+     "lbl": "≈ 1.170",
+     "at": 16,
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "",
+    "v": "KÊNH TỰ TÍNH · QUÁ KHỨ · KHÔNG PHẢI KHUYẾN NGHỊ",
+    "at": 15
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "KHÔNG CẦN ĐOÁN",
+     "at": 17,
+     "acc": true
+    },
+    {
+     "text": "tiền cố định tự mua nhiều hơn khi rẻ",
+     "at": [
+      17,
+      "Chỉ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 18,
+   "items": [
+    {
+     "text": "CHƯA PHẢI",
+     "at": 18,
+     "sm": true
+    },
+    {
+     "text": "PHẦN HAY NHẤT",
+     "at": [
+      18,
+      "phần"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "CÔ ĐỀU VỀ ĐÍCH"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

@@ -1,0 +1,181 @@
+{
+ "theme": "mim",
+ "title": "Loài người tiêu khoảng 500 năm mỗi ngày để chứng minh mình không phải robot",
+ "description": "Năm 2021, công ty hạ tầng mạng Cloudflare làm một phép tính ước lượng: mỗi lần giải mã xác nhận mất trung bình 32 giây (theo dữ liệu của họ), thế giới có khoảng 4,6 tỷ người dùng Internet, mỗi người gặp một mã khoảng 10 ngày một lần → khoảng 500 năm thời gian của con người mỗi ngày. Đây là ước tính “nhẩm trên phong bì” của chính Cloudflare, không phải số đo. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (9 phút): https://youtu.be/CAYQtYA1NJA (công khai từ 20:00 ngày 22/10).",
+ "tags": [
+  "cloudflare",
+  "lãng phí thời gian",
+  "internet",
+  "captcha",
+  "mã xác nhận",
+  "tôi không phải người máy",
+  "công nghệ quanh ta",
+  "mind in the machine"
+ ],
+ "sub": "ƯỚC TÍNH · 2021",
+ "acc": [
+  "năm",
+  "ba",
+  "tỷ",
+  "mười",
+  "ước"
+ ],
+ "kicker": "CÔNG NGHỆ QUANH TA",
+ "lines": [
+  "Năm trăm năm, mỗi ngày. Để chứng minh mình không phải robot.",
+  "Đó là ước tính của một công ty hạ tầng mạng, năm 2021.",
+  "Mỗi lần giải mã xác nhận, mất trung bình khoảng ba mươi hai giây.",
+  "Thế giới có khoảng bốn tỷ sáu người dùng Internet.",
+  "Giả sử mười ngày, mỗi người gặp một mã.",
+  "Cộng lại, là khoảng năm trăm năm của loài người, tiêu đi mỗi ngày.",
+  "Chỉ là ước tính. Nhưng nó cho thấy cái giá của một ô vuông rất nhỏ."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "500 NĂM MỖI NGÀY",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "để chứng minh mình không phải robot",
+     "at": [
+      0,
+      "Để"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7362704",
+   "ms": 6,
+   "veil": 0.58
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "ƯỚC TÍNH NĂM 2021",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "của một công ty hạ tầng mạng",
+     "at": [
+      1,
+      "của"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34771072",
+   "ms": 2,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "PHÉP TÍNH",
+   "cards": [
+    {
+     "k": "MỖI LẦN GIẢI",
+     "v": "~32 GIÂY",
+     "at": [
+      2,
+      "ba"
+     ]
+    },
+    {
+     "k": "NGƯỜI DÙNG INTERNET",
+     "v": "~4,6 TỶ",
+     "at": [
+      3,
+      "bốn"
+     ]
+    },
+    {
+     "k": "TẦN SUẤT",
+     "v": "10 NGÀY MỘT MÃ",
+     "at": [
+      4,
+      "mười"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "GIẢ ĐỊNH CỦA CLOUDFLARE, 05/2021"
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "to": 500,
+   "suffix": " NĂM",
+   "label": "THỜI GIAN CỦA LOÀI NGƯỜI · MỖI NGÀY",
+   "until": [
+    5,
+    "trăm"
+   ],
+   "sub": {
+    "text": "ƯỚC TÍNH · KHÔNG PHẢI SỐ ĐO",
+    "at": [
+     5,
+     "tiêu"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Chỉ là ước tính",
+   "nodes": [
+    {
+     "text": "nhưng cho thấy cái giá",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      6,
+      "Nhưng"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "của một ô vuông rất nhỏ",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "của"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 720
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://blog.cloudflare.com/introducing-cryptographic-attestation-of-personhood/"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "robot": "rô-bốt"
+ },
+ "imgs": {}
+}

@@ -1,0 +1,199 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "kinh-giai",
+ "hook_type": "con-so",
+ "open_shot": "dien-thoai",
+ "voice": "Ngọc Huyền",
+ "music": "clean_soul.mp3",
+ "gap": 0.0,
+ "title": "Pháp Cú 100: một câu có ích hơn ngàn câu vô nghĩa",
+ "kicker": "KINH PHÁP CÚ · KỆ 100",
+ "sub": "DIỄN Ý",
+ "acc": [
+  "một",
+  "nghìn",
+  "tâm",
+  "chọn"
+ ],
+ "lines": [
+  "Hôm nay bạn lướt qua cả nghìn dòng chữ. Bạn còn nhớ được câu nào?",
+  "Kinh Pháp Cú, kệ một trăm, nói rằng:",
+  "Một câu có ích, nghe xong tâm được lắng yên, còn hơn một nghìn câu vô nghĩa.",
+  "Thứ đi vào mắt, sẽ đi vào tâm.",
+  "Nên hôm nay, hãy chọn ít hơn, nhưng chọn kỹ hơn.",
+  "Câu nào từng khiến bạn bình yên? Viết vào bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "LƯỚT CẢ NGHÌN DÒNG",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "NHỚ ĐƯỢC CÂU NÀO?",
+     "at": [
+      0,
+      "Bạn"
+     ]
+    }
+   ],
+   "clip": "pexels:6598883"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 1000,
+   "suffix": " CÂU",
+   "label": "KINH PHÁP CÚ · KỆ 100",
+   "until": [
+    2,
+    "Một"
+   ]
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Kệ 100 (diễn ý)",
+   "nodes": [
+    {
+     "text": "1 câu có ích",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      2,
+      "Một"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    },
+    {
+     "text": "tâm lắng yên",
+     "x": 0.5,
+     "y": 0.55,
+     "at": [
+      2,
+      "tâm"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "1000 câu vô nghĩa",
+     "x": 0.5,
+     "y": 0.8,
+     "at": [
+      2,
+      "nghìn"
+     ],
+     "shape": "none",
+     "cross": [
+      2,
+      "vô"
+     ]
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      2,
+      "tâm"
+     ]
+    }
+   ],
+   "note": "DHP 100 · SUTTACENTRAL"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "VÀO MẮT",
+     "at": [
+      3,
+      "mắt"
+     ],
+     "acc": true
+    },
+    {
+     "text": "→ VÀO TÂM",
+     "at": [
+      3,
+      "vào",
+      1
+     ]
+    }
+   ],
+   "clip": "pexels:27999918",
+   "win": true,
+   "winLabel": "CHỌN ĐIỀU ĐI VÀO TÂM"
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "HÔM NAY",
+   "cards": [
+    {
+     "k": "CHỌN",
+     "v": "ÍT HƠN",
+     "at": [
+      4,
+      "ít"
+     ]
+    },
+    {
+     "k": "NHƯNG",
+     "v": "KỸ HƠN",
+     "at": [
+      4,
+      "kỹ"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "CÂU NÀO KHIẾN BẠN BÌNH YÊN?",
+     "at": [
+      5,
+      "Câu"
+     ],
+     "acc": true
+    },
+    {
+     "text": "viết vào bình luận",
+     "at": [
+      5,
+      "viết"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:12595945"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp100-115/en/sujato"
+ ],
+ "description": "Pháp Cú 100: một câu có ích hơn ngàn câu vô nghĩa\n\nNguồn: https://suttacentral.net/dhp100-115/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

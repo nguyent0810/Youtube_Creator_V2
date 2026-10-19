@@ -1,0 +1,347 @@
+{
+ "title": "Kỳ thi không trừ điểm",
+ "lines": [
+  {
+   "t": "Ở kỳ thi tốt nghiệp trung học phổ thông, câu trắc nghiệm làm sai không bị trừ điểm.",
+   "p": 0.8
+  },
+  "Nên ai cũng từng nghe lời khuyên: không biết thì cứ khoanh, đừng bỏ trống.",
+  {
+   "t": "Khoanh bừa thì còn cơ hội trúng. Bỏ trống thì chắc chắn mất điểm.",
+   "p": 1.0
+  },
+  "Bài báo năm 2025 nói: các mô hình AI đang được chấm đúng theo kiểu ấy.",
+  "Họ xem xét mười bài kiểm tra phổ biến mà giới AI dùng để xếp hạng mô hình.",
+  "Chín bài không cho một chút điểm nào khi máy trả lời \"tôi không biết\".",
+  {
+   "t": "Các mô hình ngôn ngữ được tối ưu để thành những thí sinh giỏi, và đoán khi không chắc giúp tăng điểm thi.",
+   "q": 1,
+   "tr": 1
+  },
+  "Thử hình dung hai mô hình. Mô hình A trung thực: không chắc thì nói không biết.",
+  "Mô hình B y hệt, chỉ khác là lúc nào cũng đoán.",
+  {
+   "t": "Chấm theo kiểu đúng được một điểm, sai hay bỏ trống đều không điểm, thì mô hình B thắng.",
+   "p": 1.0
+  },
+  "Lời đoán ấy lại thường rất cụ thể: hỏi một ngày tháng, nó sẽ nói \"ngày ba mươi tháng Chín\", chứ không nói \"khoảng mùa thu\".",
+  {
+   "t": "Đây là chỗ sự tự tin tách khỏi sự đúng.",
+   "p": 1.0
+  },
+  "Theo báo cáo kỹ thuật năm 2023 của OpenAI về GPT-4, bản gốc của mô hình, đo trên câu hỏi trắc nghiệm, khá biết mình biết gì: nó chắc bao nhiêu thì thường đúng chừng ấy.",
+  "Nhưng sau khi được tinh chỉnh để trò chuyện, độ khớp ấy giảm đi.",
+  "Chính báo cáo ấy viết:",
+  {
+   "t": "GPT-4 cũng có thể sai một cách tự tin trong các dự đoán của nó.",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Các tác giả đề nghị đổi cách chấm: trả lời sai thì bị trừ, nói không biết thì không bị phạt.",
+  "Giờ hãy quay lại văn phòng luật ở New York, nơi một luật sư đã hỏi máy câu đáng giá nhất."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "KỲ THI\nKHÔNG TRỪ ĐIỂM",
+   "sub": "TRẮC NGHIỆM · TỐT NGHIỆP THPT",
+   "vid": "37779521",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "ở"
+   ]
+  },
+  {
+   "type": "print",
+   "at": 1,
+   "img": "scantron",
+   "tone": "color",
+   "maxH": 640,
+   "caption": "PHIẾU TRẮC NGHIỆM (MỸ) · ẢNH MINH HỌA",
+   "illus": "ẢNH MINH HỌA · KHÔNG PHẢI PHIẾU THI THPT",
+   "side": {
+    "k": "LỜI KHUYÊN QUEN",
+    "h": "Không biết\nthì cứ khoanh",
+    "lines": [
+     {
+      "text": "Khoanh bừa: *còn cơ hội trúng*",
+      "at": 2
+     },
+     {
+      "text": "Bỏ trống: *chắc chắn mất điểm*",
+      "at": [
+       2,
+       "bỏ"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "BÀI BÁO 2025",
+     "at": 3,
+     "sm": true,
+     "fx": "rise"
+    },
+    {
+     "text": "MÁY ĐANG ĐƯỢC CHẤM ĐÚNG KIỂU ẤY",
+     "at": [
+      3,
+      "các"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "10 BÀI KIỂM TRA PHỔ BIẾN",
+     "at": 4,
+     "fx": "rise"
+    },
+    {
+     "text": "GPQA · MMLU-Pro · IFEval · Omni-MATH · BBH",
+     "at": [
+      4,
+      "phổ"
+     ],
+     "sm": true
+    },
+    {
+     "text": "MATH L5 · MuSR · SWE-bench · HLE · WildBench",
+     "at": [
+      4,
+      "xếp"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "9 / 10",
+   "sub": "KHÔNG CHO CHÚT ĐIỂM NÀO KHI MÁY NÓI “TÔI KHÔNG BIẾT” · KALAI ET AL. 2025, BẢNG 2"
+  },
+  {
+   "type": "quote",
+   "at": 6,
+   "text": "…language models are optimized to be good test-takers, and guessing when uncertain improves test performance.",
+   "by": "KALAI ET AL. · “WHY LANGUAGE MODELS HALLUCINATE”, 09.2025",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 6
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "MÔ HÌNH A: KHÔNG CHẮC → “KHÔNG BIẾT”",
+     "at": 7,
+     "fx": "rise"
+    },
+    {
+     "text": "MÔ HÌNH B: LÚC NÀO CŨNG ĐOÁN",
+     "at": 8,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 9,
+   "title": "CHẤM KIỂU 0 – 1",
+   "rows": [
+    {
+     "k": "ĐÚNG",
+     "v": "1 ĐIỂM",
+     "at": [
+      9,
+      "đúng"
+     ]
+    },
+    {
+     "k": "SAI",
+     "v": "0",
+     "at": [
+      9,
+      "sai"
+     ]
+    },
+    {
+     "k": "“KHÔNG BIẾT”",
+     "v": "0",
+     "at": [
+      9,
+      "bỏ"
+     ]
+    }
+   ],
+   "total": {
+    "k": "THẮNG",
+    "v": "MÔ HÌNH B",
+    "at": [
+     9,
+     "thắng"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "HỎI MỘT NGÀY THÁNG",
+     "at": 10,
+     "sm": true
+    },
+    {
+     "text": "“NGÀY 30 THÁNG 9”",
+     "at": [
+      10,
+      "ngày",
+      1
+     ],
+     "acc": true,
+     "fx": "rise"
+    },
+    {
+     "text": "chứ không: “khoảng mùa thu”",
+     "at": [
+      10,
+      "chứ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 11,
+   "text": "CHẮC NỊCH ≠ ĐÚNG",
+   "white": true
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "OPENAI · GPT-4 TECHNICAL REPORT · 2023",
+     "at": 12,
+     "sm": true,
+     "fx": "rise"
+    },
+    {
+     "text": "BẢN GỐC: CHẮC BAO NHIÊU, ĐÚNG CHỪNG ẤY",
+     "at": [
+      12,
+      "khá"
+     ],
+     "acc": true
+    },
+    {
+     "text": "đo trên câu hỏi trắc nghiệm",
+     "at": [
+      12,
+      "đo"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "TINH CHỈNH ĐỂ TRÒ CHUYỆN",
+     "at": 13,
+     "sm": true
+    },
+    {
+     "text": "ĐỘ KHỚP GIẢM",
+     "at": [
+      13,
+      "độ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 14,
+   "text": "GPT-4 can also be confidently wrong in its predictions…",
+   "by": "OPENAI · GPT-4 TECHNICAL REPORT, 2023, TR. 10",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 15
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "items": [
+    {
+     "text": "ĐỀ NGHỊ CỦA CÁC TÁC GIẢ",
+     "at": 16,
+     "sm": true
+    },
+    {
+     "text": "SAI → BỊ TRỪ ĐIỂM",
+     "at": [
+      16,
+      "trả"
+     ]
+    },
+    {
+     "text": "“KHÔNG BIẾT” → KHÔNG BỊ PHẠT",
+     "at": [
+      16,
+      "nói"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 17,
+   "vid": "6100011",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "QUAY LẠI NEW YORK",
+     "at": 17,
+     "sm": true
+    },
+    {
+     "text": "CÂU HỎI ĐÁNG GIÁ NHẤT",
+     "at": [
+      17,
+      "câu"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "KỲ THI KHÔNG TRỪ ĐIỂM"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.12
+ }
+}

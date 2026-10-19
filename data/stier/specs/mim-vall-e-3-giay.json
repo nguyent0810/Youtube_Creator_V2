@@ -1,0 +1,209 @@
+{
+ "theme": "mim",
+ "title": "Máy cần nghe bạn nói bao lâu để bắt chước giọng bạn? Ba giây",
+ "description": "Tháng 1/2023, nhóm nghiên cứu của Microsoft công bố mô hình VALL-E: được huấn luyện trên khoảng 60.000 giờ tiếng Anh của hơn 7.000 người nói, sau đó chỉ cần một đoạn ghi âm dài 3 giây để nói bằng giọng của một người nó chưa từng nghe. Chính các tác giả viết trong bài báo rằng mô hình có thể bị lạm dụng để giả mạo một người cụ thể; năm 2024 nhóm cho biết đây thuần tuý là dự án nghiên cứu, chưa có kế hoạch đưa ra công chúng. Video không hướng dẫn cách làm giả giọng. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ về AI giả giọng lên kênh tối 26/10.",
+ "tags": [
+  "vall-e",
+  "nhân bản giọng nói",
+  "microsoft",
+  "ai giả giọng",
+  "deepfake giọng nói",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "AI VÀ GIỌNG NÓI",
+ "sub": "VALL-E · 2023",
+ "acc": [
+  "ba",
+  "sáu",
+  "bảy",
+  "giây",
+  "ai"
+ ],
+ "lines": [
+  "Để bắt chước giọng của bạn, một cỗ máy cần nghe bạn nói bao lâu?",
+  "Một giờ? Mười phút? Hay một phút?",
+  "Tháng 1 năm 2023, một nhóm nghiên cứu công bố mô hình tên là VALL-E.",
+  "Nó được cho nghe sáu mươi nghìn giờ tiếng Anh, của hơn bảy nghìn người.",
+  "Sau đó, với một người nó chưa từng nghe, nó chỉ cần ba giây.",
+  "Bảy nghìn giọng dạy nó cách con người nói nói chung.",
+  "Ba giây của bạn, chỉ cho nó biết lần này, hãy nói như ai."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MÁY CẦN NGHE BẠN",
+     "at": 0.0
+    },
+    {
+     "text": "BAO LÂU?",
+     "at": [
+      0,
+      "bao"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:6686334",
+   "veil": 0.55
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "BẠN ĐOÁN BAO NHIÊU?",
+   "cards": [
+    {
+     "k": "?",
+     "v": "MỘT GIỜ",
+     "at": [
+      1,
+      "Một"
+     ]
+    },
+    {
+     "k": "?",
+     "v": "MƯỜI PHÚT",
+     "at": [
+      1,
+      "Mười"
+     ]
+    },
+    {
+     "k": "?",
+     "v": "MỘT PHÚT",
+     "at": [
+      1,
+      "Hay"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "THÁNG 1 NĂM 2023",
+     "at": 2,
+     "sm": true
+    },
+    {
+     "text": "MÔ HÌNH VALL-E",
+     "at": [
+      2,
+      "mô"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:8118112",
+   "ms": 3,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 2
+  },
+  {
+   "type": "chart",
+   "at": 3,
+   "kind": "bars",
+   "title": "DỮ LIỆU NÓ ĐÃ NGHE",
+   "unit": "THEO BÀI BÁO VALL-E, 01/2023",
+   "bars": [
+    {
+     "label": "GIỜ\nTIẾNG ANH",
+     "v": 60000,
+     "text": "60.000",
+     "c": "ref",
+     "at": [
+      3,
+      "sáu"
+     ]
+    },
+    {
+     "label": "NGƯỜI\nNÓI",
+     "v": 7000,
+     "text": "> 7.000",
+     "c": "dim",
+     "at": [
+      3,
+      "hơn"
+     ]
+    }
+   ],
+   "note": "GẦN BẢY NĂM NGHE LIÊN TỤC"
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "to": 3,
+   "suffix": " GIÂY",
+   "label": "GIỌNG MẪU CỦA MỘT NGƯỜI NÓ CHƯA TỪNG NGHE",
+   "until": [
+    4,
+    "ba"
+   ],
+   "sub": {
+    "text": "DỰ ÁN NGHIÊN CỨU · CHƯA ĐƯA RA CÔNG CHÚNG",
+    "at": [
+     4,
+     "giây."
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Hai phần của một giọng nói",
+   "nodes": [
+    {
+     "text": "7.000 giọng: cách con người nói",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      5,
+      "dạy"
+     ],
+     "shape": "none",
+     "w": 860
+    },
+    {
+     "text": "3 giây của bạn: nói như ai",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "chỉ"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 800
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://arxiv.org/abs/2301.02111v1"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "=AI": "ây ai",
+  "=VALL-E": "Van-i"
+ },
+ "imgs": {}
+}

@@ -1,0 +1,216 @@
+{
+ "theme": "mim",
+ "title": "Nghị sĩ – nhà vật lý Rush Holt thắng Watson ở một trận Jeopardy nhỏ, hai tuần sau trận truyền hình",
+ "description": "Ngày 28/02/2011, IBM đưa Watson tới Washington đấu với các nghị sĩ Quốc hội Mỹ. Rush Holt, nhà vật lý từng năm lần thắng liền Jeopardy khi còn trẻ, thắng Watson ở vòng đầu: 8.600 so với 6.200 đô la; Watson thắng các vòng sau. Trận không lên sóng, được tổ chức để cổ vũ việc học toán và khoa học (Wikipedia: Rush D. Holt Jr.). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/Mt5hYcQxH50 (công khai từ 20:00 ngày 19/11).",
+ "tags": [
+  "rush holt",
+  "watson thua",
+  "ibm watson",
+  "jeopardy",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "WASHINGTON · 28/02/2011",
+ "acc": [
+  "tám",
+  "nghìn",
+  "người",
+  "nhỏ",
+  "tuyệt"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Hai tuần sau khi thắng trên truyền hình, Watson thua một nhà vật lý.",
+  "Ngày 28 tháng 2 năm 2011, IBM đưa Watson tới Washington, đấu với các nghị sĩ Quốc hội Mỹ.",
+  "Một trong số họ là Rush Holt, nhà vật lý, từng năm lần thắng liền chương trình Jeopardy khi còn trẻ.",
+  "Ở vòng đầu, ông thắng: tám nghìn sáu trăm đô la, so với sáu nghìn hai trăm.",
+  "Watson thắng các vòng sau, trước những nghị sĩ khác.",
+  "Trận ấy không lên sóng. Nó được tổ chức để cổ vũ việc học toán và khoa học.",
+  "Một chiến thắng nhỏ của con người, nhắc rằng chiến thắng của máy hôm ấy không phải tuyệt đối."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "WATSON THUA",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "hai tuần sau chiến thắng trên truyền hình",
+     "at": [
+      0,
+      "Hai"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8847403",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "WASHINGTON · 28/02/2011",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "đấu với các nghị sĩ Quốc hội Mỹ",
+     "at": [
+      1,
+      "đấu"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34917507",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "RUSH HOLT",
+   "cards": [
+    {
+     "k": "NGHỀ",
+     "v": "NHÀ VẬT LÝ",
+     "at": [
+      2,
+      "nhà"
+     ]
+    },
+    {
+     "k": "JEOPARDY",
+     "v": "5 LẦN THẮNG LIỀN",
+     "at": [
+      2,
+      "từng"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "at": 3,
+   "kind": "bars",
+   "title": "VÒNG ĐẦU (ĐÔ LA)",
+   "unit": "TRẬN KHÔNG PHÁT SÓNG · 2011",
+   "bars": [
+    {
+     "label": "RUSH HOLT",
+     "v": 8600,
+     "text": "8.600",
+     "c": "up",
+     "at": [
+      3,
+      "tám"
+     ]
+    },
+    {
+     "label": "WATSON",
+     "v": 6200,
+     "text": "6.200",
+     "c": "ref",
+     "at": [
+      3,
+      "sáu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "CÁC VÒNG SAU: WATSON",
+   "sub": "TRƯỚC NHỮNG NGHỊ SĨ KHÁC"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "KHÔNG LÊN SÓNG",
+     "at": 5,
+     "sm": true
+    },
+    {
+     "text": "CỔ VŨ HỌC TOÁN VÀ KHOA HỌC",
+     "at": [
+      5,
+      "cổ"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:8567113",
+   "ms": 3,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 5
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Bài học nhỏ",
+   "nodes": [
+    {
+     "text": "chiến thắng của máy",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      6,
+      "chiến"
+     ],
+     "shape": "none",
+     "w": 680
+    },
+    {
+     "text": "không phải tuyệt đối",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "tuyệt"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 680
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Rush_D._Holt_Jr."
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "watson": "Oát-xần",
+  "ibm": "ai bi em",
+  "=IBM": "ai bi em",
+  "jeopardy": "Gie-pơ-đi",
+  "washington": "Oa-sinh-tơn",
+  "rush": "Rắt",
+  "holt": "Hôn"
+ },
+ "imgs": {}
+}

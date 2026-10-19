@@ -1,0 +1,168 @@
+{
+ "theme": "mim",
+ "title": "Bàn phím Dvorak đổi chỗ 24 trên 26 chữ cái: tốt trên giấy, nhưng 90 năm vẫn là số ít",
+ "description": "Năm 1936, August Dvorak và William Dealey được cấp bằng sáng chế Mỹ 2.040.248 cho một bàn phím mới: nguyên âm dồn về hàng giữa bên trái, các phụ âm hay dùng nằm ở hàng giữa bên phải. So với QWERTY, chỉ A và M giữ nguyên chỗ (kênh tự đếm trên bố cục chuẩn: 24/26 chữ đổi chỗ) (Wikipedia: Dvorak keyboard layout). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/KJ5y_Ypnc4U (công khai từ 20:00 ngày 05/11).",
+ "tags": [
+  "bàn phím dvorak",
+  "august dvorak",
+  "bàn phím qwerty",
+  "lịch sử bàn phím",
+  "máy đánh chữ",
+  "công nghệ",
+  "mind in the machine"
+ ],
+ "sub": "1936",
+ "acc": [
+  "24",
+  "A",
+  "M",
+  "giấy",
+  "số"
+ ],
+ "kicker": "CHUYỆN CÔNG NGHỆ",
+ "lines": [
+  "Hai mươi bốn trên hai mươi sáu chữ cái bị đổi chỗ. Đó là bàn phím Dvorak.",
+  "Năm 1936, August Dvorak và cộng sự được cấp bằng sáng chế cho một bàn phím mới.",
+  "Các nguyên âm dồn hết về hàng giữa, bên tay trái.",
+  "Những phụ âm hay dùng nhất nằm ở hàng giữa, bên tay phải.",
+  "So với QWERTY, chỉ hai chữ A và M là giữ nguyên chỗ.",
+  "Nghe rất hợp lý. Nhưng chín mươi năm sau, nó vẫn chỉ là lựa chọn của số ít.",
+  "Một bàn phím tốt hơn trên giấy chưa đủ để kéo cả thế giới học lại từ đầu."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "24 / 26",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "chữ cái đổi chỗ · bàn phím Dvorak",
+     "at": [
+      0,
+      "Đó"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34124550",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "1936",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "bằng sáng chế · Dvorak & Dealey",
+     "at": [
+      1,
+      "bằng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6037662",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "BỐ CỤC DVORAK",
+   "cards": [
+    {
+     "k": "HÀNG GIỮA · TRÁI",
+     "v": "A O E U I",
+     "at": 2
+    },
+    {
+     "k": "HÀNG GIỮA · PHẢI",
+     "v": "D H T N S",
+     "at": 3,
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 2,
+   "to": 2,
+   "suffix": " CHỮ",
+   "label": "GIỮ NGUYÊN CHỖ: A VÀ M",
+   "sub": {
+    "text": "KÊNH TỰ ĐẾM TRÊN BỐ CỤC CHUẨN",
+    "at": [
+     4,
+     "giữ"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "90 NĂM SAU",
+     "at": [
+      5,
+      "chín"
+     ],
+     "acc": true
+    },
+    {
+     "text": "vẫn là lựa chọn của số ít",
+     "at": [
+      5,
+      "vẫn"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34124550",
+   "ms": 6,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 5
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "TỐT TRÊN GIẤY",
+   "sub": "CHƯA ĐỦ ĐỂ CẢ THẾ GIỚI HỌC LẠI"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Dvorak_keyboard_layout"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "=QWERTY": "quớt-ti",
+  "qwerty": "quớt-ti",
+  "=A": "a",
+  "august": "Âu-gớt",
+  "dvorak": "Đờ-vo-rắc",
+  "=M": "em-mờ"
+ },
+ "imgs": {}
+}

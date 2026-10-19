@@ -1,0 +1,332 @@
+{
+ "title": "Cỗ máy học từ ba mươi triệu nước cờ",
+ "lines": [
+  {
+   "t": "Đối thủ của ông ra đời ở London, tại một công ty tên là DeepMind, lúc ấy đã thuộc về Google.",
+   "p": 0.8
+  },
+  "Dự án bắt đầu khoảng năm 2014, với một câu hỏi.",
+  {
+   "t": "Một mạng nơ-ron học sâu có thể chơi cờ vây tới mức nào?",
+   "p": 1.0
+  },
+  "Cách họ làm khác hẳn Deep Blue.",
+  "Họ không dạy máy luật đánh hay mẹo đánh.",
+  "Họ cho nó xem khoảng ba mươi triệu nước cờ, lấy từ các ván đấu của con người.",
+  {
+   "t": "Nhiệm vụ của nó là đoán. Ở thế cờ này, một người chơi giỏi sẽ đi nước nào?",
+   "p": 1.0
+  },
+  "Sau đó, nó tự chơi với chính mình. Hết ván này tới ván khác.",
+  {
+   "t": "Thắng thì nhớ. Thua thì sửa.",
+   "p": 1.0
+  },
+  "Cuối cùng, AlphaGo có hai bộ não nhỏ.",
+  "Một cái gợi ý những nước đáng xem xét.",
+  "Cái kia nhìn một thế cờ, và ước lượng xem ai đang thắng.",
+  "Nhờ thế, nó không cần tính mọi khả năng. Nó chỉ đào sâu vào vài hướng hứa hẹn nhất.",
+  {
+   "t": "Nghe rất giống cách một kỳ thủ nói về cảm giác của mình.",
+   "p": 1.0
+  },
+  "Có một chi tiết về cỗ máy này mà bạn nên nhớ, vì nó sẽ quay lại ở ván hai.",
+  "AlphaGo không cố thắng thật đậm.",
+  "Nó chỉ cố làm cho khả năng thắng cao nhất.",
+  {
+   "t": "Nếu phải chọn giữa thắng chắc chắn với cách biệt rất nhỏ, và thắng lớn nhưng rủi ro hơn, nó chọn cái thứ nhất.",
+   "p": 1.0
+  },
+  "Tháng 10 năm 2015, AlphaGo đấu thử với Fan Hui, nhà vô địch châu Âu.",
+  "Tỉ số là năm không.",
+  "Đó là lần đầu tiên một cỗ máy thắng một kỳ thủ chuyên nghiệp, trên bàn cờ đủ kích cỡ, không chấp quân.",
+  {
+   "t": "Tin ấy được công bố tháng 1 năm 2016, trên tạp chí khoa học Nature.",
+   "p": 1.0
+  },
+  "Còn Fan Hui thì sao?",
+  "Thua năm ván liền trước một cỗ máy, tưởng là một cú sốc khó gượng dậy.",
+  "Nhưng theo tạp chí Wired, những ván thua ấy khiến ông nhìn cờ vây theo một cách khác.",
+  "Và có một chuyện lạ xảy ra. Chính ông lại đánh hay lên.",
+  "Chỉ trong vài tháng, thứ hạng thế giới của ông từ khoảng sáu trăm ba mươi, vọt lên quanh mức ba trăm.",
+  {
+   "t": "Hãy nhớ chi tiết này. Nó sẽ quay lại ở cuối video.",
+   "p": 1.0
+  },
+  "Nhưng Fan Hui chỉ là kỳ thủ hai đẳng.",
+  "Lee Sedol là chín đẳng, bậc cao nhất.",
+  "Khoảng cách giữa hai người, giống như giữa một vận động viên giỏi và một huyền thoại.",
+  "Vì thế, gần như ai cũng tin: lần này, máy sẽ thua."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "CỖ MÁY HỌC TỪ\n30 TRIỆU NƯỚC CỜ",
+   "sub": "LONDON · DEEPMIND",
+   "vid": "855761",
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU",
+   "titleAt": [
+    0,
+    "Đối"
+   ]
+  },
+  {
+   "type": "question",
+   "at": 1,
+   "text": "Một mạng nơ-ron\nchơi cờ vây tới mức nào?",
+   "showAt": 2
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "KHÁC HẲN DEEP BLUE",
+   "rows": [
+    {
+     "k": "KHÔNG DẠY",
+     "v": "LUẬT ĐÁNH, MẸO ĐÁNH",
+     "at": 4
+    }
+   ],
+   "total": {
+    "k": "CHỈ CHO XEM",
+    "v": "~30 TRIỆU NƯỚC CỜ",
+    "at": [
+     5,
+     "ba"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "NHIỆM VỤ: ĐOÁN",
+     "at": 6,
+     "acc": true
+    },
+    {
+     "text": "người chơi giỏi sẽ đi nước nào?",
+     "at": [
+      6,
+      "một"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "go",
+   "at": 7,
+   "stones": 60,
+   "label": {
+    "k": "TỰ CHƠI VỚI CHÍNH MÌNH · THẮNG THÌ NHỚ, THUA THÌ SỬA",
+    "v": "BÀN CỜ MINH HOẠ · KHÔNG PHẢI THẾ CỜ THẬT",
+    "at": 7
+   }
+  },
+  {
+   "type": "nn",
+   "at": 9,
+   "fwdAt": [
+    10,
+    "gợi"
+   ],
+   "label": {
+    "k": "HAI BỘ NÃO NHỎ",
+    "v": "SƠ ĐỒ MINH HOẠ",
+    "at": 9
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 10,
+   "title": "HAI BỘ NÃO NHỎ",
+   "rows": [
+    {
+     "k": "BỘ THỨ NHẤT",
+     "v": "GỢI Ý NƯỚC ĐÁNG XEM",
+     "at": 10
+    },
+    {
+     "k": "BỘ THỨ HAI",
+     "v": "ƯỚC LƯỢNG AI ĐANG THẮNG",
+     "at": 11
+    }
+   ],
+   "total": {
+    "k": "NHỜ THẾ",
+    "v": "CHỈ ĐÀO SÂU VÀI HƯỚNG",
+    "at": 12
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "MỘT CHI TIẾT NÊN NHỚ",
+     "at": 14,
+     "sm": true
+    },
+    {
+     "text": "KHÔNG CỐ THẮNG ĐẬM",
+     "at": 15,
+     "acc": true
+    },
+    {
+     "text": "chỉ cố cho khả năng thắng cao nhất",
+     "at": 16,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 18,
+   "day": "ĐẤU THỬ VỚI FAN HUI · VÔ ĐỊCH CHÂU ÂU",
+   "date": "10.2015"
+  },
+  {
+   "type": "slam",
+   "at": 19,
+   "text": "0 – 5",
+   "sub": "FAN HUI – ALPHAGO"
+  },
+  {
+   "type": "kinetic",
+   "at": 20,
+   "items": [
+    {
+     "text": "LẦN ĐẦU TIÊN",
+     "at": 20,
+     "sm": true
+    },
+    {
+     "text": "MÁY THẮNG MỘT KỲ THỦ CHUYÊN NGHIỆP",
+     "at": [
+      20,
+      "một"
+     ],
+     "acc": true
+    },
+    {
+     "text": "công bố trên tạp chí Nature · 01.2016",
+     "at": 21,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 22,
+   "text": "Còn Fan Hui thì sao?"
+  },
+  {
+   "type": "bars",
+   "at": 23,
+   "title": "THỨ HẠNG THẾ GIỚI CỦA FAN HUI · SỐ NHỎ HƠN LÀ CAO HƠN",
+   "unit": "",
+   "items": [
+    {
+     "k": "TRƯỚC KHI GẶP MÁY",
+     "v": 633,
+     "lbl": "~633",
+     "at": [
+      26,
+      "sáu"
+     ]
+    },
+    {
+     "k": "VÀI THÁNG SAU",
+     "v": 300,
+     "lbl": "~300",
+     "at": [
+      26,
+      "vọt"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "THUA NĂM VÁN · RỒI ĐÁNH HAY LÊN",
+    "v": "THEO TƯ LIỆU VỀ TRẬN ĐẤU · WIRED",
+    "at": 25
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 27,
+   "items": [
+    {
+     "text": "HÃY NHỚ CHI TIẾT NÀY",
+     "at": 27,
+     "acc": true
+    },
+    {
+     "text": "nó sẽ quay lại ở cuối video",
+     "at": [
+      27,
+      "Nó"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 28,
+   "title": "ĐẲNG CẤP CHUYÊN NGHIỆP",
+   "unit": "",
+   "items": [
+    {
+     "k": "FAN HUI",
+     "v": 2,
+     "lbl": "2 ĐẲNG",
+     "at": 28
+    },
+    {
+     "k": "LEE SEDOL",
+     "v": 9,
+     "lbl": "9 ĐẲNG",
+     "at": 29,
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "9 ĐẲNG LÀ BẬC CAO NHẤT",
+    "v": "",
+    "at": 29
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 31,
+   "items": [
+    {
+     "text": "GẦN NHƯ AI CŨNG TIN",
+     "at": 31,
+     "sm": true
+    },
+    {
+     "text": "LẦN NÀY MÁY SẼ THUA",
+     "at": [
+      31,
+      "lần"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "CỖ MÁY HỌC TỪ 30 TRIỆU NƯỚC CỜ"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

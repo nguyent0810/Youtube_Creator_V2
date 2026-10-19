@@ -1,0 +1,203 @@
+{
+ "theme": "mim",
+ "title": "Vì sao không ai đổi được bàn phím QWERTY: sự phụ thuộc vào lối mòn",
+ "description": "Năm 1985, nhà kinh tế học Paul David lấy QWERTY làm ví dụ cho sự phụ thuộc vào lối mòn (Clio and the Economics of QWERTY). Năm 2019, Pháp ra tiêu chuẩn bàn phím mới NF Z71-300 nhưng chỉ tự nguyện, các chữ cái giữ nguyên chỗ (AFNOR). Năm 2013, bàn phím KALQ cho hai ngón cái giúp người thử gõ nhanh hơn khoảng một phần ba sau luyện tập (Đại học St Andrews). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/KJ5y_Ypnc4U (công khai từ 20:00 ngày 05/11).",
+ "tags": [
+  "path dependence",
+  "paul david",
+  "azerty",
+  "bàn phím qwerty",
+  "lịch sử bàn phím",
+  "máy đánh chữ",
+  "công nghệ",
+  "mind in the machine"
+ ],
+ "sub": "LỐI MÒN",
+ "acc": [
+  "lối",
+  "mòn",
+  "tự",
+  "nguyện",
+  "quen"
+ ],
+ "kicker": "CHUYỆN CÔNG NGHỆ",
+ "lines": [
+  "Một lựa chọn nhỏ năm 1873 vẫn nằm dưới ngón tay bạn hôm nay.",
+  "Năm 1985, nhà kinh tế học Paul David gọi tên hiện tượng này: sự phụ thuộc vào lối mòn.",
+  "Đổi bàn phím không phải chuyện của riêng bạn. Bạn đổi, máy ở chỗ làm vẫn thế.",
+  "Năm 2019, nước Pháp ra một tiêu chuẩn bàn phím mới, nhưng chỉ là tự nguyện, và các chữ cái vẫn nằm nguyên chỗ.",
+  "Năm 2013, một bàn phím cho hai ngón cái giúp người thử gõ nhanh hơn khoảng một phần ba.",
+  "Hơn mười năm sau, nó vẫn không thay được bàn phím quen thuộc.",
+  "Thứ giữ QWERTY ở lại không còn là chiếc máy, mà là hàng tỷ đôi tay đã quen."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "LỐI MÒN",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "một lựa chọn nhỏ từ năm 1873",
+     "at": [
+      0,
+      "nhỏ"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34124550",
+   "veil": 0.55
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "PHỤ THUỘC LỐI MÒN",
+   "sub": "PAUL DAVID · 1985"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "BẠN ĐỔI",
+     "at": [
+      2,
+      "Bạn"
+     ],
+     "sm": true
+    },
+    {
+     "text": "MÁY Ở CHỖ LÀM VẪN THẾ",
+     "at": [
+      2,
+      "máy"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:34124550",
+   "ms": 8,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 2
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "PHÁP · 2019",
+   "cards": [
+    {
+     "k": "TIÊU CHUẨN MỚI",
+     "v": "CHỈ LÀ TỰ NGUYỆN",
+     "at": 3
+    },
+    {
+     "k": "CÁC CHỮ CÁI",
+     "v": "NẰM NGUYÊN CHỖ",
+     "at": [
+      3,
+      "các"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 34,
+   "to": 34,
+   "prefix": "+",
+   "suffix": "%",
+   "label": "BÀN PHÍM HAI NGÓN CÁI · 2013",
+   "sub": {
+    "text": "SAU LUYỆN TẬP · ĐẠI HỌC ST ANDREWS",
+    "at": [
+     4,
+     "nhanh"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "HƠN MƯỜI NĂM SAU",
+     "at": 5,
+     "sm": true
+    },
+    {
+     "text": "VẪN KHÔNG THAY ĐƯỢC",
+     "at": [
+      5,
+      "vẫn"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:6962433",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 5
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Thứ giữ QWERTY",
+   "nodes": [
+    {
+     "text": "không phải chiếc máy",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      6,
+      "không"
+     ],
+     "shape": "none",
+     "w": 700
+    },
+    {
+     "text": "hàng tỷ đôi tay đã quen",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "hàng"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 760
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://papers.ssrn.com/abstract=1069950",
+  "https://www.afnor.org/en/news/electrotechnologies/french-keyboard-voluntary-standard/",
+  "https://news.st-andrews.ac.uk/archive/thumbs-up-for-faster-texting/"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "=QWERTY": "quớt-ti",
+  "qwerty": "quớt-ti",
+  "paul": "Pôn",
+  "david": "Đây-vít"
+ },
+ "imgs": {}
+}

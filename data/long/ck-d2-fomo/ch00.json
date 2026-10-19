@@ -1,0 +1,283 @@
+{
+ "title": "Tháng kỷ lục",
+ "lines": [
+  "Tháng ba năm hai nghìn không trăm hai mươi hai.",
+  "Theo Trung tâm Lưu ký Chứng khoán, nhà đầu tư trong nước mở mới hơn hai trăm bảy mươi nghìn tài khoản chứng khoán, chỉ trong một tháng.",
+  {
+   "t": "Kỷ lục cao nhất từ trước tới khi ấy.",
+   "p": 1.0
+  },
+  "Cả năm trước đó còn sôi hơn: hơn một triệu rưỡi tài khoản mới.",
+  "Nhiều hơn tổng số tài khoản mở trong bốn năm trước cộng lại.",
+  {
+   "t": "Ở quán cà phê, ở chỗ làm, trong nhóm chat gia đình, ai cũng có một câu chuyện lãi.",
+   "p": 1.0
+  },
+  {
+   "t": "Mua gì cũng lên. Không vào bây giờ thì bao giờ?",
+   "q": 1,
+   "diy": 1
+  },
+  "Nhưng có một chi tiết mà lúc ấy rất ít người để ý.",
+  {
+   "t": "Đỉnh của VN-Index đã đi qua từ hai tháng trước.",
+   "p": 1.0
+  },
+  "Ngày sáu tháng một năm ấy, chỉ số đóng cửa ở một nghìn năm trăm hai mươi tám điểm.",
+  "Mười tháng sau, nó còn chín trăm mười hai điểm.",
+  {
+   "t": "Mất bốn mươi phần trăm.",
+   "p": 1.0
+  },
+  {
+   "t": "Vậy những người vào đúng tháng kỷ lục ấy, giờ ra sao?",
+   "ask": 1
+  },
+  "Mình sẽ trả lời bằng chính dữ liệu của kênh.",
+  "Nhưng trước đó, mình muốn đi cùng bạn qua ba chặng: ba lần cả nước đổ xô đi mua cổ phiếu, vào những năm hai nghìn không trăm lẻ bảy, hai nghìn không trăm mười tám, và hai nghìn không trăm hai mươi mốt.",
+  {
+   "t": "Ba lần, cùng một cảm giác, và một kết cục rất giống nhau.",
+   "p": 1.0
+  },
+  "Đây là Biểu Đồ Biết Nói. Tiền bạc, giải thích bằng dữ liệu.",
+  "Video chỉ nhằm giáo dục, không phải lời khuyên mua hay bán, và không dự báo thị trường."
+ ],
+ "scenes": [
+  {
+   "type": "date",
+   "day": "THÁNG KỶ LỤC",
+   "date": "03.2022"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 0,
+   "to": 270217,
+   "suffix": " TÀI KHOẢN",
+   "label": "MỞ MỚI TRONG MỘT THÁNG",
+   "sub": {
+    "text": "VSD (TRUNG TÂM LƯU KÝ CHỨNG KHOÁN) · QUA BÁO CHÍ",
+    "at": 1
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "KỶ LỤC",
+     "at": 2,
+     "acc": true
+    },
+    {
+     "text": "cao nhất từ trước tới khi ấy",
+     "at": [
+      2,
+      "cao"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 3,
+   "title": "TÀI KHOẢN MỚI (TRIỆU)",
+   "items": [
+    {
+     "k": "2017 → 2020 CỘNG LẠI",
+     "v": 1.04,
+     "lbl": "1,04",
+     "at": [
+      4,
+      "bốn"
+     ]
+    },
+    {
+     "k": "RIÊNG 2021",
+     "v": 1.5,
+     "lbl": "> 1,5",
+     "at": [
+      3,
+      "triệu"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "NGUỒN",
+    "v": "VSD (TRUNG TÂM LƯU KÝ CHỨNG KHOÁN) · QUA BÁO CHÍ",
+    "at": 3
+   }
+  },
+  {
+   "type": "broll",
+   "at": 5,
+   "vid": "6220076",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "QUÁN CÀ PHÊ · CHỖ LÀM · NHÓM CHAT",
+     "at": 5,
+     "sm": true
+    },
+    {
+     "text": "AI CŨNG CÓ CHUYỆN LÃI",
+     "at": [
+      5,
+      "ai"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 6,
+   "text": "Mua gì cũng lên. Không vào bây giờ thì bao giờ?",
+   "by": "LỜI TRUYỀN MIỆNG",
+   "dy": true,
+   "qline": 6
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "ÍT AI ĐỂ Ý",
+     "at": 7,
+     "sm": true
+    },
+    {
+     "text": "ĐỈNH ĐÃ QUA",
+     "at": [
+      8,
+      "đỉnh"
+     ],
+     "acc": true
+    },
+    {
+     "text": "từ hai tháng trước",
+     "at": [
+      8,
+      "hai"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "race",
+   "at": 9,
+   "from": "2021-10-01",
+   "to": "2022-11-15",
+   "title": "VN-INDEX · 10/2021 → 11/2022",
+   "range": "01/10/2021 → 15/11/2022",
+   "drawAt": [
+    9,
+    "ngày"
+   ],
+   "until": [
+    11,
+    "mất"
+   ],
+   "series": [
+    {
+     "key": "vnindex",
+     "label": "VN-INDEX",
+     "color": "#38bdf8"
+    }
+   ],
+   "source": "DỮ LIỆU: HOSE (VNSTOCK/VCI), KÊNH TỰ TÍNH. MINH HOẠ QUÁ KHỨ, KHÔNG PHẢI KHUYẾN NGHỊ."
+  },
+  {
+   "type": "slam",
+   "at": 11,
+   "text": "−40%",
+   "sub": "1.528,57 (06/01/2022) → 911,90 (15/11/2022) · KÊNH TỰ TÍNH · QUÁ KHỨ · KHÔNG PHẢI DỰ BÁO"
+  },
+  {
+   "type": "question",
+   "at": 12,
+   "text": "Người vào tháng kỷ lục\ngiờ ra sao?"
+  },
+  {
+   "type": "timeline",
+   "at": 14,
+   "items": [
+    {
+     "year": "2007",
+     "text": "Chặng *một*",
+     "at": 14
+    },
+    {
+     "year": "2018",
+     "text": "Chặng *hai*",
+     "at": [
+      14,
+      "mười"
+     ]
+    },
+    {
+     "year": "2021",
+     "text": "Chặng *ba*",
+     "at": [
+      14,
+      "mốt"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "CÙNG MỘT CẢM GIÁC",
+     "at": 15
+    },
+    {
+     "text": "KẾT CỤC RẤT GIỐNG",
+     "at": [
+      15,
+      "kết"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "brand",
+   "at": 16,
+   "sub": "TIỀN BẠC · GIẢI THÍCH BẰNG DỮ LIỆU"
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "CHỈ GIÁO DỤC",
+     "at": 17,
+     "acc": true
+    },
+    {
+     "text": "không khuyên mua/bán · không dự báo",
+     "at": [
+      17,
+      "không"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "THÁNG KỶ LỤC"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

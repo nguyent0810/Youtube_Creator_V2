@@ -1,0 +1,225 @@
+{
+ "title": "Ngả thứ hai: dữ liệu huấn luyện",
+ "lines": [
+  {
+   "t": "OpenAI viết thẳng trong trang chính sách của mình.",
+   "p": 0.8
+  },
+  {
+   "t": "ChatGPT, chẳng hạn, được cải thiện nhờ huấn luyện thêm trên các cuộc trò chuyện của mọi người, trừ khi bạn chọn không tham gia.",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Với các dịch vụ cho cá nhân, mặc định là có thể dùng.",
+  "Muốn tắt, có một công tắc tên là Improve the model for everyone, nghĩa là cải thiện mô hình cho mọi người.",
+  {
+   "t": "Tắt đi, những cuộc trò chuyện mới của bạn sẽ không được dùng để huấn luyện.",
+   "p": 1.0
+  },
+  "Anthropic, hãng làm ra Claude, đổi chính sách vào ngày 28 tháng 8 năm 2025.",
+  "Người dùng các gói cá nhân phải tự chọn có cho dùng cuộc trò chuyện để huấn luyện hay không.",
+  {
+   "t": "Nếu đồng ý, dữ liệu có thể được giữ tới năm năm. Nếu không, thời hạn vẫn là ba mươi ngày.",
+   "p": 1.0
+  },
+  "Với Gemini của Google, cài đặt quan trọng tên là Keep Activity, giữ lại hoạt động.",
+  {
+   "t": "Theo trang trợ giúp, khi tắt nó và không gửi phản hồi, những cuộc trò chuyện sau đó của bạn không được dùng để cải thiện mô hình.",
+   "p": 1.0
+  },
+  "Có một điểm chung đáng nhớ.",
+  "Cả ba hãng đều tách riêng các gói cho doanh nghiệp: dữ liệu ở đó mặc định không dùng để huấn luyện.",
+  "Còn với người dùng thường như chúng ta, mặc định thường là bật, và việc tắt là việc của mình.",
+  {
+   "t": "Như một lá thư đã bỏ vào hộp: muốn nó không được mở ra đọc, phải dặn trước khi gửi.",
+   "p": 1.0
+  },
+  "Mà nói tới đọc, ngả thứ ba mới là ngả ít người nghĩ tới nhất."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "NGẢ THỨ HAI",
+   "title": "DỮ LIỆU\nHUẤN LUYỆN",
+   "sub": "KHI CUỘC TRÒ CHUYỆN THÀNH BÀI HỌC",
+   "vid": "38496193",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "openai"
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 1,
+   "text": "ChatGPT, for instance, improves by further training on the conversations people have with it, unless you opt out.",
+   "by": "OPENAI · HOW YOUR DATA IS USED TO IMPROVE MODEL PERFORMANCE (13.03.2026)",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 1
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "DỊCH VỤ CÁ NHÂN",
+     "at": 2,
+     "sm": true
+    },
+    {
+     "text": "MẶC ĐỊNH: CÓ THỂ DÙNG",
+     "at": [
+      2,
+      "mặc"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 3,
+   "k": "MÔ PHỎNG · DỰNG BẰNG CHỮ THEO TRANG TRỢ GIÚP, ĐỌC 09.10.2026",
+   "name": "ChatGPT",
+   "desc": "Settings → Data controls",
+   "rows": [
+    {
+     "k": "CÔNG TẮC",
+     "v": "*Improve the model for everyone*",
+     "at": [
+      3,
+      "improve"
+     ]
+    },
+    {
+     "k": "TẮT",
+     "v": "cuộc trò chuyện mới không dùng huấn luyện",
+     "at": 4
+    }
+   ],
+   "label": {
+    "k": "NGUỒN",
+    "v": "OPENAI HELP CENTER · DATA CONTROLS",
+    "at": 3
+   }
+  },
+  {
+   "type": "file",
+   "at": 5,
+   "k": "ANTHROPIC · 28.08.2025",
+   "name": "Claude",
+   "desc": "Gói cá nhân: Free · Pro · Max",
+   "rows": [
+    {
+     "k": "TỰ CHỌN",
+     "v": "cho dùng huấn luyện hay không",
+     "at": 6
+    },
+    {
+     "k": "ĐỒNG Ý",
+     "v": "giữ tới *5 năm*",
+     "at": 7
+    },
+    {
+     "k": "KHÔNG",
+     "v": "*30 ngày*",
+     "at": [
+      7,
+      "nếu"
+     ]
+    }
+   ],
+   "label": {
+    "k": "NGUỒN",
+    "v": "ANTHROPIC · UPDATES TO OUR CONSUMER TERMS",
+    "at": 5
+   }
+  },
+  {
+   "type": "file",
+   "at": 8,
+   "k": "MÔ PHỎNG · DỰNG BẰNG CHỮ THEO TRANG TRỢ GIÚP, ĐỌC 09.10.2026",
+   "name": "Gemini",
+   "desc": "Keep Activity · giữ lại hoạt động",
+   "rows": [
+    {
+     "k": "TẮT + KHÔNG GỬI PHẢN HỒI",
+     "v": "cuộc trò chuyện sau không dùng cải thiện mô hình",
+     "at": 9
+    }
+   ],
+   "label": {
+    "k": "NGUỒN",
+    "v": "GEMINI APPS PRIVACY HUB",
+    "at": 8
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "GÓI DOANH NGHIỆP",
+     "at": 11,
+     "sm": true
+    },
+    {
+     "text": "MẶC ĐỊNH KHÔNG HUẤN LUYỆN",
+     "at": [
+      11,
+      "dữ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "NGƯỜI DÙNG THƯỜNG",
+     "at": 12,
+     "sm": true
+    },
+    {
+     "text": "TẮT LÀ VIỆC CỦA MÌNH",
+     "at": [
+      12,
+      "việc"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 13,
+   "vid": "5916730",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "DẶN TRƯỚC KHI GỬI",
+     "at": 13,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 14,
+   "text": "Ngả thứ ba:\nai đọc?"
+  }
+ ],
+ "hud": {
+  "k": "NGẢ 02",
+  "t": "DỮ LIỆU HUẤN LUYỆN"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.1
+ }
+}

@@ -1,0 +1,185 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "vi-sao",
+ "hook_type": "vi-sao",
+ "open_shot": "tuong-phat",
+ "voice": "Thanh Bình",
+ "music": "ether_vox.mp3",
+ "gap": 0.0,
+ "title": "Vì sao Phật Dược Sư có màu xanh lưu ly?",
+ "kicker": "VÌ SAO?",
+ "sub": "GIẢI MÃ BIỂU TƯỢNG",
+ "acc": [
+  "lưu",
+  "thuốc",
+  "thân"
+ ],
+ "lines": [
+  "Vì sao Phật Dược Sư thường có màu xanh lam, và cầm một bình thuốc?",
+  "Mai là ba mươi tháng chín âm lịch, ngày vía Phật Dược Sư.",
+  "Tên đầy đủ: Dược Sư Lưu Ly Quang, ánh sáng như ngọc lưu ly.",
+  "Bình thuốc là biểu tượng chữa lành khổ đau của thân và tâm.",
+  "Hiểu đúng: biểu tượng nhắc chăm sóc thân tâm, không thay thuốc men.",
+  "Bạn đã biết ngày vía này chưa? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "VÌ SAO MÀU XANH?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "Phật Dược Sư · bình thuốc",
+     "at": [
+      0,
+      "Phật"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:39083609"
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "08.11.2026",
+   "day": "CHỦ NHẬT",
+   "sub": {
+    "text": "30/9 ÂM · VÍA DƯỢC SƯ",
+    "at": [
+     1,
+     "ngày"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Lưu Ly Quang",
+   "nodes": [
+    {
+     "text": "LƯU LY",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      2,
+      "Lưu"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "ÁNH SÁNG XANH",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      2,
+      "ánh"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      2,
+      "ánh"
+     ]
+    }
+   ],
+   "note": "BHAIṢAJYAGURU · WIKIPEDIA"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "BÌNH THUỐC",
+     "at": [
+      3,
+      "Bình"
+     ],
+     "acc": true
+    },
+    {
+     "text": "chữa lành thân và tâm",
+     "at": [
+      3,
+      "chữa"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7526202"
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "HIỂU ĐÚNG",
+   "cards": [
+    {
+     "k": "CHĂM SÓC",
+     "v": "THÂN TÂM",
+     "at": [
+      4,
+      "chăm"
+     ]
+    },
+    {
+     "k": "KHÔNG THAY",
+     "v": "THUỐC MEN",
+     "at": [
+      4,
+      "không"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "BẠN ĐÃ BIẾT CHƯA?",
+     "at": [
+      5,
+      "Bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận nhé",
+     "at": [
+      5,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:38714055"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Bhaisajyaguru"
+ ],
+ "description": "Vì sao Phật Dược Sư có màu xanh lưu ly?\n\nNguồn: https://en.wikipedia.org/wiki/Bhaisajyaguru",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

@@ -1,0 +1,318 @@
+{
+ "title": "Một núi phép nhân",
+ "lines": [
+  {
+   "t": "Mạng nơ-ron nghe như bộ não, nhưng bên trong nó gần với một bảng tính khổng lồ hơn.",
+   "p": 0.8
+  },
+  "Mỗi kết nối là một con số, gọi là trọng số.",
+  {
+   "t": "Ảnh đi vào, được nhân với hàng triệu trọng số, cộng lại, rồi chuyển sang lớp tiếp theo.",
+   "p": 1.0
+  },
+  "Dạy một mạng nơ-ron nghĩa là làm việc ấy hàng triệu lần.",
+  "Mỗi lần đoán sai, chỉnh từng trọng số một chút, rồi đoán lại.",
+  "Ví dụ, máy nhìn một con mèo và đoán là con cáo.",
+  "Nó lần ngược lại xem trọng số nào đã đẩy nó về phía cáo, rồi vặn mỗi trọng số đi một chút.",
+  "Một bức ảnh chưa đủ. Phải làm vậy với hơn một triệu bức ảnh, cả bộ ảnh được lặp lại khoảng chín mươi lượt.",
+  "Mạng của Alex có sáu mươi triệu trọng số.",
+  {
+   "t": "Mỗi bức ảnh đi qua mạng là hàng trăm triệu phép nhân.",
+   "p": 1.0
+  },
+  "Nghe có quen không? Hàng triệu phép tính nhỏ, giống hệt nhau, không cần chờ nhau.",
+  "Đúng là một núi hành, chờ hàng nghìn phụ bếp.",
+  "Năm 2009, ở Đại học Stanford, nhóm của Andrew Ng thử dạy mạng nơ-ron trên card đồ hoạ.",
+  "Trong bài toán họ chọn, máy chạy nhanh hơn tới năm mươi lăm lần so với một bộ xử lý hai lõi thời ấy.",
+  {
+   "t": "Một mạng lớn trước đây mất vài tuần để dạy, nay chỉ còn khoảng một ngày.",
+   "p": 1.0
+  },
+  "Nhưng tốc độ thôi chưa đủ.",
+  "Một cỗ máy học nhìn ảnh cần thứ thứ hai: rất nhiều ảnh, có người gọi tên sẵn.",
+  "Và thứ ấy vừa mới xong, ở chính Stanford."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "CHƯƠNG BỐN",
+   "title": "MỘT NÚI\nPHÉP NHÂN",
+   "sub": "MẠNG NƠ-RON TỪ BÊN TRONG",
+   "vid": "1085656",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "mạng"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    0,
+    "nhưng"
+   ],
+   "items": [
+    {
+     "text": "BỘ NÃO",
+     "at": [
+      0,
+      "nhưng"
+     ],
+     "fx": "strike",
+     "strikeAt": [
+      0,
+      "bảng"
+     ]
+    },
+    {
+     "text": "BẢNG TÍNH KHỔNG LỒ",
+     "at": [
+      0,
+      "bảng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "1 KẾT NỐI = 1 CON SỐ",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "trọng số",
+     "at": [
+      1,
+      "trọng"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "MỘT LỚP",
+   "rows": [
+    {
+     "k": "1",
+     "v": "ẢNH × TRỌNG SỐ",
+     "at": [
+      2,
+      "nhân"
+     ]
+    },
+    {
+     "k": "2",
+     "v": "CỘNG LẠI",
+     "at": [
+      2,
+      "cộng"
+     ]
+    },
+    {
+     "k": "3",
+     "v": "SANG LỚP SAU",
+     "at": [
+      2,
+      "chuyển"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "ĐOÁN SAI → CHỈNH → ĐOÁN LẠI",
+     "at": 4,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "MÈO",
+     "at": 5
+    },
+    {
+     "text": "→ “CÁO”",
+     "at": [
+      5,
+      "cáo"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "LẦN NGƯỢC",
+     "at": 6,
+     "acc": true
+    },
+    {
+     "text": "vặn mỗi trọng số một chút",
+     "at": [
+      6,
+      "vặn"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "from": 0,
+   "to": 90,
+   "prefix": "≈ ",
+   "suffix": " LƯỢT",
+   "label": "LẶP LẠI CẢ BỘ > 1 TRIỆU ẢNH",
+   "sub": {
+    "text": "KRIZHEVSKY, SUTSKEVER, HINTON · NEURIPS 2012",
+    "at": 7
+   }
+  },
+  {
+   "type": "counter",
+   "at": 8,
+   "from": 0,
+   "to": 60000000,
+   "suffix": " TRỌNG SỐ",
+   "label": "MẠNG CỦA ALEX",
+   "sub": {
+    "text": "KRIZHEVSKY, SUTSKEVER, HINTON · NEURIPS 2012",
+    "at": 8
+   }
+  },
+  {
+   "type": "slam",
+   "at": 9,
+   "text": "HÀNG TRĂM TRIỆU PHÉP NHÂN",
+   "sub": "CHO MỖI BỨC ẢNH"
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "NHỎ · GIỐNG NHAU · KHÔNG CHỜ NHAU",
+     "at": [
+      10,
+      "hàng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "NÚI HÀNH",
+     "at": 11,
+     "acc": true
+    },
+    {
+     "text": "chờ hàng nghìn phụ bếp",
+     "at": [
+      11,
+      "chờ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 12,
+   "k": "ICML 2009 · RAINA, MADHAVAN, NG",
+   "name": "Đại học Stanford",
+   "desc": "Dạy mạng nơ-ron trên card đồ hoạ",
+   "rows": [
+    {
+     "k": "TỐC ĐỘ",
+     "v": "nhanh hơn *tới 55 lần*",
+     "at": 13
+    },
+    {
+     "k": "SO VỚI",
+     "v": "CPU 2 lõi thời ấy",
+     "at": [
+      13,
+      "hai"
+     ]
+    },
+    {
+     "k": "THỜI GIAN",
+     "v": "*vài tuần → ~1 ngày*",
+     "at": 14
+    }
+   ],
+   "label": {
+    "k": "LƯU Ý",
+    "v": "TRONG BÀI TOÁN HỌ CHỌN",
+    "at": 13
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "TỐC ĐỘ",
+     "at": 15
+    },
+    {
+     "text": "CHƯA ĐỦ",
+     "at": [
+      15,
+      "chưa"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "items": [
+    {
+     "text": "THỨ HAI",
+     "at": 16,
+     "sm": true
+    },
+    {
+     "text": "RẤT NHIỀU ẢNH CÓ TÊN",
+     "at": [
+      16,
+      "rất"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "MỘT NÚI PHÉP NHÂN"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.12
+ }
+}

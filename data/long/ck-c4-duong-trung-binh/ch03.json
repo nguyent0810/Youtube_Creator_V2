@@ -1,0 +1,294 @@
+{
+ "title": "Cắt giả",
+ "lines": [
+  {
+   "t": "Muốn nhanh hơn, người ta dùng cửa sổ ngắn hơn.",
+   "p": 0.8
+  },
+  {
+   "t": "Nhưng cửa sổ ngắn thì nhạy với từng nhịp nhiễu của thị trường.",
+   "p": 1.0
+  },
+  "Kênh đã đếm trên VN-Index, từ tháng bảy năm hai nghìn không trăm mười chín tới nay.",
+  "Mỗi lần giá đóng cửa chuyển từ trên MA hai trăm xuống dưới, hoặc ngược lại, tính là một lần đổi phía.",
+  "Trong hơn bảy năm, giá đổi phía bốn mươi lăm lần.",
+  {
+   "t": "Hai mươi lăm lần trong số đó, giá quay lại phía cũ chỉ trong mười phiên.",
+   "p": 1.0
+  },
+  "Người chơi gọi những lần như vậy là cắt giả.",
+  "Hãy nhìn một ví dụ, ngay trước một biến cố lớn.",
+  "Ngày hai mươi lăm tháng mười một năm hai nghìn không trăm mười chín, giá thủng MA hai trăm.",
+  "Ngày hai mươi tháng một năm sau, giá vượt lên lại. Ai bán ở lần trước, giờ thấy mình bán hớ.",
+  {
+   "t": "Chỉ chín phiên sau, ngày ba mươi mốt tháng một, giá lại thủng. Lần này, dịch bệnh ập tới, và chỉ số rơi tới đáy tháng ba.",
+   "p": 1.0
+  },
+  "Cùng một kiểu tín hiệu, có lần là báo động giả, có lần là thật.",
+  {
+   "t": "Đường kẻ không cho bạn biết trước lần nào là lần nào.",
+   "p": 1.0
+  },
+  "Bạn bán vì giá thủng đường, vài ngày sau giá lại vượt lên, bạn mua lại ở giá cao hơn.",
+  {
+   "t": "Mỗi lần như thế, ngoài phần chênh lệch giá, còn mất phí giao dịch, và thuế khi bán.",
+   "p": 1.0
+  },
+  "Còn khi tín hiệu là thật, như sau đỉnh năm hai nghìn không trăm hai mươi hai, giá nằm dưới MA hai trăm suốt hai trăm bảy mươi chín phiên liền, hơn một năm.",
+  "Tức là đường kẻ không vô dụng: nó cho thấy cả một năm chỉ số đi xuống.",
+  {
+   "t": "Vấn đề là nó chỉ cho thấy khi đã đi được một đoạn, và nó không phân biệt được trước đâu là thật, đâu là giả.",
+   "p": 1.0
+  },
+  "Cắt giả hay xảy ra nhất khi thị trường đi ngang, giá lắc lư quanh đường trung bình.",
+  "Lúc ấy, đường kẻ giống một sợi dây căng giữa phòng, còn giá cứ bước qua bước lại.",
+  "Và đó cũng là lúc nhiều người tin vào đường kẻ nhất, vì họ đang chờ một tín hiệu rõ ràng."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "CẮT GIẢ",
+   "sub": "KHI ĐƯỜNG KẺ BÁO ĐỘNG NHẦM",
+   "vid": "5467579",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "muốn"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "CỬA SỔ NGẮN",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "NHẠY VỚI NHIỄU",
+     "at": [
+      1,
+      "nhạy"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "KÊNH ĐẾM · MA200 · 07/2019 → 10/2026",
+   "srcnote": "KÊNH TỰ TÍNH · QUÁ KHỨ · KHÔNG PHẢI TÍN HIỆU",
+   "rows": [
+    {
+     "k": "ĐỔI PHÍA",
+     "v": "45 LẦN",
+     "at": 4
+    },
+    {
+     "k": "ĐỔI LẠI ≤ 10 PHIÊN",
+     "v": "25 LẦN",
+     "at": 5
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "CẮT GIẢ",
+   "sub": "25/45 LẦN ĐỔI PHÍA · KÊNH TỰ TÍNH · QUÁ KHỨ · KHÔNG PHẢI TÍN HIỆU"
+  },
+  {
+   "type": "candles",
+   "at": 7,
+   "series": "vnindex",
+   "from": "2019-10-01",
+   "to": "2020-03-31",
+   "drawAt": [
+    7,
+    null,
+    0,
+    0.1
+   ],
+   "until": [
+    10,
+    "rơi"
+   ],
+   "title": "VN-INDEX + MA200 · TRƯỚC DỊCH",
+   "range": "10/2019 → 03/2020",
+   "ind": [
+    {
+     "k": "sma",
+     "n": 200,
+     "color": "#fbbf24",
+     "at": [
+      7,
+      "ví"
+     ]
+    }
+   ],
+   "marks": [
+    {
+     "date": "2019-11-25",
+     "text": "THỦNG",
+     "at": 8,
+     "pos": "below",
+     "tone": "down"
+    },
+    {
+     "date": "2020-01-20",
+     "text": "VƯỢT LẠI",
+     "at": 9,
+     "pos": "above",
+     "tone": "up"
+    },
+    {
+     "date": "2020-01-31",
+     "text": "THỦNG · 9 PHIÊN SAU",
+     "at": 10,
+     "pos": "below",
+     "tone": "down"
+    }
+   ],
+   "source": "DỮ LIỆU: HOSE (VNSTOCK/VCI), KÊNH TỰ TÍNH. MINH HOẠ QUÁ KHỨ, KHÔNG PHẢI KHUYẾN NGHỊ."
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "BÁO ĐỘNG GIẢ",
+     "at": 11
+    },
+    {
+     "text": "HAY THẬT?",
+     "at": [
+      11,
+      "thật"
+     ],
+     "acc": true
+    },
+    {
+     "text": "đường kẻ không cho biết trước",
+     "at": 12,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 13,
+   "title": "MỖI LẦN CẮT GIẢ",
+   "rows": [
+    {
+     "k": "1",
+     "v": "BÁN → MUA LẠI GIÁ CAO HƠN",
+     "at": 13
+    },
+    {
+     "k": "2",
+     "v": "+ PHÍ GIAO DỊCH · + THUẾ KHI BÁN",
+     "at": 14
+    }
+   ]
+  },
+  {
+   "type": "candles",
+   "at": 15,
+   "series": "vnindex",
+   "from": "2022-01-03",
+   "to": "2023-07-31",
+   "drawAt": [
+    15,
+    null,
+    0,
+    0.1
+   ],
+   "until": [
+    16,
+    "xuống"
+   ],
+   "title": "DƯỚI MA200 · 279 PHIÊN LIỀN",
+   "range": "19/04/2022 → 31/05/2023",
+   "ind": [
+    {
+     "k": "sma",
+     "n": 200,
+     "color": "#fbbf24",
+     "at": [
+      15,
+      "dưới"
+     ]
+    }
+   ],
+   "source": "DỮ LIỆU: HOSE (VNSTOCK/VCI), KÊNH TỰ TÍNH. MINH HOẠ QUÁ KHỨ, KHÔNG PHẢI KHUYẾN NGHỊ."
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "CHỈ THẤY KHI ĐÃ ĐI MỘT ĐOẠN",
+     "at": 17,
+     "acc": true
+    },
+    {
+     "text": "không phân biệt trước thật / giả",
+     "at": [
+      17,
+      "không"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 18,
+   "items": [
+    {
+     "text": "THỊ TRƯỜNG ĐI NGANG",
+     "at": 18,
+     "acc": true
+    },
+    {
+     "text": "giá lắc lư quanh đường trung bình",
+     "at": [
+      18,
+      "giá"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 20,
+   "items": [
+    {
+     "text": "LÚC TIN ĐƯỜNG KẺ NHẤT",
+     "at": 20
+    },
+    {
+     "text": "= LÚC NÓ SAI NHIỀU NHẤT",
+     "at": [
+      20,
+      "vì"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "CẮT GIẢ"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

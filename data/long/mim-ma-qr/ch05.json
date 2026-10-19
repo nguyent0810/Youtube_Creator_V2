@@ -1,0 +1,196 @@
+{
+ "title": "Món quà không thu phí",
+ "lines": [
+  {
+   "t": "Năm 1994, mã QR ra mắt.",
+   "p": 0.8
+  },
+  "Và Denso đứng trước một lựa chọn.",
+  {
+   "t": "Họ nắm bằng sáng chế. Họ có thể thu tiền mỗi lần ai đó dùng nó.",
+   "p": 1.0
+  },
+  "Họ đã không làm thế.",
+  "Công ty giữ bằng sáng chế, nhưng công bố tiêu chuẩn, và tuyên bố không thu phí với những mã làm đúng chuẩn.",
+  {
+   "t": "Năm 2000, mã QR trở thành một tiêu chuẩn quốc tế.",
+   "p": 1.0
+  },
+  "Ai cũng được dùng. Ai cũng được in. Không cần xin phép.",
+  "Sau này, Hara nói đùa với một tờ báo.",
+  {
+   "t": "Chúng tôi không nhận được đồng hoa hồng nào mỗi lần nó được dùng.",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Đây là câu trả lời cho câu hỏi ở đầu video.",
+  "Một thứ miễn phí, ai cũng làm được máy đọc, ai cũng tự in được.",
+  {
+   "t": "Nó lan đi theo cách mà một thứ phải trả tiền khó làm được.",
+   "p": 1.0
+  },
+  "Và nó lan tới những nơi mà chính người làm ra nó không ngờ.",
+  "Hara từng nghĩ mã QR sẽ phổ biến trong công nghiệp.",
+  "Còn chuyện người ta dùng nó để trả tiền, ông bảo, là điều thật sự bất ngờ."
+ ],
+ "scenes": [
+  {
+   "type": "date",
+   "day": "MÃ QR RA MẮT",
+   "date": "1994"
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "DENSO ĐỨNG TRƯỚC MỘT LỰA CHỌN",
+   "rows": [
+    {
+     "k": "HỌ CÓ",
+     "v": "BẰNG SÁNG CHẾ",
+     "at": 2
+    },
+    {
+     "k": "HỌ CÓ THỂ",
+     "v": "THU TIỀN MỖI LẦN DÙNG",
+     "at": [
+      2,
+      "thu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "HỌ KHÔNG LÀM THẾ"
+  },
+  {
+   "type": "timeline",
+   "at": 4,
+   "items": [
+    {
+     "year": "1994",
+     "text": "ra mắt · công bố tiêu chuẩn",
+     "at": [
+      4,
+      "công"
+     ]
+    },
+    {
+     "year": "—",
+     "text": "*không thu phí* với mã làm đúng chuẩn",
+     "at": [
+      4,
+      "tuyên"
+     ]
+    },
+    {
+     "year": "2000",
+     "text": "thành *tiêu chuẩn quốc tế*",
+     "at": 5
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 6,
+   "title": "KHÔNG CẦN XIN PHÉP",
+   "rows": [
+    {
+     "k": "AI CŨNG",
+     "v": "ĐƯỢC DÙNG",
+     "at": 6
+    },
+    {
+     "k": "AI CŨNG",
+     "v": "ĐƯỢC IN",
+     "at": [
+      6,
+      "in."
+     ]
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 7,
+   "text": "Chúng tôi không nhận được đồng hoa hồng nào mỗi lần nó được dùng.",
+   "by": "MASAHIRO HARA · THE GUARDIAN, 2020 · TRÍCH DỊCH",
+   "qline": 8
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "CÂU TRẢ LỜI",
+     "at": 9,
+     "sm": true
+    },
+    {
+     "text": "MIỄN PHÍ",
+     "at": [
+      10,
+      "miễn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "ai cũng làm được máy đọc · ai cũng tự in được",
+     "at": [
+      10,
+      "ai"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": 11,
+   "img": "pepsi",
+   "tone": "color",
+   "illus": "ẢNH MINH HỌA · CC BY 2.0",
+   "side": {
+    "k": "LAN ĐI",
+    "h": "TỚI NƠI\nKHÔNG AI NGỜ",
+    "lines": [
+     {
+      "text": "lon nước · bao bì · *quầy hàng*",
+      "at": [
+       12,
+       "lan"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 13,
+   "title": "ĐIỀU HARA KHÔNG NGỜ",
+   "srcnote": "DIỄN Ý LỜI HARA TRONG CÁC BÀI PHỎNG VẤN",
+   "rows": [
+    {
+     "k": "ÔNG NGHĨ",
+     "v": "PHỔ BIẾN TRONG CÔNG NGHIỆP",
+     "at": 13
+    }
+   ],
+   "total": {
+    "k": "BẤT NGỜ",
+    "v": "NGƯỜI TA DÙNG ĐỂ TRẢ TIỀN",
+    "at": 14
+   }
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "MÓN QUÀ KHÔNG THU PHÍ"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

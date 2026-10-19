@@ -1,0 +1,299 @@
+{
+ "title": "Xanh, đỏ, và cái bẫy màu",
+ "lines": [
+  {
+   "t": "Giờ tới màu sắc, chỗ người mới hay nhầm nhất.",
+   "p": 0.8
+  },
+  "Trên hầu hết biểu đồ nến ở Việt Nam, nến xanh là phiên đóng cửa cao hơn mở cửa.",
+  "Nến đỏ là phiên đóng cửa thấp hơn mở cửa.",
+  "Còn ở bài hai, bạn đã thấy bảng giá tô màu theo một cách khác.",
+  "Trên bảng giá, xanh nghĩa là cao hơn giá tham chiếu, tức giá đóng cửa của phiên hôm trước. Đỏ là thấp hơn.",
+  {
+   "t": "Hai thứ màu này so với hai cái mốc khác nhau.",
+   "p": 1.0
+  },
+  "Nên có những ngày chỉ số tăng, bảng giá xanh, mà cây nến lại đỏ.",
+  "Thứ Ba, hai mươi bốn tháng ba, là một ngày như vậy.",
+  "Hôm trước, chỉ số vừa đóng cửa ở mức thấp nhất của năm nay, khoảng một nghìn năm trăm chín mươi mốt điểm.",
+  "Sáng thứ Ba, chỉ số mở cửa cao vọt, quanh một nghìn sáu trăm hai mươi sáu.",
+  "Rồi nó không giữ được mức ấy, và đóng cửa ở khoảng một nghìn sáu trăm mười lăm.",
+  "So với hôm trước, chỉ số tăng gần một phẩy năm phần trăm. Bảng giá xanh.",
+  {
+   "t": "So với lúc mở cửa, nó thấp hơn. Cây nến đỏ.",
+   "p": 1.0
+  },
+  {
+   "t": "Thế rốt cuộc hôm đó là ngày tăng hay ngày giảm?",
+   "ask": 1
+  },
+  "Cả hai màu đều đúng. Chúng chỉ trả lời hai câu hỏi khác nhau.",
+  "Màu nến hỏi: trong phiên, giá đi lên hay đi xuống? Màu bảng giá hỏi: so với hôm qua, giá cao hơn hay thấp hơn?",
+  "Kênh tự đếm trên tám năm dữ liệu VN-Index: cứ sáu, bảy phiên lại có một phiên hai màu này ngược nhau.",
+  "Có biểu đồ còn vẽ nến tăng rỗng ruột, nến giảm tô đặc, hoặc dùng màu khác hẳn.",
+  "Nên trước khi đọc, hãy liếc qua chú thích màu của chính biểu đồ ấy."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "XANH, ĐỎ,\nVÀ CÁI BẪY MÀU",
+   "sub": "HAI THỨ MÀU · HAI CÁI MỐC",
+   "titleAt": [
+    0,
+    "Giờ"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "HAI THỨ MÀU, HAI CÁI MỐC",
+   "rows": [
+    {
+     "k": "MÀU NẾN",
+     "v": "ĐÓNG CỬA so với MỞ CỬA",
+     "at": [
+      1,
+      "Trên"
+     ]
+    },
+    {
+     "k": "→ XANH / ĐỎ",
+     "v": "ĐÓNG CAO HƠN / THẤP HƠN MỞ",
+     "at": [
+      2,
+      "Nến"
+     ]
+    },
+    {
+     "k": "MÀU BẢNG GIÁ",
+     "v": "GIÁ so với THAM CHIẾU",
+     "at": [
+      4,
+      "Trên"
+     ]
+    }
+   ],
+   "total": {
+    "k": "THAM CHIẾU",
+    "v": "= ĐÓNG CỬA PHIÊN HÔM TRƯỚC",
+    "at": [
+     4,
+     "tức"
+    ]
+   },
+   "srcnote": "Giá tham chiếu, giá mở cửa (ATO): Quy chế giao dịch VNX, QĐ 22/QĐ-HĐTV ngày 18/04/2025 · màu bảng giá: quy ước hiển thị phổ biến"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "HAI CÁI MỐC KHÁC NHAU",
+     "at": [
+      5,
+      "Hai"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "candles",
+   "at": 6,
+   "series": "vnindex",
+   "from": "2026-03-19",
+   "to": "2026-03-27",
+   "drawAt": [
+    6,
+    "Nên",
+    0,
+    0.1
+   ],
+   "until": [
+    6,
+    "lại"
+   ],
+   "title": "VN-INDEX · 19–27/03/2026",
+   "range": "NẾN ĐỎ MÀ CHỈ SỐ TĂNG?",
+   "ind": [],
+   "source": "DỮ LIỆU: VN-INDEX · HOSE (VNSTOCK/VCI) · KÊNH TỰ TÍNH · MINH HOẠ QUÁ KHỨ, KHÔNG PHẢI KHUYẾN NGHỊ",
+   "marks": [
+    {
+     "date": "2026-03-23",
+     "text": "1.591,17 · ĐÓNG CỬA THẤP NHẤT 2026 (TỚI 06/10)",
+     "pos": "below",
+     "tone": "down",
+     "at": [
+      8,
+      "thấp"
+     ],
+     "dx": 60
+    },
+    {
+     "date": "2026-03-24",
+     "text": "24/03 · MỞ CAO VỌT ≈ 1.626",
+     "pos": "above",
+     "tone": "gold",
+     "at": [
+      9,
+      "mở"
+     ],
+     "dx": 200,
+     "dy": -200
+    },
+    {
+     "date": "2026-03-24",
+     "text": "ĐÓNG 1.614,77 → NẾN ĐỎ",
+     "pos": "below",
+     "tone": "down",
+     "at": [
+      10,
+      "đóng"
+     ],
+     "dx": 450,
+     "dy": -60
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 11,
+   "title": "24/03/2026 · VN-INDEX",
+   "rows": [
+    {
+     "k": "THAM CHIẾU (ĐÓNG CỬA 23/03)",
+     "v": "1.591,17",
+     "at": [
+      11,
+      "So",
+      0,
+      0.05
+     ]
+    },
+    {
+     "k": "ĐÓNG CỬA 24/03",
+     "v": "1.614,77",
+     "at": [
+      11,
+      "hôm"
+     ]
+    },
+    {
+     "k": "SO HÔM TRƯỚC → BẢNG GIÁ XANH",
+     "v": "+23,60 (+1,48%)",
+     "at": [
+      11,
+      "tăng"
+     ]
+    },
+    {
+     "k": "MỞ CỬA",
+     "v": "≈ 1.626",
+     "at": [
+      12,
+      "So"
+     ]
+    }
+   ],
+   "total": {
+    "k": "SO VỚI MỞ CỬA → NẾN ĐỎ",
+    "v": "≈ −11,6",
+    "at": [
+     12,
+     "Cây"
+    ]
+   },
+   "srcnote": "Thời báo Tài chính, Người Lao Động, Vietnambiz 24/03/2026 (đóng cửa +23,60; đầu phiên tăng hơn 30 điểm) · giá mở: dữ liệu HOSE qua vnstock/VCI"
+  },
+  {
+   "type": "question",
+   "at": 13,
+   "text": "Vậy hôm đó là ngày tăng\nhay ngày giảm?"
+  },
+  {
+   "type": "slam",
+   "at": [
+    14,
+    "Cả",
+    0,
+    -0.3
+   ],
+   "hitAt": [
+    14,
+    "Cả"
+   ],
+   "text": "HAI MÀU · HAI CÂU HỎI",
+   "sub": "CẢ HAI ĐỀU ĐÚNG"
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "MÀU NẾN: TRONG PHIÊN, ĐI LÊN HAY ĐI XUỐNG?",
+     "at": [
+      15,
+      "Màu"
+     ]
+    },
+    {
+     "text": "MÀU BẢNG GIÁ: SO VỚI HÔM QUA?",
+     "at": [
+      15,
+      "Màu",
+      1
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 16,
+   "from": 0,
+   "to": 15,
+   "suffix": "%",
+   "label": "PHIÊN CÓ MÀU NẾN NGƯỢC MÀU BẢNG GIÁ",
+   "sub": {
+    "text": "≈ 1 PHIÊN / 6–7 PHIÊN · VN-INDEX 10/2018–10/2026 · KÊNH TỰ ĐẾM (NGUỒN DỮ LIỆU KHÁC: 16%)",
+    "at": [
+     16,
+     "sáu"
+    ]
+   },
+   "srcnote": "Kênh tự tính · 302 / 1.990 phiên = 15,2% (vnstock/VCI) · nguồn dữ liệu thứ ba: 16,4%"
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "RỖNG / ĐẶC · HAY MÀU KHÁC HẲN",
+     "at": [
+      17,
+      "Có"
+     ],
+     "sm": true
+    },
+    {
+     "text": "XEM CHÚ THÍCH MÀU CỦA CHÍNH BIỂU ĐỒ",
+     "at": [
+      18,
+      "Nên"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "XANH, ĐỎ, VÀ CÁI BẪY MÀU"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.123
+ }
+}

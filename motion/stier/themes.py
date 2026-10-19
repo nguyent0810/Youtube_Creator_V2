@@ -3,6 +3,8 @@
 "case" = kênh Hình Sự (CL): hồ sơ lưu trữ cắt dán, giữ NGUYÊN mọi mặc định cũ.
 "mim"  = Mind in the Machine: phòng thí nghiệm tối, lưới mảnh, nhấn xanh cyan,
          giọng riêng, nhạc nền CC BY dưới giọng đọc, Beat Text kiểu công nghệ.
+"ck"   = Biểu Đồ Biết Nói (tài chính cá nhân): nền xanh than #0a1426 như logo, vàng #fbbf24
+         = giá tham chiếu, xanh lá tăng / đỏ giảm, cảnh "chart" (cột / đường), giọng Xuân Vĩnh.
 
 Spec chọn bằng "theme": "mim" (không ghi = "case"). Thiết kế + lý do (2 vòng
 Grok): docs/channels/mind-in-the-machine/2026-10-06-stier-design.md.
@@ -26,12 +28,79 @@ MIM_TRACKS = {
     "chill_wave.mp3": "Chill Wave",
     "hyperfun.mp3": "Hyperfun",
     "ouroboros.mp3": "Ouroboros",
+    "hackbeat.mp3": "Hackbeat",
+    "equatorial_complex.mp3": "Equatorial Complex",
+    "late_night_radio.mp3": "Late Night Radio",
+    "wallpaper.mp3": "Wallpaper",
+    "ice_flow.mp3": "Ice Flow",
+    "investigations.mp3": "Investigations",
+    "deliberate_thought.mp3": "Deliberate Thought",
+    "voxel_revolution.mp3": "Voxel Revolution",
+    "space_jazz.mp3": "Space Jazz",
+    "ultralounge.mp3": "Ultralounge",
+    "blip_stream.mp3": "Blip Stream",
+    "pixelland.mp3": "Pixelland",
+    "electrodoodle.mp3": "Electrodoodle",
+    "getting_it_done.mp3": "Getting it Done",
+    "newer_wave.mp3": "Newer Wave",
+    "cool_vibes.mp3": "Cool Vibes",
+    "funkorama.mp3": "Funkorama",
+    "montauk_point.mp3": "Montauk Point",
 }
+
+# Kênh CK (06/10/2026): KHÔNG tải bài mới -- dùng lại các bài MacLeod đã có trong output/music/,
+# chỉ những bài êm / tò mò / ấm (bỏ Digital Lemonade, Hyperfun: quá nhí nhảnh cho chuyện tiền bạc).
+# Sổ chọn nhạc riêng của kênh (data/variety/ck_music.json) -> không xoay vòng chung với MIM.
+CK_TRACKS = {   # thư viện RIÊNG kênh CK (06/10/2026) -- không dùng chung nhạc MIM (tránh lặp nhạc giữa các kênh)
+    "local_forecast_elevator.mp3": "Local Forecast - Elevator",
+    "lobby_time.mp3": "Lobby Time",
+    "easy_lemon.mp3": "Easy Lemon",
+    "daily_beetle.mp3": "Daily Beetle",
+    "carefree.mp3": "Carefree",
+    "backbay_lounge.mp3": "Backbay Lounge",
+    "wholesome.mp3": "Wholesome",
+    "dreamer.mp3": "Dreamer",
+    "airport_lounge.mp3": "Airport Lounge",
+    "bossa_antigua.mp3": "Bossa Antigua",
+    "george_street_shuffle.mp3": "George Street Shuffle",
+    "sidewalk_shade.mp3": "Sidewalk Shade",
+    "somewhere_sunny.mp3": "Somewhere Sunny",
+    "marty_gots_a_plan.mp3": "Marty Gots a Plan",
+    "carpe_diem.mp3": "Carpe Diem",
+    "life_of_riley.mp3": "Life of Riley",
+    "pamgaea.mp3": "Pamgaea",
+    "sincerely.mp3": "Sincerely",
+    "thinking_music.mp3": "Thinking Music",
+    "hep_cats.mp3": "Hep Cats",
+    "faster_does_it.mp3": "Faster Does It",
+    "bass_walker.mp3": "Bass Walker",
+    "apero_hour.mp3": "Apero Hour",
+    "opportunity_walks.mp3": "Opportunity Walks",
+    "no_frills_salsa.mp3": "No Frills Salsa",
+    "onion_capers.mp3": "Onion Capers",
+}
+CK_MUSIC_LEDGER = ROOT / "data" / "variety" / "ck_music.json"
+
+# Kênh Phật Giáo (BUD, 09/10/2026): Short TikTok/YT "chữa lành" -- nhạc MacLeod chậm, ấm, đã có sẵn trong output/music/.
+# Sổ chọn nhạc riêng (data/variety/bud_music.json) -> không xoay vòng chung với MIM/CK.
+# 09/10/2026: mở rộng thành 9 bài chậm/êm cho hệ thống đa dạng (motion/stier/bud_variety.py chọn bài theo format).
+BUD_TRACKS = {
+    "healing.mp3": "Healing",
+    "at_rest.mp3": "At Rest",
+    "clean_soul.mp3": "Clean Soul",
+    "floating_cities.mp3": "Floating Cities",
+    "fluidscape.mp3": "Fluidscape",
+    "perspectives.mp3": "Perspectives",
+    "frost_waltz.mp3": "Frost Waltz",
+    "ether_vox.mp3": "Ether Vox",
+    "arcadia.mp3": "Arcadia",
+}
+BUD_MUSIC_LEDGER = ROOT / "data" / "variety" / "bud_music.json"
 
 THEMES = {
     "case": {"voice": "Anh Khôi", "accent": "#e2402d", "sound": "drone", "pools": None, "js": {}},
     "mim": {
-        "voice": "Hải Đăng",            # nam, giọng Bắc, tự nhiên -- khác mọi giọng của 3 kênh kia
+        "voice": "Thanh Bình",          # chủ kênh chọn 12/10/2026 (nam, Bắc, kể chuyện; trước đó: Hải Đăng)
         "img_license": "by",            # Commons: PD/CC0 + CC BY có ghi công (không BY-SA); thêm NASA:<id>
         "accent": "#22d3ee",
         "sound": "music",
@@ -49,6 +118,40 @@ THEMES = {
         "js": {"cls": "theme-mim", "frame": "print", "tone": "color", "pop": True, "karaoke": True,
                "prompt": True, "drift": True,
                "labels": {"unit": "NGÀY", "file": "GIẢI MÃ"}},
+    },
+    # Biểu Đồ Biết Nói (docs/channels/chung-khoan/2026-10-06-positioning.md mục 4): Short 9:16 "1 con số".
+    # Như "mim" (nhạc CC BY, karaoke, Beat Text theo dòng) nhưng tiết chế hơn: không flicker/glitch
+    # (chuyện tiền bạc -- không giật gân), CSS riêng theme-ck.css, nhạc + sổ nhạc riêng.
+    "ck": {
+        "voice": "Ngọc Huyền",          # chủ kênh chọn 12/10/2026: cùng giọng dẫn video dài CK (trước đó: Xuân Vĩnh)
+        "gap": 0.5,                     # Xuân Vĩnh đọc nhanh (~4,1–4,6 từ/s): 0,5 s lặng giữa các câu cho số kịp "ngấm"
+        "img_license": "by",
+        "accent": "#fbbf24",            # vàng = giá tham chiếu trên bảng giá VN (logo_a)
+        "sound": "music",
+        "music_gain": 0.14,             # nhạc thấp hơn MIM một chút: lời + số là chính
+        "tracks": CK_TRACKS,
+        "ledger": CK_MUSIC_LEDGER,
+        "pools": {"N": ["rise", "blur", "slice"], "A": ["marker", "outline"],
+                  "S": ["rise", "blur"], "D": ["scramble", "rise"],
+                  "X": ["punch", "zoom", "outline"], "per_line": True, "sync": True},
+        "js": {"cls": "theme-ck", "css": "theme-ck.css", "frame": "print", "tone": "color", "pop": True,
+               "karaoke": True, "drift": True, "labels": {"unit": "THÁNG", "file": "SỐ LIỆU"}},
+    },
+    # Phật Giáo (BUD): ấm, tĩnh, một màu nhấn vàng nghệ trên nền nâu trầm (theme-bud.css). Giọng nữ "Ngọc Huyền"
+    # (giọng của 35 bundle BUD). Beat Text tiết chế: không flicker/glitch/slice (không giật gân với lời Phật dạy).
+    "bud": {
+        "voice": "Ngọc Huyền",
+        "img_license": "by",
+        "accent": "#f5b041",
+        "sound": "music",
+        "music_gain": 0.2,
+        "tracks": BUD_TRACKS,
+        "ledger": BUD_MUSIC_LEDGER,
+        "pools": {"N": ["rise", "blur"], "A": ["marker", "outline"],
+                  "S": ["rise", "blur"], "D": ["scramble", "rise"],
+                  "X": ["zoom", "punch", "outline"], "per_line": True, "sync": True},
+        "js": {"cls": "theme-bud", "css": "theme-bud.css", "frame": "print", "tone": "color", "pop": True,
+               "karaoke": True, "drift": False, "labels": {"unit": "NGÀY", "file": "LỜI PHẬT DẠY"}},
     },
 }
 
@@ -76,19 +179,37 @@ def pick_track(slug: str, pool: list[str], ledger: Path = MUSIC_LEDGER) -> str:
     return choice
 
 
-def music_filter(gain: float, quiet: list[tuple[float, float]]) -> str:
+def track_offset(slug: str, file: str, need: float) -> int:
+    """Giây bắt đầu trong bài nhạc cho `slug` (tất định theo slug): mỗi Short lấy một ĐOẠN khác của bài, không phải lúc nào
+    cũng 25 giây đầu. Bước 15 giây, chừa đủ `need` giây + 5 giây cuối bài."""
+    import subprocess, zlib
+    try:
+        dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0",
+                                    str(MUSIC_DIR / file)], capture_output=True, text=True).stdout.strip())
+    except (ValueError, OSError):
+        return 0
+    steps = int(max(0, dur - need - 5) // 15)
+    return 15 * (zlib.crc32(slug.encode()) % (steps + 1)) if steps > 0 else 0
+
+
+def music_filter(gain: float, quiet: list[tuple[float, float]], duck_ratio: float = 6, sfx_gain: float = 0.5) -> str:
     """filter_complex: [1]=giọng, [2]=sfx, [3]=nhạc. Thông số trộn của video dài
     (build_long.mix_chapter): nhạc ~0.16, nén theo giọng 0.03/6/40/600, cảnh
     `question` gần như tắt nhạc (khoảng lặng là cú đấm), loudnorm SAU khi trộn."""
     duck = "".join(f",volume=enable='between(t,{a - 0.1:.2f},{z:.2f})':volume=0.12" for a, z in quiet)
     return ("[1:a]aresample=48000,pan=stereo|c0=c0|c1=c0,apad,asplit=3[v][vk][vk2];"
-            "[2:a]volume=0.5[s0];[s0][vk]sidechaincompress=threshold=0.05:ratio=4:attack=20:release=300[s];"
+            f"[2:a]volume={sfx_gain:g}[s0];[s0][vk]sidechaincompress=threshold=0.05:ratio=4:attack=20:release=300[s];"
             f"[3:a]aresample=48000,volume={gain}{duck}[m0];"
-            "[m0][vk2]sidechaincompress=threshold=0.03:ratio=6:attack=40:release=600[m];"
+            f"[m0][vk2]sidechaincompress=threshold=0.03:ratio={duck_ratio:g}:attack=40:release=600[m];"
             "[v][s][m]amix=inputs=3:weights='1 1 1':normalize=0:duration=first,"
             "loudnorm=I=-14:TP=-1.5:LRA=11[a]")
 
 
+def tracks(th: dict) -> dict:
+    """Bài nhạc của một theme (mặc định: bộ MIM, như trước khi có theme "ck")."""
+    return th.get("tracks", MIM_TRACKS)
+
+
 def music_credit(file: str) -> str:
-    return (f"Music: \"{MIM_TRACKS.get(file, file)}\" by Kevin MacLeod (incompetech.com). "
+    return (f"Music: \"{({**CK_TRACKS, **MIM_TRACKS, **BUD_TRACKS}).get(file, file)}\" by Kevin MacLeod (incompetech.com). "
             "Licensed under Creative Commons: By Attribution 4.0 — http://creativecommons.org/licenses/by/4.0/")

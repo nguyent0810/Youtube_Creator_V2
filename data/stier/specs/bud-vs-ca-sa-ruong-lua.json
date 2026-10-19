@@ -1,0 +1,162 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "vi-sao",
+ "hook_type": "do-vui",
+ "open_shot": "rung-nui",
+ "voice": "Thanh Bình",
+ "music": "fluidscape.mp3",
+ "gap": 0.0,
+ "title": "Vì sao áo cà sa may như ruộng lúa?",
+ "kicker": "VÌ SAO?",
+ "sub": "GIẢI MÃ BIỂU TƯỢNG",
+ "acc": [
+  "ruộng",
+  "phước"
+ ],
+ "lines": [
+  "Đố bạn: áo cà sa của nhà sư được may theo hình của thứ gì?",
+  "Đáp án: những thửa ruộng lúa.",
+  "Theo Luật tạng, Đức Phật nhìn ruộng lúa xứ Ma Kiệt Đà, rồi bảo ngài A Nan may y như thế.",
+  "Mỗi tấm y ghép từ nhiều mảnh, như những bờ ruộng.",
+  "Vì thế cà sa còn gọi là áo ruộng phước, nơi gieo điều thiện.",
+  "Bạn đoán đúng không? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "items": [
+    {
+     "text": "MAY THEO HÌNH GÌ?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "áo cà sa",
+     "at": [
+      0,
+      "cà"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8711373"
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "RUỘNG LÚA",
+   "veil": 0.5,
+   "fx": "zoom",
+   "clip": "pexels:38013072"
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Luật tạng kể",
+   "nodes": [
+    {
+     "text": "RUỘNG MA KIỆT ĐÀ",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      2,
+      "ruộng"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "Y CÀ SA",
+     "x": 0.5,
+     "y": 0.65,
+     "at": [
+      2,
+      "may"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      2,
+      "bảo"
+     ]
+    }
+   ],
+   "note": "MAHĀVAGGA 8 · LUẬT TẠNG"
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 1,
+   "suffix": " TẤM Y",
+   "label": "GHÉP NHIỀU MẢNH · NHƯ BỜ RUỘNG"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "ÁO RUỘNG PHƯỚC",
+     "at": [
+      4,
+      "áo"
+     ],
+     "acc": true
+    },
+    {
+     "text": "nơi gieo điều thiện",
+     "at": [
+      4,
+      "nơi"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:33132442"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "BẠN ĐOÁN ĐÚNG KHÔNG?",
+     "at": [
+      5,
+      "Bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận nhé",
+     "at": [
+      5,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:5418501"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Kasaya_(clothing)"
+ ],
+ "description": "Vì sao áo cà sa may như ruộng lúa?\n\nNguồn: https://en.wikipedia.org/wiki/Kasaya_(clothing)",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

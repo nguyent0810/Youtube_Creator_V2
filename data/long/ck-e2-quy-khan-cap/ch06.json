@@ -1,0 +1,169 @@
+{
+ "title": "Khi nào phép tính này không đúng với bạn",
+ "lines": [
+  {
+   "t": "Như mọi video của kênh, đây là phần nói rõ giới hạn.",
+   "p": 0.8
+  },
+  "Thứ nhất, nếu bạn đang có nợ lãi cao, như nợ thẻ, thứ tự có thể khác.",
+  {
+   "t": "Nhiều người chọn để một tấm đệm thật mỏng trước, rồi dồn sức trả nợ, rồi mới làm dày tấm đệm.",
+   "p": 1.0
+  },
+  "Thứ hai, ba tới sáu tháng không phải con số cho mọi người.",
+  {
+   "t": "Người làm tự do, hay sắp có con nhỏ, có thể cần nhiều hơn.",
+   "p": 1.0
+  },
+  "Thứ ba, quỹ khẩn cấp không thay được bảo hiểm.",
+  "Một hoá đơn mười lăm triệu thì tấm đệm đỡ được. Một hoá đơn vài trăm triệu thì không.",
+  {
+   "t": "Hai thứ ấy làm hai việc khác nhau.",
+   "p": 1.0
+  },
+  "Giờ là tờ phiếu của bạn.",
+  "Ô một: một tháng thiết yếu của bạn là bao nhiêu?",
+  "Ô hai: bạn cần mấy tháng?",
+  {
+   "t": "Ô ba: tháng này, bạn để vào được bao nhiêu?",
+   "p": 1.0
+  },
+  "Lấy ô một nhân ô hai, rồi chia cho ô ba.",
+  "Con số hiện ra là số tháng của riêng bạn.",
+  {
+   "t": "Có thể nó dài hơn bạn mong. Nhưng nó có thật, và nó ngắn lại mỗi tháng.",
+   "p": 1.0
+  },
+  "An ở phiên bản thứ nhất không giàu hơn An ở phiên bản thứ hai.",
+  "An chỉ bắt đầu sớm hơn mười sáu tháng.",
+  "Ô thứ nhất của bạn là bao nhiêu? Kể cho mình nghe ở phần bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "PHẦN CUỐI",
+   "title": "KHI NÀO PHÉP TÍNH\nKHÔNG ĐÚNG VỚI BẠN",
+   "sub": "PHẦN GIỮ Ở CUỐI MỖI VIDEO",
+   "vid": "7593898",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Như"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "BA GIỚI HẠN",
+   "rows": [
+    {
+     "k": "1",
+     "v": "ĐANG NỢ LÃI CAO: THỨ TỰ CÓ THỂ KHÁC",
+     "at": 1
+    },
+    {
+     "k": "2",
+     "v": "3–6 THÁNG KHÔNG HỢP MỌI NGƯỜI",
+     "at": 3
+    },
+    {
+     "k": "3",
+     "v": "QUỸ KHÔNG THAY ĐƯỢC BẢO HIỂM",
+     "at": 5
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 6,
+   "title": "TẤM ĐỆM ĐỠ ĐƯỢC GÌ? (TRIỆU ĐỒNG)",
+   "unit": "MINH HOẠ",
+   "items": [
+    {
+     "k": "HOÁ ĐƠN 15 TRIỆU",
+     "v": 15,
+     "lbl": "ĐỠ ĐƯỢC",
+     "at": [
+      6,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "k": "HOÁ ĐƠN VÀI TRĂM TRIỆU",
+     "v": 300,
+     "lbl": "KHÔNG",
+     "at": [
+      6,
+      "vài"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 8,
+   "title": "TỜ PHIẾU CỦA BẠN",
+   "rows": [
+    {
+     "k": "Ô 1",
+     "v": "MỘT THÁNG THIẾT YẾU = ?",
+     "at": 9
+    },
+    {
+     "k": "Ô 2",
+     "v": "CẦN MẤY THÁNG = ?",
+     "at": 10
+    },
+    {
+     "k": "Ô 3",
+     "v": "THÁNG NÀY ĐỂ VÀO = ?",
+     "at": 11
+    }
+   ],
+   "total": {
+    "k": "Ô 1 × Ô 2 ÷ Ô 3",
+    "v": "SỐ THÁNG CỦA RIÊNG BẠN",
+    "at": 12
+   }
+  },
+  {
+   "type": "broll",
+   "at": 14,
+   "vid": "3192916",
+   "ms": 8,
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA · NHÂN VẬT GIẢ ĐỊNH",
+   "kin": [
+    {
+     "text": "AN Ở PHIÊN BẢN 1 KHÔNG GIÀU HƠN",
+     "at": 15
+    },
+    {
+     "text": "CHỈ BẮT ĐẦU SỚM HƠN 16 THÁNG",
+     "at": [
+      16,
+      "chỉ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 17,
+   "text": "Ô thứ nhất của bạn\nlà bao nhiêu?"
+  }
+ ],
+ "hud": {
+  "k": "GIỚI HẠN",
+  "t": "KHI NÀO KHÔNG ĐÚNG VỚI BẠN"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

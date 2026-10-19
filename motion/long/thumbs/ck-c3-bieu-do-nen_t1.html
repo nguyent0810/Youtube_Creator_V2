@@ -1,0 +1,27 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#050912}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:"Be Vietnam Pro",sans-serif;color:#fff;
+ background:linear-gradient(rgba(125,211,252,.06) 1px,transparent 1px) 0 0/80px 80px,linear-gradient(90deg,rgba(125,211,252,.06) 1px,transparent 1px) 0 0/80px 80px,radial-gradient(80% 70% at 60% 40%,#16263f 0%,#0a1426 60%,#04080f 100%)}
+.big{position:absolute;font-weight:900;line-height:1.12;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.tag{position:absolute;font-family:"JetBrains Mono";font-weight:700;letter-spacing:.12em;white-space:nowrap;color:#fbbf24}
+.pill{position:absolute;padding:10px 30px 14px;border-radius:40px;border:5px solid;background:#0a1426;font-weight:900;font-size:48px;white-space:nowrap;line-height:1.25}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<!-- T1: một cây nến đỏ khổng lồ = VN-Index 09/03/2026 (O = H 1.757,73 · L 1.650,75 · C 1.652,79), tỉ lệ thật; chữ "MỘT CÂY NẾN / KỂ GÌ?" -->
+<svg class="abs" style="position:absolute;left:0;top:0" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs><filter id="gl" x="-50%" y="-20%" width="200%" height="140%"><feGaussianBlur stdDeviation="28" /></filter></defs>
+  <rect x="1270" y="150" width="330" height="730" rx="10" fill="#ef4444" opacity=".45" filter="url(#gl)" />
+  <line x1="1435" y1="150" x2="1435" y2="902" stroke="#ef4444" stroke-width="16" stroke-linecap="round" />
+  <rect x="1270" y="150" width="330" height="730" rx="10" fill="#ef4444" />
+  <line x1="1200" y1="150" x2="1660" y2="150" stroke="#fbbf24" stroke-width="5" stroke-dasharray="14 10" />
+  <line x1="1200" y1="884" x2="1660" y2="884" stroke="#94a3b8" stroke-width="4" stroke-dasharray="14 10" />
+</svg>
+<div class="big" style="left:90px;top:120px;font-size:150px">MỘT CÂY</div>
+<div class="big" style="left:90px;top:290px;font-size:150px">NẾN ĐỎ</div>
+<div class="big" style="left:90px;top:470px;font-size:190px;color:#fbbf24">KỂ GÌ?</div>
+<div class="pill" style="left:1660px;top:112px;border-color:#fbbf24;color:#fbbf24;transform:translateX(-50%)">MỞ = ĐỈNH</div>
+<div class="pill" style="left:1660px;top:900px;border-color:#94a3b8;color:#e2e8f0;transform:translateX(-50%)">ĐÓNG ≈ ĐÁY</div>
+<div class="tag" style="left:90px;top:900px;font-size:46px">VN-INDEX · 09/03/2026</div>
+</div><script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

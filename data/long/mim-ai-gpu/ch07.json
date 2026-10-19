@@ -1,0 +1,205 @@
+{
+ "title": "Ngôi nhà thứ hai",
+ "lines": [
+  {
+   "t": "Tháng 12 năm 2023, Jensen Huang lần đầu sang Việt Nam.",
+   "p": 0.8
+  },
+  "Ở Hà Nội, ông gặp Thủ tướng, thăm Trung tâm Đổi mới sáng tạo quốc gia, và nói chuyện với các công ty công nghệ trong nước.",
+  {
+   "t": "Báo chí ghi lại câu ông nói: muốn biến Việt Nam thành ngôi nhà thứ hai của Nvidia.",
+   "p": 1.0
+  },
+  "Một năm sau, ngày 5 tháng 12 năm 2024, Chính phủ Việt Nam và Nvidia ký thoả thuận.",
+  "Hai bên hợp tác lập một trung tâm nghiên cứu và phát triển trí tuệ nhân tạo, và một trung tâm dữ liệu trí tuệ nhân tạo ở Việt Nam.",
+  {
+   "t": "Cùng dịp ấy, Nvidia mua lại VinBrain, một công ty khởi nghiệp Việt Nam làm trí tuệ nhân tạo cho y tế.",
+   "p": 1.0
+  },
+  "Theo báo chí đưa tin, trung tâm dữ liệu trong thoả thuận sẽ mở rộng từ một trung tâm dữ liệu của Viettel vốn đã dùng công nghệ Nvidia.",
+  "Thoả thuận là bước đầu.",
+  "Những trung tâm ấy làm được gì, cần thêm thời gian mới biết.",
+  "Nhưng có một điều đáng để ý.",
+  {
+   "t": "Câu chuyện bắt đầu từ hai chiếc card trong phòng ngủ, giờ đã là chuyện của các chính phủ.",
+   "p": 1.0
+  },
+  "Vậy có phải cứ có thật nhiều chip là có trí tuệ nhân tạo?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "7",
+   "k": "CHƯƠNG BẢY",
+   "title": "NGÔI NHÀ\nTHỨ HAI",
+   "sub": "NVIDIA · VIỆT NAM",
+   "vid": "7140937",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "jensen"
+   ]
+  },
+  {
+   "type": "print",
+   "at": [
+    0,
+    "lần"
+   ],
+   "img": "jensen",
+   "side": {
+    "k": "12.2023",
+    "h": "LẦN ĐẦU TỚI VIỆT NAM",
+    "hAt": [
+     0,
+     "lần"
+    ],
+    "lines": [
+     {
+      "text": "gặp Thủ tướng",
+      "at": [
+       1,
+       "thủ"
+      ]
+     },
+     {
+      "text": "thăm Trung tâm Đổi mới sáng tạo quốc gia",
+      "at": [
+       1,
+       "trung"
+      ]
+     },
+     {
+      "text": "gặp các công ty công nghệ trong nước",
+      "at": [
+       1,
+       "công"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "“NGÔI NHÀ THỨ HAI”",
+     "at": [
+      2,
+      "ngôi"
+     ],
+     "acc": true
+    },
+    {
+     "text": "báo chí ghi lại · 12.2023",
+     "at": [
+      2,
+      "báo"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 3,
+   "day": "CHÍNH PHỦ VIỆT NAM – NVIDIA KÝ THOẢ THUẬN",
+   "date": "05.12.2024"
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "THOẢ THUẬN",
+   "srcnote": "VIETNAM NEWS · VNECONOMY 06.12.2024",
+   "rows": [
+    {
+     "k": "1",
+     "v": "TRUNG TÂM NGHIÊN CỨU & PHÁT TRIỂN AI",
+     "at": [
+      4,
+      "nghiên"
+     ]
+    },
+    {
+     "k": "2",
+     "v": "TRUNG TÂM DỮ LIỆU AI",
+     "at": [
+      4,
+      "dữ"
+     ]
+    },
+    {
+     "k": "+",
+     "v": "NVIDIA MUA VINBRAIN · AI Y TẾ",
+     "at": 5
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "MỞ RỘNG TỪ TTDL VIETTEL",
+     "at": [
+      6,
+      "viettel"
+     ]
+    },
+    {
+     "text": "theo báo chí đưa tin",
+     "at": 6,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "BƯỚC ĐẦU",
+     "at": 7,
+     "acc": true
+    },
+    {
+     "text": "làm được gì · cần thêm thời gian",
+     "at": 8,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "PHÒNG NGỦ",
+     "at": 10
+    },
+    {
+     "text": "→ CHÍNH PHỦ",
+     "at": [
+      10,
+      "chính"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 11,
+   "text": "Nhiều chip\n= có AI?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 07",
+  "t": "NGÔI NHÀ THỨ HAI"
+ },
+ "bgm": {
+  "mood": "warm",
+  "gain": 0.12
+ }
+}

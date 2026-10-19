@@ -15,7 +15,8 @@ ret1 (% còn xem ở phút 1), suggested (% view từ đề xuất / RELATED_VID
 ngay trước cùng kênh (ret1_vs_prev, suggested_vs_prev). record() giữ các số này.
 File nhạc: output/music/ (không commit; tải về theo danh mục).
 Trong chNN.json, bgm có thể ghi {"mood": "tense", "gain": .., "at": ..} thay vì "file": build_long chọn bài
-qua resolve_bgm() — ít dùng nhất trong các video gần đây, không lặp trong cùng video — và cache vào
+qua resolve_bgm() — cả bộ nhạc được chọn cùng lúc để Jaccard lớn nhất với các video gần đây nhỏ nhất (retro 3 mục 9),
+không lặp trong cùng video — và cache vào
 output/long/<topic>/bgm_picks.json để render lại vẫn ra đúng bài cũ.
 """
 import hashlib
@@ -31,6 +32,7 @@ CATALOG = ROOT / "motion" / "long" / "music_catalog.json"
 LIB = ROOT / "output" / "music"
 WINDOW = 3            # so với bao nhiêu video gần nhất cùng kênh
 MAX_BGM_OVERLAP = 0.35  # Jaccard bộ nhạc nền giữa hai video
+CHANNEL_THEME = {"MIM": "lab", "CK": "chart"}   # theme mặc định theo kênh (motion/long/build_long.py _channels) khi spec không ghi
 WINDOW_DAYS = 7       # cửa sổ số liệu giữ chân / đề xuất
 LAG_DAYS = 2          # Analytics trễ 1–2 ngày; chỉ ghi sổ khi cửa sổ đã khép
 FEEDBACK_FIELDS = ("ret1", "suggested", "ret1_vs_prev", "suggested_vs_prev", "feedback_on", "feedback_age_days")
@@ -111,8 +113,14 @@ def _bgm_files(topic: str, chs) -> set[str]:
 
 def profile(topic: str) -> dict:
     spec, chs = _chapters(topic)
-    return {"topic": topic, "channel": spec.get("channel", "CL"), "theme": spec.get("theme") or "", "look": spec.get("look") or "classic",
+    return {"topic": topic, "channel": spec.get("channel", "CL"), "theme": spec.get("theme") or CHANNEL_THEME.get(spec.get("channel", "CL"), ""), "look": spec.get("look") or "classic",
             "bgm": sorted(_bgm_files(topic, chs))}
+
+
+def _chans(track: dict) -> tuple:
+    """Kênh được dùng bài nhạc: "channel" là một mã ("MIM") hoặc danh sách (["MIM", "CK"]); thiếu = kênh Hình Sự."""
+    c = track.get("channel", "CL")
+    return tuple(c) if isinstance(c, list) else (c,)
 
 
 def recent(channel: str, exclude: str, n: int = WINDOW) -> list[dict]:
@@ -130,31 +138,91 @@ def _picks(topic: str) -> dict:
     return json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
 
 
+def _jac(a: set, b: set) -> float:
+    return len(a & b) / max(1, len(a | b))
+
+
+def optimise_picks(slots: list[tuple[str, list[str]]], fixed: set[str], prev: list[set[str]], salt: str = "",
+                   rounds: int = 6) -> dict[str, str]:
+    """Chọn MỘT bài cho mỗi ô (key, [bài hợp mood]) sao cho bộ nhạc cả video (fixed ∪ bài chọn) có Jaccard LỚN NHẤT với các
+    video gần đây (prev) nhỏ nhất (retro 3 mục 9: chọn "ít dùng nhất" từng ô cho MIM #6 trùng 64–70% hai lần, PM phải chọn tay).
+    Thứ tự ưu tiên: ít bài lặp trong video -> max Jaccard -> tổng Jaccard -> số lần dùng gần đây -> băm (tất định).
+    Tham lam theo ô rồi đổi từng ô tới khi không cải thiện (thư viện nhỏ: 14–20 bài, 5–10 ô -> rất nhanh)."""
+    uses = {}
+    for p in prev:
+        for t in p:
+            uses[t] = uses.get(t, 0) + 1
+    h = lambda key, t: int(hashlib.md5(f"{salt}|{key}|{t}".encode()).hexdigest()[:8], 16)
+
+    # 15/10/2026: video 20+ chương mà cấm lặp bài -> buộc dùng gần hết thư viện -> trùng 78% với video dài trước (MIM game).
+    # Cho mỗi bài dùng tới `cap` ô (1 với video ≤ 8 ô -- như cũ); bộ nhạc nhỏ hơn thì Jaccard với video gần đây thấp hơn.
+    cap = max(1, -(-len(slots) // 8))
+
+    def score(ch: dict[str, str]):
+        picked = list(ch.values())
+        s = fixed | set(picked)
+        cnt = {}
+        for t in picked:
+            cnt[t] = cnt.get(t, 0) + 1
+        dup = sum(max(0, n - cap) for n in cnt.values()) + len(set(picked) & fixed)
+        js = [_jac(s, p) for p in prev] or [0.0]
+        return (dup, round(max(js), 6), round(sum(js), 6), sum(uses.get(t, 0) for t in picked), sum(h(k, t) for k, t in ch.items()))
+
+    choice: dict[str, str] = {}
+    for key, cands in slots:
+        choice[key] = min(cands, key=lambda t: score({**choice, key: t}))
+    for _ in range(rounds):
+        better = False
+        for key, cands in slots:
+            cur = score(choice)
+            best = min(cands, key=lambda t: score({**choice, key: t}))
+            if score({**choice, key: best}) < cur:
+                choice[key], better = best, True
+        if not better:
+            break
+    return choice
+
+
 def resolve_bgm(topic: str, spec: dict, chs, od: Path) -> None:
-    """Điền "file" cho mọi đoạn bgm chỉ có "mood". Tất định + cache: chọn một lần, render lại vẫn giữ."""
+    """Điền "file" cho mọi đoạn bgm chỉ có "mood". Tất định + cache: chọn một lần, render lại vẫn giữ.
+    bgm_picks.json là NGUỒN CHÍNH: ô đã có trong đó (chọn tay hoặc chọn trước) không bao giờ đổi -> video đã dựng giữ đúng nhạc.
+    Ô còn thiếu được chọn CÙNG LÚC bằng optimise_picks (tối thiểu Jaccard lớn nhất với WINDOW video gần nhất của kênh)."""
     picks, cat = _picks(topic), None
-    used_recent = {}
-    for r in recent(spec.get("channel", "CL"), topic, WINDOW):
-        for f in r["bgm"]:
-            used_recent[f] = used_recent.get(f, 0) + 1
+    me = spec.get("channel", "CL")       # bài không gắn kênh = của kênh Hình Sự (Grok: lỗ hổng ở danh mục)
+    prev = [set(r["bgm"]) for r in recent(me, topic, WINDOW)]
     in_video = {Path(q["file"]).stem for _, ch in chs for q in _items(ch) if q.get("file")}
-    changed = False
+    slots = []
     for name, ch in chs:
         for k, q in enumerate(_items(ch)):
             if q.get("file") or not q.get("mood"):
                 continue
             key = f"{name}.{k}"
-            if key not in picks:
-                cat = cat or catalog()
-                cands = [t for t, m in cat["tracks"].items() if q["mood"] in m["mood"] and (LIB / m["file"]).exists()]
-                if not cands:
-                    raise SystemExit(f"variety: không có bài nào mood '{q['mood']}' trong {LIB} ({name})")
-                h = lambda t: int(hashlib.md5(f"{topic}|{key}|{t}".encode()).hexdigest()[:8], 16)
-                best = min(cands, key=lambda t: (t in in_video, used_recent.get(t, 0), h(t)))
-                picks[key] = cat["tracks"][best]["file"]
-                changed = True
+            if key in picks:
+                in_video.add(Path(picks[key]).stem)
+                continue
+            cat = cat or catalog()
+            cands = [Path(m["file"]).stem for t, m in cat["tracks"].items() if q["mood"] in m["mood"] and me in _chans(m)
+                     and (LIB / m["file"]).exists()]
+            if not cands:
+                raise SystemExit(f"variety: không có bài nào mood '{q['mood']}' trong {LIB} ({name})")
+            slots.append((key, sorted(set(cands))))
+    changed = bool(slots)
+    if slots:
+        by_stem = {Path(m["file"]).stem: m["file"] for m in cat["tracks"].values()}
+        got = optimise_picks(slots, in_video, prev, salt=topic)
+        for key, stem in got.items():
+            picks[key] = by_stem[stem]
+        s = in_video | set(got.values())
+        worst = max((_jac(s, p) for p in prev), default=0.0)
+        if worst > MAX_BGM_OVERLAP:
+            print(f"  ! WARNING variety: thư viện {me} không đủ bài — bộ nhạc tốt nhất vẫn trùng {worst:.0%} với video gần đây "
+                  f"(ngưỡng {MAX_BGM_OVERLAP:.0%}); thêm bài vào music_catalog.json hoặc chọn tay bgm_picks.json", flush=True)
+    for name, ch in chs:
+        for k, q in enumerate(_items(ch)):
+            if q.get("file") or not q.get("mood"):
+                continue
+            key = f"{name}.{k}"
             q["file"] = picks[key]
-            in_video.add(Path(q["file"]).stem)
             dst = od / "bgm" / q["file"]
             if not dst.exists():
                 dst.parent.mkdir(parents=True, exist_ok=True)
@@ -178,7 +246,7 @@ def audit(topic: str) -> list[str]:
         j = len(a & b) / max(1, len(a | b))
         if j > MAX_BGM_OVERLAP:
             problems.append(f"nhạc nền trùng {j:.0%} với '{r['topic']}' ({len(a & b)}/{len(a | b)} bài) — ngưỡng {MAX_BGM_OVERLAP:.0%}")
-    if prev and prev[-1]["look"] == me["look"]:
+    if prev and prev[-1]["look"] == me["look"] and me.get("theme") not in ("lab", "chart"):   # lab (MIM) / chart (CK): diện mạo kênh cố định -- khác nhau bằng nội dung, không bằng look
         problems.append(f"look '{me['look']}' giống video ngay trước ('{prev[-1]['topic']}') — đổi \"look\" trong spec (gợi ý: {next_look(me['channel'], topic)})")
     return problems
 

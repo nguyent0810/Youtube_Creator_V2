@@ -1,0 +1,190 @@
+{
+ "title": "Trạm thứ tư: đo khoảng cách",
+ "lines": [
+  {
+   "t": "Trạm cuối cùng là lúc ra quyết định.",
+   "p": 0.8
+  },
+  "Khi bạn đăng ký lần đầu, khuôn mặt bạn đã được biến thành một dãy số và cất đi.",
+  {
+   "t": "Lần này, tấm ảnh mới cũng được biến thành một dãy số.",
+   "p": 1.0
+  },
+  "Cỗ máy chỉ cần làm một phép tính: hai điểm ấy cách nhau bao xa.",
+  {
+   "t": "Nếu khoảng cách nhỏ hơn một ngưỡng, là cùng một người. Nếu lớn hơn, là người khác.",
+   "p": 1.0
+  },
+  "Ngưỡng ấy là một lựa chọn, chứ không phải một sự thật tự nhiên.",
+  "Đặt ngưỡng chặt, người lạ khó lọt qua, nhưng chính chủ đôi khi bị từ chối.",
+  {
+   "t": "Đặt ngưỡng lỏng, chính chủ đi qua dễ dàng, nhưng người lạ cũng dễ lọt hơn.",
+   "p": 1.0
+  },
+  "Lấy ví dụ chiếc điện thoại mở khoá bằng khuôn mặt.",
+  "Theo tài liệu bảo mật mà Apple công bố năm hai nghìn không trăm mười bảy, xác suất một người ngẫu nhiên mở được máy bằng Face ID vào khoảng một phần triệu.",
+  {
+   "t": "Với cảm biến vân tay đời trước, con số ấy là khoảng một phần năm mươi nghìn.",
+   "p": 1.0
+  },
+  "Nhưng chính tài liệu ấy cũng nói rõ những trường hợp xác suất cao hơn.",
+  "Anh chị em sinh đôi, anh chị em ruột trông giống bạn, và trẻ dưới mười ba tuổi, khi khuôn mặt chưa phát triển hết.",
+  "Với họ, hãng khuyên dùng mật mã thay thế."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "TRẠM BỐN",
+   "title": "ĐO KHOẢNG CÁCH",
+   "sub": "LÚC RA QUYẾT ĐỊNH",
+   "vid": "8090198",
+   "ms": 14,
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Trạm"
+   ]
+  },
+  {
+   "type": "units",
+   "at": 1,
+   "title": "TRẠM 4/4 · HÀNH TRÌNH CỦA MỘT TẤM ẢNH",
+   "total": 4,
+   "cols": 4,
+   "lit": 4,
+   "litAt": [
+    1,
+    "Khi"
+   ],
+   "unitLabel": "TRẠM"
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "MỘT PHÉP TÍNH",
+   "rows": [
+    {
+     "k": "LÚC ĐĂNG KÝ",
+     "v": "DÃY SỐ A · CẤT ĐI",
+     "at": [
+      2,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "k": "HÔM NAY",
+     "v": "DÃY SỐ B",
+     "at": 2
+    }
+   ],
+   "total": {
+    "k": "A–B < NGƯỠNG",
+    "v": "CÙNG MỘT NGƯỜI",
+    "at": 4
+   }
+  },
+  {
+   "type": "myth",
+   "at": 5,
+   "mythLab": "NGƯỠNG KHÔNG PHẢI",
+   "myth": "SỰ THẬT TỰ NHIÊN",
+   "truthLab": "MÀ LÀ",
+   "truth": "MỘT LỰA CHỌN",
+   "strikeAt": [
+    5,
+    "chứ"
+   ],
+   "truthAt": [
+    5,
+    "một"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 6,
+   "title": "CHỌN NGƯỠNG",
+   "rows": [
+    {
+     "k": "CHẶT",
+     "v": "KHÓ LỌT · CÓ KHI TỪ CHỐI CHỦ",
+     "at": 6
+    },
+    {
+     "k": "LỎNG",
+     "v": "CHỦ DỄ QUA · LẠ DỄ LỌT",
+     "at": 7
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 9,
+   "title": "XÁC SUẤT NGƯỜI LẠ MỞ ĐƯỢC MÁY",
+   "unit": "APPLE · FACE ID SECURITY GUIDE · 11/2017",
+   "items": [
+    {
+     "k": "VÂN TAY",
+     "v": 20,
+     "lbl": "1 / 50.000",
+     "at": [
+      10,
+      "vân"
+     ]
+    },
+    {
+     "k": "KHUÔN MẶT",
+     "v": 1,
+     "lbl": "1 / 1.000.000",
+     "at": [
+      9,
+      "một"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 11,
+   "title": "XÁC SUẤT CAO HƠN VỚI",
+   "srcnote": "CÙNG TÀI LIỆU · HÃNG KHUYÊN DÙNG MẬT MÃ",
+   "rows": [
+    {
+     "k": "1",
+     "v": "SINH ĐÔI",
+     "at": [
+      12,
+      "sinh"
+     ]
+    },
+    {
+     "k": "2",
+     "v": "ANH CHỊ EM RUỘT TRÔNG GIỐNG",
+     "at": [
+      12,
+      "ruột"
+     ]
+    },
+    {
+     "k": "3",
+     "v": "TRẺ DƯỚI 13 TUỔI",
+     "at": [
+      12,
+      "trẻ"
+     ]
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "TRẠM 4",
+  "t": "ĐO KHOẢNG CÁCH"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

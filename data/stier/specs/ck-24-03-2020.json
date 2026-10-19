@@ -1,0 +1,202 @@
+{
+ "theme": "ck",
+ "title": "Nộp 54 triệu, tài khoản còn 37 triệu: ngày 24/03/2020 của người mua đều",
+ "description": "PHÉP THỬ TRÊN SỐ LIỆU QUÁ KHỨ: mỗi tháng 3 triệu mua theo chỉ số VN-Index từ 10/2018. Tới ngày 24/03/2020, sau 18 lần mua (54 triệu), giá trị chỉ còn khoảng 37 triệu (−31%), và tài khoản nằm dưới số tiền đã nộp suốt 171 phiên, khoảng tám tháng. Tính cả 8 năm tới 10/2026, khoảng 19% số phiên tài khoản thấp hơn tiền đã nộp. Phép thử minh hoạ trên chỉ số, chưa tính phí, thuế, cổ tức; không nói lên điều gì về tương lai.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.",
+ "tags": [
+  "mua đều mỗi tháng",
+  "thị trường giảm",
+  "tháng 3 2020",
+  "vn-index",
+  "tâm lý nhà đầu tư",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "kicker": "1 NGÀY",
+ "sub": "24.03.2020",
+ "acc": [
+  "bảy",
+  "bốc",
+  "tám",
+  "mười",
+  "ngồi"
+ ],
+ "lines": [
+  "Nộp năm mươi tư triệu, tài khoản còn ba mươi bảy triệu.",
+  "Đó là ngày 24 tháng 3 năm 2020, trong phép thử mua đều mỗi tháng ba triệu theo VN-Index.",
+  "Mười tám tháng để dành. Mười bảy triệu bốc hơi.",
+  "Và tài khoản nằm dưới số tiền đã nộp suốt khoảng tám tháng liền.",
+  "Tính cả tám năm, cứ năm phiên thì gần một phiên, bạn thấy mình đang lỗ.",
+  "Phép tính mua đều thì dễ.",
+  "Ngồi yên qua những ngày như thế, mới là phần khó."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NỘP 54 TRIỆU",
+     "at": 0.0
+    },
+    {
+     "text": "CÒN 37 TRIỆU",
+     "at": [
+      0,
+      "còn"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:8052328",
+   "veil": 0.58
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "24.03.2020",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "phép thử: mỗi tháng 3 triệu theo VN-Index",
+     "at": [
+      1,
+      "trong"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6964003",
+   "ms": 4,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "chart",
+   "at": 2,
+   "kind": "bars",
+   "title": "NGÀY 24/03/2020",
+   "unit": "TRIỆU ĐỒNG · KÊNH TỰ TÍNH · QUÁ KHỨ",
+   "bars": [
+    {
+     "label": "ĐÃ NỘP\n18 THÁNG",
+     "v": 54,
+     "text": "54",
+     "c": "dim",
+     "at": [
+      2,
+      null,
+      0,
+      0.1
+     ]
+    },
+    {
+     "label": "TÀI KHOẢN\nCÒN",
+     "v": 37.2,
+     "text": "~37",
+     "c": "down",
+     "at": [
+      2,
+      "Mười",
+      1
+     ]
+    }
+   ],
+   "note": "−31% · TRÊN CHỈ SỐ, CHƯA TÍNH PHÍ, THUẾ"
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 171,
+   "suffix": " PHIÊN",
+   "label": "TÀI KHOẢN DƯỚI SỐ TIỀN ĐÃ NỘP",
+   "until": [
+    3,
+    "tám"
+   ],
+   "sub": {
+    "text": "KHOẢNG 8 THÁNG LIỀN · 01/2020 → 09/2020",
+    "at": [
+     3,
+     "liền."
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Cả 8 năm",
+   "nodes": [
+    {
+     "text": "cứ 5 phiên",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      4,
+      "cứ"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "gần 1 phiên đang lỗ",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      4,
+      "gần"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 700
+    }
+   ],
+   "note": "19% SỐ PHIÊN · 10/2018 → 10/2026"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "PHÉP TÍNH THÌ DỄ",
+     "at": 5,
+     "sm": true
+    },
+    {
+     "text": "NGỒI YÊN MỚI KHÓ",
+     "at": [
+      6,
+      "mới"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7703941",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 5
+  }
+ ],
+ "sources": [
+  "https://benefitspro.com/2012/10/31/lump-sum-investing-vs-dollar-cost-averaging",
+  "https://robberger.com/lump-sum-investing-vs-dollar-cost-averaging"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "vn-index": "Vi En In-đéc"
+ },
+ "imgs": {}
+}

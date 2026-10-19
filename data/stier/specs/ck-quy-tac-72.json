@@ -1,0 +1,208 @@
+{
+ "theme": "ck",
+ "title": "Quy tắc 72: nhẩm trong 3 giây bao lâu thì tiền gấp đôi (và giá cả gấp đôi)",
+ "description": "Quy tắc 72 là mẹo ước lượng: lấy 72 chia cho lãi suất (%/năm) ra số năm để một khoản tiền gấp đôi khi lãi nhập gốc. Ví dụ với mức lãi GIẢ ĐỊNH 6%/năm: 72 ÷ 6 = 12 năm (tính chính xác là 11,9 năm). Mẹo này cũng chạy với lạm phát: giá cả tăng khoảng 3,1%/năm (trung bình CPI bình quân năm 2018–2025, Cục Thống kê) thì sau khoảng 23 năm, sức mua của một đồng còn một nửa. Đây là mẹo tính nhẩm với lãi suất không đổi, không phải dự báo.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.",
+ "tags": [
+  "quy tắc 72",
+  "lãi kép",
+  "tính nhẩm lãi suất",
+  "lạm phát",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "kicker": "1 MẸO TÍNH",
+ "sub": "QUY TẮC 72",
+ "acc": [
+  "bảy",
+  "đôi",
+  "mười",
+  "nửa",
+  "ngược"
+ ],
+ "lines": [
+  "Có một phép tính nhẩm ba giây, cho biết bao lâu thì tiền gấp đôi.",
+  "Gọi là quy tắc bảy mươi hai.",
+  "Lấy bảy mươi hai, chia cho lãi suất một năm.",
+  "Ví dụ, lãi giả định sáu phần trăm. Bảy mươi hai chia sáu, khoảng mười hai năm.",
+  "Mẹo này còn chạy theo chiều ngược lại.",
+  "Giá cả tăng khoảng ba phần trăm một năm, thì sau chừng hai mươi ba năm, sức mua của một đồng còn một nửa.",
+  "Cùng một phép chia. Một bên làm tiền lớn lên, một bên làm nó nhỏ đi."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NHẨM 3 GIÂY",
+     "at": 0.0
+    },
+    {
+     "text": "BAO LÂU TIỀN GẤP ĐÔI",
+     "at": [
+      0,
+      "bao"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:6964001",
+   "veil": 0.58
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "QUY TẮC 72",
+   "sub": "MẸO ƯỚC LƯỢNG · LÃI NHẬP GỐC"
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Cách tính",
+   "nodes": [
+    {
+     "text": "72 ÷ lãi suất một năm",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      2,
+      "bảy"
+     ],
+     "shape": "none",
+     "w": 760
+    },
+    {
+     "text": "= số năm để gấp đôi",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      2,
+      "chia"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 720
+    }
+   ],
+   "note": "MẸO TÍNH NHẨM · LÃI SUẤT KHÔNG ĐỔI"
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 12,
+   "suffix": " NĂM",
+   "label": "72 ÷ 6 · LÃI GIẢ ĐỊNH 6%/NĂM",
+   "until": [
+    3,
+    "mười"
+   ],
+   "sub": {
+    "text": "TÍNH CHÍNH XÁC: 11,9 NĂM · KHÔNG PHẢI DỰ BÁO",
+    "at": [
+     3,
+     "năm."
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CHIỀU NGƯỢC LẠI",
+     "at": 4,
+     "acc": true
+    },
+    {
+     "text": "lạm phát cũng gấp đôi giá cả",
+     "at": [
+      4,
+      "chạy"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:35590093",
+   "ms": 5,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 4
+  },
+  {
+   "type": "chart",
+   "at": 5,
+   "kind": "bars",
+   "title": "SỐ NĂM ĐỂ GẤP ĐÔI / CÒN MỘT NỬA",
+   "unit": "NĂM · MẸO 72 · LÃI SUẤT KHÔNG ĐỔI",
+   "bars": [
+    {
+     "label": "TIỀN GẤP ĐÔI\nLÃI 6%",
+     "v": 12,
+     "text": "~12",
+     "c": "up",
+     "at": [
+      5,
+      null,
+      0,
+      0.1
+     ]
+    },
+    {
+     "label": "SỨC MUA\nCÒN 1/2",
+     "v": 23,
+     "text": "~23",
+     "c": "down",
+     "at": [
+      5,
+      "sau"
+     ]
+    }
+   ],
+   "note": "LẠM PHÁT ~3,1%/NĂM · TRUNG BÌNH 2018–2025"
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "CÙNG MỘT PHÉP CHIA",
+   "cards": [
+    {
+     "k": "LÃI",
+     "v": "LÀM TIỀN LỚN LÊN",
+     "at": [
+      6,
+      "Một"
+     ]
+    },
+    {
+     "k": "LẠM PHÁT",
+     "v": "LÀM NÓ NHỎ ĐI",
+     "at": [
+      6,
+      "một",
+      1
+     ],
+     "c": "acc"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://topi.vn/ty-le-lam-phat-o-viet-nam-qua-cac-nam.html",
+  "https://baoquangninh.vn/cpi-binh-quan-nam-2024-tang-3-63-dat-muc-tieu-quoc-hoi-de-ra-3338442.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

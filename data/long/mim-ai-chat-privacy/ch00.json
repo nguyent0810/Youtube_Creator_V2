@@ -1,0 +1,183 @@
+{
+ "title": "Bốn nghìn rưỡi cuộc trò chuyện",
+ "lines": [
+  "Cuối tháng 7 năm 2025, một nhóm phóng viên công nghệ gõ vào Google một câu tìm kiếm rất đơn giản.",
+  {
+   "t": "Họ tìm thấy hơn bốn nghìn năm trăm cuộc trò chuyện ChatGPT, nằm công khai trên kết quả tìm kiếm.",
+   "p": 1.0
+  },
+  "Có hồ sơ xin việc, có tên thật.",
+  "Có những lời tâm sự về sức khoẻ tinh thần.",
+  {
+   "t": "Có cả mã nguồn của công ty.",
+   "p": 1.0
+  },
+  "Không ai bị hack cả.",
+  "Những cuộc trò chuyện ấy đã được chính người dùng bấm chia sẻ, và bật thêm một ô cho phép công cụ tìm kiếm thấy chúng.",
+  {
+   "t": "Nhiều người có lẽ không hiểu ô ấy nghĩa là gì.",
+   "p": 1.0
+  },
+  "Ngày 31 tháng 7, OpenAI gỡ bỏ tính năng đó.",
+  "Giám đốc an ninh thông tin của hãng gọi nó là một thử nghiệm ngắn ngủi.",
+  {
+   "t": "Tính năng này tạo ra quá nhiều cơ hội để mọi người vô tình chia sẻ những thứ họ không định chia sẻ.",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Chuyện này làm nhiều người hỏi lại một câu cũ.",
+  "Những gì mình gõ vào chatbot, rồi đi đâu? AI có học từ cuộc trò chuyện của mình không?",
+  {
+   "t": "Câu trả lời không phải có hay không.",
+   "p": 1.0
+  },
+  "Một tin nhắn bạn gửi có thể đi theo ba ngả.",
+  "Vào trí nhớ của trợ lý. Vào dữ liệu để dạy phiên bản sau. Và trước mắt một con người.",
+  "Video này đi qua từng ngả, rồi chỉ bạn cách bật tắt từng cái."
+ ],
+ "scenes": [
+  {
+   "type": "date",
+   "day": "NHÓM PHÓNG VIÊN · MỘT CÂU TÌM KIẾM",
+   "date": "07.2025"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 0,
+   "to": 4500,
+   "prefix": "> ",
+   "suffix": " CUỘC TRÒ CHUYỆN",
+   "label": "CHATGPT · CÔNG KHAI TRÊN GOOGLE",
+   "sub": {
+    "text": "FAST COMPANY, QUA SEARCH ENGINE JOURNAL · 08.2025",
+    "at": 1
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "TRONG ĐÓ CÓ",
+   "rows": [
+    {
+     "k": "1",
+     "v": "HỒ SƠ XIN VIỆC · TÊN THẬT",
+     "at": 2
+    },
+    {
+     "k": "2",
+     "v": "TÂM SỰ SỨC KHOẺ TINH THẦN",
+     "at": 3
+    },
+    {
+     "k": "3",
+     "v": "MÃ NGUỒN CÔNG TY",
+     "at": 4
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "BỊ HACK",
+     "at": 5,
+     "fx": "strike",
+     "strikeAt": [
+      5,
+      "cả"
+     ]
+    },
+    {
+     "text": "TỰ BẤM CHIA SẺ",
+     "at": 6,
+     "acc": true
+    },
+    {
+     "text": "+ bật ô cho công cụ tìm kiếm thấy",
+     "at": [
+      6,
+      "bật"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 7,
+   "vid": "6689151",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "Ô ẤY NGHĨA LÀ GÌ?",
+     "at": 7,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 8,
+   "day": "OPENAI GỠ TÍNH NĂNG",
+   "date": "31.07.2025"
+  },
+  {
+   "type": "quote",
+   "at": 10,
+   "text": "…introduced too many opportunities for folks to accidentally share things they didn't intend to.",
+   "by": "GIÁM ĐỐC AN NINH THÔNG TIN OPENAI · QUA TECHRADAR, 08.2025",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 10
+  },
+  {
+   "type": "question",
+   "at": 12,
+   "text": "AI có học từ\ncuộc trò chuyện của mình?"
+  },
+  {
+   "type": "ledger",
+   "at": 14,
+   "title": "MỘT TIN NHẮN · BA NGẢ",
+   "rows": [
+    {
+     "k": "1",
+     "v": "TRÍ NHỚ CỦA TRỢ LÝ",
+     "at": 15
+    },
+    {
+     "k": "2",
+     "v": "DỮ LIỆU DẠY PHIÊN BẢN SAU",
+     "at": [
+      15,
+      "dữ"
+     ]
+    },
+    {
+     "k": "3",
+     "v": "MẮT MỘT CON NGƯỜI",
+     "at": [
+      15,
+      "trước"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "brand",
+   "at": 16,
+   "sub": "TỪNG NGẢ · VÀ CÁCH BẬT TẮT"
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "BỐN NGHÌN RƯỠI CUỘC TRÒ CHUYỆN"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

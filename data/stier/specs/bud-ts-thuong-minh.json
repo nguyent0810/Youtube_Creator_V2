@@ -1,0 +1,172 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "truoc-sau",
+ "hook_type": "nghich-ly",
+ "open_shot": "anh-sang",
+ "voice": "Mỹ Duyên",
+ "music": "healing.mp3",
+ "gap": 0.1,
+ "title": "Trước/Sau: thương mình không phải ích kỷ",
+ "kicker": "TRƯỚC / SAU",
+ "sub": "KINH TƯƠNG ƯNG 3.8",
+ "acc": [
+  "thương",
+  "hại"
+ ],
+ "lines": [
+  "Thương mình nhiều, lại làm bạn tử tế hơn?",
+  "Hoàng hậu Mạt Lợi nói: không ai thương ai hơn chính mình.",
+  "Đức Phật dạy, diễn ý: ai cũng thương mình nhất như vậy.",
+  "Nên ai thương mình, đừng làm hại người khác.",
+  "Trước: thương mình là chiều mình. Sau: thương mình là không làm hại ai.",
+  "Bạn thương mình theo cách nào? Lưu lại nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "THƯƠNG MÌNH = ÍCH KỶ?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "hay ngược lại",
+     "at": [
+      0,
+      "tử"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:4800620"
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Hoàng hậu Mạt Lợi",
+   "nodes": [
+    {
+     "text": "KHÔNG AI THƯƠNG AI",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      1,
+      "không"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "HƠN CHÍNH MÌNH",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      1,
+      "chính"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      1,
+      "chính"
+     ]
+    }
+   ],
+   "note": "SN 3.8 · DIỄN Ý"
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 1,
+   "suffix": " NGƯỜI",
+   "label": "AI CŨNG THƯƠNG NHẤT",
+   "until": [
+    2,
+    "nhất"
+   ],
+   "sub": {
+    "text": "CHÍNH MÌNH",
+    "at": [
+     2,
+     "như"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "ĐỪNG LÀM\nHẠI NGƯỜI",
+   "fx": "zoom",
+   "sub": "VÌ HỌ CŨNG THƯƠNG MÌNH"
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "THƯƠNG MÌNH",
+   "cards": [
+    {
+     "k": "TRƯỚC",
+     "v": "CHIỀU MÌNH",
+     "at": [
+      4,
+      "Trước:"
+     ]
+    },
+    {
+     "k": "SAU",
+     "v": "KHÔNG HẠI AI",
+     "at": [
+      4,
+      "Sau:"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "THƯƠNG CÁCH NÀO?",
+     "at": [
+      5,
+      "Bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "lưu lại nhé",
+     "at": [
+      5,
+      "Lưu"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6548043"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/sn3.8/en/sujato"
+ ],
+ "description": "Trước/Sau: thương mình không phải ích kỷ\n\nNguồn: https://suttacentral.net/sn3.8/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

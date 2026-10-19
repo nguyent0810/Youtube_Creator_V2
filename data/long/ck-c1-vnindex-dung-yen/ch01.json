@@ -1,0 +1,343 @@
+{
+ "title": "Cổ phiếu là gì, HOSE là gì",
+ "lines": [
+  {
+   "t": "Trước khi hỏi vì sao lỗ, mình cần biết mình đang cầm thứ gì trong tay.",
+   "p": 0.8
+  },
+  "Giả sử bạn và bốn người bạn góp tiền mở một quán phở, mỗi người một phần năm.",
+  "Quán có lãi, cuối năm chia nhau. Đó là cổ tức.",
+  {
+   "t": "Muốn rút, bạn bán lại phần của mình cho người khác, với giá cao hơn lúc góp, hoặc thấp hơn. Đó là chênh lệch giá.",
+   "p": 1.0
+  },
+  "Cổ phiếu cũng vậy, chỉ là doanh nghiệp được chia thành hàng triệu, có khi hàng tỷ phần.",
+  "Luật Chứng khoán năm hai nghìn không trăm mười chín viết:",
+  {
+   "t": "Cổ phiếu là loại chứng khoán xác nhận quyền và lợi ích hợp pháp của người sở hữu đối với một phần vốn cổ phần của tổ chức phát hành.",
+   "q": 1
+  },
+  "Nói gọn: mua cổ phiếu là mua một phần nhỏ của một doanh nghiệp, không phải mua một cái mã.",
+  {
+   "t": "Vậy mua cổ phiếu là mình làm chủ công ty luôn à?",
+   "ask": 1
+  },
+  "Bạn thành đồng sở hữu, nhưng phần của bạn thường rất nhỏ, và cả cổ tức lẫn chênh lệch giá đều không được bảo đảm.",
+  {
+   "t": "Uỷ ban Chứng khoán Mỹ nhắc người mới: trong ba nhóm tài sản chính là cổ phiếu, trái phiếu và tiền mặt, cổ phiếu trong lịch sử có rủi ro cao nhất, và cũng có lợi nhuận cao nhất.",
+   "p": 1.0
+  },
+  "Người mua và người bán gặp nhau ở sở giao dịch.",
+  "Lớn nhất Việt Nam là Sở Giao dịch Chứng khoán Thành phố Hồ Chí Minh, gọi tắt là HOSE.",
+  "Hãy hình dung một khu chợ có ban quản lý và luật cân đo.",
+  {
+   "t": "Bạn không vào chợ trực tiếp, mà nhờ một công ty chứng khoán đi chợ hộ, và trả phí.",
+   "p": 1.0
+  },
+  "Phiên chợ đầu tiên, ngày hai mươi tám tháng bảy năm hai nghìn, chỉ có hai cổ phiếu: REE và SAM.",
+  "Cuối tháng chín năm nay, HOSE có bốn trăm lẻ năm cổ phiếu, tổng vốn hoá khoảng hai phần ba GDP năm hai nghìn không trăm hai mươi lăm.",
+  "Chợ mở cửa thế nào, lệnh được khớp ra sao, mình để dành cho bài hai."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "CỔ PHIẾU LÀ GÌ,\nHOSE LÀ GÌ",
+   "sub": "CHỨNG KHOÁN TỪ SỐ 0 · BÀI 1",
+   "vid": "35782362",
+   "titleAt": [
+    0,
+    "Trước"
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 1,
+   "vid": "34770825",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "GÓP VỐN MỞ QUÁN PHỞ",
+     "at": [
+      1,
+      "góp"
+     ]
+    },
+    {
+     "text": "5 NGƯỜI · MỖI NGƯỜI 1/5",
+     "at": [
+      1,
+      "mỗi"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "QUÁN PHỞ 5 NGƯỜI GÓP",
+   "rows": [
+    {
+     "k": "LÃI CUỐI NĂM CHIA NHAU",
+     "v": "CỔ TỨC",
+     "at": [
+      2,
+      "chia"
+     ]
+    },
+    {
+     "k": "BÁN LẠI PHẦN GÓP",
+     "v": "CHÊNH LỆCH GIÁ",
+     "at": [
+      3,
+      "bán"
+     ]
+    },
+    {
+     "k": "GIÁ BÁN LẠI",
+     "v": "CAO HƠN, HOẶC THẤP HƠN",
+     "at": [
+      3,
+      "cao"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 4,
+   "vid": "36082305",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "CỔ PHIẾU CŨNG VẬY",
+     "at": [
+      4,
+      "Cổ"
+     ]
+    },
+    {
+     "text": "HÀNG TRIỆU, CÓ KHI HÀNG TỶ PHẦN",
+     "at": [
+      4,
+      "triệu,"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 5,
+   "qline": 6,
+   "typeDur": 5.6,
+   "lbl": "NGUYÊN VĂN",
+   "text": "Cổ phiếu là loại chứng khoán xác nhận quyền và lợi ích hợp pháp của người sở hữu đối với một phần vốn cổ phần của tổ chức phát hành.",
+   "by": "Luật Chứng khoán 2019 (54/2019/QH14), Điều 4 khoản 2"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "MUA MỘT PHẦN NHỎ CỦA DOANH NGHIỆP",
+     "at": [
+      7,
+      "mua"
+     ],
+     "acc": true
+    },
+    {
+     "text": "không phải mua một cái mã",
+     "at": [
+      7,
+      "không"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 8,
+   "text": "Mua cổ phiếu là\nlàm chủ công ty luôn à?"
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "ĐỒNG SỞ HỮU",
+     "at": [
+      9,
+      "Bạn"
+     ]
+    },
+    {
+     "text": "PHẦN RẤT NHỎ",
+     "at": [
+      9,
+      "rất"
+     ]
+    },
+    {
+     "text": "CỔ TỨC, CHÊNH LỆCH GIÁ: KHÔNG BẢO ĐẢM",
+     "at": [
+      9,
+      "bảo"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 10,
+   "title": "UỶ BAN CHỨNG KHOÁN MỸ (SEC)",
+   "rows": [
+    {
+     "k": "3 NHÓM",
+     "v": "CỔ PHIẾU · TRÁI PHIẾU · TIỀN MẶT",
+     "at": [
+      10,
+      "ba"
+     ]
+    },
+    {
+     "k": "RỦI RO (LỊCH SỬ)",
+     "v": "CAO NHẤT: CỔ PHIẾU",
+     "at": [
+      10,
+      "rủi"
+     ]
+    },
+    {
+     "k": "LỢI NHUẬN (LỊCH SỬ)",
+     "v": "CAO NHẤT: CỔ PHIẾU",
+     "at": [
+      10,
+      "lợi"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 11,
+   "vid": "35782362",
+   "ms": 6,
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "NGƯỜI MUA ⇄ NGƯỜI BÁN",
+     "at": [
+      11,
+      "Người"
+     ]
+    },
+    {
+     "text": "HOSE · SỞ GIAO DỊCH CHỨNG KHOÁN TP.HCM",
+     "at": [
+      12,
+      "Lớn"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 13,
+   "vid": "35878664",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MỘT KHU CHỢ CÓ BAN QUẢN LÝ",
+     "at": [
+      13,
+      "Hãy"
+     ]
+    },
+    {
+     "text": "CÔNG TY CHỨNG KHOÁN \"ĐI CHỢ HỘ\" · CÓ PHÍ",
+     "at": [
+      14,
+      "Bạn"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 15,
+   "day": "PHIÊN GIAO DỊCH ĐẦU TIÊN Ở HOSE",
+   "date": "28.07.2000",
+   "sub": {
+    "text": "CHỈ 2 CỔ PHIẾU: REE · SAM",
+    "at": [
+     15,
+     "chỉ"
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "at": 16,
+   "from": 2,
+   "to": 405,
+   "suffix": " CỔ PHIẾU",
+   "countAt": [
+    16,
+    "Cuối"
+   ],
+   "until": [
+    16,
+    "cổ"
+   ],
+   "label": "HOSE · CUỐI THÁNG 9/2026",
+   "sub": {
+    "text": "TỔNG VỐN HOÁ ≈ 2/3 GDP 2025",
+    "at": [
+     16,
+     "vốn"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "CHỢ MỞ CỬA THẾ NÀO? LỆNH KHỚP RA SAO?",
+     "at": [
+      17,
+      "Chợ"
+     ]
+    },
+    {
+     "text": "→ BÀI 2",
+     "at": [
+      17,
+      "bài"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "CỔ PHIẾU LÀ GÌ, HOSE LÀ GÌ"
+ },
+ "bgm": {
+  "mood": "warm",
+  "gain": 0.11
+ }
+}

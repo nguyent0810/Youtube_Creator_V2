@@ -1,0 +1,165 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "kinh-giai",
+ "hook_type": "nghich-ly",
+ "open_shot": "hoa-gio",
+ "voice": "Ngọc Huyền",
+ "music": "healing.mp3",
+ "gap": 0.3,
+ "title": "Pháp Cú 54: mùi hương bay ngược gió",
+ "kicker": "KINH PHÁP CÚ · KỆ 54",
+ "sub": "DIỄN Ý",
+ "acc": [
+  "hương",
+  "ngược"
+ ],
+ "lines": [
+  "Có một mùi hương bay được ngược chiều gió.",
+  "Hương hoa, hương trầm, hoa nhài, đều chỉ bay xuôi gió.",
+  "Kinh Pháp Cú, kệ năm mươi tư, diễn ý: hương của người tốt bay ngược gió, lan khắp mọi phương.",
+  "Tiếng tốt không cần quảng cáo. Nó tự đi xa, như hương thơm.",
+  "Ai có mùi hương ấy trong đời bạn? Tag người đó nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "HƯƠNG BAY NGƯỢC GIÓ?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "có một mùi hương như vậy",
+     "at": [
+      0,
+      "Có"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:36702166"
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "XUÔI GIÓ",
+   "cards": [
+    {
+     "k": "HƯƠNG",
+     "v": "HOA",
+     "at": [
+      1,
+      "Hương"
+     ]
+    },
+    {
+     "k": "HƯƠNG",
+     "v": "TRẦM",
+     "at": [
+      1,
+      "trầm,"
+     ]
+    },
+    {
+     "k": "HOA",
+     "v": "NHÀI",
+     "at": [
+      1,
+      "nhài,"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Kệ 54 (diễn ý)",
+   "nodes": [
+    {
+     "text": "NGƯỜI TỐT",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      2,
+      "người"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "NGƯỢC GIÓ · MỌI PHƯƠNG",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      2,
+      "ngược"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      2,
+      "ngược"
+     ]
+    }
+   ],
+   "note": "DHP 54 · SUTTACENTRAL"
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 0,
+   "suffix": " QUẢNG CÁO",
+   "label": "TIẾNG TỐT TỰ LAN",
+   "until": [
+    3,
+    "cần"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "TAG NGƯỜI ẤY",
+     "at": [
+      4,
+      "Ai"
+     ],
+     "acc": true
+    },
+    {
+     "text": "người có mùi hương ấy",
+     "at": [
+      4,
+      "Tag"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34357840"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp44-59/en/sujato"
+ ],
+ "description": "Pháp Cú 54: mùi hương bay ngược gió\n\nNguồn: https://suttacentral.net/dhp44-59/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

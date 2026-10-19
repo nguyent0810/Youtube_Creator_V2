@@ -1,0 +1,442 @@
+{
+ "title": "Chín tháng 2026: chỉ số đứng yên, ba phần tư cổ phiếu đi xuống",
+ "lines": [
+  {
+   "t": "Bây giờ, hãy nhìn năm nay.",
+   "p": 0.8
+  },
+  "Ngày ba mươi mốt tháng mười hai năm hai nghìn không trăm hai mươi lăm, VN-Index đóng cửa ở một nghìn bảy trăm tám mươi tư điểm.",
+  "Ngày ba mươi tháng chín năm nay, nó đóng cửa quanh một nghìn bảy trăm sáu mươi tám điểm.",
+  {
+   "t": "Giảm khoảng mười sáu điểm, chưa tới một phần trăm.",
+   "p": 1.0
+  },
+  "Còn từng cổ phiếu thì sao?",
+  "Kênh lấy giá đóng cửa của bốn trăm cổ phiếu HOSE có đủ giá ở cả hai mốc, rồi đếm từng mã.",
+  "Hai trăm chín mươi mốt mã thấp hơn cuối năm ngoái.",
+  {
+   "t": "Tức là bảy mươi hai phẩy tám phần trăm. Gần ba phần tư.",
+   "p": 1.0
+  },
+  "Thử xếp bốn trăm mã thành một hàng, từ giảm nhiều nhất tới tăng nhiều nhất.",
+  "Mã đứng giữa hàng, người ta gọi là trung vị, giảm hơn mười một phần trăm.",
+  "Một phần ba số mã giảm từ hai mươi phần trăm trở lên, trong khi chỉ ba mươi hai mã tăng từ hai mươi phần trăm trở lên.",
+  "Nếu bỏ vào mỗi mã một khoản tiền bằng nhau, chiếc giỏ đó âm khoảng mười phẩy sáu phần trăm.",
+  {
+   "t": "Khoảng cách gần mười điểm phần trăm so với VN-Index chính là cái giá của một chiếc giỏ bị lệch.",
+   "p": 1.0
+  },
+  {
+   "t": "Mấy con số này ở đâu ra vậy? Các bạn tự đếm à?",
+   "ask": 1
+  },
+  "Đúng vậy, kênh tự tính từ giá đóng cửa công khai, cách tính ghi đầy đủ trong mô tả.",
+  "Hai điểm nên biết: mã đã rời sàn trong năm không có trong mẫu, nên con số thật có thể còn tệ hơn.",
+  {
+   "t": "Còn giá dùng ở đây đã điều chỉnh theo cổ tức, nên số này hơi đẹp hơn giá trên bảng điện.",
+   "p": 1.0
+  },
+  "Hồi tháng tư, báo Tuổi Trẻ gọi hiện tượng này bằng một cụm từ:",
+  {
+   "t": "Xanh chỉ số, đỏ danh mục.",
+   "q": 1
+  },
+  "Năm hai nghìn không trăm hai mươi lăm, VN-Index tăng gần bốn mươi mốt phần trăm, nhưng theo Tuổi Trẻ, hơn bốn mươi sáu phần trăm số cổ phiếu trên thị trường vẫn có kết quả đầu tư âm.",
+  "Chỉ số đo một chiếc giỏ có trọng số, không đo một cổ phiếu điển hình."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "CHÍN THÁNG 2026:\nCHỈ SỐ ĐỨNG YÊN",
+   "sub": "BA PHẦN TƯ CỔ PHIẾU ĐI XUỐNG",
+   "vid": "39494572",
+   "ms": 7,
+   "titleAt": [
+    0,
+    "Bây"
+   ]
+  },
+  {
+   "type": "candles",
+   "at": 1,
+   "series": "vnindex",
+   "from": "2025-12-01",
+   "to": "2026-09-30",
+   "drawAt": [
+    1,
+    "Ngày"
+   ],
+   "until": [
+    2,
+    "nó"
+   ],
+   "title": "VN-INDEX · KHUNG NGÀY",
+   "range": "12/2025 – 09/2026",
+   "ind": [],
+   "marks": [
+    {
+     "date": "2025-12-31",
+     "text": "31/12: 1.784,49 (đóng cửa)",
+     "pos": "below",
+     "tone": "gold",
+     "at": [
+      1,
+      "VN-Index"
+     ],
+     "dx": 260,
+     "dy": 40
+    },
+    {
+     "date": "2026-09-30",
+     "text": "30/09: 1.768,62 (đóng cửa)",
+     "pos": "below",
+     "tone": "down",
+     "at": [
+      2,
+      "đóng"
+     ],
+     "dx": -300,
+     "dy": 40
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "−0,9% · ≈ −16 ĐIỂM",
+     "at": [
+      3,
+      "Giảm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "31/12/2025 → 30/09/2026 · giá đóng cửa",
+     "at": [
+      3,
+      "mười"
+     ],
+     "sm": true
+    },
+    {
+     "text": "CÒN TỪNG CỔ PHIẾU?",
+     "at": [
+      4,
+      "Còn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "breadth",
+   "at": 5,
+   "date": "2026-09-30",
+   "title": "KÊNH ĐẾM TỪNG MÃ · 400 CỔ PHIẾU HOSE",
+   "range": "30/09/2026 · SO VỚI 31/12/2025",
+   "drawAt": [
+    5,
+    "Kênh"
+   ],
+   "until": [
+    5,
+    "đếm"
+   ],
+   "countAt": [
+    6,
+    "Hai"
+   ],
+   "countSub": "THẤP HƠN CUỐI 2025",
+   "chipAt": [
+    7,
+    "Gần"
+   ]
+  },
+  {
+   "type": "breadth",
+   "at": 8,
+   "date": "2026-09-30",
+   "title": "XẾP HÀNG: GIẢM NHIỀU NHẤT → TĂNG NHIỀU NHẤT",
+   "range": "30/09/2026",
+   "drawAt": [
+    8,
+    "Thử"
+   ],
+   "until": [
+    8,
+    "tăng"
+   ],
+   "medianAt": [
+    9,
+    "trung"
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 10,
+   "title": "400 MÃ HOSE THEO MỨC THAY ĐỔI · 31/12 → 30/09",
+   "unit": "SỐ MÃ · KÊNH TỰ TÍNH",
+   "items": [
+    {
+     "k": "<−50%",
+     "v": 13,
+     "lbl": "13",
+     "at": [
+      10,
+      "giảm",
+      0,
+      0.0
+     ],
+     "acc": true
+    },
+    {
+     "k": "−50…−30",
+     "v": 73,
+     "lbl": "73",
+     "at": [
+      10,
+      "giảm",
+      0,
+      0.12
+     ],
+     "acc": true
+    },
+    {
+     "k": "−30…−20",
+     "v": 46,
+     "lbl": "46",
+     "at": [
+      10,
+      "giảm",
+      0,
+      0.24
+     ],
+     "acc": true
+    },
+    {
+     "k": "−20…−10",
+     "v": 80,
+     "lbl": "80",
+     "at": [
+      10,
+      "Một",
+      0,
+      0.0
+     ]
+    },
+    {
+     "k": "−10…0",
+     "v": 79,
+     "lbl": "79",
+     "at": [
+      10,
+      "Một",
+      0,
+      0.1
+     ]
+    },
+    {
+     "k": "0…+10",
+     "v": 56,
+     "lbl": "56",
+     "at": [
+      10,
+      "Một",
+      0,
+      0.2
+     ]
+    },
+    {
+     "k": "+10…+20",
+     "v": 21,
+     "lbl": "21",
+     "at": [
+      10,
+      "Một",
+      0,
+      0.3
+     ]
+    },
+    {
+     "k": "+20…+30",
+     "v": 13,
+     "lbl": "13",
+     "at": [
+      10,
+      "tăng",
+      0,
+      0.0
+     ],
+     "acc": true
+    },
+    {
+     "k": "+30…+50",
+     "v": 12,
+     "lbl": "12",
+     "at": [
+      10,
+      "tăng",
+      0,
+      0.12
+     ],
+     "acc": true
+    },
+    {
+     "k": "≥+50%",
+     "v": 7,
+     "lbl": "7",
+     "at": [
+      10,
+      "tăng",
+      0,
+      0.24
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 11,
+   "title": "HAI CHIẾC GIỎ · 31/12 → 30/09",
+   "rows": [
+    {
+     "k": "RỔ CHIA ĐỀU 400 MÃ",
+     "v": "≈ −10,6%",
+     "at": [
+      11,
+      "Nếu"
+     ]
+    },
+    {
+     "k": "VN-INDEX (THEO VỐN HOÁ)",
+     "v": "−0,9%",
+     "at": [
+      12,
+      "Khoảng"
+     ]
+    }
+   ],
+   "total": {
+    "k": "CHÊNH LỆCH",
+    "v": "GẦN 10 ĐIỂM %",
+    "at": [
+     12,
+     "giá"
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "at": 13,
+   "text": "Mấy con số này ở đâu ra?\nCác bạn tự đếm à?"
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "KÊNH TỰ TÍNH",
+     "at": [
+      14,
+      "Đúng"
+     ],
+     "acc": true
+    },
+    {
+     "text": "từ giá đóng cửa công khai · cách tính đầy đủ trong mô tả",
+     "at": [
+      14,
+      "giá"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 15,
+   "title": "HAI ĐIỂM NÊN BIẾT",
+   "rows": [
+    {
+     "k": "MÃ RỜI SÀN TRONG NĂM",
+     "v": "KHÔNG CÓ TRONG MẪU",
+     "at": [
+      15,
+      "mã"
+     ]
+    },
+    {
+     "k": "→ SỐ THẬT",
+     "v": "CÓ THỂ TỆ HƠN",
+     "at": [
+      15,
+      "tệ"
+     ]
+    },
+    {
+     "k": "GIÁ ĐÃ ĐIỀU CHỈNH CỔ TỨC",
+     "v": "HƠI ĐẸP HƠN",
+     "at": [
+      16,
+      "Còn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 17,
+   "qline": 18,
+   "lbl": "NGUYÊN VĂN",
+   "text": "Xanh chỉ số, đỏ danh mục.",
+   "by": "Báo Tuổi Trẻ, 16/04/2026"
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "items": [
+    {
+     "text": "2025: VN-INDEX +40,9%",
+     "at": [
+      19,
+      "Năm"
+     ]
+    },
+    {
+     "text": "theo Tuổi Trẻ (14/01/2026)",
+     "at": [
+      19,
+      "Tuổi"
+     ],
+     "sm": true
+    },
+    {
+     "text": "HƠN 46% CỔ PHIẾU TRÊN THỊ TRƯỜNG ĐẦU TƯ ÂM",
+     "at": [
+      19,
+      "hơn"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 20,
+   "text": "CHỈ SỐ ≠ CỔ PHIẾU ĐIỂN HÌNH",
+   "sub": "CHỈ SỐ ĐO MỘT CHIẾC GIỎ CÓ TRỌNG SỐ"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "9 THÁNG 2026: 3/4 CỔ PHIẾU ĐI XUỐNG"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

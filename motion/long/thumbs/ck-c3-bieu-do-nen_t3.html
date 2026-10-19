@@ -1,0 +1,34 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#050912}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:"Be Vietnam Pro",sans-serif;color:#fff;
+ background:linear-gradient(rgba(125,211,252,.06) 1px,transparent 1px) 0 0/80px 80px,linear-gradient(90deg,rgba(125,211,252,.06) 1px,transparent 1px) 0 0/80px 80px,radial-gradient(80% 70% at 65% 45%,#16263f 0%,#0a1426 60%,#04080f 100%)}
+.big{position:absolute;font-weight:900;line-height:1.12;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.tag{position:absolute;font-family:"JetBrains Mono";font-weight:700;letter-spacing:.12em;white-space:nowrap}
+.pill{position:absolute;padding:10px 34px 14px;border-radius:40px;border:6px solid;background:#0a1426;font-weight:900;white-space:nowrap;line-height:1.2}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<!-- T3: VN-Index 23/03 + 24/03/2026, tỉ lệ thật. 24/03: nến ĐỎ (đóng 1.614,77 < mở 1.626,34) nhưng +1,48% so với tham chiếu 1.591,17 -->
+<svg style="position:absolute;left:0;top:0" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs><filter id="gl" x="-50%" y="-30%" width="200%" height="160%"><feGaussianBlur stdDeviation="26" /></filter></defs>
+  <!-- tham chiếu = đóng cửa 23/03 -->
+  <line x1="1020" y1="795" x2="1860" y2="795" stroke="#fbbf24" stroke-width="6" stroke-dasharray="18 12" />
+  <!-- 23/03: O 1.630,11 H 1.636,27 L 1.586,44 C 1.591,17 -->
+  <line x1="1150" y1="209" x2="1150" y2="856" stroke="#ef4444" stroke-width="12" opacity=".55" />
+  <rect x="1075" y="289" width="150" height="506" rx="8" fill="#ef4444" opacity=".55" />
+  <!-- 24/03: O 1.626,34 H 1.630,63 L 1.602,92 C 1.614,77 -->
+  <rect x="1460" y="338" width="210" height="150" rx="10" fill="#ef4444" opacity=".5" filter="url(#gl)" />
+  <line x1="1565" y1="282" x2="1565" y2="642" stroke="#ef4444" stroke-width="16" />
+  <rect x="1460" y="338" width="210" height="150" rx="10" fill="#ef4444" />
+  <!-- mũi tên tăng từ tham chiếu lên đóng cửa 24/03 -->
+  <line x1="1760" y1="790" x2="1760" y2="512" stroke="#22c55e" stroke-width="12" />
+  <polygon points="1730,522 1790,522 1760,478" fill="#22c55e" />
+</svg>
+<div class="pill" style="left:1565px;top:120px;font-size:58px;border-color:#ef4444;color:#ef4444;transform:translateX(-50%)">NẾN ĐỎ</div>
+<div class="pill" style="left:1760px;top:600px;font-size:58px;border-color:#22c55e;color:#4ade80;transform:translateX(-50%)">+1,48%</div>
+<div class="tag" style="left:1040px;top:815px;font-size:36px;color:#fbbf24">THAM CHIẾU</div>
+<div class="big" style="left:80px;top:170px;font-size:150px;color:#ef4444">ĐỎ</div>
+<div class="big" style="left:80px;top:350px;font-size:150px;color:#4ade80">MÀ TĂNG?</div>
+<div class="tag" style="left:80px;top:900px;font-size:46px;color:#fbbf24">VN-INDEX · 24/03/2026</div>
+</div><script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

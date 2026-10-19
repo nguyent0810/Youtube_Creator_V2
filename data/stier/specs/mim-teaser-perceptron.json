@@ -1,0 +1,209 @@
+{
+  "theme": "mim",
+  "title": "Năm 1958, một cỗ máy 5 tấn tự học phân biệt trái và phải",
+  "description": "Năm 1958, Văn phòng Nghiên cứu Hải quân Mỹ cho phóng viên xem một máy tính IBM 704 nặng khoảng 5 tấn tự học phân biệt thẻ đục lỗ đánh dấu bên trái với bên phải, sau 50 lần thử. Frank Rosenblatt gọi nó là perceptron; tạp chí New Yorker gọi đó là đối thủ nghiêm túc đầu tiên của bộ não con người. Chỉ 11 năm sau, ý tưởng ấy bị coi là ngõ cụt. Toàn bộ câu chuyện có trong video dài \"AI Đã \"Chết\" Hai Lần Trước Khi Có ChatGPT\" trên kênh Mind in the Machine.",
+  "tags": [
+    "perceptron",
+    "lịch sử ai",
+    "trí tuệ nhân tạo",
+    "frank rosenblatt",
+    "học máy",
+    "mạng nơ-ron",
+    "ai đã chết hai lần",
+    "công nghệ"
+  ],
+  "kicker": "70 NĂM AI",
+  "sub": "1958 · PERCEPTRON",
+  "acc": [
+    "tấn",
+    "trái",
+    "phải",
+    "ngõ",
+    "cụt",
+    "chết",
+    "perceptron"
+  ],
+  "lines": [
+    "Năm 1958, một cỗ máy nặng khoảng năm tấn tự học phân biệt trái và phải.",
+    "Hải quân Mỹ mời phóng viên tới xem tận mắt.",
+    "Người ta cho nó ăn thẻ đục lỗ: tấm đánh dấu bên trái, tấm đánh dấu bên phải.",
+    "Không ai dạy nó luật nào cả.",
+    "Sau năm mươi lần thử, nó tự phân biệt được.",
+    "Người tạo ra nó gọi đó là perceptron.",
+    "Báo chí gọi nó là đối thủ nghiêm túc đầu tiên của bộ não con người.",
+    "Vậy mà chỉ mười một năm sau, ý tưởng ấy bị coi là ngõ cụt.",
+    "Nhưng ngay lúc này, nó đang nằm trong chiếc điện thoại của bạn.",
+    "Vì sao nó chết, rồi sống lại?",
+    "Xem video AI đã chết hai lần trước khi có ChatGPT, trên kênh."
+  ],
+  "imgs": {
+    "perceptron": "File:330-PSA-80-60 (USN 710739) (20897323365).jpg",
+    "ibm704": "File:IBM Electronic Data Processing Machine - GPN-2000-001881.jpg",
+    "percdiagram": "File:Organization of a biological brain and a perceptron.png"
+  },
+  "scenes": [
+    {
+      "type": "hero",
+      "img": "perceptron",
+      "intro": true,
+      "head": "CỖ MÁY TỰ HỌC"
+    },
+    {
+      "type": "photo",
+      "at": 1,
+      "img": "ibm704",
+      "mode": "full",
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "label": {
+        "text": "IBM 704 · MÁY CÙNG LOẠI · NASA 1957",
+        "at": [
+          1,
+          "phóng"
+        ]
+      }
+    },
+    {
+      "type": "ledger",
+      "at": 2,
+      "title": "THẺ ĐỤC LỖ",
+      "rows": [
+        {
+          "k": "ĐÁNH DẤU BÊN TRÁI",
+          "v": "←",
+          "at": [
+            2,
+            "trái"
+          ]
+        },
+        {
+          "k": "ĐÁNH DẤU BÊN PHẢI",
+          "v": "→",
+          "at": [
+            2,
+            "phải"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "slam",
+      "at": 3,
+      "text": "KHÔNG AI DẠY",
+      "sub": "LUẬT NÀO CẢ"
+    },
+    {
+      "type": "counter",
+      "at": 4,
+      "to": 50,
+      "suffix": " LẦN",
+      "label": "TỰ PHÂN BIỆT ĐƯỢC",
+      "until": [
+        4,
+        "thử"
+      ],
+      "labelAt": [
+        4,
+        "phân"
+      ]
+    },
+    {
+      "type": "photo",
+      "at": 5,
+      "img": "percdiagram",
+      "mode": "print",
+      "tone": "color",
+      "label": {
+        "text": "PERCEPTRON · ROSENBLATT 1958",
+        "at": [
+          5,
+          "perceptron"
+        ],
+        "y": 1330
+      }
+    },
+    {
+      "type": "quote",
+      "at": 6,
+      "text": "the first serious rival to the human brain ever devised",
+      "by": "TẠP CHÍ NEW YORKER"
+    },
+    {
+      "type": "timeline",
+      "at": 7,
+      "items": [
+        {
+          "year": "1958",
+          "text": "đối thủ của bộ não",
+          "at": [
+            7,
+            null,
+            0,
+            0.15
+          ]
+        },
+        {
+          "year": "1969",
+          "text": "bị coi là ngõ cụt",
+          "at": [
+            7,
+            "ngõ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kinetic",
+      "at": 8,
+      "clip": "pexels:6611945",
+      "veil": 0.66,
+      "items": [
+        {
+          "text": "NGAY LÚC NÀY",
+          "at": [
+            8,
+            "lúc"
+          ],
+          "sm": true,
+          "size": 64
+        },
+        {
+          "text": "TRONG ĐIỆN THOẠI",
+          "at": [
+            8,
+            "điện"
+          ],
+          "acc": true
+        },
+        {
+          "text": "của bạn",
+          "at": [
+            8,
+            "bạn"
+          ],
+          "sm": true,
+          "size": 64
+        }
+      ]
+    },
+    {
+      "type": "question",
+      "at": 9,
+      "text": "Vì sao nó chết, rồi sống lại?"
+    },
+    {
+      "type": "hero",
+      "at": 10,
+      "img": "perceptron",
+      "loop": true,
+      "head": "AI ĐÃ CHẾT HAI LẦN\nTRƯỚC KHI CÓ CHATGPT"
+    }
+  ],
+  "sources": [
+    "https://news.cornell.edu/stories/2019/09/professors-perceptron-paved-way-ai-60-years-too-soon",
+    "https://doi.org/10.1037/h0042519",
+    "https://en.wikipedia.org/wiki/Perceptrons_(book)"
+  ]
+}

@@ -1,0 +1,226 @@
+{
+ "theme": "mim",
+ "title": "Bài báo năm 2017 đổi cách máy đọc chữ: Attention Is All You Need",
+ "description": "Tháng 6/2017, tám nhà nghiên cứu của Google đăng bài “Attention Is All You Need” (arXiv 1706.03762), giới thiệu kiến trúc Transformer. Nói gọn và đơn giản hoá: thay vì đọc một câu lần lượt từng chữ, mô hình nhìn cả câu cùng lúc và tự cân xem chữ nào cần chú ý tới chữ nào. Mô hình lớn trong bài đạt kết quả hàng đầu sau 3,5 ngày huấn luyện trên 8 GPU. Các mô hình ngôn ngữ lớn và chatbot hiện nay được xây trên kiến trúc này. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.",
+ "tags": [
+  "transformer",
+  "attention is all you need",
+  "google",
+  "mô hình ngôn ngữ",
+  "chatbot",
+  "lịch sử ai",
+  "mind in the machine"
+ ],
+ "kicker": "LỊCH SỬ AI",
+ "sub": "TRANSFORMER · 2017",
+ "acc": [
+  "đọc",
+  "chữ",
+  "cả",
+  "câu",
+  "rưỡi",
+  "móng"
+ ],
+ "lines": [
+  "Một bài báo năm 2017, đổi cách máy đọc chữ.",
+  "Tám nhà nghiên cứu của Google đặt cho nó cái tên rất tự tin: Attention Is All You Need.",
+  "Họ giới thiệu một kiến trúc mới, tên là Transformer.",
+  "Trước đó, máy đọc một câu lần lượt, từng chữ một.",
+  "Còn Transformer nhìn cả câu cùng lúc, rồi tự cân xem chữ nào cần chú ý tới chữ nào.",
+  "Mô hình của họ học xong trong ba ngày rưỡi, trên tám GPU.",
+  "Nói gọn, đó là nền móng của các chatbot hôm nay."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "BÀI BÁO NĂM 2017",
+     "at": 0.0
+    },
+    {
+     "text": "ĐỔI CÁCH MÁY ĐỌC CHỮ",
+     "at": [
+      0,
+      "đổi"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:8888529",
+   "veil": 0.55
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "arXiv · 06.2017 · Google",
+   "nodes": [
+    {
+     "text": "Attention Is",
+     "x": 0.5,
+     "y": 0.34,
+     "at": [
+      1,
+      "Attention"
+     ],
+     "shape": "none",
+     "size": 84
+    },
+    {
+     "text": "All You Need",
+     "x": 0.5,
+     "y": 0.56,
+     "at": [
+      1,
+      "All"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "size": 84
+    },
+    {
+     "text": "8 tác giả",
+     "x": 0.5,
+     "y": 0.84,
+     "at": [
+      1,
+      "Tám"
+     ],
+     "shape": "none",
+     "size": 50
+    }
+   ],
+   "note": "TÊN BÀI BÁO · NGUYÊN VĂN"
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "TRANSFORMER",
+   "sub": "KIẾN TRÚC MỚI",
+   "clip": "pexels:8888529",
+   "ms": 9,
+   "veil": 0.66
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Máy đọc một câu thế nào?",
+   "nodes": [
+    {
+     "text": "từng chữ một",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      3,
+      "từng"
+     ],
+     "cross": [
+      4,
+      "Còn"
+     ]
+    },
+    {
+     "text": "cả câu cùng lúc",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      4,
+      "cả"
+     ],
+     "c": "acc",
+     "shape": "circle"
+    },
+    {
+     "text": "chữ nào chú ý tới chữ nào",
+     "x": 0.5,
+     "y": 0.88,
+     "at": [
+      4,
+      "chữ"
+     ],
+     "shape": "none",
+     "size": 46,
+     "w": 880
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "to": 8,
+   "suffix": " GPU",
+   "label": "HỌC XONG TRONG 3,5 NGÀY",
+   "until": [
+    5,
+    "tám"
+   ],
+   "sub": {
+    "text": "NGUỒN: arXiv 1706.03762",
+    "at": [
+     5,
+     "ngày"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NÓI GỌN",
+     "at": 6,
+     "sm": true
+    },
+    {
+     "text": "NỀN MÓNG CỦA",
+     "at": [
+      6,
+      "nền"
+     ]
+    },
+    {
+     "text": "CHATBOT HÔM NAY",
+     "at": [
+      6,
+      "chatbot"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7362704",
+   "ms": 3,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 6
+  }
+ ],
+ "sources": [
+  "https://arxiv.org/abs/1706.03762"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "google": "Gu-gồ",
+  "attention": "ơ-ten-sần",
+  "is": "ít",
+  "all": "o",
+  "you": "diu",
+  "need": "nít",
+  "transformer": "tran-xphó-mơ",
+  "gpu": "gi pi iu",
+  "chatbot": "chát bót"
+ },
+ "imgs": {}
+}

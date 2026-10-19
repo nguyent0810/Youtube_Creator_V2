@@ -1,0 +1,188 @@
+{
+ "title": "Mỏ neo giá mua",
+ "lines": [
+  {
+   "t": "Thứ thứ tư trên cân, có lẽ là thứ nặng nhất: cái giá bạn đã trả.",
+   "p": 0.8
+  },
+  {
+   "t": "Hãy quay lại cổ phiếu B, mua năm mươi triệu, giờ còn bốn mươi.",
+   "p": 1.0
+  },
+  "Thị trường không biết bạn mua ở giá nào.",
+  "Giá của B ngày mai lên hay xuống, không phụ thuộc vào việc bạn đang lỗ hay lãi.",
+  {
+   "t": "Nhưng trong đầu bạn, con số năm mươi triệu ấy như một cái mỏ neo.",
+   "p": 1.0
+  },
+  "Mọi quyết định đều xoay quanh câu hỏi: bao giờ thì về lại năm mươi?",
+  "Trong khi câu hỏi mà tiền của bạn thật sự quan tâm lại khác.",
+  {
+   "t": "Đó là: từ bốn mươi triệu hôm nay, đâu là chỗ hợp lý nhất cho số tiền này?",
+   "p": 1.0
+  },
+  {
+   "t": "Nhưng chưa bán thì chưa lỗ mà?",
+   "ask": 1
+  },
+  "Đó là câu nói được nghe nhiều nhất. Và về kế toán của riêng bạn, nó có vẻ đúng.",
+  "Nhưng tài khoản của bạn hôm nay đáng bốn mươi triệu, dù bạn bán hay không.",
+  {
+   "t": "Không bán chỉ làm khoản lỗ khó nhìn thấy hơn. Nó không làm khoản lỗ biến mất.",
+   "p": 1.0
+  },
+  "Có một cách nghĩ mà nhiều người dùng để gỡ mỏ neo.",
+  "Giả sử hôm nay bạn đang cầm bốn mươi triệu tiền mặt, chưa có cổ phiếu nào.",
+  "Bạn có dùng đúng số tiền ấy để mua lại đúng cổ phiếu này, ở giá này, không?",
+  "Câu trả lời của câu hỏi ấy không nhắc gì tới năm mươi triệu."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "CHƯƠNG BỐN",
+   "title": "MỎ NEO GIÁ MUA",
+   "sub": "THỨ NẶNG NHẤT TRÊN CÂN",
+   "vid": "6979840",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Thứ"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "CỔ PHIẾU B",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "GIÁ BẠN TRẢ",
+     "v": "50 TRIỆU",
+     "at": [
+      1,
+      "mua"
+     ]
+    },
+    {
+     "k": "HÔM NAY",
+     "v": "40 TRIỆU",
+     "at": [
+      1,
+      "giờ"
+     ]
+    }
+   ],
+   "total": {
+    "k": "THỊ TRƯỜNG BIẾT GIÁ BẠN MUA?",
+    "v": "KHÔNG",
+    "at": 2
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "GIÁ NGÀY MAI KHÔNG PHỤ THUỘC",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "VÀO VIỆC BẠN ĐANG LỖ HAY LÃI",
+     "at": [
+      3,
+      "vào"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 5,
+   "mythLab": "CÂU HỎI QUEN",
+   "myth": "BAO GIỜ VỀ 50?",
+   "truthLab": "CÂU HỎI CỦA TIỀN",
+   "truth": "40 TRIỆU NÊN Ở ĐÂU?",
+   "strikeAt": [
+    6,
+    "Trong"
+   ],
+   "truthAt": [
+    7,
+    "từ"
+   ]
+  },
+  {
+   "type": "question",
+   "at": 8,
+   "text": "Chưa bán thì chưa lỗ mà?"
+  },
+  {
+   "type": "ledger",
+   "at": 9,
+   "title": "TÀI KHOẢN HÔM NAY",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "NẾU BÁN",
+     "v": "40 TRIỆU",
+     "at": 10
+    },
+    {
+     "k": "NẾU KHÔNG BÁN",
+     "v": "VẪN 40 TRIỆU",
+     "at": [
+      10,
+      "dù"
+     ]
+    }
+   ],
+   "total": {
+    "k": "KHÔNG BÁN",
+    "v": "KHÓ THẤY HƠN · VẪN CÒN ĐÓ",
+    "at": 11
+   }
+  },
+  {
+   "type": "broll",
+   "at": 12,
+   "vid": "7534958",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MỘT CÁCH GỠ MỎ NEO",
+     "at": 12,
+     "sm": true
+    },
+    {
+     "text": "CẦM 40 TRIỆU TIỀN MẶT HÔM NAY",
+     "at": 13,
+     "sm": true
+    },
+    {
+     "text": "CÓ MUA LẠI ĐÚNG CỔ PHIẾU NÀY KHÔNG?",
+     "at": 14,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 15,
+   "text": "KHÔNG NHẮC TỚI 50 TRIỆU",
+   "sub": "CÂU TRẢ LỜI CHỈ NHÌN VỀ PHÍA TRƯỚC",
+   "subAt": 15
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "MỎ NEO GIÁ MUA"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

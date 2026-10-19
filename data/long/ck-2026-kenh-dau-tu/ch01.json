@@ -1,0 +1,323 @@
+{
+ "title": "Chứng khoán: đứng yên mà đi một vòng",
+ "lines": [
+  {
+   "t": "Cuối năm hai nghìn không trăm hai mươi lăm, VN-Index đóng cửa ở một nghìn bảy trăm tám mươi tư điểm.",
+   "p": 0.8
+  },
+  "Cuối tháng chín năm nay, nó ở quanh một nghìn bảy trăm sáu mươi tám điểm.",
+  "Giảm chưa tới một phần trăm.",
+  {
+   "t": "Nhìn hai con số đầu và cuối, bạn sẽ nghĩ cả năm chẳng có gì xảy ra.",
+   "p": 1.0
+  },
+  "Nhưng hãy nhìn đường đi ở giữa.",
+  "Tháng ba, căng thẳng ở Trung Đông đẩy giá dầu vượt một trăm mười tám đô la một thùng.",
+  "Chỉ trong một tháng, VN-Index mất gần mười một phần trăm, có lúc xuống một nghìn năm trăm tám mươi sáu điểm trong phiên.",
+  "Rồi tháng tư, nó bật lên hơn mười phần trăm, và tới tháng năm thì có lúc chạm một nghìn chín trăm ba mươi ba điểm trong phiên.",
+  {
+   "t": "Sau đó lại trôi xuống.",
+   "p": 1.0
+  },
+  "Từ đáy lên đỉnh là hơn hai mươi phần trăm.",
+  "Một chỉ số \"đứng yên\", nhưng ai mua theo chỉ số đúng đỉnh tháng năm thì tới cuối tháng chín vẫn lỗ gần chín phần trăm.",
+  {
+   "t": "Nhưng nghe nói tháng chín Việt Nam được nâng hạng thị trường mà? Sao không tăng?",
+   "ask": 1
+  },
+  "Đúng, nâng hạng có hiệu lực từ hai mươi mốt tháng chín.",
+  "Nhưng tiền từ các quỹ chỉ số mới chỉ vào đợt đầu khoảng mười phần trăm, trong khi khối ngoại đã bán ròng chín tháng liên tiếp, hơn chín mươi lăm nghìn tỷ đồng trên sàn HOSE.",
+  {
+   "t": "Tháng chín, thanh khoản xuống thấp nhất mười chín tháng.",
+   "p": 1.0
+  },
+  "Và còn một chi tiết nữa.",
+  "Nhiều nhịp lên xuống lớn năm nay có dấu tay của một nhóm cổ phiếu vốn hoá rất lớn.",
+  "Nửa đầu năm, VN-Index tăng hơn bốn phần trăm, nhưng nếu bỏ nhóm đó ra, chỉ số lại âm gần hai phần trăm.",
+  "Nghĩa là con số VN-Index bạn thấy trên tin tức, có khi rất khác với tài khoản của chính bạn.",
+  "Mình sẽ có hẳn một bài trong khoá Chứng khoán từ số không để giải thích vì sao."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "CHỨNG KHOÁN:\nĐỨNG YÊN MÀ ĐI MỘT VÒNG",
+   "sub": "VN-INDEX · 2026",
+   "vid": "38736271",
+   "titleAt": [
+    0,
+    "Cuối"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "1.784 → 1.769",
+     "at": [
+      1,
+      "quanh"
+     ],
+     "acc": true
+    },
+    {
+     "text": "31/12/2025 → 30/09/2026",
+     "at": [
+      1,
+      "Cuối"
+     ],
+     "sm": true
+    },
+    {
+     "text": "−0,9%",
+     "at": [
+      2,
+      "Giảm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "CẢ NĂM CHẲNG CÓ GÌ?",
+     "at": [
+      3,
+      "chẳng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "candles",
+   "at": 4,
+   "series": "vnindex",
+   "from": "2025-12-01",
+   "to": "2026-09-30",
+   "drawAt": [
+    4,
+    "nhìn"
+   ],
+   "until": [
+    6,
+    "xuống"
+   ],
+   "title": "VN-INDEX · KHUNG NGÀY",
+   "range": "12/2025 – 09/2026",
+   "ind": [],
+   "marks": [
+    {
+     "date": "2026-03-23",
+     "text": "Đáy 1.586 (trong phiên)",
+     "pos": "below",
+     "tone": "down",
+     "at": [
+      6,
+      "xuống"
+     ],
+     "dx": -160,
+     "dy": 30
+    },
+    {
+     "date": "2026-05-19",
+     "text": "Đỉnh 1.933 (trong phiên)",
+     "pos": "above",
+     "tone": "up",
+     "at": [
+      7,
+      "chạm"
+     ],
+     "dx": 200,
+     "dy": -10
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 9,
+   "text": "HƠN 20%",
+   "sub": "TỪ ĐÁY LÊN ĐỈNH · TRONG PHIÊN"
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "MUA THEO CHỈ SỐ ĐÚNG ĐỈNH THÁNG 5",
+     "at": [
+      10,
+      "đỉnh"
+     ]
+    },
+    {
+     "text": "CUỐI THÁNG 9: ≈ −8,5%",
+     "at": [
+      10,
+      "lỗ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 11,
+   "text": "Được nâng hạng thị trường,\nsao không tăng?"
+  },
+  {
+   "type": "date",
+   "at": 12,
+   "day": "NÂNG HẠNG FTSE CÓ HIỆU LỰC",
+   "date": "21.09.2026"
+  },
+  {
+   "type": "ledger",
+   "at": 13,
+   "title": "9 THÁNG 2026",
+   "rows": [
+    {
+     "k": "TIỀN QUỸ CHỈ SỐ · ĐỢT 1",
+     "v": "≈ 10%",
+     "at": [
+      13,
+      "mười"
+     ]
+    },
+    {
+     "k": "KHỐI NGOẠI BÁN RÒNG (HOSE)",
+     "v": "> 95.000 TỶ",
+     "at": [
+      13,
+      "chín"
+     ]
+    },
+    {
+     "k": "THÁNG BÁN RÒNG LIÊN TIẾP",
+     "v": "9",
+     "at": [
+      13,
+      "liên"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 14,
+   "vid": "38557069",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "THANH KHOẢN THẤP NHẤT 19 THÁNG",
+     "at": [
+      14,
+      "thấp"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "MỘT CHI TIẾT NỮA",
+     "at": [
+      15,
+      "chi"
+     ],
+     "sm": true
+    },
+    {
+     "text": "MỘT NHÓM CỔ PHIẾU VỐN HOÁ RẤT LỚN",
+     "at": [
+      16,
+      "vốn"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 17,
+   "title": "NỬA ĐẦU 2026",
+   "rows": [
+    {
+     "k": "VN-INDEX",
+     "v": "+4,23%",
+     "at": [
+      17,
+      "tăng"
+     ]
+    },
+    {
+     "k": "BỎ NHÓM VỐN HOÁ LỚN ĐÓ RA",
+     "v": "≈ −1,81%",
+     "at": [
+      17,
+      "âm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 18,
+   "items": [
+    {
+     "text": "CHỈ SỐ TRÊN TIN TỨC",
+     "at": [
+      18,
+      "tin"
+     ]
+    },
+    {
+     "text": "≠ TÀI KHOẢN CỦA BẠN",
+     "at": [
+      18,
+      "tài"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "items": [
+    {
+     "text": "KHOÁ CHỨNG KHOÁN TỪ SỐ 0",
+     "at": [
+      19,
+      "khoá"
+     ],
+     "acc": true
+    },
+    {
+     "text": "sẽ giải thích vì sao",
+     "at": [
+      19,
+      "giải"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "CHỨNG KHOÁN: ĐỨNG YÊN MÀ ĐI MỘT VÒNG"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

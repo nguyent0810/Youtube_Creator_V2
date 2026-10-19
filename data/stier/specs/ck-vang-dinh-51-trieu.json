@@ -1,0 +1,282 @@
+{
+  "theme": "ck",
+  "title": "Mua vàng đúng đỉnh 191,3 triệu: bán lại giờ lỗ bao nhiêu?",
+  "description": "29/01/2026, giá bán vàng miếng SJC lập đỉnh năm 191,3 triệu đồng/lượng — đúng ngày nhiều người ở Hà Nội xếp hàng hàng giờ để mua. Đầu tháng 10, giá mua vào chỉ khoảng 140 triệu: người mua đúng đỉnh lỗ khoảng 51 triệu/lượng, gần bằng 6 tháng thu nhập bình quân của người lao động (9,1 triệu/tháng, 9 tháng 2026).\n\nCách tính: mua theo giá bán ra 191,3 (29/01) → bán lại theo giá mua vào 140,5 (sáng 03–06/10) ≈ −50,8 triệu (≈ −26,6%). Giá bán ra giảm khoảng 1/4 từ đỉnh; chênh lệch mua–bán khoảng 3 triệu/lượng. Biểu đồ: giá bán ra 01/01, 29/01, 02/03, 30/09, 06/10/2026. Đây là nhìn lại quá khứ, không phải dự báo giá vàng.\n\nToàn cảnh các kênh năm nay — video dài trên kênh: \"Năm 2026: chứng khoán, vàng, coin, nhà đất đều đỏ — chỉ sổ tiết kiệm xanh. Vì sao?\"\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo giá. Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.",
+  "tags": [
+    "giá vàng",
+    "vàng miếng",
+    "giá vàng SJC",
+    "mua vàng đỉnh",
+    "giá vàng 2026",
+    "tài chính cá nhân",
+    "biểu đồ biết nói",
+    "chênh lệch mua bán vàng",
+    "1 con số"
+  ],
+  "kicker": "1 CON SỐ",
+  "sub": "VÀNG 2026",
+  "acc": [
+    "đỉnh",
+    "lỗ",
+    "xếp",
+    "sáu",
+    "chênh"
+  ],
+  "lines": [
+    "Ngày hai mươi chín tháng một, vàng miếng lên đỉnh cao nhất năm nay, một trăm chín mươi mốt phẩy ba triệu đồng một lượng.",
+    "Hôm đó ở Hà Nội, nhiều người xếp hàng hàng giờ để mua.",
+    "Đầu tháng mười, bán lại lượng vàng ấy, tiệm chỉ trả khoảng một trăm bốn mươi triệu.",
+    "Người mua đúng đỉnh lỗ khoảng năm mươi mốt triệu mỗi lượng.",
+    "Gần bằng sáu tháng thu nhập bình quân của một người lao động.",
+    "Vì sao hụt nhiều thế?",
+    "Giá bán ra đã giảm khoảng một phần tư từ đỉnh, cộng thêm chênh lệch mua bán khoảng ba triệu một lượng.",
+    "Toàn cảnh năm nay, mình kể trong video dài trên kênh.",
+    "Còn bạn: nếu là bạn hôm đó, bạn có xếp hàng không?"
+  ],
+  "scenes": [
+    {
+      "type": "chart",
+      "kind": "line",
+      "title": "GIÁ BÁN VÀNG MIẾNG SJC",
+      "unit": "TRIỆU ĐỒNG / LƯỢNG · 2026",
+      "points": [
+        {
+          "x": 0,
+          "v": 152.8,
+          "at": 0.0,
+          "tag": "152,8",
+          "pos": "t"
+        },
+        {
+          "x": 28,
+          "v": 191.3,
+          "at": [
+            0,
+            "đỉnh"
+          ],
+          "tag": "191,3",
+          "pos": "t",
+          "c": "up"
+        },
+        {
+          "x": 60,
+          "v": 190.9,
+          "at": [
+            1,
+            "hôm"
+          ]
+        },
+        {
+          "x": 272,
+          "v": 144.1,
+          "at": [
+            2,
+            "bán"
+          ]
+        },
+        {
+          "x": 278,
+          "v": 142.9,
+          "at": [
+            2,
+            "tiệm"
+          ]
+        }
+      ],
+      "ref": {
+        "v": 140.5,
+        "label": "TIỆM MUA VÀO ~140",
+        "at": [
+          2,
+          "trả"
+        ]
+      },
+      "ticks": [
+        {
+          "x": 0,
+          "label": "T1"
+        },
+        {
+          "x": 90,
+          "label": "T4"
+        },
+        {
+          "x": 181,
+          "label": "T7"
+        },
+        {
+          "x": 273,
+          "label": "T10"
+        }
+      ],
+      "grid": [
+        150,
+        170,
+        190
+      ],
+      "badge": {
+        "text": "XẾP HÀNG MUA ĐÚNG ĐỈNH",
+        "at": [
+          1,
+          "xếp"
+        ],
+        "y": 1300,
+        "c": "ink"
+      },
+      "note": "ĐƯỜNG: GIÁ BÁN RA · VẠCH: GIÁ MUA VÀO ĐẦU T10"
+    },
+    {
+      "type": "chart",
+      "at": 3,
+      "kind": "bars",
+      "title": "NGƯỜI MUA ĐÚNG ĐỈNH",
+      "unit": "TRIỆU ĐỒNG / LƯỢNG",
+      "bars": [
+        {
+          "label": "MUA\n29/01",
+          "v": 191.3,
+          "text": "191,3",
+          "c": "ref",
+          "at": [
+            3,
+            "mua"
+          ]
+        },
+        {
+          "label": "BÁN LẠI\nĐẦU T10",
+          "v": 140.5,
+          "text": "~140,5",
+          "c": "down",
+          "at": [
+            3,
+            "đỉnh"
+          ],
+          "ghost": 191.3,
+          "gapAt": [
+            3,
+            "lỗ"
+          ],
+          "gapText": "−51"
+        }
+      ],
+      "badge": {
+        "text": "−51 TRIỆU / LƯỢNG",
+        "at": [
+          3,
+          "mươi"
+        ],
+        "c": "down"
+      },
+      "note": "GIÁ MUA VÀO SÁNG 03–06/10/2026"
+    },
+    {
+      "type": "kinetic",
+      "at": 4,
+      "items": [
+        {
+          "text": "≈ 6 THÁNG",
+          "acc": true,
+          "at": [
+            4,
+            "sáu"
+          ]
+        },
+        {
+          "text": "THU NHẬP BÌNH QUÂN",
+          "at": [
+            4,
+            "thu"
+          ]
+        },
+        {
+          "text": "9,1 triệu/tháng · 9 tháng 2026",
+          "sm": true,
+          "at": [
+            4,
+            "lao"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "slam",
+      "at": 5,
+      "text": "VÌ SAO?"
+    },
+    {
+      "type": "ledger",
+      "at": 6,
+      "title": "LỖ ĐẾN TỪ ĐÂU",
+      "rows": [
+        {
+          "k": "GIÁ BÁN TỪ ĐỈNH",
+          "v": "≈ −1/4",
+          "at": [
+            6,
+            "giảm"
+          ]
+        },
+        {
+          "k": "CHÊNH MUA – BÁN",
+          "v": "~3 TR",
+          "at": [
+            6,
+            "chênh"
+          ]
+        }
+      ],
+      "total": {
+        "k": "TỔNG",
+        "v": "~51 TR",
+        "at": [
+          6,
+          "ba"
+        ]
+      }
+    },
+    {
+      "type": "kinetic",
+      "at": 7,
+      "items": [
+        {
+          "text": "VÀNG · CHỨNG KHOÁN",
+          "at": [
+            7,
+            "toàn"
+          ]
+        },
+        {
+          "text": "COIN · NHÀ ĐẤT",
+          "at": [
+            7,
+            "năm"
+          ]
+        },
+        {
+          "text": "VIDEO DÀI TRÊN KÊNH",
+          "acc": true,
+          "at": [
+            7,
+            "video"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "question",
+      "at": 8,
+      "text": "Hôm đó, bạn có xếp hàng không?"
+    }
+  ],
+  "sources": [
+    "https://webgia.com/gia-vang/sjc/29-01-2026.html",
+    "https://dantri.com.vn/kinh-doanh/gia-vang-sjc-di-ngang-nguoi-mua-tu-dinh-dang-lo-51-trieu-dongluong-20261006065735522.htm",
+    "https://www.techz.vn/197-1026-5-gia-vang-hom-nay-6-10-vang-trong-nuoc-di-ngang-boc-hoi-hon-50-trieu-dong-luong-tu-dinh-nguoi-mua-vang-khoc-rong-ylt712148.html",
+    "https://thanhnien.vn/gia-vang-giam-sau-vai-ngay-bat-dong-185260924101038242.htm",
+    "https://congluan.vn/gia-vang-hom-nay-01-01-2026-gia-vang-mieng-vang-nhan-trong-nuoc-va-gia-vang-the-gioi-post326855.html",
+    "https://vietnamnet.vn/gia-vang-hom-nay-2-3-2026-nong-bong-tay-vang-mieng-sjc-leo-len-dinh-2493734.html",
+    "https://baonghean.vn/en/gia-vang-hom-nay-30092026-sjc-tang-len-1411-1441-trieu-dongluong-10352437.html",
+    "https://tuoitre.vn/phunuonline/nguoi-dan-ha-noi-kien-nhan-xep-hang-gan-ca-chuc-tieng-dong-ho-cho-mua-ban-vang-1101573603.htm",
+    "https://www.nso.gov.vn/tin-tuc-thong-ke/2026/10/thong-cao-bao-chi-ve-tinh-hinh-lao-dong-viec-lam-quy-iii-va-9-thang-nam-2026/"
+  ]
+}

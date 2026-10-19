@@ -1,0 +1,178 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "chuyen-xua",
+ "hook_type": "noi-dau",
+ "open_shot": "cung-dien",
+ "voice": "Thiền Tâm Đức",
+ "music": "perspectives.mp3",
+ "gap": 0.1,
+ "series": "Chuyện xưa · Tập 9",
+ "title": "Chuyện xưa · Tập 9: Tổ Đạt Ma và “không có công đức”",
+ "kicker": "CHUYỆN XƯA · TẬP 9",
+ "sub": "THEO TRUYỆN KÝ THIỀN TÔNG",
+ "acc": [
+  "công",
+  "khoe"
+ ],
+ "lines": [
+  "Xây cả trăm ngôi chùa, mà được nói là không có công đức?",
+  "Truyện Thiền kể: vua Lương Vũ Đế khoe đã xây chùa, chép kinh, độ tăng.",
+  "Rồi hỏi Tổ Đạt Ma: trẫm được bao nhiêu công đức?",
+  "Tổ đáp: không có công đức.",
+  "Làm thiện để khoe, hay để đổi lấy, tâm vẫn chưa sáng.",
+  "Bạn từng làm việc tốt mà không ai biết chưa? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "items": [
+    {
+     "text": "KHÔNG CÓ CÔNG ĐỨC?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "dù xây cả trăm ngôi chùa",
+     "at": [
+      0,
+      "Xây"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:39903845"
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "VUA KHOE",
+   "cards": [
+    {
+     "k": "XÂY",
+     "v": "CHÙA",
+     "at": [
+      1,
+      "xây"
+     ]
+    },
+    {
+     "k": "CHÉP",
+     "v": "KINH",
+     "at": [
+      1,
+      "chép"
+     ]
+    },
+    {
+     "k": "ĐỘ",
+     "v": "TĂNG",
+     "at": [
+      1,
+      "độ"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 0,
+   "suffix": " CÔNG ĐỨC?",
+   "label": "TRẪM ĐƯỢC BAO NHIÊU?",
+   "until": [
+    3,
+    "không"
+   ],
+   "sub": {
+    "text": "TỔ ĐÁP: KHÔNG CÓ CÔNG ĐỨC",
+    "at": [
+     3,
+     "không"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Vì sao?",
+   "nodes": [
+    {
+     "text": "LÀM THIỆN ĐỂ KHOE",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      4,
+      "khoe,"
+     ],
+     "shape": "box",
+     "cross": [
+      4,
+      "tâm"
+     ]
+    },
+    {
+     "text": "TÂM CHƯA SÁNG",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      4,
+      "tâm"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      4,
+      "tâm"
+     ]
+    }
+   ],
+   "note": "TRUYỆN KÝ THIỀN · CÒN TRANH LUẬN LỊCH SỬ"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "LÀM TỐT KHÔNG AI BIẾT?",
+     "at": [
+      5,
+      "Bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận nhé",
+     "at": [
+      5,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:20488159"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Bodhidharma"
+ ],
+ "description": "Chuyện xưa · Tập 9: Tổ Đạt Ma và “không có công đức”\n\nNguồn: https://en.wikipedia.org/wiki/Bodhidharma",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

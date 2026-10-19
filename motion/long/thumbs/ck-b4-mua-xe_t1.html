@@ -1,0 +1,26 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#050912}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:"Be Vietnam Pro",sans-serif;color:#fff;
+ background:linear-gradient(rgba(125,211,252,.06) 1px,transparent 1px) 0 0/80px 80px,linear-gradient(90deg,rgba(125,211,252,.06) 1px,transparent 1px) 0 0/80px 80px,radial-gradient(80% 70% at 60% 40%,#16263f 0%,#0a1426 60%,#04080f 100%)}
+.big{position:absolute;font-weight:900;line-height:1.12;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.tag{position:absolute;font-family:"JetBrains Mono";font-weight:700;letter-spacing:.12em;white-space:nowrap;color:#fbbf24}
+.pill{position:absolute;padding:10px 30px 14px;border-radius:40px;border:5px solid;background:#0a1426;font-weight:900;font-size:44px;white-space:nowrap;line-height:1.25}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<!-- T1: đồng hồ tính tiền (vẽ tay) · VÍ DỤ GIẢ ĐỊNH xe 700 triệu: 700 -> 800 lăn bánh, gần 10 triệu mỗi tháng -->
+<svg style="position:absolute;left:0;top:0" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <path d="M1330 640 A260 260 0 0 1 1850 640" fill="none" stroke="#334155" stroke-width="40" stroke-linecap="round"/>
+  <path d="M1330 640 A260 260 0 0 1 1770 450" fill="none" stroke="#fbbf24" stroke-width="40" stroke-linecap="round"/>
+  <line x1="1590" y1="640" x2="1755" y2="470" stroke="#ef4444" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="1590" cy="640" r="30" fill="#ef4444"/>
+  <text x="1590" y="790" text-anchor="middle" font-family="Be Vietnam Pro" font-weight="900" font-size="92" fill="#fbbf24">≈ 10 TRIỆU</text>
+  <text x="1590" y="860" text-anchor="middle" font-family="Be Vietnam Pro" font-weight="800" font-size="46" fill="#e2e8f0">MỖI THÁNG</text>
+</svg>
+<div class="big" style="left:80px;top:110px;font-size:150px">XE 700 TRIỆU</div>
+<div class="big" style="left:80px;top:290px;font-size:150px">LĂN BÁNH</div>
+<div class="big" style="left:80px;top:460px;font-size:250px;color:#fbbf24">800</div>
+<div class="big" style="left:80px;top:760px;font-size:82px;color:#ef4444">MỖI THÁNG TỐN BAO NHIÊU?</div>
+<div class="tag" style="left:80px;top:930px;font-size:36px">VÍ DỤ GIẢ ĐỊNH · ĐĂNG KÝ HÀ NỘI</div>
+</div><script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

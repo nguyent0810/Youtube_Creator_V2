@@ -1,0 +1,195 @@
+{
+ "theme": "mim",
+ "title": "Một tài khoản lạ thắng 60 ván liền trước các cao thủ cờ vây: hoá ra là AlphaGo",
+ "description": "Từ 29/12/2016 tới 05/01/2017, một tài khoản lạ trên các trang cờ vây trực tuyến thách đấu các kỳ thủ hàng đầu Trung Quốc, Hàn Quốc, Nhật Bản và thắng 60 ván liên tiếp, không thua ván nào. DeepMind sau đó xác nhận đó là một phiên bản mới của AlphaGo, tên là Master. Tháng 5/2017, Master thắng Kha Khiết, kỳ thủ số một thế giới lúc ấy, 3–0 (Wikipedia: AlphaGo). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (20 phút): https://youtu.be/nbNu6xYtoYg (công khai từ 20:00 ngày 29/10).",
+ "tags": [
+  "alphago master",
+  "cờ vây trực tuyến",
+  "alphago",
+  "lee sedol",
+  "cờ vây",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "12/2016 – 01/2017",
+ "acc": [
+  "sáu",
+  "lạ",
+  "tuần",
+  "mới",
+  "ba"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Sáu mươi ván thắng liên tiếp. Không thua ván nào.",
+  "Cuối tháng 12 năm 2016, trên các trang cờ vây trực tuyến xuất hiện một tài khoản lạ.",
+  "Nó thách đấu những kỳ thủ hàng đầu của Trung Quốc, Hàn Quốc, Nhật Bản.",
+  "Và nó thắng. Hết người này tới người khác.",
+  "Chỉ trong khoảng một tuần.",
+  "Rồi nơi làm ra AlphaGo xác nhận. Đó là một phiên bản mới của nó, tên là Master.",
+  "Vài tháng sau, Master thắng luôn kỳ thủ số một thế giới. Ba không."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "60 VÁN THẮNG LIÊN TIẾP",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "không thua ván nào",
+     "at": [
+      0,
+      "Không"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:5377277",
+   "veil": 0.58
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CUỐI THÁNG 12 NĂM 2016",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "MỘT TÀI KHOẢN LẠ",
+     "at": [
+      1,
+      "một"
+     ],
+     "acc": true
+    },
+    {
+     "text": "trên các trang cờ vây trực tuyến",
+     "at": [
+      1,
+      "trên"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:28709421",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "NÓ THÁCH ĐẤU CAO THỦ CỦA",
+   "cards": [
+    {
+     "k": "NƯỚC",
+     "v": "TRUNG QUỐC",
+     "at": [
+      2,
+      "Trung"
+     ]
+    },
+    {
+     "k": "NƯỚC",
+     "v": "HÀN QUỐC",
+     "at": [
+      2,
+      "Hàn"
+     ]
+    },
+    {
+     "k": "NƯỚC",
+     "v": "NHẬT BẢN",
+     "at": [
+      2,
+      "Nhật"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 60,
+   "suffix": " – 0",
+   "label": "THẮNG – THUA · TRONG KHOẢNG MỘT TUẦN",
+   "until": [
+    4,
+    "một"
+   ],
+   "sub": {
+    "text": "29/12/2016 – 05/01/2017",
+    "at": [
+     4,
+     "tuần."
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Tài khoản ấy là",
+   "nodes": [
+    {
+     "text": "phiên bản mới của AlphaGo",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      5,
+      "Đó"
+     ],
+     "shape": "none",
+     "w": 780
+    },
+    {
+     "text": "tên là Master",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      5,
+      "tên"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 520
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "3 – 0",
+   "sub": "TRƯỚC KỲ THỦ SỐ MỘT THẾ GIỚI · 05/2017"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/AlphaGo"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "alphago": "An-pha Gô",
+  "=AlphaGo": "An-pha Gô",
+  "master": "Mát-xtơ"
+ },
+ "imgs": {}
+}

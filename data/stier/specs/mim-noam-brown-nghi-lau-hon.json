@@ -1,0 +1,201 @@
+{
+ "theme": "mim",
+ "title": "Từ bàn poker tới chatbot: ý tưởng “suy nghĩ lâu hơn trước khi trả lời” đến từ máy chơi bài",
+ "description": "Libratus, DeepStack và Pluribus không chỉ dựa vào điều đã học sẵn: tới lượt, chúng dành thêm thời gian tính lại cho đúng tình huống. Năm 2023, Noam Brown (đồng tác giả Libratus, Pluribus) chuyển sang OpenAI nghiên cứu ý tưởng tương tự cho mô hình ngôn ngữ; 09/2024, OpenAI ra mắt các mô hình đầu tiên theo hướng suy luận trước khi trả lời (OpenAI: Learning to reason with LLMs). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/Mz0HwBBSBbg (công khai từ 20:00 ngày 26/11).",
+ "tags": [
+  "noam brown",
+  "mô hình suy luận",
+  "trận đấu người máy",
+  "trí tuệ nhân tạo",
+  "lịch sử máy tính",
+  "mind in the machine"
+ ],
+ "sub": "2017 → 2024",
+ "acc": [
+  "nghĩ",
+  "lâu",
+  "thời",
+  "gian",
+  "poker"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Đôi khi, câu trả lời tốt hơn chỉ cần thêm một chút thời gian để nghĩ.",
+  "Những cỗ máy thắng poker như Libratus và Pluribus có chung một điều.",
+  "Khi tới lượt, chúng dành thêm thời gian để tính lại, cho đúng tình huống đang gặp.",
+  "Năm 2023, Noam Brown, đồng tác giả của hai cỗ máy ấy, chuyển sang làm việc ở OpenAI.",
+  "Ông nghiên cứu ý tưởng tương tự cho các mô hình ngôn ngữ: suy luận trước khi trả lời.",
+  "Tháng 9 năm 2024, OpenAI ra mắt những mô hình đầu tiên theo hướng ấy.",
+  "Từ bàn poker ở Pittsburgh tới chatbot ta dùng mỗi ngày, có một sợi chỉ nối dài."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NGHĨ LÂU HƠN",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "trước khi trả lời",
+     "at": [
+      0,
+      "thêm"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8720746",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "LIBRATUS · PLURIBUS",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "hai cỗ máy thắng poker",
+     "at": [
+      1,
+      "có"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6664998",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Khi tới lượt",
+   "nodes": [
+    {
+     "text": "dành thêm thời gian",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      2,
+      "dành"
+     ],
+     "shape": "none",
+     "w": 660
+    },
+    {
+     "text": "tính lại cho đúng tình huống",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      2,
+      "tính"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 820
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "2023: NOAM BROWN → OPENAI",
+   "sub": "ĐỒNG TÁC GIẢ LIBRATUS VÀ PLURIBUS"
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "MÔ HÌNH NGÔN NGỮ",
+   "cards": [
+    {
+     "k": "THAY VÌ",
+     "v": "TRẢ LỜI NGAY",
+     "at": 4
+    },
+    {
+     "k": "MÀ LÀ",
+     "v": "SUY LUẬN TRƯỚC",
+     "at": [
+      4,
+      "suy"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 7,
+   "to": 7,
+   "suffix": " NĂM",
+   "label": "TỪ LIBRATUS (2017) TỚI MÔ HÌNH SUY LUẬN (2024)",
+   "sub": {
+    "text": "KÊNH TỰ TÍNH",
+    "at": [
+     5,
+     "OpenAI"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MỘT SỢI CHỈ NỐI DÀI",
+     "at": [
+      6,
+      "có"
+     ],
+     "acc": true
+    },
+    {
+     "text": "từ bàn poker tới chatbot",
+     "at": 6,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6962433",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 6
+  }
+ ],
+ "sources": [
+  "https://www.cmu.edu/news/stories/archives/2017/january/AI-beats-poker-pros.html",
+  "https://ai.facebook.com/blog/pluribus-first-ai-to-beat-pros-in-6-player-poker",
+  "https://openai.com/index/learning-to-reason-with-llms/"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "chatbot": "chát-bót",
+  "libratus": "Li-bra-tút",
+  "pluribus": "Plu-ri-bút",
+  "pittsburgh": "Pít-xbớc",
+  "noam": "Nô-am",
+  "brown": "Brao",
+  "openai": "Ô-pần Ây Ai",
+  "poker": "pô-cơ",
+  "=OpenAI": "Ô-pần Ây Ai"
+ },
+ "imgs": {}
+}

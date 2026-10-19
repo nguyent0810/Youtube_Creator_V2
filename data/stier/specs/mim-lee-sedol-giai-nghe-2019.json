@@ -1,0 +1,173 @@
+{
+ "theme": "mim",
+ "title": "“Có một thực thể không thể bị đánh bại”: vì sao Lee Sedol giải nghệ năm 2019",
+ "description": "Ngày 19/11/2019, Lee Sedol tuyên bố giải nghệ ở tuổi 36, sau 24 năm làm kỳ thủ chuyên nghiệp. Ông nói với hãng tin Yonhap: “Dù tôi có trở thành số một, vẫn có một thực thể không thể bị đánh bại” (trích dịch). Đó không phải lý do duy nhất: lúc ấy ông còn có tranh chấp với Hiệp hội Cờ vây Hàn Quốc. Tháng 12/2019, ông đánh ba ván chia tay với một cỗ máy của Hàn Quốc: thắng ván đầu khi được chấp hai quân, thua hai ván sau (Wikipedia: Lee Sedol). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (20 phút): https://youtu.be/nbNu6xYtoYg",
+ "tags": [
+  "giải nghệ",
+  "yonhap",
+  "alphago",
+  "lee sedol",
+  "cờ vây",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "19/11/2019",
+ "acc": [
+  "sáu",
+  "bại",
+  "duy",
+  "ba",
+  "quê"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Ngày 19 tháng 11 năm 2019, Lee Sedol giải nghệ. Ông mới ba mươi sáu tuổi.",
+  "Ông đã làm kỳ thủ chuyên nghiệp hai mươi bốn năm.",
+  "Khi được hỏi lý do, ông nhắc tới trí tuệ nhân tạo.",
+  "Dù tôi có trở thành số một, vẫn có một thực thể không thể bị đánh bại.",
+  "Nói cho đủ, đó không phải lý do duy nhất. Ông còn có mâu thuẫn với hiệp hội cờ vây.",
+  "Tháng 12 năm ấy, ông đánh ba ván chia tay. Đối thủ lại là một cỗ máy.",
+  "Ván đầu, được chấp hai quân, ông thắng. Ván cuối cùng của sự nghiệp, ông đánh ở quê nhà."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "19/11/2019",
+     "at": 0.0,
+     "sm": true
+    },
+    {
+     "text": "LEE SEDOL GIẢI NGHỆ",
+     "at": [
+      0,
+      "Lee"
+     ],
+     "acc": true
+    },
+    {
+     "text": "ông mới 36 tuổi",
+     "at": [
+      0,
+      "Ông"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:39262883",
+   "veil": 0.5
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 24,
+   "suffix": " NĂM",
+   "label": "LÀM KỲ THỦ CHUYÊN NGHIỆP",
+   "until": [
+    1,
+    "bốn"
+   ],
+   "sub": {
+    "text": "TỪ NĂM 12 TUỔI",
+    "at": [
+     1,
+     "năm."
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "LÝ DO?",
+     "at": 2,
+     "sm": true
+    },
+    {
+     "text": "“MỘT THỰC THỂ”",
+     "at": [
+      3,
+      "vẫn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "“không thể bị đánh bại”",
+     "at": [
+      3,
+      "không"
+     ],
+     "sm": true
+    },
+    {
+     "text": "trích dịch · theo Yonhap",
+     "at": [
+      3,
+      "bại."
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:35701014",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 2
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "KHÔNG PHẢI LÝ DO DUY NHẤT",
+   "sub": "CÒN CÓ MÂU THUẪN VỚI HIỆP HỘI CỜ VÂY"
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "BA VÁN CHIA TAY VỚI MÁY",
+   "cards": [
+    {
+     "k": "VÁN 1 · ĐƯỢC CHẤP 2 QUÂN",
+     "v": "THẮNG",
+     "at": [
+      6,
+      "ông"
+     ],
+     "c": "acc"
+    },
+    {
+     "k": "VÁN 2 VÀ 3",
+     "v": "THUA",
+     "at": [
+      6,
+      "Ván"
+     ]
+    }
+   ],
+   "note": "THÁNG 12 NĂM 2019"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Lee_Sedol"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "lee": "Li",
+  "sedol": "Xê-đôn"
+ },
+ "imgs": {}
+}

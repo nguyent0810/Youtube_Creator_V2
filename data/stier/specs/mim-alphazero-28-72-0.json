@@ -1,0 +1,210 @@
+{
+ "theme": "mim",
+ "title": "AlphaZero tự học cờ vua vài giờ rồi đấu 100 ván: thắng 28, hoà 72, không thua ván nào (2017)",
+ "description": "Tháng 12/2017, nhóm làm AlphaGo công bố AlphaZero: không kho khai cuộc, không cách chấm điểm do người viết, chỉ biết luật rồi tự chơi với chính mình. Sau khoảng bốn giờ tự học, nó vượt phần mềm cờ vua mạnh nhất lúc ấy; trong 100 ván giữa hai bên, nó thắng 28, hoà 72, không thua (arXiv 1712.01815). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/TG7ZShLM4LA (công khai từ 20:00 ngày 12/11).",
+ "tags": [
+  "alphazero",
+  "stockfish",
+  "tự học",
+  "trận đấu người máy",
+  "trí tuệ nhân tạo",
+  "lịch sử máy tính",
+  "mind in the machine"
+ ],
+ "sub": "12/2017",
+ "acc": [
+  "hai",
+  "tám",
+  "không",
+  "thua",
+  "luật"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Hai mươi tám thắng, bảy mươi hai hoà, không thua ván nào.",
+  "Tháng 12 năm 2017, nhóm làm ra AlphaGo công bố một cỗ máy mới tên là AlphaZero.",
+  "Nó không có kho khai cuộc do người soạn. Không có cách chấm điểm do đại kiện tướng viết.",
+  "Người ta chỉ cho nó biết luật chơi, rồi nó tự chơi với chính mình.",
+  "Sau khoảng bốn giờ tự học, nó đã vượt phần mềm cờ vua mạnh nhất lúc ấy.",
+  "Trong một trăm ván giữa hai bên, nó thắng hai mươi tám, hoà bảy mươi hai.",
+  "Không được dạy nước nào, nó vẫn không thua ván nào."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "28 – 72 – 0",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "thắng · hoà · thua",
+     "at": [
+      0,
+      "bảy"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6600370",
+   "ms": 2,
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "ALPHAZERO · 12/2017",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "từ nhóm làm ra AlphaGo",
+     "at": [
+      1,
+      "nhóm"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:28709421",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "KHÔNG CÓ",
+   "cards": [
+    {
+     "k": "KHO KHAI CUỘC",
+     "v": "DO NGƯỜI SOẠN",
+     "at": 2
+    },
+    {
+     "k": "CHẤM ĐIỂM",
+     "v": "DO NGƯỜI VIẾT",
+     "at": [
+      2,
+      "Không",
+      1
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Chỉ có",
+   "nodes": [
+    {
+     "text": "luật chơi",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      3,
+      "luật"
+     ],
+     "shape": "none",
+     "w": 480
+    },
+    {
+     "text": "tự chơi với chính mình",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      3,
+      "tự"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 700
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 4,
+   "to": 4,
+   "prefix": "KHOẢNG ",
+   "suffix": " GIỜ",
+   "label": "TỰ HỌC ĐỂ VƯỢT PHẦN MỀM MẠNH NHẤT",
+   "sub": {
+    "text": "ARXIV 1712.01815",
+    "at": [
+     4,
+     "đã"
+    ]
+   }
+  },
+  {
+   "type": "chart",
+   "at": 5,
+   "kind": "bars",
+   "title": "100 VÁN · ALPHAZERO",
+   "unit": "THEO BÀI BÁO 12/2017",
+   "bars": [
+    {
+     "label": "THẮNG",
+     "v": 28,
+     "text": "28",
+     "c": "up",
+     "at": [
+      5,
+      "thắng"
+     ]
+    },
+    {
+     "label": "HOÀ",
+     "v": 72,
+     "text": "72",
+     "c": "ref",
+     "at": [
+      5,
+      "hoà"
+     ]
+    },
+    {
+     "label": "THUA",
+     "v": 0,
+     "text": "0",
+     "c": "down",
+     "at": [
+      6,
+      "không",
+      1
+     ]
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://arxiv.org/abs/1712.01815"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "alphago": "An-pha Gô",
+  "=AlphaGo": "An-pha Gô",
+  "alphazero": "An-pha Di-rô",
+  "=AlphaZero": "An-pha Di-rô"
+ },
+ "imgs": {}
+}

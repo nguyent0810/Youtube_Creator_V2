@@ -1,5 +1,5 @@
 /* ---------- BEAT: thư viện hiệu ứng chữ (xem BEAT / SLAM trong casewide.js) ---------- */
-.kin .rw { display:inline-block; overflow:hidden; vertical-align:bottom; line-height:1.14; padding:0 .03em; }
+.kin .rw { display:inline-block; overflow:hidden; vertical-align:bottom; line-height:1.14; padding:.3em .03em .14em; margin:-.3em 0 -.14em; }   /* chừa chỗ dấu chồng (Ầ Ế Ỗ / Ệ Ộ) */
 .kin .rw > span, .kin .dw { display:inline-block; }
 .kin .kt { display:inline-block; position:relative; padding:0 .16em; }
 .kin .mk { color:#fff; text-shadow:none; background-image:linear-gradient(var(--red), var(--red)); background-repeat:no-repeat; background-position:0 62%; background-size:0% 78%; }
@@ -19,9 +19,13 @@
 .kin .glw .gl.r { color:#ff2b6a; } .kin .glw .gl.c { color:#27e3ff; }
 .kin .stl { position:absolute; left:-.04em; right:-.04em; top:54%; height:.085em; background:var(--red); display:block; transform-origin:0 50%; }
 .kin .sl { position:absolute; left:0; right:0; top:0; }
-.kin .sl.a { clip-path:inset(0 0 50% 0); } .kin .sl.b { clip-path:inset(50% 0 0 0); } .kin .sl0 { visibility:hidden; }
+.kin .sl.a { clip-path:inset(-40% -5% 50% -5%); } .kin .sl.b { clip-path:inset(50% -5% -40% -5%); } .kin .sl0 { visibility:hidden; }
 .slam .gl, .slam .sx { position:absolute; left:0; right:0; top:0; }
 .slam .gl { opacity:0; mix-blend-mode:screen; text-shadow:none; } .slam .gl.r { color:#ff2b2b; } .slam .gl.c { color:#27e3ff; }
-.slam .s0 { clip-path:inset(0 0 66% 0); } .slam .s1 { clip-path:inset(34% 0 33% 0); } .slam .s2 { clip-path:inset(67% 0 0 0); }
+.slam .s0 { clip-path:inset(-40% -5% 66% -5%); } .slam .s1 { clip-path:inset(34% -5% 33% -5%); } .slam .s2 { clip-path:inset(67% -5% -40% -5%); }
 .slam .sx0 { visibility:hidden; }
 .slam.otl { -webkit-text-stroke:.02em #f4efe6; text-shadow:none; }
+
+/* chữ nhấn trong dòng sync (q.em): hộp màu nhấn quét sau chữ đúng lúc được đọc -- Short phối 12/10/2026 */
+.kin .sw.emw { background-image:linear-gradient(var(--red), var(--red)); background-repeat:no-repeat; background-position:0 58%; background-size:0% 84%;
+               padding:0 .14em; margin:0 -.06em; border-radius:.1em; text-shadow:none; }

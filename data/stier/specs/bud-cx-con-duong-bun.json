@@ -1,0 +1,284 @@
+{
+ "theme": "bud",
+ "format": "chuyen-xua",
+ "hook_type": "giua-truyen",
+ "open_shot": "mat-nuoc",
+ "voice": "Thanh Bình",
+ "music": "perspectives.mp3",
+ "gap": 0.45,
+ "series": "Chuyện xưa · Tập 5",
+ "title": "Chuyện xưa · Tập 5: Con đường lầy (chuyện Thiền)",
+ "kicker": "CHUYỆN XƯA · TẬP 5",
+ "sub": "CHUYỆN THIỀN · KỂ LẠI",
+ "acc": [
+  "bế",
+  "bùn",
+  "xuống"
+ ],
+ "lines": [
+  "Hai nhà sư gặp một cô gái không qua được vũng bùn…",
+  "Đó là hai thiền sư Nhật, Tanzan và Ekido, trên con đường lầy sau mưa.",
+  "Cô gái mặc kimono lụa, đứng nhìn vũng bùn.",
+  "Tanzan nói: lại đây cô. Rồi bế cô qua.",
+  "Ekido im lặng suốt quãng đường còn lại.",
+  "Tối đó tới chùa nghỉ, ông không nhịn được nữa.",
+  "Người tu không được gần phụ nữ, nhất là người trẻ đẹp. Nguy hiểm lắm. Sao anh lại làm vậy?",
+  "Tanzan đáp: tôi đặt cô ấy xuống ở đó rồi.",
+  "Còn anh, đến giờ vẫn đang bế cô ấy à?",
+  "Thứ ta mang nặng nhất, thường là chuyện đã qua.",
+  "Bạn đang bế điều gì? Bình luận, và theo dõi tập sau."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "VŨNG BÙN",
+     "at": 0.0,
+     "acc": true,
+     "size": 170,
+     "fx": "outline"
+    },
+    {
+     "text": "HAI NHÀ SƯ · MỘT CÔ GÁI",
+     "at": 0.4
+    },
+    {
+     "text": "chuyện xưa · tập 5",
+     "at": [
+      0,
+      "cô"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:18291324"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "TANZAN · EKIDO",
+     "at": [
+      1,
+      "Tanzan"
+     ],
+     "acc": true
+    },
+    {
+     "text": "hai thiền sư Nhật",
+     "at": [
+      1,
+      "thiền"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:5385954"
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "KIMONO LỤA",
+     "at": [
+      2,
+      "kimono"
+     ],
+     "acc": true,
+     "size": 140
+    }
+   ],
+   "clip": "pexels:8751248"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "LẠI ĐÂY CÔ",
+     "at": [
+      3,
+      "lại"
+     ],
+     "acc": true,
+     "size": 150
+    },
+    {
+     "text": "rồi bế cô qua",
+     "at": [
+      3,
+      "bế"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7714908"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "IM LẶNG",
+     "at": [
+      4,
+      "im"
+     ],
+     "acc": true,
+     "size": 160
+    },
+    {
+     "text": "suốt quãng đường còn lại",
+     "at": [
+      4,
+      "suốt"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:5386135"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "TỐI ĐÓ",
+     "at": [
+      5,
+      "Tối"
+     ],
+     "sm": true
+    },
+    {
+     "text": "KHÔNG NHỊN ĐƯỢC",
+     "at": [
+      5,
+      "không"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:18688462"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "SAO ANH LẠI LÀM VẬY?",
+     "at": [
+      6,
+      "Sao"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:35000438"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "ĐẶT XUỐNG RỒI",
+     "at": [
+      7,
+      "đặt"
+     ],
+     "acc": true,
+     "size": 110
+    },
+    {
+     "text": "ở đó",
+     "at": [
+      7,
+      "ở"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:31363769"
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "text": "VẪN ĐANG\nBẾ CÔ ẤY?",
+   "veil": 0.6,
+   "fx": "zoom",
+   "clip": "pexels:37416376"
+  },
+  {
+   "type": "quote",
+   "at": 9,
+   "text": "Thứ ta mang nặng nhất, thường là chuyện đã qua.",
+   "by": "BÀI HỌC · LỜI KÊNH",
+   "veil": 0.6,
+   "clip": "pexels:36229795"
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "ĐANG BẾ GÌ?",
+     "at": [
+      10,
+      "đang"
+     ],
+     "acc": true,
+     "size": 130
+    },
+    {
+     "text": "bình luận",
+     "at": [
+      10,
+      "Bình"
+     ],
+     "sm": true
+    },
+    {
+     "text": "THEO DÕI",
+     "at": [
+      10,
+      "theo"
+     ],
+     "acc": true
+    },
+    {
+     "text": "tập sau",
+     "at": [
+      10,
+      "tập"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:26976256"
+  }
+ ],
+ "description": "Chuyện xưa · Tập 5 — Con đường lầy. Chuyện Thiền truyền thống trong '101 Zen Stories' (Nyogen Senzaki & Paul Reps, in trong 'Zen Flesh, Zen Bones'): hai thiền sư Tanzan và Ekido đi trên con đường lầy sau mưa, gặp một cô gái mặc kimono lụa không qua được. Tanzan bế cô qua. Tối đó tới chùa nghỉ, Ekido mới trách: người tu không gần phụ nữ, sao anh làm vậy? Tanzan đáp: tôi đã đặt cô ấy xuống ở đó rồi, anh còn bế cô ấy sao?\n\nNguồn: https://en.wikipedia.org/wiki/Zen_Flesh,_Zen_Bones\nCâu chuyện kể lại bằng lời của kênh; bài học là lời bình của kênh.",
+ "tags": [
+  "chuyện xưa",
+  "chuyện thiền",
+  "buông bỏ",
+  "lời phật dạy",
+  "phật pháp"
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Zen_Flesh,_Zen_Bones"
+ ]
+}

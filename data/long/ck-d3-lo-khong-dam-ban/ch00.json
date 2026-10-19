@@ -1,0 +1,155 @@
+{
+ "title": "Hai cổ phiếu, một cuộc gọi",
+ "lines": [
+  "Giả sử bạn có hai cổ phiếu, mỗi mã bạn đã mua năm mươi triệu.",
+  "Cổ phiếu A đang lãi hai mươi phần trăm. Giờ nó đáng sáu mươi triệu.",
+  {
+   "t": "Cổ phiếu B đang lỗ hai mươi phần trăm. Giờ nó chỉ còn bốn mươi triệu.",
+   "p": 1.0
+  },
+  "Rồi một cuộc gọi tới. Nhà cần bốn mươi triệu, ngay tuần này.",
+  {
+   "t": "Bạn sẽ bán cổ phiếu nào?",
+   "p": 1.0
+  },
+  "Phần lớn mọi người chọn bán A.",
+  "Bán A thì chốt được tiền lãi, cảm giác rất dễ chịu.",
+  {
+   "t": "Bán B thì phải nhìn khoản lỗ trở thành thật. Không ai muốn thế.",
+   "p": 1.0
+  },
+  {
+   "t": "Thì bán cái đang lãi chứ. Có gì sai đâu?",
+   "ask": 1
+  },
+  "Có thể không sai. Nhưng lý do khiến ta chọn A, phần lớn không nằm ở hai cổ phiếu ấy.",
+  {
+   "t": "Nó nằm ở một chiếc cân trong đầu ta, và chiếc cân ấy bị lệch.",
+   "p": 1.0
+  },
+  "Video này đặt từng thứ lên chiếc cân ấy, để xem nó lệch về đâu.",
+  "Đây là Biểu Đồ Biết Nói. Tiền bạc, giải thích bằng dữ liệu.",
+  "Video chỉ nhằm giáo dục, không phải lời khuyên mua hay bán, và không dự báo thị trường."
+ ],
+ "scenes": [
+  {
+   "type": "ledger",
+   "title": "TÀI KHOẢN CỦA BẠN · MỖI MÃ MUA 50 TRIỆU",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "CỔ PHIẾU A · +20%",
+     "v": "60 TRIỆU",
+     "at": [
+      1,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "k": "CỔ PHIẾU B · −20%",
+     "v": "40 TRIỆU",
+     "at": [
+      2,
+      null,
+      0,
+      0.05
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 3,
+   "vid": "6183991",
+   "veil": 0.55,
+   "illus": "VÍ DỤ GIẢ ĐỊNH · VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MỘT CUỘC GỌI",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "NHÀ CẦN 40 TRIỆU",
+     "at": [
+      3,
+      "Nhà"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bán cổ phiếu nào?",
+     "at": 4,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "PHẦN LỚN MỌI NGƯỜI CHỌN BÁN A",
+   "rows": [
+    {
+     "k": "BÁN A",
+     "v": "CHỐT LÃI · DỄ CHỊU",
+     "at": 6
+    },
+    {
+     "k": "BÁN B",
+     "v": "LỖ THÀNH THẬT · KHÓ CHỊU",
+     "at": 7
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 8,
+   "text": "Bán cái đang lãi.\nCó gì sai đâu?"
+  },
+  {
+   "type": "broll",
+   "at": 9,
+   "vid": "8061659",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "LÝ DO KHÔNG NẰM Ở HAI CỔ PHIẾU",
+     "at": [
+      9,
+      "Nhưng"
+     ],
+     "sm": true
+    },
+    {
+     "text": "MỘT CHIẾC CÂN LỆCH",
+     "at": [
+      10,
+      "một"
+     ],
+     "acc": true
+    },
+    {
+     "text": "đặt từng thứ lên cân",
+     "at": 11,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "brand",
+   "at": 12,
+   "sub": "TIỀN BẠC · GIẢI THÍCH BẰNG DỮ LIỆU"
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "HAI CỔ PHIẾU, MỘT CUỘC GỌI"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.1
+ }
+}

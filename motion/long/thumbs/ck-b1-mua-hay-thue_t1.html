@@ -1,0 +1,35 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>*{margin:0;padding:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#050912}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:"Be Vietnam Pro",sans-serif;color:#fff;
+ background:linear-gradient(rgba(125,211,252,.06) 1px,transparent 1px) 0 0/80px 80px,linear-gradient(90deg,rgba(125,211,252,.06) 1px,transparent 1px) 0 0/80px 80px,radial-gradient(80% 70% at 50% 40%,#16263f 0%,#0a1426 60%,#04080f 100%)}
+.big{position:absolute;font-weight:900;line-height:1.05;white-space:nowrap;text-shadow:0 10px 40px #000,-6px -6px 0 #000,6px 6px 0 #000,6px -6px 0 #000,-6px 6px 0 #000}
+.door{position:absolute;top:250px;width:560px;height:780px;border-radius:18px 18px 0 0;border:14px solid;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(0,0,0,.25))}
+.door .pn{position:absolute;left:50px;right:50px;border:6px solid;border-radius:10px;opacity:.55}
+.door .knob{position:absolute;top:400px;width:44px;height:44px;border-radius:50%}
+.door .w{position:absolute;left:0;right:0;top:120px;text-align:center;font-weight:900;font-size:150px;line-height:1;text-shadow:0 8px 30px #000}
+.door .p{position:absolute;left:40px;right:40px;top:470px;padding:16px 0 20px;border-radius:20px;background:#0a1426;text-align:center;
+ font-family:"JetBrains Mono";font-weight:700;font-size:64px;line-height:1.1}
+.door .p i{display:block;font-style:normal;font-family:"Be Vietnam Pro";font-weight:900;font-size:34px;letter-spacing:.1em;color:#cbd5e1;white-space:nowrap}
+.floor{position:absolute;left:0;right:0;top:1030px;height:50px;background:linear-gradient(180deg,#1e293b,#0b1220)}
+.tag{position:absolute;font-family:"JetBrains Mono";font-weight:700;letter-spacing:.16em;white-space:nowrap;color:#fbbf24}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="0.2" data-width="1920" data-height="1080" data-fps="30">
+<!-- T1: hai cánh cửa cạnh nhau (trái cam = MUA, phải tím = THUÊ), mỗi cửa một khoản trả tháng của ví dụ + "10 NĂM SAU?" -->
+<div class="floor"></div>
+<div class="door" style="left:300px;border-color:#fb923c;box-shadow:0 0 90px rgba(251,146,60,.45)">
+ <div class="pn" style="top:40px;height:300px;border-color:#fb923c"></div>
+ <div class="knob" style="right:40px;background:#fb923c"></div>
+ <div class="w" style="color:#fb923c">MUA</div>
+ <div class="p" style="color:#fdba74;border:5px solid #fb923c">19 TR/THÁNG<i>TRẢ NGÂN HÀNG</i></div>
+</div>
+<div class="door" style="left:1060px;border-color:#a78bfa;box-shadow:0 0 90px rgba(167,139,250,.45)">
+ <div class="pn" style="top:40px;height:300px;border-color:#a78bfa"></div>
+ <div class="knob" style="left:40px;background:#a78bfa"></div>
+ <div class="w" style="color:#c4b5fd">THUÊ</div>
+ <div class="p" style="color:#ddd6fe;border:5px solid #a78bfa">6 TR/THÁNG<i>TRẢ CHỦ NHÀ</i></div>
+</div>
+<div class="big" style="left:0;right:0;top:40px;text-align:center;font-size:170px">10 NĂM SAU<span style="color:#fbbf24">?</span></div>
+<div class="tag" style="right:50px;top:1036px;font-size:26px;color:#94a3b8;letter-spacing:.12em">VÍ DỤ GIẢ ĐỊNH · CĂN 2,5 TỶ</div>
+</div><script>window.__timelines={main:gsap.timeline({paused:true})};</script></body></html>

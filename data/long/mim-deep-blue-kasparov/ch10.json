@@ -1,0 +1,154 @@
+{
+ "title": "Sau trận",
+ "lines": [
+  {
+   "t": "Kasparov không chấp nhận kết quả ấy một cách nhẹ nhàng.",
+   "p": 0.8
+  },
+  "Ở buổi họp báo, ông nói thẳng những nghi ngờ của mình.",
+  {
+   "t": "Ông đòi xem nhật ký hoạt động của cỗ máy, từng nước nó đã tính.",
+   "p": 1.0
+  },
+  "IBM từ chối đưa ngay. Về sau, họ công bố các tệp nhật ký ấy trên mạng.",
+  "Kasparov đòi đấu lại.",
+  {
+   "t": "IBM từ chối. Và Deep Blue được tháo dỡ, không bao giờ thi đấu nữa.",
+   "p": 1.0
+  },
+  "Với nhiều người, việc ấy càng làm nghi ngờ thêm dày.",
+  "Với IBM, đó là một dự án đã hoàn thành.",
+  "Đội Deep Blue nhận bảy trăm nghìn đô la tiền thưởng, cộng thêm một trăm nghìn đô la của giải thưởng lập từ năm một nghìn chín trăm tám mươi.",
+  {
+   "t": "Ngày nay, một phần của cỗ máy ấy được trưng bày trong bảo tàng.",
+   "p": 1.0
+  },
+  "Còn câu hỏi quan trọng nhất thì vẫn treo lơ lửng.",
+  "Cỗ máy ấy có thật sự hiểu cờ vua không?",
+  "Hay nó chỉ tính rất, rất nhanh?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "10",
+   "k": "CHƯƠNG MƯỜI",
+   "title": "SAU TRẬN",
+   "sub": "NHẬT KÝ, TÁI ĐẤU, VÀ MỘT CỖ MÁY BỊ THÁO",
+   "vid": "8328462",
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU",
+   "titleAt": [
+    0,
+    "Kasparov"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "KASPAROV ĐÒI",
+   "rows": [
+    {
+     "k": "1",
+     "v": "XEM NHẬT KÝ TỪNG NƯỚC MÁY TÍNH",
+     "at": 2
+    },
+    {
+     "k": "2",
+     "v": "MỘT TRẬN ĐẤU LẠI",
+     "at": 4
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "IBM",
+   "rows": [
+    {
+     "k": "NHẬT KÝ",
+     "v": "SAU MỚI CÔNG BỐ",
+     "at": 3
+    },
+    {
+     "k": "ĐẤU LẠI",
+     "v": "TỪ CHỐI",
+     "at": 5
+    }
+   ],
+   "total": {
+    "k": "DEEP BLUE",
+    "v": "BỊ THÁO DỠ",
+    "at": [
+     5,
+     "Và"
+    ]
+   }
+  },
+  {
+   "type": "bars",
+   "at": 7,
+   "title": "TIỀN THƯỞNG 1997 (NGHÌN ĐÔ LA)",
+   "unit": "THEO TƯ LIỆU VỀ TRẬN ĐẤU",
+   "items": [
+    {
+     "k": "ĐỘI DEEP BLUE",
+     "v": 700,
+     "lbl": "700",
+     "at": [
+      8,
+      "bảy"
+     ],
+     "acc": true
+    },
+    {
+     "k": "GIẢI LẬP TỪ 1980",
+     "v": 100,
+     "lbl": "+100",
+     "at": [
+      8,
+      "cộng"
+     ]
+    },
+    {
+     "k": "KASPAROV",
+     "v": 400,
+     "lbl": "400",
+     "at": [
+      8,
+      null,
+      0,
+      0.6
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 9,
+   "vid": "5028622",
+   "ms": 10,
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU",
+   "kin": [
+    {
+     "text": "MỘT PHẦN CỖ MÁY · NAY Ở BẢO TÀNG",
+     "at": 9,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 10,
+   "text": "Cỗ máy ấy có thật sự hiểu cờ vua?\nHay chỉ tính rất, rất nhanh?",
+   "showAt": 11
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 10",
+  "t": "SAU TRẬN"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

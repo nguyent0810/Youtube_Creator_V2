@@ -1,0 +1,294 @@
+{
+ "theme": "bud",
+ "format": "chuyen-xua",
+ "hook_type": "pov",
+ "open_shot": "bau-troi",
+ "voice": "Thiền Tâm Đức",
+ "music": "perspectives.mp3",
+ "gap": 0.45,
+ "series": "Chuyện xưa · Tập 4",
+ "title": "Chuyện xưa · Tập 4: Mũi tên tẩm độc (Kinh Trung Bộ 63)",
+ "kicker": "CHUYỆN XƯA · TẬP 4",
+ "sub": "KINH TRUNG BỘ 63",
+ "acc": [
+  "tên",
+  "độc",
+  "chết",
+  "khổ"
+ ],
+ "lines": [
+  "Bạn trúng tên độc, nhưng nhất quyết hỏi ai bắn trước rồi mới cho rút.",
+  "Đức Phật từng kể chuyện này.",
+  "Một tỳ-kheo đòi Ngài trả lời: thế giới vĩnh cửu không? Như Lai chết rồi còn không?",
+  "Không trả lời, ông bỏ tu.",
+  "Ngài kể: một người trúng tên tẩm độc.",
+  "Người nhà mời thầy thuốc.",
+  "Anh nói: chưa biết ai bắn, tên gì, họ gì, chưa cho rút.",
+  "Cung loại gì, tên làm bằng gì?",
+  "Chưa hỏi xong, anh đã chết.",
+  "Ngài dạy, diễn ý: Ta chỉ nói về khổ và đường hết khổ, vì nó có ích.",
+  "Mũi tên của bạn là gì? Bình luận, theo dõi tập sau."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "clip": "pexels:12222644",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "TÊN ĐỘC",
+     "at": 0.0,
+     "acc": true,
+     "size": 170
+    },
+    {
+     "text": "HỎI AI BẮN TRƯỚC",
+     "at": [
+      0,
+      "hỏi"
+     ]
+    },
+    {
+     "text": "rồi mới cho rút",
+     "at": [
+      0,
+      "rồi"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "clip": "pexels:5386141",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "ĐỨC PHẬT KỂ",
+     "at": [
+      1,
+      "Đức"
+     ],
+     "acc": true
+    },
+    {
+     "text": "Kinh Trung Bộ 63",
+     "at": [
+      1,
+      "kể"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "clip": "pexels:5386136",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "MĀLUṄKYAPUTTA",
+     "at": [
+      2,
+      "tỳ-kheo"
+     ],
+     "acc": true
+    },
+    {
+     "text": "THẾ GIỚI VĨNH CỬU?",
+     "at": [
+      2,
+      "thế"
+     ]
+    },
+    {
+     "text": "NHƯ LAI CHẾT RỒI CÒN?",
+     "at": [
+      2,
+      "Như"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "clip": "pexels:5385963",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "KHÔNG TRẢ LỜI",
+     "at": [
+      3,
+      "Không"
+     ]
+    },
+    {
+     "text": "BỎ TU",
+     "at": [
+      3,
+      "bỏ"
+     ],
+     "acc": true,
+     "size": 150
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "clip": "pexels:6668849",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "MŨI TÊN TẨM ĐỘC",
+     "at": [
+      4,
+      "tên"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "clip": "pexels:7579685",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "MỜI THẦY THUỐC",
+     "at": [
+      5,
+      "thầy"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "clip": "pexels:18504176",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "CHƯA BIẾT AI BẮN",
+     "at": [
+      6,
+      "chưa"
+     ]
+    },
+    {
+     "text": "TÊN GÌ · DÒNG HỌ NÀO",
+     "at": [
+      6,
+      "tên"
+     ]
+    },
+    {
+     "text": "CHƯA CHO RÚT",
+     "at": [
+      6,
+      "chưa",
+      1
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "clip": "pexels:6668760",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "CUNG LOẠI GÌ?",
+     "at": [
+      7,
+      "Cung"
+     ]
+    },
+    {
+     "text": "MŨI TÊN BẰNG GÌ?",
+     "at": [
+      7,
+      "tên"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "text": "ĐÃ CHẾT",
+   "clip": "pexels:33715288",
+   "veil": 0.6,
+   "fx": "zoom",
+   "sub": "KHI CHƯA HỎI XONG"
+  },
+  {
+   "type": "quote",
+   "at": 9,
+   "text": "Ta chỉ nói về khổ và con đường hết khổ, vì nó có ích.",
+   "by": "MN 63 · DIỄN Ý",
+   "clip": "pexels:17929835",
+   "veil": 0.6
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "clip": "pexels:33766131",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "MŨI TÊN CỦA BẠN?",
+     "at": [
+      10,
+      "Mũi"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận",
+     "at": [
+      10,
+      "Bình"
+     ],
+     "sm": true
+    },
+    {
+     "text": "THEO DÕI",
+     "at": [
+      10,
+      "theo"
+     ],
+     "acc": true
+    },
+    {
+     "text": "tập sau",
+     "at": [
+      10,
+      "tập"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "description": "Chuyện xưa · Tập 4. Kể lại theo Kinh Trung Bộ 63 (Cūḷamāluṅkya): tỳ-kheo Māluṅkyaputta đòi Đức Phật trả lời các câu hỏi siêu hình, nếu không sẽ bỏ tu. Đức Phật kể ví dụ người trúng mũi tên tẩm độc nhưng không chịu cho rút trước khi biết ai bắn, tên gì, dòng họ nào, cung và tên loại gì — hỏi chưa xong thì đã chết. Ngài chỉ giảng về khổ, nguyên nhân của khổ, sự diệt khổ và con đường diệt khổ, vì những điều ấy có ích.\n\nNguồn: MN 63, bản dịch Bhikkhu Sujato (CC0): https://suttacentral.net/mn63/en/sujato\nCâu chuyện kể lại bằng lời của kênh; lời Phật là diễn ý.",
+ "tags": [
+  "chuyện xưa",
+  "mũi tên tẩm độc",
+  "kinh trung bộ",
+  "lời phật dạy",
+  "phật pháp"
+ ],
+ "sources": [
+  "https://suttacentral.net/mn63/en/sujato"
+ ]
+}

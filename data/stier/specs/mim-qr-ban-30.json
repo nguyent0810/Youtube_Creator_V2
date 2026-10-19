@@ -1,0 +1,203 @@
+{
+ "theme": "mim",
+ "title": "Mã QR bẩn tới 30% vẫn đọc được: vì sao?",
+ "description": "Mã QR được thiết kế cho nhà xưởng ô tô, nơi có dầu, bụi và thùng hàng trầy xước. Mã chứa thêm dữ liệu dự phòng (mã sửa lỗi) nên có thể bị bẩn hoặc hỏng tới khoảng 30% diện tích mà vẫn đọc ra đúng (IEEE Spectrum, 11/2020). Đó cũng là lý do người ta đặt được logo vào giữa mã: logo che mất một phần dữ liệu và mã vẫn chạy. Hình mã trong video là hình minh hoạ. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.",
+ "tags": [
+  "mã qr",
+  "qr code",
+  "sửa lỗi",
+  "error correction",
+  "logo giữa mã qr",
+  "công nghệ quanh ta",
+  "mind in the machine"
+ ],
+ "kicker": "CÔNG NGHỆ QUANH TA",
+ "sub": "MÃ QR · SỬA LỖI",
+ "acc": [
+  "bẩn",
+  "hỏng",
+  "ba",
+  "dự",
+  "logo"
+ ],
+ "lines": [
+  "Mã QR bẩn tới ba mươi phần trăm, vẫn quét được.",
+  "Vì nó sinh ra cho nhà xưởng ô tô. Ở đó có dầu, có bụi, thùng hàng thì trầy xước.",
+  "Một mã vạch bẩn một sọc, là coi như hỏng.",
+  "Mã QR thì chứa thêm dữ liệu dự phòng, đủ để tính ngược lại phần đã mất.",
+  "Giống như bạn nghe một câu bị nhiễu vài chữ, mà vẫn đoán ra cả câu.",
+  "Nên người ta mới dám đặt logo vào giữa mã.",
+  "Cái logo ấy đang che mất một phần dữ liệu. Và mã vẫn chạy."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "BẨN TỚI 30%",
+     "at": 0.0
+    },
+    {
+     "text": "VẪN QUÉT ĐƯỢC",
+     "at": [
+      0,
+      "vẫn"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:8384432",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "SINH RA CHO NHÀ XƯỞNG",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "dầu · bụi · trầy xước",
+     "at": [
+      1,
+      "dầu,"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:40033690",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "BẨN MỘT CHỖ THÌ SAO?",
+   "cards": [
+    {
+     "k": "MÃ VẠCH",
+     "v": "BẨN MỘT SỌC = HỎNG",
+     "at": [
+      2,
+      "bẩn"
+     ]
+    },
+    {
+     "k": "MÃ QR",
+     "v": "CÓ DỮ LIỆU DỰ PHÒNG",
+     "at": [
+      3,
+      "dữ"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": [
+    3,
+    "đủ"
+   ],
+   "to": 30,
+   "suffix": "%",
+   "label": "DIỆN TÍCH CÓ THỂ BẨN, HỎNG",
+   "until": [
+    3,
+    "mất."
+   ],
+   "sub": {
+    "text": "TỚI KHOẢNG · THEO IEEE SPECTRUM",
+    "at": [
+     3,
+     "phần"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Nghe mất vài chữ",
+   "nodes": [
+    {
+     "text": "câu nói bị nhiễu",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      4,
+      "nghe"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "vẫn đoán ra cả câu",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      4,
+      "vẫn"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 700
+    }
+   ],
+   "note": "CÁCH VÍ CỦA KÊNH"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "LOGO Ở GIỮA MÃ",
+     "at": 5
+    },
+    {
+     "text": "ĐANG CHE MẤT DỮ LIỆU",
+     "at": [
+      6,
+      "che"
+     ],
+     "acc": true
+    },
+    {
+     "text": "và mã vẫn chạy",
+     "at": [
+      6,
+      "Và"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8830587",
+   "ms": 5,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 5
+  }
+ ],
+ "sources": [
+  "https://spectrum.ieee.org/how-a-board-game-and-skyscrapers-inspired-the-development-of-the-qr-code"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "qr": "quy a",
+  "logo": "lô-gô"
+ },
+ "imgs": {}
+}

@@ -1,0 +1,165 @@
+{
+ "theme": "mim",
+ "title": "Đã gọi video kiểm tra, thấy đúng mặt bạn, nghe đúng giọng bạn, vẫn mất tiền",
+ "description": "Đầu năm 2024, công ty an ninh mạng Bkav kể một trường hợp ở Hà Nội: một nhân viên văn phòng được bạn nhắn vay tiền qua mạng, nghi nên đòi gọi video. Cuộc gọi chỉ kéo dài vài giây rồi tắt vì “mạng chập chờn”, nhưng chị đã thấy mặt, nghe giọng, và chuyển tiền. Tài khoản của người bạn đã bị chiếm từ trước; kẻ gian dựng sẵn một đoạn video giả cả mặt lẫn giọng (VnEconomy dẫn Bkav). Cách kiểm tra chắc hơn: tự gọi vào số điện thoại bạn đã lưu. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (13 phút): https://youtu.be/sywk-F-yW7k (công khai từ 20:00 ngày 26/10).",
+ "tags": [
+  "gọi video lừa đảo",
+  "bkav",
+  "ai giả giọng",
+  "lừa đảo",
+  "deepfake",
+  "an toàn mạng",
+  "mind in the machine"
+ ],
+ "sub": "HÀ NỘI · 2024",
+ "acc": [
+  "vài",
+  "mặt",
+  "giọng",
+  "chiếm",
+  "lưu"
+ ],
+ "kicker": "AI VÀ LỪA ĐẢO",
+ "lines": [
+  "Một cuộc gọi video chỉ dài vài giây. Và một khoản tiền đã chuyển đi.",
+  "Đầu năm 2024, ở Hà Nội, một nhân viên văn phòng được bạn nhắn tin hỏi vay tiền.",
+  "Chị nghi, nên đòi gọi video.",
+  "Người bạn đồng ý ngay. Cuộc gọi chỉ vài giây rồi tắt, vì mạng chập chờn.",
+  "Nhưng chị đã thấy đúng mặt bạn, nghe đúng giọng bạn. Chị chuyển tiền.",
+  "Thật ra, tài khoản ấy đã bị chiếm. Đoạn video được dựng sẵn, giả cả mặt lẫn giọng.",
+  "Muốn kiểm tra, hãy tự gọi vào số điện thoại bạn đã lưu."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CUỘC GỌI VIDEO VÀI GIÂY",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "và một khoản tiền đã chuyển đi",
+     "at": [
+      0,
+      "Và"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6265853",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "HÀ NỘI · ĐẦU NĂM 2024",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "BẠN NHẮN TIN HỎI VAY TIỀN",
+     "at": [
+      1,
+      "được"
+     ],
+     "acc": true
+    },
+    {
+     "text": "chị nghi, nên đòi gọi video",
+     "at": 2,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6980602",
+   "ms": 4,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "timeline",
+   "at": 3,
+   "items": [
+    {
+     "year": "bước 1",
+     "text": "bạn đồng ý gọi video ngay",
+     "at": [
+      3,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "year": "bước 2",
+     "text": "vài giây rồi tắt: “mạng chập chờn”",
+     "at": [
+      3,
+      "Cuộc"
+     ]
+    },
+    {
+     "year": "bước 3",
+     "text": "đúng mặt, đúng giọng: chị chuyển tiền",
+     "at": [
+      4,
+      "thấy"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "THẬT RA",
+   "cards": [
+    {
+     "k": "TÀI KHOẢN",
+     "v": "ĐÃ BỊ CHIẾM",
+     "at": [
+      5,
+      "tài"
+     ]
+    },
+    {
+     "k": "ĐOẠN VIDEO",
+     "v": "DỰNG SẴN",
+     "at": [
+      5,
+      "Đoạn"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "THEO CÔNG TY AN NINH MẠNG BKAV"
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "GỌI SỐ BẠN ĐÃ LƯU",
+   "sub": "ĐỪNG KIỂM TRA QUA KÊNH KẺ GIAN CHỌN"
+  }
+ ],
+ "sources": [
+  "https://vneconomy.vn/canh-bao-hien-tuong-dung-ai-gia-mao-hinh-anh-giong-noi-de-lua-tien.htm"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

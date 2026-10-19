@@ -1,0 +1,295 @@
+{
+ "title": "Coin và nhà đất: hai kiểu đỏ khác nhau",
+ "lines": [
+  {
+   "t": "Bitcoin có một năm còn chóng mặt hơn.",
+   "p": 0.8
+  },
+  "Đỉnh lịch sử của nó là khoảng một trăm hai mươi sáu nghìn đô la, vào tháng mười năm hai nghìn không trăm hai mươi lăm.",
+  "Đến cuối tháng sáu năm nay, nó chỉ còn khoảng năm mươi tám nghìn đô, mất hơn một nửa.",
+  {
+   "t": "Rồi quý ba lại bật lên hơn bốn mươi phần trăm.",
+   "p": 1.0
+  },
+  "Tính từ đầu năm, Bitcoin âm khoảng bốn đến năm phần trăm. Tính mười hai tháng, âm gần hai mươi bảy phần trăm.",
+  "Và một điều nên biết: ở Việt Nam, tài sản mã hoá đã được luật công nhận là tài sản, nhưng không phải là tiền.",
+  {
+   "t": "Đến đầu tháng mười, chưa có tổ chức nào trong nước được cấp phép cung cấp dịch vụ này. Tiền trên các sàn nước ngoài không được bảo hiểm tiền gửi Việt Nam chi trả, và Bộ Tài chính cũng nói phần lớn hoạt động đó không được pháp luật bảo vệ.",
+   "p": 1.0
+  },
+  "Còn nhà đất đỏ theo một kiểu khác: giá không rơi ầm ầm, nhưng giao dịch chậm hẳn lại, dù giá sơ cấp căn hộ ở vài nơi vẫn tăng.",
+  "Theo Bộ Xây dựng, quý hai năm nay cả nước có khoảng một trăm nghìn giao dịch bất động sản, chỉ bằng sáu mươi tư phần trăm cùng kỳ năm ngoái.",
+  "Riêng đất nền, giao dịch giảm khoảng bốn mươi phần trăm.",
+  "Giá đất nền cả nước quý hai giảm hai đến ba phần trăm so với quý một. Riêng Hà Nội, giá rao đất nền bình quân quý ba thấp hơn quý một khoảng mười bốn phần trăm.",
+  {
+   "t": "Giá chỉ giảm vài phần trăm thì đâu đáng lo?",
+   "ask": 1
+  },
+  "Với nhà đất, con số đáng sợ không nằm ở giá, mà nằm ở chỗ: bạn có bán được không, và bán mất bao lâu.",
+  "Trong lúc chờ, người vay mua nhà đang trả lãi khoảng mười ba đến mười lăm phần trăm một năm sau thời gian ưu đãi.",
+  "Lãi suất cao làm người gửi tiền vui, nhưng người đi vay thì ở phía ngược lại."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "COIN VÀ NHÀ ĐẤT:\nHAI KIỂU ĐỎ",
+   "sub": "BITCOIN · BẤT ĐỘNG SẢN",
+   "vid": "38905688",
+   "titleAt": [
+    0,
+    "Bitcoin"
+   ]
+  },
+  {
+   "type": "race",
+   "at": 1,
+   "from": "2025-10-07",
+   "to": "2026-09-30",
+   "title": "BITCOIN · 12 THÁNG (GIÁ USD)",
+   "range": "07/10/2025 → 30/09/2026",
+   "drawAt": [
+    1,
+    "Đỉnh"
+   ],
+   "until": [
+    3,
+    "bốn"
+   ],
+   "series": [
+    {
+     "key": "btc",
+     "label": "BITCOIN",
+     "color": "#f97316"
+    }
+   ],
+   "source": "DỮ LIỆU: COINGECKO (GIÁ USD) · MINH HOẠ, KHÔNG PHẢI KHUYẾN NGHỊ"
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "BITCOIN · GIÁ USD",
+   "rows": [
+    {
+     "k": "TỪ ĐẦU NĂM",
+     "v": "≈ −4 ĐẾN −5%",
+     "at": [
+      4,
+      "đầu"
+     ]
+    },
+    {
+     "k": "12 THÁNG",
+     "v": "≈ −27%",
+     "at": [
+      4,
+      "mười"
+     ]
+    },
+    {
+     "k": "ĐÁY 2026 SO VỚI ĐỈNH",
+     "v": "≈ −54%",
+     "at": [
+      4,
+      "Tính"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "TÀI SẢN MÃ HOÁ = TÀI SẢN",
+     "at": [
+      5,
+      "tài"
+     ]
+    },
+    {
+     "text": "NHƯNG KHÔNG PHẢI LÀ TIỀN",
+     "at": [
+      5,
+      "tiền"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "CHƯA TỔ CHỨC NÀO ĐƯỢC CẤP PHÉP",
+     "at": [
+      6,
+      "cấp"
+     ],
+     "acc": true
+    },
+    {
+     "text": "sàn nước ngoài: không được bảo hiểm tiền gửi Việt Nam chi trả",
+     "at": [
+      6,
+      "bảo"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 7,
+   "vid": "32636373",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "NHÀ ĐẤT: GIAO DỊCH CHẬM HẲN",
+     "at": [
+      7,
+      "giao"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 8,
+   "title": "SỐ GIAO DỊCH QUÝ II/2026 · SO VỚI CÙNG KỲ 2025",
+   "unit": "BỘ XÂY DỰNG",
+   "items": [
+    {
+     "k": "CÙNG KỲ 2025",
+     "v": 100,
+     "lbl": "100%",
+     "at": [
+      8,
+      "Bộ"
+     ]
+    },
+    {
+     "k": "TỔNG",
+     "v": 63.7,
+     "lbl": "63,7%",
+     "at": [
+      8,
+      "sáu"
+     ],
+     "acc": true
+    },
+    {
+     "k": "ĐẤT NỀN",
+     "v": 59.9,
+     "lbl": "59,9%",
+     "at": [
+      9,
+      "đất"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "ĐẤT NỀN CẢ NƯỚC: −2 ĐẾN −3%",
+     "at": [
+      10,
+      "Giá"
+     ]
+    },
+    {
+     "text": "HÀ NỘI (GIÁ RAO, Q3 SO Q1): −14%",
+     "at": [
+      10,
+      "mười"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 11,
+   "text": "Giá chỉ giảm vài phần trăm\nthì đâu đáng lo?"
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "BÁN ĐƯỢC KHÔNG?",
+     "at": [
+      12,
+      "Với"
+     ]
+    },
+    {
+     "text": "BÁN MẤT BAO LÂU?",
+     "at": [
+      12,
+      "mất"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "LÃI VAY MUA NHÀ SAU ƯU ĐÃI",
+     "at": [
+      13,
+      "vay"
+     ]
+    },
+    {
+     "text": "13 – 15% / NĂM",
+     "at": [
+      13,
+      "mười"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "NGƯỜI GỬI TIỀN VUI",
+     "at": [
+      14,
+      "Lãi"
+     ]
+    },
+    {
+     "text": "NGƯỜI ĐI VAY Ở PHÍA NGƯỢC LẠI",
+     "at": [
+      14,
+      "vay"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "COIN VÀ NHÀ ĐẤT: HAI KIỂU ĐỎ"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

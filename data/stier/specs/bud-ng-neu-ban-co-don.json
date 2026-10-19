@@ -1,0 +1,129 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "nhan-gui",
+ "hook_type": "noi-thang",
+ "open_shot": "ban-tay",
+ "voice": "Ngọc Huyền",
+ "music": "at_rest.mp3",
+ "gap": 0.5,
+ "title": "Nếu bạn đang thấy cô đơn",
+ "kicker": "NHẮN GỬI",
+ "sub": "KINH TƯƠNG ƯNG 45.2",
+ "acc": [
+  "bạn",
+  "toàn"
+ ],
+ "lines": [
+  "Nếu bạn đang thấy, giữa bao nhiêu người, mà vẫn một mình.",
+  "Có lần ngài A Nan nói: bạn tốt là một nửa đời tu.",
+  "Đức Phật đáp: đừng nói vậy. Bạn tốt là toàn bộ đời tu.",
+  "Một người bạn thật, quý hơn trăm người quen.",
+  "Tag người bạn ấy vào đây. Còn nếu chưa có, bình luận, mình làm bạn nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "GIỮA BAO NGƯỜI VẪN MỘT MÌNH?",
+     "at": 0.0,
+     "acc": true
+    }
+   ],
+   "clip": "pexels:35361385"
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Bạn tốt là…",
+   "nodes": [
+    {
+     "text": "MỘT NỬA ĐỜI TU",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      1,
+      "bạn"
+     ],
+     "shape": "box",
+     "cross": [
+      2,
+      "đừng"
+     ]
+    },
+    {
+     "text": "TOÀN BỘ ĐỜI TU",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      2,
+      "Bạn"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      2,
+      "Bạn"
+     ]
+    }
+   ],
+   "note": "KINH TƯƠNG ƯNG 45.2"
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 100,
+   "suffix": " NGƯỜI QUEN",
+   "label": "KHÔNG BẰNG 1 NGƯỜI BẠN THẬT",
+   "until": [
+    3,
+    "trăm"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "TAG NGƯỜI BẠN ẤY",
+     "at": [
+      4,
+      "Tag"
+     ],
+     "acc": true
+    },
+    {
+     "text": "chưa có? mình làm bạn nhé",
+     "at": [
+      4,
+      "Còn"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6302980"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/sn45.2/en/sujato"
+ ],
+ "description": "Nếu bạn đang thấy cô đơn\n\nNguồn: https://suttacentral.net/sn45.2/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

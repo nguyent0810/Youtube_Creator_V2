@@ -1,0 +1,219 @@
+{
+ "title": "Học và trò chuyện là hai chuyện khác nhau",
+ "lines": [
+  {
+   "t": "Trước hết, phải tách hai việc mà ta hay gộp làm một: huấn luyện, và trò chuyện.",
+   "p": 0.8
+  },
+  "Huấn luyện là lúc mô hình được dạy, trên một lượng chữ khổng lồ, trong nhiều tuần hoặc nhiều tháng.",
+  {
+   "t": "Khi xong, nó thành một khối số cố định, gọi là trọng số.",
+   "p": 1.0
+  },
+  "Lúc bạn trò chuyện, khối số ấy không thay đổi.",
+  "Bạn dạy nó một mẹo hay, nó dùng được ngay trong cuộc trò chuyện đó.",
+  {
+   "t": "Nhưng mô hình không tự sửa mình sau mỗi câu bạn gõ.",
+   "p": 1.0
+  },
+  "Trong một cuộc trò chuyện, nó nhớ những gì đã nói bằng cách đọc lại cả đoạn hội thoại, mỗi lần trả lời.",
+  "Giống như bạn đưa cho một người lạ xem lại toàn bộ tin nhắn trước khi họ đáp.",
+  {
+   "t": "Mở cuộc trò chuyện mới, tờ giấy ấy trống trơn.",
+   "p": 1.0
+  },
+  "Tờ giấy ấy cũng có giới hạn độ dài.",
+  "Một cuộc trò chuyện rất dài, những gì nói ở đầu có thể bị cắt bớt hoặc tóm tắt lại, để còn chỗ cho phần mới.",
+  {
+   "t": "Đó là lý do đôi khi chatbot quên điều bạn dặn từ cả trăm tin nhắn trước.",
+   "p": 1.0
+  },
+  "Nói cách khác, trong cuộc trò chuyện, máy không học. Nó chỉ đọc.",
+  {
+   "t": "Đọc rất nhanh, đọc toàn bộ, nhưng xong cuộc là thôi.",
+   "p": 1.0
+  },
+  "Vậy câu \"AI học từ tôi\" sai à?",
+  "Không hẳn. Có hai cách để những gì bạn gõ đi xa hơn một cuộc trò chuyện.",
+  "Cách thứ nhất nằm ngay trong ứng dụng, và bạn nhìn thấy được: trí nhớ."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "HỌC VÀ\nTRÒ CHUYỆN",
+   "sub": "HAI CHUYỆN KHÁC NHAU",
+   "vid": "1085656",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "trước"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "HUẤN LUYỆN",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "chữ khổng lồ · nhiều tuần, nhiều tháng",
+     "at": [
+      1,
+      "trên"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "→ KHỐI SỐ CỐ ĐỊNH",
+     "at": 2,
+     "acc": true
+    },
+    {
+     "text": "trọng số",
+     "at": [
+      2,
+      "trọng"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "LÚC TRÒ CHUYỆN",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "KHÔNG THAY ĐỔI",
+     "at": [
+      3,
+      "không"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "TỰ SỬA SAU MỖI CÂU",
+     "at": 5,
+     "fx": "strike",
+     "strikeAt": [
+      5,
+      "câu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 6,
+   "vid": "34771078",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "ĐỌC LẠI CẢ ĐOẠN",
+     "at": 6,
+     "acc": true
+    },
+    {
+     "text": "mỗi lần trả lời",
+     "at": [
+      6,
+      "mỗi"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "CUỘC MỚI",
+     "at": 8,
+     "sm": true
+    },
+    {
+     "text": "TỜ GIẤY TRỐNG",
+     "at": [
+      8,
+      "tờ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "TỜ GIẤY CÓ GIỚI HẠN",
+     "at": 9,
+     "acc": true
+    },
+    {
+     "text": "đầu cuộc dài có thể bị cắt / tóm tắt",
+     "at": 10,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 12,
+   "text": "MÁY KHÔNG HỌC",
+   "sub": "NÓ CHỈ ĐỌC · XONG CUỘC LÀ THÔI"
+  },
+  {
+   "type": "question",
+   "at": 14,
+   "text": "“AI học từ tôi”\nlà sai?"
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "HAI CÁCH ĐI XA HƠN",
+     "at": 15,
+     "acc": true
+    },
+    {
+     "text": "cách thứ nhất: trí nhớ",
+     "at": 16,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "HỌC VÀ TRÒ CHUYỆN"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

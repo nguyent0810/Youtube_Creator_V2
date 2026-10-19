@@ -1,0 +1,199 @@
+{
+ "title": "Khi cỗ máy nhìn nhầm",
+ "lines": [
+  {
+   "t": "Năm hai nghìn không trăm mười tám, hai nhà nghiên cứu Joy Buolamwini và Timnit Gebru công bố một nghiên cứu tên là Gender Shades.",
+   "p": 0.8
+  },
+  {
+   "t": "Họ thử ba hệ thống thương mại phân tích khuôn mặt, với một việc tưởng như đơn giản: đoán xem người trong ảnh là nam hay nữ.",
+   "p": 1.0
+  },
+  "Với đàn ông da sáng, mức sai tệ nhất chỉ khoảng không phẩy tám phần trăm.",
+  {
+   "t": "Với phụ nữ da sẫm màu, mức sai tệ nhất lên tới khoảng ba mươi tư phẩy bảy phần trăm.",
+   "p": 1.0
+  },
+  "Cùng một cỗ máy, nhưng độ chính xác phụ thuộc vào việc bạn là ai.",
+  {
+   "t": "Một lý do thường được nhắc tới là dữ liệu huấn luyện: nếu cỗ máy được xem ít khuôn mặt của một nhóm người, nó sẽ kém hơn với nhóm ấy.",
+   "p": 1.0
+  },
+  "Và cái giá của việc nhìn nhầm không chỉ là một con số trong bài báo.",
+  "Tháng một năm hai nghìn không trăm hai mươi, ở thành phố Detroit, nước Mỹ, một người đàn ông tên là Robert Williams bị cảnh sát bắt ngay trước nhà, trước mặt vợ con.",
+  {
+   "t": "Lý do: một hệ thống nhận diện khuôn mặt đã ghép ảnh bằng lái xe cũ của anh với một đoạn video camera an ninh mờ nhoè.",
+   "p": 1.0
+  },
+  "Anh không phải người trong đoạn video ấy.",
+  "Anh bị giữ khoảng ba mươi giờ.",
+  {
+   "t": "Năm hai nghìn không trăm hai mươi tư, vụ kiện của anh kết thúc bằng một thoả thuận: cảnh sát thành phố không được bắt người chỉ dựa trên kết quả nhận diện khuôn mặt.",
+   "p": 1.0
+  },
+  "Cỗ máy không sai vì nó xấu.",
+  "Nó sai vì người ta tin con số của nó hơn mức con số ấy xứng đáng."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "CHƯƠNG SÁU",
+   "title": "KHI CỖ MÁY\nNHÌN NHẦM",
+   "sub": "ĐỘ CHÍNH XÁC PHỤ THUỘC VÀO BẠN LÀ AI",
+   "vid": "30036967",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Năm"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "GENDER SHADES · BUOLAMWINI & GEBRU · 2018",
+   "srcnote": "BA HỆ THỐNG THƯƠNG MẠI · ĐOÁN GIỚI TÍNH TỪ KHUÔN MẶT",
+   "rows": [
+    {
+     "k": "VIỆC CẦN LÀM",
+     "v": "ĐOÁN NAM HAY NỮ",
+     "at": [
+      1,
+      "đoán"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 2,
+   "title": "SAI TỆ NHẤT · BA HỆ THỐNG (%)",
+   "unit": "GENDER SHADES 2018 · ĐOÁN GIỚI TÍNH",
+   "items": [
+    {
+     "k": "NAM DA SÁNG",
+     "v": 0.8,
+     "lbl": "0,8",
+     "at": [
+      2,
+      "không"
+     ]
+    },
+    {
+     "k": "NỮ DA SẪM MÀU",
+     "v": 34.7,
+     "lbl": "34,7",
+     "at": [
+      3,
+      "ba"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "CÙNG MỘT CỖ MÁY",
+     "at": 4,
+     "sm": true
+    },
+    {
+     "text": "CHÍNH XÁC TUỲ VÀO BẠN LÀ AI",
+     "at": [
+      4,
+      "độ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "một lý do hay được nhắc: dữ liệu huấn luyện",
+     "at": 5,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 6,
+   "vid": "32538553",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "DETROIT · 01/2020",
+     "at": 7,
+     "acc": true
+    },
+    {
+     "text": "ROBERT WILLIAMS BỊ BẮT TRƯỚC NHÀ",
+     "at": [
+      7,
+      "Robert"
+     ],
+     "sm": true
+    },
+    {
+     "text": "ảnh bằng lái cũ ↔ video camera mờ nhoè",
+     "at": 8,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 9,
+   "from": 30,
+   "to": 30,
+   "prefix": "≈ ",
+   "suffix": " GIỜ",
+   "label": "BỊ GIỮ · ANH KHÔNG PHẢI NGƯỜI TRONG VIDEO",
+   "sub": {
+    "text": "THEO BÁO CHÍ MỸ",
+    "at": 10
+   }
+  },
+  {
+   "type": "source",
+   "at": 11,
+   "source": "THOẢ THUẬN · 06/2024",
+   "ref": "CẢNH SÁT DETROIT",
+   "snippet": "không được bắt người [[chỉ dựa trên kết quả nhận diện khuôn mặt]]",
+   "hlAt": [
+    11,
+    "chỉ"
+   ],
+   "seal": "VỤ KIỆN CỦA ROBERT WILLIAMS",
+   "sealAt": [
+    11,
+    "nhận"
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 12,
+   "mythLab": "CỖ MÁY KHÔNG SAI VÌ",
+   "myth": "NÓ XẤU",
+   "truthLab": "MÀ VÌ NGƯỜI TA",
+   "truth": "TIN CON SỐ QUÁ MỨC",
+   "strikeAt": [
+    12,
+    "xấu"
+   ],
+   "truthAt": [
+    13,
+    "tin"
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 06",
+  "t": "KHI CỖ MÁY NHÌN NHẦM"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

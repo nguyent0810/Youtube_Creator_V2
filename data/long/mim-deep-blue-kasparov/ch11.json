@@ -1,0 +1,219 @@
+{
+ "title": "Máy có \"nghĩ\" không?",
+ "lines": [
+  {
+   "t": "Câu trả lời của chính những người làm ra Deep Blue khá khiêm tốn.",
+   "p": 0.8
+  },
+  "Đó là một cỗ máy tìm kiếm cực nhanh, kèm một cách chấm điểm thế cờ do con người viết ra.",
+  {
+   "t": "Mỗi giây, hai trăm triệu thế cờ được xem xét và chấm điểm.",
+   "p": 1.0
+  },
+  "Thử hình dung một nước đi của nó.",
+  "Nó xét mọi nước có thể của mình. Với mỗi nước, nó xét mọi nước đáp lại của đối thủ.",
+  "Rồi nó lại xét tiếp, nhiều tầng như thế.",
+  "Thường thì nó nhìn trước khoảng sáu tới tám nước. Có những thế cờ, nó nhìn xa hơn hai mươi nước.",
+  "Ở tầng cuối cùng, nó chấm điểm từng thế cờ: quân còn bao nhiêu, vua có an toàn không, các quân đứng có tốt không.",
+  "Rồi nó chọn con đường dẫn tới điểm số tốt nhất, giả định rằng đối thủ cũng luôn chọn nước tốt nhất cho họ.",
+  "Cách nghĩ ấy chính là cách Shannon phác ra gần năm mươi năm trước. Không hơn.",
+  {
+   "t": "Chỉ có điều, giờ nó chạy nhanh hơn hàng triệu lần.",
+   "p": 1.0
+  },
+  "Không có chuyện tự học. Không có trực giác. Không có cảm xúc.",
+  "Những kiến thức về cờ trong nó đều do các kỹ sư và đại kiện tướng nạp vào.",
+  {
+   "t": "Nói cách khác, Deep Blue mạnh vì sức tính toán, không phải vì nó hiểu cờ theo cách con người hiểu.",
+   "p": 1.0
+  },
+  "Gần hai mươi năm sau, một cỗ máy khác chơi cờ vây theo một cách khác hẳn.",
+  "Nó tự học từ hàng triệu ván cờ, rồi tự chơi với chính mình.",
+  {
+   "t": "Nếu bạn đã xem video về AlphaGo của kênh, bạn sẽ thấy hai con đường ấy khác nhau ra sao.",
+   "p": 1.0
+  },
+  "Nhưng ngay năm một nghìn chín trăm chín mươi bảy, đã có một điều rõ ràng.",
+  "Để thắng con người ở một trò chơi, máy không nhất thiết phải nghĩ giống con người.",
+  "Nó chỉ cần làm tốt việc của nó, theo cách của nó.",
+  "Và điều ấy khiến Kasparov nảy ra một ý tưởng."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "11",
+   "k": "CHƯƠNG MƯỜI MỘT",
+   "title": "MÁY CÓ “NGHĨ”\nKHÔNG?",
+   "sub": "BÊN TRONG MỘT NƯỚC ĐI",
+   "vid": "6804656",
+   "ms": 12,
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU",
+   "titleAt": [
+    0,
+    "Câu"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "DEEP BLUE LÀ GÌ",
+   "rows": [
+    {
+     "k": "1",
+     "v": "TÌM KIẾM CỰC NHANH",
+     "at": 1
+    },
+    {
+     "k": "2",
+     "v": "CÁCH CHẤM ĐIỂM DO NGƯỜI VIẾT",
+     "at": [
+      1,
+      "kèm"
+     ]
+    }
+   ],
+   "total": {
+    "k": "MỖI GIÂY",
+    "v": "≈200 TRIỆU THẾ CỜ",
+    "at": 2
+   }
+  },
+  {
+   "type": "chess",
+   "at": 3,
+   "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+   "label": {
+    "k": "THẾ BAN ĐẦU · MINH HOẠ CÁCH MÁY “NHÌN TRƯỚC”",
+    "v": "XÉT NƯỚC MÌNH → NƯỚC ĐÁP → NƯỚC ĐÁP LẠI …",
+    "at": 4
+   }
+  },
+  {
+   "type": "bars",
+   "at": 6,
+   "title": "DEEP BLUE NHÌN TRƯỚC BAO NHIÊU NƯỚC",
+   "unit": "THEO TƯ LIỆU VỀ DEEP BLUE",
+   "items": [
+    {
+     "k": "THƯỜNG",
+     "v": 8,
+     "lbl": "6 – 8",
+     "at": [
+      6,
+      "sáu"
+     ]
+    },
+    {
+     "k": "CÓ THẾ CỜ",
+     "v": 20,
+     "lbl": "> 20",
+     "at": [
+      6,
+      "hơn"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "Ở TẦNG CUỐI: CHẤM ĐIỂM",
+   "rows": [
+    {
+     "k": "1",
+     "v": "QUÂN CÒN BAO NHIÊU",
+     "at": [
+      7,
+      "quân"
+     ]
+    },
+    {
+     "k": "2",
+     "v": "VUA CÓ AN TOÀN",
+     "at": [
+      7,
+      "vua"
+     ]
+    },
+    {
+     "k": "3",
+     "v": "CÁC QUÂN ĐỨNG CÓ TỐT",
+     "at": [
+      7,
+      "các"
+     ]
+    }
+   ],
+   "total": {
+    "k": "RỒI CHỌN",
+    "v": "ĐƯỜNG TỚI ĐIỂM TỐT NHẤT",
+    "at": 8
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "CÁCH NGHĨ CỦA SHANNON · 1950",
+     "at": 9,
+     "sm": true
+    },
+    {
+     "text": "CHẠY NHANH HƠN HÀNG TRIỆU LẦN",
+     "at": 10,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 11,
+   "mythLab": "DEEP BLUE MẠNH VÌ",
+   "myth": "HIỂU CỜ NHƯ NGƯỜI",
+   "truthLab": "THẬT RA",
+   "truth": "SỨC TÍNH TOÁN",
+   "strikeAt": [
+    13,
+    "Nói"
+   ],
+   "truthAt": [
+    13,
+    "sức"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 14,
+   "title": "HAI CON ĐƯỜNG",
+   "rows": [
+    {
+     "k": "DEEP BLUE",
+     "v": "TÌM KIẾM + LUẬT NGƯỜI VIẾT",
+     "at": 14
+    },
+    {
+     "k": "ALPHAGO",
+     "v": "TỰ HỌC TỪ VÁN CỜ",
+     "at": 15
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 17,
+   "text": "KHÔNG CẦN NGHĨ GIỐNG NGƯỜI",
+   "sub": "ĐỂ THẮNG NGƯỜI Ở MỘT TRÒ CHƠI",
+   "subAt": 18
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 11",
+  "t": "MÁY CÓ “NGHĨ” KHÔNG?"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

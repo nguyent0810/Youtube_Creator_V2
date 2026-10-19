@@ -1,0 +1,260 @@
+{
+ "theme": "bud",
+ "format": "do-vui",
+ "hook_type": "vi-sao",
+ "open_shot": "mat-nuoc",
+ "voice": "Mỹ Duyên",
+ "music": "frost_waltz.mp3",
+ "series": "Đố vui Phật pháp #1",
+ "title": "Đố vui Phật pháp #1: Cảm xúc được ví với gì? (Kinh Bọt Nước)",
+ "kicker": "ĐỐ VUI PHẬT PHÁP #1",
+ "sub": "TƯƠNG ƯNG 22.95",
+ "acc": [
+  "bọt",
+  "bong",
+  "bóng",
+  "cảm",
+  "xúc"
+ ],
+ "lines": [
+  "Vì sao Đức Phật ví thân người với một đám bọt trên sông?",
+  "Trong Kinh Bọt Nước, Ngài ví sắc thân như đám bọt trên sông: rỗng, không lõi.",
+  "Vậy cảm xúc được ví với gì?",
+  "Bong bóng nước, ảo ảnh, hay thân cây chuối?",
+  "Ba, hai, một.",
+  "Đáp án: bong bóng nước.",
+  "Như bong bóng khi mưa rơi, vừa nổi lên đã vỡ.",
+  "Lần tới cảm xúc dâng cao, nhớ: nó cũng sẽ tan.",
+  "Bình luận đáp án của bạn, và theo dõi câu đố sau."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "clip": "pexels:20608173",
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "VÌ SAO",
+     "at": 0.0,
+     "acc": true,
+     "size": 170
+    },
+    {
+     "text": "THÂN NGƯỜI = BỌT NƯỚC?",
+     "at": [
+      0,
+      "thân"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "clip": "pexels:27697869",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "KINH BỌT NƯỚC",
+     "at": [
+      1,
+      "Kinh"
+     ],
+     "acc": true
+    },
+    {
+     "text": "TƯƠNG ƯNG 22.95",
+     "at": [
+      1,
+      "ví"
+     ],
+     "sm": true
+    },
+    {
+     "text": "RỖNG · KHÔNG LÕI",
+     "at": [
+      1,
+      "rỗng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "clip": "pexels:7224719",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "ĐỐ BẠN",
+     "at": [
+      2,
+      "Vậy"
+     ],
+     "acc": true
+    },
+    {
+     "text": "CẢM XÚC ĐƯỢC VÍ VỚI GÌ?",
+     "at": [
+      2,
+      "cảm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "clip": "pexels:8865234",
+   "veil": 0.6,
+   "items": [
+    {
+     "text": "A · BONG BÓNG NƯỚC",
+     "at": [
+      3,
+      "Bong"
+     ]
+    },
+    {
+     "text": "B · ẢO ẢNH",
+     "at": [
+      3,
+      "ảo"
+     ]
+    },
+    {
+     "text": "C · THÂN CÂY CHUỐI",
+     "at": [
+      3,
+      "thân"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "clip": "pexels:32719391",
+   "veil": 0.6,
+   "items": [
+    {
+     "text": "BA",
+     "at": [
+      4,
+      "Ba"
+     ],
+     "size": 150
+    },
+    {
+     "text": "HAI",
+     "at": [
+      4,
+      "hai"
+     ],
+     "size": 150
+    },
+    {
+     "text": "MỘT",
+     "at": [
+      4,
+      "một"
+     ],
+     "acc": true,
+     "size": 150
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "BONG BÓNG\nNƯỚC",
+   "sub": "ĐÁP ÁN A",
+   "clip": "pexels:8676954",
+   "veil": 0.55,
+   "fx": "zoom"
+  },
+  {
+   "type": "quote",
+   "at": 6,
+   "text": "Như bong bóng khi trời mưa: vừa nổi lên đã vỡ.",
+   "by": "SN 22.95 · DIỄN Ý",
+   "clip": "pexels:26051352",
+   "veil": 0.6
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "clip": "pexels:30474580",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "CẢM XÚC DÂNG CAO?",
+     "at": [
+      7,
+      "cảm"
+     ]
+    },
+    {
+     "text": "NÓ CŨNG SẼ TAN",
+     "at": [
+      7,
+      "tan"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "clip": "pexels:26852001",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "ĐÁP ÁN CỦA BẠN?",
+     "at": [
+      8,
+      "đáp"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận",
+     "at": [
+      8,
+      "Bình"
+     ],
+     "sm": true
+    },
+    {
+     "text": "THEO DÕI",
+     "at": [
+      8,
+      "theo"
+     ],
+     "acc": true
+    },
+    {
+     "text": "câu đố sau",
+     "at": [
+      8,
+      "câu"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "description": "Đố vui Phật pháp #1. Kinh Tương Ưng 22.95 (Bọt nước), diễn ý: sắc như đám bọt trên sông Hằng, thọ (cảm xúc) như bong bóng nước khi trời mưa, tưởng như ảo ảnh, hành như thân cây chuối, thức như trò ảo thuật — đều rỗng, không có lõi.\n\nNguồn: SN 22.95, bản dịch Bhikkhu Sujato (CC0): https://suttacentral.net/sn22.95/en/sujato\nLời kinh là diễn ý.",
+ "tags": [
+  "đố vui phật pháp",
+  "kinh bọt nước",
+  "cảm xúc",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "sources": [
+  "https://suttacentral.net/sn22.95/en/sujato"
+ ]
+}

@@ -2,6 +2,10 @@
 
     python motion/stier/peek.py <slug> [số ký tự mở bài] [regex ...]
 """
+import pathlib, sys  # noqa: E401
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[2]))
+from factory.console import utf8_console  # noqa: E402
+utf8_console()  # console Windows cp1252 không in được tiếng Việt (retro 2 mục 7)
 import json
 import re
 import sys

@@ -1,0 +1,245 @@
+{
+  "theme": "ck",
+  "title": "Lạm phát 4,52%: 100 triệu của bạn mất bao nhiêu sức mua?",
+  "description": "CPI bình quân 9 tháng 2026 tăng 4,52% so với cùng kỳ (Cục Thống kê). Nói dễ hiểu: giỏ hàng năm ngoái hết 100 triệu thì năm nay cần khoảng 104,5 triệu; ngược lại 100 triệu để yên chỉ mua được lượng hàng cỡ 95,7 triệu năm ngoái — mất khoảng 4,3 triệu sức mua.\n\nCách tính (ước tính, tính từ dữ liệu CPI): 100 × 1,0452 ≈ 104,5; 100 ÷ 1,0452 ≈ 95,7. Đây là giỏ hàng BÌNH QUÂN cả nước; giỏ hàng nhà bạn có thể khác. 9 tháng 2026: ăn uống +4,72%, nhiên liệu +10,89% so cùng kỳ.\n\nVì sao năm nay ai cũng thấy nghèo đi — video dài trên kênh: \"Năm 2026: chứng khoán, vàng, coin, nhà đất đều đỏ — chỉ sổ tiết kiệm xanh. Vì sao?\"\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo giá. Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.",
+  "tags": [
+    "lạm phát",
+    "lạm phát 2026",
+    "CPI",
+    "chỉ số giá tiêu dùng",
+    "sức mua",
+    "mất giá tiền",
+    "tài chính cá nhân",
+    "biểu đồ biết nói",
+    "giá cả tăng",
+    "1 con số"
+  ],
+  "kicker": "1 CON SỐ",
+  "sub": "LẠM PHÁT 2026",
+  "acc": [
+    "sức",
+    "mua",
+    "ước",
+    "tính",
+    "nghèo"
+  ],
+  "lines": [
+    "Chín tháng đầu năm nay, giá cả bình quân cao hơn cùng kỳ năm ngoái bốn phẩy năm hai phần trăm, theo Cục Thống kê.",
+    "Giỏ hàng năm ngoái hết một trăm triệu, năm nay cần khoảng một trăm lẻ bốn phẩy năm triệu.",
+    "Ngược lại, một trăm triệu để yên chỉ mua được lượng hàng cỡ chín mươi lăm phẩy bảy triệu năm ngoái.",
+    "Bạn mất khoảng bốn phẩy ba triệu sức mua, dù chưa tiêu đồng nào.",
+    "Đây là ước tính theo giỏ hàng bình quân; nhà bạn có thể khác.",
+    "Riêng ăn uống tăng hơn bốn phần trăm, nhiên liệu gần mười một phần trăm.",
+    "Vì sao năm nay ai cũng thấy nghèo đi? Xem video dài trên kênh.",
+    "Còn bạn: năm nay khoản chi nào của bạn tăng nhiều nhất?"
+  ],
+  "scenes": [
+    {
+      "type": "kinetic",
+      "items": [
+        {
+          "text": "+4,52%",
+          "at": 0.0,
+          "acc": true,
+          "size": 230
+        },
+        {
+          "text": "GIÁ CẢ 9 THÁNG 2026",
+          "at": [
+            0,
+            "giá"
+          ]
+        },
+        {
+          "text": "so với cùng kỳ năm ngoái",
+          "sm": true,
+          "at": [
+            0,
+            "cùng"
+          ]
+        },
+        {
+          "text": "CỤC THỐNG KÊ",
+          "sm": true,
+          "at": [
+            0,
+            "cục"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ledger",
+      "at": 1,
+      "title": "CÙNG MỘT GIỎ HÀNG",
+      "rows": [
+        {
+          "k": "NĂM NGOÁI",
+          "v": "100 TR",
+          "at": [
+            1,
+            "ngoái"
+          ]
+        },
+        {
+          "k": "NĂM NAY",
+          "v": "~104,5 TR",
+          "at": [
+            1,
+            "nay"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "at": 2,
+      "kind": "bars",
+      "title": "SỨC MUA CỦA 100 TRIỆU",
+      "unit": "ƯỚC TÍNH · TRIỆU ĐỒNG",
+      "bars": [
+        {
+          "label": "NĂM\nNGOÁI",
+          "v": 100,
+          "text": "100",
+          "c": "ref",
+          "at": [
+            2,
+            "một"
+          ]
+        },
+        {
+          "label": "NĂM NAY\n(ĐỂ YÊN)",
+          "v": 95.7,
+          "text": "~95,7",
+          "c": "#fb923c",
+          "at": [
+            2,
+            "chín"
+          ],
+          "ghost": 100,
+          "gapAt": [
+            3,
+            "mất"
+          ],
+          "gapText": "−4,3"
+        }
+      ],
+      "badge": {
+        "text": "−4,3 TRIỆU SỨC MUA",
+        "at": [
+          3,
+          "sức"
+        ],
+        "c": "down"
+      },
+      "note": "100 ÷ 1,0452 ≈ 95,7 · TÍNH TỪ CPI"
+    },
+    {
+      "type": "kinetic",
+      "at": 4,
+      "items": [
+        {
+          "text": "ƯỚC TÍNH",
+          "acc": true,
+          "at": [
+            4,
+            "ước"
+          ]
+        },
+        {
+          "text": "GIỎ HÀNG BÌNH QUÂN",
+          "at": [
+            4,
+            "giỏ"
+          ]
+        },
+        {
+          "text": "giỏ hàng nhà bạn có thể khác",
+          "sm": true,
+          "at": [
+            4,
+            "nhà"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "at": 5,
+      "kind": "bars",
+      "title": "9 THÁNG 2026 SO CÙNG KỲ",
+      "unit": "% TĂNG GIÁ",
+      "bars": [
+        {
+          "label": "ĂN UỐNG",
+          "v": 4.72,
+          "text": "+4,72%",
+          "c": "#fb923c",
+          "at": [
+            5,
+            "ăn"
+          ]
+        },
+        {
+          "label": "NHIÊN LIỆU",
+          "v": 10.89,
+          "text": "+10,89%",
+          "c": "#fb923c",
+          "at": [
+            5,
+            "nhiên"
+          ]
+        }
+      ],
+      "ref": {
+        "v": 4.52,
+        "label": "CPI CHUNG +4,52%",
+        "at": [
+          5,
+          "riêng"
+        ],
+        "below": true
+      },
+      "note": "NGUỒN: CỤC THỐNG KÊ, 30/09/2026"
+    },
+    {
+      "type": "kinetic",
+      "at": 6,
+      "items": [
+        {
+          "text": "VÌ SAO AI CŨNG",
+          "at": [
+            6,
+            "vì"
+          ]
+        },
+        {
+          "text": "THẤY NGHÈO ĐI?",
+          "acc": true,
+          "at": [
+            6,
+            "thấy"
+          ]
+        },
+        {
+          "text": "VIDEO DÀI TRÊN KÊNH",
+          "sm": true,
+          "at": [
+            6,
+            "video"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "question",
+      "at": 7,
+      "text": "Khoản chi nào của bạn tăng nhiều nhất?"
+    }
+  ],
+  "sources": [
+    "https://www.nso.gov.vn/wp-content/uploads/2026/10/Tong-quan-CPI-chi-so-gia-vang-do-la-My-thang-9-QIII-va-9-thang-nam-2026.pdf",
+    "https://tapchicongthuong.vn/9-thang-nam-2026--cpi-tang-4-52-lam-phat-co-ban-tang-4-26-554941.htm"
+  ]
+}

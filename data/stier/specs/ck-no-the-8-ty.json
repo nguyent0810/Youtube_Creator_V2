@@ -1,0 +1,193 @@
+{
+ "theme": "ck",
+ "kicker": "1 VỤ VIỆC · 1 PHÉP TÍNH",
+ "sub": "NỢ THẺ TÍN DỤNG",
+ "title": "Nợ thẻ 8,5 triệu thành 8,8 tỷ: phép tính ngược cho thấy điều gì",
+ "description": "Tháng 3/2024, báo chí đưa tin một khoản nợ thẻ tín dụng gốc khoảng 8,55 triệu đồng được thông báo thành khoảng 8,83 tỷ sau gần 11 năm. Hai bên chưa thống nhất; kênh không phán ai đúng ai sai. Kênh chỉ tính ngược: để 8,55 triệu thành 8,83 tỷ sau 132 tháng mà không lần trả nào, khoản nợ phải lớn thêm khoảng 5,4% mỗi tháng (≈ gấp 1,88 lần mỗi năm). Đây là phép tính của kênh, không phải số do ngân hàng công bố.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (8 phút): https://youtu.be/xIfNPP1PLl8 (công khai từ 20:00 ngày 21/10)",
+ "tags": [
+  "nợ thẻ tín dụng",
+  "lãi kép",
+  "nợ xấu",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "tám",
+  "nghìn",
+  "năm",
+  "đôi",
+  "im"
+ ],
+ "lines": [
+  "Tám triệu rưỡi, thành tám tỷ tám. Gấp hơn một nghìn lần.",
+  "Tháng 3 năm 2024, báo chí đưa tin về một khoản nợ thẻ tín dụng như vậy, sau gần mười một năm.",
+  "Hai bên chưa thống nhất. Mình không phán ai đúng.",
+  "Mình chỉ tính ngược. Muốn thành tám tỷ tám, khoản nợ phải lớn thêm khoảng năm phẩy bốn phần trăm mỗi tháng.",
+  "Tháng nào cũng vậy, không một lần trả.",
+  "Năm phẩy bốn phần trăm một tháng, cộng dồn, là gần gấp đôi sau mỗi năm.",
+  "Một khoản nhỏ bị bỏ quên, đáng sợ hơn một khoản lớn được trả dần."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "8,5 TRIỆU → 8,8 TỶ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "gấp hơn 1.000 lần",
+     "at": [
+      0,
+      "Gấp"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7247875",
+   "veil": 0.58
+  },
+  {
+   "type": "chart",
+   "at": 1,
+   "kind": "bars",
+   "title": "MỘT KHOẢN NỢ THẺ (TRIỆU ĐỒNG)",
+   "unit": "THEO BÁO CHÍ · 03/2024",
+   "bars": [
+    {
+     "label": "NỢ GỐC",
+     "v": 8.55,
+     "text": "8,55",
+     "c": "ref",
+     "at": [
+      1,
+      null,
+      0,
+      0.1
+     ]
+    },
+    {
+     "label": "SAU ~11 NĂM",
+     "v": 8830,
+     "text": "8.830",
+     "c": "down",
+     "at": [
+      1,
+      "sau"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "HAI BÊN CHƯA THỐNG NHẤT",
+     "at": 2,
+     "sm": true
+    },
+    {
+     "text": "KÊNH KHÔNG PHÁN AI ĐÚNG",
+     "at": [
+      2,
+      "Mình"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:5981446",
+   "ms": 2,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 2
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "from": 5.4,
+   "to": 5.4,
+   "suffix": "%",
+   "label": "MỖI THÁNG · TÍNH NGƯỢC CỦA KÊNH",
+   "sub": {
+    "text": "KHÔNG PHẢI SỐ CỦA NGÂN HÀNG",
+    "at": 4
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "CỘNG DỒN",
+   "cards": [
+    {
+     "k": "MỖI THÁNG",
+     "v": "+5,4%",
+     "at": [
+      5,
+      "Năm"
+     ]
+    },
+    {
+     "k": "MỖI NĂM",
+     "v": "GẦN ×2",
+     "at": [
+      5,
+      "gấp"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Đáng sợ hơn",
+   "nodes": [
+    {
+     "text": "khoản lớn được trả dần",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      6,
+      "đáng"
+     ],
+     "shape": "none",
+     "w": 720
+    },
+    {
+     "text": "khoản nhỏ bị bỏ quên",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "Một"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 680
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://znews.vn/no-the-tin-dung-8-5-trieu-sau-11-nam-len-8-8-ty-tinh-lai-the-nao-post1465068.html",
+  "https://thitruongtaichinhtiente.vn/vu-no-8-5-trieu-bi-tinh-lai-hon-8-8-ty-nhung-dieu-can-biet-khi-dung-the-tin-dung-57760.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

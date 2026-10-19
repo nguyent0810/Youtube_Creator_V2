@@ -1,0 +1,113 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "kinh-giai",
+ "hook_type": "noi-dau",
+ "open_shot": "dem-khuya",
+ "voice": "Quang Sơn",
+ "music": "clean_soul.mp3",
+ "gap": 0.15,
+ "title": "Pháp Cú 3–4: đêm nằm tua lại câu nói làm mình đau",
+ "kicker": "KINH PHÁP CÚ · KỆ 3–4",
+ "sub": "DIỄN Ý",
+ "acc": [
+  "buông",
+  "đau"
+ ],
+ "lines": [
+  "Nằm xuống rồi, câu nói hồi chiều vẫn phát lại trong đầu?",
+  "Tua lại cả chục lần. Lần nào cũng đau.",
+  "Kinh Pháp Cú, kệ ba và bốn, diễn ý: ai ôm mãi ý nghĩ, họ đã mắng tôi, hại tôi, thì oán không nguôi. Ai buông được, lòng sẽ lắng.",
+  "Buông không phải là cho họ đúng. Là cho mình được ngủ.",
+  "Tối nay bạn muốn buông câu nói nào?"
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "items": [
+    {
+     "text": "VẪN NGHĨ VỀ NÓ?",
+     "at": 0.0,
+     "acc": true,
+     "fx": "hold"
+    },
+    {
+     "text": "câu nói hồi chiều",
+     "at": [
+      0,
+      "câu"
+     ],
+     "sm": true,
+     "fx": "blur"
+    }
+   ],
+   "clip": "pexels:7279741"
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 10,
+   "suffix": " LẦN TUA LẠI",
+   "label": "LẦN NÀO CŨNG ĐAU",
+   "until": [
+    1,
+    "đau."
+   ]
+  },
+  {
+   "type": "source",
+   "at": 2,
+   "source": "KINH PHÁP CÚ · KỆ 3–4",
+   "ref": "Dhammapada 3–4",
+   "snippet": "Ôm mãi “họ đã mắng tôi”, oán không nguôi. [[Buông được, lòng sẽ lắng]]."
+  },
+  {
+   "type": "quote",
+   "at": 3,
+   "line": 3,
+   "mode": "karaoke"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "BUÔNG CÂU NÀO?",
+     "at": [
+      4,
+      "Tối"
+     ],
+     "acc": true,
+     "fx": "rise"
+    },
+    {
+     "text": "tối nay, câu nào?",
+     "at": [
+      4,
+      "câu"
+     ],
+     "sm": true,
+     "fx": "blur"
+    }
+   ],
+   "clip": "pexels:6940831"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp1-20/en/sujato"
+ ],
+ "description": "Pháp Cú 3–4: đêm nằm tua lại câu nói làm mình đau\n\nNguồn: https://suttacentral.net/dhp1-20/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "overthinking"
+ ],
+ "v2": true,
+ "loop": true
+}

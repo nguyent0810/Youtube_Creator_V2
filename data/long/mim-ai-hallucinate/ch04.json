@@ -1,0 +1,249 @@
+{
+ "title": "Hỏi đúng câu, nhầm người",
+ "lines": [
+  {
+   "t": "\"Varghese có thật không?\" là một câu hỏi rất đúng.",
+   "p": 0.8
+  },
+  "Chỉ có điều, anh hỏi nhầm người.",
+  "Anh hỏi lại chính cỗ máy vừa bịa ra vụ án.",
+  {
+   "t": "Và cỗ máy làm đúng việc nó vẫn làm: viết ra câu trả lời nghe hợp lý nhất. Câu nghe hợp lý nhất ở đó là: có.",
+   "p": 1.0
+  },
+  "Tại phiên điều trần ngày 8 tháng 6 năm 2023, luật sư Steven Schwartz, người viết bản lập luận, kể lại anh đã tưởng ChatGPT là gì.",
+  {
+   "t": "Tôi đã lầm tưởng nó giống như một siêu công cụ tìm kiếm.",
+   "q": 1,
+   "tr": 1
+  },
+  {
+   "t": "Tôi chưa bao giờ nghĩ vụ án ấy có thể là bịa.",
+   "q": 1,
+   "tr": 1
+  },
+  {
+   "t": "Nhưng toà cũng ghi lại: anh đã tự tra toàn văn vụ Varghese, không tìm thấy, mà vẫn im lặng nộp lên toà.",
+   "p": 1.0
+  },
+  "Thẩm phán Castel không phạt họ vì đã dùng AI.",
+  "Ông viết rằng chẳng có gì sai trái khi dùng một công cụ AI đáng tin cậy để hỗ trợ.",
+  "Ông phạt vì các luật sư đã bỏ vai trò người gác cổng, bảo đảm điều mình nộp lên toà là chính xác.",
+  {
+   "t": "Và vì họ tiếp tục bảo vệ những phán quyết giả, ngay cả khi toà đã ra lệnh đặt nghi vấn.",
+   "p": 1.0
+  },
+  "Bài học ở đây không phải là đừng dùng AI.",
+  "Mà là: câu \"có thật không\" phải đem hỏi một nguồn khác, chứ không phải cỗ máy vừa trả lời bạn.",
+  "Cuối video, bạn sẽ biết hình phạt mà mình thấy đáng nhớ nhất của vụ này.",
+  "Nhưng trước đó: máy bịa thường tới mức nào? Có ai đã thật sự đếm?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "CHƯƠNG BỐN",
+   "title": "HỎI ĐÚNG CÂU,\nNHẦM NGƯỜI",
+   "sub": "MATA v. AVIANCA · 2023",
+   "bg": "sdny",
+   "illus": "TOÀ MOYNIHAN, MANHATTAN · ẢNH 2019",
+   "titleAt": [
+    0,
+    "là"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "“VARGHESE CÓ THẬT KHÔNG?”",
+     "at": 1
+    },
+    {
+     "text": "HỎI NHẦM NGƯỜI",
+     "at": [
+      1,
+      "hỏi"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "chat",
+   "at": 2,
+   "head": "PHỤ LỤC B · ECF 54 · DỰNG LẠI BẰNG CHỮ",
+   "tag": {
+    "text": "TRÍCH HỒ SƠ TOÀ"
+   },
+   "msgs": [
+    {
+     "who": "u",
+     "text": "Is varghese a real case",
+     "at": 2
+    },
+    {
+     "who": "m",
+     "text": "Yes, … is a real case.",
+     "at": [
+      3,
+      "câu",
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 4,
+   "day": "PHIÊN ĐIỀU TRẦN · LUẬT SƯ STEVEN SCHWARTZ",
+   "date": "08.06.2023"
+  },
+  {
+   "type": "quote",
+   "at": 5,
+   "text": "…I falsely assumed was like a super search engine…",
+   "by": "S. SCHWARTZ · PHIÊN ĐIỀU TRẦN 08.06.2023 · ECF 54 ¶37",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 5
+  },
+  {
+   "type": "quote",
+   "at": 6,
+   "text": "My reaction was, ChatGPT is finding that case somewhere… I just never thought it could be made up.",
+   "by": "S. SCHWARTZ · ECF 54 ¶11 · “IT” = VỤ ÁN",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 6
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "NHƯNG TOÀ GHI LẠI",
+     "at": 7,
+     "sm": true
+    },
+    {
+     "text": "ĐÃ TỰ TRA · KHÔNG THẤY",
+     "at": [
+      7,
+      "anh"
+     ]
+    },
+    {
+     "text": "VẪN IM LẶNG NỘP",
+     "at": [
+      7,
+      "mà"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 8,
+   "vid": "6101367",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "KHÔNG PHẠT VÌ DÙNG AI",
+     "at": 8,
+     "acc": true
+    },
+    {
+     "text": "“nothing inherently improper” · dùng công cụ AI đáng tin cậy để hỗ trợ",
+     "at": 9,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "PHẠT VÌ BỎ VAI TRÒ",
+     "at": 10,
+     "sm": true
+    },
+    {
+     "text": "NGƯỜI GÁC CỔNG",
+     "at": [
+      10,
+      "người"
+     ],
+     "acc": true
+    },
+    {
+     "text": "và vẫn bảo vệ phán quyết giả sau khi toà đặt nghi vấn",
+     "at": 11,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "BÀI HỌC KHÔNG PHẢI",
+     "at": 12,
+     "sm": true
+    },
+    {
+     "text": "ĐỪNG DÙNG AI",
+     "at": [
+      12,
+      "đừng"
+     ],
+     "fx": "strike",
+     "strikeAt": [
+      12,
+      "dùng"
+     ]
+    },
+    {
+     "text": "HỎI “CÓ THẬT KHÔNG” Ở MỘT NGUỒN KHÁC",
+     "at": 13,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "CUỐI VIDEO",
+     "at": 14,
+     "sm": true
+    },
+    {
+     "text": "HÌNH PHẠT ĐÁNG NHỚ NHẤT",
+     "at": [
+      14,
+      "hình"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 15,
+   "text": "Máy bịa thường tới mức nào?\nCó ai đã thật sự đếm?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "HỎI ĐÚNG CÂU, NHẦM NGƯỜI"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

@@ -1,0 +1,297 @@
+{
+ "title": "Nghịch lý cây ATM",
+ "lines": [
+  {
+   "t": "Giờ là một cỗ máy mà chắc chắn bạn đã dùng: máy rút tiền tự động, ATM.",
+   "p": 0.8
+  },
+  "ATM có mặt ở Mỹ từ thập niên bảy mươi.",
+  "Đến năm 2015, riêng nước Mỹ có hơn bốn trăm nghìn máy.",
+  "Bạn sẽ đoán: nghề giao dịch viên ngân hàng tiêu rồi.",
+  {
+   "t": "Nhưng theo James Bessen, trong lúc ATM lan rộng, số giao dịch viên không hề giảm.",
+   "p": 1.0
+  },
+  "Vì sao?",
+  "Ở một chi nhánh đô thị trung bình, số giao dịch viên cần có giảm từ hai mươi người xuống mười ba người, trong giai đoạn 1988 tới 2004.",
+  "Chi nhánh rẻ hơn, nên ngân hàng mở thêm. Ở đô thị, số chi nhánh tăng bốn mươi ba phần trăm.",
+  {
+   "t": "Máy lấy đi một việc vặt, là đếm tiền. Còn giao dịch viên chuyển sang tư vấn, giới thiệu dịch vụ.",
+   "p": 1.0
+  },
+  "Nhưng câu chuyện ATM có một đoạn kết thứ hai.",
+  "Theo Cục Thống kê Lao động Mỹ, năm 2014, nước này có khoảng năm trăm hai mươi nghìn giao dịch viên.",
+  "Năm 2025, còn khoảng ba trăm ba mươi chín nghìn. Mất hơn một phần ba.",
+  {
+   "t": "Cơ quan này dự báo từ năm 2025 tới năm 2035, con số ấy còn giảm thêm mười ba phần trăm, vì người ta gửi séc bằng điện thoại, ít ai còn ra quầy, và máy ATM đời mới làm được nhiều việc hơn.",
+   "p": 1.0
+  },
+  "Đặt hai thứ cạnh nhau: một cây ATM, và một chiếc điện thoại.",
+  "Cái thứ nhất chỉ làm thay một thao tác.",
+  "Cái thứ hai thay đổi cách chính khách hàng cư xử.",
+  "Vậy còn những \"máy tính\" bằng xương bằng thịt ở đầu video, họ đã đi đâu?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "CHƯƠNG BỐN",
+   "title": "NGHỊCH LÝ\nCÂY ATM",
+   "sub": "THẬP NIÊN 70 — 2035",
+   "vid": "3876885",
+   "titleAt": [
+    0,
+    "Giờ"
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 1,
+   "vid": "5849599",
+   "veil": 0.45,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "ATM Ở MỸ",
+     "at": 1
+    },
+    {
+     "text": "TỪ THẬP NIÊN 70",
+     "at": [
+      1,
+      "thập"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "vid": "3876885",
+   "ms": 6,
+   "illus": "VIDEO MINH HỌA",
+   "from": 0,
+   "to": 400000,
+   "prefix": "> ",
+   "label": "MÁY ATM Ở MỸ · 2015"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "BẠN SẼ ĐOÁN",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "GIAO DỊCH VIÊN… TIÊU RỒI?",
+     "at": [
+      3,
+      "giao"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "THEO JAMES BESSEN",
+     "at": 4,
+     "sm": true
+    },
+    {
+     "text": "TRONG LÚC ATM LAN RỘNG",
+     "at": [
+      4,
+      "trong"
+     ]
+    },
+    {
+     "text": "GIAO DỊCH VIÊN: KHÔNG HỀ GIẢM",
+     "at": [
+      4,
+      "không"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 5,
+   "text": "Vì sao?"
+  },
+  {
+   "type": "bars",
+   "at": 6,
+   "title": "GIAO DỊCH VIÊN CẦN CHO MỘT CHI NHÁNH ĐÔ THỊ",
+   "items": [
+    {
+     "k": "1988",
+     "v": 20,
+     "lbl": "20",
+     "at": [
+      6,
+      "hai"
+     ]
+    },
+    {
+     "k": "2004",
+     "v": 13,
+     "lbl": "13",
+     "at": [
+      6,
+      "mười"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "from": 0,
+   "to": 43,
+   "prefix": "+",
+   "suffix": "%",
+   "label": "SỐ CHI NHÁNH NGÂN HÀNG Ở ĐÔ THỊ",
+   "sub": {
+    "text": "CHI NHÁNH RẺ HƠN → MỞ THÊM",
+    "at": 7
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "vid": "5849599",
+   "ms": 4,
+   "illus": "VIDEO MINH HỌA",
+   "items": [
+    {
+     "text": "MÁY: ĐẾM TIỀN",
+     "at": 8
+    },
+    {
+     "text": "NGƯỜI: TƯ VẤN · GIỚI THIỆU DỊCH VỤ",
+     "at": [
+      8,
+      "Còn"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 9,
+   "text": "ĐOẠN KẾT\nTHỨ HAI"
+  },
+  {
+   "type": "bars",
+   "at": 10,
+   "title": "GIAO DỊCH VIÊN NGÂN HÀNG Ở MỸ · BLS",
+   "items": [
+    {
+     "k": "2014",
+     "v": 520.5,
+     "lbl": "520,5 NGHÌN",
+     "at": [
+      10,
+      "năm",
+      1
+     ]
+    },
+    {
+     "k": "2025",
+     "v": 339.2,
+     "lbl": "339,2 NGHÌN",
+     "at": 11,
+     "acc": true
+    }
+   ],
+   "stamp": {
+    "text": "−34,8%",
+    "at": [
+     11,
+     "Mất"
+    ],
+    "x": 760,
+    "y": 430,
+    "rot": -8
+   }
+  },
+  {
+   "type": "broll",
+   "at": 12,
+   "vid": "3876885",
+   "ms": 14,
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "DỰ BÁO CỦA BLS · 2025 → 2035",
+     "at": 12,
+     "sm": true
+    },
+    {
+     "text": "−13% NỮA",
+     "at": [
+      12,
+      "mười"
+     ],
+     "acc": true
+    },
+    {
+     "text": "séc gửi qua điện thoại · ít ai ra quầy · ATM đời mới",
+     "at": [
+      12,
+      "gửi"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 13,
+   "vid": "7535106",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MỘT CÂY ATM · MỘT CHIẾC ĐIỆN THOẠI",
+     "at": 13,
+     "sm": true
+    },
+    {
+     "text": "ATM: THAY MỘT THAO TÁC",
+     "at": 14
+    },
+    {
+     "text": "ĐIỆN THOẠI: ĐỔI CÁCH KHÁCH HÀNG CƯ XỬ",
+     "at": 15,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 16,
+   "bg": "x4",
+   "text": "Còn những “máy tính”\nbằng xương bằng thịt?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "NGHỊCH LÝ CÂY ATM"
+ },
+ "bgm": {
+  "mood": "upbeat",
+  "gain": 0.11
+ }
+}

@@ -1,0 +1,262 @@
+{
+ "title": "Cỗ máy học được trái và phải",
+ "lines": [
+  {
+   "t": "Mùa hè năm 1958, Văn phòng Nghiên cứu Hải quân Mỹ mời phóng viên tới xem một cỗ máy.",
+   "p": 1.0
+  },
+  "Đó là một chiếc máy tính IBM 704, nặng khoảng năm tấn, to bằng cả một căn phòng.",
+  "Người ta cho nó ăn những tấm thẻ đục lỗ.",
+  "Có tấm đánh dấu bên trái. Có tấm đánh dấu bên phải.",
+  "Không ai dạy nó luật nào cả.",
+  {
+   "t": "Sau năm mươi lần thử, nó tự phân biệt được trái và phải.",
+   "p": 1.0
+  },
+  "Người tạo ra nó là Frank Rosenblatt, một nhà tâm lý học trẻ ở phòng thí nghiệm hàng không Cornell.",
+  "Ông gọi nó là perceptron, cỗ máy đầu tiên có thể có một ý tưởng độc đáo.",
+  "Tạp chí New Yorker viết:",
+  {
+   "t": "Đối thủ nghiêm túc đầu tiên của bộ não con người từng được tạo ra.",
+   "q": 1
+  },
+  {
+   "t": "Chỉ mười một năm sau, ý tưởng ấy bị coi là ngõ cụt.",
+   "p": 1.0
+  },
+  "Còn người tạo ra nó thì không sống để thấy nó quay lại.",
+  "Nhưng nó đã quay lại.",
+  {
+   "t": "Và ngay lúc này, nó đang nằm trong chiếc điện thoại của bạn.",
+   "p": 1.0
+  },
+  "Đây là câu chuyện bảy mươi năm của trí tuệ nhân tạo.",
+  "Một ngành mà người ta từng nghĩ: một mùa hè là đủ để tạo bước tiến lớn.",
+  "Trong video này, mình sẽ cùng bạn trả lời ba câu hỏi.",
+  "Ai đã đặt cái tên trí tuệ nhân tạo, và họ nghĩ mất bao lâu?",
+  "Vì sao AI đã chết, không phải một, mà hai lần?",
+  "Và thứ gì đã hồi sinh nó, để hôm nay ChatGPT trả lời bạn như một con người?"
+ ],
+ "scenes": [
+  {
+   "type": "date",
+   "bg": "perceptron",
+   "day": "VĂN PHÒNG NGHIÊN CỨU HẢI QUÂN MỸ",
+   "date": "07.1958",
+   "illus": "ẢNH: MARK I PERCEPTRON · BẢN PHẦN CỨNG RA ĐỜI SAU"
+  },
+  {
+   "type": "print",
+   "at": 1,
+   "img": "ibm704",
+   "tone": "bw",
+   "illus": "ẢNH MINH HỌA · MÁY CÙNG LOẠI (NASA, 1957)",
+   "side": {
+    "k": "IBM 704",
+    "h": "≈ 5 TẤN\nTO BẰNG CĂN PHÒNG",
+    "lines": [
+     {
+      "text": "Nuôi bằng *thẻ đục lỗ*",
+      "at": [
+       1,
+       "phòng."
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "punch",
+   "at": 2,
+   "trials": 50,
+   "startAt": [
+    2,
+    "thẻ"
+   ],
+   "until": [
+    5,
+    "phân"
+   ],
+   "label": {
+    "k": "THÍ NGHIỆM 1958",
+    "v": "KHÔNG AI DẠY LUẬT",
+    "at": [
+     4,
+     "luật"
+    ]
+   }
+  },
+  {
+   "type": "print",
+   "at": 6,
+   "img": "percdiagram",
+   "tone": "color",
+   "side": {
+    "k": "FRANK ROSENBLATT",
+    "h": "Nhà tâm lý học\nCornell",
+    "hAt": [
+     6,
+     "Rosenblatt,"
+    ],
+    "lines": [
+     {
+      "text": "Hình vẽ của ông · *1958*",
+      "at": [
+       6,
+       "Cornell."
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "PERCEPTRON",
+     "at": [
+      7,
+      "perceptron,"
+     ],
+     "acc": true
+    },
+    {
+     "text": "một ý tưởng độc đáo?",
+     "at": [
+      7,
+      "độc"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 8,
+   "text": "the first serious rival to the human brain ever devised",
+   "by": "THE NEW YORKER · 1958 · QUA CORNELL CHRONICLE",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 9,
+   "typeAt": [
+    9,
+    "Đối"
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 10,
+   "text": "NGÕ CỤT",
+   "sub": "CHỈ MƯỜI MỘT NĂM SAU"
+  },
+  {
+   "type": "photo",
+   "at": 11,
+   "img": "perceptron",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.5,
+   "kin": [
+    {
+     "text": "NÓ ĐÃ QUAY LẠI",
+     "at": [
+      12,
+      "quay"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "MARK I PERCEPTRON",
+    "v": "ẢNH HẢI QUÂN MỸ",
+    "at": [
+     11,
+     "người"
+    ]
+   }
+  },
+  {
+   "type": "broll",
+   "at": 13,
+   "vid": "6963823",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "TRONG ĐIỆN THOẠI CỦA BẠN",
+     "at": [
+      13,
+      "điện"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "brand",
+   "at": 14,
+   "sub": "70 NĂM TRÍ TUỆ NHÂN TẠO"
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "MỘT MÙA HÈ",
+     "at": [
+      15,
+      "mùa"
+     ],
+     "acc": true
+    },
+    {
+     "text": "là đủ để tạo bước tiến lớn?",
+     "at": [
+      15,
+      "đủ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 16,
+   "title": "BA CÂU HỎI",
+   "rows": [
+    {
+     "k": "01",
+     "v": "AI ĐẶT TÊN — NGHĨ MẤT BAO LÂU?",
+     "at": [
+      17,
+      "đặt"
+     ]
+    },
+    {
+     "k": "02",
+     "v": "VÌ SAO AI CHẾT HAI LẦN?",
+     "at": [
+      18,
+      "chết,"
+     ]
+    },
+    {
+     "k": "03",
+     "v": "THỨ GÌ ĐÃ HỒI SINH NÓ?",
+     "at": [
+      19,
+      "hồi"
+     ]
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "CỖ MÁY HỌC ĐƯỢC TRÁI VÀ PHẢI"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.12
+ }
+}

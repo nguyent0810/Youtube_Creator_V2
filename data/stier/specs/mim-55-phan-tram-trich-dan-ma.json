@@ -1,0 +1,184 @@
+{
+ "theme": "mim",
+ "title": "55% tài liệu tham khảo là bịa: người ta đã ngồi dò từng trích dẫn AI viết ra",
+ "description": "Năm 2023, hai nhà nghiên cứu ở Mỹ (William Walters và Esther Wilder) nhờ ChatGPT viết 84 bài tổng quan ngắn, rồi dò từng tài liệu tham khảo trong đó: tổng cộng 636 tài liệu. Với GPT-3.5, 55% là bịa: những bài báo không hề tồn tại. Với GPT-4, con số giảm còn 18%. Đó là các mô hình của năm 2023; mô hình về sau khá hơn nhưng chưa hết bịa, và không có một tỉ lệ chung cho mọi AI, mọi câu hỏi (Scientific Reports, 2023). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/H9nlRjxfmPw (công khai từ 20:00 ngày 02/11).",
+ "tags": [
+  "trích dẫn giả",
+  "gpt-4",
+  "ai bịa",
+  "ảo giác ai",
+  "chatgpt",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "NGHIÊN CỨU · 2023",
+ "acc": [
+  "năm",
+  "sáu",
+  "mười",
+  "hết",
+  "dò"
+ ],
+ "kicker": "AI QUANH TA",
+ "lines": [
+  "Năm mươi lăm phần trăm tài liệu tham khảo, là bịa.",
+  "Năm 2023, hai nhà nghiên cứu nhờ ChatGPT viết tám mươi tư bài tổng quan ngắn.",
+  "Rồi họ ngồi dò từng tài liệu tham khảo trong đó. Tổng cộng sáu trăm ba mươi sáu tài liệu.",
+  "Với mô hình đời trước, hơn một nửa là những bài báo không hề tồn tại.",
+  "Với mô hình đời sau, con số ấy giảm còn mười tám phần trăm.",
+  "Khá hơn nhiều. Nhưng chưa hết.",
+  "Một trích dẫn trông rất thật, vẫn phải có người tự tay dò lại."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "55% LÀ BỊA",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "tài liệu tham khảo do máy viết ra",
+     "at": [
+      0,
+      "tài"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:11384843",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NĂM 2023",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "84 BÀI TỔNG QUAN",
+     "at": [
+      1,
+      "tám"
+     ],
+     "acc": true
+    },
+    {
+     "text": "nhờ máy viết, rồi dò lại",
+     "at": [
+      2,
+      "Rồi"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8567113",
+   "ms": 4,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 636,
+   "suffix": " TÀI LIỆU",
+   "label": "ĐƯỢC DÒ TỪNG CÁI MỘT",
+   "until": [
+    2,
+    "mươi"
+   ],
+   "sub": {
+    "text": "WALTERS & WILDER · 2023",
+    "at": [
+     2,
+     "liệu."
+    ]
+   }
+  },
+  {
+   "type": "chart",
+   "at": 3,
+   "kind": "bars",
+   "title": "TÀI LIỆU THAM KHẢO BỊA (%)",
+   "unit": "HAI ĐỜI MÔ HÌNH · NĂM 2023",
+   "min": 0,
+   "bars": [
+    {
+     "label": "ĐỜI TRƯỚC\nGPT-3.5",
+     "v": 55,
+     "text": "55",
+     "c": "ref",
+     "at": [
+      3,
+      "hơn"
+     ]
+    },
+    {
+     "label": "ĐỜI SAU\nGPT-4",
+     "v": 18,
+     "text": "18",
+     "c": "dim",
+     "at": [
+      4,
+      "mười"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Khá hơn nhiều",
+   "nodes": [
+    {
+     "text": "nhưng chưa hết",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      5,
+      "Nhưng"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "vẫn phải tự tay dò lại",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "vẫn"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 720
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC10484980/"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "chatgpt": "chát gi pi ti"
+ },
+ "imgs": {}
+}

@@ -1,0 +1,255 @@
+{
+ "theme": "bud",
+ "format": "ba-dieu",
+ "hook_type": "con-so",
+ "open_shot": "tien-bac",
+ "voice": "Ngọc Trân",
+ "music": "arcadia.mp3",
+ "gap": 0.15,
+ "title": "4 niềm vui của người có tiền (Kinh Tăng Chi 4.62)",
+ "kicker": "BỐN ĐIỀU",
+ "sub": "TĂNG CHI 4.62",
+ "acc": [
+  "vui",
+  "tiền",
+  "nợ",
+  "lỗi"
+ ],
+ "lines": [
+  "Đức Phật không chê tiền.",
+  "Ngài nói có bốn niềm vui khi có tiền đúng cách.",
+  "Một: vui vì có. Tiền do chính sức mình làm ra, chân chính, không lừa ai.",
+  "Hai: vui vì dùng. Lo cho mình, cho cha mẹ, vợ con, bạn bè, và làm việc tốt.",
+  "Ba: vui vì không nợ ai, dù ít hay nhiều.",
+  "Nhưng Ngài nói: ba niềm vui đó, không bằng một phần mười sáu niềm vui thứ tư.",
+  "Bốn: vui vì không có lỗi. Thân, lời, ý trong sạch, không ai chê trách được.",
+  "Niềm vui số mấy chạm bạn nhất? Bình luận con số, và lưu lại để làm dần."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "clip": "pexels:34993441",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "ĐỨC PHẬT",
+     "at": 0.0,
+     "acc": true,
+     "size": 160
+    },
+    {
+     "text": "KHÔNG CHÊ TIỀN",
+     "at": [
+      0,
+      "không"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "clip": "pexels:8369982",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "BỐN NIỀM VUI",
+     "at": [
+      1,
+      "bốn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "khi có tiền đúng cách",
+     "at": [
+      1,
+      "khi"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "clip": "pexels:6790429",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "MỘT",
+     "at": [
+      2,
+      "Một"
+     ],
+     "acc": true,
+     "size": 170
+    },
+    {
+     "text": "VUI VÌ CÓ",
+     "at": [
+      2,
+      "vui"
+     ]
+    },
+    {
+     "text": "tự sức mình · chân chính",
+     "at": [
+      2,
+      "sức"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "clip": "pexels:7185680",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "HAI",
+     "at": [
+      3,
+      "Hai"
+     ],
+     "acc": true,
+     "size": 170
+    },
+    {
+     "text": "VUI VÌ DÙNG",
+     "at": [
+      3,
+      "vui"
+     ]
+    },
+    {
+     "text": "cho người thân · việc tốt",
+     "at": [
+      3,
+      "cha"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "clip": "pexels:8061760",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "BA",
+     "at": [
+      4,
+      "Ba"
+     ],
+     "acc": true,
+     "size": 170
+    },
+    {
+     "text": "KHÔNG NỢ AI",
+     "at": [
+      4,
+      "không"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "clip": "pexels:3943961",
+   "veil": 0.6,
+   "items": [
+    {
+     "text": "BA NIỀM VUI ĐÓ",
+     "at": [
+      5,
+      "ba"
+     ]
+    },
+    {
+     "text": "KHÔNG BẰNG 1/16",
+     "at": [
+      5,
+      "không"
+     ],
+     "acc": true
+    },
+    {
+     "text": "niềm vui thứ tư",
+     "at": [
+      5,
+      "thứ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "KHÔNG LỖI",
+   "clip": "pexels:30747286",
+   "veil": 0.6,
+   "fx": "zoom",
+   "sub": "BỐN · THÂN · LỜI · Ý TRONG SẠCH"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "clip": "pexels:20736942",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "SỐ MẤY?",
+     "at": [
+      7,
+      "số"
+     ],
+     "acc": true,
+     "size": 150
+    },
+    {
+     "text": "bình luận con số",
+     "at": [
+      7,
+      "Bình"
+     ],
+     "sm": true
+    },
+    {
+     "text": "LƯU LẠI",
+     "at": [
+      7,
+      "lưu"
+     ],
+     "acc": true
+    },
+    {
+     "text": "để làm dần",
+     "at": [
+      7,
+      "làm"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "description": "Kinh Tăng Chi 4.62 (Không nợ), diễn ý: người tại gia có bốn niềm vui — vui vì có tài sản làm ra chân chính bằng sức mình; vui vì dùng tài sản để hưởng và làm phước; vui vì không nợ ai; và vui vì không có lỗi nơi thân, lời, ý. Ba niềm vui đầu không bằng một phần mười sáu niềm vui không lỗi.\n\nNguồn: AN 4.62, bản dịch Bhikkhu Sujato (CC0): https://suttacentral.net/an4.62/en/sujato\nLời kinh là diễn ý; phần bình giải là của kênh.",
+ "tags": [
+  "lời phật dạy",
+  "tiền bạc",
+  "hạnh phúc",
+  "phật pháp",
+  "sống tỉnh thức"
+ ],
+ "sources": [
+  "https://suttacentral.net/an4.62/en/sujato"
+ ]
+}

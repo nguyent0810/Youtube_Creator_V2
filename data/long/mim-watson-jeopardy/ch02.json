@@ -1,0 +1,144 @@
+{
+ "title": "Một trò chơi khó cho máy",
+ "lines": [
+  {
+   "t": "Chương trình đố vui ấy tên là Jeopardy, ra đời từ năm một nghìn chín trăm sáu mươi tư.",
+   "p": 0.8
+  },
+  "Nó có một luật chơi rất lạ.",
+  {
+   "t": "Người dẫn đọc ra câu trả lời. Người chơi phải đáp lại bằng một câu hỏi.",
+   "p": 1.0
+  },
+  "Ví dụ, gợi ý là: thủ đô của nước Pháp.",
+  "Người chơi bấm chuông và nói: Paris là gì?",
+  {
+   "t": "Nhưng gợi ý thật thì hiếm khi đơn giản như vậy.",
+   "p": 1.0
+  },
+  "Chúng đầy chơi chữ, nói lái, gợi ý vòng vo.",
+  "Tên chủ đề có thể là một câu đùa.",
+  {
+   "t": "Một gợi ý có thể ghép hai ý chẳng liên quan gì tới nhau.",
+   "p": 1.0
+  },
+  "Và còn một thử thách nữa: tốc độ.",
+  "Biết đáp án chưa đủ. Phải bấm chuông nhanh hơn hai người kia.",
+  {
+   "t": "Mà phải chắc, vì trả lời sai bị trừ tiền.",
+   "p": 1.0
+  },
+  "Với một con người, đó là trò chơi của kiến thức và phản xạ.",
+  "Với một cỗ máy năm hai nghìn không trăm lẻ bảy, nó gần như là không thể."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG 02",
+   "title": "MỘT TRÒ CHƠI\nKHÓ CHO MÁY",
+   "sub": "JEOPARDY! · TỪ 1964",
+   "vid": "33684363",
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH CHƯƠNG TRÌNH",
+   "titleAt": [
+    0,
+    "Chương"
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 1,
+   "mythLab": "THÔNG THƯỜNG",
+   "myth": "HỎI → TRẢ LỜI",
+   "truthLab": "JEOPARDY",
+   "truth": "GỢI Ý → ĐÁP BẰNG CÂU HỎI",
+   "strikeAt": [
+    2,
+    "Người"
+   ],
+   "truthAt": [
+    2,
+    "phải"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "VÍ DỤ",
+   "rows": [
+    {
+     "k": "GỢI Ý",
+     "v": "THỦ ĐÔ CỦA NƯỚC PHÁP",
+     "at": 3
+    },
+    {
+     "k": "NGƯỜI CHƠI",
+     "v": "“PARIS LÀ GÌ?”",
+     "at": 4
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "GỢI Ý THẬT THÌ",
+   "rows": [
+    {
+     "k": "1",
+     "v": "CHƠI CHỮ · NÓI LÁI",
+     "at": 6
+    },
+    {
+     "k": "2",
+     "v": "TÊN CHỦ ĐỀ LÀ CÂU ĐÙA",
+     "at": 7
+    },
+    {
+     "k": "3",
+     "v": "GHÉP HAI Ý KHÔNG LIÊN QUAN",
+     "at": 8
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 9,
+   "title": "VÀ CÒN TỐC ĐỘ",
+   "rows": [
+    {
+     "k": "BIẾT",
+     "v": "CHƯA ĐỦ",
+     "at": 10
+    },
+    {
+     "k": "BẤM CHUÔNG",
+     "v": "NHANH HƠN HAI NGƯỜI",
+     "at": [
+      10,
+      "Phải"
+     ]
+    }
+   ],
+   "total": {
+    "k": "TRẢ LỜI SAI",
+    "v": "BỊ TRỪ TIỀN",
+    "at": 11
+   }
+  },
+  {
+   "type": "slam",
+   "at": 12,
+   "text": "GẦN NHƯ KHÔNG THỂ",
+   "sub": "VỚI MỘT CỖ MÁY NĂM 2007",
+   "subAt": 13
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "MỘT TRÒ CHƠI KHÓ CHO MÁY"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

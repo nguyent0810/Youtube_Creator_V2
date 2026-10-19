@@ -1,0 +1,239 @@
+{
+ "title": "Khoản không ai gửi hoá đơn",
+ "lines": [
+  {
+   "t": "Khoản lớn nhất của việc có xe, thường không phải xăng, cũng không phải gửi xe.",
+   "p": 0.8
+  },
+  {
+   "t": "Mà là mất giá.",
+   "p": 1.0
+  },
+  "Không ai gửi cho bạn hoá đơn mất giá mỗi tháng.",
+  "Bạn chỉ thấy nó một lần, vào ngày bán xe.",
+  "Giá xe cũ phụ thuộc vào rất nhiều thứ: dòng xe, tình trạng, thị trường lúc bán.",
+  {
+   "t": "Nên ở đây mình chỉ dùng một ví dụ giả định.",
+   "p": 1.0
+  },
+  "Giả sử sau năm năm, chiếc xe bảy trăm triệu bán lại được khoảng năm mươi lăm phần trăm giá ban đầu.",
+  "Tức là ba trăm tám mươi lăm triệu.",
+  "Phần mất đi là ba trăm mười lăm triệu.",
+  "Chia cho sáu mươi tháng, khoảng năm triệu hai mỗi tháng.",
+  {
+   "t": "Thử nghĩ theo cách khác: nếu có người thuê chiếc xe của bạn với giá ấy mỗi tháng, tiền thuê chỉ vừa đủ bù phần xe mất giá.",
+   "p": 1.0
+  },
+  "Giờ hãy nhìn đồng hồ.",
+  "Tiền nuôi xe, khoảng bốn triệu bảy. Tiền mất giá, khoảng năm triệu hai.",
+  {
+   "t": "Mỗi tháng, chiếc xe tiêu của bạn gần mười triệu đồng.",
+   "p": 1.0
+  },
+  "Và đó là khi bạn trả thẳng, bằng tiền có sẵn.",
+  "Cộng cả một trăm triệu lúc lăn bánh, trong năm năm, người trả thẳng chi ròng khoảng sáu trăm tám mươi chín triệu.",
+  "Tức là khoảng mười một triệu rưỡi mỗi tháng.",
+  "Gần gấp ba lần bốn triệu tiền xe công nghệ."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "KHOẢN KHÔNG AI\nGỬI HOÁ ĐƠN",
+   "sub": "MẤT GIÁ",
+   "vid": "32161278",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Khoản"
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 1,
+   "mythLab": "TƯỞNG LÀ",
+   "myth": "XĂNG · GỬI XE",
+   "truthLab": "THƯỜNG LỚN NHẤT",
+   "truth": "MẤT GIÁ",
+   "strikeAt": [
+    1,
+    "Mà"
+   ],
+   "truthAt": [
+    1,
+    "mất"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "KHÔNG AI GỬI HOÁ ĐƠN MẤT GIÁ",
+     "at": 2,
+     "acc": true
+    },
+    {
+     "text": "bạn chỉ thấy nó vào ngày bán xe",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "giá xe cũ tuỳ dòng xe · tình trạng · thị trường",
+     "at": 4,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 6,
+   "title": "CHIẾC XE SAU 5 NĂM (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · BÁN LẠI 55% GIÁ BAN ĐẦU",
+   "items": [
+    {
+     "k": "MUA MỚI",
+     "v": 700,
+     "lbl": "700",
+     "at": [
+      6,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "k": "BÁN LẠI",
+     "v": 385,
+     "lbl": "385",
+     "at": [
+      7,
+      "ba"
+     ]
+    },
+    {
+     "k": "MẤT GIÁ",
+     "v": 315,
+     "lbl": "315",
+     "at": [
+      8,
+      "ba"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 9,
+   "from": 5.2,
+   "to": 5.2,
+   "prefix": "≈ ",
+   "suffix": " TRIỆU/THÁNG",
+   "label": "TIỀN MẤT GIÁ · CHIA CHO 60 THÁNG",
+   "sub": {
+    "text": "VÍ DỤ GIẢ ĐỊNH",
+    "at": 9
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "CHO AI ĐÓ THUÊ XE VỚI GIÁ ẤY",
+     "at": [
+      10,
+      "nếu"
+     ],
+     "sm": true
+    },
+    {
+     "text": "CHỈ VỪA ĐỦ BÙ PHẦN MẤT GIÁ",
+     "at": [
+      10,
+      "tiền"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 11,
+   "title": "ĐỒNG HỒ ĐANG CHỈ · MỖI THÁNG",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · XE 700 TRIỆU",
+   "rows": [
+    {
+     "k": "TIỀN NUÔI XE",
+     "v": "≈ 4,7 TRIỆU",
+     "at": [
+      12,
+      "Tiền"
+     ]
+    },
+    {
+     "k": "TIỀN MẤT GIÁ",
+     "v": "≈ 5,2 TRIỆU",
+     "at": [
+      12,
+      "mất"
+     ]
+    }
+   ],
+   "total": {
+    "k": "CỘNG",
+    "v": "GẦN 10 TRIỆU",
+    "at": 13
+   }
+  },
+  {
+   "type": "counter",
+   "at": 14,
+   "from": 11.5,
+   "to": 11.5,
+   "suffix": " TRIỆU/THÁNG",
+   "label": "TRẢ THẲNG · CHI RÒNG 5 NĂM ≈ 689 TRIỆU",
+   "sub": {
+    "text": "VÍ DỤ GIẢ ĐỊNH · GỒM 100 TRIỆU LĂN BÁNH",
+    "at": 15
+   }
+  },
+  {
+   "type": "bars",
+   "at": 17,
+   "title": "MỖI THÁNG (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "XE CÔNG NGHỆ",
+     "v": 4,
+     "lbl": "4",
+     "at": [
+      17,
+      "bốn"
+     ]
+    },
+    {
+     "k": "TRẢ THẲNG",
+     "v": 11.5,
+     "lbl": "≈ 11,5",
+     "at": [
+      17,
+      "Gần"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "KHOẢN KHÔNG AI GỬI HOÁ ĐƠN"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

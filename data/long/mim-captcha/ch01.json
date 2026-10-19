@@ -1,0 +1,197 @@
+{
+ "title": "Mười bài toán của Yahoo",
+ "lines": [
+  {
+   "t": "Mùa thu năm 2000, ở Đại học Carnegie Mellon, nước Mỹ.",
+   "p": 0.8
+  },
+  {
+   "t": "Một người của Yahoo tới nói chuyện, về mười bài toán mà công ty chưa giải được.",
+   "p": 1.0
+  },
+  "Trong khán phòng có một nghiên cứu sinh hai mươi hai tuổi, tên là Luis von Ahn.",
+  "Một bài toán khiến anh nhớ mãi.",
+  "Hàng triệu chương trình tự động đang đăng ký hộp thư miễn phí của Yahoo, để gửi thư rác.",
+  {
+   "t": "Và công ty không phân biệt được, đâu là người, đâu là máy.",
+   "p": 1.0
+  },
+  "Von Ahn cùng thầy mình, giáo sư Manuel Blum, nghĩ ra một lời giải.",
+  "Hãy ra một đề mà con người làm rất dễ, còn máy tính thì chưa làm được.",
+  {
+   "t": "Thời ấy, đề như thế có sẵn. Đọc những chữ cái bị bóp méo.",
+   "p": 1.0
+  },
+  "Họ đặt cho nó một cái tên rất dài, viết tắt là CAPTCHA.",
+  "Trong cái tên ấy có ba chữ đáng nhớ. Phép thử Turing.",
+  "Năm 1950, Alan Turing hình dung một phép thử, nơi con người ngồi chấm xem máy có giống người không.",
+  {
+   "t": "Còn ở đây thì ngược lại. Cỗ máy ngồi chấm, và con người đi thi.",
+   "p": 1.0
+  },
+  "Yahoo nhận đoạn mã ấy miễn phí. Chỉ khoảng hai tuần sau, nó đã chạy.",
+  "Nói cho đủ thì ba năm trước đó, công cụ tìm kiếm AltaVista đã dùng một cách tương tự.",
+  "Và chỉ vài năm sau, gần như trang web lớn nào cũng có một ô chữ méo."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "MƯỜI BÀI TOÁN\nCỦA YAHOO",
+   "sub": "MÙA THU NĂM 2000",
+   "vid": "8198514",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Mùa"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "TRONG KHÁN PHÒNG",
+   "srcnote": "THEO THE NEW YORKER · NPR",
+   "rows": [
+    {
+     "k": "AI",
+     "v": "LUIS VON AHN · 22 TUỔI",
+     "at": [
+      2,
+      "hai"
+     ]
+    },
+    {
+     "k": "BÀI TOÁN",
+     "v": "MÁY ĐĂNG KÝ HỘP THƯ",
+     "at": 4
+    },
+    {
+     "k": "ĐỂ",
+     "v": "GỬI THƯ RÁC",
+     "at": [
+      4,
+      "để"
+     ]
+    }
+   ],
+   "total": {
+    "k": "KHÓ",
+    "v": "ĐÂU LÀ NGƯỜI, ĐÂU LÀ MÁY?",
+    "at": [
+     5,
+     "đâu"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "RA MỘT ĐỀ",
+     "at": 7,
+     "sm": true
+    },
+    {
+     "text": "NGƯỜI LÀM RẤT DỄ",
+     "at": [
+      7,
+      "con"
+     ],
+     "acc": true
+    },
+    {
+     "text": "MÁY CHƯA LÀM ĐƯỢC",
+     "at": [
+      7,
+      "còn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "captcha",
+   "at": 8,
+   "mode": "text",
+   "words": [
+    "overlooks",
+    "inquiry"
+   ],
+   "typeAt": [
+    8,
+    "Đọc"
+   ],
+   "until": [
+    9,
+    "tên"
+   ],
+   "label": {
+    "k": "ĐỌC CHỮ BỊ BÓP MÉO",
+    "v": "HÌNH MINH HOẠ DO KÊNH TỰ VẼ · KHÔNG PHẢI GIAO DIỆN CỦA DỊCH VỤ NÀO",
+    "at": [
+     8,
+     "Đọc"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 10,
+   "text": "PHÉP THỬ TURING",
+   "sub": "BA CHỮ NẰM TRONG CÁI TÊN CAPTCHA"
+  },
+  {
+   "type": "ledger",
+   "at": 11,
+   "title": "ĐẢO CHIỀU",
+   "rows": [
+    {
+     "k": "1950",
+     "v": "NGƯỜI CHẤM · MÁY ĐI THI",
+     "at": [
+      11,
+      "con"
+     ]
+    },
+    {
+     "k": "2000",
+     "v": "MÁY CHẤM · NGƯỜI ĐI THI",
+     "at": [
+      12,
+      "Cỗ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 13,
+   "items": [
+    {
+     "year": "1997",
+     "text": "AltaVista dùng *cách tương tự*",
+     "at": 14
+    },
+    {
+     "year": "2000",
+     "text": "Yahoo nhận mã *miễn phí* · chạy sau ~2 tuần",
+     "at": 13
+    },
+    {
+     "year": "vài năm sau",
+     "text": "gần như *trang lớn nào cũng có*",
+     "at": 15
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "MƯỜI BÀI TOÁN CỦA YAHOO"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

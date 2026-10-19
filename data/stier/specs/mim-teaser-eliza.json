@@ -1,0 +1,299 @@
+{
+  "theme": "mim",
+  "title": "Năm 1966, có người tin chatbot này là người thật",
+  "description": "Năm 1966 ở MIT, Joseph Weizenbaum công bố ELIZA, chương trình đóng vai nhà trị liệu tâm lý. Bên trong không có chút hiểu biết nào: nó chỉ bắt từ khoá, đảo \"tôi\" thành \"bạn\" rồi ghép vào câu mẫu. Vậy mà Weizenbaum ghi lại: có người thử rất khó tin rằng ELIZA không phải là người. Gần 60 năm sau, Eliza được đem ra đọ sức với một cỗ máy khác. Toàn bộ câu chuyện có trong video dài \"AI Đã \"Chết\" Hai Lần Trước Khi Có ChatGPT\" trên kênh Mind in the Machine.",
+  "tags": [
+    "eliza",
+    "chatbot đầu tiên",
+    "lịch sử ai",
+    "trí tuệ nhân tạo",
+    "joseph weizenbaum",
+    "chatgpt",
+    "ai đã chết hai lần",
+    "công nghệ"
+  ],
+  "kicker": "70 NĂM AI",
+  "sub": "1966 · ELIZA",
+  "acc": [
+    "eliza",
+    "ảo",
+    "giác",
+    "thấu",
+    "hiểu"
+  ],
+  "lines": [
+    "Năm 1966, có người rất khó tin rằng chương trình này không phải là người.",
+    "Nó tên là Eliza, đóng vai một nhà trị liệu tâm lý.",
+    "Bạn gõ vào một câu. Nó gõ lại một câu.",
+    "Đàn ông ai cũng như nhau cả.",
+    "Theo cách nào?",
+    "Bạn trai tôi bắt tôi tới đây.",
+    "Bạn trai bạn bắt bạn tới đây.",
+    "Bên trong Eliza không có chút hiểu biết nào.",
+    "Nó chỉ bắt từ khoá, đảo tôi thành bạn, rồi ghép vào một câu mẫu.",
+    "Người tạo ra nó gọi đó là ảo giác của sự thấu hiểu.",
+    "Gần sáu mươi năm sau, Eliza được đem ra đọ sức với một cỗ máy mới.",
+    "Ai giống người hơn?",
+    "Kết quả có trong video dài trên kênh: AI đã chết hai lần trước khi có ChatGPT."
+  ],
+  "imgs": {
+    "weizenbaum": "File:Weizenbaum 1982.jpg"
+  },
+  "scenes": [
+    {
+      "type": "kinetic",
+      "clip": "pexels:6037662",
+      "veil": 0.7,
+      "items": [
+        {
+          "text": "1966",
+          "at": 0,
+          "acc": true,
+          "size": 230
+        },
+        {
+          "text": "KHÔNG PHẢI NGƯỜI?",
+          "at": [
+            0,
+            "không"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "slam",
+      "at": 1,
+      "text": "ELIZA",
+      "sub": "NHÀ TRỊ LIỆU TÂM LÝ · MIT"
+    },
+    {
+      "type": "kinetic",
+      "at": 2,
+      "items": [
+        {
+          "text": "bạn gõ",
+          "at": [
+            2,
+            "gõ"
+          ],
+          "fx": "type"
+        },
+        {
+          "text": "nó gõ lại",
+          "at": [
+            2,
+            "gõ",
+            1
+          ],
+          "fx": "type",
+          "acc": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "at": 3,
+      "text": "Men are all alike.",
+      "by": "NGƯỜI DÙNG · 1966"
+    },
+    {
+      "type": "kinetic",
+      "at": 4,
+      "items": [
+        {
+          "text": "IN WHAT WAY",
+          "at": [
+            4,
+            "Theo"
+          ],
+          "acc": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "at": 5,
+      "text": "Well, my boyfriend made me come here.",
+      "by": "NGƯỜI DÙNG"
+    },
+    {
+      "type": "kinetic",
+      "at": 6,
+      "items": [
+        {
+          "text": "YOUR BOYFRIEND",
+          "at": [
+            6,
+            "Bạn"
+          ],
+          "acc": true
+        },
+        {
+          "text": "MADE YOU",
+          "at": [
+            6,
+            "bắt"
+          ],
+          "acc": true
+        },
+        {
+          "text": "COME HERE",
+          "at": [
+            6,
+            "tới"
+          ],
+          "acc": true
+        }
+      ]
+    },
+    {
+      "type": "kinetic",
+      "at": 7,
+      "items": [
+        {
+          "text": "BÊN TRONG",
+          "at": [
+            7,
+            "Bên"
+          ],
+          "sm": true
+        },
+        {
+          "text": "KHÔNG HIỂU GÌ",
+          "at": [
+            7,
+            "không"
+          ],
+          "acc": true
+        }
+      ]
+    },
+    {
+      "type": "ledger",
+      "at": 8,
+      "title": "ELIZA CHỈ LÀM",
+      "rows": [
+        {
+          "k": "BẮT TỪ KHOÁ",
+          "v": "1",
+          "at": [
+            8,
+            "bắt"
+          ]
+        },
+        {
+          "k": "ĐẢO TÔI → BẠN",
+          "v": "2",
+          "at": [
+            8,
+            "đảo"
+          ]
+        },
+        {
+          "k": "GHÉP CÂU MẪU",
+          "v": "3",
+          "at": [
+            8,
+            "ghép"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "photo",
+      "at": 9,
+      "img": "weizenbaum",
+      "mode": "print",
+      "label": {
+        "text": "JOSEPH WEIZENBAUM",
+        "at": [
+          9,
+          "tạo"
+        ]
+      }
+    },
+    {
+      "type": "quote",
+      "at": [
+        9,
+        "ảo",
+        0,
+        -0.15
+      ],
+      "text": "the illusion of understanding",
+      "by": "JOSEPH WEIZENBAUM · 1966"
+    },
+    {
+      "type": "timeline",
+      "at": 10,
+      "items": [
+        {
+          "year": "1966",
+          "text": "ELIZA ra đời",
+          "at": [
+            10,
+            null,
+            0,
+            0.15
+          ]
+        },
+        {
+          "year": "GẦN 60 NĂM SAU",
+          "text": "đọ sức với một cỗ máy mới",
+          "at": [
+            10,
+            "đọ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "question",
+      "at": 11,
+      "text": "Ai giống người hơn?"
+    },
+    {
+      "type": "kinetic",
+      "at": 12,
+      "items": [
+        {
+          "text": "VIDEO DÀI TRÊN KÊNH",
+          "at": [
+            12,
+            "video"
+          ],
+          "sm": true,
+          "size": 52
+        },
+        {
+          "text": "AI ĐÃ CHẾT",
+          "at": [
+            12,
+            "AI"
+          ]
+        },
+        {
+          "text": "HAI LẦN",
+          "at": [
+            12,
+            "hai"
+          ],
+          "acc": true
+        },
+        {
+          "text": "trước khi có ChatGPT",
+          "at": [
+            12,
+            "trước"
+          ],
+          "sm": true,
+          "size": 64
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "https://doi.org/10.1145/365153.365168",
+    "https://arxiv.org/abs/2503.23674"
+  ]
+}

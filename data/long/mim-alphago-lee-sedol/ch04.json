@@ -1,0 +1,754 @@
+{
+ "title": "Ván một",
+ "lines": [
+  {
+   "t": "Ngày 9 tháng 3 năm 2016. Khách sạn Four Seasons, Seoul.",
+   "p": 0.8
+  },
+  "Một giờ chiều, ván thứ nhất bắt đầu.",
+  {
+   "t": "Lee Sedol cầm quân đen, đi trước.",
+   "p": 1.0
+  },
+  "Ngồi đối diện ông không phải một cỗ máy.",
+  "Đó là Aja Huang, một kỹ sư của DeepMind.",
+  {
+   "t": "Anh nhìn màn hình, rồi đặt quân thay cho AlphaGo. Suốt ván cờ, anh gần như không đổi nét mặt.",
+   "p": 1.0
+  },
+  "Lee Sedol thử ngay một nước ít gặp, để xem máy có lúng túng không.",
+  "Máy không lúng túng.",
+  "Nó đáp lại bình thản, rồi chủ động tấn công.",
+  {
+   "t": "Các bình luận viên bắt đầu đổi giọng. Cỗ máy này chơi như một kỳ thủ hàng đầu.",
+   "p": 1.0
+  },
+  "Giữa ván, Lee Sedol dần gỡ lại. Các nhà phân tích cho rằng có lúc ông đã cân bằng thế cờ.",
+  "Rồi tới nước thứ một trăm lẻ hai của máy.",
+  "Một nước đánh thẳng vào vùng đất của ông.",
+  {
+   "t": "Theo một bình luận viên Hàn Quốc, Lee Sedol trông như sững lại. Ông ngồi nghĩ hơn mười phút.",
+   "p": 1.0
+  },
+  "Ván cờ giằng co tới tận cuối.",
+  "Rồi ở khoảng hai mươi phút cuối cùng, AlphaGo vượt lên.",
+  {
+   "t": "Sau một trăm tám mươi sáu nước, Lee Sedol xin thua.",
+   "p": 1.0
+  },
+  "Tỉ số: không, một.",
+  "Ở buổi họp báo, ông nói mình đã mắc một sai lầm quan trọng từ sớm.",
+  "Ông vẫn tin mình có thể thắng những ván còn lại.",
+  "Nhưng lần đầu tiên, câu hỏi đã đổi chiều.",
+  "Không còn là máy có thắng nổi một ván không.",
+  "Mà là con người, có thắng nổi không?"
+ ],
+ "scenes": [
+  {
+   "type": "date",
+   "day": "VÁN MỘT · KHÁCH SẠN FOUR SEASONS, SEOUL",
+   "date": "09.03.2016"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "13 GIỜ · VÁN THỨ NHẤT",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "LEE SEDOL CẦM ĐEN, ĐI TRƯỚC",
+     "at": 2,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "NGƯỜI NGỒI ĐỐI DIỆN",
+   "rows": [
+    {
+     "k": "TÊN",
+     "v": "AJA HUANG",
+     "at": 4
+    },
+    {
+     "k": "LÀ",
+     "v": "KỸ SƯ CỦA DEEPMIND",
+     "at": [
+      4,
+      "một"
+     ]
+    }
+   ],
+   "total": {
+    "k": "VIỆC",
+    "v": "ĐẶT QUÂN THAY CHO MÁY",
+    "at": 5
+   }
+  },
+  {
+   "type": "go",
+   "pos": [
+    [
+     16,
+     3,
+     "B"
+    ],
+    [
+     3,
+     3,
+     "W"
+    ],
+    [
+     15,
+     16,
+     "B"
+    ],
+    [
+     3,
+     15,
+     "W"
+    ],
+    [
+     5,
+     2,
+     "B"
+    ],
+    [
+     2,
+     5,
+     "W"
+    ]
+   ],
+   "at": 6,
+   "hitAt": [
+    6,
+    "một"
+   ],
+   "label": {
+    "k": "VÁN 1 · LEE THỬ MỘT NƯỚC ÍT GẶP",
+    "v": "THẾ CỜ THẬT · DỰNG TỪ BIÊN BẢN VÁN ĐẤU",
+    "at": 7
+   },
+   "hit": [
+    16,
+    11,
+    "B"
+   ],
+   "move": "7"
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "BÌNH LUẬN VIÊN ĐỔI GIỌNG",
+     "at": 9,
+     "sm": true
+    },
+    {
+     "text": "CHƠI NHƯ MỘT KỲ THỦ HÀNG ĐẦU",
+     "at": [
+      9,
+      "Cỗ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "go",
+   "pos": [
+    [
+     16,
+     3,
+     "B"
+    ],
+    [
+     3,
+     3,
+     "W"
+    ],
+    [
+     15,
+     16,
+     "B"
+    ],
+    [
+     3,
+     15,
+     "W"
+    ],
+    [
+     5,
+     2,
+     "B"
+    ],
+    [
+     2,
+     5,
+     "W"
+    ],
+    [
+     16,
+     11,
+     "B"
+    ],
+    [
+     14,
+     3,
+     "W"
+    ],
+    [
+     11,
+     3,
+     "B"
+    ],
+    [
+     16,
+     2,
+     "W"
+    ],
+    [
+     17,
+     2,
+     "B"
+    ],
+    [
+     15,
+     2,
+     "W"
+    ],
+    [
+     17,
+     4,
+     "B"
+    ],
+    [
+     14,
+     5,
+     "W"
+    ],
+    [
+     15,
+     6,
+     "B"
+    ],
+    [
+     14,
+     6,
+     "W"
+    ],
+    [
+     15,
+     7,
+     "B"
+    ],
+    [
+     8,
+     3,
+     "W"
+    ],
+    [
+     11,
+     5,
+     "B"
+    ],
+    [
+     14,
+     7,
+     "W"
+    ],
+    [
+     15,
+     8,
+     "B"
+    ],
+    [
+     11,
+     7,
+     "W"
+    ],
+    [
+     10,
+     7,
+     "B"
+    ],
+    [
+     10,
+     4,
+     "W"
+    ],
+    [
+     11,
+     4,
+     "B"
+    ],
+    [
+     11,
+     6,
+     "W"
+    ],
+    [
+     10,
+     6,
+     "B"
+    ],
+    [
+     10,
+     5,
+     "W"
+    ],
+    [
+     13,
+     4,
+     "B"
+    ],
+    [
+     14,
+     4,
+     "W"
+    ],
+    [
+     9,
+     2,
+     "B"
+    ],
+    [
+     8,
+     2,
+     "W"
+    ],
+    [
+     9,
+     3,
+     "B"
+    ],
+    [
+     8,
+     4,
+     "W"
+    ],
+    [
+     9,
+     4,
+     "B"
+    ],
+    [
+     9,
+     5,
+     "W"
+    ],
+    [
+     8,
+     5,
+     "B"
+    ],
+    [
+     9,
+     6,
+     "W"
+    ],
+    [
+     11,
+     8,
+     "B"
+    ],
+    [
+     12,
+     8,
+     "W"
+    ],
+    [
+     7,
+     5,
+     "B"
+    ],
+    [
+     8,
+     7,
+     "W"
+    ],
+    [
+     12,
+     1,
+     "B"
+    ],
+    [
+     6,
+     3,
+     "W"
+    ],
+    [
+     10,
+     8,
+     "B"
+    ],
+    [
+     12,
+     9,
+     "W"
+    ],
+    [
+     10,
+     10,
+     "B"
+    ],
+    [
+     8,
+     1,
+     "W"
+    ],
+    [
+     14,
+     1,
+     "B"
+    ],
+    [
+     12,
+     11,
+     "W"
+    ],
+    [
+     11,
+     12,
+     "B"
+    ],
+    [
+     13,
+     2,
+     "W"
+    ],
+    [
+     13,
+     1,
+     "B"
+    ],
+    [
+     10,
+     1,
+     "W"
+    ],
+    [
+     11,
+     2,
+     "B"
+    ],
+    [
+     12,
+     12,
+     "W"
+    ],
+    [
+     11,
+     13,
+     "B"
+    ],
+    [
+     10,
+     11,
+     "W"
+    ],
+    [
+     11,
+     11,
+     "B"
+    ],
+    [
+     11,
+     10,
+     "W"
+    ],
+    [
+     9,
+     9,
+     "B"
+    ],
+    [
+     9,
+     11,
+     "W"
+    ],
+    [
+     7,
+     9,
+     "B"
+    ],
+    [
+     7,
+     8,
+     "W"
+    ],
+    [
+     6,
+     9,
+     "B"
+    ],
+    [
+     6,
+     5,
+     "W"
+    ],
+    [
+     8,
+     8,
+     "B"
+    ],
+    [
+     9,
+     7,
+     "W"
+    ],
+    [
+     8,
+     9,
+     "B"
+    ],
+    [
+     12,
+     13,
+     "W"
+    ],
+    [
+     11,
+     14,
+     "B"
+    ],
+    [
+     12,
+     14,
+     "W"
+    ],
+    [
+     11,
+     15,
+     "B"
+    ],
+    [
+     12,
+     15,
+     "W"
+    ],
+    [
+     11,
+     16,
+     "B"
+    ],
+    [
+     12,
+     16,
+     "W"
+    ],
+    [
+     8,
+     12,
+     "B"
+    ],
+    [
+     16,
+     14,
+     "W"
+    ],
+    [
+     5,
+     16,
+     "B"
+    ],
+    [
+     6,
+     6,
+     "W"
+    ],
+    [
+     2,
+     13,
+     "B"
+    ],
+    [
+     3,
+     13,
+     "W"
+    ],
+    [
+     3,
+     12,
+     "B"
+    ],
+    [
+     5,
+     15,
+     "W"
+    ],
+    [
+     6,
+     15,
+     "B"
+    ],
+    [
+     6,
+     16,
+     "W"
+    ],
+    [
+     5,
+     17,
+     "B"
+    ],
+    [
+     2,
+     14,
+     "W"
+    ],
+    [
+     4,
+     13,
+     "B"
+    ],
+    [
+     3,
+     14,
+     "W"
+    ],
+    [
+     4,
+     15,
+     "B"
+    ],
+    [
+     2,
+     12,
+     "W"
+    ],
+    [
+     3,
+     11,
+     "B"
+    ],
+    [
+     11,
+     17,
+     "W"
+    ],
+    [
+     10,
+     17,
+     "B"
+    ],
+    [
+     17,
+     1,
+     "W"
+    ],
+    [
+     9,
+     1,
+     "B"
+    ],
+    [
+     9,
+     0,
+     "W"
+    ],
+    [
+     12,
+     5,
+     "B"
+    ],
+    [
+     12,
+     7,
+     "W"
+    ],
+    [
+     13,
+     3,
+     "B"
+    ]
+   ],
+   "at": 10,
+   "hitAt": [
+    11,
+    "một"
+   ],
+   "label": {
+    "k": "VÁN 1 · NƯỚC 102 CỦA MÁY · LEE NGHĨ HƠN 10 PHÚT",
+    "v": "THẾ CỜ THẬT · DỰNG TỪ BIÊN BẢN VÁN ĐẤU",
+    "at": 12
+   },
+   "hit": [
+    16,
+    9,
+    "W"
+   ],
+   "move": "102"
+  },
+  {
+   "type": "broll",
+   "at": 14,
+   "vid": "33972359",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU",
+   "kin": [
+    {
+     "text": "20 PHÚT CUỐI",
+     "at": 15,
+     "acc": true
+    },
+    {
+     "text": "AlphaGo vượt lên",
+     "at": [
+      15,
+      "AlphaGo"
+     ],
+     "sm": true
+    },
+    {
+     "text": "nước 186: Lee Sedol xin thua",
+     "at": 16,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 17,
+   "text": "0 – 1",
+   "sub": "LEE SEDOL – ALPHAGO"
+  },
+  {
+   "type": "ledger",
+   "at": 18,
+   "title": "HỌP BÁO SAU VÁN MỘT",
+   "rows": [
+    {
+     "k": "LEE SEDOL",
+     "v": "SAI LẦM QUAN TRỌNG TỪ SỚM",
+     "at": 18
+    },
+    {
+     "k": "VẪN TIN",
+     "v": "THẮNG CÁC VÁN CÒN LẠI",
+     "at": 19
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 20,
+   "text": "Con người\ncó thắng nổi không?",
+   "showAt": 22
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "VÁN MỘT"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

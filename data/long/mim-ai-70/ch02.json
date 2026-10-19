@@ -1,0 +1,304 @@
+{
+ "title": "Hai con đường",
+ "lines": [
+  {
+   "t": "Ngay từ những năm đầu, giới nghiên cứu đã chia làm hai ngả.",
+   "p": 0.8
+  },
+  "Ngả thứ nhất: viết luật.",
+  "Nếu muốn máy thông minh, hãy dạy nó các quy tắc suy luận, từng bước một, như dạy một học sinh giải toán.",
+  "Ngả thứ hai: cho máy tự học.",
+  {
+   "t": "Đó là con đường của perceptron, mô phỏng một cách rất thô cách các nơ-ron trong não nối với nhau, rồi để nó tự điều chỉnh qua từng lần sai.",
+   "p": 1.0
+  },
+  "Thời ấy, ngả viết luật được tin hơn. Và nó hứa rất lớn.",
+  "Năm 1958, hai nhà nghiên cứu Herbert Simon và Allen Newell dự đoán: trong vòng mười năm, máy tính sẽ vô địch cờ vua thế giới.",
+  {
+   "t": "Mười năm. Hãy nhớ con số này.",
+   "p": 1.0
+  },
+  "Rồi năm 1966, ở MIT, nhà khoa học Joseph Weizenbaum công bố một chương trình tên là ELIZA.",
+  "ELIZA đóng vai một nhà trị liệu tâm lý.",
+  "Bạn gõ vào một câu. Nó gõ lại một câu.",
+  {
+   "t": "Đàn ông ai cũng như nhau cả.",
+   "q": 1
+  },
+  {
+   "t": "Theo cách nào?",
+   "q": 1
+  },
+  {
+   "t": "Bạn trai tôi bắt tôi tới đây.",
+   "q": 1
+  },
+  {
+   "t": "Bạn trai bạn bắt bạn tới đây.",
+   "q": 1
+  },
+  "Bên trong ELIZA không có chút hiểu biết nào.",
+  {
+   "t": "Nó chỉ bắt từ khoá, đảo \"tôi\" thành \"bạn\", rồi ghép vào một câu mẫu.",
+   "p": 1.0
+  },
+  "Vậy mà Weizenbaum ghi lại: có những người thử rất khó tin rằng ELIZA không phải là người.",
+  "Chính ông gọi đó là ảo giác của sự thấu hiểu.",
+  "Nhớ cái tên ELIZA. Gần sáu mươi năm sau, nó sẽ được đem ra đọ sức với một cỗ máy khác.",
+  "Còn lúc này, những lời hứa đã đi quá xa so với những gì máy làm được.",
+  "Và mùa hè sắp kết thúc."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "HAI CON ĐƯỜNG",
+   "sub": "1957 — 1968",
+   "bg": "percdiagram",
+   "titleAt": [
+    0,
+    "Ngay"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "NGẢ 1 · VIẾT LUẬT",
+     "at": [
+      1,
+      "viết"
+     ]
+    },
+    {
+     "text": "nếu… thì…, từng bước một",
+     "at": [
+      2,
+      "quy"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "nn",
+   "at": 3,
+   "fwdAt": [
+    4,
+    "mô"
+   ],
+   "backAt": [
+    4,
+    "sai."
+   ],
+   "label": {
+    "k": "NGẢ 2 · TỰ HỌC",
+    "v": "PERCEPTRON",
+    "at": [
+     3,
+     "tự"
+    ]
+   }
+  },
+  {
+   "type": "broll",
+   "at": 5,
+   "vid": "6599643",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "1958 · SIMON & NEWELL",
+     "at": [
+      6,
+      "1958,"
+     ]
+    },
+    {
+     "text": "10 NĂM: MÁY VÔ ĐỊCH CỜ VUA",
+     "at": [
+      6,
+      "vô"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "10 NĂM",
+   "sub": "HÃY NHỚ CON SỐ NÀY"
+  },
+  {
+   "type": "print",
+   "at": 8,
+   "img": "weizenbaum",
+   "tone": "bw",
+   "side": {
+    "k": "JOSEPH WEIZENBAUM",
+    "h": "ELIZA\nMIT · 1966",
+    "lines": [
+     {
+      "text": "Đóng vai *nhà trị liệu*",
+      "at": [
+       9,
+       "trị"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "chat",
+   "at": 10,
+   "head": "MIT · 1966 · ELIZA (TRÍCH)",
+   "msgs": [
+    {
+     "who": "u",
+     "text": "Men are all alike.",
+     "at": [
+      11,
+      "Đàn"
+     ]
+    },
+    {
+     "who": "m",
+     "text": "IN WHAT WAY",
+     "at": [
+      12,
+      "Theo"
+     ]
+    },
+    {
+     "who": "u",
+     "text": "…",
+     "at": [
+      12,
+      "nào?"
+     ]
+    },
+    {
+     "who": "u",
+     "text": "Well, my boyfriend made me come here.",
+     "at": [
+      13,
+      "Bạn"
+     ]
+    },
+    {
+     "who": "m",
+     "text": "YOUR BOYFRIEND MADE YOU COME HERE",
+     "at": [
+      14,
+      "Bạn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "KHÔNG CÓ HIỂU BIẾT",
+     "at": [
+      15,
+      "hiểu"
+     ],
+     "acc": true
+    },
+    {
+     "text": "BẮT TỪ KHOÁ",
+     "at": [
+      16,
+      "từ"
+     ]
+    },
+    {
+     "text": "ĐẢO “TÔI” → “BẠN”",
+     "at": [
+      16,
+      "đảo"
+     ]
+    },
+    {
+     "text": "GHÉP CÂU MẪU",
+     "at": [
+      16,
+      "ghép"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 17,
+   "text": "very hard to convince that ELIZA … is not human",
+   "by": "JOSEPH WEIZENBAUM · CACM, 1966",
+   "lbl": "TRÍCH"
+  },
+  {
+   "type": "slam",
+   "at": 18,
+   "text": "ẢO GIÁC\nCỦA SỰ THẤU HIỂU",
+   "sub": "“THE ILLUSION OF UNDERSTANDING”"
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "items": [
+    {
+     "text": "NHỚ CÁI TÊN: ELIZA",
+     "at": [
+      19,
+      "ELIZA."
+     ],
+     "acc": true
+    },
+    {
+     "text": "gần 60 năm sau, nó sẽ đọ sức lần nữa",
+     "at": [
+      19,
+      "đọ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 20,
+   "vid": "17342967",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "LỜI HỨA ĐI QUÁ XA",
+     "at": [
+      20,
+      "hứa"
+     ]
+    },
+    {
+     "text": "MÙA HÈ SẮP KẾT THÚC",
+     "at": [
+      21,
+      "mùa"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "HAI CON ĐƯỜNG"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.12
+ }
+}

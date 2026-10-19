@@ -1,0 +1,94 @@
+/* Giao diện kênh Biểu Đồ Biết Nói (CK) cho engine S-tier (casefile.js) -- Short 9:16 "1 con số".
+   Chỉ có tác dụng khi #root có class "theme-ck" (motion/stier/themes.py); build.py chỉ nạp file này cho theme "ck".
+   Màu theo logo (motion/long/brand/ck/logo_a.html) + .th-chart của video dài (casewide.css):
+   nền xanh than #0a1426, vàng #fbbf24 = giá tham chiếu (màu nhấn duy nhất), xanh #22c55e tăng, đỏ #ef4444 giảm.
+   Chữ: Be Vietnam Pro (không Playfair -- chất báo cũ của hồ sơ hình sự), số/nhãn JetBrains Mono. Không hạt phim, không sepia. */
+.theme-ck { --red:#fbbf24; --gold:#fde68a; --paper:#0f1b2e; --ink:#f1f5f9; --dim:#94a3b8; --glow:rgba(251,191,36,.5);
+            --up:#22c55e; --down:#ef4444; color:#f1f5f9; }
+.theme-ck #bed { background:
+    linear-gradient(rgba(125,211,252,.05) 1px, transparent 1px) 0 0 / 80px 80px,
+    linear-gradient(90deg, rgba(125,211,252,.05) 1px, transparent 1px) 0 0 / 80px 80px,
+    radial-gradient(110% 70% at 50% 28%, #13233c 0%, #0a1426 55%, #050912 100%); }
+.theme-ck #grain { display:none; }
+.theme-ck #leak { background: radial-gradient(40% 30% at 50% 50%, rgba(251,191,36,.35), transparent 70%); }
+.theme-ck .mote { width:4px; height:4px; background:rgba(253,230,138,.45); filter:blur(1px); }
+.theme-ck #vig { background: radial-gradient(115% 85% at 50% 45%, transparent 60%, rgba(0,0,0,.55) 100%); }
+.theme-ck #kicker .t small { color:#cbd5e1; }
+
+/* chữ "serif" của hồ sơ -> sans đậm */
+.theme-ck .serif, .theme-ck .hw, .theme-ck .count, .theme-ck .cell b, .theme-ck .card .n, .theme-ck .big,
+.theme-ck .ask, .theme-ck .tli .yr, .theme-ck .ledger .lt, .theme-ck .sign, .theme-ck .dg .reel div,
+.theme-ck .dsep, .theme-ck .qpaper .qm, .theme-ck .tape {
+  font-family:'Be Vietnam Pro', system-ui, sans-serif; font-style:normal; letter-spacing:-.02em; }
+.theme-ck .ask { font-weight:800; line-height:1.15; }
+.theme-ck .count { font-weight:900; }
+
+/* ánh đỏ cứng trong casefile.css -> ánh vàng */
+.theme-ck .strike { box-shadow:0 0 18px var(--glow); }
+.theme-ck .slam { text-shadow:0 0 60px var(--glow), 0 20px 60px rgba(0,0,0,.8); }
+.theme-ck .tli .dot { box-shadow:0 0 20px var(--glow); }
+.theme-ck .stamp { text-shadow:0 0 6px var(--glow); }
+.theme-ck .cw.acc { text-shadow:0 0 22px rgba(251,191,36,.35), 0 6px 28px rgba(0,0,0,.95); }
+/* marker: chữ trên nền vàng -> chữ xanh than (trắng trên vàng không đọc được) */
+.theme-ck .kin .mk { color:#0a1426; }
+
+/* thẻ giấy -> thẻ kính tối, chữ sáng, viền vàng mảnh */
+.theme-ck .card, .theme-ck .ledger, .theme-ck .qpaper {
+  background:rgba(15,27,46,.94); color:var(--ink); border:2px solid rgba(251,191,36,.35); border-radius:20px;
+  box-shadow:0 0 0 1px rgba(251,191,36,.08), 0 40px 120px rgba(0,0,0,.8), 0 0 60px rgba(251,191,36,.10); }
+.theme-ck .ledger { background-image:repeating-linear-gradient(0deg, transparent 0 91px, rgba(148,163,184,.14) 91px 93px); }
+.theme-ck .ledger .lt { color:var(--red); font-size:58px; }
+.theme-ck .ledger .row { font-size:46px; line-height:96px; }
+.theme-ck .ledger .row span:first-child { color:var(--red); }
+.theme-ck .ledger .row span:last-child { color:#fff; }
+.theme-ck .ledger .row.tot { border-top:3px solid rgba(241,245,249,.55); color:var(--red); }
+.theme-ck .ledger .row.tot span:last-child { color:var(--red); }
+.theme-ck .card .k, .theme-ck .qpaper .by { color:var(--dim); }
+.theme-ck .card .d { color:#cbd5e1; }
+.theme-ck .card .ln { background:repeating-linear-gradient(90deg, rgba(251,191,36,.5) 0 16px, transparent 16px 26px); }
+.theme-ck .card .clip { display:none; }
+.theme-ck .tli .tx { color:#cbd5e1; }
+.theme-ck .tlx { background:rgba(148,163,184,.3); }
+.theme-ck .cell { background:rgba(148,163,184,.06); border-color:rgba(148,163,184,.25); }
+.theme-ck .dg { background:rgba(10,20,38,.8); border-color:rgba(251,191,36,.25); }
+.theme-ck .dsub { color:#cbd5e1; }
+
+/* ảnh in -> khung kính mảnh viền vàng (logo kênh ở cảnh hero) */
+.theme-ck .printf { background:#0a1426; border:2px solid rgba(251,191,36,.35); border-radius:28px; box-shadow:0 50px 120px rgba(0,0,0,.85), 0 0 80px rgba(251,191,36,.12); }
+.theme-ck .hole { background:#0a1426; box-shadow:none; border-radius:18px; }
+.theme-ck .print, .theme-ck .mug { background:#0f1b2e; box-shadow:0 0 0 2px rgba(251,191,36,.35), 0 50px 120px rgba(0,0,0,.85); }
+.theme-ck .credit { color:rgba(241,245,249,.85); }
+
+/* ---- cảnh chart (casefile.js B.chart) ---- */
+.theme-ck .chtitle { position:absolute; left:40px; right:40px; text-align:center; font-weight:900; letter-spacing:-.01em; white-space:nowrap; opacity:0; }
+.theme-ck .chunit { position:absolute; left:0; right:0; text-align:center; font-size:28px; letter-spacing:.2em; color:var(--dim); white-space:nowrap; opacity:0; }
+.theme-ck .chaxis { stroke:rgba(241,245,249,.55); stroke-width:4; }
+.theme-ck .chgrid { stroke:rgba(148,163,184,.18); stroke-width:2; stroke-dasharray:8 10; }
+.theme-ck .chgl { font-family:'JetBrains Mono'; font-weight:500; font-size:26px; fill:#94a3b8; }
+.theme-ck .chtick { font-family:'JetBrains Mono'; font-weight:700; font-size:30px; fill:#cbd5e1; letter-spacing:.06em; }
+.theme-ck .chtag { font-family:'Be Vietnam Pro'; font-weight:900; font-size:50px; fill:#fff; paint-order:stroke; stroke:#0a1426; stroke-width:10px; }
+.theme-ck .chref { stroke:var(--red); stroke-width:4; stroke-dasharray:14 12; }
+.theme-ck .chreft { font-family:'JetBrains Mono'; font-weight:700; font-size:30px; fill:var(--red); letter-spacing:.08em; paint-order:stroke; stroke:#0a1426; stroke-width:8px; }
+.theme-ck .chbar { position:absolute; border-radius:14px 14px 4px 4px; transform:scaleY(0); }
+.theme-ck .chghost { position:absolute; border:4px dashed rgba(241,245,249,.45); border-radius:14px 14px 4px 4px; opacity:0; }
+.theme-ck .chgap { position:absolute; border-radius:14px 14px 0 0; opacity:0;
+  background:repeating-linear-gradient(135deg, rgba(239,68,68,.85) 0 14px, rgba(239,68,68,.35) 14px 28px); box-shadow:0 0 40px rgba(239,68,68,.45); }
+.theme-ck .chgapt { position:absolute; font-weight:900; font-size:46px; color:var(--down); white-space:nowrap; opacity:0;
+  text-shadow:0 6px 24px rgba(0,0,0,.9); }
+.theme-ck .chval { position:absolute; text-align:center; font-weight:900; line-height:1; white-space:nowrap; opacity:0;
+  text-shadow:0 8px 30px rgba(0,0,0,.85); }
+.theme-ck .chlbl { position:absolute; text-align:center; font-family:'JetBrains Mono'; font-weight:700; font-size:30px; line-height:1.45;
+  letter-spacing:.06em; color:#e2e8f0; opacity:0; }
+.theme-ck .chbadge { position:absolute; left:20px; right:20px; text-align:center; font-weight:900; line-height:1; color:var(--red); white-space:nowrap; opacity:0;
+  text-shadow:0 0 50px var(--glow), 0 12px 40px rgba(0,0,0,.85); }
+.theme-ck .chnote { position:absolute; left:0; right:0; text-align:center; font-size:22px; letter-spacing:.16em; color:#94a3b8; white-space:nowrap; opacity:0; }
+.theme-ck .chgapt { text-align:center; }
+/* băng chữ dưới logo (hero.tape): dải vàng chữ xanh than thay cho băng giấy */
+.theme-ck .tape { background:#fbbf24; color:#0a1426; font-weight:800; font-size:46px; box-shadow:0 18px 40px rgba(0,0,0,.55), 0 0 40px rgba(251,191,36,.25); }
+.theme-ck .tape::before, .theme-ck .tape::after { display:none; }
+.theme-ck .hw { font-weight:900; }
+/* câu hỏi kết: to hơn mặc định (fsz theo 1 dòng cho chữ nhỏ ~54px), cho xuống 2 dòng */
+.theme-ck .ask { font-size:78px !important; top:760px; }
+/* hiệu ứng rise cắt dấu chồng của chữ hoa tiếng Việt (Ổ, Ữ...) -> nới hộp cắt lên trên */
+.theme-ck .kin .rw { padding-top:.2em; margin-top:-.2em; }
+.theme-ck .kin.sm:not(.acc) { color:#cbd5e1; }    /* dòng phụ nhỏ: xám sáng thay màu giấy */

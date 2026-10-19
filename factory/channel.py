@@ -201,10 +201,11 @@ class Channel:
         creds = json.loads(channels.creds_path(code).read_text(encoding="utf-8"))
         return cls(code, HttpYouTube(creds), conn, channel_titles=channel_titles)
 
-    def next_upload_at(self) -> datetime:
+    def next_upload_at(self, now: datetime | None = None) -> datetime:
         """Mốc sớm nhất được upload tiếp. Bộ lập lịch (drip) hỏi cái này thay
-        vì tự giữ đồng hồ riêng."""
-        now = self.now()
+        vì tự giữ đồng hồ riêng. `now`: mốc caller đã đọc -- PHẢI truyền khi so
+        `at > now` (đọc đồng hồ lần hai thì `at` luôn trễ hơn vài µs -> hoãn mãi)."""
+        now = now or self.now()
         times = [datetime.strptime(r[0], _ISO).replace(tzinfo=timezone.utc) for r in self.conn.execute(
             "SELECT started_at FROM upload_log WHERE channel = ? AND started_at > ? ORDER BY started_at",
             (self.code, _iso(now - timedelta(hours=24))))]
@@ -450,7 +451,7 @@ class Channel:
                     self.conn.execute("DELETE FROM upload_log WHERE channel = ? AND slug = ?",
                                       (self.code, u.slug))
                 self._refuse_duplicate_title(u)
-                at = self.next_upload_at()
+                at = self.next_upload_at(now)
                 if at > now:
                     raise PacingHold(self.code, at)
                 self.conn.execute(
@@ -523,3 +524,32 @@ class Channel:
                         "defaultLanguage": "vi", "defaultAudioLanguage": "vi"},
             "status": status,
         }
+
+
+# ---------------- --wait: chờ lượt giãn nhịp KHÔNG giới hạn (retro 2 mục 10, 15) ----------------
+# Lỗi 07/10: chuỗi đăng D1 tự đoán "thử lại 30 × 5 phút" (2,5 h) nhưng lượt CK mở sau 4,2 h -> D1 không lên, Short D1 suýt lên
+# TRƯỚC video dài nó trỏ tới. Mốc chờ là dữ liệu sổ upload_log có sẵn (next_upload_at), không phải số lần thử của từng script.
+def wait_turn(chan: "Channel", *, sleep=None, say=print, margin: float = 5.0) -> None:
+    """Ngủ tới khi kênh được upload tiếp (in mốc đích, giờ UTC + giờ VN). Kiểm lại sau mỗi lần ngủ: tiến trình khác có thể
+    vừa giành lượt."""
+    import time
+    sleep = sleep or time.sleep
+    while True:
+        now = chan.now()
+        at = chan.next_upload_at(now)
+        if at <= now:
+            return
+        secs = (at - now).total_seconds() + margin
+        say(f"[--wait] kênh {chan.code}: lượt upload kế tiếp {_iso(at)} (giờ VN {at + timedelta(hours=7):%d/%m %H:%M}) "
+            f"— ngủ {secs / 60:.0f} phút")
+        sleep(secs)
+
+
+def upload_when_free(chan: "Channel", u: Upload, *, sleep=None, say=print) -> Uploaded:
+    """chan.upload, nhưng PacingHold -> chờ lượt rồi thử lại (không bao giờ ném PacingHold)."""
+    while True:
+        wait_turn(chan, sleep=sleep, say=say)
+        try:
+            return chan.upload(u)
+        except PacingHold as e:
+            say(f"[--wait] {e}")

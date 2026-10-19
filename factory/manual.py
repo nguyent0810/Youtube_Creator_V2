@@ -65,13 +65,29 @@ def _fits(b) -> None:
         raise ValueError(f"{b.slug}: mô tả + token {len(_description(b))} ký tự > {MAX_DESCRIPTION_CHARS}")
 
 
-def _meta_txt(b) -> str:
+def _meta_txt(b, extras: tuple[str, ...] = ()) -> str:
     return (f"[TIÊU ĐỀ]\n{b.title}\n\n"
             f"[MÔ TẢ]\n{_description(b)}\n\n"
             f"[TAGS]\n{', '.join(_tags(b))}\n\n"
             f"[LOẠI] {b.kind}    [HẸN GIỜ GỢI Ý] {_vn(b.publish_at)} (giờ VN)\n"
             f"Upload: Private -> đặt lịch (Schedule) đúng giờ trên. Đừng xoá tag/dòng cuối "
-            f"`{token(b.slug)}`: máy dùng nó để nhận lại video (adopt_manual.py).\n")
+            f"`{token(b.slug)}`: máy dùng nó để nhận lại video (adopt_manual.py).\n"
+            + "".join(f"{x}\n" for x in extras))
+
+
+def _long_extras(src_dir: Path, d: Path) -> tuple[str, ...]:
+    """Video dài: phụ đề + các thumbnail A/B nằm cạnh final.mp4 (output/long/<topic>/, pub/tN.jpg)."""
+    out = []
+    srt = src_dir / "captions.vi.srt"
+    if srt.exists():
+        shutil.copyfile(srt, d / srt.name)
+        out.append(f"[PHỤ ĐỀ] {srt.name} -> Studio > Phụ đề > Thêm ngôn ngữ Tiếng Việt > Tải tệp lên (có thời gian).")
+    ab = sorted((src_dir / "pub").glob("t[0-9].jpg"))
+    for t in ab:
+        shutil.copyfile(t, d / f"ab_{t.name}")
+    if ab:
+        out.append(f"[THUMBNAIL A/B] {', '.join('ab_' + t.name for t in ab)} -> Studio > Thumbnail > Test & Compare (đủ 3 bản).")
+    return tuple(out)
 
 
 def _ready(conn: sqlite3.Connection, ch: str) -> list[sqlite3.Row]:
@@ -94,7 +110,8 @@ def export(conn: sqlite3.Connection, ch: str, out_root: Path, *, bundles: Path |
             shutil.copyfile(src, dst)
         if r["thumb_path"] and Path(r["thumb_path"]).exists():
             shutil.copyfile(r["thumb_path"], d / f"thumbnail{Path(r['thumb_path']).suffix}")
-        (d / "meta.txt").write_text(_meta_txt(b), encoding="utf-8")
+        extras = _long_extras(src.parent, d) if b.kind == "long" else ()
+        (d / "meta.txt").write_text(_meta_txt(b, extras), encoding="utf-8")
         out.append(d)
     return out
 

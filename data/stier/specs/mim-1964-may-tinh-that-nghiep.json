@@ -1,0 +1,174 @@
+{
+ "theme": "mim",
+ "title": "Năm 1964, một bản ghi nhớ gửi Tổng thống Mỹ cảnh báo máy tính sẽ gây thất nghiệp hàng loạt",
+ "description": "Tháng 3/1964, một bản ghi nhớ được gửi tới Tổng thống Mỹ Lyndon Johnson, trong số người ký có nhà hoá học Linus Pauling (hai giải Nobel), cảnh báo máy tính sẽ sớm gây thất nghiệp hàng loạt. Năm 1966, uỷ ban quốc gia về tự động hoá do chính quyền Johnson lập kết luận (diễn ý): công nghệ xoá đi những công việc cụ thể, chứ không xoá đi nhu cầu lao động. Câu “lần này khác” đã được nói về máy móc suốt hai trăm năm. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (13 phút): https://youtu.be/sP0ch8-NYec (công khai từ 20:00 ngày 19/10).",
+ "tags": [
+  "triple revolution 1964",
+  "tự động hoá và thất nghiệp",
+  "lyndon johnson",
+  "ai và việc làm",
+  "tự động hoá",
+  "lịch sử công nghệ",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "AI VÀ VIỆC LÀM",
+ "sub": "MỸ · 1964",
+ "acc": [
+  "loạt",
+  "hai",
+  "việc",
+  "động",
+  "khác"
+ ],
+ "lines": [
+  "Máy tính sẽ sớm gây thất nghiệp hàng loạt. Câu này được viết từ năm 1964.",
+  "Tháng 3 năm ấy, một bản ghi nhớ được gửi tới Tổng thống Mỹ.",
+  "Trong số người ký, có cả một nhà khoa học đoạt hai giải Nobel.",
+  "Hai năm sau, một uỷ ban quốc gia về tự động hoá đưa ra kết luận.",
+  "Công nghệ xoá đi những công việc cụ thể.",
+  "Chứ không xoá đi nhu cầu lao động.",
+  "Sáu mươi năm sau, người ta lại nói đúng câu ấy, về AI. Lần này khác."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MÁY TÍNH SẼ GÂY",
+     "at": 0.0
+    },
+    {
+     "text": "THẤT NGHIỆP HÀNG LOẠT",
+     "at": [
+      0,
+      "thất"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:6037662",
+   "ms": 6,
+   "veil": 0.55
+  },
+  {
+   "type": "timeline",
+   "at": 1,
+   "items": [
+    {
+     "year": "03.1964",
+     "text": "bản ghi nhớ gửi Tổng thống Mỹ",
+     "at": [
+      1,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "year": "người ký",
+     "text": "có nhà khoa học hai giải Nobel",
+     "at": [
+      2,
+      "có"
+     ]
+    },
+    {
+     "year": "1966",
+     "text": "uỷ ban tự động hoá kết luận",
+     "at": [
+      3,
+      "một"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "KẾT LUẬN NĂM 1966 · DIỄN Ý",
+   "cards": [
+    {
+     "k": "CÔNG NGHỆ XOÁ",
+     "v": "CÔNG VIỆC CỤ THỂ",
+     "at": [
+      4,
+      "xoá"
+     ]
+    },
+    {
+     "k": "KHÔNG XOÁ",
+     "v": "NHU CẦU LAO ĐỘNG",
+     "at": [
+      5,
+      "nhu"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "to": 60,
+   "suffix": " NĂM SAU",
+   "label": "NGƯỜI TA LẠI NÓI CÂU ẤY VỀ AI",
+   "until": [
+    6,
+    "năm"
+   ],
+   "sub": {
+    "text": "“LẦN NÀY KHÁC”",
+    "at": [
+     6,
+     "Lần"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "LẦN NÀY KHÁC?",
+     "at": [
+      6,
+      "Lần"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:34775736",
+   "ms": 8,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": [
+    6,
+    "Lần"
+   ]
+  }
+ ],
+ "sources": [
+  "https://www.imf.org/external/pubs/ft/fandd/2015/03/bessen.htm",
+  "https://www.oxfordmartin.ox.ac.uk/downloads/academic/The_Future_of_Employment.pdf"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "=AI": "ây ai",
+  "nobel": "Nô-ben"
+ },
+ "imgs": {}
+}

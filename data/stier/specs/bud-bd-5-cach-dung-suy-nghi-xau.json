@@ -1,0 +1,272 @@
+{
+ "theme": "bud",
+ "format": "ba-dieu",
+ "hook_type": "menh-lenh",
+ "open_shot": "pho-dem",
+ "voice": "Ngọc Trân",
+ "music": "clean_soul.mp3",
+ "gap": 0.15,
+ "title": "5 cách dừng một suy nghĩ xấu (Kinh Trung Bộ 20)",
+ "kicker": "NĂM CÁCH",
+ "sub": "TRUNG BỘ 20 · AN TRÚ TẦM",
+ "acc": [
+  "ý",
+  "nghĩ",
+  "tâm"
+ ],
+ "lines": [
+  "Một ý nghĩ xấu cứ quay lại? Thử lần lượt năm cách này.",
+  "Đức Phật dạy trong Kinh An Trú Tầm, diễn ý:",
+  "Một: thay nó bằng một ý nghĩ lành, như thợ mộc dùng chốt nhỏ đóng bật chốt to.",
+  "Hai: nhìn hậu quả của nó. Nó sẽ dẫn bạn tới đâu?",
+  "Ba: thôi để ý tới nó, như nhắm mắt trước thứ không muốn thấy.",
+  "Bốn: thả lỏng dần gốc của nó, như người đang chạy thì đi chậm, rồi đứng, rồi ngồi.",
+  "Năm, cách cuối cùng: nghiến răng, dùng tâm chế ngự tâm.",
+  "Bạn hay dùng cách số mấy? Bình luận con số, và lưu lại để làm dần."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "clip": "pexels:17303434",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "Ý NGHĨ XẤU",
+     "at": 0.0,
+     "acc": true,
+     "fx": "outline",
+     "size": 130
+    },
+    {
+     "text": "CỨ QUAY LẠI?",
+     "at": [
+      0,
+      "cứ"
+     ]
+    },
+    {
+     "text": "thử lần lượt 5 cách",
+     "at": [
+      0,
+      "Thử"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "clip": "pexels:7698695",
+   "veil": 0.6,
+   "items": [
+    {
+     "text": "KINH AN TRÚ TẦM",
+     "at": [
+      1,
+      "Kinh"
+     ],
+     "acc": true
+    },
+    {
+     "text": "Trung Bộ 20 · diễn ý",
+     "at": [
+      1,
+      "diễn"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "clip": "pexels:39660786",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "MỘT",
+     "at": [
+      2,
+      "Một"
+     ],
+     "acc": true,
+     "size": 170
+    },
+    {
+     "text": "THAY BẰNG Ý LÀNH",
+     "at": [
+      2,
+      "thay"
+     ]
+    },
+    {
+     "text": "chốt nhỏ đóng bật chốt to",
+     "at": [
+      2,
+      "chốt"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "clip": "pexels:36723589",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "HAI",
+     "at": [
+      3,
+      "Hai"
+     ],
+     "acc": true,
+     "size": 170
+    },
+    {
+     "text": "NHÌN HẬU QUẢ",
+     "at": [
+      3,
+      "nhìn"
+     ]
+    },
+    {
+     "text": "nó dẫn bạn tới đâu?",
+     "at": [
+      3,
+      "Nó"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "clip": "pexels:30267351",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "BA",
+     "at": [
+      4,
+      "Ba"
+     ],
+     "acc": true,
+     "size": 170
+    },
+    {
+     "text": "THÔI ĐỂ Ý",
+     "at": [
+      4,
+      "thôi"
+     ]
+    },
+    {
+     "text": "như nhắm mắt lại",
+     "at": [
+      4,
+      "như"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "clip": "pexels:14919185",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "BỐN",
+     "at": [
+      5,
+      "Bốn"
+     ],
+     "acc": true,
+     "size": 170
+    },
+    {
+     "text": "THẢ LỎNG GỐC",
+     "at": [
+      5,
+      "thả"
+     ]
+    },
+    {
+     "text": "chạy → đi → đứng → ngồi",
+     "at": [
+      5,
+      "như"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "TÂM CHẾ\nNGỰ TÂM",
+   "clip": "pexels:4323008",
+   "veil": 0.6,
+   "fx": "zoom",
+   "sub": "NĂM · CÁCH CUỐI CÙNG"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "clip": "pexels:37892216",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "SỐ MẤY?",
+     "at": [
+      7,
+      "số"
+     ],
+     "acc": true,
+     "size": 150
+    },
+    {
+     "text": "bình luận con số",
+     "at": [
+      7,
+      "Bình"
+     ],
+     "sm": true
+    },
+    {
+     "text": "LƯU LẠI",
+     "at": [
+      7,
+      "lưu"
+     ],
+     "acc": true
+    },
+    {
+     "text": "để làm dần",
+     "at": [
+      7,
+      "làm"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "description": "Kinh Trung Bộ 20 (An trú tầm), diễn ý: khi ý nghĩ bất thiện cứ khởi lên — (1) thay bằng một tướng thiện, như thợ mộc dùng chốt nhỏ đóng bật chốt to; (2) quán sát hậu quả của nó; (3) không để ý, không tác ý tới nó; (4) lắng dịu dần gốc của nó, như người đang đi nhanh thì đi chậm, đứng, rồi ngồi; (5) nghiến răng, ép lưỡi lên vòm miệng, dùng tâm chế ngự tâm.\n\nNguồn: MN 20, bản dịch Bhikkhu Sujato (CC0): https://suttacentral.net/mn20/en/sujato\nLời kinh là diễn ý; phần bình giải là của kênh.",
+ "tags": [
+  "suy nghĩ tiêu cực",
+  "kinh an trú tầm",
+  "lời phật dạy",
+  "chánh niệm",
+  "phật pháp"
+ ],
+ "sources": [
+  "https://suttacentral.net/mn20/en/sujato"
+ ]
+}

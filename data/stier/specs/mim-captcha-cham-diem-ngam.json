@@ -1,0 +1,186 @@
+{
+ "theme": "mim",
+ "title": "Từ 2018, có loại kiểm tra “bạn có phải người không” mà bạn không hề nhìn thấy",
+ "description": "Tháng 10/2018, Google giới thiệu một phiên bản mã xác nhận không cần người dùng làm gì: không chữ méo, không ô ảnh, không ô tick. Hệ thống chạy ngầm trong trang web và trả về một điểm số cho biết lượt truy cập đáng ngờ tới đâu; chủ trang web tự quyết làm gì với điểm số ấy (Google Security Blog, 29/10/2018). Tiện hơn, nhưng người dùng bị chấm điểm mà không biết. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (9 phút): https://youtu.be/CAYQtYA1NJA (công khai từ 20:00 ngày 22/10).",
+ "tags": [
+  "recaptcha v3",
+  "google",
+  "quyền riêng tư",
+  "captcha",
+  "mã xác nhận",
+  "tôi không phải người máy",
+  "công nghệ quanh ta",
+  "mind in the machine"
+ ],
+ "sub": "GOOGLE · 10/2018",
+ "acc": [
+  "không",
+  "ngầm",
+  "điểm",
+  "biết",
+  "chấm"
+ ],
+ "kicker": "CÔNG NGHỆ QUANH TA",
+ "lines": [
+  "Có một bài kiểm tra bạn làm rất nhiều lần, mà chưa từng nhìn thấy.",
+  "Tháng 10 năm 2018, Google ra một kiểu mã xác nhận mới.",
+  "Không chữ méo. Không ô ảnh. Cũng không có ô nào để tick.",
+  "Nó chạy ngầm trong trang web, và không hỏi bạn câu nào.",
+  "Nó chỉ chấm cho mỗi lượt truy cập một điểm số, xem lượt ấy đáng ngờ tới đâu.",
+  "Trước đây, bạn biết mình đang bị kiểm tra.",
+  "Giờ thì bạn bị chấm điểm, mà không hề hay biết."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MỘT BÀI KIỂM TRA",
+     "at": 0.0
+    },
+    {
+     "text": "BẠN CHƯA TỪNG NHÌN THẤY",
+     "at": [
+      0,
+      "mà"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7362704",
+   "ms": 10,
+   "veil": 0.58
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "THÁNG 10 NĂM 2018",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "một kiểu mã xác nhận mới",
+     "at": [
+      1,
+      "một"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34771072",
+   "ms": 6,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "KHÔNG CÒN GÌ ĐỂ LÀM",
+   "cards": [
+    {
+     "k": "KHÔNG",
+     "v": "CHỮ MÉO",
+     "at": [
+      2,
+      "chữ"
+     ]
+    },
+    {
+     "k": "KHÔNG",
+     "v": "Ô ẢNH",
+     "at": [
+      2,
+      "ô"
+     ]
+    },
+    {
+     "k": "KHÔNG",
+     "v": "Ô ĐỂ TICK",
+     "at": [
+      2,
+      "Cũng"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "CHẠY NGẦM",
+   "sub": "KHÔNG HỎI BẠN CÂU NÀO"
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "to": 0.9,
+   "label": "ĐIỂM SỐ CHO MỖI LƯỢT TRUY CẬP · CON SỐ MINH HOẠ",
+   "until": [
+    4,
+    "số,"
+   ],
+   "sub": {
+    "text": "THEO GOOGLE SECURITY BLOG, 29/10/2018",
+    "at": [
+     4,
+     "xem"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Điều vừa đổi",
+   "nodes": [
+    {
+     "text": "trước: biết mình đang thi",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      5,
+      "bạn"
+     ],
+     "shape": "none",
+     "w": 760
+    },
+    {
+     "text": "giờ: bị chấm mà không hay",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "bị"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 800
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://security.googleblog.com/2018/10/introducing-recaptcha-v3-new-way-to.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "google": "Gu-gồ",
+  "tick": "tích"
+ },
+ "imgs": {}
+}

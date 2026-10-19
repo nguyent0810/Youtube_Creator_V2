@@ -1,0 +1,177 @@
+{
+ "theme": "mim",
+ "title": "Hồng Kông 2024: cả cuộc họp video là giả, công ty mất 200 triệu đô la Hồng Kông",
+ "description": "Tháng 1/2024 ở Hồng Kông, một nhân viên tài chính của công ty đa quốc gia nhận email như từ giám đốc tài chính, rồi được mời vào một cuộc họp video với những gương mặt, giọng nói quen. Theo cảnh sát Hồng Kông, anh chuyển khoảng 200 triệu đô la Hồng Kông (khoảng 25 triệu USD) qua 15 lần vào 5 tài khoản. Không ai trong cuộc họp là người thật; theo trả lời trước Hội đồng Lập pháp (6/2024), cuộc họp được ghi hình sẵn, dựng từ video và giọng nói công khai của người bị giả mạo. Công ty Arup về sau xác nhận là nạn nhân. Vụ lừa lộ ra khi nhân viên tự liên hệ trụ sở. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ về AI giả giọng lên kênh tối 26/10.",
+ "tags": [
+  "deepfake hồng kông",
+  "arup",
+  "cuộc họp video giả",
+  "ai giả giọng",
+  "deepfake giọng nói",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "AI VÀ GIỌNG NÓI",
+ "sub": "HỒNG KÔNG · 2024",
+ "acc": [
+  "giả",
+  "hai",
+  "mười",
+  "thật",
+  "tự"
+ ],
+ "lines": [
+  "Một cuộc họp video, mà không một ai trong đó là người thật.",
+  "Hồng Kông, tháng 1 năm 2024. Một nhân viên tài chính nhận email từ sếp, nói về một giao dịch bí mật.",
+  "Anh ta nghi. Rồi anh ta được mời vào một cuộc họp video.",
+  "Mặt quen. Giọng quen. Anh ta hết nghi.",
+  "Anh chuyển khoảng hai trăm triệu đô la Hồng Kông, chia làm mười lăm lần.",
+  "Theo nhà chức trách, cuộc họp ấy được ghi hình sẵn, dựng từ video công khai trên mạng.",
+  "Vụ lừa chỉ lộ ra, khi anh ta tự gọi về trụ sở."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MỘT CUỘC HỌP VIDEO",
+     "at": 0.0
+    },
+    {
+     "text": "KHÔNG AI LÀ NGƯỜI THẬT",
+     "at": [
+      0,
+      "không"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:8522975",
+   "veil": 0.55
+  },
+  {
+   "type": "timeline",
+   "at": 1,
+   "items": [
+    {
+     "year": "01.2024",
+     "text": "email “từ sếp”: giao dịch bí mật",
+     "at": [
+      1,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "year": "nghi ngờ",
+     "text": "rồi được mời vào họp video",
+     "at": [
+      2,
+      "Rồi"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "MẶT QUEN · GIỌNG QUEN",
+   "sub": "ANH TA HẾT NGHI"
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "to": 200,
+   "suffix": " TRIỆU",
+   "label": "ĐÔ LA HỒNG KÔNG · CHIA 15 LẦN, VÀO 5 TÀI KHOẢN",
+   "until": [
+    4,
+    "triệu"
+   ],
+   "sub": {
+    "text": "KHOẢNG 25 TRIỆU USD · THEO CẢNH SÁT HỒNG KÔNG",
+    "at": [
+     4,
+     "chia"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "GHI HÌNH SẴN",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "dựng từ video công khai trên mạng",
+     "at": [
+      5,
+      "dựng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7644029",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 5
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Lộ ra khi nào?",
+   "nodes": [
+    {
+     "text": "khi anh ta tự gọi",
+     "x": 0.5,
+     "y": 0.32,
+     "at": [
+      6,
+      "khi"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "về trụ sở chính",
+     "x": 0.5,
+     "y": 0.66,
+     "at": [
+      6,
+      "về"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 560
+    }
+   ],
+   "note": "KIỂM TRA BẰNG KÊNH DO CHÍNH MÌNH CHỌN"
+  }
+ ],
+ "sources": [
+  "https://www.info.gov.hk/gia/general/202406/26/P2024062600192.htm",
+  "https://edition.cnn.com/2024/02/04/asia/deepfake-cfo-scam-hong-kong-intl-hnk/index.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "=AI": "ây ai",
+  "email": "i-meo"
+ },
+ "imgs": {}
+}

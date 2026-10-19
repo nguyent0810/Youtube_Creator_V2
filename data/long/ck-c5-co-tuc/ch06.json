@@ -1,0 +1,144 @@
+{
+ "title": "Khi nào phép tính này không đúng với bạn",
+ "lines": [
+  {
+   "t": "Và giờ là phần mình luôn giữ ở cuối mỗi video.",
+   "p": 0.8
+  },
+  {
+   "t": "Những lúc mà các con số vừa rồi không còn đúng với bạn.",
+   "p": 1.0
+  },
+  "Thứ nhất, giá cổ phiếu ví dụ, mức cổ tức và mức phí giao dịch đều là giả định. Mỗi công ty chứng khoán thu một mức phí khác.",
+  "Thứ hai, ngày giao dịch không hưởng quyền, ngày đăng ký cuối cùng và ngày trả tiền luôn ghi trong thông báo của từng doanh nghiệp. Hãy đọc đúng văn bản ấy.",
+  {
+   "t": "Thứ ba, giá tham chiếu chỉ là điểm xuất phát. Trong phiên, giá vẫn lên xuống theo cung cầu, như mọi ngày khác.",
+   "p": 1.0
+  },
+  "Nên lần tới khi gặp một tờ thông báo cổ tức, bạn có thể tự hỏi ba câu.",
+  "Một: tỷ lệ trên mệnh giá này, đổi ra tỷ suất trên giá mình mua, là bao nhiêu?",
+  "Hai: ngày giao dịch không hưởng quyền là ngày nào, và giá tham chiếu hôm ấy sẽ được điều chỉnh bao nhiêu?",
+  {
+   "t": "Ba: cổ tức trả bằng tiền hay bằng cổ phiếu, và sau thuế mình thực nhận bao nhiêu?",
+   "p": 1.0
+  },
+  "Ba câu ấy không nói cổ phiếu nào tốt.",
+  {
+   "t": "Nhưng chúng giúp bạn không nhầm một miếng bánh được cắt ra, với một cái bánh to thêm.",
+   "p": 1.0
+  },
+  "Còn bạn, lần đầu nhận cổ tức, bạn có bất ngờ khi thấy giá cổ phiếu giảm đúng hôm ấy không?",
+  "Kể cho mình nghe ở phần bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "PHẦN CUỐI",
+   "title": "KHI NÀO PHÉP TÍNH\nKHÔNG ĐÚNG VỚI BẠN",
+   "sub": "PHẦN GIỮ Ở CUỐI MỖI VIDEO",
+   "vid": "6980366",
+   "ms": 10,
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Và"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "PHÉP TÍNH CÒN GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "1",
+     "v": "GIÁ, CỔ TỨC, PHÍ: VÍ DỤ",
+     "at": 2
+    },
+    {
+     "k": "2",
+     "v": "NGÀY CHỐT: ĐỌC THÔNG BÁO GỐC",
+     "at": 3
+    },
+    {
+     "k": "3",
+     "v": "GIÁ THAM CHIẾU = ĐIỂM XUẤT PHÁT",
+     "at": 4
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "BA CÂU KHI ĐỌC THÔNG BÁO CỔ TỨC",
+   "rows": [
+    {
+     "k": "1",
+     "v": "ĐỔI RA TỶ SUẤT TRÊN GIÁ MUA?",
+     "at": 6
+    },
+    {
+     "k": "2",
+     "v": "NGÀY NÀO · GIÁ CHỈNH BAO NHIÊU?",
+     "at": 7
+    },
+    {
+     "k": "3",
+     "v": "TIỀN HAY CỔ PHIẾU · SAU THUẾ?",
+     "at": 8
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 9,
+   "vid": "5615174",
+   "ms": 16,
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "KHÔNG NÓI CỔ PHIẾU NÀO TỐT",
+     "at": 9,
+     "sm": true
+    },
+    {
+     "text": "MIẾNG BÁNH CẮT RA ≠ CÁI BÁNH TO THÊM",
+     "at": 10,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 11,
+   "text": "Lần đầu nhận cổ tức, bạn có bất ngờ\nkhi giá giảm đúng hôm ấy?"
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "KỂ CHO MÌNH NGHE",
+     "at": 12
+    },
+    {
+     "text": "Ở PHẦN BÌNH LUẬN",
+     "at": [
+      12,
+      "ở"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "GIỚI HẠN",
+  "t": "KHI NÀO KHÔNG ĐÚNG VỚI BẠN"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

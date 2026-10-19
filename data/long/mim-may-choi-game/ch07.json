@@ -1,0 +1,110 @@
+{
+ "title": "Học từ con người trước",
+ "lines": [
+  {
+   "t": "Bước đầu tiên của AlphaStar giống cách một người mới học chơi.",
+   "p": 0.8
+  },
+  {
+   "t": "Xem người khác chơi.",
+   "p": 1.0
+  },
+  "Hãng làm ra trò chơi cung cấp cho DeepMind một kho ván đấu của người chơi thật, đã được ẩn danh.",
+  {
+   "t": "Cỗ máy xem những ván ấy, và học bắt chước: ở tình huống này, người chơi thường làm gì.",
+   "p": 1.0
+  },
+  "Chỉ riêng bước bắt chước này đã đủ để nó thắng trí tuệ nhân tạo dựng sẵn trong trò chơi, ở mức khó nhất, chín mươi lăm phần trăm số ván.",
+  {
+   "t": "Theo DeepMind, mức ấy tương đương một người chơi hạng vàng.",
+   "p": 1.0
+  },
+  "Một người chơi khá, nhưng còn rất xa mới tới chuyên nghiệp.",
+  "Bắt chước chỉ đưa cỗ máy tới ngang tầm những người nó đã xem.",
+  {
+   "t": "Muốn vượt lên, nó cần một cách học khác.",
+   "p": 1.0
+  },
+  "Và cách học ấy, lại quen thuộc với những ai đã xem video về AlphaGo hay máy chơi poker của kênh.",
+  "Tự chơi với chính mình.",
+  "Nhưng lần này, không phải một mình. Mà là cả một giải đấu."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "7",
+   "k": "CHƯƠNG BẢY",
+   "title": "HỌC TỪ\nCON NGƯỜI TRƯỚC",
+   "sub": "XEM NGƯỜI KHÁC CHƠI",
+   "vid": "7849218",
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU",
+   "titleAt": [
+    0,
+    null,
+    0,
+    0.05
+   ],
+   "ms": 6
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "BƯỚC MỘT · BẮT CHƯỚC",
+   "rows": [
+    {
+     "k": "DỮ LIỆU",
+     "v": "VÁN ĐẤU NGƯỜI THẬT · ẨN DANH",
+     "at": 2
+    },
+    {
+     "k": "HỌC",
+     "v": "NGƯỜI THƯỜNG LÀM GÌ",
+     "at": 3
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 95,
+   "to": 95,
+   "suffix": "%",
+   "label": "THẮNG AI DỰNG SẴN · MỨC KHÓ NHẤT",
+   "sub": {
+    "text": "≈ NGƯỜI CHƠI HẠNG VÀNG · DEEPMIND",
+    "at": 5
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "KHÁ · NHƯNG CÒN XA CHUYÊN NGHIỆP",
+     "at": 6,
+     "sm": true
+    },
+    {
+     "text": "BẮT CHƯỚC CHỈ ĐƯA TỚI NGANG NGƯỜI ĐÃ XEM",
+     "at": 7,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 10,
+   "text": "TỰ CHƠI VỚI CHÍNH MÌNH",
+   "sub": "NHƯNG LẦN NÀY · CẢ MỘT GIẢI ĐẤU",
+   "subAt": 11
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 07",
+  "t": "HỌC TỪ CON NGƯỜI TRƯỚC"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

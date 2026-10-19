@@ -1,5 +1,7 @@
 # Trạng thái sản xuất — 3 kênh
 
+> ⚠️ **File này sinh ngày 30/09 và đã cũ.** Chưa có MIM và CK, chưa phản ánh các Short BUD/CK/MIM và video dài làm ngày 12–15/10. Chạy lại `python scripts/status_report.py` trên máy sản xuất (cần `state.sqlite`, không có trong git) để làm mới.
+
 _Cập nhật 30/09/2026 14:20 · `python scripts/status_report.py`_
 
 # Trạng thái kênh Phong Thủy (FS)

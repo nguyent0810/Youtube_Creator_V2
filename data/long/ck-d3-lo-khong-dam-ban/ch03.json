@@ -1,0 +1,202 @@
+{
+ "title": "Phép toán của hố sâu",
+ "lines": [
+  {
+   "t": "Giữ cổ phiếu lỗ thường đi kèm một câu quen thuộc: chờ về bờ rồi bán.",
+   "p": 0.8
+  },
+  {
+   "t": "Hãy đặt thứ thứ ba lên cân: chiều sâu của cái hố.",
+   "p": 1.0
+  },
+  "Có một phép toán rất đơn giản mà ít ai để ý.",
+  "Lỗ mười phần trăm, bạn cần lãi khoảng mười một phần trăm để về lại chỗ cũ.",
+  "Lỗ hai mươi phần trăm, cần lãi hai mươi lăm.",
+  "Lỗ bốn mươi phần trăm, cần lãi gần sáu mươi bảy phần trăm.",
+  "Lỗ một nửa, cần lãi gấp đôi.",
+  {
+   "t": "Và đó là chưa tính tiền lãi mà số tiền ấy lẽ ra có thể sinh ra ở nơi khác, trong suốt thời gian chờ.",
+   "p": 1.0
+  },
+  "Hố càng sâu, đường leo lên càng dốc hơn đường rơi xuống.",
+  {
+   "t": "Có ví dụ thật nào không?",
+   "ask": 1
+  },
+  {
+   "t": "Có, ngay trên VN-Index.",
+   "p": 1.0
+  },
+  "Ngày sáu tháng một năm hai nghìn không trăm hai mươi hai, chỉ số đóng cửa ở một nghìn năm trăm hai mươi tám điểm.",
+  "Mười tháng sau, nó còn chín trăm mười hai điểm. Mất khoảng bốn mươi phần trăm.",
+  {
+   "t": "Từ đáy ấy, chỉ số phải tăng khoảng sáu mươi bảy phần trăm mới về lại đỉnh.",
+   "p": 1.0
+  },
+  "Và nó đã về, nhưng vào ngày hai mươi lăm tháng bảy năm hai nghìn không trăm hai mươi lăm.",
+  "Hơn ba năm rưỡi sau ngày đỉnh.",
+  {
+   "t": "Đó là cả chỉ số. Với từng cổ phiếu riêng lẻ, có mã về nhanh hơn, có mã tới giờ vẫn chưa về.",
+   "p": 1.0
+  },
+  "Chờ về bờ không sai. Nhưng nên biết trước bờ có thể xa tới đâu, và trong lúc chờ, số tiền ấy không làm được việc gì khác."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "PHÉP TOÁN\nCỦA HỐ SÂU",
+   "sub": "CHỜ VỀ BỜ RỒI BÁN",
+   "vid": "4163540",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Giữ"
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 2,
+   "title": "CẦN LÃI BAO NHIÊU ĐỂ HOÀ VỐN (%)",
+   "unit": "LÃI CẦN = LỖ ÷ (1 − LỖ)",
+   "items": [
+    {
+     "k": "LỖ 10%",
+     "v": 11.1,
+     "lbl": "+11",
+     "at": 3
+    },
+    {
+     "k": "LỖ 20%",
+     "v": 25,
+     "lbl": "+25",
+     "at": 4
+    },
+    {
+     "k": "LỖ 40%",
+     "v": 66.7,
+     "lbl": "+67",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "k": "LỖ 50%",
+     "v": 100,
+     "lbl": "+100",
+     "at": 6
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "HỐ CÀNG SÂU",
+     "at": 8,
+     "sm": true
+    },
+    {
+     "text": "LEO LÊN DỐC HƠN RƠI XUỐNG",
+     "at": [
+      8,
+      "đường"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 9,
+   "text": "Có ví dụ thật nào không?"
+  },
+  {
+   "type": "bars",
+   "at": 11,
+   "title": "VN-INDEX (ĐIỂM)",
+   "unit": "KÊNH TỰ TÍNH · VN-INDEX ĐÓNG CỬA",
+   "items": [
+    {
+     "k": "ĐỈNH 06/01/2022",
+     "v": 1528.57,
+     "lbl": "1.529",
+     "at": [
+      11,
+      "một"
+     ]
+    },
+    {
+     "k": "ĐÁY 15/11/2022",
+     "v": 911.9,
+     "lbl": "912 · −40%",
+     "at": [
+      12,
+      "chín"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 13,
+   "from": 67.6,
+   "to": 67.6,
+   "prefix": "+",
+   "suffix": "%",
+   "label": "TỪ ĐÁY PHẢI TĂNG ĐỂ VỀ LẠI ĐỈNH",
+   "sub": {
+    "text": "KÊNH TỰ TÍNH · VN-INDEX ĐÓNG CỬA",
+    "at": 13
+   }
+  },
+  {
+   "type": "slam",
+   "at": 14,
+   "text": "25/07/2025",
+   "sub": "VỀ LẠI ĐỈNH · HƠN 3 NĂM RƯỠI SAU · KÊNH TỰ TÍNH · VN-INDEX ĐÓNG CỬA",
+   "subAt": 15
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "items": [
+    {
+     "text": "TỪNG CỔ PHIẾU: CÓ MÃ VỀ NHANH HƠN",
+     "at": [
+      16,
+      "Với"
+     ],
+     "sm": true
+    },
+    {
+     "text": "CÓ MÃ TỚI GIỜ VẪN CHƯA VỀ",
+     "at": [
+      16,
+      "có",
+      1
+     ],
+     "acc": true
+    },
+    {
+     "text": "trong lúc chờ, tiền không làm được việc khác",
+     "at": [
+      17,
+      "trong"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "PHÉP TOÁN CỦA HỐ SÂU"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

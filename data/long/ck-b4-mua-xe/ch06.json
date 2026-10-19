@@ -1,0 +1,168 @@
+{
+ "title": "Khi nào phép tính này không đúng với bạn",
+ "lines": [
+  {
+   "t": "Và giờ là phần mình luôn giữ ở cuối mỗi video.",
+   "p": 0.8
+  },
+  {
+   "t": "Những lúc mà các con số vừa rồi không còn đúng với bạn.",
+   "p": 1.0
+  },
+  "Thứ nhất, nếu bạn đi rất nhiều, ví dụ chạy xe kiếm sống, hoặc đi tỉnh mỗi tuần, thì tiền đi lại khi chưa có xe sẽ cao hơn bốn triệu rất nhiều.",
+  "Thứ hai, nếu bạn có chỗ đỗ xe miễn phí, hoặc sống ở nơi giá đăng ký thấp hơn, đồng hồ sẽ chạy chậm hơn.",
+  {
+   "t": "Thứ ba, xe điện hiện được miễn lệ phí trước bạ lần đầu tới hết tháng hai năm sau, nên khoản lăn bánh sẽ khác hẳn.",
+   "p": 1.0
+  },
+  "Và lãi vay, lãi tiết kiệm, giá xe cũ, đều thay đổi theo thời gian.",
+  {
+   "t": "Kênh không dự báo chúng sẽ đi về đâu.",
+   "p": 1.0
+  },
+  "Nên thay vì một lời khuyên, đây là ba câu để bạn tự điền.",
+  "Một: mỗi tháng hiện mình chi bao nhiêu cho đi lại, và có xe thì sẽ đi nhiều hơn bao nhiêu?",
+  "Hai: nếu trả góp, khoản trả ở tháng đầu tiên sau ưu đãi chiếm bao nhiêu phần thu nhập?",
+  {
+   "t": "Ba: chiếc xe mình nhắm, sau năm năm, xe cũ cùng loại đang bán được bao nhiêu phần giá mới?",
+   "p": 1.0
+  },
+  "Trả lời xong ba câu ấy, bạn sẽ tự bật được chiếc đồng hồ của riêng mình.",
+  "Đồng hồ trên xe công nghệ thì ai cũng thấy.",
+  {
+   "t": "Đồng hồ trên xe của chính mình, chỉ người chịu ngồi tính mới thấy.",
+   "p": 1.0
+  },
+  "Còn bạn, nếu bỏ ra được tám trăm triệu hôm nay, bạn sẽ chọn lối nào trong ba lối ấy, và vì sao?",
+  "Kể cho mình nghe ở phần bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "PHẦN CUỐI",
+   "title": "KHI NÀO PHÉP TÍNH\nKHÔNG ĐÚNG VỚI BẠN",
+   "sub": "PHẦN GIỮ Ở CUỐI MỖI VIDEO",
+   "vid": "9130073",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Và"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "ĐỒNG HỒ CHẠY KHÁC ĐI KHI",
+   "rows": [
+    {
+     "k": "1",
+     "v": "BẠN ĐI RẤT NHIỀU",
+     "at": 2
+    },
+    {
+     "k": "2",
+     "v": "CÓ CHỖ ĐỖ MIỄN PHÍ · PHÍ THẤP HƠN",
+     "at": 3
+    },
+    {
+     "k": "3",
+     "v": "XE ĐIỆN: TRƯỚC BẠ 0% TỚI HẾT 02/2027",
+     "at": 4
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "LÃI VAY · LÃI TIẾT KIỆM · GIÁ XE CŨ",
+     "at": 5,
+     "sm": true
+    },
+    {
+     "text": "ĐỀU THAY ĐỔI · KÊNH KHÔNG DỰ BÁO",
+     "at": 6,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "BA CÂU TỰ ĐIỀN",
+   "rows": [
+    {
+     "k": "1",
+     "v": "ĐI LẠI MỖI THÁNG BAO NHIÊU?",
+     "at": 8
+    },
+    {
+     "k": "2",
+     "v": "THÁNG ĐẦU SAU ƯU ĐÃI · % THU NHẬP?",
+     "at": 9
+    },
+    {
+     "k": "3",
+     "v": "XE CŨ CÙNG LOẠI · CÒN BAO NHIÊU %?",
+     "at": 10
+    }
+   ],
+   "total": {
+    "k": "TRẢ LỜI XONG",
+    "v": "CÓ ĐỒNG HỒ CỦA RIÊNG MÌNH",
+    "at": 11
+   }
+  },
+  {
+   "type": "broll",
+   "at": 12,
+   "vid": "15510261",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "ĐỒNG HỒ XE CÔNG NGHỆ · AI CŨNG THẤY",
+     "at": 12
+    },
+    {
+     "text": "ĐỒNG HỒ XE CỦA MÌNH · CHỈ NGƯỜI CHỊU TÍNH MỚI THẤY",
+     "at": 13,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 14,
+   "text": "Có tám trăm triệu hôm nay,\nbạn chọn lối nào?"
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "KỂ CHO MÌNH NGHE",
+     "at": 15
+    },
+    {
+     "text": "Ở PHẦN BÌNH LUẬN",
+     "at": [
+      15,
+      "ở"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "GIỚI HẠN",
+  "t": "KHI NÀO KHÔNG ĐÚNG VỚI BẠN"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

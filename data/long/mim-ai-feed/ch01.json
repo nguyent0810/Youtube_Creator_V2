@@ -1,0 +1,407 @@
+{
+ "title": "Những người giống bạn",
+ "lines": [
+  {
+   "t": "Bộ dữ liệu Netflix trao cho các đội có hơn một trăm triệu lượt chấm điểm.",
+   "p": 0.8
+  },
+  "Của gần nửa triệu khách hàng, cho gần mười tám nghìn bộ phim, từ năm 1998 đến năm 2005.",
+  "Mỗi dòng chỉ ghi một khách hàng đã chấm một bộ phim mấy sao, vào ngày nào.",
+  "Xếp thành một cái bảng, chín mươi chín phần trăm số ô bỏ trống.",
+  {
+   "t": "Đề bài, thực chất, là điền vào những ô trống ấy.",
+   "p": 1.0
+  },
+  "Ý tưởng cốt lõi có tên là lọc cộng tác. Nói đơn giản: tìm những người giống bạn.",
+  "Trang trợ giúp của TikTok có một ví dụ.",
+  "Người A thích video số một, số hai và số ba.",
+  "Người B thích cả năm video, từ số một tới số năm.",
+  {
+   "t": "Hệ thống có thể đoán: người A cũng sẽ thích video số bốn và số năm.",
+   "p": 1.0
+  },
+  "YouTube kể một ví dụ khác: bạn hay xem quần vợt, và những người thích đúng những video ấy cũng thích nhạc jazz.",
+  "Thế là bạn có thể được gợi ý nhạc jazz, dù chưa từng xem video jazz nào.",
+  {
+   "t": "Máy không cần biết jazz là gì. Nó chỉ cần biết ai giống ai.",
+   "p": 1.0
+  },
+  "Năm 2007, sau một năm thi, đội dẫn đầu nhận giải thưởng tiến bộ đầu tiên, nhờ trộn một trăm linh bảy thuật toán lại với nhau.",
+  "Netflix chọn hai thuật toán mạnh nhất trong số đó, đưa vào hệ thống thật.",
+  "Một trong hai, nói thật đơn giản, tóm mỗi người và mỗi bộ phim thành một dãy số, như một bản đồ khẩu vị.",
+  {
+   "t": "Hai dãy số nằm gần nhau, nghĩa là gu gần nhau.",
+   "p": 1.0
+  },
+  "Phải thêm hai năm nữa, và ba đội đối thủ gộp lại thành một, mới vượt được mốc mười phần trăm.",
+  "Và khi bài thắng giải tới tay Netflix, thì chính Netflix đã đổi khác."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "NHỮNG NGƯỜI\nGIỐNG BẠN",
+   "sub": "NETFLIX PRIZE · LỌC CỘNG TÁC",
+   "vid": "5028622",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "trao"
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 0,
+   "to": 100480507,
+   "suffix": " LƯỢT CHẤM",
+   "label": "CỦA 480.189 KHÁCH HÀNG · CHO 17.770 BỘ PHIM",
+   "sub": {
+    "text": "10.1998 – 12.2005 · FEUERVERGER, HE & KHATRI · STATISTICAL SCIENCE 2012",
+    "at": 1
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "MỖI DÒNG CHỈ GHI",
+   "srcnote": "THÔNG CÁO NETFLIX 2009: CHỈ TÊN PHIM, SỐ SAO, NGÀY",
+   "rows": [
+    {
+     "k": "AI",
+     "v": "MỘT KHÁCH HÀNG",
+     "at": [
+      2,
+      "khách"
+     ]
+    },
+    {
+     "k": "PHIM",
+     "v": "MỘT BỘ PHIM",
+     "at": [
+      2,
+      "phim"
+     ]
+    },
+    {
+     "k": "SAO",
+     "v": "1 – 5",
+     "at": [
+      2,
+      "sao"
+     ]
+    },
+    {
+     "k": "NGÀY",
+     "v": "NGÀY CHẤM",
+     "at": [
+      2,
+      "ngày"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "dots",
+   "at": 3,
+   "total": 100,
+   "cols": 20,
+   "title": "XẾP THÀNH BẢNG: CỨ 100 Ô",
+   "appearDur": 0.8,
+   "groups": [
+    {
+     "from": 0,
+     "n": 99,
+     "cls": "ghost",
+     "label": "99 Ô BỎ TRỐNG",
+     "at": [
+      3,
+      "chín"
+     ]
+    },
+    {
+     "from": 99,
+     "n": 1,
+     "cls": "red",
+     "label": "1 Ô CÓ ĐIỂM",
+     "at": [
+      3,
+      "bỏ"
+     ]
+    }
+   ],
+   "srcnote": "LÀM TRÒN · CHÍNH XÁC 98,8% TRỐNG · FEUERVERGER, HE & KHATRI · STATISTICAL SCIENCE 2012",
+   "label": {
+    "k": "KHÁCH × PHIM",
+    "v": "MỖI Ô = MỘT LƯỢT CHẤM",
+    "at": 3
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "ĐỀ BÀI, THỰC CHẤT",
+     "at": 4,
+     "sm": true
+    },
+    {
+     "text": "ĐIỀN VÀO Ô TRỐNG",
+     "at": [
+      4,
+      "điền"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "LỌC CỘNG TÁC",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "collaborative filtering",
+     "at": [
+      5,
+      "lọc"
+     ],
+     "sm": true
+    },
+    {
+     "text": "TÌM NHỮNG NGƯỜI GIỐNG BẠN",
+     "at": [
+      5,
+      "tìm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 6,
+   "title": "VÍ DỤ CỦA TIKTOK",
+   "srcnote": "TRANG TRỢ GIÚP TIKTOK · ĐỌC 09.10.2026",
+   "rows": [
+    {
+     "k": "A",
+     "v": "1 · 2 · 3 · _ · _",
+     "at": 7
+    },
+    {
+     "k": "B",
+     "v": "1 · 2 · 3 · 4 · 5",
+     "at": 8
+    }
+   ],
+   "total": {
+    "k": "ĐOÁN",
+    "v": "A CŨNG THÍCH 4 · 5",
+    "at": [
+     9,
+     "đoán"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "YOUTUBE KỂ: BẠN HAY XEM QUẦN VỢT",
+     "at": 10
+    },
+    {
+     "text": "người thích đúng những video ấy",
+     "at": [
+      10,
+      "những"
+     ],
+     "sm": true
+    },
+    {
+     "text": "CŨNG THÍCH NHẠC JAZZ",
+     "at": [
+      10,
+      "jazz"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "GỢI Ý CHO BẠN: JAZZ",
+     "at": 11,
+     "acc": true
+    },
+    {
+     "text": "dù bạn chưa từng xem video jazz nào",
+     "at": [
+      11,
+      "dù"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 12,
+   "text": "AI GIỐNG AI",
+   "sub": "MÁY KHÔNG CẦN BIẾT JAZZ LÀ GÌ · VÍ DỤ CỦA YOUTUBE (GOODROW, 2021)"
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "2007 · GIẢI TIẾN BỘ",
+     "at": 13,
+     "fx": "rise"
+    },
+    {
+     "text": "TRỘN 107 THUẬT TOÁN",
+     "at": [
+      13,
+      "trộn"
+     ],
+     "acc": true,
+     "fx": "rise"
+    },
+    {
+     "text": "đội dẫn đầu sau một năm thi · blog Netflix 2012",
+     "at": [
+      13,
+      "đội"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 14,
+   "vid": "1085656",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "NETFLIX CHỌN 2 THUẬT TOÁN MẠNH NHẤT",
+     "at": 14
+    },
+    {
+     "text": "ĐƯA VÀO HỆ THỐNG THẬT",
+     "at": [
+      14,
+      "đưa"
+     ],
+     "acc": true
+    },
+    {
+     "text": "phân rã ma trận (SVD) · máy Boltzmann giới hạn (RBM)",
+     "at": [
+      14,
+      "hệ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 15,
+   "title": "BẢN ĐỒ KHẨU VỊ",
+   "srcnote": "MINH HỌA ĐƠN GIẢN HOÁ · KHÔNG PHẢI SỐ THẬT",
+   "rows": [
+    {
+     "k": "BẠN",
+     "v": "0,8  −0,2  0,5",
+     "at": [
+      15,
+      "người"
+     ]
+    },
+    {
+     "k": "PHIM",
+     "v": "0,7  −0,1  0,6",
+     "at": [
+      15,
+      "phim"
+     ]
+    }
+   ],
+   "total": {
+    "k": "GẦN",
+    "v": "GU GẦN NHAU",
+    "at": 16
+   }
+  },
+  {
+   "type": "timeline",
+   "at": 17,
+   "items": [
+    {
+     "year": "2006",
+     "text": "Cuộc thi *mở*",
+     "at": 17
+    },
+    {
+     "year": "2007",
+     "text": "Giải *tiến bộ* đầu tiên",
+     "at": [
+      17,
+      "hai"
+     ]
+    },
+    {
+     "year": "2009",
+     "text": "*3 đội gộp lại* · vượt 10%",
+     "at": [
+      17,
+      "ba"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 18,
+   "vid": "5473801",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "KHI BÀI THẮNG GIẢI TỚI TAY",
+     "at": 18,
+     "sm": true
+    },
+    {
+     "text": "NETFLIX ĐÃ ĐỔI KHÁC",
+     "at": [
+      18,
+      "đổi"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "NHỮNG NGƯỜI GIỐNG BẠN"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.13
+ }
+}

@@ -1,0 +1,115 @@
+{
+ "title": "Lá bài úp thứ nhất",
+ "lines": [
+  {
+   "t": "Lá bài úp thứ nhất là những gì bạn không được thấy.",
+   "p": 0.8
+  },
+  "Thử nghĩ như một cỗ máy.",
+  {
+   "t": "Bạn đang cầm một đôi át. Đối thủ vừa cược rất lớn.",
+   "p": 1.0
+  },
+  "Họ đang cầm bài mạnh hơn? Hay đang doạ?",
+  "Bạn không biết.",
+  {
+   "t": "Bạn chỉ biết những gì họ đã làm, và đoán những gì họ có thể đang cầm.",
+   "p": 1.0
+  },
+  "Một cỗ máy chơi cờ có thể nhìn trước nhiều nước, vì nó biết chắc thế cờ đang là gì.",
+  "Một cỗ máy chơi poker thì không có thế cờ chắc chắn nào.",
+  {
+   "t": "Nó phải cân nhắc mọi khả năng cùng một lúc, mỗi khả năng một xác suất.",
+   "p": 1.0
+  },
+  "Và còn một cái bẫy nữa.",
+  "Nếu bạn luôn cược lớn khi có bài mạnh, và luôn cược nhỏ khi bài yếu, đối thủ sẽ sớm đọc được bạn.",
+  "Một người chơi giỏi phải khó đoán.",
+  "Nhưng không phải khó đoán một cách ngẫu nhiên.",
+  "Mà khó đoán theo đúng tỉ lệ."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "LÁ BÀI ÚP THỨ NHẤT",
+   "title": "NHỮNG GÌ BẠN\nKHÔNG ĐƯỢC THẤY",
+   "sub": "THỬ NGHĨ NHƯ MỘT CỖ MÁY",
+   "vid": "6813811",
+   "ms": 10,
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU",
+   "titleAt": [
+    0,
+    "Lá"
+   ]
+  },
+  {
+   "type": "question",
+   "at": 2,
+   "text": "Đối thủ cược rất lớn.\nBài mạnh hơn? Hay đang doạ?",
+   "showAt": 3
+  },
+  {
+   "type": "myth",
+   "at": 6,
+   "mythLab": "MÁY CHƠI CỜ",
+   "myth": "BIẾT CHẮC THẾ CỜ",
+   "truthLab": "MÁY CHƠI POKER",
+   "truth": "MỌI KHẢ NĂNG · MỖI CÁI MỘT XÁC SUẤT",
+   "strikeAt": [
+    7,
+    "Một"
+   ],
+   "truthAt": [
+    8,
+    "Nó"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 9,
+   "title": "CÁI BẪY",
+   "rows": [
+    {
+     "k": "BÀI MẠNH",
+     "v": "LUÔN CƯỢC LỚN",
+     "at": [
+      10,
+      "luôn"
+     ]
+    },
+    {
+     "k": "BÀI YẾU",
+     "v": "LUÔN CƯỢC NHỎ",
+     "at": [
+      10,
+      "và"
+     ]
+    }
+   ],
+   "total": {
+    "k": "KẾT QUẢ",
+    "v": "BỊ ĐỌC VỊ",
+    "at": [
+     10,
+     "đọc"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 11,
+   "text": "KHÓ ĐOÁN THEO ĐÚNG TỈ LỆ",
+   "sub": "KHÔNG PHẢI NGẪU NHIÊN",
+   "subAt": 12
+  }
+ ],
+ "hud": {
+  "k": "LÁ BÀI ÚP 01",
+  "t": "NHỮNG GÌ BẠN KHÔNG ĐƯỢC THẤY"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

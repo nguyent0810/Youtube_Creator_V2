@@ -481,8 +481,11 @@ def test_adopt_records_a_manual_upload_with_its_real_upload_time(env):
     ch(env, "MIM").adopt("mim-ai-la-gi", vid)
     row = env["conn"].execute("SELECT state, video_id, started_at FROM upload_log WHERE slug = 'mim-ai-la-gi'").fetchone()
     assert tuple(row) == ("done", vid, "2026-10-05T01:00:00Z")
-    # Giãn nhịp MIM (60 phút) tính cả video upload tay: lượt kế tiếp sớm nhất 02:00.
-    assert ch(env, "MIM").next_upload_at() == T0 - timedelta(hours=1)
+    # Giãn nhịp MIM tính cả video upload tay: lượt kế tiếp = giờ upload thật (01:00) + khoảng giãn của kênh
+    # (60 phút tới 12/10/2026, nay 1 phút), không sớm hơn "bây giờ".
+    from factory import channels
+    gap = timedelta(minutes=channels.CHANNELS["MIM"]["pacing"][0])
+    assert ch(env, "MIM").next_upload_at() == max(env["clock"].t, T0 - timedelta(hours=2) + gap)
 
 
 def test_adopt_uses_now_when_published_at_is_in_the_future(env):
@@ -515,3 +518,21 @@ def test_adopt_is_idempotent_for_the_same_video_and_refuses_a_different_one(env)
     c.adopt("mim-a", v1)                                  # chạy lại: không đổi gì
     with pytest.raises(PublishError):
         c.adopt("mim-a", v2)
+
+
+class TickingClock(Clock):
+    """Đồng hồ thật: mỗi lần đọc trễ hơn lần trước một chút (như datetime.now)."""
+
+    def __call__(self):
+        self.t += timedelta(microseconds=7)
+        return self.t
+
+
+def test_a_channel_with_nothing_recent_uploads_now_even_on_a_ticking_clock(tmp_path):
+    """Lỗi thật 06/10/2026 (kênh MIM): _take đọc `now`, rồi next_upload_at() đọc đồng hồ LẦN NỮA -> mốc luôn
+    trễ hơn `now` vài micro-giây -> PacingHold vô hạn dù 24h qua kênh không vượt nhịp."""
+    video = tmp_path / "final.mp4"
+    video.write_bytes(b"\0" * 64)
+    with store.connect(tmp_path / "state.sqlite") as conn:
+        env = {"clock": TickingClock(), "yt": FakeYouTube(), "conn": conn, "video": video, "tmp": tmp_path}
+        assert ch(env).upload(up(env)).video_id

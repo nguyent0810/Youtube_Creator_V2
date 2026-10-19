@@ -1,0 +1,165 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "truoc-sau",
+ "hook_type": "pov",
+ "open_shot": "cai-nhau",
+ "voice": "Thanh Bình",
+ "music": "ether_vox.mp3",
+ "gap": 0.25,
+ "title": "Trước/Sau: đặt mình vào chỗ người khác",
+ "kicker": "TRƯỚC / SAU",
+ "sub": "KINH PHÁP CÚ · KỆ 129–130",
+ "acc": [
+  "sợ",
+  "hại"
+ ],
+ "lines": [
+  "Bạn sắp nói một câu, làm người khác đau.",
+  "Trước: chỉ nghĩ mình đúng, và nói cho hả giận.",
+  "Kệ một trăm hai mươi chín, diễn ý: ai cũng sợ roi gậy, ai cũng sợ chết.",
+  "Lấy mình làm ví dụ, đừng hại ai, đừng khiến ai hại.",
+  "Sau: mình sợ đau, người cũng vậy. Câu ấy, có thể không nói.",
+  "Bạn từng đổi vai lần nào chưa? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "SẮP NÓI CÂU ĐAU?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "làm người khác đau",
+     "at": [
+      0,
+      "làm"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6670761"
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "CHỈ NGHĨ\nMÌNH ĐÚNG",
+   "fx": "zoom",
+   "sub": "TRƯỚC"
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 1,
+   "suffix": " NỖI SỢ",
+   "label": "AI CŨNG CÓ",
+   "until": [
+    2,
+    "chết."
+   ]
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Kệ 129",
+   "nodes": [
+    {
+     "text": "LẤY MÌNH LÀM VÍ DỤ",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      3,
+      "ví"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "ĐỪNG HẠI AI",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      3,
+      "đừng"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      3,
+      "đừng"
+     ]
+    }
+   ],
+   "note": "DHP 129–130 · DIỄN Ý"
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "SAU",
+   "cards": [
+    {
+     "k": "MÌNH",
+     "v": "SỢ ĐAU",
+     "at": [
+      4,
+      "mình"
+     ]
+    },
+    {
+     "k": "NGƯỜI",
+     "v": "CŨNG VẬY",
+     "at": [
+      4,
+      "người"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "TỪNG ĐỔI VAI?",
+     "at": [
+      5,
+      "Bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận nhé",
+     "at": [
+      5,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:9750741"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp129-145/en/sujato"
+ ],
+ "description": "Trước/Sau: đặt mình vào chỗ người khác\n\nNguồn: https://suttacentral.net/dhp129-145/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

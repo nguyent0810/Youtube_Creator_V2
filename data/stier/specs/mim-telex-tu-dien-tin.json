@@ -1,0 +1,198 @@
+{
+ "theme": "mim",
+ "title": "Kiểu gõ Telex có gốc từ thời điện tín: AA thành Â, thêm S thành dấu sắc, khoảng một trăm năm trước",
+ "description": "Kiểu gõ Telex (AA → Â, thêm S → dấu sắc) bắt nguồn từ quy ước dùng ở Việt Nam trong những năm 1920–1930 để truyền chữ có dấu qua điện tín, khi máy chỉ biết chữ không dấu (Wikipedia: Telex input method). Gõ tin nhắn tiếng Việt hôm nay là dùng hai phát minh thời điện tín: hàng phím QWERTY và cách bỏ dấu ấy. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/KJ5y_Ypnc4U (công khai từ 20:00 ngày 05/11).",
+ "tags": [
+  "kiểu gõ telex",
+  "gõ tiếng việt",
+  "bàn phím qwerty",
+  "trận đấu người máy",
+  "trí tuệ nhân tạo",
+  "lịch sử máy tính",
+  "mind in the machine"
+ ],
+ "sub": "ĐIỆN TÍN · 1920S",
+ "acc": [
+  "Telex",
+  "dấu",
+  "điện",
+  "tín",
+  "trăm"
+ ],
+ "kicker": "CHUYỆN CÔNG NGHỆ",
+ "lines": [
+  "Gõ hai chữ A thành chữ Â. Cách gõ ấy có gốc từ khoảng một trăm năm trước.",
+  "Kiểu gõ Telex, thêm chữ S thành dấu sắc, thêm chữ F thành dấu huyền.",
+  "Nó bắt nguồn từ thời điện tín, những năm 1920 và 1930.",
+  "Khi ấy, người ta phải gửi chữ có dấu qua những cỗ máy chỉ biết chữ không dấu.",
+  "Nên họ quy ước: dùng chữ cái thường để thay cho dấu.",
+  "Vậy là mỗi lần gõ một tin nhắn, bạn đang dùng hai phát minh của thời điện tín: hàng phím QWERTY, và cách bỏ dấu ấy.",
+  "Bàn phím trong túi bạn mang theo cả một thế kỷ lịch sử."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "AA → Â",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "cách gõ có gốc trăm năm",
+     "at": [
+      0,
+      "Cách"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6962433",
+   "veil": 0.55
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "KIỂU GÕ TELEX",
+   "cards": [
+    {
+     "k": "THÊM S",
+     "v": "DẤU SẮC",
+     "at": [
+      1,
+      "thêm"
+     ]
+    },
+    {
+     "k": "THÊM F",
+     "v": "DẤU HUYỀN",
+     "at": [
+      1,
+      "thêm",
+      1
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "THỜI ĐIỆN TÍN",
+     "at": 2,
+     "acc": true
+    },
+    {
+     "text": "những năm 1920–1930",
+     "at": [
+      2,
+      "những"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6037662",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 2
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Bài toán",
+   "nodes": [
+    {
+     "text": "chữ có dấu",
+     "x": 0.5,
+     "y": 0.3,
+     "at": 3,
+     "shape": "none",
+     "w": 480
+    },
+    {
+     "text": "máy chỉ biết chữ không dấu",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      3,
+      "những"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 780
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "CHỮ CÁI THAY CHO DẤU",
+   "sub": "MỘT QUY ƯỚC CỦA THỜI ĐIỆN TÍN"
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 2,
+   "to": 2,
+   "suffix": " PHÁT MINH",
+   "label": "THỜI ĐIỆN TÍN TRONG MỖI TIN NHẮN",
+   "sub": {
+    "text": "QWERTY · CÁCH BỎ DẤU TELEX",
+    "at": [
+     5,
+     "hàng"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MỘT THẾ KỶ",
+     "at": [
+      6,
+      "một"
+     ],
+     "acc": true
+    },
+    {
+     "text": "trong bàn phím của bạn",
+     "at": 6,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:3945445",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 6
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Telex_(input_method)"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "=QWERTY": "quớt-ti",
+  "qwerty": "quớt-ti",
+  "=A": "a",
+  "=S": "ét",
+  "=Â": "ớ",
+  "telex": "Tê-lếch"
+ },
+ "imgs": {}
+}

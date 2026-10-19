@@ -1,0 +1,245 @@
+{
+ "theme": "mim",
+ "title": "Năm 2012, hai chiếc card chơi game làm cả ngành AI quay đầu",
+ "description": "Ở cuộc thi nhận dạng ảnh ImageNet năm 2012, nhóm của Alex Krizhevsky, Ilya Sutskever và Geoffrey Hinton (Đại học Toronto) mang tới mạng nơ-ron AlexNet, huấn luyện trong 5–6 ngày trên hai card đồ hoạ GTX 580 3GB. Lỗi top-5 của họ là 15,3%, đội đứng thứ hai 26,2% (theo chính bài báo NIPS 2012). Card đồ hoạ vốn làm ra để tính song song hàng triệu điểm ảnh, đúng kiểu tính mà mạng nơ-ron cần. Toàn cảnh 70 năm nằm trong video dài \"AI Đã Chết Hai Lần\" trên kênh Mind in the Machine. Giọng đọc tổng hợp.",
+ "tags": [
+  "alexnet",
+  "imagenet",
+  "gpu",
+  "card đồ hoạ",
+  "học sâu",
+  "lịch sử ai",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "LỊCH SỬ AI",
+ "sub": "ALEXNET · 2012",
+ "acc": [
+  "hai",
+  "card",
+  "lăm",
+  "sáu",
+  "song"
+ ],
+ "lines": [
+  "Hai chiếc card chơi game, làm cả ngành AI quay đầu.",
+  "Năm 2012, có một cuộc thi nhận dạng ảnh, tên là ImageNet.",
+  "Một nhóm ở Đại học Toronto mang tới mạng nơ-ron AlexNet.",
+  "Họ huấn luyện nó năm, sáu ngày, trên đúng hai chiếc card GTX 580.",
+  "Kết quả? AlexNet đoán sai mười lăm phần trăm.",
+  "Đội đứng thứ hai, sai tới hai mươi sáu.",
+  "Vì sao lại là card chơi game? Vì nó sinh ra để vẽ hàng triệu điểm ảnh cùng một lúc.",
+  "Mà mạng nơ-ron thì cần đúng kiểu tính song song ấy."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "2 CARD CHƠI GAME",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "LÀM CẢ NGÀNH AI QUAY ĐẦU",
+     "at": [
+      0,
+      "làm"
+     ]
+    }
+   ],
+   "clip": "pexels:6755168",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "IMAGENET · 2012",
+     "at": 1
+    },
+    {
+     "text": "cuộc thi nhận dạng ảnh",
+     "at": [
+      1,
+      "cuộc"
+     ],
+     "sm": true
+    },
+    {
+     "text": "ĐẠI HỌC TORONTO",
+     "at": [
+      2,
+      "Toronto"
+     ],
+     "sm": true
+    },
+    {
+     "text": "ALEXNET",
+     "at": [
+      2,
+      "AlexNet"
+     ],
+     "acc": true
+    }
+   ],
+   "at": 1
+  },
+  {
+   "type": "photo",
+   "at": 3,
+   "img": "gtx580",
+   "mode": "print",
+   "tone": "color",
+   "label": {
+    "text": "CHIP CỦA GTX 580 · ẢNH CC0",
+    "at": [
+     3,
+     "card"
+    ],
+    "y": 1290
+   },
+   "stamp": {
+    "text": "× 2 · 5–6 NGÀY",
+    "at": [
+     3,
+     "hai"
+    ],
+    "x": 200,
+    "y": 1090
+   }
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "to": 15,
+   "suffix": "%",
+   "label": "ALEXNET ĐOÁN SAI",
+   "until": [
+    4,
+    "lăm"
+   ],
+   "sub": {
+    "text": "LỖI TOP-5: 15,3% · BÀI BÁO NIPS 2012",
+    "at": [
+     4,
+     "phần"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "TỈ LỆ ĐOÁN SAI · IMAGENET 2012",
+   "cards": [
+    {
+     "k": "ALEXNET",
+     "v": "15,3%",
+     "at": [
+      5,
+      null,
+      0,
+      0.05
+     ],
+     "c": "acc"
+    },
+    {
+     "k": "ĐỘI THỨ HAI",
+     "v": "26,2%",
+     "at": [
+      5,
+      "hai",
+      1
+     ]
+    }
+   ],
+   "note": "LỖI TOP-5 · NGUỒN: BÀI BÁO NIPS 2012"
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Vì sao là card chơi game?",
+   "nodes": [
+    {
+     "text": "vẽ triệu điểm ảnh",
+     "x": 0.5,
+     "y": 0.26,
+     "at": [
+      6,
+      "vẽ"
+     ]
+    },
+    {
+     "text": "TÍNH SONG SONG",
+     "x": 0.5,
+     "y": 0.54,
+     "at": [
+      7,
+      "song"
+     ],
+     "c": "acc",
+     "shape": "circle"
+    },
+    {
+     "text": "mạng nơ-ron",
+     "x": 0.5,
+     "y": 0.82,
+     "at": [
+      7,
+      "mạng"
+     ]
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      6,
+      "cùng"
+     ],
+     "bend": 0
+    },
+    {
+     "from": 2,
+     "to": 1,
+     "at": [
+      7,
+      "cần"
+     ],
+     "bend": 0
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://papers.nips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html"
+ ],
+ "say": {
+  "=AI": "ây ai",
+  "imagenet": "I-mịt-nét",
+  "toronto": "To-ron-tô",
+  "alexnet": "A-léc-nét",
+  "gtx": "gi ti ích",
+  "=580": "năm tám mươi"
+ },
+ "imgs": {
+  "gtx580": "File:NVIDIA@40nm@Fermi@GF110@GeForce GTX 580@UA10B338 1041A1 N2Y540.000 GF110-375-A1 DSC04152 (27576804994).jpg"
+ },
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.4
+  }
+ }
+}

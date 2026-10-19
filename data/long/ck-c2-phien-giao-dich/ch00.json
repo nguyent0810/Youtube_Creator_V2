@@ -1,0 +1,394 @@
+{
+ "title": "Thứ Hai, chín tháng ba",
+ "lines": [
+  "Giả sử chiều thứ Hai, chín tháng ba năm hai nghìn không trăm hai mươi sáu, bạn mở bảng giá trên điện thoại.",
+  "Hơn một nửa số mã trên sàn HOSE hiện cùng một màu: xanh lơ.",
+  {
+   "t": "Trên bảng giá, xanh lơ nghĩa là giá sàn, mức thấp nhất một cổ phiếu được phép xuống trong ngày.",
+   "p": 1.0
+  },
+  "Hôm ấy, giữa lúc căng thẳng ở Trung Đông làm thị trường thế giới và giá dầu chao đảo, VN-Index mất một trăm mười lăm điểm.",
+  "Đây là lần đầu tiên chỉ số giảm hơn một trăm điểm trong một phiên.",
+  "Trên HOSE, hai trăm ba mươi ba mã giảm sàn, chỉ mười một mã tăng.",
+  {
+   "t": "Theo kênh tự tính, cổ phiếu đứng giữa hàng hôm ấy giảm khoảng sáu phẩy tám phần trăm, tức là sát mức sàn.",
+   "p": 1.0
+  },
+  "Nhưng chi tiết lạ nhất không nằm ở con số.",
+  "Hết phiên, hàng loạt mã vẫn còn hàng triệu cổ phiếu chờ bán ở giá sàn, mà không còn ai đặt mua ở giá ấy.",
+  {
+   "t": "Khoan đã. Cổ phiếu của mình, mình muốn bán mà cũng không bán được à?",
+   "ask": 1
+  },
+  "Đúng vậy.",
+  {
+   "t": "Và có những người còn không được đặt lệnh bán, dù đã mua cổ phiếu từ thứ Sáu tuần trước.",
+   "p": 1.0
+  },
+  "Để hiểu vì sao, mình sẽ đi cùng phiên chợ hôm ấy theo chiếc đồng hồ trên màn hình, từ chín giờ sáng tới ba giờ chiều, rồi thêm hai ngày sau tiếng chuông.",
+  "Đây là Biểu Đồ Biết Nói. Tiền bạc, giải thích bằng dữ liệu.",
+  "Và đây là bài hai của khoá Chứng khoán từ số không.",
+  "Video chỉ nhằm giáo dục, không phải lời khuyên mua hay bán bất kỳ cổ phiếu nào."
+ ],
+ "scenes": [
+  {
+   "type": "date",
+   "vid": "35124446",
+   "illus": "VIDEO MINH HỌA",
+   "day": "CHIỀU THỨ HAI",
+   "date": "09.03.2026",
+   "sub": {
+    "text": "VIDEO GIÁO DỤC · KHÔNG PHẢI LỜI KHUYÊN MUA, BÁN CỔ PHIẾU",
+    "at": [
+     0,
+     "Giả"
+    ]
+   }
+  },
+  {
+   "type": "breadth",
+   "at": 1,
+   "base": "prev",
+   "date": "2026-03-09",
+   "title": "395 CỔ PHIẾU HOSE · MỖI Ô MỘT MÃ",
+   "range": "09/03/2026 · SO VỚI PHIÊN TRƯỚC",
+   "drawAt": [
+    1,
+    "Hơn"
+   ],
+   "until": [
+    1,
+    "xanh"
+   ],
+   "chipAt": [
+    2,
+    "Trên"
+   ],
+   "chip": "XANH LƠ = GIÁ SÀN"
+  },
+  {
+   "type": "candles",
+   "at": 3,
+   "series": "vnindex",
+   "from": "2026-02-02",
+   "to": "2026-04-03",
+   "drawAt": [
+    3,
+    "Hôm"
+   ],
+   "until": [
+    3,
+    "căng"
+   ],
+   "title": "VN-INDEX · KHUNG NGÀY",
+   "range": "02/2026 – 04/2026",
+   "ind": [],
+   "source": "DỮ LIỆU: VN-INDEX (VNSTOCK/VCI) · \"LẦN ĐẦU > 100 ĐIỂM\": NHÂN DÂN, MEKONG ASEAN 09/03/2026 · KHÔNG PHẢI KHUYẾN NGHỊ",
+   "marks": [
+    {
+     "date": "2026-03-09",
+     "text": "09/03: −115,05 ĐIỂM · ĐÓNG CỬA 1.652,79",
+     "pos": "below",
+     "tone": "down",
+     "at": [
+      3,
+      "mất"
+     ],
+     "dx": -120,
+     "dy": 30
+    },
+    {
+     "date": "2026-03-09",
+     "text": "LẦN ĐẦU GIẢM > 100 ĐIỂM / PHIÊN",
+     "pos": "above",
+     "tone": "gold",
+     "at": [
+      4,
+      "Đây"
+     ],
+     "dx": 260,
+     "dy": -30
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "HOSE · 09/03/2026",
+   "rows": [
+    {
+     "k": "GIẢM",
+     "v": "366 MÃ",
+     "at": [
+      5,
+      "Trên"
+     ]
+    },
+    {
+     "k": "ĐỨNG GIÁ",
+     "v": "10 MÃ",
+     "at": [
+      5,
+      "Trên",
+      0,
+      0.3
+     ]
+    },
+    {
+     "k": "TĂNG",
+     "v": "11 MÃ",
+     "at": [
+      5,
+      "mười"
+     ]
+    }
+   ],
+   "total": {
+    "k": "TRONG ĐÓ GIẢM SÀN",
+    "v": "233 MÃ",
+    "at": [
+     5,
+     "hai"
+    ]
+   },
+   "srcnote": "Báo Nhân Dân, Thời báo Tài chính 09/03/2026 · toàn sàn HOSE"
+  },
+  {
+   "type": "breadth",
+   "at": 6,
+   "base": "prev",
+   "date": "2026-03-09",
+   "title": "XẾP HÀNG: GIẢM NHIỀU NHẤT → TĂNG NHIỀU NHẤT",
+   "range": "09/03/2026 · SO VỚI PHIÊN TRƯỚC",
+   "drawAt": [
+    6,
+    "Theo"
+   ],
+   "until": [
+    6,
+    "giữa"
+   ],
+   "medianAt": [
+    6,
+    "sáu"
+   ],
+   "medianText": "TRUNG VỊ −6,8% · SÀN = −7%"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "vid": "3191576",
+   "illus": "VIDEO MINH HỌA",
+   "items": [
+    {
+     "text": "CHI TIẾT LẠ NHẤT",
+     "at": [
+      7,
+      "Nhưng"
+     ],
+     "sm": true
+    },
+    {
+     "text": "HÀNG LOẠT MÃ DƯ BÁN SÀN",
+     "at": [
+      8,
+      "Hết"
+     ]
+    },
+    {
+     "text": "HÀNG TRIỆU CỔ PHIẾU",
+     "at": [
+      8,
+      "triệu"
+     ],
+     "acc": true
+    },
+    {
+     "text": "KHÔNG CÒN NGƯỜI MUA Ở GIÁ SÀN",
+     "at": [
+      8,
+      "không"
+     ]
+    }
+   ],
+   "srcnote": "Thời báo Tài chính, 09/03/2026"
+  },
+  {
+   "type": "question",
+   "at": 9,
+   "text": "Cổ phiếu của mình,\nmình muốn bán mà cũng\nkhông bán được à?"
+  },
+  {
+   "type": "slam",
+   "at": 10,
+   "text": "ĐÚNG VẬY",
+   "hitAt": [
+    10,
+    "Đúng"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "CÓ NGƯỜI CÒN KHÔNG ĐƯỢC ĐẶT LỆNH BÁN",
+     "at": [
+      11,
+      "Và"
+     ]
+    },
+    {
+     "text": "DÙ ĐÃ MUA TỪ THỨ SÁU TUẦN TRƯỚC",
+     "at": [
+      11,
+      "dù"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": [
+    12,
+    "Để"
+   ],
+   "items": [
+    {
+     "year": "9:00",
+     "text": "MỞ CỬA · ATO",
+     "at": [
+      12,
+      "Để",
+      0,
+      0.1
+     ]
+    },
+    {
+     "year": "9:15",
+     "text": "KHỚP LIÊN TỤC",
+     "at": [
+      12,
+      "Để",
+      0,
+      0.45
+     ]
+    },
+    {
+     "year": "11:30",
+     "text": "NGHỈ TRƯA",
+     "at": [
+      12,
+      "Để",
+      0,
+      0.8
+     ]
+    },
+    {
+     "year": "13:00",
+     "text": "KHỚP LIÊN TỤC",
+     "at": [
+      12,
+      "Để",
+      0,
+      1.15
+     ]
+    },
+    {
+     "year": "14:30",
+     "text": "ĐÓNG CỬA · ATC",
+     "at": [
+      12,
+      "Để",
+      0,
+      1.5
+     ]
+    },
+    {
+     "year": "14:45",
+     "text": "THOẢ THUẬN",
+     "at": [
+      12,
+      "Để",
+      0,
+      1.85
+     ]
+    },
+    {
+     "year": "15:00",
+     "text": "HẾT GIỜ",
+     "at": [
+      12,
+      "Để",
+      0,
+      2.2
+     ]
+    },
+    {
+     "year": "T+2",
+     "text": "CỔ PHIẾU, TIỀN VỀ",
+     "at": [
+      12,
+      "Để",
+      0,
+      2.55
+     ]
+    }
+   ],
+   "tag": {
+    "text": "ĐỒNG HỒ PHIÊN · HOSE",
+    "at": [
+     12,
+     "Để"
+    ]
+   },
+   "srcnote": "Giờ giao dịch cổ phiếu HOSE (tài liệu thành viên, 05/2025) · T+2: VSD · quy định tại thời điểm làm video (10/2026)"
+  },
+  {
+   "type": "brand",
+   "at": 13,
+   "sub": "TIỀN BẠC · GIẢI THÍCH BẰNG DỮ LIỆU"
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "BÀI 2 · CHỨNG KHOÁN TỪ SỐ 0",
+     "at": [
+      14,
+      "Và"
+     ],
+     "acc": true
+    },
+    {
+     "text": "chỉ nhằm giáo dục · không phải lời khuyên mua hay bán",
+     "at": [
+      15,
+      "Video"
+     ],
+     "sm": true
+    },
+    {
+     "text": "quy định mô tả theo thời điểm làm video: 10/2026",
+     "at": [
+      15,
+      "Video",
+      0,
+      0.6
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "MUỐN BÁN MÀ KHÔNG BÁN ĐƯỢC"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.085
+ }
+}

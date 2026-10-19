@@ -1,0 +1,135 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "nhan-gui",
+ "hook_type": "noi-thang",
+ "open_shot": "guong",
+ "voice": "Mỹ Duyên",
+ "music": "ether_vox.mp3",
+ "gap": 0.25,
+ "title": "Nếu bạn đang thấy mình chưa đủ tốt",
+ "kicker": "NHẮN GỬI",
+ "sub": "KINH PHÁP CÚ · KỆ 160",
+ "acc": [
+  "chủ",
+  "nhỏ"
+ ],
+ "lines": [
+  "Nếu bạn đang nhìn mình trong gương, và thấy chưa đủ tốt.",
+  "Chờ người khác công nhận, là trao chìa khoá cho họ.",
+  "Kinh Pháp Cú, kệ một trăm sáu mươi, diễn ý: chính mình là chủ của mình. Ai khác làm chủ được?",
+  "Bắt đầu từ một việc nhỏ, cho chính mình.",
+  "Lưu lại cho ngày tự ti. Việc nhỏ hôm nay là gì?"
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "CHƯA ĐỦ TỐT?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "khi nhìn mình trong gương",
+     "at": [
+      0,
+      "nhìn"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6654154"
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "TRAO CHÌA\nKHOÁ?",
+   "fx": "zoom",
+   "sub": "CHỜ NGƯỜI KHÁC CÔNG NHẬN"
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 1,
+   "suffix": " NGƯỜI CHỦ",
+   "label": "CHÍNH LÀ BẠN",
+   "until": [
+    2,
+    "chủ"
+   ]
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Hôm nay",
+   "nodes": [
+    {
+     "text": "CHỜ CÔNG NHẬN",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      3,
+      "Bắt"
+     ],
+     "shape": "box",
+     "cross": [
+      3,
+      "nhỏ,"
+     ]
+    },
+    {
+     "text": "1 VIỆC NHỎ",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      3,
+      "nhỏ,"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "DHP 160 · DIỄN Ý"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "VIỆC NHỎ HÔM NAY?",
+     "at": [
+      4,
+      "Việc"
+     ],
+     "acc": true
+    },
+    {
+     "text": "lưu lại cho ngày tự ti",
+     "at": [
+      4,
+      "Lưu"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7714887"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp157-166/en/sujato"
+ ],
+ "description": "Nếu bạn đang thấy mình chưa đủ tốt\n\nNguồn: https://suttacentral.net/dhp157-166/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

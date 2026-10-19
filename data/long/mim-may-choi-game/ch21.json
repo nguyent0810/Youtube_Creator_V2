@@ -1,0 +1,117 @@
+{
+ "title": "Chơi cùng một đội với máy",
+ "lines": [
+  {
+   "t": "Trong bốn ngày mở cửa ấy, có một chi tiết ít được nhắc tới.",
+   "p": 0.8
+  },
+  {
+   "t": "Phần lớn các ván không phải là người đấu với máy.",
+   "p": 1.0
+  },
+  "Theo con số được báo chí dẫn lại, có hơn ba mươi lăm nghìn ván hợp tác.",
+  {
+   "t": "Ở đó, người chơi và các cỗ máy chơi chung một đội, cùng chống lại một đội khác.",
+   "p": 1.0
+  },
+  "Điều ấy đặt ra một câu hỏi mới, khác hẳn mọi trận đấu trước.",
+  "Không còn là ai giỏi hơn ai.",
+  {
+   "t": "Mà là, người và máy có làm việc được cùng nhau không.",
+   "p": 1.0
+  },
+  "Một cỗ máy đã quen phối hợp với bốn bản sao của chính nó, giờ phải đoán ý một con người mà nó chưa từng gặp.",
+  {
+   "t": "Một con người phải tin vào quyết định của một đồng đội không biết nói.",
+   "p": 1.0
+  },
+  "Nếu bạn đã xem video về Deep Blue của kênh, bạn sẽ nhớ chuyện cờ nhân mã, khi người và máy ngồi chung một phe.",
+  "Gần hai mươi năm sau, câu chuyện ấy lặp lại, lần này trong một trò chơi điện tử năm người."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "21",
+   "k": "CHƯƠNG HAI MƯƠI MỐT",
+   "title": "CHƠI CÙNG\nMỘT ĐỘI VỚI MÁY",
+   "sub": "CHI TIẾT ÍT ĐƯỢC NHẮC",
+   "vid": "7551536",
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU",
+   "titleAt": [
+    0,
+    null,
+    0,
+    0.05
+   ],
+   "ms": 10
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "from": 35000,
+   "to": 35000,
+   "prefix": "> ",
+   "suffix": " VÁN",
+   "label": "VÁN HỢP TÁC · NGƯỜI VÀ MÁY CÙNG ĐỘI",
+   "sub": {
+    "text": "THEO SỐ LIỆU ĐƯỢC BÁO CHÍ DẪN",
+    "at": 3
+   }
+  },
+  {
+   "type": "myth",
+   "at": 4,
+   "mythLab": "KHÔNG CÒN LÀ",
+   "myth": "AI GIỎI HƠN AI",
+   "truthLab": "MÀ LÀ",
+   "truth": "LÀM VIỆC CÙNG NHAU",
+   "strikeAt": 5,
+   "truthAt": 6
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "HAI PHÍA",
+   "rows": [
+    {
+     "k": "CỖ MÁY",
+     "v": "ĐOÁN Ý NGƯỜI CHƯA GẶP",
+     "at": 7
+    },
+    {
+     "k": "CON NGƯỜI",
+     "v": "TIN ĐỒNG ĐỘI KHÔNG BIẾT NÓI",
+     "at": 8
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 9,
+   "vid": "6599643",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU",
+   "kin": [
+    {
+     "text": "CỜ NHÂN MÃ · DEEP BLUE",
+     "at": 9,
+     "sm": true
+    },
+    {
+     "text": "NGƯỜI VÀ MÁY CÙNG MỘT PHE",
+     "at": 10,
+     "acc": true
+    }
+   ],
+   "ms": 8
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 21",
+  "t": "CHƠI CÙNG MỘT ĐỘI VỚI MÁY"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

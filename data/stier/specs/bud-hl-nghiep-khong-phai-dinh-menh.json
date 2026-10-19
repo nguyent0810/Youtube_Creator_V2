@@ -1,0 +1,126 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "hieu-lam",
+ "hook_type": "do-vui",
+ "open_shot": "con-duong",
+ "voice": "Mỹ Duyên",
+ "music": "arcadia.mp3",
+ "gap": 0.15,
+ "series": "Hiểu đúng #10",
+ "title": "Hiểu đúng #10: Nghiệp có phải định mệnh?",
+ "kicker": "HIỂU ĐÚNG #10",
+ "sub": "KINH TĂNG CHI 6.63",
+ "acc": [
+  "ý",
+  "nghiệp"
+ ],
+ "lines": [
+  "Đoán xem: theo kinh, nghiệp là gì? A, số phận. B, ý định. C, tai hoạ.",
+  "Đáp án: B.",
+  "Kinh Tăng Chi sáu chấm sáu mươi ba, Đức Phật dạy, diễn ý: tác ý chính là nghiệp.",
+  "Nghiệp là hành động có chủ ý, không phải án định sẵn.",
+  "Nên hôm nay vẫn đổi được. Bạn đã đoán đúng chưa? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "NGHIỆP LÀ GÌ?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "A số phận · B ý định · C tai hoạ",
+     "at": [
+      0,
+      "A,"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:36094569"
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "ĐÁP ÁN",
+   "cards": [
+    {
+     "k": "A",
+     "v": "SỐ PHẬN",
+     "at": [
+      1,
+      "Đáp"
+     ]
+    },
+    {
+     "k": "B",
+     "v": "Ý ĐỊNH",
+     "at": [
+      1,
+      "B."
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 1,
+   "suffix": " TÁC Ý",
+   "label": "CHÍNH LÀ NGHIỆP",
+   "until": [
+    2,
+    "nghiệp."
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "KHÔNG PHẢI\nÁN ĐỊNH SẴN",
+   "fx": "zoom",
+   "sub": "HÔM NAY VẪN ĐỔI ĐƯỢC"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "ĐOÁN ĐÚNG CHƯA?",
+     "at": [
+      4,
+      "Bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận nhé",
+     "at": [
+      4,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:33468012"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/an6.63/en/sujato"
+ ],
+ "description": "Hiểu đúng #10: Nghiệp có phải định mệnh?\n\nNguồn: https://suttacentral.net/an6.63/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

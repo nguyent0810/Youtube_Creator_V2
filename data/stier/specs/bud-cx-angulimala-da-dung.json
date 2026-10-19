@@ -1,0 +1,167 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "chuyen-xua",
+ "hook_type": "giua-truyen",
+ "open_shot": "rung-nui",
+ "voice": "Thiền Tâm Đức",
+ "music": "perspectives.mp3",
+ "gap": 0.35,
+ "series": "Chuyện xưa · Tập 6",
+ "title": "Chuyện xưa · Tập 6: 'Ta đã dừng lại'",
+ "kicker": "CHUYỆN XƯA · TẬP 6",
+ "sub": "KINH TRUNG BỘ 86",
+ "acc": [
+  "dừng",
+  "hại"
+ ],
+ "lines": [
+  "Kẻ cướp đáng sợ nhất xứ Kosala chạy hết sức, vẫn không đuổi kịp một người đang đi bộ.",
+  "Đó là Ương Quật Ma La. Người đi bộ là Đức Phật.",
+  "Hắn hét lên: dừng lại!",
+  "Đức Phật đáp: ta đã dừng rồi. Còn ngươi, chưa dừng.",
+  "Ta đã dừng làm hại. Câu ấy khiến hắn vứt gươm, xin xuất gia.",
+  "Hôm nay, điều gì bạn cần dừng lại? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "items": [
+    {
+     "text": "CHẠY HẾT SỨC",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "vẫn không đuổi kịp người đi bộ",
+     "at": [
+      0,
+      "vẫn"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:37573173"
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Ai đuổi ai?",
+   "nodes": [
+    {
+     "text": "ƯƠNG QUẬT MA LA",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      1,
+      "Ương"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "ĐỨC PHẬT",
+     "x": 0.5,
+     "y": 0.68,
+     "at": [
+      1,
+      "Người"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      1,
+      "Người"
+     ]
+    }
+   ],
+   "note": "KINH TRUNG BỘ 86"
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "DỪNG LẠI!",
+   "veil": 0.55,
+   "fx": "zoom",
+   "clip": "pexels:6133768"
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "ĐỨC PHẬT ĐÁP",
+   "cards": [
+    {
+     "k": "TA",
+     "v": "ĐÃ DỪNG",
+     "at": [
+      3,
+      "ta"
+     ]
+    },
+    {
+     "k": "NGƯƠI",
+     "v": "CHƯA DỪNG",
+     "at": [
+      3,
+      "Còn"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "to": 1,
+   "suffix": " CÂU NÓI",
+   "label": "VỨT GƯƠM · XIN XUẤT GIA",
+   "until": [
+    4,
+    "Câu"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "BẠN CẦN DỪNG ĐIỀU GÌ?",
+     "at": [
+      5,
+      "điều"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận nhé",
+     "at": [
+      5,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:5416248"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/mn86/en/sujato"
+ ],
+ "description": "Chuyện xưa · Tập 6: 'Ta đã dừng lại'\n\nNguồn: https://suttacentral.net/mn86/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

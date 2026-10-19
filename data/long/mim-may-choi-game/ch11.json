@@ -1,0 +1,160 @@
+{
+ "title": "Đôi tay của cỗ máy",
+ "lines": [
+  {
+   "t": "Trong StarCraft, có một chỉ số mà dân chơi rất quan tâm: số hành động mỗi phút.",
+   "p": 0.8
+  },
+  {
+   "t": "Người chơi chuyên nghiệp có thể thực hiện vài trăm hành động mỗi phút.",
+   "p": 1.0
+  },
+  "Theo DeepMind, trung bình AlphaStar thực hiện khoảng hai trăm tám mươi hành động mỗi phút.",
+  {
+   "t": "Thấp hơn MaNa, khoảng ba trăm chín mươi. Và thấp hơn hẳn TLO, khoảng sáu trăm bảy mươi tám.",
+   "p": 1.0
+  },
+  "Nghe như cỗ máy còn chậm tay hơn người.",
+  "Nhưng chính DeepMind sau đó cũng làm rõ thêm hai điều.",
+  "Con số của TLO bị đẩy cao vì một kiểu bấm phím liên tục mà dân chơi hay dùng, không phải hành động nào cũng có ích.",
+  {
+   "t": "Và trong những khoảnh khắc giao tranh, tốc độ của cỗ máy có lúc vọt lên cao hơn cả hai tuyển thủ.",
+   "p": 1.0
+  },
+  "Có một chuyện thứ hai, còn quan trọng hơn.",
+  "Phiên bản ấy không phải di chuyển màn hình như người chơi.",
+  {
+   "t": "Nó nhìn thấy mọi phần bản đồ mà quân của nó đang thấy, cùng một lúc, như đang xem bản đồ thu nhỏ hết cỡ.",
+   "p": 1.0
+  },
+  "Sương mù vẫn còn: nó không thấy được những gì quân mình không nhìn tới.",
+  "Nhưng nó không bao giờ phải quay đầu nhìn chỗ khác, như một người chơi ngồi trước màn hình.",
+  {
+   "t": "Nhiều người cho rằng, chừng ấy là một lợi thế lớn.",
+   "p": 1.0
+  },
+  "DeepMind không tránh câu hỏi này.",
+  "Và câu trả lời của họ đến ngay trong ván thứ mười một."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "11",
+   "k": "CHƯƠNG MƯỜI MỘT",
+   "title": "ĐÔI TAY\nCỦA CỖ MÁY",
+   "sub": "SỐ HÀNH ĐỘNG MỖI PHÚT",
+   "vid": "7849220",
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU",
+   "titleAt": [
+    0,
+    null,
+    0,
+    0.05
+   ],
+   "ms": 8
+  },
+  {
+   "type": "bars",
+   "at": 2,
+   "title": "HÀNH ĐỘNG MỖI PHÚT · TRUNG BÌNH",
+   "unit": "DEEPMIND · 01/2019 · ALPHASTAR 277",
+   "items": [
+    {
+     "k": "ALPHASTAR",
+     "v": 280,
+     "lbl": "≈ 280",
+     "at": 2,
+     "acc": true
+    },
+    {
+     "k": "MANA",
+     "v": 390,
+     "lbl": "≈ 390",
+     "at": 3
+    },
+    {
+     "k": "TLO",
+     "v": 678,
+     "lbl": "≈ 678",
+     "at": [
+      3,
+      null,
+      0,
+      0.6
+     ]
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "DEEPMIND LÀM RÕ THÊM",
+   "rows": [
+    {
+     "k": "SỐ CỦA TLO",
+     "v": "ĐẨY CAO VÌ BẤM PHÍM LIÊN TỤC",
+     "at": 6
+    },
+    {
+     "k": "LÚC GIAO TRANH",
+     "v": "CÓ LÚC NHANH HƠN CẢ HAI",
+     "at": 7
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 8,
+   "vid": "4296589",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH TRẬN ĐẤU",
+   "kin": [
+    {
+     "text": "KHÔNG PHẢI DI CHUYỂN MÀN HÌNH",
+     "at": 9,
+     "acc": true
+    },
+    {
+     "text": "thấy cùng lúc mọi nơi quân mình đang thấy",
+     "at": 10,
+     "sm": true
+    },
+    {
+     "text": "sương mù vẫn còn",
+     "at": 11,
+     "sm": true
+    }
+   ],
+   "ms": 6
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "KHÔNG BAO GIỜ PHẢI QUAY ĐẦU",
+     "at": 12,
+     "sm": true
+    },
+    {
+     "text": "LỢI THẾ · HAY KHÔNG CÔNG BẰNG?",
+     "at": 13,
+     "acc": true
+    },
+    {
+     "text": "câu trả lời: ván thứ mười một",
+     "at": 15,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 11",
+  "t": "ĐÔI TAY CỦA CỖ MÁY"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

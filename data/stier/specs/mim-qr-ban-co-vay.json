@@ -1,0 +1,209 @@
+{
+ "theme": "mim",
+ "title": "Mã QR ra đời từ một ván cờ vây giờ nghỉ trưa",
+ "description": "Đầu thập niên 1990 ở Denso (Nhật), có thùng linh kiện mang hơn mười mã vạch vì mỗi mã vạch phổ biến chỉ chứa khoảng 12 chữ số. Kỹ sư Masahiro Hara kể ông nghĩ ra cách ghi thông tin theo hai chiều khi xếp quân đen trắng lên bàn cờ vây vào giờ nghỉ trưa. Mã QR ra mắt năm 1994; phiên bản lớn nhất chứa được hơn 7.000 chữ số (IEEE Spectrum, 11/2020; lời Hara qua Nippon.com). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.",
+ "tags": [
+  "mã qr",
+  "qr code",
+  "cờ vây",
+  "masahiro hara",
+  "mã vạch",
+  "công nghệ quanh ta",
+  "mind in the machine"
+ ],
+ "kicker": "CÔNG NGHỆ QUANH TA",
+ "sub": "MÃ QR · 1994",
+ "acc": [
+  "cờ",
+  "mười",
+  "hai",
+  "chiều",
+  "bảy"
+ ],
+ "lines": [
+  "Mã QR ra đời từ một ván cờ vây giờ nghỉ trưa.",
+  "Đầu những năm 1990, ở một nhà máy linh kiện ô tô Nhật, có thùng hàng phải dán hơn mười mã vạch.",
+  "Vì mỗi mã vạch phổ biến chỉ chứa khoảng mười hai chữ số.",
+  "Kỹ sư Masahiro Hara thích chơi cờ vây. Một hôm xếp quân, ông chợt nhận ra.",
+  "Mã vạch chỉ đọc một chiều. Còn bàn cờ có hai chiều, ngang và dọc.",
+  "Mỗi ô, hoặc đen, hoặc trắng. Với máy tính, thế là đủ.",
+  "Năm 1994, mã QR ra mắt. Bản lớn nhất chứa hơn bảy nghìn chữ số."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MÃ QR RA ĐỜI TỪ",
+     "at": 0.0
+    },
+    {
+     "text": "MỘT VÁN CỜ VÂY",
+     "at": [
+      0,
+      "một"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:39270835",
+   "veil": 0.5
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "ĐẦU NHỮNG NĂM 1990",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "HƠN 10 MÃ VẠCH",
+     "at": [
+      1,
+      "hơn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "trên một thùng hàng",
+     "at": [
+      1,
+      "mã"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:38052460",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 12,
+   "suffix": " CHỮ SỐ",
+   "label": "SỨC CHỨA CỦA MÃ VẠCH PHỔ BIẾN",
+   "until": [
+    2,
+    "hai"
+   ],
+   "sub": {
+    "text": "KHOẢNG · THEO IEEE SPECTRUM",
+    "at": [
+     2,
+     "chữ"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "GIỜ NGHỈ TRƯA",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "XẾP QUÂN ĐEN TRẮNG",
+     "at": [
+      3,
+      "xếp"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:39262883",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 3
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "MỘT CHIỀU VÀ HAI CHIỀU",
+   "cards": [
+    {
+     "k": "MÃ VẠCH",
+     "v": "ĐỌC MỘT CHIỀU",
+     "at": [
+      4,
+      "một"
+     ]
+    },
+    {
+     "k": "BÀN CỜ",
+     "v": "NGANG × DỌC",
+     "at": [
+      4,
+      "hai"
+     ],
+     "c": "acc"
+    },
+    {
+     "k": "MỖI Ô",
+     "v": "ĐEN = 1 · TRẮNG = 0",
+     "at": [
+      5,
+      "đen,"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "at": 6,
+   "kind": "bars",
+   "title": "SỨC CHỨA (CHỮ SỐ)",
+   "unit": "THEO IEEE SPECTRUM, 11/2020",
+   "bars": [
+    {
+     "label": "MÃ VẠCH\nPHỔ BIẾN",
+     "v": 12,
+     "text": "12",
+     "c": "dim",
+     "at": [
+      6,
+      "mã"
+     ]
+    },
+    {
+     "label": "MÃ QR\nLỚN NHẤT",
+     "v": 7000,
+     "text": "> 7.000",
+     "c": "ref",
+     "at": [
+      6,
+      "bảy"
+     ]
+    }
+   ],
+   "note": "MÃ QR RA MẮT NĂM 1994"
+  }
+ ],
+ "sources": [
+  "https://spectrum.ieee.org/how-a-board-game-and-skyscrapers-inspired-the-development-of-the-qr-code"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "qr": "quy a",
+  "masahiro": "Ma-xa-hi-rô",
+  "hara": "Ha-ra"
+ },
+ "imgs": {}
+}

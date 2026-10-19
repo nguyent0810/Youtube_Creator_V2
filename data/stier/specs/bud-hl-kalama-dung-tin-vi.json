@@ -1,0 +1,289 @@
+{
+ "theme": "bud",
+ "format": "hieu-lam",
+ "hook_type": "menh-lenh",
+ "open_shot": "dien-thoai",
+ "voice": "Quang Sơn",
+ "music": "clean_soul.mp3",
+ "series": "Hiểu đúng #2",
+ "title": "Hiểu đúng #2: Tin Phật là tin mọi điều được nói? (Kinh Kālāma)",
+ "kicker": "HIỂU ĐÚNG #2",
+ "sub": "TĂNG CHI 3.65 · KINH KĀLĀMA",
+ "acc": [
+  "tin",
+  "Phật",
+  "khổ",
+  "an",
+  "lạc",
+  "sai"
+ ],
+ "say": {
+  "kālāma": "Ca-la-ma",
+  "kālāma,": "Ca-la-ma,"
+ },
+ "lines": [
+  "Đừng tin video này, chỉ vì nó nói về Phật.",
+  "Nghe lạ không? Nhưng đây chính là lời Phật dạy.",
+  "Nhiều người nghĩ: tin Phật là tin mọi điều nhân danh Phật.",
+  "Sai.",
+  "Trong Kinh Kālāma, Đức Phật dạy, diễn ý:",
+  "Đừng tin chỉ vì truyền thống, vì kinh sách, hay vì người nói là thầy mình.",
+  "Mà khi tự mình thấy điều gì dẫn tới khổ, thì bỏ.",
+  "Điều gì dẫn tới an lạc, thì làm.",
+  "Lần tới thấy tin tâm linh trên mạng, hãy tự hỏi: điều này dẫn tới đâu?",
+  "Chia sẻ cho người cần hiểu đúng."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "clip": "pexels:9785298",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "ĐỪNG TIN",
+     "at": 0.0,
+     "acc": true,
+     "size": 170
+    },
+    {
+     "text": "VIDEO NÀY",
+     "at": [
+      0,
+      "video"
+     ]
+    },
+    {
+     "text": "chỉ vì nó nói về Phật",
+     "at": [
+      0,
+      "chỉ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "clip": "pexels:5418508",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "NGHE LẠ?",
+     "at": [
+      1,
+      "Nghe"
+     ],
+     "acc": true
+    },
+    {
+     "text": "LỜI PHẬT DẠY",
+     "at": [
+      1,
+      "lời"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "clip": "pexels:28144992",
+   "veil": 0.6,
+   "items": [
+    {
+     "text": "TIN PHẬT",
+     "at": [
+      2,
+      "tin"
+     ]
+    },
+    {
+     "text": "= TIN MỌI ĐIỀU?",
+     "at": [
+      2,
+      "mọi"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "SAI",
+   "clip": "pexels:19036346",
+   "veil": 0.6,
+   "fx": "zoom"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "clip": "pexels:36114345",
+   "veil": 0.6,
+   "items": [
+    {
+     "text": "KINH KĀLĀMA",
+     "at": [
+      4,
+      "Kinh"
+     ],
+     "acc": true
+    },
+    {
+     "text": "TĂNG CHI 3.65",
+     "at": [
+      4,
+      "Phật"
+     ]
+    },
+    {
+     "text": "diễn ý · bản dịch Bhikkhu Sujato",
+     "at": [
+      4,
+      "diễn"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "ĐỪNG TIN CHỈ VÌ",
+   "rows": [
+    {
+     "k": "TRUYỀN THỐNG",
+     "v": "✗",
+     "at": [
+      5,
+      "truyền"
+     ]
+    },
+    {
+     "k": "KINH SÁCH",
+     "v": "✗",
+     "at": [
+      5,
+      "kinh"
+     ]
+    },
+    {
+     "k": "NGƯỜI NÓI LÀ THẦY",
+     "v": "✗",
+     "at": [
+      5,
+      "thầy"
+     ]
+    }
+   ],
+   "clip": "pexels:34677869",
+   "veil": 0.65
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "clip": "pexels:38163102",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "DẪN TỚI KHỔ",
+     "at": [
+      6,
+      "khổ"
+     ]
+    },
+    {
+     "text": "= BỎ",
+     "at": [
+      6,
+      "bỏ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "clip": "pexels:15238832",
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "DẪN TỚI AN LẠC",
+     "at": [
+      7,
+      "an"
+     ]
+    },
+    {
+     "text": "= LÀM",
+     "at": [
+      7,
+      "làm"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "clip": "pexels:7279035",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "TIN TÂM LINH TRÊN MẠNG?",
+     "at": [
+      8,
+      "tin"
+     ]
+    },
+    {
+     "text": "DẪN TỚI ĐÂU?",
+     "at": [
+      8,
+      "đâu"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "clip": "pexels:13929702",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "CHIA SẺ",
+     "at": [
+      9,
+      "Chia"
+     ],
+     "acc": true
+    },
+    {
+     "text": "cho người cần hiểu đúng",
+     "at": [
+      9,
+      "người"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "description": "Hiểu đúng #2. Kinh Kālāma (Tăng Chi 3.65), diễn ý: đừng tin chỉ vì truyền thống, kinh sách hay vì người nói là thầy mình; khi tự mình thấy điều gì bất thiện, dẫn tới khổ thì bỏ; điều gì thiện, dẫn tới an lạc thì làm.\n\nNguồn: AN 3.65, bản dịch Bhikkhu Sujato (CC0): https://suttacentral.net/an3.65/en/sujato\nLời kinh là diễn ý; phần bình giải là của kênh.",
+ "tags": [
+  "kinh kalama",
+  "hiểu đúng phật giáo",
+  "lời phật dạy",
+  "phật pháp",
+  "tin đồn tâm linh"
+ ],
+ "sources": [
+  "https://suttacentral.net/an3.65/en/sujato"
+ ]
+}

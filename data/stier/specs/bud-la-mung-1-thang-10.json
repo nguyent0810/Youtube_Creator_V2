@@ -1,0 +1,165 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "lich-am",
+ "hook_type": "dem-nguoc",
+ "open_shot": "bau-troi",
+ "voice": "Ngọc Linh",
+ "music": "at_rest.mp3",
+ "gap": 0.25,
+ "ambience": {
+  "hits": [
+   {
+    "at": 0.1,
+    "kind": "bell",
+    "gain": 0.8
+   }
+  ]
+ },
+ "title": "Mùng 1 tháng 10 âm: còn 14 ngày tới Rằm Hạ Nguyên",
+ "kicker": "LỊCH ÂM · MÙNG 1/10",
+ "sub": "RẰM HẠ NGUYÊN",
+ "acc": [
+  "14",
+  "ơn"
+ ],
+ "lines": [
+  "Hôm nay mùng một tháng mười âm. Còn mười bốn ngày nữa là rằm tháng mười.",
+  "Thứ hai, chín tháng mười một, năm hai không hai sáu.",
+  "Rằm tháng mười, Tết Hạ Nguyên, rơi vào hai mươi ba tháng mười một.",
+  "Theo truyền thống, đây là dịp tạ ơn sau mùa gặt, nhớ ơn ông bà tổ tiên.",
+  "Mười bốn ngày tới, mỗi ngày ghi một điều biết ơn.",
+  "Bạn bắt đầu với điều gì? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "CÒN 14 NGÀY",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "tới rằm tháng 10 âm",
+     "at": [
+      0,
+      "Còn"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:12278146"
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "09.11.2026",
+   "day": "THỨ HAI",
+   "sub": {
+    "text": "MÙNG 1/10 ÂM",
+    "at": [
+     1,
+     "chín"
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 14,
+   "suffix": " NGÀY",
+   "label": "RẰM 15/10 ÂM · 23/11/2026",
+   "until": [
+    2,
+    "rơi"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "TẠ ƠN MÙA GẶT",
+     "at": [
+      3,
+      "tạ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "Tết Hạ Nguyên",
+     "at": [
+      3,
+      "Theo"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:35995793"
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "14 NGÀY",
+   "cards": [
+    {
+     "k": "MỖI NGÀY",
+     "v": "1 ĐIỀU",
+     "at": [
+      4,
+      "mỗi"
+     ]
+    },
+    {
+     "k": "GHI",
+     "v": "BIẾT ƠN",
+     "at": [
+      4,
+      "biết"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "ĐIỀU ĐẦU TIÊN?",
+     "at": [
+      5,
+      "Bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bạn biết ơn gì · bình luận",
+     "at": [
+      5,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7260659"
+  }
+ ],
+ "sources": [
+  "https://giacngo.vn/gia-tri-tam-linh-cua-le-hoi-ram-thang-muoi-post6635.html"
+ ],
+ "description": "Mùng 1 tháng 10 âm: còn 14 ngày tới Rằm Hạ Nguyên\n\nNguồn: https://giacngo.vn/gia-tri-tam-linh-cua-le-hoi-ram-thang-muoi-post6635.html",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

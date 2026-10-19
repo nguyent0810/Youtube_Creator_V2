@@ -1,0 +1,173 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "chuyen-xua",
+ "hook_type": "noi-dau",
+ "open_shot": "cai-nhau",
+ "voice": "Quang Sơn",
+ "music": "floating_cities.mp3",
+ "gap": 0.15,
+ "series": "Chuyện xưa · Tập 12",
+ "title": "Chuyện xưa · Tập 12: Những người mù sờ voi",
+ "kicker": "CHUYỆN XƯA · TẬP 12",
+ "sub": "KINH PHẬT TỰ THUYẾT 6.4",
+ "acc": [
+  "phần",
+  "voi"
+ ],
+ "lines": [
+  "Cãi nhau mà ai cũng thấy mình đúng trăm phần trăm?",
+  "Kinh Phật Tự Thuyết kể: một vị vua cho những người mù sờ con voi.",
+  "Người sờ đầu nói voi như cái chum. Người sờ ngà nói như lưỡi cày.",
+  "Người sờ đuôi nói như cái chày. Rồi họ đánh nhau.",
+  "Ai cũng đúng một phần. Thấy một phần, thì nói một phần.",
+  "Lần gần nhất bạn chỉ thấy cái vòi là khi nào?"
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "AI CŨNG ĐÚNG 100%?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "khi cãi nhau",
+     "at": [
+      0,
+      "ai"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7640675"
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Một vị vua",
+   "nodes": [
+    {
+     "text": "NHỮNG NGƯỜI MÙ",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      1,
+      "mù"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "SỜ CON VOI",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      1,
+      "sờ"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      1,
+      "sờ"
+     ]
+    }
+   ],
+   "note": "UD 6.4"
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "ĐẦU = CÁI CHUM",
+     "at": [
+      2,
+      "đầu"
+     ],
+     "acc": true
+    },
+    {
+     "text": "ngà = lưỡi cày",
+     "at": [
+      2,
+      "ngà"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34785949"
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 0,
+   "suffix": " NGƯỜI",
+   "label": "THẤY CẢ CON VOI",
+   "until": [
+    3,
+    "đánh"
+   ],
+   "sub": {
+    "text": "ĐUÔI = CÁI CHÀY",
+    "at": [
+     3,
+     "đuôi"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "THẤY MỘT PHẦN,\nNÓI MỘT PHẦN",
+   "fx": "zoom"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "CHỈ THẤY CÁI VÒI?",
+     "at": [
+      5,
+      "Lần"
+     ],
+     "acc": true
+    },
+    {
+     "text": "lần gần nhất là khi nào",
+     "at": [
+      5,
+      "là"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:35697475"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/ud6.4/en/sujato",
+  "https://en.wikipedia.org/wiki/Blind_men_and_an_elephant"
+ ],
+ "description": "Chuyện xưa · Tập 12: Những người mù sờ voi\n\nNguồn: https://suttacentral.net/ud6.4/en/sujato ; https://en.wikipedia.org/wiki/Blind_men_and_an_elephant",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

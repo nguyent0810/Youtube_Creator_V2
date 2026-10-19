@@ -1,0 +1,347 @@
+{
+ "title": "Cô tổng đài và người lái thang máy",
+ "lines": [
+  {
+   "t": "Đầu thế kỷ hai mươi, nếu nhấc điện thoại ở Mỹ, bạn sẽ nghe giọng một cô tổng đài.",
+   "p": 0.8
+  },
+  "Cô cắm dây, nối máy của bạn tới người bạn muốn gọi.",
+  {
+   "t": "Đó là một trong những nghề phổ biến nhất của phụ nữ Mỹ thời ấy.",
+   "p": 1.0
+  },
+  "Từ năm 1920 đến năm 1940, công ty AT&T thay cô tổng đài bằng tổng đài cơ khí ở hơn một nửa mạng điện thoại nước Mỹ.",
+  "Đó là một trong những khoản đầu tư tự động hoá lớn nhất lịch sử hiện đại.",
+  {
+   "t": "Phần lớn những công việc ấy biến mất.",
+   "p": 1.0
+  },
+  "Gần một thế kỷ sau, hai nhà kinh tế James Feigenbaum và Daniel Gross lần theo từng người qua các cuộc điều tra dân số, để xem điều gì đã xảy ra.",
+  "Kết quả, đăng năm 2024, có hai mặt.",
+  "Mặt thứ nhất: những lớp phụ nữ trẻ đến sau không thiếu việc.",
+  "Họ chuyển sang việc văn phòng, ngành dịch vụ, kể cả những loại việc trước đó chưa từng có.",
+  "Mặt thứ hai: những người đang làm tổng đài khi máy tới thì chịu thiệt nhất.",
+  {
+   "t": "Mười năm sau, họ dễ phải làm nghề lương thấp hơn, hoặc không còn đi làm nữa.",
+   "p": 1.0
+  },
+  "Vậy là câu hỏi từ thời những người đập máy đã có một câu trả lời, ít nhất cho một nghề.",
+  "Lớp người đến sau nhìn chung vẫn ổn. Nhưng người đứng đúng chỗ cỗ máy đi qua thì trả giá.",
+  "Hãy giữ câu hỏi này lại: người trả giá là người đang làm, hay người sắp vào nghề?",
+  {
+   "t": "Tới thời AI, câu trả lời có thể sẽ khác.",
+   "p": 1.0
+  },
+  "Còn nữa: máy móc không thắng chỉ nhờ giỏi.",
+  "Thang máy không người lái có từ khoảng năm 1900, nhưng người ta bước vào, không thấy ai điều khiển, rồi lại bước ra.",
+  "Phải sau cuộc đình công của người lái thang ở New York năm 1945, khi một triệu rưỡi nhân viên văn phòng không tới được chỗ làm, ngành thang máy mới dốc sức thuyết phục công chúng.",
+  "Từ lúc ra đời tới lúc được mọi người quen dùng, thang máy tự động mất hơn năm mươi năm."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "CÔ TỔNG ĐÀI\nVÀ NGƯỜI LÁI THANG MÁY",
+   "sub": "1920 — 1945",
+   "bg": "switchboard",
+   "titleAt": [
+    0,
+    "Đầu"
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 1,
+   "img": "switchboard",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.42,
+   "kin": [
+    {
+     "text": "CẮM DÂY · NỐI MÁY",
+     "at": 1,
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "TỔNG ĐÀI BELL SYSTEM",
+    "v": "ẢNH LƯU TRỮ QUỐC GIA MỸ",
+    "at": 1
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "MỘT TRONG NHỮNG NGHỀ PHỔ BIẾN NHẤT",
+     "at": 2
+    },
+    {
+     "text": "CỦA PHỤ NỮ MỸ",
+     "at": [
+      2,
+      "phụ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 3,
+   "bg": "strowger",
+   "day": "AT&T · TỔNG ĐÀI CƠ KHÍ",
+   "date": "1920 – 1940",
+   "label": {
+    "k": "AT&T · 1920 – 1940",
+    "v": "HƠN MỘT NỬA MẠNG ĐIỆN THOẠI MỸ",
+    "at": [
+     3,
+     "hơn"
+    ]
+   }
+  },
+  {
+   "type": "print",
+   "at": 4,
+   "img": "strowger",
+   "tone": "color",
+   "side": {
+    "k": "BỘ CHUYỂN MẠCH STROWGER",
+    "h": "Tổng đài\ncơ khí",
+    "lines": [
+     {
+      "text": "Một trong những khoản *đầu tư tự động hoá lớn nhất*",
+      "at": 4
+     }
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "PHẦN LỚN\nCÔNG VIỆC BIẾN MẤT"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "GẦN MỘT THẾ KỶ SAU",
+     "at": 6
+    },
+    {
+     "text": "JAMES FEIGENBAUM · DANIEL GROSS",
+     "at": [
+      6,
+      "James"
+     ],
+     "acc": true
+    },
+    {
+     "text": "lần theo từng người qua các cuộc điều tra dân số",
+     "at": [
+      6,
+      "lần"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "KẾT QUẢ · 2024",
+     "at": 7,
+     "sm": true
+    },
+    {
+     "text": "HAI MẶT",
+     "at": [
+      7,
+      "hai"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 8,
+   "title": "FEIGENBAUM & GROSS · 2024",
+   "rows": [
+    {
+     "k": "LỚP ĐẾN SAU",
+     "v": "KHÔNG THIẾU VIỆC",
+     "at": 8
+    },
+    {
+     "k": "→",
+     "v": "VĂN PHÒNG · DỊCH VỤ · NGHỀ MỚI",
+     "at": 9
+    },
+    {
+     "k": "NGƯỜI ĐANG LÀM",
+     "v": "CHỊU THIỆT NHẤT",
+     "at": 10
+    },
+    {
+     "k": "10 NĂM SAU",
+     "v": "LƯƠNG THẤP HƠN / THÔI VIỆC",
+     "at": 11
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "CÂU HỎI TỪ THỜI ĐẬP MÁY",
+     "at": 12,
+     "sm": true
+    },
+    {
+     "text": "ĐÃ CÓ CÂU TRẢ LỜI",
+     "at": [
+      12,
+      "đã"
+     ],
+     "acc": true
+    },
+    {
+     "text": "ít nhất cho một nghề",
+     "at": [
+      12,
+      "ít"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "bg": "switchboard",
+   "items": [
+    {
+     "text": "LỚP ĐẾN SAU: VẪN ỔN",
+     "at": 13
+    },
+    {
+     "text": "NGƯỜI ĐỨNG ĐÚNG CHỖ CỖ MÁY ĐI QUA: TRẢ GIÁ",
+     "at": [
+      13,
+      "Nhưng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 14,
+   "bg": "switchboard",
+   "text": "Người trả giá: người đang làm,\nhay người sắp vào nghề?"
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "TỚI THỜI AI",
+     "at": 15,
+     "acc": true
+    },
+    {
+     "text": "câu trả lời có thể sẽ khác",
+     "at": [
+      15,
+      "câu"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 16,
+   "text": "MÁY KHÔNG THẮNG CHỈ NHỜ GIỎI"
+  },
+  {
+   "type": "print",
+   "at": 17,
+   "img": "elevgirl",
+   "tone": "bw",
+   "illus": "ẢNH MINH HỌA · NGƯỜI LÁI THANG MÁY, 1917",
+   "side": {
+    "k": "THANG MÁY KHÔNG NGƯỜI LÁI",
+    "h": "Có từ\nkhoảng 1900",
+    "lines": [
+     {
+      "text": "Người ta bước vào, *không thấy ai điều khiển*",
+      "at": [
+       17,
+       "bước"
+      ]
+     },
+     {
+      "text": "… rồi lại *bước ra*",
+      "at": [
+       17,
+       "ra."
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "date",
+   "at": 18,
+   "day": "NEW YORK · ĐÌNH CÔNG",
+   "date": "1945",
+   "label": {
+    "k": "ĐÌNH CÔNG CỦA NGƯỜI LÁI THANG",
+    "v": "1,5 TRIỆU NHÂN VIÊN VĂN PHÒNG KHÔNG TỚI ĐƯỢC CHỖ LÀM",
+    "at": [
+     18,
+     "một"
+    ]
+   }
+  },
+  {
+   "type": "broll",
+   "at": 19,
+   "vid": "7706076",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "TỪ LÚC RA ĐỜI → LÚC QUEN DÙNG",
+     "at": 19,
+     "sm": true
+    },
+    {
+     "text": "HƠN 50 NĂM",
+     "at": [
+      19,
+      "hơn"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "CÔ TỔNG ĐÀI VÀ NGƯỜI LÁI THANG MÁY"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.16
+ }
+}

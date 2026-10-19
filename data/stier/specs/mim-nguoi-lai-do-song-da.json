@@ -1,0 +1,162 @@
+{
+ "theme": "mim",
+ "title": "AI trả lời sai về “Người lái đò Sông Đà”: vì sao máy hay bịa về văn học Việt",
+ "description": "Tháng 12/2024, kênh ANTV phản ánh: được hỏi về tuỳ bút “Người lái đò Sông Đà” của Nguyễn Tuân, một chatbot AI đưa ra thông tin sai về tên nhân vật người lái đò; hỏi về “Thương nhớ mười hai” của Vũ Bằng, nó trả lời sai tên các chương sách. Suy luận của kênh: chi tiết nhỏ của văn học Việt có mặt trên mạng ít hơn nhiều so với chuyện nước Mỹ, nên máy dễ “đoán” hơn; theo một nghiên cứu năm 2025, điều càng hiếm trong dữ liệu càng dễ bị bịa. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/H9nlRjxfmPw (công khai từ 20:00 ngày 02/11).",
+ "tags": [
+  "người lái đò sông đà",
+  "ai và văn học việt",
+  "học sinh dùng ai",
+  "ai bịa",
+  "ảo giác ai",
+  "chatgpt",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "ANTV · 12/2024",
+ "acc": [
+  "sai",
+  "hiếm",
+  "đoán",
+  "chắc",
+  "sách"
+ ],
+ "kicker": "AI QUANH TA",
+ "lines": [
+  "Hỏi AI về Người lái đò Sông Đà, nó trả lời sai, mà vẫn rất chắc chắn.",
+  "Tháng 12 năm 2024, đài ANTV phản ánh chuyện này.",
+  "Một chatbot đưa ra thông tin sai về tên nhân vật người lái đò trong tuỳ bút của Nguyễn Tuân.",
+  "Hỏi về Thương nhớ mười hai của Vũ Bằng, nó trả lời sai tên các chương sách.",
+  "Vì sao? Đây là suy luận của mình.",
+  "Những chi tiết nhỏ của văn học Việt có mặt trên mạng ít hơn rất nhiều so với chuyện của nước Mỹ. Điều càng hiếm, máy càng dễ đoán.",
+  "Nên với bài văn, hãy mở sách ra. Đừng tin một câu trả lời chỉ vì nó trôi chảy."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NGƯỜI LÁI ĐÒ SÔNG ĐÀ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "AI trả lời sai · mà rất chắc chắn",
+     "at": [
+      0,
+      "nó"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:35840531",
+   "veil": 0.55
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "ANTV · 12/2024",
+   "sub": "PHẢN ÁNH VỀ CHATBOT VÀ DANH TÁC VIỆT"
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "HAI CÂU TRẢ LỜI SAI",
+   "cards": [
+    {
+     "k": "NGUYỄN TUÂN",
+     "v": "SAI TÊN NHÂN VẬT",
+     "at": 2
+    },
+    {
+     "k": "VŨ BẰNG",
+     "v": "SAI TÊN CHƯƠNG SÁCH",
+     "at": 3,
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "VÌ SAO?",
+   "sub": "SUY LUẬN CỦA KÊNH"
+  },
+  {
+   "type": "chart",
+   "at": 5,
+   "kind": "bars",
+   "title": "CHI TIẾT CÓ MẶT TRÊN MẠNG",
+   "unit": "MINH HOẠ · SUY LUẬN CỦA KÊNH",
+   "bars": [
+    {
+     "label": "CHUYỆN\nNƯỚC MỸ",
+     "v": 100,
+     "text": "RẤT NHIỀU",
+     "c": "ref",
+     "at": [
+      5,
+      "nước"
+     ]
+    },
+    {
+     "label": "CHI TIẾT\nVĂN HỌC VIỆT",
+     "v": 15,
+     "text": "ÍT",
+     "c": "down",
+     "at": [
+      5,
+      "Điều"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MỞ SÁCH RA",
+     "at": 6,
+     "acc": true
+    },
+    {
+     "text": "đừng tin chỉ vì nó trôi chảy",
+     "at": [
+      6,
+      "Đừng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:11384843",
+   "ms": 4,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 6
+  }
+ ],
+ "sources": [
+  "https://antv.gov.vn/van-hoa-6/canh-bao-chat-gpt-thong-tin-sai-lech-ve-nhieu-danh-tac-viet-nam-B94ECF548.html",
+  "https://arxiv.org/abs/2509.04664"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "=AI": "ây ai",
+  "=ANTV": "A-en-ti-vi",
+  "chatbot": "chát bót"
+ },
+ "imgs": {}
+}

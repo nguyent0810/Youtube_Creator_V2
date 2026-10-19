@@ -1,0 +1,166 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "chuyen-xua",
+ "hook_type": "pov",
+ "open_shot": "thang-bang",
+ "voice": "Thanh Bình",
+ "music": "arcadia.mp3",
+ "gap": 0.2,
+ "series": "Chuyện xưa · Tập 11",
+ "title": "Chuyện xưa · Tập 11: Hai người nhào lộn",
+ "kicker": "CHUYỆN XƯA · TẬP 11",
+ "sub": "KINH TƯƠNG ƯNG 47.19",
+ "acc": [
+  "giữ",
+  "mình"
+ ],
+ "lines": [
+  "Bạn lo cho người khác đến kiệt sức, mà ai cũng vẫn chênh vênh.",
+  "Kinh Tương Ưng kể: hai thầy trò làm xiếc trên cây sào.",
+  "Thầy nói: con giữ thầy, thầy giữ con.",
+  "Trò đáp: mỗi người tự giữ mình, như vậy cả hai mới an toàn.",
+  "Đức Phật dạy: giữ mình là giữ người. Giữ người là giữ mình.",
+  "Hôm nay bạn đã giữ mình chưa? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "LO ĐẾN KIỆT SỨC?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "mà ai cũng chênh vênh",
+     "at": [
+      0,
+      "mà"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7502738"
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "HAI THẦY TRÒ\nTRÊN CÂY SÀO",
+   "fx": "zoom",
+   "sub": "CHUYỆN XƯA · SN 47.19"
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Thầy nói",
+   "nodes": [
+    {
+     "text": "CON GIỮ THẦY",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      2,
+      "con"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "THẦY GIỮ CON",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      2,
+      "thầy,"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      2,
+      "thầy,"
+     ]
+    }
+   ],
+   "note": "SN 47.19 · DIỄN Ý"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "MỖI NGƯỜI TỰ GIỮ",
+     "at": [
+      3,
+      "mỗi"
+     ],
+     "acc": true
+    },
+    {
+     "text": "cả hai mới an toàn",
+     "at": [
+      3,
+      "cả"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:32337292"
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "to": 2,
+   "suffix": " CHIỀU",
+   "label": "GIỮ MÌNH = GIỮ NGƯỜI",
+   "until": [
+    4,
+    "người."
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "GIỮ MÌNH CHƯA?",
+     "at": [
+      5,
+      "Hôm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận nhé",
+     "at": [
+      5,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8011205"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/sn47.19/en/sujato"
+ ],
+ "description": "Chuyện xưa · Tập 11: Hai người nhào lộn\n\nNguồn: https://suttacentral.net/sn47.19/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

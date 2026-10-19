@@ -1,0 +1,177 @@
+{
+ "theme": "mim",
+ "title": "Mỗi ngày, loài người từng mất 500.000 giờ để gõ mấy chữ méo mó",
+ "description": "Theo Luis von Ahn, người đồng sáng tạo CAPTCHA, khoảng năm 2008 cả thế giới gõ chừng 200 triệu mã xác nhận mỗi ngày, mỗi mã mất khoảng 10 giây, tức khoảng 500.000 giờ mỗi ngày (NPR, 08/2008). Chính con số ấy khiến ông tìm cách để 10 giây đó làm được việc có ích: đọc hộ những từ trong sách cũ mà máy quét không đọc được. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (9 phút): https://youtu.be/CAYQtYA1NJA (công khai từ 20:00 ngày 22/10).",
+ "tags": [
+  "luis von ahn",
+  "recaptcha",
+  "captcha",
+  "mã xác nhận",
+  "tôi không phải người máy",
+  "công nghệ quanh ta",
+  "mind in the machine"
+ ],
+ "sub": "CAPTCHA · 2008",
+ "acc": [
+  "hai",
+  "mười",
+  "năm",
+  "nghìn",
+  "ích"
+ ],
+ "kicker": "CÔNG NGHỆ QUANH TA",
+ "lines": [
+  "Năm trăm nghìn giờ mỗi ngày, cho việc gõ mấy chữ méo mó.",
+  "Con số ấy do chính người làm ra mã xác nhận tính ra.",
+  "Khoảng năm 2008, mỗi ngày cả thế giới gõ chừng hai trăm triệu mã như thế.",
+  "Mỗi lần mất khoảng mười giây.",
+  "Nhân lên, là nửa triệu giờ của con người. Mỗi ngày.",
+  "Ông thấy áy náy. Mười giây ấy, lẽ ra phải làm được việc gì có ích.",
+  "Và ông tìm ra cách: để chúng đọc hộ những trang sách cũ."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "500.000 GIỜ MỖI NGÀY",
+     "at": 0.0
+    },
+    {
+     "text": "ĐỂ GÕ MẤY CHỮ MÉO MÓ",
+     "at": [
+      0,
+      "cho"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:34124550",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NGƯỜI LÀM RA MÃ XÁC NHẬN",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "tự ngồi tính",
+     "at": [
+      1,
+      "tính"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8480685",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 200,
+   "suffix": " TRIỆU",
+   "label": "MÃ ĐƯỢC GÕ MỖI NGÀY · KHOẢNG NĂM 2008",
+   "until": [
+    2,
+    "triệu"
+   ],
+   "sub": {
+    "text": "THEO LUIS VON AHN · NPR, 08/2008",
+    "at": [
+     2,
+     "mã"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "PHÉP NHÂN",
+   "cards": [
+    {
+     "k": "MỖI NGÀY",
+     "v": "200 TRIỆU MÃ",
+     "at": [
+      3,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "k": "MỖI MÃ",
+     "v": "~10 GIÂY",
+     "at": [
+      3,
+      "mười"
+     ]
+    },
+    {
+     "k": "TỔNG",
+     "v": "~500.000 GIỜ",
+     "at": [
+      4,
+      "nửa"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Ông nghĩ ra",
+   "nodes": [
+    {
+     "text": "mười giây ấy",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      5,
+      "Mười"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "đọc hộ những trang sách cũ",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "đọc"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 800
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://www.npr.org/2008/08/14/93605988/web-security-words-help-digitize-old-books",
+  "https://www.sciencedaily.com/releases/2008/08/080814154329.htm"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

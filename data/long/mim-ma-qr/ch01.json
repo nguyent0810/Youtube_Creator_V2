@@ -1,0 +1,161 @@
+{
+ "title": "Mười mã vạch trên một thùng hàng",
+ "lines": [
+  {
+   "t": "Đầu những năm 1990, ở công ty Denso, một hãng linh kiện ô tô của Nhật.",
+   "p": 0.8
+  },
+  {
+   "t": "Mỗi thùng linh kiện đi qua nhà máy đều phải được quét mã vạch.",
+   "p": 1.0
+  },
+  "Mã vạch thì bạn biết rồi. Những sọc đen trắng trên gói mì, hộp sữa.",
+  "Nó có một giới hạn. Loại phổ biến chỉ chứa được khoảng mười hai chữ số.",
+  "Mà một thùng linh kiện thì cần nhiều thông tin hơn thế rất nhiều.",
+  {
+   "t": "Thế là người ta dán thêm mã. Rồi dán thêm nữa.",
+   "p": 1.0
+  },
+  "Kỹ sư Masahiro Hara kể lại.",
+  {
+   "t": "Có những thùng mang tới hơn mười mã vạch. Công nhân phát mệt vì phải quét đi quét lại.",
+   "q": 1,
+   "tr": 1
+  },
+  {
+   "t": "Mười lần quét cho một thùng hàng. Nhân với cả một nhà máy.",
+   "p": 1.0
+  },
+  "Năm 1992, Hara lập một nhóm nhỏ, với một đề bài nghe rất đơn giản.",
+  "Làm ra một loại mã chứa được thật nhiều thông tin, mà chỉ cần quét một lần.",
+  "Nhưng nhét thêm thông tin vào đâu, khi những cái sọc đã chật kín?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "MƯỜI MÃ VẠCH\nTRÊN MỘT THÙNG HÀNG",
+   "sub": "DENSO · ĐẦU NHỮNG NĂM 1990",
+   "vid": "6447409",
+   "ms": 8,
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Đầu"
+   ]
+  },
+  {
+   "type": "barcode",
+   "at": 2,
+   "n": 1,
+   "label": {
+    "k": "MÃ VẠCH",
+    "v": "LOẠI PHỔ BIẾN: ~12 CHỮ SỐ",
+    "at": [
+     3,
+     "khoảng"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "MỘT THÙNG LINH KIỆN",
+     "at": 4,
+     "sm": true
+    },
+    {
+     "text": "CẦN NHIỀU HƠN THẾ",
+     "at": [
+      4,
+      "nhiều"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "barcode",
+   "at": 5,
+   "n": 10,
+   "until": [
+    7,
+    "mười"
+   ],
+   "label": {
+    "k": "DÁN THÊM · RỒI DÁN THÊM NỮA",
+    "v": "HÌNH MINH HOẠ · KHÔNG PHẢI MÃ THẬT",
+    "at": [
+     5,
+     "Rồi"
+    ]
+   }
+  },
+  {
+   "type": "quote",
+   "at": 7,
+   "text": "Có những thùng mang tới hơn mười mã vạch. Công nhân phát mệt vì phải quét đi quét lại.",
+   "by": "MASAHIRO HARA · NIPPON.COM, 2020 · TRÍCH DỊCH",
+   "qline": 7
+  },
+  {
+   "type": "counter",
+   "at": 8,
+   "from": 1,
+   "to": 10,
+   "suffix": " LẦN QUÉT",
+   "until": [
+    8,
+    "quét"
+   ],
+   "label": "CHO MỘT THÙNG HÀNG",
+   "sub": {
+    "text": "× CẢ MỘT NHÀ MÁY",
+    "at": [
+     8,
+     "Nhân"
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 9,
+   "title": "ĐỀ BÀI NĂM 1992",
+   "srcnote": "NGUỒN: IEEE SPECTRUM, 11.2020",
+   "rows": [
+    {
+     "k": "CHỨA",
+     "v": "THẬT NHIỀU THÔNG TIN",
+     "at": [
+      10,
+      "chứa"
+     ]
+    },
+    {
+     "k": "CHỈ CẦN",
+     "v": "QUÉT MỘT LẦN",
+     "at": [
+      10,
+      "chỉ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 11,
+   "text": "Nhét thêm thông tin vào đâu,\nkhi những cái sọc đã chật kín?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "MƯỜI MÃ VẠCH TRÊN MỘT THÙNG HÀNG"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

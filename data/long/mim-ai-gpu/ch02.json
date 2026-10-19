@@ -1,0 +1,354 @@
+{
+ "title": "Hai triệu điểm ảnh",
+ "lines": [
+  {
+   "t": "Màn hình bạn đang xem có lẽ là loại Full HD.",
+   "p": 0.8
+  },
+  "Ngang một nghìn chín trăm hai mươi điểm, dọc một nghìn không trăm tám mươi điểm.",
+  {
+   "t": "Tức là khoảng hai triệu điểm ảnh.",
+   "p": 1.0
+  },
+  "Mỗi điểm ảnh cần được tính màu: ánh sáng chiếu vào đâu, bóng đổ chỗ nào, mặt đường ướt phản chiếu ra sao.",
+  "Game chạy sáu mươi khung hình mỗi giây.",
+  {
+   "t": "Nghĩa là hơn một trăm hai mươi triệu điểm ảnh phải được tính, trong mỗi giây.",
+   "p": 1.0
+  },
+  "Điều quan trọng là: phép tính cho điểm ảnh này gần như giống hệt phép tính cho điểm ảnh bên cạnh.",
+  "Chỉ khác con số đầu vào.",
+  {
+   "t": "Và điểm này không cần chờ điểm kia tính xong.",
+   "p": 1.0
+  },
+  "Hãy hình dung một nhà bếp.",
+  "Bộ xử lý trung tâm của máy tính, CPU, giống vài đầu bếp rất giỏi.",
+  "Mỗi người nấu được món khó, xử lý được món lạ, nhưng mỗi lúc chỉ làm vài việc.",
+  "GPU thì giống hàng nghìn phụ bếp.",
+  "Mỗi người chỉ biết một việc đơn giản, như thái hành.",
+  {
+   "t": "Nhưng nếu cần thái một núi hành, hàng nghìn phụ bếp làm cùng lúc sẽ xong trước.",
+   "p": 1.0
+  },
+  "Điều này không có nghĩa GPU giỏi hơn CPU.",
+  "Bảo hàng nghìn phụ bếp nấu một món cần nếm đi nếm lại, quyết định từng bước, họ sẽ đứng nhìn nhau.",
+  "Máy tính của bạn cần cả hai: đầu bếp lo những việc rẽ nhánh, phức tạp, còn phụ bếp lo những việc lặp lại khổng lồ.",
+  {
+   "t": "Vẽ game là việc lặp lại khổng lồ, nên nó thuộc về phụ bếp.",
+   "p": 1.0
+  },
+  "Năm 2008, ở một sự kiện của chính Nvidia, hai người dẫn chương trình MythBusters đã dựng cảnh này bằng súng bắn bi sơn.",
+  "Cỗ máy thứ nhất bắn từng viên một, chậm rãi vẽ một hình đơn giản.",
+  "Cỗ máy thứ hai có một nghìn một trăm nòng, bắn cùng một lúc.",
+  {
+   "t": "Chưa tới một phần mười giây, bức Mona Lisa hiện ra trên tấm toan.",
+   "p": 1.0
+  },
+  "Từng viên bi là một điểm ảnh.",
+  "Và chẳng bao lâu, có người tự hỏi: nếu thay điểm ảnh bằng những con số khác thì sao?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "HAI TRIỆU\nĐIỂM ẢNH",
+   "sub": "FULL HD · 60 KHUNG HÌNH MỖI GIÂY",
+   "vid": "5466792",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "full"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "1.920 × 1.080",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "ngang × dọc",
+     "at": [
+      1,
+      "dọc"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "from": 0,
+   "to": 2073600,
+   "suffix": " ĐIỂM ẢNH",
+   "label": "MỘT KHUNG HÌNH"
+  },
+  {
+   "type": "broll",
+   "at": 3,
+   "vid": "36139323",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "ÁNH SÁNG · BÓNG ĐỔ · PHẢN CHIẾU",
+     "at": 3
+    },
+    {
+     "text": "MỖI ĐIỂM ẢNH MỘT PHÉP TÍNH",
+     "at": [
+      3,
+      "mỗi"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 0,
+   "to": 124416000,
+   "prefix": "> ",
+   "suffix": " / GIÂY",
+   "label": "2.073.600 ĐIỂM × 60 KHUNG HÌNH",
+   "sub": {
+    "text": "KÊNH TỰ TÍNH",
+    "at": 5
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "GIỐNG HỆT NHAU",
+     "at": [
+      6,
+      "giống"
+     ],
+     "acc": true
+    },
+    {
+     "text": "chỉ khác con số đầu vào",
+     "at": 7,
+     "sm": true
+    },
+    {
+     "text": "KHÔNG CHỜ NHAU",
+     "at": [
+      8,
+      "không"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "MỘT NHÀ BẾP",
+     "at": 9,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "dots",
+   "at": 10,
+   "total": 120,
+   "cols": 20,
+   "title": "MỘT NHÀ BẾP",
+   "groups": [
+    {
+     "from": 0,
+     "n": 4,
+     "cls": "gold",
+     "label": "CPU · VÀI ĐẦU BẾP GIỎI",
+     "at": 10
+    },
+    {
+     "from": 4,
+     "n": 116,
+     "cls": "red",
+     "label": "GPU · HÀNG NGHÌN PHỤ BẾP",
+     "at": [
+      12,
+      "gpu"
+     ]
+    }
+   ],
+   "srcnote": "HÌNH ẢNH SO SÁNH · KHÔNG PHẢI SỐ LÕI THẬT"
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "MỘT VIỆC ĐƠN GIẢN",
+     "at": 13,
+     "sm": true
+    },
+    {
+     "text": "THÁI HÀNH",
+     "at": [
+      13,
+      "thái"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 14,
+   "text": "MỘT NÚI HÀNH",
+   "sub": "HÀNG NGHÌN NGƯỜI LÀM CÙNG LÚC"
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "GPU > CPU ?",
+     "at": 15,
+     "fx": "strike",
+     "strikeAt": [
+      15,
+      "cpu"
+     ]
+    },
+    {
+     "text": "KHÔNG PHẢI",
+     "at": [
+      15,
+      "không"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "ĐẦU BẾP",
+     "at": 17,
+     "acc": true
+    },
+    {
+     "text": "VIỆC RẼ NHÁNH",
+     "at": [
+      17,
+      "rẽ"
+     ],
+     "sm": true
+    },
+    {
+     "text": "PHỤ BẾP",
+     "at": [
+      17,
+      "phụ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "VIỆC LẶP LẠI",
+     "at": [
+      17,
+      "lặp"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 18,
+   "items": [
+    {
+     "text": "VẼ GAME",
+     "at": 18
+    },
+    {
+     "text": "→ PHỤ BẾP",
+     "at": [
+      18,
+      "phụ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 19,
+   "day": "NVISION 08 · SAN JOSE · MYTHBUSTERS",
+   "date": "08.2008"
+  },
+  {
+   "type": "kinetic",
+   "at": 20,
+   "items": [
+    {
+     "text": "MÁY 1",
+     "at": 20,
+     "sm": true
+    },
+    {
+     "text": "TỪNG VIÊN MỘT",
+     "at": [
+      20,
+      "từng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 21,
+   "from": 0,
+   "to": 1100,
+   "suffix": " NÒNG",
+   "label": "MÁY 2 · BẮN CÙNG MỘT LÚC"
+  },
+  {
+   "type": "slam",
+   "at": 22,
+   "text": "< 0,1 GIÂY",
+   "sub": "BỨC MONA LISA HIỆN RA · KỂ LẠI, KHÔNG PHẢI HÌNH GỐC"
+  },
+  {
+   "type": "kinetic",
+   "at": 23,
+   "items": [
+    {
+     "text": "1 VIÊN BI = 1 ĐIỂM ẢNH",
+     "at": 23,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 24,
+   "text": "Thay điểm ảnh\nbằng con số khác?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "HAI TRIỆU ĐIỂM ẢNH"
+ },
+ "bgm": {
+  "mood": "upbeat",
+  "gain": 0.1
+ }
+}

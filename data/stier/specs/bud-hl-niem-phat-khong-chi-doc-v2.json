@@ -1,0 +1,149 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "hieu-lam",
+ "hook_type": "menh-lenh",
+ "open_shot": "tuong-phat",
+ "voice": "Ngọc Huyền",
+ "music": "at_rest.mp3",
+ "gap": 0.15,
+ "series": "Hiểu đúng #9",
+ "title": "Hiểu đúng #9: Niệm Phật chỉ là đọc thuộc lòng?",
+ "kicker": "HIỂU ĐÚNG #9",
+ "sub": "KINH TĂNG CHI 6.10",
+ "acc": [
+  "nhớ",
+  "niệm"
+ ],
+ "lines": [
+  "Thử nhớ một phẩm chất của Đức Phật, thay vì chỉ đọc tên.",
+  "Niệm Phật chỉ là đọc thuộc lòng?",
+  "Kinh Tăng Chi sáu chấm mười, diễn ý: niệm Phật là nhớ các đức tính của Ngài.",
+  "Khi nhớ như vậy, tâm không bị tham, sân, si chi phối.",
+  "Niệm là nhớ. Không chỉ là đọc.",
+  "Đức tính nào bạn muốn học? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "NHỚ, ĐỪNG CHỈ ĐỌC",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "một phẩm chất của Phật",
+     "at": [
+      0,
+      "phẩm"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:38782921"
+  },
+  {
+   "type": "hf_myth_strike",
+   "at": 1,
+   "mythLab": "NHIỀU NGƯỜI NGHĨ",
+   "myth": "Niệm Phật = **đọc thuộc lòng**",
+   "truthLab": "THEO KINH",
+   "truth": "Niệm là **nhớ**",
+   "strikeAt": [
+    1,
+    "đọc"
+   ],
+   "truthAt": [
+    1,
+    "lòng?"
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 2,
+   "line": 2,
+   "mode": "karaoke",
+   "by": "AN 6.10 · diễn ý"
+  },
+  {
+   "type": "hf_list_build",
+   "at": 3,
+   "title": "KHÔNG BỊ CHI PHỐI",
+   "items": [
+    {
+     "key": "✕",
+     "text": "THAM",
+     "at": [
+      3,
+      "tham,"
+     ]
+    },
+    {
+     "key": "✕",
+     "text": "SÂN",
+     "at": [
+      3,
+      "sân,"
+     ]
+    },
+    {
+     "key": "✕",
+     "text": "SI",
+     "at": [
+      3,
+      "si"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "NIỆM\nLÀ NHỚ",
+   "fx": "zoom",
+   "sub": "KHÔNG CHỈ LÀ ĐỌC"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "MUỐN HỌC ĐỨC NÀO?",
+     "at": [
+      5,
+      "Đức"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận nhé",
+     "at": [
+      5,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8711382"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/an6.10/en/sujato"
+ ],
+ "description": "Hiểu đúng #9: Niệm Phật chỉ là đọc thuộc lòng?\n\nNguồn: https://suttacentral.net/an6.10/en/sujato",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "v2": true,
+ "loop": true,
+ "based_on": "bud-hl-niem-phat-khong-chi-doc"
+}

@@ -1,0 +1,177 @@
+{
+ "theme": "mim",
+ "title": "Hơn 200 triệu người xem một trận cờ: vì sao cả thế giới nín thở tháng 3/2016",
+ "description": "Theo DeepMind, hơn 200 triệu người đã theo dõi trận AlphaGo – Lee Sedol (Seoul, 9–15/03/2016). Lý do: năm 1997 máy đã thắng nhà vô địch cờ vua, nhưng suốt gần 20 năm sau, cờ vây vẫn là trò chơi máy chơi rất tệ, và giới chuyên gia tin phải ít nhất mười năm nữa máy mới thắng nổi một kỳ thủ hàng đầu. Trận đấu ấy trả lời câu hỏi sớm hơn mọi dự đoán: 4–1 cho cỗ máy (DeepMind; Wikipedia: AlphaGo versus Lee Sedol). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (20 phút): https://youtu.be/nbNu6xYtoYg",
+ "tags": [
+  "deep blue",
+  "seoul 2016",
+  "alphago",
+  "lee sedol",
+  "cờ vây",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "SEOUL · 03/2016",
+ "acc": [
+  "hai",
+  "tệ",
+  "mười",
+  "sớm",
+  "bốn"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Hơn hai trăm triệu người, cùng theo dõi một trận cờ.",
+  "Con số ấy do chính công ty làm ra cỗ máy đưa ra, tháng 3 năm 2016.",
+  "Năm 1997, máy đã thắng nhà vô địch cờ vua.",
+  "Nhưng gần hai mươi năm sau, vẫn còn một trò chơi mà máy chơi rất tệ. Cờ vây.",
+  "Giới chuyên gia tin: phải ít nhất mười năm nữa, máy mới thắng nổi một kỳ thủ hàng đầu.",
+  "Trận đấu ở Seoul trả lời sớm hơn mọi dự đoán.",
+  "Năm ván, trong bảy ngày. Bốn một, cho cỗ máy."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "HƠN 200 TRIỆU NGƯỜI",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "cùng theo dõi một trận cờ",
+     "at": [
+      0,
+      "cùng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:5377277",
+   "ms": 3,
+   "veil": 0.58
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 200,
+   "prefix": "> ",
+   "suffix": " TRIỆU",
+   "label": "NGƯỜI THEO DÕI · THEO DEEPMIND",
+   "until": [
+    1,
+    "đưa"
+   ],
+   "sub": {
+    "text": "SEOUL · 9–15/03/2016",
+    "at": [
+     1,
+     "tháng"
+    ]
+   }
+  },
+  {
+   "type": "timeline",
+   "at": 2,
+   "items": [
+    {
+     "year": "1997",
+     "text": "máy thắng nhà vô địch cờ vua",
+     "at": [
+      2,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "year": "gần 20 năm sau",
+     "text": "máy vẫn chơi cờ vây rất tệ",
+     "at": [
+      3,
+      null,
+      0,
+      0.05
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "DỰ ĐOÁN CỦA CHUYÊN GIA",
+     "at": 4,
+     "sm": true
+    },
+    {
+     "text": "ÍT NHẤT 10 NĂM NỮA",
+     "at": [
+      4,
+      "phải"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:39270835",
+   "ms": 1,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 4
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "SỚM HƠN MỌI DỰ ĐOÁN",
+   "sub": "TRẬN ĐẤU Ở SEOUL"
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "5 VÁN · 7 NGÀY",
+   "cards": [
+    {
+     "k": "CỖ MÁY",
+     "v": "4",
+     "at": [
+      6,
+      "Bốn"
+     ],
+     "c": "acc"
+    },
+    {
+     "k": "CON NGƯỜI",
+     "v": "1",
+     "at": [
+      6,
+      "một,"
+     ]
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://deepmind.google/research/alphago/",
+  "https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "seoul": "Xơ-un"
+ },
+ "imgs": {}
+}

@@ -1,0 +1,192 @@
+{
+ "title": "Ba câu hỏi trước khi bấm mua",
+ "lines": [
+  {
+   "t": "Năm hai nghìn không trăm hai mươi lăm, câu chuyện lại bắt đầu.",
+   "p": 0.8
+  },
+  "Từ ngày chín tháng tư năm hai nghìn không trăm hai mươi lăm tới giữa tháng năm năm nay, VN-Index tăng khoảng bảy mươi sáu phần trăm.",
+  {
+   "t": "Đây là lần thứ hai trong dữ liệu của kênh, chỉ số tăng hơn bốn mươi phần trăm trong mười hai tháng.",
+   "p": 1.0
+  },
+  "Mười hai tháng sau sẽ ra sao, chưa ai biết, và kênh không đoán.",
+  "Một lần trong quá khứ không phải lời tiên tri.",
+  {
+   "t": "Thị trường có thể tăng tiếp rất lâu.",
+   "p": 1.0
+  },
+  "Nhưng có ba câu hỏi bạn có thể tự hỏi, mỗi khi thấy ai cũng lãi.",
+  "Một: ngoài việc người khác đang lãi, mình mua vì lý do gì?",
+  "Hai: nếu khoản tiền này giảm bốn mươi phần trăm, như năm hai nghìn không trăm hai mươi hai, mình có phải bán ra để tiêu không?",
+  {
+   "t": "Ba: mình định vào một lần, hay chia ra nhiều lần?",
+   "p": 1.0
+  },
+  "Khi nào những điều trong video này không đúng?",
+  "Khi thị trường tăng vì lợi nhuận doanh nghiệp tăng thật, chứ không chỉ vì đám đông.",
+  "Khi bạn mua với tiền nhàn rỗi, và đủ kiên nhẫn chờ nhiều năm.",
+  {
+   "t": "Và khi bạn không phải là người mua chỉ vì sợ bị bỏ lỡ.",
+   "p": 1.0
+  },
+  "Còn bạn, bạn mở tài khoản chứng khoán vào năm nào, và vì sao? Kể cho mình nghe ở phần bình luận nhé.",
+  "Bài sau trong chuỗi tâm lý tiền bạc, mình sẽ nói về một cái bẫy khác: vì sao lỗ rồi lại càng không dám bán."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "CHƯƠNG SÁU",
+   "title": "BA CÂU HỎI\nTRƯỚC KHI BẤM MUA",
+   "sub": "2025 → NAY",
+   "vid": "7914862",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "năm"
+   ]
+  },
+  {
+   "type": "race",
+   "at": 1,
+   "from": "2025-04-09",
+   "to": "2026-05-18",
+   "title": "VN-INDEX · 09/04/2025 → 18/05/2026",
+   "range": "09/04/2025 → 18/05/2026",
+   "drawAt": [
+    1,
+    "từ"
+   ],
+   "until": [
+    2,
+    "đây"
+   ],
+   "series": [
+    {
+     "key": "vnindex",
+     "label": "VN-INDEX (% SO VỚI 09/04/2025)",
+     "color": "#22c55e"
+    }
+   ],
+   "source": "DỮ LIỆU: HOSE (VNSTOCK/VCI), KÊNH TỰ TÍNH. MINH HOẠ QUÁ KHỨ, KHÔNG PHẢI KHUYẾN NGHỊ."
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "LẦN THỨ HAI",
+     "at": 2,
+     "acc": true
+    },
+    {
+     "text": "> +40% trong 12 tháng · dữ liệu của kênh",
+     "at": [
+      2,
+      "chỉ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "KÊNH KHÔNG ĐOÁN",
+   "sub": "MỘT LẦN TRONG QUÁ KHỨ KHÔNG PHẢI LỜI TIÊN TRI"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "CÓ THỂ TĂNG TIẾP RẤT LÂU",
+     "at": 5,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 6,
+   "title": "3 CÂU TỰ HỎI · KHI AI CŨNG LÃI",
+   "rows": [
+    {
+     "k": "1",
+     "v": "NGOÀI VIỆC NGƯỜI KHÁC LÃI, MUA VÌ ĐÂU?",
+     "at": 7
+    },
+    {
+     "k": "2",
+     "v": "GIẢM 40% CÓ PHẢI BÁN ĐỂ TIÊU?",
+     "at": 8
+    },
+    {
+     "k": "3",
+     "v": "VÀO MỘT LẦN HAY NHIỀU LẦN?",
+     "at": 9
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 10,
+   "text": "Khi nào video này\nkhông đúng?"
+  },
+  {
+   "type": "ledger",
+   "at": 11,
+   "title": "KHI NÀO KHÔNG ĐÚNG",
+   "rows": [
+    {
+     "k": "✓",
+     "v": "LỢI NHUẬN DOANH NGHIỆP TĂNG THẬT",
+     "at": 11
+    },
+    {
+     "k": "✓",
+     "v": "TIỀN NHÀN RỖI · CHỜ ĐƯỢC NHIỀU NĂM",
+     "at": 12
+    },
+    {
+     "k": "✓",
+     "v": "KHÔNG MUA VÌ SỢ BỊ BỎ LỠ",
+     "at": 13
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 14,
+   "text": "Bạn mở tài khoản năm nào,\nvà vì sao?"
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "BÀI SAU",
+     "at": 15,
+     "sm": true
+    },
+    {
+     "text": "LỖ RỒI CÀNG KHÔNG DÁM BÁN",
+     "at": [
+      15,
+      "lỗ"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 06",
+  "t": "BA CÂU HỎI TRƯỚC KHI BẤM MUA"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

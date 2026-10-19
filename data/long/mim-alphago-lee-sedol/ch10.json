@@ -1,0 +1,230 @@
+{
+ "title": "Cỗ máy không cần thầy",
+ "lines": [
+  {
+   "t": "Tháng 10 năm 2017, DeepMind công bố AlphaGo Zero.",
+   "p": 0.8
+  },
+  "Chữ Zero, nghĩa là số không.",
+  {
+   "t": "Vì nó bắt đầu từ con số không.",
+   "p": 1.0
+  },
+  "Không ba mươi triệu nước cờ của con người.",
+  "Không một ván đấu mẫu nào.",
+  {
+   "t": "Người ta chỉ cho nó biết luật chơi, rồi để nó tự đánh với chính mình.",
+   "p": 1.0
+  },
+  "Những ván đầu tiên, nó đặt quân hoàn toàn ngẫu nhiên.",
+  "Nó chơi như một đứa trẻ chưa từng thấy bàn cờ.",
+  "Nhưng nó chơi rất nhiều.",
+  {
+   "t": "Trong ba ngày, gần năm triệu ván.",
+   "p": 1.0
+  },
+  "Sau ba ngày ấy, người ta cho nó gặp phiên bản đã thắng Lee Sedol.",
+  "Một trăm ván.",
+  {
+   "t": "Tỉ số là một trăm, không.",
+   "p": 1.0
+  },
+  "Hãy dừng lại ở con số này một chút.",
+  "Cỗ máy từng làm cả thế giới sửng sốt ở Seoul, đã thua trắng một trăm ván.",
+  "Thua một cỗ máy chưa từng học một nước cờ nào của con người.",
+  {
+   "t": "Và cỗ máy mới chỉ cần một phần nhỏ số máy tính so với đời trước.",
+   "p": 1.0
+  },
+  "Trên đường tự học, nó tìm lại những thế cờ mà con người mất hàng nghìn năm mới đúc kết được.",
+  {
+   "t": "Rồi nó bỏ một số thế ấy đi, và dùng những thế mà chưa ai từng đánh.",
+   "p": 1.0
+  },
+  "Người ta để nó học tiếp.",
+  "Sau bốn mươi ngày, nó gặp bản Master, bản đã thắng Kha Khiết ba không.",
+  {
+   "t": "Một trăm ván nữa. Lần này, nó thắng tám mươi chín ván.",
+   "p": 1.0
+  },
+  "Câu hỏi ở đầu trận đấu là: máy có học được cờ vây từ con người không?",
+  "Một năm rưỡi sau, câu trả lời là: nó không cần con người để học."
+ ],
+ "scenes": [
+  {
+   "type": "date",
+   "day": "DEEPMIND CÔNG BỐ ALPHAGO ZERO",
+   "date": "10.2017"
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "ZERO = SỐ KHÔNG",
+   "rows": [
+    {
+     "k": "KHÔNG",
+     "v": "30 TRIỆU NƯỚC CỜ CỦA NGƯỜI",
+     "at": 3
+    },
+    {
+     "k": "KHÔNG",
+     "v": "MỘT VÁN ĐẤU MẪU NÀO",
+     "at": 4
+    }
+   ],
+   "total": {
+    "k": "CHỈ CÓ",
+    "v": "LUẬT CHƠI · VÀ TỰ ĐÁNH",
+    "at": 5
+   }
+  },
+  {
+   "type": "go",
+   "at": 6,
+   "stones": 90,
+   "label": {
+    "k": "NHỮNG VÁN ĐẦU: ĐẶT QUÂN HOÀN TOÀN NGẪU NHIÊN",
+    "v": "BÀN CỜ MINH HOẠ · KHÔNG PHẢI THẾ CỜ THẬT",
+    "at": 6
+   }
+  },
+  {
+   "type": "counter",
+   "at": 8,
+   "from": 0,
+   "to": 4.9,
+   "suffix": " TRIỆU VÁN",
+   "until": [
+    9,
+    "triệu"
+   ],
+   "label": "TỰ CHƠI TRONG BA NGÀY",
+   "sub": {
+    "text": "THEO DEEPMIND · 10.2017",
+    "at": 9
+   }
+  },
+  {
+   "type": "slam",
+   "at": 10,
+   "text": "100 – 0",
+   "sub": "ALPHAGO ZERO – BẢN ĐÃ THẮNG LEE SEDOL",
+   "subAt": 12
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "CỖ MÁY TỪNG LÀM THẾ GIỚI SỬNG SỐT",
+     "at": 14,
+     "sm": true
+    },
+    {
+     "text": "THUA TRẮNG 100 VÁN",
+     "at": [
+      14,
+      "đã"
+     ],
+     "acc": true
+    },
+    {
+     "text": "trước một cỗ máy chưa học nước cờ nào của người",
+     "at": 15,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 16,
+   "title": "SỐ CHIP CHUYÊN DỤNG ĐỂ CHẠY",
+   "unit": "",
+   "items": [
+    {
+     "k": "BẢN ĐẤU LEE SEDOL",
+     "v": 48,
+     "lbl": "48",
+     "at": 16
+    },
+    {
+     "k": "ALPHAGO ZERO",
+     "v": 4,
+     "lbl": "4",
+     "at": [
+      16,
+      "một"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "",
+    "v": "THEO BÀI BÁO TRÊN NATURE, 10.2017",
+    "at": 16
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 17,
+   "title": "TRÊN ĐƯỜNG TỰ HỌC",
+   "rows": [
+    {
+     "k": "TÌM LẠI",
+     "v": "THẾ CỜ NGHÌN NĂM CỦA NGƯỜI",
+     "at": 17
+    }
+   ],
+   "total": {
+    "k": "RỒI",
+    "v": "DÙNG THẾ CHƯA AI TỪNG ĐÁNH",
+    "at": 18
+   }
+  },
+  {
+   "type": "counter",
+   "at": 19,
+   "from": 3,
+   "to": 40,
+   "suffix": " NGÀY",
+   "until": [
+    20,
+    "ngày,"
+   ],
+   "label": "TỰ HỌC TIẾP · RỒI GẶP BẢN MASTER"
+  },
+  {
+   "type": "slam",
+   "at": 21,
+   "text": "89 – 11",
+   "sub": "ALPHAGO ZERO – MASTER · 100 VÁN"
+  },
+  {
+   "type": "kinetic",
+   "at": 22,
+   "items": [
+    {
+     "text": "MÁY CÓ HỌC ĐƯỢC TỪ CON NGƯỜI KHÔNG?",
+     "at": 22,
+     "sm": true
+    },
+    {
+     "text": "NÓ KHÔNG CẦN CON NGƯỜI ĐỂ HỌC",
+     "at": [
+      23,
+      "nó"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 10",
+  "t": "CỖ MÁY KHÔNG CẦN THẦY"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

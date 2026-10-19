@@ -1,0 +1,303 @@
+{
+ "title": "Vì sao người ta mua đúng đỉnh",
+ "lines": [
+  {
+   "t": "Nếu dữ liệu rõ vậy, sao người ta vẫn mua đúng lúc giá cao nhất?",
+   "ask": 1
+  },
+  {
+   "t": "Có một nghiên cứu rất nổi tiếng về chuyện này, của hai nhà kinh tế Brad Barber và Terrance Odean, công bố năm hai nghìn không trăm lẻ tám.",
+   "p": 1.0
+  },
+  "Họ xem dữ liệu giao dịch của hàng chục nghìn nhà đầu tư cá nhân ở Mỹ.",
+  "Và thấy rằng người ta mua nhiều hơn bán ở những cổ phiếu đang thu hút sự chú ý.",
+  {
+   "t": "Cổ phiếu lên báo, cổ phiếu có lượng giao dịch tăng bất thường, cổ phiếu vừa tăng hay giảm rất mạnh trong một ngày.",
+   "p": 1.0
+  },
+  "Lý do nghe rất đời thường.",
+  "Muốn mua, bạn phải chọn giữa hàng nghìn mã. Không ai đủ sức xem hết.",
+  "Thế là bạn chọn trong số những thứ đang được nhắc tới.",
+  {
+   "t": "Còn khi bán, bạn chỉ bán thứ mình đang có.",
+   "p": 1.0
+  },
+  "Bây giờ hãy đặt nghiên cứu ấy cạnh năm hai nghìn không trăm hai mươi mốt.",
+  "Thứ được nhắc tới nhiều nhất không còn là một mã cổ phiếu, mà là cả thị trường.",
+  "Tin tức, nhóm chat, ảnh chụp màn hình tài khoản lãi.",
+  {
+   "t": "Sự chú ý lớn nhất thường đến khi giá đã tăng nhiều nhất.",
+   "p": 1.0
+  },
+  "Có thêm một lớp nữa, rất con người.",
+  "Khi thấy người quen lãi, ta không chỉ thấy tiền của họ tăng.",
+  "Ta thấy mình tụt lại phía sau họ.",
+  "Cảm giác ấy khó chịu hơn cả việc mất tiền, vì nó chạm vào câu hỏi mình có kém cỏi hơn người khác không.",
+  {
+   "t": "Và cách nhanh nhất để thoát khỏi cảm giác ấy, là làm giống họ.",
+   "p": 1.0
+  },
+  "Đó là cái bẫy của FOMO, nỗi sợ bị bỏ lỡ.",
+  "Nó không đến khi thị trường rẻ, vì lúc ấy chẳng ai nói về nó.",
+  "Nó đến khi ai cũng lãi, tức là khi giá đã cao.",
+  "Và tháng ba năm hai nghìn không trăm hai mươi hai là ví dụ rõ nhất: số tài khoản mới lập kỷ lục hai tháng sau khi chỉ số đã qua đỉnh."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "CHƯƠNG BỐN",
+   "title": "VÌ SAO\nMUA ĐÚNG ĐỈNH",
+   "sub": "TÂM LÝ ĐÁM ĐÔNG",
+   "vid": "38736270",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "nếu"
+   ]
+  },
+  {
+   "type": "file",
+   "at": 1,
+   "k": "REVIEW OF FINANCIAL STUDIES · 2008",
+   "name": "All That Glitters",
+   "desc": "Brad Barber · Terrance Odean",
+   "rows": [
+    {
+     "k": "DỮ LIỆU",
+     "v": "*hàng chục nghìn* nhà đầu tư cá nhân · Mỹ",
+     "at": 2
+    },
+    {
+     "k": "KẾT QUẢ",
+     "v": "mua ròng cổ phiếu *gây chú ý*",
+     "at": 3
+    }
+   ],
+   "label": {
+    "k": "NGUỒN",
+    "v": "BARBER & ODEAN (2008), RFS 21(2)",
+    "at": 1
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "“GÂY CHÚ Ý” LÀ GÌ",
+   "rows": [
+    {
+     "k": "1",
+     "v": "LÊN BÁO",
+     "at": [
+      4,
+      "lên"
+     ]
+    },
+    {
+     "k": "2",
+     "v": "KHỐI LƯỢNG BẤT THƯỜNG",
+     "at": [
+      4,
+      "lượng"
+     ]
+    },
+    {
+     "k": "3",
+     "v": "TĂNG / GIẢM RẤT MẠNH 1 NGÀY",
+     "at": [
+      4,
+      "vừa"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "MUA",
+     "at": 6,
+     "sm": true
+    },
+    {
+     "text": "CHỌN TRONG HÀNG NGHÌN MÃ",
+     "at": [
+      6,
+      "chọn"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "→ THỨ ĐANG ĐƯỢC NHẮC",
+     "at": 7,
+     "acc": true
+    },
+    {
+     "text": "BÁN: CHỈ THỨ MÌNH CÓ",
+     "at": 8
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "1 MÃ",
+     "at": [
+      10,
+      "mã"
+     ],
+     "fx": "strike",
+     "strikeAt": [
+      10,
+      "mà"
+     ]
+    },
+    {
+     "text": "CẢ THỊ TRƯỜNG",
+     "at": [
+      10,
+      "cả"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 11,
+   "vid": "5359710",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "TIN TỨC · NHÓM CHAT · ẢNH TÀI KHOẢN LÃI",
+     "at": 11
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 12,
+   "text": "CHÚ Ý NHẤT = GIÁ CAO NHẤT"
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "NGƯỜI QUEN LÃI",
+     "at": 14,
+     "sm": true
+    },
+    {
+     "text": "MÌNH TỤT LẠI",
+     "at": 15,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "items": [
+    {
+     "text": "KHÓ CHỊU HƠN MẤT TIỀN",
+     "at": 16,
+     "acc": true
+    },
+    {
+     "text": "diễn giải của kênh",
+     "at": 16,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "→ LÀM GIỐNG HỌ",
+     "at": [
+      17,
+      "làm"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 18,
+   "text": "FOMO",
+   "sub": "FEAR OF MISSING OUT · NỖI SỢ BỊ BỎ LỠ"
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "items": [
+    {
+     "text": "LÚC RẺ",
+     "at": 19,
+     "sm": true
+    },
+    {
+     "text": "CHẲNG AI NÓI",
+     "at": [
+      19,
+      "chẳng"
+     ]
+    },
+    {
+     "text": "LÚC ĐẮT",
+     "at": 20,
+     "sm": true
+    },
+    {
+     "text": "AI CŨNG LÃI",
+     "at": [
+      20,
+      "ai"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 21,
+   "items": [
+    {
+     "year": "01/2022",
+     "text": "*đỉnh* VN-Index",
+     "at": 21
+    },
+    {
+     "year": "03/2022",
+     "text": "*kỷ lục* tài khoản mới",
+     "at": [
+      21,
+      "kỷ"
+     ]
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "VÌ SAO MUA ĐÚNG ĐỈNH"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

@@ -1,0 +1,193 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "chuyen-xua",
+ "hook_type": "giua-truyen",
+ "open_shot": "lang",
+ "voice": "Thiền Tâm Đức",
+ "music": "fluidscape.mp3",
+ "gap": 0.3,
+ "series": "Chuyện xưa · Tập 8",
+ "title": "Chuyện xưa · Tập 8: Người mẹ và nắm hạt cải",
+ "kicker": "CHUYỆN XƯA · TẬP 8",
+ "sub": "KISĀ GOTAMĪ · THIG 10.1",
+ "acc": [
+  "mất",
+  "cô"
+ ],
+ "lines": [
+  "Một người mẹ ôm đứa con đã mất, đi khắp làng xin thuốc.",
+  "Đức Phật bảo: hãy xin một nắm hạt cải, từ nhà chưa từng có ai qua đời.",
+  "Bà gõ từng cửa. Nhà nào cũng có người đã mất.",
+  "Bà hiểu: mất mát là điều ai cũng gặp.",
+  "Nỗi đau không biến mất. Nhưng ta không cô đơn trong nó.",
+  "Bạn đang nhớ ai? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "items": [
+    {
+     "text": "ĐI KHẮP LÀNG XIN THUỐC",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "cho đứa con đã mất",
+     "at": [
+      0,
+      "ôm"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:27987386"
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Lời Đức Phật",
+   "nodes": [
+    {
+     "text": "1 NẮM HẠT CẢI",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      1,
+      "nắm"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "NHÀ CHƯA AI MẤT",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      1,
+      "từ"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      1,
+      "từ"
+     ]
+    }
+   ],
+   "note": "THEO CHÚ GIẢI · THIG 10.1"
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "NHÀ NÀO CŨNG CÓ",
+     "at": [
+      2,
+      "Nhà"
+     ],
+     "acc": true
+    },
+    {
+     "text": "người đã mất",
+     "at": [
+      2,
+      "người"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:27987392",
+   "win": true,
+   "winLabel": "TỪNG CỬA"
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 0,
+   "suffix": " NHÀ",
+   "label": "CHƯA TỪNG CÓ AI MẤT",
+   "until": [
+    3,
+    "hiểu:"
+   ],
+   "sub": {
+    "text": "AI CŨNG TỪNG MẤT MÁT",
+    "at": [
+     3,
+     "ai"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "BÀI HỌC",
+   "cards": [
+    {
+     "k": "NỖI ĐAU",
+     "v": "CÒN ĐÓ",
+     "at": [
+      4,
+      "Nỗi"
+     ]
+    },
+    {
+     "k": "NHƯNG TA",
+     "v": "KHÔNG CÔ ĐƠN",
+     "at": [
+      4,
+      "Nhưng"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "BẠN ĐANG NHỚ AI?",
+     "at": [
+      5,
+      "Bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận nhé",
+     "at": [
+      5,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:33997116"
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/thig10.1/en/sujato",
+  "https://en.wikipedia.org/wiki/Kisa_Gotami"
+ ],
+ "description": "Chuyện xưa · Tập 8: Người mẹ và nắm hạt cải\n\nNguồn: https://suttacentral.net/thig10.1/en/sujato ; https://en.wikipedia.org/wiki/Kisa_Gotami",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ]
+}

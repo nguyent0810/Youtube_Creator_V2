@@ -1,0 +1,127 @@
+{
+ "title": "Toronto",
+ "lines": [
+  {
+   "t": "Và rồi tới câu hỏi cuối của ván thứ nhất.",
+   "p": 0.8
+  },
+  "Chủ đề: các thành phố của nước Mỹ.",
+  {
+   "t": "Gợi ý về hai sân bay, một mang tên người hùng, một mang tên trận đánh, cùng trong Thế chiến thứ hai.",
+   "p": 1.0
+  },
+  "Hai người chơi đều viết đúng: Chicago.",
+  "Watson viết: Toronto.",
+  {
+   "t": "Kèm một chuỗi dấu hỏi.",
+   "p": 1.0
+  },
+  "Nhưng hãy nhìn vào những chi tiết ít người để ý.",
+  "Ở câu cuối, mọi người đều phải viết câu trả lời, dù chắc hay không.",
+  "Và Watson đã đặt cược chỉ chín trăm bốn mươi bảy đô la.",
+  {
+   "t": "Một con số nhỏ, vì nó không tin vào đáp án của mình.",
+   "p": 1.0
+  },
+  "Trưởng nhóm David Ferrucci sau đó giải thích.",
+  "Tên chủ đề trong trò chơi này thường chỉ gợi ý rất lỏng lẻo, nên Watson được dạy để không quá tin vào nó.",
+  "Nước Mỹ cũng có vài nơi tên là Toronto.",
+  {
+   "t": "Và thành phố Toronto của Canada có một đội bóng chày chơi trong một giải đấu của Mỹ.",
+   "p": 1.0
+  },
+  "Cỗ máy đã sai.",
+  "Nhưng nó biết mình có thể sai, và nó cược ít.",
+  "Một người chơi tồi sẽ sai và cược lớn."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "9",
+   "k": "CHƯƠNG 09",
+   "title": "TORONTO",
+   "sub": "CÂU HỎI CUỐI CỦA VÁN MỘT",
+   "vid": "18757432",
+   "illus": "VIDEO MINH HỌA · KHÔNG PHẢI HÌNH ẢNH CHƯƠNG TRÌNH",
+   "titleAt": [
+    0,
+    "Và"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "CÂU TRẢ LỜI",
+   "rows": [
+    {
+     "k": "HAI NGƯỜI CHƠI",
+     "v": "CHICAGO",
+     "at": 3
+    },
+    {
+     "k": "WATSON",
+     "v": "TORONTO?????",
+     "at": 4
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "from": 947,
+   "to": 947,
+   "suffix": " ĐÔ LA",
+   "label": "SỐ TIỀN WATSON ĐẶT CƯỢC",
+   "sub": {
+    "text": "MỘT CON SỐ NHỎ · NÓ KHÔNG TIN VÀO ĐÁP ÁN",
+    "at": 9
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 10,
+   "title": "GIẢI THÍCH CỦA DAVID FERRUCCI",
+   "rows": [
+    {
+     "k": "1",
+     "v": "TÊN CHỦ ĐỀ CHỈ GỢI Ý LỎNG",
+     "at": 11
+    },
+    {
+     "k": "2",
+     "v": "MỸ CÓ VÀI NƠI TÊN TORONTO",
+     "at": 12
+    },
+    {
+     "k": "3",
+     "v": "ĐỘI BÓNG CHÀY Ở GIẢI MỸ",
+     "at": 13
+    }
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 14,
+   "mythLab": "NGƯỜI CHƠI TỒI",
+   "myth": "SAI VÀ CƯỢC LỚN",
+   "truthLab": "WATSON",
+   "truth": "SAI NHƯNG CƯỢC ÍT",
+   "strikeAt": [
+    15,
+    "Nhưng"
+   ],
+   "truthAt": [
+    15,
+    "cược"
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 09",
+  "t": "TORONTO"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

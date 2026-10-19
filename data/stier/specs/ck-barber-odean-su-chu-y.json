@@ -1,0 +1,166 @@
+{
+ "title": "Vì sao người ta mua thứ đang được nhắc tới nhiều nhất: nghiên cứu Barber và Odean năm 2008",
+ "description": "Brad Barber và Terrance Odean (Review of Financial Studies, 2008) xem dữ liệu giao dịch của hàng chục nghìn nhà đầu tư cá nhân ở Mỹ và thấy họ mua ròng những cổ phiếu đang thu hút sự chú ý: lên báo, khối lượng giao dịch tăng bất thường, biến động mạnh trong ngày. Lý do: muốn mua phải chọn giữa hàng nghìn mã; khi bán, chỉ bán thứ mình đang có. Nội dung giáo dục, không khuyến nghị.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ: https://youtu.be/ULLEUHkYz9g (công khai từ 20:00 ngày 21/11)",
+ "tags": [
+  "barber odean",
+  "hiệu ứng chú ý",
+  "fomo",
+  "tâm lý đầu tư",
+  "vn-index",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "chú",
+  "ý",
+  "nghìn",
+  "chọn",
+  "nhắc"
+ ],
+ "kicker": "TÂM LÝ TIỀN BẠC",
+ "sub": "FOMO",
+ "lines": [
+  "Người ta thường mua thứ đang được nhắc tới nhiều nhất. Có hẳn một nghiên cứu về chuyện này.",
+  "Năm 2008, Barber và Odean xem dữ liệu giao dịch của hàng chục nghìn nhà đầu tư cá nhân ở Mỹ.",
+  "Họ thấy người ta mua nhiều hơn bán ở những cổ phiếu đang thu hút sự chú ý.",
+  "Cổ phiếu lên báo, khối lượng giao dịch tăng bất thường, hoặc vừa tăng giảm rất mạnh trong một ngày.",
+  "Lý do rất đời thường: muốn mua, bạn phải chọn giữa hàng nghìn mã. Không ai xem hết.",
+  "Thế là bạn chọn trong số những thứ đang được nhắc tới. Còn khi bán, bạn chỉ bán thứ mình đang có.",
+  "Sự chú ý lớn nhất thường đến khi giá đã tăng nhiều nhất."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MUA THỨ ĐANG ĐƯỢC NHẮC",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "một nghiên cứu nổi tiếng",
+     "at": [
+      0,
+      "Có"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:13929693",
+   "veil": 0.58
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "BARBER & ODEAN · 2008",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "hàng chục nghìn nhà đầu tư cá nhân ở Mỹ",
+     "at": [
+      1,
+      "hàng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8480284",
+   "ms": 6,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "THU HÚT SỰ CHÚ Ý",
+   "cards": [
+    {
+     "k": "LÊN BÁO",
+     "v": "GIAO DỊCH TĂNG VỌT",
+     "at": 3
+    },
+    {
+     "k": "HOẶC",
+     "v": "BIẾN ĐỘNG MẠNH TRONG NGÀY",
+     "at": [
+      3,
+      "hoặc"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 1000,
+   "to": 1000,
+   "prefix": "HÀNG ",
+   "suffix": " MÃ",
+   "label": "PHẢI CHỌN KHI MUA",
+   "sub": {
+    "text": "KHÔNG AI XEM HẾT",
+    "at": [
+     4,
+     "Không"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Mua và bán khác nhau",
+   "nodes": [
+    {
+     "text": "mua: chọn thứ đang được nhắc",
+     "x": 0.5,
+     "y": 0.3,
+     "at": 5,
+     "shape": "none",
+     "w": 820
+    },
+    {
+     "text": "bán: chỉ thứ mình đang có",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      5,
+      "Còn"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 760
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "CHÚ Ý NHIỀU NHẤT",
+   "sub": "THƯỜNG KHI GIÁ ĐÃ TĂNG NHIỀU NHẤT"
+  }
+ ],
+ "sources": [
+  "https://doi.org/10.1093/rfs/hhm079"
+ ],
+ "theme": "ck",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

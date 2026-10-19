@@ -1,0 +1,161 @@
+{
+ "title": "VN-Index tăng hơn 40% trong 12 tháng: dữ liệu 8 năm cho thấy gì sau đó (kênh tự tính)",
+ "description": "Kênh tự tính trên VN-Index đóng cửa 8 năm: chia mọi phiên theo mức tăng 12 tháng trước đó, xem 12 tháng sau. Ở 197 phiên mà chỉ số đã tăng hơn 40% trong 12 tháng (10/03/2021 → 08/02/2022), 12 tháng sau có 79% số phiên thấp hơn. Nhưng đó gần như chỉ là MỘT giai đoạn (cửa sổ chồng lấn), không phải quy luật; không phải dự báo.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ: https://youtu.be/ULLEUHkYz9g (công khai từ 20:00 ngày 21/11)",
+ "tags": [
+  "vn-index tăng nóng",
+  "dữ liệu lịch sử",
+  "fomo",
+  "tâm lý đầu tư",
+  "vn-index",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "bốn",
+  "mươi",
+  "tám",
+  "một",
+  "lần"
+ ],
+ "kicker": "TÂM LÝ TIỀN BẠC",
+ "sub": "FOMO",
+ "lines": [
+  "Khi VN-Index đã tăng hơn bốn mươi phần trăm trong một năm, mười hai tháng sau thì sao?",
+  "Kênh lấy mọi phiên trong tám năm dữ liệu, chia theo mức chỉ số đã tăng trong mười hai tháng trước đó.",
+  "Rồi xem mười hai tháng sau, chỉ số đi đâu.",
+  "Ở những phiên đã tăng hơn bốn mươi phần trăm, gần tám trên mười lần, mười hai tháng sau chỉ số thấp hơn.",
+  "Phải nói ngay cho công bằng: những phiên ấy gần như nằm trọn trong một giai đoạn, từ tháng 3 năm 2021 tới tháng 2 năm 2022.",
+  "Tức là một lần trong tám năm, không phải một quy luật, và không phải dự báo.",
+  "Một lần trong quá khứ chỉ là một lời nhắc, không phải lời tiên tri."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "+40% TRONG MỘT NĂM",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "rồi mười hai tháng sau?",
+     "at": [
+      0,
+      "mười"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8369982",
+   "veil": 0.58
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Phép đếm của kênh",
+   "nodes": [
+    {
+     "text": "mọi phiên trong 8 năm",
+     "x": 0.5,
+     "y": 0.3,
+     "at": 1,
+     "shape": "none",
+     "w": 680
+    },
+    {
+     "text": "12 tháng sau đi đâu",
+     "x": 0.5,
+     "y": 0.64,
+     "at": 2,
+     "c": "acc",
+     "shape": "circle",
+     "w": 640
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "from": 79,
+   "to": 79,
+   "suffix": "%",
+   "label": "SỐ PHIÊN THẤP HƠN SAU 12 THÁNG",
+   "sub": {
+    "text": "NHÓM ĐÃ TĂNG > 40% · KÊNH TỰ TÍNH",
+    "at": [
+     3,
+     "gần"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "03/2021 → 02/2022",
+   "sub": "GẦN NHƯ CHỈ MỘT GIAI ĐOẠN"
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "ĐỌC CHO ĐÚNG",
+   "cards": [
+    {
+     "k": "MỘT LẦN",
+     "v": "TRONG TÁM NĂM",
+     "at": 5
+    },
+    {
+     "k": "KHÔNG PHẢI",
+     "v": "QUY LUẬT · DỰ BÁO",
+     "at": [
+      5,
+      "không"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MỘT LỜI NHẮC",
+     "at": 6,
+     "acc": true
+    },
+    {
+     "text": "không phải lời tiên tri",
+     "at": [
+      6,
+      "không"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7579943",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 6
+  }
+ ],
+ "sources": [
+  "https://vnstocks.com/docs/vnstock-data/du-lieu-giao-dich"
+ ],
+ "theme": "ck",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

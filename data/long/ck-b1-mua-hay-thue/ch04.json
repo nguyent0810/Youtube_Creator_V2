@@ -1,0 +1,418 @@
+{
+ "title": "Một tỷ trả trước cũng có giá",
+ "lines": [
+  {
+   "t": "Có một khoản chi của người mua mà không ai gửi hoá đơn: chính một tỷ trả trước.",
+   "p": 0.8
+  },
+  "Nếu không đặt vào căn nhà, một tỷ ấy có thể nằm trong sổ tiết kiệm.",
+  "Tháng chín năm nay, kỳ hạn mười hai tháng ở bốn ngân hàng lớn là sáu phẩy tám phần trăm một năm.",
+  "Một tỷ, mỗi năm được khoảng sáu mươi tám triệu tiền lãi, và lãi tiền gửi của cá nhân hiện không chịu thuế.",
+  {
+   "t": "Chia ra, khoảng năm triệu bảy mỗi tháng.",
+   "p": 1.0
+  },
+  "Đặt cạnh tiền thuê sáu triệu hai.",
+  "Gần bằng nhau.",
+  "Tức là riêng tiền lãi của khoản trả trước đã gần đủ trả tiền thuê một căn y hệt.",
+  {
+   "t": "Nghịch lý bắt đầu gỡ ở đây: khi tỷ suất cho thuê thấp hơn lãi tiết kiệm, đi thuê thường rẻ hơn, nếu chỉ tính tiền ra tiền vào.",
+   "p": 1.0
+  },
+  {
+   "t": "Nhưng mấy năm qua, ai mua nhà cũng giàu lên cơ mà?",
+   "ask": 1
+  },
+  "Đúng, và dữ liệu cũng cho thấy vậy.",
+  "Thử nhìn lại tám năm, từ tháng mười năm hai nghìn không trăm mười tám tới cuối tháng chín năm nay.",
+  "Một tỷ gửi tiết kiệm mười hai tháng, cứ đáo hạn lại gửi tiếp, thành khoảng một tỷ năm trăm sáu mươi triệu.",
+  "Một tỷ đi theo VN-Index thành khoảng một tỷ bảy trăm tám mươi triệu, chưa tính cổ tức.",
+  "Một tỷ mua vàng miếng, đã trừ chênh lệch mua bán, thành gần ba tỷ chín.",
+  "Còn căn hộ Hà Nội, theo một công ty tư vấn bất động sản, tới cuối năm ngoái giá đã cao gấp khoảng ba lần năm hai nghìn không trăm mười chín.",
+  {
+   "t": "Người mua căn hộ còn có đòn bẩy: họ chỉ bỏ ra một phần tiền, nhưng hưởng trọn phần tăng giá của cả căn.",
+   "p": 1.0
+  },
+  "Nhưng chín tháng đầu năm nay, bức tranh đảo chiều.",
+  "Tiền gửi từ đầu năm lãi khoảng ba phẩy chín phần trăm.",
+  "VN-Index gần như đứng yên, hơi âm.",
+  "Vàng miếng mua đầu năm đang lỗ gần tám phần trăm.",
+  "Giá căn hộ cũ ở Hà Nội quý hai giảm khoảng ba phần trăm so với quý trước.",
+  {
+   "t": "Thứ tự thắng thua đổi theo từng giai đoạn, và quá khứ không hứa gì cho mười năm tới.",
+   "p": 1.0
+  },
+  "Giờ bạn đã thấy vì sao giá thuê rẻ mà người mua vẫn thắng mấy năm qua: giá nhà tăng đủ nhanh để gánh hết tiền lãi.",
+  "Vậy phải nhanh tới mức nào mới đủ?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "CHƯƠNG BỐN",
+   "title": "MỘT TỶ TRẢ TRƯỚC\nCŨNG CÓ GIÁ",
+   "sub": "CHI PHÍ CƠ HỘI",
+   "vid": "6963972",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Có"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "1 TỶ GỬI 12 THÁNG",
+   "rows": [
+    {
+     "k": "LÃI · 4 NH LỚN · 09/2026",
+     "v": "6,8% / NĂM",
+     "at": [
+      2,
+      "sáu"
+     ]
+    },
+    {
+     "k": "MỖI NĂM",
+     "v": "≈ 68 TR",
+     "at": [
+      3,
+      "sáu"
+     ]
+    },
+    {
+     "k": "THUẾ TNCN TRÊN LÃI",
+     "v": "MIỄN",
+     "at": [
+      3,
+      "không"
+     ]
+    }
+   ],
+   "total": {
+    "k": "MỖI THÁNG",
+    "v": "≈ 5,67 TR",
+    "at": [
+     4,
+     "năm"
+    ]
+   },
+   "srcnote": "Lãi 12 tháng 4 NH lớn 09/2026 (VietNamNet 09/09/2026) · miễn thuế: Luật 109/2025/QH15, Đ4 k6"
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "ĐẶT CẠNH NHAU",
+   "illus": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "rows": [
+    {
+     "k": "LÃI CỦA 1 TỶ",
+     "v": "≈ 5,67 TR",
+     "at": [
+      5,
+      "Đặt"
+     ]
+    },
+    {
+     "k": "PHẢI · TIỀN THUÊ",
+     "v": "≈ 6,25 TR",
+     "at": [
+      5,
+      "sáu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "GẦN BẰNG NHAU",
+   "sub": "LÃI CỦA KHOẢN TRẢ TRƯỚC ≈ 91% TIỀN THUÊ",
+   "illus": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH"
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "NGHỊCH LÝ BẮT ĐẦU GỠ",
+     "at": [
+      8,
+      "Nghịch"
+     ],
+     "sm": true
+    },
+    {
+     "text": "TỶ SUẤT THUÊ ≈ 3% < LÃI GỬI ≈ 6,8%",
+     "at": [
+      8,
+      "tỷ"
+     ]
+    },
+    {
+     "text": "→ ĐI THUÊ RẺ HƠN",
+     "at": [
+      8,
+      "thuê",
+      1
+     ],
+     "acc": true
+    },
+    {
+     "text": "nếu chỉ tính tiền ra tiền vào",
+     "at": [
+      8,
+      "nếu"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 9,
+   "text": "Nhưng mấy năm qua,\nai mua nhà cũng giàu lên cơ mà?"
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "ĐÚNG · DỮ LIỆU CŨNG CHO THẤY VẬY",
+     "at": [
+      10,
+      "Đúng"
+     ]
+    },
+    {
+     "text": "NHÌN LẠI 8 NĂM: 10/2018 → 09/2026",
+     "at": [
+      11,
+      "tám"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "race",
+   "at": 12,
+   "from": "2018-10-08",
+   "to": "2026-09-30",
+   "money": 1000,
+   "unit": "TR",
+   "title": "1 TỶ SAU 8 NĂM",
+   "range": "08/10/2018 → 30/09/2026",
+   "drawAt": [
+    12,
+    "Một"
+   ],
+   "until": [
+    14,
+    "chín"
+   ],
+   "series": [
+    {
+     "key": "deposit",
+     "rates": [
+      [
+       "2018-10-01",
+       0.066
+      ],
+      [
+       "2019-10-01",
+       0.068
+      ],
+      [
+       "2020-10-01",
+       0.06
+      ],
+      [
+       "2021-10-01",
+       0.055
+      ],
+      [
+       "2022-10-01",
+       0.064
+      ],
+      [
+       "2023-10-01",
+       0.053
+      ],
+      [
+       "2024-10-01",
+       0.046
+      ],
+      [
+       "2025-10-01",
+       0.047
+      ]
+     ],
+     "label": "TIẾT KIỆM 12 THÁNG",
+     "color": "#4ade80"
+    },
+    {
+     "key": "vnindex",
+     "label": "VN-INDEX, CHƯA CỔ TỨC",
+     "color": "#38bdf8"
+    },
+    {
+     "key": "sjc",
+     "interp": true,
+     "label": "VÀNG MIẾNG SJC",
+     "color": "#fbbf24"
+    }
+   ],
+   "source": "DỮ LIỆU: HOSE, SJC (QUA VNSTOCK) · TIẾT KIỆM: MỨC 12 THÁNG NH LỚN TỪNG NĂM, CUỘN MỖI THÁNG 10 (ƯỚC TÍNH) · VN-INDEX CHƯA GỒM CỔ TỨC · KÊNH TỰ TÍNH · NHÌN LẠI, KHÔNG PHẢI DỰ BÁO"
+  },
+  {
+   "type": "counter",
+   "at": 15,
+   "from": 0,
+   "to": 3,
+   "suffix": " LẦN",
+   "label": "GIÁ CĂN HỘ HÀ NỘI SO VỚI 2019",
+   "sub": {
+    "text": "SAVILLS · 2019 → 2025 · KHÁC KỲ, KHÁC CÁCH ĐO",
+    "at": [
+     15,
+     "cuối"
+    ]
+   },
+   "srcnote": "Savills qua Người Quan Sát 16/01/2026 · giá căn hộ, chưa trừ lãi vay, chưa gồm tiền thuê"
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "items": [
+    {
+     "text": "ĐÒN BẨY",
+     "at": [
+      16,
+      "Người"
+     ],
+     "sm": true
+    },
+    {
+     "text": "BỎ 40% TIỀN · HƯỞNG 100% PHẦN TĂNG GIÁ",
+     "at": [
+      16,
+      "đòn"
+     ]
+    },
+    {
+     "text": "VÀ 100% PHẦN GIẢM GIÁ",
+     "at": [
+      16,
+      "căn",
+      1
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "race",
+   "at": 17,
+   "from": "2025-12-31",
+   "to": "2026-09-30",
+   "money": 1000,
+   "unit": "TR",
+   "title": "9 THÁNG 2026",
+   "range": "31/12/2025 → 30/09/2026",
+   "drawAt": [
+    17,
+    "Nhưng"
+   ],
+   "until": [
+    20,
+    "tám"
+   ],
+   "series": [
+    {
+     "key": "deposit",
+     "rate": 0.052,
+     "label": "TIẾT KIỆM 5,2%",
+     "color": "#4ade80"
+    },
+    {
+     "key": "vnindex",
+     "label": "VN-INDEX",
+     "color": "#38bdf8"
+    },
+    {
+     "key": "sjc",
+     "label": "VÀNG MIẾNG SJC",
+     "color": "#fbbf24"
+    }
+   ],
+   "source": "DỮ LIỆU: HOSE, SJC (QUA VNSTOCK) · TIẾT KIỆM: MỨC 12 THÁNG NH LỚN THÁNG 1/2026 (VNECONOMY), LÃI DỒN TÍCH · KÊNH TỰ TÍNH · KHÔNG PHẢI DỰ BÁO"
+  },
+  {
+   "type": "kinetic",
+   "at": 21,
+   "items": [
+    {
+     "text": "CĂN HỘ CŨ HÀ NỘI · QUÝ II/2026",
+     "at": [
+      21,
+      "Giá"
+     ],
+     "sm": true
+    },
+    {
+     "text": "−3% SO VỚI QUÝ I",
+     "at": [
+      21,
+      "giảm"
+     ],
+     "acc": true
+    }
+   ],
+   "srcnote": "CBRE qua TC Kinh tế Tài chính 07/07/2026 (giá thứ cấp)"
+  },
+  {
+   "type": "slam",
+   "at": 22,
+   "text": "KHÔNG KÊNH NÀO THẮNG MÃI",
+   "sub": "QUÁ KHỨ KHÔNG HỨA GÌ CHO 10 NĂM TỚI",
+   "fx": "zoom"
+  },
+  {
+   "type": "kinetic",
+   "at": 23,
+   "items": [
+    {
+     "text": "GIÁ THUÊ RẺ · NGƯỜI MUA VẪN THẮNG",
+     "at": [
+      23,
+      "Giờ"
+     ],
+     "sm": true
+    },
+    {
+     "text": "VÌ GIÁ NHÀ TĂNG ĐỦ NHANH",
+     "at": [
+      23,
+      "giá",
+      1
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 24,
+   "text": "Vậy phải nhanh\ntới mức nào mới đủ?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "MỘT TỶ TRẢ TRƯỚC CŨNG CÓ GIÁ"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.17
+ }
+}

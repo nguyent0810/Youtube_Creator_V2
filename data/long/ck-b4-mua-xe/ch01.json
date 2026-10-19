@@ -1,0 +1,220 @@
+{
+ "title": "Bảy trăm thành tám trăm",
+ "lines": [
+  {
+   "t": "Khoản đầu tiên đồng hồ ghi, là trước khi bánh xe kịp lăn.",
+   "p": 0.8
+  },
+  {
+   "t": "Giá niêm yết bảy trăm triệu, nhưng muốn đưa xe ra đường, bạn còn phải nộp vài khoản.",
+   "p": 1.0
+  },
+  "Lớn nhất là lệ phí trước bạ.",
+  "Với ô tô chở người từ chín chỗ trở xuống đăng ký lần đầu, mức chung là mười phần trăm.",
+  "Một số nơi được thu cao hơn. Ở Hà Nội, mức ấy là mười hai phần trăm.",
+  "Với chiếc xe ví dụ đăng ký ở Hà Nội, khoản này là tám mươi tư triệu.",
+  {
+   "t": "Nếu đăng ký ở nơi thu mười phần trăm, khoản ấy là bảy mươi triệu, ít hơn mười bốn triệu.",
+   "p": 1.0
+  },
+  {
+   "t": "Mười hai phần trăm của giá xe à? Nhiều thế.",
+   "ask": 1
+  },
+  "Đúng vậy. Và nó tính trên bảng giá do nhà nước quy định, không phải con số trên hợp đồng của bạn.",
+  {
+   "t": "Ví dụ này tạm coi hai con số ấy bằng nhau.",
+   "p": 1.0
+  },
+  "Tiếp theo là lệ phí cấp biển số.",
+  "Từ đầu năm nay, ở Hà Nội và Thành phố Hồ Chí Minh, khoản này giảm từ hai mươi xuống còn mười bốn triệu đồng.",
+  {
+   "t": "Cộng thêm vài khoản nhỏ khác như đăng kiểm, ví dụ giả định khoảng hai triệu.",
+   "p": 1.0
+  },
+  "Vậy là chưa đi mét nào, chiếc xe bảy trăm triệu đã thành tám trăm triệu.",
+  "Một trăm triệu ấy không mua thêm được chút sắt thép nào.",
+  "Và khi bán lại, người mua sau cũng không trả lại bạn khoản đó.",
+  "Đồng hồ bắt đầu ở con số một trăm triệu."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "BẢY TRĂM\nTHÀNH TÁM TRĂM",
+   "sub": "TRƯỚC KHI BÁNH XE KỊP LĂN",
+   "vid": "7154229",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Khoản"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "GIÁ NIÊM YẾT 700 TRIỆU",
+     "at": [
+      1,
+      "Giá"
+     ],
+     "acc": true
+    },
+    {
+     "text": "muốn ra đường còn vài khoản phải nộp",
+     "at": [
+      1,
+      "muốn"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "LỆ PHÍ TRƯỚC BẠ · Ô TÔ ≤ 9 CHỖ, LẦN ĐẦU",
+   "srcnote": "THEO QUY ĐỊNH HIỆN HÀNH",
+   "rows": [
+    {
+     "k": "MỨC CHUNG",
+     "v": "10%",
+     "at": [
+      3,
+      "mức"
+     ]
+    },
+    {
+     "k": "HÀ NỘI",
+     "v": "12%",
+     "at": [
+      4,
+      "Ở"
+     ]
+    }
+   ],
+   "total": {
+    "k": "XE VÍ DỤ · HÀ NỘI",
+    "v": "84 TRIỆU",
+    "at": [
+     5,
+     "tám"
+    ]
+   }
+  },
+  {
+   "type": "bars",
+   "at": 6,
+   "title": "LỆ PHÍ TRƯỚC BẠ CỦA XE 700 TRIỆU (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "NƠI THU 10%",
+     "v": 70,
+     "lbl": "70",
+     "at": [
+      6,
+      "bảy"
+     ]
+    },
+    {
+     "k": "HÀ NỘI · 12%",
+     "v": 84,
+     "lbl": "84",
+     "at": [
+      6,
+      "ít"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 8,
+   "mythLab": "TƯỞNG LÀ TÍNH THEO",
+   "myth": "GIÁ TRÊN HỢP ĐỒNG",
+   "truthLab": "THẬT RA THEO",
+   "truth": "BẢNG GIÁ NHÀ NƯỚC",
+   "strikeAt": [
+    8,
+    "không"
+   ],
+   "truthAt": [
+    8,
+    "bảng"
+   ]
+  },
+  {
+   "type": "source",
+   "at": 10,
+   "source": "THÔNG TƯ 155/2025 · TỪ 01/01/2026",
+   "ref": "LỆ PHÍ CẤP BIỂN Ô TÔ ≤ 9 CHỖ · HÀ NỘI, TP.HCM",
+   "snippet": "giảm từ 20 triệu xuống còn [[14 triệu đồng]] mỗi lần, mỗi xe",
+   "hlAt": [
+    11,
+    "mười"
+   ],
+   "seal": "ĐÃ ĐỐI CHIẾU BÁO CHÍ",
+   "sealAt": 12
+  },
+  {
+   "type": "ledger",
+   "at": 13,
+   "title": "LĂN BÁNH · XE VÍ DỤ",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · XE 700 TRIỆU",
+   "rows": [
+    {
+     "k": "GIÁ XE",
+     "v": "700",
+     "at": [
+      13,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "k": "TRƯỚC BẠ + BIỂN + KHÁC",
+     "v": "84 + 14 + 2",
+     "at": [
+      13,
+      "bảy"
+     ]
+    }
+   ],
+   "total": {
+    "k": "LĂN BÁNH (TRIỆU)",
+    "v": "800",
+    "at": [
+     13,
+     "tám"
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "at": 14,
+   "from": 0,
+   "to": 100,
+   "suffix": " TRIỆU",
+   "until": 15,
+   "label": "ĐỒNG HỒ · KHOẢN KHÔNG MUA THÊM ĐƯỢC GÌ",
+   "sub": {
+    "text": "VÍ DỤ GIẢ ĐỊNH · KHÔNG AI TRẢ LẠI KHI BÁN XE",
+    "at": 15
+   }
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "BẢY TRĂM THÀNH TÁM TRĂM"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

@@ -1,0 +1,140 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_gain": 0.2,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "format": "vi-sao",
+ "hook_type": "vi-sao",
+ "open_shot": "tran-hat",
+ "voice": "Thiền Tâm Đức",
+ "music": "clean_soul.mp3",
+ "gap": 0.15,
+ "title": "Vì sao tràng hạt có 108 hạt?",
+ "kicker": "VÌ SAO?",
+ "sub": "TRÀNG HẠT · JAPAMALA",
+ "acc": [
+  "108",
+  "niệm"
+ ],
+ "lines": [
+  "Vì sao tràng hạt thường có đúng một trăm lẻ tám hạt?",
+  "Đây là con số phổ biến trong nhiều truyền thống.",
+  "Một cách giải thích thường gặp: một trăm lẻ tám phiền não của con người.",
+  "Tràng hạt không phải bùa. Nó giúp giữ chánh niệm, mỗi hạt một lần niệm.",
+  "Có nhiều cách giải thích con số này. Bạn từng nghe cách nào? Bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.3,
+   "items": [
+    {
+     "text": "VÌ SAO 108 HẠT?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "tràng hạt",
+     "at": [
+      0,
+      "tràng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6956040"
+  },
+  {
+   "type": "hf_count_ring",
+   "at": 1,
+   "label": "Con số phổ biến trong nhiều truyền thống",
+   "value": 108,
+   "suffix": "HẠT",
+   "note": "Phật giáo · Ấn giáo · Kỳ-na giáo",
+   "noteAt": [
+    1,
+    "truyền"
+   ]
+  },
+  {
+   "type": "hf_stamp",
+   "at": 2,
+   "kick": "MỘT CÁCH GIẢI THÍCH",
+   "big": "108",
+   "stamps": [
+    {
+     "text": "PHIỀN NÃO",
+     "at": [
+      2,
+      "phiền"
+     ],
+     "x": 330,
+     "y": 880,
+     "rot": -6
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "TRÀNG HẠT",
+   "cards": [
+    {
+     "k": "KHÔNG PHẢI",
+     "v": "BÙA",
+     "at": [
+      3,
+      "bùa."
+     ]
+    },
+    {
+     "k": "MÀ ĐỂ",
+     "v": "GIỮ CHÁNH NIỆM",
+     "at": [
+      3,
+      "chánh"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "items": [
+    {
+     "text": "BẠN TỪNG NGHE?",
+     "at": [
+      4,
+      "Bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận nhé",
+     "at": [
+      4,
+      "Bình"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:36708765"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Japamala"
+ ],
+ "description": "Vì sao tràng hạt có 108 hạt?\n\nNguồn: https://en.wikipedia.org/wiki/Japamala",
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "v2": true,
+ "loop": true,
+ "based_on": "bud-vs-trang-hat-108"
+}

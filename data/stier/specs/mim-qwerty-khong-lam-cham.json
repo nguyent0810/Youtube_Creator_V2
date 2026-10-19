@@ -1,0 +1,172 @@
+{
+ "theme": "mim",
+ "title": "QWERTY sinh ra để bạn gõ chậm lại? Cặp chữ E và R nói điều ngược lại",
+ "description": "Chuyện quen thuộc: máy đánh chữ hay kẹt cần chữ nên bàn phím được xếp để người gõ chậm đi. Nhưng E và R, một trong những cặp chữ hay đi liền nhau nhất trong tiếng Anh, lại nằm sát cạnh nhau. Năm 2011, hai nhà nghiên cứu ở Đại học Kyoto (Yasuoka & Yasuoka) gọi lời giải thích “để làm chậm người gõ” là vô nghĩa. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/KJ5y_Ypnc4U (công khai từ 20:00 ngày 05/11).",
+ "tags": [
+  "qwerty làm chậm",
+  "lầm tưởng công nghệ",
+  "bàn phím qwerty",
+  "lịch sử bàn phím",
+  "máy đánh chữ",
+  "công nghệ",
+  "mind in the machine"
+ ],
+ "sub": "LỜI ĐỒN · 150 NĂM",
+ "acc": [
+  "chậm",
+  "E",
+  "R",
+  "vô",
+  "nghĩa"
+ ],
+ "kicker": "CHUYỆN CÔNG NGHỆ",
+ "lines": [
+  "Bàn phím QWERTY được xếp lộn xộn để bạn gõ chậm lại? Gần như chắc chắn là không.",
+  "Câu chuyện quen thuộc kể rằng máy đánh chữ ngày xưa hay kẹt cần chữ, nên người ta xếp phím để người gõ chậm đi.",
+  "Nhưng hãy nhìn hai chữ E và R.",
+  "Trong tiếng Anh, chúng thuộc những cặp chữ hay đi liền nhau nhất.",
+  "Vậy mà trên bàn phím, E và R nằm sát cạnh nhau.",
+  "Năm 2011, hai nhà nghiên cứu ở Đại học Kyoto gọi thẳng chuyện cố tình làm chậm là vô nghĩa.",
+  "Không ai thiết kế một cỗ máy để người ta dùng nó chậm hơn."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "ĐỂ BẠN GÕ CHẬM?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "gần như chắc chắn là không",
+     "at": [
+      0,
+      "Gần"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:3945445",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "“HAY KẸT CẦN CHỮ”",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "câu chuyện quen thuộc",
+     "at": [
+      1,
+      "quen"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7888283",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "CẶP CHỮ E – R",
+   "cards": [
+    {
+     "k": "HAI CHỮ",
+     "v": "E · R",
+     "at": [
+      2,
+      "E"
+     ]
+    },
+    {
+     "k": "TRONG TIẾNG ANH",
+     "v": "HAY ĐI LIỀN NHAU",
+     "at": 3,
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 0,
+   "to": 0,
+   "suffix": " PHÍM",
+   "label": "NẰM GIỮA E VÀ R",
+   "sub": {
+    "text": "SÁT CẠNH NHAU TRÊN BÀN PHÍM",
+    "at": [
+     4,
+     "sát"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "“VÔ NGHĨA”",
+   "sub": "ĐẠI HỌC KYOTO · 2011"
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Lẽ thường",
+   "nodes": [
+    {
+     "text": "không ai làm một cỗ máy",
+     "x": 0.5,
+     "y": 0.3,
+     "at": 6,
+     "shape": "none",
+     "w": 760
+    },
+    {
+     "text": "để dùng chậm hơn",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "chậm"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 640
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://repository.kulib.kyoto-u.ac.jp/dspace/handle/2433/139379",
+  "https://en.wikipedia.org/wiki/QWERTY"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "=QWERTY": "quớt-ti",
+  "qwerty": "quớt-ti",
+  "=E": "e",
+  "=R": "e-rờ",
+  "kyoto": "Ki-ô-tô"
+ },
+ "imgs": {}
+}

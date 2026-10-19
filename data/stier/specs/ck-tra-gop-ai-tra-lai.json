@@ -1,0 +1,173 @@
+{
+ "theme": "ck",
+ "kicker": "1 CÂU HỎI",
+ "sub": "TRẢ GÓP 0%",
+ "title": "Trả góp lãi suất 0%: vậy ai trả tiền lãi cho bên cho vay?",
+ "description": "Khi trả góp, một bên (công ty tài chính, hoặc ngân hàng qua thẻ tín dụng) ứng tiền cho cửa hàng. Lãi “0%” thường là một dạng khuyến mãi: hãng hoặc cửa hàng trả phần lãi thay bạn, thay cho giảm giá hay quà tặng; vì thế nó thường không cộng dồn với khuyến mãi khác (VOV, báo chí). Câu cần hỏi: tổng cộng tôi phải trả bao nhiêu?\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (8 phút): https://youtu.be/An95weKtrPA (công khai từ 20:00 ngày 28/10)",
+ "tags": [
+  "trả góp 0%",
+  "khuyến mãi",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "ai",
+  "khuyến",
+  "giảm",
+  "tổng",
+  "không"
+ ],
+ "lines": [
+  "Trả góp lãi suất không phần trăm. Vậy ai trả tiền lãi?",
+  "Khi bạn trả góp, có một bên đã ứng tiền cho cửa hàng thay bạn.",
+  "Và họ không cho vay không công.",
+  "Thường thì hãng sản xuất, hoặc chính cửa hàng, trả phần lãi ấy thay bạn.",
+  "Nói cách khác, không phần trăm là một dạng khuyến mãi, thay cho giảm giá hay quà tặng.",
+  "Vì là khuyến mãi, nó thường không cộng dồn với khuyến mãi khác.",
+  "Nên câu cần hỏi không phải lãi suất bao nhiêu. Mà là tổng cộng tôi trả bao nhiêu."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "LÃI SUẤT 0%",
+     "at": 0.0
+    },
+    {
+     "text": "AI TRẢ TIỀN LÃI?",
+     "at": [
+      0,
+      "Vậy"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7735913",
+   "veil": 0.58
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Bên ứng tiền",
+   "nodes": [
+    {
+     "text": "ứng tiền cho cửa hàng thay bạn",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      1,
+      "ứng"
+     ],
+     "shape": "none",
+     "w": 820
+    },
+    {
+     "text": "không cho vay không công",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      2,
+      "không"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 700
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "AI TRẢ HỘ BẠN",
+   "cards": [
+    {
+     "k": "THƯỜNG LÀ",
+     "v": "HÃNG SẢN XUẤT",
+     "at": [
+      3,
+      "hãng"
+     ]
+    },
+    {
+     "k": "HOẶC",
+     "v": "CỬA HÀNG",
+     "at": [
+      3,
+      "chính"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "at": 4,
+   "kind": "bars",
+   "title": "MỘT KHOẢN KHUYẾN MÃI · HAI CÁCH DÙNG",
+   "unit": "MINH HOẠ CƠ CHẾ",
+   "bars": [
+    {
+     "label": "GIẢM GIÁ\nCHO BẠN",
+     "v": 1,
+     "text": "HOẶC",
+     "c": "ref",
+     "at": [
+      4,
+      "giảm"
+     ]
+    },
+    {
+     "label": "TRẢ LÃI\nTHAY BẠN",
+     "v": 1,
+     "text": "HOẶC",
+     "c": "up",
+     "at": [
+      4,
+      "khuyến"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "THƯỜNG KHÔNG CỘNG DỒN",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "hỏi: tổng cộng tôi trả bao nhiêu?",
+     "at": 6,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6898096",
+   "ms": 2,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 5
+  }
+ ],
+ "sources": [
+  "https://vov.vn/kinh-te/su-that-lai-suat-tra-gop-0-cai-bay-bi-an-614131.vov"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

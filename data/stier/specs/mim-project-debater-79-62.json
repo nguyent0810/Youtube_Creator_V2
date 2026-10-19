@@ -1,0 +1,191 @@
+{
+ "theme": "mim",
+ "title": "Cỗ máy tranh luận của IBM thua một nhà vô địch tranh biện: 79% còn 62%, San Francisco 2019",
+ "description": "Tháng 02/2019 ở San Francisco, Project Debater của IBM tranh luận với nhà vô địch tranh biện Harish Natarajan về trợ cấp giáo dục mầm non; chủ đề chỉ công bố 15 phút trước. Khán giả bỏ phiếu trước và sau; bên làm nhiều người đổi ý hơn thắng. Theo AFP, ủng hộ trợ cấp từ 79% còn 62%: con người (phe phản đối) thắng (Wikipedia: Project Debater). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/Mt5hYcQxH50 (công khai từ 20:00 ngày 19/11).",
+ "tags": [
+  "project debater",
+  "harish natarajan",
+  "ibm watson",
+  "jeopardy",
+  "trí tuệ nhân tạo",
+  "người và máy",
+  "mind in the machine"
+ ],
+ "sub": "SAN FRANCISCO · 2019",
+ "acc": [
+  "bảy",
+  "sáu",
+  "đổi",
+  "ý",
+  "người"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Bảy mươi chín phần trăm, rồi chỉ còn sáu mươi hai. Một con người đã làm khán giả đổi ý, trước một cỗ máy.",
+  "Tháng 2 năm 2019, ở San Francisco, IBM đưa lên sân khấu một cỗ máy biết tranh luận.",
+  "Đối thủ là Harish Natarajan, một nhà vô địch tranh biện.",
+  "Chủ đề chỉ được công bố mười lăm phút trước: có nên trợ cấp cho giáo dục mầm non. Máy ủng hộ, người phản đối.",
+  "Khán giả bỏ phiếu trước và sau. Bên nào làm nhiều người đổi ý về phía mình hơn, bên ấy thắng.",
+  "Theo hãng tin AFP, phe ủng hộ trợ cấp tụt từ bảy mươi chín xuống sáu mươi hai phần trăm.",
+  "Trên sân khấu của ngôn ngữ, lần này, con người vẫn giữ phần thắng."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "79% → 62%",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "con người làm khán giả đổi ý",
+     "at": [
+      0,
+      "Một"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8847403",
+   "ms": 5,
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "PROJECT DEBATER",
+     "at": [
+      1,
+      "cỗ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "San Francisco · 2019",
+     "at": 1,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8847404",
+   "ms": 1,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "CHỦ ĐỀ · BÁO TRƯỚC 15 PHÚT",
+   "cards": [
+    {
+     "k": "MÁY",
+     "v": "ỦNG HỘ TRỢ CẤP",
+     "at": [
+      3,
+      "Máy"
+     ]
+    },
+    {
+     "k": "NGƯỜI",
+     "v": "PHẢN ĐỐI",
+     "at": [
+      3,
+      "người"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Luật chấm",
+   "nodes": [
+    {
+     "text": "bỏ phiếu trước và sau",
+     "x": 0.5,
+     "y": 0.3,
+     "at": 4,
+     "shape": "none",
+     "w": 700
+    },
+    {
+     "text": "ai làm người đổi ý hơn thì thắng",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      4,
+      "Bên"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 860
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "at": 5,
+   "kind": "bars",
+   "title": "KHÁN GIẢ ỦNG HỘ TRỢ CẤP",
+   "unit": "THEO AFP · 02/2019",
+   "bars": [
+    {
+     "label": "TRƯỚC",
+     "v": 79,
+     "text": "79%",
+     "c": "ref",
+     "at": [
+      5,
+      "bảy"
+     ]
+    },
+    {
+     "label": "SAU",
+     "v": 62,
+     "text": "62%",
+     "c": "down",
+     "at": [
+      5,
+      "sáu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "CON NGƯỜI THẮNG",
+   "sub": "TRÊN SÂN KHẤU CỦA NGÔN NGỮ"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Project_Debater"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "ibm": "ai bi em",
+  "=IBM": "ai bi em",
+  "harish": "Ha-rít",
+  "natarajan": "Na-ta-ra-gian",
+  "francisco": "Phran-xi-xcô",
+  "afp": "a ép pê"
+ },
+ "imgs": {}
+}

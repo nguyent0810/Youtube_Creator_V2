@@ -1,0 +1,269 @@
+{
+ "title": "Áp dụng cho bạn, và khi nào không đúng",
+ "lines": [
+  {
+   "t": "Mình không bảo bạn nên mua, bán hay giữ vàng.",
+   "p": 0.8
+  },
+  "Chỉ có năm câu hỏi, trước khi bạn đứng vào một hàng dài.",
+  "Một: khoản tiền này mình cần lại khi nào? Nếu trong một, hai năm, mình có chịu được cảnh giá giảm hơn một phần tư không?",
+  "Hai: nếu ngày mai giá giảm mười phần trăm, mình sẽ làm gì? Nếu câu trả lời là \"chắc sẽ hoảng bán\", thì mình đang mua theo kế hoạch, hay vì sợ lỡ?",
+  "Ba: mình đang trả thêm bao nhiêu? Chênh lệch mua bán là mấy triệu, SJC đang cao hơn thế giới bao nhiêu?",
+  "Bốn: mình mua vì đã so với các lựa chọn khác, hay vì thấy ảnh hàng dài và người quen khoe?",
+  {
+   "t": "Năm: mình có nhận vàng ngay không? Nếu phải chờ giao, lúc chờ mình không bán được.",
+   "p": 1.0
+  },
+  "Và đây là lúc điều mình vừa nói không đúng với bạn.",
+  "Nếu bạn giữ rất lâu: theo kênh tự tính, người mua đúng đỉnh năm hai nghìn không trăm mười một, sau mười lăm năm vẫn được khoảng bảy phần trăm mỗi năm, chưa trừ lạm phát. Nhưng họ phải chịu gần chín năm âm, và quá khứ không bảo đảm tương lai.",
+  "Nếu bạn mua vàng cho đám cưới hay của hồi môn, câu hỏi ít là \"đỉnh hay đáy\", mà là \"mình có đủ tiền mà không phải vay không\".",
+  "Nếu bạn mua đều từng ít một, không chọn ngày, một cú sốc giá sẽ ít chi phối giá vốn của bạn hơn. Đó là cách nhiều người dùng, không phải công thức.",
+  "Nếu gia đình bạn từng sống qua những năm lạm phát rất cao, thói quen giữ vàng có lý do rất thật.",
+  {
+   "t": "Và đừng lật ngược bài học: quanh đỉnh năm hai nghìn không trăm hai mươi, báo chí ghi không còn cảnh đổ xô, xếp hàng mua vàng như những năm trước. Không có hàng dài cũng không có nghĩa là an toàn.",
+   "p": 1.0
+  },
+  "Tóm lại, người đứng trong hàng không dại.",
+  "Họ chỉ làm điều bộ não vẫn làm: nhớ điều dễ nhớ, sợ bị bỏ lại, theo đám đông, và tin điều vừa xảy ra sẽ còn tiếp diễn.",
+  "Lần tới thấy ảnh hàng dài, câu đáng hỏi không phải \"đỉnh chưa\", vì không ai biết.",
+  {
+   "t": "Câu đáng hỏi là: mình đứng vào hàng vì kế hoạch của mình, hay vì độ dài của hàng?",
+   "p": 1.0
+  },
+  {
+   "t": "Còn bây giờ, mình muốn nghe bạn: bạn hay người nhà đã bao giờ xếp hàng mua vàng chưa? Lúc ấy, điều gì khiến bạn đứng vào hàng?",
+   "p": 1.0
+  }
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "CHƯƠNG SÁU",
+   "title": "ÁP DỤNG CHO BẠN —\nVÀ KHI NÀO KHÔNG ĐÚNG",
+   "sub": "KHÔNG PHẢI LỜI KHUYÊN MUA, BÁN HAY GIỮ VÀNG",
+   "titleAt": [
+    0,
+    "Mình"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "5 CÂU TRƯỚC KHI ĐỨNG VÀO HÀNG",
+   "rows": [
+    {
+     "k": "01",
+     "v": "TIỀN NÀY CẦN LẠI KHI NÀO?",
+     "at": [
+      2,
+      "Một:"
+     ]
+    },
+    {
+     "k": "02",
+     "v": "GIẢM 10% THÌ MÌNH LÀM GÌ?",
+     "at": [
+      3,
+      "Hai:"
+     ]
+    },
+    {
+     "k": "03",
+     "v": "ĐANG TRẢ THÊM BAO NHIÊU?",
+     "at": [
+      4,
+      "Ba:"
+     ]
+    },
+    {
+     "k": "04",
+     "v": "ĐÃ SO VỚI LỰA CHỌN KHÁC?",
+     "at": [
+      5,
+      "Bốn:"
+     ]
+    },
+    {
+     "k": "05",
+     "v": "CÓ NHẬN VÀNG NGAY KHÔNG?",
+     "at": [
+      6,
+      "Năm:"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "KHI NÀO ĐIỀU NÀY",
+     "at": [
+      7,
+      "Và"
+     ]
+    },
+    {
+     "text": "KHÔNG ĐÚNG VỚI BẠN?",
+     "at": [
+      7,
+      "không"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 8,
+   "title": "KHI NÀO KHÔNG ĐÚNG",
+   "rows": [
+    {
+     "k": "GIỮ RẤT LÂU",
+     "v": "≈ 7,2%/NĂM (DANH NGHĨA)",
+     "at": [
+      8,
+      "Nếu"
+     ]
+    },
+    {
+     "k": "VÀNG CƯỚI, HỒI MÔN",
+     "v": "ĐỦ TIỀN, KHÔNG VAY?",
+     "at": [
+      9,
+      "Nếu"
+     ]
+    },
+    {
+     "k": "MUA ĐỀU, MUA NHỎ",
+     "v": "ÍT PHỤ THUỘC NGÀY MUA",
+     "at": [
+      10,
+      "Nếu"
+     ]
+    },
+    {
+     "k": "KÝ ỨC LẠM PHÁT",
+     "v": "LÝ DO RẤT THẬT",
+     "at": [
+      11,
+      "Nếu"
+     ]
+    }
+   ],
+   "srcnote": "Đỉnh 2011 → 06/10/2026 ≈ 7,2%/năm danh nghĩa, chưa trừ lạm phát, gần 9 năm âm · kênh tự tính · quá khứ ≠ tương lai"
+  },
+  {
+   "type": "slam",
+   "at": 12,
+   "text": "KHÔNG CÓ HÀNG DÀI ≠ AN TOÀN",
+   "hitAt": [
+    12,
+    "Và"
+   ],
+   "sub": "QUANH ĐỈNH 2020: \"KHÔNG CÒN HIỆN TƯỢNG ĐỔ XÔ\""
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "NGƯỜI ĐỨNG TRONG HÀNG",
+     "at": [
+      13,
+      "Tóm"
+     ]
+    },
+    {
+     "text": "KHÔNG DẠI",
+     "at": [
+      13,
+      "không"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 14,
+   "title": "BỘ NÃO VẪN LÀM VẬY",
+   "rows": [
+    {
+     "k": "01",
+     "v": "NHỚ ĐIỀU DỄ NHỚ",
+     "at": [
+      14,
+      "nhớ"
+     ]
+    },
+    {
+     "k": "02",
+     "v": "SỢ BỊ BỎ LẠI",
+     "at": [
+      14,
+      "sợ"
+     ]
+    },
+    {
+     "k": "03",
+     "v": "THEO ĐÁM ĐÔNG",
+     "at": [
+      14,
+      "theo"
+     ]
+    },
+    {
+     "k": "04",
+     "v": "VỪA TĂNG = SẼ TĂNG",
+     "at": [
+      14,
+      "tin"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "LẦN TỚI THẤY ẢNH HÀNG DÀI",
+     "at": [
+      15,
+      "Lần"
+     ]
+    },
+    {
+     "text": "\"ĐỈNH CHƯA?\" — KHÔNG AI BIẾT",
+     "at": [
+      15,
+      "không",
+      1
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 16,
+   "text": "KẾ HOẠCH CỦA MÌNH,\nKHÔNG PHẢI ĐỘ DÀI CỦA HÀNG"
+  },
+  {
+   "type": "question",
+   "at": 17,
+   "text": "Bạn hay người nhà\nđã từng xếp hàng mua vàng?\nĐiều gì khiến bạn đứng vào hàng?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 06",
+  "t": "ÁP DỤNG CHO BẠN"
+ },
+ "bgm": {
+  "mood": "warm",
+  "gain": 0.11
+ }
+}

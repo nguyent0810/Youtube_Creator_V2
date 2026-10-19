@@ -1,0 +1,179 @@
+{
+ "title": "Phải mua nhà thì con mới có chỗ học? Đọc kế hoạch tuyển sinh theo nơi cư trú trước khi tin",
+ "description": "Sổ hộ khẩu giấy hết giá trị từ 01/01/2023; thông tin cư trú nằm trong cơ sở dữ liệu. Đăng ký thường trú ở nhà thuê cần chủ nhà đồng ý và đủ diện tích tối thiểu theo đầu người (Hà Nội: 15 m² sàn/người ở khu nội thành cũ). Hà Nội xét tuyển mầm non, lớp 1, lớp 6 theo nơi cư trú; theo báo chí, nơi cư trú có thể là thường trú hoặc tạm trú. Mỗi địa phương có cách ưu tiên riêng: hãy đọc kế hoạch tuyển sinh của phường mình.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ: https://youtu.be/pXKfIo_nyVM (công khai từ 20:00 ngày 07/11)",
+ "tags": [
+  "tuyển sinh theo nơi cư trú",
+  "đăng ký thường trú",
+  "hộ khẩu",
+  "mua hay thuê nhà",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "cư",
+  "trú",
+  "tạm",
+  "đọc",
+  "mười"
+ ],
+ "kicker": "QUYẾT ĐỊNH LỚN",
+ "sub": "MUA HAY THUÊ",
+ "lines": [
+  "Phải mua nhà thì con mới có chỗ học. Trước khi tin câu ấy, hãy đọc một văn bản.",
+  "Sổ hộ khẩu giấy đã hết giá trị từ đầu năm 2023. Giờ mọi thứ nằm trong cơ sở dữ liệu cư trú.",
+  "Ở nhà thuê, muốn đăng ký thường trú thì cần chủ nhà đồng ý, và đủ diện tích theo đầu người.",
+  "Hà Nội đặt mức mười lăm mét vuông sàn mỗi người cho khu nội thành cũ.",
+  "Năm học này, Hà Nội xét tuyển mầm non, lớp một và lớp sáu theo nơi cư trú.",
+  "Theo báo chí, nơi cư trú ấy có thể là thường trú, hoặc tạm trú.",
+  "Kế hoạch tuyển sinh của phường bạn, mới là câu trả lời đáng tin nhất."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MUA NHÀ = CÓ CHỖ HỌC?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "đọc một văn bản trước khi tin",
+     "at": [
+      0,
+      "Trước"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:37408488",
+   "veil": 0.58
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "01/01/2023",
+   "sub": "SỔ HỘ KHẨU GIẤY HẾT GIÁ TRỊ"
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "THƯỜNG TRÚ Ở NHÀ THUÊ",
+   "cards": [
+    {
+     "k": "CẦN",
+     "v": "CHỦ NHÀ ĐỒNG Ý",
+     "at": [
+      2,
+      "chủ"
+     ]
+    },
+    {
+     "k": "VÀ",
+     "v": "ĐỦ DIỆN TÍCH/NGƯỜI",
+     "at": [
+      2,
+      "đủ"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "from": 15,
+   "to": 15,
+   "suffix": " M²",
+   "label": "SÀN MỖI NGƯỜI · NỘI THÀNH CŨ HÀ NỘI",
+   "sub": {
+    "text": "ĐIỀU KIỆN ĐĂNG KÝ THƯỜNG TRÚ",
+    "at": [
+     3,
+     "mười"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "XÉT TUYỂN THEO NƠI CƯ TRÚ",
+     "at": 4,
+     "acc": true
+    },
+    {
+     "text": "mầm non · lớp 1 · lớp 6 · Hà Nội",
+     "at": [
+      4,
+      "mầm"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:37408488",
+   "ms": 10,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 4
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Nơi cư trú",
+   "nodes": [
+    {
+     "text": "thường trú",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      5,
+      "thường"
+     ],
+     "shape": "none",
+     "w": 560
+    },
+    {
+     "text": "hoặc tạm trú",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      5,
+      "tạm"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 560
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "ĐỌC KẾ HOẠCH TUYỂN SINH",
+   "sub": "CỦA CHÍNH PHƯỜNG BẠN"
+  }
+ ],
+ "sources": [
+  "https://plo.vn/tu-1-1-2023-se-khong-thu-hoi-so-ho-khau-nua-post695521.html",
+  "https://thanglong.chinhphu.vn/ha-noi-dien-tich-nha-o-toi-thieu-de-dang-ky-thuong-tru-tai-noi-thanh-la-15m2-san-nguoi-103230706102726962.htm",
+  "https://vietnamnet.vn/ha-noi-lan-dau-tien-tuyen-sinh-mam-non-lop-1-va-lop-6-theo-noi-cu-tru-2496868.html"
+ ],
+ "theme": "ck",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

@@ -1,0 +1,204 @@
+{
+ "theme": "bud",
+ "format": "lich-am",
+ "hook_type": "menh-lenh",
+ "open_shot": "tuong-phat",
+ "voice": "Thục Đoan",
+ "music": "ether_vox.mp3",
+ "gap": 0.05,
+ "title": "Rằm tháng 9 âm lịch (24/10/2026): đừng chỉ đi chùa",
+ "kicker": "LỊCH ÂM",
+ "sub": "RẰM THÁNG 9 · BÍNH NGỌ",
+ "acc": [
+  "rằm",
+  "tâm",
+  "gương"
+ ],
+ "lines": [
+  "Hôm nay Rằm tháng chín. Đừng chỉ đi chùa, thử thêm điều này.",
+  "Thứ Bảy, hai mươi bốn tháng mười.",
+  "Với Phật giáo Nam tông, đây còn là ngày mãn hạ, chư Tăng làm lễ Tự tứ.",
+  "Kinh kể: có người giữ ngày rằm như người chăn bò, chỉ nghĩ mai ăn gì.",
+  "Bậc thánh thì làm sạch tâm, như lau một tấm gương.",
+  "Thử một giờ tắt điện thoại, nhớ lại điều tốt bạn đã giữ.",
+  "Bình luận việc bạn làm hôm nay, và lưu lịch này nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "RẰM THÁNG 9",
+     "at": 0.0,
+     "acc": true,
+     "fx": "outline",
+     "size": 130
+    },
+    {
+     "text": "ĐỪNG CHỈ ĐI CHÙA",
+     "at": [
+      0,
+      "Đừng"
+     ]
+    },
+    {
+     "text": "thử thêm điều này",
+     "at": [
+      0,
+      "thử"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:31020831"
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "24.10.2026",
+   "day": "THỨ BẢY",
+   "sub": {
+    "text": "15/9 ÂM · TRĂNG TRÒN",
+    "at": [
+     1,
+     "hai"
+    ]
+   },
+   "clip": "pexels:37572386",
+   "veil": 0.6
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "NAM TÔNG",
+     "at": [
+      2,
+      "Nam"
+     ],
+     "sm": true
+    },
+    {
+     "text": "MÃN HẠ · TỰ TỨ",
+     "at": [
+      2,
+      "mãn"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:37155086"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "NHƯ NGƯỜI CHĂN BÒ",
+     "at": [
+      3,
+      "như"
+     ]
+    },
+    {
+     "text": "chỉ nghĩ: mai ăn gì?",
+     "at": [
+      3,
+      "chỉ"
+     ],
+     "sm": true
+    },
+    {
+     "text": "Tăng Chi 3.70",
+     "at": [
+      3,
+      "Kinh"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:27952980"
+  },
+  {
+   "type": "quote",
+   "at": 4,
+   "text": "Làm sạch tâm, như lau một tấm gương.",
+   "by": "TĂNG CHI 3.70 · DIỄN Ý",
+   "veil": 0.6,
+   "clip": "pexels:9473224"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "MỘT GIỜ",
+     "at": [
+      5,
+      "một"
+     ],
+     "acc": true,
+     "size": 160
+    },
+    {
+     "text": "TẮT ĐIỆN THOẠI",
+     "at": [
+      5,
+      "tắt"
+     ]
+    },
+    {
+     "text": "nhớ lại điều tốt bạn đã giữ",
+     "at": [
+      5,
+      "nhớ"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6374206"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "HÔM NAY BẠN LÀM GÌ?",
+     "at": [
+      6,
+      "Bình"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bình luận · lưu lịch",
+     "at": [
+      6,
+      "lưu"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:37272187"
+  }
+ ],
+ "description": "Rằm tháng 9 âm lịch — thứ Bảy 24/10/2026. Với Phật giáo Nam tông (Theravāda), rằm tháng 9 là ngày mãn hạ, chư Tăng làm lễ Tự tứ (Pavāraṇā) sau ba tháng an cư. Kinh Tăng Chi 3.70 (diễn ý): có kiểu giữ ngày trai giới như người chăn bò — chỉ nghĩ hôm nay ăn gì, mai ăn gì; còn ngày trai giới của bậc thánh là làm sạch tâm bằng nỗ lực, như gội đầu, tắm, giặt áo, lau gương.\n\nNguồn: AN 3.70, bản dịch Bhikkhu Sujato (CC0): https://suttacentral.net/an3.70/en/sujato · https://en.wikipedia.org/wiki/Pavarana\nKhông xem ngày, không bói toán.",
+ "tags": [
+  "rằm tháng 9",
+  "âm lịch",
+  "tự tứ",
+  "lời phật dạy",
+  "phật giáo"
+ ],
+ "sources": [
+  "https://suttacentral.net/an3.70/en/sujato",
+  "https://en.wikipedia.org/wiki/Pavarana"
+ ]
+}

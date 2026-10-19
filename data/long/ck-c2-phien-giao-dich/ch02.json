@@ -1,0 +1,540 @@
+{
+ "title": "Chín giờ: phiên mở cửa, một cái giá cho tất cả",
+ "lines": [
+  {
+   "t": "Chín giờ sáng, chợ mở. Nhưng mười lăm phút đầu, chưa lệnh mua bán nào được khớp cả.",
+   "p": 0.8
+  },
+  "Đây là phiên khớp lệnh định kỳ mở cửa, hay còn gọi là ATO.",
+  "Hệ thống chỉ gom lệnh lại.",
+  {
+   "t": "Đúng chín giờ mười lăm, nó chọn một mức giá duy nhất cho tất cả: mức giá khớp được nhiều cổ phiếu nhất.",
+   "p": 1.0
+  },
+  "Thử một sổ lệnh rất nhỏ, giá tham chiếu hai mươi nghìn đồng.",
+  "Nếu chọn mười chín nghìn chín trăm, người chịu bán ở giá đó chỉ có bốn trăm cổ phiếu. Khớp được bốn trăm.",
+  "Nếu chọn hai mươi nghìn một trăm, người chịu mua ở giá đó chỉ có ba trăm. Khớp được ba trăm.",
+  "Ở đúng hai mươi nghìn, khớp được tám trăm cổ phiếu.",
+  {
+   "t": "Đó là giá mở cửa.",
+   "p": 1.0
+  },
+  "Ai khớp cũng khớp ở cùng một giá.",
+  "Kể cả người đặt mua hai mươi nghìn một trăm, cũng chỉ trả hai mươi nghìn.",
+  "Trong mười lăm phút gom lệnh, lệnh đã đặt thì không sửa, không huỷ được.",
+  {
+   "t": "Vậy sao không đợi xem giá rồi mới đặt?",
+   "ask": 1
+  },
+  "Vì lúc ấy chưa có giá khớp thật. Bảng giá chỉ hiện một giá dự kiến, và nó còn đổi cho tới khi gom xong lệnh lúc chín giờ mười lăm.",
+  {
+   "t": "Cách gom này cho mọi lệnh đặt trước giờ mở cửa cùng một cái giá, thay vì mỗi người một giá tuỳ lúc bấm.",
+   "p": 1.0
+  },
+  "Còn một chi tiết của hệ thống giao dịch mới mà HOSE chạy từ tháng năm năm hai nghìn không trăm hai mươi lăm, gọi là KRX.",
+  "Lệnh ATO không còn được chen lên trước những lệnh mua giá trần, hay lệnh bán giá sàn, đã đặt từ trước.",
+  "Nghĩa là ở giá sàn, ai đến trước thì đứng trước.",
+  "Hôm chín tháng ba, ở những mã nằm sàn, thứ tự xếp hàng ấy quyết định ai bán được trước."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "CHÍN GIỜ:\nPHIÊN MỞ CỬA",
+   "sub": "MỘT CÁI GIÁ CHO TẤT CẢ · ATO",
+   "vid": "39488470",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Chín"
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": [
+    1,
+    "Đây"
+   ],
+   "items": [
+    {
+     "year": "9:00",
+     "text": "MỞ CỬA · ATO",
+     "at": [
+      1,
+      "Đây",
+      0,
+      0.1
+     ],
+     "color": "#fbbf24"
+    },
+    {
+     "year": "9:15",
+     "text": "KHỚP LIÊN TỤC",
+     "at": [
+      1,
+      "Đây",
+      0,
+      0.17
+     ],
+     "color": "#64748b"
+    },
+    {
+     "year": "11:30",
+     "text": "NGHỈ TRƯA",
+     "at": [
+      1,
+      "Đây",
+      0,
+      0.24
+     ],
+     "color": "#64748b"
+    },
+    {
+     "year": "13:00",
+     "text": "KHỚP LIÊN TỤC",
+     "at": [
+      1,
+      "Đây",
+      0,
+      0.31
+     ],
+     "color": "#64748b"
+    },
+    {
+     "year": "14:30",
+     "text": "ĐÓNG CỬA · ATC",
+     "at": [
+      1,
+      "Đây",
+      0,
+      0.38
+     ],
+     "color": "#64748b"
+    },
+    {
+     "year": "14:45",
+     "text": "THOẢ THUẬN",
+     "at": [
+      1,
+      "Đây",
+      0,
+      0.45
+     ],
+     "color": "#64748b"
+    },
+    {
+     "year": "15:00",
+     "text": "HẾT GIỜ",
+     "at": [
+      1,
+      "Đây",
+      0,
+      0.52
+     ],
+     "color": "#64748b"
+    },
+    {
+     "year": "T+2",
+     "text": "CỔ PHIẾU, TIỀN VỀ",
+     "at": [
+      1,
+      "Đây",
+      0,
+      0.59
+     ],
+     "color": "#64748b"
+    }
+   ],
+   "tag": {
+    "text": "ĐỒNG HỒ PHIÊN · HOSE",
+    "at": [
+     1,
+     "Đây"
+    ]
+   },
+   "srcnote": "Giờ giao dịch cổ phiếu HOSE (tài liệu thành viên, 05/2025) · T+2: VSD · quy định tại thời điểm làm video (10/2026)"
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "9:00 – 9:15 · ATO",
+     "at": [
+      2,
+      "Hệ"
+     ],
+     "sm": true
+    },
+    {
+     "text": "HỆ THỐNG CHỈ GOM LỆNH",
+     "at": [
+      2,
+      "Hệ",
+      0,
+      0.15
+     ]
+    },
+    {
+     "text": "9:15 · MỘT GIÁ DUY NHẤT",
+     "at": [
+      3,
+      "Đúng"
+     ],
+     "acc": true
+    },
+    {
+     "text": "GIÁ KHỚP ĐƯỢC NHIỀU CỔ PHIẾU NHẤT",
+     "at": [
+      3,
+      "mức",
+      1
+     ]
+    }
+   ],
+   "srcnote": "Quy chế Niêm yết và giao dịch CK niêm yết — VNX, QĐ 22/QĐ-HĐTV ngày 18/04/2025, Điều 20 · giờ: tài liệu thành viên (05/2025)"
+  },
+  {
+   "type": "book",
+   "at": 4,
+   "title": "SỔ LỆNH GIẢ ĐỊNH · PHIÊN ATO",
+   "ref": 20000,
+   "ceil": 21400,
+   "floor": 18600,
+   "rows": [
+    {
+     "side": "buy",
+     "price": 20100,
+     "qty": 300,
+     "at": [
+      4,
+      "sổ",
+      0,
+      0.0
+     ]
+    },
+    {
+     "side": "buy",
+     "price": 20000,
+     "qty": 500,
+     "at": [
+      4,
+      "sổ",
+      0,
+      0.15
+     ]
+    },
+    {
+     "side": "buy",
+     "price": 19900,
+     "qty": 700,
+     "at": [
+      4,
+      "sổ",
+      0,
+      0.3
+     ]
+    },
+    {
+     "side": "sell",
+     "price": 19900,
+     "qty": 400,
+     "at": [
+      4,
+      "giá",
+      0,
+      0.0
+     ]
+    },
+    {
+     "side": "sell",
+     "price": 20000,
+     "qty": 600,
+     "at": [
+      4,
+      "giá",
+      0,
+      0.15
+     ]
+    },
+    {
+     "side": "sell",
+     "price": 20100,
+     "qty": 800,
+     "at": [
+      4,
+      "giá",
+      0,
+      0.3
+     ]
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 5,
+   "title": "NẾU CHỌN GIÁ NÀY · KHỚP ĐƯỢC BAO NHIÊU?",
+   "unit": "CỔ PHIẾU · VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "GIÁ 19.900",
+     "v": 400,
+     "lbl": "400",
+     "at": [
+      5,
+      "Khớp"
+     ]
+    },
+    {
+     "k": "GIÁ 20.000",
+     "v": 800,
+     "lbl": "800",
+     "at": [
+      7,
+      "Ở"
+     ],
+     "acc": true
+    },
+    {
+     "k": "GIÁ 20.100",
+     "v": 300,
+     "lbl": "300",
+     "at": [
+      6,
+      "Khớp"
+     ]
+    }
+   ],
+   "srcnote": "Ví dụ giả định · khớp được = min(tổng mua ở giá đó trở lên, tổng bán ở giá đó trở xuống)"
+  },
+  {
+   "type": "book",
+   "at": 8,
+   "title": "SỔ LỆNH GIẢ ĐỊNH · PHIÊN ATO",
+   "ref": 20000,
+   "ceil": 21400,
+   "floor": 18600,
+   "rows": [
+    {
+     "side": "buy",
+     "price": 20100,
+     "qty": 300,
+     "at": [
+      8,
+      "Đó",
+      0,
+      0.0
+     ]
+    },
+    {
+     "side": "buy",
+     "price": 20000,
+     "qty": 500,
+     "at": [
+      8,
+      "Đó",
+      0,
+      0.06
+     ]
+    },
+    {
+     "side": "buy",
+     "price": 19900,
+     "qty": 700,
+     "at": [
+      8,
+      "Đó",
+      0,
+      0.12
+     ]
+    },
+    {
+     "side": "sell",
+     "price": 19900,
+     "qty": 400,
+     "at": [
+      8,
+      "Đó",
+      0,
+      0.0
+     ]
+    },
+    {
+     "side": "sell",
+     "price": 20000,
+     "qty": 600,
+     "at": [
+      8,
+      "Đó",
+      0,
+      0.06
+     ]
+    },
+    {
+     "side": "sell",
+     "price": 20100,
+     "qty": 800,
+     "at": [
+      8,
+      "Đó",
+      0,
+      0.12
+     ]
+    }
+   ],
+   "match": {
+    "price": 20000,
+    "at": [
+     8,
+     "giá"
+    ],
+    "text": "GIÁ MỞ CỬA 20.000 · KHỚP 800 CỔ PHIẾU",
+    "sub": {
+     "text": "ĐẶT MUA 20.100 CŨNG CHỈ TRẢ 20.000",
+     "at": [
+      10,
+      "Kể"
+     ]
+    }
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "15 PHÚT GOM LỆNH",
+     "at": [
+      11,
+      "Trong"
+     ]
+    },
+    {
+     "text": "KHÔNG SỬA · KHÔNG HUỶ",
+     "at": [
+      11,
+      "không"
+     ],
+     "acc": true
+    }
+   ],
+   "srcnote": "Quy chế Niêm yết và giao dịch CK niêm yết — VNX, QĐ 22/QĐ-HĐTV ngày 18/04/2025, Điều 21"
+  },
+  {
+   "type": "question",
+   "at": 12,
+   "text": "Sao không đợi\nxem giá rồi mới đặt?"
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "CHƯA CÓ GIÁ KHỚP THẬT",
+     "at": [
+      13,
+      "Vì"
+     ]
+    },
+    {
+     "text": "BẢNG GIÁ CHỈ HIỆN GIÁ DỰ KIẾN",
+     "at": [
+      13,
+      "Bảng"
+     ],
+     "acc": true
+    },
+    {
+     "text": "còn đổi cho tới 9:15",
+     "at": [
+      13,
+      "còn"
+     ],
+     "sm": true
+    },
+    {
+     "text": "MỌI LỆNH ĐẶT TRƯỚC GIỜ MỞ CỬA: CÙNG MỘT GIÁ",
+     "at": [
+      14,
+      "Cách"
+     ]
+    }
+   ],
+   "srcnote": "Giá khớp dự kiến trong ATO/ATC: tài liệu thành viên tóm tắt quy định HOSE (05/2025)"
+  },
+  {
+   "type": "date",
+   "at": 15,
+   "day": "HOSE CHẠY HỆ THỐNG GIAO DỊCH MỚI (KRX)",
+   "date": "05.05.2025",
+   "srcnote": "Báo Chính phủ, 05/05/2025"
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "items": [
+    {
+     "text": "LỆNH ATO KHÔNG CHEN TRƯỚC",
+     "at": [
+      16,
+      "Lệnh"
+     ]
+    },
+    {
+     "text": "LỆNH MUA TRẦN · LỆNH BÁN SÀN ĐÃ ĐẶT TỪ TRƯỚC",
+     "at": [
+      16,
+      "những"
+     ]
+    },
+    {
+     "text": "Ở GIÁ SÀN: AI ĐẾN TRƯỚC, ĐỨNG TRƯỚC",
+     "at": [
+      17,
+      "Nghĩa"
+     ],
+     "acc": true
+    }
+   ],
+   "srcnote": "Quy chế Niêm yết và giao dịch CK niêm yết — VNX, QĐ 22/QĐ-HĐTV ngày 18/04/2025, Điều 17"
+  },
+  {
+   "type": "kinetic",
+   "at": 18,
+   "items": [
+    {
+     "text": "09/03/2026 · NHỮNG MÃ NẰM SÀN",
+     "at": [
+      18,
+      "Hôm"
+     ],
+     "sm": true
+    },
+    {
+     "text": "THỨ TỰ XẾP HÀNG",
+     "at": [
+      18,
+      "thứ"
+     ]
+    },
+    {
+     "text": "QUYẾT ĐỊNH AI BÁN ĐƯỢC TRƯỚC",
+     "at": [
+      18,
+      "quyết"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "9:00 · PHIÊN MỞ CỬA (ATO)"
+ },
+ "bgm": {
+  "mood": "warm",
+  "gain": 0.14
+ }
+}

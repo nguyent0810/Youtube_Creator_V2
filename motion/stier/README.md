@@ -45,6 +45,7 @@ Video mẫu làm tay: `motion/hf/compositions/monalisa.html` (vụ trộm Mona L
  "imgs": {"key": "File:Tên file trên Commons.jpg"},
  "map": {"countries": [], "context": [], "labels": {}, "bbox": [], "pins": [{"name": "", "lon": 0, "lat": 0, "label": ""}]},
  "scenes": [ {"type": "hero", "img": "key", "intro": true, "head": "TIÊU ĐỀ"}, {"type": "date", "at": 2, "...": "..."} ],
+ "say": {"=ELIZA": "Ê-li-dơ", "seoul": "Xơ-un"},
  "sources": ["link bài gốc"]
 }
 ```
@@ -60,6 +61,8 @@ Video mẫu làm tay: `motion/hf/compositions/monalisa.html` (vụ trộm Mona L
 | `[3, null, 0, 0.3]` | Đầu câu 3 cộng 0,3 giây. |
 
 Viết sai chữ neo là **lỗi cứng**, build dừng ngay trước khi tốn thời gian render.
+
+**Bảng đọc `say`** (tuỳ chọn, như video dài). Chỉ đổi lời đưa vào TTS, phụ đề và chữ trên màn hình vẫn giữ chữ gốc, mốc `[i, "chữ"]` vẫn neo theo chữ gốc. Khoá thường khớp không phân biệt hoa/thường (`"seoul"` khớp cả `Seoul`). Khoá có `=` đứng đầu khớp đúng hoa/thường (`"=ELIZA"` không đụng tới chữ `eliza`). Dấu câu quanh chữ được giữ. Câu không có chữ nào trong bảng giữ nguyên cache giọng. Khi thêm hoặc sửa `say`, chỉ những câu đổi cách đọc mới phải đọc lại.
 
 Riêng `at` ở cấp cảnh là thời điểm cảnh bắt đầu. Cảnh kéo dài tới khi cảnh sau bắt đầu.
 
@@ -80,7 +83,7 @@ Riêng `at` ở cấp cảnh là thời điểm cảnh bắt đầu. Cảnh kéo
 | `mug` | Ảnh hồ sơ tội phạm, gỡ vạch tên, con dấu, song sắt | `mug{img,name,at,reveal}`, `stamp`, `bars`, `big`, `ghost` |
 | `question` | Câu hỏi trong **lặng** | `text` |
 | `quote` | Trích dẫn gõ máy chữ | `text`, `by` |
-| `kinetic` | Chữ lớn xếp tầng | `items[{text,at,acc,size,serif}]` |
+| `kinetic` | Chữ lớn xếp tầng | `items[{text,at,acc,size,serif,sm}]` (`sm`: dòng phụ nhỏ, trần 64px thay 150px, nét 700) |
 | `evidence` | Tang vật dưới đèn | `img`, `tag`, `callouts[]` |
 | `split` | Hai ảnh đối chiếu + dấu | `a`, `b`, `sign`, `title` |
 | `timeline` | Mốc năm | `items[{year,text,at}]` |

@@ -1,0 +1,249 @@
+{
+ "title": "Mua đều hay dồn một lần?",
+ "lines": [
+  {
+   "t": "Nếu có sẵn cả hai trăm chín mươi mốt triệu từ đầu, mua luôn một lần thì sao?",
+   "ask": 1
+  },
+  "Trong giai đoạn này, người dồn một lần ngay từ ngày đầu sẽ có khoảng năm trăm mười bốn triệu.",
+  {
+   "t": "Hơn cô Đều gần tám mươi triệu.",
+   "p": 1.0
+  },
+  "Lý do rất đơn giản. Khi chỉ số đi lên trong dài hạn, tiền vào sớm thì được hưởng lâu hơn.",
+  "Một nghiên cứu của Vanguard năm hai nghìn không trăm mười hai, trên dữ liệu Mỹ, Anh và Úc, cũng thấy điều tương tự.",
+  {
+   "t": "Khoảng hai phần ba số lần, dồn một lần cho kết quả cao hơn chia nhỏ ra mua dần.",
+   "p": 1.0
+  },
+  "Nhưng hãy để ý hai điều.",
+  "Một, hai phần ba không phải là luôn luôn.",
+  "Mình thử cho cả hai người bắt đầu từ tháng mười năm hai nghìn không trăm hai mươi mốt, ngay trước đỉnh.",
+  {
+   "t": "Lần này, người mua đều lãi khoảng ba mươi ba phần trăm. Người dồn một lần, khoảng ba mươi hai. Gần như hoà.",
+   "p": 1.0
+  },
+  "Và hai, quan trọng hơn nhiều.",
+  "Nghiên cứu kia nói về người đã có sẵn một khoản tiền lớn.",
+  "Còn với người lĩnh lương hằng tháng, câu hỏi dồn hay chia gần như không tồn tại.",
+  {
+   "t": "Bạn không thể dồn một lần số tiền mà tám năm nữa mình mới kiếm được.",
+   "p": 1.0
+  },
+  "Nên với đa số chúng ta, mua đều không phải là một mẹo để thắng thị trường.",
+  "Nó chỉ là cách biến thói quen để dành thành một việc tự động.",
+  "Và bỏ đi câu hỏi khó nhất, là hôm nay có phải lúc mua không."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "CHƯƠNG NĂM",
+   "title": "MUA ĐỀU HAY\nDỒN MỘT LẦN?",
+   "sub": "NẾU CÓ SẴN 291 TRIỆU TỪ ĐẦU",
+   "vid": "11321634",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Nếu"
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 1,
+   "title": "CÙNG 291 TRIỆU · SAU 8 NĂM (TRIỆU ĐỒNG)",
+   "items": [
+    {
+     "k": "DỒN MỘT LẦN NGAY NGÀY ĐẦU",
+     "v": 514,
+     "lbl": "≈ 514",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "k": "MUA ĐỀU",
+     "v": 437,
+     "lbl": "≈ 437",
+     "at": 2
+    }
+   ],
+   "label": {
+    "k": "CHÊNH",
+    "v": "≈ 77 TRIỆU · KÊNH TỰ TÍNH · QUÁ KHỨ · KHÔNG PHẢI KHUYẾN NGHỊ",
+    "at": 2
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "TIỀN VÀO SỚM",
+     "at": [
+      3,
+      "tiền"
+     ]
+    },
+    {
+     "text": "ĐƯỢC HƯỞNG LÂU HƠN",
+     "at": [
+      3,
+      "được"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "VANGUARD · 2012",
+   "srcnote": "VANGUARD (2012) · NGHIÊN CỨU VỀ KHOẢN TIỀN CÓ SẴN · QUÁ KHỨ",
+   "rows": [
+    {
+     "k": "DỮ LIỆU",
+     "v": "MỸ · ANH · ÚC",
+     "at": [
+      4,
+      "trên"
+     ]
+    },
+    {
+     "k": "≈ 2/3 SỐ LẦN",
+     "v": "DỒN MỘT LẦN CAO HƠN",
+     "at": 5
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "HAI ĐIỀU CẦN ĐỂ Ý",
+     "at": 6
+    },
+    {
+     "text": "2/3 KHÔNG PHẢI LUÔN LUÔN",
+     "at": 7,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 8,
+   "title": "BẮT ĐẦU TỪ 10/2021, NGAY TRƯỚC ĐỈNH · LÃI (%)",
+   "items": [
+    {
+     "k": "MUA ĐỀU",
+     "v": 33.1,
+     "lbl": "+33,1%",
+     "at": [
+      9,
+      "ba"
+     ],
+     "acc": true
+    },
+    {
+     "k": "DỒN MỘT LẦN",
+     "v": 31.8,
+     "lbl": "+31,8%",
+     "at": [
+      9,
+      "Người"
+     ]
+    }
+   ],
+   "label": {
+    "k": "GẦN NHƯ HOÀ",
+    "v": "KÊNH TỰ TÍNH · QUÁ KHỨ · KHÔNG PHẢI KHUYẾN NGHỊ",
+    "at": [
+     9,
+     "Gần"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "ĐIỀU THỨ HAI",
+     "at": 10,
+     "sm": true
+    },
+    {
+     "text": "QUAN TRỌNG HƠN NHIỀU",
+     "at": [
+      10,
+      "quan"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 11,
+   "vid": "1793371",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "NGHIÊN CỨU: NGƯỜI ĐÃ CÓ SẴN TIỀN",
+     "at": 11,
+     "sm": true
+    },
+    {
+     "text": "LĨNH LƯƠNG HẰNG THÁNG",
+     "at": 12
+    },
+    {
+     "text": "KHÔNG CÓ LỰA CHỌN ẤY",
+     "at": [
+      12,
+      "gần"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 13,
+   "text": "KHÔNG THỂ DỒN",
+   "sub": "SỐ TIỀN 8 NĂM NỮA MỚI KIẾM ĐƯỢC"
+  },
+  {
+   "type": "ledger",
+   "at": 14,
+   "title": "MUA ĐỀU LÀ GÌ, VỚI ĐA SỐ CHÚNG TA?",
+   "rows": [
+    {
+     "k": "KHÔNG PHẢI",
+     "v": "MẸO THẮNG THỊ TRƯỜNG",
+     "at": 14
+    },
+    {
+     "k": "MÀ LÀ",
+     "v": "BIẾN ĐỂ DÀNH THÀNH VIỆC TỰ ĐỘNG",
+     "at": 15
+    },
+    {
+     "k": "VÀ BỎ ĐI",
+     "v": "“HÔM NAY CÓ PHẢI LÚC MUA?”",
+     "at": 16
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "MUA ĐỀU HAY DỒN MỘT LẦN?"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

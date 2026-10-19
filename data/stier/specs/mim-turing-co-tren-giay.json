@@ -1,0 +1,200 @@
+{
+ "theme": "mim",
+ "title": "Alan Turing viết chương trình đánh cờ khi chưa có máy chạy nổi, nên tự tính tay: nửa giờ mỗi nước",
+ "description": "Cùng thời Claude Shannon phác ra cách máy tính chơi cờ (1949–1950), Alan Turing ở Anh viết một chương trình đánh cờ. Chưa có máy nào đủ mạnh để chạy, nên ông tự làm cỗ máy: tính bằng tay trên giấy, mỗi nước gần nửa giờ. Chương trình trên giấy ấy thua một đồng nghiệp của ông (Wikipedia: Turochamp). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/TG7ZShLM4LA (công khai từ 20:00 ngày 12/11).",
+ "tags": [
+  "alan turing",
+  "turochamp",
+  "lịch sử cờ vua máy tính",
+  "trận đấu người máy",
+  "trí tuệ nhân tạo",
+  "lịch sử máy tính",
+  "mind in the machine"
+ ],
+ "sub": "NƯỚC ANH · 1952",
+ "acc": [
+  "giấy",
+  "nửa",
+  "giờ",
+  "tay",
+  "thua"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Một chương trình đánh cờ chạy trên giấy, mỗi nước mất gần nửa giờ.",
+  "Cuối những năm 1940, Alan Turing ở nước Anh viết một chương trình đánh cờ.",
+  "Nhưng chưa có cỗ máy nào đủ mạnh để chạy nó.",
+  "Nên Turing tự làm cỗ máy. Ông ngồi tính bằng tay, trên giấy, từng nước một.",
+  "Mỗi nước đi mất của ông gần nửa giờ.",
+  "Và chương trình trên giấy ấy thua một đồng nghiệp của ông.",
+  "Trước khi có máy đủ nhanh, ý tưởng máy chơi cờ đã có sẵn, chỉ chờ phần cứng đuổi kịp."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CỜ VUA TRÊN GIẤY",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "mỗi nước gần nửa giờ",
+     "at": [
+      0,
+      "mỗi"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6600019",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "ALAN TURING",
+     "at": [
+      1,
+      "Alan"
+     ],
+     "acc": true
+    },
+    {
+     "text": "viết chương trình đánh cờ · nước Anh",
+     "at": [
+      1,
+      "viết"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:31176143",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "CHƯA CÓ MÁY NÀO",
+   "sub": "ĐỦ MẠNH ĐỂ CHẠY NÓ"
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Cỗ máy là",
+   "nodes": [
+    {
+     "text": "chính Turing",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      3,
+      "Turing"
+     ],
+     "shape": "none",
+     "w": 560
+    },
+    {
+     "text": "tính tay trên giấy",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      3,
+      "tính"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 640
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 30,
+   "to": 30,
+   "prefix": "GẦN ",
+   "suffix": " PHÚT",
+   "label": "CHO MỖI NƯỚC ĐI",
+   "sub": {
+    "text": "TÍNH BẰNG TAY",
+    "at": [
+     4,
+     "gần"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "KẾT QUẢ",
+   "cards": [
+    {
+     "k": "ĐỐI THỦ",
+     "v": "MỘT ĐỒNG NGHIỆP",
+     "at": [
+      5,
+      "một"
+     ]
+    },
+    {
+     "k": "CHƯƠNG TRÌNH",
+     "v": "THUA",
+     "at": [
+      5,
+      "thua"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "Ý TƯỞNG CÓ TRƯỚC",
+     "at": 6,
+     "acc": true
+    },
+    {
+     "text": "chờ phần cứng đuổi kịp",
+     "at": [
+      6,
+      "chỉ"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:28709421",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 6
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Turochamp"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "alan": "A-lần",
+  "turing": "Tiu-rinh"
+ },
+ "imgs": {}
+}

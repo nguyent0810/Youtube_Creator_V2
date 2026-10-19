@@ -1,0 +1,186 @@
+{
+ "theme": "mim",
+ "title": "Bài kiểm tra “bạn có phải người không”: máy giờ làm giỏi hơn người",
+ "description": "Năm 2023, một nhóm ở Đại học California, Irvine (USENIX Security) cho hơn một nghìn người giải nhiều loại mã xác nhận rồi so với máy. Theo tường thuật về nghiên cứu: với chữ méo, máy giải đúng gần 100%, người chỉ 50–84%; người mất tới 15 giây, máy dưới 1 giây. Năm 2024, một nhóm ở ETH Zurich dùng mô hình nhận diện ảnh có sẵn và giải được 100% các ô ảnh họ thử. Số liệu 2023 lấy theo tường thuật báo chí về bài báo. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ (9 phút): https://youtu.be/CAYQtYA1NJA (công khai từ 20:00 ngày 22/10).",
+ "tags": [
+  "bot giải captcha",
+  "uc irvine",
+  "trí tuệ nhân tạo",
+  "captcha",
+  "mã xác nhận",
+  "tôi không phải người máy",
+  "công nghệ quanh ta",
+  "mind in the machine"
+ ],
+ "sub": "NGHIÊN CỨU · 2023",
+ "acc": [
+  "máy",
+  "năm",
+  "tám",
+  "giây",
+  "trăm"
+ ],
+ "kicker": "CÔNG NGHỆ QUANH TA",
+ "lines": [
+  "Bài kiểm tra để phân biệt người với máy, giờ máy làm giỏi hơn người.",
+  "Năm 2023, một nhóm nghiên cứu ở Mỹ cho hơn một nghìn người thi với các loại mã xác nhận.",
+  "Rồi họ so với máy.",
+  "Với chữ méo, máy giải đúng gần một trăm phần trăm.",
+  "Con người, chỉ từ năm mươi tới tám mươi tư.",
+  "Người mất tới mười lăm giây. Máy chưa tới một giây.",
+  "Năm 2024, một nhóm khác giải được một trăm phần trăm các ô ảnh họ thử."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "PHÂN BIỆT NGƯỜI VỚI MÁY",
+     "at": 0.0
+    },
+    {
+     "text": "MÁY LÀM GIỎI HƠN NGƯỜI",
+     "at": [
+      0,
+      "giờ"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:6153727",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NĂM 2023",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "HƠN 1.000 NGƯỜI ĐI THI",
+     "at": [
+      1,
+      "hơn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "rồi so với máy",
+     "at": 2,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7439776",
+   "ms": 8,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "chart",
+   "at": 3,
+   "kind": "bars",
+   "title": "GIẢI CHỮ MÉO: ĐÚNG BAO NHIÊU %",
+   "unit": "THEO TƯỜNG THUẬT NGHIÊN CỨU UC IRVINE, 2023",
+   "min": 0,
+   "bars": [
+    {
+     "label": "MÁY",
+     "v": 99,
+     "text": "GẦN 100",
+     "c": "ref",
+     "at": [
+      3,
+      "máy"
+     ]
+    },
+    {
+     "label": "NGƯỜI\nCAO NHẤT",
+     "v": 84,
+     "text": "84",
+     "c": "dim",
+     "at": [
+      4,
+      "tám"
+     ]
+    },
+    {
+     "label": "NGƯỜI\nTHẤP NHẤT",
+     "v": 50,
+     "text": "50",
+     "c": "dim",
+     "at": [
+      4,
+      "năm"
+     ]
+    }
+   ],
+   "note": "USENIX SECURITY 2023"
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "THỜI GIAN GIẢI MỘT MÃ",
+   "cards": [
+    {
+     "k": "NGƯỜI",
+     "v": "TỚI 15 GIÂY",
+     "at": [
+      5,
+      "mười"
+     ]
+    },
+    {
+     "k": "MÁY",
+     "v": "CHƯA TỚI 1 GIÂY",
+     "at": [
+      5,
+      "Máy"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "to": 100,
+   "suffix": "%",
+   "label": "Ô ẢNH ĐƯỢC THỬ · MÁY GIẢI HẾT",
+   "until": [
+    6,
+    "trăm"
+   ],
+   "sub": {
+    "text": "NHÓM NGHIÊN CỨU Ở THUỴ SĨ · 2024",
+    "at": [
+     6,
+     "các"
+    ]
+   }
+  }
+ ],
+ "sources": [
+  "https://www.usenix.org/conference/usenixsecurity23/presentation/searles",
+  "https://arxiv.org/abs/2409.08831"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

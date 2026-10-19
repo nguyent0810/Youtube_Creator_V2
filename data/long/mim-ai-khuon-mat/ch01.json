@@ -1,0 +1,141 @@
+{
+ "title": "Trạm thứ nhất: tìm khuôn mặt",
+ "lines": [
+  {
+   "t": "Trạm đầu tiên nghe có vẻ hiển nhiên. Tìm xem khuôn mặt nằm ở đâu.",
+   "p": 0.8
+  },
+  {
+   "t": "Nhưng với máy, đó là một bài toán thật sự.",
+   "p": 1.0
+  },
+  "Một tấm ảnh, với máy, chỉ là một tấm lưới gồm hàng triệu ô vuông nhỏ.",
+  "Mỗi ô là một con số, cho biết ô ấy sáng hay tối, màu gì.",
+  {
+   "t": "Không có ô nào ghi chữ mắt, hay chữ mũi.",
+   "p": 1.0
+  },
+  "Những hệ thống đời đầu tìm khuôn mặt bằng các mẫu sáng tối đơn giản.",
+  "Vùng mắt thường tối hơn vùng má. Sống mũi thường sáng hơn hai bên.",
+  {
+   "t": "Đầu những năm hai nghìn, một cách làm như thế đủ nhanh để chạy ngay trên máy ảnh.",
+   "p": 1.0
+  },
+  "Đó là lý do bạn từng thấy những ô vuông nhỏ nhảy quanh mặt người trên màn hình máy ảnh.",
+  "Ngày nay, việc này phần lớn do mạng nơ-ron làm, nhanh và chính xác hơn nhiều.",
+  "Nhưng kết quả của trạm thứ nhất vẫn rất giản dị.",
+  "Một cái khung, bao quanh khuôn mặt. Và lời chỉ dẫn: hãy nhìn vào đây."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "TRẠM MỘT",
+   "title": "TÌM KHUÔN MẶT",
+   "sub": "NGHE THÌ HIỂN NHIÊN",
+   "vid": "8090199",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Trạm"
+   ]
+  },
+  {
+   "type": "units",
+   "at": 1,
+   "title": "TRẠM 1/4 · HÀNH TRÌNH CỦA MỘT TẤM ẢNH",
+   "total": 4,
+   "cols": 4,
+   "lit": 1,
+   "litAt": [
+    1,
+    "Nhưng"
+   ],
+   "unitLabel": "TRẠM"
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "MỘT TẤM ẢNH, VỚI MÁY",
+   "rows": [
+    {
+     "k": "LÀ",
+     "v": "LƯỚI HÀNG TRIỆU Ô VUÔNG",
+     "at": 2
+    },
+    {
+     "k": "MỖI Ô",
+     "v": "MỘT CON SỐ · SÁNG, TỐI, MÀU",
+     "at": 3
+    }
+   ],
+   "total": {
+    "k": "Ô NÀO GHI “MẮT”?",
+    "v": "KHÔNG CÓ",
+    "at": 4
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "CÁCH LÀM ĐỜI ĐẦU · MẪU SÁNG TỐI",
+   "rows": [
+    {
+     "k": "VÙNG MẮT",
+     "v": "TỐI HƠN VÙNG MÁ",
+     "at": [
+      6,
+      "Vùng"
+     ]
+    },
+    {
+     "k": "SỐNG MŨI",
+     "v": "SÁNG HƠN HAI BÊN",
+     "at": [
+      6,
+      "Sống"
+     ]
+    }
+   ],
+   "total": {
+    "k": "NĂM 2000",
+    "v": "CHẠY TRÊN MÁY ẢNH",
+    "at": 7
+   }
+  },
+  {
+   "type": "broll",
+   "at": 8,
+   "vid": "8090198",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "Ô VUÔNG NHẢY QUANH MẶT NGƯỜI",
+     "at": 8,
+     "sm": true
+    },
+    {
+     "text": "NAY: MẠNG NƠ-RON · NHANH HƠN, CHÍNH XÁC HƠN",
+     "at": 9,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 10,
+   "text": "MỘT CÁI KHUNG",
+   "sub": "“HÃY NHÌN VÀO ĐÂY”",
+   "subAt": 11
+  }
+ ],
+ "hud": {
+  "k": "TRẠM 1",
+  "t": "TÌM KHUÔN MẶT"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}
