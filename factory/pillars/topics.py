@@ -300,7 +300,10 @@ def _dich():
 
 
 def _menh():
-    return _rr([lambda c=n: menh_tue_sai(c) for n, _ in T.CUNG[6:] + T.CUNG[:6]],
+    # tue_sai: MỘT chủ đề, không phải 12 -- 12 cung chỉ khác câu hook, 4/5 câu
+    # còn lại giống hệt (đo 05/10/2026: 83% câu trùng với bài trước). Giữ khoá
+    # tue-sai-6 đã đăng để next_draft bỏ qua, không sinh thêm bản nào.
+    return _rr([lambda: menh_tue_sai(T.CUNG[6][0])],
                [lambda j=j: X.menh_nap_am(j) for j in range(30)],
                [lambda i=i: X.menh_tu(i) for i in range(28)],
                [lambda k=k: X.menh_nguyen_to(k) for k in range(4)]

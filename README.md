@@ -124,7 +124,9 @@ TTS chạy **CPU**, không GPU — có chủ đích. Tài liệu upstream nói t
 | `speak.py` — TTS + timing + phụ đề | ✅ chạy thật |
 | `assemble.py` — dựng video 9:16 | ✅ chạy thật |
 | `thumbnail.py` — khung hình + chữ | ✅ |
-| `publish.py` — YouTube API, hẹn giờ | ✅ **đã chạy thật** (probe 20/09/2026) |
+| `publish.py` — YouTube API, hẹn giờ | ✅ **đã chạy thật** (probe 20/09/2026); từ 05/10 chỉ còn phần ĐỌC |
+| `channel.py` — mọi lần GHI lên YouTube: giãn nhịp, sổ upload, merge khi sửa | ✅ test trên FakeYouTube, **chưa chạy thật** |
+| `scoreboard.py` + `rotation.py` — vòng phản hồi: đo 7 ngày đầu, xếp hạng trong tuần, xoay giờ đăng, brief cho pha sinh (`scripts/feedback_loop.py`) | ✅ test trên FakeAnalytics, **chưa chạy thật** |
 | CLI gói lại | ⬜ sau cùng |
 
 ```bash
@@ -150,22 +152,29 @@ Vá 2 xoá một lớp lỗi thật của v1: câu *"cũng không phải hình p
 
 ### An toàn khi đăng
 
-`scripts/publish_batch.py` có ba chế độ, mặc định là chế độ an toàn nhất:
+`scripts/publish_batch.py` có bốn chế độ, mặc định là chế độ an toàn nhất:
 
 | | |
 |---|---|
 | `check` | Không ghi gì. Xác minh auth, chống trùng, metadata hợp lệ |
 | `probe` | Đăng **đúng một** video, private, **cố ý bỏ `publishAt`** |
-| `run` | Đăng thật, private + hẹn giờ |
+| `run` | Đăng thật, private + hẹn giờ. Cùng slug đã `probe` thì dùng lại video đó và gán lịch |
+| `resolve <slug> <video_id\|none>` | Xử lý tay một upload "không rõ" (phiên hết hạn giữa chừng) |
 
 `probe` tồn tại vì đường ghi cần được chạy lần đầu ở chỗ không ai thấy. Không có `publishAt` thì YouTube không bao giờ tự chuyển công khai.
 
 Chạy `check` lần đầu bắt được ngay hai lỗi thật: một bug thiếu tham số API, và — nghiêm trọng hơn — hàng đợi có **32 item chứ không phải 30**, hai cái thừa là video demo dựng lúc thử nghiệm. Hàng đợi là nơi mọi thứ dồn về, gồm cả thứ chỉ để thử; bước đăng phải **tự lọc**.
 
-`publish.py` luôn đặt `privacyStatus = "private"` kèm `publishAt`. Video tự chuyển public đúng giờ. **Không bao giờ đăng public ngay** — một lần nhầm là công khai thật, không rút lại được.
+Mọi lần ghi lên YouTube đi qua `factory/channel.py` (thiết kế: `docs/audit/2026-10-05-channel-design.md`):
 
-Chống đăng trùng bằng `playlistItems.list` (1 đơn vị quota) chứ không `search.list` (chỉ 100 lần/ngày cho cả project).
+- Luôn `privacyStatus = "private"` kèm `publishAt` tương lai. Video tự chuyển public đúng giờ. **Không bao giờ đăng public ngay** — một lần nhầm là công khai thật, không rút lại được.
+- **Giãn nhịp theo giờ upload**, áp cho mọi đường đăng: CL 3 giờ/lần và tối đa 8/24 giờ; FS/BUD tối đa 24/24 giờ (`factory/channels.py`, mục `pacing`). Lý do: 30/09 CL nhận 61 video/ngày và rơi khỏi feed Shorts.
+- **Định danh là (kênh, slug), không phải tiêu đề.** Sổ `upload_log` trong `state.sqlite`; trùng tiêu đề với slug khác thì từ chối (`DuplicateTitle`), không âm thầm nhận video của ngày khác như sự cố 9 ngày Lịch.
+- Upload resumable lưu session URI **trước byte đầu tiên**. Đứt giữa chừng thì lần sau hỏi lại phiên, không upload lại.
+- Chưa tới lượt, hết quota, đứt mạng, upload "không rõ" đều là **hoãn**, không tính là hỏng.
+
+Chống đăng trùng với video không có trong sổ (v1, đăng tay) bằng `playlistItems.list` (1 đơn vị quota) chứ không `search.list` (chỉ 100 lần/ngày cho cả project).
 
 ---
 
-24 test, tất cả đạt. Mỗi test khoá lại một cách hỏng thật — hoặc đã xảy ra ở v1, hoặc là giả định mà cả kiến trúc dựa vào.
+176 test (7 test cần `vnlunar`). Mỗi test khoá lại một cách hỏng thật — hoặc đã xảy ra ở v1, hoặc là giả định mà cả kiến trúc dựa vào.

@@ -59,6 +59,24 @@ window.makeBeat = ({ tl, el, esc, rnd }) => {
       tl.set(e, { opacity: 1 }, q.at - 0.35);
       for (let k = 0; k <= steps; k++) { const done = Math.floor(n * k / steps);
         tl.set(e, { textContent: chars.map((c, i) => (i < done || c === " " ? c : GLY[Math.floor(rnd() * GLY.length)])).join("") }, q.at - 0.35 + k * 0.035); } },
+    // từng chữ hiện ĐÚNG lúc được đọc: q.wt do beatfx.apply_sync tính (mọi chữ của dòng đều khớp lời đọc).
+    // Chữ chưa đọc ẩn bằng CSS (.kin .sw opacity 0) -- khung dòng hiện ở chữ đầu, không chữ nào hiện sớm.
+    // Chữ đầu được đọc muộn (> 1,2 s sau khi cảnh mở) -> cả dòng hiện mờ trước, khỏi "màn chết" (luật của v1 longform.js).
+    sync: (e, q) => { if (!q.wt || !q.wt.length) return BEAT.rise(e, q);   // "sync" ghi tay mà không có mốc chữ
+      e.innerHTML = words(q.text).map((w) => `<span class="sw">${w}</span>`).join(" ");
+      const sw = e.querySelectorAll(".sw"), pre = q.t0 != null && q.wt[0] - q.t0 > 1.2;
+      tl.set(e, { opacity: 1 }, pre ? q.t0 + 0.1 : q.wt[0] - 0.08);
+      if (pre) tl.fromTo(sw, { opacity: 0 }, { opacity: 0.16, duration: 0.5, immediateRender: false }, q.t0 + 0.1);
+      sw.forEach((s, k) => tl.fromTo(s, { opacity: pre ? 0.16 : 0, y: pre ? 0 : 40, filter: "blur(6px)" },
+        { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.28, ease: "back.out(2)", immediateRender: false }, q.wt[k] - 0.06)); },
+    // tách kênh màu, giật rồi khớp -- CHỈ trên chữ (khác SLAM.glitch: không rung #stage)
+    glitch: (e, q) => { const s = inner(e, "glw"), h = s.innerHTML;
+      s.innerHTML = `<span class="gl r">${h}</span><span class="gl c">${h}</span>${h}`;
+      tl.set(e, { opacity: 1 }, q.at - 0.05);
+      const r = s.querySelector(".gl.r"), c = s.querySelector(".gl.c");
+      for (let k = 0; k < 8; k++) { const t = q.at - 0.05 + k * 0.04, a = (rnd() - 0.5) * 30, b = (rnd() - 0.5) * 10;
+        tl.set(r, { x: a, y: b, opacity: 0.85 }, t); tl.set(c, { x: -a, y: -b, opacity: 0.85 }, t); tl.set(s, { skewX: (rnd() - 0.5) * 12 }, t); }
+      tl.set([r, c], { x: 0, y: 0, opacity: 0 }, q.at + 0.28); tl.set(s, { skewX: 0 }, q.at + 0.28); },
     // gạch ngang đè lên chữ (dùng cho "không phải X") — q.strikeAt (mặc định: at + 0.6)
     strike: (e, q) => { const s = inner(e, "stk2"), ln = el("i", "stl", null, s); BEAT.pop(e, q);
       tl.fromTo(ln, { scaleX: 0 }, { scaleX: 1, duration: 0.25, ease: "power2.out", immediateRender: false }, q.strikeAt ?? q.at + 0.6);

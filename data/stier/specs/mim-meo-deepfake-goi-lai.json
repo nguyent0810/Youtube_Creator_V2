@@ -1,0 +1,189 @@
+{
+  "theme": "mim",
+  "title": "Nghi cuộc gọi giả giọng người thân? Cúp máy, gọi lại số quen",
+  "description": "Kẻ gian dùng AI giả giọng nói, khuôn mặt người thân để vay tiền gấp. Mẹo: cúp máy, tự gọi lại số quen đã lưu; không gọi được thì hỏi người nhà khác, chưa chuyển tiền. Công an Hà Nội khuyến cáo không chuyển tiền khi chưa xác minh, không bấm đường link lạ.",
+  "tags": [
+    "deepfake",
+    "lừa đảo",
+    "giả giọng",
+    "mẹo ai",
+    "an toàn mạng",
+    "cảnh báo lừa đảo",
+    "công nghệ"
+  ],
+  "kicker": "MẸO AI 30 GIÂY",
+  "sub": "CHỐNG GIẢ GIỌNG",
+  "acc": [
+    "cúp",
+    "gọi",
+    "220.000",
+    "link"
+  ],
+  "lines": [
+    "Giọng người thân gọi tới, hốt hoảng, xin chuyển tiền gấp.",
+    "Khoan đã.",
+    "Kẻ gian có thể dùng AI giả giọng nói, thậm chí giả cả khuôn mặt trong cuộc gọi video.",
+    "Năm 2019, một giám đốc ở Anh đã chuyển 220.000 euro sau cuộc gọi được cho là giọng giả của sếp.",
+    "Mẹo đầu tiên: cúp máy.",
+    "Rồi tự gọi lại vào số điện thoại quen mà bạn đã lưu từ trước.",
+    "Không gọi được thì hỏi một người nhà khác, và chưa chuyển tiền.",
+    "Công an Hà Nội khuyến cáo: không chuyển tiền khi chưa xác minh, không bấm đường link lạ.",
+    "Kẻ gian có khi gọi điện chỉ để thu mẫu giọng nói của bạn."
+  ],
+  "scenes": [
+    {
+      "type": "kinetic",
+      "clip": "pexels:8052328",
+      "veil": 0.62,
+      "items": [
+        {
+          "text": "CHUYỂN TIỀN GẤP",
+          "at": [
+            0,
+            "chuyển"
+          ],
+          "acc": true
+        },
+        {
+          "text": "giọng người thân",
+          "at": [
+            0,
+            "Giọng"
+          ],
+          "sm": true
+        }
+      ]
+    },
+    {
+      "type": "slam",
+      "at": 1,
+      "text": "KHOAN ĐÃ"
+    },
+    {
+      "type": "ledger",
+      "at": 2,
+      "title": "AI CÓ THỂ GIẢ",
+      "rows": [
+        {
+          "k": "GIỌNG NÓI",
+          "v": "✓",
+          "at": [
+            2,
+            "giọng"
+          ]
+        },
+        {
+          "k": "KHUÔN MẶT",
+          "v": "✓",
+          "at": [
+            2,
+            "khuôn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "counter",
+      "at": 3,
+      "to": 220000,
+      "prefix": "€",
+      "label": "BỊ CHUYỂN ĐI",
+      "until": [
+        3,
+        "euro"
+      ],
+      "clip": "pexels:7447927",
+      "veil": 0.72,
+      "sub": {
+        "text": "ANH · 2019 · NGHI GIỌNG GIẢ",
+        "at": [
+          3,
+          "giọng"
+        ]
+      }
+    },
+    {
+      "type": "slam",
+      "at": 4,
+      "text": "CÚP MÁY",
+      "sub": "BƯỚC ĐẦU TIÊN"
+    },
+    {
+      "type": "kinetic",
+      "at": 5,
+      "clip": "pexels:6931573",
+      "veil": 0.66,
+      "items": [
+        {
+          "text": "GỌI LẠI",
+          "at": [
+            5,
+            "gọi"
+          ],
+          "acc": true
+        },
+        {
+          "text": "SỐ QUEN ĐÃ LƯU",
+          "at": [
+            5,
+            "quen"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kinetic",
+      "at": 6,
+      "items": [
+        {
+          "text": "HỎI NGƯỜI NHÀ KHÁC",
+          "at": [
+            6,
+            "hỏi"
+          ]
+        },
+        {
+          "text": "CHƯA CHUYỂN TIỀN",
+          "at": [
+            6,
+            "chưa"
+          ],
+          "acc": true
+        }
+      ]
+    },
+    {
+      "type": "ledger",
+      "at": 7,
+      "title": "CÔNG AN HÀ NỘI KHUYẾN CÁO",
+      "rows": [
+        {
+          "k": "CHUYỂN TIỀN KHI CHƯA XÁC MINH",
+          "v": "✗",
+          "at": [
+            7,
+            "chuyển"
+          ]
+        },
+        {
+          "k": "BẤM LINK LẠ",
+          "v": "✗",
+          "at": [
+            7,
+            "link"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "question",
+      "at": 8,
+      "text": "Cúp máy. Gọi lại số quen."
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Deepfake",
+    "https://doanhnhan.baophapluat.vn/cong-an-ha-noi-canh-bao-nguoi-dan-canh-giac-truoc-25-kich-ban-lua-dao-tren-khong-gian-mang-nam-2026-7cc6172e.html",
+    "https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes"
+  ]
+}

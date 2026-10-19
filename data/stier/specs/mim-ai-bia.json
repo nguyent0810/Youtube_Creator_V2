@@ -1,0 +1,167 @@
+{
+  "theme": "mim",
+  "title": "Vì sao AI bịa mà vẫn rất tự tin?",
+  "description": "\"Ảo giác AI\": chatbot có thể viết ra thông tin sai, kể cả trích dẫn không tồn tại, bằng giọng rất chắc chắn. Vì sao, và nên kiểm tra gì.",
+  "tags": [
+    "ảo giác ai",
+    "ai bịa",
+    "chatgpt",
+    "trí tuệ nhân tạo",
+    "ai giải thích",
+    "kiểm chứng thông tin",
+    "công nghệ"
+  ],
+  "kicker": "AI GIẢI THÍCH",
+  "sub": "ẢO GIÁC AI",
+  "acc": [
+    "bịa",
+    "tự",
+    "45",
+    "kiểm"
+  ],
+  "lines": [
+    "AI có thể bịa cả trích dẫn không tồn tại, bằng giọng rất chắc chắn.",
+    "Giới nghiên cứu gọi đó là ảo giác AI.",
+    "Năm 2021, Meta, khi đó là Facebook, cảnh báo chatbot BlenderBot 2 dễ ảo giác: khẳng định tự tin nhưng không đúng.",
+    "Vì sao lại tự tin?",
+    "Vì mô hình được dạy viết câu nghe hợp lý, không phải tự kiểm tra sự thật.",
+    "Câu đúng hay sai, với nó, đều trơn tru như nhau.",
+    "Năm 2025, EBU và BBC thấy 45% câu trả lời về tin tức của trợ lý AI có vấn đề đáng kể: sai nguồn, bịa, hoặc tin cũ.",
+    "Nên với ngày tháng, con số, trích dẫn: hãy tự kiểm tra lại.",
+    "Vì AI không phải lúc nào cũng biết là nó không biết."
+  ],
+  "scenes": [
+    {
+      "type": "quote",
+      "text": "\"... theo nghiên cứu năm 2019 của ...\"",
+      "by": "VÍ DỤ · TRÍCH DẪN BỊA"
+    },
+    {
+      "type": "slam",
+      "at": 1,
+      "text": "ẢO GIÁC AI",
+      "clip": "pexels:8720756",
+      "veil": 0.7
+    },
+    {
+      "type": "quote",
+      "at": 2,
+      "text": "confident statements that are not true",
+      "by": "META (FACEBOOK) · BLENDERBOT 2 · 2021"
+    },
+    {
+      "type": "question",
+      "at": 3,
+      "text": "Vì sao lại tự tin?"
+    },
+    {
+      "type": "ledger",
+      "at": 4,
+      "title": "AI ĐƯỢC DẠY ĐỂ",
+      "rows": [
+        {
+          "k": "NGHE HỢP LÝ",
+          "v": "✓",
+          "at": [
+            4,
+            "hợp"
+          ]
+        },
+        {
+          "k": "KIỂM TRA SỰ THẬT",
+          "v": "✗",
+          "at": [
+            4,
+            "kiểm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kinetic",
+      "at": 5,
+      "items": [
+        {
+          "text": "ĐÚNG HAY SAI",
+          "at": [
+            5,
+            "đúng"
+          ],
+          "acc": true
+        },
+        {
+          "text": "nghe như nhau",
+          "at": [
+            5,
+            "trơn"
+          ],
+          "sm": true
+        }
+      ]
+    },
+    {
+      "type": "counter",
+      "at": 6,
+      "to": 45,
+      "suffix": "%",
+      "label": "CÓ VẤN ĐỀ ĐÁNG KỂ",
+      "until": [
+        6,
+        "45%"
+      ],
+      "sub": {
+        "text": "EBU · BBC · 2025 · CÂU HỎI VỀ TIN TỨC",
+        "at": [
+          6,
+          "tin"
+        ]
+      }
+    },
+    {
+      "type": "kinetic",
+      "at": 7,
+      "clip": "pexels:36628017",
+      "veil": 0.72,
+      "items": [
+        {
+          "text": "NGÀY THÁNG",
+          "at": [
+            7,
+            "ngày"
+          ]
+        },
+        {
+          "text": "CON SỐ",
+          "at": [
+            7,
+            "con"
+          ]
+        },
+        {
+          "text": "TRÍCH DẪN",
+          "at": [
+            7,
+            "trích"
+          ]
+        },
+        {
+          "text": "TỰ KIỂM TRA",
+          "at": [
+            7,
+            "kiểm"
+          ],
+          "acc": true
+        }
+      ]
+    },
+    {
+      "type": "question",
+      "at": 8,
+      "text": "Nó không luôn biết mình sai."
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)",
+    "https://www.cdpinstitute.org/news/ai-assistants-rife-with-errors-ebu-and-bbc/"
+  ]
+}

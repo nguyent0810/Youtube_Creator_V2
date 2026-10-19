@@ -21,6 +21,8 @@
 | **Openverse** (tổng hợp Flickr CC, bảo tàng, Commons) | Lọc sẵn CC0 / PDM / BY / BY-SA | Ảnh đời thường châu Á, địa điểm hiện nay | `--src openverse` |
 | **Art Institute of Chicago** | CC0 (tác phẩm public domain) | Ảnh và tranh thế kỷ 19 (Hồng Kông, Trung Hoa, Nhật). Tìm bằng từ khóa cụ thể, từ khóa chung trả kết quả nhiễu | `--src artic` |
 | **Europeana** (`reusability=open`) | PDM / CC0 / CC BY / BY-SA | Ảnh thời thuộc địa ở châu Á (KITLV, Tropenmuseum, Nationaal Archief) | `--src europeana`. Nên đăng ký khóa miễn phí (`EUROPEANA_KEY`), hiện đang dùng khóa demo |
+| **NASA Image and Video Library** (thêm 06/10/2026) | Ảnh NASA không có bản quyền ở Mỹ. **Không** dùng logo NASA, không gợi ý NASA bảo trợ; ảnh có bên thứ ba (xem mô tả) thì bỏ. [Hướng dẫn](https://www.nasa.gov/nasa-brand-center/images-and-media/) | Vệ tinh, GPS, không gian, máy tính thời Apollo, Trái Đất | `--src nasa` (không cần khóa) |
+| **Smithsonian Open Access** (thêm 06/10/2026) | Chỉ nhận media `usage.access = CC0` | Hiện vật công nghệ: máy tính, điện thoại, máy nghe nhạc (cho kênh MIM) | `--src smithsonian`. Cần khóa miễn phí api.data.gov: `SI_API_KEY=` trong `.local.env` |
 | **Sentinel-2** qua Microsoft Planetary Computer | Dữ liệu Copernicus: dùng thương mại tự do, **bắt buộc** ghi "Contains modified Copernicus Sentinel data [năm]" | Ảnh vệ tinh 10 m làm cảnh định vị (ngã ba sông Mekong, đặc khu sòng bạc, một khu phố…) | `media_search.py sat` |
 
 **Lưu ý với Openverse:** ảnh từ Flickr có thể bị "rửa giấy phép" (người đăng không phải tác giả). Chỉ dùng khi tài khoản đăng ảnh là người chụp, hoặc là một tổ chức. Tuyệt đối không dùng ảnh người nổi tiếng chụp chuyên nghiệp lấy từ Flickr.

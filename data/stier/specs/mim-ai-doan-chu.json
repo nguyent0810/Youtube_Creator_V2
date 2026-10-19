@@ -1,0 +1,237 @@
+{
+  "theme": "mim",
+  "title": "ChatGPT thật ra chỉ đang đoán chữ tiếp theo?",
+  "description": "Về cốt lõi, mô hình ngôn ngữ lớn như ChatGPT tạo câu trả lời bằng cách dự đoán từ tiếp theo, lặp lại hàng trăm lần — vì vậy AI viết rất trơn tru, mà đôi khi vẫn sai. (\"Đoán chữ\" là cách nói đơn giản hoá; mô hình còn được tinh chỉnh thêm sau đó.)",
+  "tags": [
+    "chatgpt",
+    "ai là gì",
+    "trí tuệ nhân tạo",
+    "mô hình ngôn ngữ lớn",
+    "llm",
+    "ai giải thích",
+    "công nghệ"
+  ],
+  "kicker": "AI GIẢI THÍCH",
+  "sub": "MÔ HÌNH NGÔN NGỮ LỚN",
+  "acc": [
+    "đoán",
+    "chatgpt",
+    "trăm",
+    "sai"
+  ],
+  "lines": [
+    "Bạn hỏi ChatGPT một câu, và nó trả lời trôi chảy như người.",
+    "Nhưng về cốt lõi, nó tạo câu trả lời bằng cách đoán chữ tiếp theo.",
+    "Nó đã đọc một lượng văn bản khổng lồ, và học xem chữ nào hay đi sau chữ nào.",
+    "Bạn gõ: hôm nay trời.",
+    "Nó cân nhắc: đẹp, mưa, nắng, rồi chọn một.",
+    "Thêm chữ đó vào câu, rồi lại đoán tiếp.",
+    "Một câu trả lời dài là hàng trăm lần đoán liên tiếp như vậy.",
+    "Nói chỉ đoán là cách nói đơn giản hoá.",
+    "Nhưng nó giải thích vì sao AI viết rất trơn tru, mà đôi khi vẫn sai.",
+    "Lần tới đọc câu trả lời của AI, hãy nhớ: đó là một chuỗi phỏng đoán rất giỏi."
+  ],
+  "scenes": [
+    {
+      "type": "kinetic",
+      "items": [
+        {
+          "text": "ChatGPT",
+          "at": [
+            0,
+            "ChatGPT"
+          ],
+          "acc": true
+        },
+        {
+          "text": "trả lời như người",
+          "at": [
+            0,
+            "trôi"
+          ],
+          "sm": true
+        }
+      ],
+      "clip": "pexels:12893579",
+      "veil": 0.66
+    },
+    {
+      "type": "slam",
+      "at": 1,
+      "text": "ĐOÁN CHỮ",
+      "sub": "TIẾP THEO"
+    },
+    {
+      "type": "kinetic",
+      "at": 2,
+      "items": [
+        {
+          "text": "VĂN BẢN",
+          "at": [
+            2,
+            "văn"
+          ]
+        },
+        {
+          "text": "KHỔNG LỒ",
+          "at": [
+            2,
+            "khổng"
+          ],
+          "acc": true
+        },
+        {
+          "text": "chữ nào hay đi sau chữ nào",
+          "at": [
+            2,
+            "học"
+          ],
+          "sm": true
+        }
+      ],
+      "clip": "pexels:5925286",
+      "veil": 0.68
+    },
+    {
+      "type": "kinetic",
+      "at": 3,
+      "items": [
+        {
+          "text": "hôm nay trời",
+          "at": [
+            3,
+            "hôm"
+          ],
+          "fx": "type"
+        }
+      ]
+    },
+    {
+      "type": "ledger",
+      "at": 4,
+      "title": "VÍ DỤ: CHỮ TIẾP THEO?",
+      "rows": [
+        {
+          "k": "đẹp",
+          "v": "?",
+          "at": [
+            4,
+            "đẹp"
+          ]
+        },
+        {
+          "k": "mưa",
+          "v": "?",
+          "at": [
+            4,
+            "mưa"
+          ]
+        },
+        {
+          "k": "nắng",
+          "v": "?",
+          "at": [
+            4,
+            "nắng"
+          ]
+        }
+      ],
+      "total": {
+        "k": "CHỌN",
+        "v": "1",
+        "at": [
+          4,
+          "chọn"
+        ]
+      }
+    },
+    {
+      "type": "kinetic",
+      "at": 5,
+      "items": [
+        {
+          "text": "+1 CHỮ",
+          "at": [
+            5,
+            "Thêm"
+          ],
+          "acc": true
+        },
+        {
+          "text": "ĐOÁN TIẾP",
+          "at": [
+            5,
+            "đoán"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kinetic",
+      "at": 6,
+      "items": [
+        {
+          "text": "HÀNG TRĂM",
+          "at": [
+            6,
+            "trăm"
+          ],
+          "acc": true
+        },
+        {
+          "text": "LẦN ĐOÁN",
+          "at": [
+            6,
+            "đoán"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "kinetic",
+      "at": 7,
+      "items": [
+        {
+          "text": "ĐƠN GIẢN HOÁ",
+          "at": [
+            7,
+            "đơn"
+          ],
+          "sm": true
+        }
+      ]
+    },
+    {
+      "type": "kinetic",
+      "at": 8,
+      "items": [
+        {
+          "text": "TRƠN TRU",
+          "at": [
+            8,
+            "trơn"
+          ]
+        },
+        {
+          "text": "VẪN CÓ THỂ SAI",
+          "at": [
+            8,
+            "sai"
+          ],
+          "acc": true
+        }
+      ],
+      "clip": "pexels:7989667",
+      "veil": 0.7
+    },
+    {
+      "type": "question",
+      "at": 9,
+      "text": "Một chuỗi phỏng đoán rất giỏi."
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Large_language_model",
+    "https://www.3blue1brown.com/lessons/mini-llm"
+  ]
+}

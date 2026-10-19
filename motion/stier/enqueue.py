@@ -79,7 +79,8 @@ def main():
             desc = spec["description"] + "\n\nNguồn: " + "; ".join(spec.get("sources", [])) + "\n\n" + FOOT
             b = Bundle(channel="CL", kind="short", slug=slug, script=" ".join(spec["lines"]), title=spec["title"][:100],
                        description=desc[:5000], tags=spec.get("tags", [])[:12], thumbnail_text=spec["title"][:60],
-                       publish_at=when, voice="Anh Khôi", bgm="", broll_queries=["hyperframes-casefile"],
+                       publish_at=when, voice="Anh Khôi", bgm="", broll_queries=[],
+                       render={"engine": "casefile", "spec": f"data/stier/specs/{s}.json"},
                        source_note="; ".join(spec.get("sources", [])))
             b.validate()
             vn = (datetime.strptime(when, "%Y-%m-%dT%H:%M:%SZ") + timedelta(hours=7)).strftime("%d/%m %H:%M")

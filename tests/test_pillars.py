@@ -144,3 +144,11 @@ def test_every_topic_makes_a_valid_bundle():
             b.validate()
             assert b.slug not in slugs, b.slug
             slugs.add(b.slug)
+
+
+def test_tue_sai_is_one_topic_not_twelve():
+    # Bước 5 (docs/audit/2026-10-05-variety-design.md): 12 cung chỉ đổi câu hook,
+    # 4/5 câu giống hệt -> một video viết 12 lần. Giữ đúng một khoá ĐÃ đăng
+    # (tue-sai-6) để next_draft bỏ qua luôn, không sinh bản thứ 13.
+    keys = [d.key for d in P.all_drafts("menh") if d.key.startswith("tue-sai-")]
+    assert keys == ["tue-sai-6"]

@@ -7,6 +7,9 @@ html, body { width:1080px; height:1920px; overflow:hidden; background:#060505; }
 #root { position:relative; width:1080px; height:1920px; overflow:hidden; color:#f4efe6;
         font-family:'Be Vietnam Pro', system-ui, sans-serif; }
 .layer { position:absolute; inset:0; }
+/* nền video (clip Pexels/Coverr đã cắt sẵn 1080x1920, build.py nướng tĩnh thẻ <video>) */
+.bv { position:absolute; left:0; top:0; width:1080px; height:1920px; object-fit:cover; transform-origin:50% 50%; }
+.vveil { position:absolute; inset:0; }
 .scene { position:absolute; inset:0; overflow:hidden; opacity:0; visibility:hidden; }
 .serif { font-family:'Playfair Display', Georgia, serif; }
 .mono  { font-family:'JetBrains Mono', monospace; }

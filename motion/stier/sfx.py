@@ -117,14 +117,16 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from beatfx import beat_sfx  # noqa: E402
 
 
-def build(case: dict, dst: Path) -> None:
+def build(case: dict, dst: Path, drone: bool = True) -> None:
+    """drone=False: kênh có nhạc nền thật (MIM, motion/stier/themes.py) -- bỏ nền trầm,
+    chỉ giữ tiếng động theo cảnh/chữ; nhạc trộn riêng ở build.py."""
     dur = case["dur"]
     M = Mix(dur, case.get("seed", 1911))
     scenes = case["scenes"]
     t = np.arange(M.N) / SR
 
     # nền trầm: dày dần về cao trào, LẶNG ở cảnh question
-    drone = (np.sin(2 * np.pi * 43.65 * t) * 0.55 + np.sin(2 * np.pi * 65.4 * t + 1) * 0.25
+    bed = (np.sin(2 * np.pi * 43.65 * t) * 0.55 + np.sin(2 * np.pi * 65.4 * t + 1) * 0.25
              + np.sin(2 * np.pi * 87.3 * t * (1 + 0.002 * np.sin(2 * np.pi * 0.1 * t))) * 0.12)
     air = M.lp(M.rng.standard_normal(M.N), 0.01) * 0.9
     g = np.clip(t / 1.5, 0, 1) * (0.7 + 0.3 * np.clip((t - dur * 0.55) / 4, 0, 1))
@@ -134,8 +136,9 @@ def build(case: dict, dst: Path) -> None:
             g = np.where((t > q0) & (t < q1), 0, g)
             g = np.where((t >= q0 - 0.3) & (t <= q0), g * np.clip((q0 - t) / 0.3, 0, 1), g)
             g = np.where((t >= q1) & (t <= q1 + 0.8), g * np.clip((t - q1) / 0.8, 0, 1), g)
-    M.bed[:, 0] += (drone + air) * g * 0.22
-    M.bed[:, 1] += (drone * 0.97 + air) * g * 0.22
+    if drone:
+        M.bed[:, 0] += (bed + air) * g * 0.22
+        M.bed[:, 1] += (bed * 0.97 + air) * g * 0.22
 
     for i, s in enumerate(scenes):
         T0, T1, ty = s["t0"], s["t1"], s["type"]
