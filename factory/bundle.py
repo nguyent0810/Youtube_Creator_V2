@@ -133,8 +133,9 @@ class Bundle:
             err.append("script rỗng")
         elif self.kind == "short":
             n = self.word_count
-            if not (SHORT_MIN_WORDS <= n <= SHORT_MAX_WORDS):
-                err.append(f"short phải {SHORT_MIN_WORDS}-{SHORT_MAX_WORDS} từ, đang {n}")
+            lo = 20 if self.render.get("profile") == "bang-tra" else SHORT_MIN_WORDS   # bảng tra dừng hình 10–15 s (22/10/2026)
+            if not (lo <= n <= SHORT_MAX_WORDS):
+                err.append(f"short phải {lo}-{SHORT_MAX_WORDS} từ, đang {n}")
 
         # Tiêu đề: YouTube từ chối '<' '>' và cắt cụt quá 100 ký tự.
         if not self.title.strip():

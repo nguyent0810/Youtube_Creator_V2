@@ -13,6 +13,19 @@ from pathlib import Path
 import numpy as np
 
 SR = 48000
+FADE_CUT = int(0.005 * SR)   # 23/10/2026: 5 ms fade khi Mix.put cắt tiếng ở mép (chống tiếng tách)
+
+
+def soft_clip(x: np.ndarray, knee: float = 0.8, ceil: float = 1.0) -> np.ndarray:
+    """23/10/2026: thay np.clip cứng (cú boom/rumble chồng nhau -> vài chục mẫu vuông đầu = tiếng rè).
+    Dưới `knee` giữ NGUYÊN (mức cũ không đổi); trên knee nén mềm bằng tanh, không bao giờ vượt `ceil`."""
+    a = np.abs(x)
+    over = a > knee
+    if not over.any():
+        return x
+    y = x.copy()
+    y[over] = np.sign(x[over]) * (knee + (ceil - knee) * np.tanh((a[over] - knee) / (ceil - knee)))
+    return y
 
 # ---- nen moi truong that (CC0): mua / nuoc / chuong -- motion/stier/ambience/LICENSES.json ----
 AMB_DIR = Path(__file__).resolve().parent / "ambience"
@@ -104,9 +117,20 @@ class Mix:
         i = int(t * SR)
         if i >= self.N or i + len(sig) <= 0:
             return
+        # 23/10/2026: tiếng bị cắt đầu/đuôi (vd. whoosh thẻ chương đặt ở T0-0.35 với T0=0) bắt đầu giữa đường bao
+        # -> bước nhảy = tiếng "tách" ở đầu mỗi chương (CL lẫn MIM). Fade 5 ms ở chỗ cắt.
+        fi = fo = 0
         if i < 0:
-            sig, i = sig[-i:], 0
+            sig, i, fi = sig[-i:], 0, FADE_CUT
+        if len(sig) > self.N - i:
+            fo = FADE_CUT
         sig = sig[: self.N - i] * gain
+        if fi or fo:     # sig đã là mảng mới (phép nhân gain) -> sửa tại chỗ không đụng tín hiệu gốc
+            k = min(FADE_CUT, len(sig))
+            if fi:
+                sig[:k] *= np.linspace(0, 1, k)
+            if fo:
+                sig[-k:] *= np.linspace(1, 0, k)
         self.bed[i:i + len(sig), 0] += sig * (1 - max(0, pan))
         self.bed[i:i + len(sig), 1] += sig * (1 + min(0, pan))
 
@@ -173,7 +197,12 @@ class Mix:
         peak = np.max(np.abs(self.bed)) or 1.0
         mix = self.bed / peak * 0.9
         if extra is not None:   # nen moi truong: cong SAU chuan hoa -> muc on dinh giua cac video
-            mix = np.clip(mix + extra, -0.99, 0.99)
+            mix = soft_clip(mix + extra, 0.9, 0.99)   # 23/10/2026: thay np.clip (≤ 0,9 vẫn y như cũ)
+        k = min(FADE_CUT, len(mix) // 2)   # 23/10/2026: nền trầm/tiếng chạm mép file bị cắt cụt (đuôi −24 dBFS) -> fade 5 ms hai đầu
+        if k:
+            mix = mix.copy()
+            mix[:k] *= np.linspace(0, 1, k)[:, None]
+            mix[-k:] *= np.linspace(1, 0, k)[:, None]
         out = (mix * 32767).astype("<i2")
         with wave.open(str(dst), "wb") as w:
             w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes(out.tobytes())
@@ -332,6 +361,14 @@ def build(case: dict, dst: Path, drone: bool = True) -> None:
                     M.put(q["cross"], M.scratch(0.3), 0.6)
             for a in s.get("arrows") or []:
                 M.put(a["at"] - 0.05, M.whoosh(0.3), 0.2)
+        elif ty == "table":      # bảng tra: hàng trượt vào (gõ phím nhẹ), ô sáng lên (thud + blip) -- casefile.js B.table
+            for i, r in enumerate(s["rows"]):
+                at = r.get("at", T0 + 0.25 + i * 0.08)
+                for k in range(2):
+                    M.put(at + k * 0.05, M.key(), 0.3)
+            for h in s.get("hl") or []:
+                M.put(h["at"], M.thud(0.4), 0.55)
+                M.put(h["at"] + 0.02, M.blip(), 0.35)
         elif ty == "cards3d":    # thẻ 3D lật lên
             for c in s["cards"]:
                 M.put(c["at"] - 0.15, M.whoosh(0.35), 0.22)

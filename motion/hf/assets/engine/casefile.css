@@ -222,3 +222,18 @@ html, body { width:1080px; height:1920px; overflow:hidden; background:#060505; }
 .vwin.vw-band { border:0; border-top:4px solid var(--red); border-bottom:4px solid var(--red); border-radius:0; box-shadow:none; }
 .vwin.vw-circle { border-radius:50%; border-width:5px; }
 .vwin.vw-circle .vwlbl { left:50%; transform:translateX(-50%); bottom:60px; }
+/* ---------- table: bảng tra tự dò (casefile.js B.table, 20/10/2026) ---------- */
+.tbl { position:absolute; inset:0; }
+.tbt { position:absolute; left:40px; width:900px; text-align:center; white-space:nowrap; font-weight:900; line-height:1.05; color:var(--red); letter-spacing:-.01em; opacity:0; }
+.tbch { position:absolute; text-align:center; font-size:26px; font-weight:700; letter-spacing:.16em; color:rgba(226,232,240,.75); opacity:0; white-space:nowrap; }
+.tbh { position:absolute; display:flex; align-items:center; border-bottom:4px solid var(--red); opacity:0; }
+.tbrh { overflow:hidden; font-weight:700; letter-spacing:.12em; color:rgba(226,232,240,.75); padding-left:18px; box-sizing:border-box; white-space:nowrap; }
+.tbc { text-align:center; font-weight:900; color:#f1f5f9; white-space:nowrap; }
+.tbr { position:absolute; display:flex; align-items:center; border-radius:16px; opacity:0; }
+.tbr.odd { background:rgba(148,163,184,.10); }
+.tbk { box-sizing:border-box; padding-left:18px; color:#f1f5f9; line-height:1.05; }
+.tbk b { display:block; font-weight:900; white-space:nowrap; }
+.tbk small { display:block; font-size:24px; font-weight:500; letter-spacing:.08em; opacity:.7; margin-top:4px; white-space:nowrap; }
+.tbv { text-align:center; font-weight:900; color:#f1f5f9; border-radius:14px; line-height:1.25; font-variant-numeric:tabular-nums; }
+.tbf { position:absolute; left:40px; width:900px; text-align:center; font-weight:900; color:var(--red); letter-spacing:.02em; opacity:0; white-space:nowrap; }
+.tbn { position:absolute; left:40px; width:900px; text-align:center; font-size:24px; letter-spacing:.12em; color:rgba(226,232,240,.6); opacity:0; white-space:nowrap; }

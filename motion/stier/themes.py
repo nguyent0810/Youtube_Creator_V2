@@ -97,8 +97,14 @@ BUD_TRACKS = {
 }
 BUD_MUSIC_LEDGER = ROOT / "data" / "variety" / "bud_music.json"
 
+# 23/10/2026: mastering giọng RIÊNG kênh CL (Anh Khôi có xung buzz > 5 kHz theo từng chu kỳ cao độ -> khán giả chê "sẹt sẹt",
+# docs/pm/2026-10-22-cl-am-thanh-set-set.md). Chủ kênh nghe và chọn bản 'fx_proposed': bỏ +2,5 dB @3,2 kHz, shelf −5 dB từ 5 kHz,
+# low-pass 9 kHz, attack 5 -> 15 ms. Dùng chung cho Short (theme "case") và Long CL (build_long._channels). MIM/CK/BUD giữ nguyên.
+VOICE_FX_CL = ("highpass=f=70,equalizer=f=200:t=q:w=1:g=-2,highshelf=f=5000:g=-5,lowpass=f=9000:poles=2,"
+               "deesser=i=0.4,acompressor=threshold=-20dB:ratio=3:attack=15:release=150:makeup=2")
+
 THEMES = {
-    "case": {"voice": "Anh Khôi", "accent": "#e2402d", "sound": "drone", "pools": None, "js": {}},
+    "case": {"voice": "Anh Khôi", "accent": "#e2402d", "sound": "drone", "pools": None, "js": {}, "voice_fx": VOICE_FX_CL},
     "mim": {
         "voice": "Thanh Bình",          # chủ kênh chọn 12/10/2026 (nam, Bắc, kể chuyện; trước đó: Hải Đăng)
         "img_license": "by",            # Commons: PD/CC0 + CC BY có ghi công (không BY-SA); thêm NASA:<id>

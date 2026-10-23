@@ -82,7 +82,8 @@ SAY = {}   # chữ hiển thị -> cách đọc cho TTS (spec["say"]); phụ đ�
 def _channels() -> dict:
     sys.path.insert(0, str(ROOT / "motion" / "stier"))
     import themes
-    return {"CL": {"voice": "Anh Khôi", "quote": "Minh Đức"},
+    # 23/10/2026: CL có mastering giọng riêng (themes.VOICE_FX_CL, chống "sẹt sẹt"); kênh khác vẫn VOICE_FX
+    return {"CL": {"voice": "Anh Khôi", "quote": "Minh Đức", "voice_fx": themes.VOICE_FX_CL},
             "MIM": {"voice": "Thanh Bình", "quote": "Ngọc Huyền", "theme": "lab", "brand": "MIND IN THE MACHINE",
                     "accent": "#22d3ee", "pools": themes.THEMES["mim"]["pools"], "no_sa": True},
             # Biểu Đồ Biết Nói (tài chính cá nhân): theme "chart" (chart.js: brand, candles, race, breadth, basket), vàng = giá tham chiếu
@@ -1001,7 +1002,7 @@ def mix_chapter(ch, cd: Path, dur: float, quiet=(), master=True, items=None):
         items = [{**b, "start": 0.0, "end": dur}] if b.get("file") else []
     duck = "".join(f",volume=enable='between(t,{a - 0.1:.2f},{z:.2f})':volume=0.12" for a, z in quiet)
     inputs = ["-i", str(cd / "voice.wav"), "-i", str(cd / "sfx.wav")]
-    fc = "[0:a]aresample=48000," + (VOICE_FX + "," if master else "") + "pan=stereo|c0=c0|c1=c0,apad," + ("asplit=3[v][vk][vk2];" if items else "asplit=2[v][vk];") + "[1:a]volume=0.42[s0];[s0][vk]sidechaincompress=threshold=0.05:ratio=4:attack=20:release=300[s];"
+    fc = "[0:a]aresample=48000," + (CHAN.get("voice_fx", VOICE_FX) + "," if master else "") + "pan=stereo|c0=c0|c1=c0,apad," + ("asplit=3[v][vk][vk2];" if items else "asplit=2[v][vk];") + "[1:a]volume=0.42[s0];[s0][vk]sidechaincompress=threshold=0.05:ratio=4:attack=20:release=300[s];"
     if items:
         tags = []
         for k, q in enumerate(items):
@@ -1096,9 +1097,25 @@ def do_final(topic):
     # hình render làm tròn lên khung 1/30s -> đệm tiếng từng chương cho ĐÚNG bằng hình, không thì lệch cộng dồn (~0,2s ở chương cuối)
     for n, _ in chs:
         vd = probe_dur(od / n / "silent.mp4")
-        r = run([FFMPEG, "-v", "error", "-y", "-i", str(od / n / "mix.wav"), "-af", f"apad=whole_dur={vd:.6f}", "-t", f"{vd:.6f}", str(od / n / "mixpad.wav")])
+        # 23/10/2026: fade 5 ms hai đầu mỗi chương -- chỗ nối không còn bước nhảy ("tách" đầu chương, CL lẫn MIM)
+        af = f"apad=whole_dur={vd:.6f},afade=t=in:d=0.005,afade=t=out:st={max(0.0, vd - 0.005):.6f}:d=0.005"
+        r = run([FFMPEG, "-v", "error", "-y", "-i", str(od / n / "mix.wav"), "-af", af, "-t", f"{vd:.6f}", str(od / n / "mixpad.wav")])
         if r.returncode != 0:
             raise SystemExit(r.stderr[-1500:])
+    # 23/10/2026: lint âm thanh TRƯỚC khi ghép (docs/pm/2026-10-22-cl-am-thanh-set-set.md S4): CL vượt ngưỡng -> chặn, kênh khác cảnh báo
+    import audio_lint as AL
+    block = spec.get("channel", "CL") == "CL"
+    try:
+        err = AL.check_parts([od / n / "mixpad.wav" for n, _ in chs], [od / n / "sfx.wav" for n, _ in chs if (od / n / "sfx.wav").exists()])
+        verr, vwarn, _ = AL.check_voices([(n, od / n / "voice.wav") for n, _ in chs],
+                                         CHAN.get("voice_fx", VOICE_FX) if spec.get("master", True) else None, FFMPEG)
+    except Exception as e:      # noqa: BLE001 — công cụ đo hỏng: CL chặn, kênh khác chỉ cảnh báo
+        if block:
+            raise
+        err, verr, vwarn = [], [], [f"không đo được: {e}"]
+    if not spec.get("master", True):   # "master": false (Yakuza) = cố ý giữ giọng thô -> buzz chỉ cảnh báo
+        vwarn, verr = vwarn + verr, []
+    AL.report(topic, err + verr, vwarn, block)
     alst = od / "concat_a.txt"
     alst.write_text("".join(f"file '{(od / n / 'mixpad.wav').as_posix()}'\n" for n, _ in chs), encoding="utf-8")
     r = run([FFMPEG, "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(lst), "-f", "concat", "-safe", "0", "-i", str(alst),
@@ -1106,6 +1123,11 @@ def do_final(topic):
              "-shortest", "-movflags", "+faststart", str(od / "final.mp4")])
     if r.returncode != 0:
         raise SystemExit(r.stderr[-2000:])
+    ferr, fm = AL.check_final(od / "final.mp4", FFMPEG)   # 23/10/2026: true peak ≤ −1 dBTP sau AAC
+    print(f"  audio_lint: true peak {fm['tp']} dBTP, {fm['lufs']} LUFS", flush=True)
+    if ferr and block:
+        (od / "final.mp4").unlink(missing_ok=True)   # chặn thì không để final hỏng nằm lại cho chuỗi đăng (như 15/10)
+    AL.report(topic, ferr, [], block)
     print(od / "final.mp4", f"{probe_dur(od / 'final.mp4') / 60:.2f} phút")
 
 

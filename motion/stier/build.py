@@ -625,8 +625,9 @@ def build(slug: str, render: bool = True, draft: bool = False) -> Path:
     od.mkdir(parents=True, exist_ok=True)
     lines_txt = spec["lines"]
     nw = sum(len(l.split()) for l in lines_txt)
-    if not 55 <= nw <= 135:
-        raise SystemExit(f"{slug}: {nw} từ — ngoài 55-135")
+    bangtra = spec.get("profile") == "bang-tra"      # 22/10/2026: bảng tra dừng hình 10–15 s (A/B từ AI Learning) -- lời đọc ngắn
+    if not (20 if bangtra else 55) <= nw <= 135:
+        raise SystemExit(f"{slug}: {nw} từ — ngoài {20 if bangtra else 55}-135")
     if spec.get("rules") == 2 and lines_txt[-1].rstrip().endswith("?"):   # retro 5: luật chỉ nằm trong tài liệu nên đã lọt 1 Short
         raise SystemExit(f"{slug}: Short rules-2 không kết bằng câu hỏi: {lines_txt[-1]!r}")
     # retro 15/10/2026: "~7,5% MỖI NĂM" trên khung dọc đọc thành "-7,5%" (giá nhà phải TĂNG) -> xấp xỉ trước phần trăm dùng "≈".
@@ -647,7 +648,7 @@ def build(slug: str, render: bool = True, draft: bool = False) -> Path:
     t = speak(lines_txt, od / "voice.wav", od / "timing.json", voice=spec.get("voice", th["voice"]),
               gap=spec.get("gap", th.get("gap", 0.0)), say=spec.get("say"), tts=spec.get("tts"))
     lines = word_lines(t, od / "voice.wav", spec.get("say"))
-    dur = round(t["duration"] + 0.6, 2)                         # 0.6s thở cuối cho vòng lặp
+    dur = round(t["duration"] + float(spec.get("tail", 3.2 if bangtra else 0.6)), 2)   # 0.6s thở cuối cho vòng lặp; bảng tra: giữ khung cuối để dừng hình
     adir = HF / "assets" / "cases" / slug
     imgs, credits = {}, []
     for key, file in spec.get("imgs", {}).items():
@@ -775,14 +776,45 @@ def build(slug: str, render: bool = True, draft: bool = False) -> Path:
         music = (["-ss", str(moff)] if moff else []) + ["-i", str(themes.MUSIC_DIR / track)]
         (od / "music.json").write_text(json.dumps({"file": track, "credit": themes.music_credit(track), **({"offset": moff} if moff else {})},
                                                   ensure_ascii=False), encoding="utf-8")
+    if th.get("voice_fx"):   # 23/10/2026: chỉ theme "case" (CL): lọc giọng trước khi trộn (chống "sẹt sẹt"); theme khác giữ giọng thô như cũ
+        fc = fc.replace("[1:a]aresample=48000,", f"[1:a]aresample=48000,{th['voice_fx']},", 1)
     r = run([FF + r"\ffmpeg.exe", "-v", "error", "-y", "-i", str(silent), "-i", str(od / "voice.wav"), "-i", str(od / "sfx.wav"),
              *music, "-filter_complex", fc, "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
              "-shortest", "-movflags", "+faststart", str(final)])
     if r.returncode != 0:
         raise SystemExit(f"{slug}: mux hỏng {r.stderr[-2000:]}")
+    try:
+        audio_gate(slug, spec, th, od, final)
+    except SystemExit:
+        raise
+    except Exception as e:      # noqa: BLE001 — lỗi công cụ đo: CL chặn (không biết giọng có sạch), kênh khác chỉ cảnh báo
+        if spec.get("theme", "case") == "case":
+            raise
+        print(f"  ! WARNING audio_lint không chạy được: {e}", flush=True)
     for m in qa_short(final):
         print(f"  {m}", flush=True)
     return final
+
+
+def audio_gate(slug: str, spec: dict, th: dict, od: Path, final: Path) -> None:
+    """23/10/2026: lint âm thanh (motion/long/audio_lint.py, docs/pm/2026-10-22-cl-am-thanh-set-set.md S4) ngay sau khi trộn:
+    xung buzz của giọng ĐÃ LỌC, true peak thành phẩm, chỗ "tách" trong sfx. Theme "case" (CL) vượt ngưỡng -> xoá final + chặn;
+    theme khác chỉ cảnh báo."""
+    if str(ROOT / "motion" / "long") not in sys.path:
+        sys.path.append(str(ROOT / "motion" / "long"))   # append: không che module trùng tên của stier
+    import audio_lint as AL
+    ff = FF + r"\ffmpeg.exe"
+    block = spec.get("theme", "case") == "case"
+    verr, warn, vm = AL.check_voices([("voice", od / "voice.wav")], th.get("voice_fx"), ff)
+    ferr, fm = AL.check_final(final, ff)
+    j = AL.n_jumps(AL.load(od / "sfx.wav"))
+    if j:
+        warn.append(f"sfx.wav có {j} chỗ nhảy từ lặng (tiếng tách)")
+    b = vm["voice"]
+    print(f"  audio_lint: giọng HF nổi {b['prom']} dB · kurtosis {b['kurt']} · crest>6 {b['crest6']} % · TP {fm['tp']} dBTP", flush=True)
+    if (verr or ferr) and block:
+        final.unlink(missing_ok=True)
+    AL.report(slug, verr + ferr, warn, block)
 
 
 def check_gate(slug: str, comp: Path, scenes: list[dict], od: Path, strict: bool = True) -> dict:
