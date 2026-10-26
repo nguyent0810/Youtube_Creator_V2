@@ -1,0 +1,29 @@
+{
+  "bgm": "ouroboros.mp3",
+  "broll_queries": [],
+  "channel": "MIM",
+  "created_at": "2026-10-21T02:40:24Z",
+  "description": "Năm 2015, Florian Schroff, Dmitry Kalenichenko và James Philbin (Google) công bố FaceNet: mỗi khuôn mặt là một dãy 128 byte. Theo tóm tắt bài báo, hệ thống đạt 99,63% trên bộ ảnh LFW và 95,12% trên YouTube Faces, giảm khoảng 30% mức sai so với kết quả tốt nhất đã công bố. (Số kênh không tự tính.)\n\nGiọng đọc tổng hợp; video Pexels/Coverr minh hoạ, không phải cảnh thật của sự kiện.\nBản đầy đủ: https://youtu.be/7daMUBWG6mU\n\nNguồn:\nhttps://arxiv.org/abs/1503.03832 (đã mở: tác giả Schroff, Kalenichenko, Philbin; LFW 99,63%, YouTube Faces 95,12%; giảm sai ~30% so với kết quả tốt nhất đã công bố; 128 byte mỗi khuôn mặt)\n'bộ ba ảnh' = triplet loss trong bài FaceNet; câu tả theo script data/long/mim-ai-khuon-mat (CH03), cần đối chiếu mục 'Triplet loss' trong bài báo\n\nVideo: Pexels — Yaroslav Shuraev\nVideo: Pexels — cottonbro studio\nMusic: \"Ouroboros\" by Kevin MacLeod (incompetech.com). Licensed under Creative Commons: By Attribution 4.0 — http://creativecommons.org/licenses/by/4.0/\n\n#AI #CôngNghệ #MindInTheMachine",
+  "kind": "short",
+  "publish_at": "2026-11-26T04:30:00Z",
+  "render": {
+    "engine": "casefile",
+    "spec": "data/stier/specs/mim-facenet-2015-mot-tram-hai-muoi-tam-byte.json"
+  },
+  "schema_version": 1,
+  "script": "Năm 2015, Google biến mặt người thành dãy số. Ba nhà nghiên cứu là Florian Schroff, Dmitry Kalenichenko và James Philbin, hệ thống tên FaceNet. Mỗi khuôn mặt chỉ còn một trăm hai mươi tám byte. Để dạy máy, họ cho nó xem từng bộ ba ảnh: ảnh gốc, ảnh cùng người, và ảnh người lạ. Trên bộ ảnh thử nổi tiếng LFW, hệ thống đúng chín mươi chín phẩy sáu ba phần trăm. Theo bài báo, mức sai giảm khoảng ba mươi phần trăm so với kết quả tốt nhất đã công bố. Mặt người, với máy, chỉ còn là một dãy số, và nó nhận ra người.",
+  "slug": "mim-facenet-2015-mot-tram-hai-muoi-tam-byte",
+  "source_note": "https://arxiv.org/abs/1503.03832 (đã mở: tác giả Schroff, Kalenichenko, Philbin; LFW 99,63%, YouTube Faces 95,12%; giảm sai ~30% so với kết quả tốt nhất đã công bố; 128 byte mỗi khuôn mặt); 'bộ ba ảnh' = triplet loss trong bài FaceNet; câu tả theo script data/long/mim-ai-khuon-mat (CH03), cần đối chiếu mục 'Triplet loss' trong bài báo",
+  "tags": [
+    "facenet",
+    "google",
+    "triplet loss",
+    "nhận diện khuôn mặt",
+    "học sâu",
+    "trí tuệ nhân tạo",
+    "mind in the machine"
+  ],
+  "thumbnail_text": "",
+  "title": "Năm 2015, ba nhà nghiên cứu Google nén mỗi khuôn mặt còn 128 byte: FaceNet",
+  "voice": "Thanh Bình"
+}

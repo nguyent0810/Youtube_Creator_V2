@@ -1,0 +1,266 @@
+{
+ "theme": "mim",
+ "title": "Tháng 1/2014 Google mua DeepMind, công ty dạy máy chơi Atari; Breakout 2015",
+ "description": "Ngày 26/01/2014 Google xác nhận mua DeepMind, giá theo báo chí khoảng 400–650 triệu USD (Wikipedia: DeepMind). Theo Demis Hassabis, nhóm bắt đầu bằng cách dạy máy chơi trò Atari. Ngày 25/02/2015, DeepMind công bố hệ thống DQN trên Nature: chỉ nhận màn hình, nút bấm và điểm số; ở Breakout, nó học cách đào đường hầm bên mép tường gạch (blog DeepMind/Google 25/02/2015).\n\nGiọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/0J3dcjPjcdI (công khai từ 20:00 ngày 03/12).",
+ "tags": [
+  "deepmind",
+  "google",
+  "atari",
+  "breakout",
+  "demis hassabis",
+  "dqn",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "DEEPMIND · 2014",
+ "acc": [
+  "Google",
+  "Atari",
+  "đường",
+  "hầm"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Google mua một công ty dạy máy chơi Atari.",
+  "Tháng một năm hai nghìn không trăm mười bốn, giá được đồn tới sáu trăm năm mươi triệu đô.",
+  "Công ty ấy là DeepMind, do Demis Hassabis cùng hai bạn lập ra.",
+  "Theo Hassabis, họ bắt đầu từ những trò Atari của thập niên bảy mươi, tám mươi.",
+  "Tháng hai năm hai nghìn không trăm mười lăm, DeepMind công bố hệ thống ấy trên tạp chí Nature.",
+  "Nó chỉ nhận màn hình, các nút bấm và điểm số. Không ai dạy luật.",
+  "Ở trò Breakout, nó tự đào một đường hầm bên mép tường gạch.",
+  "Quả bóng chui qua đó, đập gạch từ phía sau.",
+  "Công ty dạy máy chơi Atari, và cỗ máy ấy tự tìm ra đường hầm."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "GOOGLE MUA",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "công ty dạy máy chơi Atari",
+     "at": [
+      0,
+      "công"
+     ],
+     "sm": true,
+     "size": 56
+    }
+   ],
+   "clip": "pexels:36246874",
+   "ms": 1,
+   "veil": 0.6
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 0,
+   "to": 650,
+   "prefix": "TỚI ",
+   "suffix": " TRIỆU ĐÔ",
+   "label": "GIÁ ĐƯỢC ĐỒN · GOOGLE MUA DEEPMIND",
+   "until": [
+    1,
+    "năm",
+    1
+   ],
+   "sub": {
+    "text": "THÁNG 1/2014 · THEO BÁO CHÍ",
+    "at": [
+     1,
+     "sáu"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "NGƯỜI LẬP DEEPMIND",
+   "cards": [
+    {
+     "k": "ĐỨNG ĐẦU",
+     "v": "DEMIS HASSABIS",
+     "at": [
+      2,
+      "Demis"
+     ],
+     "c": "acc"
+    },
+    {
+     "k": "CÙNG HAI BẠN",
+     "v": "LEGG · SULEYMAN",
+     "at": [
+      2,
+      "hai"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "ATARI",
+     "at": 3,
+     "acc": true
+    },
+    {
+     "text": "những năm bảy mươi, tám mươi",
+     "at": [
+      3,
+      "thập"
+     ],
+     "sm": true,
+     "size": 56
+    }
+   ],
+   "clip": "pexels:8888600",
+   "ms": 1,
+   "veil": 0.6,
+   "at": 3
+  },
+  {
+   "type": "date",
+   "at": 4,
+   "date": "2015",
+   "day": "NATURE",
+   "sub": {
+    "text": "49 TRÒ ATARI · DQN",
+    "at": [
+     4,
+     "hệ"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Máy chỉ nhận ba thứ",
+   "nodes": [
+    {
+     "text": "MÀN HÌNH",
+     "at": [
+      5,
+      "màn"
+     ],
+     "x": 0.5,
+     "y": 0.26,
+     "shape": "none",
+     "w": 700
+    },
+    {
+     "text": "CÁC NÚT BẤM",
+     "at": [
+      5,
+      "nút"
+     ],
+     "x": 0.5,
+     "y": 0.46,
+     "shape": "none",
+     "w": 700
+    },
+    {
+     "text": "ĐIỂM SỐ",
+     "at": [
+      5,
+      "điểm"
+     ],
+     "x": 0.5,
+     "y": 0.66,
+     "shape": "circle",
+     "w": 520,
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "ĐƯỜNG HẦM",
+     "at": 6,
+     "acc": true
+    },
+    {
+     "text": "tự đào, trong Breakout",
+     "at": [
+      6,
+      "Breakout"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:35014255",
+   "ms": 1,
+   "veil": 0.5,
+   "at": 6
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "TỪ PHÍA SAU",
+     "at": 7,
+     "acc": true
+    },
+    {
+     "text": "quả bóng đập gạch",
+     "at": [
+      7,
+      "đập"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:16377188",
+   "ms": 1,
+   "veil": 0.5,
+   "at": 7
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "text": "TỰ TÌM RA ĐƯỜNG HẦM",
+   "sub": "KHÔNG AI DẠY LUẬT"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/DeepMind",
+  "https://research.google/blog/from-pixels-to-actions-human-level-control-through-deep-reinforcement-learning/",
+  "Mnih và cộng sự — Human-level control through deep reinforcement learning (Nature 518, 02/2015)"
+ ],
+ "say": {
+  "deepmind": "Đíp-mai",
+  "google": "Gu-gồ",
+  "atari": "A-ta-ri",
+  "hassabis": "Ha-xa-bít",
+  "breakout": "Brếch-ao",
+  "nature": "Nây-chơ"
+ },
+ "rules": 2,
+ "mix": true,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.22,
+   "7": 0.5
+  }
+ },
+ "imgs": {},
+ "sources_internal": [
+  "https://en.wikipedia.org/wiki/DeepMind (đã mở: 26/01/2014 Google xác nhận mua, giá 'reportedly' 400–650 triệu USD; Hassabis: bắt đầu bằng trò Atari 70–80; founders Hassabis, Legg, Suleyman)",
+  "https://research.google/blog/from-pixels-to-actions-human-level-control-through-deep-reinforcement-learning/ (đã mở: 25/02/2015; đầu vào pixel + nút + điểm; đường hầm Breakout)",
+  "Mnih và cộng sự, Nature 518 (02/2015)"
+ ]
+}

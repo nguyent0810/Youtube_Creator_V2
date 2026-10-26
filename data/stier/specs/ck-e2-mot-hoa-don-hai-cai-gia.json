@@ -1,0 +1,177 @@
+{
+ "theme": "ck",
+ "kicker": "HAI CÁI GIÁ",
+ "sub": "QUỸ KHẨN CẤP",
+ "title": "Hoá đơn viện 15 triệu: có quỹ thì lãi 0 đồng, trả tối thiểu thì 104 tháng (ví dụ giả định)",
+ "description": "Ví dụ GIẢ ĐỊNH: nằm viện ba ngày, hoá đơn 15 triệu đồng. Có sẵn quỹ khẩn cấp: trả ngay, tiền lãi 0 đồng. Không có quỹ: quẹt thẻ tín dụng rồi mỗi tháng chỉ trả mức tối thiểu.\n\nCách kênh tính: lãi giả định 30%/năm (2,5%/tháng), trả tối thiểu 5% dư nợ (sàn 100 nghìn), không tiêu thêm, không tính phí → 104 tháng (hơn 8 năm) mới hết nợ, tổng tiền lãi ≈ 13,2 triệu. Lãi và phí thẻ thật mỗi nơi một khác.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là ví dụ giả định, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (8 phút): https://youtu.be/iOxDRCkFbYY (công khai từ 20:00 ngày 04/11)",
+ "tags": [
+  "quỹ khẩn cấp",
+  "viện phí",
+  "trả tối thiểu",
+  "nợ thẻ tín dụng",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "hoá",
+  "không",
+  "tám",
+  "lãi",
+  "sẵn"
+ ],
+ "lines": [
+  "Một hoá đơn, hai cái giá rất khác.",
+  "Ví dụ giả định: nằm viện ba ngày, hoá đơn mười lăm triệu.",
+  "Có sẵn quỹ khẩn cấp, bạn trả ngay, tiền lãi bằng không.",
+  "Không có quỹ, bạn quẹt thẻ, mỗi tháng chỉ trả mức tối thiểu.",
+  "Lãi giả định ba mươi phần trăm một năm, tối thiểu năm phần trăm.",
+  "Một trăm linh bốn tháng, hơn tám năm, mới hết nợ.",
+  "Tiền lãi khoảng mười ba triệu, gần bằng chính tờ hoá đơn.",
+  "Cùng một lần ốm. Khác nhau chỉ ở chỗ tiền có sẵn trước, hay đi vay sau."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MỘT HOÁ ĐƠN",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "hai cái giá rất khác",
+     "at": [
+      0,
+      "hai"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6688055",
+   "veil": 0.58
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "VÍ DỤ GIẢ ĐỊNH",
+   "cards": [
+    {
+     "k": "NẰM VIỆN 3 NGÀY",
+     "v": "15 TRIỆU",
+     "at": [
+      1,
+      "hoá"
+     ]
+    },
+    {
+     "k": "CÓ SẴN QUỸ",
+     "v": "LÃI 0 ĐỒNG",
+     "at": [
+      2,
+      "không"
+     ],
+     "c": "up"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "KHÔNG CÓ QUỸ",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "QUẸT THẺ · TRẢ TỐI THIỂU",
+     "at": [
+      3,
+      "quẹt"
+     ],
+     "acc": true
+    },
+    {
+     "text": "lãi giả định 30%/năm · tối thiểu 5%",
+     "at": [
+      4,
+      "ba"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7710751",
+   "ms": 2,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 0,
+   "to": 104,
+   "suffix": " THÁNG",
+   "label": "HƠN 8 NĂM MỚI HẾT NỢ",
+   "sub": {
+    "text": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+    "at": [
+     5,
+     "tháng"
+    ]
+   }
+  },
+  {
+   "type": "chart",
+   "at": 6,
+   "kind": "bars",
+   "title": "TIỀN LÃI CHO HOÁ ĐƠN 15 TRIỆU",
+   "unit": "TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "bars": [
+    {
+     "label": "CÓ SẴN\nQUỸ",
+     "v": 0,
+     "text": "0",
+     "c": "up",
+     "at": 6
+    },
+    {
+     "label": "QUẸT THẺ\nTRẢ TỐI THIỂU",
+     "v": 13.2,
+     "text": "≈13,2",
+     "c": "down",
+     "at": [
+      6,
+      "mười"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "CÓ SẴN TRƯỚC\nHAY ĐI VAY SAU",
+   "sub": "CÙNG MỘT LẦN ỐM · VÍ DỤ GIẢ ĐỊNH"
+  }
+ ],
+ "sources": [
+  "https://youtu.be/iOxDRCkFbYY"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

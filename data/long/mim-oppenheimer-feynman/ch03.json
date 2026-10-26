@@ -1,0 +1,318 @@
+{
+ "title": "Một vụ nổ không được làm thử",
+ "lines": [
+  {
+   "t": "Thử tưởng tượng bạn phải thiết kế một thứ chưa ai làm ra, mà không được làm thử.",
+   "p": 0.8
+  },
+  "Nguyên liệu quá hiếm, quá đắt để thử từng phương án.",
+  "Còn các bài toán thì không giải gọn được bằng công thức trên giấy.",
+  {
+   "t": "Nên Ban Lý thuyết phải tính bằng số, từng bước nhỏ một.",
+   "p": 1.0
+  },
+  "Mùa hè năm 1944, thí nghiệm của nhóm Emilio Segrè cho thấy một tin xấu.",
+  "Kiểu bom \"khẩu súng\", bắn hai khối nhỏ vào nhau cho thành một khối lớn, không dùng được với plutonium.",
+  "Với plutonium, hai khối gặp nhau quá chậm.",
+  {
+   "t": "Phản ứng sẽ bắt đầu sớm, trước khi quả bom kịp ghép xong.",
+   "p": 1.0
+  },
+  "Mà dự án có lẽ chỉ đủ uranium cho một quả bom vào mùa hè năm 1945.",
+  "Plutonium thì đủ cho nhiều quả hơn.",
+  "Không còn đường lùi.",
+  {
+   "t": "Nên phòng thí nghiệm buộc phải chọn cách khác: nổ ép vào trong.",
+   "p": 1.0
+  },
+  "Từ cuối năm 1943, nhà toán học John von Neumann đã thúc đẩy cách này.",
+  "Thuốc nổ thường xếp quanh một lõi kim loại, cùng nổ một lúc, ép lõi đặc lại.",
+  "Nghe thì đơn giản.",
+  "Nhưng phải tính sóng ép chạy vào lõi, dội ngược ra, đi qua từng lớp vật liệu.",
+  {
+   "t": "Mỗi tích tắc của vụ nổ là một vòng tính mới.",
+   "p": 1.0
+  },
+  "Một nhà nghiên cứu của Los Alamos viết rằng tính bài này bằng tay là không thực tế.",
+  "Từ mùa thu năm 1943, Stanley Frankel và đồng nghiệp Eldred Nelson đã mang nỗi lo ấy tới gặp Bethe.",
+  "Lời giải đến từ một nơi bất ngờ.",
+  "Đó là ý của Dana Mitchell, người lo mua sắm cho phòng thí nghiệm.",
+  "Ông từng thấy một phòng tính thiên văn ở Đại học Columbia dùng máy kế toán đục lỗ của hãng IBM.",
+  {
+   "t": "Bethe cũng đã thấy phòng ấy chạy.",
+   "p": 1.0
+  },
+  "Ban lãnh đạo đặt mua ba máy nhân IBM 601, cùng các máy phụ.",
+  "Mitchell tin chúng có thể rút một phép tính từ nhiều tháng xuống vài tuần.",
+  "Nhưng máy chỉ về được vào đầu mùa xuân năm 1944.",
+  "Cả Ban Lý thuyết phải chờ.",
+  "Trong lúc chờ, họ làm gì?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "MỘT VỤ NỔ\nKHÔNG ĐƯỢC LÀM THỬ",
+   "sub": "1943 — 1944",
+   "bg": "techarea",
+   "titleAt": [
+    0,
+    "Thử"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "NGUYÊN LIỆU QUÁ HIẾM",
+     "at": 1
+    },
+    {
+     "text": "không có công thức gọn trên giấy",
+     "at": 2,
+     "sm": true
+    },
+    {
+     "text": "TÍNH BẰNG SỐ · TỪNG BƯỚC",
+     "at": 3,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 4,
+   "day": "THÍ NGHIỆM CỦA NHÓM EMILIO SEGRÈ",
+   "date": "1944",
+   "sub": {
+    "text": "MÙA HÈ · MỘT TIN XẤU",
+    "at": [
+     4,
+     "tin"
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "KIỂU “KHẨU SÚNG” VỚI PLUTONIUM",
+   "srcnote": "N. LEWIS · TRINITY BY THE NUMBERS (LANL) · DO PLUTONIUM-240 TỰ PHÂN HẠCH",
+   "rows": [
+    {
+     "k": "CÁCH LÀM",
+     "v": "BẮN 2 KHỐI NHỎ VÀO NHAU",
+     "at": [
+      5,
+      "bắn"
+     ]
+    },
+    {
+     "k": "VẤN ĐỀ",
+     "v": "GẶP NHAU QUÁ CHẬM",
+     "at": 6
+    },
+    {
+     "k": "HẬU QUẢ",
+     "v": "PHẢN ỨNG BẮT ĐẦU SỚM",
+     "at": 7
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "URANIUM: CÓ LẼ ĐỦ 1 QUẢ",
+     "at": 8
+    },
+    {
+     "text": "PLUTONIUM: ĐỦ NHIỀU HƠN",
+     "at": 9,
+     "acc": true
+    },
+    {
+     "text": "không còn đường lùi",
+     "at": 10,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 11,
+   "text": "NỔ ÉP VÀO TRONG",
+   "sub": "IMPLOSION · CÁCH ĐỂ DÙNG ĐƯỢC PLUTONIUM"
+  },
+  {
+   "type": "print",
+   "at": 12,
+   "img": "vonneumann",
+   "tone": "bw",
+   "side": {
+    "k": "JOHN VON NEUMANN",
+    "h": "Nhà toán học\nchuyên về dòng chảy",
+    "lines": [
+     {
+      "text": "thúc đẩy cách nổ ép · *cuối 1943*",
+      "at": [
+       12,
+       "thúc"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "timeline",
+   "at": 13,
+   "bg": "techarea",
+   "items": [
+    {
+     "year": "1",
+     "text": "*thuốc nổ* xếp quanh lõi",
+     "at": 13
+    },
+    {
+     "year": "2",
+     "text": "sóng ép *chạy vào* · dội ra",
+     "at": 15
+    },
+    {
+     "year": "3",
+     "text": "mỗi tích tắc = *một vòng tính*",
+     "at": 16
+    }
+   ]
+  },
+  {
+   "type": "source",
+   "at": 17,
+   "source": "N. LEWIS · “TRINITY BY THE NUMBERS”",
+   "ref": "LOS ALAMOS NATIONAL LABORATORY · LA-UR-20-30196",
+   "snippet": "tính nổ ép bằng tay là [[không thực tế]], nhất là khi dùng phương trình trạng thái thật",
+   "hlAt": [
+    17,
+    "không"
+   ],
+   "seal": "DIỄN Ý TỪ BÀI NGHIÊN CỨU",
+   "sealAt": [
+    17,
+    "tế"
+   ]
+  },
+  {
+   "type": "date",
+   "at": 18,
+   "day": "FRANKEL & NELSON MANG BÀI TOÁN TỚI BETHE",
+   "date": "10.1943",
+   "sub": {
+    "text": "N. LEWIS · TRINITY BY THE NUMBERS (LANL)",
+    "at": [
+     18,
+     "lo"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "items": [
+    {
+     "text": "LỜI GIẢI TỪ MỘT NƠI BẤT NGỜ",
+     "at": 19,
+     "acc": true
+    },
+    {
+     "text": "Dana Mitchell · người lo mua sắm",
+     "at": [
+      20,
+      "mua"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 21,
+   "img": "card",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.45,
+   "illus": "ẢNH MINH HỌA · THẺ 80 CỘT ĐỜI SAU",
+   "kin": [
+    {
+     "text": "MÁY KẾ TOÁN ĐỤC LỖ",
+     "at": [
+      21,
+      "kế"
+     ],
+     "acc": true
+    },
+    {
+     "text": "phòng tính thiên văn · Đại học Columbia",
+     "at": [
+      21,
+      "thiên"
+     ],
+     "sm": true
+    }
+   ],
+   "label": {
+    "k": "THẺ ĐỤC LỖ 80 CỘT",
+    "v": "PHẠM VI CÔNG CỘNG",
+    "at": 21
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 23,
+   "title": "ĐƠN ĐẶT HÀNG",
+   "srcnote": "N. LEWIS · TRINITY BY THE NUMBERS (LANL) · B. J. ARCHER · LA-UR-21-20164 (LANL)",
+   "rows": [
+    {
+     "k": "MÁY NHÂN",
+     "v": "3 × IBM 601",
+     "at": [
+      23,
+      "nhân"
+     ]
+    },
+    {
+     "k": "KÈM THEO",
+     "v": "MÁY CỘNG IN · SẮP · ĐỤC THẺ",
+     "at": [
+      23,
+      "phụ"
+     ]
+    },
+    {
+     "k": "KỲ VỌNG",
+     "v": "NHIỀU THÁNG → VÀI TUẦN",
+     "at": 24
+    }
+   ],
+   "total": {
+    "k": "VỀ TỚI",
+    "v": "ĐẦU XUÂN 1944",
+    "at": 25
+   }
+  },
+  {
+   "type": "question",
+   "at": 27,
+   "text": "Trong lúc chờ máy,\nhọ làm gì?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "MỘT VỤ NỔ KHÔNG ĐƯỢC LÀM THỬ"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

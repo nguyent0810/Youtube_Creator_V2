@@ -1,0 +1,283 @@
+{
+ "title": "Một, rồi năm",
+ "lines": [
+  {
+   "t": "Theo lời ông với BBC, Petrov vẫn chưa nhấc máy khi còi hú lần nữa.",
+   "p": 0.8
+  },
+  {
+   "t": "Một phút sau, còi lại hú. Tên lửa thứ hai được phóng. Rồi thứ ba, thứ tư, và thứ năm.",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Máy đổi cảnh báo, từ \"phóng\" sang \"tấn công tên lửa\".",
+  "Bài năm 2004 kể chữ trên bảng đổi theo, và còi rú to hơn trước.",
+  "Nhưng ở đây có một chỗ lệch lớn hơn.",
+  "Trong bài năm 2004, các vụ phóng mới được kể là thứ hai, thứ ba, thứ tư.",
+  "Tức là bốn tên lửa, không phải năm.",
+  "Còn BBC năm 2013, rồi Guardian năm 2017, đều ghi năm.",
+  "Guardian còn nói rõ đó là tên lửa Minuteman, loại tên lửa liên lục địa đặt trong hầm ngầm của Mỹ.",
+  "Mình không biết bản nào đúng.",
+  "Nguồn chính là lời kể của chính ông, và lời kể ấy có hai con số.",
+  "Từ đây, mình dùng con số năm, vì đó là bản gần nhất và được nhiều báo dẫn lại.",
+  "Bài năm 2004 còn một chi tiết.",
+  "Mọi vụ phóng đều đến từ cùng một căn cứ.",
+  "Và đây là điều Petrov nói ông đã nghĩ.",
+  {
+   "t": "Tấn công tên lửa không bắt đầu từ một căn cứ. Người ta phóng từ tất cả cùng một lúc.",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Một đòn đánh phủ đầu, nếu có, phải ồ ạt.",
+  "Phải đủ lớn để đối phương không kịp đáp trả.",
+  {
+   "t": "Năm tên lửa là quá ít.",
+   "p": 1.0
+  },
+  "Điều kỳ lạ là bài báo khoa học của Podvig cũng nói gần như vậy về chính cỗ máy.",
+  "Ngay trong phần tóm tắt, ông viết hệ thống có vẻ đủ sức phát hiện một đòn tấn công ồ ạt.",
+  {
+   "t": "Nhưng không thể tin cậy khi phát hiện từng vụ phóng lẻ.",
+   "p": 1.0
+  },
+  "Năm vụ phóng lẻ là đúng thứ nó kém nhất.",
+  "Mẩu tin thứ ba.",
+  "Năm tên lửa, một căn cứ, trên một màn hình giờ ghi chữ \"tấn công\".",
+  "Bạn báo lên, hay vẫn chưa?",
+  "Trước khi mình kể tiếp, hãy nhìn ra ngoài boong-ke một chút.",
+  "Vì không ai ngồi chiếc ghế này trong chân không."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "MỘT,\nRỒI NĂM",
+   "sub": "“PHÓNG” → “TẤN CÔNG TÊN LỬA”",
+   "bg": "mmsilo",
+   "titleAt": [
+    0,
+    "theo"
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 1,
+   "text": "A minute later the siren went off again. The second missile was launched. Then the third, and the fourth, and the fifth.",
+   "by": "STANISLAV PETROV · BBC NEWS · 2013",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 1,
+   "typeAt": [
+    1,
+    "một"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "PHÓNG",
+     "at": 2,
+     "sm": true
+    },
+    {
+     "text": "TẤN CÔNG TÊN LỬA",
+     "at": [
+      2,
+      "tấn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "chữ trên bảng đổi · còi rú to hơn · bản 2004",
+     "at": 3,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "SỐ TÊN LỬA · CÁC BẢN KỂ",
+   "srcnote": "MOSKOVSKIYE NOVOSTI 2004 · BBC 2013 · GUARDIAN 2017",
+   "rows": [
+    {
+     "k": "BẢN 2004",
+     "v": "THỨ 2, THỨ 3, THỨ 4 → 4 TÊN LỬA",
+     "at": 5
+    },
+    {
+     "k": "BBC 2013",
+     "v": "ĐẾN THỨ 5 → 5 TÊN LỬA",
+     "at": 7
+    },
+    {
+     "k": "GUARDIAN 2017",
+     "v": "5 TÊN LỬA MINUTEMAN",
+     "at": 8
+    }
+   ],
+   "total": {
+    "k": "NGUỒN CHÍNH",
+    "v": "MỘT NGƯỜI · HAI CON SỐ",
+    "at": 10
+   }
+  },
+  {
+   "type": "photo",
+   "at": 11,
+   "img": "mmsilo",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "illus": "ẢNH MINH HỌA",
+   "kin": [
+    {
+     "text": "TỪ ĐÂY: 5 TÊN LỬA",
+     "at": [
+      11,
+      "dùng"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bản gần nhất · nhiều báo dẫn lại",
+     "at": [
+      11,
+      "gần"
+     ],
+     "sm": true
+    }
+   ],
+   "label": {
+    "k": "TÊN LỬA MINUTEMAN II TRONG HẦM · 1980",
+    "v": "ẢNH KHÔNG QUÂN MỸ",
+    "at": 11
+   }
+  },
+  {
+   "type": "slam",
+   "at": 13,
+   "text": "MỘT CĂN CỨ",
+   "sub": "MỌI VỤ PHÓNG · THEO BẢN 2004"
+  },
+  {
+   "type": "quote",
+   "at": 15,
+   "text": "Ракетные нападения с одной базы не начинаются, взлетают со всех сразу.",
+   "by": "S. PETROV · MOSKOVSKIYE NOVOSTI · 2004",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 15,
+   "typeAt": [
+    15,
+    "tấn"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "items": [
+    {
+     "text": "ĐÒN PHỦ ĐẦU PHẢI Ồ ẠT",
+     "at": 16,
+     "acc": true
+    },
+    {
+     "text": "đủ lớn để đối phương không kịp đáp trả",
+     "at": 17,
+     "sm": true
+    },
+    {
+     "text": "5 TÊN LỬA LÀ QUÁ ÍT",
+     "at": 18
+    }
+   ]
+  },
+  {
+   "type": "source",
+   "at": 19,
+   "source": "P. PODVIG · 2002 · PHẦN TÓM TẮT",
+   "ref": "SCIENCE & GLOBAL SECURITY 10:21–60",
+   "snippet": "The system appears to be capable of detecting a massive attack, but [[cannot be relied upon to detect individual missile launches]].",
+   "hlAt": 21,
+   "seal": "TRÍCH NGUYÊN VĂN · TR. 21",
+   "sealAt": [
+    21,
+    "lẻ"
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 22,
+   "text": "VỤ PHÓNG LẺ",
+   "sub": "ĐÚNG THỨ OKO KÉM NHẤT"
+  },
+  {
+   "type": "ledger",
+   "at": 23,
+   "title": "GHẾ TRỰC · BẠN ĐANG CÓ",
+   "srcnote": "MẨU TIN 3 / 6 · BBC 2013 · BẢN 2004",
+   "rows": [
+    {
+     "k": "1 · MÀN HÌNH",
+     "v": "1 VỤ PHÓNG · TIN CẬY TỐI ĐA",
+     "at": 23
+    },
+    {
+     "k": "2 · CON MẮT",
+     "v": "OKO MỚI · TỪNG HỎNG NHIỀU",
+     "at": 23
+    },
+    {
+     "k": "3 · SỐ LƯỢNG",
+     "v": "5 (BẢN 2004: 4) · 1 CĂN CỨ",
+     "at": 24
+    }
+   ],
+   "total": {
+    "k": "MÀN HÌNH",
+    "v": "“TẤN CÔNG”",
+    "at": [
+     24,
+     "tấn"
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "at": 25,
+   "text": "Bạn báo lên, hay vẫn chưa?\nBÁO LÊN   |   CHƯA"
+  },
+  {
+   "type": "broll",
+   "at": 26,
+   "vid": "5004222",
+   "ms": 8,
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "NHÌN RA NGOÀI BOONG-KE",
+     "at": 26,
+     "acc": true
+    },
+    {
+     "text": "không ai ngồi ghế này trong chân không",
+     "at": 27,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "MỘT, RỒI NĂM"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

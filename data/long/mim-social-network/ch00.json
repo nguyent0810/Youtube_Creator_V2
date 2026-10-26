@@ -1,0 +1,241 @@
+{
+ "title": "Một trang bị tắt",
+ "lines": [
+  "Ngày 4 tháng 11 năm 2003, báo sinh viên Harvard Crimson đăng một câu chuyện về Facemash, một trang vừa bị tắt sau một cuối tuần gây phản ứng trong trường.",
+  "Theo bài báo này, Mark E. Zuckerberg, khi đó đang học Harvard, là người lập trang.",
+  "Người vào Facemash thấy hai ảnh thẻ được chọn ngẫu nhiên và chọn người họ cho là “hotter”, nghĩa là hấp dẫn hơn.",
+  "Họ cũng có thể chấm ảnh trong cùng một House, tức khu nhà ở của sinh viên tại Harvard.",
+  "Đây không phải một mạng xã hội hoàn chỉnh, mà là một giao diện ép bạn chọn giữa hai hình ảnh.",
+  "Zuckerberg nói với Crimson rằng ông đã vào các House facebooks trực tuyến để gom ảnh thẻ cho Facemash.",
+  "House facebook khi ấy là danh bạ ảnh của một khu nhà, không phải tên của sản phẩm sau này.",
+  "Trong tối Chủ nhật, trang bị tắt sau phản ứng trong trường.",
+  "Zuckerberg nói với Crimson rằng tới lúc đó Facemash có 450 khách truy cập và ít nhất 22.000 lượt bỏ phiếu.",
+  "Hai con số ấy cho thấy tốc độ lan truyền, nhưng không nói việc này được mọi người chấp nhận.",
+  "Cảnh mở đầu của bộ phim có một công thức Elo trên cửa sổ.",
+  "Elo là cách tính điểm xếp hạng thường dùng khi người chơi hoặc đối thủ được so cặp.",
+  "Nhưng mình không tìm được nguồn đáng tin nào xác nhận Facemash thật sự dùng công thức đó, nên đây chỉ là một cảnh phim.",
+  "Trên bản đồ kết nối, ghim đầu tiên là một trang so cặp ảnh, được nhiều người mở và nhanh chóng bị tắt.",
+  "Từ điểm ghim này, câu chuyện không nên bắt đầu bằng một thiên tài cô độc, mà bằng một hệ thống danh bạ và những người bị đưa vào đó."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "0",
+   "k": "MỞ ĐẦU",
+   "title": "MỘT TRANG\nBỊ TẮT",
+   "sub": "04.11.2003 · FACEMASH",
+   "bg": "memorial07",
+   "titleAt": [
+    0,
+    "facemash"
+   ]
+  },
+  {
+   "type": "date",
+   "at": [
+    0,
+    "crimson"
+   ],
+   "day": "HARVARD CRIMSON",
+   "date": "04.11.2003",
+   "sub": {
+    "text": "MỘT TRANG VỪA BỊ TẮT",
+    "at": [
+     0,
+     "crimson"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": [
+    1,
+    "mark"
+   ],
+   "img": "mark",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "NGƯỜI LẬP TRANG",
+    "v": "MARK E. ZUCKERBERG",
+    "at": [
+     1,
+     "mark"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": [
+    1,
+    "harvard"
+   ],
+   "img": "ai01",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "PHÒNG KÝ TÚC XÁ",
+    "v": "MINH HỌA BỐI CẢNH",
+    "at": [
+     1,
+     "harvard"
+    ]
+   },
+   "illus": "ẢNH MINH HỌA",
+   "credit": false
+  },
+  {
+   "type": "photo",
+   "at": [
+    2,
+    "facemash"
+   ],
+   "img": "ai02",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "CƠ CHẾ",
+    "v": "SO HAI ẢNH NGẪU NHIÊN",
+    "at": [
+     2,
+     "facemash"
+    ]
+   },
+   "illus": "ẢNH MINH HỌA",
+   "credit": false
+  },
+  {
+   "type": "org",
+   "at": [
+    3,
+    "house"
+   ],
+   "nodes": [
+    {
+     "id": "house",
+     "t": "HOUSE",
+     "s": "DANH BẠ ẢNH",
+     "at": [
+      3,
+      "house"
+     ]
+    },
+    {
+     "id": "pair",
+     "t": "SO CẶP",
+     "s": "HAI ẢNH",
+     "p": "house",
+     "at": [
+      3,
+      "house"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    4,
+    "giao"
+   ],
+   "items": [
+    {
+     "text": "KHÔNG PHẢI MẠNG XÃ HỘI",
+     "at": [
+      4,
+      "giao"
+     ],
+     "acc": true
+    },
+    {
+     "text": "MỘT GIAO DIỆN ÉP CHỌN",
+     "at": [
+      4,
+      "giao"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": [
+    5,
+    "gom"
+   ],
+   "vid": "946146",
+   "veil": 0.62,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "GÕ BÀN PHÍM MINH HỌA · KHÔNG PHẢI SỰ KIỆN THẬT",
+     "at": [
+      5,
+      "gom"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": [
+    8,
+    "có"
+   ],
+   "from": 0,
+   "to": 450,
+   "suffix": " KHÁCH",
+   "label": "THEO ZUCKERBERG VỚI CRIMSON",
+   "year": false
+  },
+  {
+   "type": "counter",
+   "at": [
+    8,
+    "nhất"
+   ],
+   "from": 0,
+   "to": 22000,
+   "suffix": " LƯỢT",
+   "label": "Ít NHẤT · THEO CRIMSON",
+   "year": false
+  },
+  {
+   "type": "ledger",
+   "at": [
+    13,
+    "bản"
+   ],
+   "title": "BẢN ĐỒ KẾT NỐI",
+   "srcnote": "MỖI CHƯƠNG THÊM MỘT ĐƯỜNG",
+   "rows": [
+    {
+     "k": "MỞ ĐẦU",
+     "v": "SO CẶP ẢNH",
+     "at": [
+      13,
+      "bản"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": [
+    14,
+    "thiên"
+   ],
+   "text": "AI ĐÃ BỊ ĐƯA VÀO\nHỆ THỐNG NÀY?"
+  }
+ ],
+ "topic": "mim-social-network",
+ "chapter": 0,
+ "hud": {
+  "k": "CHƯƠNG 00",
+  "t": "MỘT TRANG BỊ TẮT"
+ }
+}

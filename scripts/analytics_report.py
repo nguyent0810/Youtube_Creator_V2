@@ -31,6 +31,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 from factory import channels, publish, store  # noqa: E402
+from factory.scoreboard import STAYED_TARGET, stayed  # noqa: E402
 from factory.script_signals import signals  # noqa: E402
 
 API = "https://youtubeanalytics.googleapis.com/v2/reports"
@@ -78,7 +79,12 @@ def fetch_channel(ch: str) -> list[dict]:
         # 24/09 giờ Mỹ -> lấy từ ngày đăng (UTC) sẽ BỎ MẤT ngày đầu, ngày nhiều view
         # nhất (lỗi thật: "Điều 125" ra 174 thay vì 1.263). Lùi 1 ngày cho chắc.
         start = (datetime.strptime(r["publish_at"][:10], "%Y-%m-%d") - timedelta(days=1)).date().isoformat()
-        tot = _report(tok, cid, r["video_id"], "video", "views,averageViewPercentage,averageViewDuration", start, end)
+        tot = _report(tok, cid, r["video_id"], "video",
+                      "views,engagedViews,averageViewPercentage,averageViewDuration", start, end)
+        if not tot["ok"] and tot["reason"] == "http_400":
+            # engagedViews bị từ chối: lấy lại không có nó, % ở lại ghi THIẾU (không chép views)
+            tot = _report(tok, cid, r["video_id"], "video", "views,averageViewPercentage,averageViewDuration",
+                          start, end)
         cur = _report(tok, cid, r["video_id"], "elapsedVideoTimeRatio", "audienceWatchRatio", start, end)
         src = _report(tok, cid, r["video_id"], "insightTrafficSourceType", "views", start, end)
         t = (tot.get("rows") or [{}])[0] if tot["ok"] else {}
@@ -87,7 +93,8 @@ def fetch_channel(ch: str) -> list[dict]:
             sig = signals(b.script)
         except Exception:
             sig = {}
-        out.append({**r, "views": t.get("views"), "avp": t.get("averageViewPercentage"),
+        out.append({**r, "views": t.get("views"), "engaged": t.get("engagedViews"),
+                    "avp": t.get("averageViewPercentage"),
                     "avd": t.get("averageViewDuration"),
                     "curve": cur.get("rows") if cur["ok"] else None,
                     "curve_missing": None if cur["ok"] and cur.get("rows") else (cur.get("reason") or "no_data"),
@@ -108,19 +115,31 @@ def summarize(ch: str, vids: list[dict]) -> list[str]:
         pf = next((p for p in L["prefixes"] if v["slug"].startswith(p)), "?")
         by.setdefault(pf, []).append(v)
     lines.append(f"   {'dòng':14s} {'n':>3s} {'view TB':>8s} {'view max':>8s} {'%xem TB':>8s} "
-                 f"{'giữ@25%':>8s} {'giữ@75%':>8s} {'%Shorts':>8s}")
+                 f"{'giữ@25%':>8s} {'giữ@75%':>8s} {'%Shorts':>8s} {'%ở lại':>8s}")
     for pf, vs in by.items():
         views = [v["views"] or 0 for v in vs]
         avps = [v["avp"] for v in vs if v["avp"]]
+        stay = [x for v in vs if (x := stayed(v["views"], v.get("engaged"))) is not None]
         r25 = [x for v in vs if (x := _at(v["curve"], 0.25)) is not None]
         r75 = [x for v in vs if (x := _at(v["curve"], 0.75)) is not None]
         sh = [v["sources"].get("SHORTS", 0) / max(1, sum(v["sources"].values())) for v in vs if v["sources"]]
         f = lambda xs, pct=False: "—" if not xs else (f"{statistics.mean(xs):.0%}" if pct else f"{statistics.mean(xs):.0f}")
         lines.append(f"   {pf:14s} {len(vs):3d} {f(views):>8s} {max(views):>8d} "
                      f"{(f'{statistics.mean(avps):.0f}%' if avps else '—'):>8s} {f(r25, True):>8s} "
-                     f"{f(r75, True):>8s} {f(sh, True):>8s}")
+                     f"{f(r75, True):>8s} {f(sh, True):>8s} "
+                     f"{(f'{statistics.median(stay):.0%}' if stay else '—'):>8s}")
     top = sorted(vids, key=lambda v: v["views"] or 0, reverse=True)[:5]
     lines.append("   Top view: " + " · ".join(f"{v['slug']} ({v['views']}, {v['avp'] or 0:.0f}%)" for v in top))
+    # % ở lại (engagedViews/views) dự báo việc thoát trần ~1.000 view tốt hơn % xem TB
+    ranked = sorted(((x, v) for v in vids if (x := stayed(v["views"], v.get("engaged"))) is not None),
+                    key=lambda p: p[0], reverse=True)
+    if ranked:
+        lines.append(f"   % ở lại trung vị {statistics.median(x for x, _ in ranked):.0%}; "
+                     f"{sum(1 for x, _ in ranked if x >= STAYED_TARGET)}/{len(ranked)} video đạt "
+                     f"{STAYED_TARGET:.0%}")
+        lines.append("   Ở lại cao nhất: " + " · ".join(f"{v['slug']} ({x:.0%}, {v['views']})" for x, v in ranked[:5]))
+        lines.append("   Ở lại thấp nhất: " + " · ".join(f"{v['slug']} ({x:.0%}, {v['views']})"
+                                                     for x, v in ranked[-5:][::-1]))
     return lines
 
 

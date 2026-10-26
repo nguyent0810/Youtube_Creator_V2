@@ -1,0 +1,209 @@
+{
+ "theme": "ck",
+ "kicker": "BIỂU ĐỒ NẾN",
+ "sub": "DOJI",
+ "title": "Doji báo đảo chiều? Kênh đếm khoảng 200 cây doji trên VN-Index 8 năm",
+ "description": "Doji theo định nghĩa kênh dùng: thân nến không quá 10% biên độ phiên. Trên VN-Index 8 năm có 201 cây doji (nguồn dữ liệu khác: 189). \"Đổi hướng\" = hướng đi 5 phiên sau ngược với hướng đi 5 phiên trước. Sau doji, chỉ số đổi hướng ở 42,8% số lần; mọi ngày thường: 45,0% (1.981 ngày). Nghĩa là sau doji chỉ số không đổi hướng nhiều hơn bình thường.\n\nCách đếm: chỉ số VN-Index, giá ngày từ 08/10/2018 tới 06/10/2026 (1.995 phiên, dữ liệu thị trường qua vnstock), kênh tự tính; chưa tính phí, thuế; là tần suất trong quá khứ, không phải tín hiệu.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (13 phút): https://youtu.be/bsmkQIycAbA (công khai từ 20:00 ngày 14/11)",
+ "tags": [
+  "doji",
+  "nến doji",
+  "biểu đồ nến",
+  "mẫu nến đảo chiều",
+  "vn-index",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "đảo",
+  "chiều",
+  "lưỡng",
+  "lự",
+  "hứa"
+ ],
+ "lines": [
+  "Doji báo đảo chiều? Đếm thử hai trăm lần.",
+  "Doji là nến gần như không thân: giá mở và đóng cửa gần bằng nhau.",
+  "Người ta gọi nó là dấu hiệu lưỡng lự, sắp đổi hướng.",
+  "Tám năm VN-Index, doji xuất hiện khoảng hai trăm lần.",
+  "Nếu báo đảo chiều thật, sau doji chỉ số phải hay đổi hướng hơn ngày thường.",
+  "Thực tế, sau doji chỉ số đổi hướng bốn mươi ba phần trăm số lần. Ngày thường: bốn mươi lăm.",
+  "Lưỡng lự là chuyện của một phiên, không phải lời hứa cho phiên sau."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "DOJI BÁO ĐẢO CHIỀU?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "kênh đếm thử · VN-Index 8 năm",
+     "at": [
+      0,
+      "Đếm"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7550493",
+   "veil": 0.55
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "DOJI",
+   "nodes": [
+    {
+     "text": "BÓNG TRÊN",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      1,
+      "nến"
+     ],
+     "shape": "none",
+     "w": 460
+    },
+    {
+     "text": "MỞ CỬA ≈ ĐÓNG CỬA",
+     "x": 0.5,
+     "y": 0.46,
+     "at": [
+      1,
+      "mở"
+     ],
+     "c": "acc",
+     "w": 760
+    },
+    {
+     "text": "BÓNG DƯỚI",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      1,
+      "đóng"
+     ],
+     "shape": "none",
+     "w": 460
+    },
+    {
+     "text": "LƯỠNG LỰ → SẮP ĐỔI HƯỚNG?",
+     "x": 0.5,
+     "y": 0.86,
+     "at": [
+      2,
+      "lưỡng"
+     ],
+     "shape": "circle",
+     "w": 820
+    }
+   ],
+   "note": "THÂN ≤ 10% BIÊN PHIÊN · LỜI TRUYỀN MIỆNG: DIỄN Ý"
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "from": 0,
+   "to": 201,
+   "suffix": " LẦN",
+   "label": "DOJI · VN-INDEX 10/2018–10/2026",
+   "sub": {
+    "text": "KÊNH TỰ ĐẾM · NGUỒN DỮ LIỆU KHÁC: 189",
+    "at": [
+     3,
+     "hai"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "NẾU BÁO ĐẢO CHIỀU",
+     "at": 4
+    },
+    {
+     "text": "PHẢI ĐỔI HƯỚNG NHIỀU HƠN",
+     "at": [
+      4,
+      "phải"
+     ],
+     "acc": true
+    },
+    {
+     "text": "so với ngày thường",
+     "at": [
+      4,
+      "ngày"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:24801670",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  },
+  {
+   "type": "chart",
+   "at": 5,
+   "kind": "bars",
+   "title": "SAU 5 PHIÊN, CHỈ SỐ ĐỔI HƯỚNG",
+   "unit": "% SỐ LẦN · KÊNH TỰ ĐẾM · KHÔNG PHẢI TÍN HIỆU",
+   "bars": [
+    {
+     "label": "SAU DOJI\n201 LẦN",
+     "v": 42.8,
+     "text": "42,8%",
+     "c": "ref",
+     "at": [
+      5,
+      "bốn"
+     ]
+    },
+    {
+     "label": "NGÀY\nTHƯỜNG",
+     "v": 45.0,
+     "text": "45,0%",
+     "c": "dim",
+     "at": [
+      5,
+      "Ngày"
+     ]
+    }
+   ],
+   "note": "ĐỔI HƯỚNG = 5 PHIÊN SAU NGƯỢC 5 PHIÊN TRƯỚC"
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "LƯỠNG LỰ\nMỘT PHIÊN",
+   "sub": "KHÔNG PHẢI LỜI HỨA CHO PHIÊN SAU"
+  }
+ ],
+ "sources": [
+  "https://youtu.be/bsmkQIycAbA",
+  "https://vnstocks.com/docs/vnstock-data/du-lieu-giao-dich"
+ ],
+ "say": {
+  "vn-index": "Vi En In-đéc",
+  "doji": "đô-gi"
+ },
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.55
+  }
+ },
+ "imgs": {}
+}

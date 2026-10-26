@@ -1,0 +1,264 @@
+{
+ "theme": "mim",
+ "title": "Tháng 6/2025, chat của người dùng Meta AI hiện công khai trên dòng tin Discover",
+ "description": "Tháng 6/2025, ứng dụng Meta AI có dòng tin công khai Discover hiện những cuộc trò chuyện với chatbot mà người dùng đã đăng. Business Insider thấy nhiều bài trông như đăng nhầm; một người đàn ông hỏi về sửa xe nói anh không định đăng công khai; theo Engadget, có người viết thêm vào bài đã đăng lời nhắn giữ riêng tư. Meta nói không có gì lên dòng tin nếu người dùng không chọn đăng; Mozilla nói giao diện không báo rõ bài sẽ công khai; Meta thêm màn cảnh báo trước khi đăng (Engadget; Mozilla Foundation). Chi tiết người hỏi sửa xe lấy từ bản tin thứ cấp về bài của Business Insider; kênh chưa mở được bài gốc. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện. Thông tin theo nguồn đã ghi, đọc ngày 20/10/2026; chưa có bản kiểm chứng riêng của kênh.\n\nBản đầy đủ: https://youtu.be/ejsjefnJQbI (công khai từ 20:00 ngày 23/11).",
+ "tags": [
+  "meta ai discover",
+  "chat công khai",
+  "quyền riêng tư ai",
+  "chatgpt",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "AI QUANH TA",
+ "sub": "06/2025",
+ "acc": [
+  "sửa",
+  "xe",
+  "công",
+  "khai",
+  "đăng"
+ ],
+ "lines": [
+  "Anh hỏi chuyện sửa xe, ai cũng đọc được.",
+  "Tháng sáu 2025, ứng dụng Meta AI có dòng tin công khai, hiện cả chat người dùng đăng.",
+  "Phóng viên Business Insider thấy nhiều bài trông như đăng nhầm.",
+  "Người đàn ông hỏi chuyện sửa xe nói anh không định đăng công khai.",
+  "Theo Engadget, có người còn viết thêm vào bài: hãy giữ chuyện này riêng tư.",
+  "Meta nói: không gì lên dòng tin nếu bạn không chọn đăng.",
+  "Muốn đăng phải bấm hai lần, nhưng Mozilla nói giao diện không báo rõ bài sẽ công khai.",
+  "Meta thêm màn cảnh báo trước khi đăng.",
+  "Chuyện sửa xe ấy chỉ cách công khai hai lần bấm."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "SỬA XE",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "ai cũng đọc được",
+     "at": [
+      0,
+      "ai"
+     ],
+     "sm": true
+    }
+   ],
+   "at": 0,
+   "clip": "pexels:8987289",
+   "veil": 0.55
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "06.2025",
+   "day": "META AI · DÒNG TIN DISCOVER"
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "TRÊN DÒNG TIN CÔNG KHAI",
+   "cards": [
+    {
+     "k": "CÓ",
+     "v": "CHUYỆN CÁ NHÂN",
+     "at": [
+      2,
+      "nhiều"
+     ]
+    },
+    {
+     "k": "TRÔNG NHƯ",
+     "v": "ĐĂNG NHẦM",
+     "at": [
+      2,
+      "đăng"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "KHÔNG ĐỊNH ĐĂNG",
+   "sub": "NGƯỜI HỎI VỀ SỬA XE · THEO BUSINESS INSIDER"
+  },
+  {
+   "type": "quote",
+   "at": 4,
+   "text": "Hãy giữ chuyện này riêng tư.",
+   "by": "MỘT BÀI ĐÃ ĐĂNG CÔNG KHAI · THEO ENGADGET · TRÍCH DỊCH",
+   "clip": "pexels:7273912",
+   "veil": 0.72
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "HAI PHÍA NÓI",
+   "rows": [
+    {
+     "k": "META",
+     "v": "CHỈ LÊN KHI BẠN CHỌN ĐĂNG",
+     "at": [
+      5,
+      "Meta"
+     ]
+    },
+    {
+     "k": "CÁCH ĐĂNG",
+     "v": "BẤM 2 LẦN",
+     "at": [
+      6,
+      "bấm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": [
+    6,
+    "nhưng"
+   ],
+   "title": "Mozilla nói",
+   "nodes": [
+    {
+     "text": "NÚT CHIA SẺ",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      6,
+      "Mozilla"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "BÀI CÔNG KHAI",
+     "x": 0.5,
+     "y": 0.68,
+     "at": [
+      6,
+      "công"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 700
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      6,
+      "không"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "THÊM CẢNH BÁO",
+     "at": [
+      7,
+      "thêm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "trước khi đăng",
+     "at": [
+      7,
+      "trước"
+     ],
+     "sm": true
+    }
+   ],
+   "at": 7,
+   "clip": "pexels:6279146",
+   "veil": 0.6
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "text": "HAI LẦN BẤM",
+   "sub": "TỪ SỬA XE TỚI CÔNG KHAI"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CÔNG KHAI",
+     "at": [
+      8,
+      "công"
+     ],
+     "acc": true
+    },
+    {
+     "text": "chỉ cách hai lần bấm",
+     "at": [
+      8,
+      "hai"
+     ],
+     "sm": true
+    }
+   ],
+   "at": [
+    8,
+    "công"
+   ],
+   "clip": "pexels:6611949",
+   "veil": 0.55
+  }
+ ],
+ "sources": [
+  "https://engadget.com/social-media/meta-warns-users-to-avoid-sharing-personal-or-sensitive-information-in-its-ai-app-233900625.html",
+  "https://www.mozillafoundation.org/en/campaigns/meta-help-users-stop-accidentally-sharing-private-ai-conversations/",
+  "Business Insider (06/2025) — bài về dòng tin Discover của ứng dụng Meta AI và các bài đăng nhầm (qua bản tin thứ cấp)"
+ ],
+ "say": {
+  "=AI": "ây ai",
+  "chatgpt": "chát gi pi ti",
+  "openai": "Ô-pần ây ai",
+  "google": "Gu-gồ",
+  "chatbot": "chát bót",
+  "chat": "chát",
+  "meta": "Mê-ta",
+  "mozilla": "Mô-di-la",
+  "business": "Bít-nịt",
+  "insider": "In-sai-đờ",
+  "discover": "Đít-các-vơ"
+ },
+ "rules": 2,
+ "mix": true,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.22,
+   "7": 0.5
+  }
+ },
+ "sources_internal": [
+  "https://engadget.com/social-media/meta-warns-users-to-avoid-sharing-personal-or-sensitive-information-in-its-ai-app-233900625.html (không tải được trực tiếp; câu 'keep this private' lấy từ Engadget qua Stuff)",
+  "https://www.mozillafoundation.org/en/campaigns/meta-help-users-stop-accidentally-sharing-private-ai-conversations/",
+  "Business Insider (06/2025) — chưa mở được bản gốc; người hỏi sửa xe qua bản tin thứ cấp",
+  "Sửa 22/10/2026 theo KIEM-NGUON-B mục 10: 'giữ chuyện này riêng tư' ghi theo Engadget, không phải Business Insider"
+ ],
+ "description_orig": "Tháng 6/2025, ứng dụng Meta AI có dòng tin công khai Discover hiện những cuộc trò chuyện với chatbot mà người dùng đã đăng. Business Insider thấy nhiều bài trông như đăng nhầm; một người đàn ông hỏi về sửa xe nói anh không định đăng công khai; một người viết thêm vào bài đã đăng lời nhắn giữ riêng tư. Meta nói không có gì lên dòng tin nếu người dùng không chọn đăng; Mozilla nói giao diện không báo rõ bài sẽ công khai; Meta thêm màn cảnh báo trước khi đăng (Engadget; Mozilla Foundation). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện. Thông tin theo nguồn đã ghi, đọc ngày 20/10/2026; chưa có bản kiểm chứng riêng của kênh (data/long/mim-ai-chat-privacy chưa có factcheck.md).\n\nBản đầy đủ: https://youtu.be/ejsjefnJQbI (công khai từ 20:00 ngày 23/11)."
+}

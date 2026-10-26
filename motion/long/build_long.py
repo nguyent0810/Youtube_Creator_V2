@@ -60,7 +60,7 @@ VOICE = "Anh Khôi"
 QUOTE_VOICE = "Minh Đức"     # câu {"q": 1}: lời trích nguyên văn/diễn ý, giọng khác + lọc radio
 ASK_VOICE = None              # câu {"ask": 1}: "người hỏi" chen ngang (câu hỏi của người xem) -- giọng khác, KHÔNG lọc radio
 UA = {"User-Agent": "yt-factory/1.0 (documentary research; contact via channel)"}
-FREE = re.compile(r"public domain|^pd|cc0|no restrictions|^cc by(-sa)? ?\d|^cc-by", re.I)
+FREE = re.compile(r"public domain|^pd|cc0|no restrictions|^cc by(-sa)? ?\d|^cc-by|^attribution$", re.I)   # "Attribution" = {{PD-LosAlamos}}/{{Attribution}}: chỉ buộc ghi nguồn, không SA (23/10/2026)
 # mastering giọng đọc (đã duyệt ở bản thử Mafia): cắt ù, bớt đục 200Hz, sáng 3.2kHz, khử xì, nén nhẹ.
 # Chỉ áp ở bước trộn — mốc chữ vẫn lấy từ voice.wav thô. spec "master": false để tắt (Yakuza đã đăng bản thô).
 VOICE_FX = ("highpass=f=70,equalizer=f=200:t=q:w=1:g=-2,equalizer=f=3200:t=q:w=1.4:g=2.5,deesser=i=0.4,"
@@ -466,9 +466,13 @@ def plan(ch: dict, lines: list[dict], dur: float) -> list[dict]:
                 r["animate"].setdefault("until", round(max(r["animate"]["at"] + 0.5, min(t1 - 0.6, r["animate"]["at"] + 4)), 3))
             (chartdata.attach_breadth if ty == "breadth" else chartdata.attach_basket)(r)
         if ty == "date":
+            if sum(c.isalpha() for c in r["date"]) > 1:   # mỗi ký tự không phải số là ô 44px -> chữ chồng nhau ("GIỮA 2027", CK E6 23/10/2026)
+                print(f"  ! WARNING cảnh date '{r['date']}': chữ cái trong 'date' chồng nhau — để chữ vào 'day' (vd day 'GIỮA NĂM', date '2027')")
             r.setdefault("dayAt", t0 + 0.15)
             ng = len("".join(c if c.isdigit() else " " for c in r["date"]).split())
             r.setdefault("groupAt", [t0 + 0.4 + 0.3 * g for g in range(ng)])
+            if isinstance(r.get("sub"), str):   # engine đọc sub.text/sub.at; chuỗi trần hiện chữ "undefined" (retro 23/10/2026: CK E4/E5/E6)
+                r["sub"] = {"text": r["sub"], "at": round(r["groupAt"][-1] + 0.6 if r["groupAt"] else t0 + 0.6, 3)}
         if ty == "quote":
             if "typeAt" in r:
                 r["at"] = r.pop("typeAt")
@@ -628,6 +632,16 @@ def bars_collide(scenes) -> list[str]:
             w = len(sc["title"]) * 26.8 + len(sc["unit"]) * 17.1 + 24     # đo trên khung D3 ch02: 26.7 / 17.1 px mỗi ký tự, chừa 24px
             if w > 1620:
                 out.append(f"{sc['type']}#{k} tiêu đề {len(sc['title'])} + chú thích {len(sc['unit'])} ký tự ≈ {w:.0f}px > 1620px")
+        # Nhãn trục cột (.bk 24px mono +.1em, nowrap) trong ô 1620/n px: dài là đè nhãn cột bên (retro 23/10/2026: CK E5 ch01
+        # "MỖI NGƯỜI PHỤ THUỘC · 2025" chồng nhãn 2026; A2 ch04 8 cột nhãn 16–22 ký tự).
+        if sc["type"] == "bars" and sc.get("items"):
+            slot, it = 1620 / len(sc["items"]), sc["items"]
+            ws = [len(str(q.get("k", ""))) * 16.8 for q in it]          # đo trên khung E5 ch01: ~16,8 px mỗi ký tự
+            for a in range(len(it) - 1):                                # hai nhãn kề nhau, mỗi nhãn canh giữa ô của nó
+                if (ws[a] + ws[a + 1]) / 2 > slot - 16:
+                    out.append(f"bars#{k} nhãn cột '{it[a].get('k')}' + '{it[a + 1].get('k')}' chồng nhau (ô {slot:.0f}px)")
+            if ws and (ws[0] / 2 > slot / 2 + 140 or ws[-1] / 2 > slot / 2 + 140):   # nhãn đầu/cuối tràn mép khung
+                out.append(f"bars#{k} nhãn cột đầu/cuối tràn mép khung")
     return out
 
 

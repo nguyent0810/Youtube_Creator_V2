@@ -1,0 +1,195 @@
+{
+ "theme": "ck",
+ "kicker": "BA HAY SÁU",
+ "sub": "QUỸ KHẨN CẤP",
+ "title": "Quỹ khẩn cấp 3 hay 6 tháng mới đủ? Quy tắc kinh nghiệm, không phải định luật",
+ "description": "“3–6 tháng chi tiêu thiết yếu” là quy tắc kinh nghiệm phổ biến của tài chính cá nhân, không phải định luật. Thu nhập đều, nhà có hai người cùng đi làm → tấm đệm có thể mỏng hơn; thu nhập thất thường, một mình nuôi cả nhà → cần dày hơn. Ví dụ GIẢ ĐỊNH: chi thiết yếu 8 triệu/tháng → 3 tháng = 24 triệu, 6 tháng = 48 triệu.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là ví dụ giả định, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (8 phút): https://youtu.be/iOxDRCkFbYY (công khai từ 20:00 ngày 04/11)",
+ "tags": [
+  "quỹ khẩn cấp",
+  "3 đến 6 tháng",
+  "chi tiêu thiết yếu",
+  "tiết kiệm",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "kinh",
+  "nghiệm",
+  "mỏng",
+  "dày",
+  "rơi"
+ ],
+ "lines": [
+  "Ba tháng hay sáu tháng mới đủ?",
+  "Ba tới sáu tháng là quy tắc kinh nghiệm, không phải định luật.",
+  "Hãy nghĩ nó như tấm đệm: dày bao nhiêu, tuỳ bạn có thể rơi từ đâu.",
+  "Thu nhập đều, nhà có hai người đi làm, tấm đệm có thể mỏng hơn.",
+  "Thu nhập thất thường, một mình nuôi cả nhà, tấm đệm cần dày hơn.",
+  "Ví dụ giả định, thiết yếu tám triệu: ba tháng là hai mươi tư triệu, sáu tháng là bốn mươi tám.",
+  "Đủ hay chưa không nằm ở con số chung. Nó nằm ở độ cao bạn có thể rơi."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "3 HAY 6 THÁNG?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "quỹ khẩn cấp bao nhiêu là đủ",
+     "at": [
+      0,
+      "sáu"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:19798259",
+   "veil": 0.58
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "QUY TẮC KINH NGHIỆM",
+   "sub": "KHÔNG PHẢI ĐỊNH LUẬT"
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "TẤM ĐỆM",
+     "at": 2,
+     "acc": true
+    },
+    {
+     "text": "dày bao nhiêu tuỳ độ cao có thể rơi",
+     "at": [
+      2,
+      "dày"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6572679",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Mỏng hay dày?",
+   "nodes": [
+    {
+     "text": "thu nhập đều · hai người đi làm",
+     "x": 0.5,
+     "y": 0.2,
+     "at": 3,
+     "shape": "none",
+     "w": 860
+    },
+    {
+     "text": "mỏng hơn",
+     "x": 0.5,
+     "y": 0.4,
+     "at": [
+      3,
+      "mỏng"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "thất thường · một mình nuôi nhà",
+     "x": 0.5,
+     "y": 0.62,
+     "at": 4,
+     "shape": "none",
+     "w": 860
+    },
+    {
+     "text": "dày hơn",
+     "x": 0.5,
+     "y": 0.82,
+     "at": [
+      4,
+      "dày"
+     ],
+     "c": "acc",
+     "shape": "circle"
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "at": 5,
+   "kind": "bars",
+   "title": "THIẾT YẾU 8 TRIỆU MỖI THÁNG",
+   "unit": "TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH",
+   "bars": [
+    {
+     "label": "3 THÁNG",
+     "v": 24,
+     "text": "24",
+     "c": "ref",
+     "at": [
+      5,
+      "ba"
+     ]
+    },
+    {
+     "label": "6 THÁNG",
+     "v": 48,
+     "text": "48",
+     "c": "up",
+     "at": [
+      5,
+      "sáu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "ĐỦ HAY CHƯA",
+   "cards": [
+    {
+     "k": "KHÔNG NẰM Ở",
+     "v": "CON SỐ CHUNG",
+     "at": 6
+    },
+    {
+     "k": "MÀ NẰM Ở",
+     "v": "ĐỘ CAO CÓ THỂ RƠI",
+     "at": [
+      6,
+      "nó"
+     ],
+     "c": "acc"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://youtu.be/iOxDRCkFbYY"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

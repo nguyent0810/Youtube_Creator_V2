@@ -1,0 +1,320 @@
+{
+ "title": "Ba bài trong chín tháng",
+ "lines": [
+  {
+   "t": "Máy không mệt, nhưng máy sợ bụi.",
+   "p": 0.8
+  },
+  "Mỗi máy có hàng trăm rơ-le, chỉ một hạt bụi kẹt vào là ra số sai.",
+  "Nên chương trình được thiết kế để chịu được sai số nhỏ.",
+  {
+   "t": "Sai ở chữ số cuối thì bỏ qua, chỉ sửa khi sai ở những chữ số lớn.",
+   "p": 1.0
+  },
+  "Ngoài bụi, còn một thứ bệnh của người.",
+  "Feynman gọi nó là \"bệnh máy tính\".",
+  "Người mắc đầu tiên lại chính là Stanley Frankel, người nghĩ ra cả hệ thống.",
+  "Ông mải mê làm cho một máy tự in ra bảng hàm arctang.",
+  "Trong khi bảng ấy, họ đã có sẵn.",
+  {
+   "t": "Một bảng vô ích.",
+   "p": 1.0
+  },
+  "Feynman giải thích: máy vui quá, nên người ta chơi với nó và quên việc chính.",
+  "Ai từng mải nghịch một bảng tính đến quên giờ ăn chắc hiểu căn bệnh này.",
+  "Đầu năm 1945, Frankel được chuyển sang nhóm khác.",
+  "Feynman được giao trông phần tính toán bằng máy IBM.",
+  "Theo ông, tới lúc ấy nhóm mới làm xong ba bài toán trong chín tháng.",
+  "Tiến độ rất chậm.",
+  "Bạn còn nhớ chớp sáng ở đầu video chứ?",
+  {
+   "t": "Lúc này, con đường dẫn tới nó đang tắc ngay trong căn phòng ấy.",
+   "p": 1.0
+  },
+  "Người vận hành máy là lính của Đội Kỹ sư Đặc biệt.",
+  "Quân đội chọn họ khắp nước vì có năng khiếu kỹ thuật, rồi đưa lên núi.",
+  "Họ đục lỗ lên thẻ những con số mà không ai giải thích là số gì.",
+  "Họ chỉ biết đục.",
+  "Feynman cho rằng chỗ tắc thật nằm ở đó.",
+  {
+   "t": "Không phải ở máy.",
+   "p": 1.0
+  },
+  "Ông xin Oppenheimer, và được phép giảng cho họ biết họ đang làm gì.",
+  "Theo lời Feynman, cả nhóm như bừng tỉnh: giờ họ biết mình đang góp sức vào cuộc chiến.",
+  "Áp suất ra cao hơn nghĩa là năng lượng thoát ra nhiều hơn.",
+  "Những con số bỗng có nghĩa.",
+  {
+   "t": "Còn nhóm tính tay thì không được giải thích như thế, theo nghiên cứu của Los Alamos.",
+   "p": 1.0
+  },
+  "Và con đường ấy rẽ ngoặt đúng ở khoảnh khắc này, trong một phòng máy đầy bụi.",
+  "Bởi ngay sau buổi giảng ấy, những cậu lính bắt đầu tự nghĩ cách làm nhanh hơn."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "CHƯƠNG SÁU",
+   "title": "BA BÀI\nTRONG CHÍN THÁNG",
+   "sub": "1944 — 1945",
+   "bg": "sed",
+   "titleAt": [
+    0,
+    "Máy"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "HÀNG TRĂM RƠ-LE MỖI MÁY",
+     "at": 1
+    },
+    {
+     "text": "MỘT HẠT BỤI = SỐ SAI",
+     "at": [
+      1,
+      "hạt"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 2,
+   "text": "…insensitive to small errors.",
+   "by": "N. METROPOLIS, QUA N. LEWIS · TRINITY BY THE NUMBERS (LANL)",
+   "lbl": "TRÍCH",
+   "typeAt": [
+    2,
+    null,
+    0,
+    0.05
+   ],
+   "typeDur": 1.4
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "CHỊU ĐƯỢC SAI SỐ NHỎ",
+   "srcnote": "N. LEWIS · TRINITY BY THE NUMBERS (LANL)",
+   "rows": [
+    {
+     "k": "SAI CHỮ SỐ CUỐI",
+     "v": "BỎ QUA",
+     "at": [
+      3,
+      "bỏ"
+     ]
+    },
+    {
+     "k": "SAI CHỮ SỐ LỚN",
+     "v": "SỬA",
+     "at": [
+      3,
+      "sửa"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "“BỆNH MÁY TÍNH”",
+   "sub": "FEYNMAN ĐẶT TÊN"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "NGƯỜI MẮC ĐẦU TIÊN: FRANKEL",
+     "at": 6,
+     "sm": true
+    },
+    {
+     "text": "BẢNG ARCTANG TỰ IN",
+     "at": 7,
+     "acc": true
+    },
+    {
+     "text": "bảng ấy đã có sẵn · một bảng vô ích",
+     "at": 8,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 10,
+   "dy": true,
+   "text": "Máy vui quá, nên người ta chơi với nó, và quên việc chính.",
+   "by": "RICHARD FEYNMAN · LOS ALAMOS FROM BELOW (FEYNMAN, 1976)",
+   "lbl": "DIỄN Ý",
+   "typeAt": [
+    10,
+    null,
+    0,
+    0.05
+   ],
+   "typeDur": 2.2
+  },
+  {
+   "type": "date",
+   "at": 12,
+   "day": "FRANKEL CHUYỂN NHÓM · FEYNMAN TRÔNG MÁY",
+   "date": "01.1945",
+   "sub": {
+    "text": "B. J. ARCHER · LA-UR-21-20164 (LANL)",
+    "at": 13
+   }
+  },
+  {
+   "type": "counter",
+   "at": 14,
+   "from": 0,
+   "to": 3,
+   "until": [
+    14,
+    "chín"
+   ],
+   "suffix": " BÀI",
+   "label": "TRONG CHÍN THÁNG · THEO FEYNMAN",
+   "sub": {
+    "text": "TIẾN ĐỘ RẤT CHẬM",
+    "at": 15
+   }
+  },
+  {
+   "type": "photo",
+   "at": 16,
+   "img": "fire25",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.6,
+   "kin": [
+    {
+     "text": "NHỚ CHỚP SÁNG Ở ĐẦU VIDEO?",
+     "at": 16,
+     "acc": true
+    },
+    {
+     "text": "con đường tới nó đang tắc ở đây",
+     "at": 17,
+     "sm": true
+    }
+   ],
+   "label": {
+    "k": "VỤ THỬ TRINITY · 25 PHẦN NGHÌN GIÂY",
+    "v": "ẢNH: CHÍNH PHỦ MỸ",
+    "at": 16
+   }
+  },
+  {
+   "type": "photo",
+   "at": 18,
+   "img": "sed",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.45,
+   "illus": "ẢNH ĐỘI SED NÓI CHUNG · KHÔNG RIÊNG NHÓM MÁY IBM",
+   "kin": [
+    {
+     "text": "CHỌN KHẮP NƯỚC · NĂNG KHIẾU KỸ THUẬT",
+     "at": 19,
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "ĐỘI KỸ SƯ ĐẶC BIỆT (SED) · LOS ALAMOS, 1945",
+    "v": "ẢNH: QUÂN ĐỘI MỸ",
+    "at": 18
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 20,
+   "items": [
+    {
+     "text": "ĐỤC LỖ NHỮNG CON SỐ",
+     "at": 20
+    },
+    {
+     "text": "KHÔNG AI NÓI LÀ SỐ GÌ",
+     "at": [
+      20,
+      "giải"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 22,
+   "text": "CHỖ TẮC THẬT",
+   "sub": "KHÔNG PHẢI Ở MÁY · THEO FEYNMAN"
+  },
+  {
+   "type": "ledger",
+   "at": 24,
+   "title": "BUỔI GIẢNG ĐƯỢC PHÉP",
+   "srcnote": "LOS ALAMOS FROM BELOW (FEYNMAN, 1976) · N. LEWIS · TRINITY BY THE NUMBERS (LANL)",
+   "rows": [
+    {
+     "k": "XIN PHÉP",
+     "v": "OPPENHEIMER",
+     "at": [
+      24,
+      "xin"
+     ]
+    },
+    {
+     "k": "NGƯỜI NGHE",
+     "v": "LÍNH VẬN HÀNH MÁY",
+     "at": [
+      24,
+      "giảng"
+     ]
+    },
+    {
+     "k": "ÁP SUẤT CAO HƠN",
+     "v": "NĂNG LƯỢNG NHIỀU HƠN",
+     "at": 26
+    }
+   ],
+   "total": {
+    "k": "NHÓM TÍNH TAY",
+    "v": "KHÔNG ĐƯỢC GIẢI THÍCH",
+    "at": 28
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 29,
+   "items": [
+    {
+     "text": "CON ĐƯỜNG RẼ NGOẶT Ở ĐÂY",
+     "at": 29,
+     "acc": true
+    },
+    {
+     "text": "những cậu lính tự nghĩ cách làm nhanh hơn",
+     "at": 30,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 06",
+  "t": "BA BÀI TRONG CHÍN THÁNG"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

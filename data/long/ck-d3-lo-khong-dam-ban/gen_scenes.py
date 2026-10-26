@@ -117,12 +117,12 @@ CH["ch06"] = {"hud": {"k": "GIỚI HẠN", "t": "KHI NÀO KHÔNG ĐÚNG VỚI B�
 
 Y2 = D2["youtube"]
 SPEC = {
-    "title": "Vì Sao Lỗ Rồi Lại Càng Không Dám Bán? Chiếc Cân Lệch Trong Đầu Người Đầu Tư",
+    "title": "Lỗ Rồi Càng Không Dám Bán: Vì Sao Lỗ Đau Gần Gấp Đôi Lãi?",
     "channel": "CK", "accent": "#fbbf24", "master": True, "endcard": 25, "endcardSub": "VIDEO TIẾP THEO", "beat2": True,
     "acc": ["lỗ", "lãi", "cân", "bán", "neo", "bờ", "đau"],
     "say": SAY, "imgs": {}, "chapters": [f"ch{i:02d}" for i in range(7)],
     "youtube": {
-        "titles": ["Vì Sao Lỗ Rồi Lại Càng Không Dám Bán? Chiếc Cân Lệch Trong Đầu Người Đầu Tư",
+        "titles": ["Lỗ Rồi Càng Không Dám Bán: Vì Sao Lỗ Đau Gần Gấp Đôi Lãi?",
                    "Lãi Thì Bán Ngay, Lỗ Thì Ôm Mãi: Nghiên Cứu Trên 10.000 Tài Khoản Nói Gì",
                    "Lỗ 40% Cần Lãi Bao Nhiêu Để Hoà Vốn? Bài Toán VN-Index Năm 2022"],
         "summary": "Hai cổ phiếu, một đang lãi 20%, một đang lỗ 20%, nhà cần tiền: bạn bán mã nào? Video đặt từng thứ lên “chiếc cân” trong đầu người đầu "

@@ -1,0 +1,274 @@
+{
+ "theme": "mim",
+ "title": "Chiếc mặt nạ trắng và nghiên cứu Gender Shades (2018) của Joy Buolamwini",
+ "description": "Theo lời Joy Buolamwini kể (nguồn: Wikipedia), ở MIT Media Lab, phần mềm nhận diện không phát hiện được mặt cô cho tới khi cô đeo mặt nạ trắng. Năm 2018, cùng Timnit Gebru, cô công bố Gender Shades (PMLR 81): ba hệ thống thương mại phân loại giới tính từ ảnh khuôn mặt; mức sai tệ nhất tới 34,7% với phụ nữ da sẫm màu và 0,8% với đàn ông da sáng màu. Đây là bài đoán giới tính, không phải nhận ra danh tính, và là mức tệ nhất trong ba hệ thống.\n\nGiọng đọc tổng hợp; video Pexels/Coverr minh hoạ, không phải cảnh thật của sự kiện.\nBản đầy đủ: https://youtu.be/7daMUBWG6mU",
+ "tags": [
+  "joy buolamwini",
+  "gender shades",
+  "timnit gebru",
+  "thiên kiến ai",
+  "nhận diện khuôn mặt",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "KHUÔN MẶT VÀ AI",
+ "sub": "GENDER SHADES · 2018",
+ "acc": [
+  "2018",
+  "mặt",
+  "nạ",
+  "đoán",
+  "số"
+ ],
+ "lines": [
+  "Máy chỉ thấy cô khi đeo mặt nạ trắng.",
+  "Theo lời Joy Buolamwini kể, ở MIT, phần mềm nhận diện không thấy mặt cô, trừ khi cô đeo mặt nạ trắng.",
+  "Rồi cô đo chuyện ấy bằng số liệu: năm 2018, cùng Timnit Gebru, cô công bố nghiên cứu Gender Shades.",
+  "Họ thử ba hệ thống thương mại đoán người trong ảnh là nam hay nữ.",
+  "Với đàn ông da sáng, mức sai tệ nhất chỉ không phẩy tám phần trăm.",
+  "Với phụ nữ da sẫm, mức sai tệ nhất lên tới ba mươi tư phẩy bảy phần trăm.",
+  "Đây là bài đoán giới tính, không phải nhận ra danh tính.",
+  "Chiếc mặt nạ trắng ấy đã thành một con số đo được."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "items": [
+    {
+     "text": "MẶT NẠ TRẮNG",
+     "at": [
+      0,
+      "mặt"
+     ],
+     "acc": true
+    },
+    {
+     "text": "máy mới thấy cô",
+     "at": [
+      0,
+      "Máy"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:32093831",
+   "veil": 0.55
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "THEO LỜI JOY BUOLAMWINI",
+   "nodes": [
+    {
+     "text": "MẶT CÔ",
+     "x": 0.25,
+     "y": 0.25,
+     "at": [
+      1,
+      "mặt"
+     ],
+     "w": 320
+    },
+    {
+     "text": "KHÔNG PHÁT HIỆN",
+     "x": 0.74,
+     "y": 0.25,
+     "at": [
+      1,
+      "không"
+     ],
+     "w": 440
+    },
+    {
+     "text": "ĐEO MẶT NẠ TRẮNG",
+     "x": 0.25,
+     "y": 0.72,
+     "at": [
+      1,
+      "đeo"
+     ],
+     "c": "acc",
+     "w": 440
+    },
+    {
+     "text": "PHÁT HIỆN",
+     "x": 0.74,
+     "y": 0.72,
+     "at": [
+      1,
+      "trắng"
+     ],
+     "c": "acc",
+     "w": 340
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      1,
+      "không"
+     ]
+    },
+    {
+     "from": 2,
+     "to": 3,
+     "at": [
+      1,
+      "trắng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    2,
+    "Rồi"
+   ],
+   "items": [
+    {
+     "text": "CÔ ĐO LẠI",
+     "at": [
+      2,
+      "Rồi"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bằng số liệu",
+     "at": [
+      2,
+      "bằng"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": [
+    2,
+    "năm"
+   ],
+   "date": "2018",
+   "day": "GENDER SHADES",
+   "sub": {
+    "text": "BUOLAMWINI · GEBRU",
+    "at": [
+     2,
+     "Timnit"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "BA HỆ THỐNG · ĐOÁN NAM HAY NỮ",
+   "cards": [
+    {
+     "k": "BA HỆ THỐNG",
+     "v": "THƯƠNG MẠI",
+     "at": [
+      3,
+      "ba"
+     ]
+    },
+    {
+     "k": "VIỆC DUY NHẤT",
+     "v": "NAM HAY NỮ?",
+     "at": [
+      3,
+      "đoán"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "MỨC SAI TỆ NHẤT · GENDER SHADES",
+   "rows": [
+    {
+     "k": "ĐÀN ÔNG DA SÁNG",
+     "v": "0,8%",
+     "at": [
+      4,
+      "không"
+     ]
+    },
+    {
+     "k": "PHỤ NỮ DA SẪM",
+     "v": "34,7%",
+     "at": [
+      5,
+      "ba"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "ĐOÁN GIỚI TÍNH",
+   "sub": "KHÔNG PHẢI NHẬN RA DANH TÍNH"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "MẶT NẠ TRẮNG",
+     "at": [
+      7,
+      "mặt"
+     ],
+     "acc": true
+    },
+    {
+     "text": "thành một con số",
+     "at": [
+      7,
+      "thành"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7688618",
+   "veil": 0.6
+  }
+ ],
+ "sources": [
+  "https://proceedings.mlr.press/v81/buolamwini18a.html (đã mở: 'up to 34.7%' phụ nữ da sẫm, 0,8% đàn ông da sáng, ba hệ thống thương mại phân loại giới tính)",
+  "https://en.wikipedia.org/wiki/Joy_Buolamwini (đã mở: MIT Media Lab, hệ thống không phát hiện mặt cô trừ khi đeo mặt nạ trắng; Wikipedia ghi chú có thể có phần chưa kiểm; đoạn mặt nạ không có chú thích; cần kiểm bài MIT Media Lab/TED trước khi dựng, nếu không có nguồn thì bỏ dòng 0-2 và dùng mở bằng 'Năm 2018')",
+  "Số 'tệ nhất trong ba hệ thống' theo script data/long/mim-ai-khuon-mat (CH06); không nêu tên công ty"
+ ],
+ "say": {
+  "buolamwini": "Bu-lam-guy-ni",
+  "joy": "Gioi",
+  "timnit": "Tim-nít",
+  "gebru": "Ghê-bru",
+  "gender": "Gen-đơ",
+  "shades": "Xây-đơ",
+  "mit": "em ai ti"
+ },
+ "rules": 2,
+ "mix": true,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.4
+  }
+ }
+}

@@ -1,0 +1,248 @@
+{
+ "title": "Trả góp xe hết ưu đãi: tháng 13 khoản trả nhảy thêm 1,7 triệu chỉ sau một tháng (ví dụ giả định)",
+ "description": "VÍ DỤ GIẢ ĐỊNH: vay 490 triệu mua xe (70% xe 700 triệu), 84 tháng, gốc chia đều ≈ 5,83 triệu/tháng. Lãi 8%/năm trong 12 tháng đầu (dải ưu đãi năm đầu phổ biến ≈ 7–9% theo báo chí 10/2026), từ tháng 13 giả định 13%/năm (trong dải ≈ 12–15% sau ưu đãi). Tháng 1 trả ≈ 9,10 triệu; tháng 12 ≈ 8,67 triệu; tháng 13 ≈ 10,38 triệu, tăng ≈ 1,71 triệu. Lãi thả nổi thường bằng lãi cơ sở của bên cho vay cộng một biên độ, ghi trong hợp đồng; lãi cơ sở có thể lên hoặc xuống.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ hoặc ví dụ giả định, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (9 phút): https://youtu.be/Bx9w_a_1YOI (công khai từ 20:00 ngày 11/11)",
+ "tags": [
+  "lãi vay mua xe",
+  "trả góp ô tô",
+  "lãi thả nổi",
+  "hết ưu đãi",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "mười",
+  "ba",
+  "nhảy",
+  "hợp",
+  "đồng"
+ ],
+ "kicker": "QUYẾT ĐỊNH LỚN",
+ "sub": "MUA XE · TRẢ GÓP",
+ "lines": [
+  "Tháng mười ba, khoản trả góp xe nhảy vọt.",
+  "Ví dụ giả định: vay bốn trăm chín mươi triệu, bảy năm, gốc đều, năm đầu lãi tám phần trăm.",
+  "Tháng đầu trả chín triệu một, tháng mười hai tám triệu bảy.",
+  "Từ tháng mười ba, lãi giả định mười ba phần trăm.",
+  "Khoản trả lên mười triệu bốn, thêm một triệu bảy.",
+  "Cú nhảy ấy có ghi trong hợp đồng: lãi thả nổi thường là lãi cơ sở cộng biên độ.",
+  "Dòng đáng đọc kỹ nhất, là dòng nói về lãi sau ưu đãi."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CÚ NHẢY THÁNG 13",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "trả góp xe · ví dụ giả định",
+     "at": [
+      0,
+      "trả"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6964001",
+   "veil": 0.58
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "ĐỀ BÀI · VÍ DỤ GIẢ ĐỊNH",
+   "nodes": [
+    {
+     "text": "VAY 490 TRIỆU",
+     "x": 0.5,
+     "y": 0.2,
+     "at": [
+      1,
+      "vay"
+     ]
+    },
+    {
+     "text": "7 NĂM · GỐC ĐỀU",
+     "x": 0.5,
+     "y": 0.5,
+     "at": [
+      1,
+      "năm"
+     ]
+    },
+    {
+     "text": "NĂM ĐẦU LÃI 8%",
+     "x": 0.5,
+     "y": 0.8,
+     "at": [
+      1,
+      "tám"
+     ],
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      1,
+      "năm"
+     ],
+     "bend": 0
+    },
+    {
+     "from": 1,
+     "to": 2,
+     "at": [
+      1,
+      "đầu"
+     ],
+     "bend": 0
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "at": 2,
+   "kind": "line",
+   "title": "KHOẢN TRẢ MỖI THÁNG",
+   "unit": "TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH · GỐC ĐỀU",
+   "points": [
+    {
+     "x": 1,
+     "v": 9.1,
+     "at": [
+      2,
+      "chín"
+     ],
+     "tag": "9,1",
+     "pos": "t"
+    },
+    {
+     "x": 12,
+     "v": 8.67,
+     "at": [
+      2,
+      "tám"
+     ],
+     "tag": "8,67",
+     "pos": "b",
+     "c": "ref"
+    },
+    {
+     "x": 13,
+     "v": 10.38,
+     "at": [
+      4,
+      "mười"
+     ],
+     "tag": "10,38 (+1,71)",
+     "pos": "l",
+     "c": "down"
+    }
+   ],
+   "ticks": [
+    {
+     "x": 1,
+     "label": "THÁNG 1"
+    },
+    {
+     "x": 12,
+     "label": "12"
+    },
+    {
+     "x": 13,
+     "label": "13"
+    }
+   ],
+   "grid": [
+    9,
+    10
+   ],
+   "badge": {
+    "text": "LÃI 8% → 13%",
+    "at": [
+     3,
+     "mười",
+     1
+    ],
+    "c": "down"
+   },
+   "note": "13% NẰM TRONG DẢI 12–15% SAU ƯU ĐÃI (BÁO CHÍ 10/2026)"
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "LÃI THẢ NỔI THƯỜNG LÀ",
+   "cards": [
+    {
+     "k": "LÃI CƠ SỞ",
+     "v": "CÓ THỂ ĐỔI",
+     "at": [
+      5,
+      "cơ"
+     ]
+    },
+    {
+     "k": "CỘNG",
+     "v": "BIÊN ĐỘ",
+     "at": [
+      5,
+      "biên"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "GHI TRONG HỢP ĐỒNG VAY"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "dòng đáng đọc kỹ nhất",
+     "at": [
+      6,
+      "dòng"
+     ],
+     "sm": true
+    },
+    {
+     "text": "LÃI SAU ƯU ĐÃI",
+     "at": [
+      6,
+      "lãi"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7643345",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  }
+ ],
+ "sources": [
+  "https://cafef.vn/khach-vay-mua-o-to-oan-minh-ganh-lai-suat-tha-noi-gan-20-188261008111845813.chn",
+  "https://youtu.be/Bx9w_a_1YOI"
+ ],
+ "theme": "ck",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "say": {},
+ "imgs": {},
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.2,
+   "3": 0.2,
+   "4": 0.3,
+   "5": 0.5
+  }
+ }
+}

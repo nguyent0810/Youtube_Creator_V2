@@ -430,12 +430,12 @@ CH["ch08"] = {"hud": {"k": "CHƯƠNG 08", "t": "NGƯỜI GÁC CỔNG"}, "bgm": {
 ]}
 
 SPEC = {
-    "title": "Vì Sao AI Bịa Mà Vẫn Rất Tự Tin? Sáu Vụ Án Không Hề Có Thật",
+    "title": "Luật Sư Nộp 6 Vụ Án Do ChatGPT Bịa: Vì Sao AI Tự Tin?",
     "channel": "MIM", "theme": "lab", "accent": "#22d3ee", "master": True, "endcard": 20, "autoTr": True, "endcardBg": "sdny",
     "acc": ["ai", "chatgpt", "varghese", "bịa", "ảo", "giác", "nguồn", "gác", "cổng", "đoán"],
     "say": SAY, "imgs": IMGS, "chapters": list(CH),
     "youtube": {
-        "titles": ["Vì Sao AI Bịa Mà Vẫn Rất Tự Tin? Sáu Vụ Án Không Hề Có Thật",
+        "titles": ["Luật Sư Nộp 6 Vụ Án Do ChatGPT Bịa: Vì Sao AI Tự Tin?",
                    "AI Bịa Ra 6 Vụ Án Rồi Khẳng Định Là Có Thật: Chuyện Gì Đang Xảy Ra Bên Trong?",
                    "Gần Nửa Câu Trả Lời Tin Tức Của Trợ Lý AI Có Lỗi Lớn: 3 Thói Quen Để Không Tin Nhầm"],
         "summary": "Năm 2023, một văn phòng luật ở New York nộp lên toà liên bang sáu án lệ không hề tồn tại; luật sư hỏi lại ChatGPT "

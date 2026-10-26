@@ -1,0 +1,288 @@
+{
+ "title": "Tăng lương bao nhiêu mới là tăng thật",
+ "lines": [
+  {
+   "t": "Có hai loại tăng lương.",
+   "p": 0.8
+  },
+  "Loại ghi trên phiếu lương, gọi là tăng danh nghĩa.",
+  {
+   "t": "Và loại bạn thật sự cảm thấy trong giỏ hàng, gọi là tăng thực.",
+   "p": 1.0
+  },
+  "Phép tính rất gọn.",
+  "Lấy lương mới chia cho lương cũ, rồi chia tiếp cho mức tăng của giá cả.",
+  {
+   "t": "Kết quả lớn hơn một, là bạn khá lên. Nhỏ hơn một, là bạn nghèo đi, dù lương có tăng.",
+   "p": 1.0
+  },
+  "Anh Tuấn: mười ba triệu so với mười triệu, rồi so với giá cả tăng ba mươi tám phần trăm.",
+  "Kết quả là khoảng âm năm phẩy tám phần trăm.",
+  {
+   "t": "Lương tăng ba phần mười, mà sức mua lại giảm gần sáu phần trăm.",
+   "p": 1.0
+  },
+  "Nghịch lý ở đầu video đã có lời giải.",
+  {
+   "t": "Anh không tưởng tượng. Anh thật sự mua được ít hơn.",
+   "p": 1.0
+  },
+  "Nói cách khác, tính theo giá năm hai nghìn không trăm mười sáu, mười ba triệu hôm nay chỉ bằng khoảng chín triệu bốn.",
+  {
+   "t": "Thấp hơn chính tháng lương đầu tiên của anh.",
+   "p": 1.0
+  },
+  {
+   "t": "Vậy phải bao nhiêu mới hoà?",
+   "ask": 1
+  },
+  "Khoảng mười ba triệu tám, là đứng yên.",
+  "Mười bốn triệu, khá lên được hơn một phần trăm.",
+  {
+   "t": "Mười lăm triệu, khá lên gần chín phần trăm.",
+   "p": 1.0
+  },
+  "Cùng phép tính ấy, áp cho từng năm.",
+  "Năm nay giá cả tăng khoảng bốn phẩy năm phần trăm.",
+  "Một lần tăng lương ba phần trăm, thật ra là giảm gần một phẩy năm phần trăm sức mua.",
+  "Tăng năm phần trăm, chỉ khá lên chưa tới nửa phần trăm.",
+  {
+   "t": "Phải tăng mười phần trăm, mới khá lên khoảng năm phần trăm.",
+   "p": 1.0
+  },
+  "Còn cả nước thì sao?",
+  "Lương tối thiểu vùng một năm hai nghìn không trăm mười sáu là ba triệu rưỡi.",
+  "Năm nay là năm triệu ba trăm mười nghìn.",
+  {
+   "t": "Tăng khoảng năm mươi hai phần trăm, nhanh hơn giá cả, nên sức mua thực tăng khoảng mười phần trăm sau mười năm.",
+   "p": 1.0
+  },
+  "Thu nhập bình quân của người lao động quý ba năm nay là khoảng chín triệu hai, cao hơn cùng kỳ năm ngoái gần mười phần trăm.",
+  {
+   "t": "Trừ đi mức tăng giá của tháng chín, phần tăng thực vào khoảng bốn phẩy rưỡi phần trăm.",
+   "p": 1.0
+  },
+  "Tức là bình quân, người lao động vẫn khá lên.",
+  "Nhưng bình quân là bình quân.",
+  "Và có những năm, giá cả chạy nhanh tới mức không mức tăng lương nào đuổi kịp."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "TĂNG LƯƠNG\nBAO NHIÊU MỚI LÀ THẬT",
+   "sub": "DANH NGHĨA · THỰC",
+   "vid": "5466766",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Có"
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 1,
+   "mythLab": "TĂNG DANH NGHĨA",
+   "myth": "GHI TRÊN PHIẾU LƯƠNG",
+   "truthLab": "TĂNG THỰC",
+   "truth": "CẢM THẤY TRONG GIỎ HÀNG",
+   "strikeAt": [
+    2,
+    "Và"
+   ],
+   "truthAt": [
+    2,
+    "tăng"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "LƯƠNG MỚI ÷ LƯƠNG CŨ ÷ (1 + LẠM PHÁT)",
+     "at": 4,
+     "acc": true
+    },
+    {
+     "text": "> 1: khá lên · < 1: nghèo đi",
+     "at": 5,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "from": 0,
+   "to": -5.8,
+   "suffix": "%",
+   "label": "SỨC MUA LƯƠNG ANH TUẤN · 2026 SO VỚI 2016",
+   "sub": {
+    "text": "13 ÷ 10 ÷ 1,38 · VÍ DỤ GIẢ ĐỊNH",
+    "at": 7
+   }
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "text": "+30% LƯƠNG · −6% SỨC MUA",
+   "sub": ""
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "NGHỊCH LÝ ĐÃ CÓ LỜI GIẢI",
+     "at": 9
+    },
+    {
+     "text": "13 TRIỆU HÔM NAY ≈ 9,4 TRIỆU GIÁ 2016",
+     "at": 11,
+     "acc": true
+    },
+    {
+     "text": "thấp hơn tháng lương đầu tiên",
+     "at": 12,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 13,
+   "title": "LƯƠNG 2026 · SỨC MUA SO VỚI 10 TR NĂM 2016",
+   "srcnote": "KÊNH TỰ TÍNH",
+   "rows": [
+    {
+     "k": "13 TRIỆU",
+     "v": "≈ −5,8%",
+     "at": [
+      13,
+      "Vậy"
+     ]
+    },
+    {
+     "k": "13,8 TRIỆU",
+     "v": "≈ 0 · ĐỨNG YÊN",
+     "at": 14
+    },
+    {
+     "k": "14 TRIỆU",
+     "v": "≈ +1,4%",
+     "at": 15
+    },
+    {
+     "k": "15 TRIỆU",
+     "v": "≈ +8,7%",
+     "at": 16
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 17,
+   "title": "TĂNG LƯƠNG KHI GIÁ TĂNG ≈ 4,5%",
+   "srcnote": "KÊNH TỰ TÍNH",
+   "rows": [
+    {
+     "k": "TĂNG 3%",
+     "v": "≈ −1,45% SỨC MUA",
+     "at": 19
+    },
+    {
+     "k": "TĂNG 5%",
+     "v": "≈ +0,46%",
+     "at": 20
+    },
+    {
+     "k": "TĂNG 10%",
+     "v": "≈ +5,2%",
+     "at": 21
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 22,
+   "title": "LƯƠNG TỐI THIỂU VÙNG I (TRIỆU/THÁNG)",
+   "unit": "NĐ 122/2015 · NĐ 293/2025",
+   "items": [
+    {
+     "k": "2016",
+     "v": 3.5,
+     "lbl": "3,5",
+     "at": 23
+    },
+    {
+     "k": "2026",
+     "v": 5.31,
+     "lbl": "5,31",
+     "at": 24,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 25,
+   "items": [
+    {
+     "text": "+52% DANH NGHĨA",
+     "at": 25,
+     "sm": true
+    },
+    {
+     "text": "≈ +10% SỨC MUA SAU 10 NĂM",
+     "at": [
+      25,
+      "nên"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 26,
+   "from": 9.2,
+   "to": 9.2,
+   "suffix": " TRIỆU",
+   "label": "THU NHẬP BÌNH QUÂN THÁNG · QUÝ III/2026",
+   "sub": {
+    "text": "+9,8% SO CÙNG KỲ · THỰC ≈ +4,5% · CỤC THỐNG KÊ",
+    "at": 27
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 28,
+   "items": [
+    {
+     "text": "BÌNH QUÂN VẪN KHÁ LÊN",
+     "at": 28
+    },
+    {
+     "text": "NHƯNG BÌNH QUÂN LÀ BÌNH QUÂN",
+     "at": 29,
+     "acc": true
+    },
+    {
+     "text": "có những năm giá chạy nhanh hơn mọi mức tăng lương",
+     "at": 30,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "TĂNG LƯƠNG BAO NHIÊU MỚI LÀ TĂNG THẬT"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

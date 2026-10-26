@@ -1,0 +1,176 @@
+{
+ "title": "Đèn báo thứ nhất",
+ "lines": [
+  "Ngày 20 tháng 7 năm 1969.",
+  "Con tàu đổ bộ Eagle đang hạ xuống Mặt Trăng.",
+  {
+   "t": "Động cơ hạ cánh vừa chạy được năm phút mười bảy giây.",
+   "p": 1.0
+  },
+  "Bỗng một đèn báo bật sáng trên bảng điều khiển.",
+  "Màn hình của chiếc máy tính hiện bốn chữ số: một, hai, không, hai.",
+  {
+   "t": "Mã 1202.",
+   "p": 1.0
+  },
+  "Con tàu vẫn còn cao hơn chín nghìn mét.",
+  "Còn hơn bảy phút nữa mới chạm đất.",
+  "Chỉ huy Neil Armstrong xin Houston cho biết đánh giá về báo động này.",
+  {
+   "t": "Houston trả lời chưa đầy một phút sau.",
+   "p": 1.0
+  },
+  {
+   "t": "Chúng tôi vẫn GO với báo động đó.",
+   "q": 1,
+   "tr": 1
+  },
+  "GO nghĩa là: cứ tiếp tục.",
+  "Nhưng đó chưa phải lần cuối.",
+  {
+   "t": "Đèn báo sẽ sáng thêm bốn lần nữa trước khi Eagle chạm đất.",
+   "p": 1.0
+  },
+  "Cả chuyến hạ cánh này được ghi trong hai cuốn nhật ký.",
+  "Cuốn thứ nhất của cỗ máy: mỗi lần kêu, nó đã tự làm gì.",
+  "Cuốn thứ hai của con người: mỗi lần kêu, ai trả lời, và dựa vào đâu.",
+  "Mình sẽ mở hai cuốn ấy cạnh nhau, rồi điền từng dòng.",
+  "Đến dòng cuối, bạn sẽ hiểu vì sao sau chuyến bay, NASA coi năm tiếng kêu này là bằng chứng máy chạy đúng."
+ ],
+ "scenes": [
+  {
+   "type": "date",
+   "bg": "lm",
+   "day": "EAGLE ĐANG HẠ XUỐNG MẶT TRĂNG",
+   "date": "20.07.1969",
+   "sub": {
+    "text": "ĐỘNG CƠ HẠ CÁNH MỞ MÁY · GET 102:33:05",
+    "at": 2
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "BÁO ĐỘNG CHƯƠNG TRÌNH THỨ NHẤT",
+   "srcnote": "NASA SP-238 · BẢNG 5-I",
+   "rows": [
+    {
+     "k": "GET",
+     "v": "102:38:22",
+     "at": 3
+    },
+    {
+     "k": "SAU KHI MỞ MÁY",
+     "v": "5 PHÚT 17 GIÂY",
+     "at": [
+      3,
+      "bỗng"
+     ]
+    },
+    {
+     "k": "MÃ",
+     "v": "1202",
+     "at": [
+      4,
+      "một"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "1202",
+   "sub": "MÃ BÁO ĐỘNG CỦA MÁY TÍNH DẪN ĐƯỜNG · CÒN HƠN 7 PHÚT NỮA MỚI CHẠM ĐẤT"
+  },
+  {
+   "type": "photo",
+   "at": 6,
+   "img": "lm",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.5,
+   "illus": "ẢNH MINH HỌA",
+   "kin": [
+    {
+     "text": "CÒN CAO HƠN 9.000 MÉT",
+     "at": 6,
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "EAGLE SAU KHI TÁCH KHỎI TÀU MẸ",
+    "v": "NASA · AS11-44-6584",
+    "at": 6
+   }
+  },
+  {
+   "type": "quote",
+   "at": 10,
+   "text": "We're GO on that alarm.",
+   "by": "HOUSTON · BẢN GHI KHÔNG-ĐỐI-ĐẤT KỸ THUẬT · APOLLO 11",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 10,
+   "typeAt": [
+    10,
+    "chúng"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "GO = CỨ TIẾP TỤC",
+     "at": 11,
+     "acc": true
+    },
+    {
+     "text": "đèn báo sẽ sáng thêm bốn lần nữa",
+     "at": [
+      13,
+      "đèn"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 14,
+   "title": "NHẬT KÝ HẠ CÁNH · HAI CỘT",
+   "srcnote": "KÊNH TỰ KẺ BẢNG · MỖI LẦN ĐÈN BÁO SÁNG, THÊM MỘT DÒNG",
+   "rows": [
+    {
+     "k": "MÁY",
+     "v": "MỖI LẦN KÊU, NÓ TỰ LÀM GÌ",
+     "at": [
+      15,
+      "cuốn"
+     ]
+    },
+    {
+     "k": "NGƯỜI",
+     "v": "AI TRẢ LỜI · DỰA VÀO ĐÂU",
+     "at": [
+      16,
+      "cuốn"
+     ]
+    }
+   ],
+   "total": {
+    "k": "DÒNG CUỐI",
+    "v": "VÌ SAO LÀ MÁY CHẠY ĐÚNG",
+    "at": 18
+   }
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "ĐÈN BÁO THỨ NHẤT"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

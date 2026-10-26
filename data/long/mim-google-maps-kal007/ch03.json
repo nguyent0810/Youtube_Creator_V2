@@ -1,0 +1,302 @@
+{
+ "title": "Lời hứa ngày 16 tháng 9",
+ "lines": [
+  {
+   "t": "Tám giờ tối ngày 5 tháng 9 năm 1983, Reagan lên sóng truyền hình toàn quốc từ Phòng Bầu Dục.",
+   "p": 0.8
+  },
+  "Ông gọi vụ bắn là một tội ác chống lại loài người.",
+  {
+   "t": "Rồi ông nói một câu về chiếc máy tính dẫn đường trên máy bay.",
+   "p": 1.0
+  },
+  {
+   "t": "Một chiếc máy tính phải đáp lại những gì bàn tay con người đưa vào.",
+   "q": 1,
+   "tr": 1
+  },
+  {
+   "t": "Sẽ không ai biết được là đã nhầm khi nhập đường bay cho máy, hay là máy trục trặc.",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Mười năm sau, hộp đen cho thấy máy không hề trục trặc.",
+  "Lỗi nằm ở cách dùng máy.",
+  "Mười một ngày sau bài phát biểu, ngày 16 tháng 9, Nhà Trắng ra một tuyên bố.",
+  "Người đọc nó không phải Reagan, mà là phó thư ký báo chí Larry Speakes, trong buổi họp báo trưa.",
+  "Tuyên bố viết rằng Tổng thống đã quyết định như sau.",
+  {
+   "t": "Hoa Kỳ sẵn sàng cho máy bay dân sự dùng các phương tiện của Hệ thống Định vị Toàn cầu, khi hệ thống đi vào hoạt động năm 1988.",
+   "q": 1,
+   "tr": 1
+  },
+  {
+   "t": "Hệ thống Định vị Toàn cầu ấy chính là GPS.",
+   "p": 1.0
+  },
+  "Hãy đọc kỹ câu ấy.",
+  "Nó nói về máy bay dân sự, không nói về điện thoại.",
+  "Nó không có chữ miễn phí.",
+  {
+   "t": "Và Reagan cũng không phát minh ra GPS.",
+   "p": 1.0
+  },
+  "Chương trình GPS được duyệt từ năm 1973.",
+  "Vệ tinh thử nghiệm đầu tiên được phóng ngày 22 tháng 2 năm 1978.",
+  "Năm 1983, hệ thống vẫn còn dang dở.",
+  "Lời hứa hẹn năm năm nữa.",
+  {
+   "t": "Thứ Reagan quyết định là mở một hệ thống quân sự cho máy bay chở dân thường.",
+   "p": 1.0
+  },
+  "Giờ thì bạn hiểu vì sao chấm xanh trên Google Maps lại dính tới một buổi sáng ở Sakhalin.",
+  "Nhưng lời hứa năm 1983 chưa làm chấm xanh ấy chính xác ngay.",
+  "Vì tín hiệu dành cho người dân sẽ bị cố ý làm nhoè."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "LỜI HỨA\nNGÀY 16 THÁNG 9",
+   "sub": "NHÀ TRẮNG · 1983",
+   "bg": "reagan_press",
+   "titleAt": [
+    0,
+    "tám"
+   ]
+  },
+  {
+   "type": "photo",
+   "at": [
+    0,
+    "lên"
+   ],
+   "img": "reagan_press",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.5,
+   "kin": [
+    {
+     "text": "05.09.1983 · 20:00",
+     "at": [
+      0,
+      "lên"
+     ]
+    },
+    {
+     "text": "TỘI ÁC CHỐNG LẠI LOÀI NGƯỜI",
+     "at": [
+      1,
+      "tội"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "PHÒNG BẦU DỤC · BÀI PHÁT BIỂU VỀ KAL 007",
+    "v": "WHITE HOUSE PHOTOGRAPHIC OFFICE",
+    "at": 0
+   }
+  },
+  {
+   "type": "quote",
+   "at": 3,
+   "text": "The 747 is equipped with the most modern computerized navigation facilities, but a computer must respond to input provided by human hands.",
+   "by": "RONALD REAGAN · DIỄN VĂN 05.09.1983 · AMERICAN PRESIDENCY PROJECT",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 3,
+   "typeAt": [
+    3,
+    "một"
+   ],
+   "typeDur": 3.0
+  },
+  {
+   "type": "quote",
+   "at": 4,
+   "text": "No one will ever know whether a mistake was made in giving the computer the course or whether there was a malfunction.",
+   "by": "RONALD REAGAN · DIỄN VĂN 05.09.1983",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 4,
+   "typeAt": [
+    4,
+    "sẽ"
+   ],
+   "typeDur": 2.8
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "MƯỜI NĂM SAU · HỘP ĐEN",
+     "at": 5,
+     "sm": true
+    },
+    {
+     "text": "KHÔNG TRỤC TRẶC",
+     "at": [
+      5,
+      "không"
+     ],
+     "acc": true
+    },
+    {
+     "text": "lỗi nằm ở cách dùng máy",
+     "at": 6,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": 7,
+   "img": "speakes",
+   "tone": "bw",
+   "side": {
+    "k": "16.09.1983 · HỌP BÁO 12:30",
+    "h": "Larry\nSpeakes",
+    "lines": [
+     {
+      "text": "*phó thư ký báo chí* Nhà Trắng",
+      "at": [
+       8,
+       "phó"
+      ]
+     },
+     {
+      "text": "đọc tuyên bố, *không phải* Reagan",
+      "at": [
+       8,
+       "không"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "quote",
+   "at": 10,
+   "text": "…the United States is prepared to make available to civilian aircraft the facilities of its Global Positioning System when it becomes operational in 1988.",
+   "by": "TUYÊN BỐ DO LARRY SPEAKES ĐỌC · 16.09.1983 · REAGAN LIBRARY",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 10,
+   "typeAt": [
+    10,
+    "hoa"
+   ],
+   "typeDur": 3.4
+  },
+  {
+   "type": "slam",
+   "at": 11,
+   "text": "GPS",
+   "sub": "HỆ THỐNG ĐỊNH VỊ TOÀN CẦU · GLOBAL POSITIONING SYSTEM"
+  },
+  {
+   "type": "ledger",
+   "at": 12,
+   "title": "ĐỌC KỸ CÂU ẤY",
+   "srcnote": "REAGAN LIBRARY · TUYÊN BỐ 16.09.1983",
+   "rows": [
+    {
+     "k": "DÀNH CHO",
+     "v": "MÁY BAY DÂN SỰ",
+     "at": 13
+    },
+    {
+     "k": "CHỮ “MIỄN PHÍ”",
+     "v": "KHÔNG CÓ",
+     "at": 14
+    },
+    {
+     "k": "REAGAN PHÁT MINH GPS?",
+     "v": "KHÔNG",
+     "at": 15
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 16,
+   "items": [
+    {
+     "year": "1973",
+     "text": "chương trình GPS *được duyệt*",
+     "at": 16
+    },
+    {
+     "year": "22.02.1978",
+     "text": "vệ tinh thử nghiệm *đầu tiên*",
+     "at": 17
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 18,
+   "img": "block1",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.5,
+   "kin": [
+    {
+     "text": "1983: HỆ THỐNG CÒN DANG DỞ",
+     "at": 18,
+     "acc": true
+    },
+    {
+     "text": "lời hứa hẹn mốc 1988",
+     "at": 19,
+     "sm": true
+    }
+   ],
+   "label": {
+    "k": "BẢN VẼ VỆ TINH GPS BLOCK I",
+    "v": "USAF · 1979",
+    "at": 18
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 20,
+   "items": [
+    {
+     "text": "MỞ MỘT HỆ THỐNG QUÂN SỰ",
+     "at": 20,
+     "acc": true
+    },
+    {
+     "text": "cho máy bay chở dân thường",
+     "at": [
+      20,
+      "cho"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 21,
+   "text": "CHẤM XANH",
+   "sub": "GOOGLE MAPS · MỘT BUỔI SÁNG Ở SAKHALIN · 1983",
+   "white": true
+  },
+  {
+   "type": "question",
+   "at": 22,
+   "text": "Vì sao chấm xanh\nchưa chính xác ngay?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "LỜI HỨA NGÀY 16 THÁNG 9"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

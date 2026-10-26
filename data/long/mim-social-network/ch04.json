@@ -1,0 +1,269 @@
+{
+ "title": "Những vai trò đầu tiên",
+ "lines": [
+  {
+   "t": "Một câu chuyện công nghệ thường bị kể như thể một người duy nhất tạo ra mọi phần việc.",
+   "p": 0.8
+  },
+  "Những hồ sơ đương thời cho thấy ít nhất các vai trò ban đầu đã đa dạng hơn cách kể ấy.",
+  "Hồ sơ Crimson năm 2005 gọi Eduardo Saverin là CFO của Facebook.",
+  "CFO là người phụ trách tài chính ở cấp lãnh đạo của một công ty.",
+  "Cùng hồ sơ gọi ông là nhà đầu tư sớm và người điều phối quảng cáo quốc gia lẫn địa phương trong giai đoạn đầu.",
+  "Theo chính Saverin trong hồ sơ này, Zuckerberg đã tiếp cận ông về TheFacebook trước khi lập trình trang.",
+  "Đó là điều Saverin kể về trình tự tiếp cận, không phải một lời giải thích cho toàn bộ quan hệ giữa hai người.",
+  "Crimson năm 2014 ghi Saverin không đi Palo Alto cùng nhóm vào tháng 6 năm 2004.",
+  "Cùng bài báo nói ông sau đó bị đẩy khỏi công ty.",
+  "Các dữ kiện này đủ để xác định một thay đổi vị trí trong câu chuyện doanh nghiệp.",
+  "Chúng không đủ để gán cho Saverin hay Zuckerberg một thái độ, động cơ hoặc mức độ trách nhiệm ngoài điều nguồn nói.",
+  "Sự thận trọng này không làm câu chuyện kém hấp dẫn.",
+  "Nó giữ cho ranh giới giữa hồ sơ và kịch tính không bị xóa bằng một lời kể quá chắc.",
+  "Trên bản đồ kết nối, ghim thứ năm là một vai trò: tài chính, quảng cáo và đầu tư sớm cũng là những đường nối tạo nên công ty.",
+  "Khi một đường nối thay đổi, điều ta biết chắc là mốc sự kiện, còn phần còn lại phải để nguồn nói đến đâu thì dừng ở đó."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "CHƯƠNG BỐN",
+   "title": "NHỮNG VAI TRÒ\nĐẦU TIÊN",
+   "sub": "2005 · TÀI CHÍNH · QUẢNG CÁO",
+   "bg": "hall",
+   "titleAt": [
+    0,
+    "câu"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    1,
+    "vai"
+   ],
+   "items": [
+    {
+     "text": "KHÔNG CHỈ MỘT NGƯỜI",
+     "at": [
+      1,
+      "vai"
+     ],
+     "acc": true
+    },
+    {
+     "text": "NHIỀU VAI TRÒ BAN ĐẦU",
+     "at": [
+      1,
+      "vai"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": [
+    2,
+    "eduardo"
+   ],
+   "img": "memorial24",
+   "tone": "bw",
+   "head": "HỒ SƠ CRIMSON",
+   "side": {
+    "k": "EDUARDO SAVERIN",
+    "h": "CFO CỦA FACEBOOK",
+    "lines": [
+     {
+      "text": "CFO CỦA FACEBOOK",
+      "at": [
+       2,
+       "eduardo"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "org",
+   "at": [
+    4,
+    "đầu"
+   ],
+   "nodes": [
+    {
+     "id": "capital",
+     "t": "ĐẦU TƯ SỚM",
+     "s": "TÀI CHÍNH",
+     "at": [
+      4,
+      "đầu"
+     ]
+    },
+    {
+     "id": "ads",
+     "t": "QUẢNG CÁO",
+     "s": "ĐIỀU PHỐI",
+     "p": "capital",
+     "at": [
+      4,
+      "đầu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": [
+    5,
+    "zuckerberg"
+   ],
+   "bg": "weld",
+   "items": [
+    {
+     "year": "TRƯỚC LẬP TRÌNH",
+     "text": "TIẾP CẬN SAVERIN"
+    },
+    {
+     "year": "06.2004",
+     "text": "NHÓM ĐI PALO ALTO"
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": [
+    6,
+    "trình"
+   ],
+   "vid": "5672679",
+   "veil": 0.62,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "KHUÔN VIÊN ĐẠI HỌC MINH HỌA · KHÔNG GẮN DANH TÍNH",
+     "at": [
+      6,
+      "trình"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": [
+    8,
+    "đẩy"
+   ],
+   "text": "THAY ĐỔI VỊ TRÍ",
+   "sub": "KHÔNG SUY ĐOÁN ĐỘNG CƠ"
+  },
+  {
+   "type": "photo",
+   "at": [
+    9,
+    "kiện"
+   ],
+   "img": "yard",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "ĐIỀU BIẾT CHẮC",
+    "v": "MỐC SỰ KIỆN CÓ NGUỒN",
+    "at": [
+     9,
+     "kiện"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    11,
+    "thận"
+   ],
+   "items": [
+    {
+     "text": "THẬN TRỌNG",
+     "at": [
+      11,
+      "thận"
+     ],
+     "acc": true
+    },
+    {
+     "text": "KHÔNG LÀM CÂU CHUYỆN NHẠT ĐI",
+     "at": [
+      11,
+      "thận"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": [
+    13,
+    "bản"
+   ],
+   "title": "BẢN ĐỒ KẾT NỐI",
+   "srcnote": "MỖI CHƯƠNG THÊM MỘT ĐƯỜNG",
+   "rows": [
+    {
+     "k": "MỞ ĐẦU",
+     "v": "SO CẶP ẢNH",
+     "at": [
+      13,
+      "bản"
+     ]
+    },
+    {
+     "k": "1 · QUY TẮC",
+     "v": "CỬA KỶ LUẬT",
+     "at": [
+      13,
+      "bản"
+     ]
+    },
+    {
+     "k": "2 · CỔNG VÀO",
+     "v": "EMAIL TRƯỜNG",
+     "at": [
+      13,
+      "bản"
+     ]
+    },
+    {
+     "k": "3 · MỞ RỘNG",
+     "v": "LỚP HỌC CHUNG",
+     "at": [
+      13,
+      "bản"
+     ]
+    },
+    {
+     "k": "4 · VAI TRÒ",
+     "v": "VỐN VÀ QUẢNG CÁO",
+     "at": [
+      13,
+      "bản"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": [
+    14,
+    "đường"
+   ],
+   "text": "KHI MỘT ĐƯỜNG NỐI ĐỔI,\nNGUỒN NÓI ĐẾN ĐÂU?"
+  }
+ ],
+ "topic": "mim-social-network",
+ "chapter": 4,
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "NHỮNG VAI TRÒ ĐẦU TIÊN"
+ }
+}

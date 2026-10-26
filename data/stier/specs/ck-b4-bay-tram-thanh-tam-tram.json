@@ -1,0 +1,194 @@
+{
+ "title": "Xe 700 triệu lăn bánh thành 800 triệu: 100 triệu lệ phí không mua thêm được miếng sắt nào (ví dụ Hà Nội)",
+ "description": "VÍ DỤ GIẢ ĐỊNH: xe 700 triệu đăng ký lần đầu ở Hà Nội; lệ phí trước bạ tính trên bảng giá do nhà nước quy định, ví dụ coi bằng giá xe. Lệ phí trước bạ ô tô chở người đến 9 chỗ: Hà Nội 12% = 84 triệu, nơi thu mức chung 10% = 70 triệu. Lệ phí cấp biển ở Hà Nội và TP.HCM 14 triệu từ 01/01/2026 (trước đó 20 triệu). Đăng kiểm và các khoản nhỏ khác giả định khoảng 2 triệu. Cộng 100 triệu ngoài giá xe → lăn bánh 800 triệu.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ hoặc ví dụ giả định, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (9 phút): https://youtu.be/Bx9w_a_1YOI (công khai từ 20:00 ngày 11/11)",
+ "tags": [
+  "lăn bánh ô tô",
+  "lệ phí trước bạ ô tô",
+  "phí biển số ô tô",
+  "mua xe",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "tám",
+  "trăm",
+  "tư",
+  "sắt",
+  "bán"
+ ],
+ "kicker": "QUYẾT ĐỊNH LỚN",
+ "sub": "MUA XE · LĂN BÁNH",
+ "lines": [
+  "Xe bảy trăm triệu, lăn bánh thành tám trăm.",
+  "Lớn nhất là lệ phí trước bạ: Hà Nội thu mười hai phần trăm.",
+  "Với xe ví dụ là tám mươi tư triệu; nơi thu mười phần trăm, bảy mươi triệu.",
+  "Rồi lệ phí cấp biển ở Hà Nội, từ đầu năm nay, mười bốn triệu.",
+  "Thêm vài khoản nhỏ như đăng kiểm, ví dụ giả định hai triệu.",
+  "Một trăm triệu ấy không mua thêm được miếng sắt nào.",
+  "Và khi bán lại, người mua sau cũng không trả lại bạn khoản đó."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "700 → 800 TRIỆU",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "xe ví dụ · lăn bánh ở Hà Nội",
+     "at": [
+      0,
+      "lăn"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7154236",
+   "veil": 0.58
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "LỆ PHÍ TRƯỚC BẠ",
+   "nodes": [
+    {
+     "text": "XE 700 TRIỆU",
+     "x": 0.5,
+     "y": 0.2,
+     "at": 1
+    },
+    {
+     "text": "84 TRIỆU",
+     "x": 0.26,
+     "y": 0.74,
+     "at": [
+      2,
+      "tám"
+     ],
+     "c": "acc"
+    },
+    {
+     "text": "70 TRIỆU",
+     "x": 0.74,
+     "y": 0.74,
+     "at": [
+      2,
+      "bảy"
+     ]
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      1,
+      "mười"
+     ],
+     "label": "HÀ NỘI 12%",
+     "c": "acc"
+    },
+    {
+     "from": 0,
+     "to": 2,
+     "at": [
+      2,
+      "nơi"
+     ],
+     "label": "MỨC CHUNG 10%"
+    }
+   ],
+   "note": "VÍ DỤ GIẢ ĐỊNH · GIÁ TÍNH LỆ PHÍ = GIÁ XE"
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "NGOÀI GIÁ XE · HÀ NỘI",
+   "rows": [
+    {
+     "k": "LỆ PHÍ TRƯỚC BẠ 12%",
+     "v": "84 TR",
+     "at": 3
+    },
+    {
+     "k": "CẤP BIỂN (TỪ 01/01/2026)",
+     "v": "14 TR",
+     "at": [
+      3,
+      "mười"
+     ]
+    },
+    {
+     "k": "ĐĂNG KIỂM, KHÁC (GIẢ ĐỊNH)",
+     "v": "≈ 2 TR",
+     "at": [
+      4,
+      "hai"
+     ]
+    }
+   ],
+   "total": {
+    "k": "CỘNG",
+    "v": "100 TR",
+    "at": [
+     5,
+     "trăm"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    5,
+    "không"
+   ],
+   "items": [
+    {
+     "text": "không mua thêm miếng sắt nào",
+     "at": [
+      5,
+      "không"
+     ],
+     "sm": true
+    },
+    {
+     "text": "BÁN LẠI: KHÔNG AI TRẢ",
+     "at": [
+      6,
+      "bán"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7154241",
+   "ms": 2,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  }
+ ],
+ "sources": [
+  "https://tienphong.vn/xe/634815/Ha-Noi-Phi-truoc-ba-oto-chinh-thuc-con-12-tpol.html",
+  "https://thoibaotaichinhvietnam.vn/le-phi-dang-ky-o-to-tai-ha-noi-tp-ho-chi-minh-giam-con-14-trieu-dong-190073.html",
+  "https://youtu.be/Bx9w_a_1YOI"
+ ],
+ "theme": "ck",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "say": {},
+ "imgs": {},
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.3,
+   "3": 0.22,
+   "4": 0.3,
+   "5": 0.5
+  }
+ }
+}

@@ -1,0 +1,183 @@
+{
+ "theme": "mim",
+ "title": "Với máy, khuôn mặt bạn là 128 con số: nó lưu và so sánh thế nào?",
+ "description": "Hệ thống FaceNet của Google (bài báo CVPR 2015) biến mỗi khuôn mặt thành một dãy 128 con số, tức một điểm trong không gian 128 chiều. Hai ảnh của cùng một người được dạy để rơi vào hai điểm gần nhau, ảnh của hai người khác nhau thì xa nhau. Nhưng chẳng ai biết chính xác từng con số trong 128 con số ấy đo cái gì.\n\nGiọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\nBản đầy đủ (khoảng 10 phút): https://youtu.be/7daMUBWG6mU (công khai từ 20:00 ngày 30/11).",
+ "tags": [
+  "nhận diện khuôn mặt",
+  "facenet",
+  "128 con số",
+  "ai nhận ra khuôn mặt",
+  "mạng nơ-ron",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "FACENET · GOOGLE",
+ "acc": [
+  "dãy",
+  "trăm",
+  "điểm",
+  "chẳng"
+ ],
+ "kicker": "KHUÔN MẶT VÀ AI",
+ "lines": [
+  "Với máy, mặt bạn là một dãy số.",
+  "Không phải ảnh, không phải nụ cười, mà là một trăm hai mươi tám con số.",
+  "Hệ thống FaceNet của Google biểu diễn khuôn mặt như thế.",
+  "Hai ảnh của cùng một người, rơi vào hai điểm gần nhau.",
+  "Hai người khác nhau, rơi vào hai điểm xa nhau.",
+  "Nhưng chẳng ai biết chính xác, từng con số ấy đo cái gì.",
+  "Với máy, mặt bạn chỉ là một điểm, trong không gian một trăm hai mươi tám chiều."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MẶT BẠN, VỚI MÁY",
+     "at": 0.0
+    },
+    {
+     "text": "là một dãy số",
+     "at": [
+      0,
+      "là"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7299417",
+   "veil": 0.55,
+   "ms": 2
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 0,
+   "to": 128,
+   "suffix": " CON SỐ",
+   "label": "MỘT KHUÔN MẶT TRONG HỆ THỐNG FACENET",
+   "until": [
+    1,
+    "tám"
+   ],
+   "sub": {
+    "text": "BÀI BÁO CVPR 2015 · GOOGLE",
+    "at": [
+     2,
+     "Hệ"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "MỖI KHUÔN MẶT LÀ MỘT ĐIỂM",
+   "nodes": [
+    {
+     "text": "NGƯỜI A · ẢNH 1",
+     "x": 0.27,
+     "y": 0.22,
+     "at": [
+      3,
+      "cùng"
+     ],
+     "w": 420
+    },
+    {
+     "text": "NGƯỜI A · ẢNH 2",
+     "x": 0.73,
+     "y": 0.22,
+     "at": [
+      3,
+      "người"
+     ],
+     "w": 420,
+     "c": "acc"
+    },
+    {
+     "text": "NGƯỜI B",
+     "x": 0.5,
+     "y": 0.8,
+     "at": [
+      4,
+      "khác"
+     ],
+     "w": 360
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      3,
+      "gần"
+     ],
+     "label": "GẦN",
+     "c": "acc",
+     "bend": 0
+    },
+    {
+     "from": 0,
+     "to": 2,
+     "at": [
+      4,
+      "xa"
+     ],
+     "label": "XA"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "AI ĐO CÁI GÌ?",
+   "sub": "CHẲNG AI BIẾT CHÍNH XÁC"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MỘT ĐIỂM",
+     "at": 6
+    },
+    {
+     "text": "trong không gian 128 chiều",
+     "at": [
+      6,
+      "trong"
+     ],
+     "sm": true
+    }
+   ],
+   "at": 6,
+   "clip": "pexels:5545115",
+   "ms": 3,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  }
+ ],
+ "sources": [
+  "https://arxiv.org/abs/1503.03832"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "imgs": {},
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "FaceNet": "Phây-nét",
+  "Google": "Gu-gồ"
+ }
+}

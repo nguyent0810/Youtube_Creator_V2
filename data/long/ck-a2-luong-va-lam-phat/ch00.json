@@ -1,0 +1,234 @@
+{
+ "title": "Phong bì mười triệu",
+ "lines": [
+  "Tháng mười năm hai nghìn không trăm mười sáu, anh Tuấn nhận tháng lương đầu tiên ở Hà Nội.",
+  {
+   "t": "Mười triệu đồng. Một nhân vật ví dụ, nhưng con số thì rất quen.",
+   "p": 1.0
+  },
+  "Anh nhớ cảm giác cầm số tiền ấy.",
+  "Trả tiền phòng, gửi về nhà một ít, cuối tháng vẫn còn dư.",
+  {
+   "t": "Mười năm sau, tháng mười năm nay, phiếu lương của anh ghi mười ba triệu.",
+   "p": 1.0
+  },
+  "Tăng ba phần mười.",
+  "Vậy mà anh lại thấy mình chật vật hơn năm ấy.",
+  {
+   "t": "Tiền phòng tăng, đổ xăng đắt hơn, bữa trưa ngoài quán cũng không còn giá cũ.",
+   "p": 1.0
+  },
+  "Cuối tháng, anh không còn dư như trước.",
+  {
+   "t": "Anh tự hỏi mình tiêu hoang hơn, hay có điều gì đó khác đã thay đổi.",
+   "p": 1.0
+  },
+  {
+   "t": "Lương tăng mà sao lại thấy nghèo đi?",
+   "ask": 1
+  },
+  "Đây là một nghịch lý mà rất nhiều người đi làm cảm thấy, nhưng ít ai đo được.",
+  "Lương gần như năm nào cũng tăng một chút.",
+  {
+   "t": "Vậy mà nhiều người thấy năm nay khó hơn năm trước.",
+   "p": 1.0
+  },
+  "Video này đi tìm thứ nằm giữa hai cảm giác ấy.",
+  "Nó có tên, có số đo, và có thể tính được bằng một phép chia.",
+  "Cuối video, bạn sẽ có ba con số của riêng mình, kể cả con số cho năm hai nghìn không trăm ba mươi sáu.",
+  "Đây là Biểu Đồ Biết Nói. Tiền bạc, giải thích bằng dữ liệu.",
+  "Video chỉ nhằm giáo dục, không dự báo giá cả, và không phải lời khuyên đầu tư."
+ ],
+ "scenes": [
+  {
+   "type": "broll",
+   "vid": "11321634",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "THÁNG 10/2016 · HÀ NỘI",
+     "at": [
+      0,
+      "Tháng"
+     ],
+     "sm": true
+    },
+    {
+     "text": "THÁNG LƯƠNG ĐẦU TIÊN: 10 TRIỆU",
+     "at": [
+      1,
+      "Mười"
+     ],
+     "acc": true
+    },
+    {
+     "text": "anh Tuấn · nhân vật ví dụ",
+     "at": [
+      1,
+      "Một"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "TIỀN PHÒNG · GỬI VỀ NHÀ",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "CUỐI THÁNG VẪN CÒN DƯ",
+     "at": [
+      3,
+      "cuối"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 4,
+   "title": "LƯƠNG CỦA ANH TUẤN (TRIỆU ĐỒNG/THÁNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "THÁNG 10/2016",
+     "v": 10,
+     "lbl": "10",
+     "at": [
+      4,
+      "Mười"
+     ]
+    },
+    {
+     "k": "THÁNG 10/2026",
+     "v": 13,
+     "lbl": "13",
+     "at": [
+      4,
+      "mười",
+      1
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "+30%",
+   "sub": "VẬY MÀ CHẬT VẬT HƠN"
+  },
+  {
+   "type": "broll",
+   "at": 7,
+   "vid": "11099870",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "TIỀN PHÒNG · XĂNG · BỮA TRƯA NGOÀI QUÁN",
+     "at": 7,
+     "sm": true
+    },
+    {
+     "text": "CUỐI THÁNG KHÔNG CÒN DƯ",
+     "at": 8,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 10,
+   "text": "Lương tăng mà sao\nlại thấy nghèo đi?"
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "NGHỊCH LÝ",
+     "at": 11,
+     "acc": true
+    },
+    {
+     "text": "lương gần như năm nào cũng tăng",
+     "at": 12,
+     "sm": true
+    },
+    {
+     "text": "vậy mà năm nay khó hơn năm trước",
+     "at": 13,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 14,
+   "title": "THỨ NẰM GIỮA HAI CẢM GIÁC ẤY",
+   "rows": [
+    {
+     "k": "CÓ",
+     "v": "TÊN · SỐ ĐO",
+     "at": [
+      15,
+      "Nó"
+     ]
+    },
+    {
+     "k": "TÍNH BẰNG",
+     "v": "MỘT PHÉP CHIA",
+     "at": [
+      15,
+      "phép"
+     ]
+    }
+   ],
+   "total": {
+    "k": "CUỐI VIDEO",
+    "v": "3 CON SỐ CỦA BẠN · 2036",
+    "at": 16
+   }
+  },
+  {
+   "type": "brand",
+   "at": 17,
+   "sub": "TIỀN BẠC · GIẢI THÍCH BẰNG DỮ LIỆU"
+  },
+  {
+   "type": "kinetic",
+   "at": 18,
+   "items": [
+    {
+     "text": "CHỈ NHẰM GIÁO DỤC",
+     "at": 18,
+     "acc": true
+    },
+    {
+     "text": "không dự báo giá cả · không phải lời khuyên đầu tư",
+     "at": [
+      18,
+      "không"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "PHONG BÌ MƯỜI TRIỆU"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.1
+ }
+}

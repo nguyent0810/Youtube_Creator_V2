@@ -1,0 +1,223 @@
+{
+ "title": "Dòng cuối của hai cuốn nhật ký",
+ "lines": [
+  {
+   "t": "Vậy điều gì đã đổi sau đó?",
+   "p": 0.8
+  },
+  "NASA sửa hai thứ.",
+  "Một là danh sách việc của phi hành đoàn.",
+  {
+   "t": "Khi cất cánh khỏi Mặt Trăng, radar hẹn gặp được tắt hẳn, để chuyện cũ không lặp lại.",
+   "p": 1.0
+  },
+  "Hai là chính phần mềm.",
+  {
+   "t": "Từ bản sau, máy bỏ qua những xung vô nghĩa ấy, và đòi ít thời gian hơn khi phi hành đoàn xem số liệu.",
+   "p": 1.0
+  },
+  "Chuyến Apollo 12, phóng tháng 11 năm 1969, có báo cáo ghi một câu rất ngắn: không có báo động nào trong lúc hạ cánh.",
+  {
+   "t": "Các cải tiến sau Apollo 11 đã có tác dụng.",
+   "p": 1.0
+  },
+  "Đến Apollo 14, chuyện khác lại xảy ra.",
+  "Trước giờ hạ cánh, máy bốn lần cảm nhận tín hiệu của công tắc huỷ nhiệm vụ.",
+  "Người ta soạn một quy trình, nạp bằng tay vào máy, để máy bỏ qua tín hiệu ấy.",
+  {
+   "t": "Theo một kỹ sư MIT kể lại, người nghĩ ra cách vá đó là Don Eyles.",
+   "p": 1.0
+  },
+  {
+   "t": "Sử gia NASA James Tomayko viết rằng, từ chuyến hạ cánh này, tư duy cho máy tự hồi phục khi gặp lỗi đã thấm vào mọi phần mềm bay có người lái về sau.",
+   "p": 1.0
+  },
+  "Giờ khép hai cuốn nhật ký lại.",
+  "Cuốn của máy: năm lần kêu, năm lần tự khởi động, năm lần giữ lại việc quan trọng.",
+  {
+   "t": "Cuốn của người: năm lần báo động, năm lần quyết định vẫn là tiếp tục, dựa trên một quy tắc viết từ trước và hai người hiểu cách máy làm việc.",
+   "p": 1.0
+  },
+  "Chiếc máy ấy không cần chạy hoàn hảo.",
+  {
+   "t": "Nó chỉ cần biết đứng dậy đúng cách khi hụt hơi.",
+   "p": 1.0
+  },
+  "Lần tới một thiết bị của bạn báo động, bạn muốn nó dừng hẳn, hay tự đứng dậy làm tiếp?",
+  "Kể mình nghe ở phần bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "CHƯƠNG SÁU",
+   "title": "DÒNG CUỐI CỦA\nHAI CUỐN NHẬT KÝ",
+   "sub": "SAU APOLLO 11",
+   "bg": "mcc",
+   "titleAt": [
+    0,
+    "Vậy"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "NASA SỬA HAI THỨ",
+   "srcnote": "NASA SP-238 · MỤC 13 VÀ 16",
+   "rows": [
+    {
+     "k": "1",
+     "v": "TẮT HẲN RADAR HẸN GẶP",
+     "at": 2
+    },
+    {
+     "k": "2",
+     "v": "BỎ XUNG VÔ NGHĨA",
+     "at": 4
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 6,
+   "title": "BÁO ĐỘNG LÚC HẠ CÁNH",
+   "unit": "SP-238 · BÁO CÁO APOLLO 12 (MSC-01855)",
+   "max": 6,
+   "items": [
+    {
+     "k": "APOLLO 11",
+     "v": 5,
+     "lbl": "5",
+     "at": 6
+    },
+    {
+     "k": "APOLLO 12",
+     "v": 0,
+     "lbl": "0",
+     "at": [
+      6,
+      "không"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "CẢI TIẾN CÓ TÁC DỤNG",
+     "at": 7,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 8,
+   "title": "APOLLO 14 · CÔNG TẮC HUỶ NHIỆM VỤ",
+   "srcnote": "BÁO CÁO 5 NGÀY APOLLO 14 (NTRS 19710027929) · TÊN NGƯỜI VÁ: HỒI KÝ MỘT KỸ SƯ MIT",
+   "rows": [
+    {
+     "k": "TRƯỚC HẠ",
+     "v": "4 LẦN NHẬN TÍN HIỆU “HUỶ”",
+     "at": 9
+    },
+    {
+     "k": "CÁCH XỬ LÝ",
+     "v": "NẠP TAY · MÁY BỎ QUA TÍN HIỆU",
+     "at": 10
+    },
+    {
+     "k": "NGƯỜI NGHĨ RA",
+     "v": "DON EYLES · THEO HỒI KÝ",
+     "at": 11
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 12,
+   "text": "…a philosophy that has appeared deeply embedded in all NASA manned spaceflight software since then.",
+   "by": "J. E. TOMAYKO · NASA CR-182505 · 1988",
+   "lbl": "TRÍCH",
+   "typeAt": [
+    12,
+    null,
+    0,
+    0.05
+   ],
+   "typeDur": 2.6
+  },
+  {
+   "type": "ledger",
+   "at": 13,
+   "title": "HAI CUỐN NHẬT KÝ · DÒNG CUỐI",
+   "srcnote": "KÊNH TỰ KẺ BẢNG TỪ NASA SP-238",
+   "rows": [
+    {
+     "k": "MÁY",
+     "v": "5 LẦN KÊU · 5 LẦN TỰ KHỞI ĐỘNG LẠI",
+     "at": 14
+    },
+    {
+     "k": "NGƯỜI",
+     "v": "5 LẦN QUYẾT ĐỊNH VẪN LÀ TIẾP TỤC",
+     "at": 15
+    }
+   ],
+   "total": {
+    "k": "KẾT QUẢ",
+    "v": "HẠ CÁNH · GET 102:45:40",
+    "at": 15
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "items": [
+    {
+     "text": "KHÔNG CẦN CHẠY HOÀN HẢO",
+     "at": 16
+    },
+    {
+     "text": "BIẾT ĐỨNG DẬY ĐÚNG CÁCH",
+     "at": 17,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 18,
+   "text": "Thiết bị của bạn báo động:\ndừng hẳn, hay tự đứng dậy làm tiếp?"
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "items": [
+    {
+     "text": "KỂ CHO MÌNH NGHE",
+     "at": 19
+    },
+    {
+     "text": "Ở PHẦN BÌNH LUẬN",
+     "at": [
+      19,
+      "ở"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 06",
+  "t": "DÒNG CUỐI CỦA HAI CUỐN NHẬT KÝ"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

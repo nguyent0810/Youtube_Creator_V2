@@ -1,0 +1,246 @@
+{
+ "theme": "mim",
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "rules": 2,
+ "mix": true,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "title": "Một cao thủ poker, ba cỗ máy, bốn năm: chuyện của Jason Les (2015–2019)",
+ "description": "Jason Les là một trong bốn cao thủ đấu Claudico (Pittsburgh, 2015): cả nhóm hơn máy 732.713 phỉnh nhưng chỉ là hòa về thống kê, riêng Les kém máy 80.482 phỉnh. Tháng 1/2017 anh đấu Libratus và thua 880.087 phỉnh, nhiều nhất trong bốn người. Tháng 7/2019, khi nghiên cứu Pluribus công bố, anh là một trong các cao thủ đã đấu với nó và nhận xét Pluribus là một \"quái vật tố bịp\". Phỉnh là đơn vị tính điểm, không phải tiền thật. Nguồn: CMU News 05/2015; Wikipedia (Libratus); Meta AI blog 11/07/2019.\n\nVideo nói về nghiên cứu trí tuệ nhân tạo; không hướng dẫn chơi bài, không cổ vũ cờ bạc. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/Mz0HwBBSBbg (công khai từ 20:00 ngày 26/11).",
+ "tags": [
+  "jason les",
+  "claudico",
+  "libratus",
+  "pluribus",
+  "poker",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "JASON LES · 2015–2019",
+ "acc": [
+  "ba",
+  "máy",
+  "người"
+ ],
+ "lines": [
+  "Một cao thủ poker, ba cỗ máy, bốn năm.",
+  "Năm hai nghìn mười lăm, ở Pittsburgh, Jason Les cùng ba người nữa đấu với Claudico.",
+  "Cả nhóm hơn máy bảy trăm ba mươi nghìn phỉnh, nhưng chỉ là hòa thống kê.",
+  "Riêng Les là người duy nhất đứng sau máy.",
+  "Năm hai nghìn mười bảy, anh quay lại và gặp Libratus.",
+  "Lần này anh thua nặng nhất trong bốn người, hơn tám trăm tám mươi nghìn phỉnh.",
+  "Năm hai nghìn mười chín, Pluribus công bố, và Les là một trong các cao thủ đã đấu với nó.",
+  "Anh nói: nó là một con quái vật tố bịp.",
+  "Ba cỗ máy, bốn năm, và cả ba lần Les đều ngồi ở phía loài người."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "clip": "pexels:36415776",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "BA CỖ MÁY",
+     "at": [
+      0,
+      "ba"
+     ],
+     "acc": true
+    },
+    {
+     "text": "một cao thủ · bốn năm",
+     "at": [
+      0,
+      "Một"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "2015",
+   "day": "PITTSBURGH",
+   "sub": {
+    "text": "JASON LES · CLAUDICO",
+    "at": [
+     1,
+     "Jason"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "CLAUDICO · 2015",
+   "cards": [
+    {
+     "k": "CẢ NHÓM",
+     "v": "HƠN MÁY 732.713 PHỈNH",
+     "at": [
+      2,
+      "hơn"
+     ]
+    },
+    {
+     "k": "KẾT LUẬN",
+     "v": "HÒA THỐNG KÊ",
+     "at": [
+      2,
+      "hòa"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "CLAUDICO 2015 · SO VỚI MÁY",
+   "rows": [
+    {
+     "k": "BA NGƯỜI KIA",
+     "v": "ĐỀU HƠN",
+     "at": [
+      3,
+      "người"
+     ]
+    },
+    {
+     "k": "JASON LES",
+     "v": "−80.482",
+     "at": [
+      3,
+      "đứng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "clip": "pexels:8751465",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "2017",
+     "at": [
+      4,
+      "Năm"
+     ],
+     "acc": true,
+     "size": 300
+    },
+    {
+     "text": "LIBRATUS · ANH QUAY LẠI",
+     "at": [
+      4,
+      "quay"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "to": 880,
+   "suffix": " NGHÌN PHỈNH",
+   "label": "JASON LES · LIBRATUS 2017 · NHIỀU NHẤT TRONG BỐN NGƯỜI",
+   "until": [
+    5,
+    "nghìn"
+   ]
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "PLURIBUS · 2019",
+   "nodes": [
+    {
+     "text": "bài báo công bố tháng 7",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      6,
+      "Pluribus"
+     ],
+     "shape": "none",
+     "w": 760
+    },
+    {
+     "text": "Les: một trong các cao thủ",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "Les"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 760
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "QUÁI VẬT TỐ BỊP",
+   "sub": "JASON LES NÓI VỀ PLURIBUS"
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "clip": "pexels:6650584",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "PHÍA LOÀI NGƯỜI",
+     "at": [
+      8,
+      "phía"
+     ],
+     "acc": true
+    },
+    {
+     "text": "cả ba lần",
+     "at": [
+      8,
+      "cả"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://www.cmu.edu/news/stories/archives/2015/may/poker-pros-rake-in-more-chips.html (05/2015; qua tìm kiếm: bốn cao thủ hơn Claudico 732.713 phỉnh = hòa thống kê; Li +529.033, Polk +213.671, Kim +70.491, Les -80.482)",
+  "https://en.wikipedia.org/wiki/Libratus (bảng kết quả: Kim -85.649, McAulay -277.657, Chou -522.857, Les -880.087; tổng -1.766.250)",
+  "https://ai.meta.com/blog/pluribus-first-ai-to-beat-pros-in-6-player-poker/ (11/07/2019: Jason Les trong danh sách cao thủ; 'It is an absolute monster bluffer')",
+  "data/long/mim-may-thang-poker/script.md CH05, CH09 (Claudico 2015, Libratus 2017)"
+ ],
+ "say": {
+  "jason": "Giây-sần",
+  "les": "Lét",
+  "claudico": "Cờ-lau-đi-cô",
+  "libratus": "Li-bra-tớt",
+  "pluribus": "Plu-ri-bớt",
+  "pittsburgh": "Pít-xbơ-gờ",
+  "poker": "pô-ke"
+ },
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.3,
+   "4": 0.22,
+   "5": 0.3,
+   "6": 0.22,
+   "7": 0.5
+  }
+ }
+}

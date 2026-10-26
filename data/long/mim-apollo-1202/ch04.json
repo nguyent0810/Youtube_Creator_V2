@@ -1,0 +1,356 @@
+{
+ "title": "Thủ phạm là một cái radar đang không có việc",
+ "lines": [
+  {
+   "t": "Con radar này sinh ra để giúp tàu hẹn gặp lại tàu mẹ.",
+   "p": 0.8
+  },
+  "Lúc hạ cánh, tín hiệu của nó hoàn toàn vô nghĩa.",
+  {
+   "t": "Vậy mà nó vẫn làm máy tính chạy hụt hơi.",
+   "p": 1.0
+  },
+  "Thủ phạm là một sai lệch rất nhỏ về điện.",
+  "Hai nguồn điện xoay chiều tám trăm hertz, một ở bộ điều khiển tàu và một ở hệ dẫn đường, cùng tần số nhưng lệch pha.",
+  "Bộ đổi tín hiệu của radar nhận ra như thể ăng-ten đang đổi góc không ngừng.",
+  {
+   "t": "Nó cứ thế gửi xung vào máy tính.",
+   "p": 1.0
+  },
+  "Mỗi xung chiếm đúng một nhịp nhớ của máy: mười một phẩy bảy phần triệu giây.",
+  "Hai bộ đổi gửi tối đa mười hai nghìn tám trăm xung mỗi giây.",
+  {
+   "t": "Nhân lên, ra khoảng mười lăm phần trăm thời gian của máy.",
+   "p": 1.0
+  },
+  "Khi thử phần mềm trên mặt đất, các kỹ sư MIT chỉ chừa sẵn mười phần trăm cho những xung bất ngờ.",
+  "Khoản dự phòng ấy bị vượt.",
+  "Lại thêm lúc hạ cánh đông việc nhất, máy vốn đã chạy khoảng chín mươi phần trăm công suất.",
+  {
+   "t": "Chín mươi cộng mười lăm là hơn một trăm.",
+   "p": 1.0
+  },
+  "Chương trình hạ cánh chính không chịu nổi khi có thêm một lệnh theo dõi.",
+  {
+   "t": "Chương trình tiếp cận cuối thì sát giới hạn.",
+   "p": 1.0
+  },
+  "Việc dẫn đường cứ hai giây lại được xếp lịch một lần.",
+  "Bộ điều hành xếp lịch mà không hỏi lần trước đã xong chưa.",
+  "Lần trước chưa xong, vì máy bận đếm xung.",
+  {
+   "t": "Thế là nó xếp thêm một bản nữa, và xin thêm một phòng nhớ.",
+   "p": 1.0
+  },
+  "Bộ điều hành có tám phòng và năm vùng nhớ dành cho véc-tơ.",
+  "Việc thứ chín xin phòng: báo mã 1202.",
+  {
+   "t": "Việc cần vùng véc-tơ khi cả năm vùng đã giao hết: báo mã 1201.",
+   "p": 1.0
+  },
+  "Mỗi lần ấy, máy xoá danh sách việc, rồi tra bảng giai đoạn để dựng lại chương trình hạ cánh ở một điểm hợp lý.",
+  {
+   "t": "Không mất vị trí, không mất vận tốc đã tính.",
+   "p": 1.0
+  },
+  "Đó là cột bên trái của cuốn nhật ký.",
+  "Hàng nghìn xung không có thật mỗi giây, năm lần tự đứng dậy.",
+  "Báo cáo chính thức của NASA kết luận: các báo động này là bình thường trong hoàn cảnh ấy, và cho thấy máy chạy đúng thiết kế.",
+  "Nhưng câu chuyện chưa kết thúc.",
+  "Bởi Eagle vẫn còn ba nghìn feet để xuống."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "CHƯƠNG BỐN",
+   "title": "THỦ PHẠM LÀ MỘT CÁI RADAR\nĐANG KHÔNG CÓ VIỆC",
+   "sub": "CỘT BÊN TRÁI · CỖ MÁY",
+   "bg": "site",
+   "titleAt": [
+    0,
+    "Con"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "TÍN HIỆU CỦA NÓ LÚC NÀY",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "VÔ NGHĨA",
+     "at": [
+      1,
+      "hoàn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "báo cáo NASA gọi là “meaningless”",
+     "at": 2,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "MỘT SAI LỆCH NHỎ VỀ ĐIỆN",
+   "srcnote": "NASA SP-238 · MỤC 16 · GRUMMAN LAV-500-940",
+   "rows": [
+    {
+     "k": "2 NGUỒN",
+     "v": "28 V · 800 HZ",
+     "at": 4
+    },
+    {
+     "k": "CÙNG",
+     "v": "TẦN SỐ",
+     "at": [
+      4,
+      "cùng"
+     ]
+    },
+    {
+     "k": "NHƯNG LỆCH",
+     "v": "PHA",
+     "at": [
+      4,
+      "lệch"
+     ]
+    }
+   ],
+   "total": {
+    "k": "HẬU QUẢ",
+    "v": "ĂNG-TEN ĐANG ĐỔI GÓC",
+    "at": 5
+   }
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "11,7 µS",
+   "sub": "MỖI XUNG CHIẾM MỘT NHỊP NHỚ CỦA MÁY · SP-238"
+  },
+  {
+   "type": "counter",
+   "at": 8,
+   "from": 0,
+   "to": 12800,
+   "suffix": " XUNG/GIÂY",
+   "until": [
+    8,
+    "nghìn"
+   ],
+   "label": "TỐI ĐA TỪ HAI BỘ ĐỔI CỦA RADAR HẸN GẶP",
+   "sub": {
+    "text": "6,4 NGHÌN XUNG/GIÂY MỖI BỘ ĐỔI",
+    "at": 8
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 9,
+   "title": "PHÉP NHÂN",
+   "srcnote": "NASA SP-238 · KÊNH TỰ NHÂN LẠI: 12.800 × 11,7 µS ≈ 0,15",
+   "rows": [
+    {
+     "k": "12.800 XUNG/GIÂY",
+     "v": "× 11,7 µS",
+     "at": 9
+    },
+    {
+     "k": "=",
+     "v": "≈ 0,15 GIÂY MỖI GIÂY",
+     "at": [
+      9,
+      "nhân"
+     ]
+    }
+   ],
+   "total": {
+    "k": "TỨC",
+    "v": "≈ 15% THỜI GIAN CỦA MÁY",
+    "at": [
+     9,
+     "phần"
+    ]
+   }
+  },
+  {
+   "type": "bars",
+   "at": 10,
+   "title": "XUNG THỪA · % THỜI GIAN CỦA MÁY",
+   "unit": "GRUMMAN LAV-500-940 · NASA SP-238",
+   "max": 20,
+   "items": [
+    {
+     "k": "DỰ PHÒNG KHI THỬ",
+     "v": 10,
+     "lbl": "≈ 10",
+     "at": 10
+    },
+    {
+     "k": "THỰC TẾ LÚC HẠ CÁNH",
+     "v": 15,
+     "lbl": "≈ 15",
+     "at": [
+      11,
+      "khoản"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "MÁY VỐN ĐÃ CHẠY ≈ 90%",
+     "at": 12
+    },
+    {
+     "text": "+ 15% XUNG THỪA",
+     "at": [
+      13,
+      "chín"
+     ]
+    },
+    {
+     "text": "= HƠN 100%",
+     "at": [
+      13,
+      "hơn"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 14,
+   "title": "CHƯƠNG TRÌNH HẠ CÁNH VỚI 15% XUNG",
+   "srcnote": "GRUMMAN LAV-500-940 · TRANG 4",
+   "rows": [
+    {
+     "k": "P63 · PHANH",
+     "v": "QUÁ TẢI KHI CÓ THEO DÕI",
+     "at": 14
+    },
+    {
+     "k": "P64 · TIẾP CẬN CUỐI",
+     "v": "SÁT GIỚI HẠN",
+     "at": 15
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 16,
+   "items": [
+    {
+     "year": "BƯỚC 1",
+     "text": "*xếp lịch* việc dẫn đường mỗi 2 giây",
+     "at": 16
+    },
+    {
+     "year": "BƯỚC 2",
+     "text": "lần trước *chưa xong*",
+     "at": 18
+    },
+    {
+     "year": "BƯỚC 3",
+     "text": "*xếp thêm* một bản · xin thêm phòng",
+     "at": 19
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 20,
+   "title": "KHI HẾT CHỖ",
+   "srcnote": "GRUMMAN LAV-500-940 · TRANG 1–2",
+   "rows": [
+    {
+     "k": "8",
+     "v": "PHÒNG (CORE SET)",
+     "at": 20
+    },
+    {
+     "k": "5",
+     "v": "VÙNG VÉC-TƠ (VAC)",
+     "at": [
+      20,
+      "năm"
+     ]
+    },
+    {
+     "k": "1202",
+     "v": "VIỆC THỨ 9 XIN PHÒNG",
+     "at": 21
+    },
+    {
+     "k": "1201",
+     "v": "XIN VÙNG VÉC-TƠ KHI ĐÃ HẾT",
+     "at": 22
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 23,
+   "items": [
+    {
+     "text": "XOÁ DANH SÁCH VIỆC · DỰNG LẠI",
+     "at": 23
+    },
+    {
+     "text": "không mất vị trí · không mất vận tốc",
+     "at": 24,
+     "sm": true
+    },
+    {
+     "text": "NĂM LẦN TỰ ĐỨNG DẬY",
+     "at": [
+      26,
+      "năm"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 27,
+   "text": "The Executive overflow alarms that occurred during descent are now known to be normal for the existing situation and are indicative of the proper performance of the guidance computer.",
+   "by": "NASA SP-238 · APOLLO 11 MISSION REPORT · MỤC 9",
+   "lbl": "TRÍCH",
+   "typeAt": [
+    27,
+    null,
+    0,
+    0.05
+   ],
+   "typeDur": 3.4
+  },
+  {
+   "type": "slam",
+   "at": 29,
+   "text": "3.000 FEET",
+   "sub": "EAGLE VẪN CÒN PHẢI XUỐNG"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "THỦ PHẠM LÀ MỘT CÁI RADAR ĐANG KHÔNG CÓ VIỆC"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

@@ -1,0 +1,261 @@
+{
+ "title": "Những thứ trông như sổ tiết kiệm",
+ "lines": [
+  {
+   "t": "Luật ghi rất gọn thứ được bảo hiểm.",
+   "p": 0.8
+  },
+  {
+   "t": "Đó là tiền gửi bằng đồng Việt Nam của cá nhân.",
+   "p": 1.0
+  },
+  "Bao gồm tiền gửi có kỳ hạn, không kỳ hạn, tiền gửi tiết kiệm, và chứng chỉ tiền gửi.",
+  {
+   "t": "Cả bốn đều có một điểm chung: bạn gửi tiền, và nơi ấy nợ lại bạn đúng số tiền đó. Một món nợ có tên bạn.",
+   "p": 1.0
+  },
+  "Rồi luật ghi những trường hợp không được bảo hiểm.",
+  "Tiền gửi của người sở hữu trên năm phần trăm vốn của chính tổ chức ấy.",
+  "Tiền gửi của người quản lý, người điều hành ở đó.",
+  {
+   "t": "Và tiền mua giấy tờ có giá vô danh, tức loại không ghi tên người sở hữu.",
+   "p": 1.0
+  },
+  {
+   "t": "Nghe toàn chuyện của người trong ngành. Người bình thường thì liên quan gì?",
+   "ask": 1
+  },
+  "Liên quan ở chỗ định nghĩa.",
+  "Chỉ tiền gửi bằng đồng Việt Nam của cá nhân mới nằm trong diện bảo hiểm.",
+  {
+   "t": "Vậy một khoản tiền gửi bằng đô la, theo định nghĩa ấy, không nằm trong diện này.",
+   "p": 1.0
+  },
+  "Và có những thứ được bán ngay tại quầy giao dịch, nhưng không phải là tiền gửi.",
+  "Một hợp đồng bảo hiểm nhân thọ.",
+  "Một trái phiếu của một công ty.",
+  {
+   "t": "Một chứng chỉ quỹ đầu tư.",
+   "p": 1.0
+  },
+  "Chúng có thể được giới thiệu bởi cùng một nhân viên, ký ở cùng một chiếc bàn, nơi bạn vẫn mở sổ tiết kiệm.",
+  "Nhưng về luật, đó là những sản phẩm khác, với những rủi ro khác.",
+  {
+   "t": "Chúng không nằm trong hạn mức ba trăm năm mươi triệu. Dù ký cùng chỗ.",
+   "p": 1.0
+  },
+  {
+   "t": "Làm sao biết thứ mình đang cầm là gì?",
+   "ask": 1
+  },
+  "Nhìn vào tờ giấy mình ký.",
+  "Nếu là tiền gửi, giấy tờ có tên bạn, và ghi rõ là sổ tiết kiệm, hợp đồng tiền gửi hay chứng chỉ tiền gửi.",
+  {
+   "t": "Nếu tờ giấy ghi là hợp đồng bảo hiểm, trái phiếu, hay chứng chỉ quỹ, thì đó là chuyện khác.",
+   "p": 1.0
+  },
+  "Không có nghĩa những sản phẩm ấy xấu.",
+  "Mỗi loại có lý do để tồn tại, và có luật riêng.",
+  "Chỉ là đừng tin rằng mọi thứ ký ở quầy ngân hàng đều được bảo hiểm như tiền gửi.",
+  "Hiểu được ranh giới ấy, mình mới hiểu vì sao một ngân hàng ở bên kia đại dương có thể sụp chỉ trong hai ngày."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "CHƯƠNG BỐN",
+   "title": "NHỮNG THỨ TRÔNG\nNHƯ SỔ TIẾT KIỆM",
+   "sub": "ĐƯỢC VÀ KHÔNG ĐƯỢC BẢO HIỂM",
+   "vid": "7841584",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Luật"
+   ]
+  },
+  {
+   "type": "source",
+   "at": 1,
+   "source": "LUẬT BẢO HIỂM TIỀN GỬI 2025 · ĐIỀU 17 (QUA BÁO PHÁP LUẬT)",
+   "ref": "TIỀN GỬI ĐƯỢC BẢO HIỂM",
+   "snippet": "[[tiền gửi bằng đồng Việt Nam của cá nhân]] · có kỳ hạn, không kỳ hạn, tiết kiệm, chứng chỉ tiền gửi",
+   "hlAt": [
+    1,
+    "tiền"
+   ],
+   "seal": "ĐỨNG TÊN BẠN",
+   "sealAt": 3
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "KHÔNG ĐƯỢC BẢO HIỂM (MỘT PHẦN)",
+   "rows": [
+    {
+     "k": "SỞ HỮU > 5% VỐN",
+     "v": "CỦA CHÍNH NƠI ĐÓ",
+     "at": 5
+    },
+    {
+     "k": "NGƯỜI QUẢN LÝ",
+     "v": "ĐIỀU HÀNH Ở ĐÓ",
+     "at": 6
+    },
+    {
+     "k": "GIẤY TỜ CÓ GIÁ",
+     "v": "VÔ DANH",
+     "at": [
+      7,
+      "vô"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 8,
+   "text": "Người bình thường\nthì liên quan gì?"
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "LIÊN QUAN Ở CHỖ ĐỊNH NGHĨA",
+     "at": 9
+    },
+    {
+     "text": "CHỈ TIỀN GỬI BẰNG ĐỒNG VIỆT NAM",
+     "at": 10,
+     "acc": true
+    },
+    {
+     "text": "tiền gửi bằng đô la: ngoài diện này",
+     "at": 11,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 12,
+   "vid": "7735497",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "BÁN Ở QUẦY · KHÔNG PHẢI TIỀN GỬI",
+     "at": 12,
+     "acc": true
+    },
+    {
+     "text": "bảo hiểm nhân thọ",
+     "at": 13,
+     "sm": true
+    },
+    {
+     "text": "trái phiếu công ty",
+     "at": 14,
+     "sm": true
+    },
+    {
+     "text": "chứng chỉ quỹ",
+     "at": 15,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "items": [
+    {
+     "text": "CÙNG NHÂN VIÊN · CÙNG CHIẾC BÀN",
+     "at": 16,
+     "sm": true
+    },
+    {
+     "text": "KHÁC SẢN PHẨM · KHÁC RỦI RO",
+     "at": 17,
+     "acc": true
+    },
+    {
+     "text": "không nằm trong hạn mức 350 triệu",
+     "at": 18,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 19,
+   "text": "Làm sao biết\nthứ mình đang cầm là gì?"
+  },
+  {
+   "type": "myth",
+   "at": 20,
+   "mythLab": "TỜ GIẤY GHI",
+   "myth": "HỢP ĐỒNG BẢO HIỂM · TRÁI PHIẾU · CHỨNG CHỈ QUỸ",
+   "truthLab": "TIỀN GỬI LÀ",
+   "truth": "SỔ TIẾT KIỆM · HỢP ĐỒNG / CHỨNG CHỈ TIỀN GỬI · CÓ TÊN BẠN",
+   "strikeAt": [
+    22,
+    "Nếu"
+   ],
+   "truthAt": [
+    21,
+    "Nếu"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 23,
+   "items": [
+    {
+     "text": "KHÔNG CÓ NGHĨA LÀ XẤU",
+     "at": 23
+    },
+    {
+     "text": "mỗi loại có luật riêng",
+     "at": 24,
+     "sm": true
+    },
+    {
+     "text": "KÝ Ở QUẦY ≠ ĐƯỢC BẢO HIỂM NHƯ TIỀN GỬI",
+     "at": 25,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 26,
+   "vid": "40200251",
+   "veil": 0.6,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "BÊN KIA ĐẠI DƯƠNG",
+     "at": 26,
+     "sm": true
+    },
+    {
+     "text": "SỤP TRONG HAI NGÀY",
+     "at": [
+      26,
+      "sụp"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "TRÔNG NHƯ SỔ TIẾT KIỆM"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

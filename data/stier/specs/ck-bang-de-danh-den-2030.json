@@ -1,0 +1,137 @@
+{
+ "theme": "ck",
+ "kicker": "BẢNG TRA",
+ "sub": "ĐỂ DÀNH ĐẾN 2030",
+ "title": "Mỗi tháng để dành 2, 5, 10, 15 triệu: đến 2030 có bao nhiêu? Bảng tra theo tháng",
+ "description": "Bảng tra tự dò: tìm cột số tiền bạn để dành mỗi tháng, đọc xuống dòng mốc thời gian để biết tổng tiền tích lũy (đơn vị: triệu đồng).\n\nGiả định (VÍ DỤ GIẢ ĐỊNH, không phải lời hứa lãi): bắt đầu gửi từ tháng 11/2026, gửi vào cuối mỗi tháng, đến tháng 12/2030 là 50 lần gửi; lãi 5%/năm chia đều 12 tháng, ghép lãi hằng tháng, không đổi suốt thời gian; chưa tính thuế, phí, lạm phát. Công thức: tổng = số tiền gửi × ((1 + lãi tháng)^số tháng − 1) ÷ lãi tháng. Ví dụ giả định: để dành 10 triệu mỗi tháng → khoảng 555 triệu vào 12/2030, trong đó tiền gốc là 500 triệu.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Nội dung do kênh biên soạn; giọng đọc tổng hợp.",
+ "tags": [
+  "để dành mỗi tháng",
+  "tiết kiệm đến 2030",
+  "lãi ghép",
+  "bảng tra",
+  "tài chính cá nhân",
+  "lãi 5%"
+ ],
+ "acc": [
+  "mười",
+  "2030",
+  "khoảng"
+ ],
+ "lines": [
+  "Để dành mười triệu mỗi tháng, đến 2030 có khoảng năm trăm năm mươi lăm triệu.",
+  "Lãi giả định năm phần trăm một năm.",
+  "Dừng hình, tìm cột của bạn nhé."
+ ],
+ "scenes": [
+  {
+   "type": "table",
+   "title": "ĐẾN 2030 BẠN CÓ BAO NHIÊU?",
+   "rowHead": "ĐẾN ↓",
+   "colHead": "ĐỂ DÀNH MỖI THÁNG →",
+   "cols": [
+    "2 TR",
+    "5 TR",
+    "10 TR",
+    "15 TR"
+   ],
+   "rows": [
+    {
+     "k": "12/2026",
+     "v": [
+      "4",
+      "10",
+      "20",
+      "30"
+     ]
+    },
+    {
+     "k": "12/2027",
+     "v": [
+      "29",
+      "72",
+      "144",
+      "216"
+     ]
+    },
+    {
+     "k": "12/2028",
+     "v": [
+      "55",
+      "137",
+      "274",
+      "411"
+     ]
+    },
+    {
+     "k": "12/2029",
+     "v": [
+      "82",
+      "205",
+      "411",
+      "616"
+     ]
+    },
+    {
+     "k": "12/2030",
+     "v": [
+      "111",
+      "277",
+      "555",
+      "832"
+     ]
+    }
+   ],
+   "foot": "DỪNG HÌNH · TÌM CỘT CỦA BẠN",
+   "note": "VÍ DỤ GIẢ ĐỊNH · LÃI 5%/NĂM · TRIỆU",
+   "hl": [
+    {
+     "c": 2,
+     "at": [
+      0,
+      "mười"
+     ]
+    },
+    {
+     "r": 4,
+     "c": 2,
+     "at": [
+      0,
+      "2030"
+     ],
+     "until": [
+      2,
+      null,
+      0,
+      -1.0
+     ]
+    }
+   ]
+  }
+ ],
+ "sources": [],
+ "sources_internal": [
+  "Công thức giá trị tương lai chuỗi gửi cuối kỳ; không dùng số liệu lãi suất thật"
+ ],
+ "assumptions": "Gửi cuối tháng, 11/2026..12/2030 = 50 lần, lãi 5%/năm ghép tháng, làm tròn triệu, không thuế/phí/lạm phát.",
+ "mix": false,
+ "rules": 2,
+ "cls": "btl btl-ck-led",
+ "extra_css": "bang-tra-looks.css\" /><script src=\"assets/engine/bang-tra-looks.js\"></script><link rel=\"x-end\" href=\"x",
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.5,
+   "1": 0.9
+  }
+ },
+ "say": {
+  "2030": "hai nghìn không trăm ba mươi"
+ },
+ "imgs": {},
+ "ab_test": "bang-tra-dung-hinh-2026-10-22",
+ "upload": false,
+ "profile": "bang-tra",
+ "look": "ck-led"
+}

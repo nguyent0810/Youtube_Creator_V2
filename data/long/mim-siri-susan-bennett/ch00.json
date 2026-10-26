@@ -1,0 +1,327 @@
+{
+ "title": "Câu hỏi đầu tiên",
+ "lines": [
+  "Ngày 4 tháng 10 năm 2011, Cupertino, bang California.",
+  "Apple ra mắt iPhone 4S, cùng một trợ lý biết nói tên là Siri.",
+  "Theo ghi chép trực tiếp của MacRumors, buổi ra mắt bắt đầu lúc mười giờ sáng.",
+  "Trên sân khấu, Scott Forstall của Apple trình diễn Siri.",
+  "Câu đầu tiên ông hỏi: hôm nay thời tiết thế nào?",
+  "Chiếc điện thoại đáp: đây là dự báo cho hôm nay.",
+  {
+   "t": "Giọng trả lời là giọng một người phụ nữ.",
+   "p": 1.0
+  },
+  "Cũng tháng ấy, ở ngoại ô Atlanta, diễn viên lồng tiếng Susan Bennett nhận được một thư điện tử.",
+  "Một đồng nghiệp viết rằng họ đang nghịch chiếc điện thoại mới của Apple.",
+  {
+   "t": "Đây chẳng phải là chị sao?",
+   "q": 1,
+   "tr": 1
+  },
+  "Bà mở trang của Apple, bật những đoạn video giới thiệu Siri, rồi nghe.",
+  "Hai năm sau, bà kể với đài CNN rằng bà biết ngay.",
+  {
+   "t": "Rõ ràng là tôi. Đó là giọng của tôi.",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Nhưng theo lời bà, Apple chưa từng thuê bà, cũng chẳng có buổi thử giọng nào.",
+  "Còn Apple thì từ chối bình luận.",
+  {
+   "t": "Vậy giọng nói trong chiếc điện thoại ấy, thật ra là của ai?",
+   "p": 1.0
+  },
+  "Để trả lời, mình sẽ tua ngược một cuộn băng.",
+  "Mỗi chương lùi một nấc: năm 2011, rồi một phòng thu năm 2005, rồi một phòng thí nghiệm năm 2003.",
+  "Chạm đáy rồi, mình mới tua xuôi về hôm nay.",
+  "Ở cuối cuộn băng là lý do giọng ấy nghe giống người đến vậy."
+ ],
+ "scenes": [
+  {
+   "type": "date",
+   "day": "CUPERTINO · BUỔI RA MẮT IPHONE 4S",
+   "date": "04.10.2011",
+   "sub": {
+    "text": "10:00 SÁNG GIỜ CALIFORNIA · THEO GHI CHÉP CỦA MACRUMORS",
+    "at": 2
+   }
+  },
+  {
+   "type": "broll",
+   "at": 3,
+   "vid": "8515272",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "SÂN KHẤU · TRÌNH DIỄN SIRI",
+     "at": 3,
+     "acc": true
+    },
+    {
+     "text": "câu hỏi đầu tiên",
+     "at": [
+      4,
+      "câu"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "chat",
+   "at": 4,
+   "head": "MÔ PHỎNG · CÂU HỎI THỜI TIẾT (THEO MACRUMORS)",
+   "msgs": [
+    {
+     "who": "u",
+     "text": "Hôm nay thời tiết thế nào?",
+     "at": 4
+    },
+    {
+     "who": "m",
+     "text": "Đây là dự báo cho hôm nay…",
+     "at": [
+      5,
+      "đáp"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "GIỌNG NỮ",
+   "sub": "TRẢ LỜI TRƯỚC KHÁN PHÒNG · 04.10.2011"
+  },
+  {
+   "type": "photo",
+   "at": 7,
+   "img": "atlanta",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.5,
+   "illus": "ẢNH MINH HỌA",
+   "kin": [
+    {
+     "text": "NGOẠI Ô ATLANTA",
+     "at": 7,
+     "acc": true
+    },
+    {
+     "text": "Susan Bennett · diễn viên lồng tiếng",
+     "at": [
+      7,
+      "diễn"
+     ],
+     "sm": true
+    }
+   ],
+   "label": {
+    "k": "ATLANTA, BANG GEORGIA",
+    "v": "ẢNH: BRANDON WALKER · CC0",
+    "at": 7
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "MỘT THƯ ĐIỆN TỬ",
+     "at": 8,
+     "acc": true
+    },
+    {
+     "text": "từ một đồng nghiệp · theo CNN",
+     "at": [
+      8,
+      "đồng"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 9,
+   "text": "Hey, we've been playing around with this new Apple phone. Isn't this you?",
+   "by": "MỘT ĐỒNG NGHIỆP VIẾT CHO SUSAN BENNETT · THEO CNN, 04.10.2013",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 9,
+   "typeAt": [
+    9,
+    "đây"
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 10,
+   "vid": "6892725",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "BÀ MỞ VIDEO GIỚI THIỆU",
+     "at": 10,
+     "acc": true
+    },
+    {
+     "text": "rồi nghe",
+     "at": [
+      10,
+      "nghe."
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": 11,
+   "img": "bennettc",
+   "tone": "color",
+   "illus": "ẢNH: VOA · 2018 · CÔNG CỘNG",
+   "side": {
+    "k": "SUSAN BENNETT",
+    "h": "Diễn viên lồng tiếng\nAtlanta",
+    "lines": [
+     {
+      "text": "Kể với *CNN* · 2013",
+      "at": [
+       11,
+       "kể"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "quote",
+   "at": 12,
+   "text": "Oh, I knew. It's obviously me. It's my voice.",
+   "by": "SUSAN BENNETT · CNN, 04.10.2013",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 12,
+   "typeAt": [
+    12,
+    "rõ"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 13,
+   "title": "AI XÁC NHẬN?",
+   "srcnote": "VOA 09.05.2018 · CNN 04.10.2013",
+   "rows": [
+    {
+     "k": "APPLE THUÊ BÀ?",
+     "v": "KHÔNG · THEO LỜI BÀ",
+     "at": 13
+    },
+    {
+     "k": "THỬ GIỌNG?",
+     "v": "KHÔNG CÓ BUỔI NÀO",
+     "at": [
+      13,
+      "thử"
+     ]
+    },
+    {
+     "k": "APPLE",
+     "v": "TỪ CHỐI BÌNH LUẬN",
+     "at": 14
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 15,
+   "text": "Giọng trong chiếc điện thoại ấy,\nthật ra là của ai?"
+  },
+  {
+   "type": "timeline",
+   "at": 16,
+   "bg": "cassette",
+   "label": {
+    "k": "CUỘN BĂNG · ◀◀ TUA NGƯỢC",
+    "v": "MỖI CHƯƠNG LÙI MỘT NẤC",
+    "at": 16
+   },
+   "items": [
+    {
+     "year": "2011",
+     "text": "*buổi ra mắt*",
+     "at": [
+      17,
+      "năm",
+      0
+     ]
+    },
+    {
+     "year": "2005",
+     "text": "*phòng thu*",
+     "at": [
+      17,
+      "thu"
+     ]
+    },
+    {
+     "year": "2003",
+     "text": "*phòng thí nghiệm*",
+     "at": [
+      17,
+      "nghiệm"
+     ],
+     "color": "#f472b6"
+    },
+    {
+     "year": "▶ HÔM NAY",
+     "text": "rồi *tua xuôi*",
+     "at": [
+      18,
+      "xuôi"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 19,
+   "img": "cassette",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.55,
+   "illus": "ẢNH MINH HỌA",
+   "kin": [
+    {
+     "text": "Ở CUỐI CUỘN BĂNG",
+     "at": 19,
+     "sm": true
+    },
+    {
+     "text": "VÌ SAO GIỌNG ẤY GIỐNG NGƯỜI",
+     "at": [
+      19,
+      "giống"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "CUỘN BĂNG",
+    "v": "ẢNH: TIM RECKMANN · CC BY 2.0",
+    "at": 19
+   }
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "CÂU HỎI ĐẦU TIÊN"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

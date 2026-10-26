@@ -1,0 +1,185 @@
+{
+ "theme": "mim",
+ "title": "Trước CUDA, nhà khoa học phải giả dạng phép tính thành bức tranh để card đồ hoạ chịu làm toán",
+ "description": "Đầu những năm 2000, card đồ hoạ chỉ nhận lệnh vẽ hình; muốn dùng nó tính toán khác, người ta nhét số vào màu của điểm ảnh và viết bài toán như hiệu ứng ánh sáng (Owens và cộng sự, A Survey of General-Purpose Computation on Graphics Hardware, Computer Graphics Forum, 2007; mô tả đã đơn giản hoá). Ngày 8/11/2006 Nvidia ra mắt CUDA để lập trình viên ra lệnh tính trực tiếp. Giọng đọc tổng hợp; video Pexels.\n\nBản đầy đủ: https://youtu.be/<ID-mim-ai-gpu> (công khai từ 20:00 ngày 16/11)",
+ "tags": [
+  "cuda",
+  "gpgpu",
+  "lập trình gpu",
+  "lịch sử máy tính",
+  "trí tuệ nhân tạo",
+  "gpu",
+  "nvidia",
+  "card đồ hoạ",
+  "mind in the machine"
+ ],
+ "kicker": "LỊCH SỬ GPU",
+ "sub": "CUDA · 2006",
+ "acc": [
+  "tưởng",
+  "vẽ",
+  "toán"
+ ],
+ "lines": [
+  "Chip tưởng mình đang vẽ, thật ra làm toán.",
+  "Đầu những năm hai nghìn, card đồ hoạ chỉ hiểu một ngôn ngữ: hình vẽ.",
+  "Nhà khoa học muốn dùng sức mạnh ấy để tính dòng chảy chất lỏng, sóng địa chấn, phân tử thuốc.",
+  "Cách duy nhất là giả dạng bài toán thành một bức tranh.",
+  "Con số được nhét vào màu của điểm ảnh, phép tính được viết như một hiệu ứng ánh sáng.",
+  "Tháng mười một năm hai nghìn không trăm linh sáu, Nvidia ra mắt CUDA, để người ta ra lệnh cho chip tính thẳng.",
+  "Từ ngày ấy, chip không còn phải giả vờ vẽ."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CHIP TƯỞNG MÌNH",
+     "at": 0.0
+    },
+    {
+     "text": "ĐANG VẼ",
+     "at": [
+      0,
+      "vẽ"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7141174",
+   "veil": 0.5
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "TÍNH THỨ KHÁC",
+     "at": 2,
+     "acc": true
+    },
+    {
+     "text": "chất lỏng · địa chấn · phân tử thuốc",
+     "at": [
+      2,
+      "dòng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:31767906",
+   "veil": 0.5
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Bài toán giả làm bức tranh",
+   "nodes": [
+    {
+     "text": "bài toán",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      3,
+      "bài"
+     ]
+    },
+    {
+     "text": "MÀU ĐIỂM ẢNH",
+     "x": 0.5,
+     "y": 0.5,
+     "at": [
+      4,
+      "màu"
+     ],
+     "c": "acc",
+     "shape": "circle"
+    },
+    {
+     "text": "“bức tranh” giả",
+     "x": 0.5,
+     "y": 0.77,
+     "at": [
+      4,
+      "hiệu"
+     ]
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      4,
+      "nhét"
+     ],
+     "bend": 0
+    },
+    {
+     "from": 1,
+     "to": 2,
+     "at": [
+      4,
+      "hiệu"
+     ],
+     "bend": 0
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 5,
+   "items": [
+    {
+     "year": "ĐẦU THẬP NIÊN 2000",
+     "text": "giả bài toán thành bức tranh",
+     "at": [
+      5,
+      null,
+      0,
+      0.1
+     ]
+    },
+    {
+     "year": "08.11.2006",
+     "text": "CUDA: ra lệnh tính trực tiếp",
+     "at": [
+      5,
+      "CUDA"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "KHÔNG CÒN\nGIẢ VỜ VẼ",
+   "sub": "THEO OWENS ET AL. 2007 · ĐƠN GIẢN HOÁ"
+  }
+ ],
+ "sources": [
+  "Owens et al., A Survey of GPGPU, Computer Graphics Forum 26(1), 2007 (factcheck.md dòng 5)",
+  "CUDA 08/11/2006: Digital Engineering / Wikipedia GeForce 8 series (SECONDARY)"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6,
+   "0": 0.35
+  }
+ },
+ "say": {
+  "nvidia": "En-vi-đi-a",
+  "cuda": "Cu-đa",
+  "ng": "En-gờ"
+ },
+ "imgs": {}
+}

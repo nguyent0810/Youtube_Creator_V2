@@ -1,0 +1,330 @@
+{
+ "theme": "mim",
+ "title": "Tháng 11/2006, Nvidia ra mắt CUDA: canh bạc gánh thêm khoảng một nửa chi phí mỗi chip",
+ "description": "Ian Buck, nghiên cứu sinh Stanford, viết ngôn ngữ Brook để phép tính khỏi phải giả làm bức tranh; năm 2004 anh về Nvidia. Ngày 08/11/2006 Nvidia ra mắt CUDA. Theo lời Jensen Huang kể trong một podcast, CUDA làm mỗi GPU tốn thêm khoảng 50% chi phí khi biên lãi gộp của hãng khoảng 35%. Giọng đọc tổng hợp; video Pexels.\n\nBản đầy đủ: https://youtu.be/Es4bogrdk-c",
+ "tags": [
+  "nvidia",
+  "cuda",
+  "ian buck",
+  "jensen huang",
+  "gpu",
+  "trí tuệ nhân tạo",
+  "card đồ hoạ",
+  "mind in the machine"
+ ],
+ "kicker": "NGÀNH AI",
+ "sub": "NVIDIA · 2006",
+ "acc": [
+  "toán",
+  "cuda",
+  "nửa"
+ ],
+ "lines": [
+  "Ian Buck bắt card chơi game đi làm toán.",
+  "Ở Stanford, anh viết Brook để phép tính khỏi giả làm bức tranh.",
+  "Năm hai nghìn không trăm linh bốn, Nvidia thuê anh.",
+  "Ngày tám tháng mười một năm hai nghìn không trăm linh sáu, hãng ra mắt CUDA: chip tính thẳng, khỏi giả vờ vẽ.",
+  "Theo lời chính Jensen Huang kể, mỗi chip phải gánh thêm khoảng một nửa chi phí.",
+  "Mà biên lãi gộp lúc ấy chỉ khoảng ba mươi lăm phần trăm.",
+  "Game thủ không muốn trả thêm, nên chi phí nuốt hết lợi nhuận gộp.",
+  "Nhưng CUDA nằm ngay trong card chơi game, thứ ai cũng mua được.",
+  "Sáu năm sau, có người mua đúng loại card ấy để dạy máy nhìn.",
+  "Card chơi game của Ian Buck đã đi làm toán."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "clip": "pexels:34280528",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "IAN BUCK",
+     "at": [
+      0,
+      "Ian"
+     ],
+     "acc": true,
+     "size": 179
+    },
+    {
+     "text": "CARD CHƠI GAME · LÀM TOÁN",
+     "at": [
+      0,
+      "card"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Brook: viết toán như toán",
+   "nodes": [
+    {
+     "text": "NGÔN NGỮ BROOK",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      1,
+      "Brook"
+     ]
+    },
+    {
+     "text": "PHÉP TÍNH",
+     "x": 0.5,
+     "y": 0.5,
+     "at": [
+      1,
+      "phép"
+     ],
+     "shape": "circle"
+    },
+    {
+     "text": "KHỎI GIẢ LÀM BỨC TRANH",
+     "x": 0.5,
+     "y": 0.76,
+     "at": [
+      1,
+      "giả"
+     ],
+     "c": "acc",
+     "w": 760
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      1,
+      "phép"
+     ],
+     "bend": 0
+    },
+    {
+     "from": 1,
+     "to": 2,
+     "at": [
+      1,
+      "giả"
+     ],
+     "bend": 0
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "clip": "pexels:10374892",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "2004",
+     "at": [
+      2,
+      "Năm"
+     ],
+     "acc": true,
+     "size": 300
+    },
+    {
+     "text": "NVIDIA THUÊ ANH",
+     "at": [
+      2,
+      "Nvidia"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 3,
+   "date": "08.11.2006",
+   "day": "NVIDIA RA MẮT CUDA",
+   "sub": {
+    "text": "MỘT CÔNG CỤ CHO CHIP TÍNH THẲNG",
+    "at": [
+     3,
+     "hãng"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": [
+    3,
+    "chip"
+   ],
+   "title": "VỚI CUDA",
+   "cards": [
+    {
+     "k": "SAU",
+     "v": "TÍNH THẲNG",
+     "at": [
+      3,
+      "tính"
+     ],
+     "c": "acc"
+    },
+    {
+     "k": "TRƯỚC",
+     "v": "GIẢ VỜ VẼ",
+     "at": [
+      3,
+      "giả"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "CÁI GIÁ CỦA CUDA · LỜI JENSEN HUANG KỂ",
+   "rows": [
+    {
+     "k": "CHI PHÍ THÊM MỖI CHIP",
+     "v": "KHOẢNG 50%",
+     "at": [
+      4,
+      "nửa"
+     ]
+    },
+    {
+     "k": "BIÊN LÃI GỘP LÚC ẤY",
+     "v": "KHOẢNG 35%",
+     "at": [
+      5,
+      "ba"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "clip": "pexels:6705181",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "GAME THỦ",
+     "at": [
+      6,
+      "Game"
+     ],
+     "acc": true,
+     "size": 120
+    },
+    {
+     "text": "nuốt hết lợi nhuận",
+     "at": [
+      6,
+      "nuốt"
+     ],
+     "sm": true,
+     "size": 52
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 7,
+   "title": "CUDA NẰM TRONG",
+   "cards": [
+    {
+     "k": "LOẠI CARD",
+     "v": "CHƠI GAME",
+     "at": [
+      7,
+      "card"
+     ]
+    },
+    {
+     "k": "AI MUA ĐƯỢC",
+     "v": "AI CŨNG MUA",
+     "at": [
+      7,
+      "ai"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 8,
+   "date": "2012",
+   "day": "SÁU NĂM SAU",
+   "sub": {
+    "text": "CARD CHƠI GAME · DẠY MÁY NHÌN",
+    "at": [
+     8,
+     "dạy"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "clip": "pexels:6705180",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "CARD CHƠI GAME",
+     "at": [
+      9,
+      "Card"
+     ],
+     "acc": true
+    },
+    {
+     "text": "đã đi làm toán",
+     "at": [
+      9,
+      "đi"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "HPCwire — 35 HPC Legends (hồ sơ Ian Buck)",
+  "Tom's Hardware — phỏng vấn Ian Buck",
+  "Lex Fridman Podcast #494 — Jensen Huang (bản chép lời)",
+  "https://www.digitalengineering247.com/article/nvidia-unveils-cuda/engineering-computing (thông cáo Nvidia về CUDA)",
+  "https://papers.nips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf (AlexNet, 2012)"
+ ],
+ "say": {
+  "nvidia": "En-vi-đi-a",
+  "card": "các",
+  "game": "ghêm",
+  "jensen": "Giên-xần",
+  "huang": "Hoàng",
+  "stanford": "Xtan-phợt",
+  "ian": "I-ân",
+  "buck": "Bấc",
+  "brook": "Brúc",
+  "cuda": "Cu-đa"
+ },
+ "rules": 2,
+ "mix": true,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "3": 0.3,
+   "5": 0.3,
+   "6": 0.35,
+   "8": 0.4
+  }
+ },
+ "sources_internal": [
+  "data/long/mim-ai-gpu/factcheck.md dòng 6 (Ian Buck, Brook, về Nvidia 2004; HPCwire, Tom's Hardware) và dòng 7 (Jensen Huang, Lex Fridman Podcast #494: CUDA thêm ~50% chi phí/GPU; biên lãi gộp 35%; chi phí 'nuốt hết' lợi nhuận gộp)",
+  "data/long/mim-ai-gpu/script.md CH03 (ngày 08/11/2006 ra mắt CUDA) — đã đối chiếu thông cáo Nvidia (Digital Engineering 24/7) và bản chép lời Lex #494 ngày 22/10/2026 (KIEM-NGUON-A); bỏ ý 'khách chủ yếu là phòng thí nghiệm' vì không có nguồn"
+ ]
+}

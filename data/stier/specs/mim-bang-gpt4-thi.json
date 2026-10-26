@@ -1,0 +1,181 @@
+{
+ "theme": "mim",
+ "kicker": "BẢNG TRA",
+ "sub": "GPT-4 · ĐIỂM THI 2023",
+ "title": "GPT-4 thi điểm bao nhiêu so với người? Bảng tra theo kỳ thi (OpenAI 2023)",
+ "description": "Bảng tra theo kỳ thi: điểm của GPT-4 (mô hình của OpenAI, 3/2023) khi làm các đề thi mô phỏng, và hạng phần trăm ước tính so với người đi thi. Hạng khoảng 90 nghĩa là điểm ấy ngang hoặc cao hơn khoảng 90% người dự thi. Cột \"Bản cũ\" là hạng của GPT-3.5.\n\nĐây là điểm của mô hình tại thời điểm báo cáo (tháng 3/2023), trong điều kiện mô phỏng do OpenAI tự thực hiện, không phải kết quả thi chính thức và không phản ánh các bản mô hình sau này. Với kỳ thi có thang điểm rộng như AP, báo cáo ghi dải hạng; bảng này chỉ dùng các kỳ thi có hạng một con số.\n\nSố liệu: Bảng 1 trong \"GPT-4 Technical Report\" của OpenAI (arXiv:2303.08774): Uniform Bar Exam 298/400 (hạng khoảng 90, GPT-3.5 khoảng 10); LSAT 163 (khoảng 88; 40); SAT Math 700/800 (khoảng 89; 70); SAT Evidence-Based Reading & Writing 710/800 (khoảng 93; 87); GRE Quantitative 163/170 (khoảng 80; 25); GRE Writing 4/6 (khoảng 54; 54).\n\nNội dung do kênh biên soạn. Giọng đọc tổng hợp.",
+ "tags": [
+  "GPT-4",
+  "OpenAI",
+  "điểm thi",
+  "SAT",
+  "GRE",
+  "LSAT",
+  "thi luật sư",
+  "bảng tra",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "acc": [
+  "luật",
+  "sư",
+  "mười",
+  "phần",
+  "trăm",
+  "tám",
+  "chín",
+  "năm",
+  "mươi",
+  "tư",
+  "dừng",
+  "hình"
+ ],
+ "lines": [
+  "GPT bốn thi luật sư Mỹ, nằm trong mười phần trăm cao nhất.",
+  "SAT toán, hạng tám mươi chín.",
+  "Viết luận GRE thì chỉ hạng năm mươi tư.",
+  "Đó là điểm của mô hình năm 2023.",
+  "Dừng hình tìm dòng của bạn nhé."
+ ],
+ "scenes": [
+  {
+   "type": "table",
+   "at": 0,
+   "title": "GPT-4 THI ĐƯỢC BAO NHIÊU?",
+   "rowHead": "KỲ THI ↓",
+   "colHead": "GPT-4 · BẢN CŨ (3.5) →",
+   "cols": [
+    "ĐIỂM",
+    "HẠNG %",
+    "BẢN CŨ"
+   ],
+   "rows": [
+    {
+     "k": "LUẬT SƯ",
+     "sub": "TỐI ĐA 400",
+     "v": [
+      298,
+      90,
+      10
+     ]
+    },
+    {
+     "k": "LSAT",
+     "sub": "THI LUẬT",
+     "v": [
+      163,
+      88,
+      40
+     ]
+    },
+    {
+     "k": "SAT TOÁN",
+     "sub": "TỐI ĐA 800",
+     "v": [
+      700,
+      89,
+      70
+     ]
+    },
+    {
+     "k": "SAT ĐỌC",
+     "sub": "TỐI ĐA 800",
+     "v": [
+      710,
+      93,
+      87
+     ]
+    },
+    {
+     "k": "GRE TOÁN",
+     "sub": "TỐI ĐA 170",
+     "v": [
+      163,
+      80,
+      25
+     ]
+    },
+    {
+     "k": "GRE VIẾT",
+     "sub": "TỐI ĐA 6",
+     "v": [
+      4,
+      54,
+      54
+     ]
+    }
+   ],
+   "hl": [
+    {
+     "r": 0,
+     "at": [
+      0,
+      "luật"
+     ]
+    },
+    {
+     "r": 0,
+     "c": 1,
+     "at": [
+      0,
+      "mười"
+     ]
+    },
+    {
+     "r": 2,
+     "c": 1,
+     "at": [
+      1,
+      "hạng"
+     ]
+    },
+    {
+     "r": 5,
+     "c": 1,
+     "at": [
+      2,
+      "chỉ"
+     ],
+     "until": [
+      4,
+      "dừng"
+     ]
+    }
+   ],
+   "foot": "DỪNG HÌNH ĐỂ TRA · LƯU LẠI",
+   "note": "HẠNG % ≈ HƠN BAO NHIÊU % NGƯỜI THI · 2023"
+  }
+ ],
+ "sources": [
+  "https://arxiv.org/abs/2303.08774"
+ ],
+ "sources_internal": [
+  "arXiv 2303.08774 mở được 22/10/2026 (WebFetch trang abs + PDF tải về, trích Bảng 1 bằng pypdf). Hạng là lower bound ước tính của OpenAI (\"~90th\"). Bar 'top 10%' khớp văn bản báo cáo."
+ ],
+ "mix": false,
+ "rules": 2,
+ "min_words": 25,
+ "tail": 3.4,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.25,
+   "1": 0.2,
+   "2": 0.2,
+   "3": 0.35
+  }
+ },
+ "say": {
+  "=GPT": "gi pi ti",
+  "SAT": "xát",
+  "GRE": "gi a i",
+  "=OpenAI": "Ô-pần ây ai"
+ },
+ "imgs": {},
+ "profile": "bang-tra",
+ "look": "mim-thermal",
+ "cls": "btl btl-mim-thermal",
+ "extra_css": "bang-tra-looks.css\" /><script src=\"assets/engine/bang-tra-looks.js\"></script><link rel=\"x-end\" href=\"x"
+}

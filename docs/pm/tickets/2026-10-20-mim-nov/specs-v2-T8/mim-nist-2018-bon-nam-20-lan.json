@@ -1,0 +1,242 @@
+{
+ "theme": "mim",
+ "title": "Năm 2014 máy tìm người trượt 4 phần trăm; 2018 chỉ còn 0,2: báo cáo NIST và Patrick Grother",
+ "description": "Theo báo cáo NIST ngày 30/11/2018 (127 thuật toán của 39 nhà phát triển, kho 26,6 triệu ảnh), tỉ lệ tìm một người trong kho ảnh mà thuật toán tốt nhất bỏ sót khoảng 0,2%, so với khoảng 4% năm 2014: giỏi hơn chừng 20 lần. Patrick Grother của NIST nói sự chênh lệch năng lực giữa các hãng vẫn rất rộng. Kết quả tốt nhất áp dụng cho ảnh chất lượng tốt (cần kiểm trong bản báo cáo NISTIR 8238).\n\nGiọng đọc tổng hợp; video Pexels/Coverr minh hoạ, không phải cảnh thật của sự kiện.\nBản đầy đủ: https://youtu.be/7daMUBWG6mU",
+ "tags": [
+  "nist",
+  "patrick grother",
+  "nhận diện khuôn mặt",
+  "độ chính xác",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "KHUÔN MẶT VÀ AI",
+ "sub": "NIST · 2018",
+ "acc": [
+  "2014",
+  "bốn",
+  "hai",
+  "mươi",
+  "tốt"
+ ],
+ "lines": [
+  "Năm 2014, máy tìm người trượt bốn phần trăm.",
+  "Đó là mức tốt nhất mà viện NIST của Mỹ ghi nhận khi ấy.",
+  "Cuối năm 2018, nhóm của Patrick Grother thử một trăm hai mươi bảy thuật toán của ba mươi chín nhà phát triển.",
+  "Họ tìm một người trong kho hai mươi sáu phẩy sáu triệu ảnh.",
+  "Thuật toán tốt nhất giờ trượt khoảng không phẩy hai phần trăm.",
+  "Chỉ trong bốn năm, giỏi hơn chừng hai mươi lần.",
+  "Nhưng Grother nói, năng lực giữa các hãng vẫn chênh nhau rất xa.",
+  "Từ bốn phần trăm xuống không phẩy hai, nhưng chỉ với thuật toán giỏi và ảnh tốt."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "items": [
+    {
+     "text": "2014",
+     "at": [
+      0,
+      "Năm"
+     ],
+     "acc": true,
+     "size": 300
+    },
+    {
+     "text": "TÌM MỘT NGƯỜI · TRƯỢT 4%",
+     "at": [
+      0,
+      "trượt"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:10001617",
+   "veil": 0.55
+  },
+  {
+   "type": "date",
+   "at": [
+    2,
+    "Cuối"
+   ],
+   "date": "2018",
+   "day": "30 THÁNG 11",
+   "sub": {
+    "text": "NIST · PATRICK GROTHER",
+    "at": [
+     2,
+     "Patrick"
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "at": [
+    2,
+    "một"
+   ],
+   "to": 127,
+   "suffix": " THUẬT TOÁN",
+   "label": "CỦA 39 NHÀ PHÁT TRIỂN",
+   "until": [
+    2,
+    "bảy"
+   ]
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "BÀI THỬ TÌM NGƯỜI",
+   "nodes": [
+    {
+     "text": "MỘT NGƯỜI CẦN TÌM",
+     "x": 0.5,
+     "y": 0.2,
+     "at": [
+      3,
+      "một"
+     ],
+     "w": 480
+    },
+    {
+     "text": "KHO 26,6 TRIỆU ẢNH",
+     "x": 0.5,
+     "y": 0.52,
+     "at": [
+      3,
+      "kho"
+     ],
+     "c": "acc",
+     "w": 520
+    },
+    {
+     "text": "MÁY TÌM RA HAY TRƯỢT?",
+     "x": 0.5,
+     "y": 0.82,
+     "at": [
+      3,
+      "ảnh"
+     ],
+     "w": 560
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      3,
+      "trong"
+     ]
+    },
+    {
+     "from": 1,
+     "to": 2,
+     "at": [
+      3,
+      "ảnh"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "at": 4,
+   "kind": "bars",
+   "title": "TỈ LỆ TRƯỢT KHI TÌM MỘT NGƯỜI",
+   "unit": "NIST · TÌM TRONG KHO ẢNH LỚN",
+   "min": 0,
+   "bars": [
+    {
+     "label": "NĂM 2014",
+     "v": 4,
+     "text": "≈ 4%",
+     "c": "dim",
+     "at": [
+      0,
+      "bốn"
+     ]
+    },
+    {
+     "label": "NĂM 2018",
+     "v": 0.2,
+     "text": "≈ 0,2%",
+     "c": "ref",
+     "at": [
+      4,
+      "không"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "to": 20,
+   "suffix": " LẦN",
+   "label": "GIỎI HƠN CHỪNG · 2014 → 2018",
+   "until": [
+    5,
+    "hai",
+    0
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "CHÊNH NHAU RẤT XA",
+   "sub": "GIỮA CÁC HÃNG · THEO GROTHER"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "CHỈ VỚI ẢNH TỐT",
+     "at": [
+      7,
+      "ảnh"
+     ],
+     "acc": true
+    },
+    {
+     "text": "và thuật toán giỏi",
+     "at": [
+      7,
+      "thuật"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34762047",
+   "veil": 0.6
+  }
+ ],
+ "sources": [
+  "https://www.nist.gov/node/1532616 (đã mở: ngày 30/11/2018; ~0,2% năm 2018 so với 4% năm 2014 và 5% năm 2010; ~20 lần; 127 thuật toán/39 nhà phát triển; kho 26,6 triệu ảnh; Grother: 'very wide spread of capability across the industry')",
+  "https://nvlpubs.nist.gov/nistpubs/ir/2018/NIST.IR.8238.pdf (PDF >10MB, WebFetch không mở được; điều kiện 'ảnh chất lượng tốt' chỉ có từ biometricupdate.com qua tìm kiếm; cần kiểm trong bản báo cáo)"
+ ],
+ "say": {
+  "nist": "Nít",
+  "grother": "Gro-thơ",
+  "patrick": "Pa-trích"
+ },
+ "rules": 2,
+ "mix": true,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.3,
+   "6": 0.4
+  }
+ }
+}

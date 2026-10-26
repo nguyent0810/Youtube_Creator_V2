@@ -1,0 +1,204 @@
+{
+ "theme": "ck",
+ "kicker": "QUYẾT ĐỊNH LỚN",
+ "sub": "MUA HAY THUÊ",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "say": {},
+ "imgs": {},
+ "title": "Ở 5, 10 hay 20 năm: giá nhà phải tăng bao nhiêu mỗi năm thì mua mới ngang thuê? (ví dụ giả định)",
+ "description": "VÍ DỤ GIẢ ĐỊNH (kênh tự tính): căn 2,5 tỷ, trả trước 1 tỷ, vay 1,5 tỷ gốc đều (11% hai năm đầu, 14% sau đó), phí mua 1%, thuế bán 2%, sửa chữa 0,5%/năm; thuê căn y hệt 3% giá nhà/năm, tiền thuê tăng 5%/năm, phần chênh gửi tiết kiệm 6,8%. Mức giá nhà phải tăng mỗi năm để hai bên ngang nhau: ở 5 năm ≈8,1%, 10 năm ≈7,45%, 20 năm ≈6,6%. Ở càng lâu, phí mua bán (trả một lần) càng được chia cho nhiều năm, còn tiền thuê năm nào cũng tăng. Đây là ngưỡng để tự so, không phải dự báo giá nhà.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ (hoặc ví dụ giả định), tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (14 phút): https://youtu.be/pXKfIo_nyVM (công khai từ 20:00 ngày 07/11)",
+ "tags": [
+  "mua hay thuê nhà",
+  "hoà vốn mua nhà",
+  "giá nhà",
+  "thuê nhà",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "bao",
+  "lâu",
+  "tám",
+  "bảy",
+  "sáu",
+  "hoà"
+ ],
+ "lines": [
+  "Bạn định ở căn nhà ấy bao lâu?",
+  "Ví dụ giả định: căn hai tỷ rưỡi, vay một tỷ rưỡi, so với thuê căn y hệt.",
+  "Giá nhà phải tăng bao nhiêu mỗi năm thì mua mới ngang thuê?",
+  "Ở năm năm, khoảng tám phần trăm mỗi năm.",
+  "Ở mười năm, khoảng bảy phẩy năm.",
+  "Ở hai mươi năm, còn khoảng sáu phẩy sáu.",
+  "Phí mua và thuế lúc bán chỉ trả một lần, ở càng lâu càng chia được cho nhiều năm.",
+  "Còn tiền thuê thì năm nào cũng tăng.",
+  "Ngưỡng hoà vốn đổi theo số năm bạn thật sự ở đó."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "Ở BAO LÂU?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "con số đổi cả phép so mua với thuê",
+     "at": [
+      0,
+      "căn"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:35065080",
+   "veil": 0.58
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "VÍ DỤ GIẢ ĐỊNH",
+   "cards": [
+    {
+     "k": "MUA",
+     "v": "2,5 TỶ",
+     "sub": "VAY 1,5 TỶ",
+     "at": [
+      1,
+      "căn"
+     ]
+    },
+    {
+     "k": "THUÊ",
+     "v": "CĂN Y HỆT",
+     "sub": "GIÁ NHÀ PHẢI TĂNG BAO NHIÊU?",
+     "at": [
+      1,
+      "thuê"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 3,
+   "items": [
+    {
+     "year": "Ở 5 NĂM",
+     "text": "giá phải tăng ≈8,1%/năm",
+     "at": [
+      3,
+      "tám"
+     ]
+    },
+    {
+     "year": "Ở 10 NĂM",
+     "text": "≈7,45%/năm",
+     "at": [
+      4,
+      "bảy"
+     ]
+    },
+    {
+     "year": "Ở 20 NĂM",
+     "text": "≈6,6%/năm",
+     "at": [
+      5,
+      "sáu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Vì sao giảm dần",
+   "nodes": [
+    {
+     "text": "PHÍ MUA + THUẾ BÁN",
+     "x": 0.5,
+     "y": 0.2,
+     "at": [
+      6,
+      "Phí"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "÷ SỐ NĂM Ở",
+     "x": 0.5,
+     "y": 0.5,
+     "at": [
+      6,
+      "chia"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "TIỀN THUÊ +5%/NĂM",
+     "x": 0.5,
+     "y": 0.8,
+     "at": [
+      7,
+      "tiền"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      6,
+      "lâu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "NGƯỠNG HOÀ VỐN",
+     "at": 8,
+     "sm": true
+    },
+    {
+     "text": "ĐỔI THEO SỐ NĂM Ở",
+     "at": [
+      8,
+      "số"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:4554461",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  }
+ ],
+ "sources": [
+  "https://youtu.be/pXKfIo_nyVM"
+ ],
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.22,
+   "7": 0.6
+  }
+ }
+}

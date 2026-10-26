@@ -1,0 +1,248 @@
+{
+ "title": "Chiếc máy đặt hàng khi chưa có bản vẽ",
+ "lines": [
+  {
+   "t": "Chuyện bắt đầu tám năm trước đó.",
+   "p": 0.8
+  },
+  "Ngày 9 tháng 8 năm 1961, NASA ký hợp đồng với Phòng thí nghiệm Dụng cụ của trường MIT.",
+  {
+   "t": "Việc phải làm: thiết kế và chế tạo hệ thống dẫn đường cho tàu Apollo, kể cả phần mềm.",
+   "p": 1.0
+  },
+  "Nhóm kỹ sư vừa làm hệ dẫn đường cho tên lửa Polaris, nên được chọn.",
+  "Nhưng lúc ký, chưa có bản đặc tả nào đầy đủ.",
+  "Mãi cuối năm 1962, họ mới hình dung ra Apollo cần gì.",
+  {
+   "t": "Về sau, một người trong nhóm nhớ lại rằng nếu biết trước, họ có lẽ đã kết luận là với công nghệ đầu những năm 1960, bài toán này vô nghiệm.",
+   "p": 1.0
+  },
+  "Thiết kế đầu tiên chỉ có bốn nghìn từ nhớ cố định, và hai trăm năm mươi sáu từ ghi được.",
+  {
+   "t": "Con số cuối cùng, trong chiếc máy bay lên Mặt Trăng, là ba mươi sáu nghìn tám trăm sáu mươi bốn từ cố định, và hai nghìn bốn mươi tám từ ghi được.",
+   "p": 1.0
+  },
+  "Cộng lại, chưa tới tám mươi kilobyte.",
+  "Nhỏ hơn nhiều so với một tấm ảnh bạn chụp bằng điện thoại.",
+  "Nặng ba mươi hai ký, ngốn bảy mươi oát.",
+  {
+   "t": "Bên trong có gần năm nghìn mạch logic đơn giản, làm từ những vi mạch còn rất mới.",
+   "p": 1.0
+  },
+  "Mới đến mức, theo báo cáo lịch sử của NASA, mùa hè năm 1963 các nguyên mẫu Apollo đã dùng khoảng sáu mươi phần trăm số vi mạch cả nước Mỹ sản xuất ra.",
+  "Còn phần chương trình thì sao?",
+  "Nó không nằm trong đĩa nào cả.",
+  {
+   "t": "Nó được luồn bằng dây qua những lõi từ, gọi là bộ nhớ dây thừng.",
+   "p": 1.0
+  },
+  "Làm xong thì rất khó sửa.",
+  "Phải giao chương trình trước chuyến bay nhiều tháng.",
+  {
+   "t": "Nghĩa là phần mềm phải đúng ngay từ lần đầu.",
+   "p": 1.0
+  },
+  "Một cỗ máy bé như vậy, khó sửa như vậy, làm sao lo nổi cả chuyến hạ cánh?",
+  "Câu trả lời nằm ở cách nó chia việc."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "CHIẾC MÁY ĐẶT HÀNG\nKHI CHƯA CÓ BẢN VẼ",
+   "sub": "MIT · 1961",
+   "bg": "launch",
+   "titleAt": [
+    0,
+    "Chuyện"
+   ]
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "day": "NASA KÝ HỢP ĐỒNG VỚI PHÒNG THÍ NGHIỆM DỤNG CỤ MIT",
+   "date": "09.08.1961",
+   "sub": {
+    "text": "THIẾT KẾ + CHẾ TẠO HỆ DẪN ĐƯỜNG, KỂ CẢ PHẦN MỀM",
+    "at": 2
+   }
+  },
+  {
+   "type": "photo",
+   "at": 3,
+   "img": "agc",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.5,
+   "illus": "ẢNH MINH HỌA",
+   "kin": [
+    {
+     "text": "NHÓM LÀM HỆ DẪN ĐƯỜNG TÊN LỬA POLARIS",
+     "at": 3,
+     "acc": true
+    },
+    {
+     "text": "nên được chọn cho Apollo",
+     "at": [
+      3,
+      "nên"
+     ],
+     "sm": true
+    }
+   ],
+   "label": {
+    "k": "MÁY TÍNH DẪN ĐƯỜNG APOLLO",
+    "v": "ẢNH: STEVE JURVETSON · CC BY 2.0",
+    "at": 3
+   }
+  },
+  {
+   "type": "timeline",
+   "at": 4,
+   "items": [
+    {
+     "year": "1961",
+     "text": "*ký hợp đồng* · chưa có đặc tả đầy đủ",
+     "at": 4
+    },
+    {
+     "year": "CUỐI 1962",
+     "text": "*mới hình dung* Apollo cần gì",
+     "at": 5
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 6,
+   "dy": true,
+   "text": "Nếu biết trước những gì sẽ học được, họ có lẽ đã kết luận là với công nghệ đầu những năm 1960, bài toán này vô nghiệm.",
+   "by": "MỘT NGƯỜI TRONG NHÓM MIT NHỚ LẠI · QUA TOMAYKO, NASA CR-182505 (1988)",
+   "lbl": "DIỄN Ý",
+   "typeAt": [
+    6,
+    null,
+    0,
+    0.05
+   ],
+   "typeDur": 3.0
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "BỘ NHỚ · THIẾT KẾ ĐẦU → BẢN BAY",
+   "srcnote": "TOMAYKO · NASA CR-182505 · CHƯƠNG 2",
+   "rows": [
+    {
+     "k": "CỐ ĐỊNH",
+     "v": "4K TỪ → 36.864 TỪ",
+     "at": 7
+    },
+    {
+     "k": "GHI ĐƯỢC",
+     "v": "256 TỪ → 2.048 TỪ",
+     "at": [
+      8,
+      "hai"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 9,
+   "from": 78,
+   "to": 78,
+   "prefix": "≈ ",
+   "suffix": " KILOBYTE",
+   "tag": "TỰ TÍNH",
+   "label": "TOÀN BỘ BỘ NHỚ CỦA MÁY · 38.912 TỪ × 16 BIT",
+   "sub": {
+    "text": "CHƯA TỚI 80 KB · KÊNH TỰ TÍNH",
+    "at": 10
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "32 KG · 70 OÁT",
+     "at": 11,
+     "acc": true
+    },
+    {
+     "text": "gần 5.000 mạch logic đơn giản bên trong",
+     "at": [
+      12,
+      "gần"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 13,
+   "text": "60%",
+   "sub": "SỐ VI MẠCH CẢ NƯỚC MỸ SẢN XUẤT · NGUYÊN MẪU APOLLO DÙNG · MÙA HÈ 1963"
+  },
+  {
+   "type": "photo",
+   "at": 14,
+   "img": "agc",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.5,
+   "kin": [
+    {
+     "text": "BỘ NHỚ DÂY THỪNG",
+     "at": [
+      16,
+      "bộ"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "MÁY TÍNH DẪN ĐƯỜNG APOLLO",
+    "v": "BẢN TRƯNG BÀY",
+    "at": 14
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "LÀM XONG LÀ KHÓ SỬA",
+     "at": 17,
+     "acc": true
+    },
+    {
+     "text": "giao trước chuyến bay nhiều tháng",
+     "at": 18,
+     "sm": true
+    },
+    {
+     "text": "PHẢI ĐÚNG NGAY LẦN ĐẦU",
+     "at": 19
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 20,
+   "text": "Máy bé như vậy, khó sửa như vậy,\nlàm sao lo nổi cả chuyến hạ cánh?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "CHIẾC MÁY ĐẶT HÀNG KHI CHƯA CÓ BẢN VẼ"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

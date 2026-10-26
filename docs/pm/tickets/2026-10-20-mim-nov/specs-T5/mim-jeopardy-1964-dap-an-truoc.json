@@ -1,0 +1,195 @@
+{
+ "theme": "mim",
+ "title": "Jeopardy từ năm 1964: trò đố vui đưa đáp án trước, bắt người chơi hỏi lại, và vì sao máy năm 2007 gần như bó tay",
+ "description": "Chương trình đố vui Jeopardy ra đời năm 1964 với một luật lạ: người dẫn đọc ra câu trả lời, người chơi phải đáp lại bằng một câu hỏi (ví dụ: gợi ý là thủ đô nước Pháp, đáp: Paris là gì?). Gợi ý thật đầy chơi chữ, nói lái, vòng vo; tên chủ đề có thể là một câu đùa. Với một cỗ máy năm 2007, đó gần như là không thể. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/Mt5hYcQxH50 (công khai từ 20:00 ngày 19/11).",
+ "tags": [
+  "jeopardy",
+  "watson ibm",
+  "chương trình đố vui",
+  "trí tuệ nhân tạo",
+  "lịch sử máy tính",
+  "mind in the machine"
+ ],
+ "sub": "JEOPARDY · 1964",
+ "acc": [
+  "1964",
+  "đảo",
+  "ngược",
+  "hỏi",
+  "chơi",
+  "chữ"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Năm 1964, một trò đố vui đảo ngược luật.",
+  "Người dẫn đọc ra câu trả lời. Người chơi phải đáp lại bằng một câu hỏi.",
+  "Gợi ý là thủ đô nước Pháp. Bạn bấm chuông và nói: Paris là gì?",
+  "Nhưng gợi ý thật hiếm khi đơn giản như vậy.",
+  "Chúng đầy chơi chữ, nói lái và vòng vo. Tên chủ đề có thể là một câu đùa.",
+  "Một gợi ý có thể ghép hai ý chẳng liên quan gì tới nhau.",
+  "Luật đã ngược, gợi ý lại vòng vo. Với một cỗ máy năm 2007, gần như là không thể."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "ĐẢO NGƯỢC LUẬT",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "trò đố vui từ năm 1964",
+     "at": [
+      0,
+      "Năm"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:4841217",
+   "ms": 5,
+   "veil": 0.55
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "LUẬT CHƠI",
+   "cards": [
+    {
+     "k": "NGƯỜI DẪN ĐỌC",
+     "v": "CÂU TRẢ LỜI",
+     "at": [
+      1,
+      "Người"
+     ]
+    },
+    {
+     "k": "NGƯỜI CHƠI ĐÁP",
+     "v": "MỘT CÂU HỎI",
+     "at": [
+      1,
+      "phải"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "VÍ DỤ",
+   "rows": [
+    {
+     "k": "GỢI Ý",
+     "v": "THỦ ĐÔ NƯỚC PHÁP",
+     "at": [
+      2,
+      "Gợi"
+     ]
+    },
+    {
+     "k": "NGƯỜI CHƠI",
+     "v": "PARIS LÀ GÌ?",
+     "at": [
+      2,
+      "Paris"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "GỢI Ý THẬT",
+     "at": [
+      3,
+      "Nhưng"
+     ],
+     "acc": true
+    },
+    {
+     "text": "hiếm khi đơn giản",
+     "at": [
+      3,
+      "hiếm"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8567113",
+   "ms": 9,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 3
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Gợi ý thật",
+   "nodes": [
+    {
+     "text": "chơi chữ · nói lái · vòng vo",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      4,
+      "chơi"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 800
+    },
+    {
+     "text": "hai ý chẳng liên quan",
+     "x": 0.5,
+     "y": 0.66,
+     "at": [
+      5,
+      "ghép"
+     ],
+     "shape": "none",
+     "w": 700
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "GẦN NHƯ KHÔNG THỂ",
+   "sub": "VỚI MỘT CỖ MÁY NĂM 2007"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Jeopardy!",
+  "https://en.wikipedia.org/wiki/IBM_Watson"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "watson": "Oát-xần",
+  "ibm": "ai bi em",
+  "=IBM": "ai bi em",
+  "jeopardy": "Gie-pơ-đi",
+  "ken": "Ken",
+  "jennings": "Gien-ninh",
+  "david": "Đây-vít",
+  "deep": "Đíp",
+  "blue": "Blu"
+ },
+ "imgs": {}
+}

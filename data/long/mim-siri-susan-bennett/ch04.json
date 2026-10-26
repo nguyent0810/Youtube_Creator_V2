@@ -1,0 +1,284 @@
+{
+ "title": "Đáy cuộn băng: phòng thí nghiệm năm 2003",
+ "lines": [
+  {
+   "t": "Kim lùi về 2003.",
+   "p": 0.8
+  },
+  {
+   "t": "Đây là đáy cuộn băng.",
+   "p": 1.0
+  },
+  "DARPA, cơ quan nghiên cứu quốc phòng Mỹ, có chương trình PAL, tạm dịch: trợ lý cá nhân biết học.",
+  "Trong chương trình ấy có dự án CALO, do viện nghiên cứu SRI ở California dẫn dắt.",
+  "Theo SRI, dự án kéo dài năm năm, bắt đầu từ 2003.",
+  {
+   "t": "Hơn ba trăm nhà nghiên cứu, từ hai mươi hai viện và trường, cùng tham gia.",
+   "p": 1.0
+  },
+  "Trang của SRI hình dung nó bằng một câu rất đời thường.",
+  {
+   "t": "Này CALO, xếp giúp tôi một phòng họp nhé?",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "DARPA ghi rằng thành quả của PAL được dùng cho quân đội.",
+  "Và cả cho việc trò chuyện bằng giọng nói trên thiết bị cầm tay của dân thường.",
+  {
+   "t": "Từ đó, năm 2007, SRI tách ra một công ty riêng, đặt tên là Siri.",
+   "p": 1.0
+  },
+  "Đến đây có một chi tiết đáng để ý.",
+  "Phòng thí nghiệm này làm phần hiểu câu hỏi và làm việc giúp bạn.",
+  "Không tài liệu nào mình đọc được nói nơi này thu giọng của bà Bennett.",
+  {
+   "t": "Theo CNN, giọng ấy đi đường khác: một hợp đồng với ScanSoft, rồi tới Nuance.",
+   "p": 1.0
+  },
+  "Vậy là có hai sợi băng.",
+  "Một sợi là cái đầu, sinh ra ở phòng thí nghiệm.",
+  "Một sợi là giọng nói, sinh ra trong một buồng thu ở Atlanta.",
+  "Mình đã chạm đáy.",
+  "Giờ thì tua xuôi, để xem hai sợi ấy gặp nhau thế nào, và vì sao rồi giọng ấy bị thay."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "CHƯƠNG BỐN",
+   "title": "ĐÁY CUỘN BĂNG\nPHÒNG THÍ NGHIỆM 2003",
+   "sub": "◀◀ KIM CHỈ NĂM: 2003",
+   "bg": "cassette",
+   "titleAt": [
+    0,
+    "kim"
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 1,
+   "label": {
+    "k": "CUỘN BĂNG",
+    "v": "◀◀ CHẠM ĐÁY",
+    "at": 1
+   },
+   "items": [
+    {
+     "year": "2011",
+     "text": "*ra mắt*",
+     "at": 1
+    },
+    {
+     "year": "2005",
+     "text": "*phòng thu*",
+     "at": [
+      1,
+      "là"
+     ]
+    },
+    {
+     "year": "2003",
+     "text": "*đáy cuộn băng*",
+     "at": [
+      1,
+      "đáy"
+     ],
+     "color": "#f472b6"
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "AI · Ở ĐÂU",
+   "srcnote": "DARPA · SRI INTERNATIONAL",
+   "rows": [
+    {
+     "k": "DARPA",
+     "v": "CƠ QUAN NGHIÊN CỨU QUỐC PHÒNG MỸ",
+     "at": 2
+    },
+    {
+     "k": "PAL",
+     "v": "TRỢ LÝ CÁ NHÂN BIẾT HỌC",
+     "at": [
+      2,
+      "trợ"
+     ]
+    },
+    {
+     "k": "CALO",
+     "v": "DỰ ÁN DO SRI DẪN DẮT",
+     "at": [
+      3,
+      "dự"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 0,
+   "to": 5,
+   "suffix": " NĂM",
+   "until": [
+    4,
+    "bắt"
+   ],
+   "label": "DỰ ÁN CALO · BẮT ĐẦU TỪ 2003",
+   "sub": {
+    "text": "THEO SRI",
+    "at": 4
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "HƠN 300 NHÀ NGHIÊN CỨU",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "từ 22 viện và trường · theo SRI",
+     "at": [
+      5,
+      "viện"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "chat",
+   "at": 7,
+   "head": "TRANG CỦA SRI HÌNH DUNG · TRÍCH DỊCH",
+   "msgs": [
+    {
+     "who": "u",
+     "text": "Này CALO, xếp giúp tôi một phòng họp nhé?",
+     "at": 7
+    }
+   ]
+  },
+  {
+   "type": "source",
+   "at": 8,
+   "source": "DARPA · INNOVATION TIMELINE",
+   "ref": "PERSONAL ASSISTANT THAT LEARNS (PAL)",
+   "snippet": "thành quả của PAL dùng cho quân đội, và [[cho việc trò chuyện bằng giọng nói trên thiết bị cầm tay dân sự]]",
+   "hlAt": [
+    9,
+    "trò"
+   ],
+   "seal": "DỊCH TỪ TRANG DARPA",
+   "sealAt": [
+    9,
+    "dân"
+   ]
+  },
+  {
+   "type": "date",
+   "at": 10,
+   "day": "SRI TÁCH RA CÔNG TY SIRI",
+   "date": "2007",
+   "sub": {
+    "text": "THEO DARPA VÀ SRI",
+    "at": [
+     10,
+     "đặt"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "MỘT CHI TIẾT ĐÁNG ĐỂ Ý",
+     "at": 11,
+     "acc": true
+    },
+    {
+     "text": "phòng thí nghiệm: phần hiểu câu hỏi, làm việc giúp bạn",
+     "at": 12,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 13,
+   "mythLab": "DỄ NGHĨ",
+   "myth": "GIỌNG CŨNG TỪ ĐÂY",
+   "truthLab": "THEO CNN",
+   "truth": "SCANSOFT → NUANCE",
+   "strikeAt": [
+    13,
+    "không"
+   ],
+   "truthAt": [
+    14,
+    "đường"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 15,
+   "title": "HAI SỢI BĂNG",
+   "srcnote": "SRI · DARPA · CNN",
+   "rows": [
+    {
+     "k": "SỢI 1",
+     "v": "CÁI ĐẦU · PHÒNG THÍ NGHIỆM",
+     "at": 16
+    },
+    {
+     "k": "SỢI 2",
+     "v": "GIỌNG NÓI · BUỒNG THU Ở ATLANTA",
+     "at": 17
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 18,
+   "text": "ĐÁY CUỘN BĂNG",
+   "sub": "▶ GIỜ TUA XUÔI",
+   "white": true
+  },
+  {
+   "type": "broll",
+   "at": 19,
+   "vid": "11124043",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "▶ TUA XUÔI",
+     "at": 19,
+     "acc": true
+    },
+    {
+     "text": "hai sợi gặp nhau thế nào?",
+     "at": [
+      19,
+      "gặp"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "ĐÁY CUỘN BĂNG: PHÒNG THÍ NGHIỆM NĂM 2003"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

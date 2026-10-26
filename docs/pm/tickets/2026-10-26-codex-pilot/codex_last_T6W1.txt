@@ -1,0 +1,10 @@
+Đã hoàn tất phần W1 được phép ghi:
+
+- [Kịch bản](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-macintosh-1984\script.md)
+- [Factcheck](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-macintosh-1984\factcheck.md)
+- [Báo cáo](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-26-codex-pilot\T6W1-ket-qua.md)
+
+`script_lines.py`: 2.271 âm tiết, CH00 201 âm tiết.  
+`studio_lint.py --strict`: 0 lỗi, 7 cảnh báo phong cách.
+
+Đã chạy đúng `python scripts/long_gate.py mim-macintosh-1984 --min-syl 1900`, nhưng kết quả **TRƯỢT**: ticket W1 chỉ cho ghi script/factcheck/báo cáo, còn gate bắt buộc cần cảnh, HUD, `spec.youtube`, `say` và timing TTS—các artefact nằm ngoài phạm vi ghi của ticket. Chi tiết lỗi đã ghi trong báo cáo; chưa tự ý tạo phần sản xuất đó.

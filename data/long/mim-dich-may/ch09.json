@@ -1,0 +1,448 @@
+{
+ "title": "Cỗ máy học nhìn lại",
+ "lines": [
+  {
+   "t": "Tháng 9 năm 2014, có hai bài báo xuất hiện cách nhau chưa đầy mười ngày.",
+   "p": 0.8
+  },
+  "Bài thứ nhất do Ilya Sutskever và các đồng nghiệp ở Google viết. Họ cho một mạng nơ-ron đọc cả câu tiếng Anh, nén nó thành một dãy số cố định.",
+  {
+   "t": "Rồi một mạng nơ-ron thứ hai đọc dãy số ấy, và viết ra câu tiếng Pháp.",
+   "p": 1.0
+  },
+  "Điểm số đo mức giống bản dịch của người, tối đa một trăm. Với bài thi Anh sang Pháp, cách làm mới đạt ba mươi bốn phẩy tám.",
+  {
+   "t": "Hệ thống dịch theo cụm cùng bài thi đạt ba mươi ba phẩy ba.",
+   "p": 1.0
+  },
+  {
+   "t": "Còn một chi tiết lạ: họ đảo ngược thứ tự từ của câu nguồn, và điểm tăng rõ rệt.",
+   "p": 1.0
+  },
+  "Bài thứ hai, của Dzmitry Bahdanau, Kyunghyun Cho và Yoshua Bengio, chỉ ra cái yếu của cách làm thứ nhất.",
+  {
+   "t": "Họ viết rằng ép cả câu vào một dãy số có độ dài cố định là một nút thắt cổ chai.",
+   "p": 1.0
+  },
+  "Họ đề nghị một cách khác: để cỗ máy vừa dịch vừa quay lại nhìn câu nguồn.",
+  "Mỗi lần viết một chữ, nó tự tìm xem những chữ nào của câu gốc đáng chú ý nhất lúc này.",
+  {
+   "t": "Các tác giả viết rằng những chỗ máy chú ý, khi nhìn lại, hợp với trực giác của người.",
+   "p": 1.0
+  },
+  "Bạn nhớ chữ not đi cùng ne và pas chứ?",
+  "Máy năm 1990 ghép đôi từ bằng cách đếm. Máy năm 2014 ghép đôi ngay trong lúc dịch, khác nhau cho từng câu.",
+  {
+   "t": "Ghi vào sổ: năm 2014, nhìn lại.",
+   "p": 1.0
+  },
+  "Hai năm sau, ngày 26 tháng 9 năm 2016, Google công bố hệ thống dịch nơ-ron của chính họ.",
+  "Mười sáu tầng: tám tầng đọc, tám tầng viết. Chữ hiếm được chia nhỏ thành những mảnh để dịch.",
+  {
+   "t": "Theo Google, trên những câu đơn giản, hệ thống mới giảm lỗi trung bình sáu mươi phần trăm so với hệ thống cũ. Ở vài cặp tiếng lớn, mức giảm từ năm mươi lăm đến tám mươi lăm phần trăm.",
+   "p": 1.0
+  },
+  {
+   "t": "Ngày đó, mọi bản dịch tiếng Trung sang tiếng Anh của Google chuyển sang hệ thống mới. Theo Google, khoảng mười tám triệu bản dịch mỗi ngày.",
+   "p": 1.0
+  },
+  "Nhưng chính bài viết đó cũng thú nhận.",
+  {
+   "t": "Hệ thống vẫn có thể mắc những lỗi mà người dịch không bao giờ mắc: bỏ sót chữ, dịch sai tên riêng. Và nó dịch từng câu một, chứ không nhìn cả đoạn.",
+   "p": 1.0
+  },
+  "Còn một điều nữa, mà Weaver chắc sẽ rất thích.",
+  "Tháng 11 năm 2016, Google cho một mô hình duy nhất dịch giữa nhiều thứ tiếng. Chỉ cần thêm một mã ở đầu câu để nói cần dịch sang tiếng nào.",
+  {
+   "t": "Và nó dịch được cả những cặp tiếng chưa từng thấy lúc học.",
+   "p": 1.0
+  },
+  "Họ viết rằng các phân tích gợi ý một thứ ngôn ngữ chung bên trong máy.",
+  {
+   "t": "Một tầng hầm của toà tháp? Họ nói rõ đó mới là giả thuyết.",
+   "p": 1.0
+  },
+  "Nhưng còn một bài báo năm 2017 mà bạn phải biết.",
+  "Nó cũng là một bài về dịch máy."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "9",
+   "k": "CHƯƠNG CHÍN",
+   "title": "CỖ MÁY HỌC\nNHÌN LẠI",
+   "sub": "2014 — 2016",
+   "vid": "35008786",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Tháng"
+   ]
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "day": "SUTSKEVER VÀ CỘNG SỰ · GOOGLE · ARXIV",
+   "date": "09.2014"
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "MẠNG THỨ HAI ĐỌC DÃY SỐ",
+     "at": 2,
+     "sm": true
+    },
+    {
+     "text": "VIẾT RA CÂU TIẾNG PHÁP",
+     "at": [
+      2,
+      "viết"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 3,
+   "title": "BÀI THI ANH → PHÁP · ĐIỂM TỐI ĐA 100",
+   "unit": "",
+   "items": [
+    {
+     "k": "DỊCH THEO CỤM (CÙNG BÀI THI)",
+     "v": 33.3,
+     "lbl": "33,3",
+     "at": 4
+    },
+    {
+     "k": "MẠNG NƠ-RON ĐỌC–VIẾT",
+     "v": 34.8,
+     "lbl": "34,8",
+     "at": [
+      3,
+      "ba"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "THEO BÀI BÁO SUTSKEVER, 2014",
+    "v": "ĐIỂM ĐO MỨC GIỐNG BẢN DỊCH CỦA NGƯỜI",
+    "at": 3
+   }
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "ĐẢO NGƯỢC THỨ TỰ CÂU NGUỒN",
+   "sub": "ĐIỂM TĂNG RÕ RỆT"
+  },
+  {
+   "type": "print",
+   "at": 6,
+   "img": "bengio",
+   "tone": "color",
+   "illus": "ẢNH: YOSHUA BENGIO · 2019 · MARYSE BOYCE (CC BY 4.0)",
+   "side": {
+    "k": "BAHDANAU · CHO · BENGIO",
+    "h": "Bài thứ hai",
+    "lines": [
+     {
+      "text": "Chỉ ra *cái yếu* của cách thứ nhất",
+      "at": [
+       6,
+       "chỉ"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "ÉP CẢ CÂU VÀO MỘT DÃY SỐ CỐ ĐỊNH",
+     "at": 7,
+     "sm": true
+    },
+    {
+     "text": "NÚT THẮT CỔ CHAI",
+     "at": [
+      7,
+      "nút"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "text": "VỪA DỊCH · VỪA NHÌN LẠI",
+   "sub": "ĐỀ NGHỊ CỦA BAHDANAU, CHO, BENGIO · 2014"
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "MỖI CHỮ VIẾT RA",
+     "at": 9,
+     "sm": true
+    },
+    {
+     "text": "→ TÌM CHỮ ĐÁNG CHÚ Ý NHẤT",
+     "at": [
+      9,
+      "tự"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 11,
+   "mythLab": "1990 · MÁY ĐẾM",
+   "myth": "NOT ↔ NE … PAS",
+   "truthLab": "2014 · MÁY NHÌN LẠI",
+   "truth": "GHÉP ĐÔI NGAY KHI DỊCH",
+   "strikeAt": [
+    12,
+    "đếm"
+   ],
+   "truthAt": [
+    12,
+    "ngay"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "GHI VÀO SỔ",
+     "at": [
+      13,
+      "ghi"
+     ],
+     "sm": true
+    },
+    {
+     "text": "2014 · NHÌN LẠI",
+     "at": [
+      13,
+      "năm"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 14,
+   "day": "GOOGLE · HỆ THỐNG DỊCH NƠ-RON (GNMT)",
+   "date": "26.09.2016"
+  },
+  {
+   "type": "counter",
+   "at": 15,
+   "from": 0,
+   "to": 16,
+   "suffix": " TẦNG",
+   "until": [
+    15,
+    "tầng"
+   ],
+   "label": "8 TẦNG ĐỌC + 8 TẦNG VIẾT · THEO BÀI BÁO GNMT"
+  },
+  {
+   "type": "bars",
+   "at": 16,
+   "title": "GIẢM LỖI SO VỚI HỆ THỐNG CŨ · THEO GOOGLE",
+   "unit": "",
+   "items": [
+    {
+     "k": "TRUNG BÌNH · CÂU ĐƠN GIẢN",
+     "v": 60,
+     "lbl": "60%",
+     "at": [
+      16,
+      "sáu"
+     ]
+    },
+    {
+     "k": "VÀI CẶP TIẾNG LỚN · MỨC CAO NHẤT",
+     "v": 85,
+     "lbl": "55–85%",
+     "at": [
+      16,
+      "năm"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "NGƯỜI CHẤM SO SÁNH · HÃNG TỰ BÁO CÁO",
+    "v": "THEO GOOGLE",
+    "at": 16
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "MỌI BẢN DỊCH TRUNG → ANH",
+     "at": [
+      17,
+      "mọi"
+     ],
+     "sm": true
+    },
+    {
+     "text": "≈18 TRIỆU / NGÀY · THEO GOOGLE",
+     "at": [
+      17,
+      "theo"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 18,
+   "text": "GOOGLE THÚ NHẬN",
+   "sub": "CHÍNH BÀI VIẾT ĐÓ"
+  },
+  {
+   "type": "ledger",
+   "at": 19,
+   "title": "LỖI NGƯỜI DỊCH KHÔNG MẮC · THEO GOOGLE",
+   "rows": [
+    {
+     "k": "BỎ SÓT CHỮ",
+     "v": "",
+     "at": [
+      19,
+      "bỏ"
+     ]
+    },
+    {
+     "k": "DỊCH SAI TÊN RIÊNG",
+     "v": "",
+     "at": [
+      19,
+      "sai"
+     ]
+    },
+    {
+     "k": "DỊCH TỪNG CÂU MỘT",
+     "v": "KHÔNG NHÌN CẢ ĐOẠN",
+     "at": [
+      19,
+      "Và"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 20,
+   "items": [
+    {
+     "text": "WEAVER",
+     "at": [
+      20,
+      "Weaver"
+     ],
+     "sm": true
+    },
+    {
+     "text": "CHẮC SẼ THÍCH",
+     "at": [
+      20,
+      "chắc"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 21,
+   "day": "GOOGLE · MỘT MÔ HÌNH CHO NHIỀU THỨ TIẾNG",
+   "date": "11.2016",
+   "sub": {
+    "text": "MỘT MÃ Ở ĐẦU CÂU · NÓI CẦN DỊCH SANG TIẾNG NÀO",
+    "at": [
+     21,
+     "chỉ"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 22,
+   "text": "CẶP TIẾNG CHƯA TỪNG THẤY",
+   "sub": "VẪN DỊCH ĐƯỢC · THEO BÀI BÁO GOOGLE"
+  },
+  {
+   "type": "photo",
+   "at": 23,
+   "img": "babel",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.45,
+   "kin": [
+    {
+     "text": "MỘT TẦNG HẦM CỦA TOÀ THÁP?",
+     "at": [
+      24,
+      "một"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "TRANH MINH HỌA · THÁP BABEL, BRUEGEL, 1563",
+    "v": "“GIẢ THUYẾT” · THEO CHÍNH CÁC TÁC GIẢ",
+    "at": 23
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 25,
+   "items": [
+    {
+     "text": "2017",
+     "at": [
+      25,
+      "năm"
+     ],
+     "sm": true
+    },
+    {
+     "text": "MỘT BÀI VỀ DỊCH MÁY",
+     "at": [
+      26,
+      "một"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 09",
+  "t": "CỖ MÁY HỌC NHÌN LẠI"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.1
+ }
+}

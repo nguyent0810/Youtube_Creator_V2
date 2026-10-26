@@ -1,0 +1,188 @@
+{
+ "theme": "mim",
+ "title": "13/04/2019: OpenAI Five thắng OG, đội vô địch The International, nhưng ván đấu có chú thích nhỏ",
+ "description": "Ngày 13/04/2019, ở San Francisco, OpenAI Five thắng hai ván đầu trước OG, đội vừa vô địch The International 2018 (loạt ba ván thắng hai). Ván đấu có giới hạn: số tướng được chọn ít hơn nhiều so với trò chơi đầy đủ và một số cơ chế bị tắt (Wikipedia: OpenAI Five; TechCrunch 15/04/2019).\n\nGiọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/0J3dcjPjcdI (công khai từ 20:00 ngày 03/12).",
+ "tags": [
+  "openai five",
+  "dota 2",
+  "og",
+  "openai",
+  "trận đấu người máy",
+  "trí tuệ nhân tạo",
+  "lịch sử máy tính",
+  "mind in the machine"
+ ],
+ "sub": "04.2019",
+ "acc": [
+  "thắng",
+  "chú",
+  "thích",
+  "nhỏ",
+  "hai"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Máy thắng nhà vô địch, có chú thích nhỏ.",
+  "Ngày 13 tháng 4 năm 2019, ở San Francisco, OpenAI Five thắng hai ván đầu trước đội OG.",
+  "OG là đội vừa vô địch The International năm trước.",
+  "Theo OpenAI, đó là lần đầu một trí tuệ nhân tạo đánh bại nhà vô địch thế giới ở một môn thể thao điện tử.",
+  "Nhưng ván đấu có giới hạn: kho tướng thu nhỏ rất nhiều, và vài cơ chế bị tắt, cho cả hai bên.",
+  "Chỉ có cỗ máy là đã luyện hàng nghìn năm trong đúng phiên bản ấy.",
+  "Tỉ số là hai không, và chú thích nhỏ cũng thuộc về câu chuyện."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "2 – 0",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "OpenAI Five thắng OG · 13/04/2019",
+     "at": [
+      0,
+      "nhà"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:9071005",
+   "ms": 2,
+   "veil": 0.55
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "SAN FRANCISCO · 04/2019",
+   "cards": [
+    {
+     "k": "ĐỐI THỦ",
+     "v": "OG",
+     "at": [
+      1,
+      "đội"
+     ]
+    },
+    {
+     "k": "OG LÀ",
+     "v": "VÔ ĐỊCH TI 2018",
+     "at": [
+      2,
+      "vô"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "LẦN ĐẦU TIÊN",
+     "at": 3,
+     "acc": true
+    },
+    {
+     "text": "AI thắng nhà vô địch esports · theo OpenAI",
+     "at": [
+      3,
+      "một"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7915042",
+   "ms": 1,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 3
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Chú thích nhỏ",
+   "nodes": [
+    {
+     "text": "kho tướng thu nhỏ rất nhiều",
+     "at": [
+      4,
+      "kho"
+     ],
+     "x": 0.5,
+     "y": 0.3,
+     "shape": "none",
+     "w": 800
+    },
+    {
+     "text": "vài cơ chế bị tắt",
+     "at": [
+      4,
+      "cơ"
+     ],
+     "x": 0.5,
+     "y": 0.66,
+     "c": "acc",
+     "shape": "circle",
+     "w": 700
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "CÙNG LUẬT, KHÁC ĐỘ QUEN",
+   "rows": [
+    {
+     "k": "OG",
+     "v": "PHIÊN BẢN LẠ",
+     "at": [
+      5,
+      "Chỉ"
+     ]
+    },
+    {
+     "k": "CỖ MÁY",
+     "v": "ĐÃ LUYỆN",
+     "at": [
+      5,
+      "luyện"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "2 – 0 · CÓ CHÚ THÍCH",
+   "sub": "TỈ SỐ VÀ LUẬT CHƠI"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/OpenAI_Five",
+  "https://techcrunch.com/2019/04/15/openais-dota-playing-bots-defeat-the-worlds-top-human-team/"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "openai": "Ô-pần Ây Ai",
+  "dota": "Đô-ta",
+  "og": "Ô Gi",
+  "francisco": "Phran-xít-cô"
+ },
+ "imgs": {}
+}

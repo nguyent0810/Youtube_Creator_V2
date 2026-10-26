@@ -1,0 +1,154 @@
+{
+ "theme": "mim",
+ "title": "Tháng 8/2016, Jensen Huang tự tay mang siêu máy tính 8 GPU tới một phòng thí nghiệm AI mới lập",
+ "description": "Tháng 8/2016, Jensen Huang giao tận tay chiếc DGX-1 (Nvidia gọi là siêu máy tính đầu tiên dành riêng cho trí tuệ nhân tạo, 8 GPU Tesla P100) cho OpenAI ở San Francisco; OpenAI lập tháng 12/2015, Ilya Sutskever là một trong những người sáng lập. ChatGPT ra mắt ngày 30/11/2022, khoảng sáu năm sau (Fortune 15/08/2016; DataCenterKnowledge 18/08/2016). Giọng đọc tổng hợp; video Pexels.\n\nBản đầy đủ: https://youtu.be/<ID-mim-ai-gpu> (công khai từ 20:00 ngày 16/11)",
+ "tags": [
+  "dgx-1",
+  "openai",
+  "jensen huang",
+  "siêu máy tính",
+  "trí tuệ nhân tạo",
+  "gpu",
+  "nvidia",
+  "card đồ hoạ",
+  "mind in the machine"
+ ],
+ "kicker": "NGÀNH AI",
+ "sub": "DGX-1 · 2016",
+ "acc": [
+  "tám",
+  "gpu",
+  "hộp"
+ ],
+ "lines": [
+  "Tám GPU trong một chiếc hộp, giao tận tay.",
+  "Tháng tám năm hai nghìn không trăm mười sáu, Jensen Huang tự mang một chiếc máy tới một phòng thí nghiệm nhỏ ở San Francisco.",
+  "Phòng thí nghiệm ấy mới lập được vài tháng, tên là OpenAI.",
+  "Chiếc máy tên là DGX. Nvidia gọi nó là siêu máy tính đầu tiên dành riêng cho trí tuệ nhân tạo.",
+  "Bên trong có tám GPU, xếp sát nhau.",
+  "Sáu năm sau, chính phòng thí nghiệm ấy ra mắt ChatGPT.",
+  "Từ hai chiếc card trong phòng ngủ, tới tám GPU trong một chiếc hộp."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "8 GPU",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "trong một chiếc hộp",
+     "at": [
+      0,
+      "trong"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:1085656",
+   "veil": 0.5
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "THÁNG 8 / 2016 · SAN FRANCISCO",
+   "cards": [
+    {
+     "k": "NGƯỜI GIAO",
+     "v": "JENSEN HUANG",
+     "at": [
+      1,
+      "Jensen"
+     ]
+    },
+    {
+     "k": "NGƯỜI NHẬN",
+     "v": "OPENAI",
+     "at": [
+      2,
+      "OpenAI"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "THEO FORTUNE 15/08/2016"
+  },
+  {
+   "type": "timeline",
+   "at": 3,
+   "items": [
+    {
+     "year": "08.2016",
+     "text": "DGX-1 · 8 GPU tới OpenAI",
+     "at": [
+      3,
+      "DGX"
+     ]
+    },
+    {
+     "year": "30.11.2022",
+     "text": "ChatGPT ra mắt",
+     "at": [
+      5,
+      "ChatGPT"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "2 CARD → 8 GPU",
+     "at": 6,
+     "acc": true
+    },
+    {
+     "text": "từ phòng ngủ tới một chiếc hộp",
+     "at": [
+      6,
+      "phòng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7140928",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  }
+ ],
+ "sources": [
+  "Fortune 15/08/2016 (CẦN KIỂM URL bài)",
+  "DataCenterKnowledge 18/08/2016; TOP500 (factcheck.md dòng 10, 11)"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6,
+   "0": 0.35
+  }
+ },
+ "say": {
+  "=GPU": "gi pi iu",
+  "nvidia": "En-vi-đi-a",
+  "=OpenAI": "Âu-pần Ây-ai",
+  "=ChatGPT": "Chát-gi-pi-ti",
+  "jensen": "Gien-xần",
+  "huang": "Hoang",
+  "francisco": "Phran-xít-cô",
+  "=DGX": "đi gi ích",
+  "ng": "En-gờ"
+ },
+ "imgs": {}
+}

@@ -1,0 +1,256 @@
+{
+ "title": "Nửa đêm ngày 1 tháng 5",
+ "lines": [
+  {
+   "t": "Ngày 1 tháng 5 năm 2000, Nhà Trắng công bố một tuyên bố của Tổng thống Bill Clinton.",
+   "p": 0.8
+  },
+  {
+   "t": "Hôm nay, tôi vui mừng thông báo rằng Hoa Kỳ sẽ ngừng cố ý làm suy giảm tín hiệu GPS dành cho công chúng, bắt đầu từ nửa đêm nay.",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Ông viết rằng người dùng dân sự sẽ định vị chính xác hơn tới mười lần.",
+  "Và Mỹ sẽ tiếp tục cung cấp các khả năng ấy cho người dùng khắp thế giới, miễn phí.",
+  {
+   "t": "Chữ miễn phí xuất hiện ở đây, gần mười bảy năm sau buổi sáng ở Sakhalin.",
+   "p": 1.0
+  },
+  "Theo chính phủ Mỹ, vài phút sau nửa đêm, giờ miền Đông nước Mỹ, lớp nhiễu tắt.",
+  "Cùng một lúc, trên toàn bộ chòm vệ tinh.",
+  {
+   "t": "Không ai phải thay máy thu.",
+   "p": 1.0
+  },
+  "Ở trạm đo Kentucky, bán kính chứa chín mươi lăm phần trăm số điểm đo co từ bốn mươi lăm mét xuống còn sáu phẩy ba mét.",
+  "Cây thước lại sắp co.",
+  {
+   "t": "Từ chỗ chỉ biết mình ở dưới sân hay trên khán đài, giờ bạn biết mình đứng ở vạch kẻ nào.",
+   "p": 1.0
+  },
+  "Tuyên bố của Clinton nêu một ví dụ.",
+  {
+   "t": "Các đội cấp cứu đáp lại một lời kêu cứu giờ có thể xác định họ phải tới phía nào của đường cao tốc.",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Vậy ai trả giá cho nấc co này?",
+  "Trước hết là quân đội Mỹ: họ bỏ cách làm nhoè tín hiệu trên toàn cầu.",
+  "Thay vào đó, tuyên bố nói Mỹ đã chứng minh có thể chặn tín hiệu GPS theo từng khu vực, khi an ninh bị đe dọa.",
+  "Theo tuyên bố, chính Bộ trưởng Quốc phòng đã đề xuất quyết định này.",
+  {
+   "t": "Năm 2007, Mỹ còn quyết định đặt hàng thế hệ vệ tinh GPS III không có tính năng làm nhoè.",
+   "p": 1.0
+  },
+  "Nhưng còn một khoản giá nữa.",
+  "Nó nằm trong túi của một nhóm người rất cụ thể."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "CHƯƠNG NĂM",
+   "title": "NỬA ĐÊM\nNGÀY 1 THÁNG 5",
+   "sub": "NHÀ TRẮNG · 2000",
+   "bg": "navstar2f",
+   "titleAt": [
+    0,
+    "ngày"
+   ]
+  },
+  {
+   "type": "print",
+   "at": [
+    0,
+    "công"
+   ],
+   "img": "clinton",
+   "tone": "color",
+   "side": {
+    "k": "01.05.2000 · TUYÊN BỐ CỦA TỔNG THỐNG",
+    "h": "Bill\nClinton",
+    "lines": [
+     {
+      "text": "*Nhà Trắng* công bố",
+      "at": [
+       0,
+       "công"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "quote",
+   "at": 1,
+   "text": "Today, I am pleased to announce that the United States will stop the intentional degradation of the Global Positioning System (GPS) signals available to the public beginning at midnight tonight.",
+   "by": "BILL CLINTON · TUYÊN BỐ 01.05.2000 · CLINTON WHITE HOUSE ARCHIVES",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 1,
+   "typeAt": [
+    1,
+    "hôm"
+   ],
+   "typeDur": 3.6
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "CHÍNH XÁC HƠN TỚI 10 LẦN",
+     "at": 2,
+     "acc": true
+    },
+    {
+     "text": "“free of charge” · miễn phí cho người dùng khắp thế giới",
+     "at": [
+      3,
+      "miễn"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "MIỄN PHÍ",
+   "sub": "CHỮ NÀY CÓ TRONG TUYÊN BỐ 2000 · KHÔNG CÓ TRONG TUYÊN BỐ 1983"
+  },
+  {
+   "type": "date",
+   "at": 5,
+   "bg": "navstar2f",
+   "day": "SA TẮT · SAU 0 GIỜ (MIỀN ĐÔNG MỸ)",
+   "date": "02.05.2000",
+   "sub": {
+    "text": "CÙNG LÚC TRÊN TOÀN BỘ CHÒM VỆ TINH · GPS.GOV",
+    "at": 6
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "KHÔNG AI PHẢI THAY MÁY THU",
+     "at": 7,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 8,
+   "title": "BÁN KÍNH CHỨA 95% ĐIỂM ĐO · TRẠM KENTUCKY",
+   "unit": "NOAA NGS · GPS.GOV (MÉT)",
+   "max": 50,
+   "items": [
+    {
+     "k": "CÒN SA · 01.05.2000",
+     "v": 45,
+     "lbl": "45,0",
+     "at": [
+      8,
+      "bốn"
+     ]
+    },
+    {
+     "k": "TẮT SA · 03.05.2000",
+     "v": 6.3,
+     "lbl": "6,3",
+     "at": [
+      8,
+      "sáu"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "CÂY THƯỚC LẠI SẮP CO",
+     "at": 9,
+     "acc": true
+    },
+    {
+     "text": "từ khán đài · tới từng vạch kẻ",
+     "at": 10,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 12,
+   "text": "…emergency teams responding to a cry for help can now determine what side of the highway they must respond to, thereby saving precious minutes.",
+   "by": "BILL CLINTON · TUYÊN BỐ 01.05.2000",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 12,
+   "typeAt": [
+    12,
+    "các"
+   ],
+   "typeDur": 3.0
+  },
+  {
+   "type": "question",
+   "at": 13,
+   "text": "Ai trả giá\ncho nấc co này?"
+  },
+  {
+   "type": "ledger",
+   "at": 14,
+   "title": "CÁI GIÁ CỦA QUÂN ĐỘI MỸ",
+   "srcnote": "TUYÊN BỐ 01.05.2000 · GPS.GOV (QUYẾT ĐỊNH 09.2007)",
+   "rows": [
+    {
+     "k": "BỎ",
+     "v": "LÀM NHOÈ TOÀN CẦU",
+     "at": 14
+    },
+    {
+     "k": "THAY BẰNG",
+     "v": "CHẶN THEO TỪNG KHU VỰC",
+     "at": [
+      15,
+      "chặn"
+     ]
+    },
+    {
+     "k": "ĐỀ XUẤT",
+     "v": "BỘ TRƯỞNG QUỐC PHÒNG",
+     "at": [
+      16,
+      "bộ"
+     ]
+    },
+    {
+     "k": "2007",
+     "v": "GPS III KHÔNG CÓ SA",
+     "at": 17
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 18,
+   "text": "CÒN MỘT KHOẢN GIÁ",
+   "sub": "NẰM TRONG TÚI MỘT NHÓM NGƯỜI RẤT CỤ THỂ"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "NỬA ĐÊM NGÀY 1 THÁNG 5"
+ },
+ "bgm": {
+  "mood": "epic",
+  "gain": 0.12
+ }
+}

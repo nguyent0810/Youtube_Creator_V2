@@ -1,0 +1,189 @@
+{
+ "theme": "mim",
+ "title": "Bốn năm trước trận đấu, Watson chơi rất tệ: nhóm của David Ferrucci ghép hàng trăm phương pháp nhỏ thế nào",
+ "description": "Khoảng năm 2007, IBM giao bài toán chơi Jeopardy cho nhóm nghiên cứu do David Ferrucci dẫn đầu. Những bản đầu trả lời đúng một phần nhỏ số câu hỏi và chậm tới mức không thể thi đấu. Nhóm không tìm một thuật toán thần kỳ mà ghép hàng trăm phương pháp nhỏ, mỗi phương pháp nhìn câu hỏi từ một góc khác (Wikipedia: IBM Watson). Tới 2011, cỗ máy đấu với hai nhà vô địch. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/Mt5hYcQxH50 (công khai từ 20:00 ngày 19/11).",
+ "tags": [
+  "watson ibm",
+  "david ferrucci",
+  "jeopardy",
+  "deepqa",
+  "trí tuệ nhân tạo",
+  "lịch sử máy tính",
+  "mind in the machine"
+ ],
+ "sub": "JEOPARDY · 2007–2011",
+ "acc": [
+  "tệ",
+  "Ferrucci",
+  "hàng",
+  "trăm",
+  "mảnh"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Bốn năm trước trận đấu, Watson chơi rất tệ.",
+  "Khoảng năm 2007, IBM giao bài toán cho nhóm của David Ferrucci.",
+  "Những bản đầu chỉ trả lời đúng một phần nhỏ số câu hỏi, và chậm tới mức không thể thi đấu.",
+  "Nhóm không tìm một thuật toán thần kỳ.",
+  "Họ ghép hàng trăm phương pháp nhỏ lại với nhau, mỗi cái nhìn câu hỏi từ một góc khác.",
+  "Tới năm 2011, những mảnh ghép ấy đủ sức đấu với hai nhà vô địch.",
+  "Từ một cỗ máy chơi tệ, thành người thắng cuộc, bằng hàng trăm mảnh ghép nhỏ."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CHƠI RẤT TỆ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "bốn năm trước trận đấu",
+     "at": [
+      0,
+      "Bốn"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6962281",
+   "ms": 3,
+   "veil": 0.55
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 4,
+   "to": 4,
+   "suffix": " NĂM",
+   "label": "NHÓM FERRUCCI · KHOẢNG 2007 – 2011",
+   "sub": {
+    "text": "TỪ BẢN CHƠI TỆ TỚI TRẬN ĐẤU",
+    "at": [
+     1,
+     "bài"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Những bản đầu",
+   "nodes": [
+    {
+     "text": "đúng chỉ một phần nhỏ",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      2,
+      "đúng"
+     ],
+     "shape": "none",
+     "w": 780
+    },
+    {
+     "text": "chậm · không thể thi đấu",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      2,
+      "chậm"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 740
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "KHÔNG CÓ THUẬT TOÁN THẦN KỲ",
+     "at": [
+      3,
+      "không"
+     ],
+     "acc": true
+    },
+    {
+     "text": "nhóm làm điều ngược lại",
+     "at": 3,
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8567113",
+   "ms": 9,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 3
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Cách của nhóm",
+   "nodes": [
+    {
+     "text": "hàng trăm phương pháp nhỏ",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      4,
+      "hàng"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 760
+    },
+    {
+     "text": "mỗi cái một góc nhìn",
+     "x": 0.5,
+     "y": 0.66,
+     "at": [
+      4,
+      "mỗi"
+     ],
+     "shape": "none",
+     "w": 700
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "HÀNG TRĂM MẢNH GHÉP",
+   "sub": "RỒI CỖ MÁY ĐẤU 2011"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/IBM_Watson"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.5
+  }
+ },
+ "say": {
+  "watson": "Oát-xần",
+  "ibm": "ai bi em",
+  "=IBM": "ai bi em",
+  "jeopardy": "Gie-pơ-đi",
+  "ken": "Ken",
+  "jennings": "Gien-ninh",
+  "david": "Đây-vít",
+  "deep": "Đíp",
+  "blue": "Blu"
+ },
+ "imgs": {}
+}

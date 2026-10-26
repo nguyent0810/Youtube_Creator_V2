@@ -1,0 +1,218 @@
+{
+ "topic": "mim-turing-bombe",
+ "chapter": 0,
+ "hud": {
+  "k": "CHƯƠNG 00",
+  "t": "LÁ THƯ TRONG ĐÊM"
+ },
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "0",
+   "k": "MỞ ĐẦU",
+   "title": "LÁ THƯ\nTRONG ĐÊM",
+   "sub": "21.10.1941",
+   "bg": "bletchley",
+   "titleAt": [
+    0,
+    "bốn"
+   ]
+  },
+  {
+   "type": "broll",
+   "at": [
+    1,
+    "alan"
+   ],
+   "vid": "34645486",
+   "veil": 0.62,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "BỐN CHỮ KÝ VƯỢT CẤP",
+     "at": [
+      1,
+      "alan"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": [
+    2,
+    "họ"
+   ],
+   "day": "THƯ GỬI CHURCHILL",
+   "date": "21.10.1941",
+   "sub": {
+    "text": "TURING · WELCHMAN · ALEXANDER · MILNER-BARRY",
+    "at": [
+     2,
+     "họ"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": [
+    3,
+    "bombe"
+   ],
+   "img": "bletchley",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "BLE TCHLEY PARK",
+    "v": "CÔNG VIỆC NHIỀU HƠN NGƯỜI",
+    "at": [
+     3,
+     "bombe"
+    ]
+   },
+   "kin": [
+    {
+     "text": "MÁY TẠO THÊM VIỆC",
+     "at": [
+      3,
+      "bombe"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    4,
+    "20"
+   ],
+   "items": [
+    {
+     "text": "20 NHÂN VIÊN · 20 ĐÁNH MÁY · WRNS",
+     "at": [
+      4,
+      "20"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": [
+    6,
+    "máy"
+   ],
+   "img": "enigmaCc0a",
+   "tone": "bw",
+   "head": "MÁY QUAY HÀNG GIỜ",
+   "side": {
+    "k": "ĐIỂM NGHẼN",
+    "h": "CON NGƯỜI PHẢI NHÌN VÀO",
+    "lines": [
+     {
+      "text": "CON NGƯỜI PHẢI NHÌN VÀO",
+      "at": [
+       6,
+       "máy"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": [
+    9,
+    "sáu"
+   ],
+   "title": "SÁU RĂNG CỦA KHÓA",
+   "srcnote": "MỖI CHƯƠNG THÊM MỘT MẮT XÍCH",
+   "rows": [
+    {
+     "k": "BỨC THƯ",
+     "v": "NGƯỜI XỬ LÝ MÁY",
+     "at": [
+      9,
+      "sáu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    10,
+    "áp"
+   ],
+   "items": [
+    {
+     "text": "RĂNG ĐẦU: KHÓA ĐỔI LIÊN TỤC",
+     "at": [
+      10,
+      "áp"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": [
+    13,
+    "crib"
+   ],
+   "text": "CỖ MÁY, LÁ THƯ VÀ CON NGƯỜI\nPHẢI KHỚP Ở ĐÂU?"
+  },
+  {
+   "type": "photo",
+   "at": [
+    14,
+    "máy"
+   ],
+   "img": "bombe1945",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "BOMBE THỜI CHIẾN",
+    "v": "CỖ MÁY KHÔNG GỬI ĐIỆN",
+    "at": [
+     14,
+     "máy"
+    ]
+   },
+   "kin": [
+    {
+     "text": "ĐIỆN MÃ HÓA VẪN KHÓ ĐỌC",
+     "at": [
+      14,
+      "máy"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "title": "Lá thư trong đêm",
+ "lines": [
+  "Đêm 21 tháng 10 năm 1941, bốn người làm ở Bletchley Park quyết định đi vòng qua cấp trên.",
+  "Alan Turing, Gordon Welchman, Hugh Alexander và Stuart Milner-Barry cùng ký một lá thư gửi thẳng tới Winston Churchill.",
+  "Họ không xin thêm một cỗ máy để trưng bày.",
+  "Họ xin thêm người, vì những chiếc Bombe đã tạo ra công việc mà Bletchley không đủ tay để xử lý.",
+  "Trong thư có một con số rất cụ thể: 20 nữ nhân viên văn phòng, 20 người đánh máy đã được đào tạo, và một phân đội WRNS để thử kết quả máy trả về.",
+  "Hãy dừng ở chỗ lạ nhất của lá thư này.",
+  "Một cỗ máy đang quay hàng giờ, nhưng điều làm bốn nhà giải mã lo nhất lại là chỗ con người phải nhìn vào nó.",
+  "Đến tháng 6 cùng năm, Bletchley đã đột nhập được liên lạc U-boat trong Trận Đại Tây Dương.",
+  "Vậy tại sao một dãy trống điện cơ, một lá thư và vài chục người trực lại cần nhau đến thế?",
+  "Để mở chiếc khóa này, bạn cần sáu răng.",
+  "Răng đầu là áp lực của một khóa đổi liên tục.",
+  "Răng thứ hai là nền móng Ba Lan.",
+  "Rồi tới Turing và những đồng đội không đứng sau tên ông.",
+  "Sau đó là crib, là menu, là người vận hành, và cuối cùng là điều một bộ phim đã làm cho câu chuyện này dễ hiểu nhưng không hoàn toàn đúng.",
+  "Ta lùi lại trước, về một chiếc máy không gửi được điện nào cả, nhưng khiến mọi điện mã hóa trở nên khó đọc."
+ ]
+}

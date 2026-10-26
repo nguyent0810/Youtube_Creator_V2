@@ -1,0 +1,256 @@
+{
+ "title": "Hai trăm triệu ở ngay trước mặt",
+ "lines": [
+  "Tháng sáu năm nay, chị Hạnh nghỉ việc ở xưởng may, sau mười năm làm ở đó.",
+  "Chị ba mươi lăm tuổi, một nhân vật ví dụ của video này.",
+  {
+   "t": "Mười năm ấy, tháng nào bảng lương của chị cũng có một dòng trừ bảo hiểm xã hội.",
+   "p": 1.0
+  },
+  "Một người bạn nói với chị một câu mà rất nhiều người từng nghe.",
+  "Nghỉ rồi thì rút bảo hiểm đi, được cả trăm triệu đấy.",
+  "Chị ngồi tính thử. Lương đóng bảo hiểm khoảng mười triệu, mười năm.",
+  {
+   "t": "Con số ra khoảng hai trăm triệu đồng.",
+   "p": 1.0
+  },
+  "Bằng hai mươi tháng lương.",
+  {
+   "t": "Đủ để trả một khoản nợ, sửa lại căn bếp, hay gửi về quê cho bố mẹ.",
+   "p": 1.0
+  },
+  "Hai trăm triệu, ở ngay trước mặt.",
+  "Chị không phải người duy nhất đứng trước con số như thế.",
+  "Từ năm hai nghìn không trăm mười sáu tới năm hai nghìn không trăm hai mươi hai, hơn bốn triệu tám trăm nghìn lượt người đã nhận bảo hiểm xã hội một lần.",
+  {
+   "t": "Gần chín phần mười số hồ sơ ấy đóng chưa tới mười năm.",
+   "p": 1.0
+  },
+  {
+   "t": "Vậy cầm hai trăm triệu bây giờ, hay chờ một khoản lương hưu, hai mươi lăm năm nữa?",
+   "ask": 1
+  },
+  "Đó là câu hỏi của video này.",
+  {
+   "t": "Và nó không có một đáp án đúng cho mọi người. Chỉ có từng con số.",
+   "p": 1.0
+  },
+  "Mình sẽ đi dọc một đường thẳng dài hai mươi lăm năm, từ hôm nay tới năm chị Hạnh sáu mươi tuổi.",
+  "Trên đường ấy có ba ngã rẽ, và mỗi ngã có một con số.",
+  "Đây là Biểu Đồ Biết Nói. Tiền bạc, giải thích bằng dữ liệu.",
+  "Video chỉ nhằm giáo dục, không phải lời khuyên rút hay không rút bảo hiểm xã hội. Mọi số tiền đã quy về giá hôm nay."
+ ],
+ "scenes": [
+  {
+   "type": "broll",
+   "vid": "6466354",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "THÁNG 6/2026 · NGHỈ VIỆC SAU 10 NĂM",
+     "at": [
+      0,
+      "Tháng"
+     ],
+     "sm": true
+    },
+    {
+     "text": "CHỊ HẠNH · 35 TUỔI",
+     "at": [
+      1,
+      "Chị"
+     ],
+     "acc": true
+    },
+    {
+     "text": "nhân vật ví dụ giả định",
+     "at": [
+      1,
+      "một"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "MỘT CÂU RẤT NHIỀU NGƯỜI TỪNG NGHE",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "“NGHỈ RỒI THÌ RÚT BẢO HIỂM ĐI”",
+     "at": 4,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 0,
+   "to": 200,
+   "suffix": " TRIỆU",
+   "label": "RÚT BHXH MỘT LẦN · 10 NĂM · LƯƠNG ĐÓNG 10 TRIỆU",
+   "sub": {
+    "text": "= 20 THÁNG LƯƠNG · VÍ DỤ GIẢ ĐỊNH",
+    "at": 7
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 8,
+   "title": "HAI TRĂM TRIỆU ĐỦ ĐỂ…",
+   "rows": [
+    {
+     "k": "1",
+     "v": "TRẢ MỘT KHOẢN NỢ",
+     "at": [
+      8,
+      "trả"
+     ]
+    },
+    {
+     "k": "2",
+     "v": "SỬA LẠI CĂN BẾP",
+     "at": [
+      8,
+      "sửa"
+     ]
+    },
+    {
+     "k": "3",
+     "v": "GỬI VỀ QUÊ CHO BỐ MẸ",
+     "at": [
+      8,
+      "gửi"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 9,
+   "text": "Ở NGAY TRƯỚC MẶT",
+   "sub": ""
+  },
+  {
+   "type": "bars",
+   "at": 11,
+   "title": "NGƯỜI HƯỞNG BHXH MỘT LẦN · 2016–2022 (TRIỆU LƯỢT)",
+   "unit": "BỘ LĐ-TB&XH",
+   "items": [
+    {
+     "k": "NHẬN MỘT LẦN",
+     "v": 4.8,
+     "lbl": "> 4,8",
+     "at": [
+      11,
+      "hơn"
+     ],
+     "acc": true
+    },
+    {
+     "k": "HỒ SƠ ĐÓNG DƯỚI 10 NĂM",
+     "v": 4.34,
+     "lbl": "≈ 90%",
+     "at": 12
+    }
+   ],
+   "label": {
+    "k": "QUA VNECONOMY 03/07/2023",
+    "v": "",
+    "at": 11
+   }
+  },
+  {
+   "type": "question",
+   "at": 13,
+   "text": "200 triệu bây giờ,\nhay lương hưu 25 năm nữa?"
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "CÂU HỎI CỦA VIDEO NÀY",
+     "at": 14
+    },
+    {
+     "text": "KHÔNG CÓ MỘT ĐÁP ÁN CHO MỌI NGƯỜI",
+     "at": 15,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 16,
+   "title": "MỘT ĐƯỜNG THẲNG 25 NĂM · BA NGÃ RẼ",
+   "items": [
+    {
+     "year": "2026",
+     "text": "nghỉ việc · 10 năm đóng",
+     "at": 16
+    },
+    {
+     "year": "2027",
+     "text": "ngã rẽ 1: rút một lần",
+     "at": [
+      16,
+      "từ"
+     ]
+    },
+    {
+     "year": "2031",
+     "text": "ngã rẽ 2: đủ 15 năm",
+     "at": 17
+    },
+    {
+     "year": "2051",
+     "text": "ngã rẽ 3: 60 tuổi · lương hưu",
+     "at": [
+      17,
+      "mỗi"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "brand",
+   "at": 18,
+   "sub": "TIỀN BẠC · GIẢI THÍCH BẰNG DỮ LIỆU"
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "items": [
+    {
+     "text": "CHỈ NHẰM GIÁO DỤC",
+     "at": 19,
+     "acc": true
+    },
+    {
+     "text": "không phải lời khuyên rút hay không rút · mọi số tiền quy về giá hôm nay",
+     "at": [
+      19,
+      "không"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "HAI TRĂM TRIỆU TRƯỚC MẶT"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.1
+ }
+}

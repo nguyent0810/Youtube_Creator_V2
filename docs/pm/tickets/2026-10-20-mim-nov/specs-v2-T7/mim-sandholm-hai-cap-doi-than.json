@@ -1,0 +1,285 @@
+{
+ "theme": "mim",
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "rules": 2,
+ "mix": true,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "title": "Hai người lạ, hai quả thận, một thuật toán: Sandholm và ca ghép chéo ngày 6/12/2010",
+ "description": "Một người đàn ông ở St. Louis và một phụ nữ ở New Hampshire đều cần thận, và người hiến của mỗi bên không hợp với bên mình. Thuật toán ghép cặp do nhóm giáo sư Tuomas Sandholm (Đại học Carnegie Mellon) phát triển đã ghép chéo hai cặp: vị hôn thê của người đàn ông hiến cho người phụ nữ, người thân của bà hiến cho ông. Hai ca mổ diễn ra ngày 6/12/2010, từ lượt chạy ghép ngày 27/10/2010 của chương trình thử nghiệm quốc gia OPTN, xét 43 người cần thận và 45 người hiến. Nguồn: Carnegie Mellon qua ScienceDaily, 14/12/2010.\n\nVideo nói về nghiên cứu trí tuệ nhân tạo; không hướng dẫn chơi bài, không cổ vũ cờ bạc. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/Mz0HwBBSBbg (công khai từ 20:00 ngày 26/11).",
+ "tags": [
+  "tuomas sandholm",
+  "ghép thận chéo",
+  "thuật toán",
+  "carnegie mellon",
+  "libratus",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "OPTN · 6.12.2010",
+ "acc": [
+  "thận",
+  "thuật",
+  "toán"
+ ],
+ "lines": [
+  "Hai người lạ, hai quả thận, một thuật toán.",
+  "Một người đàn ông ở St. Louis cần một quả thận.",
+  "Vị hôn thê của ông muốn hiến, nhưng không hợp với ông.",
+  "Ở New Hampshire, một phụ nữ cũng cần thận, người thân của bà không hợp.",
+  "Giáo sư Tuomas Sandholm, người cũng dạy máy chơi poker, cùng nhóm ở Carnegie Mellon viết thuật toán ghép chéo.",
+  "Vị hôn thê hiến cho người phụ nữ, còn người thân của bà hiến cho ông.",
+  "Hai ca mổ diễn ra ngày sáu tháng mười hai năm hai nghìn không trăm mười.",
+  "Chúng đến từ lượt chạy ngày hai mươi bảy tháng mười: bốn mươi ba người cần thận, bốn mươi lăm người hiến.",
+  "Hai người lạ, hai quả thận, một thuật toán nối họ lại."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "clip": "pexels:29241126",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "HAI NGƯỜI LẠ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "hai quả thận · một thuật toán",
+     "at": [
+      0,
+      "hai",
+      1
+     ],
+     "sm": true,
+     "size": 56
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "CẶP THỨ NHẤT · ST. LOUIS",
+   "nodes": [
+    {
+     "text": "người đàn ông: cần thận",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      1,
+      "người"
+     ],
+     "shape": "none",
+     "w": 760
+    },
+    {
+     "text": "vị hôn thê: muốn hiến, không hợp",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      2,
+      "hôn"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 760
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "CẶP THỨ HAI · NEW HAMPSHIRE",
+   "cards": [
+    {
+     "k": "MỘT PHỤ NỮ",
+     "v": "CẦN THẬN",
+     "at": [
+      3,
+      "phụ"
+     ]
+    },
+    {
+     "k": "NGƯỜI THÂN",
+     "v": "KHÔNG HỢP",
+     "at": [
+      3,
+      "người"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "clip": "pexels:36392049",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "TUOMAS SANDHOLM",
+     "at": [
+      4,
+      "Tuomas"
+     ],
+     "acc": true
+    },
+    {
+     "text": "Carnegie Mellon · người cũng dạy máy chơi poker",
+     "at": [
+      4,
+      "Carnegie"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "GHÉP CHÉO",
+   "nodes": [
+    {
+     "text": "vị hôn thê → người phụ nữ",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      5,
+      "Vị"
+     ],
+     "shape": "none",
+     "w": 760
+    },
+    {
+     "text": "người thân → người đàn ông",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      5,
+      "còn"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 760
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "clip": "pexels:7584601",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "6.12.2010",
+     "at": [
+      6,
+      "sáu"
+     ],
+     "acc": true
+    },
+    {
+     "text": "hai ca ghép · cùng ngày",
+     "at": [
+      6,
+      "Hai"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 7,
+   "date": "27.10.2010",
+   "day": "LƯỢT CHẠY GHÉP ĐẦU TIÊN",
+   "sub": {
+    "text": "OPTN · CHƯƠNG TRÌNH QUỐC GIA",
+    "at": [
+     7,
+     "Chúng"
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": [
+    7,
+    "bốn"
+   ],
+   "title": "LƯỢT CHẠY ĐẦU TIÊN",
+   "rows": [
+    {
+     "k": "NGƯỜI CẦN THẬN",
+     "v": "43",
+     "at": [
+      7,
+      "bốn"
+     ]
+    },
+    {
+     "k": "NGƯỜI HIẾN",
+     "v": "45",
+     "at": [
+      7,
+      "bốn",
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "clip": "pexels:34995473",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "MỘT THUẬT TOÁN",
+     "at": [
+      8,
+      "một"
+     ],
+     "acc": true
+    },
+    {
+     "text": "nối hai người lạ",
+     "at": [
+      8,
+      "nối"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://www.sciencedaily.com/releases/2010/12/101214111917.htm (CMU, 14/12/2010; đã đọc 20/10/2026: hai người nhận ở St. Louis và New Hampshire, ghép chéo vì người hiến của mỗi bên không hợp; ca mổ ngày 6/12; lượt chạy 27/10/2010: 43 người cần thận, 45 người hiến; thuật toán 2006 của Sandholm, Blum, Abraham, về sau thêm nghiên cứu sinh; Sandholm dẫn dắt. Bài gốc có tên riêng, spec cố ý không dùng)",
+  "data/long/mim-may-thang-poker/script.md CH05, CH13, CH17 (Sandholm là đồng tác giả Libratus/Pluribus; ghép thận chéo)"
+ ],
+ "say": {
+  "st.": "Xanh",
+  "louis": "Lu-ít",
+  "new": "Niu",
+  "hampshire": "Hem-sơ",
+  "tuomas": "Tu-ô-mát",
+  "sandholm": "Xan-hôm",
+  "carnegie": "Các-nê-ghi",
+  "mellon": "Mê-lần",
+  "poker": "pô-ke"
+ },
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.3,
+   "4": 0.3,
+   "5": 0.22,
+   "6": 0.3,
+   "7": 0.5
+  }
+ }
+}

@@ -1,0 +1,285 @@
+{
+ "title": "Tháng có thưởng Tết",
+ "lines": [
+  {
+   "t": "Giả sử dịp Tết, anh Khang nhận thưởng năm mươi triệu, trả cùng lương của tháng ấy.",
+   "p": 0.8
+  },
+  {
+   "t": "Tháng đó, phiếu lương ghi tổng thu nhập bảy mươi lăm triệu.",
+   "p": 1.0
+  },
+  "Công ty khấu trừ thuế theo từng tháng.",
+  "Lý do đơn giản: tới tháng ấy, không ai biết chắc cả năm anh sẽ kiếm được bao nhiêu.",
+  "Nên mỗi tháng được tính như một năm thu nhỏ.",
+  "Họ đưa cả bảy mươi lăm triệu ấy qua cái thang, như thể tháng nào anh cũng kiếm từng ấy.",
+  "Thu nhập tính thuế tháng ấy khoảng năm mươi triệu bảy, lên tới bậc thứ ba.",
+  {
+   "t": "Dòng thuế tháng có thưởng: khoảng sáu triệu sáu trăm ba mươi lăm nghìn.",
+   "p": 1.0
+  },
+  {
+   "t": "Gần bảy triệu tiền thuế chỉ cho một cái thưởng?",
+   "ask": 1
+  },
+  {
+   "t": "Đó là số bị khấu trừ, chưa chắc là số anh thật sự phải nộp.",
+   "p": 1.0
+  },
+  "Cộng cả năm, anh bị khấu trừ khoảng bảy triệu đồng.",
+  "Nhưng thuế của cả năm được tính lại một lần nữa, theo tổng thu nhập của mười hai tháng.",
+  {
+   "t": "Gọi là quyết toán thuế.",
+   "p": 1.0
+  },
+  "Cả năm anh có ba trăm năm mươi triệu.",
+  "Trừ bảo hiểm và giảm trừ gia cảnh của mười hai tháng, thu nhập tính thuế cả năm khoảng năm mươi tám triệu một.",
+  "Chia đều ra, mỗi tháng chưa tới năm triệu, nằm gọn trong bậc thứ nhất.",
+  {
+   "t": "Thuế đúng của cả năm chỉ khoảng hai triệu chín trăm lẻ năm nghìn.",
+   "p": 1.0
+  },
+  "Đã khấu trừ bảy triệu. Thuế đúng chưa tới ba triệu.",
+  "Chênh lệch khoảng bốn triệu một trăm nghìn.",
+  {
+   "t": "Đó là phần thuế nộp thừa, có thể được hoàn khi quyết toán.",
+   "p": 1.0
+  },
+  "Quyết toán thuế của năm hai nghìn không trăm hai mươi sáu sẽ diễn ra vào đầu năm hai nghìn không trăm hai mươi bảy.",
+  "Nhiều người uỷ quyền cho công ty làm thay, có người tự làm.",
+  "Cách làm cụ thể theo hướng dẫn của cơ quan thuế cho kỳ quyết toán ấy.",
+  {
+   "t": "Chỉ cần nhớ một điều: khoản khấu trừ trong tháng có thưởng chưa phải là con số cuối cùng.",
+   "p": 1.0
+  },
+  "Vậy là ta đã đi hết con đường của một đồng lương.",
+  "Bốn trạm, từ bảo hiểm tới quyết toán, rồi mới ra con số cuối cùng.",
+  "Giờ là lúc mở bảng tra."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "CHẶNG BỐN",
+   "title": "THÁNG CÓ\nTHƯỞNG TẾT",
+   "sub": "KHẤU TRỪ THÁNG · QUYẾT TOÁN NĂM",
+   "vid": "36112100",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Giả"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "THÁNG CÓ THƯỞNG",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · THƯỞNG 50 TRIỆU",
+   "rows": [
+    {
+     "k": "LƯƠNG",
+     "v": "25 TRIỆU",
+     "at": [
+      1,
+      "phiếu"
+     ]
+    },
+    {
+     "k": "THƯỞNG",
+     "v": "50 TRIỆU",
+     "at": [
+      1,
+      "tổng"
+     ]
+    }
+   ],
+   "total": {
+    "k": "TỔNG THÁNG ĐÓ",
+    "v": "75 TRIỆU",
+    "at": [
+     1,
+     "bảy"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "KHẤU TRỪ THEO TỪNG THÁNG",
+     "at": 2
+    },
+    {
+     "text": "chưa ai biết chắc cả năm kiếm bao nhiêu",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "MỖI THÁNG = MỘT NĂM THU NHỎ",
+     "at": 4,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "from": 0,
+   "to": 6.635,
+   "suffix": " TRIỆU",
+   "label": "KHẤU TRỪ THÁNG CÓ THƯỞNG",
+   "sub": {
+    "text": "TNTT ≈ 50,675 TRIỆU · LÊN BẬC 3 (20%)",
+    "at": [
+     6,
+     "lên"
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "at": 8,
+   "text": "Gần 7 triệu tiền thuế\nchỉ cho một cái thưởng?"
+  },
+  {
+   "type": "myth",
+   "at": 9,
+   "mythLab": "SỐ BỊ KHẤU TRỪ",
+   "myth": "≈ 7 TRIỆU CẢ NĂM",
+   "truthLab": "CHƯA CHẮC",
+   "truth": "LÀ SỐ PHẢI NỘP THẬT",
+   "strikeAt": [
+    10,
+    "Cộng"
+   ],
+   "truthAt": [
+    11,
+    "Nhưng"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 12,
+   "title": "QUYẾT TOÁN CẢ NĂM",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "rows": [
+    {
+     "k": "THU NHẬP CẢ NĂM",
+     "v": "350 TRIỆU",
+     "at": 13
+    },
+    {
+     "k": "THU NHẬP TÍNH THUẾ",
+     "v": "≈ 58,1 TRIỆU",
+     "at": 14
+    },
+    {
+     "k": "MỖI THÁNG",
+     "v": "< 5 TRIỆU · BẬC 1",
+     "at": 15
+    }
+   ],
+   "total": {
+    "k": "THUẾ ĐÚNG CẢ NĂM",
+    "v": "≈ 2,905 TRIỆU",
+    "at": 16
+   }
+  },
+  {
+   "type": "bars",
+   "at": 17,
+   "title": "CẢ NĂM CỦA ANH KHANG (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "ĐÃ BỊ KHẤU TRỪ",
+     "v": 7.006,
+     "lbl": "≈ 7,0",
+     "at": [
+      17,
+      "Đã"
+     ]
+    },
+    {
+     "k": "THUẾ ĐÚNG",
+     "v": 2.905,
+     "lbl": "≈ 2,9",
+     "at": [
+      17,
+      "Thuế"
+     ]
+    },
+    {
+     "k": "NỘP THỪA · CÓ THỂ ĐƯỢC HOÀN",
+     "v": 4.101,
+     "lbl": "≈ 4,1",
+     "at": 18,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 20,
+   "date": "2027",
+   "sub": {
+    "text": "QUYẾT TOÁN THUẾ CỦA NĂM 2026 · UỶ QUYỀN HOẶC TỰ LÀM",
+    "at": 20
+   }
+  },
+  {
+   "type": "slam",
+   "at": 23,
+   "text": "CHƯA PHẢI CON SỐ CUỐI CÙNG",
+   "sub": "KHẤU TRỪ TRONG THÁNG CÓ THƯỞNG"
+  },
+  {
+   "type": "timeline",
+   "at": 25,
+   "title": "CON ĐƯỜNG CỦA MỘT ĐỒNG LƯƠNG",
+   "items": [
+    {
+     "year": "1",
+     "text": "bảo hiểm",
+     "at": [
+      25,
+      "Bốn"
+     ]
+    },
+    {
+     "year": "2",
+     "text": "giảm trừ",
+     "at": [
+      25,
+      "từ"
+     ]
+    },
+    {
+     "year": "3",
+     "text": "cái thang",
+     "at": [
+      25,
+      "bảo"
+     ]
+    },
+    {
+     "year": "4",
+     "text": "quyết toán",
+     "at": [
+      25,
+      "quyết"
+     ]
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHẶNG 04",
+  "t": "THÁNG CÓ THƯỞNG TẾT"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

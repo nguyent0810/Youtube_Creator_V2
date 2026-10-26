@@ -1,0 +1,2260 @@
+Reading additional input from stdin...
+OpenAI Codex v0.164.0
+--------
+workdir: D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+model: gpt-5.6-terra
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR] (network access enabled)
+reasoning effort: high
+reasoning summaries: none
+session id: 01a17736-2d98-7111-a4f5-3aa355b60dc8
+--------
+user
+Đọc AGENTS.md rồi làm ticket docs/pm/tickets/2026-10-26-codex-pilot/T2A-nghien-cuu-turing-bombe.md từ đầu đến cuối. Tuân thủ tuyệt đối mục 'Cấm tuyệt đối'. Trước khi báo xong phải chạy `python scripts/long_gate.py mim-turing-bombe --min-syl 1900` và nó phải in ĐẠT (trừ khi ticket nói là ticket nghiên cứu). Viết báo cáo vào file kết quả mà ticket chỉ định. Tiếng Việt.
+codex
+Mình sẽ đọc ticket và các tài liệu quy trình trước, sau đó chỉ thực hiện đúng phạm vi được giao; vì đây có thể là ticket nghiên cứu, mình sẽ xác nhận rõ yêu cầu về các cổng dựng/`long_gate` trong ticket trước khi thao tác.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-Content -Raw AGENTS.md; Get-Content -Raw docs/pm/tickets/2026-10-26-codex-pilot/T2A-nghien-cuu-turing-bombe.md; Get-Content -Raw motion/long/README.md; Get-Content -Raw motion/long/RETENTION.md; Get-Content -Raw motion/long/SOURCES.md; Get-Content -Raw docs/pm/2026-10-23-mim-long-moi.md; Get-Content -Raw docs/pm/so-that-bai.md' in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 91ms:
+# AGENTS.md â€” luáº­t cho agent sáº£n xuáº¥t (Codex) trong repo nÃ y
+
+Repo dá»±ng video cho 3 kÃªnh YouTube tiáº¿ng Viá»‡t: MIM (AI/cÃ´ng nghá»‡), CK (tÃ i chÃ­nh cÃ¡ nhÃ¢n), CL (HÃ¬nh Sá»±; kÃªnh nÃ y do agent khÃ¡c lo, **khÃ´ng Ä‘á»¥ng**).
+
+Vai trÃ²:
+- **Claude** Ä‘iá»u phá»‘i: viáº¿t ticket, review cuá»‘i, Ä‘Äƒng.
+- **Agent sáº£n xuáº¥t (báº¡n):** lÃ m Ä‘Ãºng ticket Ä‘Æ°á»£c giao trong `docs/pm/tickets/`, rá»“i viáº¿t bÃ¡o cÃ¡o vÃ o file káº¿t quáº£ mÃ  ticket chá»‰ Ä‘á»‹nh.
+
+## Cáº¥m tuyá»‡t Ä‘á»‘i
+
+- **KhÃ´ng upload, khÃ´ng sá»­a vÃ  khÃ´ng xoÃ¡ gÃ¬ trÃªn YouTube.** KhÃ´ng cháº¡y `publish_long.py`, `publish_batch.py`, `enqueue_*.py`, `scripts/playlists.py`. KhÃ´ng Ä‘á»c thÆ° má»¥c credential (`.youtube_channels`, `YT_CREDS_DIR`).
+- **KhÃ´ng ghi `state.sqlite`.** Muá»‘n xem lá»‹ch thÃ¬ má»Ÿ á»Ÿ cháº¿ Ä‘á»™ chá»‰ Ä‘á»c:
+  ```python
+  sqlite3.connect('file:state.sqlite?mode=ro', uri=True)
+  ```
+- **KhÃ´ng Ä‘á»¥ng git:** khÃ´ng `git commit`, `push`, `reset`, `checkout`, `stash`.
+- **KhÃ´ng sá»­a code dÃ¹ng chung:** `motion/hf/assets/engine/*`, `motion/long/build_long.py`, `motion/stier/*.py`, `factory/*`, `tests/*`. Náº¿u tháº¥y lá»—i engine thÃ¬ ghi vÃ o bÃ¡o cÃ¡o, Ä‘á»«ng tá»± sá»­a.
+- **KhÃ´ng xoÃ¡ file** ngoÃ i thÆ° má»¥c topic cá»§a ticket (`data/long/<topic>/`, `output/long/<topic>/`, `motion/long/thumbs/<topic>_t*.html`).
+- **KhÃ´ng cháº¡y hai lá»‡nh render cÃ¹ng lÃºc.** MÃ¡y chá»‰ cháº¡y má»™t render má»™t lÃºc (`factory/render_lock.py` tá»± xáº¿p hÃ ng). KhÃ´ng kill tiáº¿n trÃ¬nh cá»§a ngÆ°á»i khÃ¡c.
+
+## Luáº­t ná»™i dung
+
+- **Sá»± tháº­t:** má»—i kháº³ng Ä‘á»‹nh cÃ³ sá»‘, ngÃ y hoáº·c tÃªn Ä‘á»u pháº£i cÃ³ má»™t dÃ²ng trong `factcheck.md`, kÃ¨m URL Ä‘Ã£ má»Ÿ Ä‘Æ°á»£c. KhÃ´ng má»Ÿ Ä‘Æ°á»£c nguá»“n thÃ¬ khÃ´ng Ä‘á»c thÃ nh kháº³ng Ä‘á»‹nh: hoáº·c bá», hoáº·c nÃ³i rÃµ "theo â€¦". KhÃ´ng bá»‹a trÃ­ch dáº«n. Lá»i trÃ­ch lÃ  báº£n dá»‹ch thÃ¬ gáº¯n `[TRÃCH Dá»ŠCH]`.
+- **áº¢nh:**
+  - MIM chá»‰ nháº­n PD, CC0, CC BY. KhÃ´ng nháº­n CC BY-SA, GFDL, NC, ND.
+  - KhÃ´ng dÃ¹ng hÃ¬nh phim; phim chá»‰ Ä‘Æ°á»£c nháº¯c báº±ng lá»i vÃ  chá»¯.
+  - KhÃ´ng gáº¯n nhÃ£n tÃªn ngÆ°á»i tháº­t lÃªn clip stock cá»§a ngÆ°á»i láº¡.
+  - Clip khÃ´ng Ä‘Æ°á»£c lá»™ logo hay chá»¯ Ä‘á»c Ä‘Æ°á»£c cá»§a thÆ°Æ¡ng hiá»‡u.
+- **MÃ´ táº£ cÃ´ng khai** (`spec.youtube.*`, `description`) khÃ´ng Ä‘Æ°á»£c chá»©a: `<`, `>`, "Cáº¦N", "cáº§n kiá»ƒm", "WebFetch", "factcheck", "data/long", "tÃ¬m kiáº¿m", "agent". Ghi chÃº lÃ m viá»‡c Ä‘á»ƒ trong `sources_internal`.
+- **CK:**
+  - KhÃ´ng nÃªu tÃªn ngÃ¢n hÃ ng thÆ°Æ¡ng máº¡i, cÃ´ng ty chá»©ng khoÃ¡n, hÃ£ng xe hay mÃ£ cá»• phiáº¿u.
+  - KhÃ´ng nÃ³i "nÃªn mua/bÃ¡n".
+  - Sá»‘ tá»± giáº£ Ä‘á»‹nh pháº£i ghi "VÃ Dá»¤ GIáº¢ Äá»ŠNH".
+  - MÃ´ táº£ cÃ³ cÃ¢u "Ná»™i dung giÃ¡o dá»¥c, khÃ´ng pháº£i tÆ° váº¥n Ä‘áº§u tÆ°."
+- **TiÃªu Ä‘á»** â‰¤ 60 kÃ½ tá»±. MIM: ngÆ°á»i + nÄƒm + bÆ°á»›c ngoáº·t, hoáº·c khuÃ´n "[PHIM/APP] NgoÃ i Äá»i Tháº­t: [ngÆ°á»i tháº­t]". CK: má»™t khoáº£n tiá»n Ã— má»™t má»‘c thá»i gian.
+- **Viáº¿t cho tai:** cÃ¢u má»™t hÆ¡i, nÃ³i vá»›i "báº¡n", sá»‘ lÃ m trÃ²n dá»… nghe. MÃ£ tÃ i liá»‡u vÃ  giá» chÃ­nh xÃ¡c chá»‰ hiá»‡n trÃªn mÃ n hÃ¬nh. KhÃ´ng má»Ÿ bÃ i báº±ng "tráº£ lá»i ba cÃ¢u há»i"; má»—i bÃ i dÃ¹ng má»™t dáº¡ng lá»™ trÃ¬nh riÃªng.
+- **Thumbnail:** chá»¯ tiáº¿ng Viá»‡t chá»‰ dá»±ng báº±ng `motion/long/thumb.py` (HTML), khÃ´ng váº½ chá»¯ báº±ng AI. Pháº£i soi `tN_small.jpg`.
+
+## Quy trÃ¬nh Long (theo máº«u `data/long/mim-ke-huy-diet-petrov`, `mim-google-maps-kal007`)
+
+Äá»c trÆ°á»›c:
+- `motion/long/README.md`, `RETENTION.md`, `SOURCES.md`;
+- `docs/pm/2026-10-23-mim-long-moi.md`;
+- `docs/pm/so-that-bai.md`.
+
+CÃ¡c bÆ°á»›c:
+1. Viáº¿t `script.md` vÃ  `factcheck.md` (nguá»“n lÃ  URL Ä‘Ã£ má»Ÿ).
+2. Cháº¡y `python motion/long/script_lines.py <topic>`; pháº£i qua cá»•ng integrity.
+3. Viáº¿t `gen_scenes.py`, rá»“i cháº¡y `python data/long/<topic>/gen_scenes.py`, ra `spec.json` vÃ  `chNN.json`. Counter cÃ³ sá»‘ 1000â€“2100 pháº£i khai `"year": true|false`.
+4. Cháº¡y `python motion/long/studio_lint.py <topic> --strict`; pháº£i ra 0 lá»—i.
+5. Cháº¡y `python motion/long/build_long.py <topic> tts`, rá»“i `... html`. Sá»­a má»i lá»—i lint mÃ  `html` bÃ¡o.
+6. Cháº¡y `python motion/long/clip_sheet.py <topic>`, xem áº£nh clip sheet; clip sai nghÄ©a hoáº·c lá»™ logo thÃ¬ thay.
+7. Chá»‰ render khi ticket cho phÃ©p: `build_long.py <topic> render`, rá»“i `final`.
+8. Dá»±ng thumbnail `motion/long/thumbs/<topic>_t1.html`, rá»“i cháº¡y `python motion/long/thumb.py <topic> t1`.
+
+## Cá»•ng cháº¥t lÆ°á»£ng (báº¯t buá»™c, tá»« 26/10/2026)
+
+CÃ¡c cá»•ng lint chá»‰ lÃ  má»©c sÃ n ká»¹ thuáº­t. TrÆ°á»›c khi bÃ¡o xong má»™t Long, pháº£i cháº¡y:
+
+```
+python scripts/long_gate.py <topic> --min-syl 1900
+```
+
+Lá»‡nh pháº£i in **Äáº T**. CÃ¡c ngÆ°á»¡ng Ä‘Æ°á»£c Ä‘o trÃªn bÃ i máº«u Petrov vÃ  KAL 007:
+
+| NgÆ°á»¡ng | GiÃ¡ trá»‹ |
+|---|---|
+| Ã‚m tiáº¿t lá»i Ä‘á»c | â‰¥ 1.900 (â‰ˆ 9 phÃºt) |
+| Thá»i lÆ°á»£ng má»—i cáº£nh | â‰¤ 9 giÃ¢y |
+| Loáº¡i cáº£nh má»—i chÆ°Æ¡ng | â‰¥ 5 |
+| Má»™t clip dÃ¹ng láº¡i (bÃ i 9â€“12 phÃºt) | â‰¤ 2 láº§n |
+| Má»™t áº£nh dÃ¹ng láº¡i | â‰¤ 3 láº§n |
+| URL nguá»“n trong `factcheck.md` | â‰¥ 8 |
+| TiÃªu Ä‘á» | â‰¤ 60 kÃ½ tá»± |
+
+NgoÃ i ra: má»i nÄƒm trong ká»‹ch báº£n pháº£i cÃ³ trong `factcheck.md`, vÃ  khÃ´ng Ä‘Æ°á»£c cÃ³ cÃ¢u Ä‘á»‡m.
+
+**BÃ i máº«u Ä‘á»ƒ so:**
+- Petrov: 22,5 phÃºt; 179 cáº£nh (7,6 giÃ¢y/cáº£nh); Ã­t nháº¥t 7 loáº¡i cáº£nh má»—i chÆ°Æ¡ng; 15 áº£nh khÃ¡c nhau.
+- KAL 007: 10,5 phÃºt; 82 cáº£nh (7,7 giÃ¢y/cáº£nh); khÃ´ng dÃ¹ng clip, chá»‰ áº£nh vÃ  Ä‘á»“ hoáº¡ (báº£n Ä‘á»“, timeline, counter).
+
+Má»—i chÆ°Æ¡ng cá»§a hai bÃ i nÃ y cÃ³ 3â€“4 dá»¯ kiá»‡n cá»¥ thá»ƒ cÃ³ nguá»“n.
+
+## Lá»—i Ä‘Ã£ gáº·p (Ä‘á»«ng láº·p láº¡i)
+
+Thá»­ nghiá»‡m Codex T1/T1b, 26/10/2026:
+
+1. **ChÃ¨n cÃ¢u Ä‘á»‡m rá»—ng nghÄ©a cho qua tá»‰ lá»‡ cÃ¢u ngáº¯n cá»§a lint.** VÃ­ dá»¥: "Ráº¥t cháº­m.", "ÄÃ³ lÃ  cÃ¢u há»i khÃ³.". CÃ¢u ngáº¯n chá»‰ Ä‘áº·t sau má»™t phÃ¡n Ä‘á»‹nh hoáº·c khoáº£nh kháº¯c cáº£m xÃºc.
+2. **Bá»‹ yÃªu cáº§u bá» cÃ¢u Ä‘á»‡m thÃ¬ chá»‰ xoÃ¡, khÃ´ng viáº¿t ná»™i dung thay.** BÃ i tá»¥t tá»« 9 xuá»‘ng 5 phÃºt. Thiáº¿u Ä‘á»™ dÃ i thÃ¬ pháº£i **tÃ¬m thÃªm dá»¯ kiá»‡n cÃ³ nguá»“n**, khÃ´ng Ä‘Æ°á»£c Ä‘á»ƒ bÃ i ngáº¯n Ä‘i.
+3. **Äá»c má»™t ngÃ y cá»¥ thá»ƒ (18/3/1940) trong khi chÃ­nh `factcheck.md` ghi lÃ  chÆ°a chá»‘t Ä‘Æ°á»£c.**
+4. **Má»™t clip láº·p 8 láº§n; 9 phÃºt chá»‰ cÃ³ 18 cáº£nh vÃ  toÃ n chá»¯.**
+5. **Cold open liá»‡t kÃª tÃªn ngÆ°á»i thay vÃ¬ dá»±ng má»™t cáº£nh cÃ³ cÄƒng tháº³ng; cÃ¢u meta "HÃ´m nay mÃ¬nh khÃ´ng ká»ƒâ€¦".**
+6. **Coi viá»‡c qua lint lÃ  xong.** Xong nghÄ©a lÃ  `long_gate.py` in Äáº T **vÃ ** ná»™i dung Ä‘Ã¡ng xem.
+
+**NghiÃªn cá»©u trÆ°á»›c, viáº¿t sau:** khi ticket chia Ä‘Ã´i, ticket nghiÃªn cá»©u chá»‰ gom kho dá»¯ kiá»‡n cÃ³ URL (`facts.md`). Ticket viáº¿t chá»‰ dÃ¹ng dá»¯ kiá»‡n trong kho Ä‘Ã³.
+
+## BÃ¡o cÃ¡o
+
+Ghi file káº¿t quáº£ theo ticket, gá»“m:
+- Ä‘Ã£ lÃ m gÃ¬, lá»‡nh nÃ o cháº¡y vÃ  káº¿t quáº£, lá»—i lint cÃ²n láº¡i;
+- kháº³ng Ä‘á»‹nh nÃ o khÃ´ng kiá»ƒm Ä‘Æ°á»£c;
+- Ä‘Æ°á»ng dáº«n clip sheet vÃ  thumbnail.
+
+KhÃ´ng tá»± nháº­n lÃ  xong náº¿u chÆ°a cháº¡y cÃ¡c cá»•ng kiá»ƒm á»Ÿ trÃªn.
+
+# T2A â€” NGHIÃŠN Cá»¨U: kho dá»¯ kiá»‡n cho Long `mim-turing-bombe`
+
+**ÄÃ¢y lÃ  ticket nghiÃªn cá»©u.** KhÃ´ng viáº¿t ká»‹ch báº£n, khÃ´ng sá»­a `script.md`, `gen_scenes.py` hay `ch*.json`, khÃ´ng render. Bá» qua yÃªu cáº§u cháº¡y `long_gate.py`.
+
+- **Äá»c trÆ°á»›c:** `AGENTS.md` (nháº¥t lÃ  má»¥c "Lá»—i Ä‘Ã£ gáº·p").
+- **Äáº§u ra:** `data/long/mim-turing-bombe/facts.md`.
+- **BÃ¡o cÃ¡o:** `docs/pm/tickets/2026-10-26-codex-pilot/T2A-ket-qua.md`.
+
+## VÃ¬ sao
+
+Báº£n T1b chá»‰ cÃ²n 5 phÃºt, vÃ¬ cáº£ bÃ i dá»±a vÃ o 3â€“4 nguá»“n. BÃ i 9â€“11 phÃºt (â‰ˆ 1.900â€“2.300 Ã¢m tiáº¿t, 8 chÆ°Æ¡ng) cáº§n **Ã­t nháº¥t 30 dá»¯ kiá»‡n cá»¥ thá»ƒ cÃ³ nguá»“n**. Gom Ä‘á»§ dá»¯ kiá»‡n trÆ°á»›c rá»“i má»›i viáº¿t.
+
+## Cáº§n gom
+
+Tá»‘i thiá»ƒu **30 dá»¯ kiá»‡n**, chia theo 8 chÆ°Æ¡ng, má»—i chÆ°Æ¡ng 3â€“5 dá»¯ kiá»‡n. Má»—i dá»¯ kiá»‡n ghi thÃ nh má»™t dÃ²ng gá»“m:
+- kháº³ng Ä‘á»‹nh ngáº¯n;
+- Ã­t nháº¥t má»™t sá»‘, ngÃ y, tÃªn hoáº·c váº­t cá»¥ thá»ƒ;
+- URL Ä‘Ã£ má»Ÿ Ä‘Æ°á»£c, kÃ¨m tÃªn trang;
+- Ä‘á»™ tin: **máº¡nh** náº¿u lÃ  nguá»“n chÃ­nh thá»‘ng (GCHQ, Bletchley Park, Turing Archive, báº£o tÃ ng, sÃ¡ch hoáº·c bÃ i há»c thuáº­t); **vá»«a** náº¿u chá»‰ cÃ³ Wikipedia hoáº·c bÃ¡o.
+
+Chá»‰ Ä‘á»c thÃ nh kháº³ng Ä‘á»‹nh nhá»¯ng dá»¯ kiá»‡n **máº¡nh**. Dá»¯ kiá»‡n **vá»«a** pháº£i Ä‘á»c kÃ¨m "theo â€¦".
+
+**CÃ¡c nhÃ³m nÃªn Ä‘Ã o** (gá»£i Ã½, khÃ´ng báº¯t buá»™c Ä‘á»§):
+1. **Enigma:**
+   - sá»‘ rÃ´-to;
+   - plugboard;
+   - sá»‘ kháº£ nÄƒng thiáº¿t láº­p;
+   - khoÃ¡ Ä‘á»•i theo ngÃ y;
+   - máº¡ng cá»§a Háº£i quÃ¢n Äá»©c vÃ  máº¡ng cá»§a Lá»¥c quÃ¢n/KhÃ´ng quÃ¢n.
+2. **Ba Lan:**
+   - Rejewski phÃ¡ Enigma nÄƒm 1932;
+   - bomba nÄƒm 1938;
+   - Zygalski vÃ  RÃ³Å¼ycki;
+   - cuá»™c gáº·p á»Ÿ rá»«ng Pyry 25â€“26/7/1939;
+   - nhá»¯ng gÃ¬ phÃ­a Ba Lan trao cho Anh vÃ  PhÃ¡p.
+3. **Turing á»Ÿ Bletchley:**
+   - Hut 8;
+   - "Prof";
+   - báº£n thiáº¿t káº¿ Bombe;
+   - Turing gáº·p nhÃ³m Ba Lan á»Ÿ PC Bruno, PhÃ¡p, 1/1940;
+   - giai thoáº¡i cÃ³ nguá»“n (xÃ­ch cá»‘c trÃ  vÃ o lÃ² sÆ°á»Ÿi, Ä‘áº¡p xe Ä‘eo máº·t náº¡ phÃ²ng Ä‘á»™c) chá»‰ dÃ¹ng khi cÃ³ nguá»“n máº¡nh.
+4. **Welchman:**
+   - diagonal board;
+   - Hut 6;
+   - má»‘c thá»i gian.
+5. **BTM, Letchworth, "Doc" Keen:**
+   - Victory (3/1940);
+   - Agnus;
+   - sá»‘ Bombe vá» cuá»‘i chiáº¿n tranh;
+   - kÃ­ch thÆ°á»›c, sá»‘ trá»‘ng;
+   - thá»i gian má»™t láº§n cháº¡y.
+6. **Crib:**
+   - vÃ­ dá»¥ crib cÃ³ tÃ i liá»‡u hoÃ¡, nhÆ° báº£n tin thá»i tiáº¿t, "Keine besonderen Ereignisse" hay chá»¯ kÃ½ thÆ°á»ng láº·p láº¡i;
+   - quy trÃ¬nh menu.
+7. **Wrens:**
+   - Eastcote, Stanmore;
+   - sá»‘ ngÆ°á»i;
+   - ca trá»±c;
+   - Jean Millar (Ä‘Ã£ cÃ³ nguá»“n GCHQ).
+8. **Káº¿t quáº£ vÃ  di sáº£n:**
+   - Háº£i quÃ¢n, U-boat, Äáº¡i TÃ¢y DÆ°Æ¡ng: chá»‰ dÃ¹ng tÃ¡c Ä‘á»™ng Ä‘á»‹nh lÆ°á»£ng cÃ³ nguá»“n máº¡nh;
+   - Banburismus;
+   - phim The Imitation Game (2014) khÃ¡c Ä‘á»i tháº­t á»Ÿ Ä‘Ã¢u: mÃ¡y "Christopher" lÃ  tÃªn do phim Ä‘áº·t, má»‘c thá»i gian bá»‹ dá»“n láº¡i, v.v. Pháº§n nÃ y cáº§n nguá»“n bÃ¬nh luáº­n Ä‘Ã¡ng tin.
+
+**áº¢nh vÃ  B-roll** (ghi riÃªng á»Ÿ cuá»‘i `facts.md`):
+- 10â€“15 áº£nh Commons Ä‘Ã£ kiá»ƒm `LicenseShortName`. Chá»‰ nháº­n PD, PDM, CC0, CC BY.
+- 10â€“15 ID clip Pexels trung tÃ­nh (rÆ¡-le, dÃ¢y Ä‘iá»‡n, mÃ¡y Ä‘Ã¡nh chá»¯, radio, biá»ƒn Ä‘Ãªm, báº£n Ä‘á»“ cÅ©, giáº¥y tá», Ä‘Ã¨n bÃ n).
+- Má»—i clip cÃ³ mÃ´ táº£ ngáº¯n vÃ  ghi chÃº "khÃ´ng logo/chá»¯".
+
+## BÃ¡o cÃ¡o `T2A-ket-qua.md`
+
+- Sá»‘ dá»¯ kiá»‡n theo chÆ°Æ¡ng (máº¡nh / vá»«a).
+- Danh sÃ¡ch URL Ä‘Ã£ má»Ÿ.
+- CÃ¢u há»i cÃ²n bá» ngá».
+- Äá» xuáº¥t cold open: chá»n tá»« dá»¯ kiá»‡n máº¡nh nháº¥t, kÃ¨m nguá»“n.
+
+# Video DÃ€I 16:9: há»“ sÆ¡ graphic motion (kÃªnh HÃ¬nh Sá»±)
+
+Anh em ngang cá»§a `motion/stier/` (Short dá»c). CÃ¹ng ngÃ´n ngá»¯ hÃ¬nh: há»“ sÆ¡ lÆ°u trá»¯, tÆ° liá»‡u tháº­t, má»™t mÃ u nháº¥n. KhÃ¡c á»Ÿ ba Ä‘iá»ƒm:
+
+- bá»‘ cá»¥c ngang 1920x1080;
+- chia theo chÆ°Æ¡ng;
+- cÃ³ video B-roll Pexels vÃ  nháº¡c ná»n tháº­t.
+
+Bá»™ ká»¹ nÄƒng giá»¯ chÃ¢n ngÆ°á»i nghe: **[RETENTION.md](RETENTION.md)**. Nguá»“n tÆ° liá»‡u dÃ¹ng tá»± do lÃ¢u dÃ i: **[SOURCES.md](SOURCES.md)**. Äá»c file nÃ y TRÆ¯á»šC khi viáº¿t ká»‹ch báº£n.
+
+## Quy trÃ¬nh
+
+DÃ¹ng python cá»§a `vietneu-tts/.venv`, vÃ¬ bÆ°á»›c TTS cáº§n gÃ³i `vieneu`.
+
+```
+python motion/long/research_long.py yakuza "Yakuza" "Yamaguchi-gumi" "?Sugamo Prison"   # bÃ i Wikipedia + áº£nh Commons tá»± do ("?"= tÃ¬m áº£nh)
+python motion/long/media_search.py search yakuza "tattoo" --src wellcome,openverse,artic,europeana   # kho má»Ÿ ngoÃ i Commons (xem SOURCES.md)
+python motion/long/media_search.py get yakuza tattoo1 X3        # táº£i á»©ng viÃªn X3 thÃ nh áº£nh "tattoo1" (tá»± ghi vÃ o spec + credit)
+python motion/long/media_search.py sat yakuza kobe_sat 135.15 34.66 135.25 34.72   # áº£nh vá»‡ tinh Sentinel-2 (Copernicus, ghi nguá»“n tá»± Ä‘á»™ng)
+python motion/long/pexels.py search yakuza "tokyo night rain" ...                      # B-roll ngang
+python motion/long/pexels.py get yakuza <id> <id> ...
+# viáº¿t data/long/yakuza/spec.json + ch00.json â€¦ chNN.json
+python motion/long/build_long.py yakuza takes 3        # (tuá»³ chá»n) Ä‘á»c má»—i cÃ¢u 3 láº§n -> tts/takes.json
+<.venv-video python> motion/long/stt_takes.py yakuza   # Whisper nghe láº¡i má»i báº£n -> tts/transcripts.json
+python motion/long/build_long.py yakuza pick           # chá»n báº£n khá»›p chá»¯ nháº¥t -> tts/picks.json, in cÃ¢u Ä‘Ã¡ng nghe láº¡i
+python motion/long/build_long.py yakuza tts            # Ä‘á»c giá»ng, cache theo tá»«ng cÃ¢u (dÃ¹ng picks náº¿u cÃ³), in thá»i lÆ°á»£ng tá»«ng chÆ°Æ¡ng
+python motion/long/build_long.py yakuza html           # áº£nh, báº£n Ä‘á»“, data.js, composition, sfx, mix tá»«ng chÆ°Æ¡ng
+python motion/long/build_long.py yakuza render ch03 --draft   # nhÃ¡p cÃ³ tiáº¿ng: chNN/draft_av.mp4
+python motion/long/build_long.py yakuza render         # báº£n tháº­t, tá»«ng chÆ°Æ¡ng
+python motion/long/build_long.py yakuza final          # ná»‘i chÆ°Æ¡ng + loudnorm -14 LUFS -> final.mp4
+python motion/long/describe.py yakuza                  # mÃ´ táº£: má»‘c chÆ°Æ¡ng + nguá»“n + ghi cÃ´ng áº£nh/nháº¡c/video
+```
+
+Giá»ng: vieneu 3.8.3, `VOICE = "Anh KhÃ´i"` (3.8.3 Ä‘á»•i tÃªn thÃ nh "Thiá»‡n Minh", tÃªn cÅ© lÃ  alias, embedding y há»‡t).
+BÆ°á»›c trá»™n Ã¡p `VOICE_FX` (highpass 70, -2dB@200, +2.5dB@3.2k, de-esser, nÃ©n 3:1) lÃªn giá»ng; spec `"master": false` Ä‘á»ƒ táº¯t
+(Yakuza Ä‘áº·t false vÃ¬ báº£n Ä‘Ã£ Ä‘Äƒng dÃ¹ng giá»ng thÃ´). Má»‘c chá»¯ luÃ´n láº¥y tá»« voice.wav thÃ´.
+
+## Spec
+
+`spec.json` gá»“m:
+
+- `imgs {key: "File:..."}`: nháº­n PD, CC0, CC BY vÃ  CC BY-SA. KhÃ´ng nháº­n NC, ND.
+- `geo {tÃªn: {countries, bbox, pins, box}}`
+- `say {chá»¯ hiá»ƒn thá»‹: cÃ¡ch Ä‘á»c}`: vÃ­ dá»¥ `"inagawa-kai": "Inagawa cai"`. Phá»¥ Ä‘á» váº«n giá»¯ chá»¯ gá»‘c.
+- `youtube {titles, summary, sources, tags}`
+
+Má»—i chÆ°Æ¡ng `chNN.json` gá»“m:
+
+- `hud {k, t}`
+- `bgm {file, at, gain}`
+- `lines[]`: má»—i pháº§n tá»­ lÃ  má»™t chuá»—i, hoáº·c `{"t": ..., "p": giÃ¢y_nghá»‰}`.
+- `scenes[]`
+
+Má»‘c thá»i gian dÃ¹ng giá»‘ng Short:
+
+| CÃº phÃ¡p | NghÄ©a |
+|---|---|
+| `i` | Ä‘áº§u cÃ¢u thá»© i |
+| `[i, "tá»«", n, lá»‡ch]` | lÃºc Ä‘á»c chá»¯ Ä‘Ã³ (láº§n thá»© n, cá»™ng thÃªm Ä‘á»™ lá»‡ch) |
+| `[i, null, 0, lá»‡ch]` | Ä‘áº§u cÃ¢u i cá»™ng Ä‘á»™ lá»‡ch |
+
+Sai chá»¯ neo lÃ  lá»—i cá»©ng: build dá»«ng ngay, khÃ´ng Ä‘á»ƒ lá»—i lá»t vÃ o render.
+
+## Ká»‹ch báº£n â†’ dá»¯ liá»‡u dá»±ng, theme noir
+
+- `python motion/long/script_lines.py <topic>`: chuyá»ƒn `data/long/<topic>/script.md` (Ä‘Ã£ duyá»‡t) thÃ nh `lines` cá»§a tá»«ng `chNN.json`.
+  `â€–` = nghá»‰ dÃ i, `**[DIá»„N Ã]**` = trÃ­ch diá»…n Ã½, `Â»` = lá»i trÃ­ch, Ä‘á»c báº±ng `QUOTE_VOICE` (Minh Äá»©c) qua bá»™ lá»c radio, cáº£nh quote cÃ³ `qline` sáº½ hiá»‡n sÃ³ng Ã¢m vÃ  nhÃ£n "GIá»ŒNG Äá»ŒC MINH Há»ŒA".
+- `spec.theme = "noir"`: khung Ä‘iá»‡n áº£nh 96px, phá»¥ Ä‘á» náº±m trong dáº£i Ä‘en dÆ°á»›i, cáº£nh `film: true` cÃ³ nháº¥p nhÃ¡y vÃ  tiáº¿ng mÃ¡y chiáº¿u.
+- Cáº£nh riÃªng cá»§a noir: `seismo` (bÄƒng Ä‘á»‹a cháº¥n, `hitAt`), `saint` (tháº» thÃ¡nh chÃ¡y, `burnAt/burnDur/burnTo`), `paper` (trang bÃ¡o mÃ´ phá»ng),
+  `pizzini` (giáº¥y Ä‘Ã¡nh mÃ¡y + `cipher` chá»¯â†’sá»‘ kiá»ƒu Provenzano), `dots` (má»—i cháº¥m má»™t ngÆ°á»i, `groups`), `board` (báº£ng ghim + dÃ¢y Ä‘á»),
+  `memorial` (tÃªn kháº¯c Ä‘Ã¡), `calendar` (lá»‹ch xÃ© `from/days/endAt`), `sticker` (tá» dÃ¡n Addiopizzo).
+- Má»i cáº£nh nháº­n `sfx: [{k: "gavel"|"bell"|"heart"|"match"|"slap"|â€¦, at}]` Ä‘á»ƒ Ä‘áº·t tiáº¿ng tay.
+- `bgm` cÃ³ thá»ƒ lÃ  danh sÃ¡ch Ä‘oáº¡n `{file, at, gain, start, end, fin, fout}` (start/end lÃ  má»‘c lá»i) Ä‘á»ƒ Ä‘á»•i nháº¡c giá»¯a chÆ°Æ¡ng.
+
+## Loáº¡i cáº£nh (casewide.js)
+
+| Loáº¡i | DÃ¹ng cho |
+|---|---|
+| `chapter` | Tháº» chÆ°Æ¡ng |
+| `broll` | Video Pexels, cÃ³ thá»ƒ kÃ¨m `kin` (chá»¯ phá»§) |
+| `photo` | áº¢nh trÃ n khung, Ken Burns |
+| `print` | áº¢nh in cáº¡nh khá»‘i chá»¯; dÃ nh cho áº£nh dá»c hoáº·c chÃ¢n dung |
+| `file` | Tháº» há»“ sÆ¡; dÃ²ng thÃ´ng tin hiá»‡n dáº§n theo lá»i Ä‘á»c |
+| `kinetic` | Chá»¯ Ä‘á»™ng |
+| `slam` | Má»™t dÃ²ng chá»¯ Ä‘áº­p máº¡nh |
+| `question` | CÃ¢u há»i; nháº¡c táº¯t, áº©n phá»¥ Ä‘á» |
+| `counter` | Sá»‘ Ä‘áº¿m |
+| `bars` | Biá»ƒu Ä‘á»“ cá»™t |
+| `timeline` | DÃ²ng thá»i gian ngang |
+| `map` | Báº£n Ä‘á»“ |
+| `quote` | TrÃ­ch dáº«n; `dy:true` gáº¯n nhÃ£n DIá»„N Ã |
+| `org` | SÆ¡ Ä‘á»“ gia Ä‘Ã¬nh hoáº·c tá»• chá»©c |
+| `ledger` | Báº£ng kÃª |
+| `split` | Hai áº£nh Ä‘áº·t cáº¡nh nhau |
+| `date` | NgÃ y thÃ¡ng |
+| `cards` | VÃ¡n bÃ i láº­t |
+| `evidence` | Tang váº­t |
+
+Nhiá»u cáº£nh nháº­n thÃªm cÃ¡c trÆ°á»ng sau:
+
+- Ná»n: `vid` (id Pexels, `ms` = giÃ¢y báº¯t Ä‘áº§u trong clip) hoáº·c `bg` (áº£nh).
+- Lá»›p phá»§: `label`, `tag`, `illus`, `stamp`.
+
+Credit áº£nh tá»± hiá»‡n theo giáº¥y phÃ©p.
+
+## Báº«y Ä‘Ã£ gáº·p
+
+- `<video>` pháº£i Ä‘Æ°á»£c **nÆ°á»›ng tÄ©nh** vÃ o HTML. HyperFrames bá» qua tháº» video do script táº¡o ra. Build tá»± kiá»ƒm tra clip cÃ³ Ä‘á»§ dÃ i cho cáº£nh khÃ´ng.
+- Anh KhÃ´i Ä‘á»c "8-9-3" thÃ nh "8 Ä‘áº¿n 9 ba", nÃªn pháº£i viáº¿t báº±ng chá»¯. ÄuÃ´i "-kai" bá»‹ Ä‘á»c thÃ nh "ki", nÃªn cáº§n map `say`.
+- Tá»‘c Ä‘á»™ render khoáº£ng 2,7 láº§n thá»i lÆ°á»£ng thá»±c (video 34 phÃºt máº¥t khoáº£ng 90 phÃºt).
+- `motion/hf/assets/long` lÃ  junction trá» tá»›i `output/long`, nÃªn áº£nh vÃ  video khÃ´ng pháº£i copy.
+
+## ÄÄƒng: thumbnail, SEO, phá»¥ Ä‘á», playlist
+
+- Thumbnail: máº«u á»Ÿ `thumbs/`, copy vÃ o `motion/hf/compositions/long/` rá»“i render 1 khung.
+  - CÃ´ng thá»©c rÃºt tá»« nghiÃªn cá»©u CTR: Ä‘á»™ tÆ°Æ¡ng pháº£n cao lÃ  biáº¿n máº¡nh nháº¥t, tiáº¿p theo lÃ  gÆ°Æ¡ng máº·t hoáº·c hÃ¬nh ngÆ°á»i.
+  - Chá»¯ chá»‰ 0â€“3 tá»«, bá»• sung cho tiÃªu Ä‘á» chá»© khÃ´ng láº·p láº¡i.
+  - Tá»‘i Ä‘a 2â€“3 thÃ nh pháº§n, khÃ´ng khÃ­ poster phim.
+  - LuÃ´n soi á»Ÿ cá»¡ mobile (~200px).
+  - LÃ m 3 báº£n Ä‘á»ƒ A/B test báº±ng Test & Compare trong Studio.
+- `python motion/long/describe.py <topic>`: mÃ´ táº£ â‰¤5000 **byte**, gá»“m hook 2 dÃ²ng Ä‘áº§u chá»©a tá»« khÃ³a, link xem tiáº¿p, má»‘c chÆ°Æ¡ng, nguá»“n, ghi cÃ´ng.
+- `python motion/long/srt.py <topic>`: phá»¥ Ä‘á» tiáº¿ng Viá»‡t tá»« má»‘c tá»«ng tá»«.
+- `python motion/long/publish_long.py <topic> CL <publishAt UTC> --playlist "TÃªn" "MÃ´ táº£" <idâ€¦>`: cháº¡y láº§n lÆ°á»£t cÃ¡c bÆ°á»›c sau.
+  1. upload private + publishAt
+  2. category
+  3. thumbnail
+  4. phá»¥ Ä‘á»
+  5. playlist má»›i
+  - Cháº¡y láº¡i thÃ¬ cÃ¡c bÆ°á»›c Ä‘Ã£ xong Ä‘Æ°á»£c bá» qua.
+
+## Beat text (hiá»‡u á»©ng chá»¯) â€” dÃ¹ng chung Long vÃ  Short
+
+- Engine: `motion/hf/assets/engine/beat.js` + `beat.css` (náº¡p trÆ°á»›c `casewide.js` / `casefile.js`). Bá»™ chá»n vÃ  tiáº¿ng tay náº±m á»Ÿ `motion/beatfx.py`.
+- Má»—i dÃ²ng chá»¯ (`kinetic.items`, `kin` phá»§ trÃªn áº£nh/clip) vÃ  má»—i `slam` Ä‘Æ°á»£c gÃ¡n `fx` tá»± Ä‘á»™ng khi dá»±ng. Viá»‡c gÃ¡n lÃ  táº¥t Ä‘á»‹nh theo tÃªn chÆ°Æ¡ng, khÃ´ng láº·p kiá»ƒu vá»«a dÃ¹ng:
+
+| Loáº¡i dÃ²ng | CÃ¡c kiá»ƒu |
+|---|---|
+| DÃ²ng thÆ°á»ng (cáº£ cáº£nh dÃ¹ng chung má»™t kiá»ƒu) | `rise` (trá»“i tá»« mÃ©p che), `blur` (nhÃ²eâ†’nÃ©t), `slice` (2 ná»­a ghÃ©p), `drop` (rÆ¡i náº£y), `pop` |
+| DÃ²ng nháº¥n `acc` | `marker` (bÃºt dáº¡ quang quÃ©t), `redact` (bÃ´i Ä‘en rá»“i lá»™), `stamp` (con dáº¥u), `tape` (bÄƒng phong tá»a), `outline` (viá»nâ†’Ä‘á»• mÃ u), `flicker` (neon cháº­p chá»n) |
+| DÃ²ng nhá» `sm` | `type` (mÃ¡y Ä‘Ã¡nh chá»¯), `rise`, `blur` |
+| DÃ²ng ngáº¯n cÃ³ sá»‘ | `scramble` (giáº£i mÃ£ kÃ½ tá»±), `type` |
+| Slam | `punch` (cÅ©), `glitch` (tÃ¡ch kÃªnh mÃ u), `zoom` (lao tá»›i), `slice` (3 dáº£i so le), `outline` |
+
+- Muá»‘n Ã©p má»™t kiá»ƒu thÃ¬ ghi `"fx": "redact"` vÃ o item hoáº·c slam. RiÃªng `"fx": "strike", "strikeAt": [i, "tá»«"]` gáº¡ch ngang cÃ¢u "khÃ´ng pháº£i X".
+- `stamp` vÃ  `tape` cÃ³ khung, nÃªn chá»‰ Ä‘Æ°á»£c gÃ¡n cho dÃ²ng â‰¤18 kÃ½ tá»± (Short: â‰¤12).
+
+## Äa dáº¡ng giá»¯a cÃ¡c video (chá»‘ng "repetitive content")
+
+ChÃ­nh sÃ¡ch Spam cá»§a YouTube láº¥y Ä‘Ãºng vÃ­ dá»¥ "the exact same background music and repetitive AI generated imagery across many videos". SÃ¡u Long Ä‘áº§u tiÃªn (Yakuza â†’ Tam GiÃ¡c VÃ ng) dÃ¹ng chung 13 bÃ i nháº¡c vÃ  cÃ¹ng má»™t diá»‡n máº¡o, nÃªn má»—i video má»›i pháº£i khÃ¡c cÃ¡c video gáº§n Ä‘Ã¢y. NghiÃªn cá»©u náº±m á»Ÿ `RESEARCH-million-views.md`.
+
+- `motion/variety.py` quáº£n lÃ½ viá»‡c nÃ y.
+  - Sá»• `data/variety/ledger.json` (cÃ³ commit) ghi má»—i video: nháº¡c ná»n, theme, look. `publish_long.py` tá»± ghi sau khi upload.
+  - `python motion/variety.py audit <topic>` so video vá»›i 3 video gáº§n nháº¥t cÃ¹ng kÃªnh. BÃ¡o lá»—i khi nháº¡c ná»n trÃ¹ng trÃªn 35% (Jaccard), hoáº·c look giá»‘ng video ngay trÆ°á»›c.
+  - `build_long.py html` in cáº£nh bÃ¡o. `build_long.py final` **tá»« chá»‘i** dá»±ng náº¿u chÆ°a sá»­a (cÃ³ thá»ƒ bá» qua báº±ng `--allow-repeat`).
+- **Look**: ghi `"look"` trong spec. CÃ³ cÃ¡c look `classic | amber | steel | jade | rose | sulfur`, má»—i look lÃ  má»™t báº£ng mÃ u, má»™t cáº·p font cÃ³ tiáº¿ng Viá»‡t vÃ  má»™t mÃ u ná»n. `python motion/variety.py next-look` gá»£i Ã½ look Ã­t dÃ¹ng nháº¥t. Spec khÃ´ng ghi look thÃ¬ render y nhÆ° cÅ© (`classic`).
+- **Nháº¡c theo mood**: trong chNN.json (hoáº·c gen_scenes) ghi `bgm={"mood": "tense", "gain": .12}` thay vÃ¬ `"file"`.
+  - CÃ¡c mood: tense | dark | sad | epic | mystery | quiet.
+  - Picker chá»n bÃ i Ã­t dÃ¹ng nháº¥t trong cÃ¡c video gáº§n Ä‘Ã¢y vÃ  khÃ´ng láº·p trong cÃ¹ng video.
+  - Káº¿t quáº£ Ä‘Æ°á»£c cache á»Ÿ `output/long/<topic>/bgm_picks.json`, nÃªn render láº¡i váº«n ra bÃ i cÅ©.
+  - Danh má»¥c nháº¡c: `motion/long/music_catalog.json`. File nháº¡c: `output/music/`. `python motion/variety.py library` cho biáº¿t má»—i bÃ i Ä‘Ã£ dÃ¹ng bao nhiÃªu láº§n.
+  - Kho hiá»‡n chá»‰ cÃ³ 14 bÃ i, chÆ°a Ä‘á»§ Ä‘á»ƒ trÃ¡nh trÃ¹ng. Pháº£i thÃªm bÃ i (Kevin MacLeod CC BY, YouTube Audio Libraryâ€¦) vÃ o cáº£ danh má»¥c láº«n `output/music/`.
+
+# Audio retention: ká»¹ nÄƒng giá»¯ chÃ¢n ngÆ°á»i nghe cho video dÃ i (kÃªnh HÃ¬nh Sá»±)
+
+Bá»™ quy táº¯c rÃºt ra tá»« viá»‡c **Ä‘o vÃ  má»• xáº»** báº£n Long thÃ nh cÃ´ng nháº¥t cá»§a kÃªnh
+("Há»™i Tam HoÃ ng", 50:05, 8.4K view, gáº¥p ~23 láº§n Long thá»© hai). File nÃ y chá»‰ ghi
+**ká»¹ thuáº­t**; khÃ´ng má»™t cÃ¢u vÄƒn nÃ o cá»§a báº£n gá»‘c Ä‘Æ°á»£c dÃ¹ng láº¡i. Báº£n chÃ©p lá»i chá»‰ Ä‘á»ƒ
+phÃ¢n tÃ­ch, náº±m á»Ÿ `output/long/ref/`, gitignored.
+
+CÃ´ng cá»¥ Ä‘o: `motion/long/transcribe.py` (faster-whisper large-v3-turbo, má»‘c tá»«ng tá»«).
+
+---
+
+## 1. Sá»‘ Ä‘o báº£n tham chiáº¿u
+
+| Chá»‰ sá»‘ | GiÃ¡ trá»‹ | Nháº­n xÃ©t |
+|---|---|---|
+| Thá»i lÆ°á»£ng | 50:05 | DÃ i lÃ  lá»£i tháº¿: watch-time tuyá»‡t Ä‘á»‘i cao |
+| Tá»‘c Ä‘á»™ Ä‘á»c | **208 Ã¢m tiáº¿t/phÃºt**, dao Ä‘á»™ng 193â€“225 theo tá»«ng 5 phÃºt | Gáº§n nhÆ° pháº³ng. KhÃ´ng cÃ³ Ä‘oáº¡n nÃ o Ä‘á»c cháº­m láº¡i Ä‘á»ƒ nháº¥n |
+| Khoáº£ng láº·ng > 0.8s | 23 láº§n / 50 phÃºt | CÃ³ chá»— nghá»‰ á»Ÿ ranh giá»›i chÆ°Æ¡ng, gáº§n nhÆ° khÃ´ng cÃ³ nghá»‰ ká»‹ch tÃ­nh |
+| Khoáº£ng láº·ng > 2s | 4 láº§n | Chá»‰ cÃ³ á»Ÿ chá»— ná»‘i file |
+| CÃ¢u há»i tu tá»« | gáº§n nhÆ° khÃ´ng cÃ³ | CÆ¡ há»™i bá»‹ bá» lá»¡ |
+
+**Káº¿t luáº­n:** báº£n Tam HoÃ ng tháº¯ng nhá» **chá»§ Ä‘á» + cáº¥u trÃºc + chi tiáº¿t láº¡**, khÃ´ng nhá»
+giá»ng Ä‘á»c. Nhá»‹p pháº³ng, Ä‘á»c cáº£ tiÃªu Ä‘á» má»¥c ("CÃ¡c hoáº¡t Ä‘á»™ng tá»™i pháº¡m chá»§ yáº¿uâ€¦"),
+liá»‡t kÃª tÃªn dÃ i. NghÄ©a lÃ  cÃ²n nhiá»u dÆ° Ä‘á»‹a tÄƒng retention báº±ng ká»¹ thuáº­t audio.
+
+## 2. Nhá»¯ng gÃ¬ báº£n gá»‘c lÃ m ÄÃšNG (giá»¯ láº¡i, viáº¿t theo cÃ¡ch cá»§a mÃ¬nh)
+
+1. **Lá»i há»©a lá»™ trÃ¬nh ngay phÃºt Ä‘áº§u.** Liá»‡t kÃª trÆ°á»›c nhá»¯ng thá»© ngÆ°á»i nghe sáº½ nháº­n
+   (lá»‹ch sá»­, cáº¥p báº­c, nghi lá»…, Ã´ng trÃ¹m, cuá»™c chiáº¿n vá»›i cáº£nh sÃ¡t). NgÆ°á»i nghe
+   biáº¿t "cÃ²n nhiá»u thá»© hay phÃ­a trÆ°á»›c" nÃªn khÃ´ng thoÃ¡t.
+2. **Cung biáº¿n cháº¥t (A â†’ B) lÃ m xÆ°Æ¡ng sá»‘ng.** Tá»« há»™i kÃ­n yÃªu nÆ°á»›c thÃ nh Ä‘áº¿ cháº¿
+   tá»™i pháº¡m. Cáº£ video lÃ  cÃ¢u tráº£ lá»i cho "chuyá»‡n gÃ¬ Ä‘Ã£ xáº£y ra á»Ÿ giá»¯a?".
+   Má»—i chá»§ Ä‘á» bÄƒng Ä‘áº£ng Ä‘á»u cÃ³ má»™t cung nhÆ° váº­y: tÃ¬m nÃ³ trÆ°á»›c khi viáº¿t.
+3. **Giáº£i mÃ£ máº­t mÃ£.** CÃ¡c con sá»‘ cáº¥p báº­c Ä‘Æ°á»£c "giáº£i" tá»«ng bÆ°á»›c (cá»™ng, nhÃ¢n ra Ã½
+   nghÄ©a). NÃ£o ngÆ°á»i nghe thÃ­ch Ä‘Æ°á»£c trao chÃ¬a khÃ³a. ÄÃ¢y lÃ  Ä‘oáº¡n giÃ u chi tiáº¿t
+   nháº¥t vÃ  cÅ©ng lÃ  Ä‘oáº¡n Ä‘á»c nhanh nháº¥t (225 Ã¢m tiáº¿t/phÃºt).
+4. **Nghi lá»… ká»ƒ báº±ng giÃ¡c quan.** HÆ°Æ¡ng khÃ³i, rÆ°á»£u pha mÃ¡u, bÆ°á»›c qua gÆ°Æ¡m, Ä‘á»‘t lá»i
+   thá». Cá»¥ thá»ƒ, nhÃ¬n tháº¥y Ä‘Æ°á»£c, khÃ´ng trá»«u tÆ°á»£ng.
+5. **Con sá»‘ gÃ¢y sá»‘c cÃ³ Ä‘á»‘i chiáº¿u.** "GiÃ¡ á»Ÿ nguá»“n X, ra Ä‘Æ°á»ng phá»‘ Y". LuÃ´n Ä‘áº·t hai
+   con sá»‘ cáº¡nh nhau Ä‘á»ƒ táº¡o tá»· lá»‡.
+6. **ChÃ¢n dung Ã´ng trÃ¹m cÃ³ cáº£nh hÃ nh Ä‘á»™ng.** KhÃ´ng chá»‰ nÃ³i "khÃ©t tiáº¿ng", mÃ  dá»±ng
+   cáº£nh cá»¥ thá»ƒ: giá», Ä‘á»‹a Ä‘iá»ƒm, chiáº¿c xe, sá»‘ ngÆ°á»i.
+7. **HÃ¬nh áº£nh áº©n dá»¥ láº·p láº¡i (motif).** Con ráº¯n nhiá»u Ä‘áº§u, cháº·t Ä‘áº§u nÃ y má»c Ä‘áº§u
+   khÃ¡c. Xuáº¥t hiá»‡n á»Ÿ giá»¯a rá»“i quay láº¡i á»Ÿ pháº§n káº¿t, táº¡o cáº£m giÃ¡c trá»n váº¹n.
+8. **"BÃ i há»c" sau má»—i pháº§n.** Má»™t cÃ¢u khÃ¡i quÃ¡t rÃºt ra tá»« chÆ°Æ¡ng vá»«a ká»ƒ. NgÆ°á»i
+   nghe tháº¥y mÃ¬nh Ä‘Æ°á»£c nhiá»u hÆ¡n lÃ  thÃ´ng tin.
+9. **ChÆ°Æ¡ng vÄƒn hÃ³a Ä‘áº¡i chÃºng gáº§n cuá»‘i.** Phim áº£nh lÃ  pháº§n ngÆ°á»i nghe biáº¿t sáºµn,
+   nÃªn Ä‘Ã¢y lÃ  "pháº§n thÆ°á»Ÿng" giá»¯ há» qua Ä‘oáº¡n phÃ¢n tÃ­ch khÃ´.
+10. **Káº¿t má»Ÿ.** KhÃ´ng káº¿t luáº­n dá»©t khoÃ¡t mÃ  Ä‘áº·t cÃ¢u há»i vá» tÆ°Æ¡ng lai.
+
+## 3. Nhá»¯ng gÃ¬ báº£n gá»‘c lÃ m SAI (sá»­a trong báº£n má»›i)
+
+| Lá»—i | Háº­u quáº£ | CÃ¡ch sá»­a |
+|---|---|---|
+| Má»Ÿ báº±ng "KÃ­nh thÆ°a quÃ½ vá»‹â€¦", giá»ng thuyáº¿t trÃ¬nh | NgÆ°á»i lÆ°á»›t khÃ´ng cÃ³ lÃ½ do á»Ÿ láº¡i 30 giÃ¢y Ä‘áº§u | **Cold open**: má»Ÿ báº±ng má»™t cáº£nh cá»¥ thá»ƒ, cÄƒng nháº¥t, rá»“i má»›i chÃ o |
+| Äá»c to tiÃªu Ä‘á» má»¥c | Nghe nhÆ° Ä‘á»c tÃ i liá»‡u | Chuyá»ƒn chÆ°Æ¡ng báº±ng **cÃ¢u mÃ³c**; tiÃªu Ä‘á» chá»‰ hiá»‡n trÃªn mÃ n hÃ¬nh |
+| Nhá»‹p Ä‘á»u 208 Ã¢m tiáº¿t/phÃºt | Buá»“n ngá»§ á»Ÿ phÃºt 15â€“25 | Äá»•i nhá»‹p cÃ³ chá»§ Ä‘Ã­ch (má»¥c 5) |
+| Liá»‡t kÃª 6â€“10 tÃªn liá»n nhau | NgÆ°á»i nghe máº¥t dáº¥u | Tá»‘i Ä‘a **3 má»¥c** má»—i danh sÃ¡ch; pháº§n cÃ²n láº¡i cho lÃªn mÃ n hÃ¬nh |
+| Láº·p ná»™i dung giá»¯a cÃ¡c chÆ°Æ¡ng | Cáº£m giÃ¡c Ä‘á»™n | Má»—i sá»± kiá»‡n chá»‰ ká»ƒ má»™t láº§n, nháº¯c láº¡i chá»‰ báº±ng **callback** ngáº¯n |
+| KhÃ´ng cÃ³ cÃ¢u há»i, khÃ´ng cÃ³ vÃ²ng má»Ÿ | KhÃ´ng cÃ³ lá»±c kÃ©o sang phÃºt sau | Má»—i chÆ°Æ¡ng má»Ÿ Ã­t nháº¥t 1 vÃ²ng, Ä‘Ã³ng á»Ÿ chÆ°Æ¡ng sau |
+| 10 phÃºt cuá»‘i lÃ  phÃ¢n tÃ­ch xÃ£ há»™i khÃ´ | Tá»¥t retention á»Ÿ Ä‘uÃ´i | Giá»¯ **cáº£nh máº¡nh thá»© hai** cho 20% cuá»‘i |
+
+## 4. Kiáº¿n trÃºc má»™t video dÃ i 30â€“40 phÃºt
+
+```
+0:00  COLD OPEN (40â€“70s)   Cáº£nh cÄƒng nháº¥t, ká»ƒ thÃ¬ hiá»‡n táº¡i, dá»«ng á»Ÿ Ä‘á»‰nh Ä‘iá»ƒm, chÆ°a giáº£i thÃ­ch
+      TITLE STING           TÃªn video + cÃ¢u há»©a ("Ä‘á»ƒ hiá»ƒu cáº£nh nÃ y, pháº£i quay láº¡i 300 nÄƒm")
+      Lá»˜ TRÃŒNH (20s)        Há»©a trÆ°á»›c nhá»¯ng gÃ¬ ngÆ°á»i xem sáº½ nháº­n (open loop chÃ­nh) -- Äá»”I HÃŒNH THá»¨C má»—i video (xem dÆ°á»›i)
+CH1   Gá»C Rá»„                NÆ¡i cung A â†’ B báº¯t Ä‘áº§u
+CH2â€¦  CÃC CHÆ¯Æ NG            Má»—i chÆ°Æ¡ng 3â€“6 phÃºt (xem khuÃ´n chÆ°Æ¡ng)
+~50%  RE-HOOK GIá»®A VIDEO    Quay láº¡i cold open: "giá» báº¡n Ä‘Ã£ hiá»ƒu vÃ¬ saoâ€¦" (Ä‘Ã³ng 1 vÃ²ng, má»Ÿ vÃ²ng má»›i lá»›n hÆ¡n)
+~75%  Cáº¢NH Máº NH THá»¨ HAI     Vá»¥ Ã¡n / cuá»™c chiáº¿n ká»‹ch tÃ­nh nháº¥t cÃ²n láº¡i
+Káº¾T   CALLBACK + CÃ‚U Há»ŽI    ÄÃ³ng vÃ²ng chÃ­nh, tráº£ motif, Ä‘á»ƒ láº¡i má»™t cÃ¢u há»i tháº­t
+```
+
+### Lá»i há»©a lá»™ trÃ¬nh: má»™t chá»©c nÄƒng, nhiá»u hÃ¬nh thá»©c (gÃ³p Ã½ ngÆ°á»i dÃ¹ng 07/10/2026)
+
+"Trong video nÃ y, mÃ¬nh sáº½ cÃ¹ng báº¡n tráº£ lá»i ba cÃ¢u há»i" láº·p á»Ÿ 4 ká»‹ch báº£n liá»n (A1, C1, D1, MIM #2) â†’ ngÆ°á»i xem thÆ°á»ng
+xuyÃªn nháº­n ra khuÃ´n, kÃªnh nghe nhÆ° mÃ¡y. Lá»™ trÃ¬nh lÃ  **chá»©c nÄƒng** (há»©a trÆ°á»›c, má»Ÿ vÃ²ng chÃ­nh), khÃ´ng pháº£i má»™t cÃ¢u cá»‘ Ä‘á»‹nh.
+Má»—i video chá»n Má»˜T hÃ¬nh thá»©c, **khÃ´ng láº·p hÃ¬nh thá»©c cá»§a video liá»n trÆ°á»›c cÃ¹ng kÃªnh**, vÃ  khÃ´ng dÃ¹ng cá»¥m "tráº£ lá»i ba cÃ¢u
+há»i" quÃ¡ 1 láº§n / 5 video:
+
+| HÃ¬nh thá»©c | VÃ­ dá»¥ |
+|---|---|
+| Cháº·ng Ä‘Æ°á»ng | "TrÆ°á»›c khi Ä‘oÃ¡n vá» AI, mÃ¬nh Ä‘i láº¡i ba cháº·ng mÃ¡y mÃ³c Ä‘Ã£ Ä‘i trÆ°á»›c nÃ³: â€¦" (MIM #2) |
+| Cáº£nh háº¹n trÆ°á»›c | "Cuá»‘i video, báº¡n sáº½ gáº·p láº¡i ngÆ°á»i Ä‘á»©ng Ä‘áº§u hÃ ng nÃ y, vÃ  láº§n áº¥y há» lÃ m khÃ¡c Ä‘i." |
+| CÃ¢u há»i duy nháº¥t | Má»™t cÃ¢u há»i lá»›n, khÃ´ng Ä‘áº¿m sá»‘: "Váº­y cÃ¡i gÃ¬ giá»¯ chá»‰ sá»‘ Ä‘á»©ng yÃªn?" |
+| Lá»i thÃ¡ch | "Thá»­ Ä‘oÃ¡n trÆ°á»›c: trong 11 láº§n, bao nhiÃªu láº§n lÃ  Ä‘á»‰nh? Giá»¯ con sá»‘ áº¥y tá»›i chÆ°Æ¡ng hai." |
+| Báº£n Ä‘á»“ báº±ng hÃ¬nh | Lá»i Ä‘á»c 1 cÃ¢u, mÃ n hÃ¬nh hiá»‡n cÃ¡c má»‘c/chÆ°Æ¡ng (timeline, ledger) thay vÃ¬ Ä‘á»c danh sÃ¡ch |
+| Nghá»‹ch lÃ½ | "MÃ¡y Ä‘áº¿m tiá»n Ä‘áº§y phá»‘, váº­y mÃ  nghá» Ä‘áº¿m tiá»n láº¡i Ä‘Ã´ng ngÆ°á»i hÆ¡n. Video nÃ y Ä‘i tÃ¬m lÃ½ do." |
+
+Ká»‹ch báº£n ghi rÃµ hÃ¬nh thá»©c Ä‘Ã£ chá»n á»Ÿ má»¥c **Giá»¯ chÃ¢n**; agent kiá»ƒm chá»©ng Ä‘á»‘i chiáº¿u vá»›i video liá»n trÆ°á»›c cá»§a kÃªnh.
+
+### KhuÃ´n má»™t chÆ°Æ¡ng (3â€“6 phÃºt)
+
+1. **MÃ³c vÃ o** (1â€“2 cÃ¢u): má»™t chi tiáº¿t láº¡, hoáº·c cÃ¢u há»i, hoáº·c con sá»‘.
+2. **Bá»‘i cáº£nh** ngáº¯n: ai, á»Ÿ Ä‘Ã¢u, nÄƒm nÃ o.
+3. **Leo thang**: 2â€“3 nhá»‹p, má»—i nhá»‹p má»™t chi tiáº¿t cá»¥ thá»ƒ hÆ¡n.
+4. **Äá»‰nh**: má»™t cÃ¢u ngáº¯n, má»™t khoáº£ng láº·ng, rá»“i hiá»‡n áº£nh hoáº·c con sá»‘ lÃªn mÃ n hÃ¬nh.
+5. **Ã nghÄ©a**: má»™t cÃ¢u "bÃ i há»c" báº±ng lá»i cá»§a mÃ¬nh.
+6. **Cáº§u ná»‘i**: cÃ¢u má»Ÿ vÃ²ng sang chÆ°Æ¡ng sau ("NhÆ°ng thá»© nuÃ´i sá»‘ng há» láº¡i khÃ´ng pháº£i
+   cá» báº¡câ€¦"). Tuyá»‡t Ä‘á»‘i khÃ´ng káº¿t chÆ°Æ¡ng báº±ng cÃ¢u tÃ³m táº¯t.
+
+## 5. Ká»¹ thuáº­t audio (TTS Anh KhÃ´i)
+
+- **Tá»‘c Ä‘á»™ ná»n** ~220 Ã¢m tiáº¿t/phÃºt lÃ  nhá»‹p tá»± nhiÃªn cá»§a KhÃ´i.
+  - Äoáº¡n giáº£i mÃ£ hoáº·c liá»‡t kÃª nhanh: cÃ¢u ngáº¯n, dá»“n dáº­p.
+  - Äoáº¡n Ä‘á»‰nh: cÃ¢u ráº¥t ngáº¯n (3â€“6 Ã¢m tiáº¿t), tÃ¡ch dÃ²ng riÃªng.
+- **Äá»™ dÃ i cÃ¢u:** trung bÃ¬nh 12â€“18 Ã¢m tiáº¿t, xen cÃ¢u 3â€“6 Ã¢m tiáº¿t má»—i 4â€“6 cÃ¢u.
+  KhÃ´ng Ä‘á»ƒ cÃ¢u nÃ o quÃ¡ 35 Ã¢m tiáº¿t (TTS há»¥t hÆ¡i, ngÆ°á»i nghe máº¥t máº¡ch).
+- **Khoáº£ng láº·ng cÃ³ chá»§ Ä‘Ã­ch** (chÃ¨n khi ghÃ©p audio, khÃ´ng nhá» dáº¥u cÃ¢u):
+
+  | Vá»‹ trÃ­ | Äá»™ dÃ i |
+  |---|---|
+  | Sau cÃ¢u Ä‘á»‰nh | 0.9â€“1.3s |
+  | Giá»¯a chÆ°Æ¡ng | 1.6â€“2.2s, kÃ¨m sting SFX |
+  | Sau cÃ¢u há»i tu tá»« | 0.6s |
+  | CÃ¢u thÆ°á»ng | 0.25â€“0.4s |
+
+- **Pattern interrupt má»—i 45â€“90 giÃ¢y:** má»™t cÃ¢u há»i tu tá»«, má»™t con sá»‘ lá»›n Ä‘á»c tÃ¡ch,
+  má»™t cÃ¢u "nhÆ°ng", má»™t Ä‘oáº¡n trÃ­ch tÃ i liá»‡u, hoáº·c Ä‘á»•i cáº£nh hÃ¬nh máº¡nh. KhÃ´ng Ä‘á»ƒ quÃ¡
+  90 giÃ¢y chá»‰ lÃ  ká»ƒ liá»n máº¡ch.
+- **NÃ³i vá»›i ngÆ°á»i nghe:** dÃ¹ng "báº¡n". Báº£n gá»‘c dÃ¹ng "quÃ½ vá»‹" (xa cÃ¡ch); kÃªnh cáº§n
+  giá»ng ká»ƒ chuyá»‡n, khÃ´ng pháº£i há»™i tháº£o.
+- **Quy táº¯c sá»‘ ba:** liá»‡t kÃª 3 thá»©, má»¥c thá»© ba lÃ  má»¥c báº¥t ngá» nháº¥t.
+- **TÃªn nÆ°á»›c ngoÃ i:** má»—i tÃªn pháº£i Ä‘i kÃ¨m má»™t mÃ´ táº£ ngáº¯n á»Ÿ láº§n Ä‘áº§u ("Taoka, Ä‘á»©a
+  tráº» má»“ cÃ´i á»Ÿ báº¿n cáº£ng Kobe"). Láº§n sau chá»‰ gá»i mÃ´ táº£ hoáº·c há».
+- **Con sá»‘:** Ä‘á»c sá»‘ trÃ²n, luÃ´n Ä‘áº·t cáº¡nh má»™t má»‘c so sÃ¡nh quen thuá»™c.
+- **Nháº¡c ná»n:** giáº£m nháº¡c khi vÃ o cÃ¢u Ä‘á»‰nh, táº¯t háº³n 1 giÃ¢y trÆ°á»›c cÃ¢u cao trÃ o,
+  vÃ o láº¡i khi sang chÆ°Æ¡ng.
+
+## 6. TÃ­nh trung thá»±c (luáº­t cá»©ng cá»§a kÃªnh)
+
+- Chá»‰ ká»ƒ sá»± kiá»‡n cÃ³ nguá»“n (Wikipedia EN/JA, bÃ¡o chÃ­ Ä‘Æ°á»£c trÃ­ch trong Ä‘Ã³). Sá»‘ liá»‡u
+  ghi kÃ¨m nÄƒm.
+- Cáº£nh "dá»±ng láº¡i" pháº£i lÃ  tÆ°á»ng thuáº­t sá»± kiá»‡n cÃ³ tháº­t, khÃ´ng bá»‹a lá»i thoáº¡i.
+  Lá»i diá»…n Ã½ pháº£i gáº¯n nhÃ£n **DIá»„N Ã** trÃªn mÃ n hÃ¬nh.
+- KhÃ´ng dÃ¹ng áº£nh gÃ¢y hiá»ƒu nháº§m (áº£nh ngÆ°á»i A chÃº thÃ­ch lÃ  ngÆ°á»i B). áº¢nh minh há»a
+  khÃ´ng liÃªn quan trá»±c tiáº¿p â†’ gáº¯n nhÃ£n "áº¢NH MINH Há»ŒA".
+- KhÃ´ng tÃ´n vinh báº¡o lá»±c hay tá»• chá»©c tá»™i pháº¡m. Má»—i chÆ°Æ¡ng "bÃ i há»c" nÃªu cÃ¡i giÃ¡ pháº£i tráº£.
+
+## 7. Checklist trÆ°á»›c khi thu Ã¢m
+
+- [ ] 30 giÃ¢y Ä‘áº§u cÃ³ cáº£nh cá»¥ thá»ƒ + cÃ¢u há»i chÆ°a tráº£ lá»i?
+- [ ] Lá»i há»©a lá»™ trÃ¬nh KHÃC hÃ¬nh thá»©c video liá»n trÆ°á»›c cÃ¹ng kÃªnh (khÃ´ng máº·c Ä‘á»‹nh "ba cÃ¢u há»i")?
+- [ ] CÃ³ â‰¥3 open loop Ä‘Æ°á»£c Ä‘Ã³ng á»Ÿ cÃ¡c chÆ°Æ¡ng sau?
+- [ ] Má»—i chÆ°Æ¡ng káº¿t báº±ng cÃ¢u cáº§u ná»‘i, khÃ´ng pháº£i cÃ¢u tÃ³m táº¯t?
+- [ ] KhÃ´ng cÃ³ Ä‘oáº¡n >90s thiáº¿u pattern interrupt?
+- [ ] KhÃ´ng danh sÃ¡ch nÃ o >3 má»¥c trong lá»i Ä‘á»c?
+- [ ] Motif xuáº¥t hiá»‡n â‰¥3 láº§n (Ä‘áº§u, giá»¯a, káº¿t)?
+- [ ] 20% cuá»‘i cÃ³ má»™t cáº£nh máº¡nh?
+- [ ] Má»i con sá»‘ cÃ³ nguá»“n vÃ  nÄƒm?
+- [ ] Tá»•ng â‰¥ 6.800 Ã¢m tiáº¿t (â‰ˆ 31 phÃºt á»Ÿ 220 Ã¢m tiáº¿t/phÃºt + láº·ng)?
+
+# Nguá»“n hÃ¬nh vÃ  video dÃ¹ng tá»± do lÃ¢u dÃ i cho kÃªnh HÃ¬nh Sá»± (Ä‘Ã£ kiá»ƒm tra ngÃ y 04/10/2026)
+
+**NguyÃªn táº¯c:** kÃªnh cÃ³ báº­t kiáº¿m tiá»n, nÃªn má»i tÆ° liá»‡u pháº£i cho phÃ©p **dÃ¹ng thÆ°Æ¡ng máº¡i** vÃ  **cho phÃ©p chá»‰nh sá»­a** (cáº¯t khung, Ken Burns, phá»§ chá»¯, Ä‘á»•i mÃ u).
+
+| ÄÆ°á»£c dÃ¹ng | KhÃ´ng dÃ¹ng |
+|---|---|
+| Public domain / PDM, CC0, CC BY, CC BY-SA (cÃ³ ghi cÃ´ng) | NC (cáº¥m thÆ°Æ¡ng máº¡i) |
+| Giáº¥y phÃ©p riÃªng cho phÃ©p thÆ°Æ¡ng máº¡i: Pexels, Pixabay, Mixkit "Free License" | ND (cáº¥m chá»‰nh sá»­a) |
+| | "Fair use", áº£nh khÃ´ng rÃµ nguá»“n |
+
+**Ghi cÃ´ng:**
+- `build_long` vÃ  `describe.py` tá»± in credit vÃ o mÃ´ táº£ cho cÃ¡c áº£nh láº¥y báº±ng `research_long.py` (Commons) vÃ  `media_search.py` (cÃ¡c kho khÃ¡c).
+- Giá»¯ nguyÃªn file `.json` cáº¡nh tá»«ng áº£nh. ÄÃ¢y lÃ  báº±ng chá»©ng giáº¥y phÃ©p náº¿u bá»‹ khiáº¿u náº¡i.
+
+## 1. áº¢nh tÆ° liá»‡u: Ä‘ang dÃ¹ng hoáº·c Ä‘Ã£ tÃ­ch há»£p sáºµn
+
+| Nguá»“n | Giáº¥y phÃ©p | Máº¡nh á»Ÿ máº£ng | CÃ´ng cá»¥ |
+|---|---|---|---|
+| **Wikimedia Commons** | PD / CC0 / CC BY / BY-SA tÃ¹y file | Má»i chá»§ Ä‘á», nguá»“n chÃ­nh | `research_long.py` |
+| **Wellcome Collection** | PDM / CC0 / CC BY 4.0 | Lá»‹ch sá»­ thuá»‘c phiá»‡n, y há»c, Trung Hoa vÃ  áº¤n Äá»™ tháº¿ ká»· 19 (tiá»‡m hÃºt, xÆ°á»Ÿng thuá»‘c phiá»‡n Patna) | `media_search.py --src wellcome` |
+| **Openverse** (tá»•ng há»£p Flickr CC, báº£o tÃ ng, Commons) | Lá»c sáºµn CC0 / PDM / BY / BY-SA | áº¢nh Ä‘á»i thÆ°á»ng chÃ¢u Ã, Ä‘á»‹a Ä‘iá»ƒm hiá»‡n nay | `--src openverse` |
+| **Art Institute of Chicago** | CC0 (tÃ¡c pháº©m public domain) | áº¢nh vÃ  tranh tháº¿ ká»· 19 (Há»“ng KÃ´ng, Trung Hoa, Nháº­t). TÃ¬m báº±ng tá»« khÃ³a cá»¥ thá»ƒ, tá»« khÃ³a chung tráº£ káº¿t quáº£ nhiá»…u | `--src artic` |
+| **Europeana** (`reusability=open`) | PDM / CC0 / CC BY / BY-SA | áº¢nh thá»i thuá»™c Ä‘á»‹a á»Ÿ chÃ¢u Ã (KITLV, Tropenmuseum, Nationaal Archief) | `--src europeana`. NÃªn Ä‘Äƒng kÃ½ khÃ³a miá»…n phÃ­ (`EUROPEANA_KEY`), hiá»‡n Ä‘ang dÃ¹ng khÃ³a demo |
+| **NASA Image and Video Library** (thÃªm 06/10/2026) | áº¢nh NASA khÃ´ng cÃ³ báº£n quyá»n á»Ÿ Má»¹. **KhÃ´ng** dÃ¹ng logo NASA, khÃ´ng gá»£i Ã½ NASA báº£o trá»£; áº£nh cÃ³ bÃªn thá»© ba (xem mÃ´ táº£) thÃ¬ bá». [HÆ°á»›ng dáº«n](https://www.nasa.gov/nasa-brand-center/images-and-media/) | Vá»‡ tinh, GPS, khÃ´ng gian, mÃ¡y tÃ­nh thá»i Apollo, TrÃ¡i Äáº¥t | `--src nasa` (khÃ´ng cáº§n khÃ³a) |
+| **Smithsonian Open Access** (thÃªm 06/10/2026) | Chá»‰ nháº­n media `usage.access = CC0` | Hiá»‡n váº­t cÃ´ng nghá»‡: mÃ¡y tÃ­nh, Ä‘iá»‡n thoáº¡i, mÃ¡y nghe nháº¡c (cho kÃªnh MIM) | `--src smithsonian`. Cáº§n khÃ³a miá»…n phÃ­ api.data.gov: `SI_API_KEY=` trong `.local.env` |
+| **Sentinel-2** qua Microsoft Planetary Computer | Dá»¯ liá»‡u Copernicus: dÃ¹ng thÆ°Æ¡ng máº¡i tá»± do, **báº¯t buá»™c** ghi "Contains modified Copernicus Sentinel data [nÄƒm]" | áº¢nh vá»‡ tinh 10 m lÃ m cáº£nh Ä‘á»‹nh vá»‹ (ngÃ£ ba sÃ´ng Mekong, Ä‘áº·c khu sÃ²ng báº¡c, má»™t khu phá»‘â€¦) | `media_search.py sat` |
+
+**LÆ°u Ã½ vá»›i Openverse:** áº£nh tá»« Flickr cÃ³ thá»ƒ bá»‹ "rá»­a giáº¥y phÃ©p" (ngÆ°á»i Ä‘Äƒng khÃ´ng pháº£i tÃ¡c giáº£). Chá»‰ dÃ¹ng khi tÃ i khoáº£n Ä‘Äƒng áº£nh lÃ  ngÆ°á»i chá»¥p, hoáº·c lÃ  má»™t tá»• chá»©c. Tuyá»‡t Ä‘á»‘i khÃ´ng dÃ¹ng áº£nh ngÆ°á»i ná»•i tiáº¿ng chá»¥p chuyÃªn nghiá»‡p láº¥y tá»« Flickr.
+
+## 2. áº¢nh tÆ° liá»‡u: nÃªn thÃªm sau
+
+CÃ¡c nguá»“n nÃ y cáº§n Ä‘Äƒng kÃ½ khÃ³a API miá»…n phÃ­, hoáº·c pháº£i tÃ¬m báº±ng tay.
+
+| Nguá»“n | Giáº¥y phÃ©p | Máº¡nh á»Ÿ máº£ng | Ghi chÃº |
+|---|---|---|---|
+| **NARA**, LÆ°u trá»¯ Quá»‘c gia Má»¹ | TÃ¡c pháº©m cá»§a chÃ­nh phá»§ liÃªn bang Má»¹ lÃ  public domain | áº¢nh vÃ  phim cá»§a FBI, DEA, quÃ¢n Ä‘á»™i Má»¹, Chiáº¿n tranh Viá»‡t Nam, Tam GiÃ¡c VÃ ng thá»i CIA | API cáº§n khÃ³a, pháº£i gá»­i email xin |
+| **Library of Congress** (bá»™ "Free to Use and Reuse", "no known restrictions") | PD | áº¢nh bÃ¡o chÃ­ Má»¹, vá»¥ Ã¡n Má»¹ Ä‘áº§u tháº¿ ká»· 20 | Trang cháº·n truy cáº­p tá»± Ä‘á»™ng (Cloudflare). Pháº§n lá»›n áº£nh Ä‘Ã£ cÃ³ báº£n sao trÃªn Commons, nÃªn tÃ¬m qua Commons trÆ°á»›c |
+| **DVIDS** (quÃ¢n Ä‘á»™i Má»¹) | PD, Ä‘Æ°á»£c dÃ¹ng thÆ°Æ¡ng máº¡i | áº¢nh vÃ  video quÃ¢n sá»± hiá»‡n Ä‘áº¡i, chá»‘ng ma tÃºy | API cáº§n khÃ³a miá»…n phÃ­; váº«n cÃ³ thá»ƒ bá»‹ Content ID nháº­n nháº§m |
+| **Smithsonian Open Access** | CC0 | Hiá»‡n váº­t, áº£nh lá»‹ch sá»­ Má»¹ | KhÃ³a api.data.gov miá»…n phÃ­. Ãt há»£p chá»§ Ä‘á» tá»™i pháº¡m, pháº§n lá»›n lÃ  máº«u váº­t |
+| **Met Museum**, **Rijksmuseum**, **NYPL Public Domain** | CC0 / PD | Tranh, áº£nh cá»•, báº£n Ä‘á»“ | Rijksmuseum cÃ³ nhiá»u áº£nh ÄÃ´ng Nam Ã thá»i thuá»™c Ä‘á»‹a |
+| **NDL Image Bank**, ThÆ° viá»‡n Quá»‘c há»™i Nháº­t | PD, Ä‘Æ°á»£c dÃ¹ng thÆ°Æ¡ng máº¡i khÃ´ng cáº§n xin phÃ©p (chá»‰ xin ghi nguá»“n) | Tranh ukiyo-e, áº£nh Nháº­t thá»i Minh Trá»‹, phÃ¹ há»£p chá»§ Ä‘á» Yakuza | TÃ¬m báº±ng tay |
+| **LÆ°u trá»¯ Quá»‘c gia ÄÃ i Loan**, **Báº£o tÃ ng Cá»‘ cung ÄÃ i Báº¯c** | Open Government Data License, tÆ°Æ¡ng Ä‘Æ°Æ¡ng CC BY | Quá»‘c DÃ¢n Äáº£ng, ÄÃ i Loan tháº¿ ká»· 20, ráº¥t há»£p táº­p Tam GiÃ¡c VÃ ng | TÃ¬m báº±ng tay, ghi cÃ´ng Ä‘áº§y Ä‘á»§ |
+| **Flickr Commons** (NKCR, "No known copyright restrictions") | CÃ¡c tá»• chá»©c tá»± xÃ¡c nháº­n khÃ´ng cÃ²n báº£n quyá»n | áº¢nh lÆ°u trá»¯ cá»§a cÃ¡c thÆ° viá»‡n lá»›n | Nhiá»u áº£nh Ä‘Ã£ cÃ³ trÃªn Commons |
+
+## 3. Video B-roll
+
+| Nguá»“n | Giáº¥y phÃ©p | Ghi chÃº |
+|---|---|---|
+| **Pexels** (Ä‘ang dÃ¹ng) | Giáº¥y phÃ©p Pexels: thÆ°Æ¡ng máº¡i, khÃ´ng báº¯t buá»™c ghi cÃ´ng | Kiá»ƒm tra HDR (`color_transfer`) trÆ°á»›c khi render. Hiáº¿m khi bá»‹ Content ID |
+| **Pixabay** | Content License: thÆ°Æ¡ng máº¡i, khÃ´ng báº¯t buá»™c ghi cÃ´ng | Cáº§n khÃ³a API miá»…n phÃ­. Má»™t sá»‘ clip/nháº¡c bá»‹ gáº¯n Content ID; náº¿u bá»‹ claim thÃ¬ dÃ¹ng "License Certificate" cá»§a Pixabay Ä‘á»ƒ khÃ¡ng nghá»‹ |
+| **Mixkit** | Chá»‰ nhá»¯ng clip mang **Free License** | CÃ³ loáº¡i Restricted License chá»‰ cho dÃ¹ng phi thÆ°Æ¡ng máº¡i, nÃªn pháº£i xem tá»«ng clip |
+| **Coverr** | Miá»…n phÃ­ cho thÆ°Æ¡ng máº¡i | Kho nhá», máº¡nh vá» cáº£nh thÃ nh phá»‘ |
+| **Prelinger Archives / phim thá»i sá»± trong NARA** (archive.org) | Pháº§n lá»›n lÃ  PD | **Rá»§i ro Content ID:** nhiá»u cÃ´ng ty gáº¯n Content ID lÃªn phim PD (vÃ­ dá»¥ Archive Farms). Chá»‰ dÃ¹ng Ä‘oáº¡n ngáº¯n, bá» tiáº¿ng gá»‘c, giá»¯ link nguá»“n Ä‘á»ƒ khÃ¡ng nghá»‹. NhÃ£n `licenseurl` trÃªn archive.org khÃ´ng Ä‘Ã¡ng tin vÃ¬ cÃ³ báº£n táº£i láº¡i tá»« YouTube bá»‹ gáº¯n nháº§m "public domain" |
+| **NASA / DVIDS video** | PD | Cáº£nh khÃ´ng gian, quÃ¢n sá»± |
+
+## 4. Báº£n Ä‘á»“, Ã¢m thanh, nháº¡c
+
+| Loáº¡i | Nguá»“n | Giáº¥y phÃ©p |
+|---|---|---|
+| Báº£n Ä‘á»“ vector | Natural Earth (Ä‘ang dÃ¹ng) | PD |
+| Báº£n Ä‘á»“ chi tiáº¿t | OpenStreetMap | ODbL, ghi "Â© OpenStreetMap contributors" |
+| Nháº¡c ná»n | Kevin MacLeod / incompetech (Ä‘ang dÃ¹ng) | CC BY 4.0, ghi cÃ´ng tá»± Ä‘á»™ng |
+| Nháº¡c ná»n | YouTube Audio Library | Miá»…n phÃ­ khi dÃ¹ng trÃªn YouTube, chÃº Ã½ cá»™t yÃªu cáº§u ghi cÃ´ng |
+| Hiá»‡u á»©ng Ã¢m thanh | Freesound | Chá»‰ láº¥y CC0 hoáº·c CC BY |
+| Hiá»‡u á»©ng Ã¢m thanh | Pixabay SFX | ThÆ°Æ¡ng máº¡i tá»± do |
+
+## 5. KHÃ”NG dÃ¹ng (Ä‘Ã£ kiá»ƒm tra)
+
+| Nguá»“n | LÃ½ do |
+|---|---|
+| EOX Sentinel-2 cloudless (s2maps / EOxCloudless) | Chá»‰ CC BY-NC-SA, muá»‘n dÃ¹ng thÆ°Æ¡ng máº¡i pháº£i mua giáº¥y phÃ©p |
+| Gallica / BnF (PhÃ¡p) | áº¢nh public domain nhÆ°ng dÃ¹ng thÆ°Æ¡ng máº¡i (ká»ƒ cáº£ video cÃ³ kiáº¿m tiá»n) pháº£i xin phÃ©p vÃ  tráº£ phÃ­ |
+| Government Records Service Há»“ng KÃ´ng (PRO) | NgoÃ i má»¥c Ä‘Ã­ch há»c táº­p, nghiÃªn cá»©u thÃ¬ pháº£i xin phÃ©p báº±ng vÄƒn báº£n |
+| British PathÃ©, AP Archive, Reuters, Getty, CriticalPast | Tráº£ phÃ­ |
+| Videvo | Láº«n nhiá»u giáº¥y phÃ©p khÃ¡c nhau, dá»… dÃ¹ng nháº§m clip khÃ´ng Ä‘Æ°á»£c phÃ©p |
+| áº¢nh hoáº·c cáº£nh trÃ­ch tá»« phim, áº£nh chá»¥p mÃ n hÃ¬nh báº£n tin truyá»n hÃ¬nh | KhÃ´ng cÃ³ giáº¥y phÃ©p |
+| áº¢nh AI | KÃªnh khÃ´ng dÃ¹ng, vÃ  Ä‘Ã£ cÃ³ file AI láº«n trong káº¿t quáº£ Commons, vÃ­ dá»¥ file "Stable diffusionâ€¦" |
+
+## 6. Náº¿u bá»‹ Content ID claim
+
+1. Má»Ÿ YouTube Studio, vÃ o má»¥c Ná»™i dung, chá»n "Xem chi tiáº¿t" á»Ÿ claim, rá»“i báº¥m "KhÃ¡ng nghá»‹". LÃ½ do: cÃ³ giáº¥y phÃ©p hoáº·c tÆ° liá»‡u thuá»™c pháº¡m vi cÃ´ng cá»™ng.
+2. DÃ¡n link trang gá»‘c cá»§a tÆ° liá»‡u (`page` trong file `.json` cá»§a áº£nh, `slug` trong `broll/index.json` cá»§a Pexels) vÃ  tÃªn giáº¥y phÃ©p.
+3. BÃªn claim cÃ³ 30 ngÃ y Ä‘á»ƒ tráº£ lá»i. Trong thá»i gian khÃ¡ng nghá»‹, doanh thu Ä‘Æ°á»£c giá»¯ láº¡i vÃ  tráº£ cho bÃªn tháº¯ng.
+
+## 7. Quy táº¯c khi dÃ¹ng tÆ° liá»‡u trong video cÃ³ kiáº¿m tiá»n (tra cá»©u ngÃ y 04/10/2026)
+
+CÃ³ ba lá»›p luáº­t Ã¡p dá»¥ng cÃ¹ng lÃºc:
+1. Luáº­t báº£n quyá»n: Má»¹ (YouTube xá»­ lÃ½ khiáº¿u náº¡i theo DMCA) vÃ  Viá»‡t Nam (Luáº­t SHTT, Äiá»u 25).
+2. Há»‡ thá»‘ng tá»± Ä‘á»™ng Content ID.
+3. ChÃ­nh sÃ¡ch kiáº¿m tiá»n YPP: "reused content" vÃ  "inauthentic content".
+
+| Loáº¡i tÆ° liá»‡u | DÃ¹ng trong video cÃ³ kiáº¿m tiá»n? | Ghi chÃº |
+|---|---|---|
+| Public domain tháº­t (Má»¹: xuáº¥t báº£n trÆ°á»›c 1931; áº£nh cá»§a chÃ­nh phá»§ liÃªn bang Má»¹; CC0/PDM) | âœ… | RiÃªng phim thá»i sá»± cÅ© váº«n cÃ³ thá»ƒ bá»‹ Content ID nháº­n nháº§m (má»¥c 3) |
+| CC BY / CC BY-SA | âœ… ghi cÃ´ng | KhÃ´ng dÃ¹ng NC/ND |
+| Pexels, Pixabay, Mixkit Free | âœ… | Giá»¯ link nguá»“n Ä‘á»ƒ khÃ¡ng nghá»‹ |
+| áº¢nh cá»§a chÃ­nh phá»§ nÆ°á»›c khÃ¡c (Há»“ng KÃ´ng, ThÃ¡i, Trung Quá»‘c, Viá»‡t Namâ€¦) | âš ï¸ | KHÃ”NG tá»± Ä‘á»™ng lÃ  public domain nhÆ° áº£nh liÃªn bang Má»¹. Chá»‰ dÃ¹ng khi Commons Ä‘Ã£ xÃ¡c nháº­n giáº¥y phÃ©p |
+| TrÃ­ch dáº«n vÄƒn báº£n ngáº¯n (cÃ¢u nÃ³i, cÃ´ng hÃ m, phÃ¡t biá»ƒu) | âœ… trÃ­ch dáº«n há»£p lÃ½ | Ngáº¯n, Ä‘Ãºng nguyÃªn Ã½, ghi nguá»“n. Luáº­t SHTT Äiá»u 25 cho phÃ©p trÃ­ch dáº«n há»£p lÃ½ Ä‘á»ƒ bÃ¬nh luáº­n, minh há»a trong phim tÃ i liá»‡u |
+| Äá»c láº¡i nguyÃªn vÄƒn bÃ i viáº¿t hay sÃ¡ch cá»§a ngÆ°á»i khÃ¡c | âŒ | YPP gá»i lÃ  "exclusive readings of materials you didn't create". Ká»‹ch báº£n cá»§a kÃªnh pháº£i lÃ  lá»i viáº¿t má»›i dá»±a trÃªn dá»¯ kiá»‡n (dá»¯ kiá»‡n khÃ´ng cÃ³ báº£n quyá»n, cÃ¢u chá»¯ thÃ¬ cÃ³) |
+| Äoáº¡n trÃ­ch phim Ä‘iá»‡n áº£nh (VÃ¢y ThÃ nh, Dá»‹ Vá»±c, American Gangsterâ€¦), poster, áº£nh still | âŒ cho kÃªnh nÃ y | Vá» luáº­t, cÃ³ thá»ƒ bÃ o chá»¯a lÃ  fair use (Ä‘oáº¡n ngáº¯n, cÃ³ bÃ¬nh luáº­n). NhÆ°ng hÃ£ng phim gáº§n nhÆ° cháº¯c cháº¯n Ä‘Ã£ Ä‘Äƒng kÃ½ Content ID, video sáº½ bá»‹ chuyá»ƒn doanh thu cho há» hoáº·c bá»‹ cháº·n á»Ÿ má»™t sá»‘ nÆ°á»›c. Chá»‰ nháº¯c tÃªn phim |
+| Äoáº¡n trÃ­ch báº£n tin truyá»n hÃ¬nh (CNN, BBC, VTV, TVBâ€¦) | âŒ | Rá»§i ro Content ID vÃ  khiáº¿u náº¡i cao nháº¥t, ká»ƒ cáº£ Ä‘oáº¡n vÃ i giÃ¢y. Ghi nguá»“n hay chÃº thÃ­ch "khÃ´ng cÃ³ Ã½ vi pháº¡m" Ä‘á»u khÃ´ng cÃ³ tÃ¡c dá»¥ng |
+| áº¢nh bÃ¡o chÃ­ hiá»‡n Ä‘áº¡i (AP, Reuters, Getty, bÃ¡o Viá»‡t Nam) | âŒ | CÃ³ thá»ƒ bá»‹ gá»¡ háº³n video (strike), khÃ´ng chá»‰ bá»‹ claim |
+| Nháº¡c thÆ°Æ¡ng máº¡i | âŒ | Chá»‰ dÃ¹ng Kevin MacLeod (CC BY), YouTube Audio Library, Pixabay |
+
+**Content ID claim vÃ  gáº­y báº£n quyá»n (strike) khÃ¡c nhau:**
+- **Claim** lÃ  Ä‘á»‘i sÃ¡nh tá»± Ä‘á»™ng. KÃªnh khÃ´ng bá»‹ pháº¡t; video cÃ³ thá»ƒ bá»‹ chia hoáº·c máº¥t doanh thu, hoáº·c bá»‹ cháº·n á»Ÿ má»™t sá»‘ nÆ°á»›c. CÃ³ thá»ƒ khÃ¡ng nghá»‹.
+- **Strike** lÃ  khi chá»§ sá»Ÿ há»¯u gá»­i yÃªu cáº§u gá»¡ cÃ³ giÃ¡ trá»‹ phÃ¡p lÃ½. Video bá»‹ gá»¡; 3 strike trong 90 ngÃ y thÃ¬ kÃªnh bá»‹ xÃ³a. áº¢nh bÃ¡o chÃ­ vÃ  Ä‘oáº¡n trÃ­ch phim lÃ  hai nguá»“n strike phá»• biáº¿n nháº¥t.
+
+**ChÃ­nh sÃ¡ch kiáº¿m tiá»n (YPP):**
+- **Reused content:** Ä‘Ã£ cho phÃ©p dÃ¹ng láº¡i tÆ° liá»‡u náº¿u cÃ³ "bÃ¬nh luáº­n, chá»‰nh sá»­a Ä‘Ã¡ng ká»ƒ, hoáº·c giÃ¡ trá»‹ giÃ¡o dá»¥c". Video cá»§a kÃªnh (ká»‹ch báº£n riÃªng, dá»±ng Ä‘á»“ há»a, dáº«n chuyá»‡n) Ä‘Ã¡p á»©ng Ä‘iá»u nÃ y.
+- **Inauthentic content** (cáº­p nháº­t 15/07/2025): rá»§i ro tháº­t náº±m á»Ÿ Ä‘Ã¢y. Video Ä‘Ãºc khuÃ´n hÃ ng loáº¡t, Ã­t khÃ¡c biá»‡t giá»¯a cÃ¡c video sáº½ bá»‹ loáº¡i khá»i kiáº¿m tiá»n. Loáº¡t Shorts S-tier Ä‘Äƒng dá»“n ngÃ y 30/09 thuá»™c Ä‘Ãºng vÃ¹ng rá»§i ro nÃ y. Cáº§n giá»¯ má»—i video cÃ³ gÃ³c ká»ƒ riÃªng vÃ  khÃ´ng Ä‘Äƒng hÃ ng loáº¡t.
+
+**Giá»ng AI:**
+- Giá»ng TTS dáº«n chuyá»‡n khÃ´ng báº¯t buá»™c gáº¯n nhÃ£n.
+- Pháº£i khai bÃ¡o "ná»™i dung Ä‘Ã£ chá»‰nh sá»­a hoáº·c tá»•ng há»£p" náº¿u khiáº¿n ngÆ°á»i tháº­t trÃ´ng nhÆ° nÃ³i hoáº·c lÃ m Ä‘iá»u há» khÃ´ng lÃ m, hoáº·c dá»±ng cáº£nh tháº­t nhÆ° Ä‘Ã£ xáº£y ra.
+- Lá»i trÃ­ch cá»§a nhÃ¢n váº­t tháº­t Ä‘á»c báº±ng giá»ng minh há»a pháº£i luÃ´n gáº¯n nhÃ£n "GIá»ŒNG Äá»ŒC MINH Há»ŒA" (engine Ä‘Ã£ lÃ m) vÃ  khÃ´ng giáº£ giá»ng nhÃ¢n váº­t.
+
+# Bá»‘n Long MIM má»›i cho 16â€“22/11/2026 (khuÃ´n "NgoÃ i Äá»i Tháº­t") â€” 23/10/2026
+
+KÃªnh **Mind in the Machine (MIM)**. Lá»‹ch má»›i lÃ  4 Long/tuáº§n (T2, T4, T6, CN 20:00 VN). Long Ä‘Ã£ háº¹n tá»›i háº¿t 15/11 (`mim-apollo-1202`). TÃ i liá»‡u nÃ y chá»n 4 Long cho 16/11, 18/11, 20/11 vÃ  22/11: hai bÃ i 20â€“30 phÃºt, hai bÃ i 9â€“12 phÃºt. Pha 1 chá»‰ viáº¿t file: chÆ°a dá»±ng, chÆ°a upload, khÃ´ng Ä‘á»¥ng `state.sqlite` (chá»‰ Ä‘á»c á»Ÿ cháº¿ Ä‘á»™ `-readonly` Ä‘á»ƒ xem lá»‹ch).
+
+**Äáº§u vÃ o:**
+- Memory: chÃ©p cÆ¡ cháº¿, khÃ´ng chÃ©p bá» máº·t; káº¿ hoáº¡ch YPP; insight cá»§a AI Learning; nhá»‹p Long MIM; Ä‘á»•i dáº¡ng lá»™ trÃ¬nh; clip sheet; mÃ´ táº£ khÃ´ng chá»©a ghi chÃº ná»™i bá»™.
+- `docs/pm/2026-10-22-bao-cao-3-kenh.md`
+- `docs/pm/2026-10-22-cl-ke-hoach-long-ngoai-doi-that.md`
+- `docs/pm/tickets/2026-10-20-mim-nov/T1-ket-qua.md`
+- Máº«u `data/long/mim-apollo-1202` vÃ  `mim-dich-may`
+- `motion/long/{README,RETENTION,SOURCES}.md`
+
+## 0. ChÃ©p cÆ¡ cháº¿ cá»§a CL, khÃ´ng chÃ©p bá» máº·t
+
+Long CL tháº¯ng nhá» ba thá»©:
+1. Má»™t má» neo khÃ¡n giáº£ Ä‘Ã£ biáº¿t sáºµn.
+2. **Má»™t** ngÆ°á»i tháº­t.
+3. Má»™t cold open cÃ³ ngÃ y giá», cá»™ng cÃ¡c cÃ¢u há»i háº¹n chÆ°Æ¡ng.
+
+Long MIM hiá»‡n chá»‰ cÃ³ khoáº£ng 2,3 nghÃ¬n lÆ°á»£t hiá»ƒn thá»‹, CTR 2,6%. TiÃªu Ä‘á» kiá»ƒu "MÃ£ 1202" khÃ´ng cÃ³ gÃ¬ Ä‘á»ƒ ngÆ°á»i xem "nháº­n ra ngay".
+
+Má» neo tá»± nhiÃªn cá»§a MIM lÃ  má»™t **phim hoáº·c app vá» AI/cÃ´ng nghá»‡ mÃ  ngÆ°á»i Viá»‡t Ä‘Ã£ biáº¿t**. KhuÃ´n tiÃªu Ä‘á»: `[PHIM/APP] NgoÃ i Äá»i Tháº­t: [ngÆ°á»i tháº­t] â€” [chi tiáº¿t tÃ² mÃ²]`.
+
+Ba Ä‘iá»u khÃ´ng chÃ©p tá»« CL:
+- **KhÃ´ng chÃ©p Ä‘á»™ dÃ i:** váº«n giá»¯ má»™t bÃ i 9â€“12 phÃºt vÃ  má»™t bÃ i 20â€“30 phÃºt Ä‘á»ƒ so.
+- **KhÃ´ng chÃ©p giá»ng ká»ƒ tá»™i pháº¡m.**
+- **KhÃ´ng dÃ¹ng hÃ¬nh phim:** phim chá»‰ Ä‘Æ°á»£c nháº¯c báº±ng lá»i vÃ  chá»¯.
+
+## 1. CÃ¡ch Ä‘o
+
+**Nhu cáº§u:** Wikimedia Pageviews REST, `all-access/user`, tá»•ng 28 ngÃ y **24/09â€“21/10/2026**.
+- BÃ i tiáº¿ng Viá»‡t láº¥y qua langlinks tá»« bÃ i EN. "â€”" lÃ  khÃ´ng cÃ³ bÃ i vi.
+- ÄÃ¢y lÃ  má»©c quan tÃ¢m Ä‘á»ƒ Ä‘á»c, khÃ´ng pháº£i nhu cáº§u xem video.
+- Váº«n chÆ°a cÃ³ dá»¯ liá»‡u YouTube Studio Research cho MIM.
+
+**TrÃ¹ng láº·p:** grep 19 thÆ° má»¥c `data/long/mim-*` (script) cÃ¹ng 228 bundle Short trong `bundles/MIM` vÃ  `data/stier/specs`.
+
+**áº¢nh:** Commons API, láº¥y `LicenseShortName` cá»§a khoáº£ng 15 káº¿t quáº£ Ä‘áº§u. MIM chá»‰ nháº­n PD, CC0 vÃ  CC BY, **khÃ´ng nháº­n BY-SA/GFDL**. Pháº£i Ä‘á»c láº¡i giáº¥y phÃ©p trÆ°á»›c khi táº£i.
+
+## 2. Báº£ng á»©ng viÃªn (20)
+
+**Quy Æ°á»›c:**
+- **vi / en:** lÆ°á»£t xem 28 ngÃ y cá»§a bÃ i phim/app má» neo, cá»™ng bÃ i nhÃ¢n váº­t náº¿u cÃ³.
+- **TrÃ¹ng:** so vá»›i Long/Short MIM Ä‘Ã£ cÃ³.
+
+| # | Má» neo â†’ ngÆ°á»i tháº­t, sá»± kiá»‡n cÃ³ ngÃ y | vi | en | TrÃ¹ng | áº¢nh tá»± do | Káº¿t luáº­n |
+|---|---|---|---|---|---|---|
+| 1 | **Káº» Há»§y Diá»‡t â†’ Stanislav Petrov**, bÃ¡o Ä‘á»™ng giáº£ Oko 26/09/1983 | Káº» há»§y diá»‡t 685; pháº§n 2 444; Petrov 78 | Terminator 110.811; Petrov 42.382; vá»¥ bÃ¡o Ä‘á»™ng 19.013 | KhÃ´ng cÃ³ Long. Short `mim-skynet-1997` há»£p lÃ m phá»…u | CÃ³ bia tÆ°á»Ÿng niá»‡m (PD, CC0) vÃ  áº£nh KhÃ´ng quÃ¢n Má»¹ (PD). **ChÃ¢n dung Petrov Ä‘á»u BY-SA** | **CHá»ŒN**, 20â€“30 phÃºt |
+| 2 | **Oppenheimer â†’ Richard Feynman**, mÃ¡y IBM vÃ  "mÃ¡y tÃ­nh ngÆ°á»i" á»Ÿ Los Alamos; Trinity 16/07/1945 | Oppenheimer (phim) 834; Feynman 580 | phim 207.954; Feynman 84.957 | KhÃ´ng | áº¢nh tháº» Los Alamos cá»§a Feynman (CC0, PD); Trinity (PD); IBM 601 (CC BY 4.0) | **CHá»ŒN**, 20â€“30 phÃºt |
+| 3 | **Siri â†’ Susan Bennett**, giá»ng thu nÄƒm 2005; Siri ra máº¯t 04/10/2011 | **Siri 2.449**; Steve Jobs 4.484 | Siri 27.641; Bennett 5.913 | KhÃ´ng. `mim-ai-voice` lÃ  chá»§ Ä‘á» nhÃ¡i giá»ng, gÃ³c khÃ¡c | áº¢nh VOA cá»§a Bennett (PD); Jobs CC BY 2.0 | **CHá»ŒN**, 9â€“12 phÃºt |
+| 4 | **Google Maps â†’ Ronald Reagan vÃ  KAL 007**, 01/09/1983 â†’ GPS cho dÃ¢n dá»¥ng | Google Maps 596; GPS 767; KAL 007 196 | Maps 105.685; KAL 25.881; GPS 30.470 | KhÃ´ng | Reagan Ä‘á»c diá»…n vÄƒn vá» KAL 007 (PD); vá»‡ tinh GPS (PD). áº¢nh mÃ¡y bay lÃ  GFDL/BY-SA nÃªn khÃ´ng dÃ¹ng | **CHá»ŒN**, 9â€“12 phÃºt |
+| 5 | NgÆ°á»i Giáº£i MÃ£ (The Imitation Game) â†’ Turing vÃ  mÃ¡y Bombe | phim 146; Turing 971; Enigma 304 | phim 63.948; Turing 196.286 | Long `mim-ai-70` Ä‘Ã£ cÃ³ phÃ©p thá»­ Turing; Short `mim-turing-1950` | Pháº§n lá»›n áº£nh Bombe/Enigma lÃ  BY-SA | Dá»± bá»‹ |
+| 6 | Her â†’ ELIZA / Weizenbaum 1966 | Her 222 | Her 56.393; ELIZA 20.728 | **Long `mim-ai-70` CH02** Ä‘Ã£ ká»ƒ ELIZA | â€” | Loáº¡i (trÃ¹ng) |
+| 7 | 2001: A Space Odyssey â†’ HAL 9000 vÃ  bÃ i Daisy | 139 | 116.574 | **`mim-ai-voice` CH08** Ä‘Ã£ ká»ƒ Daisy; `mim-ai-70` CH07 | â€” | Loáº¡i (trÃ¹ng) |
+| 8 | Hidden Figures â†’ Katherine Johnson kiá»ƒm quá»¹ Ä‘áº¡o John Glenn 20/02/1962 | â€” (khÃ´ng cÃ³ bÃ i vi); K. Johnson 218 | phim 65.939; Johnson 55.573 | `mim-ai-jobs` Ä‘Ã£ ká»ƒ Dorothy Vaughan; Short `mim-dorothy-vaughan-fortran` | Ráº¥t nhiá»u áº£nh NASA (PD) | Dá»± bá»‹ (ngÆ°á»i Viá»‡t Ã­t biáº¿t phim) |
+| 9 | TÃ´i, NgÆ°á»i MÃ¡y (I, Robot) â†’ Robert Williams, ngÆ°á»i Ä‘áº§u tiÃªn cháº¿t vÃ¬ robot, 25/01/1979 | 199 | phim 414.157; Williams 1.654 | KhÃ´ng | áº¢nh Unimate thÆ°a, BY-SA | Loáº¡i (nguá»“n sÆ¡ cáº¥p má»ng) |
+| 10 | Uber â†’ Elaine Herzberg, xe tá»± lÃ¡i 18/03/2018 (NTSB) | Uber 327; xe tá»± lÃ¡i 53 | 3.637 | KhÃ´ng | áº¢nh NTSB (PD) | Dá»± bá»‹ (bi ká»‹ch gáº§n, ngÆ°á»i lÃ¡i cÃ²n sá»‘ng) |
+| 11 | Doraemon â†’ WABOT-1, Ichiro Kato 1973 | **Doraemon 3.757** | 38.609; WABOT khÃ´ng cÃ³ bÃ i | KhÃ´ng | KhÃ´ng cÃ³ áº£nh tá»± do, báº£n quyá»n Waseda vÃ  Honda | Loáº¡i (hÃ¬nh, nguá»“n tiáº¿ng Anh má»ng) |
+| 12 | Ma Tráº­n (The Matrix) | 852 | 111.242 | `mim-ai-feed` Ä‘Ã£ nháº¯c | â€” | Loáº¡i (khÃ´ng cÃ³ má»™t ngÆ°á»i tháº­t vÃ  má»™t ngÃ y) |
+| 13 | NgÆ°á»i Sáº¯t (Iron Man) â†’ J.A.R.V.I.S. | 630 | 91.607 | KhÃ´ng | â€” | Loáº¡i (khÃ´ng cÃ³ ngÆ°á»i tháº­t) |
+| 14 | Ex Machina â†’ Eugene Goostman 07/06/2014 | 141 | 54.420 | `mim-ai-70` (phÃ©p thá»­ Turing) | â€” | Loáº¡i |
+| 15 | WarGames â†’ Reagan vÃ  NSDD-145 (1984) | â€” | 34.011 | KhÃ´ng | PD | Loáº¡i (ngÆ°á»i Viá»‡t khÃ´ng biáº¿t phim). ÄÆ°a má»™t cÃ¢u vÃ o bÃ i Petrov náº¿u cáº§n |
+| 16 | Big Hero 6 â†’ robot chÄƒm sÃ³c | 300 | 40.934 | KhÃ´ng | â€” | Loáº¡i (khÃ´ng cÃ³ ngÆ°á»i tháº­t) |
+| 17 | WALL-E | 389 | 46.673 | KhÃ´ng | â€” | Loáº¡i (nhÆ° trÃªn) |
+| 18 | Tetris â†’ Alexey Pajitnov | 214 | 48.417 | KhÃ´ng | â€” | Loáº¡i (ngÆ°á»i cÃ²n sá»‘ng, xa AI) |
+| 19 | Deep Blue | 89 | 11.552 | **ÄÃ£ cÃ³ Long** `mim-deep-blue-kasparov` | â€” | Loáº¡i |
+| 20 | Astro Boy (Atom) | 86 | 18.072 | KhÃ´ng | â€” | Loáº¡i (nhu cáº§u tháº¥p) |
+
+## 3. Bá»‘n chá»§ Ä‘á» chá»n vÃ  lÃ½ do
+
+| NgÃ y (20:00 VN) | Slug | TiÃªu Ä‘á» (titles[0]) | DÃ i (lá»i Ä‘á»c 210â€“215 Ã¢m tiáº¿t/phÃºt; cá»™ng nghá»‰) | Lá»™ trÃ¬nh |
+|---|---|---|---|---|
+| T2 16/11 | `mim-oppenheimer-feynman` | OPPENHEIMER NgoÃ i Äá»i Tháº­t: Richard Feynman â€” Cuá»™c Äua Giá»¯a NgÆ°á»i VÃ  MÃ¡y IBM á»ž Los Alamos | 4.948 Ã¢m tiáº¿t, 13 chÆ°Æ¡ng. Lá»i Ä‘á»c â‰ˆ 23,0â€“23,6 phÃºt; cá»™ng nghá»‰ â‰ˆ 27 phÃºt | "á»• khoÃ¡ ba sá»‘" (Feynman má»Ÿ kÃ©t) |
+| T4 18/11 | `mim-google-maps-kal007` | GOOGLE MAPS NgoÃ i Äá»i Tháº­t: Ronald Reagan VÃ  Chuyáº¿n Bay KAL 007 â€” Ai Tráº£ GiÃ¡ Cho Cháº¥m Xanh Cá»§a Báº¡n | 2.217 Ã¢m tiáº¿t, 7 chÆ°Æ¡ng. Lá»i Ä‘á»c â‰ˆ 10,3â€“10,6 phÃºt; cá»™ng nghá»‰ â‰ˆ 12 phÃºt | "con sá»‘ co láº¡i": thÆ°á»›c sai sá»‘ tá»« hÆ¡n 600 km xuá»‘ng khoáº£ng 100 m rá»“i khoáº£ng 5 m |
+| T6 20/11 | `mim-ke-huy-diet-petrov` | Káºº Há»¦Y DIá»†T NgoÃ i Äá»i Tháº­t: Stanislav Petrov â€” NgÆ°á»i KhÃ´ng Tin MÃ¡y TÃ­nh ÄÃªm 26/9/1983 | 4.847 Ã¢m tiáº¿t, 12 chÆ°Æ¡ng. Lá»i Ä‘á»c â‰ˆ 22,5â€“23,1 phÃºt; cá»™ng nghá»‰ â‰ˆ 26 phÃºt | "báº¡n ngá»“i vÃ o gháº¿ trá»±c" (hai nÃºt BÃO LÃŠN \| CHÆ¯A) |
+| CN 22/11 | `mim-siri-susan-bennett` | SIRI NgoÃ i Äá»i Tháº­t: Susan Bennett â€” Giá»ng NÃ³i Thu NÄƒm 2005, SÃ¡u NÄƒm Sau Má»›i Vang LÃªn Trong iPhone | 2.156 Ã¢m tiáº¿t, 7 chÆ°Æ¡ng. Lá»i Ä‘á»c â‰ˆ 10,0â€“10,3 phÃºt; cá»™ng nghá»‰ â‰ˆ 11,5 phÃºt | "tua ngÆ°á»£c cuá»™n bÄƒng": 2011 â†’ 2005 â†’ 2003, rá»“i tua xuÃ´i vá» hÃ´m nay |
+
+**Kiá»ƒm tra lá»™ trÃ¬nh:** cáº£ bá»‘n dáº¡ng Ä‘á»u khÃ¡c 19 dáº¡ng MIM Ä‘Ã£ dÃ¹ng vÃ  khÃ¡c nhau tá»«ng Ä‘Ã´i. KhÃ´ng bÃ i nÃ o cÃ³ cÃ¢u "tráº£ lá»i ba cÃ¢u há»i"; `script_lines.py` cÃ³ cháº·n cá»¥m nÃ y.
+
+**LÃ½ do chá»n:**
+- **Má» neo ngÆ°á»i Viá»‡t Ä‘Ã£ biáº¿t:**
+  - Siri vÃ  Steve Jobs cÃ³ nhu cáº§u tiáº¿ng Viá»‡t cao nháº¥t trong báº£ng.
+  - Oppenheimer lÃ  phim chiáº¿u ráº¡p lá»›n nÄƒm 2023.
+  - Káº» Há»§y Diá»‡t cá»™ng cáº£ hai pháº§n cÃ³ hÆ¡n 1,1 nghÃ¬n lÆ°á»£t.
+  - Google Maps lÃ  app ai cÅ©ng dÃ¹ng.
+- **Má»—i bÃ i cÃ³ má»™t ngÆ°á»i tháº­t vÃ  má»™t ngÃ y giá» cho cold open:**
+  - 16/07/1945 lÃºc 05:29:45
+  - ÄÃªm 31/08 ráº¡ng 01/09/1983
+  - ÄÃªm 25 ráº¡ng 26/09/1983
+  - 04/10/2011
+- **áº¢nh tá»± do cÃ³ máº·t ngÆ°á»i tháº­t cho thumbnail á»Ÿ 3/4 bÃ i:** Feynman, Reagan, Bennett.
+- **CÆ¡ cháº¿ chuá»—i:** KAL 007 (T4) vÃ  Petrov (T6) cÃ¡ch nhau 3 tuáº§n nÄƒm 1983. BÃ i T4 káº¿t báº±ng cÃ¢u ná»‘i sang bÃ i T6, nÃªn ngÆ°á»i xem cÃ³ lÃ½ do xem tiáº¿p hai Ä‘Ãªm liá»n.
+- **Xáº¿p lá»‹ch:** Petrov khÃ´ng Ä‘áº·t ngay sau Apollo 1202 (15/11), vÃ¬ hai bÃ i cÃ¹ng mÃ´-tÃ­p "mÃ¡y bÃ¡o Ä‘á»™ng, ngÆ°á»i quyáº¿t". BÃ i Petrov ká»ƒ chiá»u ngÆ°á»£c láº¡i (mÃ¡y sai, ngÆ°á»i khÃ´ng tin) vÃ  chá»‰ nháº¯c láº¡i Apollo má»™t cÃ¢u.
+- **KhÃ´ng trÃ¹ng:**
+  - KhÃ´ng cÃ³ Long nÃ o ká»ƒ Petrov, Feynman/Los Alamos, KAL 007/GPS hay Siri/Bennett.
+  - ELIZA, Daisy vÃ  "mÃ¡y tÃ­nh ngÆ°á»i" á»Ÿ Langley Ä‘Ã£ cÃ³ trong Long cÅ©. Bá»‘n bÃ i má»›i chá»‰ nháº¯c láº¡i tá»‘i Ä‘a má»™t cÃ¢u.
+
+## 4. Tráº¡ng thÃ¡i file
+
+- Má»—i slug cÃ³ Ä‘á»§ `script.md`, `factcheck.md`, `chNN.json`, `gen_scenes.py`, `spec.json`. Má»—i dÃ²ng trong factcheck lÃ  má»™t kháº³ng Ä‘á»‹nh, kÃ¨m URL Ä‘Ã£ má»Ÿ ngÃ y 23/10/2026.
+- `spec.youtube` cÃ³:
+  - `publish_at`
+  - `playlist: "CÃ´ng Nghá»‡ Quanh Ta"`
+  - accent riÃªng: #f59e0b, #34d399, xanh/Ä‘á» cá»§a Petrov, #f472b6
+- ÄÃ£ cháº¡y cáº£ ba bÆ°á»›c, káº¿t quáº£:
+  - `script_lines.py`: qua cá»•ng integrity.
+  - `gen_scenes.py`: khÃ´ng cÃ²n neo lá»—i.
+  - `studio_lint.py`: **0 lá»—i, 0 cáº£nh bÃ¡o** á»Ÿ cáº£ 4 bÃ i.
+- QuÃ©t `youtube.*` tÃ¬m `< > Cáº¦N WebFetch factcheck data/long "tÃ¬m kiáº¿m" agent`: sáº¡ch.
+
+## 5. Nguá»“n yáº¿u vÃ  rá»§i ro (Ä‘á»c trÆ°á»›c khi duyá»‡t)
+
+**Oppenheimer:**
+- Giá» ná»• 05:29:45 chá»‰ cÃ³ má»™t nguá»“n (DOE 1995). CÃ³ nguá»“n ghi 5:29:21. KhÃ´ng má»Ÿ Ä‘Æ°á»£c bÃ¡o cÃ¡o LA-6300-H (OSTI tá»« chá»‘i káº¿t ná»‘i).
+- Vai Jack Quaid Ä‘Ã³ng Feynman chá»‰ cÃ³ má»™t bÃ i giáº£i trÃ­ (Looper). Chi tiáº¿t nÃ y chá»‰ hiá»‡n trÃªn mÃ n hÃ¬nh, khÃ´ng Ä‘á»c.
+- Há»“i á»©c cá»§a Feynman (tháº» mÃ u, 9 bÃ i trong 3 thÃ¡ng) chá»‰ cÃ³ má»™t nguá»“n. Lá»i Ä‘á»c nÃ³i "theo Feynman" hoáº·c nÃªu cáº£ hai phiÃªn báº£n.
+- Tá»•ng thá»i lÆ°á»£ng cá»™ng nghá»‰ khoáº£ng 27 phÃºt. Muá»‘n vá» 26 phÃºt thÃ¬ bá» khoáº£ng 30 dáº¥u `â€–`.
+
+**KAL 007:**
+- BÃ¡o cÃ¡o ICAO 1993 chá»‰ Ä‘á»c Ä‘Æ°á»£c qua báº£n Ä‘Äƒng láº¡i cá»§a bÃªn thá»© ba, khÃ´ng pháº£i icao.int.
+- Con sá»‘ hÆ¡n 600 km (350 NM) lÃºc trÃºng tÃªn lá»­a chá»‰ cÃ³ trong phá»¥ lá»¥c phÃ¢n tÃ­ch cá»§a Nga.
+- TiÃªu Ä‘á» Ä‘Ã£ bá» chá»¯ "miá»…n phÃ­", vÃ¬ thÃ´ng cÃ¡o 16/09/1983 (do Larry Speakes Ä‘á»c) khÃ´ng cÃ³ chá»¯ nÃ y. "Free of charge" chá»‰ xuáº¥t hiá»‡n nÄƒm 2000.
+
+**Petrov:**
+- Lá»i ká»ƒ cá»§a Petrov tá»± mÃ¢u thuáº«n (4 hay 5 tÃªn lá»­a; sá»‘ táº§ng kiá»ƒm tra). Lá»i Ä‘á»c nÃ³i tháº³ng tá»«ng chá»— lá»‡ch.
+- NguyÃªn nhÃ¢n ká»¹ thuáº­t chá»‰ dá»±a vÃ o má»™t cÃ¢u cá»§a Podvig vÃ  má»™t cÃ¢u cá»§a Guardian. Ã "mÃ¢y cao, quá»¹ Ä‘áº¡o Molniya" lÃ  chÆ°a kiá»ƒm Ä‘Æ°á»£c vÃ  lá»i Ä‘á»c nÃ³i rÃµ nhÆ° váº­y.
+- KhÃ´ng má»Ÿ Ä‘Æ°á»£c Washington Post 1999, NYT 2017 vÃ  DoD 3000.09. Pháº§n káº¿t thay báº±ng Äiá»u 14 Äáº¡o luáº­t AI cá»§a EU, Ä‘á»c qua trang chÃ©p láº¡i vÃ¬ EUR-Lex khÃ´ng táº£i Ä‘Æ°á»£c.
+- **Thumbnail khÃ´ng cÃ³ máº·t Petrov** (má»i chÃ¢n dung Ä‘á»u BY-SA). Äá» xuáº¥t dÃ¹ng chá»¯ "Ð¡Ð¢ÐÐ Ð¢" Ä‘á» cá»™ng hai nÃºt, hoáº·c áº£nh bia tÆ°á»Ÿng niá»‡m (PD).
+
+**Siri:**
+- Gáº§n nhÆ° má»i chi tiáº¿t vá» bÃ  Bennett Ä‘áº¿n tá»« CNN 2013 (cá»™ng VOA 2018). Apple khÃ´ng xÃ¡c nháº­n, vÃ  chuyÃªn gia phÃ¡p y Ã¢m thanh do chÃ­nh CNN thuÃª. BÃ  Bennett cÃ²n sá»‘ng: má»i cÃ¢u vá» bÃ  Ä‘á»u nÃ³i qua nguá»“n.
+- Giá» 10:00 vÃ  cÃ¢u há»i thá»i tiáº¿t Ä‘áº§u tiÃªn chá»‰ cÃ³ trong ghi chÃ©p trá»±c tiáº¿p cá»§a MacRumors (thá»© cáº¥p).
+- NgÃ y app Siri lÃªn App Store chá»‰ cÃ³ TechCrunch.
+- BÃ i VOA vÃ  Apple ML Journal má»›i Ä‘á»c qua báº£n tÃ³m táº¯t, cáº§n má»Ÿ láº¡i báº±ng trÃ¬nh duyá»‡t.
+
+## 6. Viá»‡c cÃ²n láº¡i trÆ°á»›c pha dá»±ng (cáº§n chá»§ kÃªnh duyá»‡t)
+
+1. Duyá»‡t 4 tiÃªu Ä‘á» vÃ  thá»© tá»± lá»‹ch.
+2. Äá»c láº¡i giáº¥y phÃ©p tá»«ng áº£nh qua Commons API, rá»“i `pexels.py get` cÃ¡c clip Ä‘Ã£ ghi trong gen_scenes. Sau Ä‘Ã³ cháº¡y `clip_sheet.py`, loáº¡i clip cÃ³ logo hoáº·c chá»¯ hÃ£ng (Ä‘áº·c biá»‡t Ä‘iá»‡n thoáº¡i vÃ  phÃ²ng thu á»Ÿ bÃ i Siri).
+3. Nghe thá»­ báº£ng `say`: Feynman, Albuquerque, Osipovich, Speakes, ScanSoft, Nuance, Serpukhovâ€¦
+4. LÃ m thumbnail theo cÃ´ng thá»©c CL: má»™t máº·t ngÆ°á»i tháº­t + 3â€“5 chá»¯. BÃ i Petrov dÃ¹ng phÆ°Æ¡ng Ã¡n chá»¯.
+5. Short phá»…u: 2â€“3 Short má»—i Long, gáº¯n "Video liÃªn quan" vá» Long tÆ°Æ¡ng á»©ng. RiÃªng `mim-skynet-1997` Ä‘Ã£ cÃ³, gáº¯n vá» bÃ i Petrov.
+
+# Sá»• tháº¥t báº¡i MIM / CK / CL
+
+Äá»c báº£ng nÃ y trÆ°á»›c khi má»Ÿ má»™t chuá»—i, khuÃ´n hoáº·c lÃ´ má»›i. Má»—i dÃ²ng ghi má»™t láº§n thá»­ Ä‘Ã£ cÃ³ sá»‘ Ä‘o, bÃ i há»c rÃºt ra vÃ  thá»© Ä‘Ã£ Ä‘á»•i trong quy trÃ¬nh. Ã tÆ°á»Ÿng láº¥y tá»« ADR 0017 Â§5 cá»§a vietneu-tts; sá»‘ liá»‡u lÃ  cá»§a kÃªnh mÃ¬nh.
+
+ThÃªm má»™t dÃ²ng má»—i khi retro tÃ¬m ra má»™t tháº¥t báº¡i cÃ³ sá»‘ Ä‘o. KhÃ´ng ghi nhá»¯ng gÃ¬ chÆ°a Ä‘o Ä‘Æ°á»£c.
+
+| NgÃ y | KÃªnh | ÄÃ£ thá»­ | Sá»‘ Ä‘o | BÃ i há»c | ÄÃ£ Ä‘á»•i thÃ nh |
+|---|---|---|---|---|---|
+| 12/10 | CK | Bá» tráº§n tá»± giá»›i háº¡n, Ä‘Äƒng 5 Short/ngÃ y cá»™ng Long | YouTube tráº£ `uploadLimitExceeded` sau khoáº£ng 10 láº§n Ä‘Äƒng/ngÃ y; váº«n bá»‹ cháº·n sau hÆ¡n 18 giá»; káº¹t 2 Long vÃ  13 Short | Má»—i kÃªnh cÃ³ giá»›i háº¡n riÃªng, khÃ´ng pháº£i quota dá»± Ã¡n | ÄÄƒng Long trÆ°á»›c Short; khi bá»‹ cháº·n thÃ¬ chá» khoáº£ng 1 ngÃ y, khÃ´ng thá»­ láº¡i liÃªn tá»¥c |
+| 12/10 | MIM, CK | LÃ´ Short toÃ n chá»¯, rá»“i má»™t báº£n vÃ¡ toÃ n clip | Chá»§ kÃªnh tá»« chá»‘i cáº£ hai | Short pháº£i trá»™n chá»¯, clip, biá»ƒu Ä‘á»“ vÃ  sÆ¡ Ä‘á»“ | Chuáº©n mix v3; build lint `mix` |
+| 12â€“18/10 | MIM, CK | 5 Short/ngÃ y Ä‘á»ƒ tÄƒng view | Má»—i Short váº«n káº¹t khoáº£ng 1â€“1,4k view (trung vá»‹ MIM 1.139, CK 1.059); kÃªnh chá»‰ lá»›n nhá» sá»‘ lÆ°á»£ng | TÄƒng sá»‘ lÆ°á»£ng khÃ´ng phÃ¡ Ä‘Æ°á»£c tráº§n | 2â€“3 Short/ngÃ y, gáº¯n vá»›i Long |
+| 12â€“18/10 | CK | Short Ä‘á»c thá»‹ trÆ°á»ng vÃ  ná»£/tháº» tÃ­n dá»¥ng, bitcoin, VN-Index | 10/30 Short dÆ°á»›i 300 view, gáº§n nhÆ° khÃ´ng cÃ³ lÆ°á»£t tá»« feed | NhÃ³m chá»§ Ä‘á» nÃ y yáº¿u trÃªn CK | Dá»«ng Short CK Ä‘á»c thá»‹ trÆ°á»ng chung |
+| 13â€“20/10 | MIM | Short dáº¡ng "máº¹o", chuá»—i QR/Flappy | "á»ž láº¡i xem" chá»‰ 11â€“29% (trung vá»‹ kÃªnh 28%) | Má»Ÿ báº±ng con sá»‘ hoáº·c sá»± kiá»‡n cÃ³ ngÃ y thÃ¡ng, khÃ´ng má»Ÿ kiá»ƒu "máº¹o" | Khung truyá»‡n: nÄƒm, ngÆ°á»i, bÆ°á»›c ngoáº·t |
+| 20/10 | MIM, CK | DÃ¹ng AVP Ä‘á»ƒ dá»± Ä‘oÃ¡n Short nÃ o vÆ°á»£t tráº§n | AVP khÃ´ng dá»± bÃ¡o Ä‘Æ°á»£c view (MIM r â‰ˆ âˆ’0,1) | Má»—i kÃªnh cÃ³ thÆ°á»›c Ä‘o dá»± bÃ¡o riÃªng | Theo dÃµi "á»Ÿ láº¡i xem" (engagedViews/views) cáº¡nh AVP |
+| 21/10 | MIM | ChÃ©p `spec.sources` vÃ o mÃ´ táº£ cÃ´ng khai | 3 láº§n Ä‘Äƒng bá»‹ tá»« chá»‘i (`invalidDescription`); 38 mÃ´ táº£ pháº£i sá»­a láº¡i | Ghi chÃº lÃ m viá»‡c cá»§a agent lá»t ra cÃ´ng khai | TÃ¡ch `sources_internal`; quÃ©t mÃ´ táº£ trÆ°á»›c khi Ä‘Äƒng |
+| 21/10 | MIM | Tá»± Ä‘á»•i clip trÃ¹ng theo tá»« khoÃ¡ | 41 láº§n Ä‘á»•i sai nghÄ©a, pháº£i hoÃ n tÃ¡c háº¿t | Clip pháº£i Ä‘Æ°á»£c chá»n báº±ng máº¯t | Xem poster khi chá»n clip; dÃ¹ng `clip_sheet.py` trÆ°á»›c khi render |
+| 22/10 | MIM, CK | Long vá»›i tiÃªu Ä‘á» dÃ i 85â€“100 kÃ½ tá»±, thumbnail khÃ´ng cÃ³ tÃªn nhÃ¢n váº­t chÃ­nh | CTR 1,6â€“2,6%, chá»‰ khoáº£ng 2 nghÃ¬n lÆ°á»£t hiá»ƒn thá»‹/28 ngÃ y (CL: 3,4%, 96,8 nghÃ¬n) | Long pháº£i cÃ³ thá»© ngÆ°á»i xem nháº­n ra ngay | TiÃªu Ä‘á» khoáº£ng 60 kÃ½ tá»±; khuÃ´n "X NgoÃ i Äá»i Tháº­t" |
+| 22/10 | CL | Loudnorm má»™t lÆ°á»£t, sfx cáº¯t cá»©ng | BÃ¬nh luáº­n chÃª "Ã¢m thanh sáº¹t sáº¹t" | Äá»‰nh tháº­t vÃ  tiáº¿ng tÃ¡ch á»Ÿ Ä‘áº§u chÆ°Æ¡ng | Bá»™ lá»c giá»ng CL, fade 5 ms, `audio_lint` |
+| 21â€“23/10 | BUD (AI Learning) | ChÃ©p báº£ng tra cá»§a FS sang BUD | View/giá» tháº¥p hÆ¡n má»‘c riÃªng cá»§a BUD 3â€“8 láº§n | Pháº£i chÃ©p cÆ¡ cháº¿ (khoÃ¡ cÃ¡ nhÃ¢n vÃ  lÃ½ do xem láº¡i), khÃ´ng chÃ©p bá» máº·t | TrÆ°á»›c khi chÃ©p, ghi ra má» neo vÃ  cÃ¡ch xem cá»§a kÃªnh Ä‘Ã­ch; thá»­ 5â€“6 bÃ i, má»—i láº§n Ä‘á»•i má»™t biáº¿n |
+| 23/10 | MIM, CK | GhÃ©p Long vá»›i loudnorm má»™t lÆ°á»£t | 5/25 láº§n ghÃ©p cÃ³ Ä‘á»‰nh tháº­t trÃªn âˆ’1 dBTP (KAL âˆ’0,5) | Bá»™ mÃ£ hoÃ¡ AAC lÃ m Ä‘á»‰nh vá»t lÃªn | 26/10: thÃªm `alimiter` á»Ÿ 4x sau loudnorm |
+| 14/10 | MIM | Short Turing dÃ¹ng counter Ä‘áº¿m nÄƒm 1950 â†’ 2000 | Khung giá»¯a hiá»‡n "1.996" | Engine luÃ´n cháº¥m phÃ¢n cÃ¡ch nghÃ¬n | 26/10: counter 1000â€“2100 pháº£i khai `year` |
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-ChildItem data/long/mim-turing-bombe -Force | Select-Object Name,Length; if (Test-Path data/long/mim-turing-bombe/facts.md) { Get-Content -Raw -Encoding UTF8 data/long/mim-turing-bombe/facts.md }; Get-Content -Raw -Encoding UTF8 motion/long/SOURCES.md' in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 142ms:
+
+Name          Length
+----          ------
+img                 
+ch00.json     2683  
+ch01.json     2521  
+ch02.json     2592  
+ch03.json     2449  
+ch04.json     2148  
+ch05.json     2461  
+ch06.json     2346  
+ch07.json     2775  
+factcheck.md  2343  
+gen_scenes.py 3880  
+script.md     7404  
+spec.json     2037  
+# Nguồn hình và video dùng tự do lâu dài cho kênh Hình Sự (đã kiểm tra ngày 04/10/2026)
+
+**Nguyên tắc:** kênh có bật kiếm tiền, nên mọi tư liệu phải cho phép **dùng thương mại** và **cho phép chỉnh sửa** (cắt khung, Ken Burns, phủ chữ, đổi màu).
+
+| Được dùng | Không dùng |
+|---|---|
+| Public domain / PDM, CC0, CC BY, CC BY-SA (có ghi công) | NC (cấm thương mại) |
+| Giấy phép riêng cho phép thương mại: Pexels, Pixabay, Mixkit "Free License" | ND (cấm chỉnh sửa) |
+| | "Fair use", ảnh không rõ nguồn |
+
+**Ghi công:**
+- `build_long` và `describe.py` tự in credit vào mô tả cho các ảnh lấy bằng `research_long.py` (Commons) và `media_search.py` (các kho khác).
+- Giữ nguyên file `.json` cạnh từng ảnh. Đây là bằng chứng giấy phép nếu bị khiếu nại.
+
+## 1. Ảnh tư liệu: đang dùng hoặc đã tích hợp sẵn
+
+| Nguồn | Giấy phép | Mạnh ở mảng | Công cụ |
+|---|---|---|---|
+| **Wikimedia Commons** | PD / CC0 / CC BY / BY-SA tùy file | Mọi chủ đề, nguồn chính | `research_long.py` |
+| **Wellcome Collection** | PDM / CC0 / CC BY 4.0 | Lịch sử thuốc phiện, y học, Trung Hoa và Ấn Độ thế kỷ 19 (tiệm hút, xưởng thuốc phiện Patna) | `media_search.py --src wellcome` |
+| **Openverse** (tổng hợp Flickr CC, bảo tàng, Commons) | Lọc sẵn CC0 / PDM / BY / BY-SA | Ảnh đời thường châu Á, địa điểm hiện nay | `--src openverse` |
+| **Art Institute of Chicago** | CC0 (tác phẩm public domain) | Ảnh và tranh thế kỷ 19 (Hồng Kông, Trung Hoa, Nhật). Tìm bằng từ khóa cụ thể, từ khóa chung trả kết quả nhiễu | `--src artic` |
+| **Europeana** (`reusability=open`) | PDM / CC0 / CC BY / BY-SA | Ảnh thời thuộc địa ở châu Á (KITLV, Tropenmuseum, Nationaal Archief) | `--src europeana`. Nên đăng ký khóa miễn phí (`EUROPEANA_KEY`), hiện đang dùng khóa demo |
+| **NASA Image and Video Library** (thêm 06/10/2026) | Ảnh NASA không có bản quyền ở Mỹ. **Không** dùng logo NASA, không gợi ý NASA bảo trợ; ảnh có bên thứ ba (xem mô tả) thì bỏ. [Hướng dẫn](https://www.nasa.gov/nasa-brand-center/images-and-media/) | Vệ tinh, GPS, không gian, máy tính thời Apollo, Trái Đất | `--src nasa` (không cần khóa) |
+| **Smithsonian Open Access** (thêm 06/10/2026) | Chỉ nhận media `usage.access = CC0` | Hiện vật công nghệ: máy tính, điện thoại, máy nghe nhạc (cho kênh MIM) | `--src smithsonian`. Cần khóa miễn phí api.data.gov: `SI_API_KEY=` trong `.local.env` |
+| **Sentinel-2** qua Microsoft Planetary Computer | Dữ liệu Copernicus: dùng thương mại tự do, **bắt buộc** ghi "Contains modified Copernicus Sentinel data [năm]" | Ảnh vệ tinh 10 m làm cảnh định vị (ngã ba sông Mekong, đặc khu sòng bạc, một khu phố…) | `media_search.py sat` |
+
+**Lưu ý với Openverse:** ảnh từ Flickr có thể bị "rửa giấy phép" (người đăng không phải tác giả). Chỉ dùng khi tài khoản đăng ảnh là người chụp, hoặc là một tổ chức. Tuyệt đối không dùng ảnh người nổi tiếng chụp chuyên nghiệp lấy từ Flickr.
+
+## 2. Ảnh tư liệu: nên thêm sau
+
+Các nguồn này cần đăng ký khóa API miễn phí, hoặc phải tìm bằng tay.
+
+| Nguồn | Giấy phép | Mạnh ở mảng | Ghi chú |
+|---|---|---|---|
+| **NARA**, Lưu trữ Quốc gia Mỹ | Tác phẩm của chính phủ liên bang Mỹ là public domain | Ảnh và phim của FBI, DEA, quân đội Mỹ, Chiến tranh Việt Nam, Tam Giác Vàng thời CIA | API cần khóa, phải gửi email xin |
+| **Library of Congress** (bộ "Free to Use and Reuse", "no known restrictions") | PD | Ảnh báo chí Mỹ, vụ án Mỹ đầu thế kỷ 20 | Trang chặn truy cập tự động (Cloudflare). Phần lớn ảnh đã có bản sao trên Commons, nên tìm qua Commons trước |
+| **DVIDS** (quân đội Mỹ) | PD, được dùng thương mại | Ảnh và video quân sự hiện đại, chống ma túy | API cần khóa miễn phí; vẫn có thể bị Content ID nhận nhầm |
+| **Smithsonian Open Access** | CC0 | Hiện vật, ảnh lịch sử Mỹ | Khóa api.data.gov miễn phí. Ít hợp chủ đề tội phạm, phần lớn là mẫu vật |
+| **Met Museum**, **Rijksmuseum**, **NYPL Public Domain** | CC0 / PD | Tranh, ảnh cổ, bản đồ | Rijksmuseum có nhiều ảnh Đông Nam Á thời thuộc địa |
+| **NDL Image Bank**, Thư viện Quốc hội Nhật | PD, được dùng thương mại không cần xin phép (chỉ xin ghi nguồn) | Tranh ukiyo-e, ảnh Nhật thời Minh Trị, phù hợp chủ đề Yakuza | Tìm bằng tay |
+| **Lưu trữ Quốc gia Đài Loan**, **Bảo tàng Cố cung Đài Bắc** | Open Government Data License, tương đương CC BY | Quốc Dân Đảng, Đài Loan thế kỷ 20, rất hợp tập Tam Giác Vàng | Tìm bằng tay, ghi công đầy đủ |
+| **Flickr Commons** (NKCR, "No known copyright restrictions") | Các tổ chức tự xác nhận không còn bản quyền | Ảnh lưu trữ của các thư viện lớn | Nhiều ảnh đã có trên Commons |
+
+## 3. Video B-roll
+
+| Nguồn | Giấy phép | Ghi chú |
+|---|---|---|
+| **Pexels** (đang dùng) | Giấy phép Pexels: thương mại, không bắt buộc ghi công | Kiểm tra HDR (`color_transfer`) trước khi render. Hiếm khi bị Content ID |
+| **Pixabay** | Content License: thương mại, không bắt buộc ghi công | Cần khóa API miễn phí. Một số clip/nhạc bị gắn Content ID; nếu bị claim thì dùng "License Certificate" của Pixabay để kháng nghị |
+| **Mixkit** | Chỉ những clip mang **Free License** | Có loại Restricted License chỉ cho dùng phi thương mại, nên phải xem từng clip |
+| **Coverr** | Miễn phí cho thương mại | Kho nhỏ, mạnh về cảnh thành phố |
+| **Prelinger Archives / phim thời sự trong NARA** (archive.org) | Phần lớn là PD | **Rủi ro Content ID:** nhiều công ty gắn Content ID lên phim PD (ví dụ Archive Farms). Chỉ dùng đoạn ngắn, bỏ tiếng gốc, giữ link nguồn để kháng nghị. Nhãn `licenseurl` trên archive.org không đáng tin vì có bản tải lại từ YouTube bị gắn nhầm "public domain" |
+| **NASA / DVIDS video** | PD | Cảnh không gian, quân sự |
+
+## 4. Bản đồ, âm thanh, nhạc
+
+| Loại | Nguồn | Giấy phép |
+|---|---|---|
+| Bản đồ vector | Natural Earth (đang dùng) | PD |
+| Bản đồ chi tiết | OpenStreetMap | ODbL, ghi "© OpenStreetMap contributors" |
+| Nhạc nền | Kevin MacLeod / incompetech (đang dùng) | CC BY 4.0, ghi công tự động |
+| Nhạc nền | YouTube Audio Library | Miễn phí khi dùng trên YouTube, chú ý cột yêu cầu ghi công |
+| Hiệu ứng âm thanh | Freesound | Chỉ lấy CC0 hoặc CC BY |
+| Hiệu ứng âm thanh | Pixabay SFX | Thương mại tự do |
+
+## 5. KHÔNG dùng (đã kiểm tra)
+
+| Nguồn | Lý do |
+|---|---|
+| EOX Sentinel-2 cloudless (s2maps / EOxCloudless) | Chỉ CC BY-NC-SA, muốn dùng thương mại phải mua giấy phép |
+| Gallica / BnF (Pháp) | Ảnh public domain nhưng dùng thương mại (kể cả video có kiếm tiền) phải xin phép và trả phí |
+| Government Records Service Hồng Kông (PRO) | Ngoài mục đích học tập, nghiên cứu thì phải xin phép bằng văn bản |
+| British Pathé, AP Archive, Reuters, Getty, CriticalPast | Trả phí |
+| Videvo | Lẫn nhiều giấy phép khác nhau, dễ dùng nhầm clip không được phép |
+| Ảnh hoặc cảnh trích từ phim, ảnh chụp màn hình bản tin truyền hình | Không có giấy phép |
+| Ảnh AI | Kênh không dùng, và đã có file AI lẫn trong kết quả Commons, ví dụ file "Stable diffusion…" |
+
+## 6. Nếu bị Content ID claim
+
+1. Mở YouTube Studio, vào mục Nội dung, chọn "Xem chi tiết" ở claim, rồi bấm "Kháng nghị". Lý do: có giấy phép hoặc tư liệu thuộc phạm vi công cộng.
+2. Dán link trang gốc của tư liệu (`page` trong file `.json` của ảnh, `slug` trong `broll/index.json` của Pexels) và tên giấy phép.
+3. Bên claim có 30 ngày để trả lời. Trong thời gian kháng nghị, doanh thu được giữ lại và trả cho bên thắng.
+
+## 7. Quy tắc khi dùng tư liệu trong video có kiếm tiền (tra cứu ngày 04/10/2026)
+
+Có ba lớp luật áp dụng cùng lúc:
+1. Luật bản quyền: Mỹ (YouTube xử lý khiếu nại theo DMCA) và Việt Nam (Luật SHTT, Điều 25).
+2. Hệ thống tự động Content ID.
+3. Chính sách kiếm tiền YPP: "reused content" và "inauthentic content".
+
+| Loại tư liệu | Dùng trong video có kiếm tiền? | Ghi chú |
+|---|---|---|
+| Public domain thật (Mỹ: xuất bản trước 1931; ảnh của chính phủ liên bang Mỹ; CC0/PDM) | ✅ | Riêng phim thời sự cũ vẫn có thể bị Content ID nhận nhầm (mục 3) |
+| CC BY / CC BY-SA | ✅ ghi công | Không dùng NC/ND |
+| Pexels, Pixabay, Mixkit Free | ✅ | Giữ link nguồn để kháng nghị |
+| Ảnh của chính phủ nước khác (Hồng Kông, Thái, Trung Quốc, Việt Nam…) | ⚠️ | KHÔNG tự động là public domain như ảnh liên bang Mỹ. Chỉ dùng khi Commons đã xác nhận giấy phép |
+| Trích dẫn văn bản ngắn (câu nói, công hàm, phát biểu) | ✅ trích dẫn hợp lý | Ngắn, đúng nguyên ý, ghi nguồn. Luật SHTT Điều 25 cho phép trích dẫn hợp lý để bình luận, minh họa trong phim tài liệu |
+| Đọc lại nguyên văn bài viết hay sách của người khác | ❌ | YPP gọi là "exclusive readings of materials you didn't create". Kịch bản của kênh phải là lời viết mới dựa trên dữ kiện (dữ kiện không có bản quyền, câu chữ thì có) |
+| Đoạn trích phim điện ảnh (Vây Thành, Dị Vực, American Gangster…), poster, ảnh still | ❌ cho kênh này | Về luật, có thể bào chữa là fair use (đoạn ngắn, có bình luận). Nhưng hãng phim gần như chắc chắn đã đăng ký Content ID, video sẽ bị chuyển doanh thu cho họ hoặc bị chặn ở một số nước. Chỉ nhắc tên phim |
+| Đoạn trích bản tin truyền hình (CNN, BBC, VTV, TVB…) | ❌ | Rủi ro Content ID và khiếu nại cao nhất, kể cả đoạn vài giây. Ghi nguồn hay chú thích "không có ý vi phạm" đều không có tác dụng |
+| Ảnh báo chí hiện đại (AP, Reuters, Getty, báo Việt Nam) | ❌ | Có thể bị gỡ hẳn video (strike), không chỉ bị claim |
+| Nhạc thương mại | ❌ | Chỉ dùng Kevin MacLeod (CC BY), YouTube Audio Library, Pixabay |
+
+**Content ID claim và gậy bản quyền (strike) khác nhau:**
+- **Claim** là đối sánh tự động. Kênh không bị phạt; video có thể bị chia hoặc mất doanh thu, hoặc bị chặn ở một số nước. Có thể kháng nghị.
+- **Strike** là khi chủ sở hữu gửi yêu cầu gỡ có giá trị pháp lý. Video bị gỡ; 3 strike trong 90 ngày thì kênh bị xóa. Ảnh báo chí và đoạn trích phim là hai nguồn strike phổ biến nhất.
+
+**Chính sách kiếm tiền (YPP):**
+- **Reused content:** đã cho phép dùng lại tư liệu nếu có "bình luận, chỉnh sửa đáng kể, hoặc giá trị giáo dục". Video của kênh (kịch bản riêng, dựng đồ họa, dẫn chuyện) đáp ứng điều này.
+- **Inauthentic content** (cập nhật 15/07/2025): rủi ro thật nằm ở đây. Video đúc khuôn hàng loạt, ít khác biệt giữa các video sẽ bị loại khỏi kiếm tiền. Loạt Shorts S-tier đăng dồn ngày 30/09 thuộc đúng vùng rủi ro này. Cần giữ mỗi video có góc kể riêng và không đăng hàng loạt.
+
+**Giọng AI:**
+- Giọng TTS dẫn chuyện không bắt buộc gắn nhãn.
+- Phải khai báo "nội dung đã chỉnh sửa hoặc tổng hợp" nếu khiến người thật trông như nói hoặc làm điều họ không làm, hoặc dựng cảnh thật như đã xảy ra.
+- Lời trích của nhân vật thật đọc bằng giọng minh họa phải luôn gắn nhãn "GIỌNG ĐỌC MINH HỌA" (engine đã làm) và không giả giọng nhân vật.
+
+
+
+
+web search: 
+web search: site:bletchleypark.org.uk Bombe Alan Turing Gordon Welchman diagonal board Victory Agnus ...
+web search: 
+web search: site:bletchleypark.org.uk "Bombe" "Victory" "Agnus" ...
+web search: 
+web search: Enigma machine three rotors plugboard daily key official museum ...
+web search: 
+web search: The Imitation Game historical accuracy Christopher machine name timeline source historian ...
+codex
+Ticket xác nhận đây là pha nghiên cứu: mình sẽ không sửa kịch bản/cảnh, không dựng hay render, và không chạy `long_gate`. Mình đang đối chiếu từng dữ kiện với nguồn chính thống (ưu tiên GCHQ, bảo tàng, cơ quan lưu trữ) rồi sẽ ghi kho dữ kiện độc lập cho pha viết sau.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$queries = @('"'Enigma machine','Bombe Bletchley Park','Alan Turing','Marian Rejewski','Gordon Welchman','Bletchley Park wartime','Women Royal Naval Service','German submarine World War II'); foreach ("'$q in $queries) { $u='"'https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=20&gsrsearch='+[uri]::EscapeDataString("'$q)+'"'&prop=imageinfo&iiprop=extmetadata'; "'$j=Invoke-RestMethod -Uri $u; foreach($p in $j.query.pages.psobject.Properties.Value) { $m=$p.imageinfo[0].extmetadata; $lic=$m.LicenseShortName.value; if($lic -match '"'Public domain|CC0|CC BY( |"'$)'"') { [pscustomobject]@{Query="'$q;Title=$p.title;License=$lic;Page=('"'https://commons.wikimedia.org/wiki/'+[uri]::EscapeDataString(("'$p.title -replace '"' ','_')))} } } } | Format-Table -AutoSize" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ exited 1 in 117ms:
+At line:2 char:770
++ ... uri]::EscapeDataString(($p.title -replace ' ','_')))} } } } | Format- ...
++                                                                 ~
+An empty pipe element is not allowed.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : EmptyPipeElement
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$queries = @('"'Enigma machine','Bombe Bletchley Park','Alan Turing','Marian Rejewski','Gordon Welchman','Bletchley Park wartime','Women Royal Naval Service','German submarine World War II'); "'$all = foreach ($q in $queries) { $u='"'https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=20&gsrsearch='+[uri]::EscapeDataString("'$q)+'"'&prop=imageinfo&iiprop=extmetadata'; "'$j=Invoke-RestMethod -Uri $u; foreach($p in $j.query.pages.psobject.Properties.Value) { $m=$p.imageinfo[0].extmetadata; $lic=$m.LicenseShortName.value; if($lic -match '"'Public domain|CC0|CC BY( |"'$)'"') { [pscustomobject]@{Query="'$q;Title=$p.title;License=$lic;Page=('"'https://commons.wikimedia.org/wiki/'+[uri]::EscapeDataString(("'$p.title -replace '"' ','_')))} } } }; "'$all | Sort-Object Title -Unique | Format-Table -AutoSize -Wrap' in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 872ms:
+Invoke-RestMethod : The underlying connection was closed: An unexpected error occurred on a receive.
+At line:2 char:419
++ ... p=imageinfo&iiprop=extmetadata'; $j=Invoke-RestMethod -Uri $u; foreac ...
++                                         ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-RestMethod], WebExc 
+   eption
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeRestMethodCommand
+ 
+Invoke-RestMethod : The underlying connection was closed: An unexpected error occurred on a receive.
+At line:2 char:419
++ ... p=imageinfo&iiprop=extmetadata'; $j=Invoke-RestMethod -Uri $u; foreac ...
++                                         ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-RestMethod], WebExc 
+   eption
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeRestMethodCommand
+ 
+Invoke-RestMethod : The underlying connection was closed: An unexpected error occurred on a receive.
+At line:2 char:419
++ ... p=imageinfo&iiprop=extmetadata'; $j=Invoke-RestMethod -Uri $u; foreac ...
++                                         ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-RestMethod], WebExc 
+   eption
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeRestMethodCommand
+ 
+Invoke-RestMethod : The underlying connection was closed: An unexpected error occurred on a receive.
+At line:2 char:419
++ ... p=imageinfo&iiprop=extmetadata'; $j=Invoke-RestMethod -Uri $u; foreac ...
++                                         ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-RestMethod], WebExc 
+   eption
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeRestMethodCommand
+ 
+Invoke-RestMethod : The underlying connection was closed: An unexpected error occurred on a receive.
+At line:2 char:419
++ ... p=imageinfo&iiprop=extmetadata'; $j=Invoke-RestMethod -Uri $u; foreac ...
++                                         ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-RestMethod], WebExc 
+   eption
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeRestMethodCommand
+ 
+Invoke-RestMethod : The underlying connection was closed: An unexpected error occurred on a receive.
+At line:2 char:419
++ ... p=imageinfo&iiprop=extmetadata'; $j=Invoke-RestMethod -Uri $u; foreac ...
++                                         ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-RestMethod], WebExc 
+   eption
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeRestMethodCommand
+ 
+Invoke-RestMethod : The underlying connection was closed: An unexpected error occurred on a receive.
+At line:2 char:419
++ ... p=imageinfo&iiprop=extmetadata'; $j=Invoke-RestMethod -Uri $u; foreac ...
++                                         ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-RestMethod], WebExc 
+   eption
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeRestMethodCommand
+ 
+Invoke-RestMethod : The underlying connection was closed: An unexpected error occurred on a receive.
+At line:2 char:419
++ ... p=imageinfo&iiprop=extmetadata'; $j=Invoke-RestMethod -Uri $u; foreac ...
++                                         ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-RestMethod], WebExc 
+   eption
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeRestMethodCommand
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'curl.exe -L --silent --show-error --fail "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=5&gsrsearch=Enigma%20machine&prop=imageinfo&iiprop=extmetadata"' in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ exited 1 in 129ms:
+curl: (35) schannel: AcquireCredentialsHandle failed: SEC_E_NO_CREDENTIALS (0x8009030E) - No credentials are available in the security package
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-Content -Encoding UTF8 motion/long/pexels.py | Select-Object -First 240; Get-Content -Encoding UTF8 motion/long/research_long.py | Select-Object -First 180' in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 140ms:
+"""B-roll Pexels cho video dài (ngang 16:9). Giấy phép Pexels: dùng tự do, không bắt buộc ghi công
+(vẫn ghi "Video: Pexels" trong mô tả cho minh bạch).
+
+    python motion/long/pexels.py search <topic> "tokyo night rain" ...   -> in danh sách ứng viên (id, giây, slug)
+    python motion/long/pexels.py get <topic> <id> [<id> ...]            -> tải bản 1920x1080 (hoặc gần nhất) về broll/
+    thêm --portrait: clip dọc 9:16 (Short), cạnh dài ≤1920
+
+Chỉ lấy bản HD ≤1920 (4K làm Chrome giải mã chậm, render lâu gấp nhiều lần).
+Key: biến môi trường PEXELS_API_KEY, rồi ../.local.env (PEXELS_API_KEY hoặc PEXEL_KEY), rồi
+../video-editor/.env (máy sản xuất). Đọc lúc cần, không in ra.
+"""
+import os
+import json
+import re
+import sys
+from pathlib import Path
+
+import httpx
+
+ROOT = Path(__file__).resolve().parents[2]
+KEY_FILES = (ROOT.parent / ".local.env", ROOT.parent / "video-editor" / ".env")
+
+
+def key(files=KEY_FILES) -> str:
+    if os.environ.get("PEXELS_API_KEY"):
+        return os.environ["PEXELS_API_KEY"].strip()
+    for f in files:
+        if f.exists():
+            m = re.search(r"^(?:PEXELS_API_KEY|PEXEL_KEY)\s*=\s*(.+)$", f.read_text(encoding="utf-8-sig"), re.M)
+            if m and m.group(1).strip().strip('"'):
+                return m.group(1).strip().strip('"')
+    raise SystemExit("không thấy Pexels key (PEXELS_API_KEY / PEXEL_KEY trong .local.env)")
+
+
+def _h() -> dict:
+    return {"Authorization": key()}
+
+
+def out(topic):
+    d = Path(topic) if Path(topic).is_absolute() else ROOT / "output" / "long" / topic / "broll"
+    d.mkdir(parents=True, exist_ok=True)
+    return d
+
+
+def search(topic, queries, orientation="landscape"):
+    idx_p = out(topic) / "index.json"
+    idx = json.loads(idx_p.read_text(encoding="utf-8")) if idx_p.exists() else {}
+    for q in queries:
+        r = httpx.get("https://api.pexels.com/videos/search", headers=_h(), timeout=30,
+                      params={"query": q, "orientation": orientation, "per_page": 30, "size": "medium"})
+        r.raise_for_status()
+        print(f"\n== {q} ({r.json().get('total_results')})")
+        for v in r.json()["videos"]:
+            slug = v["url"].rstrip("/").split("/")[-1]
+            idx[str(v["id"])] = {"dur": v["duration"], "slug": slug, "user": v["user"]["name"], "q": q,
+                                 "files": [{"w": f["width"], "h": f["height"], "link": f["link"]} for f in v["video_files"] if f.get("width")]}
+            print(f"{v['id']:>10} {v['duration']:>3}s  {slug[:70]}")
+    idx_p.write_text(json.dumps(idx, ensure_ascii=False, indent=0), encoding="utf-8")
+
+
+def get(topic, ids, portrait=False):
+    idx = json.loads((out(topic) / "index.json").read_text(encoding="utf-8"))
+    for i in ids:
+        dst = out(topic) / f"{i}.mp4"
+        if dst.exists():
+            continue
+        v = idx[i]
+        fs = sorted((f for f in v["files"] if max(f["w"], f["h"]) <= 1920 and (f["h"] > f["w"]) == portrait),
+                    key=lambda f: -max(f["w"], f["h"]))
+        if not fs:
+            print(f"{i}: không có bản {'dọc' if portrait else 'ngang'} ≤1920 -- bỏ qua")
+            continue
+        f = fs[0]
+        with httpx.stream("GET", f["link"], timeout=120, follow_redirects=True) as r:
+            r.raise_for_status()
+            with open(dst, "wb") as fh:
+                for ch in r.iter_bytes():
+                    fh.write(ch)
+        print(f"{i}: {f['w']}x{f['h']} {v['dur']}s {dst.stat().st_size // 1024}KB  {v['slug'][:50]}")
+
+
+if __name__ == "__main__":
+    import pathlib, sys  # noqa: E401
+    sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[2]))
+    from factory.console import utf8_console  # noqa: E402
+    utf8_console()  # console Windows cp1252 không in được tiếng Việt (retro 2 mục 7)
+    portrait = "--portrait" in sys.argv
+    cmd, topic, *rest = [a for a in sys.argv[1:] if a != "--portrait"]
+    if cmd == "search":
+        search(topic, rest, "portrait" if portrait else "landscape")
+    else:
+        get(topic, rest, portrait)
+"""Gom tư liệu cho video DÀI: nhiều bài Wikipedia + ảnh Commons dùng tự do.
+
+    python motion/long/research_long.py <topic> "Bài 1" "Bài 2" ...
+
+Khác bản Short: video dài cần nhiều hình hơn nên nhận cả CC BY / CC BY-SA
+(bắt buộc ghi công trong mô tả — lưu artist + license để in credit tự động),
+ngoài Public domain / CC0. Không nhận NC/ND, không nhận "Fair use".
+Ghi output/long/<topic>/research.json + sheet_<n>.jpg (bảng ảnh đánh số).
+"""
+import json
+import re
+import sys
+import time
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "stier"))
+import research as R  # noqa: E402
+
+FREE = re.compile(r"public domain|^pd|cc0|no restrictions|^cc by(-sa)? ?\d|^cc-by", re.I)
+BAD = re.compile(r"nc|nd|fair use", re.I)
+
+
+def keep(rec, seen, files, src):
+    for im in R.imageinfo([f for f in files if f not in seen]):
+        lic = im["license"]
+        if FREE.search(lic) and not BAD.search(lic.replace("CC BY", "")) and not R.SKIP.search(im["file"]) \
+                and im["mime"] in ("image/jpeg", "image/png", "image/tiff", "image/gif") and min(im["w"], im["h"]) >= 400:
+            im["from"] = src
+            rec["images"].append(im)
+            seen.add(im["file"])
+
+
+def main():
+    """Đối số bắt đầu bằng "?" là truy vấn tìm ảnh Commons (vd "?Sugamo Prison"), còn lại là tên bài Wikipedia."""
+    topic, pages = sys.argv[1], sys.argv[2:]
+    out = Path(__file__).resolve().parents[2] / "output" / "long" / topic
+    out.mkdir(parents=True, exist_ok=True)
+    dst = out / "research.json"
+    rec = json.loads(dst.read_text(encoding="utf-8")) if dst.exists() else {"articles": [], "images": []}
+    have = {a["title"] for a in rec["articles"]}
+    seen = {i["file"] for i in rec["images"]}
+    n0 = len(rec["images"])
+    for p in pages:
+        if p.startswith("?"):
+            keep(rec, seen, R.commons_search(p[1:], 20), p)
+            print(f"{p:50} ảnh={len(rec['images'])}", flush=True)
+        elif p not in have:
+            a = R.article(p)
+            rec["articles"].append({"title": a["title"], "text": a["text"]})
+            keep(rec, seen, a["images"], a["title"])
+            print(f"{a['title']:50} chars={len(a['text']):6} ảnh={len(rec['images'])}", flush=True)
+        dst.write_text(json.dumps(rec, ensure_ascii=False, indent=1), encoding="utf-8")
+        time.sleep(2)
+    R.OUT = out
+    for k in range(n0 // 36 * 36, len(rec["images"]), 36):   # chỉ vẽ lại các bảng có ảnh mới
+        R.sheet(f"sheet_{k // 36}", rec["images"][k:k + 36])
+
+
+if __name__ == "__main__":
+    import pathlib, sys  # noqa: E401
+    sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[2]))
+    from factory.console import utf8_console  # noqa: E402
+    utf8_console()  # console Windows cp1252 không in được tiếng Việt (retro 2 mục 7)
+    main()
+
+web search: 
+web search: site:pexels.com/video "vintage radio" ...
+web search: 
+web search: site:pexels.com/video "radio" "Aspect Ratio" "16:9" "Free" ...
+web search: 
+web search: site:commons.wikimedia.org/wiki/File: "Alan Turing" "Public domain" ...
+web search: 
+web search: site:commons.wikimedia.org/wiki/File: "Bombe" "public domain" Bletchley ...
+web search: 
+web search: site:gchq.gov.uk Wrens Bombe operators Eastcote Stanmore number shifts ...
+web search: 
+web search: Marian Rejewski 1932 bomba 1938 Zygalski official museum Poland ...
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-Content -Raw -Encoding UTF8 data/long/mim-turing-bombe/factcheck.md; Get-Content -Raw -Encoding UTF8 data/long/mim-turing-bombe/script.md' in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 84ms:
+# Kiểm chứng MIM `mim-turing-bombe` — 26/10/2026
+
+Các URL dưới đây đã được mở ngày 26/10/2026.
+
+| Khẳng định trong lời đọc | Nguồn đã mở |
+|---|---|
+| Victory là Bombe đầu tiên hoạt động tại Bletchley Park trong tháng 3/1940 | GCHQ, [The Pyry Forest Meeting](https://www.gchq.gov.uk/information/the-pyry-forest-meeting) |
+| Enigma là họ máy rô-to điện cơ; Bombe dùng để tìm thiết lập khóa ngày | GCHQ, [Jean Millar](https://www.gchq.gov.uk/information/international-womens-month-jean-millar) |
+| Cuộc gặp Pyry diễn ra 25–26/07/1939; phía Ba Lan chia sẻ thành quả Enigma và bomba kryptologiczna | GCHQ, [The Pyry Forest Meeting](https://www.gchq.gov.uk/information/the-pyry-forest-meeting) |
+| Turing gặp các nhà mật mã Ba Lan tại Paris tháng 01/1940; trao đổi với Marian Rejewski dẫn tới tư duy về Bombe Anh | GCHQ, [The Pyry Forest Meeting](https://www.gchq.gov.uk/information/the-pyry-forest-meeting) |
+| Turing và Welchman gắn với thiết kế Bombe; diagonal board của Welchman là bổ sung quan trọng | Bletchley Park, [Gordon Welchman](https://bletchleypark.org.uk/wp-content/uploads/record_attachments/1839.pdf) |
+| Jean Millar vào WRNS tháng 03/1943, tới Eastcote tháng 11/1943, làm ca 8 giờ, vận hành Bombe, ghi điểm dừng để kiểm tra rồi báo về Bletchley Park | GCHQ, [Jean Millar](https://www.gchq.gov.uk/information/international-womens-month-jean-millar) |
+| Alan Turing Aged 16 là PDM 1.0; Marian Rejewski và Bletchley Park là PD; Enigma Machine là CC0 | Wikimedia Commons: [Turing](https://commons.wikimedia.org/wiki/File:Alan_Turing_Aged_16.jpg), [Rejewski](https://commons.wikimedia.org/wiki/File:Marian_Rejewski.jpg), [Bletchley](https://commons.wikimedia.org/wiki/File:Bletchley_Park.jpg), [Enigma](https://commons.wikimedia.org/wiki/File:Enigma_Machine.jpg) |
+
+## Điểm không kiểm được hoặc chủ động không khẳng định
+
+- Không đọc ngày cụ thể của Victory; nguồn mở chỉ chốt tháng 3/1940.
+- Không đặt WRNS vào bối cảnh tháng 3/1940; nguồn đã mở xác nhận Jean Millar tại Eastcote từ cuối năm 1943.
+- Không dùng số lượng Bombe, thời gian chạy, số người vận hành hoặc tác động quân sự.
+
+# NGƯỜI GIẢI MÃ Ngoài Đời Thật: Alan Turing Và Cỗ Máy Bombe
+
+**Kênh:** MIM · **Độ dài dự kiến:** 9–10 phút · **Lộ trình:** sáu răng của một chiếc khóa.
+**Tiêu đề:** *NGƯỜI GIẢI MÃ Ngoài Đời Thật: Alan Turing Và Bombe*
+
+Quy ước: mỗi dòng là một câu đọc; `‖` là ngừng dài. Phim *The Imitation Game* chỉ được nhắc bằng lời và chữ.
+
+## CH00 · Căn phòng nghe tiếng rơ-le
+
+Tháng 3 năm 1940, một cỗ máy mới bắt đầu chạy ở Bletchley Park, nước Anh.
+Nó tên là Victory, chiếc Bombe đầu tiên hoạt động tại đây, theo GCHQ.
+Mỗi lần các trống điện cơ quay, nó đang chạy đua với một việc rất đời thường của mật mã: khóa ngày sẽ đổi. ‖
+Một điện Enigma bị chặn đang chờ trên bàn.
+Nếu không tìm được khóa trước khi mạng liên lạc đổi thiết lập, mẩu tin ấy gần như mất giá trị.
+Vậy cỗ máy phải thử cái gì, trước khi đêm qua đi?
+Đó là chỗ câu chuyện bắt đầu căng.
+Không phải với một thiên tài đứng một mình, mà với sáu răng của một chiếc khóa.
+Ta bắt đầu với tốc độ.
+Rồi ta sẽ lần tới tri thức Ba Lan, bản thiết kế và xưởng máy.
+Sau đó mới tới manh mối và người vận hành.
+Răng đầu tiên nằm ngay trong việc khóa cứ đổi.
+
+## CH01 · Mỗi sáng, khóa lại đổi
+
+Enigma là một họ máy rô-to điện cơ dùng để mã hóa liên lạc của Đức trong Thế chiến thứ hai.
+Người gửi và người nhận chỉ đọc được nhau khi cùng thiết lập máy.
+Nhưng thiết lập dùng cho một ngày không phải lời hứa cho ngày sau.
+Vì thế, một bức điện bị chặn không chỉ là bài toán đúng hay sai.
+Nó là bài toán đúng kịp lúc.
+Kịp lúc mới khó.
+Bạn có thể hình dung một ổ khóa đổi tổ hợp trước mỗi ca trực.
+Người giải mã cần một quy trình loại sớm những đường vô vọng.
+Đó là lý do tốc độ là răng thứ nhất.
+Máy có thể quay nhanh, nhưng máy chưa biết bức điện nào đáng thử trước.
+Răng thứ hai đến từ một cuộc gặp bên ngoài Warsaw.
+
+## CH02 · Món quà từ rừng Pyry
+
+Ngày 25 và 26 tháng 7 năm 1939, các nhà mật mã Ba Lan, Pháp và Anh gặp nhau ở rừng Pyry gần Warsaw.
+Theo GCHQ, phía Ba Lan chia sẻ những tiến bộ họ đã có với Enigma.
+Trong số đó có bomba kryptologiczna, một thiết bị điện cơ hỗ trợ phân tích mật mã.
+Marian Rejewski là một nhà toán học và mật mã học Ba Lan gắn với hướng đi này.
+Sau khi Ba Lan thất thủ, Alan Turing tới Paris vào tháng 1 năm 1940 để gặp các nhà mật mã Ba Lan đã sơ tán sang Pháp.
+GCHQ viết rằng các cuộc trao đổi với Rejewski là nền tảng cho tư duy dẫn tới thiết kế Bombe Anh.
+Vì vậy, đây không phải câu chuyện ý tưởng bật ra từ một căn phòng kín.
+Nó là tri thức đi qua biên giới, rồi được một nhóm khác phát triển tiếp.
+Không ai bắt đầu từ số không.
+Nhưng một hướng suy nghĩ vẫn chưa làm ra được một cỗ máy.
+
+## CH03 · Bản vẽ không chỉ có một tên
+
+Alan Turing gắn với thiết kế Bombe của Anh.
+Gordon Welchman bổ sung diagonal board, phần nối dây mà tài liệu Bletchley Park gọi là một cải tiến quan trọng.
+Bombe không đọc hộ cả bức điện từ đầu đến cuối.
+Nó kiểm tra xem một giả thuyết có tự mâu thuẫn hay không.
+Khi một giả thuyết vướng mâu thuẫn, người vận hành có thể gạt nó sang bên sớm hơn.
+Đó là răng thứ ba: thiết kế biết bỏ đường sai.
+Máy cho ra khả năng; người giải mã còn phải kiểm tra khả năng ấy.
+Đó chưa phải đáp án.
+Để làm được chuyện đó ở quy mô ngày nào cũng chạy, bản vẽ phải rời khỏi giấy.
+
+## CH04 · Bản vẽ đi vào xưởng
+
+Victory là tên chiếc Bombe đầu tiên hoạt động tại Bletchley Park trong tháng 3 năm 1940.
+Giữa ý tưởng và một máy chạy được là dây điện, rơ-le, trống quay và những lần kiểm tra.
+Một máy hữu ích không chỉ cần đúng trên sơ đồ.
+Nó phải chạy được.
+Nó phải chạy lặp lại để người khác có thể tin vào quy trình quanh nó.
+Và mỗi lần chạy, nó vẫn cần một điểm bắt đầu.
+
+## CH05 · Người cho máy một điểm bắt đầu
+
+Người giải mã thường tìm một crib: đoạn chữ có khả năng xuất hiện trong điện văn.
+Từ giả thuyết ấy, họ dựng một chuỗi liên hệ để Bombe kiểm tra.
+Mẩu đoán ấy chưa phải đáp án.
+Nó chỉ mở cửa.
+Nó là chỗ để cả quy trình bám vào.
+Nếu chuỗi liên hệ tạo ra mâu thuẫn, giả thuyết bị loại.
+Nếu máy dừng ở một khả năng, công việc cũng chưa kết thúc.
+Người giải mã phải kiểm tra lại nó.
+Răng thứ năm là một manh mối đủ tốt, rồi một người đủ cẩn thận để không nhầm manh mối với kết luận.
+Răng cuối cùng là những người khiến vòng lặp ấy chạy liên tục.
+
+## CH06 · Những người ngồi cạnh dãy máy
+
+Đến năm 1943, WRNS, thường gọi là Wrens, được điều tới Eastcote để vận hành Bombe.
+Jean Millar kể với GCHQ rằng bà làm theo các ca tám giờ.
+Khi máy dừng, người vận hành ghi lại thiết lập, rồi bộ phận kiểm tra thử lại trước khi báo về Bletchley Park.
+Máy không tự biến điểm dừng thành một bản giải mã đáng tin.
+Điểm dừng phải được hỏi lại.
+Wrens nạp máy, theo dõi, ghi điểm dừng và chuyển kết quả qua bước kiểm tra.
+Vì thế, răng thứ sáu là tổ chức: người, máy và quy trình có mặt đúng lượt.
+Không có họ, tiếng rơ-le chỉ là tiếng rơ-le.
+Và giờ ta có thể quay lại câu hỏi trong căn phòng tháng 3 năm 1940.
+
+## CH07 · Chiếc khóa được lắp đủ
+
+Victory không phải một chiếc máy tự biết nên tìm gì.
+Nó chỉ có ích khi sáu răng khớp vào nhau.
+Tốc độ, vì khóa thay đổi.
+Từ đó mọi thứ mới bắt đầu.
+Tri thức từ Ba Lan, vì người Anh không bắt đầu từ số không.
+Thiết kế của Turing và Welchman, vì giả thuyết sai cần bị loại sớm.
+Xưởng của Keen và đồng nghiệp, vì bản vẽ phải thành máy chạy được.
+Crib của người giải mã, vì máy cần một điểm bắt đầu.
+Và người vận hành, vì một điểm dừng phải được kiểm tra trước khi trở thành thông tin.
+Đó là câu trả lời cho câu hỏi đầu video: máy phải được con người chỉ cho nơi đáng thử.
+Alan Turing là nhân vật trung tâm của câu chuyện này, nhưng trung tâm không có nghĩa là một mình.
+Đừng chỉ hỏi công cụ thông minh trả ra câu gì.
+Hãy hỏi nó nhận giả định nào, đã loại điều gì, và ai kiểm tra điểm dừng cuối cùng.
+
+
+web search: 
+web search: 
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'rg -n "def imageinfo|def commons_search|api.php" motion/stier/research.py; Get-Content -Encoding UTF8 motion/stier/research.py | Select-Object -Skip 1 -First 130' in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 149ms:
+49:    return json.loads(get(f"https://{host}/w/api.php?" + urllib.parse.urlencode(params)))
+61:def commons_search(q: str, n: int = 30) -> list[str]:
+74:def imageinfo(files: list[str]) -> list[dict]:
+
+    python motion/stier/research.py              # mọi hồ sơ trong data/stier/cases.tsv
+    python motion/stier/research.py gardner ...  # chỉ vài hồ sơ
+
+Ghi data/stier/research/<slug>.json (bài viết + ảnh ứng viên kèm giấy phép)
+và <slug>.jpg (bảng ảnh đánh số để chọn bằng mắt). Chỉ giữ ảnh có giấy phép
+Public domain / CC0 trên Commons — không ảnh AI, không ảnh có bản quyền.
+Trùng chủ đề với kênh thì đánh dấu, KHÔNG làm tiếp (factory.lines.novelty +
+từ khoá tên riêng: trùng tiêu đề chưa chắc bắt được trùng nhân vật).
+"""
+from __future__ import annotations
+
+import html
+import io
+import json
+import re
+import sys
+import time
+import urllib.parse
+import urllib.request
+from pathlib import Path
+
+from PIL import Image, ImageDraw, ImageFont
+
+ROOT = Path(__file__).resolve().parents[2]
+OUT = ROOT / "data" / "stier" / "research"
+UA = {"User-Agent": "yt-factory/1.0 (documentary research; contact via channel)"}
+PD = re.compile(r"public domain|^pd|cc0|no restrictions", re.I)
+SKIP = re.compile(r"(logo|icon|flag_of|commons-|question_book|wiki|edit-clear|symbol|padlock|ambox|crystal|nuvola|"
+                  r"folder|stub|disambig|portal|\.svg$|signature_of|coat_of_arms|red_pog|blank|map_marker)", re.I)
+
+
+def get(url: str, tries: int = 5) -> bytes:
+    for k in range(tries):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60) as r:
+                return r.read()
+        except Exception as e:  # 429/5xx: lùi dần
+            if k == tries - 1:
+                raise
+            time.sleep(3 * (k + 1) + (10 if "429" in str(e) else 0))
+    raise RuntimeError
+
+
+def api(host: str, **params) -> dict:
+    params |= {"format": "json", "formatversion": "2"}
+    time.sleep(0.4)
+    return json.loads(get(f"https://{host}/w/api.php?" + urllib.parse.urlencode(params)))
+
+
+def article(title: str) -> dict:
+    a = _article(title)
+    if not a["text"]:   # tiêu đề đoán sai -> lấy kết quả tìm kiếm đầu tiên
+        hit = api("en.wikipedia.org", action="query", list="search", srsearch=title, srlimit=1)["query"]["search"]
+        if hit:
+            a = _article(hit[0]["title"])
+    return a
+
+
+def commons_search(q: str, n: int = 30) -> list[str]:
+    d = api("commons.wikimedia.org", action="query", list="search", srsearch=q, srnamespace=6, srlimit=n)
+    return [h["title"] for h in d["query"]["search"]]
+
+
+def _article(title: str) -> dict:
+    d = api("en.wikipedia.org", action="query", prop="extracts|images|pageimages", explaintext=1,
+            titles=title, redirects=1, imlimit=100, piprop="name")
+    p = d["query"]["pages"][0]
+    return {"title": p.get("title"), "text": p.get("extract", ""),
+            "images": [i["title"] for i in p.get("images", [])], "lead": p.get("pageimage")}
+
+
+def imageinfo(files: list[str]) -> list[dict]:
+    out = []
+    for i in range(0, len(files), 40):
+        d = api("commons.wikimedia.org", action="query", prop="imageinfo", titles="|".join(files[i:i + 40]),
+                iiprop="url|size|mime|extmetadata", iiurlwidth=360)
+        for p in d["query"]["pages"]:
+            ii = (p.get("imageinfo") or [None])[0]
+            if not ii:
+                continue
+            md = ii.get("extmetadata", {})
+            lic = md.get("LicenseShortName", {}).get("value", "")
+            desc = re.sub(r"<[^>]+>", "", html.unescape(md.get("ImageDescription", {}).get("value", "")))[:220]
+            out.append({"file": p["title"], "url": ii["url"], "thumb": ii.get("thumburl"), "w": ii["width"],
+                        "h": ii["height"], "mime": ii["mime"], "license": lic,
+                        "date": re.sub(r"<[^>]+>", "", md.get("DateTimeOriginal", {}).get("value", ""))[:40],
+                        "desc": desc.strip()})
+    return out
+
+
+def sheet(slug: str, imgs: list[dict]) -> None:
+    cells = []
+    for k, im in enumerate(imgs):
+        try:
+            b = get(im["thumb"])
+            t = Image.open(io.BytesIO(b)).convert("RGB")
+            t.thumbnail((300, 300))
+            cells.append((k, t))
+        except Exception:
+            continue
+    if not cells:
+        return
+    cols = 6
+    rows = (len(cells) + cols - 1) // cols
+    S = Image.new("RGB", (cols * 310, rows * 330), (20, 20, 20))
+    dr = ImageDraw.Draw(S)
+    try:
+        f = ImageFont.truetype("arial.ttf", 26)
+    except OSError:
+        f = ImageFont.load_default()
+    for n, (k, t) in enumerate(cells):
+        x, y = (n % cols) * 310 + 5, (n // cols) * 330 + 28
+        S.paste(t, (x, y))
+        dr.text((x, y - 27), f"#{k} {imgs[k]['w']}x{imgs[k]['h']}", fill=(255, 220, 90), font=f)
+    S.save(OUT / f"{slug}.jpg", quality=80)
+
+
+def main() -> None:
+    sys.path.insert(0, str(ROOT))
+    OUT.mkdir(parents=True, exist_ok=True)
+    titles_ch = json.loads((ROOT / "data" / "channel_titles" / "CL.json").read_text(encoding="utf-8"))["videos"]
+    rows = [l.split("\t") for l in (ROOT / "data" / "stier" / "cases.tsv").read_text(encoding="utf-8").splitlines()
+            if l.strip() and not l.startswith("#")]
+    want = set(sys.argv[1:])
+    for slug, pages, keys in rows:
+        if want and slug not in want:
+            continue
+        dst = OUT / f"{slug}.json"
+        if dst.exists() and not want:
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import sys; sys.path.insert(0, 'motion/stier'); import research; fs=['File:Alan Turing at age 16.jpg','File:Alan Turing (1912-1954) in 1936 at Princeton University.jpg','File:Bletchley Park.jpg','File:Enigma Machine at NSA.jpg','File:EnigmaMachine.jpg','File:An Enigma machine.jpg','File:Enigma Machine.jpg','File:Enigma machines.jpg','File:Enigma machine, Warsaw.jpg','File:Bombe Closeup.jpg','File:Wartime picture of a Bletchley Park Bombe.jpg']; [print(x['file']+' | '+x['license']+' | '+str(x['w'])+'x'+str(x['h'])+' | https://commons.wikimedia.org/wiki/'+x['file'].replace(' ','_').replace(':','%3A')) for x in research.imageinfo(fs)]\"" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 1604ms:
+File:EnigmaMachine.jpg | Public domain | 1414x1886 | https://commons.wikimedia.org/wiki/File%3AEnigmaMachine.jpg
+File:Bletchley Park.jpg | Public domain | 2041x1101 | https://commons.wikimedia.org/wiki/File%3ABletchley_Park.jpg
+File:Enigma Machine at NSA.jpg | Public domain | 450x600 | https://commons.wikimedia.org/wiki/File%3AEnigma_Machine_at_NSA.jpg
+File:Bombe Closeup.jpg | Public domain | 3264x2448 | https://commons.wikimedia.org/wiki/File%3ABombe_Closeup.jpg
+File:Enigma Machine.jpg | CC0 | 3024x4032 | https://commons.wikimedia.org/wiki/File%3AEnigma_Machine.jpg
+File:Wartime picture of a Bletchley Park Bombe.jpg | Public domain | 946x840 | https://commons.wikimedia.org/wiki/File%3AWartime_picture_of_a_Bletchley_Park_Bombe.jpg
+File:Alan Turing at age 16.jpg | Public domain | 864x1194 | https://commons.wikimedia.org/wiki/File%3AAlan_Turing_at_age_16.jpg
+File:Enigma machines.jpg | CC0 | 3153x3119 | https://commons.wikimedia.org/wiki/File%3AEnigma_machines.jpg
+File:Enigma machine, Warsaw.jpg | Public domain | 2401x2873 | https://commons.wikimedia.org/wiki/File%3AEnigma_machine,_Warsaw.jpg
+File:Alan Turing (1912-1954) in 1936 at Princeton University.jpg | Public domain | 733x745 | https://commons.wikimedia.org/wiki/File%3AAlan_Turing_(1912-1954)_in_1936_at_Princeton_University.jpg
+File:An Enigma machine.jpg | CC0 | 1536x2048 | https://commons.wikimedia.org/wiki/File%3AAn_Enigma_machine.jpg
+
+web search: 
+web search: site:pexels.com/video/ "electrical wires" "Free Stock Video" ...
+codex
+Mình đã xác nhận được 34 dữ kiện, trong đó phần lớn là nguồn GCHQ, National Archives hoặc bảo tàng chuyên ngành; cũng đã kiểm trực tiếp trường `LicenseShortName` của 11 ảnh Commons (chỉ PD/CC0). Có một điểm cần giữ thận trọng cho pha viết: nguồn GCHQ đã mở không tự nó xác nhận câu “Victory là Bombe đầu tiên chạy tháng 3/1940”, nên mình sẽ ghi đây là câu cần kiểm lại thay vì biến nó thành dữ kiện.
+apply patch
+patch: completed
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-turing-bombe\facts.md
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-26-codex-pilot\T2A-ket-qua.md
+diff --git a/data/long/mim-turing-bombe/facts.md b/data/long/mim-turing-bombe/facts.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..96ca4ece1a78cf577ae0e848c11e81395e140f5b
+--- /dev/null
++++ b/data/long/mim-turing-bombe/facts.md
+@@ -0,0 +1,130 @@
++# Kho dữ kiện — `mim-turing-bombe`
++
++Ngày mở nguồn: 26/10/2026. Đây là kho nghiên cứu cho pha viết, không phải kịch bản. Chỉ các dòng đánh dấu **mạnh** được phép chuyển thành lời khẳng định trực tiếp. Dòng **vừa** chỉ được dùng với quy dẫn nguồn ngay trong câu đọc, ví dụ: “Theo *Time*...”.
++
++## CH00 — Một cuộc đua có thật
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 01 | Alan Turing vào làm cho GC&CS tại Bletchley Park tháng 09/1939. | [GCHQ — Alan Turing](https://www.gchq.gov.uk/information/alan-turing) | **mạnh** |
++| 02 | Turing dẫn công việc ở Hut 8 nhằm vào liên lạc Enigma của Hải quân Đức và làm việc sát với Joan Clarke. | [GCHQ — Alan Turing](https://www.gchq.gov.uk/information/alan-turing) | **mạnh** |
++| 03 | Ngày 21/10/1941, Turing, Gordon Welchman, Hugh Alexander và Stuart Milner-Barry gửi thư trực tiếp cho Winston Churchill xin thêm nguồn lực cho Bletchley Park. | [The National Archives — A dramatic plea for Churchill’s help](https://www.nationalarchives.gov.uk/explore-the-collection/stories/a-dramatic-plea-for-churchills-help/) | **mạnh** |
++| 04 | Theo National Archives, đến tháng 06/1941 các nhà giải mã Bletchley đã đột nhập được liên lạc U-boat, trong lúc Trận Đại Tây Dương vẫn rất căng thẳng. | [The National Archives — A dramatic plea for Churchill’s help](https://www.nationalarchives.gov.uk/explore-the-collection/stories/a-dramatic-plea-for-churchills-help/) | **mạnh** |
++
++## CH01 — Vì sao khóa ngày tạo áp lực
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 05 | Enigma mã hóa bằng từ ba rô-to trở lên cùng các nối trên plugboard; Cơ quan Sáng chế Đức nêu không gian lý thuyết là 158.962.555.217.826.360.000 khóa. | [DPMA — Enigma](https://www.dpma.eu/english/our_office/publications/milestones/computerpioneers/enigma/index.html) | **mạnh** |
++| 06 | Hai đầu liên lạc phải dùng đúng cùng cấu hình; thiết lập được đổi thường xuyên, riêng Hải quân Đức đổi hằng ngày vào nửa đêm. | [DPMA — Enigma](https://www.dpma.eu/english/our_office/publications/milestones/computerpioneers/enigma/index.html) | **mạnh** |
++| 07 | Enigma Lục quân/Không quân chọn 3 rô-to từ bộ 5, còn Hải quân chọn từ bộ 8. | [The National Museum of Computing — The Turing-Welchman Bombe](https://www.tnmoc.org/bombe) | **mạnh** |
++| 08 | TNMOC ghi có hàng trăm mạng Enigma trong chiến tranh, dù chỉ khoảng 50 mạng hoạt động vào cùng một thời điểm; mỗi mạng nhận key sheet riêng. | [The National Museum of Computing — The Enigma Machine](https://www.tnmoc.org/bh-2-the-enigma-machine) | **mạnh** |
++
++## CH02 — Nền móng Ba Lan
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 09 | Marian Rejewski cùng Jerzy Różycki và Henryk Zygalski lần đầu phá mã Enigma Đức vào tháng 12/1932. | [Đại học Adam Mickiewicz — Marian Rejewski](https://wmi.amu.edu.pl/wydzial/historia/biogramy/marian-rejewski) | **mạnh** |
++| 10 | Cơ quan Tình báo Ba Lan ghi lần đầu họ giải được điện Enigma tại Cung Sachsen ở Warsaw ngày 31/12/1932, sau khi Gustave Bertrand mang tài liệu tới Warsaw ngày 08/12. | [Agencja Wywiadu — Dekryptaż szyfru Enigmy](https://aw.gov.pl/pl/historia/dekryptaz-szyfru-enigmy/104,Dekryptaz-szyfru-Enigmy.html) | **mạnh** |
++| 11 | Nhóm Ba Lan làm cyclometer năm 1936; sau thay đổi của Đức tháng 09/1938, Rejewski và đồng nghiệp làm bomba kryptologiczna, còn tấm đục lỗ Zygalski hỗ trợ tìm thứ tự rô-to. | [Agencja Wywiadu — Dekryptaż szyfru Enigmy](https://aw.gov.pl/pl/historia/dekryptaz-szyfru-enigmy/104,Dekryptaz-szyfru-Enigmy.html) | **mạnh** |
++| 12 | Ngày 25–26/07/1939, các nhà mật mã Ba Lan, Pháp và Anh gặp nhau gần Warsaw; GCHQ xác nhận đoàn Anh có Alastair Denniston và Dilly Knox, và phía Ba Lan trình bày bomba kryptologiczna. | [GCHQ — The Pyry Forest Meeting](https://www.gchq.gov.uk/information/the-pyry-forest-meeting) | **mạnh** |
++
++## CH03 — Turing không bắt đầu một mình
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 13 | GCHQ đánh giá tri thức từ Ba Lan đã thay đổi cách GC&CS tiếp cận phân tích Enigma. | [GCHQ — The Pyry Forest Meeting](https://www.gchq.gov.uk/information/the-pyry-forest-meeting) | **mạnh** |
++| 14 | Tháng 01/1940, Turing tới Paris gặp các nhà mật mã Ba Lan sơ tán; GCHQ nói trao đổi với Rejewski là nền tảng cho tư duy dẫn tới thiết kế và lắp đặt Bombe Anh. | [GCHQ — The Pyry Forest Meeting](https://www.gchq.gov.uk/information/the-pyry-forest-meeting) | **mạnh** |
++| 15 | Gordon Welchman vào Bletchley tháng 09/1939, đứng đầu Hut 6 và nghĩ ra diagonal board, thứ GCHQ gọi là cải tiến lớn cho Bombe của Turing. | [GCHQ — Gordon Welchman](https://www.gchq.gov.uk/information/gordon-welchman) | **mạnh** |
++| 16 | Joan Clarke tốt nghiệp double First năm 1940, được đưa vào Hut 8 với Turing và giỏi Banburismus, một ứng dụng thống kê Bayes giúp tiết kiệm đáng kể thời gian xử lý trên Bombes. | [GCHQ — Joan Clarke](https://www.gchq.gov.uk/information/joan-clarke) | **mạnh** |
++
++## CH04 — Từ giả thuyết thành máy
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 17 | Theo TNMOC, hướng tấn công của Turing dùng crib — đối chiếu mẫu bản mã với một đoạn bản rõ được dự đoán — và lợi dụng tính chất Enigma không mã hóa một chữ thành chính nó. | [The National Museum of Computing — The Turing-Welchman Bombe](https://www.tnmoc.org/bombe) | **mạnh** |
++| 18 | TNMOC nói diagonal board của Welchman làm giảm mạnh các điểm dừng giả, nhờ đó tăng thông lượng của Bombe. | [The National Museum of Computing — The Turing-Welchman Bombe](https://www.tnmoc.org/bombe) | **mạnh** |
++| 19 | TNMOC ghi chiếc Turing–Welchman Bombe đầu tiên mang tên Agnus Dei, hay Agnes, hoạt động vào tháng 08/1940; British Tabulating Machine Company (BTM) đảm nhiệm kỹ thuật và chế tạo Bombe gốc. | [The National Museum of Computing — The Turing-Welchman Bombe](https://www.tnmoc.org/bombe) | **mạnh** |
++| 20 | TNMOC ghi toàn bộ hoạt động đã chế tạo khoảng 211 Bombe và phá nhiều khóa theo ngày; máy được đặt cả ở các outstation. | [The National Museum of Computing — The Turing-Welchman Bombe](https://www.tnmoc.org/bombe) | **mạnh** |
++
++## CH05 — Một crib biến thành menu
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 21 | GCHQ mô tả crib là các mảnh tiếng Đức thường từ 20 chữ cái trở lên mà người giải mã đoán có thể là một phần của điện văn. | [GCHQ — Shaun Wylie](https://www.gchq.gov.uk/information/shaun_wylie) | **mạnh** |
++| 22 | Một crib khả thi được dùng để tạo “menu”; menu là đầu vào cho thiết bị Bombe thử các thiết lập rô-to Enigma. | [GCHQ — Shaun Wylie](https://www.gchq.gov.uk/information/shaun_wylie) | **mạnh** |
++| 23 | Shaun Wylie vào Hut 8 tháng 01/1941 và phụ trách Crib room; GCHQ ghi ông nhận ra thứ tự rô-to thường đổi giữa các ngày, về sau gọi là Wylie WOs. | [GCHQ — Shaun Wylie](https://www.gchq.gov.uk/person/shaun-wylie) | **mạnh** |
++| 24 | Jean Millar kể mỗi ca được giao một Bombe và một menu dựng từ tri thức tình báo trước đó cùng suy luận; hai người làm chung, một vận hành và một ở phòng kiểm tra. | [GCHQ — Jean Millar](https://www.gchq.gov.uk/information/international-womens-month-jean-millar) | **mạnh** |
++
++## CH06 — Những người vận hành vòng lặp
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 25 | Jean Millar gia nhập WRNS tháng 03/1943 và được gọi đi tháng 11; tại Eastcote, bà làm ba ca 8 giờ: 08:00–16:00, 16:00–00:00 và 00:00–08:00. | [GCHQ — Jean Millar](https://www.gchq.gov.uk/information/international-womens-month-jean-millar) | **mạnh** |
++| 26 | Theo lời kể của Millar, mỗi bay có 10 Bombe; hai người vận hành/kiểm tra được phân công theo từng máy và từng menu. | [GCHQ — Jean Millar](https://www.gchq.gov.uk/information/international-womens-month-jean-millar) | **mạnh** |
++| 27 | Người vận hành nạp các bánh xe màu theo menu, cắm phần sau máy theo chỉ dẫn, bật máy để thử các thiết lập rô-to và ghi lại điểm dừng. | [GCHQ — Jean Millar](https://www.gchq.gov.uk/information/international-womens-month-jean-millar) | **mạnh** |
++| 28 | Điểm dừng chỉ được chuyển đi sau khi máy kiểm tra dùng đúng bánh xe và đúng thiết lập xác nhận; kết quả đạt kiểm tra được báo về Bletchley Park qua điện thoại xáo trộn. | [GCHQ — Jean Millar](https://www.gchq.gov.uk/information/international-womens-month-jean-millar) | **mạnh** |
++| 29 | Thư ngày 21/10/1941 xin Churchill thêm 20 nữ clerks, 20 typists được đào tạo và một phân đội WRNS để thử các “stories” do Bombe tạo ra. | [The National Archives — A dramatic plea for Churchill’s help](https://www.nationalarchives.gov.uk/explore-the-collection/stories/a-dramatic-plea-for-churchills-help/) | **mạnh** |
++
++## CH07 — Kết quả, bí mật và lớp phim ảnh
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 30 | GCHQ nói Bombe Anh đầu tiên đã hoạt động tại Bletchley kịp thời cho Blitzkrieg của Đức ở Tây Âu; trang này không nêu tên Victory hay một ngày cụ thể. | [GCHQ — The Pyry Forest Meeting](https://www.gchq.gov.uk/information/the-pyry-forest-meeting) | **mạnh** |
++| 31 | Trong chiến tranh, Bombe được đặt tại các outstation gồm Stanmore và Eastcote; sau chiến tranh khoảng 50 máy còn được giữ tạm thời, phần còn lại bị tháo dỡ, theo TNMOC. | [The National Museum of Computing — The Turing-Welchman Bombe](https://www.tnmoc.org/bombe) | **mạnh** |
++| 32 | TNMOC cho biết GCHQ chỉ bàn giao khoảng 2.000 tài liệu và bản vẽ BTM về Bombe cho Bletchley Park Trust sau chiến tranh 40 năm, giúp việc phục dựng. | [The National Museum of Computing — The Turing-Welchman Bombe](https://www.tnmoc.org/bombe) | **mạnh** |
++| 33 | Bảo tàng Mật mã Quốc gia của NSA viết rằng nhiều sử gia cho rằng khả năng đọc Enigma đã rút ngắn chiến tranh tới hai năm; đây là nhận định sử học, không phải con số kết luận của kịch bản. | [NSA — World War 2: Enigma](https://www.nsa.gov/History/National-Cryptologic-Museum/Exhibits-Artifacts/Exhibit-View/Article/2719176/world-war-2-enigma/) | **mạnh** |
++| 34 | Theo *Time*, việc phim *The Imitation Game* gọi máy của Turing là “Christopher” là hư cấu; bài báo nói máy ngoài đời được gọi là Bombe và có biệt danh Victory. | [Time — The True Story of *The Imitation Game*](https://time.com/3609585/the-true-story-of-the-imitation-game/) | **vừa** |
++
++## Chỉ dẫn biên kịch và điều phải tránh
++
++- Cold open nên bám sự căng thẳng đã kiểm được: đêm 21/10/1941, bốn người giải mã — trong đó có Turing — bỏ qua cấp quản lý để xin Churchill thêm người vì các Bombe tạo ra việc mà Bletchley không đủ người xử lý. Nguồn: [The National Archives](https://www.nationalarchives.gov.uk/explore-the-collection/stories/a-dramatic-plea-for-churchills-help/). Không mở bằng danh sách tên hay câu meta.
++- Trục kể phù hợp: **khóa đổi → nền móng Ba Lan → crib/menu → Bombe loại giả thuyết sai → kiểm tra bởi con người**. Nó giữ Turing là nhân vật trung tâm mà không xóa Rejewski, Welchman, Clarke hay Wrens.
++- Không đọc thành khẳng định “một chiếc Bombe tự giải toàn bộ điện văn”. Dữ kiện mạnh chỉ nói máy thử thiết lập từ một menu/crib và điểm dừng còn phải kiểm tra.
++- Nếu nhắc *The Imitation Game*, chỉ dùng dữ kiện số 34 với cụm “theo *Time*”; không dùng hình, poster hay đoạn phim.
++
++## Câu hỏi còn bỏ ngỏ / không được tự điền
++
++1. **Victory và mốc tháng 03/1940:** nguồn GCHQ đã mở chỉ nói “Bombe Anh đầu tiên” hoạt động kịp Blitzkrieg ở Tây Âu, không xác nhận tên Victory hay ngày chạy. TNMOC lại nêu Agnus Dei/Agnes hoạt động tháng 08/1940. Pha viết phải tránh gộp hai tên hoặc đọc ngày 18/03 nếu chưa mở được hồ sơ BTM/GCHQ xác nhận trực tiếp.
++2. **Harold “Doc” Keen, kích thước, số trống, thời gian một lượt chạy:** chưa có nguồn mạnh đã mở cho phiên bản máy thời chiến. Có thể dùng dữ kiện 211 máy và BTM; không đọc các số cơ khí của bản phục dựng như thể số của mọi Bombe thời chiến.
++3. **“Keine besonderen Ereignisse”, bản tin thời tiết, chữ ký lặp:** chưa có nguồn mạnh đã mở gắn riêng các ví dụ này với một menu/Bombe cụ thể. Chỉ dùng định nghĩa crib và menu ở CH05, hoặc nghiên cứu thêm trước khi gọi tên ví dụ.
++4. **Tác động định lượng lên U-boat/Đại Tây Dương:** chỉ dùng mốc “đã đột nhập liên lạc U-boat vào 06/1941” (dữ kiện 04) hoặc quy dẫn nhận định sử gia của NSA (dữ kiện 33); không tự đọc số tàu, số người hay số tháng chiến tranh.
++5. **Phần sai khác của phim:** chỉ có một nguồn báo chí mức vừa đã mở. Nếu muốn kể sâu về nhân vật gộp, tình tiết gián điệp hay trình tự thời gian, cần bài học thuật hay bảo tàng mở được.
++
++## Ảnh Commons đã kiểm `LicenseShortName`
++
++Chỉ dùng ảnh sau khi pha dựng tải lại và đối chiếu trang file; các kết quả dưới đây được truy vấn trực tiếp trường `LicenseShortName` ngày 26/10/2026. Tất cả là **Public domain** hoặc **CC0**, không có BY-SA/NC/ND.
++
++| # | File / mô tả | `LicenseShortName` | Kích thước | Trang nguồn |
++|---|---|---|---|---|
++| I01 | Alan Turing at age 16 | Public domain | 864×1194 | [Commons](https://commons.wikimedia.org/wiki/File%3AAlan_Turing_at_age_16.jpg) |
++| I02 | Alan Turing tại Princeton, 1936 | Public domain | 733×745 | [Commons](https://commons.wikimedia.org/wiki/File%3AAlan_Turing_(1912-1954)_in_1936_at_Princeton_University.jpg) |
++| I03 | Bletchley Park mansion | Public domain | 2041×1101 | [Commons](https://commons.wikimedia.org/wiki/File%3ABletchley_Park.jpg) |
++| I04 | Enigma Machine at NSA | Public domain | 450×600 | [Commons](https://commons.wikimedia.org/wiki/File%3AEnigma_Machine_at_NSA.jpg) |
++| I05 | EnigmaMachine, Imperial War Museum | Public domain | 1414×1886 | [Commons](https://commons.wikimedia.org/wiki/File%3AEnigmaMachine.jpg) |
++| I06 | An Enigma machine | CC0 | 1536×2048 | [Commons](https://commons.wikimedia.org/wiki/File%3AAn_Enigma_machine.jpg) |
++| I07 | Enigma Machine, WWII era | CC0 | 3024×4032 | [Commons](https://commons.wikimedia.org/wiki/File%3AEnigma_Machine.jpg) |
++| I08 | Hai máy Enigma, Polish Army Museum | CC0 | 3153×3119 | [Commons](https://commons.wikimedia.org/wiki/File%3AEnigma_machines.jpg) |
++| I09 | Enigma machine, Warsaw | Public domain | 2401×2873 | [Commons](https://commons.wikimedia.org/wiki/File%3AEnigma_machine,_Warsaw.jpg) |
++| I10 | Bombe Closeup, Bletchley Park | Public domain | 3264×2448 | [Commons](https://commons.wikimedia.org/wiki/File%3ABombe_Closeup.jpg) |
++| I11 | Wartime picture of a Bletchley Park Bombe, 1945 | Public domain | 946×840 | [Commons](https://commons.wikimedia.org/wiki/File%3AWartime_picture_of_a_Bletchley_Park_Bombe.jpg) |
++
++Lưu ý dựng: ảnh I01/I02 là chân dung thật của Turing, có thể dùng cho nhân vật Turing; không được dán nhãn Turing lên clip người lạ. Hầu hết ảnh dọc, nên ưu tiên cắt khung, đồ họa, sơ đồ, timeline và map thay vì phóng đại một ảnh thành nhiều cảnh.
++
++## Ứng viên B-roll Pexels (chưa tải)
++
++Các trang dưới đây đã mở, đều ghi giấy phép **Free** và khung ngang hoặc gần 16:9. Đây chỉ là danh sách ứng viên: trước khi dùng bắt buộc tải, tạo clip sheet và loại ngay frame có logo hoặc chữ thương hiệu/đọc được. Không gắn danh tính người thật vào người trong clip.
++
++| ID | Mô tả ngắn theo trang Pexels | Ghi chú logo/chữ bắt buộc | Trang nguồn |
++|---:|---|---|---|
++| 9758000 | Cận tay đánh máy chữ cổ | Chỉ lấy đoạn giấy không có chữ đọc được; soi logo máy. | [Pexels](https://www.pexels.com/video/a-person-typing-on-typewriter-9758000/) |
++| 30117914 | Bàn cổ, máy chữ và giấy tờ | Chỉ lấy góc không có chữ đọc được; soi logo. | [Pexels](https://www.pexels.com/video/vintage-desk-with-typewriter-and-papers-30117914/) |
++| 5823841 | Đèn bàn trong phòng làm việc | Không dùng nếu lộ logo/chữ trên vật dụng. | [Pexels](https://www.pexels.com/video/a-footage-of-a-lamp-on-a-desk-5823841/) |
++| 9618046 | Người xem bản vẽ dưới đèn bàn | Không nhận nếu bản vẽ có chữ đọc được hoặc logo. | [Pexels](https://www.pexels.com/video/a-man-working-at-night-9618046/) |
++| 10295577 | Hai người nghe radio cổ | Không gắn tên nhân vật thật; soi nhãn radio và chữ trong bối cảnh. | [Pexels](https://www.pexels.com/video/close-up-video-of-a-man-and-boy-listening-on-a-radio-10295577/) |
++| 36086992 | Đường chân trời biển và sóng nhẹ | Cảnh trung tính cho Đại Tây Dương; soi tàu/biển hiệu nếu có. | [Pexels](https://www.pexels.com/video/serene-ocean-horizon-with-gentle-waves-36086992/) |
++| 17098934 | Góc máy từ trên cao nhìn sóng vỗ bờ | Cảnh trung tính; soi vật thể có logo/chữ. | [Pexels](https://www.pexels.com/video/ocean-from-above-17098934/) |
++| 5902497 | Mặt biển và đường chân trời | Cảnh trung tính; soi tàu/biển hiệu nếu có. | [Pexels](https://www.pexels.com/video/video-of-an-ocean-5902497/) |
++| 2802271 | Sóng biển lớn quay chậm lúc hoàng hôn | Cảnh trung tính; không dùng để tái hiện một trận đánh cụ thể. | [Pexels](https://www.pexels.com/video/big-waves-in-an-ocean-2802271/) |
++| 5246418 | Sóng xanh chạm bờ cát | Cảnh trung tính; soi vật thể có logo/chữ. | [Pexels](https://www.pexels.com/video/blue-ocean-5246418/) |
++
+diff --git a/docs/pm/tickets/2026-10-26-codex-pilot/T2A-ket-qua.md b/docs/pm/tickets/2026-10-26-codex-pilot/T2A-ket-qua.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..6486d0a7093facacf8b605bac43d44605f063afe
+--- /dev/null
++++ b/docs/pm/tickets/2026-10-26-codex-pilot/T2A-ket-qua.md
+@@ -0,0 +1,45 @@
++# Kết quả T2A — nghiên cứu `mim-turing-bombe`
++
++Ngày thực hiện: 26/10/2026.
++
++## Đã làm
++
++- Đã đọc `AGENTS.md` và các tài liệu quy trình Long được nêu trong đó, đặc biệt phần các lỗi thử nghiệm trước đây.
++- Đã tạo kho nghiên cứu [facts.md](../../../../data/long/mim-turing-bombe/facts.md) theo đúng phạm vi ticket: **34 dữ kiện**, chia đủ 8 chương, mỗi chương 4–5 dữ kiện.
++- Phân loại: **33 dữ kiện mạnh**, **1 dữ kiện vừa** (số 34, sự khác biệt của phim; chỉ được đọc kèm quy dẫn *Time*).
++- Đã mở các nguồn GCHQ, The National Archives, DPMA, Agencja Wywiadu Ba Lan, Đại học Adam Mickiewicz, TNMOC, NSA và *Time*. Mỗi dữ kiện trong kho có URL và tên trang nguồn.
++- Đã kiểm trực tiếp trường `LicenseShortName` cho 11 ảnh Commons: 8 Public domain và 3 CC0; không có CC BY-SA, GFDL, NC hoặc ND.
++- Đã ghi 10 ứng viên Pexels có URL, mô tả và điều kiện bắt buộc soi logo/chữ bằng clip sheet trước khi dùng.
++
++## Lệnh đã chạy và kết quả
++
++| Lệnh / thao tác | Kết quả |
++|---|---|
++| Đọc `AGENTS.md`, ticket T2A, README/RETENTION/SOURCES và các ghi chú PM | Đã hoàn tất trước khi nghiên cứu. |
++| Truy vấn, mở và đối chiếu các nguồn lịch sử chính thống trên web | Đã hoàn tất; danh sách URL nằm ngay ở từng dữ kiện trong `facts.md`. |
++| Truy vấn Commons API qua hàm đọc `imageinfo()` để lấy `LicenseShortName` | 11/11 ảnh hợp lệ: Public domain hoặc CC0. |
++| `python scripts/long_gate.py mim-turing-bombe --min-syl 1900` | **Không chạy**: ticket T2A là ticket nghiên cứu và ghi rõ bỏ qua cổng này. |
++
++## Không làm (đúng yêu cầu ticket)
++
++- Không sửa `script.md`, `factcheck.md`, `gen_scenes.py`, `spec.json` hay bất kỳ `ch*.json` nào.
++- Không chạy TTS, HTML, render, final, thumbnail hoặc clip sheet.
++- Không upload/sửa/xóa bất cứ nội dung YouTube nào, không đọc credential, không ghi `state.sqlite`, không dùng lệnh git.
++
++## Lỗi lint còn lại
++
++Không áp dụng: ticket chỉ nghiên cứu và không cho chạy các bước dựng/lint. Không phát hiện lỗi engine vì không động vào engine.
++
++## Khẳng định chưa kiểm được / cần tránh
++
++- Không đọc “Victory là Bombe đầu tiên chạy tháng 03/1940” hay một ngày chạy cụ thể: GCHQ đã mở chỉ xác nhận Bombe Anh đầu tiên chạy kịp Blitzkrieg ở Tây Âu; TNMOC nêu Agnus Dei/Agnes hoạt động tháng 08/1940.
++- Chưa có nguồn mạnh đã mở cho Doc Keen, kích thước máy, số trống thời chiến, thời gian một lượt chạy, hay các crib cụ thể như `Keine besonderen Ereignisse`/bản tin thời tiết.
++- Không tự nêu số tàu, thương vong hoặc số tháng rút ngắn chiến tranh; dữ kiện định lượng duy nhất chỉ là nhận định của “nhiều sử gia” theo NSA và đã được đánh dấu phù hợp.
++
++## Cold open đề xuất
++
++Đặt người xem vào đêm 21/10/1941: bốn nhà giải mã, có Alan Turing, tự gửi thư vượt cấp cho Churchill vì các Bombe đã tạo ra một nút thắt nhân lực. Đó là căng thẳng thật, có ngày, người, hậu quả rõ và dẫn tự nhiên đến câu hỏi: **một cỗ máy quay nhanh đến đâu mà vẫn cần cả một hệ thống người để biến điểm dừng thành tin tình báo?** Nguồn mạnh: [The National Archives](https://www.nationalarchives.gov.uk/explore-the-collection/stories/a-dramatic-plea-for-churchills-help/).
++
++## Clip sheet và thumbnail
++
++Không có, đúng phạm vi ticket nghiên cứu. Pha dựng sau phải tải lại ứng viên, tạo clip sheet và kiểm tra logo/chữ trước khi chọn; thumbnail chưa được tạo.
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$factRows = (Select-String -Path data/long/mim-turing-bombe/facts.md -Pattern '"'"'^'"\\| (0[1-9]|[12][0-9]|3[0-4]) \\|' | Measure-Object).Count; "'$chapterRows = Select-String -Path data/long/mim-turing-bombe/facts.md -Pattern '"'"'^## CH'"'; "'$badLicenses = Select-String -Path data/long/mim-turing-bombe/facts.md -Pattern '"'BY-SA|GFDL|\\bNC\\b|\\bND\\b'; Write-Output \"fact_rows="'$factRows"; Write-Output "chapters=$($chapterRows.Count)"; Write-Output "license_policy_mentions=$($badLicenses.Count)"; Get-Content -Raw -Encoding UTF8 docs/pm/tickets/2026-10-26-codex-pilot/T2A-ket-qua.md' in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 131ms:
+fact_rows=34
+chapters=9
+license_policy_mentions=1
+# Kết quả T2A — nghiên cứu `mim-turing-bombe`
+
+Ngày thực hiện: 26/10/2026.
+
+## Đã làm
+
+- Đã đọc `AGENTS.md` và các tài liệu quy trình Long được nêu trong đó, đặc biệt phần các lỗi thử nghiệm trước đây.
+- Đã tạo kho nghiên cứu [facts.md](../../../../data/long/mim-turing-bombe/facts.md) theo đúng phạm vi ticket: **34 dữ kiện**, chia đủ 8 chương, mỗi chương 4–5 dữ kiện.
+- Phân loại: **33 dữ kiện mạnh**, **1 dữ kiện vừa** (số 34, sự khác biệt của phim; chỉ được đọc kèm quy dẫn *Time*).
+- Đã mở các nguồn GCHQ, The National Archives, DPMA, Agencja Wywiadu Ba Lan, Đại học Adam Mickiewicz, TNMOC, NSA và *Time*. Mỗi dữ kiện trong kho có URL và tên trang nguồn.
+- Đã kiểm trực tiếp trường `LicenseShortName` cho 11 ảnh Commons: 8 Public domain và 3 CC0; không có CC BY-SA, GFDL, NC hoặc ND.
+- Đã ghi 10 ứng viên Pexels có URL, mô tả và điều kiện bắt buộc soi logo/chữ bằng clip sheet trước khi dùng.
+
+## Lệnh đã chạy và kết quả
+
+| Lệnh / thao tác | Kết quả |
+|---|---|
+| Đọc `AGENTS.md`, ticket T2A, README/RETENTION/SOURCES và các ghi chú PM | Đã hoàn tất trước khi nghiên cứu. |
+| Truy vấn, mở và đối chiếu các nguồn lịch sử chính thống trên web | Đã hoàn tất; danh sách URL nằm ngay ở từng dữ kiện trong `facts.md`. |
+| Truy vấn Commons API qua hàm đọc `imageinfo()` để lấy `LicenseShortName` | 11/11 ảnh hợp lệ: Public domain hoặc CC0. |
+| `python scripts/long_gate.py mim-turing-bombe --min-syl 1900` | **Không chạy**: ticket T2A là ticket nghiên cứu và ghi rõ bỏ qua cổng này. |
+
+## Không làm (đúng yêu cầu ticket)
+
+- Không sửa `script.md`, `factcheck.md`, `gen_scenes.py`, `spec.json` hay bất kỳ `ch*.json` nào.
+- Không chạy TTS, HTML, render, final, thumbnail hoặc clip sheet.
+- Không upload/sửa/xóa bất cứ nội dung YouTube nào, không đọc credential, không ghi `state.sqlite`, không dùng lệnh git.
+
+## Lỗi lint còn lại
+
+Không áp dụng: ticket chỉ nghiên cứu và không cho chạy các bước dựng/lint. Không phát hiện lỗi engine vì không động vào engine.
+
+## Khẳng định chưa kiểm được / cần tránh
+
+- Không đọc “Victory là Bombe đầu tiên chạy tháng 03/1940” hay một ngày chạy cụ thể: GCHQ đã mở chỉ xác nhận Bombe Anh đầu tiên chạy kịp Blitzkrieg ở Tây Âu; TNMOC nêu Agnus Dei/Agnes hoạt động tháng 08/1940.
+- Chưa có nguồn mạnh đã mở cho Doc Keen, kích thước máy, số trống thời chiến, thời gian một lượt chạy, hay các crib cụ thể như `Keine besonderen Ereignisse`/bản tin thời tiết.
+- Không tự nêu số tàu, thương vong hoặc số tháng rút ngắn chiến tranh; dữ kiện định lượng duy nhất chỉ là nhận định của “nhiều sử gia” theo NSA và đã được đánh dấu phù hợp.
+
+## Cold open đề xuất
+
+Đặt người xem vào đêm 21/10/1941: bốn nhà giải mã, có Alan Turing, tự gửi thư vượt cấp cho Churchill vì các Bombe đã tạo ra một nút thắt nhân lực. Đó là căng thẳng thật, có ngày, người, hậu quả rõ và dẫn tự nhiên đến câu hỏi: **một cỗ máy quay nhanh đến đâu mà vẫn cần cả một hệ thống người để biến điểm dừng thành tin tình báo?** Nguồn mạnh: [The National Archives](https://www.nationalarchives.gov.uk/explore-the-collection/stories/a-dramatic-plea-for-churchills-help/).
+
+## Clip sheet và thumbnail
+
+Không có, đúng phạm vi ticket nghiên cứu. Pha dựng sau phải tải lại ứng viên, tạo clip sheet và kiểm tra logo/chữ trước khi chọn; thumbnail chưa được tạo.
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-Content -Raw -Encoding UTF8 motion/long/README.md; Get-Content -Raw -Encoding UTF8 motion/long/RETENTION.md' in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 82ms:
+# Video DÀI 16:9: hồ sơ graphic motion (kênh Hình Sự)
+
+Anh em ngang của `motion/stier/` (Short dọc). Cùng ngôn ngữ hình: hồ sơ lưu trữ, tư liệu thật, một màu nhấn. Khác ở ba điểm:
+
+- bố cục ngang 1920x1080;
+- chia theo chương;
+- có video B-roll Pexels và nhạc nền thật.
+
+Bộ kỹ năng giữ chân người nghe: **[RETENTION.md](RETENTION.md)**. Nguồn tư liệu dùng tự do lâu dài: **[SOURCES.md](SOURCES.md)**. Đọc file này TRƯỚC khi viết kịch bản.
+
+## Quy trình
+
+Dùng python của `vietneu-tts/.venv`, vì bước TTS cần gói `vieneu`.
+
+```
+python motion/long/research_long.py yakuza "Yakuza" "Yamaguchi-gumi" "?Sugamo Prison"   # bài Wikipedia + ảnh Commons tự do ("?"= tìm ảnh)
+python motion/long/media_search.py search yakuza "tattoo" --src wellcome,openverse,artic,europeana   # kho mở ngoài Commons (xem SOURCES.md)
+python motion/long/media_search.py get yakuza tattoo1 X3        # tải ứng viên X3 thành ảnh "tattoo1" (tự ghi vào spec + credit)
+python motion/long/media_search.py sat yakuza kobe_sat 135.15 34.66 135.25 34.72   # ảnh vệ tinh Sentinel-2 (Copernicus, ghi nguồn tự động)
+python motion/long/pexels.py search yakuza "tokyo night rain" ...                      # B-roll ngang
+python motion/long/pexels.py get yakuza <id> <id> ...
+# viết data/long/yakuza/spec.json + ch00.json … chNN.json
+python motion/long/build_long.py yakuza takes 3        # (tuỳ chọn) đọc mỗi câu 3 lần -> tts/takes.json
+<.venv-video python> motion/long/stt_takes.py yakuza   # Whisper nghe lại mọi bản -> tts/transcripts.json
+python motion/long/build_long.py yakuza pick           # chọn bản khớp chữ nhất -> tts/picks.json, in câu đáng nghe lại
+python motion/long/build_long.py yakuza tts            # đọc giọng, cache theo từng câu (dùng picks nếu có), in thời lượng từng chương
+python motion/long/build_long.py yakuza html           # ảnh, bản đồ, data.js, composition, sfx, mix từng chương
+python motion/long/build_long.py yakuza render ch03 --draft   # nháp có tiếng: chNN/draft_av.mp4
+python motion/long/build_long.py yakuza render         # bản thật, từng chương
+python motion/long/build_long.py yakuza final          # nối chương + loudnorm -14 LUFS -> final.mp4
+python motion/long/describe.py yakuza                  # mô tả: mốc chương + nguồn + ghi công ảnh/nhạc/video
+```
+
+Giọng: vieneu 3.8.3, `VOICE = "Anh Khôi"` (3.8.3 đổi tên thành "Thiện Minh", tên cũ là alias, embedding y hệt).
+Bước trộn áp `VOICE_FX` (highpass 70, -2dB@200, +2.5dB@3.2k, de-esser, nén 3:1) lên giọng; spec `"master": false` để tắt
+(Yakuza đặt false vì bản đã đăng dùng giọng thô). Mốc chữ luôn lấy từ voice.wav thô.
+
+## Spec
+
+`spec.json` gồm:
+
+- `imgs {key: "File:..."}`: nhận PD, CC0, CC BY và CC BY-SA. Không nhận NC, ND.
+- `geo {tên: {countries, bbox, pins, box}}`
+- `say {chữ hiển thị: cách đọc}`: ví dụ `"inagawa-kai": "Inagawa cai"`. Phụ đề vẫn giữ chữ gốc.
+- `youtube {titles, summary, sources, tags}`
+
+Mỗi chương `chNN.json` gồm:
+
+- `hud {k, t}`
+- `bgm {file, at, gain}`
+- `lines[]`: mỗi phần tử là một chuỗi, hoặc `{"t": ..., "p": giây_nghỉ}`.
+- `scenes[]`
+
+Mốc thời gian dùng giống Short:
+
+| Cú pháp | Nghĩa |
+|---|---|
+| `i` | đầu câu thứ i |
+| `[i, "từ", n, lệch]` | lúc đọc chữ đó (lần thứ n, cộng thêm độ lệch) |
+| `[i, null, 0, lệch]` | đầu câu i cộng độ lệch |
+
+Sai chữ neo là lỗi cứng: build dừng ngay, không để lỗi lọt vào render.
+
+## Kịch bản → dữ liệu dựng, theme noir
+
+- `python motion/long/script_lines.py <topic>`: chuyển `data/long/<topic>/script.md` (đã duyệt) thành `lines` của từng `chNN.json`.
+  `‖` = nghỉ dài, `**[DIỄN Ý]**` = trích diễn ý, `»` = lời trích, đọc bằng `QUOTE_VOICE` (Minh Đức) qua bộ lọc radio, cảnh quote có `qline` sẽ hiện sóng âm và nhãn "GIỌNG ĐỌC MINH HỌA".
+- `spec.theme = "noir"`: khung điện ảnh 96px, phụ đề nằm trong dải đen dưới, cảnh `film: true` có nhấp nháy và tiếng máy chiếu.
+- Cảnh riêng của noir: `seismo` (băng địa chấn, `hitAt`), `saint` (thẻ thánh cháy, `burnAt/burnDur/burnTo`), `paper` (trang báo mô phỏng),
+  `pizzini` (giấy đánh máy + `cipher` chữ→số kiểu Provenzano), `dots` (mỗi chấm một người, `groups`), `board` (bảng ghim + dây đỏ),
+  `memorial` (tên khắc đá), `calendar` (lịch xé `from/days/endAt`), `sticker` (tờ dán Addiopizzo).
+- Mọi cảnh nhận `sfx: [{k: "gavel"|"bell"|"heart"|"match"|"slap"|…, at}]` để đặt tiếng tay.
+- `bgm` có thể là danh sách đoạn `{file, at, gain, start, end, fin, fout}` (start/end là mốc lời) để đổi nhạc giữa chương.
+
+## Loại cảnh (casewide.js)
+
+| Loại | Dùng cho |
+|---|---|
+| `chapter` | Thẻ chương |
+| `broll` | Video Pexels, có thể kèm `kin` (chữ phủ) |
+| `photo` | Ảnh tràn khung, Ken Burns |
+| `print` | Ảnh in cạnh khối chữ; dành cho ảnh dọc hoặc chân dung |
+| `file` | Thẻ hồ sơ; dòng thông tin hiện dần theo lời đọc |
+| `kinetic` | Chữ động |
+| `slam` | Một dòng chữ đập mạnh |
+| `question` | Câu hỏi; nhạc tắt, ẩn phụ đề |
+| `counter` | Số đếm |
+| `bars` | Biểu đồ cột |
+| `timeline` | Dòng thời gian ngang |
+| `map` | Bản đồ |
+| `quote` | Trích dẫn; `dy:true` gắn nhãn DIỄN Ý |
+| `org` | Sơ đồ gia đình hoặc tổ chức |
+| `ledger` | Bảng kê |
+| `split` | Hai ảnh đặt cạnh nhau |
+| `date` | Ngày tháng |
+| `cards` | Ván bài lật |
+| `evidence` | Tang vật |
+
+Nhiều cảnh nhận thêm các trường sau:
+
+- Nền: `vid` (id Pexels, `ms` = giây bắt đầu trong clip) hoặc `bg` (ảnh).
+- Lớp phủ: `label`, `tag`, `illus`, `stamp`.
+
+Credit ảnh tự hiện theo giấy phép.
+
+## Bẫy đã gặp
+
+- `<video>` phải được **nướng tĩnh** vào HTML. HyperFrames bỏ qua thẻ video do script tạo ra. Build tự kiểm tra clip có đủ dài cho cảnh không.
+- Anh Khôi đọc "8-9-3" thành "8 đến 9 ba", nên phải viết bằng chữ. Đuôi "-kai" bị đọc thành "ki", nên cần map `say`.
+- Tốc độ render khoảng 2,7 lần thời lượng thực (video 34 phút mất khoảng 90 phút).
+- `motion/hf/assets/long` là junction trỏ tới `output/long`, nên ảnh và video không phải copy.
+
+## Đăng: thumbnail, SEO, phụ đề, playlist
+
+- Thumbnail: mẫu ở `thumbs/`, copy vào `motion/hf/compositions/long/` rồi render 1 khung.
+  - Công thức rút từ nghiên cứu CTR: độ tương phản cao là biến mạnh nhất, tiếp theo là gương mặt hoặc hình người.
+  - Chữ chỉ 0–3 từ, bổ sung cho tiêu đề chứ không lặp lại.
+  - Tối đa 2–3 thành phần, không khí poster phim.
+  - Luôn soi ở cỡ mobile (~200px).
+  - Làm 3 bản để A/B test bằng Test & Compare trong Studio.
+- `python motion/long/describe.py <topic>`: mô tả ≤5000 **byte**, gồm hook 2 dòng đầu chứa từ khóa, link xem tiếp, mốc chương, nguồn, ghi công.
+- `python motion/long/srt.py <topic>`: phụ đề tiếng Việt từ mốc từng từ.
+- `python motion/long/publish_long.py <topic> CL <publishAt UTC> --playlist "Tên" "Mô tả" <id…>`: chạy lần lượt các bước sau.
+  1. upload private + publishAt
+  2. category
+  3. thumbnail
+  4. phụ đề
+  5. playlist mới
+  - Chạy lại thì các bước đã xong được bỏ qua.
+
+## Beat text (hiệu ứng chữ) — dùng chung Long và Short
+
+- Engine: `motion/hf/assets/engine/beat.js` + `beat.css` (nạp trước `casewide.js` / `casefile.js`). Bộ chọn và tiếng tay nằm ở `motion/beatfx.py`.
+- Mỗi dòng chữ (`kinetic.items`, `kin` phủ trên ảnh/clip) và mỗi `slam` được gán `fx` tự động khi dựng. Việc gán là tất định theo tên chương, không lặp kiểu vừa dùng:
+
+| Loại dòng | Các kiểu |
+|---|---|
+| Dòng thường (cả cảnh dùng chung một kiểu) | `rise` (trồi từ mép che), `blur` (nhòe→nét), `slice` (2 nửa ghép), `drop` (rơi nảy), `pop` |
+| Dòng nhấn `acc` | `marker` (bút dạ quang quét), `redact` (bôi đen rồi lộ), `stamp` (con dấu), `tape` (băng phong tỏa), `outline` (viền→đổ màu), `flicker` (neon chập chờn) |
+| Dòng nhỏ `sm` | `type` (máy đánh chữ), `rise`, `blur` |
+| Dòng ngắn có số | `scramble` (giải mã ký tự), `type` |
+| Slam | `punch` (cũ), `glitch` (tách kênh màu), `zoom` (lao tới), `slice` (3 dải so le), `outline` |
+
+- Muốn ép một kiểu thì ghi `"fx": "redact"` vào item hoặc slam. Riêng `"fx": "strike", "strikeAt": [i, "từ"]` gạch ngang câu "không phải X".
+- `stamp` và `tape` có khung, nên chỉ được gán cho dòng ≤18 ký tự (Short: ≤12).
+
+## Đa dạng giữa các video (chống "repetitive content")
+
+Chính sách Spam của YouTube lấy đúng ví dụ "the exact same background music and repetitive AI generated imagery across many videos". Sáu Long đầu tiên (Yakuza → Tam Giác Vàng) dùng chung 13 bài nhạc và cùng một diện mạo, nên mỗi video mới phải khác các video gần đây. Nghiên cứu nằm ở `RESEARCH-million-views.md`.
+
+- `motion/variety.py` quản lý việc này.
+  - Sổ `data/variety/ledger.json` (có commit) ghi mỗi video: nhạc nền, theme, look. `publish_long.py` tự ghi sau khi upload.
+  - `python motion/variety.py audit <topic>` so video với 3 video gần nhất cùng kênh. Báo lỗi khi nhạc nền trùng trên 35% (Jaccard), hoặc look giống video ngay trước.
+  - `build_long.py html` in cảnh báo. `build_long.py final` **từ chối** dựng nếu chưa sửa (có thể bỏ qua bằng `--allow-repeat`).
+- **Look**: ghi `"look"` trong spec. Có các look `classic | amber | steel | jade | rose | sulfur`, mỗi look là một bảng màu, một cặp font có tiếng Việt và một màu nền. `python motion/variety.py next-look` gợi ý look ít dùng nhất. Spec không ghi look thì render y như cũ (`classic`).
+- **Nhạc theo mood**: trong chNN.json (hoặc gen_scenes) ghi `bgm={"mood": "tense", "gain": .12}` thay vì `"file"`.
+  - Các mood: tense | dark | sad | epic | mystery | quiet.
+  - Picker chọn bài ít dùng nhất trong các video gần đây và không lặp trong cùng video.
+  - Kết quả được cache ở `output/long/<topic>/bgm_picks.json`, nên render lại vẫn ra bài cũ.
+  - Danh mục nhạc: `motion/long/music_catalog.json`. File nhạc: `output/music/`. `python motion/variety.py library` cho biết mỗi bài đã dùng bao nhiêu lần.
+  - Kho hiện chỉ có 14 bài, chưa đủ để tránh trùng. Phải thêm bài (Kevin MacLeod CC BY, YouTube Audio Library…) vào cả danh mục lẫn `output/music/`.
+
+# Audio retention: kỹ năng giữ chân người nghe cho video dài (kênh Hình Sự)
+
+Bộ quy tắc rút ra từ việc **đo và mổ xẻ** bản Long thành công nhất của kênh
+("Hội Tam Hoàng", 50:05, 8.4K view, gấp ~23 lần Long thứ hai). File này chỉ ghi
+**kỹ thuật**; không một câu văn nào của bản gốc được dùng lại. Bản chép lời chỉ để
+phân tích, nằm ở `output/long/ref/`, gitignored.
+
+Công cụ đo: `motion/long/transcribe.py` (faster-whisper large-v3-turbo, mốc từng từ).
+
+---
+
+## 1. Số đo bản tham chiếu
+
+| Chỉ số | Giá trị | Nhận xét |
+|---|---|---|
+| Thời lượng | 50:05 | Dài là lợi thế: watch-time tuyệt đối cao |
+| Tốc độ đọc | **208 âm tiết/phút**, dao động 193–225 theo từng 5 phút | Gần như phẳng. Không có đoạn nào đọc chậm lại để nhấn |
+| Khoảng lặng > 0.8s | 23 lần / 50 phút | Có chỗ nghỉ ở ranh giới chương, gần như không có nghỉ kịch tính |
+| Khoảng lặng > 2s | 4 lần | Chỉ có ở chỗ nối file |
+| Câu hỏi tu từ | gần như không có | Cơ hội bị bỏ lỡ |
+
+**Kết luận:** bản Tam Hoàng thắng nhờ **chủ đề + cấu trúc + chi tiết lạ**, không nhờ
+giọng đọc. Nhịp phẳng, đọc cả tiêu đề mục ("Các hoạt động tội phạm chủ yếu…"),
+liệt kê tên dài. Nghĩa là còn nhiều dư địa tăng retention bằng kỹ thuật audio.
+
+## 2. Những gì bản gốc làm ĐÚNG (giữ lại, viết theo cách của mình)
+
+1. **Lời hứa lộ trình ngay phút đầu.** Liệt kê trước những thứ người nghe sẽ nhận
+   (lịch sử, cấp bậc, nghi lễ, ông trùm, cuộc chiến với cảnh sát). Người nghe
+   biết "còn nhiều thứ hay phía trước" nên không thoát.
+2. **Cung biến chất (A → B) làm xương sống.** Từ hội kín yêu nước thành đế chế
+   tội phạm. Cả video là câu trả lời cho "chuyện gì đã xảy ra ở giữa?".
+   Mỗi chủ đề băng đảng đều có một cung như vậy: tìm nó trước khi viết.
+3. **Giải mã mật mã.** Các con số cấp bậc được "giải" từng bước (cộng, nhân ra ý
+   nghĩa). Não người nghe thích được trao chìa khóa. Đây là đoạn giàu chi tiết
+   nhất và cũng là đoạn đọc nhanh nhất (225 âm tiết/phút).
+4. **Nghi lễ kể bằng giác quan.** Hương khói, rượu pha máu, bước qua gươm, đốt lời
+   thề. Cụ thể, nhìn thấy được, không trừu tượng.
+5. **Con số gây sốc có đối chiếu.** "Giá ở nguồn X, ra đường phố Y". Luôn đặt hai
+   con số cạnh nhau để tạo tỷ lệ.
+6. **Chân dung ông trùm có cảnh hành động.** Không chỉ nói "khét tiếng", mà dựng
+   cảnh cụ thể: giờ, địa điểm, chiếc xe, số người.
+7. **Hình ảnh ẩn dụ lặp lại (motif).** Con rắn nhiều đầu, chặt đầu này mọc đầu
+   khác. Xuất hiện ở giữa rồi quay lại ở phần kết, tạo cảm giác trọn vẹn.
+8. **"Bài học" sau mỗi phần.** Một câu khái quát rút ra từ chương vừa kể. Người
+   nghe thấy mình được nhiều hơn là thông tin.
+9. **Chương văn hóa đại chúng gần cuối.** Phim ảnh là phần người nghe biết sẵn,
+   nên đây là "phần thưởng" giữ họ qua đoạn phân tích khô.
+10. **Kết mở.** Không kết luận dứt khoát mà đặt câu hỏi về tương lai.
+
+## 3. Những gì bản gốc làm SAI (sửa trong bản mới)
+
+| Lỗi | Hậu quả | Cách sửa |
+|---|---|---|
+| Mở bằng "Kính thưa quý vị…", giọng thuyết trình | Người lướt không có lý do ở lại 30 giây đầu | **Cold open**: mở bằng một cảnh cụ thể, căng nhất, rồi mới chào |
+| Đọc to tiêu đề mục | Nghe như đọc tài liệu | Chuyển chương bằng **câu móc**; tiêu đề chỉ hiện trên màn hình |
+| Nhịp đều 208 âm tiết/phút | Buồn ngủ ở phút 15–25 | Đổi nhịp có chủ đích (mục 5) |
+| Liệt kê 6–10 tên liền nhau | Người nghe mất dấu | Tối đa **3 mục** mỗi danh sách; phần còn lại cho lên màn hình |
+| Lặp nội dung giữa các chương | Cảm giác độn | Mỗi sự kiện chỉ kể một lần, nhắc lại chỉ bằng **callback** ngắn |
+| Không có câu hỏi, không có vòng mở | Không có lực kéo sang phút sau | Mỗi chương mở ít nhất 1 vòng, đóng ở chương sau |
+| 10 phút cuối là phân tích xã hội khô | Tụt retention ở đuôi | Giữ **cảnh mạnh thứ hai** cho 20% cuối |
+
+## 4. Kiến trúc một video dài 30–40 phút
+
+```
+0:00  COLD OPEN (40–70s)   Cảnh căng nhất, kể thì hiện tại, dừng ở đỉnh điểm, chưa giải thích
+      TITLE STING           Tên video + câu hứa ("để hiểu cảnh này, phải quay lại 300 năm")
+      LỘ TRÌNH (20s)        Hứa trước những gì người xem sẽ nhận (open loop chính) -- ĐỔI HÌNH THỨC mỗi video (xem dưới)
+CH1   GỐC RỄ                Nơi cung A → B bắt đầu
+CH2…  CÁC CHƯƠNG            Mỗi chương 3–6 phút (xem khuôn chương)
+~50%  RE-HOOK GIỮA VIDEO    Quay lại cold open: "giờ bạn đã hiểu vì sao…" (đóng 1 vòng, mở vòng mới lớn hơn)
+~75%  CẢNH MẠNH THỨ HAI     Vụ án / cuộc chiến kịch tính nhất còn lại
+KẾT   CALLBACK + CÂU HỎI    Đóng vòng chính, trả motif, để lại một câu hỏi thật
+```
+
+### Lời hứa lộ trình: một chức năng, nhiều hình thức (góp ý người dùng 07/10/2026)
+
+"Trong video này, mình sẽ cùng bạn trả lời ba câu hỏi" lặp ở 4 kịch bản liền (A1, C1, D1, MIM #2) → người xem thường
+xuyên nhận ra khuôn, kênh nghe như máy. Lộ trình là **chức năng** (hứa trước, mở vòng chính), không phải một câu cố định.
+Mỗi video chọn MỘT hình thức, **không lặp hình thức của video liền trước cùng kênh**, và không dùng cụm "trả lời ba câu
+hỏi" quá 1 lần / 5 video:
+
+| Hình thức | Ví dụ |
+|---|---|
+| Chặng đường | "Trước khi đoán về AI, mình đi lại ba chặng máy móc đã đi trước nó: …" (MIM #2) |
+| Cảnh hẹn trước | "Cuối video, bạn sẽ gặp lại người đứng đầu hàng này, và lần ấy họ làm khác đi." |
+| Câu hỏi duy nhất | Một câu hỏi lớn, không đếm số: "Vậy cái gì giữ chỉ số đứng yên?" |
+| Lời thách | "Thử đoán trước: trong 11 lần, bao nhiêu lần là đỉnh? Giữ con số ấy tới chương hai." |
+| Bản đồ bằng hình | Lời đọc 1 câu, màn hình hiện các mốc/chương (timeline, ledger) thay vì đọc danh sách |
+| Nghịch lý | "Máy đếm tiền đầy phố, vậy mà nghề đếm tiền lại đông người hơn. Video này đi tìm lý do." |
+
+Kịch bản ghi rõ hình thức đã chọn ở mục **Giữ chân**; agent kiểm chứng đối chiếu với video liền trước của kênh.
+
+### Khuôn một chương (3–6 phút)
+
+1. **Móc vào** (1–2 câu): một chi tiết lạ, hoặc câu hỏi, hoặc con số.
+2. **Bối cảnh** ngắn: ai, ở đâu, năm nào.
+3. **Leo thang**: 2–3 nhịp, mỗi nhịp một chi tiết cụ thể hơn.
+4. **Đỉnh**: một câu ngắn, một khoảng lặng, rồi hiện ảnh hoặc con số lên màn hình.
+5. **Ý nghĩa**: một câu "bài học" bằng lời của mình.
+6. **Cầu nối**: câu mở vòng sang chương sau ("Nhưng thứ nuôi sống họ lại không phải
+   cờ bạc…"). Tuyệt đối không kết chương bằng câu tóm tắt.
+
+## 5. Kỹ thuật audio (TTS Anh Khôi)
+
+- **Tốc độ nền** ~220 âm tiết/phút là nhịp tự nhiên của Khôi.
+  - Đoạn giải mã hoặc liệt kê nhanh: câu ngắn, dồn dập.
+  - Đoạn đỉnh: câu rất ngắn (3–6 âm tiết), tách dòng riêng.
+- **Độ dài câu:** trung bình 12–18 âm tiết, xen câu 3–6 âm tiết mỗi 4–6 câu.
+  Không để câu nào quá 35 âm tiết (TTS hụt hơi, người nghe mất mạch).
+- **Khoảng lặng có chủ đích** (chèn khi ghép audio, không nhờ dấu câu):
+
+  | Vị trí | Độ dài |
+  |---|---|
+  | Sau câu đỉnh | 0.9–1.3s |
+  | Giữa chương | 1.6–2.2s, kèm sting SFX |
+  | Sau câu hỏi tu từ | 0.6s |
+  | Câu thường | 0.25–0.4s |
+
+- **Pattern interrupt mỗi 45–90 giây:** một câu hỏi tu từ, một con số lớn đọc tách,
+  một câu "nhưng", một đoạn trích tài liệu, hoặc đổi cảnh hình mạnh. Không để quá
+  90 giây chỉ là kể liền mạch.
+- **Nói với người nghe:** dùng "bạn". Bản gốc dùng "quý vị" (xa cách); kênh cần
+  giọng kể chuyện, không phải hội thảo.
+- **Quy tắc số ba:** liệt kê 3 thứ, mục thứ ba là mục bất ngờ nhất.
+- **Tên nước ngoài:** mỗi tên phải đi kèm một mô tả ngắn ở lần đầu ("Taoka, đứa
+  trẻ mồ côi ở bến cảng Kobe"). Lần sau chỉ gọi mô tả hoặc họ.
+- **Con số:** đọc số tròn, luôn đặt cạnh một mốc so sánh quen thuộc.
+- **Nhạc nền:** giảm nhạc khi vào câu đỉnh, tắt hẳn 1 giây trước câu cao trào,
+  vào lại khi sang chương.
+
+## 6. Tính trung thực (luật cứng của kênh)
+
+- Chỉ kể sự kiện có nguồn (Wikipedia EN/JA, báo chí được trích trong đó). Số liệu
+  ghi kèm năm.
+- Cảnh "dựng lại" phải là tường thuật sự kiện có thật, không bịa lời thoại.
+  Lời diễn ý phải gắn nhãn **DIỄN Ý** trên màn hình.
+- Không dùng ảnh gây hiểu nhầm (ảnh người A chú thích là người B). Ảnh minh họa
+  không liên quan trực tiếp → gắn nhãn "ẢNH MINH HỌA".
+- Không tôn vinh bạo lực hay tổ chức tội phạm. Mỗi chương "bài học" nêu cái giá phải trả.
+
+## 7. Checklist trước khi thu âm
+
+- [ ] 30 giây đầu có cảnh cụ thể + câu hỏi chưa trả lời?
+- [ ] Lời hứa lộ trình KHÁC hình thức video liền trước cùng kênh (không mặc định "ba câu hỏi")?
+- [ ] Có ≥3 open loop được đóng ở các chương sau?
+- [ ] Mỗi chương kết bằng câu cầu nối, không phải câu tóm tắt?
+- [ ] Không có đoạn >90s thiếu pattern interrupt?
+- [ ] Không danh sách nào >3 mục trong lời đọc?
+- [ ] Motif xuất hiện ≥3 lần (đầu, giữa, kết)?
+- [ ] 20% cuối có một cảnh mạnh?
+- [ ] Mọi con số có nguồn và năm?
+- [ ] Tổng ≥ 6.800 âm tiết (≈ 31 phút ở 220 âm tiết/phút + lặng)?
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-Content -Raw -Encoding UTF8 docs/pm/2026-10-23-mim-long-moi.md; Get-Content -Raw -Encoding UTF8 docs/pm/so-that-bai.md' in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 66ms:
+# Bốn Long MIM mới cho 16–22/11/2026 (khuôn "Ngoài Đời Thật") — 23/10/2026
+
+Kênh **Mind in the Machine (MIM)**. Lịch mới là 4 Long/tuần (T2, T4, T6, CN 20:00 VN). Long đã hẹn tới hết 15/11 (`mim-apollo-1202`). Tài liệu này chọn 4 Long cho 16/11, 18/11, 20/11 và 22/11: hai bài 20–30 phút, hai bài 9–12 phút. Pha 1 chỉ viết file: chưa dựng, chưa upload, không đụng `state.sqlite` (chỉ đọc ở chế độ `-readonly` để xem lịch).
+
+**Đầu vào:**
+- Memory: chép cơ chế, không chép bề mặt; kế hoạch YPP; insight của AI Learning; nhịp Long MIM; đổi dạng lộ trình; clip sheet; mô tả không chứa ghi chú nội bộ.
+- `docs/pm/2026-10-22-bao-cao-3-kenh.md`
+- `docs/pm/2026-10-22-cl-ke-hoach-long-ngoai-doi-that.md`
+- `docs/pm/tickets/2026-10-20-mim-nov/T1-ket-qua.md`
+- Mẫu `data/long/mim-apollo-1202` và `mim-dich-may`
+- `motion/long/{README,RETENTION,SOURCES}.md`
+
+## 0. Chép cơ chế của CL, không chép bề mặt
+
+Long CL thắng nhờ ba thứ:
+1. Một mỏ neo khán giả đã biết sẵn.
+2. **Một** người thật.
+3. Một cold open có ngày giờ, cộng các câu hỏi hẹn chương.
+
+Long MIM hiện chỉ có khoảng 2,3 nghìn lượt hiển thị, CTR 2,6%. Tiêu đề kiểu "Mã 1202" không có gì để người xem "nhận ra ngay".
+
+Mỏ neo tự nhiên của MIM là một **phim hoặc app về AI/công nghệ mà người Việt đã biết**. Khuôn tiêu đề: `[PHIM/APP] Ngoài Đời Thật: [người thật] — [chi tiết tò mò]`.
+
+Ba điều không chép từ CL:
+- **Không chép độ dài:** vẫn giữ một bài 9–12 phút và một bài 20–30 phút để so.
+- **Không chép giọng kể tội phạm.**
+- **Không dùng hình phim:** phim chỉ được nhắc bằng lời và chữ.
+
+## 1. Cách đo
+
+**Nhu cầu:** Wikimedia Pageviews REST, `all-access/user`, tổng 28 ngày **24/09–21/10/2026**.
+- Bài tiếng Việt lấy qua langlinks từ bài EN. "—" là không có bài vi.
+- Đây là mức quan tâm để đọc, không phải nhu cầu xem video.
+- Vẫn chưa có dữ liệu YouTube Studio Research cho MIM.
+
+**Trùng lặp:** grep 19 thư mục `data/long/mim-*` (script) cùng 228 bundle Short trong `bundles/MIM` và `data/stier/specs`.
+
+**Ảnh:** Commons API, lấy `LicenseShortName` của khoảng 15 kết quả đầu. MIM chỉ nhận PD, CC0 và CC BY, **không nhận BY-SA/GFDL**. Phải đọc lại giấy phép trước khi tải.
+
+## 2. Bảng ứng viên (20)
+
+**Quy ước:**
+- **vi / en:** lượt xem 28 ngày của bài phim/app mỏ neo, cộng bài nhân vật nếu có.
+- **Trùng:** so với Long/Short MIM đã có.
+
+| # | Mỏ neo → người thật, sự kiện có ngày | vi | en | Trùng | Ảnh tự do | Kết luận |
+|---|---|---|---|---|---|---|
+| 1 | **Kẻ Hủy Diệt → Stanislav Petrov**, báo động giả Oko 26/09/1983 | Kẻ hủy diệt 685; phần 2 444; Petrov 78 | Terminator 110.811; Petrov 42.382; vụ báo động 19.013 | Không có Long. Short `mim-skynet-1997` hợp làm phễu | Có bia tưởng niệm (PD, CC0) và ảnh Không quân Mỹ (PD). **Chân dung Petrov đều BY-SA** | **CHỌN**, 20–30 phút |
+| 2 | **Oppenheimer → Richard Feynman**, máy IBM và "máy tính người" ở Los Alamos; Trinity 16/07/1945 | Oppenheimer (phim) 834; Feynman 580 | phim 207.954; Feynman 84.957 | Không | Ảnh thẻ Los Alamos của Feynman (CC0, PD); Trinity (PD); IBM 601 (CC BY 4.0) | **CHỌN**, 20–30 phút |
+| 3 | **Siri → Susan Bennett**, giọng thu năm 2005; Siri ra mắt 04/10/2011 | **Siri 2.449**; Steve Jobs 4.484 | Siri 27.641; Bennett 5.913 | Không. `mim-ai-voice` là chủ đề nhái giọng, góc khác | Ảnh VOA của Bennett (PD); Jobs CC BY 2.0 | **CHỌN**, 9–12 phút |
+| 4 | **Google Maps → Ronald Reagan và KAL 007**, 01/09/1983 → GPS cho dân dụng | Google Maps 596; GPS 767; KAL 007 196 | Maps 105.685; KAL 25.881; GPS 30.470 | Không | Reagan đọc diễn văn về KAL 007 (PD); vệ tinh GPS (PD). Ảnh máy bay là GFDL/BY-SA nên không dùng | **CHỌN**, 9–12 phút |
+| 5 | Người Giải Mã (The Imitation Game) → Turing và máy Bombe | phim 146; Turing 971; Enigma 304 | phim 63.948; Turing 196.286 | Long `mim-ai-70` đã có phép thử Turing; Short `mim-turing-1950` | Phần lớn ảnh Bombe/Enigma là BY-SA | Dự bị |
+| 6 | Her → ELIZA / Weizenbaum 1966 | Her 222 | Her 56.393; ELIZA 20.728 | **Long `mim-ai-70` CH02** đã kể ELIZA | — | Loại (trùng) |
+| 7 | 2001: A Space Odyssey → HAL 9000 và bài Daisy | 139 | 116.574 | **`mim-ai-voice` CH08** đã kể Daisy; `mim-ai-70` CH07 | — | Loại (trùng) |
+| 8 | Hidden Figures → Katherine Johnson kiểm quỹ đạo John Glenn 20/02/1962 | — (không có bài vi); K. Johnson 218 | phim 65.939; Johnson 55.573 | `mim-ai-jobs` đã kể Dorothy Vaughan; Short `mim-dorothy-vaughan-fortran` | Rất nhiều ảnh NASA (PD) | Dự bị (người Việt ít biết phim) |
+| 9 | Tôi, Người Máy (I, Robot) → Robert Williams, người đầu tiên chết vì robot, 25/01/1979 | 199 | phim 414.157; Williams 1.654 | Không | Ảnh Unimate thưa, BY-SA | Loại (nguồn sơ cấp mỏng) |
+| 10 | Uber → Elaine Herzberg, xe tự lái 18/03/2018 (NTSB) | Uber 327; xe tự lái 53 | 3.637 | Không | Ảnh NTSB (PD) | Dự bị (bi kịch gần, người lái còn sống) |
+| 11 | Doraemon → WABOT-1, Ichiro Kato 1973 | **Doraemon 3.757** | 38.609; WABOT không có bài | Không | Không có ảnh tự do, bản quyền Waseda và Honda | Loại (hình, nguồn tiếng Anh mỏng) |
+| 12 | Ma Trận (The Matrix) | 852 | 111.242 | `mim-ai-feed` đã nhắc | — | Loại (không có một người thật và một ngày) |
+| 13 | Người Sắt (Iron Man) → J.A.R.V.I.S. | 630 | 91.607 | Không | — | Loại (không có người thật) |
+| 14 | Ex Machina → Eugene Goostman 07/06/2014 | 141 | 54.420 | `mim-ai-70` (phép thử Turing) | — | Loại |
+| 15 | WarGames → Reagan và NSDD-145 (1984) | — | 34.011 | Không | PD | Loại (người Việt không biết phim). Đưa một câu vào bài Petrov nếu cần |
+| 16 | Big Hero 6 → robot chăm sóc | 300 | 40.934 | Không | — | Loại (không có người thật) |
+| 17 | WALL-E | 389 | 46.673 | Không | — | Loại (như trên) |
+| 18 | Tetris → Alexey Pajitnov | 214 | 48.417 | Không | — | Loại (người còn sống, xa AI) |
+| 19 | Deep Blue | 89 | 11.552 | **Đã có Long** `mim-deep-blue-kasparov` | — | Loại |
+| 20 | Astro Boy (Atom) | 86 | 18.072 | Không | — | Loại (nhu cầu thấp) |
+
+## 3. Bốn chủ đề chọn và lý do
+
+| Ngày (20:00 VN) | Slug | Tiêu đề (titles[0]) | Dài (lời đọc 210–215 âm tiết/phút; cộng nghỉ) | Lộ trình |
+|---|---|---|---|---|
+| T2 16/11 | `mim-oppenheimer-feynman` | OPPENHEIMER Ngoài Đời Thật: Richard Feynman — Cuộc Đua Giữa Người Và Máy IBM Ở Los Alamos | 4.948 âm tiết, 13 chương. Lời đọc ≈ 23,0–23,6 phút; cộng nghỉ ≈ 27 phút | "ổ khoá ba số" (Feynman mở két) |
+| T4 18/11 | `mim-google-maps-kal007` | GOOGLE MAPS Ngoài Đời Thật: Ronald Reagan Và Chuyến Bay KAL 007 — Ai Trả Giá Cho Chấm Xanh Của Bạn | 2.217 âm tiết, 7 chương. Lời đọc ≈ 10,3–10,6 phút; cộng nghỉ ≈ 12 phút | "con số co lại": thước sai số từ hơn 600 km xuống khoảng 100 m rồi khoảng 5 m |
+| T6 20/11 | `mim-ke-huy-diet-petrov` | KẺ HỦY DIỆT Ngoài Đời Thật: Stanislav Petrov — Người Không Tin Máy Tính Đêm 26/9/1983 | 4.847 âm tiết, 12 chương. Lời đọc ≈ 22,5–23,1 phút; cộng nghỉ ≈ 26 phút | "bạn ngồi vào ghế trực" (hai nút BÁO LÊN \| CHƯA) |
+| CN 22/11 | `mim-siri-susan-bennett` | SIRI Ngoài Đời Thật: Susan Bennett — Giọng Nói Thu Năm 2005, Sáu Năm Sau Mới Vang Lên Trong iPhone | 2.156 âm tiết, 7 chương. Lời đọc ≈ 10,0–10,3 phút; cộng nghỉ ≈ 11,5 phút | "tua ngược cuộn băng": 2011 → 2005 → 2003, rồi tua xuôi về hôm nay |
+
+**Kiểm tra lộ trình:** cả bốn dạng đều khác 19 dạng MIM đã dùng và khác nhau từng đôi. Không bài nào có câu "trả lời ba câu hỏi"; `script_lines.py` có chặn cụm này.
+
+**Lý do chọn:**
+- **Mỏ neo người Việt đã biết:**
+  - Siri và Steve Jobs có nhu cầu tiếng Việt cao nhất trong bảng.
+  - Oppenheimer là phim chiếu rạp lớn năm 2023.
+  - Kẻ Hủy Diệt cộng cả hai phần có hơn 1,1 nghìn lượt.
+  - Google Maps là app ai cũng dùng.
+- **Mỗi bài có một người thật và một ngày giờ cho cold open:**
+  - 16/07/1945 lúc 05:29:45
+  - Đêm 31/08 rạng 01/09/1983
+  - Đêm 25 rạng 26/09/1983
+  - 04/10/2011
+- **Ảnh tự do có mặt người thật cho thumbnail ở 3/4 bài:** Feynman, Reagan, Bennett.
+- **Cơ chế chuỗi:** KAL 007 (T4) và Petrov (T6) cách nhau 3 tuần năm 1983. Bài T4 kết bằng câu nối sang bài T6, nên người xem có lý do xem tiếp hai đêm liền.
+- **Xếp lịch:** Petrov không đặt ngay sau Apollo 1202 (15/11), vì hai bài cùng mô-típ "máy báo động, người quyết". Bài Petrov kể chiều ngược lại (máy sai, người không tin) và chỉ nhắc lại Apollo một câu.
+- **Không trùng:**
+  - Không có Long nào kể Petrov, Feynman/Los Alamos, KAL 007/GPS hay Siri/Bennett.
+  - ELIZA, Daisy và "máy tính người" ở Langley đã có trong Long cũ. Bốn bài mới chỉ nhắc lại tối đa một câu.
+
+## 4. Trạng thái file
+
+- Mỗi slug có đủ `script.md`, `factcheck.md`, `chNN.json`, `gen_scenes.py`, `spec.json`. Mỗi dòng trong factcheck là một khẳng định, kèm URL đã mở ngày 23/10/2026.
+- `spec.youtube` có:
+  - `publish_at`
+  - `playlist: "Công Nghệ Quanh Ta"`
+  - accent riêng: #f59e0b, #34d399, xanh/đỏ của Petrov, #f472b6
+- Đã chạy cả ba bước, kết quả:
+  - `script_lines.py`: qua cổng integrity.
+  - `gen_scenes.py`: không còn neo lỗi.
+  - `studio_lint.py`: **0 lỗi, 0 cảnh báo** ở cả 4 bài.
+- Quét `youtube.*` tìm `< > CẦN WebFetch factcheck data/long "tìm kiếm" agent`: sạch.
+
+## 5. Nguồn yếu và rủi ro (đọc trước khi duyệt)
+
+**Oppenheimer:**
+- Giờ nổ 05:29:45 chỉ có một nguồn (DOE 1995). Có nguồn ghi 5:29:21. Không mở được báo cáo LA-6300-H (OSTI từ chối kết nối).
+- Vai Jack Quaid đóng Feynman chỉ có một bài giải trí (Looper). Chi tiết này chỉ hiện trên màn hình, không đọc.
+- Hồi ức của Feynman (thẻ màu, 9 bài trong 3 tháng) chỉ có một nguồn. Lời đọc nói "theo Feynman" hoặc nêu cả hai phiên bản.
+- Tổng thời lượng cộng nghỉ khoảng 27 phút. Muốn về 26 phút thì bỏ khoảng 30 dấu `‖`.
+
+**KAL 007:**
+- Báo cáo ICAO 1993 chỉ đọc được qua bản đăng lại của bên thứ ba, không phải icao.int.
+- Con số hơn 600 km (350 NM) lúc trúng tên lửa chỉ có trong phụ lục phân tích của Nga.
+- Tiêu đề đã bỏ chữ "miễn phí", vì thông cáo 16/09/1983 (do Larry Speakes đọc) không có chữ này. "Free of charge" chỉ xuất hiện năm 2000.
+
+**Petrov:**
+- Lời kể của Petrov tự mâu thuẫn (4 hay 5 tên lửa; số tầng kiểm tra). Lời đọc nói thẳng từng chỗ lệch.
+- Nguyên nhân kỹ thuật chỉ dựa vào một câu của Podvig và một câu của Guardian. Ý "mây cao, quỹ đạo Molniya" là chưa kiểm được và lời đọc nói rõ như vậy.
+- Không mở được Washington Post 1999, NYT 2017 và DoD 3000.09. Phần kết thay bằng Điều 14 Đạo luật AI của EU, đọc qua trang chép lại vì EUR-Lex không tải được.
+- **Thumbnail không có mặt Petrov** (mọi chân dung đều BY-SA). Đề xuất dùng chữ "СТАРТ" đỏ cộng hai nút, hoặc ảnh bia tưởng niệm (PD).
+
+**Siri:**
+- Gần như mọi chi tiết về bà Bennett đến từ CNN 2013 (cộng VOA 2018). Apple không xác nhận, và chuyên gia pháp y âm thanh do chính CNN thuê. Bà Bennett còn sống: mọi câu về bà đều nói qua nguồn.
+- Giờ 10:00 và câu hỏi thời tiết đầu tiên chỉ có trong ghi chép trực tiếp của MacRumors (thứ cấp).
+- Ngày app Siri lên App Store chỉ có TechCrunch.
+- Bài VOA và Apple ML Journal mới đọc qua bản tóm tắt, cần mở lại bằng trình duyệt.
+
+## 6. Việc còn lại trước pha dựng (cần chủ kênh duyệt)
+
+1. Duyệt 4 tiêu đề và thứ tự lịch.
+2. Đọc lại giấy phép từng ảnh qua Commons API, rồi `pexels.py get` các clip đã ghi trong gen_scenes. Sau đó chạy `clip_sheet.py`, loại clip có logo hoặc chữ hãng (đặc biệt điện thoại và phòng thu ở bài Siri).
+3. Nghe thử bảng `say`: Feynman, Albuquerque, Osipovich, Speakes, ScanSoft, Nuance, Serpukhov…
+4. Làm thumbnail theo công thức CL: một mặt người thật + 3–5 chữ. Bài Petrov dùng phương án chữ.
+5. Short phễu: 2–3 Short mỗi Long, gắn "Video liên quan" về Long tương ứng. Riêng `mim-skynet-1997` đã có, gắn về bài Petrov.
+
+# Sổ thất bại MIM / CK / CL
+
+Đọc bảng này trước khi mở một chuỗi, khuôn hoặc lô mới. Mỗi dòng ghi một lần thử đã có số đo, bài học rút ra và thứ đã đổi trong quy trình. Ý tưởng lấy từ ADR 0017 §5 của vietneu-tts; số liệu là của kênh mình.
+
+Thêm một dòng mỗi khi retro tìm ra một thất bại có số đo. Không ghi những gì chưa đo được.
+
+| Ngày | Kênh | Đã thử | Số đo | Bài học | Đã đổi thành |
+|---|---|---|---|---|---|
+| 12/10 | CK | Bỏ trần tự giới hạn, đăng 5 Short/ngày cộng Long | YouTube trả `uploadLimitExceeded` sau khoảng 10 lần đăng/ngày; vẫn bị chặn sau hơn 18 giờ; kẹt 2 Long và 13 Short | Mỗi kênh có giới hạn riêng, không phải quota dự án | Đăng Long trước Short; khi bị chặn thì chờ khoảng 1 ngày, không thử lại liên tục |
+| 12/10 | MIM, CK | Lô Short toàn chữ, rồi một bản vá toàn clip | Chủ kênh từ chối cả hai | Short phải trộn chữ, clip, biểu đồ và sơ đồ | Chuẩn mix v3; build lint `mix` |
+| 12–18/10 | MIM, CK | 5 Short/ngày để tăng view | Mỗi Short vẫn kẹt khoảng 1–1,4k view (trung vị MIM 1.139, CK 1.059); kênh chỉ lớn nhờ số lượng | Tăng số lượng không phá được trần | 2–3 Short/ngày, gắn với Long |
+| 12–18/10 | CK | Short đọc thị trường và nợ/thẻ tín dụng, bitcoin, VN-Index | 10/30 Short dưới 300 view, gần như không có lượt từ feed | Nhóm chủ đề này yếu trên CK | Dừng Short CK đọc thị trường chung |
+| 13–20/10 | MIM | Short dạng "mẹo", chuỗi QR/Flappy | "Ở lại xem" chỉ 11–29% (trung vị kênh 28%) | Mở bằng con số hoặc sự kiện có ngày tháng, không mở kiểu "mẹo" | Khung truyện: năm, người, bước ngoặt |
+| 20/10 | MIM, CK | Dùng AVP để dự đoán Short nào vượt trần | AVP không dự báo được view (MIM r ≈ −0,1) | Mỗi kênh có thước đo dự báo riêng | Theo dõi "ở lại xem" (engagedViews/views) cạnh AVP |
+| 21/10 | MIM | Chép `spec.sources` vào mô tả công khai | 3 lần đăng bị từ chối (`invalidDescription`); 38 mô tả phải sửa lại | Ghi chú làm việc của agent lọt ra công khai | Tách `sources_internal`; quét mô tả trước khi đăng |
+| 21/10 | MIM | Tự đổi clip trùng theo từ khoá | 41 lần đổi sai nghĩa, phải hoàn tác hết | Clip phải được chọn bằng mắt | Xem poster khi chọn clip; dùng `clip_sheet.py` trước khi render |
+| 22/10 | MIM, CK | Long với tiêu đề dài 85–100 ký tự, thumbnail không có tên nhân vật chính | CTR 1,6–2,6%, chỉ khoảng 2 nghìn lượt hiển thị/28 ngày (CL: 3,4%, 96,8 nghìn) | Long phải có thứ người xem nhận ra ngay | Tiêu đề khoảng 60 ký tự; khuôn "X Ngoài Đời Thật" |
+| 22/10 | CL | Loudnorm một lượt, sfx cắt cứng | Bình luận chê "âm thanh sẹt sẹt" | Đỉnh thật và tiếng tách ở đầu chương | Bộ lọc giọng CL, fade 5 ms, `audio_lint` |
+| 21–23/10 | BUD (AI Learning) | Chép bảng tra của FS sang BUD | View/giờ thấp hơn mốc riêng của BUD 3–8 lần | Phải chép cơ chế (khoá cá nhân và lý do xem lại), không chép bề mặt | Trước khi chép, ghi ra mỏ neo và cách xem của kênh đích; thử 5–6 bài, mỗi lần đổi một biến |
+| 23/10 | MIM, CK | Ghép Long với loudnorm một lượt | 5/25 lần ghép có đỉnh thật trên −1 dBTP (KAL −0,5) | Bộ mã hoá AAC làm đỉnh vọt lên | 26/10: thêm `alimiter` ở 4x sau loudnorm |
+| 14/10 | MIM | Short Turing dùng counter đếm năm 1950 → 2000 | Khung giữa hiện "1.996" | Engine luôn chấm phân cách nghìn | 26/10: counter 1000–2100 phải khai `year` |
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$chapterCount = (Select-String -Path data/long/mim-turing-bombe/facts.md -Pattern '"'"'^## CH[0-9]{2} '"' | Measure-Object).Count; "'$factCount = (Select-String -Path data/long/mim-turing-bombe/facts.md -Pattern '"'"'^'"\\| (0[1-9]|[12][0-9]|3[0-4]) \\|' | Measure-Object).Count; "'$unlinked = Select-String -Path data/long/mim-turing-bombe/facts.md -Pattern '"'"'^'"\\| (0[1-9]|[12][0-9]|3[0-4]) \\|' | Where-Object { "'$_.Line -notmatch '"'https://'}; Write-Output \"chapters="'$chapterCount facts=$factCount unlinked_facts=$($unlinked.Count)"; rg -n "Victory|Agnus|Keine besonderen" data/long/mim-turing-bombe/facts.md docs/pm/tickets/2026-10-26-codex-pilot/T2A-ket-qua.md' in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 160ms:
+chapters=8 facts=34 unlinked_facts=0
+docs/pm/tickets/2026-10-26-codex-pilot/T2A-ket-qua.md:35:- Không đọc “Victory là Bombe đầu tiên chạy tháng 03/1940” hay một ngày chạy cụ thể: GCHQ đã mở chỉ xác nhận Bombe Anh đầu tiên chạy kịp Blitzkrieg ở Tây Âu; TNMOC nêu Agnus Dei/Agnes hoạt động tháng 08/1940.
+docs/pm/tickets/2026-10-26-codex-pilot/T2A-ket-qua.md:36:- Chưa có nguồn mạnh đã mở cho Doc Keen, kích thước máy, số trống thời chiến, thời gian một lượt chạy, hay các crib cụ thể như `Keine besonderen Ereignisse`/bản tin thời tiết.
+data/long/mim-turing-bombe/facts.md:47:| 19 | TNMOC ghi chiếc Turing–Welchman Bombe đầu tiên mang tên Agnus Dei, hay Agnes, hoạt động vào tháng 08/1940; British Tabulating Machine Company (BTM) đảm nhiệm kỹ thuật và chế tạo Bombe gốc. | [The National Museum of Computing — The Turing-Welchman Bombe](https://www.tnmoc.org/bombe) | **mạnh** |
+data/long/mim-turing-bombe/facts.md:73:| 30 | GCHQ nói Bombe Anh đầu tiên đã hoạt động tại Bletchley kịp thời cho Blitzkrieg của Đức ở Tây Âu; trang này không nêu tên Victory hay một ngày cụ thể. | [GCHQ — The Pyry Forest Meeting](https://www.gchq.gov.uk/information/the-pyry-forest-meeting) | **mạnh** |
+data/long/mim-turing-bombe/facts.md:77:| 34 | Theo *Time*, việc phim *The Imitation Game* gọi máy của Turing là “Christopher” là hư cấu; bài báo nói máy ngoài đời được gọi là Bombe và có biệt danh Victory. | [Time — The True Story of *The Imitation Game*](https://time.com/3609585/the-true-story-of-the-imitation-game/) | **vừa** |
+data/long/mim-turing-bombe/facts.md:88:1. **Victory và mốc tháng 03/1940:** nguồn GCHQ đã mở chỉ nói “Bombe Anh đầu tiên” hoạt động kịp Blitzkrieg ở Tây Âu, không xác nhận tên Victory hay ngày chạy. TNMOC lại nêu Agnus Dei/Agnes hoạt động tháng 08/1940. Pha viết phải tránh gộp hai tên hoặc đọc ngày 18/03 nếu chưa mở được hồ sơ BTM/GCHQ xác nhận trực tiếp.
+data/long/mim-turing-bombe/facts.md:90:3. **“Keine besonderen Ereignisse”, bản tin thời tiết, chữ ký lặp:** chưa có nguồn mạnh đã mở gắn riêng các ví dụ này với một menu/Bombe cụ thể. Chỉ dùng định nghĩa crib và menu ở CH05, hoặc nghiên cứu thêm trước khi gọi tên ví dụ.
+
+codex
+Kiểm tra cuối cho kho nghiên cứu đã đạt: 8 chương, 34/34 dòng dữ kiện đều có URL, và không có thay đổi nào vào kịch bản, cảnh hay bước render. Báo cáo cũng nêu rõ ngoại lệ không chạy `long_gate` do chính ticket là nghiên cứu.
+codex
+Đã hoàn tất ticket nghiên cứu T2A.
+
+- Kho 34 dữ kiện/8 chương: [facts.md](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-turing-bombe\facts.md)
+- Báo cáo kết quả: [T2A-ket-qua.md](D:\Tools\Youtube Creator v2\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-26-codex-pilot\T2A-ket-qua.md)
+
+Không sửa kịch bản/cảnh, không render, không đụng YouTube/credential/state/git. Không chạy `long_gate` vì ticket ghi rõ đây là ticket nghiên cứu.
+tokens used
+181,855
+Đã hoàn tất ticket nghiên cứu T2A.
+
+- Kho 34 dữ kiện/8 chương: [facts.md](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-turing-bombe\facts.md)
+- Báo cáo kết quả: [T2A-ket-qua.md](D:\Tools\Youtube Creator v2\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-26-codex-pilot\T2A-ket-qua.md)
+
+Không sửa kịch bản/cảnh, không render, không đụng YouTube/credential/state/git. Không chạy `long_gate` vì ticket ghi rõ đây là ticket nghiên cứu.

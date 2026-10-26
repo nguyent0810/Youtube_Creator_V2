@@ -1,0 +1,261 @@
+{
+ "theme": "mim",
+ "title": "Tháng 1/2020, Robert Williams bị bắt trước nhà ở Detroit: theo hồ sơ vụ kiện của ACLU",
+ "description": "Theo ACLU: tháng 1/2020, cảnh sát Detroit bắt Robert Williams trước nhà, trước mặt vợ và hai con gái nhỏ. Cảnh sát Detroit gửi một ảnh mờ từ camera cửa hàng năm 2018 cho cảnh sát bang Michigan; kết quả nhận diện khuôn mặt trả về khả năng trùng với ảnh bằng lái đã hết hạn của ông. ACLU nói ông không phải người trong video và không có mặt ở cửa hàng; ông bị giam 30 giờ. Ngày 28/6/2024, các bên ký thoả thuận giải quyết vụ kiện; theo ACLU, cảnh sát phải có bằng chứng độc lập, đáng tin cậy trước khi bắt. Video này chỉ thuật lại điều ACLU công bố, không kết luận về trách nhiệm pháp lý.\n\nGiọng đọc tổng hợp; video Pexels/Coverr minh hoạ, không phải cảnh thật của sự kiện.\nBản đầy đủ: https://youtu.be/7daMUBWG6mU",
+ "tags": [
+  "robert williams",
+  "detroit",
+  "nhận diện khuôn mặt",
+  "aclu",
+  "bắt nhầm",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "KHUÔN MẶT VÀ AI",
+ "sub": "DETROIT · 2020",
+ "acc": [
+  "2020",
+  "ba",
+  "mươi",
+  "bằng",
+  "chứng"
+ ],
+ "lines": [
+  "Tháng một 2020, Robert Williams bị bắt trước nhà.",
+  "Cảnh sát Detroit gửi ảnh mờ từ camera cửa hàng cho cảnh sát bang Michigan để chạy nhận diện khuôn mặt.",
+  "Kết quả là khả năng trùng với ảnh bằng lái đã hết hạn của ông.",
+  "Theo ACLU, ông không phải người trong video và không có mặt ở cửa hàng.",
+  "Ông bị giam ba mươi giờ.",
+  "Tháng sáu 2024, ông và thành phố Detroit ký thoả thuận giải quyết vụ kiện.",
+  "Theo ACLU, cảnh sát phải có bằng chứng độc lập trước khi bắt ai.",
+  "Riêng kết quả nhận diện khuôn mặt không còn đủ để bắt người."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "items": [
+    {
+     "text": "2020",
+     "at": [
+      0,
+      "Tháng"
+     ],
+     "acc": true,
+     "size": 300
+    },
+    {
+     "text": "DETROIT · THEO ACLU",
+     "at": [
+      0,
+      "Robert"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:36637656",
+   "veil": 0.6
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "THEO HỒ SƠ ACLU",
+   "nodes": [
+    {
+     "text": "ẢNH MỜ · CAMERA CỬA HÀNG",
+     "x": 0.5,
+     "y": 0.18,
+     "at": [
+      1,
+      "ảnh"
+     ],
+     "w": 600
+    },
+    {
+     "text": "TÌM TRONG ẢNH BẰNG LÁI",
+     "x": 0.5,
+     "y": 0.5,
+     "at": [
+      1,
+      "chạy"
+     ],
+     "w": 600
+    },
+    {
+     "text": "KHẢ NĂNG TRÙNG",
+     "x": 0.5,
+     "y": 0.8,
+     "at": [
+      2,
+      "khả"
+     ],
+     "c": "acc",
+     "w": 480
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      1,
+      "chạy"
+     ]
+    },
+    {
+     "from": 1,
+     "to": 2,
+     "at": [
+      2,
+      "khả"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "THEO ACLU",
+     "at": [
+      3,
+      "Theo"
+     ],
+     "sm": true,
+     "size": 64
+    },
+    {
+     "text": "KHÔNG PHẢI ÔNG",
+     "at": [
+      3,
+      "không"
+     ],
+     "acc": true
+    },
+    {
+     "text": "trong đoạn video ấy",
+     "at": [
+      3,
+      "video"
+     ],
+     "sm": true,
+     "size": 52
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "to": 30,
+   "suffix": " GIỜ",
+   "label": "BỊ GIAM · THEO ACLU",
+   "until": [
+    4,
+    "ba"
+   ]
+  },
+  {
+   "type": "date",
+   "at": 5,
+   "date": "2024",
+   "day": "28 THÁNG 6",
+   "sub": {
+    "text": "THOẢ THUẬN GIẢI QUYẾT VỤ KIỆN",
+    "at": [
+     5,
+     "thoả"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "TRƯỚC KHI BẮT",
+   "cards": [
+    {
+     "k": "KẾT QUẢ NHẬN DIỆN",
+     "v": "CHƯA ĐỦ",
+     "at": [
+      6,
+      "bằng"
+     ]
+    },
+    {
+     "k": "BẰNG CHỨNG ĐỘC LẬP",
+     "v": "PHẢI CÓ",
+     "at": [
+      6,
+      "độc"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "THEO ACLU · KHÔNG PHẢI KẾT LUẬN PHÁP LÝ"
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "KHÔNG CÒN ĐỦ ĐỂ BẮT",
+   "sub": "RIÊNG KẾT QUẢ NHẬN DIỆN"
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    7,
+    "người"
+   ],
+   "items": [
+    {
+     "text": "BỊ BẮT TRƯỚC NHÀ",
+     "at": [
+      7,
+      "người"
+     ],
+     "acc": true
+    },
+    {
+     "text": "Detroit · 2020",
+     "at": [
+      7,
+      "người"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:17713400",
+   "veil": 0.6
+  }
+ ],
+ "sources": [
+  "https://aclu.org/cases/williams-v-city-of-detroit-face-recognition-false-arrest",
+  "Associated Press, 28/06/2024 — thoả thuận vụ Williams kiện thành phố Detroit"
+ ],
+ "say": {
+  "robert": "Rô-bớt",
+  "williams": "Uy-li-ừm",
+  "detroit": "Đi-troi",
+  "aclu": "ây-xi-eo-diu",
+  "michigan": "Mi-si-gần"
+ },
+ "rules": 2,
+ "mix": true,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.35,
+   "5": 0.22,
+   "6": 0.4
+  }
+ },
+ "sources_internal": [
+  "https://aclu.org/cases/williams-v-city-of-detroit-face-recognition-false-arrest (đã mở: 01/2020, trước mặt vợ và hai con gái nhỏ; ảnh mờ camera Shinola 2018 gửi cảnh sát bang Michigan; possible match với ảnh bằng lái hết hạn; ông không phải người trong video; 30 giờ; kiện 04/2021; thoả thuận 28/06/2024: cần bằng chứng độc lập trước khi bắt)",
+  "Điều khoản 'không bắt chỉ dựa trên kết quả nhận diện' lấy từ AP qua kết quả tìm kiếm (clickondetroit.com/tech/2024/06/28/..., chưa mở được); trang ACLU xác nhận 'phải có bằng chứng độc lập'. Bản lời đọc dùng đúng cách nói của ACLU."
+ ]
+}

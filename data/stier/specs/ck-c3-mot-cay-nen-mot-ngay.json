@@ -1,0 +1,201 @@
+{
+ "theme": "ck",
+ "kicker": "BIỂU ĐỒ NẾN",
+ "sub": "09/03/2026",
+ "title": "Một cây nến đỏ kể lại cả ngày: đọc bốn con số của VN-Index phiên 09/03/2026",
+ "description": "Một cây nến ngày gói bốn con số của một phiên: mở cửa, cao nhất, thấp nhất, đóng cửa. VN-Index thứ Hai 09/03/2026: mở 1.757,73 = cao nhất (không có bóng trên), thấp nhất 1.650,75, đóng 1.652,79 (cách đáy 2,04 điểm). Thân đỏ 104,94 điểm, chiếm 98% biên độ phiên. So với phiên trước: −115,05 điểm (−6,51%). Nến kể một phiên đã qua, không hứa gì về phiên sau.\n\nGiá mở/cao/thấp/đóng: dữ liệu thị trường qua vnstock, kênh tự tính; mức giảm 115,05 điểm khớp báo Nhân Dân 09/03/2026.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (13 phút): https://youtu.be/bsmkQIycAbA (công khai từ 20:00 ngày 14/11)",
+ "tags": [
+  "biểu đồ nến",
+  "cách đọc nến",
+  "nến nhật",
+  "chứng khoán cho người mới",
+  "vn-index",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "đỏ",
+  "bốn",
+  "trăm",
+  "hai",
+  "thắng"
+ ],
+ "lines": [
+  "Một cây nến đỏ kể lại cả ngày.",
+  "Thứ Hai, chín tháng ba năm nay, VN-Index mất một trăm mười lăm điểm.",
+  "Cây nến hôm ấy chỉ cần bốn con số: mở cửa, cao nhất, thấp nhất, đóng cửa.",
+  "Mở cửa cũng là mức cao nhất, nên phía trên không có bóng.",
+  "Thân đỏ dài hơn một trăm điểm.",
+  "Đóng cửa chỉ cách đáy khoảng hai điểm.",
+  "Không cần một chữ nào, cây nến đã kể: bên bán thắng trọn phiên."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MỘT CÂY NẾN ĐỎ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "kể lại cả một phiên",
+     "at": [
+      0,
+      "kể"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:11267669",
+   "veil": 0.5
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "09/03/2026",
+   "day": "THỨ HAI",
+   "sub": {
+    "text": "VN-INDEX −115,05 ĐIỂM · −6,51%",
+    "at": [
+     1,
+     "mất"
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "VN-INDEX · 09/03/2026",
+   "rows": [
+    {
+     "k": "MỞ CỬA",
+     "v": "1.757,73",
+     "at": [
+      2,
+      "mở"
+     ]
+    },
+    {
+     "k": "CAO NHẤT",
+     "v": "1.757,73",
+     "at": [
+      2,
+      "cao"
+     ]
+    },
+    {
+     "k": "THẤP NHẤT",
+     "v": "1.650,75",
+     "at": [
+      2,
+      "thấp"
+     ]
+    },
+    {
+     "k": "ĐÓNG CỬA",
+     "v": "1.652,79",
+     "at": [
+      2,
+      "đóng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "ĐỌC CÂY NẾN 09/03",
+   "nodes": [
+    {
+     "text": "MỞ CỬA = CAO NHẤT",
+     "x": 0.5,
+     "y": 0.27,
+     "at": 3,
+     "w": 760
+    },
+    {
+     "text": "KHÔNG CÓ BÓNG TRÊN",
+     "x": 0.5,
+     "y": 0.45,
+     "at": [
+      3,
+      "bóng"
+     ],
+     "shape": "none",
+     "w": 640
+    },
+    {
+     "text": "THÂN ĐỎ ≈ 105 ĐIỂM",
+     "x": 0.5,
+     "y": 0.65,
+     "at": [
+      4,
+      "thân"
+     ],
+     "c": "down",
+     "w": 700
+    },
+    {
+     "text": "ĐÓNG CỬA · CÁCH ĐÁY ≈ 2 ĐIỂM",
+     "x": 0.5,
+     "y": 0.86,
+     "at": [
+      5,
+      "cách"
+     ],
+     "c": "acc",
+     "w": 860
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 2,
+     "at": [
+      4,
+      "thân"
+     ],
+     "bend": 0.3
+    },
+    {
+     "from": 2,
+     "to": 3,
+     "at": [
+      5,
+      "đóng"
+     ]
+    }
+   ],
+   "note": "DỮ LIỆU THỊ TRƯỜNG QUA VNSTOCK · KÊNH TỰ TÍNH"
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "BÊN BÁN\nTHẮNG TRỌN PHIÊN",
+   "sub": "NẾN KỂ PHIÊN ĐÃ QUA · KHÔNG HỨA PHIÊN SAU"
+  }
+ ],
+ "sources": [
+  "https://nhandan.vn/ocop/chung-khoan-ngay-93-hon-230-co-phieu-xanh-lo-vn-index-giam-ky-luc-post947238.html",
+  "https://youtu.be/bsmkQIycAbA"
+ ],
+ "say": {
+  "vn-index": "Vi En In-đéc"
+ },
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.55
+  }
+ },
+ "imgs": {}
+}

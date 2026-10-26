@@ -1,0 +1,242 @@
+{
+ "theme": "mim",
+ "title": "Trên máy bay, Julann Griffin nghĩ ra Jeopardy: 5.280 và câu hỏi 'một dặm dài bao nhiêu feet'",
+ "description": "Theo lời Merv Griffin kể với hãng tin AP trước khi chương trình ra mắt, vợ ông là Julann nghĩ ra Jeopardy trên chuyến bay từ Duluth về New York: từ sau vụ bê bối đố vui, chưa có trò hỏi đáp nào thành công, sao không đưa đáp án trước và để người chơi tìm câu hỏi? Bà đọc thử '5.280' (một dặm dài bao nhiêu feet). NBC mua không cần xem bản chạy thử; chương trình lên sóng ngày 30/03/1964 với tên đầu tiên 'What's the Question?'. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật.\n\nBản đầy đủ: https://youtu.be/Mt5hYcQxH50 (công khai từ 20:00 ngày 19/11).",
+ "tags": [
+  "jeopardy",
+  "merv griffin",
+  "julann griffin",
+  "watson ibm",
+  "lịch sử truyền hình",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "sub": "JEOPARDY · 1964",
+ "acc": [
+  "máy",
+  "bay",
+  "vợ",
+  "đáp",
+  "án"
+ ],
+ "lines": [
+  "Trên máy bay, một người vợ ra đề.",
+  "Bà là Julann Griffin, vợ của người dẫn chương trình Merv Griffin, người đang tìm ý tưởng cho một trò đố mới.",
+  "Bà nói: từ vụ bê bối đố vui, chưa trò hỏi đáp nào thành công. Sao không đưa đáp án trước, để người chơi tìm câu hỏi?",
+  "Bà đọc thử: năm nghìn hai trăm tám mươi. Câu hỏi: một dặm dài bao nhiêu feet.",
+  "Griffin đem ý tưởng tới NBC, họ mua ngay, không cần xem bản chạy thử.",
+  "Ngày ba mươi tháng ba năm một nghìn chín trăm sáu mươi tư, trò chơi lên sóng, với tên đầu tiên: Câu hỏi là gì.",
+  "Bốn mươi bảy năm sau, câu đố trên máy bay ấy trở thành đề thi của một cỗ máy."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "items": [
+    {
+     "text": "NGƯỜI VỢ RA ĐỀ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "trên máy bay",
+     "at": [
+      0,
+      "máy"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:10588604",
+   "veil": 0.5
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Hai người trên máy bay",
+   "nodes": [
+    {
+     "text": "JULANN GRIFFIN",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      1,
+      "Julann"
+     ],
+     "shape": "none",
+     "w": 740
+    },
+    {
+     "text": "MERV GRIFFIN · TÌM Ý TƯỞNG",
+     "x": 0.5,
+     "y": 0.66,
+     "at": [
+      1,
+      "người"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 780
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": [
+    2,
+    "Sao"
+   ],
+   "text": "Sao không đổi ngược lại, đưa đáp án cho người chơi, để họ tự nghĩ ra câu hỏi?",
+   "by": "MERV GRIFFIN KỂ LỜI VỢ · AP · TRÍCH DỊCH"
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 5280,
+   "suffix": " FEET",
+   "label": "ĐÁP ÁN ĐỌC TRƯỚC",
+   "until": [
+    3,
+    "tám"
+   ],
+   "sub": {
+    "text": "CÂU HỎI: MỘT DẶM DÀI BAO NHIÊU?",
+    "at": [
+     3,
+     "Câu"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "NBC MUA NGAY",
+     "at": [
+      4,
+      "mua"
+     ],
+     "acc": true
+    },
+    {
+     "text": "không cần xem bản chạy thử",
+     "at": [
+      4,
+      "không"
+     ],
+     "sm": true,
+     "size": 56
+    }
+   ],
+   "clip": "pexels:6977375",
+   "veil": 0.6
+  },
+  {
+   "type": "date",
+   "at": 5,
+   "date": "30.03.1964",
+   "day": "LÊN SÓNG",
+   "sub": {
+    "text": "NBC · NGƯỜI DẪN ART FLEMING",
+    "at": [
+     5,
+     "trò"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": [
+    5,
+    "với"
+   ],
+   "text": "CÂU HỎI LÀ GÌ?",
+   "sub": "TÊN ĐẦU TIÊN CỦA JEOPARDY"
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "from": 47,
+   "to": 47,
+   "suffix": " NĂM",
+   "label": "TỪ MÁY BAY TỚI ĐỀ THI CỦA MÁY",
+   "sub": {
+    "text": "KÊNH TỰ TÍNH · 2011 TRỪ 1964",
+    "at": [
+     6,
+     "Bốn"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    6,
+    "trở"
+   ],
+   "items": [
+    {
+     "text": "ĐỀ THI",
+     "at": [
+      6,
+      "đề"
+     ],
+     "acc": true
+    },
+    {
+     "text": "của một cỗ máy",
+     "at": [
+      6,
+      "cỗ"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:38753809",
+   "veil": 0.55
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Merv_Griffin (Griffin kể với AP)",
+  "https://en.wikipedia.org/wiki/Jeopardy!"
+ ],
+ "say": {
+  "watson": "Oát-xần",
+  "ibm": "ai bi em",
+  "=IBM": "ai bi em",
+  "jeopardy": "Gie-pơ-đi",
+  "ken": "Ken",
+  "jennings": "Gien-ninh",
+  "rutter": "Rắt-tơ",
+  "julann": "Giu-lan",
+  "griffin": "Gờ-ri-phin",
+  "merv": "Mơv",
+  "nbc": "en bi xi",
+  "feet": "phít",
+  "art": "Ác",
+  "fleming": "Phờ-lê-ming"
+ },
+ "tts": {
+  "pauses": {
+   "0": 0.4,
+   "1": 0.22,
+   "2": 0.4,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.5
+  }
+ },
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "imgs": {},
+ "sources_internal": [
+  "https://en.wikipedia.org/wiki/Merv_Griffin (mục Game show creator: lời Griffin với AP về chuyến bay Duluth–New York, Julann, 5.280, NBC mua không cần bản chạy thử; tên đầu 'What's the Question?', Art Fleming dẫn)",
+  "https://en.wikipedia.org/wiki/Jeopardy! (ngày phát sóng đầu 30/03/1964; cùng đoạn trích AP)",
+  "47 năm = 2011 trừ 1964: kênh tự tính. CẦN KIỂM: năm chuyến bay (nguồn khác ghi 1963) nên KHÔNG đưa vào lời đọc; 'quiz show scandals' = các vụ bê bối đố vui thập niên 1950"
+ ]
+}

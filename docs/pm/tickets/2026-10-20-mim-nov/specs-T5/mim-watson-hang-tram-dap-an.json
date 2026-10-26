@@ -1,0 +1,198 @@
+{
+ "theme": "mim",
+ "title": "Watson không hiểu câu hỏi như bạn hiểu: nó tạo hàng trăm đáp án rồi chấm điểm từng cái",
+ "description": "Theo cách IBM mô tả hệ thống năm 2011, Watson không hiểu câu hỏi theo kiểu con người: nó mổ xẻ gợi ý (đang hỏi về người, thành phố hay năm tháng), lục kho văn bản để gom hàng trăm đáp án có thể, rồi tìm bằng chứng cho từng đáp án (có khớp thời gian, địa điểm không). Mỗi phép thử cho một con số, tất cả được gộp thành một điểm duy nhất cho mỗi đáp án (kịch bản video dài mục CH06; Wikipedia: IBM Watson). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/Mt5hYcQxH50 (công khai từ 20:00 ngày 19/11).",
+ "tags": [
+  "watson ibm",
+  "jeopardy",
+  "deepqa",
+  "trí tuệ nhân tạo",
+  "máy học",
+  "mind in the machine"
+ ],
+ "sub": "JEOPARDY · 2011",
+ "acc": [
+  "hiểu",
+  "chấm",
+  "điểm",
+  "hàng",
+  "trăm"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Watson không hiểu câu hỏi như bạn hiểu.",
+  "Nó làm một việc khác: tạo ra thật nhiều đáp án, rồi chấm điểm từng cái.",
+  "Trước hết, nó mổ xẻ gợi ý: đang hỏi về một người, một thành phố hay một năm?",
+  "Rồi nó lục kho văn bản của mình, và gom ra hàng trăm đáp án có thể.",
+  "Với mỗi đáp án, nó tìm bằng chứng: có khớp thời gian không, có khớp địa điểm không?",
+  "Mỗi phép thử cho một con số, rồi tất cả gộp thành một điểm duy nhất.",
+  "Với Watson, hiểu một câu hỏi nghĩa là chấm điểm hàng trăm câu trả lời."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "KHÔNG HIỂU · CHẤM ĐIỂM",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "cách Watson đọc một câu hỏi",
+     "at": [
+      0,
+      "câu"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8567113",
+   "ms": 4,
+   "veil": 0.55
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "CÁCH WATSON LÀM",
+   "cards": [
+    {
+     "k": "TẠO RA",
+     "v": "THẬT NHIỀU ĐÁP ÁN",
+     "at": [
+      1,
+      "tạo"
+     ]
+    },
+    {
+     "k": "RỒI CHẤM",
+     "v": "TỪNG CÁI",
+     "at": [
+      1,
+      "chấm"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MỔ XẺ GỢI Ý",
+     "at": [
+      2,
+      "mổ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "người · thành phố · năm",
+     "at": [
+      2,
+      "một"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6962281",
+   "ms": 12,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 2
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Bước hai",
+   "nodes": [
+    {
+     "text": "hàng trăm đáp án có thể",
+     "x": 0.5,
+     "y": 0.4,
+     "at": [
+      3,
+      "hàng"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 760
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "BẰNG CHỨNG",
+   "cards": [
+    {
+     "k": "KHỚP",
+     "v": "THỜI GIAN?",
+     "at": [
+      4,
+      "thời"
+     ]
+    },
+    {
+     "k": "KHỚP",
+     "v": "ĐỊA ĐIỂM?",
+     "at": [
+      4,
+      "địa"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 1,
+   "to": 1,
+   "suffix": " ĐIỂM",
+   "label": "MỖI ĐÁP ÁN · GỘP TỪ MỌI PHÉP THỬ",
+   "sub": {
+    "text": "CHẤM XONG MỚI CHỌN",
+    "at": [
+     5,
+     "gộp"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "HIỂU = CHẤM ĐIỂM",
+   "sub": "CÁCH WATSON ĐỌC CÂU HỎI"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/IBM_Watson"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "watson": "Oát-xần",
+  "ibm": "ai bi em",
+  "=IBM": "ai bi em",
+  "jeopardy": "Gie-pơ-đi",
+  "ken": "Ken",
+  "jennings": "Gien-ninh",
+  "david": "Đây-vít",
+  "deep": "Đíp",
+  "blue": "Blu"
+ },
+ "imgs": {}
+}

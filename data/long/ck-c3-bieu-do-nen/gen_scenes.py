@@ -387,7 +387,7 @@ for c in CH.values():
 BGM = {"ch00.0": "investigations.mp3", "ch01.0": "sidewalk_shade.mp3", "ch02.0": "frost_waltz.mp3", "ch03.0": "dreamer.mp3",
        "ch04.0": "lobby_time.mp3", "ch05.0": "perspectives.mp3", "ch06.0": "wholesome.mp3"}
 
-TITLE = "Biểu Đồ Nến Cho Người Mới: Một Cây Nến Kể Gì Về Một Phiên, Và Điều Nó Không Nói Được"
+TITLE = "Một Cây Nến Đỏ Kể Gì? Biểu Đồ Nến Cho Người Mới"
 DISCLAIMER = ("Nội dung giáo dục, không phải tư vấn đầu tư hay tư vấn tài chính cá nhân. Không khuyến nghị mua/bán bất kỳ "
               "tài sản nào, không phải tín hiệu giao dịch, không dự báo thị trường. Ví dụ dùng dữ liệu quá khứ; quá khứ không "
               "đảm bảo tương lai. Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.")

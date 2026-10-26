@@ -1,0 +1,165 @@
+{
+ "theme": "mim",
+ "title": "Bao gần thì máy coi là cùng một người? Ngưỡng nhận mặt do con người chọn",
+ "description": "Sau khi biến khuôn mặt thành một dãy số, máy chỉ làm một phép tính: hai dãy số cách nhau bao xa. Nhỏ hơn một ngưỡng thì là cùng một người, lớn hơn thì là người khác. Ngưỡng ấy là một lựa chọn chứ không phải sự thật tự nhiên: đặt chặt thì người lạ khó lọt qua nhưng chính chủ đôi khi bị từ chối; đặt lỏng thì ngược lại. Video không có số đo cụ thể; hình minh hoạ không phải số liệu thật.\n\nGiọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\nBản đầy đủ (khoảng 10 phút): https://youtu.be/7daMUBWG6mU (công khai từ 20:00 ngày 30/11).",
+ "tags": [
+  "ngưỡng nhận diện",
+  "nhận diện khuôn mặt",
+  "khoảng cách vector",
+  "an toàn và tiện lợi",
+  "mind in the machine"
+ ],
+ "sub": "NGƯỠNG LÀ MỘT LỰA CHỌN",
+ "acc": [
+  "gần",
+  "ngưỡng",
+  "chặt",
+  "lỏng"
+ ],
+ "kicker": "KHUÔN MẶT VÀ AI",
+ "lines": [
+  "Bao gần thì máy coi là cùng một người?",
+  "Máy chỉ đo một thứ: hai dãy số cách nhau bao xa.",
+  "Nhỏ hơn một ngưỡng, là cùng người. Lớn hơn, là người khác.",
+  "Ngưỡng ấy là một lựa chọn, chứ không phải sự thật tự nhiên.",
+  "Đặt chặt, người lạ khó lọt qua, nhưng chính chủ đôi khi bị từ chối.",
+  "Đặt lỏng, chính chủ đi qua dễ dàng, nhưng người lạ cũng dễ lọt hơn.",
+  "Và ở đâu đó, có một con người đã chọn: gần tới mức nào thì đủ."
+ ],
+ "scenes": [
+  {
+   "type": "slam",
+   "text": "BAO GẦN LÀ CÙNG NGƯỜI?",
+   "sub": "MÁY CHỈ ĐO MỘT KHOẢNG CÁCH"
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "MÁY CHỈ ĐO MỘT THỨ",
+   "nodes": [
+    {
+     "text": "dãy số 1",
+     "x": 0.22,
+     "y": 0.4,
+     "at": [
+      1,
+      "hai"
+     ],
+     "w": 330
+    },
+    {
+     "text": "dãy số 2",
+     "x": 0.78,
+     "y": 0.4,
+     "at": [
+      1,
+      "dãy"
+     ],
+     "w": 330
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      1,
+      "cách"
+     ],
+     "label": "BAO XA?",
+     "c": "acc",
+     "bend": 0
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NGƯỠNG = MỘT LỰA CHỌN",
+     "at": 2,
+     "acc": true
+    },
+    {
+     "text": "không phải sự thật tự nhiên",
+     "at": [
+      3,
+      "không"
+     ],
+     "sm": true
+    }
+   ],
+   "at": 2,
+   "clip": "pexels:33315117",
+   "ms": 1,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "CÙNG MỘT MÁY, HAI CÁCH ĐẶT NGƯỠNG",
+   "rows": [
+    {
+     "k": "ĐẶT CHẶT",
+     "v": "CHÍNH CHỦ BỊ TỪ",
+     "at": [
+      4,
+      "chặt"
+     ]
+    },
+    {
+     "k": "ĐẶT LỎNG",
+     "v": "NGƯỜI LẠ DỄ LỌT",
+     "at": [
+      5,
+      "lỏng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MỘT CON NGƯỜI",
+     "at": 6,
+     "acc": true
+    },
+    {
+     "text": "đã chọn: gần tới mức nào thì đủ",
+     "at": [
+      6,
+      "đã"
+     ],
+     "sm": true
+    }
+   ],
+   "at": 6,
+   "clip": "pexels:7597755",
+   "ms": 2,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  }
+ ],
+ "sources": [
+  "data/long/mim-ai-khuon-mat/script.md, CH04 (diễn lại; không có số liệu)"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "imgs": {},
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {}
+}

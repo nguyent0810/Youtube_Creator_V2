@@ -1,0 +1,192 @@
+{
+ "theme": "ck",
+ "kicker": "KHÔNG THAY THẾ",
+ "sub": "QUỸ KHẨN CẤP",
+ "title": "Quỹ khẩn cấp không thay được bảo hiểm: đỡ hoá đơn 15 triệu, không đỡ hoá đơn vài trăm triệu",
+ "description": "Ví dụ GIẢ ĐỊNH: chi tiêu thiết yếu 8 triệu/tháng → quỹ khẩn cấp 3 tháng = 24 triệu. Hoá đơn 15 triệu: quỹ đỡ được, còn dư 9 triệu. Hoá đơn vài trăm triệu: quỹ không đỡ nổi. Quỹ khẩn cấp lo những cú vấp nhỏ và hay gặp (hỏng xe, ốm nhẹ, vài tháng mất việc); bảo hiểm lo rủi ro lớn và hiếm. Hai thứ làm hai việc khác nhau. Kênh không giới thiệu sản phẩm bảo hiểm nào.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là ví dụ giả định, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (8 phút): https://youtu.be/iOxDRCkFbYY (công khai từ 20:00 ngày 04/11)",
+ "tags": [
+  "quỹ khẩn cấp",
+  "bảo hiểm",
+  "viện phí",
+  "tiết kiệm",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "thay",
+  "chín",
+  "thủng",
+  "vấp",
+  "ngã"
+ ],
+ "lines": [
+  "Quỹ khẩn cấp không thay được bảo hiểm.",
+  "Ví dụ giả định, quỹ ba tháng của bạn là hai mươi tư triệu.",
+  "Một hoá đơn mười lăm triệu, tấm đệm ấy đỡ được, còn dư chín triệu.",
+  "Nhưng một hoá đơn vài trăm triệu thì tấm đệm thủng ngay.",
+  "Quỹ khẩn cấp lo cú vấp nhỏ, hay gặp: hỏng xe, ốm nhẹ, vài tháng mất việc.",
+  "Bảo hiểm lo những cú ngã lớn và hiếm, thứ quỹ cá nhân thường không đỡ nổi.",
+  "Hai thứ ấy làm hai việc khác nhau."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "QUỸ KHẨN CẤP",
+     "at": 0.0,
+     "sm": true
+    },
+    {
+     "text": "≠ BẢO HIỂM",
+     "at": [
+      0,
+      "bảo"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:6010952",
+   "veil": 0.58
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 24,
+   "to": 24,
+   "suffix": " TRIỆU",
+   "label": "QUỸ 3 THÁNG · THIẾT YẾU 8 TRIỆU",
+   "sub": {
+    "text": "VÍ DỤ GIẢ ĐỊNH",
+    "at": [
+     1,
+     "hai"
+    ]
+   }
+  },
+  {
+   "type": "chart",
+   "at": 2,
+   "kind": "bars",
+   "title": "TẤM ĐỆM 24 TRIỆU ĐỠ ĐƯỢC TỚI ĐÂU",
+   "unit": "TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH · VÀI TRĂM = MINH HOẠ",
+   "bars": [
+    {
+     "label": "QUỸ\nCỦA BẠN",
+     "v": 24,
+     "text": "24",
+     "c": "ref",
+     "at": 2
+    },
+    {
+     "label": "HOÁ ĐƠN\nNHỎ",
+     "v": 15,
+     "text": "15",
+     "c": "up",
+     "at": [
+      2,
+      "mười"
+     ]
+    },
+    {
+     "label": "HOÁ ĐƠN\nLỚN",
+     "v": 200,
+     "text": "VÀI TRĂM",
+     "c": "down",
+     "at": [
+      3,
+      "vài"
+     ]
+    }
+   ],
+   "badge": {
+    "text": "TẤM ĐỆM THỦNG",
+    "at": [
+     3,
+     "thủng"
+    ],
+    "c": "down"
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "CÚ VẤP NHỎ, HAY GẶP",
+     "at": 4,
+     "acc": true
+    },
+    {
+     "text": "hỏng xe · ốm nhẹ · vài tháng mất việc",
+     "at": [
+      4,
+      "hỏng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:5834329",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Hai việc khác nhau",
+   "nodes": [
+    {
+     "text": "quỹ khẩn cấp: cú vấp nhỏ",
+     "x": 0.5,
+     "y": 0.24,
+     "at": 5,
+     "shape": "box",
+     "w": 780
+    },
+    {
+     "text": "bảo hiểm: cú ngã lớn",
+     "x": 0.5,
+     "y": 0.52,
+     "at": [
+      5,
+      "ngã"
+     ],
+     "c": "acc",
+     "shape": "box",
+     "w": 780
+    },
+    {
+     "text": "hai việc khác nhau",
+     "x": 0.5,
+     "y": 0.8,
+     "at": [
+      6,
+      "việc"
+     ],
+     "shape": "circle",
+     "w": 700
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://youtu.be/iOxDRCkFbYY"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

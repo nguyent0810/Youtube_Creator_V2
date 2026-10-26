@@ -1,0 +1,163 @@
+{
+ "theme": "mim",
+ "title": "Năm 2009: dạy mạng nơ-ron trên card đồ hoạ nhanh hơn tới 55 lần, vài tuần còn một ngày",
+ "description": "Raina, Madhavan và Andrew Ng (Đại học Stanford, ICML 2009): trong bài toán họ chọn, huấn luyện mạng niềm tin sâu trên card đồ hoạ nhanh hơn tới 55 lần so với bộ xử lý hai lõi thời ấy; một mạng bốn lớp, 100 triệu tham số, từ vài tuần còn khoảng một ngày. Đây là kết quả của một thí nghiệm, không phải mức tăng tốc chung cho mọi bài toán. Giọng đọc tổng hợp; video Pexels.\n\nBản đầy đủ: https://youtu.be/<ID-mim-ai-gpu> (công khai từ 20:00 ngày 16/11)",
+ "tags": [
+  "andrew ng",
+  "stanford",
+  "học sâu",
+  "icml 2009",
+  "trí tuệ nhân tạo",
+  "gpu",
+  "nvidia",
+  "card đồ hoạ",
+  "mind in the machine"
+ ],
+ "kicker": "NGÀNH AI",
+ "sub": "STANFORD · 2009",
+ "acc": [
+  "năm",
+  "mươi",
+  "lăm",
+  "ngày"
+ ],
+ "lines": [
+  "Vài tuần dạy máy, rút còn một ngày.",
+  "Năm hai nghìn không trăm linh chín, nhóm của Andrew Ng ở Đại học Stanford thử dạy mạng nơ-ron trên card đồ hoạ.",
+  "Họ đem so với một bộ xử lý hai lõi thời ấy.",
+  "Trong bài toán họ chọn, card chạy nhanh hơn tới năm mươi lăm lần.",
+  "Một mạng lớn trước đây mất vài tuần để dạy, nay chỉ còn khoảng một ngày.",
+  "Đó là kết quả của một thí nghiệm, trên một bài toán, so với một loại máy.",
+  "Nhưng vài tuần đã thành một ngày."
+ ],
+ "scenes": [
+  {
+   "type": "cards3d",
+   "title": "THỜI GIAN DẠY MỘT MẠNG LỚN",
+   "cards": [
+    {
+     "k": "TRƯỚC ĐÂY",
+     "v": "VÀI TUẦN",
+     "at": [
+      0,
+      "Vài"
+     ]
+    },
+    {
+     "k": "TRÊN CARD",
+     "v": "≈ 1 NGÀY",
+     "at": [
+      0,
+      "một"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "ICML 2009 · MỘT BÀI TOÁN CỤ THỂ"
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "STANFORD · 2009",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "ANDREW NG",
+     "at": [
+      1,
+      "Andrew"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:3147349",
+   "veil": 0.5
+  },
+  {
+   "type": "chart",
+   "at": 2,
+   "kind": "bars",
+   "title": "TỐC ĐỘ DẠY MẠNG NƠ-RON",
+   "unit": "SO VỚI CPU 2 LÕI · MỘT BÀI TOÁN",
+   "min": 0,
+   "bars": [
+    {
+     "label": "CPU\n2 LÕI",
+     "v": 1,
+     "text": "1",
+     "c": "dim",
+     "at": [
+      2,
+      "bộ"
+     ]
+    },
+    {
+     "label": "CARD\nĐỒ HOẠ",
+     "v": 55,
+     "text": "55",
+     "c": "acc",
+     "at": [
+      3,
+      "năm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "VÀI TUẦN\n→ 1 NGÀY",
+   "sub": "MẠNG 4 LỚP · 100 TRIỆU THAM SỐ"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "MỘT THÍ NGHIỆM",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "một bài toán · một loại máy",
+     "at": [
+      5,
+      "một",
+      1
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:854969",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  }
+ ],
+ "sources": [
+  "https://mlanthology.org/icml/2009/raina2009icml-large/ (abstract; factcheck.md dòng 8)"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6,
+   "0": 0.35
+  }
+ },
+ "say": {
+  "stanford": "Xten-phơ",
+  "ng": "En-gờ",
+  "andrew": "An-đru"
+ },
+ "imgs": {}
+}

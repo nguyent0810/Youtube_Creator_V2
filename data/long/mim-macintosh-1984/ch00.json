@@ -1,0 +1,198 @@
+{
+ "title": "Cú nhấp đã được nhìn thấy",
+ "lines": [
+  "Ngày 24 tháng 1 năm 1984, Steve Jobs giới thiệu Macintosh, và trong vài phút bạn sẽ thấy vì sao một chiếc chuột một nút lại làm máy tính trở nên dễ nhìn hơn.",
+  "Điều lạ là chiếc máy không mở màn bằng một dòng lệnh dài, mà có lúc tự giới thiệu trong phần trình diễn đã chuẩn bị cho ngày ra mắt.",
+  "Giao diện đồ họa là nơi cửa sổ, biểu tượng và con trỏ, tức mũi tên do chuột một nút điều khiển, biến thao tác thành thứ mắt bạn có thể lần theo.",
+  "Năm 1979, một đoàn Apple do Jobs dẫn đầu đã tới Xerox PARC và xem Smalltalk chạy trên máy Alto.",
+  "Tại PARC, Alto đã dùng cửa sổ, biểu tượng, menu và con trỏ, được điều khiển bằng chuột.",
+  "Ta sẽ qua PARC, bộ nhớ 128K, quảng cáo Super Bowl và sân khấu ngày 24 tháng 1.",
+  "Sau đó là câu chuyện chiếc chuột, bộ phim Steve Jobs năm 2015, và điều còn lại khi màn hình bắt đầu nói bằng hình.",
+  "Nhưng nếu ý tưởng đã được thấy từ 1979, điều gì khiến Macintosh 1984 trở thành bước ngoặt mà nhiều người nhớ đến?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "0",
+   "k": "MỞ ĐẦU",
+   "title": "CÚ NHẤP\nĐÃ ĐƯỢC THẤY",
+   "sub": "1979 · PARC · ALTO",
+   "bg": "alto1",
+   "titleAt": [
+    1,
+    "Điều"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    0,
+    "Steve"
+   ],
+   "items": [
+    {
+     "text": "24.01.1984",
+     "at": [
+      0,
+      "Steve"
+     ],
+     "acc": true
+    },
+    {
+     "text": "MỘT LỜI HỨA BẰNG HÌNH",
+     "at": [
+      0,
+      "Steve"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": [
+    1,
+    "máy"
+   ],
+   "img": "jobs1",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "PHẦN TRÌNH DIỄN",
+    "v": "MÁY TỰ GIỚI THIỆU",
+    "at": [
+     1,
+     "máy"
+    ]
+   },
+   "focus": [
+    0.5,
+    0.12
+   ]
+  },
+  {
+   "type": "photo",
+   "at": [
+    2,
+    "chuột"
+   ],
+   "img": "mouse1",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "VẬT NỐI",
+    "v": "CHUỘT MỘT NÚT · KHÔNG LOGO",
+    "at": [
+     2,
+     "chuột"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": [
+    3,
+    "PARC"
+   ],
+   "img": "ai01",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "PHÒNG THÍ NGHIỆM",
+    "v": "MINH HỌA BỐI CẢNH",
+    "at": [
+     3,
+     "PARC"
+    ]
+   },
+   "illus": "ẢNH MINH HỌA",
+   "credit": false
+  },
+  {
+   "type": "print",
+   "at": [
+    4,
+    "Alto"
+   ],
+   "img": "alto2",
+   "tone": "bw",
+   "head": "XEROX PARC",
+   "side": {
+    "k": "GIAO DIỆN ĐỒ HỌA",
+    "h": "CỬA SỔ · BIỂU TƯỢNG · MENU",
+    "lines": [
+     {
+      "text": "CỬA SỔ · BIỂU TƯỢNG · MENU",
+      "at": [
+       4,
+       "Alto"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "timeline",
+   "at": [
+    5,
+    "Super"
+   ],
+   "bg": "mac1",
+   "items": [
+    {
+     "year": "1979",
+     "text": "THĂM PARC"
+    },
+    {
+     "year": "1984",
+     "text": "MACINTOSH RA MẮT"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": [
+    6,
+    "Sau"
+   ],
+   "text": "TỪ Ý TƯỞNG ĐẾN SÂN KHẤU",
+   "sub": "PARC · BỘ NHỚ · QUẢNG CÁO"
+  },
+  {
+   "type": "ledger",
+   "at": [
+    6,
+    "chuột"
+   ],
+   "title": "ĐƯỜNG ĐI CỦA CÚ NHẤP",
+   "srcnote": "MỖI CHƯƠNG THÊM MỘT MỐC",
+   "rows": [
+    {
+     "k": "MỞ ĐẦU",
+     "v": "PARC VÀ CON TRỎ",
+     "at": [
+      6,
+      "chuột"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": [
+    7,
+    "bước"
+   ],
+   "text": "Ý TƯỞNG ĐÃ CÓ TRƯỚC,\nVÌ SAO 1984 VẪN ĐÁNG NHỚ?"
+  }
+ ],
+ "topic": "mim-macintosh-1984",
+ "chapter": 0,
+ "hud": {
+  "k": "CHƯƠNG 00",
+  "t": "CÚ NHẤP ĐÃ ĐƯỢC NHÌN THẤY"
+ }
+}

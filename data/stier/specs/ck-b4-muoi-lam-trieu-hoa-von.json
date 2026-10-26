@@ -1,0 +1,176 @@
+{
+ "title": "Chưa mua xe, gửi 800 triệu: chi tới khoảng 15 triệu mỗi tháng cho đi lại vẫn hoà sau 5 năm (ví dụ giả định)",
+ "description": "VÍ DỤ GIẢ ĐỊNH, kênh tự tính: người chưa mua gửi 800 triệu (đủ trả thẳng xe 700 triệu lăn bánh ở Hà Nội) ở 6,8%/năm (kỳ hạn 12 tháng nhóm ngân hàng lớn, 09/2026), ghép lãi tháng; riêng tiền lãi ≈ 4,5 triệu/tháng. So với người trả thẳng: chi tiền nuôi xe mỗi tháng và bán lại xe sau 5 năm được 385 triệu (55%). Mức chi đi lại để hai người ngang nhau sau 60 tháng ≈ 14,9 triệu/tháng. Con số chỉ nói về tiền, không tính những lúc cần xe thật: con ốm phải đi viện, về quê ngày Tết, mưa ngập không gọi được xe.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ hoặc ví dụ giả định, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (9 phút): https://youtu.be/Bx9w_a_1YOI",
+ "tags": [
+  "chi phí đi lại",
+  "xe công nghệ",
+  "chưa mua xe",
+  "mua xe",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "mười",
+  "lăm",
+  "tiền",
+  "ốm",
+  "ngang"
+ ],
+ "kicker": "QUYẾT ĐỊNH LỚN",
+ "sub": "MUA XE · CHƯA MUA",
+ "lines": [
+  "Mười lăm triệu đi xe mỗi tháng vẫn hoà.",
+  "Ví dụ giả định: có tám trăm triệu, đủ mua xe trả thẳng, nhưng chưa mua.",
+  "Tiền ấy gửi tiết kiệm, lãi sáu phẩy tám phần trăm một năm.",
+  "Riêng tiền lãi đã khoảng bốn triệu rưỡi mỗi tháng.",
+  "Kênh tính thử năm năm, so với người trả thẳng rồi bán lại xe.",
+  "Người chưa mua chi tới khoảng mười lăm triệu mỗi tháng cho đi lại, vẫn ngang nhau.",
+  "Nhưng con số ấy chỉ nói về tiền. Nó không nói về một đêm con ốm phải đi viện."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "15 TRIỆU MỖI THÁNG",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "đi lại · vẫn hoà người mua xe",
+     "at": [
+      0,
+      "vẫn"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:13929582",
+   "veil": 0.55
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "NGƯỜI CHƯA MUA · VÍ DỤ GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "CÓ SẴN",
+     "v": "800 TRIỆU",
+     "at": [
+      1,
+      "tám"
+     ]
+    },
+    {
+     "k": "GỬI TIẾT KIỆM",
+     "v": "6,8%/NĂM",
+     "at": [
+      2,
+      "sáu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "from": 0,
+   "to": 4.5,
+   "suffix": " TRIỆU",
+   "label": "TIỀN LÃI MỖI THÁNG",
+   "sub": {
+    "text": "800 TRIỆU × 6,8% ÷ 12 ≈ 4,53",
+    "at": [
+     3,
+     "bốn"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "SAU 5 NĂM",
+   "nodes": [
+    {
+     "text": "TRẢ THẲNG · BÁN LẠI XE",
+     "x": 0.5,
+     "y": 0.22,
+     "at": [
+      4,
+      "trả"
+     ]
+    },
+    {
+     "text": "CHƯA MUA · ĐI LẠI ≈ 15 TR/THÁNG",
+     "x": 0.5,
+     "y": 0.78,
+     "at": [
+      5,
+      "mười"
+     ],
+     "c": "acc",
+     "w": 860
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      5,
+      "ngang"
+     ],
+     "label": "NGANG NHAU",
+     "bend": 0
+    }
+   ],
+   "note": "CÓ TÍNH LÃI GỬI · KÊNH TỰ TÍNH · VÍ DỤ GIẢ ĐỊNH"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "CHỈ NÓI VỀ TIỀN",
+     "at": [
+      6,
+      "tiền"
+     ],
+     "acc": true
+    },
+    {
+     "text": "không nói về đêm con ốm phải đi viện",
+     "at": [
+      6,
+      "đêm"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:15283975",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  }
+ ],
+ "sources": [
+  "https://youtu.be/Bx9w_a_1YOI"
+ ],
+ "theme": "ck",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "say": {},
+ "imgs": {},
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.25,
+   "4": 0.22,
+   "5": 0.6
+  }
+ }
+}

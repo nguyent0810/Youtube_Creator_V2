@@ -1,0 +1,312 @@
+{
+ "title": "Thẻ trắng, thẻ xanh, thẻ vàng",
+ "lines": [
+  {
+   "t": "Trước đó, phòng máy chỉ chạy một bài một lúc.",
+   "p": 0.8
+  },
+  "Xấp thẻ phải đi hết vòng máy này, rồi mới tới vòng sau.",
+  {
+   "t": "Nghĩa là lúc xấp thẻ nằm ở máy nhân, thì máy cộng ngồi chơi.",
+   "p": 1.0
+  },
+  "Theo nghiên cứu của Los Alamos, chính những cậu lính nghĩ ra một mẹo rất đơn giản: tô màu thẻ.",
+  "Mỗi bài một màu.",
+  "Hai, ba bài cùng chạy trong một phòng, lệch nhịp nhau.",
+  "Lúc bài màu này ở máy nhân, bài màu kia đang ở máy cộng.",
+  {
+   "t": "Không máy nào phải đứng chờ.",
+   "p": 1.0
+  },
+  "Nhờ vậy, thời gian cho một bài giảm từ ba tháng xuống chừng ba tuần.",
+  "Feynman thì nhớ theo kiểu dễ khoe hơn.",
+  "Trước kia chín tháng được ba bài, giờ ba tháng được chín bài.",
+  {
+   "t": "Nhanh gần gấp mười.",
+   "p": 1.0
+  },
+  "Một nhà nghiên cứu khác của Los Alamos đếm lại theo hồ sơ.",
+  "Từ tháng 4 tới tháng 7 năm 1945, nhóm làm xong mười hai bài.",
+  {
+   "t": "Hai cách đếm khác nhau, nhưng cùng chỉ về một hướng.",
+   "p": 1.0
+  },
+  "Cạch, số thứ hai.",
+  "Chạy nhiều việc cùng lúc, lệch nhịp nhau, để không cỗ máy nào đứng không.",
+  "Ngày nay, người ta gọi đó là tính song song.",
+  "Và để ý nhé, số thứ hai không đến từ phòng của các nhà vật lý.",
+  {
+   "t": "Nó đến từ những người vừa được cho biết mình đang tính gì.",
+   "p": 1.0
+  },
+  "Cuối năm 1944, máy cũng mạnh lên.",
+  "Johnston, người thợ IBM, gợi ý dùng một kiểu máy nhân mới, nhân được ba số một lần.",
+  "Eldred Nelson tới gặp IBM, và hãng nhận làm riêng cho Los Alamos, trong đó có hai chiếc chia được.",
+  {
+   "t": "Trước đó, muốn chia, người ta phải tra thẻ số nghịch đảo rồi đem nhân.",
+   "p": 1.0
+  },
+  "Trong phòng máy ấy còn có những cái tên về sau rất nổi tiếng.",
+  "John Kemeny, một cậu lính vận hành máy, sau này cùng tạo ra ngôn ngữ lập trình BASIC.",
+  "Richard Hamming đùa rằng ở đây ông chỉ là người lao công của máy tính.",
+  "Về sau, ông làm ra loại mã tự sửa lỗi mang tên mình.",
+  "Hamming kể, chính phòng máy này cho ông thấy một điều.",
+  {
+   "t": "Những thí nghiệm không thể làm trong phòng thí nghiệm sẽ làm được bằng máy tính.",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Nhưng chẳng bao lâu, cả hệ thống ấy bị đẩy tới giới hạn.",
+  "Bởi một cái hạn chót."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "7",
+   "k": "CHƯƠNG BẢY",
+   "title": "THẺ TRẮNG,\nTHẺ XANH, THẺ VÀNG",
+   "sub": "SỐ THỨ HAI",
+   "bg": "card",
+   "titleAt": [
+    0,
+    "Trước"
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 1,
+   "items": [
+    {
+     "year": "TRƯỚC",
+     "text": "*một bài* một lúc",
+     "at": 1
+    },
+    {
+     "year": "VẤN ĐỀ",
+     "text": "máy nhân bận · *máy cộng ngồi chơi*",
+     "at": 2
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "TÔ MÀU THẺ",
+   "sub": "MẸO CỦA NHỮNG CẬU LÍNH · N. LEWIS · TRINITY BY THE NUMBERS (LANL)"
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "BA BÀI · LỆCH NHỊP",
+   "srcnote": "LOS ALAMOS FROM BELOW (FEYNMAN, 1976) · N. LEWIS · TRINITY BY THE NUMBERS (LANL) · KÊNH MINH HOẠ BẰNG BẢNG",
+   "rows": [
+    {
+     "k": "THẺ TRẮNG",
+     "v": "BÀI A · ĐANG Ở MÁY NHÂN",
+     "at": 4
+    },
+    {
+     "k": "THẺ XANH",
+     "v": "BÀI B · ĐANG Ở MÁY CỘNG",
+     "at": 5
+    },
+    {
+     "k": "THẺ VÀNG",
+     "v": "BÀI C · ĐANG Ở MÁY SẮP",
+     "at": 6
+    }
+   ],
+   "total": {
+    "k": "KẾT QUẢ",
+    "v": "KHÔNG MÁY NÀO ĐỨNG CHỜ",
+    "at": 7
+   }
+  },
+  {
+   "type": "bars",
+   "at": 8,
+   "title": "THỜI GIAN MỘT BÀI",
+   "unit": "N. LEWIS · TRINITY BY THE NUMBERS (LANL) · TÍNH THEO TUẦN",
+   "max": 14,
+   "items": [
+    {
+     "k": "TRƯỚC",
+     "v": 13,
+     "lbl": "≈ 3 THÁNG",
+     "at": 8
+    },
+    {
+     "k": "SAU",
+     "v": 3,
+     "lbl": "≈ 3 TUẦN",
+     "at": [
+      8,
+      "chừng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "FEYNMAN NHỚ",
+     "at": 9,
+     "sm": true
+    },
+    {
+     "text": "9 THÁNG → 3 BÀI",
+     "at": 10
+    },
+    {
+     "text": "3 THÁNG → 9 BÀI",
+     "at": [
+      10,
+      "giờ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "nhanh gần gấp mười",
+     "at": 11,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 12,
+   "title": "MỘT CÁCH ĐẾM KHÁC",
+   "srcnote": "B. J. ARCHER · LA-UR-21-20164 (LANL) · THEO HỒ SƠ",
+   "rows": [
+    {
+     "k": "04 → 07.1945",
+     "v": "12 BÀI",
+     "at": 13
+    }
+   ],
+   "total": {
+    "k": "HAI CÁCH ĐẾM",
+    "v": "CÙNG MỘT HƯỚNG",
+    "at": 14
+   }
+  },
+  {
+   "type": "counter",
+   "at": 15,
+   "from": 1,
+   "to": 2,
+   "until": [
+    15,
+    "thứ"
+   ],
+   "suffix": " / 3",
+   "label": "Ổ KHOÁ · SỐ THỨ HAI ĐÃ MỞ",
+   "sub": {
+    "text": "SỐ 2 · CHẠY SONG SONG, LỆCH NHỊP",
+    "at": 16
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "TÍNH SONG SONG",
+     "at": 17,
+     "acc": true
+    },
+    {
+     "text": "không đến từ phòng các nhà vật lý",
+     "at": 18,
+     "sm": true
+    },
+    {
+     "text": "đến từ người vừa biết mình tính gì",
+     "at": 19,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 20,
+   "title": "MÁY MẠNH LÊN · CUỐI 1944",
+   "srcnote": "B. J. ARCHER · LA-UR-21-20164 (LANL) · N. LEWIS · TRINITY BY THE NUMBERS (LANL)",
+   "rows": [
+    {
+     "k": "GỢI Ý",
+     "v": "JOHNSTON · NHÂN 3 SỐ MỘT LẦN",
+     "at": 21
+    },
+    {
+     "k": "ĐÀM PHÁN",
+     "v": "NELSON ↔ IBM",
+     "at": 22
+    },
+    {
+     "k": "RIÊNG LOS ALAMOS",
+     "v": "2 MÁY CHIA ĐƯỢC",
+     "at": [
+      22,
+      "chia"
+     ]
+    },
+    {
+     "k": "TRƯỚC ĐÓ",
+     "v": "TRA THẺ NGHỊCH ĐẢO RỒI NHÂN",
+     "at": 23
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 24,
+   "items": [
+    {
+     "text": "NHỮNG CÁI TÊN VỀ SAU",
+     "at": 24,
+     "sm": true
+    },
+    {
+     "text": "JOHN KEMENY → BASIC",
+     "at": 25,
+     "acc": true
+    },
+    {
+     "text": "RICHARD HAMMING → MÃ SỬA LỖI",
+     "at": 27
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 29,
+   "text": "…experiments that were impossible in the laboratory were going to be possible with computers.",
+   "by": "RICHARD HAMMING · QUA N. LEWIS · TRINITY BY THE NUMBERS (LANL)",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 29,
+   "typeAt": [
+    29,
+    "thí"
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 30,
+   "text": "HẠN CHÓT",
+   "sub": "CẢ HỆ THỐNG BỊ ĐẨY TỚI GIỚI HẠN"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 07",
+  "t": "THẺ TRẮNG, THẺ XANH, THẺ VÀNG"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

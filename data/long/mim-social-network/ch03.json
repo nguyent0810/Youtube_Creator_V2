@@ -1,0 +1,241 @@
+{
+ "title": "Đường nối ra ngoài trường",
+ "lines": [
+  {
+   "t": "Đến tháng 3 năm 2004, TheFacebook đã có chỗ đứng tại Columbia, Stanford và Yale.",
+   "p": 0.8
+  },
+  "Cùng thời điểm, Crimson ghi người đăng ký thứ 10.000 đã xuất hiện.",
+  "Một mạng chỉ hữu ích khi bạn thấy người mình muốn tìm cũng ở trong đó.",
+  "Một tính năng đầu tiên tên Coursematch cho phép người dùng xem bạn bè học lớp nào trong học kỳ.",
+  "Coursematch nghĩa là ghép theo môn học, tức dùng lịch học như một mối nối có thể nhìn thấy.",
+  "Tính năng này cho thấy mạng không chỉ lưu tên và ảnh.",
+  "Nó còn tổ chức thông tin quanh những nhịp sinh hoạt rất gần, như một lớp học chung.",
+  "Khi Zuckerberg thi cuối kỳ vào tháng 5 năm 2004, TheFacebook đã mở rộng trên toàn quốc và gần 100.000 người dùng, theo Crimson.",
+  "Sau kỳ thi, nhóm gồm Zuckerberg, Dustin Moskovitz, Andrew McCollum và các thực tập sinh đi Palo Alto.",
+  "Tháng 6 năm 2004, công ty đổi tên thành Facebook.",
+  "Các mốc này kể sự tăng trưởng của dịch vụ, chứ không cho ta đọc được suy nghĩ của từng người trong nhóm.",
+  "Trên bản đồ kết nối, ghim thứ tư là Coursematch: một đường nối không chỉ qua tên, mà qua việc bạn đang học cùng ai.",
+  "Từ đây, mạng đã không còn chỉ là một danh bạ trong một trường, mà là một hạ tầng có thể lặp lại ở nhiều nơi."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "ĐƯỜNG NỐI\nRA NGOÀI TRƯỜNG",
+   "sub": "03–06.2004 · MỞ RỘNG",
+   "bg": "campus",
+   "titleAt": [
+    0,
+    "columbia"
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": [
+    1,
+    "thứ"
+   ],
+   "bg": "yard",
+   "items": [
+    {
+     "year": "03.2004",
+     "text": "10.000 ĐĂNG KÝ"
+    },
+    {
+     "year": "05.2004",
+     "text": "GẦN 100.000 NGƯỜI"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    2,
+    "mạng"
+   ],
+   "items": [
+    {
+     "text": "NGƯỜI BẠN MUỐN TÌM",
+     "at": [
+      2,
+      "mạng"
+     ],
+     "acc": true
+    },
+    {
+     "text": "CŨNG PHẢI Ở TRONG MẠNG",
+     "at": [
+      2,
+      "mạng"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": [
+    3,
+    "coursematch"
+   ],
+   "text": "COURSEMATCH",
+   "sub": "XEM BẠN BÈ HỌC LỚP NÀO"
+  },
+  {
+   "type": "org",
+   "at": [
+    4,
+    "môn"
+   ],
+   "nodes": [
+    {
+     "id": "course",
+     "t": "MÔN HỌC",
+     "s": "NHỊP CHUNG",
+     "at": [
+      4,
+      "môn"
+     ]
+    },
+    {
+     "id": "friend",
+     "t": "BẠN BÈ",
+     "s": "MỐI NỐI",
+     "p": "course",
+     "at": [
+      4,
+      "môn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": [
+    6,
+    "lớp"
+   ],
+   "vid": "7490429",
+   "veil": 0.62,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "KHUÔN VIÊN ĐẠI HỌC MINH HỌA · KHÔNG PHẢI HARVARD",
+     "at": [
+      6,
+      "lớp"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": [
+    7,
+    "gần"
+   ],
+   "from": 0,
+   "to": 100000,
+   "suffix": " NGƯỜI",
+   "label": "GẦN ĐÚNG · THEO CRIMSON",
+   "year": false
+  },
+  {
+   "type": "timeline",
+   "at": [
+    9,
+    "facebook"
+   ],
+   "bg": "memorial24",
+   "items": [
+    {
+     "year": "05.2004",
+     "text": "NHÓM ĐI PALO ALTO"
+    },
+    {
+     "year": "06.2004",
+     "text": "ĐỔI TÊN FACEBOOK"
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": [
+    10,
+    "mốc"
+   ],
+   "img": "campus",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "MỞ RỘNG",
+    "v": "MỐC SỰ KIỆN KHÔNG ĐỌC Ý NGHĨ",
+    "at": [
+     10,
+     "mốc"
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": [
+    11,
+    "bản"
+   ],
+   "title": "BẢN ĐỒ KẾT NỐI",
+   "srcnote": "MỖI CHƯƠNG THÊM MỘT ĐƯỜNG",
+   "rows": [
+    {
+     "k": "MỞ ĐẦU",
+     "v": "SO CẶP ẢNH",
+     "at": [
+      11,
+      "bản"
+     ]
+    },
+    {
+     "k": "1 · QUY TẮC",
+     "v": "CỬA KỶ LUẬT",
+     "at": [
+      11,
+      "bản"
+     ]
+    },
+    {
+     "k": "2 · CỔNG VÀO",
+     "v": "EMAIL TRƯỜNG",
+     "at": [
+      11,
+      "bản"
+     ]
+    },
+    {
+     "k": "3 · MỞ RỘNG",
+     "v": "LỚP HỌC CHUNG",
+     "at": [
+      11,
+      "bản"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": [
+    12,
+    "hạ"
+   ],
+   "text": "MỘT DANH BẠ ĐÃ THÀNH\nHẠ TẦNG NHƯ THẾ NÀO?"
+  }
+ ],
+ "topic": "mim-social-network",
+ "chapter": 3,
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "ĐƯỜNG NỐI RA NGOÀI TRƯỜNG"
+ }
+}

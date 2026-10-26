@@ -1,0 +1,267 @@
+{
+ "title": "Computer là một nghề",
+ "lines": [
+  {
+   "t": "Ở Langley, computer là một nghề.",
+   "p": 0.8
+  },
+  "Trong thập niên 1940, Langley tuyển phụ nữ Mỹ gốc Phi có bằng đại học vào làm computer.",
+  "Ban đầu, họ bị gom vào một khu tách biệt mang tên West Area Computers.",
+  "Công việc nghe rất khô.",
+  "Họ đọc dữ liệu từ những cuộn phim ghi, tính toán, rồi vẽ kết quả lên đồ thị.",
+  "Dụng cụ của họ là thước trượt và máy tính cơ.",
+  "Mỗi con số đi qua tay một người trước khi thành một đường cong trên giấy.",
+  "Trang lịch sử của NASA ghi rằng phân biệt chủng tộc khi ấy là chính sách ở miền Nam và trong quân đội Mỹ.",
+  "Các nữ computer da đen phải dùng khu ăn uống và nhà vệ sinh tách riêng, và gặp rào cản trong công việc.",
+  "Họ làm ra những con số cho cả trung tâm, nhưng bữa trưa thì phải ăn ở một chỗ riêng.",
+  "Johnson chỉ ở đó vài tuần.",
+  "Bà được chuyển sang Phân ban Nghiên cứu Bay, làm việc với kỹ sư Henry Pearson.",
+  "Từ đó, những bài toán trên bàn bà bắt đầu đi gần hơn tới bầu trời.",
+  "Dòng thứ ba trong sổ: con số đáng tin cần cả một nghề làm nền, từ đọc dữ liệu tới vẽ đồ thị.",
+  "Và nghề ấy, ở Langley, có những người phụ nữ phải ngồi tách riêng ở khu phía tây.",
+  "Ở Phân ban Nghiên cứu Bay, bài toán lớn đầu tiên của Johnson không nằm trên quỹ đạo, mà nằm ngay phía sau một chiếc máy bay."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "COMPUTER LÀ\nMỘT NGHỀ",
+   "sub": "THẬP NIÊN 1940 · LANGLEY",
+   "bg": "kj1985",
+   "titleAt": [
+    0,
+    "langley"
+   ]
+  },
+  {
+   "type": "photo",
+   "at": [
+    1,
+    "1940"
+   ],
+   "img": "kjComp",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "NASA HUMAN COMPUTERS",
+    "v": "ẢNH: NASA",
+    "at": [
+     1,
+     "1940"
+    ]
+   },
+   "kin": [
+    {
+     "text": "PHỤ NỮ MỸ GỐC PHI CÓ BẰNG ĐẠI HỌC",
+     "at": [
+      1,
+      "1940"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": [
+    2,
+    "west"
+   ],
+   "text": "WEST AREA COMPUTERS",
+   "sub": "KHU LÀM VIỆC TÁCH BIỆT"
+  },
+  {
+   "type": "broll",
+   "at": [
+    4,
+    "đọc"
+   ],
+   "vid": "6272049",
+   "veil": 0.62,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "ĐỌC PHIM DỮ LIỆU · TÍNH · VẼ ĐỒ THỊ",
+     "at": [
+      4,
+      "đọc"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    5,
+    "thước"
+   ],
+   "items": [
+    {
+     "text": "THƯỚC TRƯỢT · MÁY TÍNH CƠ",
+     "at": [
+      5,
+      "thước"
+     ],
+     "acc": true
+    },
+    {
+     "text": "MỖI CON SỐ ĐI QUA TAY MỘT NGƯỜI",
+     "at": [
+      5,
+      "thước"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": [
+    7,
+    "phân"
+   ],
+   "img": "ai01",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "PHÂN BIỆT CHỦNG TỘC · NASA HISTORY",
+    "v": "CHÍNH SÁCH Ở MIỀN NAM VÀ TRONG QUÂN ĐỘI",
+    "at": [
+     7,
+     "phân"
+    ]
+   },
+   "illus": "ẢNH MINH HỌA",
+   "credit": false,
+   "kin": [
+    {
+     "text": "KHU ĂN VÀ NHÀ VỆ SINH TÁCH RIÊNG",
+     "at": [
+      7,
+      "phân"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "org",
+   "at": [
+    10,
+    "johnson"
+   ],
+   "nodes": [
+    {
+     "id": "wac",
+     "t": "WEST COMPUTERS",
+     "s": "VÀI TUẦN",
+     "at": [
+      10,
+      "johnson"
+     ]
+    },
+    {
+     "id": "frd",
+     "t": "FLIGHT RESEARCH DIVISION",
+     "s": "VỚI HENRY PEARSON",
+     "p": "wac",
+     "at": [
+      11,
+      "phân"
+     ]
+    },
+    {
+     "id": "stf",
+     "t": "SPACE TASK FORCE",
+     "s": "1958",
+     "p": "frd",
+     "at": [
+      12,
+      "từ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": [
+    12,
+    "bầu"
+   ],
+   "vid": "8197039",
+   "veil": 0.62,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "TỪ BẢNG SỐ TỚI BẦU TRỜI",
+     "at": [
+      12,
+      "bầu"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": [
+    13,
+    "dòng"
+   ],
+   "title": "SỔ CỦA MỘT CON SỐ ĐÁNG TIN",
+   "srcnote": "MỖI CHẶNG ĐỜI THÊM MỘT DÒNG",
+   "rows": [
+    {
+     "k": "HỎI",
+     "v": "VÌ SAO MỘT CON SỐ ĐÁNG TIN?",
+     "at": [
+      13,
+      "dòng"
+     ]
+    },
+    {
+     "k": "1 · NỀN",
+     "v": "NGƯỜI ĐƯỢC RÈN KỸ TỪ NHỎ",
+     "at": [
+      13,
+      "dòng"
+     ]
+    },
+    {
+     "k": "2 · VIỆC",
+     "v": "ĐƯỢC TRAO ĐÚNG BÀI TOÁN",
+     "at": [
+      13,
+      "dòng"
+     ]
+    },
+    {
+     "k": "3 · NGHỀ",
+     "v": "ĐỌC DỮ LIỆU · TÍNH · VẼ ĐỒ THỊ",
+     "at": [
+      13,
+      "dòng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": [
+    15,
+    "bài"
+   ],
+   "text": "BÀI TOÁN ĐẦU TIÊN\nNẰM SAU ĐUÔI MÁY BAY"
+  }
+ ],
+ "topic": "mim-katherine-johnson",
+ "chapter": 3,
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "COMPUTER LÀ MỘT NGHỀ"
+ }
+}

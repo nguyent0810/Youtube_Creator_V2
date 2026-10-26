@@ -234,12 +234,12 @@ CH["ch21"] = {"hud": {"k": "PHẦN CUỐI", "t": "DẤU HỎI"}, "bgm": {"mood":
 ]}
 
 SPEC = {
-    "title": "Watson Thắng Jeopardy!: Cỗ Máy Trả Lời “Toronto” Và Bài Học Về Độ Tự Tin",
+    "title": "Watson Thắng Jeopardy! 2011: Cỗ Máy Trả Lời “Toronto?????”",
     "channel": "MIM", "theme": "lab", "accent": "#22d3ee", "master": True, "endcard": 20, "autoTr": True, "beat2": True,
     "acc": ["watson", "toronto", "tự", "tin", "máy", "chắc", "thắng", "sai"],
     "say": SAY, "imgs": {}, "chapters": [f"ch{i:02d}" for i in range(22)],
     "youtube": {
-        "titles": ["Watson Thắng Jeopardy!: Cỗ Máy Trả Lời “Toronto” Và Bài Học Về Độ Tự Tin",
+        "titles": ["Watson Thắng Jeopardy! 2011: Cỗ Máy Trả Lời “Toronto?????”",
                    "Ngày Máy Tính Thắng Hai Nhà Vô Địch Đố Vui: IBM Watson, 2011",
                    "Từ Jeopardy! Tới Bệnh Viện: Watson Thắng Trên Truyền Hình, Rồi Vấp Ngoài Đời Thật"],
         "summary": "Tháng 2/2011, cỗ máy Watson của IBM thắng hai nhà vô địch trò đố vui Jeopardy! trên truyền hình Mỹ, dù từng trả lời “Toronto” cho "

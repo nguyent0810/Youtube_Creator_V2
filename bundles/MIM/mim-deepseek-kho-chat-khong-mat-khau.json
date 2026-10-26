@@ -1,0 +1,29 @@
+{
+  "bgm": "hyperfun.mp3",
+  "broll_queries": [],
+  "channel": "MIM",
+  "created_at": "2026-10-21T02:40:24Z",
+  "description": "Ngày 29/01/2025, nhóm Wiz Research (bài của Gal Nagli) công bố phát hiện một cơ sở dữ liệu ClickHouse của DeepSeek mở hoàn toàn, không cần xác thực, trên hai tên miền phụ của DeepSeek (cổng 9000). Bảng log_stream có hơn một triệu dòng nhật ký, gồm lịch sử trò chuyện, khoá bí mật và chi tiết hệ thống phía sau. Wiz báo ngay cho DeepSeek và DeepSeek nhanh chóng đóng lại (theo Wiz). Bài không nêu có ai khác đã truy cập hay chưa. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện. Thông tin theo nguồn đã ghi, đọc ngày 20/10/2026; chưa có bản kiểm chứng riêng của kênh (data/long/mim-ai-chat-privacy chưa có factcheck.md).\n\nBản đầy đủ: https://youtu.be/ejsjefnJQbI (công khai từ 20:00 ngày 23/11).\n\nNguồn:\nhttps://www.wiz.io/blog/wiz-research-uncovers-exposed-deepseek-database-leak (đã đọc 20/10: 29/01/2025, Gal Nagli, 'completely open and unauthenticated', hơn một triệu dòng log_stream, chat history + secret keys + backend details, Wiz báo và DeepSeek nhanh chóng đóng)\n\nVideo: Pexels — Nothing Ahead\nVideo: Pexels — RDNE Stock project\nVideo: Pexels — Monstera Production\nMusic: \"Hyperfun\" by Kevin MacLeod (incompetech.com). Licensed under Creative Commons: By Attribution 4.0 — http://creativecommons.org/licenses/by/4.0/\n\n#AI #CôngNghệ #MindInTheMachine",
+  "kind": "short",
+  "publish_at": "2026-11-25T12:00:00Z",
+  "render": {
+    "engine": "casefile",
+    "spec": "data/stier/specs/mim-deepseek-kho-chat-khong-mat-khau.json"
+  },
+  "schema_version": 1,
+  "script": "Một kho dữ liệu chat không cần mật khẩu. Ngày hai mươi chín tháng một 2025, nhóm nghiên cứu Wiz công bố một phát hiện. Một cơ sở dữ liệu của DeepSeek mở toang trên mạng, không đòi xác thực. Nhóm Wiz tự chạy được lệnh trên đó, ngay trong trình duyệt. Nó nằm trên hai tên miền phụ của chính DeepSeek. Bên trong có hơn một triệu dòng nhật ký. Trong đó có lịch sử trò chuyện, khoá bí mật, và chi tiết của hệ thống phía sau. Wiz báo ngay, và DeepSeek nhanh chóng đóng lại. Kho không cần mật khẩu, nên chẳng ai phải phá khoá.",
+  "slug": "mim-deepseek-kho-chat-khong-mat-khau",
+  "source_note": "https://www.wiz.io/blog/wiz-research-uncovers-exposed-deepseek-database-leak (đã đọc 20/10: 29/01/2025, Gal Nagli, 'completely open and unauthenticated', hơn một triệu dòng log_stream, chat history + secret keys + backend details, Wiz báo và DeepSeek nhanh chóng đóng)",
+  "tags": [
+    "deepseek",
+    "wiz research",
+    "lộ dữ liệu ai",
+    "quyền riêng tư ai",
+    "chatgpt",
+    "trí tuệ nhân tạo",
+    "mind in the machine"
+  ],
+  "thumbnail_text": "",
+  "title": "Ngày 29/01/2025, Wiz công bố cơ sở dữ liệu DeepSeek mở không cần xác thực, chứa lịch sử chat",
+  "voice": "Thanh Bình"
+}

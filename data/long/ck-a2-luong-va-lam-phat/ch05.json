@@ -1,0 +1,263 @@
+{
+ "title": "Năm hai nghìn không trăm ba mươi sáu",
+ "lines": [
+  {
+   "t": "Mười năm nữa, năm hai nghìn không trăm ba mươi sáu.",
+   "p": 0.8
+  },
+  "Anh Tuấn bốn mươi tư tuổi.",
+  {
+   "t": "Muốn có đúng sức mua của mười triệu năm hai nghìn không trăm mười sáu, anh cần bao nhiêu?",
+   "p": 1.0
+  },
+  "Mình không đoán được lạm phát mười năm tới.",
+  "Không ai đoán chắc được.",
+  {
+   "t": "Nên mình thử ba mức giả định: ba, bốn, và năm phần trăm mỗi năm.",
+   "p": 1.0
+  },
+  "Với ba phần trăm, gần bằng mức bình quân mười năm qua, anh cần khoảng mười tám triệu rưỡi.",
+  "Với bốn phần trăm, khoảng hai mươi triệu bốn.",
+  {
+   "t": "Với năm phần trăm, khoảng hai mươi hai triệu rưỡi.",
+   "p": 1.0
+  },
+  "Hai mươi hai triệu rưỡi, chỉ để đứng yên.",
+  {
+   "t": "Chỉ để mua được cái giỏ mà mười triệu từng mua.",
+   "p": 1.0
+  },
+  {
+   "t": "Nghe đáng sợ quá. Vậy là ai cũng sẽ nghèo đi à?",
+   "ask": 1
+  },
+  "Không hẳn.",
+  "Mười năm qua, lương tối thiểu tăng nhanh hơn giá cả, và năm nay thu nhập bình quân cũng vậy.",
+  {
+   "t": "Lạm phát chỉ làm bạn nghèo đi khi thu nhập của bạn tăng chậm hơn nó.",
+   "p": 1.0
+  },
+  "Thử với anh Tuấn, lương mười ba triệu hôm nay.",
+  "Nếu mỗi năm lương anh tăng đều bảy phần trăm, năm hai nghìn không trăm ba mươi sáu anh có khoảng hai mươi lăm triệu sáu.",
+  "Cao hơn cả mức hai mươi hai triệu rưỡi của kịch bản giá tăng nhanh nhất.",
+  "Còn nếu lương chỉ tăng ba phần trăm mỗi năm, anh có khoảng mười bảy triệu rưỡi.",
+  {
+   "t": "Thấp hơn cả mức mười tám triệu rưỡi của kịch bản giá tăng chậm nhất.",
+   "p": 1.0
+  },
+  "Còn với tiền để dành thì chuyện khác một chút.",
+  "Tiền nằm yên trong ngăn kéo chắc chắn thua lạm phát.",
+  "Tiền gửi tiết kiệm có lãi, nhưng thứ quan trọng là phần lãi còn lại sau khi trừ giá cả tăng.",
+  {
+   "t": "Phần ấy gọi là lãi thực.",
+   "p": 1.0
+  },
+  "Vậy nên câu hỏi đúng không phải là lạm phát năm nay bao nhiêu.",
+  "Mà là: lương của tôi, và tiền để dành của tôi, có chạy nhanh hơn lạm phát của chính tôi không?",
+  "Câu ấy, bạn tự trả lời được bằng ba con số."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "CHƯƠNG NĂM",
+   "title": "NĂM 2036",
+   "sub": "BA MỨC GIẢ ĐỊNH · KHÔNG PHẢI DỰ BÁO",
+   "vid": "37127207",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Mười"
+   ]
+  },
+  {
+   "type": "question",
+   "at": 2,
+   "text": "Năm 2036, bao nhiêu mới bằng\nsức mua 10 triệu năm 2016?"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "KHÔNG AI ĐOÁN CHẮC LẠM PHÁT",
+     "at": 3
+    },
+    {
+     "text": "BA MỨC GIẢ ĐỊNH: 3 · 4 · 5%/NĂM",
+     "at": 5,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 6,
+   "title": "CẦN BAO NHIÊU NĂM 2036 (TRIỆU/THÁNG)",
+   "unit": "GIẢ ĐỊNH · KHÔNG PHẢI DỰ BÁO",
+   "items": [
+    {
+     "k": "2016",
+     "v": 10,
+     "lbl": "10",
+     "at": [
+      6,
+      "Với"
+     ]
+    },
+    {
+     "k": "2026",
+     "v": 13.8,
+     "lbl": "13,8",
+     "at": [
+      6,
+      "ba"
+     ]
+    },
+    {
+     "k": "2036 · 3%/NĂM",
+     "v": 18.5,
+     "lbl": "≈ 18,5",
+     "at": [
+      6,
+      "mười"
+     ]
+    },
+    {
+     "k": "2036 · 4%/NĂM",
+     "v": 20.4,
+     "lbl": "≈ 20,4",
+     "at": [
+      7,
+      "hai"
+     ]
+    },
+    {
+     "k": "2036 · 5%/NĂM",
+     "v": 22.5,
+     "lbl": "≈ 22,5",
+     "at": [
+      8,
+      "hai"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 9,
+   "text": "22,5 TRIỆU · CHỈ ĐỂ ĐỨNG YÊN",
+   "sub": "MUA ĐÚNG GIỎ HÀNG CỦA 10 TRIỆU NĂM 2016"
+  },
+  {
+   "type": "question",
+   "at": 11,
+   "text": "Vậy là ai cũng\nsẽ nghèo đi à?"
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "KHÔNG HẲN",
+     "at": 12,
+     "acc": true
+    },
+    {
+     "text": "chỉ nghèo đi khi thu nhập tăng chậm hơn giá",
+     "at": 14,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 15,
+   "title": "LƯƠNG 13 TRIỆU, TĂNG ĐỀU MỖI NĂM → 2036 (TRIỆU)",
+   "unit": "GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "TĂNG 3%/NĂM",
+     "v": 17.5,
+     "lbl": "≈ 17,5",
+     "at": 18
+    },
+    {
+     "k": "CẦN (GIÁ +3%)",
+     "v": 18.5,
+     "lbl": "≈ 18,5",
+     "at": 19
+    },
+    {
+     "k": "CẦN (GIÁ +5%)",
+     "v": 22.5,
+     "lbl": "≈ 22,5",
+     "at": 17
+    },
+    {
+     "k": "TĂNG 7%/NĂM",
+     "v": 25.6,
+     "lbl": "≈ 25,6",
+     "at": 16,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 20,
+   "vid": "7710771",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "TIỀN TRONG NGĂN KÉO · CHẮC CHẮN THUA",
+     "at": 21,
+     "sm": true
+    },
+    {
+     "text": "LÃI THỰC = LÃI − MỨC TĂNG GIÁ",
+     "at": 22,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 24,
+   "mythLab": "KHÔNG PHẢI",
+   "myth": "LẠM PHÁT NĂM NAY BAO NHIÊU?",
+   "truthLab": "MÀ LÀ",
+   "truth": "LƯƠNG VÀ TIỀN ĐỂ DÀNH CÓ NHANH HƠN LẠM PHÁT CỦA TÔI?",
+   "strikeAt": [
+    25,
+    "Mà"
+   ],
+   "truthAt": [
+    25,
+    "lương"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 26,
+   "items": [
+    {
+     "text": "TỰ TRẢ LỜI BẰNG BA CON SỐ",
+     "at": 26,
+     "acc": true,
+     "fx": "marker"
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "NĂM 2036"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

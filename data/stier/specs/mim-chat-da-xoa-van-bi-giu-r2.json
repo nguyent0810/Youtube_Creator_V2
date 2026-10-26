@@ -1,0 +1,227 @@
+{
+ "theme": "mim",
+ "title": "Ngày 13/05/2025, thẩm phán Mỹ ra lệnh OpenAI giữ lại cả dữ liệu chat người dùng đã xoá",
+ "description": "Ngày 13/05/2025, thẩm phán Ona T. Wang (Toà án Liên bang quận Nam New York), trong vụ The New York Times và các báo kiện OpenAI, ra lệnh OpenAI giữ lại dữ liệu đầu ra ChatGPT vốn sẽ bị xoá, gồm cả chat người dùng đã xoá. OpenAI phản đối công khai (đơn phản đối 03/06/2025; COO Brad Lightcap gọi yêu cầu của các báo là rộng quá mức, không cần thiết). Nghĩa vụ giữ thêm dữ liệu mới chấm dứt từ 26/09/2025 theo thoả thuận được duyệt ngày 09/10/2025; OpenAI cho biết đã lưu một phần dữ liệu lịch sử từ tháng 4 đến tháng 9/2025 và phần này vẫn còn. Theo OpenAI, hàng trăm triệu người dùng không phải bên trong vụ nhưng chat của họ nằm trong phạm vi lệnh; lệnh không áp dụng với Enterprise, Edu và một số chế độ không lưu dữ liệu. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện. Thông tin theo nguồn đã ghi, đọc ngày 20/10/2026; chưa có bản kiểm chứng riêng của kênh.\n\nBản đầy đủ: https://youtu.be/ejsjefnJQbI (công khai từ 20:00 ngày 23/11).",
+ "tags": [
+  "new york times openai",
+  "lệnh toà ai",
+  "quyền riêng tư ai",
+  "chatgpt",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "AI QUANH TA",
+ "sub": "2025",
+ "acc": [
+  "xoá",
+  "thẩm",
+  "phán",
+  "giữ",
+  "lại"
+ ],
+ "lines": [
+  "Người dùng xoá chat, thẩm phán bảo giữ lại.",
+  "Ngày mười ba tháng năm 2025, thẩm phán Ona Wang ra lệnh trong vụ New York Times kiện OpenAI.",
+  "Lệnh buộc giữ lại dữ liệu vốn sẽ bị xoá, cả chat đã xoá.",
+  "Bình thường, OpenAI xoá chúng khỏi hệ thống trong ba mươi ngày.",
+  "Tháng sáu, OpenAI phản đối công khai, gọi yêu cầu của báo là rộng quá mức.",
+  "Theo OpenAI, hàng trăm triệu người dùng không phải bên nào trong vụ, nhưng chat của họ nằm trong lệnh.",
+  "Từ ngày hai mươi sáu tháng chín, OpenAI không phải giữ thêm.",
+  "Chat xoá trong thời gian lệnh hiệu lực, một phần bản đã giữ vẫn còn."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CHAT ĐÃ XOÁ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "vẫn bị giữ lại",
+     "at": [
+      0,
+      "giữ"
+     ],
+     "sm": true
+    }
+   ],
+   "at": 0,
+   "clip": "pexels:5637306",
+   "veil": 0.55
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "13.05.2025",
+   "day": "THẨM PHÁN ONA WANG RA LỆNH"
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Lệnh giữ dữ liệu",
+   "nodes": [
+    {
+     "text": "NEW YORK TIMES KIỆN OPENAI",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      2,
+      "Lệnh"
+     ],
+     "shape": "box",
+     "w": 780
+    },
+    {
+     "text": "GIỮ CẢ CHAT ĐÃ XOÁ",
+     "x": 0.5,
+     "y": 0.68,
+     "at": [
+      2,
+      "cả"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 740
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      2,
+      "cả"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "from": 0,
+   "to": 30,
+   "suffix": " NGÀY",
+   "label": "BÌNH THƯỜNG OPENAI XOÁ SAU",
+   "until": [
+    3,
+    "ba"
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 4,
+   "text": "Rộng quá mức và không cần thiết.",
+   "by": "BRAD LIGHTCAP · COO OPENAI · NÓI VỀ YÊU CẦU CỦA NYT · TRÍCH DỊCH",
+   "clip": "pexels:7812445",
+   "veil": 0.72
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "AI NẰM TRONG LỆNH",
+   "rows": [
+    {
+     "k": "BÊN TRONG VỤ KIỆN",
+     "v": "BÁO · OPENAI",
+     "at": [
+      5,
+      "bên"
+     ]
+    },
+    {
+     "k": "NẰM TRONG LỆNH",
+     "v": "THEO OPENAI: HÀNG TRĂM TRIỆU NGƯỜI DÙNG",
+     "at": [
+      5,
+      "chat"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 6,
+   "date": "26.09.2025",
+   "day": "HẾT NGHĨA VỤ GIỮ THÊM"
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "BẢN ĐÃ GIỮ VẪN CÒN",
+   "sub": "TRƯỚC NGÀY 26.09.2025"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "VẪN CÒN",
+     "at": [
+      7,
+      "vẫn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "những bản đã giữ trước đó",
+     "at": [
+      7,
+      "bản"
+     ],
+     "sm": true
+    }
+   ],
+   "at": [
+    7,
+    "vẫn"
+   ],
+   "clip": "pexels:8057893",
+   "veil": 0.6
+  }
+ ],
+ "sources": [
+  "https://www.malwarebytes.com/blog/news/2025/06/openai-forced-to-preserve-chatgpt-chats",
+  "https://cyberinsider.com/us-court-orders-openai-to-preserve-all-chatgpt-logs-indefinitely/",
+  "https://news.bloomberglaw.com/litigation/openai-continues-to-fight-discovery-order-over-privacy-concerns",
+  "https://engadget.com/ai/openai-no-longer-has-to-preserve-all-of-its-chatgpt-data-with-some-exceptions-192422093.html",
+  "OpenAI — How we're responding to The New York Times' data demands: https://openai.com/index/response-to-nyt-data-demands/"
+ ],
+ "say": {
+  "=AI": "ây ai",
+  "chatgpt": "chát gi pi ti",
+  "openai": "Ô-pần ây ai",
+  "google": "Gu-gồ",
+  "chatbot": "chát bót",
+  "chat": "chát",
+  "ona": "Ô-na",
+  "wang": "Oang",
+  "york": "Óc",
+  "times": "Tai",
+  "new": "Niu"
+ },
+ "rules": 2,
+ "mix": true,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.5
+  }
+ },
+ "sources_internal": [
+  "https://www.malwarebytes.com/blog/news/2025/06/openai-forced-to-preserve-chatgpt-chats (lệnh 13/05/2025 do thẩm phán Ona T. Wang ban hành, thư phản đối của OpenAI)",
+  "https://cyberinsider.com/us-court-orders-openai-to-preserve-all-chatgpt-logs-indefinitely/ ; https://news.bloomberglaw.com/litigation/openai-continues-to-fight-discovery-order-over-privacy-concerns (phản đối 03/06/2025, Lightcap)",
+  "https://engadget.com/ai/openai-no-longer-has-to-preserve-all-of-its-chatgpt-data-with-some-exceptions-192422093.html (chấm dứt 26/09/2025, duyệt 09/10/2025)",
+  "https://openai.com/index/response-to-nyt-data-demands/ (OpenAI, bản cập nhật 22/10/2025: Lightcap 'a sweeping and unnecessary demand' là nói về yêu cầu của NYT; 'obligations ... ended on September 26, 2025'; dữ liệu lịch sử tháng 4–9/2025). Lệnh toà trên docket 1:23-cv-11195 chưa đọc trực tiếp",
+  "Sửa 22/10/2026 theo KIEM-NGUON-B mục 8: Wang ra lệnh (không phải 'nhận yêu cầu'); 'hàng trăm triệu' là lời OpenAI; tháng 4–9/2025"
+ ],
+ "description_orig": "Ngày 13/05/2025, thẩm phán Ona T. Wang (Toà án Liên bang quận Nam New York), trong vụ The New York Times và các báo kiện OpenAI, ra lệnh OpenAI giữ lại dữ liệu đầu ra ChatGPT vốn sẽ bị xoá, gồm cả chat người dùng đã xoá. OpenAI phản đối công khai (đơn phản đối 03/06/2025; COO Brad Lightcap gọi lệnh là rộng quá mức, không cần thiết). Nghĩa vụ giữ thêm dữ liệu mới chấm dứt từ 26/09/2025 theo thoả thuận được duyệt ngày 09/10/2025; dữ liệu đã giữ trước đó vẫn còn, trừ vài ngoại lệ. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện. Thông tin theo nguồn đã ghi, đọc ngày 20/10/2026; chưa có bản kiểm chứng riêng của kênh (data/long/mim-ai-chat-privacy chưa có factcheck.md).\n\nBản đầy đủ: https://youtu.be/ejsjefnJQbI (công khai từ 20:00 ngày 23/11)."
+}

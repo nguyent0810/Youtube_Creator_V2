@@ -1,0 +1,194 @@
+{
+ "theme": "mim",
+ "title": "Năm 2008, 1.100 nòng súng bi sơn vẽ xong bức Mona Lisa trong chưa đầy một phần mười giây",
+ "description": "Tại sự kiện NVISION 08 của Nvidia (San Jose, tháng 8/2008), hai người dẫn chương trình MythBusters dựng cảnh so một cỗ máy bắn bi sơn từng viên với một cỗ máy 1.100 nòng bắn cùng lúc; cỗ máy thứ hai vẽ bức Mona Lisa trong chưa đầy 0,1 giây (theo bit-tech, Wikipedia: Nvision). Card đồ hoạ làm việc theo kiểu ấy: hàng nghìn phép tính nhỏ cùng một lúc. Đây là kể lại, không dùng video của sự kiện; hình minh hoạ lấy từ Pexels. Giọng đọc tổng hợp.\n\nBản đầy đủ: https://youtu.be/<ID-mim-ai-gpu> (công khai từ 20:00 ngày 16/11)",
+ "tags": [
+  "mythbusters",
+  "mona lisa",
+  "nvision 2008",
+  "tính toán song song",
+  "trí tuệ nhân tạo",
+  "gpu",
+  "nvidia",
+  "card đồ hoạ",
+  "mind in the machine"
+ ],
+ "kicker": "ĐỒ HOẠ MÁY TÍNH",
+ "sub": "NVISION · 2008",
+ "acc": [
+  "nghìn",
+  "nòng",
+  "cùng",
+  "lúc"
+ ],
+ "lines": [
+  "Một nghìn một trăm nòng súng bắn cùng lúc.",
+  "Năm hai nghìn không trăm linh tám, ở một sự kiện của Nvidia, hai người dẫn chương trình MythBusters dựng một thí nghiệm bằng súng bắn bi sơn.",
+  "Cỗ máy thứ nhất bắn từng viên một, chậm rãi vẽ ra một hình đơn giản.",
+  "Cỗ máy thứ hai có một nghìn một trăm nòng, bắn cùng một lúc.",
+  "Chưa tới một phần mười giây, bức Mona Lisa hiện ra trên tấm toan.",
+  "Từng viên bi là một điểm ảnh, và card đồ hoạ làm việc đúng như thế.",
+  "Một nghìn một trăm nòng, cùng một lúc: đó là cách một con chip vẽ."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "1.100 NÒNG SÚNG",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "bắn cùng một lúc",
+     "at": [
+      0,
+      "cùng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:2539566",
+   "veil": 0.5
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "NVISION · 2008",
+     "at": 1
+    },
+    {
+     "text": "MYTHBUSTERS · BI SƠN",
+     "at": [
+      1,
+      "MythBusters"
+     ],
+     "sm": true,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "HAI CỖ MÁY BẮN BI SƠN",
+   "cards": [
+    {
+     "k": "MÁY THỨ NHẤT",
+     "v": "TỪNG VIÊN",
+     "at": [
+      2,
+      "nhất"
+     ]
+    },
+    {
+     "k": "MÁY THỨ HAI",
+     "v": "1.100 NÒNG",
+     "at": [
+      3,
+      "nghìn"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "THEO BIT-TECH · KỂ LẠI, KHÔNG DÙNG VIDEO GỐC"
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 100,
+   "to": 100,
+   "prefix": "< ",
+   "suffix": " MILI GIÂY",
+   "label": "THỜI GIAN VẼ XONG MONA LISA",
+   "sub": {
+    "text": "CHƯA TỚI MỘT PHẦN MƯỜI GIÂY",
+    "at": [
+     4,
+     "phần"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Một viên bi = một điểm ảnh",
+   "nodes": [
+    {
+     "text": "1 viên bi",
+     "x": 0.5,
+     "y": 0.27,
+     "at": [
+      5,
+      "viên"
+     ]
+    },
+    {
+     "text": "1 điểm ảnh",
+     "x": 0.5,
+     "y": 0.5,
+     "at": [
+      5,
+      "điểm"
+     ],
+     "c": "acc",
+     "shape": "circle"
+    },
+    {
+     "text": "NGHÌN CÙNG LÚC",
+     "x": 0.5,
+     "y": 0.76,
+     "at": 6,
+     "shape": "none",
+     "w": 700
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      5,
+      "điểm"
+     ],
+     "bend": 0
+    },
+    {
+     "from": 1,
+     "to": 2,
+     "at": 6,
+     "bend": 0
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Nvision",
+  "bit-tech, bản tin NVISION 08 (CẦN KIỂM URL gốc)"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6,
+   "0": 0.35
+  }
+ },
+ "say": {
+  "nvidia": "En-vi-đi-a",
+  "mythbusters": "Mít-bớt-tơ",
+  "mona": "Mô-na",
+  "lisa": "Li-da",
+  "ng": "En-gờ"
+ },
+ "imgs": {}
+}

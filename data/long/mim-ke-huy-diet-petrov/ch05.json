@@ -1,0 +1,345 @@
+{
+ "title": "Ba giờ sáng ở Washington",
+ "lines": [
+  {
+   "t": "Ngày 9 tháng 11 năm 1979, bốn năm trước đêm ở Serpukhov.",
+   "p": 0.8
+  },
+  "Bộ chỉ huy Phòng không Bắc Mỹ, gọi tắt là NORAD, đặt trong lòng núi Cheyenne ở bang Colorado.",
+  "Hôm ấy, màn hình cảnh báo của họ hiện một cuộc tấn công tên lửa của Liên Xô.",
+  "Cùng lúc, hình ảnh ấy hiện ở Bộ chỉ huy Không quân Chiến lược và Trung tâm Chỉ huy Quân sự Quốc gia.",
+  "Lưu trữ An ninh Quốc gia, một viện nghiên cứu ở Washington, đã công bố hồ sơ giải mật về đêm ấy.",
+  "Họ dẫn lại hồi ký của Robert Gates, khi đó làm ở Hội đồng An ninh Quốc gia.",
+  "Theo hồi ký, cố vấn an ninh quốc gia Zbigniew Brzezinski bị đánh thức lúc ba giờ sáng.",
+  "Cuộc gọi đầu tiên báo khoảng hai trăm năm mươi tên lửa của Liên Xô.",
+  {
+   "t": "Cuộc gọi thứ hai: hai nghìn hai trăm tên lửa, một cuộc tấn công toàn diện.",
+   "p": 1.0
+  },
+  "Ông biết Tổng thống chỉ có chừng ba đến bảy phút để quyết định đánh trả.",
+  "Ông không đánh thức vợ, vì nghĩ rằng nửa tiếng nữa mọi người đều sẽ chết.",
+  "Ông định gọi Tổng thống Carter.",
+  "Bạn đang ở chỗ của ông.",
+  {
+   "t": "Bạn bấm số gọi Tổng thống, hay chờ thêm một chút?",
+   "p": 1.0
+  },
+  "Một phút trước khi ông định gọi, có cuộc gọi thứ ba.",
+  "Các hệ thống cảnh báo khác không thấy vụ phóng nào.",
+  {
+   "t": "Báo động giả.",
+   "p": 1.0
+  },
+  "Trong lúc ấy, mười máy bay tiêm kích đã cất cánh.",
+  "Sở chỉ huy bay khẩn cấp của Tổng thống cũng đã cất cánh, dù Tổng thống không có trên đó.",
+  "Báo chí khi ấy viết rằng một nhân viên đã nạp nhầm băng huấn luyện vào máy.",
+  "Hồ sơ giải mật thì khác.",
+  "Một phần mềm giả lập tấn công, dùng để thử máy tính, đã lọt sang màn hình cảnh báo thật.",
+  "Và chỉ huy NORAD về sau thừa nhận họ không tái tạo được đúng cách hệ thống đã hỏng.",
+  "Một cố vấn cấp cao của Bộ Ngoại giao Mỹ, Marshall Shulman, ghi lại rằng những báo động giả kiểu này không hề hiếm.",
+  "Ông còn lo vì người ta xử lý chúng quá dễ dãi.",
+  "Năm ngày sau, lãnh đạo Liên Xô Leonid Brezhnev gửi một bức thư riêng cho Carter.",
+  {
+   "t": "Sự cố này chứa đựng một mối nguy cực lớn.",
+   "q": 1,
+   "tr": 1
+  },
+  {
+   "t": "Tôi nghĩ ông sẽ đồng ý với tôi rằng, trong những việc như thế, không được có sai sót.",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Bảy tháng sau, nó lại đến.",
+  "Lần này, thủ phạm có giá bốn mươi sáu xu."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "CHƯƠNG NĂM",
+   "title": "BA GIỜ SÁNG\nỞ WASHINGTON",
+   "sub": "09.11.1979",
+   "bg": "cheyenne68",
+   "titleAt": [
+    0,
+    "ngày"
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 1,
+   "img": "cheyenne68",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.5,
+   "kin": [
+    {
+     "text": "BỘ CHỈ HUY PHÒNG KHÔNG BẮC MỸ",
+     "at": [
+      1,
+      "bộ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "trong lòng núi · bang Colorado",
+     "at": [
+      1,
+      "lòng"
+     ],
+     "sm": true
+    }
+   ],
+   "label": {
+    "k": "LỐI VÀO NORAD · NÚI CHEYENNE",
+    "v": "1968 · ẢNH CÔNG CỘNG",
+    "at": 1
+   }
+  },
+  {
+   "type": "photo",
+   "at": 2,
+   "img": "norad84",
+   "tone": "color",
+   "move": "out",
+   "veil": 0.55,
+   "illus": "ẢNH MINH HỌA · CHỤP NĂM 1984",
+   "kin": [
+    {
+     "text": "MÀN HÌNH: LIÊN XÔ TẤN CÔNG TÊN LỬA",
+     "at": [
+      2,
+      "màn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "cùng lúc ở Bộ chỉ huy Không quân Chiến lược + Trung tâm Chỉ huy Quân sự Quốc gia",
+     "at": 3,
+     "sm": true
+    }
+   ],
+   "label": {
+    "k": "PHÒNG CHỈ HUY NORAD",
+    "v": "ẢNH BỘ QUỐC PHÒNG MỸ · BOB SIMONS",
+    "at": 2
+   }
+  },
+  {
+   "type": "source",
+   "at": 4,
+   "source": "NATIONAL SECURITY ARCHIVE · EBB 371 · 01.03.2012",
+   "ref": "“THE 3 A.M. PHONE CALL: FALSE MISSILE ATTACK WARNING INCIDENTS, 1979–1980”",
+   "snippet": "…awakened on 9 November 1979, to be told that [[NORAD … was reporting a Soviet missile attack]].",
+   "hlAt": 6,
+   "seal": "HỒ SƠ GIẢI MẬT · DẪN HỒI KÝ R. GATES (1996)",
+   "sealAt": [
+    5,
+    "hồi"
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "from": 0,
+   "to": 250,
+   "suffix": " TÊN LỬA",
+   "until": [
+    7,
+    "mươi"
+   ],
+   "label": "CUỘC GỌI THỨ NHẤT · THEO HỒI KÝ",
+   "sub": {
+    "text": "QUA NSA EBB 371",
+    "at": 7
+   }
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "text": "2.200 TÊN LỬA",
+   "sub": "CUỘC GỌI THỨ HAI · “TẤN CÔNG TOÀN DIỆN” · THEO HỒI KÝ"
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "3–7 PHÚT ĐỂ TỔNG THỐNG QUYẾT ĐỊNH",
+     "at": [
+      9,
+      "quyết"
+     ],
+     "acc": true
+    },
+    {
+     "text": "không đánh thức vợ · theo hồi ký R. Gates",
+     "at": 10,
+     "sm": true
+    },
+    {
+     "text": "ÔNG ĐỊNH GỌI CARTER",
+     "at": 11
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 12,
+   "text": "Bạn gọi Tổng thống,\nhay chờ thêm một chút?\nBÁO LÊN   |   CHƯA"
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "CUỘC GỌI THỨ BA",
+     "at": 14,
+     "sm": true
+    },
+    {
+     "text": "CÁC HỆ THỐNG KHÁC: KHÔNG THẤY GÌ",
+     "at": 15,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 16,
+   "text": "BÁO ĐỘNG GIẢ",
+   "sub": "09.11.1979 · NORAD",
+   "white": true
+  },
+  {
+   "type": "photo",
+   "at": 17,
+   "img": "e4b",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.5,
+   "illus": "ẢNH MINH HỌA · CÙNG LOẠI MÁY BAY",
+   "kin": [
+    {
+     "text": "10 TIÊM KÍCH ĐÃ CẤT CÁNH",
+     "at": [
+      17,
+      "mười"
+     ]
+    },
+    {
+     "text": "SỞ CHỈ HUY BAY CẤT CÁNH · KHÔNG CÓ TỔNG THỐNG",
+     "at": [
+      18,
+      "sở"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "BOEING E-4B · SỞ CHỈ HUY BAY KHẨN CẤP",
+    "v": "ẢNH KHÔNG QUÂN MỸ",
+    "at": 17
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 19,
+   "title": "NGUYÊN NHÂN · HAI CÁCH KỂ",
+   "srcnote": "NSA EBB 371 · DẪN SAGAN 1993",
+   "rows": [
+    {
+     "k": "BÁO CHÍ 1979",
+     "v": "NẠP NHẦM BĂNG HUẤN LUYỆN",
+     "at": [
+      19,
+      "nạp"
+     ]
+    },
+    {
+     "k": "GIẢI MẬT",
+     "v": "GIẢ LẬP LỌT LÊN MÀN HÌNH THẬT",
+     "at": 21
+    },
+    {
+     "k": "CHỈ HUY NORAD",
+     "v": "KHÔNG TÁI TẠO ĐƯỢC LỖI",
+     "at": 22
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 23,
+   "items": [
+    {
+     "text": "“KHÔNG HỀ HIẾM”",
+     "at": [
+      23,
+      "hiếm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "Marshall Shulman · Bộ Ngoại giao Mỹ",
+     "at": 23,
+     "sm": true
+    },
+    {
+     "text": "và xử lý quá dễ dãi",
+     "at": 24,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 25,
+   "day": "THƯ RIÊNG BREZHNEV GỬI CARTER",
+   "date": "14.11.1979",
+   "sub": {
+    "text": "QUA ĐẠI SỨ DOBRYNIN · NSA EBB 371",
+    "at": 25
+   }
+  },
+  {
+   "type": "quote",
+   "at": 26,
+   "text": "…fraught with a tremendous danger.",
+   "by": "L. BREZHNEV · THƯ GỬI J. CARTER · 14.11.1979 · QUA NSA EBB 371",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 26,
+   "typeAt": [
+    26,
+    "sự"
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 27,
+   "text": "I think you will agree with me that there should be no errors in such matters.",
+   "by": "L. BREZHNEV · 14.11.1979",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 27,
+   "typeAt": [
+    27,
+    "tôi"
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 28,
+   "text": "46¢",
+   "sub": "THỦ PHẠM LẦN SAU · 06.1980"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "BA GIỜ SÁNG Ở WASHINGTON"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

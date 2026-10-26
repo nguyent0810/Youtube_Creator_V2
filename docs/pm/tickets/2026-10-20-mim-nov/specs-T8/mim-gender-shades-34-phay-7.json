@@ -1,0 +1,153 @@
+{
+ "theme": "mim",
+ "title": "Cùng một máy, mức sai chênh hơn 40 lần: nghiên cứu Gender Shades (2018)",
+ "description": "Năm 2018, Joy Buolamwini và Timnit Gebru thử ba hệ thống thương mại phân loại giới tính từ ảnh khuôn mặt (đoán nam hay nữ; đây KHÔNG phải bài thử nhận ra danh tính). Mức sai tệ nhất trong ba hệ thống: khoảng 0,8% với đàn ông da sáng, khoảng 34,7% với phụ nữ da sẫm màu. Một lý do thường được nhắc tới là dữ liệu huấn luyện có ít khuôn mặt của một nhóm người. 'Hơn 40 lần' là kênh tự tính (34,7 / 0,8 ≈ 43).\n\nGiọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\nBản đầy đủ (khoảng 10 phút): https://youtu.be/7daMUBWG6mU (công khai từ 20:00 ngày 30/11).",
+ "tags": [
+  "gender shades",
+  "thiên kiến ai",
+  "nhận diện khuôn mặt",
+  "buolamwini",
+  "công bằng trong ai",
+  "mind in the machine"
+ ],
+ "sub": "GENDER SHADES · 2018",
+ "acc": [
+  "bốn",
+  "mươi",
+  "sai",
+  "ai"
+ ],
+ "kicker": "KHUÔN MẶT VÀ AI",
+ "lines": [
+  "Cùng một máy, sai chênh hơn bốn mươi lần.",
+  "Năm hai nghìn không trăm mười tám, hai nhà nghiên cứu thử ba hệ thống đoán nam hay nữ từ ảnh mặt.",
+  "Với đàn ông da sáng, mức sai tệ nhất khoảng không phẩy tám phần trăm.",
+  "Với phụ nữ da sẫm màu, lên tới khoảng ba mươi bốn phẩy bảy phần trăm.",
+  "Một lý do thường được nhắc tới là dữ liệu huấn luyện có ít khuôn mặt của một nhóm người.",
+  "Đây là bài thử đoán giới tính, không phải nhận ra danh tính.",
+  "Cùng một máy, độ chính xác phụ thuộc vào việc bạn là ai."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CÙNG MỘT MÁY",
+     "at": 0.0
+    },
+    {
+     "text": "sai chênh hơn 40 lần",
+     "at": [
+      0,
+      "sai"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:8225802",
+   "veil": 0.55,
+   "ms": 1
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "MỨC SAI TỆ NHẤT · ĐOÁN NAM HAY NỮ",
+   "cards": [
+    {
+     "k": "ĐÀN ÔNG DA SÁNG",
+     "v": "0,8%",
+     "at": [
+      2,
+      "đàn"
+     ]
+    },
+    {
+     "k": "PHỤ NỮ DA SẪM MÀU",
+     "v": "34,7%",
+     "at": [
+      3,
+      "phụ"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "MỘT LÝ DO THƯỜNG ĐƯỢC NHẮC",
+   "nodes": [
+    {
+     "text": "ít khuôn mặt trong dữ liệu",
+     "x": 0.5,
+     "y": 0.22,
+     "at": [
+      4,
+      "ít"
+     ],
+     "w": 760
+    },
+    {
+     "text": "máy sai nhiều hơn",
+     "x": 0.5,
+     "y": 0.72,
+     "at": [
+      4,
+      "huấn"
+     ],
+     "c": "acc",
+     "w": 600
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      4,
+      "nhóm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "ĐOÁN GIỚI TÍNH",
+   "sub": "KHÔNG PHẢI NHẬN RA DANH TÍNH"
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "from": 1,
+   "to": 40,
+   "prefix": "HƠN ",
+   "suffix": " LẦN",
+   "label": "CHÊNH LỆCH MỨC SAI · KÊNH TỰ TÍNH",
+   "until": [
+    6,
+    "ai"
+   ]
+  }
+ ],
+ "sources": [
+  "https://proceedings.mlr.press/v81/buolamwini18a/buolamwini18a.pdf -- URL cần kiểm khi có mạng"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "imgs": {},
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {}
+}

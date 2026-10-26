@@ -116,12 +116,12 @@ CH["ch06"] = {"hud": {"k": "GIỚI HẠN", "t": "KHI NÀO KHÔNG ĐÚNG VỚI B�
 
 Y4 = C4["youtube"]
 SPEC = {
-    "title": "Quỹ Khẩn Cấp: Cần Bao Nhiêu, Mất Bao Lâu, Để Ở Đâu? Tờ Phiếu Ba Ô Trống",
+    "title": "Hoá Đơn Viện 15 Triệu: Quỹ Khẩn Cấp Cần Bao Nhiêu?",
     "channel": "CK", "accent": "#fbbf24", "master": True, "endcard": 25, "endcardSub": "VIDEO TIẾP THEO", "beat2": True,
     "acc": ["quỹ", "khẩn", "cấp", "đệm", "thiết", "yếu", "tháng"],
     "say": SAY, "imgs": {}, "chapters": [f"ch{i:02d}" for i in range(7)],
     "youtube": {
-        "titles": ["Quỹ Khẩn Cấp: Cần Bao Nhiêu, Mất Bao Lâu, Để Ở Đâu? Tờ Phiếu Ba Ô Trống",
+        "titles": ["Hoá Đơn Viện 15 Triệu: Quỹ Khẩn Cấp Cần Bao Nhiêu?",
                    "Một Hoá Đơn 15 Triệu: Vì Sao Cùng Mức Lương Mà Hai Người Đi Hai Ngả?",
                    "Quỹ Khẩn Cấp 3–6 Tháng: Tính Thế Nào Với Lương 12 Triệu?"],
         "summary": "Một hoá đơn viện phí 15 triệu, hai phiên bản của cùng một người: một bên có quỹ khẩn cấp, một bên phải quẹt thẻ và trả tối thiểu. "

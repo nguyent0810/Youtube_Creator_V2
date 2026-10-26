@@ -1,0 +1,282 @@
+{
+ "topic": "mim-turing-bombe",
+ "chapter": 7,
+ "hud": {
+  "k": "CHƯƠNG 07",
+  "t": "NGƯỜI Ở TRONG VÒNG LẶP"
+ },
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "7",
+   "k": "CHƯƠNG BẢY",
+   "title": "NGƯỜI TRONG\nVÒNG LẶP",
+   "sub": "1945 · SAU CHIẾN TRANH",
+   "bg": "bombe1945",
+   "titleAt": [
+    0,
+    "bombes"
+   ]
+  },
+  {
+   "type": "broll",
+   "at": [
+    1,
+    "outstation"
+   ],
+   "vid": "2915385",
+   "veil": 0.62,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "TỪ BLETCHLEY RA NGOÀI",
+     "at": [
+      1,
+      "outstation"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "at": [
+    2,
+    "sau"
+   ],
+   "geo": "atlantic",
+   "pins": [
+    {
+     "name": "Bletchley"
+    },
+    {
+     "name": "Eastcote"
+    },
+    {
+     "name": "Stanmore"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    3,
+    "gần"
+   ],
+   "items": [
+    {
+     "text": "CHỈ MỘT PHẦN CÒN LẠI",
+     "at": [
+      3,
+      "gần"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": [
+    3,
+    "2.000"
+   ],
+   "img": "bombeClose",
+   "tone": "bw",
+   "head": "BẢN VẼ BTM",
+   "side": {
+    "k": "GẦN 40 NĂM",
+    "h": "HỒ SƠ TRỞ VỀ SAU GẦN BỐN THẬP NIÊN",
+    "lines": [
+     {
+      "text": "HỒ SƠ TRỞ VỀ SAU GẦN BỐN THẬP NIÊN",
+      "at": [
+       3,
+       "2.000"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": [
+    4,
+    "nsa"
+   ],
+   "title": "SÁU RĂNG CỦA KHÓA",
+   "srcnote": "MỖI CHƯƠNG THÊM MỘT MẮT XÍCH",
+   "rows": [
+    {
+     "k": "BỨC THƯ",
+     "v": "NGƯỜI XỬ LÝ MÁY",
+     "at": [
+      4,
+      "nsa"
+     ]
+    },
+    {
+     "k": "KHÓA NGÀY",
+     "v": "ÁP LỰC THỜI GIAN",
+     "at": [
+      4,
+      "nsa"
+     ]
+    },
+    {
+     "k": "BA LAN",
+     "v": "CÁCH ĐẶT CÂU HỎI",
+     "at": [
+      4,
+      "nsa"
+     ]
+    },
+    {
+     "k": "NHÓM",
+     "v": "Ý TƯỞNG THÀNH PHƯƠNG PHÁP",
+     "at": [
+      4,
+      "nsa"
+     ]
+    },
+    {
+     "k": "CRIB VÀ MENU",
+     "v": "GIẢ THUYẾT ĐỂ THỬ",
+     "at": [
+      4,
+      "nsa"
+     ]
+    },
+    {
+     "k": "BOMBE",
+     "v": "LOẠI ĐƯỜNG SAI",
+     "at": [
+      4,
+      "nsa"
+     ]
+    },
+    {
+     "k": "WRNS",
+     "v": "KIỂM TRA ĐIỂM DỪNG",
+     "at": [
+      4,
+      "nsa"
+     ]
+    },
+    {
+     "k": "LỚP PHIM ẢNH",
+     "v": "AI CHỊU TRÁCH NHIỆM",
+     "at": [
+      4,
+      "nsa"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    5,
+    "nút"
+   ],
+   "items": [
+    {
+     "text": "LỊCH SỬ KHÔNG PHẢI PHÉP MÀU",
+     "at": [
+      5,
+      "nút"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": [
+    6,
+    "imitation"
+   ],
+   "img": "turing16",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "ALAN TURING",
+    "v": "PHIM CHỈ LÀ MỘT LỚP",
+    "at": [
+     6,
+     "imitation"
+    ]
+   },
+   "kin": [
+    {
+     "text": "KHÔNG DÙNG HÌNH PHIM",
+     "at": [
+      6,
+      "imitation"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": [
+    7,
+    "christopher"
+   ],
+   "text": "CHRISTOPHER LÀ HƯ CẤU",
+   "sub": "THEO TIME · MÁY NGOÀI ĐỜI LÀ BOMBE"
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    13,
+    "phương"
+   ],
+   "items": [
+    {
+     "text": "PHƯƠNG PHÁP CẦN NGƯỜI VẬN HÀNH",
+     "at": [
+      13,
+      "phương"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": [
+    19,
+    "trách"
+   ],
+   "text": "CÔNG CỤ BẮT ĐẦU TỪ GIẢ ĐỊNH NÀO,\nVÀ AI KIỂM TRA ĐIỂM DỪNG CUỐI?"
+  }
+ ],
+ "title": "Người ở trong vòng lặp",
+ "lines": [
+  {
+   "t": "Bombes không chỉ nằm ở Bletchley Park.",
+   "p": 0.8
+  },
+  "TNMOC ghi các outstation có Stanmore và Eastcote.",
+  "Sau chiến tranh, khoảng 50 máy được giữ lại tạm thời, còn phần lớn bị tháo dỡ.",
+  "Gần 40 năm sau chiến tranh, GCHQ mới bàn giao khoảng 2.000 tài liệu và bản vẽ BTM về Bombe cho Bletchley Park Trust, tạo điều kiện cho việc phục dựng.",
+  "Bảo tàng Mật mã Quốc gia của NSA viết rằng nhiều sử gia cho rằng khả năng đọc Enigma có thể đã rút ngắn chiến tranh tới hai năm.",
+  "Đó là nhận định của sử gia, không phải một nút bấm kỳ diệu của một cỗ máy.",
+  "Phim The Imitation Game giúp nhiều người gặp lại Alan Turing.",
+  "Nhưng theo Time, cái tên “Christopher” mà phim đặt cho cỗ máy là hư cấu; ngoài đời nó được gọi là Bombe, và bài báo nói có biệt danh Victory.",
+  "Sự khác biệt ấy đáng nhớ không phải để chê một bộ phim.",
+  "Nó nhắc ta rằng lịch sử thật rộng hơn một nhân vật chính.",
+  "Sáu răng của chiếc khóa đã khớp lại.",
+  "Khóa đổi liên tục tạo áp lực.",
+  "Ba Lan cung cấp nền móng.",
+  "Turing, Welchman và Clarke biến các ý tưởng thành phương pháp.",
+  "Crib và menu cho máy một nơi đáng thử.",
+  "BTM cùng những người vận hành biến phương pháp thành quy trình.",
+  "Và bước kiểm tra cuối cùng giữ cho một điểm dừng không bị nhầm thành sự thật.",
+  "Đó có lẽ là phần hiện đại nhất của câu chuyện.",
+  "Đừng chỉ hỏi một công cụ trả ra câu gì.",
+  "Hãy hỏi nó bắt đầu từ giả định nào, đã loại những đường nào, và ai có trách nhiệm kiểm tra điểm dừng cuối cùng."
+ ]
+}

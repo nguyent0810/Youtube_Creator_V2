@@ -1,0 +1,206 @@
+{
+ "theme": "mim",
+ "title": "Năm 1944, một nhà toán học dùng poker để hiểu tố bịp; 73 năm sau máy mới ngồi vào bàn",
+ "description": "Năm 1944, John von Neumann và Oskar Morgenstern dùng một ván poker đơn giản hoá trong cuốn sách nền móng của lý thuyết trò chơi để phân tích tố bịp. Tháng 1/2017, chương trình Libratus (Đại học Carnegie Mellon) thắng bốn người chơi poker chuyên nghiệp ở Pittsburgh. Nguồn: von Neumann & Morgenstern, Theory of Games and Economic Behavior (1944); CMU News 31/01/2017.\n\nVideo nói về nghiên cứu trí tuệ nhân tạo; không hướng dẫn chơi bài, không cổ vũ cờ bạc. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/Mz0HwBBSBbg (công khai từ 20:00 ngày 26/11).",
+ "tags": [
+  "von neumann",
+  "lý thuyết trò chơi",
+  "tố bịp",
+  "libratus",
+  "ai poker",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "LÝ THUYẾT TRÒ CHƠI · 1944",
+ "acc": [
+  "1944",
+  "tố",
+  "bịp",
+  "tỉ",
+  "lệ",
+  "bảy",
+  "mươi",
+  "ba"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Một nhà toán học chọn poker năm 1944.",
+  "Ông là John von Neumann, và ông muốn hiểu một hành vi rất con người: tố bịp.",
+  "Trong một ván poker đơn giản hoá, ông chỉ ra rằng muốn khó bị đọc vị, phải tố bịp theo một tỉ lệ nhất định.",
+  "Hơn bảy mươi năm sau, tháng 1 năm 2017, cỗ máy Libratus thắng bốn cao thủ poker.",
+  "Nó tố bịp đúng tần suất mà phép tính chỉ ra.",
+  "Từ trang sách tới sòng bài ở Pittsburgh, bảy mươi ba năm.",
+  "Poker vào toán học năm 1944, và mãi tới năm 2017 máy mới ngồi vào bàn."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "items": [
+    {
+     "text": "POKER · 1944",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "một nhà toán học · một ván bài",
+     "at": [
+      0,
+      "toán"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6219899",
+   "veil": 0.55
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Von Neumann",
+   "nodes": [
+    {
+     "text": "muốn hiểu: tố bịp",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      1,
+      "muốn"
+     ],
+     "shape": "none",
+     "w": 700
+    },
+    {
+     "text": "một tỉ lệ nhất định",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      2,
+      "tỉ"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 700
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "TỐ BỊP = MỘT TỈ LỆ",
+   "sub": "VÁN POKER ĐƠN GIẢN HOÁ · 1944"
+  },
+  {
+   "type": "timeline",
+   "at": 3,
+   "items": [
+    {
+     "year": "1944",
+     "text": "sách về lý thuyết trò chơi",
+     "at": [
+      3,
+      "Hơn"
+     ]
+    },
+    {
+     "year": "01.2017",
+     "text": "Libratus thắng bốn cao thủ",
+     "at": [
+      3,
+      "tháng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "ĐÚNG TẦN SUẤT",
+     "at": 4,
+     "acc": true
+    },
+    {
+     "text": "không cần giữ nét mặt",
+     "at": [
+      4,
+      "phép"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6813640",
+   "ms": 2,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 73,
+   "to": 73,
+   "suffix": " NĂM",
+   "label": "TỪ TRANG SÁCH TỚI SÒNG BÀI",
+   "sub": {
+    "text": "KÊNH TỰ TÍNH · 2017 TRỪ 1944",
+    "at": [
+     5,
+     "bảy"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "1944 → 2017",
+     "at": [
+      6,
+      "Poker"
+     ],
+     "acc": true
+    },
+    {
+     "text": "poker · toán học · cỗ máy",
+     "at": [
+      6,
+      "mãi"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6259147",
+   "ms": 4,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  }
+ ],
+ "sources": [
+  "https://press.princeton.edu/books/paperback/9780691130613/theory-of-games-and-economic-behavior",
+  "https://www.cmu.edu/news/stories/archives/2017/january/poker-event-ends.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "libratus": "Li-bra-tút",
+  "poker": "pô-cơ",
+  "Neumann": "Nôi-man",
+  "Pittsburgh": "Pít-bớc"
+ },
+ "imgs": {}
+}

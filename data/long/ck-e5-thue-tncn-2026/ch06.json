@@ -1,0 +1,225 @@
+{
+ "title": "Khi nào bảng tra không đúng với bạn",
+ "lines": [
+  {
+   "t": "Như mọi video của kênh, đây là phần nói rõ giới hạn.",
+   "p": 0.8
+  },
+  "Thứ nhất, lương đóng bảo hiểm.",
+  "Bảng giả định bạn đóng bảo hiểm trên toàn bộ lương gộp.",
+  {
+   "t": "Nếu mức đóng thấp hơn, phần được trừ nhỏ hơn, và thuế cao hơn bảng một chút.",
+   "p": 1.0
+  },
+  "Thứ hai, những khoản không chịu thuế.",
+  "Một số khoản phụ cấp, hay tiền lương làm thêm giờ và làm đêm, có thể được miễn theo quy định chi tiết.",
+  {
+   "t": "Có những khoản ấy, thuế của bạn sẽ thấp hơn bảng.",
+   "p": 1.0
+  },
+  "Thứ ba, thu nhập ngoài lương.",
+  "Làm thêm ở nơi khác, hợp đồng ngắn hạn, cho thuê nhà, đều có cách tính riêng.",
+  {
+   "t": "Bảng này chỉ nói về tiền lương ở một nơi.",
+   "p": 1.0
+  },
+  "Và một lưu ý về thời điểm.",
+  "Luật thuế mới có hiệu lực từ ngày một tháng bảy, nhưng phần tiền lương được áp dụng cho cả kỳ tính thuế năm hai nghìn không trăm hai mươi sáu.",
+  {
+   "t": "Nếu có tháng nào trong năm bị khấu trừ theo cách cũ, phần chênh sẽ được tính lại khi quyết toán.",
+   "p": 1.0
+  },
+  "Vậy thay vì một lời khuyên, đây là ba câu bạn có thể tự hỏi trước tờ phiếu lương của mình.",
+  "Một: mức lương đóng bảo hiểm của tôi là bao nhiêu, có bằng lương thật không?",
+  "Hai: người phụ thuộc của tôi đã được đăng ký chưa?",
+  {
+   "t": "Ba: năm nay có tháng nào tôi nhận một khoản lớn, để nhớ kiểm tra lúc quyết toán?",
+   "p": 1.0
+  },
+  "Quay lại bàn làm việc của anh Khang.",
+  "Ba tờ phiếu lương, cùng hai mươi lăm triệu.",
+  "Bảy trăm hai mươi bảy nghìn. Bốn trăm bốn mươi tám nghìn. Ba mươi tư nghìn.",
+  "Con số trên hợp đồng không đổi.",
+  {
+   "t": "Thứ đổi là những dòng nhỏ ở giữa, mà ít ai đọc.",
+   "p": 1.0
+  },
+  "Và những dòng nhỏ ấy, cộng cả năm, là gần năm triệu đồng của một gia đình.",
+  "Còn bạn, phiếu lương tháng này, dòng thuế ghi bao nhiêu?",
+  "Kể cho mình nghe ở phần bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "PHẦN CUỐI",
+   "title": "KHI NÀO BẢNG TRA\nKHÔNG ĐÚNG VỚI BẠN",
+   "sub": "PHẦN GIỮ Ở CUỐI MỖI VIDEO",
+   "vid": "8479054",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Như"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "BẢNG CÒN GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "1",
+     "v": "LƯƠNG ĐÓNG BH = LƯƠNG GỘP",
+     "at": 1
+    },
+    {
+     "k": "2",
+     "v": "KHÔNG CÓ KHOẢN MIỄN THUẾ",
+     "at": 4
+    },
+    {
+     "k": "3",
+     "v": "CHỈ LƯƠNG Ở MỘT NƠI",
+     "at": 7
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "LÀM THÊM · HỢP ĐỒNG NGẮN · CHO THUÊ NHÀ",
+     "at": 8,
+     "sm": true
+    },
+    {
+     "text": "MỖI LOẠI MỘT CÁCH TÍNH RIÊNG",
+     "at": [
+      8,
+      "đều"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 10,
+   "date": "01/07/2026",
+   "sub": {
+    "text": "LUẬT CÓ HIỆU LỰC · PHẦN TIỀN LƯƠNG ÁP CHO CẢ KỲ TÍNH THUẾ 2026",
+    "at": 10
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 13,
+   "title": "BA CÂU TỰ HỎI TRƯỚC PHIẾU LƯƠNG",
+   "rows": [
+    {
+     "k": "1",
+     "v": "LƯƠNG ĐÓNG BH CỦA TÔI?",
+     "at": 14
+    },
+    {
+     "k": "2",
+     "v": "ĐĂNG KÝ NGƯỜI PHỤ THUỘC CHƯA?",
+     "at": 15
+    },
+    {
+     "k": "3",
+     "v": "THÁNG NÀO NHẬN KHOẢN LỚN?",
+     "at": 16
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 17,
+   "title": "BA TỜ PHIẾU LƯƠNG · CÙNG 25 TRIỆU (NGHÌN Đ)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "2019",
+     "v": 727.5,
+     "lbl": "727",
+     "at": [
+      19,
+      "Bảy"
+     ]
+    },
+    {
+     "k": "2025",
+     "v": 447.5,
+     "lbl": "448",
+     "at": [
+      19,
+      "Bốn"
+     ]
+    },
+    {
+     "k": "2026",
+     "v": 33.75,
+     "lbl": "34",
+     "at": [
+      19,
+      "Ba"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 20,
+   "items": [
+    {
+     "text": "CON SỐ TRÊN HỢP ĐỒNG KHÔNG ĐỔI",
+     "at": 20
+    },
+    {
+     "text": "THỨ ĐỔI LÀ NHỮNG DÒNG NHỎ Ở GIỮA",
+     "at": 21,
+     "acc": true
+    },
+    {
+     "text": "cả năm ≈ 5 triệu của một gia đình",
+     "at": 22,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 23,
+   "text": "Phiếu lương tháng này của bạn,\ndòng thuế ghi bao nhiêu?"
+  },
+  {
+   "type": "kinetic",
+   "at": 24,
+   "items": [
+    {
+     "text": "KỂ CHO MÌNH NGHE",
+     "at": 24
+    },
+    {
+     "text": "Ở PHẦN BÌNH LUẬN",
+     "at": [
+      24,
+      "ở"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "GIỚI HẠN",
+  "t": "KHI NÀO BẢNG TRA KHÔNG ĐÚNG"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

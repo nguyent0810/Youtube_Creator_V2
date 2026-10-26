@@ -1,0 +1,277 @@
+{
+ "title": "Bộ phim và phần không được cắt gọn",
+ "lines": [
+  {
+   "t": "Phim Moneyball ra mắt năm 2011, được chuyển thể từ cuốn Moneyball: The Art of Winning an Unfair Game xuất bản năm 2003 về mùa Oakland năm 2002.",
+   "p": 0.8
+  },
+  "Peter Brand trong phim là nhân vật hư cấu, dựa một phần trên nền tảng phân tích của Paul DePodesta.",
+  "Theo AP, DePodesta không cho dùng tên thật của mình trong phim.",
+  "Vì vậy, khi bạn nhớ một cảnh có Peter Brand, hãy xem đó là cách điện ảnh cô đặc ý tưởng, không phải bằng chứng rằng ngoài đời đã xảy ra đúng như vậy.",
+  "Theo Washington Post, xung đột giữa cách tiếp cận dữ liệu và người tuyển trạch trong phim được kịch tính hóa.",
+  "Nó chỉ đổi cách ta dùng phim: như cánh cửa đi vào chủ đề, không phải bản đồ duy nhất dẫn qua lịch sử.",
+  "Một chi tiết ngoài đời cũng hay bị làm mờ là vai trò của Art Howe.",
+  "MLB ghi Art Howe là manager dẫn Oakland tới mùa 103 thắng và chức vô địch AL West năm 2002, cũng là năm cuối của ông với đội.",
+  "Đội 2002 có Hatteberg với 68 walk, có OBP toàn đội .339, có ERA 3,68, và có một manager đưa đội qua lịch thi đấu dài.",
+  "Các mảnh ấy không cạnh tranh để giành danh hiệu nguyên nhân duy nhất.",
+  "Chúng ghép lại để giải thích vì sao một câu chuyện về dữ liệu lại vẫn là câu chuyện về tổ chức và con người.",
+  "Trên tấm bảng, ô thứ sáu ghi: câu chuyện càng được kể gọn, bạn càng cần mở lại những phần đã bị cắt khỏi khung hình.",
+  "Và khi mùa thường kết thúc, Oakland sẽ gặp một giới hạn mà không mô hình nào hứa xóa được."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "CHƯƠNG NĂM",
+   "title": "BỘ PHIM VÀ PHẦN\nKHÔNG ĐƯỢC CẮT GỌN",
+   "sub": "2003 · SÁCH | 2011 · PHIM",
+   "bg": "tickets",
+   "titleAt": [
+    0,
+    "năm"
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": [
+    0,
+    "mắt"
+   ],
+   "bg": "card",
+   "items": [
+    {
+     "year": "2002",
+     "text": "MÙA OAKLAND"
+    },
+    {
+     "year": "2003",
+     "text": "SÁCH MONEYBALL"
+    },
+    {
+     "year": "2011",
+     "text": "PHIM MONEYBALL"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    1,
+    "peter"
+   ],
+   "items": [
+    {
+     "text": "PETER BRAND LÀ HƯ CẤU",
+     "at": [
+      1,
+      "peter"
+     ],
+     "acc": true
+    },
+    {
+     "text": "DỰA MỘT PHẦN TRÊN NỀN TẢNG CỦA DEPODESTA",
+     "at": [
+      1,
+      "peter"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": [
+    2,
+    "depodesta"
+   ],
+   "img": "depo",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "PAUL DEPODESTA",
+    "v": "KHÔNG CHO DÙNG TÊN THẬT TRONG PHIM",
+    "at": [
+     2,
+     "depodesta"
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "at": [
+    3,
+    "ý"
+   ],
+   "text": "ĐIỆN ẢNH CÔ ĐẶC Ý TƯỞNG\nHAY GHI LẠI LỊCH SỬ?"
+  },
+  {
+   "type": "slam",
+   "at": [
+    4,
+    "dữ"
+   ],
+   "text": "KỊCH TÍNH HÓA",
+   "sub": "THEO WASHINGTON POST"
+  },
+  {
+   "type": "print",
+   "at": [
+    7,
+    "art"
+   ],
+   "img": "beane10",
+   "tone": "bw",
+   "head": "ART HOWE",
+   "side": {
+    "k": "MANAGER NĂM 2002",
+    "h": "103 THẮNG · VÔ ĐỊCH AL WEST",
+    "lines": [
+     {
+      "text": "103 THẮNG · VÔ ĐỊCH AL WEST",
+      "at": [
+       7,
+       "art"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "org",
+   "at": [
+    8,
+    "obp"
+   ],
+   "nodes": [
+    {
+     "id": "obp",
+     "t": "OBP .339",
+     "s": "TOÀN ĐỘI",
+     "at": [
+      8,
+      "obp"
+     ]
+    },
+    {
+     "id": "era",
+     "t": "ERA 3,68",
+     "s": "PITCHING",
+     "p": "obp",
+     "at": [
+      8,
+      "era"
+     ]
+    },
+    {
+     "id": "mgr",
+     "t": "ART HOWE",
+     "s": "LỊCH ĐẤU DÀI",
+     "p": "era",
+     "at": [
+      8,
+      "manager"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    10,
+    "tổ"
+   ],
+   "items": [
+    {
+     "text": "DỮ LIỆU · TỔ CHỨC · CON NGƯỜI",
+     "at": [
+      10,
+      "tổ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "CÁC MẢNH GHÉP CÙNG TỒN TẠI",
+     "at": [
+      10,
+      "tổ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": [
+    11,
+    "bảng"
+   ],
+   "title": "TẤM BẢNG CHỜ MỘT LẦN LÊN GÔN",
+   "srcnote": "MỖI CHƯƠNG THÊM MỘT Ô",
+   "rows": [
+    {
+     "k": "HỎI",
+     "v": "MỘT LẦN LÊN GÔN GIẢI THÍCH ĐƯỢC GÌ?",
+     "at": [
+      11,
+      "bảng"
+     ]
+    },
+    {
+     "k": "1 · MÙA DÀI",
+     "v": "TIỀN ÍT · VẪN PHẢI THẮNG",
+     "at": [
+      11,
+      "bảng"
+     ]
+    },
+    {
+     "k": "2 · LÊN GÔN",
+     "v": "ĐÈN PIN · KHÔNG PHẢI BẢN ĐỒ",
+     "at": [
+      11,
+      "bảng"
+     ]
+    },
+    {
+     "k": "3 · CÂU HỎI",
+     "v": "DỮ LIỆU BẮT NIỀM TIN TRẢ LỜI",
+     "at": [
+      11,
+      "bảng"
+     ]
+    },
+    {
+     "k": "4 · TRANH LUẬN",
+     "v": "NHIỀU NGƯỜI CÙNG KIỂM TRA",
+     "at": [
+      11,
+      "bảng"
+     ]
+    },
+    {
+     "k": "5 · KHUNG HÌNH",
+     "v": "MỞ LẠI PHẦN BỊ CẮT GỌN",
+     "at": [
+      11,
+      "bảng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": [
+    12,
+    "mô"
+   ],
+   "text": "MỘT MÔ HÌNH CÓ HỨA\nXÓA HẾT GIỚI HẠN KHÔNG?"
+  }
+ ],
+ "topic": "mim-moneyball",
+ "chapter": 5,
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "BỘ PHIM VÀ PHẦN KHÔNG ĐƯỢC CẮT GỌN"
+ }
+}

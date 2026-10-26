@@ -1,0 +1,225 @@
+{
+ "theme": "ck",
+ "kicker": "QUYẾT ĐỊNH LỚN",
+ "sub": "MUA HAY THUÊ",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "say": {},
+ "imgs": {},
+ "title": "Thuê nhà có đăng ký thường trú được không? Hai điều kiện nhà của mình không cần",
+ "description": "Theo Luật Cư trú 2020 (Điều 20), đăng ký thường trú ở chỗ ở thuê, mượn, ở nhờ cần chủ sở hữu đồng ý và đủ diện tích nhà ở tối thiểu do HĐND cấp tỉnh quy định, không thấp hơn 8 m² sàn/người; chỗ ở thuộc sở hữu của mình thì không áp điều kiện diện tích. Ví dụ giả định: căn 31 m², 4 người → ≈7,75 m²/người, dưới mức sàn 8 m². Mức của từng tỉnh, thành có thể cao hơn: kiểm tra nghị quyết của nơi bạn ở.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ (hoặc ví dụ giả định), tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (14 phút): https://youtu.be/pXKfIo_nyVM",
+ "tags": [
+  "thường trú",
+  "nhà thuê",
+  "luật cư trú",
+  "mua hay thuê nhà",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "chủ",
+  "đồng",
+  "tám",
+  "mình",
+  "vuông"
+ ],
+ "lines": [
+  "Ở nhà thuê, đăng ký thường trú được không?",
+  "Được, với hai điều kiện mà nhà của mình không cần.",
+  "Một, chủ nhà đồng ý cho bạn đăng ký.",
+  "Hai, đủ diện tích sàn tính theo đầu người.",
+  "Luật đặt mức thấp nhất tám mét vuông mỗi người, tỉnh thành có thể đặt cao hơn.",
+  "Căn ba mươi mốt mét vuông, bốn người: mỗi người chưa tới tám mét vuông.",
+  "Ở nhà thuê, chưa đủ điều kiện. Ở nhà của mình, không bị đòi diện tích.",
+  "Ở nhà thuê, quyền đăng ký thường trú nằm trong tay chủ nhà và số mét vuông."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "THƯỜNG TRÚ Ở NHÀ THUÊ?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "được không, và cần gì",
+     "at": [
+      0,
+      "đăng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:4553290",
+   "veil": 0.58
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Nhà thuê cần thêm",
+   "nodes": [
+    {
+     "text": "NHÀ THUÊ",
+     "x": 0.5,
+     "y": 0.18,
+     "at": [
+      1,
+      "Được"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "CHỦ NHÀ ĐỒNG Ý",
+     "x": 0.5,
+     "y": 0.5,
+     "at": [
+      2,
+      "chủ"
+     ],
+     "shape": "none"
+    },
+    {
+     "text": "ĐỦ M² MỖI NGƯỜI",
+     "x": 0.5,
+     "y": 0.82,
+     "at": [
+      3,
+      "đủ"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      2,
+      "đồng"
+     ]
+    },
+    {
+     "from": 1,
+     "to": 2,
+     "at": [
+      3,
+      "diện"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 8,
+   "to": 8,
+   "suffix": " M²",
+   "label": "SÀN MỖI NGƯỜI · MỨC THẤP NHẤT CỦA LUẬT",
+   "sub": {
+    "text": "TỈNH, THÀNH CÓ THỂ ĐẶT CAO HƠN",
+    "at": [
+     4,
+     "tỉnh"
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "VÍ DỤ GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "DIỆN TÍCH",
+     "v": "31 M²",
+     "at": [
+      5,
+      "ba"
+     ]
+    },
+    {
+     "k": "SỐ NGƯỜI",
+     "v": "4",
+     "at": [
+      5,
+      "bốn"
+     ]
+    }
+   ],
+   "total": {
+    "k": "MỖI NGƯỜI",
+    "v": "≈7,75 M² < 8",
+    "at": [
+     5,
+     "chưa"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "CÙNG CĂN 31 M², 4 NGƯỜI",
+   "cards": [
+    {
+     "k": "NHÀ THUÊ",
+     "v": "CHƯA ĐỦ",
+     "at": [
+      6,
+      "thuê"
+     ],
+     "c": "down"
+    },
+    {
+     "k": "NHÀ CỦA MÌNH",
+     "v": "KHÔNG ĐÒI M²",
+     "at": [
+      6,
+      "mình"
+     ],
+     "c": "up"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "Ở NHÀ THUÊ",
+     "at": 7,
+     "sm": true
+    },
+    {
+     "text": "CHỦ NHÀ + SỐ M²",
+     "at": [
+      7,
+      "chủ"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7579428",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  }
+ ],
+ "sources": [
+  "https://tuoitre.vn/nha-31m2-nhung-khong-duoc-dang-ky-thuong-tru-cho-4-nguoi-co-dung-khong-20260108105123535.htm",
+  "https://luatvietnam.vn/tin-van-ban-moi/dieu-kien-dang-ky-thuong-tru-tai-nha-thue-186-28192-article.html"
+ ],
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.6
+  }
+ }
+}

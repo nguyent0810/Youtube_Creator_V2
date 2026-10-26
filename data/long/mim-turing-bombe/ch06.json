@@ -1,0 +1,281 @@
+{
+ "topic": "mim-turing-bombe",
+ "chapter": 6,
+ "hud": {
+  "k": "CHƯƠNG 06",
+  "t": "BA CA, MƯỜI MÁY, MỘT ĐIỂM DỪNG"
+ },
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "CHƯƠNG SÁU",
+   "title": "BA CA, MƯỜI MÁY\nMỘT ĐIỂM DỪNG",
+   "sub": "11.1943 · EASTCOTE",
+   "bg": "bletchley",
+   "titleAt": [
+    0,
+    "millar"
+   ]
+  },
+  {
+   "type": "broll",
+   "at": [
+    1,
+    "eastcote"
+   ],
+   "vid": "34645486",
+   "veil": 0.62,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "EASTCOTE · BA CA TÁM GIỜ",
+     "at": [
+      1,
+      "eastcote"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": [
+    3,
+    "10"
+   ],
+   "day": "JEAN MILLAR · WRNS",
+   "date": "11.1943",
+   "sub": {
+    "text": "MỖI BAY CÓ 10 BOMBE",
+    "at": [
+     3,
+     "10"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    4,
+    "hai"
+   ],
+   "items": [
+    {
+     "text": "HAI NGƯỜI · MỘT MÁY · MỘT MENU",
+     "at": [
+      4,
+      "hai"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": [
+    5,
+    "bánh"
+   ],
+   "img": "bletchley",
+   "tone": "bw",
+   "head": "NẠP BÁNH XE MÀU",
+   "side": {
+    "k": "THEO MENU",
+    "h": "CẮM MẶT SAU THEO CHỈ DẪN",
+    "lines": [
+     {
+      "text": "CẮM MẶT SAU THEO CHỈ DẪN",
+      "at": [
+       5,
+       "bánh"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    7,
+    "dừng"
+   ],
+   "items": [
+    {
+     "text": "DỪNG LẠI · GHI THIẾT LẬP",
+     "at": [
+      7,
+      "dừng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": [
+    10,
+    "bletchley"
+   ],
+   "title": "SÁU RĂNG CỦA KHÓA",
+   "srcnote": "MỖI CHƯƠNG THÊM MỘT MẮT XÍCH",
+   "rows": [
+    {
+     "k": "BỨC THƯ",
+     "v": "NGƯỜI XỬ LÝ MÁY",
+     "at": [
+      10,
+      "bletchley"
+     ]
+    },
+    {
+     "k": "KHÓA NGÀY",
+     "v": "ÁP LỰC THỜI GIAN",
+     "at": [
+      10,
+      "bletchley"
+     ]
+    },
+    {
+     "k": "BA LAN",
+     "v": "CÁCH ĐẶT CÂU HỎI",
+     "at": [
+      10,
+      "bletchley"
+     ]
+    },
+    {
+     "k": "NHÓM",
+     "v": "Ý TƯỞNG THÀNH PHƯƠNG PHÁP",
+     "at": [
+      10,
+      "bletchley"
+     ]
+    },
+    {
+     "k": "CRIB VÀ MENU",
+     "v": "GIẢ THUYẾT ĐỂ THỬ",
+     "at": [
+      10,
+      "bletchley"
+     ]
+    },
+    {
+     "k": "BOMBE",
+     "v": "LOẠI ĐƯỜNG SAI",
+     "at": [
+      10,
+      "bletchley"
+     ]
+    },
+    {
+     "k": "WRNS",
+     "v": "KIỂM TRA ĐIỂM DỪNG",
+     "at": [
+      10,
+      "bletchley"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "at": [
+    12,
+    "wrns"
+   ],
+   "geo": "atlantic",
+   "pins": [
+    {
+     "name": "Bletchley"
+    },
+    {
+     "name": "Eastcote"
+    },
+    {
+     "name": "Stanmore"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    14,
+    "20"
+   ],
+   "items": [
+    {
+     "text": "20 NỮ NHÂN VIÊN · 20 NGƯỜI ĐÁNH MÁY",
+     "at": [
+      14,
+      "20"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": [
+    17,
+    "dữ"
+   ],
+   "img": "enigmaPair",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "DỮ LIỆU · KIỂM TRA · CHUYỂN ĐI",
+    "v": "MẮT XÍCH BẮT BUỘC",
+    "at": [
+     17,
+     "dữ"
+    ]
+   },
+   "kin": [
+    {
+     "text": "HỆ THỐNG NHANH BẰNG ĐIỂM CHẬM NHẤT",
+     "at": [
+      17,
+      "dữ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": [
+    19,
+    "bí"
+   ],
+   "text": "BÍ MẬT KÉO DÀI SAU CHIẾN TRANH\nĐỂ LẠI ĐIỀU GÌ?"
+  }
+ ],
+ "title": "Ba ca, mười máy, một điểm dừng",
+ "lines": [
+  {
+   "t": "Jean Millar gia nhập WRNS tháng 3 năm 1943 và được gọi đi vào tháng 11.",
+   "p": 0.8
+  },
+  "Tại Eastcote, bà làm ba ca tám giờ: từ 8 giờ đến 16 giờ, từ 16 giờ đến nửa đêm, và từ nửa đêm đến 8 giờ sáng.",
+  "Một hệ thống mật mã đổi khóa ngày không cho ai đặc quyền ngủ theo giờ hành chính.",
+  "Theo lời kể của Millar, mỗi bay có 10 Bombe.",
+  "Hai người cùng xử lý một máy và một menu: một người vận hành, người kia ở phòng kiểm tra.",
+  "Họ nạp những bánh xe màu theo menu rồi cắm phần sau máy theo chỉ dẫn.",
+  "Khi bật, Bombe thử các thiết lập rô-to.",
+  "Thỉnh thoảng nó dừng, và người vận hành ghi lại đúng thiết lập lúc ấy.",
+  "Đó chưa phải khoảnh khắc “đã giải mã xong”.",
+  "Người kiểm tra dựng máy kiểm tra với cùng bánh xe và cùng thiết lập.",
+  "Chỉ khi bước đó qua, kết quả mới được báo về Bletchley Park bằng điện thoại xáo trộn.",
+  "Hãy quay lại lá thư đầu video.",
+  "Nó xin một phân đội WRNS không phải để đứng cạnh máy cho đủ cảnh đẹp.",
+  "Họ là một mắt xích bắt buộc giữa một menu trên giấy và một kết quả có thể tin.",
+  "Trong cùng lá thư, bốn nhà giải mã còn xin 20 nữ nhân viên văn phòng và 20 người đánh máy đã được đào tạo.",
+  "Khi máy tăng tốc, công việc quanh máy không biến mất.",
+  "Nó đổi hình dạng.",
+  "Ai đó vẫn phải chuẩn bị dữ liệu đầu vào, kiểm tra đầu ra và chuyển nó tới đúng nơi.",
+  "Hệ thống chỉ nhanh bằng điểm chậm nhất của chính nó.",
+  "Và bí mật của hệ thống này còn kéo dài rất lâu sau khi chiến tranh kết thúc."
+ ]
+}

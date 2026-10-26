@@ -1,0 +1,624 @@
+Reading additional input from stdin...
+OpenAI Codex v0.164.0
+--------
+workdir: D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+model: gpt-5.6-terra
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR] (network access enabled)
+reasoning effort: medium
+reasoning summaries: none
+session id: 01a177fa-fe72-7ab2-bae9-681ed4a1c325
+--------
+user
+Làm ticket docs/pm/tickets/2026-10-26-codex-pilot/T4R-nghien-cuu-moneyball.md từ đầu đến cuối. Tuân thủ AGENTS.md (đã nạp sẵn), nhất là 'Cấm tuyệt đối' và 'chỉ đọc đúng các file ticket chỉ định, không khám phá repo'. Trước khi báo xong phải chạy `python scripts/long_gate.py mim-moneyball --min-syl 1900` và nó phải in ĐẠT (trừ khi ticket nói là ticket nghiên cứu). Viết báo cáo vào file kết quả mà ticket chỉ định. Tiếng Việt.
+codex
+Mình sẽ bám đúng phạm vi ticket và ba tài liệu được phép; trước hết xác định đây là ticket nghiên cứu hay sản xuất đầy đủ, rồi thực hiện các cổng kiểm bắt buộc và ghi báo cáo theo đường dẫn ticket.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw 'docs/pm/tickets/2026-10-26-codex-pilot/T4R-nghien-cuu-moneyball.md'; Get-Content -Raw 'docs/codex/long-rules.md'; Get-Content -Raw 'docs/codex/long-cheatsheet.md'" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 85ms:
+# T4R â€” NGHIÃŠN Cá»¨U: kho dá»¯ kiá»‡n cho Long `mim-moneyball`
+
+ÄÃ¢y lÃ  ticket nghiÃªn cá»©u. **Chá»‰ ghi 2 file:**
+- `data/long/mim-moneyball/facts.md`
+- `docs/pm/tickets/2026-10-26-codex-pilot/T4R-ket-qua.md`
+
+KhÃ´ng viáº¿t ká»‹ch báº£n, khÃ´ng cháº¡y lint/render, khÃ´ng cháº¡y `long_gate`.
+
+**Chá»‰ Ä‘á»c:**
+- ticket nÃ y;
+- `docs/codex/long-rules.md`, má»¥c "áº¢nh AI";
+- máº«u Ä‘á»‹nh dáº¡ng kho: `data/long/mim-katherine-johnson/facts.md`. Chá»‰ xem **20 dÃ²ng Ä‘áº§u** vÃ  **má»¥c áº£nh/B-roll á»Ÿ cuá»‘i file** Ä‘á»ƒ biáº¿t Ä‘á»‹nh dáº¡ng.
+
+**KhÃ´ng** grep repo, khÃ´ng Ä‘á»c code.
+
+## Äá» tÃ i
+
+| Má»¥c | Ná»™i dung |
+|---|---|
+| Má» neo | Phim *Moneyball* (2011). TÃ¬m tÃªn chiáº¿u á»Ÿ Viá»‡t Nam qua nguá»“n Ä‘Ã£ má»Ÿ. Phim chá»‰ Ä‘Æ°á»£c nháº¯c báº±ng lá»i vÃ  chá»¯ |
+| NgÆ°á»i tháº­t | Billy Beane, Paul DePodesta; ná»n táº£ng lÃ  Bill James vÃ  sabermetrics |
+| Má»‘c | MÃ¹a 2002 cá»§a Oakland Athletics: chuá»—i tháº¯ng 20 tráº­n vÃ  ngÃ¢n sÃ¡ch lÆ°Æ¡ng so vá»›i cÃ¡c Ä‘á»™i lá»›n |
+| GÃ³c ká»ƒ cá»§a kÃªnh MIM | Con sá»‘ vÃ  mÃ´ hÃ¬nh Ä‘á» vá»›i máº¯t ngÆ°á»i tuyá»ƒn tráº¡ch. Sau 2002, phÃ¢n tÃ­ch dá»¯ liá»‡u lan ra cáº£ thá»ƒ thao nhÆ° tháº¿ nÃ o |
+| Lá»‹ch | 9â€“11 phÃºt, Ä‘Äƒng thá»© SÃ¡u 27/11/2026 20:00 VN |
+
+## Cáº§n gom
+
+- **Dá»¯ kiá»‡n:** Ã­t nháº¥t **30**, chia cho 8 chÆ°Æ¡ng, má»—i chÆ°Æ¡ng 3â€“5. Má»—i dÃ²ng gá»“m:
+  - kháº³ng Ä‘á»‹nh;
+  - Ã­t nháº¥t má»™t sá»‘, ngÃ y, tÃªn hoáº·c váº­t cá»¥ thá»ƒ;
+  - URL Ä‘Ã£ má»Ÿ, kÃ¨m tÃªn trang;
+  - Ä‘á»™ tin: **máº¡nh** (MLB.com, Baseball-Reference, SABR, bÃ¡o lá»›n, sÃ¡ch) hoáº·c **vá»«a**.
+- **Sá»‘ liá»‡u mÃ¹a giáº£i:** tháº¯ng/thua, ngÃ¢n sÃ¡ch lÆ°Æ¡ng, chá»‰ sá»‘ OBP. Æ¯u tiÃªn Baseball-Reference hoáº·c MLB.
+- **Phim khÃ¡c Ä‘á»i tháº­t á»Ÿ Ä‘Ã¢u:**
+  - Peter Brand lÃ  nhÃ¢n váº­t dá»±a trÃªn DePodesta; DePodesta khÃ´ng cho dÃ¹ng tÃªn tháº­t.
+  - Vai trÃ² cá»§a Art Howe, vai trÃ² cá»§a Scott Hatteberg.
+  - Chá»‰ ghi Ä‘iá»ƒm nÃ o cÃ³ nguá»“n.
+- **áº¢nh:** 8â€“12 áº£nh Commons. Chá»‰ nháº­n PD, CC0 hoáº·c CC BY. áº¢nh cáº§u thá»§ MLB thÆ°á»ng lÃ  CC BY-SA, **loáº¡i**. Kiá»ƒm `LicenseShortName` cho tá»«ng áº£nh.
+- **áº¢nh AI:** tá»‘i Ä‘a 6 áº£nh, cho cáº£nh khÃ´ng cÃ³ áº£nh tá»± do: phÃ²ng há»p tuyá»ƒn tráº¡ch, báº£ng sá»‘ liá»‡u, sÃ¢n bÃ³ng chÃ y Ä‘Ãªm.
+  - Ghi tháº³ng prompt theo Ä‘á»‹nh dáº¡ng `ai_prompts.md` vÃ o cuá»‘i `facts.md`, má»¥c "Äá» xuáº¥t áº£nh AI".
+  - NgÆ°á»i tháº­t chá»‰ váº½ theo dÃ¡ng gá»‘c, á»Ÿ gÃ³c nghiÃªng quay Ä‘i hoáº·c tá»« phÃ­a sau. KhÃ´ng chá»¯, khÃ´ng logo Ä‘á»™i.
+- **Clip:** 10â€“12 clip Pexels trung tÃ­nh (sÃ¢n bÃ³ng chÃ y khÃ´ng logo, báº£ng tÃ­nh, bÃ³ng chÃ y cáº­n cáº£nh, khÃ¡n Ä‘Ã i). Má»—i clip ghi chÃº "khÃ´ng logo/chá»¯".
+
+## BÃ¡o cÃ¡o
+
+- Sá»‘ dá»¯ kiá»‡n theo chÆ°Æ¡ng, chia máº¡nh/vá»«a.
+- TÃªn phim tiáº¿ng Viá»‡t, kÃ¨m nguá»“n.
+- Äá» xuáº¥t cold open: cÃ³ ngÃ y giá» cá»¥ thá»ƒ, láº¥y tá»« dá»¯ kiá»‡n máº¡nh nháº¥t.
+- CÃ¢u há»i cÃ²n bá» ngá».
+
+# Luáº­t Long cho agent sáº£n xuáº¥t (chi tiáº¿t, chuyá»ƒn tá»« AGENTS.md ngÃ y 26/10/2026)
+
+Äá»c cÃ¹ng `docs/codex/long-cheatsheet.md`.
+
+### áº¢nh AI khi khÃ´ng cÃ³ áº£nh tá»± do (tá»« 26/10/2026)
+
+Cáº£nh cáº§n minh hoáº¡ mÃ  khÃ´ng cÃ³ áº£nh PD/CC0/CC BY (vÃ­ dá»¥ cáº£nh trong phÃ²ng lÃ m viá»‡c nÄƒm 1962, hay má»™t váº­t Ä‘Ã£ máº¥t) thÃ¬ **khÃ´ng tá»± táº¡o áº£nh**. Ghi prompt vÃ o `data/long/<topic>/ai_prompts.md` Ä‘á»ƒ chá»§ kÃªnh nhá» bot táº¡o.
+
+**Äá»‹nh dáº¡ng má»™t má»¥c:**
+
+```
+#### ai_01.png â€” <cáº£nh dÃ¹ng á»Ÿ chNN, cÃ¢u sá»‘ N>
+- Prompt (tiáº¿ng Anh): <mÃ´ táº£ chi tiáº¿t: bá»‘i cáº£nh, thá»i ká»³, Ã¡nh sÃ¡ng, bá»‘ cá»¥c, phong cÃ¡ch>
+- Khung: 16:9, 1920x1080
+- Cáº¥m: chá»¯ hoáº·c sá»‘ trong áº£nh, logo, khuÃ´n máº·t nháº­n ra Ä‘Æ°á»£c cá»§a ngÆ°á»i tháº­t
+- Phong cÃ¡ch: <vÃ­ dá»¥ "painterly editorial illustration, muted 1960s palette">
+```
+
+**Quy táº¯c:**
+- **NgÆ°á»i tháº­t: láº¥y dÃ¡ng gá»‘c, khÃ´ng váº½ máº·t** (chá»§ kÃªnh, 26/10/2026):
+  - ÄÆ°á»£c váº½ ngÆ°á»i cÃ³ tháº­t (Johnson, Glennâ€¦) theo **dÃ¡ng gá»‘c** trong áº£nh tÆ° liá»‡u: vÃ³c ngÆ°á»i, kiá»ƒu tÃ³c, trang phá»¥c, Ä‘á»“ váº­t, bá»‘i cáº£nh Ä‘Ãºng thá»i ká»³.
+  - Chá»‰ váº½ á»Ÿ **gÃ³c nghiÃªng quay Ä‘i hoáº·c tá»« phÃ­a sau**, khÃ´ng tháº¥y rÃµ máº·t.
+  - Trong prompt, ghi áº£nh tÆ° liá»‡u tham chiáº¿u (URL Commons/NASA trong `facts.md`) vÃ  mÃ´ táº£ dÃ¡ng cá»¥ thá»ƒ. VÃ­ dá»¥: "woman in 1960s cat-eye glasses and cardigan, seen from behind at a desk with mechanical calculator".
+  - Máº·t ngÆ°á»i tháº­t chá»‰ dÃ¹ng áº£nh tÆ° liá»‡u PD.
+- **Phong cÃ¡ch:** minh hoáº¡ hoáº·c tranh váº½, **khÃ´ng giáº£ áº£nh tÆ° liá»‡u**, Ä‘á»ƒ ngÆ°á»i xem khÃ´ng nháº§m lÃ  tÆ° liá»‡u tháº­t.
+- **KhÃ´ng gáº¯n nhÃ£n AI:** khÃ´ng thÃªm nhÃ£n "AI" trÃªn mÃ n hÃ¬nh hay trong mÃ´ táº£, vÃ¬ báº£n thÃ¢n áº£nh Ä‘Ã£ cÃ³ chá»¯ kÃ½ AI (chá»§ kÃªnh quyáº¿t Ä‘á»‹nh ngÃ y 26/10/2026).
+- **ÄÆ°á»ng dáº«n:**
+  - Chá»§ kÃªnh tháº£ áº£nh vÃ o `motion/hf/assets/long/<topic>/img/ai/ai_NN.png`.
+  - Engine chá»‰ Ä‘á»c `output/long/<topic>/img/aiNN.jpg` kÃ¨m `.json`. Claude cháº¡y `python scripts/ai_img_import.py <topic>` Ä‘á»ƒ chÃ©p áº£nh sang chá»— Ä‘Ã³.
+  - Tá»« 26/10, Claude cháº¡y `python scripts/ai_img_request.py <topic>`. Lá»‡nh nÃ y gá»­i `ai_prompts.md` cho bot táº¡o áº£nh qua webhook (khoÃ¡ Ä‘á»c tá»« registry User, xem `docs/tools/grokbot-webhook.md`), chá» áº£nh vá» rá»“i cháº¡y `ai_img_import`. **Agent sáº£n xuáº¥t khÃ´ng gá»i webhook**: chá»‰ viáº¿t prompt.
+  - Trong `IMGS`, khai key `aiNN` lÃ  `"EXT:ai:ai_NN"`.
+- **Ghi cÃ´ng:** cáº£nh dÃ¹ng áº£nh AI pháº£i cÃ³ `"credit": false`. Náº¿u thiáº¿u, engine in "áº¢NH: TÆ¯ LIá»†U Â· PHáº M VI CÃ”NG Cá»˜NG", tá»©c lÃ  gáº¯n nhÃ£n tÆ° liá»‡u cho tranh minh hoáº¡, sai sá»± tháº­t. NhÃ£n `illus` "áº¢NH MINH Há»ŒA" thÃ¬ giá»¯, vÃ¬ Ä‘Ã³ lÃ  nhÃ£n chuáº©n cho tranh minh hoáº¡.
+- **Khi chÆ°a cÃ³ áº£nh:** giá»¯ nguyÃªn cáº£nh vÃ  Ä‘Æ°á»ng dáº«n, rá»“i ghi trong bÃ¡o cÃ¡o "chá» N áº£nh AI". `html` hoáº·c `long_gate` cÃ³ thá»ƒ bÃ¡o thiáº¿u file; Ä‘iá»u Ä‘Ã³ cháº¥p nháº­n Ä‘Æ°á»£c cho tá»›i khi áº£nh vá».
+- **Giá»›i háº¡n:** tá»‘i Ä‘a 6 áº£nh AI cho má»™t bÃ i 9â€“11 phÃºt. Æ¯u tiÃªn áº£nh tÆ° liá»‡u tháº­t.
+
+### Quy trÃ¬nh Long (theo máº«u `data/long/mim-ke-huy-diet-petrov`, `mim-google-maps-kal007`)
+
+Äá»c trÆ°á»›c:
+- `motion/long/README.md`, `RETENTION.md`, `SOURCES.md`;
+- `docs/pm/2026-10-23-mim-long-moi.md`;
+- `docs/pm/so-that-bai.md`.
+
+CÃ¡c bÆ°á»›c:
+1. Viáº¿t `script.md` vÃ  `factcheck.md` (nguá»“n lÃ  URL Ä‘Ã£ má»Ÿ).
+2. Cháº¡y `python motion/long/script_lines.py <topic>`; pháº£i qua cá»•ng integrity.
+3. Viáº¿t `gen_scenes.py`, rá»“i cháº¡y `python data/long/<topic>/gen_scenes.py`, ra `spec.json` vÃ  `chNN.json`. Counter cÃ³ sá»‘ 1000â€“2100 pháº£i khai `"year": true|false`.
+4. Cháº¡y `python motion/long/studio_lint.py <topic> --strict`; pháº£i ra 0 lá»—i.
+5. Cháº¡y `python motion/long/build_long.py <topic> tts`, rá»“i `... html`. Sá»­a má»i lá»—i lint mÃ  `html` bÃ¡o.
+6. Cháº¡y `python motion/long/clip_sheet.py <topic>`, xem áº£nh clip sheet; clip sai nghÄ©a hoáº·c lá»™ logo thÃ¬ thay.
+7. Chá»‰ render khi ticket cho phÃ©p: `build_long.py <topic> render`, rá»“i `final`.
+8. Dá»±ng thumbnail `motion/long/thumbs/<topic>_t1.html`, rá»“i cháº¡y `python motion/long/thumb.py <topic> t1`.
+
+### Cá»•ng cháº¥t lÆ°á»£ng (báº¯t buá»™c, tá»« 26/10/2026)
+
+CÃ¡c cá»•ng lint chá»‰ lÃ  má»©c sÃ n ká»¹ thuáº­t. TrÆ°á»›c khi bÃ¡o xong má»™t Long, pháº£i cháº¡y:
+
+```
+python scripts/long_gate.py <topic> --min-syl 1900
+```
+
+Lá»‡nh pháº£i in **Äáº T**. CÃ¡c ngÆ°á»¡ng Ä‘Æ°á»£c Ä‘o trÃªn bÃ i máº«u Petrov vÃ  KAL 007:
+
+| NgÆ°á»¡ng | GiÃ¡ trá»‹ |
+|---|---|
+| Ã‚m tiáº¿t lá»i Ä‘á»c | â‰¥ 1.900 (â‰ˆ 9 phÃºt) |
+| Thá»i lÆ°á»£ng má»—i cáº£nh | â‰¤ 9 giÃ¢y |
+| Loáº¡i cáº£nh má»—i chÆ°Æ¡ng | â‰¥ 5 |
+| Má»™t clip dÃ¹ng láº¡i (bÃ i 9â€“12 phÃºt) | â‰¤ 2 láº§n |
+| Má»™t áº£nh dÃ¹ng láº¡i | â‰¤ 3 láº§n |
+| URL nguá»“n trong `factcheck.md` | â‰¥ 8 |
+| TiÃªu Ä‘á» | â‰¤ 60 kÃ½ tá»± |
+
+NgoÃ i ra: má»i nÄƒm trong ká»‹ch báº£n pháº£i cÃ³ trong `factcheck.md`, vÃ  khÃ´ng Ä‘Æ°á»£c cÃ³ cÃ¢u Ä‘á»‡m.
+
+**BÃ i máº«u Ä‘á»ƒ so:**
+- Petrov: 22,5 phÃºt; 179 cáº£nh (7,6 giÃ¢y/cáº£nh); Ã­t nháº¥t 7 loáº¡i cáº£nh má»—i chÆ°Æ¡ng; 15 áº£nh khÃ¡c nhau.
+- KAL 007: 10,5 phÃºt; 82 cáº£nh (7,7 giÃ¢y/cáº£nh); khÃ´ng dÃ¹ng clip, chá»‰ áº£nh vÃ  Ä‘á»“ hoáº¡ (báº£n Ä‘á»“, timeline, counter).
+
+Má»—i chÆ°Æ¡ng cá»§a hai bÃ i nÃ y cÃ³ 3â€“4 dá»¯ kiá»‡n cá»¥ thá»ƒ cÃ³ nguá»“n.
+
+### Lá»—i Ä‘Ã£ gáº·p (Ä‘á»«ng láº·p láº¡i)
+
+Thá»­ nghiá»‡m Codex T1/T1b, 26/10/2026:
+
+1. **ChÃ¨n cÃ¢u Ä‘á»‡m rá»—ng nghÄ©a cho qua tá»‰ lá»‡ cÃ¢u ngáº¯n cá»§a lint.** VÃ­ dá»¥: "Ráº¥t cháº­m.", "ÄÃ³ lÃ  cÃ¢u há»i khÃ³.". CÃ¢u ngáº¯n chá»‰ Ä‘áº·t sau má»™t phÃ¡n Ä‘á»‹nh hoáº·c khoáº£nh kháº¯c cáº£m xÃºc.
+2. **Bá»‹ yÃªu cáº§u bá» cÃ¢u Ä‘á»‡m thÃ¬ chá»‰ xoÃ¡, khÃ´ng viáº¿t ná»™i dung thay.** BÃ i tá»¥t tá»« 9 xuá»‘ng 5 phÃºt. Thiáº¿u Ä‘á»™ dÃ i thÃ¬ pháº£i **tÃ¬m thÃªm dá»¯ kiá»‡n cÃ³ nguá»“n**, khÃ´ng Ä‘Æ°á»£c Ä‘á»ƒ bÃ i ngáº¯n Ä‘i.
+3. **Äá»c má»™t ngÃ y cá»¥ thá»ƒ (18/3/1940) trong khi chÃ­nh `factcheck.md` ghi lÃ  chÆ°a chá»‘t Ä‘Æ°á»£c.**
+4. **Má»™t clip láº·p 8 láº§n; 9 phÃºt chá»‰ cÃ³ 18 cáº£nh vÃ  toÃ n chá»¯.**
+5. **Cold open liá»‡t kÃª tÃªn ngÆ°á»i thay vÃ¬ dá»±ng má»™t cáº£nh cÃ³ cÄƒng tháº³ng; cÃ¢u meta "HÃ´m nay mÃ¬nh khÃ´ng ká»ƒâ€¦".**
+6. **Coi viá»‡c qua lint lÃ  xong.** Xong nghÄ©a lÃ  `long_gate.py` in Äáº T **vÃ ** ná»™i dung Ä‘Ã¡ng xem.
+7. **Tháº» chÆ°Æ¡ng ghi sai trÆ°á»ng.** ÄÃ£ ghi `"number": "05"` thay cho `no`/`k`, nÃªn engine hiá»‡n chá»¯ "undefined" giá»¯a mÃ n hÃ¬nh á»Ÿ cáº£ 8 chÆ°Æ¡ng. Tháº» chÆ°Æ¡ng Ä‘Ãºng (theo `mim-ke-huy-diet-petrov/ch05.json`):
+
+   ```json
+   {"type":"chapter","no":"5","k":"CHÆ¯Æ NG NÄ‚M","title":"â€¦","sub":"<má»‘c>","bg":"<áº£nh>","titleAt":[0,"<tá»«>"]}
+   ```
+
+   Má»—i `chNN.json` cÅ©ng pháº£i cÃ³ `"hud": {"k": "CHÆ¯Æ NG 05", "t": "<TIÃŠU Äá»€>"}`. Thiáº¿u `hud` thÃ¬ `describe.py` cháº¿t vÃ  mÃ´ táº£ khÃ´ng cÃ³ danh sÃ¡ch chÆ°Æ¡ng.
+8. **Má»™t khuÃ´n cáº£nh cho má»i chÆ°Æ¡ng.** Má»™t khuÃ´n 9 cáº£nh Ä‘Æ°á»£c dÃ¹ng láº¡i á»Ÿ cáº£ 8 chÆ°Æ¡ng, nÃªn cÃ¹ng má»™t dÃ²ng chá»¯ hiá»‡n 8 láº§n. Má»—i cáº£nh pháº£i minh hoáº¡ Ä‘Ãºng cÃ¢u Ä‘ang Ä‘á»c, vÃ  chá»¯ trÃªn mÃ n hÃ¬nh láº¥y tá»« dá»¯ kiá»‡n cá»§a chÃ­nh chÆ°Æ¡ng Ä‘Ã³. MÃ´-tÃ­p láº·p chá»‰ Ä‘Æ°á»£c lÃ m báº±ng `ledger` cÃ³ tiÃªu Ä‘á» cá»‘ Ä‘á»‹nh, má»—i chÆ°Æ¡ng thÃªm má»™t dÃ²ng má»›i.
+9. **QuÃªn báº£ng `SAY` vÃ  Ä‘á»ƒ `spec.youtube` trá»‘ng.** Pháº£i viáº¿t ngay tá»« Ä‘áº§u, theo máº«u Petrov vÃ  KAL:
+   - `SAY` phiÃªn Ã¢m má»i tÃªn nÆ°á»›c ngoÃ i, viáº¿t táº¯t (TNMOC, NASAâ€¦) vÃ  sá»‘ ráº¥t lá»›n.
+   - `spec.youtube` gá»“m: `publish_at`, `playlist`, `category`, `thumb`, `summary`, `more`, `chapter_titles`, `sources` (â‰¥ 8 URL cÃ´ng khai), `tags`, `hashtags`, `video_credits`.
+
+**NghiÃªn cá»©u trÆ°á»›c, viáº¿t sau:** khi ticket chia Ä‘Ã´i, ticket nghiÃªn cá»©u chá»‰ gom kho dá»¯ kiá»‡n cÃ³ URL (`facts.md`). Ticket viáº¿t chá»‰ dÃ¹ng dá»¯ kiá»‡n trong kho Ä‘Ã³.
+
+
+# Cheatsheet dá»±ng Long MIM (cho Codex, Ä‘á»c thay engine)
+
+**KhÃ´ng Ä‘á»c** `motion/long/build_long.py`, `motion/hf/assets/engine/*`, `motion/stier/*`, `factory/*`, `pexels.py` hay thÆ° má»¥c cá»§a bÃ i khÃ¡c. Má»i thá»© cáº§n biáº¿t Ä‘á»u cÃ³ trong cheatsheet nÃ y vÃ  trong **má»™t file máº«u**:
+
+> `data/long/mim-katherine-johnson/gen_scenes.py`. BÃ i nÃ y Ä‘Ã£ qua cá»•ng, render vÃ  Ä‘Äƒng. **ChÃ©p nguyÃªn file nÃ y lÃ m khung.** Giá»¯ cÃ¡c helper á»Ÿ dÃ²ng 57â€“163 vÃ  `main()`. Chá»‰ thay pháº§n ná»™i dung bÃªn dÆ°á»›i.
+
+## Thay nhá»¯ng gÃ¬ trong khung
+
+| Khá»‘i | Thay báº±ng |
+|---|---|
+| `TOPIC`, `TITLE` (â‰¤ 60 kÃ½ tá»±, má»™t dáº¥u `:`) | Cá»§a bÃ i má»›i |
+| `SAY` | PhiÃªn Ã¢m má»i tÃªn nÆ°á»›c ngoÃ i, viáº¿t táº¯t vÃ  sá»‘ lá»›n trong lá»i Ä‘á»c. KhoÃ¡ viáº¿t thÆ°á»ng. VÃ­ dá»¥: `"nasa": "Na-sa"` |
+| `IMGS` | áº¢nh Commons `"File:â€¦"` (Ä‘Ã£ kiá»ƒm PD/CC0/CC BY) hoáº·c `"EXT:ai:ai_NN"` cho áº£nh AI |
+| `AI_PATH`, `STAND` | Sá»‘ áº£nh AI cá»§a bÃ i (â‰¤ 6); `STAND` = áº£nh tÆ° liá»‡u thay táº¡m cho tá»«ng áº£nh AI |
+| `GEO` | Báº£n Ä‘á»“: `countries`, `context`, `bbox [lon_min, lat_min, lon_max, lat_max]`, `pins [{name, lon, lat, label}]` |
+| `CHAPTER_TITLES` | `ch00`â€“`ch07`, tiáº¿ng Viá»‡t cÃ³ dáº¥u |
+| `LEDGER`, `ROWS` | MÃ´-tÃ­p cá»§a bÃ i: má»™t tiÃªu Ä‘á», má»—i chÆ°Æ¡ng thÃªm 1 dÃ²ng |
+| `ch00()`â€“`ch07()` | Cáº£nh cá»§a tá»«ng chÆ°Æ¡ng (má»¥c dÆ°á»›i) |
+| `make_spec()` | Äá»§ 11 trÆ°á»ng `youtube`, Ä‘á»•i `publish_at`; giá»¯ `"say": SAY`, `imgs`, `geo` |
+
+## Helper: chá»¯ kÃ½ vÃ  Ã½ nghÄ©a
+
+**Neo thá»i gian:** `a(line, word)` neo cáº£nh vÃ o cÃ¢u `line` cá»§a chÆ°Æ¡ng, táº¡i tá»« `word`. `word` pháº£i lÃ  chá»¯ **cÃ³ tháº­t trong cÃ¢u Ä‘Ã³**, khÃ´ng pháº£i sá»‘ vÃ  khÃ´ng pháº£i chá»¯ cÃ³ trong `SAY`.
+
+| Helper | DÃ¹ng khi |
+|---|---|
+| `chapter(no, k, title, sub, bg, title_at)` | Cáº£nh Ä‘áº§u má»—i chÆ°Æ¡ng. `k = "CHÆ¯Æ NG Má»˜T"`; `sub` = má»‘c cÃ³ nguá»“n; `bg` = key áº£nh |
+| `photo(img, at, key, value, kin=None)` | áº¢nh tÆ° liá»‡u hoáº·c áº£nh AI. áº¢nh AI tá»± cÃ³ `illus` + `credit: False` |
+| `print_scene(img, at, head, key, value)` | áº¢nh Ä‘áº·t nhÆ° tá» in, cÃ³ cá»™t ghi chÃº |
+| `broll(vid, at, text)` | Clip Pexels (id sá»‘), cÃ³ nhÃ£n VIDEO MINH Há»ŒA |
+| `kinetic(at, text, small=None)` | Chá»¯ lá»›n Ä‘á»™ng |
+| `slam(at, text, sub)` | Má»™t con sá»‘ hoáº·c cá»¥m tá»« Ä‘áº­p máº¡nh |
+| `date(at, day, d, sub)` | Má»‘c ngÃ y lá»›n. `d = "20.02.1962"` (chá»¯ sá»‘ vÃ  dáº¥u cháº¥m); chá»¯ thÃ¬ Ä‘á»ƒ vÃ o `day` |
+| `counter(at, to, suffix, label, frm=0, year=False)` | Sá»‘ Ä‘áº¿m. NÄƒm thÃ¬ `year=True` |
+| `timeline(at, bg, items)` | DÃ²ng thá»i gian (xem cÃ¡ch dÃ¹ng trong máº«u) |
+| `org(at, nodes)` | SÆ¡ Ä‘á»“ ngÆ°á»i hoáº·c tá»• chá»©c |
+| `question(at, text)` | CÃ¢u há»i treo |
+| `ledger(n, at)` | Hiá»‡n mÃ´-tÃ­p tá»›i dÃ²ng `n` |
+| `{"type": "map", "at": â€¦, "geo": "<key GEO>"}` | Báº£n Ä‘á»“; máº«u cÃ³ á»Ÿ `ch01`/`ch05` cá»§a khung |
+
+## Luáº­t cáº£nh (cá»•ng `long_gate.py` sáº½ cháº·n náº¿u sai)
+
+- 60â€“80 cáº£nh, trung bÃ¬nh â‰¤ 9 giÃ¢y/cáº£nh, má»—i chÆ°Æ¡ng â‰¥ 5 loáº¡i cáº£nh.
+- KhÃ´ng dÃ²ng chá»¯ hiá»ƒn thá»‹ nÃ o láº·p > 2 láº§n. MÃ´-tÃ­p chá»‰ qua `ledger`.
+- Má»™t clip dÃ¹ng â‰¤ 2 láº§n, Ã­t nháº¥t 6 clip khÃ¡c nhau. Má»™t áº£nh dÃ¹ng â‰¤ 3 láº§n.
+- Má»—i cáº£nh minh hoáº¡ **cÃ¢u Ä‘ang Ä‘á»c**.
+
+## Clip Pexels
+
+- Táº£i: `python motion/long/pexels.py get <topic> <id> â€¦`. Chá»‰ dÃ¹ng id Ä‘Ã£ ghi trong `facts.md`.
+- SoÃ¡t: `python motion/long/clip_sheet.py <topic>`, má»Ÿ `output/long/<topic>/qa_clips.jpg` xem. Clip lá»™ chá»¯, logo hoáº·c sai nghÄ©a thÃ¬ thay.
+
+## Thá»© tá»± lá»‡nh
+
+Äáº·t `PYTHONIOENCODING=utf-8` cho má»i lá»‡nh.
+
+1. `python motion/long/script_lines.py <topic>`: Ä‘Æ°a lá»i Ä‘á»c tá»« `script.md` vÃ o `chNN.json`.
+2. `python data/long/<topic>/gen_scenes.py`, rá»“i cháº¡y láº¡i `script_lines.py`. `gen_scenes` ghi Ä‘Ã¨ `chNN.json` khÃ´ng kÃ¨m `lines`.
+3. `python motion/long/studio_lint.py <topic> --strict`
+4. `python motion/long/build_long.py <topic> tts`, rá»“i `â€¦ html`. Náº¿u áº£nh AI chÆ°a cÃ³ thÃ¬ cháº¡y `gen_scenes.py --standin` Ä‘á»ƒ soÃ¡t html, sau Ä‘Ã³ cháº¡y láº¡i báº£n tháº­t.
+5. `python scripts/long_gate.py <topic> --min-syl 1900` pháº£i ra **Äáº T**.
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Encoding utf8 -TotalCount 20 'data/long/mim-katherine-johnson/facts.md'; Get-Content -Encoding utf8 'data/long/mim-katherine-johnson/facts.md' | Select-Object -Last 120" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 119ms:
+# Kho dữ kiện — `mim-katherine-johnson`
+
+Ngày mở nguồn: 26/10/2026. Đây là kho nghiên cứu cho pha viết, không phải kịch bản. Chỉ các dòng **mạnh** được phép chuyển thành lời khẳng định trực tiếp. Dòng **vừa** phải được quy dẫn trong lời đọc, ví dụ: “Theo *TIME*...”.
+
+## CH00 — 20/02/1962: một chuyến bay không được phép sai
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 01 | Ngày 20/02/1962, John H. Glenn Jr. trở thành người Mỹ đầu tiên bay vào quỹ đạo Trái Đất trên Friendship 7. | [NASA History — Friendship 7](https://www.nasa.gov/history/friendship7/index.html) | **mạnh** |
+| 02 | Friendship 7 là nhiệm vụ Mercury-Atlas 6; tên lửa Atlas đưa tàu Mercury vào quỹ đạo và Glenn bay ba vòng quanh Trái Đất. | [NASA History — Friendship 7](https://www.nasa.gov/history/friendship7/index.html) | **mạnh** |
+| 03 | Toàn bộ chuyến bay Friendship 7 kéo dài 4 giờ 55 phút 23 giây trước khi đáp xuống đại dương. | [NASA History — Friendship 7](https://www.nasa.gov/history/friendship7/index.html) | **mạnh** |
+| 04 | Mục tiêu của Project Mercury là đưa một tàu có người lái vào quỹ đạo, quan sát con người trong điều kiện đó và đưa cả người lẫn tàu về an toàn. | [NASA History — Friendship 7](https://www.nasa.gov/history/friendship7/index.html) | **mạnh** |
+| 34 | Tựa Việt đang được các trang tiếng Việt dùng cho phim *Hidden Figures* (2016) là **Bộ Ba Ưu Việt**; đây chỉ là mỏ neo để nhận diện phim, không dùng làm nguồn lịch sử. | [VOH — Bộ Ba Ưu Việt / Hidden Figures](https://voh.com.vn/phim/phim-ve-nu-quyen-452430.html) | **vừa** |
+
+## CH01 — Cô bé đi nhanh hơn lớp học
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 05 | Katherine Johnson sinh ngày 26/08/1918 tại White Sulphur Springs, bang West Virginia. | [NASA — Katherine Johnson Biography](https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/) | **mạnh** |
+| 06 | Vì học vượt nhiều lớp, Johnson đã học trung học trong khuôn viên West Virginia State College khi mới 13 tuổi. | [NASA — Katherine Johnson Biography](https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/) | **mạnh** |
+|---|---|---|---|
+| 05 | Katherine Johnson sinh ngày 26/08/1918 tại White Sulphur Springs, bang West Virginia. | [NASA — Katherine Johnson Biography](https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/) | **mạnh** |
+| 06 | Vì học vượt nhiều lớp, Johnson đã học trung học trong khuôn viên West Virginia State College khi mới 13 tuổi. | [NASA — Katherine Johnson Biography](https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/) | **mạnh** |
+| 07 | Bà vào West Virginia State College năm 18 tuổi, học toán và tiếng Pháp; giáo sư toán W. W. Schieffelin Claytor là người hướng dẫn quan trọng của bà. | [NASA — Katherine Johnson Biography](https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/) | **mạnh** |
+| 08 | Johnson tốt nghiệp loại xuất sắc năm 1937 rồi dạy tại một trường công lập dành cho người da đen ở Virginia. | [NASA — Katherine Johnson Biography](https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/) | **mạnh** |
+
+## CH02 — Cánh cửa đại học và con đường đến Langley
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 09 | Năm 1939, khi West Virginia bắt đầu hội nhập các trường cao học, Johnson và hai nam sinh được chọn là ba sinh viên da đen đầu tiên được mời vào West Virginia University. | [NASA — Katherine Johnson Biography](https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/) | **mạnh** |
+| 10 | Johnson rời chương trình cao học sau học kỳ đầu để lập gia đình với người chồng đầu James Goble. | [NASA — Katherine Johnson Biography](https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/) | **mạnh** |
+| 11 | Năm 1952, bà biết NACA Langley đang có vị trí ở West Area Computing, một bộ phận toàn người da đen do Dorothy Vaughan phụ trách. | [NASA — Katherine Johnson Biography](https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/) | **mạnh** |
+| 12 | Johnson bắt đầu làm tại Langley vào mùa hè năm 1953; hai tuần sau, Vaughan giao bà sang dự án ở Maneuver Loads Branch và vị trí tạm thời trở thành thường trực. | [NASA — Katherine Johnson Biography](https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/) | **mạnh** |
+
+## CH03 — “Computer” là một nghề, và nó bị tách riêng
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 13 | Trong thập niên 1940, Langley tuyển phụ nữ Mỹ gốc Phi có bằng đại học làm “computer”; ban đầu họ được gom vào khu West Area Computers tách biệt. | [NASA History — Langley’s Computers, 1935–1970](https://www.nasa.gov/history/langleys-computers-1935-1970/) | **mạnh** |
+| 14 | NASA History ghi phân biệt chủng tộc là chính sách ở miền Nam và quân đội Mỹ khi ấy; các nữ “computer” da đen gặp khu ăn và nhà vệ sinh tách riêng cùng rào cản việc làm. | [NASA History — Langley’s Computers, 1935–1970](https://www.nasa.gov/history/langleys-computers-1935-1970/) | **mạnh** |
+| 15 | Công việc của “computer” ở Langley thường gồm đọc phim dữ liệu, tính toán và vẽ dữ liệu lên đồ thị; họ dùng thước trượt và máy tính cơ bản. | [NASA History — Langley’s Computers, 1935–1970](https://www.nasa.gov/history/langleys-computers-1935-1970/) | **mạnh** |
+| 16 | Johnson chỉ ở West Computers vài tuần rồi sang Flight Research Division làm với Henry Pearson; đến năm 1958 bà vào Space Task Force. | [NASA History — Langley’s Computers, 1935–1970](https://www.nasa.gov/history/langleys-computers-1935-1970/) | **mạnh** |
+
+## CH04 — Từ dữ liệu chuyến bay đến bài toán quỹ đạo
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 17 | Trong bốn năm đầu ở Flight Research Division, Johnson phân tích dữ liệu thử bay và làm việc về một vụ tai nạn máy bay do nhiễu động phía sau máy bay (wake turbulence). | [NASA — Katherine Johnson Biography](https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/) | **mạnh** |
+| 18 | Việc Liên Xô phóng Sputnik năm 1957 thay đổi hướng công việc của Johnson; năm 1958 bà đóng góp toán học cho tài liệu *Notes on Space Technology*. | [NASA — Katherine Johnson Biography](https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/) | **mạnh** |
+| 19 | Khi NACA chuyển thành NASA năm 1958, Johnson đi cùng nhóm kỹ sư hình thành Space Task Group vì bà đã làm việc với nhiều người trong số đó ở Langley. | [NASA — Katherine Johnson Biography](https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/) | **mạnh** |
+| 20 | Bà làm phân tích quỹ đạo cho Freedom 7 của Alan Shepard vào tháng 05/1961, chuyến bay có người đầu tiên của Hoa Kỳ. | [NASA — Katherine Johnson Biography](https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/) | **mạnh** |
+
+## CH05 — Bài kiểm tra tay trước Friendship 7
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 21 | Để chuẩn bị cho quỹ đạo của Glenn năm 1962, NASA dựng mạng liên lạc toàn cầu nối các trạm theo dõi với máy IBM ở Washington, Cape Canaveral và Bermuda. | [NASA — Katherine Johnson Biography](https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/) | **mạnh** |
+| 22 | Các máy đó đã được nạp phương trình quỹ đạo điều khiển đường đi Friendship 7 từ phóng đến đáp; NASA nói phi hành gia vẫn dè dặt với máy điện tử vì chúng có thể trục trặc hoặc mất điện. | [NASA — Katherine Johnson Biography](https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/) | **mạnh** |
+| 23 | Trong mục kiểm tra trước bay, Glenn yêu cầu kỹ sư nhờ Johnson chạy lại cùng các con số và phương trình bằng tay trên máy tính cơ để đối chiếu kết quả máy điện tử. | [NASA — Katherine Johnson Biography](https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/) | **mạnh** |
+| 24 | Câu “If she says they’re good, then I’m ready to go” là **lời Johnson kể lại** lời Glenn trong tiểu sử NASA; nếu dịch để đọc phải gắn nhãn `[TRÍCH DỊCH]`, không coi là bản ghi âm nguyên văn. | [NASA — Katherine Johnson Biography](https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/) | **mạnh** |
+| 25 | NASA Langley cũng ghi câu “Get the girl to check the numbers” như lời Glenn được kể lại, chỉ rõ người ông nhắc đến là Johnson. | [NASA — From Computers to Leaders](https://www.nasa.gov/general/from-computers-to-leaders-women-at-nasa-langley/) | **mạnh** |
+
+## CH06 — Dấu tên trên báo cáo, Apollo và sự nghiệp dài 33 năm
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 26 | Năm 1960, Johnson và kỹ sư Ted Skopinski đồng tác giả báo cáo *Determination of Azimuth Angle at Burnout for Placing a Satellite Over a Selected Earth Position*, nêu các phương trình cho chuyến bay quỹ đạo có điểm hạ cánh xác định. | [NASA — Katherine Johnson Biography](https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/) | **mạnh** |
+| 27 | NASA xác định đây là lần đầu một phụ nữ ở Flight Research Division được ghi tên là tác giả của một báo cáo nghiên cứu. | [NASA — Katherine Johnson Biography](https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/) | **mạnh** |
+| 28 | Johnson xem các phép tính đồng bộ Lunar Module với Command and Service Module đang ở quỹ đạo Mặt Trăng là đóng góp lớn nhất của mình cho thám hiểm không gian. | [NASA — Katherine Johnson Biography](https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/) | **mạnh** |
+| 29 | NASA ghi Johnson tính quỹ đạo cho chuyến hạ cánh Mặt Trăng Apollo 11 năm 1969 và cũng làm cho Space Shuttle cùng Earth Resources Technology Satellite, sau này đổi tên Landsat. | [NASA — Katherine Johnson Biography](https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/) | **mạnh** |
+| 33 | Johnson qua đời ngày 24/02/2020; NASA ghi bà hưởng thọ 101 tuổi. | [NASA — Katherine Johnson Biography](https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/) | **mạnh** |
+
+## CH07 — Sự ghi nhận muộn và lớp phim ảnh
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 30 | Johnson nghỉ hưu năm 1986 sau 33 năm ở Langley và đã viết hoặc đồng viết 26 báo cáo nghiên cứu. | [NASA — Katherine Johnson Biography](https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/) | **mạnh** |
+| 31 | Ngày 24/11/2015, Tổng thống Barack Obama trao Presidential Medal of Freedom cho Johnson tại Nhà Trắng. | [NASA — Katherine Johnson Receives Presidential Medal of Freedom](https://www.nasa.gov/image-article/katherine-johnson-receives-presidential-medal-of-freedom-2/) | **mạnh** |
+| 32 | Katherine G. Johnson Computational Research Facility được cắt băng khánh thành ở NASA Langley ngày 22/09/2017. | [NASA — Facility Officially Opens](https://www.nasa.gov/centers-and-facilities/ivv/nasa-langleys-katherine-johnson-computational-research-facility-officially-opens/) | **mạnh** |
+| 35 | NASA giải thích cảnh Johnson chạy xa để dùng nhà vệ sinh “chỉ dành cho người da trắng” **không xảy ra với chính Johnson**; đó là việc đã xảy ra với người khác. Vì vậy không tái kể cảnh này như tiểu sử của bà. | [NASA — NASA in Hollywood, transcript](https://www.nasa.gov/podcasts/houston-we-have-a-podcast/nasa-in-hollywood/) | **mạnh** |
+| 36 | *TIME* viết cảnh điện thoại/người kiểm tay sát giờ phóng đã được nén để tăng kịch tính: cuộc gọi không xảy ra chỉ vài phút trước lúc phóng. Chỉ dùng nếu quy dẫn “theo *TIME*”. | [TIME — John Glenn and Katherine Johnson](https://time.com/4594571/hidden-figures-john-glenn-space-race/) | **vừa** |
+
+## Chỉ dẫn biên kịch và điều phải tránh
+
+- Trục bài: **20/02/1962 và bài kiểm tra tay → nền học vấn → West Area và công việc dữ liệu → Space Task Group → đối chiếu Friendhip 7 → dấu tên trên báo cáo/Apollo → sự ghi nhận**. Katherine Johnson và chuyến bay năm 1962 là tâm điểm.
+- Dorothy Vaughan chỉ nhắc một câu tối đa, ở dữ kiện 11, để giải thích ai phụ trách West Area Computing. Không đi vào tuyến FORTRAN hoặc sự nghiệp Vaughan vì Long `mim-ai-jobs` và Short `mim-dorothy-vaughan-fortran` đã dùng.
+- Nếu dùng câu của Glenn, chỉ dùng đúng bối cảnh NASA: đó là lời kể lại của Johnson/NASA, không phải bản ghi âm. Bản dịch phải dán `[TRÍCH DỊCH]` trên hình.
+- Không dùng ảnh, poster, trích đoạn hay tái hiện cảnh phim *Hidden Figures*. Phần “khác đời thật” chỉ được đọc với quy dẫn NASA hoặc *TIME* như dữ kiện 35–36.
+- Cold open đề xuất: **“20 tháng 2 năm 1962. John Glenn sắp bay ba vòng quanh Trái Đất. Trước danh sách kiểm tra, ông muốn Katherine Johnson lấy đúng các phương trình máy IBM vừa chạy và kiểm lại bằng tay.”** Sau đó hiện chữ “Friendship 7 · 20/02/1962” và chuyển sang số 4 giờ 55 phút 23 giây. Mọi thành phần đều bám dữ kiện 01–03 và 21–23; không cần thêm thoại hư cấu.
+
+## Câu hỏi còn bỏ ngỏ / không được tự điền
+
+1. Không có nguồn NASA đã mở nêu model chính xác của máy IBM trong mạng Friendship 7. Vì vậy **không đọc “IBM 7090”** cho đến khi pha viết mở được hồ sơ kỹ thuật trực tiếp xác nhận model và vai trò.
+2. Nguồn mạnh đã mở xác nhận Johnson kiểm lại phép tính theo yêu cầu của Glenn, nhưng không cho thời lượng bà làm phép tính hoặc con số sai số. Không tự thêm “một ngày rưỡi”, “hàng nghìn phép tính” hay con số độ chính xác.
+3. Chưa có nguồn mở, mạnh và trực tiếp về giờ phóng địa phương/UTC của Friendship 7 trong kho này. Cold open chỉ dùng ngày 20/02/1962, không đọc giờ.
+4. Tựa Việt “Bộ Ba Ưu Việt” có nguồn báo/giải trí mức vừa, không phải phát hành chính thức tìm được. Có thể giữ cả tên gốc *Hidden Figures* trong tiêu đề/metadata nội bộ để tránh nhầm.
+5. Không dùng chi tiết cảnh nhà vệ sinh, cú điện thoại sát giờ phóng, nhân vật gộp hoặc trình tự trong phim làm dữ kiện đời thật.
+
+## Ảnh Commons/NASA đã kiểm giấy phép
+
+Các file Commons dưới đây đã mở trang file; `LicenseShortName` là **Public domain** (ảnh do NASA tạo) hoặc là trang ảnh chính thức của NASA. Pha dựng phải mở lại từng trang file ngay trước khi tải, đối chiếu giấy phép, và không dùng logo NASA như yếu tố quảng bá.
+
+| # | File / mô tả | Giấy phép | Trang nguồn |
+|---|---|---|---|
+| I01 | Katherine Johnson tại bàn làm việc NASA, 1966 | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Katherine_Johnson_at_NASA,_in_1966.jpg) |
+| I02 | “NASA human computers”, Johnson tại Langley, 1971 | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:NASA_human_computers_-_Katherine_Coleman_Goble_Johnson.jpg) |
+| I03 | Johnson tại NASA Langley, 1980 | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Katherine_Johnson_at_NASA_Langley_Research_Center_1980.jpg) |
+| I04 | Chân dung Johnson, 1983 | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Katherine_Johnson_1983.jpg) |
+| I05 | Johnson tại Langley, 1985 | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Katherine_Johnson_1985.jpg) |
+| I06 | Johnson tại NASA Langley, 2014 | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Katherine_Johnson_at_NASA_Langley_in_2014.jpg) |
+| I07 | Johnson nhận Presidential Medal of Freedom, 2015 | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Katherine_Johnson_Receives_Presidential_Medal_of_Freedom.jpg) |
+| I08 | Trang đầu báo cáo NASA có tên Johnson, 09/1960 | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Johnson_NASA_Paper.jpg) |
+| I09 | Johnson tại bàn với “Celestial Training Device”, 1960 | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Katherine_johnson_john_glenn.png) |
+| I10 | Johnson tại lễ cắt băng cơ sở mang tên bà, 22/09/2017 | NASA, ảnh chính thức | [NASA Image Article](https://www.nasa.gov/image-article/katherine-johnson-ribbon-cutting-ceremony/) |
+| I11 | Johnson tại bàn làm việc ở Langley, ảnh NASA giới thiệu 26/08/2016 | NASA, ảnh chính thức | [NASA Image Article](https://www.nasa.gov/image-article/katherine-johnson-nasa-langley-research-center/) |
+| I12 | Johnson nhận huân chương, ảnh NASA/Bill Ingalls | NASA, ảnh chính thức | [NASA Image Article](https://www.nasa.gov/image-article/katherine-johnson-receives-presidential-medal-of-freedom-2/) |
+| I13 | Ảnh tư liệu chuyến Friendship 7: Glenn vào tàu trước phóng | NASA, ảnh chính thức | [NASA History — Friendship 7 Photos](https://www.nasa.gov/history/friendship7/pages/photos.html) |
+| I14 | Ảnh tư liệu chuyến Friendship 7: Mercury-Atlas cất cánh | NASA, ảnh chính thức | [NASA History — Friendship 7 Photos](https://www.nasa.gov/history/friendship7/pages/photos.html) |
+
+Lưu ý dựng: I01–I09 là ảnh Katherine Johnson thật và có thể gắn nhãn tên bà. Không gắn tên bà, Glenn hay bất kỳ người thật nào lên B-roll người lạ. I13–I14 là tư liệu NASA, không phải ảnh phim.
+
+## Ứng viên B-roll Pexels (chưa tải)
+
+Các trang dưới đây đã mở và hiển thị giấy phép **Free** hoặc **CC0**. Đây là danh sách ứng viên; trước khi dùng bắt buộc tải, tạo clip sheet và loại frame có logo, nhãn thương hiệu, số/giấy tờ đọc được. Không gắn danh tính Johnson hay Glenn lên người trong clip.
+
+| ID | Mô tả ngắn theo trang Pexels | Ghi chú logo/chữ bắt buộc | Trang nguồn |
+|---:|---|---|---|
+| 9056542 | Cận tay, máy tính và giấy | Chỉ dùng frame không có chữ/số đọc được, logo máy tính. | [Pexels](https://www.pexels.com/video/a-person-typing-on-calculator-while-writing-on-a-paper-9056542/) |
+| 8195667 | Người tính toán và ghi chép ở bàn | Không dán tên nhân vật thật; soi giấy và thiết bị. | [Pexels](https://www.pexels.com/video/person-computing-using-a-calculator-8195667/) |
+| 11899304 | Cận cảnh tính toán và viết ở bàn | Loại frame có logo màn hình hoặc văn bản. | [Pexels](https://www.pexels.com/video/close-up-view-of-calculating-and-writing-in-office-11899304/) |
+| 5682784 | Nhóm người làm phép tính trên bàn | Không gắn nhãn Johnson/Vaughan/Glenn; soi cốc, giấy, laptop. | [Pexels](https://www.pexels.com/video/people-doing-calculations-5682784/) |
+| 5466768 | Tay ghi chú với máy tính | Loại tiền tệ, thương hiệu, chữ/số đọc được. | [Pexels](https://www.pexels.com/video/a-person-using-a-calculator-and-taking-notes-5466768/) |
+| 8197039 | Hai người giải công thức trên bảng đen | Chỉ lấy phần bảng không có công thức/chữ đọc được nếu làm nền. | [Pexels](https://www.pexels.com/video/a-man-solving-a-formula-on-the-blackboard-8197039/) |
+| 3196291 | Người giải bài trên bảng đen | Soi chữ bảng; không gắn danh tính người thật. | [Pexels](https://www.pexels.com/video/man-solving-a-problem-on-a-blackboard-3196291/) |
+| 6272049 | Cận cảnh tay viết phấn trên bảng | Soi chữ/công thức để không đọc được. | [Pexels](https://www.pexels.com/video/person-holding-chalk-in-front-of-the-blackboard-6272049/) |
+| 3196425 | Người viết phương trình trên bảng | Soi chữ/công thức; không nhận diện là Johnson. | [Pexels](https://www.pexels.com/video/woman-writing-equations-on-a-blackboard-3196425/) |
+| 854266 | Tên lửa cất cánh, 16:9 | Chỉ dùng như b-roll trung tính; loại cờ, logo, biển hiệu và không gọi là Friendship 7. | [Pexels](https://www.pexels.com/video/rocket-launch-854266/) |
+| 854264 | Đếm ngược/tên lửa cất cánh | Soi chữ đếm ngược, logo, biển hiệu; không tái hiện sự kiện 1962. | [Pexels](https://www.pexels.com/video/countdown-launching-of-a-spaceship-854264/) |
+| 854262 | Tên lửa cất cánh | Soi logo/chữ; chỉ dùng minh họa tổng quát. | [Pexels](https://www.pexels.com/video/rocket-lift-off-854262/) |
+
+codex
+Ticket này là ticket nghiên cứu, nên theo chỉ dẫn riêng mình sẽ chỉ tạo kho dữ kiện và báo cáo; không viết kịch bản, không render/lint, và không chạy `long_gate`. Mình đang kiểm chứng nguồn gốc cho số liệu mùa 2002, các nhân vật, và giấy phép hình.
+web search: 
+web search: site:mlb.com Oakland Athletics 2002 20 consecutive wins payroll 2002 Moneyball ...
+web search: 
+web search: site:mlb.com Oakland Athletics 2002 20 consecutive wins payroll 2002 Moneyball ...
+web search: 
+web search: Paul DePodesta Peter Brand name not used Moneyball interview ...
+web search: 
+web search: Bill James sabermetrics history Society for American Baseball Research official ...
+web search: 
+web search: site:commons.wikimedia.org/wiki/File Oakland Athletics 2002 public domain ...
+web search: 
+web search: site:commons.wikimedia.org/wiki/File "Bill James" "CC BY" ...
+web search: 
+web search: site:pexels.com/video baseball stadium no logo Pexels ...
+codex
+Đã có các nguồn mạnh từ MLB, Baseball-Reference và SABR, cùng các trang Commons đã xác nhận `CC BY`/PD. Mình sẽ ghi kho theo 8 chương, tách rõ phần nào chỉ là diễn giải của phim và phần nào dùng được như dữ kiện lịch sử.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "New-Item -ItemType Directory -Force 'data/long/mim-moneyball' | Out-Null" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 99ms:
+apply patch
+patch: completed
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-moneyball\facts.md
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-26-codex-pilot\T4R-ket-qua.md
+diff --git a/data/long/mim-moneyball/facts.md b/data/long/mim-moneyball/facts.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..325077e6a54f89c70fc66d878516e55a3ba361a5
+--- /dev/null
++++ b/data/long/mim-moneyball/facts.md
+@@ -0,0 +1,144 @@
++# Kho dữ kiện — `mim-moneyball`
++
++Ngày mở nguồn: 26/10/2026. Đây là kho nghiên cứu cho pha viết, không phải kịch bản. Dòng **mạnh** có thể dùng làm khẳng định trực tiếp; dòng **vừa** phải quy dẫn trong lời đọc (ví dụ: “Theo *Washington Post*...” ). Không dùng hình, poster, đoạn trích hoặc âm thanh của phim.
++
++## CH00 — 20 trận, từ 13/08 đến 04/09/2002
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 01 | Oakland Athletics bắt đầu chuỗi thắng 20 trận bằng chiến thắng 5–4 trước Toronto ngày 13/08/2002. | [MLB — 10th Anniversary of 20-Game Streak](https://www.mlb.com/athletics/news/athletics-to-celebrate-10th-anniversary-of-20-game-winning-streak/c-36661928) | **mạnh** |
++| 02 | Chuỗi kết thúc ở mốc 20 vào ngày 04/09/2002 khi Oakland thắng Kansas City 12–11; đây là kỷ lục chuỗi thắng của American League tại thời điểm đó. | [MLB — Twenty wins, 20 ways to win](https://www.mlb.com/athletics/news/twenty-wins-20-ways-to-win/c-121624) | **mạnh** |
++| 03 | Trong trận thắng thứ 20, Oakland từng dẫn 11–0 sau ba hiệp trước khi Kansas City gỡ hòa ở hiệp chín. | [MLB — 10th Anniversary of 20-Game Streak](https://www.mlb.com/athletics/news/athletics-to-celebrate-10th-anniversary-of-20-game-winning-streak/c-36661928) | **mạnh** |
++| 04 | Scott Hatteberg vào sân đánh thay ở đầu hiệp chín và đánh home run trước Jason Grimsley, chốt trận thắng 12–11. | [MLB — Scott Hatteberg player page](https://www.mlb.com/player/scott-hatteberg-115608) | **mạnh** |
++
++## CH01 — Một mùa 103–59, không chỉ một đoạn cao trào
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 05 | Oakland kết thúc mùa thường 2002 với thành tích 103 thắng, 59 thua và đứng đầu AL West. | [Baseball-Reference — 2002 Oakland Athletics](https://www.baseball-reference.com/teams/OAK/2002.shtml) | **mạnh** |
++| 06 | Trước khi chuỗi 20 trận bắt đầu, đội có thành tích 20–26; sau đó đi 83–33 trong phần còn lại của mùa thường. | [MLB — A’s proving themselves with hot streak](https://www.mlb.com/athletics/news/oakland-as-proving-themselves-with-hot-streak/c-132917242) | **mạnh** |
++| 07 | MLB ghi quỹ lương Oakland năm 2002 là 40.004.167 USD, đứng thứ 28 trong giải. | [MLB — Ten Years Later: The A’s Are Back](https://www.mlb.com/news/ten-years-later-the-as-are-back/c-37848808) | **mạnh** |
++| 08 | Đội 2002 ghi 800 runs và để lọt 654 runs; đó là các tổng số mùa giải, không phải số liệu riêng của chuỗi thắng. | [Baseball-Reference — 2002 Oakland Athletics](https://www.baseball-reference.com/teams/OAK/2002.shtml) | **mạnh** |
++
++## CH02 — Chỉ số không thay người tuyển trạch
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 09 | Baseball-Reference ghi Oakland 2002 có OBP toàn đội là .339, đứng thứ ba trong American League. | [Baseball-Reference — 2002 Oakland Athletics](https://www.baseball-reference.com/teams/OAK/2002.shtml) | **mạnh** |
++| 10 | Scott Hatteberg có 68 walk mùa 2002 và đứng thứ hai đội về walk. | [MLB — Scott Hatteberg player page](https://www.mlb.com/player/scott-hatteberg-115608) | **mạnh** |
++| 11 | Hatteberg chưa từng chơi first base trước mùa 2002; ông có 88 lần xuất phát ở vị trí này cho Oakland. | [MLB — Scott Hatteberg player page](https://www.mlb.com/player/scott-hatteberg-115608) | **mạnh** |
++| 12 | Cách nói “Moneyball chỉ là OBP” là giản lược: MLB nêu Oakland 2002 có ERA 3,68, xếp thứ ba MLB, đồng thời thành công nhờ phân tích giá trị cầu thủ. | [MLB — Ten Years Later: The A’s Are Back](https://www.mlb.com/news/ten-years-later-the-as-are-back/c-37848808) | **mạnh** |
++
++## CH03 — Bill James và tên gọi sabermetrics
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 13 | SABR cho biết Bill James định nghĩa sabermetrics năm 1980 là việc tìm kiếm tri thức khách quan về bóng chày. | [SABR — A Guide to Sabermetric Research](https://sabr.org/sabermetrics) | **mạnh** |
++| 14 | Bill James, Pete Palmer và Dick Cramer đồng lập Statistical Analysis Committee của SABR năm 1974. | [SABR — A Guide to Sabermetric Research](https://sabr.org/sabermetrics) | **mạnh** |
++| 15 | James tự xuất bản *Baseball Abstract* đầu tiên năm 1977; trong *Baseball Abstract* năm 1980 ông đặt tên “sabermetrics”. | [SABR — 50 at 50: Analytics](https://sabr.org/50at50/analytics) | **mạnh** |
++| 16 | SABR mô tả nghiên cứu sabermetrics thường dùng phân tích thống kê để chất vấn những thước đo truyền thống như batting average và số trận thắng của pitcher. | [SABR — A Guide to Sabermetric Research](https://sabr.org/sabermetrics) | **mạnh** |
++
++## CH04 — Billy Beane và Paul DePodesta
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 17 | Billy Beane là general manager của Oakland trong câu chuyện mùa 2002; MLB xác định cuốn sách năm 2003 nói về mùa này và về Beane. | [MLB — Athletics timeline, 2000s](https://www.mlb.com/athletics/history/timeline-2000s) | **mạnh** |
++| 18 | Paul DePodesta gia nhập Athletics năm 1999 với vai trò assistant general manager của Beane. | [AP — DePodesta returns to baseball](https://apnews.com/article/e67c9d939d0c27f65c5785de3a4fed10) | **mạnh** |
++| 19 | DePodesta từng chơi bóng chày và bóng bầu dục tại Harvard, rồi khởi nghiệp baseball bằng vị trí thực tập ở Cleveland năm 1996. | [AP — DePodesta returns to baseball](https://apnews.com/article/e67c9d939d0c27f65c5785de3a4fed10) | **mạnh** |
++| 20 | Không nên kể đội tuyển trạch như hai phe “con người chống máy”: DePodesta nói với *Washington Post* rằng quyết định có nhiều cảm xúc con người và xung đột đó bị mô tả mạnh hơn trong sách/phim. | [Washington Post — what the film leaves out](https://www.washingtonpost.com/sports/nationals/moneyball-is-compelling-but-leaves-out-much-of-the-real-story/2011/10/11/gIQAMA1cdL_story.html) | **vừa** |
++
++## CH05 — Phim khác đời thật ở đâu
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 21 | Phim *Moneyball* (2011) được chuyển thể từ sách *Moneyball: The Art of Winning an Unfair Game* xuất bản năm 2003 về mùa 2002 của Oakland. | [MLB — Athletics timeline, 2000s](https://www.mlb.com/athletics/history/timeline-2000s) | **mạnh** |
++| 22 | Nhân vật Peter Brand là nhân vật hư cấu dựa một phần vào nền tảng phân tích của DePodesta; DePodesta không cho dùng tên thật trong phim. | [AP — DePodesta returns to baseball](https://apnews.com/article/e67c9d939d0c27f65c5785de3a4fed10) | **mạnh** |
++| 23 | Art Howe là manager dẫn Oakland tới mùa 103 thắng và chức vô địch AL West năm 2002, năm cuối của ông với đội. | [MLB — Art Howe recalls 20-game streak](https://www.mlb.com/news/art-howe-recalls-athletics-20-game-win-streak-c254298012) | **mạnh** |
++| 24 | Theo một tổng thuật của *Washington Post*, xung đột giữa cách tiếp cận dữ liệu và người tuyển trạch trong phim được kịch tính hóa; không dùng các màn đối đầu trong phim làm sự kiện lịch sử. | [Washington Post — what the film leaves out](https://www.washingtonpost.com/sports/nationals/moneyball-is-compelling-but-leaves-out-much-of-the-real-story/2011/10/11/gIQAMA1cdL_story.html) | **vừa** |
++
++## CH06 — Kết thúc mùa không phải chiến thắng tuyệt đối
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 25 | Oakland vào ALDS 2002 gặp Minnesota Twins sau mùa 103 thắng. | [MLB — 2002 Twins–A’s ALDS recap](https://www.mlb.com/news/2002-twins-a-s-alds-recap.html) | **mạnh** |
++| 26 | Minnesota thắng trận 1 ALDS 7–5 sau khi Oakland từng dẫn 5–1. | [MLB — 2002 Twins–A’s ALDS recap](https://www.mlb.com/news/2002-twins-a-s-alds-recap.html) | **mạnh** |
++| 27 | Oakland thắng trận 2 và trận 3, nhưng Minnesota thắng trận 4 để cân bằng series trước trận quyết định. | [MLB — 2002 Twins–A’s ALDS recap](https://www.mlb.com/news/2002-twins-a-s-alds-recap.html) | **mạnh** |
++| 28 | Oakland thua Minnesota 1–5 ở trận 5 ALDS 2002, nên không tiến vào ALCS. | [Baseball-Reference — 2002 Oakland Athletics](https://www.baseball-reference.com/teams/OAK/2002.shtml) | **mạnh** |
++
++## CH07 — Từ một câu chuyện thành thay đổi rộng hơn
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 29 | MLB viết rằng sau khi Michael Lewis xuất bản *Moneyball*, các câu lạc bộ áp dụng ngày càng nhiều cách tiếp cận dựa trên dữ liệu để xây đội cạnh tranh. | [MLB — Mariners analytics staff](https://www.mlb.com/news/mariners-analytics-staff-breaking-ground) | **mạnh** |
++| 30 | MLB nêu các ảnh hưởng trên sân gồm tăng dùng infield shift, reliever ném mạnh và hitter kiên nhẫn nhưng có sức mạnh; đây là xu hướng toàn giải, không phải công lao riêng của Oakland. | [MLB — Mariners analytics staff](https://www.mlb.com/news/mariners-analytics-staff-breaking-ground) | **mạnh** |
++| 31 | MLB mô tả analytics hiện đại tác động tới gần như mọi quyết định chiến thuật trong baseball. | [MLB — Sabermetrics for a casual fan](https://www.mlb.com/news/sabermetrics-in-baseball-a-casual-fans-guide) | **mạnh** |
++| 32 | MLB nói cuộc cách mạng analytics bắt đầu từ thập niên 1990 và bùng lên đầu những năm 2000 khi *Moneyball* ra mắt; đây là mô tả xu hướng, không phải quan hệ nhân quả một chiều. | [MLB — Brian Cashman interview, 2026](https://www.mlb.com/news/conversation-yankees-general-manager-brian-cashman-2026-season) | **mạnh** |
++
++## Chỉ dẫn biên kịch và điều phải tránh
++
++- Trục đề xuất: **20 trận → vì sao ngân sách thấp cần đo khác đi → nền sabermetrics của Bill James → Beane/DePodesta và giới hạn của phiên bản phim → Hatteberg, pitching và 103–59 → ALDS → ảnh hưởng lan rộng.**
++- Nói “phim *Moneyball* (2011)” chỉ như mỏ neo văn hóa. Không dùng hình, poster, clip, nhạc hoặc lời thoại phim.
++- Không nói Oakland “thắng nhờ OBP” hay “bỏ hẳn tuyển trạch”; kho chỉ cho phép nói OBP là một chỉ số được ưu tiên trong câu chuyện phổ biến, còn dữ kiện mùa giải cũng cho thấy pitching mạnh.
++- Không gắn tên Billy Beane, Paul DePodesta, Art Howe hoặc Scott Hatteberg lên B-roll người lạ.
++
++## Câu hỏi còn bỏ ngỏ / không được tự điền
++
++1. Chưa tìm được nguồn Việt Nam đã mở, đủ tin cậy, xác nhận tựa phát hành chính thức của *Moneyball* (2011). Ở pha viết giữ tên gốc *Moneyball*; không tự dịch thành một tựa Việt.
++2. Nguồn đã mở không đủ để kết luận ngân sách của Oakland “bằng một nửa hay một phần ba” một đối thủ cụ thể. Chỉ đọc con số 40.004.167 USD và thứ hạng quỹ lương khi cần.
++3. Không dùng hình ảnh hay chi tiết từ phim để chứng minh xung đột với Art Howe hoặc quá trình chuyển vị trí của Hatteberg ngoài các dữ kiện có nguồn ở trên.
++4. Các clip Pexels bên dưới chỉ là ứng viên. Pha dựng phải tải, tạo clip sheet và loại mọi frame lộ logo/chữ/số đọc được.
++
++## Ảnh Commons đã kiểm giấy phép
++
++Mỗi trang file dưới đây đã mở và hiển thị `LicenseShortName` phù hợp: chỉ **CC BY** hoặc **Public domain**. Khi dựng, kiểm lại trang file trước khi tải và crop/loại khung có logo đội, biển hiệu hoặc chữ đọc được.
++
++| # | File / mô tả | Giấy phép | Trang nguồn |
++|---|---|---|---|
++| I01 | Billy Beane, 2006 | CC BY 2.0 | [Commons](https://commons.wikimedia.org/wiki/File:Billy_Beane_2006.jpg) |
++| I02 | Billy Beane tại Leaders Event, 2010 | CC BY 2.0 | [Commons](https://commons.wikimedia.org/wiki/File:Billy_Beane_-_General_Manager_Oakland_As_(5964095428).jpg) |
++| I03 | Paul DePodesta và Jimmy Haslam, 2017; crop chỉ DePodesta nếu dùng | CC BY 2.0 | [Commons](https://commons.wikimedia.org/wiki/File:Paul_DePodesta_and_Jimmy_Haslam_(36730002206).jpg) |
++| I04 | Oakland Coliseum, nhìn từ khán đài trên, 2024 | CC BY 4.0 | [Commons](https://commons.wikimedia.org/wiki/File:Oakland_Coliseum_view_from_upper_deck.jpg) |
++| I05 | Oakland Coliseum ban đêm, 2024 | CC BY 4.0 | [Commons](https://commons.wikimedia.org/wiki/File:Oakland_Coliseum_at_night.jpg) |
++| I06 | Góc nhìn trên cao Oakland Coliseum, 2024 | CC BY 4.0 | [Commons](https://commons.wikimedia.org/wiki/File:Oakland_Coliseum_overhead_angle,_September_2024.jpg) |
++| I07 | Oakland Coliseum nhìn từ trên không, 2024 | CC BY 4.0 | [Commons](https://commons.wikimedia.org/wiki/File:Oakland_Coliseum_aerial_view_2024.jpg) |
++| I08 | Quầy vé Oakland Coliseum, 2024 | CC BY 4.0 | [Commons](https://commons.wikimedia.org/wiki/File:Oakland_Coliseum_ticket_booths.jpg) |
++| I09 | Bảng điểm một trận baseball, ảnh chung | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Baseball_game_score.jpg) |
++| I10 | Scorecard baseball, ảnh chung | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Pac_bell_scorecard.jpg) |
++
++## Ứng viên B-roll Pexels (chưa tải)
++
++Các trang đã mở ghi `Free`/`Free to use`. Chỉ dùng như minh họa trung tính cho phòng tuyển trạch, họp, lựa chọn và dữ liệu; không nhận diện người trong clip là người thật trong câu chuyện.
++
++| ID | Mô tả ngắn | Ghi chú bắt buộc | Trang nguồn |
++|---:|---|---|---|
++| 6930656 | Bắt tay quanh bàn họp | Soi màn hình, giấy và logo; không gắn tên người thật. | [Pexels](https://www.pexels.com/video/coworkers-shaking-hands-at-the-office-6930656/) |
++| 7552614 | Nhóm thảo luận trong văn phòng | Loại frame lộ logo/chữ trên giấy hoặc màn hình. | [Pexels](https://www.pexels.com/video/people-in-a-meeting-7552614/) |
++| 9464879 | Đồng nghiệp trao đổi và bắt tay | Không dùng như tái hiện giao dịch cầu thủ. | [Pexels](https://www.pexels.com/video/people-shaking-hands-at-the-office-9464879/) |
++| 6930648 | Họp văn phòng | Soi cốc, bảng và trang phục có nhãn. | [Pexels](https://www.pexels.com/video/coworkers-shaking-hands-in-the-office-6930648/) |
++| 8275595 | Hai người họp, khung 16:9 | Chỉ dùng nền trung tính, không gắn danh tính. | [Pexels](https://www.pexels.com/video/men-shaking-hands-at-the-office-8275595/) |
++| 8135918 | Nhóm bàn kế hoạch | Loại blueprint, đồ thị hay chữ đọc được. | [Pexels](https://www.pexels.com/video/people-in-a-meeting-at-an-office-8135918/) |
++| 3253798 | Nhóm họp với thiết bị | Soi laptop và logo trước khi cắt. | [Pexels](https://www.pexels.com/video/a-woman-shaking-hands-in-a-business-meeting-3253798/) |
++| 7691559 | Góc cao nhóm bàn biểu đồ | Không để biểu đồ/chữ đọc được; không nói là số liệu Oakland. | [Pexels](https://www.pexels.com/video/business-people-having-a-meeting-7691559/) |
++| 7989468 | Nhóm đặt tay trong cuộc họp | Loại màn hình trình chiếu/chữ thương hiệu. | [Pexels](https://www.pexels.com/video/coworkers-putting-their-hands-together-at-a-meeting-7989468/) |
++| 8863754 | Hai người thảo luận trong phòng họp | Không dùng như ảnh nhân vật thật. | [Pexels](https://www.pexels.com/video/candidates-having-an-agreement-8863754/) |
++| 5726611 | Nhóm trao đổi trong văn phòng | Soi kỹ bảng, giấy, màn hình và logo. | [Pexels](https://www.pexels.com/video/coworkers-having-a-meeting-in-the-office-5726611/) |
++
++## Đề xuất ảnh AI
++
++#### ai_01.png — phòng tuyển trạch minh họa cho CH02, khi nói về dữ liệu và trực giác
++- Prompt (tiếng Anh): Editorial illustration, late-1990s baseball scouting room at night, a long table with anonymous silhouettes seen only from behind comparing handwritten stat sheets and simple monochrome charts, warm desk lamps, filing cabinets, no recognizable faces, no team colors, no real team insignia, clearly painted rather than archival photography.
++- Khung: 16:9, 1920x1080
++- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
++- Phong cách: painterly editorial illustration, muted green and amber palette
++
++#### ai_02.png — sân bóng chày đêm minh họa cho CH00, trước cú đánh quyết định
++- Prompt (tiếng Anh): Painterly editorial illustration of an empty generic baseball diamond under stadium lights at night, viewed from high behind home plate, rainless dramatic sky, no players close enough to identify, no team colors, no signage, no logos, no text, clearly an illustration and not archival footage.
++- Khung: 16:9, 1920x1080
++- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
++- Phong cách: painterly editorial illustration, cinematic blue and amber light
++
++#### ai_03.png — bảng dữ liệu minh họa cho CH07, khi phân tích lan rộng
++- Prompt (tiếng Anh): Editorial illustration of anonymous analysts viewed from behind in a modern operations room, projected abstract dots, bars and trend lines without readable numbers or letters, baseball tucked on a blank desk, no brands, no logos, no recognizable real people, deliberately painterly not photorealistic.
++- Khung: 16:9, 1920x1080
++- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
++- Phong cách: contemporary editorial illustration, restrained navy, cream and orange palette
+diff --git a/docs/pm/tickets/2026-10-26-codex-pilot/T4R-ket-qua.md b/docs/pm/tickets/2026-10-26-codex-pilot/T4R-ket-qua.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..160df54d4a7c0a284e1687cd5dc798c519cabdeb
+--- /dev/null
++++ b/docs/pm/tickets/2026-10-26-codex-pilot/T4R-ket-qua.md
+@@ -0,0 +1,31 @@
++# Kết quả T4R — nghiên cứu `mim-moneyball`
++
++Ngày thực hiện: 26/10/2026.
++
++## Đã làm
++
++- Đã tạo kho dữ kiện: `data/long/mim-moneyball/facts.md`.
++- Kho có 32 dữ kiện, chia đủ 8 chương, mỗi chương 4 dữ kiện: **30 mạnh**, **2 vừa**.
++- Đã ưu tiên MLB, Baseball-Reference, SABR và AP; URL của từng dữ kiện nằm ngay trong bảng và đã được mở khi nghiên cứu.
++- Đã ghi 10 ảnh Commons có giấy phép PD hoặc CC BY (không có CC BY-SA), 11 ứng viên B-roll Pexels trung tính và 3 prompt ảnh AI theo yêu cầu ticket.
++
++## Lệnh đã chạy
++
++- `New-Item -ItemType Directory -Force 'data/long/mim-moneyball'` — tạo thư mục phạm vi topic, thành công.
++
++Đây là ticket nghiên cứu nên **không** viết kịch bản, không chạy lint/render và không chạy `python scripts/long_gate.py mim-moneyball --min-syl 1900`, đúng chỉ dẫn ticket.
++
++## Kiểm chứng còn bỏ ngỏ
++
++- Chưa tìm được nguồn Việt Nam đã mở xác nhận tựa phát hành tiếng Việt chính thức của *Moneyball* (2011). Giữ tên gốc trong pha viết.
++- Không có nguồn đã mở đủ để so quỹ lương Oakland với một đối thủ cụ thể theo tỷ lệ “một nửa/một phần ba”; chỉ dùng 40.004.167 USD và hạng 28.
++- Hai dữ kiện về mức độ phim kịch tính hóa xung đột với tuyển trạch là nguồn **vừa** và phải quy dẫn nếu dùng.
++
++## Cold open đề xuất
++
++**Ngày 04/09/2002, Oakland đang dẫn Kansas City 11–0 sau ba hiệp, rồi bị gỡ hòa ở hiệp chín. Scott Hatteberg vào sân đánh thay và đưa bóng qua hàng rào để khép lại trận 12–11, chiến thắng thứ 20 liên tiếp.** Dữ kiện dùng: 02–04, đều nguồn MLB mức mạnh.
++
++## Đường dẫn media cho pha dựng
++
++- Danh sách Commons, B-roll Pexels và prompt AI: `data/long/mim-moneyball/facts.md`.
++- Chưa có clip sheet hoặc thumbnail vì ticket nghiên cứu không cho dựng/render.
+
+codex
+Kho và báo cáo đã được ghi. Mình đang kiểm tra cuối cùng đúng hai tệp đầu ra của ticket (cấu trúc 8 chương, số dữ kiện, các mục media và câu hỏi mở); không thực hiện cổng Long vì ticket xác định đây là nghiên cứu.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$facts = Get-Content -Encoding utf8 '"'data/long/mim-moneyball/facts.md'; "'$report = Get-Content -Encoding utf8 '"'docs/pm/tickets/2026-10-26-codex-pilot/T4R-ket-qua.md'; [PSCustomObject]@{FactsLines="'$facts.Count; Chapters=($facts | Where-Object { $_ -match '"'"'^## CH'"\\d\\d' }).Count; FactRows=("'$facts | Where-Object { $_ -match '"'"'^'"\\| \\d\\d \\|' }).Count; ReportLines="'$report.Count} | Format-List' in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 180ms:
+
+
+FactsLines  : 144
+Chapters    : 8
+FactRows    : 32
+ReportLines : 31
+
+
+
+
+codex
+Đã hoàn tất ticket nghiên cứu.
+
+- Kho dữ kiện 32 dòng, đủ 8 chương: [facts.md](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-moneyball\facts.md)
+- Báo cáo kết quả: [T4R-ket-qua.md](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-26-codex-pilot\T4R-ket-qua.md)
+
+Đây là ticket nghiên cứu nên không chạy `long_gate`, lint, render hay tạo script, đúng chỉ dẫn ticket.
+tokens used
+95,345
+Đã hoàn tất ticket nghiên cứu.
+
+- Kho dữ kiện 32 dòng, đủ 8 chương: [facts.md](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-moneyball\facts.md)
+- Báo cáo kết quả: [T4R-ket-qua.md](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-26-codex-pilot\T4R-ket-qua.md)
+
+Đây là ticket nghiên cứu nên không chạy `long_gate`, lint, render hay tạo script, đúng chỉ dẫn ticket.
