@@ -182,7 +182,7 @@
   B.counter = (s, d) => {
     // số thập phân (vd. "to": 3.1) giữ đúng số chữ số sau dấu phẩy; trước 12/10/2026 bị làm tròn thành "3"
     const dp = s.dec ?? Math.max(...[s.to, s.from || 0].map((n) => (String(n).split(".")[1] || "").length));
-    const vn = (n) => { const [a, b] = Number(n).toFixed(dp).split("."); return a.replace(/\B(?=(\d{3})+(?!\d))/g, ".") + (b ? "," + b : ""); };
+    const vn = (n) => { const [a, b] = Number(n).toFixed(dp).split("."); return (s.year ? a : a.replace(/\B(?=(\d{3})+(?!\d))/g, ".")) + (b ? "," + b : ""); };   // "year": true -> 1996, không chấm nghìn (26/10/2026: Short Turing hiện "1.996")
     const str = (s.prefix || "") + vn(s.to) + (s.suffix || ""), fs = fsz(str, 300, 1000, /[MWmw]/.test(str) ? 0.72 : 0.66);   // chữ có M/W rộng hơn hẳn: "500 NĂM" từng chạm hai mép khung (14/10/2026)
     const ct = el("div", "count", esc((s.prefix || "") + vn(s.from || 0) + (s.suffix || "")), d); ct.style.fontSize = px(fs); if (s.top) ct.style.top = px(s.top);
     const top = (s.top || 360) + fs + 20;

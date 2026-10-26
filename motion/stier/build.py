@@ -637,10 +637,12 @@ def build(slug: str, render: bool = True, draft: bool = False) -> Path:
     if _tl:
         raise SystemExit(f"{slug}: dấu ~ trước số dễ đọc thành dấu trừ: {_tl} -- dùng ≈")
     # retro 15/10/2026: counter hiện năm "2007" thành "2.007" (dấu phân cách nghìn) -> năm dùng slam/kinetic/timeline.
-    _yr = [s["to"] for s in spec.get("scenes", []) if spec.get("theme") in ("mim", "ck") and s.get("type") == "counter"
-           and float(s["to"]).is_integer() and 1500 <= s["to"] <= 2100 and not str(s.get("suffix") or "").strip()]
+    # 15/10/2026: counter hiện năm "2007" thành "2.007"; Short Turing (dựng trước luật) đếm 1950 -> 2000 hiện "1.996".
+    # 26/10/2026: mọi theme khai "year" cho counter 1000-2100; "year": true thì engine không chấm nghìn (casefile/casewide.js).
+    from long.studio_lint import year_counter_issues
+    _yr = year_counter_issues(spec.get("scenes"))
     if _yr:
-        raise SystemExit(f"{slug}: counter hiện năm {_yr} sẽ thành \"2.007\" -- dùng slam/kinetic/timeline")
+        raise SystemExit(f"{slug}: " + "; ".join(_yr))
     th = themes.theme(spec)
     if spec.get("theme") == "bud":   # BUD: luật đa dạng (format/hook/cảnh mở/nhạc/giọng) -- bud_variety.py
         import bud_variety
@@ -761,7 +763,8 @@ def build(slug: str, render: bool = True, draft: bool = False) -> Path:
     final = od / ("draft_av.mp4" if draft else "final.mp4")
     fc = ("[1:a]aresample=48000,pan=stereo|c0=c0|c1=c0,apad,asplit=2[v][vk];[2:a]volume=0.5[s0];"
           "[s0][vk]sidechaincompress=threshold=0.05:ratio=4:attack=20:release=300[s];"
-          "[v][s]amix=inputs=2:weights='1 1':normalize=0:duration=first,loudnorm=I=-14:TP=-1.5:LRA=11[a]")
+          "[v][s]amix=inputs=2:weights='1 1':normalize=0:duration=first,loudnorm=I=-14:TP=-1.5:LRA=11,"
+          "aresample=192000,alimiter=limit=0.78:level=0,aresample=48000[a]")   # 26/10/2026: chặn đỉnh thật (như build_long)
     music = []
     if th["sound"] == "music":
         # spec ghi "music" (BUD: bud_variety chọn) -> dùng đúng bài đó; không ghi -> như cũ (lâu chưa dùng nhất)

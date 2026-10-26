@@ -208,7 +208,8 @@ def music_filter(gain: float, quiet: list[tuple[float, float]], duck_ratio: floa
             f"[3:a]aresample=48000,volume={gain}{duck}[m0];"
             f"[m0][vk2]sidechaincompress=threshold=0.03:ratio={duck_ratio:g}:attack=40:release=600[m];"
             "[v][s][m]amix=inputs=3:weights='1 1 1':normalize=0:duration=first,"
-            "loudnorm=I=-14:TP=-1.5:LRA=11[a]")
+            "loudnorm=I=-14:TP=-1.5:LRA=11,"
+            "aresample=192000,alimiter=limit=0.78:level=0,aresample=48000[a]")   # 26/10/2026: chặn đỉnh thật (như build_long)
 
 
 def tracks(th: dict) -> dict:

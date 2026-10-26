@@ -346,7 +346,7 @@
     // Số thập phân (vd. "to": 3.6): giữ đúng số chữ số sau dấu phẩy của from/to. Trước 12/10/2026 mọi số bị làm tròn,
     // "3,6 TỶ" hiện thành "4 TỶ" trong khi lời đọc nói "ba tỷ sáu".
     const dp = s.dec ?? Math.max(...[s.to, s.from || 0].map((n) => (String(n).split(".")[1] || "").length));
-    const vn = (n) => { const [a, b] = Number(n).toFixed(dp).split("."); return a.replace(/\B(?=(\d{3})+(?!\d))/g, ".") + (b ? "," + b : ""); };
+    const vn = (n) => { const [a, b] = Number(n).toFixed(dp).split("."); return (s.year ? a : a.replace(/\B(?=(\d{3})+(?!\d))/g, ".")) + (b ? "," + b : ""); };   // "year": true -> 1996, không chấm nghìn (26/10/2026: Short Turing hiện "1.996")
     let cx0 = 0, cw = W;
     if (s.img) { const m = IM(s.img), k = Math.min(600 / m.w, 640 / m.h), w = m.w * k, h = m.h * k;
       const pr = el("div", "print", null, d); Object.assign(pr.style, { left: px(140), top: px(470 - (h + 36) / 2), width: px(w + 36), height: px(h + 36) });

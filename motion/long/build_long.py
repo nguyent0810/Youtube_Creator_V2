@@ -1037,6 +1037,13 @@ def render_key(topic, name, od, draft) -> str:
             hsh.update((HF / "assets" / "engine" / n).read_bytes())
     for vid in sorted(set(re.findall(r"broll/(\d+(?:fit)?)\.mp4", comp.read_text(encoding="utf-8")))):
         hsh.update(vid.encode())
+    # 26/10/2026 (học từ vietneu-tts 08c3d94): thay ảnh mà giữ tên thì key cũ vẫn khớp -> chương cũ được dùng lại.
+    # Băm nội dung ảnh local; clip thì chỉ băm cỡ file (đọc cả clip mỗi lần quá chậm).
+    refs = (od / name / "data.js").read_text(encoding="utf-8") + comp.read_text(encoding="utf-8")
+    for rel in sorted(set(re.findall(r"""["'(]((?:assets|broll)/[^"')]+\.(?:jpe?g|png|webp|gif|svg|mp4|webm))""", refs, re.I))):
+        f = HF / rel
+        if f.is_file():
+            hsh.update(rel.encode() + (str(f.stat().st_size).encode() if f.suffix.lower() in (".mp4", ".webm") else f.read_bytes()))
     return hsh.hexdigest()[:16]
 
 
@@ -1119,7 +1126,8 @@ def do_final(topic):
     alst = od / "concat_a.txt"
     alst.write_text("".join(f"file '{(od / n / 'mixpad.wav').as_posix()}'\n" for n, _ in chs), encoding="utf-8")
     r = run([FFMPEG, "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(lst), "-f", "concat", "-safe", "0", "-i", str(alst),
-             "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
+             "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-af", "loudnorm=I=-14:TP=-1.5:LRA=11,aresample=192000,alimiter=limit=0.78:level=0,aresample=48000",   # 26/10/2026: chặn đỉnh thật ở 4x (5/25 Long từng vọt > −1 dBTP sau AAC; KAL đã thử limit 0.78 -> −1,7 dBTP, −14,2 LUFS)
+             "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
              "-shortest", "-movflags", "+faststart", str(od / "final.mp4")])
     if r.returncode != 0:
         raise SystemExit(r.stderr[-2000:])
