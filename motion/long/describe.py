@@ -61,7 +61,9 @@ def mim_lines(spec, meta, chapters, used, vids, music, od):
     idx_p = od / "broll" / "index.json"
     idx = json.loads(idx_p.read_text(encoding="utf-8")) if idx_p.exists() else {}
     users = sorted({idx[v]["user"] for v in vids if v in idx})
-    L += ["", "🎬 VIDEO: Pexels (pexels.com), giấy phép Pexels" + (" — quay bởi " + ", ".join(users) if users else ""), "", "🎵 NHẠC NỀN"]
+    if vids:   # 23/10/2026: chỉ ghi dòng Pexels khi video thật sự có clip Pexels
+        L += ["", "🎬 VIDEO: Pexels (pexels.com), giấy phép Pexels" + (" — quay bởi " + ", ".join(users) if users else "")]
+    L += ["", "🎵 NHẠC NỀN"]
     mac = [b for b in music if b in MUSIC]
     if mac:
         L.append(", ".join(f"\"{MUSIC[b]}\"" for b in mac) + " by Kevin MacLeod (incompetech.com)")

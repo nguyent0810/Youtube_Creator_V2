@@ -1,0 +1,129 @@
+{
+ "theme": "mim",
+ "title": "Người lạ mở được Face ID: một phần triệu. Nhưng con số ấy dành cho ai?",
+ "description": "Theo tài liệu bảo mật Face ID mà Apple công bố tháng 11/2017, xác suất một người ngẫu nhiên mở được máy bằng Face ID là khoảng 1 trên 1.000.000 (cho một khuôn mặt đã đăng ký); với cảm biến vân tay Touch ID đời trước là khoảng 1 trên 50.000. Chính tài liệu ấy nói xác suất cao hơn với anh chị em sinh đôi, anh chị em ruột trông giống nhau và trẻ dưới 13 tuổi; với họ hãng khuyên dùng mật mã. Tỉ lệ 'chặt hơn khoảng 20 lần' là kênh tự tính từ hai con số.\n\nGiọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\nBản đầy đủ (khoảng 10 phút): https://youtu.be/7daMUBWG6mU (công khai từ 20:00 ngày 30/11).",
+ "tags": [
+  "face id",
+  "apple",
+  "nhận diện khuôn mặt",
+  "touch id",
+  "sinh trắc học",
+  "bảo mật điện thoại",
+  "mind in the machine"
+ ],
+ "sub": "TÀI LIỆU APPLE · 2017",
+ "acc": [
+  "triệu",
+  "năm",
+  "ngẫu",
+  "sinh"
+ ],
+ "kicker": "KHUÔN MẶT VÀ AI",
+ "lines": [
+  "Người lạ mở được Face ID: một phần triệu.",
+  "Đó là con số trong tài liệu bảo mật Apple công bố năm hai nghìn không trăm mười bảy.",
+  "Với cảm biến vân tay đời trước, là một phần năm mươi nghìn.",
+  "Tức là chặt hơn khoảng hai mươi lần.",
+  "Nhưng con số ấy dành cho một người ngẫu nhiên, với một khuôn mặt đã đăng ký.",
+  "Với anh chị em sinh đôi, hay trẻ dưới mười ba tuổi, xác suất cao hơn.",
+  "Một phần triệu, là dành cho người lạ ngẫu nhiên."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NGƯỜI LẠ MỞ ĐƯỢC",
+     "at": 0.0
+    },
+    {
+     "text": "một phần triệu",
+     "at": [
+      0,
+      "một"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7821861",
+   "veil": 0.55
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "XÁC SUẤT MỘT NGƯỜI NGẪU NHIÊN MỞ ĐƯỢC MÁY",
+   "rows": [
+    {
+     "k": "VÂN TAY ĐỜI TRƯỚC",
+     "v": "1 / 50.000",
+     "at": [
+      2,
+      "vân"
+     ]
+    },
+    {
+     "k": "FACE ID",
+     "v": "1 / 1.000.000",
+     "at": [
+      3,
+      "Tức"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "CON SỐ ẤY CHỈ ĐÚNG VỚI AI?",
+   "cards": [
+    {
+     "k": "NGƯỜI NGẪU NHIÊN",
+     "v": "MỘT PHẦN TRIỆU",
+     "at": [
+      4,
+      "ngẫu"
+     ]
+    },
+    {
+     "k": "SINH ĐÔI · TRẺ DƯỚI 13 TUỔI",
+     "v": "CAO HƠN",
+     "at": [
+      5,
+      "sinh"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "MỘT PHẦN TRIỆU",
+   "sub": "CHỈ VỚI NGƯỜI LẠ NGẪU NHIÊN"
+  }
+ ],
+ "sources": [
+  "Apple, Face ID Security Guide (11/2017) -- URL cần kiểm khi có mạng"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "imgs": {},
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "Face": "Phây",
+  "=ID": "ai đi",
+  "Apple": "Áp-pồ"
+ }
+}

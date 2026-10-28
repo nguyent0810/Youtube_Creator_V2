@@ -1,0 +1,221 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-hl-nghiep-khong-phai-dinh-menh",
+ "format": "hieu-lam",
+ "hook_type": "do-vui",
+ "open_shot": "con-duong",
+ "voice": "Thiện Minh",
+ "music": "arcadia.mp3",
+ "music_gain": 0.18,
+ "gap": 0.45,
+ "series": "Hiểu đúng #10",
+ "title": "Nghiệp là gì? Số phận, ý định hay tai họa?",
+ "kicker": "HIỂU ĐÚNG #10",
+ "sub": "KINH TĂNG CHI 6.63",
+ "acc": [
+  "nghiệp",
+  "ý",
+  "định"
+ ],
+ "lines": [
+  "Đoán xem: nghiệp là gì? Số phận, ý định, hay tai họa?",
+  "Chọn một chữ trước nhé.",
+  "Nhiều người nghĩ nghiệp là án định sẵn, không đổi được.",
+  "Đáp án bất ngờ: là ý định.",
+  "Kinh Tăng Chi, diễn ý: tác ý chính là nghiệp.",
+  "Thật ra, nghiệp nằm ở việc mình chọn làm, ngay bây giờ.",
+  "Nên hôm nay vẫn đổi được.",
+  "Hôm nay chọn một việc tử tế, có chủ ý.",
+  "Bạn đoán số phận, ý định, hay tai họa? Comment một chữ."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:36094569",
+   "items": [
+    {
+     "text": "NGHIỆP LÀ GÌ?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "hiểu đúng #10",
+     "at": [
+      0,
+      "nghiệp"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "hf_list_build",
+   "at": 1,
+   "title": "BẠN CHỌN?",
+   "items": [
+    {
+     "key": "A",
+     "text": "SỐ PHẬN",
+     "at": [
+      1,
+      "chọn"
+     ]
+    },
+    {
+     "key": "B",
+     "text": "Ý ĐỊNH",
+     "at": [
+      1,
+      "chữ"
+     ]
+    },
+    {
+     "key": "C",
+     "text": "TAI HỌA",
+     "at": [
+      1,
+      "nhé."
+     ]
+    }
+   ]
+  },
+  {
+   "type": "hf_split",
+   "at": 2,
+   "a": {
+    "lab": "NHIỀU NGƯỜI NGHĨ",
+    "val": "đã **định**",
+    "num": "✗",
+    "at": [
+     2,
+     "nhiều"
+    ]
+   },
+   "b": {
+    "lab": "HIỂU ĐÚNG",
+    "val": "nghiệp = **ý định**",
+    "num": "✓",
+    "at": [
+     3,
+     "ý"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "AN 6.63 (diễn ý)",
+   "nodes": [
+    {
+     "text": "TÁC Ý",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      4,
+      "tác"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "= NGHIỆP",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      4,
+      "nghiệp."
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "AN 6.63 · SUTTACENTRAL"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "clip": "pexels:33468012",
+   "items": [
+    {
+     "text": "CHỌN NGAY BÂY GIỜ",
+     "at": [
+      5,
+      "nghiệp"
+     ],
+     "acc": true
+    },
+    {
+     "text": "việc mình chọn làm",
+     "at": [
+      5,
+      "chọn"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "HÔM NAY\nVẪN ĐỔI ĐƯỢC",
+   "fx": "zoom"
+  },
+  {
+   "type": "cards3d",
+   "at": 7,
+   "title": "HÔM NAY",
+   "cards": [
+    {
+     "k": "1 VIỆC",
+     "v": "TỬ TẾ, CÓ CHỦ Ý",
+     "at": [
+      7,
+      "việc"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "veil": 0.4,
+   "clip": "pexels:31993283",
+   "items": [
+    {
+     "text": "BẠN ĐOÁN GÌ?",
+     "at": [
+      8,
+      "bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "comment một chữ",
+     "at": [
+      8,
+      "comment"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/an6.63/en/sujato"
+ ],
+ "description": "Nghiệp là gì? Số phận, ý định hay tai họa?\n\nNguồn: https://suttacentral.net/an6.63/en/sujato"
+}

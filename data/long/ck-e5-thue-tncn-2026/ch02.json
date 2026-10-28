@@ -1,0 +1,314 @@
+{
+ "title": "Cái thang năm bậc",
+ "lines": [
+  {
+   "t": "Hãy hình dung thu nhập tính thuế như nước đổ vào một dãy bậc thang.",
+   "p": 0.8
+  },
+  {
+   "t": "Mỗi bậc chỉ giữ một lượng nước nhất định, và mỗi bậc có một mức thuế riêng.",
+   "p": 1.0
+  },
+  "Bậc thứ nhất giữ tối đa mười triệu đồng, chịu năm phần trăm.",
+  "Bậc thứ hai, từ mười tới ba mươi triệu, chịu mười phần trăm.",
+  {
+   "t": "Bậc thứ ba, từ ba mươi tới sáu mươi triệu, chịu hai mươi phần trăm.",
+   "p": 1.0
+  },
+  "Hai bậc cuối dành cho thu nhập rất cao.",
+  "Từ sáu mươi tới một trăm triệu, ba mươi phần trăm.",
+  {
+   "t": "Trên một trăm triệu, ba mươi lăm phần trăm.",
+   "p": 1.0
+  },
+  {
+   "t": "Vậy lương lên bậc hai thì cả lương bị tính mười phần trăm à?",
+   "ask": 1
+  },
+  "Không.",
+  "Đây là chỗ nhiều người hiểu nhầm nhất.",
+  "Chỉ phần nước tràn sang bậc hai mới chịu mức của bậc hai. Chỉ phần tràn.",
+  {
+   "t": "Phần nằm ở bậc một vẫn chỉ chịu năm phần trăm.",
+   "p": 1.0
+  },
+  "Sáu trăm bảy mươi lăm nghìn của anh Khang nằm gọn trong bậc thứ nhất.",
+  "Năm phần trăm của nó là ba mươi ba nghìn bảy trăm năm mươi đồng.",
+  {
+   "t": "Đó là dòng thuế trên phiếu lương tháng mười. Chưa tới ba mươi tư nghìn.",
+   "p": 1.0
+  },
+  "Trước năm nay, cái thang có bảy bậc, và các bậc hẹp hơn.",
+  "Bậc một chỉ giữ năm triệu.",
+  "Bậc hai giữ thêm năm triệu nữa.",
+  {
+   "t": "Mức ba mươi lăm phần trăm bắt đầu từ tám mươi triệu, chứ không phải một trăm triệu.",
+   "p": 1.0
+  },
+  "Thử cùng một thu nhập tính thuế hai mươi triệu một tháng.",
+  "Theo thang bảy bậc cũ, thuế là hai triệu ba trăm năm mươi nghìn.",
+  {
+   "t": "Theo thang năm bậc mới, một triệu rưỡi. Nhẹ hơn hẳn.",
+   "p": 1.0
+  },
+  "Còn một con số nữa trên thang, hay bị nhầm với tiền thuế thật.",
+  "Thử lương gộp năm mươi triệu, chưa có người phụ thuộc.",
+  "Thu nhập tính thuế khoảng hai mươi chín triệu, nên phần trên cùng nằm ở bậc mười phần trăm.",
+  "Nhưng tổng thuế chỉ khoảng hai triệu bốn trăm hai mươi lăm nghìn.",
+  {
+   "t": "Chưa tới năm phần trăm của lương gộp.",
+   "p": 1.0
+  },
+  {
+   "t": "Bậc cao nhất bạn chạm tới, không phải là tỉ lệ thuế bạn thật sự trả.",
+   "p": 1.0
+  },
+  "Bậc rộng hơn, nước tràn lên bậc cao chậm hơn.",
+  "Đó là nửa thứ nhất của câu trả lời.",
+  "Nửa thứ hai nằm ở hai tờ phiếu lương cũ của anh Khang."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHẶNG HAI",
+   "title": "CÁI THANG\nNĂM BẬC",
+   "sub": "BIỂU THUẾ LUỸ TIẾN TỪNG PHẦN · 2026",
+   "vid": "7593898",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Hãy"
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 2,
+   "title": "THUẾ SUẤT TỪNG BẬC (%)",
+   "unit": "THU NHẬP TÍNH THUẾ/THÁNG · TỪ 2026",
+   "items": [
+    {
+     "k": "ĐẾN 10 TR",
+     "v": 5,
+     "lbl": "5",
+     "at": [
+      2,
+      "Bậc"
+     ]
+    },
+    {
+     "k": "10 – 30 TR",
+     "v": 10,
+     "lbl": "10",
+     "at": [
+      3,
+      "Bậc"
+     ]
+    },
+    {
+     "k": "30 – 60 TR",
+     "v": 20,
+     "lbl": "20",
+     "at": [
+      4,
+      "Bậc"
+     ]
+    },
+    {
+     "k": "60 – 100 TR",
+     "v": 30,
+     "lbl": "30",
+     "at": [
+      6,
+      "Từ"
+     ]
+    },
+    {
+     "k": "TRÊN 100 TR",
+     "v": 35,
+     "lbl": "35",
+     "at": [
+      7,
+      "Trên"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "LUẬT THUẾ TNCN 109/2025/QH15 (QUA TẠP CHÍ CÔNG THƯƠNG)",
+    "v": "",
+    "at": 2
+   }
+  },
+  {
+   "type": "question",
+   "at": 8,
+   "text": "Lên bậc hai thì cả lương\nbị tính 10% à?"
+  },
+  {
+   "type": "myth",
+   "at": 9,
+   "mythLab": "NHIỀU NGƯỜI NGHĨ",
+   "myth": "CẢ LƯƠNG CHỊU MỨC BẬC CAO",
+   "truthLab": "THẬT RA",
+   "truth": "CHỈ PHẦN TRÀN SANG BẬC ĐÓ",
+   "strikeAt": [
+    10,
+    "Đây"
+   ],
+   "truthAt": [
+    11,
+    "Chỉ"
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 13,
+   "from": 0,
+   "to": 33750,
+   "suffix": " Đ",
+   "label": "675 NGHÌN × 5% · DÒNG THUẾ THÁNG 10",
+   "sub": {
+    "text": "VÍ DỤ GIẢ ĐỊNH · ANH KHANG · 25 TRIỆU · 1 NGƯỜI PHỤ THUỘC",
+    "at": 14
+   }
+  },
+  {
+   "type": "bars",
+   "at": 16,
+   "title": "BIỂU 7 BẬC CŨ · NGƯỠNG TRÊN CỦA TỪNG BẬC (TRIỆU)",
+   "unit": "ĐẾN HẾT 2025",
+   "items": [
+    {
+     "k": "BẬC 1 · 5%",
+     "v": 5,
+     "lbl": "5",
+     "at": [
+      17,
+      "Bậc"
+     ]
+    },
+    {
+     "k": "BẬC 2 · 10%",
+     "v": 10,
+     "lbl": "10",
+     "at": [
+      18,
+      "Bậc"
+     ]
+    },
+    {
+     "k": "BẬC 3 · 15%",
+     "v": 18,
+     "lbl": "18",
+     "at": [
+      18,
+      "năm"
+     ]
+    },
+    {
+     "k": "BẬC 7 · 35% TỪ",
+     "v": 80,
+     "lbl": "80",
+     "at": [
+      19,
+      "tám"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 20,
+   "title": "TNTT 20 TRIỆU/THÁNG · THUẾ (TRIỆU)",
+   "unit": "KÊNH TỰ TÍNH",
+   "items": [
+    {
+     "k": "THANG 7 BẬC CŨ",
+     "v": 2.35,
+     "lbl": "2,35",
+     "at": [
+      21,
+      "Theo"
+     ]
+    },
+    {
+     "k": "THANG 5 BẬC MỚI",
+     "v": 1.5,
+     "lbl": "1,5",
+     "at": [
+      22,
+      "Theo"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 23,
+   "title": "LƯƠNG GỘP 50 TRIỆU · CHƯA CÓ NGƯỜI PHỤ THUỘC",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "rows": [
+    {
+     "k": "THU NHẬP TÍNH THUẾ",
+     "v": "≈ 29,25 TRIỆU",
+     "at": 25
+    },
+    {
+     "k": "BẬC CAO NHẤT CHẠM",
+     "v": "10%",
+     "at": [
+      25,
+      "bậc"
+     ]
+    },
+    {
+     "k": "TỔNG THUẾ",
+     "v": "≈ 2,425 TRIỆU",
+     "at": 26
+    }
+   ],
+   "total": {
+    "k": "TRÊN LƯƠNG GỘP",
+    "v": "≈ 4,85%",
+    "at": 27
+   }
+  },
+  {
+   "type": "slam",
+   "at": 28,
+   "text": "BẬC CAO NHẤT ≠ TỈ LỆ THUẾ THẬT",
+   "sub": ""
+  },
+  {
+   "type": "kinetic",
+   "at": 29,
+   "items": [
+    {
+     "text": "BẬC RỘNG HƠN · TRÀN LÊN CHẬM HƠN",
+     "at": 29
+    },
+    {
+     "text": "NỬA THỨ NHẤT CỦA CÂU TRẢ LỜI",
+     "at": 30,
+     "acc": true
+    },
+    {
+     "text": "nửa thứ hai: hai tờ phiếu lương cũ",
+     "at": 31,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHẶNG 02",
+  "t": "CÁI THANG NĂM BẬC"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

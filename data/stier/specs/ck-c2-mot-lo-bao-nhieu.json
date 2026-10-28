@@ -1,0 +1,184 @@
+{
+ "theme": "ck",
+ "kicker": "MỘT LÔ",
+ "sub": "BAO NHIÊU TIỀN",
+ "title": "Một lô cổ phiếu cần bao nhiêu tiền? Khoảng 1,5 triệu với cổ phiếu giá giữa sàn TP.HCM",
+ "description": "Ở sàn TP.HCM, một lô chẵn là 100 cổ phiếu. Kênh tự tính: giá đóng cửa gần nhất tới 30/09/2026 của 406 cổ phiếu, giá trung vị ≈ 15.400 đồng → một lô ≈ 1,54 triệu đồng, chưa tính phí, ≈ 17% thu nhập bình quân tháng của người lao động (9,0 triệu, quý I/2026, Cục Thống kê) — chưa tới một phần năm. Muốn ít hơn 100 cổ phiếu (1–99) thì dùng lô lẻ: khớp trong cùng các phiên như lô chẵn nhưng chỉ đặt được lệnh giới hạn.\n\nGiá từng cổ phiếu khác nhau rất xa; con số trung vị chỉ cho biết cỡ tiền, không phải gợi ý mua mã nào. Quy định lô: Quy chế VNX, QĐ 22/QĐ-HĐTV ngày 18/04/2025, theo thời điểm làm video (10/2026).\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ (giá tới 30/09/2026), tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (12 phút): https://youtu.be/S_oMZt36W60",
+ "tags": [
+  "lô cổ phiếu",
+  "lô lẻ",
+  "mua cổ phiếu cần bao nhiêu tiền",
+  "chứng khoán cho người mới",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "trăm",
+  "rưỡi",
+  "năm",
+  "lẻ",
+  "chẵn"
+ ],
+ "lines": [
+  "Một lô cổ phiếu cần bao nhiêu tiền?",
+  "Trên sàn Thành phố Hồ Chí Minh, một lô là một trăm cổ phiếu.",
+  "Cuối tháng chín, cổ phiếu đứng giữa hàng giá khoảng mười lăm nghìn.",
+  "Vậy một lô khoảng một triệu rưỡi, chưa tính phí.",
+  "Chưa tới một phần năm thu nhập bình quân tháng, khoảng chín triệu.",
+  "Muốn ít hơn, từ một tới chín mươi chín cổ phiếu, là lô lẻ.",
+  "Lô lẻ chỉ đặt được lệnh giới hạn.",
+  "Một trăm cổ phiếu là lô chẵn, không phải mức mua tối thiểu."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MỘT LÔ BAO NHIÊU TIỀN?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "1 LÔ = 100 CỔ PHIẾU",
+     "at": [
+      1,
+      "lô"
+     ]
+    },
+    {
+     "text": "lô chẵn · sàn TP.HCM · quy định 10/2026",
+     "at": [
+      1,
+      "cổ"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34583663",
+   "ms": 3,
+   "veil": 0.58
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "from": 0,
+   "to": 15400,
+   "suffix": " Đ",
+   "label": "GIÁ ĐỨNG GIỮA HÀNG · CỔ PHIẾU SÀN TP.HCM",
+   "sub": {
+    "text": "TRUNG VỊ 406 MÃ · TỚI 30/09/2026 · KÊNH TỰ TÍNH",
+    "at": [
+     2,
+     "giá"
+    ]
+   }
+  },
+  {
+   "type": "chart",
+   "at": 3,
+   "kind": "bars",
+   "title": "MỘT LÔ SO VỚI THU NHẬP THÁNG",
+   "unit": "TRIỆU ĐỒNG · KÊNH TỰ TÍNH · CHƯA TÍNH PHÍ",
+   "bars": [
+    {
+     "label": "1 LÔ\n100 × 15.400",
+     "v": 1.54,
+     "text": "≈ 1,54",
+     "c": "acc",
+     "at": [
+      3,
+      "lô"
+     ]
+    },
+    {
+     "label": "THU NHẬP\nBÌNH QUÂN",
+     "v": 9.0,
+     "text": "9,0",
+     "c": "ref",
+     "at": [
+      4,
+      "thu"
+     ]
+    }
+   ],
+   "badge": {
+    "text": "≈ 17% · CHƯA TỚI 1/5",
+    "at": [
+     4,
+     "chín"
+    ],
+    "y": 1300
+   },
+   "note": "THU NHẬP BÌNH QUÂN NGƯỜI LAO ĐỘNG QUÝ I/2026 · NSO"
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "ÍT HƠN 100 CỔ PHIẾU",
+   "nodes": [
+    {
+     "text": "LÔ LẺ: 1–99 CỔ PHIẾU",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      5,
+      "lô"
+     ],
+     "w": 780
+    },
+    {
+     "text": "CHỈ LỆNH GIỚI HẠN",
+     "x": 0.5,
+     "y": 0.72,
+     "at": [
+      6,
+      "giới"
+     ],
+     "shape": "circle",
+     "c": "acc",
+     "w": 720
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      6,
+      "chỉ"
+     ]
+    }
+   ],
+   "note": "KHỚP CÙNG CÁC PHIÊN VỚI LÔ CHẴN · QUY ĐỊNH 10/2026"
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "100 CỔ PHIẾU =\nLÔ CHẴN",
+   "sub": "KHÔNG PHẢI MỨC MUA TỐI THIỂU"
+  }
+ ],
+ "sources": [
+  "https://youtu.be/S_oMZt36W60",
+  "https://www.nso.gov.vn/tin-tuc-thong-ke/2026/04/thong-cao-bao-chi-ve-tinh-hinh-lao-dong-viec-lam-quy-i-nam-2026/",
+  "https://luatvietnam.vn/chung-khoan/quyet-dinh-22-qd-hdtv-2025-ban-hanh-quy-che-niem-yet-va-giao-dich-chung-khoan-399805-d1.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

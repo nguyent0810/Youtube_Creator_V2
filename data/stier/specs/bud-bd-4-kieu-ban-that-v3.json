@@ -1,0 +1,175 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-bd-4-kieu-ban-that",
+ "format": "ba-dieu",
+ "hook_type": "con-so",
+ "open_shot": "ban-be",
+ "voice": "Ngọc Trân",
+ "music": "arcadia.mp3",
+ "music_gain": 0.18,
+ "gap": 0.15,
+ "title": "4 kiểu bạn thật: bạn thân của bạn là số mấy?",
+ "kicker": "4 KIỂU BẠN THẬT",
+ "sub": "KINH TRƯỜNG BỘ 31",
+ "acc": [
+  "số",
+  "bạn"
+ ],
+ "lines": [
+  "Bốn kiểu bạn thật. Bạn thân của bạn là số mấy?",
+  "Đếm thử trên tay nhé.",
+  "Số một: người che chở khi bạn sơ suất.",
+  "Số hai: người không bỏ đi lúc bạn gặp nạn.",
+  "Số ba: người dám khuyên, ngăn bạn làm điều xấu.",
+  "Nhưng số bốn thì sao? Người vui thật lòng khi bạn thành công.",
+  "Kinh Trường Bộ ba mươi mốt, diễn ý: đó là bốn người bạn thật.",
+  "Bạn thân của bạn là số mấy? Gửi cho họ kèm một con số."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:9187880",
+   "items": [
+    {
+     "text": "BẠN THÂN LÀ SỐ MẤY?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "4 kiểu bạn thật",
+     "at": [
+      0,
+      "bạn",
+      1
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 4,
+   "suffix": " KIỂU BẠN",
+   "label": "ĐẾM TRÊN TAY",
+   "until": [
+    1,
+    "nhé."
+   ]
+  },
+  {
+   "type": "hf_list_build",
+   "at": 2,
+   "title": "BẠN THẬT",
+   "items": [
+    {
+     "key": "1",
+     "text": "CHE CHỞ",
+     "at": [
+      2,
+      "che"
+     ]
+    },
+    {
+     "key": "2",
+     "text": "KHÔNG BỎ ĐI",
+     "at": [
+      3,
+      "bỏ"
+     ]
+    },
+    {
+     "key": "3",
+     "text": "DÁM KHUYÊN",
+     "at": [
+      4,
+      "khuyên,"
+     ]
+    },
+    {
+     "key": "4",
+     "text": "???",
+     "at": [
+      4,
+      "xấu."
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "clip": "pexels:4772462",
+   "items": [
+    {
+     "text": "SỐ 4?",
+     "at": [
+      5,
+      "nhưng"
+     ],
+     "acc": true
+    },
+    {
+     "text": "vui thật lòng khi bạn thành công",
+     "at": [
+      5,
+      "vui"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "source",
+   "at": 6,
+   "source": "KINH TRƯỜNG BỘ 31",
+   "ref": "Thi-ca-la-việt",
+   "snippet": "Bốn người bạn thật: [[giúp đỡ · chung vui buồn · khuyên điều tốt · thương mến]].",
+   "hlAt": [
+    6,
+    "thật."
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "veil": 0.4,
+   "clip": "pexels:8343558",
+   "items": [
+    {
+     "text": "GỬI CHO BẠN ẤY",
+     "at": [
+      7,
+      "gửi"
+     ],
+     "acc": true
+    },
+    {
+     "text": "kèm một con số",
+     "at": [
+      7,
+      "kèm"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dn31/en/sujato"
+ ],
+ "description": "4 kiểu bạn thật: bạn thân của bạn là số mấy?\n\nNguồn: https://suttacentral.net/dn31/en/sujato"
+}

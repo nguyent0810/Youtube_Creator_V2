@@ -183,13 +183,13 @@ CH["ch06"] = {"hud": {"k": "CHƯƠNG 06", "t": "BA CÂU HỎI TRƯỚC KHI BẤM
 ]}
 
 SPEC = {
-    "title": "FOMO: Vì Sao Lúc \"Ai Cũng Lãi\" Lại Là Lúc Nguy Hiểm Nhất?",
+    "title": "Năm 2021 Ai Cũng Lãi: Vì Sao Đó Là Lúc Nguy Hiểm Nhất?",
     "channel": "CK", "accent": "#fbbf24", "master": True, "endcard": 20, "endcardSub": "VIDEO TIẾP THEO", "beat2": True,
     "acc": ["vn-index", "fomo", "đỉnh", "kỷ", "lục", "tài", "khoản"],
     "say": SAY, "imgs": {},
     "chapters": [f"ch{i:02d}" for i in range(7)],
     "youtube": {
-        "titles": ["FOMO: Vì Sao Lúc \"Ai Cũng Lãi\" Lại Là Lúc Nguy Hiểm Nhất?",
+        "titles": ["Năm 2021 Ai Cũng Lãi: Vì Sao Đó Là Lúc Nguy Hiểm Nhất?",
                    "Tháng Kỷ Lục Mở Tài Khoản Chứng Khoán Lại Đến SAU Đỉnh: Dữ Liệu 2022 Nói Gì",
                    "Ba Lần Cả Nước Đổ Xô Mua Cổ Phiếu, Và Điều Xảy Ra Sau Đó"],
         "summary": "Tháng 3/2022, nhà đầu tư Việt Nam mở hơn 270 nghìn tài khoản chứng khoán — kỷ lục — trong khi đỉnh VN-Index đã qua từ hai "

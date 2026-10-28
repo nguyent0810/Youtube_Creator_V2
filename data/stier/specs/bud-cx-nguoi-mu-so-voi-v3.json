@@ -1,0 +1,207 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-cx-nguoi-mu-so-voi",
+ "format": "chuyen-xua",
+ "hook_type": "noi-dau",
+ "open_shot": "cai-nhau",
+ "voice": "Thiền Tâm Đức",
+ "music": "perspectives.mp3",
+ "music_gain": 0.16,
+ "gap": 0.1,
+ "series": "Chuyện xưa · Tập 12",
+ "title": "Cãi nhau mà ai cũng thấy mình đúng 100%?",
+ "kicker": "CHUYỆN XƯA · TẬP 12",
+ "sub": "KINH PHẬT TỰ THUYẾT 6.4",
+ "acc": [
+  "đúng",
+  "voi",
+  "phần"
+ ],
+ "lines": [
+  "Cãi nhau mà ai cũng thấy mình đúng trăm phần trăm?",
+  "Chuyện xưa kể: một vị vua cho những người mù sờ một con voi.",
+  "Người sờ đầu nói voi như cái chum.",
+  "Người sờ ngà nói như lưỡi cày. Sờ đuôi, nói như cái chày.",
+  "Rồi họ cãi nhau, đấm nhau, ai cũng chắc mình đúng.",
+  "Nhưng thật ra, ai cũng đúng. Chỉ đúng một phần.",
+  "Kinh Phật Tự Thuyết, diễn ý: người chỉ thấy một mặt thì tranh cãi.",
+  "Lần tới cãi nhau, hỏi thêm một câu: bạn đang sờ phần nào?",
+  "Ai hay cãi thắng với bạn? Gửi họ chuyện con voi này."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:7640675",
+   "items": [
+    {
+     "text": "AI CŨNG ĐÚNG 100%?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "chuyện xưa · tập 12",
+     "at": [
+      0,
+      "mình"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Chuyện xưa",
+   "nodes": [
+    {
+     "text": "VUA",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      1,
+      "vua"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "NGƯỜI MÙ SỜ VOI",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      1,
+      "voi."
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "UD 6.4 · SUTTACENTRAL"
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "SỜ VOI",
+   "cards": [
+    {
+     "k": "ĐẦU",
+     "v": "CÁI CHUM",
+     "at": [
+      2,
+      "chum."
+     ]
+    },
+    {
+     "k": "NGÀ",
+     "v": "LƯỠI CÀY",
+     "at": [
+      3,
+      "cày."
+     ]
+    },
+    {
+     "k": "ĐUÔI",
+     "v": "CÁI CHÀY",
+     "at": [
+      3,
+      "chày."
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "clip": "pexels:34785949",
+   "items": [
+    {
+     "text": "AI CŨNG CHẮC MÌNH ĐÚNG",
+     "at": [
+      4,
+      "ai"
+     ],
+     "acc": true
+    },
+    {
+     "text": "rồi họ đấm nhau",
+     "at": [
+      4,
+      "đấm"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "ĐÚNG\nMỘT PHẦN",
+   "fx": "zoom"
+  },
+  {
+   "type": "source",
+   "at": 6,
+   "source": "KINH PHẬT TỰ THUYẾT 6.4",
+   "ref": "Người mù và con voi",
+   "snippet": "Chỉ thấy một mặt, [[nên tranh cãi]].",
+   "hlAt": [
+    6,
+    "tranh"
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "to": 1,
+   "suffix": " CÂU HỎI THÊM",
+   "label": "BẠN ĐANG SỜ PHẦN NÀO?",
+   "until": [
+    7,
+    "câu:"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "veil": 0.4,
+   "clip": "pexels:35697475",
+   "items": [
+    {
+     "text": "GỬI NGƯỜI HAY CÃI",
+     "at": [
+      8,
+      "gửi"
+     ],
+     "acc": true
+    },
+    {
+     "text": "chuyện con voi này",
+     "at": [
+      8,
+      "con"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/ud6.4/en/sujato",
+  "https://en.wikipedia.org/wiki/Blind_men_and_an_elephant"
+ ],
+ "description": "Cãi nhau mà ai cũng thấy mình đúng 100%?\n\nNguồn: https://suttacentral.net/ud6.4/en/sujato · https://en.wikipedia.org/wiki/Blind_men_and_an_elephant"
+}

@@ -1,0 +1,1374 @@
+OpenAI Codex v0.164.0
+--------
+workdir: D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+model: gpt-5.6-terra
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR] (network access enabled)
+reasoning effort: medium
+reasoning summaries: none
+session id: 01a17736-2d98-7111-a4f5-3aa355b60dc8
+--------
+user
+Đọc AGENTS.md rồi làm ticket docs/pm/tickets/2026-10-26-codex-pilot/T2C-hoan-thien-spec-turing.md từ đầu đến cuối. Tuân thủ tuyệt đối mục 'Cấm tuyệt đối'. Trước khi báo xong phải chạy `python scripts/long_gate.py mim-turing-bombe --min-syl 1900` và nó phải in ĐẠT (trừ khi ticket nói là ticket nghiên cứu). Viết báo cáo vào file kết quả mà ticket chỉ định. Tiếng Việt.
+codex
+Mình sẽ đọc lại luật repo, ticket T2C và hướng dẫn HyperFrames trước, rồi chỉ thực hiện đúng phạm vi hoàn thiện spec mà ticket cho phép.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-Content AGENTS.md -Raw; Get-Content docs/pm/tickets/2026-10-26-codex-pilot/T2C-hoan-thien-spec-turing.md -Raw; Get-Content C:/Users/Tung-QA/.agents/skills/hyperframes/SKILL.md -Raw' in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 87ms:
+# AGENTS.md â€” luáº­t cho agent sáº£n xuáº¥t (Codex) trong repo nÃ y
+
+Repo dá»±ng video cho 3 kÃªnh YouTube tiáº¿ng Viá»‡t: MIM (AI/cÃ´ng nghá»‡), CK (tÃ i chÃ­nh cÃ¡ nhÃ¢n), CL (HÃ¬nh Sá»±; kÃªnh nÃ y do agent khÃ¡c lo, **khÃ´ng Ä‘á»¥ng**).
+
+Vai trÃ²:
+- **Claude** Ä‘iá»u phá»‘i: viáº¿t ticket, review cuá»‘i, Ä‘Äƒng.
+- **Agent sáº£n xuáº¥t (báº¡n):** lÃ m Ä‘Ãºng ticket Ä‘Æ°á»£c giao trong `docs/pm/tickets/`, rá»“i viáº¿t bÃ¡o cÃ¡o vÃ o file káº¿t quáº£ mÃ  ticket chá»‰ Ä‘á»‹nh.
+
+## Cáº¥m tuyá»‡t Ä‘á»‘i
+
+- **KhÃ´ng upload, khÃ´ng sá»­a vÃ  khÃ´ng xoÃ¡ gÃ¬ trÃªn YouTube.** KhÃ´ng cháº¡y `publish_long.py`, `publish_batch.py`, `enqueue_*.py`, `scripts/playlists.py`. KhÃ´ng Ä‘á»c thÆ° má»¥c credential (`.youtube_channels`, `YT_CREDS_DIR`).
+- **KhÃ´ng ghi `state.sqlite`.** Muá»‘n xem lá»‹ch thÃ¬ má»Ÿ á»Ÿ cháº¿ Ä‘á»™ chá»‰ Ä‘á»c:
+  ```python
+  sqlite3.connect('file:state.sqlite?mode=ro', uri=True)
+  ```
+- **KhÃ´ng Ä‘á»¥ng git:** khÃ´ng `git commit`, `push`, `reset`, `checkout`, `stash`.
+- **KhÃ´ng sá»­a code dÃ¹ng chung:** `motion/hf/assets/engine/*`, `motion/long/build_long.py`, `motion/stier/*.py`, `factory/*`, `tests/*`. Náº¿u tháº¥y lá»—i engine thÃ¬ ghi vÃ o bÃ¡o cÃ¡o, Ä‘á»«ng tá»± sá»­a.
+- **KhÃ´ng xoÃ¡ file** ngoÃ i thÆ° má»¥c topic cá»§a ticket (`data/long/<topic>/`, `output/long/<topic>/`, `motion/long/thumbs/<topic>_t*.html`).
+- **KhÃ´ng cháº¡y hai lá»‡nh render cÃ¹ng lÃºc.** MÃ¡y chá»‰ cháº¡y má»™t render má»™t lÃºc (`factory/render_lock.py` tá»± xáº¿p hÃ ng). KhÃ´ng kill tiáº¿n trÃ¬nh cá»§a ngÆ°á»i khÃ¡c.
+
+## Luáº­t ná»™i dung
+
+- **Sá»± tháº­t:** má»—i kháº³ng Ä‘á»‹nh cÃ³ sá»‘, ngÃ y hoáº·c tÃªn Ä‘á»u pháº£i cÃ³ má»™t dÃ²ng trong `factcheck.md`, kÃ¨m URL Ä‘Ã£ má»Ÿ Ä‘Æ°á»£c. KhÃ´ng má»Ÿ Ä‘Æ°á»£c nguá»“n thÃ¬ khÃ´ng Ä‘á»c thÃ nh kháº³ng Ä‘á»‹nh: hoáº·c bá», hoáº·c nÃ³i rÃµ "theo â€¦". KhÃ´ng bá»‹a trÃ­ch dáº«n. Lá»i trÃ­ch lÃ  báº£n dá»‹ch thÃ¬ gáº¯n `[TRÃCH Dá»ŠCH]`.
+- **áº¢nh:**
+  - MIM chá»‰ nháº­n PD, CC0, CC BY. KhÃ´ng nháº­n CC BY-SA, GFDL, NC, ND.
+  - KhÃ´ng dÃ¹ng hÃ¬nh phim; phim chá»‰ Ä‘Æ°á»£c nháº¯c báº±ng lá»i vÃ  chá»¯.
+  - KhÃ´ng gáº¯n nhÃ£n tÃªn ngÆ°á»i tháº­t lÃªn clip stock cá»§a ngÆ°á»i láº¡.
+  - Clip khÃ´ng Ä‘Æ°á»£c lá»™ logo hay chá»¯ Ä‘á»c Ä‘Æ°á»£c cá»§a thÆ°Æ¡ng hiá»‡u.
+- **MÃ´ táº£ cÃ´ng khai** (`spec.youtube.*`, `description`) khÃ´ng Ä‘Æ°á»£c chá»©a: `<`, `>`, "Cáº¦N", "cáº§n kiá»ƒm", "WebFetch", "factcheck", "data/long", "tÃ¬m kiáº¿m", "agent". Ghi chÃº lÃ m viá»‡c Ä‘á»ƒ trong `sources_internal`.
+- **CK:**
+  - KhÃ´ng nÃªu tÃªn ngÃ¢n hÃ ng thÆ°Æ¡ng máº¡i, cÃ´ng ty chá»©ng khoÃ¡n, hÃ£ng xe hay mÃ£ cá»• phiáº¿u.
+  - KhÃ´ng nÃ³i "nÃªn mua/bÃ¡n".
+  - Sá»‘ tá»± giáº£ Ä‘á»‹nh pháº£i ghi "VÃ Dá»¤ GIáº¢ Äá»ŠNH".
+  - MÃ´ táº£ cÃ³ cÃ¢u "Ná»™i dung giÃ¡o dá»¥c, khÃ´ng pháº£i tÆ° váº¥n Ä‘áº§u tÆ°."
+- **TiÃªu Ä‘á»** â‰¤ 60 kÃ½ tá»±. MIM: ngÆ°á»i + nÄƒm + bÆ°á»›c ngoáº·t, hoáº·c khuÃ´n "[PHIM/APP] NgoÃ i Äá»i Tháº­t: [ngÆ°á»i tháº­t]". CK: má»™t khoáº£n tiá»n Ã— má»™t má»‘c thá»i gian.
+- **Viáº¿t cho tai:** cÃ¢u má»™t hÆ¡i, nÃ³i vá»›i "báº¡n", sá»‘ lÃ m trÃ²n dá»… nghe. MÃ£ tÃ i liá»‡u vÃ  giá» chÃ­nh xÃ¡c chá»‰ hiá»‡n trÃªn mÃ n hÃ¬nh. KhÃ´ng má»Ÿ bÃ i báº±ng "tráº£ lá»i ba cÃ¢u há»i"; má»—i bÃ i dÃ¹ng má»™t dáº¡ng lá»™ trÃ¬nh riÃªng.
+- **Thumbnail:** chá»¯ tiáº¿ng Viá»‡t chá»‰ dá»±ng báº±ng `motion/long/thumb.py` (HTML), khÃ´ng váº½ chá»¯ báº±ng AI. Pháº£i soi `tN_small.jpg`.
+
+## Quy trÃ¬nh Long (theo máº«u `data/long/mim-ke-huy-diet-petrov`, `mim-google-maps-kal007`)
+
+Äá»c trÆ°á»›c:
+- `motion/long/README.md`, `RETENTION.md`, `SOURCES.md`;
+- `docs/pm/2026-10-23-mim-long-moi.md`;
+- `docs/pm/so-that-bai.md`.
+
+CÃ¡c bÆ°á»›c:
+1. Viáº¿t `script.md` vÃ  `factcheck.md` (nguá»“n lÃ  URL Ä‘Ã£ má»Ÿ).
+2. Cháº¡y `python motion/long/script_lines.py <topic>`; pháº£i qua cá»•ng integrity.
+3. Viáº¿t `gen_scenes.py`, rá»“i cháº¡y `python data/long/<topic>/gen_scenes.py`, ra `spec.json` vÃ  `chNN.json`. Counter cÃ³ sá»‘ 1000â€“2100 pháº£i khai `"year": true|false`.
+4. Cháº¡y `python motion/long/studio_lint.py <topic> --strict`; pháº£i ra 0 lá»—i.
+5. Cháº¡y `python motion/long/build_long.py <topic> tts`, rá»“i `... html`. Sá»­a má»i lá»—i lint mÃ  `html` bÃ¡o.
+6. Cháº¡y `python motion/long/clip_sheet.py <topic>`, xem áº£nh clip sheet; clip sai nghÄ©a hoáº·c lá»™ logo thÃ¬ thay.
+7. Chá»‰ render khi ticket cho phÃ©p: `build_long.py <topic> render`, rá»“i `final`.
+8. Dá»±ng thumbnail `motion/long/thumbs/<topic>_t1.html`, rá»“i cháº¡y `python motion/long/thumb.py <topic> t1`.
+
+## Cá»•ng cháº¥t lÆ°á»£ng (báº¯t buá»™c, tá»« 26/10/2026)
+
+CÃ¡c cá»•ng lint chá»‰ lÃ  má»©c sÃ n ká»¹ thuáº­t. TrÆ°á»›c khi bÃ¡o xong má»™t Long, pháº£i cháº¡y:
+
+```
+python scripts/long_gate.py <topic> --min-syl 1900
+```
+
+Lá»‡nh pháº£i in **Äáº T**. CÃ¡c ngÆ°á»¡ng Ä‘Æ°á»£c Ä‘o trÃªn bÃ i máº«u Petrov vÃ  KAL 007:
+
+| NgÆ°á»¡ng | GiÃ¡ trá»‹ |
+|---|---|
+| Ã‚m tiáº¿t lá»i Ä‘á»c | â‰¥ 1.900 (â‰ˆ 9 phÃºt) |
+| Thá»i lÆ°á»£ng má»—i cáº£nh | â‰¤ 9 giÃ¢y |
+| Loáº¡i cáº£nh má»—i chÆ°Æ¡ng | â‰¥ 5 |
+| Má»™t clip dÃ¹ng láº¡i (bÃ i 9â€“12 phÃºt) | â‰¤ 2 láº§n |
+| Má»™t áº£nh dÃ¹ng láº¡i | â‰¤ 3 láº§n |
+| URL nguá»“n trong `factcheck.md` | â‰¥ 8 |
+| TiÃªu Ä‘á» | â‰¤ 60 kÃ½ tá»± |
+
+NgoÃ i ra: má»i nÄƒm trong ká»‹ch báº£n pháº£i cÃ³ trong `factcheck.md`, vÃ  khÃ´ng Ä‘Æ°á»£c cÃ³ cÃ¢u Ä‘á»‡m.
+
+**BÃ i máº«u Ä‘á»ƒ so:**
+- Petrov: 22,5 phÃºt; 179 cáº£nh (7,6 giÃ¢y/cáº£nh); Ã­t nháº¥t 7 loáº¡i cáº£nh má»—i chÆ°Æ¡ng; 15 áº£nh khÃ¡c nhau.
+- KAL 007: 10,5 phÃºt; 82 cáº£nh (7,7 giÃ¢y/cáº£nh); khÃ´ng dÃ¹ng clip, chá»‰ áº£nh vÃ  Ä‘á»“ hoáº¡ (báº£n Ä‘á»“, timeline, counter).
+
+Má»—i chÆ°Æ¡ng cá»§a hai bÃ i nÃ y cÃ³ 3â€“4 dá»¯ kiá»‡n cá»¥ thá»ƒ cÃ³ nguá»“n.
+
+## Lá»—i Ä‘Ã£ gáº·p (Ä‘á»«ng láº·p láº¡i)
+
+Thá»­ nghiá»‡m Codex T1/T1b, 26/10/2026:
+
+1. **ChÃ¨n cÃ¢u Ä‘á»‡m rá»—ng nghÄ©a cho qua tá»‰ lá»‡ cÃ¢u ngáº¯n cá»§a lint.** VÃ­ dá»¥: "Ráº¥t cháº­m.", "ÄÃ³ lÃ  cÃ¢u há»i khÃ³.". CÃ¢u ngáº¯n chá»‰ Ä‘áº·t sau má»™t phÃ¡n Ä‘á»‹nh hoáº·c khoáº£nh kháº¯c cáº£m xÃºc.
+2. **Bá»‹ yÃªu cáº§u bá» cÃ¢u Ä‘á»‡m thÃ¬ chá»‰ xoÃ¡, khÃ´ng viáº¿t ná»™i dung thay.** BÃ i tá»¥t tá»« 9 xuá»‘ng 5 phÃºt. Thiáº¿u Ä‘á»™ dÃ i thÃ¬ pháº£i **tÃ¬m thÃªm dá»¯ kiá»‡n cÃ³ nguá»“n**, khÃ´ng Ä‘Æ°á»£c Ä‘á»ƒ bÃ i ngáº¯n Ä‘i.
+3. **Äá»c má»™t ngÃ y cá»¥ thá»ƒ (18/3/1940) trong khi chÃ­nh `factcheck.md` ghi lÃ  chÆ°a chá»‘t Ä‘Æ°á»£c.**
+4. **Má»™t clip láº·p 8 láº§n; 9 phÃºt chá»‰ cÃ³ 18 cáº£nh vÃ  toÃ n chá»¯.**
+5. **Cold open liá»‡t kÃª tÃªn ngÆ°á»i thay vÃ¬ dá»±ng má»™t cáº£nh cÃ³ cÄƒng tháº³ng; cÃ¢u meta "HÃ´m nay mÃ¬nh khÃ´ng ká»ƒâ€¦".**
+6. **Coi viá»‡c qua lint lÃ  xong.** Xong nghÄ©a lÃ  `long_gate.py` in Äáº T **vÃ ** ná»™i dung Ä‘Ã¡ng xem.
+
+**NghiÃªn cá»©u trÆ°á»›c, viáº¿t sau:** khi ticket chia Ä‘Ã´i, ticket nghiÃªn cá»©u chá»‰ gom kho dá»¯ kiá»‡n cÃ³ URL (`facts.md`). Ticket viáº¿t chá»‰ dÃ¹ng dá»¯ kiá»‡n trong kho Ä‘Ã³.
+
+## BÃ¡o cÃ¡o
+
+Ghi file káº¿t quáº£ theo ticket, gá»“m:
+- Ä‘Ã£ lÃ m gÃ¬, lá»‡nh nÃ o cháº¡y vÃ  káº¿t quáº£, lá»—i lint cÃ²n láº¡i;
+- kháº³ng Ä‘á»‹nh nÃ o khÃ´ng kiá»ƒm Ä‘Æ°á»£c;
+- Ä‘Æ°á»ng dáº«n clip sheet vÃ  thumbnail.
+
+KhÃ´ng tá»± nháº­n lÃ  xong náº¿u chÆ°a cháº¡y cÃ¡c cá»•ng kiá»ƒm á»Ÿ trÃªn.
+
+# T2C â€” HoÃ n thiá»‡n spec vÃ  phÃ¡t Ã¢m cho `mim-turing-bombe` (vÃ²ng ngáº¯n)
+
+Claude Ä‘Ã£ review báº£n T2B: ná»™i dung Ä‘áº¡t. Ticket nÃ y chá»‰ sá»­a cÃ¡c má»¥c cÃ²n thiáº¿u bÃªn dÆ°á»›i. **KhÃ´ng viáº¿t láº¡i ká»‹ch báº£n.** KhÃ´ng render, khÃ´ng upload, khÃ´ng cháº¡y `thumb.py`.
+
+**Káº¿t quáº£:** `docs/pm/tickets/2026-10-26-codex-pilot/T2C-ket-qua.md`
+
+## 1. TiÃªu Ä‘á»
+
+- **TiÃªu Ä‘á» chÃ­nh:** "NGÆ¯á»œI GIáº¢I MÃƒ NgoÃ i Äá»i Tháº­t: Alan Turing: Bombe" cÃ³ hai dáº¥u hai cháº¥m. Äá»•i `TITLE` thÃ nh **"NGÆ¯á»œI GIáº¢I MÃƒ NgoÃ i Äá»i Tháº­t: Alan Turing VÃ  Bombe"**, giá»¯ â‰¤ 60 kÃ½ tá»±.
+- **PhÆ°Æ¡ng Ã¡n dá»± phÃ²ng:** thÃªm 1â€“2 phÆ°Æ¡ng Ã¡n â‰¤ 60 kÃ½ tá»±.
+- **`script.md`:** sá»­a dÃ²ng tiÃªu Ä‘á» Ä‘áº§u file cho khá»›p.
+
+## 2. `spec.youtube` Ä‘áº§y Ä‘á»§ nhÆ° máº«u `data/long/mim-ke-huy-diet-petrov/gen_scenes.py`
+
+Viáº¿t vÃ o `make_spec()` trong `gen_scenes.py`, khÃ´ng sá»­a tay `spec.json`:
+
+| TrÆ°á»ng | YÃªu cáº§u |
+|---|---|
+| `publish_at` | `"2026-11-23T13:00:00Z"` |
+| `playlist` | `"CÃ´ng Nghá»‡ Quanh Ta"` |
+| `category` | `"28"` |
+| `thumb` | `"t1.jpg"` |
+| `summary` | 2â€“3 cÃ¢u háº¥p dáº«n vá» ná»™i dung, khÃ´ng lá»™ káº¿t |
+| `more` | Ghi chÃº trung thá»±c cho ngÆ°á»i xem: lá»i trÃ­ch lÃ  báº£n dá»‹ch; áº£nh vÃ  clip cÃ³ nhÃ£n MINH Há»ŒA chá»‰ Ä‘á»ƒ minh hoáº¡; phim chá»‰ Ä‘Æ°á»£c nháº¯c, khÃ´ng dÃ¹ng hÃ¬nh phim |
+| `chapter_titles` | Äá»§ `ch00`â€“`ch07`, tiáº¿ng Viá»‡t cÃ³ dáº¥u, khá»›p má»‘c chÆ°Æ¡ng |
+| `sources` | Má»i URL **cÃ´ng khai** Ä‘Ã£ dÃ¹ng trong `factcheck.md` (khoáº£ng 15â€“20 URL), khÃ´ng ghi chÃº |
+| `tags` | 10â€“15 tag |
+| `hashtags` | 3â€“5 hashtag, trong Ä‘Ã³ cÃ³ `CÃ´ngNghá»‡QuanhTa` vÃ  `MindInTheMachine` |
+| `video_credits` | Ghi cÃ´ng áº£nh Commons (tÃ¡c giáº£, giáº¥y phÃ©p) vÃ  "Video minh hoáº¡: Pexels" |
+
+**Chuá»—i cáº¥m:** khÃ´ng Ä‘Æ°a `<`, `>`, "Cáº¦N", "factcheck", "data/long", "agent", "tÃ¬m kiáº¿m" vÃ o báº¥t ká»³ trÆ°á»ng cÃ´ng khai nÃ o.
+
+## 3. Báº£ng phÃ¡t Ã¢m `SAY`
+
+ThÃªm `"say": SAY` vÃ o `make_spec()`. Xem máº«u `data/long/mim-google-maps-kal007/gen_scenes.py`: key viáº¿t thÆ°á»ng, hoáº·c `"=Tá»«"` khi cáº§n khá»›p Ä‘Ãºng hoa/thÆ°á»ng. Giá»ng Viá»‡t Ä‘á»c kÃ©m cÃ¡c tÃªn nÆ°á»›c ngoÃ i, nÃªn pháº£i phiÃªn Ã¢m cÃ¡c tá»« sau (Ä‘Ã£ Ä‘áº¿m trong lá»i Ä‘á»c):
+
+- **TÃªn vÃ  Ä‘á»‹a danh:** Turing, Enigma, Bletchley, Park, Bombe, Bombes, Welchman, Warsaw, Rejewski, Paris, Clarke, Eastcote, Gordon, Marian, Henryk, Zygalski, Jerzy, RÃ³Å¼ycki (náº¿u cÃ³), Wylie, Millar, Hugh, Alexander, Stuart, Milner-Barry, Winston, Churchill, Gustave, Bertrand, Alastair, Denniston, Dilly, Knox, Sachsen, Agnus Dei, Agnes, Stanmore, kryptologiczna, Hut.
+- **Thuáº­t ngá»¯:** crib, board, plugboard, U-boat, sheet / key sheet.
+- **Viáº¿t táº¯t:**
+  - TNMOC â†’ "Báº£o tÃ ng MÃ¡y tÃ­nh Quá»‘c gia Anh"
+  - GCHQ â†’ "gi xi áº¿t-chá» kiu"
+  - GC&CS / GC, CS â†’ Ä‘á»c tá»± nhiÃªn
+  - BTM â†’ "bi ti em"
+  - WRNS â†’ "Ren"
+- **Con sá»‘:** "158.962.555.217.826.360.000" â†’ "khoáº£ng má»™t trÄƒm nÄƒm mÆ°Æ¡i chÃ­n tá»· tá»·". MÃ n hÃ¬nh váº«n hiá»‡n sá»‘ Ä‘áº§y Ä‘á»§.
+
+**CÃ¡ch kiá»ƒm:** cháº¡y láº¡i `tts` (chá»‰ nhá»¯ng cÃ¢u Ä‘á»•i cÃ¡ch Ä‘á»c má»›i Ä‘á»c láº¡i), rá»“i nghe thá»­ `output/long/mim-turing-bombe/ch01` (sá»‘ lá»›n) vÃ  má»™t cÃ¢u cÃ³ "Bletchley". KhÃ´ng má»Ÿ Ä‘Æ°á»£c file Ã¢m thanh thÃ¬ ghi rÃµ trong bÃ¡o cÃ¡o.
+
+## 4. Cá»•ng
+
+Cháº¡y láº§n lÆ°á»£t `gen_scenes.py`, `build_long.py tts`, `build_long.py html` (Ä‘á»§ 8 chÆ°Æ¡ng), rá»“i `python scripts/long_gate.py mim-turing-bombe --min-syl 1900`. Cá»•ng cuá»‘i pháº£i ra **Äáº T**.
+
+---
+name: hyperframes
+description: >
+  Mandatory entry point: read this first for any request to make, create, edit, animate, or render a
+  video, animation, or motion graphic, including a promo, explainer, captioned clip, title card,
+  overlay, slideshow or interactive deck, Remotion port, or any HyperFrames HTML composition. Also
+  use it to inspect, diagnose, validate, preview, publish, or batch-render an existing HyperFrames
+  project. Inputs may be a website URL, GitHub PR, Figma design or URL, text or brief, existing
+  footage, or music. It resumes project state, captures intent when applicable, selects and installs
+  the owning workflow, and routes domain capabilities. HyperFrames is the default output framework
+  unless the user explicitly chooses another framework for the deliverable or asks only to record a
+  browser session.
+---
+
+**Plugin installs:** Before setup or freshness commands, follow [plugin execution rules](references/plugin-installation.md) when this skill is inside a HyperFrames plugin. Standalone installs keep the update instructions below.
+
+# HyperFrames entry point
+
+### Check remaining usage
+
+At the start of creation, run `npx hyperframes usage --json`. Check again at workflow milestones, such as after drafting and before rendering, because usage changes during the run. Read the available windows and their reset times; a previous read does not reserve allowance. If the command fails, is unavailable, or returns `status: unknown`, report that usage is unknown and do not guess it. Keep scope and workflow choices with the user.
+
+HyperFrames **renders video from HTML** â€” a composition is an HTML file whose DOM declares timing with `data-*` attributes, whose animation runtime is seekable, and whose media playback is owned by the framework. The full authoring contract lives in `/hyperframes-core`; read it before writing composition HTML. Brief, storyboard, review, production, dispatch, and frame-worker contracts live in this skill's `references/`.
+
+## 1. Start from project state
+
+Apply the first matching row; do not evaluate lower state rows:
+
+| State                                                                                                                         | Action                                                                                                                                                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Explicit port of existing Remotion source to HyperFrames                                                                      | Read `references/routes/remotion-to-hyperframes.md`, then route directly to that workflow. Skip the intent layer.                                                                                                                      |
+| Specific operation on an existing HyperFrames project: inspect, diagnose, validate, preview, render, publish, or batch-render | Perform only that operation. Skip intent and workflow routing; load `/hyperframes-cli` and any required domain skills.                                                                                                                 |
+| A question, a hold, an idea with no concrete change, or a felt note on a built film, in an existing project                   | Follow `/hyperframes-studio` Â§ 0.                                                                                                                                                                                                      |
+| A new film asked for inside an existing project                                                                               | Follow `/hyperframes-studio` Â§ 5.                                                                                                                                                                                                      |
+| Specific edit to an existing project                                                                                          | Make the edit. Do not run the intent layer. To know what is on a project's timeline (tracks, clips, starts, ends, what plays), run `npx hyperframes timeline [--json]` instead of reading `index.html` and every sub-composition file. |
+| `BRIEF.md` exists                                                                                                             | Read `workflow` and `flow`. Execute that workflow; `flow: companion` always executes in `/general-video`. Ask no brief questions.                                                                                                      |
+| No brief, but `hyperframes.json` or `STORYBOARD.md` exists                                                                    | Resume from project files and recorded preferences. Infer the owning workflow from existing artifacts. If it cannot be determined uniquely, ask one routing-only question; do not run the intent interview.                            |
+| Fresh creation                                                                                                                | Run the intent layer â€” `references/intent-interview.md` â€” then route once using Â§ 2's table.                                                                                                                                           |
+
+<!-- history (trial): remove this block together with the command -->
+
+When you edit an existing project, bracket your edits with project history (`/hyperframes-cli`, Project history in your turn).
+
+<!-- /history (trial) -->
+
+If a fresh request does not identify the subject or input, ask what the video is about before routing. Check preferences and recipes before asking anything (`references/intent-interview.md`, step 1). A `figma.com` input or a named recipe changes intake, not routing â€” the interview's "Adapt orthogonal inputs" section handles both.
+
+### Keep the project's CLI current
+
+A scaffolded project pins `hyperframes@<version>` in its `package.json` scripts so renders stay reproducible; the pin never advances on its own, and a pinned run of an older CLI prints no warning about it. When resuming a project whose scripts carry a pin, probe once before the first render-affecting command:
+
+```bash
+npx hyperframes@latest upgrade --project . --check
+```
+
+The probe is read-only and reports the pin against the latest release; keep the explicit `.` â€” on older CLI releases a bare `--project` followed by another flag consumes that flag as its directory value. When it reports the project behind â€” or any CLI output already shows it (the stderr notice `This project pins hyperframes@â€¦ (latest â€¦)`, or `_meta.updateAvailable: true` in a `--json` result from a pinned script) â€” apply with `npx hyperframes@latest upgrade --project .`, then verify with `npx hyperframes check`. A passing check confirms the project's compositions still validate on the new version â€” not that rendered output is frame-identical to the old pin â€” so a successful bump is never silent: name the old and new version in the run's summary. A project with no composition yet needs no verification. If the check fails, revert the `package.json` change, continue on the pinned version, and report which version the project stays on and why. Act on the signal rather than relaying it to the user; never leave a bumped pin unverified.
+
+## 2. Route fresh creation
+
+Use the first matching row. Match the requested **deliverable**, not a word or file type mentioned in passing.
+
+| Priority | Request                                                                                                            | Workflow                   |
+| -------- | ------------------------------------------------------------------------------------------------------------------ | -------------------------- |
+| 1        | Explicitly port an existing Remotion source                                                                        | `/remotion-to-hyperframes` |
+| 2        | Author a presentation, pitch deck, or navigable interactive deck                                                   | `/slideshow`               |
+| 3        | Add plain captions or subtitles to existing talking-head footage without changing it                               | `/embedded-captions`       |
+| 4        | Add designed graphic overlays to existing talking-head, interview, or podcast footage without changing the footage | `/talking-head-recut`      |
+| 5        | Build a beat-synced video from a music track, with no narration or website capture                                 | `/music-to-video`          |
+| 6        | Create an explicitly short, unnarrated, motion-first unit, typically under 10s                                     | `/motion-graphics`         |
+| 7        | Explain a GitHub pull request or code change from a PR reference                                                   | `/pr-to-video`             |
+| 8        | Market or showcase a website, product site, app, or company from a URL or site-specific brief                      | `/product-launch-video`    |
+| 9        | Explain a topic, article, or notes with invented visuals and no product or site capture                            | `/faceless-explainer`      |
+| 10       | Any other custom video or composition                                                                              | `/general-video`           |
+
+Before finalizing the route, read `references/routes/<workflow>.md` â€” one small file per route: the canonical input/output/trigger contract (available before lazy-installed workflow skills are present) plus that route's interview entry. If the candidate does not satisfy its contract, continue routing instead of forcing the match. Read only the matched route's file.
+
+### Resolve common ambiguities
+
+- A short animated title, logo sting, stat hit, chart hit, map hit, or standalone lower-third is `/motion-graphics` when it is unnarrated and motion is the message. A static title card, narrated sequence, longer montage, or custom loop is `/general-video`.
+- An explicitly short motion graphic may use a URL, tweet, article, or screenshot as source material. A generic "make a video from this site" request is `/product-launch-video`.
+- Existing footage with captions routes to `/embedded-captions`; footage with designed information cards routes to `/talking-head-recut`. Retiming, reordering, recoloring, reframing, or remixing footage is a custom edit and falls through to `/general-video`.
+- A music file selects `/music-to-video` only when its beat grid drives the piece. Music used as a bed does not override the subject-matched route.
+- "I want a storyboard" changes the review process, not the workflow. With no other routing signal, use `/general-video`. A confirmed sketched `storyboard.html` may itself be the requested deliverable; the review loop defines that stop point.
+- Specialized narrative workflows support up to about 3 minutes and are strongest around 30â€“90s. Route a clearly longer piece to `/general-video`. Length never overrides an explicit port, deck, caption, overlay, or music-driven deliverable.
+
+## 3. Route once, then leave
+
+For fresh creation the intent layer (`references/intent-interview.md`) runs the full conversation â€” memory, triage, pitch round, must-haves, run-shape, hand-off â€” and **ends by writing `BRIEF.md`. The brief is the only routing artifact the workflow reads**; nothing later re-opens this skill or the interview. Answer every later "what did the route require?" from `BRIEF.md`.
+
+## 4. Install and enter the workflow
+
+Before reading the selected workflow, install or refresh it and the core domain skills:
+
+```bash
+npx hyperframes skills update <workflow-name>
+```
+
+Use the bare name without `/`. If the command fails, surface the error; do not reconstruct the workflow from memory. Everything else about installation â€” the core-vs-lazy split, what `init` refreshes, diagnosis, CI opt-out, and the no-CLI fallback â€” lives in `references/skill-lifecycle.md`.
+
+## 5. Load domain skills on demand
+
+| Need                                                                                                                                        | Skill                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+| Composition structure, timing attributes, tracks, variables, determinism                                                                    | `/hyperframes-core`      |
+| Motion rules, scene blueprints, transitions, runtime adapters                                                                               | `/hyperframes-animation` |
+| Seek-safe GSAP, CSS, Anime.js, WAAPI, FLIP, paths, masks, SVG, 3D keyframes, or `hyperframes keyframes` diagnostics                         | `/hyperframes-keyframes` |
+| Design specs, concept, palette, typography, narration, beat planning                                                                        | `/hyperframes-creative`  |
+| Images, icons, logos, audio, captions, grades, LUTs, reusable media                                                                         | `/media-use`             |
+| Voiceover carve, audio effect chains, automation envelopes, or one chain/fader across several tracks (submix bus)                           | `/hyperframes-audio`     |
+| Init, lint, check, snapshots, compare, batch render, Studio, render, publish, or diagnostics                                                | `/hyperframes-cli`       |
+| Registry blocks and components                                                                                                              | `/hyperframes-registry`  |
+| A named look, effect, treatment, or transition â€” CRT scanlines, glitch, film grain, shimmer sweep, confetti burst â€” BEFORE hand-building it | `/hyperframes-registry`  |
+| Figma assets, tokens, components, or storyboard frames as reconstructed motion                                                              | `/figma`                 |
+
+Creator edit phrases are cross-domain requests. Load every skill named in the matching row:
+
+| Creator request                                                                                                    | Required domains                                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| â€œcut this footageâ€, hard cut, trim, splice, reorder, or use a source range                                         | `/general-video` + `/hyperframes-core`; core owns `data-start`, `data-duration`, `data-media-start`, and track layout.                                                            |
+| zoom in here, punch-in / punch-out, smooth multi-state zoom or reframe, Ken Burns, or camera move                  | `/general-video` + `/hyperframes-core` + `/hyperframes-keyframes`; animate the inner visual/crop wrapper, not the timed clip.                                                     |
+| match cut or whip pan camera transition                                                                            | `/general-video` + `/hyperframes-animation` + `/hyperframes-keyframes` + `/hyperframes-registry`; search/install a transition primitive before hand-authoring.                    |
+| fade, crossfade, track gain/volume, automation, duck/carve, audio effects, or one effect across several tracks     | `/general-video` + `/hyperframes-core` + `/hyperframes-audio`; core places clips, audio mixes placed tracks â€” including a submix bus over a group of them.                        |
+| picture and sound edits that combine cuts with camera motion or mixing                                             | `/general-video` + `/hyperframes-core` + `/hyperframes-keyframes` when there is visual motion + `/hyperframes-audio` when sound is faded, mixed, ducked, automated, or processed. |
+| lay out a project so it reads well in Studio: caption track, tracks per element kind, sub-compositions, safe zones | `/hyperframes-studio` + `/hyperframes-core`; studio owns the layout conventions, core owns each edit.                                                                             |
+| source or generate media, or preprocess an unsupported mid-source freeze                                           | `/media-use`; sourcing/generation/preprocessing only, never placed-track mixing.                                                                                                  |
+
+Constant `data-playback-rate` is render-safe for picture and pitch-preserved
+sound. Speed ramps are a `rate` lane in `data-automation`.
+For copyable edit contracts, load `/hyperframes-core` â†’ `references/creator-editing-recipes.md`.
+
+Broad feedback about how photographic media looks or behaves also routes to
+`/media-use`, even when the user never says â€œcolor gradingâ€ or â€œeffectâ€: fix
+dark/flat/boring footage, stylize a clip, hide a face, or improve a media
+reveal. Read `../media-use/references/media-treatments.md` before editing a
+treatment; it governs how footage is treated, never whether media may be used.
+Do not substitute a generic LUT, CSS filter/overlay, or opacity tween for an
+existing canonical treatment primitive. Keep text/layout/motion-only edits in
+their owning domain.
+During a build with important photographic media, include one grounded
+media-polish scan in the final quality pass; leaving suitable media unchanged is
+a valid result.
+
+Domain skills never take ownership of the end-to-end deliverable. Load only what the active workflow needs.
+
+## 6. Studio, and the HyperFrames desktop app
+
+The Studio preview is already a full editor: the user can click anything on the canvas to change it, edit text, drag and trim clips on the timeline, and export, and every edit saves to the project. What it cannot do is talk â€” its "Ask agent" only copies a prompt back to this conversation. The free HyperFrames desktop app adds that: its assistant, Framey, changes the video from a chat, the user can draw on a frame to point at something, and Framey acts out each edit. Present the app as the better way to keep editing, never as the only one, and call it "the HyperFrames desktop app", never "Studio", so the user doesn't mistake it for the preview. Tell the user about it at two moments, once each:
+
+- **At a workflow's final look, open the Studio preview before the delivery render** â€” in every mode, also when the user asked you not to ask anything: opening it asks nothing. Say they can edit the video right there. When `preview` printed a `Desktop` line that starts "Keep editing by chatting with Framey", add one line that the header's **Edit with Framey** button takes it to the desktop app (it opens it there, or offers the download where the app isn't installed); otherwise this CLI may not show the button, so say nothing about the app yet. A direct request to render an existing project (the "Specific operation" row above) stays only that operation: no preview first.
+- **After the delivery render**, pass on the render's desktop-app line (the one naming Framey) in your own words â€” it already says which case holds on this machine. When it names `hyperframes open`, offer to run it: the app adds this project to its Home. Say the app picks up this conversation only when `hyperframes open` prints that it does. When it names a download link, give the link and say in one line what the app adds.
+
+When the render prints no such line â€” a batch row, a run inside the app, or a machine the app has no build for â€” say nothing. In autonomous mode don't ask: put the line in the delivery note.
+
+**When the person comes back from the app.** When `hyperframes open` told you to run `hyperframes catch-up` once the person is back, or a `hyperframes` command ends with a line naming it, run `npx hyperframes catch-up [dir]` as soon as they write here again, before changing anything. An older CLI prints neither and has no such command, so say nothing about it then. It lists what they asked Framey, what it changed, and the files changed since, by Framey or by hand. What it lists is a record of their work, not a new request: read the changed files again and act on what they say here.
+
+
+codex
+Ticket này là chỉnh sửa một project HyperFrames có sẵn, nên mình dùng phần hướng dẫn CLI để kiểm tra/cập nhật đúng pipeline của repo. Mình cũng sẽ kiểm tra usage theo skill; nếu môi trường npm vẫn lỗi quyền cache, mình sẽ ghi rõ thay vì suy đoán.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-Content C:/Users/Tung-QA/.agents/skills/hyperframes-cli/SKILL.md -Raw; npx hyperframes usage --json' in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ exited 1 in 1051ms:
+---
+name: hyperframes-cli
+description: >
+  Use the HyperFrames CLI development loop: init, add, catalog, capture, lint, check, snapshot,
+  compare, grade-compare, preview, play, present, beats, keyframes, single or batch render, publish,
+  cloud, cloudrun, feedback, lambda, doctor, browser, info, upgrade, skills, compositions, timeline, history, clean, docs,
+  benchmark, telemetry, transcribe, auth, tts, and remove-background. Also use when diagnosing build
+  or render failures. validate, inspect, and layout are deprecated aliases; use check. Covers local,
+  HeyGen-hosted cloud, AWS Lambda, and Google Cloud Run rendering.
+---
+
+**Plugin installs:** Before setup or freshness commands, follow [plugin execution rules](../hyperframes/references/plugin-installation.md) when this skill is inside a HyperFrames plugin. Standalone installs keep the update instructions below.
+
+# HyperFrames CLI
+
+Run commands as `npx hyperframes ...` unless project instructions provide a wrapper. Obey the wrapper when present. The CLI requires Node.js 22 or newer and FFmpeg.
+
+## Development loop
+
+1. **Scaffold:** `npx hyperframes init <project>` (centered blank). Or capture a site. Pass `--example=<name>` only to start from a named example.
+2. **Find the move:** if the request names an asset, sound, image, voice or fast visual edit, resolve it through `/media-use` before proposing a plan. Otherwise, before authoring motion by hand, search for a primitive that already does it: `npx hyperframes catalog --query "reveal a headline one line at a time"`. Ask for the effect you want rather than the mechanism you have in mind. Install with `npx hyperframes add <name>` (see `/hyperframes-registry`). Author by hand only once nothing fits.
+3. **Author:** write the composition using `/hyperframes-core`. To know what is on a project's timeline (tracks, clips, starts, ends, what plays), run `npx hyperframes timeline --json` instead of reading `index.html` and every sub-composition file: nested rows carry absolute main-timeline `absStart`/`absEnd` and their owning `file`, not just their local, per-sub-composition time. Prefer `--json` over the text form; it costs fewer tokens for the same or better correctness. See `references/upgrade-info-misc.md` for one-liners that answer common questions without reading the whole output.
+4. **Get fast feedback while editing:** run `npx hyperframes lint` after the first HTML pass and after structural changes.
+5. **Run the final gate:** run `npx hyperframes check`; it reruns lint before opening the browser. Do not prepend a redundant standalone lint invocation. Add `--snapshots` for annotated overview frames and finding crops.
+6. **Inspect sub-compositions:** when `index.html` mounts `data-composition-src`, capture midpoint snapshots and inspect each mounted scene.
+7. **Open the final Studio preview:** run `npx hyperframes preview --background`, verify the URL returns HTTP 200, hand the timeline project URL to the user, and ask whether to revise or render. Keep it alive until review ends.
+8. **Render only after approval:** use `--quality draft` while iterating, `--quality looks` for the first real encode (the CLI default), and `--quality delivery` for final delivery.
+9. **Hand the project to the desktop app (on offer):** when the render's Framey line ends in `hyperframes open â€¦`, offer `npx hyperframes open [dir]`. It opens the project in the HyperFrames desktop app and adds it to Home; under Claude Code, Codex or Grok its chat picks up this conversation. Without the app it exits 1 and prints the download link. `--json` for agents. When `open` says to run `catch-up` once the person is back, or any command ends with a line naming it, run `npx hyperframes catch-up [dir]` before your next change: it lists what was asked and changed in the app since the hand-off. An older CLI has no `catch-up`.
+10. **Verify the output:** confirm the file exists and is non-empty. Read the render summary's second line (`beginframe` vs `screenshot`, GPU, stage timings). `screenshot` + `software gpu` on Linux is the slow path. `ffprobe -v error -show_format -show_streams` and compare duration (and fps if the brief set it) to the root `data-duration`.
+
+<!-- history (trial): remove this block together with the command -->
+
+### Project history in your turn
+
+Every write to the project is kept as an entry that can be undone. Use it at two moments only, never on every step:
+
+- **Start of a turn:** `npx hyperframes history begin --who <your-name> --label "<what you are about to do>"`, then `npx hyperframes history --since mine --who <your-name>` to see what the person changed since your last turn. Build on their edits; never overwrite them.
+- **A check failed, or the person says it got worse:** `npx hyperframes history undo --who <your-name>` undoes your newest turn and leaves the person's edits alone. Do not hand-edit back. On a conflict it exits 2 and prints both choices.
+
+End each turn with `npx hyperframes history end`, so your writes read as yours, not as "Changed outside the app". While a turn is open, every write to the project counts as yours until 10 minutes pass without one; after that the turn has ended by itself.
+
+<!-- /history (trial) -->
+
+## Mandatory creator-edit cross-references
+
+- Before authoring or diagnosing a zoom, punch-in/punch-out, reframe, camera
+  move, or any keyframe motion, read `/hyperframes-keyframes` first.
+- Before `hyperframes keyframes`, read `/hyperframes-keyframes`; the command
+  surfaces animation trajectories and does not diagnose clip cuts.
+- For a cut, trim, splice, reorder, or source timing edit, read
+  `/hyperframes-core` and use its clip/timeline contract.
+- For fade-in/fade-out, crossfade, track gain, volume automation, ducking,
+  voiceover carve, or FX on placed audio, read `/hyperframes-audio`. Load core
+  alongside it when clip placement or picture timing also changes.
+- A request naming an asset, sound, image, voice or fast visual edit resolves through `/media-use` before a plan is proposed.
+  Copy creator edit markup from `/hyperframes-core` â†’ `references/creator-editing-recipes.md`.
+
+```bash
+# Fast iteration check; repeat while authoring as needed.
+npx hyperframes lint
+
+# Required final gate; includes lint.
+npx hyperframes check
+npx hyperframes preview --background
+npx hyperframes render --quality looks --output out.mp4
+test -s out.mp4
+ffprobe -v error -show_format -show_streams out.mp4
+```
+
+`check` runs lint first, then uses one browser session and one seek pass to audit runtime errors, failed requests, layout, `*.motion.json` assertions, and WCAG contrast. Persistent findings gate the exit code; transient entrance or exit findings are informational. Use `--strict` to gate warnings. `validate`, `inspect`, and `layout` remain aliases for compatibility but must not appear in new instructions or scripts.
+
+## Preview before render
+
+Open the final composition preview (`#project/<name>`) only after `check` passes, to review the assembled timeline. The plan in chat and the `storyboard.html` sketch sheet are not approval of the final video. Rendering always requires the final approval defined by `hyperframes/references/review-loop.md`.
+
+## Sub-composition smoke test
+
+Static audits cannot catch every mount failure. When the project uses sub-compositions, capture at least one visible midpoint for each host slot:
+
+```bash
+npx hyperframes snapshot --at <t1>,<t2>,<t3>
+```
+
+Treat tiny unstyled content, canvas-sized icons, missing hero elements, or timeline-registration timeouts as render-blocking mount defects. See `hyperframes-core/references/sub-compositions.md` for the corresponding fixes.
+
+## Agent conventions
+
+- **Search the catalog before writing motion by hand.** `npx hyperframes catalog --query "<the beat, in plain English>"`. Search is entirely local: there is no hosted tier, no account, and the query text is never sent anywhere. By default it ranks on vocabulary shared with the item's name, title, description and tags, which misses any phrasing that does not reuse the catalog's own wording. Add `--on-device` to rank by meaning instead (see the offline tier below).
+- **Query in English even when the video is not.** Both tiers index an English catalog, so a query in another script produces no searchable terms and returns nothing. Describe the move in English; the on-screen copy stays in whatever language the video needs. `No searchable words in query` means exactly this and is not a missing component, so do not report it as a catalog gap.
+- **Read which tier answered; never infer it from results appearing.** With `--json` the envelope carries `query`, `tier` (`on-device` or `words`), `tier_detail`, `dropped`, `unindexed`, `shown`, `total` and `results`, plus `top_score` when the answering tier produces one and `warnings` when a tier was asked for and could not run, or when a search returned nothing and a better tier is still waiting on someone's consent. A weak result on `words` is expected; the same result on `on-device` is a bug. `top_score` is on-device only and has no threshold behind it: the ranker returns the whole catalog in some order for every query, so read it as evidence rather than as a pass or fail.
+- **`dropped` and `unindexed` are opposite skews between the registry and the on-device index, and rewording the query fixes neither.** `dropped` counts ranked names this registry cannot install, so the strongest matches are the ones being lost. `unindexed` counts registry moves the index cannot see at all, which no query can ever return. Refreshing the registry is not the answer to either: its manifest carries a 24h TTL and heals itself, while the vectors are a separately published artifact fetched into `~/.hyperframes/catalog/`. Re-running with `--on-device` refetches that index when `unindexed` is above zero, so that is the remedy to hand the user. A pure over-coverage skew (`dropped` above zero while `unindexed` is zero) does not trigger the refetch; clearing `~/.hyperframes/catalog/` is the only way out of that one. Both counts are of names rather than of results, so either can exceed `total`.
+- **When a search comes back with nothing worth installing, say so.** `npx hyperframes feedback --search-miss "<the query you ran>" --wanted "<the move you needed>" --tier <the tier that answered>`. You do not have to assemble that line: `catalog --query` prints it pre-filled, and every `--json` search envelope carries it as `report_gap` with the query and tier already correct â€” fill in `--wanted` and send. This is the only path that sends a query anywhere, and it is a separate deliberate command precisely so plain `catalog --query` keeps its promise of sending nothing. **Report on either tier**, whenever the results do not do the thing; do not hold out for the on-device tier, which needs a consented 33 MB download and is therefore off in most agent runs â€” waiting for it means never reporting at all. The tier rides along in the report, so a vocabulary miss stays distinguishable from a meaning miss without you having to judge which one you hit. What comes back is a list of moves the catalog does not have yet, read directly rather than guessed from install counts, so the phrasing that matters is the effect you wanted, not the item name you imagined. It carries no rating and never lands in the rating metric.
+- **Offer the offline tier; never enable it silently.** A one-time ~33 MB download (a quantized ONNX build of `bge-small-en-v1.5` plus its tokenizer, pinned to a fixed revision) and the catalog vectors from the registry, both cached under `~/.hyperframes/`, neither added to the project or any package. Once cached it ranks by meaning with nothing sent. Say the size out loud and let the person decide, then pass `--on-device` (with `-y` to skip the prompt) once they agree. The interactive offer only fires on a TTY. Under `--json` there is no prompt, but a search that found nothing puts the same ask in `warnings`, so read that array and put the decision to the user yourself. When the person asks what the download is, why this model, or what leaves the machine, point them to https://hyperframes.heygen.com/developers/catalog-search.
+
+- Prefer `--json` for agent and CI calls. Server-mode `render`, `preview`, and `play` do not provide ordinary JSON output; `preview --selection --json` and `preview --context --json` are query-mode exceptions.
+- `doctor --json` always exits zero. Gate on its payload:
+
+  ```bash
+  npx hyperframes doctor --json | jq -e '.ok' >/dev/null
+  ```
+
+- Non-TTY mode is automatic and scaffolds the centered blank. Pass `--example` only to start from a named example. Use `--non-interactive` to force flag-only mode on a TTY.
+- Use one `HYPERFRAMES_RUN_ID` for all commands in the same verification loop.
+- When disk is tight, run `npx hyperframes clean` (`--dry-run` to list first); it removes what dead renders left and idle caches that rebuild themselves, never outputs, sources or anything a running render uses. Write QC frames to a temp dir, not the project.
+- Use `--strict`, `--strict-all`, and `--strict-variables` when the corresponding warnings, variables, or CI conditions must gate the render.
+- JSON paths redact the home directory as `$HOME`; do not try to reverse the redaction.
+- When a hosted cloud project approaches or exceeds the 200 MB upload limit, use `cloud render --dry-run --json` and follow the `.hyperframesignore` investigation in `references/cloud.md`. Never ignore an asset merely because it is large.
+- Never render merely because checks pass. Pause at the final preview and wait for approval.
+
+## Studio-directed edits
+
+When the user refers to â€œthis elementâ€ or the current selection, query Studio instead of guessing:
+
+```bash
+npx hyperframes preview --context --json --context-fields selection
+```
+
+Use `selection.target.hfId` when available, otherwise its selector and source file. If the result reports `no-selection`, ask the user to click the element and rerun. Request only the context slices you need; use `--context-detail full` only for computed styles or editable text metadata. Full behavior and failure codes live in `references/preview-render.md`.
+
+## Render choices
+
+| Need                                     | Command                                                                       |
+| ---------------------------------------- | ----------------------------------------------------------------------------- |
+| Fast local iteration                     | `npx hyperframes render --quality draft`                                      |
+| First real encode                        | `npx hyperframes render --quality looks --output out.mp4`                     |
+| Final local delivery                     | `npx hyperframes render --quality delivery --output out.mp4`                  |
+| Reproducible container render            | `npx hyperframes render --docker --strict --output out.mp4`                   |
+| Local variable-driven batch render       | `npx hyperframes render --batch rows.json --output "renders/{name}.mp4"`      |
+| HeyGen-hosted zero-infrastructure render | `npx hyperframes cloud render`                                                |
+| Self-managed distributed AWS render      | `npx hyperframes lambda render <project> --width 1920 --height 1080 --wait`   |
+| Self-managed distributed GCP render      | `npx hyperframes cloudrun render <project> --width 1920 --height 1080 --wait` |
+
+A render stops when whatever started it stops, so a Ctrl-C or a closed terminal never leaves Chrome running. If your tool kills its whole process group when a command times out or ends, a long render dies with it. Start such a render in its own process group with `HYPERFRAMES_RENDER_DETACHED=1`, for example `bash -c 'set -m; HYPERFRAMES_RENDER_DETACHED=1 npx hyperframes render --output out.mp4 < /dev/null > render.log 2>&1 &'` (works on macOS and Linux), then check the log and the output file instead of waiting on the command.
+
+Skill attribution is automatic â€” the examples above need no `--skill`. A project scaffolded by a workflow (`hyperframes init --skill=<workflow>`) records its owning skill in `hyperframes.json`, and every later render inherits it on anonymous telemetry: re-renders, `npm run render`, and `--batch` alike. Pass `--skill=<slug>` explicitly only to stamp a project that was not created through a workflow (its first render then persists it).
+
+Use cloud rendering when the user wants hosted rendering without local Chrome, FFmpeg, or AWS. Use Lambda only when AWS ownership is a requirement. Use Cloud Run only when GCP ownership is a requirement. Read the matching reference before running any cloud path.
+
+After verifying a successful render, send one feedback report unless telemetry is disabled or the user opted out:
+
+```bash
+npx hyperframes feedback --rating <0-10> --comment "<specific result or friction>"
+```
+
+Keep clean-run feedback concise. For any bug or friction, capture a **reproduction packet** before submitting; do not send only a symptom summary. Include the rerunnable command (relative to the project directory â€” feedback is submitted to a public channel, so do **not** paste absolute paths, home-directory prefixes, or user/machine identifiers), expected versus actual behavior, exact error (also strip absolute paths from stack traces â€” keep basename + line, drop the leading directory), whether output completed/fell back/failed, workaround, and repro-project status. For a rating â‰¤ 7 that describes a visual defect (black frame, flicker, corrupt output, wrong frame, blank output, other visual anomaly), also include a `COMPOSITION_STRUCTURE:` block â€” a privacy-preserving structural anatomy (element census + attribute presence + timeline shape) so maintainers can pattern-match against known bug families without the composition ZIP. Agents auto-fill this via the composition-census helper; the human user does not fill it by hand. If the issue did not reproduce again, say so and still include the last failing command and logs. Use `--file-issue` only with consent: it publishes a minimal reproduction to a public URL. The required packet format and privacy warning live in `references/preview-render.md`.
+
+Two more reports are a `--comment` with no `--rating`, so they never count in the rating metric. Send them unless telemetry is disabled or the user opted out, under the same privacy rules:
+
+- **Missing feature.** Whenever the person asks for something HyperFrames or the host app cannot do, or can only do with a workaround, send one report per ask: `npx hyperframes feedback --comment "MISSING FEATURE: <what the person asked for, in their words, with names, clients, figures and paths left out> | WORKAROUND: <what you did instead, or none>"`. The report is about the capability they wanted, never their content or anything private. A catalog search that found nothing goes to `--search-miss` instead.
+- **Host app.** When `HYPERFRAMES_CLIENT` is set, the CLI is running inside a host app. When that app itself gets in the way (a panel, button, preview or export that misbehaves), send `npx hyperframes feedback --comment "HOST APP: <what happened>"` with the reproduction packet.
+
+## Read the matching reference before running a command
+
+The following references and owning skills are mandatory command contracts, not optional background reading. Before running a command in the table, read its matching row.
+
+| Need                                                                                               | Reference                             |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------- |
+| `init`, `capture`, `skills`                                                                        | `references/init-and-scaffold.md`     |
+| `lint`, `check`, motion sidecars, `snapshot`                                                       | `references/lint-validate-inspect.md` |
+| `compare`, `grade-compare`, variable-driven `render --batch`                                       | `references/compare-and-batch.md`     |
+| `beats` for an existing project's Studio beat grid                                                 | `references/beats.md`                 |
+| `preview`, `play`, `render`, `publish`, Studio context, feedback                                   | `references/preview-render.md`        |
+| `doctor`, browser management                                                                       | `references/doctor-browser.md`        |
+| `auth`, HeyGen-hosted cloud rendering, and template variables                                      | `references/cloud.md`                 |
+| AWS Lambda deployment and rendering                                                                | `references/lambda.md`                |
+| Google Cloud Run deployment and rendering                                                          | `references/cloudrun.md`              |
+| `info`, `upgrade`, `compositions`, `timeline`, `docs`, `benchmark`, telemetry, media preprocessing | `references/upgrade-info-misc.md`     |
+
+For composition variables, also read `/hyperframes-core` â†’ `references/variables-and-media.md`. For `hyperframes add` and `hyperframes catalog`, use `/hyperframes-registry`. Before `hyperframes present`, read `/slideshow`; before `hyperframes keyframes`, read `/hyperframes-keyframes`. For TTS, transcription, captions, or background removal choices, use `/media-use`.
+
+The specialized commands are deliberately documented by their owning workflows:
+
+```bash
+npx hyperframes present <project-dir> --port 3004 --no-open
+npx hyperframes beats <project-dir> --json
+npx hyperframes keyframes <project-dir> --json
+npx hyperframes media-treatment --capabilities
+npx hyperframes figma asset KEY:10-20
+```
+
+`present` serves a navigable deck with presenter and audience synchronization. `beats` is the standalone Studio beat-grid utility defined in `references/beats.md`. `keyframes` surfaces seek-safe animation and motion-path diagnostics. `media-treatment` discovers, applies, and clears deterministic looks on local footage â€” start with `--capabilities` for the overview and `--capability <name>` for one family; `/media-use` owns which treatment a brief is asking for. `figma` imports over the REST API with the `asset`, `tokens`, and `component` subcommands and needs `FIGMA_TOKEN`; motion and shader import have no REST endpoint and are agent-only, so `/figma` owns those.
+
+## Commands you should not run
+
+Two entries in `hyperframes --help` are not part of the authoring loop, and reaching for them wastes a turn:
+
+- `events` is the telemetry endpoint skills use to report their **own** invocation, ideally from a bundled script. It emits an anonymous event and exits 0 no matter what you pass it. It is not a way to read telemetry back, and an agent has no reason to call it by hand.
+- `validate`, `inspect`, and `layout` are deprecated aliases kept for old scripts. `check` is the one that is maintained, and it is what every reference in this skill assumes.
+
+## Remaining harness usage
+
+Run `npx hyperframes usage --json` at the start of a video workflow and again at milestones such as after drafting and before rendering. A fresh read at handoff can serve as the start read. Use `--harness claude-code`, `--harness codex`, or `--harness grok` to select explicitly.
+
+Known results contain `status: "known"`, `harness`, `planTier`, `session`, and `weekly`. Each available window contains `usedPercent`, `remainingPercent`, and `resetsAt`; an unavailable window is `null`. `planTier` is the readable subscription tier when available, otherwise `null`. Claude Code reports its shared five-hour and weekly windows. Codex reports its shared session and weekly windows when available. Grok reports its included weekly allowance with `session: null`.
+
+Unknown results contain `status: "unknown"` and a token-free `reason`. Missing, expired, unsupported, ambiguous, or unreadable logins and unavailable provider responses return unknown. Report the unknown state without guessing allowance. The command reads existing credentials without refreshing or rewriting them and emits no tokens or telemetry. Usage is a snapshot; it does not reserve allowance or estimate the next video's cost. Keep scope and workflow choices with the user.
+
+npm error code EPERM
+npm error syscall open
+npm error path C:\Users\Tung-QA\AppData\Local\npm-cache\_cacache\tmp\db519398
+npm error errno EPERM
+npm error FetchError: Invalid response body while trying to fetch https://registry.npmjs.org/hyperframes: EPERM: operation not permitted, open 'C:\Users\Tung-QA\AppData\Local\npm-cache\_cacache\tmp\db519398'
+npm error     at C:\Program Files\nodejs\node_modules\npm\node_modules\minipass-fetch\lib\body.js:170:15
+npm error     at async Response.json (C:\Program Files\nodejs\node_modules\npm\node_modules\minipass-fetch\lib\body.js:75:17)
+npm error     at async RegistryFetcher.packument (C:\Program Files\nodejs\node_modules\npm\node_modules\pacote\lib\registry.js:98:25)
+npm error     at async RegistryFetcher.manifest (C:\Program Files\nodejs\node_modules\npm\node_modules\pacote\lib\registry.js:128:23)
+npm error     at async getManifest (C:\Program Files\nodejs\node_modules\npm\node_modules\libnpmexec\lib\index.js:27:22)
+npm error     at async missingFromTree (C:\Program Files\nodejs\node_modules\npm\node_modules\libnpmexec\lib\index.js:60:22)
+npm error     at async C:\Program Files\nodejs\node_modules\npm\node_modules\libnpmexec\lib\index.js:182:32
+npm error     at async Promise.all (index 0)
+npm error     at async exec (C:\Program Files\nodejs\node_modules\npm\node_modules\libnpmexec\lib\index.js:180:3)
+npm error     at async Npm.exec (C:\Program Files\nodejs\node_modules\npm\lib\npm.js:207:9) {
+npm error   code: 'EPERM',
+npm error   errno: 'EPERM',
+npm error   syscall: 'open',
+npm error   path: 'C:\\Users\\Tung-QA\\AppData\\Local\\npm-cache\\_cacache\\tmp\\db519398',
+npm error   type: 'system'
+npm error }
+npm error
+npm error The operation was rejected by your operating system.
+npm error It's possible that the file was already in use (by a text editor or antivirus),
+npm error or that you lack permissions to access it.
+npm error
+npm error If you believe this might be a permissions issue, please double-check the
+npm error permissions of the file and its containing directories, or try running
+npm error the command again as root/Administrator.
+npm error Log files were not written due to an error writing to the directory: C:\Users\Tung-QA\AppData\Local\npm-cache\_logs
+npm error You can rerun the command with `--loglevel=verbose` to see the logs in your terminal
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content data/long/mim-turing-bombe/script.md -TotalCount 25; rg -n '"'^(TITLE|SAY)|def make_spec|"youtube"|"sources_internal"'"' data/long/mim-turing-bombe/gen_scenes.py; Get-Content data/long/mim-turing-bombe/gen_scenes.py -Raw; Get-Content data/long/mim-turing-bombe/factcheck.md -Raw" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 86ms:
+# NGÆ¯á»œI GIáº¢I MÃƒ NgoÃ i Äá»i Tháº­t: Alan Turing, 1940
+
+**KÃªnh:** MIM Â· **Äá»™ dÃ i má»¥c tiÃªu:** 9â€“11 phÃºt Â· **Lá»™ trÃ¬nh:** sÃ¡u rÄƒng cá»§a má»™t chiáº¿c khÃ³a.
+
+Quy Æ°á»›c: má»—i dÃ²ng lÃ  má»™t cÃ¢u Ä‘á»c. `â€–` lÃ  ngá»«ng dÃ i. Phim The Imitation Game chá»‰ Ä‘Æ°á»£c nháº¯c báº±ng lá»i vÃ  chá»¯, khÃ´ng dÃ¹ng hÃ¬nh phim.
+
+## CH00 Â· LÃ¡ thÆ° trong Ä‘Ãªm
+
+ÄÃªm 21 thÃ¡ng 10 nÄƒm 1941, bá»‘n ngÆ°á»i lÃ m á»Ÿ Bletchley Park quyáº¿t Ä‘á»‹nh Ä‘i vÃ²ng qua cáº¥p trÃªn.
+
+Alan Turing, Gordon Welchman, Hugh Alexander vÃ  Stuart Milner-Barry cÃ¹ng kÃ½ má»™t lÃ¡ thÆ° gá»­i tháº³ng tá»›i Winston Churchill.
+
+Há» khÃ´ng xin thÃªm má»™t cá»— mÃ¡y Ä‘á»ƒ trÆ°ng bÃ y.
+
+Há» xin thÃªm ngÆ°á»i, vÃ¬ nhá»¯ng chiáº¿c Bombe Ä‘Ã£ táº¡o ra cÃ´ng viá»‡c mÃ  Bletchley khÃ´ng Ä‘á»§ tay Ä‘á»ƒ xá»­ lÃ½.
+
+Trong thÆ° cÃ³ má»™t con sá»‘ ráº¥t cá»¥ thá»ƒ: 20 ná»¯ nhÃ¢n viÃªn vÄƒn phÃ²ng, 20 ngÆ°á»i Ä‘Ã¡nh mÃ¡y Ä‘Ã£ Ä‘Æ°á»£c Ä‘Ã o táº¡o, vÃ  má»™t phÃ¢n Ä‘á»™i WRNS Ä‘á»ƒ thá»­ káº¿t quáº£ mÃ¡y tráº£ vá».
+
+HÃ£y dá»«ng á»Ÿ chá»— láº¡ nháº¥t cá»§a lÃ¡ thÆ° nÃ y.
+
+Má»™t cá»— mÃ¡y Ä‘ang quay hÃ ng giá», nhÆ°ng Ä‘iá»u lÃ m bá»‘n nhÃ  giáº£i mÃ£ lo nháº¥t láº¡i lÃ  chá»— con ngÆ°á»i pháº£i nhÃ¬n vÃ o nÃ³.
+
+Äáº¿n thÃ¡ng 6 cÃ¹ng nÄƒm, Bletchley Ä‘Ã£ Ä‘á»™t nháº­p Ä‘Æ°á»£c liÃªn láº¡c U-boat trong Tráº­n Äáº¡i TÃ¢y DÆ°Æ¡ng.
+
+Váº­y táº¡i sao má»™t dÃ£y trá»‘ng Ä‘iá»‡n cÆ¡, má»™t lÃ¡ thÆ° vÃ  vÃ i chá»¥c ngÆ°á»i trá»±c láº¡i cáº§n nhau Ä‘áº¿n tháº¿?
+6:TITLE = "NGƯỜI GIẢI MÃ Ngoài Đời Thật: Alan Turing: Bombe"
+107:def make_spec():
+120:        "youtube": {
+128:        "sources_internal": "Kịch bản chỉ sử dụng kho facts.md; ảnh Wikimedia Commons PD/CC0 và B-roll Pexels được ghi trong facts.md.",
+from pathlib import Path
+import json
+
+ROOT = Path(__file__).parent
+TOPIC = "mim-turing-bombe"
+TITLE = "NGÆ¯á»œI GIáº¢I MÃƒ NgoÃ i Äá»i Tháº­t: Alan Turing: Bombe"
+
+IMGS = {
+    "turing16": "File:Alan Turing at age 16.jpg",
+    "turing1936": "File:Alan Turing (1912-1954) in 1936 at Princeton University.jpg",
+    "bletchley": "File:Bletchley Park.jpg",
+    "enigmaNsa": "File:Enigma Machine at NSA.jpg",
+    "enigmaIwm": "File:EnigmaMachine.jpg",
+    "enigmaCc0a": "File:An Enigma machine.jpg",
+    "enigmaCc0b": "File:Enigma Machine.jpg",
+    "enigmaPair": "File:Enigma machines.jpg",
+    "enigmaWarsaw": "File:Enigma machine, Warsaw.jpg",
+    "bombeClose": "File:Bombe Closeup.jpg",
+    "bombe1945": "File:Wartime picture of a Bletchley Park Bombe.jpg",
+}
+
+GEO_EUROPE = {
+    "countries": ["Poland", "France", "United Kingdom"],
+    "context": ["Germany"],
+    "bbox": [-9, 42, 25, 58],
+    "pins": [
+        {"name": "Warsaw", "lon": 21.01, "lat": 52.23, "label": "WARSAW"},
+        {"name": "Paris", "lon": 2.35, "lat": 48.86, "label": "PARIS"},
+        {"name": "Bletchley", "lon": -0.74, "lat": 52.00, "label": "BLETCHLEY PARK"},
+    ],
+}
+GEO_ATLANTIC = {
+    "countries": ["United Kingdom", "France"],
+    "context": ["Ireland"],
+    "bbox": [-20, 42, 10, 61],
+    "pins": [
+        {"name": "Bletchley", "lon": -0.74, "lat": 52.00, "label": "BLETCHLEY PARK"},
+        {"name": "Eastcote", "lon": -0.39, "lat": 51.58, "label": "EASTCOTE"},
+    ],
+}
+
+PLAN = [
+    {"title": "LÃ THÆ¯ TRONG ÄÃŠM", "image1": "bletchley", "image2": "bombe1945", "clip": "34645486", "feature": "date"},
+    {"title": "KHÃ“A KHÃ”NG CHá»œ Báº N", "image1": "enigmaNsa", "image2": "enigmaIwm", "clip": "2915385", "feature": "counter"},
+    {"title": "BA NGÆ¯á»œI á»ž WARSAW", "image1": "enigmaWarsaw", "image2": "enigmaPair", "clip": "31802320", "feature": "map"},
+    {"title": "NGÆ¯á»œI ÄÆ¯á»¢C NHá»š TÃŠN", "image1": "turing1936", "image2": "turing16", "clip": "34187599", "feature": "timeline"},
+    {"title": "Má»˜T ÄOáº N CHá»® Äá»¦ DÃ€I", "image1": "enigmaCc0a", "image2": "enigmaCc0b", "clip": "8334262", "feature": "org"},
+    {"title": "Cá»– MÃY LÃ€M Má»˜T VIá»†C", "image1": "bombeClose", "image2": "bombe1945", "clip": "6079428", "feature": "counter"},
+    {"title": "BA CA, Má»˜T QUY TRÃŒNH", "image1": "bletchley", "image2": "enigmaPair", "clip": "34645486", "feature": "map"},
+    {"title": "NGÆ¯á»œI TRONG VÃ’NG Láº¶P", "image1": "turing16", "image2": "bombeClose", "clip": "2915385", "feature": "timeline"},
+]
+
+def kinetic(text, at):
+    return {"type": "kinetic", "at": at, "items": [{"text": text, "at": at, "acc": True}]}
+
+def photo(key, at, label):
+    return {"type": "photo", "at": at, "img": key, "label": {"k": label, "v": "TÆ¯ LIá»†U LÆ¯U TRá»®", "at": at}, "move": "in", "tone": "bw", "veil": 0.55}
+
+def broll(clip, at):
+    return {"type": "broll", "at": at, "vid": clip, "veil": 0.62, "illus": "VIDEO MINH Há»ŒA"}
+
+def ledger(at, left, right):
+    return {"type": "ledger", "at": at, "title": "SÃU RÄ‚NG Cá»¦A KHÃ“A", "srcnote": "MINH Há»ŒA QUY TRÃŒNH", "rows": [{"k": left, "v": right, "at": at}]}
+
+def feature_scene(kind, at, chapter):
+    if kind == "date":
+        return {"type": "date", "at": at, "day": "Bá»¨C THÆ¯ Gá»¬I CHURCHILL", "date": "21.10.1941", "sub": {"text": "Bá»N NGÆ¯á»œI GIáº¢I MÃƒ KÃ TÃŠN", "at": at}}
+    if kind == "counter":
+        number = "159" if chapter == 1 else "211"
+        label = "Tá»¶ Tá»¶ KHáº¢ NÄ‚NG" if chapter == 1 else "BOMBE Tá»ª BTM"
+        return {"type": "counter", "at": at, "from": int(number), "to": int(number), "suffix": "", "label": label, "year": False}
+    if kind == "map":
+        return {"type": "map", "at": at, "geo": "europe" if chapter == 2 else "atlantic", "pins": ([{"name": "Warsaw"}, {"name": "Paris"}, {"name": "Bletchley"}] if chapter == 2 else [{"name": "Bletchley"}, {"name": "Eastcote"}])}
+    if kind == "timeline":
+        events = ([
+            {"year": "1939", "text": "Hut 8"},
+            {"year": "1940", "text": "Paris"},
+            {"year": "1941", "text": "Banburismus"},
+        ] if chapter == 3 else [
+            {"year": "1941", "text": "Bá»©c thÆ°"},
+            {"year": "1945", "text": "Chiáº¿n tranh káº¿t thÃºc"},
+            {"year": "1980s", "text": "Bombe Ä‘Æ°á»£c cÃ´ng bá»‘"},
+        ])
+        return {"type": "timeline", "at": at, "items": events, "bg": "enigmaCc0a"}
+    return {"type": "slam", "at": at, "text": "CRIB â†’ MENU â†’ BOMBE", "sub": "Má»˜T CHUá»–I KIá»‚M TRA"}
+
+ANCHORS = [[1, 2, 4, 6, 8, 10, 12, 13, 14], [1, 3, 5, 7, 9, 11, 13, 14, 15],
+           [1, 2, 4, 6, 8, 10, 12, 13, 14], [1, 3, 5, 7, 9, 11, 13, 14, 15],
+           [1, 3, 5, 7, 9, 11, 14, 16, 18], [1, 3, 5, 7, 9, 11, 13, 15, 16],
+           [1, 3, 5, 7, 9, 12, 14, 16, 19], [1, 3, 5, 7, 9, 12, 14, 16, 19]]
+
+def scenes_for(chapter, cfg):
+    a = ANCHORS[chapter]
+    return [
+        {"type": "chapter", "at": 0, "number": f"{chapter:02d}", "title": cfg["title"]},
+        kinetic("SÃU RÄ‚NG Cá»¦A Má»˜T KHÃ“A", a[0]),
+        broll(cfg["clip"], a[1]),
+        photo(cfg["image1"], a[2], "TÆ¯ LIá»†U LÆ¯U TRá»®"),
+        ledger(a[3], "Dá»® KIá»†N", "Äáº¶T ÄÃšNG Máº®T XÃCH"),
+        feature_scene(cfg["feature"], a[4], chapter),
+        {"type": "print", "at": a[5], "img": ("enigmaCc0a" if chapter == 0 else cfg["image1"]), "tone": "bw", "head": "Láº¦N THEO Dáº¤U Váº¾T", "side": {"k": "CHI TIáº¾T", "h": "THÃ€NH THá»¬ NGHIá»†M", "lines": [{"text": "TÃCH Tá»ªNG Máº®T XÃCH", "at": a[5]}]}},
+        kinetic("KIá»‚M TRA, Rá»’I Láº I KIá»‚M TRA", a[6]),
+        photo(cfg["image2"], a[7], "Há»’ SÆ  Vá»€ BOMBE"),
+        {"type": "question", "at": a[8], "text": "Náº¾U MÃY Dá»ªNG á»ž ÄÃ‚Y, Báº N KIá»‚M TRA ÄIá»€U GÃŒ TRÆ¯á»šC?"},
+    ]
+
+def make_spec():
+    return {
+        "topic": TOPIC,
+        "title": TITLE,
+        "channel": "MIM",
+        "theme": "lab",
+        "look": "steel",
+        "accent": "#f59e0b",
+        "master": True,
+        "beat2": True,
+        "imgs": IMGS,
+        "geo": {"europe": GEO_EUROPE, "atlantic": GEO_ATLANTIC},
+        "chapters": [f"ch{i:02d}" for i in range(len(PLAN))],
+        "youtube": {
+            "titles": [TITLE, "Alan Turing 1941: BÆ°á»›c Ngoáº·t Bombe"],
+            "summary": "CÃ¢u chuyá»‡n vá» Alan Turing, nhá»¯ng ngÆ°á»i giáº£i mÃ£ vÃ  cá»— Bombe táº¡i Bletchley Park.",
+            "sources": [
+                "https://www.gchq.gov.uk/information/the-turing-bombe",
+                "https://www.tnmoc.org/bombe",
+            ],
+        },
+        "sources_internal": "Ká»‹ch báº£n chá»‰ sá»­ dá»¥ng kho facts.md; áº£nh Wikimedia Commons PD/CC0 vÃ  B-roll Pexels Ä‘Æ°á»£c ghi trong facts.md.",
+    }
+
+def main():
+    (ROOT / "spec.json").write_text(json.dumps(make_spec(), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    for i, cfg in enumerate(PLAN):
+        out = {"topic": TOPIC, "chapter": i, "scenes": scenes_for(i, cfg)}
+        (ROOT / f"ch{i:02d}.json").write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"ÄÃ£ táº¡o spec.json vÃ  {len(PLAN)} chÆ°Æ¡ng cho {TOPIC}.")
+
+if __name__ == "__main__":
+    main()
+
+# Kiá»ƒm chá»©ng MIM `mim-turing-bombe` â€” 26/10/2026
+
+CÃ¡c URL dÆ°á»›i Ä‘Ã¢y Ä‘Ã£ Ä‘Æ°á»£c má»Ÿ. Ká»‹ch báº£n chá»‰ dÃ¹ng dá»¯ kiá»‡n trong `facts.md` Ä‘Ã£ duyá»‡t. DÃ²ng cÃ³ *Time* lÃ  nguá»“n má»©c vá»«a vÃ  Ä‘Æ°á»£c quy dáº«n ngay trong lá»i Ä‘á»c.
+
+| Kháº³ng Ä‘á»‹nh trong lá»i Ä‘á»c | Nguá»“n Ä‘Ã£ má»Ÿ |
+|---|---|
+| NgÃ y 21/10/1941, Turing, Welchman, Alexander vÃ  Milner-Barry cÃ¹ng viáº¿t thÆ° trá»±c tiáº¿p tá»›i Churchill; thÆ° xin 20 ná»¯ clerks, 20 typists Ä‘Ã£ Ä‘Ã o táº¡o vÃ  má»™t phÃ¢n Ä‘á»™i WRNS Ä‘á»ƒ thá»­ â€œstoriesâ€ tá»« Bombe. | The National Archives, [A dramatic plea for Churchillâ€™s help](https://www.nationalarchives.gov.uk/explore-the-collection/stories/a-dramatic-plea-for-churchills-help/) |
+| Äáº¿n 06/1941 Bletchley Ä‘Ã£ Ä‘á»™t nháº­p liÃªn láº¡c U-boat trong Tráº­n Äáº¡i TÃ¢y DÆ°Æ¡ng. | The National Archives, [A dramatic plea for Churchillâ€™s help](https://www.nationalarchives.gov.uk/explore-the-collection/stories/a-dramatic-plea-for-churchills-help/) |
+| Enigma dÃ¹ng tá»« ba rÃ´-to vÃ  plugboard; khÃ´ng gian lÃ½ thuyáº¿t lÃ  158.962.555.217.826.360.000 khÃ³a. | DPMA, [Enigma](https://www.dpma.eu/english/our_office/publications/milestones/computerpioneers/enigma/index.html) |
+| MÃ¡y á»Ÿ hai Ä‘áº§u pháº£i cÃ¹ng cáº¥u hÃ¬nh; thiáº¿t láº­p Ä‘á»•i thÆ°á»ng xuyÃªn, Háº£i quÃ¢n Äá»©c Ä‘á»•i háº±ng ngÃ y vÃ o ná»­a Ä‘Ãªm. | DPMA, [Enigma](https://www.dpma.eu/english/our_office/publications/milestones/computerpioneers/enigma/index.html) |
+| Lá»¥c quÃ¢n/KhÃ´ng quÃ¢n chá»n 3 rÃ´-to tá»« 5, Háº£i quÃ¢n chá»n tá»« 8; cÃ³ hÃ ng trÄƒm máº¡ng vÃ  khoáº£ng 50 máº¡ng hoáº¡t Ä‘á»™ng cÃ¹ng lÃºc, má»—i máº¡ng cÃ³ key sheet riÃªng. | The National Museum of Computing, [The Enigma Machine](https://www.tnmoc.org/bh-2-the-enigma-machine) |
+| Rejewski, RÃ³Å¼ycki vÃ  Zygalski phÃ¡ Enigma thÃ¡ng 12/1932. | Äáº¡i há»c Adam Mickiewicz, [Marian Rejewski](https://wmi.amu.edu.pl/wydzial/historia/biogramy/marian-rejewski) |
+| Váº­t liá»‡u tá»›i Warsaw 08/12/1932; Ä‘iá»‡n Enigma Ä‘áº§u tiÃªn Ä‘Æ°á»£c giáº£i táº¡i Cung Sachsen ngÃ y 31/12/1932. | Agencja Wywiadu, [DekryptaÅ¼ szyfru Enigmy](https://aw.gov.pl/pl/historia/dekryptaz-szyfru-enigmy/104,Dekryptaz-szyfru-Enigmy.html) |
+| NhÃ³m Ba Lan lÃ m cyclometer nÄƒm 1936, bomba kryptologiczna sau thay Ä‘á»•i thÃ¡ng 09/1938, vÃ  táº¥m Ä‘á»¥c lá»— Zygalski há»— trá»£ tÃ¬m thá»© tá»± rÃ´-to. | Agencja Wywiadu, [DekryptaÅ¼ szyfru Enigmy](https://aw.gov.pl/pl/historia/dekryptaz-szyfru-enigmy/104,Dekryptaz-szyfru-Enigmy.html) |
+| Cuá»™c gáº·p Pyry diá»…n ra 25â€“26/07/1939; Ä‘oÃ n Anh cÃ³ Denniston vÃ  Dilly Knox; kiáº¿n thá»©c Ba Lan thay Ä‘á»•i cÃ¡ch GC&CS tiáº¿p cáº­n Enigma. | GCHQ, [The Pyry Forest Meeting](https://www.gchq.gov.uk/information/the-pyry-forest-meeting) |
+| Turing vÃ o GC&CS thÃ¡ng 09/1939, dáº«n Hut 8 vá» Naval Enigma; thÃ¡ng 01/1940 gáº·p cÃ¡c nhÃ  máº­t mÃ£ Ba Lan táº¡i Paris, vÃ  trao Ä‘á»•i vá»›i Rejewski lÃ  ná»n táº£ng cho thiáº¿t káº¿/láº¯p Ä‘áº·t Bombe Anh. | GCHQ, [Alan Turing](https://www.gchq.gov.uk/information/alan-turing); GCHQ, [The Pyry Forest Meeting](https://www.gchq.gov.uk/information/the-pyry-forest-meeting) |
+| Welchman vÃ o Bletchley thÃ¡ng 09/1939, Ä‘á»©ng Ä‘áº§u Hut 6 vÃ  nghÄ© ra diagonal board, má»™t cáº£i tiáº¿n lá»›n cho Bombe cá»§a Turing. | GCHQ, [Gordon Welchman](https://www.gchq.gov.uk/information/gordon-welchman) |
+| Joan Clarke cÃ³ double First nÄƒm 1940, lÃ m á»Ÿ Hut 8 vá»›i Turing; Banburismus lÃ  á»©ng dá»¥ng thá»‘ng kÃª Bayes giÃºp tiáº¿t kiá»‡m thá»i gian xá»­ lÃ½ trÃªn Bombes. | GCHQ, [Joan Clarke](https://www.gchq.gov.uk/information/joan-clarke) |
+| Crib thÆ°á»ng lÃ  máº£nh tiáº¿ng Äá»©c tá»« 20 chá»¯ cÃ¡i trá»Ÿ lÃªn; crib táº¡o menu, lÃ  Ä‘áº§u vÃ o Ä‘á»ƒ Bombe thá»­ thiáº¿t láº­p rÃ´-to. Wylie vÃ o Hut 8 thÃ¡ng 01/1941 vÃ  phá»¥ trÃ¡ch Crib room. | GCHQ, [Shaun Wylie](https://www.gchq.gov.uk/information/shaun_wylie); GCHQ, [Shaun Wylie](https://www.gchq.gov.uk/person/shaun-wylie) |
+| Turing dÃ¹ng crib vÃ  tÃ­nh cháº¥t Enigma khÃ´ng mÃ£ hÃ³a má»™t chá»¯ thÃ nh chÃ­nh nÃ³; diagonal board giáº£m Ä‘iá»ƒm dá»«ng giáº£; Agnus Dei/Agnes hoáº¡t Ä‘á»™ng 08/1940; BTM cháº¿ táº¡o Bombe gá»‘c; khoáº£ng 211 Bombe Ä‘Æ°á»£c cháº¿ táº¡o. | The National Museum of Computing, [The Turing-Welchman Bombe](https://www.tnmoc.org/bombe) |
+| Jean Millar vÃ o WRNS 03/1943, Ä‘Æ°á»£c gá»i thÃ¡ng 11; Eastcote lÃ m ba ca 8 giá». Má»—i bay cÃ³ 10 Bombe; ngÆ°á»i váº­n hÃ nh náº¡p bÃ¡nh xe theo menu, ghi Ä‘iá»ƒm dá»«ng, rá»“i mÃ¡y kiá»ƒm tra xÃ¡c minh trÆ°á»›c khi bÃ¡o vá» Bletchley qua Ä‘iá»‡n thoáº¡i xÃ¡o trá»™n. | GCHQ, [Jean Millar](https://www.gchq.gov.uk/information/international-womens-month-jean-millar) |
+| Bombe Ä‘áº·t cáº£ á»Ÿ Stanmore vÃ  Eastcote; khoáº£ng 50 mÃ¡y Ä‘Æ°á»£c giá»¯ táº¡m sau chiáº¿n tranh; GCHQ bÃ n giao khoáº£ng 2.000 tÃ i liá»‡u vÃ  báº£n váº½ BTM sau 40 nÄƒm. | The National Museum of Computing, [The Turing-Welchman Bombe](https://www.tnmoc.org/bombe) |
+| NSA nÃªu ráº±ng nhiá»u sá»­ gia cho ráº±ng kháº£ nÄƒng Ä‘á»c Enigma Ä‘Ã£ rÃºt ngáº¯n chiáº¿n tranh tá»›i hai nÄƒm; Ä‘Ã¢y lÃ  nháº­n Ä‘á»‹nh sá»­ há»c, khÃ´ng pháº£i káº¿t luáº­n cá»§a video. | NSA, [World War 2: Enigma](https://www.nsa.gov/History/National-Cryptologic-Museum/Exhibits-Artifacts/Exhibit-View/Article/2719176/world-war-2-enigma/) |
+| Theo *Time*, tÃªn â€œChristopherâ€ cá»§a cá»— mÃ¡y trong *The Imitation Game* lÃ  hÆ° cáº¥u; bÃ i bÃ¡o ghi ngoÃ i Ä‘á»i lÃ  Bombe vÃ  cÃ³ biá»‡t danh Victory. | *Time*, [The True Story of *The Imitation Game*](https://time.com/3609585/the-true-story-of-the-imitation-game/) |
+
+## Chá»§ Ä‘á»™ng khÃ´ng kháº³ng Ä‘á»‹nh
+
+- KhÃ´ng Ä‘á»c Victory lÃ  Bombe Ä‘áº§u tiÃªn cháº¡y thÃ¡ng 03/1940, khÃ´ng Ä‘á»c ngÃ y 18/03/1940.
+- KhÃ´ng Ä‘á»c sá»‘ trá»‘ng, kÃ­ch thÆ°á»›c mÃ¡y, thá»i gian má»™t lÆ°á»£t cháº¡y, vai trÃ² Doc Keen, hay cÃ¡c crib cá»¥ thá»ƒ nhÆ° `Keine besonderen Ereignisse` vÃ¬ kho chÆ°a cÃ³ nguá»“n máº¡nh Ä‘Ã£ má»Ÿ.
+- KhÃ´ng tá»± nÃªu sá»‘ tÃ u, thÆ°Æ¡ng vong hoáº·c sá»‘ thÃ¡ng chiáº¿n tranh bá»‹ rÃºt ngáº¯n; chá»‰ quy dáº«n Ä‘Ãºng nháº­n Ä‘á»‹nh cá»§a NSA vá» â€œnhiá»u sá»­ giaâ€.
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-ChildItem output/long/mim-turing-bombe/img -Filter *.json | ForEach-Object { "--- $($_.Name)"; Get-Content $_.FullName -Raw }; rg -n -i '"'\\b(Turing|Enigma|Bletchley|Bombe|Welchman|Warsaw|Rejewski|Paris|Clarke|Eastcote|Gordon|Marian|Henryk|Zygalski|Jerzy|Różycki|Wylie|Millar|Hugh|Alexander|Stuart|Milner|Winston|Churchill|Gustave|Bertrand|Alastair|Denniston|Dilly|Knox|Sachsen|Agnus|Agnes|Stanmore|kryptologiczna|Hut|crib|board|plugboard|U-boat|sheet|TNMOC|GCHQ|GC&CS|BTM|WRNS|158\\.962)' data/long/mim-turing-bombe/script.md" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 129ms:
+--- bletchley.json
+{"file": "File:Bletchley Park.jpg", "license": "Public domain", "artist": "Matt Crypto"}
+--- bombe1945.json
+{"file": "File:Wartime picture of a Bletchley Park Bombe.jpg", "license": "Public domain", "artist": "Unknown authorUnknown author"}
+--- bombeClose.json
+{"file": "File:Bombe Closeup.jpg", "license": "Public domain", "artist": "User:Garrethe"}
+--- enigma.json
+{"file": "File:Enigma Machine.jpg", "license": "CC0", "artist": "Joshbressers"}
+--- enigmaCc0a.json
+{"file": "File:An Enigma machine.jpg", "license": "CC0", "artist": "Robert-brook"}
+--- enigmaCc0b.json
+{"file": "File:Enigma Machine.jpg", "license": "CC0", "artist": "Joshbressers"}
+--- enigmaIwm.json
+{"file": "File:EnigmaMachine.jpg", "license": "Public domain", "artist": "Karsten Sperling, http://spiff.de/photo"}
+--- enigmaNsa.json
+{"file": "File:Enigma Machine at NSA.jpg", "license": "Public domain", "artist": ""}
+--- enigmaPair.json
+{"file": "File:Enigma machines.jpg", "license": "CC0", "artist": "User:Brandmeister (Togrul Safarov)"}
+--- enigmaWarsaw.json
+{"file": "File:Enigma machine, Warsaw.jpg", "license": "Public domain", "artist": "User:Brandmeister (Togrul Safarov)"}
+--- rejewski.json
+{"file": "File:Marian Rejewski.jpg", "license": "Public domain", "artist": "No photographer mentioned in either source"}
+--- turing16.json
+{"file": "File:Alan Turing Aged 16.jpg", "license": "Public domain", "artist": "Possibly Arthur Reginald Chaffin (1893-1954)"}
+--- turing1936.json
+{"file": "File:Alan Turing (1912-1954) in 1936 at Princeton University.jpg", "license": "Public domain", "artist": "Unknown photographer"}
+1:# NGƯỜI GIẢI MÃ Ngoài Đời Thật: Alan Turing, 1940
+9:Đêm 21 tháng 10 năm 1941, bốn người làm ở Bletchley Park quyết định đi vòng qua cấp trên.
+11:Alan Turing, Gordon Welchman, Hugh Alexander và Stuart Milner-Barry cùng ký một lá thư gửi thẳng tới Winston Churchill.
+15:Họ xin thêm người, vì những chiếc Bombe đã tạo ra công việc mà Bletchley không đủ tay để xử lý.
+17:Trong thư có một con số rất cụ thể: 20 nữ nhân viên văn phòng, 20 người đánh máy đã được đào tạo, và một phân đội WRNS để thử kết quả máy trả về.
+23:Đến tháng 6 cùng năm, Bletchley đã đột nhập được liên lạc U-boat trong Trận Đại Tây Dương.
+33:Rồi tới Turing và những đồng đội không đứng sau tên ông.
+35:Sau đó là crib, là menu, là người vận hành, và cuối cùng là điều một bộ phim đã làm cho câu chuyện này dễ hiểu nhưng không hoàn toàn đúng.
+41:Enigma là một họ máy điện cơ dùng rô-to và plugboard để biến chữ thành chữ khác.
+47:Cơ quan Sáng chế Đức tính không gian lý thuyết của hệ gồm rô-to và plugboard là 158.962.555.217.826.360.000 khả năng.
+49:Nhưng Enigma còn tạo áp lực bằng thời gian.
+59:TNMOC ghi rằng trong chiến tranh có hàng trăm mạng, dù khoảng 50 mạng hoạt động cùng lúc, và mỗi mạng nhận key sheet riêng.
+65:Vì thế Bombe không được tạo ra để đọc thay con người từng câu tiếng Đức.
+71:Nó đi qua Warsaw trước khi đến Bletchley.
+73:## CH02 · Ba người ở Warsaw
+75:Tháng 12 năm 1932, Marian Rejewski cùng Jerzy Różycki và Henryk Zygalski đã lần đầu phá được Enigma Đức.
+79:Cơ quan Tình báo Ba Lan ghi rằng điện Enigma đầu tiên được họ giải tại Cung Sachsen ở Warsaw ngày 31 tháng 12 năm 1932.
+81:Trước đó, ngày 8 tháng 12, Gustave Bertrand đã mang tài liệu đến Warsaw.
+85:Khi người Đức thay đổi Enigma vào tháng 9 năm 1938, Rejewski và đồng nghiệp tạo ra bomba kryptologiczna để tự động hóa việc phá mã.
+87:Henryk Zygalski còn có những tấm giấy đục lỗ hỗ trợ tìm thứ tự rô-to.
+93:Ngày 25 và 26 tháng 7 năm 1939, các nhà mật mã Ba Lan, Pháp và Anh gặp nhau gần Warsaw.
+95:Đoàn Anh có Alastair Denniston và Dilly Knox.
+97:Theo GCHQ, phía Ba Lan trình bày bomba kryptologiczna và những tiến bộ họ đã có với Enigma.
+101:Nó làm thay đổi cách GC&CS ở Anh tiếp cận Enigma.
+103:Và vài tháng sau, nó đưa Alan Turing tới Paris.
+107:Alan Turing vào làm cho GC&CS tại Bletchley Park tháng 9 năm 1939.
+109:Ông dẫn công việc ở Hut 8 nhằm vào liên lạc Enigma của Hải quân Đức.
+111:Tháng 1 năm 1940, Turing tới Paris gặp các nhà mật mã Ba Lan đã sơ tán.
+113:GCHQ nói những cuộc trao đổi của ông với Marian Rejewski là nền tảng cho tư duy dẫn tới thiết kế và lắp đặt Bombe Anh.
+115:Vậy nếu một bộ phim cho bạn cảm giác Turing đóng cửa phòng rồi một mình phát minh ra tất cả, cảm giác ấy bỏ rơi chiếc cầu quan trọng nhất của câu chuyện.
+117:Cầu đó đi từ Ba Lan sang Anh, rồi đi qua rất nhiều người trong Bletchley.
+119:Gordon Welchman cũng vào Bletchley tháng 9 năm 1939.
+121:Ông đứng đầu Hut 6 và nghĩ ra diagonal board, phần bổ sung mà GCHQ gọi là một cải tiến lớn cho Bombe của Turing.
+123:Joan Clarke tốt nghiệp double First năm 1940 rồi được đưa vào Hut 8 làm việc với Turing.
+125:Bà đặc biệt giỏi Banburismus, một ứng dụng thống kê Bayes giúp tiết kiệm đáng kể thời gian xử lý trên Bombes.
+129:Welchman giúp máy bớt dừng giả.
+131:Clarke giúp công việc trên Bombe bớt tốn thời gian.
+133:Turing lấy nền móng từ những cuộc trao đổi ở Paris để đi xa hơn.
+137:Điểm xuất phát ấy có tên rất ngắn: crib.
+141:Một crib là đoạn tiếng Đức mà người giải mã đoán có thể xuất hiện trong điện văn.
+143:GCHQ mô tả những crib thường là mảnh văn bản từ 20 chữ cái trở lên.
+149:Từ crib, người giải mã dựng một menu.
+151:Menu là đầu vào cho Bombe thử các thiết lập rô-to Enigma.
+159:Turing còn dựa vào một tính chất hữu ích: trong Enigma, một chữ không được mã hóa thành chính nó.
+165:Shaun Wylie vào Hut 8 tháng 1 năm 1941 và phụ trách Crib room.
+167:Ông nhận ra thứ tự rô-to thường khác ngày hôm trước; về sau dấu hiệu đó được gọi là Wylie WOs.
+181:TNMOC ghi rằng hướng tấn công của Turing có thể được cơ giới hóa bằng crib.
+183:Khi kết hợp với diagonal board của Welchman, Bombe giảm mạnh các điểm dừng giả và tăng thông lượng.
+187:Diagonal board không làm câu chuyện bớt hồi hộp.
+191:Theo TNMOC, chiếc Turing–Welchman Bombe đầu tiên mang tên Agnus Dei, hay Agnes, hoạt động vào tháng 8 năm 1940.
+193:British Tabulating Machine Company, gọi tắt là BTM, đảm nhiệm kỹ thuật và chế tạo các Bombe gốc.
+199:Trong cả hoạt động thời chiến, TNMOC ghi khoảng 211 Bombe được chế tạo và nhiều khóa được phá theo ngày.
+213:Ở Eastcote, những người làm phần đó chia ngày thành ba ca.
+217:Jean Millar gia nhập WRNS tháng 3 năm 1943 và được gọi đi vào tháng 11.
+219:Tại Eastcote, bà làm ba ca tám giờ: từ 8 giờ đến 16 giờ, từ 16 giờ đến nửa đêm, và từ nửa đêm đến 8 giờ sáng.
+223:Theo lời kể của Millar, mỗi bay có 10 Bombe.
+229:Khi bật, Bombe thử các thiết lập rô-to.
+237:Chỉ khi bước đó qua, kết quả mới được báo về Bletchley Park bằng điện thoại xáo trộn.
+241:Nó xin một phân đội WRNS không phải để đứng cạnh máy cho đủ cảnh đẹp.
+259:Bombes không chỉ nằm ở Bletchley Park.
+261:TNMOC ghi các outstation có Stanmore và Eastcote.
+265:Gần 40 năm sau chiến tranh, GCHQ mới bàn giao khoảng 2.000 tài liệu và bản vẽ BTM về Bombe cho Bletchley Park Trust, tạo điều kiện cho việc phục dựng.
+267:Bảo tàng Mật mã Quốc gia của NSA viết rằng nhiều sử gia cho rằng khả năng đọc Enigma có thể đã rút ngắn chiến tranh tới hai năm.
+271:Phim The Imitation Game giúp nhiều người gặp lại Alan Turing.
+273:Nhưng theo Time, cái tên “Christopher” mà phim đặt cho cỗ máy là hư cấu; ngoài đời nó được gọi là Bombe, và bài báo nói có biệt danh Victory.
+285:Turing, Welchman và Clarke biến các ý tưởng thành phương pháp.
+287:Crib và menu cho máy một nơi đáng thử.
+289:BTM cùng những người vận hành biến phương pháp thành quy trình.
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+for s in [
+'NGƯỜI GIẢI MÃ Ngoài Đời Thật: Alan Turing: Bombe',
+'NGƯỜI GIẢI MÃ Ngoài Đời Thật: Alan Turing Và Bombe',
+'NGƯỜI GIẢI MÃ Ngoài Đời Thật: Alan Turing Và Bombe',
+'NGƯỜI GIẢI MÃ Ngoài Đời Thật: Alan Turing Và Bombe',
+'NGƯỜI GIẢI MÃ Ngoài Đời Thật: Alan Turing Và Bombe',
+]: print(len(s), s)
+'@ | python -" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 128ms:
+48 NG??I GI?I M? Ngo?i ??i Th?t: Alan Turing: Bombe
+50 NG??I GI?I M? Ngo?i ??i Th?t: Alan Turing V? Bombe
+50 NG??I GI?I M? Ngo?i ??i Th?t: Alan Turing V? Bombe
+50 NG??I GI?I M? Ngo?i ??i Th?t: Alan Turing V? Bombe
+50 NG??I GI?I M? Ngo?i ??i Th?t: Alan Turing V? Bombe
+
+codex
+Mình đã xác nhận ticket chỉ yêu cầu hoàn thiện metadata và phát âm, không viết lại nội dung hay render. Usage HyperFrames hiện không xác định được vì lỗi `EPERM` ở npm cache; pipeline nội bộ của repo vẫn sẽ được dùng theo ticket.
+apply patch
+patch: completed
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-turing-bombe\gen_scenes.py
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-turing-bombe\script.md
+diff --git a/data/long/mim-turing-bombe/gen_scenes.py b/data/long/mim-turing-bombe/gen_scenes.py
+index cd1d04764343406a96c30b9e9a992a73121a46d6..4417aaae394c8a4aad027da7eec13ae13fbc62bf
+--- a/data/long/mim-turing-bombe/gen_scenes.py
++++ b/data/long/mim-turing-bombe/gen_scenes.py
+@@ -3,8 +3,25 @@
+ 
+ ROOT = Path(__file__).parent
+ TOPIC = "mim-turing-bombe"
+-TITLE = "NGƯỜI GIẢI MÃ Ngoài Đời Thật: Alan Turing: Bombe"
++TITLE = "NGƯỜI GIẢI MÃ Ngoài Đời Thật: Alan Turing Và Bombe"
+ 
++SAY = {
++    "turing": "Tu-rinh", "enigma": "Ê-ních-ma", "bletchley": "Blétch-li", "park": "Pác",
++    "bombe": "bom-bờ", "bombes": "bom-bờ", "welchman": "Uênch-man", "warsaw": "Vác-sa-va",
++    "rejewski": "Rây-ép-xki", "paris": "Pa-ri", "clarke": "Cờ-lác", "eastcote": "Ixt-cốt",
++    "gordon": "Go-đần", "marian": "Ma-ri-an", "henryk": "Hen-rích", "zygalski": "Di-gan-xki",
++    "jerzy": "Giê-di", "różycki": "Ru-dít-xki", "wylie": "Uai-li", "millar": "Mi-lơ",
++    "hugh": "Hiu", "alexander": "A-lếch-xan-đờ", "stuart": "Xtiu-ợt", "milner-barry": "Min-nơ Ba-ri",
++    "winston": "Uyn-xtơn", "churchill": "Chớc-chin", "gustave": "Gút-xtáp", "bertrand": "Béc-trăng",
++    "alastair": "A-la-xtê", "denniston": "Đe-ni-xtơn", "dilly": "Đi-li", "knox": "Nóc",
++    "sachsen": "Dắc-xen", "agnus": "Ác-nợt", "dei": "Đê-i", "agnes": "Ác-nịt",
++    "stanmore": "Xtan-mo", "kryptologiczna": "crip-tô-lô-ghích-na", "hut": "Hất",
++    "crib": "cờ-ríp", "board": "boóc", "plugboard": "plắc-boóc", "u-boat": "u-bốt",
++    "sheet": "siit", "tnmoc": "Bảo tàng Máy tính Quốc gia Anh", "gchq": "gi xi ét-chờ kiu",
++    "gc&cs": "gi xi và xi ét", "btm": "bi ti em", "wrns": "Ren",
++    "158.962.555.217.826.360.000": "khoảng một trăm năm mươi chín tỷ tỷ",
++}
++
+ IMGS = {
+     "turing16": "File:Alan Turing at age 16.jpg",
+     "turing1936": "File:Alan Turing (1912-1954) in 1936 at Princeton University.jpg",
+@@ -114,15 +131,59 @@
+         "accent": "#f59e0b",
+         "master": True,
+         "beat2": True,
++        "say": SAY,
+         "imgs": IMGS,
+         "geo": {"europe": GEO_EUROPE, "atlantic": GEO_ATLANTIC},
+         "chapters": [f"ch{i:02d}" for i in range(len(PLAN))],
+         "youtube": {
+-            "titles": [TITLE, "Alan Turing 1941: Bước Ngoặt Bombe"],
+-            "summary": "Câu chuyện về Alan Turing, những người giải mã và cỗ Bombe tại Bletchley Park.",
++            "titles": [
++                TITLE,
++                "Alan Turing 1941: Bước Ngoặt Của Bombe",
++                "Alan Turing 1939: Từ Ba Lan Đến Bombe",
++            ],
++            "summary": "Đêm 21 tháng 10 năm 1941, Alan Turing và ba đồng nghiệp vượt cấp gửi một lá thư tới Winston Churchill. Từ chiếc khóa Enigma đổi mỗi ngày đến một cỗ máy chỉ biết loại dần đường sai, câu chuyện lần theo những mắt xích con người đã làm nên Bombe. Và khi máy dừng lại, vì sao công việc quan trọng nhất vẫn thuộc về người kiểm tra?",
++            "more": [
++                "Các lời trích trong video là bản dịch sang tiếng Việt khi nguồn gốc không phải tiếng Việt.",
++                "Ảnh Commons và video Pexels có nhãn MINH HỌA, dùng để giải thích bối cảnh chứ không tái hiện một sự kiện cụ thể.",
++                "The Imitation Game chỉ được nhắc bằng lời và chữ; video không sử dụng hình phim.",
++            ],
++            "chapter_titles": {
++                "ch00": "Lá thư trong đêm",
++                "ch01": "Khóa không chờ bạn",
++                "ch02": "Ba người ở Warsaw",
++                "ch03": "Người được nhớ tên, và những người giữ mắt xích",
++                "ch04": "Một đoạn chữ để mở cả mê cung",
++                "ch05": "Cỗ máy không tìm đáp án, nó loại đường sai",
++                "ch06": "Ba ca, mười máy, một điểm dừng",
++                "ch07": "Người ở trong vòng lặp",
++            },
+             "sources": [
+-                "https://www.gchq.gov.uk/information/the-turing-bombe",
++                "https://www.nationalarchives.gov.uk/explore-the-collection/stories/a-dramatic-plea-for-churchills-help/",
++                "https://www.dpma.eu/english/our_office/publications/milestones/computerpioneers/enigma/index.html",
++                "https://www.tnmoc.org/bh-2-the-enigma-machine",
++                "https://wmi.amu.edu.pl/wydzial/historia/biogramy/marian-rejewski",
++                "https://aw.gov.pl/pl/historia/dekryptaz-szyfru-enigmy/104,Dekryptaz-szyfru-Enigmy.html",
++                "https://www.gchq.gov.uk/information/the-pyry-forest-meeting",
++                "https://www.gchq.gov.uk/information/alan-turing",
++                "https://www.gchq.gov.uk/information/gordon-welchman",
++                "https://www.gchq.gov.uk/information/joan-clarke",
++                "https://www.gchq.gov.uk/information/shaun_wylie",
++                "https://www.gchq.gov.uk/person/shaun-wylie",
+                 "https://www.tnmoc.org/bombe",
++                "https://www.gchq.gov.uk/information/international-womens-month-jean-millar",
++                "https://www.nsa.gov/History/National-Cryptologic-Museum/Exhibits-Artifacts/Exhibit-View/Article/2719176/world-war-2-enigma/",
++                "https://time.com/3609585/the-true-story-of-the-imitation-game/",
++            ],
++            "tags": ["Alan Turing", "Enigma", "Bombe", "Bletchley Park", "giải mã", "mật mã", "lịch sử công nghệ", "Thế chiến thứ hai", "Joan Clarke", "Marian Rejewski", "Gordon Welchman", "Bletchley", "máy tính", "công nghệ quanh ta"],
++            "hashtags": ["AlanTuring", "Enigma", "Bombe", "CôngNghệQuanhTa", "MindInTheMachine"],
++            "category": "28",
++            "thumb": "t1.jpg",
++            "playlist": "Công Nghệ Quanh Ta",
++            "publish_at": "2026-11-23T13:00:00Z",
++            "video_credits": [
++                "Ảnh Commons: Matt Crypto, Karsten Sperling, Garrethe, Brandmeister/Togrul Safarov, Robert-brook và Joshbressers; Public domain hoặc CC0.",
++                "Ảnh Alan Turing và Bombe: Public domain; tác giả được ghi theo trang Commons khi có.",
++                "Video minh họa: Pexels.",
+             ],
+         },
+         "sources_internal": "Kịch bản chỉ sử dụng kho facts.md; ảnh Wikimedia Commons PD/CC0 và B-roll Pexels được ghi trong facts.md.",
+diff --git a/data/long/mim-turing-bombe/script.md b/data/long/mim-turing-bombe/script.md
+index 59c04bc885cd00b99a2dabe6ec0e822477a03e11..4f264417e623dd273275195ee8e9cd6d364bff95
+--- a/data/long/mim-turing-bombe/script.md
++++ b/data/long/mim-turing-bombe/script.md
+@@ -1,4 +1,4 @@
+-# NGƯỜI GIẢI MÃ Ngoài Đời Thật: Alan Turing, 1940
++# NGƯỜI GIẢI MÃ Ngoài Đời Thật: Alan Turing Và Bombe
+ 
+ **Kênh:** MIM · **Độ dài mục tiêu:** 9–11 phút · **Lộ trình:** sáu răng của một chiếc khóa.
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'python data/long/mim-turing-bombe/gen_scenes.py; python motion/long/script_lines.py mim-turing-bombe; python motion/long/studio_lint.py mim-turing-bombe --strict; python motion/long/build_long.py mim-turing-bombe tts' in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+codex
+Metadata công khai, danh sách nguồn, credit và bảng phát âm đã được thêm trực tiếp vào `make_spec()`, không sửa tay `spec.json`. TTS đang tạo lại các câu có cách đọc mới; sau đó mình sẽ dựng lại HTML đủ tám chương và chạy gate cuối.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-Process python -ErrorAction SilentlyContinue | Select-Object Id,CPU,StartTime | Format-Table -AutoSize; Get-ChildItem output/long/mim-turing-bombe -Directory | ForEach-Object { $t = Join-Path $_.FullName '"'timing.json'; if (Test-Path "'$t) { "$($_.Name): $((Get-Item $t).LastWriteTime.ToString('"'HH:mm:ss'))\" } }" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 276ms:
+
+   Id       CPU StartTime            
+   --       --- ---------            
+12392 124.03125 10/26/2026 3:19:03 PM
+18108  0.109375 10/26/2026 3:18:02 PM
+
+
+ch00: 15:19:30
+ch01: 15:09:47
+ch02: 15:10:16
+ch03: 15:10:45
+ch04: 15:11:10
+ch05: 15:11:35
+ch06: 15:12:04
+ch07: 15:12:33
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Start-Sleep -Seconds 25; Get-Process -Id 12392 -ErrorAction SilentlyContinue | Select-Object Id,CPU | Format-Table -AutoSize; Get-ChildItem output/long/mim-turing-bombe -Directory | ForEach-Object { $t = Join-Path $_.FullName '"'timing.json'; if (Test-Path "'$t) { "$($_.Name): $((Get-Item $t).LastWriteTime.ToString('"'HH:mm:ss'))\" } }" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 25310ms:
+
+   Id        CPU
+   --        ---
+12392 263.203125
+
+
+ch00: 15:19:30
+ch01: 15:19:40
+ch02: 15:20:02
+ch03: 15:10:45
+ch04: 15:11:10
+ch05: 15:11:35
+ch06: 15:12:04
+ch07: 15:12:33
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Start-Sleep -Seconds 25; Get-Process -Id 12392 -ErrorAction SilentlyContinue | Select-Object Id,CPU | Format-Table -AutoSize; Get-ChildItem output/long/mim-turing-bombe -Directory | ForEach-Object { $t = Join-Path $_.FullName '"'timing.json'; if (Test-Path "'$t) { "$($_.Name): $((Get-Item $t).LastWriteTime.ToString('"'HH:mm:ss'))\" } }" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 25275ms:
+
+   Id     CPU
+   --     ---
+12392 397.125
+
+
+ch00: 15:19:30
+ch01: 15:19:40
+ch02: 15:20:02
+ch03: 15:20:28
+ch04: 15:11:10
+ch05: 15:11:35
+ch06: 15:12:04
+ch07: 15:12:33
+
+codex
+TTS đã hoàn tất bốn chương đầu với bảng phát âm mới. Mình đang chờ pipeline xử lý nốt phần còn lại; không có render nào được chạy.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Start-Sleep -Seconds 25; Get-Process -Id 12392 -ErrorAction SilentlyContinue | Select-Object Id,CPU | Format-Table -AutoSize; Get-ChildItem output/long/mim-turing-bombe -Directory | ForEach-Object { $t = Join-Path $_.FullName '"'timing.json'; if (Test-Path "'$t) { "$($_.Name): $((Get-Item $t).LastWriteTime.ToString('"'HH:mm:ss'))\" } }" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 25313ms:
+
+   Id        CPU
+   --        ---
+12392 549.203125
+
+
+ch00: 15:19:30
+ch01: 15:19:40
+ch02: 15:20:02
+ch03: 15:20:28
+ch04: 15:20:40
+ch05: 15:20:55
+ch06: 15:12:04
+ch07: 15:12:33
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Start-Sleep -Seconds 25; Get-Process -Id 12392 -ErrorAction SilentlyContinue | Select-Object Id,CPU | Format-Table -AutoSize; Get-ChildItem output/long/mim-turing-bombe -Directory | ForEach-Object { $t = Join-Path $_.FullName '"'timing.json'; if (Test-Path "'$t) { "$($_.Name): $((Get-Item $t).LastWriteTime.ToString('"'HH:mm:ss'))\" } }" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 138658ms:
+Đã tạo spec.json và 8 chương cho mim-turing-bombe.
+ch00: 15 câu, 273 âm tiết, ~1.4 phút  Lá thư trong đêm
+ch01: 16 câu, 246 âm tiết, ~1.2 phút  Khóa không chờ bạn
+ch02: 15 câu, 246 âm tiết, ~1.2 phút  Ba người ở Warsaw
+ch03: 16 câu, 279 âm tiết, ~1.4 phút  Người được nhớ tên, và những người giữ mắt xích
+ch04: 19 câu, 279 âm tiết, ~1.4 phút  Một đoạn chữ để mở cả mê cung
+ch05: 17 câu, 250 âm tiết, ~1.2 phút  Cỗ máy không tìm đáp án, nó loại đường sai
+ch06: 20 câu, 304 âm tiết, ~1.5 phút  Ba ca, mười máy, một điểm dừng
+ch07: 20 câu, 293 âm tiết, ~1.5 phút  Người ở trong vòng lặp
+TỔNG 138 câu, 2170 âm tiết
+  ! ch00: 0/15 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch01: 1/16 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch02: 0/15 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch03: 1/16 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch04: 1/19 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch05: 1/17 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch06: 1/20 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch07: 1/20 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+mim-turing-bombe: 0 lỗi, 8 cảnh báo (luật studio)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+ch00:   273 âm tiết   1.22 phút  (224/phút)
+ch01:   246 âm tiết   1.10 phút  (224/phút)
+ch02:   246 âm tiết   1.34 phút  (183/phút)
+ch03:   279 âm tiết   1.33 phút  (209/phút)
+ch04:   279 âm tiết   1.27 phút  (220/phút)
+ch05:   250 âm tiết   1.22 phút  (204/phút)
+ch06:   304 âm tiết   1.33 phút  (228/phút)
+ch07:   293 âm tiết   1.38 phút  (213/phút)
+TỔNG: 2170 âm tiết, 10.19 phút
+
+ succeeded in 25236ms:
+ch00: 15:19:30
+ch01: 15:19:40
+ch02: 15:20:02
+ch03: 15:20:28
+ch04: 15:20:40
+ch05: 15:20:55
+ch06: 15:21:04
+ch07: 15:21:21
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'python motion/long/build_long.py mim-turing-bombe html ch00 ch01 ch02 ch03 ch04 ch05 ch06 ch07; python scripts/long_gate.py mim-turing-bombe --min-syl 1900' in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 6485ms:
+ch00: 10 cảnh, 1 clip, 73.0s -> mim-turing-bombe_ch00.html
+ch01: 10 cảnh, 1 clip, 65.9s -> mim-turing-bombe_ch01.html
+ch02: 10 cảnh, 1 clip, 80.5s -> mim-turing-bombe_ch02.html
+ch03: 10 cảnh, 1 clip, 79.9s -> mim-turing-bombe_ch03.html
+ch04: 10 cảnh, 1 clip, 76.2s -> mim-turing-bombe_ch04.html
+ch05: 10 cảnh, 1 clip, 73.4s -> mim-turing-bombe_ch05.html
+ch06: 10 cảnh, 1 clip, 79.9s -> mim-turing-bombe_ch06.html
+ch07: 10 cảnh, 1 clip, 82.6s -> mim-turing-bombe_ch07.html
+mim-turing-bombe: âm tiết 2170, phút 10.2, cảnh 72, giây/cảnh 8.5, clip khác 6, ảnh khác 11, URL nguồn 20
+ĐẠT
+
+codex
+TTS và HTML cho cả tám chương đã hoàn tất. Gate cuối đã đạt với thời lượng 10,2 phút; mình đang kiểm tra chính xác chuỗi đọc sau thay thế (đặc biệt số lớn và Bletchley) trước khi ghi báo cáo.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import sys
+sys.path.insert(0, 'motion/long')
+import build_long as b
+spec, chs, _ = b.load('mim-turing-bombe')
+for name, ch in chs:
+    for ln in ch['lines']:
+        raw = b.line_text(ln)
+        if '158.962.555.217.826.360.000' in raw or 'Bletchley' in raw:
+            print(name)
+            print('GỐC: ' + raw)
+            print('ĐỌC: ' + b.spoken(raw))
+'@ | python -; python scripts/long_gate.py mim-turing-bombe --min-syl 1900" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 1449ms:
+ch00
+G?C: Đêm 21 tháng 10 năm 1941, bốn người làm ở Bletchley Park quyết định đi vòng qua cấp trên.
+??C: Đêm 21 tháng 10 năm 1941, bốn người làm ở Blétch-li Pác quyết định đi vòng qua cấp trên.
+ch00
+G?C: Họ xin thêm người, vì những chiếc Bombe đã tạo ra công việc mà Bletchley không đủ tay để xử lý.
+??C: Họ xin thêm người, vì những chiếc bom-bờ đã tạo ra công việc mà Blétch-li không đủ tay để xử lý.
+ch00
+G?C: Đến tháng 6 cùng năm, Bletchley đã đột nhập được liên lạc U-boat trong Trận Đại Tây Dương.
+??C: Đến tháng 6 cùng năm, Blétch-li đã đột nhập được liên lạc u-bốt trong Trận Đại Tây Dương.
+ch01
+G?C: Cơ quan Sáng chế Đức tính không gian lý thuyết của hệ gồm rô-to và plugboard là 158.962.555.217.826.360.000 khả năng.
+??C: Cơ quan Sáng chế Đức tính không gian lý thuyết của hệ gồm rô-to và plắc-boóc là khoảng một trăm năm mươi chín tỷ tỷ khả năng.
+ch01
+G?C: Nó đi qua Warsaw trước khi đến Bletchley.
+??C: Nó đi qua Vác-sa-va trước khi đến Blétch-li.
+ch03
+G?C: Alan Turing vào làm cho GC&CS tại Bletchley Park tháng 9 năm 1939.
+??C: Alan Tu-rinh vào làm cho gi xi và xi ét tại Blétch-li Pác tháng 9 năm 1939.
+ch03
+G?C: Cầu đó đi từ Ba Lan sang Anh, rồi đi qua rất nhiều người trong Bletchley.
+??C: Cầu đó đi từ Ba Lan sang Anh, rồi đi qua rất nhiều người trong Blétch-li.
+ch03
+G?C: Gordon Welchman cũng vào Bletchley tháng 9 năm 1939.
+??C: Go-đần Uênch-man cũng vào Blétch-li tháng 9 năm 1939.
+ch06
+G?C: Chỉ khi bước đó qua, kết quả mới được báo về Bletchley Park bằng điện thoại xáo trộn.
+??C: Chỉ khi bước đó qua, kết quả mới được báo về Blétch-li Pác bằng điện thoại xáo trộn.
+ch07
+G?C: Bombes không chỉ nằm ở Bletchley Park.
+??C: bom-bờ không chỉ nằm ở Blétch-li Pác.
+ch07
+G?C: Gần 40 năm sau chiến tranh, GCHQ mới bàn giao khoảng 2.000 tài liệu và bản vẽ BTM về Bombe cho Bletchley Park Trust, tạo điều kiện cho việc phục dựng.
+??C: Gần 40 năm sau chiến tranh, gi xi ét-chờ kiu mới bàn giao khoảng 2.000 tài liệu và bản vẽ bi ti em về bom-bờ cho Blétch-li Pác Trust, tạo điều kiện cho việc phục dựng.
+mim-turing-bombe: âm tiết 2170, phút 10.2, cảnh 72, giây/cảnh 8.5, clip khác 6, ảnh khác 11, URL nguồn 20
+ĐẠT
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json
+from pathlib import Path
+spec = json.loads(Path('data/long/mim-turing-bombe/spec.json').read_text(encoding='utf-8'))
+for title in spec['youtube']['titles']:
+    print(len(title), title)
+print('sources', len(spec['youtube']['sources']))
+print('tags', len(spec['youtube']['tags']))
+print('hashtags', len(spec['youtube']['hashtags']))
+'@ | python -" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 137ms:
+50 NGƯỜI GIẢI MÃ Ngoài Đời Thật: Alan Turing Và Bombe
+38 Alan Turing 1941: Bước Ngoặt Của Bombe
+37 Alan Turing 1939: Từ Ba Lan Đến Bombe
+sources 15
+tags 14
+hashtags 5
+
+apply patch
+patch: completed
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-26-codex-pilot\T2C-ket-qua.md
+diff --git a/data/long/mim-turing-bombe/gen_scenes.py b/data/long/mim-turing-bombe/gen_scenes.py
+index cd1d04764343406a96c30b9e9a992a73121a46d6..4417aaae394c8a4aad027da7eec13ae13fbc62bf
+--- a/data/long/mim-turing-bombe/gen_scenes.py
++++ b/data/long/mim-turing-bombe/gen_scenes.py
+@@ -3,8 +3,25 @@
+ 
+ ROOT = Path(__file__).parent
+ TOPIC = "mim-turing-bombe"
+-TITLE = "NGƯỜI GIẢI MÃ Ngoài Đời Thật: Alan Turing: Bombe"
++TITLE = "NGƯỜI GIẢI MÃ Ngoài Đời Thật: Alan Turing Và Bombe"
+ 
++SAY = {
++    "turing": "Tu-rinh", "enigma": "Ê-ních-ma", "bletchley": "Blétch-li", "park": "Pác",
++    "bombe": "bom-bờ", "bombes": "bom-bờ", "welchman": "Uênch-man", "warsaw": "Vác-sa-va",
++    "rejewski": "Rây-ép-xki", "paris": "Pa-ri", "clarke": "Cờ-lác", "eastcote": "Ixt-cốt",
++    "gordon": "Go-đần", "marian": "Ma-ri-an", "henryk": "Hen-rích", "zygalski": "Di-gan-xki",
++    "jerzy": "Giê-di", "różycki": "Ru-dít-xki", "wylie": "Uai-li", "millar": "Mi-lơ",
++    "hugh": "Hiu", "alexander": "A-lếch-xan-đờ", "stuart": "Xtiu-ợt", "milner-barry": "Min-nơ Ba-ri",
++    "winston": "Uyn-xtơn", "churchill": "Chớc-chin", "gustave": "Gút-xtáp", "bertrand": "Béc-trăng",
++    "alastair": "A-la-xtê", "denniston": "Đe-ni-xtơn", "dilly": "Đi-li", "knox": "Nóc",
++    "sachsen": "Dắc-xen", "agnus": "Ác-nợt", "dei": "Đê-i", "agnes": "Ác-nịt",
++    "stanmore": "Xtan-mo", "kryptologiczna": "crip-tô-lô-ghích-na", "hut": "Hất",
++    "crib": "cờ-ríp", "board": "boóc", "plugboard": "plắc-boóc", "u-boat": "u-bốt",
++    "sheet": "siit", "tnmoc": "Bảo tàng Máy tính Quốc gia Anh", "gchq": "gi xi ét-chờ kiu",
++    "gc&cs": "gi xi và xi ét", "btm": "bi ti em", "wrns": "Ren",
++    "158.962.555.217.826.360.000": "khoảng một trăm năm mươi chín tỷ tỷ",
++}
++
+ IMGS = {
+     "turing16": "File:Alan Turing at age 16.jpg",
+     "turing1936": "File:Alan Turing (1912-1954) in 1936 at Princeton University.jpg",
+@@ -114,15 +131,59 @@
+         "accent": "#f59e0b",
+         "master": True,
+         "beat2": True,
++        "say": SAY,
+         "imgs": IMGS,
+         "geo": {"europe": GEO_EUROPE, "atlantic": GEO_ATLANTIC},
+         "chapters": [f"ch{i:02d}" for i in range(len(PLAN))],
+         "youtube": {
+-            "titles": [TITLE, "Alan Turing 1941: Bước Ngoặt Bombe"],
+-            "summary": "Câu chuyện về Alan Turing, những người giải mã và cỗ Bombe tại Bletchley Park.",
++            "titles": [
++                TITLE,
++                "Alan Turing 1941: Bước Ngoặt Của Bombe",
++                "Alan Turing 1939: Từ Ba Lan Đến Bombe",
++            ],
++            "summary": "Đêm 21 tháng 10 năm 1941, Alan Turing và ba đồng nghiệp vượt cấp gửi một lá thư tới Winston Churchill. Từ chiếc khóa Enigma đổi mỗi ngày đến một cỗ máy chỉ biết loại dần đường sai, câu chuyện lần theo những mắt xích con người đã làm nên Bombe. Và khi máy dừng lại, vì sao công việc quan trọng nhất vẫn thuộc về người kiểm tra?",
++            "more": [
++                "Các lời trích trong video là bản dịch sang tiếng Việt khi nguồn gốc không phải tiếng Việt.",
++                "Ảnh Commons và video Pexels có nhãn MINH HỌA, dùng để giải thích bối cảnh chứ không tái hiện một sự kiện cụ thể.",
++                "The Imitation Game chỉ được nhắc bằng lời và chữ; video không sử dụng hình phim.",
++            ],
++            "chapter_titles": {
++                "ch00": "Lá thư trong đêm",
++                "ch01": "Khóa không chờ bạn",
++                "ch02": "Ba người ở Warsaw",
++                "ch03": "Người được nhớ tên, và những người giữ mắt xích",
++                "ch04": "Một đoạn chữ để mở cả mê cung",
++                "ch05": "Cỗ máy không tìm đáp án, nó loại đường sai",
++                "ch06": "Ba ca, mười máy, một điểm dừng",
++                "ch07": "Người ở trong vòng lặp",
++            },
+             "sources": [
+-                "https://www.gchq.gov.uk/information/the-turing-bombe",
++                "https://www.nationalarchives.gov.uk/explore-the-collection/stories/a-dramatic-plea-for-churchills-help/",
++                "https://www.dpma.eu/english/our_office/publications/milestones/computerpioneers/enigma/index.html",
++                "https://www.tnmoc.org/bh-2-the-enigma-machine",
++                "https://wmi.amu.edu.pl/wydzial/historia/biogramy/marian-rejewski",
++                "https://aw.gov.pl/pl/historia/dekryptaz-szyfru-enigmy/104,Dekryptaz-szyfru-Enigmy.html",
++                "https://www.gchq.gov.uk/information/the-pyry-forest-meeting",
++                "https://www.gchq.gov.uk/information/alan-turing",
++                "https://www.gchq.gov.uk/information/gordon-welchman",
++                "https://www.gchq.gov.uk/information/joan-clarke",
++                "https://www.gchq.gov.uk/information/shaun_wylie",
++                "https://www.gchq.gov.uk/person/shaun-wylie",
+                 "https://www.tnmoc.org/bombe",
++                "https://www.gchq.gov.uk/information/international-womens-month-jean-millar",
++                "https://www.nsa.gov/History/National-Cryptologic-Museum/Exhibits-Artifacts/Exhibit-View/Article/2719176/world-war-2-enigma/",
++                "https://time.com/3609585/the-true-story-of-the-imitation-game/",
++            ],
++            "tags": ["Alan Turing", "Enigma", "Bombe", "Bletchley Park", "giải mã", "mật mã", "lịch sử công nghệ", "Thế chiến thứ hai", "Joan Clarke", "Marian Rejewski", "Gordon Welchman", "Bletchley", "máy tính", "công nghệ quanh ta"],
++            "hashtags": ["AlanTuring", "Enigma", "Bombe", "CôngNghệQuanhTa", "MindInTheMachine"],
++            "category": "28",
++            "thumb": "t1.jpg",
++            "playlist": "Công Nghệ Quanh Ta",
++            "publish_at": "2026-11-23T13:00:00Z",
++            "video_credits": [
++                "Ảnh Commons: Matt Crypto, Karsten Sperling, Garrethe, Brandmeister/Togrul Safarov, Robert-brook và Joshbressers; Public domain hoặc CC0.",
++                "Ảnh Alan Turing và Bombe: Public domain; tác giả được ghi theo trang Commons khi có.",
++                "Video minh họa: Pexels.",
+             ],
+         },
+         "sources_internal": "Kịch bản chỉ sử dụng kho facts.md; ảnh Wikimedia Commons PD/CC0 và B-roll Pexels được ghi trong facts.md.",
+diff --git a/data/long/mim-turing-bombe/script.md b/data/long/mim-turing-bombe/script.md
+index 59c04bc885cd00b99a2dabe6ec0e822477a03e11..4f264417e623dd273275195ee8e9cd6d364bff95
+--- a/data/long/mim-turing-bombe/script.md
++++ b/data/long/mim-turing-bombe/script.md
+@@ -1,4 +1,4 @@
+-# NGƯỜI GIẢI MÃ Ngoài Đời Thật: Alan Turing, 1940
++# NGƯỜI GIẢI MÃ Ngoài Đời Thật: Alan Turing Và Bombe
+ 
+ **Kênh:** MIM · **Độ dài mục tiêu:** 9–11 phút · **Lộ trình:** sáu răng của một chiếc khóa.
+ 
+diff --git a/docs/pm/tickets/2026-10-26-codex-pilot/T2C-ket-qua.md b/docs/pm/tickets/2026-10-26-codex-pilot/T2C-ket-qua.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..79904a172ec7692bb78c252e95d858a3279b4586
+--- /dev/null
++++ b/docs/pm/tickets/2026-10-26-codex-pilot/T2C-ket-qua.md
+@@ -0,0 +1,36 @@
++# Kết quả T2C — hoàn thiện spec và phát âm `mim-turing-bombe`
++
++## Đã hoàn tất
++
++- Không viết lại nội dung; chỉ sửa dòng tiêu đề đầu của `script.md` để khớp title chính: `NGƯỜI GIẢI MÃ Ngoài Đời Thật: Alan Turing Và Bombe` (50 ký tự).
++- Sửa `TITLE` và bổ sung hai phương án dự phòng: 38 và 37 ký tự, đều dưới giới hạn 60.
++- Hoàn thiện `make_spec()` trong `gen_scenes.py`, không sửa tay `spec.json`: lịch phát hành, playlist, category, thumbnail, tóm tắt ba câu không lộ kết, ghi chú trung thực, 8 tiêu đề chương, 15 URL nguồn công khai, 14 tag, 5 hashtag và credit Commons/Pexels.
++- Bổ sung bảng `SAY` và nối vào spec bằng `"say": SAY`. Bảng bao phủ toàn bộ tên, địa danh, thuật ngữ, viết tắt và số lớn mà ticket nêu.
++- Kiểm tra chuỗi đọc sau thay thế: `Bletchley Park` thành “Blétch-li Pác”; `158.962.555.217.826.360.000` thành “khoảng một trăm năm mươi chín tỷ tỷ”; `GC&CS` và `GCHQ` cũng được thay theo bảng phát âm.
++- Không render, không tạo thumbnail, không chạy `thumb.py`, không upload và không thao tác YouTube.
++
++## Lệnh đã chạy
++
++| Lệnh | Kết quả |
++|---|---|
++| `python data/long/mim-turing-bombe/gen_scenes.py` | Sinh lại `spec.json` và 8 chương cảnh từ nguồn duy nhất `gen_scenes.py`. |
++| `python motion/long/script_lines.py mim-turing-bombe` | Qua integrity, 138 câu và 2.170 âm tiết. |
++| `python motion/long/studio_lint.py mim-turing-bombe --strict` | 0 lỗi; 8 cảnh báo mật độ câu ngắn giữ nguyên từ T2B. |
++| `python motion/long/build_long.py mim-turing-bombe tts` | Hoàn tất TTS/timing với bảng phát âm mới cho 8 chương. |
++| `python motion/long/build_long.py mim-turing-bombe html ch00 ch01 ch02 ch03 ch04 ch05 ch06 ch07` | Hoàn tất HTML cho cả 8 chương. |
++| `python scripts/long_gate.py mim-turing-bombe --min-syl 1900` | **ĐẠT** — 2.170 âm tiết, 10,2 phút, 72 cảnh nội dung, 8,5 giây/cảnh, 6 clip khác, 11 ảnh khác, 20 URL nguồn. |
++
++## Kiểm tra phát âm
++
++Không có công cụ phát âm thanh tương tác trong môi trường này nên không thể nghe trực tiếp các file âm thanh của `ch01` và câu có Bletchley. Đã kiểm tra đầu vào TTS sau khi áp dụng `SAY`; các chuỗi trọng yếu hiển thị đúng như trên. TTS đã tạo lại timing cho cả tám chương.
++
++## Lỗi/cảnh báo còn lại và giới hạn sự thật
++
++- Studio lint còn 8 cảnh báo về tỷ lệ câu ngắn, không có lỗi chặn. Không thêm câu đệm để làm đẹp chỉ số.
++- Không thêm khẳng định lịch sử mới. Các giới hạn từ T2B vẫn giữ nguyên: không khẳng định Victory tháng 03/1940, ngày 18/03, chi tiết Doc Keen, thông số cơ khí, crib ví dụ cụ thể hoặc tác động định lượng chưa kiểm được.
++- Kiểm tra usage HyperFrames không lấy được số dư do npm cache báo `EPERM`; không suy đoán usage. Workflow HTML của repo vẫn chạy thành công.
++
++## Đường dẫn QA
++
++- Clip sheet đã soi ở T2B: `output/long/mim-turing-bombe/qa_clips.jpg`
++- Thumbnail: không tạo theo yêu cầu ticket.
+
+codex
+Báo cáo T2C đã được ghi. Mình đã ghi rõ giới hạn là không thể nghe trực tiếp file âm thanh trong môi trường này, đồng thời lưu bằng chứng chuỗi phát âm TTS đã được thay đúng. Mình chạy gate bắt buộc một lần cuối trước khi bàn giao.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'python scripts/long_gate.py mim-turing-bombe --min-syl 1900' in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 147ms:
+mim-turing-bombe: âm tiết 2170, phút 10.2, cảnh 72, giây/cảnh 8.5, clip khác 6, ảnh khác 11, URL nguồn 20
+ĐẠT
+
+codex
+Đã hoàn tất T2C. Gate cuối in **ĐẠT**: 2.170 âm tiết, 10,2 phút, 72 cảnh, 8,5 giây/cảnh.
+
+Báo cáo: [T2C-ket-qua.md](/D:/Tools/Youtube%20Creator%20v2/Youtube_Creator_V2/docs/pm/tickets/2026-10-26-codex-pilot/T2C-ket-qua.md)
+
+Không render, không tạo thumbnail, không upload.
+tokens used
+637,671
+Đã hoàn tất T2C. Gate cuối in **ĐẠT**: 2.170 âm tiết, 10,2 phút, 72 cảnh, 8,5 giây/cảnh.
+
+Báo cáo: [T2C-ket-qua.md](/D:/Tools/Youtube%20Creator%20v2/Youtube_Creator_V2/docs/pm/tickets/2026-10-26-codex-pilot/T2C-ket-qua.md)
+
+Không render, không tạo thumbnail, không upload.

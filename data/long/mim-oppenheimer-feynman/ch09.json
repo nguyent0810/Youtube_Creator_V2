@@ -1,0 +1,315 @@
+{
+ "title": "Chín mươi giây im lặng",
+ "lines": [
+  {
+   "t": "Feynman ngẩng lên sau cái chớp.",
+   "p": 0.8
+  },
+  "Trên sàn xe tải có một vệt màu tím.",
+  {
+   "t": "Ông tự nhủ: không phải nó đâu, đó chỉ là dư ảnh trong mắt.",
+   "p": 1.0
+  },
+  "Ông nhìn lên lần nữa.",
+  "Ánh trắng chuyển sang vàng, rồi sang cam.",
+  "Mây hình thành rồi tan đi, theo nhịp nén và giãn của không khí.",
+  {
+   "t": "Một quả cầu màu cam bốc lên, viền đen dần, thành một khối khói lớn có lửa bên trong.",
+   "p": 1.0
+  },
+  "Tất cả chừng một phút.",
+  "Không ai nói một lời.",
+  "Feynman tin mình gần như là người duy nhất nhìn nó bằng mắt trần.",
+  {
+   "t": "Những người khác đeo kính đen, còn người ở gần hơn thì được dặn nằm sấp xuống đất.",
+   "p": 1.0
+  },
+  "Chừng một phút rưỡi sau chớp sáng, một tiếng nổ lớn vọng tới.",
+  "Rồi tiếng ầm ì như sấm.",
+  {
+   "t": "Âm thanh cần chừng ấy thời gian để đi hết hơn ba mươi cây số.",
+   "p": 1.0
+  },
+  "Chính tiếng nổ ấy làm Feynman tin.",
+  "Ông giải thích: âm thanh còn đặc chắc như vậy ở khoảng cách ấy, nghĩa là nó đã chạy thật.",
+  "Người đứng cạnh hỏi đó là gì.",
+  "Feynman đáp: đó là quả bom.",
+  {
+   "t": "Người hỏi là một phóng viên được cử tới để viết về sự kiện.",
+   "p": 1.0
+  },
+  "Sức nổ được ước tính bằng hai mươi nghìn tấn thuốc nổ TNT.",
+  "Theo nghiên cứu của Los Alamos, vụ thử Trinity đã kiểm chứng các tính toán cho thiết kế ấy.",
+  {
+   "t": "Những xấp thẻ màu, những chiếc máy cộng quay tay, đã tính đúng.",
+   "p": 1.0
+  },
+  "Ở Los Alamos, người ta mở tiệc.",
+  "Feynman ngồi trên đuôi một chiếc xe jeep mà đánh trống.",
+  "Chỉ có một người ngồi rầu rĩ: Bob Wilson, người năm nào đã rủ Feynman vào dự án.",
+  "Feynman hỏi anh buồn gì.",
+  {
+   "t": "Thật kinh khủng, cái thứ chúng ta đã làm ra.",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Feynman đáp: nhưng chính anh rủ chúng tôi vào mà.",
+  "Ba tuần sau, câu nói của Wilson có thêm tên hai thành phố."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "9",
+   "k": "CHƯƠNG CHÍN",
+   "title": "CHÍN MƯƠI GIÂY\nIM LẶNG",
+   "sub": "TRINITY · 16.07.1945",
+   "bg": "strip",
+   "titleAt": [
+    0,
+    "ngẩng"
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 1,
+   "img": "fire53",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.45,
+   "kin": [
+    {
+     "text": "MỘT VỆT TÍM TRÊN SÀN XE",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "“chỉ là dư ảnh”",
+     "at": 2,
+     "sm": true
+    }
+   ],
+   "label": {
+    "k": "VỤ THỬ TRINITY · 53 PHẦN NGHÌN GIÂY",
+    "v": "ẢNH: NNSA · CHÍNH PHỦ MỸ",
+    "at": 1
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "NHỮNG GÌ FEYNMAN THẤY",
+   "srcnote": "LOS ALAMOS FROM BELOW (FEYNMAN, 1976) · DIỄN Ý",
+   "rows": [
+    {
+     "k": "1",
+     "v": "TRẮNG → VÀNG → CAM",
+     "at": 4
+    },
+    {
+     "k": "2",
+     "v": "MÂY HIỆN RỒI TAN",
+     "at": 5
+    },
+    {
+     "k": "3",
+     "v": "QUẢ CẦU CAM · VIỀN ĐEN · KHÓI",
+     "at": 6
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "from": 0,
+   "to": 60,
+   "until": [
+    7,
+    "phút"
+   ],
+   "suffix": " GIÂY",
+   "label": "TẤT CẢ CHỪNG MỘT PHÚT",
+   "sub": {
+    "text": "KHÔNG AI NÓI MỘT LỜI",
+    "at": 8
+   }
+  },
+  {
+   "type": "photo",
+   "at": 9,
+   "img": "strip",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.5,
+   "kin": [
+    {
+     "text": "NHÌN BẰNG MẮT TRẦN",
+     "at": 9,
+     "acc": true
+    },
+    {
+     "text": "người ở gần hơn: nằm sấp xuống đất",
+     "at": 10,
+     "sm": true
+    }
+   ],
+   "label": {
+    "k": "DẢI PHIM CHỤP VỤ NỔ TRINITY",
+    "v": "BERLYN BRIXNER · PHẠM VI CÔNG CỘNG",
+    "at": 9
+   }
+  },
+  {
+   "type": "counter",
+   "at": 11,
+   "from": 0,
+   "to": 90,
+   "until": [
+    11,
+    "vọng"
+   ],
+   "suffix": " GIÂY",
+   "label": "TỪ CHỚP SÁNG TỚI TIẾNG NỔ · ≈ MỘT PHÚT RƯỠI",
+   "sub": {
+    "text": "32 KM ÷ 343 M/GIÂY ≈ 94 GIÂY · TỰ TÍNH",
+    "at": 13
+   }
+  },
+  {
+   "type": "slam",
+   "at": 14,
+   "text": "NÓ ĐÃ CHẠY THẬT",
+   "sub": "TIẾNG NỔ LÀM FEYNMAN TIN"
+  },
+  {
+   "type": "quote",
+   "at": 15,
+   "dy": true,
+   "text": "Âm thanh còn đặc chắc như thế ở khoảng cách ấy, nghĩa là nó đã chạy thật.",
+   "by": "RICHARD FEYNMAN · LOS ALAMOS FROM BELOW (FEYNMAN, 1976)",
+   "lbl": "DIỄN Ý",
+   "typeAt": [
+    15,
+    null,
+    0,
+    0.05
+   ],
+   "typeDur": 2.6
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "items": [
+    {
+     "text": "“ĐÓ LÀ GÌ?”",
+     "at": 16
+    },
+    {
+     "text": "“ĐÓ LÀ QUẢ BOM.”",
+     "at": 17,
+     "acc": true
+    },
+    {
+     "text": "người hỏi: một phóng viên",
+     "at": 18,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 19,
+   "title": "VỤ THỬ TRINITY",
+   "srcnote": "BẢO TÀNG NGUYÊN TỬ QUỐC GIA (DOE) · N. LEWIS · TRINITY BY THE NUMBERS (LANL)",
+   "rows": [
+    {
+     "k": "SỨC NỔ ƯỚC TÍNH",
+     "v": "≈ 20.000 TẤN TNT",
+     "at": 19
+    },
+    {
+     "k": "KIỂM CHỨNG",
+     "v": "TÍNH TOÁN THIẾT KẾ ĐÃ CHỌN",
+     "at": 20
+    }
+   ],
+   "total": {
+    "k": "THẺ MÀU · MÁY QUAY TAY",
+    "v": "ĐÃ TÍNH ĐÚNG",
+    "at": 21
+   }
+  },
+  {
+   "type": "photo",
+   "at": 22,
+   "img": "bldgT",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.5,
+   "illus": "ẢNH TƯ LIỆU · LOS ALAMOS",
+   "kin": [
+    {
+     "text": "Ở LOS ALAMOS: MỞ TIỆC",
+     "at": 22
+    },
+    {
+     "text": "Feynman đánh trống trên xe jeep",
+     "at": 23,
+     "sm": true
+    }
+   ],
+   "label": {
+    "k": "TOÀ NHÀ T · KHU KỸ THUẬT",
+    "v": "CÔNG BINH LỤC QUÂN MỸ",
+    "at": 22
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 24,
+   "items": [
+    {
+     "text": "BOB WILSON",
+     "at": [
+      24,
+      "rầu"
+     ],
+     "acc": true
+    },
+    {
+     "text": "người đã rủ Feynman vào dự án",
+     "at": [
+      24,
+      "rủ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 26,
+   "text": "It's a terrible thing that we made.",
+   "by": "BOB WILSON, QUA LỜI FEYNMAN · LOS ALAMOS FROM BELOW (FEYNMAN, 1976)",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 26,
+   "typeAt": [
+    26,
+    "kinh"
+   ]
+  },
+  {
+   "type": "question",
+   "at": 28,
+   "text": "Ba tuần sau,\ncâu nói ấy có thêm tên hai thành phố."
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 09",
+  "t": "CHÍN MƯƠI GIÂY IM LẶNG"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.09
+ }
+}

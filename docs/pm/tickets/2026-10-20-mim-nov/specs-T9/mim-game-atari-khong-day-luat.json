@@ -1,0 +1,222 @@
+{
+ "theme": "mim",
+ "title": "DQN 2015: cỗ máy học 49 trò chơi Atari chỉ từ màn hình và điểm số, không được dạy luật nào (DeepMind, Nature)",
+ "description": "Tháng 2/2015, DeepMind công bố hệ thống DQN trên tạp chí Nature: thử với 49 trò Atari 2600, đầu vào chỉ là điểm ảnh, tập nút bấm và điểm số. Theo DeepMind, hơn phương pháp trước ở 43/49 trò và đạt trên 75% điểm của người thử game chuyên nghiệp ở hơn nửa số trò.\n\nGiọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/0J3dcjPjcdI (công khai từ 20:00 ngày 03/12).",
+ "tags": [
+  "dqn",
+  "atari",
+  "deepmind",
+  "học tăng cường",
+  "nature",
+  "trận đấu người máy",
+  "trí tuệ nhân tạo",
+  "lịch sử máy tính",
+  "mind in the machine"
+ ],
+ "sub": "ATARI · 2015",
+ "acc": [
+  "luật",
+  "chơi",
+  "màn",
+  "hình",
+  "điểm"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Không ai dạy nó luật chơi nào cả.",
+  "Tháng hai năm 2015, DeepMind công bố hệ thống DQN trên tạp chí Nature.",
+  "Nó được thử với bốn mươi chín trò chơi Atari: bắn súng, đánh bóng, lái xe đơn giản.",
+  "Nó chỉ nhận ba thứ: hình ảnh trên màn hình, danh sách các nút có thể bấm, và điểm số.",
+  "Rồi tự thử, tự sai, và tự tìm cách để điểm số tăng lên.",
+  "Cùng một thuật toán, và ở hơn một nửa số trò, nó đạt trên bảy mươi lăm phần trăm điểm của người thử game chuyên nghiệp.",
+  "Không luật chơi nào, chỉ có màn hình và điểm số."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "KHÔNG DẠY LUẬT",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "49 trò Atari · DQN · 2015",
+     "at": [
+      0,
+      "nó"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:4836573",
+   "ms": 3,
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NATURE · 02/2015",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "DeepMind công bố DQN",
+     "at": [
+      1,
+      "DeepMind"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8128417",
+   "ms": 1,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "from": 0,
+   "to": 49,
+   "label": "TRÒ CHƠI ATARI",
+   "until": [
+    2,
+    "chín"
+   ],
+   "sub": {
+    "text": "BẮN SÚNG · ĐÁNH BÓNG · LÁI XE",
+    "at": [
+     2,
+     "bắn"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "NÓ CHỈ NHẬN BA THỨ",
+   "cards": [
+    {
+     "k": "MỘT",
+     "v": "HÌNH ẢNH MÀN HÌNH",
+     "at": [
+      3,
+      "hình"
+     ]
+    },
+    {
+     "k": "HAI",
+     "v": "CÁC NÚT CÓ THỂ BẤM",
+     "at": [
+      3,
+      "danh"
+     ]
+    },
+    {
+     "k": "BA",
+     "v": "ĐIỂM SỐ",
+     "at": [
+      3,
+      "điểm"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Cách nó học",
+   "nodes": [
+    {
+     "text": "tự thử · tự sai",
+     "at": [
+      4,
+      "tự"
+     ],
+     "x": 0.5,
+     "y": 0.3,
+     "shape": "none",
+     "w": 700
+    },
+    {
+     "text": "điểm số tăng lên",
+     "at": [
+      4,
+      "điểm"
+     ],
+     "x": 0.5,
+     "y": 0.66,
+     "c": "acc",
+     "shape": "circle",
+     "w": 700
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      4,
+      "tìm"
+     ],
+     "bend": 0
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 0,
+   "to": 75,
+   "prefix": "TRÊN ",
+   "suffix": "%",
+   "label": "ĐIỂM NGƯỜI THỬ GAME CHUYÊN NGHIỆP",
+   "until": [
+    5,
+    "lăm"
+   ],
+   "sub": {
+    "text": "Ở HƠN NỬA SỐ TRÒ · THEO DEEPMIND",
+    "at": [
+     5,
+     "hơn"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "MÀN HÌNH + ĐIỂM SỐ",
+   "sub": "KHÔNG MỘT LUẬT CHƠI"
+  }
+ ],
+ "sources": [
+  "https://www.nature.com/articles/nature14236"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "atari": "A-ta-ri",
+  "deepmind": "Đíp-mai",
+  "dqn": "Đê Cu En",
+  "nature": "Nây-chơ"
+ },
+ "imgs": {}
+}

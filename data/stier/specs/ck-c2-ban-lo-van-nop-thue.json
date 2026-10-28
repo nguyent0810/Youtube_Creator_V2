@@ -1,0 +1,184 @@
+{
+ "theme": "ck",
+ "kicker": "THUẾ KHI BÁN",
+ "sub": "CỔ PHIẾU",
+ "title": "Bán lỗ cổ phiếu vẫn phải nộp thuế: 0,1% trên giá bán mỗi lần (ví dụ giả định)",
+ "description": "Thuế thu nhập cá nhân khi bán chứng khoán tính bằng giá bán × 0,1% theo từng lần bán, không tính trên tiền lãi, vì vậy bán lỗ vẫn nộp. VÍ DỤ GIẢ ĐỊNH: mua 120 triệu đồng, bán ra 100 triệu → lỗ 20 triệu, thuế vẫn là 100 triệu × 0,1% = 100.000 đồng (chưa tính phí môi giới hai chiều). Luật Thuế thu nhập cá nhân số 109/2025/QH15, Điều 13 khoản 2 (hiệu lực 01/07/2026) giữ nguyên mức 0,1% \"theo từng lần chuyển nhượng\".\n\nÁp cho cá nhân chuyển nhượng chứng khoán; quy định theo thời điểm làm video (10/2026) và có thể thay đổi.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là ví dụ giả định, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (12 phút): https://youtu.be/S_oMZt36W60",
+ "tags": [
+  "thuế bán cổ phiếu",
+  "thuế thu nhập cá nhân",
+  "bán lỗ cổ phiếu",
+  "chứng khoán cho người mới",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "lỗ",
+  "thuế",
+  "giá",
+  "bán",
+  "nhìn"
+ ],
+ "lines": [
+  "Bán lỗ cổ phiếu vẫn phải nộp thuế.",
+  "Ví dụ giả định: mua một trăm hai mươi triệu, bán được một trăm triệu.",
+  "Lỗ hai mươi triệu, nhưng vẫn nộp một trăm nghìn đồng thuế.",
+  "Vì thuế ở đây tính trên giá bán, không phải trên tiền lãi.",
+  "Mỗi lần bán, không phẩy một phần trăm giá bán, lãi hay lỗ đều vậy.",
+  "Luật thuế thu nhập cá nhân mới, hiệu lực từ tháng bảy, giữ nguyên cách tính này.",
+  "Lãi hay lỗ là chuyện của bạn. Thuế chỉ nhìn số tiền bán ra."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "BÁN LỖ VẪN NỘP THUẾ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "thuế thu nhập cá nhân · chứng khoán",
+     "at": [
+      0,
+      "nộp"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6863131",
+   "ms": 0,
+   "veil": 0.58
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "VÍ DỤ GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "MUA",
+     "v": "120.000.000 Đ",
+     "at": [
+      1,
+      "mua"
+     ]
+    },
+    {
+     "k": "BÁN",
+     "v": "100.000.000 Đ",
+     "at": [
+      1,
+      "bán"
+     ]
+    },
+    {
+     "k": "LỖ",
+     "v": "−20.000.000 Đ",
+     "at": [
+      2,
+      "lỗ"
+     ]
+    }
+   ],
+   "total": {
+    "k": "THUẾ VẪN NỘP",
+    "v": "100.000 Đ",
+    "at": [
+     2,
+     "nộp"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "THUẾ TÍNH TRÊN",
+   "cards": [
+    {
+     "k": "TÍNH TRÊN",
+     "v": "GIÁ BÁN",
+     "at": [
+      3,
+      "giá"
+     ],
+     "c": "acc"
+    },
+    {
+     "k": "KHÔNG TÍNH TRÊN",
+     "v": "TIỀN LÃI",
+     "at": [
+      3,
+      "lãi"
+     ],
+     "c": "down"
+    },
+    {
+     "k": "MỖI LẦN BÁN",
+     "v": "0,1%",
+     "at": [
+      4,
+      "không"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "LUẬT 109/2025/QH15 · ĐIỀU 13",
+     "at": 5,
+     "sm": true
+    },
+    {
+     "text": "0,1% × GIÁ BÁN",
+     "at": [
+      5,
+      "hiệu"
+     ],
+     "acc": true
+    },
+    {
+     "text": "theo từng lần chuyển nhượng · hiệu lực 01/07/2026",
+     "at": [
+      5,
+      "giữ"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6101365",
+   "ms": 1,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "THUẾ NHÌN GIÁ BÁN",
+   "sub": "KHÔNG NHÌN LÃI HAY LỖ"
+  }
+ ],
+ "sources": [
+  "https://youtu.be/S_oMZt36W60",
+  "https://thuvienphapluat.vn/van-ban/thue-phi-le-phi/Luat-Thue-thu-nhap-ca-nhan-2025-so-109-2025-QH15-665870.aspx"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

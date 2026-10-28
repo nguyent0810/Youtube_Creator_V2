@@ -1,0 +1,164 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-ng-neu-ban-thay-chua-du-tot",
+ "format": "nhan-gui",
+ "hook_type": "noi-thang",
+ "open_shot": "guong",
+ "voice": "Mỹ Duyên",
+ "music": "ether_vox.mp3",
+ "music_gain": 0.16,
+ "gap": 0.0,
+ "title": "Bạn chấm mình mấy điểm trên 10?",
+ "kicker": "NHẮN GỬI",
+ "sub": "KINH PHÁP CÚ · KỆ 160",
+ "acc": [
+  "chấm",
+  "điểm",
+  "mình"
+ ],
+ "lines": [
+  "Bạn chấm mình mấy điểm trên mười?",
+  "Nếu dưới năm, có thể bạn đang chờ người khác chấm hộ.",
+  "Chờ người khác công nhận, là trao chìa khóa cho họ.",
+  "Một câu kệ: chính mình là chỗ dựa của mình.",
+  "Thật ra, điểm số không quan trọng bằng một việc nhỏ.",
+  "Hôm nay làm một việc nhỏ cho mình: ngủ sớm, hay uống đủ nước.",
+  "Mai chấm lại, bạn được thêm mấy điểm? Comment một con số."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:6654154",
+   "items": [
+    {
+     "text": "CHẤM MÌNH MẤY ĐIỂM?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "trên thang mười",
+     "at": [
+      0,
+      "trên"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 5,
+   "suffix": " ĐIỂM TRỞ XUỐNG",
+   "label": "CHỜ NGƯỜI KHÁC CHẤM HỘ?",
+   "until": [
+    1,
+    "năm,"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "veil": 0.4,
+   "clip": "pexels:7579426",
+   "items": [
+    {
+     "text": "TRAO CHÌA KHÓA",
+     "at": [
+      2,
+      "trao"
+     ],
+     "acc": true
+    },
+    {
+     "text": "cho người khác",
+     "at": [
+      2,
+      "chờ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "source",
+   "at": 3,
+   "source": "KINH PHÁP CÚ · KỆ 160",
+   "ref": "Phẩm Tự Ngã",
+   "snippet": "[[Chính mình]] là chỗ dựa của mình.",
+   "hlAt": [
+    3,
+    "dựa"
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "MỘT VIỆC NHỎ\n> ĐIỂM SỐ",
+   "fx": "zoom"
+  },
+  {
+   "type": "hf_list_build",
+   "at": 5,
+   "title": "HÔM NAY CHO MÌNH",
+   "items": [
+    {
+     "key": "1",
+     "text": "NGỦ SỚM",
+     "at": [
+      5,
+      "ngủ"
+     ]
+    },
+    {
+     "key": "2",
+     "text": "UỐNG ĐỦ NƯỚC",
+     "at": [
+      5,
+      "uống"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "veil": 0.4,
+   "clip": "pexels:7714887",
+   "items": [
+    {
+     "text": "MAI CHẤM LẠI?",
+     "at": [
+      6,
+      "mai"
+     ],
+     "acc": true
+    },
+    {
+     "text": "comment một con số",
+     "at": [
+      6,
+      "comment"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp157-166/en/sujato"
+ ],
+ "description": "Bạn chấm mình mấy điểm trên 10?\n\nNguồn: https://suttacentral.net/dhp157-166/en/sujato"
+}

@@ -1,0 +1,236 @@
+{
+ "title": "Hai tờ phiếu lương",
+ "lines": [
+  "Anh Khang làm kế toán ở một công ty, nhân vật ví dụ của video này.",
+  "Lương gộp hai mươi lăm triệu một tháng.",
+  {
+   "t": "Vợ anh đi làm, con trai năm tuổi là người phụ thuộc của anh.",
+   "p": 1.0
+  },
+  "Trên bàn anh có hai tờ phiếu lương.",
+  "Tờ thứ nhất của tháng mười hai năm ngoái.",
+  "Dòng thuế thu nhập cá nhân ghi khoảng bốn trăm bốn mươi tám nghìn đồng.",
+  "Tờ thứ hai của tháng mười năm nay.",
+  {
+   "t": "Dòng thuế chỉ còn khoảng ba mươi tư nghìn.",
+   "p": 1.0
+  },
+  "Cùng một mức lương. Cùng một gia đình.",
+  "Anh không đổi việc, không được tăng lương.",
+  {
+   "t": "Chỉ có luật thay đổi.",
+   "p": 1.0
+  },
+  "Lúc đầu, anh còn tưởng phòng nhân sự tính nhầm.",
+  "Anh đặt hai tờ giấy cạnh nhau, dò từng dòng một, từ trên xuống.",
+  {
+   "t": "Không có dòng nào sai.",
+   "p": 1.0
+  },
+  {
+   "t": "Sao có thể giảm hơn mười ba lần như vậy?",
+   "ask": 1
+  },
+  "Nếu lật thêm một tờ phiếu cũ hơn, của năm hai nghìn không trăm mười chín, con số còn lạ hơn.",
+  {
+   "t": "Hơn bảy trăm hai mươi bảy nghìn.",
+   "p": 1.0
+  },
+  "Cuối video, có một bảng tra.",
+  "Hàng là mức lương, cột là số người phụ thuộc.",
+  "Bạn có thể dừng hình và tìm đúng ô của mình.",
+  "Nhưng để đọc đúng ô ấy, mình sẽ đi cùng một đồng lương, trên con đường nó đi trước khi thành tiền thuế.",
+  "Đây là Biểu Đồ Biết Nói. Tiền bạc, giải thích bằng dữ liệu.",
+  "Video chỉ nhằm giáo dục, giải thích luật bằng phép tính, không phải tư vấn thuế."
+ ],
+ "scenes": [
+  {
+   "type": "broll",
+   "vid": "8731555",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "ANH KHANG · KẾ TOÁN",
+     "at": [
+      0,
+      "Anh"
+     ],
+     "sm": true
+    },
+    {
+     "text": "LƯƠNG GỘP 25 TRIỆU",
+     "at": [
+      1,
+      "Lương"
+     ],
+     "acc": true
+    },
+    {
+     "text": "1 con là người phụ thuộc · ví dụ giả định",
+     "at": [
+      2,
+      "Vợ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 3,
+   "title": "DÒNG THUẾ TNCN TRÊN PHIẾU LƯƠNG (NGHÌN ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "THÁNG 12/2025",
+     "v": 448,
+     "lbl": "≈ 448",
+     "at": [
+      5,
+      "Dòng"
+     ]
+    },
+    {
+     "k": "THÁNG 10/2026",
+     "v": 34,
+     "lbl": "≈ 34",
+     "at": [
+      7,
+      "Dòng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "CÙNG MỨC LƯƠNG · CÙNG GIA ĐÌNH",
+     "at": 8
+    },
+    {
+     "text": "không đổi việc · không tăng lương",
+     "at": 9,
+     "sm": true
+    },
+    {
+     "text": "CHỈ CÓ LUẬT THAY ĐỔI",
+     "at": 10,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 11,
+   "vid": "7490451",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "tưởng phòng nhân sự tính nhầm",
+     "at": 11,
+     "sm": true
+    },
+    {
+     "text": "KHÔNG CÓ DÒNG NÀO SAI",
+     "at": 13,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 14,
+   "text": "Sao có thể giảm\nhơn 13 lần như vậy?"
+  },
+  {
+   "type": "slam",
+   "at": 15,
+   "text": "2019: ≈ 727.500 Đ",
+   "sub": "CÙNG 25 TRIỆU · CÙNG 1 NGƯỜI PHỤ THUỘC"
+  },
+  {
+   "type": "ledger",
+   "at": 17,
+   "title": "CUỐI VIDEO: BẢNG TRA",
+   "rows": [
+    {
+     "k": "HÀNG",
+     "v": "MỨC LƯƠNG GỘP",
+     "at": [
+      18,
+      "Hàng"
+     ]
+    },
+    {
+     "k": "CỘT",
+     "v": "SỐ NGƯỜI PHỤ THUỘC",
+     "at": [
+      18,
+      "cột"
+     ]
+    }
+   ],
+   "total": {
+    "k": "BẠN",
+    "v": "DỪNG HÌNH · TÌM Ô CỦA MÌNH",
+    "at": 19
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 20,
+   "items": [
+    {
+     "text": "ĐI CÙNG MỘT ĐỒNG LƯƠNG",
+     "at": 20,
+     "acc": true
+    },
+    {
+     "text": "trên con đường nó thành tiền thuế",
+     "at": [
+      20,
+      "trên"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "brand",
+   "at": 21,
+   "sub": "TIỀN BẠC · GIẢI THÍCH BẰNG DỮ LIỆU"
+  },
+  {
+   "type": "kinetic",
+   "at": 22,
+   "items": [
+    {
+     "text": "CHỈ NHẰM GIÁO DỤC",
+     "at": 22,
+     "acc": true
+    },
+    {
+     "text": "giải thích luật bằng phép tính · không phải tư vấn thuế",
+     "at": [
+      22,
+      "giải"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "HAI TỜ PHIẾU LƯƠNG"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.1
+ }
+}

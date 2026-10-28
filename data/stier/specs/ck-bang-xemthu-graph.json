@@ -1,0 +1,141 @@
+{
+ "theme": "ck",
+ "kicker": "BẢNG TRA",
+ "sub": "CHIA LƯƠNG 50/30/20",
+ "title": "Lương 10, 15, 25 triệu: tháng này chia tiền thế nào? Bảng 50/30/20 theo lương",
+ "description": "Bảng tra tự dò: tìm hàng lương thực nhận mỗi tháng của bạn, đọc ngang để biết phần cho khoản cần thiết (50%), khoản muốn (30%) và phần để dành hoặc trả nợ (20%).\n\nCách tính: mỗi phần = lương thực nhận × tỉ lệ. Ví dụ giả định: lương 15 triệu → 7,5 triệu cho khoản cần, 4,5 triệu cho khoản muốn, 3 triệu để dành. Quy tắc 50/30/20 được phổ biến qua cuốn sách All Your Worth của Elizabeth Warren và Amelia Warren Tyagi (2005); đây là quy tắc kinh nghiệm để bắt đầu, không phải định luật, và mỗi gia đình có hoàn cảnh riêng.\n\nMọi con số là VÍ DỤ GIẢ ĐỊNH, tính trên lương thực nhận sau thuế, bảo hiểm.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Nội dung do kênh biên soạn; giọng đọc tổng hợp.",
+ "tags": [
+  "chia lương",
+  "quy tắc 50/30/20",
+  "bảng tra",
+  "lương 15 triệu",
+  "tài chính cá nhân",
+  "tiết kiệm"
+ ],
+ "acc": [
+  "mười",
+  "lăm",
+  "bảy",
+  "ba"
+ ],
+ "lines": [
+  "Lương mười lăm triệu: bảy rưỡi cho khoản cần, ba triệu để dành.",
+  "Theo quy tắc năm mươi, ba mươi, hai mươi.",
+  "Dừng hình, tìm hàng của bạn nhé."
+ ],
+ "scenes": [
+  {
+   "type": "table",
+   "title": "THÁNG NÀY CHIA TIỀN THẾ NÀO?",
+   "rowHead": "LƯƠNG ↓",
+   "colHead": "CẦN · MUỐN · DÀNH →",
+   "cols": [
+    "50%",
+    "30%",
+    "20%"
+   ],
+   "rows": [
+    {
+     "k": "10 TR",
+     "v": [
+      "5",
+      "3",
+      "2"
+     ]
+    },
+    {
+     "k": "15 TR",
+     "v": [
+      "7,5",
+      "4,5",
+      "3"
+     ]
+    },
+    {
+     "k": "20 TR",
+     "v": [
+      "10",
+      "6",
+      "4"
+     ]
+    },
+    {
+     "k": "25 TR",
+     "v": [
+      "12,5",
+      "7,5",
+      "5"
+     ]
+    },
+    {
+     "k": "30 TR",
+     "v": [
+      "15",
+      "9",
+      "6"
+     ]
+    }
+   ],
+   "foot": "DỪNG HÌNH · TÌM HÀNG CỦA BẠN",
+   "note": "TRIỆU/THÁNG · VÍ DỤ GIẢ ĐỊNH",
+   "hl": [
+    {
+     "r": 1,
+     "at": [
+      0,
+      "lăm"
+     ]
+    },
+    {
+     "r": 1,
+     "c": 0,
+     "at": [
+      0,
+      "bảy"
+     ]
+    },
+    {
+     "r": 1,
+     "c": 2,
+     "at": [
+      0,
+      "ba"
+     ],
+     "until": [
+      2,
+      null,
+      0,
+      -1.0
+     ]
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://www.nasdaq.com/articles/your-guide-to-the-50-30-20-budgeting-rule"
+ ],
+ "sources_internal": [
+  "WebSearch 22/10/2026: 50/30/20 do Elizabeth Warren và Amelia Warren Tyagi phổ biến trong All Your Worth, 2005 (một số nguồn ghi 2006)"
+ ],
+ "assumptions": "Lương thực nhận; 50% cần, 30% muốn, 20% để dành/trả nợ; mức lương 10-30 triệu là ví dụ.",
+ "mix": false,
+ "rules": 2,
+ "cls": "btl btl-ck-graph",
+ "extra_css": "bang-tra-looks.css\" /><script src=\"assets/engine/bang-tra-looks.js\"></script><link rel=\"x-end\" href=\"x",
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.5,
+   "1": 0.9
+  }
+ },
+ "say": {},
+ "imgs": {},
+ "ab_test": "bang-tra-dung-hinh-2026-10-22",
+ "upload": false,
+ "profile": "bang-tra",
+ "look": "ck-graph",
+ "xem_thu": true
+}

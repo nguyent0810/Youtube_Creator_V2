@@ -1,0 +1,69 @@
+{
+ "_doc": "Giao diện Short bảng tra (22/10/2026). Quy tắc xoay: docs/pm/2026-10-22-bang-tra-looks.md. Công cụ: python motion/stier/bang_tra_look.py next|apply|check.",
+ "looks": {
+  "mim-crt": {
+   "channel": "MIM",
+   "name": "Terminal CRT phosphor xanh lá"
+  },
+  "mim-blueprint": {
+   "channel": "MIM",
+   "name": "Bản vẽ blueprint nét trắng"
+  },
+  "mim-thermal": {
+   "channel": "MIM",
+   "name": "Biên lai máy in nhiệt"
+  },
+  "mim-heat": {
+   "channel": "MIM",
+   "name": "Bảng nhiệt neon lạnh-nóng"
+  },
+  "ck-led": {
+   "channel": "CK",
+   "name": "Bảng điện tử LED hổ phách"
+  },
+  "ck-ledger": {
+   "channel": "CK",
+   "name": "Sổ kế toán kem, bút highlight"
+  },
+  "ck-graph": {
+   "channel": "CK",
+   "name": "Giấy kẻ ô đồ thị, nến mờ, kính lúp"
+  },
+  "ck-bars": {
+   "channel": "CK",
+   "name": "Ô có thanh nhiệt kế mini"
+  }
+ },
+ "picks": [
+  {
+   "channel": "MIM",
+   "slug": "mim-bang-nghe-ai",
+   "look": "mim-heat"
+  },
+  {
+   "channel": "CK",
+   "slug": "ck-bang-chia-luong-50-30-20",
+   "look": "ck-ledger"
+  },
+  {
+   "channel": "MIM",
+   "slug": "mim-bang-sinh-nam",
+   "look": "mim-crt"
+  },
+  {
+   "channel": "CK",
+   "slug": "ck-bang-de-danh-den-2030",
+   "look": "ck-led"
+  },
+  {
+   "channel": "MIM",
+   "slug": "mim-bang-gpt4-thi",
+   "look": "mim-thermal"
+  },
+  {
+   "channel": "CK",
+   "slug": "ck-bang-tran-thue-nha",
+   "look": "ck-bars"
+  }
+ ]
+}

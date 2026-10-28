@@ -1,0 +1,5 @@
+Đã hoàn tất phần dựng theo ticket và ghi báo cáo tại [T4W2-ket-qua.md](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-26-codex-pilot\T4W2-ket-qua.md).
+
+`python scripts/long_gate.py mim-moneyball --min-syl 1900` đã in **ĐẠT**: 2.216 âm tiết, 81 cảnh, 6 clip khác nhau, 29 URL nguồn.
+
+Còn một lỗi hạ tầng đã ghi rõ trong báo cáo: Pexels/clip sheet không chạy được vì thiếu `output/long/mim-moneyball/broll/index.json`, nên chưa có `qa_clips.jpg` để soi. Ba ảnh AI đang chờ tạo theo [ai_prompts.md](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-moneyball\ai_prompts.md).

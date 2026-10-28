@@ -1,0 +1,246 @@
+{
+ "theme": "ck",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "title": "Tháng 3/2022, 270 nghìn tài khoản mới: 8 tháng sau ra sao?",
+ "description": "Tháng 3/2022 có 270.217 tài khoản chứng khoán mở mới (VSD: cá nhân 270.011, tổ chức 206). VN-Index lập đỉnh 1.528,57 ngày 06/01/2022, đóng cửa 31/03/2022 ở 1.492,15, rồi xuống 911,90 ngày 15/11/2022, giảm khoảng 38,9% từ cuối tháng 3. Nhìn lại quá khứ, không phải dự báo. Dữ liệu VN-Index, kênh tự tính.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Nội dung do kênh biên soạn; giọng đọc tổng hợp.\n\nBản đầy đủ: https://youtu.be/ULLEUHkYz9g",
+ "tags": [
+  "tài khoản chứng khoán",
+  "vn-index 2022",
+  "fomo chứng khoán",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "hai",
+  "chín",
+  "bốn",
+  "đỉnh",
+  "đám"
+ ],
+ "kicker": "TÂM LÝ TIỀN BẠC",
+ "sub": "FOMO",
+ "lines": [
+  "Tháng ba năm hai nghìn không trăm hai mươi hai, hơn hai trăm bảy mươi nghìn tài khoản chứng khoán mới được mở.",
+  "Lúc ấy, VN-Index vừa lập đỉnh hơn một nghìn năm trăm hai mươi điểm vào đầu tháng một.",
+  "Cuối tháng ba, chỉ số vẫn quanh một nghìn bốn trăm chín mươi điểm.",
+  "Đến giữa tháng mười một, nó chỉ còn khoảng chín trăm mười hai điểm.",
+  "Giảm gần bốn mươi phần trăm từ cuối tháng ba.",
+  "Đám đông đến khi chỉ số đã ở gần đỉnh.",
+  "Đó là nhìn lại quá khứ, không phải dự báo cho lần sau.",
+  "Hơn hai trăm bảy mươi nghìn tài khoản mới trong một tháng, và tám tháng sau, chỉ số mất gần bốn mươi phần trăm."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "270.217",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "TÀI KHOẢN MỚI · THÁNG 3/2022",
+     "at": [
+      0,
+      "tài"
+     ],
+     "sm": true
+    },
+    {
+     "text": "NGUỒN: VSD",
+     "at": [
+      0,
+      "tài"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34839526",
+   "ms": 3,
+   "veil": 0.58
+  },
+  {
+   "type": "chart",
+   "at": 1,
+   "kind": "line",
+   "title": "VN-INDEX 2022",
+   "unit": "ĐIỂM",
+   "min": 850,
+   "max": 1600,
+   "points": [
+    {
+     "x": 0,
+     "v": 1528.57,
+     "at": [
+      1,
+      "đỉnh"
+     ],
+     "tag": "1.529",
+     "pos": "t"
+    },
+    {
+     "x": 2.8,
+     "v": 1492.15,
+     "at": 2,
+     "tag": "1.492",
+     "pos": "b"
+    }
+   ],
+   "ticks": [
+    {
+     "x": 0,
+     "label": "6/1"
+    },
+    {
+     "x": 2.8,
+     "label": "31/3"
+    },
+    {
+     "x": 10.3,
+     "label": "15/11"
+    }
+   ],
+   "note": "DỮ LIỆU: VN-INDEX 2018–2026 · KÊNH TỰ TÍNH"
+  },
+  {
+   "type": "chart",
+   "at": 3,
+   "kind": "line",
+   "title": "VN-INDEX 2022",
+   "unit": "ĐIỂM",
+   "min": 850,
+   "max": 1600,
+   "points": [
+    {
+     "x": 0,
+     "v": 1528.57,
+     "at": [
+      3,
+      null,
+      0,
+      0.02
+     ],
+     "tag": "1.529",
+     "pos": "t"
+    },
+    {
+     "x": 2.8,
+     "v": 1492.15,
+     "at": [
+      3,
+      null,
+      0,
+      0.06
+     ],
+     "tag": "1.492",
+     "pos": "r"
+    },
+    {
+     "x": 10.3,
+     "v": 911.9,
+     "at": 3,
+     "tag": "912",
+     "pos": "b",
+     "c": "down"
+    }
+   ],
+   "ticks": [
+    {
+     "x": 0,
+     "label": "6/1"
+    },
+    {
+     "x": 2.8,
+     "label": "31/3"
+    },
+    {
+     "x": 10.3,
+     "label": "15/11"
+    }
+   ],
+   "badge": {
+    "text": "−38,9%",
+    "at": 4,
+    "c": "down"
+   },
+   "note": "DỮ LIỆU: VN-INDEX 2018–2026 · KÊNH TỰ TÍNH",
+   "tr": "cut"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "ĐÁM ĐÔNG ĐẾN",
+     "at": 5,
+     "sm": true
+    },
+    {
+     "text": "KHI CHỈ SỐ GẦN ĐỈNH",
+     "at": [
+      5,
+      "chỉ"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7703941",
+   "ms": 2,
+   "veil": 0.58
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "QUÁ KHỨ ≠ DỰ BÁO",
+   "sub": "DỮ LIỆU: VN-INDEX 2018–2026 · KÊNH TỰ TÍNH"
+  },
+  {
+   "type": "board",
+   "at": 7,
+   "title": "Tháng 3 → tháng 11/2022",
+   "nodes": [
+    {
+     "text": "270.217 tài khoản mới",
+     "x": 0.5,
+     "y": 0.3,
+     "at": 7,
+     "shape": "none",
+     "w": 660
+    },
+    {
+     "text": "chỉ số −39%",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      7,
+      "mất"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 600
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://youtu.be/ULLEUHkYz9g"
+ ],
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.4
+  }
+ },
+ "say": {},
+ "imgs": {},
+ "short_type": "S"
+}

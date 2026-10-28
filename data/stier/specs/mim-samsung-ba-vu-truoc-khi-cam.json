@@ -1,0 +1,266 @@
+{
+ "theme": "mim",
+ "title": "Samsung mở ChatGPT cho kỹ sư 11/03/2023, chưa đầy hai tháng sau một bộ phận lớn tạm cấm",
+ "description": "Theo The Economist Korea (30/03/2023), bộ phận bán dẫn của Samsung cho dùng ChatGPT từ 11/03/2023, và có ba vụ đưa thông tin nội bộ vào công cụ này: mã nguồn lỗi của chương trình đo thiết bị nhà máy, mã cần tối ưu, và bản ghi một cuộc họp. Samsung chưa xác nhận chi tiết các vụ (The Register, 02/05/2023). Theo bản thông báo nội bộ mà Bloomberg được xem (02/05/2023), Samsung tạm cấm công cụ AI tạo sinh tại một bộ phận lớn, trên thiết bị của công ty. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện. Thông tin theo nguồn đã ghi, đọc ngày 20/10/2026; chưa có bản kiểm chứng riêng của kênh.\n\nBản đầy đủ: https://youtu.be/ejsjefnJQbI (công khai từ 20:00 ngày 23/11).",
+ "tags": [
+  "samsung chatgpt",
+  "lộ dữ liệu công ty",
+  "quyền riêng tư ai",
+  "chatgpt",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "AI QUANH TA",
+ "sub": "2023",
+ "acc": [
+  "Samsung",
+  "ba",
+  "vụ",
+  "cấm",
+  "mở",
+  "cửa"
+ ],
+ "lines": [
+  "Năm 2023, Samsung cho kỹ sư dùng ChatGPT.",
+  "Ngày mười một tháng ba, bộ phận bán dẫn mở cửa.",
+  "Chưa đầy ba tuần sau, báo Hàn Quốc đưa tin về ba vụ.",
+  "Một kỹ sư dán mã nguồn lỗi của chương trình đo thiết bị nhà máy để nhờ sửa.",
+  "Một người khác dán mã để nhờ tối ưu.",
+  "Người thứ ba biến bản ghi một cuộc họp thành biên bản.",
+  "Samsung chưa xác nhận chi tiết các vụ này.",
+  "Đầu tháng năm, thông báo gửi một bộ phận lớn vẫn tạm cấm các công cụ AI tạo sinh.",
+  "Mở cửa ngày mười một tháng ba, tạm cấm chưa đầy hai tháng sau."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "SAMSUNG · 2023",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "kỹ sư bán dẫn được dùng ChatGPT",
+     "at": [
+      0,
+      "kỹ"
+     ],
+     "sm": true
+    }
+   ],
+   "at": 0,
+   "clip": "pexels:7652109",
+   "veil": 0.55
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "11.03.2023",
+   "day": "BỘ PHẬN BÁN DẪN MỞ CỬA CHO CHATGPT"
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "from": 0,
+   "to": 3,
+   "suffix": " VỤ",
+   "label": "THEO THE ECONOMIST KOREA",
+   "until": [
+    2,
+    "ba",
+    1
+   ],
+   "sub": {
+    "text": "BÁO ĐĂNG NGÀY 30.03.2023",
+    "at": [
+     2,
+     "báo"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "HAI LẦN DÁN VÀO",
+   "cards": [
+    {
+     "k": "LẦN 1",
+     "v": "MÃ LỖI CHƯƠNG TRÌNH ĐO",
+     "at": [
+      3,
+      "mã"
+     ]
+    },
+    {
+     "k": "LẦN 2",
+     "v": "MÃ CẦN TỐI ƯU",
+     "at": [
+      4,
+      "mã"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CUỘC HỌP",
+     "at": [
+      5,
+      "bản"
+     ],
+     "acc": true
+    },
+    {
+     "text": "→ biên bản · lần thứ ba",
+     "at": [
+      5,
+      "biên"
+     ],
+     "sm": true
+    }
+   ],
+   "at": 5,
+   "clip": "pexels:7812347",
+   "veil": 0.6
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "CHƯA XÁC NHẬN",
+   "sub": "SAMSUNG VỀ CHI TIẾT CÁC VỤ"
+  },
+  {
+   "type": "board",
+   "at": 7,
+   "title": "05.2023",
+   "nodes": [
+    {
+     "text": "THÔNG BÁO GỬI MỘT BỘ PHẬN LỚN",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      7,
+      "thông"
+     ],
+     "shape": "box",
+     "w": 780
+    },
+    {
+     "text": "TẠM CẤM AI TẠO SINH",
+     "x": 0.5,
+     "y": 0.68,
+     "at": [
+      7,
+      "tạm"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 740
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      7,
+      "tạm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 8,
+   "items": [
+    {
+     "year": "11.03.2023",
+     "text": "mở cửa cho ChatGPT",
+     "at": [
+      8,
+      "Mở"
+     ]
+    },
+    {
+     "year": "02.05.2023",
+     "text": "bản tin Bloomberg về lệnh cấm",
+     "at": [
+      8,
+      "tạm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "TẠM CẤM",
+     "at": [
+      8,
+      "chưa"
+     ],
+     "acc": true
+    },
+    {
+     "text": "chưa đầy hai tháng sau",
+     "at": [
+      8,
+      "hai"
+     ],
+     "sm": true
+    }
+   ],
+   "at": [
+    8,
+    "chưa"
+   ],
+   "clip": "pexels:26586645",
+   "veil": 0.6
+  }
+ ],
+ "sources": [
+  "The Economist Korea, 30/03/2023 (qua Gigazine, Cybersecurity News, HCAMag)",
+  "https://cybersecuritynews.com/chatgpt-leaks-samsung-data/",
+  "https://www.theregister.com/2023/05/02/samsung_generative_ai_ban/",
+  "Bloomberg, 02/05/2023 — thông báo nội bộ của Samsung gửi một bộ phận lớn về lệnh cấm công cụ AI tạo sinh"
+ ],
+ "say": {
+  "=AI": "ây ai",
+  "chatgpt": "chát gi pi ti",
+  "openai": "Ô-pần ây ai",
+  "google": "Gu-gồ",
+  "chatbot": "chát bót",
+  "chat": "chát",
+  "samsung": "Xam-xung",
+  "economist": "I-cô-nô-mít",
+  "korea": "Cô-ri-a"
+ },
+ "rules": 2,
+ "mix": true,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.22,
+   "7": 0.5
+  }
+ },
+ "sources_internal": [
+  "The Economist Korea 30/03/2023 (qua Gigazine, Cybersecurity News, HCAMag: DS cho dùng từ 11/03; ba vụ) — CẦN tìm bài gốc tiếng Hàn",
+  "https://www.theregister.com/2023/05/02/samsung_generative_ai_ban/ (Bloomberg 02/05/2023; Samsung chưa xác nhận chi tiết các vụ; thông báo gửi 'one of its biggest divisions', tạm cấm ChatGPT/Bard; không phải cấm toàn tập đoàn)",
+  "Sửa 22/10/2026 theo KIEM-NGUON-A mục 6: mã lỗi là của chương trình tải CSDL đo thiết bị nhà máy (Cybersecurity News dẫn Economist Korea)"
+ ],
+ "description_orig": "Theo The Economist Korea (30/03/2023), bộ phận bán dẫn của Samsung cho dùng ChatGPT từ 11/03/2023, và có ba vụ đưa thông tin nội bộ vào công cụ này: mã nguồn lỗi của một thiết bị bán dẫn, mã cần tối ưu, và bản ghi một cuộc họp. Samsung không xác nhận chi tiết các vụ (The Register, 02/05/2023). Theo bản thông báo nội bộ mà Bloomberg được xem (02/05/2023), Samsung tạm cấm công cụ AI tạo sinh trên thiết bị của công ty. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện. Thông tin theo nguồn đã ghi, đọc ngày 20/10/2026; chưa có bản kiểm chứng riêng của kênh (data/long/mim-ai-chat-privacy chưa có factcheck.md).\n\nBản đầy đủ: https://youtu.be/ejsjefnJQbI (công khai từ 20:00 ngày 23/11)."
+}

@@ -1,0 +1,13 @@
+/* A/B bảng tra dừng hình (22/10/2026): chỉ áp khi spec có cls "bt"; không đụng engine chung. */
+.bt #kicker { display:none; }
+.bt .tbl { transform-origin:50% 0; transform:translateY(120px) scale(1.025); }
+.bt .tbt { top:-10px !important; left:40px; width:900px; height:290px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; text-align:center;
+  white-space:normal !important; font-size:80px !important; line-height:1.08; background:#fbbf24; color:#0a1426 !important; border-radius:18px; padding:0 34px; }
+.bt .tbch { font-size:36px !important; letter-spacing:.04em; color:#e2e8f0; }
+.bt .tbrh { font-size:34px !important; }
+.bt .tbf { font-size:44px !important; }
+.bt .tbn { font-size:36px !important; letter-spacing:.01em; color:#cbd5e1; }
+/* bảng 4 cột (số 3 chữ số): thu nhỏ vừa đủ để không dính nhau, số vẫn >= 60 px */
+.bt4 .tbv { font-size:64px !important; }
+.bt4 .tbk b { font-size:46px !important; }
+.bt4 .tbc { font-size:40px !important; }

@@ -1,0 +1,36 @@
+{
+  "assumption": {
+    "insured_wage_million": 15,
+    "living_cost_million": 13,
+    "paid_months": 84
+  },
+  "monthly_benefit_million": 9.0,
+  "monthly_shortfall_million": 4.0,
+  "duration": {
+    "first_36_paid_months": 3,
+    "extra_48_paid_months": 4,
+    "total_months": 7,
+    "cap_months": 12
+  },
+  "total_benefit_million": 63.0,
+  "cumulative_shortfall_million": [
+    4.0,
+    8.0,
+    12.0,
+    16.0,
+    20.0,
+    24.0,
+    28.0
+  ],
+  "regional_caps_million": {
+    "I": 26.55,
+    "II": 23.65,
+    "III": 20.7,
+    "IV": 18.5
+  },
+  "waiting_days": {
+    "current_law": 11,
+    "previous_law": 16,
+    "waiting_period": 10
+  }
+}

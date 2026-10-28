@@ -1,0 +1,587 @@
+{
+ "title": "Lớp cuối: lộ trình không xóa mọi lớp tiền",
+ "lines": [
+  {
+   "t": "Trước khi nói về mục tiêu miễn viện phí, hãy đặt ví dụ giả định cạnh bức tranh quỹ.",
+   "p": 0.8
+  },
+  "Mức đóng bảo hiểm y tế hằng tháng phổ biến là bốn phẩy năm phần trăm tiền lương làm căn cứ đóng bảo hiểm xã hội, lương hưu, trợ cấp hoặc lương cơ sở.",
+  "Luật quy định mức tối đa là sáu phần trăm.",
+  "Đây là tỷ lệ đóng, không phải công thức để đo quyền lợi riêng của Minh.",
+  {
+   "t": "Thác ba mươi triệu và mười hai triệu vẫn chỉ là một ví dụ minh hoạ.",
+   "p": 1.0
+  },
+  "Quy mô quỹ là lớp khác.",
+  "Trong hộ gia đình cùng tham gia trong năm tài chính, người thứ hai đóng bảy mươi phần trăm mức người thứ nhất.",
+  "Người thứ ba đóng sáu mươi phần trăm.",
+  "Người thứ tư đóng năm mươi phần trăm, từ người thứ năm là bốn mươi phần trăm.",
+  "Các cột giảm dần theo hộ gia đình.",
+  {
+   "t": "Chúng không phải mức hưởng khám chữa bệnh.",
+   "p": 1.0
+  },
+  "Cuối năm hai nghìn không trăm hai mươi bốn, có chín mươi lăm phẩy năm hai năm triệu người tham gia bảo hiểm y tế.",
+  "Con số ấy tương đương khoảng chín mươi bốn phẩy hai chín phần trăm dân số.",
+  "Cùng năm đó có một trăm tám mươi ba phẩy sáu triệu lượt khám chữa bệnh và chi phí quỹ khoảng một trăm bốn mươi nghìn tỷ đồng.",
+  "Năm hai nghìn không trăm hai mươi lăm, quỹ chi trả cho một trăm chín mươi lăm phẩy một triệu lượt.",
+  "Số chi đề nghị thanh toán là một trăm sáu mươi sáu phẩy bốn nghìn tỷ đồng.",
+  {
+   "t": "Những số lớn này cho biết quy mô hệ thống, không dự báo hóa đơn của một người.",
+   "p": 1.0
+  },
+  "Quy mô không thay thế hồ sơ riêng.",
+  "Nghị quyết bảy mươi hai năm hai nghìn không trăm hai mươi lăm được ban hành ngày chín tháng chín năm hai nghìn không trăm hai mươi lăm.",
+  "Mục tiêu đến năm hai nghìn không trăm ba mươi là miễn chi phí khám chữa bệnh ở mức cơ bản trong phạm vi quyền lợi bảo hiểm y tế theo lộ trình.",
+  "Đó không phải tuyên bố miễn phí tuyệt đối cho mọi dịch vụ và mọi khoản đi kèm.",
+  "Từ năm hai nghìn không trăm hai mươi sáu, định hướng là từng bước tăng tỷ lệ và mức thanh toán.",
+  "Định hướng cũng tăng chi cho phòng bệnh, chẩn đoán, điều trị sớm ở một số bệnh và đối tượng ưu tiên.",
+  {
+   "t": "Đây là lộ trình, chưa phải quyền lợi đồng loạt đã có hiệu lực.",
+   "p": 1.0
+  },
+  "Mục tiêu không phải hóa đơn hôm nay.",
+  "Đường biểu đồ tiền túi đi từ khoảng sáu mươi phần trăm đầu những năm hai nghìn tới khoảng bốn mươi phần trăm năm hai nghìn không trăm hai mươi lăm.",
+  "Giai đoạn hai nghìn không trăm hai mươi tám đến hai nghìn không trăm ba mươi nêu mục tiêu dưới ba mươi phần trăm.",
+  "Dưới ba mươi phần trăm là mục tiêu giai đoạn hai nghìn không trăm hai mươi tám đến hai nghìn không trăm ba mươi, chưa phải quyền lợi hôm nay.",
+  "Vì vậy, quay lại thác chi phí mở đầu.",
+  "Lộ trình có thể thay đổi phần chi phí cơ bản trong phạm vi quyền lợi.",
+  "Còn từng lớp phải được nhìn riêng.",
+  "Còn năm triệu đồng chi trả, năm triệu ngoài phạm vi và hai triệu ngoài hóa đơn của ví dụ giả định phải được đọc từng lớp, không được hứa sẽ tự biến mất.",
+  "Ba mươi triệu trong bảy ngày, hai mươi triệu quỹ trả, mười triệu trên hóa đơn và mười hai triệu gánh nặng rộng hơn.",
+  "Đó là bốn con số để nhìn cùng lúc, trước khi kết luận bất cứ điều gì."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "PHẦN CUỐI",
+   "title": "LỘ TRÌNH KHÔNG\nXÓA MỌI LỚP",
+   "sub": "NGHỊ QUYẾT 72-NQ/TW · MỤC TIÊU 2030",
+   "titleAt": 0,
+   "bg": "ai04"
+  },
+  {
+   "type": "bars",
+   "at": 1,
+   "title": "MỨC ĐÓNG BHYT HẰNG THÁNG",
+   "unit": "% TIỀN LƯƠNG LÀM CĂN CỨ ĐÓNG",
+   "srcnote": "NGUỒN: NGHỊ ĐỊNH 188/2025/NĐ-CP · BHXH VIỆT NAM",
+   "items": [
+    {
+     "k": "PHỔ BIẾN",
+     "v": 4.5,
+     "lbl": "4,5%",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "k": "TỐI ĐA",
+     "v": 6,
+     "lbl": "6%",
+     "at": 2
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "TỶ LỆ ĐÓNG",
+     "at": 3,
+     "acc": true
+    },
+    {
+     "text": "không phải thước đo quyền lợi của Minh",
+     "at": [
+      3,
+      "công"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "waterfall",
+   "at": 4,
+   "title": "THÁC 30 → 12 · VÍ DỤ",
+   "range": "VÍ DỤ GIẢ ĐỊNH · TRIỆU ĐỒNG",
+   "unit": "TRIỆU",
+   "start": {
+    "k": "TỔNG HÓA ĐƠN",
+    "v": 30.0,
+    "at": 4
+   },
+   "steps": [
+    {
+     "k": "QUỸ TRẢ",
+     "v": -20.0,
+     "at": [
+      4,
+      "triệu"
+     ]
+    },
+    {
+     "k": "NGOÀI HÓA ĐƠN",
+     "v": 2.0,
+     "at": [
+      4,
+      "và"
+     ]
+    }
+   ],
+   "calls": [
+    {
+     "i": 3,
+     "text": "12 TRIỆU",
+     "at": [
+      4,
+      "mười"
+     ]
+    }
+   ],
+   "end": {
+    "k": "GÁNH NẶNG",
+    "at": [
+     4,
+     "mười"
+    ]
+   }
+  },
+  {
+   "type": "bars",
+   "at": 6,
+   "title": "ĐÓNG THEO HỘ GIA ĐÌNH",
+   "unit": "% MỨC NGƯỜI THỨ NHẤT",
+   "srcnote": "NGUỒN: BHXH VIỆT NAM",
+   "items": [
+    {
+     "k": "NGƯỜI 1",
+     "v": 100,
+     "lbl": "100%",
+     "at": 6
+    },
+    {
+     "k": "NGƯỜI 2",
+     "v": 70,
+     "lbl": "70%",
+     "at": [
+      6,
+      "bảy"
+     ]
+    },
+    {
+     "k": "NGƯỜI 3",
+     "v": 60,
+     "lbl": "60%",
+     "at": 7
+    },
+    {
+     "k": "NGƯỜI 4",
+     "v": 50,
+     "lbl": "50%",
+     "at": [
+      8,
+      "năm"
+     ]
+    },
+    {
+     "k": "TỪ NGƯỜI 5",
+     "v": 40,
+     "lbl": "40%",
+     "at": [
+      8,
+      "bốn"
+     ],
+     "acc": true
+    }
+   ],
+   "calls": [
+    {
+     "i": 4,
+     "text": "≠ MỨC HƯỞNG",
+     "at": 10
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 11,
+   "from": 0,
+   "to": 95.525,
+   "suffix": " TRIỆU NGƯỜI",
+   "label": "THAM GIA BHYT · CUỐI 2024",
+   "srcnote": "NGUỒN: BHXH VIỆT NAM",
+   "sub": {
+    "text": "≈ 94,29% DÂN SỐ",
+    "at": 12
+   }
+  },
+  {
+   "type": "bars",
+   "at": 13,
+   "title": "LƯỢT KCB BHYT",
+   "unit": "TRIỆU LƯỢT",
+   "srcnote": "NGUỒN: BÁO CHÍNH PHỦ (2024) · BHXH VIỆT NAM (2025)",
+   "items": [
+    {
+     "k": "2024",
+     "v": 183.6,
+     "lbl": "183,6",
+     "at": 13
+    },
+    {
+     "k": "2025",
+     "v": 195.1,
+     "lbl": "195,1",
+     "at": 14,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 15,
+   "title": "CHI TỪ QUỸ BHYT",
+   "unit": "NGHÌN TỶ ĐỒNG",
+   "srcnote": "NGUỒN: BÁO CHÍNH PHỦ (2024) · BHXH VIỆT NAM (2025)",
+   "items": [
+    {
+     "k": "2024 · CHI QUỸ",
+     "v": 140,
+     "lbl": "≈140",
+     "at": 15
+    },
+    {
+     "k": "2025 · ĐỀ NGHỊ THANH TOÁN",
+     "v": 166.4,
+     "lbl": "166,4",
+     "at": [
+      15,
+      "một"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 16,
+   "vid": "8122597",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "QUY MÔ HỆ THỐNG",
+     "at": 16,
+     "acc": true
+    },
+    {
+     "text": "không dự báo hóa đơn của một người",
+     "at": [
+      16,
+      "không"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 18,
+   "title": "NGHỊ QUYẾT 72-NQ/TW",
+   "items": [
+    {
+     "year": "09/09/2025",
+     "text": "ban hành",
+     "at": 18
+    },
+    {
+     "year": "ĐẾN 2030",
+     "text": "miễn chi phí KCB cơ bản trong phạm vi",
+     "at": 19
+    }
+   ],
+   "srcnote": "NGUỒN: BÁO CHÍNH PHỦ"
+  },
+  {
+   "type": "myth",
+   "at": 20,
+   "myth": "MIỄN PHÍ TUYỆT ĐỐI MỌI KHOẢN",
+   "truth": "MỨC CƠ BẢN · TRONG PHẠM VI",
+   "strikeAt": [
+    20,
+    "tuyệt"
+   ],
+   "truthAt": [
+    20,
+    "đi"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 21,
+   "title": "ĐỊNH HƯỚNG TỪ 2026",
+   "srcnote": "NGUỒN: BÁO CHÍNH PHỦ",
+   "rows": [
+    {
+     "k": "1",
+     "v": "TĂNG DẦN TỶ LỆ VÀ MỨC THANH TOÁN",
+     "at": 21
+    },
+    {
+     "k": "2",
+     "v": "TĂNG CHI PHÒNG BỆNH, CHẨN ĐOÁN SỚM",
+     "at": 22
+    },
+    {
+     "k": "3",
+     "v": "MỘT SỐ BỆNH, ĐỐI TƯỢNG ƯU TIÊN",
+     "at": [
+      22,
+      "ưu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 23,
+   "items": [
+    {
+     "text": "LỘ TRÌNH",
+     "at": 23,
+     "acc": true
+    },
+    {
+     "text": "chưa phải quyền lợi đồng loạt",
+     "at": [
+      23,
+      "chưa"
+     ],
+     "sm": true
+    },
+    {
+     "text": "mục tiêu ≠ hóa đơn hôm nay",
+     "at": 24,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 25,
+   "title": "TIỀN TÚI: THỰC TẾ VÀ MỤC TIÊU",
+   "unit": "% TỔNG CHI Y TẾ",
+   "srcnote": "NGUỒN: BHXH VIỆT NAM · BÁO CHÍNH PHỦ",
+   "items": [
+    {
+     "k": "ĐẦU NHỮNG NĂM 2000",
+     "v": 60,
+     "lbl": "≈60%",
+     "at": 25
+    },
+    {
+     "k": "NĂM 2025",
+     "v": 40,
+     "lbl": "≈40%",
+     "at": [
+      25,
+      "bốn"
+     ],
+     "acc": true
+    },
+    {
+     "k": "MỤC TIÊU 2028–2030",
+     "v": 30,
+     "lbl": "< 30%",
+     "at": 26
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 27,
+   "vid": "7598737",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "DƯỚI 30% LÀ MỤC TIÊU",
+     "at": 27,
+     "acc": true
+    },
+    {
+     "text": "chưa phải quyền lợi hôm nay",
+     "at": [
+      27,
+      "chưa"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "img": "ai06",
+   "at": 28,
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.5,
+    0.32
+   ],
+   "move": "in",
+   "reveal": {
+    "kind": "wipe",
+    "at": 28,
+    "d": 0.9
+   },
+   "kin": [
+    {
+     "text": "PHẦN CƠ BẢN TRONG PHẠM VI",
+     "at": 29,
+     "acc": true
+    },
+    {
+     "text": "từng lớp vẫn nhìn riêng",
+     "at": 30,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 31,
+   "title": "BA LỚP KHÔNG TỰ BIẾN MẤT",
+   "unit": "TRIỆU ĐỒNG",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · TRIỆU ĐỒNG",
+   "items": [
+    {
+     "k": "ĐỒNG CHI TRẢ",
+     "v": 5.0,
+     "lbl": "5",
+     "at": 31,
+     "acc": true
+    },
+    {
+     "k": "NGOÀI PHẠM VI",
+     "v": 5.0,
+     "lbl": "5",
+     "at": [
+      31,
+      "ngoài"
+     ],
+     "acc": true
+    },
+    {
+     "k": "NGOÀI HÓA ĐƠN",
+     "v": 2.0,
+     "lbl": "2",
+     "at": [
+      31,
+      "hai"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "stack",
+   "at": 32,
+   "title": "BỐN CON SỐ CỦA VÍ DỤ",
+   "range": "VÍ DỤ GIẢ ĐỊNH · TRIỆU ĐỒNG",
+   "unit": "TRIỆU",
+   "keys": [
+    {
+     "k": "QUỸ TRẢ"
+    },
+    {
+     "k": "TRÊN HÓA ĐƠN"
+    },
+    {
+     "k": "NGOÀI HÓA ĐƠN"
+    }
+   ],
+   "groups": [
+    {
+     "k": "HÓA ĐƠN 7 NGÀY",
+     "vals": [
+      20.0,
+      10.0,
+      0
+     ],
+     "at": 32
+    },
+    {
+     "k": "GÁNH NẶNG",
+     "vals": [
+      0,
+      10.0,
+      2.0
+     ],
+     "at": [
+      32,
+      "gánh"
+     ]
+    }
+   ],
+   "calls": [
+    {
+     "i": 1,
+     "text": "12 TRIỆU",
+     "at": [
+      32,
+      "gánh"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 33,
+   "title": "BỐN SỐ NHÌN CÙNG LÚC",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · TRIỆU ĐỒNG",
+   "rows": [
+    {
+     "k": "TỔNG HÓA ĐƠN",
+     "v": "30 TRIỆU",
+     "at": 33
+    },
+    {
+     "k": "QUỸ TRẢ",
+     "v": "20 TRIỆU",
+     "at": [
+      33,
+      "con"
+     ]
+    },
+    {
+     "k": "TRÊN HÓA ĐƠN",
+     "v": "10 TRIỆU",
+     "at": [
+      33,
+      "nhìn"
+     ]
+    },
+    {
+     "k": "GÁNH NẶNG",
+     "v": "12 TRIỆU",
+     "at": [
+      33,
+      "trước"
+     ]
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "PHẦN CUỐI",
+  "t": "LỘ TRÌNH KHÔNG XÓA MỌI LỚP"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.1
+ }
+}

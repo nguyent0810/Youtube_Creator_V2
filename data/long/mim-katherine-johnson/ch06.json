@@ -1,0 +1,260 @@
+{
+ "title": "Dấu tên trên báo cáo",
+ "lines": [
+  {
+   "t": "Thật ra, hai năm trước chuyến bay của Glenn, tên Johnson đã nằm trên trang đầu một báo cáo.",
+   "p": 0.8
+  },
+  "Năm 1960, bà và kỹ sư Ted Skopinski cùng đứng tên một báo cáo về góc phương vị lúc tên lửa tắt máy.",
+  "Mục tiêu là đặt một vệ tinh lên trên một điểm đã chọn trên mặt đất.",
+  "Báo cáo nêu các phương trình cho chuyến bay quỹ đạo có điểm hạ cánh xác định trước.",
+  "NASA ghi đây là lần đầu một phụ nữ ở Phân ban Nghiên cứu Bay được ghi tên tác giả của một báo cáo nghiên cứu.",
+  "Một dòng tên nhỏ trên trang giấy, nhưng đó là lần đầu của cả một phân ban.",
+  "Sau Mercury là Apollo.",
+  "NASA ghi Johnson tính quỹ đạo cho chuyến hạ cánh Mặt Trăng Apollo 11 năm 1969.",
+  "Nhưng đóng góp mà chính bà xem là lớn nhất lại là một phần việc khác.",
+  "Đó là các phép tính đồng bộ module Mặt Trăng với module chỉ huy và phục vụ đang bay trên quỹ đạo Mặt Trăng.",
+  "Nói cách khác, là phần giúp hai con tàu tìm lại được nhau.",
+  "Bạn còn nhớ vế khó nhất của Dự án Mercury chứ?",
+  "Đưa người về an toàn.",
+  "Johnson còn làm cho chương trình tàu con thoi, và cho vệ tinh tài nguyên Trái Đất mà sau này được đổi tên thành Landsat.",
+  "Dòng thứ sáu trong sổ: con số đáng tin cần có tên người chịu trách nhiệm trên trang giấy.",
+  "Ghi nhận đến muộn hơn nhiều."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "CHƯƠNG SÁU",
+   "title": "DẤU TÊN\nTRÊN BÁO CÁO",
+   "sub": "1960 → 1969",
+   "bg": "paper",
+   "titleAt": [
+    0,
+    "thật"
+   ]
+  },
+  {
+   "type": "source",
+   "at": [
+    1,
+    "1960"
+   ],
+   "source": "NASA · 09.1960",
+   "ref": "JOHNSON · SKOPINSKI · ĐỒNG TÁC GIẢ",
+   "snippet": "[[Determination of Azimuth Angle at Burnout]] for Placing a Satellite Over a Selected Earth Position",
+   "hlAt": [
+    1,
+    "góc"
+   ],
+   "seal": "TÊN BÁO CÁO",
+   "sealAt": [
+    1,
+    "đứng"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    2,
+    "vệ"
+   ],
+   "items": [
+    {
+     "text": "ĐẶT VỆ TINH LÊN TRÊN MỘT ĐIỂM ĐÃ CHỌN",
+     "at": [
+      2,
+      "vệ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "ĐIỂM HẠ CÁNH XÁC ĐỊNH TRƯỚC",
+     "at": [
+      2,
+      "vệ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": [
+    4,
+    "nasa"
+   ],
+   "img": "paper",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "TRANG ĐẦU BÁO CÁO · 09.1960",
+    "v": "ẢNH: NASA",
+    "at": [
+     4,
+     "nasa"
+    ]
+   },
+   "kin": [
+    {
+     "text": "LẦN ĐẦU MỘT PHỤ NỮ Ở PHÂN BAN ĐỨNG TÊN",
+     "at": [
+      4,
+      "nasa"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": [
+    6,
+    "apollo"
+   ],
+   "vid": "854266",
+   "veil": 0.62,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "SAU MERCURY LÀ APOLLO",
+     "at": [
+      6,
+      "apollo"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": [
+    7,
+    "apollo"
+   ],
+   "day": "APOLLO 11 · HẠ CÁNH MẶT TRĂNG",
+   "date": "1969",
+   "sub": {
+    "text": "JOHNSON TÍNH QUỸ ĐẠO",
+    "at": [
+     7,
+     "apollo"
+    ]
+   }
+  },
+  {
+   "type": "print",
+   "at": [
+    9,
+    "module"
+   ],
+   "img": "kj1985",
+   "tone": "bw",
+   "head": "ĐÓNG GÓP LỚN NHẤT · THEO CHÍNH BÀ",
+   "side": {
+    "k": "APOLLO",
+    "h": "LUNAR MODULE\n↔ COMMAND AND SERVICE MODULE",
+    "lines": [
+     {
+      "text": "LUNAR MODULE · ↔ COMMAND AND SERVICE MODULE",
+      "at": [
+       9,
+       "module"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "at": [
+    11,
+    "bạn"
+   ],
+   "text": "VẾ KHÓ NHẤT\nCỦA DỰ ÁN MERCURY?"
+  },
+  {
+   "type": "slam",
+   "at": [
+    12,
+    "đưa"
+   ],
+   "text": "ĐƯA NGƯỜI VỀ AN TOÀN",
+   "sub": "TỪ MERCURY TỚI APOLLO"
+  },
+  {
+   "type": "ledger",
+   "at": [
+    14,
+    "dòng"
+   ],
+   "title": "SỔ CỦA MỘT CON SỐ ĐÁNG TIN",
+   "srcnote": "MỖI CHẶNG ĐỜI THÊM MỘT DÒNG",
+   "rows": [
+    {
+     "k": "HỎI",
+     "v": "VÌ SAO MỘT CON SỐ ĐÁNG TIN?",
+     "at": [
+      14,
+      "dòng"
+     ]
+    },
+    {
+     "k": "1 · NỀN",
+     "v": "NGƯỜI ĐƯỢC RÈN KỸ TỪ NHỎ",
+     "at": [
+      14,
+      "dòng"
+     ]
+    },
+    {
+     "k": "2 · VIỆC",
+     "v": "ĐƯỢC TRAO ĐÚNG BÀI TOÁN",
+     "at": [
+      14,
+      "dòng"
+     ]
+    },
+    {
+     "k": "3 · NGHỀ",
+     "v": "ĐỌC DỮ LIỆU · TÍNH · VẼ ĐỒ THỊ",
+     "at": [
+      14,
+      "dòng"
+     ]
+    },
+    {
+     "k": "4 · KINH NGHIỆM",
+     "v": "QUEN DỮ LIỆU BAY THẬT",
+     "at": [
+      14,
+      "dòng"
+     ]
+    },
+    {
+     "k": "5 · ĐỐI CHIẾU",
+     "v": "HAI CÁCH TÍNH · MỘT ĐÁP ÁN",
+     "at": [
+      14,
+      "dòng"
+     ]
+    },
+    {
+     "k": "6 · TÊN",
+     "v": "CÓ NGƯỜI ĐỨNG TÊN",
+     "at": [
+      14,
+      "dòng"
+     ]
+    }
+   ]
+  }
+ ],
+ "topic": "mim-katherine-johnson",
+ "chapter": 6,
+ "hud": {
+  "k": "CHƯƠNG 06",
+  "t": "DẤU TÊN TRÊN BÁO CÁO"
+ }
+}

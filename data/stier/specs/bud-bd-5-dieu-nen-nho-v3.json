@@ -1,0 +1,167 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-bd-5-dieu-nen-nho",
+ "format": "ba-dieu",
+ "hook_type": "menh-lenh",
+ "open_shot": "ban-tay-gia",
+ "voice": "Thiện Minh",
+ "music": "arcadia.mp3",
+ "music_gain": 0.18,
+ "gap": 0.5,
+ "series": "14 ngày biết ơn · Ngày 11",
+ "title": "Mỗi sáng nhớ 3 điều. Điều số 3 ít ai dám nghĩ",
+ "kicker": "14 NGÀY BIẾT ƠN · NGÀY 11",
+ "sub": "KINH TĂNG CHI 5.57",
+ "acc": [
+  "ba",
+  "điều",
+  "nhớ"
+ ],
+ "lines": [
+  "Mỗi sáng nhớ ba điều. Điều số ba ít ai dám nghĩ.",
+  "Mười bốn ngày biết ơn, ngày mười một.",
+  "Một: ta sẽ già. Hãy biết ơn đôi tay còn khỏe hôm nay.",
+  "Hai: người ta thương, sẽ có lúc chia xa.",
+  "Nên gọi cho họ khi còn gọi được.",
+  "Nhưng điều số ba mới là chìa khóa.",
+  "Kinh Tăng Chi, diễn ý: ta là chủ của hành động mình.",
+  "Nhớ để sống tử tế hơn, không phải để sợ.",
+  "Hôm nay gọi một cuộc, cho người bạn thương nhất.",
+  "Điều nào khó nhớ nhất với bạn? Comment một con số."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:5524254",
+   "items": [
+    {
+     "text": "NHỚ 3 ĐIỀU",
+     "at": 0.0
+    }
+   ]
+  },
+  {
+   "type": "hf_unit_grid",
+   "at": 1,
+   "title": "NGÀY 11 / 14",
+   "total": 14,
+   "cols": 7,
+   "glyph": "🙏",
+   "lit": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "litAt": [
+    1,
+    "một."
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "veil": 0.4,
+   "clip": "pexels:6628249",
+   "items": [
+    {
+     "text": "1. TA SẼ GIÀ",
+     "at": [
+      2,
+      "một:"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "ĐIỀU 2",
+   "cards": [
+    {
+     "k": "NGƯỜI THƯƠNG",
+     "v": "CÓ LÚC CHIA XA",
+     "at": [
+      3,
+      "chia"
+     ]
+    },
+    {
+     "k": "NÊN",
+     "v": "GỌI KHI CÒN GỌI ĐƯỢC",
+     "at": [
+      4,
+      "gọi"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "ĐIỀU SỐ 3",
+   "fx": "zoom"
+  },
+  {
+   "type": "source",
+   "at": 6,
+   "source": "KINH TĂNG CHI 5.57",
+   "ref": "Năm điều nên quán",
+   "snippet": "Ta là [[chủ]] hành động mình.",
+   "hlAt": [
+    6,
+    "chủ"
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 8,
+   "to": 1,
+   "suffix": " CUỘC GỌI",
+   "label": "CHO NGƯỜI BẠN THƯƠNG NHẤT",
+   "until": [
+    8,
+    "cuộc,"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "veil": 0.4,
+   "clip": "pexels:39481766",
+   "items": [
+    {
+     "text": "ĐIỀU NÀO KHÓ NHỚ?",
+     "at": [
+      9,
+      "điều"
+     ]
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/an5.57/en/sujato"
+ ],
+ "description": "Mỗi sáng nhớ 3 điều. Điều số 3 ít ai dám nghĩ\n\nNguồn: https://suttacentral.net/an5.57/en/sujato"
+}

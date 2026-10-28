@@ -1,4 +1,4 @@
-"""Sinh spec.json + scenes/hud/bgm của từng chNN.json cho video dài MIM #6 "GPU: Con Chip Chơi Game Đã Trở Thành Trái Tim Của AI Như Thế Nào?".
+"""Sinh spec.json + scenes/hud/bgm của từng chNN.json cho video dài MIM #6 "AlexNet 2012: Card Chơi Game Đã Thành Trái Tim Của AI".
 
     python data/long/mim-ai-gpu/gen_scenes.py        # giữ nguyên "lines" + "title" (do motion/long/script_lines.py ghi)
 
@@ -264,13 +264,13 @@ CH["ch08"] = {"hud": {"k": "CHƯƠNG 08", "t": "KHÔNG CHỈ LÀ CON CHIP"}, "bg
 ]}
 
 SPEC = {
-    "title": "GPU: Con Chip Chơi Game Đã Trở Thành Trái Tim Của AI Như Thế Nào?",
+    "title": "AlexNet 2012: Card Chơi Game Đã Thành Trái Tim Của AI",
     "channel": "MIM", "theme": "lab", "accent": "#22d3ee", "master": True, "endcard": 20, "autoTr": True, "beat2": True,
     "acc": ["gpu", "cpu", "card", "nvidia", "alexnet", "cuda", "phòng", "ngủ"],
     "say": SAY, "imgs": IMGS,
     "chapters": [f"ch{i:02d}" for i in range(9)],
     "youtube": {
-        "titles": ["GPU: Con Chip Chơi Game Đã Trở Thành Trái Tim Của AI Như Thế Nào?",
+        "titles": ["AlexNet 2012: Card Chơi Game Đã Thành Trái Tim Của AI",
                    "Hai Card Chơi Game Trong Phòng Ngủ Đã Khởi Đầu Kỷ Nguyên AI",
                    "Vì Sao AI Cần GPU? Từ Card Đồ Hoạ Chơi Game Đến Siêu Máy Tính"],
         "summary": "Năm 2012, một nghiên cứu sinh ở Toronto huấn luyện mạng nơ-ron trên hai card đồ hoạ chơi game đặt trong phòng ngủ ở nhà bố mẹ — "

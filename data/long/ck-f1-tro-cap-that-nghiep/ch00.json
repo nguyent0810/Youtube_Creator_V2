@@ -1,0 +1,191 @@
+{
+ "title": "Sáu mươi phần trăm đỡ được bao lâu?",
+ "lines": [
+  "Sáu tháng đầu năm hai nghìn không trăm hai mươi sáu, hơn ba trăm ba mươi nghìn quyết định hưởng trợ cấp thất nghiệp được đưa vào chi trả.",
+  "Nhưng trợ cấp hằng tháng theo luật là sáu mươi phần trăm bình quân lương đóng của sáu tháng gần nhất, không phải toàn bộ lương cũ.",
+  {
+   "t": "Biểu đồ đầu tiên đặt hai dữ kiện thật cạnh nhau: ba trăm ba mươi hai nghìn sáu trăm hai mươi chín quyết định đã được tiếp nhận, và công thức sáu mươi phần trăm.",
+   "p": 1.0
+  },
+  "Nghịch lý là bạn có thể đã đóng nhiều năm, nhưng khoản đệm vẫn có trần và chỉ chạy trong một số tháng.",
+  "Vậy trợ cấp thất nghiệp thật sự đỡ được bạn bao nhiêu tháng, và còn hở bao nhiêu?",
+  {
+   "t": "Đó không phải câu hỏi chỉ có một con số chung cho tất cả mọi người.",
+   "p": 1.0
+  },
+  "Nó đi qua mức lương đóng, bốn cửa điều kiện, ngày chờ và bậc tháng đã đóng.",
+  "Đến cuối video, một ví dụ giả định sẽ cho thấy bảy năm đóng được đổi thành bao nhiêu tháng, rồi khoảng hở cộng dồn ra sao.",
+  "Trước hết, ta đặt công thức sáu mươi phần trăm vào một phép tính minh họa, không phải lời hứa về mức nhận của bất kỳ ai."
+ ],
+ "scenes": [
+  {
+   "type": "counter",
+   "at": 0,
+   "from": 0,
+   "to": 332629,
+   "label": "QUYẾT ĐỊNH HƯỞNG TRỢ CẤP THẤT NGHIỆP · 6 THÁNG ĐẦU 2026",
+   "srcnote": "NGUỒN: BẢO HIỂM XÃ HỘI VIỆT NAM"
+  },
+  {
+   "type": "bars",
+   "at": 1,
+   "title": "TRỢ CẤP MỖI THÁNG SO VỚI LƯƠNG ĐÓNG",
+   "unit": "%",
+   "srcnote": "LUẬT VIỆC LÀM 74/2025/QH15 · HIỆU LỰC 01/01/2026",
+   "items": [
+    {
+     "k": "BÌNH QUÂN LƯƠNG ĐÓNG 6 THÁNG",
+     "v": 100,
+     "lbl": "100%",
+     "at": [
+      1,
+      "bình"
+     ]
+    },
+    {
+     "k": "TRỢ CẤP",
+     "v": 60,
+     "lbl": "60%",
+     "at": [
+      1,
+      "sáu"
+     ],
+     "acc": true
+    }
+   ],
+   "calls": [
+    {
+     "i": 1,
+     "text": "60%",
+     "at": [
+      1,
+      "sáu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "vid": "4068575",
+   "at": 3,
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "ĐÓNG NHIỀU NĂM",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "CÓ TRẦN · CÓ HẠN",
+     "at": [
+      3,
+      "trần"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 4,
+   "text": "Trợ cấp đỡ được\nbao nhiêu tháng?"
+  },
+  {
+   "type": "bars",
+   "at": 6,
+   "title": "SỐ THÁNG HƯỞNG THEO SỐ NĂM ĐÓNG",
+   "unit": "THÁNG",
+   "srcnote": "LUẬT VIỆC LÀM 74/2025/QH15 · HIỆU LỰC 01/01/2026",
+   "items": [
+    {
+     "k": "ĐÓNG 3 NĂM",
+     "v": 3,
+     "lbl": "3",
+     "at": [
+      6,
+      "bốn"
+     ]
+    },
+    {
+     "k": "ĐÓNG 6 NĂM",
+     "v": 6,
+     "lbl": "6",
+     "at": [
+      6,
+      "ngày"
+     ]
+    },
+    {
+     "k": "ĐÓNG 12 NĂM TRỞ LÊN",
+     "v": 12,
+     "lbl": "12 (TỐI ĐA)",
+     "at": [
+      6,
+      "bậc"
+     ],
+     "acc": true
+    }
+   ],
+   "calls": [
+    {
+     "i": 2,
+     "text": "TỐI ĐA 12",
+     "at": [
+      6,
+      "bậc"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 7,
+   "title": "ĐƯỜNG ĐI CỦA MỘT HỒ SƠ",
+   "items": [
+    {
+     "year": "LƯƠNG ĐÓNG",
+     "text": "60%",
+     "at": 7
+    },
+    {
+     "year": "4 CỬA",
+     "text": "điều kiện",
+     "at": [
+      7,
+      "bảy"
+     ]
+    },
+    {
+     "year": "CHỜ",
+     "text": "10 ngày làm việc",
+     "at": [
+      7,
+      "tháng"
+     ]
+    },
+    {
+     "year": "HỞ",
+     "text": "cộng dồn",
+     "at": [
+      7,
+      "khoảng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "brand",
+   "at": 8,
+   "sub": "TIỀN BẠC · GIẢI THÍCH BẰNG DỮ LIỆU"
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "TRỢ CẤP ĐỠ ĐƯỢC BAO LÂU"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.1
+ }
+}

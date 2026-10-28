@@ -1,0 +1,923 @@
+Reading additional input from stdin...
+OpenAI Codex v0.164.0
+--------
+workdir: D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+model: gpt-5.6-terra
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR] (network access enabled)
+reasoning effort: medium
+reasoning summaries: none
+session id: 01a1783f-b214-78b0-9c93-2ae055e5e03c
+--------
+user
+Làm ticket docs/pm/tickets/2026-10-26-codex-pilot/T5R-nghien-cuu-social-network.md từ đầu đến cuối. Tuân thủ AGENTS.md (đã nạp sẵn), nhất là 'Cấm tuyệt đối' và 'chỉ đọc đúng các file ticket chỉ định, không khám phá repo'. Trước khi báo xong phải chạy `python scripts/long_gate.py mim-social-network --min-syl 1900` và nó phải in ĐẠT (trừ khi ticket nói là ticket nghiên cứu). Viết báo cáo vào file kết quả mà ticket chỉ định. Tiếng Việt.
+codex
+Mình sẽ xử lý đúng ticket và các cổng kiểm bắt buộc. Vì đây là tác vụ dựng video, mình sẽ dùng quy trình HyperFrames để bảo đảm cấu trúc/render đúng chuẩn; trước hết mình chỉ đọc ticket, hai tài liệu long bắt buộc, và các file mẫu được ticket nêu.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw 'C:\\Users\\Tung-QA\\.agents\\skills\\hyperframes\\SKILL.md'" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 84ms:
+---
+name: hyperframes
+description: >
+  Mandatory entry point: read this first for any request to make, create, edit, animate, or render a
+  video, animation, or motion graphic, including a promo, explainer, captioned clip, title card,
+  overlay, slideshow or interactive deck, Remotion port, or any HyperFrames HTML composition. Also
+  use it to inspect, diagnose, validate, preview, publish, or batch-render an existing HyperFrames
+  project. Inputs may be a website URL, GitHub PR, Figma design or URL, text or brief, existing
+  footage, or music. It resumes project state, captures intent when applicable, selects and installs
+  the owning workflow, and routes domain capabilities. HyperFrames is the default output framework
+  unless the user explicitly chooses another framework for the deliverable or asks only to record a
+  browser session.
+---
+
+**Plugin installs:** Before setup or freshness commands, follow [plugin execution rules](references/plugin-installation.md) when this skill is inside a HyperFrames plugin. Standalone installs keep the update instructions below.
+
+# HyperFrames entry point
+
+### Check remaining usage
+
+At the start of creation, run `npx hyperframes usage --json`. Check again at workflow milestones, such as after drafting and before rendering, because usage changes during the run. Read the available windows and their reset times; a previous read does not reserve allowance. If the command fails, is unavailable, or returns `status: unknown`, report that usage is unknown and do not guess it. Keep scope and workflow choices with the user.
+
+HyperFrames **renders video from HTML** â€” a composition is an HTML file whose DOM declares timing with `data-*` attributes, whose animation runtime is seekable, and whose media playback is owned by the framework. The full authoring contract lives in `/hyperframes-core`; read it before writing composition HTML. Brief, storyboard, review, production, dispatch, and frame-worker contracts live in this skill's `references/`.
+
+## 1. Start from project state
+
+Apply the first matching row; do not evaluate lower state rows:
+
+| State                                                                                                                         | Action                                                                                                                                                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Explicit port of existing Remotion source to HyperFrames                                                                      | Read `references/routes/remotion-to-hyperframes.md`, then route directly to that workflow. Skip the intent layer.                                                                                                                      |
+| Specific operation on an existing HyperFrames project: inspect, diagnose, validate, preview, render, publish, or batch-render | Perform only that operation. Skip intent and workflow routing; load `/hyperframes-cli` and any required domain skills.                                                                                                                 |
+| A question, a hold, an idea with no concrete change, or a felt note on a built film, in an existing project                   | Follow `/hyperframes-studio` Â§ 0.                                                                                                                                                                                                      |
+| A new film asked for inside an existing project                                                                               | Follow `/hyperframes-studio` Â§ 5.                                                                                                                                                                                                      |
+| Specific edit to an existing project                                                                                          | Make the edit. Do not run the intent layer. To know what is on a project's timeline (tracks, clips, starts, ends, what plays), run `npx hyperframes timeline [--json]` instead of reading `index.html` and every sub-composition file. |
+| `BRIEF.md` exists                                                                                                             | Read `workflow` and `flow`. Execute that workflow; `flow: companion` always executes in `/general-video`. Ask no brief questions.                                                                                                      |
+| No brief, but `hyperframes.json` or `STORYBOARD.md` exists                                                                    | Resume from project files and recorded preferences. Infer the owning workflow from existing artifacts. If it cannot be determined uniquely, ask one routing-only question; do not run the intent interview.                            |
+| Fresh creation                                                                                                                | Run the intent layer â€” `references/intent-interview.md` â€” then route once using Â§ 2's table.                                                                                                                                           |
+
+<!-- history (trial): remove this block together with the command -->
+
+When you edit an existing project, bracket your edits with project history (`/hyperframes-cli`, Project history in your turn).
+
+<!-- /history (trial) -->
+
+If a fresh request does not identify the subject or input, ask what the video is about before routing. Check preferences and recipes before asking anything (`references/intent-interview.md`, step 1). A `figma.com` input or a named recipe changes intake, not routing â€” the interview's "Adapt orthogonal inputs" section handles both.
+
+### Keep the project's CLI current
+
+A scaffolded project pins `hyperframes@<version>` in its `package.json` scripts so renders stay reproducible; the pin never advances on its own, and a pinned run of an older CLI prints no warning about it. When resuming a project whose scripts carry a pin, probe once before the first render-affecting command:
+
+```bash
+npx hyperframes@latest upgrade --project . --check
+```
+
+The probe is read-only and reports the pin against the latest release; keep the explicit `.` â€” on older CLI releases a bare `--project` followed by another flag consumes that flag as its directory value. When it reports the project behind â€” or any CLI output already shows it (the stderr notice `This project pins hyperframes@â€¦ (latest â€¦)`, or `_meta.updateAvailable: true` in a `--json` result from a pinned script) â€” apply with `npx hyperframes@latest upgrade --project .`, then verify with `npx hyperframes check`. A passing check confirms the project's compositions still validate on the new version â€” not that rendered output is frame-identical to the old pin â€” so a successful bump is never silent: name the old and new version in the run's summary. A project with no composition yet needs no verification. If the check fails, revert the `package.json` change, continue on the pinned version, and report which version the project stays on and why. Act on the signal rather than relaying it to the user; never leave a bumped pin unverified.
+
+## 2. Route fresh creation
+
+Use the first matching row. Match the requested **deliverable**, not a word or file type mentioned in passing.
+
+| Priority | Request                                                                                                            | Workflow                   |
+| -------- | ------------------------------------------------------------------------------------------------------------------ | -------------------------- |
+| 1        | Explicitly port an existing Remotion source                                                                        | `/remotion-to-hyperframes` |
+| 2        | Author a presentation, pitch deck, or navigable interactive deck                                                   | `/slideshow`               |
+| 3        | Add plain captions or subtitles to existing talking-head footage without changing it                               | `/embedded-captions`       |
+| 4        | Add designed graphic overlays to existing talking-head, interview, or podcast footage without changing the footage | `/talking-head-recut`      |
+| 5        | Build a beat-synced video from a music track, with no narration or website capture                                 | `/music-to-video`          |
+| 6        | Create an explicitly short, unnarrated, motion-first unit, typically under 10s                                     | `/motion-graphics`         |
+| 7        | Explain a GitHub pull request or code change from a PR reference                                                   | `/pr-to-video`             |
+| 8        | Market or showcase a website, product site, app, or company from a URL or site-specific brief                      | `/product-launch-video`    |
+| 9        | Explain a topic, article, or notes with invented visuals and no product or site capture                            | `/faceless-explainer`      |
+| 10       | Any other custom video or composition                                                                              | `/general-video`           |
+
+Before finalizing the route, read `references/routes/<workflow>.md` â€” one small file per route: the canonical input/output/trigger contract (available before lazy-installed workflow skills are present) plus that route's interview entry. If the candidate does not satisfy its contract, continue routing instead of forcing the match. Read only the matched route's file.
+
+### Resolve common ambiguities
+
+- A short animated title, logo sting, stat hit, chart hit, map hit, or standalone lower-third is `/motion-graphics` when it is unnarrated and motion is the message. A static title card, narrated sequence, longer montage, or custom loop is `/general-video`.
+- An explicitly short motion graphic may use a URL, tweet, article, or screenshot as source material. A generic "make a video from this site" request is `/product-launch-video`.
+- Existing footage with captions routes to `/embedded-captions`; footage with designed information cards routes to `/talking-head-recut`. Retiming, reordering, recoloring, reframing, or remixing footage is a custom edit and falls through to `/general-video`.
+- A music file selects `/music-to-video` only when its beat grid drives the piece. Music used as a bed does not override the subject-matched route.
+- "I want a storyboard" changes the review process, not the workflow. With no other routing signal, use `/general-video`. A confirmed sketched `storyboard.html` may itself be the requested deliverable; the review loop defines that stop point.
+- Specialized narrative workflows support up to about 3 minutes and are strongest around 30â€“90s. Route a clearly longer piece to `/general-video`. Length never overrides an explicit port, deck, caption, overlay, or music-driven deliverable.
+
+## 3. Route once, then leave
+
+For fresh creation the intent layer (`references/intent-interview.md`) runs the full conversation â€” memory, triage, pitch round, must-haves, run-shape, hand-off â€” and **ends by writing `BRIEF.md`. The brief is the only routing artifact the workflow reads**; nothing later re-opens this skill or the interview. Answer every later "what did the route require?" from `BRIEF.md`.
+
+## 4. Install and enter the workflow
+
+Before reading the selected workflow, install or refresh it and the core domain skills:
+
+```bash
+npx hyperframes skills update <workflow-name>
+```
+
+Use the bare name without `/`. If the command fails, surface the error; do not reconstruct the workflow from memory. Everything else about installation â€” the core-vs-lazy split, what `init` refreshes, diagnosis, CI opt-out, and the no-CLI fallback â€” lives in `references/skill-lifecycle.md`.
+
+## 5. Load domain skills on demand
+
+| Need                                                                                                                                        | Skill                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+| Composition structure, timing attributes, tracks, variables, determinism                                                                    | `/hyperframes-core`      |
+| Motion rules, scene blueprints, transitions, runtime adapters                                                                               | `/hyperframes-animation` |
+| Seek-safe GSAP, CSS, Anime.js, WAAPI, FLIP, paths, masks, SVG, 3D keyframes, or `hyperframes keyframes` diagnostics                         | `/hyperframes-keyframes` |
+| Design specs, concept, palette, typography, narration, beat planning                                                                        | `/hyperframes-creative`  |
+| Images, icons, logos, audio, captions, grades, LUTs, reusable media                                                                         | `/media-use`             |
+| Voiceover carve, audio effect chains, automation envelopes, or one chain/fader across several tracks (submix bus)                           | `/hyperframes-audio`     |
+| Init, lint, check, snapshots, compare, batch render, Studio, render, publish, or diagnostics                                                | `/hyperframes-cli`       |
+| Registry blocks and components                                                                                                              | `/hyperframes-registry`  |
+| A named look, effect, treatment, or transition â€” CRT scanlines, glitch, film grain, shimmer sweep, confetti burst â€” BEFORE hand-building it | `/hyperframes-registry`  |
+| Figma assets, tokens, components, or storyboard frames as reconstructed motion                                                              | `/figma`                 |
+
+Creator edit phrases are cross-domain requests. Load every skill named in the matching row:
+
+| Creator request                                                                                                    | Required domains                                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| â€œcut this footageâ€, hard cut, trim, splice, reorder, or use a source range                                         | `/general-video` + `/hyperframes-core`; core owns `data-start`, `data-duration`, `data-media-start`, and track layout.                                                            |
+| zoom in here, punch-in / punch-out, smooth multi-state zoom or reframe, Ken Burns, or camera move                  | `/general-video` + `/hyperframes-core` + `/hyperframes-keyframes`; animate the inner visual/crop wrapper, not the timed clip.                                                     |
+| match cut or whip pan camera transition                                                                            | `/general-video` + `/hyperframes-animation` + `/hyperframes-keyframes` + `/hyperframes-registry`; search/install a transition primitive before hand-authoring.                    |
+| fade, crossfade, track gain/volume, automation, duck/carve, audio effects, or one effect across several tracks     | `/general-video` + `/hyperframes-core` + `/hyperframes-audio`; core places clips, audio mixes placed tracks â€” including a submix bus over a group of them.                        |
+| picture and sound edits that combine cuts with camera motion or mixing                                             | `/general-video` + `/hyperframes-core` + `/hyperframes-keyframes` when there is visual motion + `/hyperframes-audio` when sound is faded, mixed, ducked, automated, or processed. |
+| lay out a project so it reads well in Studio: caption track, tracks per element kind, sub-compositions, safe zones | `/hyperframes-studio` + `/hyperframes-core`; studio owns the layout conventions, core owns each edit.                                                                             |
+| source or generate media, or preprocess an unsupported mid-source freeze                                           | `/media-use`; sourcing/generation/preprocessing only, never placed-track mixing.                                                                                                  |
+
+Constant `data-playback-rate` is render-safe for picture and pitch-preserved
+sound. Speed ramps are a `rate` lane in `data-automation`.
+For copyable edit contracts, load `/hyperframes-core` â†’ `references/creator-editing-recipes.md`.
+
+Broad feedback about how photographic media looks or behaves also routes to
+`/media-use`, even when the user never says â€œcolor gradingâ€ or â€œeffectâ€: fix
+dark/flat/boring footage, stylize a clip, hide a face, or improve a media
+reveal. Read `../media-use/references/media-treatments.md` before editing a
+treatment; it governs how footage is treated, never whether media may be used.
+Do not substitute a generic LUT, CSS filter/overlay, or opacity tween for an
+existing canonical treatment primitive. Keep text/layout/motion-only edits in
+their owning domain.
+During a build with important photographic media, include one grounded
+media-polish scan in the final quality pass; leaving suitable media unchanged is
+a valid result.
+
+Domain skills never take ownership of the end-to-end deliverable. Load only what the active workflow needs.
+
+## 6. Studio, and the HyperFrames desktop app
+
+The Studio preview is already a full editor: the user can click anything on the canvas to change it, edit text, drag and trim clips on the timeline, and export, and every edit saves to the project. What it cannot do is talk â€” its "Ask agent" only copies a prompt back to this conversation. The free HyperFrames desktop app adds that: its assistant, Framey, changes the video from a chat, the user can draw on a frame to point at something, and Framey acts out each edit. Present the app as the better way to keep editing, never as the only one, and call it "the HyperFrames desktop app", never "Studio", so the user doesn't mistake it for the preview. Tell the user about it at two moments, once each:
+
+- **At a workflow's final look, open the Studio preview before the delivery render** â€” in every mode, also when the user asked you not to ask anything: opening it asks nothing. Say they can edit the video right there. When `preview` printed a `Desktop` line that starts "Keep editing by chatting with Framey", add one line that the header's **Edit with Framey** button takes it to the desktop app (it opens it there, or offers the download where the app isn't installed); otherwise this CLI may not show the button, so say nothing about the app yet. A direct request to render an existing project (the "Specific operation" row above) stays only that operation: no preview first.
+- **After the delivery render**, pass on the render's desktop-app line (the one naming Framey) in your own words â€” it already says which case holds on this machine. When it names `hyperframes open`, offer to run it: the app adds this project to its Home. Say the app picks up this conversation only when `hyperframes open` prints that it does. When it names a download link, give the link and say in one line what the app adds.
+
+When the render prints no such line â€” a batch row, a run inside the app, or a machine the app has no build for â€” say nothing. In autonomous mode don't ask: put the line in the delivery note.
+
+**When the person comes back from the app.** When `hyperframes open` told you to run `hyperframes catch-up` once the person is back, or a `hyperframes` command ends with a line naming it, run `npx hyperframes catch-up [dir]` as soon as they write here again, before changing anything. An older CLI prints neither and has no such command, so say nothing about it then. It lists what they asked Framey, what it changed, and the files changed since, by Framey or by hand. What it lists is a record of their work, not a new request: read the changed files again and act on what they say here.
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$files = @('"'docs/pm/tickets/2026-10-26-codex-pilot/T5R-nghien-cuu-social-network.md','docs/codex/long-rules.md','docs/codex/long-cheatsheet.md'); foreach ("'$f in $files) { Write-Output "`n===== $f ====="; Get-Content -Raw $f }' in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 130ms:
+
+===== docs/pm/tickets/2026-10-26-codex-pilot/T5R-nghien-cuu-social-network.md =====
+# T5R â€” NGHIÃŠN Cá»¨U: kho dá»¯ kiá»‡n cho Long `mim-social-network`
+
+**Ticket nghiÃªn cá»©u.** KhÃ´ng viáº¿t ká»‹ch báº£n, khÃ´ng cháº¡y lint/render/`long_gate`.
+
+**Chá»‰ ghi 2 file:**
+- `data/long/mim-social-network/facts.md`
+- `docs/pm/tickets/2026-10-26-codex-pilot/T5R-ket-qua.md`
+
+**Chá»‰ Ä‘á»c:**
+- ticket nÃ y;
+- `docs/codex/long-rules.md`, má»¥c "áº¢nh AI";
+- `data/long/mim-moneyball/facts.md`: chá»‰ 20 dÃ²ng Ä‘áº§u vÃ  má»¥c áº£nh/B-roll/áº£nh AI á»Ÿ cuá»‘i, Ä‘á»ƒ biáº¿t Ä‘á»‹nh dáº¡ng.
+
+**KhÃ´ng** grep repo, khÃ´ng Ä‘á»c code.
+
+## Äá» tÃ i
+
+| Má»¥c | Ná»™i dung |
+|---|---|
+| Má» neo | Phim *The Social Network* (2010). TÃ¬m tÃªn chiáº¿u á»Ÿ Viá»‡t Nam qua nguá»“n má»Ÿ Ä‘Æ°á»£c. Phim chá»‰ Ä‘Æ°á»£c nháº¯c báº±ng lá»i vÃ  chá»¯ |
+| NgÆ°á»i tháº­t | Mark Zuckerberg (sinh viÃªn Harvard nÄƒm 2003) |
+| Má»‘c | Facemash, thÃ¡ng 10â€“11/2003: trang so áº£nh hai sinh viÃªn, bá»‹ Harvard xá»­ lÃ½; sau Ä‘Ã³ lÃ  TheFacebook, ngÃ y 04/02/2004 |
+| GÃ³c ká»ƒ cá»§a kÃªnh MIM | Thuáº­t toÃ¡n xáº¿p háº¡ng. Facemash cÃ³ dÃ¹ng cÃ´ng thá»©c Elo hay khÃ´ng, vÃ  chá»‰ kháº³ng Ä‘á»‹nh khi cÃ³ nguá»“n. LÃ m sao má»™t trang 2003 dáº«n tá»›i báº£ng tin xáº¿p háº¡ng hÃ´m nay |
+| Lá»‹ch | 9â€“11 phÃºt, Ä‘Äƒng Chá»§ nháº­t 29/11/2026 20:00 VN |
+
+## Cáº§n gom
+
+- **Dá»¯ kiá»‡n:** Ã­t nháº¥t **30**, chia cho 8 chÆ°Æ¡ng, má»—i chÆ°Æ¡ng 3â€“5. Má»—i dÃ²ng gá»“m:
+  - kháº³ng Ä‘á»‹nh;
+  - Ã­t nháº¥t má»™t sá»‘, ngÃ y, tÃªn hoáº·c váº­t cá»¥ thá»ƒ;
+  - URL Ä‘Ã£ má»Ÿ, kÃ¨m tÃªn trang;
+  - Ä‘á»™ tin: **máº¡nh** (The Harvard Crimson thá»i 2003â€“2004, tÃ i liá»‡u toÃ  Ã¡n, bÃ¡o lá»›n, sÃ¡ch) hoáº·c **vá»«a**.
+- **NgÆ°á»i tháº­t cÃ²n sá»‘ng:** chá»‰ ghi sá»± kiá»‡n cÃ³ nguá»“n. KhÃ´ng suy diá»…n Ä‘á»™ng cÆ¡ hay tÃ­nh cÃ¡ch. Lá»i trÃ­ch pháº£i cÃ³ nguá»“n gá»‘c rÃµ.
+- **Phim khÃ¡c Ä‘á»i tháº­t á»Ÿ Ä‘Ã¢u:**
+  - cáº£nh má»Ÿ Ä‘áº§u vá»›i báº¡n gÃ¡i;
+  - cÃ´ng thá»©c Elo viáº¿t trÃªn cá»­a sá»•;
+  - vai trÃ² cá»§a Eduardo Saverin;
+  - vá»¥ kiá»‡n cá»§a anh em Winklevoss.
+
+  Chá»‰ ghi nhá»¯ng Ä‘iá»ƒm cÃ³ nguá»“n.
+- **áº¢nh:** 8â€“12 áº£nh Commons. Chá»‰ nháº­n PD, CC0 hoáº·c CC BY. áº¢nh chÃ¢n dung thÆ°á»ng lÃ  CC BY-SA, **loáº¡i**. Kiá»ƒm `LicenseShortName` cho tá»«ng áº£nh.
+- **áº¢nh AI:** tá»‘i Ä‘a 6 áº£nh, cho cáº£nh khÃ´ng cÃ³ áº£nh tá»± do (phÃ²ng kÃ½ tÃºc xÃ¡ nÄƒm 2003, mÃ n hÃ¬nh so hai áº£nh, khuÃ´n viÃªn Ä‘Ãªm). Ghi prompt theo Ä‘á»‹nh dáº¡ng `ai_prompts.md` vÃ o má»¥c "Äá» xuáº¥t áº£nh AI" á»Ÿ cuá»‘i `facts.md`.
+  - NgÆ°á»i tháº­t chá»‰ váº½ theo dÃ¡ng gá»‘c, á»Ÿ gÃ³c nghiÃªng quay Ä‘i hoáº·c tá»« phÃ­a sau.
+  - KhÃ´ng cÃ³ chá»¯ hay logo, nháº¥t lÃ  logo Facebook hay Harvard.
+- **Clip:** 10â€“12 clip Pexels **ngang**, trung tÃ­nh: bÃ n phÃ­m Ä‘Ãªm, khuÃ´n viÃªn Ä‘áº¡i há»c, mÃ n hÃ¬nh code má», kÃ½ tÃºc xÃ¡. Ghi chÃº "khÃ´ng logo/chá»¯".
+  - Clip dá»c bá»‹ loáº¡i.
+  - Clip lá»™ logo sÃ¢n váº­n Ä‘á»™ng, trÆ°á»ng hay hÃ£ng bá»‹ loáº¡i.
+
+## BÃ¡o cÃ¡o
+
+- Sá»‘ dá»¯ kiá»‡n theo chÆ°Æ¡ng, chia máº¡nh/vá»«a.
+- TÃªn phim tiáº¿ng Viá»‡t, kÃ¨m nguá»“n.
+- Äá» xuáº¥t cold open: cÃ³ ngÃ y giá» cá»¥ thá»ƒ, láº¥y tá»« dá»¯ kiá»‡n máº¡nh nháº¥t.
+- CÃ¢u há»i cÃ²n bá» ngá».
+
+
+===== docs/codex/long-rules.md =====
+# Luáº­t Long cho agent sáº£n xuáº¥t (chi tiáº¿t, chuyá»ƒn tá»« AGENTS.md ngÃ y 26/10/2026)
+
+Äá»c cÃ¹ng `docs/codex/long-cheatsheet.md`.
+
+### áº¢nh AI khi khÃ´ng cÃ³ áº£nh tá»± do (tá»« 26/10/2026)
+
+Cáº£nh cáº§n minh hoáº¡ mÃ  khÃ´ng cÃ³ áº£nh PD/CC0/CC BY (vÃ­ dá»¥ cáº£nh trong phÃ²ng lÃ m viá»‡c nÄƒm 1962, hay má»™t váº­t Ä‘Ã£ máº¥t) thÃ¬ **khÃ´ng tá»± táº¡o áº£nh**. Ghi prompt vÃ o `data/long/<topic>/ai_prompts.md` Ä‘á»ƒ chá»§ kÃªnh nhá» bot táº¡o.
+
+**Äá»‹nh dáº¡ng má»™t má»¥c:**
+
+```
+#### ai_01.png â€” <cáº£nh dÃ¹ng á»Ÿ chNN, cÃ¢u sá»‘ N>
+- Prompt (tiáº¿ng Anh): <mÃ´ táº£ chi tiáº¿t: bá»‘i cáº£nh, thá»i ká»³, Ã¡nh sÃ¡ng, bá»‘ cá»¥c, phong cÃ¡ch>
+- Khung: 16:9, 1920x1080
+- Cáº¥m: chá»¯ hoáº·c sá»‘ trong áº£nh, logo, khuÃ´n máº·t nháº­n ra Ä‘Æ°á»£c cá»§a ngÆ°á»i tháº­t
+- Phong cÃ¡ch: <vÃ­ dá»¥ "painterly editorial illustration, muted 1960s palette">
+```
+
+**Quy táº¯c:**
+- **NgÆ°á»i tháº­t: láº¥y dÃ¡ng gá»‘c, khÃ´ng váº½ máº·t** (chá»§ kÃªnh, 26/10/2026):
+  - ÄÆ°á»£c váº½ ngÆ°á»i cÃ³ tháº­t (Johnson, Glennâ€¦) theo **dÃ¡ng gá»‘c** trong áº£nh tÆ° liá»‡u: vÃ³c ngÆ°á»i, kiá»ƒu tÃ³c, trang phá»¥c, Ä‘á»“ váº­t, bá»‘i cáº£nh Ä‘Ãºng thá»i ká»³.
+  - Chá»‰ váº½ á»Ÿ **gÃ³c nghiÃªng quay Ä‘i hoáº·c tá»« phÃ­a sau**, khÃ´ng tháº¥y rÃµ máº·t.
+  - Trong prompt, ghi áº£nh tÆ° liá»‡u tham chiáº¿u (URL Commons/NASA trong `facts.md`) vÃ  mÃ´ táº£ dÃ¡ng cá»¥ thá»ƒ. VÃ­ dá»¥: "woman in 1960s cat-eye glasses and cardigan, seen from behind at a desk with mechanical calculator".
+  - Máº·t ngÆ°á»i tháº­t chá»‰ dÃ¹ng áº£nh tÆ° liá»‡u PD.
+- **Phong cÃ¡ch:** minh hoáº¡ hoáº·c tranh váº½, **khÃ´ng giáº£ áº£nh tÆ° liá»‡u**, Ä‘á»ƒ ngÆ°á»i xem khÃ´ng nháº§m lÃ  tÆ° liá»‡u tháº­t.
+- **KhÃ´ng gáº¯n nhÃ£n AI:** khÃ´ng thÃªm nhÃ£n "AI" trÃªn mÃ n hÃ¬nh hay trong mÃ´ táº£, vÃ¬ báº£n thÃ¢n áº£nh Ä‘Ã£ cÃ³ chá»¯ kÃ½ AI (chá»§ kÃªnh quyáº¿t Ä‘á»‹nh ngÃ y 26/10/2026).
+- **ÄÆ°á»ng dáº«n:**
+  - Chá»§ kÃªnh tháº£ áº£nh vÃ o `motion/hf/assets/long/<topic>/img/ai/ai_NN.png`.
+  - Engine chá»‰ Ä‘á»c `output/long/<topic>/img/aiNN.jpg` kÃ¨m `.json`. Claude cháº¡y `python scripts/ai_img_import.py <topic>` Ä‘á»ƒ chÃ©p áº£nh sang chá»— Ä‘Ã³.
+  - Tá»« 26/10, Claude cháº¡y `python scripts/ai_img_request.py <topic>`. Lá»‡nh nÃ y gá»­i `ai_prompts.md` cho bot táº¡o áº£nh qua webhook (khoÃ¡ Ä‘á»c tá»« registry User, xem `docs/tools/grokbot-webhook.md`), chá» áº£nh vá» rá»“i cháº¡y `ai_img_import`. **Agent sáº£n xuáº¥t khÃ´ng gá»i webhook**: chá»‰ viáº¿t prompt.
+  - Trong `IMGS`, khai key `aiNN` lÃ  `"EXT:ai:ai_NN"`.
+- **Ghi cÃ´ng:** cáº£nh dÃ¹ng áº£nh AI pháº£i cÃ³ `"credit": false`. Náº¿u thiáº¿u, engine in "áº¢NH: TÆ¯ LIá»†U Â· PHáº M VI CÃ”NG Cá»˜NG", tá»©c lÃ  gáº¯n nhÃ£n tÆ° liá»‡u cho tranh minh hoáº¡, sai sá»± tháº­t. NhÃ£n `illus` "áº¢NH MINH Há»ŒA" thÃ¬ giá»¯, vÃ¬ Ä‘Ã³ lÃ  nhÃ£n chuáº©n cho tranh minh hoáº¡.
+- **Khi chÆ°a cÃ³ áº£nh:** giá»¯ nguyÃªn cáº£nh vÃ  Ä‘Æ°á»ng dáº«n, rá»“i ghi trong bÃ¡o cÃ¡o "chá» N áº£nh AI". `html` hoáº·c `long_gate` cÃ³ thá»ƒ bÃ¡o thiáº¿u file; Ä‘iá»u Ä‘Ã³ cháº¥p nháº­n Ä‘Æ°á»£c cho tá»›i khi áº£nh vá».
+- **Giá»›i háº¡n:** tá»‘i Ä‘a 6 áº£nh AI cho má»™t bÃ i 9â€“11 phÃºt. Æ¯u tiÃªn áº£nh tÆ° liá»‡u tháº­t.
+
+### Quy trÃ¬nh Long (theo máº«u `data/long/mim-ke-huy-diet-petrov`, `mim-google-maps-kal007`)
+
+Äá»c trÆ°á»›c:
+- `motion/long/README.md`, `RETENTION.md`, `SOURCES.md`;
+- `docs/pm/2026-10-23-mim-long-moi.md`;
+- `docs/pm/so-that-bai.md`.
+
+CÃ¡c bÆ°á»›c:
+1. Viáº¿t `script.md` vÃ  `factcheck.md` (nguá»“n lÃ  URL Ä‘Ã£ má»Ÿ).
+2. Cháº¡y `python motion/long/script_lines.py <topic>`; pháº£i qua cá»•ng integrity.
+3. Viáº¿t `gen_scenes.py`, rá»“i cháº¡y `python data/long/<topic>/gen_scenes.py`, ra `spec.json` vÃ  `chNN.json`. Counter cÃ³ sá»‘ 1000â€“2100 pháº£i khai `"year": true|false`.
+4. Cháº¡y `python motion/long/studio_lint.py <topic> --strict`; pháº£i ra 0 lá»—i.
+5. Cháº¡y `python motion/long/build_long.py <topic> tts`, rá»“i `... html`. Sá»­a má»i lá»—i lint mÃ  `html` bÃ¡o.
+6. Cháº¡y `python motion/long/clip_sheet.py <topic>`, xem áº£nh clip sheet; clip sai nghÄ©a hoáº·c lá»™ logo thÃ¬ thay.
+7. Chá»‰ render khi ticket cho phÃ©p: `build_long.py <topic> render`, rá»“i `final`.
+8. Dá»±ng thumbnail `motion/long/thumbs/<topic>_t1.html`, rá»“i cháº¡y `python motion/long/thumb.py <topic> t1`.
+
+### Cá»•ng cháº¥t lÆ°á»£ng (báº¯t buá»™c, tá»« 26/10/2026)
+
+CÃ¡c cá»•ng lint chá»‰ lÃ  má»©c sÃ n ká»¹ thuáº­t. TrÆ°á»›c khi bÃ¡o xong má»™t Long, pháº£i cháº¡y:
+
+```
+python scripts/long_gate.py <topic> --min-syl 1900
+```
+
+Lá»‡nh pháº£i in **Äáº T**. CÃ¡c ngÆ°á»¡ng Ä‘Æ°á»£c Ä‘o trÃªn bÃ i máº«u Petrov vÃ  KAL 007:
+
+| NgÆ°á»¡ng | GiÃ¡ trá»‹ |
+|---|---|
+| Ã‚m tiáº¿t lá»i Ä‘á»c | â‰¥ 1.900 (â‰ˆ 9 phÃºt) |
+| Thá»i lÆ°á»£ng má»—i cáº£nh | â‰¤ 9 giÃ¢y |
+| Loáº¡i cáº£nh má»—i chÆ°Æ¡ng | â‰¥ 5 |
+| Má»™t clip dÃ¹ng láº¡i (bÃ i 9â€“12 phÃºt) | â‰¤ 2 láº§n |
+| Má»™t áº£nh dÃ¹ng láº¡i | â‰¤ 3 láº§n |
+| URL nguá»“n trong `factcheck.md` | â‰¥ 8 |
+| TiÃªu Ä‘á» | â‰¤ 60 kÃ½ tá»± |
+
+NgoÃ i ra: má»i nÄƒm trong ká»‹ch báº£n pháº£i cÃ³ trong `factcheck.md`, vÃ  khÃ´ng Ä‘Æ°á»£c cÃ³ cÃ¢u Ä‘á»‡m.
+
+**BÃ i máº«u Ä‘á»ƒ so:**
+- Petrov: 22,5 phÃºt; 179 cáº£nh (7,6 giÃ¢y/cáº£nh); Ã­t nháº¥t 7 loáº¡i cáº£nh má»—i chÆ°Æ¡ng; 15 áº£nh khÃ¡c nhau.
+- KAL 007: 10,5 phÃºt; 82 cáº£nh (7,7 giÃ¢y/cáº£nh); khÃ´ng dÃ¹ng clip, chá»‰ áº£nh vÃ  Ä‘á»“ hoáº¡ (báº£n Ä‘á»“, timeline, counter).
+
+Má»—i chÆ°Æ¡ng cá»§a hai bÃ i nÃ y cÃ³ 3â€“4 dá»¯ kiá»‡n cá»¥ thá»ƒ cÃ³ nguá»“n.
+
+### Lá»—i Ä‘Ã£ gáº·p (Ä‘á»«ng láº·p láº¡i)
+
+Thá»­ nghiá»‡m Codex T1/T1b, 26/10/2026:
+
+1. **ChÃ¨n cÃ¢u Ä‘á»‡m rá»—ng nghÄ©a cho qua tá»‰ lá»‡ cÃ¢u ngáº¯n cá»§a lint.** VÃ­ dá»¥: "Ráº¥t cháº­m.", "ÄÃ³ lÃ  cÃ¢u há»i khÃ³.". CÃ¢u ngáº¯n chá»‰ Ä‘áº·t sau má»™t phÃ¡n Ä‘á»‹nh hoáº·c khoáº£nh kháº¯c cáº£m xÃºc.
+2. **Bá»‹ yÃªu cáº§u bá» cÃ¢u Ä‘á»‡m thÃ¬ chá»‰ xoÃ¡, khÃ´ng viáº¿t ná»™i dung thay.** BÃ i tá»¥t tá»« 9 xuá»‘ng 5 phÃºt. Thiáº¿u Ä‘á»™ dÃ i thÃ¬ pháº£i **tÃ¬m thÃªm dá»¯ kiá»‡n cÃ³ nguá»“n**, khÃ´ng Ä‘Æ°á»£c Ä‘á»ƒ bÃ i ngáº¯n Ä‘i.
+3. **Äá»c má»™t ngÃ y cá»¥ thá»ƒ (18/3/1940) trong khi chÃ­nh `factcheck.md` ghi lÃ  chÆ°a chá»‘t Ä‘Æ°á»£c.**
+4. **Má»™t clip láº·p 8 láº§n; 9 phÃºt chá»‰ cÃ³ 18 cáº£nh vÃ  toÃ n chá»¯.**
+5. **Cold open liá»‡t kÃª tÃªn ngÆ°á»i thay vÃ¬ dá»±ng má»™t cáº£nh cÃ³ cÄƒng tháº³ng; cÃ¢u meta "HÃ´m nay mÃ¬nh khÃ´ng ká»ƒâ€¦".**
+6. **Coi viá»‡c qua lint lÃ  xong.** Xong nghÄ©a lÃ  `long_gate.py` in Äáº T **vÃ ** ná»™i dung Ä‘Ã¡ng xem.
+7. **Tháº» chÆ°Æ¡ng ghi sai trÆ°á»ng.** ÄÃ£ ghi `"number": "05"` thay cho `no`/`k`, nÃªn engine hiá»‡n chá»¯ "undefined" giá»¯a mÃ n hÃ¬nh á»Ÿ cáº£ 8 chÆ°Æ¡ng. Tháº» chÆ°Æ¡ng Ä‘Ãºng (theo `mim-ke-huy-diet-petrov/ch05.json`):
+
+   ```json
+   {"type":"chapter","no":"5","k":"CHÆ¯Æ NG NÄ‚M","title":"â€¦","sub":"<má»‘c>","bg":"<áº£nh>","titleAt":[0,"<tá»«>"]}
+   ```
+
+   Má»—i `chNN.json` cÅ©ng pháº£i cÃ³ `"hud": {"k": "CHÆ¯Æ NG 05", "t": "<TIÃŠU Äá»€>"}`. Thiáº¿u `hud` thÃ¬ `describe.py` cháº¿t vÃ  mÃ´ táº£ khÃ´ng cÃ³ danh sÃ¡ch chÆ°Æ¡ng.
+8. **Má»™t khuÃ´n cáº£nh cho má»i chÆ°Æ¡ng.** Má»™t khuÃ´n 9 cáº£nh Ä‘Æ°á»£c dÃ¹ng láº¡i á»Ÿ cáº£ 8 chÆ°Æ¡ng, nÃªn cÃ¹ng má»™t dÃ²ng chá»¯ hiá»‡n 8 láº§n. Má»—i cáº£nh pháº£i minh hoáº¡ Ä‘Ãºng cÃ¢u Ä‘ang Ä‘á»c, vÃ  chá»¯ trÃªn mÃ n hÃ¬nh láº¥y tá»« dá»¯ kiá»‡n cá»§a chÃ­nh chÆ°Æ¡ng Ä‘Ã³. MÃ´-tÃ­p láº·p chá»‰ Ä‘Æ°á»£c lÃ m báº±ng `ledger` cÃ³ tiÃªu Ä‘á» cá»‘ Ä‘á»‹nh, má»—i chÆ°Æ¡ng thÃªm má»™t dÃ²ng má»›i.
+9. **QuÃªn báº£ng `SAY` vÃ  Ä‘á»ƒ `spec.youtube` trá»‘ng.** Pháº£i viáº¿t ngay tá»« Ä‘áº§u, theo máº«u Petrov vÃ  KAL:
+   - `SAY` phiÃªn Ã¢m má»i tÃªn nÆ°á»›c ngoÃ i, viáº¿t táº¯t (TNMOC, NASAâ€¦) vÃ  sá»‘ ráº¥t lá»›n.
+   - `spec.youtube` gá»“m: `publish_at`, `playlist`, `category`, `thumb`, `summary`, `more`, `chapter_titles`, `sources` (â‰¥ 8 URL cÃ´ng khai), `tags`, `hashtags`, `video_credits`.
+
+**NghiÃªn cá»©u trÆ°á»›c, viáº¿t sau:** khi ticket chia Ä‘Ã´i, ticket nghiÃªn cá»©u chá»‰ gom kho dá»¯ kiá»‡n cÃ³ URL (`facts.md`). Ticket viáº¿t chá»‰ dÃ¹ng dá»¯ kiá»‡n trong kho Ä‘Ã³.
+
+
+
+===== docs/codex/long-cheatsheet.md =====
+# Cheatsheet dá»±ng Long MIM (cho Codex, Ä‘á»c thay engine)
+
+**KhÃ´ng Ä‘á»c** `motion/long/build_long.py`, `motion/hf/assets/engine/*`, `motion/stier/*`, `factory/*`, `pexels.py` hay thÆ° má»¥c cá»§a bÃ i khÃ¡c. Má»i thá»© cáº§n biáº¿t Ä‘á»u cÃ³ trong cheatsheet nÃ y vÃ  trong **má»™t file máº«u**:
+
+> `data/long/mim-katherine-johnson/gen_scenes.py`. BÃ i nÃ y Ä‘Ã£ qua cá»•ng, render vÃ  Ä‘Äƒng. **ChÃ©p nguyÃªn file nÃ y lÃ m khung.** Giá»¯ cÃ¡c helper á»Ÿ dÃ²ng 57â€“163 vÃ  `main()`. Chá»‰ thay pháº§n ná»™i dung bÃªn dÆ°á»›i.
+
+## Thay nhá»¯ng gÃ¬ trong khung
+
+| Khá»‘i | Thay báº±ng |
+|---|---|
+| `TOPIC`, `TITLE` (â‰¤ 60 kÃ½ tá»±, má»™t dáº¥u `:`) | Cá»§a bÃ i má»›i |
+| `SAY` | PhiÃªn Ã¢m má»i tÃªn nÆ°á»›c ngoÃ i, viáº¿t táº¯t vÃ  sá»‘ lá»›n trong lá»i Ä‘á»c. KhoÃ¡ viáº¿t thÆ°á»ng. VÃ­ dá»¥: `"nasa": "Na-sa"` |
+| `IMGS` | áº¢nh Commons `"File:â€¦"` (Ä‘Ã£ kiá»ƒm PD/CC0/CC BY) hoáº·c `"EXT:ai:ai_NN"` cho áº£nh AI |
+| `AI_PATH`, `STAND` | Sá»‘ áº£nh AI cá»§a bÃ i (â‰¤ 6); `STAND` = áº£nh tÆ° liá»‡u thay táº¡m cho tá»«ng áº£nh AI |
+| `GEO` | Báº£n Ä‘á»“: `countries`, `context`, `bbox [lon_min, lat_min, lon_max, lat_max]`, `pins [{name, lon, lat, label}]` |
+| `CHAPTER_TITLES` | `ch00`â€“`ch07`, tiáº¿ng Viá»‡t cÃ³ dáº¥u |
+| `LEDGER`, `ROWS` | MÃ´-tÃ­p cá»§a bÃ i: má»™t tiÃªu Ä‘á», má»—i chÆ°Æ¡ng thÃªm 1 dÃ²ng |
+| `ch00()`â€“`ch07()` | Cáº£nh cá»§a tá»«ng chÆ°Æ¡ng (má»¥c dÆ°á»›i) |
+| `make_spec()` | Äá»§ 11 trÆ°á»ng `youtube`, Ä‘á»•i `publish_at`; giá»¯ `"say": SAY`, `imgs`, `geo` |
+
+## Helper: chá»¯ kÃ½ vÃ  Ã½ nghÄ©a
+
+**Neo thá»i gian:** `a(line, word)` neo cáº£nh vÃ o cÃ¢u `line` cá»§a chÆ°Æ¡ng, táº¡i tá»« `word`. `word` pháº£i lÃ  chá»¯ **cÃ³ tháº­t trong cÃ¢u Ä‘Ã³**, khÃ´ng pháº£i sá»‘ vÃ  khÃ´ng pháº£i chá»¯ cÃ³ trong `SAY`.
+
+| Helper | DÃ¹ng khi |
+|---|---|
+| `chapter(no, k, title, sub, bg, title_at)` | Cáº£nh Ä‘áº§u má»—i chÆ°Æ¡ng. `k = "CHÆ¯Æ NG Má»˜T"`; `sub` = má»‘c cÃ³ nguá»“n; `bg` = key áº£nh |
+| `photo(img, at, key, value, kin=None)` | áº¢nh tÆ° liá»‡u hoáº·c áº£nh AI. áº¢nh AI tá»± cÃ³ `illus` + `credit: False` |
+| `print_scene(img, at, head, key, value)` | áº¢nh Ä‘áº·t nhÆ° tá» in, cÃ³ cá»™t ghi chÃº |
+| `broll(vid, at, text)` | Clip Pexels (id sá»‘), cÃ³ nhÃ£n VIDEO MINH Há»ŒA |
+| `kinetic(at, text, small=None)` | Chá»¯ lá»›n Ä‘á»™ng |
+| `slam(at, text, sub)` | Má»™t con sá»‘ hoáº·c cá»¥m tá»« Ä‘áº­p máº¡nh |
+| `date(at, day, d, sub)` | Má»‘c ngÃ y lá»›n. `d = "20.02.1962"` (chá»¯ sá»‘ vÃ  dáº¥u cháº¥m); chá»¯ thÃ¬ Ä‘á»ƒ vÃ o `day` |
+| `counter(at, to, suffix, label, frm=0, year=False)` | Sá»‘ Ä‘áº¿m. NÄƒm thÃ¬ `year=True` |
+| `timeline(at, bg, items)` | DÃ²ng thá»i gian (xem cÃ¡ch dÃ¹ng trong máº«u) |
+| `org(at, nodes)` | SÆ¡ Ä‘á»“ ngÆ°á»i hoáº·c tá»• chá»©c |
+| `question(at, text)` | CÃ¢u há»i treo |
+| `ledger(n, at)` | Hiá»‡n mÃ´-tÃ­p tá»›i dÃ²ng `n` |
+| `{"type": "map", "at": â€¦, "geo": "<key GEO>"}` | Báº£n Ä‘á»“; máº«u cÃ³ á»Ÿ `ch01`/`ch05` cá»§a khung |
+
+## Luáº­t cáº£nh (cá»•ng `long_gate.py` sáº½ cháº·n náº¿u sai)
+
+- 60â€“80 cáº£nh, trung bÃ¬nh â‰¤ 9 giÃ¢y/cáº£nh, má»—i chÆ°Æ¡ng â‰¥ 5 loáº¡i cáº£nh.
+- KhÃ´ng dÃ²ng chá»¯ hiá»ƒn thá»‹ nÃ o láº·p > 2 láº§n. MÃ´-tÃ­p chá»‰ qua `ledger`.
+- Má»™t clip dÃ¹ng â‰¤ 2 láº§n, Ã­t nháº¥t 6 clip khÃ¡c nhau. Má»™t áº£nh dÃ¹ng â‰¤ 3 láº§n.
+- Má»—i cáº£nh minh hoáº¡ **cÃ¢u Ä‘ang Ä‘á»c**.
+
+## Clip Pexels
+
+- Táº£i: `python motion/long/pexels.py get <topic> <id> â€¦`. Chá»‰ dÃ¹ng id Ä‘Ã£ ghi trong `facts.md`. Tá»« 26/10/2026 táº£i tháº³ng theo id, khÃ´ng cáº§n `search` trÆ°á»›c.
+  - Lá»‡nh in "khÃ´ng cÃ³ báº£n ngang â‰¤1920 -- bá» qua" nghÄ©a lÃ  clip dá»c. Pháº£i thay báº±ng clip ngang. TÃ¬m báº±ng `pexels.py search <topic> "tá»« khoÃ¡"`, rá»“i `get` id má»›i.
+- SoÃ¡t: `python motion/long/clip_sheet.py <topic>`, má»Ÿ `output/long/<topic>/qa_clips.jpg` xem. Clip lá»™ chá»¯, logo hoáº·c sai nghÄ©a thÃ¬ thay.
+
+## BÃ i há»c Moneyball (26/10/2026)
+
+- **VÃ²ng ká»‹ch báº£n (W1):** pháº£i cháº¡y `script_lines.py` vÃ  `studio_lint.py --strict` rá»“i sá»­a háº¿t lá»—i cÃ¢u > 35 tiáº¿ng **ngay trong W1**. TÃ¡ch cÃ¢u sau khi Ä‘Ã£ dá»±ng cáº£nh thÃ¬ má»i neo phÃ­a sau bá»‹ lá»‡ch, sá»­a ráº¥t tá»‘n.
+- **Neo pháº£i tÄƒng dáº§n.** Cáº£nh sau pháº£i neo vÃ o tá»« Ä‘á»©ng **sau** neo cá»§a cáº£nh trÆ°á»›c, tÃ­nh theo (cÃ¢u, vá»‹ trÃ­ tá»«). Neo ngÆ°á»£c hoáº·c trÃ¹ng thÃ¬ engine bÃ¡o "cáº£nh quÃ¡ ngáº¯n".
+- **KhÃ´ng neo vÃ o chá»¯ sá»‘.** VÃ­ dá»¥ "11" khÃ´ng khá»›p vá»›i "11â€“0".
+- **"Qua html" nghÄ©a lÃ ** in Ä‘á»§ 8 dÃ²ng `chNN: â€¦ -> â€¦html` vÃ  khÃ´ng cÃ³ `Error`. Cháº¡y báº£n `--standin` mÃ  khÃ´ng Ä‘á»c lá»—i thÃ¬ chÆ°a tÃ­nh lÃ  qua.
+
+## Thá»© tá»± lá»‡nh
+
+Äáº·t `PYTHONIOENCODING=utf-8` cho má»i lá»‡nh.
+
+1. `python motion/long/script_lines.py <topic>`: Ä‘Æ°a lá»i Ä‘á»c tá»« `script.md` vÃ o `chNN.json`.
+2. `python data/long/<topic>/gen_scenes.py`, rá»“i cháº¡y láº¡i `script_lines.py`. `gen_scenes` ghi Ä‘Ã¨ `chNN.json` khÃ´ng kÃ¨m `lines`.
+3. `python motion/long/studio_lint.py <topic> --strict` pháº£i ra **0 lá»—i**.
+   - CÃ¢u quÃ¡ 35 tiáº¿ng thÃ¬ **tÃ¡ch thÃ nh 2 cÃ¢u** trong `script.md`, giá»¯ nguyÃªn Ã½, ká»ƒ cáº£ khi ká»‹ch báº£n Ä‘Ã£ Ä‘Æ°á»£c duyá»‡t.
+   - TÃ¡ch cÃ¢u xong, kiá»ƒm láº¡i neo `a(line, word)` cá»§a cÃ¡c cÃ¢u phÃ­a sau trong chÆ°Æ¡ng Ä‘Ã³, vÃ¬ sá»‘ thá»© tá»± cÃ¢u Ä‘Ã£ lá»‡ch.
+4. `python motion/long/build_long.py <topic> tts` cho **Ä‘á»§ má»i chÆ°Æ¡ng**: pháº£i cÃ³ `output/long/<topic>/chNN/timing.json` cho tá»«ng chÆ°Æ¡ng. Rá»“i cháº¡y `â€¦ html`. Náº¿u áº£nh AI chÆ°a cÃ³ thÃ¬ cháº¡y `gen_scenes.py --standin` Ä‘á»ƒ soÃ¡t html, sau Ä‘Ã³ cháº¡y láº¡i báº£n tháº­t.
+5. `python scripts/long_gate.py <topic> --min-syl 1900` pháº£i ra **Äáº T**.
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Encoding utf8 'data/long/mim-moneyball/facts.md' -TotalCount 20; Get-Content -Encoding utf8 'data/long/mim-moneyball/facts.md' | Select-String -Pattern '"'^(##|###) .*?(Ảnh|B-roll|AI)'"' -Context 0,24" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 175ms:
+# Kho dữ kiện — `mim-moneyball`
+
+Ngày mở nguồn: 26/10/2026. Đây là kho nghiên cứu cho pha viết, không phải kịch bản. Dòng **mạnh** có thể dùng làm khẳng định trực tiếp; dòng **vừa** phải quy dẫn trong lời đọc (ví dụ: “Theo *Washington Post*...” ). Không dùng hình, poster, đoạn trích hoặc âm thanh của phim.
+
+## CH00 — 20 trận, từ 13/08 đến 04/09/2002
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 01 | Oakland Athletics bắt đầu chuỗi thắng 20 trận bằng chiến thắng 5–4 trước Toronto ngày 13/08/2002. | [MLB — 10th Anniversary of 20-Game Streak](https://www.mlb.com/athletics/news/athletics-to-celebrate-10th-anniversary-of-20-game-winning-streak/c-36661928) | **mạnh** |
+| 02 | Chuỗi kết thúc ở mốc 20 vào ngày 04/09/2002 khi Oakland thắng Kansas City 12–11; đây là kỷ lục chuỗi thắng của American League tại thời điểm đó. | [MLB — Twenty wins, 20 ways to win](https://www.mlb.com/athletics/news/twenty-wins-20-ways-to-win/c-121624) | **mạnh** |
+| 03 | Trong trận thắng thứ 20, Oakland từng dẫn 11–0 sau ba hiệp trước khi Kansas City gỡ hòa ở hiệp chín. | [MLB — 10th Anniversary of 20-Game Streak](https://www.mlb.com/athletics/news/athletics-to-celebrate-10th-anniversary-of-20-game-winning-streak/c-36661928) | **mạnh** |
+| 04 | Scott Hatteberg vào sân đánh thay ở đầu hiệp chín và đánh home run trước Jason Grimsley, chốt trận thắng 12–11. | [MLB — Scott Hatteberg player page](https://www.mlb.com/player/scott-hatteberg-115608) | **mạnh** |
+
+## CH01 — Một mùa 103–59, không chỉ một đoạn cao trào
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 05 | Oakland kết thúc mùa thường 2002 với thành tích 103 thắng, 59 thua và đứng đầu AL West. | [Baseball-Reference — 2002 Oakland Athletics](https://www.baseball-reference.com/teams/OAK/2002.shtml) | **mạnh** |
+| 06 | Trước khi chuỗi 20 trận bắt đầu, đội có thành tích 20–26; sau đó đi 83–33 trong phần còn lại của mùa thường. | [MLB — A’s proving themselves with hot streak](https://www.mlb.com/athletics/news/oakland-as-proving-themselves-with-hot-streak/c-132917242) | **mạnh** |
+| 07 | MLB ghi quỹ lương Oakland năm 2002 là 40.004.167 USD, đứng thứ 28 trong giải. | [MLB — Ten Years Later: The A’s Are Back](https://www.mlb.com/news/ten-years-later-the-as-are-back/c-37848808) | **mạnh** |
+
+> ## Ảnh Commons đã kiểm giấy phép
+  
+  Mỗi trang file dưới đây đã mở và hiển thị `LicenseShortName` phù hợp: chỉ **CC BY** hoặc **Public domain**. Khi 
+dựng, kiểm lại trang file trước khi tải và crop/loại khung có logo đội, biển hiệu hoặc chữ đọc được.
+  
+  | # | File / mô tả | Giấy phép | Trang nguồn |
+  |---|---|---|---|
+  | I01 | Billy Beane, 2006 | CC BY 2.0 | [Commons](https://commons.wikimedia.org/wiki/File:Billy_Beane_2006.jpg) |
+  | I02 | Billy Beane tại Leaders Event, 2010 | CC BY 2.0 | 
+[Commons](https://commons.wikimedia.org/wiki/File:Billy_Beane_-_General_Manager_Oakland_As_(5964095428).jpg) |
+  | I03 | Paul DePodesta và Jimmy Haslam, 2017; crop chỉ DePodesta nếu dùng | CC BY 2.0 | 
+[Commons](https://commons.wikimedia.org/wiki/File:Paul_DePodesta_and_Jimmy_Haslam_(36730002206).jpg) |
+  | I04 | Oakland Coliseum, nhìn từ khán đài trên, 2024 | CC BY 4.0 | 
+[Commons](https://commons.wikimedia.org/wiki/File:Oakland_Coliseum_view_from_upper_deck.jpg) |
+  | I05 | Oakland Coliseum ban đêm, 2024 | CC BY 4.0 | 
+[Commons](https://commons.wikimedia.org/wiki/File:Oakland_Coliseum_at_night.jpg) |
+  | I06 | Góc nhìn trên cao Oakland Coliseum, 2024 | CC BY 4.0 | 
+[Commons](https://commons.wikimedia.org/wiki/File:Oakland_Coliseum_overhead_angle,_September_2024.jpg) |
+  | I07 | Oakland Coliseum nhìn từ trên không, 2024 | CC BY 4.0 | 
+[Commons](https://commons.wikimedia.org/wiki/File:Oakland_Coliseum_aerial_view_2024.jpg) |
+  | I08 | Quầy vé Oakland Coliseum, 2024 | CC BY 4.0 | 
+[Commons](https://commons.wikimedia.org/wiki/File:Oakland_Coliseum_ticket_booths.jpg) |
+  | I09 | Bảng điểm một trận baseball, ảnh chung | Public domain | 
+[Commons](https://commons.wikimedia.org/wiki/File:Baseball_game_score.jpg) |
+  | I10 | Scorecard baseball, ảnh chung | Public domain | 
+[Commons](https://commons.wikimedia.org/wiki/File:Pac_bell_scorecard.jpg) |
+  
+> ## Ứng viên B-roll Pexels (chưa tải)
+  
+  Các trang đã mở ghi `Free`/`Free to use`. Chỉ dùng như minh họa trung tính cho phòng tuyển trạch, họp, lựa chọn và 
+dữ liệu; không nhận diện người trong clip là người thật trong câu chuyện.
+  
+  | ID | Mô tả ngắn | Ghi chú bắt buộc | Trang nguồn |
+  |---:|---|---|---|
+  | 6930656 | Bắt tay quanh bàn họp | Soi màn hình, giấy và logo; không gắn tên người thật. | 
+[Pexels](https://www.pexels.com/video/coworkers-shaking-hands-at-the-office-6930656/) |
+  | 7552614 | Nhóm thảo luận trong văn phòng | Loại frame lộ logo/chữ trên giấy hoặc màn hình. | 
+[Pexels](https://www.pexels.com/video/people-in-a-meeting-7552614/) |
+  | 9464879 | Đồng nghiệp trao đổi và bắt tay | Không dùng như tái hiện giao dịch cầu thủ. | 
+[Pexels](https://www.pexels.com/video/people-shaking-hands-at-the-office-9464879/) |
+  | 6930648 | Họp văn phòng | Soi cốc, bảng và trang phục có nhãn. | 
+[Pexels](https://www.pexels.com/video/coworkers-shaking-hands-in-the-office-6930648/) |
+  | 8275595 | Hai người họp, khung 16:9 | Chỉ dùng nền trung tính, không gắn danh tính. | 
+[Pexels](https://www.pexels.com/video/men-shaking-hands-at-the-office-8275595/) |
+  | 8135918 | Nhóm bàn kế hoạch | Loại blueprint, đồ thị hay chữ đọc được. | 
+[Pexels](https://www.pexels.com/video/people-in-a-meeting-at-an-office-8135918/) |
+  | 3253798 | Nhóm họp với thiết bị | Soi laptop và logo trước khi cắt. | 
+[Pexels](https://www.pexels.com/video/a-woman-shaking-hands-in-a-business-meeting-3253798/) |
+  | 7691559 | Góc cao nhóm bàn biểu đồ | Không để biểu đồ/chữ đọc được; không nói là số liệu Oakland. | 
+[Pexels](https://www.pexels.com/video/business-people-having-a-meeting-7691559/) |
+  | 7989468 | Nhóm đặt tay trong cuộc họp | Loại màn hình trình chiếu/chữ thương hiệu. | 
+[Pexels](https://www.pexels.com/video/coworkers-putting-their-hands-together-at-a-meeting-7989468/) |
+  | 8863754 | Hai người thảo luận trong phòng họp | Không dùng như ảnh nhân vật thật. | 
+[Pexels](https://www.pexels.com/video/candidates-having-an-agreement-8863754/) |
+  | 5726611 | Nhóm trao đổi trong văn phòng | Soi kỹ bảng, giấy, màn hình và logo. | 
+[Pexels](https://www.pexels.com/video/coworkers-having-a-meeting-in-the-office-5726611/) |
+  
+> ## Đề xuất ảnh AI
+  
+  #### ai_01.png — phòng tuyển trạch minh họa cho CH02, khi nói về dữ liệu và trực giác
+  - Prompt (tiếng Anh): Editorial illustration, late-1990s baseball scouting room at night, a long table with 
+anonymous silhouettes seen only from behind comparing handwritten stat sheets and simple monochrome charts, warm desk 
+lamps, filing cabinets, no recognizable faces, no team colors, no real team insignia, clearly painted rather than 
+archival photography.
+  - Khung: 16:9, 1920x1080
+  - Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
+  - Phong cách: painterly editorial illustration, muted green and amber palette
+  
+  #### ai_02.png — sân bóng chày đêm minh họa cho CH00, trước cú đánh quyết định
+  - Prompt (tiếng Anh): Painterly editorial illustration of an empty generic baseball diamond under stadium lights at 
+night, viewed from high behind home plate, rainless dramatic sky, no players close enough to identify, no team colors, 
+no signage, no logos, no text, clearly an illustration and not archival footage.
+  - Khung: 16:9, 1920x1080
+  - Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
+  - Phong cách: painterly editorial illustration, cinematic blue and amber light
+  
+  #### ai_03.png — bảng dữ liệu minh họa cho CH07, khi phân tích lan rộng
+  - Prompt (tiếng Anh): Editorial illustration of anonymous analysts viewed from behind in a modern operations room, 
+projected abstract dots, bars and trend lines without readable numbers or letters, baseball tucked on a blank desk, no 
+brands, no logos, no recognizable real people, deliberately painterly not photorealistic.
+  - Khung: 16:9, 1920x1080
+  - Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
+  - Phong cách: contemporary editorial illustration, restrained navy, cream and orange palette
+
+
+
+codex
+Ticket này là ticket nghiên cứu, nên theo chỉ dẫn ngay trong ticket mình sẽ không viết kịch bản, không render và không chạy `long_gate` (đây là ngoại lệ mà ticket quy định). Mình đang xây kho dữ kiện 8 chương, ưu tiên nguồn gốc và ghi riêng những điểm phim/đời thật chưa đủ chứng cứ.
+web search: 
+web search: site:thecrimson.com Facemash October 2003 Zuckerberg 450 visitors 22000 photo views ...
+web search: 
+web search: https://www.thecrimson.com/article/2003/11/4/hot-or-not-website-briefly-judges/
+web search: 
+web search: site:about.fb.com ranking Feed algorithm signals meaningful interactions 2018 ...
+web search: 
+web search: site:commons.wikimedia.org/wiki/File Mark Zuckerberg CC BY ...
+web search: 
+web search: site:commons.wikimedia.org/wiki/File Harvard Yard "CC BY" -"BY-SA" ...
+web search: 
+web search: site:pexels.com/video university campus 16:9 free video ...
+codex
+Mình đã xác nhận được mốc Facemash từ bài Crimson đương thời, ngày ra mắt TheFacebook và dữ liệu tăng trưởng ban đầu từ Crimson, hồ sơ tòa án cho vụ ConnectU/Winklevoss, cùng mô tả chính thức về các tín hiệu xếp hạng Feed. Quan trọng: chưa có nguồn đủ mạnh chứng minh Facemash dùng Elo, nên phần này sẽ được khóa thành “không khẳng định”.
+apply patch
+patch: completed
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-social-network\facts.md
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-26-codex-pilot\T5R-ket-qua.md
+diff --git a/data/long/mim-social-network/facts.md b/data/long/mim-social-network/facts.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..c08d6df5494225a0214ea527952a450742ea553c
+--- /dev/null
++++ b/data/long/mim-social-network/facts.md
+@@ -0,0 +1,137 @@
++# Kho dữ kiện — `mim-social-network`
++
++Ngày mở nguồn: 26/10/2026. Đây là kho nghiên cứu cho pha viết, không phải kịch bản. Dòng **mạnh** có thể dùng làm khẳng định trực tiếp; dòng **vừa** phải quy dẫn trong lời đọc. Không dùng hình, poster, đoạn trích hoặc âm thanh của phim.
++
++## CH00 — Một đêm, một trang bị tắt
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 01 | Bài của *The Harvard Crimson* ngày 04/11/2003 xác định Mark E. Zuckerberg là người lập Facemash khi đang học Harvard; trang dùng ảnh thẻ lấy từ các “House facebooks” trực tuyến. | [The Harvard Crimson — *Hot or Not? Website Briefly Judges Looks*](https://www.thecrimson.com/article/2003/11/4/hot-or-not-website-briefly-judges/) | **mạnh** |
++| 02 | Theo bài năm 2003, Facemash cho người xem chọn người “hotter” giữa hai ảnh được chọn ngẫu nhiên, hoặc chấm ảnh trong cùng một House. | [The Harvard Crimson — *Hot or Not?*](https://www.thecrimson.com/article/2003/11/4/hot-or-not-website-briefly-judges/) | **mạnh** |
++| 03 | Zuckerberg nói với Crimson rằng ông đã truy cập các House facebooks để gom ảnh thẻ vào Facemash. | [The Harvard Crimson — *Hot or Not?*](https://www.thecrimson.com/article/2003/11/4/hot-or-not-website-briefly-judges/) | **mạnh** |
++| 04 | Trang bị tắt vào tối Chủ nhật sau phản ứng trên trường; tới lúc đó có 450 khách truy cập và ít nhất 22.000 lượt bỏ phiếu, theo Zuckerberg nói với Crimson. | [The Harvard Crimson — *Hot or Not?*](https://www.thecrimson.com/article/2003/11/4/hot-or-not-website-briefly-judges/) | **mạnh** |
++
++## CH01 — Harvard xử lý vụ Facemash
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 05 | Crimson năm 2014 viết Facemash nhận hơn 20.000 lượt truy cập trong 24 giờ và thu hút sự chú ý của Administrative Board của Harvard College. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
++| 06 | Bài Crimson cùng năm nói Administrative Board không buộc Zuckerberg rời Harvard vì các vi phạm liên quan Facemash. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
++| 07 | Bản khiếu kiện đa quận về mạng xã hội nộp năm 2024 tóm lược rằng Zuckerberg bị triệu tập trước cơ quan kỷ luật của Harvard sau Facemash. Đây là tài liệu tố tụng, không phải phán quyết về nguồn gốc Facebook. | [In re: Social Media Adolescent Addiction/Personal Injury Products Liability Litigation — Complaint, tr. 64–66](https://s3.amazonaws.com/hoth.bizango/assets/26247/Palo_Alto_Complaint_032824.pdf) | **vừa** |
++| 08 | Trong bài năm 2003, Zuckerberg nói ông quan tâm đến phần khoa học máy tính của dự án; đây là phát biểu đương thời, không đủ để suy ra động cơ rộng hơn. | [The Harvard Crimson — *Hot or Not?*](https://www.thecrimson.com/article/2003/11/4/hot-or-not-website-briefly-judges/) | **mạnh** |
++
++## CH02 — Từ danh bạ House đến TheFacebook
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 09 | Trước TheFacebook, Harvard có danh bạ tìm kiếm cho khóa năm nhất, còn các House giữ danh bạ ảnh và số điện thoại riêng, thường bị hạn chế truy cập. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
++| 10 | TheFacebook đi vào hoạt động ngày 04/02/2004 từ phòng ký túc xá Kirkland House của Zuckerberg. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
++| 11 | Ban đầu chỉ sinh viên Harvard có thể đăng ký TheFacebook; một người dùng đầu tiên nói cần địa chỉ `harvard.edu`. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
++| 12 | Trang có 650 người đăng ký trong 24 giờ đầu và 4.300 tài khoản trong hai tuần đầu, theo Crimson phỏng vấn người dùng đầu tiên. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
++
++## CH03 — Đà mở rộng đầu năm 2004
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 13 | Đến tháng 03/2004, TheFacebook đã có chỗ đứng tại Columbia, Stanford và Yale, đồng thời đạt người đăng ký thứ 10.000. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
++| 14 | Một tính năng đầu tiên là Coursematch, cho phép người dùng xem bạn bè học lớp nào trong học kỳ. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
++| 15 | Khi Zuckerberg thi cuối kỳ vào tháng 05/2004, TheFacebook đã mở rộng trên toàn quốc và gần 100.000 người dùng, theo Crimson. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
++| 16 | Crimson ghi nhóm đi Palo Alto sau kỳ thi gồm Zuckerberg, Dustin Moskovitz, Andrew McCollum và các thực tập sinh; tháng 06/2004 công ty đổi tên thành Facebook. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
++
++## CH04 — Eduardo Saverin: sự kiện có nguồn, không suy diễn
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 17 | Hồ sơ chân dung của Crimson năm 2005 gọi Eduardo Saverin là CFO của Facebook, nhà đầu tư sớm và người điều phối quảng cáo quốc gia/lịa phương thời đầu. | [The Harvard Crimson — *Key Players*](https://www.thecrimson.com/article/2005/2/24/key-players-three-full-time-employees-have/?page=single) | **mạnh** |
++| 18 | Theo chính Saverin trong hồ sơ Crimson, Zuckerberg đã tiếp cận ông về TheFacebook trước khi lập trình trang. | [The Harvard Crimson — *Key Players*](https://www.thecrimson.com/article/2005/2/24/key-players-three-full-time-employees-have/?page=single) | **mạnh** |
++| 19 | Crimson năm 2014 ghi Saverin không đi Palo Alto cùng nhóm vào tháng 06/2004 và sau đó bị đẩy khỏi công ty. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
++| 20 | Không dùng lời đọc nào gán thái độ, động cơ hoặc mức độ trách nhiệm cá nhân cho Saverin ngoài các sự kiện ở dòng 17–19, trừ khi ticket viết có nguồn mới. | [The Harvard Crimson — *Key Players*](https://www.thecrimson.com/article/2005/2/24/key-players-three-full-time-employees-have/?page=single) | **mạnh** |
++
++## CH05 — Winklevoss, Narendra và hồ sơ vụ kiện
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 21 | Crimson ghi Cameron Winklevoss, Tyler Winklevoss và Divya Narendra đã tìm Zuckerberg để hỗ trợ xây mạng xã hội riêng cho sinh viên Harvard. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
++| 22 | Tòa Phúc thẩm Liên bang Khu vực 9 tóm tắt rằng ba người Winklevoss/Narendra cáo buộc Zuckerberg lấy ý tưởng Facebook của họ; đây là cáo buộc của các bên, không phải kết luận thực tế của tòa về hành vi đó. | [U.S. Court of Appeals for the Ninth Circuit — *Facebook v. ConnectU* (2011)](https://law.justia.com/cases/federal/appellate-courts/ca9/08-16745/08-16745-2011-04-11.html) | **mạnh** |
++| 23 | Phán quyết năm 2011 giữ nguyên việc thực thi thỏa thuận dàn xếp giữa Facebook, Winklevosses/Narendra và ConnectU. | [U.S. Court of Appeals for the Ninth Circuit — *Facebook v. ConnectU* (2011)](https://law.justia.com/cases/federal/appellate-courts/ca9/08-16745/08-16745-2011-04-11.html) | **mạnh** |
++| 24 | Hồ sơ tòa Massachusetts mô tả phiên hòa giải toàn cầu ngày 22/02/2008; Facebook nhận toàn bộ cổ phần ConnectU đổi lấy 20 triệu USD tiền mặt và hơn một triệu cổ phiếu Facebook, giá trị khi đó xấp xỉ 65 triệu USD. | [Massachusetts Appeals Court — *Chang v. Winklevoss*](https://law.justia.com/cases/massachusetts/court-of-appeals/volumes/95/95massappct202.html) | **mạnh** |
++
++## CH06 — Phim và đời thật: chỉ nêu phần có thể kiểm
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 25 | Netflix Việt Nam hiển thị tên phim năm 2010 là **Mạng xã hội** và mô tả đây là phim tiểu sử của David Fincher về sự trỗi dậy của Mark Zuckerberg từ sinh viên Harvard. | [Netflix Việt Nam — *Mạng xã hội*](https://www.netflix.com/vn/title/70132721) | **vừa** |
++| 26 | Netflix xếp phim vào nhóm “Phim chuyển thể từ sách” và “Phim dựa trên câu chuyện có thật”; vì vậy không được mặc định mọi cảnh thoại là tư liệu lịch sử. | [Netflix Việt Nam — *Mạng xã hội*](https://www.netflix.com/vn/title/70132721) | **vừa** |
++| 27 | Vai Eduardo trong phim do Andrew Garfield thể hiện, còn vai Mark do Jesse Eisenberg thể hiện, theo trang Netflix Việt Nam; đây chỉ là thông tin dàn diễn viên, không xác nhận diễn biến phim. | [Netflix Việt Nam — *Mạng xã hội*](https://www.netflix.com/vn/title/70132721) | **vừa** |
++| 28 | Không có nguồn đã mở đủ mạnh để kiểm chứng cảnh mở đầu với bạn gái, cảnh công thức Elo trên cửa sổ, hay các đối thoại cụ thể của phim. Không đưa chúng thành sự kiện thật; nếu cần nhắc, chỉ nói rõ đó là cảnh phim. | [Netflix Việt Nam — *Mạng xã hội*](https://www.netflix.com/vn/title/70132721) | **mạnh** |
++
++## CH07 — Từ so cặp ảnh đến Feed xếp hạng
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 29 | Facemash có cơ chế so sánh hai ảnh được chọn ngẫu nhiên, nhưng không có nguồn đã mở nào xác nhận nó dùng công thức Elo. Không được nói “Facemash dùng Elo”. | [The Harvard Crimson — *Hot or Not?*](https://www.thecrimson.com/article/2003/11/4/hot-or-not-website-briefly-judges/) | **mạnh** |
++| 30 | Meta mô tả Feed hiện đại là quá trình sắp thứ tự các bài có thể thấy để hiện nội dung liên quan hơn ở đầu Feed; bốn thành phần họ nêu là inventory, signals, predictions và relevancy score. | [Meta Newsroom — *News Feed Ranking in Three Minutes Flat*](https://about.fb.com/news/2018/05/inside-feed-news-feed-ranking/) | **mạnh** |
++| 31 | Theo Meta năm 2018, các tín hiệu xếp hạng có thể gồm mức phản ứng, bình luận và chia sẻ; bản cập nhật khi đó ưu tiên bài có thể tạo đối thoại và tương tác có ý nghĩa. | [Meta Newsroom — *Bringing People Closer Together*](https://about.fb.com/news/2018/01/news-feed-fyi-bringing-people-closer-together/) | **mạnh** |
++| 32 | Meta cũng nêu ví dụ các tín hiệu như độ mới của bài, dạng liên kết/ảnh/video và người đăng; họ nói trung bình có khoảng 3.000 bài khả dĩ mỗi ngày nhưng người dùng chỉ lướt khoảng 300. Đây là mô tả của công ty về hệ thống, cần quy dẫn “theo Meta”. | [Meta Newsroom — *Q&A on Upcoming US and Brazil Elections*](https://about.fb.com/news/2018/09/us-brazil-elections/) | **vừa** |
++
++> ## Ảnh Commons đã kiểm giấy phép
++
++Mỗi trang file dưới đây đã mở và hiển thị `LicenseShortName` phù hợp: chỉ **CC BY**, **CC0** hoặc **Public domain**. Không dùng các kết quả CC BY-SA/GFDL đã loại. Trước khi tải, kiểm lại trang file và crop/loại phần có logo, biển hiệu hoặc chữ đọc được.
++
++| # | File / mô tả | Giấy phép | Trang nguồn |
++|---|---|---|---|
++| I01 | Mark Zuckerberg, 2005; chỉ dùng ảnh tư liệu khi cần xác định nhân vật | CC BY 2.5 | [Commons](https://commons.wikimedia.org/wiki/File:MarkZuckerberg.jpg) |
++| I02 | Memorial Hall, Harvard, 2007 | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Harvard_memorial_hall.jpg) |
++| I03 | Memorial Hall, Harvard, 2016 | CC BY 2.0 | [Commons](https://commons.wikimedia.org/wiki/File:Memorial_Hall,_Harvard.jpg) |
++| I04 | Memorial Hall, Harvard, 2007 | CC BY 2.5 | [Commons](https://commons.wikimedia.org/wiki/File:HarvardMemorialHall24June07.jpg) |
++| I05 | Harvard Yard chapel | CC BY 2.0 | [Commons](https://commons.wikimedia.org/wiki/File:Harvard_Yard_chapel.jpg) |
++| I06 | Harvard Yard, 2011 | CC BY 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:Harvard_Yard,_Harvard_University,_Cambridge_MA.jpg) |
++| I07 | Weld Hall, Harvard | Public domain (Hoa Kỳ) | [Commons](https://commons.wikimedia.org/wiki/File:Weld_Hall_-_Harvard_University.jpg) |
++| I08 | Harvard Hall, 2022 | CC0 | [Commons](https://commons.wikimedia.org/wiki/File:Harvard_Hall_-_Harvard_University.jpg) |
++| I09 | Khuôn viên Harvard, 2016 | CC0 | [Commons](https://commons.wikimedia.org/wiki/File:Harvard_University.jpg) |
++
++> ## Ứng viên B-roll Pexels (chưa tải)
++
++Các trang đã mở ghi `Free`/`Free to use` và là khung ngang. Chỉ dùng minh họa trung tính; phải soi frame cuối cùng để loại logo, chữ đọc được và thương hiệu. Không nhận diện bất kỳ người nào trong clip là Zuckerberg, Saverin, Winklevoss hay sinh viên Harvard.
++
++| ID | Mô tả ngắn | Ghi chú bắt buộc | Trang nguồn |
++|---:|---|---|---|
++| 36392564 | Ngón tay gõ bàn phím trong phòng tối | Khung 16:9; soi bàn phím/màn hình, không để chữ đọc được. | [Pexels](https://www.pexels.com/video/typing-on-keyboard-in-dimly-lit-room-36392564/) |
++| 14314426 | Người dùng máy tính ban đêm | Khung 16:9; không gắn danh tính người thật, kiểm logo thiết bị. | [Pexels](https://www.pexels.com/video/man-typing-on-keyboard-at-night-14314426/) |
++| 7490429 | Góc bay toàn cảnh đại học | Khung 16:9; chỉ là minh họa đại học chung, loại logo/tên trường. | [Pexels](https://www.pexels.com/video/aerial-footage-of-a-university-7490429/) |
++| 5672679 | Drone qua các tòa nhà đại học | Khung 16:9; không nói là Harvard, loại bảng hiệu. | [Pexels](https://www.pexels.com/video/drone-footage-of-a-college-university-5672679/) |
++| 36802720 | Time-lapse khuôn viên đại học | Khung 16:9; không nói là Harvard, soi logo và chữ. | [Pexels](https://www.pexels.com/video/vibrant-university-campus-timelapse-in-india-36802720/) |
++| 33193839 | Bàn làm việc lập trình | Khung 16:9; màn hình có thể có chữ/logo, chỉ dùng khi crop/mờ được. | [Pexels](https://www.pexels.com/video/vibrant-computer-coding-workspace-setup-33193839/) |
++| 33314914 | Cận cảnh màn hình mã nguồn | Kiểm chữ/logo; chỉ dùng như code mờ, không là ảnh chụp Facemash. | [Pexels](https://www.pexels.com/video/modern-workspace-with-coding-on-screen-33314914/) |
++| 34160292 | Không gian code tối, nhiều màn hình | Kiểm chữ/logo; chỉ làm B-roll trung tính. | [Pexels](https://www.pexels.com/video/dark-room-coding-on-multiple-monitors-34160292/) |
++| 28913793 | Phòng ở bình dân | Khung 16:9; dùng minh họa ký túc xá chung, không gắn Harvard. | [Pexels](https://www.pexels.com/video/cozy-budget-accommodation-room-interior-28913793/) |
++| 5925294 | Góc từ trên xuống, tay gõ laptop | Khung 16:9; kiểm màn hình/laptop có logo hoặc chữ. | [Pexels](https://www.pexels.com/video/top-view-video-of-person-typing-on-laptop-5925294/) |
++
++> ## Đề xuất ảnh AI
++
++Các prompt này chỉ để chủ kênh tạo ảnh; không gọi webhook, không tự tạo ảnh. Không tham chiếu ảnh phim. Mark Zuckerberg nếu xuất hiện chỉ là dáng người trẻ tóc nâu ngắn, hoodie tối, góc sau/nghiêng quay đi; tham chiếu tư liệu: [Commons I01](https://commons.wikimedia.org/wiki/File:MarkZuckerberg.jpg).
++
++#### ai_01.png — phòng ký túc xá minh họa cho CH00, lúc một trang web được dựng trong đêm
++- Prompt (tiếng Anh): Painterly editorial illustration of a generic 2003 college dorm room at night, a young male student with short brown hair in a dark hoodie seen only from behind at a desk facing an old CRT monitor, loose books and a keyboard, dim tungsten desk lamp, no recognizable face, no institutional architecture, no brand marks, no readable screen content, clearly illustrated rather than archival photography.
++- Khung: 16:9, 1920x1080
++- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
++- Phong cách: painterly editorial illustration, muted amber and deep blue palette
++
++#### ai_02.png — màn hình so hai ô ảnh trừu tượng cho CH00, giải thích cơ chế so sánh
++- Prompt (tiếng Anh): Editorial illustration of a generic early-2000s CRT computer monitor viewed at an angle, showing two completely blank portrait-shaped silhouettes side by side with two unlabeled circular choice buttons, anonymous hands at a keyboard, no faces, no readable interface, no text, no numbers, no logos, deliberately painted and not a screenshot.
++- Khung: 16:9, 1920x1080
++- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
++- Phong cách: painterly editorial illustration, restrained gray-green and amber palette
++
++#### ai_03.png — khuôn viên đêm minh họa cho CH01, sau phản ứng trên trường
++- Prompt (tiếng Anh): Painterly editorial illustration of a fictional ivy-covered university walkway at night after rain, a few anonymous students seen from behind walking apart under warm lamps, brick buildings without plaques or emblems, no readable signs, no logos, no recognizable people, clearly an illustration.
++- Khung: 16:9, 1920x1080
++- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
++- Phong cách: painterly editorial illustration, nocturnal blue and warm window-light palette
++
++#### ai_04.png — sơ đồ Feed minh họa cho CH07, khi nói về ranking hiện đại
++- Prompt (tiếng Anh): Editorial illustration of an abstract social feed flowing across a dark field: anonymous blank post cards, dots, connecting lines and non-readable color blocks rising into ordered layers, no letters, no digits, no platform logos, no human faces, clearly a painted conceptual data illustration.
++- Khung: 16:9, 1920x1080
++- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
++- Phong cách: contemporary painterly editorial illustration, navy, cream and restrained coral accents
++
+diff --git a/docs/pm/tickets/2026-10-26-codex-pilot/T5R-ket-qua.md b/docs/pm/tickets/2026-10-26-codex-pilot/T5R-ket-qua.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..35aaab7ae7acd99fd3e0bb64472efa5bc6ae8e7c
+--- /dev/null
++++ b/docs/pm/tickets/2026-10-26-codex-pilot/T5R-ket-qua.md
+@@ -0,0 +1,29 @@
++# Kết quả T5R — nghiên cứu `mim-social-network`
++
++## Đã làm
++
++- Đã tạo kho dữ kiện tại `data/long/mim-social-network/facts.md`.
++- Kho có 32 dữ kiện, chia đủ 8 chương (mỗi chương 4 dòng): 26 dòng **mạnh**, 6 dòng **vừa**.
++- Đã ghi tên Việt của phim là **Mạng xã hội**, theo trang Netflix Việt Nam đã mở.
++- Đã bổ sung 9 ảnh Commons chỉ có PD/CC0/CC BY; 10 clip Pexels ngang, có ghi chú rà logo/chữ; và 4 prompt ảnh AI theo đúng định dạng.
++
++## Lệnh đã chạy và kết quả
++
++- Đã đọc đúng phạm vi của ticket nghiên cứu: ticket, mục “Ảnh AI” của `docs/codex/long-rules.md`, và phần được chỉ định trong `data/long/mim-moneyball/facts.md`.
++- Đã mở các URL nguồn trong kho bằng trình duyệt: The Harvard Crimson (2003, 2005, 2014), hồ sơ tòa Massachusetts và Ninth Circuit, Meta Newsroom, Netflix Việt Nam, Commons và Pexels.
++- Không chạy lint, render, `script_lines.py`, `studio_lint.py` hoặc `python scripts/long_gate.py mim-social-network --min-syl 1900`: ticket xác định đây là **ticket nghiên cứu** và cấm các lệnh này.
++
++## Điểm chưa kiểm được / không dùng làm khẳng định
++
++- Không có nguồn đã mở đủ mạnh xác nhận Facemash dùng công thức Elo. Kho ghi rõ không được nói điều này như sự thật.
++- Không có nguồn đã mở đủ mạnh để xác nhận các cảnh cụ thể trong phim: mở đầu với bạn gái, công thức Elo trên cửa sổ và các đối thoại cụ thể. Nếu bài viết sau cần nhắc, chỉ gọi đó là cảnh phim, không biến thành sự kiện đời thật.
++- Các B-roll Pexels chưa tải và chưa lập clip sheet; pha dựng phải kiểm từng frame để loại logo/chữ.
++
++## Đề xuất cold open
++
++Mở bằng một mốc có nguồn mạnh: “Tối Chủ nhật đầu tháng 11 năm 2003, một trang so hai ảnh sinh viên Harvard đã bị tắt. Trước đó, 450 người đã bấm hơn 22.000 lần.” Nguồn là bài *The Harvard Crimson* ngày 04/11/2003. Sau cú móc này mới chuyển sang câu hỏi: từ thao tác chọn một trong hai ảnh, mạng xã hội đã tiến tới việc xếp thứ tự hàng nghìn bài đăng như thế nào?
++
++## Câu hỏi còn bỏ ngỏ
++
++- Có nguồn sơ cấp hoặc hồ sơ mã nguồn nào xác nhận chính xác thuật toán xếp hạng của Facemash không?
++- Có nguồn mở đáng tin nào đối chiếu từng cảnh phim với sự kiện thật, đặc biệt cảnh đầu và chi tiết Elo, mà không cần dùng trích đoạn phim không?
+
+apply patch
+patch: completed
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-26-codex-pilot\T5R-ket-qua.md
+diff --git a/data/long/mim-social-network/facts.md b/data/long/mim-social-network/facts.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..c08d6df5494225a0214ea527952a450742ea553c
+--- /dev/null
++++ b/data/long/mim-social-network/facts.md
+@@ -0,0 +1,137 @@
++# Kho dữ kiện — `mim-social-network`
++
++Ngày mở nguồn: 26/10/2026. Đây là kho nghiên cứu cho pha viết, không phải kịch bản. Dòng **mạnh** có thể dùng làm khẳng định trực tiếp; dòng **vừa** phải quy dẫn trong lời đọc. Không dùng hình, poster, đoạn trích hoặc âm thanh của phim.
++
++## CH00 — Một đêm, một trang bị tắt
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 01 | Bài của *The Harvard Crimson* ngày 04/11/2003 xác định Mark E. Zuckerberg là người lập Facemash khi đang học Harvard; trang dùng ảnh thẻ lấy từ các “House facebooks” trực tuyến. | [The Harvard Crimson — *Hot or Not? Website Briefly Judges Looks*](https://www.thecrimson.com/article/2003/11/4/hot-or-not-website-briefly-judges/) | **mạnh** |
++| 02 | Theo bài năm 2003, Facemash cho người xem chọn người “hotter” giữa hai ảnh được chọn ngẫu nhiên, hoặc chấm ảnh trong cùng một House. | [The Harvard Crimson — *Hot or Not?*](https://www.thecrimson.com/article/2003/11/4/hot-or-not-website-briefly-judges/) | **mạnh** |
++| 03 | Zuckerberg nói với Crimson rằng ông đã truy cập các House facebooks để gom ảnh thẻ vào Facemash. | [The Harvard Crimson — *Hot or Not?*](https://www.thecrimson.com/article/2003/11/4/hot-or-not-website-briefly-judges/) | **mạnh** |
++| 04 | Trang bị tắt vào tối Chủ nhật sau phản ứng trên trường; tới lúc đó có 450 khách truy cập và ít nhất 22.000 lượt bỏ phiếu, theo Zuckerberg nói với Crimson. | [The Harvard Crimson — *Hot or Not?*](https://www.thecrimson.com/article/2003/11/4/hot-or-not-website-briefly-judges/) | **mạnh** |
++
++## CH01 — Harvard xử lý vụ Facemash
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 05 | Crimson năm 2014 viết Facemash nhận hơn 20.000 lượt truy cập trong 24 giờ và thu hút sự chú ý của Administrative Board của Harvard College. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
++| 06 | Bài Crimson cùng năm nói Administrative Board không buộc Zuckerberg rời Harvard vì các vi phạm liên quan Facemash. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
++| 07 | Bản khiếu kiện đa quận về mạng xã hội nộp năm 2024 tóm lược rằng Zuckerberg bị triệu tập trước cơ quan kỷ luật của Harvard sau Facemash. Đây là tài liệu tố tụng, không phải phán quyết về nguồn gốc Facebook. | [In re: Social Media Adolescent Addiction/Personal Injury Products Liability Litigation — Complaint, tr. 64–66](https://s3.amazonaws.com/hoth.bizango/assets/26247/Palo_Alto_Complaint_032824.pdf) | **vừa** |
++| 08 | Trong bài năm 2003, Zuckerberg nói ông quan tâm đến phần khoa học máy tính của dự án; đây là phát biểu đương thời, không đủ để suy ra động cơ rộng hơn. | [The Harvard Crimson — *Hot or Not?*](https://www.thecrimson.com/article/2003/11/4/hot-or-not-website-briefly-judges/) | **mạnh** |
++
++## CH02 — Từ danh bạ House đến TheFacebook
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 09 | Trước TheFacebook, Harvard có danh bạ tìm kiếm cho khóa năm nhất, còn các House giữ danh bạ ảnh và số điện thoại riêng, thường bị hạn chế truy cập. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
++| 10 | TheFacebook đi vào hoạt động ngày 04/02/2004 từ phòng ký túc xá Kirkland House của Zuckerberg. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
++| 11 | Ban đầu chỉ sinh viên Harvard có thể đăng ký TheFacebook; một người dùng đầu tiên nói cần địa chỉ `harvard.edu`. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
++| 12 | Trang có 650 người đăng ký trong 24 giờ đầu và 4.300 tài khoản trong hai tuần đầu, theo Crimson phỏng vấn người dùng đầu tiên. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
++
++## CH03 — Đà mở rộng đầu năm 2004
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 13 | Đến tháng 03/2004, TheFacebook đã có chỗ đứng tại Columbia, Stanford và Yale, đồng thời đạt người đăng ký thứ 10.000. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
++| 14 | Một tính năng đầu tiên là Coursematch, cho phép người dùng xem bạn bè học lớp nào trong học kỳ. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
++| 15 | Khi Zuckerberg thi cuối kỳ vào tháng 05/2004, TheFacebook đã mở rộng trên toàn quốc và gần 100.000 người dùng, theo Crimson. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
++| 16 | Crimson ghi nhóm đi Palo Alto sau kỳ thi gồm Zuckerberg, Dustin Moskovitz, Andrew McCollum và các thực tập sinh; tháng 06/2004 công ty đổi tên thành Facebook. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
++
++## CH04 — Eduardo Saverin: sự kiện có nguồn, không suy diễn
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 17 | Hồ sơ chân dung của Crimson năm 2005 gọi Eduardo Saverin là CFO của Facebook, nhà đầu tư sớm và người điều phối quảng cáo quốc gia/lịa phương thời đầu. | [The Harvard Crimson — *Key Players*](https://www.thecrimson.com/article/2005/2/24/key-players-three-full-time-employees-have/?page=single) | **mạnh** |
++| 18 | Theo chính Saverin trong hồ sơ Crimson, Zuckerberg đã tiếp cận ông về TheFacebook trước khi lập trình trang. | [The Harvard Crimson — *Key Players*](https://www.thecrimson.com/article/2005/2/24/key-players-three-full-time-employees-have/?page=single) | **mạnh** |
++| 19 | Crimson năm 2014 ghi Saverin không đi Palo Alto cùng nhóm vào tháng 06/2004 và sau đó bị đẩy khỏi công ty. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
++| 20 | Không dùng lời đọc nào gán thái độ, động cơ hoặc mức độ trách nhiệm cá nhân cho Saverin ngoài các sự kiện ở dòng 17–19, trừ khi ticket viết có nguồn mới. | [The Harvard Crimson — *Key Players*](https://www.thecrimson.com/article/2005/2/24/key-players-three-full-time-employees-have/?page=single) | **mạnh** |
++
++## CH05 — Winklevoss, Narendra và hồ sơ vụ kiện
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 21 | Crimson ghi Cameron Winklevoss, Tyler Winklevoss và Divya Narendra đã tìm Zuckerberg để hỗ trợ xây mạng xã hội riêng cho sinh viên Harvard. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
++| 22 | Tòa Phúc thẩm Liên bang Khu vực 9 tóm tắt rằng ba người Winklevoss/Narendra cáo buộc Zuckerberg lấy ý tưởng Facebook của họ; đây là cáo buộc của các bên, không phải kết luận thực tế của tòa về hành vi đó. | [U.S. Court of Appeals for the Ninth Circuit — *Facebook v. ConnectU* (2011)](https://law.justia.com/cases/federal/appellate-courts/ca9/08-16745/08-16745-2011-04-11.html) | **mạnh** |
++| 23 | Phán quyết năm 2011 giữ nguyên việc thực thi thỏa thuận dàn xếp giữa Facebook, Winklevosses/Narendra và ConnectU. | [U.S. Court of Appeals for the Ninth Circuit — *Facebook v. ConnectU* (2011)](https://law.justia.com/cases/federal/appellate-courts/ca9/08-16745/08-16745-2011-04-11.html) | **mạnh** |
++| 24 | Hồ sơ tòa Massachusetts mô tả phiên hòa giải toàn cầu ngày 22/02/2008; Facebook nhận toàn bộ cổ phần ConnectU đổi lấy 20 triệu USD tiền mặt và hơn một triệu cổ phiếu Facebook, giá trị khi đó xấp xỉ 65 triệu USD. | [Massachusetts Appeals Court — *Chang v. Winklevoss*](https://law.justia.com/cases/massachusetts/court-of-appeals/volumes/95/95massappct202.html) | **mạnh** |
++
++## CH06 — Phim và đời thật: chỉ nêu phần có thể kiểm
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 25 | Netflix Việt Nam hiển thị tên phim năm 2010 là **Mạng xã hội** và mô tả đây là phim tiểu sử của David Fincher về sự trỗi dậy của Mark Zuckerberg từ sinh viên Harvard. | [Netflix Việt Nam — *Mạng xã hội*](https://www.netflix.com/vn/title/70132721) | **vừa** |
++| 26 | Netflix xếp phim vào nhóm “Phim chuyển thể từ sách” và “Phim dựa trên câu chuyện có thật”; vì vậy không được mặc định mọi cảnh thoại là tư liệu lịch sử. | [Netflix Việt Nam — *Mạng xã hội*](https://www.netflix.com/vn/title/70132721) | **vừa** |
++| 27 | Vai Eduardo trong phim do Andrew Garfield thể hiện, còn vai Mark do Jesse Eisenberg thể hiện, theo trang Netflix Việt Nam; đây chỉ là thông tin dàn diễn viên, không xác nhận diễn biến phim. | [Netflix Việt Nam — *Mạng xã hội*](https://www.netflix.com/vn/title/70132721) | **vừa** |
++| 28 | Không có nguồn đã mở đủ mạnh để kiểm chứng cảnh mở đầu với bạn gái, cảnh công thức Elo trên cửa sổ, hay các đối thoại cụ thể của phim. Không đưa chúng thành sự kiện thật; nếu cần nhắc, chỉ nói rõ đó là cảnh phim. | [Netflix Việt Nam — *Mạng xã hội*](https://www.netflix.com/vn/title/70132721) | **mạnh** |
++
++## CH07 — Từ so cặp ảnh đến Feed xếp hạng
++
++| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
++|---|---|---|---|
++| 29 | Facemash có cơ chế so sánh hai ảnh được chọn ngẫu nhiên, nhưng không có nguồn đã mở nào xác nhận nó dùng công thức Elo. Không được nói “Facemash dùng Elo”. | [The Harvard Crimson — *Hot or Not?*](https://www.thecrimson.com/article/2003/11/4/hot-or-not-website-briefly-judges/) | **mạnh** |
++| 30 | Meta mô tả Feed hiện đại là quá trình sắp thứ tự các bài có thể thấy để hiện nội dung liên quan hơn ở đầu Feed; bốn thành phần họ nêu là inventory, signals, predictions và relevancy score. | [Meta Newsroom — *News Feed Ranking in Three Minutes Flat*](https://about.fb.com/news/2018/05/inside-feed-news-feed-ranking/) | **mạnh** |
++| 31 | Theo Meta năm 2018, các tín hiệu xếp hạng có thể gồm mức phản ứng, bình luận và chia sẻ; bản cập nhật khi đó ưu tiên bài có thể tạo đối thoại và tương tác có ý nghĩa. | [Meta Newsroom — *Bringing People Closer Together*](https://about.fb.com/news/2018/01/news-feed-fyi-bringing-people-closer-together/) | **mạnh** |
++| 32 | Meta cũng nêu ví dụ các tín hiệu như độ mới của bài, dạng liên kết/ảnh/video và người đăng; họ nói trung bình có khoảng 3.000 bài khả dĩ mỗi ngày nhưng người dùng chỉ lướt khoảng 300. Đây là mô tả của công ty về hệ thống, cần quy dẫn “theo Meta”. | [Meta Newsroom — *Q&A on Upcoming US and Brazil Elections*](https://about.fb.com/news/2018/09/us-brazil-elections/) | **vừa** |
++
++> ## Ảnh Commons đã kiểm giấy phép
++
++Mỗi trang file dưới đây đã mở và hiển thị `LicenseShortName` phù hợp: chỉ **CC BY**, **CC0** hoặc **Public domain**. Không dùng các kết quả CC BY-SA/GFDL đã loại. Trước khi tải, kiểm lại trang file và crop/loại phần có logo, biển hiệu hoặc chữ đọc được.
++
++| # | File / mô tả | Giấy phép | Trang nguồn |
++|---|---|---|---|
++| I01 | Mark Zuckerberg, 2005; chỉ dùng ảnh tư liệu khi cần xác định nhân vật | CC BY 2.5 | [Commons](https://commons.wikimedia.org/wiki/File:MarkZuckerberg.jpg) |
++| I02 | Memorial Hall, Harvard, 2007 | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Harvard_memorial_hall.jpg) |
++| I03 | Memorial Hall, Harvard, 2016 | CC BY 2.0 | [Commons](https://commons.wikimedia.org/wiki/File:Memorial_Hall,_Harvard.jpg) |
++| I04 | Memorial Hall, Harvard, 2007 | CC BY 2.5 | [Commons](https://commons.wikimedia.org/wiki/File:HarvardMemorialHall24June07.jpg) |
++| I05 | Harvard Yard chapel | CC BY 2.0 | [Commons](https://commons.wikimedia.org/wiki/File:Harvard_Yard_chapel.jpg) |
++| I06 | Harvard Yard, 2011 | CC BY 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:Harvard_Yard,_Harvard_University,_Cambridge_MA.jpg) |
++| I07 | Weld Hall, Harvard | Public domain (Hoa Kỳ) | [Commons](https://commons.wikimedia.org/wiki/File:Weld_Hall_-_Harvard_University.jpg) |
++| I08 | Harvard Hall, 2022 | CC0 | [Commons](https://commons.wikimedia.org/wiki/File:Harvard_Hall_-_Harvard_University.jpg) |
++| I09 | Khuôn viên Harvard, 2016 | CC0 | [Commons](https://commons.wikimedia.org/wiki/File:Harvard_University.jpg) |
++
++> ## Ứng viên B-roll Pexels (chưa tải)
++
++Các trang đã mở ghi `Free`/`Free to use` và là khung ngang. Chỉ dùng minh họa trung tính; phải soi frame cuối cùng để loại logo, chữ đọc được và thương hiệu. Không nhận diện bất kỳ người nào trong clip là Zuckerberg, Saverin, Winklevoss hay sinh viên Harvard.
++
++| ID | Mô tả ngắn | Ghi chú bắt buộc | Trang nguồn |
++|---:|---|---|---|
++| 36392564 | Ngón tay gõ bàn phím trong phòng tối | Khung 16:9; soi bàn phím/màn hình, không để chữ đọc được. | [Pexels](https://www.pexels.com/video/typing-on-keyboard-in-dimly-lit-room-36392564/) |
++| 14314426 | Người dùng máy tính ban đêm | Khung 16:9; không gắn danh tính người thật, kiểm logo thiết bị. | [Pexels](https://www.pexels.com/video/man-typing-on-keyboard-at-night-14314426/) |
++| 7490429 | Góc bay toàn cảnh đại học | Khung 16:9; chỉ là minh họa đại học chung, loại logo/tên trường. | [Pexels](https://www.pexels.com/video/aerial-footage-of-a-university-7490429/) |
++| 5672679 | Drone qua các tòa nhà đại học | Khung 16:9; không nói là Harvard, loại bảng hiệu. | [Pexels](https://www.pexels.com/video/drone-footage-of-a-college-university-5672679/) |
++| 36802720 | Time-lapse khuôn viên đại học | Khung 16:9; không nói là Harvard, soi logo và chữ. | [Pexels](https://www.pexels.com/video/vibrant-university-campus-timelapse-in-india-36802720/) |
++| 33193839 | Bàn làm việc lập trình | Khung 16:9; màn hình có thể có chữ/logo, chỉ dùng khi crop/mờ được. | [Pexels](https://www.pexels.com/video/vibrant-computer-coding-workspace-setup-33193839/) |
++| 33314914 | Cận cảnh màn hình mã nguồn | Kiểm chữ/logo; chỉ dùng như code mờ, không là ảnh chụp Facemash. | [Pexels](https://www.pexels.com/video/modern-workspace-with-coding-on-screen-33314914/) |
++| 34160292 | Không gian code tối, nhiều màn hình | Kiểm chữ/logo; chỉ làm B-roll trung tính. | [Pexels](https://www.pexels.com/video/dark-room-coding-on-multiple-monitors-34160292/) |
++| 28913793 | Phòng ở bình dân | Khung 16:9; dùng minh họa ký túc xá chung, không gắn Harvard. | [Pexels](https://www.pexels.com/video/cozy-budget-accommodation-room-interior-28913793/) |
++| 5925294 | Góc từ trên xuống, tay gõ laptop | Khung 16:9; kiểm màn hình/laptop có logo hoặc chữ. | [Pexels](https://www.pexels.com/video/top-view-video-of-person-typing-on-laptop-5925294/) |
++
++> ## Đề xuất ảnh AI
++
++Các prompt này chỉ để chủ kênh tạo ảnh; không gọi webhook, không tự tạo ảnh. Không tham chiếu ảnh phim. Mark Zuckerberg nếu xuất hiện chỉ là dáng người trẻ tóc nâu ngắn, hoodie tối, góc sau/nghiêng quay đi; tham chiếu tư liệu: [Commons I01](https://commons.wikimedia.org/wiki/File:MarkZuckerberg.jpg).
++
++#### ai_01.png — phòng ký túc xá minh họa cho CH00, lúc một trang web được dựng trong đêm
++- Prompt (tiếng Anh): Painterly editorial illustration of a generic 2003 college dorm room at night, a young male student with short brown hair in a dark hoodie seen only from behind at a desk facing an old CRT monitor, loose books and a keyboard, dim tungsten desk lamp, no recognizable face, no institutional architecture, no brand marks, no readable screen content, clearly illustrated rather than archival photography.
++- Khung: 16:9, 1920x1080
++- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
++- Phong cách: painterly editorial illustration, muted amber and deep blue palette
++
++#### ai_02.png — màn hình so hai ô ảnh trừu tượng cho CH00, giải thích cơ chế so sánh
++- Prompt (tiếng Anh): Editorial illustration of a generic early-2000s CRT computer monitor viewed at an angle, showing two completely blank portrait-shaped silhouettes side by side with two unlabeled circular choice buttons, anonymous hands at a keyboard, no faces, no readable interface, no text, no numbers, no logos, deliberately painted and not a screenshot.
++- Khung: 16:9, 1920x1080
++- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
++- Phong cách: painterly editorial illustration, restrained gray-green and amber palette
++
++#### ai_03.png — khuôn viên đêm minh họa cho CH01, sau phản ứng trên trường
++- Prompt (tiếng Anh): Painterly editorial illustration of a fictional ivy-covered university walkway at night after rain, a few anonymous students seen from behind walking apart under warm lamps, brick buildings without plaques or emblems, no readable signs, no logos, no recognizable people, clearly an illustration.
++- Khung: 16:9, 1920x1080
++- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
++- Phong cách: painterly editorial illustration, nocturnal blue and warm window-light palette
++
++#### ai_04.png — sơ đồ Feed minh họa cho CH07, khi nói về ranking hiện đại
++- Prompt (tiếng Anh): Editorial illustration of an abstract social feed flowing across a dark field: anonymous blank post cards, dots, connecting lines and non-readable color blocks rising into ordered layers, no letters, no digits, no platform logos, no human faces, clearly a painted conceptual data illustration.
++- Khung: 16:9, 1920x1080
++- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
++- Phong cách: contemporary painterly editorial illustration, navy, cream and restrained coral accents
++
+diff --git a/docs/pm/tickets/2026-10-26-codex-pilot/T5R-ket-qua.md b/docs/pm/tickets/2026-10-26-codex-pilot/T5R-ket-qua.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..f6a68f7038d6733c6b8b64054d1228304e1f5455
+--- /dev/null
++++ b/docs/pm/tickets/2026-10-26-codex-pilot/T5R-ket-qua.md
+@@ -0,0 +1,29 @@
++# Kết quả T5R — nghiên cứu `mim-social-network`
++
++## Đã làm
++
++- Đã tạo kho dữ kiện tại `data/long/mim-social-network/facts.md`.
++- Kho có 32 dữ kiện, chia đủ 8 chương (mỗi chương 4 dòng): 26 dòng **mạnh**, 6 dòng **vừa**.
++- Đã ghi tên Việt của phim là **Mạng xã hội**, theo trang Netflix Việt Nam đã mở.
++- Đã bổ sung 9 ảnh Commons chỉ có PD/CC0/CC BY; 10 clip Pexels ngang, có ghi chú rà logo/chữ; và 4 prompt ảnh AI theo đúng định dạng.
++
++## Lệnh đã chạy và kết quả
++
++- Đã đọc đúng phạm vi của ticket nghiên cứu: ticket, mục “Ảnh AI” của `docs/codex/long-rules.md`, và phần được chỉ định trong `data/long/mim-moneyball/facts.md`.
++- Đã mở các URL nguồn trong kho bằng trình duyệt: The Harvard Crimson (2003, 2005, 2014), hồ sơ tòa Massachusetts và Ninth Circuit, Meta Newsroom, Netflix Việt Nam, Commons và Pexels.
++- Không chạy lint, render, `script_lines.py`, `studio_lint.py` hoặc `python scripts/long_gate.py mim-social-network --min-syl 1900`: ticket xác định đây là **ticket nghiên cứu** và cấm các lệnh này.
++
++## Điểm chưa kiểm được / không dùng làm khẳng định
++
++- Không có nguồn đã mở đủ mạnh xác nhận Facemash dùng công thức Elo. Kho ghi rõ không được nói điều này như sự thật.
++- Không có nguồn đã mở đủ mạnh để xác nhận các cảnh cụ thể trong phim: mở đầu với bạn gái, công thức Elo trên cửa sổ và các đối thoại cụ thể. Nếu bài viết sau cần nhắc, chỉ gọi đó là cảnh phim, không biến thành sự kiện đời thật.
++- Các B-roll Pexels chưa tải và chưa lập clip sheet; pha dựng phải kiểm từng frame để loại logo/chữ.
++
++## Đề xuất cold open
++
++Mở bằng một mốc có nguồn mạnh: “Tối Chủ nhật 02/11/2003, một trang so hai ảnh sinh viên Harvard đã bị tắt. Trước đó, 450 người đã bấm hơn 22.000 lần.” Mốc 02/11 được suy ra từ bài *The Harvard Crimson* ngày 04/11/2003, bài này viết trang bị tắt vào tối Chủ nhật vừa qua. Sau cú móc này mới chuyển sang câu hỏi: từ thao tác chọn một trong hai ảnh, mạng xã hội đã tiến tới việc xếp thứ tự hàng nghìn bài đăng như thế nào?
++
++## Câu hỏi còn bỏ ngỏ
++
++- Có nguồn sơ cấp hoặc hồ sơ mã nguồn nào xác nhận chính xác thuật toán xếp hạng của Facemash không?
++- Có nguồn mở đáng tin nào đối chiếu từng cảnh phim với sự kiện thật, đặc biệt cảnh đầu và chi tiết Elo, mà không cần dùng trích đoạn phim không?
+
+codex
+Đã hoàn tất ticket nghiên cứu và ghi đúng 2 file:
+
+- [Kho dữ kiện facts.md](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-social-network\facts.md)
+- [Báo cáo T5R-ket-qua.md](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-26-codex-pilot\T5R-ket-qua.md)
+
+Kho có 32 dữ kiện/8 chương, nguồn đã mở, 9 ảnh Commons hợp lệ, 10 B-roll Pexels ngang và 4 prompt AI. Không chạy `long_gate` vì ticket này ghi rõ là ticket nghiên cứu và cấm lint/render/gate.
+tokens used
+93,705
+Đã hoàn tất ticket nghiên cứu và ghi đúng 2 file:
+
+- [Kho dữ kiện facts.md](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-social-network\facts.md)
+- [Báo cáo T5R-ket-qua.md](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-26-codex-pilot\T5R-ket-qua.md)
+
+Kho có 32 dữ kiện/8 chương, nguồn đã mở, 9 ảnh Commons hợp lệ, 10 B-roll Pexels ngang và 4 prompt AI. Không chạy `long_gate` vì ticket này ghi rõ là ticket nghiên cứu và cấm lint/render/gate.

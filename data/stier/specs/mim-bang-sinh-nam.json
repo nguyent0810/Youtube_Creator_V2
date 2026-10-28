@@ -1,0 +1,181 @@
+{
+ "theme": "mim",
+ "kicker": "BẢNG TRA",
+ "sub": "LỊCH SỬ AI THEO NĂM SINH",
+ "title": "Bạn sinh năm nào? Lúc máy thắng người, bạn mấy tuổi? Bảng tra theo năm sinh",
+ "description": "Bảng tra theo năm sinh: tìm cột năm sinh của bạn, rồi đọc xuống để biết bạn bao nhiêu tuổi vào bốn cột mốc máy thắng người hoặc ra mắt công chúng. Tuổi = năm mốc trừ năm sinh, tính theo năm dương lịch, chưa tính tháng sinh; dấu gạch là chưa sinh.\n\nBốn mốc: Deep Blue của IBM thắng Garry Kasparov ở trận đấu cờ vua 3–11/5/1997 (3½–2½); Watson của IBM thắng hai nhà vô địch trong chương trình Jeopardy!, phát sóng 14–16/2/2011; AlphaGo của DeepMind thắng Lee Sedol 4–1 ở trận cờ vây 9–15/3/2016; OpenAI ra mắt ChatGPT ngày 30/11/2022.\n\nNguồn: Wikipedia, các bài \"Deep Blue versus Garry Kasparov\", \"Watson (computer)\", \"AlphaGo versus Lee Sedol\", \"ChatGPT\".\n\nNội dung do kênh biên soạn. Giọng đọc tổng hợp.",
+ "tags": [
+  "Deep Blue",
+  "Kasparov",
+  "Watson",
+  "AlphaGo",
+  "ChatGPT",
+  "lịch sử AI",
+  "bảng tra",
+  "năm sinh",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "acc": [
+  "1980",
+  "mười",
+  "bảy",
+  "ba",
+  "mươi",
+  "mốt",
+  "sáu",
+  "bốn",
+  "hai",
+  "dừng",
+  "hình"
+ ],
+ "lines": [
+  "Sinh năm 1980? Mười bảy tuổi, Deep Blue thắng Kasparov.",
+  "Ba mươi mốt, Watson thắng Jeopardy.",
+  "Ba mươi sáu, AlphaGo thắng cờ vây.",
+  "Bốn mươi hai, ChatGPT ra đời.",
+  "Dừng hình tìm dòng của bạn nhé."
+ ],
+ "scenes": [
+  {
+   "type": "table",
+   "at": 0,
+   "title": "BẠN MẤY TUỔI LÚC ĐÓ?",
+   "rowHead": "MÁY ĐÃ ↓",
+   "colHead": "NĂM SINH CỦA BẠN →",
+   "cols": [
+    "1970",
+    "1980",
+    "1990",
+    "2000"
+   ],
+   "rows": [
+    {
+     "k": "1997",
+     "sub": "CỜ VUA",
+     "v": [
+      27,
+      17,
+      7,
+      "—"
+     ]
+    },
+    {
+     "k": "2011",
+     "sub": "JEOPARDY",
+     "v": [
+      41,
+      31,
+      21,
+      11
+     ]
+    },
+    {
+     "k": "2016",
+     "sub": "CỜ VÂY",
+     "v": [
+      46,
+      36,
+      26,
+      16
+     ]
+    },
+    {
+     "k": "2022",
+     "sub": "CHATGPT",
+     "v": [
+      52,
+      42,
+      32,
+      22
+     ]
+    }
+   ],
+   "hl": [
+    {
+     "c": 1,
+     "at": [
+      0,
+      "1980"
+     ]
+    },
+    {
+     "r": 0,
+     "c": 1,
+     "at": [
+      0,
+      "mười"
+     ]
+    },
+    {
+     "r": 1,
+     "c": 1,
+     "at": [
+      1,
+      "ba"
+     ]
+    },
+    {
+     "r": 2,
+     "c": 1,
+     "at": [
+      2,
+      "ba"
+     ]
+    },
+    {
+     "r": 3,
+     "c": 1,
+     "at": [
+      3,
+      "bốn"
+     ],
+     "until": [
+      4,
+      "dừng"
+     ]
+    }
+   ],
+   "foot": "DỪNG HÌNH ĐỂ TRA · LƯU LẠI",
+   "note": "TUỔI = NĂM MỐC − NĂM SINH · — = CHƯA SINH"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Deep_Blue_versus_Garry_Kasparov",
+  "https://en.wikipedia.org/wiki/Watson_(computer)",
+  "https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol",
+  "https://en.wikipedia.org/wiki/ChatGPT"
+ ],
+ "sources_internal": [
+  "Wikipedia en mở được qua WebFetch 22/10/2026: Deep Blue 3-11/5/1997 thắng 3½-2½; Watson phát 14,15,16/2/2011 thắng 77.147 USD; AlphaGo 9-15/3/2016 thắng 4-1; ChatGPT 30/11/2022. Khớp data/long mim-deep-blue-kasparov, mim-watson-jeopardy, mim-alphago-lee-sedol (script.md) và mim-ai-gpu/factcheck.md. Tuổi = phép trừ năm, kênh tự tính."
+ ],
+ "mix": false,
+ "rules": 2,
+ "min_words": 25,
+ "tail": 3.0,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.15,
+   "1": 0.12,
+   "2": 0.12,
+   "3": 0.25
+  }
+ },
+ "say": {
+  "deep": "Đíp",
+  "blue": "Blu",
+  "kasparov": "Cát-xpa-rốp",
+  "watson": "Oát-xần",
+  "jeopardy": "Gie-pơ-đi",
+  "alphago": "An-pha Gô",
+  "chatgpt": "chát gi pi ti"
+ },
+ "imgs": {},
+ "profile": "bang-tra",
+ "look": "mim-crt",
+ "cls": "btl btl-mim-crt",
+ "extra_css": "bang-tra-looks.css\" /><script src=\"assets/engine/bang-tra-looks.js\"></script><link rel=\"x-end\" href=\"x"
+}

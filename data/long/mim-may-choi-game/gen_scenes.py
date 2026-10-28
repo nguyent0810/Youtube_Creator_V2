@@ -287,12 +287,12 @@ CH["ch23"] = {"hud": {"k": "PHẦN CUỐI", "t": "NĂM ĐIỀU, ĐÃ ĐÁNH DẤ
 ]}
 
 SPEC = {
-    "title": "Máy Thắng Game Thời Gian Thực: AlphaStar, OpenAI Five Và Năm Điều Cờ Vua Không Có",
+    "title": "AlphaStar, OpenAI Five: Khi Máy Thắng Cả Game Thời Gian Thực",
     "channel": "MIM", "theme": "lab", "accent": "#22d3ee", "master": True, "endcard": 20, "autoTr": True, "beat2": True,
     "acc": ["máy", "starcraft", "dota", "năm", "điều", "thắng", "người"],
     "say": SAY, "imgs": {}, "chapters": [f"ch{i:02d}" for i in range(24)],
     "youtube": {
-        "titles": ["Máy Thắng Game Thời Gian Thực: AlphaStar, OpenAI Five Và Năm Điều Cờ Vua Không Có",
+        "titles": ["AlphaStar, OpenAI Five: Khi Máy Thắng Cả Game Thời Gian Thực",
                    "Từ Cờ Vua Tới StarCraft Và Dota 2: Vì Sao Game Điện Tử Khó Cho Máy Hơn Cờ",
                    "200 Năm Chơi Game Trong 14 Ngày: Cỗ Máy Thắng Tuyển Thủ Chuyên Nghiệp Thế Nào"],
         "summary": "Sau cờ vua và cờ vây, máy chuyển sang những trò chơi điện tử chiến thuật thời gian thực. Video kể câu chuyện AlphaStar (DeepMind, "

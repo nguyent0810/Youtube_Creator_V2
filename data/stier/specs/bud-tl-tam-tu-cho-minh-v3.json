@@ -1,0 +1,161 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-tl-tam-tu-cho-minh",
+ "format": "tinh-lang",
+ "hook_type": "noi-thang",
+ "open_shot": "hoa-sen",
+ "voice": "Ngọc Huyền",
+ "music": "fluidscape.mp3",
+ "music_gain": 0.16,
+ "gap": 0.8,
+ "title": "Câu bạn nói với chính mình nhiều nhất",
+ "kicker": "TĨNH LẶNG",
+ "sub": "KINH TỪ BI · SNP 1.8",
+ "acc": [
+  "bình",
+  "an"
+ ],
+ "lines": [
+  "Câu bạn nói với chính mình nhiều nhất là gì?",
+  "Nếu câu ấy là: sao mình tệ vậy.",
+  "Đặt tay lên ngực. Thở vào thật chậm.",
+  "Nói thầm: mong mình bình an. Mong mình bớt khổ.",
+  "Thật ra, đây là lời Kinh Từ Bi, diễn ý.",
+  "Mong mọi loài an vui. Mọi loài, gồm cả bạn.",
+  "Câu mới bạn muốn nói với mình là gì? Gửi cho người hay tự trách."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:38548497",
+   "items": [
+    {
+     "text": "CÂU BẠN NÓI VỚI MÌNH?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "nhiều nhất là câu gì",
+     "at": [
+      0,
+      "nhiều"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "hf_myth_strike",
+   "at": 1,
+   "mythLab": "CÂU CŨ",
+   "myth": "Sao mình **tệ vậy**",
+   "truthLab": "THỬ ĐỔI",
+   "truth": "Mong mình **bình an**",
+   "strikeAt": [
+    1,
+    "tệ"
+   ],
+   "truthAt": [
+    1,
+    "vậy."
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "veil": 0.4,
+   "clip": "pexels:6438238",
+   "items": [
+    {
+     "text": "ĐẶT TAY LÊN NGỰC",
+     "at": [
+      2,
+      "đặt"
+     ],
+     "acc": true
+    },
+    {
+     "text": "thở vào thật chậm",
+     "at": [
+      2,
+      "thở"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 2,
+   "suffix": " LỜI",
+   "label": "BÌNH AN · BỚT KHỔ",
+   "until": [
+    3,
+    "khổ."
+   ]
+  },
+  {
+   "type": "source",
+   "at": 4,
+   "source": "KINH TỪ BI · SNP 1.8",
+   "ref": "Metta Sutta",
+   "snippet": "[[Mong mọi loài được an vui]], được bình an.",
+   "hlAt": [
+    5,
+    "vui."
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "veil": 0.4,
+   "clip": "pexels:25809332",
+   "items": [
+    {
+     "text": "CÂU MỚI CỦA BẠN?",
+     "at": [
+      6,
+      "câu"
+     ],
+     "acc": true
+    },
+    {
+     "text": "gửi cho người hay tự trách",
+     "at": [
+      6,
+      "gửi"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "ambience": {
+  "bed": "water",
+  "gain": 0.9,
+  "hits": [
+   {
+    "at": 0.1,
+    "kind": "gong",
+    "gain": 0.6
+   }
+  ]
+ },
+ "sources": [
+  "https://suttacentral.net/snp1.8/en/sujato"
+ ],
+ "description": "Câu bạn nói với chính mình nhiều nhất\n\nNguồn: https://suttacentral.net/snp1.8/en/sujato"
+}

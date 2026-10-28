@@ -1,0 +1,223 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-dv-tam-guong",
+ "format": "do-vui",
+ "hook_type": "vi-sao",
+ "open_shot": "soi-guong",
+ "voice": "Quang Sơn",
+ "music": "arcadia.mp3",
+ "music_gain": 0.18,
+ "gap": 0.05,
+ "series": "Đố vui Phật pháp #9",
+ "title": "Vì sao Đức Phật dùng một cái gương để dạy con trai?",
+ "kicker": "ĐỐ VUI PHẬT PHÁP #9",
+ "sub": "KINH TRUNG BỘ 61",
+ "acc": [
+  "gương",
+  "soi",
+  "con"
+ ],
+ "lines": [
+  "Vì sao Đức Phật dùng một cái gương để dạy con trai?",
+  "A, làm đẹp. B, soi việc làm. C, tập kiên nhẫn.",
+  "Chọn một chữ trước nhé.",
+  "Bất ngờ chưa? Đáp án là B. Cậu bé tên La Hầu La.",
+  "Kinh Trung Bộ, diễn ý: soi việc mình ba lần, trước, trong, và sau.",
+  "Thấy hại mình hay hại người thì dừng.",
+  "Nhưng có ích, thì cứ làm tiếp.",
+  "Tối nay, soi lại một việc hôm nay.",
+  "Gửi cho con hoặc em bạn. Bé chọn A, B hay C?"
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:7350570",
+   "items": [
+    {
+     "text": "VÌ SAO LÀ CÁI GƯƠNG?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "đố vui Phật pháp #9",
+     "at": [
+      0,
+      "gương"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "hf_list_build",
+   "at": 1,
+   "title": "BẠN CHỌN?",
+   "items": [
+    {
+     "key": "A",
+     "text": "LÀM ĐẸP",
+     "at": [
+      1,
+      "đẹp."
+     ]
+    },
+    {
+     "key": "B",
+     "text": "SOI VIỆC LÀM",
+     "at": [
+      1,
+      "soi"
+     ]
+    },
+    {
+     "key": "C",
+     "text": "TẬP KIÊN NHẪN",
+     "at": [
+      1,
+      "kiên"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 2,
+   "text": "A · B hay C?",
+   "clip": "pexels:7576281",
+   "veil": 0.65
+  },
+  {
+   "type": "hf_stamp",
+   "at": 3,
+   "kick": "",
+   "big": "B",
+   "stamps": [
+    {
+     "text": "SOI VIỆC LÀM",
+     "at": [
+      3,
+      "b."
+     ],
+     "x": 200,
+     "y": 880,
+     "rot": -6
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "MN 61 (diễn ý)",
+   "nodes": [
+    {
+     "text": "TRƯỚC",
+     "x": 0.2,
+     "y": 0.4,
+     "at": [
+      4,
+      "trước,"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "TRONG",
+     "x": 0.5,
+     "y": 0.4,
+     "at": [
+      4,
+      "trong,"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "SAU",
+     "x": 0.8,
+     "y": 0.4,
+     "at": [
+      4,
+      "sau."
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "MN 61 · SUTTACENTRAL"
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "SOI XONG",
+   "cards": [
+    {
+     "k": "CÓ HẠI",
+     "v": "DỪNG",
+     "at": [
+      5,
+      "dừng."
+     ]
+    },
+    {
+     "k": "CÓ ÍCH",
+     "v": "LÀM TIẾP",
+     "at": [
+      6,
+      "ích,"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "to": 1,
+   "suffix": " VIỆC SOI LẠI",
+   "label": "TỐI NAY",
+   "until": [
+    7,
+    "việc"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "veil": 0.4,
+   "clip": "pexels:6940837",
+   "items": [
+    {
+     "text": "BÉ CHỌN A, B HAY C?",
+     "at": [
+      8,
+      "bé"
+     ],
+     "acc": true
+    },
+    {
+     "text": "gửi cho con hoặc em",
+     "at": [
+      8,
+      "gửi"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/mn61/en/sujato"
+ ],
+ "description": "Vì sao Đức Phật dùng một cái gương để dạy con trai?\n\nNguồn: https://suttacentral.net/mn61/en/sujato"
+}

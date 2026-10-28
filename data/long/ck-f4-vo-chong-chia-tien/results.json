@@ -1,0 +1,271 @@
+{
+  "assume": {
+    "thao_income": 15.0,
+    "nam_income": 25.0,
+    "common_cost": 26.0,
+    "months": 12
+  },
+  "total_income": 40.0,
+  "remaining_after_cost": 14.0,
+  "equal": {
+    "thao_contrib": 13.0,
+    "nam_contrib": 13.0,
+    "thao_left": 2.0,
+    "nam_left": 12.0,
+    "month_12": {
+      "thao_left": 24.0,
+      "nam_left": 144.0
+    }
+  },
+  "proportional": {
+    "thao_contrib": 9.75,
+    "nam_contrib": 16.25,
+    "thao_left": 5.25,
+    "nam_left": 8.75,
+    "month_12": {
+      "thao_left": 63.0,
+      "nam_left": 105.0
+    }
+  },
+  "pool": {
+    "after_cost": 14.0,
+    "thao_left": 3.5,
+    "nam_left": 3.5,
+    "common_left": 7.0,
+    "month_12": {
+      "thao_left": 42.0,
+      "nam_left": 42.0,
+      "common_left": 84.0
+    }
+  },
+  "monthly_chart": [
+    {
+      "month": 1,
+      "equal": {
+        "thao": 2.0,
+        "nam": 12.0
+      },
+      "proportional": {
+        "thao": 5.25,
+        "nam": 8.75
+      },
+      "pool": {
+        "thao": 3.5,
+        "nam": 3.5,
+        "common": 7.0
+      }
+    },
+    {
+      "month": 2,
+      "equal": {
+        "thao": 4.0,
+        "nam": 24.0
+      },
+      "proportional": {
+        "thao": 10.5,
+        "nam": 17.5
+      },
+      "pool": {
+        "thao": 7.0,
+        "nam": 7.0,
+        "common": 14.0
+      }
+    },
+    {
+      "month": 3,
+      "equal": {
+        "thao": 6.0,
+        "nam": 36.0
+      },
+      "proportional": {
+        "thao": 15.75,
+        "nam": 26.25
+      },
+      "pool": {
+        "thao": 10.5,
+        "nam": 10.5,
+        "common": 21.0
+      }
+    },
+    {
+      "month": 4,
+      "equal": {
+        "thao": 8.0,
+        "nam": 48.0
+      },
+      "proportional": {
+        "thao": 21.0,
+        "nam": 35.0
+      },
+      "pool": {
+        "thao": 14.0,
+        "nam": 14.0,
+        "common": 28.0
+      }
+    },
+    {
+      "month": 5,
+      "equal": {
+        "thao": 10.0,
+        "nam": 60.0
+      },
+      "proportional": {
+        "thao": 26.25,
+        "nam": 43.75
+      },
+      "pool": {
+        "thao": 17.5,
+        "nam": 17.5,
+        "common": 35.0
+      }
+    },
+    {
+      "month": 6,
+      "equal": {
+        "thao": 12.0,
+        "nam": 72.0
+      },
+      "proportional": {
+        "thao": 31.5,
+        "nam": 52.5
+      },
+      "pool": {
+        "thao": 21.0,
+        "nam": 21.0,
+        "common": 42.0
+      }
+    },
+    {
+      "month": 7,
+      "equal": {
+        "thao": 14.0,
+        "nam": 84.0
+      },
+      "proportional": {
+        "thao": 36.75,
+        "nam": 61.25
+      },
+      "pool": {
+        "thao": 24.5,
+        "nam": 24.5,
+        "common": 49.0
+      }
+    },
+    {
+      "month": 8,
+      "equal": {
+        "thao": 16.0,
+        "nam": 96.0
+      },
+      "proportional": {
+        "thao": 42.0,
+        "nam": 70.0
+      },
+      "pool": {
+        "thao": 28.0,
+        "nam": 28.0,
+        "common": 56.0
+      }
+    },
+    {
+      "month": 9,
+      "equal": {
+        "thao": 18.0,
+        "nam": 108.0
+      },
+      "proportional": {
+        "thao": 47.25,
+        "nam": 78.75
+      },
+      "pool": {
+        "thao": 31.5,
+        "nam": 31.5,
+        "common": 63.0
+      }
+    },
+    {
+      "month": 10,
+      "equal": {
+        "thao": 20.0,
+        "nam": 120.0
+      },
+      "proportional": {
+        "thao": 52.5,
+        "nam": 87.5
+      },
+      "pool": {
+        "thao": 35.0,
+        "nam": 35.0,
+        "common": 70.0
+      }
+    },
+    {
+      "month": 11,
+      "equal": {
+        "thao": 22.0,
+        "nam": 132.0
+      },
+      "proportional": {
+        "thao": 57.75,
+        "nam": 96.25
+      },
+      "pool": {
+        "thao": 38.5,
+        "nam": 38.5,
+        "common": 77.0
+      }
+    },
+    {
+      "month": 12,
+      "equal": {
+        "thao": 24.0,
+        "nam": 144.0
+      },
+      "proportional": {
+        "thao": 63.0,
+        "nam": 105.0
+      },
+      "pool": {
+        "thao": 42.0,
+        "nam": 42.0,
+        "common": 84.0
+      }
+    }
+  ],
+  "cost_share_pct": {
+    "equal_thao": 86.7,
+    "equal_nam": 52.0,
+    "proportional_thao": 65.0,
+    "proportional_nam": 65.0
+  },
+  "sensitivity": [
+    {
+      "cost": 24,
+      "equal_thao": 3.0,
+      "equal_nam": 13.0,
+      "pro_thao": 6.0,
+      "pro_nam": 10.0
+    },
+    {
+      "cost": 26,
+      "equal_thao": 2.0,
+      "equal_nam": 12.0,
+      "pro_thao": 5.25,
+      "pro_nam": 8.75
+    },
+    {
+      "cost": 28,
+      "equal_thao": 1.0,
+      "equal_nam": 11.0,
+      "pro_thao": 4.5,
+      "pro_nam": 7.5
+    },
+    {
+      "cost": 30,
+      "equal_thao": 0.0,
+      "equal_nam": 10.0,
+      "pro_thao": 3.75,
+      "pro_nam": 6.25
+    }
+  ]
+}

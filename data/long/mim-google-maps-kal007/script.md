@@ -1,0 +1,215 @@
+# GOOGLE MAPS NGOÀI ĐỜI THẬT: RONALD REAGAN VÀ CHUYẾN BAY KAL 007 (bản 1)
+
+**Kênh:** Mind in the Machine (MIM) · **Chuỗi:** Công nghệ quanh ta · **Giọng:** Thanh Bình (dẫn) · Ngọc Huyền (`»` lời trích)
+**Độ dài dự kiến:** ~10,5–11 phút, 7 chương (đo theo âm tiết: xem mục Ghi chú; tốc độ thật Thanh Bình ~208–215 âm tiết/phút)
+**Tiêu đề (phương án):** (1) *GOOGLE MAPS Ngoài Đời Thật: Ronald Reagan Và Chuyến Bay KAL 007 — Ai Trả Giá Cho Chấm Xanh Của Bạn* · (2) *GOOGLE MAPS Ngoài Đời Thật: Ronald Reagan, KAL 007 Và Lời Hứa Mở GPS Cho Người Dân* · (3) *GOOGLE MAPS Ngoài Đời Thật: Ronald Reagan Và KAL 007 — Từ Lệch 600 Km Tới Sai 5 Mét*
+
+Quy ước: mỗi dòng là một câu đọc · `‖` = ngừng dài · `»` = lời trích (đọc giọng trích; `[TRÍCH DỊCH]` = câu thật đã dịch từ văn bản gốc tiếng Anh) · `**[DIỄN Ý]**` = diễn ý, không phải nguyên văn.
+**Viết cho tai:** câu một hơi, nói với "bạn", xưng "mình"; giờ UTC chính xác tới giây chỉ hiện trên màn hình, lời đọc nói tròn; "hải lý" luôn kèm quy đổi cây số ở lần đầu; liệt kê tối đa ba mục.
+**Trung thực:** mọi giờ, hướng bay, độ lệch, kết luận về lái tự động lấy từ báo cáo ICAO năm 1993 (thư LE 4/19.4-93/68 ngày 16/07/1993, kèm báo cáo C-WP/9781; bản quét đầy đủ 298 trang) · con số "350 hải lý, hơn 600 km" lúc trúng tên lửa là của **phân tích phía Nga đính kèm báo cáo** (Phụ lục D), Hội đồng ICAO không thông qua phần kết luận nên lời đọc nói rõ "phân tích của phía Nga" · ICAO chỉ đưa ra hai khả năng (quên ở chế độ giữ hướng, hoặc bật dẫn đường quán tính khi đã lệch quá 7,5 hải lý), lời đọc nói cả hai, không chọn · tuyên bố mở GPS ngày 16/09/1983 do **phó thư ký báo chí Larry Speakes** đọc, nói "Tổng thống đã quyết định"; văn bản **không** có chữ "miễn phí", chỉ nói máy bay dân sự; lời đọc nói rõ Reagan không phát minh GPS · chữ "miễn phí" (free of charge) chỉ có trong tuyên bố của Clinton năm 2000 · "một trăm mét" là của bản tin Nhà Trắng năm 2000 (ví dụ máy dẫn đường ô tô), con số đo thật 45 m → 6,3 m là của NOAA (một trạm ở Kentucky, đăng trên gps.gov) · phi công Osipovich chỉ nhắc qua bản ghi liên lạc và lời phỏng vấn do ICAO tóm tắt, diễn ý · không mô tả thương vong, 269 người nói một lần.
+
+**Giữ chân:** cold open = **31/08/1983 (giờ UTC), chiếc 747 lệch dần khỏi tuyến R20, dừng ở lúc hai tên lửa rời giá phóng** · **lộ trình dạng "con số co lại"** (khác mọi dạng MIM đã dùng: ba câu hỏi, chặng đường, lời thách đoán số, cảnh hẹn trước, nghịch lý, câu hỏi duy nhất, bản đồ bằng hình, giải phẫu một vật, đồng hồ đếm ngược, ba vòng thi, phiên toà, bảng tỉ số, ba thanh độ tự tin, ba lá bài úp, "năm điều … không có", theo chân một tấm ảnh, cuốn sổ lời hứa, nhật ký hai cột, ba câu nói qua nhiều năm): màn hình giữ một **cây thước sai số**; mỗi khi một nấc được chốt, thước co lại (hơn 600 km → khoảng 100 m → khoảng 5 m), lời đọc hứa ngay CH00: cuối video bạn sẽ biết ai đã trả giá cho mỗi nấc co · **vòng mở:** "ai trả giá cho mỗi nấc co?" (CH00 → đóng CH06) · "ba bộ dẫn đường quán tính ở đâu suốt năm tiếng?" (CH01 → CH02) · "nước Mỹ đã làm gì sau đêm ấy?" (CH02 → CH03) · "ai làm nhoè tín hiệu?" (CH03 → CH04) · "ai ký quyết định gỡ nhiễu?" (CH04 → CH05) · "khoản giá nằm trong túi ai?" (CH05 → CH06) · **re-hook ~45%** = cuối CH03 "giờ bạn hiểu vì sao chấm xanh dính tới đêm ở Sakhalin" · **cảnh mạnh ~75%** = nửa đêm 01/05/2000, lớp nhiễu tắt cùng lúc trên cả chòm vệ tinh (CH05) · **mô-típ** "cây thước co lại" (CH00, CH02, CH04, CH06) + "chấm xanh" (CH00, CH03, CH06) + "bàn tay con người đưa vào" (CH03, CH06).
+
+---
+
+## CH00 · Đường bay lệch dần
+
+Ngày 31 tháng 8 năm 1983, theo giờ quốc tế.
+Một chiếc Boeing 747 của Korean Air Lines đang bay qua Bắc Thái Bình Dương.
+Chuyến bay KAL 007 về Seoul.
+Mỗi lần bạn mở Google Maps và thấy chấm xanh của mình, bạn đang dùng một thứ có dính tới chuyến bay này.
+Và tới một người: Tổng thống Mỹ Ronald Reagan. ‖
+Máy bay cất cánh từ Anchorage, bang Alaska, lúc một giờ chiều giờ quốc tế.
+Trên bản đồ, nó phải bám tuyến R20, một hành lang bay chạy sát không phận Liên Xô.
+Nhưng nó đang lệch dần về phía bắc.
+Mỗi giờ một xa hơn. ‖
+Trong buồng lái, không có dấu hiệu nào cho thấy ai biết điều đó.
+Nó bay qua bán đảo Kamchatka, rồi tới đảo Sakhalin.
+Một chiếc tiêm kích Liên Xô đã bám theo nó. ‖
+Khoảng sáu giờ hai mươi lăm sáng ngày 1 tháng 9, theo giờ trên đảo Sakhalin.
+Trên độ cao ấy, trời vẫn còn tối.
+Hai quả tên lửa rời giá phóng. ‖
+Từ giờ, màn hình của mình sẽ giữ một cây thước.
+Nó đo máy móc sai bao xa khi trả lời câu hỏi: tôi đang ở đâu?
+Đêm ấy, thước chỉ hàng trăm cây số.
+Mỗi chương, nó sẽ co lại một nấc.
+Một nấc, rồi một nấc nữa.
+Cuối video, bạn sẽ biết ai đã trả giá cho mỗi nấc co ấy.
+
+## CH01 · Một con số trên la bàn
+
+Muốn hiểu vì sao lệch, phải quay lại phút thứ ba sau khi cất cánh.
+Lúc ấy, chiếc 747 quay mũi về hướng chừng hai trăm bốn mươi lăm độ theo la bàn từ.
+Rồi nó giữ đúng hướng ấy cho tới lúc bị tấn công.
+Một con số, giữ suốt đêm. ‖
+Đó là kết luận của Tổ chức Hàng không Dân dụng Quốc tế, gọi tắt là ICAO, trong báo cáo năm 1993.
+Gần mười năm sau.
+Vì hai hộp đen, do Liên Xô vớt lên năm 1983, mãi tháng 1 năm 1993 phía Nga mới trao cho ICAO. ‖
+Máy ghi dữ liệu cho thấy hướng bay gần như không đổi suốt hơn năm tiếng.
+Đều đến mức, theo báo cáo, chỉ có lái tự động mới giữ được như vậy.
+Cũng không có hỏng hóc lớn nào về điện tử hay dẫn đường trước lúc bị bắn.
+Máy bay không hỏng.
+Vậy chuyện gì đã xảy ra?
+Lái tự động có nhiều chế độ.
+Ở chế độ giữ hướng, nó cứ bay theo một con số la bàn, gió đẩy đi đâu thì trôi theo đó.
+Ở chế độ dẫn đường quán tính, nó bám từng điểm trên lộ trình đã nạp sẵn.
+Báo cáo ICAO đưa ra hai khả năng.
+Một là tổ lái để quên lái tự động ở chế độ giữ hướng.
+Hai là họ có bật dẫn đường quán tính, nhưng khi ấy máy bay đã lệch quá bảy phẩy năm hải lý, nên máy không bắt được tuyến.
+Một hải lý là chừng một phẩy tám cây số.
+Trường hợp nào thì đèn báo trong buồng lái cũng không cho thấy máy bay đang bay theo hướng cố định. ‖
+Đài dẫn đường vô tuyến ở Anchorage đã ngừng hoạt động từ ngày 23 tháng 8.
+Nên cách thường dùng để bám tuyến ngay sau khi rời Anchorage không có sẵn. ‖
+Bốn mươi chín phút sau khi cất cánh, ngang trạm Bethel ở Alaska, máy bay đã lệch mười hai hải lý.
+Hơn hai mươi cây số.
+Báo cáo viết rằng chừng ấy đáng lẽ đã phải khiến tổ lái nghi ngờ.
+Nhưng không có dấu hiệu nào cho thấy họ nhận ra.
+Trên máy bay có tới ba bộ dẫn đường quán tính.
+Vậy suốt năm tiếng ấy, chúng ở đâu?
+
+## CH02 · Ba bộ máy không ai giao tay lái
+
+Theo ICAO, chiếc 747 mang ba bộ dẫn đường quán tính của hãng Litton.
+Mỗi bộ có cảm biến riêng và một máy tính riêng, tự tính ra vị trí của máy bay.
+Chúng không được nối với sóng radio để tự chỉnh, nên sai số cứ âm thầm cộng dồn.
+Nhưng sai số ấy nhỏ: dưới hai hải lý cho mỗi giờ bay.
+Ba bộ còn soi lẫn nhau, bộ nào lệch so với hai bộ kia là lộ ra ngay.
+Theo báo cáo, màn hình của chúng đáng lẽ đã cho thấy máy bay đang trượt khỏi tuyến.
+Nhưng báo cáo cũng kết luận: lái tự động không hề do bộ dẫn đường quán tính điều khiển.
+Máy biết đường. ‖
+Chỉ là không ai giao tay lái cho máy.
+Còn chiếc 747 thì cứ lệch.
+Ở điểm báo cáo thứ nhất trên biển, chừng sáu mươi hải lý.
+Điểm thứ hai, một trăm. Điểm thứ ba, một trăm sáu mươi.
+Một trăm sáu mươi hải lý là gần ba trăm cây số. ‖
+Từ khoảng mười sáu giờ bốn mươi giờ quốc tế, tiêm kích Liên Xô cố chặn nó trên Kamchatka, nhưng không thành.
+Gần đảo Sakhalin, họ bắt kịp.
+Đúng lúc ấy, tổ lái xin trạm Tokyo cho lên cao thêm hai nghìn bộ, và được phép.
+Báo cáo ghi: phía Liên Xô hiểu cú lên cao này là một động tác né tránh.
+Trung tâm chỉ huy Liên Xô cho rằng đây là máy bay trinh sát RC-135 của Mỹ.
+Báo cáo ghi: không ai gọi tổ lái qua tần số cấp cứu. ‖
+Theo bản ghi liên lạc in trong báo cáo, chiếc tiêm kích số 805 là của phi công Osipovich.
+Khi được nhóm ICAO phỏng vấn, phi công ấy nói ông không hề biết đó là máy bay chở khách. **[DIỄN Ý]**
+Lúc mười tám giờ hai mươi sáu phút giờ quốc tế, quả tên lửa đầu tiên nổ.
+Hai trăm sáu mươi chín người trên máy bay, không ai sống sót. ‖
+Phân tích của phía Nga, đính kèm báo cáo ICAO, tính rằng lúc ấy máy bay đã lệch khoảng ba trăm năm mươi hải lý khỏi tuyến R20.
+Hơn sáu trăm cây số.
+Đó là nấc đầu tiên trên cây thước của mình.
+Vậy sau đêm ấy, nước Mỹ đã làm gì?
+
+## CH03 · Lời hứa ngày 16 tháng 9
+
+Tám giờ tối ngày 5 tháng 9 năm 1983, Reagan lên sóng truyền hình toàn quốc từ Phòng Bầu Dục.
+Ông gọi vụ bắn là một tội ác chống lại loài người.
+Rồi ông nói một câu về chiếc máy tính dẫn đường trên máy bay. ‖
+» Một chiếc máy tính phải đáp lại những gì bàn tay con người đưa vào. [TRÍCH DỊCH]
+» Sẽ không ai biết được là đã nhầm khi nhập đường bay cho máy, hay là máy trục trặc. [TRÍCH DỊCH] ‖
+Mười năm sau, hộp đen cho thấy máy không hề trục trặc.
+Lỗi nằm ở cách dùng máy.
+Mười một ngày sau bài phát biểu, ngày 16 tháng 9, Nhà Trắng ra một tuyên bố.
+Người đọc nó không phải Reagan, mà là phó thư ký báo chí Larry Speakes, trong buổi họp báo trưa.
+Tuyên bố viết rằng Tổng thống đã quyết định như sau.
+» Hoa Kỳ sẵn sàng cho máy bay dân sự dùng các phương tiện của Hệ thống Định vị Toàn cầu, khi hệ thống đi vào hoạt động năm 1988. [TRÍCH DỊCH]
+Hệ thống Định vị Toàn cầu ấy chính là GPS. ‖
+Hãy đọc kỹ câu ấy.
+Nó nói về máy bay dân sự, không nói về điện thoại.
+Nó không có chữ miễn phí.
+Và Reagan cũng không phát minh ra GPS. ‖
+Chương trình GPS được duyệt từ năm 1973.
+Vệ tinh thử nghiệm đầu tiên được phóng ngày 22 tháng 2 năm 1978.
+Năm 1983, hệ thống vẫn còn dang dở.
+Lời hứa hẹn năm năm nữa.
+Thứ Reagan quyết định là mở một hệ thống quân sự cho máy bay chở dân thường. ‖
+Giờ thì bạn hiểu vì sao chấm xanh trên Google Maps lại dính tới một buổi sáng ở Sakhalin.
+Nhưng lời hứa năm 1983 chưa làm chấm xanh ấy chính xác ngay.
+Vì tín hiệu dành cho người dân sẽ bị cố ý làm nhoè.
+
+## CH04 · Một trăm mét cố ý
+
+Mốc năm 1988 trôi qua.
+Vệ tinh GPS thế hệ thứ hai đầu tiên phải tới ngày 14 tháng 2 năm 1989 mới được phóng.
+Và khi tín hiệu tới tay người dân, nó mang sẵn một lớp nhiễu.
+Phía Mỹ gọi lớp nhiễu ấy là "khả dụng có chọn lọc", viết tắt SA.
+Trang chính thức về GPS của chính phủ Mỹ mô tả: đó là sự cố ý làm suy giảm tín hiệu GPS công cộng, vì lý do an ninh quốc gia.
+Nhoè cỡ nào?
+Theo một tài liệu của Nhà Trắng năm 2000, máy dẫn đường trên ô tô khi ấy chỉ biết xe nằm trong phạm vi chừng một trăm mét. ‖
+Một trăm mét: nấc thứ hai của cây thước.
+Nghe thì nhỏ, so với sáu trăm cây số.
+Nhưng hãy nghĩ tới hai đường cao tốc chạy song song.
+Tài liệu ấy viết đúng chuyện này: máy khó biết xe đang ở trên đường nào. ‖
+Số đo thật còn rõ hơn.
+Ở một trạm đo tại bang Kentucky, khi còn lớp nhiễu, chín mươi lăm phần trăm số điểm đo rơi trong bán kính bốn mươi lăm mét.
+Trang GPS của chính phủ Mỹ ví thế này. ‖
+Bạn chỉ biết mình đang ở dưới sân, hay trên khán đài một sân bóng bầu dục. **[DIỄN Ý]**
+Lớp nhiễu được phát ra từ chính các vệ tinh.
+Người dùng không tự gỡ được.
+Muốn gỡ, phải có một quyết định từ trên cao.
+Một văn bản của Tổng thống Mỹ năm 1996 đã hứa bỏ nó chậm nhất vào năm 2006.
+Và mỗi năm xem xét lại một lần. ‖
+Ai sẽ ký quyết định đó?
+
+## CH05 · Nửa đêm ngày 1 tháng 5
+
+Ngày 1 tháng 5 năm 2000, Nhà Trắng công bố một tuyên bố của Tổng thống Bill Clinton.
+» Hôm nay, tôi vui mừng thông báo rằng Hoa Kỳ sẽ ngừng cố ý làm suy giảm tín hiệu GPS dành cho công chúng, bắt đầu từ nửa đêm nay. [TRÍCH DỊCH] ‖
+Ông viết rằng người dùng dân sự sẽ định vị chính xác hơn tới mười lần.
+Và Mỹ sẽ tiếp tục cung cấp các khả năng ấy cho người dùng khắp thế giới, miễn phí.
+Chữ miễn phí xuất hiện ở đây, gần mười bảy năm sau buổi sáng ở Sakhalin. ‖
+Theo chính phủ Mỹ, vài phút sau nửa đêm, giờ miền Đông nước Mỹ, lớp nhiễu tắt.
+Cùng một lúc, trên toàn bộ chòm vệ tinh.
+Không ai phải thay máy thu. ‖
+Ở trạm đo Kentucky, bán kính chứa chín mươi lăm phần trăm số điểm đo co từ bốn mươi lăm mét xuống còn sáu phẩy ba mét.
+Cây thước lại sắp co.
+Từ chỗ chỉ biết mình ở dưới sân hay trên khán đài, giờ bạn biết mình đứng ở vạch kẻ nào. ‖
+Tuyên bố của Clinton nêu một ví dụ.
+» Các đội cấp cứu đáp lại một lời kêu cứu giờ có thể xác định họ phải tới phía nào của đường cao tốc. [TRÍCH DỊCH] ‖
+Vậy ai trả giá cho nấc co này?
+Trước hết là quân đội Mỹ: họ bỏ cách làm nhoè tín hiệu trên toàn cầu.
+Thay vào đó, tuyên bố nói Mỹ đã chứng minh có thể chặn tín hiệu GPS theo từng khu vực, khi an ninh bị đe dọa.
+Theo tuyên bố, chính Bộ trưởng Quốc phòng đã đề xuất quyết định này.
+Năm 2007, Mỹ còn quyết định đặt hàng thế hệ vệ tinh GPS III không có tính năng làm nhoè. ‖
+Nhưng còn một khoản giá nữa.
+Nó nằm trong túi của một nhóm người rất cụ thể.
+
+## CH06 · Chấm xanh của bạn
+
+Hôm nay, trang GPS của chính phủ Mỹ ghi rằng điện thoại có GPS thường chính xác trong bán kính chừng năm mét, dưới trời thoáng.
+Gần nhà cao tầng, cầu hay cây cối, nó kém đi.
+Năm mét: nấc thứ ba của cây thước. ‖
+Chấm xanh trên Google Maps của bạn đứng trên cả ba nấc ấy.
+Và câu hỏi còn lại: ai trả tiền cho nó?
+Không phải bạn.
+Cũng trang ấy trả lời thẳng.
+» Người đóng thuế Mỹ trả tiền cho dịch vụ GPS mà cả thế giới đang dùng. [TRÍCH DỊCH]
+Luật và chính sách của Mỹ buộc dịch vụ GPS dân sự không thu phí trực tiếp của người dùng.
+Nên chữ miễn phí chỉ đúng một nửa.
+Bạn không trả, nhưng có người trả. ‖
+Giờ nhìn lại cây thước.
+Nấc hàng trăm cây số gắn với chuyến KAL 007: tuyên bố năm 1983 nói lời hứa GPS là để thảm kịch ấy không lặp lại.
+Nấc một trăm mét co lại khi quân đội Mỹ thôi làm nhoè tín hiệu cho cả thế giới.
+Nấc năm mét được trả mỗi năm bằng tiền thuế của người Mỹ. ‖
+Có một thứ cây thước không đo được.
+Như Reagan nói, máy tính vẫn đáp lại những gì bàn tay con người đưa vào.
+Chưa đầy bốn tuần sau buổi sáng ở Sakhalin, rạng sáng ngày 26 tháng 9 năm 1983, máy tính báo động của Liên Xô báo Mỹ vừa phóng tên lửa.
+Người ngồi trước màn hình hôm ấy tên là Stanislav Petrov. ‖
+Video thứ Sáu này của kênh sẽ kể đêm đó.
+Còn bạn, đã bao giờ chấm xanh dắt bạn sang nhầm một con đường chưa?
+Nó lệch bao xa, ở đâu? Kể mình nghe ở phần bình luận nhé.
+
+## Ghi chú
+
+Ước độ dài: âm tiết = từ tách bằng dấu cách của lời đọc (sau `script_lines.py`); phút đọc = âm tiết / 210; phút ước = phút đọc + 0,3 giây/câu + 1 giây mỗi `‖` (+0,8 giây nghỉ đầu chương CH01–CH06). Chưa tính thẻ kết 20 giây.
+
+| Chương | Câu | Âm tiết | `‖` | Phút đọc (210/phút) | Phút ước (có nghỉ) |
+|---|---|---|---|---|---|
+| CH00 · Đường bay lệch dần | 21 | 237 | 4 | 1.13 | 1.30 |
+| CH01 · Một con số trên la bàn | 28 | 388 | 4 | 1.85 | 2.07 |
+| CH02 · Ba bộ máy không ai giao tay lái | 27 | 388 | 4 | 1.85 | 2.06 |
+| CH03 · Lời hứa ngày 16 tháng 9 | 24 | 314 | 5 | 1.50 | 1.71 |
+| CH04 · Một trăm mét cố ý | 21 | 278 | 4 | 1.32 | 1.51 |
+| CH05 · Nửa đêm ngày 1 tháng 5 | 20 | 317 | 6 | 1.51 | 1.72 |
+| CH06 · Chấm xanh của bạn | 22 | 295 | 4 | 1.40 | 1.59 |
+| **Tổng** | 163 | 2217 | 31 | 10.56 | 11.97 |
+
+Cold open đúng nghĩa (CH00 dòng 0–14, tới "Hai quả tên lửa rời giá phóng") ≈ 180 âm tiết ≈ 55 giây; dòng 15–20 là lời hứa lộ trình (~20 giây). Nhắc Google Maps (dòng 3) và Ronald Reagan (dòng 4) trong ~20 giây đầu.
+Nguồn và nhãn từng câu: `factcheck.md`.

@@ -1,0 +1,216 @@
+{
+ "theme": "mim",
+ "title": "Tháng 11/2021, Facebook thông báo tắt nhận diện khuôn mặt và xoá hơn một tỉ mẫu khuôn mặt",
+ "description": "Theo Wikipedia và các báo (AP, Engadget), tháng 11/2021 Meta (Facebook) thông báo sẽ tắt hệ thống nhận diện khuôn mặt và xoá mẫu khuôn mặt (face template) của hơn 1 tỉ người; Jerome Pesenti là người viết thông báo. Theo hãng, họ chuyển từ nhận diện đại trà sang những cách dùng hẹp hơn như xác thực chính chủ; AP còn nhắc tới bất định về quy định và một vụ kiện ở Illinois. Người đang bật tính năng sẽ không còn được tự gắn tên trong ảnh và video.\n\nGiọng đọc tổng hợp; video Pexels/Coverr minh hoạ, không phải cảnh thật của sự kiện.\nBản đầy đủ: https://youtu.be/7daMUBWG6mU",
+ "tags": [
+  "facebook",
+  "meta",
+  "nhận diện khuôn mặt",
+  "dữ liệu sinh trắc",
+  "jerome pesenti",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "KHUÔN MẶT VÀ AI",
+ "sub": "FACEBOOK · 2021",
+ "acc": [
+  "2021",
+  "xoá",
+  "tỉ",
+  "khuôn",
+  "mặt"
+ ],
+ "lines": [
+  "Năm 2021, Facebook sắp xoá một tỉ khuôn mặt.",
+  "Hãng thông báo sẽ tắt hệ thống nhận diện khuôn mặt, cùng tính năng tự gắn tên người trong ảnh.",
+  "Người viết thông báo là Jerome Pesenti.",
+  "Thứ bị xoá không phải ảnh, mà là hơn một tỉ mẫu khuôn mặt, mỗi mẫu là một dãy số.",
+  "Theo hãng, họ chuyển từ nhận diện đại trà sang những cách dùng hẹp hơn, như xác thực chính chủ.",
+  "Người đang bật tính năng sẽ không còn được tự gắn tên trong ảnh và video.",
+  "Hơn một tỉ dãy số khuôn mặt, từ nay, sẽ biến mất khỏi hệ thống ấy."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "items": [
+    {
+     "text": "2021",
+     "at": [
+      0,
+      "Năm"
+     ],
+     "acc": true,
+     "size": 300
+    },
+    {
+     "text": "MỘT TỈ KHUÔN MẶT",
+     "at": [
+      0,
+      "một"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8549582",
+   "veil": 0.6
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "2021",
+   "day": "THÁNG 11",
+   "sub": {
+    "text": "FACEBOOK · THÔNG BÁO TẮT NHẬN DIỆN",
+    "at": [
+     1,
+     "tắt"
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 1,
+   "suffix": " TỈ+",
+   "label": "MẪU KHUÔN MẶT SẼ BỊ XOÁ",
+   "until": [
+    3,
+    "một"
+   ]
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "LÝ DO HÃNG NÊU",
+   "nodes": [
+    {
+     "text": "NHẬN DIỆN ĐẠI TRÀ",
+     "x": 0.5,
+     "y": 0.2,
+     "at": [
+      4,
+      "đại"
+     ],
+     "w": 500,
+     "cross": [
+      4,
+      "sang"
+     ]
+    },
+    {
+     "text": "XÁC THỰC CHÍNH CHỦ",
+     "x": 0.5,
+     "y": 0.72,
+     "at": [
+      4,
+      "xác"
+     ],
+     "c": "acc",
+     "w": 520
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      4,
+      "sang"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "NGƯỜI ĐANG BẬT TÍNH NĂNG",
+   "cards": [
+    {
+     "k": "TRƯỚC",
+     "v": "TỰ GẮN TÊN",
+     "at": [
+      5,
+      "tự"
+     ]
+    },
+    {
+     "k": "SAU",
+     "v": "KHÔNG CÒN",
+     "at": [
+      5,
+      "không"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "BIẾN MẤT",
+   "sub": "HƠN MỘT TỈ DÃY SỐ KHUÔN MẶT"
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    6,
+    "hệ"
+   ],
+   "items": [
+    {
+     "text": "MỘT TỈ DÃY SỐ",
+     "at": [
+      6,
+      "dãy"
+     ],
+     "acc": true
+    },
+    {
+     "text": "khỏi hệ thống ấy",
+     "at": [
+      6,
+      "khỏi"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:35057102",
+   "veil": 0.6
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/DeepFace",
+  "Meta — Update On Use Of Face Recognition In Facebook (11/2021): https://about.fb.com/news/2021/11/update-on-use-of-face-recognition/",
+  "Associated Press, 11/2021 — Facebook ngừng nhận diện khuôn mặt",
+  "Engadget, 11/2021 — Facebook shuts down face recognition"
+ ],
+ "say": {
+  "facebook": "Phây-búc",
+  "meta": "Mê-ta",
+  "jerome": "Giê-rôm",
+  "pesenti": "Pê-xen-ti",
+  "illinois": "I-li-noi",
+  "ap": "ây-pi"
+ },
+ "rules": 2,
+ "mix": true,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "sources_internal": [
+  "https://en.wikipedia.org/wiki/DeepFace (đã mở: Meta thông báo 11/2021 tắt nhận diện khuôn mặt của Facebook, xoá mẫu khuôn mặt của hơn 1 tỉ người, dự kiến xong 12/2021)",
+  "AP/Engadget/XDA qua kết quả tìm kiếm (engadget.com/facebook-shuts-down-face-recognition-171737198.html mở trang trống; Pesenti là người viết bài, lý do chuyển sang xác thực hẹp, Illinois, tự gắn tên): CẦN mở bản gốc about.fb.com/news/2021/11/update-on-use-of-face-recognition/ (không mở được lúc lập)"
+ ],
+ "description_orig": "Theo Wikipedia và các báo (AP, Engadget), tháng 11/2021 Meta (Facebook) thông báo sẽ tắt hệ thống nhận diện khuôn mặt và xoá mẫu khuôn mặt (face template) của hơn 1 tỉ người; Jerome Pesenti là người viết thông báo. Theo hãng, họ chuyển từ nhận diện đại trà sang những cách dùng hẹp hơn như xác thực chính chủ; AP còn nhắc tới bất định về quy định và một vụ kiện ở Illinois (cần kiểm bản gốc trên about.fb.com). Người đang bật tính năng sẽ không còn được tự gắn tên trong ảnh và video.\n\nGiọng đọc tổng hợp; video Pexels/Coverr minh hoạ, không phải cảnh thật của sự kiện.\nBản đầy đủ: https://youtu.be/7daMUBWG6mU"
+}

@@ -1,0 +1,297 @@
+# NGƯỜI GIẢI MÃ Ngoài Đời Thật: Alan Turing Và Bombe
+
+**Kênh:** MIM · **Độ dài mục tiêu:** 9–11 phút · **Lộ trình:** sáu răng của một chiếc khóa.
+
+Quy ước: mỗi dòng là một câu đọc. `‖` là ngừng dài. Phim The Imitation Game chỉ được nhắc bằng lời và chữ, không dùng hình phim.
+
+## CH00 · Lá thư trong đêm
+
+Đêm 21 tháng 10 năm 1941, bốn người làm ở Bletchley Park quyết định đi vòng qua cấp trên.
+
+Alan Turing, Gordon Welchman, Hugh Alexander và Stuart Milner-Barry cùng ký một lá thư gửi thẳng tới Winston Churchill.
+
+Họ không xin thêm một cỗ máy để trưng bày.
+
+Họ xin thêm người, vì những chiếc Bombe đã tạo ra công việc mà Bletchley không đủ tay để xử lý.
+
+Trong thư có một con số rất cụ thể: 20 nữ nhân viên văn phòng, 20 người đánh máy đã được đào tạo, và một phân đội WRNS để thử kết quả máy trả về.
+
+Hãy dừng ở chỗ lạ nhất của lá thư này.
+
+Một cỗ máy đang quay hàng giờ, nhưng điều làm bốn nhà giải mã lo nhất lại là chỗ con người phải nhìn vào nó.
+
+Đến tháng 6 cùng năm, Bletchley đã đột nhập được liên lạc U-boat trong Trận Đại Tây Dương.
+
+Vậy tại sao một dãy trống điện cơ, một lá thư và vài chục người trực lại cần nhau đến thế?
+
+Để mở chiếc khóa này, bạn cần sáu răng.
+
+Răng đầu là áp lực của một khóa đổi liên tục.
+
+Răng thứ hai là nền móng Ba Lan.
+
+Rồi tới Turing và những đồng đội không đứng sau tên ông.
+
+Sau đó là crib, là menu, là người vận hành, và cuối cùng là điều một bộ phim đã làm cho câu chuyện này dễ hiểu nhưng không hoàn toàn đúng.
+
+Ta lùi lại trước, về một chiếc máy không gửi được điện nào cả, nhưng khiến mọi điện mã hóa trở nên khó đọc.
+
+## CH01 · Khóa không chờ bạn
+
+Enigma là một họ máy điện cơ dùng rô-to và plugboard để biến chữ thành chữ khác.
+
+Một phím được nhấn, dòng điện đi qua nhiều rô-to, rồi kết quả hiện ở bảng đèn.
+
+Điều đáng ngại không chỉ là máy có ba rô-to hoặc nhiều hơn.
+
+Cơ quan Sáng chế Đức tính không gian lý thuyết của hệ gồm rô-to và plugboard là 158.962.555.217.826.360.000 khả năng.
+
+Nhưng Enigma còn tạo áp lực bằng thời gian.
+
+Hai đầu liên lạc phải đặt máy giống hệt nhau mới đọc được cùng một thông điệp.
+
+Thiết lập được thay thường xuyên, còn Hải quân Đức đổi khóa ngày vào nửa đêm.
+
+Các mạng cũng không giống nhau.
+
+Lục quân và Không quân chọn ba rô-to từ một bộ năm, trong khi Hải quân chọn từ một bộ tám.
+
+TNMOC ghi rằng trong chiến tranh có hàng trăm mạng, dù khoảng 50 mạng hoạt động cùng lúc, và mỗi mạng nhận key sheet riêng.
+
+Đó là lý do một điện văn chặn được không tự động có giá trị.
+
+Nó chỉ có giá trị nếu bạn tìm ra đường vào trước khi bối cảnh của nó đã đổi.
+
+Vì thế Bombe không được tạo ra để đọc thay con người từng câu tiếng Đức.
+
+Nó được tạo ra để loại thật nhanh những khả năng không thể đúng.
+
+Nhưng ý tưởng loại đường sai này không xuất hiện từ khoảng trống.
+
+Nó đi qua Warsaw trước khi đến Bletchley.
+
+## CH02 · Ba người ở Warsaw
+
+Tháng 12 năm 1932, Marian Rejewski cùng Jerzy Różycki và Henryk Zygalski đã lần đầu phá được Enigma Đức.
+
+Đó là ba người Ba Lan, không phải phần mở đầu trang trí cho câu chuyện về một thiên tài Anh.
+
+Cơ quan Tình báo Ba Lan ghi rằng điện Enigma đầu tiên được họ giải tại Cung Sachsen ở Warsaw ngày 31 tháng 12 năm 1932.
+
+Trước đó, ngày 8 tháng 12, Gustave Bertrand đã mang tài liệu đến Warsaw.
+
+Nhóm Ba Lan tiếp tục làm cyclometer vào năm 1936.
+
+Khi người Đức thay đổi Enigma vào tháng 9 năm 1938, Rejewski và đồng nghiệp tạo ra bomba kryptologiczna để tự động hóa việc phá mã.
+
+Henryk Zygalski còn có những tấm giấy đục lỗ hỗ trợ tìm thứ tự rô-to.
+
+Chi tiết này quan trọng vì nó cho thấy một thay đổi của đối phương không kết thúc cuộc chơi.
+
+Nó buộc người giải mã đổi cách đặt câu hỏi.
+
+Ngày 25 và 26 tháng 7 năm 1939, các nhà mật mã Ba Lan, Pháp và Anh gặp nhau gần Warsaw.
+
+Đoàn Anh có Alastair Denniston và Dilly Knox.
+
+Theo GCHQ, phía Ba Lan trình bày bomba kryptologiczna và những tiến bộ họ đã có với Enigma.
+
+Tri thức ấy không phải một món quà đơn giản được trao một lần rồi biến mất.
+
+Nó làm thay đổi cách GC&CS ở Anh tiếp cận Enigma.
+
+Và vài tháng sau, nó đưa Alan Turing tới Paris.
+
+## CH03 · Người được nhớ tên, và những người giữ mắt xích
+
+Alan Turing vào làm cho GC&CS tại Bletchley Park tháng 9 năm 1939.
+
+Ông dẫn công việc ở Hut 8 nhằm vào liên lạc Enigma của Hải quân Đức.
+
+Tháng 1 năm 1940, Turing tới Paris gặp các nhà mật mã Ba Lan đã sơ tán.
+
+GCHQ nói những cuộc trao đổi của ông với Marian Rejewski là nền tảng cho tư duy dẫn tới thiết kế và lắp đặt Bombe Anh.
+
+Vậy nếu một bộ phim cho bạn cảm giác Turing đóng cửa phòng rồi một mình phát minh ra tất cả, cảm giác ấy bỏ rơi chiếc cầu quan trọng nhất của câu chuyện.
+
+Cầu đó đi từ Ba Lan sang Anh, rồi đi qua rất nhiều người trong Bletchley.
+
+Gordon Welchman cũng vào Bletchley tháng 9 năm 1939.
+
+Ông đứng đầu Hut 6 và nghĩ ra diagonal board, phần bổ sung mà GCHQ gọi là một cải tiến lớn cho Bombe của Turing.
+
+Joan Clarke tốt nghiệp double First năm 1940 rồi được đưa vào Hut 8 làm việc với Turing.
+
+Bà đặc biệt giỏi Banburismus, một ứng dụng thống kê Bayes giúp tiết kiệm đáng kể thời gian xử lý trên Bombes.
+
+Đó là một hệ thống, trong đó người này giảm số việc cho máy, còn chiếc máy giảm số việc cho người khác.
+
+Welchman giúp máy bớt dừng giả.
+
+Clarke giúp công việc trên Bombe bớt tốn thời gian.
+
+Turing lấy nền móng từ những cuộc trao đổi ở Paris để đi xa hơn.
+
+Nhưng để biến một giả thuyết thành chuyển động thật, cả nhóm vẫn cần cho máy một điểm xuất phát.
+
+Điểm xuất phát ấy có tên rất ngắn: crib.
+
+## CH04 · Một đoạn chữ để mở cả mê cung
+
+Một crib là đoạn tiếng Đức mà người giải mã đoán có thể xuất hiện trong điện văn.
+
+GCHQ mô tả những crib thường là mảnh văn bản từ 20 chữ cái trở lên.
+
+Bạn không cần biết toàn bộ bức điện để bắt đầu.
+
+Bạn cần một mảnh đủ có lý để hỏi: nếu đoạn này nằm ở đây, những dây nối nào sẽ tự mâu thuẫn?
+
+Từ crib, người giải mã dựng một menu.
+
+Menu là đầu vào cho Bombe thử các thiết lập rô-to Enigma.
+
+Đây là khác biệt quan trọng giữa “máy tìm đáp án” và điều máy thực sự làm.
+
+Nó không đọc hộ toàn bộ bức điện từ đầu đến cuối.
+
+Nó kiểm tra giả thuyết có tự đá nhau hay không.
+
+Turing còn dựa vào một tính chất hữu ích: trong Enigma, một chữ không được mã hóa thành chính nó.
+
+Khi giả thuyết bắt một chữ quay lại chính nó, đường đó bị loại.
+
+Khi đủ nhiều đường sai bị loại, số đường còn lại nhỏ đi tới mức người thật có thể kiểm tra.
+
+Shaun Wylie vào Hut 8 tháng 1 năm 1941 và phụ trách Crib room.
+
+Ông nhận ra thứ tự rô-to thường khác ngày hôm trước; về sau dấu hiệu đó được gọi là Wylie WOs.
+
+Một người nhìn ra một thói quen lặp lại trong dòng điện mã hóa.
+
+Người khác biến quan sát ấy thành menu.
+
+Máy làm phần thử mệt mỏi.
+
+Rồi người lại trở về để quyết định điểm dừng nào đáng tin.
+
+Nhưng trước khi nói về điểm dừng, cần nhìn vào thứ làm những giả thuyết ấy quay được suốt ngày.
+
+## CH05 · Cỗ máy không tìm đáp án, nó loại đường sai
+
+TNMOC ghi rằng hướng tấn công của Turing có thể được cơ giới hóa bằng crib.
+
+Khi kết hợp với diagonal board của Welchman, Bombe giảm mạnh các điểm dừng giả và tăng thông lượng.
+
+Một điểm dừng giả có nghĩa là máy tạm thời cho bạn một khả năng nghe có vẻ hứa hẹn, nhưng kiểm tra thêm sẽ bác bỏ nó.
+
+Diagonal board không làm câu chuyện bớt hồi hộp.
+
+Nó làm những giờ lao động đỡ bị nuốt bởi các ngõ cụt.
+
+Theo TNMOC, chiếc Turing–Welchman Bombe đầu tiên mang tên Agnus Dei, hay Agnes, hoạt động vào tháng 8 năm 1940.
+
+British Tabulating Machine Company, gọi tắt là BTM, đảm nhiệm kỹ thuật và chế tạo các Bombe gốc.
+
+Vì vậy, đừng gọi đây là một ý tưởng sống duy nhất trong đầu một nhà toán học.
+
+Nó là bản thiết kế đi vào xưởng, thành dây, bánh xe, tiếp điểm và quy trình bảo dưỡng.
+
+Trong cả hoạt động thời chiến, TNMOC ghi khoảng 211 Bombe được chế tạo và nhiều khóa được phá theo ngày.
+
+Con số ấy cho thấy một bước ngoặt khác.
+
+Nhưng dây chuyền không tự chạy chỉ vì máy đã lắp xong.
+
+Nó cần menu đúng.
+
+Nó cần bánh xe được nạp đúng.
+
+Nó cần người nhận ra máy đã dừng.
+
+Và quan trọng nhất, nó cần người không nhầm một điểm dừng với lời giải cuối cùng.
+
+Ở Eastcote, những người làm phần đó chia ngày thành ba ca.
+
+## CH06 · Ba ca, mười máy, một điểm dừng
+
+Jean Millar gia nhập WRNS tháng 3 năm 1943 và được gọi đi vào tháng 11.
+
+Tại Eastcote, bà làm ba ca tám giờ: từ 8 giờ đến 16 giờ, từ 16 giờ đến nửa đêm, và từ nửa đêm đến 8 giờ sáng.
+
+Một hệ thống mật mã đổi khóa ngày không cho ai đặc quyền ngủ theo giờ hành chính.
+
+Theo lời kể của Millar, mỗi bay có 10 Bombe.
+
+Hai người cùng xử lý một máy và một menu: một người vận hành, người kia ở phòng kiểm tra.
+
+Họ nạp những bánh xe màu theo menu rồi cắm phần sau máy theo chỉ dẫn.
+
+Khi bật, Bombe thử các thiết lập rô-to.
+
+Thỉnh thoảng nó dừng, và người vận hành ghi lại đúng thiết lập lúc ấy.
+
+Đó chưa phải khoảnh khắc “đã giải mã xong”.
+
+Người kiểm tra dựng máy kiểm tra với cùng bánh xe và cùng thiết lập.
+
+Chỉ khi bước đó qua, kết quả mới được báo về Bletchley Park bằng điện thoại xáo trộn.
+
+Hãy quay lại lá thư đầu video.
+
+Nó xin một phân đội WRNS không phải để đứng cạnh máy cho đủ cảnh đẹp.
+
+Họ là một mắt xích bắt buộc giữa một menu trên giấy và một kết quả có thể tin.
+
+Trong cùng lá thư, bốn nhà giải mã còn xin 20 nữ nhân viên văn phòng và 20 người đánh máy đã được đào tạo.
+
+Khi máy tăng tốc, công việc quanh máy không biến mất.
+
+Nó đổi hình dạng.
+
+Ai đó vẫn phải chuẩn bị dữ liệu đầu vào, kiểm tra đầu ra và chuyển nó tới đúng nơi.
+
+Hệ thống chỉ nhanh bằng điểm chậm nhất của chính nó.
+
+Và bí mật của hệ thống này còn kéo dài rất lâu sau khi chiến tranh kết thúc.
+
+## CH07 · Người ở trong vòng lặp
+
+Bombes không chỉ nằm ở Bletchley Park.
+
+TNMOC ghi các outstation có Stanmore và Eastcote.
+
+Sau chiến tranh, khoảng 50 máy được giữ lại tạm thời, còn phần lớn bị tháo dỡ.
+
+Gần 40 năm sau chiến tranh, GCHQ mới bàn giao khoảng 2.000 tài liệu và bản vẽ BTM về Bombe cho Bletchley Park Trust, tạo điều kiện cho việc phục dựng.
+
+Bảo tàng Mật mã Quốc gia của NSA viết rằng nhiều sử gia cho rằng khả năng đọc Enigma có thể đã rút ngắn chiến tranh tới hai năm.
+
+Đó là nhận định của sử gia, không phải một nút bấm kỳ diệu của một cỗ máy.
+
+Phim The Imitation Game giúp nhiều người gặp lại Alan Turing.
+
+Nhưng theo Time, cái tên “Christopher” mà phim đặt cho cỗ máy là hư cấu; ngoài đời nó được gọi là Bombe, và bài báo nói có biệt danh Victory.
+
+Sự khác biệt ấy đáng nhớ không phải để chê một bộ phim.
+
+Nó nhắc ta rằng lịch sử thật rộng hơn một nhân vật chính.
+
+Sáu răng của chiếc khóa đã khớp lại.
+
+Khóa đổi liên tục tạo áp lực.
+
+Ba Lan cung cấp nền móng.
+
+Turing, Welchman và Clarke biến các ý tưởng thành phương pháp.
+
+Crib và menu cho máy một nơi đáng thử.
+
+BTM cùng những người vận hành biến phương pháp thành quy trình.
+
+Và bước kiểm tra cuối cùng giữ cho một điểm dừng không bị nhầm thành sự thật.
+
+Đó có lẽ là phần hiện đại nhất của câu chuyện.
+
+Đừng chỉ hỏi một công cụ trả ra câu gì.
+
+Hãy hỏi nó bắt đầu từ giả định nào, đã loại những đường nào, và ai có trách nhiệm kiểm tra điểm dừng cuối cùng.

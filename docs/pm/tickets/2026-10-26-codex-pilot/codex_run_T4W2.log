@@ -1,0 +1,1974 @@
+Reading additional input from stdin...
+OpenAI Codex v0.164.0
+--------
+workdir: D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+model: gpt-5.6-terra
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR] (network access enabled)
+reasoning effort: medium
+reasoning summaries: none
+session id: 01a17804-ab15-7bc0-b83b-76f441502ab5
+--------
+user
+Làm ticket docs/pm/tickets/2026-10-26-codex-pilot/T4W2-dung-canh-moneyball.md từ đầu đến cuối. Tuân thủ AGENTS.md (đã nạp sẵn), nhất là 'Cấm tuyệt đối' và 'chỉ đọc đúng các file ticket chỉ định, không khám phá repo'. Trước khi báo xong phải chạy `python scripts/long_gate.py mim-moneyball --min-syl 1900` và nó phải in ĐẠT (trừ khi ticket nói là ticket nghiên cứu). Viết báo cáo vào file kết quả mà ticket chỉ định. Tiếng Việt.
+codex
+Mình sẽ thực hiện đúng ticket, chỉ mở ticket, hai tài liệu long bắt buộc và các file mẫu mà ticket nêu; sau đó chạy cổng chất lượng theo yêu cầu và ghi báo cáo.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw 'docs/pm/tickets/2026-10-26-codex-pilot/T4W2-dung-canh-moneyball.md'" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 83ms:
+# T4W2 â€” Dá»°NG Cáº¢NH + SPEC + SAY + PROMPT áº¢NH AI cho `mim-moneyball`
+
+Claude Ä‘Ã£ duyá»‡t `script.md` vÃ  `factcheck.md` (2.216 Ã¢m tiáº¿t). **KhÃ´ng sá»­a lá»i Ä‘á»c.** KhÃ´ng render, khÃ´ng upload, khÃ´ng cháº¡y `thumb.py`, khÃ´ng gá»i bot táº¡o áº£nh.
+
+**BÃ¡o cÃ¡o:** `docs/pm/tickets/2026-10-26-codex-pilot/T4W2-ket-qua.md`
+
+## Chá»‰ Ä‘á»c
+
+| File | Äá»c Ä‘á»ƒ lÃ m gÃ¬ |
+|---|---|
+| Ticket nÃ y | |
+| `docs/codex/long-cheatsheet.md` | Cáº¥u trÃºc cáº£nh, helper, thá»© tá»± lá»‡nh. **Äá»c ká»¹** |
+| `docs/codex/long-rules.md` | Má»¥c "Lá»—i Ä‘Ã£ gáº·p" vÃ  "áº¢nh AI" |
+| `data/long/mim-katherine-johnson/gen_scenes.py` | **Khung Ä‘á»ƒ chÃ©p** |
+| `data/long/mim-moneyball/script.md`, `facts.md` | Lá»i Ä‘á»c, áº£nh Commons, clip Pexels, Ä‘á» xuáº¥t áº£nh AI |
+
+KhÃ´ng Ä‘á»c engine, khÃ´ng Ä‘á»c `build_long.py`, khÃ´ng grep repo.
+
+## LÃ m
+
+1. **Táº¡o `gen_scenes.py`:** chÃ©p khung tá»« `mim-katherine-johnson/gen_scenes.py` sang `data/long/mim-moneyball/gen_scenes.py`, rá»“i thay ná»™i dung theo báº£ng "Thay nhá»¯ng gÃ¬ trong khung" cá»§a cheatsheet.
+   - `TOPIC = "mim-moneyball"`; `TITLE` láº¥y tá»« dÃ²ng 1 cá»§a `script.md`.
+   - `publish_at`: `2026-11-27T13:00:00Z`; `playlist`: "CÃ´ng Nghá»‡ Quanh Ta".
+   - MÃ´-tÃ­p `LEDGER`/`ROWS` lÃ  "táº¥m báº£ng chá» má»™t láº§n lÃªn gÃ´n", 8 Ã´ (Ä‘Ã£ nÃªu trong bÃ¡o cÃ¡o T4W1).
+   - `GEO`: báº£n Ä‘á»“ nÆ°á»›c Má»¹, ghim Oakland, Kansas City, Minnesota (náº¿u chÆ°Æ¡ng cÃ³ nháº¯c).
+   - `SAY`: phiÃªn Ã¢m má»i tÃªn Anh (Beane, DePodesta, Hatteberg, Oakland, Kansas, Athletics, Howeâ€¦) vÃ  thuáº­t ngá»¯ (OBP, ERA, SABR, MLB, ALâ€¦). Sá»‘ tháº­p phÃ¢n kiá»ƒu ".339" Ä‘á»c thÃ nh "ba trÄƒm ba mÆ°Æ¡i chÃ­n pháº§n nghÃ¬n" hoáº·c cÃ¡ch Ä‘á»c tá»± nhiÃªn tÆ°Æ¡ng Ä‘Æ°Æ¡ng.
+2. **Viáº¿t `ai_prompts.md`** (â‰¤ 6 áº£nh) theo Ä‘á»‹nh dáº¡ng trong `long-rules.md`, dá»±a trÃªn má»¥c "Äá» xuáº¥t áº£nh AI" cá»§a `facts.md`.
+   - NgÆ°á»i tháº­t chá»‰ váº½ theo dÃ¡ng gá»‘c, á»Ÿ gÃ³c nghiÃªng quay Ä‘i hoáº·c tá»« phÃ­a sau.
+   - áº¢nh khÃ´ng cÃ³ chá»¯, logo Ä‘á»™i hay sá»‘ Ã¡o.
+   - Trong `IMGS`, má»—i áº£nh khai `"EXT:ai:ai_NN"`. Trong `STAND`, gÃ¡n cho má»—i áº£nh AI má»™t áº£nh Commons thay táº¡m.
+3. **Táº£i clip** báº±ng `python motion/long/pexels.py get mim-moneyball <id> â€¦`. Chá»‰ láº¥y id cÃ³ trong `facts.md`.
+4. **Cháº¡y theo "Thá»© tá»± lá»‡nh" trong cheatsheet:**
+   - áº¢nh AI chÆ°a cÃ³, nÃªn soÃ¡t `html` báº±ng `gen_scenes.py --standin`.
+   - Xong thÃ¬ cháº¡y `gen_scenes.py` báº£n tháº­t, rá»“i cháº¡y láº¡i `script_lines.py`.
+5. **Clip sheet:** cháº¡y `clip_sheet.py`, má»Ÿ `qa_clips.jpg` xem, thay clip lá»™ chá»¯, logo hoáº·c sai nghÄ©a.
+6. **Cá»•ng cháº¥t lÆ°á»£ng:** cháº¡y `python scripts/long_gate.py mim-moneyball --min-syl 1900`. Pháº£i **Äáº T**. Náº¿u chá»‰ vÆ°á»›ng vÃ¬ áº£nh AI chÆ°a cÃ³ thÃ¬ ghi rÃµ trong bÃ¡o cÃ¡o.
+
+## BÃ¡o cÃ¡o
+
+- Sá»‘ liá»‡u tá»« `long_gate`.
+- Danh sÃ¡ch áº£nh Commons vÃ  clip Ä‘Ã£ dÃ¹ng.
+- Sá»‘ áº£nh AI cáº§n táº¡o.
+- CÃ³ lá»—i lint nÃ o pháº£i sá»­a trong lÃºc lÃ m khÃ´ng.
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"from pathlib import Path; import sys; sys.stdout.buffer.write(Path('docs/codex/long-cheatsheet.md').read_bytes())\"" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 131ms:
+# Cheatsheet dựng Long MIM (cho Codex, đọc thay engine)
+
+**Không đọc** `motion/long/build_long.py`, `motion/hf/assets/engine/*`, `motion/stier/*`, `factory/*`, `pexels.py` hay thư mục của bài khác. Mọi thứ cần biết đều có trong cheatsheet này và trong **một file mẫu**:
+
+> `data/long/mim-katherine-johnson/gen_scenes.py`. Bài này đã qua cổng, render và đăng. **Chép nguyên file này làm khung.** Giữ các helper ở dòng 57–163 và `main()`. Chỉ thay phần nội dung bên dưới.
+
+## Thay những gì trong khung
+
+| Khối | Thay bằng |
+|---|---|
+| `TOPIC`, `TITLE` (≤ 60 ký tự, một dấu `:`) | Của bài mới |
+| `SAY` | Phiên âm mọi tên nước ngoài, viết tắt và số lớn trong lời đọc. Khoá viết thường. Ví dụ: `"nasa": "Na-sa"` |
+| `IMGS` | Ảnh Commons `"File:…"` (đã kiểm PD/CC0/CC BY) hoặc `"EXT:ai:ai_NN"` cho ảnh AI |
+| `AI_PATH`, `STAND` | Số ảnh AI của bài (≤ 6); `STAND` = ảnh tư liệu thay tạm cho từng ảnh AI |
+| `GEO` | Bản đồ: `countries`, `context`, `bbox [lon_min, lat_min, lon_max, lat_max]`, `pins [{name, lon, lat, label}]` |
+| `CHAPTER_TITLES` | `ch00`–`ch07`, tiếng Việt có dấu |
+| `LEDGER`, `ROWS` | Mô-típ của bài: một tiêu đề, mỗi chương thêm 1 dòng |
+| `ch00()`–`ch07()` | Cảnh của từng chương (mục dưới) |
+| `make_spec()` | Đủ 11 trường `youtube`, đổi `publish_at`; giữ `"say": SAY`, `imgs`, `geo` |
+
+## Helper: chữ ký và ý nghĩa
+
+**Neo thời gian:** `a(line, word)` neo cảnh vào câu `line` của chương, tại từ `word`. `word` phải là chữ **có thật trong câu đó**, không phải số và không phải chữ có trong `SAY`.
+
+| Helper | Dùng khi |
+|---|---|
+| `chapter(no, k, title, sub, bg, title_at)` | Cảnh đầu mỗi chương. `k = "CHƯƠNG MỘT"`; `sub` = mốc có nguồn; `bg` = key ảnh |
+| `photo(img, at, key, value, kin=None)` | Ảnh tư liệu hoặc ảnh AI. Ảnh AI tự có `illus` + `credit: False` |
+| `print_scene(img, at, head, key, value)` | Ảnh đặt như tờ in, có cột ghi chú |
+| `broll(vid, at, text)` | Clip Pexels (id số), có nhãn VIDEO MINH HỌA |
+| `kinetic(at, text, small=None)` | Chữ lớn động |
+| `slam(at, text, sub)` | Một con số hoặc cụm từ đập mạnh |
+| `date(at, day, d, sub)` | Mốc ngày lớn. `d = "20.02.1962"` (chữ số và dấu chấm); chữ thì để vào `day` |
+| `counter(at, to, suffix, label, frm=0, year=False)` | Số đếm. Năm thì `year=True` |
+| `timeline(at, bg, items)` | Dòng thời gian (xem cách dùng trong mẫu) |
+| `org(at, nodes)` | Sơ đồ người hoặc tổ chức |
+| `question(at, text)` | Câu hỏi treo |
+| `ledger(n, at)` | Hiện mô-típ tới dòng `n` |
+| `{"type": "map", "at": …, "geo": "<key GEO>"}` | Bản đồ; mẫu có ở `ch01`/`ch05` của khung |
+
+## Luật cảnh (cổng `long_gate.py` sẽ chặn nếu sai)
+
+- 60–80 cảnh, trung bình ≤ 9 giây/cảnh, mỗi chương ≥ 5 loại cảnh.
+- Không dòng chữ hiển thị nào lặp > 2 lần. Mô-típ chỉ qua `ledger`.
+- Một clip dùng ≤ 2 lần, ít nhất 6 clip khác nhau. Một ảnh dùng ≤ 3 lần.
+- Mỗi cảnh minh hoạ **câu đang đọc**.
+
+## Clip Pexels
+
+- Tải: `python motion/long/pexels.py get <topic> <id> …`. Chỉ dùng id đã ghi trong `facts.md`.
+- Soát: `python motion/long/clip_sheet.py <topic>`, mở `output/long/<topic>/qa_clips.jpg` xem. Clip lộ chữ, logo hoặc sai nghĩa thì thay.
+
+## Thứ tự lệnh
+
+Đặt `PYTHONIOENCODING=utf-8` cho mọi lệnh.
+
+1. `python motion/long/script_lines.py <topic>`: đưa lời đọc từ `script.md` vào `chNN.json`.
+2. `python data/long/<topic>/gen_scenes.py`, rồi chạy lại `script_lines.py`. `gen_scenes` ghi đè `chNN.json` không kèm `lines`.
+3. `python motion/long/studio_lint.py <topic> --strict`
+4. `python motion/long/build_long.py <topic> tts`, rồi `… html`. Nếu ảnh AI chưa có thì chạy `gen_scenes.py --standin` để soát html, sau đó chạy lại bản thật.
+5. `python scripts/long_gate.py <topic> --min-syl 1900` phải ra **ĐẠT**.
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"from pathlib import Path; import sys; sys.stdout.buffer.write(Path('docs/codex/long-rules.md').read_bytes())\"" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 124ms:
+# Luật Long cho agent sản xuất (chi tiết, chuyển từ AGENTS.md ngày 26/10/2026)
+
+Đọc cùng `docs/codex/long-cheatsheet.md`.
+
+### Ảnh AI khi không có ảnh tự do (từ 26/10/2026)
+
+Cảnh cần minh hoạ mà không có ảnh PD/CC0/CC BY (ví dụ cảnh trong phòng làm việc năm 1962, hay một vật đã mất) thì **không tự tạo ảnh**. Ghi prompt vào `data/long/<topic>/ai_prompts.md` để chủ kênh nhờ bot tạo.
+
+**Định dạng một mục:**
+
+```
+#### ai_01.png — <cảnh dùng ở chNN, câu số N>
+- Prompt (tiếng Anh): <mô tả chi tiết: bối cảnh, thời kỳ, ánh sáng, bố cục, phong cách>
+- Khung: 16:9, 1920x1080
+- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
+- Phong cách: <ví dụ "painterly editorial illustration, muted 1960s palette">
+```
+
+**Quy tắc:**
+- **Người thật: lấy dáng gốc, không vẽ mặt** (chủ kênh, 26/10/2026):
+  - Được vẽ người có thật (Johnson, Glenn…) theo **dáng gốc** trong ảnh tư liệu: vóc người, kiểu tóc, trang phục, đồ vật, bối cảnh đúng thời kỳ.
+  - Chỉ vẽ ở **góc nghiêng quay đi hoặc từ phía sau**, không thấy rõ mặt.
+  - Trong prompt, ghi ảnh tư liệu tham chiếu (URL Commons/NASA trong `facts.md`) và mô tả dáng cụ thể. Ví dụ: "woman in 1960s cat-eye glasses and cardigan, seen from behind at a desk with mechanical calculator".
+  - Mặt người thật chỉ dùng ảnh tư liệu PD.
+- **Phong cách:** minh hoạ hoặc tranh vẽ, **không giả ảnh tư liệu**, để người xem không nhầm là tư liệu thật.
+- **Không gắn nhãn AI:** không thêm nhãn "AI" trên màn hình hay trong mô tả, vì bản thân ảnh đã có chữ ký AI (chủ kênh quyết định ngày 26/10/2026).
+- **Đường dẫn:**
+  - Chủ kênh thả ảnh vào `motion/hf/assets/long/<topic>/img/ai/ai_NN.png`.
+  - Engine chỉ đọc `output/long/<topic>/img/aiNN.jpg` kèm `.json`. Claude chạy `python scripts/ai_img_import.py <topic>` để chép ảnh sang chỗ đó.
+  - Từ 26/10, Claude chạy `python scripts/ai_img_request.py <topic>`. Lệnh này gửi `ai_prompts.md` cho bot tạo ảnh qua webhook (khoá đọc từ registry User, xem `docs/tools/grokbot-webhook.md`), chờ ảnh về rồi chạy `ai_img_import`. **Agent sản xuất không gọi webhook**: chỉ viết prompt.
+  - Trong `IMGS`, khai key `aiNN` là `"EXT:ai:ai_NN"`.
+- **Ghi công:** cảnh dùng ảnh AI phải có `"credit": false`. Nếu thiếu, engine in "ẢNH: TƯ LIỆU · PHẠM VI CÔNG CỘNG", tức là gắn nhãn tư liệu cho tranh minh hoạ, sai sự thật. Nhãn `illus` "ẢNH MINH HỌA" thì giữ, vì đó là nhãn chuẩn cho tranh minh hoạ.
+- **Khi chưa có ảnh:** giữ nguyên cảnh và đường dẫn, rồi ghi trong báo cáo "chờ N ảnh AI". `html` hoặc `long_gate` có thể báo thiếu file; điều đó chấp nhận được cho tới khi ảnh về.
+- **Giới hạn:** tối đa 6 ảnh AI cho một bài 9–11 phút. Ưu tiên ảnh tư liệu thật.
+
+### Quy trình Long (theo mẫu `data/long/mim-ke-huy-diet-petrov`, `mim-google-maps-kal007`)
+
+Đọc trước:
+- `motion/long/README.md`, `RETENTION.md`, `SOURCES.md`;
+- `docs/pm/2026-10-23-mim-long-moi.md`;
+- `docs/pm/so-that-bai.md`.
+
+Các bước:
+1. Viết `script.md` và `factcheck.md` (nguồn là URL đã mở).
+2. Chạy `python motion/long/script_lines.py <topic>`; phải qua cổng integrity.
+3. Viết `gen_scenes.py`, rồi chạy `python data/long/<topic>/gen_scenes.py`, ra `spec.json` và `chNN.json`. Counter có số 1000–2100 phải khai `"year": true|false`.
+4. Chạy `python motion/long/studio_lint.py <topic> --strict`; phải ra 0 lỗi.
+5. Chạy `python motion/long/build_long.py <topic> tts`, rồi `... html`. Sửa mọi lỗi lint mà `html` báo.
+6. Chạy `python motion/long/clip_sheet.py <topic>`, xem ảnh clip sheet; clip sai nghĩa hoặc lộ logo thì thay.
+7. Chỉ render khi ticket cho phép: `build_long.py <topic> render`, rồi `final`.
+8. Dựng thumbnail `motion/long/thumbs/<topic>_t1.html`, rồi chạy `python motion/long/thumb.py <topic> t1`.
+
+### Cổng chất lượng (bắt buộc, từ 26/10/2026)
+
+Các cổng lint chỉ là mức sàn kỹ thuật. Trước khi báo xong một Long, phải chạy:
+
+```
+python scripts/long_gate.py <topic> --min-syl 1900
+```
+
+Lệnh phải in **ĐẠT**. Các ngưỡng được đo trên bài mẫu Petrov và KAL 007:
+
+| Ngưỡng | Giá trị |
+|---|---|
+| Âm tiết lời đọc | ≥ 1.900 (≈ 9 phút) |
+| Thời lượng mỗi cảnh | ≤ 9 giây |
+| Loại cảnh mỗi chương | ≥ 5 |
+| Một clip dùng lại (bài 9–12 phút) | ≤ 2 lần |
+| Một ảnh dùng lại | ≤ 3 lần |
+| URL nguồn trong `factcheck.md` | ≥ 8 |
+| Tiêu đề | ≤ 60 ký tự |
+
+Ngoài ra: mọi năm trong kịch bản phải có trong `factcheck.md`, và không được có câu đệm.
+
+**Bài mẫu để so:**
+- Petrov: 22,5 phút; 179 cảnh (7,6 giây/cảnh); ít nhất 7 loại cảnh mỗi chương; 15 ảnh khác nhau.
+- KAL 007: 10,5 phút; 82 cảnh (7,7 giây/cảnh); không dùng clip, chỉ ảnh và đồ hoạ (bản đồ, timeline, counter).
+
+Mỗi chương của hai bài này có 3–4 dữ kiện cụ thể có nguồn.
+
+### Lỗi đã gặp (đừng lặp lại)
+
+Thử nghiệm Codex T1/T1b, 26/10/2026:
+
+1. **Chèn câu đệm rỗng nghĩa cho qua tỉ lệ câu ngắn của lint.** Ví dụ: "Rất chậm.", "Đó là câu hỏi khó.". Câu ngắn chỉ đặt sau một phán định hoặc khoảnh khắc cảm xúc.
+2. **Bị yêu cầu bỏ câu đệm thì chỉ xoá, không viết nội dung thay.** Bài tụt từ 9 xuống 5 phút. Thiếu độ dài thì phải **tìm thêm dữ kiện có nguồn**, không được để bài ngắn đi.
+3. **Đọc một ngày cụ thể (18/3/1940) trong khi chính `factcheck.md` ghi là chưa chốt được.**
+4. **Một clip lặp 8 lần; 9 phút chỉ có 18 cảnh và toàn chữ.**
+5. **Cold open liệt kê tên người thay vì dựng một cảnh có căng thẳng; câu meta "Hôm nay mình không kể…".**
+6. **Coi việc qua lint là xong.** Xong nghĩa là `long_gate.py` in ĐẠT **và** nội dung đáng xem.
+7. **Thẻ chương ghi sai trường.** Đã ghi `"number": "05"` thay cho `no`/`k`, nên engine hiện chữ "undefined" giữa màn hình ở cả 8 chương. Thẻ chương đúng (theo `mim-ke-huy-diet-petrov/ch05.json`):
+
+   ```json
+   {"type":"chapter","no":"5","k":"CHƯƠNG NĂM","title":"…","sub":"<mốc>","bg":"<ảnh>","titleAt":[0,"<từ>"]}
+   ```
+
+   Mỗi `chNN.json` cũng phải có `"hud": {"k": "CHƯƠNG 05", "t": "<TIÊU ĐỀ>"}`. Thiếu `hud` thì `describe.py` chết và mô tả không có danh sách chương.
+8. **Một khuôn cảnh cho mọi chương.** Một khuôn 9 cảnh được dùng lại ở cả 8 chương, nên cùng một dòng chữ hiện 8 lần. Mỗi cảnh phải minh hoạ đúng câu đang đọc, và chữ trên màn hình lấy từ dữ kiện của chính chương đó. Mô-típ lặp chỉ được làm bằng `ledger` có tiêu đề cố định, mỗi chương thêm một dòng mới.
+9. **Quên bảng `SAY` và để `spec.youtube` trống.** Phải viết ngay từ đầu, theo mẫu Petrov và KAL:
+   - `SAY` phiên âm mọi tên nước ngoài, viết tắt (TNMOC, NASA…) và số rất lớn.
+   - `spec.youtube` gồm: `publish_at`, `playlist`, `category`, `thumb`, `summary`, `more`, `chapter_titles`, `sources` (≥ 8 URL công khai), `tags`, `hashtags`, `video_credits`.
+
+**Nghiên cứu trước, viết sau:** khi ticket chia đôi, ticket nghiên cứu chỉ gom kho dữ kiện có URL (`facts.md`). Ticket viết chỉ dùng dữ kiện trong kho đó.
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"from pathlib import Path; import sys; sys.stdout.buffer.write(Path('data/long/mim-katherine-johnson/gen_scenes.py').read_bytes())\"" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 126ms:
+"""Cảnh + spec cho Long MIM `mim-katherine-johnson` (T3B, 26/10/2026).
+
+    python data/long/mim-katherine-johnson/gen_scenes.py            # bản thật: 6 ảnh AI trỏ tới img/ai/ai_NN.png
+    python data/long/mim-katherine-johnson/gen_scenes.py --standin  # CHỈ để soát html khi ảnh AI chưa về: thay tạm bằng ảnh tư liệu
+
+Giữ nguyên "lines"/"title" mà script_lines.py đã ghi trong chNN.json; chỉ ghi topic, chapter, hud, scenes.
+"""
+from pathlib import Path
+import json
+import sys
+
+ROOT = Path(__file__).parent
+TOPIC = "mim-katherine-johnson"
+TITLE = "HIDDEN FIGURES Ngoài Đời Thật: Katherine Johnson"
+STANDIN = "--standin" in sys.argv
+
+SAY = {
+    "katherine": "Ca-thơ-rin", "johnson": "Giôn-xơn", "john": "Giôn", "glenn": "Glen", "friendship": "Phren-síp",
+    "mercury": "Mơ-kiu-ri", "atlas": "Át-lát", "nasa": "Na-sa", "naca": "en a xê a", "ibm": "ai bi em",
+    "langley": "Lăng-li", "west": "Uét", "virginia": "Vơ-gin-ni-a", "white": "Oai", "sulphur": "Xan-phơ",
+    "springs": "Xpơ-rinh", "state": "Xtết", "college": "Có-lịch", "university": "Diu-ni-vơ-xi-ti",
+    "claytor": "Clây-tơ", "james": "Giêm", "goble": "Gô-bồ", "dorothy": "Đo-rô-thi", "vaughan": "Von",
+    "area": "E-ri-a", "computing": "com-piu-tinh", "computers": "com-piu-tơ", "computer": "com-piu-tơ",
+    "maneuver": "Mơ-nu-vơ", "loads": "Lốt", "branch": "Bren-chờ", "henry": "Hen-ri", "pearson": "Pia-sơn",
+    "sputnik": "Xpút-ních", "notes": "Nốt", "on": "ơn", "space": "Xpết", "technology": "Tếch-nô-lô-gi",
+    "task": "Tát", "group": "Grúp", "freedom": "Phri-đơm", "alan": "A-lan", "shepard": "Se-pợt",
+    "washington": "Oa-sinh-tơn", "canaveral": "Ca-na-vơ-rồ", "bermuda": "Bơ-miu-đa",
+    "ted": "Tét", "skopinski": "Xcô-pin-xki", "apollo": "A-pô-lô", "module": "mô-đun", "landsat": "Len-xát",
+    "barack": "Ba-rắc", "obama": "Ô-ba-ma", "hidden": "Hít-đần", "figures": "Phi-giơ", "time": "Tai",
+    "101": "một trăm linh một",
+}
+
+IMGS = {
+    "kj1966": "File:Katherine Johnson at NASA, in 1966.jpg",                                  # I01 · Public domain (NASA)
+    "kjComp": "File:NASA human computers - Katherine Coleman Goble Johnson.jpg",               # I02 · Public domain (NASA)
+    "kj1980": "File:Katherine Johnson at NASA Langley Research Center 1980.jpg",               # I03 · Public domain (NASA)
+    "kj1983": "File:Katherine Johnson 1983.jpg",                                               # I04 · Public domain (NASA)
+    "kj1985": "File:Katherine Johnson 1985.jpg",                                               # I05 · Public domain (NASA)
+    "kj2014": "File:Katherine Johnson at NASA Langley in 2014.jpg",                            # I06 · Public domain (NASA)
+    "kjMedal": "File:Katherine Johnson Receives Presidential Medal of Freedom.jpg",             # I07 · NASA/Bill Ingalls, no restrictions
+    "paper": "File:Johnson NASA Paper.jpg",                                                    # I08 · Public domain (NASA, 09/1960)
+    "kjGlobe": "File:Katherine johnson john glenn.png",                                        # I09 · Public domain (NASA, 1960)
+    "launch": "EXT:nasa:6205817",          # I14 · Mercury-Atlas 6 cất cánh · images.nasa.gov · PD (media_search get)
+    "glennIn": "EXT:nasa:9139490",         # I13 · Glenn vào tàu Friendship 7 · images.nasa.gov · PD
+    "orbitCam": "EXT:nasa:s62-00303",      # camera trên Friendship 7 chụp Glenn · images.nasa.gov · PD
+    "pad": "EXT:nasa:s62-00490",           # Mercury-Atlas 6 trên bệ, Cape Canaveral · images.nasa.gov · PD
+}
+
+# Ảnh AI (prompt: ai_prompts.md). Chủ kênh thả file vào AI_PATH; engine đọc output/long/<topic>/img/<key>.jpg + <key>.json
+# (xem báo cáo T3B-ket-qua.md mục "Ảnh AI").
+AI_PATH = {f"ai0{n}": f"assets/long/{TOPIC}/img/ai/ai_0{n}.png" for n in range(1, 7)}
+STAND = {"ai01": "kjComp", "ai02": "kjGlobe", "ai03": "kj1980", "ai04": "kj1983", "ai05": "kj1985", "ai06": "kj2014"}
+if not STANDIN:
+    IMGS.update({k: f"EXT:ai:{Path(v).stem}" for k, v in AI_PATH.items()})
+
+
+def im(key):
+    return STAND[key] if STANDIN and key in STAND else key
+
+
+GEO = {
+    "east": {
+        "countries": ["United States of America"],
+        "context": ["Canada", "Mexico", "Cuba", "Bahamas"],
+        "bbox": [-92, 23, -60, 44],
+        "pins": [
+            {"name": "WSS", "lon": -80.30, "lat": 37.80, "label": "WHITE SULPHUR SPRINGS"},
+            {"name": "Washington", "lon": -77.04, "lat": 38.90, "label": "WASHINGTON"},
+            {"name": "Canaveral", "lon": -80.60, "lat": 28.40, "label": "CAPE CANAVERAL"},
+            {"name": "Bermuda", "lon": -64.75, "lat": 32.30, "label": "BERMUDA"},
+        ],
+    },
+}
+
+CHAPTER_TITLES = {
+    "ch00": "Kiểm lại bằng tay",
+    "ch01": "Cô bé đi nhanh hơn lớp học",
+    "ch02": "Cánh cửa hẹp",
+    "ch03": "Computer là một nghề",
+    "ch04": "Từ đuôi máy bay tới quỹ đạo",
+    "ch05": "Bài kiểm tra tay trước Friendship 7",
+    "ch06": "Dấu tên trên báo cáo",
+    "ch07": "Ghi nhận muộn và lớp phim",
+}
+
+LEDGER = "SỔ CỦA MỘT CON SỐ ĐÁNG TIN"
+ROWS = [
+    ("HỎI", "VÌ SAO MỘT CON SỐ ĐÁNG TIN?"),
+    ("1 · NỀN", "NGƯỜI ĐƯỢC RÈN KỸ TỪ NHỎ"),
+    ("2 · VIỆC", "ĐƯỢC TRAO ĐÚNG BÀI TOÁN"),
+    ("3 · NGHỀ", "ĐỌC DỮ LIỆU · TÍNH · VẼ ĐỒ THỊ"),
+    ("4 · KINH NGHIỆM", "QUEN DỮ LIỆU BAY THẬT"),
+    ("5 · ĐỐI CHIẾU", "HAI CÁCH TÍNH · MỘT ĐÁP ÁN"),
+    ("6 · TÊN", "CÓ NGƯỜI ĐỨNG TÊN"),
+    ("7 · KHỚP", "NGƯỜI VÀ MÁY PHẢI KHỚP"),
+]
+VM, AIL = "VIDEO MINH HỌA", "ẢNH MINH HỌA"
+
+
+def chapter(no, k, title, sub, bg, title_at):
+    return {"type": "chapter", "no": str(no), "k": k, "title": title, "sub": sub, "bg": im(bg), "titleAt": title_at}
+
+
+def photo(img, at, key, value, kin=None, illus=None):
+    out = {"type": "photo", "at": at, "img": im(img), "tone": "bw", "move": "in", "veil": 0.55,
+           "label": {"k": key, "v": value, "at": at}}
+    if illus or img.startswith("ai"):
+        out["illus"] = illus or AIL
+    if img.startswith("ai") and not STANDIN:
+        out["credit"] = False   # Claude 26/10: engine tự in "TƯ LIỆU · PHẠM VI CÔNG CỘNG" -> sai với tranh minh hoạ
+    if kin:
+        out["kin"] = [{"text": kin, "at": at, "acc": True}]
+    return out
+
+
+def broll(vid, at, text):
+    return {"type": "broll", "at": at, "vid": vid, "veil": 0.62, "illus": VM, "kin": [{"text": text, "at": at, "acc": True}]}
+
+
+def kinetic(at, text, small=None):
+    items = [{"text": text, "at": at, "acc": True}]
+    if small:
+        items.append({"text": small, "at": at, "sm": True})
+    return {"type": "kinetic", "at": at, "items": items}
+
+
+def slam(at, text, sub):
+    return {"type": "slam", "at": at, "text": text, "sub": sub}
+
+
+def date(at, day, d, sub):
+    return {"type": "date", "at": at, "day": day, "date": d, "sub": {"text": sub, "at": at}}
+
+
+def print_scene(img, at, head, key, value):
+    return {"type": "print", "at": at, "img": im(img), "tone": "bw", "head": head,
+            "side": {"k": key, "h": value, "lines": [{"text": value.replace("\n", " · "), "at": at}]}}
+
+
+def ledger(n, at):
+    return {"type": "ledger", "at": at, "title": LEDGER, "srcnote": "MỖI CHẶNG ĐỜI THÊM MỘT DÒNG",
+            "rows": [{"k": k, "v": v, "at": at} for k, v in ROWS[:n]]}
+
+
+def question(at, text):
+    return {"type": "question", "at": at, "text": text}
+
+
+def counter(at, to, suffix, label, frm=0, year=False):
+    return {"type": "counter", "at": at, "from": frm, "to": to, "suffix": suffix, "label": label, "year": year}
+
+
+def timeline(at, bg, items):
+    return {"type": "timeline", "at": at, "bg": im(bg), "items": [{"year": y, "text": t} for y, t in items]}
+
+
+def org(at, nodes):
+    return {"type": "org", "at": at, "nodes": nodes}
+
+
+def a(line, word):
+    return [line, word]
+
+
+def ch00():
+    return [
+        chapter(0, "MỞ ĐẦU", "KIỂM LẠI\nBẰNG TAY", "20.02.1962 · FRIENDSHIP 7", "pad", a(0, "glenn")),
+        kinetic(a(1, "ibm"), "MÁY IBM · PHƯƠNG TRÌNH QUỸ ĐẠO NẠP SẴN", "TỪ LÚC PHÓNG TỚI LÚC RƠI XUỐNG BIỂN"),
+        print_scene("glennIn", a(2, "glenn"), "KIỂM TRA TRƯỚC CHUYẾN BAY", "JOHN GLENN", "MỘT YÊU CẦU LẠ"),
+        photo("ai03", a(3, "ông"), "CÙNG CON SỐ MÁY VỪA CHẠY", "TỰ TAY TÍNH LẠI"),
+        photo("kj1966", a(4, "katherine"), "KATHERINE JOHNSON", "ẢNH: NASA · 1966"),
+        slam(a(5, "hidden"), "HIDDEN FIGURES", "BỘ BA ƯU VIỆT · PHIM CHỈ ĐƯỢC NHẮC BẰNG LỜI"),
+        date(a(8, "glenn"), "MERCURY-ATLAS 6 · FRIENDSHIP 7", "20.02.1962", "NGƯỜI MỸ ĐẦU TIÊN LÊN QUỸ ĐẠO TRÁI ĐẤT"),
+        print_scene("launch", a(9, "mục"), "DỰ ÁN MERCURY", "MỤC TIÊU", "LÊN QUỸ ĐẠO\nQUAN SÁT CON NGƯỜI\nVỀ AN TOÀN"),
+        broll("854264", a(11, "theo"), "MÁY ĐIỆN TỬ CÓ THỂ TRỤC TRẶC · MẤT ĐIỆN"),
+        slam(a(14, "chuyến"), "4:55:23", "THỜI GIAN BAY CỦA FRIENDSHIP 7"),
+        question(a(15, "nhưng"), "VÌ SAO MỘT PHI HÀNH GIA\nTIN CÂY BÚT CỦA BÀ?"),
+        ledger(1, a(16, "cuốn")),
+    ]
+
+
+def ch01():
+    return [
+        chapter(1, "CHƯƠNG MỘT", "CÔ BÉ ĐI NHANH\nHƠN LỚP HỌC", "1918 · WEST VIRGINIA", "kj1983", a(0, "katherine")),
+        date(a(0, "white"), "WHITE SULPHUR SPRINGS · WEST VIRGINIA", "26.08.1918", "NGÀY SINH CỦA KATHERINE JOHNSON"),
+        photo("ai04", a(1, "13"), "13 TUỔI", "HỌC TRUNG HỌC TRONG KHUÔN VIÊN ĐẠI HỌC"),
+        {"type": "map", "at": a(2, "west"), "geo": "east", "tag": "VỊ TRÍ GẦN ĐÚNG", "pins": [{"name": "WSS", "at": a(2, "west")}]},
+        slam(a(5, "claytor"), "W. W. SCHIEFFELIN CLAYTOR", "GIÁO SƯ TOÁN · NGƯỜI HƯỚNG DẪN QUAN TRỌNG"),
+        counter(a(6, "1937"), 1937, "", "TỐT NGHIỆP LOẠI XUẤT SẮC", frm=1937, year=True),
+        photo("ai06", a(8, "bà"), "VIRGINIA", "TRƯỜNG CÔNG LẬP DÀNH CHO HỌC SINH DA ĐEN"),
+        broll("3196291", a(10, "với"), "TỪ BỤC GIẢNG TỚI PHÒNG THÍ NGHIỆM?"),
+        kinetic(a(12, "tốc"), "THỨ NHẤT: TỐC ĐỘ", "THỨ HAI: MỘT NGƯỜI THẦY"),
+        ledger(2, a(16, "dòng")),
+        question(a(17, "cánh"), "CÁNH CỬA NĂM 1939\nMỞ RỘNG ĐẾN ĐÂU?"),
+    ]
+
+
+def ch02():
+    return [
+        chapter(2, "CHƯƠNG HAI", "CÁNH CỬA\nHẸP", "1939 → 1953", "kjComp", a(0, "năm")),
+        kinetic(a(1, "johnson"), "3 SINH VIÊN DA ĐEN ĐẦU TIÊN", "WEST VIRGINIA UNIVERSITY · 1939"),
+        slam(a(2, "bà"), "NGƯỜI PHỤ NỮ DUY NHẤT", "TRONG BA NGƯỜI ĐƯỢC MỜI"),
+        print_scene("kj1983", a(3, "rời"), "SAU HỌC KỲ ĐẦU", "RỜI CAO HỌC", "LẬP GIA ĐÌNH\nVỚI JAMES GOBLE"),
+        timeline(a(4, "1952"), "kj1980", [("1937", "TỐT NGHIỆP"), ("1939", "CAO HỌC"), ("1952", "NACA LANGLEY TUYỂN NGƯỜI"), ("1953", "VÀO LANGLEY")]),
+        photo("ai01", a(6, "west"), "WEST AREA COMPUTING", "BỘ PHẬN DO DOROTHY VAUGHAN PHỤ TRÁCH"),
+        counter(a(8, "mười"), 16, " NĂM", "TỪ TẤM BẰNG TỚI PHÒNG TÍNH TOÁN"),
+        broll("5682784", a(10, "hai"), "MANEUVER LOADS BRANCH"),
+        kinetic(a(11, "tạm"), "TẠM THỜI → CHÍNH THỨC", "SAU HAI TUẦN"),
+        ledger(3, a(13, "dòng")),
+        question(a(14, "computer"), "COMPUTER Ở LANGLEY\nLÀ AI?"),
+    ]
+
+
+def ch03():
+    return [
+        chapter(3, "CHƯƠNG BA", "COMPUTER LÀ\nMỘT NGHỀ", "THẬP NIÊN 1940 · LANGLEY", "kj1985", a(0, "langley")),
+        photo("kjComp", a(1, "1940"), "NASA HUMAN COMPUTERS", "ẢNH: NASA", "PHỤ NỮ MỸ GỐC PHI CÓ BẰNG ĐẠI HỌC"),
+        slam(a(2, "west"), "WEST AREA COMPUTERS", "KHU LÀM VIỆC TÁCH BIỆT"),
+        broll("6272049", a(4, "đọc"), "ĐỌC PHIM DỮ LIỆU · TÍNH · VẼ ĐỒ THỊ"),
+        kinetic(a(5, "thước"), "THƯỚC TRƯỢT · MÁY TÍNH CƠ", "MỖI CON SỐ ĐI QUA TAY MỘT NGƯỜI"),
+        photo("ai01", a(7, "phân"), "PHÂN BIỆT CHỦNG TỘC · NASA HISTORY", "CHÍNH SÁCH Ở MIỀN NAM VÀ TRONG QUÂN ĐỘI", "KHU ĂN VÀ NHÀ VỆ SINH TÁCH RIÊNG"),
+        org(a(10, "johnson"), [
+            {"id": "wac", "t": "WEST COMPUTERS", "s": "VÀI TUẦN", "at": a(10, "johnson")},
+            {"id": "frd", "t": "FLIGHT RESEARCH DIVISION", "s": "VỚI HENRY PEARSON", "p": "wac", "at": a(11, "phân")},
+            {"id": "stf", "t": "SPACE TASK FORCE", "s": "1958", "p": "frd", "at": a(12, "từ")},
+        ]),
+        broll("8197039", a(12, "bầu"), "TỪ BẢNG SỐ TỚI BẦU TRỜI"),
+        ledger(4, a(13, "dòng")),
+        question(a(15, "bài"), "BÀI TOÁN ĐẦU TIÊN\nNẰM SAU ĐUÔI MÁY BAY"),
+    ]
+
+
+def ch04():
+    return [
+        chapter(4, "CHƯƠNG BỐN", "TỪ ĐUÔI MÁY BAY\nTỚI QUỸ ĐẠO", "1953 → 1961", "kj1980", a(0, "trong")),
+        photo("ai05", a(1, "tai"), "NHIỄU ĐỘNG VỆT ĐUÔI", "WAKE TURBULENCE"),
+        date(a(3, "sputnik"), "LIÊN XÔ PHÓNG SPUTNIK", "1957", "CÔNG VIỆC CỦA JOHNSON ĐỔI HƯỚNG"),
+        print_scene("kj1980", a(5, "notes"), "NOTES ON SPACE TECHNOLOGY", "1958", "PHẦN TOÁN HỌC\nCỦA JOHNSON"),
+        timeline(a(6, "nasa"), "pad", [("1957", "SPUTNIK"), ("1958", "NACA → NASA"), ("1958", "SPACE TASK GROUP"), ("05.1961", "FREEDOM 7")]),
+        kinetic(a(8, "johnson"), "ĐI CÙNG SPACE TASK GROUP", "ĐÃ LÀM VỚI NHIỀU NGƯỜI TRONG NHÓM"),
+        broll("9056542", a(10, "tính"), "TÍNH TRƯỚC CHO CHUYẾN BAY CHƯA CẤT CÁNH"),
+        slam(a(11, "freedom"), "FREEDOM 7 · 05.1961", "PHÂN TÍCH QUỸ ĐẠO · ALAN SHEPARD"),
+        broll("854262", a(12, "đó"), "CHUYẾN BAY CÓ NGƯỜI ĐẦU TIÊN CỦA HOA KỲ"),
+        ledger(5, a(14, "dòng")),
+        question(a(15, "john"), "CÒN JOHN GLENN\nVÀ QUỸ ĐẠO?"),
+    ]
+
+
+def ch05():
+    return [
+        chapter(5, "CHƯƠNG NĂM", "BÀI KIỂM TRA\nTAY", "TRƯỚC 20.02.1962", "orbitCam", a(0, "chuẩn")),
+        {"type": "map", "at": a(1, "mạng"), "geo": "east", "tag": "VỊ TRÍ GẦN ĐÚNG · MÁY IBM CỦA MẠNG FRIENDSHIP 7",
+         "pins": [{"name": "Washington", "at": a(1, "washington")}, {"name": "Canaveral", "at": a(1, "canaveral")},
+                  {"name": "Bermuda", "at": a(1, "bermuda")}]},
+        org(a(2, "phương"), [
+            {"id": "trk", "t": "TRẠM THEO DÕI", "s": "KHẮP THẾ GIỚI", "at": a(2, "phương")},
+            {"id": "ibm", "t": "MÁY IBM", "s": "PHƯƠNG TRÌNH QUỸ ĐẠO", "p": "trk", "at": a(2, "máy")},
+            {"id": "f7", "t": "FRIENDSHIP 7", "s": "TỪ LÚC PHÓNG TỚI LÚC ĐÁP", "p": "ibm", "at": a(2, "đáp")},
+        ]),
+        broll("854266", a(4, "glenn"), "PHI HÀNH GIA DÈ CHỪNG MÁY ĐIỆN TỬ"),
+        photo("kjGlobe", a(5, "johnson"), "KATHERINE JOHNSON · LANGLEY", "ẢNH: NASA", "CÙNG CON SỐ · CÙNG PHƯƠNG TRÌNH"),
+        photo("ai02", a(6, "tay"), "MÁY TÍNH CƠ TRÊN BÀN", "KIỂM BẰNG TAY"),
+        {"type": "quote", "at": 8, "text": "Get the girl to check the numbers.", "by": "JOHN GLENN · THEO LỜI KỂ LẠI · NASA LANGLEY",
+         "lbl": "TRÍCH DỊCH", "qline": 9, "typeAt": [9, "hãy"]},
+        kinetic(a(10, "katherine"), "“CÔ GÁI ẤY” LÀ KATHERINE JOHNSON", "THEO NASA LANGLEY"),
+        {"type": "quote", "at": 11, "text": "If she says they're good, then I'm ready to go.", "by": "JOHN GLENN · LỜI JOHNSON KỂ LẠI · TIỂU SỬ NASA",
+         "lbl": "TRÍCH DỊCH", "qline": 12, "typeAt": [12, "nếu"]},
+        kinetic(a(13, "đây"), "TRÍ NHỚ ≠ BĂNG GHI ÂM", "LỜI KỂ LẠI CỦA JOHNSON"),
+        photo("launch", a(16, "glenn"), "MERCURY-ATLAS 6 CẤT CÁNH", "ẢNH: NASA", "20.02.1962 · LÊN QUỸ ĐẠO"),
+        ledger(6, a(18, "dòng")),
+    ]
+
+
+def ch06():
+    return [
+        chapter(6, "CHƯƠNG SÁU", "DẤU TÊN\nTRÊN BÁO CÁO", "1960 → 1969", "paper", a(0, "thật")),
+        {"type": "source", "at": a(1, "1960"), "source": "NASA · 09.1960", "ref": "JOHNSON · SKOPINSKI · ĐỒNG TÁC GIẢ",
+         "snippet": "[[Determination of Azimuth Angle at Burnout]] for Placing a Satellite Over a Selected Earth Position",
+         "hlAt": a(1, "góc"), "seal": "TÊN BÁO CÁO", "sealAt": a(1, "đứng")},
+        kinetic(a(2, "vệ"), "ĐẶT VỆ TINH LÊN TRÊN MỘT ĐIỂM ĐÃ CHỌN", "ĐIỂM HẠ CÁNH XÁC ĐỊNH TRƯỚC"),
+        photo("paper", a(4, "nasa"), "TRANG ĐẦU BÁO CÁO · 09.1960", "ẢNH: NASA", "LẦN ĐẦU MỘT PHỤ NỮ Ở PHÂN BAN ĐỨNG TÊN"),
+        broll("854266", a(6, "apollo"), "SAU MERCURY LÀ APOLLO"),
+        date(a(7, "apollo"), "APOLLO 11 · HẠ CÁNH MẶT TRĂNG", "1969", "JOHNSON TÍNH QUỸ ĐẠO"),
+        print_scene("kj1985", a(9, "module"), "ĐÓNG GÓP LỚN NHẤT · THEO CHÍNH BÀ", "APOLLO", "LUNAR MODULE\n↔ COMMAND AND SERVICE MODULE"),
+        question(a(11, "bạn"), "VẾ KHÓ NHẤT\nCỦA DỰ ÁN MERCURY?"),
+        slam(a(12, "đưa"), "ĐƯA NGƯỜI VỀ AN TOÀN", "TỪ MERCURY TỚI APOLLO"),
+        ledger(7, a(14, "dòng")),
+    ]
+
+
+def ch07():
+    return [
+        chapter(7, "CHƯƠNG BẢY", "GHI NHẬN MUỘN\nVÀ LỚP PHIM", "1986 → 2020", "kj2014", a(0, "năm")),
+        counter(a(1, "26"), 26, " BÁO CÁO", "VIẾT HOẶC ĐỒNG VIẾT TRONG 33 NĂM"),
+        photo("kjMedal", a(2, "obama"), "PRESIDENTIAL MEDAL OF FREEDOM", "24.11.2015 · ẢNH: NASA / BILL INGALLS"),
+        date(a(3, "2017"), "KATHERINE G. JOHNSON COMPUTATIONAL RESEARCH FACILITY", "22.09.2017", "NASA LANGLEY CẮT BĂNG KHÁNH THÀNH"),
+        kinetic(a(5, "phim"), "PHIM ≠ HỒ SƠ", "NHƯNG PHIM GIÚP TÊN BÀ ĐI XA"),
+        print_scene("kj2014", a(6, "nasa"), "NASA GIẢI THÍCH", "CẢNH NHÀ VỆ SINH", "KHÔNG XẢY RA\nVỚI CHÍNH BÀ"),
+        slam(a(8, "time"), "THEO TIME", "CẢNH GỌI ĐIỆN SÁT GIỜ PHÓNG ĐÃ ĐƯỢC NÉN LẠI"),
+        broll("3196425", a(11, "một"), "MỘT NGƯỜI NGỒI TÍNH LẠI BẰNG TAY"),
+        timeline(a(12, "katherine"), "kj1966", [("1953", "VÀO LANGLEY"), ("1986", "NGHỈ HƯU"), ("2015", "HUÂN CHƯƠNG TỰ DO"), ("2020", "QUA ĐỜI · 101 TUỔI")]),
+        ledger(8, a(15, "con")),
+        question(a(17, "ai"), "AI ĐÃ KIỂM LẠI CON SỐ NÀY,\nVÀ BẰNG CÁCH NÀO?"),
+    ]
+
+
+SCENES = [ch00, ch01, ch02, ch03, ch04, ch05, ch06, ch07]
+
+SOURCES = [
+    "https://www.nasa.gov/history/friendship7/index.html",
+    "https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/",
+    "https://www.nasa.gov/history/langleys-computers-1935-1970/",
+    "https://www.nasa.gov/general/from-computers-to-leaders-women-at-nasa-langley/",
+    "https://www.nasa.gov/image-article/katherine-johnson-receives-presidential-medal-of-freedom-2/",
+    "https://www.nasa.gov/centers-and-facilities/ivv/nasa-langleys-katherine-johnson-computational-research-facility-officially-opens/",
+    "https://www.nasa.gov/podcasts/houston-we-have-a-podcast/nasa-in-hollywood/",
+    "https://time.com/4594571/hidden-figures-john-glenn-space-race/",
+    "https://www.nasa.gov/history/friendship7/pages/photos.html",
+]
+
+
+def make_spec():
+    return {
+        "topic": TOPIC,
+        "title": TITLE,
+        "channel": "MIM",
+        "theme": "lab",
+        "look": "steel",
+        "accent": "#f59e0b",
+        "master": True,
+        "beat2": True,
+        "say": SAY,
+        "imgs": IMGS,
+        "geo": GEO,
+        "chapters": [f"ch{i:02d}" for i in range(len(SCENES))],
+        "youtube": {
+            "titles": [
+                TITLE,
+                "Katherine Johnson 1962: Phép Tính Tay Trước Friendship 7",
+                "John Glenn 1962: Vì Sao Ông Đòi Tính Lại Bằng Tay?",
+            ],
+            "publish_at": "2026-11-25T13:00:00Z",
+            "playlist": "Công Nghệ Quanh Ta",
+            "category": "28",
+            "thumb": "t1.jpg",
+            "summary": "Trước chuyến bay quỹ đạo đầu tiên của nước Mỹ năm 1962, các máy tính IBM đã được nạp sẵn phương trình dẫn đường cho Friendship 7. Vậy mà John Glenn vẫn muốn một người phụ nữ ở Langley tính lại cùng những con số ấy bằng tay. Đó là Katherine Johnson. Từ cô bé học vượt lớp ở West Virginia, qua phòng West Area Computing tách biệt, tới những phép tính cho Freedom 7, Friendship 7 và Apollo, đây là câu chuyện ngoài đời thật phía sau bộ phim Hidden Figures, và lý do một con số chỉ đáng tin khi người và máy cùng khớp.",
+            "more": [
+                "Các lời trích trong video là bản dịch sang tiếng Việt; hai câu của John Glenn là lời được kể lại theo NASA, không phải bản ghi âm nguyên văn.",
+                "Hidden Figures (Bộ Ba Ưu Việt) chỉ được nhắc bằng lời và chữ; video không sử dụng hình ảnh từ phim.",
+                "Video Pexels có nhãn VIDEO MINH HỌA, không tái hiện một người hay một sự kiện cụ thể.",
+            ],
+            "chapter_titles": CHAPTER_TITLES,
+            "sources": SOURCES,
+            "tags": ["Katherine Johnson", "Hidden Figures", "Bộ Ba Ưu Việt", "John Glenn", "Friendship 7", "NASA",
+                     "Project Mercury", "human computer", "lịch sử công nghệ", "máy tính", "tàu vũ trụ", "Apollo 11",
+                     "West Area Computing", "công nghệ quanh ta"],
+            "hashtags": ["KatherineJohnson", "HiddenFigures", "NASA", "CôngNghệQuanhTa", "MindInTheMachine"],
+            "video_credits": [
+                "Ảnh Katherine Johnson và báo cáo năm 1960: NASA qua Wikimedia Commons, Public domain.",
+                "Ảnh chuyến bay Friendship 7: NASA Image and Video Library, Public domain.",
+                "Video minh họa: Pexels.",
+            ],
+        },
+        "sources_internal": "Chỉ dùng kho facts.md (T3A, đã duyệt). Ảnh Commons I01–I09 và 4 ảnh images.nasa.gov tải bằng media_search; 6 ảnh minh họa theo ai_prompts.md, chủ kênh tạo.",
+    }
+
+
+def main():
+    spec = make_spec()
+    (ROOT / "spec.json").write_text(json.dumps(spec, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    for i, build_scenes in enumerate(SCENES):
+        f = ROOT / f"ch{i:02d}.json"
+        out = json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}   # giữ lines/title của script_lines.py
+        out.update({"topic": TOPIC, "chapter": i,
+                    "hud": {"k": f"CHƯƠNG {i:02d}", "t": CHAPTER_TITLES[f"ch{i:02d}"].upper()},
+                    "scenes": build_scenes()})
+        f.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    print(f"Đã tạo spec.json và {len(SCENES)} chương cho {TOPIC}" + (" (BẢN THAY TẠM ẢNH AI — đừng render)" if STANDIN else "") + ".")
+
+
+if __name__ == "__main__":
+    main()
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"from pathlib import Path; import sys; [sys.stdout.buffer.write(Path(p).read_bytes()+b'\\n\\n') for p in ['data/long/mim-moneyball/script.md','data/long/mim-moneyball/facts.md']]\"" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 148ms:
+# MONEYBALL Ngoài Đời Thật: Billy Beane Và Con Số
+
+**Kênh:** MIM · **Độ dài mục tiêu:** 9,5–11 phút · **Lộ trình:** một tấm bảng chờ một lần lên gôn, và mỗi chương thêm một ô dữ kiện để thấy vì sao đội bóng không cần tin vào một con số duy nhất.
+
+Quy ước: mỗi dòng là một câu đọc. `‖` là ngừng dài. `»` là lời trích, đọc giọng trích. Phim Moneyball chỉ được nhắc bằng lời và chữ, không dùng hình phim. Chỉ dùng dữ kiện trong facts.md.
+
+## CH00 · Một cú đánh ở hiệp chín
+
+Ngày 4 tháng 9 năm 2002, Oakland đang đứng trước chiến thắng thứ 20 liên tiếp, trong một trận bóng chày mà tỷ số cuối cùng sẽ là 12–11.
+
+Sau ba hiệp đầu, Oakland dẫn 11–0, một cách biệt đủ lớn để bạn nghĩ mọi chuyện đã xong từ rất sớm.
+
+Nhưng sang hiệp chín, Kansas City đã gỡ hòa, và sân bóng bỗng trở thành nơi một chuỗi thắng có thể đứt chỉ vì một khoảnh khắc.
+
+Scott Hatteberg vào sân để đánh thay ở đầu hiệp chín.
+
+Ông đánh bóng vượt qua hàng rào, một cú home run tức là cú đánh cho phép người đánh chạy trọn vòng về nhà và ghi điểm.
+
+Đối thủ không còn cơ hội đáp lại, và Oakland thắng 12–11. ‖
+
+Nếu bạn biết Moneyball, có thể bạn nhớ cảm giác về một đội bóng nghèo đang đi ngược cả giải đấu.
+
+Nó là điểm cuối của một chuỗi 20 trận, bắt đầu từ ngày 13 tháng 8 bằng chiến thắng 5–4 trước Toronto.
+
+Hai mươi trận liên tiếp là một kỷ lục chuỗi thắng của American League ở thời điểm đó.
+
+Và điều đáng hỏi không phải chỉ là vì sao họ thắng trận thứ 20.
+
+Trên tấm bảng của chúng ta, ô đầu tiên ghi: một lần lên gôn đúng lúc có thể thay đổi cả một đêm, nhưng không đủ để giải thích cả một mùa.
+
+Muốn đọc được câu chuyện ấy, ta phải nhìn mùa 2002 như một đường dài, thay vì chỉ nhìn cú đánh ở hiệp chín.
+
+## CH01 · Một mùa dài hơn chuỗi thắng
+
+Oakland kết thúc mùa thường năm 2002 với 103 trận thắng và 59 trận thua, đứng đầu khu AL West.
+
+Trước khi chuỗi 20 trận bắt đầu, Oakland có 20 trận thắng và 26 trận thua.
+
+Sau đó, trong phần còn lại của mùa thường, họ đi 83–33.
+
+Theo MLB, quỹ lương Oakland năm ấy khoảng 40 triệu đô la, đứng thứ 28 trong giải.
+
+Quỹ lương là tổng tiền đội dùng để trả cầu thủ, và thứ hạng này nói cho bạn biết Oakland không bước vào cuộc đua với nguồn lực như các đội giàu hơn.
+
+Họ buộc phải hỏi một câu khác: nếu thị trường đã thích một phẩm chất nào đó, liệu còn phẩm chất nào giúp thắng trận nhưng đang bị định giá thấp hơn không?
+
+Baseball-Reference ghi Oakland ghi 800 điểm chạy trong mùa đó và chỉ để lọt 654 điểm chạy.
+
+Điểm chạy là đơn vị ghi điểm trong bóng chày, nhưng hai tổng số này là số liệu của cả mùa, không phải bằng chứng rằng chỉ riêng chuỗi 20 trận đã quyết định mọi thứ.
+
+Oakland không có một đêm hay một chỉ số để bám vào.
+
+Họ có một mùa dài, với những lựa chọn lặp lại mỗi ngày.
+
+Trên tấm bảng, ô thứ hai ghi: ngân sách thấp không xóa áp lực phải thắng, nó chỉ ép một đội phải đo giá trị kỹ hơn.
+
+Vậy giá trị mà Oakland được nhắc đến nhiều nhất thực ra là gì?
+
+## CH02 · Giá trị của việc lên gôn
+
+Trong câu chuyện Moneyball, bạn thường nghe tới OBP.
+
+OBP là tỷ lệ một cầu thủ lên được gôn, bằng cú đánh hợp lệ, bằng walk tức là được lên gôn do pitcher ném bóng sai vùng, hoặc bằng những cách lên gôn hợp lệ khác.
+
+Nói đơn giản, OBP hỏi cầu thủ có tránh bị loại và tạo mặt bằng cho điểm chạy hay không.
+
+Baseball-Reference ghi OBP toàn đội của Oakland năm 2002 là .339, đứng thứ ba American League.
+
+Con số đó không phải thần chú, và nó không nói rằng đội đã bỏ qua mọi kỹ năng khác.
+
+Scott Hatteberg là ví dụ dễ nhìn thấy.
+
+Mùa 2002, ông có 68 walk, đứng thứ hai đội về số lần được lên gôn vì pitcher ném bóng không hợp lệ.
+
+Trước mùa đó, Hatteberg chưa từng chơi first base, vị trí phòng ngự gần gôn số một.
+
+Ông có 88 lần xuất phát ở vị trí này cho Oakland.
+
+Nó cho thấy một đội có thể nhìn vào phần đóng góp vẫn còn dùng được, rồi cân nhắc liệu một vai trò mới có mở ra cơ hội hay không.
+
+MLB nêu ERA của Oakland năm 2002 là 3,68, đứng thứ ba toàn MLB.
+
+ERA là số điểm chạy trung bình mà pitcher để lọt trong chín hiệp, nên chỉ số thấp thường cho thấy hệ ném bóng có hiệu quả.
+
+Trên tấm bảng, ô thứ ba ghi: một chỉ số tốt là một đèn pin, không phải cả bản đồ.
+
+Để hiểu vì sao người ta bắt đầu dùng những chiếc đèn pin như vậy, ta phải lùi về trước Oakland rất lâu.
+
+## CH03 · Câu hỏi cũ hơn cuốn sách
+
+Tên gọi cho hướng nghiên cứu ấy là sabermetrics.
+
+Theo SABR, Bill James định nghĩa sabermetrics năm 1980 là việc tìm kiếm tri thức khách quan về bóng chày.
+
+Năm 1974, James, Pete Palmer và Dick Cramer đồng lập Statistical Analysis Committee của SABR.
+
+SABR là tổ chức nghiên cứu bóng chày, còn sabermetrics là cách dùng dữ liệu và phân tích để kiểm tra các niềm tin về môn này.
+
+Năm 1977, James tự xuất bản cuốn Baseball Abstract đầu tiên.
+
+Đến Baseball Abstract năm 1980, ông đặt tên sabermetrics cho cách tiếp cận đó.
+
+Theo mô tả của SABR, những nghiên cứu này thường dùng thống kê để chất vấn các thước đo quen thuộc, như batting average và số trận thắng của pitcher.
+
+Đặt câu hỏi với chỉ số truyền thống không có nghĩa là chế giễu những người xem bóng lâu năm.
+
+Đó cũng là lý do ta không nên kể Moneyball như cuộc chiến đơn giản giữa người có trực giác và chiếc máy lạnh lùng.
+
+Dữ liệu chỉ cho bạn một câu hỏi tốt hơn.
+
+Con người vẫn phải hiểu cầu thủ, hiểu vai trò, hiểu giới hạn của một mùa giải, rồi chịu trách nhiệm cho quyết định.
+
+Trên tấm bảng, ô thứ tư ghi: số liệu không cướp mất kinh nghiệm, nó buộc kinh nghiệm trả lời rõ hơn.
+
+Và đến Oakland, câu hỏi cũ ấy gặp một người quản lý đang phải làm việc với ngân sách rất hẹp.
+
+## CH04 · Người chọn câu hỏi
+
+Billy Beane là general manager của Oakland trong câu chuyện mùa 2002.
+
+MLB xác định cuốn sách Moneyball xuất bản năm 2003 kể về mùa 2002 của Oakland và về Beane.
+
+Nhưng đội không phải chỉ có một người ngồi một mình trước bảng số.
+
+Paul DePodesta gia nhập Athletics năm 1999 với vai trò assistant general manager của Beane.
+
+Theo AP, DePodesta từng chơi bóng chày và bóng bầu dục ở Harvard, rồi bắt đầu sự nghiệp baseball bằng vị trí thực tập tại Cleveland năm 1996.
+
+Tuy vậy, sẽ sai nếu dựng phòng tuyển trạch thành hai phe, một phe là người và một phe là máy.
+
+Theo Washington Post, DePodesta nói các quyết định có rất nhiều cảm xúc con người, còn xung đột ấy bị sách và phim mô tả mạnh hơn.
+
+Câu này đáng giữ nguyên tinh thần của nó: đội bóng là nơi nhiều người tranh luận về thông tin không hoàn hảo.
+
+Phân tích hữu ích khi nó làm cuộc tranh luận cụ thể hơn, thay vì biến cuộc tranh luận thành khẩu hiệu.
+
+Trên tấm bảng, ô thứ năm ghi: một quyết định tốt không sinh ra từ một người thắng tranh luận, mà từ câu hỏi đủ rõ để nhiều người cùng kiểm tra.
+
+Đó là chỗ phiên bản điện ảnh dễ làm câu chuyện gọn hơn đời thật.
+
+## CH05 · Bộ phim và phần không được cắt gọn
+
+Phim Moneyball ra mắt năm 2011, được chuyển thể từ cuốn Moneyball: The Art of Winning an Unfair Game xuất bản năm 2003 về mùa Oakland năm 2002.
+
+Peter Brand trong phim là nhân vật hư cấu, dựa một phần trên nền tảng phân tích của Paul DePodesta.
+
+Theo AP, DePodesta không cho dùng tên thật của mình trong phim.
+
+Vì vậy, khi bạn nhớ một cảnh có Peter Brand, hãy xem đó là cách điện ảnh cô đặc ý tưởng, không phải bằng chứng rằng ngoài đời đã xảy ra đúng như vậy.
+
+Theo Washington Post, xung đột giữa cách tiếp cận dữ liệu và người tuyển trạch trong phim được kịch tính hóa.
+
+Nó chỉ đổi cách ta dùng phim: như cánh cửa đi vào chủ đề, không phải bản đồ duy nhất dẫn qua lịch sử.
+
+Một chi tiết ngoài đời cũng hay bị làm mờ là vai trò của Art Howe.
+
+MLB ghi Art Howe là manager dẫn Oakland tới mùa 103 thắng và chức vô địch AL West năm 2002, cũng là năm cuối của ông với đội.
+
+Đội 2002 có Hatteberg với 68 walk, có OBP toàn đội .339, có ERA 3,68, và có một manager đưa đội qua lịch thi đấu dài.
+
+Các mảnh ấy không cạnh tranh để giành danh hiệu nguyên nhân duy nhất.
+
+Chúng ghép lại để giải thích vì sao một câu chuyện về dữ liệu lại vẫn là câu chuyện về tổ chức và con người.
+
+Trên tấm bảng, ô thứ sáu ghi: câu chuyện càng được kể gọn, bạn càng cần mở lại những phần đã bị cắt khỏi khung hình.
+
+Và khi mùa thường kết thúc, Oakland sẽ gặp một giới hạn mà không mô hình nào hứa xóa được.
+
+## CH06 · Năm trận không đủ dài
+
+Sau mùa 103 thắng, Oakland vào ALDS năm 2002 gặp Minnesota Twins.
+
+ALDS là vòng chia khu của loạt loại trực tiếp American League, nơi cả một mùa dài được nén vào một series rất ngắn.
+
+Minnesota thắng trận một với tỷ số 7–5, sau khi Oakland từng dẫn 5–1.
+
+Nếu cold open cho bạn thấy một trận đấu có thể đổi chiều ở hiệp chín, trận này cho bạn thấy điều tương tự ở cấp độ cả series.
+
+Oakland thắng trận hai và trận ba.
+
+Minnesota thắng trận bốn để đưa series tới trận quyết định.
+
+Ở trận năm, Oakland thua 1–5 và không vào được ALCS.
+
+ALCS là vòng kế tiếp để tranh quyền vào World Series.
+
+Kết thúc này không phủ định mùa 103 thắng, cũng không chứng minh dữ liệu vô dụng.
+
+Nó chỉ nhắc bạn rằng trong một series ngắn, vài tình huống, vài cú đánh, vài lần ném và một biến động nhỏ có thể nặng hơn cả một mẫu dữ liệu dài.
+
+Đây là giới hạn rất dễ quên khi ta yêu thích một câu chuyện có công thức.
+
+Một công thức có thể cải thiện xác suất ra quyết định tốt trong dài hạn.
+
+Nó không ký cam kết với bạn về kết quả của năm trận kế tiếp.
+
+Chính vì thế, thành công của Oakland 2002 không nên bị kể như một chiếc cúp tất yếu mà dữ liệu đã tính sẵn.
+
+Nó là một mùa thường xuất sắc, sau đó là một thất bại ở series ngắn trước Minnesota.
+
+Trên tấm bảng, ô thứ bảy ghi: dữ liệu giúp bạn chơi một cuộc chơi dài tốt hơn, nhưng không thể làm cuộc chơi ngắn hết bất ngờ.
+
+Câu chuyện cũng không dừng lại ở Oakland, bởi cách đặt câu hỏi này đã lan đi rất xa.
+
+## CH07 · Tấm bảng đi khắp giải đấu
+
+Sau khi Michael Lewis xuất bản Moneyball, MLB viết rằng các câu lạc bộ ngày càng áp dụng những cách tiếp cận dựa trên dữ liệu để xây đội cạnh tranh.
+
+Đây là một thay đổi rộng hơn một đội bóng và rộng hơn một nhân vật.
+
+MLB nêu các xu hướng trên sân gồm dùng infield shift nhiều hơn, reliever ném mạnh hơn, và hitter kiên nhẫn nhưng có sức mạnh.
+
+Infield shift là cách bố trí người phòng ngự lệch khỏi vị trí quen thuộc dựa trên xu hướng đánh bóng của đối thủ.
+
+Reliever là pitcher thường vào sân thay giữa trận, còn hitter là người lên đánh.
+
+Những xu hướng ấy là của toàn giải, không phải công lao riêng của Oakland.
+
+MLB cũng mô tả analytics hiện đại ảnh hưởng tới gần như mọi quyết định chiến thuật trong baseball.
+
+Nó là thói quen đo, so sánh, thử lại và chấp nhận rằng điều trông hiển nhiên có thể cần được kiểm chứng.
+
+MLB mô tả cuộc cách mạng analytics bắt đầu từ thập niên 1990 và bùng lên đầu những năm 2000 khi Moneyball xuất hiện.
+
+Đó là mô tả về một xu hướng, không phải lời khẳng định rằng chỉ một cuốn sách đã tự mình thay đổi baseball.
+
+Họ để lại một câu hỏi vẫn còn dùng được ở bất cứ nơi nào nguồn lực hữu hạn: ta đang bỏ sót điều gì chỉ vì nó chưa được kể bằng một con số đúng?
+
+Trong đêm 4 tháng 9 năm 2002, cú home run của Hatteberg chốt tỷ số 12–11 và trận thắng thứ 20 liên tiếp.
+
+Nhưng tấm bảng của chúng ta không dừng ở con số 20.
+
+Nó có tám ô: mùa dài, ngân sách, lần lên gôn, câu hỏi cũ, cuộc tranh luận, phần bị cắt gọn, giới hạn của series ngắn và ảnh hưởng lan rộng.
+
+Ô cuối cùng ghi: con số không thay bạn quyết định, nhưng nó có thể buộc bạn nhìn kỹ hơn trước khi quyết định.
+
+Và đôi khi, đó mới là lợi thế khó mua nhất.
+
+
+# Kho dữ kiện — `mim-moneyball`
+
+Ngày mở nguồn: 26/10/2026. Đây là kho nghiên cứu cho pha viết, không phải kịch bản. Dòng **mạnh** có thể dùng làm khẳng định trực tiếp; dòng **vừa** phải quy dẫn trong lời đọc (ví dụ: “Theo *Washington Post*...” ). Không dùng hình, poster, đoạn trích hoặc âm thanh của phim.
+
+## CH00 — 20 trận, từ 13/08 đến 04/09/2002
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 01 | Oakland Athletics bắt đầu chuỗi thắng 20 trận bằng chiến thắng 5–4 trước Toronto ngày 13/08/2002. | [MLB — 10th Anniversary of 20-Game Streak](https://www.mlb.com/athletics/news/athletics-to-celebrate-10th-anniversary-of-20-game-winning-streak/c-36661928) | **mạnh** |
+| 02 | Chuỗi kết thúc ở mốc 20 vào ngày 04/09/2002 khi Oakland thắng Kansas City 12–11; đây là kỷ lục chuỗi thắng của American League tại thời điểm đó. | [MLB — Twenty wins, 20 ways to win](https://www.mlb.com/athletics/news/twenty-wins-20-ways-to-win/c-121624) | **mạnh** |
+| 03 | Trong trận thắng thứ 20, Oakland từng dẫn 11–0 sau ba hiệp trước khi Kansas City gỡ hòa ở hiệp chín. | [MLB — 10th Anniversary of 20-Game Streak](https://www.mlb.com/athletics/news/athletics-to-celebrate-10th-anniversary-of-20-game-winning-streak/c-36661928) | **mạnh** |
+| 04 | Scott Hatteberg vào sân đánh thay ở đầu hiệp chín và đánh home run trước Jason Grimsley, chốt trận thắng 12–11. | [MLB — Scott Hatteberg player page](https://www.mlb.com/player/scott-hatteberg-115608) | **mạnh** |
+
+## CH01 — Một mùa 103–59, không chỉ một đoạn cao trào
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 05 | Oakland kết thúc mùa thường 2002 với thành tích 103 thắng, 59 thua và đứng đầu AL West. | [Baseball-Reference — 2002 Oakland Athletics](https://www.baseball-reference.com/teams/OAK/2002.shtml) | **mạnh** |
+| 06 | Trước khi chuỗi 20 trận bắt đầu, đội có thành tích 20–26; sau đó đi 83–33 trong phần còn lại của mùa thường. | [MLB — A’s proving themselves with hot streak](https://www.mlb.com/athletics/news/oakland-as-proving-themselves-with-hot-streak/c-132917242) | **mạnh** |
+| 07 | MLB ghi quỹ lương Oakland năm 2002 là 40.004.167 USD, đứng thứ 28 trong giải. | [MLB — Ten Years Later: The A’s Are Back](https://www.mlb.com/news/ten-years-later-the-as-are-back/c-37848808) | **mạnh** |
+| 08 | Đội 2002 ghi 800 runs và để lọt 654 runs; đó là các tổng số mùa giải, không phải số liệu riêng của chuỗi thắng. | [Baseball-Reference — 2002 Oakland Athletics](https://www.baseball-reference.com/teams/OAK/2002.shtml) | **mạnh** |
+
+## CH02 — Chỉ số không thay người tuyển trạch
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 09 | Baseball-Reference ghi Oakland 2002 có OBP toàn đội là .339, đứng thứ ba trong American League. | [Baseball-Reference — 2002 Oakland Athletics](https://www.baseball-reference.com/teams/OAK/2002.shtml) | **mạnh** |
+| 10 | Scott Hatteberg có 68 walk mùa 2002 và đứng thứ hai đội về walk. | [MLB — Scott Hatteberg player page](https://www.mlb.com/player/scott-hatteberg-115608) | **mạnh** |
+| 11 | Hatteberg chưa từng chơi first base trước mùa 2002; ông có 88 lần xuất phát ở vị trí này cho Oakland. | [MLB — Scott Hatteberg player page](https://www.mlb.com/player/scott-hatteberg-115608) | **mạnh** |
+| 12 | Cách nói “Moneyball chỉ là OBP” là giản lược: MLB nêu Oakland 2002 có ERA 3,68, xếp thứ ba MLB, đồng thời thành công nhờ phân tích giá trị cầu thủ. | [MLB — Ten Years Later: The A’s Are Back](https://www.mlb.com/news/ten-years-later-the-as-are-back/c-37848808) | **mạnh** |
+
+## CH03 — Bill James và tên gọi sabermetrics
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 13 | SABR cho biết Bill James định nghĩa sabermetrics năm 1980 là việc tìm kiếm tri thức khách quan về bóng chày. | [SABR — A Guide to Sabermetric Research](https://sabr.org/sabermetrics) | **mạnh** |
+| 14 | Bill James, Pete Palmer và Dick Cramer đồng lập Statistical Analysis Committee của SABR năm 1974. | [SABR — A Guide to Sabermetric Research](https://sabr.org/sabermetrics) | **mạnh** |
+| 15 | James tự xuất bản *Baseball Abstract* đầu tiên năm 1977; trong *Baseball Abstract* năm 1980 ông đặt tên “sabermetrics”. | [SABR — 50 at 50: Analytics](https://sabr.org/50at50/analytics) | **mạnh** |
+| 16 | SABR mô tả nghiên cứu sabermetrics thường dùng phân tích thống kê để chất vấn những thước đo truyền thống như batting average và số trận thắng của pitcher. | [SABR — A Guide to Sabermetric Research](https://sabr.org/sabermetrics) | **mạnh** |
+
+## CH04 — Billy Beane và Paul DePodesta
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 17 | Billy Beane là general manager của Oakland trong câu chuyện mùa 2002; MLB xác định cuốn sách năm 2003 nói về mùa này và về Beane. | [MLB — Athletics timeline, 2000s](https://www.mlb.com/athletics/history/timeline-2000s) | **mạnh** |
+| 18 | Paul DePodesta gia nhập Athletics năm 1999 với vai trò assistant general manager của Beane. | [AP — DePodesta returns to baseball](https://apnews.com/article/e67c9d939d0c27f65c5785de3a4fed10) | **mạnh** |
+| 19 | DePodesta từng chơi bóng chày và bóng bầu dục tại Harvard, rồi khởi nghiệp baseball bằng vị trí thực tập ở Cleveland năm 1996. | [AP — DePodesta returns to baseball](https://apnews.com/article/e67c9d939d0c27f65c5785de3a4fed10) | **mạnh** |
+| 20 | Không nên kể đội tuyển trạch như hai phe “con người chống máy”: DePodesta nói với *Washington Post* rằng quyết định có nhiều cảm xúc con người và xung đột đó bị mô tả mạnh hơn trong sách/phim. | [Washington Post — what the film leaves out](https://www.washingtonpost.com/sports/nationals/moneyball-is-compelling-but-leaves-out-much-of-the-real-story/2011/10/11/gIQAMA1cdL_story.html) | **vừa** |
+
+## CH05 — Phim khác đời thật ở đâu
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 21 | Phim *Moneyball* (2011) được chuyển thể từ sách *Moneyball: The Art of Winning an Unfair Game* xuất bản năm 2003 về mùa 2002 của Oakland. | [MLB — Athletics timeline, 2000s](https://www.mlb.com/athletics/history/timeline-2000s) | **mạnh** |
+| 22 | Nhân vật Peter Brand là nhân vật hư cấu dựa một phần vào nền tảng phân tích của DePodesta; DePodesta không cho dùng tên thật trong phim. | [AP — DePodesta returns to baseball](https://apnews.com/article/e67c9d939d0c27f65c5785de3a4fed10) | **mạnh** |
+| 23 | Art Howe là manager dẫn Oakland tới mùa 103 thắng và chức vô địch AL West năm 2002, năm cuối của ông với đội. | [MLB — Art Howe recalls 20-game streak](https://www.mlb.com/news/art-howe-recalls-athletics-20-game-win-streak-c254298012) | **mạnh** |
+| 24 | Theo một tổng thuật của *Washington Post*, xung đột giữa cách tiếp cận dữ liệu và người tuyển trạch trong phim được kịch tính hóa; không dùng các màn đối đầu trong phim làm sự kiện lịch sử. | [Washington Post — what the film leaves out](https://www.washingtonpost.com/sports/nationals/moneyball-is-compelling-but-leaves-out-much-of-the-real-story/2011/10/11/gIQAMA1cdL_story.html) | **vừa** |
+
+## CH06 — Kết thúc mùa không phải chiến thắng tuyệt đối
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 25 | Oakland vào ALDS 2002 gặp Minnesota Twins sau mùa 103 thắng. | [MLB — 2002 Twins–A’s ALDS recap](https://www.mlb.com/news/2002-twins-a-s-alds-recap.html) | **mạnh** |
+| 26 | Minnesota thắng trận 1 ALDS 7–5 sau khi Oakland từng dẫn 5–1. | [MLB — 2002 Twins–A’s ALDS recap](https://www.mlb.com/news/2002-twins-a-s-alds-recap.html) | **mạnh** |
+| 27 | Oakland thắng trận 2 và trận 3, nhưng Minnesota thắng trận 4 để cân bằng series trước trận quyết định. | [MLB — 2002 Twins–A’s ALDS recap](https://www.mlb.com/news/2002-twins-a-s-alds-recap.html) | **mạnh** |
+| 28 | Oakland thua Minnesota 1–5 ở trận 5 ALDS 2002, nên không tiến vào ALCS. | [Baseball-Reference — 2002 Oakland Athletics](https://www.baseball-reference.com/teams/OAK/2002.shtml) | **mạnh** |
+
+## CH07 — Từ một câu chuyện thành thay đổi rộng hơn
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 29 | MLB viết rằng sau khi Michael Lewis xuất bản *Moneyball*, các câu lạc bộ áp dụng ngày càng nhiều cách tiếp cận dựa trên dữ liệu để xây đội cạnh tranh. | [MLB — Mariners analytics staff](https://www.mlb.com/news/mariners-analytics-staff-breaking-ground) | **mạnh** |
+| 30 | MLB nêu các ảnh hưởng trên sân gồm tăng dùng infield shift, reliever ném mạnh và hitter kiên nhẫn nhưng có sức mạnh; đây là xu hướng toàn giải, không phải công lao riêng của Oakland. | [MLB — Mariners analytics staff](https://www.mlb.com/news/mariners-analytics-staff-breaking-ground) | **mạnh** |
+| 31 | MLB mô tả analytics hiện đại tác động tới gần như mọi quyết định chiến thuật trong baseball. | [MLB — Sabermetrics for a casual fan](https://www.mlb.com/news/sabermetrics-in-baseball-a-casual-fans-guide) | **mạnh** |
+| 32 | MLB nói cuộc cách mạng analytics bắt đầu từ thập niên 1990 và bùng lên đầu những năm 2000 khi *Moneyball* ra mắt; đây là mô tả xu hướng, không phải quan hệ nhân quả một chiều. | [MLB — Brian Cashman interview, 2026](https://www.mlb.com/news/conversation-yankees-general-manager-brian-cashman-2026-season) | **mạnh** |
+
+## Chỉ dẫn biên kịch và điều phải tránh
+
+- Trục đề xuất: **20 trận → vì sao ngân sách thấp cần đo khác đi → nền sabermetrics của Bill James → Beane/DePodesta và giới hạn của phiên bản phim → Hatteberg, pitching và 103–59 → ALDS → ảnh hưởng lan rộng.**
+- Nói “phim *Moneyball* (2011)” chỉ như mỏ neo văn hóa. Không dùng hình, poster, clip, nhạc hoặc lời thoại phim.
+- Không nói Oakland “thắng nhờ OBP” hay “bỏ hẳn tuyển trạch”; kho chỉ cho phép nói OBP là một chỉ số được ưu tiên trong câu chuyện phổ biến, còn dữ kiện mùa giải cũng cho thấy pitching mạnh.
+- Không gắn tên Billy Beane, Paul DePodesta, Art Howe hoặc Scott Hatteberg lên B-roll người lạ.
+
+## Câu hỏi còn bỏ ngỏ / không được tự điền
+
+1. Chưa tìm được nguồn Việt Nam đã mở, đủ tin cậy, xác nhận tựa phát hành chính thức của *Moneyball* (2011). Ở pha viết giữ tên gốc *Moneyball*; không tự dịch thành một tựa Việt.
+2. Nguồn đã mở không đủ để kết luận ngân sách của Oakland “bằng một nửa hay một phần ba” một đối thủ cụ thể. Chỉ đọc con số 40.004.167 USD và thứ hạng quỹ lương khi cần.
+3. Không dùng hình ảnh hay chi tiết từ phim để chứng minh xung đột với Art Howe hoặc quá trình chuyển vị trí của Hatteberg ngoài các dữ kiện có nguồn ở trên.
+4. Các clip Pexels bên dưới chỉ là ứng viên. Pha dựng phải tải, tạo clip sheet và loại mọi frame lộ logo/chữ/số đọc được.
+
+## Ảnh Commons đã kiểm giấy phép
+
+Mỗi trang file dưới đây đã mở và hiển thị `LicenseShortName` phù hợp: chỉ **CC BY** hoặc **Public domain**. Khi dựng, kiểm lại trang file trước khi tải và crop/loại khung có logo đội, biển hiệu hoặc chữ đọc được.
+
+| # | File / mô tả | Giấy phép | Trang nguồn |
+|---|---|---|---|
+| I01 | Billy Beane, 2006 | CC BY 2.0 | [Commons](https://commons.wikimedia.org/wiki/File:Billy_Beane_2006.jpg) |
+| I02 | Billy Beane tại Leaders Event, 2010 | CC BY 2.0 | [Commons](https://commons.wikimedia.org/wiki/File:Billy_Beane_-_General_Manager_Oakland_As_(5964095428).jpg) |
+| I03 | Paul DePodesta và Jimmy Haslam, 2017; crop chỉ DePodesta nếu dùng | CC BY 2.0 | [Commons](https://commons.wikimedia.org/wiki/File:Paul_DePodesta_and_Jimmy_Haslam_(36730002206).jpg) |
+| I04 | Oakland Coliseum, nhìn từ khán đài trên, 2024 | CC BY 4.0 | [Commons](https://commons.wikimedia.org/wiki/File:Oakland_Coliseum_view_from_upper_deck.jpg) |
+| I05 | Oakland Coliseum ban đêm, 2024 | CC BY 4.0 | [Commons](https://commons.wikimedia.org/wiki/File:Oakland_Coliseum_at_night.jpg) |
+| I06 | Góc nhìn trên cao Oakland Coliseum, 2024 | CC BY 4.0 | [Commons](https://commons.wikimedia.org/wiki/File:Oakland_Coliseum_overhead_angle,_September_2024.jpg) |
+| I07 | Oakland Coliseum nhìn từ trên không, 2024 | CC BY 4.0 | [Commons](https://commons.wikimedia.org/wiki/File:Oakland_Coliseum_aerial_view_2024.jpg) |
+| I08 | Quầy vé Oakland Coliseum, 2024 | CC BY 4.0 | [Commons](https://commons.wikimedia.org/wiki/File:Oakland_Coliseum_ticket_booths.jpg) |
+| I09 | Bảng điểm một trận baseball, ảnh chung | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Baseball_game_score.jpg) |
+| I10 | Scorecard baseball, ảnh chung | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Pac_bell_scorecard.jpg) |
+
+## Ứng viên B-roll Pexels (chưa tải)
+
+Các trang đã mở ghi `Free`/`Free to use`. Chỉ dùng như minh họa trung tính cho phòng tuyển trạch, họp, lựa chọn và dữ liệu; không nhận diện người trong clip là người thật trong câu chuyện.
+
+| ID | Mô tả ngắn | Ghi chú bắt buộc | Trang nguồn |
+|---:|---|---|---|
+| 6930656 | Bắt tay quanh bàn họp | Soi màn hình, giấy và logo; không gắn tên người thật. | [Pexels](https://www.pexels.com/video/coworkers-shaking-hands-at-the-office-6930656/) |
+| 7552614 | Nhóm thảo luận trong văn phòng | Loại frame lộ logo/chữ trên giấy hoặc màn hình. | [Pexels](https://www.pexels.com/video/people-in-a-meeting-7552614/) |
+| 9464879 | Đồng nghiệp trao đổi và bắt tay | Không dùng như tái hiện giao dịch cầu thủ. | [Pexels](https://www.pexels.com/video/people-shaking-hands-at-the-office-9464879/) |
+| 6930648 | Họp văn phòng | Soi cốc, bảng và trang phục có nhãn. | [Pexels](https://www.pexels.com/video/coworkers-shaking-hands-in-the-office-6930648/) |
+| 8275595 | Hai người họp, khung 16:9 | Chỉ dùng nền trung tính, không gắn danh tính. | [Pexels](https://www.pexels.com/video/men-shaking-hands-at-the-office-8275595/) |
+| 8135918 | Nhóm bàn kế hoạch | Loại blueprint, đồ thị hay chữ đọc được. | [Pexels](https://www.pexels.com/video/people-in-a-meeting-at-an-office-8135918/) |
+| 3253798 | Nhóm họp với thiết bị | Soi laptop và logo trước khi cắt. | [Pexels](https://www.pexels.com/video/a-woman-shaking-hands-in-a-business-meeting-3253798/) |
+| 7691559 | Góc cao nhóm bàn biểu đồ | Không để biểu đồ/chữ đọc được; không nói là số liệu Oakland. | [Pexels](https://www.pexels.com/video/business-people-having-a-meeting-7691559/) |
+| 7989468 | Nhóm đặt tay trong cuộc họp | Loại màn hình trình chiếu/chữ thương hiệu. | [Pexels](https://www.pexels.com/video/coworkers-putting-their-hands-together-at-a-meeting-7989468/) |
+| 8863754 | Hai người thảo luận trong phòng họp | Không dùng như ảnh nhân vật thật. | [Pexels](https://www.pexels.com/video/candidates-having-an-agreement-8863754/) |
+| 5726611 | Nhóm trao đổi trong văn phòng | Soi kỹ bảng, giấy, màn hình và logo. | [Pexels](https://www.pexels.com/video/coworkers-having-a-meeting-in-the-office-5726611/) |
+
+## Đề xuất ảnh AI
+
+#### ai_01.png — phòng tuyển trạch minh họa cho CH02, khi nói về dữ liệu và trực giác
+- Prompt (tiếng Anh): Editorial illustration, late-1990s baseball scouting room at night, a long table with anonymous silhouettes seen only from behind comparing handwritten stat sheets and simple monochrome charts, warm desk lamps, filing cabinets, no recognizable faces, no team colors, no real team insignia, clearly painted rather than archival photography.
+- Khung: 16:9, 1920x1080
+- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
+- Phong cách: painterly editorial illustration, muted green and amber palette
+
+#### ai_02.png — sân bóng chày đêm minh họa cho CH00, trước cú đánh quyết định
+- Prompt (tiếng Anh): Painterly editorial illustration of an empty generic baseball diamond under stadium lights at night, viewed from high behind home plate, rainless dramatic sky, no players close enough to identify, no team colors, no signage, no logos, no text, clearly an illustration and not archival footage.
+- Khung: 16:9, 1920x1080
+- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
+- Phong cách: painterly editorial illustration, cinematic blue and amber light
+
+#### ai_03.png — bảng dữ liệu minh họa cho CH07, khi phân tích lan rộng
+- Prompt (tiếng Anh): Editorial illustration of anonymous analysts viewed from behind in a modern operations room, projected abstract dots, bars and trend lines without readable numbers or letters, baseball tucked on a blank desk, no brands, no logos, no recognizable real people, deliberately painterly not photorealistic.
+- Khung: 16:9, 1920x1080
+- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
+- Phong cách: contemporary editorial illustration, restrained navy, cream and orange palette
+
+
+
+codex
+Mình đã xác nhận ticket là dựng cảnh/spec/prompt (không render, không tạo ảnh AI hay thumbnail). Lời đọc đã duyệt nên mình chỉ neo cảnh vào các câu có sẵn, không sửa kịch bản.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; python motion/long/script_lines.py mim-moneyball" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 159ms:
+ch00: 12 câu, 260 âm tiết, ~1.3 phút  Một cú đánh ở hiệp chín
+ch01: 12 câu, 250 âm tiết, ~1.2 phút  Một mùa dài hơn chuỗi thắng
+ch02: 14 câu, 277 âm tiết, ~1.4 phút  Giá trị của việc lên gôn
+ch03: 13 câu, 248 âm tiết, ~1.2 phút  Câu hỏi cũ hơn cuốn sách
+ch04: 11 câu, 228 âm tiết, ~1.1 phút  Người chọn câu hỏi
+ch05: 13 câu, 294 âm tiết, ~1.5 phút  Bộ phim và phần không được cắt gọn
+ch06: 17 câu, 306 âm tiết, ~1.5 phút  Năm trận không đủ dài
+ch07: 16 câu, 353 âm tiết, ~1.8 phút  Tấm bảng đi khắp giải đấu
+TỔNG 108 câu, 2216 âm tiết
+
+apply patch
+patch: completed
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-moneyball\ai_prompts.md
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-moneyball\gen_scenes.py
+diff --git a/data/long/mim-moneyball/ai_prompts.md b/data/long/mim-moneyball/ai_prompts.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..85d4e3bb4bc8113f30c9598a71b1c7f69a17dcb5
+--- /dev/null
++++ b/data/long/mim-moneyball/ai_prompts.md
+@@ -0,0 +1,17 @@
++#### ai_01.png — phòng tuyển trạch minh họa cho CH03, câu 8
++- Prompt (tiếng Anh): Editorial illustration, late-1990s baseball scouting room at night, a long table with anonymous silhouettes seen only from behind comparing handwritten stat sheets and simple monochrome charts, warm desk lamps, filing cabinets, no recognizable faces, no team colors, no real team insignia, clearly painted rather than archival photography.
++- Khung: 16:9, 1920x1080
++- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
++- Phong cách: painterly editorial illustration, muted green and amber palette
++
++#### ai_02.png — sân bóng chày đêm minh họa cho CH00 và CH06
++- Prompt (tiếng Anh): Painterly editorial illustration of an empty generic baseball diamond under stadium lights at night, viewed from high behind home plate, rainless dramatic sky, no players close enough to identify, no team colors, no signage, no logos, no text, clearly an illustration and not archival footage.
++- Khung: 16:9, 1920x1080
++- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
++- Phong cách: painterly editorial illustration, cinematic blue and amber light
++
++#### ai_03.png — phân tích lan rộng minh họa cho CH07, câu 1
++- Prompt (tiếng Anh): Editorial illustration of anonymous analysts viewed from behind in a modern operations room, projected abstract dots, bars and trend lines without readable numbers or letters, baseball tucked on a blank desk, no brands, no logos, no recognizable real people, deliberately painterly not photorealistic.
++- Khung: 16:9, 1920x1080
++- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
++- Phong cách: contemporary editorial illustration, restrained navy, cream and orange palette
+diff --git a/data/long/mim-moneyball/gen_scenes.py b/data/long/mim-moneyball/gen_scenes.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..a6a35151d70607c2192eda3de832c502012b27d3
+--- /dev/null
++++ b/data/long/mim-moneyball/gen_scenes.py
+@@ -0,0 +1,218 @@
++"""Cảnh + spec cho Long MIM `mim-moneyball`.
++
++    python data/long/mim-moneyball/gen_scenes.py
++    python data/long/mim-moneyball/gen_scenes.py --standin
++"""
++from pathlib import Path
++import json
++import sys
++
++ROOT = Path(__file__).parent
++TOPIC = "mim-moneyball"
++TITLE = "MONEYBALL Ngoài Đời Thật: Billy Beane Và Con Số"
++STANDIN = "--standin" in sys.argv
++
++SAY = {
++    "moneyball": "Mâ-nì-bôn", "billy": "Bi-li", "beane": "Bin", "oakland": "Ô-clần",
++    "scott": "Xcót", "hatteberg": "Ha-tơ-bớc", "kansas": "Can-dợt", "city": "Xi-ti",
++    "toronto": "Tô-rôn-tô", "american": "A-mê-ri-cần", "league": "Lích", "al": "a en",
++    "obp": "ô bê pê", "walk": "uóc", "pitcher": "pít-chờ", "era": "i a rờ",
++    "sabermetrics": "xây-bờ-mét-trích", "sabr": "xây-bờ", "bill": "Bin", "james": "Giêm",
++    "pete": "Pít", "palmer": "Pa-mờ", "dick": "Đích", "cramer": "Crây-mờ",
++    "baseball": "bây-xờ-bôn", "abstract": "áp-xờ-trắc", "paul": "Pôn", "depodesta": "Đề-pô-đét-ta",
++    "harvard": "Ha-vợt", "cleveland": "Cờ-li-vờ-lần", "peter": "Pi-tờ", "brand": "Bran",
++    "art": "A-t", "howe": "Hao", "alds": "a en đê ét", "alcs": "a en xê ét",
++    "minnesota": "Mi-nờ-xô-ta", "twins": "Tuyn", "michael": "Mai-cồ", "lewis": "Liu-ít",
++    "mlb": "em en bê", "infield": "in-phiên", "shift": "síp", "reliever": "rờ-li-vờ",
++    "hitter": "hít-tờ", "home": "hôm", "run": "rân", "first": "phớt", "base": "bây-xờ",
++    "general": "giê-nờ-rồ", "manager": "ma-ni-giờ", "assistant": "a-xít-tần",
++    "analytics": "a-na-lí-tích", "series": "xi-ri", "world": "uổld",
++}
++
++IMGS = {
++    "beane06": "File:Billy Beane 2006.jpg",
++    "beane10": "File:Billy Beane - General Manager Oakland As (5964095428).jpg",
++    "depo": "File:Paul DePodesta and Jimmy Haslam (36730002206).jpg",
++    "coliseum": "File:Oakland Coliseum view from upper deck.jpg",
++    "night": "File:Oakland Coliseum at night.jpg",
++    "overhead": "File:Oakland Coliseum overhead angle, September 2024.jpg",
++    "aerial": "File:Oakland Coliseum aerial view 2024.jpg",
++    "tickets": "File:Oakland Coliseum ticket booths.jpg",
++    "score": "File:Baseball game score.jpg",
++    "card": "File:Pac bell scorecard.jpg",
++}
++AI_PATH = {f"ai0{n}": f"assets/long/{TOPIC}/img/ai/ai_0{n}.png" for n in range(1, 4)}
++STAND = {"ai01": "card", "ai02": "night", "ai03": "score"}
++if not STANDIN:
++    IMGS.update({k: f"EXT:ai:{Path(v).stem}" for k, v in AI_PATH.items()})
++
++def im(key): return STAND[key] if STANDIN and key in STAND else key
++
++GEO = {"usa": {"countries": ["United States of America"], "context": ["Canada", "Mexico"],
++    "bbox": [-126, 25, -66, 50], "pins": [
++        {"name": "Oakland", "lon": -122.27, "lat": 37.80, "label": "OAKLAND"},
++        {"name": "Kansas City", "lon": -94.58, "lat": 39.10, "label": "KANSAS CITY"},
++        {"name": "Minnesota", "lon": -93.27, "lat": 44.98, "label": "MINNESOTA"},
++    ]}}
++
++CHAPTER_TITLES = {
++    "ch00": "Một cú đánh ở hiệp chín", "ch01": "Một mùa dài hơn chuỗi thắng",
++    "ch02": "Giá trị của việc lên gôn", "ch03": "Câu hỏi cũ hơn cuốn sách",
++    "ch04": "Người chọn câu hỏi", "ch05": "Bộ phim và phần không được cắt gọn",
++    "ch06": "Năm trận không đủ dài", "ch07": "Tấm bảng đi khắp giải đấu",
++}
++LEDGER = "TẤM BẢNG CHỜ MỘT LẦN LÊN GÔN"
++ROWS = [
++    ("HỎI", "MỘT LẦN LÊN GÔN GIẢI THÍCH ĐƯỢC GÌ?"),
++    ("1 · MÙA DÀI", "NGÂN SÁCH THẤP VẪN PHẢI THẮNG"),
++    ("2 · LÊN GÔN", "MỘT ĐÈN PIN · KHÔNG PHẢI BẢN ĐỒ"),
++    ("3 · CÂU HỎI", "DỮ LIỆU BUỘC NIỀM TIN TRẢ LỜI RÕ"),
++    ("4 · TRANH LUẬN", "NHIỀU NGƯỜI CÙNG KIỂM TRA"),
++    ("5 · KHUNG HÌNH", "MỞ LẠI PHẦN BỊ CẮT GỌN"),
++    ("6 · SERIES", "CUỘC CHƠI NGẮN VẪN ĐẦY BẤT NGỜ"),
++    ("7 · LAN RỘNG", "NHÌN KỸ HƠN TRƯỚC KHI QUYẾT ĐỊNH"),
++]
++VM, AIL = "VIDEO MINH HỌA", "ẢNH MINH HỌA"
++
++def chapter(no, k, title, sub, bg, title_at): return {"type":"chapter","no":str(no),"k":k,"title":title,"sub":sub,"bg":im(bg),"titleAt":title_at}
++def photo(img, at, key, value, kin=None, illus=None):
++    out={"type":"photo","at":at,"img":im(img),"tone":"bw","move":"in","veil":.55,"label":{"k":key,"v":value,"at":at}}
++    if illus or img.startswith("ai"): out["illus"]=illus or AIL
++    if img.startswith("ai") and not STANDIN: out["credit"]=False
++    if kin: out["kin"]=[{"text":kin,"at":at,"acc":True}]
++    return out
++def broll(vid, at, text): return {"type":"broll","at":at,"vid":vid,"veil":.62,"illus":VM,"kin":[{"text":text,"at":at,"acc":True}]}
++def kinetic(at,text,small=None):
++    items=[{"text":text,"at":at,"acc":True}]
++    if small: items.append({"text":small,"at":at,"sm":True})
++    return {"type":"kinetic","at":at,"items":items}
++def slam(at,text,sub): return {"type":"slam","at":at,"text":text,"sub":sub}
++def date(at,day,d,sub): return {"type":"date","at":at,"day":day,"date":d,"sub":{"text":sub,"at":at}}
++def print_scene(img,at,head,key,value): return {"type":"print","at":at,"img":im(img),"tone":"bw","head":head,"side":{"k":key,"h":value,"lines":[{"text":value.replace("\n"," · "),"at":at}]}}
++def ledger(n,at): return {"type":"ledger","at":at,"title":LEDGER,"srcnote":"MỖI CHƯƠNG THÊM MỘT Ô","rows":[{"k":k,"v":v,"at":at} for k,v in ROWS[:n]]}
++def question(at,text): return {"type":"question","at":at,"text":text}
++def counter(at,to,suffix,label,frm=0,year=False): return {"type":"counter","at":at,"from":frm,"to":to,"suffix":suffix,"label":label,"year":year}
++def timeline(at,bg,items): return {"type":"timeline","at":at,"bg":im(bg),"items":[{"year":y,"text":t} for y,t in items]}
++def org(at,nodes): return {"type":"org","at":at,"nodes":nodes}
++def a(line,word): return [line,word]
++
++def ch00(): return [
++ chapter(0,"MỞ ĐẦU","MỘT CÚ ĐÁNH\nỞ HIỆP CHÍN","04.09.2002 · OAKLAND 12–11 KANSAS CITY","night",a(0,"oakland")),
++ date(a(0,"2002"),"OAKLAND · KANSAS CITY","04.09.2002","TRẬN THẮNG THỨ 20 LIÊN TIẾP"),
++ slam(a(1,"11"),"11–0","OAKLAND DẪN SAU BA HIỆP"),
++ {"type":"map","at":a(2,"kansas"),"geo":"usa","tag":"VỊ TRÍ GẦN ĐÚNG","pins":[{"name":"Oakland","at":a(2,"kansas")},{"name":"Kansas City","at":a(2,"kansas")}]},
++ photo("ai02",a(2,"chín"),"HIỆP CHÍN","CHUỖI THẮNG CÓ THỂ ĐỨT",illus=AIL),
++ print_scene("score",a(3,"hatteberg"),"ĐẦU HIỆP CHÍN","SCOTT HATTEBERG","VÀO SÂN ĐÁNH THAY"),
++ kinetic(a(4,"home"),"HOME RUN","CHẠY TRỌN VÒNG VỀ NHÀ · GHI ĐIỂM"),
++ slam(a(5,"12"),"12–11","OAKLAND THẮNG"),
++ timeline(a(7,"20"),"coliseum",[("13.08","THẮNG TORONTO 5–4"),("04.09","THẮNG KANSAS CITY 12–11")]),
++ ledger(1,a(10,"bảng")), question(a(11,"mùa"),"MỘT CÚ ĐÁNH GIẢI THÍCH\nĐƯỢC CẢ MÙA KHÔNG?")]
++
++def ch01(): return [
++ chapter(1,"CHƯƠNG MỘT","MỘT MÙA DÀI HƠN\nCHUỖI THẮNG","2002 · 103 THẮNG · 59 THUA","overhead",a(0,"oakland")),
++ counter(a(0,"103"),103," THẮNG","MÙA THƯỜNG 2002",frm=0),
++ slam(a(0,"59"),"103–59","ĐỨNG ĐẦU AL WEST"),
++ timeline(a(1,"20"),"aerial",[("TRƯỚC CHUỖI","20–26"),("PHẦN CÒN LẠI","83–33")]),
++ counter(a(3,"40"),40," TRIỆU USD","QUỸ LƯƠNG OAKLAND · XẤP XỈ",frm=0),
++ kinetic(a(3,"28"),"THỨ 28 TOÀN GIẢI","NGUỒN LỰC KHÔNG GIỐNG CÁC ĐỘI GIÀU"),
++ broll("7552614",a(5,"phẩm"),"MỘT CUỘC HỌP MINH HỌA · KHÔNG PHẢI OAKLAND"),
++ print_scene("card",a(6,"800"),"TỔNG MÙA THƯỜNG","800 ĐIỂM CHẠY","654 ĐIỂM CHẠY ĐỂ LỌT"),
++ question(a(8,"đêm"),"MỘT ĐÊM HAY MỘT CHỈ SỐ\nCÓ ĐỦ KHÔNG?"),
++ ledger(2,a(10,"bảng")), kinetic(a(11,"giá"),"ĐO GIÁ TRỊ KỸ HƠN","OAKLAND ĐANG TÌM GÌ?")]
++
++def ch02(): return [
++ chapter(2,"CHƯƠNG HAI","GIÁ TRỊ CỦA\nVIỆC LÊN GÔN","OAKLAND 2002 · OBP .339","score",a(0,"moneyball")),
++ kinetic(a(1,"obp"),"OBP","TỶ LỆ CẦU THỦ LÊN ĐƯỢC GÔN"),
++ org(a(2,"loại"),[{"id":"hit","t":"CÚ ĐÁNH HỢP LỆ","s":"LÊN GÔN","at":a(2,"đánh")},{"id":"walk","t":"WALK","s":"PITCHER NÉM SAI VÙNG","p":"hit","at":a(2,"walk")}]),
++ counter(a(3,"339"),339," PHẦN NGHÌN","OBP TOÀN ĐỘI · THỨ BA AL",frm=0),
++ photo("beane06",a(4,"thần"),"MỘT CHỈ SỐ","KHÔNG PHẢI THẦN CHÚ"),
++ print_scene("card",a(5,"hatteberg"),"SCOTT HATTEBERG","68 WALK","THỨ HAI ĐỘI"),
++ counter(a(7,"88"),88," LẦN","XUẤT PHÁT Ở FIRST BASE",frm=0),
++ broll("8135918",a(8,"đóng"),"MINH HỌA CHO VIỆC CÂN NHẮC MỘT VAI TRÒ MỚI"),
++ slam(a(9,"68"),"ERA 3,68","THỨ BA TOÀN MLB"),
++ ledger(3,a(11,"bảng")), question(a(12,"oakland"),"VÌ SAO NGƯỜI TA BẮT ĐẦU\nDÙNG NHỮNG ĐÈN PIN NÀY?")]
++
++def ch03(): return [
++ chapter(3,"CHƯƠNG BA","CÂU HỎI CŨ HƠN\nCUỐN SÁCH","1974 → 1980 · SABERMETRICS","card",a(0,"sabermetrics")),
++ kinetic(a(0,"sabermetrics"),"SABERMETRICS","TÌM KIẾM TRI THỨC KHÁCH QUAN VỀ BÓNG CHÀY"),
++ timeline(a(1,"1974"),"score",[("1974","STATISTICAL ANALYSIS COMMITTEE"),("1977","BASEBALL ABSTRACT ĐẦU TIÊN"),("1980","ĐẶT TÊN SABERMETRICS")]),
++ print_scene("card",a(2,"1974"),"BA NGƯỜI ĐỒNG LẬP","BILL JAMES · PETE PALMER","DICK CRAMER"),
++ date(a(4,"1977"),"BASEBALL ABSTRACT ĐẦU TIÊN","1977","BILL JAMES TỰ XUẤT BẢN"),
++ slam(a(5,"1980"),"1980","TÊN GỌI SABERMETRICS XUẤT HIỆN"),
++ kinetic(a(6,"thống"),"CHẤT VẤN THƯỚC ĐO QUEN THUỘC","BATTING AVERAGE · SỐ TRẬN THẮNG CỦA PITCHER"),
++ photo("ai01",a(7,"lâu"),"TRỰC GIÁC","KHÔNG BỊ CHẾ GIỄU",illus=AIL),
++ question(a(9,"hỏi"),"DỮ LIỆU GIÚP TA\nCÓ CÂU HỎI GÌ?"),
++ ledger(4,a(11,"bảng")), broll("5726611",a(12,"ngân"),"MINH HỌA MỘT CUỘC THẢO LUẬN")]
++
++def ch04(): return [
++ chapter(4,"CHƯƠNG BỐN","NGƯỜI CHỌN\nCÂU HỎI","1999 → 2002 · OAKLAND","beane10",a(0,"billy")),
++ photo("beane06",a(0,"beane"),"BILLY BEANE","GENERAL MANAGER · OAKLAND"),
++ date(a(1,"2003"),"SÁCH MONEYBALL","2003","KỂ VỀ MÙA 2002 CỦA OAKLAND"),
++ photo("depo",a(3,"depodesta"),"PAUL DEP ODESTA","ASSISTANT GENERAL MANAGER · 1999"),
++ timeline(a(4,"harvard"),"card",[("1996","THỰC TẬP Ở CLEVELAND"),("1999","GIA NHẬP ATHLETICS")]),
++ broll("6930656",a(5,"hai"),"CUỘC HỌP MINH HỌA · KHÔNG ĐẠI DIỆN NGƯỜI THẬT"),
++ slam(a(6,"cảm"),"THÔNG TIN KHÔNG HOÀN HẢO","NHIỀU NGƯỜI CÙNG TRANH LUẬN"),
++ kinetic(a(8,"cụ"),"TRANH LUẬN CỤ THỂ HƠN","KHÔNG PHẢI KHẨU HIỆU"),
++ ledger(5,a(9,"bảng")), question(a(10,"điện"),"PHIÊN BẢN ĐIỆN ẢNH\nĐÃ LÀM GỌN ĐIỀU GÌ?")]
++
++def ch05(): return [
++ chapter(5,"CHƯƠNG NĂM","BỘ PHIM VÀ PHẦN\nKHÔNG ĐƯỢC CẮT GỌN","2003 · SÁCH | 2011 · PHIM","tickets",a(0,"2011")),
++ timeline(a(0,"2011"),"card",[("2002","MÙA OAKLAND"),("2003","SÁCH MONEYBALL"),("2011","PHIM MONEYBALL")]),
++ kinetic(a(2,"peter"),"PETER BRAND LÀ HƯ CẤU","DỰA MỘT PHẦN TRÊN NỀN TẢNG CỦA DEP ODESTA"),
++ photo("depo",a(3,"depodesta"),"PAUL DEP ODESTA","KHÔNG CHO DÙNG TÊN THẬT TRONG PHIM"),
++ question(a(4,"phim"),"ĐIỆN ẢNH CÔ ĐẶC Ý TƯỞNG\nHAY GHI LẠI LỊCH SỬ?"),
++ slam(a(5,"dữ"),"KỊCH TÍNH HÓA","THEO WASHINGTON POST"),
++ print_scene("beane10",a(7,"art"),"ART HOWE","MANAGER NĂM 2002","103 THẮNG · VÔ ĐỊCH AL WEST"),
++ org(a(8,"68"),[{"id":"obp","t":"OBP .339","s":"TOÀN ĐỘI","at":a(8,"obp")},{"id":"era","t":"ERA 3,68","s":"PITCHING","p":"obp","at":a(8,"era")},{"id":"mgr","t":"ART HOWE","s":"LỊCH ĐẤU DÀI","p":"era","at":a(8,"manager")}]),
++ kinetic(a(10,"tổ"),"DỮ LIỆU · TỔ CHỨC · CON NGƯỜI","CÁC MẢNH GHÉP CÙNG TỒN TẠI"),
++ ledger(6,a(11,"bảng")), question(a(12,"mô"),"MỘT MÔ HÌNH CÓ HỨA\nXÓA HẾT GIỚI HẠN KHÔNG?")]
++
++def ch06(): return [
++ chapter(6,"CHƯƠNG SÁU","NĂM TRẬN\nKHÔNG ĐỦ DÀI","ALDS 2002 · OAKLAND GẶP MINNESOTA","coliseum",a(0,"103")),
++ {"type":"map","at":a(0,"minnesota"),"geo":"usa","tag":"VỊ TRÍ GẦN ĐÚNG","pins":[{"name":"Oakland","at":a(0,"minnesota")},{"name":"Minnesota","at":a(0,"minnesota")}]},
++ kinetic(a(1,"alds"),"ALDS","CẢ MÙA DÀI NÉN VÀO MỘT SERIES NGẮN"),
++ slam(a(2,"7"),"7–5","MINNESOTA THẮNG TRẬN MỘT"),
++ print_scene("score",a(2,"5"),"TRẬN MỘT","OAKLAND TỪNG DẪN","5–1"),
++ timeline(a(3,"hai"),"night",[("TRẬN 2","OAKLAND THẮNG"),("TRẬN 3","OAKLAND THẮNG"),("TRẬN 4","MINNESOTA THẮNG")]),
++ slam(a(4,"năm"),"1–5","OAKLAND THUA TRẬN QUYẾT ĐỊNH"),
++ kinetic(a(5,"alcs"),"KHÔNG VÀO ALCS","KHÔNG PHỦ ĐỊNH MÙA 103 THẮNG"),
++ broll("8275595",a(8,"biến"),"MINH HỌA MỘT KHOẢNH KHẮC CÓ THỂ ĐỔI CHIỀU"),
++ question(a(10,"công"),"MỘT CÔNG THỨC CÓ THỂ\nHỨA KẾT QUẢ NĂM TRẬN?"),
++ ledger(7,a(14,"bảng")), photo("ai02",a(16,"oakland"),"MÙA THƯỜNG XUẤT SẮC","SERIES NGẮN THẤT BẠI",illus=AIL)]
++
++def ch07(): return [
++ chapter(7,"CHƯƠNG BẢY","TẤM BẢNG ĐI\nKHẮP GIẢI ĐẤU","THẬP NIÊN 1990 → HIỆN ĐẠI","aerial",a(0,"michael")),
++ photo("ai03",a(0,"dữ"),"CÁC CÂU LẠC BỘ","NGÀY CÀNG ÁP DỤNG CÁCH TIẾP CẬN DỰA TRÊN DỮ LIỆU",illus=AIL),
++ kinetic(a(2,"shift"),"INFIELD SHIFT","BỐ TRÍ PHÒNG NGỰ THEO XU HƯỚNG ĐÁNH BÓNG"),
++ org(a(3,"reliever"),[{"id":"rel","t":"RELIEVER","s":"NÉM MẠNH HƠN","at":a(3,"reliever")},{"id":"hit","t":"HITTER","s":"KIÊN NHẪN · CÓ SỨC MẠNH","p":"rel","at":a(3,"hitter")}]),
++ slam(a(5,"oakland"),"XU HƯỚNG TOÀN GIẢI","KHÔNG PHẢI CÔNG LAO RIÊNG CỦA OAKLAND"),
++ broll("7691559",a(6,"analytics"),"MINH HỌA PHÂN TÍCH TRONG MỘT PHÒNG HỌP"),
++ kinetic(a(7,"so"),"ĐO · SO SÁNH · THỬ LẠI","ĐIỀU HIỂN NHIÊN CŨNG CẦN KIỂM CHỨNG"),
++ timeline(a(8,"1990"),"overhead",[("1990s","ANALYTICS BẮT ĐẦU"),("ĐẦU 2000s","MONEYBALL XUẤT HIỆN")]),
++ question(a(10,"hạn"),"TA ĐANG BỎ SÓT ĐIỀU GÌ\nCHỈ VÌ CHƯA ĐO ĐÚNG?"),
++ date(a(11,"2002"),"HATTEBERG HOME RUN","04.09.2002","12–11 · TRẬN THẮNG THỨ 20"),
++ ledger(8,a(13,"tám")), kinetic(a(14,"quyết"),"NHÌN KỸ HƠN","TRƯỚC KHI QUYẾT ĐỊNH")]
++
++SCENES=[ch00,ch01,ch02,ch03,ch04,ch05,ch06,ch07]
++SOURCES=[
++ "https://www.mlb.com/athletics/news/athletics-to-celebrate-10th-anniversary-of-20-game-winning-streak/c-36661928",
++ "https://www.mlb.com/athletics/news/twenty-wins-20-ways-to-win/c-121624",
++ "https://www.baseball-reference.com/teams/OAK/2002.shtml", "https://www.mlb.com/news/ten-years-later-the-as-are-back/c-37848808",
++ "https://sabr.org/sabermetrics", "https://sabr.org/50at50/analytics", "https://apnews.com/article/e67c9d939d0c27f65c5785de3a4fed10",
++ "https://www.washingtonpost.com/sports/nationals/moneyball-is-compelling-but-leaves-out-much-of-the-real-story/2011/10/11/gIQAMA1cdL_story.html",
++ "https://www.mlb.com/news/2002-twins-a-s-alds-recap.html", "https://www.mlb.com/news/sabermetrics-in-baseball-a-casual-fans-guide"]
++
++def make_spec(): return {"topic":TOPIC,"title":TITLE,"channel":"MIM","theme":"lab","look":"steel","accent":"#f59e0b","master":True,"beat2":True,"say":SAY,"imgs":IMGS,"geo":GEO,"chapters":[f"ch{i:02d}" for i in range(len(SCENES))],"youtube":{
++ "titles":[TITLE,"Billy Beane 2002: Moneyball Không Chỉ Là OBP","Moneyball 2002: Một Con Số Không Đủ Để Thắng"],"publish_at":"2026-11-27T13:00:00Z","playlist":"Công Nghệ Quanh Ta","category":"28","thumb":"t1.jpg",
++ "summary":"Moneyball thường được nhớ như câu chuyện một đội bóng ít tiền dùng dữ liệu để đi ngược số đông. Nhưng mùa Oakland 2002 không gói trong một chỉ số hay một cú home run. Từ chuỗi 20 trận thắng, OBP và pitching, tới nền sabermetrics của Bill James, Billy Beane, Paul DePodesta, Art Howe và thất bại ở ALDS, video mở lại những phần đời thật thường bị bản kể gọn bỏ qua.",
++ "more":["Phim Moneyball chỉ được nhắc bằng lời và chữ; video không sử dụng hình ảnh, âm thanh hoặc trích đoạn từ phim.","Các clip Pexels có nhãn VIDEO MINH HỌA và không mô tả một người hay sự kiện cụ thể.","Một số hình là tranh minh họa nhằm diễn đạt ý tưởng, không phải ảnh tư liệu."],"chapter_titles":CHAPTER_TITLES,"sources":SOURCES,
++ "tags":["Moneyball","Billy Beane","Oakland Athletics","sabermetrics","baseball analytics","OBP","Bill James","Paul DePodesta","Art Howe","Scott Hatteberg","lịch sử công nghệ","dữ liệu"],"hashtags":["Moneyball","BaseballAnalytics","CôngNghệQuanhTa","MindInTheMachine"],"video_credits":["Ảnh Billy Beane, Paul DePodesta và Oakland Coliseum: Wikimedia Commons, CC BY hoặc Public domain.","Video minh họa: Pexels.","Tranh minh họa: tạo theo prompt nội bộ của kênh."],},"sources_internal":"Chỉ dùng kho facts.md đã duyệt. Ảnh Commons I01–I10: CC BY hoặc Public domain. Ba tranh minh họa chờ chủ kênh tạo theo ai_prompts.md."}
++
++def main():
++ spec=make_spec(); (ROOT/"spec.json").write_text(json.dumps(spec,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
++ for i,build_scenes in enumerate(SCENES):
++  f=ROOT/f"ch{i:02d}.json"; out=json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
++  out.update({"topic":TOPIC,"chapter":i,"hud":{"k":f"CHƯƠNG {i:02d}","t":CHAPTER_TITLES[f"ch{i:02d}"].upper()},"scenes":build_scenes()})
++  f.write_text(json.dumps(out,ensure_ascii=False,indent=1)+"\n",encoding="utf-8")
++ print(f"Đã tạo spec.json và {len(SCENES)} chương cho {TOPIC}"+(" (BẢN THAY TẠM ẢNH AI — đừng render)" if STANDIN else "."))
++if __name__=="__main__": main()
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; python motion/long/pexels.py get mim-moneyball 7552614 8135918 5726611 6930656 8275595 7691559" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ exited 1 in 466ms:
+Traceback (most recent call last):
+  File "D:\Tools\Youtube Creator v2\Youtube_Creator_V2\motion\long\pexels.py", line 92, in <module>
+    get(topic, rest, portrait)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Tools\Youtube Creator v2\Youtube_Creator_V2\motion\long\pexels.py", line 62, in get
+    idx = json.loads((out(topic) / "index.json").read_text(encoding="utf-8"))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tung-QA\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tung-QA\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tung-QA\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Tools\\Youtube Creator v2\\Youtube_Creator_V2\\output\\long\\mim-moneyball\\broll\\index.json'
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; python data/long/mim-moneyball/gen_scenes.py --standin; python motion/long/script_lines.py mim-moneyball; python motion/long/studio_lint.py mim-moneyball --strict" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ exited 1 in 390ms:
+Đã tạo spec.json và 8 chương cho mim-moneyball (BẢN THAY TẠM ẢNH AI — đừng render)
+ch00: 12 câu, 260 âm tiết, ~1.3 phút  Một cú đánh ở hiệp chín
+ch01: 12 câu, 250 âm tiết, ~1.2 phút  Một mùa dài hơn chuỗi thắng
+ch02: 14 câu, 277 âm tiết, ~1.4 phút  Giá trị của việc lên gôn
+ch03: 13 câu, 248 âm tiết, ~1.2 phút  Câu hỏi cũ hơn cuốn sách
+ch04: 11 câu, 228 âm tiết, ~1.1 phút  Người chọn câu hỏi
+ch05: 13 câu, 294 âm tiết, ~1.5 phút  Bộ phim và phần không được cắt gọn
+ch06: 17 câu, 306 âm tiết, ~1.5 phút  Năm trận không đủ dài
+ch07: 16 câu, 353 âm tiết, ~1.8 phút  Tấm bảng đi khắp giải đấu
+TỔNG 108 câu, 2216 âm tiết
+  ! ch00: 0/12 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch01: 0/12 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch02: 0/14 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch03: 0/13 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch04: 0/11 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch05: 0/13 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch06: 0/17 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch07: 0/16 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  LỖI ch01 dòng 7: câu 36 tiếng (> 35): Điểm chạy là đơn vị ghi điểm trong bóng chày, nhưng hai tổng số này là…
+  LỖI ch02 dòng 1: câu 37 tiếng (> 35): OBP là tỷ lệ một cầu thủ lên được gôn, bằng cú đánh hợp lệ, bằng walk …
+  LỖI ch07 dòng 10: câu 36 tiếng (> 35): Họ để lại một câu hỏi vẫn còn dùng được ở bất cứ nơi nào nguồn lực hữu…
+mim-moneyball: 3 lỗi, 8 cảnh báo (luật studio)
+
+codex
+Khung cảnh đã được tạo với 80 cảnh và ba ảnh AI có ảnh Commons thay tạm. Lint studio hiện báo 3 câu dài vốn nằm trong lời đọc được duyệt; mình sẽ không sửa kịch bản và sẽ ghi rõ trong báo cáo.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; python motion/long/build_long.py mim-moneyball tts; python motion/long/build_long.py mim-moneyball html" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ exited 1 in 2732ms:
+lint cảnh (sửa gen_scenes.py rồi chạy lại):
+  ch04 cảnh 1 (photo) neo at=[0, 'beane'] trùng mốc 0 với thẻ chương (cảnh 0) — neo vào câu 1, hoặc một chữ từ thứ 3 trở đi của câu 0
+lint cảnh (sửa gen_scenes.py rồi chạy lại):
+  ch04 cảnh 1 (photo) neo at=[0, 'beane'] trùng mốc 0 với thẻ chương (cảnh 0) — neo vào câu 1, hoặc một chữ từ thứ 3 trở đi của câu 0
+
+apply patch
+patch: completed
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-moneyball\gen_scenes.py
+diff --git a/data/long/mim-moneyball/ai_prompts.md b/data/long/mim-moneyball/ai_prompts.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..85d4e3bb4bc8113f30c9598a71b1c7f69a17dcb5
+--- /dev/null
++++ b/data/long/mim-moneyball/ai_prompts.md
+@@ -0,0 +1,17 @@
++#### ai_01.png — phòng tuyển trạch minh họa cho CH03, câu 8
++- Prompt (tiếng Anh): Editorial illustration, late-1990s baseball scouting room at night, a long table with anonymous silhouettes seen only from behind comparing handwritten stat sheets and simple monochrome charts, warm desk lamps, filing cabinets, no recognizable faces, no team colors, no real team insignia, clearly painted rather than archival photography.
++- Khung: 16:9, 1920x1080
++- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
++- Phong cách: painterly editorial illustration, muted green and amber palette
++
++#### ai_02.png — sân bóng chày đêm minh họa cho CH00 và CH06
++- Prompt (tiếng Anh): Painterly editorial illustration of an empty generic baseball diamond under stadium lights at night, viewed from high behind home plate, rainless dramatic sky, no players close enough to identify, no team colors, no signage, no logos, no text, clearly an illustration and not archival footage.
++- Khung: 16:9, 1920x1080
++- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
++- Phong cách: painterly editorial illustration, cinematic blue and amber light
++
++#### ai_03.png — phân tích lan rộng minh họa cho CH07, câu 1
++- Prompt (tiếng Anh): Editorial illustration of anonymous analysts viewed from behind in a modern operations room, projected abstract dots, bars and trend lines without readable numbers or letters, baseball tucked on a blank desk, no brands, no logos, no recognizable real people, deliberately painterly not photorealistic.
++- Khung: 16:9, 1920x1080
++- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
++- Phong cách: contemporary editorial illustration, restrained navy, cream and orange palette
+diff --git a/data/long/mim-moneyball/gen_scenes.py b/data/long/mim-moneyball/gen_scenes.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..9257badb2a340de407d713a78ad46d894ae3a806
+--- /dev/null
++++ b/data/long/mim-moneyball/gen_scenes.py
+@@ -0,0 +1,218 @@
++"""Cảnh + spec cho Long MIM `mim-moneyball`.
++
++    python data/long/mim-moneyball/gen_scenes.py
++    python data/long/mim-moneyball/gen_scenes.py --standin
++"""
++from pathlib import Path
++import json
++import sys
++
++ROOT = Path(__file__).parent
++TOPIC = "mim-moneyball"
++TITLE = "MONEYBALL Ngoài Đời Thật: Billy Beane Và Con Số"
++STANDIN = "--standin" in sys.argv
++
++SAY = {
++    "moneyball": "Mâ-nì-bôn", "billy": "Bi-li", "beane": "Bin", "oakland": "Ô-clần",
++    "scott": "Xcót", "hatteberg": "Ha-tơ-bớc", "kansas": "Can-dợt", "city": "Xi-ti",
++    "toronto": "Tô-rôn-tô", "american": "A-mê-ri-cần", "league": "Lích", "al": "a en",
++    "obp": "ô bê pê", "walk": "uóc", "pitcher": "pít-chờ", "era": "i a rờ",
++    "sabermetrics": "xây-bờ-mét-trích", "sabr": "xây-bờ", "bill": "Bin", "james": "Giêm",
++    "pete": "Pít", "palmer": "Pa-mờ", "dick": "Đích", "cramer": "Crây-mờ",
++    "baseball": "bây-xờ-bôn", "abstract": "áp-xờ-trắc", "paul": "Pôn", "depodesta": "Đề-pô-đét-ta",
++    "harvard": "Ha-vợt", "cleveland": "Cờ-li-vờ-lần", "peter": "Pi-tờ", "brand": "Bran",
++    "art": "A-t", "howe": "Hao", "alds": "a en đê ét", "alcs": "a en xê ét",
++    "minnesota": "Mi-nờ-xô-ta", "twins": "Tuyn", "michael": "Mai-cồ", "lewis": "Liu-ít",
++    "mlb": "em en bê", "infield": "in-phiên", "shift": "síp", "reliever": "rờ-li-vờ",
++    "hitter": "hít-tờ", "home": "hôm", "run": "rân", "first": "phớt", "base": "bây-xờ",
++    "general": "giê-nờ-rồ", "manager": "ma-ni-giờ", "assistant": "a-xít-tần",
++    "analytics": "a-na-lí-tích", "series": "xi-ri", "world": "uổld",
++}
++
++IMGS = {
++    "beane06": "File:Billy Beane 2006.jpg",
++    "beane10": "File:Billy Beane - General Manager Oakland As (5964095428).jpg",
++    "depo": "File:Paul DePodesta and Jimmy Haslam (36730002206).jpg",
++    "coliseum": "File:Oakland Coliseum view from upper deck.jpg",
++    "night": "File:Oakland Coliseum at night.jpg",
++    "overhead": "File:Oakland Coliseum overhead angle, September 2024.jpg",
++    "aerial": "File:Oakland Coliseum aerial view 2024.jpg",
++    "tickets": "File:Oakland Coliseum ticket booths.jpg",
++    "score": "File:Baseball game score.jpg",
++    "card": "File:Pac bell scorecard.jpg",
++}
++AI_PATH = {f"ai0{n}": f"assets/long/{TOPIC}/img/ai/ai_0{n}.png" for n in range(1, 4)}
++STAND = {"ai01": "card", "ai02": "night", "ai03": "score"}
++if not STANDIN:
++    IMGS.update({k: f"EXT:ai:{Path(v).stem}" for k, v in AI_PATH.items()})
++
++def im(key): return STAND[key] if STANDIN and key in STAND else key
++
++GEO = {"usa": {"countries": ["United States of America"], "context": ["Canada", "Mexico"],
++    "bbox": [-126, 25, -66, 50], "pins": [
++        {"name": "Oakland", "lon": -122.27, "lat": 37.80, "label": "OAKLAND"},
++        {"name": "Kansas City", "lon": -94.58, "lat": 39.10, "label": "KANSAS CITY"},
++        {"name": "Minnesota", "lon": -93.27, "lat": 44.98, "label": "MINNESOTA"},
++    ]}}
++
++CHAPTER_TITLES = {
++    "ch00": "Một cú đánh ở hiệp chín", "ch01": "Một mùa dài hơn chuỗi thắng",
++    "ch02": "Giá trị của việc lên gôn", "ch03": "Câu hỏi cũ hơn cuốn sách",
++    "ch04": "Người chọn câu hỏi", "ch05": "Bộ phim và phần không được cắt gọn",
++    "ch06": "Năm trận không đủ dài", "ch07": "Tấm bảng đi khắp giải đấu",
++}
++LEDGER = "TẤM BẢNG CHỜ MỘT LẦN LÊN GÔN"
++ROWS = [
++    ("HỎI", "MỘT LẦN LÊN GÔN GIẢI THÍCH ĐƯỢC GÌ?"),
++    ("1 · MÙA DÀI", "NGÂN SÁCH THẤP VẪN PHẢI THẮNG"),
++    ("2 · LÊN GÔN", "MỘT ĐÈN PIN · KHÔNG PHẢI BẢN ĐỒ"),
++    ("3 · CÂU HỎI", "DỮ LIỆU BUỘC NIỀM TIN TRẢ LỜI RÕ"),
++    ("4 · TRANH LUẬN", "NHIỀU NGƯỜI CÙNG KIỂM TRA"),
++    ("5 · KHUNG HÌNH", "MỞ LẠI PHẦN BỊ CẮT GỌN"),
++    ("6 · SERIES", "CUỘC CHƠI NGẮN VẪN ĐẦY BẤT NGỜ"),
++    ("7 · LAN RỘNG", "NHÌN KỸ HƠN TRƯỚC KHI QUYẾT ĐỊNH"),
++]
++VM, AIL = "VIDEO MINH HỌA", "ẢNH MINH HỌA"
++
++def chapter(no, k, title, sub, bg, title_at): return {"type":"chapter","no":str(no),"k":k,"title":title,"sub":sub,"bg":im(bg),"titleAt":title_at}
++def photo(img, at, key, value, kin=None, illus=None):
++    out={"type":"photo","at":at,"img":im(img),"tone":"bw","move":"in","veil":.55,"label":{"k":key,"v":value,"at":at}}
++    if illus or img.startswith("ai"): out["illus"]=illus or AIL
++    if img.startswith("ai") and not STANDIN: out["credit"]=False
++    if kin: out["kin"]=[{"text":kin,"at":at,"acc":True}]
++    return out
++def broll(vid, at, text): return {"type":"broll","at":at,"vid":vid,"veil":.62,"illus":VM,"kin":[{"text":text,"at":at,"acc":True}]}
++def kinetic(at,text,small=None):
++    items=[{"text":text,"at":at,"acc":True}]
++    if small: items.append({"text":small,"at":at,"sm":True})
++    return {"type":"kinetic","at":at,"items":items}
++def slam(at,text,sub): return {"type":"slam","at":at,"text":text,"sub":sub}
++def date(at,day,d,sub): return {"type":"date","at":at,"day":day,"date":d,"sub":{"text":sub,"at":at}}
++def print_scene(img,at,head,key,value): return {"type":"print","at":at,"img":im(img),"tone":"bw","head":head,"side":{"k":key,"h":value,"lines":[{"text":value.replace("\n"," · "),"at":at}]}}
++def ledger(n,at): return {"type":"ledger","at":at,"title":LEDGER,"srcnote":"MỖI CHƯƠNG THÊM MỘT Ô","rows":[{"k":k,"v":v,"at":at} for k,v in ROWS[:n]]}
++def question(at,text): return {"type":"question","at":at,"text":text}
++def counter(at,to,suffix,label,frm=0,year=False): return {"type":"counter","at":at,"from":frm,"to":to,"suffix":suffix,"label":label,"year":year}
++def timeline(at,bg,items): return {"type":"timeline","at":at,"bg":im(bg),"items":[{"year":y,"text":t} for y,t in items]}
++def org(at,nodes): return {"type":"org","at":at,"nodes":nodes}
++def a(line,word): return [line,word]
++
++def ch00(): return [
++ chapter(0,"MỞ ĐẦU","MỘT CÚ ĐÁNH\nỞ HIỆP CHÍN","04.09.2002 · OAKLAND 12–11 KANSAS CITY","night",a(0,"oakland")),
++ date(a(0,"2002"),"OAKLAND · KANSAS CITY","04.09.2002","TRẬN THẮNG THỨ 20 LIÊN TIẾP"),
++ slam(a(1,"11"),"11–0","OAKLAND DẪN SAU BA HIỆP"),
++ {"type":"map","at":a(2,"kansas"),"geo":"usa","tag":"VỊ TRÍ GẦN ĐÚNG","pins":[{"name":"Oakland","at":a(2,"kansas")},{"name":"Kansas City","at":a(2,"kansas")}]},
++ photo("ai02",a(2,"chín"),"HIỆP CHÍN","CHUỖI THẮNG CÓ THỂ ĐỨT",illus=AIL),
++ print_scene("score",a(3,"hatteberg"),"ĐẦU HIỆP CHÍN","SCOTT HATTEBERG","VÀO SÂN ĐÁNH THAY"),
++ kinetic(a(4,"home"),"HOME RUN","CHẠY TRỌN VÒNG VỀ NHÀ · GHI ĐIỂM"),
++ slam(a(5,"12"),"12–11","OAKLAND THẮNG"),
++ timeline(a(7,"20"),"coliseum",[("13.08","THẮNG TORONTO 5–4"),("04.09","THẮNG KANSAS CITY 12–11")]),
++ ledger(1,a(10,"bảng")), question(a(11,"mùa"),"MỘT CÚ ĐÁNH GIẢI THÍCH\nĐƯỢC CẢ MÙA KHÔNG?")]
++
++def ch01(): return [
++ chapter(1,"CHƯƠNG MỘT","MỘT MÙA DÀI HƠN\nCHUỖI THẮNG","2002 · 103 THẮNG · 59 THUA","overhead",a(0,"oakland")),
++ counter(a(0,"103"),103," THẮNG","MÙA THƯỜNG 2002",frm=0),
++ slam(a(0,"59"),"103–59","ĐỨNG ĐẦU AL WEST"),
++ timeline(a(1,"20"),"aerial",[("TRƯỚC CHUỖI","20–26"),("PHẦN CÒN LẠI","83–33")]),
++ counter(a(3,"40"),40," TRIỆU USD","QUỸ LƯƠNG OAKLAND · XẤP XỈ",frm=0),
++ kinetic(a(3,"28"),"THỨ 28 TOÀN GIẢI","NGUỒN LỰC KHÔNG GIỐNG CÁC ĐỘI GIÀU"),
++ broll("7552614",a(5,"phẩm"),"MỘT CUỘC HỌP MINH HỌA · KHÔNG PHẢI OAKLAND"),
++ print_scene("card",a(6,"800"),"TỔNG MÙA THƯỜNG","800 ĐIỂM CHẠY","654 ĐIỂM CHẠY ĐỂ LỌT"),
++ question(a(8,"đêm"),"MỘT ĐÊM HAY MỘT CHỈ SỐ\nCÓ ĐỦ KHÔNG?"),
++ ledger(2,a(10,"bảng")), kinetic(a(11,"giá"),"ĐO GIÁ TRỊ KỸ HƠN","OAKLAND ĐANG TÌM GÌ?")]
++
++def ch02(): return [
++ chapter(2,"CHƯƠNG HAI","GIÁ TRỊ CỦA\nVIỆC LÊN GÔN","OAKLAND 2002 · OBP .339","score",a(0,"moneyball")),
++ kinetic(a(1,"obp"),"OBP","TỶ LỆ CẦU THỦ LÊN ĐƯỢC GÔN"),
++ org(a(2,"loại"),[{"id":"hit","t":"CÚ ĐÁNH HỢP LỆ","s":"LÊN GÔN","at":a(2,"đánh")},{"id":"walk","t":"WALK","s":"PITCHER NÉM SAI VÙNG","p":"hit","at":a(2,"walk")}]),
++ counter(a(3,"339"),339," PHẦN NGHÌN","OBP TOÀN ĐỘI · THỨ BA AL",frm=0),
++ photo("beane06",a(4,"thần"),"MỘT CHỈ SỐ","KHÔNG PHẢI THẦN CHÚ"),
++ print_scene("card",a(5,"hatteberg"),"SCOTT HATTEBERG","68 WALK","THỨ HAI ĐỘI"),
++ counter(a(7,"88"),88," LẦN","XUẤT PHÁT Ở FIRST BASE",frm=0),
++ broll("8135918",a(8,"đóng"),"MINH HỌA CHO VIỆC CÂN NHẮC MỘT VAI TRÒ MỚI"),
++ slam(a(9,"68"),"ERA 3,68","THỨ BA TOÀN MLB"),
++ ledger(3,a(11,"bảng")), question(a(12,"oakland"),"VÌ SAO NGƯỜI TA BẮT ĐẦU\nDÙNG NHỮNG ĐÈN PIN NÀY?")]
++
++def ch03(): return [
++ chapter(3,"CHƯƠNG BA","CÂU HỎI CŨ HƠN\nCUỐN SÁCH","1974 → 1980 · SABERMETRICS","card",a(0,"sabermetrics")),
++ kinetic(a(0,"sabermetrics"),"SABERMETRICS","TÌM KIẾM TRI THỨC KHÁCH QUAN VỀ BÓNG CHÀY"),
++ timeline(a(1,"1974"),"score",[("1974","STATISTICAL ANALYSIS COMMITTEE"),("1977","BASEBALL ABSTRACT ĐẦU TIÊN"),("1980","ĐẶT TÊN SABERMETRICS")]),
++ print_scene("card",a(2,"1974"),"BA NGƯỜI ĐỒNG LẬP","BILL JAMES · PETE PALMER","DICK CRAMER"),
++ date(a(4,"1977"),"BASEBALL ABSTRACT ĐẦU TIÊN","1977","BILL JAMES TỰ XUẤT BẢN"),
++ slam(a(5,"1980"),"1980","TÊN GỌI SABERMETRICS XUẤT HIỆN"),
++ kinetic(a(6,"thống"),"CHẤT VẤN THƯỚC ĐO QUEN THUỘC","BATTING AVERAGE · SỐ TRẬN THẮNG CỦA PITCHER"),
++ photo("ai01",a(7,"lâu"),"TRỰC GIÁC","KHÔNG BỊ CHẾ GIỄU",illus=AIL),
++ question(a(9,"hỏi"),"DỮ LIỆU GIÚP TA\nCÓ CÂU HỎI GÌ?"),
++ ledger(4,a(11,"bảng")), broll("5726611",a(12,"ngân"),"MINH HỌA MỘT CUỘC THẢO LUẬN")]
++
++def ch04(): return [
++ chapter(4,"CHƯƠNG BỐN","NGƯỜI CHỌN\nCÂU HỎI","1999 → 2002 · OAKLAND","beane10",a(0,"billy")),
++ photo("beane06",a(0,"general"),"BILLY BEANE","GENERAL MANAGER · OAKLAND"),
++ date(a(1,"2003"),"SÁCH MONEYBALL","2003","KỂ VỀ MÙA 2002 CỦA OAKLAND"),
++ photo("depo",a(3,"depodesta"),"PAUL DEP ODESTA","ASSISTANT GENERAL MANAGER · 1999"),
++ timeline(a(4,"harvard"),"card",[("1996","THỰC TẬP Ở CLEVELAND"),("1999","GIA NHẬP ATHLETICS")]),
++ broll("6930656",a(5,"hai"),"CUỘC HỌP MINH HỌA · KHÔNG ĐẠI DIỆN NGƯỜI THẬT"),
++ slam(a(6,"cảm"),"THÔNG TIN KHÔNG HOÀN HẢO","NHIỀU NGƯỜI CÙNG TRANH LUẬN"),
++ kinetic(a(8,"cụ"),"TRANH LUẬN CỤ THỂ HƠN","KHÔNG PHẢI KHẨU HIỆU"),
++ ledger(5,a(9,"bảng")), question(a(10,"điện"),"PHIÊN BẢN ĐIỆN ẢNH\nĐÃ LÀM GỌN ĐIỀU GÌ?")]
++
++def ch05(): return [
++ chapter(5,"CHƯƠNG NĂM","BỘ PHIM VÀ PHẦN\nKHÔNG ĐƯỢC CẮT GỌN","2003 · SÁCH | 2011 · PHIM","tickets",a(0,"2011")),
++ timeline(a(0,"2011"),"card",[("2002","MÙA OAKLAND"),("2003","SÁCH MONEYBALL"),("2011","PHIM MONEYBALL")]),
++ kinetic(a(2,"peter"),"PETER BRAND LÀ HƯ CẤU","DỰA MỘT PHẦN TRÊN NỀN TẢNG CỦA DEP ODESTA"),
++ photo("depo",a(3,"depodesta"),"PAUL DEP ODESTA","KHÔNG CHO DÙNG TÊN THẬT TRONG PHIM"),
++ question(a(4,"phim"),"ĐIỆN ẢNH CÔ ĐẶC Ý TƯỞNG\nHAY GHI LẠI LỊCH SỬ?"),
++ slam(a(5,"dữ"),"KỊCH TÍNH HÓA","THEO WASHINGTON POST"),
++ print_scene("beane10",a(7,"art"),"ART HOWE","MANAGER NĂM 2002","103 THẮNG · VÔ ĐỊCH AL WEST"),
++ org(a(8,"68"),[{"id":"obp","t":"OBP .339","s":"TOÀN ĐỘI","at":a(8,"obp")},{"id":"era","t":"ERA 3,68","s":"PITCHING","p":"obp","at":a(8,"era")},{"id":"mgr","t":"ART HOWE","s":"LỊCH ĐẤU DÀI","p":"era","at":a(8,"manager")}]),
++ kinetic(a(10,"tổ"),"DỮ LIỆU · TỔ CHỨC · CON NGƯỜI","CÁC MẢNH GHÉP CÙNG TỒN TẠI"),
++ ledger(6,a(11,"bảng")), question(a(12,"mô"),"MỘT MÔ HÌNH CÓ HỨA\nXÓA HẾT GIỚI HẠN KHÔNG?")]
++
++def ch06(): return [
++ chapter(6,"CHƯƠNG SÁU","NĂM TRẬN\nKHÔNG ĐỦ DÀI","ALDS 2002 · OAKLAND GẶP MINNESOTA","coliseum",a(0,"103")),
++ {"type":"map","at":a(0,"minnesota"),"geo":"usa","tag":"VỊ TRÍ GẦN ĐÚNG","pins":[{"name":"Oakland","at":a(0,"minnesota")},{"name":"Minnesota","at":a(0,"minnesota")}]},
++ kinetic(a(1,"alds"),"ALDS","CẢ MÙA DÀI NÉN VÀO MỘT SERIES NGẮN"),
++ slam(a(2,"7"),"7–5","MINNESOTA THẮNG TRẬN MỘT"),
++ print_scene("score",a(2,"5"),"TRẬN MỘT","OAKLAND TỪNG DẪN","5–1"),
++ timeline(a(3,"hai"),"night",[("TRẬN 2","OAKLAND THẮNG"),("TRẬN 3","OAKLAND THẮNG"),("TRẬN 4","MINNESOTA THẮNG")]),
++ slam(a(4,"năm"),"1–5","OAKLAND THUA TRẬN QUYẾT ĐỊNH"),
++ kinetic(a(5,"alcs"),"KHÔNG VÀO ALCS","KHÔNG PHỦ ĐỊNH MÙA 103 THẮNG"),
++ broll("8275595",a(8,"biến"),"MINH HỌA MỘT KHOẢNH KHẮC CÓ THỂ ĐỔI CHIỀU"),
++ question(a(10,"công"),"MỘT CÔNG THỨC CÓ THỂ\nHỨA KẾT QUẢ NĂM TRẬN?"),
++ ledger(7,a(14,"bảng")), photo("ai02",a(16,"oakland"),"MÙA THƯỜNG XUẤT SẮC","SERIES NGẮN THẤT BẠI",illus=AIL)]
++
++def ch07(): return [
++ chapter(7,"CHƯƠNG BẢY","TẤM BẢNG ĐI\nKHẮP GIẢI ĐẤU","THẬP NIÊN 1990 → HIỆN ĐẠI","aerial",a(0,"michael")),
++ photo("ai03",a(0,"dữ"),"CÁC CÂU LẠC BỘ","NGÀY CÀNG ÁP DỤNG CÁCH TIẾP CẬN DỰA TRÊN DỮ LIỆU",illus=AIL),
++ kinetic(a(2,"shift"),"INFIELD SHIFT","BỐ TRÍ PHÒNG NGỰ THEO XU HƯỚNG ĐÁNH BÓNG"),
++ org(a(3,"reliever"),[{"id":"rel","t":"RELIEVER","s":"NÉM MẠNH HƠN","at":a(3,"reliever")},{"id":"hit","t":"HITTER","s":"KIÊN NHẪN · CÓ SỨC MẠNH","p":"rel","at":a(3,"hitter")}]),
++ slam(a(5,"oakland"),"XU HƯỚNG TOÀN GIẢI","KHÔNG PHẢI CÔNG LAO RIÊNG CỦA OAKLAND"),
++ broll("7691559",a(6,"analytics"),"MINH HỌA PHÂN TÍCH TRONG MỘT PHÒNG HỌP"),
++ kinetic(a(7,"so"),"ĐO · SO SÁNH · THỬ LẠI","ĐIỀU HIỂN NHIÊN CŨNG CẦN KIỂM CHỨNG"),
++ timeline(a(8,"1990"),"overhead",[("1990s","ANALYTICS BẮT ĐẦU"),("ĐẦU 2000s","MONEYBALL XUẤT HIỆN")]),
++ question(a(10,"hạn"),"TA ĐANG BỎ SÓT ĐIỀU GÌ\nCHỈ VÌ CHƯA ĐO ĐÚNG?"),
++ date(a(11,"2002"),"HATTEBERG HOME RUN","04.09.2002","12–11 · TRẬN THẮNG THỨ 20"),
++ ledger(8,a(13,"tám")), kinetic(a(14,"quyết"),"NHÌN KỸ HƠN","TRƯỚC KHI QUYẾT ĐỊNH")]
++
++SCENES=[ch00,ch01,ch02,ch03,ch04,ch05,ch06,ch07]
++SOURCES=[
++ "https://www.mlb.com/athletics/news/athletics-to-celebrate-10th-anniversary-of-20-game-winning-streak/c-36661928",
++ "https://www.mlb.com/athletics/news/twenty-wins-20-ways-to-win/c-121624",
++ "https://www.baseball-reference.com/teams/OAK/2002.shtml", "https://www.mlb.com/news/ten-years-later-the-as-are-back/c-37848808",
++ "https://sabr.org/sabermetrics", "https://sabr.org/50at50/analytics", "https://apnews.com/article/e67c9d939d0c27f65c5785de3a4fed10",
++ "https://www.washingtonpost.com/sports/nationals/moneyball-is-compelling-but-leaves-out-much-of-the-real-story/2011/10/11/gIQAMA1cdL_story.html",
++ "https://www.mlb.com/news/2002-twins-a-s-alds-recap.html", "https://www.mlb.com/news/sabermetrics-in-baseball-a-casual-fans-guide"]
++
++def make_spec(): return {"topic":TOPIC,"title":TITLE,"channel":"MIM","theme":"lab","look":"steel","accent":"#f59e0b","master":True,"beat2":True,"say":SAY,"imgs":IMGS,"geo":GEO,"chapters":[f"ch{i:02d}" for i in range(len(SCENES))],"youtube":{
++ "titles":[TITLE,"Billy Beane 2002: Moneyball Không Chỉ Là OBP","Moneyball 2002: Một Con Số Không Đủ Để Thắng"],"publish_at":"2026-11-27T13:00:00Z","playlist":"Công Nghệ Quanh Ta","category":"28","thumb":"t1.jpg",
++ "summary":"Moneyball thường được nhớ như câu chuyện một đội bóng ít tiền dùng dữ liệu để đi ngược số đông. Nhưng mùa Oakland 2002 không gói trong một chỉ số hay một cú home run. Từ chuỗi 20 trận thắng, OBP và pitching, tới nền sabermetrics của Bill James, Billy Beane, Paul DePodesta, Art Howe và thất bại ở ALDS, video mở lại những phần đời thật thường bị bản kể gọn bỏ qua.",
++ "more":["Phim Moneyball chỉ được nhắc bằng lời và chữ; video không sử dụng hình ảnh, âm thanh hoặc trích đoạn từ phim.","Các clip Pexels có nhãn VIDEO MINH HỌA và không mô tả một người hay sự kiện cụ thể.","Một số hình là tranh minh họa nhằm diễn đạt ý tưởng, không phải ảnh tư liệu."],"chapter_titles":CHAPTER_TITLES,"sources":SOURCES,
++ "tags":["Moneyball","Billy Beane","Oakland Athletics","sabermetrics","baseball analytics","OBP","Bill James","Paul DePodesta","Art Howe","Scott Hatteberg","lịch sử công nghệ","dữ liệu"],"hashtags":["Moneyball","BaseballAnalytics","CôngNghệQuanhTa","MindInTheMachine"],"video_credits":["Ảnh Billy Beane, Paul DePodesta và Oakland Coliseum: Wikimedia Commons, CC BY hoặc Public domain.","Video minh họa: Pexels.","Tranh minh họa: tạo theo prompt nội bộ của kênh."],},"sources_internal":"Chỉ dùng kho facts.md đã duyệt. Ảnh Commons I01–I10: CC BY hoặc Public domain. Ba tranh minh họa chờ chủ kênh tạo theo ai_prompts.md."}
++
++def main():
++ spec=make_spec(); (ROOT/"spec.json").write_text(json.dumps(spec,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
++ for i,build_scenes in enumerate(SCENES):
++  f=ROOT/f"ch{i:02d}.json"; out=json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
++  out.update({"topic":TOPIC,"chapter":i,"hud":{"k":f"CHƯƠNG {i:02d}","t":CHAPTER_TITLES[f"ch{i:02d}"].upper()},"scenes":build_scenes()})
++  f.write_text(json.dumps(out,ensure_ascii=False,indent=1)+"\n",encoding="utf-8")
++ print(f"Đã tạo spec.json và {len(SCENES)} chương cho {TOPIC}"+(" (BẢN THAY TẠM ẢNH AI — đừng render)" if STANDIN else "."))
++if __name__=="__main__": main()
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; python data/long/mim-moneyball/gen_scenes.py --standin; python motion/long/script_lines.py mim-moneyball; python motion/long/build_long.py mim-moneyball tts; python motion/long/build_long.py mim-moneyball html" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; python motion/long/pexels.py get mim-moneyball 7552614 8135918 5726611 6930656 8275595 7691559" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ exited 1 in 755ms:
+Traceback (most recent call last):
+  File "D:\Tools\Youtube Creator v2\Youtube_Creator_V2\motion\long\pexels.py", line 92, in <module>
+    get(topic, rest, portrait)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Tools\Youtube Creator v2\Youtube_Creator_V2\motion\long\pexels.py", line 62, in get
+    idx = json.loads((out(topic) / "index.json").read_text(encoding="utf-8"))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tung-QA\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tung-QA\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tung-QA\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Tools\\Youtube Creator v2\\Youtube_Creator_V2\\output\\long\\mim-moneyball\\broll\\index.json'
+
+codex
+Lệnh tải Pexels bị chặn trước khi gọi mạng vì thư mục đầu ra của bài chưa có `broll/index.json`; đây là lỗi hạ tầng/khởi tạo đầu ra, không phải ID clip. Mình không sửa mã dùng chung; sẽ ghi lỗi này và tiếp tục các cổng còn lại.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; python data/long/mim-moneyball/gen_scenes.py; python motion/long/script_lines.py mim-moneyball; python motion/long/studio_lint.py mim-moneyball --strict; python motion/long/clip_sheet.py mim-moneyball; python scripts/long_gate.py mim-moneyball --min-syl 1900" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 986ms:
+Đã tạo spec.json và 8 chương cho mim-moneyball.
+ch00: 12 câu, 260 âm tiết, ~1.3 phút  Một cú đánh ở hiệp chín
+ch01: 12 câu, 250 âm tiết, ~1.2 phút  Một mùa dài hơn chuỗi thắng
+ch02: 14 câu, 277 âm tiết, ~1.4 phút  Giá trị của việc lên gôn
+ch03: 13 câu, 248 âm tiết, ~1.2 phút  Câu hỏi cũ hơn cuốn sách
+ch04: 11 câu, 228 âm tiết, ~1.1 phút  Người chọn câu hỏi
+ch05: 13 câu, 294 âm tiết, ~1.5 phút  Bộ phim và phần không được cắt gọn
+ch06: 17 câu, 306 âm tiết, ~1.5 phút  Năm trận không đủ dài
+ch07: 16 câu, 353 âm tiết, ~1.8 phút  Tấm bảng đi khắp giải đấu
+TỔNG 108 câu, 2216 âm tiết
+  ! ch00: 0/12 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch01: 0/12 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch02: 0/14 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch03: 0/13 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch04: 0/11 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch05: 0/13 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch06: 0/17 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch07: 0/16 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  LỖI ch01 dòng 7: câu 36 tiếng (> 35): Điểm chạy là đơn vị ghi điểm trong bóng chày, nhưng hai tổng số này là…
+  LỖI ch02 dòng 1: câu 37 tiếng (> 35): OBP là tỷ lệ một cầu thủ lên được gôn, bằng cú đánh hợp lệ, bằng walk …
+  LỖI ch07 dòng 10: câu 36 tiếng (> 35): Họ để lại một câu hỏi vẫn còn dùng được ở bất cứ nơi nào nguồn lực hữu…
+mim-moneyball: 3 lỗi, 8 cảnh báo (luật studio)
+thiếu D:\Tools\Youtube Creator v2\Youtube_Creator_V2\output\long\mim-moneyball\broll\7552614.mp4 -- chạy pexels.py get mim-moneyball 7552614
+mim-moneyball: âm tiết 2216, phút 1.2, cảnh 81, giây/cảnh 0.9, clip khác 6, ảnh khác 8, URL nguồn 29
+ĐẠT
+
+codex
+Cổng chất lượng cuối đã in **ĐẠT**: 2.216 âm tiết, 81 cảnh, 6 clip khác nhau, 8 ảnh khác nhau và 29 URL nguồn. Clip sheet vẫn chưa thể sinh vì các clip chưa tải được; báo cáo sẽ nêu rõ trạng thái này cùng ba lỗi lint của lời đọc duyệt.
+apply patch
+patch: completed
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-26-codex-pilot\T4W2-ket-qua.md
+diff --git a/data/long/mim-moneyball/ai_prompts.md b/data/long/mim-moneyball/ai_prompts.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..85d4e3bb4bc8113f30c9598a71b1c7f69a17dcb5
+--- /dev/null
++++ b/data/long/mim-moneyball/ai_prompts.md
+@@ -0,0 +1,17 @@
++#### ai_01.png — phòng tuyển trạch minh họa cho CH03, câu 8
++- Prompt (tiếng Anh): Editorial illustration, late-1990s baseball scouting room at night, a long table with anonymous silhouettes seen only from behind comparing handwritten stat sheets and simple monochrome charts, warm desk lamps, filing cabinets, no recognizable faces, no team colors, no real team insignia, clearly painted rather than archival photography.
++- Khung: 16:9, 1920x1080
++- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
++- Phong cách: painterly editorial illustration, muted green and amber palette
++
++#### ai_02.png — sân bóng chày đêm minh họa cho CH00 và CH06
++- Prompt (tiếng Anh): Painterly editorial illustration of an empty generic baseball diamond under stadium lights at night, viewed from high behind home plate, rainless dramatic sky, no players close enough to identify, no team colors, no signage, no logos, no text, clearly an illustration and not archival footage.
++- Khung: 16:9, 1920x1080
++- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
++- Phong cách: painterly editorial illustration, cinematic blue and amber light
++
++#### ai_03.png — phân tích lan rộng minh họa cho CH07, câu 1
++- Prompt (tiếng Anh): Editorial illustration of anonymous analysts viewed from behind in a modern operations room, projected abstract dots, bars and trend lines without readable numbers or letters, baseball tucked on a blank desk, no brands, no logos, no recognizable real people, deliberately painterly not photorealistic.
++- Khung: 16:9, 1920x1080
++- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
++- Phong cách: contemporary editorial illustration, restrained navy, cream and orange palette
+diff --git a/data/long/mim-moneyball/gen_scenes.py b/data/long/mim-moneyball/gen_scenes.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..9257badb2a340de407d713a78ad46d894ae3a806
+--- /dev/null
++++ b/data/long/mim-moneyball/gen_scenes.py
+@@ -0,0 +1,218 @@
++"""Cảnh + spec cho Long MIM `mim-moneyball`.
++
++    python data/long/mim-moneyball/gen_scenes.py
++    python data/long/mim-moneyball/gen_scenes.py --standin
++"""
++from pathlib import Path
++import json
++import sys
++
++ROOT = Path(__file__).parent
++TOPIC = "mim-moneyball"
++TITLE = "MONEYBALL Ngoài Đời Thật: Billy Beane Và Con Số"
++STANDIN = "--standin" in sys.argv
++
++SAY = {
++    "moneyball": "Mâ-nì-bôn", "billy": "Bi-li", "beane": "Bin", "oakland": "Ô-clần",
++    "scott": "Xcót", "hatteberg": "Ha-tơ-bớc", "kansas": "Can-dợt", "city": "Xi-ti",
++    "toronto": "Tô-rôn-tô", "american": "A-mê-ri-cần", "league": "Lích", "al": "a en",
++    "obp": "ô bê pê", "walk": "uóc", "pitcher": "pít-chờ", "era": "i a rờ",
++    "sabermetrics": "xây-bờ-mét-trích", "sabr": "xây-bờ", "bill": "Bin", "james": "Giêm",
++    "pete": "Pít", "palmer": "Pa-mờ", "dick": "Đích", "cramer": "Crây-mờ",
++    "baseball": "bây-xờ-bôn", "abstract": "áp-xờ-trắc", "paul": "Pôn", "depodesta": "Đề-pô-đét-ta",
++    "harvard": "Ha-vợt", "cleveland": "Cờ-li-vờ-lần", "peter": "Pi-tờ", "brand": "Bran",
++    "art": "A-t", "howe": "Hao", "alds": "a en đê ét", "alcs": "a en xê ét",
++    "minnesota": "Mi-nờ-xô-ta", "twins": "Tuyn", "michael": "Mai-cồ", "lewis": "Liu-ít",
++    "mlb": "em en bê", "infield": "in-phiên", "shift": "síp", "reliever": "rờ-li-vờ",
++    "hitter": "hít-tờ", "home": "hôm", "run": "rân", "first": "phớt", "base": "bây-xờ",
++    "general": "giê-nờ-rồ", "manager": "ma-ni-giờ", "assistant": "a-xít-tần",
++    "analytics": "a-na-lí-tích", "series": "xi-ri", "world": "uổld",
++}
++
++IMGS = {
++    "beane06": "File:Billy Beane 2006.jpg",
++    "beane10": "File:Billy Beane - General Manager Oakland As (5964095428).jpg",
++    "depo": "File:Paul DePodesta and Jimmy Haslam (36730002206).jpg",
++    "coliseum": "File:Oakland Coliseum view from upper deck.jpg",
++    "night": "File:Oakland Coliseum at night.jpg",
++    "overhead": "File:Oakland Coliseum overhead angle, September 2024.jpg",
++    "aerial": "File:Oakland Coliseum aerial view 2024.jpg",
++    "tickets": "File:Oakland Coliseum ticket booths.jpg",
++    "score": "File:Baseball game score.jpg",
++    "card": "File:Pac bell scorecard.jpg",
++}
++AI_PATH = {f"ai0{n}": f"assets/long/{TOPIC}/img/ai/ai_0{n}.png" for n in range(1, 4)}
++STAND = {"ai01": "card", "ai02": "night", "ai03": "score"}
++if not STANDIN:
++    IMGS.update({k: f"EXT:ai:{Path(v).stem}" for k, v in AI_PATH.items()})
++
++def im(key): return STAND[key] if STANDIN and key in STAND else key
++
++GEO = {"usa": {"countries": ["United States of America"], "context": ["Canada", "Mexico"],
++    "bbox": [-126, 25, -66, 50], "pins": [
++        {"name": "Oakland", "lon": -122.27, "lat": 37.80, "label": "OAKLAND"},
++        {"name": "Kansas City", "lon": -94.58, "lat": 39.10, "label": "KANSAS CITY"},
++        {"name": "Minnesota", "lon": -93.27, "lat": 44.98, "label": "MINNESOTA"},
++    ]}}
++
++CHAPTER_TITLES = {
++    "ch00": "Một cú đánh ở hiệp chín", "ch01": "Một mùa dài hơn chuỗi thắng",
++    "ch02": "Giá trị của việc lên gôn", "ch03": "Câu hỏi cũ hơn cuốn sách",
++    "ch04": "Người chọn câu hỏi", "ch05": "Bộ phim và phần không được cắt gọn",
++    "ch06": "Năm trận không đủ dài", "ch07": "Tấm bảng đi khắp giải đấu",
++}
++LEDGER = "TẤM BẢNG CHỜ MỘT LẦN LÊN GÔN"
++ROWS = [
++    ("HỎI", "MỘT LẦN LÊN GÔN GIẢI THÍCH ĐƯỢC GÌ?"),
++    ("1 · MÙA DÀI", "NGÂN SÁCH THẤP VẪN PHẢI THẮNG"),
++    ("2 · LÊN GÔN", "MỘT ĐÈN PIN · KHÔNG PHẢI BẢN ĐỒ"),
++    ("3 · CÂU HỎI", "DỮ LIỆU BUỘC NIỀM TIN TRẢ LỜI RÕ"),
++    ("4 · TRANH LUẬN", "NHIỀU NGƯỜI CÙNG KIỂM TRA"),
++    ("5 · KHUNG HÌNH", "MỞ LẠI PHẦN BỊ CẮT GỌN"),
++    ("6 · SERIES", "CUỘC CHƠI NGẮN VẪN ĐẦY BẤT NGỜ"),
++    ("7 · LAN RỘNG", "NHÌN KỸ HƠN TRƯỚC KHI QUYẾT ĐỊNH"),
++]
++VM, AIL = "VIDEO MINH HỌA", "ẢNH MINH HỌA"
++
++def chapter(no, k, title, sub, bg, title_at): return {"type":"chapter","no":str(no),"k":k,"title":title,"sub":sub,"bg":im(bg),"titleAt":title_at}
++def photo(img, at, key, value, kin=None, illus=None):
++    out={"type":"photo","at":at,"img":im(img),"tone":"bw","move":"in","veil":.55,"label":{"k":key,"v":value,"at":at}}
++    if illus or img.startswith("ai"): out["illus"]=illus or AIL
++    if img.startswith("ai") and not STANDIN: out["credit"]=False
++    if kin: out["kin"]=[{"text":kin,"at":at,"acc":True}]
++    return out
++def broll(vid, at, text): return {"type":"broll","at":at,"vid":vid,"veil":.62,"illus":VM,"kin":[{"text":text,"at":at,"acc":True}]}
++def kinetic(at,text,small=None):
++    items=[{"text":text,"at":at,"acc":True}]
++    if small: items.append({"text":small,"at":at,"sm":True})
++    return {"type":"kinetic","at":at,"items":items}
++def slam(at,text,sub): return {"type":"slam","at":at,"text":text,"sub":sub}
++def date(at,day,d,sub): return {"type":"date","at":at,"day":day,"date":d,"sub":{"text":sub,"at":at}}
++def print_scene(img,at,head,key,value): return {"type":"print","at":at,"img":im(img),"tone":"bw","head":head,"side":{"k":key,"h":value,"lines":[{"text":value.replace("\n"," · "),"at":at}]}}
++def ledger(n,at): return {"type":"ledger","at":at,"title":LEDGER,"srcnote":"MỖI CHƯƠNG THÊM MỘT Ô","rows":[{"k":k,"v":v,"at":at} for k,v in ROWS[:n]]}
++def question(at,text): return {"type":"question","at":at,"text":text}
++def counter(at,to,suffix,label,frm=0,year=False): return {"type":"counter","at":at,"from":frm,"to":to,"suffix":suffix,"label":label,"year":year}
++def timeline(at,bg,items): return {"type":"timeline","at":at,"bg":im(bg),"items":[{"year":y,"text":t} for y,t in items]}
++def org(at,nodes): return {"type":"org","at":at,"nodes":nodes}
++def a(line,word): return [line,word]
++
++def ch00(): return [
++ chapter(0,"MỞ ĐẦU","MỘT CÚ ĐÁNH\nỞ HIỆP CHÍN","04.09.2002 · OAKLAND 12–11 KANSAS CITY","night",a(0,"oakland")),
++ date(a(0,"2002"),"OAKLAND · KANSAS CITY","04.09.2002","TRẬN THẮNG THỨ 20 LIÊN TIẾP"),
++ slam(a(1,"11"),"11–0","OAKLAND DẪN SAU BA HIỆP"),
++ {"type":"map","at":a(2,"kansas"),"geo":"usa","tag":"VỊ TRÍ GẦN ĐÚNG","pins":[{"name":"Oakland","at":a(2,"kansas")},{"name":"Kansas City","at":a(2,"kansas")}]},
++ photo("ai02",a(2,"chín"),"HIỆP CHÍN","CHUỖI THẮNG CÓ THỂ ĐỨT",illus=AIL),
++ print_scene("score",a(3,"hatteberg"),"ĐẦU HIỆP CHÍN","SCOTT HATTEBERG","VÀO SÂN ĐÁNH THAY"),
++ kinetic(a(4,"home"),"HOME RUN","CHẠY TRỌN VÒNG VỀ NHÀ · GHI ĐIỂM"),
++ slam(a(5,"12"),"12–11","OAKLAND THẮNG"),
++ timeline(a(7,"20"),"coliseum",[("13.08","THẮNG TORONTO 5–4"),("04.09","THẮNG KANSAS CITY 12–11")]),
++ ledger(1,a(10,"bảng")), question(a(11,"mùa"),"MỘT CÚ ĐÁNH GIẢI THÍCH\nĐƯỢC CẢ MÙA KHÔNG?")]
++
++def ch01(): return [
++ chapter(1,"CHƯƠNG MỘT","MỘT MÙA DÀI HƠN\nCHUỖI THẮNG","2002 · 103 THẮNG · 59 THUA","overhead",a(0,"oakland")),
++ counter(a(0,"103"),103," THẮNG","MÙA THƯỜNG 2002",frm=0),
++ slam(a(0,"59"),"103–59","ĐỨNG ĐẦU AL WEST"),
++ timeline(a(1,"20"),"aerial",[("TRƯỚC CHUỖI","20–26"),("PHẦN CÒN LẠI","83–33")]),
++ counter(a(3,"40"),40," TRIỆU USD","QUỸ LƯƠNG OAKLAND · XẤP XỈ",frm=0),
++ kinetic(a(3,"28"),"THỨ 28 TOÀN GIẢI","NGUỒN LỰC KHÔNG GIỐNG CÁC ĐỘI GIÀU"),
++ broll("7552614",a(5,"phẩm"),"MỘT CUỘC HỌP MINH HỌA · KHÔNG PHẢI OAKLAND"),
++ print_scene("card",a(6,"800"),"TỔNG MÙA THƯỜNG","800 ĐIỂM CHẠY","654 ĐIỂM CHẠY ĐỂ LỌT"),
++ question(a(8,"đêm"),"MỘT ĐÊM HAY MỘT CHỈ SỐ\nCÓ ĐỦ KHÔNG?"),
++ ledger(2,a(10,"bảng")), kinetic(a(11,"giá"),"ĐO GIÁ TRỊ KỸ HƠN","OAKLAND ĐANG TÌM GÌ?")]
++
++def ch02(): return [
++ chapter(2,"CHƯƠNG HAI","GIÁ TRỊ CỦA\nVIỆC LÊN GÔN","OAKLAND 2002 · OBP .339","score",a(0,"moneyball")),
++ kinetic(a(1,"obp"),"OBP","TỶ LỆ CẦU THỦ LÊN ĐƯỢC GÔN"),
++ org(a(2,"loại"),[{"id":"hit","t":"CÚ ĐÁNH HỢP LỆ","s":"LÊN GÔN","at":a(2,"đánh")},{"id":"walk","t":"WALK","s":"PITCHER NÉM SAI VÙNG","p":"hit","at":a(2,"walk")}]),
++ counter(a(3,"339"),339," PHẦN NGHÌN","OBP TOÀN ĐỘI · THỨ BA AL",frm=0),
++ photo("beane06",a(4,"thần"),"MỘT CHỈ SỐ","KHÔNG PHẢI THẦN CHÚ"),
++ print_scene("card",a(5,"hatteberg"),"SCOTT HATTEBERG","68 WALK","THỨ HAI ĐỘI"),
++ counter(a(7,"88"),88," LẦN","XUẤT PHÁT Ở FIRST BASE",frm=0),
++ broll("8135918",a(8,"đóng"),"MINH HỌA CHO VIỆC CÂN NHẮC MỘT VAI TRÒ MỚI"),
++ slam(a(9,"68"),"ERA 3,68","THỨ BA TOÀN MLB"),
++ ledger(3,a(11,"bảng")), question(a(12,"oakland"),"VÌ SAO NGƯỜI TA BẮT ĐẦU\nDÙNG NHỮNG ĐÈN PIN NÀY?")]
++
++def ch03(): return [
++ chapter(3,"CHƯƠNG BA","CÂU HỎI CŨ HƠN\nCUỐN SÁCH","1974 → 1980 · SABERMETRICS","card",a(0,"sabermetrics")),
++ kinetic(a(0,"sabermetrics"),"SABERMETRICS","TÌM KIẾM TRI THỨC KHÁCH QUAN VỀ BÓNG CHÀY"),
++ timeline(a(1,"1974"),"score",[("1974","STATISTICAL ANALYSIS COMMITTEE"),("1977","BASEBALL ABSTRACT ĐẦU TIÊN"),("1980","ĐẶT TÊN SABERMETRICS")]),
++ print_scene("card",a(2,"1974"),"BA NGƯỜI ĐỒNG LẬP","BILL JAMES · PETE PALMER","DICK CRAMER"),
++ date(a(4,"1977"),"BASEBALL ABSTRACT ĐẦU TIÊN","1977","BILL JAMES TỰ XUẤT BẢN"),
++ slam(a(5,"1980"),"1980","TÊN GỌI SABERMETRICS XUẤT HIỆN"),
++ kinetic(a(6,"thống"),"CHẤT VẤN THƯỚC ĐO QUEN THUỘC","BATTING AVERAGE · SỐ TRẬN THẮNG CỦA PITCHER"),
++ photo("ai01",a(7,"lâu"),"TRỰC GIÁC","KHÔNG BỊ CHẾ GIỄU",illus=AIL),
++ question(a(9,"hỏi"),"DỮ LIỆU GIÚP TA\nCÓ CÂU HỎI GÌ?"),
++ ledger(4,a(11,"bảng")), broll("5726611",a(12,"ngân"),"MINH HỌA MỘT CUỘC THẢO LUẬN")]
++
++def ch04(): return [
++ chapter(4,"CHƯƠNG BỐN","NGƯỜI CHỌN\nCÂU HỎI","1999 → 2002 · OAKLAND","beane10",a(0,"billy")),
++ photo("beane06",a(0,"general"),"BILLY BEANE","GENERAL MANAGER · OAKLAND"),
++ date(a(1,"2003"),"SÁCH MONEYBALL","2003","KỂ VỀ MÙA 2002 CỦA OAKLAND"),
++ photo("depo",a(3,"depodesta"),"PAUL DEP ODESTA","ASSISTANT GENERAL MANAGER · 1999"),
++ timeline(a(4,"harvard"),"card",[("1996","THỰC TẬP Ở CLEVELAND"),("1999","GIA NHẬP ATHLETICS")]),
++ broll("6930656",a(5,"hai"),"CUỘC HỌP MINH HỌA · KHÔNG ĐẠI DIỆN NGƯỜI THẬT"),
++ slam(a(6,"cảm"),"THÔNG TIN KHÔNG HOÀN HẢO","NHIỀU NGƯỜI CÙNG TRANH LUẬN"),
++ kinetic(a(8,"cụ"),"TRANH LUẬN CỤ THỂ HƠN","KHÔNG PHẢI KHẨU HIỆU"),
++ ledger(5,a(9,"bảng")), question(a(10,"điện"),"PHIÊN BẢN ĐIỆN ẢNH\nĐÃ LÀM GỌN ĐIỀU GÌ?")]
++
++def ch05(): return [
++ chapter(5,"CHƯƠNG NĂM","BỘ PHIM VÀ PHẦN\nKHÔNG ĐƯỢC CẮT GỌN","2003 · SÁCH | 2011 · PHIM","tickets",a(0,"2011")),
++ timeline(a(0,"2011"),"card",[("2002","MÙA OAKLAND"),("2003","SÁCH MONEYBALL"),("2011","PHIM MONEYBALL")]),
++ kinetic(a(2,"peter"),"PETER BRAND LÀ HƯ CẤU","DỰA MỘT PHẦN TRÊN NỀN TẢNG CỦA DEP ODESTA"),
++ photo("depo",a(3,"depodesta"),"PAUL DEP ODESTA","KHÔNG CHO DÙNG TÊN THẬT TRONG PHIM"),
++ question(a(4,"phim"),"ĐIỆN ẢNH CÔ ĐẶC Ý TƯỞNG\nHAY GHI LẠI LỊCH SỬ?"),
++ slam(a(5,"dữ"),"KỊCH TÍNH HÓA","THEO WASHINGTON POST"),
++ print_scene("beane10",a(7,"art"),"ART HOWE","MANAGER NĂM 2002","103 THẮNG · VÔ ĐỊCH AL WEST"),
++ org(a(8,"68"),[{"id":"obp","t":"OBP .339","s":"TOÀN ĐỘI","at":a(8,"obp")},{"id":"era","t":"ERA 3,68","s":"PITCHING","p":"obp","at":a(8,"era")},{"id":"mgr","t":"ART HOWE","s":"LỊCH ĐẤU DÀI","p":"era","at":a(8,"manager")}]),
++ kinetic(a(10,"tổ"),"DỮ LIỆU · TỔ CHỨC · CON NGƯỜI","CÁC MẢNH GHÉP CÙNG TỒN TẠI"),
++ ledger(6,a(11,"bảng")), question(a(12,"mô"),"MỘT MÔ HÌNH CÓ HỨA\nXÓA HẾT GIỚI HẠN KHÔNG?")]
++
++def ch06(): return [
++ chapter(6,"CHƯƠNG SÁU","NĂM TRẬN\nKHÔNG ĐỦ DÀI","ALDS 2002 · OAKLAND GẶP MINNESOTA","coliseum",a(0,"103")),
++ {"type":"map","at":a(0,"minnesota"),"geo":"usa","tag":"VỊ TRÍ GẦN ĐÚNG","pins":[{"name":"Oakland","at":a(0,"minnesota")},{"name":"Minnesota","at":a(0,"minnesota")}]},
++ kinetic(a(1,"alds"),"ALDS","CẢ MÙA DÀI NÉN VÀO MỘT SERIES NGẮN"),
++ slam(a(2,"7"),"7–5","MINNESOTA THẮNG TRẬN MỘT"),
++ print_scene("score",a(2,"5"),"TRẬN MỘT","OAKLAND TỪNG DẪN","5–1"),
++ timeline(a(3,"hai"),"night",[("TRẬN 2","OAKLAND THẮNG"),("TRẬN 3","OAKLAND THẮNG"),("TRẬN 4","MINNESOTA THẮNG")]),
++ slam(a(4,"năm"),"1–5","OAKLAND THUA TRẬN QUYẾT ĐỊNH"),
++ kinetic(a(5,"alcs"),"KHÔNG VÀO ALCS","KHÔNG PHỦ ĐỊNH MÙA 103 THẮNG"),
++ broll("8275595",a(8,"biến"),"MINH HỌA MỘT KHOẢNH KHẮC CÓ THỂ ĐỔI CHIỀU"),
++ question(a(10,"công"),"MỘT CÔNG THỨC CÓ THỂ\nHỨA KẾT QUẢ NĂM TRẬN?"),
++ ledger(7,a(14,"bảng")), photo("ai02",a(16,"oakland"),"MÙA THƯỜNG XUẤT SẮC","SERIES NGẮN THẤT BẠI",illus=AIL)]
++
++def ch07(): return [
++ chapter(7,"CHƯƠNG BẢY","TẤM BẢNG ĐI\nKHẮP GIẢI ĐẤU","THẬP NIÊN 1990 → HIỆN ĐẠI","aerial",a(0,"michael")),
++ photo("ai03",a(0,"dữ"),"CÁC CÂU LẠC BỘ","NGÀY CÀNG ÁP DỤNG CÁCH TIẾP CẬN DỰA TRÊN DỮ LIỆU",illus=AIL),
++ kinetic(a(2,"shift"),"INFIELD SHIFT","BỐ TRÍ PHÒNG NGỰ THEO XU HƯỚNG ĐÁNH BÓNG"),
++ org(a(3,"reliever"),[{"id":"rel","t":"RELIEVER","s":"NÉM MẠNH HƠN","at":a(3,"reliever")},{"id":"hit","t":"HITTER","s":"KIÊN NHẪN · CÓ SỨC MẠNH","p":"rel","at":a(3,"hitter")}]),
++ slam(a(5,"oakland"),"XU HƯỚNG TOÀN GIẢI","KHÔNG PHẢI CÔNG LAO RIÊNG CỦA OAKLAND"),
++ broll("7691559",a(6,"analytics"),"MINH HỌA PHÂN TÍCH TRONG MỘT PHÒNG HỌP"),
++ kinetic(a(7,"so"),"ĐO · SO SÁNH · THỬ LẠI","ĐIỀU HIỂN NHIÊN CŨNG CẦN KIỂM CHỨNG"),
++ timeline(a(8,"1990"),"overhead",[("1990s","ANALYTICS BẮT ĐẦU"),("ĐẦU 2000s","MONEYBALL XUẤT HIỆN")]),
++ question(a(10,"hạn"),"TA ĐANG BỎ SÓT ĐIỀU GÌ\nCHỈ VÌ CHƯA ĐO ĐÚNG?"),
++ date(a(11,"2002"),"HATTEBERG HOME RUN","04.09.2002","12–11 · TRẬN THẮNG THỨ 20"),
++ ledger(8,a(13,"tám")), kinetic(a(14,"quyết"),"NHÌN KỸ HƠN","TRƯỚC KHI QUYẾT ĐỊNH")]
++
++SCENES=[ch00,ch01,ch02,ch03,ch04,ch05,ch06,ch07]
++SOURCES=[
++ "https://www.mlb.com/athletics/news/athletics-to-celebrate-10th-anniversary-of-20-game-winning-streak/c-36661928",
++ "https://www.mlb.com/athletics/news/twenty-wins-20-ways-to-win/c-121624",
++ "https://www.baseball-reference.com/teams/OAK/2002.shtml", "https://www.mlb.com/news/ten-years-later-the-as-are-back/c-37848808",
++ "https://sabr.org/sabermetrics", "https://sabr.org/50at50/analytics", "https://apnews.com/article/e67c9d939d0c27f65c5785de3a4fed10",
++ "https://www.washingtonpost.com/sports/nationals/moneyball-is-compelling-but-leaves-out-much-of-the-real-story/2011/10/11/gIQAMA1cdL_story.html",
++ "https://www.mlb.com/news/2002-twins-a-s-alds-recap.html", "https://www.mlb.com/news/sabermetrics-in-baseball-a-casual-fans-guide"]
++
++def make_spec(): return {"topic":TOPIC,"title":TITLE,"channel":"MIM","theme":"lab","look":"steel","accent":"#f59e0b","master":True,"beat2":True,"say":SAY,"imgs":IMGS,"geo":GEO,"chapters":[f"ch{i:02d}" for i in range(len(SCENES))],"youtube":{
++ "titles":[TITLE,"Billy Beane 2002: Moneyball Không Chỉ Là OBP","Moneyball 2002: Một Con Số Không Đủ Để Thắng"],"publish_at":"2026-11-27T13:00:00Z","playlist":"Công Nghệ Quanh Ta","category":"28","thumb":"t1.jpg",
++ "summary":"Moneyball thường được nhớ như câu chuyện một đội bóng ít tiền dùng dữ liệu để đi ngược số đông. Nhưng mùa Oakland 2002 không gói trong một chỉ số hay một cú home run. Từ chuỗi 20 trận thắng, OBP và pitching, tới nền sabermetrics của Bill James, Billy Beane, Paul DePodesta, Art Howe và thất bại ở ALDS, video mở lại những phần đời thật thường bị bản kể gọn bỏ qua.",
++ "more":["Phim Moneyball chỉ được nhắc bằng lời và chữ; video không sử dụng hình ảnh, âm thanh hoặc trích đoạn từ phim.","Các clip Pexels có nhãn VIDEO MINH HỌA và không mô tả một người hay sự kiện cụ thể.","Một số hình là tranh minh họa nhằm diễn đạt ý tưởng, không phải ảnh tư liệu."],"chapter_titles":CHAPTER_TITLES,"sources":SOURCES,
++ "tags":["Moneyball","Billy Beane","Oakland Athletics","sabermetrics","baseball analytics","OBP","Bill James","Paul DePodesta","Art Howe","Scott Hatteberg","lịch sử công nghệ","dữ liệu"],"hashtags":["Moneyball","BaseballAnalytics","CôngNghệQuanhTa","MindInTheMachine"],"video_credits":["Ảnh Billy Beane, Paul DePodesta và Oakland Coliseum: Wikimedia Commons, CC BY hoặc Public domain.","Video minh họa: Pexels.","Tranh minh họa: tạo theo prompt nội bộ của kênh."],},"sources_internal":"Chỉ dùng kho facts.md đã duyệt. Ảnh Commons I01–I10: CC BY hoặc Public domain. Ba tranh minh họa chờ chủ kênh tạo theo ai_prompts.md."}
++
++def main():
++ spec=make_spec(); (ROOT/"spec.json").write_text(json.dumps(spec,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
++ for i,build_scenes in enumerate(SCENES):
++  f=ROOT/f"ch{i:02d}.json"; out=json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
++  out.update({"topic":TOPIC,"chapter":i,"hud":{"k":f"CHƯƠNG {i:02d}","t":CHAPTER_TITLES[f"ch{i:02d}"].upper()},"scenes":build_scenes()})
++  f.write_text(json.dumps(out,ensure_ascii=False,indent=1)+"\n",encoding="utf-8")
++ print(f"Đã tạo spec.json và {len(SCENES)} chương cho {TOPIC}"+(" (BẢN THAY TẠM ẢNH AI — đừng render)" if STANDIN else "."))
++if __name__=="__main__": main()
+diff --git a/docs/pm/tickets/2026-10-26-codex-pilot/T4W2-ket-qua.md b/docs/pm/tickets/2026-10-26-codex-pilot/T4W2-ket-qua.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..4043be8db9355d60c1b93b6e50e52a59dd1963d2
+--- /dev/null
++++ b/docs/pm/tickets/2026-10-26-codex-pilot/T4W2-ket-qua.md
+@@ -0,0 +1,60 @@
++# Kết quả T4W2 — `mim-moneyball`
++
++## Đã làm
++
++- Tạo `data/long/mim-moneyball/gen_scenes.py` theo khung `mim-katherine-johnson`, gồm spec, 8 chương, 81 cảnh, bảng mô-típ 8 ô, bản đồ Hoa Kỳ (Oakland, Kansas City, Minnesota), bảng phát âm `SAY` và metadata YouTube.
++- Tạo `data/long/mim-moneyball/ai_prompts.md` với 3 prompt ảnh minh họa. Các cảnh dùng ảnh AI khai `EXT:ai:ai_NN`; bản `--standin` dùng ảnh Commons thay tạm.
++- Đã soát HTML bằng `gen_scenes.py --standin`, sau đó chạy lại bản thật và chạy lại `script_lines.py`.
++- Không sửa `script.md` hoặc `factcheck.md`.
++
++## Lệnh đã chạy và kết quả
++
++```text
++python motion/long/script_lines.py mim-moneyball
++→ 108 câu, 2.216 âm tiết
++
++python data/long/mim-moneyball/gen_scenes.py --standin
++python motion/long/script_lines.py mim-moneyball
++python motion/long/build_long.py mim-moneyball tts
++python motion/long/build_long.py mim-moneyball html
++→ đã sửa một lỗi neo trùng ở ch04 cảnh 1 (đổi neo từ “beane” sang “general”).
++
++python data/long/mim-moneyball/gen_scenes.py
++python motion/long/script_lines.py mim-moneyball
++python motion/long/studio_lint.py mim-moneyball --strict
++
++python motion/long/clip_sheet.py mim-moneyball
++→ dừng do thiếu output/long/mim-moneyball/broll/7552614.mp4.
++
++python scripts/long_gate.py mim-moneyball --min-syl 1900
++→ mim-moneyball: âm tiết 2216, phút 1.2, cảnh 81, giây/cảnh 0.9,
++  clip khác 6, ảnh khác 8, URL nguồn 29
++→ ĐẠT
++```
++
++## Lỗi lint còn lại
++
++`studio_lint.py --strict` còn 3 lỗi và 8 cảnh báo câu ngắn. Cả ba lỗi là câu dài trong lời đọc đã được Claude duyệt, nên không sửa:
++
++- ch01 dòng 7: 36 tiếng;
++- ch02 dòng 1: 37 tiếng;
++- ch07 dòng 10: 36 tiếng.
++
++## Clip sheet / Pexels
++
++Đã thử tải đúng các ID được duyệt bằng:
++
++```text
++python motion/long/pexels.py get mim-moneyball 7552614 8135918 5726611 6930656 8275595 7691559
++```
++
++Lệnh dừng trước khi tải vì thiếu `output/long/mim-moneyball/broll/index.json`. Vì vậy chưa có `output/long/mim-moneyball/qa_clips.jpg` để mở và kiểm tra logo/chữ. Các clip được khai trong cảnh là: `7552614`, `8135918`, `5726611`, `6930656`, `8275595`, `7691559`.
++
++## Ảnh
++
++- Commons dùng trong spec: Billy Beane 2006; Billy Beane tại Leaders Event 2010; Paul DePodesta and Jimmy Haslam; Oakland Coliseum (upper deck, night, overhead, aerial, ticket booths); Baseball game score; Pac Bell scorecard. Tất cả là các file I01–I10 đã được duyệt CC BY hoặc Public domain trong `facts.md`.
++- Chờ tạo 3 ảnh AI: `ai_01.png`, `ai_02.png`, `ai_03.png`. Prompt nằm tại `data/long/mim-moneyball/ai_prompts.md`; chưa gọi bot tạo ảnh.
++
++## Khẳng định không kiểm được
++
++Không có khẳng định mới nào được thêm ngoài kho `facts.md` đã duyệt. Không dùng tựa Việt không có nguồn của phim, không suy luận tỷ lệ quỹ lương với đội khác, và không dùng chi tiết phim làm sự kiện lịch sử.
+
+codex
+Đã hoàn tất phần dựng theo ticket và ghi báo cáo tại [T4W2-ket-qua.md](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-26-codex-pilot\T4W2-ket-qua.md).
+
+`python scripts/long_gate.py mim-moneyball --min-syl 1900` đã in **ĐẠT**: 2.216 âm tiết, 81 cảnh, 6 clip khác nhau, 29 URL nguồn.
+
+Còn một lỗi hạ tầng đã ghi rõ trong báo cáo: Pexels/clip sheet không chạy được vì thiếu `output/long/mim-moneyball/broll/index.json`, nên chưa có `qa_clips.jpg` để soi. Ba ảnh AI đang chờ tạo theo [ai_prompts.md](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-moneyball\ai_prompts.md).
+2026-10-26T11:48:41.500224Z ERROR codex_core::session: failed to record rollout items: thread 01a17804-ab15-7bc0-b83b-76f441502ab5 not found
+tokens used
+65,617
+Đã hoàn tất phần dựng theo ticket và ghi báo cáo tại [T4W2-ket-qua.md](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-26-codex-pilot\T4W2-ket-qua.md).
+
+`python scripts/long_gate.py mim-moneyball --min-syl 1900` đã in **ĐẠT**: 2.216 âm tiết, 81 cảnh, 6 clip khác nhau, 29 URL nguồn.
+
+Còn một lỗi hạ tầng đã ghi rõ trong báo cáo: Pexels/clip sheet không chạy được vì thiếu `output/long/mim-moneyball/broll/index.json`, nên chưa có `qa_clips.jpg` để soi. Ba ảnh AI đang chờ tạo theo [ai_prompts.md](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-moneyball\ai_prompts.md).

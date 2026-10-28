@@ -1,0 +1,364 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 6,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "format": "chuyen-xua",
+ "hook_type": "noi-dau",
+ "open_shot": "nguoi-than",
+ "voice": "Thiền Tâm Đức",
+ "music": "fluidscape.mp3",
+ "music_gain": 0.1,
+ "gap": 0.35,
+ "series": "Chuyện xưa · Tập 8",
+ "title": "Kisa Gotami đi xin thuốc cho đứa con đã mất",
+ "kicker": "CHUYỆN XƯA",
+ "sub": "KISĀ GOTAMĪ · DHP 114",
+ "acc": [
+  "thuốc",
+  "hạt",
+  "đèn"
+ ],
+ "lines": [
+  "Kisa Gotami bế con đi xin thuốc. Đứa bé đã mất.",
+  "Bà đi từng nhà, gõ từng cánh cửa.",
+  "Người ta lùi lại. Có người bảo bà điên.",
+  "Một người chỉ đường đến Đức Phật.",
+  "Ngài nói: Ta biết thuốc. Mang về cho Ta một nhúm hạt cải trắng.",
+  "Nhưng phải xin từ nhà chưa từng có ai chết.",
+  "Cánh cửa thứ nhất mở. Hạt cải có. Người chết cũng có.",
+  "Cửa thứ hai. Cửa thứ ba. Ai cũng sẵn lòng cho.",
+  "Nhưng ai cũng nói với bà một câu giống nhau.",
+  "Người sống thì ít. Người chết thì nhiều.",
+  "Chiều xuống, bà đặt con nằm xuống dưới tán rừng.",
+  "Rồi quay về, hai tay trống không.",
+  "Nhiều năm sau, đến lượt bà thắp đèn trong sảnh lễ.",
+  "Ngọn này bùng lên. Ngọn kia lụi tắt.",
+  "Bà ngồi im, nhìn rất lâu.",
+  "Kinh Pháp Cú, diễn ý: một ngày thấy điều bất tử.",
+  "Quý hơn trăm năm không thấy.",
+  "Nếu có thuốc cho nỗi nhớ, bạn mang đến cho ai? Comment một tên."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:27987386",
+   "items": [
+    {
+     "text": "XIN THUỐC",
+     "at": 0,
+     "acc": true
+    },
+    {
+     "text": "CHO CON",
+     "at": 0,
+     "acc": true
+    },
+    {
+     "text": "đứa bé đã mất",
+     "at": 0,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "hf_stamp",
+   "at": 2,
+   "kick": "",
+   "big": "",
+   "stamps": [
+    {
+     "text": "BÀ ĐIÊN RỒI",
+     "at": [
+      2,
+      "điên."
+     ],
+     "x": 150,
+     "y": 880,
+     "rot": -4
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "veil": 0.45,
+   "clip": "pexels:27987392",
+   "items": [
+    {
+     "text": "ĐẾN GẶP",
+     "at": 3,
+     "acc": true
+    },
+    {
+     "text": "ĐỨC PHẬT",
+     "at": 3,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 4,
+   "text": "Một nhúm hạt cải trắng.",
+   "by": "DHPA 8.13 · DIỄN Ý",
+   "clip": "pexels:8489901",
+   "veil": 0.55
+  },
+  {
+   "type": "hf_stamp",
+   "at": 5,
+   "kick": "ĐIỀU KIỆN",
+   "big": "",
+   "stamps": [
+    {
+     "text": "CHƯA TỪNG CÓ AI CHẾT",
+     "at": [
+      5,
+      "chưa"
+     ],
+     "x": 150,
+     "y": 880,
+     "rot": -4
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "veil": 0.45,
+   "clip": "pexels:39917306",
+   "items": [
+    {
+     "text": "CỬA THỨ NHẤT",
+     "at": 6,
+     "acc": true
+    },
+    {
+     "text": "hạt cải có · người chết cũng có",
+     "at": 6,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "hf_unit_grid",
+   "at": 7,
+   "title": "NHÀ NÀO CŨNG CÓ",
+   "total": 12,
+   "cols": 4,
+   "glyph": "🕯",
+   "lit": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "litAt": [
+    7,
+    "cửa"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "veil": 0.5,
+   "clip": "pexels:7318813",
+   "items": [
+    {
+     "text": "MỘT CÂU",
+     "at": 8,
+     "acc": true
+    },
+    {
+     "text": "GIỐNG NHAU",
+     "at": 8,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 9,
+   "text": "NGƯỜI SỐNG\nTHÌ ÍT",
+   "fx": "fade",
+   "sub": "NGƯỜI CHẾT THÌ NHIỀU"
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "veil": 0.3,
+   "clip": "pexels:28884305",
+   "items": [
+    {
+     "text": "DƯỚI TÁN",
+     "at": 10,
+     "acc": true
+    },
+    {
+     "text": "RỪNG",
+     "at": 10,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 11,
+   "to": 0,
+   "suffix": " HẠT CẢI",
+   "label": "HAI TAY TRỐNG KHÔNG",
+   "until": [
+    11,
+    "trống"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "veil": 0.35,
+   "clip": "pexels:26761190",
+   "items": [
+    {
+     "text": "THẮP ĐÈN",
+     "at": 12,
+     "acc": true
+    },
+    {
+     "text": "nhiều năm sau",
+     "at": 12,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 13,
+   "text": "Bùng lên. Lụi tắt.",
+   "by": "DHPA 8.13 · DIỄN Ý",
+   "clip": "pexels:6752408",
+   "veil": 0.35
+  },
+  {
+   "type": "slam",
+   "at": 14,
+   "text": "BÀ NGỒI IM",
+   "fx": "fade",
+   "sub": "NHÌN RẤT LÂU"
+  },
+  {
+   "type": "source",
+   "at": 15,
+   "source": "DHP 114 · CHÚ GIẢI DHPA 8.13",
+   "ref": "Kisā Gotamī · diễn ý",
+   "snippet": "Một ngày [[thấy điều bất tử]].",
+   "hlAt": [
+    15,
+    "bất"
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 16,
+   "text": "QUÝ HƠN\nTRĂM NĂM",
+   "fx": "fade",
+   "sub": "KHÔNG THẤY"
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "veil": 0.4,
+   "clip": "pexels:34807184",
+   "items": [
+    {
+     "text": "THUỐC CHO",
+     "at": 17,
+     "acc": true
+    },
+    {
+     "text": "NỖI NHỚ",
+     "at": 17,
+     "acc": true
+    },
+    {
+     "text": "comment một tên",
+     "at": 17,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://ancient-buddhist-texts.net/English-Texts/Dhamma-Verses-Comm/08-13.htm",
+  "https://www.tipitaka.net/tipitaka/dhp/verseload.php?verse=114",
+  "https://suttacentral.net/thig10.1/en/sujato"
+ ],
+ "description": "Người mẹ đi xin thuốc cho đứa con đã mất\n\nNguồn: https://suttacentral.net/thig10.1/en/sujato · https://en.wikipedia.org/wiki/Kisa_Gotami",
+ "profile": "chiem-nghiem",
+ "beats": [
+  {
+   "after": 5,
+   "s": 1.0
+  },
+  {
+   "after": 9,
+   "s": 2.5,
+   "sfx": "bell"
+  },
+  {
+   "after": 11,
+   "s": 1.5
+  },
+  {
+   "after": 14,
+   "s": 2.0
+  },
+  {
+   "after": 16,
+   "s": 1.5
+  }
+ ],
+ "faithful_note": "Diễn ý. Hạt cải, 'người sống ít người chết nhiều', đặt xác con trong rừng, thắp đèn ở sảnh Bố-tát và kệ Dhp 114 đều từ chú giải Dhp (DhpA 8.13, Burlingame 'Buddhist Legends'). Thig 10.1 là kệ của chính bà (không kể chuyện hạt cải). Không thêm lời an ủi nào của Phật ngoài văn bản.",
+ "cls": "chiem",
+ "extra_css": "bud-chiemnghiem.css",
+ "end_sfx": "gong",
+ "grade": {
+  "arc": [
+   [
+    0,
+    "amber"
+   ],
+   [
+    10,
+    "blue"
+   ],
+   [
+    12,
+    "gold"
+   ]
+  ],
+  "grain": 7,
+  "leak": [
+   "amber",
+   "gold"
+  ],
+  "leak_opacity": 0.14
+ }
+}

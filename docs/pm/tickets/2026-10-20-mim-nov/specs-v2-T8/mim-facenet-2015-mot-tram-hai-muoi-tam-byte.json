@@ -1,0 +1,243 @@
+{
+ "theme": "mim",
+ "title": "Năm 2015, ba nhà nghiên cứu Google nén mỗi khuôn mặt còn 128 byte: FaceNet",
+ "description": "Năm 2015, Florian Schroff, Dmitry Kalenichenko và James Philbin (Google) công bố FaceNet: mỗi khuôn mặt là một dãy 128 byte. Theo tóm tắt bài báo, hệ thống đạt 99,63% trên bộ ảnh LFW và 95,12% trên YouTube Faces, giảm khoảng 30% mức sai so với kết quả tốt nhất đã công bố. (Số kênh không tự tính.)\n\nGiọng đọc tổng hợp; video Pexels/Coverr minh hoạ, không phải cảnh thật của sự kiện.\nBản đầy đủ: https://youtu.be/7daMUBWG6mU",
+ "tags": [
+  "facenet",
+  "google",
+  "triplet loss",
+  "nhận diện khuôn mặt",
+  "học sâu",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "KHUÔN MẶT VÀ AI",
+ "sub": "FACENET · 2015",
+ "acc": [
+  "2015",
+  "dãy",
+  "số",
+  "một",
+  "trăm"
+ ],
+ "lines": [
+  "Năm 2015, Google biến mặt người thành dãy số.",
+  "Ba nhà nghiên cứu là Florian Schroff, Dmitry Kalenichenko và James Philbin, hệ thống tên FaceNet.",
+  "Mỗi khuôn mặt chỉ còn một trăm hai mươi tám byte.",
+  "Để dạy máy, họ cho nó xem từng bộ ba ảnh: ảnh gốc, ảnh cùng người, và ảnh người lạ.",
+  "Trên bộ ảnh thử nổi tiếng LFW, hệ thống đúng chín mươi chín phẩy sáu ba phần trăm.",
+  "Theo bài báo, mức sai giảm khoảng ba mươi phần trăm so với kết quả tốt nhất đã công bố.",
+  "Mặt người, với máy, chỉ còn là một dãy số, và nó nhận ra người."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "items": [
+    {
+     "text": "2015",
+     "at": [
+      0,
+      "Năm"
+     ],
+     "acc": true,
+     "size": 300
+    },
+    {
+     "text": "GOOGLE · FACENET",
+     "at": [
+      0,
+      "Google"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7688618",
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "FACENET",
+     "at": [
+      1,
+      "FaceNet"
+     ],
+     "acc": true
+    },
+    {
+     "text": "Schroff · Kalenichenko · Philbin",
+     "at": [
+      1,
+      "Florian"
+     ],
+     "sm": true,
+     "size": 48
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 128,
+   "suffix": " BYTE",
+   "label": "MỖI KHUÔN MẶT · FACENET",
+   "until": [
+    2,
+    "hai"
+   ]
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "MỘT BỘ BA ẢNH",
+   "nodes": [
+    {
+     "text": "ẢNH GỐC",
+     "x": 0.5,
+     "y": 0.18,
+     "at": [
+      3,
+      "ảnh"
+     ],
+     "w": 400
+    },
+    {
+     "text": "CÙNG NGƯỜI",
+     "x": 0.25,
+     "y": 0.78,
+     "at": [
+      3,
+      "cùng"
+     ],
+     "c": "acc",
+     "w": 400
+    },
+    {
+     "text": "NGƯỜI LẠ",
+     "x": 0.77,
+     "y": 0.78,
+     "at": [
+      3,
+      "lạ"
+     ],
+     "w": 360
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "ĐỘ CHÍNH XÁC · BÀI BÁO FACENET",
+   "rows": [
+    {
+     "k": "LFW (ẢNH)",
+     "v": "99,63%",
+     "at": [
+      4,
+      "chín"
+     ]
+    },
+    {
+     "k": "YOUTUBE FACES (VIDEO)",
+     "v": "95,12%",
+     "at": [
+      4,
+      "đúng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "SO VỚI KỶ LỤC CŨ",
+   "cards": [
+    {
+     "k": "MỨC SAI",
+     "v": "GIẢM KHOẢNG 30%",
+     "at": [
+      5,
+      "ba"
+     ],
+     "c": "acc"
+    },
+    {
+     "k": "KỶ LỤC ĐÃ CÔNG BỐ",
+     "v": "TRƯỚC ĐÓ",
+     "at": [
+      5,
+      "kết"
+     ]
+    }
+   ],
+   "note": "THEO TÓM TẮT BÀI BÁO · ARXIV 1503.03832"
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "DÃY SỐ NHỎ XÍU",
+   "sub": "VẪN PHÂN BIỆT ĐƯỢC NGƯỜI"
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    6,
+    "nhận"
+   ],
+   "items": [
+    {
+     "text": "MỘT DÃY SỐ",
+     "at": [
+      6,
+      "dãy"
+     ],
+     "acc": true
+    },
+    {
+     "text": "nhận ra người",
+     "at": [
+      6,
+      "nhận"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8721655",
+   "veil": 0.6
+  }
+ ],
+ "sources": [
+  "https://arxiv.org/abs/1503.03832 (đã mở: tác giả Schroff, Kalenichenko, Philbin; LFW 99,63%, YouTube Faces 95,12%; giảm sai ~30% so với kết quả tốt nhất đã công bố; 128 byte mỗi khuôn mặt)",
+  "'bộ ba ảnh' = triplet loss trong bài FaceNet; câu tả theo script data/long/mim-ai-khuon-mat (CH03), cần đối chiếu mục 'Triplet loss' trong bài báo"
+ ],
+ "say": {
+  "facenet": "Phây-nét",
+  "google": "Gu-gồ",
+  "florian": "Phlo-ri-an",
+  "schroff": "Sờ-rốp",
+  "dmitry": "Đi-mi-tri",
+  "kalenichenko": "Ca-lê-ni-chen-cô",
+  "james": "Giêm",
+  "philbin": "Phi-bin",
+  "lfw": "eo ép đúp-liu",
+  "byte": "bai"
+ },
+ "rules": 2,
+ "mix": true,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ }
+}

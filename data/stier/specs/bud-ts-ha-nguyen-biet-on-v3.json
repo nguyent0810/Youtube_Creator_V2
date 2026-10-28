@@ -1,0 +1,197 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-ts-ha-nguyen-biet-on",
+ "format": "truoc-sau",
+ "hook_type": "noi-dau",
+ "open_shot": "trang-len",
+ "voice": "Đoan Trang",
+ "music": "clean_soul.mp3",
+ "music_gain": 0.18,
+ "gap": 0.1,
+ "title": "Cả năm cố gắng, mà vẫn thấy thiếu?",
+ "kicker": "TRƯỚC · SAU",
+ "sub": "KINH TĂNG CHI 2.32",
+ "acc": [
+  "thiếu",
+  "đếm",
+  "có"
+ ],
+ "lines": [
+  "Cả năm cố gắng, mà vẫn thấy thiếu?",
+  "Có thể vì ta chỉ đếm những gì chưa có.",
+  "Lương chưa đủ. Nhà chưa xong. Mình chưa giỏi.",
+  "Tối Rằm tháng Mười, người xưa làm ngược lại: đếm những gì đã có.",
+  "Nhưng đếm được không dễ. Vì cái đã có, ta quen mất.",
+  "Kinh Tăng Chi dạy: người biết ơn, nhớ ơn rất hiếm có.",
+  "Một bữa cơm. Một người thân. Một hơi thở bình yên.",
+  "Tối nay viết ra ba thứ đã có, trước khi ngủ.",
+  "Năm nay bạn đã có gì mà quên đếm? Gửi người hay thấy thiếu."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:33839739",
+   "items": [
+    {
+     "text": "VẪN THẤY THIẾU?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "cả năm cố gắng",
+     "at": [
+      0,
+      "cố"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "hf_list_build",
+   "at": 1,
+   "title": "ĐẾM CÁI CHƯA CÓ",
+   "items": [
+    {
+     "key": "1",
+     "text": "LƯƠNG CHƯA ĐỦ",
+     "at": [
+      2,
+      "lương"
+     ]
+    },
+    {
+     "key": "2",
+     "text": "NHÀ CHƯA XONG",
+     "at": [
+      2,
+      "nhà"
+     ]
+    },
+    {
+     "key": "3",
+     "text": "MÌNH CHƯA GIỎI",
+     "at": [
+      2,
+      "mình"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "veil": 0.4,
+   "clip": "pexels:34781879",
+   "items": [
+    {
+     "text": "ĐẾM CÁI ĐÃ CÓ",
+     "at": [
+      3,
+      "đếm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "tối Rằm tháng Mười",
+     "at": [
+      3,
+      "tối"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "CÓ RỒI\nNÊN QUEN MẤT",
+   "fx": "zoom"
+  },
+  {
+   "type": "source",
+   "at": 5,
+   "source": "KINH TĂNG CHI 2.32",
+   "ref": "Hai hạng người hiếm có",
+   "snippet": "Người [[biết ơn và nhớ ơn]] rất hiếm có.",
+   "hlAt": [
+    5,
+    "nhớ"
+   ]
+  },
+  {
+   "type": "hf_split",
+   "at": 6,
+   "a": {
+    "lab": "TRƯỚC",
+    "val": "đếm **thiếu**",
+    "num": "−",
+    "at": [
+     6,
+     "một"
+    ]
+   },
+   "b": {
+    "lab": "SAU",
+    "val": "đếm **đủ**",
+    "num": "+",
+    "at": [
+     6,
+     "hơi"
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "to": 3,
+   "suffix": " THỨ ĐÃ CÓ",
+   "label": "VIẾT RA TRƯỚC KHI NGỦ",
+   "until": [
+    7,
+    "thứ"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "veil": 0.4,
+   "clip": "pexels:37211825",
+   "items": [
+    {
+     "text": "QUÊN ĐẾM GÌ?",
+     "at": [
+      8,
+      "năm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "gửi người hay thấy thiếu",
+     "at": [
+      8,
+      "gửi"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://giacngo.vn/gia-tri-tam-linh-cua-le-hoi-ram-thang-muoi-post6635.html",
+  "https://suttacentral.net/an2.32-41/en/sujato"
+ ],
+ "description": "Cả năm cố gắng, mà vẫn thấy thiếu?\n\nNguồn: https://giacngo.vn/gia-tri-tam-linh-cua-le-hoi-ram-thang-muoi-post6635.html · https://suttacentral.net/an2.32-41/en/sujato"
+}

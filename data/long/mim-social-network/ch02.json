@@ -1,0 +1,247 @@
+{
+ "title": "Một danh bạ có lối vào",
+ "lines": [
+  {
+   "t": "Trước TheFacebook, Harvard đã có danh bạ tìm kiếm cho khóa năm nhất.",
+   "p": 0.8
+  },
+  "Các House cũng giữ những danh bạ ảnh và số điện thoại riêng, thường hạn chế người được truy cập.",
+  "Nói cách khác, thông tin đã tồn tại, nhưng nằm trong các ngăn khác nhau.",
+  "Ngày 4 tháng 2 năm 2004, TheFacebook đi vào hoạt động từ phòng ký túc xá Kirkland House của Zuckerberg.",
+  "Ban đầu, chỉ sinh viên Harvard mới có thể đăng ký.",
+  "Một người dùng đầu tiên nói với Crimson rằng địa chỉ email harvard.edu là điều kiện để vào trang.",
+  "Điều kiện ấy tạo ra một đường biên đơn giản: bạn thuộc cộng đồng trường thì có một lối vào.",
+  "Trong 24 giờ đầu, TheFacebook có 650 người đăng ký, theo Crimson phỏng vấn người dùng đầu tiên.",
+  "Trong hai tuần đầu, con số là 4.300 tài khoản.",
+  "Nhưng nó cho thấy danh bạ chung đã giải quyết một việc rất cụ thể: tìm và nhận ra người cùng môi trường.",
+  "Thay vì so hai ảnh rồi buộc một người thắng, giao diện mới cho mỗi người một hồ sơ trong cùng một mạng.",
+  "Sự thay đổi ấy nghe nhỏ, nhưng nó chuyển trọng tâm từ chấm điểm người khác sang dựng một nơi để người quen tìm nhau.",
+  "Trên bản đồ kết nối, ghim thứ ba là địa chỉ harvard.edu: một cổng vào biến danh bạ rời rạc thành mạng có ranh giới.",
+  "Và khi cổng vào đã rõ, câu hỏi tiếp theo là liệu mô hình đó có đi qua được cổng trường khác hay không."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "MỘT DANH BẠ\nCÓ LỐI VÀO",
+   "sub": "04.02.2004 · KIRKLAND HOUSE",
+   "bg": "weld",
+   "titleAt": [
+    0,
+    "thefacebook"
+   ]
+  },
+  {
+   "type": "print",
+   "at": [
+    1,
+    "house"
+   ],
+   "img": "hall",
+   "tone": "bw",
+   "head": "DANH BẠ HOUSE",
+   "side": {
+    "k": "ẢNH VÀ SỐ ĐIỆN THOẠI",
+    "h": "GIỚI HẠN TRUY CẬP",
+    "lines": [
+     {
+      "text": "GIỚI HẠN TRUY CẬP",
+      "at": [
+       1,
+       "house"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    2,
+    "ngăn"
+   ],
+   "items": [
+    {
+     "text": "CÁC NGĂN RIÊNG",
+     "at": [
+      2,
+      "ngăn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "THÔNG TIN ĐÃ TỒN TẠI",
+     "at": [
+      2,
+      "ngăn"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": [
+    3,
+    "thefacebook"
+   ],
+   "day": "KIRKLAND HOUSE",
+   "date": "04.02.2004",
+   "sub": {
+    "text": "THEFACEBOOK ĐI VÀO HOẠT ĐỘNG",
+    "at": [
+     3,
+     "thefacebook"
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "at": [
+    3,
+    "kirkland"
+   ],
+   "geo": "boston",
+   "tag": "VỊ TRÍ GẦN ĐÚNG",
+   "pins": [
+    {
+     "name": "Harvard",
+     "at": [
+      3,
+      "kirkland"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": [
+    4,
+    "harvard"
+   ],
+   "img": "mark",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "CỔNG VÀO",
+    "v": "BAN ĐẦU CHỈ HARVARD",
+    "at": [
+     4,
+     "harvard"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": [
+    5,
+    "email"
+   ],
+   "text": "HARVARD.EDU",
+   "sub": "ĐIỀU KIỆN ĐĂNG KÝ"
+  },
+  {
+   "type": "counter",
+   "at": [
+    7,
+    "có"
+   ],
+   "from": 0,
+   "to": 650,
+   "suffix": " NGƯỜI",
+   "label": "24 GIỜ ĐẦU",
+   "year": false
+  },
+  {
+   "type": "counter",
+   "at": [
+    8,
+    "là"
+   ],
+   "from": 0,
+   "to": 4300,
+   "suffix": " TÀI KHOẢN",
+   "label": "HAI TUẦN ĐẦU",
+   "year": false
+  },
+  {
+   "type": "org",
+   "at": [
+    10,
+    "hồ"
+   ],
+   "nodes": [
+    {
+     "id": "profile",
+     "t": "HỒ SƠ",
+     "s": "MỘT NGƯỜI",
+     "at": [
+      10,
+      "hồ"
+     ]
+    },
+    {
+     "id": "network",
+     "t": "MẠNG",
+     "s": "NGƯỜI QUEN",
+     "p": "profile",
+     "at": [
+      10,
+      "hồ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": [
+    12,
+    "bản"
+   ],
+   "title": "BẢN ĐỒ KẾT NỐI",
+   "srcnote": "MỖI CHƯƠNG THÊM MỘT ĐƯỜNG",
+   "rows": [
+    {
+     "k": "MỞ ĐẦU",
+     "v": "SO CẶP ẢNH",
+     "at": [
+      12,
+      "bản"
+     ]
+    },
+    {
+     "k": "1 · QUY TẮC",
+     "v": "CỬA KỶ LUẬT",
+     "at": [
+      12,
+      "bản"
+     ]
+    },
+    {
+     "k": "2 · CỔNG VÀO",
+     "v": "EMAIL TRƯỜNG",
+     "at": [
+      12,
+      "bản"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": [
+    13,
+    "cổng"
+   ],
+   "text": "CỔNG NÀY CÓ ĐI QUA\nĐƯỢC TRƯỜNG KHÁC KHÔNG?"
+  }
+ ],
+ "topic": "mim-social-network",
+ "chapter": 2,
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "MỘT DANH BẠ CÓ LỐI VÀO"
+ }
+}

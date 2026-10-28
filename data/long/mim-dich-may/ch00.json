@@ -1,0 +1,287 @@
+{
+ "title": "Chín giây ở New York",
+ "lines": [
+  "New York, ngày 7 tháng 1 năm 1954.",
+  {
+   "t": "Trong trụ sở hãng IBM, một cỗ máy tính choán cả căn phòng. Một tờ báo thời ấy tả nó to bằng một sân quần vợt.",
+   "p": 1.0
+  },
+  "Một cô nhân viên ngồi trước bàn phím. Cô không biết một chữ tiếng Nga.",
+  {
+   "t": "Cô gõ một câu tiếng Nga, viết bằng chữ cái Latin: Mi pyeryedayem mislyi posryedstvom ryechi.",
+   "p": 1.0
+  },
+  "Cái máy lặng đi vài giây. Rồi bộ gõ chữ tự động của nó chạy.",
+  "Trên giấy hiện ra một câu tiếng Anh.",
+  {
+   "t": "Chúng ta truyền đạt ý nghĩ bằng lời nói.",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Báo chí đưa tin này lên trang nhất.",
+  "Tờ New York Times viết rằng đây được tin là lần đầu một cỗ máy dịch thành công một văn bản có nghĩa, từ thứ tiếng này sang thứ tiếng khác.",
+  "Tờ Christian Science Monitor còn kể lại kỳ vọng của hai bên tổ chức, IBM và Đại học Georgetown.",
+  {
+   "t": "Chỉ trong vài năm nữa, sẽ có nhiều \"bộ não\" điện tử dịch mọi thứ tiếng.",
+   "p": 1.0
+  },
+  "Vài năm nữa.",
+  {
+   "t": "Mình xin bạn nhớ ba chữ ấy. Vì chúng sẽ còn quay lại nhiều lần.",
+   "p": 1.0
+  },
+  "Hôm nay bạn dán một đoạn tiếng nước ngoài vào điện thoại, và bản dịch hiện ra gần như ngay.",
+  {
+   "t": "Vậy lời hứa năm 1954 đã thành sự thật chưa? Câu trả lời dài hơn bạn đoán.",
+   "p": 1.0
+  },
+  "Nên mình làm một việc hơi khác. Mình mở một cuốn sổ.",
+  "Mỗi lần có người hứa máy sắp dịch được, mình ghi một dòng: ai nói, năm nào, hạn bao lâu.",
+  {
+   "t": "Dòng đầu tiên vừa xong: năm 1954, vài năm nữa.",
+   "p": 1.0
+  },
+  "Cuối video, mình đem cuốn sổ ra tất toán.",
+  "Nhưng trước hết, hãy xem chiều hôm ấy cỗ máy thật sự làm được gì."
+ ],
+ "scenes": [
+  {
+   "type": "date",
+   "day": "TRỤ SỞ IBM · NEW YORK",
+   "date": "07.01.1954"
+  },
+  {
+   "type": "print",
+   "at": 1,
+   "img": "ibm701",
+   "tone": "bw",
+   "illus": "ẢNH MINH HỌA · MÁY CÙNG LOẠI, CHỤP Ở BẢO TÀNG",
+   "side": {
+    "k": "IBM 701",
+    "h": "TO BẰNG\nSÂN QUẦN VỢT",
+    "lines": [
+     {
+      "text": "Theo một tờ báo thời ấy",
+      "at": [
+       1,
+       "quần"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "broll",
+   "at": 2,
+   "vid": "33068304",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MỘT CÔ NHÂN VIÊN",
+     "at": 2,
+     "sm": true
+    },
+    {
+     "text": "KHÔNG BIẾT TIẾNG NGA",
+     "at": [
+      2,
+      "không"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "CÔ GÕ MỘT CÂU TIẾNG NGA",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "MI PYERYEDAYEM MISLYI",
+     "at": [
+      3,
+      "mi"
+     ],
+     "acc": true
+    },
+    {
+     "text": "posryedstvom ryechi",
+     "at": [
+      3,
+      "posryedstvom"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 5,
+   "text": "We transmit thoughts by means of speech.",
+   "by": "CÂU MÁY IN RA · THEO NEW YORK TIMES, QUA HUTCHINS",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 6,
+   "typeAt": [
+    6,
+    "chúng"
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 7,
+   "vid": "38826405",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "BÁO CHÍ",
+     "at": 7,
+     "sm": true
+    },
+    {
+     "text": "TRANG NHẤT",
+     "at": [
+      7,
+      "trang"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "NEW YORK TIMES",
+     "at": 8,
+     "sm": true
+    },
+    {
+     "text": "“LẦN ĐẦU”",
+     "at": [
+      8,
+      "lần"
+     ],
+     "acc": true
+    },
+    {
+     "text": "được tin là · một cỗ máy dịch thành công",
+     "at": [
+      8,
+      "được"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 9,
+   "text": "…trong vài năm nữa sẽ có nhiều “bộ não” điện tử dịch mọi thứ tiếng một cách trôi chảy…",
+   "who": "CHRISTIAN SCIENCE MONITOR · 1954",
+   "note": "TRÍCH DỊCH · KỲ VỌNG CỦA IBM VÀ GEORGETOWN · QUA HUTCHINS"
+  },
+  {
+   "type": "slam",
+   "at": 11,
+   "text": "VÀI NĂM NỮA",
+   "sub": "LỜI HỨA SỐ 1 · 1954"
+  },
+  {
+   "type": "broll",
+   "at": 13,
+   "vid": "6909831",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "HÔM NAY: DÁN → CÓ BẢN DỊCH",
+     "at": [
+      13,
+      "dán"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 14,
+   "text": "Lời hứa năm 1954\nđã thành sự thật chưa?"
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "MÌNH MỞ MỘT CUỐN SỔ",
+     "at": [
+      15,
+      "mở"
+     ],
+     "acc": true
+    },
+    {
+     "text": "ai nói · năm nào · hạn bao lâu",
+     "at": [
+      16,
+      "ai"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 17,
+   "title": "CUỐN SỔ LỜI HỨA",
+   "srcnote": "MỖI LẦN MÁY ĐƯỢC HỨA SẮP DỊCH ĐƯỢC · GHI MỘT DÒNG",
+   "rows": [
+    {
+     "k": "NĂM 1954",
+     "v": "“VÀI NĂM NỮA” · BÁO THỜI ẤY",
+     "at": 17
+    }
+   ],
+   "total": {
+    "k": "TẤT TOÁN",
+    "v": "CUỐI VIDEO",
+    "at": 18
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "items": [
+    {
+     "text": "CHIỀU HÔM ẤY",
+     "at": 19,
+     "sm": true
+    },
+    {
+     "text": "MÁY THẬT SỰ LÀM ĐƯỢC GÌ?",
+     "at": [
+      19,
+      "thật"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "CHÍN GIÂY Ở NEW YORK"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

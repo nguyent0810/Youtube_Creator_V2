@@ -1,0 +1,282 @@
+{
+ "title": "Bốn cửa trước khi đồng hồ chạy",
+ "lines": [
+  {
+   "t": "Trên màn hình có bốn chấm sáng, và mỗi chấm là một cửa điều kiện.",
+   "p": 0.8
+  },
+  "Chấm thứ nhất là cách chấm dứt việc làm phải hợp lệ theo luật.",
+  "Chấm thứ hai là thời gian đã đóng.",
+  "Chấm thứ ba là hạn nộp hồ sơ.",
+  {
+   "t": "Chấm thứ tư là quãng chờ sau hồ sơ đủ.",
+   "p": 1.0
+  },
+  "Với hợp đồng thông thường, mốc đóng là đủ mười hai tháng trong hai mươi bốn tháng trước khi nghỉ.",
+  "Với hợp đồng từ đủ một tháng đến dưới mười hai tháng, cửa sổ là ba mươi sáu tháng.",
+  "Hồ sơ cần nộp trong ba tháng kể từ ngày chấm dứt hợp đồng hoặc ngừng làm việc.",
+  {
+   "t": "Đó là ba con số đầu tiên trên bộ đếm.",
+   "p": 1.0
+  },
+  "Chấm thứ tư là mười ngày làm việc sau khi nộp đủ hồ sơ.",
+  "Trong mười ngày ấy, người nộp không được rơi vào các trường hợp luật liệt kê như đã có việc làm thuộc diện bảo hiểm bắt buộc.",
+  "Màn hình không chấm điểm ai hơn ai.",
+  {
+   "t": "Nó chỉ đánh dấu đủ bốn cửa hay chưa.",
+   "p": 1.0
+  },
+  "Ở cửa chấm dứt, luật loại trường hợp đơn phương trái pháp luật và người đã đủ điều kiện hưởng lương hưu.",
+  "Ở cửa thời gian đóng, hợp đồng thường nhìn lùi hai mươi bốn tháng, còn nhóm hợp đồng ngắn nhìn lùi ba mươi sáu tháng.",
+  "Trên lịch nộp, ba tháng là một dải từ ngày chấm dứt, không phải ba lần hẹn khác nhau.",
+  {
+   "t": "Trên lịch chờ, mười ngày làm việc chỉ khép lại khi hồ sơ đủ; ngày thứ mười một mới là mốc hưởng, sau mười ô chờ liên tiếp.",
+   "p": 1.0
+  },
+  "Với chị Lan, bốn chấm đều là giả định để nhìn đường đi của biểu đồ.",
+  "Mười hai trong hai mươi bốn là một điều kiện giả định chị Lan đáp ứng.",
+  "Ba tháng là hạn giả định chị Lan không bỏ lỡ.",
+  {
+   "t": "Mười ngày là quãng chờ giả định chị Lan đi hết.",
+   "p": 1.0
+  },
+  "Nếu một chấm chưa sáng, cột chín triệu chưa thể đặt lên thác tiền.",
+  "Vì vậy, đồng hồ không đếm từ ngày nghỉ việc.",
+  "Nó chỉ bắt đầu khi hồ sơ được nộp đủ.",
+  "Mốc tiếp theo là ngày làm việc thứ mười một."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "BỐN CỬA\nĐIỀU KIỆN",
+   "sub": "HỒ SƠ ĐỦ MỚI MỞ ĐỒNG HỒ",
+   "vid": "5434539",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": 0
+  },
+  {
+   "type": "photo",
+   "img": "ai03",
+   "at": 1,
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.49,
+    0.2
+   ],
+   "move": "pan"
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "BỐN CỬA ĐIỀU KIỆN",
+   "srcnote": "LUẬT VIỆC LÀM 74/2025/QH15 · HIỆU LỰC 01/01/2026",
+   "rows": [
+    {
+     "k": "1",
+     "v": "CHẤM DỨT HỢP ĐỒNG ĐÚNG LUẬT",
+     "at": 2
+    },
+    {
+     "k": "2",
+     "v": "ĐÓNG ĐỦ 12 THÁNG / 24",
+     "at": 3
+    },
+    {
+     "k": "3",
+     "v": "NỘP HỒ SƠ TRONG 3 THÁNG",
+     "at": 4
+    },
+    {
+     "k": "4",
+     "v": "10 NGÀY CHỜ KHÔNG CÓ VIỆC",
+     "at": 5
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 6,
+   "title": "CỬA SỔ THỜI GIAN ĐÓNG",
+   "unit": "THÁNG",
+   "items": [
+    {
+     "k": "HỢP ĐỒNG THƯỜNG",
+     "v": 24,
+     "lbl": "24",
+     "at": 6
+    },
+    {
+     "k": "ĐÓNG TỐI THIỂU",
+     "v": 12,
+     "lbl": "12",
+     "at": 7
+    },
+    {
+     "k": "HỢP ĐỒNG NGẮN",
+     "v": 36,
+     "lbl": "36",
+     "at": 8
+    }
+   ],
+   "calls": [
+    {
+     "i": 1,
+     "text": "ĐỦ 12",
+     "at": 7
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "vid": "5434539",
+   "at": 8,
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA"
+  },
+  {
+   "type": "timeline",
+   "at": 9,
+   "title": "CỬA THỨ TƯ: 10 NGÀY LÀM VIỆC",
+   "items": [
+    {
+     "year": "3 THÁNG",
+     "text": "hạn nộp hồ sơ",
+     "at": 9
+    },
+    {
+     "year": "10 NGÀY",
+     "text": "làm việc chờ",
+     "at": [
+      9,
+      "mười"
+     ]
+    },
+    {
+     "year": "KHÔNG CÓ VIỆC",
+     "text": "thuộc diện bắt buộc",
+     "at": 10
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 12,
+   "from": 0,
+   "to": 11,
+   "suffix": " NGÀY",
+   "label": "ĐIỂM BẮT ĐẦU",
+   "sub": {
+    "text": "SAU HỒ SƠ ĐỦ",
+    "at": 12
+   }
+  },
+  {
+   "type": "waterfall",
+   "at": 13,
+   "title": "CỘT TRỢ CẤP CHƯA HIỆN",
+   "range": "TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH",
+   "unit": "TRIỆU",
+   "start": {
+    "k": "CHI PHÍ",
+    "v": 13,
+    "at": 13
+   },
+   "steps": [
+    {
+     "k": "TRỢ CẤP BÙ",
+     "v": -9.0,
+     "at": 15
+    }
+   ],
+   "end": {
+    "k": "CÒN THIẾU",
+    "at": 15
+   },
+   "calls": [
+    {
+     "i": 2,
+     "text": "THIẾU 4 TRIỆU",
+     "at": 15
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 15,
+   "title": "ĐIỀU KIỆN VÀ KHOẢN TRỢ CẤP",
+   "unit": "CỬA",
+   "items": [
+    {
+     "k": "ĐỦ 4 CỬA",
+     "v": 4,
+     "lbl": "4",
+     "at": 15,
+     "acc": true
+    }
+   ],
+   "calls": [
+    {
+     "i": 0,
+     "text": "ĐỦ BỐN",
+     "at": 15
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "HỒ SƠ ĐỦ MỚI BẮT ĐẦU",
+     "at": 17,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 18,
+   "from": 0,
+   "to": 10,
+   "suffix": " NGÀY",
+   "label": "QUÃNG CHỜ",
+   "sub": {
+    "text": "SAU KHI NỘP ĐỦ",
+    "at": 18
+   }
+  },
+  {
+   "type": "timeline",
+   "at": 19,
+   "title": "MỐC TIẾP THEO",
+   "items": [
+    {
+     "year": "0",
+     "text": "nộp đủ",
+     "at": 19
+    },
+    {
+     "year": "10",
+     "text": "ngày chờ",
+     "at": 20
+    },
+    {
+     "year": "11",
+     "text": "mốc hưởng",
+     "at": 21
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "BỐN CỬA TRƯỚC KHI ĐỒNG HỒ CHẠY"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.1
+ }
+}

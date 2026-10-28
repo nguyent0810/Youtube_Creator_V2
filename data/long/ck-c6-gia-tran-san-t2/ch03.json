@@ -1,0 +1,384 @@
+{
+ "title": "Khi cả bảng cùng chạm sàn",
+ "lines": [
+  {
+   "t": "Ngày ba tháng tư năm hai nghìn không trăm hai mươi lăm là một ví dụ dữ liệu rõ ràng.",
+   "p": 0.8
+  },
+  "VN-Index đóng ở một nghìn hai trăm hai mươi chín phẩy tám mươi bốn điểm.",
+  "Chỉ số giảm tám mươi bảy phẩy chín mươi chín điểm.",
+  "Tỷ lệ giảm được nêu là sáu phẩy sáu mươi tám phần trăm.",
+  "Trong phiên đó, HOSE có năm trăm mười bảy mã giảm.",
+  "Trong số ấy, hai trăm sáu mươi ba mã giảm sàn.",
+  "Phép trừ cho phần giảm nhưng chưa sàn là hai trăm năm mươi bốn mã.",
+  "Mười ba mã tăng.",
+  "Trong số ấy, ba mã tăng trần.",
+  "Biểu đồ cột chồng tách phần giảm thành hai lớp.",
+  "Bảng giá có thể nghẹt.",
+  "Hai trăm sáu mươi ba là phần đỏ sát sàn.",
+  "Hai trăm năm mươi bốn là phần giảm khác.",
+  "Mười ba mã tăng, kể cả ba mã trần, chỉ là một phần rất nhỏ.",
+  "Không có ý nghĩa khuyên mua hay bán trong các con số này.",
+  "Chúng chỉ cho thấy nhiều mức giá có thể cùng chạm sàn trong một ngày.",
+  "Ngày chín tháng tư năm hai nghìn không trăm hai mươi lăm lại có một mốc khác.",
+  "VN-Index về một nghìn không trăm chín mươi bốn phẩy ba điểm.",
+  "Mức giảm là ba mươi tám phẩy bốn mươi chín điểm.",
+  "Tỷ lệ được nêu là ba phẩy bốn mươi phần trăm.",
+  "Phiên đó có một trăm bốn mươi bảy mã giảm sàn.",
+  "Một trăm bốn mươi bảy là ít hơn hai trăm sáu mươi ba.",
+  "Nhưng cả hai số đều minh họa áp lực có thể dồn vào một bên bảng giá.",
+  "Quay lại ví dụ giả định, một trăm cổ phiếu của anh Tuấn vẫn không tự nhiên thành có thể bán chỉ vì giá đang đỏ.",
+  "Trạng thái giá và quyền đặt lệnh là hai cột khác nhau.",
+  "Một cột nói mười tám nghìn sáu trăm hay hai mươi mốt nghìn bốn trăm.",
+  "Cột kia nói T, T cộng một, hay chiều T cộng hai.",
+  "Nhưng lịch không đổi.",
+  "Giờ ta đi vào cột thứ hai."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "KHI CẢ BẢNG\nCÙNG CHẠM SÀN",
+   "sub": "PHIÊN 03/04/2025 · NGUỒN: VIETNAMPLUS",
+   "img": "ai03",
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.5,
+    0.3
+   ],
+   "titleAt": 0
+  },
+  {
+   "type": "candles",
+   "at": 1,
+   "series": "vnindex",
+   "from": "2025-03-03",
+   "to": "2025-04-03",
+   "title": "VN-INDEX · ĐẾN 03/04/2025",
+   "range": "DỮ LIỆU: HOSE QUA VNSTOCK",
+   "calls": [
+    {
+     "i": -1,
+     "text": "1.229,84 ĐIỂM",
+     "at": 1
+    }
+   ]
+  },
+  {
+   "type": "waterfall",
+   "at": 2,
+   "title": "PHIÊN 03/04/2025",
+   "range": "ĐIỂM · NGUỒN: VIETNAMPLUS",
+   "unit": "ĐIỂM",
+   "start": {
+    "k": "02/04",
+    "v": 1317.83,
+    "at": 2
+   },
+   "steps": [
+    {
+     "k": "PHIÊN 03/04",
+     "v": -87.99,
+     "at": 2
+    }
+   ],
+   "end": {
+    "k": "ĐÓNG CỬA",
+    "at": 3
+   },
+   "calls": [
+    {
+     "i": 1,
+     "text": "−87,99 · −6,68%",
+     "at": 3
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 0,
+   "to": 517,
+   "suffix": " MÃ GIẢM",
+   "label": "HOSE · PHIÊN 03/04/2025",
+   "srcnote": "NGUỒN: VIETNAMPLUS"
+  },
+  {
+   "type": "bars",
+   "at": 5,
+   "title": "HOSE 03/04/2025",
+   "unit": "MÃ",
+   "srcnote": "NGUỒN: VIETNAMPLUS",
+   "items": [
+    {
+     "k": "GIẢM SÀN",
+     "v": 263,
+     "lbl": "263",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "k": "GIẢM KHÁC",
+     "v": 254,
+     "lbl": "254",
+     "at": 6
+    },
+    {
+     "k": "TĂNG",
+     "v": 13,
+     "lbl": "13",
+     "at": 7
+    },
+    {
+     "k": "TĂNG TRẦN",
+     "v": 3,
+     "lbl": "3",
+     "at": 8
+    }
+   ],
+   "calls": [
+    {
+     "i": 0,
+     "text": "263 MÃ SÀN",
+     "at": 5
+    },
+    {
+     "i": 1,
+     "text": "517 − 263 = 254",
+     "at": 6
+    }
+   ]
+  },
+  {
+   "type": "stack",
+   "at": 9,
+   "title": "PHIÊN 03/04 · CỘT CHỒNG",
+   "range": "MÃ · NGUỒN: VIETNAMPLUS",
+   "unit": "MÃ",
+   "keys": [
+    {
+     "k": "GIẢM SÀN",
+     "color": "#22d3ee"
+    },
+    {
+     "k": "GIẢM KHÁC",
+     "color": "#ef4444"
+    },
+    {
+     "k": "TĂNG",
+     "color": "#4ade80"
+    }
+   ],
+   "groups": [
+    {
+     "k": "MÃ GIẢM",
+     "vals": [
+      263,
+      254,
+      0
+     ],
+     "at": 9
+    },
+    {
+     "k": "MÃ TĂNG",
+     "vals": [
+      0,
+      0,
+      13
+     ],
+     "at": 13
+    }
+   ],
+   "calls": [
+    {
+     "i": 0,
+     "text": "263 SÁT SÀN",
+     "at": 11
+    },
+    {
+     "i": 1,
+     "text": "13 TĂNG · 3 TRẦN",
+     "at": [
+      13,
+      "tăng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 14,
+   "vid": "7148966",
+   "loop": true,
+   "veil": 0.56,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "KHÔNG PHẢI LỜI KHUYÊN",
+     "at": 14,
+     "sm": true
+    },
+    {
+     "text": "NHIỀU MỨC GIÁ CÙNG CHẠM SÀN",
+     "at": 15,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "candles",
+   "at": 16,
+   "series": "vnindex",
+   "from": "2025-04-01",
+   "to": "2025-04-09",
+   "title": "VN-INDEX · 01–09/04/2025",
+   "range": "DỮ LIỆU: HOSE QUA VNSTOCK",
+   "calls": [
+    {
+     "i": -1,
+     "text": "1.094,3 ĐIỂM",
+     "at": 17
+    }
+   ]
+  },
+  {
+   "type": "waterfall",
+   "at": 18,
+   "title": "PHIÊN 09/04/2025",
+   "range": "ĐIỂM · NGUỒN: VTV",
+   "unit": "ĐIỂM",
+   "start": {
+    "k": "08/04",
+    "v": 1132.79,
+    "at": 18
+   },
+   "steps": [
+    {
+     "k": "PHIÊN 09/04",
+     "v": -38.49,
+     "at": 18
+    }
+   ],
+   "end": {
+    "k": "ĐÓNG CỬA",
+    "at": 19
+   },
+   "calls": [
+    {
+     "i": 1,
+     "text": "−38,49 · −3,40%",
+     "at": 19
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 20,
+   "title": "MÃ GIẢM SÀN · HAI PHIÊN",
+   "unit": "MÃ",
+   "srcnote": "NGUỒN: VTV · VIETNAMPLUS",
+   "items": [
+    {
+     "k": "09/04/2025",
+     "v": 147,
+     "lbl": "147",
+     "at": 20,
+     "acc": true
+    },
+    {
+     "k": "03/04/2025",
+     "v": 263,
+     "lbl": "263",
+     "at": 21
+    }
+   ],
+   "calls": [
+    {
+     "i": 0,
+     "text": "ÍT HƠN 263",
+     "at": 21
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 22,
+   "vid": "7651886",
+   "loop": true,
+   "veil": 0.56,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "ÁP LỰC DỒN VỀ MỘT BÊN BẢNG",
+     "at": 22,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "img": "ai03",
+   "at": 23,
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.5,
+    0.3
+   ],
+   "reveal": {
+    "kind": "wipe",
+    "at": 23,
+    "d": 0.9
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 24,
+   "title": "100 CỔ PHIẾU ĐANG Ở ĐÂU?",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "HAI CỘT",
+     "v": "GIÁ ≠ QUYỀN ĐẶT LỆNH",
+     "at": 24
+    },
+    {
+     "k": "CỘT GIÁ",
+     "v": "18.600 – 21.400 ĐỒNG",
+     "at": 25
+    },
+    {
+     "k": "CỘT LỊCH",
+     "v": "T · T+1 · CHIỀU T+2",
+     "at": 26
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 27,
+   "items": [
+    {
+     "text": "LỊCH KHÔNG ĐỔI",
+     "at": 27,
+     "acc": true
+    },
+    {
+     "text": "cột thứ hai: thời điểm",
+     "at": 28,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "KHI CẢ BẢNG CÙNG CHẠM SÀN"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

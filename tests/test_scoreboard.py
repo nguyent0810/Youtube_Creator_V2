@@ -432,3 +432,86 @@ def test_a_failing_cohort_for_any_api_reason_does_not_stop_the_others(db):
         yt.add_video(vid, published_at=live)
     out = collect(db, "FS", yt, now=NOW)
     assert set(metrics(db)) == {"giap-b"} and out["failed"] == 1
+
+
+# ── % ở lại (engagedViews / views) theo series ────────────────────────────
+
+from factory.scoreboard import STAYED_STOP, stay_by_series, stayed  # noqa: E402
+
+
+def stay(conn, slug, day, pct, *, views=1000, code="MIM"):
+    put(conn, slug, day, round(views * pct), views=views, code=code)
+
+
+def mim_rows(conn):
+    return [dict(r) for r in conn.execute("SELECT * FROM video_metrics WHERE channel = 'MIM'")]
+
+
+def test_stayed_is_unknown_for_null_engaged_or_too_few_views():
+    assert stayed(1000, 450) == pytest.approx(0.45)
+    assert stayed(1000, None) is None                  # API từ chối engagedViews: không đoán
+    assert stayed(49, 40) is None                      # quá ít view: tỉ lệ chỉ là nhiễu
+    assert stayed(0, 0) is None
+
+
+def test_series_comes_from_the_slug_word_after_the_channel_prefix(sb):
+    prepare(sb, "MIM")
+    for i in range(3):
+        stay(sb, f"mim-qr-bai-{i}", MON + timedelta(days=i), 0.30)
+        stay(sb, f"mim-flappy-bai-{i}", MON + timedelta(days=i), 0.50)
+    big, odd = stay_by_series("MIM", mim_rows(sb))
+    assert [s.series for s in big] == ["mim-flappy", "mim-qr"]       # % ở lại cao xếp trên
+    assert odd == []
+
+
+def test_a_series_whose_last_six_shorts_sit_below_25_percent_should_stop(sb):
+    prepare(sb, "MIM")
+    for i, pct in enumerate([0.60, 0.60, 0.20, 0.20, 0.20, 0.20, 0.20, 0.20]):
+        stay(sb, f"mim-qr-{i}", MON + timedelta(days=i), pct)
+    [s] = stay_by_series("MIM", mim_rows(sb))[0]
+    assert s.n == 8 and s.recent < STAYED_STOP
+    assert s.verdict == "nên dừng"                     # hai bài tốt cũ không cứu được series đang tụt
+
+
+def test_five_weak_shorts_are_not_enough_to_say_stop(sb):
+    prepare(sb, "MIM")
+    for i in range(5):
+        stay(sb, f"mim-qr-{i}", MON + timedelta(days=i), 0.10)
+    [s] = stay_by_series("MIM", mim_rows(sb))[0]
+    assert s.verdict == ""
+
+
+def test_a_series_at_45_percent_or_more_is_marked_as_reaching_the_threshold(sb):
+    prepare(sb, "MIM")
+    for i in range(3):
+        stay(sb, f"mim-teaser-{i}", MON + timedelta(days=i), 0.50)
+    [s] = stay_by_series("MIM", mim_rows(sb))[0]
+    assert s.verdict == "đạt ngưỡng" and s.median == pytest.approx(0.50)
+
+
+def test_small_series_low_view_shorts_longs_and_pre_regime_weeks_are_kept_out(sb):
+    prepare(sb, "MIM")
+    stay(sb, "mim-alexnet-2-card", MON, 0.30)                              # series 1 bài -> lẻ
+    stay(sb, "mim-qr-it-view", MON, 0.90, views=30)                         # < 50 view: bỏ
+    stay(sb, "mim-qr-cu", date(2026, 9, 28), 0.90)                          # trước mốc 05/10: bỏ
+    stay(sb, "mim-qr-dai", MON, 0.90)
+    sb.execute("UPDATE video_metrics SET kind = 'long' WHERE slug = 'mim-qr-dai'")
+    big, odd = stay_by_series("MIM", mim_rows(sb))
+    assert big == [] and [s.series for s in odd] == ["mim-alexnet"]
+
+
+def test_brief_shows_stayed_per_series_per_line_and_per_video(sb):
+    prepare(sb, "MIM")
+    for i in range(15):
+        stay(sb, f"mim-qr-{i}", MON + timedelta(days=i % 7), 0.20, views=1000 + i)
+    md = render_brief(board(sb, "MIM", frontier=date(2026, 10, 24)))
+    series = md.split("## % ở lại theo series")[1].split("## ")[0]
+    assert "`mim-qr` | 15 | 20% | 20% |" in series and "**nên dừng**" in series
+    assert "% ở lại trung vị |" in md.split("## Theo dòng")[1]               # cột mới ở bảng dòng
+    assert "· ở lại 20% ·" in md.split("## Cao nhất")[1]                     # từng video
+
+
+def test_brief_without_measured_shorts_says_so(sb):
+    prepare(sb, "MIM")
+    md = render_brief(board(sb, "MIM", frontier=date(2026, 10, 24)))
+    assert "Chưa có Short nào đo được % ở lại" in md

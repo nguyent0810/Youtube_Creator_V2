@@ -1,0 +1,202 @@
+{
+ "title": "Ba cái ví đặt cạnh nhau",
+ "lines": [
+  "Gộp hết lương vào một ví chung, hay mỗi người giữ phần của mình?",
+  "Một tổng hợp sáu nghiên cứu, gần ba mươi chín nghìn người tham gia, đã đo đúng câu hỏi ấy.",
+  "Nhóm gộp toàn bộ tiền trong dữ liệu ấy báo cáo mức hài lòng quan hệ cao hơn nhóm giữ tách một phần hoặc toàn bộ.",
+  {
+   "t": "Nhưng đó là liên hệ trong nghiên cứu quốc tế, không phải lời hứa cho một gia đình cụ thể.",
+   "p": 1.0
+  },
+  "Vậy vì sao một câu hỏi rất đời thường là “cách quản lý tài chính vợ chồng” lại không có một đáp án chia tiền duy nhất?",
+  "Nghịch lý là chia đôi tiền nhà nghe rất công bằng, nhưng người lương thấp có thể hết tiền trước.",
+  "Ba bảng sau giữ cùng một hóa đơn, rồi lần lượt hỏi về cùng số tiền, cùng tỷ lệ thu nhập, và phần riêng hay phần chung.",
+  "Câu hỏi trung tâm là: chia đôi tiền nhà nghe rất công bằng, vì sao người lương thấp lại hết tiền trước?",
+  "Cuối video, ba bảng sẽ quay lại để đóng vòng này: công bằng là cùng góp một số, cùng chịu một tỷ lệ, hay cùng có phần riêng?"
+ ],
+ "scenes": [
+  {
+   "type": "broll",
+   "at": 0,
+   "vid": "6963493",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "GỘP CHUNG?",
+     "at": 0,
+     "acc": true
+    },
+    {
+     "text": "HAY GIỮ RIÊNG?",
+     "at": [
+      0,
+      "giữ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 0,
+   "to": 38534,
+   "label": "NGƯỜI THAM GIA · 6 NGHIÊN CỨU",
+   "srcnote": "NGUỒN: GLADSTONE, GARBINSKY & MOGILNER · JPSP 2022",
+   "sub": {
+    "text": "CÙNG ĐO MỘT CÂU HỎI",
+    "at": [
+     1,
+     "đo"
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "NHÓM NÀO HÀI LÒNG HƠN?",
+   "srcnote": "NGUỒN: GLADSTONE, GARBINSKY & MOGILNER · JPSP 2022",
+   "rows": [
+    {
+     "k": "GỘP TOÀN BỘ",
+     "v": "HÀI LÒNG QUAN HỆ CAO HƠN",
+     "at": [
+      2,
+      "gộp"
+     ]
+    },
+    {
+     "k": "TÁCH MỘT PHẦN / TOÀN BỘ",
+     "v": "THẤP HƠN",
+     "at": [
+      2,
+      "tách"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 3,
+   "vid": "6963962",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "LIÊN HỆ TRONG NGHIÊN CỨU",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "KHÔNG PHẢI LỜI HỨA",
+     "at": [
+      3,
+      "lời"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 4,
+   "text": "Chia tiền vợ chồng:\nvì sao không có một đáp án?"
+  },
+  {
+   "type": "bars",
+   "at": 5,
+   "title": "CHIA ĐÔI HÓA ĐƠN 26 TRIỆU",
+   "unit": "TRIỆU CÒN LẠI · VÍ DỤ GIẢ ĐỊNH",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "items": [
+    {
+     "k": "LƯƠNG 25 TRIỆU",
+     "v": 12.0,
+     "lbl": "CÒN 12",
+     "at": [
+      5,
+      "chia"
+     ]
+    },
+    {
+     "k": "LƯƠNG 15 TRIỆU",
+     "v": 2.0,
+     "lbl": "CÒN 2",
+     "at": [
+      5,
+      "thấp"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 6,
+   "title": "BA BẢNG · MỘT HÓA ĐƠN",
+   "items": [
+    {
+     "year": "1 HÓA ĐƠN",
+     "text": "giữ nguyên",
+     "at": 6
+    },
+    {
+     "year": "BẢNG 1",
+     "text": "cùng số tiền",
+     "at": [
+      6,
+      "tiền"
+     ]
+    },
+    {
+     "year": "BẢNG 2",
+     "text": "cùng tỷ lệ thu nhập",
+     "at": [
+      6,
+      "tỷ"
+     ]
+    },
+    {
+     "year": "BẢNG 3",
+     "text": "riêng hay chung",
+     "at": [
+      6,
+      "riêng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "CHIA ĐÔI = CÔNG BẰNG?",
+     "at": 7,
+     "acc": true
+    },
+    {
+     "text": "ai hết tiền trước?",
+     "at": [
+      7,
+      "hết"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "brand",
+   "at": 8,
+   "sub": "TIỀN BẠC · GIẢI THÍCH BẰNG DỮ LIỆU"
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "GỘP HAY GIỮ RIÊNG?"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.1
+ }
+}

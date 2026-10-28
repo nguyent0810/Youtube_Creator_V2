@@ -1,0 +1,160 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-la-cuoi-thang-9-tu-hoi",
+ "format": "lich-am",
+ "hook_type": "con-so",
+ "open_shot": "dong-ho-cat",
+ "voice": "Thục Đoan",
+ "music": "at_rest.mp3",
+ "music_gain": 0.18,
+ "gap": 0.15,
+ "special_date": true,
+ "title": "Ngày cuối tháng 9 âm: 1 câu hỏi 10 giây",
+ "kicker": "LỊCH ÂM · 30/9",
+ "sub": "KINH TĂNG CHI 10.48",
+ "acc": [
+  "hỏi",
+  "tháng"
+ ],
+ "lines": [
+  "Một câu hỏi, mười giây, cho ngày cuối tháng.",
+  "Hôm nay ba mươi tháng chín âm, cũng là ngày vía Phật Dược Sư.",
+  "Đức Phật khuyên nên tự hỏi câu này thường xuyên.",
+  "Kinh Tăng Chi, diễn ý: ngày đêm đang trôi qua. Mình đang sống chúng thế nào?",
+  "Thật ra, câu hỏi này không để trách mình.",
+  "Chỉ để nhìn lại một tháng, và chọn lại một việc.",
+  "Từ mai là tháng mười âm. Bạn chọn giữ một việc tốt nào?"
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:31112120",
+   "items": [
+    {
+     "text": "1 CÂU HỎI · 10 GIÂY",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "ngày cuối tháng 9 âm",
+     "at": [
+      0,
+      "cuối"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "08.11.2026",
+   "day": "CHỦ NHẬT",
+   "sub": {
+    "text": "30/9 ÂM · NGÀY CUỐI THÁNG",
+    "at": [
+     1,
+     "vía"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "veil": 0.4,
+   "clip": "pexels:7657792",
+   "items": [
+    {
+     "text": "TỰ HỎI THƯỜNG XUYÊN",
+     "at": [
+      2,
+      "tự"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "source",
+   "at": 3,
+   "source": "KINH TĂNG CHI 10.48",
+   "ref": "Mười pháp",
+   "snippet": "Ngày đêm trôi qua — [[ta đang sống chúng thế nào?]]",
+   "hlAt": [
+    3,
+    "nào?"
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "KHÔNG ĐỂ\nTRÁCH MÌNH",
+   "fx": "zoom",
+   "sub": "CHỈ ĐỂ NHÌN LẠI"
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "NHÌN LẠI · CHỌN LẠI",
+   "cards": [
+    {
+     "k": "1 THÁNG",
+     "v": "NHÌN LẠI",
+     "at": [
+      5,
+      "nhìn"
+     ]
+    },
+    {
+     "k": "1 VIỆC",
+     "v": "CHỌN LẠI",
+     "at": [
+      5,
+      "chọn"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "veil": 0.4,
+   "clip": "pexels:39575381",
+   "items": [
+    {
+     "text": "GIỮ VIỆC TỐT NÀO?",
+     "at": [
+      6,
+      "từ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "comment một việc tốt",
+     "at": [
+      6,
+      "bạn"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/an10.48/en/sujato"
+ ],
+ "description": "Ngày cuối tháng 9 âm: 1 câu hỏi 10 giây\n\nNguồn: https://suttacentral.net/an10.48/en/sujato"
+}

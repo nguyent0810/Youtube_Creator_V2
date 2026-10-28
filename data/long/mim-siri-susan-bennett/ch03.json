@@ -1,0 +1,368 @@
+{
+ "title": "Kéo cuộn băng ra: những mảnh âm",
+ "lines": [
+  {
+   "t": "Hãy hình dung cả tháng thu âm ấy là một dải băng rất dài.",
+   "p": 0.8
+  },
+  "Máy cắt dải băng thành rất nhiều mảnh nhỏ.",
+  "Mỗi mảnh ngắn hơn một âm tiết, có khi chỉ bằng nửa một âm.",
+  "Mỗi mảnh được dán nhãn: âm gì, cao hay thấp, đứng cạnh âm nào.",
+  "Muốn nói câu mới? Máy đi lục kho.",
+  "Cách làm này gọi là tổng hợp ghép đơn vị.",
+  "Năm 1996, hai nhà nghiên cứu ở Kyoto, Nhật Bản, là Andrew Hunt và Alan Black, mô tả nó trong một bài báo.",
+  {
+   "t": "Ý tưởng của họ gói trong hai cái giá.",
+   "p": 1.0
+  },
+  "Giá thứ nhất: mảnh này giống đến đâu với âm mình cần.",
+  "Giá thứ hai: mảnh này nối với mảnh bên cạnh có êm không, có lộ vết cắt không.",
+  {
+   "t": "Máy dò qua các cách ghép, rồi chọn đường có tổng giá thấp nhất.",
+   "p": 1.0
+  },
+  "Mình minh họa thế này.",
+  "Để nói một chữ ngắn, máy có thể lấy phần đầu từ một câu thu buổi sáng.",
+  "Phần giữa lấy từ một câu khác, thu lúc trưa.",
+  "Phần cuối lấy từ một câu thứ ba, thu lúc chiều muộn.",
+  {
+   "t": "Ghép lại: một chữ liền mạch.",
+   "p": 1.0
+  },
+  "Hai tác giả viết, kho càng lớn, càng nhiều mảnh với đủ cao độ, thì lời nói càng tự nhiên.",
+  "Đó là lý do một kho giọng cần rất nhiều giờ thu.",
+  {
+   "t": "Nhờ vậy, máy nói được những câu mà người đọc chưa từng đọc.",
+   "p": 1.0
+  },
+  "Bà Bennett có một nhận xét vui về chuyện này.",
+  "Bà kể bà rất dễ chán khi đọc hàng giờ liền.",
+  {
+   "t": "Nên theo bà, đôi khi Siri nghe hơi có thái độ: những âm ấy có thể thu trong mười lăm phút cuối.",
+   "diy": 1,
+   "p": 1.0
+  },
+  "Vậy mỗi mảnh âm là một khoảnh khắc thật, trong một ngày làm việc thật, của một người.",
+  "Giờ thì bạn đã hiểu vì sao bà nghe thấy mình nói những câu chưa từng nói.",
+  "Nhưng đó mới là cái miệng.",
+  "Còn cái đầu, ai dạy chiếc máy hiểu câu bạn hỏi?",
+  "Muốn biết, cuộn băng phải lùi thêm một nấc."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "KÉO CUỘN BĂNG RA\nNHỮNG MẢNH ÂM",
+   "sub": "TỔNG HỢP GHÉP ĐƠN VỊ",
+   "bg": "cassette",
+   "titleAt": [
+    0,
+    "hãy"
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 1,
+   "vid": "5102361",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MỘT DẢI BĂNG RẤT DÀI",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "CẮT THÀNH RẤT NHIỀU MẢNH",
+     "at": [
+      1,
+      "cắt"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "units",
+   "at": 2,
+   "title": "MỖI MẢNH: NGẮN HƠN MỘT ÂM TIẾT · CÓ KHI CHỈ NỬA ÂM",
+   "total": 12,
+   "cols": 12,
+   "lit": 12,
+   "litAt": [
+    2,
+    "nửa"
+   ],
+   "unitLabel": "MẢNH · MINH HỌA"
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "NHÃN DÁN TRÊN MỖI MẢNH",
+   "srcnote": "HUNT & BLACK 1996 · APPLE ML JOURNAL 2017",
+   "rows": [
+    {
+     "k": "1",
+     "v": "ÂM GÌ",
+     "at": 3
+    },
+    {
+     "k": "2",
+     "v": "CAO HAY THẤP",
+     "at": [
+      3,
+      "cao"
+     ]
+    },
+    {
+     "k": "3",
+     "v": "ĐỨNG CẠNH ÂM NÀO",
+     "at": [
+      3,
+      "cạnh"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "MUỐN NÓI CÂU MỚI",
+     "at": 4,
+     "sm": true
+    },
+    {
+     "text": "MÁY ĐI LỤC KHO",
+     "at": [
+      4,
+      "lục"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "GHÉP ĐƠN VỊ",
+   "sub": "UNIT SELECTION · TỔNG HỢP TIẾNG NÓI BẰNG CÁCH GHÉP"
+  },
+  {
+   "type": "source",
+   "at": 6,
+   "source": "ICASSP-96 · ATR, KYOTO · 1996 · TR. 373",
+   "ref": "HUNT & BLACK · “UNIT SELECTION…”",
+   "snippet": "chọn và ghép các đơn vị từ [[một kho tiếng nói lớn của một người đọc]]",
+   "hlAt": [
+    6,
+    "mô"
+   ],
+   "seal": "ĐÃ ĐỌC BÀI GỐC",
+   "sealAt": 7
+  },
+  {
+   "type": "ledger",
+   "at": 8,
+   "title": "HAI CÁI GIÁ",
+   "srcnote": "HUNT & BLACK 1996 · “TARGET COST” / “CONCATENATION COST”",
+   "rows": [
+    {
+     "k": "GIÁ 1",
+     "v": "GIỐNG ÂM CẦN NÓI ĐẾN ĐÂU",
+     "at": 8
+    },
+    {
+     "k": "GIÁ 2",
+     "v": "NỐI CÓ ÊM · CÓ LỘ VẾT CẮT?",
+     "at": 9
+    }
+   ],
+   "total": {
+    "k": "MÁY CHỌN",
+    "v": "ĐƯỜNG TỔNG GIÁ THẤP NHẤT",
+    "at": [
+     10,
+     "thấp"
+    ]
+   }
+  },
+  {
+   "type": "timeline",
+   "at": 11,
+   "bg": "spectro",
+   "label": {
+    "k": "MINH HỌA CỦA KÊNH",
+    "v": "KHÔNG PHẢI DỮ LIỆU THẬT",
+    "at": 11
+   },
+   "items": [
+    {
+     "year": "BUỔI SÁNG",
+     "text": "*phần đầu* · câu A",
+     "at": [
+      12,
+      "đầu"
+     ]
+    },
+    {
+     "year": "LÚC TRƯA",
+     "text": "*phần giữa* · câu B",
+     "at": [
+      13,
+      "giữa"
+     ]
+    },
+    {
+     "year": "CHIỀU MUỘN",
+     "text": "*phần cuối* · câu C",
+     "at": [
+      14,
+      "cuối"
+     ],
+     "color": "#f472b6"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 15,
+   "text": "MỘT CHỮ LIỀN MẠCH",
+   "sub": "GHÉP TỪ BA CÂU KHÁC NHAU · MINH HỌA"
+  },
+  {
+   "type": "print",
+   "at": 16,
+   "img": "spectro",
+   "tone": "color",
+   "illus": "ẢNH MINH HỌA · PHỔ ÂM CÂU “I OWE YOU” (CÔNG CỘNG)",
+   "side": {
+    "k": "HUNT & BLACK · 1996",
+    "h": "Kho càng lớn\nlời càng tự nhiên",
+    "lines": [
+     {
+      "text": "đủ *cao độ*, đủ *âm sắc*",
+      "at": [
+       16,
+       "cao"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "CẦN RẤT NHIỀU GIỜ THU",
+     "at": 17,
+     "acc": true
+    },
+    {
+     "text": "câu chưa từng đọc vẫn nói được",
+     "at": 18,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 19,
+   "img": "mic",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.55,
+   "illus": "ẢNH MINH HỌA",
+   "kin": [
+    {
+     "text": "BỐN TIẾNG LIỀN",
+     "at": 19,
+     "sm": true
+    },
+    {
+     "text": "RẤT DỄ CHÁN",
+     "at": [
+      20,
+      "chán"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "MICRO TRONG PHÒNG THU",
+    "v": "ẢNH: SHIXART1985 · CC BY 2.0",
+    "at": 19
+   }
+  },
+  {
+   "type": "quote",
+   "at": 21,
+   "dy": true,
+   "text": "Đôi khi Siri nghe hơi có thái độ: những âm ấy có thể được thu trong mười lăm phút cuối của bốn tiếng.",
+   "by": "SUSAN BENNETT KỂ VỚI CNN · 2013",
+   "lbl": "DIỄN Ý",
+   "typeAt": [
+    21,
+    null,
+    0,
+    0.05
+   ],
+   "typeDur": 3.0
+  },
+  {
+   "type": "kinetic",
+   "at": 22,
+   "items": [
+    {
+     "text": "MỖI MẢNH ÂM",
+     "at": 22,
+     "sm": true
+    },
+    {
+     "text": "MỘT KHOẢNH KHẮC THẬT",
+     "at": [
+      22,
+      "khoảnh"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 23,
+   "text": "NHỮNG CÂU CHƯA TỪNG NÓI",
+   "sub": "GIỜ THÌ BẠN ĐÃ HIỂU VÌ SAO"
+  },
+  {
+   "type": "kinetic",
+   "at": 24,
+   "items": [
+    {
+     "text": "GIỌNG NÓI = CÁI MIỆNG",
+     "at": [
+      24,
+      "miệng."
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 25,
+   "text": "Còn cái đầu:\nai dạy chiếc máy hiểu câu bạn hỏi?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "KÉO CUỘN BĂNG RA: NHỮNG MẢNH ÂM"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

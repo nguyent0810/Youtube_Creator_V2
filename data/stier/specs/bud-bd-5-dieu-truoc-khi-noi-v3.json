@@ -1,0 +1,171 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-bd-5-dieu-truoc-khi-noi",
+ "format": "ba-dieu",
+ "hook_type": "con-so",
+ "open_shot": "go-phim",
+ "voice": "Ngọc Trân",
+ "music": "frost_waltz.mp3",
+ "music_gain": 0.18,
+ "gap": 0.15,
+ "title": "Trước khi bấm gửi, hỏi 5 câu",
+ "kicker": "5 CÂU TRƯỚC KHI GỬI",
+ "sub": "KINH TĂNG CHI 5.198",
+ "acc": [
+  "câu",
+  "gửi",
+  "giận"
+ ],
+ "lines": [
+  "Trước khi bấm gửi, hỏi năm câu. Câu số năm khó nhất.",
+  "Một: đúng lúc chưa?",
+  "Hai: có thật không? Ba: có nhẹ nhàng không?",
+  "Bốn: có ích cho người đọc không?",
+  "Nhưng câu năm mới làm ta khựng lại.",
+  "Năm: mình gõ vì thương, hay vì đang giận?",
+  "Kinh Tăng Chi dạy: đủ năm điều này là lời nói tốt.",
+  "Lần tới, đếm đủ năm câu rồi hãy bấm gửi.",
+  "Câu nào bạn hay quên nhất? Gửi người hay comment gắt."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:6962433",
+   "items": [
+    {
+     "text": "HỎI 5 CÂU",
+     "at": 0.0
+    },
+    {
+     "text": "trước khi bấm gửi",
+     "at": [
+      0,
+      "bấm"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "hf_list_build",
+   "at": 1,
+   "title": "5 CÂU TRƯỚC KHI GỬI",
+   "items": [
+    {
+     "key": "1",
+     "text": "ĐÚNG LÚC?",
+     "at": [
+      1,
+      "đúng"
+     ]
+    },
+    {
+     "key": "2",
+     "text": "CÓ THẬT?",
+     "at": [
+      2,
+      "thật"
+     ]
+    },
+    {
+     "key": "3",
+     "text": "NHẸ NHÀNG?",
+     "at": [
+      2,
+      "nhẹ"
+     ]
+    },
+    {
+     "key": "4",
+     "text": "CÓ ÍCH?",
+     "at": [
+      3,
+      "ích"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "CÂU SỐ 5?",
+   "fx": "zoom"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "clip": "pexels:4439224",
+   "items": [
+    {
+     "text": "VÌ THƯƠNG HAY VÌ GIẬN?",
+     "at": [
+      5,
+      "năm:"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "source",
+   "at": 6,
+   "source": "KINH TĂNG CHI 5.198",
+   "ref": "Lời nói tốt",
+   "snippet": "Đúng lúc, chân thật, nhẹ nhàng, có ích, [[từ lòng thương]].",
+   "hlAt": [
+    6,
+    "tốt."
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "to": 5,
+   "suffix": " CÂU HỎI",
+   "label": "RỒI HÃY BẤM GỬI",
+   "until": [
+    7,
+    "gửi."
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "veil": 0.4,
+   "clip": "pexels:9187960",
+   "items": [
+    {
+     "text": "CÂU NÀO HAY QUÊN?",
+     "at": [
+      8,
+      "câu"
+     ]
+    },
+    {
+     "text": "gửi người hay comment gắt",
+     "at": [
+      8,
+      "gửi"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/an5.198/en/sujato"
+ ],
+ "description": "Trước khi bấm gửi, hỏi 5 câu\n\nNguồn: https://suttacentral.net/an5.198/en/sujato"
+}

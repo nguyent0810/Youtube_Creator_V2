@@ -1,0 +1,222 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-dv-bai-phap-dau-tien",
+ "format": "do-vui",
+ "hook_type": "do-vui",
+ "open_shot": "rung-nui",
+ "voice": "Quang Sơn",
+ "music": "floating_cities.mp3",
+ "music_gain": 0.18,
+ "gap": 0.05,
+ "series": "Đố vui Phật pháp #7",
+ "title": "Bài giảng đầu tiên của Đức Phật có mấy người nghe?",
+ "kicker": "ĐỐ VUI PHẬT PHÁP #7",
+ "sub": "KINH CHUYỂN PHÁP LUÂN · SN 56.11",
+ "acc": [
+  "mấy",
+  "năm",
+  "giữa"
+ ],
+ "lines": [
+  "Bài giảng đầu tiên của Đức Phật có mấy người nghe?",
+  "Một, năm, hay một trăm?",
+  "Chọn một con số trước khi xem tiếp.",
+  "Đáp án bất ngờ: chỉ năm người.",
+  "Nhưng năm vị ấy từng rời bỏ Ngài, ở vườn Nai.",
+  "Kinh Chuyển Pháp Luân, diễn ý: tránh hai cực, hưởng thụ và ép xác.",
+  "Áp vào đời: hôm nay làm một việc vừa sức, đừng ép mình quá.",
+  "Bạn đoán mấy người? Comment một con số."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:30780348",
+   "items": [
+    {
+     "text": "MẤY NGƯỜI NGHE?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "bài giảng đầu tiên của Đức Phật",
+     "at": [
+      0,
+      "đầu"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "hf_list_build",
+   "at": 1,
+   "title": "BẠN CHỌN?",
+   "items": [
+    {
+     "key": "A",
+     "text": "1 NGƯỜI",
+     "at": [
+      1,
+      "một,"
+     ]
+    },
+    {
+     "key": "B",
+     "text": "5 NGƯỜI",
+     "at": [
+      1,
+      "năm,"
+     ]
+    },
+    {
+     "key": "C",
+     "text": "100 NGƯỜI",
+     "at": [
+      1,
+      "trăm?"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 2,
+   "text": "A · B hay C?",
+   "clip": "pexels:37609510",
+   "veil": 0.65
+  },
+  {
+   "type": "hf_stamp",
+   "at": 3,
+   "kick": "",
+   "big": "5",
+   "stamps": [
+    {
+     "text": "NĂM NGƯỜI",
+     "at": [
+      3,
+      "người."
+     ],
+     "x": 200,
+     "y": 880,
+     "rot": -6
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "clip": "pexels:35228415",
+   "items": [
+    {
+     "text": "VƯỜN NAI",
+     "at": [
+      4,
+      "vườn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "năm vị tu sĩ · Isipatana",
+     "at": [
+      4,
+      "năm"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Chuyển Pháp Luân (diễn ý)",
+   "nodes": [
+    {
+     "text": "HƯỞNG THỤ",
+     "x": 0.27,
+     "y": 0.3,
+     "at": [
+      5,
+      "hưởng"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "ÉP XÁC",
+     "x": 0.73,
+     "y": 0.3,
+     "at": [
+      5,
+      "ép"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "ĐƯỜNG GIỮA",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      5,
+      "xác."
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "SN 56.11 · SUTTACENTRAL"
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "to": 1,
+   "suffix": " VIỆC VỪA SỨC",
+   "label": "HÔM NAY · ĐỪNG ÉP MÌNH",
+   "until": [
+    6,
+    "sức,"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "veil": 0.4,
+   "clip": "pexels:38351402",
+   "items": [
+    {
+     "text": "MẤY NGƯỜI?",
+     "at": [
+      7,
+      "bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "comment một con số",
+     "at": [
+      7,
+      "comment"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/sn56.11/en/sujato"
+ ],
+ "description": "Bài giảng đầu tiên của Đức Phật có mấy người nghe?\n\nNguồn: https://suttacentral.net/sn56.11/en/sujato"
+}

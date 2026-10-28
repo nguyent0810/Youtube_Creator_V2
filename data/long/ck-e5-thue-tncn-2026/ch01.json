@@ -1,0 +1,316 @@
+{
+ "title": "Từ lương gộp tới thu nhập tính thuế",
+ "lines": [
+  {
+   "t": "Con đường bắt đầu từ con số trên hợp đồng.",
+   "p": 0.8
+  },
+  {
+   "t": "Hai mươi lăm triệu, lương gộp.",
+   "p": 1.0
+  },
+  "Trạm đầu tiên là bảo hiểm bắt buộc.",
+  "Người lao động đóng tám phần trăm cho bảo hiểm xã hội.",
+  "Một phẩy năm phần trăm cho bảo hiểm y tế.",
+  {
+   "t": "Và một phần trăm cho bảo hiểm thất nghiệp.",
+   "p": 1.0
+  },
+  "Cộng lại là mười phẩy năm phần trăm. Hơn một phần mười.",
+  "Với hai mươi lăm triệu, khoảng hai triệu sáu trăm hai mươi lăm nghìn.",
+  "Phần này được trừ ra trước khi tính thuế.",
+  {
+   "t": "Còn hai mươi hai triệu ba trăm bảy mươi lăm nghìn.",
+   "p": 1.0
+  },
+  "Trạm thứ hai mới là trạm lớn nhất: giảm trừ gia cảnh.",
+  "Từ năm nay, mỗi người nộp thuế được trừ mười lăm triệu rưỡi một tháng cho bản thân.",
+  "Mỗi người phụ thuộc được trừ thêm sáu triệu hai. Tăng hơn bốn phần mười.",
+  {
+   "t": "Năm ngoái, hai con số ấy chỉ là mười một triệu, và bốn triệu bốn.",
+   "p": 1.0
+  },
+  {
+   "t": "Người phụ thuộc là ai mới được tính?",
+   "ask": 1
+  },
+  "Thường là con nhỏ, hoặc cha mẹ, vợ chồng không có thu nhập đáng kể.",
+  "Từ năm nay, ngưỡng thu nhập của người phụ thuộc được nâng từ một triệu lên ba triệu đồng một tháng.",
+  "Và phải đăng ký người phụ thuộc thì mới được trừ.",
+  {
+   "t": "Không đăng ký, phần giảm trừ ấy coi như không có. Mất trắng.",
+   "p": 1.0
+  },
+  "Và có một quy định ít người để ý.",
+  "Mỗi người phụ thuộc chỉ được tính giảm trừ một lần, vào một người nộp thuế.",
+  {
+   "t": "Con của anh Khang chỉ có thể được đăng ký cho anh, hoặc cho vợ anh, không cho cả hai.",
+   "p": 1.0
+  },
+  "Giả sử vợ anh lương mười lăm triệu, thấp hơn mức phải nộp thuế, và con được đăng ký cho chị.",
+  "Phần giảm trừ sáu triệu hai không giúp chị bớt đồng nào, vì chị vốn không phải nộp.",
+  "Còn thuế của anh Khang lên khoảng ba trăm bốn mươi ba nghìn một tháng.",
+  {
+   "t": "Mỗi năm chênh nhau khoảng ba triệu bảy.",
+   "p": 1.0
+  },
+  "Cùng một đứa trẻ, cùng một gia đình. Khác nhau ở một tờ đăng ký.",
+  "Anh Khang có một người phụ thuộc.",
+  "Mười lăm triệu rưỡi cộng sáu triệu hai, là hai mươi mốt triệu bảy.",
+  "Lấy hai mươi hai triệu ba trăm bảy mươi lăm, trừ hai mươi mốt triệu bảy.",
+  {
+   "t": "Còn lại sáu trăm bảy mươi lăm nghìn.",
+   "p": 1.0
+  },
+  "Đó là thu nhập tính thuế của anh.",
+  "Không phải hai mươi lăm triệu.",
+  "Chỉ hơn nửa triệu.",
+  "Thuế chỉ tính trên phần nhỏ ấy, qua một cái thang có năm bậc.",
+  "Và cái thang năm bậc này là thay đổi lớn thứ hai của năm nay."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHẶNG MỘT",
+   "title": "TỪ LƯƠNG GỘP\nTỚI THU NHẬP TÍNH THUẾ",
+   "sub": "BẢO HIỂM · GIẢM TRỪ GIA CẢNH",
+   "vid": "5466772",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Con"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "TRẠM 1 · BẢO HIỂM BẮT BUỘC (NGƯỜI LAO ĐỘNG)",
+   "rows": [
+    {
+     "k": "BẢO HIỂM XÃ HỘI",
+     "v": "8%",
+     "at": 3
+    },
+    {
+     "k": "BẢO HIỂM Y TẾ",
+     "v": "1,5%",
+     "at": 4
+    },
+    {
+     "k": "BẢO HIỂM THẤT NGHIỆP",
+     "v": "1%",
+     "at": 5
+    }
+   ],
+   "total": {
+    "k": "CỘNG",
+    "v": "10,5%",
+    "at": 6
+   }
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "from": 25,
+   "to": 22.375,
+   "suffix": " TRIỆU",
+   "until": [
+    9,
+    "Còn"
+   ],
+   "label": "SAU BẢO HIỂM (25 − 2,625)",
+   "sub": {
+    "text": "VÍ DỤ GIẢ ĐỊNH · ANH KHANG · 25 TRIỆU · 1 NGƯỜI PHỤ THUỘC",
+    "at": 8
+   }
+  },
+  {
+   "type": "bars",
+   "at": 10,
+   "title": "TRẠM 2 · GIẢM TRỪ GIA CẢNH (TRIỆU ĐỒNG/THÁNG)",
+   "unit": "2025 → 2026",
+   "items": [
+    {
+     "k": "BẢN THÂN · 2025",
+     "v": 11,
+     "lbl": "11",
+     "at": [
+      13,
+      "Năm"
+     ]
+    },
+    {
+     "k": "BẢN THÂN · 2026",
+     "v": 15.5,
+     "lbl": "15,5",
+     "at": [
+      11,
+      "mười"
+     ],
+     "acc": true
+    },
+    {
+     "k": "PHỤ THUỘC · 2025",
+     "v": 4.4,
+     "lbl": "4,4",
+     "at": [
+      13,
+      "bốn"
+     ]
+    },
+    {
+     "k": "PHỤ THUỘC · 2026",
+     "v": 6.2,
+     "lbl": "6,2",
+     "at": [
+      12,
+      "sáu"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "LUẬT THUẾ TNCN 109/2025/QH15 · ĐIỀU 10",
+    "v": "",
+    "at": 11
+   }
+  },
+  {
+   "type": "question",
+   "at": 14,
+   "text": "Người phụ thuộc là ai\nmới được tính?"
+  },
+  {
+   "type": "ledger",
+   "at": 15,
+   "title": "NGƯỜI PHỤ THUỘC",
+   "rows": [
+    {
+     "k": "THƯỜNG LÀ",
+     "v": "CON NHỎ · CHA MẸ · VỢ/CHỒNG",
+     "at": 15
+    },
+    {
+     "k": "NGƯỠNG THU NHẬP",
+     "v": "1 → 3 TRIỆU/THÁNG",
+     "at": [
+      16,
+      "một"
+     ]
+    },
+    {
+     "k": "PHẢI",
+     "v": "ĐĂNG KÝ MỚI ĐƯỢC TRỪ",
+     "at": 17
+    }
+   ]
+  },
+  {
+   "type": "source",
+   "at": 19,
+   "source": "LUẬT THUẾ TNCN 109/2025/QH15",
+   "ref": "ĐIỀU 10 · KHOẢN 3",
+   "snippet": "mỗi người phụ thuộc chỉ được tính giảm trừ [[một lần vào một người nộp thuế]]",
+   "hlAt": [
+    20,
+    "một"
+   ],
+   "seal": "ANH HOẶC VỢ · KHÔNG CẢ HAI",
+   "sealAt": 21
+  },
+  {
+   "type": "bars",
+   "at": 22,
+   "title": "THUẾ CỦA ANH KHANG MỖI THÁNG (NGHÌN ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "CON ĐĂNG KÝ CHO ANH",
+     "v": 33.75,
+     "lbl": "≈ 34",
+     "at": [
+      22,
+      "Giả"
+     ]
+    },
+    {
+     "k": "CON ĐĂNG KÝ CHO VỢ (KHÔNG PHẢI NỘP)",
+     "v": 343.75,
+     "lbl": "≈ 344",
+     "at": [
+      24,
+      "Còn"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 25,
+   "text": "≈ 3,7 TRIỆU/NĂM",
+   "sub": "KHÁC NHAU Ở MỘT TỜ ĐĂNG KÝ"
+  },
+  {
+   "type": "ledger",
+   "at": 27,
+   "title": "THU NHẬP TÍNH THUẾ CỦA ANH KHANG",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · ANH KHANG · 25 TRIỆU · 1 NGƯỜI PHỤ THUỘC",
+   "rows": [
+    {
+     "k": "SAU BẢO HIỂM",
+     "v": "22,375 TRIỆU",
+     "at": [
+      29,
+      "Lấy"
+     ]
+    },
+    {
+     "k": "GIẢM TRỪ 15,5 + 6,2",
+     "v": "− 21,7 TRIỆU",
+     "at": [
+      28,
+      "Mười"
+     ]
+    }
+   ],
+   "total": {
+    "k": "CÒN",
+    "v": "675 NGHÌN",
+    "at": [
+     30,
+     "Còn"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 31,
+   "items": [
+    {
+     "text": "KHÔNG PHẢI 25 TRIỆU",
+     "at": 32
+    },
+    {
+     "text": "CHỈ HƠN NỬA TRIỆU",
+     "at": 33,
+     "acc": true
+    },
+    {
+     "text": "qua một cái thang có năm bậc",
+     "at": 34,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHẶNG 01",
+  "t": "TỪ LƯƠNG GỘP TỚI THU NHẬP TÍNH THUẾ"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

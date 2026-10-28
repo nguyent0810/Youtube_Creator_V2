@@ -79,8 +79,10 @@ def test_ck_specs_follow_the_hard_rules(p):
     else:                       # kết ở câu chốt -- không câu hỏi cuối, không mời xem video dài trong lời đọc
         assert not s["lines"][-1].rstrip().endswith("?") and s["scenes"][-1]["type"] != "question"
         assert not re.search(r"video dài|trên kênh", " ".join(s["lines"]).lower())
-    assert s["sources"] and all(u.startswith("https://") for u in s["sources"])
-    assert 55 <= sum(len(x.split()) for x in s["lines"]) <= 135
+    # bảng tra chỉ là phép tính của kênh (ví dụ lãi kép giả định) thì có thể không có nguồn ngoài; có nguồn thì phải là https
+    assert (s["sources"] or s.get("profile") == "bang-tra") and all(u.startswith("https://") for u in s["sources"])
+    lo = 20 if s.get("profile") == "bang-tra" else 55   # bảng tra dừng hình 10–15 s (22/10/2026)
+    assert lo <= sum(len(x.split()) for x in s["lines"]) <= 135
 
 
 # ── 4. Vào kho (không upload) ─────────────────────────────────────────────

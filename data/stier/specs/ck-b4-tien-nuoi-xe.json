@@ -1,0 +1,183 @@
+{
+ "title": "Nuôi ô tô mỗi tháng tốn bao nhiêu? Năm đầu khoảng 4,7 triệu với xe 700 triệu (ví dụ giả định)",
+ "description": "Hai khoản bắt buộc: phí sử dụng đường bộ xe chở người dưới 10 chỗ đứng tên cá nhân 130.000 đ/tháng (NĐ 90/2023); bảo hiểm trách nhiệm dân sự bắt buộc xe dưới 6 chỗ không kinh doanh 437.000 đ/năm chưa VAT (NĐ 67/2023). VÍ DỤ GIẢ ĐỊNH cho xe 700 triệu, năm đầu: gửi xe 1,5 triệu/tháng; xăng 12.000 km/năm × 7 L/100 km × 24.000 đ/L ≈ 1,7 triệu/tháng; bảo dưỡng 6 triệu/năm = 0,5 triệu/tháng; bảo hiểm vật chất 1,5%/năm giá trị xe ≈ 0,9 triệu/tháng. Cộng ≈ 4,7 triệu/tháng, chưa tính mất giá; 4 triệu đi xe công nghệ cả tháng cũng là ví dụ giả định.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ hoặc ví dụ giả định, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (9 phút): https://youtu.be/Bx9w_a_1YOI (công khai từ 20:00 ngày 11/11)",
+ "tags": [
+  "chi phí nuôi ô tô",
+  "phí đường bộ",
+  "bảo hiểm ô tô bắt buộc",
+  "mua xe",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "bảy",
+  "nghìn",
+  "xăng",
+  "bốn",
+  "nhiều"
+ ],
+ "kicker": "QUYẾT ĐỊNH LỚN",
+ "sub": "MUA XE · TIỀN NUÔI",
+ "lines": [
+  "Nuôi ô tô mỗi tháng tốn bao nhiêu?",
+  "Hai khoản bắt buộc: phí đường bộ một trăm ba mươi nghìn một tháng.",
+  "Bảo hiểm trách nhiệm dân sự, bốn trăm ba mươi bảy nghìn một năm, chưa tính thuế.",
+  "Khoản lớn tuỳ cách dùng xe. Ví dụ giả định: gửi xe một triệu rưỡi.",
+  "Xăng khoảng một triệu bảy, bảo dưỡng năm trăm nghìn, bảo hiểm vật chất gần chín trăm nghìn.",
+  "Cộng hết, năm đầu khoảng bốn triệu bảy mỗi tháng.",
+  "Đã hơn bốn triệu, số tiền ví dụ cả tháng đi xe công nghệ."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NUÔI XE MỖI THÁNG",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "xe ví dụ 700 triệu · năm đầu",
+     "at": [
+      0,
+      "tốn"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:35585177",
+   "ms": 4,
+   "veil": 0.6
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "HAI KHOẢN BẮT BUỘC",
+   "rows": [
+    {
+     "k": "PHÍ ĐƯỜNG BỘ",
+     "v": "130 NGHÌN/THÁNG",
+     "at": [
+      1,
+      "phí"
+     ]
+    },
+    {
+     "k": "BẢO HIỂM TNDS (CHƯA VAT)",
+     "v": "437 NGHÌN/NĂM",
+     "at": [
+      2,
+      "bốn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "TUỲ CÁCH DÙNG XE · TRIỆU/THÁNG",
+   "nodes": [
+    {
+     "text": "GỬI XE 1,5",
+     "x": 0.5,
+     "y": 0.18,
+     "at": [
+      3,
+      "gửi"
+     ]
+    },
+    {
+     "text": "XĂNG ≈ 1,7",
+     "x": 0.5,
+     "y": 0.4,
+     "at": [
+      4,
+      "xăng"
+     ]
+    },
+    {
+     "text": "BẢO DƯỠNG 0,5",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      4,
+      "dưỡng"
+     ]
+    },
+    {
+     "text": "BH VẬT CHẤT ≈ 0,9",
+     "x": 0.5,
+     "y": 0.84,
+     "at": [
+      4,
+      "vật"
+     ]
+    }
+   ],
+   "note": "VÍ DỤ GIẢ ĐỊNH · 12.000 KM/NĂM · 7 L/100 KM · 24.000 Đ/L"
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 0,
+   "to": 4.7,
+   "suffix": " TRIỆU",
+   "label": "MỖI THÁNG · NĂM ĐẦU",
+   "sub": {
+    "text": "VÍ DỤ GIẢ ĐỊNH · CHƯA TÍNH MẤT GIÁ",
+    "at": [
+     5,
+     "bốn"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "HƠN 4 TRIỆU",
+     "at": [
+      6,
+      "hơn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "cả tháng xe công nghệ (ví dụ)",
+     "at": [
+      6,
+      "xe"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:40360857",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  }
+ ],
+ "sources": [
+  "https://pbgdpl.cantho.gov.vn/quy-dinh-ve-muc-thu-phi-su-dung-duong-bo-tu-ngay-01022024",
+  "https://luatvietnam.vn/giao-thong/bao-hiem-o-to-bat-buoc-bao-nhieu-tien-863-89239-article.html",
+  "https://youtu.be/Bx9w_a_1YOI"
+ ],
+ "theme": "ck",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "say": {},
+ "imgs": {},
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.3,
+   "3": 0.22,
+   "4": 0.3,
+   "5": 0.5
+  }
+ }
+}

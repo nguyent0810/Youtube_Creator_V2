@@ -1,0 +1,200 @@
+{
+ "title": "Chín mươi bốn phần trăm có thẻ, bốn mươi phần trăm vẫn tự trả",
+ "lines": [
+  "Cuối năm hai nghìn không trăm hai mươi bốn, chín mươi bốn phẩy hai chín phần trăm dân số đã có bảo hiểm y tế.",
+  "Nhưng năm hai nghìn không trăm hai mươi lăm, tiền túi vẫn khoảng bốn mươi phần trăm tổng chi y tế.",
+  {
+   "t": "Trên màn hình là hai cột số.",
+   "p": 1.0
+  },
+  "Đó là nghịch lý.",
+  "Nó nói một tỷ lệ trên thẻ, một khoản trên hóa đơn và một khoản gia đình phải xoay không phải lúc nào cũng là cùng một thứ.",
+  "Vậy có thẻ bảo hiểm y tế rồi, vì sao người Việt vẫn tự trả gần nửa tiền khám chữa bệnh?",
+  {
+   "t": "Phần ấy nằm ở đâu trên hóa đơn?",
+   "p": 1.0
+  },
+  "Video này không dùng hai tỷ lệ toàn hệ thống để đoán hóa đơn của riêng bạn.",
+  "Nó sẽ tách từng lớp tiền: phần trong phạm vi, phần đồng chi trả, phần ngoài phạm vi và chi phí đi cùng.",
+  "Cuối video, ta quay lại.",
+  "Lộ trình miễn chi phí khám chữa bệnh cơ bản đến năm hai nghìn không trăm ba mươi có thể chạm lớp nào, và lớp nào vẫn ở ngoài?"
+ ],
+ "scenes": [
+  {
+   "type": "counter",
+   "at": 0,
+   "from": 0,
+   "to": 94.29,
+   "suffix": "%",
+   "label": "DÂN SỐ CÓ BHYT · CUỐI 2024",
+   "srcnote": "NGUỒN: BHXH VIỆT NAM"
+  },
+  {
+   "type": "bars",
+   "at": 1,
+   "title": "CÓ THẺ VẪN TRẢ TIỀN TÚI",
+   "unit": "PHẦN TRĂM",
+   "srcnote": "NGUỒN: BHXH VIỆT NAM",
+   "items": [
+    {
+     "k": "BAO PHỦ BHYT · CUỐI 2024",
+     "v": 94.29,
+     "lbl": "94,29%",
+     "at": 1
+    },
+    {
+     "k": "TIỀN TÚI / TỔNG CHI Y TẾ · 2025",
+     "v": 40,
+     "lbl": "≈40%",
+     "at": [
+      1,
+      "bốn"
+     ],
+     "acc": true
+    }
+   ],
+   "calls": [
+    {
+     "i": 1,
+     "text": "VẪN ≈40%",
+     "at": [
+      2,
+      "hai"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "NGHỊCH LÝ",
+     "at": 3,
+     "acc": true
+    },
+    {
+     "text": "có thẻ, vẫn trả từ túi",
+     "at": 3,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "BA THỨ KHÔNG GIỐNG NHAU",
+   "srcnote": "VIDEO NÀY TÁCH TỪNG LỚP",
+   "rows": [
+    {
+     "k": "1",
+     "v": "TỶ LỆ TRÊN THẺ",
+     "at": 4
+    },
+    {
+     "k": "2",
+     "v": "KHOẢN TRÊN HÓA ĐƠN",
+     "at": [
+      4,
+      "hóa"
+     ]
+    },
+    {
+     "k": "3",
+     "v": "KHOẢN GIA ĐÌNH PHẢI XOAY",
+     "at": [
+      4,
+      "gia"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 5,
+   "text": "CÓ THẺ RỒI\nVÌ SAO VẪN TỰ TRẢ?"
+  },
+  {
+   "type": "broll",
+   "at": 6,
+   "vid": "36718656",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "NẰM Ở ĐÂU TRÊN HÓA ĐƠN?",
+     "at": 6,
+     "acc": true
+    },
+    {
+     "text": "tỷ lệ cả nước không đoán được hóa đơn của bạn",
+     "at": 7,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": [
+    8,
+    "từng"
+   ],
+   "title": "BỐN LỚP TIỀN CẦN TÁCH",
+   "items": [
+    {
+     "year": "LỚP 1",
+     "text": "trong phạm vi",
+     "at": [
+      8,
+      "từng"
+     ]
+    },
+    {
+     "year": "LỚP 2",
+     "text": "đồng chi trả",
+     "at": [
+      8,
+      "đồng"
+     ]
+    },
+    {
+     "year": "LỚP 3",
+     "text": "ngoài phạm vi",
+     "at": [
+      8,
+      "ngoài"
+     ]
+    },
+    {
+     "year": "LỚP 4",
+     "text": "chi phí đi cùng",
+     "at": [
+      8,
+      "cùng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 10,
+   "text": "LỘ TRÌNH 2030\nCHẠM ĐƯỢC LỚP NÀO?"
+  },
+  {
+   "type": "brand",
+   "at": [
+    10,
+    "vẫn"
+   ],
+   "sub": "TIỀN BẠC · GIẢI THÍCH BẰNG DỮ LIỆU"
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "MƯỜI HAI TRIỆU Ở ĐÂU"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.1
+ }
+}

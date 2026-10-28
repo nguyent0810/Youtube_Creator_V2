@@ -1,0 +1,461 @@
+{
+ "title": "Lớp thứ năm: mười triệu trên hóa đơn, mười hai triệu ngoài đời",
+ "lines": [
+  {
+   "t": "Đây là lúc thác chi phí hoàn thành.",
+   "p": 0.8
+  },
+  "Nhắc lại: Minh là ví dụ giả định với ba mươi triệu trong bảy ngày.",
+  "Trong đó, hai mươi lăm triệu được giả định là trong phạm vi hưởng.",
+  "Ở mức ví dụ tám mươi phần trăm, quỹ trả hai mươi triệu.",
+  {
+   "t": "Ba mươi trừ hai mươi còn mười triệu không do quỹ trả.",
+   "p": 1.0
+  },
+  "Mười triệu ấy có hai lớp.",
+  "Năm triệu là phần đồng chi trả của hai mươi lăm triệu trong phạm vi.",
+  "Năm triệu là phần ngoài phạm vi hoặc ngoài quyền lợi trong hóa đơn.",
+  "Vậy năm cộng năm bằng mười triệu Minh tự trả trên hóa đơn.",
+  {
+   "t": "Một phần ba hóa đơn vẫn rơi vào túi gia đình, dù đã có thẻ.",
+   "p": 1.0
+  },
+  "Tên của từng lớp rất quan trọng.",
+  "Rồi có hai triệu đi lại, ăn ở người nhà và ngày nghỉ làm.",
+  "Ví dụ giả định gọi đây là chi phí ngoài hóa đơn, không phải chi phí khám chữa bệnh bảo hiểm y tế.",
+  "Mười triệu trên hóa đơn cộng hai triệu ngoài hóa đơn thành mười hai triệu.",
+  "Mười hai trên ba mươi hai triệu là khoảng ba mươi tám phần trăm, rất gần con số bốn mươi phần trăm của cả nước ở đầu video.",
+  "Đó là lý do cold open không hỏi riêng “quỹ trả bao nhiêu”.",
+  "Nó hỏi sức ép tiền mặt.",
+  {
+   "t": "Nó hỏi gia đình còn phải xoay bao nhiêu.",
+   "p": 1.0
+  },
+  "Ở bình diện toàn hệ thống, tỷ lệ chi trực tiếp từ tiền túi cho dịch vụ y tế được nêu khoảng bốn mươi phần trăm năm hai nghìn không trăm hai mươi lăm.",
+  "Đầu những năm hai nghìn, con số khoảng sáu mươi phần trăm.",
+  "Hai tỷ lệ này là chỉ số toàn hệ thống.",
+  "Chúng không cho phép suy ra Minh sẽ trả bốn mươi phần trăm hay sáu mươi phần trăm.",
+  {
+   "t": "Mỗi lớp của ví dụ giả định vẫn cần được đọc riêng.",
+   "p": 1.0
+  },
+  "Không có tỷ lệ chung cho Minh.",
+  "Cơ sở khám chữa bệnh có trách nhiệm kiểm tra quyền lợi và mức hưởng trước khi kết thúc lượt khám chữa bệnh hoặc ra viện.",
+  "Nhưng video này không thể xem hồ sơ của Minh.",
+  "Nó chỉ đưa ra phép tính: năm cộng năm bằng mười, rồi mười cộng hai bằng mười hai triệu.",
+  "Đó là giới hạn của ví dụ.",
+  "Lớp cuối cùng nhìn rộng hơn: mọi người đang đóng vào quỹ thế nào, và lộ trình đến năm hai nghìn không trăm ba mươi đang nói điều gì."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "CHƯƠNG NĂM",
+   "title": "MƯỜI TRIỆU\nTRÊN HÓA ĐƠN",
+   "sub": "VÍ DỤ GIẢ ĐỊNH · 30 TRIỆU · 7 NGÀY",
+   "titleAt": 0,
+   "vid": "8381605",
+   "illus": "VIDEO MINH HỌA"
+  },
+  {
+   "type": "bars",
+   "at": 1,
+   "title": "NHẮC LẠI VÍ DỤ CỦA MINH",
+   "unit": "TRIỆU ĐỒNG",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · TRIỆU ĐỒNG",
+   "items": [
+    {
+     "k": "TỔNG 7 NGÀY",
+     "v": 30.0,
+     "lbl": "30",
+     "at": 1
+    },
+    {
+     "k": "TRONG PHẠM VI",
+     "v": 25.0,
+     "lbl": "25",
+     "at": 2,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "waterfall",
+   "at": 3,
+   "title": "PHẦN KHÔNG DO QUỸ TRẢ",
+   "range": "VÍ DỤ GIẢ ĐỊNH · TRIỆU ĐỒNG",
+   "unit": "TRIỆU",
+   "start": {
+    "k": "TỔNG",
+    "v": 30.0,
+    "at": 3
+   },
+   "steps": [
+    {
+     "k": "QUỸ TRẢ 80%",
+     "v": -20.0,
+     "at": [
+      3,
+      "quỹ"
+     ]
+    }
+   ],
+   "calls": [
+    {
+     "i": 2,
+     "text": "10 TRIỆU",
+     "at": [
+      4,
+      "mười"
+     ]
+    }
+   ],
+   "end": {
+    "k": "KHÔNG DO QUỸ",
+    "at": 4,
+    "tone": "down"
+   }
+  },
+  {
+   "type": "waterfall",
+   "at": 6,
+   "title": "10 TRIỆU CÓ HAI LỚP",
+   "range": "VÍ DỤ GIẢ ĐỊNH · TRIỆU ĐỒNG",
+   "unit": "TRIỆU",
+   "start": {
+    "k": "ĐỒNG CHI TRẢ",
+    "v": 5.0,
+    "at": 6
+   },
+   "steps": [
+    {
+     "k": "NGOÀI PHẠM VI",
+     "v": 5.0,
+     "at": 7
+    }
+   ],
+   "calls": [
+    {
+     "i": 2,
+     "text": "5 + 5 = 10",
+     "at": [
+      8,
+      "mười"
+     ]
+    }
+   ],
+   "end": {
+    "k": "TRÊN HÓA ĐƠN",
+    "at": 8,
+    "tone": "down"
+   }
+  },
+  {
+   "type": "dots",
+   "at": 9,
+   "title": "MỖI CHẤM 1 TRIỆU · HÓA ĐƠN 30",
+   "total": 30,
+   "cols": 10,
+   "groups": [
+    {
+     "from": 0,
+     "n": 20,
+     "cls": "ghost",
+     "label": "20 TRIỆU QUỸ TRẢ",
+     "at": 9
+    },
+    {
+     "from": 20,
+     "n": 10,
+     "cls": "red",
+     "label": "10 TRIỆU · MỘT PHẦN BA",
+     "at": [
+      9,
+      "phần"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "img": "ai05",
+   "at": 11,
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.45,
+    0.3
+   ],
+   "move": "out",
+   "kin": [
+    {
+     "text": "2 TRIỆU",
+     "at": 11,
+     "acc": true
+    },
+    {
+     "text": "đi lại · ăn ở người nhà · nghỉ làm",
+     "at": [
+      11,
+      "đi"
+     ],
+     "sm": true
+    },
+    {
+     "text": "ngoài hóa đơn",
+     "at": 12,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "waterfall",
+   "at": 13,
+   "title": "GÁNH NẶNG RỘNG HƠN",
+   "range": "VÍ DỤ GIẢ ĐỊNH · TRIỆU ĐỒNG",
+   "unit": "TRIỆU",
+   "start": {
+    "k": "TRÊN HÓA ĐƠN",
+    "v": 10.0,
+    "at": 13
+   },
+   "steps": [
+    {
+     "k": "NGOÀI HÓA ĐƠN",
+     "v": 2.0,
+     "at": [
+      13,
+      "hai"
+     ]
+    }
+   ],
+   "calls": [
+    {
+     "i": 2,
+     "text": "12 TRIỆU",
+     "at": [
+      13,
+      "thành"
+     ]
+    }
+   ],
+   "end": {
+    "k": "GÁNH NẶNG",
+    "at": [
+     13,
+     "thành"
+    ]
+   }
+  },
+  {
+   "type": "bars",
+   "at": 14,
+   "title": "GẦN CON SỐ ĐẦU VIDEO",
+   "unit": "PHẦN TRĂM",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · NGUỒN 40%: BHXH VIỆT NAM",
+   "items": [
+    {
+     "k": "VÍ DỤ: 12 / 32 TRIỆU",
+     "v": 37.5,
+     "lbl": "≈38%",
+     "at": 14,
+     "acc": true
+    },
+    {
+     "k": "CẢ NƯỚC · 2025",
+     "v": 40,
+     "lbl": "≈40%",
+     "at": [
+      14,
+      "bốn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 15,
+   "vid": "8122597",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "KHÔNG CHỈ “QUỸ TRẢ BAO NHIÊU”",
+     "at": 15,
+     "sm": true
+    },
+    {
+     "text": "SỨC ÉP TIỀN MẶT",
+     "at": 16,
+     "acc": true
+    },
+    {
+     "text": "gia đình còn xoay bao nhiêu",
+     "at": 17,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 18,
+   "title": "TIỀN TÚI / TỔNG CHI Y TẾ",
+   "unit": "PHẦN TRĂM",
+   "srcnote": "NGUỒN: BHXH VIỆT NAM",
+   "items": [
+    {
+     "k": "ĐẦU NHỮNG NĂM 2000",
+     "v": 60,
+     "lbl": "≈60%",
+     "at": 19
+    },
+    {
+     "k": "NĂM 2025",
+     "v": 40,
+     "lbl": "≈40%",
+     "at": 18,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 20,
+   "myth": "MINH TRẢ 40% HAY 60%",
+   "truth": "CHỈ SỐ TOÀN HỆ THỐNG",
+   "strikeAt": [
+    21,
+    "suy"
+   ],
+   "truthAt": [
+    21,
+    "trả"
+   ],
+   "mythLab": "ĐỪNG SUY RA"
+  },
+  {
+   "type": "ledger",
+   "at": 22,
+   "title": "MỖI LỚP ĐỌC RIÊNG",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · TRIỆU ĐỒNG",
+   "rows": [
+    {
+     "k": "ĐỒNG CHI TRẢ",
+     "v": "5 TRIỆU",
+     "at": 22
+    },
+    {
+     "k": "NGOÀI PHẠM VI",
+     "v": "5 TRIỆU",
+     "at": [
+      22,
+      "ví"
+     ]
+    },
+    {
+     "k": "NGOÀI HÓA ĐƠN",
+     "v": "2 TRIỆU",
+     "at": [
+      22,
+      "đọc"
+     ]
+    }
+   ],
+   "total": {
+    "k": "TỶ LỆ CHUNG CHO MINH",
+    "v": "KHÔNG CÓ",
+    "at": 23
+   }
+  },
+  {
+   "type": "timeline",
+   "at": 24,
+   "title": "TRÁCH NHIỆM CỦA CƠ SỞ KCB",
+   "items": [
+    {
+     "year": "KIỂM TRA",
+     "text": "quyền lợi, mức hưởng",
+     "at": 24
+    },
+    {
+     "year": "TRƯỚC KHI",
+     "text": "kết thúc lượt KCB hoặc ra viện",
+     "at": [
+      24,
+      "trước"
+     ]
+    },
+    {
+     "year": "VIDEO NÀY",
+     "text": "không xem được hồ sơ của Minh",
+     "at": 25
+    }
+   ],
+   "srcnote": "NGUỒN: BHXH VIỆT NAM"
+  },
+  {
+   "type": "stack",
+   "at": 26,
+   "title": "5 + 5 = 10 · 10 + 2 = 12",
+   "range": "VÍ DỤ GIẢ ĐỊNH · TRIỆU ĐỒNG",
+   "unit": "TRIỆU",
+   "keys": [
+    {
+     "k": "ĐỒNG CHI TRẢ"
+    },
+    {
+     "k": "NGOÀI PHẠM VI"
+    },
+    {
+     "k": "NGOÀI HÓA ĐƠN"
+    }
+   ],
+   "groups": [
+    {
+     "k": "TRÊN HÓA ĐƠN",
+     "vals": [
+      5.0,
+      5.0,
+      0
+     ],
+     "at": 26
+    },
+    {
+     "k": "GÁNH NẶNG",
+     "vals": [
+      5.0,
+      5.0,
+      2.0
+     ],
+     "at": [
+      26,
+      "rồi"
+     ]
+    }
+   ],
+   "calls": [
+    {
+     "i": 1,
+     "text": "12 TRIỆU",
+     "at": [
+      26,
+      "triệu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 28,
+   "text": "MỌI NGƯỜI ĐÓNG QUỸ RA SAO?\nLỘ TRÌNH 2030 NÓI GÌ?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "MƯỜI TRIỆU TRÊN HÓA ĐƠN"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

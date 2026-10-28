@@ -1,0 +1,326 @@
+{
+ "title": "Lớp thứ tư: điều kiện đi cùng tỷ lệ",
+ "lines": [
+  {
+   "t": "Biểu đồ của Minh vẫn giữ ba mươi triệu ở đầu và hai mươi triệu quỹ ở giữa.",
+   "p": 0.8
+  },
+  "Nhưng trên cột hai mươi triệu, màn hình thêm một nhãn: trong phạm vi, đúng quy định.",
+  "Nhãn đó không thay đổi số của ví dụ giả định.",
+  "Nó nhắc rằng số tiền chỉ có nghĩa sau khi điều kiện được xác định.",
+  "Đây không phải lời khuyên về nơi điều trị.",
+  {
+   "t": "Đây là cách đọc chữ trên biểu đồ.",
+   "p": 1.0
+  },
+  "Điều kiện phải đi cùng tỷ lệ.",
+  "Theo quy định được giới thiệu cho luật mới, khám chữa bệnh tại cơ sở cấp ban đầu trong toàn quốc được hưởng một trăm phần trăm mức hưởng.",
+  "Điều trị nội trú tại cơ sở cấp cơ bản trong toàn quốc cũng được hưởng một trăm phần trăm mức hưởng.",
+  "Hai cụm “một trăm phần trăm” này vẫn gắn với mức hưởng và phạm vi quyền lợi.",
+  {
+   "t": "Chúng không tự biến phần đi lại hay thu nhập nghỉ làm thành chi phí quỹ thanh toán.",
+   "p": 1.0
+  },
+  "Khoản ngoài hóa đơn vẫn đứng riêng.",
+  "Từ ngày một tháng bảy năm hai nghìn không trăm hai mươi sáu, một số trường hợp ngoại trú có quy tắc mới.",
+  "Tại cơ sở cấp cơ bản, theo điều kiện luật định, quỹ thanh toán năm mươi phần trăm mức hưởng.",
+  "Năm mươi phần trăm ở đây là năm mươi phần trăm mức hưởng, không phải một nửa hóa đơn.",
+  "Màn hình đặt ba cột: một trăm, một trăm và năm mươi phần trăm mức hưởng.",
+  "Mỗi cột có nhãn điều kiện riêng.",
+  {
+   "t": "Không cột nào được phép đứng một mình rồi đại diện cho cả ba mươi triệu.",
+   "p": 1.0
+  },
+  "Một số bệnh hiếm, hiểm nghèo, cần phẫu thuật hoặc kỹ thuật cao thuộc danh mục có quy tắc riêng.",
+  "Danh mục được nêu có sáu mươi hai bệnh hoặc nhóm bệnh.",
+  "Chi tiết này cho thấy vì sao video không thể thay một hồ sơ cụ thể bằng một câu chung chung.",
+  "Một ví dụ không thể thay hồ sơ.",
+  "Ví dụ giả định của Minh chỉ giữ đường thác chi phí: hai mươi lăm triệu trong phạm vi, hai mươi triệu quỹ trả.",
+  "Sau khi gắn đúng nhãn, ta mới bóc lớp tiền anh thực sự thấy trên hóa đơn."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "CHƯƠNG BỐN",
+   "title": "ĐIỀU KIỆN\nĐI CÙNG TỶ LỆ",
+   "sub": "NHÃN: TRONG PHẠM VI · ĐÚNG QUY ĐỊNH",
+   "titleAt": 0,
+   "bg": "ai03"
+  },
+  {
+   "type": "waterfall",
+   "at": 1,
+   "title": "NHÃN MỚI TRÊN CỘT 20",
+   "range": "VÍ DỤ GIẢ ĐỊNH · TRIỆU ĐỒNG",
+   "unit": "TRIỆU",
+   "start": {
+    "k": "TỔNG HÓA ĐƠN",
+    "v": 30.0,
+    "at": 1
+   },
+   "steps": [
+    {
+     "k": "QUỸ TRẢ",
+     "v": -20.0,
+     "at": [
+      1,
+      "cột"
+     ]
+    }
+   ],
+   "calls": [
+    {
+     "i": 1,
+     "text": "ĐÚNG QUY ĐỊNH",
+     "at": [
+      1,
+      "phạm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "img": "ai04",
+   "at": 2,
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.45,
+    0.45
+   ],
+   "zoom": {
+    "x": 0.45,
+    "y": 0.55,
+    "z": 1.5,
+    "at": 3,
+    "d": 1.2
+   },
+   "kin": [
+    {
+     "text": "ĐIỀU KIỆN TRƯỚC, SỐ SAU",
+     "at": 3,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "KHÔNG PHẢI LỜI KHUYÊN",
+     "at": 4,
+     "acc": true
+    },
+    {
+     "text": "chỉ là cách đọc chữ trên biểu đồ",
+     "at": 5,
+     "sm": true
+    },
+    {
+     "text": "điều kiện đi cùng tỷ lệ",
+     "at": 6,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 7,
+   "title": "100% Ở HAI NƠI",
+   "unit": "% MỨC HƯỞNG",
+   "srcnote": "NGUỒN: LUẬT 51/2024/QH15 · BHXH VIỆT NAM",
+   "items": [
+    {
+     "k": "KCB CẤP BAN ĐẦU · TOÀN QUỐC",
+     "v": 100,
+     "lbl": "100%",
+     "at": 7,
+     "acc": true
+    },
+    {
+     "k": "NỘI TRÚ CẤP CƠ BẢN",
+     "v": 100,
+     "lbl": "100%",
+     "at": 8,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 9,
+   "myth": "100% = QUỸ TRẢ CẢ ĐI LẠI",
+   "truth": "NGOÀI HÓA ĐƠN VẪN ĐỨNG RIÊNG",
+   "strikeAt": 10,
+   "truthAt": 11
+  },
+  {
+   "type": "timeline",
+   "at": 12,
+   "title": "NGOẠI TRÚ TỪ 01/07/2026",
+   "items": [
+    {
+     "year": "01/07/2026",
+     "text": "quy tắc ngoại trú mới",
+     "at": 12
+    },
+    {
+     "year": "CẤP CƠ BẢN",
+     "text": "quỹ trả 50% mức hưởng",
+     "at": 13
+    },
+    {
+     "year": "50%",
+     "text": "của mức hưởng, không phải nửa hóa đơn",
+     "at": 14
+    }
+   ],
+   "srcnote": "NGUỒN: BHXH VIỆT NAM"
+  },
+  {
+   "type": "bars",
+   "at": 15,
+   "title": "BA CỘT · BA NHÃN",
+   "unit": "% MỨC HƯỞNG",
+   "srcnote": "NGUỒN: BHXH VIỆT NAM",
+   "items": [
+    {
+     "k": "CẤP BAN ĐẦU",
+     "v": 100,
+     "lbl": "100%",
+     "at": 15
+    },
+    {
+     "k": "NỘI TRÚ CẤP CƠ BẢN",
+     "v": 100,
+     "lbl": "100%",
+     "at": [
+      15,
+      "một",
+      1
+     ]
+    },
+    {
+     "k": "NGOẠI TRÚ CẤP CƠ BẢN",
+     "v": 50,
+     "lbl": "50%",
+     "at": [
+      15,
+      "năm"
+     ],
+     "acc": true
+    }
+   ],
+   "calls": [
+    {
+     "i": 2,
+     "text": "TỪ 01/07/2026",
+     "at": 16
+    },
+    {
+     "i": 0,
+     "text": "≠ CẢ 30 TRIỆU",
+     "at": 17
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 18,
+   "title": "DANH MỤC CÓ QUY TẮC RIÊNG",
+   "srcnote": "NGUỒN: BHXH VIỆT NAM",
+   "rows": [
+    {
+     "k": "1",
+     "v": "BỆNH HIẾM",
+     "at": 18
+    },
+    {
+     "k": "2",
+     "v": "HIỂM NGHÈO",
+     "at": [
+      18,
+      "hiểm"
+     ]
+    },
+    {
+     "k": "3",
+     "v": "CẦN PHẪU THUẬT, KỸ THUẬT CAO",
+     "at": [
+      18,
+      "phẫu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 19,
+   "from": 0,
+   "to": 62,
+   "suffix": " BỆNH",
+   "label": "BỆNH HOẶC NHÓM BỆNH TRONG DANH MỤC",
+   "srcnote": "NGUỒN: BHXH VIỆT NAM"
+  },
+  {
+   "type": "broll",
+   "at": 20,
+   "vid": "8381605",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "HỒ SƠ CỤ THỂ",
+     "at": 20,
+     "acc": true
+    },
+    {
+     "text": "một ví dụ không thay được",
+     "at": 21,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 22,
+   "title": "ĐƯỜNG THÁC GIỮ NGUYÊN",
+   "unit": "TRIỆU ĐỒNG",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · TRIỆU ĐỒNG",
+   "items": [
+    {
+     "k": "TRONG PHẠM VI",
+     "v": 25.0,
+     "lbl": "25",
+     "at": 22
+    },
+    {
+     "k": "QUỸ TRẢ",
+     "v": 20.0,
+     "lbl": "20",
+     "at": [
+      22,
+      "quỹ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 23,
+   "text": "TRÊN HÓA ĐƠN\nANH THỰC SỰ THẤY GÌ?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "ĐIỀU KIỆN ĐI CÙNG TỶ LỆ"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.1
+ }
+}

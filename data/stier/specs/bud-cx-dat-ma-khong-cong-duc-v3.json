@@ -1,0 +1,244 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-cx-dat-ma-khong-cong-duc",
+ "format": "chuyen-xua",
+ "hook_type": "noi-dau",
+ "open_shot": "cung-dien",
+ "voice": "Thiền Tâm Đức",
+ "music": "perspectives.mp3",
+ "music_gain": 0.16,
+ "gap": 0.1,
+ "series": "Chuyện xưa · Tập 9",
+ "title": "Xây trăm ngôi chùa mà không có công đức?",
+ "kicker": "CHUYỆN XƯA · TẬP 9",
+ "sub": "TỔ ĐẠT MA · LƯƠNG VŨ ĐẾ",
+ "acc": [
+  "công",
+  "đức"
+ ],
+ "lines": [
+  "Xây trăm ngôi chùa mà không có công đức?",
+  "Truyện Thiền kể: vua Lương Vũ Đế mời Tổ Đạt Ma vào cung.",
+  "Vua khoe: trẫm xây chùa, in sách, độ biết bao người xuất gia.",
+  "Rồi hỏi: trẫm được bao nhiêu công đức?",
+  "Cả triều đình chờ một lời khen.",
+  "Nhưng Tổ đáp gọn: không có công đức.",
+  "Vua sững người. Vì sao lại như vậy?",
+  "Theo nhà Thiền, làm thiện để khoe hay để đổi phước. Tâm vẫn chưa sáng.",
+  "Việc tốt thật sự không cần ai đếm.",
+  "Tuần này thử làm một việc tốt, và không kể với ai.",
+  "Việc tốt không ai biết có công đức không? Tag người hay giúp âm thầm."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:39692405",
+   "items": [
+    {
+     "text": "KHÔNG CÓ CÔNG ĐỨC?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "dù xây trăm ngôi chùa",
+     "at": [
+      0,
+      "trăm"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "VUA KHOE",
+   "cards": [
+    {
+     "k": "1",
+     "v": "XÂY CHÙA",
+     "at": [
+      2,
+      "xây"
+     ]
+    },
+    {
+     "k": "2",
+     "v": "IN SÁCH",
+     "at": [
+      2,
+      "in"
+     ]
+    },
+    {
+     "k": "3",
+     "v": "ĐỘ TĂNG",
+     "at": [
+      2,
+      "độ"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "veil": 0.4,
+   "clip": "pexels:29773517",
+   "items": [
+    {
+     "text": "BAO NHIÊU CÔNG ĐỨC?",
+     "at": [
+      3,
+      "bao"
+     ],
+     "acc": true
+    },
+    {
+     "text": "cả triều chờ một lời khen",
+     "at": [
+      4,
+      "cả"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "to": 0,
+   "suffix": " CÔNG ĐỨC",
+   "label": "TỔ ĐÁP GỌN",
+   "until": [
+    5,
+    "đức."
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "veil": 0.4,
+   "clip": "pexels:20488159",
+   "items": [
+    {
+     "text": "VÌ SAO?",
+     "at": [
+      6,
+      "vì"
+     ],
+     "acc": true
+    },
+    {
+     "text": "vua sững người",
+     "at": [
+      6,
+      "vua"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 7,
+   "title": "Nhà Thiền giải thích",
+   "nodes": [
+    {
+     "text": "LÀM ĐỂ KHOE · ĐỂ ĐỔI",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      7,
+      "khoe"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "TÂM CHƯA SÁNG",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      7,
+      "tâm"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "BODHIDHARMA · WIKIPEDIA"
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "text": "VIỆC TỐT THẬT\nKHÔNG CẦN ĐẾM",
+   "fx": "zoom",
+   "sub": "KHÔNG CẦN AI BIẾT"
+  },
+  {
+   "type": "hf_list_build",
+   "at": 9,
+   "title": "TUẦN NÀY",
+   "items": [
+    {
+     "key": "1",
+     "text": "1 VIỆC TỐT",
+     "at": [
+      9,
+      "việc"
+     ]
+    },
+    {
+     "key": "2",
+     "text": "KHÔNG KỂ AI",
+     "at": [
+      9,
+      "kể"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "veil": 0.4,
+   "clip": "pexels:38124837",
+   "items": [
+    {
+     "text": "CÓ CÔNG ĐỨC KHÔNG?",
+     "at": [
+      10,
+      "việc"
+     ],
+     "acc": true
+    },
+    {
+     "text": "tag người hay giúp âm thầm",
+     "at": [
+      10,
+      "tag"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Bodhidharma"
+ ],
+ "description": "Xây trăm ngôi chùa mà không có công đức?\n\nNguồn: https://en.wikipedia.org/wiki/Bodhidharma"
+}

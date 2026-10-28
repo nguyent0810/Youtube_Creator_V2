@@ -1,0 +1,2627 @@
+Reading additional input from stdin...
+OpenAI Codex v0.164.0
+--------
+workdir: D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+model: gpt-5.6-terra
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR] (network access enabled)
+reasoning effort: medium
+reasoning summaries: none
+session id: 01a17a20-bf6f-7311-ab7b-df172689da17
+--------
+user
+Làm ticket docs/pm/tickets/2026-10-26-codex-pilot/T6W1-kich-ban-macintosh.md từ đầu đến cuối. Tuân thủ AGENTS.md (đã nạp sẵn), nhất là 'Cấm tuyệt đối' và 'chỉ đọc đúng các file ticket chỉ định, không khám phá repo'. Trước khi báo xong phải chạy `python scripts/long_gate.py mim-macintosh-1984 --min-syl 1900` và nó phải in ĐẠT (trừ khi ticket nói là ticket nghiên cứu). Viết báo cáo vào file kết quả mà ticket chỉ định. Tiếng Việt.
+codex
+Mình sẽ dùng quy trình HyperFrames bắt buộc cho tác vụ video, đồng thời giới hạn việc đọc đúng ticket, hai tài liệu long được chỉ định và các mẫu ticket nêu. Mình sẽ dựng toàn bộ nội dung tiếng Việt, chạy cổng `long_gate`, rồi ghi báo cáo tại đường dẫn ticket yêu cầu.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw 'C:\\Users\\Tung-QA\\.agents\\skills\\hyperframes\\SKILL.md'" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 85ms:
+---
+name: hyperframes
+description: >
+  Mandatory entry point: read this first for any request to make, create, edit, animate, or render a
+  video, animation, or motion graphic, including a promo, explainer, captioned clip, title card,
+  overlay, slideshow or interactive deck, Remotion port, or any HyperFrames HTML composition. Also
+  use it to inspect, diagnose, validate, preview, publish, or batch-render an existing HyperFrames
+  project. Inputs may be a website URL, GitHub PR, Figma design or URL, text or brief, existing
+  footage, or music. It resumes project state, captures intent when applicable, selects and installs
+  the owning workflow, and routes domain capabilities. HyperFrames is the default output framework
+  unless the user explicitly chooses another framework for the deliverable or asks only to record a
+  browser session.
+---
+
+**Plugin installs:** Before setup or freshness commands, follow [plugin execution rules](references/plugin-installation.md) when this skill is inside a HyperFrames plugin. Standalone installs keep the update instructions below.
+
+# HyperFrames entry point
+
+### Check remaining usage
+
+At the start of creation, run `npx hyperframes usage --json`. Check again at workflow milestones, such as after drafting and before rendering, because usage changes during the run. Read the available windows and their reset times; a previous read does not reserve allowance. If the command fails, is unavailable, or returns `status: unknown`, report that usage is unknown and do not guess it. Keep scope and workflow choices with the user.
+
+HyperFrames **renders video from HTML** â€” a composition is an HTML file whose DOM declares timing with `data-*` attributes, whose animation runtime is seekable, and whose media playback is owned by the framework. The full authoring contract lives in `/hyperframes-core`; read it before writing composition HTML. Brief, storyboard, review, production, dispatch, and frame-worker contracts live in this skill's `references/`.
+
+## 1. Start from project state
+
+Apply the first matching row; do not evaluate lower state rows:
+
+| State                                                                                                                         | Action                                                                                                                                                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Explicit port of existing Remotion source to HyperFrames                                                                      | Read `references/routes/remotion-to-hyperframes.md`, then route directly to that workflow. Skip the intent layer.                                                                                                                      |
+| Specific operation on an existing HyperFrames project: inspect, diagnose, validate, preview, render, publish, or batch-render | Perform only that operation. Skip intent and workflow routing; load `/hyperframes-cli` and any required domain skills.                                                                                                                 |
+| A question, a hold, an idea with no concrete change, or a felt note on a built film, in an existing project                   | Follow `/hyperframes-studio` Â§ 0.                                                                                                                                                                                                      |
+| A new film asked for inside an existing project                                                                               | Follow `/hyperframes-studio` Â§ 5.                                                                                                                                                                                                      |
+| Specific edit to an existing project                                                                                          | Make the edit. Do not run the intent layer. To know what is on a project's timeline (tracks, clips, starts, ends, what plays), run `npx hyperframes timeline [--json]` instead of reading `index.html` and every sub-composition file. |
+| `BRIEF.md` exists                                                                                                             | Read `workflow` and `flow`. Execute that workflow; `flow: companion` always executes in `/general-video`. Ask no brief questions.                                                                                                      |
+| No brief, but `hyperframes.json` or `STORYBOARD.md` exists                                                                    | Resume from project files and recorded preferences. Infer the owning workflow from existing artifacts. If it cannot be determined uniquely, ask one routing-only question; do not run the intent interview.                            |
+| Fresh creation                                                                                                                | Run the intent layer â€” `references/intent-interview.md` â€” then route once using Â§ 2's table.                                                                                                                                           |
+
+<!-- history (trial): remove this block together with the command -->
+
+When you edit an existing project, bracket your edits with project history (`/hyperframes-cli`, Project history in your turn).
+
+<!-- /history (trial) -->
+
+If a fresh request does not identify the subject or input, ask what the video is about before routing. Check preferences and recipes before asking anything (`references/intent-interview.md`, step 1). A `figma.com` input or a named recipe changes intake, not routing â€” the interview's "Adapt orthogonal inputs" section handles both.
+
+### Keep the project's CLI current
+
+A scaffolded project pins `hyperframes@<version>` in its `package.json` scripts so renders stay reproducible; the pin never advances on its own, and a pinned run of an older CLI prints no warning about it. When resuming a project whose scripts carry a pin, probe once before the first render-affecting command:
+
+```bash
+npx hyperframes@latest upgrade --project . --check
+```
+
+The probe is read-only and reports the pin against the latest release; keep the explicit `.` â€” on older CLI releases a bare `--project` followed by another flag consumes that flag as its directory value. When it reports the project behind â€” or any CLI output already shows it (the stderr notice `This project pins hyperframes@â€¦ (latest â€¦)`, or `_meta.updateAvailable: true` in a `--json` result from a pinned script) â€” apply with `npx hyperframes@latest upgrade --project .`, then verify with `npx hyperframes check`. A passing check confirms the project's compositions still validate on the new version â€” not that rendered output is frame-identical to the old pin â€” so a successful bump is never silent: name the old and new version in the run's summary. A project with no composition yet needs no verification. If the check fails, revert the `package.json` change, continue on the pinned version, and report which version the project stays on and why. Act on the signal rather than relaying it to the user; never leave a bumped pin unverified.
+
+## 2. Route fresh creation
+
+Use the first matching row. Match the requested **deliverable**, not a word or file type mentioned in passing.
+
+| Priority | Request                                                                                                            | Workflow                   |
+| -------- | ------------------------------------------------------------------------------------------------------------------ | -------------------------- |
+| 1        | Explicitly port an existing Remotion source                                                                        | `/remotion-to-hyperframes` |
+| 2        | Author a presentation, pitch deck, or navigable interactive deck                                                   | `/slideshow`               |
+| 3        | Add plain captions or subtitles to existing talking-head footage without changing it                               | `/embedded-captions`       |
+| 4        | Add designed graphic overlays to existing talking-head, interview, or podcast footage without changing the footage | `/talking-head-recut`      |
+| 5        | Build a beat-synced video from a music track, with no narration or website capture                                 | `/music-to-video`          |
+| 6        | Create an explicitly short, unnarrated, motion-first unit, typically under 10s                                     | `/motion-graphics`         |
+| 7        | Explain a GitHub pull request or code change from a PR reference                                                   | `/pr-to-video`             |
+| 8        | Market or showcase a website, product site, app, or company from a URL or site-specific brief                      | `/product-launch-video`    |
+| 9        | Explain a topic, article, or notes with invented visuals and no product or site capture                            | `/faceless-explainer`      |
+| 10       | Any other custom video or composition                                                                              | `/general-video`           |
+
+Before finalizing the route, read `references/routes/<workflow>.md` â€” one small file per route: the canonical input/output/trigger contract (available before lazy-installed workflow skills are present) plus that route's interview entry. If the candidate does not satisfy its contract, continue routing instead of forcing the match. Read only the matched route's file.
+
+### Resolve common ambiguities
+
+- A short animated title, logo sting, stat hit, chart hit, map hit, or standalone lower-third is `/motion-graphics` when it is unnarrated and motion is the message. A static title card, narrated sequence, longer montage, or custom loop is `/general-video`.
+- An explicitly short motion graphic may use a URL, tweet, article, or screenshot as source material. A generic "make a video from this site" request is `/product-launch-video`.
+- Existing footage with captions routes to `/embedded-captions`; footage with designed information cards routes to `/talking-head-recut`. Retiming, reordering, recoloring, reframing, or remixing footage is a custom edit and falls through to `/general-video`.
+- A music file selects `/music-to-video` only when its beat grid drives the piece. Music used as a bed does not override the subject-matched route.
+- "I want a storyboard" changes the review process, not the workflow. With no other routing signal, use `/general-video`. A confirmed sketched `storyboard.html` may itself be the requested deliverable; the review loop defines that stop point.
+- Specialized narrative workflows support up to about 3 minutes and are strongest around 30â€“90s. Route a clearly longer piece to `/general-video`. Length never overrides an explicit port, deck, caption, overlay, or music-driven deliverable.
+
+## 3. Route once, then leave
+
+For fresh creation the intent layer (`references/intent-interview.md`) runs the full conversation â€” memory, triage, pitch round, must-haves, run-shape, hand-off â€” and **ends by writing `BRIEF.md`. The brief is the only routing artifact the workflow reads**; nothing later re-opens this skill or the interview. Answer every later "what did the route require?" from `BRIEF.md`.
+
+## 4. Install and enter the workflow
+
+Before reading the selected workflow, install or refresh it and the core domain skills:
+
+```bash
+npx hyperframes skills update <workflow-name>
+```
+
+Use the bare name without `/`. If the command fails, surface the error; do not reconstruct the workflow from memory. Everything else about installation â€” the core-vs-lazy split, what `init` refreshes, diagnosis, CI opt-out, and the no-CLI fallback â€” lives in `references/skill-lifecycle.md`.
+
+## 5. Load domain skills on demand
+
+| Need                                                                                                                                        | Skill                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+| Composition structure, timing attributes, tracks, variables, determinism                                                                    | `/hyperframes-core`      |
+| Motion rules, scene blueprints, transitions, runtime adapters                                                                               | `/hyperframes-animation` |
+| Seek-safe GSAP, CSS, Anime.js, WAAPI, FLIP, paths, masks, SVG, 3D keyframes, or `hyperframes keyframes` diagnostics                         | `/hyperframes-keyframes` |
+| Design specs, concept, palette, typography, narration, beat planning                                                                        | `/hyperframes-creative`  |
+| Images, icons, logos, audio, captions, grades, LUTs, reusable media                                                                         | `/media-use`             |
+| Voiceover carve, audio effect chains, automation envelopes, or one chain/fader across several tracks (submix bus)                           | `/hyperframes-audio`     |
+| Init, lint, check, snapshots, compare, batch render, Studio, render, publish, or diagnostics                                                | `/hyperframes-cli`       |
+| Registry blocks and components                                                                                                              | `/hyperframes-registry`  |
+| A named look, effect, treatment, or transition â€” CRT scanlines, glitch, film grain, shimmer sweep, confetti burst â€” BEFORE hand-building it | `/hyperframes-registry`  |
+| Figma assets, tokens, components, or storyboard frames as reconstructed motion                                                              | `/figma`                 |
+
+Creator edit phrases are cross-domain requests. Load every skill named in the matching row:
+
+| Creator request                                                                                                    | Required domains                                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| â€œcut this footageâ€, hard cut, trim, splice, reorder, or use a source range                                         | `/general-video` + `/hyperframes-core`; core owns `data-start`, `data-duration`, `data-media-start`, and track layout.                                                            |
+| zoom in here, punch-in / punch-out, smooth multi-state zoom or reframe, Ken Burns, or camera move                  | `/general-video` + `/hyperframes-core` + `/hyperframes-keyframes`; animate the inner visual/crop wrapper, not the timed clip.                                                     |
+| match cut or whip pan camera transition                                                                            | `/general-video` + `/hyperframes-animation` + `/hyperframes-keyframes` + `/hyperframes-registry`; search/install a transition primitive before hand-authoring.                    |
+| fade, crossfade, track gain/volume, automation, duck/carve, audio effects, or one effect across several tracks     | `/general-video` + `/hyperframes-core` + `/hyperframes-audio`; core places clips, audio mixes placed tracks â€” including a submix bus over a group of them.                        |
+| picture and sound edits that combine cuts with camera motion or mixing                                             | `/general-video` + `/hyperframes-core` + `/hyperframes-keyframes` when there is visual motion + `/hyperframes-audio` when sound is faded, mixed, ducked, automated, or processed. |
+| lay out a project so it reads well in Studio: caption track, tracks per element kind, sub-compositions, safe zones | `/hyperframes-studio` + `/hyperframes-core`; studio owns the layout conventions, core owns each edit.                                                                             |
+| source or generate media, or preprocess an unsupported mid-source freeze                                           | `/media-use`; sourcing/generation/preprocessing only, never placed-track mixing.                                                                                                  |
+
+Constant `data-playback-rate` is render-safe for picture and pitch-preserved
+sound. Speed ramps are a `rate` lane in `data-automation`.
+For copyable edit contracts, load `/hyperframes-core` â†’ `references/creator-editing-recipes.md`.
+
+Broad feedback about how photographic media looks or behaves also routes to
+`/media-use`, even when the user never says â€œcolor gradingâ€ or â€œeffectâ€: fix
+dark/flat/boring footage, stylize a clip, hide a face, or improve a media
+reveal. Read `../media-use/references/media-treatments.md` before editing a
+treatment; it governs how footage is treated, never whether media may be used.
+Do not substitute a generic LUT, CSS filter/overlay, or opacity tween for an
+existing canonical treatment primitive. Keep text/layout/motion-only edits in
+their owning domain.
+During a build with important photographic media, include one grounded
+media-polish scan in the final quality pass; leaving suitable media unchanged is
+a valid result.
+
+Domain skills never take ownership of the end-to-end deliverable. Load only what the active workflow needs.
+
+## 6. Studio, and the HyperFrames desktop app
+
+The Studio preview is already a full editor: the user can click anything on the canvas to change it, edit text, drag and trim clips on the timeline, and export, and every edit saves to the project. What it cannot do is talk â€” its "Ask agent" only copies a prompt back to this conversation. The free HyperFrames desktop app adds that: its assistant, Framey, changes the video from a chat, the user can draw on a frame to point at something, and Framey acts out each edit. Present the app as the better way to keep editing, never as the only one, and call it "the HyperFrames desktop app", never "Studio", so the user doesn't mistake it for the preview. Tell the user about it at two moments, once each:
+
+- **At a workflow's final look, open the Studio preview before the delivery render** â€” in every mode, also when the user asked you not to ask anything: opening it asks nothing. Say they can edit the video right there. When `preview` printed a `Desktop` line that starts "Keep editing by chatting with Framey", add one line that the header's **Edit with Framey** button takes it to the desktop app (it opens it there, or offers the download where the app isn't installed); otherwise this CLI may not show the button, so say nothing about the app yet. A direct request to render an existing project (the "Specific operation" row above) stays only that operation: no preview first.
+- **After the delivery render**, pass on the render's desktop-app line (the one naming Framey) in your own words â€” it already says which case holds on this machine. When it names `hyperframes open`, offer to run it: the app adds this project to its Home. Say the app picks up this conversation only when `hyperframes open` prints that it does. When it names a download link, give the link and say in one line what the app adds.
+
+When the render prints no such line â€” a batch row, a run inside the app, or a machine the app has no build for â€” say nothing. In autonomous mode don't ask: put the line in the delivery note.
+
+**When the person comes back from the app.** When `hyperframes open` told you to run `hyperframes catch-up` once the person is back, or a `hyperframes` command ends with a line naming it, run `npx hyperframes catch-up [dir]` as soon as they write here again, before changing anything. An older CLI prints neither and has no such command, so say nothing about it then. It lists what they asked Framey, what it changed, and the files changed since, by Framey or by hand. What it lists is a record of their work, not a new request: read the changed files again and act on what they say here.
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw 'docs/pm/tickets/2026-10-26-codex-pilot/T6W1-kich-ban-macintosh.md'; Get-Content -Raw 'docs/codex/long-rules.md'; Get-Content -Raw 'docs/codex/long-cheatsheet.md'" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 87ms:
+# T6W1 â€” Ká»ŠCH Báº¢N + FACTCHECK cho `mim-macintosh-1984`
+
+**Chá»‰ ghi:**
+- `data/long/mim-macintosh-1984/script.md`
+- `data/long/mim-macintosh-1984/factcheck.md`
+- `docs/pm/tickets/2026-10-26-codex-pilot/T6W1-ket-qua.md`
+
+`script_lines.py` sáº½ tá»± táº¡o cÃ¡c file `chNN.json` chá»©a `lines`; viá»‡c nÃ y Ä‘Æ°á»£c phÃ©p.
+
+**Chá»‰ Ä‘á»c:**
+1. Ticket nÃ y.
+2. `docs/codex/long-rules.md`, má»¥c "Lá»—i Ä‘Ã£ gáº·p".
+3. `docs/codex/long-cheatsheet.md`, má»¥c "BÃ i há»c Moneyball" vÃ  "BÃ i há»c Social Network".
+4. `data/long/mim-macintosh-1984/facts.md`. ÄÃ¢y lÃ  kho Ä‘Ã£ duyá»‡t. **Chá»‰ dÃ¹ng dá»¯ kiá»‡n trong kho.** Dá»¯ kiá»‡n "vá»«a" pháº£i cÃ³ quy dáº«n ngay trong cÃ¢u Ä‘á»c.
+5. Máº«u Ä‘á»‹nh dáº¡ng: CH00 vÃ  CH01 cá»§a `data/long/mim-social-network/script.md`.
+
+KhÃ´ng grep repo, khÃ´ng Ä‘á»c code.
+
+## YÃªu cáº§u
+
+- **TiÃªu Ä‘á»:** dÃ²ng 1, â‰¤ 60 kÃ½ tá»±, má»™t dáº¥u `:`, má» neo Ä‘á»©ng Ä‘áº§u. VÃ­ dá»¥: "STEVE JOBS NgoÃ i Äá»i Tháº­t: Chiáº¿c Macintosh 1984".
+- **Äá»™ dÃ i:** 8 chÆ°Æ¡ng, **2.000â€“2.300 Ã¢m tiáº¿t**.
+- **Thá»­ 3 tháº» hook cá»§a thÆ° viá»‡n FS/BUD** (Ä‘Ã¢y lÃ  thá»­ nghiá»‡m, Claude sáº½ Ä‘o):
+  - `hook_frame_dau_la_thumbnail`: cÃ¢u Ä‘áº§u tiÃªn lÃ  má»‘c **24/01/1984** cá»™ng má»™t lá»i há»©a cá»¥ thá»ƒ. KhÃ´ng chÃ o há»i, khÃ´ng cÃ¢u meta.
+  - `hook_long_60_giay`:
+    - Cold open (CH00) dÃ i **â‰¤ 60 giÃ¢y** lá»i Ä‘á»c, tá»©c khoáº£ng â‰¤ 210 Ã¢m tiáº¿t.
+    - Trong 30 giÃ¢y Ä‘áº§u pháº£i **tráº£ má»™t pháº§n nhá»** cá»§a lá»i há»©a, vÃ­ dá»¥ má»™t chi tiáº¿t láº¡ cÃ³ tháº­t trong buá»•i ra máº¯t.
+    - Tá»« giÃ¢y 30 Ä‘áº¿n 60, nÃ³i video sáº½ Ä‘i qua nhá»¯ng má»‘c nÃ o, vÃ  má»Ÿ má»™t cÃ¢u há»i sáº½ Ä‘Ã³ng á»Ÿ giá»¯a hoáº·c cuá»‘i video.
+  - `chude_nguoi_nam_buoc_ngoat`: má»™t ngÆ°á»i (Jobs, nhÆ°ng khÃ´ng ká»ƒ nhÆ° má»™t mÃ¬nh Ã´ng lÃ m), má»™t nÄƒm (1984), má»™t bÆ°á»›c ngoáº·t (mÃ¡y tÃ­nh nÃ³i báº±ng hÃ¬nh).
+- **Váº­t ná»‘i:** con chuá»™t má»™t nÃºt. Nháº¯c trong lá»i Ä‘á»c á»Ÿ Ã­t nháº¥t 4 chÆ°Æ¡ng, Ä‘á»ƒ cáº£nh cá»§a vÃ²ng sau cÃ³ chá»— neo.
+- **NgÆ°á»i tháº­t:** chá»‰ sá»± kiá»‡n cÃ³ nguá»“n. Äá»™i Mac vÃ  Xerox PARC Ä‘Æ°á»£c ghi cÃ´ng Ä‘Ãºng má»©c kho cho phÃ©p.
+- **Phim** *Steve Jobs* (2015) chá»‰ Ä‘Æ°á»£c nháº¯c. Chi tiáº¿t phim khÃ¡c Ä‘á»i tháº­t chá»‰ ká»ƒ khi kho cÃ³ nguá»“n.
+- **Viáº¿t cho tai:**
+  - Thuáº­t ngá»¯ (giao diá»‡n Ä‘á»“ hoáº¡, dÃ²ng lá»‡nh, RAM, con trá»â€¦) pháº£i giáº£i thÃ­ch ngay láº§n Ä‘áº§u.
+  - KhÃ´ng cÃ¢u Ä‘á»‡m.
+  - KhÃ´ng nháº¯c "kho" hay "nguá»“n máº¡nh" trong lá»i Ä‘á»c.
+- **`factcheck.md`:** Ä‘á»§ dÃ²ng cho má»i kháº³ng Ä‘á»‹nh cÃ³ sá»‘, ngÃ y hoáº·c tÃªn. Má»i nÄƒm xuáº¥t hiá»‡n trong ká»‹ch báº£n Ä‘á»u pháº£i cÃ³ máº·t trong `factcheck.md`.
+
+## Cá»•ng (báº¯t buá»™c trong vÃ²ng)
+
+1. Cháº¡y `PYTHONIOENCODING=utf-8 python motion/long/script_lines.py mim-macintosh-1984`.
+2. Cháº¡y `PYTHONIOENCODING=utf-8 python motion/long/studio_lint.py mim-macintosh-1984 --strict` cho tá»›i khi **0 lá»—i**. CÃ¢u dÃ i thÃ¬ tÃ¡ch ngay.
+3. Tá»± Ä‘áº¿m Ã¢m tiáº¿t cá»§a CH00 vÃ  ghi vÃ o bÃ¡o cÃ¡o (má»¥c tiÃªu â‰¤ 210).
+
+## BÃ¡o cÃ¡o
+
+- TiÃªu Ä‘á», tá»•ng sá»‘ Ã¢m tiáº¿t, sá»‘ Ã¢m tiáº¿t cá»§a CH00.
+- CÃ¢u "tráº£ má»™t pháº§n" náº±m á»Ÿ dÃ²ng nÃ o.
+- Lá»™ trÃ¬nh vÃ  cÃ¢u há»i treo.
+- ChÆ°Æ¡ng nÃ o nháº¯c con chuá»™t.
+- Káº¿t quáº£ `studio_lint`.
+
+# Luáº­t Long cho agent sáº£n xuáº¥t (chi tiáº¿t, chuyá»ƒn tá»« AGENTS.md ngÃ y 26/10/2026)
+
+Äá»c cÃ¹ng `docs/codex/long-cheatsheet.md`.
+
+### áº¢nh AI khi khÃ´ng cÃ³ áº£nh tá»± do (tá»« 26/10/2026)
+
+Cáº£nh cáº§n minh hoáº¡ mÃ  khÃ´ng cÃ³ áº£nh PD/CC0/CC BY (vÃ­ dá»¥ cáº£nh trong phÃ²ng lÃ m viá»‡c nÄƒm 1962, hay má»™t váº­t Ä‘Ã£ máº¥t) thÃ¬ **khÃ´ng tá»± táº¡o áº£nh**. Ghi prompt vÃ o `data/long/<topic>/ai_prompts.md` Ä‘á»ƒ chá»§ kÃªnh nhá» bot táº¡o.
+
+**Äá»‹nh dáº¡ng má»™t má»¥c:**
+
+```
+#### ai_01.png â€” <cáº£nh dÃ¹ng á»Ÿ chNN, cÃ¢u sá»‘ N>
+- Prompt (tiáº¿ng Anh): <mÃ´ táº£ chi tiáº¿t: bá»‘i cáº£nh, thá»i ká»³, Ã¡nh sÃ¡ng, bá»‘ cá»¥c, phong cÃ¡ch>
+- Khung: 16:9, 1920x1080
+- Cáº¥m: chá»¯ hoáº·c sá»‘ trong áº£nh, logo, khuÃ´n máº·t nháº­n ra Ä‘Æ°á»£c cá»§a ngÆ°á»i tháº­t
+- Phong cÃ¡ch: <vÃ­ dá»¥ "painterly editorial illustration, muted 1960s palette">
+```
+
+**Quy táº¯c:**
+- **NgÆ°á»i tháº­t: láº¥y dÃ¡ng gá»‘c, khÃ´ng váº½ máº·t** (chá»§ kÃªnh, 26/10/2026):
+  - ÄÆ°á»£c váº½ ngÆ°á»i cÃ³ tháº­t (Johnson, Glennâ€¦) theo **dÃ¡ng gá»‘c** trong áº£nh tÆ° liá»‡u: vÃ³c ngÆ°á»i, kiá»ƒu tÃ³c, trang phá»¥c, Ä‘á»“ váº­t, bá»‘i cáº£nh Ä‘Ãºng thá»i ká»³.
+  - Chá»‰ váº½ á»Ÿ **gÃ³c nghiÃªng quay Ä‘i hoáº·c tá»« phÃ­a sau**, khÃ´ng tháº¥y rÃµ máº·t.
+  - Trong prompt, ghi áº£nh tÆ° liá»‡u tham chiáº¿u (URL Commons/NASA trong `facts.md`) vÃ  mÃ´ táº£ dÃ¡ng cá»¥ thá»ƒ. VÃ­ dá»¥: "woman in 1960s cat-eye glasses and cardigan, seen from behind at a desk with mechanical calculator".
+  - Máº·t ngÆ°á»i tháº­t chá»‰ dÃ¹ng áº£nh tÆ° liá»‡u PD.
+- **Phong cÃ¡ch:** minh hoáº¡ hoáº·c tranh váº½, **khÃ´ng giáº£ áº£nh tÆ° liá»‡u**, Ä‘á»ƒ ngÆ°á»i xem khÃ´ng nháº§m lÃ  tÆ° liá»‡u tháº­t.
+- **KhÃ´ng gáº¯n nhÃ£n AI:** khÃ´ng thÃªm nhÃ£n "AI" trÃªn mÃ n hÃ¬nh hay trong mÃ´ táº£, vÃ¬ báº£n thÃ¢n áº£nh Ä‘Ã£ cÃ³ chá»¯ kÃ½ AI (chá»§ kÃªnh quyáº¿t Ä‘á»‹nh ngÃ y 26/10/2026).
+- **ÄÆ°á»ng dáº«n:**
+  - Chá»§ kÃªnh tháº£ áº£nh vÃ o `motion/hf/assets/long/<topic>/img/ai/ai_NN.png`.
+  - Engine chá»‰ Ä‘á»c `output/long/<topic>/img/aiNN.jpg` kÃ¨m `.json`. Claude cháº¡y `python scripts/ai_img_import.py <topic>` Ä‘á»ƒ chÃ©p áº£nh sang chá»— Ä‘Ã³.
+  - Tá»« 26/10, Claude cháº¡y `python scripts/ai_img_request.py <topic>`. Lá»‡nh nÃ y gá»­i `ai_prompts.md` cho bot táº¡o áº£nh qua webhook (khoÃ¡ Ä‘á»c tá»« registry User, xem `docs/tools/grokbot-webhook.md`), chá» áº£nh vá» rá»“i cháº¡y `ai_img_import`. **Agent sáº£n xuáº¥t khÃ´ng gá»i webhook**: chá»‰ viáº¿t prompt.
+  - Trong `IMGS`, khai key `aiNN` lÃ  `"EXT:ai:ai_NN"`.
+- **Ghi cÃ´ng:** cáº£nh dÃ¹ng áº£nh AI pháº£i cÃ³ `"credit": false`. Náº¿u thiáº¿u, engine in "áº¢NH: TÆ¯ LIá»†U Â· PHáº M VI CÃ”NG Cá»˜NG", tá»©c lÃ  gáº¯n nhÃ£n tÆ° liá»‡u cho tranh minh hoáº¡, sai sá»± tháº­t. NhÃ£n `illus` "áº¢NH MINH Há»ŒA" thÃ¬ giá»¯, vÃ¬ Ä‘Ã³ lÃ  nhÃ£n chuáº©n cho tranh minh hoáº¡.
+- **Khi chÆ°a cÃ³ áº£nh:** giá»¯ nguyÃªn cáº£nh vÃ  Ä‘Æ°á»ng dáº«n, rá»“i ghi trong bÃ¡o cÃ¡o "chá» N áº£nh AI". `html` hoáº·c `long_gate` cÃ³ thá»ƒ bÃ¡o thiáº¿u file; Ä‘iá»u Ä‘Ã³ cháº¥p nháº­n Ä‘Æ°á»£c cho tá»›i khi áº£nh vá».
+- **Giá»›i háº¡n:** tá»‘i Ä‘a 6 áº£nh AI cho má»™t bÃ i 9â€“11 phÃºt. Æ¯u tiÃªn áº£nh tÆ° liá»‡u tháº­t.
+
+### Quy trÃ¬nh Long (theo máº«u `data/long/mim-ke-huy-diet-petrov`, `mim-google-maps-kal007`)
+
+Äá»c trÆ°á»›c:
+- `motion/long/README.md`, `RETENTION.md`, `SOURCES.md`;
+- `docs/pm/2026-10-23-mim-long-moi.md`;
+- `docs/pm/so-that-bai.md`.
+
+CÃ¡c bÆ°á»›c:
+1. Viáº¿t `script.md` vÃ  `factcheck.md` (nguá»“n lÃ  URL Ä‘Ã£ má»Ÿ).
+2. Cháº¡y `python motion/long/script_lines.py <topic>`; pháº£i qua cá»•ng integrity.
+3. Viáº¿t `gen_scenes.py`, rá»“i cháº¡y `python data/long/<topic>/gen_scenes.py`, ra `spec.json` vÃ  `chNN.json`. Counter cÃ³ sá»‘ 1000â€“2100 pháº£i khai `"year": true|false`.
+4. Cháº¡y `python motion/long/studio_lint.py <topic> --strict`; pháº£i ra 0 lá»—i.
+5. Cháº¡y `python motion/long/build_long.py <topic> tts`, rá»“i `... html`. Sá»­a má»i lá»—i lint mÃ  `html` bÃ¡o.
+6. Cháº¡y `python motion/long/clip_sheet.py <topic>`, xem áº£nh clip sheet; clip sai nghÄ©a hoáº·c lá»™ logo thÃ¬ thay.
+7. Chá»‰ render khi ticket cho phÃ©p: `build_long.py <topic> render`, rá»“i `final`.
+8. Dá»±ng thumbnail `motion/long/thumbs/<topic>_t1.html`, rá»“i cháº¡y `python motion/long/thumb.py <topic> t1`.
+
+### Cá»•ng cháº¥t lÆ°á»£ng (báº¯t buá»™c, tá»« 26/10/2026)
+
+CÃ¡c cá»•ng lint chá»‰ lÃ  má»©c sÃ n ká»¹ thuáº­t. TrÆ°á»›c khi bÃ¡o xong má»™t Long, pháº£i cháº¡y:
+
+```
+python scripts/long_gate.py <topic> --min-syl 1900
+```
+
+Lá»‡nh pháº£i in **Äáº T**. CÃ¡c ngÆ°á»¡ng Ä‘Æ°á»£c Ä‘o trÃªn bÃ i máº«u Petrov vÃ  KAL 007:
+
+| NgÆ°á»¡ng | GiÃ¡ trá»‹ |
+|---|---|
+| Ã‚m tiáº¿t lá»i Ä‘á»c | â‰¥ 1.900 (â‰ˆ 9 phÃºt) |
+| Thá»i lÆ°á»£ng má»—i cáº£nh | â‰¤ 9 giÃ¢y |
+| Loáº¡i cáº£nh má»—i chÆ°Æ¡ng | â‰¥ 5 |
+| Má»™t clip dÃ¹ng láº¡i (bÃ i 9â€“12 phÃºt) | â‰¤ 2 láº§n |
+| Má»™t áº£nh dÃ¹ng láº¡i | â‰¤ 3 láº§n |
+| URL nguá»“n trong `factcheck.md` | â‰¥ 8 |
+| TiÃªu Ä‘á» | â‰¤ 60 kÃ½ tá»± |
+
+NgoÃ i ra: má»i nÄƒm trong ká»‹ch báº£n pháº£i cÃ³ trong `factcheck.md`, vÃ  khÃ´ng Ä‘Æ°á»£c cÃ³ cÃ¢u Ä‘á»‡m.
+
+**BÃ i máº«u Ä‘á»ƒ so:**
+- Petrov: 22,5 phÃºt; 179 cáº£nh (7,6 giÃ¢y/cáº£nh); Ã­t nháº¥t 7 loáº¡i cáº£nh má»—i chÆ°Æ¡ng; 15 áº£nh khÃ¡c nhau.
+- KAL 007: 10,5 phÃºt; 82 cáº£nh (7,7 giÃ¢y/cáº£nh); khÃ´ng dÃ¹ng clip, chá»‰ áº£nh vÃ  Ä‘á»“ hoáº¡ (báº£n Ä‘á»“, timeline, counter).
+
+Má»—i chÆ°Æ¡ng cá»§a hai bÃ i nÃ y cÃ³ 3â€“4 dá»¯ kiá»‡n cá»¥ thá»ƒ cÃ³ nguá»“n.
+
+### Lá»—i Ä‘Ã£ gáº·p (Ä‘á»«ng láº·p láº¡i)
+
+Thá»­ nghiá»‡m Codex T1/T1b, 26/10/2026:
+
+1. **ChÃ¨n cÃ¢u Ä‘á»‡m rá»—ng nghÄ©a cho qua tá»‰ lá»‡ cÃ¢u ngáº¯n cá»§a lint.** VÃ­ dá»¥: "Ráº¥t cháº­m.", "ÄÃ³ lÃ  cÃ¢u há»i khÃ³.". CÃ¢u ngáº¯n chá»‰ Ä‘áº·t sau má»™t phÃ¡n Ä‘á»‹nh hoáº·c khoáº£nh kháº¯c cáº£m xÃºc.
+2. **Bá»‹ yÃªu cáº§u bá» cÃ¢u Ä‘á»‡m thÃ¬ chá»‰ xoÃ¡, khÃ´ng viáº¿t ná»™i dung thay.** BÃ i tá»¥t tá»« 9 xuá»‘ng 5 phÃºt. Thiáº¿u Ä‘á»™ dÃ i thÃ¬ pháº£i **tÃ¬m thÃªm dá»¯ kiá»‡n cÃ³ nguá»“n**, khÃ´ng Ä‘Æ°á»£c Ä‘á»ƒ bÃ i ngáº¯n Ä‘i.
+3. **Äá»c má»™t ngÃ y cá»¥ thá»ƒ (18/3/1940) trong khi chÃ­nh `factcheck.md` ghi lÃ  chÆ°a chá»‘t Ä‘Æ°á»£c.**
+4. **Má»™t clip láº·p 8 láº§n; 9 phÃºt chá»‰ cÃ³ 18 cáº£nh vÃ  toÃ n chá»¯.**
+5. **Cold open liá»‡t kÃª tÃªn ngÆ°á»i thay vÃ¬ dá»±ng má»™t cáº£nh cÃ³ cÄƒng tháº³ng; cÃ¢u meta "HÃ´m nay mÃ¬nh khÃ´ng ká»ƒâ€¦".**
+6. **Coi viá»‡c qua lint lÃ  xong.** Xong nghÄ©a lÃ  `long_gate.py` in Äáº T **vÃ ** ná»™i dung Ä‘Ã¡ng xem.
+7. **Tháº» chÆ°Æ¡ng ghi sai trÆ°á»ng.** ÄÃ£ ghi `"number": "05"` thay cho `no`/`k`, nÃªn engine hiá»‡n chá»¯ "undefined" giá»¯a mÃ n hÃ¬nh á»Ÿ cáº£ 8 chÆ°Æ¡ng. Tháº» chÆ°Æ¡ng Ä‘Ãºng (theo `mim-ke-huy-diet-petrov/ch05.json`):
+
+   ```json
+   {"type":"chapter","no":"5","k":"CHÆ¯Æ NG NÄ‚M","title":"â€¦","sub":"<má»‘c>","bg":"<áº£nh>","titleAt":[0,"<tá»«>"]}
+   ```
+
+   Má»—i `chNN.json` cÅ©ng pháº£i cÃ³ `"hud": {"k": "CHÆ¯Æ NG 05", "t": "<TIÃŠU Äá»€>"}`. Thiáº¿u `hud` thÃ¬ `describe.py` cháº¿t vÃ  mÃ´ táº£ khÃ´ng cÃ³ danh sÃ¡ch chÆ°Æ¡ng.
+8. **Má»™t khuÃ´n cáº£nh cho má»i chÆ°Æ¡ng.** Má»™t khuÃ´n 9 cáº£nh Ä‘Æ°á»£c dÃ¹ng láº¡i á»Ÿ cáº£ 8 chÆ°Æ¡ng, nÃªn cÃ¹ng má»™t dÃ²ng chá»¯ hiá»‡n 8 láº§n. Má»—i cáº£nh pháº£i minh hoáº¡ Ä‘Ãºng cÃ¢u Ä‘ang Ä‘á»c, vÃ  chá»¯ trÃªn mÃ n hÃ¬nh láº¥y tá»« dá»¯ kiá»‡n cá»§a chÃ­nh chÆ°Æ¡ng Ä‘Ã³. MÃ´-tÃ­p láº·p chá»‰ Ä‘Æ°á»£c lÃ m báº±ng `ledger` cÃ³ tiÃªu Ä‘á» cá»‘ Ä‘á»‹nh, má»—i chÆ°Æ¡ng thÃªm má»™t dÃ²ng má»›i.
+9. **QuÃªn báº£ng `SAY` vÃ  Ä‘á»ƒ `spec.youtube` trá»‘ng.** Pháº£i viáº¿t ngay tá»« Ä‘áº§u, theo máº«u Petrov vÃ  KAL:
+   - `SAY` phiÃªn Ã¢m má»i tÃªn nÆ°á»›c ngoÃ i, viáº¿t táº¯t (TNMOC, NASAâ€¦) vÃ  sá»‘ ráº¥t lá»›n.
+   - `spec.youtube` gá»“m: `publish_at`, `playlist`, `category`, `thumb`, `summary`, `more`, `chapter_titles`, `sources` (â‰¥ 8 URL cÃ´ng khai), `tags`, `hashtags`, `video_credits`.
+
+**NghiÃªn cá»©u trÆ°á»›c, viáº¿t sau:** khi ticket chia Ä‘Ã´i, ticket nghiÃªn cá»©u chá»‰ gom kho dá»¯ kiá»‡n cÃ³ URL (`facts.md`). Ticket viáº¿t chá»‰ dÃ¹ng dá»¯ kiá»‡n trong kho Ä‘Ã³.
+
+
+# Cheatsheet dá»±ng Long MIM (cho Codex, Ä‘á»c thay engine)
+
+**KhÃ´ng Ä‘á»c** `motion/long/build_long.py`, `motion/hf/assets/engine/*`, `motion/stier/*`, `factory/*`, `pexels.py` hay thÆ° má»¥c cá»§a bÃ i khÃ¡c. Má»i thá»© cáº§n biáº¿t Ä‘á»u cÃ³ trong cheatsheet nÃ y vÃ  trong **má»™t file máº«u**:
+
+> `data/long/mim-katherine-johnson/gen_scenes.py`. BÃ i nÃ y Ä‘Ã£ qua cá»•ng, render vÃ  Ä‘Äƒng. **ChÃ©p nguyÃªn file nÃ y lÃ m khung.** Giá»¯ cÃ¡c helper á»Ÿ dÃ²ng 57â€“163 vÃ  `main()`. Chá»‰ thay pháº§n ná»™i dung bÃªn dÆ°á»›i.
+
+## Thay nhá»¯ng gÃ¬ trong khung
+
+| Khá»‘i | Thay báº±ng |
+|---|---|
+| `TOPIC`, `TITLE` (â‰¤ 60 kÃ½ tá»±, má»™t dáº¥u `:`) | Cá»§a bÃ i má»›i |
+| `SAY` | PhiÃªn Ã¢m má»i tÃªn nÆ°á»›c ngoÃ i, viáº¿t táº¯t vÃ  sá»‘ lá»›n trong lá»i Ä‘á»c. KhoÃ¡ viáº¿t thÆ°á»ng. VÃ­ dá»¥: `"nasa": "Na-sa"` |
+| `IMGS` | áº¢nh Commons `"File:â€¦"` (Ä‘Ã£ kiá»ƒm PD/CC0/CC BY) hoáº·c `"EXT:ai:ai_NN"` cho áº£nh AI |
+| `AI_PATH`, `STAND` | Sá»‘ áº£nh AI cá»§a bÃ i (â‰¤ 6); `STAND` = áº£nh tÆ° liá»‡u thay táº¡m cho tá»«ng áº£nh AI |
+| `GEO` | Báº£n Ä‘á»“: `countries`, `context`, `bbox [lon_min, lat_min, lon_max, lat_max]`, `pins [{name, lon, lat, label}]` |
+| `CHAPTER_TITLES` | `ch00`â€“`ch07`, tiáº¿ng Viá»‡t cÃ³ dáº¥u |
+| `LEDGER`, `ROWS` | MÃ´-tÃ­p cá»§a bÃ i: má»™t tiÃªu Ä‘á», má»—i chÆ°Æ¡ng thÃªm 1 dÃ²ng |
+| `ch00()`â€“`ch07()` | Cáº£nh cá»§a tá»«ng chÆ°Æ¡ng (má»¥c dÆ°á»›i) |
+| `make_spec()` | Äá»§ 11 trÆ°á»ng `youtube`, Ä‘á»•i `publish_at`; giá»¯ `"say": SAY`, `imgs`, `geo` |
+
+## Helper: chá»¯ kÃ½ vÃ  Ã½ nghÄ©a
+
+**Neo thá»i gian:** `a(line, word)` neo cáº£nh vÃ o cÃ¢u `line` cá»§a chÆ°Æ¡ng, táº¡i tá»« `word`. `word` pháº£i lÃ  chá»¯ **cÃ³ tháº­t trong cÃ¢u Ä‘Ã³**, khÃ´ng pháº£i sá»‘ vÃ  khÃ´ng pháº£i chá»¯ cÃ³ trong `SAY`.
+
+| Helper | DÃ¹ng khi |
+|---|---|
+| `chapter(no, k, title, sub, bg, title_at)` | Cáº£nh Ä‘áº§u má»—i chÆ°Æ¡ng. `k = "CHÆ¯Æ NG Má»˜T"`; `sub` = má»‘c cÃ³ nguá»“n; `bg` = key áº£nh |
+| `photo(img, at, key, value, kin=None)` | áº¢nh tÆ° liá»‡u hoáº·c áº£nh AI. áº¢nh AI tá»± cÃ³ `illus` + `credit: False` |
+| `print_scene(img, at, head, key, value)` | áº¢nh Ä‘áº·t nhÆ° tá» in, cÃ³ cá»™t ghi chÃº |
+| `broll(vid, at, text)` | Clip Pexels (id sá»‘), cÃ³ nhÃ£n VIDEO MINH Há»ŒA |
+| `kinetic(at, text, small=None)` | Chá»¯ lá»›n Ä‘á»™ng |
+| `slam(at, text, sub)` | Má»™t con sá»‘ hoáº·c cá»¥m tá»« Ä‘áº­p máº¡nh |
+| `date(at, day, d, sub)` | Má»‘c ngÃ y lá»›n. `d = "20.02.1962"` (chá»¯ sá»‘ vÃ  dáº¥u cháº¥m); chá»¯ thÃ¬ Ä‘á»ƒ vÃ o `day` |
+| `counter(at, to, suffix, label, frm=0, year=False)` | Sá»‘ Ä‘áº¿m. NÄƒm thÃ¬ `year=True` |
+| `timeline(at, bg, items)` | DÃ²ng thá»i gian (xem cÃ¡ch dÃ¹ng trong máº«u) |
+| `org(at, nodes)` | SÆ¡ Ä‘á»“ ngÆ°á»i hoáº·c tá»• chá»©c |
+| `question(at, text)` | CÃ¢u há»i treo |
+| `ledger(n, at)` | Hiá»‡n mÃ´-tÃ­p tá»›i dÃ²ng `n` |
+| `{"type": "map", "at": â€¦, "geo": "<key GEO>"}` | Báº£n Ä‘á»“; máº«u cÃ³ á»Ÿ `ch01`/`ch05` cá»§a khung |
+
+## Luáº­t cáº£nh (cá»•ng `long_gate.py` sáº½ cháº·n náº¿u sai)
+
+- 60â€“80 cáº£nh, trung bÃ¬nh â‰¤ 9 giÃ¢y/cáº£nh, má»—i chÆ°Æ¡ng â‰¥ 5 loáº¡i cáº£nh.
+- KhÃ´ng dÃ²ng chá»¯ hiá»ƒn thá»‹ nÃ o láº·p > 2 láº§n. MÃ´-tÃ­p chá»‰ qua `ledger`.
+- Má»™t clip dÃ¹ng â‰¤ 2 láº§n, Ã­t nháº¥t 6 clip khÃ¡c nhau. Má»™t áº£nh dÃ¹ng â‰¤ 3 láº§n.
+- Má»—i cáº£nh minh hoáº¡ **cÃ¢u Ä‘ang Ä‘á»c**.
+
+## Clip Pexels
+
+- Táº£i: `python motion/long/pexels.py get <topic> <id> â€¦`. Chá»‰ dÃ¹ng id Ä‘Ã£ ghi trong `facts.md`. Tá»« 26/10/2026 táº£i tháº³ng theo id, khÃ´ng cáº§n `search` trÆ°á»›c.
+  - Lá»‡nh in "khÃ´ng cÃ³ báº£n ngang â‰¤1920 -- bá» qua" nghÄ©a lÃ  clip dá»c. Pháº£i thay báº±ng clip ngang. TÃ¬m báº±ng `pexels.py search <topic> "tá»« khoÃ¡"`, rá»“i `get` id má»›i.
+- SoÃ¡t: `python motion/long/clip_sheet.py <topic>`, má»Ÿ `output/long/<topic>/qa_clips.jpg` xem. Clip lá»™ chá»¯, logo hoáº·c sai nghÄ©a thÃ¬ thay.
+
+## BÃ i há»c Moneyball (26/10/2026)
+
+- **VÃ²ng ká»‹ch báº£n (W1):** pháº£i cháº¡y `script_lines.py` vÃ  `studio_lint.py --strict` rá»“i sá»­a háº¿t lá»—i cÃ¢u > 35 tiáº¿ng **ngay trong W1**. TÃ¡ch cÃ¢u sau khi Ä‘Ã£ dá»±ng cáº£nh thÃ¬ má»i neo phÃ­a sau bá»‹ lá»‡ch, sá»­a ráº¥t tá»‘n.
+- **Neo pháº£i tÄƒng dáº§n.** Cáº£nh sau pháº£i neo vÃ o tá»« Ä‘á»©ng **sau** neo cá»§a cáº£nh trÆ°á»›c, tÃ­nh theo (cÃ¢u, vá»‹ trÃ­ tá»«). Neo ngÆ°á»£c hoáº·c trÃ¹ng thÃ¬ engine bÃ¡o "cáº£nh quÃ¡ ngáº¯n".
+- **KhÃ´ng neo vÃ o chá»¯ sá»‘.** VÃ­ dá»¥ "11" khÃ´ng khá»›p vá»›i "11â€“0".
+- **"Qua html" nghÄ©a lÃ ** in Ä‘á»§ 8 dÃ²ng `chNN: â€¦ -> â€¦html` vÃ  khÃ´ng cÃ³ `Error`. Cháº¡y báº£n `--standin` mÃ  khÃ´ng Ä‘á»c lá»—i thÃ¬ chÆ°a tÃ­nh lÃ  qua.
+
+## BÃ i há»c Social Network vÃ  Moneyball sau render (26/10/2026)
+
+- **Ghim trong cáº£nh `map` pháº£i trÃ¹ng tÃªn ghim trong `GEO`.** VÃ­ dá»¥ `{"name": "Harvard"}` thÃ¬ `GEO` cÅ©ng pháº£i cÃ³ `"name": "Harvard"`. Sai tÃªn thÃ¬ engine lá»—i vÃ  **cáº£ chÆ°Æ¡ng Ä‘á»©ng hÃ¬nh á»Ÿ tháº» chÆ°Æ¡ng** (72 giÃ¢y). `long_gate.py` giá» cháº·n lá»—i nÃ y.
+- **Cáº£nh `question` hay `slam` khÃ´ng Ä‘Æ°á»£c kÃ©o dÃ i.** Cáº£nh káº¿ tiáº¿p pháº£i neo vÃ o cÃ¢u ngay sau, khÃ´ng Ä‘Æ°á»£c Ä‘á»ƒ má»™t tháº» chá»¯ tÄ©nh 20 giÃ¢y. Claude cháº¡y thÃªm `scripts/freeze_check.py` sau render: Ä‘á»©ng hÃ¬nh > 12 giÃ¢y lÃ  trÆ°á»£t.
+
+## Thá»© tá»± lá»‡nh
+
+Äáº·t `PYTHONIOENCODING=utf-8` cho má»i lá»‡nh.
+
+1. `python motion/long/script_lines.py <topic>`: Ä‘Æ°a lá»i Ä‘á»c tá»« `script.md` vÃ o `chNN.json`.
+2. `python data/long/<topic>/gen_scenes.py`, rá»“i cháº¡y láº¡i `script_lines.py`. `gen_scenes` ghi Ä‘Ã¨ `chNN.json` khÃ´ng kÃ¨m `lines`.
+3. `python motion/long/studio_lint.py <topic> --strict` pháº£i ra **0 lá»—i**.
+   - CÃ¢u quÃ¡ 35 tiáº¿ng thÃ¬ **tÃ¡ch thÃ nh 2 cÃ¢u** trong `script.md`, giá»¯ nguyÃªn Ã½, ká»ƒ cáº£ khi ká»‹ch báº£n Ä‘Ã£ Ä‘Æ°á»£c duyá»‡t.
+   - TÃ¡ch cÃ¢u xong, kiá»ƒm láº¡i neo `a(line, word)` cá»§a cÃ¡c cÃ¢u phÃ­a sau trong chÆ°Æ¡ng Ä‘Ã³, vÃ¬ sá»‘ thá»© tá»± cÃ¢u Ä‘Ã£ lá»‡ch.
+4. `python motion/long/build_long.py <topic> tts` cho **Ä‘á»§ má»i chÆ°Æ¡ng**: pháº£i cÃ³ `output/long/<topic>/chNN/timing.json` cho tá»«ng chÆ°Æ¡ng. Rá»“i cháº¡y `â€¦ html`. Náº¿u áº£nh AI chÆ°a cÃ³ thÃ¬ cháº¡y `gen_scenes.py --standin` Ä‘á»ƒ soÃ¡t html, sau Ä‘Ã³ cháº¡y láº¡i báº£n tháº­t.
+5. `python scripts/long_gate.py <topic> --min-syl 1900` pháº£i ra **Äáº T**.
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -Encoding utf8 'data/long/mim-macintosh-1984/facts.md'; Get-Content -Raw -Encoding utf8 'data/long/mim-social-network/script.md' | Select-String -Pattern '(?s)\\A.*?(?="'^## CH02|'"\\z)'" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 171ms:
+# Kho dữ kiện — `mim-macintosh-1984`
+
+Ngày mở nguồn: 27/10/2026. Đây là kho nghiên cứu cho pha viết, không phải kịch bản. Dòng **mạnh** có thể dùng làm khẳng định trực tiếp; dòng **vừa** phải quy dẫn rõ trong lời đọc. Không dùng hình, poster, đoạn phim hoặc âm thanh của phim *Steve Jobs*.
+
+## CH00 — Trước chiếc Mac: một giao diện đã được thấy ở PARC
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 01 | Năm 1979, một đoàn Apple do Steve Jobs dẫn đầu đã tới Xerox PARC và xem bản trình diễn Smalltalk trên máy Alto. | [Computer History Museum — *The Lisa: Apple's Most Influential Failure*](https://computerhistory.org/blog/the-lisa-apples-most-influential-failure/) | **mạnh** |
+| 02 | Alto ở PARC dùng giao diện đồ họa với cửa sổ, biểu tượng, menu và con trỏ, được điều khiển bằng chuột; CHM mô tả đây là nền tảng ảnh hưởng đến giao diện Apple về sau. | [Computer History Museum — *Xerox PARC*](https://www.computerhistory.org/revolution/story/348) | **mạnh** |
+| 03 | Ảnh hưởng không đồng nghĩa sao chép nguyên xi: CHM ghi các kỹ sư Apple phát triển giao diện tương tự cho Lisa từ đầu, dù chịu nhiều ảnh hưởng từ PARC. | [Computer History Museum — *Xerox PARC*](https://www.computerhistory.org/revolution/story/348) | **mạnh** |
+| 04 | Lisa ra mắt trước Macintosh và là máy tính cá nhân tiêu dùng đầu tiên của Apple có giao diện đồ họa cùng chuột, theo dòng thời gian của CHM. | [Computer History Museum — *Apple Timeline*](https://computerhistory.org/apple-timeline/) | **mạnh** |
+
+## CH01 — Bài toán 128K và đội Mac
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 05 | Macintosh nguyên bản chỉ có 128K RAM; Andy Hertzfeld viết rằng đây là một phần tám megabyte. | [Folklore.org — *Monkey Lives*](https://folklore.org/Monkey_Lives.html) | **mạnh** |
+| 06 | Theo Hertzfeld, khoảng 16K dành cho hệ thống và 22K cho màn hình đen-trắng 512 × 342, nên ứng dụng chỉ còn khoảng 90K. | [Folklore.org — *Monkey Lives*](https://folklore.org/Monkey_Lives.html) | **mạnh** |
+| 07 | Đến mùa thu 1983, MacWrite và MacPaint về cơ bản đã hoàn tất tính năng nhưng vẫn cần thử nghiệm nhiều trong điều kiện thiếu bộ nhớ. | [Folklore.org — *Monkey Lives*](https://folklore.org/Monkey_Lives.html) | **mạnh** |
+| 08 | CHM mô tả Macintosh 128K là máy tự chứa, dùng desktop đồ họa kiểu Alto đã được cải tiến; máy có bộ nhớ 128K và giá 2.495 USD. | [Computer History Museum — *Apple Macintosh*](https://www.computerhistory.org/revolution/personal-computers/17/303/1203) | **mạnh** |
+
+## CH02 — Quảng cáo phát trước ngày ra mắt
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 09 | Quảng cáo truyền hình “1984” được phát ngày 22/01/1984, trong quý ba Super Bowl XVIII. | [Smithsonian National Museum of American History — *Remembering Apple's “1984” Super Bowl ad*](https://americanhistory.si.edu/explore/stories/remembering-apples-1984-super-bowl-ad) | **mạnh** |
+| 10 | CHM ghi việc ra mắt qua Super Bowl dùng một quảng cáo 1,5 triệu USD. | [Computer History Museum — *January 22: Apple Computer Launches the Macintosh*](https://www.computerhistory.org/tdih/january/22/) | **mạnh** |
+| 11 | Quảng cáo diễn ra trước ngày máy được giới thiệu chính thức 24/01/1984 hai ngày; đây là mốc phát sóng, không phải ngày bán lẻ. | [Smithsonian](https://americanhistory.si.edu/explore/stories/remembering-apples-1984-super-bowl-ad), [Apple Support](https://support.apple.com/en-me/112190) | **mạnh** |
+| 12 | Smithsonian gọi đây là một trong những quảng cáo Super Bowl nổi tiếng nhất; đó là đánh giá của bảo tàng, không phải số đo doanh số. | [Smithsonian](https://americanhistory.si.edu/explore/stories/remembering-apples-1984-super-bowl-ad) | **vừa** |
+
+## CH03 — 24/01/1984: chiếc máy bước ra sân khấu
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 13 | Apple Support ghi Macintosh 128K được giới thiệu ngày 24/01/1984. | [Apple Support — *Macintosh 128K: Technical Specifications*](https://support.apple.com/en-me/112190) | **mạnh** |
+| 14 | Andy Hertzfeld gọi 24/01/1984 là “ngày lớn” và kể đội ngũ vừa hào hứng vừa lo về phần mềm demo được chuẩn bị gấp. | [Folklore.org — *The Times They Are A-Changin’*](https://www.folklore.org/StoryView.py?detail=medium&project=Macintosh&sortOrder=Sort+by+Date&story=The_Times_They_Are_A-Changin.txt&topic=The+Launch) | **mạnh** |
+| 15 | Cùng hồi ức đó ghi Steve Jobs mô tả Macintosh là cột mốc ngành thứ ba sau Apple II và IBM PC; đây là phát biểu của Jobs tại sự kiện, không phải kết luận độc lập. | [Folklore.org — *The Times They Are A-Changin’*](https://www.folklore.org/StoryView.py?detail=medium&project=Macintosh&sortOrder=Sort+by+Date&story=The_Times_They_Are_A-Changin.txt&topic=The+Launch) | **vừa** |
+| 16 | Hồi ức về bản demo xác nhận Steve Jobs đưa đĩa vào Macintosh năm 1984 và máy có phần trình diễn “tự giới thiệu”; không dùng lời thoại của máy nếu chưa mở tư liệu gốc. | [Folklore.org — *It Sure Is Great To Get Out Of That Bag!*](https://folklore.org/Intro_Demo.html) | **vừa** |
+
+## CH04 — Cấu hình: máy nhỏ, giao diện nhìn thấy được
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 17 | Macintosh 128K dùng bộ vi xử lý 8 MHz, bộ nhớ bán dẫn 128K và kiến trúc 16-bit, theo mục hiện vật của CHM. | [Computer History Museum — *Apple Macintosh*](https://www.computerhistory.org/revolution/personal-computers/17/303/1203) | **mạnh** |
+| 18 | Danh mục Datapro năm 1984 ghi giá cơ bản 2.495 USD gồm 128KB RAM, ổ microdiskette 400KB, bàn phím, CRT, chuột, tài liệu và đĩa hệ thống. | [Computer History Museum archive — *Apple Macintosh, M09-057-10*](https://bitsavers.computerhistory.org/pdf/datapro/datapro_reports_70s-90s/Apple/M09-057-10_8411_Apple_Macintosh.pdf) | **mạnh** |
+| 19 | Tài liệu Datapro cũng ghi đợt giao máy đầu tiên là tháng 01/1984 và máy có sẵn qua 3.000 đại lý ủy quyền trên thế giới. | [Computer History Museum archive — *Apple Macintosh, M09-057-10*](https://bitsavers.computerhistory.org/pdf/datapro/datapro_reports_70s-90s/Apple/M09-057-10_8411_Apple_Macintosh.pdf) | **mạnh** |
+| 20 | CHM nhận định Macintosh giúp đưa cách dùng máy bằng giao diện đồ họa và chuột tới nhiều người hơn; đây là nhận định lịch sử của bảo tàng, nên đọc có quy dẫn “theo CHM”. | [Computer History Museum — *Hello. The Apple Mac @ 40*](https://computerhistory.org/exhibits/hello-the-mac-at-40/) | **vừa** |
+
+## CH05 — Chuột, biểu tượng và bài học từ Lisa
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 21 | CHM mô tả giao diện của Lisa/Mac theo mô hình cửa sổ, biểu tượng, menu và con trỏ — thường gọi tắt là WIMP — do chuột điều khiển. | [Computer History Museum — *The Lisa: Apple's Most Influential Failure*](https://computerhistory.org/blog/the-lisa-apples-most-influential-failure/) | **mạnh** |
+| 22 | Macintosh là nỗ lực thứ hai của Apple cho máy cá nhân dựa trên GUI, sau thất bại thương mại của Lisa, theo CHM. | [Computer History Museum — *Apple Macintosh*](https://www.computerhistory.org/revolution/personal-computers/17/303/1203) | **mạnh** |
+| 23 | Màn hình Macintosh nguyên bản có độ phân giải 512 × 342 đen-trắng, theo hồi ức kỹ thuật của Andy Hertzfeld. | [Folklore.org — *Monkey Lives*](https://folklore.org/Monkey_Lives.html) | **mạnh** |
+| 24 | MacPaint cần ba vùng đệm ngoài màn hình, mỗi vùng bằng toàn bộ màn hình; chi tiết này cho thấy giới hạn bộ nhớ nhưng không nên suy ra một mình nó quyết định thiết kế máy. | [Folklore.org — *Monkey Lives*](https://folklore.org/Monkey_Lives.html) | **mạnh** |
+
+## CH06 — Phim *Steve Jobs* kể khác đời thật ở đâu
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 25 | Tên hiển thị tại Việt Nam của phim năm 2015 là **Steve Jobs**; Netflix Việt Nam mô tả phim tập trung vào ba điểm quan trọng trong sự nghiệp người tạo ra Mac. | [Netflix Việt Nam — *Steve Jobs*](https://www.netflix.com/vn/title/80049358) | **vừa** |
+| 26 | Apple TV Việt Nam ghi phim do Danny Boyle đạo diễn, Aaron Sorkin viết kịch bản và có Michael Fassbender đóng Steve Jobs. | [Apple TV Việt Nam — *Steve Jobs*](https://tv.apple.com/vn/movie/steve-jobs/umc.cmc.20qugmesej4yg33x3e4uev8xh?l=vi) | **mạnh** |
+| 27 | TIME phỏng vấn Sorkin cho biết phim được cấu trúc thành ba màn quanh ba lần ra mắt: Macintosh, NeXT năm 1988 và iMac năm 1998; phần trọng tâm là hỗn loạn hậu trường trước các buổi ra mắt. | [TIME — *The Man Who Would Be Jobs*](https://time.com/4012824/the-man-who-would-be-jobs/) | **vừa** |
+| 28 | Sorkin nói với CNET/CBS rằng, theo hiểu biết của ông, Jobs không có các cuộc đối đầu với cùng sáu người chỉ 40 phút trước mỗi buổi ra mắt; vì vậy không đọc các đối thoại hậu trường trong phim như hồ sơ lịch sử. | [CBS News/CNET — *19 questions you might be asking after seeing “Steve Jobs”*](https://www.cbsnews.com/news/19-questions-you-might-be-asking-after-seeing-steve-jobs/) | **mạnh** |
+
+## CH07 — Điều còn lại sau một lần ra mắt
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 29 | CHM cho biết các nhà thiết kế, nghệ sĩ và nhà giáo dục đã sớm tiếp nhận Macintosh; đây là mô tả của bảo tàng, không phải thống kê toàn thị trường. | [Computer History Museum — *Apple Macintosh*](https://www.computerhistory.org/revolution/personal-computers/17/303/1203) | **vừa** |
+| 30 | CHM ghi Macintosh đưa điện toán đồ họa tới đông người dùng hơn, nhưng không nên gọi nó là máy đầu tiên có GUI hay chuột: Alto và Lisa có trước. | [Computer History Museum — *Hello. The Apple Mac @ 40*](https://computerhistory.org/exhibits/hello-the-mac-at-40/), [*Apple Timeline*](https://computerhistory.org/apple-timeline/) | **mạnh** |
+| 31 | Folklore.org ghi phần mềm hệ thống vẫn được hoàn tất gấp sát ngày ra mắt, nên câu chuyện không chỉ là một cá nhân “làm ra Mac” mà có cả đội phần mềm; chỉ nêu các tên cá nhân khi mở thêm nguồn cho từng đóng góp. | [Folklore.org — *The Times They Are A-Changin’*](https://www.folklore.org/StoryView.py?detail=medium&project=Macintosh&sortOrder=Sort+by+Date&story=The_Times_They_Are_A-Changin.txt&topic=The+Launch) | **mạnh** |
+| 32 | Apple Support liệt kê Macintosh 128K hỗ trợ các bản Mac OS từ System 1.0 đến 7.0.1P; đây là danh sách tương thích kỹ thuật, không phải bằng chứng về mức độ phổ biến của từng bản. | [Apple Support — *Macintosh 128K: Technical Specifications*](https://support.apple.com/en-me/112190) | **mạnh** |
+
+> ## Ảnh Commons đã kiểm giấy phép
+
+Mỗi trang file dưới đây đã mở và hiển thị `LicenseShortName` phù hợp: chỉ **Public domain**, **CC0** hoặc **CC BY**. Không dùng các kết quả CC BY-SA đã loại. Trước khi tải, kiểm lại trang file, cắt hoặc bỏ khung có logo Apple/chữ đọc được; không dùng ảnh phim.
+
+| # | File / mô tả | Giấy phép | Trang nguồn và lưu ý |
+|---|---|---|---|
+| I01 | Macintosh 128K, ảnh đã cắt bỏ người | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Macintosh_128k_computer,_January_1984,_by_Bernard_Gotfryd_-_(cropped_to_remove_individual).jpg). Cắt tiếp vùng logo nếu còn thấy. |
+| I02 | Steve Jobs cùng Macintosh, tháng 01/1984 | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Steve_Jobs_and_Macintosh_computer,_January_1984,_by_Bernard_Gotfryd_-_edited.jpg). Chỉ dùng tư liệu người thật; che/cắt logo máy. |
+| I03 | Steve Jobs, 1984, Library of Congress | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Steve_Jobs_(Apple_computer)_(LOC).jpg). Không dùng để minh họa diễn viên. |
+| I04 | Macintosh 128K tại bảo tàng Praha, góc 1 | CC0 1.0 | [Commons](https://commons.wikimedia.org/wiki/File:Apple_Museum_(Prague)_Macintosh_128K_(1984)_-_1.jpg). Cắt logo/nhãn bảo tàng. |
+| I05 | Macintosh 128K tại bảo tàng Praha, góc 2 | CC0 1.0 | [Commons](https://commons.wikimedia.org/wiki/File:Apple_Museum_(Prague)_Macintosh_128K_(1984)_-_2.jpg). Cắt logo/nhãn bảo tàng. |
+| I06 | Xerox Alto tại Heinz Nixdorf MuseumsForum | CC BY 4.0 | [Commons](https://commons.wikimedia.org/wiki/File:Xero_Alto_Computer.jpg). Cắt bảng chú thích bảo tàng. |
+| I07 | Xerox Alto tại Computer History Museum | CC BY 2.0 | [Commons](https://commons.wikimedia.org/wiki/File:Xerox_Alto_full.jpg). Cắt nhãn/biển trong khung. |
+| I08 | Chuột cơ khí, nền trơn | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Computer_mouse-2005.jpg). Không có logo rõ. |
+| I09 | Chuột và bàn phím đen trắng | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:A_computer_mouse_in_black_and_white_with_a_computer_keyboard_behind_it.jpg). Không có logo rõ. |
+| I10 | Minh họa đĩa mềm 3,5 inch | CC BY 4.0 | [Commons](https://commons.wikimedia.org/wiki/File:3.5in_floppy_disk_illustration.svg). Giữ nhãn credit ngoài khung hình. |
+
+> ## Ứng viên B-roll Pexels (chưa tải)
+
+Các trang dưới đây đã mở và ghi `Free`/`Free to use`; ưu tiên bản ngang đã ghi. Chỉ là minh họa trung tính: phải soi clip sheet sau khi tải, bỏ clip có logo hoặc chữ đọc được, và không gắn danh tính Steve Jobs/đội Mac cho người trong stock.
+
+| ID | Mô tả ngắn | Ghi chú bắt buộc | Trang nguồn |
+|---:|---|---|---|
+| 19205382 | Cận cảnh bàn phím và chuột | 16:9; kiểm thiết bị không có logo. | [Pexels](https://www.pexels.com/video/a-close-up-of-a-computer-keyboard-and-mouse-19205382/) |
+| 3592341 | Tay gõ bàn phím desktop | 1920 × 1080, 16:9; làm B-roll gõ phím chung. | [Pexels](https://www.pexels.com/video/person-using-a-computer-keyboard-3592341/) |
+| 4962316 | Chuột và bàn phím trong studio | 16:9; soi màn hình và nhạc cụ, không suy là phòng Mac. | [Pexels](https://www.pexels.com/video/a-man-holding-a-computer-mouse-while-typing-on-keyboard-4962316/) |
+| 6803042 | Tay dùng chuột, nền có bàn phím | Kiểm toàn bộ khung, không logo/chữ. | [Pexels](https://www.pexels.com/video/close-up-view-of-a-person-using-a-computer-mouse-6803042/) |
+| 29542968 | Tay gõ và dùng chuột | Kiểm thương hiệu laptop/màn hình; minh họa trung tính. | [Pexels](https://www.pexels.com/video/focus-hands-typing-on-keyboard-and-using-mouse-29542968/) |
+| 4450059 | Cận cảnh gõ bàn phím | Không để chữ trên màn hình lọt khung. | [Pexels](https://www.pexels.com/video/close-up-shot-of-a-person-typing-on-the-computer-keyboard-4450059/) |
+| 36392564 | Gõ bàn phím trong phòng tối | 16:9; soi bàn phím/màn hình, không để chữ đọc được. | [Pexels](https://www.pexels.com/video/typing-on-keyboard-in-dimly-lit-room-36392564/) |
+| 14314426 | Người dùng máy tính ban đêm | 16:9; không gắn danh tính người thật, kiểm logo thiết bị. | [Pexels](https://www.pexels.com/video/man-typing-on-keyboard-at-night-14314426/) |
+| 7490429 | Toàn cảnh đại học từ trên cao | 16:9; chỉ minh họa trường đại học chung, loại logo/tên trường. | [Pexels](https://www.pexels.com/video/aerial-footage-of-a-university-7490429/) |
+| 5672679 | Drone qua tòa nhà đại học | 16:9; không nói là Xerox PARC hay Apple, soi bảng hiệu. | [Pexels](https://www.pexels.com/video/drone-footage-of-a-college-university-5672679/) |
+
+> ## Đề xuất ảnh AI
+
+Các prompt này chỉ để chủ kênh tạo ảnh; không gọi webhook, không tự tạo ảnh. Với Steve Jobs, chỉ dùng dáng người tóc sẫm, cổ lọ đen, quay lưng hoặc nghiêng quay đi; tham chiếu tư liệu [Commons I02](https://commons.wikimedia.org/wiki/File:Steve_Jobs_and_Macintosh_computer,_January_1984,_by_Bernard_Gotfryd_-_edited.jpg). Không tham chiếu ảnh phim.
+
+## ai_01.png — phòng làm việc PARC minh họa cho CH00
+- Prompt (tiếng Anh): Painterly editorial illustration of a late-1970s research lab, a tall early graphical workstation with blank window-like rectangles and a generic pointing device on the desk, three anonymous engineers seen only from behind, warm fluorescent light, no readable screens, no logos, no faces, clearly an illustration rather than archival photography.
+- Khung: 16:9, 1920x1080
+- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
+- Phong cách: painterly editorial illustration, muted late-1970s palette
+
+## ai_02.png — màn hình pixel art đơn sắc cho CH01/CH05
+- Prompt (tiếng Anh): Monochrome 1984 computer-screen pixel art, a generic black-and-white desktop with a simple arrow cursor and three blank folder-shaped icons, chunky low-resolution pixels, curved CRT glow, no letters, no digits, no logos, no brand-specific interface.
+- Khung: 16:9, 1920x1080
+- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
+- Phong cách: pixel_art, monochrome green-gray CRT phosphor
+
+## ai_03.png — hậu trường sân khấu ngày ra mắt cho CH03
+- Prompt (tiếng Anh): Painterly editorial illustration of a 1984 product-launch backstage, a slim young man in a black turtleneck with dark hair seen from behind holding a plain 3.5-inch floppy disk beside a beige all-in-one computer with its badge area blank, dark curtains and warm stage spill, no recognizable face, no text, no logos; reference pose only: Commons I02.
+- Khung: 16:9, 1920x1080
+- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
+- Phong cách: painterly editorial illustration, subdued theatrical amber and charcoal
+
+## ai_04.png — chuột và con trỏ pixel art cho CH04/CH05
+- Prompt (tiếng Anh): Monochrome 1984 computer-screen pixel art: a generic one-button mouse resting beside a blank CRT, an oversized arrow cursor moving across an empty dotted grid, chunky low-resolution pixels, no letters, no digits, no logos, no recognizable interface.
+- Khung: 16:9, 1920x1080
+- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
+- Phong cách: pixel_art, monochrome warm-gray CRT display
+
+## ai_05.png — cả đội phần mềm trước màn hình nhỏ cho CH07
+- Prompt (tiếng Anh): Painterly editorial illustration of four anonymous early-1980s software makers seen from behind around a compact beige monochrome computer, one pointing at a blank geometric interface, papers and a generic floppy disk on the desk, no identifiable people, no readable text, no logos, clearly not a documentary photograph.
+- Khung: 16:9, 1920x1080
+- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
+- Phong cách: painterly editorial illustration, restrained blue-gray and tungsten palette
+
+> ## Đề xuất vật nối
+
+**Chuột một nút, không logo** là vật nối. CH00 dùng ảnh Commons I08/I09 khi giải thích PARC và thao tác trỏ; CH01 dùng ai_02 như con trỏ pixel; CH03 dùng một chuột đặt cạnh máy trong ảnh minh họa, không gắn thương hiệu; CH04–CH05 trở lại bằng ai_04 và I08; CH07 dùng I09 ở đoạn di sản. Không lặp lại một ảnh quá ba lần; cùng là mô-típ chuột nhưng mỗi lần là ảnh/góc hoặc minh họa khác.
+
+
+# THE SOCIAL NETWORK Ngoài Đời Thật: Facemash 2003
+
+**Kênh:** MIM · **Độ dài mục tiêu:** 9–10 phút · **Lộ trình:** một bản đồ kết nối, mỗi chương ghim thêm một điểm để 
+tách điều bộ phim kể với điều nguồn lịch sử xác nhận.
+
+Quy ước: mỗi dòng là một câu đọc. `‖` là ngừng dài. Phim chỉ được nhắc bằng lời và chữ, không dùng hình phim. Chỉ dùng 
+dữ kiện trong facts.md.
+
+## CH00 · Một trang bị tắt
+
+Ngày 4 tháng 11 năm 2003, báo sinh viên Harvard Crimson đăng một câu chuyện về Facemash, một trang vừa bị tắt sau một 
+cuối tuần gây phản ứng trong trường.
+
+Theo bài báo này, Mark E. Zuckerberg, khi đó đang học Harvard, là người lập trang.
+
+Người vào Facemash thấy hai ảnh thẻ được chọn ngẫu nhiên và chọn người họ cho là “hotter”, nghĩa là hấp dẫn hơn.
+
+Họ cũng có thể chấm ảnh trong cùng một House, tức khu nhà ở của sinh viên tại Harvard.
+
+Đây không phải một mạng xã hội hoàn chỉnh, mà là một giao diện ép bạn chọn giữa hai hình ảnh.
+
+Zuckerberg nói với Crimson rằng ông đã vào các House facebooks trực tuyến để gom ảnh thẻ cho Facemash.
+
+House facebook khi ấy là danh bạ ảnh của một khu nhà, không phải tên của sản phẩm sau này.
+
+Trong tối Chủ nhật, trang bị tắt sau phản ứng trong trường.
+
+Zuckerberg nói với Crimson rằng tới lúc đó Facemash có 450 khách truy cập và ít nhất 22.000 lượt bỏ phiếu.
+
+Hai con số ấy cho thấy tốc độ lan truyền, nhưng không nói việc này được mọi người chấp nhận.
+
+Cảnh mở đầu của bộ phim có một công thức Elo trên cửa sổ.
+
+Elo là cách tính điểm xếp hạng thường dùng khi người chơi hoặc đối thủ được so cặp.
+
+Nhưng mình không tìm được nguồn đáng tin nào xác nhận Facemash thật sự dùng công thức đó, nên đây chỉ là một cảnh phim.
+
+Trên bản đồ kết nối, ghim đầu tiên là một trang so cặp ảnh, được nhiều người mở và nhanh chóng bị tắt.
+
+Từ điểm ghim này, câu chuyện không nên bắt đầu bằng một thiên tài cô độc, mà bằng một hệ thống danh bạ và những người 
+bị đưa vào đó.
+
+## CH01 · Cánh cửa kỷ luật
+
+Facemash không chỉ là một thử nghiệm kỹ thuật nằm yên trong phòng ký túc xá.
+
+Crimson viết năm 2014 rằng trang nhận hơn 20.000 lượt truy cập trong 24 giờ.
+
+Theo bài năm 2014, Facemash thu hút sự chú ý của Administrative Board, cơ quan kỷ luật của Harvard College.
+
+Cùng nguồn đó nói hội đồng không buộc Zuckerberg rời Harvard vì các vi phạm liên quan Facemash.
+
+Một đơn kiện đa quận nộp năm 2024 cũng tóm lược rằng ông bị triệu tập trước cơ quan kỷ luật sau vụ việc.
+
+Đó là mô tả trong hồ sơ tố tụng, không phải phán quyết về nguồn gốc Facebook.
+
+Bài Crimson năm 2003 ghi Zuckerberg nói ông quan tâm đến phần khoa học máy tính của dự án.
+
+Đó là phát biểu đương thời về một phần của dự án.
+
+Nó không cho phép ta biến thành kết luận về động cơ rộng hơn, hay về tính cách của một người thật.
+
+Điểm quan trọng hơn là dữ liệu ảnh không tự nhiên trở thành dữ liệu vô chủ chỉ vì một trang có thể mở được chúng.
+
+Một danh bạ vốn có giới hạn truy cập, khi bị gom lại và đặt vào một trò so sánh, có ý nghĩa khác hẳn.
+
+Trên bản đồ kết nối, ghim thứ hai là cánh cửa kỷ luật: công nghệ, quy tắc trường học và sự đồng ý đã va vào nhau.
+
+Nó nhắc bạn rằng trước khi hỏi một sản phẩm tăng nhanh ra sao, cần hỏi nó đã lấy dữ liệu và đặt con người vào đâu.
+
+## CH02 · Một danh bạ có lối vào
+
+Trước TheFacebook, Harvard đã có danh bạ tìm kiếm cho khóa năm nhất.
+
+Các House cũng giữ những danh bạ ảnh và số điện thoại riêng, thường hạn chế người được truy cập.
+
+Nói cách khác, thông tin đã tồn tại, nhưng nằm trong các ngăn khác nhau.
+
+Ngày 4 tháng 2 năm 2004, TheFacebook đi vào hoạt động từ phòng ký túc xá Kirkland House của Zuckerberg.
+
+Ban đầu, chỉ sinh viên Harvard mới có thể đăng ký.
+
+Một người dùng đầu tiên nói với Crimson rằng địa chỉ email harvard.edu là điều kiện để vào trang.
+
+Điều kiện ấy tạo ra một đường biên đơn giản: bạn thuộc cộng đồng trường thì có một lối vào.
+
+Trong 24 giờ đầu, TheFacebook có 650 người đăng ký, theo Crimson phỏng vấn người dùng đầu tiên.
+
+Trong hai tuần đầu, con số là 4.300 tài khoản.
+
+Nhưng nó cho thấy danh bạ chung đã giải quyết một việc rất cụ thể: tìm và nhận ra người cùng môi trường.
+
+Thay vì so hai ảnh rồi buộc một người thắng, giao diện mới cho mỗi người một hồ sơ trong cùng một mạng.
+
+Sự thay đổi ấy nghe nhỏ, nhưng nó chuyển trọng tâm từ chấm điểm người khác sang dựng một nơi để người quen tìm nhau.
+
+Trên bản đồ kết nối, ghim thứ ba là địa chỉ harvard.edu: một cổng vào biến danh bạ rời rạc thành mạng có ranh giới.
+
+Và khi cổng vào đã rõ, câu hỏi tiếp theo là liệu mô hình đó có đi qua được cổng trường khác hay không.
+
+## CH03 · Đường nối ra ngoài trường
+
+Đến tháng 3 năm 2004, TheFacebook đã có chỗ đứng tại Columbia, Stanford và Yale.
+
+Cùng thời điểm, Crimson ghi người đăng ký thứ 10.000 đã xuất hiện.
+
+Một mạng chỉ hữu ích khi bạn thấy người mình muốn tìm cũng ở trong đó.
+
+Một tính năng đầu tiên tên Coursematch cho phép người dùng xem bạn bè học lớp nào trong học kỳ.
+
+Coursematch nghĩa là ghép theo môn học, tức dùng lịch học như một mối nối có thể nhìn thấy.
+
+Tính năng này cho thấy mạng không chỉ lưu tên và ảnh.
+
+Nó còn tổ chức thông tin quanh những nhịp sinh hoạt rất gần, như một lớp học chung.
+
+Khi Zuckerberg thi cuối kỳ vào tháng 5 năm 2004, TheFacebook đã mở rộng trên toàn quốc và gần 100.000 người dùng, theo 
+Crimson.
+
+Sau kỳ thi, nhóm gồm Zuckerberg, Dustin Moskovitz, Andrew McCollum và các thực tập sinh đi Palo Alto.
+
+Tháng 6 năm 2004, công ty đổi tên thành Facebook.
+
+Các mốc này kể sự tăng trưởng của dịch vụ, chứ không cho ta đọc được suy nghĩ của từng người trong nhóm.
+
+Trên bản đồ kết nối, ghim thứ tư là Coursematch: một đường nối không chỉ qua tên, mà qua việc bạn đang học cùng ai.
+
+Từ đây, mạng đã không còn chỉ là một danh bạ trong một trường, mà là một hạ tầng có thể lặp lại ở nhiều nơi.
+
+## CH04 · Những vai trò đầu tiên
+
+Một câu chuyện công nghệ thường bị kể như thể một người duy nhất tạo ra mọi phần việc.
+
+Những hồ sơ đương thời cho thấy ít nhất các vai trò ban đầu đã đa dạng hơn cách kể ấy.
+
+Hồ sơ Crimson năm 2005 gọi Eduardo Saverin là CFO của Facebook.
+
+CFO là người phụ trách tài chính ở cấp lãnh đạo của một công ty.
+
+Cùng hồ sơ gọi ông là nhà đầu tư sớm và người điều phối quảng cáo quốc gia lẫn địa phương trong giai đoạn đầu.
+
+Theo chính Saverin trong hồ sơ này, Zuckerberg đã tiếp cận ông về TheFacebook trước khi lập trình trang.
+
+Đó là điều Saverin kể về trình tự tiếp cận, không phải một lời giải thích cho toàn bộ quan hệ giữa hai người.
+
+Crimson năm 2014 ghi Saverin không đi Palo Alto cùng nhóm vào tháng 6 năm 2004.
+
+Cùng bài báo nói ông sau đó bị đẩy khỏi công ty.
+
+Các dữ kiện này đủ để xác định một thay đổi vị trí trong câu chuyện doanh nghiệp.
+
+Chúng không đủ để gán cho Saverin hay Zuckerberg một thái độ, động cơ hoặc mức độ trách nhiệm ngoài điều nguồn nói.
+
+Sự thận trọng này không làm câu chuyện kém hấp dẫn.
+
+Nó giữ cho ranh giới giữa hồ sơ và kịch tính không bị xóa bằng một lời kể quá chắc.
+
+Trên bản đồ kết nối, ghim thứ năm là một vai trò: tài chính, quảng cáo và đầu tư sớm cũng là những đường nối tạo nên 
+công ty.
+
+Khi một đường nối thay đổi, điều ta biết chắc là mốc sự kiện, còn phần còn lại phải để nguồn nói đến đâu thì dừng ở đó.
+
+## CH05 · Một tranh chấp có hồ sơ
+
+Cameron Winklevoss, Tyler Winklevoss và Divya Narendra từng tìm Zuckerberg để hỗ trợ xây một mạng xã hội riêng cho 
+sinh viên Harvard, theo Crimson.
+
+Chi tiết này thường được kể lại bằng những câu rất tròn trịa, nhưng hồ sơ pháp lý buộc ta tách cáo buộc với kết luận.
+
+Tòa Phúc thẩm Liên bang Khu vực 9 tóm tắt rằng ba người Winklevoss và Narendra cáo buộc Zuckerberg lấy ý tưởng 
+Facebook của họ.
+
+Đây là cáo buộc của các bên trong vụ kiện.
+
+Nó không phải kết luận thực tế của tòa rằng hành vi đó đã xảy ra đúng như lời cáo buộc.
+
+Phán quyết năm 2011 giữ nguyên việc thực thi thỏa thuận dàn xếp giữa Facebook, hai anh em Winklevoss, Narendra và 
+ConnectU.
+
+Một hồ sơ tòa Massachusetts mô tả phiên hòa giải toàn cầu ngày 22 tháng 2 năm 2008.
+
+Theo hồ sơ đó, Facebook nhận toàn bộ cổ phần ConnectU để đổi lấy 20 triệu đô la tiền mặt và hơn một triệu cổ phiếu 
+Facebook.
+
+Giá trị khi đó được mô tả xấp xỉ 65 triệu đô la.
+
+Những con số này nói về điều khoản được tòa mô tả, không phải thước đo đạo đức cho một bên nào.
+
+Phim có thể rút một tranh chấp thành các cảnh đối đầu dễ nhớ.
+
+Nhưng khi nghe một lời buộc tội trong câu chuyện thật, bạn cần biết nó là lời buộc tội, dàn xếp hay phán quyết.
+
+Ba nhãn đó không thể đổi cho nhau chỉ vì chúng làm nhịp kể nhanh hơn.
+
+Trên bản đồ kết nối, ghim thứ sáu là hồ sơ tòa: nó nối các bên bằng văn bản pháp lý, không bằng một kết luận mà nguồn 
+không đưa ra.
+
+Đó cũng là cách xem một câu chuyện hấp dẫn mà không biến tranh chấp thành một phán quyết tưởng tượng.
+
+## CH06 · Phim không phải hồ sơ
+
+Năm 2010, bộ phim Mạng xã hội ra mắt dưới sự đạo diễn của David Fincher, theo trang Netflix Việt Nam.
+
+Trang này mô tả phim là một phim tiểu sử về sự trỗi dậy của Mark Zuckerberg từ sinh viên Harvard.
+
+Netflix cũng xếp phim vào nhóm chuyển thể từ sách và dựa trên câu chuyện có thật.
+
+Hai nhãn này nói cho bạn điều quan trọng: tác phẩm dùng lịch sử làm chất liệu, nhưng không tự biến mọi cảnh thoại 
+thành tư liệu.
+
+Vai Eduardo trong phim do Andrew Garfield thể hiện.
+
+Vai Mark do Jesse Eisenberg thể hiện.
+
+Đó là thông tin dàn diễn viên, không phải bằng chứng cho diễn biến ngoài đời.
+
+Cảnh mở đầu với bạn gái cũng chưa có nguồn đáng tin nào xác nhận.
+
+Công thức Elo trên cửa sổ và những đối thoại cụ thể trong phim cũng vậy.
+
+Vì vậy, nếu bạn nhớ một khoảnh khắc như thế, cách gọi chính xác nhất là cảnh phim.
+
+Điều này không đòi bạn phải bỏ qua bộ phim.
+
+Nó chỉ đổi cách xem: phim có thể mở một câu hỏi lịch sử, còn báo đương thời và hồ sơ mới giúp kiểm phần trả lời.
+
+Sự phân biệt này đặc biệt quan trọng khi người thật còn sống và một câu thoại có thể bị nhớ như một sự kiện.
+
+Trên bản đồ kết nối, ghim thứ bảy là nhãn “phim”: nó nối người xem với câu chuyện, nhưng không thay thế chứng cứ.
+
+Giờ ta trở lại từ hình ảnh so cặp đầu tiên đến một hệ thống sắp thứ tự có ảnh hưởng rộng hơn nhiều.
+
+## CH07 · Ai đứng ở đầu Feed
+
+Facemash từng để người xem so sánh hai ảnh được chọn ngẫu nhiên.
+
+Nó không phải bằng chứng rằng Facemash dùng Elo, dù bộ phim có một cảnh như vậy.
+
+Sau này, Meta mô tả Feed hiện đại như quá trình sắp thứ tự các bài có thể nhìn thấy để nội dung liên quan hơn lên đầu 
+Feed.
+
+Feed là dòng bài bạn nhìn thấy khi mở ứng dụng.
+
+Theo Meta, bốn phần của quá trình là inventory, signals, predictions và relevancy score.
+
+Inventory là tập các bài có thể được hiện ra.
+
+Signals là những tín hiệu hệ thống quan sát được.
+
+Predictions là dự đoán về điều bạn có thể làm với một bài.
+
+Relevancy score là điểm dùng để sắp thứ tự mức liên quan.
+
+Theo Meta năm 2018, các tín hiệu có thể gồm phản ứng, bình luận và chia sẻ.
+
+Công ty cũng nêu độ mới của bài, dạng liên kết, ảnh hoặc video, cùng người đăng, như các ví dụ về tín hiệu.
+
+Theo chính Meta, trung bình có khoảng 3.000 bài khả dĩ mỗi ngày, trong khi người dùng chỉ lướt khoảng 300 bài.
+
+Đây là mô tả của công ty về hệ thống của họ, nên cần được nghe như lời Meta giải thích, không phải một kiểm toán độc 
+lập.
+
+Trên bản đồ kết nối, ghim cuối là Feed: từ hai ảnh ngẫu nhiên đến một hệ thống chọn thứ tự cho rất nhiều bài có thể 
+xem.
+
+Câu chuyện ngoài đời thật không phải là một đường thẳng mà phim đã đóng dấu xong.
+
+Nó là bản đồ gồm trang báo, hồ sơ tòa, lời kể đương thời và cả những khoảng trống mà ta phải giữ nguyên là khoảng 
+trống.
+
+
+
+
+apply patch
+patch: completed
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-macintosh-1984\factcheck.md
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-macintosh-1984\script.md
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-26-codex-pilot\T6W1-ket-qua.md
+diff --git a/data/long/mim-macintosh-1984/factcheck.md b/data/long/mim-macintosh-1984/factcheck.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..01cd8ee51f5512d618d0799aae03153aa54f982b
+--- /dev/null
++++ b/data/long/mim-macintosh-1984/factcheck.md
+@@ -0,0 +1,19 @@
++# Factcheck — mim-macintosh-1984
++
++Mọi URL dưới đây đã có trong kho dữ kiện đã duyệt của ticket. Các nhận định được gắn “theo” trong lời đọc khi kho xếp độ tin là vừa.
++
++| Khẳng định trong kịch bản | Nguồn |
++|---|---|
++| Steve Jobs dẫn đoàn Apple tới Xerox PARC năm 1979; Smalltalk chạy trên Alto. Alto có GUI với cửa sổ, biểu tượng, menu, con trỏ và chuột; Apple phát triển giao diện Lisa từ đầu dù chịu ảnh hưởng PARC. | [Computer History Museum — Lisa](https://computerhistory.org/blog/the-lisa-apples-most-influential-failure/); [Computer History Museum — Xerox PARC](https://www.computerhistory.org/revolution/story/348) |
++| Lisa ra trước Macintosh và là máy tiêu dùng đầu tiên của Apple có GUI cùng chuột. | [Computer History Museum — Apple Timeline](https://computerhistory.org/apple-timeline/) |
++| Macintosh nguyên bản có 128K RAM; khoảng 16K cho hệ thống, 22K cho màn hình 512 × 342, còn khoảng 90K cho ứng dụng. MacWrite/MacPaint cơ bản hoàn tất vào mùa thu 1983 nhưng cần thử nghiệm thêm. | [Folklore.org — Monkey Lives](https://folklore.org/Monkey_Lives.html) |
++| Macintosh 128K là máy tự chứa, có desktop đồ họa kiểu Alto cải tiến, 128K và giá 2.495 USD. | [Computer History Museum — Apple Macintosh](https://www.computerhistory.org/revolution/personal-computers/17/303/1203) |
++| Quảng cáo “1984” phát ngày 22/01/1984 trong quý ba Super Bowl XVIII; đây là hai ngày trước giới thiệu chính thức 24/01/1984. | [Smithsonian — Apple 1984 ad](https://americanhistory.si.edu/explore/stories/remembering-apples-1984-super-bowl-ad); [Apple Support — Macintosh 128K](https://support.apple.com/en-me/112190) |
++| Chiến dịch Super Bowl dùng quảng cáo 1,5 triệu USD. Smithsonian đánh giá đây là một trong các quảng cáo Super Bowl nổi tiếng nhất. | [Computer History Museum — January 22](https://www.computerhistory.org/tdih/january/22/); [Smithsonian — Apple 1984 ad](https://americanhistory.si.edu/explore/stories/remembering-apples-1984-super-bowl-ad) |
++| Macintosh 128K được giới thiệu 24/01/1984. Hertzfeld kể đội vừa hào hứng vừa lo demo; Jobs đưa đĩa vào máy, và phần demo có tự giới thiệu. Phát biểu “cột mốc thứ ba” là lời Jobs tại sự kiện. | [Apple Support — Macintosh 128K](https://support.apple.com/en-me/112190); [Folklore.org — The Times They Are A-Changin’](https://www.folklore.org/StoryView.py?detail=medium&project=Macintosh&sortOrder=Sort+by+Date&story=The+Times_They_Are_A-Changin.txt&topic=The+Launch); [Folklore.org — Intro Demo](https://folklore.org/Intro_Demo.html) |
++| Macintosh dùng CPU 8 MHz, 128K, kiến trúc 16-bit. Gói 2.495 USD gồm 128KB RAM, microdiskette 400KB, bàn phím, CRT, chuột, tài liệu và đĩa hệ thống; giao máy đầu tháng 01/1984 qua 3.000 đại lý. | [Computer History Museum — Apple Macintosh](https://www.computerhistory.org/revolution/personal-computers/17/303/1203); [Datapro 1984](https://bitsavers.computerhistory.org/pdf/datapro/datapro_reports_70s-90s/Apple/M09-057-10_8411_Apple_Macintosh.pdf) |
++| Theo CHM, Macintosh đưa GUI và chuột tới nhiều người hơn; đây không phải khẳng định máy đầu tiên có GUI/chuột. | [Computer History Museum — Hello, Mac at 40](https://computerhistory.org/exhibits/hello-the-mac-at-40/); [Computer History Museum — Apple Timeline](https://computerhistory.org/apple-timeline/) |
++| Lisa/Mac dùng mô hình WIMP do chuột điều khiển. Macintosh là nỗ lực GUI thứ hai của Apple sau thất bại thương mại Lisa. Màn hình 512 × 342; MacPaint dùng ba vùng đệm ngoài màn hình. | [Computer History Museum — Lisa](https://computerhistory.org/blog/the-lisa-apples-most-influential-failure/); [Computer History Museum — Apple Macintosh](https://www.computerhistory.org/revolution/personal-computers/17/303/1203); [Folklore.org — Monkey Lives](https://folklore.org/Monkey_Lives.html) |
++| Phim Steve Jobs (2015): Netflix VN mô tả ba điểm sự nghiệp; Apple TV VN ghi Danny Boyle, Aaron Sorkin, Michael Fassbender. | [Netflix Việt Nam — Steve Jobs](https://www.netflix.com/vn/title/80049358); [Apple TV Việt Nam — Steve Jobs](https://tv.apple.com/vn/movie/steve-jobs/umc.cmc.20qugmesej4yg33x3e4uev8xh?l=vi) |
++| TIME: phim có ba màn quanh Macintosh, NeXT năm 1988 và iMac năm 1998. Sorkin nói với CNET/CBS rằng không có các đối đầu với cùng sáu người 40 phút trước mỗi lần ra mắt như phim dựng. | [TIME — The Man Who Would Be Jobs](https://time.com/4012824/the-man-who-would-be-jobs/); [CBS News/CNET — 19 questions](https://www.cbsnews.com/news/19-questions-you-might-be-asking-after-seeing-steve-jobs/) |
++| CHM mô tả nhà thiết kế, nghệ sĩ, nhà giáo dục sớm tiếp nhận Mac. Folklore.org ghi phần mềm hệ thống hoàn tất gấp sát ra mắt. Macintosh 128K hỗ trợ System 1.0 đến 7.0.1P. | [Computer History Museum — Apple Macintosh](https://www.computerhistory.org/revolution/personal-computers/17/303/1203); [Folklore.org — The Times They Are A-Changin’](https://www.folklore.org/StoryView.py?detail=medium&project=Macintosh&sortOrder=Sort+by+Date&story=The+Times_They_Are_A-Changin.txt&topic=The+Launch); [Apple Support — Macintosh 128K](https://support.apple.com/en-me/112190) |
+diff --git a/data/long/mim-macintosh-1984/script.md b/data/long/mim-macintosh-1984/script.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..22c70cd73a302a21986263c7bf402d234d94911d
+--- /dev/null
++++ b/data/long/mim-macintosh-1984/script.md
+@@ -0,0 +1,295 @@
++# STEVE JOBS 1984: Macintosh biết nói bằng hình
++
++## CH00 · Cú nhấp đã được nhìn thấy
++
++Ngày 24 tháng 01 năm 1984, Steve Jobs giới thiệu Macintosh, và trong vài phút bạn sẽ thấy vì sao một chiếc chuột một nút lại làm máy tính trở nên dễ nhìn hơn.
++
++Điều lạ là chiếc máy không mở màn bằng một dòng lệnh dài, mà có lúc tự giới thiệu trong phần trình diễn đã chuẩn bị cho ngày ra mắt.
++
++Dòng lệnh là nơi bạn gõ chữ để ra lệnh cho máy.
++
++Còn giao diện đồ họa là nơi cửa sổ, biểu tượng và con trỏ biến thao tác thành thứ mắt bạn có thể lần theo.
++
++Con trỏ là mũi tên trên màn hình, còn chuột một nút là vật nhỏ để đưa mũi tên ấy đi.
++
++Năm 1979, một đoàn Apple do Jobs dẫn đầu đã tới Xerox PARC và xem Smalltalk chạy trên máy Alto.
++
++Tại PARC, Alto đã dùng cửa sổ, biểu tượng, menu và con trỏ, được điều khiển bằng chuột.
++
++Nhưng ảnh hưởng không phải là chép nguyên một chiếc máy.
++
++Các kỹ sư Apple phát triển giao diện cho Lisa từ đầu, dù chịu ảnh hưởng rõ từ PARC.
++
++Lisa ra trước Macintosh, và theo Computer History Museum, đó là máy tiêu dùng đầu tiên của Apple có giao diện đồ họa cùng chuột.
++
++Ta sẽ đi từ chuyến thăm PARC, qua bài toán bộ nhớ 128K, quảng cáo Super Bowl, rồi bước lên sân khấu ngày 24 tháng 01.
++
++Sau đó là câu chuyện chiếc chuột, bộ phim Steve Jobs năm 2015, và điều còn lại khi màn hình bắt đầu nói bằng hình.
++
++Nhưng nếu ý tưởng đã được thấy từ 1979, điều gì khiến Macintosh 1984 trở thành bước ngoặt mà nhiều người nhớ đến?
++
++## CH01 · Chín mươi K để làm việc
++
++Macintosh nguyên bản chỉ có 128K RAM, tức một phần tám megabyte theo Andy Hertzfeld.
++
++RAM là bộ nhớ làm việc tạm thời, nơi chương trình giữ thứ nó đang cần ngay lúc này.
++
++Con số nghe nhỏ khi nhìn từ hiện tại, nhưng nó quyết định từng khoảng trống trong chiếc máy năm 1984.
++
++Khoảng 16K được dành cho hệ thống.
++
++Khoảng 22K nữa dành cho màn hình đen trắng 512 nhân 342 điểm ảnh.
++
++Điểm ảnh là những chấm rất nhỏ ghép thành hình trên màn hình.
++
++Sau hai phần ấy, ứng dụng chỉ còn khoảng 90K để thở.
++
++Vì vậy, một thao tác tưởng đơn giản như vẽ hay soạn thảo lại phải được cân từng mẩu bộ nhớ.
++
++Đến mùa thu 1983, MacWrite và MacPaint về cơ bản đã hoàn tất tính năng.
++
++MacWrite là chương trình soạn văn bản, còn MacPaint là chương trình vẽ bằng chuột.
++
++Nhưng cả hai vẫn cần thử nghiệm nhiều trong tình trạng thiếu bộ nhớ.
++
++Một con trỏ chạy theo chuột không chỉ là hiệu ứng đẹp mắt.
++
++Nó phải có chỗ trong bộ nhớ, cùng cửa sổ, biểu tượng và phần việc người dùng đang làm.
++
++Computer History Museum mô tả Macintosh 128K là một máy tự chứa với desktop đồ họa kiểu Alto đã được cải tiến.
++
++Desktop ở đây là mặt bàn trên màn hình, nơi các biểu tượng và cửa sổ được đặt cạnh nhau.
++
++Máy có giá 2.495 USD.
++
++Giá đó gồm một lời hứa: thay vì nhớ câu lệnh, bạn có thể nhìn thấy việc mình sắp làm.
++
++Lời hứa ấy vẫn chưa đủ nếu không có phần mềm chạy mượt trong giới hạn 90K.
++
++Đó là lý do câu chuyện Macintosh không chỉ có Jobs ở sân khấu.
++
++Nó còn có một đội phần mềm đang thử từng chi tiết, để một lần nhấp chuột không biến thành lúc máy đứng lại.
++
++## CH02 · Quảng cáo đi trước chiếc máy
++
++Trước khi Macintosh được giới thiệu chính thức, khán giả truyền hình đã thấy một tín hiệu khác.
++
++Ngày 22 tháng 01 năm 1984, quảng cáo truyền hình mang tên 1984 được phát trong quý ba của Super Bowl XVIII.
++
++Đó là hai ngày trước ngày giới thiệu Macintosh 24 tháng 01 năm 1984.
++
++Vì vậy, đây là mốc phát sóng quảng cáo, không phải ngày bán lẻ của máy.
++
++Computer History Museum ghi chiến dịch Super Bowl dùng một quảng cáo trị giá 1,5 triệu USD.
++
++Một con số lớn không tự chứng minh sản phẩm sẽ thành công.
++
++Nó chỉ cho thấy Apple đã chọn một sân khấu đắt tiền để đặt câu hỏi về cách người ta nhìn máy tính.
++
++Smithsonian gọi quảng cáo này là một trong những quảng cáo Super Bowl nổi tiếng nhất.
++
++Đó là đánh giá của bảo tàng, chứ không phải số đo doanh số Macintosh.
++
++Điểm đáng chú ý là nhịp kể đi trước vật thể.
++
++Khán giả được gợi cảm giác một trật tự cũ sắp bị phá vỡ, rồi hai ngày sau mới gặp chiếc máy thật.
++
++Một chiếc chuột một nút không xuất hiện như một món phụ kiện vô danh.
++
++Nó là phần bàn tay của lời hứa: bạn di chuyển, con trỏ phản hồi, và màn hình trả lại hình ảnh.
++
++Quảng cáo có thể làm ký ức bùng lên nhanh hơn tài liệu kỹ thuật.
++
++Nhưng nó không thay thế được câu hỏi khó hơn.
++
++Khi chiếc Macintosh nhỏ thật sự bước ra sân khấu, nó có làm được điều mà lời hứa vừa dựng lên không?
++
++## CH03 · Ngày chiếc máy tự giới thiệu
++
++Apple Support ghi Macintosh 128K được giới thiệu ngày 24 tháng 01 năm 1984.
++
++Andy Hertzfeld gọi đó là ngày lớn, khi đội ngũ vừa hào hứng vừa lo về phần mềm demo chuẩn bị gấp.
++
++Demo là phần trình diễn được soạn để cho người xem thấy máy làm được gì.
++
++Trong hồi ức về buổi ra mắt, Jobs đưa một đĩa vào Macintosh.
++
++Máy có phần trình diễn tự giới thiệu, nhưng ta không cần bịa lại lời thoại của nó để hiểu khoảnh khắc ấy.
++
++Một chiếc hộp nhỏ trên sân khấu đã được giao nhiệm vụ nói bằng chính màn hình của mình.
++
++Theo cùng hồi ức, Jobs gọi Macintosh là cột mốc ngành thứ ba sau Apple II và IBM PC.
++
++Đó là phát biểu của Jobs tại sự kiện, không phải kết luận độc lập về toàn bộ lịch sử máy tính.
++
++Sự phân biệt này quan trọng vì một buổi ra mắt luôn có phần sân khấu.
++
++Sân khấu muốn bạn nhớ khoảnh khắc.
++
++Còn lịch sử cần cho biết ai đã làm gì, vào lúc nào, và điều nào vẫn chỉ là lời tự đánh giá.
++
++Chiếc đĩa mềm 3,5 inch trong tay người trình diễn cũng nhắc rằng phần mềm phải được đưa vào máy trước khi màn hình làm điều kỳ diệu.
++
++Con chuột một nút đặt cạnh máy không cần lời giới thiệu dài.
++
++Nó cho người dùng một cử chỉ rất ngắn: trỏ vào thứ đang thấy, rồi bấm.
++
++Sau tiếng vỗ tay, câu hỏi đổi hướng.
++
++Không còn là quảng cáo đã gây chú ý thế nào.
++
++Câu hỏi là: bên trong chiếc máy 128K ấy có những gì để cử chỉ bấm chuột trở thành một cách dùng máy tính thực sự?
++
++## CH04 · Cái giá của một mặt bàn
++
++Theo Computer History Museum, Macintosh dùng bộ vi xử lý 8 MHz, bộ nhớ bán dẫn 128K và kiến trúc 16-bit.
++
++Bộ vi xử lý là phần thực hiện các phép tính và điều khiển trong máy.
++
++MHz là đơn vị nhịp hoạt động, còn 16-bit mô tả cách kiến trúc xử lý dữ liệu trong bối cảnh kỹ thuật ấy.
++
++Danh mục Datapro năm 1984 ghi giá cơ bản 2.495 USD.
++
++Gói đó gồm 128KB RAM, ổ microdiskette 400KB, bàn phím, CRT, chuột, tài liệu và đĩa hệ thống.
++
++CRT là loại màn hình ống tia âm cực, chiếc màn hình dày phổ biến vào thời đó.
++
++Microdiskette là đĩa mềm nhỏ để mang phần mềm hoặc dữ liệu.
++
++Danh mục này cũng ghi đợt giao máy đầu tiên là tháng 01 năm 1984.
++
++Máy có sẵn qua 3.000 đại lý ủy quyền trên thế giới, theo Datapro.
++
++Đó là dữ kiện về kênh phân phối, không phải lời khẳng định rằng mọi nơi đều đón nhận nó như nhau.
++
++Theo Computer History Museum, Macintosh giúp đưa cách dùng máy bằng giao diện đồ họa và chuột tới nhiều người hơn.
++
++Đây là nhận định lịch sử của bảo tàng.
++
++Nó không nói Macintosh là máy đầu tiên có chuột, vì Alto và Lisa đã có trước.
++
++Điều Macintosh đóng gói là một mặt bàn có thể nhìn thấy, một con trỏ có thể di chuyển, và một mức giá kèm đường phân phối cụ thể.
++
++Chuột một nút vì vậy không đứng riêng lẻ.
++
++Nó là cửa vào của cả gói phần cứng, phần mềm và cách trình bày mới.
++
++Nhưng nhìn thấy giao diện chưa có nghĩa mọi tác vụ đều nhẹ nhàng.
++
++Ở chương tiếp theo, chính một chương trình vẽ cho thấy cái giá bộ nhớ của một màn hình tưởng rất đơn giản.
++
++## CH05 · Chuột không chỉ để chỉ
++
++Computer History Museum mô tả giao diện Lisa và Mac bằng cửa sổ, biểu tượng, menu và con trỏ.
++
++Người ta thường gọi tắt mô hình ấy là WIMP.
++
++WIMP không phải tên một sản phẩm, mà là chữ viết tắt của bốn thành phần vừa nói.
++
++Chuột điều khiển con trỏ đi qua những thành phần ấy.
++
++Bạn không cần nhớ một chuỗi lệnh để mở một việc quen thuộc.
++
++Bạn nhìn biểu tượng, đưa chuột một nút tới đó, rồi bấm.
++
++Macintosh là nỗ lực thứ hai của Apple cho máy cá nhân dựa trên giao diện đồ họa, sau thất bại thương mại của Lisa, theo Computer History Museum.
++
++Máy Macintosh nguyên bản có màn hình đen trắng 512 nhân 342 điểm ảnh, theo Andy Hertzfeld.
++
++Trên diện tích nhỏ đó, MacPaint cần ba vùng đệm ngoài màn hình.
++
++Mỗi vùng đệm có kích thước bằng toàn bộ màn hình.
++
++Vùng đệm là nơi chương trình giữ một bản sao hình ảnh để tính toán trước khi bạn thấy kết quả.
++
++Chi tiết ấy cho thấy giới hạn bộ nhớ gây áp lực ra sao.
++
++Nhưng nó không cho phép ta nói một mình MacPaint quyết định toàn bộ thiết kế của Macintosh.
++
++Một giao diện nhìn đơn giản thường che bên dưới rất nhiều thỏa hiệp kỹ thuật.
++
++Con trỏ mũi tên đi qua màn hình đen trắng có vẻ bình thường với chúng ta hôm nay.
++
++Năm 1984, nó phải cùng tồn tại với một bức vẽ, một văn bản, hệ thống và phần bộ nhớ ít ỏi còn lại.
++
++Đó là bước ngoặt của Macintosh: không phát minh ra mọi thành phần từ số không, mà ép chúng cùng hoạt động trong một chiếc máy hướng tới người dùng.
++
++Và khi câu chuyện được kể lại bằng phim, chính những thỏa hiệp chậm và nhiều người này rất dễ bị nén thành một cuộc đối đầu gọn gàng.
++
++## CH06 · Bộ phim và khoảng cách thật
++
++Phim Steve Jobs năm 2015 có tên hiển thị tại Việt Nam là Steve Jobs.
++
++Netflix Việt Nam mô tả phim tập trung vào ba điểm quan trọng trong sự nghiệp người tạo ra Mac.
++
++Apple TV Việt Nam ghi Danny Boyle đạo diễn, Aaron Sorkin viết kịch bản và Michael Fassbender đóng Steve Jobs.
++
++Đó là thông tin về một tác phẩm điện ảnh, không phải bằng chứng cho từng cuộc nói chuyện ngoài đời.
++
++TIME phỏng vấn Sorkin và ghi phim được cấu trúc thành ba màn quanh ba lần ra mắt.
++
++Ba lần ấy là Macintosh, NeXT năm 1988 và iMac năm 1998.
++
++Phim tập trung vào hỗn loạn hậu trường trước các buổi ra mắt.
++
++Kịch bản như vậy có thể tạo căng thẳng rất hiệu quả.
++
++Nhưng Sorkin nói với CNET và CBS rằng, theo hiểu biết của ông, Jobs không có những cuộc đối đầu với cùng sáu người chỉ 40 phút trước mỗi buổi ra mắt.
++
++Vì thế, không nên đọc các đối thoại hậu trường trong phim như hồ sơ lịch sử.
++
++Ta vẫn có thể xem phim để cảm nhận sức ép của một buổi ra mắt.
++
++Sau đó, ta trở về với tài liệu: chuyến thăm PARC năm 1979, bộ nhớ 128K, quảng cáo ngày 22 tháng 01, và sân khấu ngày 24 tháng 01 năm 1984.
++
++Chuột một nút cũng nhắc ta về khác biệt này.
++
++Trong phim, một vật nhỏ có thể thành đạo cụ cho xung đột.
++
++Ngoài đời, nó là một phần của giao diện, của phần mềm, của bộ nhớ và của cả đội làm cho thao tác bấm có nghĩa.
++
++Khi giữ được khoảng cách ấy, câu chuyện không bớt kịch tính.
++
++Nó chỉ công bằng hơn với người thật và với những chi tiết mà nguồn chưa xác nhận.
++
++## CH07 · Điều còn lại trên màn hình
++
++Theo Computer History Museum, các nhà thiết kế, nghệ sĩ và nhà giáo dục đã sớm tiếp nhận Macintosh.
++
++Đây là mô tả của bảo tàng, không phải thống kê toàn thị trường.
++
++Cũng theo Computer History Museum, Macintosh đưa điện toán đồ họa tới đông người dùng hơn.
++
++Điều đó không biến nó thành máy đầu tiên có giao diện đồ họa hay chuột.
++
++Alto có trước.
++
++Lisa có trước.
++
++Giá trị của mốc 1984 nằm ở cách nhiều phần đã tồn tại được ghép thành một trải nghiệm có thể đem ra thị trường.
++
++Bạn nhìn một biểu tượng.
++
++Bạn đưa con trỏ tới đó bằng chuột một nút.
++
++Bạn bấm, và chiếc máy trả lời bằng thay đổi trên màn hình.
++
++Folklore.org ghi phần mềm hệ thống vẫn được hoàn tất gấp sát ngày ra mắt.
++
++Vì vậy, câu chuyện không chỉ là một cá nhân làm ra Macintosh.
++
++Nó có cả đội phần mềm, cùng những giới hạn bộ nhớ và những bản demo phải kịp chạy.
++
++Apple Support liệt kê Macintosh 128K hỗ trợ các bản Mac OS từ System 1.0 đến 7.0.1P.
++
++Đó là danh sách tương thích kỹ thuật, không phải bằng chứng về mức độ phổ biến của từng bản.
++
++Điều đáng giữ lại không phải huyền thoại rằng Jobs tự mình phát minh ra tất cả.
++
++Đó là một bước ngoặt năm 1984, khi cách dùng máy bằng hình, con trỏ và chuột được đưa tới gần nhiều người hơn.
++
++Và câu hỏi treo từ đầu giờ có thể trả lời như thế này.
++
++Macintosh đáng nhớ không vì nó xuất hiện từ khoảng trống.
++
++Nó đáng nhớ vì biến một chuỗi ý tưởng, thử nghiệm và lao động của nhiều người thành một cử chỉ mà bạn có thể hiểu chỉ bằng một cú nhấp.
+diff --git a/docs/pm/tickets/2026-10-26-codex-pilot/T6W1-ket-qua.md b/docs/pm/tickets/2026-10-26-codex-pilot/T6W1-ket-qua.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..5963b5d460a791cc13ec1051c3a4b055a0f27d78
+--- /dev/null
++++ b/docs/pm/tickets/2026-10-26-codex-pilot/T6W1-ket-qua.md
+@@ -0,0 +1,3 @@
++# Báo cáo T6W1 — mim-macintosh-1984
++
++Đang thực hiện các cổng kiểm bắt buộc.
+
+codex
+Mình đã hoàn tất bản thảo 8 chương và factcheck chỉ dùng kho đã duyệt. Tiếp theo mình chạy lần lượt bộ tách lời đọc, lint nghiêm ngặt và cổng tổng; nếu phát hiện câu quá dài hay điều kiện định dạng, mình sẽ sửa ngay trong hai file được ticket cho phép.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; python motion/long/script_lines.py mim-macintosh-1984" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 179ms:
+ch00: 13 câu, 289 âm tiết, ~1.4 phút  Cú nhấp đã được nhìn thấy
+ch01: 20 câu, 320 âm tiết, ~1.6 phút  Chín mươi K để làm việc
+ch02: 16 câu, 272 âm tiết, ~1.4 phút  Quảng cáo đi trước chiếc máy
+ch03: 17 câu, 296 âm tiết, ~1.5 phút  Ngày chiếc máy tự giới thiệu
+ch04: 18 câu, 309 âm tiết, ~1.5 phút  Cái giá của một mặt bàn
+ch05: 18 câu, 324 âm tiết, ~1.6 phút  Chuột không chỉ để chỉ
+ch06: 17 câu, 306 âm tiết, ~1.5 phút  Bộ phim và khoảng cách thật
+ch07: 20 câu, 305 âm tiết, ~1.5 phút  Điều còn lại trên màn hình
+TỔNG 139 câu, 2421 âm tiết
+
+apply patch
+patch: completed
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-macintosh-1984\script.md
+diff --git a/data/long/mim-macintosh-1984/factcheck.md b/data/long/mim-macintosh-1984/factcheck.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..01cd8ee51f5512d618d0799aae03153aa54f982b
+--- /dev/null
++++ b/data/long/mim-macintosh-1984/factcheck.md
+@@ -0,0 +1,19 @@
++# Factcheck — mim-macintosh-1984
++
++Mọi URL dưới đây đã có trong kho dữ kiện đã duyệt của ticket. Các nhận định được gắn “theo” trong lời đọc khi kho xếp độ tin là vừa.
++
++| Khẳng định trong kịch bản | Nguồn |
++|---|---|
++| Steve Jobs dẫn đoàn Apple tới Xerox PARC năm 1979; Smalltalk chạy trên Alto. Alto có GUI với cửa sổ, biểu tượng, menu, con trỏ và chuột; Apple phát triển giao diện Lisa từ đầu dù chịu ảnh hưởng PARC. | [Computer History Museum — Lisa](https://computerhistory.org/blog/the-lisa-apples-most-influential-failure/); [Computer History Museum — Xerox PARC](https://www.computerhistory.org/revolution/story/348) |
++| Lisa ra trước Macintosh và là máy tiêu dùng đầu tiên của Apple có GUI cùng chuột. | [Computer History Museum — Apple Timeline](https://computerhistory.org/apple-timeline/) |
++| Macintosh nguyên bản có 128K RAM; khoảng 16K cho hệ thống, 22K cho màn hình 512 × 342, còn khoảng 90K cho ứng dụng. MacWrite/MacPaint cơ bản hoàn tất vào mùa thu 1983 nhưng cần thử nghiệm thêm. | [Folklore.org — Monkey Lives](https://folklore.org/Monkey_Lives.html) |
++| Macintosh 128K là máy tự chứa, có desktop đồ họa kiểu Alto cải tiến, 128K và giá 2.495 USD. | [Computer History Museum — Apple Macintosh](https://www.computerhistory.org/revolution/personal-computers/17/303/1203) |
++| Quảng cáo “1984” phát ngày 22/01/1984 trong quý ba Super Bowl XVIII; đây là hai ngày trước giới thiệu chính thức 24/01/1984. | [Smithsonian — Apple 1984 ad](https://americanhistory.si.edu/explore/stories/remembering-apples-1984-super-bowl-ad); [Apple Support — Macintosh 128K](https://support.apple.com/en-me/112190) |
++| Chiến dịch Super Bowl dùng quảng cáo 1,5 triệu USD. Smithsonian đánh giá đây là một trong các quảng cáo Super Bowl nổi tiếng nhất. | [Computer History Museum — January 22](https://www.computerhistory.org/tdih/january/22/); [Smithsonian — Apple 1984 ad](https://americanhistory.si.edu/explore/stories/remembering-apples-1984-super-bowl-ad) |
++| Macintosh 128K được giới thiệu 24/01/1984. Hertzfeld kể đội vừa hào hứng vừa lo demo; Jobs đưa đĩa vào máy, và phần demo có tự giới thiệu. Phát biểu “cột mốc thứ ba” là lời Jobs tại sự kiện. | [Apple Support — Macintosh 128K](https://support.apple.com/en-me/112190); [Folklore.org — The Times They Are A-Changin’](https://www.folklore.org/StoryView.py?detail=medium&project=Macintosh&sortOrder=Sort+by+Date&story=The+Times_They_Are_A-Changin.txt&topic=The+Launch); [Folklore.org — Intro Demo](https://folklore.org/Intro_Demo.html) |
++| Macintosh dùng CPU 8 MHz, 128K, kiến trúc 16-bit. Gói 2.495 USD gồm 128KB RAM, microdiskette 400KB, bàn phím, CRT, chuột, tài liệu và đĩa hệ thống; giao máy đầu tháng 01/1984 qua 3.000 đại lý. | [Computer History Museum — Apple Macintosh](https://www.computerhistory.org/revolution/personal-computers/17/303/1203); [Datapro 1984](https://bitsavers.computerhistory.org/pdf/datapro/datapro_reports_70s-90s/Apple/M09-057-10_8411_Apple_Macintosh.pdf) |
++| Theo CHM, Macintosh đưa GUI và chuột tới nhiều người hơn; đây không phải khẳng định máy đầu tiên có GUI/chuột. | [Computer History Museum — Hello, Mac at 40](https://computerhistory.org/exhibits/hello-the-mac-at-40/); [Computer History Museum — Apple Timeline](https://computerhistory.org/apple-timeline/) |
++| Lisa/Mac dùng mô hình WIMP do chuột điều khiển. Macintosh là nỗ lực GUI thứ hai của Apple sau thất bại thương mại Lisa. Màn hình 512 × 342; MacPaint dùng ba vùng đệm ngoài màn hình. | [Computer History Museum — Lisa](https://computerhistory.org/blog/the-lisa-apples-most-influential-failure/); [Computer History Museum — Apple Macintosh](https://www.computerhistory.org/revolution/personal-computers/17/303/1203); [Folklore.org — Monkey Lives](https://folklore.org/Monkey_Lives.html) |
++| Phim Steve Jobs (2015): Netflix VN mô tả ba điểm sự nghiệp; Apple TV VN ghi Danny Boyle, Aaron Sorkin, Michael Fassbender. | [Netflix Việt Nam — Steve Jobs](https://www.netflix.com/vn/title/80049358); [Apple TV Việt Nam — Steve Jobs](https://tv.apple.com/vn/movie/steve-jobs/umc.cmc.20qugmesej4yg33x3e4uev8xh?l=vi) |
++| TIME: phim có ba màn quanh Macintosh, NeXT năm 1988 và iMac năm 1998. Sorkin nói với CNET/CBS rằng không có các đối đầu với cùng sáu người 40 phút trước mỗi lần ra mắt như phim dựng. | [TIME — The Man Who Would Be Jobs](https://time.com/4012824/the-man-who-would-be-jobs/); [CBS News/CNET — 19 questions](https://www.cbsnews.com/news/19-questions-you-might-be-asking-after-seeing-steve-jobs/) |
++| CHM mô tả nhà thiết kế, nghệ sĩ, nhà giáo dục sớm tiếp nhận Mac. Folklore.org ghi phần mềm hệ thống hoàn tất gấp sát ra mắt. Macintosh 128K hỗ trợ System 1.0 đến 7.0.1P. | [Computer History Museum — Apple Macintosh](https://www.computerhistory.org/revolution/personal-computers/17/303/1203); [Folklore.org — The Times They Are A-Changin’](https://www.folklore.org/StoryView.py?detail=medium&project=Macintosh&sortOrder=Sort+by+Date&story=The+Times_They_Are_A-Changin.txt&topic=The+Launch); [Apple Support — Macintosh 128K](https://support.apple.com/en-me/112190) |
+diff --git a/data/long/mim-macintosh-1984/script.md b/data/long/mim-macintosh-1984/script.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..6a57ca498d8fa9043e1b1256834c8decdf9c7d56
+--- /dev/null
++++ b/data/long/mim-macintosh-1984/script.md
+@@ -0,0 +1,281 @@
++# STEVE JOBS 1984: Macintosh biết nói bằng hình
++
++## CH00 · Cú nhấp đã được nhìn thấy
++
++Ngày 24 tháng 01 năm 1984, Steve Jobs giới thiệu Macintosh, và trong vài phút bạn sẽ thấy vì sao một chiếc chuột một nút lại làm máy tính trở nên dễ nhìn hơn.
++
++Điều lạ là chiếc máy không mở màn bằng một dòng lệnh dài, mà có lúc tự giới thiệu trong phần trình diễn đã chuẩn bị cho ngày ra mắt.
++
++Giao diện đồ họa là nơi cửa sổ, biểu tượng và con trỏ, tức mũi tên do chuột một nút điều khiển, biến thao tác thành thứ mắt bạn có thể lần theo.
++
++Năm 1979, một đoàn Apple do Jobs dẫn đầu đã tới Xerox PARC và xem Smalltalk chạy trên máy Alto.
++
++Tại PARC, Alto đã dùng cửa sổ, biểu tượng, menu và con trỏ, được điều khiển bằng chuột.
++
++Nhưng ảnh hưởng không phải là chép nguyên một chiếc máy.
++
++Các kỹ sư Apple phát triển giao diện cho Lisa từ đầu, dù chịu ảnh hưởng rõ từ PARC.
++
++Ta sẽ đi từ chuyến thăm PARC, qua bài toán bộ nhớ 128K, quảng cáo Super Bowl, rồi bước lên sân khấu ngày 24 tháng 01.
++
++Sau đó là câu chuyện chiếc chuột, bộ phim Steve Jobs năm 2015, và điều còn lại khi màn hình bắt đầu nói bằng hình.
++
++Nhưng nếu ý tưởng đã được thấy từ 1979, điều gì khiến Macintosh 1984 trở thành bước ngoặt mà nhiều người nhớ đến?
++
++## CH01 · Chín mươi K để làm việc
++
++Macintosh nguyên bản chỉ có 128K RAM, tức một phần tám megabyte theo Andy Hertzfeld.
++
++RAM là bộ nhớ làm việc tạm thời, nơi chương trình giữ thứ nó đang cần ngay lúc này.
++
++Con số nghe nhỏ khi nhìn từ hiện tại, nhưng nó quyết định từng khoảng trống trong chiếc máy năm 1984.
++
++Khoảng 16K được dành cho hệ thống.
++
++Khoảng 22K nữa dành cho màn hình đen trắng 512 nhân 342 điểm ảnh.
++
++Điểm ảnh là những chấm rất nhỏ ghép thành hình trên màn hình.
++
++Sau hai phần ấy, ứng dụng chỉ còn khoảng 90K để thở.
++
++Vì vậy, một thao tác tưởng đơn giản như vẽ hay soạn thảo lại phải được cân từng mẩu bộ nhớ.
++
++Đến mùa thu 1983, MacWrite và MacPaint về cơ bản đã hoàn tất tính năng.
++
++MacWrite là chương trình soạn văn bản, còn MacPaint là chương trình vẽ bằng chuột.
++
++Nhưng cả hai vẫn cần thử nghiệm nhiều trong tình trạng thiếu bộ nhớ.
++
++Một con trỏ chạy theo chuột không chỉ là hiệu ứng đẹp mắt.
++
++Nó phải có chỗ trong bộ nhớ, cùng cửa sổ, biểu tượng và phần việc người dùng đang làm.
++
++Computer History Museum mô tả Macintosh 128K là một máy tự chứa với desktop đồ họa kiểu Alto đã được cải tiến.
++
++Desktop ở đây là mặt bàn trên màn hình, nơi các biểu tượng và cửa sổ được đặt cạnh nhau.
++
++Máy có giá 2.495 USD.
++
++Giá đó gồm một lời hứa: thay vì nhớ câu lệnh, bạn có thể nhìn thấy việc mình sắp làm.
++
++Lời hứa ấy vẫn chưa đủ nếu không có phần mềm chạy mượt trong giới hạn 90K.
++
++Đó là lý do câu chuyện Macintosh không chỉ có Jobs ở sân khấu.
++
++Nó còn có một đội phần mềm đang thử từng chi tiết, để một lần nhấp chuột không biến thành lúc máy đứng lại.
++
++## CH02 · Quảng cáo đi trước chiếc máy
++
++Trước khi Macintosh được giới thiệu chính thức, khán giả truyền hình đã thấy một tín hiệu khác.
++
++Ngày 22 tháng 01 năm 1984, quảng cáo truyền hình mang tên 1984 được phát trong quý ba của Super Bowl XVIII.
++
++Đó là hai ngày trước ngày giới thiệu Macintosh 24 tháng 01 năm 1984.
++
++Vì vậy, đây là mốc phát sóng quảng cáo, không phải ngày bán lẻ của máy.
++
++Computer History Museum ghi chiến dịch Super Bowl dùng một quảng cáo trị giá 1,5 triệu USD.
++
++Một con số lớn không tự chứng minh sản phẩm sẽ thành công.
++
++Nó chỉ cho thấy Apple đã chọn một sân khấu đắt tiền để đặt câu hỏi về cách người ta nhìn máy tính.
++
++Smithsonian gọi quảng cáo này là một trong những quảng cáo Super Bowl nổi tiếng nhất.
++
++Đó là đánh giá của bảo tàng, chứ không phải số đo doanh số Macintosh.
++
++Điểm đáng chú ý là nhịp kể đi trước vật thể.
++
++Khán giả được gợi cảm giác một trật tự cũ sắp bị phá vỡ, rồi hai ngày sau mới gặp chiếc máy thật.
++
++Một chiếc chuột một nút không xuất hiện như một món phụ kiện vô danh.
++
++Nó là phần bàn tay của lời hứa: bạn di chuyển, con trỏ phản hồi, và màn hình trả lại hình ảnh.
++
++Quảng cáo có thể làm ký ức bùng lên nhanh hơn tài liệu kỹ thuật.
++
++Nhưng nó không thay thế được câu hỏi khó hơn.
++
++Khi chiếc Macintosh nhỏ thật sự bước ra sân khấu, nó có làm được điều mà lời hứa vừa dựng lên không?
++
++## CH03 · Ngày chiếc máy tự giới thiệu
++
++Apple Support ghi Macintosh 128K được giới thiệu ngày 24 tháng 01 năm 1984.
++
++Andy Hertzfeld gọi đó là ngày lớn, khi đội ngũ vừa hào hứng vừa lo về phần mềm demo chuẩn bị gấp.
++
++Demo là phần trình diễn được soạn để cho người xem thấy máy làm được gì.
++
++Trong hồi ức về buổi ra mắt, Jobs đưa một đĩa vào Macintosh.
++
++Máy có phần trình diễn tự giới thiệu, nhưng ta không cần bịa lại lời thoại của nó để hiểu khoảnh khắc ấy.
++
++Một chiếc hộp nhỏ trên sân khấu đã được giao nhiệm vụ nói bằng chính màn hình của mình.
++
++Theo cùng hồi ức, Jobs gọi Macintosh là cột mốc ngành thứ ba sau Apple II và IBM PC.
++
++Đó là phát biểu của Jobs tại sự kiện, không phải kết luận độc lập về toàn bộ lịch sử máy tính.
++
++Sự phân biệt này quan trọng vì một buổi ra mắt luôn có phần sân khấu.
++
++Sân khấu muốn bạn nhớ khoảnh khắc.
++
++Còn lịch sử cần cho biết ai đã làm gì, vào lúc nào, và điều nào vẫn chỉ là lời tự đánh giá.
++
++Chiếc đĩa mềm 3,5 inch trong tay người trình diễn cũng nhắc rằng phần mềm phải được đưa vào máy trước khi màn hình làm điều kỳ diệu.
++
++Con chuột một nút đặt cạnh máy không cần lời giới thiệu dài.
++
++Nó cho người dùng một cử chỉ rất ngắn: trỏ vào thứ đang thấy, rồi bấm.
++
++Sau tiếng vỗ tay, câu hỏi đổi hướng.
++
++Không còn là quảng cáo đã gây chú ý thế nào.
++
++Câu hỏi là: bên trong chiếc máy 128K ấy có những gì để cử chỉ bấm chuột trở thành một cách dùng máy tính thực sự?
++
++## CH04 · Cái giá của một mặt bàn
++
++Theo Computer History Museum, Macintosh dùng bộ vi xử lý 8 MHz, bộ nhớ bán dẫn 128K và kiến trúc 16-bit.
++
++Bộ vi xử lý là phần thực hiện các phép tính và điều khiển trong máy.
++
++MHz là đơn vị nhịp hoạt động, còn 16-bit mô tả cách kiến trúc xử lý dữ liệu trong bối cảnh kỹ thuật ấy.
++
++Danh mục Datapro năm 1984 ghi giá cơ bản 2.495 USD.
++
++Gói đó gồm 128KB RAM, ổ microdiskette 400KB, bàn phím, CRT, chuột, tài liệu và đĩa hệ thống.
++
++CRT là loại màn hình ống tia âm cực, chiếc màn hình dày phổ biến vào thời đó.
++
++Microdiskette là đĩa mềm nhỏ để mang phần mềm hoặc dữ liệu.
++
++Danh mục này cũng ghi đợt giao máy đầu tiên là tháng 01 năm 1984.
++
++Máy có sẵn qua 3.000 đại lý ủy quyền trên thế giới, theo Datapro.
++
++Đó là dữ kiện về kênh phân phối, không phải lời khẳng định rằng mọi nơi đều đón nhận nó như nhau.
++
++Theo Computer History Museum, Macintosh giúp đưa cách dùng máy bằng giao diện đồ họa và chuột tới nhiều người hơn.
++
++Đây là nhận định lịch sử của bảo tàng.
++
++Nó không nói Macintosh là máy đầu tiên có chuột, vì Alto và Lisa đã có trước.
++
++Điều Macintosh đóng gói là một mặt bàn có thể nhìn thấy, một con trỏ có thể di chuyển, và một mức giá kèm đường phân phối cụ thể.
++
++Chuột một nút vì vậy không đứng riêng lẻ.
++
++Nó là cửa vào của cả gói phần cứng, phần mềm và cách trình bày mới.
++
++Nhưng nhìn thấy giao diện chưa có nghĩa mọi tác vụ đều nhẹ nhàng.
++
++Ở chương tiếp theo, chính một chương trình vẽ cho thấy cái giá bộ nhớ của một màn hình tưởng rất đơn giản.
++
++## CH05 · Chuột không chỉ để chỉ
++
++Computer History Museum mô tả giao diện Lisa và Mac bằng cửa sổ, biểu tượng, menu và con trỏ.
++
++Người ta thường gọi tắt mô hình ấy là WIMP.
++
++WIMP không phải tên một sản phẩm, mà là chữ viết tắt của bốn thành phần vừa nói.
++
++Chuột điều khiển con trỏ đi qua những thành phần ấy.
++
++Bạn không cần nhớ một chuỗi lệnh để mở một việc quen thuộc.
++
++Bạn nhìn biểu tượng, đưa chuột một nút tới đó, rồi bấm.
++
++Macintosh là nỗ lực thứ hai của Apple cho máy cá nhân dựa trên giao diện đồ họa, sau thất bại thương mại của Lisa, theo Computer History Museum.
++
++Máy Macintosh nguyên bản có màn hình đen trắng 512 nhân 342 điểm ảnh, theo Andy Hertzfeld.
++
++Trên diện tích nhỏ đó, MacPaint cần ba vùng đệm ngoài màn hình.
++
++Mỗi vùng đệm có kích thước bằng toàn bộ màn hình.
++
++Vùng đệm là nơi chương trình giữ một bản sao hình ảnh để tính toán trước khi bạn thấy kết quả.
++
++Chi tiết ấy cho thấy giới hạn bộ nhớ gây áp lực ra sao.
++
++Nhưng nó không cho phép ta nói một mình MacPaint quyết định toàn bộ thiết kế của Macintosh.
++
++Một giao diện nhìn đơn giản thường che bên dưới rất nhiều thỏa hiệp kỹ thuật.
++
++Con trỏ mũi tên đi qua màn hình đen trắng có vẻ bình thường với chúng ta hôm nay.
++
++Năm 1984, nó phải cùng tồn tại với một bức vẽ, một văn bản, hệ thống và phần bộ nhớ ít ỏi còn lại.
++
++Đó là bước ngoặt của Macintosh: không phát minh ra mọi thành phần từ số không, mà ép chúng cùng hoạt động trong một chiếc máy hướng tới người dùng.
++
++Và khi câu chuyện được kể lại bằng phim, chính những thỏa hiệp chậm và nhiều người này rất dễ bị nén thành một cuộc đối đầu gọn gàng.
++
++## CH06 · Bộ phim và khoảng cách thật
++
++Phim Steve Jobs năm 2015 có tên hiển thị tại Việt Nam là Steve Jobs.
++
++Netflix Việt Nam mô tả phim tập trung vào ba điểm quan trọng trong sự nghiệp người tạo ra Mac.
++
++Apple TV Việt Nam ghi Danny Boyle đạo diễn, Aaron Sorkin viết kịch bản và Michael Fassbender đóng Steve Jobs.
++
++TIME phỏng vấn Sorkin và ghi phim được cấu trúc thành ba màn quanh ba lần ra mắt.
++
++Ba lần ấy là Macintosh, NeXT năm 1988 và iMac năm 1998.
++
++Phim tập trung vào hỗn loạn hậu trường trước các buổi ra mắt.
++
++Nhưng Sorkin nói với CNET và CBS rằng, theo hiểu biết của ông, Jobs không có những cuộc đối đầu với cùng sáu người chỉ 40 phút trước mỗi buổi ra mắt.
++
++Vì thế, không nên đọc các đối thoại hậu trường trong phim như hồ sơ lịch sử.
++
++Sau đó, ta trở về với tài liệu: chuyến thăm PARC năm 1979, bộ nhớ 128K, quảng cáo ngày 22 tháng 01, và sân khấu ngày 24 tháng 01 năm 1984.
++
++Chuột một nút cũng nhắc ta về khác biệt này.
++
++Ngoài đời, nó là một phần của giao diện, của phần mềm, của bộ nhớ và của cả đội làm cho thao tác bấm có nghĩa.
++
++Khi giữ được khoảng cách ấy, câu chuyện không bớt kịch tính.
++
++Nó chỉ công bằng hơn với người thật và với những chi tiết mà nguồn chưa xác nhận.
++
++## CH07 · Điều còn lại trên màn hình
++
++Theo Computer History Museum, các nhà thiết kế, nghệ sĩ và nhà giáo dục đã sớm tiếp nhận Macintosh.
++
++Đây là mô tả của bảo tàng, không phải thống kê toàn thị trường.
++
++Cũng theo Computer History Museum, Macintosh đưa điện toán đồ họa tới đông người dùng hơn.
++
++Điều đó không biến nó thành máy đầu tiên có giao diện đồ họa hay chuột.
++
++Alto có trước.
++
++Lisa có trước.
++
++Giá trị của mốc 1984 nằm ở cách nhiều phần đã tồn tại được ghép thành một trải nghiệm có thể đem ra thị trường.
++
++Bạn nhìn một biểu tượng.
++
++Bạn đưa con trỏ tới đó bằng chuột một nút.
++
++Bạn bấm, và chiếc máy trả lời bằng thay đổi trên màn hình.
++
++Folklore.org ghi phần mềm hệ thống vẫn được hoàn tất gấp sát ngày ra mắt.
++
++Vì vậy, câu chuyện không chỉ là một cá nhân làm ra Macintosh.
++
++Nó có cả đội phần mềm, cùng những giới hạn bộ nhớ và những bản demo phải kịp chạy.
++
++Apple Support liệt kê Macintosh 128K hỗ trợ các bản Mac OS từ System 1.0 đến 7.0.1P.
++
++Đó là danh sách tương thích kỹ thuật, không phải bằng chứng về mức độ phổ biến của từng bản.
++
++Điều đáng giữ lại không phải huyền thoại rằng Jobs tự mình phát minh ra tất cả.
++
++Đó là một bước ngoặt năm 1984, khi cách dùng máy bằng hình, con trỏ và chuột được đưa tới gần nhiều người hơn.
++
++Và câu hỏi treo từ đầu giờ có thể trả lời như thế này.
++
++Macintosh đáng nhớ không vì nó xuất hiện từ khoảng trống.
++
++Nó đáng nhớ vì biến một chuỗi ý tưởng, thử nghiệm và lao động của nhiều người thành một cử chỉ mà bạn có thể hiểu chỉ bằng một cú nhấp.
+diff --git a/docs/pm/tickets/2026-10-26-codex-pilot/T6W1-ket-qua.md b/docs/pm/tickets/2026-10-26-codex-pilot/T6W1-ket-qua.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..5963b5d460a791cc13ec1051c3a4b055a0f27d78
+--- /dev/null
++++ b/docs/pm/tickets/2026-10-26-codex-pilot/T6W1-ket-qua.md
+@@ -0,0 +1,3 @@
++# Báo cáo T6W1 — mim-macintosh-1984
++
++Đang thực hiện các cổng kiểm bắt buộc.
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; python motion/long/script_lines.py mim-macintosh-1984; python motion/long/studio_lint.py mim-macintosh-1984 --strict" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 304ms:
+ch00: 10 câu, 239 âm tiết, ~1.2 phút  Cú nhấp đã được nhìn thấy
+ch01: 20 câu, 320 âm tiết, ~1.6 phút  Chín mươi K để làm việc
+ch02: 16 câu, 272 âm tiết, ~1.4 phút  Quảng cáo đi trước chiếc máy
+ch03: 17 câu, 296 âm tiết, ~1.5 phút  Ngày chiếc máy tự giới thiệu
+ch04: 18 câu, 309 âm tiết, ~1.5 phút  Cái giá của một mặt bàn
+ch05: 18 câu, 324 âm tiết, ~1.6 phút  Chuột không chỉ để chỉ
+ch06: 13 câu, 244 âm tiết, ~1.2 phút  Bộ phim và khoảng cách thật
+ch07: 20 câu, 305 âm tiết, ~1.5 phút  Điều còn lại trên màn hình
+TỔNG 132 câu, 2309 âm tiết
+  ! ch00 dòng 4: có vẻ liệt kê hơn 3 mục trong một câu: Tại PARC, Alto đã dùng cửa sổ, biểu tượng, menu và con trỏ, được điều …
+  ! ch00: 0/10 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch01: 1/20 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch02: 0/16 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch03: 0/17 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch04: 0/18 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch05: 0/18 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch06: 0/13 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+mim-macintosh-1984: 0 lỗi, 8 cảnh báo (luật studio)
+
+apply patch
+patch: completed
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-macintosh-1984\script.md
+diff --git a/data/long/mim-macintosh-1984/factcheck.md b/data/long/mim-macintosh-1984/factcheck.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..01cd8ee51f5512d618d0799aae03153aa54f982b
+--- /dev/null
++++ b/data/long/mim-macintosh-1984/factcheck.md
+@@ -0,0 +1,19 @@
++# Factcheck — mim-macintosh-1984
++
++Mọi URL dưới đây đã có trong kho dữ kiện đã duyệt của ticket. Các nhận định được gắn “theo” trong lời đọc khi kho xếp độ tin là vừa.
++
++| Khẳng định trong kịch bản | Nguồn |
++|---|---|
++| Steve Jobs dẫn đoàn Apple tới Xerox PARC năm 1979; Smalltalk chạy trên Alto. Alto có GUI với cửa sổ, biểu tượng, menu, con trỏ và chuột; Apple phát triển giao diện Lisa từ đầu dù chịu ảnh hưởng PARC. | [Computer History Museum — Lisa](https://computerhistory.org/blog/the-lisa-apples-most-influential-failure/); [Computer History Museum — Xerox PARC](https://www.computerhistory.org/revolution/story/348) |
++| Lisa ra trước Macintosh và là máy tiêu dùng đầu tiên của Apple có GUI cùng chuột. | [Computer History Museum — Apple Timeline](https://computerhistory.org/apple-timeline/) |
++| Macintosh nguyên bản có 128K RAM; khoảng 16K cho hệ thống, 22K cho màn hình 512 × 342, còn khoảng 90K cho ứng dụng. MacWrite/MacPaint cơ bản hoàn tất vào mùa thu 1983 nhưng cần thử nghiệm thêm. | [Folklore.org — Monkey Lives](https://folklore.org/Monkey_Lives.html) |
++| Macintosh 128K là máy tự chứa, có desktop đồ họa kiểu Alto cải tiến, 128K và giá 2.495 USD. | [Computer History Museum — Apple Macintosh](https://www.computerhistory.org/revolution/personal-computers/17/303/1203) |
++| Quảng cáo “1984” phát ngày 22/01/1984 trong quý ba Super Bowl XVIII; đây là hai ngày trước giới thiệu chính thức 24/01/1984. | [Smithsonian — Apple 1984 ad](https://americanhistory.si.edu/explore/stories/remembering-apples-1984-super-bowl-ad); [Apple Support — Macintosh 128K](https://support.apple.com/en-me/112190) |
++| Chiến dịch Super Bowl dùng quảng cáo 1,5 triệu USD. Smithsonian đánh giá đây là một trong các quảng cáo Super Bowl nổi tiếng nhất. | [Computer History Museum — January 22](https://www.computerhistory.org/tdih/january/22/); [Smithsonian — Apple 1984 ad](https://americanhistory.si.edu/explore/stories/remembering-apples-1984-super-bowl-ad) |
++| Macintosh 128K được giới thiệu 24/01/1984. Hertzfeld kể đội vừa hào hứng vừa lo demo; Jobs đưa đĩa vào máy, và phần demo có tự giới thiệu. Phát biểu “cột mốc thứ ba” là lời Jobs tại sự kiện. | [Apple Support — Macintosh 128K](https://support.apple.com/en-me/112190); [Folklore.org — The Times They Are A-Changin’](https://www.folklore.org/StoryView.py?detail=medium&project=Macintosh&sortOrder=Sort+by+Date&story=The+Times_They_Are_A-Changin.txt&topic=The+Launch); [Folklore.org — Intro Demo](https://folklore.org/Intro_Demo.html) |
++| Macintosh dùng CPU 8 MHz, 128K, kiến trúc 16-bit. Gói 2.495 USD gồm 128KB RAM, microdiskette 400KB, bàn phím, CRT, chuột, tài liệu và đĩa hệ thống; giao máy đầu tháng 01/1984 qua 3.000 đại lý. | [Computer History Museum — Apple Macintosh](https://www.computerhistory.org/revolution/personal-computers/17/303/1203); [Datapro 1984](https://bitsavers.computerhistory.org/pdf/datapro/datapro_reports_70s-90s/Apple/M09-057-10_8411_Apple_Macintosh.pdf) |
++| Theo CHM, Macintosh đưa GUI và chuột tới nhiều người hơn; đây không phải khẳng định máy đầu tiên có GUI/chuột. | [Computer History Museum — Hello, Mac at 40](https://computerhistory.org/exhibits/hello-the-mac-at-40/); [Computer History Museum — Apple Timeline](https://computerhistory.org/apple-timeline/) |
++| Lisa/Mac dùng mô hình WIMP do chuột điều khiển. Macintosh là nỗ lực GUI thứ hai của Apple sau thất bại thương mại Lisa. Màn hình 512 × 342; MacPaint dùng ba vùng đệm ngoài màn hình. | [Computer History Museum — Lisa](https://computerhistory.org/blog/the-lisa-apples-most-influential-failure/); [Computer History Museum — Apple Macintosh](https://www.computerhistory.org/revolution/personal-computers/17/303/1203); [Folklore.org — Monkey Lives](https://folklore.org/Monkey_Lives.html) |
++| Phim Steve Jobs (2015): Netflix VN mô tả ba điểm sự nghiệp; Apple TV VN ghi Danny Boyle, Aaron Sorkin, Michael Fassbender. | [Netflix Việt Nam — Steve Jobs](https://www.netflix.com/vn/title/80049358); [Apple TV Việt Nam — Steve Jobs](https://tv.apple.com/vn/movie/steve-jobs/umc.cmc.20qugmesej4yg33x3e4uev8xh?l=vi) |
++| TIME: phim có ba màn quanh Macintosh, NeXT năm 1988 và iMac năm 1998. Sorkin nói với CNET/CBS rằng không có các đối đầu với cùng sáu người 40 phút trước mỗi lần ra mắt như phim dựng. | [TIME — The Man Who Would Be Jobs](https://time.com/4012824/the-man-who-would-be-jobs/); [CBS News/CNET — 19 questions](https://www.cbsnews.com/news/19-questions-you-might-be-asking-after-seeing-steve-jobs/) |
++| CHM mô tả nhà thiết kế, nghệ sĩ, nhà giáo dục sớm tiếp nhận Mac. Folklore.org ghi phần mềm hệ thống hoàn tất gấp sát ra mắt. Macintosh 128K hỗ trợ System 1.0 đến 7.0.1P. | [Computer History Museum — Apple Macintosh](https://www.computerhistory.org/revolution/personal-computers/17/303/1203); [Folklore.org — The Times They Are A-Changin’](https://www.folklore.org/StoryView.py?detail=medium&project=Macintosh&sortOrder=Sort+by+Date&story=The+Times_They_Are_A-Changin.txt&topic=The+Launch); [Apple Support — Macintosh 128K](https://support.apple.com/en-me/112190) |
+diff --git a/data/long/mim-macintosh-1984/script.md b/data/long/mim-macintosh-1984/script.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..8a921a94e1c421c844b542cc07ef5c8055ddfdf7
+--- /dev/null
++++ b/data/long/mim-macintosh-1984/script.md
+@@ -0,0 +1,277 @@
++# STEVE JOBS 1984: Macintosh biết nói bằng hình
++
++## CH00 · Cú nhấp đã được nhìn thấy
++
++Ngày 24 tháng 01 năm 1984, Steve Jobs giới thiệu Macintosh, và trong vài phút bạn sẽ thấy vì sao một chiếc chuột một nút lại làm máy tính trở nên dễ nhìn hơn.
++
++Điều lạ là chiếc máy không mở màn bằng một dòng lệnh dài, mà có lúc tự giới thiệu trong phần trình diễn đã chuẩn bị cho ngày ra mắt.
++
++Giao diện đồ họa là nơi cửa sổ, biểu tượng và con trỏ, tức mũi tên do chuột một nút điều khiển, biến thao tác thành thứ mắt bạn có thể lần theo.
++
++Năm 1979, một đoàn Apple do Jobs dẫn đầu đã tới Xerox PARC và xem Smalltalk chạy trên máy Alto.
++
++Tại PARC, Alto đã dùng cửa sổ, biểu tượng, menu và con trỏ, được điều khiển bằng chuột.
++
++Ta sẽ qua PARC, bộ nhớ 128K, quảng cáo Super Bowl và sân khấu ngày 24 tháng 01.
++
++Sau đó là câu chuyện chiếc chuột, bộ phim Steve Jobs năm 2015, và điều còn lại khi màn hình bắt đầu nói bằng hình.
++
++Nhưng nếu ý tưởng đã được thấy từ 1979, điều gì khiến Macintosh 1984 trở thành bước ngoặt mà nhiều người nhớ đến?
++
++## CH01 · Chín mươi K để làm việc
++
++Macintosh nguyên bản chỉ có 128K RAM, tức một phần tám megabyte theo Andy Hertzfeld.
++
++RAM là bộ nhớ làm việc tạm thời, nơi chương trình giữ thứ nó đang cần ngay lúc này.
++
++Con số nghe nhỏ khi nhìn từ hiện tại, nhưng nó quyết định từng khoảng trống trong chiếc máy năm 1984.
++
++Khoảng 16K được dành cho hệ thống.
++
++Khoảng 22K nữa dành cho màn hình đen trắng 512 nhân 342 điểm ảnh.
++
++Điểm ảnh là những chấm rất nhỏ ghép thành hình trên màn hình.
++
++Sau hai phần ấy, ứng dụng chỉ còn khoảng 90K để thở.
++
++Vì vậy, một thao tác tưởng đơn giản như vẽ hay soạn thảo lại phải được cân từng mẩu bộ nhớ.
++
++Đến mùa thu 1983, MacWrite và MacPaint về cơ bản đã hoàn tất tính năng.
++
++MacWrite là chương trình soạn văn bản, còn MacPaint là chương trình vẽ bằng chuột.
++
++Nhưng cả hai vẫn cần thử nghiệm nhiều trong tình trạng thiếu bộ nhớ.
++
++Một con trỏ chạy theo chuột không chỉ là hiệu ứng đẹp mắt.
++
++Nó phải có chỗ trong bộ nhớ, cùng cửa sổ, biểu tượng và phần việc người dùng đang làm.
++
++Computer History Museum mô tả Macintosh 128K là một máy tự chứa với desktop đồ họa kiểu Alto đã được cải tiến.
++
++Desktop ở đây là mặt bàn trên màn hình, nơi các biểu tượng và cửa sổ được đặt cạnh nhau.
++
++Máy có giá 2.495 USD.
++
++Giá đó gồm một lời hứa: thay vì nhớ câu lệnh, bạn có thể nhìn thấy việc mình sắp làm.
++
++Lời hứa ấy vẫn chưa đủ nếu không có phần mềm chạy mượt trong giới hạn 90K.
++
++Đó là lý do câu chuyện Macintosh không chỉ có Jobs ở sân khấu.
++
++Nó còn có một đội phần mềm đang thử từng chi tiết, để một lần nhấp chuột không biến thành lúc máy đứng lại.
++
++## CH02 · Quảng cáo đi trước chiếc máy
++
++Trước khi Macintosh được giới thiệu chính thức, khán giả truyền hình đã thấy một tín hiệu khác.
++
++Ngày 22 tháng 01 năm 1984, quảng cáo truyền hình mang tên 1984 được phát trong quý ba của Super Bowl XVIII.
++
++Đó là hai ngày trước ngày giới thiệu Macintosh 24 tháng 01 năm 1984.
++
++Vì vậy, đây là mốc phát sóng quảng cáo, không phải ngày bán lẻ của máy.
++
++Computer History Museum ghi chiến dịch Super Bowl dùng một quảng cáo trị giá 1,5 triệu USD.
++
++Một con số lớn không tự chứng minh sản phẩm sẽ thành công.
++
++Nó chỉ cho thấy Apple đã chọn một sân khấu đắt tiền để đặt câu hỏi về cách người ta nhìn máy tính.
++
++Smithsonian gọi quảng cáo này là một trong những quảng cáo Super Bowl nổi tiếng nhất.
++
++Đó là đánh giá của bảo tàng, chứ không phải số đo doanh số Macintosh.
++
++Điểm đáng chú ý là nhịp kể đi trước vật thể.
++
++Khán giả được gợi cảm giác một trật tự cũ sắp bị phá vỡ, rồi hai ngày sau mới gặp chiếc máy thật.
++
++Một chiếc chuột một nút không xuất hiện như một món phụ kiện vô danh.
++
++Nó là phần bàn tay của lời hứa: bạn di chuyển, con trỏ phản hồi, và màn hình trả lại hình ảnh.
++
++Quảng cáo có thể làm ký ức bùng lên nhanh hơn tài liệu kỹ thuật.
++
++Nhưng nó không thay thế được câu hỏi khó hơn.
++
++Khi chiếc Macintosh nhỏ thật sự bước ra sân khấu, nó có làm được điều mà lời hứa vừa dựng lên không?
++
++## CH03 · Ngày chiếc máy tự giới thiệu
++
++Apple Support ghi Macintosh 128K được giới thiệu ngày 24 tháng 01 năm 1984.
++
++Andy Hertzfeld gọi đó là ngày lớn, khi đội ngũ vừa hào hứng vừa lo về phần mềm demo chuẩn bị gấp.
++
++Demo là phần trình diễn được soạn để cho người xem thấy máy làm được gì.
++
++Trong hồi ức về buổi ra mắt, Jobs đưa một đĩa vào Macintosh.
++
++Máy có phần trình diễn tự giới thiệu, nhưng ta không cần bịa lại lời thoại của nó để hiểu khoảnh khắc ấy.
++
++Một chiếc hộp nhỏ trên sân khấu đã được giao nhiệm vụ nói bằng chính màn hình của mình.
++
++Theo cùng hồi ức, Jobs gọi Macintosh là cột mốc ngành thứ ba sau Apple II và IBM PC.
++
++Đó là phát biểu của Jobs tại sự kiện, không phải kết luận độc lập về toàn bộ lịch sử máy tính.
++
++Sự phân biệt này quan trọng vì một buổi ra mắt luôn có phần sân khấu.
++
++Sân khấu muốn bạn nhớ khoảnh khắc.
++
++Còn lịch sử cần cho biết ai đã làm gì, vào lúc nào, và điều nào vẫn chỉ là lời tự đánh giá.
++
++Chiếc đĩa mềm 3,5 inch trong tay người trình diễn cũng nhắc rằng phần mềm phải được đưa vào máy trước khi màn hình làm điều kỳ diệu.
++
++Con chuột một nút đặt cạnh máy không cần lời giới thiệu dài.
++
++Nó cho người dùng một cử chỉ rất ngắn: trỏ vào thứ đang thấy, rồi bấm.
++
++Sau tiếng vỗ tay, câu hỏi đổi hướng.
++
++Không còn là quảng cáo đã gây chú ý thế nào.
++
++Câu hỏi là: bên trong chiếc máy 128K ấy có những gì để cử chỉ bấm chuột trở thành một cách dùng máy tính thực sự?
++
++## CH04 · Cái giá của một mặt bàn
++
++Theo Computer History Museum, Macintosh dùng bộ vi xử lý 8 MHz, bộ nhớ bán dẫn 128K và kiến trúc 16-bit.
++
++Bộ vi xử lý là phần thực hiện các phép tính và điều khiển trong máy.
++
++MHz là đơn vị nhịp hoạt động, còn 16-bit mô tả cách kiến trúc xử lý dữ liệu trong bối cảnh kỹ thuật ấy.
++
++Danh mục Datapro năm 1984 ghi giá cơ bản 2.495 USD.
++
++Gói đó gồm 128KB RAM, ổ microdiskette 400KB, bàn phím, CRT, chuột, tài liệu và đĩa hệ thống.
++
++CRT là loại màn hình ống tia âm cực, chiếc màn hình dày phổ biến vào thời đó.
++
++Microdiskette là đĩa mềm nhỏ để mang phần mềm hoặc dữ liệu.
++
++Danh mục này cũng ghi đợt giao máy đầu tiên là tháng 01 năm 1984.
++
++Máy có sẵn qua 3.000 đại lý ủy quyền trên thế giới, theo Datapro.
++
++Đó là dữ kiện về kênh phân phối, không phải lời khẳng định rằng mọi nơi đều đón nhận nó như nhau.
++
++Theo Computer History Museum, Macintosh giúp đưa cách dùng máy bằng giao diện đồ họa và chuột tới nhiều người hơn.
++
++Đây là nhận định lịch sử của bảo tàng.
++
++Nó không nói Macintosh là máy đầu tiên có chuột, vì Alto và Lisa đã có trước.
++
++Điều Macintosh đóng gói là một mặt bàn có thể nhìn thấy, một con trỏ có thể di chuyển, và một mức giá kèm đường phân phối cụ thể.
++
++Chuột một nút vì vậy không đứng riêng lẻ.
++
++Nó là cửa vào của cả gói phần cứng, phần mềm và cách trình bày mới.
++
++Nhưng nhìn thấy giao diện chưa có nghĩa mọi tác vụ đều nhẹ nhàng.
++
++Ở chương tiếp theo, chính một chương trình vẽ cho thấy cái giá bộ nhớ của một màn hình tưởng rất đơn giản.
++
++## CH05 · Chuột không chỉ để chỉ
++
++Computer History Museum mô tả giao diện Lisa và Mac bằng cửa sổ, biểu tượng, menu và con trỏ.
++
++Người ta thường gọi tắt mô hình ấy là WIMP.
++
++WIMP không phải tên một sản phẩm, mà là chữ viết tắt của bốn thành phần vừa nói.
++
++Chuột điều khiển con trỏ đi qua những thành phần ấy.
++
++Bạn không cần nhớ một chuỗi lệnh để mở một việc quen thuộc.
++
++Bạn nhìn biểu tượng, đưa chuột một nút tới đó, rồi bấm.
++
++Macintosh là nỗ lực thứ hai của Apple cho máy cá nhân dựa trên giao diện đồ họa, sau thất bại thương mại của Lisa, theo Computer History Museum.
++
++Máy Macintosh nguyên bản có màn hình đen trắng 512 nhân 342 điểm ảnh, theo Andy Hertzfeld.
++
++Trên diện tích nhỏ đó, MacPaint cần ba vùng đệm ngoài màn hình.
++
++Mỗi vùng đệm có kích thước bằng toàn bộ màn hình.
++
++Vùng đệm là nơi chương trình giữ một bản sao hình ảnh để tính toán trước khi bạn thấy kết quả.
++
++Chi tiết ấy cho thấy giới hạn bộ nhớ gây áp lực ra sao.
++
++Nhưng nó không cho phép ta nói một mình MacPaint quyết định toàn bộ thiết kế của Macintosh.
++
++Một giao diện nhìn đơn giản thường che bên dưới rất nhiều thỏa hiệp kỹ thuật.
++
++Con trỏ mũi tên đi qua màn hình đen trắng có vẻ bình thường với chúng ta hôm nay.
++
++Năm 1984, nó phải cùng tồn tại với một bức vẽ, một văn bản, hệ thống và phần bộ nhớ ít ỏi còn lại.
++
++Đó là bước ngoặt của Macintosh: không phát minh ra mọi thành phần từ số không, mà ép chúng cùng hoạt động trong một chiếc máy hướng tới người dùng.
++
++Và khi câu chuyện được kể lại bằng phim, chính những thỏa hiệp chậm và nhiều người này rất dễ bị nén thành một cuộc đối đầu gọn gàng.
++
++## CH06 · Bộ phim và khoảng cách thật
++
++Phim Steve Jobs năm 2015 có tên hiển thị tại Việt Nam là Steve Jobs.
++
++Netflix Việt Nam mô tả phim tập trung vào ba điểm quan trọng trong sự nghiệp người tạo ra Mac.
++
++Apple TV Việt Nam ghi Danny Boyle đạo diễn, Aaron Sorkin viết kịch bản và Michael Fassbender đóng Steve Jobs.
++
++TIME phỏng vấn Sorkin và ghi phim được cấu trúc thành ba màn quanh ba lần ra mắt.
++
++Ba lần ấy là Macintosh, NeXT năm 1988 và iMac năm 1998.
++
++Phim tập trung vào hỗn loạn hậu trường trước các buổi ra mắt.
++
++Nhưng Sorkin nói với CNET và CBS rằng, theo hiểu biết của ông, Jobs không có những cuộc đối đầu với cùng sáu người chỉ 40 phút trước mỗi buổi ra mắt.
++
++Vì thế, không nên đọc các đối thoại hậu trường trong phim như hồ sơ lịch sử.
++
++Sau đó, ta trở về với tài liệu: chuyến thăm PARC năm 1979, bộ nhớ 128K, quảng cáo ngày 22 tháng 01, và sân khấu ngày 24 tháng 01 năm 1984.
++
++Chuột một nút cũng nhắc ta về khác biệt này.
++
++Ngoài đời, nó là một phần của giao diện, của phần mềm, của bộ nhớ và của cả đội làm cho thao tác bấm có nghĩa.
++
++Khi giữ được khoảng cách ấy, câu chuyện không bớt kịch tính.
++
++Nó chỉ công bằng hơn với người thật và với những chi tiết mà nguồn chưa xác nhận.
++
++## CH07 · Điều còn lại trên màn hình
++
++Theo Computer History Museum, các nhà thiết kế, nghệ sĩ và nhà giáo dục đã sớm tiếp nhận Macintosh.
++
++Đây là mô tả của bảo tàng, không phải thống kê toàn thị trường.
++
++Cũng theo Computer History Museum, Macintosh đưa điện toán đồ họa tới đông người dùng hơn.
++
++Điều đó không biến nó thành máy đầu tiên có giao diện đồ họa hay chuột.
++
++Alto có trước.
++
++Lisa có trước.
++
++Giá trị của mốc 1984 nằm ở cách nhiều phần đã tồn tại được ghép thành một trải nghiệm có thể đem ra thị trường.
++
++Bạn nhìn một biểu tượng.
++
++Bạn đưa con trỏ tới đó bằng chuột một nút.
++
++Bạn bấm, và chiếc máy trả lời bằng thay đổi trên màn hình.
++
++Folklore.org ghi phần mềm hệ thống vẫn được hoàn tất gấp sát ngày ra mắt.
++
++Vì vậy, câu chuyện không chỉ là một cá nhân làm ra Macintosh.
++
++Nó có cả đội phần mềm, cùng những giới hạn bộ nhớ và những bản demo phải kịp chạy.
++
++Apple Support liệt kê Macintosh 128K hỗ trợ các bản Mac OS từ System 1.0 đến 7.0.1P.
++
++Đó là danh sách tương thích kỹ thuật, không phải bằng chứng về mức độ phổ biến của từng bản.
++
++Điều đáng giữ lại không phải huyền thoại rằng Jobs tự mình phát minh ra tất cả.
++
++Đó là một bước ngoặt năm 1984, khi cách dùng máy bằng hình, con trỏ và chuột được đưa tới gần nhiều người hơn.
++
++Và câu hỏi treo từ đầu giờ có thể trả lời như thế này.
++
++Macintosh đáng nhớ không vì nó xuất hiện từ khoảng trống.
++
++Nó đáng nhớ vì biến một chuỗi ý tưởng, thử nghiệm và lao động của nhiều người thành một cử chỉ mà bạn có thể hiểu chỉ bằng một cú nhấp.
+diff --git a/docs/pm/tickets/2026-10-26-codex-pilot/T6W1-ket-qua.md b/docs/pm/tickets/2026-10-26-codex-pilot/T6W1-ket-qua.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..5963b5d460a791cc13ec1051c3a4b055a0f27d78
+--- /dev/null
++++ b/docs/pm/tickets/2026-10-26-codex-pilot/T6W1-ket-qua.md
+@@ -0,0 +1,3 @@
++# Báo cáo T6W1 — mim-macintosh-1984
++
++Đang thực hiện các cổng kiểm bắt buộc.
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; python motion/long/script_lines.py mim-macintosh-1984; python motion/long/studio_lint.py mim-macintosh-1984 --strict; python scripts/long_gate.py mim-macintosh-1984 --min-syl 1900" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ exited 1 in 330ms:
+ch00: 8 câu, 201 âm tiết, ~1.0 phút  Cú nhấp đã được nhìn thấy
+ch01: 20 câu, 320 âm tiết, ~1.6 phút  Chín mươi K để làm việc
+ch02: 16 câu, 272 âm tiết, ~1.4 phút  Quảng cáo đi trước chiếc máy
+ch03: 17 câu, 296 âm tiết, ~1.5 phút  Ngày chiếc máy tự giới thiệu
+ch04: 18 câu, 309 âm tiết, ~1.5 phút  Cái giá của một mặt bàn
+ch05: 18 câu, 324 âm tiết, ~1.6 phút  Chuột không chỉ để chỉ
+ch06: 13 câu, 244 âm tiết, ~1.2 phút  Bộ phim và khoảng cách thật
+ch07: 20 câu, 305 âm tiết, ~1.5 phút  Điều còn lại trên màn hình
+TỔNG 130 câu, 2271 âm tiết
+  ! ch00 dòng 4: có vẻ liệt kê hơn 3 mục trong một câu: Tại PARC, Alto đã dùng cửa sổ, biểu tượng, menu và con trỏ, được điều …
+  ! ch01: 1/20 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch02: 0/16 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch03: 0/17 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch04: 0/18 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch05: 0/18 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch06: 0/13 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+mim-macintosh-1984: 0 lỗi, 7 cảnh báo (luật studio)
+mim-macintosh-1984: âm tiết 2271, phút 10.8, cảnh 0, giây/cảnh 648.9, clip khác 0, ảnh khác 0, URL nguồn 26
+  LỖI: ch00: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch00: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: ch01: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch01: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: ch02: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch02: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: ch03: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch03: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: ch04: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch04: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: ch05: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch05: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: ch06: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch06: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: ch07: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch07: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: chưa TTS: ['ch00', 'ch01', 'ch02', 'ch03', 'ch04', 'ch05', 'ch06', 'ch07'] -- chạy build_long.py <topic> tts cho đủ
+  LỖI: 648.9 giây/cảnh > 9.0: cần thêm cảnh (bài mẫu ~7,6)
+  LỖI: spec.youtube thiếu ['publish_at', 'playlist', 'chapter_titles', 'tags', 'video_credits'] (xem mẫu mim-ke-huy-diet-petrov)
+  LỖI: spec.youtube.sources chỉ 0 URL công khai (< 8)
+  LỖI: 55 tên/thuật ngữ nước ngoài trong lời đọc mà spec không có bảng say
+TRƯỢT (21 lỗi)
+
+codex
+Cổng kịch bản đã qua `studio_lint --strict` với 0 lỗi (còn 7 cảnh báo phong cách). Tuy nhiên `long_gate` đang trượt vì ticket W1 cấm ghi `gen_scenes.py`, `spec.json` và artefact TTS—những phần bắt buộc để gate đo cảnh, HUD, metadata và timing. Mình sẽ ghi báo cáo trung thực về trạng thái này, không tự ý vượt phạm vi “Chỉ ghi” của ticket.
+apply patch
+patch: completed
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-26-codex-pilot\T6W1-ket-qua.md
+diff --git a/data/long/mim-macintosh-1984/factcheck.md b/data/long/mim-macintosh-1984/factcheck.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..01cd8ee51f5512d618d0799aae03153aa54f982b
+--- /dev/null
++++ b/data/long/mim-macintosh-1984/factcheck.md
+@@ -0,0 +1,19 @@
++# Factcheck — mim-macintosh-1984
++
++Mọi URL dưới đây đã có trong kho dữ kiện đã duyệt của ticket. Các nhận định được gắn “theo” trong lời đọc khi kho xếp độ tin là vừa.
++
++| Khẳng định trong kịch bản | Nguồn |
++|---|---|
++| Steve Jobs dẫn đoàn Apple tới Xerox PARC năm 1979; Smalltalk chạy trên Alto. Alto có GUI với cửa sổ, biểu tượng, menu, con trỏ và chuột; Apple phát triển giao diện Lisa từ đầu dù chịu ảnh hưởng PARC. | [Computer History Museum — Lisa](https://computerhistory.org/blog/the-lisa-apples-most-influential-failure/); [Computer History Museum — Xerox PARC](https://www.computerhistory.org/revolution/story/348) |
++| Lisa ra trước Macintosh và là máy tiêu dùng đầu tiên của Apple có GUI cùng chuột. | [Computer History Museum — Apple Timeline](https://computerhistory.org/apple-timeline/) |
++| Macintosh nguyên bản có 128K RAM; khoảng 16K cho hệ thống, 22K cho màn hình 512 × 342, còn khoảng 90K cho ứng dụng. MacWrite/MacPaint cơ bản hoàn tất vào mùa thu 1983 nhưng cần thử nghiệm thêm. | [Folklore.org — Monkey Lives](https://folklore.org/Monkey_Lives.html) |
++| Macintosh 128K là máy tự chứa, có desktop đồ họa kiểu Alto cải tiến, 128K và giá 2.495 USD. | [Computer History Museum — Apple Macintosh](https://www.computerhistory.org/revolution/personal-computers/17/303/1203) |
++| Quảng cáo “1984” phát ngày 22/01/1984 trong quý ba Super Bowl XVIII; đây là hai ngày trước giới thiệu chính thức 24/01/1984. | [Smithsonian — Apple 1984 ad](https://americanhistory.si.edu/explore/stories/remembering-apples-1984-super-bowl-ad); [Apple Support — Macintosh 128K](https://support.apple.com/en-me/112190) |
++| Chiến dịch Super Bowl dùng quảng cáo 1,5 triệu USD. Smithsonian đánh giá đây là một trong các quảng cáo Super Bowl nổi tiếng nhất. | [Computer History Museum — January 22](https://www.computerhistory.org/tdih/january/22/); [Smithsonian — Apple 1984 ad](https://americanhistory.si.edu/explore/stories/remembering-apples-1984-super-bowl-ad) |
++| Macintosh 128K được giới thiệu 24/01/1984. Hertzfeld kể đội vừa hào hứng vừa lo demo; Jobs đưa đĩa vào máy, và phần demo có tự giới thiệu. Phát biểu “cột mốc thứ ba” là lời Jobs tại sự kiện. | [Apple Support — Macintosh 128K](https://support.apple.com/en-me/112190); [Folklore.org — The Times They Are A-Changin’](https://www.folklore.org/StoryView.py?detail=medium&project=Macintosh&sortOrder=Sort+by+Date&story=The+Times_They_Are_A-Changin.txt&topic=The+Launch); [Folklore.org — Intro Demo](https://folklore.org/Intro_Demo.html) |
++| Macintosh dùng CPU 8 MHz, 128K, kiến trúc 16-bit. Gói 2.495 USD gồm 128KB RAM, microdiskette 400KB, bàn phím, CRT, chuột, tài liệu và đĩa hệ thống; giao máy đầu tháng 01/1984 qua 3.000 đại lý. | [Computer History Museum — Apple Macintosh](https://www.computerhistory.org/revolution/personal-computers/17/303/1203); [Datapro 1984](https://bitsavers.computerhistory.org/pdf/datapro/datapro_reports_70s-90s/Apple/M09-057-10_8411_Apple_Macintosh.pdf) |
++| Theo CHM, Macintosh đưa GUI và chuột tới nhiều người hơn; đây không phải khẳng định máy đầu tiên có GUI/chuột. | [Computer History Museum — Hello, Mac at 40](https://computerhistory.org/exhibits/hello-the-mac-at-40/); [Computer History Museum — Apple Timeline](https://computerhistory.org/apple-timeline/) |
++| Lisa/Mac dùng mô hình WIMP do chuột điều khiển. Macintosh là nỗ lực GUI thứ hai của Apple sau thất bại thương mại Lisa. Màn hình 512 × 342; MacPaint dùng ba vùng đệm ngoài màn hình. | [Computer History Museum — Lisa](https://computerhistory.org/blog/the-lisa-apples-most-influential-failure/); [Computer History Museum — Apple Macintosh](https://www.computerhistory.org/revolution/personal-computers/17/303/1203); [Folklore.org — Monkey Lives](https://folklore.org/Monkey_Lives.html) |
++| Phim Steve Jobs (2015): Netflix VN mô tả ba điểm sự nghiệp; Apple TV VN ghi Danny Boyle, Aaron Sorkin, Michael Fassbender. | [Netflix Việt Nam — Steve Jobs](https://www.netflix.com/vn/title/80049358); [Apple TV Việt Nam — Steve Jobs](https://tv.apple.com/vn/movie/steve-jobs/umc.cmc.20qugmesej4yg33x3e4uev8xh?l=vi) |
++| TIME: phim có ba màn quanh Macintosh, NeXT năm 1988 và iMac năm 1998. Sorkin nói với CNET/CBS rằng không có các đối đầu với cùng sáu người 40 phút trước mỗi lần ra mắt như phim dựng. | [TIME — The Man Who Would Be Jobs](https://time.com/4012824/the-man-who-would-be-jobs/); [CBS News/CNET — 19 questions](https://www.cbsnews.com/news/19-questions-you-might-be-asking-after-seeing-steve-jobs/) |
++| CHM mô tả nhà thiết kế, nghệ sĩ, nhà giáo dục sớm tiếp nhận Mac. Folklore.org ghi phần mềm hệ thống hoàn tất gấp sát ra mắt. Macintosh 128K hỗ trợ System 1.0 đến 7.0.1P. | [Computer History Museum — Apple Macintosh](https://www.computerhistory.org/revolution/personal-computers/17/303/1203); [Folklore.org — The Times They Are A-Changin’](https://www.folklore.org/StoryView.py?detail=medium&project=Macintosh&sortOrder=Sort+by+Date&story=The+Times_They_Are_A-Changin.txt&topic=The+Launch); [Apple Support — Macintosh 128K](https://support.apple.com/en-me/112190) |
+diff --git a/data/long/mim-macintosh-1984/script.md b/data/long/mim-macintosh-1984/script.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..8a921a94e1c421c844b542cc07ef5c8055ddfdf7
+--- /dev/null
++++ b/data/long/mim-macintosh-1984/script.md
+@@ -0,0 +1,277 @@
++# STEVE JOBS 1984: Macintosh biết nói bằng hình
++
++## CH00 · Cú nhấp đã được nhìn thấy
++
++Ngày 24 tháng 01 năm 1984, Steve Jobs giới thiệu Macintosh, và trong vài phút bạn sẽ thấy vì sao một chiếc chuột một nút lại làm máy tính trở nên dễ nhìn hơn.
++
++Điều lạ là chiếc máy không mở màn bằng một dòng lệnh dài, mà có lúc tự giới thiệu trong phần trình diễn đã chuẩn bị cho ngày ra mắt.
++
++Giao diện đồ họa là nơi cửa sổ, biểu tượng và con trỏ, tức mũi tên do chuột một nút điều khiển, biến thao tác thành thứ mắt bạn có thể lần theo.
++
++Năm 1979, một đoàn Apple do Jobs dẫn đầu đã tới Xerox PARC và xem Smalltalk chạy trên máy Alto.
++
++Tại PARC, Alto đã dùng cửa sổ, biểu tượng, menu và con trỏ, được điều khiển bằng chuột.
++
++Ta sẽ qua PARC, bộ nhớ 128K, quảng cáo Super Bowl và sân khấu ngày 24 tháng 01.
++
++Sau đó là câu chuyện chiếc chuột, bộ phim Steve Jobs năm 2015, và điều còn lại khi màn hình bắt đầu nói bằng hình.
++
++Nhưng nếu ý tưởng đã được thấy từ 1979, điều gì khiến Macintosh 1984 trở thành bước ngoặt mà nhiều người nhớ đến?
++
++## CH01 · Chín mươi K để làm việc
++
++Macintosh nguyên bản chỉ có 128K RAM, tức một phần tám megabyte theo Andy Hertzfeld.
++
++RAM là bộ nhớ làm việc tạm thời, nơi chương trình giữ thứ nó đang cần ngay lúc này.
++
++Con số nghe nhỏ khi nhìn từ hiện tại, nhưng nó quyết định từng khoảng trống trong chiếc máy năm 1984.
++
++Khoảng 16K được dành cho hệ thống.
++
++Khoảng 22K nữa dành cho màn hình đen trắng 512 nhân 342 điểm ảnh.
++
++Điểm ảnh là những chấm rất nhỏ ghép thành hình trên màn hình.
++
++Sau hai phần ấy, ứng dụng chỉ còn khoảng 90K để thở.
++
++Vì vậy, một thao tác tưởng đơn giản như vẽ hay soạn thảo lại phải được cân từng mẩu bộ nhớ.
++
++Đến mùa thu 1983, MacWrite và MacPaint về cơ bản đã hoàn tất tính năng.
++
++MacWrite là chương trình soạn văn bản, còn MacPaint là chương trình vẽ bằng chuột.
++
++Nhưng cả hai vẫn cần thử nghiệm nhiều trong tình trạng thiếu bộ nhớ.
++
++Một con trỏ chạy theo chuột không chỉ là hiệu ứng đẹp mắt.
++
++Nó phải có chỗ trong bộ nhớ, cùng cửa sổ, biểu tượng và phần việc người dùng đang làm.
++
++Computer History Museum mô tả Macintosh 128K là một máy tự chứa với desktop đồ họa kiểu Alto đã được cải tiến.
++
++Desktop ở đây là mặt bàn trên màn hình, nơi các biểu tượng và cửa sổ được đặt cạnh nhau.
++
++Máy có giá 2.495 USD.
++
++Giá đó gồm một lời hứa: thay vì nhớ câu lệnh, bạn có thể nhìn thấy việc mình sắp làm.
++
++Lời hứa ấy vẫn chưa đủ nếu không có phần mềm chạy mượt trong giới hạn 90K.
++
++Đó là lý do câu chuyện Macintosh không chỉ có Jobs ở sân khấu.
++
++Nó còn có một đội phần mềm đang thử từng chi tiết, để một lần nhấp chuột không biến thành lúc máy đứng lại.
++
++## CH02 · Quảng cáo đi trước chiếc máy
++
++Trước khi Macintosh được giới thiệu chính thức, khán giả truyền hình đã thấy một tín hiệu khác.
++
++Ngày 22 tháng 01 năm 1984, quảng cáo truyền hình mang tên 1984 được phát trong quý ba của Super Bowl XVIII.
++
++Đó là hai ngày trước ngày giới thiệu Macintosh 24 tháng 01 năm 1984.
++
++Vì vậy, đây là mốc phát sóng quảng cáo, không phải ngày bán lẻ của máy.
++
++Computer History Museum ghi chiến dịch Super Bowl dùng một quảng cáo trị giá 1,5 triệu USD.
++
++Một con số lớn không tự chứng minh sản phẩm sẽ thành công.
++
++Nó chỉ cho thấy Apple đã chọn một sân khấu đắt tiền để đặt câu hỏi về cách người ta nhìn máy tính.
++
++Smithsonian gọi quảng cáo này là một trong những quảng cáo Super Bowl nổi tiếng nhất.
++
++Đó là đánh giá của bảo tàng, chứ không phải số đo doanh số Macintosh.
++
++Điểm đáng chú ý là nhịp kể đi trước vật thể.
++
++Khán giả được gợi cảm giác một trật tự cũ sắp bị phá vỡ, rồi hai ngày sau mới gặp chiếc máy thật.
++
++Một chiếc chuột một nút không xuất hiện như một món phụ kiện vô danh.
++
++Nó là phần bàn tay của lời hứa: bạn di chuyển, con trỏ phản hồi, và màn hình trả lại hình ảnh.
++
++Quảng cáo có thể làm ký ức bùng lên nhanh hơn tài liệu kỹ thuật.
++
++Nhưng nó không thay thế được câu hỏi khó hơn.
++
++Khi chiếc Macintosh nhỏ thật sự bước ra sân khấu, nó có làm được điều mà lời hứa vừa dựng lên không?
++
++## CH03 · Ngày chiếc máy tự giới thiệu
++
++Apple Support ghi Macintosh 128K được giới thiệu ngày 24 tháng 01 năm 1984.
++
++Andy Hertzfeld gọi đó là ngày lớn, khi đội ngũ vừa hào hứng vừa lo về phần mềm demo chuẩn bị gấp.
++
++Demo là phần trình diễn được soạn để cho người xem thấy máy làm được gì.
++
++Trong hồi ức về buổi ra mắt, Jobs đưa một đĩa vào Macintosh.
++
++Máy có phần trình diễn tự giới thiệu, nhưng ta không cần bịa lại lời thoại của nó để hiểu khoảnh khắc ấy.
++
++Một chiếc hộp nhỏ trên sân khấu đã được giao nhiệm vụ nói bằng chính màn hình của mình.
++
++Theo cùng hồi ức, Jobs gọi Macintosh là cột mốc ngành thứ ba sau Apple II và IBM PC.
++
++Đó là phát biểu của Jobs tại sự kiện, không phải kết luận độc lập về toàn bộ lịch sử máy tính.
++
++Sự phân biệt này quan trọng vì một buổi ra mắt luôn có phần sân khấu.
++
++Sân khấu muốn bạn nhớ khoảnh khắc.
++
++Còn lịch sử cần cho biết ai đã làm gì, vào lúc nào, và điều nào vẫn chỉ là lời tự đánh giá.
++
++Chiếc đĩa mềm 3,5 inch trong tay người trình diễn cũng nhắc rằng phần mềm phải được đưa vào máy trước khi màn hình làm điều kỳ diệu.
++
++Con chuột một nút đặt cạnh máy không cần lời giới thiệu dài.
++
++Nó cho người dùng một cử chỉ rất ngắn: trỏ vào thứ đang thấy, rồi bấm.
++
++Sau tiếng vỗ tay, câu hỏi đổi hướng.
++
++Không còn là quảng cáo đã gây chú ý thế nào.
++
++Câu hỏi là: bên trong chiếc máy 128K ấy có những gì để cử chỉ bấm chuột trở thành một cách dùng máy tính thực sự?
++
++## CH04 · Cái giá của một mặt bàn
++
++Theo Computer History Museum, Macintosh dùng bộ vi xử lý 8 MHz, bộ nhớ bán dẫn 128K và kiến trúc 16-bit.
++
++Bộ vi xử lý là phần thực hiện các phép tính và điều khiển trong máy.
++
++MHz là đơn vị nhịp hoạt động, còn 16-bit mô tả cách kiến trúc xử lý dữ liệu trong bối cảnh kỹ thuật ấy.
++
++Danh mục Datapro năm 1984 ghi giá cơ bản 2.495 USD.
++
++Gói đó gồm 128KB RAM, ổ microdiskette 400KB, bàn phím, CRT, chuột, tài liệu và đĩa hệ thống.
++
++CRT là loại màn hình ống tia âm cực, chiếc màn hình dày phổ biến vào thời đó.
++
++Microdiskette là đĩa mềm nhỏ để mang phần mềm hoặc dữ liệu.
++
++Danh mục này cũng ghi đợt giao máy đầu tiên là tháng 01 năm 1984.
++
++Máy có sẵn qua 3.000 đại lý ủy quyền trên thế giới, theo Datapro.
++
++Đó là dữ kiện về kênh phân phối, không phải lời khẳng định rằng mọi nơi đều đón nhận nó như nhau.
++
++Theo Computer History Museum, Macintosh giúp đưa cách dùng máy bằng giao diện đồ họa và chuột tới nhiều người hơn.
++
++Đây là nhận định lịch sử của bảo tàng.
++
++Nó không nói Macintosh là máy đầu tiên có chuột, vì Alto và Lisa đã có trước.
++
++Điều Macintosh đóng gói là một mặt bàn có thể nhìn thấy, một con trỏ có thể di chuyển, và một mức giá kèm đường phân phối cụ thể.
++
++Chuột một nút vì vậy không đứng riêng lẻ.
++
++Nó là cửa vào của cả gói phần cứng, phần mềm và cách trình bày mới.
++
++Nhưng nhìn thấy giao diện chưa có nghĩa mọi tác vụ đều nhẹ nhàng.
++
++Ở chương tiếp theo, chính một chương trình vẽ cho thấy cái giá bộ nhớ của một màn hình tưởng rất đơn giản.
++
++## CH05 · Chuột không chỉ để chỉ
++
++Computer History Museum mô tả giao diện Lisa và Mac bằng cửa sổ, biểu tượng, menu và con trỏ.
++
++Người ta thường gọi tắt mô hình ấy là WIMP.
++
++WIMP không phải tên một sản phẩm, mà là chữ viết tắt của bốn thành phần vừa nói.
++
++Chuột điều khiển con trỏ đi qua những thành phần ấy.
++
++Bạn không cần nhớ một chuỗi lệnh để mở một việc quen thuộc.
++
++Bạn nhìn biểu tượng, đưa chuột một nút tới đó, rồi bấm.
++
++Macintosh là nỗ lực thứ hai của Apple cho máy cá nhân dựa trên giao diện đồ họa, sau thất bại thương mại của Lisa, theo Computer History Museum.
++
++Máy Macintosh nguyên bản có màn hình đen trắng 512 nhân 342 điểm ảnh, theo Andy Hertzfeld.
++
++Trên diện tích nhỏ đó, MacPaint cần ba vùng đệm ngoài màn hình.
++
++Mỗi vùng đệm có kích thước bằng toàn bộ màn hình.
++
++Vùng đệm là nơi chương trình giữ một bản sao hình ảnh để tính toán trước khi bạn thấy kết quả.
++
++Chi tiết ấy cho thấy giới hạn bộ nhớ gây áp lực ra sao.
++
++Nhưng nó không cho phép ta nói một mình MacPaint quyết định toàn bộ thiết kế của Macintosh.
++
++Một giao diện nhìn đơn giản thường che bên dưới rất nhiều thỏa hiệp kỹ thuật.
++
++Con trỏ mũi tên đi qua màn hình đen trắng có vẻ bình thường với chúng ta hôm nay.
++
++Năm 1984, nó phải cùng tồn tại với một bức vẽ, một văn bản, hệ thống và phần bộ nhớ ít ỏi còn lại.
++
++Đó là bước ngoặt của Macintosh: không phát minh ra mọi thành phần từ số không, mà ép chúng cùng hoạt động trong một chiếc máy hướng tới người dùng.
++
++Và khi câu chuyện được kể lại bằng phim, chính những thỏa hiệp chậm và nhiều người này rất dễ bị nén thành một cuộc đối đầu gọn gàng.
++
++## CH06 · Bộ phim và khoảng cách thật
++
++Phim Steve Jobs năm 2015 có tên hiển thị tại Việt Nam là Steve Jobs.
++
++Netflix Việt Nam mô tả phim tập trung vào ba điểm quan trọng trong sự nghiệp người tạo ra Mac.
++
++Apple TV Việt Nam ghi Danny Boyle đạo diễn, Aaron Sorkin viết kịch bản và Michael Fassbender đóng Steve Jobs.
++
++TIME phỏng vấn Sorkin và ghi phim được cấu trúc thành ba màn quanh ba lần ra mắt.
++
++Ba lần ấy là Macintosh, NeXT năm 1988 và iMac năm 1998.
++
++Phim tập trung vào hỗn loạn hậu trường trước các buổi ra mắt.
++
++Nhưng Sorkin nói với CNET và CBS rằng, theo hiểu biết của ông, Jobs không có những cuộc đối đầu với cùng sáu người chỉ 40 phút trước mỗi buổi ra mắt.
++
++Vì thế, không nên đọc các đối thoại hậu trường trong phim như hồ sơ lịch sử.
++
++Sau đó, ta trở về với tài liệu: chuyến thăm PARC năm 1979, bộ nhớ 128K, quảng cáo ngày 22 tháng 01, và sân khấu ngày 24 tháng 01 năm 1984.
++
++Chuột một nút cũng nhắc ta về khác biệt này.
++
++Ngoài đời, nó là một phần của giao diện, của phần mềm, của bộ nhớ và của cả đội làm cho thao tác bấm có nghĩa.
++
++Khi giữ được khoảng cách ấy, câu chuyện không bớt kịch tính.
++
++Nó chỉ công bằng hơn với người thật và với những chi tiết mà nguồn chưa xác nhận.
++
++## CH07 · Điều còn lại trên màn hình
++
++Theo Computer History Museum, các nhà thiết kế, nghệ sĩ và nhà giáo dục đã sớm tiếp nhận Macintosh.
++
++Đây là mô tả của bảo tàng, không phải thống kê toàn thị trường.
++
++Cũng theo Computer History Museum, Macintosh đưa điện toán đồ họa tới đông người dùng hơn.
++
++Điều đó không biến nó thành máy đầu tiên có giao diện đồ họa hay chuột.
++
++Alto có trước.
++
++Lisa có trước.
++
++Giá trị của mốc 1984 nằm ở cách nhiều phần đã tồn tại được ghép thành một trải nghiệm có thể đem ra thị trường.
++
++Bạn nhìn một biểu tượng.
++
++Bạn đưa con trỏ tới đó bằng chuột một nút.
++
++Bạn bấm, và chiếc máy trả lời bằng thay đổi trên màn hình.
++
++Folklore.org ghi phần mềm hệ thống vẫn được hoàn tất gấp sát ngày ra mắt.
++
++Vì vậy, câu chuyện không chỉ là một cá nhân làm ra Macintosh.
++
++Nó có cả đội phần mềm, cùng những giới hạn bộ nhớ và những bản demo phải kịp chạy.
++
++Apple Support liệt kê Macintosh 128K hỗ trợ các bản Mac OS từ System 1.0 đến 7.0.1P.
++
++Đó là danh sách tương thích kỹ thuật, không phải bằng chứng về mức độ phổ biến của từng bản.
++
++Điều đáng giữ lại không phải huyền thoại rằng Jobs tự mình phát minh ra tất cả.
++
++Đó là một bước ngoặt năm 1984, khi cách dùng máy bằng hình, con trỏ và chuột được đưa tới gần nhiều người hơn.
++
++Và câu hỏi treo từ đầu giờ có thể trả lời như thế này.
++
++Macintosh đáng nhớ không vì nó xuất hiện từ khoảng trống.
++
++Nó đáng nhớ vì biến một chuỗi ý tưởng, thử nghiệm và lao động của nhiều người thành một cử chỉ mà bạn có thể hiểu chỉ bằng một cú nhấp.
+diff --git a/docs/pm/tickets/2026-10-26-codex-pilot/T6W1-ket-qua.md b/docs/pm/tickets/2026-10-26-codex-pilot/T6W1-ket-qua.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..b75c8c9c7e2754621e4c99aa75b3319bead70314
+--- /dev/null
++++ b/docs/pm/tickets/2026-10-26-codex-pilot/T6W1-ket-qua.md
+@@ -0,0 +1,30 @@
++# Báo cáo T6W1 — mim-macintosh-1984
++
++## Đã thực hiện
++
++- Viết `data/long/mim-macintosh-1984/script.md`: 8 chương, tiêu đề `STEVE JOBS 1984: Macintosh biết nói bằng hình` (52 ký tự, một dấu hai chấm).
++- Viết `data/long/mim-macintosh-1984/factcheck.md`: đối chiếu các mốc, số liệu, tên riêng và nhận định quy dẫn với 26 URL công khai từ kho dữ kiện đã duyệt.
++- Chạy `PYTHONIOENCODING=utf-8 python motion/long/script_lines.py mim-macintosh-1984` hai lần cuối: tổng 2.271 âm tiết; CH00 201 âm tiết.
++- Chạy `PYTHONIOENCODING=utf-8 python motion/long/studio_lint.py mim-macintosh-1984 --strict`: **0 lỗi**, 7 cảnh báo phong cách về mật độ câu ngắn và một câu liệt kê ở CH00.
++- Chạy `PYTHONIOENCODING=utf-8 python scripts/long_gate.py mim-macintosh-1984 --min-syl 1900`: **TRƯỢT, 21 lỗi**.
++
++## Hook và cấu trúc
++
++- Mở đầu CH00 nêu đúng mốc `24 tháng 01 năm 1984` và lời hứa cụ thể về chuột một nút.
++- Câu trả một phần lời hứa nằm ở CH00, dòng 7 của `script.md`: Macintosh có phần trình diễn tự giới thiệu trong ngày ra mắt.
++- Lộ trình: PARC → bộ nhớ 128K → Super Bowl → sân khấu 24/01 → chuột/giao diện → phim *Steve Jobs* → di sản.
++- Câu hỏi treo ở cuối CH00: vì sao ý tưởng đã được thấy từ năm 1979 vẫn thành bước ngoặt ở năm 1984.
++- Vật nối “chuột một nút” xuất hiện ở CH00, CH01, CH02, CH03, CH04, CH05, CH06 và CH07.
++
++## Không kiểm được / giới hạn
++
++- Không có khẳng định nào dùng ngoài kho dữ kiện đã duyệt. Các nhận định nguồn xếp mức “vừa” đều đọc với quy dẫn rõ (Computer History Museum, Smithsonian, Netflix Việt Nam, TIME hoặc lời Sorkin).
++- Không tạo hoặc gọi ảnh AI, không dùng tư liệu phim.
++
++## Blocker cổng tổng
++
++Ticket chỉ cho phép ghi ba file: `script.md`, `factcheck.md`, và báo cáo này. Sau `script_lines.py`, các `chNN.json` chỉ có lời đọc; chưa có cảnh, `hud`, `spec.youtube`, `say`, hoặc timing TTS.
++
++Vì vậy `long_gate.py` báo thiếu HUD và tối thiểu 5 loại cảnh tại cả 8 chương, thiếu TTS cho CH00–CH07, cảnh trung bình 648,9 giây, và thiếu các trường `spec.youtube` (`publish_at`, `playlist`, `chapter_titles`, `tags`, `video_credits`, `sources`, `say`). Các artefact cần để sửa nằm ngoài danh sách “Chỉ ghi” của ticket; không tự ý tạo `gen_scenes.py`, `spec.json` hay chạy TTS/render.
++
++Không có clip sheet hoặc thumbnail trong ticket W1 này; chưa tạo.
+
+apply patch
+patch: completed
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-26-codex-pilot\T6W1-ket-qua.md
+diff --git a/data/long/mim-macintosh-1984/factcheck.md b/data/long/mim-macintosh-1984/factcheck.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..01cd8ee51f5512d618d0799aae03153aa54f982b
+--- /dev/null
++++ b/data/long/mim-macintosh-1984/factcheck.md
+@@ -0,0 +1,19 @@
++# Factcheck — mim-macintosh-1984
++
++Mọi URL dưới đây đã có trong kho dữ kiện đã duyệt của ticket. Các nhận định được gắn “theo” trong lời đọc khi kho xếp độ tin là vừa.
++
++| Khẳng định trong kịch bản | Nguồn |
++|---|---|
++| Steve Jobs dẫn đoàn Apple tới Xerox PARC năm 1979; Smalltalk chạy trên Alto. Alto có GUI với cửa sổ, biểu tượng, menu, con trỏ và chuột; Apple phát triển giao diện Lisa từ đầu dù chịu ảnh hưởng PARC. | [Computer History Museum — Lisa](https://computerhistory.org/blog/the-lisa-apples-most-influential-failure/); [Computer History Museum — Xerox PARC](https://www.computerhistory.org/revolution/story/348) |
++| Lisa ra trước Macintosh và là máy tiêu dùng đầu tiên của Apple có GUI cùng chuột. | [Computer History Museum — Apple Timeline](https://computerhistory.org/apple-timeline/) |
++| Macintosh nguyên bản có 128K RAM; khoảng 16K cho hệ thống, 22K cho màn hình 512 × 342, còn khoảng 90K cho ứng dụng. MacWrite/MacPaint cơ bản hoàn tất vào mùa thu 1983 nhưng cần thử nghiệm thêm. | [Folklore.org — Monkey Lives](https://folklore.org/Monkey_Lives.html) |
++| Macintosh 128K là máy tự chứa, có desktop đồ họa kiểu Alto cải tiến, 128K và giá 2.495 USD. | [Computer History Museum — Apple Macintosh](https://www.computerhistory.org/revolution/personal-computers/17/303/1203) |
++| Quảng cáo “1984” phát ngày 22/01/1984 trong quý ba Super Bowl XVIII; đây là hai ngày trước giới thiệu chính thức 24/01/1984. | [Smithsonian — Apple 1984 ad](https://americanhistory.si.edu/explore/stories/remembering-apples-1984-super-bowl-ad); [Apple Support — Macintosh 128K](https://support.apple.com/en-me/112190) |
++| Chiến dịch Super Bowl dùng quảng cáo 1,5 triệu USD. Smithsonian đánh giá đây là một trong các quảng cáo Super Bowl nổi tiếng nhất. | [Computer History Museum — January 22](https://www.computerhistory.org/tdih/january/22/); [Smithsonian — Apple 1984 ad](https://americanhistory.si.edu/explore/stories/remembering-apples-1984-super-bowl-ad) |
++| Macintosh 128K được giới thiệu 24/01/1984. Hertzfeld kể đội vừa hào hứng vừa lo demo; Jobs đưa đĩa vào máy, và phần demo có tự giới thiệu. Phát biểu “cột mốc thứ ba” là lời Jobs tại sự kiện. | [Apple Support — Macintosh 128K](https://support.apple.com/en-me/112190); [Folklore.org — The Times They Are A-Changin’](https://www.folklore.org/StoryView.py?detail=medium&project=Macintosh&sortOrder=Sort+by+Date&story=The+Times_They_Are_A-Changin.txt&topic=The+Launch); [Folklore.org — Intro Demo](https://folklore.org/Intro_Demo.html) |
++| Macintosh dùng CPU 8 MHz, 128K, kiến trúc 16-bit. Gói 2.495 USD gồm 128KB RAM, microdiskette 400KB, bàn phím, CRT, chuột, tài liệu và đĩa hệ thống; giao máy đầu tháng 01/1984 qua 3.000 đại lý. | [Computer History Museum — Apple Macintosh](https://www.computerhistory.org/revolution/personal-computers/17/303/1203); [Datapro 1984](https://bitsavers.computerhistory.org/pdf/datapro/datapro_reports_70s-90s/Apple/M09-057-10_8411_Apple_Macintosh.pdf) |
++| Theo CHM, Macintosh đưa GUI và chuột tới nhiều người hơn; đây không phải khẳng định máy đầu tiên có GUI/chuột. | [Computer History Museum — Hello, Mac at 40](https://computerhistory.org/exhibits/hello-the-mac-at-40/); [Computer History Museum — Apple Timeline](https://computerhistory.org/apple-timeline/) |
++| Lisa/Mac dùng mô hình WIMP do chuột điều khiển. Macintosh là nỗ lực GUI thứ hai của Apple sau thất bại thương mại Lisa. Màn hình 512 × 342; MacPaint dùng ba vùng đệm ngoài màn hình. | [Computer History Museum — Lisa](https://computerhistory.org/blog/the-lisa-apples-most-influential-failure/); [Computer History Museum — Apple Macintosh](https://www.computerhistory.org/revolution/personal-computers/17/303/1203); [Folklore.org — Monkey Lives](https://folklore.org/Monkey_Lives.html) |
++| Phim Steve Jobs (2015): Netflix VN mô tả ba điểm sự nghiệp; Apple TV VN ghi Danny Boyle, Aaron Sorkin, Michael Fassbender. | [Netflix Việt Nam — Steve Jobs](https://www.netflix.com/vn/title/80049358); [Apple TV Việt Nam — Steve Jobs](https://tv.apple.com/vn/movie/steve-jobs/umc.cmc.20qugmesej4yg33x3e4uev8xh?l=vi) |
++| TIME: phim có ba màn quanh Macintosh, NeXT năm 1988 và iMac năm 1998. Sorkin nói với CNET/CBS rằng không có các đối đầu với cùng sáu người 40 phút trước mỗi lần ra mắt như phim dựng. | [TIME — The Man Who Would Be Jobs](https://time.com/4012824/the-man-who-would-be-jobs/); [CBS News/CNET — 19 questions](https://www.cbsnews.com/news/19-questions-you-might-be-asking-after-seeing-steve-jobs/) |
++| CHM mô tả nhà thiết kế, nghệ sĩ, nhà giáo dục sớm tiếp nhận Mac. Folklore.org ghi phần mềm hệ thống hoàn tất gấp sát ra mắt. Macintosh 128K hỗ trợ System 1.0 đến 7.0.1P. | [Computer History Museum — Apple Macintosh](https://www.computerhistory.org/revolution/personal-computers/17/303/1203); [Folklore.org — The Times They Are A-Changin’](https://www.folklore.org/StoryView.py?detail=medium&project=Macintosh&sortOrder=Sort+by+Date&story=The+Times_They_Are_A-Changin.txt&topic=The+Launch); [Apple Support — Macintosh 128K](https://support.apple.com/en-me/112190) |
+diff --git a/data/long/mim-macintosh-1984/script.md b/data/long/mim-macintosh-1984/script.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..8a921a94e1c421c844b542cc07ef5c8055ddfdf7
+--- /dev/null
++++ b/data/long/mim-macintosh-1984/script.md
+@@ -0,0 +1,277 @@
++# STEVE JOBS 1984: Macintosh biết nói bằng hình
++
++## CH00 · Cú nhấp đã được nhìn thấy
++
++Ngày 24 tháng 01 năm 1984, Steve Jobs giới thiệu Macintosh, và trong vài phút bạn sẽ thấy vì sao một chiếc chuột một nút lại làm máy tính trở nên dễ nhìn hơn.
++
++Điều lạ là chiếc máy không mở màn bằng một dòng lệnh dài, mà có lúc tự giới thiệu trong phần trình diễn đã chuẩn bị cho ngày ra mắt.
++
++Giao diện đồ họa là nơi cửa sổ, biểu tượng và con trỏ, tức mũi tên do chuột một nút điều khiển, biến thao tác thành thứ mắt bạn có thể lần theo.
++
++Năm 1979, một đoàn Apple do Jobs dẫn đầu đã tới Xerox PARC và xem Smalltalk chạy trên máy Alto.
++
++Tại PARC, Alto đã dùng cửa sổ, biểu tượng, menu và con trỏ, được điều khiển bằng chuột.
++
++Ta sẽ qua PARC, bộ nhớ 128K, quảng cáo Super Bowl và sân khấu ngày 24 tháng 01.
++
++Sau đó là câu chuyện chiếc chuột, bộ phim Steve Jobs năm 2015, và điều còn lại khi màn hình bắt đầu nói bằng hình.
++
++Nhưng nếu ý tưởng đã được thấy từ 1979, điều gì khiến Macintosh 1984 trở thành bước ngoặt mà nhiều người nhớ đến?
++
++## CH01 · Chín mươi K để làm việc
++
++Macintosh nguyên bản chỉ có 128K RAM, tức một phần tám megabyte theo Andy Hertzfeld.
++
++RAM là bộ nhớ làm việc tạm thời, nơi chương trình giữ thứ nó đang cần ngay lúc này.
++
++Con số nghe nhỏ khi nhìn từ hiện tại, nhưng nó quyết định từng khoảng trống trong chiếc máy năm 1984.
++
++Khoảng 16K được dành cho hệ thống.
++
++Khoảng 22K nữa dành cho màn hình đen trắng 512 nhân 342 điểm ảnh.
++
++Điểm ảnh là những chấm rất nhỏ ghép thành hình trên màn hình.
++
++Sau hai phần ấy, ứng dụng chỉ còn khoảng 90K để thở.
++
++Vì vậy, một thao tác tưởng đơn giản như vẽ hay soạn thảo lại phải được cân từng mẩu bộ nhớ.
++
++Đến mùa thu 1983, MacWrite và MacPaint về cơ bản đã hoàn tất tính năng.
++
++MacWrite là chương trình soạn văn bản, còn MacPaint là chương trình vẽ bằng chuột.
++
++Nhưng cả hai vẫn cần thử nghiệm nhiều trong tình trạng thiếu bộ nhớ.
++
++Một con trỏ chạy theo chuột không chỉ là hiệu ứng đẹp mắt.
++
++Nó phải có chỗ trong bộ nhớ, cùng cửa sổ, biểu tượng và phần việc người dùng đang làm.
++
++Computer History Museum mô tả Macintosh 128K là một máy tự chứa với desktop đồ họa kiểu Alto đã được cải tiến.
++
++Desktop ở đây là mặt bàn trên màn hình, nơi các biểu tượng và cửa sổ được đặt cạnh nhau.
++
++Máy có giá 2.495 USD.
++
++Giá đó gồm một lời hứa: thay vì nhớ câu lệnh, bạn có thể nhìn thấy việc mình sắp làm.
++
++Lời hứa ấy vẫn chưa đủ nếu không có phần mềm chạy mượt trong giới hạn 90K.
++
++Đó là lý do câu chuyện Macintosh không chỉ có Jobs ở sân khấu.
++
++Nó còn có một đội phần mềm đang thử từng chi tiết, để một lần nhấp chuột không biến thành lúc máy đứng lại.
++
++## CH02 · Quảng cáo đi trước chiếc máy
++
++Trước khi Macintosh được giới thiệu chính thức, khán giả truyền hình đã thấy một tín hiệu khác.
++
++Ngày 22 tháng 01 năm 1984, quảng cáo truyền hình mang tên 1984 được phát trong quý ba của Super Bowl XVIII.
++
++Đó là hai ngày trước ngày giới thiệu Macintosh 24 tháng 01 năm 1984.
++
++Vì vậy, đây là mốc phát sóng quảng cáo, không phải ngày bán lẻ của máy.
++
++Computer History Museum ghi chiến dịch Super Bowl dùng một quảng cáo trị giá 1,5 triệu USD.
++
++Một con số lớn không tự chứng minh sản phẩm sẽ thành công.
++
++Nó chỉ cho thấy Apple đã chọn một sân khấu đắt tiền để đặt câu hỏi về cách người ta nhìn máy tính.
++
++Smithsonian gọi quảng cáo này là một trong những quảng cáo Super Bowl nổi tiếng nhất.
++
++Đó là đánh giá của bảo tàng, chứ không phải số đo doanh số Macintosh.
++
++Điểm đáng chú ý là nhịp kể đi trước vật thể.
++
++Khán giả được gợi cảm giác một trật tự cũ sắp bị phá vỡ, rồi hai ngày sau mới gặp chiếc máy thật.
++
++Một chiếc chuột một nút không xuất hiện như một món phụ kiện vô danh.
++
++Nó là phần bàn tay của lời hứa: bạn di chuyển, con trỏ phản hồi, và màn hình trả lại hình ảnh.
++
++Quảng cáo có thể làm ký ức bùng lên nhanh hơn tài liệu kỹ thuật.
++
++Nhưng nó không thay thế được câu hỏi khó hơn.
++
++Khi chiếc Macintosh nhỏ thật sự bước ra sân khấu, nó có làm được điều mà lời hứa vừa dựng lên không?
++
++## CH03 · Ngày chiếc máy tự giới thiệu
++
++Apple Support ghi Macintosh 128K được giới thiệu ngày 24 tháng 01 năm 1984.
++
++Andy Hertzfeld gọi đó là ngày lớn, khi đội ngũ vừa hào hứng vừa lo về phần mềm demo chuẩn bị gấp.
++
++Demo là phần trình diễn được soạn để cho người xem thấy máy làm được gì.
++
++Trong hồi ức về buổi ra mắt, Jobs đưa một đĩa vào Macintosh.
++
++Máy có phần trình diễn tự giới thiệu, nhưng ta không cần bịa lại lời thoại của nó để hiểu khoảnh khắc ấy.
++
++Một chiếc hộp nhỏ trên sân khấu đã được giao nhiệm vụ nói bằng chính màn hình của mình.
++
++Theo cùng hồi ức, Jobs gọi Macintosh là cột mốc ngành thứ ba sau Apple II và IBM PC.
++
++Đó là phát biểu của Jobs tại sự kiện, không phải kết luận độc lập về toàn bộ lịch sử máy tính.
++
++Sự phân biệt này quan trọng vì một buổi ra mắt luôn có phần sân khấu.
++
++Sân khấu muốn bạn nhớ khoảnh khắc.
++
++Còn lịch sử cần cho biết ai đã làm gì, vào lúc nào, và điều nào vẫn chỉ là lời tự đánh giá.
++
++Chiếc đĩa mềm 3,5 inch trong tay người trình diễn cũng nhắc rằng phần mềm phải được đưa vào máy trước khi màn hình làm điều kỳ diệu.
++
++Con chuột một nút đặt cạnh máy không cần lời giới thiệu dài.
++
++Nó cho người dùng một cử chỉ rất ngắn: trỏ vào thứ đang thấy, rồi bấm.
++
++Sau tiếng vỗ tay, câu hỏi đổi hướng.
++
++Không còn là quảng cáo đã gây chú ý thế nào.
++
++Câu hỏi là: bên trong chiếc máy 128K ấy có những gì để cử chỉ bấm chuột trở thành một cách dùng máy tính thực sự?
++
++## CH04 · Cái giá của một mặt bàn
++
++Theo Computer History Museum, Macintosh dùng bộ vi xử lý 8 MHz, bộ nhớ bán dẫn 128K và kiến trúc 16-bit.
++
++Bộ vi xử lý là phần thực hiện các phép tính và điều khiển trong máy.
++
++MHz là đơn vị nhịp hoạt động, còn 16-bit mô tả cách kiến trúc xử lý dữ liệu trong bối cảnh kỹ thuật ấy.
++
++Danh mục Datapro năm 1984 ghi giá cơ bản 2.495 USD.
++
++Gói đó gồm 128KB RAM, ổ microdiskette 400KB, bàn phím, CRT, chuột, tài liệu và đĩa hệ thống.
++
++CRT là loại màn hình ống tia âm cực, chiếc màn hình dày phổ biến vào thời đó.
++
++Microdiskette là đĩa mềm nhỏ để mang phần mềm hoặc dữ liệu.
++
++Danh mục này cũng ghi đợt giao máy đầu tiên là tháng 01 năm 1984.
++
++Máy có sẵn qua 3.000 đại lý ủy quyền trên thế giới, theo Datapro.
++
++Đó là dữ kiện về kênh phân phối, không phải lời khẳng định rằng mọi nơi đều đón nhận nó như nhau.
++
++Theo Computer History Museum, Macintosh giúp đưa cách dùng máy bằng giao diện đồ họa và chuột tới nhiều người hơn.
++
++Đây là nhận định lịch sử của bảo tàng.
++
++Nó không nói Macintosh là máy đầu tiên có chuột, vì Alto và Lisa đã có trước.
++
++Điều Macintosh đóng gói là một mặt bàn có thể nhìn thấy, một con trỏ có thể di chuyển, và một mức giá kèm đường phân phối cụ thể.
++
++Chuột một nút vì vậy không đứng riêng lẻ.
++
++Nó là cửa vào của cả gói phần cứng, phần mềm và cách trình bày mới.
++
++Nhưng nhìn thấy giao diện chưa có nghĩa mọi tác vụ đều nhẹ nhàng.
++
++Ở chương tiếp theo, chính một chương trình vẽ cho thấy cái giá bộ nhớ của một màn hình tưởng rất đơn giản.
++
++## CH05 · Chuột không chỉ để chỉ
++
++Computer History Museum mô tả giao diện Lisa và Mac bằng cửa sổ, biểu tượng, menu và con trỏ.
++
++Người ta thường gọi tắt mô hình ấy là WIMP.
++
++WIMP không phải tên một sản phẩm, mà là chữ viết tắt của bốn thành phần vừa nói.
++
++Chuột điều khiển con trỏ đi qua những thành phần ấy.
++
++Bạn không cần nhớ một chuỗi lệnh để mở một việc quen thuộc.
++
++Bạn nhìn biểu tượng, đưa chuột một nút tới đó, rồi bấm.
++
++Macintosh là nỗ lực thứ hai của Apple cho máy cá nhân dựa trên giao diện đồ họa, sau thất bại thương mại của Lisa, theo Computer History Museum.
++
++Máy Macintosh nguyên bản có màn hình đen trắng 512 nhân 342 điểm ảnh, theo Andy Hertzfeld.
++
++Trên diện tích nhỏ đó, MacPaint cần ba vùng đệm ngoài màn hình.
++
++Mỗi vùng đệm có kích thước bằng toàn bộ màn hình.
++
++Vùng đệm là nơi chương trình giữ một bản sao hình ảnh để tính toán trước khi bạn thấy kết quả.
++
++Chi tiết ấy cho thấy giới hạn bộ nhớ gây áp lực ra sao.
++
++Nhưng nó không cho phép ta nói một mình MacPaint quyết định toàn bộ thiết kế của Macintosh.
++
++Một giao diện nhìn đơn giản thường che bên dưới rất nhiều thỏa hiệp kỹ thuật.
++
++Con trỏ mũi tên đi qua màn hình đen trắng có vẻ bình thường với chúng ta hôm nay.
++
++Năm 1984, nó phải cùng tồn tại với một bức vẽ, một văn bản, hệ thống và phần bộ nhớ ít ỏi còn lại.
++
++Đó là bước ngoặt của Macintosh: không phát minh ra mọi thành phần từ số không, mà ép chúng cùng hoạt động trong một chiếc máy hướng tới người dùng.
++
++Và khi câu chuyện được kể lại bằng phim, chính những thỏa hiệp chậm và nhiều người này rất dễ bị nén thành một cuộc đối đầu gọn gàng.
++
++## CH06 · Bộ phim và khoảng cách thật
++
++Phim Steve Jobs năm 2015 có tên hiển thị tại Việt Nam là Steve Jobs.
++
++Netflix Việt Nam mô tả phim tập trung vào ba điểm quan trọng trong sự nghiệp người tạo ra Mac.
++
++Apple TV Việt Nam ghi Danny Boyle đạo diễn, Aaron Sorkin viết kịch bản và Michael Fassbender đóng Steve Jobs.
++
++TIME phỏng vấn Sorkin và ghi phim được cấu trúc thành ba màn quanh ba lần ra mắt.
++
++Ba lần ấy là Macintosh, NeXT năm 1988 và iMac năm 1998.
++
++Phim tập trung vào hỗn loạn hậu trường trước các buổi ra mắt.
++
++Nhưng Sorkin nói với CNET và CBS rằng, theo hiểu biết của ông, Jobs không có những cuộc đối đầu với cùng sáu người chỉ 40 phút trước mỗi buổi ra mắt.
++
++Vì thế, không nên đọc các đối thoại hậu trường trong phim như hồ sơ lịch sử.
++
++Sau đó, ta trở về với tài liệu: chuyến thăm PARC năm 1979, bộ nhớ 128K, quảng cáo ngày 22 tháng 01, và sân khấu ngày 24 tháng 01 năm 1984.
++
++Chuột một nút cũng nhắc ta về khác biệt này.
++
++Ngoài đời, nó là một phần của giao diện, của phần mềm, của bộ nhớ và của cả đội làm cho thao tác bấm có nghĩa.
++
++Khi giữ được khoảng cách ấy, câu chuyện không bớt kịch tính.
++
++Nó chỉ công bằng hơn với người thật và với những chi tiết mà nguồn chưa xác nhận.
++
++## CH07 · Điều còn lại trên màn hình
++
++Theo Computer History Museum, các nhà thiết kế, nghệ sĩ và nhà giáo dục đã sớm tiếp nhận Macintosh.
++
++Đây là mô tả của bảo tàng, không phải thống kê toàn thị trường.
++
++Cũng theo Computer History Museum, Macintosh đưa điện toán đồ họa tới đông người dùng hơn.
++
++Điều đó không biến nó thành máy đầu tiên có giao diện đồ họa hay chuột.
++
++Alto có trước.
++
++Lisa có trước.
++
++Giá trị của mốc 1984 nằm ở cách nhiều phần đã tồn tại được ghép thành một trải nghiệm có thể đem ra thị trường.
++
++Bạn nhìn một biểu tượng.
++
++Bạn đưa con trỏ tới đó bằng chuột một nút.
++
++Bạn bấm, và chiếc máy trả lời bằng thay đổi trên màn hình.
++
++Folklore.org ghi phần mềm hệ thống vẫn được hoàn tất gấp sát ngày ra mắt.
++
++Vì vậy, câu chuyện không chỉ là một cá nhân làm ra Macintosh.
++
++Nó có cả đội phần mềm, cùng những giới hạn bộ nhớ và những bản demo phải kịp chạy.
++
++Apple Support liệt kê Macintosh 128K hỗ trợ các bản Mac OS từ System 1.0 đến 7.0.1P.
++
++Đó là danh sách tương thích kỹ thuật, không phải bằng chứng về mức độ phổ biến của từng bản.
++
++Điều đáng giữ lại không phải huyền thoại rằng Jobs tự mình phát minh ra tất cả.
++
++Đó là một bước ngoặt năm 1984, khi cách dùng máy bằng hình, con trỏ và chuột được đưa tới gần nhiều người hơn.
++
++Và câu hỏi treo từ đầu giờ có thể trả lời như thế này.
++
++Macintosh đáng nhớ không vì nó xuất hiện từ khoảng trống.
++
++Nó đáng nhớ vì biến một chuỗi ý tưởng, thử nghiệm và lao động của nhiều người thành một cử chỉ mà bạn có thể hiểu chỉ bằng một cú nhấp.
+diff --git a/docs/pm/tickets/2026-10-26-codex-pilot/T6W1-ket-qua.md b/docs/pm/tickets/2026-10-26-codex-pilot/T6W1-ket-qua.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..7da19b806206c8e514100be2d52a9c9e062a67fa
+--- /dev/null
++++ b/docs/pm/tickets/2026-10-26-codex-pilot/T6W1-ket-qua.md
+@@ -0,0 +1,30 @@
++# Báo cáo T6W1 — mim-macintosh-1984
++
++## Đã thực hiện
++
++- Viết `data/long/mim-macintosh-1984/script.md`: 8 chương, tiêu đề `STEVE JOBS 1984: Macintosh biết nói bằng hình` (45 ký tự, một dấu hai chấm).
++- Viết `data/long/mim-macintosh-1984/factcheck.md`: đối chiếu các mốc, số liệu, tên riêng và nhận định quy dẫn với 26 URL công khai từ kho dữ kiện đã duyệt.
++- Chạy `PYTHONIOENCODING=utf-8 python motion/long/script_lines.py mim-macintosh-1984` hai lần cuối: tổng 2.271 âm tiết; CH00 201 âm tiết.
++- Chạy `PYTHONIOENCODING=utf-8 python motion/long/studio_lint.py mim-macintosh-1984 --strict`: **0 lỗi**, 7 cảnh báo phong cách về mật độ câu ngắn và một câu liệt kê ở CH00.
++- Chạy `PYTHONIOENCODING=utf-8 python scripts/long_gate.py mim-macintosh-1984 --min-syl 1900`: **TRƯỢT, 21 lỗi**.
++
++## Hook và cấu trúc
++
++- Mở đầu CH00 nêu đúng mốc `24 tháng 01 năm 1984` và lời hứa cụ thể về chuột một nút.
++- Câu trả một phần lời hứa nằm ở CH00, dòng 7 của `script.md`: Macintosh có phần trình diễn tự giới thiệu trong ngày ra mắt.
++- Lộ trình: PARC → bộ nhớ 128K → Super Bowl → sân khấu 24/01 → chuột/giao diện → phim *Steve Jobs* → di sản.
++- Câu hỏi treo ở cuối CH00: vì sao ý tưởng đã được thấy từ năm 1979 vẫn thành bước ngoặt ở năm 1984.
++- Vật nối “chuột một nút” xuất hiện ở CH00, CH01, CH02, CH03, CH04, CH05, CH06 và CH07.
++
++## Không kiểm được / giới hạn
++
++- Không có khẳng định nào dùng ngoài kho dữ kiện đã duyệt. Các nhận định nguồn xếp mức “vừa” đều đọc với quy dẫn rõ (Computer History Museum, Smithsonian, Netflix Việt Nam, TIME hoặc lời Sorkin).
++- Không tạo hoặc gọi ảnh AI, không dùng tư liệu phim.
++
++## Blocker cổng tổng
++
++Ticket chỉ cho phép ghi ba file: `script.md`, `factcheck.md`, và báo cáo này. Sau `script_lines.py`, các `chNN.json` chỉ có lời đọc; chưa có cảnh, `hud`, `spec.youtube`, `say`, hoặc timing TTS.
++
++Vì vậy `long_gate.py` báo thiếu HUD và tối thiểu 5 loại cảnh tại cả 8 chương, thiếu TTS cho CH00–CH07, cảnh trung bình 648,9 giây, và thiếu các trường `spec.youtube` (`publish_at`, `playlist`, `chapter_titles`, `tags`, `video_credits`, `sources`, `say`). Các artefact cần để sửa nằm ngoài danh sách “Chỉ ghi” của ticket; không tự ý tạo `gen_scenes.py`, `spec.json` hay chạy TTS/render.
++
++Không có clip sheet hoặc thumbnail trong ticket W1 này; chưa tạo.
+
+codex
+Đã hoàn tất phần W1 được phép ghi:
+
+- [Kịch bản](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-macintosh-1984\script.md)
+- [Factcheck](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-macintosh-1984\factcheck.md)
+- [Báo cáo](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-26-codex-pilot\T6W1-ket-qua.md)
+
+`script_lines.py`: 2.271 âm tiết, CH00 201 âm tiết.  
+`studio_lint.py --strict`: 0 lỗi, 7 cảnh báo phong cách.
+
+Đã chạy đúng `python scripts/long_gate.py mim-macintosh-1984 --min-syl 1900`, nhưng kết quả **TRƯỢT**: ticket W1 chỉ cho ghi script/factcheck/báo cáo, còn gate bắt buộc cần cảnh, HUD, `spec.youtube`, `say` và timing TTS—các artefact nằm ngoài phạm vi ghi của ticket. Chi tiết lỗi đã ghi trong báo cáo; chưa tự ý tạo phần sản xuất đó.
+tokens used
+60,779
+Đã hoàn tất phần W1 được phép ghi:
+
+- [Kịch bản](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-macintosh-1984\script.md)
+- [Factcheck](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-macintosh-1984\factcheck.md)
+- [Báo cáo](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-26-codex-pilot\T6W1-ket-qua.md)
+
+`script_lines.py`: 2.271 âm tiết, CH00 201 âm tiết.  
+`studio_lint.py --strict`: 0 lỗi, 7 cảnh báo phong cách.
+
+Đã chạy đúng `python scripts/long_gate.py mim-macintosh-1984 --min-syl 1900`, nhưng kết quả **TRƯỢT**: ticket W1 chỉ cho ghi script/factcheck/báo cáo, còn gate bắt buộc cần cảnh, HUD, `spec.youtube`, `say` và timing TTS—các artefact nằm ngoài phạm vi ghi của ticket. Chi tiết lỗi đã ghi trong báo cáo; chưa tự ý tạo phần sản xuất đó.

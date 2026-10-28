@@ -1,0 +1,261 @@
+{
+ "theme": "mim",
+ "title": "Cả nhà hàng bỏ bữa xem tivi: bữa tối của Charles Lickel và ý tưởng cho Watson",
+ "description": "Theo lời kể (Wikipedia, mục lịch sử IBM Watson, dẫn sách Final Jeopardy của Stephen Baker), năm 2004 nhà quản lý nghiên cứu IBM Charles Lickel ăn tối cùng đồng nghiệp thì cả nhà hàng im lặng xem Ken Jennings trong chuỗi 74 ván thắng ở Jeopardy. Lickel đưa ý tưởng cho một cỗ máy chơi trò này; năm 2005 Paul Horn ủng hộ, ông khó tìm người nhận vì thử thách phức tạp hơn cờ vua, rồi David Ferrucci nhận lời. Chi tiết bữa tối là lời kể, các nguồn khác nhau về tên nhà hàng. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật.\n\nBản đầy đủ: https://youtu.be/Mt5hYcQxH50 (công khai từ 20:00 ngày 19/11).",
+ "tags": [
+  "watson ibm",
+  "charles lickel",
+  "ken jennings",
+  "jeopardy",
+  "david ferrucci",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "sub": "IBM · 2004–2005",
+ "acc": [
+  "nhà",
+  "hàng",
+  "Lickel",
+  "nhận",
+  "lời"
+ ],
+ "lines": [
+  "Cả nhà hàng bỏ bữa chạy ra xem tivi.",
+  "Theo lời kể, năm hai nghìn không trăm lẻ bốn, nhà quản lý Charles Lickel của IBM đang ăn tối cùng đồng nghiệp.",
+  "Cả quán nín lặng xem Ken Jennings, giữa chuỗi bảy mươi tư ván thắng liền ở Jeopardy.",
+  "Lickel báo ý tưởng lên: để một cỗ máy của IBM thử chơi trò này.",
+  "Năm hai nghìn không trăm lẻ năm, lãnh đạo nghiên cứu Paul Horn ủng hộ.",
+  "Nhưng ông khó tìm được ai nhận. Cờ vua không lời, còn trò này đầy ngôn ngữ, khó hơn nhiều.",
+  "Cuối cùng, David Ferrucci nhận lời.",
+  "Từ một nhà hàng im lặng, IBM có đề bài mới sau cờ vua."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "items": [
+    {
+     "text": "2004",
+     "at": 0.0,
+     "acc": true,
+     "size": 300
+    },
+    {
+     "text": "CẢ NHÀ HÀNG · BỎ BỮA",
+     "at": [
+      0,
+      "bỏ"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:38406367",
+   "veil": 0.55
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "2004",
+   "day": "THEO LỜI KỂ",
+   "sub": {
+    "text": "CHARLES LICKEL · IBM",
+    "at": [
+     1,
+     "Charles"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "KEN JENNINGS",
+     "at": [
+      2,
+      "Ken"
+     ],
+     "acc": true
+    },
+    {
+     "text": "cả quán nín lặng",
+     "at": [
+      2,
+      "nín"
+     ],
+     "sm": true,
+     "size": 56
+    }
+   ],
+   "clip": "pexels:28679682",
+   "veil": 0.5
+  },
+  {
+   "type": "counter",
+   "at": [
+    2,
+    "giữa"
+   ],
+   "to": 74,
+   "suffix": " VÁN",
+   "label": "CHUỖI THẮNG LIỀN · JEOPARDY",
+   "until": [
+    2,
+    "tư"
+   ]
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Lickel",
+   "nodes": [
+    {
+     "text": "ý tưởng gửi lên",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      3,
+      "ý"
+     ],
+     "shape": "none",
+     "w": 700
+    },
+    {
+     "text": "một cỗ máy chơi trò này?",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      3,
+      "cỗ"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 740
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "PAUL HORN",
+     "at": [
+      4,
+      "Paul"
+     ],
+     "acc": true
+    },
+    {
+     "text": "2005 · ủng hộ ý tưởng",
+     "at": [
+      4,
+      "ủng"
+     ],
+     "sm": true,
+     "size": 56
+    }
+   ],
+   "clip": "pexels:36392049",
+   "veil": 0.55
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "AI SẼ NHẬN?",
+   "cards": [
+    {
+     "k": "CỜ VUA",
+     "v": "KHÔNG LỜI",
+     "at": [
+      5,
+      "Cờ"
+     ]
+    },
+    {
+     "k": "ĐỐ VUI",
+     "v": "ĐẦY NGÔN NGỮ",
+     "at": [
+      5,
+      "đầy"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "VÌ SAO KHÓ TÌM NGƯỜI NHẬN"
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "FERRUCCI NHẬN LỜI",
+   "sub": "IBM · JEOPARDY"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "MỘT NHÀ HÀNG IM LẶNG",
+     "at": [
+      7,
+      "nhà"
+     ],
+     "acc": true
+    },
+    {
+     "text": "đề bài mới sau cờ vua",
+     "at": [
+      7,
+      "đề"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7402582",
+   "veil": 0.6
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/IBM_Watson",
+  "Stephen Baker — Final Jeopardy: Man vs. Machine and the Quest to Know Everything (2011)",
+  "https://www.techrepublic.com/fr/article/ibm-watson-the-inside-story-of-how-the-jeopardy-winning-supercomputer-was-born-and-what-it-wants-to-do-next/"
+ ],
+ "say": {
+  "watson": "Oát-xần",
+  "ibm": "ai bi em",
+  "=IBM": "ai bi em",
+  "jeopardy": "Gie-pơ-đi",
+  "ken": "Ken",
+  "jennings": "Gien-ninh",
+  "rutter": "Rắt-tơ",
+  "lickel": "Lích-cồ",
+  "horn": "Hoóc",
+  "paul": "Pôn",
+  "david": "Đây-vít",
+  "ferrucci": "Phê-ru-chi",
+  "charles": "Sạc-lơ"
+ },
+ "tts": {
+  "pauses": {
+   "0": 0.4,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.5
+  }
+ },
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "imgs": {},
+ "sources_internal": [
+  "https://en.wikipedia.org/wiki/IBM_Watson (mục Development: 2004 Lickel, 74 ván, 2005 Horn, khó tìm người nhận, Ferrucci nhận; dẫn Baker, Final Jeopardy, 2011, tr. 6–8)",
+  "https://www.techrepublic.com/fr/article/ibm-watson-the-inside-story-of-how-the-jeopardy-winning-supercomputer-was-born-and-what-it-wants-to-do-next/ (kể lại bữa tối; CẦN KIỂM: chưa mở được bản đầy đủ, nguồn khác nhau về tên nhà hàng)",
+  "data/long/mim-watson-jeopardy/script.md CH01 (cùng chuyện, ghi 'theo lời kể')"
+ ]
+}

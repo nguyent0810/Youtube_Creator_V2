@@ -1,0 +1,173 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-kg-ke-5-han-thu",
+ "format": "kinh-giai",
+ "hook_type": "noi-dau",
+ "open_shot": "lua",
+ "voice": "Đoan Trang",
+ "music": "at_rest.mp3",
+ "music_gain": 0.16,
+ "gap": 0.15,
+ "title": "Lửa có dập được lửa không?",
+ "kicker": "KINH GIẢI",
+ "sub": "KINH PHÁP CÚ · KỆ 5",
+ "acc": [
+  "lửa",
+  "buông",
+  "hận"
+ ],
+ "ambience": {
+  "bed": "rain",
+  "gain": 0.6
+ },
+ "lines": [
+  "Lửa có dập được lửa không?",
+  "Càng đổ thêm, càng cháy. Cãi lại cũng vậy.",
+  "Đoán xem: hận thù dứt bằng gì? Im lặng, thắng lý, hay thứ khác?",
+  "Đức Phật dạy, diễn ý: hận thù không dứt bằng hận thù.",
+  "Chỉ dứt bằng không hận thù. Đó là luật từ xưa.",
+  "Nhưng buông không phải chịu thua.",
+  "Mà là không để cơn giận của người khác điều khiển mình.",
+  "Tối nay thử viết một chữ buông, cho một người.",
+  "Bạn đang giữ lửa với ai? Gửi người đang giận ai đó."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:6401825",
+   "items": [
+    {
+     "text": "LỬA DẬP LỬA?",
+     "at": 0.0,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "hf_list_build",
+   "at": 2,
+   "title": "HẬN THÙ DỨT BẰNG?",
+   "items": [
+    {
+     "key": "A",
+     "text": "IM LẶNG",
+     "at": [
+      2,
+      "im"
+     ]
+    },
+    {
+     "key": "B",
+     "text": "THẮNG LÝ",
+     "at": [
+      2,
+      "thắng"
+     ]
+    },
+    {
+     "key": "C",
+     "text": "???",
+     "at": [
+      2,
+      "khác?"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Kệ 5 (diễn ý)",
+   "nodes": [
+    {
+     "text": "HẬN ĐÁP HẬN: KHÔNG DỨT",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      3,
+      "không"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "KHÔNG HẬN: DỨT",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      4,
+      "dứt"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "DHP 5 · SUTTACENTRAL"
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "BUÔNG ≠\nCHỊU THUA",
+   "fx": "zoom"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "veil": 0.4,
+   "clip": "pexels:6146497",
+   "items": [
+    {
+     "text": "MÌNH CẦM LÁI",
+     "at": [
+      6,
+      "không"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "to": 1,
+   "suffix": " CHỮ BUÔNG",
+   "label": "TỐI NAY · CHO MỘT NGƯỜI",
+   "until": [
+    7,
+    "buông,"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "veil": 0.4,
+   "clip": "pexels:7681532",
+   "items": [
+    {
+     "text": "GIỮ LỬA VỚI AI?",
+     "at": [
+      8,
+      "bạn"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp1-20/en/sujato"
+ ],
+ "description": "Lửa có dập được lửa không?\n\nNguồn: https://suttacentral.net/dhp1-20/en/sujato"
+}

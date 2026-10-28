@@ -1,0 +1,139 @@
+{
+ "theme": "ck",
+ "kicker": "BẢNG TRA",
+ "sub": "TRẦN TIỀN THUÊ NHÀ",
+ "title": "Lương bao nhiêu thì tiền thuê nhà nên là bao nhiêu? Bảng trần thuê theo lương",
+ "description": "Bảng tra tự dò: tìm hàng mức lương của bạn, đọc sang cột 30% để biết trần tiền thuê nhà mỗi tháng theo quy tắc kinh nghiệm (hai cột 25% và 35% để so sánh).\n\nCách tính: trần thuê = lương × tỉ lệ. Ví dụ giả định: lương 15 triệu → 30% là 4,5 triệu; 25% là 3,75 triệu; 35% là 5,25 triệu. Quy tắc 30% bắt nguồn từ chuẩn khả năng chi trả nhà ở của Mỹ: năm 1969 trần tiền thuê nhà ở công được đặt ở 25% thu nhập, đến 1981 nâng lên 30%. Đây là quy tắc kinh nghiệm, không phải định luật; chi phí sống mỗi nơi mỗi khác.\n\nMọi con số là VÍ DỤ GIẢ ĐỊNH, tính trên lương thực nhận.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Nội dung do kênh biên soạn; giọng đọc tổng hợp.",
+ "tags": [
+  "tiền thuê nhà",
+  "quy tắc 30%",
+  "thuê nhà bao nhiêu",
+  "bảng tra",
+  "tài chính cá nhân"
+ ],
+ "acc": [
+  "mười",
+  "lăm",
+  "bốn"
+ ],
+ "lines": [
+  "Lương mười lăm triệu, trần tiền thuê là bốn triệu rưỡi.",
+  "Quy tắc ba mươi phần trăm thu nhập.",
+  "Vượt mức ấy, các khoản khác sẽ chật.",
+  "Dừng hình, tìm hàng của bạn nhé."
+ ],
+ "scenes": [
+  {
+   "type": "table",
+   "title": "THUÊ NHÀ TỐI ĐA BAO NHIÊU?",
+   "rowHead": "LƯƠNG ↓",
+   "colHead": "TRẦN THUÊ · TRIỆU/THÁNG →",
+   "cols": [
+    "25%",
+    "30%",
+    "35%"
+   ],
+   "rows": [
+    {
+     "k": "8 TR",
+     "v": [
+      "2",
+      "2,4",
+      "2,8"
+     ]
+    },
+    {
+     "k": "10 TR",
+     "v": [
+      "2,5",
+      "3",
+      "3,5"
+     ]
+    },
+    {
+     "k": "12 TR",
+     "v": [
+      "3",
+      "3,6",
+      "4,2"
+     ]
+    },
+    {
+     "k": "15 TR",
+     "v": [
+      "3,75",
+      "4,5",
+      "5,25"
+     ]
+    },
+    {
+     "k": "20 TR",
+     "v": [
+      "5",
+      "6",
+      "7"
+     ]
+    }
+   ],
+   "foot": "DỪNG HÌNH · TÌM HÀNG CỦA BẠN",
+   "note": "VÍ DỤ GIẢ ĐỊNH · QUY TẮC 30%",
+   "hl": [
+    {
+     "r": 3,
+     "at": [
+      0,
+      "lăm"
+     ]
+    },
+    {
+     "r": 3,
+     "c": 1,
+     "at": [
+      0,
+      "bốn"
+     ]
+    },
+    {
+     "c": 1,
+     "at": [
+      1,
+      "ba"
+     ],
+     "until": [
+      3,
+      null,
+      0,
+      -1.0
+     ]
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Brooke_Amendment"
+ ],
+ "sources_internal": [
+  "WebSearch 22/10/2026: Brooke Amendment 1969 trần 25%, 1981 nâng 30%; nhiều nguồn nói mức 30% không có cơ sở khoa học chặt"
+ ],
+ "assumptions": "Lương thực nhận; trần = lương × 25/30/35%; mức lương 8-20 triệu là ví dụ.",
+ "mix": false,
+ "rules": 2,
+ "cls": "btl btl-ck-bars",
+ "extra_css": "bang-tra-looks.css\" /><script src=\"assets/engine/bang-tra-looks.js\"></script><link rel=\"x-end\" href=\"x",
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.4,
+   "1": 0.5,
+   "2": 0.9
+  }
+ },
+ "say": {},
+ "imgs": {},
+ "ab_test": "bang-tra-dung-hinh-2026-10-22",
+ "upload": false,
+ "profile": "bang-tra",
+ "look": "ck-bars"
+}

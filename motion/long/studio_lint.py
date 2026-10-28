@@ -7,6 +7,7 @@
 LỖI (đã từng tới tay người xem):
   - câu đọc dài hơn 35 tiếng (TTS hụt hơi, người nghe mất mạch);
   - counter đếm tới một NĂM (1500-2100) mà không đứng yên ("năm không đếm từ 0");
+  - counter có from/to 1000-2100, không suffix, không khai "year" (engine chấm nghìn: 1996 -> "1.996");
   - counter có chữ số hoặc "<" trong prefix mà không đứng yên (số trung gian đọc như dữ kiện thật).
 CẢNH BÁO (giữ chân):
   - cả chương ít câu ngắn (<= 6 tiếng): cần khoảng 1 câu mỗi 4-6 câu, đặt sau phán định hoặc khoảnh khắc cảm xúc;
@@ -20,6 +21,21 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+
+
+def year_counter_issues(scenes) -> list[str]:
+    """Counter có số 1000-2100 mà không suffix phải khai "year": true (năm, không chấm nghìn) hoặc false (số lượng).
+
+    26/10/2026: Short Turing đếm 1950 -> 2000 hiện "1.996". Không đoán bằng nhãn như vietneu-tts: "THÀNH VIÊN BỊ LOẠI
+    MỖI NĂM" (yakuza, 2000) và "MẶT NẠ PHÒNG ĐỘC" (shanghai, 1000) là số lượng. Dùng chung cho build.py (Short)."""
+    out = []
+    for i, s in enumerate(scenes or []):
+        if s.get("type") != "counter" or "year" in s or str(s.get("suffix") or "").strip():
+            continue
+        nums = [n for n in (s.get("from", 0), s["to"]) if float(n).is_integer() and 1000 <= n <= 2100]
+        if nums:
+            out.append(f"cảnh {i}: counter {int(nums[-1])} -- khai \"year\": true (năm, hiện 1996) hoặc false (số lượng, hiện 1.996)")
+    return out
 
 
 def text_of(ln) -> str:
@@ -54,11 +70,12 @@ def lint(topic: str) -> tuple[list[str], list[str]]:
         for i in range(2, len(types)):
             if types[i] == types[i - 1] == types[i - 2] and types[i] not in ("broll",):
                 warn.append(f"{name} cảnh {i - 2}-{i}: ba cảnh '{types[i]}' liền nhau")
+        err += [f"{name} {m}" for m in year_counter_issues(ch.get("scenes"))]
         for i, s in enumerate(ch.get("scenes") or []):
             if s["type"] != "counter":
                 continue
             moving = s.get("from", 0) != s["to"]
-            if moving and float(s["to"]).is_integer() and 1500 <= s["to"] <= 2100 and not s.get("suffix"):
+            if moving and float(s["to"]).is_integer() and 1500 <= s["to"] <= 2100 and not s.get("suffix") and s.get("year") is not False:
                 err.append(f"{name} cảnh {i}: counter đếm tới năm {int(s['to'])} (đặt from = to hoặc dùng kinetic/date)")
             if moving and re.search(r"[\d<>≈~]", str(s.get("prefix") or "")):
                 err.append(f"{name} cảnh {i}: counter prefix {s['prefix']!r} mà số còn chạy")
@@ -66,6 +83,9 @@ def lint(topic: str) -> tuple[list[str], list[str]]:
 
 
 def main() -> int:
+    sys.path.insert(0, str(ROOT))
+    from factory.console import utf8_console
+    utf8_console()  # console Windows cp1252 không in được tiếng Việt (retro 2 mục 7)
     topic = sys.argv[1]
     err, warn = lint(topic)
     out = sys.stdout

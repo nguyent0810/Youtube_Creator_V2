@@ -1,0 +1,209 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-kg-ke-201-thang-thua",
+ "format": "do-vui",
+ "hook_type": "do-vui",
+ "open_shot": "pho-dem",
+ "voice": "Quang Sơn",
+ "music": "frost_waltz.mp3",
+ "music_gain": 0.18,
+ "gap": 0.15,
+ "series": "Đố bạn đời thường #1",
+ "title": "Đố bạn: thắng cãi nhau thì được gì?",
+ "kicker": "ĐỐ BẠN ĐỜI THƯỜNG #1",
+ "sub": "KINH PHÁP CÚ · KỆ 201",
+ "acc": [
+  "thù",
+  "oán",
+  "thắng"
+ ],
+ "lines": [
+  "Đố bạn: thắng một trận cãi nhau, bạn được gì?",
+  "Danh dự, bình yên, hay thù oán?",
+  "Chọn một đáp án trước đã.",
+  "Đáp án bất ngờ: thù oán.",
+  "Kinh Pháp Cú, diễn ý: thắng sinh thù oán, người thua ngủ không yên.",
+  "Nhưng người an tịnh, bỏ cả thắng lẫn thua, thì ngủ ngon.",
+  "Lần tới sắp cãi, thử nói: để mình nghe bạn trước.",
+  "Bạn đoán đúng không? Gửi cho người hay cãi thắng bạn."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:8557555",
+   "items": [
+    {
+     "text": "THẮNG CÃI ĐƯỢC GÌ?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "đố bạn đời thường #1",
+     "at": [
+      0,
+      "được"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "hf_list_build",
+   "at": 1,
+   "title": "BẠN CHỌN?",
+   "items": [
+    {
+     "key": "A",
+     "text": "DANH DỰ",
+     "at": [
+      1,
+      "danh"
+     ]
+    },
+    {
+     "key": "B",
+     "text": "BÌNH YÊN",
+     "at": [
+      1,
+      "bình"
+     ]
+    },
+    {
+     "key": "C",
+     "text": "THÙ OÁN",
+     "at": [
+      1,
+      "thù"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 2,
+   "text": "A · B hay C?",
+   "clip": "pexels:8559175",
+   "veil": 0.65
+  },
+  {
+   "type": "hf_stamp",
+   "at": 3,
+   "kick": "",
+   "big": "C",
+   "stamps": [
+    {
+     "text": "THÙ OÁN",
+     "at": [
+      3,
+      "oán."
+     ],
+     "x": 200,
+     "y": 880,
+     "rot": -6
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Kệ 201 (diễn ý)",
+   "nodes": [
+    {
+     "text": "THẮNG → THÙ OÁN",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      4,
+      "thắng"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "THUA → NGỦ KHÔNG YÊN",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      4,
+      "thua"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "DHP 201 · SUTTACENTRAL"
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "NGƯỜI AN TỊNH",
+   "cards": [
+    {
+     "k": "BỎ",
+     "v": "THẮNG",
+     "at": [
+      5,
+      "thắng"
+     ]
+    },
+    {
+     "k": "BỎ",
+     "v": "THUA",
+     "at": [
+      5,
+      "thua,"
+     ]
+    },
+    {
+     "k": "RỒI",
+     "v": "NGỦ NGON",
+     "at": [
+      5,
+      "ngủ"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "veil": 0.4,
+   "clip": "pexels:39329852",
+   "items": [
+    {
+     "text": "ĐỂ MÌNH NGHE BẠN TRƯỚC",
+     "at": [
+      6,
+      "để"
+     ],
+     "acc": true
+    },
+    {
+     "text": "gửi cho người hay cãi thắng bạn",
+     "at": [
+      7,
+      "gửi"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp197-208/en/sujato"
+ ],
+ "description": "Đố bạn: thắng cãi nhau thì được gì?\n\nNguồn: https://suttacentral.net/dhp197-208/en/sujato"
+}

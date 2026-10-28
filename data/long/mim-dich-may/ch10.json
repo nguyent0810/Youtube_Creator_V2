@@ -1,0 +1,357 @@
+{
+ "title": "Bài thi dịch của một kiến trúc",
+ "lines": [
+  {
+   "t": "Tháng 6 năm 2017, một nhóm nghiên cứu đăng lên mạng một bài báo ngắn.",
+   "p": 0.8
+  },
+  {
+   "t": "Bạn có thể đã nghe tên nó vì chatbot. Nhưng bài báo ấy không nói chuyện trò. Nó thi dịch.",
+   "p": 1.0
+  },
+  "Họ thử trên hai bài thi: dịch Anh sang Đức, và dịch Anh sang Pháp.",
+  {
+   "t": "Các mô hình tốt nhất lúc ấy đều dựa vào vòng lặp đọc từng chữ hoặc các lớp tích chập. Họ bỏ cả hai, và gọi mô hình mới là Transformer.",
+   "p": 1.0
+  },
+  "Bài thi Anh sang Đức dùng khoảng bốn triệu rưỡi cặp câu. Bài thi Anh sang Pháp dùng ba mươi sáu triệu cặp câu.",
+  "Bạn nhớ nhóm IBM năm 1990 chứ? Họ dạy phần dịch bằng khoảng một trăm mười bảy nghìn cặp câu.",
+  {
+   "t": "Thế là từ một trăm mười bảy nghìn lên ba mươi sáu triệu.",
+   "p": 1.0
+  },
+  "Với bài Anh sang Đức, họ đạt hai mươi tám phẩy bốn điểm, vượt kết quả tốt nhất trước đó hơn hai điểm.",
+  "Cái hay nằm ở một hình trong bài.",
+  "Khác với năm 2014, lần này mỗi chữ trong câu tự nhìn sang những chữ khác của chính câu ấy.",
+  {
+   "t": "Có một ví dụ, nhiều chỗ chú ý cùng nối chữ making với phần cuối cụm making, more difficult. Hai đầu cụm cách xa nhau, vậy mà máy bắt được.",
+   "p": 1.0
+  },
+  "Và đây là chỗ mình muốn nói rõ, để bạn không nhầm.",
+  "Cỗ máy trong bài ấy có hai nửa. Nửa thứ nhất đọc câu nguồn. Nửa thứ hai viết câu đích, vừa viết vừa nhìn lại nửa thứ nhất.",
+  {
+   "t": "Đó là một cỗ máy dịch.",
+   "p": 1.0
+  },
+  "Năm 2018, OpenAI công bố mô hình GPT đầu tiên. Nó chỉ giữ lại nửa viết.",
+  "Tức là chatbot hôm nay, theo nghĩa nào đó, có họ hàng với một cỗ máy dịch.",
+  {
+   "t": "Nhưng họ hàng chưa phải là cùng một thứ.",
+   "p": 1.0
+  },
+  "Cái cũi của Bar-Hillel còn đó.",
+  "Chỉ khác: kiến thức không do người nhét vào. Nó đến từ một núi văn bản máy đã đọc.",
+  {
+   "t": "Máy đã hiểu, hay chỉ thuộc đủ nhiều? Mình không có đáp án.",
+   "p": 1.0
+  },
+  "Bây giờ, hãy mở cuốn sổ ra."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "10",
+   "k": "CHƯƠNG MƯỜI",
+   "title": "BÀI THI DỊCH\nCỦA MỘT KIẾN TRÚC",
+   "sub": "06.2017",
+   "vid": "5651577",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Tháng"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "BẠN NGHE TÊN NÓ VÌ CHATBOT",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "NHƯNG NÓ THI DỊCH",
+     "at": [
+      1,
+      "nó",
+      1
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "HAI BÀI THI DỊCH",
+   "rows": [
+    {
+     "k": "BÀI 1",
+     "v": "ANH → ĐỨC",
+     "at": 2
+    },
+    {
+     "k": "BÀI 2",
+     "v": "ANH → PHÁP",
+     "at": [
+      2,
+      "Pháp"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "BỎ VÒNG LẶP ĐỌC TỪNG CHỮ",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "BỎ CẢ LỚP TÍCH CHẬP",
+     "at": [
+      3,
+      "bỏ"
+     ],
+     "sm": true
+    },
+    {
+     "text": "→ TRANSFORMER",
+     "at": [
+      3,
+      "Transformer."
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 4,
+   "title": "CẶP CÂU DÙNG ĐỂ DẠY PHẦN DỊCH · TRIỆU CẶP",
+   "unit": "",
+   "items": [
+    {
+     "k": "ANH–ĐỨC · 2017",
+     "v": 4.5,
+     "lbl": "≈4,5 TRIỆU",
+     "at": 4
+    },
+    {
+     "k": "ANH–PHÁP · 2017",
+     "v": 36,
+     "lbl": "36 TRIỆU",
+     "at": [
+      4,
+      "ba"
+     ],
+     "acc": true
+    },
+    {
+     "k": "IBM · 1990",
+     "v": 0.117,
+     "lbl": "≈117 NGHÌN",
+     "at": 5
+    }
+   ],
+   "label": {
+    "k": "THEO VASWANI VÀ CỘNG SỰ 2017 · BROWN VÀ CỘNG SỰ 1990",
+    "v": "HAI BÀI THI KHÁC NHAU",
+    "at": 4
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "117 NGHÌN → 36 TRIỆU",
+     "at": [
+      6,
+      "một"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "28,4 ĐIỂM",
+   "sub": "ANH → ĐỨC · VƯỢT KẾT QUẢ TỐT NHẤT TRƯỚC ĐÓ HƠN 2 ĐIỂM"
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "KHÁC NĂM 2014",
+     "at": [
+      9,
+      "khác"
+     ],
+     "sm": true
+    },
+    {
+     "text": "MỖI CHỮ TỰ NHÌN SANG CHỮ KHÁC",
+     "at": [
+      9,
+      "mỗi"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "VÍ DỤ TRONG BÀI BÁO GỐC · HÌNH 3",
+     "at": 10,
+     "sm": true
+    },
+    {
+     "text": "making",
+     "at": [
+      10,
+      "making"
+     ],
+     "acc": true
+    },
+    {
+     "text": "… more difficult",
+     "at": [
+      10,
+      "more"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 12,
+   "title": "CỖ MÁY TRONG BÀI BÁO",
+   "rows": [
+    {
+     "k": "NỬA 1",
+     "v": "ĐỌC CÂU NGUỒN",
+     "at": [
+      12,
+      "nhất"
+     ]
+    },
+    {
+     "k": "NỬA 2",
+     "v": "VIẾT CÂU ĐÍCH · NHÌN LẠI NỬA 1",
+     "at": [
+      12,
+      "hai",
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 13,
+   "text": "MỘT CỖ MÁY DỊCH",
+   "sub": "KHÔNG PHẢI MỘT CHATBOT"
+  },
+  {
+   "type": "date",
+   "at": 14,
+   "day": "OPENAI · MÔ HÌNH GPT ĐẦU TIÊN",
+   "date": "2018",
+   "sub": {
+    "text": "CHỈ GIỮ LẠI NỬA VIẾT",
+    "at": [
+     14,
+     "chỉ"
+    ]
+   }
+  },
+  {
+   "type": "myth",
+   "at": 15,
+   "mythLab": "CHATBOT HÔM NAY",
+   "myth": "= MỘT CỖ MÁY DỊCH",
+   "truthLab": "THỰC RA",
+   "truth": "HỌ HÀNG · CHƯA PHẢI CÙNG MỘT THỨ",
+   "strikeAt": [
+    16,
+    "Nhưng"
+   ],
+   "truthAt": [
+    16,
+    "chưa"
+   ]
+  },
+  {
+   "type": "question",
+   "at": 17,
+   "text": "Cái cũi của Bar-Hillel\nvẫn còn đó."
+  },
+  {
+   "type": "kinetic",
+   "at": 18,
+   "items": [
+    {
+     "text": "KIẾN THỨC KHÔNG DO NGƯỜI NHÉT VÀO",
+     "at": [
+      18,
+      "kiến"
+     ],
+     "sm": true
+    },
+    {
+     "text": "TỪ MỘT NÚI VĂN BẢN",
+     "at": [
+      18,
+      "từ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 19,
+   "text": "HIỂU HAY THUỘC?",
+   "sub": "CÂU HỎI MỞ"
+  },
+  {
+   "type": "kinetic",
+   "at": 20,
+   "items": [
+    {
+     "text": "BÂY GIỜ",
+     "at": [
+      20,
+      "bây"
+     ],
+     "sm": true
+    },
+    {
+     "text": "MỞ CUỐN SỔ RA",
+     "at": [
+      20,
+      "mở"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 10",
+  "t": "BÀI THI DỊCH CỦA MỘT KIẾN TRÚC"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

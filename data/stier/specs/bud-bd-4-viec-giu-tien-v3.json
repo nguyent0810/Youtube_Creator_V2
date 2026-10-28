@@ -1,0 +1,200 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-tl-tho-30-giay",
+ "format": "ba-dieu",
+ "hook_type": "con-so",
+ "open_shot": "dem-tien",
+ "voice": "Thiện Minh",
+ "music": "arcadia.mp3",
+ "music_gain": 0.18,
+ "gap": 0.45,
+ "series": "Phật dạy về tiền #0",
+ "title": "Lương về: 4 việc để tiền không bay mất",
+ "kicker": "PHẬT DẠY VỀ TIỀN #0",
+ "sub": "KINH TĂNG CHI 8.54",
+ "acc": [
+  "tiền",
+  "việc",
+  "cân"
+ ],
+ "lines": [
+  "Lương về, bốn việc để tiền không bay mất.",
+  "Chuyện tiền bạc, bài số không.",
+  "Một: siêng năng, làm nghề cho giỏi.",
+  "Hai: giữ gìn, đừng để mất vì cẩu thả.",
+  "Nhưng việc ba nghe lạ: chọn bạn.",
+  "Bạn tiêu hoang, mình cũng khó giữ tiền.",
+  "Bốn: sống cân bằng, không quá chặt, không quá rộng.",
+  "Kinh Tăng Chi dạy: thu chi cân xứng, như người cầm cân.",
+  "Hôm nay ghi lại một khoản chi, xem có cân không.",
+  "Bạn yếu nhất việc số mấy? Comment một con số."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:7735913",
+   "items": [
+    {
+     "text": "4 VIỆC GIỮ TIỀN",
+     "at": 0.0
+    }
+   ]
+  },
+  {
+   "type": "hf_stamp",
+   "at": 1,
+   "kick": "",
+   "big": "#0",
+   "stamps": [
+    {
+     "text": "PHẬT DẠY VỀ TIỀN",
+     "at": [
+      1,
+      "bạc,"
+     ],
+     "x": 200,
+     "y": 880,
+     "rot": -6
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "4 VIỆC",
+   "cards": [
+    {
+     "k": "1",
+     "v": "SIÊNG NĂNG",
+     "at": [
+      2,
+      "siêng"
+     ]
+    },
+    {
+     "k": "2",
+     "v": "GIỮ GÌN",
+     "at": [
+      3,
+      "giữ"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "VIỆC 3:\nCHỌN BẠN",
+   "fx": "zoom"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "clip": "pexels:5981446",
+   "items": [
+    {
+     "text": "BẠN TIÊU HOANG?",
+     "at": [
+      5,
+      "bạn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Việc 4",
+   "nodes": [
+    {
+     "text": "KHÔNG QUÁ CHẶT",
+     "x": 0.27,
+     "y": 0.3,
+     "at": [
+      6,
+      "chặt,"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "KHÔNG QUÁ RỘNG",
+     "x": 0.73,
+     "y": 0.3,
+     "at": [
+      6,
+      "rộng."
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "CÂN BẰNG",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "cân"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "AN 8.54 · SUTTACENTRAL"
+  },
+  {
+   "type": "source",
+   "at": 7,
+   "source": "KINH TĂNG CHI 8.54",
+   "ref": "Dīghajāṇu",
+   "snippet": "Thu chi cân xứng, [[như người cầm cân]].",
+   "hlAt": [
+    7,
+    "cầm"
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 8,
+   "to": 1,
+   "suffix": " KHOẢN CHI",
+   "label": "GHI LẠI · XEM CÓ CÂN",
+   "until": [
+    8,
+    "chi,"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "veil": 0.4,
+   "clip": "pexels:7710770",
+   "items": [
+    {
+     "text": "YẾU NHẤT VIỆC SỐ MẤY?",
+     "at": [
+      9,
+      "bạn"
+     ]
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/an8.54/en/sujato"
+ ],
+ "description": "Lương về: 4 việc để tiền không bay mất\n\nNguồn: https://suttacentral.net/an8.54/en/sujato"
+}

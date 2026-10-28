@@ -153,12 +153,12 @@ CH["ch07"] = {"hud": {"k": "CHƯƠNG 07", "t": "BẬT TẮT TỪNG NGẢ"}, "bgm
 ]}
 
 SPEC = {
-    "title": "AI Có Học Từ Cuộc Trò Chuyện Của Bạn Không? Chuyện Gì Xảy Ra Với Những Gì Bạn Gõ Vào Chatbot",
+    "title": "Bạn Gõ Gì Vào Chatbot, Ai Được Đọc? AI Có Học Từ Đó?",
     "channel": "MIM", "theme": "lab", "accent": "#22d3ee", "master": True, "endcard": 20, "autoTr": True, "beat2": True,
     "acc": ["chatgpt", "gemini", "claude", "huấn", "luyện", "nhớ", "riêng", "tư"],
     "say": SAY, "imgs": {}, "chapters": [f"ch{i:02d}" for i in range(8)],
     "youtube": {
-        "titles": ["AI Có Học Từ Cuộc Trò Chuyện Của Bạn Không? Chuyện Gì Xảy Ra Với Những Gì Bạn Gõ Vào Chatbot",
+        "titles": ["Bạn Gõ Gì Vào Chatbot, Ai Được Đọc? AI Có Học Từ Đó?",
                    "Những Gì Bạn Gõ Vào ChatGPT, Gemini, Claude Đi Đâu? Ba Ngả Và Cách Tắt Từng Ngả",
                    "4.500 Cuộc Trò Chuyện ChatGPT Hiện Trên Google: Quyền Riêng Tư Khi Dùng Chatbot"],
         "summary": "Tháng 7/2025, hơn 4.500 cuộc trò chuyện ChatGPT được chia sẻ hiện công khai trên Google. AI có học từ những gì bạn gõ không? "

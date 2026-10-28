@@ -1,0 +1,187 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-ts-nghi-gi-thanh-nay",
+ "format": "truoc-sau",
+ "hook_type": "noi-dau",
+ "open_shot": "dien-thoai",
+ "voice": "Thanh Bình",
+ "music": "perspectives.mp3",
+ "music_gain": 0.18,
+ "gap": 0.7,
+ "title": "Lướt tin xấu cả ngày, sao lòng nặng?",
+ "kicker": "TÂM NGHIÊNG VỀ ĐÂU",
+ "sub": "KINH TRUNG BỘ 19",
+ "acc": [
+  "lòng",
+  "nghiêng"
+ ],
+ "lines": [
+  "Lướt tin xấu cả ngày, rồi hỏi sao lòng nặng?",
+  "Không phải tại bạn yếu đuối.",
+  "Tâm có một thói quen, giống con đường mòn.",
+  "Kinh Song Tầm, diễn ý: nghĩ gì nhiều, tâm nghiêng về đó.",
+  "Nhưng chiều ngược lại cũng đúng.",
+  "Tối nay, đổi mười phút lướt tin bằng một điều tử tế.",
+  "Đọc một câu hay. Nhắn một lời cảm ơn.",
+  "Tối nay, bạn nuôi lòng bằng gì? Gửi cho người hay lướt khuya."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:9787494",
+   "items": [
+    {
+     "text": "LƯỚT TIN XẤU CẢ NGÀY?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "rồi lòng nặng trĩu",
+     "at": [
+      0,
+      "lòng"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "KHÔNG PHẢI\nTẠI BẠN",
+   "fx": "zoom",
+   "sub": "TÂM CÓ THÓI QUEN"
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "veil": 0.4,
+   "clip": "pexels:36107233",
+   "items": [
+    {
+     "text": "CON ĐƯỜNG MÒN",
+     "at": [
+      2,
+      "đường"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Song Tầm (diễn ý)",
+   "nodes": [
+    {
+     "text": "NGHĨ GÌ NHIỀU",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      3,
+      "nghĩ"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "TÂM NGHIÊNG VỀ ĐÓ",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      3,
+      "nghiêng"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "MN 19 · SUTTACENTRAL"
+  },
+  {
+   "type": "hf_split",
+   "at": 4,
+   "a": {
+    "lab": "10 PHÚT LƯỚT TIN",
+    "val": "lòng **nặng**",
+    "num": "−",
+    "at": [
+     4,
+     "ngược"
+    ]
+   },
+   "b": {
+    "lab": "10 PHÚT TỬ TẾ",
+    "val": "lòng **nhẹ**",
+    "num": "+",
+    "at": [
+     5,
+     "tử"
+    ]
+   }
+  },
+  {
+   "type": "hf_list_build",
+   "at": 6,
+   "title": "THAY BẰNG",
+   "items": [
+    {
+     "key": "1",
+     "text": "ĐỌC MỘT CÂU HAY",
+     "at": [
+      6,
+      "đọc"
+     ]
+    },
+    {
+     "key": "2",
+     "text": "NHẮN LỜI CẢM ƠN",
+     "at": [
+      6,
+      "nhắn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "veil": 0.4,
+   "clip": "pexels:29158867",
+   "items": [
+    {
+     "text": "NUÔI LÒNG BẰNG GÌ?",
+     "at": [
+      7,
+      "nuôi"
+     ],
+     "acc": true
+    },
+    {
+     "text": "gửi cho người hay lướt khuya",
+     "at": [
+      7,
+      "gửi"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/mn19/en/sujato"
+ ],
+ "description": "Lướt tin xấu cả ngày, sao lòng nặng?\n\nNguồn: https://suttacentral.net/mn19/en/sujato"
+}

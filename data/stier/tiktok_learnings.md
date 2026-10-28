@@ -199,3 +199,305 @@
 - Font BUD (Playfair) cao hơn Newsreader: count_ring cần đẩy đơn vị xuống (.cr-suf 1050px); list_build phóng chữ 104px, bỏ dòng phụ nhỏ.
 - Luật mix: hf_list_build tính là D (bảng/danh sách như ledger); tối đa 1 cơ chế tròn (wheel/cycle_draw/count_ring).
 - Loop: clip móc của cảnh loop giờ bắt đầu đúng lúc loop (trước đây sớm 0,2 s đè lên CTA).
+
+
+## 18. Lượt 15:50 — 14/10/2026 (UTC+7)
+
+### Analytics (Studio, 16:00)
+- Followers 933 (+1 so với sáng); 7 ngày: 1.9K views (+3.5%), 99 likes (−43%), 8 comments, 0 shares, 2 profile views.
+- #9 Kalama (06:35 hôm nay): 112 views / 2 likes sau ~9h → vẫn kẹt baseline 110–127.
+- Top likes vẫn là bài gắn ngày âm lịch (Mùng 1 tháng 9: 117v/16♥/3 cmt) và kệ ngắn đời thường (kệ 252, kệ 227–228: 8♥). Chuyện xưa / Hiểu đúng: 1–3♥.
+- Views gần như phẳng mọi format → vấn đề nằm ở 0–3s (lượt đẩy đầu ~110 người), không phải chủ đề. Chờ A/B v2 (#94/#102) + bài extra 21:30 tối nay để so.
+
+### Hàng đợi
+- Tối nay: #10 19:45 + extra-1014 (Pháp Cú 3–4 "tua lại câu nói") 21:30 — cả hai đã schedule.
+- Đã schedule thêm #51–#56 (04/11 11:30 → 06/11 20:25). Queue giờ tới **06/11/2026 20:25**. Lô tiếp: #57 (07/11 09:40).
+- #51 caption dư ~3 ký tự (dòng trống trước hashtag) — không sửa.
+- Đổi caption (chỉ bản đăng TikTok, chưa sửa JSON): #52 CTA "Gửi cho người đang mệt", #55 "Gửi cho người bạn muốn cùng làm" → thử kéo shares (7 ngày = 0).
+- Lưu ý: hộp thoại "Continue to post? … Post now" sau khi bấm Schedule chỉ bỏ qua chờ kiểm duyệt; bài vẫn giữ giờ hẹn.
+
+### Việc tiếp
+- 21:50: báo cáo VN cho user; so #10 và extra 21:30.
+- Lô sau: #57–#62 khi buffer cần (vẫn >20 ngày).
+
+
+## §19 — 2026-10-14 21:50
+
+### Analytics (Studio Home + Posts, ~22:05 VN)
+- Followers **933**; 7 ngày: **1.9K** views (+3.5% / +64), likes **99** (−43%), comments **8**, shares **0**, profile views **2**. Traffic vẫn ~97% For You.
+- Hôm nay: **#9** Kalama 06:35 = **112v / 2♥** (ổn định baseline); **#10** POV ngủ 19:45 = **45v / 1♥** (~2h); **extra-1014** Pháp Cú 3–4 21:30 = **0v** (mới lên).
+- Hôm qua: #8 Ba Vedehika 124v/1♥; #7 kệ 252 122v/8♥ (likes tốt nhất gần đây).
+- #10 sớm thấp hơn buổi sáng cùng ngày — đo lại sáng mai; extra cần ≥6–12h trước khi kết luận.
+
+### Calendar / queue (PC JSON, không phải Studio)
+- Calendar `tiktok_calendar_2026-11.json`: **104/104** entries; status field = `planned`×34 (#1–#34) + `rendered`×70 (#35–#104). Không có cờ `scheduled` riêng trong JSON.
+- Hôm nay theo lịch: **#9** 06:35 Kalama (planned trong JSON); **#10** 19:45 nhắn gửi ngủ (planned trong JSON).
+- Frontier Studio (theo §18 / memory 15:50): queue đã schedule tới **06/11 20:25 (#56)**; lô tiếp **#57 (07/11 09:40)**.
+- Box ready #57–#64 có đủ mp4; staging PC: `grokbot-stage\b51\` (#57–58) + `b59\` (#59–64). Desktop `grokbot-tiktok` giữ #67–74 (allowlist CopyToBox).
+
+### Research tips (late 2026, nguồn ngoài — giữ factual)
+1. **Completion + 0–2s hook** nặng hơn like/follow; cắt mọi thứ làm drop sớm; mở bằng promise/visual/câu hỏi (miraflow 2026; Multilogin 2026 ~40–50% weight completion/watch).
+2. **Độ dài**: niche healing/VN thường ổn **21–60s**; short 11–30s dễ virality nếu completion cao; 60–180s chỉ khi retention nửa đầu mạnh (Toklytics VN creator; Multilogin).
+3. **Giờ VN**: sweet spot đại trà ~**18–21h** (đỉnh ~20h); kênh healing/Phật thường thêm sáng sớm (~6h) — đo bằng analytics kênh mình, không tin bảng chung (nhanhieu.ai / Buffer Mar 2026; ekhoo Tịnh Tâm ~6AM).
+4. **Nội dung Phật VN**: 1–3 câu punch đời thường (cô đơn, giận, ngủ), không thuyết giảng dài; keyword trong 3s đầu + caption để Search (Rest of World Giác Minh Luật; Fint VN search playbook).
+5. **CTA save/share/comment** rõ (gửi cho ai đang mệt) — shares/comments là tín hiệu utility; kênh đang 0 shares/7d (§18) → ưu tiên CTA hỏi ngắn ngữ pháp tự nhiên.
+
+Nguồn: miraflow.ai TikTok Best Practices 2026; multilogin.com TikTok algorithm 2026; fint-global VN search; gma-asia TikTok VN; nhanhieu.ai khung giờ; restofworld.org Giác Minh Luật; toklytics @minhtrithienvien.
+
+### Việc tiếp
+- Điền số Studio vào khối analytics trên (cùng lượt 21:50).
+- Lô schedule tiếp: **#57+ từ 07/11 09:40** khi buffer Studio cần (hiện còn tới 06/11).
+- So retention #10 + extra-1014 vs baseline ~110–127; chờ A/B v2 (#94/#102).
+
+## §20 — 2026-10-15 09:50
+
+### Analytics (Studio Home @hanhtrinhgiaithoat)
+- Followers: **933** (following 1; total likes 23K)
+- 7d views: **1.9K** (+137 / +7.6%); profile views 5
+- 7d likes: **98** (−51 / −34.2%); comments **7**; shares **0**
+- Baseline posts vẫn ~110–150v:
+  - #10 POV ngủ (14/10 19:45): **119v / 4♥**
+  - #9 Kalama (14/10 06:35): **112v / 2♥**
+  - #8 Ba Vedehika (13/10 20:30): **124v / 1♥**
+  - #7 kệ 252 (13/10 11:40): **122v / 8♥**
+- **extra-1014** Pháp Cú 3–4 (14/10 21:30): **0v / 0♥ / 0💬** sau ~12h — bất thường (không phân phối hoặc counter lệch). Theo dõi thêm tới 21:50; nếu vẫn 0 → kiểm tra bị hạn chế / watermark / upload lỗi.
+- Hôm nay 15/10 đã schedule (0v vì chưa tới giờ): 11:55 #11 bọt nước; **12:15** Niệm Phật test; **18:15** Lá trong tay v3; 20:40 #12 đi bộ. 11:55↔12:15 chỉ cách 20 phút (chật).
+
+### Calendar / queue
+- Studio last slot: **06/11 20:25** (#56 cô đơn / SN 45.2). Trước đó 06/11 11:15 Kinh Điềm Lành. Ước ~46 scheduled.
+- #51 cũ "Lá trong tay" quiz **vẫn** schedule **04/11 11:30** (trùng nội dung với test 18:15 hôm nay).
+- PC **offline** lúc 09:50 → không sync `tiktok_learnings.md` / calendar JSON trên D:\. Append này nằm box: `/workspace/tiktok/learnings_append_20.md`.
+- Buffer >> 2–3 ngày → **không** render/schedule #57+ lượt này. Next batch khi cần: #57 (07/11 09:40).
+
+### Research tips (15/10)
+1. Watch time / completion / replay > like; share/save/comment quan trọng (Hootsuite Jun 2026) — kênh vẫn **0 shares/7d**.
+2. Hook 0–3s: câu hỏi / pain đời thường; SEO keyword VN trong caption + chữ + VO.
+3. Phật VN: 1–3 câu punch, hạn chế thuật ngữ dày (pattern Giác Minh Luật).
+4. Variety format giúp tránh feed lặp; giữ bud_variety.
+5. A/B hôm nay: slot 12:15 vs 18:15 — đo khi đủ tuổi trước khi đổi lịch hàng loạt.
+
+Nguồn: Studio Home 15/10 09:50; blog.hootsuite.com/tiktok-algorithm; socialboost.asia; vietnamnet Giác Minh Luật.
+
+### Việc tiếp
+- 21:50: cập nhật views extra-1014 + A/B 12:15/18:15; ping user VN nếu routine yêu cầu.
+- PC online: sync §20 vào PC learnings; hỏi user xóa #51 (4/11) và #93 (25/11) nếu A/B thắng.
+- Chỉ schedule #57+ khi buffer Studio < ~3 ngày.
+
+## §21 — 2026-10-15 15:50
+
+### Analytics (Studio, read-only)
+- Followers 933; 7d views 1.9K (+7.6%); likes 98 (−34%); comments 7; shares 0; profile views 5.
+- #11 bọt nước (15/10 11:55, old style, Đố vui #1): **114v / 12♥** sau ~4h — like rate cao nhất gần đây (~10%).
+- **Niệm Phật v2 test (15/10 12:15): 0v sau ~3.5h.**
+- **extra-1014 Pháp Cú 3–4 (14/10 21:30): 1v sau ~18h.** Không có cờ hạn chế; privacy Everyone.
+- #10 POV ngủ 120v/4♥; #9 Kalama 112v/2♥; #8 124v/1♥; #7 122v/8♥.
+
+### Chẩn đoán
+- File v2 giống hệt file cũ về kỹ thuật (h264 1080x1920 30fps, AAC 48k stereo, Lavf62, 4–5 Mbps) → không phải lỗi encode.
+- Cả 2 bài ~0 view đều là **bài "extra"** ngoài 2 slot/ngày, và đăng sát bài khác (21:30 cách 19:45 1h45; 12:15 cách 11:55 chỉ 20 phút). Giả thuyết mạnh: TikTok không đẩy batch đầu cho bài đăng dồn/quá dày (3–4 bài/ngày) trên kênh nhỏ — **không phải** do style v2.
+- Hệ quả: A/B style v2 vs cũ đang **bị nhiễu** (v2 trùng với extra slot). Bài 18:15 Lá trong tay v3 cũng là extra (ngày có 4 bài: 11:55, 12:15, 18:15, 20:40) → kết quả cũng nhiễu.
+
+### Đề xuất (chờ user / 21:50)
+- Không thêm bài extra; giữ tối đa 2 bài/ngày, cách nhau ≥ 6h.
+- Test v2 công bằng: **thay thế** một slot thường (vd #94 25/11, #102 29/11 đã dùng v2) thay vì thêm bài.
+- Không xoá #51 cũ (04/11) / #93 cũ (25/11) cho tới khi có kết quả A/B sạch.
+
+## §22 — 2026-10-15 21:50
+
+### Trạng thái pipeline
+- PC DESKTOP-2JA218A **offline** → không sync calendar/learnings lên D:\…; không render lô mới.
+- Studio schedule tới **06/11 20:25** (#56 “Nếu bạn đang thấy…”) ≫ 2–3 ngày → **không schedule/render** lượt này. Next batch khi cần: #57 (07/11 09:40).
+- Box ready #1–#104 đủ. 0 drafts; không restriction.
+
+### Analytics (Studio, @hanhtrinhgiaithoat)
+- Followers **933**; 7d views **1.9K** (+7.6%); likes **98** (−34.2%); comments **7**; shares **0**; profile views **5** (+150%).
+- Traffic: FYP 96.1%, Search 2.1%, Profile 1.6%, Following 0.2%.
+
+### Hôm nay / gần đây (views / likes / comments)
+- **#11 bọt nước** 15/10 11:55: **115 / 12 / 0** — like-rate cao nhất gần đây (~10%).
+- **Niệm Phật v2** 15/10 12:15: **không thấy trong Posts** (0 match caption; không có slot 12:15) — có thể xoá/fail/ẩn; cần xác minh.
+- **#51v3 Lá trong tay** 15/10 18:15 (extra/new-style): **1 / 0 / 0** sau ~3.7h — gần như không phân phối.
+- **#12 đi bộ** 15/10 20:40: **31 / 0 / 0** (~1.3h, còn sớm).
+- extra-1014 Pháp Cú 3–4 14/10 21:30: **1 / 0 / 0** sau ~24h.
+- #10 POV ngủ 120/4; #9 Kalama 112/2; #8 124/1; #7 122/8.
+
+### Kết luận cadence / A/B
+- Hai bài “extra/new-style” (Pháp Cú 3–4, Lá trong tay) = ~1 view; bài thường ~110–125. Niệm Phật test biến mất khỏi list → A/B style **vẫn nhiễu** + thêm rủi ro upload.
+- Nghiên cứu 2026: early engagement quyết định FYP (đặc biệt <1K follower); completion/rewatch > like; đăng dồn chất lượng thấp hại hơn giúp. → **tối đa 2 bài/ngày**, cách ≥ ~6h; **không thêm extra**.
+- A/B Shorts-mix chỉ trên slot thường đã gắn (#94/#102 v2); giữ #51 cũ 04/11 và #93 cũ 25/11 đến khi user quyết.
+
+### Việc đang đổi
+1. Không đăng extra / không dồn 3–4 bài/ngày.
+2. Ưu tiên format đố vui (like-rate #11) + POV/hook đau đã đạt ~100v.
+3. Học: search traffic còn 2.1% — caption/keyword âm lịch vẫn nên giữ để kéo Search.
+
+### Blocker
+- PC offline (learnings §20–§22 chỉ trên box). Bật PC để sync `tiktok_learnings.md` và render #57+ khi buffer gần hết (~22 ngày còn lại → chưa gấp).
+- Niệm Phật 12:15 thiếu trên Studio — hỏi user / lần sau kiểm tra lại lịch sử xoá.
+
+## §23 — 2026-10-16 09:50
+
+### Analytics (Studio Home @hanhtrinhgiaithoat)
+- Followers: **933**; 7d views: **1.9K** (+7.6%); likes **98** (−34%); comments **7**; shares **0**.
+- Hôm nay: **#13** "Đức Phật không chê tiền…" 16/10 06:35: **~76v / 11♥ / 2💬** (~3.5h).
+- Hôm qua:
+  - **#12** đi bộ: **111v / 10♥**
+  - **#11** bọt nước: **115v / 12♥**
+  - **Lá trong tay** 18:15: vẫn **1v**
+  - **Niệm Phật** 12:15: giờ đã thấy trong Posts nhưng **0v / ~22h**
+  - **extra-1014**: vẫn **1v**
+
+### Cadence / A/B
+- Bài extra (3–4/ngày) vẫn gần như **0 reach** → giữ **tối đa 2 bài/ngày**; không thêm extra.
+- A/B style v2 vẫn nhiễu vì trùng slot extra; chưa đủ tín hiệu sạch để đổi lịch hàng loạt.
+
+### Calendar / queue
+- Studio buffer tới **06/11 20:25 (#56)**; ~**43** scheduled; next batch **#57 (07/11 09:40)**.
+- PC **online** lại; box ready **#57–#104**. Buffer ~21 ngày ≫ 3 → **không** render/schedule lượt này.
+- Calendar JSON vẫn `planned` cho bài sớm; **Studio = source of truth** cho frontier schedule.
+
+### Pending user (ghi chú — không ping)
+- #51 cũ vẫn schedule **04/11 11:30**
+- #93 cũ vẫn trên calendar **25/11**
+
+### Việc tiếp
+- Chỉ schedule #57+ khi buffer Studio < ~3 ngày.
+- Giữ max 2/ngày; ưu tiên slot thường đã gắn v2 (#94/#102) khi test style.
+
+## §24 — 2026-10-16 15:50
+
+### Analytics (Studio Home @hanhtrinhgiaithoat)
+- Followers: **933**; 7d views: **1.9K** (+31, +1.7%); likes **82** (−19, −18.8%); comments **6**; shares **0**. Profile views 6 (+200%).
+- Hôm nay: **#13** "Đức Phật không chê tiền…" 06:35: **117v / 13♥ / 2💬** (lên từ ~76v sáng). #14 POV mất người thân **20:10** vẫn scheduled.
+- Hôm qua: #11 bọt nước **116v/12♥**; #12 đi bộ **113v/10♥**; Lá trong tay **1v**; Niệm Phật **0v**; extra-1014 **1v**.
+
+### Cadence / A/B
+- Extra vẫn ~0 reach → giữ **max 2 bài/ngày**.
+- Regular ~110–120v ổn định; engagement #13 khá (13♥/117v).
+
+### Calendar / queue
+- Studio buffer tới **06/11 20:25 (#56)**; ~43 scheduled; next **#57 (07/11 09:40)**.
+- PC **online**; box ready **#57–#104** (48/48). Buffer ~21 ngày ≫ 3 → **không** render/schedule.
+- Pending (không ping): #51 cũ 04/11 11:30; #93 cũ 25/11.
+
+### Việc tiếp
+- Chỉ schedule #57+ khi buffer Studio < ~3 ngày.
+- 21:50: báo user ngắn (VN) theo routine.
+
+## §25 — 2026-10-19 (nghiên cứu công thức + lô v3 #57–#64)
+**Nghiên cứu đầy đủ:** `research_cong_thuc_2026-10-19.md` (bản trên box `/workspace/tiktok/`; mọi số liệu đều có link nguồn).
+- **Chẩn đoán 10–18/10:** mọi bài dừng ở 110–160 view; rớt ở 0:01–0:03; xem trung bình 4–5,6 s; xem hết 0–5%; share = 0; ~96% traffic từ For You. → kẹt ở cửa 1 vì **hook/khung đầu**, không phải bị bóp. Bài đăng chen (3–4 bài/ngày) = 0–1 view → **giữ 2 bài/ngày, cách nhau ≥ 6 h, không chen.**
+- **Theo nguồn chính thức của TikTok:** xem hết một video dài là tín hiệu nặng; follower không phải yếu tố trực tiếp. Thứ tự tín hiệu (không chính thức): watch/completion → rewatch → share qua DM → save → comment → like.
+- **Mốc:** giữ chân 3 s ≥ 55–60%; mặt bằng nền tảng xem 3,75 s và 4% xem hết (Metricool). Kênh mình mới ngang mức trung bình.
+- **Hook:** khoảng trống tò mò và tính cấp bách thắng (OSF, 46.605 hook). Hook cảm xúc kéo share. Không dạo đầu, không "Hôm nay…/Nếu bạn…/POV…".
+- **Độ dài:** Buffer (1,1 triệu video) cho thấy video 30–60 s có reach cao hơn, nhưng hook mới quyết định → thử Chuyện xưa 30–40 s.
+- **SEO:** từ khóa nói ra trong 3 s đầu, hiện trên màn, có trong 100 ký tự đầu caption; 3–5 hashtag cụ thể; bật phụ đề tự động tiếng Việt.
+
+### Công thức v3 "Đố · Hé · Làm · Gửi"
+1. 0–2 s: câu đố hoặc nghịch lý đời thường ≤ 10 chữ, có từ khóa; chữ to + clip chuyển động ở khung 0; A/B/C hoặc "số mấy?" hiện trên màn.
+2. Vòng mở → đáp án ở 35–60%; có một câu móc lại ở 30–75%.
+3. Hé một câu kinh (dẫn nguồn ≤ 8 chữ, ghi "diễn ý", số hiệu đưa lên thẻ nguồn).
+4. Làm một việc cụ thể có con số (10 phút, 3 chữ, 1 dòng, 1 cái tên).
+5. Gửi: câu cuối là câu hỏi, gọi lại hook, kèm **người nhận cụ thể** hoặc comment một chữ.
+6. 18–25 s, nhịp 3,2–3,5 từ/giây (Chuyện xưa thử 30–40 s).
+7. Series có số: Đố bạn đời thường #N · 14 ngày biết ơn · Ngày N · Phật dạy về tiền #N · Chuyện xưa · Tập N.
+8. Caption: dòng 1 = từ khóa + câu hỏi; CTA "💬 … · 📩 Gửi cho …"; 3–5 hashtag.
+9. Một tuần 14 bài: 4 Đố, 3 Phật pháp đời thường, 2 lịch âm, 2 Chuyện xưa, 2 tĩnh lặng, 1 Hiểu đúng/Vì sao; POV ≤ 1 bài/tuần.
+
+### Lô v3 #57–#64 (07–10/11, giữ nguyên giờ đăng để A/B sạch)
+Spec: `data/stier/specs/*-v3.json` (nguồn sinh: `plan_v3/mkspecs.py` trên box). Bài cũ vẫn giữ trong manifest dưới `old_path`.
+- **Lỗi gate gặp phải và cách sửa:**
+  - `counter` có suffix ngắn ("4 KIỂU", "3 CHỮ") → cỡ chữ 300px làm dấu chồng lên `countlbl` → content_overlap. **Dùng suffix ≥ 8 ký tự** ("4 KIỂU BẠN", "3 CHỮ THÔI").
+  - `hf_stamp`: kick "ĐÁP ÁN" chồng big "C" (t≈8 s) → để kick rỗng.
+  - `hf_stamp` kick đập vào số to ở #60 → thay bằng `counter`.
+  - Chữ to kinetic cuối quá dài chồng chữ nhỏ → rút ngắn ("GIỮ VIỆC TỐT NÀO?").
+- **Nhịp R6:** gap 0,1–0,15 cho ra 4,1–4,3 từ/giây với giọng Thanh Bình (78–93 từ / 20–22 s). **Quy tắc nhanh: số từ ≤ 3,4 × (thời lượng TTS − 1); mỗi +0,1 gap ≈ +0,1 s × (số dòng − 1).** Bài 8 dòng ~85 từ cần gap ≈ 0,7–0,85.
+- Gate cho phép chồng dòng trong cùng một cảnh kinetic (build.py bỏ qua) → `check.json` có thể ghi ok=False dù END OK; tin dòng END.
+
+### Thử nghiệm (đo ở 48 h, trong Studio)
+Mục tiêu mỗi video: 3 s ≥ 55% · xem trung bình ≥ 7 s · xem hết ≥ 10% · share ≥ 1 · tim/view ≥ 8% · comment ≥ 2 · view ≥ 250 (≥ 500 = qua cửa 1).
+- **E1:** v3 vs baseline (#57–#72 vs bài tháng 10).
+- **E2:** CTA gửi vs CTA comment.
+- **E3:** độ dài 30–40 s.
+- **E4:** series 14 ngày biết ơn (ngày 1/5/11/15).
+- **E5:** khung trưa vs sáng.
+- Mỗi nhánh cần ≥ 6 video mới kết luận; nhánh thua 2 tuần liền thì bỏ. **Mục tiêu tháng 11: ≥ 3 video > 500 view, 1.000 follower trước 30/11.**
+- Lịch tháng 12 nháp (2 bài/ngày, #105–#166): `data/stier/tiktok_calendar_2026-12.json`.
+
+## 26 - 2026-10-19 (lô v3 #65-#72: bài học lint + dựng)
+
+- Câu được tách chỉ theo dấu . ! ? — dấu phẩy, hai chấm không cắt câu. Mỗi câu ≤ 14 từ, phần dẫn nguồn trước dấu hai chấm ≤ 8 từ (R3).
+- Regex trích dẫn bắt cả "kinh điển", "chép kinh", "lời kệ": tránh các từ này trước mốc 25 % thời lượng. Có trích kinh thì phải có "diễn ý" (R10).
+- "Kinh Pháp Cú, diễn ý" đã quá dày (R8: "pháp cú diễn" > 3/15 kịch bản). Xoay vòng: "Phật dạy, diễn ý:", "Kinh Pháp Cú dạy:", "Một câu kệ:", "Kệ Pháp Cú dạy:".
+- R2 (câu nối "nhưng / thật ra") đo theo thời gian thật sau TTS (30-75 %), không theo số từ — giọng chậm đẩy câu nối ra sớm hơn ước tính. Đặt câu nối ở khoảng 40-60 % số từ.
+- Tốc độ đo được (giây/từ, chưa tính gap): Thanh Bình 0,23 · Ngọc Linh 0,26 · Ngọc Trân 0,29 · Thục Đoan 0,29 · Quang Sơn 0,32-0,33 · Thiền Tâm Đức 0,33 · Mỹ Duyên 0,35. Giọng chậm chỉ đạt ~2,9-3,0 từ/giây dù gap = 0; muốn 3,2-3,5 từ/giây thì dùng Thanh Bình / Ngọc Trân / Thục Đoan / Ngọc Linh.
+- Clip mở đầu phải khớp lời: kiểm ảnh thu nhỏ trước khi dựng (#67 suýt dùng tượng Di Lặc không có nhục kế cho câu hỏi về nhục kế).
+
+## §27 — 2026-10-19 09:50 (UTC+7)
+
+### Analytics (Studio Posts snapshot ~09:55)
+- Logged in @hanhtrinhgiaithoat OK.
+- Recent published: 18/10 POV tên độc ~146v/5♥; 18/10 Đố vui #3 ~147v/6♥; 17/10 Kẻ thù ~151v/3♥; 17/10 mùng 8 quiz ~162v/7♥; 16/10 POV phone 136v/2♥; 16/10 tiền 119v/13♥/2💬.
+- Baseline vẫn ~110–160 view. Đố vui ổn định; bài tiền vẫn tỉ lệ tim cao nhất.
+- Hôm nay #19 (5 cách gỡ oán giận) và #20 (Pháp Cú 103) còn scheduled (UI Studio hiện giờ UTC: 19/10 04:25 và 13:25 = 11:25 và 20:25 VN).
+
+### Hàng đợi / sản xuất
+- Lịch Nov: buffer Studio cần xác nhận đủ tới #56 (lượt này thấy vài bài scheduled ở đầu list — phải lọc Scheduled để đếm đủ; 15:50 sẽ xác nhận lại nếu cần).
+- Đợt render v3 sáng 19/10 (nolock batch rb2–rb6): #73–#80, #83–#85 OK; #81 và #82 FAIL layout content_overlap (cần sửa spec rồi render lại). #86+ đang chạy.
+- Tháng 12: `tiktok_calendar_2026-12.json` đã có 62 bài `planned-v3` trên PC. Công thức Đố/Hé/Làm/Gửi đã chốt trong research 19/10.
+- Không đăng chen / không đổi slot đã schedule (theo yêu cầu user 19/10).
+
+### Việc tiếp
+- Sửa layout #81/#82 rồi render lại.
+- Hoàn rb4→rb6 (#86–#104 v3 trừ A/B giữ nguyên nếu có).
+- 15:50: đếm đủ Scheduled + kiểm #19 đã lên; 21:50 báo cáo VN.
+
+### Bổ sung §27b — cùng lượt 09:50 (sau khi search Studio)
+- Posts list mặc định **không hiện hết** bài scheduled xa: search "Rằm tháng 9" thấy hàng đợi còn tới ít nhất **28/10** (vía Quán Âm #36–#38), kèm #29 Rằm 24/10. Buffer thực tế vẫn > 2–3 ngày; **không** cần refill ồ ạt.
+- Lượt này từng schedule nhầm trùng: #27 và #28 mỗi cái 2 lần (giờ UI UTC). Đã yêu cầu xóa bản sai (giữ 23/10 11:45 VN và 20:00 VN).
+- Quy tắc: trước khi schedule thêm, **search caption/slug** hoặc lọc Scheduled đủ sâu — đừng kết luận thiếu buffer chỉ vì đầu list.
+- Render v3 rb5: thêm FAIL layout (#90 ha-nguyen-biet-on, #95 nghiep, #96 tu-trach, #97 5-dieu-truoc-khi-noi). Cùng dạng content_overlap như #81/#82 (đã patch spec, chờ rb81).
+
+### 28 - lượt 15:50 ngày 19/10
+- Studio 7 ngày: 2K view (+4.6%), 85 tim (−25.4%), 7 bình luận, 1 share, 7 lượt xem hồ sơ; For You 96.7%, Search 2.1%. Khán giả 93.3% VN; 35–44 tuổi 26.9%, 45–54 24.7%, 55+ 22%.
+- 17/10: quiz mùng 8 162v/7♥; "Kẻ thù" 151v/3♥. 18/10: Đố vui lời cuối 147v/6♥; POV tên độc 147v/5♥.
+- **#19 (19/10 11:25, 5 cách gỡ oan gia, nhạc Arcadia) KẸT 1 view sau ~4.5h**: không có nhãn/cảnh báo, quyền "Everyone", video công khai mở được, nhưng traffic source toàn "-", avg watch 0.91s, thumbnail trong analytics màu xám. Giống hệt 15/10 18:15 "Lá trong tay" (1v), 14/10 21:30 extra Pháp Cú 3–4 (1v), 15/10 12:15 Niệm Phật (0v).
+- Đã loại trừ: file mp4 bình thường (h264 1080x1920 30fps, AAC, âm lượng −16.9 dB trung bình, frame đầu có hình + chữ). Nhạc Arcadia không phải nguyên nhân (#3 và #13 cũng dùng Arcadia vẫn 110+ view).
+- Giả thuyết: TikTok kiểm duyệt/xử lý bị treo âm thầm (thumbnail xám = chưa xử lý xong), hoặc lọc trùng lặp nội dung. Chưa xác nhận.
+- Việc tiếp: lượt 21:50 kiểm lại #19 và #20 (20:25). Nếu #19 vẫn ~1 view và #20 bình thường → báo user, đề xuất (không tự làm) đăng lại #19 ở slot trống sau. Nếu #20 cũng kẹt → báo user là vấn đề cấp tài khoản.
+
+## 29 - 2026-10-19 21:50 (UTC+7) — stub PC/box check (chưa có số Studio mới)
+
+### Pending Studio
+- **Chưa recheck Studio trong lượt executor này.** Cần parent/agent có browser xác nhận lại **#19** (11:25, 5 cách gỡ oan gia — kẹt 1v lúc 15:50) và **#20** (20:25, Pháp Cú 103) rồi mới ghi analytics.
+
+### PC / box (đã kiểm)
+- Calendar Nov: 104 entries; Dec: 	iktok_calendar_2026-12.json 62 entries (#105–#166, planned-v3).
+- #57–#104: 43× `rendered-v3`; giữ cũ/A-B: #92/#93 (old), #94/#101/#102 (v2).
+- Box `/workspace/tiktok/ready`: 43 file `*-v3.mp4` cho #57–#104 (thiếu đúng 5 số A/B trên). Research: `/workspace/tiktok/research_cong_thuc_2026-10-19.md`.
+- #57 v3 sẵn: PC `output\stier\bud-dv-thang-cai-nhau-v3\final.mp4` + box `57-bud-dv-thang-cai-nhau-v3.mp4`; lịch 07/11 09:40; **chưa schedule** (buffer tới #56 = 06/11 20:25).
+- Render lock/who trỏ long CK (cũ); không thấy python/ffmpeg đang chạy. **Không cần render BUD tối nay.**
+
+### Việc tiếp
+- Điền số #19/#20 từ Studio vào mục này (hoặc §30) khi có.
+- Chỉ schedule #57+ khi buffer Studio < ~3 ngày.
+
+
+## §30 — 2026-10-20 04:50 (UTC+7) — vì sao có bài 0–1 view + SEO caption #57–#104
+
+### Chẩn đoán (so 5 bài kẹt với ~20 bài thường 110–162v)
+- Bài kẹt: extra-1014 Pháp Cú 3–4 (14/10 21:30, 1v), Niệm Phật v2 (15/10 12:15, 0v rồi biến mất khỏi Posts), #51v3 Lá trong tay (15/10 18:15, 1v), #19 (19/10 11:25, 1v), #20 (19/10 20:25, kẹt theo user).
+- Dấu hiệu chung: traffic source "-", xem TB 0,91 s, thumbnail xám → bài **không được vào lô thử FYP** (giữ phân phối/xử lý), không phải "nội dung yếu" (nội dung yếu vẫn có 50–150v lô đầu).
+- KHÔNG phải nguyên nhân (giống hệt bài thường): cấu trúc caption, độ dài 560–710 ký tự, 4–5 hashtag cùng bộ (#loiphatday #chualanh #phattaitam…), credit Kevin MacLeod/Pexels, nhạc (Arcadia, Healing cũng có ở bài 110+v), độ dài 23–30 s, file mp4 (h264 1080x1920, có tiếng), giờ đăng (bài thường đạt 110–162v ở mọi khung 06:35–21:20; #19 11:25 và #20 20:25 cùng kẹt). Footage: 0 clip Pexels nào bị dùng lại giữa #0–#22.
+- Bản lịch đăng #13–#26 (sched_*.txt) đã bỏ URL → link trong caption không giải thích được #19/#20. Các bài extra đăng tay có thể còn URL (chưa kiểm được).
+- Tương quan mạnh: (1) 3/5 bài là **extra** chen vào ngày 3–4 bài, cách bài khác 20 phút–1h45; (2) **trùng nội dung**: Lá trong tay v3 = #51 đã xếp lịch 04/11; Niệm Phật v2 = #93; Pháp Cú 3–4 (oán giận) → 5 ngày sau #19 cũng "gỡ oán giận"; (3) đăng lại/xoá (Niệm Phật biến mất) → bộ lọc trùng lặp/spam có thể giữ cả các bài sau trong 1–5 ngày. Kiểm chứng: #21 (20/10 07:05) và #22 (20:35) — nếu bình thường thì đó là giữ tạm thời.
+- Web (2026): 0 view + thumbnail xám = đang xử lý/review hoặc "not eligible for FYP"; nguyên nhân hay gặp: đăng lại/trùng lặp, đăng dồn, bài chưa xử lý xong; KHÔNG xoá-đăng lại cùng file. 3–5 hashtag liên quan; từ khóa ở dòng đầu; link trong caption không bấm được, nên bỏ.
+
+### Đã sửa (#57–#104, chưa lên lịch TikTok)
+- Caption SEO (`plan_v3/seo.py`, gọi cuối `mkcaps.caption`): dòng 1 có cụm từ khóa tiếng Việt hay tìm ("Lời Phật dạy khi…", "Đố vui Phật pháp", "Nghiệp là gì"…); bỏ mọi URL; nguồn rút gọn "Nguồn: Kinh Pháp Cú, kệ 201"; credit "Nhạc: Kevin MacLeod (CC BY 4.0) · Video: Pexels" (CC BY vẫn đủ ghi công); bỏ dòng âm thanh CC0 (CC0 không bắt ghi công); "#1" trong chữ → "số 1" (TikTok biến thành hashtag rác); hashtag 3–5: 1–2 chủ đề + #loiphatday #phatphap #phatgiao, bỏ tag tự đặt không ai tìm (#badieu #songtinh #nhangui #tamanmoingay #phattaitam #phatphapnhiemmau…). Độ dài ~700 → ~500 ký tự.
+- Giờ đăng: dữ liệu không cho thấy giờ là nguyên nhân → giữ nguyên (2/ngày, ≥6h). Không render lại (hook/chữ trên hình không đổi).
+- Manifest: `pre_seo_caption` giữ bản cũ; calendar 11 cập nhật caption/hashtags #57–#104.
+
+### Luật mới
+- Không đăng extra; không đăng 2 bài cùng chủ đề/kinh trong 7 ngày; không đăng lại/xoá-đăng lại; một bài kẹt thì chờ 24–48 h, không đăng bản sao.
+- Rủi ro trùng sắp tới: #51 (04/11, đã xếp lịch) trùng Lá trong tay v3 đã đăng 15/10; #93 trùng Niệm Phật v2; #74 kệ 5 hận thù gần chủ đề oán giận (#19, extra-1014) nhưng cách >3 tuần.

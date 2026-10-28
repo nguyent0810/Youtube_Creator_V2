@@ -1,0 +1,262 @@
+{
+ "title": "Cái hộp trong cái \"pen\"",
+ "lines": [
+  {
+   "t": "Bar-Hillel cho một ví dụ nổi tiếng trong ngành.",
+   "p": 0.8
+  },
+  "Hãy đọc từng câu.",
+  "Cậu bé John đi tìm hộp đồ chơi của mình.",
+  "Cuối cùng, cậu tìm thấy nó.",
+  "Cái hộp ở trong cái pen.",
+  {
+   "t": "John rất vui.",
+   "p": 1.0
+  },
+  {
+   "t": "Chữ pen trong tiếng Anh có hai nghĩa. Một là cây bút. Hai là cái cũi, nơi trẻ nhỏ ngồi chơi.",
+   "p": 1.0
+  },
+  "Bạn không cần suy nghĩ cũng biết đây là cái cũi.",
+  "Vì một cái hộp đồ chơi không thể nằm gọn trong một cây bút.",
+  {
+   "t": "Nhưng máy thì không biết điều đó.",
+   "p": 1.0
+  },
+  "Bar-Hillel viết rằng không có một chương trình nào, hiện có hay tưởng tượng ra được, giúp máy chọn đúng nghĩa ở chỗ này.",
+  {
+   "t": "Điều cần để chọn đúng không nằm trong câu. Nó nằm ngoài câu. Là kiến thức về kích thước của đồ vật trong đời.",
+   "p": 1.0
+  },
+  "Các đồng nghiệp của ông đáp ngay: vậy thì nạp thêm kiến thức vào máy.",
+  "Ông gạt phắt: như vậy là đòi nạp cả một cuốn bách khoa toàn thư. Theo chữ của ông, đó là chuyện viển vông.",
+  "Biết trong phòng có đúng tám cái ghế, bạn cũng biết có nhiều hơn năm cái, ít hơn mười cái, và cứ thế mãi.",
+  {
+   "t": "Số điều con người biết, ở một nghĩa nào đó, là vô hạn.",
+   "p": 1.0
+  },
+  "Rồi ông viết kết luận của cả bài báo.",
+  {
+   "t": "Dịch hoàn toàn tự động, chất lượng cao, không phải một mục tiêu hợp lý, kể cả với văn bản khoa học.",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Nhưng ông không bảo bỏ cuộc.",
+  "Một mục trong báo cáo của ông có đề: dịch bán tự động, chất lượng cao, có thể làm được trong tương lai gần.",
+  "Ông nói: nếu thỉnh thoảng vẫn gặp những câu như thế, thì cần một người biên tập kiểm lại. Và khi chấp nhận điều đó, trở ngại lớn nhất đã được gỡ.",
+  {
+   "t": "Máy làm phần nặng. Người làm phần hiểu.",
+   "p": 1.0
+  },
+  {
+   "t": "Bạn nhớ cái cũi và cuốn bách khoa toàn thư nhé. Câu hỏi ấy sẽ quay lại: máy lấy kiến thức ở đâu?",
+   "p": 1.0
+  },
+  "Còn bây giờ, hãy tới năm 1964, khi chính phủ Mỹ hỏi một câu rất thực tế: tiền đã tiêu vào đâu?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "CHƯƠNG BỐN",
+   "title": "CÁI HỘP\nTRONG CÁI “PEN”",
+   "sub": "BAR-HILLEL · 1960",
+   "vid": "7918125",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Bar-Hillel"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "John đi tìm hộp đồ chơi",
+     "at": 2,
+     "sm": true
+    },
+    {
+     "text": "cuối cùng cậu thấy nó",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "THE BOX WAS IN THE PEN",
+     "at": 4,
+     "acc": true
+    },
+    {
+     "text": "John rất vui",
+     "at": 5,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 6,
+   "mythLab": "PEN · NGHĨA THỨ NHẤT",
+   "myth": "CÂY BÚT",
+   "truthLab": "PEN · NGHĨA THỨ HAI",
+   "truth": "CÁI CŨI CHO TRẺ NHỎ",
+   "strikeAt": [
+    8,
+    "bút"
+   ],
+   "truthAt": [
+    7,
+    "cũi"
+   ]
+  },
+  {
+   "type": "question",
+   "at": 9,
+   "text": "Nhưng máy\nthì không biết."
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "KHÔNG CHƯƠNG TRÌNH NÀO",
+     "at": 10,
+     "acc": true
+    },
+    {
+     "text": "hiện có hay tưởng tượng ra được",
+     "at": [
+      10,
+      "hiện"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "KIẾN THỨC NẰM NGOÀI CÂU",
+     "at": 11,
+     "acc": true
+    },
+    {
+     "text": "kích thước của đồ vật trong đời",
+     "at": [
+      11,
+      "kích"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 12,
+   "text": "“Vậy nạp thêm\nkiến thức vào máy?”"
+  },
+  {
+   "type": "slam",
+   "at": 13,
+   "text": "BÁCH KHOA TOÀN THƯ",
+   "sub": "“CHUYỆN VIỂN VÔNG” · THEO BAR-HILLEL"
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "ĐÚNG 8 CÁI GHẾ",
+     "at": 14,
+     "acc": true
+    },
+    {
+     "text": "> 5 · < 10 · …",
+     "at": [
+      14,
+      "hơn"
+     ],
+     "sm": true
+    },
+    {
+     "text": "VÔ HẠN",
+     "at": 15
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 16,
+   "text": "Fully automatic, high quality translation is not a reasonable goal, not even for scientific texts.",
+   "by": "BAR-HILLEL · ADVANCES IN COMPUTERS, TẬP 1, 1960",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 17,
+   "typeAt": [
+    17,
+    "dịch"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 18,
+   "items": [
+    {
+     "text": "KHÔNG BẢO BỎ CUỘC",
+     "at": 18,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 19,
+   "title": "BAR-HILLEL ĐỀ XUẤT",
+   "rows": [
+    {
+     "k": "MỤC TIÊU",
+     "v": "BÁN TỰ ĐỘNG · CHẤT LƯỢNG CAO",
+     "at": 19
+    },
+    {
+     "k": "MÁY",
+     "v": "LÀM PHẦN NẶNG",
+     "at": [
+      21,
+      "Máy"
+     ]
+    },
+    {
+     "k": "NGƯỜI",
+     "v": "BIÊN TẬP · PHẦN HIỂU",
+     "at": [
+      21,
+      "Người"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 22,
+   "text": "Máy lấy kiến thức\nở đâu?"
+  },
+  {
+   "type": "date",
+   "at": 23,
+   "day": "ỦY BAN CỦA CHÍNH PHỦ MỸ HỎI: TIỀN ĐÃ TIÊU VÀO ĐÂU?",
+   "date": "1964"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "CÁI HỘP TRONG CÁI “PEN”"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.1
+ }
+}

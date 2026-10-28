@@ -1,0 +1,230 @@
+{
+ "theme": "ck",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "title": "Xe 700 triệu: mỗi tháng mất giá bao nhiêu?",
+ "description": "VÍ DỤ GIẢ ĐỊNH của kênh: xe 700 triệu, sau 5 năm bán lại khoảng 55% giá ban đầu, tức 385 triệu. Phần mất giá 315 triệu, chia 60 tháng là khoảng 5,25 triệu mỗi tháng, nhiều hơn tiền nuôi xe năm đầu (khoảng 4,73 triệu). Kênh tự tính.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Nội dung do kênh biên soạn; giọng đọc tổng hợp.\n\nBản đầy đủ: https://youtu.be/Bx9w_a_1YOI",
+ "tags": [
+  "ô tô mất giá",
+  "khấu hao xe",
+  "chi phí nuôi xe",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "bạn",
+  "năm",
+  "ba",
+  "hoá",
+  "giá"
+ ],
+ "kicker": "QUYẾT ĐỊNH LỚN",
+ "sub": "MUA XE",
+ "lines": [
+  "Chiếc xe bảy trăm triệu bạn mua năm nay, mỗi tháng mất bao nhiêu tiền mà không có hoá đơn nào?",
+  "Đây là ví dụ giả định của kênh: sau năm năm, xe bán lại được khoảng năm mươi lăm phần trăm giá ban đầu.",
+  "Tức là khoảng ba trăm tám mươi lăm triệu.",
+  "Phần mất đi là ba trăm mười lăm triệu.",
+  "Chia cho sáu mươi tháng, khoảng năm triệu hai mỗi tháng.",
+  "Còn nhiều hơn tiền nuôi xe năm đầu, khoảng bốn triệu bảy.",
+  "Nếu có người thuê chiếc xe của bạn với giá ấy, tiền thuê chỉ vừa đủ bù phần mất giá.",
+  "Bảy trăm triệu hôm nay, mỗi tháng lặng lẽ bớt đi năm triệu hai, không ai gửi hoá đơn."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "XE 700 TRIỆU CỦA BẠN",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "MỖI THÁNG MẤT BAO NHIÊU?",
+     "at": [
+      0,
+      "mỗi"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:39445384",
+   "ms": 3,
+   "veil": 0.58
+  },
+  {
+   "type": "chart",
+   "at": 1,
+   "kind": "line",
+   "title": "GIÁ TRỊ XE",
+   "unit": "TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH",
+   "min": 300,
+   "max": 750,
+   "points": [
+    {
+     "x": 0,
+     "v": 700,
+     "at": [
+      1,
+      "ví"
+     ],
+     "tag": "700",
+     "pos": "t"
+    },
+    {
+     "x": 5,
+     "v": 385,
+     "at": [
+      2,
+      "ba"
+     ],
+     "tag": "≈385",
+     "pos": "b",
+     "c": "down"
+    }
+   ],
+   "ticks": [
+    {
+     "x": 0,
+     "label": "MỚI MUA"
+    },
+    {
+     "x": 5,
+     "label": "NĂM 5"
+    }
+   ],
+   "badge": {
+    "text": "−315 TRIỆU",
+    "at": [
+     3,
+     "ba"
+    ],
+    "c": "down"
+   },
+   "note": "GIẢ ĐỊNH BÁN LẠI 55% SAU 5 NĂM · KÊNH TỰ TÍNH"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "≈5,25",
+     "at": [
+      4,
+      "năm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "TRIỆU ĐỒNG MỖI THÁNG",
+     "at": [
+      4,
+      "mỗi"
+     ],
+     "sm": true
+    },
+    {
+     "text": "315 ÷ 60 THÁNG · VÍ DỤ GIẢ ĐỊNH",
+     "at": 4,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "at": 5,
+   "kind": "bars",
+   "title": "MỖI THÁNG (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "bars": [
+    {
+     "label": "MẤT GIÁ",
+     "v": 5.25,
+     "text": "≈5,25",
+     "c": "down",
+     "at": 5
+    },
+    {
+     "label": "NUÔI XE NĂM ĐẦU",
+     "v": 4.73,
+     "text": "≈4,73",
+     "c": "ref",
+     "at": [
+      5,
+      "bốn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Nếu có người thuê xe",
+   "nodes": [
+    {
+     "text": "≈ 5,25 triệu / tháng",
+     "x": 0.5,
+     "y": 0.3,
+     "at": 6,
+     "shape": "none",
+     "w": 620
+    },
+    {
+     "text": "chỉ vừa bù phần mất giá",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "vừa"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 700
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "700 → 385 SAU 5 NĂM",
+     "at": 7,
+     "sm": true
+    },
+    {
+     "text": "KHÔNG AI GỬI HOÁ ĐƠN",
+     "at": [
+      7,
+      "không"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:15283975",
+   "ms": 2,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  }
+ ],
+ "sources": [
+  "https://youtu.be/Bx9w_a_1YOI"
+ ],
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.4
+  }
+ },
+ "say": {},
+ "imgs": {},
+ "short_type": "S"
+}

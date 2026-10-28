@@ -1,0 +1,183 @@
+{
+ "theme": "mim",
+ "title": "08/2018: OpenAI Five thua cả hai trận ở The International, giải Dota 2 lớn nhất năm",
+ "description": "Tháng 8/2018, đội máy OpenAI Five chơi hai trận ở The International: một trận với paiN Gaming (Brazil), một trận với đội gồm các cựu tuyển thủ hàng đầu Trung Quốc, và thua cả hai (Wikipedia: OpenAI Five). Tỉ số từng ván không được nêu.\n\nGiọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/0J3dcjPjcdI (công khai từ 20:00 ngày 03/12).",
+ "tags": [
+  "openai five",
+  "dota 2",
+  "the international",
+  "openai",
+  "trận đấu người máy",
+  "trí tuệ nhân tạo",
+  "lịch sử máy tính",
+  "mind in the machine"
+ ],
+ "sub": "08.2018",
+ "acc": [
+  "thua",
+  "hai",
+  "trận",
+  "tám"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Năm 2018, đội máy thua cả hai trận.",
+  "Tháng tám, OpenAI Five chơi hai trận ở The International, giải Dota lớn nhất năm.",
+  "Một trận với đội paiN Gaming của Brazil, một trận với các cựu tuyển thủ hàng đầu Trung Quốc.",
+  "Cả hai trận, năm cỗ máy đều thua.",
+  "Nhiều người nhận xét: cỗ máy chỉ giỏi phản xạ, chứ chưa biết chiến lược.",
+  "OpenAI không bỏ cuộc: họ huấn luyện thêm gần tám tháng nữa.",
+  "Hai trận thua, và một nhận xét sẽ còn bị thử lại."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "0 – 2",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "OpenAI Five · The International",
+     "at": [
+      0,
+      "đội"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:9071016",
+   "ms": 2,
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "THE INTERNATIONAL",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "giải Dota lớn nhất năm · 08/2018",
+     "at": [
+      1,
+      "giải"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7915042",
+   "ms": 1,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "HAI TRẬN · THE INTERNATIONAL 2018",
+   "rows": [
+    {
+     "k": "PAIN GAMING · BRAZIL",
+     "v": "THUA",
+     "at": [
+      2,
+      "Brazil"
+     ]
+    },
+    {
+     "k": "CỰU TUYỂN THỦ · TRUNG QUỐC",
+     "v": "THUA",
+     "at": [
+      2,
+      "Quốc"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Nhận xét lúc ấy",
+   "nodes": [
+    {
+     "text": "chỉ giỏi phản xạ",
+     "at": [
+      4,
+      "giỏi"
+     ],
+     "x": 0.5,
+     "y": 0.3,
+     "shape": "none",
+     "w": 700
+    },
+    {
+     "text": "chưa biết chiến lược",
+     "at": [
+      4,
+      "chưa"
+     ],
+     "x": 0.5,
+     "y": 0.66,
+     "c": "acc",
+     "shape": "circle",
+     "w": 760
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 0,
+   "to": 8,
+   "prefix": "GẦN ",
+   "suffix": " THÁNG",
+   "label": "HUẤN LUYỆN THÊM",
+   "until": [
+    5,
+    "tám"
+   ],
+   "sub": {
+    "text": "KÊNH TỰ TÍNH · 08/2018 → 04/2019",
+    "at": [
+     5,
+     "huấn"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "HAI TRẬN THUA",
+   "sub": "MỘT NHẬN XÉT CÒN BỊ THỬ LẠI"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/OpenAI_Five"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "openai": "Ô-pần Ây Ai",
+  "dota": "Đô-ta",
+  "=paiN": "Pên",
+  "gaming": "Ghê-ming",
+  "brazil": "Bra-xin"
+ },
+ "imgs": {}
+}

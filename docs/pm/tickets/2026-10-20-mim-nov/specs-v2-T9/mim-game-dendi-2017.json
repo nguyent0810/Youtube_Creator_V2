@@ -1,0 +1,251 @@
+{
+ "theme": "mim",
+ "title": "Tháng 8/2017, Dendi thua một cỗ máy Dota ở The International",
+ "description": "Tháng 8/2017, tại The International (giải Dota 2), tuyển thủ người Ukraine Dendi thua bot một chọi một của OpenAI; trong tuần đó bot cũng đã thắng SumaiL và Arteezy (theo OpenAI và báo chí). Một năm sau OpenAI ra mắt OpenAI Five, năm cỗ máy chơi thành đội.\n\nGiọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/0J3dcjPjcdI (công khai từ 20:00 ngày 03/12).",
+ "tags": [
+  "dendi",
+  "dota 2",
+  "openai",
+  "the international",
+  "trận đấu người máy",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "DOTA 2 · 2017",
+ "acc": [
+  "Dendi",
+  "thua",
+  "đồng",
+  "đội"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Dendi thua cỗ máy trên sân khấu lớn nhất.",
+  "Tháng tám năm hai nghìn không trăm mười bảy, giải Dota The International.",
+  "Dendi là tuyển thủ Ukraine, một cái tên rất nổi trong làng Dota.",
+  "Đối thủ của anh là bot của OpenAI, chỉ chơi một chọi một.",
+  "Trước đó trong tuần, bot đã thắng cả SumaiL lẫn Arteezy.",
+  "Không ai dạy nó chiến thuật. Nó chỉ tự chơi với chính mình.",
+  "Rồi Dendi ngồi xuống, và thua.",
+  "Một năm sau, OpenAI mang tới năm cỗ máy.",
+  "Dendi thua một cỗ máy, và nó chưa biết đồng đội là gì."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "DENDI",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "THUA MỘT CỖ MÁY",
+     "at": [
+      0,
+      "thua"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:28679682",
+   "ms": 1,
+   "veil": 0.55
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "2017",
+   "day": "THÁNG TÁM",
+   "sub": {
+    "text": "THE INTERNATIONAL · DOTA 2",
+    "at": [
+     1,
+     "giải"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "UKRAINE",
+     "at": 2,
+     "acc": true
+    },
+    {
+     "text": "tuyển thủ Dota nổi tiếng",
+     "at": [
+      2,
+      "tuyển"
+     ],
+     "sm": true,
+     "size": 56
+    }
+   ],
+   "at": 2
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Ván một chọi một",
+   "nodes": [
+    {
+     "text": "DENDI",
+     "at": 3,
+     "x": 0.27,
+     "y": 0.36,
+     "shape": "circle",
+     "w": 380
+    },
+    {
+     "text": "BOT OPENAI",
+     "at": [
+      3,
+      "bot"
+     ],
+     "x": 0.73,
+     "y": 0.36,
+     "shape": "circle",
+     "w": 440,
+     "c": "acc"
+    },
+    {
+     "text": "1 CHỌI 1",
+     "at": [
+      3,
+      "một"
+     ],
+     "x": 0.5,
+     "y": 0.68,
+     "shape": "none",
+     "w": 600,
+     "size": 56
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "TUẦN THE INTERNATIONAL 2017",
+   "rows": [
+    {
+     "k": "SUMAIL",
+     "v": "THUA BOT",
+     "at": [
+      4,
+      "SumaiL"
+     ]
+    },
+    {
+     "k": "ARTEEZY",
+     "v": "THUA BOT",
+     "at": [
+      4,
+      "Arteezy"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "TỰ CHƠI",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "với chính mình",
+     "at": [
+      5,
+      "chính"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:36392049",
+   "ms": 1,
+   "veil": 0.45,
+   "at": 5
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "DENDI THUA",
+   "sub": "TRƯỚC MỘT CỖ MÁY"
+  },
+  {
+   "type": "cards3d",
+   "at": 7,
+   "title": "MỘT NĂM SAU",
+   "cards": [
+    {
+     "k": "ĐỘI MÁY",
+     "v": "5 CỖ MÁY",
+     "at": [
+      7,
+      "năm",
+      1
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "OPENAI FIVE · 2018"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CHƯA BIẾT",
+     "at": 8,
+     "acc": true
+    },
+    {
+     "text": "đồng đội là gì",
+     "at": [
+      8,
+      "đồng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8087317",
+   "ms": 1,
+   "veil": 0.55,
+   "at": 8
+  }
+ ],
+ "sources": [
+  "OpenAI, Dota 2 (11/08/2017) https://openai.com/index/dota-2 (trang trả 403 khi mở trực tiếp; dẫn qua Quartz https://qz.com/1052409/ cũng 403, và tóm tắt tìm kiếm: SumaiL, Arteezy thua trong tuần trước; CẦN KIỂM trước khi dựng)",
+  "https://en.wikipedia.org/wiki/OpenAI_Five (đã mở: Dendi, tuyển thủ Ukraine, thua bot một chọi một tại TI 2017, tháng 08/2017)",
+  "data/long/mim-may-choi-game/script.md CH16"
+ ],
+ "say": {
+  "openai": "Ô-pần Ây-ai",
+  "dota": "Đô-ta",
+  "dendi": "Đen-đi",
+  "sumail": "Su-meo",
+  "arteezy": "Ác-ti-zi",
+  "ukraine": "U-crai-na",
+  "international": "In-tơ-nát-sần-nồ"
+ },
+ "rules": 2,
+ "mix": true,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4,
+   "6": 0.4,
+   "7": 0.5
+  }
+ },
+ "imgs": {}
+}

@@ -1,0 +1,461 @@
+{
+ "title": "Ví thứ ba: một quỹ, hai phần riêng",
+ "lines": [
+  {
+   "t": "Ví thứ ba không bắt đầu bằng việc ai góp bao nhiêu.",
+   "p": 0.8
+  },
+  "Trong ví dụ giả định, toàn bộ bốn mươi triệu đi vào một quỹ chung trước.",
+  "Quỹ trả hai mươi sáu triệu chi chung.",
+  "Quỹ còn mười bốn triệu.",
+  "Hai người thống nhất để lại ba triệu rưỡi cho Thảo.",
+  "Một phần riêng.",
+  "Nam cũng để lại ba triệu rưỡi.",
+  {
+   "t": "Bảy triệu còn lại nằm trong quỹ chung.",
+   "p": 1.0
+  },
+  "Một phần chung.",
+  "Ba cột chồng xuất hiện mỗi tháng: ba rưỡi, ba rưỡi và bảy.",
+  "Tổng ba phần là mười bốn triệu.",
+  "Không được cộng bảy triệu vào ví riêng của Thảo.",
+  "Cũng không được cộng nó vào ví riêng của Nam.",
+  "Nó là quỹ chung theo đúng tên mà hai người đã dùng.",
+  "Đó là khác biệt quan trọng nhất của nhánh này.",
+  "Không đếm trùng.",
+  "Sau ba tháng, hai khoản riêng là mười triệu năm trăm nghìn và mười triệu năm trăm nghìn.",
+  "Quỹ chung là hai mươi mốt triệu.",
+  "Sau sáu tháng, hai phần riêng cùng là hai mươi mốt triệu.",
+  "Quỹ chung là bốn mươi hai triệu.",
+  "Ba cột cùng lớn lên.",
+  "Đến tháng mười hai, mỗi người có bốn mươi hai triệu riêng.",
+  "Quỹ chung là tám mươi bốn triệu.",
+  "Tổng cả ba cột là một trăm sáu mươi tám triệu, như hai cách trước.",
+  "Tổng không đổi, nhưng cái được gọi là của riêng đã đổi.",
+  "Vogler, Lyonette và Wiggins dùng khái niệm gộp một phần cho kiểu vừa có chi chung vừa có quyền tự chủ.",
+  "Khái niệm ấy mô tả hai lớp tiền đặt cạnh nhau.",
+  "Nó không nói một cặp phải đặt mốc ba triệu rưỡi.",
+  "Mốc ba triệu rưỡi trong video là ví dụ giả định.",
+  "Nếu mốc này đổi, cả cột tháng mười hai cũng đổi.",
+  "Nếu chi chung đổi, quỹ chung cũng đổi.",
+  "Vì thế, ví thứ ba không phải đáp án cho ví thứ nhất hay thứ hai.",
+  "Nó là một cách gọi.",
+  "Nó chỉ đặt thêm một câu: phần nào là tiền để hai người dùng chung, và phần nào là khoản riêng?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "VÍ THỨ BA\nMỘT QUỸ, HAI PHẦN RIÊNG",
+   "sub": "VÍ DỤ GIẢ ĐỊNH · GỘP MỘT PHẦN",
+   "vid": "6963485",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": 0
+  },
+  {
+   "type": "waterfall",
+   "at": 1,
+   "title": "QUỸ CHUNG MỘT THÁNG",
+   "range": "TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH",
+   "unit": "TRIỆU",
+   "start": {
+    "k": "CẢ HAI LƯƠNG",
+    "v": 40.0,
+    "at": 1
+   },
+   "steps": [
+    {
+     "k": "CHI CHUNG",
+     "v": -26.0,
+     "at": 2
+    }
+   ],
+   "end": {
+    "k": "QUỸ CÒN",
+    "at": 3
+   },
+   "calls": [
+    {
+     "i": 2,
+     "text": "CÒN 14",
+     "at": 3
+    }
+   ]
+  },
+  {
+   "type": "waterfall",
+   "at": 4,
+   "title": "14 TRIỆU CHIA BA PHẦN",
+   "range": "TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH",
+   "unit": "TRIỆU",
+   "start": {
+    "k": "SAU CHI CHUNG",
+    "v": 14.0,
+    "at": 4
+   },
+   "steps": [
+    {
+     "k": "THẢO RIÊNG",
+     "v": -3.5,
+     "at": [
+      4,
+      "thảo"
+     ]
+    },
+    {
+     "k": "NAM RIÊNG",
+     "v": -3.5,
+     "at": 6
+    }
+   ],
+   "end": {
+    "k": "QUỸ CHUNG",
+    "at": [
+     7,
+     "quỹ"
+    ]
+   },
+   "calls": [
+    {
+     "i": 3,
+     "text": "QUỸ GIỮ 7",
+     "at": [
+      7,
+      "quỹ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "stack",
+   "at": 9,
+   "title": "MỖI THÁNG: BA PHẦN",
+   "range": "TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH",
+   "unit": "TRIỆU",
+   "keys": [
+    {
+     "k": "THẢO"
+    },
+    {
+     "k": "NAM"
+    },
+    {
+     "k": "QUỸ CHUNG"
+    }
+   ],
+   "groups": [
+    {
+     "k": "THÁNG 1",
+     "vals": [
+      3.5,
+      3.5,
+      7.0
+     ],
+     "at": 9
+    }
+   ],
+   "calls": [
+    {
+     "i": 0,
+     "text": "TỔNG 14",
+     "at": 10
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "img": "ai02",
+   "at": 11,
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "zoom": {
+    "x": 0.5,
+    "y": 0.55,
+    "z": 1.35,
+    "at": 11,
+    "d": 1.2
+   },
+   "veil": 0.35,
+   "kin": [
+    {
+     "text": "QUỸ CHUNG ≠ VÍ RIÊNG",
+     "at": [
+      11,
+      "cộng"
+     ],
+     "acc": true
+    },
+    {
+     "text": "không của Thảo, không của Nam",
+     "at": 12,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "KHÁC BIỆT QUAN TRỌNG NHẤT",
+     "at": 14,
+     "sm": true
+    },
+    {
+     "text": "KHÔNG ĐẾM TRÙNG",
+     "at": 15,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "stack",
+   "at": 16,
+   "title": "CỘNG DỒN: THÁNG 3 VÀ 6",
+   "range": "TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH",
+   "unit": "TRIỆU",
+   "keys": [
+    {
+     "k": "THẢO"
+    },
+    {
+     "k": "NAM"
+    },
+    {
+     "k": "QUỸ CHUNG"
+    }
+   ],
+   "groups": [
+    {
+     "k": "THÁNG 3",
+     "vals": [
+      10.5,
+      10.5,
+      21.0
+     ],
+     "at": 16
+    },
+    {
+     "k": "THÁNG 6",
+     "vals": [
+      21.0,
+      21.0,
+      42.0
+     ],
+     "at": 18
+    }
+   ],
+   "calls": [
+    {
+     "i": 0,
+     "text": "QUỸ 21",
+     "at": 17
+    },
+    {
+     "i": 1,
+     "text": "QUỸ 42",
+     "at": 19
+    }
+   ]
+  },
+  {
+   "type": "race",
+   "at": 20,
+   "abs": true,
+   "unit": "TRIỆU",
+   "xlab": "THÁNG ",
+   "xstep": 3,
+   "dates": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+   ],
+   "title": "BA CỘT CÙNG LỚN LÊN",
+   "range": "CỘNG DỒN · TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH",
+   "series": [
+    {
+     "label": "THẢO = NAM",
+     "color": "#f472b6",
+     "vals": [
+      0.0,
+      3.5,
+      7.0,
+      10.5,
+      14.0,
+      17.5,
+      21.0,
+      24.5,
+      28.0,
+      31.5,
+      35.0,
+      38.5,
+      42.0
+     ]
+    },
+    {
+     "label": "QUỸ CHUNG",
+     "color": "#fbbf24",
+     "vals": [
+      0.0,
+      7.0,
+      14.0,
+      21.0,
+      28.0,
+      35.0,
+      42.0,
+      49.0,
+      56.0,
+      63.0,
+      70.0,
+      77.0,
+      84.0
+     ]
+    }
+   ],
+   "calls": [
+    {
+     "s": 0,
+     "i": 12,
+     "text": "42 MỖI NGƯỜI",
+     "at": 21
+    },
+    {
+     "s": 1,
+     "i": 12,
+     "text": "QUỸ 84",
+     "at": 22
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 23,
+   "from": 0,
+   "to": 168.0,
+   "label": "THẢO + NAM + QUỸ · THÁNG 12",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "suffix": " TRIỆU",
+   "sub": {
+    "text": "CÁI GỌI LÀ “CỦA RIÊNG” ĐÃ ĐỔI",
+    "at": 24
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 25,
+   "title": "GỘP MỘT PHẦN",
+   "srcnote": "NGUỒN: VOGLER, LYONETTE & WIGGINS · 2008",
+   "rows": [
+    {
+     "k": "NGHIÊN CỨU",
+     "v": "VOGLER, LYONETTE & WIGGINS",
+     "at": 25
+    },
+    {
+     "k": "LỚP 1",
+     "v": "CHI CHUNG",
+     "at": [
+      25,
+      "chi"
+     ]
+    },
+    {
+     "k": "LỚP 2",
+     "v": "QUYỀN TỰ CHỦ",
+     "at": [
+      25,
+      "tự"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 27,
+   "items": [
+    {
+     "text": "MỐC 3,5 TRIỆU",
+     "at": 27,
+     "acc": true
+    },
+    {
+     "text": "chỉ là ví dụ giả định",
+     "at": 28,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 29,
+   "vid": "6964248",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "ĐỔI MỐC → ĐỔI CỘT THÁNG 12",
+     "at": 29,
+     "acc": true
+    },
+    {
+     "text": "ĐỔI CHI → ĐỔI QUỸ",
+     "at": 30,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "img": "ai06",
+   "at": 31,
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "move": "out",
+   "veil": 0.35,
+   "kin": [
+    {
+     "text": "KHÔNG PHẢI ĐÁP ÁN",
+     "at": 31,
+     "sm": true
+    },
+    {
+     "text": "MỘT CÁCH GỌI",
+     "at": 32,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 33,
+   "text": "Phần nào để dùng chung,\nphần nào là khoản riêng?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "VÍ THỨ BA · MỘT QUỸ, HAI PHẦN RIÊNG"
+ },
+ "bgm": {
+  "mood": "warm",
+  "gain": 0.1
+ }
+}

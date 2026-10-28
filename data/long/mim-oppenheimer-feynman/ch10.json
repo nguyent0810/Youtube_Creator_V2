@@ -1,0 +1,327 @@
+{
+ "title": "Cái giá",
+ "lines": [
+  {
+   "t": "Ngày 6 tháng 8 năm 1945, tám giờ mười lăm sáng giờ Nhật Bản, một quả bom nguyên tử nổ trên thành phố Hiroshima.",
+   "p": 0.8
+  },
+  {
+   "t": "Ba ngày sau, mười một giờ hai phút, đến lượt Nagasaki.",
+   "p": 1.0
+  },
+  "Mình xin kể chậm lại ở đây.",
+  "Quả bom ở Nagasaki dùng plutonium, cùng kiểu với thiết bị đã thử ở Trinity.",
+  {
+   "t": "Tức là cùng kiểu thiết kế mà những xấp thẻ màu ở Los Alamos đã tính.",
+   "p": 1.0
+  },
+  "Không ai biết chính xác bao nhiêu người đã chết.",
+  "Thành phố Hiroshima ước tính khoảng một trăm bốn mươi nghìn người, tính tới cuối tháng 12 năm 1945.",
+  "Thành phố Nagasaki ước tính gần bảy mươi tư nghìn người, trong cùng khoảng thời gian.",
+  {
+   "t": "Đó là cái giá.",
+   "p": 1.0
+  },
+  "Thành phố Hiroshima ghi rằng hôm ấy trong phố có cư dân, binh lính, và người làng bên được huy động vào.",
+  "Có cả lao động bị cưỡng bức từ các thuộc địa của Nhật.",
+  {
+   "t": "Báo cáo năm 1946 của chính Quân đội Mỹ đưa con số thấp hơn nhiều, và tự nhận việc ước tính là rất khó.",
+   "p": 1.0
+  },
+  "Trong bài nói của mình, Feynman không kể nhiều về hai thành phố ấy.",
+  "Ông kể về chính mình.",
+  "Sau chiến tranh, ông về dạy ở Đại học Cornell.",
+  "Ngồi trong một nhà hàng ở New York, ông nhìn ra các toà nhà và bắt đầu nhẩm bán kính tàn phá của quả bom ở Hiroshima.",
+  {
+   "t": "Từ đây tới phố số ba mươi tư là bao xa?",
+   "p": 1.0
+  },
+  "Thấy người ta xây cầu, làm đường mới, ông nghĩ họ thật vô ích.",
+  {
+   "t": "Gần ba mươi năm sau, ông nói ông mừng vì mình đã sai, và người ta vẫn cứ xây.",
+   "p": 1.0
+  },
+  "Ông còn nói một điều khó nghe hơn.",
+  "Họ bắt đầu vì một lý do tốt, rồi lao vào làm, vui vì giải được bài khó.",
+  "Rồi họ thôi nghĩ.",
+  {
+   "t": "Theo ông, khoảnh khắc ấy, chỉ còn Bob Wilson là vẫn nghĩ.",
+   "p": 1.0
+  },
+  "Mình kể chương này vì một lẽ.",
+  "Những cỗ máy tính trong câu chuyện này không ra đời trong một phòng thí nghiệm vô can.",
+  "Và chúng không dừng lại khi chiến tranh kết thúc.",
+  "Chúng đi đâu tiếp?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "10",
+   "k": "CHƯƠNG MƯỜI",
+   "title": "CÁI GIÁ",
+   "sub": "06.08 · 09.08.1945",
+   "bg": "hiroshima",
+   "titleAt": [
+    0,
+    "Ngày"
+   ]
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "day": "NAGASAKI · 11:02 GIỜ NHẬT",
+   "date": "09.08.1945",
+   "sub": {
+    "text": "BA NGÀY SAU HIROSHIMA (06.08.1945) · BÁO CÁO MANHATTAN DISTRICT",
+    "at": [
+     1,
+     "lượt"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "MÌNH XIN KỂ CHẬM LẠI",
+     "at": 2,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "CÙNG KIỂU THIẾT KẾ",
+   "srcnote": "BẢO TÀNG NGUYÊN TỬ QUỐC GIA (DOE) · N. LEWIS · TRINITY BY THE NUMBERS (LANL)",
+   "rows": [
+    {
+     "k": "BOM NAGASAKI",
+     "v": "PLUTONIUM · KIỂU TRINITY",
+     "at": [
+      3,
+      "cùng"
+     ]
+    },
+    {
+     "k": "TỨC LÀ",
+     "v": "THIẾT KẾ CÁC XẤP THẺ ĐÃ TÍNH",
+     "at": 4
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 5,
+   "img": "hiroshima",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.5,
+   "kin": [
+    {
+     "text": "KHÔNG AI BIẾT CON SỐ CHÍNH XÁC",
+     "at": 5,
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "HIROSHIMA SAU VỤ NỔ",
+    "v": "ẢNH: CHÍNH PHỦ MỸ · PHẠM VI CÔNG CỘNG",
+    "at": 5
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 6,
+   "title": "ƯỚC TÍNH SỐ NGƯỜI CHẾT · TỚI CUỐI 12.1945",
+   "srcnote": "THÀNH PHỐ HIROSHIMA · THÀNH PHỐ NAGASAKI (BÁO CÁO 07.1950)",
+   "rows": [
+    {
+     "k": "HIROSHIMA",
+     "v": "≈ 140.000",
+     "at": [
+      6,
+      "ước"
+     ]
+    },
+    {
+     "k": "NAGASAKI",
+     "v": "73.884",
+     "at": [
+      7,
+      "ước"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 8,
+   "text": "ĐÓ LÀ CÁI GIÁ",
+   "sub": "HAI THÀNH PHỐ · MỘT MÙA HÈ",
+   "white": true
+  },
+  {
+   "type": "photo",
+   "at": 9,
+   "img": "nagasaki",
+   "tone": "bw",
+   "move": "out",
+   "veil": 0.5,
+   "kin": [
+    {
+     "text": "CƯ DÂN · BINH LÍNH · NGƯỜI ĐƯỢC HUY ĐỘNG",
+     "at": 9
+    },
+    {
+     "text": "cả lao động bị cưỡng bức từ các thuộc địa của Nhật · theo thành phố Hiroshima",
+     "at": 10,
+     "sm": true
+    }
+   ],
+   "label": {
+    "k": "NAGASAKI · 09.1945",
+    "v": "ẢNH: HẢI QUÂN MỸ · PHẠM VI CÔNG CỘNG",
+    "at": 9
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 11,
+   "title": "BÁO CÁO CỦA QUÂN ĐỘI MỸ · 1946",
+   "srcnote": "MANHATTAN ENGINEER DISTRICT · THE ATOMIC BOMBINGS OF HIROSHIMA AND NAGASAKI",
+   "rows": [
+    {
+     "k": "HIROSHIMA",
+     "v": "66.000 CHẾT",
+     "at": [
+      11,
+      "con"
+     ]
+    },
+    {
+     "k": "NAGASAKI",
+     "v": "39.000 CHẾT",
+     "at": [
+      11,
+      "thấp"
+     ]
+    }
+   ],
+   "total": {
+    "k": "BÁO CÁO TỰ NHẬN",
+    "v": "“RẤT KHÓ ƯỚC TÍNH”",
+    "at": [
+     11,
+     "khó"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "FEYNMAN KỂ VỀ CHÍNH MÌNH",
+     "at": 13
+    },
+    {
+     "text": "về dạy ở Đại học Cornell",
+     "at": 14,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 15,
+   "dy": true,
+   "text": "Từ đây tới phố số 34 là bao xa? Tất cả những toà nhà này, đổ nát…",
+   "by": "RICHARD FEYNMAN · LOS ALAMOS FROM BELOW (FEYNMAN, 1976)",
+   "lbl": "DIỄN Ý",
+   "typeAt": [
+    15,
+    null,
+    0,
+    0.05
+   ],
+   "typeDur": 3.0
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "XÂY CẦU LÀM GÌ NỮA?",
+     "at": 17
+    },
+    {
+     "text": "GẦN 30 NĂM SAU: “TÔI MỪNG VÌ MÌNH ĐÃ SAI”",
+     "at": 18,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 19,
+   "title": "MỘT ĐIỀU KHÓ NGHE HƠN",
+   "srcnote": "LOS ALAMOS FROM BELOW (FEYNMAN, 1976) · DIỄN Ý",
+   "rows": [
+    {
+     "k": "BẮT ĐẦU",
+     "v": "VÌ MỘT LÝ DO TỐT",
+     "at": 20
+    },
+    {
+     "k": "RỒI",
+     "v": "LAO VÀO · VUI VÌ GIẢI ĐƯỢC BÀI KHÓ",
+     "at": [
+      20,
+      "lao"
+     ]
+    },
+    {
+     "k": "CUỐI CÙNG",
+     "v": "THÔI KHÔNG NGHĨ",
+     "at": 21
+    }
+   ],
+   "total": {
+    "k": "CÒN NGHĨ",
+    "v": "BOB WILSON",
+    "at": 22
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 23,
+   "items": [
+    {
+     "text": "KHÔNG RA ĐỜI TRONG MỘT PHÒNG THÍ NGHIỆM VÔ CAN",
+     "at": 24,
+     "acc": true
+    },
+    {
+     "text": "và không dừng lại khi chiến tranh kết thúc",
+     "at": 25,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 26,
+   "text": "Sau chiến tranh,\nnhững cỗ máy ấy đi đâu?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 10",
+  "t": "CÁI GIÁ"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.08
+ }
+}

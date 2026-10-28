@@ -1,0 +1,226 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-cx-kisa-gotami-hat-cai",
+ "format": "chuyen-xua",
+ "hook_type": "giua-truyen",
+ "open_shot": "nguoi-than",
+ "voice": "Thiền Tâm Đức",
+ "music": "fluidscape.mp3",
+ "music_gain": 0.16,
+ "gap": 0.1,
+ "series": "Chuyện xưa · Tập 8",
+ "title": "Người mẹ đi xin thuốc cho đứa con đã mất",
+ "kicker": "CHUYỆN XƯA · TẬP 8",
+ "sub": "KISĀ GOTAMĪ · THIG 10.1",
+ "acc": [
+  "mất",
+  "hạt",
+  "cải"
+ ],
+ "lines": [
+  "Người mẹ ôm đứa con đã mất, gõ cửa xin thuốc.",
+  "Ai cũng lắc đầu. Có người bảo: đi gặp Đức Phật.",
+  "Ngài không nói một lời an ủi nào.",
+  "Ngài bảo bà xin một nắm hạt cải. Từ nhà chưa từng có người mất.",
+  "Bà đi từng nhà. Nhà nào cũng có người đã mất.",
+  "Nhưng đến tối, tay bà vẫn trống không.",
+  "Thật ra, Ngài đã trao một điều khác.",
+  "Mất mát nhà nào cũng gặp. Bà không còn một mình.",
+  "Trưởng Lão Ni Kệ, diễn ý: bà xuất gia. Tâm bà được bình an.",
+  "Nỗi đau không biến mất. Nhưng ta không phải ôm nó một mình.",
+  "Ai bạn thương vừa mất người thân? Gửi họ chuyện này."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:27987386",
+   "items": [
+    {
+     "text": "XIN THUỐC CHO CON",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "đứa con đã mất",
+     "at": [
+      0,
+      "đứa"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "AI CŨNG\nLẮC ĐẦU",
+   "fx": "zoom",
+   "sub": "ĐI GẶP ĐỨC PHẬT"
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "veil": 0.4,
+   "clip": "pexels:7707975",
+   "items": [
+    {
+     "text": "KHÔNG MỘT LỜI AN ỦI",
+     "at": [
+      2,
+      "không"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Lời Đức Phật",
+   "nodes": [
+    {
+     "text": "1 NẮM HẠT CẢI",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      3,
+      "hạt"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "NHÀ CHƯA AI MẤT",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      3,
+      "nhà"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "THIG 10.1 · SUTTACENTRAL"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "clip": "pexels:27987392",
+   "items": [
+    {
+     "text": "NHÀ NÀO CŨNG CÓ",
+     "at": [
+      4,
+      "nhà",
+      1
+     ],
+     "acc": true
+    },
+    {
+     "text": "người đã mất",
+     "at": [
+      4,
+      "người"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "to": 0,
+   "suffix": " HẠT CẢI",
+   "label": "TAY VẪN TRỐNG KHÔNG",
+   "until": [
+    5,
+    "trống"
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "ĐIỀU NGÀI TRAO",
+   "cards": [
+    {
+     "k": "NHÀ NÀO",
+     "v": "CŨNG MẤT MÁT",
+     "at": [
+      7,
+      "nhà"
+     ]
+    },
+    {
+     "k": "BÀ",
+     "v": "KHÔNG MỘT MÌNH",
+     "at": [
+      7,
+      "một"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "source",
+   "at": 8,
+   "source": "TRƯỞNG LÃO NI KỆ 10.1",
+   "ref": "Kisā Gotamī",
+   "snippet": "Bà xuất gia, [[tâm được bình an]].",
+   "hlAt": [
+    8,
+    "an."
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 9,
+   "text": "KHÔNG ÔM\nMỘT MÌNH",
+   "fx": "zoom",
+   "sub": "NỖI ĐAU KHÔNG BIẾN MẤT"
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "veil": 0.4,
+   "clip": "pexels:7478342",
+   "items": [
+    {
+     "text": "GỬI HỌ CHUYỆN NÀY",
+     "at": [
+      10,
+      "gửi"
+     ],
+     "acc": true
+    },
+    {
+     "text": "người vừa mất người thân",
+     "at": [
+      10,
+      "ai"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/thig10.1/en/sujato",
+  "https://en.wikipedia.org/wiki/Kisa_Gotami"
+ ],
+ "description": "Người mẹ đi xin thuốc cho đứa con đã mất\n\nNguồn: https://suttacentral.net/thig10.1/en/sujato · https://en.wikipedia.org/wiki/Kisa_Gotami"
+}

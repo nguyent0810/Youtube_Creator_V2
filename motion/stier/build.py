@@ -362,7 +362,7 @@ from beatfx import apply_sync, assign_beats  # noqa: E402  (motion/beatfx.py —
 # cộng đồng, số liệu (biểu đồ/bộ đếm) và sơ đồ (bảng trắng/thẻ 3D/bản đồ) phải đan nhau. Spec ghi "mix": true để bật.
 MODE = {"kinetic": "T", "slam": "T", "question": "T", "quote": "T",
         "photo": "M", "doc": "M", "hero": "M", "evidence": "M", "mug": "M", "split": "M", "file": "M", "crowd": "M",
-        "chart": "D", "counter": "D", "ledger": "D", "timeline": "D", "calendar": "D", "clock": "D", "date": "D",
+        "chart": "D", "counter": "D", "ledger": "D", "timeline": "D", "calendar": "D", "clock": "D", "date": "D", "table": "D",
         "map": "G", "board": "G", "cards3d": "G", "source": "G",
         # BUD v2.1: thiết bị Shorts Studio (tiền tố hf_ để không đụng split/calendar của MIM/CK)
         "hf_wheel": "G", "hf_cycle_draw": "G", "hf_myth_strike": "G", "hf_split": "G", "hf_list_build": "D",
@@ -375,6 +375,12 @@ def scene_mode(r: dict) -> str:
     return "M" if m == "T" and (r.get("clip") or r.get("vid")) else m
 
 
+# Bảng tra tự dò (cảnh "table", khuôn mới chủ kênh duyệt 20/10/2026): bảng phải đứng yên lâu để người xem dừng hình dò ô
+# của mình (khuôn bảng ở repo vietneu-tts: bảng 8–15 s cuối video). Nên riêng cảnh table được dài tới 20 s và kiểu D chứa
+# bảng được chiếm tới 80% thời lượng (bảng hiện sớm từ giây 2 để giữ chân, rồi quay lại cuối video để dừng hình); mọi luật khác (phải có M, D, G; chữ ≤ 35%; không 3 cảnh liền cùng kiểu) giữ nguyên.
+TABLE_MAX_S, TABLE_MAX_SHARE = 20, 0.8
+
+
 def mix_lint(sc: list[dict]) -> list[str]:
     modes = [scene_mode(r) for r in sc]
     dur = sc[-1]["t1"] - sc[0]["t0"]
@@ -385,15 +391,19 @@ def mix_lint(sc: list[dict]) -> list[str]:
             out.append(f"thiếu cảnh {name}")
     if share["T"] > 0.35:
         out.append(f"cảnh thuần chữ chiếm {share['T']:.0%} thời lượng (> 35%)")
-    if max(share.values()) > 0.6:
-        out.append(f"một kiểu cảnh chiếm {max(share.values()):.0%} thời lượng (> 60%)")
+    top = max(share, key=share.get)
+    cap = TABLE_MAX_SHARE if top == "D" and any(r["type"] == "table" for r in sc) else 0.6
+    if share[top] > cap:
+        out.append(f"một kiểu cảnh chiếm {share[top]:.0%} thời lượng (> {cap:.0%})")
     for i in range(len(modes) - 2):
         if modes[i] == modes[i + 1] == modes[i + 2]:
             out.append(f"3 cảnh liền cùng kiểu {modes[i]} (cảnh {i}–{i + 2})")
             break
-    longest = max(sc, key=lambda r: r["t1"] - r["t0"])
-    if longest["t1"] - longest["t0"] > 11:
-        out.append(f"cảnh {longest['type']} dài {longest['t1'] - longest['t0']:.1f}s (> 11s): tách ra")
+    for r in sc:
+        lim = TABLE_MAX_S if r["type"] == "table" else 11
+        if r["t1"] - r["t0"] > lim:
+            out.append(f"cảnh {r['type']} dài {r['t1'] - r['t0']:.1f}s (> {lim}s): tách ra")
+            break
     return out
 
 
@@ -625,8 +635,10 @@ def build(slug: str, render: bool = True, draft: bool = False) -> Path:
     od.mkdir(parents=True, exist_ok=True)
     lines_txt = spec["lines"]
     nw = sum(len(l.split()) for l in lines_txt)
-    if not 55 <= nw <= 135:
-        raise SystemExit(f"{slug}: {nw} từ — ngoài 55-135")
+    contem = spec.get("profile") == "chiem-nghiem"   # 20/10/2026: chiêm nghiệm -- độ dài không trần
+    bangtra = spec.get("profile") == "bang-tra"      # 22/10/2026: bảng tra dừng hình 10–15 s (A/B từ AI Learning) -- lời đọc ngắn
+    if not (20 if bangtra else 55) <= nw <= (400 if contem else 135):
+        raise SystemExit(f"{slug}: {nw} từ — ngoài {20 if bangtra else 55}-135")
     if spec.get("rules") == 2 and lines_txt[-1].rstrip().endswith("?"):   # retro 5: luật chỉ nằm trong tài liệu nên đã lọt 1 Short
         raise SystemExit(f"{slug}: Short rules-2 không kết bằng câu hỏi: {lines_txt[-1]!r}")
     # retro 15/10/2026: "~7,5% MỖI NĂM" trên khung dọc đọc thành "-7,5%" (giá nhà phải TĂNG) -> xấp xỉ trước phần trăm dùng "≈".
@@ -636,18 +648,35 @@ def build(slug: str, render: bool = True, draft: bool = False) -> Path:
     if _tl:
         raise SystemExit(f"{slug}: dấu ~ trước số dễ đọc thành dấu trừ: {_tl} -- dùng ≈")
     # retro 15/10/2026: counter hiện năm "2007" thành "2.007" (dấu phân cách nghìn) -> năm dùng slam/kinetic/timeline.
-    _yr = [s["to"] for s in spec.get("scenes", []) if spec.get("theme") in ("mim", "ck") and s.get("type") == "counter"
-           and float(s["to"]).is_integer() and 1500 <= s["to"] <= 2100 and not str(s.get("suffix") or "").strip()]
+    # 15/10/2026: counter hiện năm "2007" thành "2.007"; Short Turing (dựng trước luật) đếm 1950 -> 2000 hiện "1.996".
+    # 26/10/2026: mọi theme khai "year" cho counter 1000-2100; "year": true thì engine không chấm nghìn (casefile/casewide.js).
+    from long.studio_lint import year_counter_issues
+    _yr = year_counter_issues(spec.get("scenes"))
     if _yr:
-        raise SystemExit(f"{slug}: counter hiện năm {_yr} sẽ thành \"2.007\" -- dùng slam/kinetic/timeline")
+        raise SystemExit(f"{slug}: " + "; ".join(_yr))
     th = themes.theme(spec)
     if spec.get("theme") == "bud":   # BUD: luật đa dạng (format/hook/cảnh mở/nhạc/giọng) -- bud_variety.py
         import bud_variety
         spec = bud_variety.apply(slug, spec)
+    _gap = spec.get("gap", th.get("gap", 0.0))
+    if spec.get("beats"):   # beats [{after:i, s, sfx?}] -> nghỉ thở thật trong voice.wav (tts.pauses = gap + s)
+        spec["tts"] = dict(spec.get("tts") or {})
+        spec["tts"]["pauses"] = {str(b["after"]): round(_gap + float(b["s"]), 3) for b in spec["beats"]}
     t = speak(lines_txt, od / "voice.wav", od / "timing.json", voice=spec.get("voice", th["voice"]),
-              gap=spec.get("gap", th.get("gap", 0.0)), say=spec.get("say"), tts=spec.get("tts"))
+              gap=_gap, say=spec.get("say"), tts=spec.get("tts"))
+    if spec.get("beats") or spec.get("end_sfx"):   # chuông/cồng đặt theo mốc giọng đo thật
+        amb = spec.get("ambience") or {}
+        amb = {"bed": amb} if isinstance(amb, str) else dict(amb)
+        hits = [h for h in amb.get("hits") or [] if not h.get("auto")]
+        for b in spec.get("beats") or []:
+            if b.get("sfx"):
+                hits.append({"at": round(t["segments"][b["after"]]["end"] + 0.25, 2), "kind": b["sfx"], "gain": b.get("gain", 0.8), "auto": True})
+        if spec.get("end_sfx"):
+            hits.append({"at": round(t["segments"][-1]["end"] + 0.15, 2), "kind": spec["end_sfx"], "gain": 0.6, "auto": True})
+        amb["hits"] = hits
+        spec["ambience"] = amb
     lines = word_lines(t, od / "voice.wav", spec.get("say"))
-    dur = round(t["duration"] + 0.6, 2)                         # 0.6s thở cuối cho vòng lặp
+    dur = round(t["duration"] + float(spec.get("tail", 3.2 if bangtra else 0.6)), 2)   # 0.6s thở cuối cho vòng lặp; bảng tra: giữ khung cuối để dừng hình
     adir = HF / "assets" / "cases" / slug
     imgs, credits = {}, []
     for key, file in spec.get("imgs", {}).items():
@@ -740,9 +769,10 @@ def build(slug: str, render: bool = True, draft: bool = False) -> Path:
     comp = HF / "compositions" / "cases" / f"{slug}.html"
     comp.parent.mkdir(parents=True, exist_ok=True)
     comp.write_text(HTML.replace("{hfs}", hfs_tags(spec, scenes)).replace("{slug}", slug).replace("{dur}", str(dur)).replace("{title}", spec["title"])
-                    .replace("{cls}", th["js"].get("cls", "") + look_cls).replace("{videos}", "\n".join(vtags))
+                    .replace("{cls}", th["js"].get("cls", "") + look_cls + (" " + spec["cls"] if spec.get("cls") else "")).replace("{videos}", "\n".join(vtags))
                     # CSS riêng của theme (CK: theme-ck.css); theme không khai báo -> HTML y hệt cũ
-                    .replace("{css}", f'\n<link rel="stylesheet" href="assets/engine/{th["js"]["css"]}" />' if th["js"].get("css") else ""),
+                    .replace("{css}", (f'\n<link rel="stylesheet" href="assets/engine/{th["js"]["css"]}" />' if th["js"].get("css") else "")
+                             + (f'\n<link rel="stylesheet" href="assets/engine/{spec["extra_css"]}" />' if spec.get("extra_css") else "")),
                     encoding="utf-8")
     sfx.build(case, od / "sfx.wav", drone=th["sound"] == "drone")
     if spec.get("theme") == "bud" and spec.get("v2"):
@@ -760,7 +790,8 @@ def build(slug: str, render: bool = True, draft: bool = False) -> Path:
     final = od / ("draft_av.mp4" if draft else "final.mp4")
     fc = ("[1:a]aresample=48000,pan=stereo|c0=c0|c1=c0,apad,asplit=2[v][vk];[2:a]volume=0.5[s0];"
           "[s0][vk]sidechaincompress=threshold=0.05:ratio=4:attack=20:release=300[s];"
-          "[v][s]amix=inputs=2:weights='1 1':normalize=0:duration=first,loudnorm=I=-14:TP=-1.5:LRA=11[a]")
+          "[v][s]amix=inputs=2:weights='1 1':normalize=0:duration=first,loudnorm=I=-14:TP=-1.5:LRA=11,"
+          "aresample=192000,alimiter=limit=0.78:level=0,aresample=48000[a]")   # 26/10/2026: chặn đỉnh thật (như build_long)
     music = []
     if th["sound"] == "music":
         # spec ghi "music" (BUD: bud_variety chọn) -> dùng đúng bài đó; không ghi -> như cũ (lâu chưa dùng nhất)
@@ -775,14 +806,72 @@ def build(slug: str, render: bool = True, draft: bool = False) -> Path:
         music = (["-ss", str(moff)] if moff else []) + ["-i", str(themes.MUSIC_DIR / track)]
         (od / "music.json").write_text(json.dumps({"file": track, "credit": themes.music_credit(track), **({"offset": moff} if moff else {})},
                                                   ensure_ascii=False), encoding="utf-8")
+    if th.get("voice_fx"):   # 23/10/2026: chỉ theme "case" (CL): lọc giọng trước khi trộn (chống "sẹt sẹt"); theme khác giữ giọng thô như cũ
+        fc = fc.replace("[1:a]aresample=48000,", f"[1:a]aresample=48000,{th['voice_fx']},", 1)
     r = run([FF + r"\ffmpeg.exe", "-v", "error", "-y", "-i", str(silent), "-i", str(od / "voice.wav"), "-i", str(od / "sfx.wav"),
              *music, "-filter_complex", fc, "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
              "-shortest", "-movflags", "+faststart", str(final)])
     if r.returncode != 0:
         raise SystemExit(f"{slug}: mux hỏng {r.stderr[-2000:]}")
+    try:
+        audio_gate(slug, spec, th, od, final)
+    except SystemExit:
+        raise
+    except Exception as e:      # noqa: BLE001 — lỗi công cụ đo: CL chặn (không biết giọng có sạch), kênh khác chỉ cảnh báo
+        if spec.get("theme", "case") == "case":
+            raise
+        print(f"  ! WARNING audio_lint không chạy được: {e}", flush=True)
+    if spec.get("grade"):   # 20/10/2026: chỉnh màu theo đoạn + hạt phim + vignette + light leak (re-encode hình)
+        final = grade(final, spec["grade"], scenes, t, dur)
     for m in qa_short(final):
         print(f"  {m}", flush=True)
     return final
+
+
+def audio_gate(slug: str, spec: dict, th: dict, od: Path, final: Path) -> None:
+    """23/10/2026: lint âm thanh (motion/long/audio_lint.py, docs/pm/2026-10-22-cl-am-thanh-set-set.md S4) ngay sau khi trộn:
+    xung buzz của giọng ĐÃ LỌC, true peak thành phẩm, chỗ "tách" trong sfx. Theme "case" (CL) vượt ngưỡng -> xoá final + chặn;
+    theme khác chỉ cảnh báo."""
+    if str(ROOT / "motion" / "long") not in sys.path:
+        sys.path.append(str(ROOT / "motion" / "long"))   # append: không che module trùng tên của stier
+    import audio_lint as AL
+    ff = FF + r"\ffmpeg.exe"
+    block = spec.get("theme", "case") == "case"
+    verr, warn, vm = AL.check_voices([("voice", od / "voice.wav")], th.get("voice_fx"), ff)
+    ferr, fm = AL.check_final(final, ff)
+    j = AL.n_jumps(AL.load(od / "sfx.wav"))
+    if j:
+        warn.append(f"sfx.wav có {j} chỗ nhảy từ lặng (tiếng tách)")
+    b = vm["voice"]
+    print(f"  audio_lint: giọng HF nổi {b['prom']} dB · kurtosis {b['kurt']} · crest>6 {b['crest6']} % · TP {fm['tp']} dBTP", flush=True)
+    if (verr or ferr) and block:
+        final.unlink(missing_ok=True)
+    AL.report(slug, verr + ferr, warn, block)
+
+
+GRADES = {"amber": "colortemperature=temperature=4200:mix=0.55,eq=saturation=0.92:gamma=0.98",
+          "blue": "colortemperature=temperature=9500:mix=0.6,eq=saturation=0.72",
+          "gold": "colortemperature=temperature=3500:mix=0.6,eq=contrast=1.04"}
+
+def grade(final: Path, g: dict, scenes: list[dict], t: dict, dur: float) -> Path:
+    """g = {"arc": [[câu bắt đầu, "amber"|"blue"|"gold"], ...], "grain": 7, "leak": ["amber","gold"]}. Mốc theo câu (giọng đo thật)."""
+    seg = t["segments"]
+    arc = [(seg[i]["start"] - 0.2 if i else 0.0, name) for i, name in g["arc"]]
+    ws = [(a, arc[k + 1][0] if k + 1 < len(arc) else dur + 1, n) for k, (a, n) in enumerate(arc)]
+    chain = []
+    for a, b, n in ws:
+        for f in GRADES[n].split(","):
+            chain.append(f"{f}:enable='between(t,{a:.2f},{b:.2f})'")
+    leak = " + ".join(f"between(t,{a:.2f},{b:.2f})" for a, b, n in ws if n in g.get("leak", []))
+    fc = (f"[0:v]{','.join(chain)},vignette=angle=PI/4.5,noise=alls={g.get('grain', 7)}:allf=t+u[g];"
+          f"gradients=s=1080x1920:c0=0xff9a4a:c1=0x000000:x0=980:y0=60:x1=420:y1=900:nb_colors=2:speed=0.012:r=30:d={dur + 1:.2f}[lk];"
+          f"[g][lk]blend=all_mode=screen:all_opacity={g.get('leak_opacity', 0.16)}" + (f":enable='{leak}'" if leak else ":enable=0") + ",format=yuv420p[v]")
+    out = final.with_name(final.stem + "_graded.mp4")
+    r = run([FF + r"\ffmpeg.exe", "-v", "error", "-y", "-i", str(final), "-filter_complex", fc, "-map", "[v]", "-map", "0:a",
+             "-c:v", "libx264", "-crf", "20", "-preset", "medium", "-c:a", "copy", "-movflags", "+faststart", "-shortest", str(out)])
+    if r.returncode != 0:
+        raise SystemExit(f"grade hỏng {r.stderr[-1500:]}")
+    return out
 
 
 def check_gate(slug: str, comp: Path, scenes: list[dict], od: Path, strict: bool = True) -> dict:

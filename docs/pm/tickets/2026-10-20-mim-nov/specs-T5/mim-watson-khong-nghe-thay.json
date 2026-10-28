@@ -1,0 +1,169 @@
+{
+ "theme": "mim",
+ "title": "Watson lặp lại đúng đáp án sai của đối thủ: vì sao cỗ máy thắng Jeopardy năm 2011 không có tai",
+ "description": "Trong trận Jeopardy 2011, có lần Watson đưa ra đúng đáp án sai mà người chơi trước vừa nói, vì nó nhận gợi ý dưới dạng chữ và không nghe được người khác nói gì (kịch bản video dài mục CH08; Wikipedia: IBM Watson). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/Mt5hYcQxH50 (công khai từ 20:00 ngày 19/11).",
+ "tags": [
+  "watson ibm",
+  "jeopardy",
+  "ken jennings",
+  "trí tuệ nhân tạo",
+  "lịch sử máy tính",
+  "mind in the machine"
+ ],
+ "sub": "JEOPARDY · 2011",
+ "acc": [
+  "lặp",
+  "sai",
+  "tai",
+  "nghe"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Watson lặp lại đáp án sai của đối thủ.",
+  "Năm 2011, trong trận Jeopardy với hai nhà vô địch, một người chơi đáp sai trước.",
+  "Rồi Watson bấm chuông, và đưa ra đúng đáp án sai ấy.",
+  "Lý do rất đơn giản: Watson không có tai.",
+  "Nó nhận gợi ý dưới dạng chữ, cùng lúc gợi ý hiện lên cho người chơi.",
+  "Nó không nghe được ai đang nói gì, kể cả đối thủ vừa đáp sai.",
+  "Cỗ máy thắng cuộc thi tri thức ấy, nhưng không nghe được điều mà cả khán phòng vừa nghe."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "LẶP ĐÁP ÁN SAI",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "của chính đối thủ",
+     "at": [
+      0,
+      "đối"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7005884",
+   "ms": 8,
+   "veil": 0.55
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Một lượt chơi",
+   "nodes": [
+    {
+     "text": "người chơi đáp sai",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      1,
+      "đáp"
+     ],
+     "shape": "none",
+     "w": 740
+    },
+    {
+     "text": "Watson đáp đúng như thế",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      2,
+      "Watson"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 780
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "WATSON KHÔNG CÓ TAI",
+     "at": [
+      3,
+      "Lý"
+     ],
+     "acc": true
+    },
+    {
+     "text": "lý do rất đơn giản",
+     "at": [
+      3,
+      "Lý"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8567113",
+   "ms": 9,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 3
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "WATSON NHẬN GÌ",
+   "rows": [
+    {
+     "k": "GỢI Ý",
+     "v": "DẠNG CHỮ",
+     "at": [
+      4,
+      "chữ"
+     ]
+    },
+    {
+     "k": "LỜI ĐỐI THỦ",
+     "v": "KHÔNG NGHE",
+     "at": [
+      5,
+      "nghe"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "KHÔNG CÓ TAI",
+   "sub": "NÊN KHÔNG NGHE ĐỐI THỦ SAI"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/IBM_Watson"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "watson": "Oát-xần",
+  "ibm": "ai bi em",
+  "=IBM": "ai bi em",
+  "jeopardy": "Gie-pơ-đi",
+  "ken": "Ken",
+  "jennings": "Gien-ninh",
+  "david": "Đây-vít",
+  "deep": "Đíp",
+  "blue": "Blu"
+ },
+ "imgs": {}
+}

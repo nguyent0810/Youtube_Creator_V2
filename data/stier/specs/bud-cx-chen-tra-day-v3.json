@@ -1,0 +1,190 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-cx-chen-tra-day",
+ "format": "chuyen-xua",
+ "hook_type": "giua-truyen",
+ "open_shot": "rot-tra",
+ "voice": "Thanh Bình",
+ "music": "perspectives.mp3",
+ "music_gain": 0.16,
+ "gap": 0.75,
+ "series": "Chuyện xưa · Tập 10",
+ "title": "Trà đã tràn ra bàn, mà thầy vẫn rót",
+ "kicker": "CHUYỆN XƯA · TẬP 10",
+ "sub": "THIỀN SƯ NAN-IN",
+ "acc": [
+  "trà",
+  "đầy",
+  "rót"
+ ],
+ "lines": [
+  "Trà đã tràn ra bàn, mà thầy vẫn rót.",
+  "Chuyện Thiền kể: một học giả đến hỏi Thiền sư Nan-in về Thiền.",
+  "Ông nói không ngừng về những gì mình đã biết.",
+  "Thầy lặng lẽ rót trà. Chén đầy, thầy vẫn rót.",
+  "Học giả kêu lên: tràn rồi, đừng rót nữa!",
+  "Thầy đáp: tâm ông như chén trà này. Đầy rồi, rót gì vào được?",
+  "Thật ra, ai cũng có lúc là chén trà đầy.",
+  "Lần tới nghe ai nói, thử im mười giây trước khi đáp.",
+  "Chén trà của bạn đang đầy điều gì? Gửi người hay nói biết rồi."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:17512964",
+   "items": [
+    {
+     "text": "TRÀN RỒI VẪN RÓT?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "chuyện xưa · tập 10",
+     "at": [
+      0,
+      "thầy"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Chuyện Thiền",
+   "nodes": [
+    {
+     "text": "HỌC GIẢ",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      1,
+      "học"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "NÓI KHÔNG NGỪNG",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      2,
+      "nói"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "ZEN FLESH, ZEN BONES"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "veil": 0.4,
+   "clip": "pexels:8507900",
+   "items": [
+    {
+     "text": "CHÉN ĐẦY · VẪN RÓT",
+     "at": [
+      3,
+      "chén"
+     ],
+     "acc": true
+    },
+    {
+     "text": "thầy lặng lẽ rót trà",
+     "at": [
+      3,
+      "thầy"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "TRÀN RỒI!\nĐỪNG RÓT NỮA",
+   "fx": "zoom"
+  },
+  {
+   "type": "source",
+   "at": 5,
+   "source": "CHUYỆN THIỀN",
+   "ref": "Thiền sư Nan-in",
+   "snippet": "Tâm ông như chén trà này. [[Đầy rồi, rót gì vào được?]]",
+   "hlAt": [
+    5,
+    "đầy"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "veil": 0.4,
+   "clip": "pexels:6343936",
+   "items": [
+    {
+     "text": "AI CŨNG CÓ LÚC ĐẦY",
+     "at": [
+      6,
+      "ai"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "to": 10,
+   "suffix": " GIÂY IM LẶNG",
+   "label": "TRƯỚC KHI ĐÁP",
+   "until": [
+    7,
+    "giây"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "veil": 0.4,
+   "clip": "pexels:8507948",
+   "items": [
+    {
+     "text": "CHÉN TRÀ ĐẦY GÌ?",
+     "at": [
+      8,
+      "chén"
+     ],
+     "acc": true
+    },
+    {
+     "text": "gửi người hay nói biết rồi",
+     "at": [
+      8,
+      "gửi"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Zen_Flesh,_Zen_Bones"
+ ],
+ "description": "Trà đã tràn ra bàn, mà thầy vẫn rót\n\nNguồn: https://en.wikipedia.org/wiki/Zen_Flesh,_Zen_Bones"
+}

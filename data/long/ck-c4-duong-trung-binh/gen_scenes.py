@@ -158,12 +158,12 @@ CH["ch05"] = {"hud": {"k": "CHƯƠNG 05", "t": "VẬY MA DÙNG ĐỂ LÀM GÌ"},
 ]}
 
 SPEC = {
-    "title": "Đường Trung Bình Động MA Là Gì? Một Đường Kẻ Tóm Tắt Quá Khứ, Và Điều Nó Không Biết",
+    "title": "MA200 Báo Muộn 67 Phiên: Đường Trung Bình Động Là Gì?",
     "channel": "CK", "accent": "#fbbf24", "master": True, "endcard": 20, "endcardSub": "VIDEO TIẾP THEO", "beat2": True,
     "acc": ["vn-index", "ma", "trung", "bình", "trễ", "giả"],
     "say": SAY, "imgs": {}, "chapters": [f"ch{i:02d}" for i in range(6)],
     "youtube": {
-        "titles": ["Đường Trung Bình Động MA Là Gì? Một Đường Kẻ Tóm Tắt Quá Khứ, Và Điều Nó Không Biết",
+        "titles": ["MA200 Báo Muộn 67 Phiên: Đường Trung Bình Động Là Gì?",
                    "MA200 \"Thủng Là Bán\"? Kênh Thử Trên 7 Năm VN-Index",
                    "MA Cho Người Mới: Tính Tay, Đọc Đúng, Và Vì Sao Nó Luôn Đến Muộn"],
         "summary": "Đường trung bình động (MA) là đường kẻ gần như phần mềm biểu đồ nào cũng vẽ. Video tính tay một đường MA5 bằng giá VN-Index "

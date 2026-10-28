@@ -1,0 +1,193 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-la-mung-1-thang-10",
+ "format": "lich-am",
+ "hook_type": "dem-nguoc",
+ "open_shot": "bau-troi",
+ "voice": "Ngọc Linh",
+ "music": "ether_vox.mp3",
+ "music_gain": 0.18,
+ "gap": 0.6,
+ "special_date": true,
+ "series": "14 ngày biết ơn · Ngày 1",
+ "title": "Còn 14 ngày tới Rằm tháng 10: thử thách 14 ngày biết ơn",
+ "kicker": "14 NGÀY BIẾT ƠN · NGÀY 1",
+ "sub": "RẰM HẠ NGUYÊN · 23/11",
+ "acc": [
+  "biết",
+  "ơn",
+  "tên"
+ ],
+ "lines": [
+  "Còn mười bốn ngày nữa là Rằm tháng Mười.",
+  "Hôm nay mùng một tháng mười âm, thứ Hai, chín tháng mười một.",
+  "Rằm tháng Mười là Tết Hạ Nguyên, dịp tạ ơn sau mùa gặt.",
+  "Mình rủ bạn một thử thách nhỏ: mười bốn ngày biết ơn.",
+  "Mỗi ngày, viết một dòng cảm ơn một người cụ thể.",
+  "Khoan viết chung chung. Phải có tên, và một việc họ đã làm.",
+  "Ngày thứ nhất: bạn muốn cảm ơn ai? Comment một cái tên nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:12278146",
+   "items": [
+    {
+     "text": "CÒN 14 NGÀY → RẰM THÁNG 10",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "14 ngày biết ơn · ngày 1",
+     "at": [
+      0,
+      "rằm"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "09.11.2026",
+   "day": "THỨ HAI",
+   "sub": {
+    "text": "MÙNG 1/10 ÂM",
+    "at": [
+     1,
+     "mùng"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "veil": 0.4,
+   "clip": "pexels:39183303",
+   "items": [
+    {
+     "text": "TẾT HẠ NGUYÊN",
+     "at": [
+      2,
+      "tết"
+     ],
+     "acc": true
+    },
+    {
+     "text": "tạ ơn sau mùa gặt",
+     "at": [
+      2,
+      "tạ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "hf_unit_grid",
+   "at": 3,
+   "title": "14 NGÀY BIẾT ƠN",
+   "total": 14,
+   "cols": 7,
+   "glyph": "🙏",
+   "lit": [
+    1
+   ],
+   "litAt": [
+    3,
+    "biết"
+   ],
+   "unitLabel": "hôm nay: ngày 1"
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "MỖI NGÀY 1 DÒNG",
+   "cards": [
+    {
+     "k": "1",
+     "v": "MỘT NGƯỜI",
+     "at": [
+      4,
+      "người"
+     ]
+    },
+    {
+     "k": "2",
+     "v": "MỘT VIỆC HỌ LÀM",
+     "at": [
+      4,
+      "cụ"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "hf_myth_strike",
+   "at": 5,
+   "mythLab": "CHUNG CHUNG",
+   "myth": "Cảm ơn **mọi người**",
+   "truthLab": "CỤ THỂ",
+   "truth": "**Một cái tên** + một việc",
+   "strikeAt": [
+    5,
+    "chung"
+   ],
+   "truthAt": [
+    5,
+    "tên,"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "veil": 0.4,
+   "clip": "pexels:36641402",
+   "items": [
+    {
+     "text": "BẠN CẢM ƠN AI?",
+     "at": [
+      6,
+      "bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "comment một cái tên",
+     "at": [
+      6,
+      "comment"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "ambience": {
+  "hits": [
+   {
+    "at": 0.1,
+    "kind": "bell",
+    "gain": 0.8
+   }
+  ]
+ },
+ "sources": [
+  "https://giacngo.vn/gia-tri-tam-linh-cua-le-hoi-ram-thang-muoi-post6635.html"
+ ],
+ "description": "Còn 14 ngày tới Rằm tháng 10: thử thách 14 ngày biết ơn\n\nNguồn: https://giacngo.vn/gia-tri-tam-linh-cua-le-hoi-ram-thang-muoi-post6635.html"
+}

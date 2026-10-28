@@ -1,0 +1,212 @@
+{
+ "theme": "ck",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "title": "Trả trước 1 tỷ mua nhà: mỗi năm mất 68 triệu tiền lãi?",
+ "description": "Tháng 9/2026, kỳ hạn 12 tháng ở bốn ngân hàng lớn khoảng 6,8%/năm. VÍ DỤ GIẢ ĐỊNH của kênh: căn hộ 2,5 tỷ, trả trước 1 tỷ. Nếu nằm trong sổ, 1 tỷ ấy được khoảng 68 triệu tiền lãi một năm, khoảng 5,7 triệu mỗi tháng, gần bằng tiền thuê một căn y hệt (6,25 triệu). Kênh tự tính, giữ nguyên mức lãi, không phải dự báo.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Nội dung do kênh biên soạn; giọng đọc tổng hợp.\n\nBản đầy đủ: https://youtu.be/pXKfIo_nyVM",
+ "tags": [
+  "trả trước mua nhà",
+  "mua hay thuê nhà",
+  "lãi tiết kiệm",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "sáu",
+  "một",
+  "lãi",
+  "thuê",
+  "hoá"
+ ],
+ "kicker": "QUYẾT ĐỊNH LỚN",
+ "sub": "MUA HAY THUÊ",
+ "lines": [
+  "Tháng chín năm nay, sổ tiết kiệm mười hai tháng ở bốn ngân hàng lớn trả khoảng sáu phẩy tám phần trăm một năm.",
+  "Giờ lấy ví dụ giả định của kênh: căn hộ hai tỷ rưỡi, trả trước một tỷ.",
+  "Một tỷ ấy, nếu nằm trong sổ, mỗi năm được khoảng sáu mươi tám triệu tiền lãi.",
+  "Chia ra, khoảng năm triệu bảy mỗi tháng.",
+  "Còn thuê một căn y hệt, ví dụ khoảng sáu triệu hai mỗi tháng.",
+  "Tức là riêng tiền lãi của khoản trả trước đã gần đủ trả tiền thuê.",
+  "Đó là một khoản chi của người mua mà không ai gửi hoá đơn.",
+  "Sáu phẩy tám phần trăm một năm, đó là cái giá của một tỷ trả trước, cần tính vào trước khi so mua với thuê."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "6,8%/NĂM",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "TIẾT KIỆM 12 THÁNG · 4 NGÂN HÀNG LỚN · 09/2026",
+     "at": [
+      0,
+      "mười"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6964001",
+   "ms": 3,
+   "veil": 0.58
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "VÍ DỤ GIẢ ĐỊNH",
+   "cards": [
+    {
+     "k": "CĂN HỘ",
+     "v": "2,5 TỶ",
+     "at": [
+      1,
+      "căn"
+     ]
+    },
+    {
+     "k": "TRẢ TRƯỚC",
+     "v": "1 TỶ",
+     "at": [
+      1,
+      "trả"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "≈68",
+     "at": [
+      2,
+      "sáu"
+     ],
+     "acc": true
+    },
+    {
+     "text": "TRIỆU TIỀN LÃI MỖI NĂM",
+     "at": [
+      2,
+      "lãi"
+     ],
+     "sm": true
+    },
+    {
+     "text": "VÍ DỤ GIẢ ĐỊNH · 1 TỶ × 6,8%",
+     "at": 2,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "at": 3,
+   "kind": "bars",
+   "title": "MỖI THÁNG (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "bars": [
+    {
+     "label": "LÃI CỦA 1 TỶ",
+     "v": 5.67,
+     "text": "≈5,7",
+     "c": "ref",
+     "at": [
+      3,
+      "năm"
+     ]
+    },
+    {
+     "label": "TIỀN THUÊ",
+     "v": 6.25,
+     "text": "6,25",
+     "c": "down",
+     "at": [
+      4,
+      "thuê"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "LÃI ≈ TIỀN THUÊ",
+   "sub": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "KHOẢN CHI",
+     "at": 6,
+     "sm": true
+    },
+    {
+     "text": "KHÔNG CÓ HOÁ ĐƠN",
+     "at": [
+      6,
+      "không"
+     ]
+    }
+   ],
+   "clip": "pexels:4553290",
+   "ms": 2,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  },
+  {
+   "type": "board",
+   "at": 7,
+   "title": "Trước khi so mua với thuê",
+   "nodes": [
+    {
+     "text": "6,8% một năm",
+     "x": 0.5,
+     "y": 0.3,
+     "at": 7,
+     "shape": "none",
+     "w": 620
+    },
+    {
+     "text": "giá của 1 tỷ trả trước",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      7,
+      "giá"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 700
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://vneconomy.vn/lai-suat-tiet-kiem-ngan-hang-nao-cao-nhat-thang-92026.htm",
+  "https://youtu.be/pXKfIo_nyVM"
+ ],
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.4
+  }
+ },
+ "say": {},
+ "imgs": {},
+ "short_type": "S"
+}

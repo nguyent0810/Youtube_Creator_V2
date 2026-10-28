@@ -1,0 +1,240 @@
+{
+ "theme": "mim",
+ "title": "Hơn 4.500 link chia sẻ ChatGPT hiện trên Google (07/2025): không ai bị hack, OpenAI gỡ tính năng",
+ "description": "Cuối tháng 7/2025, Fast Company tìm thấy hơn 4.500 link chia sẻ ChatGPT được Google lập chỉ mục, có tên, hồ sơ xin việc, tâm sự cá nhân và tài liệu công việc (theo Search Engine Journal, 31/07/2025). Người dùng phải bấm chia sẻ rồi tích thêm ô cho phép bên ngoài tìm thấy; mặc định link chỉ mở được với người có link. Ngày 31/07/2025 OpenAI nói tính năng này là thử nghiệm ngắn ngủi, tạo quá nhiều cơ hội chia sẻ nhầm, và gỡ nó. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện. Thông tin theo nguồn đã ghi, đọc ngày 20/10/2026; chưa có bản kiểm chứng riêng của kênh.\n\nBản đầy đủ: https://youtu.be/ejsjefnJQbI (công khai từ 20:00 ngày 23/11).",
+ "tags": [
+  "chia sẻ chatgpt",
+  "link chatgpt trên google",
+  "quyền riêng tư ai",
+  "chatgpt",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "AI QUANH TA",
+ "sub": "07/2025",
+ "acc": [
+  "bốn",
+  "nghìn",
+  "rưỡi",
+  "hack",
+  "cánh",
+  "cửa"
+ ],
+ "lines": [
+  "Hơn bốn nghìn rưỡi chat hiện trên Google.",
+  "Cuối tháng bảy 2025, tờ Fast Company gõ một lệnh tìm kiếm trên Google.",
+  "Họ thấy hơn bốn nghìn năm trăm đường dẫn chia sẻ ChatGPT.",
+  "Trong đó có tên thật, hồ sơ xin việc và tài liệu công việc.",
+  "Không ai bị hack.",
+  "Mỗi chat đó do chính người dùng bấm chia sẻ, rồi tích thêm một ô cho công cụ tìm kiếm thấy.",
+  "Ngày ba mươi mốt tháng bảy, OpenAI gỡ tính năng, gọi nó là thử nghiệm ngắn ngủi.",
+  "Hơn bốn nghìn rưỡi chat không bị đánh cắp. Chúng nằm sau một cánh cửa mà chính chủ đã mở."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "HƠN 4.500",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "chat hiện trên Google",
+     "at": [
+      0,
+      "chat"
+     ],
+     "sm": true
+    }
+   ],
+   "at": 0,
+   "clip": "pexels:9757994",
+   "veil": 0.55
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "07.2025",
+   "day": "FAST COMPANY TÌM TRÊN GOOGLE"
+  },
+  {
+   "type": "counter",
+   "at": [
+    2,
+    "hơn"
+   ],
+   "from": 0,
+   "to": 4500,
+   "prefix": "HƠN ",
+   "until": [
+    2,
+    "trăm"
+   ],
+   "label": "LINK CHIA SẺ CHATGPT TRÊN KẾT QUẢ TÌM KIẾM",
+   "sub": {
+    "text": "THEO SEARCH ENGINE JOURNAL · 31.07.2025",
+    "at": [
+     2,
+     "đường"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "TRONG ĐÓ CÓ",
+   "cards": [
+    {
+     "k": "CÓ",
+     "v": "TÊN THẬT",
+     "at": [
+      3,
+      "tên"
+     ]
+    },
+    {
+     "k": "CÓ",
+     "v": "HỒ SƠ XIN VIỆC",
+     "at": [
+      3,
+      "hồ"
+     ]
+    },
+    {
+     "k": "CÓ CẢ",
+     "v": "TÀI LIỆU CÔNG VIỆC",
+     "at": [
+      3,
+      "tài"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "KHÔNG AI BỊ HACK"
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Hai cú bấm",
+   "nodes": [
+    {
+     "text": "BẤM CHIA SẺ",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      5,
+      "bấm"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "TÍCH Ô CHO TÌM KIẾM THẤY",
+     "x": 0.5,
+     "y": 0.68,
+     "at": [
+      5,
+      "tích"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 780
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      5,
+      "rồi"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 6,
+   "date": "31.07.2025",
+   "day": "OPENAI GỠ TÍNH NĂNG"
+  },
+  {
+   "type": "quote",
+   "at": [
+    6,
+    "gọi"
+   ],
+   "text": "Một thử nghiệm ngắn ngủi.",
+   "by": "OPENAI · THEO SEARCH ENGINE JOURNAL · TRÍCH DỊCH",
+   "clip": "pexels:6201892",
+   "veil": 0.72
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MỘT CÁNH CỬA",
+     "at": [
+      7,
+      "cánh"
+     ],
+     "acc": true
+    },
+    {
+     "text": "chính chủ đã mở",
+     "at": [
+      7,
+      "chính"
+     ],
+     "sm": true
+    }
+   ],
+   "at": [
+    7,
+    "Chúng"
+   ],
+   "clip": "pexels:8561462",
+   "veil": 0.6
+  }
+ ],
+ "sources": [
+  "https://www.searchenginejournal.com/openai-is-pulling-shared-chatgpt-chats-from-google-search/552671/",
+  "https://www.fastcompany.com/91376687/google-indexing-chatgpt-conversations"
+ ],
+ "say": {
+  "=AI": "ây ai",
+  "chatgpt": "chát gi pi ti",
+  "openai": "Ô-pần ây ai",
+  "google": "Gu-gồ",
+  "chatbot": "chát bót",
+  "chat": "chát",
+  "fast": "Phát",
+  "company": "Com-pa-ni",
+  "hack": "hách"
+ },
+ "rules": 2,
+ "mix": true,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.5
+  }
+ },
+ "sources_internal": [
+  "https://www.searchenginejournal.com/openai-is-pulling-shared-chatgpt-chats-from-google-search/552671/ (đã đọc 20/10: 'over 4,500', 31/07/2025, câu của OpenAI; hai bước chia sẻ + ô cho công cụ tìm kiếm; mặc định chỉ người có link)",
+  "https://www.fastcompany.com/91376687/google-indexing-chatgpt-conversations (bài gốc; máy chủ không tải được ngày 20/10) — CẦN ĐỌC BẢN GỐC"
+ ],
+ "description_orig": "Cuối tháng 7/2025, Fast Company tìm thấy hơn 4.500 link chia sẻ ChatGPT được Google lập chỉ mục, có tên, hồ sơ xin việc, tâm sự cá nhân và tài liệu công việc (theo Search Engine Journal, 31/07/2025). Người dùng phải bấm chia sẻ rồi tích thêm ô cho công cụ tìm kiếm thấy; mặc định link chỉ mở được với người có link. Ngày 31/07/2025 OpenAI nói tính năng này là thử nghiệm ngắn ngủi, tạo quá nhiều cơ hội chia sẻ nhầm, và gỡ nó. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện. Thông tin theo nguồn đã ghi, đọc ngày 20/10/2026; chưa có bản kiểm chứng riêng của kênh (data/long/mim-ai-chat-privacy chưa có factcheck.md).\n\nBản đầy đủ: https://youtu.be/ejsjefnJQbI (công khai từ 20:00 ngày 23/11)."
+}

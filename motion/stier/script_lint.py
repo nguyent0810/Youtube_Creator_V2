@@ -98,9 +98,12 @@ def lint(slug: str, spec: dict, lines: list[dict] | None = None, dur: float | No
     if GENERIC_CTA.search(last) and (strict or sum(bool(GENERIC_CTA.search(r[-1])) for r in rec[:5]) >= 2):
         bad.append("R5 CTA chung chung 'Bình luận nhé' -- hỏi một chữ/một số cụ thể")
     # R6 nhịp
-    rate = (tot / (dur - 1.0)) if dur else 3.3
-    if dur and not 2.6 <= rate <= 3.8:
-        bad.append(f"R6 nhịp {rate:.2f} từ/giây (ngoài 2,6-3,8)")
+    contem = spec.get("profile") == "chiem-nghiem"
+    beat_s = (sum(float(b.get("s", 0)) for b in spec.get("beats", [])) + float(spec.get("gap", 0)) * (len(L) - 1)) if contem else 0.0
+    rate = (tot / (dur - 1.0 - beat_s)) if dur else 3.3
+    lo, hi = (2.6, 3.2) if contem else (2.6, 3.8)
+    if dur and not lo <= rate <= hi:
+        bad.append(f"R6 nhịp {rate:.2f} từ/giây (ngoài {lo}-{hi}, đã trừ {beat_s:.1f}s nghỉ)")
     for i, l in enumerate(L):
         if nw[i] > 22:
             bad.append(f"R6 câu {i} dài {nw[i]} từ (> 22)")
@@ -128,12 +131,53 @@ def lint(slug: str, spec: dict, lines: list[dict] | None = None, dur: float | No
         E.append("R10 thiếu sources")
     if ci is not None and "diễn ý" not in nfc(" ".join(L)).lower() and not any(s.get("type") == "source" for s in spec.get("scenes", [])):
         bad.append("R10 có trích kinh nhưng không ghi 'diễn ý' (lời hoặc thẻ nguồn)")
+    if spec.get("profile") == "chiem-nghiem":
+        contemplative(spec, L, cum, bad, W)
     wv = tuple(spec.get("lint_waive") or ())   # miễn có ghi lý do trong spec (lint_waive_why), chỉ hạ thành cảnh báo
     if wv:
         W += [f"(miễn) {e}" for e in E if e.split()[0] in wv]
         E[:] = [e for e in E if e.split()[0] not in wv]
     return E, W
 
+
+
+# ---- Profile "chiem-nghiem" (20/10/2026) -- xem /workspace/tiktok/skills/audio-script-chiem-nghiem/SKILL.md
+CLICHE = ("tâm được an", "tâm được bình an", "buông bỏ", "buông bỏ để", "hãy buông", "bình an trong tâm", "chữa lành tâm hồn",
+          "năng lượng tích cực", "sống chậm lại", "hạnh phúc đích thực", "giác ngộ", "nhận ra rằng", "vũ trụ",
+          "tâm hồn được", "hãy yêu thương bản thân", "mọi thứ sẽ ổn", "bài học quý giá", "đời là vô thường", "nhân quả báo ứng")
+LECTURE = ("bài học", "điều này cho thấy", "chúng ta cần", "chúng ta phải", "bạn nên", "bạn phải", "hãy luôn", "hãy biết",
+           "ý nghĩa là", "thông điệp", "đừng bao giờ", "phải biết")
+SENSE = ("lạnh", "ấm", "nóng", "gió", "mưa", "khói", "lửa", "ngọn", "đèn", "bụi", "mùi", "thơm", "ướt", "khô", "nặng", "nhẹ",
+         "tiếng", "im", "lặng", "sáng", "tối", "chạng vạng", "bóng", "vàng", "trắng", "xám", "run", "chân", "tay", "ngực",
+         "hơi thở", "thở", "da", "cửa", "gõ", "hạt", "đất", "cát", "nắng", "sương", "trăng", "lá", "nước", "hông")
+
+
+def contemplative(spec, L, cum, bad, W):
+    txt = nfc(" ".join(L)).lower()
+    for c in CLICHE:
+        if c in txt:
+            bad.append(f"C1 sáo ngữ cấm: '{c}' -- thay bằng hình ảnh/cảm giác cụ thể")
+    for i, l in enumerate(L):
+        for c in LECTURE:
+            if c in nfc(l).lower():
+                bad.append(f"C2 câu {i}: giọng giảng '{c}' -- để câu chuyện tự nói")
+    beats = spec.get("beats") or []
+    if len(beats) < 3 or not any(float(b.get("s", 0)) >= 2.0 for b in beats):
+        bad.append("C3 cần >= 3 'beats' (nghỉ thở, {after:i, s}) và ít nhất 1 nghỉ >= 2 s ở bước ngoặt")
+    if any(not 0 <= int(b.get("after", -1)) < len(L) for b in beats):
+        bad.append("C3 beat 'after' trỏ ngoài số câu")
+    sw = {w for w in SENSE if re.search(rf"\b{w}\b", txt)}
+    if len(sw) < 5:
+        bad.append(f"C4 ít chất liệu giác quan ({len(sw)}/5): {sorted(sw)}")
+    if not re.search(r"\bbạn\b", nfc(" ".join(L[-2:])).lower()):
+        bad.append("C5 2 câu cuối phải mời người nghe (ngôi 'bạn'), không kết luận thay họ")
+    fn_ = nfc(spec.get("faithful_note", "")).lower()
+    if not fn_ or not ("diễn ý" in fn_ and re.search(r"chú giải|aṭṭhakathā|dhp|thig|\bsn\b|\ban\b|\bmn\b", fn_)):
+        bad.append("C6 thiếu 'faithful_note' (chi tiết nào từ kinh, chi tiết nào từ chú giải, chỗ nào diễn ý)")
+    if sum(nfc(l).count("!") for l in L):
+        bad.append("C7 không dùng dấu chấm than trong giọng chiêm nghiệm")
+    if any(len(words(l)) > 16 for l in L):
+        W.append("C8 có câu > 16 từ -- giọng chậm cần câu ngắn")
 
 if __name__ == "__main__":
     rc = 0

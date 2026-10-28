@@ -1,0 +1,188 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-ts-bat-dau",
+ "format": "truoc-sau",
+ "hook_type": "nghich-ly",
+ "open_shot": "cong-viec",
+ "voice": "Ngọc Trân",
+ "music": "clean_soul.mp3",
+ "music_gain": 0.18,
+ "gap": 0.1,
+ "title": "Mất tập trung không phải tại điện thoại",
+ "kicker": "BÁT DẦU ĐẦY",
+ "sub": "KINH TƯƠNG ƯNG 47.20",
+ "acc": [
+  "tập",
+  "trung",
+  "dầu"
+ ],
+ "lines": [
+  "Mất tập trung không phải tại điện thoại.",
+  "Mà vì ta làm ba việc cùng lúc.",
+  "Thử tưởng tượng: bưng bát dầu đầy tới miệng, đi giữa đám đông.",
+  "Phía sau có người cầm gươm. Đổ một giọt là mất đầu.",
+  "Kinh Tương Ưng, diễn ý: bát dầu đầy là chánh niệm về thân.",
+  "Nhưng không cần gươm. Chỉ cần một việc một lúc.",
+  "Một giờ tới, tắt bớt thông báo, làm trọn một việc.",
+  "Hôm nay bạn mất tập trung mấy lần? Tag đồng nghiệp hay làm ba việc."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:8888529",
+   "items": [
+    {
+     "text": "MẤT TẬP TRUNG?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "không phải tại điện thoại",
+     "at": [
+      0,
+      "không"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 3,
+   "suffix": " VIỆC CÙNG LÚC",
+   "label": "MỚI LÀ THỦ PHẠM",
+   "until": [
+    1,
+    "lúc."
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "veil": 0.4,
+   "clip": "pexels:4625679",
+   "items": [
+    {
+     "text": "BÁT DẦU ĐẦY",
+     "at": [
+      2,
+      "bát"
+     ],
+     "acc": true
+    },
+    {
+     "text": "đi giữa đám đông",
+     "at": [
+      2,
+      "đi"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "ĐỔ 1 GIỌT?",
+   "fx": "zoom",
+   "sub": "PHÍA SAU CÓ NGƯỜI CẦM GƯƠM"
+  },
+  {
+   "type": "source",
+   "at": 4,
+   "source": "KINH TƯƠNG ƯNG 47.20",
+   "ref": "Hoa hậu trong nước",
+   "snippet": "Bát dầu đầy là [[chánh niệm về thân]].",
+   "hlAt": [
+    4,
+    "thân."
+   ]
+  },
+  {
+   "type": "hf_split",
+   "at": 5,
+   "a": {
+    "lab": "3 VIỆC CÙNG LÚC",
+    "val": "đầu **tràn**",
+    "num": "−",
+    "at": [
+     5,
+     "nhưng"
+    ]
+   },
+   "b": {
+    "lab": "1 VIỆC MỘT LÚC",
+    "val": "việc **xong**",
+    "num": "+",
+    "at": [
+     5,
+     "việc"
+    ]
+   }
+  },
+  {
+   "type": "hf_list_build",
+   "at": 6,
+   "title": "1 GIỜ TỚI",
+   "items": [
+    {
+     "key": "1",
+     "text": "TẮT THÔNG BÁO",
+     "at": [
+      6,
+      "tắt"
+     ]
+    },
+    {
+     "key": "2",
+     "text": "LÀM TRỌN 1 VIỆC",
+     "at": [
+      6,
+      "trọn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "veil": 0.4,
+   "clip": "pexels:8721656",
+   "items": [
+    {
+     "text": "MẤY LẦN HÔM NAY?",
+     "at": [
+      7,
+      "hôm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "tag đồng nghiệp hay làm ba việc",
+     "at": [
+      7,
+      "tag"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/sn47.20/en/sujato"
+ ],
+ "description": "Mất tập trung không phải tại điện thoại\n\nNguồn: https://suttacentral.net/sn47.20/en/sujato"
+}

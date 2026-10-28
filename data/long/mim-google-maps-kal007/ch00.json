@@ -1,0 +1,220 @@
+{
+ "title": "Đường bay lệch dần",
+ "lines": [
+  "Ngày 31 tháng 8 năm 1983, theo giờ quốc tế.",
+  "Một chiếc Boeing 747 của Korean Air Lines đang bay qua Bắc Thái Bình Dương.",
+  "Chuyến bay KAL 007 về Seoul.",
+  "Mỗi lần bạn mở Google Maps và thấy chấm xanh của mình, bạn đang dùng một thứ có dính tới chuyến bay này.",
+  {
+   "t": "Và tới một người: Tổng thống Mỹ Ronald Reagan.",
+   "p": 1.0
+  },
+  "Máy bay cất cánh từ Anchorage, bang Alaska, lúc một giờ chiều giờ quốc tế.",
+  "Trên bản đồ, nó phải bám tuyến R20, một hành lang bay chạy sát không phận Liên Xô.",
+  "Nhưng nó đang lệch dần về phía bắc.",
+  {
+   "t": "Mỗi giờ một xa hơn.",
+   "p": 1.0
+  },
+  "Trong buồng lái, không có dấu hiệu nào cho thấy ai biết điều đó.",
+  "Nó bay qua bán đảo Kamchatka, rồi tới đảo Sakhalin.",
+  {
+   "t": "Một chiếc tiêm kích Liên Xô đã bám theo nó.",
+   "p": 1.0
+  },
+  "Khoảng sáu giờ hai mươi lăm sáng ngày 1 tháng 9, theo giờ trên đảo Sakhalin.",
+  "Trên độ cao ấy, trời vẫn còn tối.",
+  {
+   "t": "Hai quả tên lửa rời giá phóng.",
+   "p": 1.0
+  },
+  "Từ giờ, màn hình của mình sẽ giữ một cây thước.",
+  "Nó đo máy móc sai bao xa khi trả lời câu hỏi: tôi đang ở đâu?",
+  "Đêm ấy, thước chỉ hàng trăm cây số.",
+  "Mỗi chương, nó sẽ co lại một nấc.",
+  "Một nấc, rồi một nấc nữa.",
+  "Cuối video, bạn sẽ biết ai đã trả giá cho mỗi nấc co ấy."
+ ],
+ "scenes": [
+  {
+   "type": "date",
+   "bg": "okhotsk",
+   "day": "BẮC THÁI BÌNH DƯƠNG",
+   "date": "31.08.1983",
+   "sub": {
+    "text": "GIỜ QUỐC TẾ (UTC) · BÁO CÁO ICAO 1993",
+    "at": [
+     0,
+     "giờ"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "BOEING 747 · KOREAN AIR LINES",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "chuyến KAL 007 · đích đến Seoul",
+     "at": 2,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "CHẤM XANH",
+   "sub": "TRÊN GOOGLE MAPS CỦA BẠN · CÓ DÍNH TỚI CHUYẾN BAY NÀY"
+  },
+  {
+   "type": "print",
+   "at": 4,
+   "img": "reagan_desk",
+   "tone": "color",
+   "side": {
+    "k": "TỔNG THỐNG MỸ · 1981–1989",
+    "h": "Ronald\nReagan",
+    "lines": [
+     {
+      "text": "*người thật* của câu chuyện",
+      "at": [
+       4,
+       "người"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "at": 5,
+   "geo": "pac",
+   "tag": "ĐƯỜNG VẼ GẦN ĐÚNG · KHÔNG PHẢI DỮ LIỆU TUYẾN BAY",
+   "pins": [
+    {
+     "name": "Anchorage",
+     "at": 5
+    },
+    {
+     "name": "Seoul",
+     "at": [
+      6,
+      "bám"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "from": "Anchorage",
+     "to": "Kamchatka",
+     "at": [
+      7,
+      "lệch"
+     ],
+     "until": 9,
+     "bend": 0.12
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 9,
+   "title": "TRONG BUỒNG LÁI",
+   "srcnote": "ICAO 1993 · TÓM TẮT KẾT LUẬN",
+   "rows": [
+    {
+     "k": "TỔ LÁI BIẾT ĐANG LỆCH?",
+     "v": "KHÔNG CÓ DẤU HIỆU",
+     "at": 9
+    },
+    {
+     "k": "QUA",
+     "v": "KAMCHATKA → SAKHALIN",
+     "at": 10
+    },
+    {
+     "k": "PHÍA SAU",
+     "v": "TIÊM KÍCH LIÊN XÔ",
+     "at": 11
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 12,
+   "img": "sakhalin",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "illus": "ẢNH MINH HỌA",
+   "kin": [
+    {
+     "text": "≈ 06:25 GIỜ SAKHALIN · 01.09",
+     "at": 12,
+     "acc": true
+    },
+    {
+     "text": "trời vẫn còn tối",
+     "at": 13,
+     "sm": true
+    }
+   ],
+   "label": {
+    "k": "ĐẢO SAKHALIN",
+    "v": "ẢNH VỆ TINH NASA · 2002",
+    "at": 12
+   }
+  },
+  {
+   "type": "slam",
+   "at": 14,
+   "text": "18:25:30 UTC",
+   "sub": "HAI TÊN LỬA RỜI GIÁ PHÓNG · ICAO 1993 MỤC 2.15.7",
+   "white": true
+  },
+  {
+   "type": "ledger",
+   "at": 15,
+   "title": "CÂY THƯỚC SAI SỐ · “TÔI ĐANG Ở ĐÂU?”",
+   "srcnote": "KÊNH TỰ KẺ · MỖI CHƯƠNG CO MỘT NẤC",
+   "rows": [
+    {
+     "k": "NẤC 1 · 1983",
+     "v": "HÀNG TRĂM KM",
+     "at": 17
+    },
+    {
+     "k": "NẤC 2",
+     "v": "?",
+     "at": 18
+    },
+    {
+     "k": "NẤC 3",
+     "v": "?",
+     "at": [
+      19,
+      "rồi"
+     ]
+    }
+   ],
+   "total": {
+    "k": "CUỐI VIDEO",
+    "v": "AI TRẢ GIÁ MỖI NẤC CO",
+    "at": 20
+   }
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "ĐƯỜNG BAY LỆCH DẦN"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

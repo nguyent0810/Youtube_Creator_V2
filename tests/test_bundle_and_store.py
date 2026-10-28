@@ -61,6 +61,32 @@ def test_rejects_angle_brackets_in_title():
         _bundle(title="Mệnh Kim <hợp> màu gì").validate()
 
 
+@pytest.mark.parametrize("note", [
+    "Lãi 6,8%: hồ sơ Long B1, nguồn [A1-83]",          # 28/10/2026, suýt lên mô tả CK
+    "Ngày phát sóng chưa xác định — CẦN kiểm",
+    "xem data/long/mim-ai-gpu/factcheck.md dòng 7",
+    "Nguồn: đọc qua WebFetch",
+])
+def test_rejects_internal_notes_in_description(note):
+    with pytest.raises(BundleInvalid, match="description"):
+        _bundle(description=f"Màu bản mệnh cho mệnh Kim.\n\n{note}").validate()
+
+
+def test_rejects_empty_sources_block():
+    with pytest.raises(BundleInvalid, match="Nguồn"):
+        _bundle(description="Màu bản mệnh.\n\nNguồn:\n\nMusic: x (CC BY)").validate()
+
+
+@pytest.mark.parametrize("ok", [
+    "Nguồn:\nhttps://support.apple.com/docs/FaceID_Security_Guide.pdf",   # đường dẫn trong URL công khai
+    "Một công cụ tìm kiếm trả lời sai.",                                  # từ thường, không phải ghi chú
+    "AI agent tự đặt vé máy bay.",
+    "Nguồn:\nVí dụ giả định, kênh tự tính",
+])
+def test_allows_ordinary_public_text(ok):
+    _bundle(description=f"Màu bản mệnh.\n\n{ok}").validate()
+
+
 def test_tag_limit_counts_total_not_each():
     """YouTube tính TỔNG độ dài tag, không phải từng cái. Kiểm tra từng cái
     sẽ cho lọt bộ tag hợp lệ-từng-phần nhưng bị API từ chối."""

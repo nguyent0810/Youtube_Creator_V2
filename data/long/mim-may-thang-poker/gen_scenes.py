@@ -193,12 +193,12 @@ CH["ch18"] = {"hud": {"k": "PHẦN CUỐI", "t": "BA LÁ BÀI ÚP"}, "bgm": {"mo
 ]}
 
 SPEC = {
-    "title": "Máy Thắng Poker: Cỗ Máy Học Cách Tố Bịp, Và Ba Lá Bài Úp",
+    "title": "Libratus 2017: Cỗ Máy Học Tố Bịp, Thắng 4 Cao Thủ Poker",
     "channel": "MIM", "theme": "lab", "accent": "#22d3ee", "master": True, "endcard": 20, "autoTr": True, "beat2": True,
     "acc": ["libratus", "pluribus", "bịp", "máy", "bài", "úp", "phỉnh", "thắng"],
     "say": SAY, "imgs": {}, "chapters": [f"ch{i:02d}" for i in range(19)],
     "youtube": {
-        "titles": ["Máy Thắng Poker: Cỗ Máy Học Cách Tố Bịp, Và Ba Lá Bài Úp",
+        "titles": ["Libratus 2017: Cỗ Máy Học Tố Bịp, Thắng 4 Cao Thủ Poker",
                    "Hai Mươi Ngày Ở Pittsburgh: Bốn Cao Thủ Poker Đấu Một Cỗ Máy, 2017",
                    "Vì Sao Poker Khó Cho Máy Hơn Cờ Vây? Libratus, Pluribus Và Nghệ Thuật Tố Bịp"],
         "summary": "Tháng 1/2017, bốn cao thủ poker đấu tay đôi 120.000 ván với chương trình Libratus của Đại học Carnegie Mellon, và thua. Video lật ba "

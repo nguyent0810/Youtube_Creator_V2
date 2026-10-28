@@ -182,6 +182,15 @@
     const from = mv === "out" ? { scale: 1.14 } : mv === "pan" ? { scale: 1.12, x: 60 } : { scale: 1.0 };
     const to = mv === "out" ? { scale: 1.0 } : mv === "pan" ? { scale: 1.12, x: -60 } : { scale: 1.12 };
     tl.fromTo(holder, from, { ...to, duration: dur, ease: "none", immediateRender: false }, s.t0 - 0.15);
+    // 27/10/2026, thẻ thư viện FS/BUD (tuỳ chọn, video cũ không có trường này -> không đổi):
+    // reveal {kind: "wipe"|"circle", at?, d?} = image_reveal/mask_reveal: ảnh mở dần qua mặt nạ (circle mở từ tiêu điểm).
+    // zoom {x, y, z?, at, d?} = camera_zoom: phóng vào một điểm của ảnh (toạ độ 0–1 theo ảnh) đúng lúc lời đọc nhắc tới.
+    if (s.reveal) { const rv = s.reveal, ra = rv.at ?? s.t0, rd = rv.d ?? 0.9;
+      const [c0, c1] = rv.kind === "circle" ? [`circle(0% at ${il + fx * iw}px ${it + fy * ih}px)`, `circle(150% at ${il + fx * iw}px ${it + fy * ih}px)`]
+        : ["inset(0% 100% 0% 0%)", "inset(0% 0% 0% 0%)"];
+      tl.fromTo(area, { clipPath: c0 }, { clipPath: c1, duration: rd, ease: "power2.inOut", immediateRender: true }, ra); }
+    if (s.zoom) { const z = s.zoom; area.style.transformOrigin = `${il + z.x * iw}px ${it + z.y * ih}px`;
+      tl.fromTo(area, { scale: 1 }, { scale: z.z ?? 1.6, duration: z.d ?? 1.2, ease: "power2.inOut", immediateRender: false }, z.at); }
     if (s.veil) { const vl = el("div", "veil", null, d); vl.style.background = `rgba(5,4,4,${s.veil})`; }
     if (s.kin) kinetic(s.kin, d, s.align);
     common(s, d);
@@ -346,7 +355,7 @@
     // Số thập phân (vd. "to": 3.6): giữ đúng số chữ số sau dấu phẩy của from/to. Trước 12/10/2026 mọi số bị làm tròn,
     // "3,6 TỶ" hiện thành "4 TỶ" trong khi lời đọc nói "ba tỷ sáu".
     const dp = s.dec ?? Math.max(...[s.to, s.from || 0].map((n) => (String(n).split(".")[1] || "").length));
-    const vn = (n) => { const [a, b] = Number(n).toFixed(dp).split("."); return a.replace(/\B(?=(\d{3})+(?!\d))/g, ".") + (b ? "," + b : ""); };
+    const vn = (n) => { const [a, b] = Number(n).toFixed(dp).split("."); return (s.year ? a : a.replace(/\B(?=(\d{3})+(?!\d))/g, ".")) + (b ? "," + b : ""); };   // "year": true -> 1996, không chấm nghìn (26/10/2026: Short Turing hiện "1.996")
     let cx0 = 0, cw = W;
     if (s.img) { const m = IM(s.img), k = Math.min(600 / m.w, 640 / m.h), w = m.w * k, h = m.h * k;
       const pr = el("div", "print", null, d); Object.assign(pr.style, { left: px(140), top: px(470 - (h + 36) / 2), width: px(w + 36), height: px(h + 36) });

@@ -1,0 +1,235 @@
+{
+ "theme": "ck",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "title": "Phí đường bộ 130 nghìn: nuôi ô tô mỗi tháng hết bao nhiêu?",
+ "description": "Năm 2026, phí sử dụng đường bộ của xe chở người tối đa 8 chỗ không kinh doanh vận tải là 130 nghìn đồng mỗi tháng (Nghị định 364/2025; trước đó Nghị định 90/2023 cũng ở mức này). VÍ DỤ GIẢ ĐỊNH của kênh: xe 700 triệu, 12.000 km/năm, 7 lít/100 km, xăng 24.000 đ/lít, gửi xe 1,5 triệu/tháng, bảo hiểm vật chất 1,5% giá xe, bảo dưỡng 6 triệu/năm. Tổng tiền nuôi xe năm đầu khoảng 4,73 triệu mỗi tháng, chưa tính mất giá. Kênh tự tính.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Nội dung do kênh biên soạn; giọng đọc tổng hợp.\n\nBản đầy đủ: https://youtu.be/Bx9w_a_1YOI",
+ "tags": [
+  "nuôi ô tô mỗi tháng",
+  "chi phí nuôi xe",
+  "phí đường bộ",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "một",
+  "bốn",
+  "xăng",
+  "gửi",
+  "giá"
+ ],
+ "kicker": "QUYẾT ĐỊNH LỚN",
+ "sub": "MUA XE",
+ "lines": [
+  "Năm nay, phí sử dụng đường bộ của ô tô con không kinh doanh vẫn là một trăm ba mươi nghìn đồng mỗi tháng.",
+  "Đó là khoản nhỏ nhất khi nuôi một chiếc xe.",
+  "Ví dụ giả định của kênh: xe bảy trăm triệu, chạy mười hai nghìn cây số một năm.",
+  "Xăng khoảng một triệu bảy mỗi tháng, gửi xe một triệu rưỡi.",
+  "Bảo hiểm vật chất gần chín trăm nghìn, bảo dưỡng năm trăm nghìn.",
+  "Cộng cả bảo hiểm bắt buộc và phí đường bộ, khoảng bốn triệu bảy mỗi tháng.",
+  "Mà vẫn chưa tính tiền xe mất giá, khoản lớn nhất nhưng không có hoá đơn.",
+  "Một trăm ba mươi nghìn phí đường bộ, chỉ chừng ba phần trăm của bốn triệu bảy mỗi tháng."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "130.000 Đ/THÁNG",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "PHÍ ĐƯỜNG BỘ · Ô TÔ CON KHÔNG KINH DOANH",
+     "at": [
+      0,
+      "phí"
+     ],
+     "sm": true
+    },
+    {
+     "text": "NGHỊ ĐỊNH 364/2025 · NĂM 2026",
+     "at": [
+      0,
+      "phí"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:35585177",
+   "ms": 3,
+   "veil": 0.58
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "KHOẢN NHỎ NHẤT",
+   "sub": "KHI NUÔI MỘT CHIẾC XE"
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "VÍ DỤ GIẢ ĐỊNH",
+   "cards": [
+    {
+     "k": "GIÁ XE",
+     "v": "700 TR",
+     "at": [
+      2,
+      "xe"
+     ]
+    },
+    {
+     "k": "MỖI NĂM",
+     "v": "12.000 KM",
+     "at": [
+      2,
+      "chạy"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "at": 3,
+   "kind": "bars",
+   "title": "NUÔI XE MỖI THÁNG (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · NĂM ĐẦU",
+   "bars": [
+    {
+     "label": "XĂNG",
+     "v": 1.68,
+     "text": "≈1,7",
+     "c": "ref",
+     "at": 3
+    },
+    {
+     "label": "GỬI XE",
+     "v": 1.5,
+     "text": "1,5",
+     "c": "ref",
+     "at": [
+      3,
+      "gửi"
+     ]
+    },
+    {
+     "label": "BH VẬT CHẤT",
+     "v": 0.875,
+     "text": "≈0,9",
+     "c": "ref",
+     "at": 4
+    },
+    {
+     "label": "BẢO DƯỠNG",
+     "v": 0.5,
+     "text": "0,5",
+     "c": "ref",
+     "at": [
+      4,
+      "dưỡng"
+     ]
+    },
+    {
+     "label": "BẮT BUỘC + ĐƯỜNG BỘ",
+     "v": 0.17,
+     "text": "0,17",
+     "c": "down",
+     "at": [
+      5,
+      "phí"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    5,
+    "bốn"
+   ],
+   "items": [
+    {
+     "text": "≈4,73",
+     "at": [
+      5,
+      "bốn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "TRIỆU ĐỒNG MỖI THÁNG",
+     "at": [
+      5,
+      "mỗi"
+     ],
+     "sm": true
+    },
+    {
+     "text": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+     "at": [
+      5,
+      "mỗi"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "CHƯA TÍNH MẤT GIÁ",
+   "sub": "KHOẢN LỚN NHẤT · KHÔNG CÓ HOÁ ĐƠN"
+  },
+  {
+   "type": "board",
+   "at": 7,
+   "title": "Phí đường bộ trong tiền nuôi xe",
+   "nodes": [
+    {
+     "text": "130.000 / tháng",
+     "x": 0.5,
+     "y": 0.3,
+     "at": 7,
+     "shape": "none",
+     "w": 620
+    },
+    {
+     "text": "≈ 3% của 4,73 triệu",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      7,
+      "ba"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 700
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://lsvn.vn/chinh-thuc-bo-dan-tem-thu-phi-duong-bo-tren-kinh-o-to-a168088.html",
+  "https://tapchitoaan.vn/index.php/muc-thu-che-do-thu-nop-mien-quan-ly-va-su-dung-phi-su-dung-duong-bo-tu-ngay-01-thang-02-nam-20249948.html",
+  "https://youtu.be/Bx9w_a_1YOI"
+ ],
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.4
+  }
+ },
+ "say": {},
+ "imgs": {},
+ "short_type": "S"
+}

@@ -92,3 +92,6 @@
 /* hiệu ứng rise cắt dấu chồng của chữ hoa tiếng Việt (Ổ, Ữ...) -> nới hộp cắt lên trên */
 .theme-ck .kin .rw { padding-top:.2em; margin-top:-.2em; }
 .theme-ck .kin.sm:not(.acc) { color:#cbd5e1; }    /* dòng phụ nhỏ: xám sáng thay màu giấy */
+/* bảng tra (B.table): nền kính tối như ledger, đường kẻ vàng mảnh */
+.theme-ck .tbr { border:1px solid rgba(251,191,36,.16); }
+.theme-ck .tbt, .theme-ck .tbc, .theme-ck .tbk b, .theme-ck .tbv, .theme-ck .tbf { font-family:'Be Vietnam Pro', system-ui, sans-serif; }

@@ -1,0 +1,212 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-vs-mo-hinh-ca",
+ "format": "vi-sao",
+ "hook_type": "vi-sao",
+ "open_shot": "mat-ca",
+ "voice": "Quang Sơn",
+ "music": "fluidscape.mp3",
+ "music_gain": 0.18,
+ "gap": 0.05,
+ "title": "Mõ trong chùa hình con cá, vì cá làm gì?",
+ "kicker": "VÌ SAO?",
+ "sub": "MÕ CÁ · MOKUGYO",
+ "acc": [
+  "cá",
+  "mõ",
+  "mắt"
+ ],
+ "lines": [
+  "Mõ trong chùa hình con cá, vì cá làm gì?",
+  "A, bơi giỏi. B, không bao giờ nhắm mắt. C, đẻ nhiều trứng.",
+  "Đoán trước đã.",
+  "Đáp án là B. Theo cách giải thích truyền thống, cá không nhắm mắt, kể cả khi ngủ.",
+  "Nhưng mõ không chỉ để nhắc thức.",
+  "Mõ còn giữ nhịp khi tụng niệm. Gõ một tiếng, đọc một chữ.",
+  "Tiếng mõ nhắc người tu: luôn tỉnh thức.",
+  "Lần tới nghe tiếng mõ, thở ba hơi theo nhịp.",
+  "Bạn đoán cá làm gì? Comment A, B hay C."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:34908364",
+   "items": [
+    {
+     "text": "VÌ CÁ LÀM GÌ?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "mõ trong chùa hình con cá",
+     "at": [
+      0,
+      "mõ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "hf_list_build",
+   "at": 1,
+   "title": "BẠN CHỌN?",
+   "items": [
+    {
+     "key": "A",
+     "text": "BƠI GIỎI",
+     "at": [
+      1,
+      "bơi"
+     ]
+    },
+    {
+     "key": "B",
+     "text": "KHÔNG NHẮM MẮT",
+     "at": [
+      1,
+      "nhắm"
+     ]
+    },
+    {
+     "key": "C",
+     "text": "ĐẺ NHIỀU",
+     "at": [
+      1,
+      "đẻ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 2,
+   "text": "A · B hay C?",
+   "clip": "pexels:38348294",
+   "veil": 0.65
+  },
+  {
+   "type": "hf_stamp",
+   "at": 3,
+   "kick": "",
+   "big": "B",
+   "stamps": [
+    {
+     "text": "KHÔNG NHẮM MẮT",
+     "at": [
+      3,
+      "b."
+     ],
+     "x": 200,
+     "y": 880,
+     "rot": -6
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Mõ cá (Mokugyo)",
+   "nodes": [
+    {
+     "text": "MÕ",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      4,
+      "mõ"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "KHÔNG CHỈ NHẮC THỨC",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      4,
+      "thức."
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "MOKUGYO · WIKIPEDIA"
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "MÕ GIỮ NHỊP",
+   "cards": [
+    {
+     "k": "GÕ 1 TIẾNG",
+     "v": "ĐỌC 1 CHỮ",
+     "at": [
+      5,
+      "gõ"
+     ]
+    },
+    {
+     "k": "NHẮC",
+     "v": "LUÔN TỈNH THỨC",
+     "at": [
+      6,
+      "tỉnh"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "to": 3,
+   "suffix": " HƠI THỞ",
+   "label": "THEO NHỊP MÕ",
+   "until": [
+    7,
+    "hơi"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "veil": 0.4,
+   "clip": "pexels:29065334",
+   "items": [
+    {
+     "text": "CÁ LÀM GÌ?",
+     "at": [
+      8,
+      "bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "comment A, B hay C",
+     "at": [
+      8,
+      "comment"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Mokugyo"
+ ],
+ "description": "Mõ trong chùa hình con cá, vì cá làm gì?\n\nNguồn: https://en.wikipedia.org/wiki/Mokugyo"
+}

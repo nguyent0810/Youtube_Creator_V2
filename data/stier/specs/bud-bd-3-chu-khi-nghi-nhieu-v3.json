@@ -1,0 +1,203 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-ng-neu-ban-nghi-qua-nhieu",
+ "format": "ba-dieu",
+ "hook_type": "menh-lenh",
+ "open_shot": "giuong-dem",
+ "voice": "Đoan Trang",
+ "music": "clean_soul.mp3",
+ "music_gain": 0.16,
+ "gap": 0.25,
+ "title": "Nghĩ nhiều lúc khuya? Thử 3 chữ này",
+ "kicker": "3 CHỮ CHO ĐÊM KHÓ NGỦ",
+ "sub": "KINH TRUNG BỘ 131",
+ "acc": [
+  "qua",
+  "chưa",
+  "này"
+ ],
+ "lines": [
+  "Đầu óc chạy không ngừng lúc khuya? Thử ba chữ này.",
+  "Nghĩ lại chuyện hôm qua. Lo trước chuyện ngày mai.",
+  "Chữ thứ nhất: qua. Chuyện hôm qua đã qua rồi.",
+  "Chữ thứ hai: chưa. Ngày mai chưa đến.",
+  "Nhưng chữ thứ ba mới là chìa khóa.",
+  "Kinh Nhất Dạ Hiền Giả, diễn ý: chỉ có lúc này.",
+  "Chữ thứ ba: này. Một hơi thở này, một đêm nay.",
+  "Qua, chưa, này. Lưu lại cho đêm khó ngủ nhé.",
+  "Đêm nay đầu bạn đang chạy về chuyện gì? Gửi cho người hay thức khuya."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.4,
+   "clip": "pexels:6753819",
+   "items": [
+    {
+     "text": "NGHĨ NHIỀU LÚC KHUYA?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "thử 3 chữ này",
+     "at": [
+      0,
+      "thử"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "TRONG ĐẦU",
+   "cards": [
+    {
+     "k": "HÔM QUA",
+     "v": "NGHĨ LẠI",
+     "at": [
+      1,
+      "hôm"
+     ]
+    },
+    {
+     "k": "NGÀY MAI",
+     "v": "LO TRƯỚC",
+     "at": [
+      1,
+      "mai."
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "hf_list_build",
+   "at": 2,
+   "title": "3 CHỮ",
+   "items": [
+    {
+     "key": "1",
+     "text": "QUA",
+     "at": [
+      2,
+      "qua."
+     ]
+    },
+    {
+     "key": "2",
+     "text": "CHƯA",
+     "at": [
+      3,
+      "chưa."
+     ]
+    },
+    {
+     "key": "3",
+     "text": "???",
+     "at": [
+      3,
+      "đến."
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "CHỮ THỨ BA",
+   "fx": "zoom",
+   "sub": "MỚI LÀ CHÌA KHÓA"
+  },
+  {
+   "type": "source",
+   "at": 5,
+   "source": "KINH TRUNG BỘ 131",
+   "ref": "Nhất Dạ Hiền Giả",
+   "snippet": "Quá khứ đã qua, tương lai chưa đến. [[Chỉ có lúc này]] — thấy rõ ngay đó.",
+   "hlAt": [
+    5,
+    "này."
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "veil": 0.45,
+   "clip": "pexels:11142482",
+   "items": [
+    {
+     "text": "NÀY",
+     "at": [
+      6,
+      "này."
+     ],
+     "acc": true
+    },
+    {
+     "text": "một hơi thở này, một đêm nay",
+     "at": [
+      6,
+      "một"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "to": 3,
+   "suffix": " CHỮ THÔI",
+   "label": "QUA · CHƯA · NÀY",
+   "until": [
+    7,
+    "này."
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "veil": 0.45,
+   "clip": "pexels:32873862",
+   "items": [
+    {
+     "text": "ĐANG NGHĨ VỀ CHUYỆN GÌ?",
+     "at": [
+      8,
+      "đêm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "gửi cho người hay thức khuya",
+     "at": [
+      8,
+      "gửi"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "ambience": {
+  "bed": "rain",
+  "gain": 0.8
+ },
+ "sources": [
+  "https://suttacentral.net/mn131/en/sujato"
+ ],
+ "description": "Nghĩ nhiều lúc khuya? Thử 3 chữ này\n\nNguồn: https://suttacentral.net/mn131/en/sujato"
+}

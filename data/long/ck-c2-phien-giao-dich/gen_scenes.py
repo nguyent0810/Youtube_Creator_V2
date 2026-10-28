@@ -371,7 +371,7 @@ CH["ch06"] = {"hud": {"k": "CHƯƠNG 06", "t": "ÁP DỤNG CHO BẠN"}, "bgm": {
     {"type": "question", "at": 22, "text": "Lần đầu đặt lệnh, điều gì\nlàm bạn bất ngờ nhất?\nLô 100 cổ phiếu, bước giá,\nhay hai ngày chờ?"},
 ]}
 
-TITLE = "Vì Sao Có Ngày Muốn Bán Cổ Phiếu Mà Không Bán Được? Một Phiên HOSE Từ 9 Giờ Tới 15 Giờ"
+TITLE = "Ngày VN-Index Mất 115 Điểm: Vì Sao Muốn Bán Mà Không Bán Được?"
 DISCLAIMER = ("Nội dung giáo dục, không phải tư vấn đầu tư hay tư vấn tài chính cá nhân. Không khuyến nghị mua/bán bất kỳ "
               "tài sản nào. Ví dụ dùng dữ liệu quá khứ; quá khứ không đảm bảo tương lai. Nội dung do kênh biên soạn từ nguồn "
               "công khai; giọng đọc tổng hợp. Quy định mô tả theo thời điểm làm video (10/2026) và có thể thay đổi.")

@@ -1,0 +1,207 @@
+{
+ "theme": "mim",
+ "title": "Hơn 4.500 cuộc trò chuyện ChatGPT từng hiện công khai trên Google: không ai bị hack",
+ "description": "Tháng 7/2025, các phóng viên công nghệ tìm thấy hơn 4.500 cuộc trò chuyện ChatGPT nằm công khai trên kết quả tìm kiếm Google, có cả hồ sơ xin việc, tên thật và mã nguồn của công ty (theo Fast Company, qua Search Engine Journal/TechRadar). Không phải vụ bị xâm nhập: người dùng đã tự bấm chia sẻ và bật một ô cho phép công cụ tìm kiếm thấy cuộc trò chuyện. Ngày 31/07/2025, OpenAI gỡ tính năng này. Cài đặt và tên nút có thể khác theo gói, vùng và phiên bản; thông tin theo trang của hãng, đọc ngày 09/10/2026. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/ejsjefnJQbI (công khai từ 20:00 ngày 23/11).",
+ "tags": [
+  "chatgpt lộ cuộc trò chuyện",
+  "chia sẻ chatgpt",
+  "quyền riêng tư ai",
+  "link chia sẻ chatgpt",
+  "chatgpt",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "07/2025",
+ "acc": [
+  "bốn",
+  "nghìn",
+  "rưỡi",
+  "hack",
+  "chia",
+  "sẻ",
+  "cửa"
+ ],
+ "kicker": "AI QUANH TA",
+ "lines": [
+  "Bốn nghìn rưỡi cuộc trò chuyện hiện trên Google.",
+  "Tháng 7 năm 2025, các phóng viên công nghệ tìm thấy hơn bốn nghìn năm trăm cuộc trò chuyện ChatGPT nằm công khai trên kết quả tìm kiếm.",
+  "Có hồ sơ xin việc, có tên thật, có cả mã nguồn của một công ty.",
+  "Không ai bị hack.",
+  "Chính người dùng đã bấm chia sẻ, rồi bật thêm một ô cho phép công cụ tìm kiếm thấy chúng.",
+  "Ngày 31 tháng 7, OpenAI gỡ tính năng ấy.",
+  "Bốn nghìn rưỡi cuộc trò chuyện kia không bị đánh cắp. Chúng nằm sau một cánh cửa mà chính chủ đã mở."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "HƠN 4.500",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "cuộc trò chuyện hiện trên Google",
+     "at": [
+      0,
+      "cuộc"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8888530",
+   "veil": 0.55
+  },
+  {
+   "type": "counter",
+   "at": [
+    1,
+    "hơn"
+   ],
+   "from": 0,
+   "to": 4500,
+   "prefix": "HƠN ",
+   "until": [
+    1,
+    "trăm"
+   ],
+   "label": "CUỘC TRÒ CHUYỆN CHATGPT CÔNG KHAI",
+   "sub": {
+    "text": "TRÊN KẾT QUẢ TÌM KIẾM · 07/2025",
+    "at": [
+     1,
+     "nằm"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "TRONG ĐÓ CÓ",
+   "cards": [
+    {
+     "k": "CÓ",
+     "v": "HỒ SƠ XIN VIỆC",
+     "at": [
+      2,
+      "hồ"
+     ]
+    },
+    {
+     "k": "CÓ",
+     "v": "TÊN THẬT",
+     "at": [
+      2,
+      "tên"
+     ]
+    },
+    {
+     "k": "CÓ CẢ",
+     "v": "MÃ NGUỒN",
+     "at": [
+      2,
+      "mã"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "KHÔNG AI BỊ HACK"
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Hai cú bấm",
+   "nodes": [
+    {
+     "text": "BẤM CHIA SẺ",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      4,
+      "bấm"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "BẬT Ô CHO TÌM KIẾM THẤY",
+     "x": 0.5,
+     "y": 0.68,
+     "at": [
+      4,
+      "bật"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 780
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      4,
+      "rồi"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 5,
+   "date": "31.07.2025",
+   "day": "OPENAI GỠ TÍNH NĂNG"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "KHÔNG BỊ ĐÁNH CẮP",
+     "at": 6,
+     "acc": true
+    },
+    {
+     "text": "cánh cửa chính chủ đã mở",
+     "at": [
+      6,
+      "Chúng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7579576",
+   "veil": 0.58
+  }
+ ],
+ "sources": [
+  "https://www.searchenginejournal.com/openai-is-pulling-shared-chatgpt-chats-from-google-search/552671/"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "=AI": "ây ai",
+  "chatgpt": "chát gi pi ti",
+  "google": "Gu-gồ",
+  "openai": "Ô-pần ây ai",
+  "hack": "hách"
+ },
+ "imgs": {}
+}

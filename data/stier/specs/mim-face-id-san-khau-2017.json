@@ -1,0 +1,280 @@
+{
+ "theme": "mim",
+ "title": "Face ID từ chối ngay trên sân khấu năm 2017: Apple giải thích thế nào",
+ "description": "Ngày 12/09/2017, trong buổi ra mắt iPhone X, Face ID không mở máy demo của Craig Federighi; ông đổi sang máy dự phòng. Theo lời Apple giải thích sau đó, nhiều người đã cầm chiếc máy trước buổi diễn, Face ID thử nhận mặt họ nhiều lần rồi đòi mật mã, đúng như thiết kế. Theo trang hỗ trợ của Apple, xác suất một người ngẫu nhiên mở được máy bằng Face ID là dưới 1 phần triệu (với một diện mạo đã đăng ký); sinh đôi, anh chị em và trẻ dưới 13 tuổi có xác suất cao hơn.\n\nGiọng đọc tổng hợp; video Pexels/Coverr minh hoạ, không phải cảnh thật của sự kiện.\nBản đầy đủ: https://youtu.be/7daMUBWG6mU",
+ "tags": [
+  "face id",
+  "apple",
+  "iphone x",
+  "craig federighi",
+  "nhận diện khuôn mặt",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "KHUÔN MẶT VÀ AI",
+ "sub": "FACE ID · 2017",
+ "acc": [
+  "2017",
+  "từ",
+  "chối",
+  "mật",
+  "mã"
+ ],
+ "lines": [
+  "Năm 2017, Face ID từ chối trên sân khấu.",
+  "Ngày mười hai tháng chín, Craig Federighi của Apple cầm iPhone X lên giới thiệu.",
+  "Ông nhìn vào màn hình. Máy không mở, chỉ đòi mật mã.",
+  "Ông đổi sang chiếc máy dự phòng, và chiếc ấy mở được.",
+  "Theo lời Apple giải thích sau đó, trước buổi diễn có nhiều người đã cầm chiếc máy kia.",
+  "Face ID thử nhận mặt họ, thất bại nhiều lần, rồi tự chuyển sang đòi mật mã.",
+  "Theo Apple, người lạ mở được Face ID với xác suất dưới một phần triệu.",
+  "Hoá ra lần từ chối ấy là Face ID đang chạy đúng thiết kế."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "items": [
+    {
+     "text": "2017",
+     "at": [
+      0,
+      "Năm"
+     ],
+     "acc": true,
+     "size": 300
+    },
+    {
+     "text": "SÂN KHẤU · IPHONE X",
+     "at": [
+      0,
+      "sân"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6279825",
+   "veil": 0.5
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "2017",
+   "day": "12 THÁNG 9",
+   "sub": {
+    "text": "CRAIG FEDERIGHI · APPLE",
+    "at": [
+     1,
+     "Craig"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    1,
+    "iPhone"
+   ],
+   "items": [
+    {
+     "text": "IPHONE X",
+     "at": [
+      1,
+      "iPhone"
+     ],
+     "acc": true
+    },
+    {
+     "text": "máy demo trên sân khấu",
+     "at": [
+      1,
+      "giới"
+     ],
+     "sm": true,
+     "size": 56
+    }
+   ],
+   "clip": "pexels:32259631",
+   "veil": 0.6
+  },
+  {
+   "type": "question",
+   "at": [
+    2,
+    "Máy"
+   ],
+   "text": "Máy không mở."
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "HAI CHIẾC MÁY",
+   "cards": [
+    {
+     "k": "MÁY THỨ NHẤT",
+     "v": "ĐÒI MẬT MÃ",
+     "at": [
+      3,
+      "Ông"
+     ]
+    },
+    {
+     "k": "MÁY DỰ PHÒNG",
+     "v": "MỞ ĐƯỢC",
+     "at": [
+      3,
+      "dự"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "THEO TRUYỀN THÔNG VÀ LỜI APPLE"
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "APPLE GIẢI THÍCH",
+   "nodes": [
+    {
+     "text": "NHIỀU NGƯỜI CẦM MÁY",
+     "x": 0.5,
+     "y": 0.16,
+     "at": [
+      4,
+      "nhiều"
+     ],
+     "w": 520
+    },
+    {
+     "text": "FACE ID THỬ MẶT LẠ",
+     "x": 0.5,
+     "y": 0.45,
+     "at": [
+      5,
+      "thử"
+     ],
+     "w": 520
+    },
+    {
+     "text": "ĐÒI MẬT MÃ",
+     "x": 0.5,
+     "y": 0.78,
+     "at": [
+      5,
+      "đòi"
+     ],
+     "c": "acc",
+     "w": 460
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      5,
+      "Face"
+     ]
+    },
+    {
+     "from": 1,
+     "to": 2,
+     "at": [
+      5,
+      "rồi"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 6,
+   "title": "FACE ID · THEO APPLE",
+   "rows": [
+    {
+     "k": "NGƯỜI LẠ MỞ ĐƯỢC",
+     "v": "DƯỚI 1/1.000.000",
+     "at": [
+      6,
+      "dưới"
+     ]
+    },
+    {
+     "k": "SINH ĐÔI · TRẺ DƯỚI 13",
+     "v": "CAO HƠN",
+     "at": [
+      6,
+      "phần"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "ĐÚNG THIẾT KẾ",
+   "sub": "THEO LỜI APPLE"
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    7,
+    "thiết"
+   ],
+   "items": [
+    {
+     "text": "MỘT LẦN TỪ CHỐI",
+     "at": [
+      7,
+      "lần"
+     ],
+     "acc": true
+    },
+    {
+     "text": "Face ID · 2017",
+     "at": [
+      7,
+      "Face"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6787449",
+   "veil": 0.6
+  }
+ ],
+ "sources": [
+  "https://9to5mac.com/2017/09/13/face-id-demo-fail-details/",
+  "https://support.apple.com/en-us/102381",
+  "https://www.engadget.com/2017-09-14-apple-explains-face-id-fail.html"
+ ],
+ "say": {
+  "face": "Phây",
+  "id": "ai đi",
+  "federighi": "Phê-đê-ri-ghi",
+  "craig": "Cray",
+  "apple": "Áp-pồ",
+  "iphone": "ai-phôn"
+ },
+ "rules": 2,
+ "mix": true,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.3,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.4
+  }
+ },
+ "sources_internal": [
+  "https://9to5mac.com/2017/09/13/face-id-demo-fail-details/ (đã mở: 12/09/2017, Federighi đổi máy dự phòng, Apple nói máy bị nhiều người cầm, đòi mật mã đúng thiết kế)",
+  "https://support.apple.com/en-us/102381 (đã mở: dưới 1/1.000.000, sinh đôi/anh chị em/trẻ dưới 13 tuổi cao hơn)",
+  "https://www.engadget.com/2017-09-14-apple-explains-face-id-fail.html (chỉ thấy qua kết quả tìm kiếm; trang trống khi mở, cần kiểm lại)"
+ ]
+}

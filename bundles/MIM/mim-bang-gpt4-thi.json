@@ -1,0 +1,32 @@
+{
+  "bgm": "ouroboros.mp3",
+  "broll_queries": [],
+  "channel": "MIM",
+  "created_at": "2026-10-22T06:54:35Z",
+  "description": "Bảng tra theo kỳ thi: điểm của GPT-4 (mô hình của OpenAI, 3/2023) khi làm các đề thi mô phỏng, và hạng phần trăm ước tính so với người đi thi. Hạng khoảng 90 nghĩa là điểm ấy ngang hoặc cao hơn khoảng 90% người dự thi. Cột \"Bản cũ\" là hạng của GPT-3.5.\n\nĐây là điểm của mô hình tại thời điểm báo cáo (tháng 3/2023), trong điều kiện mô phỏng do OpenAI tự thực hiện, không phải kết quả thi chính thức và không phản ánh các bản mô hình sau này. Với kỳ thi có thang điểm rộng như AP, báo cáo ghi dải hạng; bảng này chỉ dùng các kỳ thi có hạng một con số.\n\nSố liệu: Bảng 1 trong \"GPT-4 Technical Report\" của OpenAI (arXiv:2303.08774): Uniform Bar Exam 298/400 (hạng khoảng 90, GPT-3.5 khoảng 10); LSAT 163 (khoảng 88; 40); SAT Math 700/800 (khoảng 89; 70); SAT Evidence-Based Reading & Writing 710/800 (khoảng 93; 87); GRE Quantitative 163/170 (khoảng 80; 25); GRE Writing 4/6 (khoảng 54; 54).\n\nNội dung do kênh biên soạn. Giọng đọc tổng hợp.\n\nNguồn:\nhttps://arxiv.org/abs/2303.08774\n\nMusic: \"Ouroboros\" by Kevin MacLeod (incompetech.com). Licensed under Creative Commons: By Attribution 4.0 — http://creativecommons.org/licenses/by/4.0/\n\n#AI #CôngNghệ #MindInTheMachine",
+  "kind": "short",
+  "publish_at": "2026-10-23T14:30:00Z",
+  "render": {
+    "engine": "casefile",
+    "spec": "data/stier/specs/mim-bang-gpt4-thi.json"
+  },
+  "schema_version": 1,
+  "script": "GPT bốn thi luật sư Mỹ, nằm trong mười phần trăm cao nhất. SAT toán, hạng tám mươi chín. Viết luận GRE thì chỉ hạng năm mươi tư. Đó là điểm của mô hình năm 2023. Dừng hình tìm dòng của bạn nhé.",
+  "slug": "mim-bang-gpt4-thi",
+  "source_note": "https://arxiv.org/abs/2303.08774",
+  "tags": [
+    "GPT-4",
+    "OpenAI",
+    "điểm thi",
+    "SAT",
+    "GRE",
+    "LSAT",
+    "thi luật sư",
+    "bảng tra",
+    "trí tuệ nhân tạo",
+    "mind in the machine"
+  ],
+  "thumbnail_text": "",
+  "title": "GPT-4 thi điểm bao nhiêu so với người? Bảng tra theo kỳ thi (OpenAI 2023)",
+  "voice": "Thanh Bình"
+}

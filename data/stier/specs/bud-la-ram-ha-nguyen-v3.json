@@ -1,0 +1,229 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-la-ram-ha-nguyen",
+ "format": "lich-am",
+ "hook_type": "menh-lenh",
+ "open_shot": "trang-ram",
+ "voice": "Ngọc Linh",
+ "music": "ether_vox.mp3",
+ "music_gain": 0.18,
+ "gap": 0.35,
+ "special_date": true,
+ "series": "14 ngày biết ơn · Về đích",
+ "title": "Rằm tháng 10: bạn đã cảm ơn được bao nhiêu người?",
+ "kicker": "14 NGÀY BIẾT ƠN · VỀ ĐÍCH",
+ "sub": "15/10 ÂM · TẾT HẠ NGUYÊN",
+ "acc": [
+  "rằm",
+  "ơn",
+  "người"
+ ],
+ "ambience": {
+  "hits": [
+   {
+    "at": 0.1,
+    "kind": "bell",
+    "gain": 0.8
+   }
+  ]
+ },
+ "lines": [
+  "Hôm nay Rằm tháng Mười. Dừng một phút, đếm xem.",
+  "Thứ Hai, hai mươi ba tháng mười một. Mười lăm tháng mười âm.",
+  "Tết Hạ Nguyên, dịp tạ ơn sau mùa gặt.",
+  "Mười bốn ngày biết ơn đã về đích.",
+  "Bạn đã cảm ơn được bao nhiêu người? Một, năm, hay mười bốn?",
+  "Thật ra, con số không quan trọng bằng một điều.",
+  "Kinh Tăng Chi, diễn ý: người tốt là người biết ơn và nhớ ơn.",
+  "Tối nay, ăn bữa cơm mới, nói một lời cảm ơn người nấu.",
+  "Rằm này, bạn đã cảm ơn bao nhiêu người? Comment một con số."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:30894034",
+   "items": [
+    {
+     "text": "RẰM THÁNG 10",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "14 ngày biết ơn · về đích",
+     "at": [
+      0,
+      "dừng"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "23.11.2026",
+   "day": "THỨ HAI",
+   "sub": {
+    "text": "15/10 ÂM · TẾT HẠ NGUYÊN",
+    "at": [
+     1,
+     "âm."
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "veil": 0.4,
+   "clip": "pexels:35995794",
+   "items": [
+    {
+     "text": "TẾT HẠ NGUYÊN",
+     "at": [
+      2,
+      "tết"
+     ],
+     "acc": true
+    },
+    {
+     "text": "tạ ơn sau mùa gặt",
+     "at": [
+      2,
+      "tạ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "hf_unit_grid",
+   "at": 3,
+   "title": "14 NGÀY BIẾT ƠN",
+   "total": 14,
+   "cols": 7,
+   "glyph": "🙏",
+   "lit": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+   ],
+   "litAt": [
+    3,
+    "bốn"
+   ],
+   "unitLabel": "14/14 · về đích"
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "BẠN ĐÃ CẢM ƠN",
+   "cards": [
+    {
+     "k": "A",
+     "v": "1 NGƯỜI",
+     "at": [
+      4,
+      "một,"
+     ]
+    },
+    {
+     "k": "B",
+     "v": "5 NGƯỜI",
+     "at": [
+      4,
+      "năm,"
+     ]
+    },
+    {
+     "k": "C",
+     "v": "14 NGƯỜI",
+     "at": [
+      4,
+      "bốn?"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "KHÔNG PHẢI\nCON SỐ",
+   "fx": "zoom"
+  },
+  {
+   "type": "source",
+   "at": 6,
+   "source": "KINH TĂNG CHI 2.32",
+   "ref": "Người chân chính",
+   "snippet": "Người tốt [[biết ơn và nhớ ơn]].",
+   "hlAt": [
+    6,
+    "nhớ"
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "to": 1,
+   "suffix": " LỜI CẢM ƠN",
+   "label": "NGƯỜI NẤU BỮA CƠM MỚI",
+   "until": [
+    7,
+    "cảm"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "veil": 0.4,
+   "clip": "pexels:39592688",
+   "items": [
+    {
+     "text": "BAO NHIÊU NGƯỜI?",
+     "at": [
+      8,
+      "bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "comment một con số",
+     "at": [
+      8,
+      "comment"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://giacngo.vn/gia-tri-tam-linh-cua-le-hoi-ram-thang-muoi-post6635.html",
+  "https://suttacentral.net/an2.32-41/en/sujato"
+ ],
+ "description": "Rằm tháng 10: bạn đã cảm ơn được bao nhiêu người?\n\nNguồn: https://giacngo.vn/gia-tri-tam-linh-cua-le-hoi-ram-thang-muoi-post6635.html · https://suttacentral.net/an2.32-41/en/sujato"
+}

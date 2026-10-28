@@ -1,0 +1,243 @@
+{
+ "title": "Chuột không chỉ để chỉ",
+ "lines": [
+  {
+   "t": "Computer History Museum mô tả giao diện Lisa và Mac bằng cửa sổ, biểu tượng, menu và con trỏ.",
+   "p": 0.8
+  },
+  "Người ta thường gọi tắt mô hình ấy là WIMP.",
+  "WIMP không phải tên một sản phẩm, mà là chữ viết tắt của bốn thành phần vừa nói.",
+  "Chuột điều khiển con trỏ đi qua những thành phần ấy.",
+  "Bạn không cần nhớ một chuỗi lệnh để mở một việc quen thuộc.",
+  "Bạn nhìn biểu tượng, đưa chuột một nút tới đó, rồi bấm.",
+  "Macintosh là nỗ lực thứ hai của Apple cho máy cá nhân dựa trên giao diện đồ họa, sau thất bại thương mại của Lisa, theo Computer History Museum.",
+  "Máy Macintosh nguyên bản có màn hình đen trắng 512 nhân 342 điểm ảnh, theo Andy Hertzfeld.",
+  "Trên diện tích nhỏ đó, MacPaint cần ba vùng đệm ngoài màn hình.",
+  "Mỗi vùng đệm có kích thước bằng toàn bộ màn hình.",
+  "Vùng đệm là nơi chương trình giữ một bản sao hình ảnh để tính toán trước khi bạn thấy kết quả.",
+  "Chi tiết ấy cho thấy giới hạn bộ nhớ gây áp lực ra sao.",
+  "Nhưng nó không cho phép ta nói một mình MacPaint quyết định toàn bộ thiết kế của Macintosh.",
+  "Một giao diện nhìn đơn giản thường che bên dưới rất nhiều thỏa hiệp kỹ thuật.",
+  "Con trỏ mũi tên đi qua màn hình đen trắng có vẻ bình thường với chúng ta hôm nay.",
+  "Năm 1984, nó phải cùng tồn tại với một bức vẽ, một văn bản, hệ thống và phần bộ nhớ ít ỏi còn lại.",
+  "Đó là bước ngoặt của Macintosh: không phát minh ra mọi thành phần từ số không, mà ép chúng cùng hoạt động trong một chiếc máy hướng tới người dùng.",
+  "Và khi câu chuyện được kể lại bằng phim, chính những thỏa hiệp chậm và nhiều người này rất dễ bị nén thành một cuộc đối đầu gọn gàng."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "CHƯƠNG NĂM",
+   "title": "CHUỘT KHÔNG\nCHỈ ĐỂ CHỈ",
+   "sub": "WIMP · LISA · MACPAINT",
+   "bg": "mouse1",
+   "titleAt": [
+    0,
+    "Museum"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    1,
+    "WIMP"
+   ],
+   "items": [
+    {
+     "text": "CỬA SỔ · BIỂU TƯỢNG",
+     "at": [
+      1,
+      "WIMP"
+     ],
+     "acc": true
+    },
+    {
+     "text": "MENU · CON TRỎ",
+     "at": [
+      1,
+      "WIMP"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": [
+    3,
+    "Chuột"
+   ],
+   "img": "ai04",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "VẬT NỐI",
+    "v": "CHUỘT MỘT NÚT VÀ CON TRỎ PIXEL",
+    "at": [
+     3,
+     "Chuột"
+    ]
+   },
+   "illus": "ẢNH MINH HỌA",
+   "credit": false
+  },
+  {
+   "type": "slam",
+   "at": [
+    5,
+    "bấm"
+   ],
+   "text": "NHÌN · TRỎ · BẤM",
+   "sub": "KHÔNG CẦN NHỚ MỘT CHUỖI LỆNH"
+  },
+  {
+   "type": "timeline",
+   "at": [
+    6,
+    "Lisa"
+   ],
+   "bg": "mac3",
+   "items": [
+    {
+     "year": "LISA",
+     "text": "NỖ LỰC ĐẦU"
+    },
+    {
+     "year": "MACINTOSH",
+     "text": "NỖ LỰC THỨ HAI"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": [
+    8,
+    "hình"
+   ],
+   "from": 0,
+   "to": 512,
+   "suffix": " × 342",
+   "label": "ĐIỂM ẢNH ĐEN TRẮNG",
+   "year": false
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    11,
+    "sao"
+   ],
+   "items": [
+    {
+     "text": "BA VÙNG ĐỆM",
+     "at": [
+      11,
+      "sao"
+     ],
+     "acc": true
+    },
+    {
+     "text": "MỖI VÙNG BẰNG TOÀN BỘ MÀN HÌNH",
+     "at": [
+      11,
+      "sao"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": [
+    14,
+    "nay"
+   ],
+   "vid": "19205382",
+   "veil": 0.62,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "CHUỘT VÀ BÀN PHÍM MINH HỌA · KIỂM LOGO TRƯỚC DÙNG",
+     "at": [
+      14,
+      "nay"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": [
+    16,
+    "bước"
+   ],
+   "title": "ĐƯỜNG ĐI CỦA CÚ NHẤP",
+   "srcnote": "MỖI CHƯƠNG THÊM MỘT MỐC",
+   "rows": [
+    {
+     "k": "MỞ ĐẦU",
+     "v": "PARC VÀ CON TRỎ",
+     "at": [
+      16,
+      "bước"
+     ]
+    },
+    {
+     "k": "1 · BỘ NHỚ",
+     "v": "CHỈ CÒN 90K",
+     "at": [
+      16,
+      "bước"
+     ]
+    },
+    {
+     "k": "2 · TÍN HIỆU",
+     "v": "QUẢNG CÁO ĐI TRƯỚC",
+     "at": [
+      16,
+      "bước"
+     ]
+    },
+    {
+     "k": "3 · SÂN KHẤU",
+     "v": "MÁY TỰ GIỚI THIỆU",
+     "at": [
+      16,
+      "bước"
+     ]
+    },
+    {
+     "k": "4 · GÓI MÁY",
+     "v": "MẶT BÀN NHÌN THẤY",
+     "at": [
+      16,
+      "bước"
+     ]
+    },
+    {
+     "k": "5 · GIAO DIỆN",
+     "v": "CHUỘT VÀ CON TRỎ",
+     "at": [
+      16,
+      "bước"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": [
+    17,
+    "gàng"
+   ],
+   "text": "KHI PHIM KỂ LẠI,\nCHI TIẾT NÀO DỄ BỊ NÉN ĐI?"
+  }
+ ],
+ "topic": "mim-macintosh-1984",
+ "chapter": 5,
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "CHUỘT KHÔNG CHỈ ĐỂ CHỈ"
+ }
+}

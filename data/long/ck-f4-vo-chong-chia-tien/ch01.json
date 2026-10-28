@@ -1,0 +1,548 @@
+{
+ "title": "Ví thứ nhất: cùng góp một số",
+ "lines": [
+  {
+   "t": "Đây là ví dụ giả định để tính, không phải ngân sách của bất kỳ gia đình nào.",
+   "p": 0.8
+  },
+  "Chị Thảo nhận mười lăm triệu mỗi tháng, còn anh Nam nhận hai mươi lăm triệu.",
+  "Chi chung là hai mươi sáu triệu, cho nhà ở, ăn uống và các khoản khác.",
+  "Cách thứ nhất rất dễ ghi lên giấy: mỗi người góp mười ba triệu.",
+  "Phép chia là hai mươi sáu chia hai.",
+  "Không cần biết ai mang về nhiều hơn.",
+  "Rất dễ tính.",
+  "Trên thác nước, Thảo bắt đầu từ mười lăm rồi mất mười ba.",
+  "Phần còn lại của Thảo là hai triệu mỗi tháng.",
+  "Nam bắt đầu từ hai mươi lăm, cũng mất mười ba.",
+  {
+   "t": "Phần còn lại của Nam là mười hai triệu mỗi tháng.",
+   "p": 1.0
+  },
+  "Hai ví khác xa.",
+  "Chênh lệch phần còn lại là mười triệu mỗi tháng.",
+  "Đó không phải lỗi tính toán.",
+  "Đó là kết quả mà quy tắc cùng góp một số tạo ra.",
+  "Trong mười hai tháng không có lãi và không có khoản chi khác, Thảo để lại hai mươi bốn triệu.",
+  "Nam để lại một trăm bốn mươi bốn triệu.",
+  "Biểu đồ chính đặt hai cột ấy cạnh nhau ở tháng cuối.",
+  "Cả hai vẫn đã trả cùng tổng một trăm năm mươi sáu triệu cho chi chung.",
+  "Nhưng hai cột riêng không cao bằng nhau.",
+  "Đây là điểm thấy được.",
+  "Nghiên cứu của Vogler, Lyonette và Wiggins năm hai nghìn không trăm lẻ tám gọi một cách tổ chức là quản lý độc lập.",
+  "Ở đó, mỗi người có thể giữ thu nhập riêng và chịu phần mục chi đã định.",
+  "“Công bằng” trong cách nói ấy có thể là góp bằng nhau, dù thu nhập khác nhau.",
+  "Đó là mô tả một cách tổ chức, không phải bảng chấm điểm.",
+  "Nó không xếp hạng.",
+  "Trong ví dụ giả định, mười ba triệu chiếm gần tám mươi bảy phần trăm lương Thảo.",
+  "Cũng mười ba triệu chỉ chiếm năm mươi hai phần trăm lương Nam.",
+  "Hai tỷ lệ này xuất hiện như hai chấm trên cùng một hàng.",
+  "Chúng giải thích vì sao con số bằng nhau có thể nặng khác nhau.",
+  "Nhưng biểu đồ chưa trả lời ai phải đổi cách.",
+  "Nó chỉ hoàn thành ví thứ nhất: cùng góp một số tạo ra hai số dư hai và mười hai."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "VÍ THỨ NHẤT\nCÙNG GÓP MỘT SỐ",
+   "sub": "VÍ DỤ GIẢ ĐỊNH",
+   "vid": "6963962",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": 0
+  },
+  {
+   "type": "photo",
+   "img": "ai01",
+   "at": 1,
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.5,
+    0.32
+   ],
+   "reveal": {
+    "kind": "circle",
+    "at": 1,
+    "d": 0.9
+   },
+   "label": {
+    "k": "VÍ DỤ GIẢ ĐỊNH",
+    "v": "THẢO 15 TRIỆU · NAM 25 TRIỆU",
+    "at": [
+     1,
+     "thảo"
+    ]
+   }
+  },
+  {
+   "type": "bars",
+   "at": 2,
+   "title": "THU NHẬP VÀ CHI CHUNG",
+   "unit": "TRIỆU/THÁNG · VÍ DỤ GIẢ ĐỊNH",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "items": [
+    {
+     "k": "THẢO",
+     "v": 15.0,
+     "lbl": "15",
+     "at": 2
+    },
+    {
+     "k": "NAM",
+     "v": 25.0,
+     "lbl": "25",
+     "at": 2
+    },
+    {
+     "k": "CHI CHUNG",
+     "v": 26.0,
+     "lbl": "26",
+     "at": [
+      2,
+      "sáu"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "stack",
+   "at": 3,
+   "title": "CHIA ĐỀU 26 TRIỆU",
+   "range": "TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH",
+   "unit": "TRIỆU",
+   "keys": [
+    {
+     "k": "THẢO"
+    },
+    {
+     "k": "NAM"
+    }
+   ],
+   "groups": [
+    {
+     "k": "MỖI THÁNG",
+     "vals": [
+      13.0,
+      13.0
+     ],
+     "at": 3
+    }
+   ],
+   "calls": [
+    {
+     "i": 0,
+     "text": "26 ÷ 2 = 13",
+     "at": 4
+    }
+   ]
+  },
+  {
+   "type": "waterfall",
+   "at": 7,
+   "title": "THẢO · CHIA ĐỀU",
+   "range": "TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH",
+   "unit": "TRIỆU",
+   "start": {
+    "k": "LƯƠNG THẢO",
+    "v": 15.0,
+    "at": 7
+   },
+   "steps": [
+    {
+     "k": "GÓP CHUNG",
+     "v": -13.0,
+     "at": [
+      7,
+      "mất"
+     ]
+    }
+   ],
+   "end": {
+    "k": "CÒN LẠI",
+    "at": 8,
+    "tone": "down"
+   },
+   "calls": [
+    {
+     "i": 2,
+     "text": "CÒN 2 TRIỆU",
+     "at": 8,
+     "tone": "down"
+    }
+   ]
+  },
+  {
+   "type": "waterfall",
+   "at": 9,
+   "title": "NAM · CHIA ĐỀU",
+   "range": "TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH",
+   "unit": "TRIỆU",
+   "start": {
+    "k": "LƯƠNG NAM",
+    "v": 25.0,
+    "at": 9
+   },
+   "steps": [
+    {
+     "k": "GÓP CHUNG",
+     "v": -13.0,
+     "at": [
+      9,
+      "mất"
+     ]
+    }
+   ],
+   "end": {
+    "k": "CÒN LẠI",
+    "at": 10
+   },
+   "calls": [
+    {
+     "i": 2,
+     "text": "CÒN 12 TRIỆU",
+     "at": 10
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 11,
+   "title": "CÒN LẠI MỖI THÁNG",
+   "unit": "TRIỆU · VÍ DỤ GIẢ ĐỊNH",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "items": [
+    {
+     "k": "THẢO",
+     "v": 2.0,
+     "lbl": "2",
+     "at": 11
+    },
+    {
+     "k": "NAM",
+     "v": 12.0,
+     "lbl": "12",
+     "at": 11
+    },
+    {
+     "k": "CHÊNH LỆCH",
+     "v": 10.0,
+     "lbl": "10",
+     "at": 12,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "img": "ai04",
+   "at": 13,
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.42,
+    0.32
+   ],
+   "move": "in",
+   "veil": 0.35,
+   "kin": [
+    {
+     "text": "KHÔNG PHẢI LỖI TÍNH",
+     "at": 13,
+     "sm": true
+    },
+    {
+     "text": "KẾT QUẢ CỦA QUY TẮC",
+     "at": 14,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "race",
+   "at": 15,
+   "abs": true,
+   "unit": "TRIỆU",
+   "xlab": "THÁNG ",
+   "xstep": 3,
+   "dates": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+   ],
+   "title": "CHIA ĐỀU · 12 THÁNG",
+   "range": "CỘNG DỒN · TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH",
+   "series": [
+    {
+     "label": "THẢO",
+     "color": "#f472b6",
+     "vals": [
+      0.0,
+      2.0,
+      4.0,
+      6.0,
+      8.0,
+      10.0,
+      12.0,
+      14.0,
+      16.0,
+      18.0,
+      20.0,
+      22.0,
+      24.0
+     ]
+    },
+    {
+     "label": "NAM",
+     "color": "#38bdf8",
+     "vals": [
+      0.0,
+      12.0,
+      24.0,
+      36.0,
+      48.0,
+      60.0,
+      72.0,
+      84.0,
+      96.0,
+      108.0,
+      120.0,
+      132.0,
+      144.0
+     ]
+    }
+   ],
+   "calls": [
+    {
+     "s": 0,
+     "i": 12,
+     "text": "THẢO 24",
+     "at": [
+      15,
+      "để"
+     ]
+    },
+    {
+     "s": 1,
+     "i": 12,
+     "text": "NAM 144",
+     "at": 16
+    }
+   ]
+  },
+  {
+   "type": "stack",
+   "at": 17,
+   "title": "12 THÁNG: GÓP VÀ CÒN",
+   "range": "TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH",
+   "unit": "TRIỆU",
+   "keys": [
+    {
+     "k": "THẢO"
+    },
+    {
+     "k": "NAM"
+    }
+   ],
+   "groups": [
+    {
+     "k": "CÒN RIÊNG",
+     "vals": [
+      24.0,
+      144.0
+     ],
+     "at": 17
+    },
+    {
+     "k": "ĐÃ GÓP CHI CHUNG",
+     "vals": [
+      156.0,
+      156.0
+     ],
+     "at": 18
+    }
+   ],
+   "calls": [
+    {
+     "i": 0,
+     "text": "24 ≠ 144",
+     "at": 19,
+     "tone": "down"
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 21,
+   "title": "QUẢN LÝ ĐỘC LẬP",
+   "srcnote": "NGUỒN: VOGLER, LYONETTE & WIGGINS · 2008",
+   "rows": [
+    {
+     "k": "NGHIÊN CỨU",
+     "v": "VOGLER, LYONETTE & WIGGINS · 2008",
+     "at": 21
+    },
+    {
+     "k": "THU NHẬP",
+     "v": "MỖI NGƯỜI GIỮ PHẦN RIÊNG",
+     "at": 22
+    },
+    {
+     "k": "MỤC CHI",
+     "v": "MỖI NGƯỜI CHỊU PHẦN ĐÃ ĐỊNH",
+     "at": [
+      22,
+      "chịu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 23,
+   "vid": "6963484",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "“CÔNG BẰNG”",
+     "at": 23,
+     "sm": true
+    },
+    {
+     "text": "GÓP BẰNG NHAU",
+     "at": [
+      23,
+      "góp"
+     ],
+     "acc": true
+    },
+    {
+     "text": "mô tả, không chấm điểm",
+     "at": 24,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "dots",
+   "at": 26,
+   "title": "LƯƠNG THẢO: 15 CHẤM",
+   "total": 15,
+   "cols": 15,
+   "srcnote": "MỖI CHẤM = 1 TRIỆU · VÍ DỤ GIẢ ĐỊNH",
+   "groups": [
+    {
+     "from": 0,
+     "n": 13,
+     "cls": "red",
+     "label": "GÓP 13 ≈ 86,7% LƯƠNG",
+     "at": 26
+    },
+    {
+     "from": 13,
+     "n": 2,
+     "cls": "hollow",
+     "label": "CÒN 2",
+     "at": [
+      26,
+      "lương"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "dots",
+   "at": 27,
+   "title": "LƯƠNG NAM: 25 CHẤM",
+   "total": 25,
+   "cols": 25,
+   "srcnote": "MỖI CHẤM = 1 TRIỆU · VÍ DỤ GIẢ ĐỊNH",
+   "groups": [
+    {
+     "from": 0,
+     "n": 13,
+     "cls": "red",
+     "label": "GÓP 13 = 52% LƯƠNG",
+     "at": 27
+    },
+    {
+     "from": 13,
+     "n": 12,
+     "cls": "hollow",
+     "label": "CÒN 12",
+     "at": [
+      27,
+      "lương"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 28,
+   "title": "13 TRIỆU NẶNG BAO NHIÊU?",
+   "unit": "% LƯƠNG ĐEM GÓP · VÍ DỤ GIẢ ĐỊNH",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "items": [
+    {
+     "k": "THẢO",
+     "v": 86.7,
+     "lbl": "86,7%",
+     "at": 28,
+     "acc": true
+    },
+    {
+     "k": "NAM",
+     "v": 52.0,
+     "lbl": "52%",
+     "at": [
+      28,
+      "chấm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 30,
+   "vid": "6963478",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "AI PHẢI ĐỔI CÁCH?",
+     "at": 30,
+     "sm": true
+    },
+    {
+     "text": "VÍ THỨ NHẤT: CÒN 2 VÀ 12",
+     "at": [
+      31,
+      "hai"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "VÍ THỨ NHẤT · CÙNG GÓP MỘT SỐ"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.1
+ }
+}

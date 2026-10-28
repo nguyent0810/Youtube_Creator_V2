@@ -1,0 +1,268 @@
+{
+ "title": "Khóa lịch, mở khung tính",
+ "lines": [
+  {
+   "t": "Lịch của chị Hà bắt đầu ở không triệu và đóng ở năm phẩy sáu triệu.",
+   "p": 0.8
+  },
+  "Ba phẩy năm triệu là bảy đám cưới trong ví dụ giả định.",
+  "Hai phẩy một triệu là bảy dịp khác trong ví dụ giả định.",
+  "Cộng lại thành năm phẩy sáu triệu trong cả năm.",
+  "Trên biểu đồ thác, cột đầu là lương tháng mười hai triệu.",
+  "Cột thứ hai trừ ba phẩy năm triệu cho nhóm cưới.",
+  "Cột thứ ba trừ hai phẩy một triệu cho các dịp khác.",
+  "Cột cuối ghi tổng phong bì năm phẩy sáu triệu.",
+  "Biểu đồ này không nói chị Hà lấy toàn bộ phong bì từ một tháng lương.",
+  "Nó chỉ đặt hai thước đo cạnh nhau để dễ nhìn tỷ lệ.",
+  "Năm phẩy sáu chia mười hai là bốn mươi sáu phẩy sáu bảy phần trăm.",
+  "Vì thế, năm phẩy sáu triệu gần bằng một nửa tháng lương của chị Hà.",
+  "Đó là vòng chính đã mở ở đầu video.",
+  "Không phải một phong bì làm lịch nặng.",
+  "Là nhiều phong bì nhỏ, ở nhiều tháng, chạy chung một bộ đếm.",
+  "Nếu chị Hà đặt trần sáu triệu cho ví dụ, sau tổng năm phẩy sáu triệu còn không phẩy bốn triệu.",
+  "Sáu trừ năm phẩy sáu bằng không phẩy bốn.",
+  "Nhưng trần bốn, năm hay sáu triệu đều chỉ là ô ngân sách giả định.",
+  "Không ô nào là mức nên chọn.",
+  "Khung tính đơn giản là số dịp nhân mức theo quan hệ, rồi cộng các dịp khác.",
+  "Bạn thay số dịp.",
+  "Bạn thay mức phong bì.",
+  "Bạn thay cả trần, nếu bạn muốn dùng trần.",
+  "Kết quả mới không trở thành phán xét.",
+  "Nó chỉ là lịch của bạn, thay vì lịch của chị Hà.",
+  "Nội dung giáo dục, không phải tư vấn đầu tư."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "PHẦN CUỐI",
+   "title": "KHÓA LỊCH,\nMỞ KHUNG TÍNH",
+   "sub": "5,6 TRIỆU · VÍ DỤ GIẢ ĐỊNH",
+   "vid": "7430218",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": 0
+  },
+  {
+   "type": "photo",
+   "img": "ai01",
+   "at": 1,
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.5,
+    0.18
+   ],
+   "move": "out"
+  },
+  {
+   "type": "waterfall",
+   "at": 3,
+   "title": "TỪ LƯƠNG TỚI PHONG BÌ",
+   "range": [
+    0,
+    12
+   ],
+   "unit": "TRIỆU",
+   "start": {
+    "k": "LƯƠNG",
+    "v": 12,
+    "at": 3
+   },
+   "steps": [
+    {
+     "k": "CƯỚI",
+     "v": -3.5,
+     "at": 3
+    },
+    {
+     "k": "DỊP KHÁC",
+     "v": -2.1,
+     "at": 3
+    }
+   ],
+   "end": {
+    "k": "PHONG BÌ",
+    "at": 3
+   },
+   "calls": [
+    {
+     "i": 3,
+     "text": "5,6 TRIỆU",
+     "at": 3
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 10,
+   "from": 0,
+   "to": 5.6,
+   "suffix": " TRIỆU",
+   "label": "TỔNG PHONG BÌ CẢ NĂM",
+   "calls": [
+    {
+     "i": 0,
+     "text": "5,6 TRIỆU",
+     "at": 10
+    }
+   ]
+  },
+  {
+   "type": "heat",
+   "at": 12,
+   "title": "LỊCH KHÉP LẠI",
+   "range": [
+    0,
+    1.1
+   ],
+   "unit": "TRIỆU",
+   "cols": 6,
+   "cells": [
+    {
+     "k": "T1",
+     "v": 0,
+     "at": 12
+    },
+    {
+     "k": "T2",
+     "v": 0.8,
+     "at": 12
+    },
+    {
+     "k": "T3",
+     "v": 0,
+     "at": 12
+    },
+    {
+     "k": "T4",
+     "v": 0.7,
+     "at": 12
+    },
+    {
+     "k": "T5",
+     "v": 0.5,
+     "at": 12
+    },
+    {
+     "k": "T6",
+     "v": 0,
+     "at": 12
+    },
+    {
+     "k": "T7",
+     "v": 0.3,
+     "at": 12
+    },
+    {
+     "k": "T8",
+     "v": 0.5,
+     "at": 12
+    },
+    {
+     "k": "T9",
+     "v": 0,
+     "at": 12
+    },
+    {
+     "k": "T10",
+     "v": 0.8,
+     "at": 12
+    },
+    {
+     "k": "T11",
+     "v": 1,
+     "at": 12
+    },
+    {
+     "k": "T12",
+     "v": 1,
+     "at": 12
+    }
+   ],
+   "total": {
+    "label": "CẢ NĂM",
+    "at": 12
+   },
+   "calls": [
+    {
+     "i": 11,
+     "text": "5,6 TRIỆU",
+     "at": 12
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 14,
+   "title": "TỔNG / LƯƠNG THÁNG",
+   "unit": "VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "TỔNG NĂM",
+     "v": 5.6,
+     "lbl": "5,6",
+     "at": 14
+    },
+    {
+     "k": "LƯƠNG THÁNG",
+     "v": 12,
+     "lbl": "12",
+     "at": 14
+    }
+   ],
+   "calls": [
+    {
+     "i": 0,
+     "text": "5,6",
+     "at": 14
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 19,
+   "title": "KHUNG TÍNH",
+   "rows": [
+    {
+     "k": "SỐ DỊP",
+     "v": "× MỨC",
+     "at": 19
+    },
+    {
+     "k": "CỘNG",
+     "v": "CÁC DỊP KHÁC",
+     "at": 19
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 23,
+   "text": "Bạn thay số nào\ntrong lịch của mình?"
+  },
+  {
+   "type": "kinetic",
+   "at": 25,
+   "items": [
+    {
+     "text": "ĐÓ LÀ LỊCH CỦA BẠN",
+     "at": 25,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "brand",
+   "at": 25,
+   "sub": "NỘI DUNG GIÁO DỤC · KHÔNG PHẢI TƯ VẤN ĐẦU TƯ"
+  }
+ ],
+ "hud": {
+  "k": "PHẦN CUỐI",
+  "t": "KHÓA LỊCH, MỞ KHUNG TÍNH"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

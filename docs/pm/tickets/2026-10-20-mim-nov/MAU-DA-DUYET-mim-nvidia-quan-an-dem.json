@@ -1,0 +1,274 @@
+{
+ "theme": "mim",
+ "title": "Quán ăn đêm năm 1993 và con chip dạy máy nhìn",
+ "description": "Năm 1993, ba kỹ sư lập Nvidia để làm chip vẽ game; theo lời Jensen Huang kể, họ quyết định ngay tại một quán Denny's ở San Jose. Gần hai mươi năm sau, tại Toronto, nghiên cứu sinh Alex Krizhevsky dạy một mạng nơ-ron nhận ảnh trên hai card đồ hoạ chơi game trong khoảng 5–6 ngày; tại cuộc thi ILSVRC 2012, tỉ lệ sai top-5 của nhóm là 15,3%, đội hạng hai 26,2%. Giọng đọc tổng hợp; video Pexels.\n\nBản đầy đủ: https://youtu.be/Es4bogrdk-c",
+ "tags": [
+  "nvidia",
+  "jensen huang",
+  "alexnet",
+  "gpu",
+  "học sâu",
+  "trí tuệ nhân tạo",
+  "card đồ hoạ",
+  "mind in the machine"
+ ],
+ "kicker": "NGÀNH AI",
+ "sub": "NVIDIA · 1993",
+ "acc": [
+  "quán",
+  "đêm",
+  "nhìn"
+ ],
+ "lines": [
+  "Năm 1993, ba kỹ sư ngồi quán ăn đêm.",
+  "Ở quán Denny's, theo lời Jensen Huang kể, họ quyết định lập công ty làm chip vẽ game.",
+  "Không ai trong quán hôm ấy nhắc tới trí tuệ nhân tạo.",
+  "Chip ấy tính màu hai triệu điểm ảnh, sáu mươi lần mỗi giây.",
+  "Gần hai mươi năm sau, ở Toronto, Alex Krizhevsky lắp hai card game vào máy trong phòng ngủ.",
+  "Anh dạy máy nhìn ảnh suốt năm sáu ngày.",
+  "Máy sai mười lăm phẩy ba phần trăm. Đội hạng hai sai hai mươi sáu.",
+  "Con chip sinh ra để vẽ game vừa dạy một cỗ máy nhìn.",
+  "Chuyện bắt đầu ở một quán ăn đêm."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "clip": "pexels:34679319",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "1993",
+     "at": [
+      0,
+      "Năm"
+     ],
+     "acc": true,
+     "size": 300
+    },
+    {
+     "text": "BA KỸ SƯ · QUÁN ĂN ĐÊM",
+     "at": [
+      0,
+      "ba"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "DENNY'S · SAN JOSE",
+     "at": [
+      1,
+      "Denny's"
+     ],
+     "sm": true,
+     "size": 64
+    },
+    {
+     "text": "LẬP CÔNG TY",
+     "at": [
+      1,
+      "quyết"
+     ],
+     "acc": true
+    },
+    {
+     "text": "theo lời Jensen Huang kể",
+     "at": [
+      1,
+      "theo"
+     ],
+     "sm": true,
+     "size": 52
+    },
+    {
+     "text": "CHIP VẼ GAME",
+     "at": [
+      1,
+      "chip"
+     ]
+    }
+   ],
+   "clip": "pexels:39890727",
+   "veil": 0.6
+  },
+  {
+   "type": "question",
+   "at": 2,
+   "text": "Không ai nhắc tới AI."
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "CHIP VẼ GAME LÀM GÌ",
+   "cards": [
+    {
+     "k": "MỖI KHUNG HÌNH",
+     "v": "2 TRIỆU ĐIỂM ẢNH",
+     "at": [
+      3,
+      "hai"
+     ]
+    },
+    {
+     "k": "MỖI GIÂY",
+     "v": "60 LẦN",
+     "at": [
+      3,
+      "sáu"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "VÍ DỤ MÀN HÌNH FULL HD"
+  },
+  {
+   "type": "date",
+   "at": 4,
+   "date": "2012",
+   "day": "TORONTO",
+   "sub": {
+    "text": "ALEX KRIZHEVSKY · PHÒNG NGỦ",
+    "at": [
+     4,
+     "Alex"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    4,
+    "hai",
+    1
+   ],
+   "clip": "pexels:36175909",
+   "veil": 0.45,
+   "items": [
+    {
+     "text": "HAI CARD",
+     "at": [
+      4,
+      "hai",
+      1
+     ],
+     "acc": true
+    },
+    {
+     "text": "chơi game · trong phòng ngủ",
+     "at": [
+      4,
+      "game"
+     ],
+     "sm": true,
+     "size": 56
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "to": 6,
+   "suffix": " NGÀY",
+   "label": "HUẤN LUYỆN LIÊN TỤC · 5–6 NGÀY",
+   "until": [
+    5,
+    "sáu"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 6,
+   "title": "TỈ LỆ SAI · ILSVRC 2012",
+   "rows": [
+    {
+     "k": "MÁY CỦA ANH",
+     "v": "15,3%",
+     "at": [
+      6,
+      "mười"
+     ]
+    },
+    {
+     "k": "ĐỘI HẠNG HAI",
+     "v": "26,2%",
+     "at": [
+      6,
+      "hai",
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "CHIP VẼ GAME",
+   "sub": "VỪA DẠY MÁY NHÌN"
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "clip": "pexels:35153704",
+   "veil": 0.6,
+   "items": [
+    {
+     "text": "MỘT QUÁN ĂN ĐÊM",
+     "at": [
+      8,
+      "quán"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bắt đầu từ đây",
+     "at": [
+      8,
+      "bắt"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Nvidia (thành lập 05/04/1993; cuộc họp tại Denny's, nguồn thuật lại; ngày cuộc họp 1992 hay 1993 các nguồn khác nhau)",
+  "https://www.nbcconnecticut.com/news/business/money-report/jensen-huang-started-his-2-trillion-company-nvidia-at-a-dennys-breakfast-booth/3282560/",
+  "NeurIPS 2012, Krizhevsky–Sutskever–Hinton (hai GTX 580, 5–6 ngày; 15,3% vs 26,2%) — data/long/mim-ai-gpu/factcheck.md dòng 7"
+ ],
+ "say": {
+  "denny's": "Đen-nì",
+  "nvidia": "En-vi-đi-a",
+  "jensen": "Giên-xần",
+  "huang": "Hoàng",
+  "toronto": "Tô-rôn-tô",
+  "krizhevsky": "Cri-dép-xki",
+  "alex": "A-lếch",
+  "san": "San",
+  "jose": "Hô-xê",
+  "game": "ghêm",
+  "card": "các"
+ },
+ "rules": 2,
+ "mix": true,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.4,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.5,
+   "7": 0.4
+  }
+ }
+}

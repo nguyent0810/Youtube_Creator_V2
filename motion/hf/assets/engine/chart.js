@@ -187,9 +187,24 @@ window.chartScenes = ({ B, tl, el, esc, px, common, W, H, C, bg }) => {
     tl.fromTo(o, { p: 0 }, { p: 0.999, duration: a1 - a0, ease: "none", immediateRender: true, onUpdate: draw }, a0);
     tl.to(o, { p: 1, duration: 0.01, onUpdate: draw }, a1);
     tl.add(() => {}, a1 + 0.02); draw();
+    // calls (thẻ thư viện highlight_callout, 27/10/2026): khoanh đúng điểm đang đọc -- [{i, s?: chỉ số series, text, at, tone?}].
+    // Vòng tròn + nhãn viên thuốc nối bằng nét đứt; mỗi lúc một khoanh sáng, khoanh trước mờ đi (sfx_long: thud ở at).
+    const cg = [];
+    (s.calls || []).forEach((c) => { const q = s.series[c.s || 0], v = q.vals[c.i], cx = x(c.i), cy = y(v);
+      const col = BK_TONE[c.tone || "gold"] || c.tone, grp = svgEl("g", { opacity: 0 }, g);
+      svgEl("circle", { cx, cy, r: 30, fill: "none", stroke: col, "stroke-width": 5 }, grp);
+      svgEl("circle", { cx, cy, r: 30, fill: "none", stroke: col, "stroke-opacity": 0.3, "stroke-width": 16 }, grp);
+      const up = cy > (T + PB) / 2, ly = up ? cy - 120 : cy + 120, lx = Math.min(R - 40, Math.max(L + 200, cx)), wpx = [...c.text].length * 24 + 48;
+      svgEl("line", { x1: cx, y1: cy + (up ? -30 : 30), x2: lx, y2: ly + (up ? 32 : -32), stroke: col, "stroke-width": 3, "stroke-dasharray": "6 6" }, grp);
+      svgEl("rect", { x: lx - wpx / 2, y: ly - 32, width: wpx, height: 64, rx: 32, fill: "#0a1426", "fill-opacity": 0.94, stroke: col, "stroke-width": 3 }, grp);
+      const t = svgEl("text", { x: lx, y: ly + 14, class: "cdmk", fill: col, "text-anchor": "middle" }, grp); t.textContent = c.text;
+      tl.fromTo(grp, { opacity: 0, scale: 0.6, transformOrigin: `${cx}px ${cy}px` }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2.4)", immediateRender: true }, c.at);
+      if (cg.length) tl.to(cg[cg.length - 1], { opacity: 0.25, duration: 0.3 }, c.at);
+      cg.push(grp); });
     const hd = el("div", "cdhd", `<b>${esc(s.title || "100 TRIỆU, CHIA ĐỀU 5 KÊNH")}</b><span>${esc(s.range || "")}</span>`, d);
     tl.fromTo(hd, { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.35, immediateRender: false }, s.t0 + 0.1);
-    el("div", "cdsrc", esc(s.source || "DỮ LIỆU: HOSE, SJC (QUA VNSTOCK), COINGECKO · TIẾT KIỆM: LÃI ĐƠN GIẢ ĐỊNH · MINH HOẠ, KHÔNG PHẢI KHUYẾN NGHỊ"), d);
+    el("div", "cdsrc", esc(s.source || (A ? "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH · MINH HOẠ, KHÔNG PHẢI TƯ VẤN"
+      : "DỮ LIỆU: HOSE, SJC (QUA VNSTOCK), COINGECKO · TIẾT KIỆM: LÃI ĐƠN GIẢ ĐỊNH · MINH HOẠ, KHÔNG PHẢI KHUYẾN NGHỊ")), d);
     common(s, d);
   };
 
@@ -372,6 +387,107 @@ window.chartScenes = ({ B, tl, el, esc, px, common, W, H, C, bg }) => {
     const hd = el("div", "cdhd", `<b>${esc(s.title || "VỐN HOÁ HOSE · MỖI Ô MỘT CỔ PHIẾU")}</b><span>${esc(s.range || vdate(s.date || "") + " · DIỆN TÍCH Ô = VỐN HOÁ")}</span>`, d);
     tl.fromTo(hd, { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.35, immediateRender: false }, s.t0 + 0.1);
     el("div", "cdsrc", esc(s.source || SRC_HOSE), d);
+    common(s, d);
+  };
+
+  /* ---- 27/10/2026: ba cảnh biểu đồ cho lô Long CK (docs/pm/2026-10-27-ck-dung-hinh-hap-dan.md). Số do gen_scenes tính sẵn. ---- */
+  const tri = (v) => { const r = Math.round(v * 10) / 10, [i, f] = Math.abs(r).toFixed(1).split(".");
+    return (r < 0 ? "−" : "") + i.replace(/\B(?=(\d{3})+(?!\d))/g, ".") + (f !== "0" ? "," + f : ""); };
+  const head = (s, d, def) => { const hd = el("div", "cdhd", `<b>${esc(s.title || def)}</b><span>${esc(s.range || "")}</span>`, d);
+    tl.fromTo(hd, { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.35, immediateRender: false }, s.t0 + 0.1);
+    el("div", "cdsrc", esc(s.source || "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH · MINH HOẠ, KHÔNG PHẢI TƯ VẤN"), d); };
+  const svgT = (g, attrs, txt, cls = "cdax") => { const t = svgEl("text", { class: cls, ...attrs }, g); t.textContent = txt; return t; };
+
+  /* waterfall : thác tiền -- cột đầu là tổng, mỗi bước là một khoản cộng (+) hoặc trừ (−) lơ lửng, cột cuối là phần còn lại.
+     {title, range?, unit?: "TRIỆU", start:{k, v}, steps:[{k, v, at}], end?:{k, at, tone?}, calls?:[{i, text, at}], source?}
+     i trong calls: 0 = cột đầu, 1..n = bước, n+1 = cột cuối. sfx_long: tone ở start/mỗi bước, thud ở end. */
+  B.waterfall = (s, d) => {
+    const st = s.steps || [], cols = [{ k: s.start.k, a: 0, b: s.start.v, c: "#38bdf8", at: s.start.at ?? s.t0 + 0.4, lbl: tri(s.start.v) }];
+    let run = s.start.v;
+    st.forEach((q) => { const a = run; run += q.v; cols.push({ k: q.k, a, b: run, c: q.v < 0 ? "#f87171" : "#4ade80", at: q.at, lbl: (q.v < 0 ? "" : "+") + tri(q.v) }); });
+    if (s.end) cols.push({ k: s.end.k, a: 0, b: run, c: BK_TONE[s.end.tone || "gold"], at: s.end.at, lbl: tri(run), fin: true });
+    const L = 170, R = 1750, T = 230, PB = 800, n = cols.length, slot = (R - L) / n, bw = Math.min(190, slot * 0.62);
+    const hi = Math.max(...cols.map((c) => Math.max(c.a, c.b))) * 1.08, lo = Math.min(0, ...cols.map((c) => Math.min(c.a, c.b)));
+    const y = (v) => PB - (v - lo) / (hi - lo) * (PB - T), cx = (i) => L + slot * (i + 0.5);
+    const g = svgEl("svg", { class: "layer", viewBox: `0 0 ${W} ${H}` }, d);
+    svgEl("line", { x1: L - 20, x2: R + 20, y1: y(0), y2: y(0), stroke: "rgba(241,245,249,.45)", "stroke-width": 3 }, g);
+    if (s.unit) svgT(g, { x: L - 20, y: T - 30 }, s.unit);
+    const nodes = cols.map((c, i) => { const top = y(Math.max(c.a, c.b)), h = Math.max(4, Math.abs(y(c.a) - y(c.b))), grp = svgEl("g", {}, g);
+      const r = svgEl("rect", { x: cx(i) - bw / 2, y: top, width: bw, height: h, rx: 8, fill: c.c, "fill-opacity": c.fin ? 1 : 0.9 }, grp);
+      const v = svgT(grp, { x: cx(i), y: top - 20, "text-anchor": "middle", fill: c.c }, c.lbl, "cdmk");
+      const k = svgT(g, { x: cx(i), y: PB + 50, "text-anchor": "middle" }, c.k);
+      if (i && !c.fin) { const ln = svgEl("line", { x1: cx(i - 1) + bw / 2, x2: cx(i) - bw / 2, y1: y(c.a), y2: y(c.a), stroke: "rgba(241,245,249,.5)", "stroke-width": 2, "stroke-dasharray": "8 7" }, g);
+        tl.fromTo(ln, { opacity: 0 }, { opacity: 1, duration: 0.2, immediateRender: true }, c.at - 0.1); }
+      tl.fromTo(k, { opacity: 0 }, { opacity: 1, duration: 0.2, immediateRender: true }, s.t0 + 0.2 + 0.04 * i);
+      tl.fromTo(r, { scaleY: 0, transformOrigin: c.b >= c.a ? "50% 100%" : "50% 0%" }, { scaleY: 1, duration: 0.45, ease: "power3.out", immediateRender: true }, c.at);
+      tl.fromTo(v, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.3, immediateRender: true }, c.at + 0.3);
+      return { cx: cx(i), top, bot: top + h }; });
+    (s.calls || []).forEach((c) => { const q = nodes[c.i]; if (!q) return; const col = BK_TONE[c.tone || "gold"] || c.tone, grp = svgEl("g", {}, g);
+      svgEl("rect", { x: q.cx - bw / 2 - 14, y: q.top - 64, width: bw + 28, height: q.bot - q.top + 78, rx: 18, fill: "none", stroke: col, "stroke-width": 5 }, grp);
+      const wpx = [...c.text].length * 24 + 48, lx = Math.min(R - wpx / 2, Math.max(L + wpx / 2, q.cx)), ly = Math.max(T - 70, q.top - 110);
+      svgEl("rect", { x: lx - wpx / 2, y: ly - 32, width: wpx, height: 64, rx: 32, fill: "#0a1426", "fill-opacity": 0.94, stroke: col, "stroke-width": 3 }, grp);
+      svgT(grp, { x: lx, y: ly + 14, fill: col, "text-anchor": "middle" }, c.text, "cdmk");
+      tl.fromTo(grp, { opacity: 0 }, { opacity: 1, duration: 0.3, immediateRender: true }, c.at); });
+    head(s, d, "TIỀN ĐI ĐÂU");
+    common(s, d);
+  };
+
+  /* heat : lịch nhiệt -- mỗi ô một tháng (hoặc một mục), màu đậm theo số tiền, ô sáng lần lượt; bộ đếm cộng dồn bên dưới.
+     {title, range?, unit?: "TRIỆU", cols?: 6, cells:[{k: "T1", v, note?, at?}], drawAt?, until?, total?:{label, at}, calls?:[{i, text, at}], source?}
+     sfx_long: tick theo ô, thud ở total.at. */
+  B.heat = (s, d) => {
+    const cs = s.cells, n = cs.length, cols = s.cols || Math.min(6, n), rows = Math.ceil(n / cols), mx = Math.max(...cs.map((c) => c.v), 1e-9);
+    const GX = 170, GW = 1580, gap = 18, cw = (GW - gap * (cols - 1)) / cols, ch = Math.min(220, (560 - gap * (rows - 1)) / rows), GY = 220;
+    const a0 = s.drawAt ?? s.t0 + 0.5, a1 = s.until ?? Math.min(s.t1 - 1.2, a0 + 0.35 * n);
+    const tot = el("div", "htot", "", d); let sum = 0;
+    const boxes = cs.map((c, i) => { const x = GX + (i % cols) * (cw + gap), yy = GY + Math.floor(i / cols) * (ch + gap), k = c.v / mx;
+      const b = el("div", "hcell", `<i>${esc(c.k)}</i><b>${c.v ? tri(c.v) : "—"}</b>${c.note ? `<s>${esc(c.note)}</s>` : ""}`, d);
+      Object.assign(b.style, { left: px(x), top: px(yy), width: px(cw), height: px(ch) });
+      const at = c.at ?? a0 + (a1 - a0) * (i / n);
+      tl.fromTo(b, { opacity: 0, scale: 0.85, backgroundColor: "rgba(30,41,59,.7)" },
+        { opacity: 1, scale: 1, backgroundColor: c.v ? `rgba(251,191,36,${(0.14 + 0.78 * k).toFixed(3)})` : "rgba(30,41,59,.7)", duration: 0.3, ease: "power2.out", immediateRender: true }, at);
+      if (k > 0.55) tl.set(b, { color: "#1a1204" }, at + 0.15);
+      sum += c.v; tl.set(tot, { textContent: `${s.total ? s.total.label + " " : ""}${tri(sum)}${s.unit ? " " + s.unit : ""}` }, at);
+      return { x: x + cw / 2, y: yy + ch / 2 }; });
+    Object.assign(tot.style, { top: px(GY + rows * (ch + gap) + ((s.calls || []).length ? 78 : 20)) });
+    tl.fromTo(tot, { opacity: 0 }, { opacity: 1, duration: 0.3, immediateRender: true }, a0);
+    if (s.total && s.total.at != null) tl.fromTo(tot, { scale: 1 }, { scale: 1.12, duration: 0.25, yoyo: true, repeat: 1, immediateRender: false }, s.total.at);
+    (s.calls || []).forEach((c) => { const q = boxes[c.i]; if (!q) return; const ring = el("div", "hring", `<span>${esc(c.text)}</span>`, d);
+      Object.assign(ring.style, { left: px(q.x - cw / 2 - 10), top: px(q.y - ch / 2 - 10), width: px(cw + 20), height: px(ch + 20) });
+      tl.fromTo(ring, { opacity: 0, scale: 1.2 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)", immediateRender: false }, c.at); });
+    head(s, d, "MỘT NĂM, MƯỜI HAI THÁNG");
+    common(s, d);
+  };
+
+  /* stack : cột xếp chồng -- mỗi cột một nhóm (một cách chia / một tháng), các phần chồng lên nhau theo màu cố định.
+     {title, range?, unit?, keys:[{k: "VỢ", color?}], groups:[{k, vals:[…], at}], calls?:[{i, text, at}], source?}
+     sfx_long: tone ở mỗi group.at. */
+  B.stack = (s, d) => {
+    const keys = s.keys, gs = s.groups, n = gs.length, PAL = ["#f472b6", "#38bdf8", "#fbbf24", "#4ade80"];
+    const L = 220, R = 1500, T = 230, PB = 800, slot = (R - L) / n, bw = Math.min(200, slot * 0.58), mx = Math.max(...gs.map((q) => q.vals.reduce((a, b) => a + b, 0))) * 1.12;
+    const y = (v) => PB - v / mx * (PB - T);
+    const g = svgEl("svg", { class: "layer", viewBox: `0 0 ${W} ${H}` }, d);
+    svgEl("line", { x1: L - 20, x2: R + 10, y1: PB, y2: PB, stroke: "rgba(241,245,249,.45)", "stroke-width": 3 }, g);
+    if (s.unit) svgT(g, { x: L - 20, y: T - 30 }, s.unit);
+    const tops = gs.map((q, i) => { const x = L + slot * (i + 0.5); let acc = 0;
+      svgT(g, { x, y: PB + 50, "text-anchor": "middle" }, q.k);
+      q.vals.forEach((v, j) => { const col = keys[j].color || PAL[j % PAL.length], y0 = y(acc), y1 = y(acc + v), grp = svgEl("g", {}, g);
+        svgEl("rect", { x: x - bw / 2, y: y1, width: bw, height: Math.max(2, y0 - y1), fill: col, rx: j === q.vals.length - 1 ? 8 : 0 }, grp);
+        if (y0 - y1 > 44) svgT(grp, { x, y: (y0 + y1) / 2 + 13, "text-anchor": "middle" }, tri(v), "stv");
+        tl.fromTo(grp, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out", immediateRender: true }, q.at + 0.18 * j);
+        acc += v; });
+      const tt = svgT(g, { x, y: y(acc) - 22, "text-anchor": "middle", fill: "#f1f5f9" }, tri(acc), "cdmk");
+      tl.fromTo(tt, { opacity: 0 }, { opacity: 1, duration: 0.3, immediateRender: true }, q.at + 0.18 * q.vals.length);
+      return { x, y: y(acc) }; });
+    const lg = el("div", "stlg", keys.map((k, j) => `<p><i style="background:${k.color || PAL[j % PAL.length]}"></i>${esc(k.k)}</p>`).join(""), d);
+    tl.fromTo(lg, { opacity: 0, x: 30 }, { opacity: 1, x: 0, duration: 0.35, immediateRender: false }, s.t0 + 0.3);
+    (s.calls || []).forEach((c) => { const q = tops[c.i]; if (!q) return; const col = BK_TONE[c.tone || "gold"] || c.tone, grp = svgEl("g", {}, g);
+      svgEl("rect", { x: q.x - bw / 2 - 16, y: q.y - 60, width: bw + 32, height: PB - q.y + 76, rx: 18, fill: "none", stroke: col, "stroke-width": 5 }, grp);
+      const wpx = [...c.text].length * 24 + 48, lx = Math.min(R - wpx / 2 + 200, Math.max(L + wpx / 2, q.x));
+      svgEl("rect", { x: lx - wpx / 2, y: PB + 86, width: wpx, height: 64, rx: 32, fill: "#0a1426", "fill-opacity": 0.94, stroke: col, "stroke-width": 3 }, grp);
+      svgT(grp, { x: lx, y: PB + 132, fill: col, "text-anchor": "middle" }, c.text, "cdmk");
+      tl.fromTo(grp, { opacity: 0 }, { opacity: 1, duration: 0.3, immediateRender: true }, c.at); });
+    head(s, d, "AI GÓP BAO NHIÊU");
     common(s, d);
   };
 

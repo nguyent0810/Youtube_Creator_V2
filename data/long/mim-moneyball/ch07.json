@@ -1,0 +1,315 @@
+{
+ "title": "Tấm bảng đi khắp giải đấu",
+ "lines": [
+  {
+   "t": "Sau khi Michael Lewis xuất bản Moneyball, MLB viết rằng các câu lạc bộ ngày càng áp dụng những cách tiếp cận dựa trên dữ liệu để xây đội cạnh tranh.",
+   "p": 0.8
+  },
+  "Đây là một thay đổi rộng hơn một đội bóng và rộng hơn một nhân vật.",
+  "MLB nêu các xu hướng trên sân gồm dùng infield shift nhiều hơn, reliever ném mạnh hơn, và hitter kiên nhẫn nhưng có sức mạnh.",
+  "Infield shift là cách bố trí người phòng ngự lệch khỏi vị trí quen thuộc dựa trên xu hướng đánh bóng của đối thủ.",
+  "Reliever là pitcher thường vào sân thay giữa trận, còn hitter là người lên đánh.",
+  "Những xu hướng ấy là của toàn giải, không phải công lao riêng của Oakland.",
+  "MLB cũng mô tả analytics hiện đại ảnh hưởng tới gần như mọi quyết định chiến thuật trong baseball.",
+  "Nó là thói quen đo, so sánh, thử lại và chấp nhận rằng điều trông hiển nhiên có thể cần được kiểm chứng.",
+  "MLB mô tả cuộc cách mạng analytics bắt đầu từ thập niên 1990 và bùng lên đầu những năm 2000 khi Moneyball xuất hiện.",
+  "Đó là mô tả về một xu hướng, không phải lời khẳng định rằng chỉ một cuốn sách đã tự mình thay đổi baseball.",
+  "Họ để lại một câu hỏi vẫn còn dùng được ở bất cứ nơi nào nguồn lực hữu hạn.",
+  "Ta đang bỏ sót điều gì, chỉ vì nó chưa được kể bằng một con số đúng?",
+  "Trong đêm 4 tháng 9 năm 2002, cú home run của Hatteberg chốt tỷ số 12–11 và trận thắng thứ 20 liên tiếp.",
+  "Nhưng tấm bảng của chúng ta không dừng ở con số 20.",
+  "Nó có tám ô: mùa dài, ngân sách, lần lên gôn, câu hỏi cũ, cuộc tranh luận, phần bị cắt gọn, giới hạn của series ngắn và ảnh hưởng lan rộng.",
+  "Ô cuối cùng ghi: con số không thay bạn quyết định, nhưng nó có thể buộc bạn nhìn kỹ hơn trước khi quyết định.",
+  "Và đôi khi, đó mới là lợi thế khó mua nhất."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "7",
+   "k": "CHƯƠNG BẢY",
+   "title": "TẤM BẢNG ĐI\nKHẮP GIẢI ĐẤU",
+   "sub": "THẬP NIÊN 1990 → HIỆN ĐẠI",
+   "bg": "aerial",
+   "titleAt": [
+    0,
+    "michael"
+   ]
+  },
+  {
+   "type": "photo",
+   "at": [
+    0,
+    "dữ"
+   ],
+   "img": "ai03",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "CÁC CÂU LẠC BỘ",
+    "v": "NGÀY CÀNG ÁP DỤNG CÁCH TIẾP CẬN DỰA TRÊN DỮ LIỆU",
+    "at": [
+     0,
+     "dữ"
+    ]
+   },
+   "illus": "ẢNH MINH HỌA",
+   "credit": false
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    2,
+    "shift"
+   ],
+   "items": [
+    {
+     "text": "INFIELD SHIFT",
+     "at": [
+      2,
+      "shift"
+     ],
+     "acc": true
+    },
+    {
+     "text": "BỐ TRÍ PHÒNG NGỰ THEO XU HƯỚNG ĐÁNH BÓNG",
+     "at": [
+      2,
+      "shift"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "org",
+   "at": [
+    4,
+    "reliever"
+   ],
+   "nodes": [
+    {
+     "id": "rel",
+     "t": "RELIEVER",
+     "s": "NÉM MẠNH HƠN",
+     "at": [
+      4,
+      "reliever"
+     ]
+    },
+    {
+     "id": "hit",
+     "t": "HITTER",
+     "s": "KIÊN NHẪN · CÓ SỨC MẠNH",
+     "p": "rel",
+     "at": [
+      4,
+      "hitter"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": [
+    5,
+    "oakland"
+   ],
+   "text": "XU HƯỚNG TOÀN GIẢI",
+   "sub": "KHÔNG PHẢI CÔNG LAO RIÊNG CỦA OAKLAND"
+  },
+  {
+   "type": "broll",
+   "at": [
+    6,
+    "analytics"
+   ],
+   "vid": "7691559",
+   "veil": 0.62,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MINH HỌA PHÂN TÍCH TRONG MỘT PHÒNG HỌP",
+     "at": [
+      6,
+      "analytics"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    7,
+    "so"
+   ],
+   "items": [
+    {
+     "text": "ĐO · SO SÁNH · THỬ LẠI",
+     "at": [
+      7,
+      "so"
+     ],
+     "acc": true
+    },
+    {
+     "text": "ĐIỀU HIỂN NHIÊN CŨNG CẦN KIỂM CHỨNG",
+     "at": [
+      7,
+      "so"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": [
+    8,
+    "niên"
+   ],
+   "bg": "overhead",
+   "items": [
+    {
+     "year": "1990s",
+     "text": "ANALYTICS BẮT ĐẦU"
+    },
+    {
+     "year": "ĐẦU 2000s",
+     "text": "MONEYBALL XUẤT HIỆN"
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": [
+    10,
+    "hạn"
+   ],
+   "text": "TA ĐANG BỎ SÓT ĐIỀU GÌ\nCHỈ VÌ CHƯA ĐO ĐÚNG?"
+  },
+  {
+   "type": "date",
+   "at": [
+    12,
+    "năm"
+   ],
+   "day": "HATTEBERG HOME RUN",
+   "date": "04.09.2002",
+   "sub": {
+    "text": "12–11 · TRẬN THẮNG THỨ 20",
+    "at": [
+     12,
+     "năm"
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": [
+    14,
+    "tám"
+   ],
+   "title": "TẤM BẢNG CHỜ MỘT LẦN LÊN GÔN",
+   "srcnote": "MỖI CHƯƠNG THÊM MỘT Ô",
+   "rows": [
+    {
+     "k": "HỎI",
+     "v": "MỘT LẦN LÊN GÔN GIẢI THÍCH ĐƯỢC GÌ?",
+     "at": [
+      14,
+      "tám"
+     ]
+    },
+    {
+     "k": "1 · MÙA DÀI",
+     "v": "TIỀN ÍT · VẪN PHẢI THẮNG",
+     "at": [
+      14,
+      "tám"
+     ]
+    },
+    {
+     "k": "2 · LÊN GÔN",
+     "v": "ĐÈN PIN · KHÔNG PHẢI BẢN ĐỒ",
+     "at": [
+      14,
+      "tám"
+     ]
+    },
+    {
+     "k": "3 · CÂU HỎI",
+     "v": "DỮ LIỆU BẮT NIỀM TIN TRẢ LỜI",
+     "at": [
+      14,
+      "tám"
+     ]
+    },
+    {
+     "k": "4 · TRANH LUẬN",
+     "v": "NHIỀU NGƯỜI CÙNG KIỂM TRA",
+     "at": [
+      14,
+      "tám"
+     ]
+    },
+    {
+     "k": "5 · KHUNG HÌNH",
+     "v": "MỞ LẠI PHẦN BỊ CẮT GỌN",
+     "at": [
+      14,
+      "tám"
+     ]
+    },
+    {
+     "k": "6 · SERIES",
+     "v": "LOẠT NGẮN · VẪN BẤT NGỜ",
+     "at": [
+      14,
+      "tám"
+     ]
+    },
+    {
+     "k": "7 · LAN RỘNG",
+     "v": "NHÌN KỸ TRƯỚC KHI CHỌN",
+     "at": [
+      14,
+      "tám"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    15,
+    "quyết"
+   ],
+   "items": [
+    {
+     "text": "NHÌN KỸ HƠN",
+     "at": [
+      15,
+      "quyết"
+     ],
+     "acc": true
+    },
+    {
+     "text": "TRƯỚC KHI QUYẾT ĐỊNH",
+     "at": [
+      15,
+      "quyết"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "topic": "mim-moneyball",
+ "chapter": 7,
+ "hud": {
+  "k": "CHƯƠNG 07",
+  "t": "TẤM BẢNG ĐI KHẮP GIẢI ĐẤU"
+ }
+}

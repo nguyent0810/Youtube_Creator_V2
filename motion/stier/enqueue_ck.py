@@ -47,7 +47,7 @@ def bundle_for(slug: str, when_vn: str) -> Bundle:
     return Bundle(channel="CK", kind="short", slug=slug, script=" ".join(spec["lines"]), title=spec["title"],
                   description=desc, tags=spec["tags"][:15], thumbnail_text="", publish_at=when,
                   voice=spec.get("voice", "Ngọc Huyền"), bgm=music["file"], broll_queries=[],
-                  render={"engine": "casefile", "spec": f"data/stier/specs/{slug}.json"},
+                  render={"engine": "casefile", "spec": f"data/stier/specs/{slug}.json", **({"profile": "bang-tra"} if spec.get("profile") == "bang-tra" else {})},
                   source_note="; ".join(spec["sources"]))
 
 

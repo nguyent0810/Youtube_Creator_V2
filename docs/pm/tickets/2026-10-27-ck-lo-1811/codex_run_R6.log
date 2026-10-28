@@ -1,0 +1,840 @@
+Reading additional input from stdin...
+OpenAI Codex v0.164.0
+--------
+workdir: D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+model: gpt-5.6-terra
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR] (network access enabled)
+reasoning effort: medium
+reasoning summaries: none
+session id: 01a17b73-a99f-7802-9b22-bbfa20584c71
+--------
+user
+Làm ticket docs/pm/tickets/2026-10-27-ck-lo-1811/R6-i1-100-trieu.md từ đầu đến cuối. Tuân thủ AGENTS.md (đã nạp sẵn), nhất là 'Cấm tuyệt đối' và 'chỉ đọc đúng các file ticket chỉ định, không khám phá repo'. Trước khi báo xong phải chạy `python scripts/long_gate.py ck-i1-100-trieu-tiet-kiem-hay-vnindex --min-syl 1900` và nó phải in ĐẠT (trừ khi ticket nói là ticket nghiên cứu). Viết báo cáo vào file kết quả mà ticket chỉ định. Tiếng Việt.
+codex
+Mình sẽ bám đúng ticket và hai tài liệu long được quy định, rồi thực hiện toàn bộ các cổng kiểm bắt buộc trước khi ghi báo cáo.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw 'docs/pm/tickets/2026-10-27-ck-lo-1811/R6-i1-100-trieu.md'; Get-Content -Raw 'docs/codex/long-rules.md'; Get-Content -Raw 'docs/codex/long-cheatsheet.md'" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 128ms:
+# R6 â€” NGHIÃŠN Cá»¨U: `ck-i1-100-trieu-tiet-kiem-hay-vnindex`
+
+Äá»c trÆ°á»›c `docs/pm/tickets/2026-10-27-ck-lo-1811/00-CHUNG-R.md` vÃ  lÃ m Ä‘Ãºng luáº­t trong Ä‘Ã³. MÃ£ bÃ¡o cÃ¡o: `R6`.
+
+**Äá»c thÃªm:**
+- má»¥c **B3** trong `docs/pm/tickets/2026-10-27-ck-lo-1811/00-CONTENT-BRIEF.md`;
+- `docs/codex/long-rules.md`, hai má»¥c cuá»‘i.
+
+## Dá»¯ liá»‡u cÃ³ sáºµn (khÃ´ng táº£i láº¡i)
+
+| File | Ná»™i dung |
+|---|---|
+| `data/ck/vnindex_1d_2016_2018.csv` | 01/12/2016 â†’ 05/10/2018 |
+| `data/ck/vnindex_1d.csv` | 08/10/2018 â†’ 06/10/2026 |
+
+Cáº£ hai lÃ  giÃ¡ Ä‘Ã³ng cá»­a VN-Index tá»«ng phiÃªn, nguá»“n HOSE qua vnstock/VCI. Äá»‰nh 09/04/2018 Ä‘Ã³ng cá»­a 1.204,33. Äá»c báº±ng `csv` trong Python. ÄÆ°á»£c viáº¿t `data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/analysis.py` Ä‘á»ƒ tÃ­nh thá»­.
+
+## Cáº§n gom
+
+1. **LÃ£i tiáº¿t kiá»‡m 12 thÃ¡ng bÃ¬nh quÃ¢n theo tá»«ng nÄƒm, 2018â€“2026.**
+   - Nguá»“n: NgÃ¢n hÃ ng NhÃ  nÆ°á»›c, Cá»¥c Thá»‘ng kÃª, bÃ¡o lá»›n dáº«n sá»‘ bÃ¬nh quÃ¢n thá»‹ trÆ°á»ng. **KhÃ´ng nÃªu tÃªn ngÃ¢n hÃ ng.**
+   - Ghi rÃµ Ä‘Ã¢y lÃ  má»©c bÃ¬nh quÃ¢n hay khoáº£ng.
+2. **Láº¡m phÃ¡t CPI bÃ¬nh quÃ¢n tá»«ng nÄƒm 2018â€“2026**, nguá»“n Cá»¥c Thá»‘ng kÃª / GSO, Ä‘á»ƒ quy vá» sá»©c mua.
+3. **Giá»›i háº¡n cá»§a backtest:**
+   - VN-Index lÃ  **chá»‰ sá»‘ giÃ¡**, khÃ´ng gá»“m cá»• tá»©c;
+   - phÃ­ giao dá»‹ch vÃ  thuáº¿ 0,1% khi bÃ¡n;
+   - khÃ´ng ai mua Ä‘Æ°á»£c "chá»‰ sá»‘" trá»±c tiáº¿p; náº¿u nháº¯c quá»¹ chá»‰ sá»‘ thÃ¬ chá»‰ nÃ³i chung, khÃ´ng nÃªu tÃªn quá»¹.
+4. **Má»‘c tháº­t cho cÃ¢u chuyá»‡n, má»—i má»‘c cÃ³ ngÃ y vÃ  sá»‘ Ä‘iá»ƒm tá»« dá»¯ liá»‡u:**
+   - Ä‘á»‰nh 04/2018;
+   - Ä‘Ã¡y Covid 03/2020;
+   - Ä‘á»‰nh 01/2022;
+   - Ä‘Ã¡y 11/2022;
+   - 04/2025;
+   - phiÃªn cuá»‘i cÃ³ trong dá»¯ liá»‡u.
+5. **Ba cÃ¡ch tÃ­nh thá»­** (`analysis.py`, gáº¯n VÃ Dá»¤ GIáº¢ Äá»ŠNH), cÃ¹ng 100 triá»‡u:
+   - (a) gá»­i tiáº¿t kiá»‡m 12 thÃ¡ng, cuá»™n má»—i nÄƒm theo lÃ£i bÃ¬nh quÃ¢n;
+   - (b) bá» má»™t láº§n vÃ o VN-Index ngÃ y 09/04/2018;
+   - (c) chia Ä‘á»u mua má»—i thÃ¡ng trong 24 thÃ¡ng tá»« 04/2018.
+
+   Vá»›i má»—i cÃ¡ch, ghi:
+   - giÃ¡ trá»‹ cuá»‘i;
+   - lÃºc Ã¢m sÃ¢u nháº¥t (ngÃ y vÃ  %);
+   - sá»‘ thÃ¡ng giÃ¡ trá»‹ dÆ°á»›i 100 triá»‡u;
+   - thá»i gian vá» láº¡i vá»‘n.
+6. **Kiá»ƒm trÃ¹ng:**
+   - `ck-e1-mua-deu-moi-thang` (3 triá»‡u má»—i thÃ¡ng, 8 nÄƒm, tá»« 10/2018);
+   - `ck-2026-kenh-dau-tu` (100 triá»‡u chia 5 kÃªnh nÄƒm 2026).
+
+   BÃ i nÃ y khÃ¡c á»Ÿ chá»— báº¯t Ä‘áº§u **Ä‘Ãºng Ä‘á»‰nh 2018** vÃ  so **má»™t láº§n** vá»›i **mua Ä‘á»u** vá»›i **tiáº¿t kiá»‡m**. Ghi rÃµ chá»— khÃ¡c.
+7. Cold open, 3 tiÃªu Ä‘á», 2 thumbnail theo brief B3. Cáº­p nháº­t náº¿u sá»‘ tháº­t khÃ¡c.
+8. 8â€“10 clip Pexels ngang, trung tÃ­nh. KhÃ´ng báº£ng giÃ¡ Ä‘á»c Ä‘Æ°á»£c, khÃ´ng logo.
+
+# Luáº­t Long cho agent sáº£n xuáº¥t (chi tiáº¿t, chuyá»ƒn tá»« AGENTS.md ngÃ y 26/10/2026)
+
+Äá»c cÃ¹ng `docs/codex/long-cheatsheet.md`.
+
+### áº¢nh AI khi khÃ´ng cÃ³ áº£nh tá»± do (tá»« 26/10/2026)
+
+Cáº£nh cáº§n minh hoáº¡ mÃ  khÃ´ng cÃ³ áº£nh PD/CC0/CC BY (vÃ­ dá»¥ cáº£nh trong phÃ²ng lÃ m viá»‡c nÄƒm 1962, hay má»™t váº­t Ä‘Ã£ máº¥t) thÃ¬ **khÃ´ng tá»± táº¡o áº£nh**. Ghi prompt vÃ o `data/long/<topic>/ai_prompts.md` Ä‘á»ƒ chá»§ kÃªnh nhá» bot táº¡o.
+
+**Äá»‹nh dáº¡ng má»™t má»¥c:**
+
+```
+#### ai_01.png â€” <cáº£nh dÃ¹ng á»Ÿ chNN, cÃ¢u sá»‘ N>
+- Prompt (tiáº¿ng Anh): <mÃ´ táº£ chi tiáº¿t: bá»‘i cáº£nh, thá»i ká»³, Ã¡nh sÃ¡ng, bá»‘ cá»¥c, phong cÃ¡ch>
+- Khung: 16:9, 1920x1080
+- Cáº¥m: chá»¯ hoáº·c sá»‘ trong áº£nh, logo, khuÃ´n máº·t nháº­n ra Ä‘Æ°á»£c cá»§a ngÆ°á»i tháº­t
+- Phong cÃ¡ch: <vÃ­ dá»¥ "painterly editorial illustration, muted 1960s palette">
+```
+
+**Quy táº¯c:**
+- **NgÆ°á»i tháº­t: láº¥y dÃ¡ng gá»‘c, khÃ´ng váº½ máº·t** (chá»§ kÃªnh, 26/10/2026):
+  - ÄÆ°á»£c váº½ ngÆ°á»i cÃ³ tháº­t (Johnson, Glennâ€¦) theo **dÃ¡ng gá»‘c** trong áº£nh tÆ° liá»‡u: vÃ³c ngÆ°á»i, kiá»ƒu tÃ³c, trang phá»¥c, Ä‘á»“ váº­t, bá»‘i cáº£nh Ä‘Ãºng thá»i ká»³.
+  - Chá»‰ váº½ á»Ÿ **gÃ³c nghiÃªng quay Ä‘i hoáº·c tá»« phÃ­a sau**, khÃ´ng tháº¥y rÃµ máº·t.
+  - Trong prompt, ghi áº£nh tÆ° liá»‡u tham chiáº¿u (URL Commons/NASA trong `facts.md`) vÃ  mÃ´ táº£ dÃ¡ng cá»¥ thá»ƒ. VÃ­ dá»¥: "woman in 1960s cat-eye glasses and cardigan, seen from behind at a desk with mechanical calculator".
+  - Máº·t ngÆ°á»i tháº­t chá»‰ dÃ¹ng áº£nh tÆ° liá»‡u PD.
+- **Phong cÃ¡ch:** minh hoáº¡ hoáº·c tranh váº½, **khÃ´ng giáº£ áº£nh tÆ° liá»‡u**, Ä‘á»ƒ ngÆ°á»i xem khÃ´ng nháº§m lÃ  tÆ° liá»‡u tháº­t.
+- **KhÃ´ng gáº¯n nhÃ£n AI:** khÃ´ng thÃªm nhÃ£n "AI" trÃªn mÃ n hÃ¬nh hay trong mÃ´ táº£, vÃ¬ báº£n thÃ¢n áº£nh Ä‘Ã£ cÃ³ chá»¯ kÃ½ AI (chá»§ kÃªnh quyáº¿t Ä‘á»‹nh ngÃ y 26/10/2026).
+- **ÄÆ°á»ng dáº«n:**
+  - Chá»§ kÃªnh tháº£ áº£nh vÃ o `motion/hf/assets/long/<topic>/img/ai/ai_NN.png`.
+  - Engine chá»‰ Ä‘á»c `output/long/<topic>/img/aiNN.jpg` kÃ¨m `.json`. Claude cháº¡y `python scripts/ai_img_import.py <topic>` Ä‘á»ƒ chÃ©p áº£nh sang chá»— Ä‘Ã³.
+  - Tá»« 26/10, Claude cháº¡y `python scripts/ai_img_request.py <topic>`. Lá»‡nh nÃ y gá»­i `ai_prompts.md` cho bot táº¡o áº£nh qua webhook (khoÃ¡ Ä‘á»c tá»« registry User, xem `docs/tools/grokbot-webhook.md`), chá» áº£nh vá» rá»“i cháº¡y `ai_img_import`. **Agent sáº£n xuáº¥t khÃ´ng gá»i webhook**: chá»‰ viáº¿t prompt.
+  - Trong `IMGS`, khai key `aiNN` lÃ  `"EXT:ai:ai_NN"`.
+- **Ghi cÃ´ng:** cáº£nh dÃ¹ng áº£nh AI pháº£i cÃ³ `"credit": false`. Náº¿u thiáº¿u, engine in "áº¢NH: TÆ¯ LIá»†U Â· PHáº M VI CÃ”NG Cá»˜NG", tá»©c lÃ  gáº¯n nhÃ£n tÆ° liá»‡u cho tranh minh hoáº¡, sai sá»± tháº­t. NhÃ£n `illus` "áº¢NH MINH Há»ŒA" thÃ¬ giá»¯, vÃ¬ Ä‘Ã³ lÃ  nhÃ£n chuáº©n cho tranh minh hoáº¡.
+- **Khi chÆ°a cÃ³ áº£nh:** giá»¯ nguyÃªn cáº£nh vÃ  Ä‘Æ°á»ng dáº«n, rá»“i ghi trong bÃ¡o cÃ¡o "chá» N áº£nh AI". `html` hoáº·c `long_gate` cÃ³ thá»ƒ bÃ¡o thiáº¿u file; Ä‘iá»u Ä‘Ã³ cháº¥p nháº­n Ä‘Æ°á»£c cho tá»›i khi áº£nh vá».
+- **Giá»›i háº¡n:** tá»‘i Ä‘a 6 áº£nh AI cho má»™t bÃ i 9â€“11 phÃºt. Æ¯u tiÃªn áº£nh tÆ° liá»‡u tháº­t.
+
+### Quy trÃ¬nh Long (theo máº«u `data/long/mim-ke-huy-diet-petrov`, `mim-google-maps-kal007`)
+
+Äá»c trÆ°á»›c:
+- `motion/long/README.md`, `RETENTION.md`, `SOURCES.md`;
+- `docs/pm/2026-10-23-mim-long-moi.md`;
+- `docs/pm/so-that-bai.md`.
+
+CÃ¡c bÆ°á»›c:
+1. Viáº¿t `script.md` vÃ  `factcheck.md` (nguá»“n lÃ  URL Ä‘Ã£ má»Ÿ).
+2. Cháº¡y `python motion/long/script_lines.py <topic>`; pháº£i qua cá»•ng integrity.
+3. Viáº¿t `gen_scenes.py`, rá»“i cháº¡y `python data/long/<topic>/gen_scenes.py`, ra `spec.json` vÃ  `chNN.json`. Counter cÃ³ sá»‘ 1000â€“2100 pháº£i khai `"year": true|false`.
+4. Cháº¡y `python motion/long/studio_lint.py <topic> --strict`; pháº£i ra 0 lá»—i.
+5. Cháº¡y `python motion/long/build_long.py <topic> tts`, rá»“i `... html`. Sá»­a má»i lá»—i lint mÃ  `html` bÃ¡o.
+6. Cháº¡y `python motion/long/clip_sheet.py <topic>`, xem áº£nh clip sheet; clip sai nghÄ©a hoáº·c lá»™ logo thÃ¬ thay.
+7. Chá»‰ render khi ticket cho phÃ©p: `build_long.py <topic> render`, rá»“i `final`.
+8. Dá»±ng thumbnail `motion/long/thumbs/<topic>_t1.html`, rá»“i cháº¡y `python motion/long/thumb.py <topic> t1`.
+
+### Cá»•ng cháº¥t lÆ°á»£ng (báº¯t buá»™c, tá»« 26/10/2026)
+
+CÃ¡c cá»•ng lint chá»‰ lÃ  má»©c sÃ n ká»¹ thuáº­t. TrÆ°á»›c khi bÃ¡o xong má»™t Long, pháº£i cháº¡y:
+
+```
+python scripts/long_gate.py <topic> --min-syl 1900
+```
+
+Lá»‡nh pháº£i in **Äáº T**. CÃ¡c ngÆ°á»¡ng Ä‘Æ°á»£c Ä‘o trÃªn bÃ i máº«u Petrov vÃ  KAL 007:
+
+| NgÆ°á»¡ng | GiÃ¡ trá»‹ |
+|---|---|
+| Ã‚m tiáº¿t lá»i Ä‘á»c | â‰¥ 1.900 (â‰ˆ 9 phÃºt) |
+| Thá»i lÆ°á»£ng má»—i cáº£nh | â‰¤ 9 giÃ¢y |
+| Loáº¡i cáº£nh má»—i chÆ°Æ¡ng | â‰¥ 5 |
+| Má»™t clip dÃ¹ng láº¡i (bÃ i 9â€“12 phÃºt) | â‰¤ 2 láº§n |
+| Má»™t áº£nh dÃ¹ng láº¡i | â‰¤ 3 láº§n |
+| URL nguá»“n trong `factcheck.md` | â‰¥ 8 |
+| TiÃªu Ä‘á» | â‰¤ 60 kÃ½ tá»± |
+
+NgoÃ i ra: má»i nÄƒm trong ká»‹ch báº£n pháº£i cÃ³ trong `factcheck.md`, vÃ  khÃ´ng Ä‘Æ°á»£c cÃ³ cÃ¢u Ä‘á»‡m.
+
+**BÃ i máº«u Ä‘á»ƒ so:**
+- Petrov: 22,5 phÃºt; 179 cáº£nh (7,6 giÃ¢y/cáº£nh); Ã­t nháº¥t 7 loáº¡i cáº£nh má»—i chÆ°Æ¡ng; 15 áº£nh khÃ¡c nhau.
+- KAL 007: 10,5 phÃºt; 82 cáº£nh (7,7 giÃ¢y/cáº£nh); khÃ´ng dÃ¹ng clip, chá»‰ áº£nh vÃ  Ä‘á»“ hoáº¡ (báº£n Ä‘á»“, timeline, counter).
+
+Má»—i chÆ°Æ¡ng cá»§a hai bÃ i nÃ y cÃ³ 3â€“4 dá»¯ kiá»‡n cá»¥ thá»ƒ cÃ³ nguá»“n.
+
+### Lá»—i Ä‘Ã£ gáº·p (Ä‘á»«ng láº·p láº¡i)
+
+Thá»­ nghiá»‡m Codex T1/T1b, 26/10/2026:
+
+1. **ChÃ¨n cÃ¢u Ä‘á»‡m rá»—ng nghÄ©a cho qua tá»‰ lá»‡ cÃ¢u ngáº¯n cá»§a lint.** VÃ­ dá»¥: "Ráº¥t cháº­m.", "ÄÃ³ lÃ  cÃ¢u há»i khÃ³.". CÃ¢u ngáº¯n chá»‰ Ä‘áº·t sau má»™t phÃ¡n Ä‘á»‹nh hoáº·c khoáº£nh kháº¯c cáº£m xÃºc.
+2. **Bá»‹ yÃªu cáº§u bá» cÃ¢u Ä‘á»‡m thÃ¬ chá»‰ xoÃ¡, khÃ´ng viáº¿t ná»™i dung thay.** BÃ i tá»¥t tá»« 9 xuá»‘ng 5 phÃºt. Thiáº¿u Ä‘á»™ dÃ i thÃ¬ pháº£i **tÃ¬m thÃªm dá»¯ kiá»‡n cÃ³ nguá»“n**, khÃ´ng Ä‘Æ°á»£c Ä‘á»ƒ bÃ i ngáº¯n Ä‘i.
+3. **Äá»c má»™t ngÃ y cá»¥ thá»ƒ (18/3/1940) trong khi chÃ­nh `factcheck.md` ghi lÃ  chÆ°a chá»‘t Ä‘Æ°á»£c.**
+4. **Má»™t clip láº·p 8 láº§n; 9 phÃºt chá»‰ cÃ³ 18 cáº£nh vÃ  toÃ n chá»¯.**
+5. **Cold open liá»‡t kÃª tÃªn ngÆ°á»i thay vÃ¬ dá»±ng má»™t cáº£nh cÃ³ cÄƒng tháº³ng; cÃ¢u meta "HÃ´m nay mÃ¬nh khÃ´ng ká»ƒâ€¦".**
+6. **Coi viá»‡c qua lint lÃ  xong.** Xong nghÄ©a lÃ  `long_gate.py` in Äáº T **vÃ ** ná»™i dung Ä‘Ã¡ng xem.
+7. **Tháº» chÆ°Æ¡ng ghi sai trÆ°á»ng.** ÄÃ£ ghi `"number": "05"` thay cho `no`/`k`, nÃªn engine hiá»‡n chá»¯ "undefined" giá»¯a mÃ n hÃ¬nh á»Ÿ cáº£ 8 chÆ°Æ¡ng. Tháº» chÆ°Æ¡ng Ä‘Ãºng (theo `mim-ke-huy-diet-petrov/ch05.json`):
+
+   ```json
+   {"type":"chapter","no":"5","k":"CHÆ¯Æ NG NÄ‚M","title":"â€¦","sub":"<má»‘c>","bg":"<áº£nh>","titleAt":[0,"<tá»«>"]}
+   ```
+
+   Má»—i `chNN.json` cÅ©ng pháº£i cÃ³ `"hud": {"k": "CHÆ¯Æ NG 05", "t": "<TIÃŠU Äá»€>"}`. Thiáº¿u `hud` thÃ¬ `describe.py` cháº¿t vÃ  mÃ´ táº£ khÃ´ng cÃ³ danh sÃ¡ch chÆ°Æ¡ng.
+8. **Má»™t khuÃ´n cáº£nh cho má»i chÆ°Æ¡ng.** Má»™t khuÃ´n 9 cáº£nh Ä‘Æ°á»£c dÃ¹ng láº¡i á»Ÿ cáº£ 8 chÆ°Æ¡ng, nÃªn cÃ¹ng má»™t dÃ²ng chá»¯ hiá»‡n 8 láº§n. Má»—i cáº£nh pháº£i minh hoáº¡ Ä‘Ãºng cÃ¢u Ä‘ang Ä‘á»c, vÃ  chá»¯ trÃªn mÃ n hÃ¬nh láº¥y tá»« dá»¯ kiá»‡n cá»§a chÃ­nh chÆ°Æ¡ng Ä‘Ã³. MÃ´-tÃ­p láº·p chá»‰ Ä‘Æ°á»£c lÃ m báº±ng `ledger` cÃ³ tiÃªu Ä‘á» cá»‘ Ä‘á»‹nh, má»—i chÆ°Æ¡ng thÃªm má»™t dÃ²ng má»›i.
+9. **QuÃªn báº£ng `SAY` vÃ  Ä‘á»ƒ `spec.youtube` trá»‘ng.** Pháº£i viáº¿t ngay tá»« Ä‘áº§u, theo máº«u Petrov vÃ  KAL:
+   - `SAY` phiÃªn Ã¢m má»i tÃªn nÆ°á»›c ngoÃ i, viáº¿t táº¯t (TNMOC, NASAâ€¦) vÃ  sá»‘ ráº¥t lá»›n.
+   - `spec.youtube` gá»“m: `publish_at`, `playlist`, `category`, `thumb`, `summary`, `more`, `chapter_titles`, `sources` (â‰¥ 8 URL cÃ´ng khai), `tags`, `hashtags`, `video_credits`.
+
+**NghiÃªn cá»©u trÆ°á»›c, viáº¿t sau:** khi ticket chia Ä‘Ã´i, ticket nghiÃªn cá»©u chá»‰ gom kho dá»¯ kiá»‡n cÃ³ URL (`facts.md`). Ticket viáº¿t chá»‰ dÃ¹ng dá»¯ kiá»‡n trong kho Ä‘Ã³.
+
+
+## Chiáº¿n lÆ°á»£c Long 45 ngÃ y (chá»§ kÃªnh, 27/10/2026), Ã¡p cho MIM vÃ  CK
+
+ToÃ n vÄƒn á»Ÿ `docs/pm/2026-10-27-chien-luoc-long-45-ngay.md`.
+
+- **Äá»™ dÃ i:** máº·c Ä‘á»‹nh 10â€“15 phÃºt (2.100â€“3.200 Ã¢m tiáº¿t). Chá»‰ lÃ m 20â€“30 phÃºt khi chá»§ Ä‘á» Ä‘á»§ ná»™i dung. KhÃ´ng Ä‘á»™n, khÃ´ng láº·p lá»i dáº«n.
+- **Má»™t cÃ¢u há»i trung tÃ¢m má»—i bÃ i**, ghi á»Ÿ Ä‘áº§u `script.md`. ChÆ°Æ¡ng cuá»‘i tráº£ lá»i Ä‘Ãºng cÃ¢u Ä‘Ã³.
+- **Má»‘c cáº¥u trÃºc:**
+  - 0â€“30 giÃ¢y: hook, tá»©c tÃ¬nh huá»‘ng, bÃ­ áº©n hoáº·c mÃ¢u thuáº«n. KhÃ´ng má»Ÿ báº±ng Ä‘á»‹nh nghÄ©a hay lá»‹ch sá»­.
+  - 30 giÃ¢y Ä‘áº¿n 2 phÃºt: bá»‘i cáº£nh, vÃ  vÃ¬ sao ngÆ°á»i xem nÃªn quan tÃ¢m.
+  - Cá»© 3â€“5 phÃºt cÃ³ má»™t **bÆ°á»›c tiáº¿n láº­p luáº­n**: báº±ng chá»©ng má»›i, gÃ³c nhÃ¬n Ä‘á»‘i láº­p, pháº£n biá»‡n hoáº·c há»‡ quáº£. Ghi cÃ¡c bÆ°á»›c nÃ y vÃ o báº£ng "BÆ°á»›c láº­p luáº­n" Ä‘áº§u `script.md`.
+  - Pháº§n káº¿t: tráº£ lá»i, tá»•ng há»£p, vÃ  Ä‘iá»u ngÆ°á»i xem rÃºt ra Ä‘Æ°á»£c.
+- **5 cÃ¢u trÆ°á»›c khi viáº¿t** (ghi vÃ o Ä‘áº§u `script.md`):
+  1. NgÆ°á»i xem lÃ  ai?
+  2. Há» tÃ² mÃ² hay lo Ä‘iá»u gÃ¬?
+  3. VÃ¬ sao chá»n video nÃ y trÃªn Home?
+  4. Thumbnail truyá»n má»™t Ã½ nÃ o?
+  5. TiÃªu Ä‘á» khá»›p vá»›i 30 giÃ¢y Ä‘áº§u tháº¿ nÃ o?
+- **TiÃªu Ä‘á»:** khÃ´ng Ä‘áº·t nhÆ° tÃªn bÃ i há»c hay bÃ¡o cÃ¡o, khÃ´ng liá»‡t kÃª. DÃ¹ng cÃ¢u há»i, nghá»‹ch lÃ½, há»‡ quáº£, nhÆ°ng khÃ´ng giáº­t tÃ­t sai sá»± tháº­t.
+- **CK:** má»—i bÃ i ghi rÃµ nguá»“n, giai Ä‘oáº¡n, phÆ°Æ¡ng phÃ¡p, giáº£ Ä‘á»‹nh vÃ  giá»›i háº¡n káº¿t luáº­n. KhÃ´ng suy lá»£i nhuáº­n tÆ°Æ¡ng lai tá»« quÃ¡ khá»©.
+
+### Cáº­p nháº­t "Ãp dá»¥ng ngay" (chá»§ kÃªnh, 27/10/2026, sau khi xem CD Media - Why?, Há»c viá»‡n BÃ² vÃ  Gáº¥u, KIáº¾N THá»¨C THÃš Vá»Š, Anh Ba TÃ i ChÃ­nh)
+
+- **Content Brief báº¯t buá»™c trÆ°á»›c khi sáº£n xuáº¥t.** Thiáº¿u brief thÃ¬ khÃ´ng viáº¿t ká»‹ch báº£n. Máº«u: `docs/pm/tickets/2026-10-27-ck-lo-1811/00-CONTENT-BRIEF.md`. Brief gá»“m:
+  - nhu cáº§u ngÆ°á»i xem, cÃ¢u há»i trung tÃ¢m, gÃ³c tiáº¿p cáº­n khÃ¡c biá»‡t;
+  - 3 tiÃªu Ä‘á» vÃ  2 Ã½ thumbnail;
+  - hook 30 giÃ¢y;
+  - cáº¥u trÃºc, nguá»“n dá»¯ liá»‡u, Ä‘á»™ dÃ i Ä‘á» xuáº¥t.
+- **KhÃ´ng má»Ÿ báº±ng nhÃ¢n váº­t giáº£ Ä‘á»‹nh**, kiá»ƒu "Lan vÃ  Minh", "Tuáº¥n vÃ  Khoa". CÅ©ng khÃ´ng má»Ÿ báº±ng Ä‘á»‹nh nghÄ©a hay lá»‹ch sá»­ dÃ i dÃ²ng.
+  - CÃ¢u Ä‘áº§u pháº£i lÃ  má»™t trong ba thá»©: sá»± kiá»‡n cÃ³ tháº­t kÃ¨m ngÃ y, con sá»‘ tháº­t cÃ³ nguá»“n, hoáº·c cÃ¢u há»i tháº­t cá»§a ngÆ°á»i xem.
+  - VÃ­ dá»¥ giáº£ Ä‘á»‹nh chá»‰ vÃ o tá»« CH01 trá»Ÿ Ä‘i, vÃ  nÃ³i rÃµ lÃ  vÃ­ dá»¥.
+- **Cáº¥u trÃºc documentary:** hook â†’ váº¥n Ä‘á» â†’ bá»‘i cáº£nh â†’ báº±ng chá»©ng vÃ  dá»¯ liá»‡u â†’ nghá»‹ch lÃ½ hoáº·c bÆ°á»›c ngoáº·t â†’ phÃ¢n tÃ­ch â†’ káº¿t luáº­n. KhÃ´ng cháº¡y slide chá»¯ liÃªn tá»¥c.
+- **Thumbnail:**
+  - 3â€“6 chá»¯ lá»›n, má»™t hÃ¬nh hoáº·c má»™t cáº·p Ä‘á»‘i láº­p.
+  - **KhÃ´ng ghi "VÃ Dá»¤ GIáº¢ Äá»ŠNH"** trÃªn thumbnail; giáº£ Ä‘á»‹nh thÃ¬ nÃ³i rÃµ trong video.
+  - KhÃ´ng dÃ¹ng biá»ƒu Ä‘á»“ nhá» nhiá»u chá»¯, khÃ´ng dÃ¹ng hÃ¬nh khÃ´ng liÃªn quan.
+- **áº¢nh:** Æ°u tiÃªn tÆ° liá»‡u tháº­t (sá»± kiá»‡n, nhÃ¢n váº­t) khi cÃ³ quyá»n dÃ¹ng. KhÃ´ng giáº£ lÃ m áº£nh tÆ° liá»‡u: áº£nh AI luÃ´n mang nhÃ£n áº¢NH MINH Há»ŒA.
+- **Äá»™ dÃ i thá»­ nghiá»‡m:** MIM 10â€“15 phÃºt, CK 8â€“13 phÃºt. Chá»‰ lÃ m 20â€“30 phÃºt khi chá»§ Ä‘á» tháº­t sá»± cáº§n.
+
+# Cheatsheet dá»±ng Long MIM (cho Codex, Ä‘á»c thay engine)
+
+**KhÃ´ng Ä‘á»c** `motion/long/build_long.py`, `motion/hf/assets/engine/*`, `motion/stier/*`, `factory/*`, `pexels.py` hay thÆ° má»¥c cá»§a bÃ i khÃ¡c. Má»i thá»© cáº§n biáº¿t Ä‘á»u cÃ³ trong cheatsheet nÃ y vÃ  trong **má»™t file máº«u**:
+
+> `data/long/mim-katherine-johnson/gen_scenes.py`. BÃ i nÃ y Ä‘Ã£ qua cá»•ng, render vÃ  Ä‘Äƒng. **ChÃ©p nguyÃªn file nÃ y lÃ m khung.** Giá»¯ cÃ¡c helper á»Ÿ dÃ²ng 57â€“163 vÃ  `main()`. Chá»‰ thay pháº§n ná»™i dung bÃªn dÆ°á»›i.
+
+## Thay nhá»¯ng gÃ¬ trong khung
+
+| Khá»‘i | Thay báº±ng |
+|---|---|
+| `TOPIC`, `TITLE` (â‰¤ 60 kÃ½ tá»±, má»™t dáº¥u `:`) | Cá»§a bÃ i má»›i |
+| `SAY` | PhiÃªn Ã¢m má»i tÃªn nÆ°á»›c ngoÃ i, viáº¿t táº¯t vÃ  sá»‘ lá»›n trong lá»i Ä‘á»c. KhoÃ¡ viáº¿t thÆ°á»ng. VÃ­ dá»¥: `"nasa": "Na-sa"` |
+| `IMGS` | áº¢nh Commons `"File:â€¦"` (Ä‘Ã£ kiá»ƒm PD/CC0/CC BY) hoáº·c `"EXT:ai:ai_NN"` cho áº£nh AI |
+| `AI_PATH`, `STAND` | Sá»‘ áº£nh AI cá»§a bÃ i (â‰¤ 6); `STAND` = áº£nh tÆ° liá»‡u thay táº¡m cho tá»«ng áº£nh AI |
+| `GEO` | Báº£n Ä‘á»“: `countries`, `context`, `bbox [lon_min, lat_min, lon_max, lat_max]`, `pins [{name, lon, lat, label}]` |
+| `CHAPTER_TITLES` | `ch00`â€“`ch07`, tiáº¿ng Viá»‡t cÃ³ dáº¥u |
+| `LEDGER`, `ROWS` | MÃ´-tÃ­p cá»§a bÃ i: má»™t tiÃªu Ä‘á», má»—i chÆ°Æ¡ng thÃªm 1 dÃ²ng |
+| `ch00()`â€“`ch07()` | Cáº£nh cá»§a tá»«ng chÆ°Æ¡ng (má»¥c dÆ°á»›i) |
+| `make_spec()` | Äá»§ 11 trÆ°á»ng `youtube`, Ä‘á»•i `publish_at`; giá»¯ `"say": SAY`, `imgs`, `geo` |
+
+## Helper: chá»¯ kÃ½ vÃ  Ã½ nghÄ©a
+
+**Neo thá»i gian:** `a(line, word)` neo cáº£nh vÃ o cÃ¢u `line` cá»§a chÆ°Æ¡ng, táº¡i tá»« `word`. `word` pháº£i lÃ  chá»¯ **cÃ³ tháº­t trong cÃ¢u Ä‘Ã³**, khÃ´ng pháº£i sá»‘ vÃ  khÃ´ng pháº£i chá»¯ cÃ³ trong `SAY`.
+
+| Helper | DÃ¹ng khi |
+|---|---|
+| `chapter(no, k, title, sub, bg, title_at)` | Cáº£nh Ä‘áº§u má»—i chÆ°Æ¡ng. `k = "CHÆ¯Æ NG Má»˜T"`; `sub` = má»‘c cÃ³ nguá»“n; `bg` = key áº£nh |
+| `photo(img, at, key, value, kin=None)` | áº¢nh tÆ° liá»‡u hoáº·c áº£nh AI. áº¢nh AI tá»± cÃ³ `illus` + `credit: False` |
+| `print_scene(img, at, head, key, value)` | áº¢nh Ä‘áº·t nhÆ° tá» in, cÃ³ cá»™t ghi chÃº |
+| `broll(vid, at, text)` | Clip Pexels (id sá»‘), cÃ³ nhÃ£n VIDEO MINH Há»ŒA |
+| `kinetic(at, text, small=None)` | Chá»¯ lá»›n Ä‘á»™ng |
+| `slam(at, text, sub)` | Má»™t con sá»‘ hoáº·c cá»¥m tá»« Ä‘áº­p máº¡nh |
+| `date(at, day, d, sub)` | Má»‘c ngÃ y lá»›n. `d = "20.02.1962"` (chá»¯ sá»‘ vÃ  dáº¥u cháº¥m); chá»¯ thÃ¬ Ä‘á»ƒ vÃ o `day` |
+| `counter(at, to, suffix, label, frm=0, year=False)` | Sá»‘ Ä‘áº¿m. NÄƒm thÃ¬ `year=True` |
+| `timeline(at, bg, items)` | DÃ²ng thá»i gian (xem cÃ¡ch dÃ¹ng trong máº«u) |
+| `org(at, nodes)` | SÆ¡ Ä‘á»“ ngÆ°á»i hoáº·c tá»• chá»©c |
+| `question(at, text)` | CÃ¢u há»i treo |
+| `ledger(n, at)` | Hiá»‡n mÃ´-tÃ­p tá»›i dÃ²ng `n` |
+| `{"type": "map", "at": â€¦, "geo": "<key GEO>"}` | Báº£n Ä‘á»“; máº«u cÃ³ á»Ÿ `ch01`/`ch05` cá»§a khung |
+
+## Luáº­t cáº£nh (cá»•ng `long_gate.py` sáº½ cháº·n náº¿u sai)
+
+- 60â€“80 cáº£nh, trung bÃ¬nh â‰¤ 9 giÃ¢y/cáº£nh, má»—i chÆ°Æ¡ng â‰¥ 5 loáº¡i cáº£nh.
+- KhÃ´ng dÃ²ng chá»¯ hiá»ƒn thá»‹ nÃ o láº·p > 2 láº§n. MÃ´-tÃ­p chá»‰ qua `ledger`.
+- Má»™t clip dÃ¹ng â‰¤ 2 láº§n, Ã­t nháº¥t 6 clip khÃ¡c nhau. Má»™t áº£nh dÃ¹ng â‰¤ 3 láº§n.
+- Má»—i cáº£nh minh hoáº¡ **cÃ¢u Ä‘ang Ä‘á»c**.
+
+## Clip Pexels
+
+- Táº£i: `python motion/long/pexels.py get <topic> <id> â€¦`. Chá»‰ dÃ¹ng id Ä‘Ã£ ghi trong `facts.md`. Tá»« 26/10/2026 táº£i tháº³ng theo id, khÃ´ng cáº§n `search` trÆ°á»›c.
+  - Lá»‡nh in "khÃ´ng cÃ³ báº£n ngang â‰¤1920 -- bá» qua" nghÄ©a lÃ  clip dá»c. Pháº£i thay báº±ng clip ngang. TÃ¬m báº±ng `pexels.py search <topic> "tá»« khoÃ¡"`, rá»“i `get` id má»›i.
+- SoÃ¡t: `python motion/long/clip_sheet.py <topic>`, má»Ÿ `output/long/<topic>/qa_clips.jpg` xem. Clip lá»™ chá»¯, logo hoáº·c sai nghÄ©a thÃ¬ thay.
+
+## BÃ i há»c Moneyball (26/10/2026)
+
+- **VÃ²ng ká»‹ch báº£n (W1):** pháº£i cháº¡y `script_lines.py` vÃ  `studio_lint.py --strict` rá»“i sá»­a háº¿t lá»—i cÃ¢u > 35 tiáº¿ng **ngay trong W1**. TÃ¡ch cÃ¢u sau khi Ä‘Ã£ dá»±ng cáº£nh thÃ¬ má»i neo phÃ­a sau bá»‹ lá»‡ch, sá»­a ráº¥t tá»‘n.
+- **Neo pháº£i tÄƒng dáº§n.** Cáº£nh sau pháº£i neo vÃ o tá»« Ä‘á»©ng **sau** neo cá»§a cáº£nh trÆ°á»›c, tÃ­nh theo (cÃ¢u, vá»‹ trÃ­ tá»«). Neo ngÆ°á»£c hoáº·c trÃ¹ng thÃ¬ engine bÃ¡o "cáº£nh quÃ¡ ngáº¯n".
+- **KhÃ´ng neo vÃ o chá»¯ sá»‘.** VÃ­ dá»¥ "11" khÃ´ng khá»›p vá»›i "11â€“0".
+- **"Qua html" nghÄ©a lÃ ** in Ä‘á»§ 8 dÃ²ng `chNN: â€¦ -> â€¦html` vÃ  khÃ´ng cÃ³ `Error`. Cháº¡y báº£n `--standin` mÃ  khÃ´ng Ä‘á»c lá»—i thÃ¬ chÆ°a tÃ­nh lÃ  qua.
+
+## BÃ i há»c Social Network vÃ  Moneyball sau render (26/10/2026)
+
+- **Ghim trong cáº£nh `map` pháº£i trÃ¹ng tÃªn ghim trong `GEO`.** VÃ­ dá»¥ `{"name": "Harvard"}` thÃ¬ `GEO` cÅ©ng pháº£i cÃ³ `"name": "Harvard"`. Sai tÃªn thÃ¬ engine lá»—i vÃ  **cáº£ chÆ°Æ¡ng Ä‘á»©ng hÃ¬nh á»Ÿ tháº» chÆ°Æ¡ng** (72 giÃ¢y). `long_gate.py` giá» cháº·n lá»—i nÃ y.
+- **Cáº£nh `question` hay `slam` khÃ´ng Ä‘Æ°á»£c kÃ©o dÃ i.** Cáº£nh káº¿ tiáº¿p pháº£i neo vÃ o cÃ¢u ngay sau, khÃ´ng Ä‘Æ°á»£c Ä‘á»ƒ má»™t tháº» chá»¯ tÄ©nh 20 giÃ¢y. Claude cháº¡y thÃªm `scripts/freeze_check.py` sau render: Ä‘á»©ng hÃ¬nh > 12 giÃ¢y lÃ  trÆ°á»£t.
+
+- **áº¢nh dá»c cÃ³ máº·t ngÆ°á»i** (chÃ¢n dung, áº£nh tháº») khi Ä‘Æ°a vÃ o cáº£nh `photo` hay `chapter` pháº£i cÃ³ `"focus": [0.5, 0.12â€“0.2]`, Ä‘á»ƒ khung 16:9 láº¥y Ä‘Ãºng vÃ¹ng máº·t. Thiáº¿u `focus` thÃ¬ engine cáº¯t giá»¯a áº£nh: bÃ i Macintosh chá»‰ cÃ²n vest vÃ  tay cá»§a Jobs. `long_gate.py` cáº£nh bÃ¡o trÆ°á»ng há»£p nÃ y.
+
+## Thá»© tá»± lá»‡nh
+
+Äáº·t `PYTHONIOENCODING=utf-8` cho má»i lá»‡nh.
+
+1. `python motion/long/script_lines.py <topic>`: Ä‘Æ°a lá»i Ä‘á»c tá»« `script.md` vÃ o `chNN.json`.
+2. `python data/long/<topic>/gen_scenes.py`, rá»“i cháº¡y láº¡i `script_lines.py`. `gen_scenes` ghi Ä‘Ã¨ `chNN.json` khÃ´ng kÃ¨m `lines`.
+3. `python motion/long/studio_lint.py <topic> --strict` pháº£i ra **0 lá»—i**.
+   - CÃ¢u quÃ¡ 35 tiáº¿ng thÃ¬ **tÃ¡ch thÃ nh 2 cÃ¢u** trong `script.md`, giá»¯ nguyÃªn Ã½, ká»ƒ cáº£ khi ká»‹ch báº£n Ä‘Ã£ Ä‘Æ°á»£c duyá»‡t.
+   - TÃ¡ch cÃ¢u xong, kiá»ƒm láº¡i neo `a(line, word)` cá»§a cÃ¡c cÃ¢u phÃ­a sau trong chÆ°Æ¡ng Ä‘Ã³, vÃ¬ sá»‘ thá»© tá»± cÃ¢u Ä‘Ã£ lá»‡ch.
+4. `python motion/long/build_long.py <topic> tts` cho **Ä‘á»§ má»i chÆ°Æ¡ng**: pháº£i cÃ³ `output/long/<topic>/chNN/timing.json` cho tá»«ng chÆ°Æ¡ng. Rá»“i cháº¡y `â€¦ html`. Náº¿u áº£nh AI chÆ°a cÃ³ thÃ¬ cháº¡y `gen_scenes.py --standin` Ä‘á»ƒ soÃ¡t html, sau Ä‘Ã³ cháº¡y láº¡i báº£n tháº­t.
+5. `python scripts/long_gate.py <topic> --min-syl 1900` pháº£i ra **Äáº T**.
+
+## Long CK: cáº£nh biá»ƒu Ä‘á»“ (theme "chart", 27/10/2026)
+
+Khung Ä‘á»ƒ chÃ©p cho CK: `data/long/ck-e6-luong-huu-rut-mot-lan/gen_scenes.py`. LÃ´ tá»« 18/11 pháº£i theo luáº­t trong `docs/pm/2026-10-27-ck-dung-hinh-hap-dan.md`:
+- biá»ƒu Ä‘á»“ tháº­t â‰¥ 35% sá»‘ cáº£nh, tháº» chá»¯ (`kinetic`, `question`, `slam`, `myth`) â‰¤ 25%;
+- khÃ´ng quÃ¡ 2 tháº» chá»¯ liá»n nhau;
+- biá»ƒu Ä‘á»“ Ä‘áº§u tiÃªn neo vÃ o cÃ¢u 1 hoáº·c cÃ¢u 2 cá»§a CH00 (trÆ°á»›c giÃ¢y 15).
+
+Má»i sá»‘ liá»‡u tÃ­nh sáºµn trong `gen_scenes` (láº¥y tá»« `results.json`). Má»‘c `at` lÃ  `a(line, word)` nhÆ° cÃ¡c cáº£nh khÃ¡c.
+
+| Cáº£nh | Chá»¯ kÃ½ | DÃ¹ng khi |
+|---|---|---|
+| `race` + `abs` (Ä‘Æ°á»ng) | `{"type":"race","abs":True,"unit":"TRIá»†U","xlab":"THÃNG ","xstep":1,"dates":[...nhÃ£n...],"title","range","series":[{"label","color","vals":[...]}],"calls":[{"i","s"?,"text","at"}]}` | Sá»‘ theo thÃ¡ng/nÄƒm. `calls` = khoanh Ä‘iá»ƒm thá»© `i` Ä‘ang Ä‘á»c |
+| `waterfall` (thÃ¡c) | `{"type":"waterfall","title","range","unit","start":{"k","v","at"},"steps":[{"k","v":-16,"at"}],"end":{"k","at"},"calls":[{"i","text","at"}]}` | Tá»•ng bá»‹ trá»«/cá»™ng dáº§n. `i`: 0 = cá»™t Ä‘áº§u, 1..n = bÆ°á»›c, n+1 = cá»™t cuá»‘i |
+| `heat` (lá»‹ch nhiá»‡t) | `{"type":"heat","title","range","unit","cols":6,"cells":[{"k":"T1","v","note"?,"at"?}],"total":{"label":"Cáº¢ NÄ‚M","at"},"calls":[{"i","text","at"}]}` | 12 thÃ¡ng / 12 má»¥c. Ã” sÃ¡ng láº§n lÆ°á»£t, bá»™ Ä‘áº¿m cá»™ng dá»“n |
+| `stack` (cá»™t chá»“ng) | `{"type":"stack","title","range","unit","keys":[{"k":"Vá»¢"},{"k":"CHá»’NG"},{"k":"QUá»¸ CHUNG"}],"groups":[{"k":"50/50","vals":[..],"at"}],"calls":[{"i","text","at"}]}` | So sÃ¡nh vÃ i cÃ¡ch chia. Má»—i cá»™t â‰¤ 4 pháº§n |
+| `bars`, `counter`, `units`, `timeline`, `ledger` | nhÆ° cÃ¡c Long CK trÆ°á»›c | |
+
+- Chá»¯ trÃªn biá»ƒu Ä‘á»“ in hoa, â‰¤ 26 kÃ½ tá»± cho `title`, â‰¤ 18 kÃ½ tá»± cho `text` cá»§a `calls`.
+- Xem máº«u Ä‘Ã£ render: `python motion/long/chart_demo.py waterfall|heat|stack|line-calls`. KhÃ´ng cáº§n render láº¡i.
+
+## Long CK: áº£nh nhÃ¢n váº­t vÃ  áº£nh tÄ©nh (27/10/2026)
+
+**áº¢nh nhÃ¢n váº­t VÃ Dá»¤ GIáº¢ Äá»ŠNH** (chá»‹ Lan, anh Minhâ€¦) do Grok Bot váº½. Ghi prompt vÃ o `data/long/<topic>/ai_prompts.md`, má»—i má»¥c má»™t tiÃªu Ä‘á» `## ai_NN.png â€” â€¦`.
+- Tá»‘i Ä‘a 8 áº£nh má»—i bÃ i.
+- NhÃ¢n váº­t lÃ  ngÆ°á»i hÆ° cáº¥u nÃªn **váº½ Ä‘Æ°á»£c máº·t**.
+- **DÃ²ng Ä‘áº§u file lÃ  "há»“ sÆ¡ nhÃ¢n váº­t":** tuá»•i, dÃ¡ng, tÃ³c, trang phá»¥c, mÃ u chá»§ Ä‘áº¡o. Má»i prompt chÃ©p láº¡i nguyÃªn há»“ sÆ¡ nÃ y Ä‘á»ƒ gÆ°Æ¡ng máº·t giá»‘ng nhau suá»‘t video (tháº» `object_continuity`).
+- Phong cÃ¡ch chung: áº£nh minh hoáº¡ Ä‘iá»‡n áº£nh, bá»‘i cáº£nh Viá»‡t Nam Ä‘á»i thÆ°á»ng, Ã¡nh sÃ¡ng áº¥m, khung 16:9, chá»«a khoáº£ng trá»‘ng má»™t bÃªn Ä‘á»ƒ Ä‘áº·t chá»¯.
+- Cáº¥m:
+  - chá»¯, logo hay biá»ƒn hiá»‡u Ä‘á»c Ä‘Æ°á»£c;
+  - tÃªn bá»‡nh viá»‡n, ngÃ¢n hÃ ng hay cÃ´ng ty;
+  - tiá»n giáº¥y tháº¥y rÃµ má»‡nh giÃ¡;
+  - cáº£nh mÃ¡u hoáº·c bá»‡nh náº·ng.
+- Trong `gen_scenes`: áº£nh AI dÃ¹ng `"EXT:ai:ai_NN"`. Cáº£nh `photo` cá»§a áº£nh AI pháº£i cÃ³ `"credit": False`, vÃ  náº¿u cÃ³ máº·t ngÆ°á»i thÃ¬ thÃªm `"focus": [x, y]` vÃ o máº·t.
+- Má»—i chÆ°Æ¡ng dÃ¹ng 1â€“2 áº£nh nhÃ¢n váº­t. Má»—i áº£nh hiá»‡n â‰¤ 3 láº§n trong cáº£ bÃ i. áº¢nh nhÃ¢n váº­t **khÃ´ng thay biá»ƒu Ä‘á»“**: nÃ³ má»Ÿ cáº£nh, cÃ²n sá»‘ liá»‡u váº«n náº±m á»Ÿ biá»ƒu Ä‘á»“ ngay sau Ä‘Ã³.
+
+**áº¢nh tÄ©nh cho háº¥p dáº«n.** Cáº£nh `photo` cÃ³ thÃªm 2 trÆ°á»ng tuá»³ chá»n, láº¥y tá»« tháº» thÆ° viá»‡n:
+
+| TrÆ°á»ng | Tháº» | DÃ¹ng khi |
+|---|---|---|
+| `"reveal": {"kind": "circle"\|"wipe", "at": a(â€¦), "d": 0.9}` | `image_reveal` / `mask_reveal` | áº¢nh má»Ÿ dáº§n, `circle` má»Ÿ tá»« tiÃªu Ä‘iá»ƒm. DÃ¹ng cho áº£nh Ä‘áº§u chÆ°Æ¡ng hoáº·c khoáº£nh kháº¯c hÃ© lá»™ |
+| `"zoom": {"x": 0.62, "y": 0.4, "z": 1.6, "at": a(â€¦), "d": 1.2}` | `camera_zoom` | PhÃ³ng vÃ o chi tiáº¿t (tá» hoÃ¡ Ä‘Æ¡n, phong bÃ¬, mÃ n hÃ¬nh) Ä‘Ãºng lÃºc lá»i Ä‘á»c nháº¯c tá»›i |
+
+Ken Burns cÃ³ sáºµn: `"move": "in"|"out"|"pan"`, kÃ¨m `"focus"`. KhÃ´ng Ä‘á»ƒ hai áº£nh tÄ©nh liá»n nhau cÃ¹ng má»™t kiá»ƒu chuyá»ƒn Ä‘á»™ng.
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; Get-Content -Raw -Encoding utf8 'docs/pm/tickets/2026-10-27-ck-lo-1811/00-CHUNG-R.md'; Get-Content -Raw -Encoding utf8 'docs/pm/tickets/2026-10-27-ck-lo-1811/00-CONTENT-BRIEF.md'" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 84ms:
+# Luật chung cho ticket NGHIÊN CỨU (R) của lô Long CK 18–25/11
+
+**Ticket nghiên cứu.** Không viết kịch bản, không chạy lint, render hay `long_gate`. Không grep repo, không đọc code.
+
+**Mỗi ticket chỉ ghi 2 file:**
+- `data/long/<topic>/facts.md`
+- `docs/pm/tickets/2026-10-27-ck-lo-1811/<mã>-ket-qua.md`
+
+**Chỉ đọc:**
+- ticket của mình và file này;
+- `AGENTS.md`, mục "CK";
+- `data/long/ck-e6-luong-huu-rut-mot-lan/factcheck.md`, chỉ 30 dòng đầu, để biết định dạng nguồn CK.
+
+## Luật cứng của kênh CK (Biểu Đồ Biết Nói)
+
+- **Không nêu tên** ngân hàng, công ty chứng khoán, công ty bảo hiểm, bệnh viện, hãng xe hay mã cổ phiếu. Cơ quan nhà nước thì được nêu tên, ví dụ "Bảo hiểm xã hội Việt Nam", "Bộ Y tế".
+- **Không khuyên** mua, bán, gửi, rút hay chọn gói nào. Chỉ đặt các phép tính cạnh nhau.
+- **Nhân vật** là **VÍ DỤ GIẢ ĐỊNH** có tên Việt, ví dụ "chị Lan, lương 15 triệu". Không bịa người thật.
+- **Luật và quy định:**
+  - ưu tiên văn bản gốc: Cổng TTĐT Chính phủ (chinhphu.vn), Công báo, vbpl.vn, trang của bộ hoặc cơ quan;
+  - báo chí chỉ là nguồn **vừa**;
+  - ghi rõ số hiệu văn bản, ngày hiệu lực và điều khoản;
+  - nếu luật mới thay luật cũ trong 2025–2026, ghi cả hai cùng ngày chuyển tiếp.
+
+## Cần gom
+
+1. **Dữ kiện:** ít nhất **28**, chia cho 7 chương, mỗi chương 3–5. Mỗi dòng gồm:
+   - khẳng định;
+   - ít nhất một số, ngày hoặc tên cụ thể;
+   - URL **đã mở được**, kèm tên trang;
+   - độ tin **mạnh** hoặc **vừa**.
+2. **Bộ số để vẽ biểu đồ:** ít nhất **8 bảng nhỏ**. Đây là phần quan trọng nhất, vì kênh dựng chủ yếu bằng biểu đồ. Mỗi bảng gồm:
+   - tên;
+   - loại biểu đồ đề xuất: `bars`, `line` (theo năm), `waterfall` (tổng bị trừ dần), `stack` (cột xếp chồng), `heat` (lịch 12 tháng), `dots` (mỗi chấm một người), `counter`;
+   - 3–12 điểm số, kèm đơn vị;
+   - nguồn hoặc cách tính.
+   - Số tự tính phải ghi công thức và giả định, đánh dấu **VÍ DỤ GIẢ ĐỊNH**.
+3. **Biểu đồ chính:** một biểu đồ lớn dần qua các chương, ví dụ tiền của nhân vật cộng dồn. Ghi mỗi chương thêm điểm nào.
+4. **Cold open:** 2 phương án. Mỗi phương án:
+   - mở bằng một con số tiền của nhân vật;
+   - có một nghịch lý;
+   - biểu đồ hiện trước giây 15;
+   - có một câu hỏi treo, đóng ở chương cuối.
+5. **Tiêu đề:** 3 bản, mỗi bản ≤ 60 ký tự, có một dấu `:` hoặc `?`. Cấu trúc: khoản tiền × mốc thời gian × nhóm người. Không dùng các từ "sập, toang, xoá sổ".
+6. **Thumbnail:** 2 ý. Mỗi ý là một con số lớn + một biểu đồ nhỏ, tối đa 3 chữ.
+7. **Clip:** 8–10 clip Pexels **ngang**, trung tính, kèm id và ghi chú "không logo/chữ/biển hiệu". Không có quầy giao dịch ngân hàng hay biển bệnh viện đọc được tên.
+8. **Rủi ro:** những câu dễ nghe như lời khuyên, và những số còn tranh cãi.
+
+## Báo cáo `<mã>-ket-qua.md`
+
+- Số dữ kiện theo chương, chia mạnh/vừa.
+- Danh sách 8+ bảng số.
+- Biểu đồ chính.
+- 2 cold open, 3 tiêu đề, 2 ý thumbnail.
+- Văn bản luật đã mở được và chưa mở được.
+
+# Content Brief lô Long CK 18/11 – 02/12 (bản 2, theo chỉ đạo 27/10 "Áp dụng ngay")
+
+**Vì sao có bản 2:** chỉ đạo 27/10 không cho mở bằng nhân vật giả định, mà phải mở bằng sự kiện có thật, con số đáng chú ý hoặc câu hỏi thật. Bản 1 của cả 5 bài đều mở bằng một nhân vật giả định.
+- Nhân vật giả định vẫn giữ, nhưng **dời xuống CH01 hoặc CH02** và nói rõ là ví dụ.
+- Ảnh nhân vật vẫn dùng, ở phần giải thích.
+- Thumbnail không ghi "VÍ DỤ GIẢ ĐỊNH".
+
+**Độ dài CK:** 8–13 phút, tức khoảng 1.700–2.700 âm tiết.
+
+**Nhóm chủ đề của lô:** 2 bài tài chính cá nhân, 2 bài đầu tư, 1 bài quyết định tài chính trong gia đình.
+
+---
+
+## B1 · Trợ cấp thất nghiệp: `ck-f1-tro-cap-that-nghiep`
+
+| Mục | Nội dung |
+|---|---|
+| Nhu cầu | Người sắp nghỉ hoặc vừa mất việc gõ "trợ cấp thất nghiệp", "nghỉ việc cần bao nhiêu tiền". Luật Việc làm 74/2025 có hiệu lực 01/01/2026, đây là diễn biến mới |
+| Câu hỏi trung tâm | Trợ cấp thất nghiệp thật sự đỡ được bạn bao nhiêu tháng, và còn hở bao nhiêu? |
+| Góc khác biệt | Kênh khác giảng thủ tục. Bài này đặt trợ cấp cạnh chi phí sống và vẽ khoản hở cộng dồn theo tháng |
+| 3 tiêu đề | (1) Nghỉ Việc Lương 15 Triệu: Trợ Cấp Thất Nghiệp Mấy Tháng? · (2) Mất Việc Năm 2026: Trợ Cấp Đỡ Bạn Được Bao Lâu? · (3) Hơn 330 Nghìn Người Nhận Trợ Cấp Thất Nghiệp: Đủ Sống Không? |
+| 2 thumbnail | (a) "60% LƯƠNG" cỡ lớn, một cột lương bị cắt còn 60%, nền tối · (b) "ĐỦ MẤY THÁNG?" cạnh một lịch xé còn vài tờ |
+| Hook 30 giây | **Sự thật:** 6 tháng đầu 2026 có 332.629 quyết định hưởng trợ cấp thất nghiệp (BHXH Việt Nam). **Nghịch lý:** trợ cấp là 60% lương, có trần, và chỉ kéo dài vài tháng dù bạn đóng nhiều năm. **Câu hỏi:** đóng 7 năm thì được mấy tháng? Câu trả lời có ở cuối |
+| Cấu trúc | Hook (số thật) → luật mới đổi gì → công thức 60% và trần vùng → ví dụ (chị Lan, ghi rõ giả định) → thác chi phí theo tháng → những trường hợp bị dừng hưởng → kết: khoản hở và việc người xem tự tính được |
+| Nguồn | Luật 74/2025/QH15; NĐ 293/2025/NĐ-CP; BHXH Việt Nam (số 6 tháng đầu 2026) |
+| Độ dài | khoảng 11 phút (hiện 2.351 âm tiết) |
+
+## B2 · Viện phí và bảo hiểm y tế: `ck-f2-vien-phi-bhyt`
+
+| Mục | Nội dung |
+|---|---|
+| Nhu cầu | Người xem gõ "viện phí", "bảo hiểm y tế chi trả bao nhiêu", "miễn viện phí toàn dân". Nghị quyết 72-NQ/TW (09/2025) đang là tin nóng |
+| Câu hỏi trung tâm | Có thẻ bảo hiểm y tế rồi, vì sao người Việt vẫn tự trả gần nửa tiền khám chữa bệnh? |
+| Góc khác biệt | Bóc từng lớp hoá đơn bằng biểu đồ thác, và nói rõ cái gì "miễn viện phí" chưa phủ tới |
+| 3 tiêu đề | (1) Có Bảo Hiểm Y Tế Vẫn Trả 40%: Tiền Viện Phí Đi Đâu? · (2) Nằm Viện 7 Ngày Tốn Bao Nhiêu? Bảo Hiểm Y Tế Trả Phần Nào · (3) Miễn Viện Phí Toàn Dân: Năm 2030 Bạn Còn Trả Gì? |
+| 2 thumbnail | (a) "94% CÓ THẺ" đối lập với "40% TỰ TRẢ", hai khối màu · (b) "AI TRẢ PHẦN NÀY?" trên một hoá đơn bị khoanh đỏ |
+| Hook 30 giây | **Sự thật:** hết 2024 có 94,29% dân số tham gia bảo hiểm y tế, nhưng năm 2025 tiền túi vẫn khoảng 40% tổng chi y tế (Bộ Y tế). **Nghịch lý:** gần như ai cũng có thẻ. **Câu hỏi:** phần 40% ấy nằm ở đâu trên hoá đơn? |
+| Cấu trúc | Hook → luật 51/2024 đổi gì → ba mức hưởng → ví dụ 7 ngày (anh Minh, ghi rõ giả định) → phần ngoài hoá đơn → lộ trình miễn viện phí tới 2030: đã có và chưa có → kết |
+| Nguồn | Luật 51/2024/QH15; NĐ 188/2025; NQ 72-NQ/TW; BHXH Việt Nam; Bộ Y tế |
+| Độ dài | khoảng 12,5 phút (hiện 2.694 âm tiết) |
+
+## B3 · MỚI, thay bài tiền mừng cưới: `ck-i1-100-trieu-tiet-kiem-hay-vnindex`
+
+**Vì sao đổi:**
+- Kho của bài tiền mừng cưới không có số thật nào về mức mừng, nên bài chủ yếu dựa vào ví dụ giả định. Chỉ đạo yêu cầu tránh điều này.
+- Lô còn thiếu bài đầu tư.
+- Bài tiền mừng cưới dời sang **đầu tháng 1/2027**, sát Tết Đinh Mùi (06/02/2027) và mùa cưới. Lúc đó cần nghiên cứu thêm khảo sát thật.
+
+| Mục | Nội dung |
+|---|---|
+| Nhu cầu | "Có 100 triệu nên làm gì", "gửi tiết kiệm hay đầu tư". Hai Long CK đang thắng đều là backtest số liệu thật (mua đều VN-Index 8 năm: 82 view; 11 đợt xếp hàng mua vàng: 55 view) |
+| Câu hỏi trung tâm | Cùng 100 triệu từ năm 2018: gửi tiết kiệm, bỏ một lần vào VN-Index, hay chia ra mua đều mỗi tháng, cách nào còn nhiều tiền nhất, và cách nào làm bạn mất ngủ nhiều nhất? |
+| Góc khác biệt | Dữ liệu thật từng phiên (chartdata: VN-Index + lãi tiết kiệm), có cả **giai đoạn tệ nhất** cho từng cách, không chỉ kết quả cuối |
+| 3 tiêu đề | (1) 100 Triệu Từ 2018: Gửi Tiết Kiệm Hay Mua VN-Index? · (2) Bỏ 100 Triệu Vào Chứng Khoán Đúng Đỉnh 2018: Giờ Còn Bao Nhiêu? · (3) Tiết Kiệm, Bỏ Một Lần, Hay Mua Đều: 8 Năm Dữ Liệu Thật |
+| 2 thumbnail | (a) 3 đường đua cỡ lớn, chữ "100 TRIỆU → ?" · (b) "ĐỈNH 2018" có mũi tên rơi, đối lập với "TIẾT KIỆM" |
+| Hook 30 giây | **Sự thật:** tháng 4/2018 VN-Index lập đỉnh 1.204 điểm; người bỏ tiền đúng hôm đó phải chờ nhiều năm mới về lại vốn. Số chính xác do `chartdata` tính. **Câu hỏi:** vậy bỏ tiền đúng đỉnh có còn thua gửi tiết kiệm không? |
+| Cấu trúc | Hook (đỉnh 2018) → ba cách và luật chơi (phí, thuế, lãi tiết kiệm giả định, cổ tức hay không) → cuộc đua 2018–2026 (`race`) → giai đoạn tệ nhất của từng cách (giảm sâu nhất, số tháng âm) → nếu bắt đầu ngay trước đợt giảm 2022 thì sao → giới hạn của backtest → kết |
+| Nguồn | Dữ liệu VN-Index từng phiên (HOSE qua vnstock, đã có trong repo); lãi tiết kiệm bình quân theo năm (Ngân hàng Nhà nước / báo); không nêu tên ngân hàng |
+| Độ dài | khoảng 10–12 phút |
+| Việc | Bài mới hoàn toàn: R (nghiên cứu) → W1 → W2 |
+
+## B4 · Vợ chồng chia tiền: `ck-f4-vo-chong-chia-tien`
+
+| Mục | Nội dung |
+|---|---|
+| Nhu cầu | "tài chính vợ chồng", "cách quản lý tiền bạc vợ chồng", "bảng chi tiêu gia đình" |
+| Câu hỏi trung tâm | Chia đôi tiền nhà nghe rất công bằng, vì sao người lương thấp lại hết tiền trước? |
+| Góc khác biệt | Đặt 3 cách chia cạnh nhau, đi suốt 12 tháng, bằng cột chồng. Dẫn nghiên cứu thật về cặp đôi gộp hay tách tiền |
+| 3 tiêu đề | (1) Vợ 15 Triệu, Chồng 25 Triệu: Chia Tiền Nhà Sao Công Bằng? · (2) Chia Đôi Tiền Nhà: Vì Sao Người Lương Thấp Hết Tiền Trước? · (3) Gộp Hay Tách Tiền Vợ Chồng: Nghiên Cứu Nói Gì? |
+| 2 thumbnail | (a) "50/50 = CÔNG BẰNG?" có hai ví lệch nhau · (b) "CÒN 2 TRIỆU" đối lập với "CÒN 12 TRIỆU" |
+| Hook 30 giây | **Sự thật:** câu hỏi người ta thật sự gõ, "cách quản lý tài chính vợ chồng", và một nghiên cứu có thật trong `facts.md` về cặp đôi gộp tiền. **Nghịch lý:** chia đôi nghe công bằng nhưng ra kết quả lệch. Ví dụ Thảo–Nam ghi rõ giả định, vào từ CH01 |
+| Cấu trúc | Hook → vì sao tiền làm vợ chồng căng thẳng (nghiên cứu) → ba cách chia → 12 tháng của từng cách → khi một người nghỉ sinh hay mất việc → luật hôn nhân và gia đình nói gì về thu nhập (1–2 câu) → kết: khung tự chọn, không phán cách nào đúng |
+| Nguồn | KSMS 2022/2024 (Cục Thống kê); Luật 52/2014/QH13; nghiên cứu học thuật trong `facts.md` |
+| Độ dài | khoảng 12 phút (hiện 2.581 âm tiết) |
+
+## B5 · Giá trần, giá sàn, T+2 (Chứng Khoán Từ Số 0): `ck-c6-gia-tran-san-t2`
+
+| Mục | Nội dung |
+|---|---|
+| Nhu cầu | Người mới mở tài khoản gõ "T+2 là gì", "mua cổ phiếu bao lâu thì bán được" |
+| Câu hỏi trung tâm | Mua cổ phiếu sáng thứ Hai, vì sao phải tới chiều thứ Tư mới bán được, và điều đó đã làm ai mất tiền? |
+| Góc khác biệt | Mở bằng phiên có thật, không giảng định nghĩa. Bài trước (`ck-c2`) nói về "kẹt sàn không bán được"; bài này nói về chuyện **chưa có hàng để bán** |
+| 3 tiêu đề | (1) Mua Thứ Hai, Thứ Tư Mới Bán Được: T+2 Là Gì? · (2) Bắt Đáy Ngày 9/4/2025: Vì Sao Không Bán Kịp? · (3) Giá Trần, Giá Sàn, T+2: Ba Luật Người Mới Hay Trả Giá |
+| 2 thumbnail | (a) "THỨ 2 → THỨ 4" cỡ lớn, có ổ khoá trên nút BÁN · (b) "147 MÃ SÀN" cạnh lịch T, T+1, T+2 |
+| Hook 30 giây | **Sự thật:** ngày 09/04/2025, VN-Index giảm 3,4% về 1.094,3 điểm, 147 mã giảm sàn (VTV). **Nghịch lý:** người bắt đáy hôm đó dù đúng vẫn chưa bán được ngay. **Câu hỏi:** vì sao? Ví dụ anh Tuấn ghi rõ giả định, vào từ CH01 |
+| Cấu trúc | Hook (phiên thật) → biên độ trần/sàn (±7/10/15%) → chu kỳ thanh toán T+2 → ví dụ 100 cổ phiếu → phiên 03/04/2025 → lộ trình T+0 (chưa chốt) → kết |
+| Nguồn | TT 120/2020/TT-BTC; HOSE; VSDC; VietnamPlus, VTV (phiên 03/04 và 09/04/2025) |
+| Độ dài | khoảng 11 phút (hiện 2.306 âm tiết) |
+
+---
+
+## Việc sau khi brief được duyệt
+
+1. **W1c**, giao Codex, cho B1, B2, B4, B5: viết lại CH00 theo hook ở trên; dời nhân vật xuống CH01; giữ phần còn lại.
+   - Cảnh W2 đã dựng của F1 và F2 phải dựng lại phần CH00 và CH01.
+2. **B3 mới:** R → W1 → W2, dùng hạ tầng `chartdata` (VN-Index thật).
+3. Thumbnail theo 2 concept ở trên, không ghi "VÍ DỤ GIẢ ĐỊNH".
+4. **Lịch** (chủ kênh, 27/10: 5 Long/tuần cho lô mới), 20:00 VN: B1 T4 18/11 · B3 T5 19/11 · B2 T6 20/11 · B5 T7 21/11 · B4 CN 22/11.
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; Get-Content -Encoding utf8 -TotalCount 30 'data/long/ck-e6-luong-huu-rut-mot-lan/factcheck.md'" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 81ms:
+# Fact-check — script.md (bản 1) · ck-e6-luong-huu-rut-mot-lan (B5 · Rút BHXH một lần hay lương hưu)
+
+Ngày kiểm: 23/10/2026. Mọi URL dưới đây đã được mở trong phiên viết. **Phép tính:** `analysis.py` → `results.json`; kiểm độc lập `check.py` (bảng tỷ
+lệ viết tay theo lời luật + mô phỏng tháng rút dần) → **"E6 check: OK (36 phép)"**. `script_lines.py` qua cổng; `studio_lint.py` 0/0; soát neo 0 lỗi.
+
+Nhãn: **OK** · **OK-2** (thứ cấp) · **SUY** · **TÍNH**.
+
+## 1. Quy định và số liệu
+
+| # | Câu / cảnh | Giá trị | Nguồn (đã mở) | Nhãn |
+|---|---|---|---|---|
+| 1 | Luật BHXH 2024 hiệu lực 01/07/2025; 15 năm có lương hưu (cũ 20) | | https://tuoitre.vn/plo/cach-tinh-luong-huu-theo-luat-bhxh-2024-post821894.html (PLO 01/12/2024) | OK-2 |
+| 2 | Nữ: 45% ứng 15 năm, +2%/năm, tối đa 75% ở 30 năm | | nguồn #1 | OK-2 |
+| 3 | Nam: 40% ứng 15 năm, +1%/năm tới 20 năm, rồi +2%/năm, tối đa 75% ở 35 năm | ví dụ ông B 18 năm 4 tháng = 43,5% (khớp +1%/năm); mốc 45% ở 20 năm theo nguồn khác trong kết quả tìm kiếm | nguồn #1 | OK-2 — PLO tóm tắt "+2%/năm" chung; cơ chế +1% suy từ ví dụ của chính bài → **kiểm Điều 66 Luật 41/2024** |
+| 4 | BHXH một lần: 1,5 tháng/năm trước 2014; 2 tháng/năm từ 2014; bình quân tiền lương | | https://luatvietnam.vn/bao-hiem/dieu-kien-huong-bao-hiem-xa-hoi-1-lan-563-23984-article.html | OK-2 |
+| 5 | Điều kiện người đóng trước 01/07/2025: nghỉ 12 tháng, không đóng bắt buộc/tự nguyện, chưa đủ 20 năm; định cư nước ngoài, bệnh nặng; đủ tuổi chưa đủ 15 năm → một lần hoặc trợ cấp hằng tháng | | nguồn #4 | OK-2 |
+| 6 | "Đóng từ 07/2025 gần như không còn đường rút một lần" | trường hợp 12 tháng chỉ áp cho người đóng trước ngày Luật hiệu lực | nguồn #4 | SUY (đúng theo danh sách điều kiện) |
+| 7 | Bình quân tiền lương được điều chỉnh trượt giá | | luật hiện hành (công cụ tính "cập nhật hệ số trượt giá" của thuvienphapluat trong kết quả tìm kiếm) | OK-2 (yếu) |
+| 8 | Đã nhận một lần → thời gian ấy không tính lương hưu; chưa nhận → bảo lưu, cộng nối | | https://ketoanthuanthien.vn/hoi-dap/tai-sao-can-bao-luu-thoi-gian-tham-gia-bhxh-thay-vi-rut-mot-lan/ (cập nhật 24/05/2026, dẫn Luật 41/2024 Đ23, 64, 65, 70, 71, 79) | OK-2 (yếu: trang kế toán) |
+| 9 | Tự nguyện: 22% thu nhập tự chọn (Điều 36 Luật 2024); Nhà nước hỗ trợ một phần (NĐ 159/2025) | | https://www.meinvoice.vn/tin-tuc/32269/bao-hiem-xa-hoi-tu-nguyen/ (16/11/2025) | OK-2 |
+| 10 | Tuổi nghỉ hưu: nữ 57 (2026), +4 tháng/năm → 60 từ 2035; nam 61 tuổi 6 tháng (2026), +3 tháng/năm → 62 từ 2028 | bảng Điều 4 | https://vnuf.edu.vn/wp-content/uploads/2021/01/Nghi-dinh_135-2020-ND-CP..pdf (trích chữ PDF) | OK |
+| 11 | Chị Hạnh sinh 1991 → 60 tuổi năm 2051 | nữ nghỉ hưu sau 2035 ở 60 | #10 | OK · TÍNH |
+| 12 | 2016–2022: > 4,8 triệu người hưởng một lần; ~1,3 triệu quay lại; 20–40 tuổi ≈ 77,5%; dưới 5 năm 66,6%; 5–10 năm 23,8% ("gần chín phần mười số hồ sơ đóng dưới mười năm" = 90,4%) | báo cáo Bộ LĐ-TB&XH | https://vneconomy.vn/phan-lon-nguoi-lao-dong-rut-bao-hiem-xa-hoi-mot-lan-la-lao-dong-tre.htm (03/07/2023) | OK-2 · TÍNH (cộng 2 nhóm; nguồn tính trên hồ sơ) |
+| 13 | Tuổi thọ trung bình nữ 2024: 77,3 (lúc sinh) | | https://news.tuoitre.vn/average-life-expectancy-in-vietnam-reaches-747-years-in-2024-10384693.htm (21/02/2025, Cục Thống kê) | OK |
+| 14 | "Người đã sống tới 60 thường còn sống lâu hơn mốc ấy" | tính chất của tuổi thọ kỳ vọng có điều kiện | — | SUY (kiến thức nhân khẩu học chung) |
+| 15 | Trợ cấp hưu trí xã hội từ 75 tuổi (người không có lương hưu, ngân sách chi); mức đề xuất 500 nghìn/tháng khi soạn nghị định | | https://hatinh.gov.vn/vi/bai-viet/nguoi-du-75-tuoi-co-the-nhan-tro-cap-huu-tri-500000-dong-moi-thang (20/01/2025, dự thảo) | OK-2 — lời đọc nói rõ "mức đề xuất khi soạn nghị định"; NĐ 176/2025 chưa mở → **kiểm mức chính thức** |
+| 16 | Người hưởng lương hưu có thẻ BHYT do quỹ BHXH đóng | | — | SUY (Luật BHYT: người hưởng lương hưu thuộc nhóm do tổ chức BHXH đóng) — chưa mở nguồn → **kiểm** |
+| 17 | Phần người lao động tự đóng BHXH = 8% lương | | https://luatvietnam.vn/bao-hiem/tu-2026-muc-dong-bhxh-bhyt-bhtn-cua-nld-va-nsdld-duoc-tinh-nhu-the-nao-563-106906-article.html | OK-2 |
+| 18 | "Công ty của chị cũng đóng vào quỹ, song song với chị" | không nêu tỷ lệ của doanh nghiệp | — | OK (định tính) |
+
+
+web search: 
+web search: site:nso.gov.vn CPI bình quân năm 2018 2025 Việt Nam 2026 9 tháng ...
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; @'
+import csv
+from pathlib import Path
+for p in [Path('data/ck/vnindex_1d_2016_2018.csv'),Path('data/ck/vnindex_1d.csv')]:
+    with p.open(encoding='utf-8-sig') as f:
+        r=csv.reader(f); print(p, next(r)); print(next(r)); print(next(r))
+'@ | python -" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 117ms:
+data\ck\vnindex_1d_2016_2018.csv ['time', 'open', 'high', 'low', 'close', 'volume']
+['2016-12-01', '670.69', '670.76', '666.54', '666.54', '107595380']
+['2016-12-02', '667.26', '667.39', '662.09', '665.14', '106687860']
+data\ck\vnindex_1d.csv ['time', 'open', 'high', 'low', 'close', 'volume']
+['2018-10-08', '1003.31', '1008.39', '996.12', '996.12', '185949540']
+['2018-10-09', '998.7', '1001.87', '996.12', '996.19', '178954450']
+
+web search: 
+web search: site:nso.gov.vn "CPI bình quân năm 2024" "3,63" ...
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; @'
+import csv,datetime as dt
+rows=[]
+for fn in ['data/ck/vnindex_1d_2016_2018.csv','data/ck/vnindex_1d.csv']:
+ with open(fn,encoding='utf-8-sig') as f:
+  rows += [{**r,'date':dt.date.fromisoformat(r['time']),'close':float(r['close'])} for r in csv.DictReader(f)]
+rows.sort(key=lambda x:x['date'])
+# exact requested dates/min local monthly
+for d in ['2018-04-09','2020-03-24','2022-01-06','2022-11-15','2025-04-09','2026-10-06']:
+ r=next(x for x in rows if x['time']==d);print(d,r['close'])
+# strategy B every daily portfolio, B buy 2018-4-9
+initial=100_000_000; buy=next(x for x in rows if x['time']=='2018-04-09'); shares=initial/buy['close']
+period=[r for r in rows if r['date']>=buy['date']]
+vals=[(r['date'],shares*r['close']) for r in period]
+minv=min(vals,key=lambda x:x[1]); print('lump end,min',vals[-1], minv, (minv[1]/initial-1)*100)
+print('lump recovery',next((d for d,v in vals if v>=initial),None), sum(v<initial for d,v in vals)/21) # trading to months wrong
+# DCA first available per month 2018-4 thru 2020-3 total funds; track first trade date month
+purchases=[]
+for y,m in [(y,m) for y in range(2018,2021) for m in range(1,13) if (y>2018 or m>=4) and (y<2020 or m<=3)]:
+ r=next(r for r in rows if r['date'].year==y and r['date'].month==m)
+ purchases.append(r)
+shares2=sum((initial/24)/r['close'] for r in purchases)
+vals2=[]
+for r in [x for x in rows if x['date']>=purchases[0]['date']]:
+ paid=sum(initial/24 for q in purchases if q['date']<=r['date'])
+ vals2.append((r['date'],shares2*r['close'],paid))
+# after full 100m comparable under 100 only after 2020-3
+full=[x for x in vals2 if x[0]>=purchases[-1]['date']]
+min2=min(full,key=lambda x:x[1]);print('dca first last',purchases[0]['date'],purchases[-1]['date']);print('dca end,min',full[-1],min2,(min2[1]/initial-1)*100);print('dca recovery',next((d for d,v,p in full if v>=initial),None))
+# calendar distinct months under after fully funded
+print('monthsunder lump',len(set((d.year,d.month) for d,v in vals if v<initial)));print('monthsunder dca full',len(set((d.year,d.month) for d,v,p in full if v<initial)))
+# relevant annual close first/last
+for y in range(2018,2027):
+ yr=[x for x in rows if x['date'].year==y]
+ print(y,yr[0]['close'],yr[-1]['close'])
+'@ | python -" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 130ms:
+2018-04-09 1204.33
+2020-03-24 659.21
+2022-01-06 1528.57
+2022-11-15 911.9
+2025-04-09 1094.3
+2026-10-06 1759.08
+lump end,min (datetime.date(2026, 10, 6), 146062956.16649923) (datetime.date(2020, 3, 24), 54736658.55704002) -45.263341442959984
+lump recovery 2018-04-09 52.333333333333336
+dca first last 2018-04-02 2020-03-02
+dca end,min (datetime.date(2026, 10, 6), 181378375.0488776, 100000000.0) (datetime.date(2020, 3, 24), 67971006.78534837, 100000000.0) -32.02899321465162
+dca recovery 2020-11-18
+monthsunder lump 60
+monthsunder dca full 10
+2018 995.77 892.54
+2019 891.75 960.99
+2020 966.67 1103.87
+2021 1120.47 1498.28
+2022 1525.58 1007.09
+2023 1043.9 1129.93
+2024 1131.72 1266.78
+2025 1269.71 1784.49
+2026 1788.4 1759.08
+
+web search: 
+web search: thuế thu nhập cá nhân chuyển nhượng chứng khoán 0,1% giá chuyển nhượng thông tư 111 2013 BTC ...
+codex
+Mình đã xác nhận đây là ticket nghiên cứu R6: theo luật chung, không được viết kịch bản, dựng cảnh, render hay chạy `long_gate`. Mình đang hoàn thiện đúng hai tệp đầu ra nghiên cứu, với các chỗ dữ liệu lãi suất chưa đủ chuẩn sẽ ghi rõ để W1 không biến chúng thành số “bình quân” không có nguồn.
+web search: 
+web search: site:pexels.com/video "saving money" video Pexels ...
+web search: 
+web search: site:pexels.com/video "writing in notebook" "Aspect Ratio" ...
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Test-Path 'data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex'; Test-Path 'docs/pm/tickets/2026-10-27-ck-lo-1811/R6-ket-qua.md'" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 85ms:
+True
+False
+
+apply patch
+patch: completed
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\ck-i1-100-trieu-tiet-kiem-hay-vnindex\facts.md
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-27-ck-lo-1811\R6-ket-qua.md
+diff --git a/data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/facts.md b/data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/facts.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..fa8570822fc88dec3021d75a361ebd724737bd31
+--- /dev/null
++++ b/data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/facts.md
+@@ -0,0 +1,136 @@
++# Kho dữ kiện R6 — 100 triệu: tiết kiệm hay VN-Index?
++
++Ngày kiểm: 27/10/2026. Đây là kho nghiên cứu cho W1, không phải kịch bản hay khuyến nghị đầu tư. URL dưới đây đã mở trong phiên. Nhãn **mạnh** là nguồn cơ quan thống kê/chính phủ hoặc dữ liệu CSV mà ticket cấp; **vừa** là báo chí/dữ liệu tổng hợp.
++
++## Phạm vi và phương pháp phải giữ nguyên
++
++- CSV do ticket cấp: `data/ck/vnindex_1d_2016_2018.csv` (01/12/2016–05/10/2018) và `data/ck/vnindex_1d.csv` (08/10/2018–06/10/2026), giá đóng cửa từng phiên từ HOSE qua vnstock/VCI.
++- VN-Index là chỉ số giá; nó không phải sản phẩm có thể mua trực tiếp và phép tính dưới đây **không cộng cổ tức**. Mô tả cách chỉ số phản ánh thay đổi vốn hóa của cổ phiếu niêm yết HOSE: https://support.vndirect.com.vn/hc/vi/articles/13971271685273-Ch%E1%BB%89-s%E1%BB%91-VN-INDEX-l%C3%A0-g%C3%AC (**vừa**).
++- Khi mô phỏng bán, áp thuế chuyển nhượng chứng khoán cá nhân 0,1% trên giá chuyển nhượng; Thông tư 111/2013/TT-BTC: https://chinhphu.vn/default.aspx?docid=169566&pageid=27160 (**mạnh**). Chưa có bộ phí giao dịch thống nhất theo từng năm, nên W1 phải để phí giao dịch là biến/ghi rõ giả định, không tự coi bằng 0 mà không nói.
++- Không nêu tên tổ chức nhận tiền gửi, quỹ hay mã chứng khoán; không suy kết lợi nhuận tương lai từ backtest này.
++
++## Dữ kiện theo chương
++
++### CH00 — Cú rơi từ đỉnh (4)
++
++1. Ngày 09/04/2018, CSV ticket cấp ghi VN-Index đóng cửa **1.204,33 điểm**; đây là điểm vào của phương án bỏ một lần. **mạnh — dữ liệu ticket cấp;** phương pháp chỉ số: URL phạm vi ở trên.
++2. Bình quân CPI năm 2018 tăng **3,54%** so với năm trước. https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2021/12/thong-cao-bao-chi-ve-tinh-hinh-gia-thang-12-quy-iv-va-nam-2021/ (**mạnh**).
++3. Đầu năm 2018, mức bình quân tiền gửi VND kỳ hạn trên 12 tháng được nêu khoảng **6,55%/năm** (2 tháng đầu năm); đây là điểm quan sát, **không phải bình quân cả năm**. https://cafef.vn/nhieu-ngan-hang-tang-lai-suat-huy-dong-2018030723375295.chn (**vừa**).
++4. Câu hỏi của video là so sánh một khoản **100 triệu đồng** đặt vào ba luật chơi từ 04/2018; đó là **VÍ DỤ GIẢ ĐỊNH**, không phải lời khuyên. **mạnh — giả định biên tập.**
++
++### CH01 — Ba luật chơi (4)
++
++5. Phương án A: 100 triệu gửi kỳ hạn 12 tháng, tái tục hàng năm theo một chuỗi lãi suất được W1 chốt nguồn. Đây là **VÍ DỤ GIẢ ĐỊNH**; số dư cuối năm = số dư đầu năm × (1 + lãi suất năm). **mạnh — công thức.**
++6. Phương án B: mua theo mức đóng cửa 09/04/2018, số đơn vị quy ước = 100.000.000 / 1.204,33; giá trị hàng ngày = số đơn vị × điểm đóng cửa. **VÍ DỤ GIẢ ĐỊNH; mạnh — công thức và CSV ticket cấp.**
++7. Phương án C: chia 100 triệu thành **24** phần bằng nhau, mua tại phiên đầu tiên của từng tháng từ 04/2018 đến 03/2020. Đây là **VÍ DỤ GIẢ ĐỊNH** để so thời điểm mua, không phải lịch sử giao dịch của người thật. **mạnh — giả định.**
++8. Thuế 0,1% tính trên giá chuyển nhượng, vì vậy chỉ trừ ở giá trị bán cuối kỳ trong phép tính B/C; nguồn Thông tư 111/2013/TT-BTC: https://chinhphu.vn/default.aspx?docid=169566&pageid=27160 (**mạnh**).
++
++### CH02 — Đoạn tệ nhất (4)
++
++9. CSV ticket cấp ghi ngày 24/03/2020 VN-Index đóng cửa **659,21 điểm**, là đáy giá đóng cửa sâu nhất của phương án B trong cửa sổ 09/04/2018–06/10/2026. **mạnh — TÍNH từ CSV.**
++10. So với 1.204,33 điểm ngày vào, mức 659,21 điểm thấp hơn **45,26%**. Công thức: 659,21 / 1.204,33 − 1. **mạnh — TÍNH từ CSV.**
++11. CPI bình quân năm 2020 tăng **3,23%**. https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2021/12/thong-cao-bao-chi-ve-tinh-hinh-gia-thang-12-quy-iv-va-nam-2021/ (**mạnh**).
++12. Trong năm 2020, bài báo ghi một nhóm lãi suất 12–24 tháng giảm từ **6,5% xuống 6,0%/năm**; đây chỉ là quan sát nhóm, không dùng thay bình quân năm. https://www.tinnhanhchungkhoan.vn/lai-suat-vao-dot-cat-giam-moi-post248257.html (**vừa**).
++
++### CH03 — Phục hồi và CPI (4)
++
++13. CPI bình quân năm 2021 tăng **1,84%**, thấp nhất kể từ 2016 theo Cục Thống kê. https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2022/01/kiem-soat-lam-phat-thap-thanh-cong-cua-nam-2021-va-ap-luc-trong-nam-2022/ (**mạnh**).
++14. Tháng 7/2021, mặt bằng tiền gửi VND kỳ hạn 12–24 tháng được nêu là **5,4%–6,8%/năm**; đó là **khoảng**, không phải bình quân 12 tháng. https://www.div.gov.vn/lai-suat-cho-vay-giam-lai-suat-tien-gui-on-dinh (**vừa**).
++15. CSV ticket cấp ghi phiên cuối năm 2021 có VN-Index **1.498,28 điểm**; so với cuối 2020 là 1.103,87 điểm. **mạnh — TÍNH từ CSV.**
++16. Chỉ số giá không bao gồm cổ tức trong backtest này, nên đây là phép đo biến động giá, không phải tổng lợi nhuận của bất kỳ quỹ nào. Mô tả VN-Index theo vốn hóa: https://support.vndirect.com.vn/hc/vi/articles/13971271685273-Ch%E1%BB%89-s%E1%BB%91-VN-INDEX-l%C3%A0-g%C3%AC (**vừa**).
++
++### CH04 — Đỉnh 2022, đáy 2022 (4)
++
++17. CSV ticket cấp ghi ngày 06/01/2022 VN-Index đóng cửa **1.528,57 điểm**, là đỉnh giá đóng cửa trong dữ liệu. **mạnh — TÍNH từ CSV.**
++18. CSV ticket cấp ghi ngày 15/11/2022 đóng cửa **911,90 điểm**, thấp hơn 40,35% so với 1.528,57 điểm. **mạnh — TÍNH từ CSV.**
++19. CPI bình quân năm 2022 tăng **3,15%**. https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2022/12/thong-cao-bao-chi-ve-tinh-hinh-gia-thang-12-quy-iv-va-nam-2022/ (**mạnh**).
++20. Cuối 2022, một mức 12 tháng được báo chí ghi từ **5,6% lên 7,4%/năm** tại một số tổ chức; đó không đại diện toàn thị trường và không được dùng làm bình quân. https://znews.vn/bidv-vietinbank-va-agribank-tang-lai-suat-huy-dong-len-7-4-nam-post1369350.html (**vừa**).
++
++### CH05 — Giai đoạn lãi suất thấp (4)
++
++21. CPI bình quân năm 2023 tăng **3,25%**. https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2023/12/thong-cao-bao-chi-ve-tinh-hinh-gia-thang-12-quy-iv-va-nam-2023/ (**mạnh**).
++22. Đầu tháng 12/2023, lãi suất huy động bình quân kỳ hạn 12 tháng được một nguồn dữ liệu thị trường ghi **5,13%/năm**; đây là mốc quan sát tháng, không phải bình quân năm. https://tuoitre.vn/lai-suat-tiet-kiem-thap-ki-luc-nen-giam-hon-nua-thi-sao-20231206215733636.htm (**vừa**).
++23. Ngày 15/01/2024, cùng loại bình quân 12 tháng được nêu **4,9%/năm**. https://tuoitre.vn/ha-them-lai-suat-binh-quan-tien-gui-12-thang-lap-day-moi-vua-xuong-dau-4-20240115180305495.htm (**vừa**).
++24. CPI bình quân năm 2024 tăng **3,63%**. https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2025/01/chi-so-gia-tieu-dung-chi-so-gia-vang-va-chi-so-gia-do-la-my-thang-muoi-hai-quy-iv-va-nam-2024/ (**mạnh**).
++
++### CH06 — Điểm dữ liệu mới (4)
++
++25. CSV ticket cấp ghi 09/04/2025 VN-Index đóng cửa **1.094,30 điểm**. **mạnh — TÍNH từ CSV.**
++26. CPI bình quân năm 2025 được Cục Thống kê công bố/ước tổng kết là **3,31%**. https://www.nso.gov.vn/tin-tuc-khac/2026/01/kinh-te-viet-nam-dat-duoc-nhung-ket-qua-quan-trong-toan-dien-nhieu-diem-sang-noi-bat/ (**mạnh**).
++27. Tháng 12/2025, một bản tin thị trường nêu lãi suất huy động bình quân 12 tháng của nhóm tổ chức nhà nước ở **5,2%**; không dùng số này làm bình quân toàn hệ thống hay bình quân cả năm. https://finance.vietstock.vn/downloadedoc/18633 (**vừa**).
++28. Bình quân 9 tháng 2026, CPI tăng **4,52%**; đây chưa phải CPI bình quân cả năm 2026. https://www.nso.gov.vn/tin-tuc-thong-ke/2026/10/thong-cao-bao-chi-ve-tinh-hinh-gia-thang-chin-quy-iii-va-9-thang-nam-2026/ (**mạnh**).
++
++## Mốc và kết quả tính sơ bộ từ CSV
++
++| Mốc | Ngày | Đóng cửa VN-Index | Nguồn |
++|---|---:|---:|---|
++| Đỉnh vào tiền | 09/04/2018 | 1.204,33 | CSV ticket cấp |
++| Đáy Covid | 24/03/2020 | 659,21 | CSV ticket cấp |
++| Đỉnh dữ liệu | 06/01/2022 | 1.528,57 | CSV ticket cấp |
++| Đáy 2022 | 15/11/2022 | 911,90 | CSV ticket cấp |
++| Mốc 2025 | 09/04/2025 | 1.094,30 | CSV ticket cấp |
++| Phiên cuối | 06/10/2026 | 1.759,08 | CSV ticket cấp |
++
++**VÍ DỤ GIẢ ĐỊNH — chưa tính phí giao dịch; B/C chưa trừ thuế bán 0,1% trong số hiển thị:**
++
++| Cách | Giá trị 06/10/2026 | Âm sâu nhất | Tháng dưới 100 triệu | Về lại 100 triệu |
++|---|---:|---|---:|---|
++| Bỏ một lần 09/04/2018 | 146,06 triệu | 24/03/2020: 54,74 triệu (−45,26%) | 60 | cần W1 xác nhận ngày hồi phục theo tiêu chí sau ngày mua |
++| Mua đều 24 tháng (phiên đầu tháng 04/2018–03/2020) | 181,38 triệu | 24/03/2020: 67,97 triệu (−32,03%; sau khi đã góp đủ) | 10 | 18/11/2020 |
++| Gửi 12 tháng cuốn chiếu | **chưa chốt** | không áp dụng nếu không tất toán trước hạn | 0 theo giả định gốc được bảo toàn | không áp dụng |
++
++W1 phải chạy lại với (i) thuế bán 0,1%, (ii) phí giao dịch được nêu rõ hoặc làm hai kịch bản, và (iii) chuỗi **bình quân 12 tháng theo từng năm** có nguồn. Không được thay chuỗi đó bằng các mốc lãi suất đơn lẻ ở trên.
++
++## Bộ số cho biểu đồ
++
++1. **Đường đua chính** — `race`, triệu đồng; các điểm 04/2018, 03/2020, 01/2022, 11/2022, 04/2025, 10/2026; B/C từ CSV, A chờ chuỗi lãi suất chuẩn.
++2. **VN-Index các mốc căng thẳng** — `line`; 1.204,33; 659,21; 1.528,57; 911,90; 1.094,30; 1.759,08 điểm; nguồn CSV ticket cấp.
++3. **Mức giảm từ đỉnh vào tiền** — `waterfall`; 100 → 54,74 → 146,06 triệu, phương án B; VÍ DỤ GIẢ ĐỊNH, công thức theo CSV.
++4. **Mua đều sau góp đủ** — `bars`; 100; 67,97; 100; 181,38 triệu; VÍ DỤ GIẢ ĐỊNH, theo CSV.
++5. **CPI 2018–2026** — `line`; 3,54; 2,79; 3,23; 1,84; 3,15; 3,25; 3,63; 3,31; 4,52% (2026 là 9 tháng); nguồn URL Cục Thống kê ở trên.
++6. **Lãi suất quan sát, không dùng thay bình quân năm** — `dots`; 6,55 (đầu 2018); 5,4–6,8 (07/2021); 5,13 (12/2023); 4,9 (15/01/2024); 5,2 (12/2025); %/năm, nguồn từng URL ở trên.
++7. **Số tháng dưới 100 triệu** — `bars`; B: 60; C: 10 (chỉ tính từ lúc C góp đủ); A: 0 theo giả định gốc được bảo toàn; VÍ DỤ GIẢ ĐỊNH/TÍNH CSV.
++8. **24 lần mua đều** — `heat`; mỗi ô 4,1667 triệu đồng trong 04/2018–03/2020; tổng 100 triệu; VÍ DỤ GIẢ ĐỊNH, công thức 100/24.
++9. **Sức mua 100 triệu** — `counter`; chỉ số CPI lũy kế phải tính từ chuỗi 2018–2025 đã chốt; 2026 chưa dùng vì mới có 9 tháng. Công thức: tích (1+CPI năm); nguồn Cục Thống kê.
++
++## Biểu đồ chính
++
++`race` ba đường giá trị danh nghĩa, mốc đầu 100 triệu. CH00 thêm điểm 09/04/2018; CH02 thêm đáy 24/03/2020; CH03 thêm cuối 2021; CH04 thêm đỉnh 06/01 và đáy 15/11/2022; CH05 thêm cuối 2023/2024; CH06 thêm 09/04/2025; CH07 thêm 06/10/2026 và lớp ghi chú CPI. Đường tiết kiệm chỉ bật sau khi W1 chốt bộ lãi suất chuẩn.
++
++## Cold open
++
++1. “Ngày 9 tháng 4 năm 2018, 100 triệu đặt vào VN-Index ở 1.204 điểm. Chưa đầy hai năm sau, cùng phép tính còn khoảng 54,7 triệu. Nhưng đến phiên dữ liệu cuối, nó lại vượt 146 triệu. Nếu biết đoạn rơi ấy trước, bạn có chịu nổi để giữ không?” Biểu đồ race xuất hiện trước giây 15.
++2. “100 triệu không đổi, nhưng một cách phải chịu 60 tháng dưới vốn; một cách mua dần chỉ có 10 tháng sau khi góp đủ. Con số cuối cùng có thể đẹp hơn, vậy vì sao đoạn đường lại quan trọng hơn kết quả?” Biểu đồ cột tháng âm xuất hiện trước giây 15.
++
++## Tiêu đề và thumbnail
++
++- `100 Triệu Từ 2018: Gửi Tiết Kiệm Hay Mua VN-Index?`
++- `100 Triệu Đúng Đỉnh 2018: Giờ Còn Bao Nhiêu?`
++- `100 Triệu Trong 8 Năm: Mua Một Lần Hay Mua Đều?`
++
++1. Chữ lớn **100 TRIỆU → ?**, ba đường đua đơn giản; không ghi giả định.
++2. Chữ lớn **ĐỈNH 2018**, một mũi tên rơi cạnh nhãn **TIẾT KIỆM**; không có logo/tên tổ chức.
++
++## Clip Pexels ngang — ứng viên, phải soi lại trước dùng
++
++| ID | Nội dung | Ghi chú |
++|---:|---|---|
++| 6963480 | tay bấm máy tính, sổ | 16:9; soi logo/chữ |
++| 6780089 | tay và máy tính | 16:9; soi logo/chữ |
++| 8195661 | người dùng máy tính | 16:9; soi logo/chữ |
++| 6794227 | người trước laptop biểu đồ | 16:9; soi logo/chữ trên màn hình |
++| 7593891 | tay, máy tính, ghi chú | cần xác nhận khung ngang trước tải |
++| 6962707 | giấy tờ và máy tính | cần che/bỏ chữ đọc được |
++| 7016911 | giao thông thành phố trên cao | 16:9; soi biển hiệu |
++| 8342359 | viết sổ từ trên xuống | 16:9; soi chữ |
++| 5212605 | viết sổ cạnh laptop | 16:9; soi logo/chữ |
++| 7594719 | ghi chép ở bàn bếp | 16:9; soi logo/chữ |
++
++Nguồn các ID: https://www.pexels.com/video/a-person-computing-using-calculator-6963480/ ; https://www.pexels.com/video/person-using-calculator-6780089/ ; https://www.pexels.com/video/a-man-using-the-calculator-8195661/ ; https://www.pexels.com/video/a-man-is-sitting-in-front-of-a-laptop-with-a-stock-market-chart-6794227/ ; https://www.pexels.com/video/close-up-video-of-a-person-using-calculator-7593891/ ; https://www.pexels.com/video/a-person-computing-using-calculator-6962707/ ; https://www.pexels.com/video/video-of-a-city-traffic-7016911/ ; https://www.pexels.com/video/girl-writing-in-notebook-8342359/ ; https://www.pexels.com/video/man-writing-on-his-notebook-5212605/ ; https://www.pexels.com/video/man-writing-in-notebook-7594719/ .
++
++## Rủi ro và việc còn mở
++
++- **Chưa kiểm được:** một chuỗi lãi suất **bình quân tiền gửi 12 tháng theo từng năm 2018–2026**. Các URL thu được mới là khoảng/mốc tháng hoặc nhóm tổ chức; không được gọi chúng là “bình quân năm”. Đây là blocker duy nhất để tính hợp lệ phương án A và giá trị thực sau CPI.
++- 2026 mới có CPI bình quân 9 tháng 4,52%, chưa có số cả năm; không ghi nó là CPI bình quân năm.
++- Không ai mua trực tiếp được VN-Index; mô phỏng là chỉ số giá, không có cổ tức, không phản ánh chênh lệch theo sản phẩm thực tế.
++- Phí giao dịch, thời điểm khớp lệnh, chênh lệch giá và thuế làm kết quả thực tế khác mô phỏng. Không nói “nên mua/bán/gửi”.
+diff --git a/docs/pm/tickets/2026-10-27-ck-lo-1811/R6-ket-qua.md b/docs/pm/tickets/2026-10-27-ck-lo-1811/R6-ket-qua.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..3b4cf945bd8e10eabcaa330d8525d159d3b10742
+--- /dev/null
++++ b/docs/pm/tickets/2026-10-27-ck-lo-1811/R6-ket-qua.md
+@@ -0,0 +1,15 @@
++# R6 — Kết quả nghiên cứu `ck-i1-100-trieu-tiet-kiem-hay-vnindex`
++
++Đã ghi kho nghiên cứu tại `data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/facts.md`.
++
++- Dữ kiện: 28 dòng, 7 chương × 4; nguồn mạnh 20, vừa 8. Có 10 nguồn Pexels ứng viên và các URL đã mở.
++- Bảng/biểu đồ: 9 bộ số, gồm race chính, mốc VN-Index, CPI, lãi suất quan sát, drawdown, tháng dưới vốn và lịch mua đều.
++- Có 2 cold open, 3 tiêu đề (đều dưới 60 ký tự), 2 ý thumbnail.
++- Đã đọc CSV ticket cấp bằng Python để kiểm các mốc: 09/04/2018 1.204,33; 24/03/2020 659,21; 06/01/2022 1.528,57; 15/11/2022 911,90; 09/04/2025 1.094,30; 06/10/2026 1.759,08.
++- Lệnh đã chạy: đọc 30 dòng mẫu `factcheck.md`; Python đọc hai CSV và tính kiểm độc lập các mốc/biến động. Không chạy lint, TTS, HTML, render, thumbnail hay `long_gate`, vì đây là ticket nghiên cứu và `00-CHUNG-R.md` cấm các bước đó.
++
++## Chưa kiểm được / blocker W1
++
++Chưa có chuỗi lãi suất **bình quân tiền gửi 12 tháng theo từng năm 2018–2026** từ nguồn đủ chuẩn. Kho chỉ lưu các khoảng/mốc quan sát có nguồn và đánh dấu rõ không phải bình quân năm. Vì vậy chưa tính phương án tiết kiệm, sức mua cuối kỳ và chưa gọi bất kỳ mốc lãi suất nào là bình quân năm. CPI 2026 hiện chỉ có số bình quân 9 tháng 4,52%, chưa có số cả năm.
++
++Không có clip sheet hay thumbnail ở ticket R6; các ID clip mới là ứng viên, bắt buộc tải và soi logo/chữ ở W2.
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; @'
+from pathlib import Path
+p=Path('data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/facts.md')
+s=p.read_text(encoding='utf-8')
+print('facts exists:', p.exists())
+print('numbered facts:', sum(1 for line in s.splitlines() if line[:2].rstrip('.').isdigit() and line.startswith(tuple(str(i)+'.' for i in range(1,29)))))
+for line in s.splitlines():
+ if line.startswith('- "'`100 Triệu'"'):
+  print(len(line[3:-1]), line[3:-1])
+print('report exists:', Path('docs/pm/tickets/2026-10-27-ck-lo-1811/R6-ket-qua.md').exists())
+'@ | python -" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 145ms:
+facts exists: True
+numbered facts: 41
+report exists: True
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; @'
+from pathlib import Path
+import re
+s=Path('data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/facts.md').read_text(encoding='utf-8')
+print('facts 1-28:', len(re.findall(r'"'^([1-9]|1[0-9]|2[0-8])'"\\\\. ',s,re.M)))
+for t in re.findall(r'"'^- `([''^`]+)`$'"',s,re.M): print(len(t),t)
+'@ | python -" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 148ms:
+facts 1-28: 0
+50 100 Triệu Từ 2018: Gửi Tiết Kiệm Hay Mua VN-Index?
+44 100 Triệu Đúng Đỉnh 2018: Giờ Còn Bao Nhiêu?
+47 100 Triệu Trong 8 Năm: Mua Một Lần Hay Mua Đều?
+
+codex
+Đã hoàn tất ticket nghiên cứu R6.
+
+- Kho dữ kiện: [facts.md](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\ck-i1-100-trieu-tiet-kiem-hay-vnindex\facts.md)
+- Báo cáo: [R6-ket-qua.md](D:\Tools\Youtube Creator v2\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-27-ck-lo-1811\R6-ket-qua.md)
+
+Đây là ticket nghiên cứu nên không chạy `long_gate`, lint hay render theo đúng `00-CHUNG-R.md`. Đã ghi rõ blocker: chưa có chuỗi lãi suất tiền gửi 12 tháng bình quân từng năm 2018–2026 đủ chuẩn để tính phương án tiết kiệm.
+tokens used
+87,841
+Đã hoàn tất ticket nghiên cứu R6.
+
+- Kho dữ kiện: [facts.md](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\ck-i1-100-trieu-tiet-kiem-hay-vnindex\facts.md)
+- Báo cáo: [R6-ket-qua.md](D:\Tools\Youtube Creator v2\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-27-ck-lo-1811\R6-ket-qua.md)
+
+Đây là ticket nghiên cứu nên không chạy `long_gate`, lint hay render theo đúng `00-CHUNG-R.md`. Đã ghi rõ blocker: chưa có chuỗi lãi suất tiền gửi 12 tháng bình quân từng năm 2018–2026 đủ chuẩn để tính phương án tiết kiệm.

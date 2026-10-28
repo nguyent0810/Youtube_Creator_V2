@@ -1,0 +1,395 @@
+{
+ "title": "Khi quốc hội Canada trở thành thầy giáo",
+ "lines": [
+  {
+   "t": "Tháng 6 năm 1990, một nhóm tám nhà nghiên cứu của IBM đăng một bài báo ở tạp chí Computational Linguistics.",
+   "p": 0.8
+  },
+  {
+   "t": "Tên bài: một cách tiếp cận thống kê cho dịch máy.",
+   "p": 1.0
+  },
+  "Mở đầu bài, họ nhắc tới Warren Weaver, người năm 1949 đã gợi ý dùng thống kê.",
+  {
+   "t": "Ý ấy bị bỏ, họ viết, vì máy quá yếu và chữ trong máy quá ít. Còn giờ, máy tính nhanh hơn năm 1950 khoảng một trăm nghìn lần.",
+   "p": 1.0
+  },
+  "Họ cần một thứ rất đặc biệt: một văn bản có sẵn hai bản, hai thứ tiếng.",
+  "Họ tìm thấy nó ở quốc hội Canada. Mọi lời phát biểu được ghi lại bằng cả tiếng Anh lẫn tiếng Pháp. Tên gọi là Hansard.",
+  {
+   "t": "Họ có khoảng một trăm triệu từ tiếng Anh. Từ đó, họ lọc ra khoảng ba triệu cặp câu Anh và Pháp, và chừng chín mươi chín phần trăm số cặp ấy khớp nhau.",
+   "p": 1.0
+  },
+  {
+   "t": "Đừng dạy máy ngữ pháp. Cứ cho nó xem thật nhiều cặp câu, rồi để nó đếm: từ tiếng Pháp này hay đi cùng từ tiếng Anh nào.",
+   "p": 1.0
+  },
+  "Khi nhìn chữ hear, máy tính ra bản dịch tiếng Pháp có khả năng nhất, không phải một chữ đúng nghĩa. Mà là chữ bravo.",
+  "Vì sao? Vì trong quốc hội, người nói tiếng Anh tán thưởng bằng cách hô hear, hear. Còn người nói tiếng Pháp hô bravo.",
+  {
+   "t": "Máy học được rằng hai chữ hear sẽ thành một chữ bravo.",
+   "p": 1.0
+  },
+  "Một ví dụ nữa. Chữ not trong tiếng Anh, máy thấy nó đi cùng hai chữ tiếng Pháp: ne và pas.",
+  {
+   "t": "Nó tự tìm ra cách ghép đôi từ, mà không ai bảo. Mình giữ lại cái ghép đôi này nhé.",
+   "p": 1.0
+  },
+  "Vậy kết quả ra sao?",
+  "Họ cho máy dịch bảy mươi ba câu tiếng Pháp mới.",
+  "Chỉ năm phần trăm giống hệt bản dịch của người. Tính cả bản dịch khác chữ nhưng đúng ý, hoặc đúng nghĩa dù lệch ý, thì được bốn mươi tám phần trăm.",
+  {
+   "t": "Ba mươi bảy phần trăm là câu sai ngữ pháp.",
+   "p": 1.0
+  },
+  "Hơn một nửa số câu, máy dịch hỏng.",
+  "Vậy mà bài báo ấy là một cái mốc. Vì nó cho thấy máy có thể dịch mà không ai phải viết luật ngữ pháp.",
+  {
+   "t": "Và họ chỉ dùng khoảng một phần trăm số dữ liệu sẵn có để dạy phần dịch.",
+   "p": 1.0
+  },
+  "Ghi vào sổ: năm 1990, IBM. Dữ liệu thay cho luật.",
+  "Hạn: chưa ai hứa. Nhưng người ta nhìn thấy một lối đi.",
+  "Lối ấy sẽ dẫn tới một cái tên mà bạn đã biết."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "7",
+   "k": "CHƯƠNG BẢY",
+   "title": "KHI QUỐC HỘI CANADA\nTRỞ THÀNH THẦY GIÁO",
+   "sub": "IBM · 1990",
+   "vid": "1085656",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Tháng"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "MỘT CÁCH TIẾP CẬN THỐNG KÊ",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "Computational Linguistics · 06.1990 · 8 tác giả",
+     "at": [
+      1,
+      "cho"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": 2,
+   "img": "weaver",
+   "tone": "bw",
+   "illus": "ẢNH: WARREN WEAVER · 1940 · LƯU TRỮ QUỐC GIA MỸ",
+   "side": {
+    "k": "WARREN WEAVER · 1949",
+    "h": "Gợi ý dùng\nthống kê",
+    "lines": [
+     {
+      "text": "Bài báo IBM *nhắc tên ông*",
+      "at": [
+       2,
+       "Weaver,"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "from": 0,
+   "to": 100000,
+   "suffix": " LẦN",
+   "until": [
+    3,
+    "nghìn"
+   ],
+   "label": "KHOẢNG · MÁY TÍNH NHANH HƠN NĂM 1950 · THEO BÀI BÁO IBM"
+  },
+  {
+   "type": "broll",
+   "at": 4,
+   "vid": "38496190",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MỘT VĂN BẢN · HAI THỨ TIẾNG",
+     "at": [
+      4,
+      "một"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 5,
+   "img": "parliament",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.5,
+   "kin": [
+    {
+     "text": "HANSARD · QUỐC HỘI CANADA",
+     "at": [
+      5,
+      "hansard."
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "ẢNH LƯU TRỮ · HẠ VIỆN CANADA NĂM 1953",
+    "v": "MINH HỌA · KHÔNG PHẢI NĂM 1990",
+    "at": 5
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 6,
+   "title": "KHO DỮ LIỆU HANSARD",
+   "srcnote": "THEO BROWN VÀ CỘNG SỰ · 1990",
+   "rows": [
+    {
+     "k": "TIẾNG ANH",
+     "v": "≈100 TRIỆU TỪ",
+     "at": 6
+    },
+    {
+     "k": "CẶP CÂU ANH–PHÁP LỌC RA",
+     "v": "≈3 TRIỆU",
+     "at": [
+      6,
+      "ba"
+     ]
+    },
+    {
+     "k": "KHỚP NHAU",
+     "v": "≈99%",
+     "at": [
+      6,
+      "chín"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "KHÔNG DẠY NGỮ PHÁP",
+     "at": 7,
+     "acc": true
+    },
+    {
+     "text": "để máy ĐẾM",
+     "at": [
+      7,
+      "để"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 8,
+   "mythLab": "HEAR · MÁY KỲ VỌNG",
+   "myth": "MỘT CHỮ ĐÚNG NGHĨA?",
+   "truthLab": "MÁY TÍNH RA",
+   "truth": "BRAVO",
+   "strikeAt": [
+    8,
+    "không"
+   ],
+   "truthAt": [
+    8,
+    "bravo"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "MỘT BÊN TÁN THƯỞNG: “HEAR, HEAR!”",
+     "at": 9,
+     "sm": true
+    },
+    {
+     "text": "BÊN KIA: “BRAVO!”",
+     "at": [
+      9,
+      "bravo"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 10,
+   "text": "2 × HEAR → 1 × BRAVO",
+   "sub": "MÁY TỰ HỌC ĐƯỢC · THEO BÀI BÁO IBM"
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "NOT",
+     "at": [
+      11,
+      "not"
+     ]
+    },
+    {
+     "text": "↔ NE … PAS",
+     "at": [
+      11,
+      "ne"
+     ],
+     "acc": true
+    },
+    {
+     "text": "tự ghép đôi từ · không ai bảo",
+     "at": 12,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 13,
+   "text": "Kết quả\nra sao?"
+  },
+  {
+   "type": "counter",
+   "at": 14,
+   "from": 0,
+   "to": 73,
+   "suffix": " CÂU TIẾNG PHÁP MỚI",
+   "until": [
+    14,
+    "ba"
+   ],
+   "label": "BỘ CÂU THỬ · BROWN VÀ CỘNG SỰ, 1990"
+  },
+  {
+   "type": "bars",
+   "at": 15,
+   "title": "BẢN DỊCH CỦA MÁY · 73 CÂU · % SỐ CÂU",
+   "unit": "",
+   "items": [
+    {
+     "k": "GIỐNG HỆT BẢN DỊCH CỦA NGƯỜI",
+     "v": 5,
+     "lbl": "5%",
+     "at": 15
+    },
+    {
+     "k": "CHẤP NHẬN ĐƯỢC · THEO TIÊU CHÍ CỦA NHÓM",
+     "v": 48,
+     "lbl": "48%",
+     "at": [
+      15,
+      "bốn"
+     ],
+     "acc": true
+    },
+    {
+     "k": "SAI NGỮ PHÁP",
+     "v": 37,
+     "lbl": "37%",
+     "at": 16
+    }
+   ],
+   "label": {
+    "k": "THEO CHÍNH NHÓM IBM",
+    "v": "KẾT QUẢ SƠ BỘ · BÀI BÁO GHI “PRELIMINARY”",
+    "at": 15
+   }
+  },
+  {
+   "type": "slam",
+   "at": 17,
+   "text": "HƠN MỘT NỬA: HỎNG",
+   "sub": "VẬY MÀ LÀ MỘT CÁI MỐC"
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "items": [
+    {
+     "text": "CHỈ DÙNG ≈1% DỮ LIỆU",
+     "at": [
+      19,
+      "chỉ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "để dạy phần dịch",
+     "at": [
+      19,
+      "để"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 20,
+   "title": "CUỐN SỔ LỜI HỨA",
+   "rows": [
+    {
+     "k": "1990 · IBM",
+     "v": "DỮ LIỆU THAY CHO LUẬT",
+     "at": 20
+    },
+    {
+     "k": "HẠN",
+     "v": "CHƯA AI HỨA · CÓ MỘT LỐI ĐI",
+     "at": 21
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 22,
+   "items": [
+    {
+     "text": "MỘT CÁI TÊN BẠN ĐÃ BIẾT",
+     "at": [
+      22,
+      "cái"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 07",
+  "t": "KHI QUỐC HỘI CANADA TRỞ THÀNH THẦY GIÁO"
+ },
+ "bgm": {
+  "mood": "upbeat",
+  "gain": 0.1
+ }
+}
