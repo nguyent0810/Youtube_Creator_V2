@@ -150,3 +150,55 @@ def test_nap_cli_khong_keo_mcp_va_playwright():
             "sys.exit(1 if ('mcp' in sys.modules or 'playwright' in sys.modules) else 0)")
     assert subprocess.run([sys.executable, "-c", code]).returncode == 0
     assert muse.URL.startswith("https://") and json.loads("{}") == {}
+
+
+# --- tiktok create --schedule (28/10/2026) ---
+from datetime import datetime  # noqa: E402
+
+TZ7 = tiktok.tz_of("GMT+7")
+NOW = datetime(2026, 10, 28, 12, 0, tzinfo=TZ7)
+
+
+def test_hen_gio_hop_le_doc_theo_mui_gio_trang():
+    w = tiktok.check_schedule("2026-11-05 19:45", TZ7, NOW)
+    assert (w.year, w.month, w.day, w.hour, w.minute) == (2026, 11, 5, 19, 45)
+    assert w.utcoffset().total_seconds() == 7 * 3600
+
+
+@pytest.mark.parametrize("text", [
+    "2026-11-05 19:47",     # phút không chia hết cho 5: bộ chọn không có
+    "2026-10-28 12:10",     # dưới 20 phút
+    "2026-11-08 12:05",     # quá 10 ngày (giới hạn TikTok)
+    "05/11/2026 19:45",     # sai định dạng
+])
+def test_hen_gio_tu_choi(text):
+    with pytest.raises(SystemExit):
+        tiktok.check_schedule(text, TZ7, NOW)
+
+
+def test_mui_gio():
+    assert tiktok.tz_of("+7").utcoffset(None).total_seconds() == 7 * 3600
+    assert tiktok.tz_of("GMT-3:30").utcoffset(None).total_seconds() == -(3 * 3600 + 1800)
+    with pytest.raises(SystemExit):
+        tiktok.tz_of("Asia/Ho_Chi_Minh")
+
+
+def test_nhan_ngay_cua_lich():
+    assert tiktok.day_label(datetime(2026, 11, 5)) == "November 5th, 2026"
+    assert tiktok.day_label(datetime(2026, 11, 22)) == "November 22nd, 2026"
+    assert tiktok.day_label(datetime(2026, 11, 13)) == "November 13th, 2026"
+    assert tiktok.shown_date(datetime(2026, 11, 5)) == "Nov 5, 2026"
+
+
+def test_doc_lai_cai_dat_truoc_khi_bam():
+    w = datetime(2026, 11, 5, 19, 45, tzinfo=TZ7)
+    page = "When to post\nNow\nSchedule\nNov 5, 2026\n19:45\n(GMT+7) Local Time\nWho can see this post\nEveryone\n"
+    assert tiktok.settings_ok(page, w, "Everyone", "GMT+7") == []
+    assert tiktok.settings_ok(page.replace("19:45", "12:45"), w, "Everyone", "GMT+7")
+    assert tiktok.settings_ok(page.replace("GMT+7", "GMT+9"), w, "Everyone", "GMT+7")
+    assert tiktok.settings_ok(page, w, "Only you", "GMT+7")
+
+
+def test_so_caption_bo_qua_khoang_trang():
+    assert tiktok.same_caption("Câu hỏi?\n\nGiải thích #phatgiao", "Câu hỏi? Giải thích #phatgiao")
+    assert not tiktok.same_caption("Câu hỏi?", "Câu hỏi? #phatgiao")

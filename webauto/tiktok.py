@@ -2,7 +2,12 @@
 
 This acts on a LIVE channel, so (see CLAUDE.md: never publish, schedule or delete without the owner's say):
   - create  defaults to private ("Only you"); a non-private post needs --allow-public. The caption is
-            prefixed with --marker so a test post is easy to find. It never schedules.
+            prefixed with --marker so a test post is easy to find (pass --marker "" for a real post).
+            --schedule "YYYY-MM-DD HH:MM" schedules instead of posting now: the time is read in the
+            timezone TikTok Studio shows (--tz, default GMT+7), must be 20 min to 10 days ahead and a
+            multiple of 5 minutes. Before the irreversible click it re-reads date, time, timezone,
+            privacy and caption from the page and refuses on any mismatch. --dry-run does every step
+            but the final click, then discards the draft.
   - delete  needs --id; refuses a post that is not "Only me" without --allow-public, and refuses unless
             exactly one loaded row matches the id. TikTok keeps deleted posts 30 days (Activity center >
             Recently deleted).
@@ -17,6 +22,7 @@ import json
 import re
 import subprocess
 import sys
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from .browsentic import browser, run
@@ -31,6 +37,69 @@ PRIVACY = {"public": "Everyone", "friends": "Friends", "private": "Only you"}
 def check_create(privacy, allow_public):
     if privacy != "private" and not allow_public:
         raise SystemExit(f"refused: privacy '{privacy}' needs --allow-public (default is private)")
+
+
+MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
+          "November", "December"]
+SCHEDULE_MIN, SCHEDULE_MAX = timedelta(minutes=20), timedelta(days=10)   # TikTok Studio: up to 10 days ahead
+
+
+def tz_of(label):
+    """'GMT+7' / '+7' / 'GMT-3:30' -> tzinfo. The schedule is read in the timezone the Studio page shows."""
+    m = re.fullmatch(r"(?:GMT|UTC)?([+-])(\d{1,2})(?::(\d{2}))?", label.strip())
+    if not m:
+        raise SystemExit(f"refused: cannot read timezone {label!r} (use e.g. GMT+7)")
+    sign = 1 if m.group(1) == "+" else -1
+    return timezone(sign * timedelta(hours=int(m.group(2)), minutes=int(m.group(3) or 0)))
+
+
+def check_schedule(text, tz, now=None):
+    """Parse 'YYYY-MM-DD HH:MM' in `tz` and refuse a time the Studio picker cannot hold or should not get."""
+    try:
+        when = datetime.strptime(text.strip(), "%Y-%m-%d %H:%M").replace(tzinfo=tz)
+    except ValueError:
+        raise SystemExit(f"refused: --schedule {text!r} is not 'YYYY-MM-DD HH:MM'")
+    if when.minute % 5:
+        raise SystemExit("refused: the Studio minute picker only has multiples of 5")
+    now = now or datetime.now(tz)
+    if when - now < SCHEDULE_MIN:
+        raise SystemExit(f"refused: {when:%Y-%m-%d %H:%M} is less than 20 minutes ahead")
+    if when - now > SCHEDULE_MAX:
+        raise SystemExit(f"refused: {when:%Y-%m-%d %H:%M} is more than 10 days ahead (TikTok limit)")
+    return when
+
+
+def ordinal(n):
+    return f"{n}{'th' if 11 <= n % 100 <= 13 else {1: 'st', 2: 'nd', 3: 'rd'}.get(n % 10, 'th')}"
+
+
+def day_label(d):
+    """aria-label fragment of a calendar day button: 'November 5th, 2026'."""
+    return f"{MONTHS[d.month - 1]} {ordinal(d.day)}, {d.year}"
+
+
+def shown_date(d):
+    """How the date field shows a day: 'Nov 5, 2026'."""
+    return f"{MONTHS[d.month - 1][:3]} {d.day}, {d.year}"
+
+
+def settings_ok(text, when, privacy_label, tz_label):
+    """The page text must show exactly what we asked for; returns the list of problems (empty = ok)."""
+    bad = []
+    if when is not None:
+        if f"Schedule\n{shown_date(when)}\n{when:%H:%M}" not in text:
+            bad.append(f"date/time is not {shown_date(when)} {when:%H:%M}")
+        if f"({tz_label})" not in text.replace("GMT+0", "GMT"):
+            bad.append(f"timezone on the page is not ({tz_label})")
+    if f"Who can see this post\n{privacy_label}" not in text:
+        bad.append(f"privacy is not {privacy_label}")
+    return bad
+
+
+def same_caption(typed, want):
+    """Compare captions ignoring whitespace runs (the editor turns newlines into blocks)."""
+    norm = lambda x: re.sub(r"\s+", " ", x).strip()  # noqa: E731
+    return norm(typed) == norm(want)
 
 
 def check_delete(rows, post_id, allow_public):
@@ -132,8 +201,82 @@ async def update_post(a):
         print("saved; verify on the Posts page (see the note in update_post)")
 
 
+async def click_at(b, selector):
+    """Scroll an element into view and click its centre with a real (trusted) mouse event.
+    The Studio hour wheel ignores synthetic clicks (the minute wheel does not); this works for both."""
+    await b.call("page_scrollTo", target={"selector": selector})
+    el = (await b.call("page_waitForElement", target={"selector": selector}, state="visible"))["element"]
+    bd = el["bounds"]
+    await b.call("page_trustedClick", point={"x": bd["x"] + bd["width"] / 2, "y": bd["y"] + bd["height"] / 2})
+
+
+async def open_field(b, pattern):
+    """Click the date or time field of the schedule row: the control whose text matches `pattern`."""
+    ui = (await b.call("page_getPageInfo", maxPerKind=300, geometry=True))["interactive"]
+    for kind in ("buttons", "inputs", "comboboxes", "other"):
+        for x in ui.get(kind, []):
+            if re.fullmatch(pattern, (x.get("text") or x.get("value") or "").strip()):
+                await b.call("page_clickElement", target={"selector": x["selector"]})
+                await asyncio.sleep(1)
+                return
+    raise SystemExit(f"refused: no schedule field matching {pattern!r} on the page")
+
+
+async def set_schedule(b, when):
+    await b.call("page_clickElement", target={"text": "Schedule", "selector": "label"})
+    await asyncio.sleep(1)
+    await open_field(b, r"[A-Z][a-z]{2} \d{1,2}, \d{4}")
+    for _ in range(12):   # walk the calendar to the right month
+        text = await b.text()
+        if f"{MONTHS[when.month - 1]}\n{when.year}" in text or f"{MONTHS[when.month - 1]} {when.year}" in text:
+            break
+        await b.call("page_clickElement", target={"selector": 'button.DatePicker__nav[aria-label="Next month"]'})
+        await asyncio.sleep(0.5)
+    await b.call("page_clickElement", target={"selector": f'button.DatePicker__day[aria-label*="{day_label(when)}"]'})
+    await asyncio.sleep(1)
+    await open_field(b, r"\d{2}:\d{2}")
+    await click_at(b, f'button.TimePicker__item[aria-label="Hours {when.hour:02d}"]')
+    await asyncio.sleep(0.5)
+    await click_at(b, f'button.TimePicker__item[aria-label="Minutes {when.minute:02d}"]')
+    await asyncio.sleep(0.5)
+    await b.call("page_pressKey", key="Escape")
+
+
+async def set_ai_label(b):
+    """'AI-generated content' switch under Settings > Show more. Turning it on opens no dialog (checked 28/10/2026)."""
+    try:
+        await b.call("page_clickElement", target={"text": "Show more"})
+        await asyncio.sleep(1)
+    except RuntimeError:
+        pass   # already expanded
+    sel = "input.Switch__input"
+    ui = (await b.call("page_getPageInfo", maxPerKind=300, geometry=True))["interactive"]
+    labels = [x for k in ui.values() if isinstance(k, list) for x in k if (x.get("text") or "").strip() == "AI-generated content"]
+    switches = [x for k in ui.values() if isinstance(k, list) for x in k if sel in (x.get("selector") or "")]
+    if not labels or not switches:
+        raise SystemExit("refused: cannot find the AI-generated content switch")
+    y = labels[0]["bounds"]["y"]
+    sw = min(switches, key=lambda x: abs(x["bounds"]["y"] - y))
+    if abs(sw["bounds"]["y"] - y) > 30:
+        raise SystemExit("refused: no switch on the AI-generated content row")
+    if not sw.get("checked"):
+        bd = sw["bounds"]
+        await b.call("page_trustedClick", point={"x": bd["x"] + bd["width"] / 2, "y": bd["y"] + bd["height"] / 2})
+        await asyncio.sleep(1)
+
+
+async def discard(b):
+    await b.call("page_clickElement", target={"role": "button", "text": "Discard"})
+    await b.call("page_waitForElement", target={"text": "Discard this post?"})
+    await b.call("page_clickElement", target={"selector": "[role=dialog] button", "text": "Discard"})
+    await asyncio.sleep(2)
+
+
 async def create_post(a):
     check_create(a.privacy, a.allow_public)
+    tz = tz_of(a.tz)
+    when = check_schedule(a.schedule, tz) if a.schedule else None
+    caption = f"{a.marker} {a.caption}".strip()
     video = Path(a.video).resolve()
     async with browser() as b:
         # start the local file server only once the browser is up, so a failed connect never leaves it running
@@ -149,18 +292,35 @@ async def create_post(a):
         await b.call("page_attachFile", target={"selector": "input[type=file]"}, downloadId=dl["downloadId"])
         await b.call("page_waitForElement", target={"selector": CAPTION})
         await asyncio.sleep(3)
-        await type_caption(b, f"{a.marker} {a.caption}".strip())
+        await type_caption(b, caption)
         # privacy: the 'Who can see this post' combobox shows 'Everyone'; open it and pick the option
-        await b.call("page_clickElement", target={"text": "Everyone"})
-        await asyncio.sleep(1)
-        await b.call("page_clickElement", target={"text": PRIVACY[a.privacy], "selector": "[role=option]"})
-        await asyncio.sleep(1)
-        text = (await b.call("page_extractText", maxLength=3000))["content"]
-        if f"Who can see this post\n{PRIVACY[a.privacy]}" not in text:  # last check before the irreversible click
-            raise SystemExit("refused to post: privacy is not " + PRIVACY[a.privacy])
-        await b.call("page_clickElement", target={"role": "button", "text": "Post"})
-        await asyncio.sleep(5)
-        print("posted (check the list); privacy =", a.privacy)
+        if a.privacy != "public":
+            await b.call("page_clickElement", target={"text": "Everyone"})
+            await asyncio.sleep(1)
+            await b.call("page_clickElement", target={"text": PRIVACY[a.privacy], "selector": "[role=option]"})
+            await asyncio.sleep(1)
+        if when:
+            await set_schedule(b, when)
+        if a.ai_label:
+            await set_ai_label(b)
+        # last checks before the irreversible click: everything is read back from the page
+        text = await b.text()
+        typed = (await b.call("page_extractText", target={"selector": CAPTION}, maxLength=5000)).get("content", "")
+        bad = settings_ok(text, when, PRIVACY[a.privacy], a.tz.replace("UTC", "GMT"))
+        if not same_caption(typed, caption):
+            bad.append(f"caption on the page differs: {typed[:120]!r}")
+        if bad or a.dry_run:
+            print(("DRY RUN ok: " if not bad else "REFUSED: ") + ("; ".join(bad) or "all settings read back as asked"))
+            await discard(b)
+            print("draft discarded")
+            if bad:
+                raise SystemExit(1)
+            return
+        button = "Schedule" if when else "Post"
+        await b.call("page_clickElement", target={"role": "button", "text": button})
+        await asyncio.sleep(6)
+        print(f"{'scheduled for ' + when.strftime('%Y-%m-%d %H:%M') + ' ' + a.tz if when else 'posted'}"
+              f" (check the Posts list); privacy = {a.privacy}")
 
 
 def add_parser(sub):
@@ -172,7 +332,11 @@ def add_parser(sub):
     c.add_argument("--caption", default="")
     c.add_argument("--privacy", choices=list(PRIVACY), default="private")
     c.add_argument("--allow-public", action="store_true", help="required for friends/public posts")
-    c.add_argument("--marker", default="TEST-CRUD", help="caption prefix so test posts are findable")
+    c.add_argument("--marker", default="TEST-CRUD", help="caption prefix so test posts are findable; \"\" for a real post")
+    c.add_argument("--schedule", default=None, help="'YYYY-MM-DD HH:MM' in --tz; 20 min to 10 days ahead, minutes in 5s")
+    c.add_argument("--tz", default="GMT+7", help="timezone TikTok Studio shows next to the schedule (checked on the page)")
+    c.add_argument("--ai-label", action="store_true", help="turn on the 'AI-generated content' label")
+    c.add_argument("--dry-run", action="store_true", help="do every step except the final click, then discard the draft")
     c.set_defaults(func=lambda a: run(create_post(a)))
     u = s.add_parser("update", help="edit a caption (not verified end to end)")
     u.add_argument("--id", required=True)
