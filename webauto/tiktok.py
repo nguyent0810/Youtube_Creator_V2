@@ -35,7 +35,8 @@ def check_create(privacy, allow_public):
 
 def check_delete(rows, post_id, allow_public):
     """Return the one row to delete, or exit with the reason. `rows` come from list_rows()."""
-    hit = [r for r in rows if post_id in r["id"]]
+    # exact match only: a substring match let a short or partial id pick some other single post
+    hit = [r for r in rows if r["id"] == post_id]
     if len(hit) != 1 or not hit[0].get("more_selector"):
         raise SystemExit(f"refused: {len(hit)} loaded rows match id {post_id} (need exactly 1)")
     if hit[0]["privacy"] != "Only me" and not allow_public:
@@ -58,14 +59,36 @@ async def list_rows(b):
     # the three-dots button is the icon-only button at the far right of each row (34 px wide)
     mores = sorted((x for x in ui["buttons"] if not x.get("text") and x.get("bounds", {}).get("width") == 34
                     and x["bounds"]["x"] > 1300), key=lambda x: x["bounds"]["y"])
-    priv = sorted((x for x in ui["buttons"] if x.get("text") in ("Everyone", "Only me", "Friends")),
-                  key=lambda x: x["bounds"]["y"])
-    return [{
-        "id": re.search(r"/video/(.+)$", link["href"]).group(1),
-        "title": link["text"][:80],
-        "privacy": priv[i]["text"] if i < len(priv) else "?",
-        "more_selector": mores[i]["selector"] if i < len(mores) else None,
-    } for i, link in enumerate(links)]
+    priv = [x for x in ui["buttons"] if x.get("text") in ("Everyone", "Only me", "Friends")]
+    return pair_rows(links, priv, mores)
+
+
+ROW_TOL = 30   # px: a row's link, privacy button and "…" button sit on the same horizontal band
+
+
+def _mid_y(x):
+    b = x.get("bounds") or {}
+    return b["y"] + b.get("height", 0) / 2 if "y" in b else None
+
+
+def pair_rows(links, priv, mores):
+    """One dict per post link, with the privacy and "…" button on the SAME row (nearest centre-y within ROW_TOL).
+
+    Pairing by list index (the first version) shifts every later row as soon as one row lacks a button,
+    so delete could open the menu of a different post. A row with no button close enough gets "?" / None,
+    which check_delete then refuses."""
+    def near(y, items):
+        best = min(items, key=lambda x: abs(_mid_y(x) - y), default=None) if y is not None else None
+        return best if best is not None and abs(_mid_y(best) - y) <= ROW_TOL else None
+    priv = [x for x in priv if _mid_y(x) is not None]
+    mores = [x for x in mores if _mid_y(x) is not None]
+    out = []
+    for link in links:
+        y = _mid_y(link)
+        p, m = near(y, priv), near(y, mores)
+        out.append({"id": re.search(r"/video/(.+)$", link["href"]).group(1), "title": link["text"][:80],
+                    "privacy": p["text"] if p else "?", "more_selector": m["selector"] if m else None})
+    return out
 
 
 async def list_posts(a):
@@ -112,9 +135,10 @@ async def update_post(a):
 async def create_post(a):
     check_create(a.privacy, a.allow_public)
     video = Path(a.video).resolve()
-    srv = subprocess.Popen([sys.executable, "-m", "http.server", "8899", "--bind", "127.0.0.1"], cwd=video.parent,
-                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     async with browser() as b:
+        # start the local file server only once the browser is up, so a failed connect never leaves it running
+        srv = subprocess.Popen([sys.executable, "-m", "http.server", "8899", "--bind", "127.0.0.1"], cwd=video.parent,
+                               stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         try:
             await asyncio.sleep(1.5)
             dl = await b.call("page_captureDownload", url=f"http://127.0.0.1:8899/{video.name}")

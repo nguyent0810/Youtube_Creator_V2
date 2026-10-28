@@ -72,12 +72,32 @@ def test_delete_chi_xoa_bai_rieng_tu_khop_dung_mot_dong():
 @pytest.mark.parametrize("pid,allow", [
     ("2222", False),   # bài công khai
     ("9999", False),   # không có dòng nào
-    ("1111", False),   # khớp hai dòng (1111 và 11112)
+    ("111", False),    # id thiếu số: trước đây khớp kiểu "chứa trong", nay phải khớp đúng
     ("3333", True),    # id bị che, không có nút "…"
 ])
 def test_delete_tu_choi(pid, allow):
     with pytest.raises(SystemExit):
         tiktok.check_delete(ROWS, pid, allow)
+
+
+def test_delete_khop_id_chinh_xac():
+    assert tiktok.check_delete(ROWS, "1111", False)["title"] == "a"   # không lẫn với 11112
+
+
+def _el(y, **kw):
+    return {"bounds": {"x": 1400, "y": y, "width": 34, "height": 20}, **kw}
+
+
+def test_ghep_dong_theo_toa_do_khong_theo_thu_tu():
+    links = [_el(100, href="/video/1", text="a"), _el(200, href="/video/2", text="b"), _el(300, href="/video/3", text="c")]
+    # dòng giữa thiếu cả nút quyền xem lẫn nút "…": ghép theo chỉ số sẽ đẩy nút của dòng 3 lên dòng 2
+    priv = [_el(300, text="Everyone"), _el(100, text="Only me")]
+    mores = [_el(102, selector="#m1"), _el(301, selector="#m3")]
+    rows = tiktok.pair_rows(links, priv, mores)
+    assert [(r["id"], r["privacy"], r["more_selector"]) for r in rows] == [
+        ("1", "Only me", "#m1"), ("2", "?", None), ("3", "Everyone", "#m3")]
+    with pytest.raises(SystemExit):
+        tiktok.check_delete(rows, "2", True)
 
 
 def test_create_mac_dinh_rieng_tu():
