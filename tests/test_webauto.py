@@ -2,6 +2,7 @@
 
 Phần chạm trình duyệt (Flow, ChatGPT, Muse, TikTok) chỉ kiểm bằng tay, vì phụ thuộc giao diện trang.
 """
+import importlib.util
 import json
 from pathlib import Path
 
@@ -251,6 +252,12 @@ def test_cli_wait_login_toan_cuc(monkeypatch):
 
 # ---- Flow: gỡ dấu ✦ ở góc (imagefix). Không mở trình duyệt. ---------------------------------------------
 
+# Pillow + opencv nằm trong extra `webauto`: máy chưa cài thì bỏ qua thay vì báo lỗi.
+needs_imaging = pytest.mark.skipif(
+    importlib.util.find_spec("cv2") is None or importlib.util.find_spec("PIL") is None,
+    reason="cần extra webauto (pillow, opencv-python-headless)")
+
+
 def _scene(w, h, kind):
     """Nền có vân. kind: diamond (✦ 4 cánh cong), circle, rhombus (thoi thẳng), none."""
     import numpy as np
@@ -286,6 +293,7 @@ def _save_jpg(im, path):
     im.save(path, format="JPEG", quality=90)
 
 
+@needs_imaging
 def test_find_mark_thay_kim_cuong_va_fill_dua_vung_ve_nen(tmp_path):
     import numpy as np
     from PIL import Image
@@ -318,6 +326,7 @@ def test_find_mark_thay_kim_cuong_va_fill_dua_vung_ve_nen(tmp_path):
     assert find_mark(Image.open(path)) is None
 
 
+@needs_imaging
 def test_khong_co_dau_thi_khong_doi_file(tmp_path):
     import hashlib
     from PIL import Image
@@ -343,6 +352,7 @@ def test_khong_co_dau_thi_khong_doi_file(tmp_path):
     assert cpath.read_bytes() == raw
 
 
+@needs_imaging
 def test_crop_giu_ti_le_16_9(tmp_path):
     from PIL import Image
 
@@ -360,6 +370,7 @@ def test_crop_giu_ti_le_16_9(tmp_path):
     assert cx >= w2 or cy >= h2
 
 
+@needs_imaging
 def test_keep_raw_chi_khi_co_sua(tmp_path):
     from webauto.flow import finish_image
 
@@ -400,6 +411,7 @@ def _paste(base, draw_fn):
     return Image.alpha_composite(base.convert("RGBA"), overlay).convert("RGB")
 
 
+@needs_imaging
 def test_find_mark_bo_sao_cham_net_va_thoi_thang():
     """Sao, chấm, vệt nến và hình thoi thẳng không phải dấu ✦. Dấu 4 cánh cong thì thấy."""
     import math
@@ -458,6 +470,7 @@ def test_find_mark_bo_sao_cham_net_va_thoi_thang():
     assert x0 <= mx <= x1 and y0 <= my <= y1
 
 
+@needs_imaging
 def test_known_flow_crop_nen_trang_cat_vung_dau(tmp_path):
     """Ảnh Flow vừa tải luôn bị cắt góc, kể cả nền trắng không có dấu nhìn thấy."""
     from PIL import Image
@@ -482,6 +495,7 @@ def test_known_flow_crop_nen_trang_cat_vung_dau(tmp_path):
     assert find_mark(path) is None
 
 
+@needs_imaging
 def test_known_flow_fill_khong_thay_khong_sua(tmp_path, capsys):
     from PIL import Image
 
@@ -498,6 +512,7 @@ def test_known_flow_fill_khong_thay_khong_sua(tmp_path, capsys):
     assert capsys.readouterr().err == ""
 
 
+@needs_imaging
 def test_ba_goc_bo_sot_crop_known_flow(tmp_path):
     """Góc phải dưới của 3 ảnh Lead bỏ sót. Gỗ và dốc xám thì thấy; khung tranh thì không.
     crop known_flow vẫn cắt hộp cố định ở cả ba.
@@ -533,6 +548,7 @@ def test_ba_goc_bo_sot_crop_known_flow(tmp_path):
         assert find_mark(path) is None
 
 
+@needs_imaging
 def test_finish_image_crop_cat_ca_khi_khong_thay_dau(tmp_path):
     from PIL import Image
 
