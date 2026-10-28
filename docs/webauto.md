@@ -64,9 +64,13 @@ Gom **mọi số liệu của YouTube Studio** về file, để LLM đọc bản
 
 ```
 python -m webauto studio collect                       # kênh Studio đang mở, mọi báo cáo, 5 kỳ
-python -m webauto studio collect --channel-id UC... --periods 28d,lifetime --reports videos,daily,traffic_source
+python -m webauto studio channels                      # các kênh của mọi tài khoản Google đã đăng nhập trong Chrome
+python -m webauto studio collect --channel all         # lần lượt từng kênh, mỗi kênh một thư mục
+python -m webauto studio collect --channel "biểu đồ" --periods 28d,lifetime --reports videos,daily,traffic_source
 python -m webauto studio summarize --dir output/webauto/studio/<kênh>/<ngày>   # gộp lại thư mục đã thu
 ```
+
+Chọn kênh: `--channel` nhận `all`, một phần tên kênh, mã `UC...` hoặc số `authuser`. Script mở `studio.youtube.com/?authuser=0,1,2...` (mỗi số là một tài khoản Google đã đăng nhập trong Chrome, như trong nút chuyển tài khoản của Studio), đọc mã và tên kênh, dừng khi số tiếp theo quay về kênh đã gặp; mọi URL xuất số liệu đều gắn `authuser` của kênh đó, nên không cần bấm chuyển tài khoản. Không có `--channel` thì lấy kênh Studio đang mở như trước. Mỗi tài khoản Google mới thấy kênh đầu tiên mà Studio mở cho nó.
 
 Cách làm: với mỗi (báo cáo, kỳ) script mở URL **Chế độ nâng cao** của Studio (URL tham số hoá đầy đủ: kênh, kỳ, chỉ số, chiều), bấm "Xuất chế độ xem hiện tại" > `.csv`, giải nén. Dùng cái này thay vì Analytics API (`factory/analytics.py`) vì Studio có số mà API không trả (lượt hiển thị, CTR hình thu nhỏ, bảng theo từng video, các chiều khán giả), và một lần xuất là đủ mọi dòng.
 

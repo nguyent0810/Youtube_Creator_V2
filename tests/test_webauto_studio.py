@@ -149,6 +149,29 @@ def test_build_url_co_du_tham_so():
     assert u.startswith("https://studio.youtube.com/channel/UCabc/analytics/") and "explore?" in u
     assert u.count("t_metrics=") == 2 and "dimension=VIDEO" in u and "time_period=4_weeks" in u
     assert "metric=EXTERNAL_VIEWS" in u
+    assert "authuser" not in u
+    assert studio.build_url("UCabc", "4_weeks", "VIDEO", studio.METRICS_MIN, authuser=2).endswith("&authuser=2")
+
+
+def test_ten_kenh_doc_tu_thanh_ben_studio():
+    assert studio.channel_name_from_text("Bỏ qua\nKênh của bạn\nBiểu Đồ Biết Nói\nTổng quan") == "Biểu Đồ Biết Nói"
+    assert studio.channel_name_from_text("Skip\n Your channel \n\nMind in the Machine\nDashboard") == "Mind in the Machine"
+    assert studio.channel_name_from_text("Không có thanh bên") is None
+
+
+ACCOUNTS = [{"authuser": 0, "channel_id": "UCaaaaaaaaaaaaaaaaaaaaaa", "name": "Into the Killer’s Mind"},
+            {"authuser": 1, "channel_id": "UCbbbbbbbbbbbbbbbbbbbbbb", "name": "Biểu Đồ Biết Nói"},
+            {"authuser": 2, "channel_id": "UCcccccccccccccccccccccc", "name": "Mind in the Machine"}]
+
+
+def test_chon_kenh_theo_ten_so_hoac_ma():
+    assert studio.select_accounts(ACCOUNTS, "all") == ACCOUNTS
+    assert [a["authuser"] for a in studio.select_accounts(ACCOUNTS, "biểu đồ")] == [1]
+    assert [a["authuser"] for a in studio.select_accounts(ACCOUNTS, "2")] == [2]
+    assert [a["authuser"] for a in studio.select_accounts(ACCOUNTS, "UCaaaaaaaaaaaaaaaaaaaaaa")] == [0]
+    assert len(studio.select_accounts(ACCOUNTS, "mind")) == 2  # tên mơ hồ: lấy mọi kênh khớp
+    with pytest.raises(SystemExit, match="Biểu Đồ Biết Nói"):
+        studio.select_accounts(ACCOUNTS, "không có")
 
 
 def test_classify_theo_tieu_de():

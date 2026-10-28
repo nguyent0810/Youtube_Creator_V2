@@ -75,11 +75,13 @@ DEFAULT_DIM_PERIODS = ["28d", "lifetime"]
 PERIOD_ORDER = ["28d", "lifetime", "7d", "90d", "365d"]  # 28d first: ids for new dimensions are resolved on it
 
 
-def build_url(channel, period_id, dimension, metrics):
+def build_url(channel, period_id, dimension, metrics, authuser=None):
     q = [("entity_type", "CHANNEL"), ("entity_id", channel), ("time_period", period_id),
          ("explore_type", "TABLE_AND_CHART"), ("metric", metrics[0]), ("granularity", "DAY")]
     q += [("t_metrics", m) for m in metrics]
     q += [("dimension", dimension), ("o_column", metrics[0]), ("o_direction", "ANALYTICS_ORDER_DIRECTION_DESC")]
+    if authuser is not None:  # which signed-in Google account (Chrome multi-login) owns the channel
+        q.append(("authuser", authuser))
     return BASE.format(ch=channel) + "?" + urlencode(q)
 
 
@@ -184,7 +186,68 @@ async def current_channel(b):
     raise SystemExit("could not detect the Studio channel; pass --channel-id UC...")
 
 
-async def fetch(b, channel, report, period, cat, dest):
+def studio_home(authuser=None):
+    return STUDIO if authuser is None else f"{STUDIO}?authuser={authuser}"
+
+
+def channel_name_from_text(text):
+    """Studio's sidebar reads "Kênh của bạn" / "Your channel" followed by the channel name."""
+    lines = [ln.strip() for ln in (text or "").splitlines() if ln.strip()]
+    for i, ln in enumerate(lines[:-1]):
+        if ln.lower() in ("kênh của bạn", "your channel"):
+            return lines[i + 1]
+    return None
+
+
+def select_accounts(accounts, want):
+    """accounts: [{"authuser", "channel_id", "name"}]. want: "all", an authuser number, a UC id, or part of a name."""
+    if want == "all":
+        return accounts
+    w = str(want).strip().lower()
+    hit = [a for a in accounts if w == str(a["authuser"]) or w == a["channel_id"].lower()]
+    hit = hit or [a for a in accounts if w in (a.get("name") or "").lower()]
+    if not hit:
+        names = ", ".join(f'{a["authuser"]}: {a.get("name") or "?"} ({a["channel_id"]})' for a in accounts)
+        raise SystemExit(f"no signed-in channel matches {want!r}; found: {names}")
+    return hit
+
+
+async def discover(b, limit=8):
+    """Every channel the Google accounts signed in to this Chrome open in Studio, by `authuser` index.
+    An index past the last account falls back to an earlier one, which is where the scan stops."""
+    found = []
+    for n in range(limit):
+        tab = await b.call("page_openTab", url=studio_home(n))
+        try:
+            ch = None
+            for _ in range(10):
+                await asyncio.sleep(2)
+                url = ((await b.call("browsentic_status")).get("activeTab") or {}).get("url", "")
+                if auth.url_is_login(url):
+                    break
+                m = re.search(r"/channel/(UC[\w-]{22})", url)
+                if m:
+                    ch = m.group(1)
+                    break
+            if not ch or any(a["channel_id"] == ch for a in found):
+                break
+            name = None
+            for _ in range(5):
+                name = channel_name_from_text((await b.call("page_extractText")).get("content", ""))
+                if name:
+                    break
+                await asyncio.sleep(2)
+            found.append({"authuser": n, "channel_id": ch, "name": name})
+        finally:
+            if tab.get("tabId"):
+                try:
+                    await b.call("page_closeTab", tabId=tab["tabId"])
+                except Exception:
+                    pass
+    return found
+
+
+async def fetch(b, channel, report, period, cat, dest, authuser=None):
     """Try known ids first, then the candidates; cache whatever works. Returns (files, ids) or (None, reason)."""
     known_p = cat["periods"].get(period)
     known_d = cat["dimensions"].get(report)
@@ -198,7 +261,7 @@ async def fetch(b, channel, report, period, cat, dest):
         for did in dids:
             for mi in msets:
                 # a NEW tab per attempt: Chrome refuses a second automatic download in the same tab
-                tab = await b.call("page_openTab", url=build_url(channel, pid, did, METRIC_SETS[mi]))
+                tab = await b.call("page_openTab", url=build_url(channel, pid, did, METRIC_SETS[mi], authuser))
                 try:
                     if not await ready(b, 1 if (pid != known_p or did != known_d) else 2):
                         continue
@@ -209,7 +272,7 @@ async def fetch(b, channel, report, period, cat, dest):
                             break
                         except RuntimeError as e:
                             last = f"export failed ({str(e)[:80]}); the report may be empty"
-                            await b.call("page_navigate", url=build_url(channel, pid, did, METRIC_SETS[mi]))
+                            await b.call("page_navigate", url=build_url(channel, pid, did, METRIC_SETS[mi], authuser))
                             if not await ready(b, 2):
                                 break
                     if not z:
@@ -238,47 +301,65 @@ def plan(reports, periods):
     return out
 
 
+async def collect_one(b, cat, target, out, periods, reports, resume=False):
+    channel, authuser = target["channel_id"], target.get("authuser")
+    folder = Path(out) / channel / date.today().isoformat()
+    print(f"== {target.get('name') or channel} ({channel})", flush=True)
+    items, done = [], {}
+    if resume and (folder / "manifest.json").exists():  # keep what already worked, retry the rest
+        prev = json.loads((folder / "manifest.json").read_text(encoding="utf-8"))
+        done = {(r["report"], r["period"]): r for r in prev["reports"] if r["status"] == "ok"}
+    for n, (rep, per) in enumerate(plan(reports, periods), 1):
+        if (rep, per) in done:
+            items.append(done[(rep, per)])
+            print(f"[{n}] {rep} / {per}: already collected", flush=True)
+            continue
+        rel = Path("raw") / f"{rep}__{per}"
+        print(f"[{n}] {rep} / {per} ...", flush=True)
+        files, info = await fetch(b, channel, rep, per, cat, folder / rel, authuser)
+        if files:
+            items.append({"report": rep, "period": per, "status": "ok", **info,
+                          "files": {k: (rel / v.name).as_posix() for k, v in files.items()}})
+            print(f"     ok: {info['dimension_id']} / {info['period_id']} ({len(files)} files)", flush=True)
+        else:
+            items.append({"report": rep, "period": per, "status": "failed", "reason": info})
+            print(f"     failed: {info}", flush=True)
+        save_catalog(cat)
+    manifest = {"channel_id": channel, "channel_name": target.get("name"), "authuser": authuser,
+                "collected": datetime.now().isoformat(timespec="seconds"), "reports": items}
+    folder.mkdir(parents=True, exist_ok=True)
+    (folder / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")
+    return folder
+
+
 async def collect(channel, out, periods, reports, refresh=False, resume=False):
+    """channel: None = the channel Studio opens with; "all", an authuser number, a UC id or part of a channel
+    name = picked from the Google accounts signed in to this Chrome (Studio's account switcher)."""
     cat = load_catalog(refresh)
-    items = []
+    folders = []
     async with browser() as b:
         tab = await b.call("page_openTab", url=STUDIO)
         try:
             await asyncio.sleep(3)
             await ensure_login(b)
-            channel = channel or await current_channel(b)
-            folder = Path(out) / channel / date.today().isoformat()
-            done = {}
-            if resume and (folder / "manifest.json").exists():  # keep what already worked, retry the rest
-                prev = json.loads((folder / "manifest.json").read_text(encoding="utf-8"))
-                done = {(r["report"], r["period"]): r for r in prev["reports"] if r["status"] == "ok"}
-            for n, (rep, per) in enumerate(plan(reports, periods), 1):
-                if (rep, per) in done:
-                    items.append(done[(rep, per)])
-                    print(f"[{n}] {rep} / {per}: already collected", flush=True)
-                    continue
-                rel = Path("raw") / f"{rep}__{per}"
-                print(f"[{n}] {rep} / {per} ...", flush=True)
-                files, info = await fetch(b, channel, rep, per, cat, folder / rel)
-                if files:
-                    items.append({"report": rep, "period": per, "status": "ok", **info,
-                                  "files": {k: (rel / v.name).as_posix() for k, v in files.items()}})
-                    print(f"     ok: {info['dimension_id']} / {info['period_id']} ({len(files)} files)", flush=True)
-                else:
-                    items.append({"report": rep, "period": per, "status": "failed", "reason": info})
-                    print(f"     failed: {info}", flush=True)
-                save_catalog(cat)
+            if channel:
+                targets = select_accounts(await discover(b), channel)
+            else:
+                targets = [{"channel_id": await current_channel(b), "authuser": None, "name": None}]
+            for t in targets:
+                folders.append(await collect_one(b, cat, t, out, periods, reports, resume))
         finally:
             if tab.get("tabId"):
                 try:
                     await b.call("page_closeTab", tabId=tab["tabId"])
                 except Exception:
                     pass
-    manifest = {"channel_id": channel, "collected": datetime.now().isoformat(timespec="seconds"),
-                "reports": items}
-    folder.mkdir(parents=True, exist_ok=True)
-    (folder / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")
-    return folder
+    return folders
+
+
+async def list_channels():
+    async with browser() as b:
+        return await discover(b)
 
 
 def _run_collect(a):
@@ -287,11 +368,16 @@ def _run_collect(a):
     bad = [r for r in reports if r not in DIMENSION_CANDIDATES] + [p for p in periods if p not in PERIOD_CANDIDATES]
     if bad:
         raise SystemExit(f"unknown report/period: {bad}; reports={list(DIMENSION_CANDIDATES)} periods={list(PERIOD_CANDIDATES)}")
-    folder = run(collect(a.channel_id, a.out, periods, reports, a.refresh_catalog, a.resume))
-    print("collected into", folder)
-    if not a.no_summary:
-        for p in studio_summary.write_outputs(folder):
-            print("wrote", p)
+    for folder in run(collect(a.channel, a.out, periods, reports, a.refresh_catalog, a.resume)):
+        print("collected into", folder)
+        if not a.no_summary:
+            for p in studio_summary.write_outputs(folder):
+                print("wrote", p)
+
+
+def _run_channels(a):
+    for acc in run(list_channels()):
+        print(f'{acc["authuser"]}\t{acc["channel_id"]}\t{acc.get("name") or "?"}')
 
 
 def _run_summarize(a):
@@ -303,7 +389,9 @@ def add_parser(sub):
     ap = sub.add_parser("studio", help="YouTube Studio analytics: export every report, merge into one summary for LLMs")
     s = ap.add_subparsers(dest="cmd", required=True)
     c = s.add_parser("collect", help="export the reports (read-only) and write the summary")
-    c.add_argument("--channel-id", help="UC... (default: the channel Studio opens with)")
+    c.add_argument("--channel", "--channel-id", dest="channel",
+                   help='"all", part of a channel name, a UC id or an authuser number (see `studio channels`); '
+                        "default: the channel Studio opens with")
     c.add_argument("--out", default=str(default_out("studio")), help="<out>/<channel>/<date>/")
     c.add_argument("--periods", default="7d,28d,90d,365d,lifetime")
     c.add_argument("--reports", default=",".join(DIMENSION_CANDIDATES), help="comma list; default all")
@@ -311,6 +399,8 @@ def add_parser(sub):
     c.add_argument("--resume", action="store_true", help="reuse today's folder: only (re)try reports that are missing or failed")
     c.add_argument("--no-summary", action="store_true")
     c.set_defaults(func=_run_collect)
+    ch = s.add_parser("channels", help="list the channels of every Google account signed in to this Chrome")
+    ch.set_defaults(func=_run_channels)
     m = s.add_parser("summarize", help="merge an already collected folder into summary.md/json + videos.csv")
     m.add_argument("--dir", required=True, help="the <out>/<channel>/<date> folder with manifest.json")
     m.add_argument("--out", help="default: the same folder")
