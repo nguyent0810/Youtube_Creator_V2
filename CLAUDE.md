@@ -35,6 +35,7 @@ Một phiên được nhờ "cải thiện" đã dựng bốn Long (escobar, cap
 
 Dự án dùng `tk` ([wedow/ticket](https://github.com/wedow/ticket), MIT, bản chép trong `tools/ticket/`). Ticket là file markdown trong `.tickets/`, commit cùng repo.
 
-- Đầu phiên: `bash tools/ticket/tk ready` (việc đang mở, đã hết phụ thuộc).
-- Việc kéo dài hơn một phiên hoặc có mốc ngày: `bash tools/ticket/tk create "<tiêu đề>" -p <0-4> --tags <...> -d "..." --acceptance "..."`.
-- Tiến độ: `tk add-note <id> "..."`; xong: `tk close <id>`. Lệnh `ls`/`query` là plugin, cần `PATH="$PWD/tools/ticket:$PATH"`.
+- Gọi: PowerShell/cmd dùng `.\tk <lệnh>` (file `tk.cmd`, chạy bằng Git Bash, dùng được từ thư mục nào cũng được: `& "D:\Tools\Youtube Creator v2\Youtube_Creator_V2\tk.cmd" ready`). Trong Git Bash: `bash tools/ticket/tk <lệnh>`. Không gõ `bash` trong PowerShell: đó là WSL, máy này không có.
+- Đầu phiên: `tk ready` (việc đang mở, đã hết phụ thuộc).
+- Việc kéo dài hơn một phiên hoặc có mốc ngày: `tk create "<tiêu đề>" -p <0-4> --tags <...> -d "..." --acceptance "..."`.
+- Tiến độ: `tk add-note <id> "..."`; xong: `tk close <id>`. `tk ls`, `tk query` là plugin; `tk.cmd` đã tự thêm vào PATH, Git Bash thì cần `PATH="$PWD/tools/ticket:$PATH"`.
