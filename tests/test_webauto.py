@@ -107,6 +107,19 @@ def test_create_mac_dinh_rieng_tu():
     tiktok.check_create("public", True)
 
 
+def test_flow_session_file_from_flag_or_env(monkeypatch, tmp_path):
+    monkeypatch.delenv("WEBAUTO_FLOW_SESSION", raising=False)
+    assert flow.session_file() is None
+    monkeypatch.setenv("WEBAUTO_FLOW_SESSION", str(tmp_path / "env.json"))
+    assert flow.session_file() == tmp_path / "env.json"
+    assert flow.session_file(str(tmp_path / "flag.json")) == tmp_path / "flag.json"
+
+
+def test_flow_missing_session_file_stops_before_browser(tmp_path):
+    with pytest.raises(SystemExit, match="export-session"):
+        flow.launch(None, session=str(tmp_path / "none.json"))
+
+
 def test_flow_image_can_mode_video():
     with pytest.raises(SystemExit):
         flow.generate([("a", "b")], "out", mode="image", image="x.png")

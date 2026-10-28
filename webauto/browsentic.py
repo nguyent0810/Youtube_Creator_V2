@@ -44,7 +44,8 @@ class Browser:
     async def call(self, tool, **args):
         res = await self.s.call_tool(tool, args)
         text = "".join(c.text for c in res.content if getattr(c, "text", None))
-        if res.isError:
+        # mcp đổi tên trường: isError (bản cũ) -> is_error (bản mới, 2026)
+        if getattr(res, "is_error", None) or getattr(res, "isError", False):
             raise RuntimeError(f"{tool}: {text[:300]}")
         return parse_payload(text)
 
@@ -88,14 +89,20 @@ def run(coro):
 
 
 def clipboard():
-    r = subprocess.run(
-        ["powershell", "-NoProfile", "-Command", "[Console]::OutputEncoding=[Text.Encoding]::UTF8; Get-Clipboard -Raw"],
-        capture_output=True, encoding="utf-8")
+    if sys.platform == "darwin":   # macOS: pbpaste (PowerShell only exists on Windows)
+        r = subprocess.run(["pbpaste"], capture_output=True, encoding="utf-8")
+    else:
+        r = subprocess.run(
+            ["powershell", "-NoProfile", "-Command", "[Console]::OutputEncoding=[Text.Encoding]::UTF8; Get-Clipboard -Raw"],
+            capture_output=True, encoding="utf-8")
     return (r.stdout or "").rstrip("\r\n")
 
 
 def clear_clipboard():
-    subprocess.run(["powershell", "-NoProfile", "-Command", "Set-Clipboard -Value ''"], capture_output=True)
+    if sys.platform == "darwin":
+        subprocess.run(["pbcopy"], input="", text=True, capture_output=True)
+    else:
+        subprocess.run(["powershell", "-NoProfile", "-Command", "Set-Clipboard -Value ''"], capture_output=True)
 
 
 def newest_download(since):
