@@ -1,0 +1,12 @@
+Tôi sẽ đọc brief YCV-im1r trước, rồi làm đúng phạm vi trong repo này và ghi file retro khi xong.Brief giới hạn chỉ đọc và ghi một file retro. Tôi sẽ lần các note, kịch bản, báo cáo vòng và spec để lần nguyên nhân từng sự cố.Sáu báo cáo đã đủ mạch sự cố. Tiếp theo tôi đối chiếu spec và chỗ trong code mà cổng tự động lẽ ra phải chặn.Báo cáo đã khớp spec. Tôi xem contact sheet của bài đã đăng để xác nhận clip và cảnh còn sót.Contact sheet bài đã đăng xác nhận p1 vẫn mở và kết bằng điện thoại có mặt người trên màn hình, còn p6 đã thành bộ đếm. Tôi ghi retro theo đúng tám sự cố.Đã ghi retro vào `docs/pm/2026-10-28-retro-mim-pilot-short.md`. Chỉ đọc tài liệu, spec và contact sheet p1/p6. Không sửa code, không gọi API, không chạy git, không đổi lịch.
+
+Tám sự cố đều có nguyên nhân, cổng hiện có, và chốt máy kèm hàm cùng ví dụ test. Chốt chính nằm ở `build()` trước `speak()` và ở `clips.ensure()`:
+
+- `render_preflight()` dừng ngay khi sandbox trả `EPERM`, mã `sandbox-no-render`.
+- `DENY` chặn `pexels:39687575`, `38410499`, `38410501`, `28709421`.
+- `acc_lint` không cho từ phủ định và từ đơn "một" vào `acc`.
+- `pilot_lint` không cho hook B mở bằng "Theo…", và không cho p2 gắn "ba giây" với "đủ" hoặc "dài bằng".
+- `board_lint` bắt board từ 3 nút xếp dọc.
+- Biểu đồ dưới 2 cột thì bắt dùng `counter`.
+
+Bản đã hẹn giờ vẫn còn một điểm: p1 mở bằng `pexels:38410499` và kết bằng `pexels:38410501`. Cả hai đều là điện thoại có mặt người trên màn hình. Retro không sửa spec đó.

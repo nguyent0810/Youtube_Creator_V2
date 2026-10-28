@@ -1,0 +1,7 @@
+Tôi sẽ đọc brief YCV-cimp trước, rồi làm đúng phạm vi trong brief và ghi báo cáo cuối.Brief chỉ cho đọc và phân tích, rồi ghi một báo cáo. Tôi sẽ xem cấu trúc số liệu Studio và quy tắc Long trước khi tính.Số liệu traffic là theo kênh, không theo từng video. Tôi sẽ tính bảng Long public từ CSV và đối chiếu lịch đăng.16 Long đã public có số liệu; phần lớn kẹt ở lượt hiển thị hoặc CTR. Tôi sẽ ghi báo cáo từ các cột Studio vừa tính.Báo cáo đang 125 dòng, vượt trần 120. Tôi rút gọn và sửa chỗ nói AVD Browse/Suggested của CK trên 3 phút.Báo cáo nằm ở `docs/pm/tickets/LONG-DIAG-report.md` (119 dòng). Không sửa code, không đăng, không commit, không đổi lịch.
+
+Mỗi kênh có 8 Long public tính tới 26/10/2026. Tám video CK được 238 lượt xem, tám video MIM được 917. Video nhiều nhất là `sywk-F-yW7k` với 404 lượt xem.
+
+Nguyên nhân đo được là lượt hiển thị và CTR. Năm Long CK và ba Long MIM còn dưới 1.000 impressions. Bảy trong tám Long đã vượt 1.000 impressions thì CTR dưới 2%. Chỉ một video, `a45PR7ejNgk`, có thời lượng xem trung bình dưới 3 phút trên mẫu đủ 30 lượt xem. Không có dòng traffic `Shorts` hay `SHORTS_CONTENT_LINKS`.
+
+Giờ xem Long trong 365 ngày, sau khi trừ một video CK chưa public, là 10,82 giờ ở CK và 37,79 giờ ở MIM. So với mốc 4.000 giờ của YPP, đó là 0,27% và 0,94%. Giờ xem Short không được cộng vào.

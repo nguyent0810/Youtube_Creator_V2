@@ -1,0 +1,33 @@
+{
+ "theme": "mim",
+ "short_type": "S",
+ "pilot": {"pair": 3, "hook": "A", "long": "m5soSE5-BDQ", "date": "2026-11-17"},
+ "title": "YouTube 2016: chọn vài chục video thế nào?",
+ "description": "Covington, Adams, Sargin (Google), \"Deep Neural Networks for YouTube Recommendations\", RecSys '16 (09/2016): hệ thống hai vòng, từ kho hàng triệu video lọc ra vài trăm ứng viên rồi xếp hạng còn vài chục. Bài viết ghi xếp theo tỉ lệ nhấp dễ đẩy video câu nhấp, còn thời gian xem phản ánh mức quan tâm tốt hơn. Đây là mô tả năm 2016, không phải hệ thống hiện nay. Giọng đọc tổng hợp.\n\nBản đầy đủ, thuật toán đề xuất đoán bạn thích gì: https://youtu.be/m5soSE5-BDQ",
+ "tags": ["youtube đề xuất", "thuật toán đề xuất", "recsys 2016", "trí tuệ nhân tạo", "mind in the machine"],
+ "kicker": "THUẬT TOÁN ĐỀ XUẤT",
+ "sub": "RECSYS · 09/2016",
+ "acc": ["hàng triệu", "vài trăm", "vài chục", "thời gian xem"],
+ "lines": [
+  "Tháng 9 năm 2016, ba kỹ sư Google mô tả YouTube lọc hàng triệu video xuống vài chục trước mắt bạn.",
+  "Vòng một: từ hàng triệu video, máy lọc ra vài trăm ứng viên.",
+  "Vòng hai: chấm điểm vài trăm video đó, rồi đưa vài chục lên trước mắt bạn.",
+  "Họ còn viết: xếp theo lượt nhấp dễ đẩy video câu nhấp lên trên, dù người xem không xem hết.",
+  "Nên họ dùng thời gian xem, vì nó phản ánh sự quan tâm tốt hơn.",
+  "Đó là mô tả năm 2016. Hệ thống bây giờ đã thay đổi nhiều.",
+  "Hàng triệu video, vài trăm ứng viên, rồi vài chục trên màn hình bạn. Đó là cách bài báo năm 2016 mô tả."
+ ],
+ "scenes": [
+  {"type": "kinetic", "items": [{"text": "HÀNG TRIỆU → VÀI CHỤC VIDEO", "at": 0, "acc": true}, {"text": "BA KỸ SƯ GOOGLE · 09/2016", "at": [0, "Google"], "sm": true}], "clip": "pexels:34337855", "veil": 0.58},
+  {"type": "board", "at": 1, "title": "VÒNG MỘT", "nodes": [{"text": "hàng triệu video", "x": 0.5, "y": 0.28, "at": [1, "triệu"], "shape": "circle", "w": 630}, {"text": "vài trăm ứng viên", "x": 0.5, "y": 0.7, "at": [1, "trăm"], "c": "acc", "shape": "circle", "w": 630}], "arrows": [{"from": 0, "to": 1, "at": [1, "lọc"]}]},
+  {"type": "cards3d", "at": 2, "title": "VÒNG HAI", "cards": [{"k": "CHẤM ĐIỂM", "v": "VÀI TRĂM", "at": [2, "trăm"]}, {"k": "ĐƯA LÊN MÀN HÌNH", "v": "VÀI CHỤC", "at": [2, "chục"], "c": "acc"}]},
+  {"type": "kinetic", "at": 3, "items": [{"text": "XẾP THEO LƯỢT NHẤP", "at": 3}, {"text": "CÓ THỂ ĐẨY VIDEO CÂU NHẤP", "at": [3, "câu"], "acc": true}], "clip": "pexels:37342578", "veil": 0.62},
+  {"type": "slam", "at": 4, "text": "THỜI GIAN XEM", "sub": "PHẢN ÁNH SỰ QUAN TÂM TỐT HƠN", "clip": "pexels:34336609", "veil": 0.64},
+  {"type": "date", "at": 5, "date": "09.2016", "day": "MÔ TẢ HỆ THỐNG KHI ĐÓ", "sub": {"text": "HỆ THỐNG BÂY GIỜ ĐÃ THAY ĐỔI NHIỀU", "at": [5, "Hệ"]}},
+  {"type": "board", "at": 6, "title": "HÀNG TRIỆU → VÀI TRĂM → VÀI CHỤC", "nodes": [{"text": "kho video", "x": 0.5, "y": 0.25, "at": 6, "shape": "circle", "w": 440}, {"text": "ứng viên", "x": 0.5, "y": 0.5, "at": [6, "trăm"], "shape": "circle", "w": 440}, {"text": "màn hình bạn", "x": 0.5, "y": 0.75, "at": [6, "chục"], "c": "acc", "shape": "circle", "w": 440}], "arrows": [{"from": 0, "to": 1, "at": [6, "triệu"]}, {"from": 1, "to": 2, "at": [6, "ứng"]}]}
+ ],
+ "sources": ["https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45530.pdf"],
+ "mix": true, "rules": 2, "music_gain": 0.18, "music_duck": 3, "sfx_gain": 0.36,
+ "tts": {"pauses": {"0": 0.35, "1": 0.22, "2": 0.22, "3": 0.22, "4": 0.22, "5": 0.35}},
+ "say": {"YouTube": "Du-túp", "Google": "Gu-gồ"}, "imgs": {}
+}

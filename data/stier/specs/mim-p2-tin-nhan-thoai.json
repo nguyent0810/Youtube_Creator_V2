@@ -1,0 +1,264 @@
+{
+ "theme": "mim",
+ "short_type": "S",
+ "pilot": {
+  "pair": 1,
+  "hook": "B",
+  "long": "sywk-F-yW7k",
+  "date": "2026-11-14"
+ },
+ "title": "Tin nhắn thoại: giọng nói còn là bằng chứng?",
+ "description": "VALL-E (Microsoft, arXiv 01/2023) là mô hình nghiên cứu nói được bằng giọng một người chưa từng nghe chỉ từ đoạn ghi âm mẫu 3 giây; OpenAI (29/03/2024) giới thiệu Voice Engine cần một mẫu 15 giây. Cả hai chưa mở rộng ra công chúng. FBI (PSA 03/12/2024) khuyên hạn chế đăng hình ảnh và giọng nói công khai, để tài khoản mạng xã hội ở chế độ riêng tư. Giọng đọc tổng hợp.\n\nBản đầy đủ, AI giả giọng người thân và một từ bí mật cho cả nhà: https://youtu.be/sywk-F-yW7k",
+ "tags": [
+  "tin nhắn thoại",
+  "ai giả giọng",
+  "giọng nói giả",
+  "deepfake",
+  "an toàn mạng",
+  "mind in the machine"
+ ],
+ "kicker": "AI VÀ GIỌNG NÓI",
+ "sub": "MỘT GIỌNG CÓ ĐỦ?",
+ "acc": [
+  "ba",
+  "mười",
+  "bằng chứng",
+  "gọi lại"
+ ],
+ "lines": [
+  "Tin nhắn thoại bạn gửi hôm qua có dài hơn ba giây không? Năm 2023, một mô hình nghiên cứu chỉ cần ba giây giọng mẫu.",
+  "VALL-E vẫn là mô hình nghiên cứu, chưa mở cho công chúng.",
+  "Năm 2024, OpenAI giới thiệu một mô hình cần mười lăm giây, và không được phát hành rộng rãi cho công chúng.",
+  "Chúng không phải công cụ của kẻ gian. Giọng quen không còn là bằng chứng chắc chắn.",
+  "FBI khuyên hạn chế đăng hình và giọng nói công khai, để tài khoản mạng xã hội riêng tư.",
+  "Còn khi một giọng quen gọi tới đòi tiền gấp: cúp máy, tự gọi lại số bạn đã lưu.",
+  "Giọng nói có thể bị sao chép. Nhưng chuyện tiền bạc phải được xác nhận bằng cuộc gọi lại."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "TIN NHẮN THOẠI 3 GIÂY",
+     "at": 0,
+     "acc": true
+    },
+    {
+     "text": "MÔ HÌNH · 2023",
+     "at": [
+      0,
+      "2023"
+     ],
+     "sm": true
+    },
+    {
+     "text": "DÀI BẰNG MẪU GIỌNG NGHIÊN CỨU",
+     "at": [
+      0,
+      "mẫu"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:36564655",
+   "veil": 0.58
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "VALL-E",
+   "cards": [
+    {
+     "k": "MẪU GIỌNG",
+     "v": "3 GIÂY",
+     "at": [
+      1,
+      "VALL-E"
+     ]
+    },
+    {
+     "k": "TRẠNG THÁI",
+     "v": "CHƯA MỞ CÔNG CHÚNG",
+     "at": [
+      1,
+      "chưa"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 15,
+   "suffix": " GIÂY",
+   "label": "MẪU GIỌNG · MÔ HÌNH 2024",
+   "until": [
+    2,
+    "mười"
+   ],
+   "sub": {
+    "text": "CHƯA PHÁT HÀNH RỘNG RÃI",
+    "at": [
+     2,
+     "phát"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "GIỌNG QUEN",
+     "at": 3
+    },
+    {
+     "text": "CHƯA CHẮC LÀ BẰNG CHỨNG",
+     "at": [
+      3,
+      "bằng"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:34337855",
+   "veil": 0.62
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "FBI KHUYÊN",
+   "nodes": [
+    {
+     "text": "hạn chế công khai giọng",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      4,
+      "FBI"
+     ],
+     "shape": "none",
+     "w": 780
+    },
+    {
+     "text": "để tài khoản riêng tư",
+     "x": 0.5,
+     "y": 0.66,
+     "at": [
+      4,
+      "FBI"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 660
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "KHI CÓ CUỘC GỌI GẤP",
+   "nodes": [
+    {
+     "text": "cúp máy",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      5,
+      "cúp"
+     ],
+     "shape": "circle",
+     "w": 420
+    },
+    {
+     "text": "gọi lại",
+     "x": 0.5,
+     "y": 0.5,
+     "at": [
+      5,
+      "gọi"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 420
+    },
+    {
+     "text": "số đã lưu",
+     "x": 0.5,
+     "y": 0.75,
+     "at": [
+      5,
+      "số"
+     ],
+     "shape": "circle",
+     "w": 420
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      5,
+      "tự"
+     ]
+    },
+    {
+     "from": 1,
+     "to": 2,
+     "at": [
+      5,
+      "đã"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "GIỌNG NÓI CÓ THỂ BỊ SAO CHÉP",
+     "at": 6
+    },
+    {
+     "text": "TIỀN BẠC CẦN CUỘC GỌI LẠI",
+     "at": [
+      6,
+      "gọi"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7606358",
+   "veil": 0.6
+  }
+ ],
+ "sources": [
+  "https://arxiv.org/abs/2301.02111v1",
+  "https://openai.com/index/navigating-the-challenges-and-opportunities-of-synthetic-voices/",
+  "https://www.ic3.gov/PSA/2024/PSA241203"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.08,
+   "1": 0.05,
+   "2": 0.05,
+   "3": 0.05,
+   "4": 0.05,
+   "5": 0.08
+  }
+ },
+ "say": {
+  "VALL-E": "Va-li",
+  "OpenAI": "Ô-pần Ây-ai",
+  "FBI": "Ép-bê-i"
+ },
+ "imgs": {}
+}

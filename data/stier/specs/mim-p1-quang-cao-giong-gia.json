@@ -1,0 +1,231 @@
+{
+ "theme": "mim",
+ "short_type": "S",
+ "pilot": {
+  "pair": 1,
+  "hook": "A",
+  "long": "sywk-F-yW7k",
+  "date": "2026-11-13"
+ },
+ "title": "Scarlett Johansson 2023: giọng giả trong quảng cáo",
+ "description": "Theo tạp chí Variety (02/11/2023), một quảng cáo dài 22 giây đăng trên X ngày 28/10/2023 dùng một đoạn hậu trường thật của Scarlett Johansson, kèm hình ảnh tạo bằng AI và một giọng nói giả bắt chước cô để quảng cáo một ứng dụng chỉnh ảnh. Người đại diện của cô xác nhận cô không phải người phát ngôn của ứng dụng; luật sư Kevin Yorn nói sẽ theo đuổi mọi biện pháp pháp lý. Kênh chưa thấy nguồn công bố kết quả vụ việc. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh trong quảng cáo.\n\nBản đầy đủ, AI giả giọng người thân để lừa tiền và cách phòng: https://youtu.be/sywk-F-yW7k",
+ "tags": [
+  "scarlett johansson",
+  "ai giả giọng",
+  "giọng nói giả",
+  "quảng cáo deepfake",
+  "deepfake",
+  "an toàn mạng",
+  "mind in the machine"
+ ],
+ "kicker": "AI VÀ GIỌNG NÓI",
+ "sub": "10/2023",
+ "acc": [
+  "giả",
+  "thật",
+  "nhỏ",
+  "chưa",
+  "đồng"
+ ],
+ "lines": [
+  "Tháng 10 năm 2023, một quảng cáo trên mạng X dùng giọng giả của Scarlett Johansson. Cô chưa từng nhận lời.",
+  "Quảng cáo dài hai mươi hai giây, mở đầu bằng một đoạn hậu trường thật của cô.",
+  "Rồi tới hình ảnh AI, và một giọng nói bắt chước cô, mời tải một ứng dụng chỉnh ảnh.",
+  "Góc màn hình có dòng chữ nhỏ: ảnh do ứng dụng tạo, không liên quan tới người này.",
+  "Người đại diện xác nhận, cô không phải người phát ngôn của ứng dụng.",
+  "Theo Variety, luật sư của cô nói sẽ theo đuổi mọi biện pháp pháp lý.",
+  "AI sao chép được giọng nói. Nhưng nó không tự tạo ra được sự đồng ý."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "GIỌNG GIẢ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "SCARLETT JOHANSSON",
+     "at": [
+      0,
+      "Scarlett"
+     ]
+    },
+    {
+     "text": "CÔ CHƯA TỪNG NHẬN LỜI",
+     "at": [
+      0,
+      "Cô"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:38410499",
+   "ms": 2,
+   "veil": 0.58
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "QUẢNG CÁO 22 GIÂY",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "MỞ BẰNG HẬU TRƯỜNG THẬT",
+     "at": [
+      1,
+      "hậu"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:34536743",
+   "ms": 2,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Quảng cáo ghép",
+   "nodes": [
+    {
+     "text": "giọng thật của cô",
+     "x": 0.5,
+     "y": 0.24,
+     "at": [
+      2,
+      "Rồi"
+     ],
+     "w": 640
+    },
+    {
+     "text": "AI bắt chước",
+     "x": 0.5,
+     "y": 0.5,
+     "at": [
+      2,
+      "bắt"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 520
+    },
+    {
+     "text": "mời tải ứng dụng",
+     "x": 0.5,
+     "y": 0.78,
+     "at": [
+      2,
+      "mời"
+     ],
+     "w": 640
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      2,
+      "giọng"
+     ]
+    },
+    {
+     "from": 1,
+     "to": 2,
+     "at": [
+      2,
+      "mời"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 3,
+   "text": "Ảnh do ứng dụng tạo, không liên quan tới người này.",
+   "by": "DÒNG CHỮ NHỎ TRONG QUẢNG CÁO · THEO VARIETY · TRÍCH DỊCH"
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "KHÔNG PHẢI NGƯỜI PHÁT NGÔN",
+   "sub": "NGƯỜI ĐẠI DIỆN CỦA CÔ XÁC NHẬN",
+   "clip": "pexels:7586633",
+   "veil": 0.62
+  },
+  {
+   "type": "date",
+   "at": 5,
+   "date": "02.11.2023",
+   "day": "THỨ NĂM",
+   "sub": {
+    "text": "LUẬT SƯ: THEO ĐUỔI MỌI BIỆN PHÁP PHÁP LÝ",
+    "at": [
+     5,
+     "luật"
+    ]
+   },
+   "clip": "pexels:37342578",
+   "veil": 0.72
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "SAO CHÉP ĐƯỢC GIỌNG NÓI",
+     "at": 6,
+     "sm": true
+    },
+    {
+     "text": "KHÔNG TẠO RA ĐƯỢC",
+     "at": [
+      6,
+      "không"
+     ]
+    },
+    {
+     "text": "SỰ ĐỒNG Ý",
+     "at": [
+      6,
+      "đồng"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:38410501",
+   "ms": 1,
+   "veil": 0.6
+  }
+ ],
+ "sources": [
+  "https://au.variety.com/2023/digital/news/scarlett-johansson-legal-action-ai-app-ad-likeness-11749/"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.3,
+   "4": 0.22,
+   "5": 0.35
+  }
+ },
+ "say": {
+  "Scarlett Johansson": "Xcác-lét Giô-han-xơn",
+  "Variety": "Va-rai-ơ-ti",
+  "mạng X": "mạng Ích"
+ },
+ "imgs": {}
+}

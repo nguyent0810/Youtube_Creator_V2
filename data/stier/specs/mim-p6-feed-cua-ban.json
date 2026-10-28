@@ -1,0 +1,225 @@
+{
+ "theme": "mim",
+ "short_type": "S",
+ "pilot": {
+  "pair": 3,
+  "hook": "B",
+  "long": "m5soSE5-BDQ",
+  "date": "2026-11-18"
+ },
+ "title": "Hàng tỉ video: feed bạn khác vì sao?",
+ "description": "Theo blog YouTube (Cristos Goodrow, 15/09/2021), hệ thống đề xuất lọc qua hàng tỉ video và học mỗi ngày từ hơn 80 tỉ tín hiệu (lượt nhấp, thời gian xem, khảo sát, chia sẻ, thích, không thích); mức quan trọng của mỗi tín hiệu tùy từng người. TikTok (18/06/2020) viết rằng không có một bảng tin For You chung. Số liệu do các hãng tự công bố. Giọng đọc tổng hợp.\n\nBản đầy đủ, thuật toán đề xuất đoán bạn thích gì: https://youtu.be/m5soSE5-BDQ",
+ "tags": [
+  "feed youtube",
+  "thuật toán đề xuất",
+  "tiktok for you",
+  "youtube đề xuất",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "THUẬT TOÁN ĐỀ XUẤT",
+ "sub": "FEED CỦA BẠN",
+ "acc": [
+  "hàng tỉ",
+  "tám mươi tỉ",
+  "chính bạn"
+ ],
+ "lines": [
+  "Video bạn vừa lướt qua được chọn từ hàng tỉ video, theo YouTube. Vì sao người ngồi cạnh bạn lại thấy video khác?",
+  "Theo YouTube năm 2021, hệ thống học mỗi ngày từ hơn tám mươi tỉ tín hiệu.",
+  "Lượt nhấp, thời gian xem, khảo sát, lượt chia sẻ, thích và không thích.",
+  "Mức quan trọng của mỗi tín hiệu tùy vào chính bạn.",
+  "Người hay chia sẻ mọi video thì lượt chia sẻ của họ được tính nhẹ đi.",
+  "TikTok cũng viết năm 2020: không có một bảng tin For You chung cho tất cả.",
+  "Cùng một kho video. Feed của bạn khác vì hệ thống cân tín hiệu của bạn theo một cách khác để đề xuất video."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "HÀNG TỈ VIDEO",
+     "at": 0,
+     "acc": true
+    },
+    {
+     "text": "THEO YOUTUBE · 2021",
+     "at": [
+      0,
+      "YouTube"
+     ],
+     "sm": true
+    },
+    {
+     "text": "FEED BẠN KHÁC VÌ SAO?",
+     "at": [
+      0,
+      "Vì"
+     ]
+    }
+   ],
+   "clip": "pexels:34336609",
+   "veil": 0.58
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 80,
+   "to": 80,
+   "prefix": "HƠN ",
+   "suffix": " TỈ",
+   "label": "TÍN HIỆU HỆ THỐNG HỌC MỖI NGÀY",
+   "sub": {
+    "text": "THEO YOUTUBE · 2021 · SỐ LIỆU HÃNG TỰ CÔNG BỐ",
+    "at": [
+     1,
+     "YouTube"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "NHỮNG TÍN HIỆU",
+   "nodes": [
+    {
+     "text": "lượt nhấp · thời gian xem",
+     "x": 0.5,
+     "y": 0.26,
+     "at": [
+      2,
+      "nhấp"
+     ],
+     "shape": "none",
+     "w": 840
+    },
+    {
+     "text": "khảo sát · chia sẻ",
+     "x": 0.5,
+     "y": 0.52,
+     "at": [
+      2,
+      "khảo"
+     ],
+     "shape": "none",
+     "w": 720
+    },
+    {
+     "text": "thích · không thích",
+     "x": 0.5,
+     "y": 0.76,
+     "at": [
+      2,
+      "thích"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 630
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "MỖI TÍN HIỆU",
+     "at": 3
+    },
+    {
+     "text": "NẶNG NHẸ TÙY VÀO BẠN",
+     "at": [
+      3,
+      "tùy"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:34578211",
+   "veil": 0.62
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "CHIA SẺ NHIỀU",
+   "sub": "TÍN HIỆU CHIA SẺ CÓ THỂ NHẸ ĐI",
+   "clip": "pexels:16863222",
+   "veil": 0.64
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "THEO TIKTOK · 2020",
+   "nodes": [
+    {
+     "text": "không có một bảng tin",
+     "x": 0.5,
+     "y": 0.32,
+     "at": [
+      5,
+      "không"
+     ],
+     "shape": "none",
+     "w": 760
+    },
+    {
+     "text": "FOR YOU CHUNG",
+     "x": 0.5,
+     "y": 0.68,
+     "at": [
+      5,
+      "For"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 570
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "CÙNG HÀNG TỈ VIDEO",
+     "at": 6
+    },
+    {
+     "text": "MỖI NGƯỜI MỘT CÁCH ĐẾM",
+     "at": [
+      6,
+      "một"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:39463971",
+   "veil": 0.6
+  }
+ ],
+ "sources": [
+  "https://blog.youtube/inside-youtube/on-youtubes-recommendation-system/",
+  "https://newsroom.tiktok.com/how-tiktok-recommends-videos-for-you?lang=en"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.35
+  }
+ },
+ "say": {
+  "YouTube": "Du-túp",
+  "TikTok": "Tích-tóc",
+  "For You": "Pho Diu"
+ },
+ "imgs": {}
+}

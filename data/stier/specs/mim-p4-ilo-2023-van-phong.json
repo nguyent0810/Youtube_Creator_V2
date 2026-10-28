@@ -1,0 +1,33 @@
+{
+ "theme": "mim",
+ "short_type": "S",
+ "pilot": {"pair": 2, "hook": "A", "long": "sP0ch8-NYec", "date": "2026-11-16"},
+ "title": "ILO 2023: nghề văn phòng chạm AI mức cao?",
+ "description": "ILO Working Paper 96 (Gmyrek, Berg, Bescond, tháng 8/2023), \"Generative AI and Jobs: A global analysis of potential effects on job quantity and quality\": chỉ nhóm nghề văn phòng có mức tiếp xúc cao, với 24% việc nhỏ ở mức cao và 58% ở mức vừa; các nhóm khác chỉ 1–4% việc ở mức cao. Báo cáo đo mức tiếp xúc tiềm năng và nhận định AI dễ bổ trợ hơn là tự động hoá trọn nghề. Giọng đọc tổng hợp.\n\nBản đầy đủ, AI và việc làm qua 200 năm: https://youtu.be/sP0ch8-NYec",
+ "tags": ["ilo", "nghề văn phòng", "ai và việc làm", "tự động hoá", "trí tuệ nhân tạo", "mind in the machine"],
+ "kicker": "AI VÀ VIỆC LÀM",
+ "sub": "ILO · 08/2023",
+ "acc": ["hai mươi bốn", "năm mươi tám", "hỗ trợ"],
+ "lines": [
+  "Tháng 8 năm 2023, ILO kết luận văn phòng là nhóm duy nhất tiếp xúc cao với AI tạo sinh.",
+  "Chỉ một nhóm có mức tiếp xúc cao: công việc văn phòng.",
+  "Hai mươi bốn phần trăm việc nhỏ của nghề văn phòng ở mức cao, thêm năm mươi tám phần trăm ở mức vừa.",
+  "Ở các nhóm nghề khác, phần việc ở mức cao chỉ từ một tới bốn phần trăm.",
+  "Nhưng báo cáo không đếm ai đã mất việc. Nó đo mức tiếp xúc tiềm năng.",
+  "Và kết luận của họ: AI dễ hỗ trợ công việc hơn là tự động hoá trọn một nghề.",
+  "Một nhóm nghề duy nhất ở mức cao. Điều được đo là phần việc có thể đổi, không phải con người bị thay."
+ ],
+ "scenes": [
+  {"type": "kinetic", "items": [{"text": "CHỈ VĂN PHÒNG Ở MỨC CAO", "at": 0, "acc": true}, {"text": "ILO · THÁNG 8 NĂM 2023", "at": [0, "2023"], "sm": true}], "clip": "pexels:34550739", "veil": 0.58},
+  {"type": "board", "at": 1, "title": "MỨC TIẾP XÚC CAO", "nodes": [{"text": "chỉ một nhóm", "x": 0.5, "y": 0.3, "at": [1, "một"], "shape": "none", "w": 570}, {"text": "công việc văn phòng", "x": 0.5, "y": 0.66, "at": [1, "văn"], "c": "acc", "shape": "circle", "w": 650}]},
+  {"type": "chart", "at": 2, "kind": "bars", "title": "VIỆC NHỎ CỦA NGHỀ VĂN PHÒNG", "unit": "MỨC TIẾP XÚC TIỀM NĂNG", "min": 0, "bars": [{"label": "MỨC CAO", "v": 24, "text": "24%", "c": "ref", "at": [2, "Hai"]}, {"label": "MỨC VỪA", "v": 58, "text": "58%", "c": "acc", "at": [2, "thêm"]}]},
+  {"type": "kinetic", "at": 3, "items": [{"text": "NHÓM NGHỀ KHÁC", "at": 3}, {"text": "CHỈ 1–4% Ở MỨC CAO", "at": [3, "một"], "acc": true}], "clip": "pexels:34342666", "veil": 0.62},
+  {"type": "slam", "at": 4, "text": "TIẾP XÚC TIỀM NĂNG", "sub": "KHÔNG PHẢI SỐ NGƯỜI ĐÃ MẤT VIỆC"},
+  {"type": "board", "at": 5, "title": "KẾT LUẬN CỦA ILO", "nodes": [{"text": "AI dễ hỗ trợ công việc", "x": 0.5, "y": 0.32, "at": [5, "AI"], "c": "acc", "shape": "circle", "w": 680}, {"text": "hơn là tự động hoá trọn nghề", "x": 0.5, "y": 0.68, "at": [5, "hơn"], "shape": "none", "w": 820}]},
+  {"type": "kinetic", "at": 6, "items": [{"text": "MỘT NHÓM DUY NHẤT", "at": 6}, {"text": "PHẦN VIỆC CÓ THỂ ĐỔI", "at": [6, "có"], "acc": true}], "clip": "pexels:39459371", "veil": 0.6}
+ ],
+ "sources": ["https://webapps.ilo.org/static/english/intserv/working-papers/wp096/index.html"],
+ "mix": true, "rules": 2, "music_gain": 0.18, "music_duck": 3, "sfx_gain": 0.36,
+ "tts": {"pauses": {"0": 0.35, "1": 0.22, "2": 0.22, "3": 0.22, "4": 0.22, "5": 0.35}},
+ "say": {"ILO": "Ai-en-lô"}, "imgs": {}
+}

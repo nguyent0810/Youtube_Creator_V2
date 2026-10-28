@@ -39,3 +39,23 @@ Dự án dùng `tk` ([wedow/ticket](https://github.com/wedow/ticket), MIT, bản
 - Đầu phiên: `tk ready` (việc đang mở, đã hết phụ thuộc).
 - Việc kéo dài hơn một phiên hoặc có mốc ngày: `tk create "<tiêu đề>" -p <0-4> --tags <...> -d "..." --acceptance "..."`.
 - Tiến độ: `tk add-note <id> "..."`; xong: `tk close <id>`. `tk ls`, `tk query` là plugin; `tk.cmd` đã tự thêm vào PATH, Git Bash thì cần `PATH="$PWD/tools/ticket:$PATH"`.
+
+## Điều phối agent (từ 28/10/2026)
+
+Claude điều phối và review cuối. Các agent CLI trên máy làm ticket: Codex (`codex exec`), agy (`agy -p`), Grok (`grok -p`).
+
+- **Giao việc:**
+  1. Viết brief `docs/pm/tickets/<id>-<agent>.md`, ghi rõ phạm vi, file được ghi và file báo cáo.
+  2. Chạy `python scripts/agent_ticket.py <id> --brief <brief> --expect <báo cáo> --agents codex,agy,grok`.
+- **Fallback:** agent hết quota, lỗi hoặc không ghi báo cáo thì script tự chuyển agent kế tiếp. Hỏng cả danh sách thì có cờ `docs/pm/tickets/<id>.FALLBACK_CLAUDE` và thoát mã 3; khi đó Claude giao cho subagent của mình. Long vẫn dùng `scripts/codex_ticket.py`, script này có snapshot và rollback.
+- **Chọn agent:** code, spec và test giao Codex. Codex **không render** (chủ kênh chọn 28/10): sandbox Windows của Codex chặn npm cache và `spawn` (Node 22, Chrome, ffmpeg), nên render và các lệnh `npx hyperframes` giao agy hoặc Grok. Phân tích giao agy hoặc Grok. agy chạy không người trông bằng `--sandbox --dangerously-skip-permissions` (chủ kênh cho phép 28/10, AI Learning cũng dùng vậy), nên brief phải ghi rõ file nào được ghi.
+- **Tự sinh ticket:** đọc báo cáo của agent, thấy việc cần làm thì Claude tạo ticket mới, gắn tag `auto` và ghi ticket nguồn trong mô tả.
+  - Được tự giao: phân tích, sửa code hoặc công cụ, viết spec, dựng nháp.
+  - Phải chờ chủ kênh duyệt: đăng, đặt lịch, gỡ hay thay video đã đăng, đổi kế hoạch nội dung, mọi thứ ra ngoài.
+- **Agent không bao giờ:** đăng, enqueue, commit, đổi lịch, hoặc thấy `YT_CREDS_DIR`.
+- **Quyền tự duyệt:** agy chạy với `--sandbox --dangerously-skip-permissions`, Grok chạy với `--always-approve`. Chủ kênh cho phép cả hai từ 28/10.
+- **Chốt chặn** (theo review ChatGPT 28/10, `docs/pm/2026-10-28-huong-lam-mim-ck.chatgpt-review.md`):
+  - tối đa 5 ticket tag `auto` đang mở; vượt thì gộp hoặc chờ;
+  - mỗi brief có input, output, tiêu chí đạt và file báo cáo cố định;
+  - agent không tự xác nhận "đạt": Claude kiểm số hoặc khung hình bằng chứng trước khi đóng ticket;
+  - việc đổi trạng thái đăng (upload, lịch, thay video) không bao giờ đi qua fallback tự động.

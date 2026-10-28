@@ -1,0 +1,27 @@
+{
+  "bgm": "late_night_radio.mp3",
+  "broll_queries": [],
+  "channel": "MIM",
+  "created_at": "2026-10-28T09:34:53Z",
+  "description": "Covington, Adams, Sargin (Google), \"Deep Neural Networks for YouTube Recommendations\", RecSys '16 (09/2016): hệ thống hai vòng, từ kho hàng triệu video lọc ra vài trăm ứng viên rồi xếp hạng còn vài chục. Bài viết ghi xếp theo tỉ lệ nhấp dễ đẩy video câu nhấp, còn thời gian xem phản ánh mức quan tâm tốt hơn. Đây là mô tả năm 2016, không phải hệ thống hiện nay. Giọng đọc tổng hợp.\n\nBản đầy đủ, thuật toán đề xuất đoán bạn thích gì: https://youtu.be/m5soSE5-BDQ\n\nNguồn:\nhttps://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45530.pdf\n\nVideo: Pexels — Nicola Narracci\nMusic: \"Late Night Radio\" by Kevin MacLeod (incompetech.com). Licensed under Creative Commons: By Attribution 4.0 — http://creativecommons.org/licenses/by/4.0/\n\n#AI #CôngNghệ #MindInTheMachine",
+  "kind": "short",
+  "publish_at": "2026-11-17T08:00:00Z",
+  "render": {
+    "engine": "casefile",
+    "spec": "data/stier/specs/mim-p5-recsys-2016.json"
+  },
+  "schema_version": 1,
+  "script": "Tháng 9 năm 2016, ba kỹ sư Google mô tả YouTube lọc hàng triệu video xuống vài chục trước mắt bạn. Vòng một: từ hàng triệu video, máy lọc ra vài trăm ứng viên. Vòng hai: chấm điểm vài trăm video đó, rồi đưa vài chục lên trước mắt bạn. Họ còn viết: xếp theo lượt nhấp dễ đẩy video câu nhấp lên trên, dù người xem không xem hết. Nên họ dùng thời gian xem, vì nó phản ánh sự quan tâm tốt hơn. Đó là mô tả năm 2016. Hệ thống bây giờ đã thay đổi nhiều. Hàng triệu video, vài trăm ứng viên, rồi vài chục trên màn hình bạn. Đó là cách bài báo năm 2016 mô tả.",
+  "slug": "mim-p5-recsys-2016",
+  "source_note": "https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45530.pdf",
+  "tags": [
+    "youtube đề xuất",
+    "thuật toán đề xuất",
+    "recsys 2016",
+    "trí tuệ nhân tạo",
+    "mind in the machine"
+  ],
+  "thumbnail_text": "",
+  "title": "YouTube 2016: chọn vài chục video thế nào?",
+  "voice": "Thanh Bình"
+}

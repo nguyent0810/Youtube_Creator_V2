@@ -1,0 +1,239 @@
+{
+ "theme": "mim",
+ "short_type": "S",
+ "pilot": {
+  "pair": 2,
+  "hook": "B",
+  "long": "sP0ch8-NYec",
+  "date": "2026-11-15"
+ },
+ "title": "Nhập liệu: đứng đầu 427 nghề ILO về AI?",
+ "description": "ILO Working Paper 140 (2025), \"Generative AI and Jobs: A Refined Global Index of Occupational Exposure\": bảng A1 chấm 427 nghề; \"Data Entry Clerks\" (mã 4132) đứng đầu với điểm trung bình 0,70 (thang 0–1, là mức khả năng tự động hoá trung bình của các việc nhỏ trong nghề, không phải phần trăm công việc). 13 nghề ở mức tiếp xúc cao nhất, phần lớn là việc văn phòng. Mức tiếp xúc là tiềm năng, không phải số việc đã mất. Giọng đọc tổng hợp.\n\nBản đầy đủ, AI và việc làm qua 200 năm: https://youtu.be/sP0ch8-NYec",
+ "tags": [
+  "nghề nhập liệu",
+  "ilo",
+  "ai và việc làm",
+  "tự động hoá",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "AI VÀ VIỆC LÀM",
+ "sub": "ILO · 2025",
+ "acc": [
+  "đứng đầu",
+  "không phẩy bảy",
+  "đổi"
+ ],
+ "lines": [
+  "Nếu bạn làm nhập liệu, bảng 427 nghề của ILO năm 2025 xếp nghề của bạn đứng đầu.",
+  "Đứng đầu về mức tiếp xúc với AI tạo sinh: điểm không phẩy bảy, thang từ không tới một.",
+  "Điểm này không có nghĩa là AI làm được bảy mươi phần trăm việc của bạn.",
+  "Mỗi việc nhỏ trong nghề được chấm xem máy làm được tới đâu, rồi lấy trung bình.",
+  "Chỉ mười ba nghề ở mức cao nhất, phần lớn là việc văn phòng: đánh máy, kế toán sổ sách, tính lương.",
+  "Theo ILO, kết quả dễ xảy ra hơn là công việc thay đổi, chứ không phải bị thay hàng loạt.",
+  "Đứng đầu bảng không có nghĩa là mất việc. Nó cho biết phần việc nào của bạn sẽ đổi trước."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NHẬP LIỆU ĐỨNG ĐẦU",
+     "at": 0,
+     "acc": true
+    },
+    {
+     "text": "BẢNG 427 NGHỀ · ILO 2025",
+     "at": [
+      0,
+      "2025"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34336609",
+   "veil": 0.58
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "ĐIỂM TIẾP XÚC",
+   "cards": [
+    {
+     "k": "NHẬP LIỆU",
+     "v": "0,70 / 1",
+     "at": [
+      1,
+      "không"
+     ]
+    },
+    {
+     "k": "Ý NGHĨA",
+     "v": "KHÔNG PHẢI 70%",
+     "at": [
+      1,
+      "thang"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "0,70 KHÔNG PHẢI 70%",
+   "sub": "KHÔNG PHẢI PHẦN TRĂM CÔNG VIỆC",
+   "clip": "pexels:34578211",
+   "veil": 0.64
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "CÁCH ILO TÍNH ĐIỂM",
+   "nodes": [
+    {
+     "text": "từng việc nhỏ",
+     "x": 0.5,
+     "y": 0.25,
+     "at": [
+      3,
+      "Mỗi"
+     ],
+     "shape": "circle",
+     "w": 440
+    },
+    {
+     "text": "chấm khả năng máy làm",
+     "x": 0.5,
+     "y": 0.5,
+     "at": [
+      3,
+      "máy"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 520
+    },
+    {
+     "text": "lấy trung bình",
+     "x": 0.5,
+     "y": 0.75,
+     "at": [
+      3,
+      "rồi"
+     ],
+     "shape": "circle",
+     "w": 440
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      3,
+      "chấm"
+     ]
+    },
+    {
+     "from": 1,
+     "to": 2,
+     "at": [
+      3,
+      "rồi"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "to": 13,
+   "suffix": " NGHỀ",
+   "label": "MỨC TIẾP XÚC CAO NHẤT",
+   "until": [
+    4,
+    "mười"
+   ],
+   "sub": {
+    "text": "PHẦN LỚN LÀ VIỆC VĂN PHÒNG",
+    "at": [
+     4,
+     "văn"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "ILO: KẾT QUẢ DỄ XẢY RA HƠN",
+   "nodes": [
+    {
+     "text": "công việc thay đổi",
+     "x": 0.5,
+     "y": 0.32,
+     "at": [
+      5,
+      "công"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 600
+    },
+    {
+     "text": "không phải bị thay hàng loạt",
+     "x": 0.5,
+     "y": 0.68,
+     "at": [
+      5,
+      "hàng"
+     ],
+     "shape": "none",
+     "w": 780
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "ĐỨNG ĐẦU BẢNG",
+     "at": 6
+    },
+    {
+     "text": "KHÔNG CÓ NGHĨA LÀ MẤT VIỆC",
+     "at": [
+      6,
+      "mất"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:16863222",
+   "veil": 0.6
+  }
+ ],
+ "sources": [
+  "https://webapps.ilo.org/static/english/intserv/working-papers/wp140/index.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.35
+  }
+ },
+ "say": {
+  "ILO": "Ai-en-lô"
+ },
+ "imgs": {}
+}

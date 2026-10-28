@@ -2,7 +2,7 @@
 id: YCV-9tns
 status: open
 deps: []
-links: []
+links: [YCV-8ted, YCV-g8ms]
 created: 2026-10-28T07:20:59Z
 type: task
 priority: 1
@@ -32,3 +32,13 @@ Còn thiếu: 'xem / lướt qua' (stayed to watch) và lượt hiển thị tr�
 - Chỉ số 'xem / lướt qua' lấy được bằng script hoặc ghi rõ là đọc tay.
 - Báo chủ kênh; không tự mở rộng pilot.
 
+
+## Notes
+
+**2026-10-28T08:00:52Z**
+
+Biến nhiễu: Long CK 20:00 ngày 08/11 (7K1zP3ZdabQ), 09/11 (Ss_unzSu7DY), 11/11 (dQ3HLAXf12U), 1 giờ sau Short pilot; chủ kênh quyết giữ nguyên (28/10).
+
+**2026-10-28T09:14:21Z**
+
+Thêm từ YCV-cimp: ghi impressions, CTR, AVD của mỗi Long ở 24h/72h/7d; chỉ số: số Long đủ 7 ngày trước 11/11 có CTR ≥ 2% và AVD ≥ 3:00 nhưng impressions < 1.000.
