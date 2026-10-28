@@ -12,6 +12,7 @@ import asyncio
 import time
 from pathlib import Path
 
+from . import auth
 from .browsentic import browser, clear_clipboard, clipboard, run
 from .common import UNVERIFIED_NOTE, parse_blocks, write_md
 
@@ -21,6 +22,18 @@ SEND = ["body > div:nth-of-type(2) > div > div > div > div > div:nth-of-type(1) 
         "button[aria-label*='Send']"]
 NEW_SIDE_CHAT = "nav section > div:nth-of-type(1) > span > button"
 MORE = "#hatch-chat-scroll button[aria-label='More options']"
+
+
+async def ensure_login(b):
+    """Signed in = the chat composer is there. Otherwise wait for the owner to sign in."""
+    async def ok():
+        try:
+            await b.call("page_waitForElement", target={"selector": "textarea"})
+            return True
+        except RuntimeError:
+            return False
+
+    await auth.ensure(ok, "Muse AI", URL)
 
 
 async def copy_last_bubble(b):
@@ -67,6 +80,7 @@ async def research(questions, wait_s=900, adopt_first=False, min_chars=1500):
         try:
             if not adopt_first:
                 await asyncio.sleep(6)
+                await ensure_login(b)
                 await b.call("page_clickElement", target={"text": "Chats"})
                 await asyncio.sleep(3)
                 await b.call("page_clickElement", target={"selector": NEW_SIDE_CHAT})

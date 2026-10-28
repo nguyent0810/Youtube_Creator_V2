@@ -11,6 +11,7 @@ import shutil
 import time
 from pathlib import Path
 
+from . import auth
 from .browsentic import browser, newest_download, run
 from .common import UNVERIFIED_NOTE, default_out, parse_prompts, write_md
 
@@ -29,6 +30,19 @@ REVIEW_INSTRUCTION = (
 )
 
 
+async def ensure_login(b):
+    """Logged-out chatgpt.com (or a Cloudflare human check) -> wait for the owner; never type credentials."""
+    await asyncio.sleep(3)
+
+    async def ok():
+        try:
+            return not auth.chatgpt_signed_out(await b.text(target={"selector": "body"}))
+        except RuntimeError:
+            return False
+
+    await auth.ensure(ok, "ChatGPT", URL)
+
+
 async def _send(b, text):
     await b.call("page_waitForElement", target={"selector": ",".join(COMPOSER)})
     await b.first("page_fillInput", COMPOSER, value=text)
@@ -39,6 +53,7 @@ async def _send(b, text):
 async def render_image(b, prompt, dest, wait_s):
     tab = await b.call("page_openTab", url=URL)
     try:
+        await ensure_login(b)
         await _send(b, f"Create an image: {prompt}")
         deadline = time.time() + wait_s
         while True:
@@ -105,6 +120,7 @@ async def ask(text, wait_s=420, poll=6, stable=4, from_chat=None):
     async with browser() as b:
         tab = await b.call("page_openTab", url=from_chat or URL)
         try:
+            await ensure_login(b)
             if not from_chat:
                 await _send(b, text)
             deadline, last, same = time.time() + wait_s, None, 0

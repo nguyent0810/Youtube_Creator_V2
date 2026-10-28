@@ -10,6 +10,7 @@ import re
 import time
 from pathlib import Path
 
+from . import auth
 from .common import default_out, parse_prompts, profile_dir
 
 FLOW_URL = "https://flow.google.com/"
@@ -17,6 +18,7 @@ EDITOR = "flow-rich-text-editor div[role=textbox]"
 GENERATE = "flow-generate-icon-button button"
 SETTINGS = "button[aria-label='Settings trigger']"
 DEFAULT_MODEL = {"image": "Nano Banana Pro", "video": "Omni 1.1 Flash"}
+NEW_PROJECT = re.compile("Dự án mới|New project")
 VIDEO_DONE = "flow-video-tile img[alt='Generated video thumbnail']"
 
 
@@ -42,7 +44,14 @@ def login():
 
 def new_project(page):
     page.goto(FLOW_URL)
-    page.get_by_role("button", name=re.compile("Dự án mới|New project")).click(timeout=60000)
+    page.wait_for_timeout(3000)
+
+    def signed_in():
+        return not auth.url_is_login(page.url) and page.get_by_role("button", name=NEW_PROJECT).count() > 0
+
+    # the window is the owner's to sign in to (Google may also ask for 2-step); webauto only waits
+    auth.ensure_sync(signed_in, "Google Flow", FLOW_URL)
+    page.get_by_role("button", name=NEW_PROJECT).click(timeout=60000)
     page.wait_for_url(re.compile(r"/project/"), timeout=30000)
     page.wait_for_selector(EDITOR, timeout=30000)
 

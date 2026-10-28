@@ -150,3 +150,86 @@ def test_nap_cli_khong_keo_mcp_va_playwright():
             "sys.exit(1 if ('mcp' in sys.modules or 'playwright' in sys.modules) else 0)")
     assert subprocess.run([sys.executable, "-c", code]).returncode == 0
     assert muse.URL.startswith("https://") and json.loads("{}") == {}
+
+
+# ---- đăng nhập: chờ chủ máy tự đăng nhập, không bao giờ tự nhập mật khẩu -----------------------------------
+
+def test_auth_da_dang_nhap_thi_di_tiep():
+    import asyncio
+    from webauto import auth
+    said = []
+    asyncio.run(auth.ensure(lambda: _async(True), "Site", "https://x", wait_s=5, say=said.append))
+    assert said == []
+
+
+async def _async(v):
+    return v
+
+
+def test_auth_cho_den_khi_dang_nhap_roi_tiep_tuc():
+    import asyncio
+    from webauto import auth
+    calls, said = [], []
+
+    async def check():
+        calls.append(1)
+        return len(calls) >= 3  # lần 1 chưa, lần 2 chưa, lần 3 đã đăng nhập
+
+    asyncio.run(auth.ensure(check, "Site", "https://x", wait_s=5, poll=0, say=said.append))
+    assert len(calls) == 3
+    assert "not signed in" in said[0] and "continuing" in said[-1]
+
+
+def test_auth_wait_0_bao_loi_ngay_va_noi_ro_khong_tu_nhap_mat_khau():
+    import asyncio
+    from webauto import auth
+    with pytest.raises(auth.LoginRequired) as e:
+        asyncio.run(auth.ensure(lambda: _async(False), "ChatGPT", "https://chatgpt.com/", wait_s=0))
+    msg = str(e.value)
+    assert "ChatGPT" in msg and "https://chatgpt.com/" in msg and "never enters passwords" in msg
+    assert isinstance(e.value, SystemExit)  # thoát gọn với thông báo, không in traceback
+
+
+def test_auth_het_gio_cho_thi_bao_loi():
+    import asyncio
+    from webauto import auth
+    with pytest.raises(auth.LoginRequired) as e:
+        asyncio.run(auth.ensure(lambda: _async(False), "Muse", "https://muse.ai/", wait_s=0.05, poll=0.01, say=lambda m: None))
+    assert "waited" in str(e.value)
+
+
+def test_auth_sync_cho_playwright():
+    from webauto import auth
+    n = []
+
+    def check():
+        n.append(1)
+        return len(n) >= 2
+
+    auth.ensure_sync(check, "Flow", "https://flow.google.com/", wait_s=5, poll=0, say=lambda m: None)
+    assert len(n) == 2
+    with pytest.raises(auth.LoginRequired):
+        auth.ensure_sync(lambda: False, "Flow", "https://flow.google.com/", wait_s=0)
+
+
+def test_auth_nhan_biet_chua_dang_nhap():
+    from webauto import auth
+    assert auth.chatgpt_signed_out("ChatGPT Log in Sign up for free Ask ChatGPT")
+    assert auth.chatgpt_signed_out("Just a moment... Verify you are human")  # Cloudflare: chủ máy tự xử lý
+    assert not auth.chatgpt_signed_out("New chat Library Recents Create Coffee Image Plus")
+    assert auth.url_is_login("https://accounts.google.com/v3/signin/identifier")
+    assert auth.url_is_login("https://www.tiktok.com/login?redirect=x")
+    assert not auth.url_is_login("https://studio.youtube.com/channel/UCabc")
+
+
+def test_cli_wait_login_toan_cuc(monkeypatch):
+    from webauto import auth
+    p = cli.build_parser()
+    assert p.parse_args(["tiktok", "list"]).wait_login == auth.WAIT_LOGIN
+    assert p.parse_args(["--wait-login", "30", "tiktok", "list"]).wait_login == 30
+    seen = {}
+    monkeypatch.setattr(auth, "configure", lambda s: seen.setdefault("w", s))
+    monkeypatch.setattr("webauto.tiktok.list_posts", lambda a: None)
+    monkeypatch.setattr("webauto.tiktok.run", lambda coro: None)
+    cli.main(["--wait-login", "7", "tiktok", "list"])
+    assert seen["w"] == 7
