@@ -202,3 +202,15 @@ def test_doc_lai_cai_dat_truoc_khi_bam():
 def test_so_caption_bo_qua_khoang_trang():
     assert tiktok.same_caption("Câu hỏi?\n\nGiải thích #phatgiao", "Câu hỏi? Giải thích #phatgiao")
     assert not tiktok.same_caption("Câu hỏi?", "Câu hỏi? #phatgiao")
+
+
+def test_tim_o_ngay_gio_theo_toa_do():
+    # đo thật 28/10/2026: radio Now x=133, Schedule y=434; ô múi giờ combobox x=517 y=462 cao 36
+    ui = {"fields": [{"role": "radio", "text": "Now", "bounds": {"x": 133, "y": 434, "width": 16, "height": 16}},
+                     {"role": "radio", "text": "Schedule", "bounds": {"x": 210, "y": 434, "width": 16, "height": 16}}],
+          "buttons": [{"role": "combobox", "bounds": {"x": 517, "y": 462, "width": 220, "height": 36}},
+                      {"role": "combobox", "bounds": {"x": 133, "y": 900, "width": 280, "height": 36}}]}
+    (dx, dy), (tx, ty) = tiktok.schedule_points(ui)
+    assert 200 < dx < 245 and 390 < tx < 435 and dy == ty == 480
+    with pytest.raises(SystemExit):
+        tiktok.schedule_points({"fields": [], "buttons": []})

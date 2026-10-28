@@ -181,11 +181,27 @@ async def delete_post(a):
         print("deleted" if all(a.id not in r["id"] for r in await list_rows(b)) else "STILL PRESENT - check Studio")
 
 
-async def type_caption(b, text):
-    """The caption editor ignores fillInput (the value reverts on submit); it needs real key events."""
-    await b.call("page_focusInput", target={"selector": CAPTION}, caret="all")
-    await b.call("page_pressKey", key="Backspace")
-    await b.call("page_typeText", text=text, clear=False, speed="natural")
+async def type_caption(b, text, default=""):
+    """Write the caption with real key events (the editor ignores fillInput; the value reverts on submit).
+
+    Traps found on Studio 28/10/2026:
+      - typing into an EMPTY editor (after select-all + Backspace, or after deleting the prefilled file
+        name first) crashes the upload page ("Something went wrong"). So the caption is typed AFTER the
+        prefilled file name, and only then the name is selected and deleted: the editor is never empty;
+      - the hashtag autocomplete mangles fast typing ("#phatgiao#phatgia#…"), and a tag typed without a
+        space in front can be swallowed. Each tag is typed as " #tag" at natural speed."""
+    await b.call("page_focusInput", target={"selector": CAPTION}, caret="end")
+    parts = [p for p in re.split(r"\s*(#\w+)\s*", text) if p]
+    for i, part in enumerate(parts):
+        lead = " " if (i == 0 and default) or part.startswith("#") else ""
+        speed = "natural" if part.startswith("#") else "instant"
+        await b.call("page_typeText", text=lead + part, clear=False, speed=speed)
+        if part.startswith("#"):
+            await asyncio.sleep(1.2)
+            await b.call("page_pressKey", key="Escape")   # close the suggestion list without picking
+    if default:
+        await b.call("page_selectText", search=default + " ")
+        await b.call("page_pressKey", key="Delete")
 
 
 async def update_post(a):
@@ -195,7 +211,8 @@ async def update_post(a):
     async with browser() as b:
         await b.call("page_navigate", url=EDIT.format(id=a.id))
         await b.call("page_waitForElement", target={"selector": CAPTION})
-        await type_caption(b, a.caption)
+        current = (await b.call("page_extractText", target={"selector": CAPTION})).get("content", "")
+        await type_caption(b, a.caption, current.strip())
         await b.call("page_clickElement", target={"role": "button", "text": "Save"})
         await asyncio.sleep(3)
         print("saved; verify on the Posts page (see the note in update_post)")
@@ -210,22 +227,52 @@ async def click_at(b, selector):
     await b.call("page_trustedClick", point={"x": bd["x"] + bd["width"] / 2, "y": bd["y"] + bd["height"] / 2})
 
 
-async def open_field(b, pattern):
-    """Click the date or time field of the schedule row: the control whose text matches `pattern`."""
-    ui = (await b.call("page_getPageInfo", maxPerKind=300, geometry=True))["interactive"]
-    for kind in ("buttons", "inputs", "comboboxes", "other"):
-        for x in ui.get(kind, []):
-            if re.fullmatch(pattern, (x.get("text") or x.get("value") or "").strip()):
-                await b.call("page_clickElement", target={"selector": x["selector"]})
-                await asyncio.sleep(1)
-                return
-    raise SystemExit(f"refused: no schedule field matching {pattern!r} on the page")
+def schedule_points(ui):
+    """Click points of the schedule row's date and time pickers.
+
+    Neither picker is exposed as an interactive element (they are plain divs, no accessible text, and raw
+    HTML is off-limits under Browsentic's policy). The row is anchored by two things that are exposed: the
+    'Now' radio (left edge of the row) and the timezone combobox (right end). Measured on Studio 28/10/2026:
+    the date field spans ~0-46 % and the time field ~50-96 % of the gap between them; their centres sit at
+    ~23 % and ~73 %. A wrong click is caught later: the date and time are read back before anything is posted."""
+    now = next((x for x in ui.get("fields", []) if x.get("role") == "radio" and x.get("text") == "Now"), None)
+    radio = next((x for x in ui.get("fields", []) if x.get("role") == "radio" and x.get("text") == "Schedule"), None)
+    if not now or not radio or "bounds" not in now or "bounds" not in radio:
+        raise SystemExit("refused: cannot locate the schedule row on the page")
+    top = radio["bounds"]["y"]
+    tz = [x for x in ui.get("buttons", []) if x.get("role") == "combobox" and "bounds" in x
+          and top < x["bounds"]["y"] < top + 80]
+    if not tz:
+        raise SystemExit("refused: no timezone selector next to the schedule date/time")
+    tzb = tz[0]["bounds"]
+    x0, gap, y = now["bounds"]["x"], tzb["x"] - now["bounds"]["x"], tzb["y"] + tzb["height"] / 2
+    return (x0 + gap * 0.23, y), (x0 + gap * 0.73, y)
+
+
+async def open_field(b, index):
+    """Open the date (0) or time (1) picker of the schedule row with a real click.
+    page_getPageInfo gives page coordinates; page_trustedClick wants viewport coordinates."""
+    info = await b.call("page_getPageInfo", maxPerKind=300, geometry=True)
+    vp = info.get("viewport") or {}
+    x, y = schedule_points(info["interactive"])[index]
+    await b.call("page_trustedClick", point={"x": x - vp.get("scrollX", 0), "y": y - vp.get("scrollY", 0)})
+    await asyncio.sleep(1)
 
 
 async def set_schedule(b, when):
-    await b.call("page_clickElement", target={"text": "Schedule", "selector": "label"})
+    # the caption editor can scroll the page and leave a hashtag popup open: close it, bring the row into view
+    await b.call("page_pressKey", key="Escape")
+    for _ in range(4):
+        try:
+            await b.call("page_clickElement", target={"text": "Schedule", "selector": "label"})
+            break
+        except RuntimeError:
+            await b.call("page_scrollTo", direction="down")
+            await asyncio.sleep(0.5)
+    else:
+        raise SystemExit("refused: cannot find the 'Schedule' option")
     await asyncio.sleep(1)
-    await open_field(b, r"[A-Z][a-z]{2} \d{1,2}, \d{4}")
+    await open_field(b, 0)
     for _ in range(12):   # walk the calendar to the right month
         text = await b.text()
         if f"{MONTHS[when.month - 1]}\n{when.year}" in text or f"{MONTHS[when.month - 1]} {when.year}" in text:
@@ -234,7 +281,7 @@ async def set_schedule(b, when):
         await asyncio.sleep(0.5)
     await b.call("page_clickElement", target={"selector": f'button.DatePicker__day[aria-label*="{day_label(when)}"]'})
     await asyncio.sleep(1)
-    await open_field(b, r"\d{2}:\d{2}")
+    await open_field(b, 1)
     await click_at(b, f'button.TimePicker__item[aria-label="Hours {when.hour:02d}"]')
     await asyncio.sleep(0.5)
     await click_at(b, f'button.TimePicker__item[aria-label="Minutes {when.minute:02d}"]')
@@ -279,48 +326,93 @@ async def create_post(a):
     caption = f"{a.marker} {a.caption}".strip()
     video = Path(a.video).resolve()
     async with browser() as b:
-        # start the local file server only once the browser is up, so a failed connect never leaves it running
-        srv = subprocess.Popen([sys.executable, "-m", "http.server", "8899", "--bind", "127.0.0.1"], cwd=video.parent,
-                               stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        # Reuse ONE upload tab and never navigate away from it or close it. The upload page keeps a
+        # beforeunload handler even after Discard, so leaving it (navigate, reload, close) raises Chrome's
+        # native "Leave site?" dialog, which blocks the tab: Browsentic cannot answer it.
         try:
-            await asyncio.sleep(1.5)
-            dl = await b.call("page_captureDownload", url=f"http://127.0.0.1:8899/{video.name}")
+            await b.call("page_switchTab", match="tiktokstudio/upload")
+        except RuntimeError:
+            await b.call("page_openTab", url=UPLOAD)
+        try:
+            if "When to post" in await b.text():   # a draft from an interrupted run is still open in this tab
+                await discard(b)
+            await b.call("page_waitForElement", target={"text": "Select video"}, timeoutMs=30000)
+            # a draft left by an earlier closed tab comes back as "A video you were editing wasn't saved.
+            # Continue editing? Discard | Continue": drop it, never continue someone else's draft
+            if "Continue editing?" in await b.text():
+                await b.call("page_clickElement", target={"text": "Discard"})
+                await asyncio.sleep(1)
+            # start the local file server only once the browser is up, so a failed connect never leaves it running
+            srv = subprocess.Popen([sys.executable, "-m", "http.server", "8899", "--bind", "127.0.0.1"], cwd=video.parent,
+                                   stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            try:
+                await asyncio.sleep(1.5)
+                dl = await b.call("page_captureDownload", url=f"http://127.0.0.1:8899/{video.name}")
+            finally:
+                srv.terminate()
+            await b.call("page_attachFile", target={"selector": "input[type=file]"}, downloadId=dl["downloadId"])
+            a.default_caption = video.stem   # Studio prefills the caption with the file name
+            try:
+                await _fill_and_submit(b, a, when, caption)
+            except BaseException as e:
+                print(e if isinstance(e, SystemExit) else f"error: {e}")
+                # never leave a half-filled draft behind: TikTok may keep it
+                try:
+                    await discard(b)
+                    print("draft discarded after an error")
+                except Exception:  # noqa: BLE001
+                    print("could not discard the draft - check TikTok Studio")
+                raise
         finally:
-            srv.terminate()
-        await b.call("page_navigate", url=UPLOAD)
-        await b.call("page_waitForElement", target={"text": "Select video"})
-        await b.call("page_attachFile", target={"selector": "input[type=file]"}, downloadId=dl["downloadId"])
-        await b.call("page_waitForElement", target={"selector": CAPTION})
-        await asyncio.sleep(3)
-        await type_caption(b, caption)
-        # privacy: the 'Who can see this post' combobox shows 'Everyone'; open it and pick the option
-        if a.privacy != "public":
-            await b.call("page_clickElement", target={"text": "Everyone"})
-            await asyncio.sleep(1)
-            await b.call("page_clickElement", target={"text": PRIVACY[a.privacy], "selector": "[role=option]"})
-            await asyncio.sleep(1)
-        if when:
-            await set_schedule(b, when)
-        if a.ai_label:
-            await set_ai_label(b)
-        # last checks before the irreversible click: everything is read back from the page
-        text = await b.text()
-        typed = (await b.call("page_extractText", target={"selector": CAPTION}, maxLength=5000)).get("content", "")
-        bad = settings_ok(text, when, PRIVACY[a.privacy], a.tz.replace("UTC", "GMT"))
-        if not same_caption(typed, caption):
-            bad.append(f"caption on the page differs: {typed[:120]!r}")
-        if bad or a.dry_run:
-            print(("DRY RUN ok: " if not bad else "REFUSED: ") + ("; ".join(bad) or "all settings read back as asked"))
-            await discard(b)
-            print("draft discarded")
-            if bad:
-                raise SystemExit(1)
-            return
-        button = "Schedule" if when else "Post"
-        await b.call("page_clickElement", target={"role": "button", "text": button})
-        await asyncio.sleep(6)
-        print(f"{'scheduled for ' + when.strftime('%Y-%m-%d %H:%M') + ' ' + a.tz if when else 'posted'}"
-              f" (check the Posts list); privacy = {a.privacy}")
+            pass   # keep the tab: see above
+
+
+async def _fill_and_submit(b, a, when, caption):
+    # the editor appears only after the upload is accepted; the tool caps one wait at 30 s
+    for _ in range(4):
+        try:
+            await b.call("page_waitForElement", target={"selector": CAPTION}, timeoutMs=30000)
+            break
+        except RuntimeError:
+            continue
+    else:
+        raise SystemExit("refused: the caption editor never appeared (upload not accepted?)")
+    # typing while the video is still "Uploading..." is not safe; wait for it to finish
+    for _ in range(60):
+        if "Uploading" not in await b.text():
+            break
+        await asyncio.sleep(2)
+    else:
+        raise SystemExit("refused: the video is still uploading after 2 minutes")
+    await type_caption(b, caption, a.default_caption)
+    # privacy: the 'Who can see this post' combobox shows 'Everyone'; open it and pick the option
+    if a.privacy != "public":
+        await b.call("page_clickElement", target={"text": "Everyone"})
+        await asyncio.sleep(1)
+        await b.call("page_clickElement", target={"text": PRIVACY[a.privacy], "selector": "[role=option]"})
+        await asyncio.sleep(1)
+    if when:
+        await set_schedule(b, when)
+    if a.ai_label:
+        await set_ai_label(b)
+    # last checks before the irreversible click: everything is read back from the page
+    text = await b.text()
+    typed = (await b.call("page_extractText", target={"selector": CAPTION}, maxLength=5000)).get("content", "")
+    bad = settings_ok(text, when, PRIVACY[a.privacy], a.tz.replace("UTC", "GMT"))
+    if not same_caption(typed, caption):
+        bad.append(f"caption on the page differs: {typed[:120]!r}")
+    if bad:
+        raise SystemExit("REFUSED: " + "; ".join(bad))
+    if a.dry_run:
+        print("DRY RUN ok: all settings read back as asked")
+        await discard(b)
+        print("draft discarded")
+        return
+    button = "Schedule" if when else "Post"
+    await b.call("page_clickElement", target={"role": "button", "text": button})
+    await asyncio.sleep(6)
+    print(f"{'scheduled for ' + when.strftime('%Y-%m-%d %H:%M') + ' ' + a.tz if when else 'posted'}"
+          f" (check the Posts list); privacy = {a.privacy}")
 
 
 def add_parser(sub):
