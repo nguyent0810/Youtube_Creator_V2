@@ -42,15 +42,16 @@ def login():
         ctx.close()
 
 
-def new_project(page):
+def new_project(page, headless=False):
     page.goto(FLOW_URL)
     page.wait_for_timeout(3000)
 
     def signed_in():
         return not auth.url_is_login(page.url) and page.get_by_role("button", name=NEW_PROJECT).count() > 0
 
-    # the window is the owner's to sign in to (Google may also ask for 2-step); webauto only waits
-    auth.ensure_sync(signed_in, "Google Flow", FLOW_URL)
+    # the window is the owner's to sign in to (Google may also ask for 2-step); webauto only waits.
+    # Headless has no window to sign in to, so fail at once: run `webauto flow login` first.
+    auth.ensure_sync(signed_in, "Google Flow", FLOW_URL, wait_s=0 if headless else None)
     page.get_by_role("button", name=NEW_PROJECT).click(timeout=60000)
     page.wait_for_url(re.compile(r"/project/"), timeout=30000)
     page.wait_for_selector(EDITOR, timeout=30000)
@@ -167,7 +168,7 @@ def generate(prompts, out, mode="image", model=None, count=1, duration=6, ratio=
         ctx = launch(p, headless)
         try:
             page = ctx.pages[0] if ctx.pages else ctx.new_page()
-            new_project(page)
+            new_project(page, headless)
             apply_settings(page, mode, model, count, duration, ratio, res)
             if image:
                 set_start_frame(page, Path(image).resolve())
@@ -209,9 +210,11 @@ def add_parser(sub):
     g.add_argument("--quality", choices=["720p", "1080p", "4K"], default="720p", help="video download quality")
     g.add_argument("--image", help="video mode: start-frame image (image-to-video)")
     g.add_argument("--timeout", type=int, help="seconds per prompt (default 240 image / 900 video)")
+    g.add_argument("--headless", action="store_true", help="no Chrome window (the profile must be signed in already)")
     g.set_defaults(func=_run_generate)
 
 
 def _run_generate(a):
     prompts = [("p1", a.prompt)] if a.prompt else parse_prompts(a.prompts_file)
-    generate(prompts, a.out, a.mode, a.model, a.count, a.duration, a.ratio, a.res, a.quality, a.image, a.timeout)
+    generate(prompts, a.out, a.mode, a.model, a.count, a.duration, a.ratio, a.res, a.quality, a.image, a.timeout,
+             a.headless)
