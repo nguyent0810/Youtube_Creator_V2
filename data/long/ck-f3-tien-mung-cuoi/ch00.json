@@ -1,0 +1,223 @@
+{
+ "title": "Một con số nhìn nhỏ",
+ "lines": [
+  "Lương tháng của chị Hà là mười hai triệu, nhưng các phong bì cả năm trong ví dụ này lên năm phẩy sáu triệu.",
+  "Một phong bì nhỏ không bằng cả tháng lương, nhưng nhiều phong bì nhỏ lại có thể chạm gần nửa tháng lương.",
+  "Trên lịch nhiệt mười hai tháng, mỗi ô màu sẽ hiện đúng lúc chị Hà ghi một dịp xã giao.",
+  "Đó là lịch ví dụ giả định của một người, không phải dự báo mùa cưới hay mức mừng chuẩn.",
+  "Chị Hà có bảy đám cưới và bảy dịp khác, tổng cộng mười bốn lần cần ghi vào lịch.",
+  "Có bạn thân, đồng nghiệp, họ hàng, lì xì, tân gia, đầy tháng và đám hiếu.",
+  "Vì vậy, video không hỏi bạn nên bỏ vào phong bì bao nhiêu.",
+  "Video chỉ mở một cuốn lịch treo tường, rồi để bộ đếm đi từ không tới năm phẩy sáu triệu.",
+  "Con số cuối bằng bốn mươi sáu phẩy sáu bảy phần trăm lương một tháng của chị Hà.",
+  "Nó chỉ là phép chia, không phải phán xét.",
+  "Điều cần nhìn là đường đi của bộ đếm ấy."
+ ],
+ "scenes": [
+  {
+   "type": "heat",
+   "at": 0,
+   "title": "LỊCH 12 THÁNG",
+   "range": [
+    0,
+    1.1
+   ],
+   "unit": "TRIỆU",
+   "cols": 6,
+   "cells": [
+    {
+     "k": "T1",
+     "v": 0,
+     "at": 0
+    },
+    {
+     "k": "T2",
+     "v": 0.8,
+     "at": 0
+    },
+    {
+     "k": "T3",
+     "v": 0,
+     "at": 0
+    },
+    {
+     "k": "T4",
+     "v": 0.7,
+     "at": 0
+    },
+    {
+     "k": "T5",
+     "v": 0.5,
+     "at": 0
+    },
+    {
+     "k": "T6",
+     "v": 0,
+     "at": 0
+    },
+    {
+     "k": "T7",
+     "v": 0.3,
+     "at": 0
+    },
+    {
+     "k": "T8",
+     "v": 0.5,
+     "at": 0
+    },
+    {
+     "k": "T9",
+     "v": 0,
+     "at": 0
+    },
+    {
+     "k": "T10",
+     "v": 0.8,
+     "at": 0
+    },
+    {
+     "k": "T11",
+     "v": 1,
+     "at": 0
+    },
+    {
+     "k": "T12",
+     "v": 1,
+     "at": 0
+    }
+   ],
+   "total": {
+    "label": "CẢ NĂM",
+    "at": 0
+   },
+   "calls": [
+    {
+     "i": 11,
+     "text": "5,6 TRIỆU",
+     "at": 0
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 0,
+   "from": 0,
+   "to": 5.6,
+   "suffix": " TRIỆU",
+   "label": "CẢ NĂM · VÍ DỤ GIẢ ĐỊNH · CHỊ HÀ · LƯƠNG 12 TRIỆU/THÁNG",
+   "calls": [
+    {
+     "i": 0,
+     "text": "5,6 TRIỆU",
+     "at": 0
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "img": "ai01",
+   "at": 1,
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.5,
+    0.18
+   ],
+   "reveal": {
+    "kind": "wipe",
+    "at": 1,
+    "d": 0.9
+   }
+  },
+  {
+   "type": "broll",
+   "vid": "7430218",
+   "at": 2,
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA"
+  },
+  {
+   "type": "bars",
+   "at": 3,
+   "title": "14 DỊP TRONG NĂM",
+   "unit": "VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "ĐÁM CƯỚI",
+     "v": 7,
+     "lbl": "7",
+     "at": 3
+    },
+    {
+     "k": "DỊP KHÁC",
+     "v": 7,
+     "lbl": "7",
+     "at": 3
+    }
+   ],
+   "calls": [
+    {
+     "i": 0,
+     "text": "7",
+     "at": 3
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "LỊCH VÍ DỤ GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "CƯỚI",
+     "v": "7 DỊP",
+     "at": 4
+    },
+    {
+     "k": "DỊP KHÁC",
+     "v": "7 DỊP",
+     "at": 4
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 6,
+   "text": "Một năm, những phong bì nhỏ\ncộng thành bao nhiêu?"
+  },
+  {
+   "type": "counter",
+   "at": 8,
+   "from": 0,
+   "to": 46.67,
+   "suffix": "%",
+   "label": "SO VỚI LƯƠNG THÁNG",
+   "calls": [
+    {
+     "i": 0,
+     "text": "46,67%",
+     "at": 8
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "items": [
+    {
+     "text": "NHÌN ĐƯỜNG ĐI CỦA BỘ ĐẾM",
+     "at": 10,
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "LỊCH PHONG BÌ CẢ NĂM"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.1
+ }
+}

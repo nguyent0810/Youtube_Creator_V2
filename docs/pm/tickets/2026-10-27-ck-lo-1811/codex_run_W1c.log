@@ -1,0 +1,1333 @@
+Reading additional input from stdin...
+OpenAI Codex v0.164.0
+--------
+workdir: D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+model: gpt-5.6-terra
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR] (network access enabled)
+reasoning effort: medium
+reasoning summaries: none
+session id: 01a17b71-12ec-7ab1-93d5-f1fdcdabdc22
+--------
+user
+Làm ticket docs/pm/tickets/2026-10-27-ck-lo-1811/W1c-5.md từ đầu đến cuối. Tuân thủ AGENTS.md (đã nạp sẵn), nhất là 'Cấm tuyệt đối' và 'chỉ đọc đúng các file ticket chỉ định, không khám phá repo'. Trước khi báo xong phải chạy `python scripts/long_gate.py ck-c6-gia-tran-san-t2 --min-syl 1900` và nó phải in ĐẠT (trừ khi ticket nói là ticket nghiên cứu). Viết báo cáo vào file kết quả mà ticket chỉ định. Tiếng Việt.
+codex
+Tôi sẽ làm đúng ticket, chỉ dùng các tài liệu được phép và các cổng kiểm bắt buộc. Vì đây là tác vụ dựng video, tôi cũng sẽ dùng quy trình HyperFrames để bảo đảm dự án render/kiểm tra đúng chuẩn.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw 'docs/pm/tickets/2026-10-27-ck-lo-1811/W1c-5.md'; Get-Content -Raw 'docs/codex/long-rules.md'; Get-Content -Raw 'docs/codex/long-cheatsheet.md'; Get-Content -Raw 'C:/Users/Tung-QA/.codex/skills/.system/hyperframes/SKILL.md'" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ exited 1 in 246ms:
+# W1c-5 â€” Sá»¬A Má»ž Äáº¦U `ck-c6-gia-tran-san-t2`
+Äá»c `docs/pm/tickets/2026-10-27-ck-lo-1811/00-CHUNG-W1c.md` vÃ  lÃ m Ä‘Ãºng. Brief: má»¥c **B5** trong `00-CONTENT-BRIEF.md`. MÃ£ bÃ¡o cÃ¡o: `W1c-5`.
+
+# Luáº­t Long cho agent sáº£n xuáº¥t (chi tiáº¿t, chuyá»ƒn tá»« AGENTS.md ngÃ y 26/10/2026)
+
+Äá»c cÃ¹ng `docs/codex/long-cheatsheet.md`.
+
+### áº¢nh AI khi khÃ´ng cÃ³ áº£nh tá»± do (tá»« 26/10/2026)
+
+Cáº£nh cáº§n minh hoáº¡ mÃ  khÃ´ng cÃ³ áº£nh PD/CC0/CC BY (vÃ­ dá»¥ cáº£nh trong phÃ²ng lÃ m viá»‡c nÄƒm 1962, hay má»™t váº­t Ä‘Ã£ máº¥t) thÃ¬ **khÃ´ng tá»± táº¡o áº£nh**. Ghi prompt vÃ o `data/long/<topic>/ai_prompts.md` Ä‘á»ƒ chá»§ kÃªnh nhá» bot táº¡o.
+
+**Äá»‹nh dáº¡ng má»™t má»¥c:**
+
+```
+#### ai_01.png â€” <cáº£nh dÃ¹ng á»Ÿ chNN, cÃ¢u sá»‘ N>
+- Prompt (tiáº¿ng Anh): <mÃ´ táº£ chi tiáº¿t: bá»‘i cáº£nh, thá»i ká»³, Ã¡nh sÃ¡ng, bá»‘ cá»¥c, phong cÃ¡ch>
+- Khung: 16:9, 1920x1080
+- Cáº¥m: chá»¯ hoáº·c sá»‘ trong áº£nh, logo, khuÃ´n máº·t nháº­n ra Ä‘Æ°á»£c cá»§a ngÆ°á»i tháº­t
+- Phong cÃ¡ch: <vÃ­ dá»¥ "painterly editorial illustration, muted 1960s palette">
+```
+
+**Quy táº¯c:**
+- **NgÆ°á»i tháº­t: láº¥y dÃ¡ng gá»‘c, khÃ´ng váº½ máº·t** (chá»§ kÃªnh, 26/10/2026):
+  - ÄÆ°á»£c váº½ ngÆ°á»i cÃ³ tháº­t (Johnson, Glennâ€¦) theo **dÃ¡ng gá»‘c** trong áº£nh tÆ° liá»‡u: vÃ³c ngÆ°á»i, kiá»ƒu tÃ³c, trang phá»¥c, Ä‘á»“ váº­t, bá»‘i cáº£nh Ä‘Ãºng thá»i ká»³.
+  - Chá»‰ váº½ á»Ÿ **gÃ³c nghiÃªng quay Ä‘i hoáº·c tá»« phÃ­a sau**, khÃ´ng tháº¥y rÃµ máº·t.
+  - Trong prompt, ghi áº£nh tÆ° liá»‡u tham chiáº¿u (URL Commons/NASA trong `facts.md`) vÃ  mÃ´ táº£ dÃ¡ng cá»¥ thá»ƒ. VÃ­ dá»¥: "woman in 1960s cat-eye glasses and cardigan, seen from behind at a desk with mechanical calculator".
+  - Máº·t ngÆ°á»i tháº­t chá»‰ dÃ¹ng áº£nh tÆ° liá»‡u PD.
+- **Phong cÃ¡ch:** minh hoáº¡ hoáº·c tranh váº½, **khÃ´ng giáº£ áº£nh tÆ° liá»‡u**, Ä‘á»ƒ ngÆ°á»i xem khÃ´ng nháº§m lÃ  tÆ° liá»‡u tháº­t.
+- **KhÃ´ng gáº¯n nhÃ£n AI:** khÃ´ng thÃªm nhÃ£n "AI" trÃªn mÃ n hÃ¬nh hay trong mÃ´ táº£, vÃ¬ báº£n thÃ¢n áº£nh Ä‘Ã£ cÃ³ chá»¯ kÃ½ AI (chá»§ kÃªnh quyáº¿t Ä‘á»‹nh ngÃ y 26/10/2026).
+- **ÄÆ°á»ng dáº«n:**
+  - Chá»§ kÃªnh tháº£ áº£nh vÃ o `motion/hf/assets/long/<topic>/img/ai/ai_NN.png`.
+  - Engine chá»‰ Ä‘á»c `output/long/<topic>/img/aiNN.jpg` kÃ¨m `.json`. Claude cháº¡y `python scripts/ai_img_import.py <topic>` Ä‘á»ƒ chÃ©p áº£nh sang chá»— Ä‘Ã³.
+  - Tá»« 26/10, Claude cháº¡y `python scripts/ai_img_request.py <topic>`. Lá»‡nh nÃ y gá»­i `ai_prompts.md` cho bot táº¡o áº£nh qua webhook (khoÃ¡ Ä‘á»c tá»« registry User, xem `docs/tools/grokbot-webhook.md`), chá» áº£nh vá» rá»“i cháº¡y `ai_img_import`. **Agent sáº£n xuáº¥t khÃ´ng gá»i webhook**: chá»‰ viáº¿t prompt.
+  - Trong `IMGS`, khai key `aiNN` lÃ  `"EXT:ai:ai_NN"`.
+- **Ghi cÃ´ng:** cáº£nh dÃ¹ng áº£nh AI pháº£i cÃ³ `"credit": false`. Náº¿u thiáº¿u, engine in "áº¢NH: TÆ¯ LIá»†U Â· PHáº M VI CÃ”NG Cá»˜NG", tá»©c lÃ  gáº¯n nhÃ£n tÆ° liá»‡u cho tranh minh hoáº¡, sai sá»± tháº­t. NhÃ£n `illus` "áº¢NH MINH Há»ŒA" thÃ¬ giá»¯, vÃ¬ Ä‘Ã³ lÃ  nhÃ£n chuáº©n cho tranh minh hoáº¡.
+- **Khi chÆ°a cÃ³ áº£nh:** giá»¯ nguyÃªn cáº£nh vÃ  Ä‘Æ°á»ng dáº«n, rá»“i ghi trong bÃ¡o cÃ¡o "chá» N áº£nh AI". `html` hoáº·c `long_gate` cÃ³ thá»ƒ bÃ¡o thiáº¿u file; Ä‘iá»u Ä‘Ã³ cháº¥p nháº­n Ä‘Æ°á»£c cho tá»›i khi áº£nh vá».
+- **Giá»›i háº¡n:** tá»‘i Ä‘a 6 áº£nh AI cho má»™t bÃ i 9â€“11 phÃºt. Æ¯u tiÃªn áº£nh tÆ° liá»‡u tháº­t.
+
+### Quy trÃ¬nh Long (theo máº«u `data/long/mim-ke-huy-diet-petrov`, `mim-google-maps-kal007`)
+
+Äá»c trÆ°á»›c:
+- `motion/long/README.md`, `RETENTION.md`, `SOURCES.md`;
+- `docs/pm/2026-10-23-mim-long-moi.md`;
+- `docs/pm/so-that-bai.md`.
+
+CÃ¡c bÆ°á»›c:
+1. Viáº¿t `script.md` vÃ  `factcheck.md` (nguá»“n lÃ  URL Ä‘Ã£ má»Ÿ).
+2. Cháº¡y `python motion/long/script_lines.py <topic>`; pháº£i qua cá»•ng integrity.
+3. Viáº¿t `gen_scenes.py`, rá»“i cháº¡y `python data/long/<topic>/gen_scenes.py`, ra `spec.json` vÃ  `chNN.json`. Counter cÃ³ sá»‘ 1000â€“2100 pháº£i khai `"year": true|false`.
+4. Cháº¡y `python motion/long/studio_lint.py <topic> --strict`; pháº£i ra 0 lá»—i.
+5. Cháº¡y `python motion/long/build_long.py <topic> tts`, rá»“i `... html`. Sá»­a má»i lá»—i lint mÃ  `html` bÃ¡o.
+6. Cháº¡y `python motion/long/clip_sheet.py <topic>`, xem áº£nh clip sheet; clip sai nghÄ©a hoáº·c lá»™ logo thÃ¬ thay.
+7. Chá»‰ render khi ticket cho phÃ©p: `build_long.py <topic> render`, rá»“i `final`.
+8. Dá»±ng thumbnail `motion/long/thumbs/<topic>_t1.html`, rá»“i cháº¡y `python motion/long/thumb.py <topic> t1`.
+
+### Cá»•ng cháº¥t lÆ°á»£ng (báº¯t buá»™c, tá»« 26/10/2026)
+
+CÃ¡c cá»•ng lint chá»‰ lÃ  má»©c sÃ n ká»¹ thuáº­t. TrÆ°á»›c khi bÃ¡o xong má»™t Long, pháº£i cháº¡y:
+
+```
+python scripts/long_gate.py <topic> --min-syl 1900
+```
+
+Lá»‡nh pháº£i in **Äáº T**. CÃ¡c ngÆ°á»¡ng Ä‘Æ°á»£c Ä‘o trÃªn bÃ i máº«u Petrov vÃ  KAL 007:
+
+| NgÆ°á»¡ng | GiÃ¡ trá»‹ |
+|---|---|
+| Ã‚m tiáº¿t lá»i Ä‘á»c | â‰¥ 1.900 (â‰ˆ 9 phÃºt) |
+| Thá»i lÆ°á»£ng má»—i cáº£nh | â‰¤ 9 giÃ¢y |
+| Loáº¡i cáº£nh má»—i chÆ°Æ¡ng | â‰¥ 5 |
+| Má»™t clip dÃ¹ng láº¡i (bÃ i 9â€“12 phÃºt) | â‰¤ 2 láº§n |
+| Má»™t áº£nh dÃ¹ng láº¡i | â‰¤ 3 láº§n |
+| URL nguá»“n trong `factcheck.md` | â‰¥ 8 |
+| TiÃªu Ä‘á» | â‰¤ 60 kÃ½ tá»± |
+
+NgoÃ i ra: má»i nÄƒm trong ká»‹ch báº£n pháº£i cÃ³ trong `factcheck.md`, vÃ  khÃ´ng Ä‘Æ°á»£c cÃ³ cÃ¢u Ä‘á»‡m.
+
+**BÃ i máº«u Ä‘á»ƒ so:**
+- Petrov: 22,5 phÃºt; 179 cáº£nh (7,6 giÃ¢y/cáº£nh); Ã­t nháº¥t 7 loáº¡i cáº£nh má»—i chÆ°Æ¡ng; 15 áº£nh khÃ¡c nhau.
+- KAL 007: 10,5 phÃºt; 82 cáº£nh (7,7 giÃ¢y/cáº£nh); khÃ´ng dÃ¹ng clip, chá»‰ áº£nh vÃ  Ä‘á»“ hoáº¡ (báº£n Ä‘á»“, timeline, counter).
+
+Má»—i chÆ°Æ¡ng cá»§a hai bÃ i nÃ y cÃ³ 3â€“4 dá»¯ kiá»‡n cá»¥ thá»ƒ cÃ³ nguá»“n.
+
+### Lá»—i Ä‘Ã£ gáº·p (Ä‘á»«ng láº·p láº¡i)
+
+Thá»­ nghiá»‡m Codex T1/T1b, 26/10/2026:
+
+1. **ChÃ¨n cÃ¢u Ä‘á»‡m rá»—ng nghÄ©a cho qua tá»‰ lá»‡ cÃ¢u ngáº¯n cá»§a lint.** VÃ­ dá»¥: "Ráº¥t cháº­m.", "ÄÃ³ lÃ  cÃ¢u há»i khÃ³.". CÃ¢u ngáº¯n chá»‰ Ä‘áº·t sau má»™t phÃ¡n Ä‘á»‹nh hoáº·c khoáº£nh kháº¯c cáº£m xÃºc.
+2. **Bá»‹ yÃªu cáº§u bá» cÃ¢u Ä‘á»‡m thÃ¬ chá»‰ xoÃ¡, khÃ´ng viáº¿t ná»™i dung thay.** BÃ i tá»¥t tá»« 9 xuá»‘ng 5 phÃºt. Thiáº¿u Ä‘á»™ dÃ i thÃ¬ pháº£i **tÃ¬m thÃªm dá»¯ kiá»‡n cÃ³ nguá»“n**, khÃ´ng Ä‘Æ°á»£c Ä‘á»ƒ bÃ i ngáº¯n Ä‘i.
+3. **Äá»c má»™t ngÃ y cá»¥ thá»ƒ (18/3/1940) trong khi chÃ­nh `factcheck.md` ghi lÃ  chÆ°a chá»‘t Ä‘Æ°á»£c.**
+4. **Má»™t clip láº·p 8 láº§n; 9 phÃºt chá»‰ cÃ³ 18 cáº£nh vÃ  toÃ n chá»¯.**
+5. **Cold open liá»‡t kÃª tÃªn ngÆ°á»i thay vÃ¬ dá»±ng má»™t cáº£nh cÃ³ cÄƒng tháº³ng; cÃ¢u meta "HÃ´m nay mÃ¬nh khÃ´ng ká»ƒâ€¦".**
+6. **Coi viá»‡c qua lint lÃ  xong.** Xong nghÄ©a lÃ  `long_gate.py` in Äáº T **vÃ ** ná»™i dung Ä‘Ã¡ng xem.
+7. **Tháº» chÆ°Æ¡ng ghi sai trÆ°á»ng.** ÄÃ£ ghi `"number": "05"` thay cho `no`/`k`, nÃªn engine hiá»‡n chá»¯ "undefined" giá»¯a mÃ n hÃ¬nh á»Ÿ cáº£ 8 chÆ°Æ¡ng. Tháº» chÆ°Æ¡ng Ä‘Ãºng (theo `mim-ke-huy-diet-petrov/ch05.json`):
+
+   ```json
+   {"type":"chapter","no":"5","k":"CHÆ¯Æ NG NÄ‚M","title":"â€¦","sub":"<má»‘c>","bg":"<áº£nh>","titleAt":[0,"<tá»«>"]}
+   ```
+
+   Má»—i `chNN.json` cÅ©ng pháº£i cÃ³ `"hud": {"k": "CHÆ¯Æ NG 05", "t": "<TIÃŠU Äá»€>"}`. Thiáº¿u `hud` thÃ¬ `describe.py` cháº¿t vÃ  mÃ´ táº£ khÃ´ng cÃ³ danh sÃ¡ch chÆ°Æ¡ng.
+8. **Má»™t khuÃ´n cáº£nh cho má»i chÆ°Æ¡ng.** Má»™t khuÃ´n 9 cáº£nh Ä‘Æ°á»£c dÃ¹ng láº¡i á»Ÿ cáº£ 8 chÆ°Æ¡ng, nÃªn cÃ¹ng má»™t dÃ²ng chá»¯ hiá»‡n 8 láº§n. Má»—i cáº£nh pháº£i minh hoáº¡ Ä‘Ãºng cÃ¢u Ä‘ang Ä‘á»c, vÃ  chá»¯ trÃªn mÃ n hÃ¬nh láº¥y tá»« dá»¯ kiá»‡n cá»§a chÃ­nh chÆ°Æ¡ng Ä‘Ã³. MÃ´-tÃ­p láº·p chá»‰ Ä‘Æ°á»£c lÃ m báº±ng `ledger` cÃ³ tiÃªu Ä‘á» cá»‘ Ä‘á»‹nh, má»—i chÆ°Æ¡ng thÃªm má»™t dÃ²ng má»›i.
+9. **QuÃªn báº£ng `SAY` vÃ  Ä‘á»ƒ `spec.youtube` trá»‘ng.** Pháº£i viáº¿t ngay tá»« Ä‘áº§u, theo máº«u Petrov vÃ  KAL:
+   - `SAY` phiÃªn Ã¢m má»i tÃªn nÆ°á»›c ngoÃ i, viáº¿t táº¯t (TNMOC, NASAâ€¦) vÃ  sá»‘ ráº¥t lá»›n.
+   - `spec.youtube` gá»“m: `publish_at`, `playlist`, `category`, `thumb`, `summary`, `more`, `chapter_titles`, `sources` (â‰¥ 8 URL cÃ´ng khai), `tags`, `hashtags`, `video_credits`.
+
+**NghiÃªn cá»©u trÆ°á»›c, viáº¿t sau:** khi ticket chia Ä‘Ã´i, ticket nghiÃªn cá»©u chá»‰ gom kho dá»¯ kiá»‡n cÃ³ URL (`facts.md`). Ticket viáº¿t chá»‰ dÃ¹ng dá»¯ kiá»‡n trong kho Ä‘Ã³.
+
+
+## Chiáº¿n lÆ°á»£c Long 45 ngÃ y (chá»§ kÃªnh, 27/10/2026), Ã¡p cho MIM vÃ  CK
+
+ToÃ n vÄƒn á»Ÿ `docs/pm/2026-10-27-chien-luoc-long-45-ngay.md`.
+
+- **Äá»™ dÃ i:** máº·c Ä‘á»‹nh 10â€“15 phÃºt (2.100â€“3.200 Ã¢m tiáº¿t). Chá»‰ lÃ m 20â€“30 phÃºt khi chá»§ Ä‘á» Ä‘á»§ ná»™i dung. KhÃ´ng Ä‘á»™n, khÃ´ng láº·p lá»i dáº«n.
+- **Má»™t cÃ¢u há»i trung tÃ¢m má»—i bÃ i**, ghi á»Ÿ Ä‘áº§u `script.md`. ChÆ°Æ¡ng cuá»‘i tráº£ lá»i Ä‘Ãºng cÃ¢u Ä‘Ã³.
+- **Má»‘c cáº¥u trÃºc:**
+  - 0â€“30 giÃ¢y: hook, tá»©c tÃ¬nh huá»‘ng, bÃ­ áº©n hoáº·c mÃ¢u thuáº«n. KhÃ´ng má»Ÿ báº±ng Ä‘á»‹nh nghÄ©a hay lá»‹ch sá»­.
+  - 30 giÃ¢y Ä‘áº¿n 2 phÃºt: bá»‘i cáº£nh, vÃ  vÃ¬ sao ngÆ°á»i xem nÃªn quan tÃ¢m.
+  - Cá»© 3â€“5 phÃºt cÃ³ má»™t **bÆ°á»›c tiáº¿n láº­p luáº­n**: báº±ng chá»©ng má»›i, gÃ³c nhÃ¬n Ä‘á»‘i láº­p, pháº£n biá»‡n hoáº·c há»‡ quáº£. Ghi cÃ¡c bÆ°á»›c nÃ y vÃ o báº£ng "BÆ°á»›c láº­p luáº­n" Ä‘áº§u `script.md`.
+  - Pháº§n káº¿t: tráº£ lá»i, tá»•ng há»£p, vÃ  Ä‘iá»u ngÆ°á»i xem rÃºt ra Ä‘Æ°á»£c.
+- **5 cÃ¢u trÆ°á»›c khi viáº¿t** (ghi vÃ o Ä‘áº§u `script.md`):
+  1. NgÆ°á»i xem lÃ  ai?
+  2. Há» tÃ² mÃ² hay lo Ä‘iá»u gÃ¬?
+  3. VÃ¬ sao chá»n video nÃ y trÃªn Home?
+  4. Thumbnail truyá»n má»™t Ã½ nÃ o?
+  5. TiÃªu Ä‘á» khá»›p vá»›i 30 giÃ¢y Ä‘áº§u tháº¿ nÃ o?
+- **TiÃªu Ä‘á»:** khÃ´ng Ä‘áº·t nhÆ° tÃªn bÃ i há»c hay bÃ¡o cÃ¡o, khÃ´ng liá»‡t kÃª. DÃ¹ng cÃ¢u há»i, nghá»‹ch lÃ½, há»‡ quáº£, nhÆ°ng khÃ´ng giáº­t tÃ­t sai sá»± tháº­t.
+- **CK:** má»—i bÃ i ghi rÃµ nguá»“n, giai Ä‘oáº¡n, phÆ°Æ¡ng phÃ¡p, giáº£ Ä‘á»‹nh vÃ  giá»›i háº¡n káº¿t luáº­n. KhÃ´ng suy lá»£i nhuáº­n tÆ°Æ¡ng lai tá»« quÃ¡ khá»©.
+
+### Cáº­p nháº­t "Ãp dá»¥ng ngay" (chá»§ kÃªnh, 27/10/2026, sau khi xem CD Media - Why?, Há»c viá»‡n BÃ² vÃ  Gáº¥u, KIáº¾N THá»¨C THÃš Vá»Š, Anh Ba TÃ i ChÃ­nh)
+
+- **Content Brief báº¯t buá»™c trÆ°á»›c khi sáº£n xuáº¥t.** Thiáº¿u brief thÃ¬ khÃ´ng viáº¿t ká»‹ch báº£n. Máº«u: `docs/pm/tickets/2026-10-27-ck-lo-1811/00-CONTENT-BRIEF.md`. Brief gá»“m:
+  - nhu cáº§u ngÆ°á»i xem, cÃ¢u há»i trung tÃ¢m, gÃ³c tiáº¿p cáº­n khÃ¡c biá»‡t;
+  - 3 tiÃªu Ä‘á» vÃ  2 Ã½ thumbnail;
+  - hook 30 giÃ¢y;
+  - cáº¥u trÃºc, nguá»“n dá»¯ liá»‡u, Ä‘á»™ dÃ i Ä‘á» xuáº¥t.
+- **KhÃ´ng má»Ÿ báº±ng nhÃ¢n váº­t giáº£ Ä‘á»‹nh**, kiá»ƒu "Lan vÃ  Minh", "Tuáº¥n vÃ  Khoa". CÅ©ng khÃ´ng má»Ÿ báº±ng Ä‘á»‹nh nghÄ©a hay lá»‹ch sá»­ dÃ i dÃ²ng.
+  - CÃ¢u Ä‘áº§u pháº£i lÃ  má»™t trong ba thá»©: sá»± kiá»‡n cÃ³ tháº­t kÃ¨m ngÃ y, con sá»‘ tháº­t cÃ³ nguá»“n, hoáº·c cÃ¢u há»i tháº­t cá»§a ngÆ°á»i xem.
+  - VÃ­ dá»¥ giáº£ Ä‘á»‹nh chá»‰ vÃ o tá»« CH01 trá»Ÿ Ä‘i, vÃ  nÃ³i rÃµ lÃ  vÃ­ dá»¥.
+- **Cáº¥u trÃºc documentary:** hook â†’ váº¥n Ä‘á» â†’ bá»‘i cáº£nh â†’ báº±ng chá»©ng vÃ  dá»¯ liá»‡u â†’ nghá»‹ch lÃ½ hoáº·c bÆ°á»›c ngoáº·t â†’ phÃ¢n tÃ­ch â†’ káº¿t luáº­n. KhÃ´ng cháº¡y slide chá»¯ liÃªn tá»¥c.
+- **Thumbnail:**
+  - 3â€“6 chá»¯ lá»›n, má»™t hÃ¬nh hoáº·c má»™t cáº·p Ä‘á»‘i láº­p.
+  - **KhÃ´ng ghi "VÃ Dá»¤ GIáº¢ Äá»ŠNH"** trÃªn thumbnail; giáº£ Ä‘á»‹nh thÃ¬ nÃ³i rÃµ trong video.
+  - KhÃ´ng dÃ¹ng biá»ƒu Ä‘á»“ nhá» nhiá»u chá»¯, khÃ´ng dÃ¹ng hÃ¬nh khÃ´ng liÃªn quan.
+- **áº¢nh:** Æ°u tiÃªn tÆ° liá»‡u tháº­t (sá»± kiá»‡n, nhÃ¢n váº­t) khi cÃ³ quyá»n dÃ¹ng. KhÃ´ng giáº£ lÃ m áº£nh tÆ° liá»‡u: áº£nh AI luÃ´n mang nhÃ£n áº¢NH MINH Há»ŒA.
+- **Äá»™ dÃ i thá»­ nghiá»‡m:** MIM 10â€“15 phÃºt, CK 8â€“13 phÃºt. Chá»‰ lÃ m 20â€“30 phÃºt khi chá»§ Ä‘á» tháº­t sá»± cáº§n.
+
+# Cheatsheet dá»±ng Long MIM (cho Codex, Ä‘á»c thay engine)
+
+**KhÃ´ng Ä‘á»c** `motion/long/build_long.py`, `motion/hf/assets/engine/*`, `motion/stier/*`, `factory/*`, `pexels.py` hay thÆ° má»¥c cá»§a bÃ i khÃ¡c. Má»i thá»© cáº§n biáº¿t Ä‘á»u cÃ³ trong cheatsheet nÃ y vÃ  trong **má»™t file máº«u**:
+
+> `data/long/mim-katherine-johnson/gen_scenes.py`. BÃ i nÃ y Ä‘Ã£ qua cá»•ng, render vÃ  Ä‘Äƒng. **ChÃ©p nguyÃªn file nÃ y lÃ m khung.** Giá»¯ cÃ¡c helper á»Ÿ dÃ²ng 57â€“163 vÃ  `main()`. Chá»‰ thay pháº§n ná»™i dung bÃªn dÆ°á»›i.
+
+## Thay nhá»¯ng gÃ¬ trong khung
+
+| Khá»‘i | Thay báº±ng |
+|---|---|
+| `TOPIC`, `TITLE` (â‰¤ 60 kÃ½ tá»±, má»™t dáº¥u `:`) | Cá»§a bÃ i má»›i |
+| `SAY` | PhiÃªn Ã¢m má»i tÃªn nÆ°á»›c ngoÃ i, viáº¿t táº¯t vÃ  sá»‘ lá»›n trong lá»i Ä‘á»c. KhoÃ¡ viáº¿t thÆ°á»ng. VÃ­ dá»¥: `"nasa": "Na-sa"` |
+| `IMGS` | áº¢nh Commons `"File:â€¦"` (Ä‘Ã£ kiá»ƒm PD/CC0/CC BY) hoáº·c `"EXT:ai:ai_NN"` cho áº£nh AI |
+| `AI_PATH`, `STAND` | Sá»‘ áº£nh AI cá»§a bÃ i (â‰¤ 6); `STAND` = áº£nh tÆ° liá»‡u thay táº¡m cho tá»«ng áº£nh AI |
+| `GEO` | Báº£n Ä‘á»“: `countries`, `context`, `bbox [lon_min, lat_min, lon_max, lat_max]`, `pins [{name, lon, lat, label}]` |
+| `CHAPTER_TITLES` | `ch00`â€“`ch07`, tiáº¿ng Viá»‡t cÃ³ dáº¥u |
+| `LEDGER`, `ROWS` | MÃ´-tÃ­p cá»§a bÃ i: má»™t tiÃªu Ä‘á», má»—i chÆ°Æ¡ng thÃªm 1 dÃ²ng |
+| `ch00()`â€“`ch07()` | Cáº£nh cá»§a tá»«ng chÆ°Æ¡ng (má»¥c dÆ°á»›i) |
+| `make_spec()` | Äá»§ 11 trÆ°á»ng `youtube`, Ä‘á»•i `publish_at`; giá»¯ `"say": SAY`, `imgs`, `geo` |
+
+## Helper: chá»¯ kÃ½ vÃ  Ã½ nghÄ©a
+
+**Neo thá»i gian:** `a(line, word)` neo cáº£nh vÃ o cÃ¢u `line` cá»§a chÆ°Æ¡ng, táº¡i tá»« `word`. `word` pháº£i lÃ  chá»¯ **cÃ³ tháº­t trong cÃ¢u Ä‘Ã³**, khÃ´ng pháº£i sá»‘ vÃ  khÃ´ng pháº£i chá»¯ cÃ³ trong `SAY`.
+
+| Helper | DÃ¹ng khi |
+|---|---|
+| `chapter(no, k, title, sub, bg, title_at)` | Cáº£nh Ä‘áº§u má»—i chÆ°Æ¡ng. `k = "CHÆ¯Æ NG Má»˜T"`; `sub` = má»‘c cÃ³ nguá»“n; `bg` = key áº£nh |
+| `photo(img, at, key, value, kin=None)` | áº¢nh tÆ° liá»‡u hoáº·c áº£nh AI. áº¢nh AI tá»± cÃ³ `illus` + `credit: False` |
+| `print_scene(img, at, head, key, value)` | áº¢nh Ä‘áº·t nhÆ° tá» in, cÃ³ cá»™t ghi chÃº |
+| `broll(vid, at, text)` | Clip Pexels (id sá»‘), cÃ³ nhÃ£n VIDEO MINH Há»ŒA |
+| `kinetic(at, text, small=None)` | Chá»¯ lá»›n Ä‘á»™ng |
+| `slam(at, text, sub)` | Má»™t con sá»‘ hoáº·c cá»¥m tá»« Ä‘áº­p máº¡nh |
+| `date(at, day, d, sub)` | Má»‘c ngÃ y lá»›n. `d = "20.02.1962"` (chá»¯ sá»‘ vÃ  dáº¥u cháº¥m); chá»¯ thÃ¬ Ä‘á»ƒ vÃ o `day` |
+| `counter(at, to, suffix, label, frm=0, year=False)` | Sá»‘ Ä‘áº¿m. NÄƒm thÃ¬ `year=True` |
+| `timeline(at, bg, items)` | DÃ²ng thá»i gian (xem cÃ¡ch dÃ¹ng trong máº«u) |
+| `org(at, nodes)` | SÆ¡ Ä‘á»“ ngÆ°á»i hoáº·c tá»• chá»©c |
+| `question(at, text)` | CÃ¢u há»i treo |
+| `ledger(n, at)` | Hiá»‡n mÃ´-tÃ­p tá»›i dÃ²ng `n` |
+| `{"type": "map", "at": â€¦, "geo": "<key GEO>"}` | Báº£n Ä‘á»“; máº«u cÃ³ á»Ÿ `ch01`/`ch05` cá»§a khung |
+
+## Luáº­t cáº£nh (cá»•ng `long_gate.py` sáº½ cháº·n náº¿u sai)
+
+- 60â€“80 cáº£nh, trung bÃ¬nh â‰¤ 9 giÃ¢y/cáº£nh, má»—i chÆ°Æ¡ng â‰¥ 5 loáº¡i cáº£nh.
+- KhÃ´ng dÃ²ng chá»¯ hiá»ƒn thá»‹ nÃ o láº·p > 2 láº§n. MÃ´-tÃ­p chá»‰ qua `ledger`.
+- Má»™t clip dÃ¹ng â‰¤ 2 láº§n, Ã­t nháº¥t 6 clip khÃ¡c nhau. Má»™t áº£nh dÃ¹ng â‰¤ 3 láº§n.
+- Má»—i cáº£nh minh hoáº¡ **cÃ¢u Ä‘ang Ä‘á»c**.
+
+## Clip Pexels
+
+- Táº£i: `python motion/long/pexels.py get <topic> <id> â€¦`. Chá»‰ dÃ¹ng id Ä‘Ã£ ghi trong `facts.md`. Tá»« 26/10/2026 táº£i tháº³ng theo id, khÃ´ng cáº§n `search` trÆ°á»›c.
+  - Lá»‡nh in "khÃ´ng cÃ³ báº£n ngang â‰¤1920 -- bá» qua" nghÄ©a lÃ  clip dá»c. Pháº£i thay báº±ng clip ngang. TÃ¬m báº±ng `pexels.py search <topic> "tá»« khoÃ¡"`, rá»“i `get` id má»›i.
+- SoÃ¡t: `python motion/long/clip_sheet.py <topic>`, má»Ÿ `output/long/<topic>/qa_clips.jpg` xem. Clip lá»™ chá»¯, logo hoáº·c sai nghÄ©a thÃ¬ thay.
+
+## BÃ i há»c Moneyball (26/10/2026)
+
+- **VÃ²ng ká»‹ch báº£n (W1):** pháº£i cháº¡y `script_lines.py` vÃ  `studio_lint.py --strict` rá»“i sá»­a háº¿t lá»—i cÃ¢u > 35 tiáº¿ng **ngay trong W1**. TÃ¡ch cÃ¢u sau khi Ä‘Ã£ dá»±ng cáº£nh thÃ¬ má»i neo phÃ­a sau bá»‹ lá»‡ch, sá»­a ráº¥t tá»‘n.
+- **Neo pháº£i tÄƒng dáº§n.** Cáº£nh sau pháº£i neo vÃ o tá»« Ä‘á»©ng **sau** neo cá»§a cáº£nh trÆ°á»›c, tÃ­nh theo (cÃ¢u, vá»‹ trÃ­ tá»«). Neo ngÆ°á»£c hoáº·c trÃ¹ng thÃ¬ engine bÃ¡o "cáº£nh quÃ¡ ngáº¯n".
+- **KhÃ´ng neo vÃ o chá»¯ sá»‘.** VÃ­ dá»¥ "11" khÃ´ng khá»›p vá»›i "11â€“0".
+- **"Qua html" nghÄ©a lÃ ** in Ä‘á»§ 8 dÃ²ng `chNN: â€¦ -> â€¦html` vÃ  khÃ´ng cÃ³ `Error`. Cháº¡y báº£n `--standin` mÃ  khÃ´ng Ä‘á»c lá»—i thÃ¬ chÆ°a tÃ­nh lÃ  qua.
+
+## BÃ i há»c Social Network vÃ  Moneyball sau render (26/10/2026)
+
+- **Ghim trong cáº£nh `map` pháº£i trÃ¹ng tÃªn ghim trong `GEO`.** VÃ­ dá»¥ `{"name": "Harvard"}` thÃ¬ `GEO` cÅ©ng pháº£i cÃ³ `"name": "Harvard"`. Sai tÃªn thÃ¬ engine lá»—i vÃ  **cáº£ chÆ°Æ¡ng Ä‘á»©ng hÃ¬nh á»Ÿ tháº» chÆ°Æ¡ng** (72 giÃ¢y). `long_gate.py` giá» cháº·n lá»—i nÃ y.
+- **Cáº£nh `question` hay `slam` khÃ´ng Ä‘Æ°á»£c kÃ©o dÃ i.** Cáº£nh káº¿ tiáº¿p pháº£i neo vÃ o cÃ¢u ngay sau, khÃ´ng Ä‘Æ°á»£c Ä‘á»ƒ má»™t tháº» chá»¯ tÄ©nh 20 giÃ¢y. Claude cháº¡y thÃªm `scripts/freeze_check.py` sau render: Ä‘á»©ng hÃ¬nh > 12 giÃ¢y lÃ  trÆ°á»£t.
+
+- **áº¢nh dá»c cÃ³ máº·t ngÆ°á»i** (chÃ¢n dung, áº£nh tháº») khi Ä‘Æ°a vÃ o cáº£nh `photo` hay `chapter` pháº£i cÃ³ `"focus": [0.5, 0.12â€“0.2]`, Ä‘á»ƒ khung 16:9 láº¥y Ä‘Ãºng vÃ¹ng máº·t. Thiáº¿u `focus` thÃ¬ engine cáº¯t giá»¯a áº£nh: bÃ i Macintosh chá»‰ cÃ²n vest vÃ  tay cá»§a Jobs. `long_gate.py` cáº£nh bÃ¡o trÆ°á»ng há»£p nÃ y.
+
+## Thá»© tá»± lá»‡nh
+
+Äáº·t `PYTHONIOENCODING=utf-8` cho má»i lá»‡nh.
+
+1. `python motion/long/script_lines.py <topic>`: Ä‘Æ°a lá»i Ä‘á»c tá»« `script.md` vÃ o `chNN.json`.
+2. `python data/long/<topic>/gen_scenes.py`, rá»“i cháº¡y láº¡i `script_lines.py`. `gen_scenes` ghi Ä‘Ã¨ `chNN.json` khÃ´ng kÃ¨m `lines`.
+3. `python motion/long/studio_lint.py <topic> --strict` pháº£i ra **0 lá»—i**.
+   - CÃ¢u quÃ¡ 35 tiáº¿ng thÃ¬ **tÃ¡ch thÃ nh 2 cÃ¢u** trong `script.md`, giá»¯ nguyÃªn Ã½, ká»ƒ cáº£ khi ká»‹ch báº£n Ä‘Ã£ Ä‘Æ°á»£c duyá»‡t.
+   - TÃ¡ch cÃ¢u xong, kiá»ƒm láº¡i neo `a(line, word)` cá»§a cÃ¡c cÃ¢u phÃ­a sau trong chÆ°Æ¡ng Ä‘Ã³, vÃ¬ sá»‘ thá»© tá»± cÃ¢u Ä‘Ã£ lá»‡ch.
+4. `python motion/long/build_long.py <topic> tts` cho **Ä‘á»§ má»i chÆ°Æ¡ng**: pháº£i cÃ³ `output/long/<topic>/chNN/timing.json` cho tá»«ng chÆ°Æ¡ng. Rá»“i cháº¡y `â€¦ html`. Náº¿u áº£nh AI chÆ°a cÃ³ thÃ¬ cháº¡y `gen_scenes.py --standin` Ä‘á»ƒ soÃ¡t html, sau Ä‘Ã³ cháº¡y láº¡i báº£n tháº­t.
+5. `python scripts/long_gate.py <topic> --min-syl 1900` pháº£i ra **Äáº T**.
+
+## Long CK: cáº£nh biá»ƒu Ä‘á»“ (theme "chart", 27/10/2026)
+
+Khung Ä‘á»ƒ chÃ©p cho CK: `data/long/ck-e6-luong-huu-rut-mot-lan/gen_scenes.py`. LÃ´ tá»« 18/11 pháº£i theo luáº­t trong `docs/pm/2026-10-27-ck-dung-hinh-hap-dan.md`:
+- biá»ƒu Ä‘á»“ tháº­t â‰¥ 35% sá»‘ cáº£nh, tháº» chá»¯ (`kinetic`, `question`, `slam`, `myth`) â‰¤ 25%;
+- khÃ´ng quÃ¡ 2 tháº» chá»¯ liá»n nhau;
+- biá»ƒu Ä‘á»“ Ä‘áº§u tiÃªn neo vÃ o cÃ¢u 1 hoáº·c cÃ¢u 2 cá»§a CH00 (trÆ°á»›c giÃ¢y 15).
+
+Má»i sá»‘ liá»‡u tÃ­nh sáºµn trong `gen_scenes` (láº¥y tá»« `results.json`). Má»‘c `at` lÃ  `a(line, word)` nhÆ° cÃ¡c cáº£nh khÃ¡c.
+
+| Cáº£nh | Chá»¯ kÃ½ | DÃ¹ng khi |
+|---|---|---|
+| `race` + `abs` (Ä‘Æ°á»ng) | `{"type":"race","abs":True,"unit":"TRIá»†U","xlab":"THÃNG ","xstep":1,"dates":[...nhÃ£n...],"title","range","series":[{"label","color","vals":[...]}],"calls":[{"i","s"?,"text","at"}]}` | Sá»‘ theo thÃ¡ng/nÄƒm. `calls` = khoanh Ä‘iá»ƒm thá»© `i` Ä‘ang Ä‘á»c |
+| `waterfall` (thÃ¡c) | `{"type":"waterfall","title","range","unit","start":{"k","v","at"},"steps":[{"k","v":-16,"at"}],"end":{"k","at"},"calls":[{"i","text","at"}]}` | Tá»•ng bá»‹ trá»«/cá»™ng dáº§n. `i`: 0 = cá»™t Ä‘áº§u, 1..n = bÆ°á»›c, n+1 = cá»™t cuá»‘i |
+| `heat` (lá»‹ch nhiá»‡t) | `{"type":"heat","title","range","unit","cols":6,"cells":[{"k":"T1","v","note"?,"at"?}],"total":{"label":"Cáº¢ NÄ‚M","at"},"calls":[{"i","text","at"}]}` | 12 thÃ¡ng / 12 má»¥c. Ã” sÃ¡ng láº§n lÆ°á»£t, bá»™ Ä‘áº¿m cá»™ng dá»“n |
+| `stack` (cá»™t chá»“ng) | `{"type":"stack","title","range","unit","keys":[{"k":"Vá»¢"},{"k":"CHá»’NG"},{"k":"QUá»¸ CHUNG"}],"groups":[{"k":"50/50","vals":[..],"at"}],"calls":[{"i","text","at"}]}` | So sÃ¡nh vÃ i cÃ¡ch chia. Má»—i cá»™t â‰¤ 4 pháº§n |
+| `bars`, `counter`, `units`, `timeline`, `ledger` | nhÆ° cÃ¡c Long CK trÆ°á»›c | |
+
+- Chá»¯ trÃªn biá»ƒu Ä‘á»“ in hoa, â‰¤ 26 kÃ½ tá»± cho `title`, â‰¤ 18 kÃ½ tá»± cho `text` cá»§a `calls`.
+- Xem máº«u Ä‘Ã£ render: `python motion/long/chart_demo.py waterfall|heat|stack|line-calls`. KhÃ´ng cáº§n render láº¡i.
+
+## Long CK: áº£nh nhÃ¢n váº­t vÃ  áº£nh tÄ©nh (27/10/2026)
+
+**áº¢nh nhÃ¢n váº­t VÃ Dá»¤ GIáº¢ Äá»ŠNH** (chá»‹ Lan, anh Minhâ€¦) do Grok Bot váº½. Ghi prompt vÃ o `data/long/<topic>/ai_prompts.md`, má»—i má»¥c má»™t tiÃªu Ä‘á» `## ai_NN.png â€” â€¦`.
+- Tá»‘i Ä‘a 8 áº£nh má»—i bÃ i.
+- NhÃ¢n váº­t lÃ  ngÆ°á»i hÆ° cáº¥u nÃªn **váº½ Ä‘Æ°á»£c máº·t**.
+- **DÃ²ng Ä‘áº§u file lÃ  "há»“ sÆ¡ nhÃ¢n váº­t":** tuá»•i, dÃ¡ng, tÃ³c, trang phá»¥c, mÃ u chá»§ Ä‘áº¡o. Má»i prompt chÃ©p láº¡i nguyÃªn há»“ sÆ¡ nÃ y Ä‘á»ƒ gÆ°Æ¡ng máº·t giá»‘ng nhau suá»‘t video (tháº» `object_continuity`).
+- Phong cÃ¡ch chung: áº£nh minh hoáº¡ Ä‘iá»‡n áº£nh, bá»‘i cáº£nh Viá»‡t Nam Ä‘á»i thÆ°á»ng, Ã¡nh sÃ¡ng áº¥m, khung 16:9, chá»«a khoáº£ng trá»‘ng má»™t bÃªn Ä‘á»ƒ Ä‘áº·t chá»¯.
+- Cáº¥m:
+  - chá»¯, logo hay biá»ƒn hiá»‡u Ä‘á»c Ä‘Æ°á»£c;
+  - tÃªn bá»‡nh viá»‡n, ngÃ¢n hÃ ng hay cÃ´ng ty;
+  - tiá»n giáº¥y tháº¥y rÃµ má»‡nh giÃ¡;
+  - cáº£nh mÃ¡u hoáº·c bá»‡nh náº·ng.
+- Trong `gen_scenes`: áº£nh AI dÃ¹ng `"EXT:ai:ai_NN"`. Cáº£nh `photo` cá»§a áº£nh AI pháº£i cÃ³ `"credit": False`, vÃ  náº¿u cÃ³ máº·t ngÆ°á»i thÃ¬ thÃªm `"focus": [x, y]` vÃ o máº·t.
+- Má»—i chÆ°Æ¡ng dÃ¹ng 1â€“2 áº£nh nhÃ¢n váº­t. Má»—i áº£nh hiá»‡n â‰¤ 3 láº§n trong cáº£ bÃ i. áº¢nh nhÃ¢n váº­t **khÃ´ng thay biá»ƒu Ä‘á»“**: nÃ³ má»Ÿ cáº£nh, cÃ²n sá»‘ liá»‡u váº«n náº±m á»Ÿ biá»ƒu Ä‘á»“ ngay sau Ä‘Ã³.
+
+**áº¢nh tÄ©nh cho háº¥p dáº«n.** Cáº£nh `photo` cÃ³ thÃªm 2 trÆ°á»ng tuá»³ chá»n, láº¥y tá»« tháº» thÆ° viá»‡n:
+
+| TrÆ°á»ng | Tháº» | DÃ¹ng khi |
+|---|---|---|
+| `"reveal": {"kind": "circle"\|"wipe", "at": a(â€¦), "d": 0.9}` | `image_reveal` / `mask_reveal` | áº¢nh má»Ÿ dáº§n, `circle` má»Ÿ tá»« tiÃªu Ä‘iá»ƒm. DÃ¹ng cho áº£nh Ä‘áº§u chÆ°Æ¡ng hoáº·c khoáº£nh kháº¯c hÃ© lá»™ |
+| `"zoom": {"x": 0.62, "y": 0.4, "z": 1.6, "at": a(â€¦), "d": 1.2}` | `camera_zoom` | PhÃ³ng vÃ o chi tiáº¿t (tá» hoÃ¡ Ä‘Æ¡n, phong bÃ¬, mÃ n hÃ¬nh) Ä‘Ãºng lÃºc lá»i Ä‘á»c nháº¯c tá»›i |
+
+Ken Burns cÃ³ sáºµn: `"move": "in"|"out"|"pan"`, kÃ¨m `"focus"`. KhÃ´ng Ä‘á»ƒ hai áº£nh tÄ©nh liá»n nhau cÃ¹ng má»™t kiá»ƒu chuyá»ƒn Ä‘á»™ng.
+
+Get-Content : Cannot find path 'C:\Users\Tung-QA\.codex\skills\.system\hyperframes\SKILL.md' because it does not exist.
+At line:2 char:163
++ ... tsheet.md'; Get-Content -Raw 'C:/Users/Tung-QA/.codex/skills/.system/ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Tung-Q...frames\SKILL.md:String) [Get-Content], ItemNotFoundEx 
+   ception
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new(); Get-Content -Raw -Encoding utf8 'docs/pm/tickets/2026-10-27-ck-lo-1811/00-CHUNG-W1c.md'; Get-Content -Raw -Encoding utf8 'docs/pm/tickets/2026-10-27-ck-lo-1811/00-CONTENT-BRIEF.md'" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 91ms:
+# Luật chung cho ticket SỬA MỞ ĐẦU (W1c), theo Content Brief bản 2 đã duyệt 27/10
+
+Đọc:
+- `docs/pm/tickets/2026-10-27-ck-lo-1811/00-CONTENT-BRIEF.md`, mục của bài mình;
+- `docs/codex/long-rules.md`, hai mục cuối "Chiến lược Long 45 ngày" và "Cập nhật Áp dụng ngay";
+- `script.md`, `facts.md`, `factcheck.md` của bài.
+
+Không đọc gì khác.
+
+**Chỉ ghi:**
+- `script.md`
+- `factcheck.md`
+- `analysis.py`, `check.py`, `results.json` (chỉ khi phải đổi số)
+- `docs/pm/tickets/2026-10-27-ck-lo-1811/<mã>-ket-qua.md`
+
+## Sửa
+
+1. **Viết lại CH00** theo "Hook 30 giây" trong brief.
+   - **Câu 0** là sự kiện, con số thật hoặc câu hỏi thật, lấy từ `facts.md` và có nguồn. Không nhắc nhân vật ví dụ trong CH00.
+   - Trong 2 câu đầu nói ra con số mà biểu đồ dữ liệu thật đầu tiên sẽ vẽ.
+   - Có nghịch lý và một vòng mở chính, đóng ở CH06.
+   - Nói câu hỏi trung tâm của brief.
+   - CH00 ≤ 230 âm tiết.
+2. **Đưa nhân vật ví dụ vào đầu CH01**, kèm một câu nói rõ "đây là ví dụ giả định để tính". Bỏ các câu trùng ở CH01 nếu cần.
+3. **Dòng 1 = tiêu đề (1) trong brief.** Hai tiêu đề còn lại ghi vào dòng "Tiêu đề phụ".
+4. **Đầu `script.md` thêm 3 mục:**
+   - "Câu hỏi trung tâm";
+   - "5 câu trước khi viết";
+   - bảng "Bước lập luận": các mốc khoảng 3–5 phút, mỗi mốc một bước tiến của lập luận, ghi chương và câu.
+5. Cập nhật bảng "Biểu đồ" cho CH00 và CH01. Biểu đồ đầu tiên là **số thật** có nguồn.
+6. Giữ nguyên CH02–CH06, trừ chỗ phải nối câu.
+7. Tổng âm tiết: **1.900–2.700** (8–13 phút).
+
+## Cổng
+
+- `analysis.py` và `check.py` → `OK` (chạy lại nếu có đổi số).
+- `script_lines.py` (C6 dùng thêm `--allow-repeat-line`).
+- `studio_lint.py --strict` → 0 lỗi.
+
+`long_gate` trượt vì chưa có cảnh là bình thường.
+
+## Báo cáo
+
+- CH00 mới, nguyên văn.
+- Tổng âm tiết và âm tiết CH00.
+- Câu 0 lấy từ dữ kiện số mấy trong `facts.md`.
+
+# Content Brief lô Long CK 18/11 – 02/12 (bản 2, theo chỉ đạo 27/10 "Áp dụng ngay")
+
+**Vì sao có bản 2:** chỉ đạo 27/10 không cho mở bằng nhân vật giả định, mà phải mở bằng sự kiện có thật, con số đáng chú ý hoặc câu hỏi thật. Bản 1 của cả 5 bài đều mở bằng một nhân vật giả định.
+- Nhân vật giả định vẫn giữ, nhưng **dời xuống CH01 hoặc CH02** và nói rõ là ví dụ.
+- Ảnh nhân vật vẫn dùng, ở phần giải thích.
+- Thumbnail không ghi "VÍ DỤ GIẢ ĐỊNH".
+
+**Độ dài CK:** 8–13 phút, tức khoảng 1.700–2.700 âm tiết.
+
+**Nhóm chủ đề của lô:** 2 bài tài chính cá nhân, 2 bài đầu tư, 1 bài quyết định tài chính trong gia đình.
+
+---
+
+## B1 · Trợ cấp thất nghiệp: `ck-f1-tro-cap-that-nghiep`
+
+| Mục | Nội dung |
+|---|---|
+| Nhu cầu | Người sắp nghỉ hoặc vừa mất việc gõ "trợ cấp thất nghiệp", "nghỉ việc cần bao nhiêu tiền". Luật Việc làm 74/2025 có hiệu lực 01/01/2026, đây là diễn biến mới |
+| Câu hỏi trung tâm | Trợ cấp thất nghiệp thật sự đỡ được bạn bao nhiêu tháng, và còn hở bao nhiêu? |
+| Góc khác biệt | Kênh khác giảng thủ tục. Bài này đặt trợ cấp cạnh chi phí sống và vẽ khoản hở cộng dồn theo tháng |
+| 3 tiêu đề | (1) Nghỉ Việc Lương 15 Triệu: Trợ Cấp Thất Nghiệp Mấy Tháng? · (2) Mất Việc Năm 2026: Trợ Cấp Đỡ Bạn Được Bao Lâu? · (3) Hơn 330 Nghìn Người Nhận Trợ Cấp Thất Nghiệp: Đủ Sống Không? |
+| 2 thumbnail | (a) "60% LƯƠNG" cỡ lớn, một cột lương bị cắt còn 60%, nền tối · (b) "ĐỦ MẤY THÁNG?" cạnh một lịch xé còn vài tờ |
+| Hook 30 giây | **Sự thật:** 6 tháng đầu 2026 có 332.629 quyết định hưởng trợ cấp thất nghiệp (BHXH Việt Nam). **Nghịch lý:** trợ cấp là 60% lương, có trần, và chỉ kéo dài vài tháng dù bạn đóng nhiều năm. **Câu hỏi:** đóng 7 năm thì được mấy tháng? Câu trả lời có ở cuối |
+| Cấu trúc | Hook (số thật) → luật mới đổi gì → công thức 60% và trần vùng → ví dụ (chị Lan, ghi rõ giả định) → thác chi phí theo tháng → những trường hợp bị dừng hưởng → kết: khoản hở và việc người xem tự tính được |
+| Nguồn | Luật 74/2025/QH15; NĐ 293/2025/NĐ-CP; BHXH Việt Nam (số 6 tháng đầu 2026) |
+| Độ dài | khoảng 11 phút (hiện 2.351 âm tiết) |
+
+## B2 · Viện phí và bảo hiểm y tế: `ck-f2-vien-phi-bhyt`
+
+| Mục | Nội dung |
+|---|---|
+| Nhu cầu | Người xem gõ "viện phí", "bảo hiểm y tế chi trả bao nhiêu", "miễn viện phí toàn dân". Nghị quyết 72-NQ/TW (09/2025) đang là tin nóng |
+| Câu hỏi trung tâm | Có thẻ bảo hiểm y tế rồi, vì sao người Việt vẫn tự trả gần nửa tiền khám chữa bệnh? |
+| Góc khác biệt | Bóc từng lớp hoá đơn bằng biểu đồ thác, và nói rõ cái gì "miễn viện phí" chưa phủ tới |
+| 3 tiêu đề | (1) Có Bảo Hiểm Y Tế Vẫn Trả 40%: Tiền Viện Phí Đi Đâu? · (2) Nằm Viện 7 Ngày Tốn Bao Nhiêu? Bảo Hiểm Y Tế Trả Phần Nào · (3) Miễn Viện Phí Toàn Dân: Năm 2030 Bạn Còn Trả Gì? |
+| 2 thumbnail | (a) "94% CÓ THẺ" đối lập với "40% TỰ TRẢ", hai khối màu · (b) "AI TRẢ PHẦN NÀY?" trên một hoá đơn bị khoanh đỏ |
+| Hook 30 giây | **Sự thật:** hết 2024 có 94,29% dân số tham gia bảo hiểm y tế, nhưng năm 2025 tiền túi vẫn khoảng 40% tổng chi y tế (Bộ Y tế). **Nghịch lý:** gần như ai cũng có thẻ. **Câu hỏi:** phần 40% ấy nằm ở đâu trên hoá đơn? |
+| Cấu trúc | Hook → luật 51/2024 đổi gì → ba mức hưởng → ví dụ 7 ngày (anh Minh, ghi rõ giả định) → phần ngoài hoá đơn → lộ trình miễn viện phí tới 2030: đã có và chưa có → kết |
+| Nguồn | Luật 51/2024/QH15; NĐ 188/2025; NQ 72-NQ/TW; BHXH Việt Nam; Bộ Y tế |
+| Độ dài | khoảng 12,5 phút (hiện 2.694 âm tiết) |
+
+## B3 · MỚI, thay bài tiền mừng cưới: `ck-i1-100-trieu-tiet-kiem-hay-vnindex`
+
+**Vì sao đổi:**
+- Kho của bài tiền mừng cưới không có số thật nào về mức mừng, nên bài chủ yếu dựa vào ví dụ giả định. Chỉ đạo yêu cầu tránh điều này.
+- Lô còn thiếu bài đầu tư.
+- Bài tiền mừng cưới dời sang **đầu tháng 1/2027**, sát Tết Đinh Mùi (06/02/2027) và mùa cưới. Lúc đó cần nghiên cứu thêm khảo sát thật.
+
+| Mục | Nội dung |
+|---|---|
+| Nhu cầu | "Có 100 triệu nên làm gì", "gửi tiết kiệm hay đầu tư". Hai Long CK đang thắng đều là backtest số liệu thật (mua đều VN-Index 8 năm: 82 view; 11 đợt xếp hàng mua vàng: 55 view) |
+| Câu hỏi trung tâm | Cùng 100 triệu từ năm 2018: gửi tiết kiệm, bỏ một lần vào VN-Index, hay chia ra mua đều mỗi tháng, cách nào còn nhiều tiền nhất, và cách nào làm bạn mất ngủ nhiều nhất? |
+| Góc khác biệt | Dữ liệu thật từng phiên (chartdata: VN-Index + lãi tiết kiệm), có cả **giai đoạn tệ nhất** cho từng cách, không chỉ kết quả cuối |
+| 3 tiêu đề | (1) 100 Triệu Từ 2018: Gửi Tiết Kiệm Hay Mua VN-Index? · (2) Bỏ 100 Triệu Vào Chứng Khoán Đúng Đỉnh 2018: Giờ Còn Bao Nhiêu? · (3) Tiết Kiệm, Bỏ Một Lần, Hay Mua Đều: 8 Năm Dữ Liệu Thật |
+| 2 thumbnail | (a) 3 đường đua cỡ lớn, chữ "100 TRIỆU → ?" · (b) "ĐỈNH 2018" có mũi tên rơi, đối lập với "TIẾT KIỆM" |
+| Hook 30 giây | **Sự thật:** tháng 4/2018 VN-Index lập đỉnh 1.204 điểm; người bỏ tiền đúng hôm đó phải chờ nhiều năm mới về lại vốn. Số chính xác do `chartdata` tính. **Câu hỏi:** vậy bỏ tiền đúng đỉnh có còn thua gửi tiết kiệm không? |
+| Cấu trúc | Hook (đỉnh 2018) → ba cách và luật chơi (phí, thuế, lãi tiết kiệm giả định, cổ tức hay không) → cuộc đua 2018–2026 (`race`) → giai đoạn tệ nhất của từng cách (giảm sâu nhất, số tháng âm) → nếu bắt đầu ngay trước đợt giảm 2022 thì sao → giới hạn của backtest → kết |
+| Nguồn | Dữ liệu VN-Index từng phiên (HOSE qua vnstock, đã có trong repo); lãi tiết kiệm bình quân theo năm (Ngân hàng Nhà nước / báo); không nêu tên ngân hàng |
+| Độ dài | khoảng 10–12 phút |
+| Việc | Bài mới hoàn toàn: R (nghiên cứu) → W1 → W2 |
+
+## B4 · Vợ chồng chia tiền: `ck-f4-vo-chong-chia-tien`
+
+| Mục | Nội dung |
+|---|---|
+| Nhu cầu | "tài chính vợ chồng", "cách quản lý tiền bạc vợ chồng", "bảng chi tiêu gia đình" |
+| Câu hỏi trung tâm | Chia đôi tiền nhà nghe rất công bằng, vì sao người lương thấp lại hết tiền trước? |
+| Góc khác biệt | Đặt 3 cách chia cạnh nhau, đi suốt 12 tháng, bằng cột chồng. Dẫn nghiên cứu thật về cặp đôi gộp hay tách tiền |
+| 3 tiêu đề | (1) Vợ 15 Triệu, Chồng 25 Triệu: Chia Tiền Nhà Sao Công Bằng? · (2) Chia Đôi Tiền Nhà: Vì Sao Người Lương Thấp Hết Tiền Trước? · (3) Gộp Hay Tách Tiền Vợ Chồng: Nghiên Cứu Nói Gì? |
+| 2 thumbnail | (a) "50/50 = CÔNG BẰNG?" có hai ví lệch nhau · (b) "CÒN 2 TRIỆU" đối lập với "CÒN 12 TRIỆU" |
+| Hook 30 giây | **Sự thật:** câu hỏi người ta thật sự gõ, "cách quản lý tài chính vợ chồng", và một nghiên cứu có thật trong `facts.md` về cặp đôi gộp tiền. **Nghịch lý:** chia đôi nghe công bằng nhưng ra kết quả lệch. Ví dụ Thảo–Nam ghi rõ giả định, vào từ CH01 |
+| Cấu trúc | Hook → vì sao tiền làm vợ chồng căng thẳng (nghiên cứu) → ba cách chia → 12 tháng của từng cách → khi một người nghỉ sinh hay mất việc → luật hôn nhân và gia đình nói gì về thu nhập (1–2 câu) → kết: khung tự chọn, không phán cách nào đúng |
+| Nguồn | KSMS 2022/2024 (Cục Thống kê); Luật 52/2014/QH13; nghiên cứu học thuật trong `facts.md` |
+| Độ dài | khoảng 12 phút (hiện 2.581 âm tiết) |
+
+## B5 · Giá trần, giá sàn, T+2 (Chứng Khoán Từ Số 0): `ck-c6-gia-tran-san-t2`
+
+| Mục | Nội dung |
+|---|---|
+| Nhu cầu | Người mới mở tài khoản gõ "T+2 là gì", "mua cổ phiếu bao lâu thì bán được" |
+| Câu hỏi trung tâm | Mua cổ phiếu sáng thứ Hai, vì sao phải tới chiều thứ Tư mới bán được, và điều đó đã làm ai mất tiền? |
+| Góc khác biệt | Mở bằng phiên có thật, không giảng định nghĩa. Bài trước (`ck-c2`) nói về "kẹt sàn không bán được"; bài này nói về chuyện **chưa có hàng để bán** |
+| 3 tiêu đề | (1) Mua Thứ Hai, Thứ Tư Mới Bán Được: T+2 Là Gì? · (2) Bắt Đáy Ngày 9/4/2025: Vì Sao Không Bán Kịp? · (3) Giá Trần, Giá Sàn, T+2: Ba Luật Người Mới Hay Trả Giá |
+| 2 thumbnail | (a) "THỨ 2 → THỨ 4" cỡ lớn, có ổ khoá trên nút BÁN · (b) "147 MÃ SÀN" cạnh lịch T, T+1, T+2 |
+| Hook 30 giây | **Sự thật:** ngày 09/04/2025, VN-Index giảm 3,4% về 1.094,3 điểm, 147 mã giảm sàn (VTV). **Nghịch lý:** người bắt đáy hôm đó dù đúng vẫn chưa bán được ngay. **Câu hỏi:** vì sao? Ví dụ anh Tuấn ghi rõ giả định, vào từ CH01 |
+| Cấu trúc | Hook (phiên thật) → biên độ trần/sàn (±7/10/15%) → chu kỳ thanh toán T+2 → ví dụ 100 cổ phiếu → phiên 03/04/2025 → lộ trình T+0 (chưa chốt) → kết |
+| Nguồn | TT 120/2020/TT-BTC; HOSE; VSDC; VietnamPlus, VTV (phiên 03/04 và 09/04/2025) |
+| Độ dài | khoảng 11 phút (hiện 2.306 âm tiết) |
+
+---
+
+## Việc sau khi brief được duyệt
+
+1. **W1c**, giao Codex, cho B1, B2, B4, B5: viết lại CH00 theo hook ở trên; dời nhân vật xuống CH01; giữ phần còn lại.
+   - Cảnh W2 đã dựng của F1 và F2 phải dựng lại phần CH00 và CH01.
+2. **B3 mới:** R → W1 → W2, dùng hạ tầng `chartdata` (VN-Index thật).
+3. Thumbnail theo 2 concept ở trên, không ghi "VÍ DỤ GIẢ ĐỊNH".
+4. **Lịch** (chủ kênh, 27/10: 5 Long/tuần cho lô mới), 20:00 VN: B1 T4 18/11 · B3 T5 19/11 · B2 T6 20/11 · B5 T7 21/11 · B4 CN 22/11.
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new(); Get-Content -Raw -Encoding utf8 'data/long/ck-c6-gia-tran-san-t2/script.md'; Get-Content -Raw -Encoding utf8 'data/long/ck-c6-gia-tran-san-t2/facts.md'; Get-Content -Raw -Encoding utf8 'data/long/ck-c6-gia-tran-san-t2/factcheck.md'" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 98ms:
+# MUA CỔ PHIẾU THỨ HAI, BAO GIỜ BÁN ĐƯỢC? GIÁ TRẦN, SÀN VÀ T+2
+
+**Tiêu đề phụ một:** Hai triệu đồng nhân hai ngày: một trăm cổ phiếu đang ở đâu?
+**Tiêu đề phụ hai:** Giá trần, giá sàn và chiếc lịch sau nút mua
+
+**Kênh:** Biểu Đồ Biết Nói (CK) · **Chuỗi:** Chứng Khoán Từ Số 0 · **Nhân vật:** anh Tuấn, VÍ DỤ GIẢ ĐỊNH.
+
+Quy ước: mỗi dòng là một câu đọc. Lời đọc không có chữ số. Nội dung giáo dục, không phải tư vấn đầu tư.
+
+## Biểu đồ
+
+| Chương | Loại và điểm số | Câu neo |
+|---|---|---|
+| CH00 | Lịch nhiệt T, T cộng một, T cộng hai; hai triệu đồng và một trăm cổ phiếu | “Hai triệu đồng đã khớp, nhưng một trăm cổ phiếu chưa bán được.” |
+| CH01 | Thanh dải sàn mười tám nghìn sáu trăm, tham chiếu hai mươi nghìn, trần hai mươi mốt nghìn bốn trăm | “Dải giả định chạy từ mười tám nghìn sáu trăm tới hai mươi mốt nghìn bốn trăm đồng.” |
+| CH02 | Cột ngoại lệ: bảy, hai mươi, mười lăm và bốn mươi phần trăm | “Bảy phần trăm không phải chiếc trần của mọi ngày.” |
+| CH03 | Cột chồng phiên ba tháng tư: hai trăm sáu mươi ba giảm sàn, hai trăm năm mươi bốn giảm khác, mười ba tăng, ba tăng trần | “Hai trăm sáu mươi ba mã cùng giảm sàn.” |
+| CH04 | Lịch nhiệt T, T cộng một, T cộng hai; mười một giờ, mười một giờ ba mươi, trước mười ba giờ, chiều T cộng hai | “Trước mười ba giờ T cộng hai là mốc phân bổ.” |
+| CH05 | Cột chồng tiền và cổ phiếu: T bằng không, T cộng một bằng không, chiều T cộng hai là một trăm | “Chiều T cộng hai, một trăm cổ phiếu mới có thể bán.” |
+| CH06 | Bảng tách hai khung: giá mỗi phiên và thời điểm có chứng khoán | “Giá sàn giới hạn giá, còn T cộng hai giới hạn thời điểm.” |
+
+## CH00 · Hai triệu đồng, nhưng nút bán chưa sáng
+
+Hai triệu đồng đã khớp, nhưng nút bán chưa bấm được.
+Anh Tuấn là nhân vật ví dụ giả định của video này.
+Anh vừa mua một trăm cổ phiếu của một công ty hư cấu.
+Mỗi cổ phiếu có giá hai mươi nghìn đồng.
+Một trăm nhân hai mươi nghìn là hai triệu đồng.
+Hai triệu là số đầu tiên.
+Con số này chưa gồm phí.
+Trên màn hình, lịch có ba ô: T, T cộng một, rồi T cộng hai.
+Ở ô T, tiền của ví dụ giả định đã dùng để khớp lệnh.
+Nhưng ô một trăm cổ phiếu có thể bán vẫn hiện bằng không.
+Đây là nghịch lý đầu tiên.
+Giá trên bảng có thể đỏ rất mạnh.
+Tuy vậy, người vừa mua chưa chắc đã có chứng khoán để đặt lệnh bán.
+Vậy giá sàn đang chặn giá, hay lịch thanh toán đang chặn thời điểm?
+Ta sẽ theo chân một trăm cổ phiếu ấy qua từng mốc.
+Thứ Hai là T trong ví dụ giả định.
+Thứ Ba là T cộng một.
+Thứ Tư là T cộng hai.
+Lịch trên không phải dự báo cho một tuần cụ thể.
+Nó chỉ làm chiếc đồng hồ cho câu chuyện.
+Đến cuối video, ta sẽ trở lại nút bán chưa sáng này.
+Trước hết, hãy nhìn cái khung làm giá chạy được đến đâu.
+
+## CH01 · Cái khung quanh giá hai mươi nghìn
+
+Giá tham chiếu là mốc để Sở giao dịch tính dải giá.
+Biên độ là giới hạn dao động quanh mốc ấy.
+Hai khái niệm nghe gần nhau, nhưng không phải một.
+Trong ví dụ giả định, giá tham chiếu là hai mươi nghìn đồng.
+Trên HOSE, biên độ thông thường của nhóm được tài liệu nêu là cộng trừ bảy phần trăm.
+Bảy phần trăm của hai mươi nghìn là một nghìn bốn trăm đồng.
+Trừ một nghìn bốn trăm, giá sàn giả định là mười tám nghìn sáu trăm đồng.
+Cộng một nghìn bốn trăm, giá trần giả định là hai mươi mốt nghìn bốn trăm đồng.
+Dải giả định chạy từ mười tám nghìn sáu trăm tới hai mươi mốt nghìn bốn trăm đồng.
+Giữa dải là hai mươi nghìn đồng.
+Thanh giá trên màn hình có ba điểm, không phải ba lời tiên đoán.
+Điểm thấp là sàn.
+Điểm giữa là tham chiếu.
+Điểm cao là trần.
+Một trăm cổ phiếu của anh Tuấn vẫn đang ở ô chờ phân bổ.
+Hai triệu đồng là giá trị khớp lệnh giả định.
+Không có con số nào ở đây bảo giá sẽ đi lên hay đi xuống.
+Nó chỉ cho biết một phiên có chiếc khung.
+Đó là phép nhân.
+Như tập trước, ATO, ATC và lô một trăm là những quy ước của phiên.
+Điều quan trọng hơn là chiếc khung này chỉ nói về giá của phiên đó.
+Nó chưa nói bạn đã có cổ phiếu để bán hay chưa.
+Giá và thời điểm tách riêng.
+Muốn thấy rõ hơn, ta cần tách ngày thường khỏi những ngày ngoại lệ.
+
+## CH02 · Bảy phần trăm không phải mọi chiếc khung
+
+Bảy phần trăm là biên độ thông thường được tài liệu HOSE nêu cho trường hợp vừa nói.
+Nó không phải lời hứa rằng một người nắm giữ chỉ có thể lỗ bảy phần trăm.
+Một phiên là một phiên.
+Nhiều phiên nối nhau là một câu chuyện khác.
+Trong ví dụ giả định, hai mươi nghìn giảm bảy phần trăm còn mười tám nghìn sáu trăm.
+Ngày sau lại có một giá tham chiếu khác.
+Vì vậy, không thể lấy một con số của một ngày làm phanh cho cả tuần.
+Đây là nghịch lý thứ hai.
+Một cái sàn nghe như đáy.
+Không có đáy chung.
+Nhưng nó là đáy trong dải của một phiên, không phải đáy cho mọi tương lai.
+Tài liệu HOSE cũng nêu trường hợp ngày giao dịch đầu tiên hoặc giao dịch lại sau tạm ngừng dài.
+Khi đó, biên độ được nêu là cộng trừ hai mươi phần trăm.
+Hai mươi phần trăm của hai mươi nghìn trong ví dụ giả định là bốn nghìn đồng.
+Dải minh họa khi ấy là từ mười sáu nghìn tới hai mươi bốn nghìn đồng.
+Trên UPCoM, nguồn HNX ghi nhận biên độ thông thường mười lăm phần trăm từ năm hai nghìn không trăm mười lăm.
+Nguồn đó cũng ghi nhận mức bốn mươi phần trăm cho ngày đầu hoặc giao dịch lại từ năm hai nghìn không trăm mười một.
+Mười lăm phần trăm của hai mươi nghìn là ba nghìn đồng trong ví dụ giả định.
+Bốn mươi phần trăm của hai mươi nghìn là tám nghìn đồng.
+Các cột trên màn hình vì thế đứng cạnh nhau: bảy, hai mươi, mười lăm và bốn mươi.
+Ngày giao dịch tạo bối cảnh.
+Chúng không phải bảng chọn nơi giao dịch.
+Chúng chỉ nhắc rằng phải hỏi: đây là sàn nào, ngày nào, tình huống nào?
+Còn nếu một phiên thật sự nghẹt ở phía sàn, chiếc khung giá có tự mở nút bán không?
+
+## CH03 · Khi cả bảng cùng chạm sàn
+
+Ngày ba tháng tư năm hai nghìn không trăm hai mươi lăm là một ví dụ dữ liệu rõ ràng.
+VN-Index đóng ở một nghìn hai trăm hai mươi chín phẩy tám mươi bốn điểm.
+Chỉ số giảm tám mươi bảy phẩy chín mươi chín điểm.
+Tỷ lệ giảm được nêu là sáu phẩy sáu mươi tám phần trăm.
+Trong phiên đó, HOSE có năm trăm mười bảy mã giảm.
+Trong số ấy, hai trăm sáu mươi ba mã giảm sàn.
+Phép trừ cho phần giảm nhưng chưa sàn là hai trăm năm mươi bốn mã.
+Mười ba mã tăng.
+Ba mã tăng trần.
+Biểu đồ cột chồng chia đúng bốn phần ấy.
+Bảng giá có thể nghẹt.
+Hai trăm sáu mươi ba là phần đỏ sát sàn.
+Hai trăm năm mươi bốn là phần giảm khác.
+Mười ba và ba là phần tăng nhỏ hơn.
+Không có ý nghĩa khuyên mua hay bán trong bốn con số này.
+Chúng chỉ cho thấy nhiều mức giá có thể cùng chạm sàn trong một ngày.
+Ngày chín tháng tư năm hai nghìn không trăm hai mươi lăm lại có một mốc khác.
+VN-Index về một nghìn không trăm chín mươi bốn phẩy ba điểm.
+Mức giảm là ba mươi tám phẩy bốn mươi chín điểm.
+Tỷ lệ được nêu là ba phẩy bốn mươi phần trăm.
+Phiên đó có một trăm bốn mươi bảy mã giảm sàn.
+Một trăm bốn mươi bảy là ít hơn hai trăm sáu mươi ba.
+Nhưng cả hai số đều minh họa áp lực có thể dồn vào một bên bảng giá.
+Quay lại ví dụ giả định, một trăm cổ phiếu của anh Tuấn vẫn không tự nhiên thành có thể bán chỉ vì giá đang đỏ.
+Trạng thái giá và quyền đặt lệnh là hai cột khác nhau.
+Một cột nói mười tám nghìn sáu trăm hay hai mươi mốt nghìn bốn trăm.
+Cột kia nói T, T cộng một, hay chiều T cộng hai.
+Nhưng lịch không đổi.
+Giờ ta đi vào cột thứ hai.
+
+## CH04 · T, T cộng một và chiếc đồng hồ phân bổ
+
+Quy chế được VSDC công bố có hiệu lực ngày hai mươi chín tháng tám năm hai nghìn không trăm hai mươi hai.
+Quyết định ban hành quy chế có ngày mười chín tháng tám năm hai nghìn không trăm hai mươi hai.
+Với giao dịch mua ngày T, nguồn này nói tiền hoặc chứng khoán được nhận trước mười ba giờ ngày T cộng hai.
+Nguồn cũng nói chứng khoán mua ngày T có thể được bán trong phiên chiều T cộng hai.
+Đồng hồ vẫn chạy.
+Đó là mốc quan trọng nhất của video.
+Trong lịch ví dụ giả định, sáng thứ Hai là T.
+Lệnh mua một trăm cổ phiếu khớp với giá trị hai triệu đồng.
+Ô cổ phiếu có thể bán vẫn là không.
+Thứ Ba là T cộng một.
+Hai triệu đồng vẫn là giá trị khớp lệnh minh họa.
+Ô cổ phiếu có thể bán vẫn là không.
+Thứ Tư là T cộng hai.
+Theo quy chế của Tổng công ty Lưu ký, khâu hoàn tất với ngân hàng thanh toán diễn ra từ mười một giờ tới mười một giờ ba mươi.
+Sau đó, thành viên lưu ký phân bổ cho khách trước mười ba giờ.
+Trước mười ba giờ T cộng hai là mốc phân bổ trên biểu đồ.
+Đây là mốc nguồn nêu.
+Nguồn không bảo rằng cổ phiếu vừa mua có thể bán ngay từ đầu ngày.
+Nguồn nói phiên chiều T cộng hai.
+Vì thế, cách nói T cộng hai phẩy năm nghe tiện nhưng không phải mốc chính thức trong video này.
+Ta giữ hai ô dễ nhớ: trước mười ba giờ và phiên chiều.
+Trong ví dụ giả định, chiều thứ Tư là lúc một trăm cổ phiếu chuyển từ chờ phân bổ sang có thể bán.
+Không phải giá đã tăng thì nút này sáng.
+Không phải giá đã giảm thì nút này tự sáng.
+Chiếc đồng hồ thanh toán mới giải thích chuyển động ấy.
+Đây là nơi cái khung giá gặp cái lịch.
+
+## CH05 · Theo chân một trăm cổ phiếu
+
+Bây giờ, hãy nhìn lại cùng một bảng nhưng bỏ hết thuật ngữ.
+Hàng đầu là tiền của ví dụ giả định.
+Hàng dưới là một trăm cổ phiếu hư cấu.
+Bảng ấy rất đơn giản.
+Sáng thứ Hai, giá hai mươi nghìn nhân một trăm bằng hai triệu đồng.
+Hai triệu là giá trị khớp lệnh, chưa gồm phí.
+Ô có thể bán của một trăm cổ phiếu là không.
+Đó là cột T.
+Sang thứ Ba, T cộng một, bảng vẫn để số không ở ô có thể bán.
+Hai triệu đồng không phải số dư thực tế được khẳng định.
+Nó chỉ giữ nguyên giá trị khớp lệnh để mắt ta theo được câu chuyện.
+Một trăm cổ phiếu vẫn chờ phân bổ theo ví dụ giả định.
+Đó là cột T cộng một.
+Đến chiều thứ Tư, T cộng hai, ô có thể bán đổi từ không thành một trăm.
+Chiều T cộng hai, một trăm cổ phiếu mới có thể bán.
+Đó là cột T cộng hai.
+Biểu đồ không hề nói lệnh bán sẽ khớp.
+Nó cũng không nói mức giá nào sẽ khớp.
+Giá thị trường vẫn có thể nằm trong dải của phiên.
+Ví dụ, sàn giả định mười tám nghìn sáu trăm vẫn là một trạng thái giá.
+Trần giả định hai mươi mốt nghìn bốn trăm cũng là một trạng thái giá.
+Nhưng khả năng đặt lệnh với số cổ phiếu vừa mua đi theo lịch phân bổ.
+Từng ô có nhiệm vụ riêng.
+Ta tách được hai câu thường bị trộn vào nhau.
+Câu thứ nhất là: giá hôm nay có thể chạy trong dải nào?
+Câu thứ hai là: số cổ phiếu vừa mua khi nào nằm ở ô có thể bán?
+Với ví dụ giả định này, câu thứ hai dẫn tới chiều T cộng hai.
+Không dẫn tới lúc giá đổi màu.
+Không dẫn tới một mẹo thao tác.
+Nó dẫn tới một mốc vận hành được nguồn nêu.
+Còn sau khi bán thì số tiền thực nhận có luôn bằng giá bán nhân số cổ phiếu không?
+
+## CH06 · Ba ô chưa được phép điền
+
+Khi có một lệnh bán, người xem thường nhìn ngay vào giá bán nhân số cổ phiếu.
+Trong ví dụ giả định, một trăm cổ phiếu là một trăm đơn vị để đếm.
+Nhưng giá trị cuối cùng không thể được rút gọn thành một con số chung cho mọi nơi.
+Phí giao dịch theo biểu phí nơi mở tài khoản.
+Tài liệu đang dùng không có một mức phí chung kèm ngày hiệu lực.
+Ba ô ấy không giống nhau.
+Vì vậy, biểu đồ để ô phí là “chưa điền”.
+Đó là một lựa chọn có chủ ý.
+Thuế cũng cần nói thật về mức độ chắc chắn.
+Luật Thuế thu nhập cá nhân số một trăm linh chín trên hai nghìn không trăm hai mươi lăm có hiệu lực từ ngày một tháng bảy năm hai nghìn không trăm hai mươi sáu.
+Nghị định hướng dẫn cũng được nêu có hiệu lực từ ngày một tháng bảy năm hai nghìn không trăm hai mươi sáu.
+Tuy nhiên, kho này chưa chốt được điều khoản và hướng dẫn hiện hành để đọc mức không phẩy một phần trăm như một khẳng định.
+Vì vậy, biểu đồ để ô thuế là “cần kiểm văn bản”.
+Không lấy hai triệu đồng giả định để trừ một khoản chưa chốt.
+Đó không phải né số.
+Sự thận trọng có lý do.
+Đó là không biến ví dụ thành thông tin sai.
+Ô thứ ba là T cộng không.
+Nguồn đang dùng xác nhận bước rút ngắn đến khả năng bán trong phiên chiều T cộng hai.
+Nó không xác nhận cơ chế bán chứng khoán chờ về hay mốc T cộng không cho nhà đầu tư cá nhân.
+Vì vậy, biểu đồ chỉ kéo lịch từ T tới T cộng hai.
+Ô T cộng không để trống.
+Không đoán ngày áp dụng.
+Không gắn một lời hứa lên ô trống.
+Và giờ, vòng mở đầu có thể khép lại.
+Hai triệu đồng trong ví dụ giả định đã khớp ở T.
+Một trăm cổ phiếu không bán được ngay không phải vì giá sàn là một cái khóa cho cả tuần.
+Giá sàn giới hạn giá của từng phiên.
+T cộng hai giới hạn thời điểm bạn có chứng khoán để đặt lệnh bán.
+Đến chiều T cộng hai, ô một trăm cổ phiếu mới sáng trong ví dụ này.
+Đó là câu trả lời cho nút bán ở đầu video.
+Trước một lệnh cụ thể, hãy tách bảng thành hai hàng: giá và thời điểm.
+Rồi chỉ điền những ô mà văn bản hiện hành xác nhận.
+
+# Kho dữ kiện — ck-c6-gia-tran-san-t2 (R5)
+
+Ngày kiểm: 27/10/2026. Các URL dưới đây đã được mở trong phiên nghiên cứu. Nhãn **mạnh** = văn bản/cơ quan vận hành thị trường; **vừa** = cơ quan báo chí. Các số trong ví dụ Anh Tuấn đều là **VÍ DỤ GIẢ ĐỊNH**, không phải khuyến nghị giao dịch.
+
+## Dữ kiện theo 7 chương
+
+| # | Chương | Khẳng định dùng được | Nguồn đã mở | Độ tin |
+|---|---|---|---|---|
+| 1 | 1. Cái khung giá | Thông tư 120/2020/TT-BTC định nghĩa biên độ là giới hạn dao động theo tỷ lệ phần trăm so với giá tham chiếu. | https://staticfile.hsx.vn/Uploads/LocalFiles/d7f582e40a2c43528c8476092dd1f6ad/20210119_Thong%20tu%20120.2020%20TT-BTC.pdf (TT 120/2020/TT-BTC) | mạnh |
+| 2 | 1. Cái khung giá | Giá tham chiếu là mức do Sở giao dịch xác định, làm cơ sở tính giá trần và giá sàn. | https://staticfile.hsx.vn/Uploads/LocalFiles/d7f582e40a2c43528c8476092dd1f6ad/20210119_Thong%20tu%20120.2020%20TT-BTC.pdf (TT 120/2020/TT-BTC, Điều 2) | mạnh |
+| 3 | 1. Cái khung giá | Trên HOSE, biên độ thông thường của cổ phiếu, chứng chỉ quỹ đóng và ETF là ±7%. | https://staticfile.hsx.vn/Uploads/UploadDocuments/2372201/4.Bien%20do%20dao%20dong%20gia.pdf (HOSE, Biên độ dao động giá) | mạnh |
+| 4 | 1. Cái khung giá | HOSE công bố biên độ ±20% cho ngày giao dịch đầu tiên và cho giao dịch lại sau tạm ngừng/đình chỉ từ 25 ngày liên tiếp trở lên. | https://staticfile.hsx.vn/Uploads/UploadDocuments/2372201/4.Bien%20do%20dao%20dong%20gia.pdf (HOSE) | mạnh |
+| 5 | 2. Ba mức biên độ | HNX cho biết UPCoM đổi biên độ thông thường từ ±10% lên ±15% từ 01/07/2015. | https://www.hnx.vn/vi-vn/m-tin-tuc-hnx/9%20nam%20hoat%20dong%20UPCoM%20lon%20manh%20khong%20ngung-60002643-0.html (HNX) | mạnh |
+| 6 | 2. Ba mức biên độ | HNX ghi nhận biên độ ngày đầu/giao dịch lại trên UPCoM là ±40% từ 04/04/2011. | https://www.hnx.vn/vi-vn/m-tin-tuc-hnx/9%20nam%20hoat%20dong%20UPCoM%20lon%20manh%20khong%20ngung-60002643-0.html (HNX) | mạnh |
+| 7 | 2. Ba mức biên độ | Tài liệu HOSE nêu riêng mức ±7% là biên độ thông thường, nên không diễn giải nó là mức lỗ tối đa của người nắm giữ qua nhiều phiên. | https://staticfile.hsx.vn/Uploads/UploadDocuments/2372201/4.Bien%20do%20dao%20dong%20gia.pdf (HOSE) | mạnh |
+| 8 | 2. Ba mức biên độ | **VÍ DỤ GIẢ ĐỊNH:** giá tham chiếu 20.000 đồng trên HOSE cho dải 18.600–21.400 đồng nếu áp ±7%; phép tính 20.000 × (1 ± 0,07). | Cách tính từ #3 | mạnh · tính |
+| 9 | 3. Một phiên có thể nghẹt | Ngày 03/04/2025, VN-Index đóng 1.229,84 điểm, giảm 87,99 điểm hay 6,68%. | https://www.vietnamplus.vn/vn-index-giam-manh-nhat-lich-su-sau-khi-my-cong-bo-thue-doi-ung-post1024606.vnp (TTXVN/Vietnam+) | vừa |
+| 10 | 3. Một phiên có thể nghẹt | Cùng phiên 03/04/2025, HOSE có 263 mã giảm sàn, 517 mã giảm, 13 mã tăng và 3 mã tăng trần. | https://www.vietnamplus.vn/vn-index-giam-manh-nhat-lich-su-sau-khi-my-cong-bo-thue-doi-ung-post1024606.vnp (TTXVN/Vietnam+) | vừa |
+| 11 | 3. Một phiên có thể nghẹt | Ngày 09/04/2025, VN-Index giảm 38,49 điểm, tương đương 3,40%, về 1.094,3 điểm. | https://vtv.vn/kinh-te/vn-index-giam-tiep-gan-40-diem-20250409171341275.htm (VTV) | vừa |
+| 12 | 3. Một phiên có thể nghẹt | Phiên 09/04/2025 có 147 mã giảm sàn; số này minh họa rằng nhiều mức giá có thể cùng chạm sàn trong một phiên. | https://vtv.vn/kinh-te/vn-index-giam-tiep-gan-40-diem-20250409171341275.htm (VTV) | vừa |
+| 13 | 4. T đến T+2 | Quyết định 109/QĐ-VSD ban hành quy chế bù trừ và thanh toán mới ngày 19/08/2022. | https://vsdc.vn/vi/ad/152750 (VSDC) | mạnh |
+| 14 | 4. T đến T+2 | Quy chế mới có hiệu lực 29/08/2022; với giao dịch mua ngày T, nhà đầu tư nhận tiền/chứng khoán trước 13h ngày T+2. | https://vsdc.vn/vi/ad/152750 (VSDC) | mạnh |
+| 15 | 4. T đến T+2 | VSDC nói chứng khoán mua ngày T có thể được bán trong phiên chiều T+2, thay vì chờ T+3 như trước. | https://vsdc.vn/vi/ad/152750 (VSDC) | mạnh |
+| 16 | 4. T đến T+2 | VSDC nêu ngân hàng thanh toán và VSD hoàn tất lần lượt trong khung 11h00–11h30 ngày T+2; thành viên lưu ký phải phân bổ cho khách trước 13h. | https://vsdc.vn/vi/ad/152750 (VSDC) | mạnh |
+| 17 | 5. Lịch của Anh Tuấn | **VÍ DỤ GIẢ ĐỊNH:** Anh Tuấn mua 100 cổ phiếu hư cấu giá 20.000 đồng sáng thứ Hai: giá trị khớp lệnh là 2.000.000 đồng, chưa gồm phí. | 100 × 20.000 = 2.000.000 | tính |
+| 18 | 5. Lịch của Anh Tuấn | **VÍ DỤ GIẢ ĐỊNH:** nếu thứ Hai là T, thứ Ba là T+1 và thứ Tư là T+2 thì câu chuyện chỉ nên nói “có thể bán trong phiên chiều T+2”, không nói cổ phiếu về từ đầu ngày. | Cách diễn giải từ #14–#16 | mạnh · suy |
+| 19 | 5. Lịch của Anh Tuấn | Cách gọi “T+2,5” là cách nói không chính thức; lời đọc nên thay bằng mốc VSDC “trước 13h T+2” và “phiên chiều T+2”. | https://vsdc.vn/vi/ad/152750 (VSDC) | mạnh |
+| 20 | 5. Lịch của Anh Tuấn | Việc giá đang giảm không tự tạo quyền bán ngay cho chứng khoán vừa mua; quyền bán trong ví dụ gắn với thời điểm phân bổ chứng khoán T+2. | https://vsdc.vn/vi/ad/152750 (VSDC) | mạnh · suy |
+| 21 | 6. Phí và thuế | Luật Thuế thu nhập cá nhân số 109/2025/QH15 có hiệu lực từ 01/07/2026. | https://vbpl.moj.gov.vn/botaichinh/Pages/vbpq-vanbanlienquan.aspx?ItemID=187045 (CSDL quốc gia VBPL, Bộ Tài chính) | mạnh |
+| 22 | 6. Phí và thuế | Nghị định hướng dẫn Luật Thuế thu nhập cá nhân có hiệu lực từ 01/07/2026. | https://moj.gov.vn/portal/tin-tuc/chi-tiet/quy-inh-chi-tiet-mot-so-dieu-va-bien-phap-de-to-chuc-huong-dan-thi-hanh-luat-thue-thu-nhap-ca-nhan-ti00o28d56.html (Bộ Tư pháp) | mạnh |
+| 23 | 6. Phí và thuế | Mức thuế chuyển nhượng chứng khoán 0,1% trên giá bán từng lần là điểm cần kiểm lại theo văn bản hướng dẫn thi hành mới trước khi viết; chưa dùng làm câu khẳng định tuyệt đối ở bản này. | https://vbpl.moj.gov.vn/botaichinh/Pages/vbpq-vanbanlienquan.aspx?ItemID=187045 (Luật 109/2025/QH15, trang đã mở nhưng cần mở PDF điều khoản) | chưa chốt |
+| 24 | 6. Phí và thuế | Phí giao dịch không gắn một mức chung trong kho này; khi viết chỉ nói “phí theo biểu phí nơi mở tài khoản” cho đến khi có nguồn biểu phí cụ thể và ngày hiệu lực. | — | rủi ro cần kiểm |
+| 25 | 7. T+0 đã tới đâu | Nguồn VSDC đã mở chỉ xác nhận rút ngắn từ T+3 xuống khả năng bán phiên chiều T+2; nó không xác nhận cơ chế bán chứng khoán chờ về/T+0 cho nhà đầu tư cá nhân. | https://vsdc.vn/vi/ad/152750 (VSDC) | mạnh |
+| 26 | 7. T+0 đã tới đâu | Không dùng câu “T+0 sắp triển khai” hoặc một mốc triển khai trong 10/2026 nếu chưa mở được thông báo hiện hành của cơ quan quản lý/VSDC. | — | rủi ro cần kiểm |
+| 27 | 7. T+0 đã tới đâu | Câu an toàn: “T+2 là cơ chế cần giải thích trong video này; cải tiến tiếp theo chỉ nói khi có văn bản công bố.” | Suy luận biên tập từ #13–#16 | mạnh · suy |
+| 28 | 7. T+0 đã tới đâu | Câu hỏi mở từ đầu có thể khép lại bằng: “Dải giá giới hạn mỗi phiên, còn lịch T+2 giới hạn lúc bạn có chứng khoán để đặt lệnh bán.” | Tổng hợp #1–#20 | suy |
+
+## Bộ số để vẽ biểu đồ
+
+| # | Tên / loại | Điểm số | Nguồn hoặc cách tính |
+|---|---|---|---|
+| 1 | Dải giá HOSE / `bars` | tham chiếu 20.000; sàn 18.600; trần 21.400 đồng | **VÍ DỤ GIẢ ĐỊNH:** 20.000 × 0,93; 20.000; 20.000 × 1,07. #3, #8 |
+| 2 | So sánh biên độ / `bars` | HOSE 7%; HNX 10%; UPCoM 15% | HOSE: #3; HNX ±10% cần văn bản hiện hành trước dựng; UPCoM: #5. Không render cột HNX khi chưa bổ sung nguồn. |
+| 3 | Ngoại lệ ngày đầu / `bars` | HOSE 20%; UPCoM 40% | #4, #6 |
+| 4 | Phiên 03/04/2025 / `stack` | giảm sàn 263; giảm khác 254; tăng 13; trần 3 | 517 giảm − 263 sàn = 254; #10 |
+| 5 | Chỉ số qua hai phiên / `line` | 03/04: 1.229,84; 09/04: 1.094,30 điểm | #9, #11 |
+| 6 | Lịch thanh toán / `heat` | T (thứ Hai): khớp; T+1 (thứ Ba): chờ; T+2 11h–11h30: hoàn tất; trước 13h: phân bổ; chiều T+2: có thể bán | #14–#16; ngày thứ chỉ là **VÍ DỤ GIẢ ĐỊNH** |
+| 7 | Tiền và cổ phiếu Anh Tuấn / `stack` | T: tiền khớp 2.000.000, cổ phiếu bán được 0; T+1: 2.000.000, 0; T+2 chiều: 2.000.000, 100 | **VÍ DỤ GIẢ ĐỊNH:** #17–#20; hiển thị trạng thái, không ngụ ý số dư thực tế |
+| 8 | Thuế minh họa / `waterfall` | giá bán giả định 2.100.000; thuế 0,1% giả định 2.100; còn 2.097.900 trước phí | **CHỈ DÙNG SAU KHI CHỐT #23. VÍ DỤ GIẢ ĐỊNH:** 2.100.000 × 0,001; không đưa phí vì chưa có biểu phí nguồn. |
+| 9 | Mốc rút ngắn thanh toán / `timeline` | trước 29/08/2022: chờ T+3; từ 29/08/2022: chiều T+2 | #13–#15 |
+
+## Biểu đồ chính: “100 cổ phiếu đang ở đâu?”
+
+Một `ledger` đi qua 7 chương, mỗi chương thêm một điểm: (1) giá tham chiếu 20.000; (2) dải 18.600–21.400; (3) giá chạm sàn là trạng thái giá, chưa phải quyền bán; (4) T → T+1 → T+2; (5) 100 cổ phiếu hư cấu chuyển từ “chờ phân bổ” sang “có thể bán chiều T+2”; (6) khi bán mới hiện ô thuế, chỉ sau khi chốt văn bản; (7) kết luận tách hai cái “trần/sàn” và “T+2”.
+
+## Cold open
+
+1. **2.000.000 đồng, nhưng nút bán chưa bấm được.** Anh Tuấn (VÍ DỤ GIẢ ĐỊNH) vừa mua 100 cổ phiếu hư cấu giá 20.000 đồng. Giá có thể đỏ mạnh, nhưng biểu đồ lịch T–T+2 xuất hiện ở giây 10: thứ Hai mua, chiều thứ Tư mới có thể bán. Câu hỏi treo: “Vậy giá sàn đang chặn giá, hay lịch thanh toán đang chặn thời điểm?”
+2. **18.600 đồng không phải là một cái phanh cho cả tuần.** Từ một giá giả định 20.000 đồng, dải HOSE vẽ ngay giây 12 ra 18.600–21.400. Nghịch lý: một cổ phiếu có giá sàn hôm nay, nhưng người vừa mua vẫn có thể chưa có chứng khoán để bán. Câu hỏi treo: “Hai cái khung này gặp nhau ở chiều nào của T+2?”
+
+## Tiêu đề đề xuất
+
+1. `2 triệu × 2 ngày: Người mới mua bán khi nào?`
+2. `20.000 đồng × T+2: Giá trần giá sàn là gì?`
+3. `100 cổ phiếu × 2 ngày: Vì sao chưa bán được?`
+
+## Thumbnail
+
+1. Số lớn **T+2**; biểu đồ lịch ba ô T / T+1 / T+2; chữ: `BÁN KHI NÀO?`.
+2. Số lớn **±7%**; thanh dải sàn–tham chiếu–trần; chữ: `KHUNG GIÁ`.
+
+## Clip Pexels cần tải và soi clip sheet
+
+Các trang đã mở; danh sách này chỉ là ứng viên 16:9 được Pexels ghi nhận hoặc cần xác nhận lại bằng lệnh tải/clip sheet trước dựng. Cấm dùng nếu khung có logo, chữ đọc được, biển hiệu, hoặc màn hình lộ thương hiệu.
+
+| ID | URL | Nội dung | Ghi chú |
+|---|---|---|---|
+| 8195667 | https://www.pexels.com/video/person-computing-using-a-calculator-8195667/ | tay dùng máy tính, viết giấy | Pexels ghi 3840×2160, 16:9; không logo/chữ/biển hiệu |
+| 11899304 | https://www.pexels.com/video/close-up-view-of-calculating-and-writing-in-office-11899304/ | cận cảnh máy tính và giấy tờ | Pexels ghi 3840×2160; không logo/chữ/biển hiệu |
+| 6794227 | https://www.pexels.com/video/a-man-is-sitting-in-front-of-a-laptop-with-a-stock-market-chart-6794227/ | người nhìn biểu đồ laptop | Pexels ghi 3840×2160, 16:9; soi màn hình vì có biểu đồ/chữ |
+| 7688068 | https://www.pexels.com/video/person-using-a-calculator-7688068/ | cận cảnh tay và máy tính | Pexels ghi 3840×2160; không logo/chữ/biển hiệu |
+| 7148966 | https://www.pexels.com/video/video-of-a-people-discussing-using-laptop-7148966/ | hai người xem laptop | Pexels ghi 3840×2160, 16:9; soi màn hình/logo |
+| 7652107 | https://www.pexels.com/video/workplace-7652107/ | bàn làm việc, máy tính, giấy | xác nhận file ngang khi tải; không logo/chữ/biển hiệu |
+| 7693395 | https://www.pexels.com/video/people-working-using-a-smartphone-and-laptop-in-the-office-7693395/ | điện thoại và laptop | xác nhận file ngang khi tải; soi màn hình/logo |
+| 5726502 | https://www.pexels.com/video/a-man-analyzing-stocks-on-a-laptop-5726502/ | phân tích biểu đồ trên laptop | xác nhận file ngang khi tải; soi màn hình/logo |
+
+## Rủi ro biên tập và điểm chưa chốt
+
+- Không nói “nên mua/bán”, “bắt đáy”, “thoát hàng”, hay gợi ý chọn nơi mở tài khoản.
+- Không nêu tên ngân hàng, công ty chứng khoán, hãng xe hay mã cổ phiếu; minh họa dùng công ty hư cấu.
+- Phí giao dịch tùy biểu phí; không đặt một tỷ lệ chung khi chưa có nguồn và ngày hiệu lực.
+- Thuế 0,1%/giá bán phải mở được PDF điều khoản/hướng dẫn thi hành hiện hành rồi mới đưa vào lời đọc, dù ticket đề xuất con số này.
+- Chưa có nguồn hiện hành xác nhận bán chứng khoán chờ về/T+0 hay lộ trình áp dụng tới 10/2026. Không được suy diễn từ việc rút ngắn sang T+2.
+- HNX ±10% được ticket nêu nhưng chưa có URL hiện hành đã mở trong kho này; cần bổ sung trước khi vẽ biểu đồ so sánh đủ ba sàn.
+
+# Kiểm chứng — ck-c6-gia-tran-san-t2
+
+Mọi số tiền, số cổ phiếu, thứ Hai–thứ Tư và công ty của anh Tuấn trong lời đọc là **VÍ DỤ GIẢ ĐỊNH**. Chúng được tính trong `analysis.py`, không phải dữ liệu thị trường hay lời khuyên.
+
+| Khẳng định / số / tên trong kịch bản | Nguồn URL đã mở | Ghi chú |
+|---|---|---|
+| Thông tư 120/2020/TT-BTC định nghĩa biên độ và giá tham chiếu. | https://staticfile.hsx.vn/Uploads/LocalFiles/d7f582e40a2c43528c8476092dd1f6ad/20210119_Thong%20tu%20120.2020%20TT-BTC.pdf | Văn bản được nêu trong facts.md. |
+| HOSE có biên độ thông thường cộng trừ bảy phần trăm; ngày đầu/giao dịch lại thuộc trường hợp nêu trong tài liệu có cộng trừ hai mươi phần trăm. | https://staticfile.hsx.vn/Uploads/UploadDocuments/2372201/4.Bien%20do%20dao%20dong%20gia.pdf | Dùng cho phần giá giả định hai mươi nghìn. |
+| UPCoM đổi biên độ thông thường lên cộng trừ mười lăm phần trăm từ ngày một tháng bảy năm hai nghìn không trăm mười lăm; ngày đầu/giao dịch lại cộng trừ bốn mươi phần trăm từ ngày bốn tháng tư năm hai nghìn không trăm mười một. | https://www.hnx.vn/vi-vn/m-tin-tuc-hnx/9%20nam%20hoat%20dong%20UPCoM%20lon%20manh%20khong%20ngung-60002643-0.html | Không nêu mức HNX vì kho chưa có nguồn hiện hành. |
+| Ngày ba tháng tư năm hai nghìn không trăm hai mươi lăm, VN-Index đóng một nghìn hai trăm hai mươi chín phẩy tám mươi bốn điểm, giảm tám mươi bảy phẩy chín mươi chín điểm hay sáu phẩy sáu mươi tám phần trăm; HOSE có hai trăm sáu mươi ba mã giảm sàn, năm trăm mười bảy mã giảm, mười ba mã tăng, ba mã tăng trần. | https://www.vietnamplus.vn/vn-index-giam-manh-nhat-lich-su-sau-khi-my-cong-bo-thue-doi-ung-post1024606.vnp | Nguồn báo chí, dùng làm ví dụ về trạng thái thị trường. |
+| Ngày chín tháng tư năm hai nghìn không trăm hai mươi lăm, VN-Index giảm ba mươi tám phẩy bốn mươi chín điểm, tương đương ba phẩy bốn mươi phần trăm, về một nghìn không trăm chín mươi bốn phẩy ba điểm; có một trăm bốn mươi bảy mã giảm sàn. | https://vtv.vn/kinh-te/vn-index-giam-tiep-gan-40-diem-20250409171341275.htm | Nguồn báo chí. |
+| Quyết định 109/QĐ-VSD có ngày mười chín tháng tám năm hai nghìn không trăm hai mươi hai; quy chế hiệu lực ngày hai mươi chín tháng tám năm hai nghìn không trăm hai mươi hai. Mua ngày T nhận tiền/chứng khoán trước mười ba giờ ngày T cộng hai; có thể bán trong phiên chiều T cộng hai. Khung hoàn tất được nêu là mười một giờ tới mười một giờ ba mươi. | https://vsdc.vn/vi/ad/152750 | Nguồn vận hành thị trường. |
+| Luật Thuế thu nhập cá nhân số 109/2025/QH15 và nghị định hướng dẫn có hiệu lực từ ngày một tháng bảy năm hai nghìn không trăm hai mươi sáu. | https://vbpl.moj.gov.vn/botaichinh/Pages/vbpq-vanbanlienquan.aspx?ItemID=187045 | Kịch bản chỉ nói cần kiểm điều khoản, không khẳng định thuế suất. |
+| Thông tin về nghị định hướng dẫn Luật Thuế thu nhập cá nhân. | https://moj.gov.vn/portal/tin-tuc/chi-tiet/quy-inh-chi-tiet-mot-so-dieu-va-bien-phap-de-to-chuc-huong-dan-thi-hanh-luat-thue-thu-nhap-ca-nhan-ti00o28d56.html | Chỉ dùng để nêu mốc hiệu lực. |
+
+## Điểm không kiểm được nên không khẳng định
+
+- Thuế chuyển nhượng chứng khoán không được đọc là mức không phẩy một phần trăm sau ngày một tháng bảy năm hai nghìn không trăm hai mươi sáu, vì điều khoản/hướng dẫn hiện hành chưa được chốt trong kho.
+- Không nêu một mức phí chung; chỉ nói phí theo biểu phí nơi mở tài khoản.
+- Không khẳng định cơ chế T cộng không, thời điểm triển khai, hay quyền bán chứng khoán chờ về ngoài mốc chiều T cộng hai được nguồn VSDC xác nhận.
+
+
+codex
+Tôi đã xác nhận đây là ticket sửa W1c: chỉ thay CH00, đưa ví dụ giả định xuống CH01, và giữ CH02–CH06. Tôi sẽ không tự mở rộng sang dựng cảnh hay render ngoài phạm vi ticket.
+apply patch
+patch: completed
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\ck-c6-gia-tran-san-t2\script.md
+diff --git a/data/long/ck-c6-gia-tran-san-t2/script.md b/data/long/ck-c6-gia-tran-san-t2/script.md
+index d6922854f799d2a6a8f9dbfdc476b49d92222342..28163e72e39d6b52dc8cc28bd271937eff12cd7f
+--- a/data/long/ck-c6-gia-tran-san-t2/script.md
++++ b/data/long/ck-c6-gia-tran-san-t2/script.md
+@@ -1,51 +1,72 @@
+-# MUA CỔ PHIẾU THỨ HAI, BAO GIỜ BÁN ĐƯỢC? GIÁ TRẦN, SÀN VÀ T+2
++# Mua Thứ Hai, Thứ Tư Mới Bán Được: T+2 Là Gì?
+ 
+-**Tiêu đề phụ một:** Hai triệu đồng nhân hai ngày: một trăm cổ phiếu đang ở đâu?
+-**Tiêu đề phụ hai:** Giá trần, giá sàn và chiếc lịch sau nút mua
++**Tiêu đề phụ một:** Bắt Đáy Ngày 9/4/2025: Vì Sao Không Bán Kịp?
++**Tiêu đề phụ hai:** Giá Trần, Giá Sàn, T+2: Ba Luật Người Mới Hay Trả Giá
+ 
+ **Kênh:** Biểu Đồ Biết Nói (CK) · **Chuỗi:** Chứng Khoán Từ Số 0 · **Nhân vật:** anh Tuấn, VÍ DỤ GIẢ ĐỊNH.
+ 
+ Quy ước: mỗi dòng là một câu đọc. Lời đọc không có chữ số. Nội dung giáo dục, không phải tư vấn đầu tư.
+ 
++## Câu hỏi trung tâm
++
++Mua cổ phiếu sáng thứ Hai, vì sao phải tới chiều thứ Tư mới bán được, và điều đó đã làm ai mất tiền?
++
++## 5 câu trước khi viết
++
++1. Người xem là người mới mở tài khoản và đang tìm hiểu T cộng hai, giá trần, giá sàn.
++2. Họ tò mò vì sao lệnh mua đã khớp nhưng cổ phiếu chưa thể đặt lệnh bán ngay.
++3. Họ chọn video vì một phiên giảm thật đặt câu hỏi này vào tình huống dễ hình dung.
++4. Thumbnail truyền một ý: từ thứ Hai đến thứ Tư, nút bán vẫn bị khóa.
++5. Tiêu đề khớp ba mươi giây đầu vì hook mở bằng phiên ngày chín tháng tư năm hai nghìn không trăm hai mươi lăm và hỏi đúng thời điểm bán.
++
++## Bước lập luận
++
++| Mốc | Chương và câu | Bước tiến |
++|---|---|---|
++| Khoảng phút không đến hai | CH00, câu bảy | Tách nghịch lý: giá giảm không đồng nghĩa người mua vừa khớp đã có hàng để bán. |
++| Khoảng phút ba đến năm | CH02, câu mười hai đến hai mươi bốn | Tách giá sàn của một phiên khỏi mức lỗ qua nhiều phiên và các ngoại lệ biên độ. |
++| Khoảng phút năm đến bảy | CH04, câu một đến hai mươi ba | Đưa văn bản vận hành vào lịch T, T cộng một, T cộng hai để giải thích lúc cổ phiếu được phân bổ. |
++| Khoảng phút tám đến mười | CH06, câu hai mươi hai đến ba mươi | Khép vòng mở: giá giới hạn giá của phiên, còn T cộng hai giới hạn thời điểm có chứng khoán để đặt lệnh bán. |
++
+ ## Biểu đồ
+ 
+ | Chương | Loại và điểm số | Câu neo |
+ |---|---|---|
+-| CH00 | Lịch nhiệt T, T cộng một, T cộng hai; hai triệu đồng và một trăm cổ phiếu | “Hai triệu đồng đã khớp, nhưng một trăm cổ phiếu chưa bán được.” |
+-| CH01 | Thanh dải sàn mười tám nghìn sáu trăm, tham chiếu hai mươi nghìn, trần hai mươi mốt nghìn bốn trăm | “Dải giả định chạy từ mười tám nghìn sáu trăm tới hai mươi mốt nghìn bốn trăm đồng.” |
++| CH00 | Cột số thật phiên chín tháng tư: VN-Index một nghìn không trăm chín mươi bốn phẩy ba điểm và một trăm bốn mươi bảy mã giảm sàn; sau đó là câu hỏi về lịch T cộng hai | “Ngày chín tháng tư năm hai nghìn không trăm hai mươi lăm, VN-Index về một nghìn không trăm chín mươi bốn phẩy ba điểm và có một trăm bốn mươi bảy mã giảm sàn.” |
++| CH01 | Lịch nhiệt T, T cộng một, T cộng hai cho ví dụ giả định; thanh dải sàn mười tám nghìn sáu trăm, tham chiếu hai mươi nghìn, trần hai mươi mốt nghìn bốn trăm | “Đây là ví dụ giả định để tính: một trăm cổ phiếu giá hai mươi nghìn đồng.” |
+ | CH02 | Cột ngoại lệ: bảy, hai mươi, mười lăm và bốn mươi phần trăm | “Bảy phần trăm không phải chiếc trần của mọi ngày.” |
+ | CH03 | Cột chồng phiên ba tháng tư: hai trăm sáu mươi ba giảm sàn, hai trăm năm mươi bốn giảm khác, mười ba tăng, ba tăng trần | “Hai trăm sáu mươi ba mã cùng giảm sàn.” |
+ | CH04 | Lịch nhiệt T, T cộng một, T cộng hai; mười một giờ, mười một giờ ba mươi, trước mười ba giờ, chiều T cộng hai | “Trước mười ba giờ T cộng hai là mốc phân bổ.” |
+ | CH05 | Cột chồng tiền và cổ phiếu: T bằng không, T cộng một bằng không, chiều T cộng hai là một trăm | “Chiều T cộng hai, một trăm cổ phiếu mới có thể bán.” |
+ | CH06 | Bảng tách hai khung: giá mỗi phiên và thời điểm có chứng khoán | “Giá sàn giới hạn giá, còn T cộng hai giới hạn thời điểm.” |
+ 
+-## CH00 · Hai triệu đồng, nhưng nút bán chưa sáng
++## CH00 · Một phiên đỏ, nhưng người mua chưa có hàng để bán
+ 
+-Hai triệu đồng đã khớp, nhưng nút bán chưa bấm được.
+-Anh Tuấn là nhân vật ví dụ giả định của video này.
+-Anh vừa mua một trăm cổ phiếu của một công ty hư cấu.
+-Mỗi cổ phiếu có giá hai mươi nghìn đồng.
+-Một trăm nhân hai mươi nghìn là hai triệu đồng.
+-Hai triệu là số đầu tiên.
+-Con số này chưa gồm phí.
+-Trên màn hình, lịch có ba ô: T, T cộng một, rồi T cộng hai.
+-Ở ô T, tiền của ví dụ giả định đã dùng để khớp lệnh.
+-Nhưng ô một trăm cổ phiếu có thể bán vẫn hiện bằng không.
+-Đây là nghịch lý đầu tiên.
+-Giá trên bảng có thể đỏ rất mạnh.
+-Tuy vậy, người vừa mua chưa chắc đã có chứng khoán để đặt lệnh bán.
+-Vậy giá sàn đang chặn giá, hay lịch thanh toán đang chặn thời điểm?
+-Ta sẽ theo chân một trăm cổ phiếu ấy qua từng mốc.
+-Thứ Hai là T trong ví dụ giả định.
+-Thứ Ba là T cộng một.
+-Thứ Tư là T cộng hai.
+-Lịch trên không phải dự báo cho một tuần cụ thể.
+-Nó chỉ làm chiếc đồng hồ cho câu chuyện.
+-Đến cuối video, ta sẽ trở lại nút bán chưa sáng này.
+-Trước hết, hãy nhìn cái khung làm giá chạy được đến đâu.
++Ngày chín tháng tư năm hai nghìn không trăm hai mươi lăm, VN-Index giảm ba phẩy bốn mươi phần trăm về một nghìn không trăm chín mươi bốn phẩy ba điểm.
++Phiên đó có một trăm bốn mươi bảy mã giảm sàn.
++Đây là hai số thật của phiên mở đầu biểu đồ hôm nay.
++Chúng cho thấy một bảng giá đỏ có thể rộng đến mức nào.
++Nhưng chúng chưa trả lời câu khó hơn cho người vừa mua trong phiên ấy.
++Nếu lệnh mua đã khớp sáng thứ Hai, vì sao có lúc phải tới chiều thứ Tư mới có thể bán?
++Người mua đúng lúc giá rơi cũng chưa chắc có cổ phiếu trong ô có thể bán ngay.
++Đó là nghịch lý của video này.
++Giá trần và giá sàn giới hạn giá trong một phiên.
++Còn lịch thanh toán giới hạn thời điểm chứng khoán vừa mua được phân bổ.
++Hai chiếc khóa này dễ bị trộn vào một.
++Vì vậy, câu hỏi trung tâm là: mua cổ phiếu sáng thứ Hai, vì sao phải tới chiều thứ Tư mới bán được, và điều đó đã làm ai mất tiền?
++Ta sẽ tách từng chiếc khóa, rồi quay lại phiên đỏ này ở cuối video.
++Trước hết, ta cần một ví dụ giả định để nhìn thấy giá và thời điểm đứng ở hai hàng khác nhau.
+ 
+ ## CH01 · Cái khung quanh giá hai mươi nghìn
+ 
++Đây là ví dụ giả định để tính, không phải khuyến nghị giao dịch.
++Anh Tuấn là nhân vật hư cấu của video này.
++Anh mua một trăm cổ phiếu của một công ty hư cấu.
++Mỗi cổ phiếu có giá hai mươi nghìn đồng.
++Một trăm nhân hai mươi nghìn là hai triệu đồng, chưa gồm phí.
++Trong lịch minh họa, thứ Hai là T, thứ Ba là T cộng một và thứ Tư là T cộng hai.
++Lịch này không dự báo cho một tuần cụ thể.
++Nó chỉ làm chiếc đồng hồ để ta theo dõi lúc cổ phiếu được phân bổ.
+ Giá tham chiếu là mốc để Sở giao dịch tính dải giá.
+ Biên độ là giới hạn dao động quanh mốc ấy.
+ Hai khái niệm nghe gần nhau, nhưng không phải một.
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; python data/long/ck-c6-gia-tran-san-t2/analysis.py; python data/long/ck-c6-gia-tran-san-t2/check.py; python motion/long/script_lines.py ck-c6-gia-tran-san-t2 --allow-repeat-line; python motion/long/studio_lint.py ck-c6-gia-tran-san-t2 --strict; python scripts/long_gate.py ck-c6-gia-tran-san-t2 --min-syl 1900" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ exited 1 in 784ms:
+{
+  "assume": {
+    "reference_vnd": 20000,
+    "shares": 100,
+    "market": "HOSE",
+    "band": 0.07
+  },
+  "band": {
+    "floor_vnd": 18600,
+    "reference_vnd": 20000,
+    "ceiling_vnd": 21400
+  },
+  "order": {
+    "value_vnd": 2000000,
+    "fees_included": false
+  },
+  "apr_3_2025": {
+    "down_total": 517,
+    "floor_down": 263,
+    "other_down": 254,
+    "up": 13,
+    "ceiling_up": 3
+  },
+  "index": {
+    "apr_3": 1229.84,
+    "apr_3_change": -87.99,
+    "apr_3_pct": -6.68,
+    "apr_9": 1094.3,
+    "apr_9_change": -38.49,
+    "apr_9_pct": -3.4
+  },
+  "settlement": {
+    "t2_complete_start": "11:00",
+    "t2_complete_end": "11:30",
+    "allocation_before": "13:00",
+    "sell_from": "afternoon T+2"
+  },
+  "tuan_ledger": {
+    "T": {
+      "cash_matched_vnd": 2000000,
+      "shares_sellable": 0
+    },
+    "T1": {
+      "cash_matched_vnd": 2000000,
+      "shares_sellable": 0
+    },
+    "T2_afternoon": {
+      "cash_matched_vnd": 2000000,
+      "shares_sellable": 100
+    }
+  },
+  "special_band": {
+    "hose_first_or_resume": 0.2,
+    "upcom_first_or_resume": 0.4,
+    "upcom_regular": 0.15
+  }
+}
+C6 check: OK (11 phép)
+ch00: 14 câu, 232 âm tiết, ~1.2 phút  Một phiên đỏ, nhưng người mua chưa có hàng để bán
+ch01: 32 câu, 380 âm tiết, ~1.9 phút  Cái khung quanh giá hai mươi nghìn
+ch02: 24 câu, 332 âm tiết, ~1.7 phút  Bảy phần trăm không phải mọi chiếc khung
+ch03: 29 câu, 342 âm tiết, ~1.7 phút  Khi cả bảng cùng chạm sàn
+ch04: 26 câu, 340 âm tiết, ~1.7 phút  T, T cộng một và chiếc đồng hồ phân bổ
+ch05: 31 câu, 352 âm tiết, ~1.8 phút  Theo chân một trăm cổ phiếu
+ch06: 33 câu, 436 âm tiết, ~2.2 phút  Ba ô chưa được phép điền
+TỔNG 189 câu, 2414 âm tiết
+  ! ch00: 0/14 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch03: 4/29 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+ck-c6-gia-tran-san-t2: 0 lỗi, 2 cảnh báo (luật studio)
+ck-c6-gia-tran-san-t2: âm tiết 2414, phút 11.5, cảnh 0, giây/cảnh 689.7, clip khác 0, ảnh khác 0, URL nguồn 8
+  LỖI: ch00: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch00: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: ch01: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch01: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: ch02: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch02: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: ch03: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch03: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: ch04: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch04: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: ch05: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch05: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: ch06: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch06: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: chưa TTS: ['ch00', 'ch01', 'ch02', 'ch03', 'ch04', 'ch05', 'ch06'] -- chạy build_long.py <topic> tts cho đủ
+  LỖI: 689.7 giây/cảnh > 9.0: cần thêm cảnh (bài mẫu ~7,6)
+  LỖI: spec.youtube thiếu ['publish_at', 'playlist', 'chapter_titles', 'tags', 'video_credits'] (xem mẫu mim-ke-huy-diet-petrov)
+  LỖI: spec.youtube.sources chỉ 0 URL công khai (< 8)
+  LỖI: 18 tên/thuật ngữ nước ngoài trong lời đọc mà spec không có bảng say
+TRƯỢT (19 lỗi)
+
+apply patch
+patch: completed
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\ck-c6-gia-tran-san-t2\script.md
+diff --git a/data/long/ck-c6-gia-tran-san-t2/script.md b/data/long/ck-c6-gia-tran-san-t2/script.md
+index d6922854f799d2a6a8f9dbfdc476b49d92222342..c9893abda5bfddc46db4e6bd31115dc25ed79b38
+--- a/data/long/ck-c6-gia-tran-san-t2/script.md
++++ b/data/long/ck-c6-gia-tran-san-t2/script.md
+@@ -1,51 +1,72 @@
+-# MUA CỔ PHIẾU THỨ HAI, BAO GIỜ BÁN ĐƯỢC? GIÁ TRẦN, SÀN VÀ T+2
++# Mua Thứ Hai, Thứ Tư Mới Bán Được: T+2 Là Gì?
+ 
+-**Tiêu đề phụ một:** Hai triệu đồng nhân hai ngày: một trăm cổ phiếu đang ở đâu?
+-**Tiêu đề phụ hai:** Giá trần, giá sàn và chiếc lịch sau nút mua
++**Tiêu đề phụ một:** Bắt Đáy Ngày 9/4/2025: Vì Sao Không Bán Kịp?
++**Tiêu đề phụ hai:** Giá Trần, Giá Sàn, T+2: Ba Luật Người Mới Hay Trả Giá
+ 
+ **Kênh:** Biểu Đồ Biết Nói (CK) · **Chuỗi:** Chứng Khoán Từ Số 0 · **Nhân vật:** anh Tuấn, VÍ DỤ GIẢ ĐỊNH.
+ 
+ Quy ước: mỗi dòng là một câu đọc. Lời đọc không có chữ số. Nội dung giáo dục, không phải tư vấn đầu tư.
+ 
++## Câu hỏi trung tâm
++
++Mua cổ phiếu sáng thứ Hai, vì sao phải tới chiều thứ Tư mới bán được, và điều đó đã làm ai mất tiền?
++
++## 5 câu trước khi viết
++
++1. Người xem là người mới mở tài khoản và đang tìm hiểu T cộng hai, giá trần, giá sàn.
++2. Họ tò mò vì sao lệnh mua đã khớp nhưng cổ phiếu chưa thể đặt lệnh bán ngay.
++3. Họ chọn video vì một phiên giảm thật đặt câu hỏi này vào tình huống dễ hình dung.
++4. Thumbnail truyền một ý: từ thứ Hai đến thứ Tư, nút bán vẫn bị khóa.
++5. Tiêu đề khớp ba mươi giây đầu vì hook mở bằng phiên ngày chín tháng tư năm hai nghìn không trăm hai mươi lăm và hỏi đúng thời điểm bán.
++
++## Bước lập luận
++
++| Mốc | Chương và câu | Bước tiến |
++|---|---|---|
++| Khoảng phút không đến hai | CH00, câu bảy | Tách nghịch lý: giá giảm không đồng nghĩa người mua vừa khớp đã có hàng để bán. |
++| Khoảng phút ba đến năm | CH02, câu mười hai đến hai mươi bốn | Tách giá sàn của một phiên khỏi mức lỗ qua nhiều phiên và các ngoại lệ biên độ. |
++| Khoảng phút năm đến bảy | CH04, câu một đến hai mươi ba | Đưa văn bản vận hành vào lịch T, T cộng một, T cộng hai để giải thích lúc cổ phiếu được phân bổ. |
++| Khoảng phút tám đến mười | CH06, câu hai mươi hai đến ba mươi | Khép vòng mở: giá giới hạn giá của phiên, còn T cộng hai giới hạn thời điểm có chứng khoán để đặt lệnh bán. |
++
+ ## Biểu đồ
+ 
+ | Chương | Loại và điểm số | Câu neo |
+ |---|---|---|
+-| CH00 | Lịch nhiệt T, T cộng một, T cộng hai; hai triệu đồng và một trăm cổ phiếu | “Hai triệu đồng đã khớp, nhưng một trăm cổ phiếu chưa bán được.” |
+-| CH01 | Thanh dải sàn mười tám nghìn sáu trăm, tham chiếu hai mươi nghìn, trần hai mươi mốt nghìn bốn trăm | “Dải giả định chạy từ mười tám nghìn sáu trăm tới hai mươi mốt nghìn bốn trăm đồng.” |
++| CH00 | Cột số thật phiên chín tháng tư: VN-Index một nghìn không trăm chín mươi bốn phẩy ba điểm và một trăm bốn mươi bảy mã giảm sàn; sau đó là câu hỏi về lịch T cộng hai | “Ngày chín tháng tư năm hai nghìn không trăm hai mươi lăm, VN-Index về một nghìn không trăm chín mươi bốn phẩy ba điểm và có một trăm bốn mươi bảy mã giảm sàn.” |
++| CH01 | Lịch nhiệt T, T cộng một, T cộng hai cho ví dụ giả định; thanh dải sàn mười tám nghìn sáu trăm, tham chiếu hai mươi nghìn, trần hai mươi mốt nghìn bốn trăm | “Đây là ví dụ giả định để tính: một trăm cổ phiếu giá hai mươi nghìn đồng.” |
+ | CH02 | Cột ngoại lệ: bảy, hai mươi, mười lăm và bốn mươi phần trăm | “Bảy phần trăm không phải chiếc trần của mọi ngày.” |
+ | CH03 | Cột chồng phiên ba tháng tư: hai trăm sáu mươi ba giảm sàn, hai trăm năm mươi bốn giảm khác, mười ba tăng, ba tăng trần | “Hai trăm sáu mươi ba mã cùng giảm sàn.” |
+ | CH04 | Lịch nhiệt T, T cộng một, T cộng hai; mười một giờ, mười một giờ ba mươi, trước mười ba giờ, chiều T cộng hai | “Trước mười ba giờ T cộng hai là mốc phân bổ.” |
+ | CH05 | Cột chồng tiền và cổ phiếu: T bằng không, T cộng một bằng không, chiều T cộng hai là một trăm | “Chiều T cộng hai, một trăm cổ phiếu mới có thể bán.” |
+ | CH06 | Bảng tách hai khung: giá mỗi phiên và thời điểm có chứng khoán | “Giá sàn giới hạn giá, còn T cộng hai giới hạn thời điểm.” |
+ 
+-## CH00 · Hai triệu đồng, nhưng nút bán chưa sáng
++## CH00 · Một phiên đỏ, nhưng người mua chưa có hàng để bán
+ 
+-Hai triệu đồng đã khớp, nhưng nút bán chưa bấm được.
+-Anh Tuấn là nhân vật ví dụ giả định của video này.
+-Anh vừa mua một trăm cổ phiếu của một công ty hư cấu.
+-Mỗi cổ phiếu có giá hai mươi nghìn đồng.
+-Một trăm nhân hai mươi nghìn là hai triệu đồng.
+-Hai triệu là số đầu tiên.
+-Con số này chưa gồm phí.
+-Trên màn hình, lịch có ba ô: T, T cộng một, rồi T cộng hai.
+-Ở ô T, tiền của ví dụ giả định đã dùng để khớp lệnh.
+-Nhưng ô một trăm cổ phiếu có thể bán vẫn hiện bằng không.
+-Đây là nghịch lý đầu tiên.
+-Giá trên bảng có thể đỏ rất mạnh.
+-Tuy vậy, người vừa mua chưa chắc đã có chứng khoán để đặt lệnh bán.
+-Vậy giá sàn đang chặn giá, hay lịch thanh toán đang chặn thời điểm?
+-Ta sẽ theo chân một trăm cổ phiếu ấy qua từng mốc.
+-Thứ Hai là T trong ví dụ giả định.
+-Thứ Ba là T cộng một.
+-Thứ Tư là T cộng hai.
+-Lịch trên không phải dự báo cho một tuần cụ thể.
+-Nó chỉ làm chiếc đồng hồ cho câu chuyện.
+-Đến cuối video, ta sẽ trở lại nút bán chưa sáng này.
+-Trước hết, hãy nhìn cái khung làm giá chạy được đến đâu.
++Ngày chín tháng tư năm hai nghìn không trăm hai mươi lăm, VN-Index giảm ba phẩy bốn mươi phần trăm về một nghìn không trăm chín mươi bốn phẩy ba điểm.
++Phiên đó có một trăm bốn mươi bảy mã giảm sàn.
++Đây là hai số thật của phiên mở đầu biểu đồ hôm nay.
++Chúng cho thấy một bảng giá đỏ có thể rộng đến mức nào.
++Nhưng chúng chưa trả lời câu khó hơn cho người vừa mua trong phiên ấy.
++Nếu lệnh mua đã khớp sáng thứ Hai, vì sao có lúc phải tới chiều thứ Tư mới có thể bán?
++Người mua đúng lúc giá rơi cũng chưa chắc có cổ phiếu trong ô bán ngay.
++Đó là nghịch lý của video này.
++Giá trần và giá sàn giới hạn giá trong một phiên.
++Còn lịch thanh toán giới hạn thời điểm chứng khoán vừa mua được phân bổ.
++Hai chiếc khóa này dễ bị trộn vào một.
++Vì vậy, câu hỏi trung tâm là: mua cổ phiếu sáng thứ Hai, vì sao phải tới chiều thứ Tư mới bán được, và điều đó đã làm ai mất tiền?
++Ta sẽ tách từng chiếc khóa, rồi quay lại phiên đỏ này ở cuối video.
++Trước hết, ta cần một ví dụ giả định để nhìn thấy giá và thời điểm đứng ở hai hàng khác nhau.
+ 
+ ## CH01 · Cái khung quanh giá hai mươi nghìn
+ 
++Đây là ví dụ giả định để tính, không phải khuyến nghị giao dịch.
++Anh Tuấn là nhân vật hư cấu của video này.
++Anh mua một trăm cổ phiếu của một công ty hư cấu.
++Mỗi cổ phiếu có giá hai mươi nghìn đồng.
++Một trăm nhân hai mươi nghìn là hai triệu đồng, chưa gồm phí.
++Trong lịch minh họa, thứ Hai là T, thứ Ba là T cộng một và thứ Tư là T cộng hai.
++Lịch này không dự báo cho một tuần cụ thể.
++Nó chỉ làm chiếc đồng hồ để ta theo dõi lúc cổ phiếu được phân bổ.
+ Giá tham chiếu là mốc để Sở giao dịch tính dải giá.
+ Biên độ là giới hạn dao động quanh mốc ấy.
+ Hai khái niệm nghe gần nhau, nhưng không phải một.
+
+codex
+Đợt kiểm đầu tiên cho thấy phần viết đã đạt lint nghiêm ngặt, nhưng cổng tổng chưa thể đạt vì topic chưa có bất kỳ cảnh, HUD, TTS hoặc `spec.youtube` đầy đủ—đó là các hạng mục W1c cấm ghi. Tôi đã chỉnh CH00 xuống đúng giới hạn và đang ghi nhận chính xác trạng thái này trong báo cáo ticket.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; python motion/long/script_lines.py ck-c6-gia-tran-san-t2 --allow-repeat-line; python motion/long/studio_lint.py ck-c6-gia-tran-san-t2 --strict; python scripts/long_gate.py ck-c6-gia-tran-san-t2 --min-syl 1900; Test-Path 'docs/pm/tickets/2026-10-27-ck-lo-1811/W1c-5-ket-qua.md'" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 464ms:
+ch00: 14 câu, 230 âm tiết, ~1.1 phút  Một phiên đỏ, nhưng người mua chưa có hàng để bán
+ch01: 32 câu, 380 âm tiết, ~1.9 phút  Cái khung quanh giá hai mươi nghìn
+ch02: 24 câu, 332 âm tiết, ~1.7 phút  Bảy phần trăm không phải mọi chiếc khung
+ch03: 29 câu, 342 âm tiết, ~1.7 phút  Khi cả bảng cùng chạm sàn
+ch04: 26 câu, 340 âm tiết, ~1.7 phút  T, T cộng một và chiếc đồng hồ phân bổ
+ch05: 31 câu, 352 âm tiết, ~1.8 phút  Theo chân một trăm cổ phiếu
+ch06: 33 câu, 436 âm tiết, ~2.2 phút  Ba ô chưa được phép điền
+TỔNG 189 câu, 2412 âm tiết
+  ! ch00: 0/14 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch03: 4/29 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+ck-c6-gia-tran-san-t2: 0 lỗi, 2 cảnh báo (luật studio)
+ck-c6-gia-tran-san-t2: âm tiết 2412, phút 11.5, cảnh 0, giây/cảnh 689.1, clip khác 0, ảnh khác 0, URL nguồn 8
+  LỖI: ch00: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch00: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: ch01: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch01: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: ch02: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch02: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: ch03: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch03: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: ch04: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch04: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: ch05: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch05: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: ch06: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch06: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: chưa TTS: ['ch00', 'ch01', 'ch02', 'ch03', 'ch04', 'ch05', 'ch06'] -- chạy build_long.py <topic> tts cho đủ
+  LỖI: 689.1 giây/cảnh > 9.0: cần thêm cảnh (bài mẫu ~7,6)
+  LỖI: spec.youtube thiếu ['publish_at', 'playlist', 'chapter_titles', 'tags', 'video_credits'] (xem mẫu mim-ke-huy-diet-petrov)
+  LỖI: spec.youtube.sources chỉ 0 URL công khai (< 8)
+  LỖI: 18 tên/thuật ngữ nước ngoài trong lời đọc mà spec không có bảng say
+TRƯỢT (19 lỗi)
+False
+
+apply patch
+patch: completed
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-27-ck-lo-1811\W1c-5-ket-qua.md
+diff --git a/data/long/ck-c6-gia-tran-san-t2/script.md b/data/long/ck-c6-gia-tran-san-t2/script.md
+index d6922854f799d2a6a8f9dbfdc476b49d92222342..c9893abda5bfddc46db4e6bd31115dc25ed79b38
+--- a/data/long/ck-c6-gia-tran-san-t2/script.md
++++ b/data/long/ck-c6-gia-tran-san-t2/script.md
+@@ -1,51 +1,72 @@
+-# MUA CỔ PHIẾU THỨ HAI, BAO GIỜ BÁN ĐƯỢC? GIÁ TRẦN, SÀN VÀ T+2
++# Mua Thứ Hai, Thứ Tư Mới Bán Được: T+2 Là Gì?
+ 
+-**Tiêu đề phụ một:** Hai triệu đồng nhân hai ngày: một trăm cổ phiếu đang ở đâu?
+-**Tiêu đề phụ hai:** Giá trần, giá sàn và chiếc lịch sau nút mua
++**Tiêu đề phụ một:** Bắt Đáy Ngày 9/4/2025: Vì Sao Không Bán Kịp?
++**Tiêu đề phụ hai:** Giá Trần, Giá Sàn, T+2: Ba Luật Người Mới Hay Trả Giá
+ 
+ **Kênh:** Biểu Đồ Biết Nói (CK) · **Chuỗi:** Chứng Khoán Từ Số 0 · **Nhân vật:** anh Tuấn, VÍ DỤ GIẢ ĐỊNH.
+ 
+ Quy ước: mỗi dòng là một câu đọc. Lời đọc không có chữ số. Nội dung giáo dục, không phải tư vấn đầu tư.
+ 
++## Câu hỏi trung tâm
++
++Mua cổ phiếu sáng thứ Hai, vì sao phải tới chiều thứ Tư mới bán được, và điều đó đã làm ai mất tiền?
++
++## 5 câu trước khi viết
++
++1. Người xem là người mới mở tài khoản và đang tìm hiểu T cộng hai, giá trần, giá sàn.
++2. Họ tò mò vì sao lệnh mua đã khớp nhưng cổ phiếu chưa thể đặt lệnh bán ngay.
++3. Họ chọn video vì một phiên giảm thật đặt câu hỏi này vào tình huống dễ hình dung.
++4. Thumbnail truyền một ý: từ thứ Hai đến thứ Tư, nút bán vẫn bị khóa.
++5. Tiêu đề khớp ba mươi giây đầu vì hook mở bằng phiên ngày chín tháng tư năm hai nghìn không trăm hai mươi lăm và hỏi đúng thời điểm bán.
++
++## Bước lập luận
++
++| Mốc | Chương và câu | Bước tiến |
++|---|---|---|
++| Khoảng phút không đến hai | CH00, câu bảy | Tách nghịch lý: giá giảm không đồng nghĩa người mua vừa khớp đã có hàng để bán. |
++| Khoảng phút ba đến năm | CH02, câu mười hai đến hai mươi bốn | Tách giá sàn của một phiên khỏi mức lỗ qua nhiều phiên và các ngoại lệ biên độ. |
++| Khoảng phút năm đến bảy | CH04, câu một đến hai mươi ba | Đưa văn bản vận hành vào lịch T, T cộng một, T cộng hai để giải thích lúc cổ phiếu được phân bổ. |
++| Khoảng phút tám đến mười | CH06, câu hai mươi hai đến ba mươi | Khép vòng mở: giá giới hạn giá của phiên, còn T cộng hai giới hạn thời điểm có chứng khoán để đặt lệnh bán. |
++
+ ## Biểu đồ
+ 
+ | Chương | Loại và điểm số | Câu neo |
+ |---|---|---|
+-| CH00 | Lịch nhiệt T, T cộng một, T cộng hai; hai triệu đồng và một trăm cổ phiếu | “Hai triệu đồng đã khớp, nhưng một trăm cổ phiếu chưa bán được.” |
+-| CH01 | Thanh dải sàn mười tám nghìn sáu trăm, tham chiếu hai mươi nghìn, trần hai mươi mốt nghìn bốn trăm | “Dải giả định chạy từ mười tám nghìn sáu trăm tới hai mươi mốt nghìn bốn trăm đồng.” |
++| CH00 | Cột số thật phiên chín tháng tư: VN-Index một nghìn không trăm chín mươi bốn phẩy ba điểm và một trăm bốn mươi bảy mã giảm sàn; sau đó là câu hỏi về lịch T cộng hai | “Ngày chín tháng tư năm hai nghìn không trăm hai mươi lăm, VN-Index về một nghìn không trăm chín mươi bốn phẩy ba điểm và có một trăm bốn mươi bảy mã giảm sàn.” |
++| CH01 | Lịch nhiệt T, T cộng một, T cộng hai cho ví dụ giả định; thanh dải sàn mười tám nghìn sáu trăm, tham chiếu hai mươi nghìn, trần hai mươi mốt nghìn bốn trăm | “Đây là ví dụ giả định để tính: một trăm cổ phiếu giá hai mươi nghìn đồng.” |
+ | CH02 | Cột ngoại lệ: bảy, hai mươi, mười lăm và bốn mươi phần trăm | “Bảy phần trăm không phải chiếc trần của mọi ngày.” |
+ | CH03 | Cột chồng phiên ba tháng tư: hai trăm sáu mươi ba giảm sàn, hai trăm năm mươi bốn giảm khác, mười ba tăng, ba tăng trần | “Hai trăm sáu mươi ba mã cùng giảm sàn.” |
+ | CH04 | Lịch nhiệt T, T cộng một, T cộng hai; mười một giờ, mười một giờ ba mươi, trước mười ba giờ, chiều T cộng hai | “Trước mười ba giờ T cộng hai là mốc phân bổ.” |
+ | CH05 | Cột chồng tiền và cổ phiếu: T bằng không, T cộng một bằng không, chiều T cộng hai là một trăm | “Chiều T cộng hai, một trăm cổ phiếu mới có thể bán.” |
+ | CH06 | Bảng tách hai khung: giá mỗi phiên và thời điểm có chứng khoán | “Giá sàn giới hạn giá, còn T cộng hai giới hạn thời điểm.” |
+ 
+-## CH00 · Hai triệu đồng, nhưng nút bán chưa sáng
++## CH00 · Một phiên đỏ, nhưng người mua chưa có hàng để bán
+ 
+-Hai triệu đồng đã khớp, nhưng nút bán chưa bấm được.
+-Anh Tuấn là nhân vật ví dụ giả định của video này.
+-Anh vừa mua một trăm cổ phiếu của một công ty hư cấu.
+-Mỗi cổ phiếu có giá hai mươi nghìn đồng.
+-Một trăm nhân hai mươi nghìn là hai triệu đồng.
+-Hai triệu là số đầu tiên.
+-Con số này chưa gồm phí.
+-Trên màn hình, lịch có ba ô: T, T cộng một, rồi T cộng hai.
+-Ở ô T, tiền của ví dụ giả định đã dùng để khớp lệnh.
+-Nhưng ô một trăm cổ phiếu có thể bán vẫn hiện bằng không.
+-Đây là nghịch lý đầu tiên.
+-Giá trên bảng có thể đỏ rất mạnh.
+-Tuy vậy, người vừa mua chưa chắc đã có chứng khoán để đặt lệnh bán.
+-Vậy giá sàn đang chặn giá, hay lịch thanh toán đang chặn thời điểm?
+-Ta sẽ theo chân một trăm cổ phiếu ấy qua từng mốc.
+-Thứ Hai là T trong ví dụ giả định.
+-Thứ Ba là T cộng một.
+-Thứ Tư là T cộng hai.
+-Lịch trên không phải dự báo cho một tuần cụ thể.
+-Nó chỉ làm chiếc đồng hồ cho câu chuyện.
+-Đến cuối video, ta sẽ trở lại nút bán chưa sáng này.
+-Trước hết, hãy nhìn cái khung làm giá chạy được đến đâu.
++Ngày chín tháng tư năm hai nghìn không trăm hai mươi lăm, VN-Index giảm ba phẩy bốn mươi phần trăm về một nghìn không trăm chín mươi bốn phẩy ba điểm.
++Phiên đó có một trăm bốn mươi bảy mã giảm sàn.
++Đây là hai số thật của phiên mở đầu biểu đồ hôm nay.
++Chúng cho thấy một bảng giá đỏ có thể rộng đến mức nào.
++Nhưng chúng chưa trả lời câu khó hơn cho người vừa mua trong phiên ấy.
++Nếu lệnh mua đã khớp sáng thứ Hai, vì sao có lúc phải tới chiều thứ Tư mới có thể bán?
++Người mua đúng lúc giá rơi cũng chưa chắc có cổ phiếu trong ô bán ngay.
++Đó là nghịch lý của video này.
++Giá trần và giá sàn giới hạn giá trong một phiên.
++Còn lịch thanh toán giới hạn thời điểm chứng khoán vừa mua được phân bổ.
++Hai chiếc khóa này dễ bị trộn vào một.
++Vì vậy, câu hỏi trung tâm là: mua cổ phiếu sáng thứ Hai, vì sao phải tới chiều thứ Tư mới bán được, và điều đó đã làm ai mất tiền?
++Ta sẽ tách từng chiếc khóa, rồi quay lại phiên đỏ này ở cuối video.
++Trước hết, ta cần một ví dụ giả định để nhìn thấy giá và thời điểm đứng ở hai hàng khác nhau.
+ 
+ ## CH01 · Cái khung quanh giá hai mươi nghìn
+ 
++Đây là ví dụ giả định để tính, không phải khuyến nghị giao dịch.
++Anh Tuấn là nhân vật hư cấu của video này.
++Anh mua một trăm cổ phiếu của một công ty hư cấu.
++Mỗi cổ phiếu có giá hai mươi nghìn đồng.
++Một trăm nhân hai mươi nghìn là hai triệu đồng, chưa gồm phí.
++Trong lịch minh họa, thứ Hai là T, thứ Ba là T cộng một và thứ Tư là T cộng hai.
++Lịch này không dự báo cho một tuần cụ thể.
++Nó chỉ làm chiếc đồng hồ để ta theo dõi lúc cổ phiếu được phân bổ.
+ Giá tham chiếu là mốc để Sở giao dịch tính dải giá.
+ Biên độ là giới hạn dao động quanh mốc ấy.
+ Hai khái niệm nghe gần nhau, nhưng không phải một.
+diff --git a/docs/pm/tickets/2026-10-27-ck-lo-1811/W1c-5-ket-qua.md b/docs/pm/tickets/2026-10-27-ck-lo-1811/W1c-5-ket-qua.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..23ac505c217fd1bc7db4cc136813e55d955a8f0b
+--- /dev/null
++++ b/docs/pm/tickets/2026-10-27-ck-lo-1811/W1c-5-ket-qua.md
+@@ -0,0 +1,46 @@
++# W1c-5 — Kết quả sửa mở đầu `ck-c6-gia-tran-san-t2`
++
++## Đã làm
++
++- Đổi dòng tiêu đề thành tiêu đề (1) của Content Brief: `Mua Thứ Hai, Thứ Tư Mới Bán Được: T+2 Là Gì?`.
++- Đưa hai tiêu đề còn lại vào hai dòng “Tiêu đề phụ”.
++- Thêm “Câu hỏi trung tâm”, “5 câu trước khi viết”, bảng “Bước lập luận”, và cập nhật bảng “Biểu đồ” cho CH00/CH01.
++- Viết lại CH00 theo hook số liệu thật; dời ví dụ giả định anh Tuấn xuống đầu CH01 và nêu rõ đây là ví dụ để tính.
++- Giữ nguyên CH02–CH06.
++
++## CH00 mới (nguyên văn)
++
++> Ngày chín tháng tư năm hai nghìn không trăm hai mươi lăm, VN-Index giảm ba phẩy bốn mươi phần trăm về một nghìn không trăm chín mươi bốn phẩy ba điểm.
++> Phiên đó có một trăm bốn mươi bảy mã giảm sàn.
++> Đây là hai số thật của phiên mở đầu biểu đồ hôm nay.
++> Chúng cho thấy một bảng giá đỏ có thể rộng đến mức nào.
++> Nhưng chúng chưa trả lời câu khó hơn cho người vừa mua trong phiên ấy.
++> Nếu lệnh mua đã khớp sáng thứ Hai, vì sao có lúc phải tới chiều thứ Tư mới có thể bán?
++> Người mua đúng lúc giá rơi cũng chưa chắc có cổ phiếu trong ô bán ngay.
++> Đó là nghịch lý của video này.
++> Giá trần và giá sàn giới hạn giá trong một phiên.
++> Còn lịch thanh toán giới hạn thời điểm chứng khoán vừa mua được phân bổ.
++> Hai chiếc khóa này dễ bị trộn vào một.
++> Vì vậy, câu hỏi trung tâm là: mua cổ phiếu sáng thứ Hai, vì sao phải tới chiều thứ Tư mới bán được, và điều đó đã làm ai mất tiền?
++> Ta sẽ tách từng chiếc khóa, rồi quay lại phiên đỏ này ở cuối video.
++> Trước hết, ta cần một ví dụ giả định để nhìn thấy giá và thời điểm đứng ở hai hàng khác nhau.
++
++## Kiểm tra đã chạy
++
++- `python data/long/ck-c6-gia-tran-san-t2/analysis.py`: tạo lại số tính, khớp các giả định.
++- `python data/long/ck-c6-gia-tran-san-t2/check.py`: `C6 check: OK (11 phép)`.
++- `python motion/long/script_lines.py ck-c6-gia-tran-san-t2 --allow-repeat-line`: tổng 2.412 âm tiết; CH00 230 âm tiết; tổng 189 câu.
++- `python motion/long/studio_lint.py ck-c6-gia-tran-san-t2 --strict`: `0 lỗi, 2 cảnh báo` (cảnh báo phân bố câu ngắn ở CH00 và CH03).
++- `python scripts/long_gate.py ck-c6-gia-tran-san-t2 --min-syl 1900`: **TRƯỢT (19 lỗi)**, không in ĐẠT.
++
++## Lý do cổng tổng chưa đạt
++
++Topic hiện có 0 cảnh ở cả bảy chương, thiếu HUD, TTS, `spec.youtube` và bảng `say`; vì vậy cổng báo 19 lỗi, gồm không đủ loại cảnh mỗi chương, chưa TTS, 689,1 giây/cảnh, và trường `spec.youtube` còn thiếu. Ticket W1c chỉ cho ghi `script.md`, `factcheck.md`, `analysis.py`, `check.py`, `results.json` và báo cáo; không cho sửa `gen_scenes.py`/`spec.json` hay chạy bước dựng để khắc phục các lỗi này. Không có clip sheet hoặc thumbnail để báo cáo ở pha W1c.
++
++## Nguồn câu 0
++
++Câu 0 lấy từ dữ kiện **#11** trong `facts.md`: phiên 09/04/2025, VN-Index giảm 38,49 điểm (3,40%) về 1.094,3 điểm; URL VTV đã mở: https://vtv.vn/kinh-te/vn-index-giam-tiep-gan-40-diem-20250409171341275.htm. Câu 1 dùng dữ kiện **#12** cùng URL: 147 mã giảm sàn.
++
++## Khẳng định chưa kiểm được
++
++Không bổ sung khẳng định chưa kiểm được. Các giới hạn sẵn có về thuế, phí chung và T+0 vẫn giữ nguyên ở CH06/factcheck.
+
+codex
+Đã hoàn tất phần W1c và ghi báo cáo tại [W1c-5-ket-qua.md](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-27-ck-lo-1811\W1c-5-ket-qua.md).
+
+Đã đạt:
+- `check.py`: OK
+- `studio_lint.py --strict`: 0 lỗi
+- CH00 mới: 230 âm tiết
+- Tổng: 2.412 âm tiết
+
+Đã chạy đúng `long_gate.py --min-syl 1900`, nhưng kết quả là `TRƯỢT (19 lỗi)`, không phải `ĐẠT`: topic chưa có cảnh, HUD, TTS hoặc `spec.youtube` hoàn chỉnh. Ticket W1c cấm sửa các tệp dựng cần thiết để khắc phục các lỗi này; chi tiết đầy đủ nằm trong báo cáo.
+tokens used
+53,540
+Đã hoàn tất phần W1c và ghi báo cáo tại [W1c-5-ket-qua.md](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-27-ck-lo-1811\W1c-5-ket-qua.md).
+
+Đã đạt:
+- `check.py`: OK
+- `studio_lint.py --strict`: 0 lỗi
+- CH00 mới: 230 âm tiết
+- Tổng: 2.412 âm tiết
+
+Đã chạy đúng `long_gate.py --min-syl 1900`, nhưng kết quả là `TRƯỢT (19 lỗi)`, không phải `ĐẠT`: topic chưa có cảnh, HUD, TTS hoặc `spec.youtube` hoàn chỉnh. Ticket W1c cấm sửa các tệp dựng cần thiết để khắc phục các lỗi này; chi tiết đầy đủ nằm trong báo cáo.

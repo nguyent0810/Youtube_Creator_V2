@@ -1,0 +1,250 @@
+# Mua Thứ Hai, Thứ Tư Mới Bán Được: T+2 Là Gì?
+
+**Tiêu đề phụ một:** Bắt Đáy Ngày 9/4/2025: Vì Sao Không Bán Kịp?
+**Tiêu đề phụ hai:** Giá Trần, Giá Sàn, T+2: Ba Luật Người Mới Hay Trả Giá
+
+**Kênh:** Biểu Đồ Biết Nói (CK) · **Chuỗi:** Chứng Khoán Từ Số 0 · **Nhân vật:** anh Tuấn, VÍ DỤ GIẢ ĐỊNH.
+
+Quy ước: mỗi dòng là một câu đọc. Lời đọc không có chữ số. Nội dung giáo dục, không phải tư vấn đầu tư.
+
+## Câu hỏi trung tâm
+
+Mua cổ phiếu sáng thứ Hai, vì sao phải tới chiều thứ Tư mới bán được, và điều đó đã làm ai mất tiền?
+
+## 5 câu trước khi viết
+
+1. Người xem là người mới mở tài khoản và đang tìm hiểu T cộng hai, giá trần, giá sàn.
+2. Họ tò mò vì sao lệnh mua đã khớp nhưng cổ phiếu chưa thể đặt lệnh bán ngay.
+3. Họ chọn video vì một phiên giảm thật đặt câu hỏi này vào tình huống dễ hình dung.
+4. Thumbnail truyền một ý: từ thứ Hai đến thứ Tư, nút bán vẫn bị khóa.
+5. Tiêu đề khớp ba mươi giây đầu vì hook mở bằng phiên ngày chín tháng tư năm hai nghìn không trăm hai mươi lăm và hỏi đúng thời điểm bán.
+
+## Bước lập luận
+
+| Mốc | Chương và câu | Bước tiến |
+|---|---|---|
+| Khoảng phút không đến hai | CH00, câu bảy | Tách nghịch lý: giá giảm không đồng nghĩa người mua vừa khớp đã có hàng để bán. |
+| Khoảng phút ba đến năm | CH02, câu mười hai đến hai mươi bốn | Tách giá sàn của một phiên khỏi mức lỗ qua nhiều phiên và các ngoại lệ biên độ. |
+| Khoảng phút năm đến bảy | CH04, câu một đến hai mươi ba | Đưa văn bản vận hành vào lịch T, T cộng một, T cộng hai để giải thích lúc cổ phiếu được phân bổ. |
+| Khoảng phút tám đến mười | CH06, câu hai mươi hai đến ba mươi | Khép vòng mở: giá giới hạn giá của phiên, còn T cộng hai giới hạn thời điểm có chứng khoán để đặt lệnh bán. |
+
+## Biểu đồ
+
+| Chương | Loại và điểm số | Câu neo |
+|---|---|---|
+| CH00 | Cột số thật phiên chín tháng tư: VN-Index một nghìn không trăm chín mươi bốn phẩy ba điểm và một trăm bốn mươi bảy mã giảm sàn; sau đó là câu hỏi về lịch T cộng hai | “Ngày chín tháng tư năm hai nghìn không trăm hai mươi lăm, VN-Index về một nghìn không trăm chín mươi bốn phẩy ba điểm và có một trăm bốn mươi bảy mã giảm sàn.” |
+| CH01 | Lịch nhiệt T, T cộng một, T cộng hai cho ví dụ giả định; thanh dải sàn mười tám nghìn sáu trăm, tham chiếu hai mươi nghìn, trần hai mươi mốt nghìn bốn trăm | “Đây là ví dụ giả định để tính: một trăm cổ phiếu giá hai mươi nghìn đồng.” |
+| CH02 | Cột ngoại lệ: bảy, hai mươi, mười lăm và bốn mươi phần trăm | “Bảy phần trăm không phải chiếc trần của mọi ngày.” |
+| CH03 | Cột chồng phiên ba tháng tư: hai trăm sáu mươi ba giảm sàn, hai trăm năm mươi bốn giảm khác, mười ba tăng, ba tăng trần | “Hai trăm sáu mươi ba mã cùng giảm sàn.” |
+| CH04 | Lịch nhiệt T, T cộng một, T cộng hai; mười một giờ, mười một giờ ba mươi, trước mười ba giờ, chiều T cộng hai | “Trước mười ba giờ T cộng hai là mốc phân bổ.” |
+| CH05 | Cột chồng tiền và cổ phiếu: T bằng không, T cộng một bằng không, chiều T cộng hai là một trăm | “Chiều T cộng hai, một trăm cổ phiếu mới có thể bán.” |
+| CH06 | Bảng tách hai khung: giá mỗi phiên và thời điểm có chứng khoán | “Giá sàn giới hạn giá, còn T cộng hai giới hạn thời điểm.” |
+
+## CH00 · Một phiên đỏ, nhưng người mua chưa có hàng để bán
+
+Ngày chín tháng tư năm hai nghìn không trăm hai mươi lăm, VN-Index giảm ba phẩy bốn mươi phần trăm về một nghìn không trăm chín mươi bốn phẩy ba điểm.
+Phiên đó có một trăm bốn mươi bảy mã giảm sàn.
+Chúng cho thấy một bảng giá đỏ có thể rộng đến mức nào.
+Nhưng chúng chưa trả lời câu khó hơn cho người vừa mua trong phiên ấy.
+Nếu lệnh mua đã khớp sáng thứ Hai, vì sao có lúc phải tới chiều thứ Tư mới có thể bán?
+Người mua đúng lúc giá rơi cũng chưa chắc có cổ phiếu trong ô bán ngay.
+Đó là nghịch lý của video này.
+Giá trần và giá sàn giới hạn giá trong một phiên.
+Còn lịch thanh toán giới hạn thời điểm chứng khoán vừa mua được phân bổ.
+Hai chiếc khóa này dễ bị trộn vào một.
+Vì vậy, câu hỏi trung tâm là: mua cổ phiếu sáng thứ Hai, vì sao phải tới chiều thứ Tư mới bán được, và điều đó đã làm ai mất tiền?
+Ta sẽ tách từng chiếc khóa, rồi quay lại phiên đỏ này ở cuối video.
+Trước hết, ta cần một ví dụ giả định để nhìn thấy giá và thời điểm đứng ở hai hàng khác nhau.
+
+## CH01 · Cái khung quanh giá hai mươi nghìn
+
+Đây là ví dụ giả định để tính, không phải khuyến nghị giao dịch.
+Anh Tuấn là nhân vật hư cấu của video này.
+Anh mua một trăm cổ phiếu của một công ty hư cấu.
+Mỗi cổ phiếu có giá hai mươi nghìn đồng.
+Một trăm nhân hai mươi nghìn là hai triệu đồng, chưa gồm phí.
+Trong lịch minh họa, thứ Hai là T, thứ Ba là T cộng một và thứ Tư là T cộng hai.
+Lịch này không dự báo cho một tuần cụ thể.
+Nó chỉ làm chiếc đồng hồ để ta theo dõi lúc cổ phiếu được phân bổ.
+Giá tham chiếu là mốc để Sở giao dịch tính dải giá.
+Biên độ là giới hạn dao động quanh mốc ấy.
+Hai khái niệm nghe gần nhau, nhưng không phải một.
+Trong ví dụ giả định, giá tham chiếu là hai mươi nghìn đồng.
+Trên HOSE, biên độ thông thường của nhóm được tài liệu nêu là cộng trừ bảy phần trăm.
+Bảy phần trăm của hai mươi nghìn là một nghìn bốn trăm đồng.
+Trừ một nghìn bốn trăm, giá sàn giả định là mười tám nghìn sáu trăm đồng.
+Cộng một nghìn bốn trăm, giá trần giả định là hai mươi mốt nghìn bốn trăm đồng.
+Dải giả định chạy từ mười tám nghìn sáu trăm tới hai mươi mốt nghìn bốn trăm đồng.
+Giữa dải là hai mươi nghìn đồng.
+Thanh giá trên màn hình có ba điểm, không phải ba lời tiên đoán.
+Điểm thấp là sàn.
+Điểm giữa là tham chiếu.
+Điểm cao là trần.
+Một trăm cổ phiếu của anh Tuấn vẫn đang ở ô chờ phân bổ.
+Hai triệu đồng là giá trị khớp lệnh giả định.
+Không có con số nào ở đây bảo giá sẽ đi lên hay đi xuống.
+Nó chỉ cho biết một phiên có chiếc khung.
+Đó là phép nhân.
+Như tập trước, ATO, ATC và lô một trăm là những quy ước của phiên.
+Điều quan trọng hơn là chiếc khung này chỉ nói về giá của phiên đó.
+Nó chưa nói bạn đã có cổ phiếu để bán hay chưa.
+Giá và thời điểm tách riêng.
+Muốn thấy rõ hơn, ta cần tách ngày thường khỏi những ngày ngoại lệ.
+
+## CH02 · Bảy phần trăm không phải mọi chiếc khung
+
+Bảy phần trăm là biên độ thông thường được tài liệu HOSE nêu cho trường hợp vừa nói.
+Nó không phải lời hứa rằng một người nắm giữ chỉ có thể lỗ bảy phần trăm.
+Một phiên là một phiên.
+Nhiều phiên nối nhau là một câu chuyện khác.
+Trong ví dụ giả định, hai mươi nghìn giảm bảy phần trăm còn mười tám nghìn sáu trăm.
+Ngày sau lại có một giá tham chiếu khác.
+Vì vậy, không thể lấy một con số của một ngày làm phanh cho cả tuần.
+Đây là nghịch lý thứ hai.
+Một cái sàn nghe như đáy.
+Không có đáy chung.
+Nhưng nó là đáy trong dải của một phiên, không phải đáy cho mọi tương lai.
+Tài liệu HOSE cũng nêu trường hợp ngày giao dịch đầu tiên hoặc giao dịch lại sau tạm ngừng dài.
+Khi đó, biên độ được nêu là cộng trừ hai mươi phần trăm.
+Hai mươi phần trăm của hai mươi nghìn trong ví dụ giả định là bốn nghìn đồng.
+Dải minh họa khi ấy là từ mười sáu nghìn tới hai mươi bốn nghìn đồng.
+Trên UPCoM, nguồn HNX ghi nhận biên độ thông thường mười lăm phần trăm từ năm hai nghìn không trăm mười lăm.
+Nguồn đó cũng ghi nhận mức bốn mươi phần trăm cho ngày đầu hoặc giao dịch lại từ năm hai nghìn không trăm mười một.
+Mười lăm phần trăm của hai mươi nghìn là ba nghìn đồng trong ví dụ giả định.
+Bốn mươi phần trăm của hai mươi nghìn là tám nghìn đồng.
+Các cột trên màn hình vì thế đứng cạnh nhau: bảy, hai mươi, mười lăm và bốn mươi.
+Ngày giao dịch tạo bối cảnh.
+Chúng không phải bảng chọn nơi giao dịch.
+Chúng chỉ nhắc rằng phải hỏi: đây là sàn nào, ngày nào, tình huống nào?
+Còn nếu một phiên thật sự nghẹt ở phía sàn, chiếc khung giá có tự mở nút bán không?
+
+## CH03 · Khi cả bảng cùng chạm sàn
+
+Ngày ba tháng tư năm hai nghìn không trăm hai mươi lăm là một ví dụ dữ liệu rõ ràng.
+VN-Index đóng ở một nghìn hai trăm hai mươi chín phẩy tám mươi bốn điểm.
+Chỉ số giảm tám mươi bảy phẩy chín mươi chín điểm.
+Tỷ lệ giảm được nêu là sáu phẩy sáu mươi tám phần trăm.
+Trong phiên đó, HOSE có năm trăm mười bảy mã giảm.
+Trong số ấy, hai trăm sáu mươi ba mã giảm sàn.
+Phép trừ cho phần giảm nhưng chưa sàn là hai trăm năm mươi bốn mã.
+Mười ba mã tăng.
+Trong số ấy, ba mã tăng trần.
+Biểu đồ cột chồng tách phần giảm thành hai lớp.
+Bảng giá có thể nghẹt.
+Hai trăm sáu mươi ba là phần đỏ sát sàn.
+Hai trăm năm mươi bốn là phần giảm khác.
+Mười ba mã tăng, kể cả ba mã trần, chỉ là một phần rất nhỏ.
+Không có ý nghĩa khuyên mua hay bán trong các con số này.
+Chúng chỉ cho thấy nhiều mức giá có thể cùng chạm sàn trong một ngày.
+Ngày chín tháng tư năm hai nghìn không trăm hai mươi lăm lại có một mốc khác.
+VN-Index về một nghìn không trăm chín mươi bốn phẩy ba điểm.
+Mức giảm là ba mươi tám phẩy bốn mươi chín điểm.
+Tỷ lệ được nêu là ba phẩy bốn mươi phần trăm.
+Phiên đó có một trăm bốn mươi bảy mã giảm sàn.
+Một trăm bốn mươi bảy là ít hơn hai trăm sáu mươi ba.
+Nhưng cả hai số đều minh họa áp lực có thể dồn vào một bên bảng giá.
+Quay lại ví dụ giả định, một trăm cổ phiếu của anh Tuấn vẫn không tự nhiên thành có thể bán chỉ vì giá đang đỏ.
+Trạng thái giá và quyền đặt lệnh là hai cột khác nhau.
+Một cột nói mười tám nghìn sáu trăm hay hai mươi mốt nghìn bốn trăm.
+Cột kia nói T, T cộng một, hay chiều T cộng hai.
+Nhưng lịch không đổi.
+Giờ ta đi vào cột thứ hai.
+
+## CH04 · T, T cộng một và chiếc đồng hồ phân bổ
+
+Quy chế được VSDC công bố có hiệu lực ngày hai mươi chín tháng tám năm hai nghìn không trăm hai mươi hai.
+Quyết định ban hành quy chế có ngày mười chín tháng tám năm hai nghìn không trăm hai mươi hai.
+Với giao dịch mua ngày T, nguồn này nói tiền hoặc chứng khoán được nhận trước mười ba giờ ngày T cộng hai.
+Nguồn cũng nói chứng khoán mua ngày T có thể được bán trong phiên chiều T cộng hai.
+Đồng hồ vẫn chạy.
+Đó là mốc quan trọng nhất của video.
+Trong lịch ví dụ giả định, sáng thứ Hai là T.
+Lệnh mua một trăm cổ phiếu khớp với giá trị hai triệu đồng.
+Ô cổ phiếu có thể bán vẫn là không.
+Thứ Ba là T cộng một.
+Hai triệu đồng vẫn là giá trị khớp lệnh minh họa.
+Ô cổ phiếu có thể bán vẫn là không.
+Thứ Tư là T cộng hai.
+Theo quy chế của Tổng công ty Lưu ký, khâu hoàn tất với ngân hàng thanh toán diễn ra từ mười một giờ tới mười một giờ ba mươi.
+Sau đó, thành viên lưu ký phân bổ cho khách trước mười ba giờ.
+Trước mười ba giờ T cộng hai là mốc phân bổ trên biểu đồ.
+Đây là mốc nguồn nêu.
+Nguồn không bảo rằng cổ phiếu vừa mua có thể bán ngay từ đầu ngày.
+Nguồn nói phiên chiều T cộng hai.
+Vì thế, cách nói T cộng hai phẩy năm nghe tiện nhưng không phải mốc chính thức trong video này.
+Ta giữ hai ô dễ nhớ: trước mười ba giờ và phiên chiều.
+Trong ví dụ giả định, chiều thứ Tư là lúc một trăm cổ phiếu chuyển từ chờ phân bổ sang có thể bán.
+Không phải giá đã tăng thì nút này sáng.
+Không phải giá đã giảm thì nút này tự sáng.
+Chiếc đồng hồ thanh toán mới giải thích chuyển động ấy.
+Đây là nơi cái khung giá gặp cái lịch.
+
+## CH05 · Theo chân một trăm cổ phiếu
+
+Bây giờ, hãy nhìn lại cùng một bảng nhưng bỏ hết thuật ngữ.
+Hàng đầu là tiền của ví dụ giả định.
+Hàng dưới là một trăm cổ phiếu hư cấu.
+Bảng ấy rất đơn giản.
+Sáng thứ Hai, giá hai mươi nghìn nhân một trăm bằng hai triệu đồng.
+Hai triệu là giá trị khớp lệnh, chưa gồm phí.
+Ô có thể bán của một trăm cổ phiếu là không.
+Đó là cột T.
+Sang thứ Ba, T cộng một, bảng vẫn để số không ở ô có thể bán.
+Hai triệu đồng không phải số dư thực tế được khẳng định.
+Nó chỉ giữ nguyên giá trị khớp lệnh để mắt ta theo được câu chuyện.
+Một trăm cổ phiếu vẫn chờ phân bổ theo ví dụ giả định.
+Đó là cột T cộng một.
+Đến chiều thứ Tư, T cộng hai, ô có thể bán đổi từ không thành một trăm.
+Chiều T cộng hai, một trăm cổ phiếu mới có thể bán.
+Đó là cột T cộng hai.
+Biểu đồ không hề nói lệnh bán sẽ khớp.
+Nó cũng không nói mức giá nào sẽ khớp.
+Giá thị trường vẫn có thể nằm trong dải của phiên.
+Ví dụ, sàn giả định mười tám nghìn sáu trăm vẫn là một trạng thái giá.
+Trần giả định hai mươi mốt nghìn bốn trăm cũng là một trạng thái giá.
+Nhưng khả năng đặt lệnh với số cổ phiếu vừa mua đi theo lịch phân bổ.
+Từng ô có nhiệm vụ riêng.
+Ta tách được hai câu thường bị trộn vào nhau.
+Câu thứ nhất là: giá hôm nay có thể chạy trong dải nào?
+Câu thứ hai là: số cổ phiếu vừa mua khi nào nằm ở ô có thể bán?
+Với ví dụ giả định này, câu thứ hai dẫn tới chiều T cộng hai.
+Không dẫn tới lúc giá đổi màu.
+Không dẫn tới một mẹo thao tác.
+Nó dẫn tới một mốc vận hành được nguồn nêu.
+Còn sau khi bán thì số tiền thực nhận có luôn bằng giá bán nhân số cổ phiếu không?
+
+## CH06 · Ba ô chưa được phép điền
+
+Khi có một lệnh bán, người xem thường nhìn ngay vào giá bán nhân số cổ phiếu.
+Trong ví dụ giả định, một trăm cổ phiếu là một trăm đơn vị để đếm.
+Nhưng giá trị cuối cùng không thể được rút gọn thành một con số chung cho mọi nơi.
+Phí giao dịch theo biểu phí nơi mở tài khoản.
+Tài liệu đang dùng không có một mức phí chung kèm ngày hiệu lực.
+Ba ô ấy không giống nhau.
+Vì vậy, biểu đồ để ô phí là “chưa điền”.
+Đó là một lựa chọn có chủ ý.
+Thuế cũng cần nói thật về mức độ chắc chắn.
+Luật Thuế thu nhập cá nhân số một trăm linh chín trên hai nghìn không trăm hai mươi lăm có hiệu lực từ ngày một tháng bảy năm hai nghìn không trăm hai mươi sáu.
+Nghị định hướng dẫn cũng được nêu có hiệu lực từ ngày một tháng bảy năm hai nghìn không trăm hai mươi sáu.
+Tuy nhiên, kho này chưa chốt được điều khoản và hướng dẫn hiện hành để đọc mức không phẩy một phần trăm như một khẳng định.
+Vì vậy, biểu đồ để ô thuế là “cần kiểm văn bản”.
+Không lấy hai triệu đồng giả định để trừ một khoản chưa chốt.
+Đó không phải né số.
+Sự thận trọng có lý do.
+Đó là không biến ví dụ thành thông tin sai.
+Ô thứ ba là T cộng không.
+Nguồn đang dùng xác nhận bước rút ngắn đến khả năng bán trong phiên chiều T cộng hai.
+Nó không xác nhận cơ chế bán chứng khoán chờ về hay mốc T cộng không cho nhà đầu tư cá nhân.
+Vì vậy, biểu đồ chỉ kéo lịch từ T tới T cộng hai.
+Ô T cộng không để trống.
+Không đoán ngày áp dụng.
+Không gắn một lời hứa lên ô trống.
+Và giờ, vòng mở đầu có thể khép lại.
+Hai triệu đồng trong ví dụ giả định đã khớp ở T.
+Một trăm cổ phiếu không bán được ngay không phải vì giá sàn là một cái khóa cho cả tuần.
+Giá sàn giới hạn giá của từng phiên.
+T cộng hai giới hạn thời điểm bạn có chứng khoán để đặt lệnh bán.
+Đến chiều T cộng hai, ô một trăm cổ phiếu mới sáng trong ví dụ này.
+Đó là câu trả lời cho nút bán ở đầu video.
+Trước một lệnh cụ thể, hãy tách bảng thành hai hàng: giá và thời điểm.
+Rồi chỉ điền những ô mà văn bản hiện hành xác nhận.

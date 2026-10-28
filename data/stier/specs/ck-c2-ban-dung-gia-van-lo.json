@@ -1,0 +1,198 @@
+{
+ "theme": "ck",
+ "kicker": "HOÀ VỐN",
+ "sub": "PHÍ VÀ THUẾ",
+ "title": "Bán đúng giá mua mà vẫn lỗ: phí và thuế của một lô cổ phiếu (ví dụ giả định)",
+ "description": "Mua rồi bán lại đúng giá mua vẫn lỗ, vì mỗi chiều mua và bán đều mất phí môi giới, lúc bán còn nộp thuế thu nhập cá nhân 0,1% trên giá bán. VÍ DỤ GIẢ ĐỊNH (kênh tự tính): 100 cổ phiếu giá 20.000 đồng, phí giả định 0,15% mỗi chiều. Bán 20.000 → mất 8.000 đồng (phí mua 3.000 + phí bán 3.000 + thuế 2.000); bán 20.050 (+1 bước giá 50 đồng) → lỗ ≈ 3.000 (3.012,5); bán 20.100 (+2 bước) → lãi ≈ 2.000 (1.975). Hoà vốn lý thuyết ≈ 20.080 đồng, giá đặt được kế tiếp là 20.100.\n\nPhí môi giới tuỳ công ty chứng khoán, tối đa 0,45% mỗi chiều (Thông tư 102/2021/TT-BTC), thực tế thường thấp hơn. Thuế 0,1% trên giá bán từng lần: Luật Thuế thu nhập cá nhân số 109/2025/QH15, Điều 13 khoản 2 (hiệu lực 01/07/2026). Bước giá 50 đồng áp cho cổ phiếu giá 10.000–49.950 đồng ở sàn TP.HCM; quy định theo thời điểm làm video (10/2026).\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là ví dụ giả định, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (12 phút): https://youtu.be/S_oMZt36W60 (công khai từ 20:00 ngày 31/10)",
+ "tags": [
+  "phí giao dịch chứng khoán",
+  "thuế bán cổ phiếu",
+  "bước giá",
+  "chứng khoán cho người mới",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "lỗ",
+  "tám",
+  "hai",
+  "bước",
+  "hoà"
+ ],
+ "lines": [
+  "Bán đúng giá mua, bạn vẫn lỗ.",
+  "Ví dụ giả định: một trăm cổ phiếu, giá hai mươi nghìn đồng.",
+  "Phí giả định mỗi chiều: không phẩy mười lăm phần trăm.",
+  "Bán ra, nộp thêm thuế không phẩy một phần trăm trên giá bán.",
+  "Bán lại đúng hai mươi nghìn, bạn mất tám nghìn đồng.",
+  "Lên một bước, năm mươi đồng, vẫn lỗ khoảng ba nghìn.",
+  "Phải lên hai bước, tới hai mươi nghìn một trăm, mới lãi chừng hai nghìn.",
+  "Hoà vốn không nằm ở giá mua, mà cao hơn hai bước giá."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "BÁN ĐÚNG GIÁ MUA",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "VẪN LỖ",
+     "at": [
+      0,
+      "lỗ"
+     ],
+     "c": "down"
+    },
+    {
+     "text": "ví dụ giả định · một lô 100 cổ phiếu",
+     "at": [
+      0,
+      "vẫn"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7710753",
+   "ms": 4,
+   "veil": 0.58
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "MỘT LÔ · VÍ DỤ GIẢ ĐỊNH",
+   "cards": [
+    {
+     "k": "MUA",
+     "v": "100 × 20.000 Đ",
+     "at": [
+      1,
+      "một"
+     ]
+    },
+    {
+     "k": "PHÍ MỖI CHIỀU (GIẢ ĐỊNH)",
+     "v": "0,15%",
+     "at": [
+      2,
+      "phí"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "MUA RỒI BÁN ĐÚNG 20.000 Đ",
+   "rows": [
+    {
+     "k": "THUẾ KHI BÁN · 0,1%",
+     "v": "2.000 Đ",
+     "at": [
+      3,
+      "thuế"
+     ]
+    },
+    {
+     "k": "PHÍ MUA · 0,15%",
+     "v": "3.000 Đ",
+     "at": [
+      4,
+      "bán"
+     ]
+    },
+    {
+     "k": "PHÍ BÁN · 0,15%",
+     "v": "3.000 Đ",
+     "at": [
+      4,
+      "đúng"
+     ]
+    }
+   ],
+   "total": {
+    "k": "BẠN MẤT",
+    "v": "−8.000 Đ",
+    "at": [
+     4,
+     "tám"
+    ]
+   }
+  },
+  {
+   "type": "chart",
+   "at": 5,
+   "kind": "bars",
+   "title": "LÃI / LỖ MỘT LÔ (ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · PHÍ 0,15%/CHIỀU · THUẾ 0,1%",
+   "bars": [
+    {
+     "label": "BÁN\n20.000",
+     "v": -8000,
+     "text": "−8.000",
+     "c": "down",
+     "at": [
+      5,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "label": "+1 BƯỚC\n20.050",
+     "v": -3012.5,
+     "text": "≈ −3.000",
+     "c": "down",
+     "at": [
+      5,
+      "lỗ"
+     ]
+    },
+    {
+     "label": "+2 BƯỚC\n20.100",
+     "v": 1975,
+     "text": "≈ +2.000",
+     "c": "up",
+     "at": [
+      6,
+      "lãi"
+     ]
+    }
+   ],
+   "note": "KÊNH TỰ TÍNH · MUA 100 × 20.000 Đ · BƯỚC GIÁ 50 Đ"
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "HOÀ VỐN =\nGIÁ MUA + 2 BƯỚC",
+   "sub": "VÍ DỤ GIẢ ĐỊNH · PHÍ TUỲ CÔNG TY"
+  }
+ ],
+ "sources": [
+  "https://youtu.be/S_oMZt36W60",
+  "https://tapchicongthuong.vn/giam-gia-mot-so-dich-vu-trong-linh-vuc-chung-khoan-tu-01-01-2022-85704.htm",
+  "https://thuvienphapluat.vn/van-ban/thue-phi-le-phi/Luat-Thue-thu-nhap-ca-nhan-2025-so-109-2025-QH15-665870.aspx",
+  "https://luatvietnam.vn/chung-khoan/quyet-dinh-22-qd-hdtv-2025-ban-hanh-quy-che-niem-yet-va-giao-dich-chung-khoan-399805-d1.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

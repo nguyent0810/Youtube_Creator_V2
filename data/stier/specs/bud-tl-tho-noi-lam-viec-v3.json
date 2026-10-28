@@ -1,0 +1,155 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-tl-tho-noi-lam-viec",
+ "format": "tinh-lang",
+ "hook_type": "menh-lenh",
+ "open_shot": "ban-lam-viec",
+ "voice": "Ngọc Linh",
+ "music": "fluidscape.mp3",
+ "music_gain": 0.16,
+ "gap": 0.9,
+ "title": "Vai bạn đang nhô lên, đúng không?",
+ "kicker": "TĨNH LẶNG",
+ "sub": "KINH TRUNG BỘ 118",
+ "acc": [
+  "vai",
+  "thở",
+  "căng"
+ ],
+ "ambience": {
+  "bed": "rain",
+  "gain": 0.4
+ },
+ "lines": [
+  "Vai bạn đang nhô lên, đúng không? Thả xuống thử.",
+  "Thả lỏng hàm. Thả lỏng hai bàn tay.",
+  "Hít vào, đếm bốn.",
+  "Thở ra dài hơn, đếm sáu.",
+  "Thật ra, cơ thể căng trước, rồi tâm mới căng theo.",
+  "Kinh Trung Bộ, diễn ý: thở ra, làm dịu toàn thân.",
+  "Bốn hơi như vậy. Rồi chỉ làm một việc thôi.",
+  "Vai bạn xuống chưa? Gửi đồng nghiệp đang căng nhất."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:9063506",
+   "items": [
+    {
+     "text": "VAI ĐANG NHÔ LÊN?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "thả xuống thử",
+     "at": [
+      0,
+      "thả"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 4,
+   "suffix": " HƠI THỞ",
+   "label": "THẢ HÀM · THẢ TAY",
+   "until": [
+    1,
+    "tay."
+   ],
+   "sub": {
+    "text": "VÀO 4 · RA 6",
+    "at": [
+     2,
+     "hít"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "clip": "pexels:12908966",
+   "items": [
+    {
+     "text": "THÂN CĂNG → TÂM CĂNG",
+     "at": [
+      4,
+      "cơ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "source",
+   "at": 5,
+   "source": "KINH TRUNG BỘ 118",
+   "ref": "Niệm hơi thở",
+   "snippet": "Thở ra, [[làm dịu toàn thân]].",
+   "hlAt": [
+    5,
+    "dịu"
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "SAU 4 HƠI",
+   "cards": [
+    {
+     "k": "CHỈ",
+     "v": "MỘT VIỆC THÔI",
+     "at": [
+      6,
+      "một"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "veil": 0.4,
+   "clip": "pexels:35170762",
+   "items": [
+    {
+     "text": "VAI XUỐNG CHƯA?",
+     "at": [
+      7,
+      "vai"
+     ],
+     "acc": true
+    },
+    {
+     "text": "gửi đồng nghiệp đang căng nhất",
+     "at": [
+      7,
+      "gửi"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/mn118/en/sujato"
+ ],
+ "description": "Vai bạn đang nhô lên, đúng không?\n\nNguồn: https://suttacentral.net/mn118/en/sujato"
+}

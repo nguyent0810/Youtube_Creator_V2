@@ -1,0 +1,384 @@
+{
+ "title": "Lớp thứ ba: tỷ lệ không phủ cả hóa đơn",
+ "lines": [
+  {
+   "t": "Tám mươi phần trăm, chín mươi lăm phần trăm và một trăm phần trăm là ba cột rất dễ nhìn.",
+   "p": 0.8
+  },
+  "Nhưng chúng là mức hưởng trong phạm vi quyền lợi bảo hiểm y tế.",
+  "Chúng không phải ba con dấu dán lên toàn bộ tờ hóa đơn trong tay người bệnh.",
+  {
+   "t": "Điều đó giải thích vì sao ví dụ giả định ba mươi triệu của Minh vẫn phải bóc từng lớp.",
+   "p": 1.0
+  },
+  "Tỷ lệ không tự nói hết.",
+  "Trong phép tính minh hoạ, hai mươi lăm triệu nằm trong phạm vi.",
+  "Lấy tám mươi phần trăm của hai mươi lăm triệu, quỹ trả hai mươi triệu.",
+  "Năm triệu còn lại là đồng chi trả của phần trong phạm vi.",
+  "Năm triệu ngoài phạm vi vẫn là một lớp khác.",
+  {
+   "t": "Vì thế, hai mươi triệu không phải tám mươi phần trăm của ba mươi triệu.",
+   "p": 1.0
+  },
+  "Phép nhân chỉ dùng cho phần được giả định.",
+  "Một trăm phần trăm cũng không có nghĩa mọi khoản trong bảy ngày đều biến mất.",
+  "Với người tham gia đủ năm năm liên tục, mức một trăm phần trăm trong phạm vi chỉ đến khi đồng thời đáp ứng các điều kiện luật định.",
+  "Trong đó có điều kiện khám chữa bệnh đúng quy định.",
+  "Còn có ngưỡng số tiền cùng chi trả trong năm vượt sáu lần mức tham chiếu.",
+  "Từ ngày một tháng bảy năm hai nghìn không trăm hai mươi sáu, mức tham chiếu là hai phẩy năm ba triệu đồng một tháng.",
+  {
+   "t": "Sáu lần mức này là hơn mười lăm phẩy mười tám triệu đồng cùng chi trả trong năm.",
+   "p": 1.0
+  },
+  "Con số năm năm, sáu lần, hai phẩy năm ba và mười lăm phẩy mười tám không phải bảng giá.",
+  "Chúng là các điều kiện và ngưỡng cần đặt cùng nhau.",
+  "Không thể tách một điều kiện ra.",
+  "Ví dụ giả định của Minh không khẳng định anh đạt ngưỡng đó.",
+  "Nó chỉ dùng mức tám mươi phần trăm để vẽ hai mươi triệu quỹ trả trên hai mươi lăm triệu trong phạm vi.",
+  "Sáu lần mức tham chiếu hai phẩy năm ba triệu tạo ngưỡng hơn mười lăm phẩy mười tám triệu.",
+  "Tỷ lệ đã rõ hơn.",
+  "Lớp kế tiếp là nơi, tuyến và điều kiện khiến cùng một tỷ lệ được đọc khác đi."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "TỶ LỆ KHÔNG PHỦ\nCẢ HÓA ĐƠN",
+   "sub": "MỨC HƯỞNG TRONG PHẠM VI",
+   "titleAt": 0,
+   "bg": "ai02"
+  },
+  {
+   "type": "bars",
+   "at": [
+    0,
+    "cột"
+   ],
+   "title": "BA MỨC HƯỞNG BHYT",
+   "unit": "% CHI PHÍ TRONG PHẠM VI",
+   "srcnote": "NGUỒN: BHXH VIỆT NAM",
+   "items": [
+    {
+     "k": "MỨC 80%",
+     "v": 80,
+     "lbl": "80%",
+     "at": [
+      0,
+      "cột"
+     ]
+    },
+    {
+     "k": "MỨC 95%",
+     "v": 95,
+     "lbl": "95%",
+     "at": [
+      0,
+      "dễ"
+     ]
+    },
+    {
+     "k": "MỨC 100%",
+     "v": 100,
+     "lbl": "100%",
+     "at": [
+      0,
+      "nhìn"
+     ],
+     "acc": true
+    }
+   ],
+   "calls": [
+    {
+     "i": 2,
+     "text": "TRONG PHẠM VI",
+     "at": [
+      1,
+      "phạm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "img": "ai03",
+   "at": 2,
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.5,
+    0.35
+   ],
+   "move": "pan",
+   "kin": [
+    {
+     "text": "KHÔNG DÁN LÊN CẢ HÓA ĐƠN",
+     "at": 2,
+     "acc": true
+    },
+    {
+     "text": "bóc từng lớp của 30 triệu",
+     "at": 3,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "waterfall",
+   "at": 5,
+   "title": "LỚP TRONG PHẠM VI",
+   "range": "VÍ DỤ GIẢ ĐỊNH · TRIỆU ĐỒNG",
+   "unit": "TRIỆU",
+   "start": {
+    "k": "TRONG PHẠM VI",
+    "v": 25.0,
+    "at": 5
+   },
+   "steps": [
+    {
+     "k": "QUỸ TRẢ 80%",
+     "v": -20.0,
+     "at": [
+      6,
+      "quỹ"
+     ]
+    }
+   ],
+   "calls": [
+    {
+     "i": 2,
+     "text": "CÒN 5 TRIỆU",
+     "at": [
+      7,
+      "đồng"
+     ]
+    }
+   ],
+   "end": {
+    "k": "ĐỒNG CHI TRẢ",
+    "at": 7,
+    "tone": "down"
+   }
+  },
+  {
+   "type": "stack",
+   "at": 8,
+   "title": "BA LỚP CỦA 30 TRIỆU",
+   "range": "VÍ DỤ GIẢ ĐỊNH · TRIỆU ĐỒNG",
+   "unit": "TRIỆU",
+   "keys": [
+    {
+     "k": "QUỸ TRẢ"
+    },
+    {
+     "k": "ĐỒNG CHI TRẢ"
+    },
+    {
+     "k": "NGOÀI PHẠM VI"
+    }
+   ],
+   "groups": [
+    {
+     "k": "HÓA ĐƠN",
+     "vals": [
+      20.0,
+      5.0,
+      5.0
+     ],
+     "at": 8
+    }
+   ],
+   "calls": [
+    {
+     "i": 0,
+     "text": "LỚP KHÁC: 5",
+     "at": [
+      8,
+      "lớp"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": [
+    9,
+    "tám"
+   ],
+   "title": "80% CỦA PHẦN NÀO?",
+   "unit": "TRIỆU ĐỒNG",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · TRIỆU ĐỒNG",
+   "items": [
+    {
+     "k": "80% × 25 TRIỆU",
+     "v": 20.0,
+     "lbl": "20 · ĐÚNG",
+     "at": [
+      9,
+      "tám"
+     ],
+     "acc": true
+    },
+    {
+     "k": "80% × 30 TRIỆU",
+     "v": 24.0,
+     "lbl": "24 · KHÔNG PHẢI",
+     "at": [
+      9,
+      "ba"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 11,
+   "myth": "100% = 7 NGÀY MIỄN HẾT",
+   "truth": "100% TRONG PHẠM VI · CÓ ĐIỀU KIỆN",
+   "strikeAt": [
+    11,
+    "không"
+   ],
+   "truthAt": 12
+  },
+  {
+   "type": "ledger",
+   "at": 12,
+   "title": "MỨC 100%: ĐỦ CÁC ĐIỀU KIỆN",
+   "srcnote": "NGUỒN: BHXH VIỆT NAM",
+   "rows": [
+    {
+     "k": "1",
+     "v": "THAM GIA 5 NĂM LIÊN TỤC",
+     "at": 12
+    },
+    {
+     "k": "2",
+     "v": "KCB ĐÚNG QUY ĐỊNH",
+     "at": 13
+    },
+    {
+     "k": "3",
+     "v": "CÙNG CHI TRẢ > 6 LẦN THAM CHIẾU",
+     "at": 14
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 15,
+   "from": 0,
+   "to": 2.53,
+   "suffix": " TRIỆU",
+   "label": "MỨC THAM CHIẾU MỖI THÁNG",
+   "srcnote": "NGUỒN: BHXH VIỆT NAM",
+   "sub": {
+    "text": "TỪ 01/07/2026",
+    "at": 15
+   }
+  },
+  {
+   "type": "bars",
+   "at": 16,
+   "title": "NGƯỠNG 6 LẦN THAM CHIẾU",
+   "unit": "TRIỆU ĐỒNG",
+   "srcnote": "NGUỒN: BHXH VIỆT NAM",
+   "items": [
+    {
+     "k": "THAM CHIẾU / THÁNG",
+     "v": 2.53,
+     "lbl": "2,53",
+     "at": 16
+    },
+    {
+     "k": "6 LẦN · CÙNG CHI TRẢ / NĂM",
+     "v": 15.18,
+     "lbl": "15,18",
+     "at": [
+      16,
+      "mười"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "KHÔNG PHẢI BẢNG GIÁ",
+     "at": 17,
+     "acc": true
+    },
+    {
+     "text": "5 năm · 6 lần · 2,53 · 15,18 đi cùng nhau",
+     "at": 18,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 20,
+   "vid": "36718656",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "KHÔNG KHẲNG ĐỊNH ĐẠT NGƯỠNG",
+     "at": 20,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "dots",
+   "at": [
+    21,
+    "vẽ"
+   ],
+   "title": "25 CHẤM = 25 TRIỆU TRONG PHẠM VI",
+   "total": 25,
+   "cols": 5,
+   "groups": [
+    {
+     "from": 0,
+     "n": 20,
+     "cls": "gold",
+     "label": "20 TRIỆU QUỸ TRẢ",
+     "at": [
+      21,
+      "vẽ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 22,
+   "from": 0,
+   "to": 15.18,
+   "suffix": " TRIỆU",
+   "label": "NGƯỠNG CÙNG CHI TRẢ TRONG NĂM",
+   "srcnote": "NGUỒN: BHXH VIỆT NAM",
+   "sub": {
+    "text": "6 × 2,53 TRIỆU",
+    "at": 22
+   }
+  },
+  {
+   "type": "question",
+   "at": 24,
+   "text": "NƠI · TUYẾN · ĐIỀU KIỆN\nĐỔI CÁCH ĐỌC THẾ NÀO?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "TỶ LỆ KHÔNG PHỦ CẢ HÓA ĐƠN"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.1
+ }
+}

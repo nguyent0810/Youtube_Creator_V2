@@ -1,0 +1,275 @@
+{
+ "title": "Cỗ máy không bao giờ làm một việc",
+ "lines": [
+  {
+   "t": "Hạ cánh không phải một phép tính.",
+   "p": 0.8
+  },
+  "Là hàng chục việc chạy gần như cùng lúc.",
+  "Đọc gia tốc kế. Lái động cơ. Cập nhật màn hình cho phi hành đoàn.",
+  {
+   "t": "Cứ hai giây, việc dẫn đường lại tính lại một lần.",
+   "p": 1.0
+  },
+  "Chiếc máy xử lý chúng bằng một hệ điều hành thu nhỏ, tên là Executive, nghĩa là bộ điều hành.",
+  "Nó xếp hàng các việc theo mức ưu tiên.",
+  "Cứ hai mươi phần nghìn giây, nó nhìn lại xem có việc nào quan trọng hơn không.",
+  {
+   "t": "Có thì việc đang chạy phải nhường.",
+   "p": 1.0
+  },
+  "Nhưng bộ nhớ ghi được quá ít.",
+  "Nên không việc nào được có chỗ riêng.",
+  "Mỗi việc khi bắt đầu được cấp một \"phòng\" gồm mười hai ô nhớ.",
+  "Xong việc thì trả phòng, mà cả máy chỉ có tám phòng.",
+  {
+   "t": "Một kỹ sư MIT nhớ lại, có những ô nhớ phải gánh tới bảy việc khác nhau, ở những lúc khác nhau.",
+   "p": 1.0
+  },
+  "Vậy nếu có việc xin phòng, mà phòng đã hết thì sao?",
+  {
+   "t": "Hãy nhớ câu hỏi này.",
+   "p": 1.0
+  },
+  "Các kỹ sư còn biết một điều: không được để máy chết giữa lúc đang đốt động cơ.",
+  "Nên họ viết riêng một phần khởi động lại.",
+  "Gặp sự cố, máy xoá sạch mọi lệnh đang phát ra ngoài: động cơ, bộ đẩy lái, đèn báo.",
+  {
+   "t": "Rồi nó tra bảng, dựng lại từng việc quan trọng, chạy tiếp từ gần chỗ cũ.",
+   "p": 1.0
+  },
+  "Trong một bài báo kỹ thuật năm 1975, Margaret Hamilton và đồng tác giả kể lại thiết kế này.",
+  "Phần mềm hệ thống của Apollo gồm các mô-đun chạy không đồng bộ: bộ lập lịch, mô-đun màn hình và mô-đun khởi động lại.",
+  "Bài báo dẫn tên Laning cho bộ lập lịch, và dẫn chính tên Hamilton cho mô-đun màn hình.",
+  "Họ viết rằng, nếu không thiết kế như vậy, ít nhất một chuyến bay Apollo đã thành thảm hoạ.",
+  {
+   "t": "Bài báo không nói đó là chuyến nào.",
+   "p": 1.0
+  },
+  "Phần khởi động lại ấy sắp phải làm việc năm lần liền."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "CỖ MÁY KHÔNG BAO GIỜ\nLÀM MỘT VIỆC",
+   "sub": "BỘ ĐIỀU HÀNH · EXECUTIVE",
+   "titleAt": [
+    0,
+    "Hạ"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "HÀNG CHỤC VIỆC",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "chạy gần như cùng lúc",
+     "at": [
+      1,
+      "chạy"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "VIỆC CỦA MÁY LÚC HẠ CÁNH",
+   "srcnote": "NASA SP-238 · MỤC 16 · TOMAYKO",
+   "rows": [
+    {
+     "k": "1",
+     "v": "ĐỌC GIA TỐC KẾ",
+     "at": 2
+    },
+    {
+     "k": "2",
+     "v": "LÁI ĐỘNG CƠ",
+     "at": [
+      2,
+      "lái"
+     ]
+    },
+    {
+     "k": "3",
+     "v": "CẬP NHẬT MÀN HÌNH",
+     "at": [
+      2,
+      "cập"
+     ]
+    }
+   ],
+   "total": {
+    "k": "MỖI 2 GIÂY",
+    "v": "DẪN ĐƯỜNG TÍNH LẠI 1 LẦN",
+    "at": 3
+   }
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "EXECUTIVE",
+   "sub": "BỘ ĐIỀU HÀNH · VIỆC QUAN TRỌNG HƠN ĐƯỢC CHẠY TRƯỚC"
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "from": 0,
+   "to": 20,
+   "suffix": " MILI GIÂY",
+   "until": [
+    6,
+    "nghìn"
+   ],
+   "label": "CỨ CHỪNG ĐÓ LẠI XEM CÓ VIỆC QUAN TRỌNG HƠN KHÔNG",
+   "sub": {
+    "text": "TOMAYKO · NASA CR-182505",
+    "at": 6
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 8,
+   "title": "MỘT VIỆC = MỘT “PHÒNG” NHỚ",
+   "srcnote": "TOMAYKO · GRUMMAN LAV-500-940 · Ô DÙNG CHUNG BẢY VIỆC: THEO HỒI KÝ MỘT KỸ SƯ MIT",
+   "rows": [
+    {
+     "k": "PHÒNG",
+     "v": "12 Ô NHỚ",
+     "at": [
+      10,
+      "mười"
+     ]
+    },
+    {
+     "k": "KHI XONG",
+     "v": "TRẢ PHÒNG",
+     "at": 11
+    },
+    {
+     "k": "CẢ MÁY",
+     "v": "CHỈ 8 PHÒNG",
+     "at": [
+      11,
+      "tám"
+     ]
+    },
+    {
+     "k": "Ô DÙNG CHUNG",
+     "v": "CÓ Ô GÁNH TỚI 7 VIỆC",
+     "at": [
+      12,
+      "bảy"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 13,
+   "text": "Phòng đã hết thì sao?\nHãy nhớ câu hỏi này."
+  },
+  {
+   "type": "photo",
+   "at": 15,
+   "img": "agc",
+   "tone": "bw",
+   "move": "out",
+   "veil": 0.55,
+   "kin": [
+    {
+     "text": "KHÔNG ĐƯỢC ĐỂ MÁY CHẾT",
+     "at": 15,
+     "acc": true
+    },
+    {
+     "text": "giữa lúc đang đốt động cơ",
+     "at": [
+      15,
+      "giữa"
+     ],
+     "sm": true
+    }
+   ],
+   "label": {
+    "k": "MÁY TÍNH DẪN ĐƯỜNG APOLLO",
+    "v": "BẢN TRƯNG BÀY",
+    "at": 15
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 17,
+   "title": "KHỞI ĐỘNG LẠI · BA BƯỚC",
+   "srcnote": "TOMAYKO · NASA CR-182505 · “HANDLING RESTARTS”",
+   "rows": [
+    {
+     "k": "1",
+     "v": "XOÁ MỌI LỆNH RA NGOÀI",
+     "at": 17
+    },
+    {
+     "k": "2",
+     "v": "TRA BẢNG ĐIỂM KHỞI ĐỘNG LẠI",
+     "at": [
+      18,
+      "tra"
+     ]
+    },
+    {
+     "k": "3",
+     "v": "DỰNG LẠI VIỆC QUAN TRỌNG",
+     "at": [
+      18,
+      "dựng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "source",
+   "at": 19,
+   "source": "AIAA 75-593 · M. HAMILTON & S. ZELDIN · 04/1975",
+   "ref": "“HIGHER ORDER SOFTWARE” · NTRS 19750042668",
+   "snippet": "phần mềm hệ thống Apollo: [[bộ lập lịch · mô-đun màn hình · mô-đun khởi động lại]]",
+   "hlAt": 20,
+   "seal": "DIỄN Ý TỪ BÀI BÁO · KHÔNG PHẢI TRÍCH NGUYÊN VĂN",
+   "sealAt": 22
+  },
+  {
+   "type": "kinetic",
+   "at": 24,
+   "items": [
+    {
+     "text": "SẮP PHẢI LÀM VIỆC",
+     "at": 24,
+     "sm": true
+    },
+    {
+     "text": "NĂM LẦN LIỀN",
+     "at": [
+      24,
+      "năm"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "CỖ MÁY KHÔNG BAO GIỜ LÀM MỘT VIỆC"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

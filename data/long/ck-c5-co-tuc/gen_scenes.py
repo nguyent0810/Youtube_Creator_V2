@@ -117,12 +117,12 @@ CH["ch06"] = {"hud": {"k": "GIỚI HẠN", "t": "KHI NÀO KHÔNG ĐÚNG VỚI B�
 
 Y4 = C4["youtube"]
 SPEC = {
-    "title": "Cổ Tức 10% Là 10% Của Cái Gì? Giải Mã Một Tờ Thông Báo Cổ Tức",
+    "title": "Cổ Tức 10% Mà Chỉ Được 2,5%? Đọc Đúng Thông Báo Cổ Tức",
     "channel": "CK", "accent": "#fbbf24", "master": True, "endcard": 25, "endcardSub": "VIDEO TIẾP THEO", "beat2": True,
     "acc": ["cổ", "tức", "mệnh", "giá", "bánh", "quyền", "thuế"],
     "say": SAY, "imgs": {}, "chapters": [f"ch{i:02d}" for i in range(7)],
     "youtube": {
-        "titles": ["Cổ Tức 10% Là 10% Của Cái Gì? Giải Mã Một Tờ Thông Báo Cổ Tức",
+        "titles": ["Cổ Tức 10% Mà Chỉ Được 2,5%? Đọc Đúng Thông Báo Cổ Tức",
                    "Vì Sao Giá Cổ Phiếu Tự Giảm Đúng Ngày Chia Cổ Tức? Ngày Không Hưởng Quyền Giải Thích Bằng Số",
                    "Mua Cổ Phiếu Để “Ăn Cổ Tức” Có Lời Không? Phép Tính Trên 1.000 Cổ Phiếu"],
         "summary": "Một tờ thông báo cổ tức có ba cụm chữ: “cổ tức bằng tiền 10%”, “ngày giao dịch không hưởng quyền”, “cổ tức bằng cổ phiếu”. Video giải "

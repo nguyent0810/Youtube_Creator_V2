@@ -1,0 +1,288 @@
+{
+ "theme": "ck",
+ "kicker": "BẢNG TRA",
+ "sub": "QUỸ KHẨN CẤP",
+ "title": "Quỹ khẩn cấp 3 tháng của bạn mất bao lâu? Bảng tra theo chi tiêu thiết yếu và số tiền để dành",
+ "description": "Bảng tra tự dò: tìm hàng chi tiêu thiết yếu mỗi tháng của bạn (không phải mức lương) và cột số tiền bạn để dành được mỗi tháng. Ô giao nhau là số tháng để có quỹ khẩn cấp bằng 3 tháng chi tiêu thiết yếu.\n\nCách tính: quỹ = 3 × chi tiêu thiết yếu; số tháng = quỹ ÷ số tiền để dành mỗi tháng, làm tròn lên, không tính lãi. Ví dụ: thiết yếu 8 triệu → quỹ 24 triệu; để dành 1,5 triệu/tháng → 16 tháng; 3 triệu/tháng → 8 tháng. “3–6 tháng” là quy tắc kinh nghiệm của tài chính cá nhân, không phải định luật.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là ví dụ giả định, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn; giọng đọc tổng hợp.\n\nBản đầy đủ (8 phút): https://youtu.be/iOxDRCkFbYY",
+ "tags": [
+  "quỹ khẩn cấp",
+  "bảng tra",
+  "tiết kiệm",
+  "để dành mỗi tháng",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "mười",
+  "sáu",
+  "tám",
+  "ba",
+  "thật"
+ ],
+ "lines": [
+  "Quỹ khẩn cấp của bạn mất bao lâu?",
+  "Tìm hàng chi tiêu thiết yếu của bạn, không phải mức lương.",
+  "Rồi dò sang cột số tiền bạn để dành mỗi tháng.",
+  "Thiết yếu tám triệu, để dành một triệu rưỡi: mười sáu tháng.",
+  "Để dành được ba triệu, chỉ còn tám tháng.",
+  "Vì quỹ bằng ba tháng thiết yếu, chia cho phần để dành.",
+  "Con số của bạn có thể dài. Nhưng nó có thật, và ngắn lại mỗi tháng."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MẤY THÁNG?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "tìm ô của bạn trong bảng",
+     "at": [
+      0,
+      "bao"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6326861",
+   "veil": 0.55
+  },
+  {
+   "type": "table",
+   "at": 1,
+   "title": "QUỸ 3 THÁNG MẤT MẤY THÁNG?",
+   "rowHead": "THIẾT YẾU ↓",
+   "colHead": "ĐỂ DÀNH MỖI THÁNG →",
+   "cols": [
+    "1 TR",
+    "1,5 TR",
+    "2 TR",
+    "3 TR"
+   ],
+   "rows": [
+    {
+     "k": "5 TR",
+     "sub": "QUỸ 15 TR",
+     "v": [
+      15,
+      10,
+      8,
+      5
+     ]
+    },
+    {
+     "k": "6 TR",
+     "sub": "QUỸ 18 TR",
+     "v": [
+      18,
+      12,
+      9,
+      6
+     ]
+    },
+    {
+     "k": "7 TR",
+     "sub": "QUỸ 21 TR",
+     "v": [
+      21,
+      14,
+      11,
+      7
+     ]
+    },
+    {
+     "k": "8 TR",
+     "sub": "QUỸ 24 TR",
+     "v": [
+      24,
+      16,
+      12,
+      8
+     ]
+    },
+    {
+     "k": "10 TR",
+     "sub": "QUỸ 30 TR",
+     "v": [
+      30,
+      20,
+      15,
+      10
+     ]
+    },
+    {
+     "k": "12 TR",
+     "sub": "QUỸ 36 TR",
+     "v": [
+      36,
+      24,
+      18,
+      12
+     ]
+    }
+   ],
+   "hl": [
+    {
+     "r": 3,
+     "at": [
+      1,
+      "của"
+     ]
+    },
+    {
+     "c": 1,
+     "at": [
+      2,
+      "cột"
+     ]
+    },
+    {
+     "r": 3,
+     "at": [
+      3,
+      "tám"
+     ]
+    },
+    {
+     "r": 3,
+     "c": 1,
+     "at": [
+      3,
+      "rưỡi"
+     ]
+    },
+    {
+     "r": 3,
+     "c": 3,
+     "at": [
+      4,
+      "ba"
+     ],
+     "until": 5
+    }
+   ],
+   "foot": "DỪNG HÌNH ĐỂ TRA · LƯU LẠI",
+   "note": "SỐ THÁNG · VÍ DỤ · KHÔNG TÍNH LÃI · LÀM TRÒN LÊN"
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "VÌ SAO RA SỐ ẤY",
+   "cards": [
+    {
+     "k": "QUỸ 3 THÁNG",
+     "v": "3 × THIẾT YẾU",
+     "at": 5
+    },
+    {
+     "k": "SỐ THÁNG",
+     "v": "QUỸ ÷ ĐỂ DÀNH",
+     "at": [
+      5,
+      "chia"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "at": 6,
+   "title": "QUỸ 3 THÁNG MẤT MẤY THÁNG?",
+   "rowHead": "THIẾT YẾU ↓",
+   "colHead": "ĐỂ DÀNH MỖI THÁNG →",
+   "cols": [
+    "1 TR",
+    "1,5 TR",
+    "2 TR",
+    "3 TR"
+   ],
+   "rows": [
+    {
+     "k": "5 TR",
+     "sub": "QUỸ 15 TR",
+     "v": [
+      15,
+      10,
+      8,
+      5
+     ]
+    },
+    {
+     "k": "6 TR",
+     "sub": "QUỸ 18 TR",
+     "v": [
+      18,
+      12,
+      9,
+      6
+     ]
+    },
+    {
+     "k": "7 TR",
+     "sub": "QUỸ 21 TR",
+     "v": [
+      21,
+      14,
+      11,
+      7
+     ]
+    },
+    {
+     "k": "8 TR",
+     "sub": "QUỸ 24 TR",
+     "v": [
+      24,
+      16,
+      12,
+      8
+     ]
+    },
+    {
+     "k": "10 TR",
+     "sub": "QUỸ 30 TR",
+     "v": [
+      30,
+      20,
+      15,
+      10
+     ]
+    },
+    {
+     "k": "12 TR",
+     "sub": "QUỸ 36 TR",
+     "v": [
+      36,
+      24,
+      18,
+      12
+     ]
+    }
+   ],
+   "foot": "DỪNG HÌNH ĐỂ TRA · LƯU LẠI",
+   "note": "SỐ THÁNG · VÍ DỤ · KHÔNG TÍNH LÃI · LÀM TRÒN LÊN"
+  }
+ ],
+ "sources": [
+  "https://youtu.be/iOxDRCkFbYY"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.3,
+   "1": 0.22,
+   "2": 0.3,
+   "3": 0.25,
+   "4": 0.4,
+   "5": 0.5
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

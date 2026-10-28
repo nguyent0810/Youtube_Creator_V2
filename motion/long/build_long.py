@@ -60,7 +60,7 @@ VOICE = "Anh Khôi"
 QUOTE_VOICE = "Minh Đức"     # câu {"q": 1}: lời trích nguyên văn/diễn ý, giọng khác + lọc radio
 ASK_VOICE = None              # câu {"ask": 1}: "người hỏi" chen ngang (câu hỏi của người xem) -- giọng khác, KHÔNG lọc radio
 UA = {"User-Agent": "yt-factory/1.0 (documentary research; contact via channel)"}
-FREE = re.compile(r"public domain|^pd|cc0|no restrictions|^cc by(-sa)? ?\d|^cc-by", re.I)
+FREE = re.compile(r"public domain|^pd|cc0|no restrictions|^cc by(-sa)? ?\d|^cc-by|^attribution$", re.I)   # "Attribution" = {{PD-LosAlamos}}/{{Attribution}}: chỉ buộc ghi nguồn, không SA (23/10/2026)
 # mastering giọng đọc (đã duyệt ở bản thử Mafia): cắt ù, bớt đục 200Hz, sáng 3.2kHz, khử xì, nén nhẹ.
 # Chỉ áp ở bước trộn — mốc chữ vẫn lấy từ voice.wav thô. spec "master": false để tắt (Yakuza đã đăng bản thô).
 VOICE_FX = ("highpass=f=70,equalizer=f=200:t=q:w=1:g=-2,equalizer=f=3200:t=q:w=1.4:g=2.5,deesser=i=0.4,"
@@ -82,7 +82,8 @@ SAY = {}   # chữ hiển thị -> cách đọc cho TTS (spec["say"]); phụ đ�
 def _channels() -> dict:
     sys.path.insert(0, str(ROOT / "motion" / "stier"))
     import themes
-    return {"CL": {"voice": "Anh Khôi", "quote": "Minh Đức"},
+    # 23/10/2026: CL có mastering giọng riêng (themes.VOICE_FX_CL, chống "sẹt sẹt"); kênh khác vẫn VOICE_FX
+    return {"CL": {"voice": "Anh Khôi", "quote": "Minh Đức", "voice_fx": themes.VOICE_FX_CL},
             "MIM": {"voice": "Thanh Bình", "quote": "Ngọc Huyền", "theme": "lab", "brand": "MIND IN THE MACHINE",
                     "accent": "#22d3ee", "pools": themes.THEMES["mim"]["pools"], "no_sa": True},
             # Biểu Đồ Biết Nói (tài chính cá nhân): theme "chart" (chart.js: brand, candles, race, breadth, basket), vàng = giá tham chiếu
@@ -465,9 +466,13 @@ def plan(ch: dict, lines: list[dict], dur: float) -> list[dict]:
                 r["animate"].setdefault("until", round(max(r["animate"]["at"] + 0.5, min(t1 - 0.6, r["animate"]["at"] + 4)), 3))
             (chartdata.attach_breadth if ty == "breadth" else chartdata.attach_basket)(r)
         if ty == "date":
+            if sum(c.isalpha() for c in r["date"]) > 1:   # mỗi ký tự không phải số là ô 44px -> chữ chồng nhau ("GIỮA 2027", CK E6 23/10/2026)
+                print(f"  ! WARNING cảnh date '{r['date']}': chữ cái trong 'date' chồng nhau — để chữ vào 'day' (vd day 'GIỮA NĂM', date '2027')")
             r.setdefault("dayAt", t0 + 0.15)
             ng = len("".join(c if c.isdigit() else " " for c in r["date"]).split())
             r.setdefault("groupAt", [t0 + 0.4 + 0.3 * g for g in range(ng)])
+            if isinstance(r.get("sub"), str):   # engine đọc sub.text/sub.at; chuỗi trần hiện chữ "undefined" (retro 23/10/2026: CK E4/E5/E6)
+                r["sub"] = {"text": r["sub"], "at": round(r["groupAt"][-1] + 0.6 if r["groupAt"] else t0 + 0.6, 3)}
         if ty == "quote":
             if "typeAt" in r:
                 r["at"] = r.pop("typeAt")
@@ -545,6 +550,17 @@ def plan(ch: dict, lines: list[dict], dur: float) -> list[dict]:
         if ty == "ledger":
             for k, q in enumerate(r.get("rows") or []):
                 q.setdefault("at", round(t0 + 0.6 + 0.5 * k, 3))
+        if ty in ("waterfall", "stack"):   # chart.js 27/10/2026: bước/cột chưa neo thì hiện lần lượt sau đầu cảnh
+            if ty == "waterfall":
+                r["start"].setdefault("at", round(t0 + 0.4, 3))
+            for k, q in enumerate(r.get("steps" if ty == "waterfall" else "groups") or []):
+                q.setdefault("at", round(t0 + 0.9 + 0.6 * k, 3))
+            if ty == "waterfall" and r.get("end"):
+                last = max([q["at"] for q in r.get("steps") or []] + [r["start"]["at"]])
+                r["end"].setdefault("at", round(min(t1 - 0.5, last + 0.7), 3))
+        if ty == "heat":
+            r.setdefault("drawAt", round(t0 + 0.5, 3))
+            r.setdefault("until", round(max(r["drawAt"] + 0.3, min(t1 - 1.2, r["drawAt"] + 0.35 * len(r["cells"]))), 3))
     assign_beats(sc, ch, lines)
     return sc
 
@@ -559,9 +575,9 @@ LATE_MAX = 1.0
 # thẻ chương, logo, màn kết, câu hỏi, giấy trích, sổ, khung biểu đồ (tiêu đề t0+0.1), cửa sổ chat, ảnh in/ảnh, hồ sơ, bản đồ.
 FRAME_TYPES = {"chapter", "brand", "endcard", "question", "quote", "ledger", "bars", "chat", "print", "photo", "broll", "file",
                "candles", "race", "breadth", "basket", "book", "map", "guess", "nn", "go", "qr", "barcode", "flap", "captcha", "keyboard",
-               "myth", "source", "units", "chess"}   # 3 cuối: lab.js (khung ≤ t0+0.2)
+               "myth", "source", "units", "chess", "waterfall", "heat", "stack"}   # 3 cuối: lab.js (khung ≤ t0+0.2)
 _NOT_START = {"t0", "t1", "until", "voiceEnd", "endAt", "typeDur", "burnDur", "dur"}
-_DATA_LISTS = {"dots", "rects", "vals", "bars", "candles", "ohlc", "series"}     # mảng số liệu biểu đồ, không phải mốc
+_DATA_LISTS = {"dots", "rects", "vals", "bars", "candles", "ohlc", "series", "cells", "keys"}     # mảng số liệu biểu đồ, không phải mốc
 
 
 def unresolved_cues(o, path=""):
@@ -627,6 +643,16 @@ def bars_collide(scenes) -> list[str]:
             w = len(sc["title"]) * 26.8 + len(sc["unit"]) * 17.1 + 24     # đo trên khung D3 ch02: 26.7 / 17.1 px mỗi ký tự, chừa 24px
             if w > 1620:
                 out.append(f"{sc['type']}#{k} tiêu đề {len(sc['title'])} + chú thích {len(sc['unit'])} ký tự ≈ {w:.0f}px > 1620px")
+        # Nhãn trục cột (.bk 24px mono +.1em, nowrap) trong ô 1620/n px: dài là đè nhãn cột bên (retro 23/10/2026: CK E5 ch01
+        # "MỖI NGƯỜI PHỤ THUỘC · 2025" chồng nhãn 2026; A2 ch04 8 cột nhãn 16–22 ký tự).
+        if sc["type"] == "bars" and sc.get("items"):
+            slot, it = 1620 / len(sc["items"]), sc["items"]
+            ws = [len(str(q.get("k", ""))) * 16.8 for q in it]          # đo trên khung E5 ch01: ~16,8 px mỗi ký tự
+            for a in range(len(it) - 1):                                # hai nhãn kề nhau, mỗi nhãn canh giữa ô của nó
+                if (ws[a] + ws[a + 1]) / 2 > slot - 16:
+                    out.append(f"bars#{k} nhãn cột '{it[a].get('k')}' + '{it[a + 1].get('k')}' chồng nhau (ô {slot:.0f}px)")
+            if ws and (ws[0] / 2 > slot / 2 + 140 or ws[-1] / 2 > slot / 2 + 140):   # nhãn đầu/cuối tràn mép khung
+                out.append(f"bars#{k} nhãn cột đầu/cuối tràn mép khung")
     return out
 
 
@@ -1001,7 +1027,7 @@ def mix_chapter(ch, cd: Path, dur: float, quiet=(), master=True, items=None):
         items = [{**b, "start": 0.0, "end": dur}] if b.get("file") else []
     duck = "".join(f",volume=enable='between(t,{a - 0.1:.2f},{z:.2f})':volume=0.12" for a, z in quiet)
     inputs = ["-i", str(cd / "voice.wav"), "-i", str(cd / "sfx.wav")]
-    fc = "[0:a]aresample=48000," + (VOICE_FX + "," if master else "") + "pan=stereo|c0=c0|c1=c0,apad," + ("asplit=3[v][vk][vk2];" if items else "asplit=2[v][vk];") + "[1:a]volume=0.42[s0];[s0][vk]sidechaincompress=threshold=0.05:ratio=4:attack=20:release=300[s];"
+    fc = "[0:a]aresample=48000," + (CHAN.get("voice_fx", VOICE_FX) + "," if master else "") + "pan=stereo|c0=c0|c1=c0,apad," + ("asplit=3[v][vk][vk2];" if items else "asplit=2[v][vk];") + "[1:a]volume=0.42[s0];[s0][vk]sidechaincompress=threshold=0.05:ratio=4:attack=20:release=300[s];"
     if items:
         tags = []
         for k, q in enumerate(items):
@@ -1036,6 +1062,13 @@ def render_key(topic, name, od, draft) -> str:
             hsh.update((HF / "assets" / "engine" / n).read_bytes())
     for vid in sorted(set(re.findall(r"broll/(\d+(?:fit)?)\.mp4", comp.read_text(encoding="utf-8")))):
         hsh.update(vid.encode())
+    # 26/10/2026 (học từ vietneu-tts 08c3d94): thay ảnh mà giữ tên thì key cũ vẫn khớp -> chương cũ được dùng lại.
+    # Băm nội dung ảnh local; clip thì chỉ băm cỡ file (đọc cả clip mỗi lần quá chậm).
+    refs = (od / name / "data.js").read_text(encoding="utf-8") + comp.read_text(encoding="utf-8")
+    for rel in sorted(set(re.findall(r"""["'(]((?:assets|broll)/[^"')]+\.(?:jpe?g|png|webp|gif|svg|mp4|webm))""", refs, re.I))):
+        f = HF / rel
+        if f.is_file():
+            hsh.update(rel.encode() + (str(f.stat().st_size).encode() if f.suffix.lower() in (".mp4", ".webm") else f.read_bytes()))
     return hsh.hexdigest()[:16]
 
 
@@ -1096,16 +1129,38 @@ def do_final(topic):
     # hình render làm tròn lên khung 1/30s -> đệm tiếng từng chương cho ĐÚNG bằng hình, không thì lệch cộng dồn (~0,2s ở chương cuối)
     for n, _ in chs:
         vd = probe_dur(od / n / "silent.mp4")
-        r = run([FFMPEG, "-v", "error", "-y", "-i", str(od / n / "mix.wav"), "-af", f"apad=whole_dur={vd:.6f}", "-t", f"{vd:.6f}", str(od / n / "mixpad.wav")])
+        # 23/10/2026: fade 5 ms hai đầu mỗi chương -- chỗ nối không còn bước nhảy ("tách" đầu chương, CL lẫn MIM)
+        af = f"apad=whole_dur={vd:.6f},afade=t=in:d=0.005,afade=t=out:st={max(0.0, vd - 0.005):.6f}:d=0.005"
+        r = run([FFMPEG, "-v", "error", "-y", "-i", str(od / n / "mix.wav"), "-af", af, "-t", f"{vd:.6f}", str(od / n / "mixpad.wav")])
         if r.returncode != 0:
             raise SystemExit(r.stderr[-1500:])
+    # 23/10/2026: lint âm thanh TRƯỚC khi ghép (docs/pm/2026-10-22-cl-am-thanh-set-set.md S4): CL vượt ngưỡng -> chặn, kênh khác cảnh báo
+    import audio_lint as AL
+    block = spec.get("channel", "CL") == "CL"
+    try:
+        err = AL.check_parts([od / n / "mixpad.wav" for n, _ in chs], [od / n / "sfx.wav" for n, _ in chs if (od / n / "sfx.wav").exists()])
+        verr, vwarn, _ = AL.check_voices([(n, od / n / "voice.wav") for n, _ in chs],
+                                         CHAN.get("voice_fx", VOICE_FX) if spec.get("master", True) else None, FFMPEG)
+    except Exception as e:      # noqa: BLE001 — công cụ đo hỏng: CL chặn, kênh khác chỉ cảnh báo
+        if block:
+            raise
+        err, verr, vwarn = [], [], [f"không đo được: {e}"]
+    if not spec.get("master", True):   # "master": false (Yakuza) = cố ý giữ giọng thô -> buzz chỉ cảnh báo
+        vwarn, verr = vwarn + verr, []
+    AL.report(topic, err + verr, vwarn, block)
     alst = od / "concat_a.txt"
     alst.write_text("".join(f"file '{(od / n / 'mixpad.wav').as_posix()}'\n" for n, _ in chs), encoding="utf-8")
     r = run([FFMPEG, "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(lst), "-f", "concat", "-safe", "0", "-i", str(alst),
-             "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
+             "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-af", "loudnorm=I=-14:TP=-1.5:LRA=11,aresample=192000,alimiter=limit=0.78:level=0,aresample=48000",   # 26/10/2026: chặn đỉnh thật ở 4x (5/25 Long từng vọt > −1 dBTP sau AAC; KAL đã thử limit 0.78 -> −1,7 dBTP, −14,2 LUFS)
+             "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
              "-shortest", "-movflags", "+faststart", str(od / "final.mp4")])
     if r.returncode != 0:
         raise SystemExit(r.stderr[-2000:])
+    ferr, fm = AL.check_final(od / "final.mp4", FFMPEG)   # 23/10/2026: true peak ≤ −1 dBTP sau AAC
+    print(f"  audio_lint: true peak {fm['tp']} dBTP, {fm['lufs']} LUFS", flush=True)
+    if ferr and block:
+        (od / "final.mp4").unlink(missing_ok=True)   # chặn thì không để final hỏng nằm lại cho chuỗi đăng (như 15/10)
+    AL.report(topic, ferr, [], block)
     print(od / "final.mp4", f"{probe_dur(od / 'final.mp4') / 60:.2f} phút")
 
 

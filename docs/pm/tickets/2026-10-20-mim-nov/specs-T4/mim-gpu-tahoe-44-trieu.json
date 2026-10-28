@@ -1,0 +1,194 @@
+{
+ "theme": "mim",
+ "title": "Tháng 12/2012: công ty ba người, chưa có sản phẩm, được trả giá tới 44 triệu đô",
+ "description": "Theo nhà báo Cade Metz (sách Genius Makers, trích trên Wired 2021): tháng 12/2012, ở khách sạn sòng bạc bên hồ Tahoe, công ty của Geoffrey Hinton, Alex Krizhevsky và Ilya Sutskever được đấu giá kín. Bốn công ty trả giá từ xa, mỗi lần tăng ít nhất một triệu đô; Hinton dừng cuộc đấu giá ở 44 triệu đô và chọn Google. Giọng đọc tổng hợp; ảnh Hinton: Wikimedia Commons (CC BY 2.0).\n\nBản đầy đủ: https://youtu.be/<ID-mim-ai-gpu> (công khai từ 20:00 ngày 16/11)",
+ "tags": [
+  "geoffrey hinton",
+  "alexnet",
+  "đấu giá",
+  "dnnresearch",
+  "trí tuệ nhân tạo",
+  "gpu",
+  "nvidia",
+  "card đồ hoạ",
+  "mind in the machine"
+ ],
+ "kicker": "NGÀNH AI",
+ "sub": "TAHOE · 2012",
+ "acc": [
+  "ba",
+  "bốn",
+  "mươi",
+  "triệu"
+ ],
+ "lines": [
+  "Ba người, bốn mươi bốn triệu đô.",
+  "Theo nhà báo Cade Metz, tháng mười hai năm hai nghìn không trăm mười hai, bên hồ Tahoe, có một cuộc đấu giá kín.",
+  "Món hàng là công ty chưa có sản phẩm, chỉ có ba người: Hinton, Alex Krizhevsky, Ilya Sutskever.",
+  "Bốn công ty trả giá từ xa, mỗi lần tăng ít nhất một triệu đô.",
+  "Khi giá chạm bốn mươi bốn triệu đô, Hinton dừng cuộc đấu giá và chọn về với Google.",
+  "Thứ được định giá không phải một sản phẩm, mà là cách dạy máy nhìn.",
+  "Ba người, và một cách dạy máy nhìn, đáng ít nhất bốn mươi bốn triệu đô."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "3 NGƯỜI",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "44 TRIỆU ĐÔ",
+     "at": [
+      0,
+      "bốn"
+     ]
+    }
+   ],
+   "clip": "pexels:7609195",
+   "veil": 0.55
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "ĐẤU GIÁ KÍN · BÊN HỒ TAHOE",
+   "cards": [
+    {
+     "k": "THÁNG",
+     "v": "12 / 2012",
+     "at": [
+      1,
+      "tháng"
+     ]
+    },
+    {
+     "k": "MÓN HÀNG",
+     "v": "CÔNG TY 3 NGƯỜI",
+     "at": [
+      2,
+      "Món"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "THEO CADE METZ · GENIUS MAKERS (2021)"
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "CÁCH TRẢ GIÁ",
+   "rows": [
+    {
+     "k": "BÊN MUA",
+     "v": "4 CÔNG TY",
+     "at": [
+      3,
+      "Bốn"
+     ]
+    },
+    {
+     "k": "TRẢ GIÁ",
+     "v": "TỪ XA",
+     "at": [
+      3,
+      "từ"
+     ]
+    },
+    {
+     "k": "MỖI LẦN TĂNG",
+     "v": "≥ 1 TRIỆU ĐÔ",
+     "at": [
+      3,
+      "mỗi"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 0,
+   "to": 44,
+   "suffix": " TRIỆU ĐÔ",
+   "label": "GIÁ KHI HINTON DỪNG ĐẤU GIÁ",
+   "until": [
+    4,
+    "triệu"
+   ],
+   "sub": {
+    "text": "MỖI LẦN TĂNG ÍT NHẤT 1 TRIỆU ĐÔ",
+    "at": [
+     4,
+     "Khi"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": [
+    4,
+    "Hinton"
+   ],
+   "img": "hinton",
+   "mode": "print",
+   "tone": "color",
+   "label": {
+    "text": "GEOFFREY HINTON · ẢNH CC BY 2.0",
+    "at": [
+     4,
+     "dừng"
+    ],
+    "y": 1290
+   },
+   "stamp": {
+    "text": "CHỌN GOOGLE",
+    "at": [
+     4,
+     "Google"
+    ],
+    "x": 200,
+    "y": 1090
+   }
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "THỨ ĐƯỢC ĐỊNH GIÁ:\nCÁCH DẠY MÁY NHÌN",
+   "sub": "KHÔNG PHẢI MỘT SẢN PHẨM"
+  }
+ ],
+ "sources": [
+  "Cade Metz, Genius Makers (2021), qua Wired 2021 (đã đối chiếu ở factcheck.md dòng 9)",
+  "https://spectrum.ieee.org/alexnet-source-code"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6,
+   "0": 0.35
+  }
+ },
+ "say": {
+  "hinton": "Hin-tơn",
+  "krizhevsky": "Cri-giép-xki",
+  "sutskever": "Xút-xke-vơ",
+  "tahoe": "Ta-hô",
+  "google": "Gu-gồ",
+  "metz": "Mét",
+  "ng": "En-gờ",
+  "cade": "Kết"
+ },
+ "imgs": {
+  "hinton": "File:Geoffrey Hinton at Collision 2024 in Toronto (cropped).jpg"
+ }
+}

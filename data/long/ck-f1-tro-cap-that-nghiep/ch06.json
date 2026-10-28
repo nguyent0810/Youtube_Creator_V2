@@ -1,0 +1,444 @@
+{
+ "title": "Tháng cuối, và điểm dừng",
+ "lines": [
+  {
+   "t": "Tháng một, chị Lan thiếu bốn triệu trong ví dụ giả định.",
+   "p": 0.8
+  },
+  "Tháng hai, đường tích lũy là tám triệu.",
+  "Tháng ba là mười hai triệu, và tháng bốn là mười sáu triệu.",
+  {
+   "t": "Đường này không nói chị Lan phải chi như vậy.",
+   "p": 1.0
+  },
+  "Tháng năm là hai mươi triệu thiếu tích lũy.",
+  "Tháng sáu là hai mươi bốn triệu.",
+  "Tháng bảy là hai mươi tám triệu.",
+  {
+   "t": "Bảy điểm trên biểu đồ đường đều đến từ bốn triệu nhân số tháng.",
+   "p": 1.0
+  },
+  "Trong bảy tháng ấy, người đang hưởng được cơ quan bảo hiểm xã hội đóng bảo hiểm y tế từ Quỹ bảo hiểm thất nghiệp, theo luật.",
+  "Đó là một dòng quyền lợi khác với cột chín triệu.",
+  "Trong sáu tháng đầu năm hai nghìn không trăm hai mươi sáu, hệ thống đã tiếp nhận ba trăm ba mươi hai nghìn sáu trăm hai mươi chín quyết định hưởng để chi trả.",
+  {
+   "t": "Đó là số quyết định của toàn hệ thống, không phải số người thất nghiệp duy nhất.",
+   "p": 1.0
+  },
+  "Đồng hồ cũng có điểm dừng sớm.",
+  "Khi đang hưởng mà có việc làm, người lao động có trách nhiệm thông báo trong ba ngày làm việc kể từ ngày có việc làm.",
+  "Một hợp đồng từ đủ một tháng là một trường hợp được xác định có việc làm theo quy định.",
+  {
+   "t": "Trong ví dụ giả định, nếu chị Lan có việc làm ở tháng năm, biểu đồ không vẽ tiếp như trợ cấp tự chạy mãi.",
+   "p": 1.0
+  },
+  "Luật còn nêu các trường hợp chấm dứt khác, gồm tự đề nghị chấm dứt hoặc có việc làm thuộc diện bảo hiểm bắt buộc.",
+  "Từ chối việc làm được giới thiệu hai lần mà không có lý do chính đáng cũng là một mốc được luật nêu.",
+  "Hồ sơ được giải quyết tại tổ chức dịch vụ việc làm nơi người lao động có nhu cầu nhận trợ cấp.",
+  {
+   "t": "Không cần suy ngược nơi đó từ nơi làm việc cũ.",
+   "p": 1.0
+  },
+  "Vậy vòng chính khép lại ở đúng thác tiền mở đầu.",
+  "Chín triệu mỗi tháng, chi phí mười ba triệu, thiếu bốn triệu; bảy tháng thành hai mươi tám triệu trong ví dụ giả định.",
+  "Đồng hồ hữu ích vì nó cho thấy cả bốn cửa, mười ngày chờ, ngày thứ mười một, bảy tháng và điểm dừng khi có việc.",
+  "Nội dung giáo dục, không phải tư vấn đầu tư."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "PHẦN CUỐI",
+   "title": "THÁNG CUỐI\nVÀ ĐIỂM DỪNG",
+   "sub": "ĐƯỜNG THIẾU TỚI 28 TRIỆU",
+   "vid": "9841386",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": 0
+  },
+  {
+   "type": "race",
+   "at": 1,
+   "abs": true,
+   "unit": "TRIỆU",
+   "xlab": "THÁNG ",
+   "xstep": 1,
+   "dates": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "title": "THIẾU CỘNG DỒN TỪNG THÁNG",
+   "range": "THIẾU CỘNG DỒN · VÍ DỤ GIẢ ĐỊNH",
+   "series": [
+    {
+     "label": "THIẾU CỘNG DỒN",
+     "color": "#ef4444",
+     "vals": [
+      4.0,
+      8.0,
+      12.0,
+      16.0
+     ]
+    }
+   ],
+   "calls": [
+    {
+     "i": 1,
+     "text": "THÁNG 2: 8",
+     "at": 1
+    },
+    {
+     "i": 3,
+     "text": "THÁNG 4: 16",
+     "at": [
+      2,
+      "bốn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "img": "ai06",
+   "at": 3,
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.5,
+    0.21
+   ],
+   "move": "in"
+  },
+  {
+   "type": "bars",
+   "at": 4,
+   "title": "BA THÁNG CUỐI",
+   "unit": "TRIỆU THIẾU · VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "THÁNG 5",
+     "v": 20.0,
+     "lbl": "20",
+     "at": 4
+    },
+    {
+     "k": "THÁNG 6",
+     "v": 24.0,
+     "lbl": "24",
+     "at": 5
+    },
+    {
+     "k": "THÁNG 7",
+     "v": 28.0,
+     "lbl": "28",
+     "at": 6,
+     "acc": true
+    }
+   ],
+   "calls": [
+    {
+     "i": 2,
+     "text": "28 TRIỆU",
+     "at": 6
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "from": 0,
+   "to": 28.0,
+   "suffix": " TRIỆU",
+   "label": "4 TRIỆU × 7 THÁNG",
+   "sub": {
+    "text": "VÍ DỤ GIẢ ĐỊNH",
+    "at": 7
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 8,
+   "title": "NGOÀI CỘT 9 TRIỆU",
+   "srcnote": "LUẬT VIỆC LÀM 74/2025/QH15 · HIỆU LỰC 01/01/2026",
+   "rows": [
+    {
+     "k": "BẢO HIỂM Y TẾ",
+     "v": "QUỸ BHTN ĐÓNG THAY",
+     "at": 8
+    },
+    {
+     "k": "LÀ QUYỀN LỢI",
+     "v": "KHÔNG CỘNG VÀO 9 TRIỆU",
+     "at": 9
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 10,
+   "from": 0,
+   "to": 332629,
+   "label": "QUYẾT ĐỊNH HƯỞNG · 6 THÁNG ĐẦU 2026",
+   "sub": {
+    "text": "TOÀN HỆ THỐNG · KHÔNG PHẢI SỐ NGƯỜI",
+    "at": 11
+   },
+   "srcnote": "NGUỒN: BẢO HIỂM XÃ HỘI VIỆT NAM"
+  },
+  {
+   "type": "broll",
+   "vid": "9841386",
+   "at": 12,
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "ĐIỂM DỪNG SỚM",
+     "at": 12,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 13,
+   "title": "KHI CÓ VIỆC LÀM",
+   "items": [
+    {
+     "year": "CÓ VIỆC",
+     "text": "đang hưởng",
+     "at": 13
+    },
+    {
+     "year": "3 NGÀY",
+     "text": "phải thông báo",
+     "at": [
+      13,
+      "ba"
+     ]
+    },
+    {
+     "year": "≥ 1 THÁNG",
+     "text": "hợp đồng = có việc",
+     "at": 14
+    }
+   ]
+  },
+  {
+   "type": "race",
+   "at": 15,
+   "abs": true,
+   "unit": "TRIỆU",
+   "xlab": "THÁNG ",
+   "xstep": 1,
+   "dates": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "title": "NẾU CÓ VIỆC Ở THÁNG 5",
+   "range": "THIẾU CỘNG DỒN · VÍ DỤ GIẢ ĐỊNH",
+   "series": [
+    {
+     "label": "THIẾU CỘNG DỒN",
+     "color": "#ef4444",
+     "vals": [
+      4.0,
+      8.0,
+      12.0,
+      16.0,
+      20.0
+     ]
+    }
+   ],
+   "calls": [
+    {
+     "i": 4,
+     "text": "DỪNG Ở THÁNG 5",
+     "at": [
+      15,
+      "năm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 16,
+   "title": "CÁC ĐIỂM CHẤM DỨT KHÁC",
+   "srcnote": "LUẬT VIỆC LÀM 74/2025/QH15 · HIỆU LỰC 01/01/2026",
+   "rows": [
+    {
+     "k": "1",
+     "v": "TỰ ĐỀ NGHỊ CHẤM DỨT",
+     "at": 16
+    },
+    {
+     "k": "2",
+     "v": "CÓ VIỆC CÓ BẢO HIỂM BẮT BUỘC",
+     "at": [
+      16,
+      "việc"
+     ]
+    },
+    {
+     "k": "3",
+     "v": "TỪ CHỐI VIỆC 2 LẦN",
+     "at": 17
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "img": "ai03",
+   "at": 18,
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.4,
+    0.24
+   ],
+   "move": "pan"
+  },
+  {
+   "type": "waterfall",
+   "at": 20,
+   "title": "VÒNG KHÉP LẠI: 13 − 9 = 4",
+   "range": "TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH",
+   "unit": "TRIỆU",
+   "start": {
+    "k": "CHI PHÍ",
+    "v": 13,
+    "at": 20
+   },
+   "steps": [
+    {
+     "k": "TRỢ CẤP BÙ",
+     "v": -9.0,
+     "at": 21
+    }
+   ],
+   "end": {
+    "k": "CÒN THIẾU",
+    "at": 21
+   },
+   "calls": [
+    {
+     "i": 2,
+     "text": "THIẾU 4 TRIỆU",
+     "at": 21
+    }
+   ]
+  },
+  {
+   "type": "race",
+   "at": [
+    21,
+    "bảy"
+   ],
+   "abs": true,
+   "unit": "TRIỆU",
+   "xlab": "THÁNG ",
+   "xstep": 1,
+   "dates": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "title": "THIẾU CỘNG DỒN TỚI THÁNG 7",
+   "range": "THIẾU CỘNG DỒN · VÍ DỤ GIẢ ĐỊNH",
+   "series": [
+    {
+     "label": "THIẾU CỘNG DỒN",
+     "color": "#ef4444",
+     "vals": [
+      4.0,
+      8.0,
+      12.0,
+      16.0,
+      20.0,
+      24.0,
+      28.0
+     ]
+    }
+   ],
+   "calls": [
+    {
+     "i": 6,
+     "text": "THÁNG 7: 28",
+     "at": [
+      21,
+      "thành"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 22,
+   "title": "ĐỒNG HỒ TRỢ CẤP",
+   "items": [
+    {
+     "year": "4 CỬA",
+     "text": "điều kiện",
+     "at": 22
+    },
+    {
+     "year": "10 NGÀY",
+     "text": "chờ",
+     "at": [
+      22,
+      "mười"
+     ]
+    },
+    {
+     "year": "7 THÁNG",
+     "text": "hưởng",
+     "at": [
+      22,
+      "bảy"
+     ]
+    },
+    {
+     "year": "DỪNG",
+     "text": "khi có việc",
+     "at": [
+      22,
+      "dừng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 23,
+   "items": [
+    {
+     "text": "HIỂU QUYỀN LỢI CỦA MÌNH",
+     "at": 23,
+     "acc": true
+    },
+    {
+     "text": "trước khi nộp hồ sơ",
+     "at": 23,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "PHẦN CUỐI",
+  "t": "THÁNG CUỐI VÀ ĐIỂM DỪNG"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.1
+ }
+}

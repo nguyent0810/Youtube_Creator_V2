@@ -1,0 +1,427 @@
+{
+ "title": "Cái khung quanh giá hai mươi nghìn",
+ "lines": [
+  {
+   "t": "Đây là ví dụ giả định để tính, không phải khuyến nghị giao dịch.",
+   "p": 0.8
+  },
+  "Anh Tuấn là nhân vật hư cấu của video này.",
+  "Anh mua một trăm cổ phiếu của một công ty hư cấu.",
+  "Mỗi cổ phiếu có giá hai mươi nghìn đồng.",
+  "Một trăm nhân hai mươi nghìn là hai triệu đồng, chưa gồm phí.",
+  "Trong lịch minh họa, thứ Hai là T, thứ Ba là T cộng một và thứ Tư là T cộng hai.",
+  "Lịch này không dự báo cho một tuần cụ thể.",
+  "Nó chỉ làm chiếc đồng hồ để ta theo dõi lúc cổ phiếu được phân bổ.",
+  "Giá tham chiếu là mốc để Sở giao dịch tính dải giá.",
+  "Biên độ là giới hạn dao động quanh mốc ấy.",
+  "Hai khái niệm nghe gần nhau, nhưng không phải một.",
+  "Trong ví dụ giả định, giá tham chiếu là hai mươi nghìn đồng.",
+  "Trên HOSE, biên độ thông thường của nhóm được tài liệu nêu là cộng trừ bảy phần trăm.",
+  "Bảy phần trăm của hai mươi nghìn là một nghìn bốn trăm đồng.",
+  "Trừ một nghìn bốn trăm, giá sàn giả định là mười tám nghìn sáu trăm đồng.",
+  "Cộng một nghìn bốn trăm, giá trần giả định là hai mươi mốt nghìn bốn trăm đồng.",
+  "Dải giả định chạy từ mười tám nghìn sáu trăm tới hai mươi mốt nghìn bốn trăm đồng.",
+  "Giữa dải là hai mươi nghìn đồng.",
+  "Thanh giá trên màn hình có ba điểm, không phải ba lời tiên đoán.",
+  "Điểm thấp là sàn.",
+  "Điểm giữa là tham chiếu.",
+  "Điểm cao là trần.",
+  "Một trăm cổ phiếu của anh Tuấn vẫn đang ở ô chờ phân bổ.",
+  "Hai triệu đồng là giá trị khớp lệnh giả định.",
+  "Không có con số nào ở đây bảo giá sẽ đi lên hay đi xuống.",
+  "Nó chỉ cho biết một phiên có chiếc khung.",
+  "Đó là phép nhân.",
+  "Như tập trước, ATO, ATC và lô một trăm là những quy ước của phiên.",
+  "Điều quan trọng hơn là chiếc khung này chỉ nói về giá của phiên đó.",
+  "Nó chưa nói bạn đã có cổ phiếu để bán hay chưa.",
+  "Giá và thời điểm tách riêng.",
+  "Muốn thấy rõ hơn, ta cần tách ngày thường khỏi những ngày ngoại lệ."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "CÁI KHUNG QUANH\nGIÁ 20.000 ĐỒNG",
+   "sub": "VÍ DỤ GIẢ ĐỊNH · KHÔNG KHUYẾN NGHỊ",
+   "img": "ai01",
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.45,
+    0.3
+   ],
+   "titleAt": 0
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "NHÂN VẬT HƯ CẤU",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "NGƯỜI MUA",
+     "v": "ANH TUẤN · HƯ CẤU",
+     "at": 1
+    },
+    {
+     "k": "CỔ PHIẾU",
+     "v": "100 · CÔNG TY HƯ CẤU",
+     "at": 2
+    },
+    {
+     "k": "GIÁ MỖI CỔ PHIẾU",
+     "v": "20.000 ĐỒNG",
+     "at": 3
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 0,
+   "to": 2000000,
+   "suffix": " ĐỒNG",
+   "label": "100 × 20.000 ĐỒNG · VÍ DỤ GIẢ ĐỊNH",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH",
+   "sub": {
+    "text": "CHƯA GỒM PHÍ",
+    "at": [
+     4,
+     "phí"
+    ]
+   }
+  },
+  {
+   "type": "timeline",
+   "at": 5,
+   "title": "LỊCH MINH HỌA",
+   "items": [
+    {
+     "year": "THỨ HAI",
+     "text": "ngày T",
+     "at": 5
+    },
+    {
+     "year": "THỨ BA",
+     "text": "T+1",
+     "at": [
+      5,
+      "Ba"
+     ]
+    },
+    {
+     "year": "THỨ TƯ",
+     "text": "T+2",
+     "at": [
+      5,
+      "Tư"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 7,
+   "vid": "7148966",
+   "loop": true,
+   "veil": 0.56,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "ĐỒNG HỒ PHÂN BỔ",
+     "at": 7,
+     "acc": true
+    },
+    {
+     "text": "không dự báo tuần nào",
+     "at": 7,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 8,
+   "title": "HAI KHÁI NIỆM",
+   "srcnote": "NGUỒN: TT 120/2020/TT-BTC",
+   "rows": [
+    {
+     "k": "GIÁ THAM CHIẾU",
+     "v": "MỐC SỞ GIAO DỊCH TÍNH DẢI",
+     "at": 8
+    },
+    {
+     "k": "BIÊN ĐỘ",
+     "v": "GIỚI HẠN DAO ĐỘNG QUANH MỐC",
+     "at": 9
+    },
+    {
+     "k": "GẦN NHAU",
+     "v": "NHƯNG KHÔNG PHẢI MỘT",
+     "at": 10
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 11,
+   "from": 0,
+   "to": 20000,
+   "suffix": " ĐỒNG",
+   "label": "GIÁ THAM CHIẾU · VÍ DỤ GIẢ ĐỊNH",
+   "srcnote": "NGUỒN: HOSE",
+   "sub": {
+    "text": "HOSE · BIÊN ĐỘ THÔNG THƯỜNG ±7%",
+    "at": 12
+   }
+  },
+  {
+   "type": "waterfall",
+   "at": 13,
+   "title": "TỪ THAM CHIẾU XUỐNG SÀN",
+   "range": "ĐỒNG · VÍ DỤ GIẢ ĐỊNH · ±7%",
+   "unit": "ĐỒNG",
+   "start": {
+    "k": "THAM CHIẾU",
+    "v": 20000,
+    "at": 13
+   },
+   "steps": [
+    {
+     "k": "−7%",
+     "v": -1400,
+     "at": 13
+    }
+   ],
+   "end": {
+    "k": "GIÁ SÀN",
+    "at": 14
+   },
+   "calls": [
+    {
+     "i": 1,
+     "text": "7% = 1.400 ĐỒNG",
+     "at": 13
+    },
+    {
+     "i": 2,
+     "text": "SÀN 18.600",
+     "at": 14
+    }
+   ]
+  },
+  {
+   "type": "waterfall",
+   "at": 15,
+   "title": "TỪ THAM CHIẾU LÊN TRẦN",
+   "range": "ĐỒNG · VÍ DỤ GIẢ ĐỊNH · ±7%",
+   "unit": "ĐỒNG",
+   "start": {
+    "k": "THAM CHIẾU",
+    "v": 20000,
+    "at": 15
+   },
+   "steps": [
+    {
+     "k": "+7%",
+     "v": 1400,
+     "at": 15
+    }
+   ],
+   "end": {
+    "k": "GIÁ TRẦN",
+    "at": [
+     15,
+     "trần"
+    ]
+   },
+   "calls": [
+    {
+     "i": 2,
+     "text": "TRẦN 21.400",
+     "at": [
+      15,
+      "trần"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "book",
+   "at": 16,
+   "title": "DẢI GIÁ MỘT PHIÊN",
+   "range": "18.600 → 21.400 ĐỒNG",
+   "ref": 20000,
+   "ceil": 21400,
+   "floor": 18600,
+   "prices": [
+    21400,
+    20000,
+    18600
+   ],
+   "rows": [],
+   "match": {
+    "price": 20000,
+    "at": 17,
+    "text": "GIỮA DẢI: 20.000 ĐỒNG"
+   },
+   "source": "VÍ DỤ GIẢ ĐỊNH · HOSE ±7% · KHÔNG PHẢI GIÁ CỦA MÃ NÀO"
+  },
+  {
+   "type": "bars",
+   "at": 18,
+   "title": "BA ĐIỂM TRÊN THANH GIÁ",
+   "unit": "ĐỒNG",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "SÀN",
+     "v": 18600,
+     "lbl": "18.600",
+     "at": 18
+    },
+    {
+     "k": "THAM CHIẾU",
+     "v": 20000,
+     "lbl": "20.000",
+     "at": 18,
+     "acc": true
+    },
+    {
+     "k": "TRẦN",
+     "v": 21400,
+     "lbl": "21.400",
+     "at": 18
+    }
+   ],
+   "calls": [
+    {
+     "i": 0,
+     "text": "ĐIỂM THẤP: SÀN",
+     "at": 19
+    },
+    {
+     "i": 1,
+     "text": "GIỮA: THAM CHIẾU",
+     "at": 20
+    },
+    {
+     "i": 2,
+     "text": "ĐIỂM CAO: TRẦN",
+     "at": 21
+    }
+   ]
+  },
+  {
+   "type": "stack",
+   "at": 22,
+   "title": "100 CỔ PHIẾU ĐANG Ở ĐÂU?",
+   "range": "VÍ DỤ GIẢ ĐỊNH",
+   "unit": "CỔ PHIẾU",
+   "keys": [
+    {
+     "k": "CHỜ PHÂN BỔ"
+    },
+    {
+     "k": "CÓ THỂ BÁN"
+    }
+   ],
+   "groups": [
+    {
+     "k": "SAU KHI KHỚP",
+     "vals": [
+      100,
+      0
+     ],
+     "at": 22
+    }
+   ],
+   "calls": [
+    {
+     "i": 0,
+     "text": "KHỚP 2 TRIỆU ĐỒNG",
+     "at": 23
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 24,
+   "vid": "7688068",
+   "loop": true,
+   "veil": 0.56,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "KHUNG GIÁ ≠ DỰ BÁO",
+     "at": 24,
+     "acc": true
+    },
+    {
+     "text": "chỉ là phép nhân",
+     "at": 26,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 27,
+   "items": [
+    {
+     "text": "ATO · ATC · LÔ 100",
+     "at": 27,
+     "acc": true
+    },
+    {
+     "text": "quy ước của phiên, như tập trước",
+     "at": 27,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "img": "ai02",
+   "at": 28,
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.55,
+    0.3
+   ],
+   "zoom": {
+    "x": 0.6,
+    "y": 0.45,
+    "z": 1.4,
+    "at": 28,
+    "d": 1.2
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 30,
+   "items": [
+    {
+     "text": "GIÁ ≠ THỜI ĐIỂM",
+     "at": 30,
+     "acc": true
+    },
+    {
+     "text": "ngày thường · ngày ngoại lệ",
+     "at": 31,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "CÁI KHUNG QUANH GIÁ"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

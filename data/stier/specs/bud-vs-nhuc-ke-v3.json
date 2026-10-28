@@ -1,0 +1,204 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-vs-nhuc-ke",
+ "format": "vi-sao",
+ "hook_type": "do-vui",
+ "open_shot": "tuong-phat",
+ "voice": "Thanh Bình",
+ "music": "perspectives.mp3",
+ "music_gain": 0.18,
+ "gap": 0.9,
+ "title": "Khối nhô trên đầu tượng Phật là búi tóc? Đúng hay sai",
+ "kicker": "ĐÚNG HAY SAI?",
+ "sub": "NHỤC KẾ · KINH TRƯỜNG BỘ 30",
+ "acc": [
+  "búi",
+  "tóc",
+  "nhục",
+  "kế"
+ ],
+ "lines": [
+  "Khối nhô trên đầu tượng Phật là búi tóc?",
+  "Đúng hay sai? Đoán trước đã.",
+  "Câu trả lời: sai. Đó không phải búi tóc.",
+  "Nó tên là nhục kế, tiếng Phạn là u-sni-sa.",
+  "Kinh Trường Bộ ba mươi, diễn ý: đỉnh đầu như đội vương miện.",
+  "Nhưng trong nghệ thuật, nó thường tượng trưng cho trí tuệ.",
+  "Lần tới đi chùa, thử chỉ cho một người cùng xem.",
+  "Trước giờ bạn nghĩ là búi tóc không? Comment đúng hay sai."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:8710925",
+   "items": [
+    {
+     "text": "BÚI TÓC?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "khối nhô trên đầu tượng Phật",
+     "at": [
+      0,
+      "đầu"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "hf_myth_strike",
+   "at": 1,
+   "mythLab": "NHIỀU NGƯỜI NGHĨ",
+   "myth": "**Búi tóc**",
+   "truthLab": "THEO KINH",
+   "truth": "**Nhục kế**",
+   "strikeAt": [
+    2,
+    "sai."
+   ],
+   "truthAt": [
+    2,
+    "phải"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "veil": 0.4,
+   "clip": "pexels:8710986",
+   "items": [
+    {
+     "text": "NHỤC KẾ",
+     "at": [
+      3,
+      "nhục"
+     ],
+     "acc": true
+    },
+    {
+     "text": "tiếng Phạn: uṣṇīṣa",
+     "at": [
+      3,
+      "phạn"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "to": 32,
+   "suffix": " TƯỚNG TỐT",
+   "label": "KINH TRƯỜNG BỘ 30",
+   "until": [
+    4,
+    "đỉnh"
+   ],
+   "sub": {
+    "text": "ĐỈNH ĐẦU NHƯ ĐỘI VƯƠNG MIỆN",
+    "at": [
+     4,
+     "vương"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Trong nghệ thuật",
+   "nodes": [
+    {
+     "text": "NHỤC KẾ",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      5,
+      "nghệ"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "TRÍ TUỆ",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      5,
+      "trí"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "USHNISHA · WIKIPEDIA"
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "LẦN TỚI ĐI CHÙA",
+   "cards": [
+    {
+     "k": "NHÌN",
+     "v": "NHỤC KẾ",
+     "at": [
+      6,
+      "chùa,"
+     ]
+    },
+    {
+     "k": "CHỈ CHO",
+     "v": "1 NGƯỜI",
+     "at": [
+      6,
+      "chỉ"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "veil": 0.4,
+   "clip": "pexels:36110360",
+   "items": [
+    {
+     "text": "ĐÚNG HAY SAI?",
+     "at": [
+      7,
+      "trước"
+     ],
+     "acc": true
+    },
+    {
+     "text": "comment một chữ",
+     "at": [
+      7,
+      "comment"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Ushnisha",
+  "https://suttacentral.net/dn30/en/sujato"
+ ],
+ "description": "Khối nhô trên đầu tượng Phật là búi tóc? Đúng hay sai\n\nNguồn: https://en.wikipedia.org/wiki/Ushnisha · https://suttacentral.net/dn30/en/sujato"
+}

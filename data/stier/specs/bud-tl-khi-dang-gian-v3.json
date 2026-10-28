@@ -1,0 +1,178 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-tl-khi-dang-gian",
+ "format": "tinh-lang",
+ "hook_type": "menh-lenh",
+ "open_shot": "nguoi-than",
+ "voice": "Ngọc Linh",
+ "music": "healing.mp3",
+ "music_gain": 0.16,
+ "gap": 0.9,
+ "title": "Đang giận? Đừng gõ phím trong 20 giây",
+ "kicker": "TĨNH LẶNG",
+ "sub": "KINH PHÁP CÚ · KỆ 223",
+ "acc": [
+  "giận",
+  "giây",
+  "phím"
+ ],
+ "ambience": {
+  "bed": "water",
+  "gain": 0.8
+ },
+ "lines": [
+  "Đang giận? Đừng gõ phím trong hai mươi giây tới.",
+  "Đặt điện thoại xuống. Thở cùng mình.",
+  "Thở vào, đếm bốn.",
+  "Thở ra dài hơn, đếm sáu.",
+  "Gọi tên nó: đây là cơn giận. Nó sẽ qua.",
+  "Thật ra, giận không sai. Chỉ đừng để nó gõ phím thay bạn.",
+  "Kinh Pháp Cú, diễn ý: thắng giận bằng không giận.",
+  "Hai mươi giây xong. Giờ bạn còn muốn gõ gì? Gửi người hay nóng vội."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:8134639",
+   "items": [
+    {
+     "text": "ĐANG GIẬN?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "đừng gõ phím 20 giây",
+     "at": [
+      0,
+      "đừng"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 20,
+   "suffix": " GIÂY THỞ",
+   "label": "ĐẶT ĐIỆN THOẠI XUỐNG",
+   "until": [
+    1,
+    "xuống."
+   ],
+   "sub": {
+    "text": "VÀO 4 · RA 6",
+    "at": [
+     2,
+     "vào,"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Gọi tên nó",
+   "nodes": [
+    {
+     "text": "ĐÂY LÀ CƠN GIẬN",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      4,
+      "đây"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "NÓ SẼ QUA",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      4,
+      "qua."
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "MN 118 · SUTTACENTRAL"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "clip": "pexels:37626074",
+   "items": [
+    {
+     "text": "GIẬN KHÔNG SAI",
+     "at": [
+      5,
+      "giận"
+     ],
+     "acc": true
+    },
+    {
+     "text": "đừng để nó gõ phím thay bạn",
+     "at": [
+      5,
+      "đừng"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "source",
+   "at": 6,
+   "source": "KINH PHÁP CÚ · KỆ 223",
+   "ref": "Phẩm Phẫn Nộ",
+   "snippet": "Thắng giận bằng [[không giận]].",
+   "hlAt": [
+    6,
+    "không"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "veil": 0.4,
+   "clip": "pexels:9039054",
+   "items": [
+    {
+     "text": "CÒN MUỐN GÕ GÌ?",
+     "at": [
+      7,
+      "giờ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "gửi người hay nóng vội",
+     "at": [
+      7,
+      "gửi"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp221-234/en/sujato",
+  "https://suttacentral.net/mn118/en/sujato"
+ ],
+ "description": "Đang giận? Đừng gõ phím trong 20 giây\n\nNguồn: https://suttacentral.net/dhp221-234/en/sujato · https://suttacentral.net/mn118/en/sujato"
+}

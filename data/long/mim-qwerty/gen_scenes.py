@@ -181,12 +181,12 @@ CH["ch08"] = {"hud": {"k": "CHƯƠNG 08", "t": "THỨ NẰM DƯỚI NGÓN TAY B�
 ]}
 
 SPEC = {
-    "title": "Vì Sao Bàn Phím Không Xếp Theo A B C? Ba Lời Buộc Tội Với QWERTY",
+    "title": "Sholes, 1873: Vì Sao Bàn Phím Không Xếp A B C?",
     "channel": "MIM", "theme": "lab", "accent": "#22d3ee", "master": True, "endcard": 20, "autoTr": True, "beat2": True,
     "acc": ["qwerty", "chậm", "tội", "phím", "thắng", "dvorak", "telex"],
     "say": SAY, "imgs": {}, "chapters": [f"ch{i:02d}" for i in range(9)],
     "youtube": {
-        "titles": ["Vì Sao Bàn Phím Không Xếp Theo A B C? Ba Lời Buộc Tội Với QWERTY",
+        "titles": ["Sholes, 1873: Vì Sao Bàn Phím Không Xếp A B C?",
                    "Bàn Phím QWERTY Có Thật Được Thiết Kế Để Bạn Gõ Chậm Lại?",
                    "150 Năm Trước, Một Chiếc Máy Đánh Chữ Đã Quyết Định Bạn Gõ Phím Thế Nào Hôm Nay"],
         "summary": "Hàng phím Q-W-E-R-T-Y dưới tay bạn có ba lời buộc tội: sinh ra để làm bạn gõ chậm, thắng không phải vì tốt, và vùi dập một bàn "

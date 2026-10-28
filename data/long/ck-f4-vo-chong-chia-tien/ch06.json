@@ -1,0 +1,562 @@
+{
+ "title": "Khi hóa đơn đổi, câu hỏi cũng đổi",
+ "lines": [
+  {
+   "t": "Giờ thay một biến duy nhất: chi chung.",
+   "p": 0.8
+  },
+  "Trong ví dụ giả định, thử bốn mức hai mươi bốn, hai mươi sáu, hai mươi tám và ba mươi triệu.",
+  "Với cách cùng góp một số, khi chi là hai mươi bốn triệu, Thảo còn ba triệu.",
+  "Nam còn mười ba triệu.",
+  "Khi chi lên hai mươi sáu triệu, hai số là hai và mười hai.",
+  "Khi chi lên hai mươi tám triệu, hai số là một và mười một.",
+  {
+   "t": "Khi chi lên ba mươi triệu, Thảo còn không, còn Nam còn mười triệu.",
+   "p": 1.0
+  },
+  "Đường này rất dốc.",
+  "Trên đường theo tỷ trọng, chi hai mươi bốn triệu để lại sáu triệu cho Thảo và mười triệu cho Nam.",
+  "Chi hai mươi sáu triệu để lại năm triệu hai trăm năm mươi nghìn và tám triệu bảy trăm năm mươi nghìn.",
+  "Chi hai mươi tám triệu để lại bốn triệu năm trăm nghìn và bảy triệu năm trăm nghìn.",
+  "Chi ba mươi triệu để lại ba triệu bảy trăm năm mươi nghìn và sáu triệu hai trăm năm mươi nghìn.",
+  "Hai đường cùng đi xuống khi hóa đơn tăng.",
+  "Nhưng độ dốc và điểm chạm không giống nhau.",
+  "Đó là khác biệt.",
+  "Đó là điều đường nhạy chi cho thấy.",
+  "Nó không bảo ai phải chọn đường nào.",
+  "Quay lại tháng mười hai của ba ví.",
+  "Ví cùng góp một số cho hai mươi bốn và một trăm bốn mươi bốn triệu.",
+  "Ví cùng tỷ lệ cho sáu mươi ba và một trăm lẻ năm triệu.",
+  "Ví quỹ chung cho bốn mươi hai, bốn mươi hai và tám mươi bốn triệu.",
+  "Tất cả đều xuất phát từ bốn mươi triệu vào, hai mươi sáu triệu ra và mười bốn triệu còn lại.",
+  "Tổng vẫn như cũ.",
+  "Vòng mở đã khép ở đây.",
+  "Công bằng không tự nằm trong một con số, vì ba bảng đang trả lời ba câu khác nhau.",
+  "Một bảng hỏi: mỗi người có góp cùng số tiền không?",
+  "Một bảng hỏi: mỗi người có chịu cùng tỷ lệ thu nhập không?",
+  "Hai câu khác nhau.",
+  "Một bảng hỏi: hai người muốn để lại bao nhiêu phần riêng và bao nhiêu phần chung?",
+  "Những câu đó không tự chọn thay nhau.",
+  "Theo khảo sát mức sống năm hai nghìn không trăm hai mươi hai, chi tiêu, nhà ở, giáo dục, y tế và việc làm là các nhóm dữ liệu khác nhau.",
+  "Một hóa đơn gia đình cũng có thể cần được gọi tên từng phần như vậy.",
+  "Video này chỉ đặt ba phép tính cạnh nhau để thấy cái giá và phần còn lại của từng định nghĩa.",
+  "Bạn có thể nhìn ba cái ví trước khi gọi một con số là công bằng."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "PHẦN CUỐI",
+   "title": "KHI HÓA ĐƠN ĐỔI",
+   "sub": "CÂU HỎI CŨNG ĐỔI",
+   "vid": "6963483",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": 0
+  },
+  {
+   "type": "bars",
+   "at": 1,
+   "title": "BỐN MỨC CHI CHUNG THỬ",
+   "unit": "TRIỆU/THÁNG · VÍ DỤ GIẢ ĐỊNH",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "items": [
+    {
+     "k": "CHI 24",
+     "v": 24,
+     "lbl": "24",
+     "at": [
+      1,
+      "mức"
+     ]
+    },
+    {
+     "k": "CHI 26",
+     "v": 26,
+     "lbl": "26",
+     "at": [
+      1,
+      "sáu"
+     ],
+     "acc": true
+    },
+    {
+     "k": "CHI 28",
+     "v": 28,
+     "lbl": "28",
+     "at": [
+      1,
+      "tám"
+     ]
+    },
+    {
+     "k": "CHI 30",
+     "v": 30,
+     "lbl": "30",
+     "at": [
+      1,
+      "ba"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 2,
+   "title": "CHI 24 · CHIA ĐỀU",
+   "unit": "TRIỆU · VÍ DỤ GIẢ ĐỊNH",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "items": [
+    {
+     "k": "THẢO CÒN",
+     "v": 3.0,
+     "lbl": "3",
+     "at": [
+      2,
+      "thảo"
+     ],
+     "acc": true
+    },
+    {
+     "k": "NAM CÒN",
+     "v": 13.0,
+     "lbl": "13",
+     "at": 3
+    }
+   ]
+  },
+  {
+   "type": "stack",
+   "at": 4,
+   "title": "CHIA ĐỀU · KHI CHI TĂNG",
+   "range": "TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH",
+   "unit": "TRIỆU",
+   "keys": [
+    {
+     "k": "THẢO"
+    },
+    {
+     "k": "NAM"
+    }
+   ],
+   "groups": [
+    {
+     "k": "CHI 24",
+     "vals": [
+      3.0,
+      13.0
+     ],
+     "at": 4
+    },
+    {
+     "k": "CHI 26",
+     "vals": [
+      2.0,
+      12.0
+     ],
+     "at": [
+      4,
+      "số"
+     ]
+    },
+    {
+     "k": "CHI 28",
+     "vals": [
+      1.0,
+      11.0
+     ],
+     "at": 5
+    },
+    {
+     "k": "CHI 30",
+     "vals": [
+      0.0,
+      10.0
+     ],
+     "at": 6
+    }
+   ],
+   "calls": [
+    {
+     "i": 3,
+     "text": "THẢO CÒN 0",
+     "at": [
+      6,
+      "không"
+     ],
+     "tone": "down"
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 8,
+   "title": "CHI 24 · TỶ TRỌNG",
+   "unit": "TRIỆU · VÍ DỤ GIẢ ĐỊNH",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "items": [
+    {
+     "k": "THẢO CÒN",
+     "v": 6.0,
+     "lbl": "6",
+     "at": [
+      8,
+      "sáu"
+     ],
+     "acc": true
+    },
+    {
+     "k": "NAM CÒN",
+     "v": 10.0,
+     "lbl": "10",
+     "at": [
+      8,
+      "nam"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "stack",
+   "at": 9,
+   "title": "TỶ TRỌNG · KHI CHI TĂNG",
+   "range": "TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH",
+   "unit": "TRIỆU",
+   "keys": [
+    {
+     "k": "THẢO"
+    },
+    {
+     "k": "NAM"
+    }
+   ],
+   "groups": [
+    {
+     "k": "CHI 24",
+     "vals": [
+      6.0,
+      10.0
+     ],
+     "at": 9
+    },
+    {
+     "k": "CHI 26",
+     "vals": [
+      5.25,
+      8.75
+     ],
+     "at": [
+      9,
+      "để"
+     ]
+    },
+    {
+     "k": "CHI 28",
+     "vals": [
+      4.5,
+      7.5
+     ],
+     "at": 10
+    },
+    {
+     "k": "CHI 30",
+     "vals": [
+      3.75,
+      6.25
+     ],
+     "at": 11
+    }
+   ],
+   "calls": [
+    {
+     "i": 3,
+     "text": "THẢO CÒN 3,75",
+     "at": [
+      11,
+      "để"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 12,
+   "title": "CHI +6: THẢO MẤT BAO NHIÊU",
+   "unit": "TRIỆU · VÍ DỤ GIẢ ĐỊNH",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "items": [
+    {
+     "k": "CHIA ĐỀU · 3 → 0",
+     "v": 3.0,
+     "lbl": "−3 · CHẠM 0",
+     "at": 12,
+     "acc": true
+    },
+    {
+     "k": "TỶ TRỌNG · 6 → 3,75",
+     "v": 2.25,
+     "lbl": "−2,25",
+     "at": [
+      13,
+      "độ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "img": "ai04",
+   "at": 15,
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.42,
+    0.32
+   ],
+   "move": "pan",
+   "veil": 0.35,
+   "kin": [
+    {
+     "text": "ĐƯỜNG NHẠY CHI",
+     "at": 15,
+     "sm": true
+    },
+    {
+     "text": "KHÔNG BẢO AI PHẢI CHỌN",
+     "at": 16,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "stack",
+   "at": 17,
+   "title": "THÁNG 12 · BA VÍ",
+   "range": "TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH",
+   "unit": "TRIỆU",
+   "keys": [
+    {
+     "k": "THẢO"
+    },
+    {
+     "k": "NAM"
+    },
+    {
+     "k": "QUỸ CHUNG"
+    }
+   ],
+   "groups": [
+    {
+     "k": "CÙNG SỐ",
+     "vals": [
+      24.0,
+      144.0,
+      0
+     ],
+     "at": 18
+    },
+    {
+     "k": "CÙNG TỶ LỆ",
+     "vals": [
+      63.0,
+      105.0,
+      0
+     ],
+     "at": 19
+    },
+    {
+     "k": "QUỸ CHUNG",
+     "vals": [
+      42.0,
+      42.0,
+      84.0
+     ],
+     "at": 20
+    }
+   ],
+   "calls": []
+  },
+  {
+   "type": "waterfall",
+   "at": 21,
+   "title": "MỖI THÁNG · CẢ NHÀ",
+   "range": "TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH",
+   "unit": "TRIỆU",
+   "start": {
+    "k": "VÀO",
+    "v": 40.0,
+    "at": 21
+   },
+   "steps": [
+    {
+     "k": "RA",
+     "v": -26.0,
+     "at": [
+      21,
+      "sáu"
+     ]
+    }
+   ],
+   "end": {
+    "k": "CÒN LẠI",
+    "at": [
+     21,
+     "còn"
+    ]
+   },
+   "calls": [
+    {
+     "i": 2,
+     "text": "VẪN 14 TRIỆU",
+     "at": 22
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 23,
+   "items": [
+    {
+     "text": "VÒNG MỞ ĐÃ KHÉP",
+     "at": 23,
+     "sm": true
+    },
+    {
+     "text": "CÔNG BẰNG KHÔNG NẰM TRONG MỘT CON SỐ",
+     "at": 24,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 25,
+   "title": "BA BẢNG · BA CÂU HỎI",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "rows": [
+    {
+     "k": "BẢNG 1",
+     "v": "CÙNG SỐ TIỀN?",
+     "at": 25
+    },
+    {
+     "k": "BẢNG 2",
+     "v": "CÙNG TỶ LỆ THU NHẬP?",
+     "at": 26
+    },
+    {
+     "k": "→",
+     "v": "HAI CÂU KHÁC NHAU",
+     "at": 27
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 28,
+   "text": "Bao nhiêu phần riêng,\nbao nhiêu phần chung?"
+  },
+  {
+   "type": "timeline",
+   "at": 30,
+   "title": "KSMS 2022 · CÁC NHÓM DỮ LIỆU",
+   "items": [
+    {
+     "year": "CHI TIÊU",
+     "text": "",
+     "at": 30
+    },
+    {
+     "year": "NHÀ Ở",
+     "text": "",
+     "at": [
+      30,
+      "nhà"
+     ]
+    },
+    {
+     "year": "GIÁO DỤC",
+     "text": "",
+     "at": [
+      30,
+      "giáo"
+     ]
+    },
+    {
+     "year": "Y TẾ",
+     "text": "",
+     "at": [
+      30,
+      "y"
+     ]
+    },
+    {
+     "year": "VIỆC LÀM",
+     "text": "",
+     "at": [
+      30,
+      "việc"
+     ]
+    }
+   ],
+   "srcnote": "NGUỒN: TỔNG CỤC THỐNG KÊ · KSMS 2022"
+  },
+  {
+   "type": "photo",
+   "img": "ai01",
+   "at": 31,
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.5,
+    0.4
+   ],
+   "zoom": {
+    "x": 0.5,
+    "y": 0.6,
+    "z": 1.35,
+    "at": 31,
+    "d": 1.2
+   },
+   "veil": 0.35,
+   "kin": [
+    {
+     "text": "GỌI TÊN TỪNG PHẦN",
+     "at": 31,
+     "acc": true
+    },
+    {
+     "text": "cái giá và phần còn lại của từng định nghĩa",
+     "at": 32,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 33,
+   "items": [
+    {
+     "text": "NHÌN BA CÁI VÍ",
+     "at": 33,
+     "acc": true
+    },
+    {
+     "text": "trước khi gọi một con số là công bằng",
+     "at": [
+      33,
+      "trước"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "PHẦN CUỐI",
+  "t": "KHI HÓA ĐƠN ĐỔI, CÂU HỎI CŨNG ĐỔI"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.1
+ }
+}

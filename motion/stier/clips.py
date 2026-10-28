@@ -174,6 +174,29 @@ def credit(c: dict) -> str:
     return f"Video: Pexels — {c['author']}" if prov == "pexels" else f"Video: Coverr — {c['title']}"
 
 
+MIN_SHARP = 0.5   # cạnh ngắn dưới nửa mức cần -> phóng hơn 2 lần, nhoè thấy rõ: dừng
+
+
+def pick_file(files: list[dict], need: int, ref: str = "") -> dict:
+    """File để tải: bản NHẸ NHẤT có cạnh ngắn >= need; không bản nào đủ thì bản LỚN NHẤT.
+
+    Lỗi 28/10/2026 (retro CK pilot P4): khóa sắp xếp cũ (thiếu chuẩn, cạnh dài) khi mọi bản đều dưới
+    chuẩn lại chọn bản NHỎ nhất -- clip 7154241 có bản 1066x1920 nhưng bị tải bản 238x426 rồi phóng toàn khung.
+    Bản lớn nhất vẫn dưới MIN_SHARP x need thì dừng, không âm thầm dựng clip nhoè."""
+    fs = [f for f in files if f.get("link") and f.get("w") and f.get("h")]
+    if not fs:
+        raise SystemExit(f"{ref}: không có file tải được")
+    short = lambda f: min(f["w"], f["h"])
+    ok = [f for f in fs if short(f) >= need]
+    if ok:
+        return min(ok, key=lambda f: max(f["w"], f["h"]))
+    best = max(fs, key=lambda f: (short(f), max(f["w"], f["h"])))
+    if short(best) < MIN_SHARP * need:
+        raise SystemExit(f"{ref}: bản lớn nhất chỉ {best['w']}x{best['h']}, cần cạnh ngắn >= {need} "
+                         f"(tối thiểu {int(MIN_SHARP * need)}) -- chọn clip khác")
+    return best
+
+
 def ensure(ref: str, ffmpeg: str = "ffmpeg", slot: dict | None = None) -> dict:
     """Clip đã cắt sẵn (tải + cắt nếu chưa có). Trả {src (đường dẫn trong project HyperFrames), dur, credit}.
     slot (Short phối, 12/10/2026): {"name", "box": (x, y, w, h)} -- ô clip sẽ hiện (toàn khung hoặc cửa sổ của look).
@@ -208,16 +231,12 @@ def ensure(ref: str, ffmpeg: str = "ffmpeg", slot: dict | None = None) -> dict:
             shutil.copy2(dst, bak)
         transcode(ffmpeg, bak, dst)
     if not dst.exists():
-        # bản nhẹ nhất mà vẫn phủ được 1080x1920 sau khi cắt
-        fs = sorted((f for f in c["files"] if f.get("link")), key=lambda f: (min(f["w"], f["h"]) < 1080, max(f["w"], f["h"])))
-        if slot:   # bản đủ nét cho ô (cạnh ngắn >= cạnh ngắn của ô, tối đa 1080), nhẹ nhất
-            need = min(1080, min(slot["box"][2], slot["box"][3]))
-            fs = sorted((f for f in c["files"] if f.get("link")), key=lambda f: (min(f["w"], f["h"]) < need, max(f["w"], f["h"])))
-        if not fs:
-            raise SystemExit(f"{ref}: không có file tải được")
+        # toàn khung cần cạnh ngắn 1080; ô cửa sổ cần cạnh ngắn của ô (tối đa 1080)
+        need = min(1080, min(slot["box"][2], slot["box"][3])) if slot else 1080
+        f0 = pick_file(c["files"], need, ref)
         raw = CLIPS / f"{prov}-{cid}.src.mp4"
         CLIPS.mkdir(parents=True, exist_ok=True)
-        with httpx.stream("GET", fs[0]["link"], timeout=180, follow_redirects=True) as r:
+        with httpx.stream("GET", f0["link"], timeout=180, follow_redirects=True) as r:
             r.raise_for_status()
             with open(raw, "wb") as fh:
                 for ch in r.iter_bytes():

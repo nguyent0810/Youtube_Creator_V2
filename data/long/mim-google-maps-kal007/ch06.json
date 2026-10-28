@@ -1,0 +1,255 @@
+{
+ "title": "Chấm xanh của bạn",
+ "lines": [
+  {
+   "t": "Hôm nay, trang GPS của chính phủ Mỹ ghi rằng điện thoại có GPS thường chính xác trong bán kính chừng năm mét, dưới trời thoáng.",
+   "p": 0.8
+  },
+  "Gần nhà cao tầng, cầu hay cây cối, nó kém đi.",
+  {
+   "t": "Năm mét: nấc thứ ba của cây thước.",
+   "p": 1.0
+  },
+  "Chấm xanh trên Google Maps của bạn đứng trên cả ba nấc ấy.",
+  "Và câu hỏi còn lại: ai trả tiền cho nó?",
+  "Không phải bạn.",
+  "Cũng trang ấy trả lời thẳng.",
+  {
+   "t": "Người đóng thuế Mỹ trả tiền cho dịch vụ GPS mà cả thế giới đang dùng.",
+   "q": 1,
+   "tr": 1
+  },
+  "Luật và chính sách của Mỹ buộc dịch vụ GPS dân sự không thu phí trực tiếp của người dùng.",
+  "Nên chữ miễn phí chỉ đúng một nửa.",
+  {
+   "t": "Bạn không trả, nhưng có người trả.",
+   "p": 1.0
+  },
+  "Giờ nhìn lại cây thước.",
+  "Nấc hàng trăm cây số gắn với chuyến KAL 007: tuyên bố năm 1983 nói lời hứa GPS là để thảm kịch ấy không lặp lại.",
+  "Nấc một trăm mét co lại khi quân đội Mỹ thôi làm nhoè tín hiệu cho cả thế giới.",
+  {
+   "t": "Nấc năm mét được trả mỗi năm bằng tiền thuế của người Mỹ.",
+   "p": 1.0
+  },
+  "Có một thứ cây thước không đo được.",
+  "Như Reagan nói, máy tính vẫn đáp lại những gì bàn tay con người đưa vào.",
+  "Chưa đầy bốn tuần sau buổi sáng ở Sakhalin, rạng sáng ngày 26 tháng 9 năm 1983, máy tính báo động của Liên Xô báo Mỹ vừa phóng tên lửa.",
+  {
+   "t": "Người ngồi trước màn hình hôm ấy tên là Stanislav Petrov.",
+   "p": 1.0
+  },
+  "Video thứ Sáu này của kênh sẽ kể đêm đó.",
+  "Còn bạn, đã bao giờ chấm xanh dắt bạn sang nhầm một con đường chưa?",
+  "Nó lệch bao xa, ở đâu? Kể mình nghe ở phần bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "CHƯƠNG SÁU",
+   "title": "CHẤM XANH\nCỦA BẠN",
+   "sub": "HÔM NAY",
+   "bg": "launch",
+   "titleAt": [
+    0,
+    "hôm"
+   ]
+  },
+  {
+   "type": "slam",
+   "at": [
+    0,
+    "ghi"
+   ],
+   "text": "≈ 5 MÉT",
+   "sub": "ĐIỆN THOẠI · TRỜI THOÁNG · 4,9 M THEO GPS.GOV"
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "CÂY THƯỚC SAI SỐ · ĐỦ BA NẤC",
+   "srcnote": "ICAO 1993 · NHÀ TRẮNG 2000 · GPS.GOV",
+   "rows": [
+    {
+     "k": "NẤC 1 · 1983",
+     "v": "HƠN 600 KM",
+     "at": 2
+    },
+    {
+     "k": "NẤC 2 · CÒN SA",
+     "v": "≈ 100 M",
+     "at": [
+      2,
+      "nấc"
+     ]
+    },
+    {
+     "k": "NẤC 3 · HÔM NAY",
+     "v": "≈ 5 M",
+     "at": [
+      2,
+      "ba"
+     ]
+    }
+   ],
+   "total": {
+    "k": "CHẤM XANH",
+    "v": "ĐỨNG TRÊN CẢ BA NẤC",
+    "at": 3
+   }
+  },
+  {
+   "type": "question",
+   "at": 4,
+   "text": "Ai trả tiền\ncho chấm xanh?"
+  },
+  {
+   "type": "quote",
+   "at": 7,
+   "text": "The American taxpayer pays for the GPS service enjoyed throughout the world.",
+   "by": "GPS.GOV · “WHO PAYS FOR GPS?”",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 7,
+   "typeAt": [
+    7,
+    "người"
+   ],
+   "typeDur": 2.4
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "KHÔNG THU PHÍ TRỰC TIẾP",
+     "at": [
+      8,
+      "phí"
+     ],
+     "acc": true
+    },
+    {
+     "text": "luật và chính sách của Mỹ",
+     "at": 8,
+     "sm": true
+    },
+    {
+     "text": "BẠN KHÔNG TRẢ · CÓ NGƯỜI TRẢ",
+     "at": 10
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 11,
+   "title": "AI TRẢ GIÁ CHO MỖI NẤC CO",
+   "srcnote": "REAGAN LIBRARY 1983 · TUYÊN BỐ CLINTON 2000 · GPS.GOV",
+   "rows": [
+    {
+     "k": "HÀNG TRĂM KM",
+     "v": "KAL 007 · LỜI HỨA 1983",
+     "at": 12
+    },
+    {
+     "k": "≈ 100 M → VÀI MÉT",
+     "v": "MỸ THÔI LÀM NHOÈ",
+     "at": 13
+    },
+    {
+     "k": "≈ 5 M MỖI NĂM",
+     "v": "TIỀN THUẾ CỦA NGƯỜI MỸ",
+     "at": 14
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 15,
+   "img": "reagan_desk",
+   "tone": "bw",
+   "move": "out",
+   "veil": 0.55,
+   "kin": [
+    {
+     "text": "“BÀN TAY CON NGƯỜI ĐƯA VÀO”",
+     "at": [
+      16,
+      "bàn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "Reagan · 05.09.1983",
+     "at": 16,
+     "sm": true
+    }
+   ],
+   "label": {
+    "k": "PHÒNG BẦU DỤC · 05.09.1983",
+    "v": "WHITE HOUSE PHOTOGRAPHIC OFFICE",
+    "at": 15
+   }
+  },
+  {
+   "type": "date",
+   "at": 17,
+   "day": "MÁY BÁO ĐỘNG LIÊN XÔ: “MỸ PHÓNG TÊN LỬA”",
+   "date": "26.09.1983",
+   "sub": {
+    "text": "NGƯỜI NGỒI TRƯỚC MÀN HÌNH: STANISLAV PETROV · THEO NPR",
+    "at": 18
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "items": [
+    {
+     "text": "THỨ SÁU NÀY",
+     "at": 19,
+     "acc": true
+    },
+    {
+     "text": "video tiếp theo của kênh",
+     "at": [
+      19,
+      "kênh"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 20,
+   "text": "Chấm xanh từng dắt bạn\nsang nhầm đường chưa?"
+  },
+  {
+   "type": "kinetic",
+   "at": 21,
+   "items": [
+    {
+     "text": "LỆCH BAO XA · Ở ĐÂU",
+     "at": 21
+    },
+    {
+     "text": "KỂ MÌNH NGHE Ở BÌNH LUẬN",
+     "at": [
+      21,
+      "kể"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 06",
+  "t": "CHẤM XANH CỦA BẠN"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

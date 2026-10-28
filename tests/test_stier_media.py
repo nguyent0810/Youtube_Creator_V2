@@ -16,6 +16,32 @@ sys.path[:0] = [str(ROOT / "motion" / "stier"), str(ROOT / "motion")]
 import clips  # noqa: E402
 
 
+def _f(w, h):
+    return {"w": w, "h": h, "link": f"https://x/{w}x{h}.mp4"}
+
+
+def test_pick_file_lightest_that_meets_need():
+    fs = [_f(2160, 3840), _f(1080, 1920), _f(720, 1280)]
+    assert clips.pick_file(fs, 1080) == _f(1080, 1920)
+
+
+def test_pick_file_largest_when_none_meets_need():
+    # 28/10/2026: clip chỉ có tối đa 1066x1920 -- trước đây bị chọn bản 238x426
+    fs = [_f(238, 426), _f(1066, 1920), _f(540, 960)]
+    assert clips.pick_file(fs, 1080) == _f(1066, 1920)
+
+
+def test_pick_file_refuses_when_all_far_too_small():
+    with pytest.raises(SystemExit):
+        clips.pick_file([_f(238, 426), _f(360, 640)], 1080)
+
+
+def test_pick_file_window_slot_uses_slot_need():
+    fs = [_f(540, 960), _f(1080, 1920)]
+    assert clips.pick_file(fs, 730) == _f(1080, 1920)
+    assert clips.pick_file(fs, 500) == _f(540, 960)
+
+
 def test_clip_refs_name_a_provider_and_an_id():
     assert clips.parse("pexels:12345") == ("pexels", "12345")
     assert clips.parse("coverr:AbC-9") == ("coverr", "AbC-9")

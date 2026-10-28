@@ -1,0 +1,246 @@
+{
+ "theme": "mim",
+ "title": "Ngày 20/03/2023, một số người dùng ChatGPT thấy tiêu đề chat của người lạ trong lịch sử",
+ "description": "Ngày 20/03/2023, một lỗi trong thư viện mã nguồn mở redis-py khiến một số người dùng ChatGPT thấy tiêu đề các cuộc trò chuyện của người dùng khác; OpenAI tạm ngừng dịch vụ để xử lý. Theo bài giải trình của OpenAI (24/03/2023, đối chiếu qua The Hacker News, Help Net Security, Infosecurity Magazine), 1,2% người đăng ký gói trả phí hoạt động trong khoảng 9 giờ có thể bị lộ thông tin thanh toán (tên, email, địa chỉ thanh toán, bốn số cuối và hạn thẻ, không có số thẻ đầy đủ). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện. Thông tin theo nguồn đã ghi, đọc ngày 20/10/2026; chưa có bản kiểm chứng riêng của kênh (data/long/mim-ai-chat-privacy chưa có factcheck.md).\n\nBản đầy đủ: https://youtu.be/ejsjefnJQbI (công khai từ 20:00 ngày 23/11).",
+ "tags": [
+  "chatgpt lỗi lộ dữ liệu 2023",
+  "openai redis",
+  "quyền riêng tư ai",
+  "chatgpt",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "AI QUANH TA",
+ "sub": "03/2023",
+ "acc": [
+  "người",
+  "lạ",
+  "lịch",
+  "sử",
+  "huỷ",
+  "nhầm"
+ ],
+ "lines": [
+  "Năm 2023, người lạ hiện trong lịch sử chat.",
+  "Ngày hai mươi tháng ba, một số người dùng ChatGPT thấy tiêu đề chat của người dùng khác.",
+  "OpenAI cho ChatGPT ngừng hoạt động để tìm nguyên nhân.",
+  "Lỗi nằm trong thư viện mã nguồn mở: yêu cầu bị huỷ giữa chừng có thể làm kết nối trả nhầm dữ liệu.",
+  "Một phẩy hai phần trăm người dùng gói trả phí, trong chín giờ ấy, có thể bị lộ tên, địa chỉ, bốn số cuối thẻ.",
+  "OpenAI nói số người thực sự bị lộ là cực kỳ thấp.",
+  "Một yêu cầu bị huỷ giữa chừng, và người lạ hiện trong lịch sử của bạn."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NGƯỜI LẠ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "20.03.2023 · trong lịch sử chat",
+     "at": [
+      0,
+      "hiện"
+     ],
+     "sm": true
+    }
+   ],
+   "at": 0,
+   "clip": "pexels:7279738",
+   "veil": 0.55
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "TRONG LỊCH SỬ CHAT",
+   "cards": [
+    {
+     "k": "CỦA MÌNH",
+     "v": "CHAT CŨ",
+     "at": [
+      1,
+      "một"
+     ]
+    },
+    {
+     "k": "CỦA NGƯỜI KHÁC",
+     "v": "TIÊU ĐỀ MỚI",
+     "at": [
+      1,
+      "tiêu"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 2,
+   "text": "NGỪNG HOẠT ĐỘNG",
+   "sub": "OPENAI TẠM TẮT CHATGPT"
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Một yêu cầu bị huỷ",
+   "nodes": [
+    {
+     "text": "YÊU CẦU BỊ HUỶ GIỮA CHỪNG",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      3,
+      "yêu"
+     ],
+     "shape": "box",
+     "w": 780
+    },
+    {
+     "text": "KẾT NỐI TRẢ NHẦM DỮ LIỆU",
+     "x": 0.5,
+     "y": 0.68,
+     "at": [
+      3,
+      "kết"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 780
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      3,
+      "kết"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "GÓI TRẢ PHÍ · TRONG 9 GIỜ",
+   "rows": [
+    {
+     "k": "NGƯỜI CÓ THỂ BỊ LỘ",
+     "v": "1,2%",
+     "at": [
+      4,
+      "Một"
+     ]
+    },
+    {
+     "k": "CÓ THỂ LỘ",
+     "v": "TÊN · ĐỊA CHỈ · 4 SỐ CUỐI",
+     "at": [
+      4,
+      "tên"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": [
+    4,
+    "chín"
+   ],
+   "from": 0,
+   "to": 9,
+   "suffix": " GIỜ",
+   "label": "KHUNG GIỜ CÓ THỂ BỊ ẢNH HƯỞNG",
+   "until": [
+    4,
+    "ấy"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "RẤT THẤP",
+     "at": [
+      5,
+      "cực"
+     ],
+     "acc": true
+    },
+    {
+     "text": "số người thực sự bị lộ · theo OpenAI",
+     "at": [
+      5,
+      "OpenAI"
+     ],
+     "sm": true
+    }
+   ],
+   "at": 5,
+   "clip": "pexels:35158244",
+   "veil": 0.58
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "ĐI NHẦM NGƯỜI",
+   "sub": "MỘT YÊU CẦU BỊ HUỶ GIỮA CHỪNG"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NGƯỜI LẠ",
+     "at": [
+      6,
+      "người"
+     ],
+     "acc": true
+    },
+    {
+     "text": "trong lịch sử của bạn",
+     "at": [
+      6,
+      "lịch"
+     ],
+     "sm": true
+    }
+   ],
+   "at": [
+    6,
+    "người"
+   ],
+   "clip": "pexels:11349390",
+   "veil": 0.55
+  }
+ ],
+ "sources": [
+  "https://openai.com/index/march-20-chatgpt-outage (OpenAI, 24/03/2023; trang trả 403 khi tải tự động ngày 20/10 — nội dung đối chiếu qua The Hacker News, Help Net Security, Infosecurity Magazine: redis-py, 1,2%, 9 giờ) — CẦN ĐỌC BẢN GỐC"
+ ],
+ "say": {
+  "=AI": "ây ai",
+  "chatgpt": "chát gi pi ti",
+  "openai": "Ô-pần ây ai",
+  "google": "Gu-gồ",
+  "chatbot": "chát bót",
+  "chat": "chát"
+ },
+ "rules": 2,
+ "mix": true,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.5
+  }
+ }
+}

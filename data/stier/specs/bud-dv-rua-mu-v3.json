@@ -1,0 +1,211 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-dv-rua-mu",
+ "format": "do-vui",
+ "hook_type": "do-vui",
+ "open_shot": "rua-bien",
+ "voice": "Thục Đoan",
+ "music": "floating_cities.mp3",
+ "music_gain": 0.18,
+ "gap": 0.1,
+ "series": "Đố vui Phật pháp #10",
+ "title": "Đố bạn: được làm người khó cỡ nào?",
+ "kicker": "ĐỐ VUI PHẬT PHÁP #10",
+ "sub": "KINH TƯƠNG ƯNG 56.47",
+ "acc": [
+  "người",
+  "rùa",
+  "lỗ"
+ ],
+ "lines": [
+  "Đố bạn: được làm người khó cỡ nào?",
+  "A, như trúng số. B, như rùa mù chui lỗ ách. C, như hái sao.",
+  "Chọn một chữ đi.",
+  "Đáp án bất ngờ là B.",
+  "Kinh Tương Ưng, diễn ý: rùa mù trăm năm mới nổi một lần.",
+  "Trên biển có một cái ách trôi, chỉ một lỗ.",
+  "Nhưng rùa chui đúng lỗ ấy, còn dễ hơn được làm người.",
+  "Hôm nay làm một việc tốt, cho xứng cơ hội hiếm ấy.",
+  "Làm người khó cỡ nào? Comment A, B hay C."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:28639826",
+   "items": [
+    {
+     "text": "LÀM NGƯỜI KHÓ CỠ NÀO?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "đố vui Phật pháp #10",
+     "at": [
+      0,
+      "người"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "hf_list_build",
+   "at": 1,
+   "title": "BẠN CHỌN?",
+   "items": [
+    {
+     "key": "A",
+     "text": "TRÚNG SỐ",
+     "at": [
+      1,
+      "trúng"
+     ]
+    },
+    {
+     "key": "B",
+     "text": "RÙA MÙ · LỖ ÁCH",
+     "at": [
+      1,
+      "rùa"
+     ]
+    },
+    {
+     "key": "C",
+     "text": "HÁI SAO",
+     "at": [
+      1,
+      "hái"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 2,
+   "text": "A · B hay C?",
+   "clip": "pexels:33937728",
+   "veil": 0.65
+  },
+  {
+   "type": "hf_stamp",
+   "at": 3,
+   "kick": "",
+   "big": "B",
+   "stamps": [
+    {
+     "text": "RÙA MÙ",
+     "at": [
+      3,
+      "b."
+     ],
+     "x": 200,
+     "y": 880,
+     "rot": -6
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "to": 100,
+   "suffix": " NĂM",
+   "label": "RÙA MỚI NỔI MỘT LẦN",
+   "until": [
+    4,
+    "nổi"
+   ]
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "SN 56.47 (diễn ý)",
+   "nodes": [
+    {
+     "text": "1 CÁI ÁCH TRÔI",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      5,
+      "ách"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "CHỈ 1 LỖ",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      5,
+      "lỗ."
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "SN 56.47 · SUTTACENTRAL"
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "CÒN DỄ HƠN\nLÀM NGƯỜI",
+   "fx": "zoom"
+  },
+  {
+   "type": "cards3d",
+   "at": 7,
+   "title": "HÔM NAY",
+   "cards": [
+    {
+     "k": "1 VIỆC TỐT",
+     "v": "XỨNG CƠ HỘI HIẾM",
+     "at": [
+      7,
+      "việc"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "veil": 0.4,
+   "clip": "pexels:7280839",
+   "items": [
+    {
+     "text": "KHÓ CỠ NÀO?",
+     "at": [
+      8,
+      "làm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "comment A, B hay C",
+     "at": [
+      8,
+      "comment"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/sn56.47/en/sujato"
+ ],
+ "description": "Đố bạn: được làm người khó cỡ nào?\n\nNguồn: https://suttacentral.net/sn56.47/en/sujato"
+}

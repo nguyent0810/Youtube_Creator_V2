@@ -1,0 +1,275 @@
+{
+ "title": "Ổ khoá mở",
+ "lines": [
+  {
+   "t": "Giờ xếp ba số cạnh nhau.",
+   "p": 0.8
+  },
+  "Một: chẻ bài toán thành dây chuyền.",
+  "Hai: chạy nhiều việc cùng lúc.",
+  {
+   "t": "Ba: cho máy tự chạy và tung xúc xắc.",
+   "p": 1.0
+  },
+  "Đó là câu trả lời mình hứa ở đầu video.",
+  "Người ta tính trước được một vụ nổ chưa ai từng thấy, không nhờ riêng một thiên tài nào.",
+  "Mà nhờ cách chia việc, cho người trước, rồi cho máy.",
+  {
+   "t": "Người mệt, máy thì không, nên phần việc lặp lại dần chuyển sang máy.",
+   "p": 1.0
+  },
+  "Năm 1987, Metropolis viết về tương lai.",
+  "Ông hình dung hàng nghìn, thậm chí hàng triệu bộ xử lý cùng chạy song song.",
+  "Và ông viết rằng các đường đi của Monte Carlo, về bản chất, rất hợp để tính song song.",
+  {
+   "t": "Những con chip đồ hoạ chạy mô phỏng hôm nay, thứ kênh mình đã có một video riêng, vẫn dựa trên ba số ấy.",
+   "p": 1.0
+  },
+  "Còn Feynman?",
+  "Năm 1965, ông nhận giải Nobel vật lý.",
+  "Ông mất ngày 15 tháng 2 năm 1988.",
+  {
+   "t": "Và ông để dành một chuyện két sắt cho cuối bài nói.",
+   "p": 1.0
+  },
+  "Sau chiến tranh, ông quay lại Los Alamos, cần tài liệu đúng vào một ngày thứ bảy.",
+  "Tủ của Freddy de Hoffmann, người phụ trách giải mật, chứa bản sao gần như mọi tài liệu của phòng thí nghiệm.",
+  "Ông thử số pi, xoay đủ kiểu suốt hai mươi phút.",
+  {
+   "t": "Không mở.",
+   "p": 1.0
+  },
+  "Rồi ông nghĩ: một người làm toán như de Hoffmann dễ chọn một hằng số toán học.",
+  "Mà hằng số quan trọng còn lại là số e.",
+  "Hai mươi bảy, mười tám, hai mươi tám.",
+  {
+   "t": "Két mở.",
+   "p": 1.0
+  },
+  "Feynman không đoán bừa.",
+  "Ông đoán xem con người phía sau ổ khoá sẽ chọn gì.",
+  "Ba số của ổ khoá hôm nay cũng vậy, cả ba đều là chuyện con người sắp xếp công việc.",
+  "Nếu được ngồi vào căn phòng năm 1944 ấy, bạn chọn chỗ nào: người tính bằng máy quay tay, cậu lính đục thẻ, hay người sửa máy?",
+  "Và vì sao? Viết cho mình ở phần bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "12",
+   "k": "CHƯƠNG MƯỜI HAI",
+   "title": "Ổ KHOÁ MỞ",
+   "sub": "BA SỐ · MỘT LỜI GIẢI",
+   "bg": "feyn0",
+   "titleAt": [
+    0,
+    "Giờ"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "Ổ KHOÁ BA SỐ",
+   "srcnote": "KÊNH TỔNG HỢP TỪ CÁC CHƯƠNG TRƯỚC",
+   "rows": [
+    {
+     "k": "SỐ 1",
+     "v": "CHẺ VIỆC THÀNH DÂY CHUYỀN",
+     "at": 1
+    },
+    {
+     "k": "SỐ 2",
+     "v": "CHẠY NHIỀU VIỆC CÙNG LÚC",
+     "at": 2
+    },
+    {
+     "k": "SỐ 3",
+     "v": "MÁY TỰ CHẠY · TUNG XÚC XẮC",
+     "at": 3
+    }
+   ],
+   "total": {
+    "k": "MỞ RA",
+    "v": "CÁCH TÍNH TRƯỚC MỘT VỤ NỔ",
+    "at": 4
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "KHÔNG NHỜ RIÊNG MỘT THIÊN TÀI",
+     "at": 5
+    },
+    {
+     "text": "NHỜ CÁCH CHIA VIỆC",
+     "at": 6,
+     "acc": true
+    },
+    {
+     "text": "người mệt, máy thì không",
+     "at": 7,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "source",
+   "at": 8,
+   "source": "N. METROPOLIS · “THE BEGINNING OF THE MONTE CARLO METHOD”",
+   "ref": "LOS ALAMOS SCIENCE · SỐ 15 · 1987",
+   "snippet": "song song quy mô lớn với [[hàng nghìn bộ xử lý, thậm chí hàng triệu]] · đường đi Monte Carlo về bản chất rất song song",
+   "hlAt": [
+    9,
+    "thậm"
+   ],
+   "seal": "DIỄN Ý TỪ BÀI VIẾT 1987",
+   "sealAt": 10
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "CHIP ĐỒ HOẠ HÔM NAY",
+     "at": 11,
+     "sm": true
+    },
+    {
+     "text": "VẪN DỰA TRÊN BA SỐ ẤY",
+     "at": [
+      11,
+      "dựa"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": 12,
+   "img": "feyn0",
+   "tone": "bw",
+   "side": {
+    "k": "RICHARD FEYNMAN",
+    "h": "1918 — 1988",
+    "lines": [
+     {
+      "text": "Nobel vật lý *1965*",
+      "at": 13
+     },
+     {
+      "text": "mất *15.02.1988*",
+      "at": 14
+     }
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "CHUYỆN KÉT SẮT ĐỂ DÀNH",
+     "at": 15,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 16,
+   "k": "SAU CHIẾN TRANH · MỘT NGÀY THỨ BẢY",
+   "name": "TỦ CỦA\nFREDDY DE HOFFMANN",
+   "desc": "Người phụ trách giải mật · bản sao gần như mọi tài liệu",
+   "rows": [
+    {
+     "k": "THỬ",
+     "v": "SỐ PI · 31-41-59…",
+     "at": 18
+    },
+    {
+     "k": "20 PHÚT",
+     "v": "KHÔNG MỞ",
+     "at": 19
+    }
+   ],
+   "label": {
+    "k": "NGUỒN",
+    "v": "LOS ALAMOS FROM BELOW (FEYNMAN, 1976) · DIỄN Ý",
+    "at": 16
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 20,
+   "items": [
+    {
+     "text": "NGƯỜI LÀM TOÁN → HẰNG SỐ TOÁN HỌC",
+     "at": 20
+    },
+    {
+     "text": "SỐ e = 2,718281828…",
+     "at": 21,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 22,
+   "text": "27 · 18 · 28",
+   "sub": "BA SỐ CỦA SỐ e · TỦ MỞ"
+  },
+  {
+   "type": "kinetic",
+   "at": 23,
+   "items": [
+    {
+     "text": "KÉT MỞ",
+     "at": 23,
+     "acc": true
+    },
+    {
+     "text": "không đoán bừa · đoán con người phía sau ổ khoá",
+     "at": 25,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 27,
+   "text": "Ngồi vào căn phòng năm 1944,\nbạn chọn chỗ nào?"
+  },
+  {
+   "type": "kinetic",
+   "at": 28,
+   "items": [
+    {
+     "text": "VIẾT CHO MÌNH",
+     "at": [
+      28,
+      "viết"
+     ]
+    },
+    {
+     "text": "Ở PHẦN BÌNH LUẬN",
+     "at": [
+      28,
+      "bình"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 12",
+  "t": "Ổ KHOÁ MỞ"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.1
+ }
+}

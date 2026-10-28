@@ -1,0 +1,256 @@
+{
+ "title": "Một tranh chấp có hồ sơ",
+ "lines": [
+  {
+   "t": "Cameron Winklevoss, Tyler Winklevoss và Divya Narendra từng tìm Zuckerberg để hỗ trợ xây một mạng xã hội riêng cho sinh viên Harvard, theo Crimson.",
+   "p": 0.8
+  },
+  "Chi tiết này thường được kể lại bằng những câu rất tròn trịa, nhưng hồ sơ pháp lý buộc ta tách cáo buộc với kết luận.",
+  "Tòa Phúc thẩm Liên bang Khu vực 9 tóm tắt rằng ba người Winklevoss và Narendra cáo buộc Zuckerberg lấy ý tưởng Facebook của họ.",
+  "Đây là cáo buộc của các bên trong vụ kiện.",
+  "Nó không phải kết luận thực tế của tòa rằng hành vi đó đã xảy ra đúng như lời cáo buộc.",
+  "Phán quyết năm 2011 giữ nguyên việc thực thi thỏa thuận dàn xếp giữa Facebook, hai anh em Winklevoss, Narendra và ConnectU.",
+  "Một hồ sơ tòa Massachusetts mô tả phiên hòa giải toàn cầu ngày 22 tháng 2 năm 2008.",
+  "Theo hồ sơ đó, Facebook nhận toàn bộ cổ phần ConnectU để đổi lấy 20 triệu đô la tiền mặt và hơn một triệu cổ phiếu Facebook.",
+  "Giá trị khi đó được mô tả xấp xỉ 65 triệu đô la.",
+  "Những con số này nói về điều khoản được tòa mô tả, không phải thước đo đạo đức cho một bên nào.",
+  "Phim có thể rút một tranh chấp thành các cảnh đối đầu dễ nhớ.",
+  "Nhưng khi nghe một lời buộc tội trong câu chuyện thật, bạn cần biết nó là lời buộc tội, dàn xếp hay phán quyết.",
+  "Ba nhãn đó không thể đổi cho nhau chỉ vì chúng làm nhịp kể nhanh hơn.",
+  "Trên bản đồ kết nối, ghim thứ sáu là hồ sơ tòa: nó nối các bên bằng văn bản pháp lý, không bằng một kết luận mà nguồn không đưa ra.",
+  "Đó cũng là cách xem một câu chuyện hấp dẫn mà không biến tranh chấp thành một phán quyết tưởng tượng."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "CHƯƠNG NĂM",
+   "title": "MỘT TRANH CHẤP\nCÓ HỒ SƠ",
+   "sub": "2008 → 2011 · CONNECTU",
+   "bg": "memorial07",
+   "titleAt": [
+    0,
+    "cameron"
+   ]
+  },
+  {
+   "type": "org",
+   "at": [
+    0,
+    "tyler"
+   ],
+   "nodes": [
+    {
+     "id": "group",
+     "t": "WINKLEVOSS · NARENDRA",
+     "s": "MẠNG CHO SINH VIÊN",
+     "at": [
+      0,
+      "tyler"
+     ]
+    },
+    {
+     "id": "zuck",
+     "t": "ZUCKERBERG",
+     "s": "HỖ TRỢ XÂY DỰNG",
+     "p": "group",
+     "at": [
+      0,
+      "tyler"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    1,
+    "pháp"
+   ],
+   "items": [
+    {
+     "text": "HỒ SƠ PHÁP LÝ",
+     "at": [
+      1,
+      "pháp"
+     ],
+     "acc": true
+    },
+    {
+     "text": "TÁCH CÁO BUỘC VÀ KẾT LUẬN",
+     "at": [
+      1,
+      "pháp"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": [
+    2,
+    "cáo"
+   ],
+   "img": "chapel",
+   "tone": "bw",
+   "head": "TÒA KHU VỰC 9",
+   "side": {
+    "k": "CÁO BUỘC",
+    "h": "KHÔNG PHẢI KẾT LUẬN SỰ THẬT",
+    "lines": [
+     {
+      "text": "KHÔNG PHẢI KẾT LUẬN SỰ THẬT",
+      "at": [
+       2,
+       "cáo"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": [
+    4,
+    "kết"
+   ],
+   "text": "BA NHÃN KHÁC NHAU",
+   "sub": "CÁO BUỘC · DÀN XẾP · PHÁN QUYẾT"
+  },
+  {
+   "type": "timeline",
+   "at": [
+    6,
+    "năm"
+   ],
+   "bg": "hall",
+   "items": [
+    {
+     "year": "22.02.2008",
+     "text": "HÒA GIẢI TOÀN CẦU"
+    },
+    {
+     "year": "2011",
+     "text": "THI HÀNH DÀN XẾP"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": [
+    7,
+    "lấy"
+   ],
+   "from": 0,
+   "to": 20,
+   "suffix": " TRIỆU USD",
+   "label": "TIỀN MẶT · THEO HỒ SƠ TÒA",
+   "year": false
+  },
+  {
+   "type": "counter",
+   "at": [
+    8,
+    "xỉ"
+   ],
+   "from": 0,
+   "to": 65,
+   "suffix": " TRIỆU USD",
+   "label": "GIÁ TRỊ XẤP XỈ KHI ĐÓ",
+   "year": false
+  },
+  {
+   "type": "photo",
+   "at": [
+    9,
+    "đạo"
+   ],
+   "img": "memorial16",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "ĐIỀU KHOẢN",
+    "v": "KHÔNG PHẢI THƯỚC ĐO ĐẠO ĐỨC",
+    "at": [
+     9,
+     "đạo"
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": [
+    13,
+    "bản"
+   ],
+   "title": "BẢN ĐỒ KẾT NỐI",
+   "srcnote": "MỖI CHƯƠNG THÊM MỘT ĐƯỜNG",
+   "rows": [
+    {
+     "k": "MỞ ĐẦU",
+     "v": "SO CẶP ẢNH",
+     "at": [
+      13,
+      "bản"
+     ]
+    },
+    {
+     "k": "1 · QUY TẮC",
+     "v": "CỬA KỶ LUẬT",
+     "at": [
+      13,
+      "bản"
+     ]
+    },
+    {
+     "k": "2 · CỔNG VÀO",
+     "v": "EMAIL TRƯỜNG",
+     "at": [
+      13,
+      "bản"
+     ]
+    },
+    {
+     "k": "3 · MỞ RỘNG",
+     "v": "LỚP HỌC CHUNG",
+     "at": [
+      13,
+      "bản"
+     ]
+    },
+    {
+     "k": "4 · VAI TRÒ",
+     "v": "VỐN VÀ QUẢNG CÁO",
+     "at": [
+      13,
+      "bản"
+     ]
+    },
+    {
+     "k": "5 · HỒ SƠ",
+     "v": "CÁO BUỘC KHÁC ÁN",
+     "at": [
+      13,
+      "bản"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": [
+    14,
+    "phán"
+   ],
+   "text": "LÀM SAO XEM TRANH CHẤP\nMÀ KHÔNG TƯỞNG TƯỢNG ÁN?"
+  }
+ ],
+ "topic": "mim-social-network",
+ "chapter": 5,
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "MỘT TRANH CHẤP CÓ HỒ SƠ"
+ }
+}

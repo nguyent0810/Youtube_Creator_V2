@@ -1,0 +1,205 @@
+{
+ "theme": "mim",
+ "title": "OpenAI Five: năm cỗ máy chơi Dota 2 thành một đội mà không ai dạy cách chia việc",
+ "description": "Mỗi đội Dota 2 có năm người. OpenAI cho năm cỗ máy tự chơi với nhau để học phối hợp: không ai ra lệnh, chỉ có phần thưởng khi cả đội thắng (theo OpenAI và Wikipedia: OpenAI Five).\n\nGiọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/0J3dcjPjcdI (công khai từ 20:00 ngày 03/12).",
+ "tags": [
+  "openai five",
+  "dota 2",
+  "openai",
+  "phối hợp nhiều tác tử",
+  "trận đấu người máy",
+  "trí tuệ nhân tạo",
+  "lịch sử máy tính",
+  "mind in the machine"
+ ],
+ "sub": "OPENAI FIVE",
+ "acc": [
+  "năm",
+  "đội",
+  "thưởng",
+  "chung"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Năm cỗ máy, không ai ra lệnh cho ai.",
+  "Trong Dota hai, mỗi đội có năm người, mỗi người điều khiển một nhân vật.",
+  "OpenAI cho năm cỗ máy chơi thành một đội, và không ai dạy chúng cách chia việc.",
+  "Chúng chỉ được thưởng khi cả đội thắng.",
+  "Dần dần, chúng học được rằng có lúc phải hy sinh lợi ích riêng cho đồng đội.",
+  "Mỗi cỗ máy tự quyết định, và phải đoán bốn cỗ máy kia sẽ làm gì.",
+  "Không ai ra lệnh, chỉ có một phần thưởng chung."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "5 CỖ MÁY",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "không ai ra lệnh",
+     "at": [
+      0,
+      "không"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:35160268",
+   "ms": 1,
+   "veil": 0.55
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 0,
+   "to": 5,
+   "label": "NGƯỜI MỖI ĐỘI · MỖI NGƯỜI MỘT NHÂN VẬT",
+   "until": [
+    1,
+    "năm"
+   ],
+   "sub": {
+    "text": "DOTA 2",
+    "at": [
+     1,
+     "Dota"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Ai chia việc?",
+   "nodes": [
+    {
+     "text": "có người ra lệnh",
+     "at": [
+      2,
+      "OpenAI"
+     ],
+     "x": 0.5,
+     "y": 0.3,
+     "cross": [
+      2,
+      "không"
+     ],
+     "w": 700
+    },
+    {
+     "text": "năm cỗ máy tự học phối hợp",
+     "at": [
+      2,
+      "chơi"
+     ],
+     "x": 0.5,
+     "y": 0.68,
+     "c": "acc",
+     "shape": "none",
+     "w": 860
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CẢ ĐỘI THẮNG",
+     "at": 3,
+     "acc": true
+    },
+    {
+     "text": "mới được thưởng",
+     "at": [
+      3,
+      "thưởng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8888807",
+   "ms": 1,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 3
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "ĐỒNG ĐỘI",
+   "cards": [
+    {
+     "k": "LỢI ÍCH RIÊNG",
+     "v": "ĐÔI KHI PHẢI BỎ",
+     "at": [
+      4,
+      "hy"
+     ]
+    },
+    {
+     "k": "VÌ AI",
+     "v": "VÌ CẢ ĐỘI",
+     "at": [
+      4,
+      "đồng"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "TỰ ĐOÁN Ý",
+   "sub": "BỐN CỖ MÁY CÒN LẠI"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MỘT PHẦN THƯỞNG CHUNG",
+     "at": 6,
+     "acc": true
+    },
+    {
+     "text": "không ai ra lệnh",
+     "at": [
+      6,
+      "Không"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:35163081",
+   "ms": 1,
+   "veil": 0.55,
+   "at": 6
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/OpenAI_Five",
+  "https://openai.com/index/openai-five/"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "openai": "Ô-pần Ây Ai",
+  "dota": "Đô-ta"
+ },
+ "imgs": {}
+}

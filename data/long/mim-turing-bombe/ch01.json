@@ -1,0 +1,218 @@
+{
+ "topic": "mim-turing-bombe",
+ "chapter": 1,
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "KHÓA KHÔNG CHỜ BẠN"
+ },
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "KHÓA KHÔNG\nCHỜ BẠN",
+   "sub": "NỬA ĐÊM · KHÓA NGÀY",
+   "bg": "enigmaNsa",
+   "titleAt": [
+    0,
+    "máy"
+   ]
+  },
+  {
+   "type": "broll",
+   "at": [
+    1,
+    "dòng"
+   ],
+   "vid": "2915385",
+   "veil": 0.62,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MỘT PHÍM, NHIỀU RÔ-TO",
+     "at": [
+      1,
+      "dòng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": [
+    2,
+    "ba"
+   ],
+   "img": "enigmaNsa",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "ENIGMA",
+    "v": "BA RÔ-TO TRỞ LÊN",
+    "at": [
+     2,
+     "ba"
+    ]
+   },
+   "kin": [
+    {
+     "text": "DÒNG ĐIỆN ĐỔI ĐƯỜNG",
+     "at": [
+      2,
+      "ba"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": [
+    3,
+    "khả"
+   ],
+   "text": "158.962.555.217.826.360.000",
+   "sub": "KHÔNG GIAN LÝ THUYẾT CỦA ENIGMA"
+  },
+  {
+   "type": "ledger",
+   "at": [
+    5,
+    "hai"
+   ],
+   "title": "SÁU RĂNG CỦA KHÓA",
+   "srcnote": "MỖI CHƯƠNG THÊM MỘT MẮT XÍCH",
+   "rows": [
+    {
+     "k": "BỨC THƯ",
+     "v": "NGƯỜI XỬ LÝ MÁY",
+     "at": [
+      5,
+      "hai"
+     ]
+    },
+    {
+     "k": "KHÓA NGÀY",
+     "v": "ÁP LỰC THỜI GIAN",
+     "at": [
+      5,
+      "hai"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    6,
+    "nửa"
+   ],
+   "items": [
+    {
+     "text": "NỬA ĐÊM · THIẾT LẬP ĐỔI",
+     "at": [
+      6,
+      "nửa"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": [
+    8,
+    "lục"
+   ],
+   "img": "enigmaIwm",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "RÔ-TO",
+    "v": "3 TỪ 5 · HẢI QUÂN 3 TỪ 8",
+    "at": [
+     8,
+     "lục"
+    ]
+   },
+   "kin": [
+    {
+     "text": "MẠNG KHÔNG DÙNG CÙNG MỘT KHÓA",
+     "at": [
+      8,
+      "lục"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": [
+    9,
+    "khoảng"
+   ],
+   "from": 0,
+   "to": 50,
+   "suffix": " MẠNG",
+   "label": "HOẠT ĐỘNG CÙNG LÚC",
+   "year": false
+  },
+  {
+   "type": "print",
+   "at": [
+    11,
+    "đường"
+   ],
+   "img": "enigmaNsa",
+   "tone": "bw",
+   "head": "ĐIỆN VĂN CHẶN ĐƯỢC",
+   "side": {
+    "k": "GIÁ TRỊ",
+    "h": "PHẢI TÌM ĐƯỜNG VÀO KỊP LÚC",
+    "lines": [
+     {
+      "text": "PHẢI TÌM ĐƯỜNG VÀO KỊP LÚC",
+      "at": [
+       11,
+       "đường"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "at": [
+    13,
+    "loại"
+   ],
+   "text": "NẾU KHÔNG ĐỌC THAY CON NGƯỜI,\nBOMBE LOẠI ĐIỀU GÌ?"
+  }
+ ],
+ "title": "Khóa không chờ bạn",
+ "lines": [
+  {
+   "t": "Enigma là một họ máy điện cơ dùng rô-to và plugboard để biến chữ thành chữ khác.",
+   "p": 0.8
+  },
+  "Một phím được nhấn, dòng điện đi qua nhiều rô-to, rồi kết quả hiện ở bảng đèn.",
+  "Điều đáng ngại không chỉ là máy có ba rô-to hoặc nhiều hơn.",
+  "Cơ quan Sáng chế Đức tính không gian lý thuyết của hệ gồm rô-to và plugboard là 158.962.555.217.826.360.000 khả năng.",
+  "Nhưng Enigma còn tạo áp lực bằng thời gian.",
+  "Hai đầu liên lạc phải đặt máy giống hệt nhau mới đọc được cùng một thông điệp.",
+  "Thiết lập được thay thường xuyên, còn Hải quân Đức đổi khóa ngày vào nửa đêm.",
+  "Các mạng cũng không giống nhau.",
+  "Lục quân và Không quân chọn ba rô-to từ một bộ năm, trong khi Hải quân chọn từ một bộ tám.",
+  "TNMOC ghi rằng trong chiến tranh có hàng trăm mạng, dù khoảng 50 mạng hoạt động cùng lúc, và mỗi mạng nhận key sheet riêng.",
+  "Đó là lý do một điện văn chặn được không tự động có giá trị.",
+  "Nó chỉ có giá trị nếu bạn tìm ra đường vào trước khi bối cảnh của nó đã đổi.",
+  "Vì thế Bombe không được tạo ra để đọc thay con người từng câu tiếng Đức.",
+  "Nó được tạo ra để loại thật nhanh những khả năng không thể đúng.",
+  "Nhưng ý tưởng loại đường sai này không xuất hiện từ khoảng trống.",
+  "Nó đi qua Warsaw trước khi đến Bletchley."
+ ]
+}

@@ -1,0 +1,264 @@
+{
+ "theme": "mim",
+ "title": "05/08/2018: khán giả được chọn tướng cho OpenAI Five, và con người thắng một ván",
+ "description": "Ngày 05/08/2018 tại San Francisco, OpenAI Five đấu Dota 2 với năm người chơi hàng đầu (trong đó có Blitz) trước khoảng 100.000 người xem trực tiếp. Máy thắng hai ván đầu; ở ván ba khán giả chọn đội hình cho máy, con người thắng, máy thắng loạt 2–1 (OpenAI Five Benchmark; PC Gamer).\n\nGiọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/0J3dcjPjcdI (công khai từ 20:00 ngày 03/12).",
+ "tags": [
+  "openai five",
+  "dota 2",
+  "blitz",
+  "benchmark",
+  "trận đấu người máy",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "OPENAI FIVE · 2018",
+ "acc": [
+  "khán",
+  "giả",
+  "chọn",
+  "tướng"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Khán giả chọn tướng để hại cỗ máy.",
+  "Ngày năm tháng tám năm hai nghìn không trăm mười tám, ở San Francisco.",
+  "OpenAI Five đấu Dota với năm người chơi hàng đầu, trong đó có Blitz.",
+  "Khoảng một trăm nghìn người xem trực tiếp.",
+  "Hai ván đầu, đội máy thắng.",
+  "Ván ba, khán giả được quyền chọn tướng cho đội máy.",
+  "Họ cố ý chọn một đội hình dở.",
+  "Và lần này, con người thắng.",
+  "Tháng tám ấy, máy thắng loạt trận, nhưng khán giả vẫn hạ được nó một ván."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "KHÁN GIẢ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "chọn tướng để hại máy",
+     "at": [
+      0,
+      "chọn"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:19193241",
+   "ms": 3,
+   "veil": 0.55
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "2018",
+   "day": "05/08",
+   "sub": {
+    "text": "SAN FRANCISCO · DOTA 2",
+    "at": [
+     1,
+     "San"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Năm ván đấu",
+   "nodes": [
+    {
+     "text": "OPENAI FIVE",
+     "at": [
+      2,
+      "OpenAI"
+     ],
+     "x": 0.3,
+     "y": 0.36,
+     "shape": "circle",
+     "w": 440,
+     "c": "acc"
+    },
+    {
+     "text": "5 NGƯỜI CHƠI GIỎI",
+     "at": [
+      2,
+      "năm"
+     ],
+     "x": 0.7,
+     "y": 0.36,
+     "shape": "circle",
+     "w": 460
+    },
+    {
+     "text": "CÓ BLITZ",
+     "at": [
+      2,
+      "Blitz"
+     ],
+     "x": 0.5,
+     "y": 0.68,
+     "shape": "none",
+     "w": 500,
+     "size": 56
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "from": 0,
+   "to": 100,
+   "prefix": "KHOẢNG ",
+   "suffix": " NGHÌN",
+   "label": "NGƯỜI XEM TRỰC TIẾP",
+   "until": [
+    3,
+    "trăm"
+   ],
+   "sub": {
+    "text": "THEO OPENAI",
+    "at": [
+     3,
+     "người"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "2 – 0",
+     "at": 4,
+     "acc": true
+    },
+    {
+     "text": "máy thắng hai ván đầu",
+     "at": [
+      4,
+      "đội"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7579576",
+   "ms": 1,
+   "veil": 0.5,
+   "at": 4
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "VÁN BA",
+   "cards": [
+    {
+     "k": "AI CHỌN TƯỚNG",
+     "v": "KHÁN GIẢ",
+     "at": [
+      5,
+      "khán"
+     ],
+     "c": "acc"
+    },
+    {
+     "k": "CHỌN CHO",
+     "v": "ĐỘI MÁY",
+     "at": [
+      5,
+      "tướng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "ĐỘI HÌNH DỞ",
+   "sub": "CỐ Ý CHỌN"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CON NGƯỜI THẮNG",
+     "at": 7,
+     "acc": true
+    },
+    {
+     "text": "ván ba",
+     "at": [
+      7,
+      "lần"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:27385370",
+   "ms": 4,
+   "veil": 0.5,
+   "at": 7
+  },
+  {
+   "type": "ledger",
+   "at": 8,
+   "title": "LOẠT TRẬN 05/08/2018",
+   "rows": [
+    {
+     "k": "MÁY",
+     "v": "2 VÁN",
+     "at": [
+      8,
+      "máy"
+     ]
+    },
+    {
+     "k": "NGƯỜI",
+     "v": "1 VÁN",
+     "at": [
+      8,
+      "một"
+     ]
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "OpenAI — OpenAI Five Benchmark: Results: https://openai.com/index/openai-five-benchmark-results",
+  "https://en.wikipedia.org/wiki/OpenAI_Five",
+  "PC Gamer — bản tin về trận OpenAI Five Benchmark (08/2018)"
+ ],
+ "say": {
+  "openai": "Ô-pần Ây-ai",
+  "dota": "Đô-ta",
+  "blitz": "Blít",
+  "san": "San",
+  "francisco": "Phran-xít-cô",
+  "five": "Phai"
+ },
+ "rules": 2,
+ "mix": true,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.4,
+   "7": 0.5
+  }
+ },
+ "imgs": {},
+ "sources_internal": [
+  "https://openai.com/index/openai-five-benchmark-results (trả 403 khi mở trực tiếp; 2–1, Blitz/Cap/Fogged/Merlini/MoonMeander, khoảng 100.000 người xem, ván ba khán giả chọn tướng; qua tóm tắt tìm kiếm + PC Gamer; CẦN KIỂM trước khi dựng)",
+  "https://techxplore.com/news/2018-08-openai-best-of-three-international.html (mở: 451)",
+  "https://en.wikipedia.org/wiki/OpenAI_Five (đã mở: 'win over former pros' 06/08/2018)"
+ ]
+}

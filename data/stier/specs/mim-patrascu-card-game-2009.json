@@ -1,0 +1,251 @@
+{
+ "theme": "mim",
+ "title": "Năm 2009, người dựng máy cho nhóm của Hinton thử card chơi game thay cho card Tesla đắt",
+ "description": "Relu Patrascu lo toàn bộ máy tính nghiên cứu của nhóm học máy ở Đại học Toronto (nhóm của Geoffrey Hinton). Đầu năm 2009 nhóm chủ yếu chạy Matlab trên máy chủ thường; họ mua card đồ hoạ Nvidia đầu tiên, loại Tesla cho máy chủ, giá nhiều nghìn đô cho một hệ thống nên chỉ mua được ít. Khi CUDA được thử trên card chơi game (GTX 280 và 285 năm 2009, sau đó GTX 480 và 580), nhóm mua được nhiều chiếc, khỏi tranh nhau thời gian trên Tesla; Patrascu phải tự nghĩ cách tản nhiệt và cấp điện. Theo bài của khoa, việc học máy nhanh hơn khoảng 30 lần so với máy chủ nhiều lõi thời ấy. Năm 2012, AlexNet thắng ImageNet trên card GTX 580. Nguồn: bài viết của John DiMarco, Khoa Khoa học máy tính, Đại học Toronto (06/11/2023).\n\nGiọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật.\n\nBản đầy đủ: https://youtu.be/Es4bogrdk-c",
+ "tags": [
+  "relu patrascu",
+  "geoffrey hinton",
+  "đại học toronto",
+  "nvidia",
+  "cuda",
+  "card đồ hoạ",
+  "alexnet",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "NGÀNH AI",
+ "sub": "TORONTO · 2009",
+ "acc": [
+  "máy",
+  "card",
+  "ba"
+ ],
+ "lines": [
+  "Người dựng máy cho nhóm của Hinton.",
+  "Anh là Relu Patrascu, lo máy tính nghiên cứu của nhóm học máy ở Toronto.",
+  "Năm hai nghìn không trăm linh chín, họ mua card Nvidia đầu tiên, loại Tesla cho máy chủ.",
+  "Giá nhiều nghìn đô một hệ thống, nên chỉ mua được ít, và ai cũng phải tranh nhau.",
+  "Anh thử card chơi game, vì CUDA chạy được trên cả chúng.",
+  "Nhóm mua được nhiều chiếc, khỏi phải chờ.",
+  "Card nóng và ngốn điện, anh phải tự nghĩ cách bố trí quạt và nguồn.",
+  "Theo khoa, học máy nhanh hơn ba mươi lần so với máy chủ thời ấy.",
+  "Năm hai nghìn không trăm mười hai, AlexNet thắng ImageNet trên card chơi game.",
+  "Trước AlexNet, đã có một người dựng máy cho nó chạy."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "clip": "pexels:4708325",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "NGƯỜI DỰNG MÁY",
+     "at": [
+      0,
+      "dựng"
+     ],
+     "acc": true
+    },
+    {
+     "text": "cho nhóm của Hinton",
+     "at": [
+      0,
+      "nhóm"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "NHÓM HỌC MÁY · TORONTO",
+   "cards": [
+    {
+     "k": "RELU PATRASCU",
+     "v": "LO MÁY TÍNH NGHIÊN CỨU",
+     "at": [
+      1,
+      "Relu"
+     ]
+    },
+    {
+     "k": "ĐẠI HỌC",
+     "v": "TORONTO",
+     "at": [
+      1,
+      "Toronto"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 2,
+   "date": "2009",
+   "day": "CARD NVIDIA ĐẦU TIÊN",
+   "sub": {
+    "text": "LOẠI TESLA · CHO MÁY CHỦ",
+    "at": [
+     2,
+     "Tesla"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "clip": "pexels:6700011",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "NHIỀU NGHÌN ĐÔ",
+     "at": [
+      3,
+      "nhiều"
+     ],
+     "acc": true
+    },
+    {
+     "text": "một hệ thống Tesla · chỉ mua được ít",
+     "at": [
+      3,
+      "chỉ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "HAI LỰA CHỌN",
+   "nodes": [
+    {
+     "text": "card chơi game + CUDA",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      4,
+      "card"
+     ],
+     "shape": "none",
+     "w": 760
+    },
+    {
+     "text": "mua được nhiều chiếc",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      5,
+      "mua"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 760
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "clip": "pexels:40316891",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "NÓNG · NGỐN ĐIỆN",
+     "at": [
+      6,
+      "nóng"
+     ],
+     "acc": true
+    },
+    {
+     "text": "tự nghĩ cách bố trí quạt và nguồn",
+     "at": [
+      6,
+      "tự"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "to": 30,
+   "suffix": " LẦN",
+   "label": "HỌC MÁY NHANH HƠN · THEO BÀI GHI CỦA KHOA",
+   "until": [
+    7,
+    "lần"
+   ],
+   "sub": {
+    "text": "SO VỚI MÁY CHỦ NHIỀU LÕI THỜI ẤY",
+    "at": [
+     7,
+     "so"
+    ]
+   }
+  },
+  {
+   "type": "date",
+   "at": 8,
+   "date": "2012",
+   "day": "ALEXNET THẮNG IMAGENET",
+   "sub": {
+    "text": "TRÊN CARD GTX 580",
+    "at": [
+     8,
+     "trên"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 9,
+   "text": "NGƯỜI DỰNG MÁY",
+   "sub": "TRƯỚC KHI CÓ ALEXNET"
+  }
+ ],
+ "sources": [
+  "John DiMarco, Khoa Khoa học máy tính Đại học Toronto — bài blog 06/11/2023: https://www.cs.toronto.edu/~jdd/blog.cgi/2023/11/06",
+  "Krizhevsky, Sutskever, Hinton — ImageNet Classification with Deep Convolutional Neural Networks (NeurIPS 2012)"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "say": {
+  "relu": "Rê-lu",
+  "patrascu": "Pa-trát-xcu",
+  "hinton": "Hin-tơn",
+  "toronto": "Tô-rôn-tô",
+  "nvidia": "En-vi-đi-a",
+  "tesla": "Tét-la",
+  "matlab": "Mát-láp",
+  "cuda": "Cu-đa",
+  "alexnet": "A-léch-nét",
+  "imagenet": "Im-mịt-nét"
+ },
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.3,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.22,
+   "7": 0.22,
+   "8": 0.5
+  }
+ },
+ "sources_internal": [
+  "https://www.cs.toronto.edu/~jdd/blog.cgi/2023/11/06 (John DiMarco, Khoa Khoa học máy tính ĐH Toronto, 06/11/2023; đã đọc 20/10/2026: Patrascu lo máy tính nghiên cứu cho nhóm học máy; đầu 2009 Matlab trên CPU; card Tesla đầu tiên 'nhiều nghìn đô'; GTX 280/285 năm 2009 rồi GTX 480/580; chi tiết quạt, nguồn; tăng tốc 30 lần so với máy chủ nhiều lõi thời đó; 2012 AlexNet trên GTX 580). Bài không nêu ngày mua chính xác, model Tesla hay giá card chơi game: lời đọc không nói giá card chơi game, chỉ 'mua được nhiều chiếc' như bài; câu 'ai cũng phải tranh nhau' = 'researchers compete for time on scarce Tesla cards'",
+  "data/long/mim-ai-gpu/script.md CH05 (AlexNet 2012, hai card GTX 580)"
+ ]
+}

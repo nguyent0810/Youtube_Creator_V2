@@ -253,12 +253,12 @@ CH["ch17"] = {"hud": {"k": "CHƯƠNG 17", "t": "HAI TRĂM TRIỆU THẾ CỜ M�
 ]}
 
 SPEC = {
-    "title": "Deep Blue Đấu Kasparov: Mười Chín Nước Cờ Khiến Nhà Vô Địch Thế Giới Bỏ Đi",
+    "title": "Deep Blue Đấu Kasparov 1997: 19 Nước Cờ Khiến Nhà Vô Địch Bỏ Đi",
     "channel": "MIM", "theme": "lab", "accent": "#22d3ee", "master": True, "endcard": 20, "autoTr": True, "beat2": True,
     "acc": ["deep", "blue", "kasparov", "máy", "thua", "thắng", "nước", "câu"],
     "say": SAY, "imgs": {}, "chapters": [f"ch{i:02d}" for i in range(18)],
     "youtube": {
-        "titles": ["Deep Blue Đấu Kasparov: Mười Chín Nước Cờ Khiến Nhà Vô Địch Thế Giới Bỏ Đi",
+        "titles": ["Deep Blue Đấu Kasparov 1997: 19 Nước Cờ Khiến Nhà Vô Địch Bỏ Đi",
                    "Ngày Máy Tính Thắng Nhà Vô Địch Cờ Vua: Câu Chuyện Thật Của Deep Blue, 1997",
                    "Kasparov Thua Máy: Một Con Bọ, Một Lời Buộc Tội, Và Hai Mươi Năm Để Nói “Không”"],
         "summary": "Ngày 11/5/1997, sau 19 nước cờ, nhà vô địch thế giới Garry Kasparov xin thua cỗ máy Deep Blue của IBM: lần đầu một máy tính thắng "

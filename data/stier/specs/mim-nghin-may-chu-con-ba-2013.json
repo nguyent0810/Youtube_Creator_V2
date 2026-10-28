@@ -1,0 +1,234 @@
+{
+ "theme": "mim",
+ "title": "Một nghìn máy chủ để nhìn thấy mèo (2012), ba máy chủ gắn card đồ hoạ cho mạng cùng cỡ (2013)",
+ "description": "Năm 2012, Google cho một mạng nơ-ron xem ảnh lấy từ YouTube chạy trên 16.000 lõi xử lý (hơn 1.000 máy chủ); Jeff Dean và Andrew Ng báo cáo mạng chưa từng được bảo thế nào là con mèo. Một năm sau, nhóm Stanford của Andrew Ng (Adam Coates và cộng sự) dùng máy chủ gắn card đồ hoạ bán sẵn: 3 máy dạy được mạng 1 tỉ tham số, 16 máy lên hơn 11 tỉ (ICML 2013). Hai thí nghiệm khác nhau nhưng cùng cỡ mạng. Giọng đọc tổng hợp; video Pexels.\n\nBản đầy đủ: https://youtu.be/Es4bogrdk-c",
+ "tags": [
+  "andrew ng",
+  "google brain",
+  "gpu",
+  "adam coates",
+  "mạng nơ-ron",
+  "học sâu",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "NGÀNH AI",
+ "sub": "GOOGLE · STANFORD",
+ "acc": [
+  "nghìn",
+  "mèo",
+  "ba"
+ ],
+ "lines": [
+  "Một nghìn máy chủ để nhìn thấy mèo.",
+  "Năm hai nghìn không trăm mười hai, Google cho một mạng nơ-ron xem ảnh lấy từ YouTube.",
+  "Không ai bảo nó thế nào là con mèo.",
+  "Vậy mà nó tự học ra khái niệm ấy, trên mười sáu nghìn lõi xử lý.",
+  "Jeff Dean và Andrew Ng viết về nó trên blog của Google.",
+  "Một năm sau, ở Stanford, Adam Coates và nhóm của Ng thử cách khác.",
+  "Máy chủ gắn card đồ hoạ bán sẵn: ba máy là dạy được mạng một tỉ tham số.",
+  "Mười sáu máy thì lên tới hơn mười một tỉ.",
+  "Hai thí nghiệm khác nhau, nhưng cùng cỡ mạng, chừng một tỉ.",
+  "Từ một nghìn máy chủ, chỉ còn ba."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "clip": "pexels:7688618",
+   "veil": 0.6,
+   "items": [
+    {
+     "text": "1.000",
+     "at": [
+      0,
+      "nghìn"
+     ],
+     "acc": true,
+     "size": 300
+    },
+    {
+     "text": "MÁY CHỦ · ĐỂ NHÌN THẤY MÈO",
+     "at": [
+      0,
+      "máy"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "2012",
+   "day": "GOOGLE · ẢNH TỪ YOUTUBE",
+   "sub": {
+    "text": "MỘT MẠNG NƠ-RON XEM ẢNH",
+    "at": [
+     1,
+     "mạng"
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "at": 2,
+   "text": "Chưa ai bảo nó: đây là mèo."
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "to": 16000,
+   "suffix": " LÕI",
+   "label": "XỬ LÝ · MẠNG CHỪNG 1 TỈ KẾT NỐI",
+   "until": [
+    3,
+    "sáu"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "clip": "pexels:17518183",
+   "veil": 0.6,
+   "items": [
+    {
+     "text": "JEFF DEAN",
+     "at": [
+      4,
+      "Jeff"
+     ],
+     "acc": true
+    },
+    {
+     "text": "ANDREW NG",
+     "at": [
+      4,
+      "Andrew"
+     ]
+    },
+    {
+     "text": "viết trên blog của Google",
+     "at": [
+      4,
+      "blog"
+     ],
+     "sm": true,
+     "size": 56
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 5,
+   "date": "2013",
+   "day": "STANFORD",
+   "sub": {
+    "text": "ADAM COATES · NHÓM CỦA ANDREW NG",
+    "at": [
+     5,
+     "Adam"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "MÁY CHỦ GẮN CARD ĐỒ HOẠ",
+   "cards": [
+    {
+     "k": "3 MÁY",
+     "v": "1 TỈ THAM SỐ",
+     "at": [
+      6,
+      "ba"
+     ]
+    },
+    {
+     "k": "16 MÁY",
+     "v": "11 TỈ",
+     "at": [
+      7,
+      "mười"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "THEO BÀI BÁO ICML 2013 · THAM SỐ, KHÔNG PHẢI KẾT NỐI"
+  },
+  {
+   "type": "chart",
+   "at": 8,
+   "kind": "bars",
+   "title": "SỐ MÁY CHỦ CẦN CÓ",
+   "unit": "HAI THÍ NGHIỆM KHÁC NHAU · CÙNG CỠ MẠNG CHỪNG 1 TỈ",
+   "min": 0,
+   "bars": [
+    {
+     "label": "GOOGLE\n2012",
+     "v": 1000,
+     "text": "1.000",
+     "c": "dim",
+     "at": [
+      8,
+      "Hai"
+     ]
+    },
+    {
+     "label": "STANFORD\n2013",
+     "v": 3,
+     "text": "3",
+     "c": "acc",
+     "at": [
+      8,
+      "chừng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 9,
+   "text": "1.000 → 3",
+   "sub": "MÁY CHỦ · CÙNG CỠ MẠNG"
+  }
+ ],
+ "sources": [
+  "Coates, Huval, Wang, Wu, Catanzaro, Ng — Deep learning with COTS HPC systems (ICML 2013): https://proceedings.mlr.press/v28/coates13.html",
+  "The Register, 18/06/2013: https://www.theregister.com/2013/06/18/google_deep_learning_ai/",
+  "The New York Times, 25/06/2012 — How Many Computers to Identify a Cat? 16,000",
+  "Blog Google Research của Jeff Dean và Andrew Ng về thí nghiệm mạng nơ-ron nhận ra mèo (2012)"
+ ],
+ "say": {
+  "google": "Gu-gồ",
+  "card": "các",
+  "stanford": "Xtan-phợt",
+  "youtube": "Diu-tiu",
+  "jeff": "Giép",
+  "dean": "Đin",
+  "andrew": "An-đru",
+  "ng": "Ing",
+  "adam": "A-đam",
+  "coates": "Cô-ớt",
+  "blog": "blóc"
+ },
+ "rules": 2,
+ "mix": true,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "2": 0.4,
+   "4": 0.3,
+   "7": 0.3,
+   "8": 0.35
+  }
+ },
+ "sources_internal": [
+  "Coates, Huval, Wang, Wu, Catanzaro, Ng, \"Deep learning with COTS HPC systems\", ICML 2013: https://proceedings.mlr.press/v28/coates13.html (3 máy, 1 tỉ tham số, vài ngày; 16 máy, hơn 11 tỉ)",
+  "The Register 18/06/2013: https://www.theregister.com/2013/06/18/google_deep_learning_ai/ (16.000 lõi CPU trên 1.000 máy của Google; máy Stanford dùng card GTX 680)",
+  "Bản tin NYT 25/06/2012 'How Many Computers to Identify a Cat? 16,000' và blog Google của Jeff Dean, Andrew Ng (mạng chưa từng được bảo 'mèo' là gì, hơn 1 tỉ kết nối) — chưa đọc bản gốc, CẦN KIỂM"
+ ]
+}

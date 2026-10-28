@@ -48,6 +48,27 @@ SHORT_MAX_WORDS = 140   # hồ sơ S-tier ~35 giây vẫn nằm trong khung Shor
 
 _ILLEGAL_TITLE = re.compile(r"[<>]")
 
+# Ghi chú nội bộ lọt vào mô tả công khai (21/10 và 28/10/2026: "hồ sơ Long B1, nguồn [A1-83]" suýt lên mô tả CK).
+# Chỉ dấu vết chắc chắn là nội bộ: KHÔNG chặn từ thường như "tìm kiếm", "agent" (MIM nói về công cụ tìm kiếm, AI agent).
+_INTERNAL_NOTE = [
+    (re.compile(r"[<>]"), "ký tự < hoặc >"),
+    (re.compile(r"cần kiểm", re.I), '"cần kiểm"'),
+    (re.compile(r"WebFetch|factcheck", re.I), "tên công cụ / file kiểm chứng"),
+    # không tính đoạn nằm trong URL (https://site/docs/... là link công khai)
+    (re.compile(r"(?<![/\w.:-])(?:data|docs|output|motion|scripts)/[\w./-]+"), "đường dẫn trong repo"),
+    (re.compile(r"\[[A-Z]\d*-\d+\]"), "mã nguồn nội bộ kiểu [A1-83]"),
+    (re.compile(r"hồ sơ (?:Long|bài|nguồn)", re.I), '"hồ sơ …" (sổ nghiên cứu nội bộ)'),
+]
+_EMPTY_SOURCES = re.compile(r"Nguồn:[ \t]*(?:\n[ \t]*\n|\s*$)")
+
+
+def internal_note_issues(text: str) -> list[str]:
+    """Dấu vết ghi chú nội bộ trong một đoạn chữ công khai (mô tả, tiêu đề)."""
+    out = [f"chứa {why}: {m.group(0)!r}" for pat, why in _INTERNAL_NOTE if (m := pat.search(text))]
+    if _EMPTY_SOURCES.search(text):
+        out.append('khối "Nguồn:" rỗng (spec.sources trống)')
+    return out
+
 # Cách dựng video. assemble = short thường (TTS + B-roll, factory/assemble.py);
 # casefile = hồ sơ S-tier (motion/stier, HyperFrames); casewide = video dài 16:9
 # (motion/long). Hai engine sau dựng từ file spec riêng, không cần broll_queries.
@@ -133,8 +154,9 @@ class Bundle:
             err.append("script rỗng")
         elif self.kind == "short":
             n = self.word_count
-            if not (SHORT_MIN_WORDS <= n <= SHORT_MAX_WORDS):
-                err.append(f"short phải {SHORT_MIN_WORDS}-{SHORT_MAX_WORDS} từ, đang {n}")
+            lo = 20 if self.render.get("profile") == "bang-tra" else SHORT_MIN_WORDS   # bảng tra dừng hình 10–15 s (22/10/2026)
+            if not (lo <= n <= SHORT_MAX_WORDS):
+                err.append(f"short phải {lo}-{SHORT_MAX_WORDS} từ, đang {n}")
 
         # Tiêu đề: YouTube từ chối '<' '>' và cắt cụt quá 100 ký tự.
         if not self.title.strip():
@@ -146,6 +168,7 @@ class Bundle:
 
         if len(self.description) > MAX_DESCRIPTION_CHARS:
             err.append(f"description {len(self.description)} ký tự > {MAX_DESCRIPTION_CHARS}")
+        err += [f"description {e}" for e in internal_note_issues(self.description)]
 
         # Tag: YouTube tính TỔNG độ dài, không phải từng cái.
         total_tags = sum(len(t) for t in self.tags) + max(0, len(self.tags) - 1)

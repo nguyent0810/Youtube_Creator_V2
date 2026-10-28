@@ -1,0 +1,443 @@
+{
+ "title": "Cuốn nhật ký thứ hai: căn phòng ở Houston",
+ "lines": [
+  {
+   "t": "Giờ sang cột bên phải của cuốn nhật ký: con người.",
+   "p": 0.8
+  },
+  "Ở Trung tâm điều khiển Houston, giám đốc bay Gene Kranz vừa nhắc mọi người ngồi xuống, chuẩn bị cho giờ đốt động cơ hạ cánh.",
+  "Bản tin của NASA ghi lại lời ông kết thúc.",
+  {
+   "t": "Chúc tất cả các bạn may mắn.",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Trong phòng có hai người trông chừng chiếc máy tính: Steve Bales và Jack Garman.",
+  "Báo cáo lịch sử của NASA ghi rằng chính họ nhận ra nguồn gốc của sự cố.",
+  "Sau khi bàn nhau, Bales báo giám đốc bay: máy vẫn đủ tốt để hạ cánh.",
+  {
+   "t": "Vì sao dám nói vậy chỉ trong chưa đầy một phút?",
+   "p": 1.0
+  },
+  "Vì trước chuyến bay, người ta đã đặt sẵn một quy tắc.",
+  "Loại báo động kiểu này tự nó không phải lý do để huỷ.",
+  "Báo cáo của NASA giải thích thêm.",
+  "Các báo động không xuất hiện liên tục, và máy vẫn đang làm đúng việc dẫn đường.",
+  {
+   "t": "Nên quyết định là: tiếp tục.",
+   "p": 1.0
+  },
+  "Trên tàu Eagle, phi hành đoàn cũng tự quan sát.",
+  "Ít lâu sau báo động thứ hai, Buzz Aldrin nói thêm với Houston một chi tiết.",
+  {
+   "t": "Cùng báo động đó, và hình như nó xuất hiện khi chúng tôi có màn hình một sáu sáu tám đang hiện.",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Ông nhìn đúng.",
+  "Bản ghi nhớ của hãng Grumman, nhà chế tạo tàu đổ bộ, viết mười một ngày sau chuyến bay, ghi lại đúng điều đó.",
+  "Hai báo động đầu đều đến chừng mười hai giây sau khi phi hành đoàn gọi màn hình theo dõi.",
+  "Lần thứ ba, họ chỉ xem chừng mười giây, và không có báo động nào.",
+  {
+   "t": "Bản ghi nhớ viết: những lệnh theo dõi như vậy là gánh nặng đáng kể cho máy, và Houston đã nhận ra điều ấy.",
+   "p": 1.0
+  },
+  {
+   "t": "Chúng tôi sẽ theo dõi độ chênh cao của các bạn.",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Từ đó, việc theo dõi độ cao thuộc về Houston.",
+  {
+   "t": "Sau chuyến bay, NASA đổi phần mềm để phi hành đoàn theo dõi hạ cánh mà tốn ít thời gian máy hơn.",
+   "p": 1.0
+  },
+  "Vẫn còn một câu hỏi.",
+  "Vì sao một chiếc radar lại làm máy tính quá tải?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "CUỐN NHẬT KÝ THỨ HAI\nCĂN PHÒNG Ở HOUSTON",
+   "sub": "CỘT BÊN PHẢI · CON NGƯỜI",
+   "bg": "mcc",
+   "titleAt": [
+    0,
+    "Giờ"
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 1,
+   "img": "mcctraj",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.5,
+   "kin": [
+    {
+     "text": "GIÁM ĐỐC BAY: GENE KRANZ",
+     "at": [
+      1,
+      "giám"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "TRUNG TÂM ĐIỀU KHIỂN HOUSTON",
+    "v": "NASA · APOLLO 11",
+    "at": 1
+   }
+  },
+  {
+   "type": "photo",
+   "at": 2,
+   "img": "mcc",
+   "tone": "color",
+   "move": "out",
+   "veil": 0.5,
+   "kin": [
+    {
+     "text": "BẢN TIN PAO CỦA NASA",
+     "at": 2,
+     "acc": true
+    },
+    {
+     "text": "ghi lại lời ông kết thúc",
+     "at": [
+      2,
+      "ghi"
+     ],
+     "sm": true
+    }
+   ],
+   "label": {
+    "k": "TRUNG TÂM ĐIỀU KHIỂN HOUSTON",
+    "v": "NASA JSC · S69-40302",
+    "at": 2
+   }
+  },
+  {
+   "type": "quote",
+   "at": 3,
+   "text": "Good luck to all of you.",
+   "by": "GENE KRANZ · BẢN TIN PAO · GET 102:12 · TRƯỚC GIỜ ĐỐT ĐỘNG CƠ",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 3,
+   "typeAt": [
+    3,
+    "chúc"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "HAI NGƯỜI TRÔNG MÁY TÍNH",
+   "srcnote": "TOMAYKO · NASA CR-182505 · CHƯƠNG 2",
+   "rows": [
+    {
+     "k": "TRONG PHÒNG",
+     "v": "HAI NGƯỜI · MỘT CHIẾC MÁY",
+     "at": 4
+    },
+    {
+     "k": "STEVE BALES",
+     "v": "THEO DÕI MÁY TÍNH TỪ HOUSTON",
+     "at": [
+      4,
+      "steve"
+     ]
+    },
+    {
+     "k": "JACK GARMAN",
+     "v": "THEO DÕI MÁY TÍNH TỪ HOUSTON",
+     "at": [
+      4,
+      "jack"
+     ]
+    },
+    {
+     "k": "BÁO CÁO NASA",
+     "v": "HỌ NHẬN RA NGUỒN GỐC SỰ CỐ",
+     "at": 5
+    }
+   ],
+   "total": {
+    "k": "NASA GHI",
+    "v": "BALES BÁO GIÁM ĐỐC BAY: GO",
+    "at": 6
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "CHƯA ĐẦY MỘT PHÚT",
+     "at": 7,
+     "acc": true
+    },
+    {
+     "text": "từ đèn báo đến câu trả lời",
+     "at": [
+      7,
+      "chỉ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 8,
+   "title": "QUY TẮC VIẾT TRƯỚC CHUYẾN BAY",
+   "srcnote": "NASA SP-238 · MỤC 13",
+   "rows": [
+    {
+     "k": "QUY TẮC",
+     "v": "ĐẶT SẴN TRƯỚC KHI BAY",
+     "at": 8
+    },
+    {
+     "k": "BÁO ĐỘNG KIỂU NÀY",
+     "v": "KHÔNG TỰ NÓ BUỘC HUỶ",
+     "at": 9
+    },
+    {
+     "k": "LÝ DO 1",
+     "v": "KHÔNG XUẤT HIỆN LIÊN TỤC",
+     "at": [
+      11,
+      "không"
+     ]
+    },
+    {
+     "k": "LÝ DO 2",
+     "v": "MÁY VẪN DẪN ĐƯỜNG ĐÚNG",
+     "at": [
+      11,
+      "máy"
+     ]
+    }
+   ],
+   "total": {
+    "k": "QUYẾT ĐỊNH",
+    "v": "TIẾP TỤC",
+    "at": 12
+   }
+  },
+  {
+   "type": "photo",
+   "at": 13,
+   "img": "lm2",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.5,
+   "kin": [
+    {
+     "text": "TRÊN TÀU EAGLE",
+     "at": 13,
+     "sm": true
+    },
+    {
+     "text": "phi hành đoàn cũng tự quan sát",
+     "at": [
+      13,
+      "phi"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "TÀU ĐỔ BỘ",
+    "v": "NASA · AS11-44-6643",
+    "at": 13
+   }
+  },
+  {
+   "type": "photo",
+   "at": 14,
+   "img": "lm",
+   "tone": "color",
+   "move": "out",
+   "veil": 0.5,
+   "kin": [
+    {
+     "text": "BUZZ ALDRIN",
+     "at": [
+      14,
+      "buzz"
+     ],
+     "acc": true
+    },
+    {
+     "text": "phi công module Mặt Trăng · nói với Houston",
+     "at": [
+      14,
+      "nói"
+     ],
+     "sm": true
+    }
+   ],
+   "label": {
+    "k": "TÀU ĐỔ BỘ EAGLE",
+    "v": "NASA · AS11-44-6584",
+    "at": 14
+   }
+  },
+  {
+   "type": "quote",
+   "at": 15,
+   "text": "Same alarm, and it appears to come up when we have a 1668 up.",
+   "by": "PHI CÔNG MODULE MẶT TRĂNG (BUZZ ALDRIN) · BẢN GHI KHÔNG-ĐỐI-ĐẤT KỸ THUẬT",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 15,
+   "typeAt": [
+    15,
+    "cùng"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 17,
+   "title": "BẢN GHI NHỚ GRUMMAN · 31.07.1969",
+   "srcnote": "GRUMMAN LAV-500-940 · “PROGRAM ALARMS IN POWERED DESCENT” · NỘI BỘ HÃNG",
+   "rows": [
+    {
+     "k": "NHÀ CHẾ TẠO",
+     "v": "GRUMMAN · TÀU ĐỔ BỘ",
+     "at": 17
+    },
+    {
+     "k": "VIẾT SAU",
+     "v": "11 NGÀY · 31.07 SAU 20.07",
+     "at": [
+      17,
+      "viết"
+     ]
+    },
+    {
+     "k": "GHI NHẬN",
+     "v": "4 × 1202 · 1 × 1201",
+     "at": [
+      17,
+      "ghi"
+     ]
+    },
+    {
+     "k": "BÁO ĐỘNG 1",
+     "v": "≈ 12 GIÂY SAU LỆNH THEO DÕI",
+     "at": [
+      18,
+      "hai"
+     ]
+    },
+    {
+     "k": "BÁO ĐỘNG 2",
+     "v": "≈ 12 GIÂY SAU LỆNH THEO DÕI",
+     "at": [
+      18,
+      "mười"
+     ]
+    },
+    {
+     "k": "XEM LẦN BA",
+     "v": "≈ 10 GIÂY · KHÔNG BÁO ĐỘNG",
+     "at": 19
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 20,
+   "items": [
+    {
+     "text": "LỆNH THEO DÕI = GÁNH NẶNG ĐÁNG KỂ",
+     "at": [
+      20,
+      "gánh"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bản ghi nhớ Grumman · Houston đã nhận ra",
+     "at": [
+      20,
+      "houston"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 21,
+   "text": "Eagle, Houston. We'll monitor your DELTA-H.",
+   "by": "HOUSTON · BẢN GHI KHÔNG-ĐỐI-ĐẤT KỸ THUẬT · APOLLO 11",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 21,
+   "typeAt": [
+    21,
+    "chúng"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 22,
+   "items": [
+    {
+     "text": "THEO DÕI ĐỘ CAO: VIỆC CỦA HOUSTON",
+     "at": 22,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 23,
+   "title": "SAU CHUYẾN BAY",
+   "srcnote": "NASA SP-238 · MỤC 16 · GRUMMAN LAV-500-940 TR. 5",
+   "rows": [
+    {
+     "k": "NASA",
+     "v": "ĐỔI PHẦN MỀM",
+     "at": 23
+    },
+    {
+     "k": "PHI HÀNH ĐOÀN",
+     "v": "VẪN THEO DÕI HẠ CÁNH",
+     "at": [
+      23,
+      "phi"
+     ]
+    },
+    {
+     "k": "THỜI GIAN MÁY",
+     "v": "TỐN ÍT HƠN",
+     "at": [
+      23,
+      "tốn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 24,
+   "text": "Vì sao một chiếc radar\nlại làm máy tính quá tải?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "CUỐN NHẬT KÝ THỨ HAI: CĂN PHÒNG Ở HOUSTON"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

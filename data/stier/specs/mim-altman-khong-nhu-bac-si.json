@@ -1,0 +1,257 @@
+{
+ "theme": "mim",
+ "title": "Tháng 7/2025, Sam Altman nói chat với ChatGPT chưa có đặc quyền pháp lý như với bác sĩ",
+ "description": "Theo TechCrunch (25/07/2025), trên podcast This Past Weekend của Theo Von, Sam Altman, người đứng đầu OpenAI, nói rằng với nhà trị liệu, luật sư, bác sĩ có đặc quyền pháp lý, còn với ChatGPT thì 'chúng tôi chưa tìm ra điều đó'; ông gọi tình trạng hiện tại là rất không ổn và cho rằng cần giải quyết gấp. Theo bài báo, nếu có kiện tụng, OpenAI hiện có thể bị yêu cầu đưa các cuộc trò chuyện ra. Câu trích là bản dịch của kênh. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện. Thông tin theo nguồn đã ghi, đọc ngày 20/10/2026; chưa có bản kiểm chứng riêng của kênh.\n\nBản đầy đủ: https://youtu.be/ejsjefnJQbI (công khai từ 20:00 ngày 23/11).",
+ "tags": [
+  "sam altman",
+  "đặc quyền pháp lý chatgpt",
+  "quyền riêng tư ai",
+  "chatgpt",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "AI QUANH TA",
+ "sub": "07/2025",
+ "acc": [
+  "bác",
+  "sĩ",
+  "đặc",
+  "quyền",
+  "ChatGPT"
+ ],
+ "lines": [
+  "Nói với ChatGPT không như nói với bác sĩ.",
+  "Tháng bảy 2025, Sam Altman của OpenAI nói điều ấy trên podcast của Theo Von.",
+  "Ông nói nhiều người kể với ChatGPT chuyện riêng tư, như kể với nhà trị liệu.",
+  "Bác sĩ, luật sư, nhà trị liệu đều có đặc quyền pháp lý bảo vệ cuộc trò chuyện.",
+  "Với ChatGPT, theo ông: chúng tôi chưa tìm ra điều đó.",
+  "Nếu có kiện tụng, OpenAI có thể phải đưa các cuộc trò chuyện ra.",
+  "Ông gọi tình trạng này là rất không ổn.",
+  "Bác sĩ có đặc quyền pháp lý, ChatGPT thì chưa, theo chính Sam Altman."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "BÁC SĨ ≠ CHATGPT",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "về mặt pháp lý",
+     "at": [
+      0,
+      "như"
+     ],
+     "sm": true
+    }
+   ],
+   "at": 0,
+   "clip": "pexels:8091712",
+   "veil": 0.55
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "07.2025",
+   "day": "SAM ALTMAN · PODCAST THEO VON"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CHUYỆN RIÊNG TƯ NHẤT",
+     "at": [
+      2,
+      "riêng"
+     ],
+     "acc": true
+    },
+    {
+     "text": "kể với chatbot như kể với nhà trị liệu",
+     "at": [
+      2,
+      "nhà"
+     ],
+     "sm": true
+    }
+   ],
+   "at": 2,
+   "clip": "pexels:9902177",
+   "veil": 0.6
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "ĐẶC QUYỀN PHÁP LÝ",
+   "cards": [
+    {
+     "k": "BÁC SĨ",
+     "v": "CÓ",
+     "at": [
+      3,
+      "Bác"
+     ]
+    },
+    {
+     "k": "LUẬT SƯ",
+     "v": "CÓ",
+     "at": [
+      3,
+      "luật"
+     ]
+    },
+    {
+     "k": "NHÀ TRỊ LIỆU",
+     "v": "CÓ",
+     "at": [
+      3,
+      "nhà"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 4,
+   "text": "Chúng tôi chưa tìm ra điều đó.",
+   "by": "SAM ALTMAN · VỀ CHATGPT · TRÍCH DỊCH",
+   "clip": "pexels:36392049",
+   "veil": 0.72
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Nếu có kiện tụng",
+   "nodes": [
+    {
+     "text": "VỤ KIỆN",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      5,
+      "kiện"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "ĐƯA CHAT RA",
+     "x": 0.5,
+     "y": 0.68,
+     "at": [
+      5,
+      "đưa"
+     ],
+     "c": "acc",
+     "shape": "circle"
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      5,
+      "phải"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "RẤT KHÔNG ỔN",
+   "sub": "ALTMAN NÓI VỀ KHOẢNG TRỐNG NÀY"
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "ĐẶC QUYỀN PHÁP LÝ",
+   "rows": [
+    {
+     "k": "BÁC SĨ",
+     "v": "CÓ",
+     "at": [
+      7,
+      "Bác"
+     ]
+    },
+    {
+     "k": "CHATGPT",
+     "v": "CHƯA",
+     "at": [
+      7,
+      "ChatGPT"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "THEO CHÍNH ALTMAN",
+     "at": [
+      7,
+      "theo"
+     ],
+     "acc": true
+    },
+    {
+     "text": "chưa có đặc quyền",
+     "at": [
+      7,
+      "chưa"
+     ],
+     "sm": true
+    }
+   ],
+   "at": [
+    7,
+    "theo"
+   ],
+   "clip": "pexels:6977375",
+   "veil": 0.6
+  }
+ ],
+ "sources": [
+  "https://techcrunch.com/2025/07/25/sam-altman-warns-theres-no-legal-confidentiality-when-using-chatgpt-as-a-therapist",
+  "https://qz.com/sam-altman-warning-chatgpt-therapist"
+ ],
+ "say": {
+  "=AI": "ây ai",
+  "chatgpt": "chát gi pi ti",
+  "openai": "Ô-pần ây ai",
+  "google": "Gu-gồ",
+  "chatbot": "chát bót",
+  "chat": "chát",
+  "altman": "Ôn-man",
+  "theo": "Thi-ô",
+  "von": "Von",
+  "podcast": "pót-cát",
+  "sam": "Sam"
+ },
+ "rules": 2,
+ "mix": true,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.5
+  }
+ },
+ "sources_internal": [
+  "https://techcrunch.com/2025/07/25/sam-altman-warns-theres-no-legal-confidentiality-when-using-chatgpt-as-a-therapist (đã đọc 20/10: ngày 25/07/2025, câu 'we haven't figured that out yet', 'very screwed up')",
+  "https://qz.com/sam-altman-warning-chatgpt-therapist (câu 'we could be required to produce that'); ngày phát sóng tập podcast chưa xác định — CẦN kiểm; ý 'nhiều người kể chuyện riêng tư' — CẦN kiểm nguyên văn"
+ ],
+ "description_orig": "Theo TechCrunch (25/07/2025), trên podcast This Past Weekend của Theo Von, Sam Altman, người đứng đầu OpenAI, nói rằng với nhà trị liệu, luật sư, bác sĩ có đặc quyền pháp lý, còn với ChatGPT thì 'chúng tôi chưa tìm ra điều đó'; ông gọi tình trạng hiện tại là rất không ổn và cho rằng cần giải quyết gấp. Theo bài báo, nếu có kiện tụng, OpenAI hiện có thể bị yêu cầu đưa các cuộc trò chuyện ra. Câu trích là bản dịch của kênh. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện. Thông tin theo nguồn đã ghi, đọc ngày 20/10/2026; chưa có bản kiểm chứng riêng của kênh (data/long/mim-ai-chat-privacy chưa có factcheck.md).\n\nBản đầy đủ: https://youtu.be/ejsjefnJQbI (công khai từ 20:00 ngày 23/11)."
+}

@@ -1,0 +1,287 @@
+{
+ "topic": "mim-turing-bombe",
+ "chapter": 3,
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "NGƯỜI ĐƯỢC NHỚ TÊN, VÀ NHỮNG NGƯỜI GIỮ MẮT XÍCH"
+ },
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "NGƯỜI ĐƯỢC NHỚ TÊN\nVÀ CẢ NHÓM",
+   "sub": "09.1939 · HUT 8",
+   "bg": "turing1936",
+   "titleAt": [
+    0,
+    "turing"
+   ]
+  },
+  {
+   "type": "broll",
+   "at": [
+    1,
+    "hut"
+   ],
+   "vid": "34187599",
+   "veil": 0.62,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "HUT 8 · LIÊN LẠC HẢI QUÂN",
+     "at": [
+      1,
+      "hut"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": [
+    2,
+    "paris"
+   ],
+   "bg": "turing1936",
+   "items": [
+    {
+     "year": "09.1939",
+     "text": "HUT 8"
+    },
+    {
+     "year": "01.1940",
+     "text": "PARIS"
+    },
+    {
+     "year": "1940",
+     "text": "CLARKE"
+    },
+    {
+     "year": "1941",
+     "text": "BANBURISMUS"
+    }
+   ]
+  },
+  {
+   "type": "org",
+   "at": [
+    3,
+    "gchq"
+   ],
+   "nodes": [
+    {
+     "id": "rej",
+     "t": "REJEWSKI",
+     "s": "NỀN MÓNG",
+     "at": [
+      3,
+      "gchq"
+     ]
+    },
+    {
+     "id": "tur",
+     "t": "TURING",
+     "s": "HUT 8",
+     "p": "rej",
+     "at": [
+      3,
+      "nền"
+     ]
+    },
+    {
+     "id": "wel",
+     "t": "WELCHMAN",
+     "s": "DIAGONAL BOARD",
+     "p": "tur",
+     "at": [
+      3,
+      "thiết"
+     ]
+    },
+    {
+     "id": "cla",
+     "t": "CLARKE",
+     "s": "BANBURISMUS",
+     "p": "tur",
+     "at": [
+      3,
+      "bombe"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    4,
+    "phim"
+   ],
+   "items": [
+    {
+     "text": "KHÔNG PHẢI MỘT NGƯỜI TRONG PHÒNG KÍN",
+     "at": [
+      4,
+      "phim"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": [
+    6,
+    "gordon"
+   ],
+   "img": "turing1936",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "GORDON WELCHMAN",
+    "v": "HUT 6 · DIAGONAL BOARD",
+    "at": [
+     6,
+     "gordon"
+    ]
+   },
+   "kin": [
+    {
+     "text": "MỘT CẢI TIẾN LỚN CHO BOMBE",
+     "at": [
+      6,
+      "gordon"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": [
+    8,
+    "joan"
+   ],
+   "img": "turing16",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "JOAN CLARKE",
+    "v": "HUT 8 · BANBURISMUS",
+    "at": [
+     8,
+     "joan"
+    ]
+   },
+   "kin": [
+    {
+     "text": "GIẢM BỚT THỜI GIAN XỬ LÝ",
+     "at": [
+      8,
+      "joan"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": [
+    9,
+    "bayes"
+   ],
+   "img": "turing1936",
+   "tone": "bw",
+   "head": "MÁY GIẢM VIỆC",
+   "side": {
+    "k": "NGƯỜI",
+    "h": "GIẢM VIỆC CHO MÁY",
+    "lines": [
+     {
+      "text": "GIẢM VIỆC CHO MÁY",
+      "at": [
+       9,
+       "bayes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": [
+    10,
+    "hệ"
+   ],
+   "title": "SÁU RĂNG CỦA KHÓA",
+   "srcnote": "MỖI CHƯƠNG THÊM MỘT MẮT XÍCH",
+   "rows": [
+    {
+     "k": "BỨC THƯ",
+     "v": "NGƯỜI XỬ LÝ MÁY",
+     "at": [
+      10,
+      "hệ"
+     ]
+    },
+    {
+     "k": "KHÓA NGÀY",
+     "v": "ÁP LỰC THỜI GIAN",
+     "at": [
+      10,
+      "hệ"
+     ]
+    },
+    {
+     "k": "BA LAN",
+     "v": "CÁCH ĐẶT CÂU HỎI",
+     "at": [
+      10,
+      "hệ"
+     ]
+    },
+    {
+     "k": "NHÓM",
+     "v": "Ý TƯỞNG THÀNH PHƯƠNG PHÁP",
+     "at": [
+      10,
+      "hệ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": [
+    15,
+    "crib"
+   ],
+   "text": "MỘT CỖ MÁY MUỐN CHẠY\nCẦN ĐIỂM XUẤT PHÁT NÀO?"
+  }
+ ],
+ "title": "Người được nhớ tên, và những người giữ mắt xích",
+ "lines": [
+  {
+   "t": "Alan Turing vào làm cho GC&CS tại Bletchley Park tháng 9 năm 1939.",
+   "p": 0.8
+  },
+  "Ông dẫn công việc ở Hut 8 nhằm vào liên lạc Enigma của Hải quân Đức.",
+  "Tháng 1 năm 1940, Turing tới Paris gặp các nhà mật mã Ba Lan đã sơ tán.",
+  "GCHQ nói những cuộc trao đổi của ông với Marian Rejewski là nền tảng cho tư duy dẫn tới thiết kế và lắp đặt Bombe Anh.",
+  "Vậy nếu một bộ phim cho bạn cảm giác Turing đóng cửa phòng rồi một mình phát minh ra tất cả, cảm giác ấy bỏ rơi chiếc cầu quan trọng nhất của câu chuyện.",
+  "Cầu đó đi từ Ba Lan sang Anh, rồi đi qua rất nhiều người trong Bletchley.",
+  "Gordon Welchman cũng vào Bletchley tháng 9 năm 1939.",
+  "Ông đứng đầu Hut 6 và nghĩ ra diagonal board, phần bổ sung mà GCHQ gọi là một cải tiến lớn cho Bombe của Turing.",
+  "Joan Clarke tốt nghiệp double First năm 1940 rồi được đưa vào Hut 8 làm việc với Turing.",
+  "Bà đặc biệt giỏi Banburismus, một ứng dụng thống kê Bayes giúp tiết kiệm đáng kể thời gian xử lý trên Bombes.",
+  "Đó là một hệ thống, trong đó người này giảm số việc cho máy, còn chiếc máy giảm số việc cho người khác.",
+  "Welchman giúp máy bớt dừng giả.",
+  "Clarke giúp công việc trên Bombe bớt tốn thời gian.",
+  "Turing lấy nền móng từ những cuộc trao đổi ở Paris để đi xa hơn.",
+  "Nhưng để biến một giả thuyết thành chuyển động thật, cả nhóm vẫn cần cho máy một điểm xuất phát.",
+  "Điểm xuất phát ấy có tên rất ngắn: crib."
+ ]
+}

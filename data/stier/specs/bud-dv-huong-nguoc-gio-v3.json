@@ -1,0 +1,201 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-kg-ke-54-huong-nguoc-gio",
+ "format": "do-vui",
+ "hook_type": "do-vui",
+ "open_shot": "hoa-sen",
+ "voice": "Mỹ Duyên",
+ "music": "arcadia.mp3",
+ "music_gain": 0.18,
+ "gap": 0.0,
+ "series": "Đố bạn đời thường #2",
+ "title": "Đố bạn: mùi hương nào bay được ngược gió?",
+ "kicker": "ĐỐ BẠN ĐỜI THƯỜNG #2",
+ "sub": "KINH PHÁP CÚ · KỆ 54",
+ "acc": [
+  "hương",
+  "gió",
+  "tốt"
+ ],
+ "lines": [
+  "Mùi hương nào bay được ngược chiều gió?",
+  "A, trầm hương. B, hoa nhài. C, tiếng tốt của một người.",
+  "Chọn trước rồi xem tiếp.",
+  "Đáp án bất ngờ: C.",
+  "Kinh Pháp Cú, diễn ý: hương hoa chỉ bay xuôi gió.",
+  "Nhưng hương của người tốt bay ngược gió, lan khắp mọi phương.",
+  "Tuần này, thử khen thật lòng một người, sau lưng họ.",
+  "Ai có mùi hương ấy trong đời bạn? Tag người đó nhé."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:10313456",
+   "items": [
+    {
+     "text": "BAY NGƯỢC GIÓ?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "mùi hương nào?",
+     "at": [
+      0,
+      "nào"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "hf_list_build",
+   "at": 1,
+   "title": "BẠN CHỌN?",
+   "items": [
+    {
+     "key": "A",
+     "text": "TRẦM HƯƠNG",
+     "at": [
+      1,
+      "trầm"
+     ]
+    },
+    {
+     "key": "B",
+     "text": "HOA NHÀI",
+     "at": [
+      1,
+      "nhài."
+     ]
+    },
+    {
+     "key": "C",
+     "text": "TIẾNG TỐT",
+     "at": [
+      1,
+      "tiếng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 2,
+   "text": "A · B hay C?",
+   "clip": "pexels:7597753",
+   "veil": 0.65
+  },
+  {
+   "type": "hf_stamp",
+   "at": 3,
+   "kick": "",
+   "big": "C",
+   "stamps": [
+    {
+     "text": "TIẾNG TỐT",
+     "at": [
+      3,
+      "ngờ:"
+     ],
+     "x": 200,
+     "y": 880,
+     "rot": -6
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Kệ 54 (diễn ý)",
+   "nodes": [
+    {
+     "text": "HƯƠNG HOA → XUÔI GIÓ",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      4,
+      "xuôi"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "NGƯỜI TỐT → NGƯỢC GIÓ",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      5,
+      "ngược"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "DHP 54 · SUTTACENTRAL"
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "TUẦN NÀY",
+   "cards": [
+    {
+     "k": "KHEN",
+     "v": "THẬT LÒNG",
+     "at": [
+      6,
+      "khen"
+     ]
+    },
+    {
+     "k": "SAU LƯNG",
+     "v": "NGƯỜI ẤY",
+     "at": [
+      6,
+      "lưng"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "veil": 0.4,
+   "clip": "pexels:18185371",
+   "items": [
+    {
+     "text": "TAG NGƯỜI ẤY",
+     "at": [
+      7,
+      "ai"
+     ],
+     "acc": true
+    },
+    {
+     "text": "người có mùi hương ấy",
+     "at": [
+      7,
+      "tag"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp44-59/en/sujato"
+ ],
+ "description": "Đố bạn: mùi hương nào bay được ngược gió?\n\nNguồn: https://suttacentral.net/dhp44-59/en/sujato"
+}

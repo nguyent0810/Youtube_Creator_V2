@@ -1,0 +1,157 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-ng-neu-ban-tu-trach",
+ "format": "nhan-gui",
+ "hook_type": "noi-thang",
+ "open_shot": "cua-so",
+ "voice": "Mỹ Duyên",
+ "music": "ether_vox.mp3",
+ "music_gain": 0.16,
+ "gap": 0.0,
+ "title": "Bạn đang trúng một mũi tên, hay hai?",
+ "kicker": "NHẮN GỬI",
+ "sub": "KINH TƯƠNG ƯNG 36.6",
+ "acc": [
+  "mũi",
+  "tên",
+  "hai"
+ ],
+ "lines": [
+  "Bạn đang trúng một mũi tên, hay hai?",
+  "Mũi thứ nhất: chuyện đã xảy ra. Nó đau thật.",
+  "Mũi thứ hai: tự trách mình mãi, bắn vào đúng chỗ đau.",
+  "Thật ra, mũi thứ hai là do chính mình bắn.",
+  "Kinh Tương Ưng, diễn ý: người hiểu biết chỉ chịu một mũi tên.",
+  "Hôm nay, đặt tay lên ngực, nói: chuyện đó qua rồi.",
+  "Chăm vết thương thứ nhất là đủ.",
+  "Gửi người hay tự trách. Bạn đang trúng mấy mũi tên?"
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:6381014",
+   "items": [
+    {
+     "text": "MỘT MŨI TÊN HAY HAI?",
+     "at": 0.0,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "HAI MŨI TÊN",
+   "cards": [
+    {
+     "k": "MŨI 1",
+     "v": "CHUYỆN ĐÃ XẢY RA",
+     "at": [
+      1,
+      "nhất:"
+     ]
+    },
+    {
+     "k": "MŨI 2",
+     "v": "TỰ TRÁCH MÃI",
+     "at": [
+      2,
+      "tự"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "hf_stamp",
+   "at": 3,
+   "kick": "",
+   "big": "2",
+   "stamps": [
+    {
+     "text": "DO MÌNH BẮN",
+     "at": [
+      3,
+      "bắn."
+     ],
+     "x": 200,
+     "y": 880,
+     "rot": -6
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "SN 36.6 (diễn ý)",
+   "nodes": [
+    {
+     "text": "NGƯỜI HIỂU BIẾT",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      4,
+      "hiểu"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "CHỈ 1 MŨI TÊN",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      4,
+      "một"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "SN 36.6 · SUTTACENTRAL"
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "to": 1,
+   "suffix": " CÂU NÓI",
+   "label": "CHUYỆN ĐÓ QUA RỒI",
+   "until": [
+    5,
+    "qua"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "veil": 0.4,
+   "clip": "pexels:6217274",
+   "items": [
+    {
+     "text": "TRÚNG MẤY MŨI?",
+     "at": [
+      7,
+      "bạn"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/sn36.6/en/sujato"
+ ],
+ "description": "Bạn đang trúng một mũi tên, hay hai?\n\nNguồn: https://suttacentral.net/sn36.6/en/sujato"
+}

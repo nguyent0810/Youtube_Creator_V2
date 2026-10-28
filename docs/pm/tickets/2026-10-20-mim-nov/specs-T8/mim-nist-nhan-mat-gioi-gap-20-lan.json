@@ -1,0 +1,165 @@
+{
+ "theme": "mim",
+ "title": "Bốn năm, máy nhận mặt giỏi gấp 20 lần: số liệu NIST 2014 và 2018",
+ "description": "Viện Tiêu chuẩn và Công nghệ Quốc gia Mỹ (NIST) thử nhiều thuật toán nhận diện khuôn mặt. Ở bài thử tìm một người trong kho ảnh lớn, các thuật toán tốt nhất thất bại khoảng 4% số lần năm 2014 và còn khoảng 0,2% năm 2018, tức giỏi hơn khoảng 20 lần. NIST nêu nguyên nhân là mạng nơ-ron tích chập sâu thay cho các cách làm cũ. NIST cũng lưu ý đó là kết quả với ảnh chất lượng tốt, và giữa các nhà phát triển vẫn chênh nhau rất xa.\n\nGiọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\nBản đầy đủ (khoảng 10 phút): https://youtu.be/7daMUBWG6mU (công khai từ 20:00 ngày 30/11).",
+ "tags": [
+  "nist",
+  "nhận diện khuôn mặt",
+  "mạng nơ-ron tích chập",
+  "độ chính xác ai",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "NISTIR 8238 · 2018",
+ "acc": [
+  "bốn",
+  "hai",
+  "mươi",
+  "tốt"
+ ],
+ "kicker": "KHUÔN MẶT VÀ AI",
+ "lines": [
+  "Bốn năm, máy nhận mặt giỏi gấp hai mươi.",
+  "Viện NIST của Mỹ thử một bài: tìm một người trong kho ảnh lớn.",
+  "Năm hai nghìn không trăm mười bốn, thuật toán tốt nhất sai khoảng bốn phần trăm.",
+  "Năm hai nghìn không trăm mười tám, chỉ còn khoảng không phẩy hai phần trăm.",
+  "NIST nói rõ nguyên nhân: mạng nơ-ron sâu thay cho các cách làm cũ.",
+  "Nhưng đó là với ảnh chất lượng tốt, và các nhà phát triển vẫn chênh nhau rất xa.",
+  "Giỏi gấp hai mươi lần, trong điều kiện tốt."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "BỐN NĂM",
+     "at": 0.0
+    },
+    {
+     "text": "giỏi gấp hai mươi",
+     "at": [
+      0,
+      "giỏi"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:37215129",
+   "veil": 0.55,
+   "ms": 1
+  },
+  {
+   "type": "chart",
+   "at": 2,
+   "kind": "bars",
+   "title": "TỈ LỆ THẤT BẠI KHI TÌM MỘT NGƯỜI",
+   "unit": "NIST · TÌM TRONG KHO ẢNH LỚN",
+   "min": 0,
+   "bars": [
+    {
+     "label": "NĂM 2014",
+     "v": 4,
+     "text": "≈ 4%",
+     "c": "dim",
+     "at": [
+      2,
+      "bốn"
+     ]
+    },
+    {
+     "label": "NĂM 2018",
+     "v": 0.2,
+     "text": "≈ 0,2%",
+     "c": "ref",
+     "at": [
+      3,
+      "không"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "VÌ SAO GIỎI HƠN?",
+   "nodes": [
+    {
+     "text": "cách làm cũ",
+     "x": 0.5,
+     "y": 0.2,
+     "at": [
+      4,
+      "các"
+     ],
+     "cross": [
+      4,
+      "thay"
+     ],
+     "w": 420
+    },
+    {
+     "text": "mạng nơ-ron sâu",
+     "x": 0.5,
+     "y": 0.7,
+     "at": [
+      4,
+      "mạng"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 520
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      4,
+      "thay"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "CHỈ VỚI ẢNH TỐT",
+   "sub": "CÁC NHÀ PHÁT TRIỂN VẪN CHÊNH RẤT XA"
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "from": 1,
+   "to": 20,
+   "suffix": " LẦN",
+   "label": "GIỎI HƠN · TRONG ĐIỀU KIỆN TỐT",
+   "until": [
+    6,
+    "lần"
+   ]
+  }
+ ],
+ "sources": [
+  "https://nvlpubs.nist.gov/nistpubs/ir/2018/NIST.IR.8238.pdf -- URL cần kiểm khi có mạng"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "imgs": {},
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "NIST": "en ai ét ti"
+ }
+}

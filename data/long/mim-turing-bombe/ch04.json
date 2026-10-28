@@ -1,0 +1,263 @@
+{
+ "topic": "mim-turing-bombe",
+ "chapter": 4,
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "MỘT ĐOẠN CHỮ ĐỂ MỞ CẢ MÊ CUNG"
+ },
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "CHƯƠNG BỐN",
+   "title": "MỘT ĐOẠN CHỮ\nĐỦ DÀI",
+   "sub": "01.1941 · CRIB ROOM",
+   "bg": "enigmaCc0a",
+   "titleAt": [
+    0,
+    "crib"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    1,
+    "20"
+   ],
+   "items": [
+    {
+     "text": "CRIB · TỪ 20 CHỮ CÁI TRỞ LÊN",
+     "at": [
+      1,
+      "20"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": [
+    2,
+    "toàn"
+   ],
+   "img": "enigmaCc0a",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "KHÔNG CẦN CẢ BỨC ĐIỆN",
+    "v": "CHỈ CẦN MỘT MẢNH CÓ LÝ",
+    "at": [
+     2,
+     "toàn"
+    ]
+   },
+   "kin": [
+    {
+     "text": "GIẢ THUYẾT BẮT ĐẦU TỪ MỘT MẢNH",
+     "at": [
+      2,
+      "toàn"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": [
+    3,
+    "dây"
+   ],
+   "img": "enigmaCc0a",
+   "tone": "bw",
+   "head": "NẾU ĐOẠN NÀY NẰM Ở ĐÂY",
+   "side": {
+    "k": "CÂU HỎI",
+    "h": "DÂY NÀO TỰ MÂU THUẪN",
+    "lines": [
+     {
+      "text": "DÂY NÀO TỰ MÂU THUẪN",
+      "at": [
+       3,
+       "dây"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": [
+    4,
+    "menu"
+   ],
+   "text": "MENU",
+   "sub": "ĐẦU VÀO ĐỂ BOMBE THỬ RÔ-TO"
+  },
+  {
+   "type": "photo",
+   "at": [
+    5,
+    "bombe"
+   ],
+   "img": "enigmaCc0b",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "BOMBE",
+    "v": "THỬ THIẾT LẬP RÔ-TO",
+    "at": [
+     5,
+     "bombe"
+    ]
+   },
+   "kin": [
+    {
+     "text": "KHÔNG ĐỌC HỘ CẢ BỨC ĐIỆN",
+     "at": [
+      5,
+      "bombe"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    8,
+    "kiểm"
+   ],
+   "items": [
+    {
+     "text": "GIẢ THUYẾT CÓ TỰ ĐÁ NHAU KHÔNG?",
+     "at": [
+      8,
+      "kiểm"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": [
+    11,
+    "đường"
+   ],
+   "title": "SÁU RĂNG CỦA KHÓA",
+   "srcnote": "MỖI CHƯƠNG THÊM MỘT MẮT XÍCH",
+   "rows": [
+    {
+     "k": "BỨC THƯ",
+     "v": "NGƯỜI XỬ LÝ MÁY",
+     "at": [
+      11,
+      "đường"
+     ]
+    },
+    {
+     "k": "KHÓA NGÀY",
+     "v": "ÁP LỰC THỜI GIAN",
+     "at": [
+      11,
+      "đường"
+     ]
+    },
+    {
+     "k": "BA LAN",
+     "v": "CÁCH ĐẶT CÂU HỎI",
+     "at": [
+      11,
+      "đường"
+     ]
+    },
+    {
+     "k": "NHÓM",
+     "v": "Ý TƯỞNG THÀNH PHƯƠNG PHÁP",
+     "at": [
+      11,
+      "đường"
+     ]
+    },
+    {
+     "k": "CRIB VÀ MENU",
+     "v": "GIẢ THUYẾT ĐỂ THỬ",
+     "at": [
+      11,
+      "đường"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": [
+    12,
+    "shaun"
+   ],
+   "day": "SHAUN WYLIE VÀO HUT 8",
+   "date": "01.1941",
+   "sub": {
+    "text": "PHỤ TRÁCH CRIB ROOM",
+    "at": [
+     12,
+     "shaun"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    13,
+    "wylie"
+   ],
+   "items": [
+    {
+     "text": "WYLIE WOs · THỨ TỰ RÔ-TO ĐỔI",
+     "at": [
+      13,
+      "wylie"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": [
+    17,
+    "người"
+   ],
+   "text": "SAU ĐIỂM DỪNG CỦA MÁY,\nAI QUYẾT ĐỊNH NÓ ĐÁNG TIN?"
+  }
+ ],
+ "title": "Một đoạn chữ để mở cả mê cung",
+ "lines": [
+  {
+   "t": "Một crib là đoạn tiếng Đức mà người giải mã đoán có thể xuất hiện trong điện văn.",
+   "p": 0.8
+  },
+  "GCHQ mô tả những crib thường là mảnh văn bản từ 20 chữ cái trở lên.",
+  "Bạn không cần biết toàn bộ bức điện để bắt đầu.",
+  "Bạn cần một mảnh đủ có lý để hỏi: nếu đoạn này nằm ở đây, những dây nối nào sẽ tự mâu thuẫn?",
+  "Từ crib, người giải mã dựng một menu.",
+  "Menu là đầu vào cho Bombe thử các thiết lập rô-to Enigma.",
+  "Đây là khác biệt quan trọng giữa “máy tìm đáp án” và điều máy thực sự làm.",
+  "Nó không đọc hộ toàn bộ bức điện từ đầu đến cuối.",
+  "Nó kiểm tra giả thuyết có tự đá nhau hay không.",
+  "Turing còn dựa vào một tính chất hữu ích: trong Enigma, một chữ không được mã hóa thành chính nó.",
+  "Khi giả thuyết bắt một chữ quay lại chính nó, đường đó bị loại.",
+  "Khi đủ nhiều đường sai bị loại, số đường còn lại nhỏ đi tới mức người thật có thể kiểm tra.",
+  "Shaun Wylie vào Hut 8 tháng 1 năm 1941 và phụ trách Crib room.",
+  "Ông nhận ra thứ tự rô-to thường khác ngày hôm trước; về sau dấu hiệu đó được gọi là Wylie WOs.",
+  "Một người nhìn ra một thói quen lặp lại trong dòng điện mã hóa.",
+  "Người khác biến quan sát ấy thành menu.",
+  "Máy làm phần thử mệt mỏi.",
+  "Rồi người lại trở về để quyết định điểm dừng nào đáng tin.",
+  "Nhưng trước khi nói về điểm dừng, cần nhìn vào thứ làm những giả thuyết ấy quay được suốt ngày."
+ ]
+}

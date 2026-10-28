@@ -1,0 +1,333 @@
+{
+ "title": "Theo chân một trăm cổ phiếu",
+ "lines": [
+  {
+   "t": "Bây giờ, hãy nhìn lại cùng một bảng nhưng bỏ hết thuật ngữ.",
+   "p": 0.8
+  },
+  "Hàng đầu là tiền của ví dụ giả định.",
+  "Hàng dưới là một trăm cổ phiếu hư cấu.",
+  "Bảng ấy rất đơn giản.",
+  "Sáng thứ Hai, giá hai mươi nghìn nhân một trăm bằng hai triệu đồng.",
+  "Hai triệu là giá trị khớp lệnh, chưa gồm phí.",
+  "Ô có thể bán của một trăm cổ phiếu là không.",
+  "Đó là cột T.",
+  "Sang thứ Ba, T cộng một, bảng vẫn để số không ở ô có thể bán.",
+  "Hai triệu đồng không phải số dư thực tế được khẳng định.",
+  "Nó chỉ giữ nguyên giá trị khớp lệnh để mắt ta theo được câu chuyện.",
+  "Một trăm cổ phiếu vẫn chờ phân bổ theo ví dụ giả định.",
+  "Đó là cột T cộng một.",
+  "Đến chiều thứ Tư, T cộng hai, ô có thể bán đổi từ không thành một trăm.",
+  "Chiều T cộng hai, một trăm cổ phiếu mới có thể bán.",
+  "Đó là cột T cộng hai.",
+  "Biểu đồ không hề nói lệnh bán sẽ khớp.",
+  "Nó cũng không nói mức giá nào sẽ khớp.",
+  "Giá thị trường vẫn có thể nằm trong dải của phiên.",
+  "Ví dụ, sàn giả định mười tám nghìn sáu trăm vẫn là một trạng thái giá.",
+  "Trần giả định hai mươi mốt nghìn bốn trăm cũng là một trạng thái giá.",
+  "Nhưng khả năng đặt lệnh với số cổ phiếu vừa mua đi theo lịch phân bổ.",
+  "Từng ô có nhiệm vụ riêng.",
+  "Ta tách được hai câu thường bị trộn vào nhau.",
+  "Câu thứ nhất là: giá hôm nay có thể chạy trong dải nào?",
+  "Câu thứ hai là: số cổ phiếu vừa mua khi nào nằm ở ô có thể bán?",
+  "Với ví dụ giả định này, câu thứ hai dẫn tới chiều T cộng hai.",
+  "Không dẫn tới lúc giá đổi màu.",
+  "Không dẫn tới một mẹo thao tác.",
+  "Nó dẫn tới một mốc vận hành được nguồn nêu.",
+  "Còn sau khi bán thì số tiền thực nhận có luôn bằng giá bán nhân số cổ phiếu không?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "CHƯƠNG NĂM",
+   "title": "THEO CHÂN\n100 CỔ PHIẾU",
+   "sub": "VÍ DỤ GIẢ ĐỊNH · T → CHIỀU T+2",
+   "img": "ai05",
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.5,
+    0.3
+   ],
+   "titleAt": 0
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "BẢNG HAI HÀNG",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "HÀNG ĐẦU",
+     "v": "TIỀN · GIÁ TRỊ KHỚP",
+     "at": 1
+    },
+    {
+     "k": "HÀNG DƯỚI",
+     "v": "100 CỔ PHIẾU HƯ CẤU",
+     "at": 2
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 0,
+   "to": 2000000,
+   "suffix": " ĐỒNG",
+   "label": "SÁNG THỨ HAI · 20.000 × 100",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH",
+   "sub": {
+    "text": "GIÁ TRỊ KHỚP · CHƯA GỒM PHÍ",
+    "at": 5
+   }
+  },
+  {
+   "type": "stack",
+   "at": 6,
+   "title": "Ô CÓ THỂ BÁN",
+   "range": "VÍ DỤ GIẢ ĐỊNH",
+   "unit": "CỔ PHIẾU",
+   "keys": [
+    {
+     "k": "CHỜ PHÂN BỔ"
+    },
+    {
+     "k": "CÓ THỂ BÁN"
+    }
+   ],
+   "groups": [
+    {
+     "k": "T · THỨ HAI",
+     "vals": [
+      100,
+      0
+     ],
+     "at": 6
+    },
+    {
+     "k": "T+1 · THỨ BA",
+     "vals": [
+      100,
+      0
+     ],
+     "at": 8
+    }
+   ],
+   "calls": [
+    {
+     "i": 0,
+     "text": "CỘT T: BÁN ĐƯỢC 0",
+     "at": 7
+    },
+    {
+     "i": 1,
+     "text": "CỘT T+1: VẪN 0",
+     "at": [
+      8,
+      "không"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "2 TRIỆU = GIÁ TRỊ KHỚP",
+     "at": 9,
+     "acc": true
+    },
+    {
+     "text": "không phải số dư thực tế",
+     "at": 9,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 11,
+   "vid": "7688068",
+   "loop": true,
+   "veil": 0.56,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "VẪN CHỜ PHÂN BỔ",
+     "at": 11,
+     "acc": true
+    },
+    {
+     "text": "cột T+1",
+     "at": 12,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "heat",
+   "at": 13,
+   "title": "ĐẾN CHIỀU THỨ TƯ",
+   "range": "VÍ DỤ GIẢ ĐỊNH",
+   "unit": "CỔ PHIẾU",
+   "cols": 3,
+   "cells": [
+    {
+     "k": "T · THỨ HAI",
+     "v": 0,
+     "note": "CHỜ",
+     "at": 13
+    },
+    {
+     "k": "T+1 · THỨ BA",
+     "v": 0,
+     "note": "CHỜ",
+     "at": 13
+    },
+    {
+     "k": "CHIỀU T+2 · THỨ TƯ",
+     "v": 100,
+     "note": "CÓ THỂ BÁN",
+     "at": [
+      13,
+      "thành"
+     ]
+    }
+   ],
+   "calls": [
+    {
+     "i": 2,
+     "text": "CHIỀU T+2",
+     "at": 14
+    }
+   ],
+   "total": {
+    "label": "CÓ THỂ BÁN",
+    "at": 14
+   }
+  },
+  {
+   "type": "photo",
+   "img": "ai05",
+   "at": 15,
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.5,
+    0.3
+   ],
+   "move": "in"
+  },
+  {
+   "type": "book",
+   "at": 18,
+   "title": "GIÁ VẪN TRONG DẢI PHIÊN",
+   "range": "TRẠNG THÁI GIÁ · KHÔNG PHẢI QUYỀN BÁN",
+   "ref": 20000,
+   "ceil": 21400,
+   "floor": 18600,
+   "prices": [
+    21400,
+    20000,
+    18600
+   ],
+   "rows": [],
+   "match": {
+    "price": 18600,
+    "at": 19,
+    "text": "SÀN 18.600: MỘT TRẠNG THÁI GIÁ",
+    "sub": {
+     "text": "TRẦN 21.400 CŨNG VẬY",
+     "at": 20
+    }
+   },
+   "source": "VÍ DỤ GIẢ ĐỊNH · HOSE ±7% · KHÔNG PHẢI GIÁ CỦA MÃ NÀO"
+  },
+  {
+   "type": "ledger",
+   "at": 21,
+   "title": "100 CỔ PHIẾU ĐANG Ở ĐÂU?",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "ĐẶT LỆNH BÁN",
+     "v": "THEO LỊCH PHÂN BỔ",
+     "at": 21
+    },
+    {
+     "k": "TỪNG Ô",
+     "v": "MỘT NHIỆM VỤ RIÊNG",
+     "at": 22
+    },
+    {
+     "k": "HAI CÂU HỎI",
+     "v": "THƯỜNG BỊ TRỘN",
+     "at": 23
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 24,
+   "text": "CÂU 1: HÔM NAY\nGIÁ CHẠY TRONG DẢI NÀO?"
+  },
+  {
+   "type": "question",
+   "at": 25,
+   "text": "CÂU 2: KHI NÀO CỔ PHIẾU\nNẰM Ở Ô CÓ THỂ BÁN?"
+  },
+  {
+   "type": "timeline",
+   "at": 26,
+   "title": "CÂU 2 DẪN TỚI ĐÂU?",
+   "items": [
+    {
+     "year": "CHIỀU T+2",
+     "text": "mốc của ví dụ giả định",
+     "at": 26
+    },
+    {
+     "year": "GIÁ ĐỔI MÀU",
+     "text": "không phải",
+     "at": 27
+    },
+    {
+     "year": "MẸO THAO TÁC",
+     "text": "không phải",
+     "at": 28
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 29,
+   "vid": "7651886",
+   "loop": true,
+   "veil": 0.56,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MỐC VẬN HÀNH NGUỒN NÊU",
+     "at": 29,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 30,
+   "text": "BÁN XONG, TIỀN THỰC NHẬN\nCÓ BẰNG GIÁ × SỐ CỔ PHIẾU?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "THEO CHÂN MỘT TRĂM CỔ PHIẾU"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

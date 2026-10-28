@@ -1,0 +1,252 @@
+{
+ "title": "Con số ba trăm năm mươi triệu",
+ "lines": [
+  {
+   "t": "Bắt đầu từ con số mà ít người biết tên.",
+   "p": 0.8
+  },
+  "Nó gọi là hạn mức trả tiền bảo hiểm.",
+  {
+   "t": "Đó là số tiền tối đa mà tổ chức bảo hiểm tiền gửi trả cho bạn, khi nơi bạn gửi tiền đổ vỡ.",
+   "p": 1.0
+  },
+  "Từ ngày mười ba tháng bảy năm hai nghìn không trăm hai mươi sáu, con số ấy là ba trăm năm mươi triệu đồng.",
+  "Trước đó, từ năm hai nghìn không trăm hai mươi mốt, nó chỉ là một trăm hai mươi lăm triệu.",
+  {
+   "t": "Tăng gần gấp ba.",
+   "p": 1.0
+  },
+  "Ai trả khoản tiền này?",
+  "Không phải ngân hàng của bạn.",
+  "Mỗi quý, các tổ chức nhận tiền gửi phải đóng phí bảo hiểm cho tổ chức bảo hiểm tiền gửi.",
+  {
+   "t": "Khi có chuyện, tổ chức ấy trả từ quỹ dự phòng của mình, theo luật bảo hiểm tiền gửi mới, có hiệu lực từ năm nay.",
+   "p": 1.0
+  },
+  {
+   "t": "Phải đổ vỡ tới mức nào thì mới được trả?",
+   "ask": 1
+  },
+  "Luật mới ghi ba trường hợp.",
+  "Một, khi phương án phá sản của nơi ấy được phê duyệt.",
+  "Hai, khi nơi ấy bị kiểm soát đặc biệt, lỗ vượt cả vốn và quỹ dự trữ, và bị đình chỉ nhận tiền gửi.",
+  {
+   "t": "Ba, khi Chính phủ quyết định yêu cầu chi trả, để giữ an toàn cho cả hệ thống.",
+   "p": 1.0
+  },
+  "Mốc bắt đầu tính là lúc một trong ba điều ấy xảy ra.",
+  "Và thời hạn trả cũng ngắn lại.",
+  {
+   "t": "Tối đa bốn mươi lăm ngày, thay vì sáu mươi ngày như trước.",
+   "p": 1.0
+  },
+  "Giờ quay lại cuốn sổ của chị Thu.",
+  "Một tỷ hai, ở một nơi.",
+  "Nếu chuyện xấu nhất xảy ra, khoản chắc chắn chị được trả là ba trăm năm mươi triệu.",
+  {
+   "t": "Tám trăm năm mươi triệu còn lại nằm ngoài hạn mức.",
+   "p": 1.0
+  },
+  "Nếu chuyện ấy xảy ra trước tháng bảy năm nay, phần nằm ngoài còn lớn hơn: hơn một tỷ.",
+  "Phần ngoài hạn mức không có nghĩa là mất trắng.",
+  "Nó có nghĩa là không còn nằm trong lời hứa chắc chắn của luật, mà chờ vào việc xử lý tài sản sau đó.",
+  "Nhưng con số ba trăm năm mươi triệu còn một chi tiết.",
+  "Và chi tiết ấy khiến nhiều cuốn sổ tự vượt hạn mức mà chủ không hề hay biết."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "CON SỐ\n350 TRIỆU",
+   "sub": "HẠN MỨC TRẢ TIỀN BẢO HIỂM",
+   "vid": "6980366",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Bắt"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "HẠN MỨC TRẢ TIỀN BẢO HIỂM",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "= số tối đa được trả khi nơi bạn gửi tiền đổ vỡ",
+     "at": 2,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 3,
+   "title": "HẠN MỨC (TRIỆU ĐỒNG · MỖI NGƯỜI · MỖI NƠI)",
+   "unit": "GỒM GỐC VÀ LÃI",
+   "items": [
+    {
+     "k": "TỪ 2021",
+     "v": 125,
+     "lbl": "125",
+     "at": [
+      4,
+      "Trước"
+     ]
+    },
+    {
+     "k": "TỪ 13/07/2026",
+     "v": 350,
+     "lbl": "350",
+     "at": [
+      3,
+      "ba"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "THÔNG TƯ 05/2026/TT-NHNN · TỪ 13/07/2026",
+    "v": "",
+    "at": 3
+   }
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "GẦN GẤP BA",
+   "sub": "+180%"
+  },
+  {
+   "type": "ledger",
+   "at": 6,
+   "title": "AI TRẢ KHOẢN NÀY?",
+   "rows": [
+    {
+     "k": "KHÔNG PHẢI",
+     "v": "NGÂN HÀNG CỦA BẠN",
+     "at": 7
+    },
+    {
+     "k": "MỖI QUÝ",
+     "v": "NƠI NHẬN TIỀN GỬI ĐÓNG PHÍ",
+     "at": 8
+    }
+   ],
+   "total": {
+    "k": "KHI CÓ CHUYỆN",
+    "v": "QUỸ DỰ PHÒNG TRẢ",
+    "at": 9
+   }
+  },
+  {
+   "type": "question",
+   "at": 10,
+   "text": "Phải đổ vỡ tới mức nào\nthì mới được trả?"
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "LUẬT 2025 · BA TRƯỜNG HỢP PHẢI TRẢ",
+     "at": 11,
+     "acc": true
+    },
+    {
+     "text": "1 · phương án phá sản được duyệt",
+     "at": 12,
+     "sm": true
+    },
+    {
+     "text": "2 · kiểm soát đặc biệt, lỗ vượt vốn, đình chỉ nhận tiền gửi",
+     "at": 13,
+     "sm": true
+    },
+    {
+     "text": "3 · Chính phủ quyết định yêu cầu chi trả",
+     "at": 14,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 16,
+   "from": 45,
+   "to": 45,
+   "suffix": " NGÀY",
+   "label": "TỐI ĐA ĐỂ TRẢ · TRƯỚC ĐÂY 60 NGÀY",
+   "sub": {
+    "text": "TÍNH TỪ LÚC PHÁT SINH NGHĨA VỤ TRẢ",
+    "at": 17
+   }
+  },
+  {
+   "type": "bars",
+   "at": 18,
+   "title": "1,2 TỶ CỦA CHỊ THU (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "CHẮC CHẮN ĐƯỢC TRẢ",
+     "v": 350,
+     "lbl": "350",
+     "at": [
+      20,
+      "khoản"
+     ],
+     "acc": true
+    },
+    {
+     "k": "NẰM NGOÀI HẠN MỨC",
+     "v": 850,
+     "lbl": "850",
+     "at": [
+      21,
+      "Tám"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 22,
+   "items": [
+    {
+     "text": "TRƯỚC 13/07/2026: NGOÀI HẠN MỨC 1.075 TRIỆU",
+     "at": 22,
+     "sm": true
+    },
+    {
+     "text": "NGOÀI HẠN MỨC ≠ MẤT TRẮNG",
+     "at": 23,
+     "acc": true
+    },
+    {
+     "text": "= chờ xử lý tài sản sau đó, không còn là lời hứa chắc chắn",
+     "at": 24,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 25,
+   "text": "CÒN MỘT CHI TIẾT",
+   "sub": "CUỐN SỔ TỰ VƯỢT HẠN MỨC"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "350 TRIỆU"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

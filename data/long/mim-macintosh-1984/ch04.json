@@ -1,0 +1,231 @@
+{
+ "title": "Cái giá của một mặt bàn",
+ "lines": [
+  {
+   "t": "Theo Computer History Museum, Macintosh dùng bộ vi xử lý 8 MHz, bộ nhớ bán dẫn 128K và kiến trúc 16-bit.",
+   "p": 0.8
+  },
+  "Bộ vi xử lý là phần thực hiện các phép tính và điều khiển trong máy.",
+  "MHz là đơn vị nhịp hoạt động, còn 16-bit mô tả cách kiến trúc xử lý dữ liệu trong bối cảnh kỹ thuật ấy.",
+  "Danh mục Datapro năm 1984 ghi giá cơ bản 2.495 USD.",
+  "Gói đó gồm 128KB RAM, ổ microdiskette 400KB, bàn phím, CRT, chuột, tài liệu và đĩa hệ thống.",
+  "CRT là loại màn hình ống tia âm cực, chiếc màn hình dày phổ biến vào thời đó.",
+  "Microdiskette là đĩa mềm nhỏ để mang phần mềm hoặc dữ liệu.",
+  "Danh mục này cũng ghi đợt giao máy đầu tiên là tháng 1 năm 1984.",
+  "Máy có sẵn qua 3.000 đại lý ủy quyền trên thế giới, theo Datapro.",
+  "Đó là dữ kiện về kênh phân phối, không phải lời khẳng định rằng mọi nơi đều đón nhận nó như nhau.",
+  "Theo Computer History Museum, Macintosh giúp đưa cách dùng máy bằng giao diện đồ họa và chuột tới nhiều người hơn.",
+  "Đây là nhận định lịch sử của bảo tàng.",
+  "Nó không nói Macintosh là máy đầu tiên có chuột, vì Alto và Lisa đã có trước.",
+  "Điều Macintosh đóng gói là một mặt bàn có thể nhìn thấy, một con trỏ có thể di chuyển, và một mức giá kèm đường phân phối cụ thể.",
+  "Chuột một nút vì vậy không đứng riêng lẻ.",
+  "Nó là cửa vào của cả gói phần cứng, phần mềm và cách trình bày mới.",
+  "Nhưng nhìn thấy giao diện chưa có nghĩa mọi tác vụ đều nhẹ nhàng.",
+  "Ở chương tiếp theo, chính một chương trình vẽ cho thấy cái giá bộ nhớ của một màn hình tưởng rất đơn giản."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "CHƯƠNG BỐN",
+   "title": "CÁI GIÁ CỦA\nMỘT MẶT BÀN",
+   "sub": "8 MHZ · 128K · 16-BIT",
+   "bg": "mac2",
+   "titleAt": [
+    0,
+    "Museum"
+   ]
+  },
+  {
+   "type": "counter",
+   "at": [
+    0,
+    "lý"
+   ],
+   "from": 0,
+   "to": 8,
+   "suffix": " MHZ",
+   "label": "BỘ VI XỬ LÝ",
+   "year": false
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    2,
+    "ấy"
+   ],
+   "items": [
+    {
+     "text": "KIẾN TRÚC 16-BIT",
+     "at": [
+      2,
+      "ấy"
+     ],
+     "acc": true
+    },
+    {
+     "text": "MỘT MÔ TẢ KỸ THUẬT",
+     "at": [
+      2,
+      "ấy"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": [
+    4,
+    "Gói"
+   ],
+   "img": "mac3",
+   "tone": "bw",
+   "head": "DANH MỤC DATAPRO",
+   "side": {
+    "k": "2.495 USD",
+    "h": "RAM · Ổ ĐĨA · CRT · CHUỘT",
+    "lines": [
+     {
+      "text": "RAM · Ổ ĐĨA · CRT · CHUỘT",
+      "at": [
+       4,
+       "Gói"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": [
+    4,
+    "chuột"
+   ],
+   "img": "mouse1",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "VẬT NỐI",
+    "v": "CỬA VÀO CỦA CẢ GÓI MÁY",
+    "at": [
+     4,
+     "chuột"
+    ]
+   }
+  },
+  {
+   "type": "timeline",
+   "at": [
+    7,
+    "tháng"
+   ],
+   "bg": "mac1",
+   "items": [
+    {
+     "year": "01.1984",
+     "text": "GIAO MÁY ĐẦU TIÊN"
+    },
+    {
+     "year": "3.000",
+     "text": "ĐẠI LÝ ỦY QUYỀN"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": [
+    10,
+    "hơn"
+   ],
+   "text": "3.000 ĐẠI LÝ",
+   "sub": "DỮ KIỆN PHÂN PHỐI · KHÔNG PHẢI DOANH SỐ"
+  },
+  {
+   "type": "broll",
+   "at": [
+    15,
+    "mới"
+   ],
+   "vid": "4962316",
+   "veil": 0.62,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "BÀN PHÍM VÀ CHUỘT MINH HỌA · KHÔNG GẮN THƯƠNG HIỆU",
+     "at": [
+      15,
+      "mới"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": [
+    16,
+    "nhàng"
+   ],
+   "title": "ĐƯỜNG ĐI CỦA CÚ NHẤP",
+   "srcnote": "MỖI CHƯƠNG THÊM MỘT MỐC",
+   "rows": [
+    {
+     "k": "MỞ ĐẦU",
+     "v": "PARC VÀ CON TRỎ",
+     "at": [
+      16,
+      "nhàng"
+     ]
+    },
+    {
+     "k": "1 · BỘ NHỚ",
+     "v": "CHỈ CÒN 90K",
+     "at": [
+      16,
+      "nhàng"
+     ]
+    },
+    {
+     "k": "2 · TÍN HIỆU",
+     "v": "QUẢNG CÁO ĐI TRƯỚC",
+     "at": [
+      16,
+      "nhàng"
+     ]
+    },
+    {
+     "k": "3 · SÂN KHẤU",
+     "v": "MÁY TỰ GIỚI THIỆU",
+     "at": [
+      16,
+      "nhàng"
+     ]
+    },
+    {
+     "k": "4 · GÓI MÁY",
+     "v": "MẶT BÀN NHÌN THẤY",
+     "at": [
+      16,
+      "nhàng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": [
+    17,
+    "đơn"
+   ],
+   "text": "MỘT MÀN HÌNH ĐƠN GIẢN\nĐÃ ĐỔI GÌ Ở BÊN DƯỚI?"
+  }
+ ],
+ "topic": "mim-macintosh-1984",
+ "chapter": 4,
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "CÁI GIÁ CỦA MỘT MẶT BÀN"
+ }
+}

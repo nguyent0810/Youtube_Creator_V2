@@ -1,0 +1,324 @@
+{
+ "title": "Lớp đầu: tổng hóa đơn không phải một cục tiền",
+ "lines": [
+  {
+   "t": "Anh Minh là ví dụ giả định để tính, không phải một ca bệnh hay một báo giá thật.",
+   "p": 0.8
+  },
+  "Mở lớp đầu tiên của ví dụ giả định: tổng chi phí là ba mươi triệu cho bảy ngày.",
+  "Con số này chỉ để vẽ thác chi phí.",
+  "Nó không đại diện cho bất kỳ bệnh, cơ sở, hay mức giá nào.",
+  "Điều đầu tiên cần tách là hai chiếc hộp.",
+  "Một hộp là chi phí khám chữa bệnh có thể xét trong phạm vi bảo hiểm y tế.",
+  {
+   "t": "Hộp còn lại là những khoản đi cùng đợt nằm viện, nhưng không nên gọi là bảo hiểm từ chối.",
+   "p": 1.0
+  },
+  "Ranh giới này rất quan trọng.",
+  "Trong ví dụ, hai mươi lăm triệu được đặt vào hộp trong phạm vi.",
+  "Năm triệu còn lại là phần ngoài phạm vi hoặc ngoài quyền lợi trong hóa đơn.",
+  {
+   "t": "Hai dòng đó đã đủ thành ba mươi triệu tổng hóa đơn.",
+   "p": 1.0
+  },
+  "Nhưng hóa đơn chưa phải toàn bộ gánh nặng.",
+  "Ví dụ giả định còn có hai triệu cho đi lại, ăn ở người nhà và ngày nghỉ làm.",
+  "Hai triệu này không phải chi phí khám chữa bệnh bảo hiểm y tế.",
+  "Vì vậy, nó không nên bị gộp vào câu “quỹ không trả”.",
+  {
+   "t": "Đây là ranh giới nhỏ, nhưng đổi hẳn cách đọc con số.",
+   "p": 1.0
+  },
+  "Màn hình đặt bảy chấm cho bảy ngày.",
+  "Nó đặt năm dòng cho phần chi phí khám chữa bệnh và ba khoản ngoài hóa đơn.",
+  "Ví dụ giả định này có bảy ngày, năm dòng chi phí khám chữa bệnh và ba khoản ngoài hóa đơn.",
+  "Ta chưa trừ đồng nào cả.",
+  "Đó là lớp đầu.",
+  "Lớp tiếp theo là: luật nào đang định nghĩa những chữ “trong phạm vi” ấy."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "TỔNG HÓA ĐƠN\nNHIỀU LỚP",
+   "sub": "VÍ DỤ GIẢ ĐỊNH · ANH MINH",
+   "titleAt": 0,
+   "bg": "ai01"
+  },
+  {
+   "type": "counter",
+   "at": [
+    1,
+    "tổng"
+   ],
+   "from": 0,
+   "to": 30.0,
+   "suffix": " TRIỆU",
+   "label": "TỔNG CHI PHÍ · 7 NGÀY NẰM VIỆN",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · TRIỆU ĐỒNG",
+   "sub": {
+    "text": "VÍ DỤ GIẢ ĐỊNH",
+    "at": [
+     1,
+     "tổng"
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "img": "ai02",
+   "at": 2,
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.55,
+    0.3
+   ],
+   "move": "pan",
+   "kin": [
+    {
+     "text": "CHỈ ĐỂ VẼ THÁC CHI PHÍ",
+     "at": 2,
+     "sm": true
+    },
+    {
+     "text": "KHÔNG PHẢI BÁO GIÁ",
+     "at": 3,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": [
+    4,
+    "tách"
+   ],
+   "title": "HAI CHIẾC HỘP",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · TRIỆU ĐỒNG",
+   "rows": [
+    {
+     "k": "HỘP 1",
+     "v": "TRONG PHẠM VI BHYT",
+     "at": [
+      4,
+      "tách"
+     ]
+    },
+    {
+     "k": "HỘP 2",
+     "v": "KHOẢN ĐI CÙNG ĐỢT NẰM VIỆN",
+     "at": 6
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    6,
+    "nhưng"
+   ],
+   "items": [
+    {
+     "text": "KHÔNG PHẢI “BẢO HIỂM TỪ CHỐI”",
+     "at": [
+      6,
+      "nhưng"
+     ],
+     "acc": true
+    },
+    {
+     "text": "ranh giới giữa hai hộp",
+     "at": 7,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "waterfall",
+   "at": 8,
+   "title": "HAI DÒNG THÀNH HÓA ĐƠN",
+   "range": "VÍ DỤ GIẢ ĐỊNH · TRIỆU ĐỒNG",
+   "unit": "TRIỆU",
+   "start": {
+    "k": "TRONG PHẠM VI",
+    "v": 25.0,
+    "at": 8
+   },
+   "steps": [
+    {
+     "k": "NGOÀI PHẠM VI",
+     "v": 5.0,
+     "at": 9
+    }
+   ],
+   "calls": [
+    {
+     "i": 2,
+     "text": "30 TRIỆU",
+     "at": [
+      10,
+      "ba"
+     ]
+    }
+   ],
+   "end": {
+    "k": "TỔNG HÓA ĐƠN",
+    "at": 10
+   }
+  },
+  {
+   "type": "photo",
+   "img": "ai05",
+   "at": 11,
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.5,
+    0.28
+   ],
+   "reveal": {
+    "kind": "circle",
+    "at": 11,
+    "d": 0.9
+   },
+   "kin": [
+    {
+     "text": "HÓA ĐƠN ≠ GÁNH NẶNG",
+     "at": 11,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 12,
+   "title": "CỘNG THÊM NGOÀI HÓA ĐƠN",
+   "unit": "TRIỆU ĐỒNG",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · TRIỆU ĐỒNG",
+   "items": [
+    {
+     "k": "TỔNG HÓA ĐƠN",
+     "v": 30.0,
+     "lbl": "30",
+     "at": 12
+    },
+    {
+     "k": "ĐI LẠI · ĂN Ở · NGHỈ LÀM",
+     "v": 2.0,
+     "lbl": "2 TRIỆU",
+     "at": [
+      12,
+      "hai"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 13,
+   "myth": "“QUỸ KHÔNG TRẢ” 2 TRIỆU",
+   "truth": "NGOÀI CHI PHÍ KCB BHYT",
+   "strikeAt": [
+    14,
+    "gộp"
+   ],
+   "truthAt": 15,
+   "mythLab": "ĐỪNG GỘP VÀO"
+  },
+  {
+   "type": "timeline",
+   "at": 16,
+   "title": "MỘT LẦN NẰM VIỆN",
+   "items": [
+    {
+     "year": "7 NGÀY",
+     "text": "nằm viện",
+     "at": 16
+    },
+    {
+     "year": "5 DÒNG",
+     "text": "chi khám chữa bệnh",
+     "at": 17
+    },
+    {
+     "year": "3 KHOẢN",
+     "text": "ngoài hóa đơn",
+     "at": [
+      17,
+      "ba"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 18,
+   "title": "HỒ SƠ CỦA VÍ DỤ",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · TRIỆU ĐỒNG",
+   "rows": [
+    {
+     "k": "NGÀY NẰM VIỆN",
+     "v": "7",
+     "at": 18
+    },
+    {
+     "k": "DÒNG CHI KCB",
+     "v": "5",
+     "at": [
+      18,
+      "năm"
+     ]
+    },
+    {
+     "k": "KHOẢN NGOÀI HÓA ĐƠN",
+     "v": "3",
+     "at": [
+      18,
+      "ba"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 19,
+   "title": "CHƯA TRỪ ĐỒNG NÀO",
+   "unit": "TRIỆU ĐỒNG",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · TRIỆU ĐỒNG",
+   "items": [
+    {
+     "k": "TỔNG HÓA ĐƠN",
+     "v": 30.0,
+     "lbl": "30",
+     "at": 19
+    },
+    {
+     "k": "ĐÃ TRỪ",
+     "v": 0,
+     "lbl": "0",
+     "at": [
+      19,
+      "đồng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 21,
+   "text": "“TRONG PHẠM VI”\nDO LUẬT NÀO ĐỊNH NGHĨA?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "TỔNG HÓA ĐƠN NHIỀU LỚP"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.1
+ }
+}

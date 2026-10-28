@@ -1,0 +1,350 @@
+{
+ "title": "T, T cộng một và chiếc đồng hồ phân bổ",
+ "lines": [
+  {
+   "t": "Quy chế được VSDC công bố có hiệu lực ngày hai mươi chín tháng tám năm hai nghìn không trăm hai mươi hai.",
+   "p": 0.8
+  },
+  "Quyết định ban hành quy chế có ngày mười chín tháng tám năm hai nghìn không trăm hai mươi hai.",
+  "Với giao dịch mua ngày T, nguồn này nói tiền hoặc chứng khoán được nhận trước mười ba giờ ngày T cộng hai.",
+  "Nguồn cũng nói chứng khoán mua ngày T có thể được bán trong phiên chiều T cộng hai.",
+  "Đồng hồ vẫn chạy.",
+  "Đó là mốc quan trọng nhất của video.",
+  "Trong lịch ví dụ giả định, sáng thứ Hai là T.",
+  "Lệnh mua một trăm cổ phiếu khớp với giá trị hai triệu đồng.",
+  "Ô cổ phiếu có thể bán vẫn là không.",
+  "Thứ Ba là T cộng một.",
+  "Hai triệu đồng vẫn là giá trị khớp lệnh minh họa.",
+  "Ô cổ phiếu có thể bán vẫn là không.",
+  "Thứ Tư là T cộng hai.",
+  "Theo quy chế của Tổng công ty Lưu ký, khâu hoàn tất với ngân hàng thanh toán diễn ra từ mười một giờ tới mười một giờ ba mươi.",
+  "Sau đó, thành viên lưu ký phân bổ cho khách trước mười ba giờ.",
+  "Trước mười ba giờ T cộng hai là mốc phân bổ trên biểu đồ.",
+  "Đây là mốc nguồn nêu.",
+  "Nguồn không bảo rằng cổ phiếu vừa mua có thể bán ngay từ đầu ngày.",
+  "Nguồn nói phiên chiều T cộng hai.",
+  "Vì thế, cách nói T cộng hai phẩy năm nghe tiện nhưng không phải mốc chính thức trong video này.",
+  "Ta giữ hai ô dễ nhớ: trước mười ba giờ và phiên chiều.",
+  "Trong ví dụ giả định, chiều thứ Tư là lúc một trăm cổ phiếu chuyển từ chờ phân bổ sang có thể bán.",
+  "Không phải giá đã tăng thì nút này sáng.",
+  "Không phải giá đã giảm thì nút này tự sáng.",
+  "Chiếc đồng hồ thanh toán mới giải thích chuyển động ấy.",
+  "Đây là nơi cái khung giá gặp cái lịch."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "CHƯƠNG BỐN",
+   "title": "T, T+1\nVÀ ĐỒNG HỒ PHÂN BỔ",
+   "sub": "QUY CHẾ VSDC · HIỆU LỰC 29/08/2022",
+   "img": "ai04",
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.5,
+    0.35
+   ],
+   "titleAt": 0
+  },
+  {
+   "type": "timeline",
+   "at": 1,
+   "title": "QUY CHẾ THANH TOÁN MỚI",
+   "items": [
+    {
+     "year": "19/08/2022",
+     "text": "quyết định ban hành",
+     "at": 1
+    },
+    {
+     "year": "29/08/2022",
+     "text": "quy chế có hiệu lực",
+     "at": [
+      1,
+      "quy"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "from": 0,
+   "to": 13,
+   "suffix": " GIỜ",
+   "label": "MUA NGÀY T · NHẬN TRƯỚC 13 GIỜ T+2",
+   "srcnote": "NGUỒN: VSDC",
+   "sub": {
+    "text": "BÁN ĐƯỢC TỪ PHIÊN CHIỀU T+2",
+    "at": 3
+   }
+  },
+  {
+   "type": "broll",
+   "at": 4,
+   "vid": "8195667",
+   "loop": true,
+   "veil": 0.56,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "ĐỒNG HỒ VẪN CHẠY",
+     "at": 4,
+     "sm": true
+    },
+    {
+     "text": "MỐC QUAN TRỌNG NHẤT",
+     "at": 5,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "img": "ai04",
+   "at": 6,
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.5,
+    0.4
+   ],
+   "zoom": {
+    "x": 0.45,
+    "y": 0.6,
+    "z": 1.4,
+    "at": 6,
+    "d": 1.2
+   }
+  },
+  {
+   "type": "heat",
+   "at": 7,
+   "title": "LỊCH CỦA 100 CỔ PHIẾU",
+   "range": "VÍ DỤ GIẢ ĐỊNH · THỨ HAI → THỨ TƯ",
+   "unit": "CỔ PHIẾU",
+   "cols": 3,
+   "cells": [
+    {
+     "k": "T · THỨ HAI",
+     "v": 0,
+     "note": "KHỚP 2 TRIỆU ĐỒNG",
+     "at": 7
+    },
+    {
+     "k": "T+1 · THỨ BA",
+     "v": 0,
+     "note": "VẪN 2 TRIỆU KHỚP",
+     "at": 9
+    },
+    {
+     "k": "T+2 · THỨ TƯ",
+     "v": 0,
+     "note": "CHỜ MỐC GIỜ",
+     "at": 12
+    }
+   ],
+   "calls": [
+    {
+     "i": 0,
+     "text": "Ô BÁN: 0",
+     "at": 8
+    },
+    {
+     "i": 1,
+     "text": "Ô BÁN VẪN 0",
+     "at": 11
+    }
+   ],
+   "total": {
+    "label": "CÓ THỂ BÁN",
+    "at": 8
+   }
+  },
+  {
+   "type": "timeline",
+   "at": 13,
+   "title": "NGÀY T+2 THEO VSDC",
+   "items": [
+    {
+     "year": "11:00 – 11:30",
+     "text": "hoàn tất với ngân hàng thanh toán",
+     "at": 13
+    },
+    {
+     "year": "TRƯỚC 13:00",
+     "text": "thành viên lưu ký phân bổ cho khách",
+     "at": 14
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 15,
+   "title": "CÁC MỐC GIỜ NGÀY T+2",
+   "unit": "GIỜ",
+   "srcnote": "NGUỒN: VSDC",
+   "items": [
+    {
+     "k": "HOÀN TẤT TỪ",
+     "v": 11,
+     "lbl": "11:00",
+     "at": 15
+    },
+    {
+     "k": "HOÀN TẤT ĐẾN",
+     "v": 11.5,
+     "lbl": "11:30",
+     "at": 15
+    },
+    {
+     "k": "PHÂN BỔ TRƯỚC",
+     "v": 13,
+     "lbl": "13:00",
+     "at": 15,
+     "acc": true
+    }
+   ],
+   "calls": [
+    {
+     "i": 2,
+     "text": "MỐC PHÂN BỔ",
+     "at": 16
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 17,
+   "items": [
+    {
+     "text": "KHÔNG PHẢI ĐẦU NGÀY",
+     "at": 17,
+     "acc": true
+    },
+    {
+     "text": "nguồn nói: phiên chiều T+2",
+     "at": 18,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 19,
+   "title": "CÁCH NÓI VÀ MỐC NGUỒN",
+   "srcnote": "NGUỒN: VSDC",
+   "rows": [
+    {
+     "k": "“T+2,5”",
+     "v": "CÁCH NÓI, KHÔNG CHÍNH THỨC",
+     "at": 19
+    },
+    {
+     "k": "TRƯỚC 13 GIỜ",
+     "v": "PHÂN BỔ",
+     "at": 20
+    },
+    {
+     "k": "PHIÊN CHIỀU",
+     "v": "CÓ THỂ BÁN",
+     "at": [
+      20,
+      "chiều"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "stack",
+   "at": 21,
+   "title": "CHIỀU THỨ TƯ ĐỔI Ô",
+   "range": "VÍ DỤ GIẢ ĐỊNH",
+   "unit": "CỔ PHIẾU",
+   "keys": [
+    {
+     "k": "CHỜ PHÂN BỔ"
+    },
+    {
+     "k": "CÓ THỂ BÁN"
+    }
+   ],
+   "groups": [
+    {
+     "k": "TRƯỚC 13 GIỜ",
+     "vals": [
+      100,
+      0
+     ],
+     "at": 21
+    },
+    {
+     "k": "CHIỀU T+2",
+     "vals": [
+      0,
+      100
+     ],
+     "at": [
+      21,
+      "sang"
+     ]
+    }
+   ],
+   "calls": [
+    {
+     "i": 1,
+     "text": "100 CÓ THỂ BÁN",
+     "at": [
+      21,
+      "bán"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 22,
+   "vid": "7693395",
+   "loop": true,
+   "veil": 0.56,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "GIÁ TĂNG HAY GIẢM",
+     "at": 22,
+     "sm": true
+    },
+    {
+     "text": "NÚT BÁN KHÔNG ĐỔI THEO MÀU GIÁ",
+     "at": 23,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 24,
+   "items": [
+    {
+     "text": "ĐỒNG HỒ THANH TOÁN",
+     "at": 24,
+     "acc": true
+    },
+    {
+     "text": "nơi khung giá gặp lịch",
+     "at": 25,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "CHIẾC ĐỒNG HỒ PHÂN BỔ"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

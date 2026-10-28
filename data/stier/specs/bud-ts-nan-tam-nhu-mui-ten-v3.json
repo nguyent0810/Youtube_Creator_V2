@@ -1,0 +1,195 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-ts-nan-tam-nhu-mui-ten",
+ "format": "truoc-sau",
+ "hook_type": "noi-dau",
+ "open_shot": "cung-ten",
+ "voice": "Thanh Bình",
+ "music": "perspectives.mp3",
+ "music_gain": 0.18,
+ "gap": 0.7,
+ "title": "Tâm hay cong theo chuyện vui buồn? Thợ làm tên có cách",
+ "kicker": "TRƯỚC · SAU",
+ "sub": "KINH PHÁP CÚ · KỆ 33",
+ "acc": [
+  "tâm",
+  "nắn",
+  "cong"
+ ],
+ "lines": [
+  "Tâm hay cong theo vui buồn? Thợ làm tên có cách.",
+  "Ngày xưa, thợ làm tên hơ mũi tên trên lửa.",
+  "Rồi nắn từng chút, đến khi thẳng.",
+  "Không ai nắn một lần là xong.",
+  "Nhưng tâm còn khó hơn tên: nay vui, mai buồn, khó giữ.",
+  "Kệ Pháp Cú dạy: người trí nắn tâm, như thợ nắn tên.",
+  "Ngày xưa ta nghĩ phải thẳng ngay. Giờ hiểu: nắn mỗi ngày là đủ.",
+  "Hôm nay chọn một chỗ cong, nắn một lần thôi.",
+  "Tâm bạn đang cong chỗ nào? Gửi người đang tập sửa mình."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:6668845",
+   "items": [
+    {
+     "text": "TÂM CONG?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "thợ làm tên có cách",
+     "at": [
+      0,
+      "thợ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Thợ làm tên",
+   "nodes": [
+    {
+     "text": "HƠ LỬA",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      1,
+      "hơ"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "NẮN TỪNG CHÚT",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      2,
+      "nắn"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "DHP 33 · SUTTACENTRAL"
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "KHÔNG AI NẮN\nMỘT LẦN",
+   "fx": "zoom"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "clip": "pexels:5058605",
+   "items": [
+    {
+     "text": "NAY VUI · MAI BUỒN",
+     "at": [
+      4,
+      "nay"
+     ],
+     "acc": true
+    },
+    {
+     "text": "tâm khó hơn tên",
+     "at": [
+      4,
+      "tâm"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "source",
+   "at": 5,
+   "source": "KINH PHÁP CÚ · KỆ 33",
+   "ref": "Phẩm Tâm",
+   "snippet": "Người trí [[nắn thẳng tâm]], như thợ nắn tên.",
+   "hlAt": [
+    5,
+    "nắn"
+   ]
+  },
+  {
+   "type": "hf_split",
+   "at": 6,
+   "a": {
+    "lab": "TRƯỚC",
+    "val": "ép **thẳng**",
+    "num": "−",
+    "at": [
+     6,
+     "nghĩ"
+    ]
+   },
+   "b": {
+    "lab": "SAU",
+    "val": "nắn **dần**",
+    "num": "+",
+    "at": [
+     6,
+     "hiểu:"
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "to": 1,
+   "suffix": " LẦN NẮN",
+   "label": "MỘT CHỖ CONG · HÔM NAY",
+   "until": [
+    7,
+    "nắn"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "veil": 0.4,
+   "clip": "pexels:34159262",
+   "items": [
+    {
+     "text": "CONG CHỖ NÀO?",
+     "at": [
+      8,
+      "tâm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "gửi người đang tập sửa mình",
+     "at": [
+      8,
+      "gửi"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp33-43/en/sujato"
+ ],
+ "description": "Tâm hay cong theo chuyện vui buồn? Thợ làm tên có cách\n\nNguồn: https://suttacentral.net/dhp33-43/en/sujato"
+}

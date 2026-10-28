@@ -1,0 +1,135 @@
+{
+ "theme": "mim",
+ "title": "Ý chặn ChatGPT gần một tháng năm 2023: lý do là dữ liệu người dùng",
+ "description": "Ngày 31/03/2023, cơ quan bảo vệ dữ liệu của Ý (Garante) tạm thời chặn ChatGPT trên toàn nước Ý, nêu lý do người dùng không được thông báo đầy đủ và việc thu thập dữ liệu cá nhân hàng loạt để huấn luyện thiếu cơ sở pháp lý. Ngày 28/04/2023, ChatGPT hoạt động trở lại ở Ý sau khi OpenAI đáp ứng nhiều yêu cầu của cơ quan này (theo Privacy Laws & Business, Fox Business, The Decoder). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/ejsjefnJQbI (công khai từ 20:00 ngày 23/11).",
+ "tags": [
+  "ý chặn chatgpt",
+  "garante chatgpt",
+  "luật dữ liệu ai",
+  "quyền riêng tư ai",
+  "chatgpt",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "03/2023",
+ "acc": [
+  "quốc",
+  "chặn",
+  "tháng",
+  "dữ",
+  "liệu"
+ ],
+ "kicker": "AI QUANH TA",
+ "lines": [
+  "Một quốc gia từng chặn ChatGPT gần một tháng.",
+  "Ngày 31 tháng 3 năm 2023, cơ quan bảo vệ dữ liệu của Ý tạm thời chặn ChatGPT trên toàn nước Ý.",
+  "Lý do thứ nhất: người dùng không được thông báo đầy đủ.",
+  "Lý do thứ hai: việc thu thập dữ liệu cá nhân hàng loạt để huấn luyện thiếu cơ sở pháp lý.",
+  "Ngày 28 tháng 4, ChatGPT hoạt động trở lại ở Ý, sau khi OpenAI đáp ứng nhiều yêu cầu của cơ quan này.",
+  "Gần một tháng, vì một câu hỏi về dữ liệu của người dùng."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MỘT QUỐC GIA CHẶN CHATGPT",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "gần một tháng · 2023",
+     "at": [
+      0,
+      "gần"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7818628",
+   "veil": 0.58
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "31.03.2023",
+   "day": "Ý TẠM CHẶN CHATGPT"
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "HAI LÝ DO",
+   "cards": [
+    {
+     "k": "LÝ DO 1",
+     "v": "THIẾU THÔNG BÁO",
+     "at": [
+      2,
+      "thứ"
+     ]
+    },
+    {
+     "k": "LÝ DO 2",
+     "v": "THIẾU CƠ SỞ PHÁP LÝ",
+     "at": [
+      3,
+      "thứ"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "28.04.2023",
+     "at": 4,
+     "acc": true
+    },
+    {
+     "text": "ChatGPT trở lại ở Ý",
+     "at": [
+      4,
+      "hoạt"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:13801258",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  },
+  {
+   "type": "calendar",
+   "at": 5,
+   "n": 28,
+   "unit": "NGÀY",
+   "title": "GẦN MỘT THÁNG BỊ *CHẶN*"
+  }
+ ],
+ "sources": [
+  "https://www.privacylaws.com/news/italy-s-garante-imposes-and-then-withdraws-a-ban-on-chatgpt/"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.6
+  }
+ },
+ "say": {
+  "=AI": "ây ai",
+  "chatgpt": "chát gi pi ti",
+  "openai": "Ô-pần ây ai"
+ },
+ "imgs": {}
+}

@@ -1,0 +1,398 @@
+{
+ "title": "Dây chuyền không có máy",
+ "lines": [
+  {
+   "t": "Hồi ấy, IBM bán máy cho văn phòng và ngân hàng.",
+   "p": 0.8
+  },
+  "Có máy cộng in ra tổng, có máy nhân đọc hai số trên một tấm thẻ rồi nhân, có máy sắp thẻ.",
+  "Ý của Frankel là xếp những cái máy ấy thành một vòng.",
+  {
+   "t": "Một xấp thẻ đi qua máy cộng, sang máy nhân, rồi lại về máy cộng.",
+   "p": 1.0
+  },
+  "Feynman gọi đó là sản xuất hàng loạt bằng máy.",
+  "Ông nhấn mạnh: khi ấy, đó là chuyện mới.",
+  "Mỗi vòng của xấp thẻ ứng với một bước thời gian của vụ nổ.",
+  {
+   "t": "Mỗi vòng cần chừng mười hai thao tác trên máy, và người vẫn phải can thiệp luôn.",
+   "p": 1.0
+  },
+  "Tháng 3 năm 1944, máy vẫn chưa về.",
+  "Nên họ thử chương trình bằng người.",
+  "Mỗi cô ngồi trước một chiếc Marchant, và chỉ làm một việc.",
+  "Cô này chỉ cộng.",
+  "Cô kia chỉ nhân.",
+  "Một cô khác chỉ lấy lập phương của một con số.",
+  {
+   "t": "Kết quả ghi lên một tấm thẻ, chuyền sang bàn bên cạnh.",
+   "p": 1.0
+  },
+  "Họ cho thẻ chạy vòng ấy, cho tới khi gỡ hết lỗi trong chương trình.",
+  "Rồi một bất ngờ.",
+  "Feynman kể: cách chia việc này nhanh hơn hẳn kiểu mỗi người tự làm từ đầu tới cuối.",
+  "Nhanh ngang đúng tốc độ người ta dự tính cho máy IBM.",
+  {
+   "t": "Khác biệt duy nhất, theo ông: máy không biết mệt, và làm được ba ca.",
+   "p": 1.0
+  },
+  {
+   "t": "Còn người thì mệt dần.",
+   "p": 1.0
+  },
+  "Nhân nói chuyện chia việc, đây là cách Feynman thật sự mở két.",
+  "Những tủ có mã số ở Los Alamos thuộc loại mới, áp tai nghe hay sờ tay đều vô ích.",
+  "Ông mày mò và nhận ra không cần xoay đúng từng vạch, lệch hai vạch vẫn mở.",
+  "Thế là chỉ còn chừng tám nghìn tổ hợp, đủ để thử hết trong tám tiếng.",
+  {
+   "t": "Rồi ông mất chừng hai năm để tìm ra một mẹo nhanh hơn.",
+   "p": 1.0
+  },
+  "Khi tủ đang mở, có thể dò ra hai số cuối của mã.",
+  "Ông vừa đứng tán chuyện, vừa nghịch mặt số, rồi về phòng ghi lại.",
+  "Có hai số cuối, số đầu chỉ còn chừng hai mươi khả năng.",
+  "Ba phút là mở.",
+  "Ông không dò cả ba số một lúc.",
+  {
+   "t": "Ông chẻ việc ra.",
+   "p": 1.0
+  },
+  "Cạch: số thứ nhất của ổ khoá đã mở.",
+  {
+   "t": "Chẻ một phép tính lớn thành dây chuyền những bước nhỏ, mỗi chỗ chỉ làm đúng một việc.",
+   "p": 1.0
+  },
+  "Nhà nghiên cứu Bill Archer của Los Alamos gọi bước chẻ phương trình thành từng thao tác ấy bằng một chữ quen thuộc: lập trình.",
+  "Nó có trước cả máy.",
+  "Rồi máy cũng tới.",
+  "Nhưng người lắp máy thì không."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "CHƯƠNG BỐN",
+   "title": "DÂY CHUYỀN\nKHÔNG CÓ MÁY",
+   "sub": "THÁNG 3 · 1944",
+   "bg": "ibm601",
+   "titleAt": [
+    0,
+    "Hồi"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "MÁY KẾ TOÁN IBM THỜI ẤY",
+   "srcnote": "LOS ALAMOS FROM BELOW (FEYNMAN, 1976) · B. J. ARCHER · LA-UR-21-20164 (LANL), BẢNG I",
+   "rows": [
+    {
+     "k": "MÁY CỘNG IN (405)",
+     "v": "IN RA TỔNG",
+     "at": [
+      1,
+      "cộng"
+     ]
+    },
+    {
+     "k": "MÁY NHÂN (601)",
+     "v": "ĐỌC 2 SỐ TRÊN THẺ → NHÂN",
+     "at": [
+      1,
+      "đọc"
+     ]
+    },
+    {
+     "k": "MÁY SẮP (075)",
+     "v": "SẮP THẺ THEO CỘT",
+     "at": [
+      1,
+      "sắp"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 3,
+   "bg": "ibm601",
+   "items": [
+    {
+     "year": "1",
+     "text": "*máy cộng*",
+     "at": 3
+    },
+    {
+     "year": "2",
+     "text": "*máy nhân*",
+     "at": [
+      3,
+      "nhân"
+     ]
+    },
+    {
+     "year": "3",
+     "text": "lại *máy cộng*",
+     "at": [
+      3,
+      "lại"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 4,
+   "dy": true,
+   "text": "Sản xuất hàng loạt bằng máy. Khi ấy, đó là chuyện mới.",
+   "by": "RICHARD FEYNMAN · LOS ALAMOS FROM BELOW (FEYNMAN, 1976)",
+   "lbl": "DIỄN Ý",
+   "typeAt": [
+    4,
+    null,
+    0,
+    0.05
+   ],
+   "typeDur": 2.4
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "1 VÒNG THẺ = 1 BƯỚC THỜI GIAN",
+     "at": 6,
+     "acc": true
+    },
+    {
+     "text": "≈ 12 thao tác · người vẫn phải can thiệp",
+     "at": 7,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 8,
+   "day": "MÁY VẪN CHƯA VỀ",
+   "date": "03.1944",
+   "sub": {
+    "text": "THỬ CHƯƠNG TRÌNH BẰNG NGƯỜI",
+    "at": 9
+   }
+  },
+  {
+   "type": "photo",
+   "at": 10,
+   "img": "marchant",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.5,
+   "illus": "ẢNH MINH HỌA",
+   "kin": [
+    {
+     "text": "MỖI CÔ · MỘT VIỆC",
+     "at": 10,
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "MÁY CỘNG MARCHANT",
+    "v": "ẢNH: BHAIYAJI SMILE 123 · CC0",
+    "at": 10
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 11,
+   "title": "DÂY CHUYỀN BẰNG NGƯỜI",
+   "srcnote": "LOS ALAMOS FROM BELOW (FEYNMAN, 1976) · N. LEWIS · TRINITY BY THE NUMBERS (LANL)",
+   "rows": [
+    {
+     "k": "BÀN 1",
+     "v": "CHỈ CỘNG",
+     "at": 11
+    },
+    {
+     "k": "BÀN 2",
+     "v": "CHỈ NHÂN",
+     "at": 12
+    },
+    {
+     "k": "BÀN 3",
+     "v": "CHỈ LẬP PHƯƠNG",
+     "at": 13
+    },
+    {
+     "k": "→",
+     "v": "GHI THẺ · CHUYỀN SANG BÀN BÊN",
+     "at": 14
+    }
+   ],
+   "total": {
+    "k": "MỤC ĐÍCH",
+    "v": "GỠ LỖI CHƯƠNG TRÌNH",
+    "at": 15
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 16,
+   "items": [
+    {
+     "text": "MỘT BẤT NGỜ",
+     "at": 16,
+     "sm": true
+    },
+    {
+     "text": "NHANH HƠN MỖI NGƯỜI TỰ LÀM HẾT",
+     "at": 17
+    },
+    {
+     "text": "NGANG TỐC ĐỘ DỰ TÍNH CHO MÁY IBM",
+     "at": 18,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "split",
+   "at": 19,
+   "title": "KHÁC BIỆT DUY NHẤT · THEO FEYNMAN",
+   "a": {
+    "img": "ibm601",
+    "label": "MÁY: KHÔNG MỆT · 3 CA",
+    "at": 19
+   },
+   "b": {
+    "img": "marchant",
+    "label": "NGƯỜI: MỆT DẦN",
+    "at": 20
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 21,
+   "title": "CÁCH FEYNMAN MỞ KÉT",
+   "srcnote": "LOS ALAMOS FROM BELOW (FEYNMAN, 1976) · DIỄN Ý",
+   "rows": [
+    {
+     "k": "TỦ KIỂU MỚI",
+     "v": "ÁP TAI · SỜ TAY ĐỀU VÔ ÍCH",
+     "at": 22
+    },
+    {
+     "k": "LỆCH 2 VẠCH",
+     "v": "VẪN MỞ",
+     "at": [
+      23,
+      "lệch"
+     ]
+    },
+    {
+     "k": "TỔ HỢP",
+     "v": "≈ 8.000 · THỬ HẾT TRONG 8 GIỜ",
+     "at": 24
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 25,
+   "items": [
+    {
+     "text": "≈ HAI NĂM MÀY MÒ",
+     "at": 25
+    },
+    {
+     "text": "TỦ ĐANG MỞ → DÒ 2 SỐ CUỐI",
+     "at": 26,
+     "acc": true
+    },
+    {
+     "text": "vừa tán chuyện vừa nghịch mặt số",
+     "at": 27,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 28,
+   "from": 0,
+   "to": 20,
+   "until": [
+    28,
+    "khả"
+   ],
+   "suffix": " KHẢ NĂNG",
+   "label": "SỐ ĐẦU · KHI ĐÃ CÓ HAI SỐ CUỐI",
+   "sub": {
+    "text": "≈ 3 PHÚT LÀ MỞ · THEO FEYNMAN",
+    "at": 29
+   }
+  },
+  {
+   "type": "slam",
+   "at": 30,
+   "text": "CHẺ VIỆC RA",
+   "sub": "KHÔNG DÒ CẢ BA SỐ MỘT LÚC"
+  },
+  {
+   "type": "counter",
+   "at": 32,
+   "from": 0,
+   "to": 1,
+   "until": [
+    32,
+    "mở"
+   ],
+   "suffix": " / 3",
+   "label": "Ổ KHOÁ · SỐ THỨ NHẤT ĐÃ MỞ",
+   "sub": {
+    "text": "SỐ 1 · CHẺ VIỆC THÀNH DÂY CHUYỀN",
+    "at": 33
+   }
+  },
+  {
+   "type": "source",
+   "at": 34,
+   "source": "B. J. ARCHER · “THE LOS ALAMOS COMPUTING FACILITY…”",
+   "ref": "LANL · LA-UR-21-20164 · 2021",
+   "snippet": "lập trình máy IBM bắt đầu bằng việc [[chẻ phương trình thành từng thao tác]]: cộng hai số này, chia hai số kia…",
+   "hlAt": [
+    34,
+    "chẻ"
+   ],
+   "seal": "DIỄN Ý TỪ BÀI NGHIÊN CỨU",
+   "sealAt": [
+    34,
+    "lập"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 35,
+   "items": [
+    {
+     "text": "CÓ TRƯỚC CẢ MÁY",
+     "at": 35,
+     "acc": true
+    },
+    {
+     "text": "máy tới · người lắp máy thì không",
+     "at": 37,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "DÂY CHUYỀN KHÔNG CÓ MÁY"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

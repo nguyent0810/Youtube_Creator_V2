@@ -1,0 +1,326 @@
+{
+ "title": "Ba tờ phiếu lương, cùng một con số",
+ "lines": [
+  {
+   "t": "Bây giờ đặt ba tờ phiếu lương cạnh nhau.",
+   "p": 0.8
+  },
+  {
+   "t": "Cả ba đều ghi lương gộp hai mươi lăm triệu, cùng một người phụ thuộc.",
+   "p": 1.0
+  },
+  "Năm hai nghìn không trăm mười chín, giảm trừ bản thân là chín triệu, người phụ thuộc ba triệu sáu.",
+  "Thu nhập tính thuế gần chín triệu tám, trải qua hai bậc của thang cũ.",
+  {
+   "t": "Thuế khoảng bảy trăm hai mươi bảy nghìn rưỡi. Hơn bảy trăm nghìn.",
+   "p": 1.0
+  },
+  "Giữa năm hai nghìn không trăm hai mươi, giảm trừ lên mười một triệu và bốn triệu bốn.",
+  "Đến tháng mười hai năm ngoái, thu nhập tính thuế của anh còn gần bảy triệu.",
+  {
+   "t": "Thuế khoảng bốn trăm bốn mươi bảy nghìn rưỡi.",
+   "p": 1.0
+  },
+  "Năm nay, với mười lăm triệu rưỡi và sáu triệu hai, thu nhập tính thuế chỉ còn sáu trăm bảy mươi lăm nghìn.",
+  {
+   "t": "Thuế ba mươi ba nghìn bảy trăm năm mươi đồng. Gần như bằng không.",
+   "p": 1.0
+  },
+  "Tính cả năm, so với năm ngoái, anh Khang giữ lại thêm gần năm triệu đồng.",
+  {
+   "t": "Gần năm triệu. Không cần làm thêm một giờ nào.",
+   "p": 1.0
+  },
+  {
+   "t": "Sao giảm trừ lại được nâng mạnh như vậy?",
+   "ask": 1
+  },
+  "Luật thuế cũ có một nguyên tắc.",
+  "Khi giá cả tăng quá hai mươi phần trăm, mức giảm trừ gia cảnh được xem xét điều chỉnh.",
+  "Thử đổi các mức cũ về giá năm nay bằng chỉ số giá tiêu dùng.",
+  "Chín triệu của năm hai nghìn không trăm mười ba, tương đương khoảng mười ba triệu tư hôm nay.",
+  {
+   "t": "Mười một triệu của năm hai nghìn không trăm hai mươi, cũng khoảng mười ba triệu tư. Bằng nhau.",
+   "p": 1.0
+  },
+  "Tức là lần nâng năm hai nghìn không trăm hai mươi chỉ đủ bù phần giá cả đã tăng.",
+  {
+   "t": "Còn mười lăm triệu rưỡi năm nay cao hơn mức cũ khoảng hai triệu, sau khi đã tính giá cả.",
+   "p": 1.0
+  },
+  {
+   "t": "Vậy lương bao nhiêu thì bắt đầu phải nộp thuế?",
+   "ask": 1
+  },
+  "Với cùng cách tính ấy, người không có người phụ thuộc bắt đầu nộp khi lương gộp vượt khoảng mười bảy triệu ba.",
+  "Có một người phụ thuộc, khoảng hai mươi tư triệu ba.",
+  {
+   "t": "Có hai người phụ thuộc, khoảng ba mươi mốt triệu hai.",
+   "p": 1.0
+  },
+  "Năm ngoái, ba ngưỡng ấy chỉ là khoảng mười hai triệu ba, mười bảy triệu hai, và hai mươi hai triệu.",
+  "Để dễ hình dung, quý ba năm nay, thu nhập bình quân một tháng của người lao động Việt Nam là khoảng chín triệu hai.",
+  {
+   "t": "Thấp hơn nhiều so với ngưỡng thấp nhất.",
+   "p": 1.0
+  },
+  "Nhưng mười hai tháng không phải lúc nào cũng giống nhau.",
+  "Có một tháng, phiếu lương của anh Khang trông rất khác.",
+  "Tháng có thưởng Tết."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHẶNG BA",
+   "title": "BA TỜ PHIẾU LƯƠNG\nCÙNG MỘT CON SỐ",
+   "sub": "2019 · 2025 · 2026",
+   "vid": "6963972",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Bây"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "THÁNG BẤT KỲ NĂM 2019",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · ANH KHANG · 25 TRIỆU · 1 NGƯỜI PHỤ THUỘC",
+   "rows": [
+    {
+     "k": "GIẢM TRỪ",
+     "v": "9 + 3,6 TRIỆU",
+     "at": [
+      2,
+      "giảm"
+     ]
+    },
+    {
+     "k": "THU NHẬP TÍNH THUẾ",
+     "v": "≈ 9,775 TRIỆU",
+     "at": 3
+    }
+   ],
+   "total": {
+    "k": "THUẾ",
+    "v": "≈ 727.500 Đ",
+    "at": 4
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "THÁNG 12/2025",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · ANH KHANG · 25 TRIỆU · 1 NGƯỜI PHỤ THUỘC",
+   "rows": [
+    {
+     "k": "GIẢM TRỪ (TỪ 07/2020)",
+     "v": "11 + 4,4 TRIỆU",
+     "at": [
+      5,
+      "giảm"
+     ]
+    },
+    {
+     "k": "THU NHẬP TÍNH THUẾ",
+     "v": "≈ 6,975 TRIỆU",
+     "at": 6
+    }
+   ],
+   "total": {
+    "k": "THUẾ",
+    "v": "≈ 447.500 Đ",
+    "at": 7
+   }
+  },
+  {
+   "type": "bars",
+   "at": 8,
+   "title": "25 TRIỆU · 1 NPT · THUẾ/THÁNG (NGHÌN Đ)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "2019",
+     "v": 727.5,
+     "lbl": "727,5",
+     "at": [
+      8,
+      "Năm"
+     ]
+    },
+    {
+     "k": "2025",
+     "v": 447.5,
+     "lbl": "447,5",
+     "at": [
+      8,
+      "với"
+     ]
+    },
+    {
+     "k": "2026",
+     "v": 33.75,
+     "lbl": "33,75",
+     "at": 9,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 10,
+   "from": 0,
+   "to": 4.965,
+   "suffix": " TRIỆU",
+   "label": "GIỮ LẠI THÊM MỖI NĂM SO VỚI 2025",
+   "sub": {
+    "text": "12 × 413.750 Đ · VÍ DỤ GIẢ ĐỊNH",
+    "at": 11
+   }
+  },
+  {
+   "type": "question",
+   "at": 12,
+   "text": "Sao giảm trừ lại được\nnâng mạnh như vậy?"
+  },
+  {
+   "type": "source",
+   "at": 13,
+   "source": "BỘ TÀI CHÍNH (QUA LSVN 05/01/2021)",
+   "ref": "LUẬT CŨ · LUẬT 2025 XÉT THEO GIÁ CẢ VÀ THU NHẬP",
+   "snippet": "CPI biến động [[trên 20%]] thì điều chỉnh mức giảm trừ gia cảnh",
+   "hlAt": [
+    14,
+    "hai"
+   ],
+   "seal": "CPI 2013 → 2020: +22%",
+   "sealAt": 15
+  },
+  {
+   "type": "bars",
+   "at": 16,
+   "title": "GIẢM TRỪ BẢN THÂN · QUY VỀ GIÁ 2026 (TRIỆU ĐỒNG)",
+   "unit": "CPI · KÊNH TỰ TÍNH",
+   "items": [
+    {
+     "k": "9 TR · 2013",
+     "v": 13.36,
+     "lbl": "≈ 13,4",
+     "at": [
+      16,
+      "Chín"
+     ]
+    },
+    {
+     "k": "11 TR · 2020",
+     "v": 13.35,
+     "lbl": "≈ 13,4",
+     "at": [
+      17,
+      "Mười"
+     ]
+    },
+    {
+     "k": "15,5 TR · 2026",
+     "v": 15.5,
+     "lbl": "15,5",
+     "at": 19,
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "CPI BÌNH QUÂN NĂM: WORLD BANK WDI (TỪ SỐ LIỆU CỤC THỐNG KÊ) · 2026 GIẢ ĐỊNH +4,52%",
+    "v": "",
+    "at": 16
+   }
+  },
+  {
+   "type": "question",
+   "at": 20,
+   "text": "Lương bao nhiêu thì\nbắt đầu phải nộp thuế?"
+  },
+  {
+   "type": "bars",
+   "at": 21,
+   "title": "LƯƠNG GỘP BẮT ĐẦU NỘP THUẾ",
+   "unit": "TRIỆU/THÁNG",
+   "items": [
+    {
+     "k": "0 NGƯỜI · 2026",
+     "v": 17.32,
+     "lbl": "≈ 17,3",
+     "at": [
+      21,
+      "mười"
+     ],
+     "acc": true
+    },
+    {
+     "k": "1 NGƯỜI · 2026",
+     "v": 24.25,
+     "lbl": "≈ 24,3",
+     "at": 22,
+     "acc": true
+    },
+    {
+     "k": "2 NGƯỜI · 2026",
+     "v": 31.17,
+     "lbl": "≈ 31,2",
+     "at": 23,
+     "acc": true
+    },
+    {
+     "k": "0 / 1 / 2 · 2025",
+     "v": 12.29,
+     "lbl": "12,3 · 17,2 · 22,1",
+     "at": 24
+    }
+   ],
+   "label": {
+    "k": "GIẢ ĐỊNH ĐÓNG BẢO HIỂM 10,5% TRÊN TOÀN BỘ LƯƠNG · KÊNH TỰ TÍNH",
+    "v": "",
+    "at": 21
+   }
+  },
+  {
+   "type": "counter",
+   "at": 25,
+   "from": 9.2,
+   "to": 9.2,
+   "suffix": " TRIỆU",
+   "label": "THU NHẬP BÌNH QUÂN THÁNG · QUÝ III/2026",
+   "sub": {
+    "text": "CỤC THỐNG KÊ · THẤP HƠN NGƯỠNG THẤP NHẤT",
+    "at": 26
+   }
+  },
+  {
+   "type": "broll",
+   "at": 27,
+   "vid": "5615174",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MƯỜI HAI THÁNG KHÔNG GIỐNG NHAU",
+     "at": 27,
+     "sm": true
+    },
+    {
+     "text": "THÁNG CÓ THƯỞNG TẾT",
+     "at": 29,
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHẶNG 03",
+  "t": "BA TỜ PHIẾU LƯƠNG"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

@@ -1,0 +1,230 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-la-via-to-dat-ma",
+ "format": "lich-am",
+ "hook_type": "dem-nguoc",
+ "open_shot": "nen-huong",
+ "voice": "Thục Đoan",
+ "music": "frost_waltz.mp3",
+ "music_gain": 0.18,
+ "gap": 0.15,
+ "special_date": true,
+ "series": "14 ngày biết ơn · Ngày 5",
+ "title": "Còn 10 ngày tới Rằm tháng 10 · vía Tổ Đạt Ma · biết ơn ngày 5",
+ "kicker": "14 NGÀY BIẾT ƠN · NGÀY 5",
+ "sub": "5/10 ÂM · VÍA TỔ ĐẠT MA",
+ "acc": [
+  "ơn",
+  "tâm",
+  "tên"
+ ],
+ "ambience": {
+  "hits": [
+   {
+    "at": 0.1,
+    "kind": "bell",
+    "gain": 0.8
+   }
+  ]
+ },
+ "lines": [
+  "Mười ngày nữa là Rằm tháng Mười.",
+  "Hôm nay mùng năm tháng mười âm, ngày vía Tổ Đạt Ma.",
+  "Thử thách biết ơn đã tới ngày thứ năm.",
+  "Theo truyền thống, Tổ là vị Tổ đầu tiên của Thiền tông Trung Hoa.",
+  "Tinh thần Thiền: nhìn thẳng vào tâm mình.",
+  "Thật ra, biết ơn cũng là nhìn thẳng: thấy rõ ai đã giúp mình.",
+  "Ngày năm: cảm ơn một người hay bị quên. Như bác bảo vệ, cô lao công.",
+  "Ngày năm, bạn cảm ơn ai? Comment một cái tên."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:37550147",
+   "items": [
+    {
+     "text": "CÒN 10 NGÀY → RẰM",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "14 ngày biết ơn · ngày 5",
+     "at": [
+      0,
+      "rằm"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "13.11.2026",
+   "day": "THỨ SÁU",
+   "sub": {
+    "text": "5/10 ÂM · VÍA TỔ ĐẠT MA",
+    "at": [
+     1,
+     "vía"
+    ]
+   }
+  },
+  {
+   "type": "hf_unit_grid",
+   "at": 2,
+   "title": "14 NGÀY BIẾT ƠN",
+   "total": 14,
+   "cols": 7,
+   "glyph": "🙏",
+   "lit": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "litAt": [
+    2,
+    "năm."
+   ],
+   "unitLabel": "hôm nay: ngày 5"
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "veil": 0.4,
+   "clip": "pexels:8711383",
+   "items": [
+    {
+     "text": "TỔ THỨ NHẤT",
+     "at": [
+      3,
+      "tổ",
+      1
+     ],
+     "acc": true
+    },
+    {
+     "text": "Thiền tông Trung Hoa",
+     "at": [
+      3,
+      "thiền"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Tinh thần Thiền",
+   "nodes": [
+    {
+     "text": "NHÌN THẲNG",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      4,
+      "nhìn"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "VÀO TÂM MÌNH",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      4,
+      "tâm"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "BODHIDHARMA · WIKIPEDIA"
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "BIẾT ƠN = NHÌN THẲNG",
+   "cards": [
+    {
+     "k": "THẤY RÕ",
+     "v": "AI ĐÃ GIÚP MÌNH",
+     "at": [
+      5,
+      "thấy"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "hf_list_build",
+   "at": 6,
+   "title": "NGÀY 5 · NGƯỜI HAY BỊ QUÊN",
+   "items": [
+    {
+     "key": "1",
+     "text": "BÁC BẢO VỆ",
+     "at": [
+      6,
+      "bác"
+     ]
+    },
+    {
+     "key": "2",
+     "text": "CÔ LAO CÔNG",
+     "at": [
+      6,
+      "cô"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "veil": 0.4,
+   "clip": "pexels:38470504",
+   "items": [
+    {
+     "text": "BẠN CẢM ƠN AI?",
+     "at": [
+      7,
+      "bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "comment một cái tên",
+     "at": [
+      7,
+      "comment"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://tapchinghiencuuphathoc.vn/cac-ngay-via-phat-bo-tat.html",
+  "https://en.wikipedia.org/wiki/Bodhidharma",
+  "https://giacngo.vn/gia-tri-tam-linh-cua-le-hoi-ram-thang-muoi-post6635.html"
+ ],
+ "description": "Còn 10 ngày tới Rằm tháng 10 · vía Tổ Đạt Ma · biết ơn ngày 5\n\nNguồn: https://tapchinghiencuuphathoc.vn/cac-ngay-via-phat-bo-tat.html · https://en.wikipedia.org/wiki/Bodhidharma · https://giacngo.vn/gia-tri-tam-linh-cua-le-hoi-ram-thang-muoi-post6635.html"
+}

@@ -1,0 +1,2830 @@
+Reading additional input from stdin...
+OpenAI Codex v0.164.0
+--------
+workdir: D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+model: gpt-5.6-terra
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR] (network access enabled)
+reasoning effort: medium
+reasoning summaries: none
+session id: 01a17b81-3776-7703-b4e4-7d58dc738a45
+--------
+user
+Làm ticket docs/pm/tickets/2026-10-27-ck-lo-1811/W1-6b-sua-i1.md từ đầu đến cuối. Tuân thủ AGENTS.md (đã nạp sẵn), nhất là 'Cấm tuyệt đối' và 'chỉ đọc đúng các file ticket chỉ định, không khám phá repo'. Trước khi báo xong phải chạy `python scripts/long_gate.py ck-i1-100-trieu-tiet-kiem-hay-vnindex --min-syl 1900` và nó phải in ĐẠT (trừ khi ticket nói là ticket nghiên cứu). Viết báo cáo vào file kết quả mà ticket chỉ định. Tiếng Việt.
+codex
+Mình sẽ làm đúng ticket, trước hết đọc ticket và hai tài liệu long bắt buộc; sau đó chỉ mở các file mẫu được ticket chỉ định.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw 'docs/pm/tickets/2026-10-27-ck-lo-1811/W1-6b-sua-i1.md'; \""'`n---LONG-RULES---`n"; Get-Content -Raw '"'docs/codex/long-rules.md'; \""'`n---CHEATSHEET---`n"; Get-Content -Raw '"'docs/codex/long-cheatsheet.md'" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 229ms:
+# W1-6b â€” Sá»¬A `ck-i1-100-trieu-tiet-kiem-hay-vnindex`: Ä‘Æ°a Ä‘Æ°á»ng tiáº¿t kiá»‡m vÃ o
+
+Äá»c:
+- `00-CHUNG-W1.md` vÃ  `00-CHUNG-W1c.md` (luáº­t giá»¯ nguyÃªn);
+- `W1-6-ket-qua.md`, `R6-ket-qua.md`;
+- `script.md`, `facts.md`, `analysis.py`, `check.py` cá»§a bÃ i.
+
+MÃ£ bÃ¡o cÃ¡o: `W1-6b`.
+
+**Lá»—i cháº·n:** ká»‹ch báº£n Ä‘ang nÃ³i trÃªn sÃ³ng ráº±ng "chÆ°a cÃ³ dá»¯ liá»‡u", "chÆ°a xáº¿p háº¡ng tiáº¿t kiá»‡m". KhÃ´ng Ä‘Äƒng Ä‘Æ°á»£c. Video pháº£i tráº£ lá»i cÃ¢u há»i trung tÃ¢m.
+
+## CÃ¡ch tÃ­nh tiáº¿t kiá»‡m (Claude chá»‘t)
+
+- Kho chá»‰ cÃ³ cÃ¡c **má»‘c quan sÃ¡t** lÃ£i 12 thÃ¡ng: 6,55% (Ä‘áº§u 2018); 6,0â€“6,5% (2020); 5,4â€“6,8% (07/2021); 5,6â€“7,4% (cuá»‘i 2022); 5,13% (12/2023); 4,9% (01/2024); 5,2% (12/2025). CÃ¡c má»‘c nÃ y náº±m trong khoáº£ng **5â€“7%/nÄƒm**.
+- DÃ¹ng **3 ká»‹ch báº£n lÃ£i cá»‘ Ä‘á»‹nh**: **5%, 6% vÃ  7%/nÄƒm**, gá»­i 12 thÃ¡ng, cuá»™n má»—i nÄƒm, tá»« 09/04/2018 tá»›i 06/10/2026. Pháº§n nÄƒm láº» tÃ­nh lÃ£i theo tá»‰ lá»‡ thá»i gian.
+- **ÄÆ°á»ng chÃ­nh 6%.** Hai Ä‘Æ°á»ng 5% vÃ  7% lÃ  dáº£i má» hai bÃªn.
+- Ghi rÃµ **VÃ Dá»¤ GIáº¢ Äá»ŠNH**: lÃ£i cá»‘ Ä‘á»‹nh trong khoáº£ng Ä‘Ã£ quan sÃ¡t, khÃ´ng pháº£i lÃ£i tháº­t cá»§a má»™t ngÃ¢n hÃ ng nÃ o.
+- LÃ£i tiáº¿t kiá»‡m khÃ´ng cÃ³ thuáº¿ thu nháº­p; khÃ´ng cáº§n nÃ³i thÃªm.
+
+## Sá»­a
+
+1. **`analysis.py`:**
+   - thÃªm 3 ká»‹ch báº£n tiáº¿t kiá»‡m;
+   - xuáº¥t chuá»—i **cuá»‘i má»—i thÃ¡ng** tá»« 04/2018 tá»›i 10/2026 cho cáº£ 3 cÃ¡ch: `tiet_kiem_6`, `tiet_kiem_5`, `tiet_kiem_7`, `mot_lan`, `mua_deu`;
+   - ghi `results.json` á»Ÿ dáº¡ng dÃ¹ng tháº³ng Ä‘Æ°á»£c cho `race` (`dates` = nhÃ£n thÃ¡ng, `vals`).
+
+   `check.py` tÃ­nh láº¡i giÃ¡ trá»‹ cuá»‘i cá»§a tiáº¿t kiá»‡m báº±ng cÃ´ng thá»©c Ä‘Ã³ng.
+2. **`script.md`:**
+   - **xoÃ¡ má»i cÃ¢u kiá»ƒu "chÆ°a cÃ³ dá»¯ liá»‡u / chÆ°a xáº¿p háº¡ng / thiáº¿u chuá»—i"**;
+   - Ä‘Æ°a káº¿t quáº£ 3 cÃ¡ch vÃ o. Thá»© tá»± giÃ¡ trá»‹ cuá»‘i theo sá»‘ tÃ­nh Ä‘Æ°á»£c, vÃ­ dá»¥ mua Ä‘á»u â‰ˆ 181 triá»‡u, tiáº¿t kiá»‡m 6% â‰ˆ 164 triá»‡u, má»™t láº§n â‰ˆ 145 triá»‡u;
+   - nÃ³i rÃµ nghá»‹ch lÃ½: mua Ä‘Ãºng Ä‘á»‰nh váº«n cÃ³ lÃ£i nhÆ°ng thua tiáº¿t kiá»‡m, cÃ²n mua Ä‘á»u tháº¯ng mÃ  tá»«ng Ã¢m khoáº£ng 32%;
+   - CH05 Ä‘á»•i thÃ nh "tiáº¿t kiá»‡m: tháº¯ng á»Ÿ Ä‘Ã¢u, thua á»Ÿ Ä‘Ã¢u". NÃ³i khoáº£ng 5â€“7% Ä‘Ã£ quan sÃ¡t, vÃ  náº¿u lÃ£i chá»‰ 5% thÃ¬ thá»© háº¡ng Ä‘á»•i tháº¿ nÃ o;
+   - giá»¯ giá»›i háº¡n backtest á»Ÿ chÆ°Æ¡ng cuá»‘i: khÃ´ng cá»• tá»©c, phÃ­ vÃ  thuáº¿, quÃ¡ khá»© khÃ´ng pháº£i dá»± bÃ¡o;
+   - 1.900â€“2.500 Ã¢m tiáº¿t;
+   - cáº­p nháº­t báº£ng "Biá»ƒu Ä‘á»“" vÃ  "BÆ°á»›c láº­p luáº­n".
+3. **`factcheck.md`:** cáº­p nháº­t theo cÃ¡c cÃ¢u má»›i.
+
+## Cá»•ng
+
+- `analysis.py` â†’ `check.py` `OK`;
+- `script_lines.py`;
+- `studio_lint.py --strict` â†’ 0 lá»—i.
+
+
+---LONG-RULES---
+
+# Luáº­t Long cho agent sáº£n xuáº¥t (chi tiáº¿t, chuyá»ƒn tá»« AGENTS.md ngÃ y 26/10/2026)
+
+Äá»c cÃ¹ng `docs/codex/long-cheatsheet.md`.
+
+### áº¢nh AI khi khÃ´ng cÃ³ áº£nh tá»± do (tá»« 26/10/2026)
+
+Cáº£nh cáº§n minh hoáº¡ mÃ  khÃ´ng cÃ³ áº£nh PD/CC0/CC BY (vÃ­ dá»¥ cáº£nh trong phÃ²ng lÃ m viá»‡c nÄƒm 1962, hay má»™t váº­t Ä‘Ã£ máº¥t) thÃ¬ **khÃ´ng tá»± táº¡o áº£nh**. Ghi prompt vÃ o `data/long/<topic>/ai_prompts.md` Ä‘á»ƒ chá»§ kÃªnh nhá» bot táº¡o.
+
+**Äá»‹nh dáº¡ng má»™t má»¥c:**
+
+```
+#### ai_01.png â€” <cáº£nh dÃ¹ng á»Ÿ chNN, cÃ¢u sá»‘ N>
+- Prompt (tiáº¿ng Anh): <mÃ´ táº£ chi tiáº¿t: bá»‘i cáº£nh, thá»i ká»³, Ã¡nh sÃ¡ng, bá»‘ cá»¥c, phong cÃ¡ch>
+- Khung: 16:9, 1920x1080
+- Cáº¥m: chá»¯ hoáº·c sá»‘ trong áº£nh, logo, khuÃ´n máº·t nháº­n ra Ä‘Æ°á»£c cá»§a ngÆ°á»i tháº­t
+- Phong cÃ¡ch: <vÃ­ dá»¥ "painterly editorial illustration, muted 1960s palette">
+```
+
+**Quy táº¯c:**
+- **NgÆ°á»i tháº­t: láº¥y dÃ¡ng gá»‘c, khÃ´ng váº½ máº·t** (chá»§ kÃªnh, 26/10/2026):
+  - ÄÆ°á»£c váº½ ngÆ°á»i cÃ³ tháº­t (Johnson, Glennâ€¦) theo **dÃ¡ng gá»‘c** trong áº£nh tÆ° liá»‡u: vÃ³c ngÆ°á»i, kiá»ƒu tÃ³c, trang phá»¥c, Ä‘á»“ váº­t, bá»‘i cáº£nh Ä‘Ãºng thá»i ká»³.
+  - Chá»‰ váº½ á»Ÿ **gÃ³c nghiÃªng quay Ä‘i hoáº·c tá»« phÃ­a sau**, khÃ´ng tháº¥y rÃµ máº·t.
+  - Trong prompt, ghi áº£nh tÆ° liá»‡u tham chiáº¿u (URL Commons/NASA trong `facts.md`) vÃ  mÃ´ táº£ dÃ¡ng cá»¥ thá»ƒ. VÃ­ dá»¥: "woman in 1960s cat-eye glasses and cardigan, seen from behind at a desk with mechanical calculator".
+  - Máº·t ngÆ°á»i tháº­t chá»‰ dÃ¹ng áº£nh tÆ° liá»‡u PD.
+- **Phong cÃ¡ch:** minh hoáº¡ hoáº·c tranh váº½, **khÃ´ng giáº£ áº£nh tÆ° liá»‡u**, Ä‘á»ƒ ngÆ°á»i xem khÃ´ng nháº§m lÃ  tÆ° liá»‡u tháº­t.
+- **KhÃ´ng gáº¯n nhÃ£n AI:** khÃ´ng thÃªm nhÃ£n "AI" trÃªn mÃ n hÃ¬nh hay trong mÃ´ táº£, vÃ¬ báº£n thÃ¢n áº£nh Ä‘Ã£ cÃ³ chá»¯ kÃ½ AI (chá»§ kÃªnh quyáº¿t Ä‘á»‹nh ngÃ y 26/10/2026).
+- **ÄÆ°á»ng dáº«n:**
+  - Chá»§ kÃªnh tháº£ áº£nh vÃ o `motion/hf/assets/long/<topic>/img/ai/ai_NN.png`.
+  - Engine chá»‰ Ä‘á»c `output/long/<topic>/img/aiNN.jpg` kÃ¨m `.json`. Claude cháº¡y `python scripts/ai_img_import.py <topic>` Ä‘á»ƒ chÃ©p áº£nh sang chá»— Ä‘Ã³.
+  - Tá»« 26/10, Claude cháº¡y `python scripts/ai_img_request.py <topic>`. Lá»‡nh nÃ y gá»­i `ai_prompts.md` cho bot táº¡o áº£nh qua webhook (khoÃ¡ Ä‘á»c tá»« registry User, xem `docs/tools/grokbot-webhook.md`), chá» áº£nh vá» rá»“i cháº¡y `ai_img_import`. **Agent sáº£n xuáº¥t khÃ´ng gá»i webhook**: chá»‰ viáº¿t prompt.
+  - Trong `IMGS`, khai key `aiNN` lÃ  `"EXT:ai:ai_NN"`.
+- **Ghi cÃ´ng:** cáº£nh dÃ¹ng áº£nh AI pháº£i cÃ³ `"credit": false`. Náº¿u thiáº¿u, engine in "áº¢NH: TÆ¯ LIá»†U Â· PHáº M VI CÃ”NG Cá»˜NG", tá»©c lÃ  gáº¯n nhÃ£n tÆ° liá»‡u cho tranh minh hoáº¡, sai sá»± tháº­t. NhÃ£n `illus` "áº¢NH MINH Há»ŒA" thÃ¬ giá»¯, vÃ¬ Ä‘Ã³ lÃ  nhÃ£n chuáº©n cho tranh minh hoáº¡.
+- **Khi chÆ°a cÃ³ áº£nh:** giá»¯ nguyÃªn cáº£nh vÃ  Ä‘Æ°á»ng dáº«n, rá»“i ghi trong bÃ¡o cÃ¡o "chá» N áº£nh AI". `html` hoáº·c `long_gate` cÃ³ thá»ƒ bÃ¡o thiáº¿u file; Ä‘iá»u Ä‘Ã³ cháº¥p nháº­n Ä‘Æ°á»£c cho tá»›i khi áº£nh vá».
+- **Giá»›i háº¡n:** tá»‘i Ä‘a 6 áº£nh AI cho má»™t bÃ i 9â€“11 phÃºt. Æ¯u tiÃªn áº£nh tÆ° liá»‡u tháº­t.
+
+### Quy trÃ¬nh Long (theo máº«u `data/long/mim-ke-huy-diet-petrov`, `mim-google-maps-kal007`)
+
+Äá»c trÆ°á»›c:
+- `motion/long/README.md`, `RETENTION.md`, `SOURCES.md`;
+- `docs/pm/2026-10-23-mim-long-moi.md`;
+- `docs/pm/so-that-bai.md`.
+
+CÃ¡c bÆ°á»›c:
+1. Viáº¿t `script.md` vÃ  `factcheck.md` (nguá»“n lÃ  URL Ä‘Ã£ má»Ÿ).
+2. Cháº¡y `python motion/long/script_lines.py <topic>`; pháº£i qua cá»•ng integrity.
+3. Viáº¿t `gen_scenes.py`, rá»“i cháº¡y `python data/long/<topic>/gen_scenes.py`, ra `spec.json` vÃ  `chNN.json`. Counter cÃ³ sá»‘ 1000â€“2100 pháº£i khai `"year": true|false`.
+4. Cháº¡y `python motion/long/studio_lint.py <topic> --strict`; pháº£i ra 0 lá»—i.
+5. Cháº¡y `python motion/long/build_long.py <topic> tts`, rá»“i `... html`. Sá»­a má»i lá»—i lint mÃ  `html` bÃ¡o.
+6. Cháº¡y `python motion/long/clip_sheet.py <topic>`, xem áº£nh clip sheet; clip sai nghÄ©a hoáº·c lá»™ logo thÃ¬ thay.
+7. Chá»‰ render khi ticket cho phÃ©p: `build_long.py <topic> render`, rá»“i `final`.
+8. Dá»±ng thumbnail `motion/long/thumbs/<topic>_t1.html`, rá»“i cháº¡y `python motion/long/thumb.py <topic> t1`.
+
+### Cá»•ng cháº¥t lÆ°á»£ng (báº¯t buá»™c, tá»« 26/10/2026)
+
+CÃ¡c cá»•ng lint chá»‰ lÃ  má»©c sÃ n ká»¹ thuáº­t. TrÆ°á»›c khi bÃ¡o xong má»™t Long, pháº£i cháº¡y:
+
+```
+python scripts/long_gate.py <topic> --min-syl 1900
+```
+
+Lá»‡nh pháº£i in **Äáº T**. CÃ¡c ngÆ°á»¡ng Ä‘Æ°á»£c Ä‘o trÃªn bÃ i máº«u Petrov vÃ  KAL 007:
+
+| NgÆ°á»¡ng | GiÃ¡ trá»‹ |
+|---|---|
+| Ã‚m tiáº¿t lá»i Ä‘á»c | â‰¥ 1.900 (â‰ˆ 9 phÃºt) |
+| Thá»i lÆ°á»£ng má»—i cáº£nh | â‰¤ 9 giÃ¢y |
+| Loáº¡i cáº£nh má»—i chÆ°Æ¡ng | â‰¥ 5 |
+| Má»™t clip dÃ¹ng láº¡i (bÃ i 9â€“12 phÃºt) | â‰¤ 2 láº§n |
+| Má»™t áº£nh dÃ¹ng láº¡i | â‰¤ 3 láº§n |
+| URL nguá»“n trong `factcheck.md` | â‰¥ 8 |
+| TiÃªu Ä‘á» | â‰¤ 60 kÃ½ tá»± |
+
+NgoÃ i ra: má»i nÄƒm trong ká»‹ch báº£n pháº£i cÃ³ trong `factcheck.md`, vÃ  khÃ´ng Ä‘Æ°á»£c cÃ³ cÃ¢u Ä‘á»‡m.
+
+**BÃ i máº«u Ä‘á»ƒ so:**
+- Petrov: 22,5 phÃºt; 179 cáº£nh (7,6 giÃ¢y/cáº£nh); Ã­t nháº¥t 7 loáº¡i cáº£nh má»—i chÆ°Æ¡ng; 15 áº£nh khÃ¡c nhau.
+- KAL 007: 10,5 phÃºt; 82 cáº£nh (7,7 giÃ¢y/cáº£nh); khÃ´ng dÃ¹ng clip, chá»‰ áº£nh vÃ  Ä‘á»“ hoáº¡ (báº£n Ä‘á»“, timeline, counter).
+
+Má»—i chÆ°Æ¡ng cá»§a hai bÃ i nÃ y cÃ³ 3â€“4 dá»¯ kiá»‡n cá»¥ thá»ƒ cÃ³ nguá»“n.
+
+### Lá»—i Ä‘Ã£ gáº·p (Ä‘á»«ng láº·p láº¡i)
+
+Thá»­ nghiá»‡m Codex T1/T1b, 26/10/2026:
+
+1. **ChÃ¨n cÃ¢u Ä‘á»‡m rá»—ng nghÄ©a cho qua tá»‰ lá»‡ cÃ¢u ngáº¯n cá»§a lint.** VÃ­ dá»¥: "Ráº¥t cháº­m.", "ÄÃ³ lÃ  cÃ¢u há»i khÃ³.". CÃ¢u ngáº¯n chá»‰ Ä‘áº·t sau má»™t phÃ¡n Ä‘á»‹nh hoáº·c khoáº£nh kháº¯c cáº£m xÃºc.
+2. **Bá»‹ yÃªu cáº§u bá» cÃ¢u Ä‘á»‡m thÃ¬ chá»‰ xoÃ¡, khÃ´ng viáº¿t ná»™i dung thay.** BÃ i tá»¥t tá»« 9 xuá»‘ng 5 phÃºt. Thiáº¿u Ä‘á»™ dÃ i thÃ¬ pháº£i **tÃ¬m thÃªm dá»¯ kiá»‡n cÃ³ nguá»“n**, khÃ´ng Ä‘Æ°á»£c Ä‘á»ƒ bÃ i ngáº¯n Ä‘i.
+3. **Äá»c má»™t ngÃ y cá»¥ thá»ƒ (18/3/1940) trong khi chÃ­nh `factcheck.md` ghi lÃ  chÆ°a chá»‘t Ä‘Æ°á»£c.**
+4. **Má»™t clip láº·p 8 láº§n; 9 phÃºt chá»‰ cÃ³ 18 cáº£nh vÃ  toÃ n chá»¯.**
+5. **Cold open liá»‡t kÃª tÃªn ngÆ°á»i thay vÃ¬ dá»±ng má»™t cáº£nh cÃ³ cÄƒng tháº³ng; cÃ¢u meta "HÃ´m nay mÃ¬nh khÃ´ng ká»ƒâ€¦".**
+6. **Coi viá»‡c qua lint lÃ  xong.** Xong nghÄ©a lÃ  `long_gate.py` in Äáº T **vÃ ** ná»™i dung Ä‘Ã¡ng xem.
+7. **Tháº» chÆ°Æ¡ng ghi sai trÆ°á»ng.** ÄÃ£ ghi `"number": "05"` thay cho `no`/`k`, nÃªn engine hiá»‡n chá»¯ "undefined" giá»¯a mÃ n hÃ¬nh á»Ÿ cáº£ 8 chÆ°Æ¡ng. Tháº» chÆ°Æ¡ng Ä‘Ãºng (theo `mim-ke-huy-diet-petrov/ch05.json`):
+
+   ```json
+   {"type":"chapter","no":"5","k":"CHÆ¯Æ NG NÄ‚M","title":"â€¦","sub":"<má»‘c>","bg":"<áº£nh>","titleAt":[0,"<tá»«>"]}
+   ```
+
+   Má»—i `chNN.json` cÅ©ng pháº£i cÃ³ `"hud": {"k": "CHÆ¯Æ NG 05", "t": "<TIÃŠU Äá»€>"}`. Thiáº¿u `hud` thÃ¬ `describe.py` cháº¿t vÃ  mÃ´ táº£ khÃ´ng cÃ³ danh sÃ¡ch chÆ°Æ¡ng.
+8. **Má»™t khuÃ´n cáº£nh cho má»i chÆ°Æ¡ng.** Má»™t khuÃ´n 9 cáº£nh Ä‘Æ°á»£c dÃ¹ng láº¡i á»Ÿ cáº£ 8 chÆ°Æ¡ng, nÃªn cÃ¹ng má»™t dÃ²ng chá»¯ hiá»‡n 8 láº§n. Má»—i cáº£nh pháº£i minh hoáº¡ Ä‘Ãºng cÃ¢u Ä‘ang Ä‘á»c, vÃ  chá»¯ trÃªn mÃ n hÃ¬nh láº¥y tá»« dá»¯ kiá»‡n cá»§a chÃ­nh chÆ°Æ¡ng Ä‘Ã³. MÃ´-tÃ­p láº·p chá»‰ Ä‘Æ°á»£c lÃ m báº±ng `ledger` cÃ³ tiÃªu Ä‘á» cá»‘ Ä‘á»‹nh, má»—i chÆ°Æ¡ng thÃªm má»™t dÃ²ng má»›i.
+9. **QuÃªn báº£ng `SAY` vÃ  Ä‘á»ƒ `spec.youtube` trá»‘ng.** Pháº£i viáº¿t ngay tá»« Ä‘áº§u, theo máº«u Petrov vÃ  KAL:
+   - `SAY` phiÃªn Ã¢m má»i tÃªn nÆ°á»›c ngoÃ i, viáº¿t táº¯t (TNMOC, NASAâ€¦) vÃ  sá»‘ ráº¥t lá»›n.
+   - `spec.youtube` gá»“m: `publish_at`, `playlist`, `category`, `thumb`, `summary`, `more`, `chapter_titles`, `sources` (â‰¥ 8 URL cÃ´ng khai), `tags`, `hashtags`, `video_credits`.
+
+**NghiÃªn cá»©u trÆ°á»›c, viáº¿t sau:** khi ticket chia Ä‘Ã´i, ticket nghiÃªn cá»©u chá»‰ gom kho dá»¯ kiá»‡n cÃ³ URL (`facts.md`). Ticket viáº¿t chá»‰ dÃ¹ng dá»¯ kiá»‡n trong kho Ä‘Ã³.
+
+
+## Chiáº¿n lÆ°á»£c Long 45 ngÃ y (chá»§ kÃªnh, 27/10/2026), Ã¡p cho MIM vÃ  CK
+
+ToÃ n vÄƒn á»Ÿ `docs/pm/2026-10-27-chien-luoc-long-45-ngay.md`.
+
+- **Äá»™ dÃ i:** máº·c Ä‘á»‹nh 10â€“15 phÃºt (2.100â€“3.200 Ã¢m tiáº¿t). Chá»‰ lÃ m 20â€“30 phÃºt khi chá»§ Ä‘á» Ä‘á»§ ná»™i dung. KhÃ´ng Ä‘á»™n, khÃ´ng láº·p lá»i dáº«n.
+- **Má»™t cÃ¢u há»i trung tÃ¢m má»—i bÃ i**, ghi á»Ÿ Ä‘áº§u `script.md`. ChÆ°Æ¡ng cuá»‘i tráº£ lá»i Ä‘Ãºng cÃ¢u Ä‘Ã³.
+- **Má»‘c cáº¥u trÃºc:**
+  - 0â€“30 giÃ¢y: hook, tá»©c tÃ¬nh huá»‘ng, bÃ­ áº©n hoáº·c mÃ¢u thuáº«n. KhÃ´ng má»Ÿ báº±ng Ä‘á»‹nh nghÄ©a hay lá»‹ch sá»­.
+  - 30 giÃ¢y Ä‘áº¿n 2 phÃºt: bá»‘i cáº£nh, vÃ  vÃ¬ sao ngÆ°á»i xem nÃªn quan tÃ¢m.
+  - Cá»© 3â€“5 phÃºt cÃ³ má»™t **bÆ°á»›c tiáº¿n láº­p luáº­n**: báº±ng chá»©ng má»›i, gÃ³c nhÃ¬n Ä‘á»‘i láº­p, pháº£n biá»‡n hoáº·c há»‡ quáº£. Ghi cÃ¡c bÆ°á»›c nÃ y vÃ o báº£ng "BÆ°á»›c láº­p luáº­n" Ä‘áº§u `script.md`.
+  - Pháº§n káº¿t: tráº£ lá»i, tá»•ng há»£p, vÃ  Ä‘iá»u ngÆ°á»i xem rÃºt ra Ä‘Æ°á»£c.
+- **5 cÃ¢u trÆ°á»›c khi viáº¿t** (ghi vÃ o Ä‘áº§u `script.md`):
+  1. NgÆ°á»i xem lÃ  ai?
+  2. Há» tÃ² mÃ² hay lo Ä‘iá»u gÃ¬?
+  3. VÃ¬ sao chá»n video nÃ y trÃªn Home?
+  4. Thumbnail truyá»n má»™t Ã½ nÃ o?
+  5. TiÃªu Ä‘á» khá»›p vá»›i 30 giÃ¢y Ä‘áº§u tháº¿ nÃ o?
+- **TiÃªu Ä‘á»:** khÃ´ng Ä‘áº·t nhÆ° tÃªn bÃ i há»c hay bÃ¡o cÃ¡o, khÃ´ng liá»‡t kÃª. DÃ¹ng cÃ¢u há»i, nghá»‹ch lÃ½, há»‡ quáº£, nhÆ°ng khÃ´ng giáº­t tÃ­t sai sá»± tháº­t.
+- **CK:** má»—i bÃ i ghi rÃµ nguá»“n, giai Ä‘oáº¡n, phÆ°Æ¡ng phÃ¡p, giáº£ Ä‘á»‹nh vÃ  giá»›i háº¡n káº¿t luáº­n. KhÃ´ng suy lá»£i nhuáº­n tÆ°Æ¡ng lai tá»« quÃ¡ khá»©.
+
+### Cáº­p nháº­t "Ãp dá»¥ng ngay" (chá»§ kÃªnh, 27/10/2026, sau khi xem CD Media - Why?, Há»c viá»‡n BÃ² vÃ  Gáº¥u, KIáº¾N THá»¨C THÃš Vá»Š, Anh Ba TÃ i ChÃ­nh)
+
+- **Content Brief báº¯t buá»™c trÆ°á»›c khi sáº£n xuáº¥t.** Thiáº¿u brief thÃ¬ khÃ´ng viáº¿t ká»‹ch báº£n. Máº«u: `docs/pm/tickets/2026-10-27-ck-lo-1811/00-CONTENT-BRIEF.md`. Brief gá»“m:
+  - nhu cáº§u ngÆ°á»i xem, cÃ¢u há»i trung tÃ¢m, gÃ³c tiáº¿p cáº­n khÃ¡c biá»‡t;
+  - 3 tiÃªu Ä‘á» vÃ  2 Ã½ thumbnail;
+  - hook 30 giÃ¢y;
+  - cáº¥u trÃºc, nguá»“n dá»¯ liá»‡u, Ä‘á»™ dÃ i Ä‘á» xuáº¥t.
+- **KhÃ´ng má»Ÿ báº±ng nhÃ¢n váº­t giáº£ Ä‘á»‹nh**, kiá»ƒu "Lan vÃ  Minh", "Tuáº¥n vÃ  Khoa". CÅ©ng khÃ´ng má»Ÿ báº±ng Ä‘á»‹nh nghÄ©a hay lá»‹ch sá»­ dÃ i dÃ²ng.
+  - CÃ¢u Ä‘áº§u pháº£i lÃ  má»™t trong ba thá»©: sá»± kiá»‡n cÃ³ tháº­t kÃ¨m ngÃ y, con sá»‘ tháº­t cÃ³ nguá»“n, hoáº·c cÃ¢u há»i tháº­t cá»§a ngÆ°á»i xem.
+  - VÃ­ dá»¥ giáº£ Ä‘á»‹nh chá»‰ vÃ o tá»« CH01 trá»Ÿ Ä‘i, vÃ  nÃ³i rÃµ lÃ  vÃ­ dá»¥.
+- **Cáº¥u trÃºc documentary:** hook â†’ váº¥n Ä‘á» â†’ bá»‘i cáº£nh â†’ báº±ng chá»©ng vÃ  dá»¯ liá»‡u â†’ nghá»‹ch lÃ½ hoáº·c bÆ°á»›c ngoáº·t â†’ phÃ¢n tÃ­ch â†’ káº¿t luáº­n. KhÃ´ng cháº¡y slide chá»¯ liÃªn tá»¥c.
+- **Thumbnail:**
+  - 3â€“6 chá»¯ lá»›n, má»™t hÃ¬nh hoáº·c má»™t cáº·p Ä‘á»‘i láº­p.
+  - **KhÃ´ng ghi "VÃ Dá»¤ GIáº¢ Äá»ŠNH"** trÃªn thumbnail; giáº£ Ä‘á»‹nh thÃ¬ nÃ³i rÃµ trong video.
+  - KhÃ´ng dÃ¹ng biá»ƒu Ä‘á»“ nhá» nhiá»u chá»¯, khÃ´ng dÃ¹ng hÃ¬nh khÃ´ng liÃªn quan.
+- **áº¢nh:** Æ°u tiÃªn tÆ° liá»‡u tháº­t (sá»± kiá»‡n, nhÃ¢n váº­t) khi cÃ³ quyá»n dÃ¹ng. KhÃ´ng giáº£ lÃ m áº£nh tÆ° liá»‡u: áº£nh AI luÃ´n mang nhÃ£n áº¢NH MINH Há»ŒA.
+- **Äá»™ dÃ i thá»­ nghiá»‡m:** MIM 10â€“15 phÃºt, CK 8â€“13 phÃºt. Chá»‰ lÃ m 20â€“30 phÃºt khi chá»§ Ä‘á» tháº­t sá»± cáº§n.
+
+
+---CHEATSHEET---
+
+# Cheatsheet dá»±ng Long MIM (cho Codex, Ä‘á»c thay engine)
+
+**KhÃ´ng Ä‘á»c** `motion/long/build_long.py`, `motion/hf/assets/engine/*`, `motion/stier/*`, `factory/*`, `pexels.py` hay thÆ° má»¥c cá»§a bÃ i khÃ¡c. Má»i thá»© cáº§n biáº¿t Ä‘á»u cÃ³ trong cheatsheet nÃ y vÃ  trong **má»™t file máº«u**:
+
+> `data/long/mim-katherine-johnson/gen_scenes.py`. BÃ i nÃ y Ä‘Ã£ qua cá»•ng, render vÃ  Ä‘Äƒng. **ChÃ©p nguyÃªn file nÃ y lÃ m khung.** Giá»¯ cÃ¡c helper á»Ÿ dÃ²ng 57â€“163 vÃ  `main()`. Chá»‰ thay pháº§n ná»™i dung bÃªn dÆ°á»›i.
+
+## Thay nhá»¯ng gÃ¬ trong khung
+
+| Khá»‘i | Thay báº±ng |
+|---|---|
+| `TOPIC`, `TITLE` (â‰¤ 60 kÃ½ tá»±, má»™t dáº¥u `:`) | Cá»§a bÃ i má»›i |
+| `SAY` | PhiÃªn Ã¢m má»i tÃªn nÆ°á»›c ngoÃ i, viáº¿t táº¯t vÃ  sá»‘ lá»›n trong lá»i Ä‘á»c. KhoÃ¡ viáº¿t thÆ°á»ng. VÃ­ dá»¥: `"nasa": "Na-sa"` |
+| `IMGS` | áº¢nh Commons `"File:â€¦"` (Ä‘Ã£ kiá»ƒm PD/CC0/CC BY) hoáº·c `"EXT:ai:ai_NN"` cho áº£nh AI |
+| `AI_PATH`, `STAND` | Sá»‘ áº£nh AI cá»§a bÃ i (â‰¤ 6); `STAND` = áº£nh tÆ° liá»‡u thay táº¡m cho tá»«ng áº£nh AI |
+| `GEO` | Báº£n Ä‘á»“: `countries`, `context`, `bbox [lon_min, lat_min, lon_max, lat_max]`, `pins [{name, lon, lat, label}]` |
+| `CHAPTER_TITLES` | `ch00`â€“`ch07`, tiáº¿ng Viá»‡t cÃ³ dáº¥u |
+| `LEDGER`, `ROWS` | MÃ´-tÃ­p cá»§a bÃ i: má»™t tiÃªu Ä‘á», má»—i chÆ°Æ¡ng thÃªm 1 dÃ²ng |
+| `ch00()`â€“`ch07()` | Cáº£nh cá»§a tá»«ng chÆ°Æ¡ng (má»¥c dÆ°á»›i) |
+| `make_spec()` | Äá»§ 11 trÆ°á»ng `youtube`, Ä‘á»•i `publish_at`; giá»¯ `"say": SAY`, `imgs`, `geo` |
+
+## Helper: chá»¯ kÃ½ vÃ  Ã½ nghÄ©a
+
+**Neo thá»i gian:** `a(line, word)` neo cáº£nh vÃ o cÃ¢u `line` cá»§a chÆ°Æ¡ng, táº¡i tá»« `word`. `word` pháº£i lÃ  chá»¯ **cÃ³ tháº­t trong cÃ¢u Ä‘Ã³**, khÃ´ng pháº£i sá»‘ vÃ  khÃ´ng pháº£i chá»¯ cÃ³ trong `SAY`.
+
+| Helper | DÃ¹ng khi |
+|---|---|
+| `chapter(no, k, title, sub, bg, title_at)` | Cáº£nh Ä‘áº§u má»—i chÆ°Æ¡ng. `k = "CHÆ¯Æ NG Má»˜T"`; `sub` = má»‘c cÃ³ nguá»“n; `bg` = key áº£nh |
+| `photo(img, at, key, value, kin=None)` | áº¢nh tÆ° liá»‡u hoáº·c áº£nh AI. áº¢nh AI tá»± cÃ³ `illus` + `credit: False` |
+| `print_scene(img, at, head, key, value)` | áº¢nh Ä‘áº·t nhÆ° tá» in, cÃ³ cá»™t ghi chÃº |
+| `broll(vid, at, text)` | Clip Pexels (id sá»‘), cÃ³ nhÃ£n VIDEO MINH Há»ŒA |
+| `kinetic(at, text, small=None)` | Chá»¯ lá»›n Ä‘á»™ng |
+| `slam(at, text, sub)` | Má»™t con sá»‘ hoáº·c cá»¥m tá»« Ä‘áº­p máº¡nh |
+| `date(at, day, d, sub)` | Má»‘c ngÃ y lá»›n. `d = "20.02.1962"` (chá»¯ sá»‘ vÃ  dáº¥u cháº¥m); chá»¯ thÃ¬ Ä‘á»ƒ vÃ o `day` |
+| `counter(at, to, suffix, label, frm=0, year=False)` | Sá»‘ Ä‘áº¿m. NÄƒm thÃ¬ `year=True` |
+| `timeline(at, bg, items)` | DÃ²ng thá»i gian (xem cÃ¡ch dÃ¹ng trong máº«u) |
+| `org(at, nodes)` | SÆ¡ Ä‘á»“ ngÆ°á»i hoáº·c tá»• chá»©c |
+| `question(at, text)` | CÃ¢u há»i treo |
+| `ledger(n, at)` | Hiá»‡n mÃ´-tÃ­p tá»›i dÃ²ng `n` |
+| `{"type": "map", "at": â€¦, "geo": "<key GEO>"}` | Báº£n Ä‘á»“; máº«u cÃ³ á»Ÿ `ch01`/`ch05` cá»§a khung |
+
+## Luáº­t cáº£nh (cá»•ng `long_gate.py` sáº½ cháº·n náº¿u sai)
+
+- 60â€“80 cáº£nh, trung bÃ¬nh â‰¤ 9 giÃ¢y/cáº£nh, má»—i chÆ°Æ¡ng â‰¥ 5 loáº¡i cáº£nh.
+- KhÃ´ng dÃ²ng chá»¯ hiá»ƒn thá»‹ nÃ o láº·p > 2 láº§n. MÃ´-tÃ­p chá»‰ qua `ledger`.
+- Má»™t clip dÃ¹ng â‰¤ 2 láº§n, Ã­t nháº¥t 6 clip khÃ¡c nhau. Má»™t áº£nh dÃ¹ng â‰¤ 3 láº§n.
+- Má»—i cáº£nh minh hoáº¡ **cÃ¢u Ä‘ang Ä‘á»c**.
+
+## Clip Pexels
+
+- Táº£i: `python motion/long/pexels.py get <topic> <id> â€¦`. Chá»‰ dÃ¹ng id Ä‘Ã£ ghi trong `facts.md`. Tá»« 26/10/2026 táº£i tháº³ng theo id, khÃ´ng cáº§n `search` trÆ°á»›c.
+  - Lá»‡nh in "khÃ´ng cÃ³ báº£n ngang â‰¤1920 -- bá» qua" nghÄ©a lÃ  clip dá»c. Pháº£i thay báº±ng clip ngang. TÃ¬m báº±ng `pexels.py search <topic> "tá»« khoÃ¡"`, rá»“i `get` id má»›i.
+- SoÃ¡t: `python motion/long/clip_sheet.py <topic>`, má»Ÿ `output/long/<topic>/qa_clips.jpg` xem. Clip lá»™ chá»¯, logo hoáº·c sai nghÄ©a thÃ¬ thay.
+
+## BÃ i há»c Moneyball (26/10/2026)
+
+- **VÃ²ng ká»‹ch báº£n (W1):** pháº£i cháº¡y `script_lines.py` vÃ  `studio_lint.py --strict` rá»“i sá»­a háº¿t lá»—i cÃ¢u > 35 tiáº¿ng **ngay trong W1**. TÃ¡ch cÃ¢u sau khi Ä‘Ã£ dá»±ng cáº£nh thÃ¬ má»i neo phÃ­a sau bá»‹ lá»‡ch, sá»­a ráº¥t tá»‘n.
+- **Neo pháº£i tÄƒng dáº§n.** Cáº£nh sau pháº£i neo vÃ o tá»« Ä‘á»©ng **sau** neo cá»§a cáº£nh trÆ°á»›c, tÃ­nh theo (cÃ¢u, vá»‹ trÃ­ tá»«). Neo ngÆ°á»£c hoáº·c trÃ¹ng thÃ¬ engine bÃ¡o "cáº£nh quÃ¡ ngáº¯n".
+- **KhÃ´ng neo vÃ o chá»¯ sá»‘.** VÃ­ dá»¥ "11" khÃ´ng khá»›p vá»›i "11â€“0".
+- **"Qua html" nghÄ©a lÃ ** in Ä‘á»§ 8 dÃ²ng `chNN: â€¦ -> â€¦html` vÃ  khÃ´ng cÃ³ `Error`. Cháº¡y báº£n `--standin` mÃ  khÃ´ng Ä‘á»c lá»—i thÃ¬ chÆ°a tÃ­nh lÃ  qua.
+
+## BÃ i há»c Social Network vÃ  Moneyball sau render (26/10/2026)
+
+- **Ghim trong cáº£nh `map` pháº£i trÃ¹ng tÃªn ghim trong `GEO`.** VÃ­ dá»¥ `{"name": "Harvard"}` thÃ¬ `GEO` cÅ©ng pháº£i cÃ³ `"name": "Harvard"`. Sai tÃªn thÃ¬ engine lá»—i vÃ  **cáº£ chÆ°Æ¡ng Ä‘á»©ng hÃ¬nh á»Ÿ tháº» chÆ°Æ¡ng** (72 giÃ¢y). `long_gate.py` giá» cháº·n lá»—i nÃ y.
+- **Cáº£nh `question` hay `slam` khÃ´ng Ä‘Æ°á»£c kÃ©o dÃ i.** Cáº£nh káº¿ tiáº¿p pháº£i neo vÃ o cÃ¢u ngay sau, khÃ´ng Ä‘Æ°á»£c Ä‘á»ƒ má»™t tháº» chá»¯ tÄ©nh 20 giÃ¢y. Claude cháº¡y thÃªm `scripts/freeze_check.py` sau render: Ä‘á»©ng hÃ¬nh > 12 giÃ¢y lÃ  trÆ°á»£t.
+
+- **áº¢nh dá»c cÃ³ máº·t ngÆ°á»i** (chÃ¢n dung, áº£nh tháº») khi Ä‘Æ°a vÃ o cáº£nh `photo` hay `chapter` pháº£i cÃ³ `"focus": [0.5, 0.12â€“0.2]`, Ä‘á»ƒ khung 16:9 láº¥y Ä‘Ãºng vÃ¹ng máº·t. Thiáº¿u `focus` thÃ¬ engine cáº¯t giá»¯a áº£nh: bÃ i Macintosh chá»‰ cÃ²n vest vÃ  tay cá»§a Jobs. `long_gate.py` cáº£nh bÃ¡o trÆ°á»ng há»£p nÃ y.
+
+## Thá»© tá»± lá»‡nh
+
+Äáº·t `PYTHONIOENCODING=utf-8` cho má»i lá»‡nh.
+
+1. `python motion/long/script_lines.py <topic>`: Ä‘Æ°a lá»i Ä‘á»c tá»« `script.md` vÃ o `chNN.json`.
+2. `python data/long/<topic>/gen_scenes.py`, rá»“i cháº¡y láº¡i `script_lines.py`. `gen_scenes` ghi Ä‘Ã¨ `chNN.json` khÃ´ng kÃ¨m `lines`.
+3. `python motion/long/studio_lint.py <topic> --strict` pháº£i ra **0 lá»—i**.
+   - CÃ¢u quÃ¡ 35 tiáº¿ng thÃ¬ **tÃ¡ch thÃ nh 2 cÃ¢u** trong `script.md`, giá»¯ nguyÃªn Ã½, ká»ƒ cáº£ khi ká»‹ch báº£n Ä‘Ã£ Ä‘Æ°á»£c duyá»‡t.
+   - TÃ¡ch cÃ¢u xong, kiá»ƒm láº¡i neo `a(line, word)` cá»§a cÃ¡c cÃ¢u phÃ­a sau trong chÆ°Æ¡ng Ä‘Ã³, vÃ¬ sá»‘ thá»© tá»± cÃ¢u Ä‘Ã£ lá»‡ch.
+4. `python motion/long/build_long.py <topic> tts` cho **Ä‘á»§ má»i chÆ°Æ¡ng**: pháº£i cÃ³ `output/long/<topic>/chNN/timing.json` cho tá»«ng chÆ°Æ¡ng. Rá»“i cháº¡y `â€¦ html`. Náº¿u áº£nh AI chÆ°a cÃ³ thÃ¬ cháº¡y `gen_scenes.py --standin` Ä‘á»ƒ soÃ¡t html, sau Ä‘Ã³ cháº¡y láº¡i báº£n tháº­t.
+5. `python scripts/long_gate.py <topic> --min-syl 1900` pháº£i ra **Äáº T**.
+
+## Long CK: cáº£nh biá»ƒu Ä‘á»“ (theme "chart", 27/10/2026)
+
+Khung Ä‘á»ƒ chÃ©p cho CK: `data/long/ck-e6-luong-huu-rut-mot-lan/gen_scenes.py`. LÃ´ tá»« 18/11 pháº£i theo luáº­t trong `docs/pm/2026-10-27-ck-dung-hinh-hap-dan.md`:
+- biá»ƒu Ä‘á»“ tháº­t â‰¥ 35% sá»‘ cáº£nh, tháº» chá»¯ (`kinetic`, `question`, `slam`, `myth`) â‰¤ 25%;
+- khÃ´ng quÃ¡ 2 tháº» chá»¯ liá»n nhau;
+- biá»ƒu Ä‘á»“ Ä‘áº§u tiÃªn neo vÃ o cÃ¢u 1 hoáº·c cÃ¢u 2 cá»§a CH00 (trÆ°á»›c giÃ¢y 15).
+
+Má»i sá»‘ liá»‡u tÃ­nh sáºµn trong `gen_scenes` (láº¥y tá»« `results.json`). Má»‘c `at` lÃ  `a(line, word)` nhÆ° cÃ¡c cáº£nh khÃ¡c.
+
+| Cáº£nh | Chá»¯ kÃ½ | DÃ¹ng khi |
+|---|---|---|
+| `race` + `abs` (Ä‘Æ°á»ng) | `{"type":"race","abs":True,"unit":"TRIá»†U","xlab":"THÃNG ","xstep":1,"dates":[...nhÃ£n...],"title","range","series":[{"label","color","vals":[...]}],"calls":[{"i","s"?,"text","at"}]}` | Sá»‘ theo thÃ¡ng/nÄƒm. `calls` = khoanh Ä‘iá»ƒm thá»© `i` Ä‘ang Ä‘á»c |
+| `waterfall` (thÃ¡c) | `{"type":"waterfall","title","range","unit","start":{"k","v","at"},"steps":[{"k","v":-16,"at"}],"end":{"k","at"},"calls":[{"i","text","at"}]}` | Tá»•ng bá»‹ trá»«/cá»™ng dáº§n. `i`: 0 = cá»™t Ä‘áº§u, 1..n = bÆ°á»›c, n+1 = cá»™t cuá»‘i |
+| `heat` (lá»‹ch nhiá»‡t) | `{"type":"heat","title","range","unit","cols":6,"cells":[{"k":"T1","v","note"?,"at"?}],"total":{"label":"Cáº¢ NÄ‚M","at"},"calls":[{"i","text","at"}]}` | 12 thÃ¡ng / 12 má»¥c. Ã” sÃ¡ng láº§n lÆ°á»£t, bá»™ Ä‘áº¿m cá»™ng dá»“n |
+| `stack` (cá»™t chá»“ng) | `{"type":"stack","title","range","unit","keys":[{"k":"Vá»¢"},{"k":"CHá»’NG"},{"k":"QUá»¸ CHUNG"}],"groups":[{"k":"50/50","vals":[..],"at"}],"calls":[{"i","text","at"}]}` | So sÃ¡nh vÃ i cÃ¡ch chia. Má»—i cá»™t â‰¤ 4 pháº§n |
+| `bars`, `counter`, `units`, `timeline`, `ledger` | nhÆ° cÃ¡c Long CK trÆ°á»›c | |
+
+- Chá»¯ trÃªn biá»ƒu Ä‘á»“ in hoa, â‰¤ 26 kÃ½ tá»± cho `title`, â‰¤ 18 kÃ½ tá»± cho `text` cá»§a `calls`.
+- Xem máº«u Ä‘Ã£ render: `python motion/long/chart_demo.py waterfall|heat|stack|line-calls`. KhÃ´ng cáº§n render láº¡i.
+
+## Long CK: áº£nh nhÃ¢n váº­t vÃ  áº£nh tÄ©nh (27/10/2026)
+
+**áº¢nh nhÃ¢n váº­t VÃ Dá»¤ GIáº¢ Äá»ŠNH** (chá»‹ Lan, anh Minhâ€¦) do Grok Bot váº½. Ghi prompt vÃ o `data/long/<topic>/ai_prompts.md`, má»—i má»¥c má»™t tiÃªu Ä‘á» `## ai_NN.png â€” â€¦`.
+- Tá»‘i Ä‘a 8 áº£nh má»—i bÃ i.
+- NhÃ¢n váº­t lÃ  ngÆ°á»i hÆ° cáº¥u nÃªn **váº½ Ä‘Æ°á»£c máº·t**.
+- **DÃ²ng Ä‘áº§u file lÃ  "há»“ sÆ¡ nhÃ¢n váº­t":** tuá»•i, dÃ¡ng, tÃ³c, trang phá»¥c, mÃ u chá»§ Ä‘áº¡o. Má»i prompt chÃ©p láº¡i nguyÃªn há»“ sÆ¡ nÃ y Ä‘á»ƒ gÆ°Æ¡ng máº·t giá»‘ng nhau suá»‘t video (tháº» `object_continuity`).
+- Phong cÃ¡ch chung: áº£nh minh hoáº¡ Ä‘iá»‡n áº£nh, bá»‘i cáº£nh Viá»‡t Nam Ä‘á»i thÆ°á»ng, Ã¡nh sÃ¡ng áº¥m, khung 16:9, chá»«a khoáº£ng trá»‘ng má»™t bÃªn Ä‘á»ƒ Ä‘áº·t chá»¯.
+- Cáº¥m:
+  - chá»¯, logo hay biá»ƒn hiá»‡u Ä‘á»c Ä‘Æ°á»£c;
+  - tÃªn bá»‡nh viá»‡n, ngÃ¢n hÃ ng hay cÃ´ng ty;
+  - tiá»n giáº¥y tháº¥y rÃµ má»‡nh giÃ¡;
+  - cáº£nh mÃ¡u hoáº·c bá»‡nh náº·ng.
+- Trong `gen_scenes`: áº£nh AI dÃ¹ng `"EXT:ai:ai_NN"`. Cáº£nh `photo` cá»§a áº£nh AI pháº£i cÃ³ `"credit": False`, vÃ  náº¿u cÃ³ máº·t ngÆ°á»i thÃ¬ thÃªm `"focus": [x, y]` vÃ o máº·t.
+- Má»—i chÆ°Æ¡ng dÃ¹ng 1â€“2 áº£nh nhÃ¢n váº­t. Má»—i áº£nh hiá»‡n â‰¤ 3 láº§n trong cáº£ bÃ i. áº¢nh nhÃ¢n váº­t **khÃ´ng thay biá»ƒu Ä‘á»“**: nÃ³ má»Ÿ cáº£nh, cÃ²n sá»‘ liá»‡u váº«n náº±m á»Ÿ biá»ƒu Ä‘á»“ ngay sau Ä‘Ã³.
+
+**áº¢nh tÄ©nh cho háº¥p dáº«n.** Cáº£nh `photo` cÃ³ thÃªm 2 trÆ°á»ng tuá»³ chá»n, láº¥y tá»« tháº» thÆ° viá»‡n:
+
+| TrÆ°á»ng | Tháº» | DÃ¹ng khi |
+|---|---|---|
+| `"reveal": {"kind": "circle"\|"wipe", "at": a(â€¦), "d": 0.9}` | `image_reveal` / `mask_reveal` | áº¢nh má»Ÿ dáº§n, `circle` má»Ÿ tá»« tiÃªu Ä‘iá»ƒm. DÃ¹ng cho áº£nh Ä‘áº§u chÆ°Æ¡ng hoáº·c khoáº£nh kháº¯c hÃ© lá»™ |
+| `"zoom": {"x": 0.62, "y": 0.4, "z": 1.6, "at": a(â€¦), "d": 1.2}` | `camera_zoom` | PhÃ³ng vÃ o chi tiáº¿t (tá» hoÃ¡ Ä‘Æ¡n, phong bÃ¬, mÃ n hÃ¬nh) Ä‘Ãºng lÃºc lá»i Ä‘á»c nháº¯c tá»›i |
+
+Ken Burns cÃ³ sáºµn: `"move": "in"|"out"|"pan"`, kÃ¨m `"focus"`. KhÃ´ng Ä‘á»ƒ hai áº£nh tÄ©nh liá»n nhau cÃ¹ng má»™t kiá»ƒu chuyá»ƒn Ä‘á»™ng.
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; "'$files = @('"'docs/pm/tickets/2026-10-27-ck-lo-1811/00-CHUNG-W1.md','docs/pm/tickets/2026-10-27-ck-lo-1811/00-CHUNG-W1c.md','docs/pm/tickets/2026-10-27-ck-lo-1811/W1-6-ket-qua.md','docs/pm/tickets/2026-10-27-ck-lo-1811/R6-ket-qua.md','data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/script.md','data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/facts.md','data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/analysis.py','data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/check.py'); foreach("'$f in $files) { "`n--- $f ---"; Get-Content -Raw -Encoding utf8 $f }' in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 268ms:
+
+--- docs/pm/tickets/2026-10-27-ck-lo-1811/00-CHUNG-W1.md ---
+# Luật chung cho ticket KỊCH BẢN (W1) của lô Long CK 18–25/11
+
+**Mỗi ticket chỉ ghi:**
+- `data/long/<topic>/script.md`
+- `data/long/<topic>/factcheck.md`
+- `data/long/<topic>/analysis.py`
+- `data/long/<topic>/check.py`
+- `data/long/<topic>/results.json`
+- `docs/pm/tickets/2026-10-27-ck-lo-1811/<mã>-ket-qua.md`
+
+`script_lines.py` sẽ tự tạo các file `chNN.json`; việc này được phép.
+
+**Chỉ đọc:**
+1. Ticket của mình và file này.
+2. `AGENTS.md`, mục "CK".
+3. `docs/codex/long-rules.md`, mục "Lỗi đã gặp".
+4. `docs/codex/long-cheatsheet.md`, mục "Bài học Moneyball".
+5. `data/long/<topic>/facts.md`. Đây là kho đã duyệt, **chỉ dùng dữ kiện trong kho**.
+6. **Mẫu định dạng:** `data/long/ck-e6-luong-huu-rut-mot-lan/script.md` (phần đầu và CH00–CH01), `analysis.py`, `check.py`.
+
+Không grep repo, không đọc code engine.
+
+## Yêu cầu
+
+- **Tiêu đề:** dùng đúng tiêu đề ở ticket, đặt ở dòng 1. Ghi thêm 2 tiêu đề phụ.
+- **Độ dài:** 7 chương (CH00–CH06), **2.300–2.700 âm tiết**. Riêng CH00 ≤ 230 âm tiết.
+- **Cold open (CH00):**
+  - câu 1 là con số tiền của nhân vật VÍ DỤ GIẢ ĐỊNH, không chào hỏi, không câu meta;
+  - câu 2 hoặc câu 3 nói đúng thứ mà biểu đồ đầu tiên sẽ hiện, để cảnh biểu đồ neo vào được trước giây 15;
+  - có một nghịch lý;
+  - mở **một vòng chính**, đóng ở CH06.
+- **Lộ trình:** mỗi bài một dạng riêng, ghi trong ticket. Không "trả lời ba câu hỏi".
+- **Viết cho biểu đồ.** Mỗi chương có ít nhất 3 câu đọc ra một con số mà màn hình có thể vẽ được (cột, đường, thác, lịch nhiệt, cột chồng, bộ đếm).
+  - Đầu `script.md`, dưới mục "Biểu đồ", liệt kê biểu đồ của từng chương: loại, các điểm số, câu neo.
+  - Câu neo phải nói đúng con số đó, bằng chữ.
+- **Biểu đồ chính:** biểu đồ của nhân vật lớn dần qua các chương (lấy trong `facts.md`). Ít nhất 4 chương nhắc lại nó bằng lời.
+- **Số:**
+  - mọi số tự tính sinh trong `analysis.py` → `results.json`;
+  - `check.py` tính lại bằng cách khác, phải in `OK`;
+  - lời đọc **không có chữ số**: viết bằng chữ, làm tròn dễ nghe;
+  - số giả định gắn "ví dụ" trong lời đọc ít nhất một lần mỗi chương.
+- **Luật cứng CK:** theo `AGENTS.md`. Không phán cách nào đúng. Câu nào gần lời khuyên thì đổi thành phép tính đặt cạnh nhau.
+- **Luật và chính sách:** nói kèm mốc, ví dụ "theo luật có hiệu lực từ đầu năm hai nghìn không trăm hai mươi sáu". Cái nào chưa chốt thì nói là chưa chốt.
+- **Câu:** ≤ 35 tiếng. Mỗi 4–6 câu có một câu ngắn. Không câu đệm. Không nhắc "kho", "nguồn mạnh".
+- **`factcheck.md`:** đủ dòng cho mọi khẳng định có số, ngày hoặc tên. Mọi năm trong kịch bản đều phải có mặt.
+
+## Cổng (bắt buộc trong vòng)
+
+1. `PYTHONIOENCODING=utf-8 python data/long/<topic>/analysis.py`, rồi `… check.py` → `OK`.
+2. `PYTHONIOENCODING=utf-8 python motion/long/script_lines.py <topic>`.
+3. `PYTHONIOENCODING=utf-8 python motion/long/studio_lint.py <topic> --strict` cho tới khi **0 lỗi**. Câu dài thì tách ngay.
+
+## Báo cáo `<mã>-ket-qua.md`
+
+- Tổng số âm tiết, số âm tiết của CH00.
+- Vòng mở chính: mở ở câu nào, đóng ở câu nào.
+- Bảng biểu đồ theo chương.
+- Kết quả `check.py` và `studio_lint`.
+- Khẳng định nào bỏ vì nguồn yếu.
+
+
+--- docs/pm/tickets/2026-10-27-ck-lo-1811/00-CHUNG-W1c.md ---
+# Luật chung cho ticket SỬA MỞ ĐẦU (W1c), theo Content Brief bản 2 đã duyệt 27/10
+
+Đọc:
+- `docs/pm/tickets/2026-10-27-ck-lo-1811/00-CONTENT-BRIEF.md`, mục của bài mình;
+- `docs/codex/long-rules.md`, hai mục cuối "Chiến lược Long 45 ngày" và "Cập nhật Áp dụng ngay";
+- `script.md`, `facts.md`, `factcheck.md` của bài.
+
+Không đọc gì khác.
+
+**Chỉ ghi:**
+- `script.md`
+- `factcheck.md`
+- `analysis.py`, `check.py`, `results.json` (chỉ khi phải đổi số)
+- `docs/pm/tickets/2026-10-27-ck-lo-1811/<mã>-ket-qua.md`
+
+## Sửa
+
+1. **Viết lại CH00** theo "Hook 30 giây" trong brief.
+   - **Câu 0** là sự kiện, con số thật hoặc câu hỏi thật, lấy từ `facts.md` và có nguồn. Không nhắc nhân vật ví dụ trong CH00.
+   - Trong 2 câu đầu nói ra con số mà biểu đồ dữ liệu thật đầu tiên sẽ vẽ.
+   - Có nghịch lý và một vòng mở chính, đóng ở CH06.
+   - Nói câu hỏi trung tâm của brief.
+   - CH00 ≤ 230 âm tiết.
+2. **Đưa nhân vật ví dụ vào đầu CH01**, kèm một câu nói rõ "đây là ví dụ giả định để tính". Bỏ các câu trùng ở CH01 nếu cần.
+3. **Dòng 1 = tiêu đề (1) trong brief.** Hai tiêu đề còn lại ghi vào dòng "Tiêu đề phụ".
+4. **Đầu `script.md` thêm 3 mục:**
+   - "Câu hỏi trung tâm";
+   - "5 câu trước khi viết";
+   - bảng "Bước lập luận": các mốc khoảng 3–5 phút, mỗi mốc một bước tiến của lập luận, ghi chương và câu.
+5. Cập nhật bảng "Biểu đồ" cho CH00 và CH01. Biểu đồ đầu tiên là **số thật** có nguồn.
+6. Giữ nguyên CH02–CH06, trừ chỗ phải nối câu.
+7. Tổng âm tiết: **1.900–2.700** (8–13 phút).
+
+## Cổng
+
+- `analysis.py` và `check.py` → `OK` (chạy lại nếu có đổi số).
+- `script_lines.py` (C6 dùng thêm `--allow-repeat-line`).
+- `studio_lint.py --strict` → 0 lỗi.
+
+`long_gate` trượt vì chưa có cảnh là bình thường.
+
+## Báo cáo
+
+- CH00 mới, nguyên văn.
+- Tổng âm tiết và âm tiết CH00.
+- Câu 0 lấy từ dữ kiện số mấy trong `facts.md`.
+
+
+--- docs/pm/tickets/2026-10-27-ck-lo-1811/W1-6-ket-qua.md ---
+# W1-6 — Kết quả kịch bản `ck-i1-100-trieu-tiet-kiem-hay-vnindex`
+
+## Đã làm
+
+- Viết `data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/script.md`: 7 chương CH00–CH06, tiêu đề B3, câu hỏi trung tâm, 5 câu trước khi viết, bảng bước lập luận và bảng biểu đồ.
+- CH00 mở bằng dữ kiện số 1 trong `facts.md`: 09/04/2018, VN-Index 1.204,33 điểm; không có nhân vật giả định. Vòng mở là khoảng cách giữa kết quả cuối và đoạn rơi; mở ở CH00 câu 3–4, đóng ở CH06 câu 19–25.
+- Viết `analysis.py`, `check.py`, `results.json` cho hai CSV ticket cấp. Phí giả định 0,15% khi mua và bán; thuế chuyển nhượng 0,1% khi bán. `check.py` kiểm độc lập 6 phép.
+- Viết `factcheck.md`, với URL cho mọi dữ kiện nguồn và phần ghi rõ giới hạn.
+
+## Kết quả cổng W1
+
+| Mục | Kết quả |
+|---|---|
+| Tổng âm tiết | 1.919 |
+| CH00 | 215 âm tiết |
+| `analysis.py` | Ghi `results.json` thành công |
+| `check.py` | `I1 check: OK (6 phep)` |
+| `script_lines.py` | Tạo đủ CH00–CH06 |
+| `studio_lint.py --strict` | 0 lỗi, 0 cảnh báo |
+
+## Biểu đồ theo chương
+
+| Chương | Biểu đồ chính | Số neo |
+|---|---|---|
+| CH00 | race tuyệt đối | 09/04/2018, 1.204,33 điểm; một lần mở 100 triệu |
+| CH01 | race ba vị trí | 24 lần mua, mỗi lần 4,1667 triệu |
+| CH02 | race + waterfall | một lần: 54,52 triệu ở 24/03/2020 |
+| CH03 | race + line | cuối 2021: 1.498,28 điểm |
+| CH04 | race + bars | mua đều: 93,63 triệu ở 15/11/2022 |
+| CH05 | race + dots | mốc quan sát 4,9% ngày 15/01/2024 |
+| CH06 | race + counter | một lần 145,48 triệu; mua đều 180,61 triệu ở 06/10/2026 |
+
+## Lệnh đã chạy
+
+```text
+PYTHONIOENCODING=utf-8 python data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/analysis.py
+PYTHONIOENCODING=utf-8 python data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/check.py
+PYTHONIOENCODING=utf-8 python motion/long/script_lines.py ck-i1-100-trieu-tiet-kiem-hay-vnindex
+PYTHONIOENCODING=utf-8 python motion/long/studio_lint.py ck-i1-100-trieu-tiet-kiem-hay-vnindex --strict
+PYTHONIOENCODING=utf-8 python scripts/long_gate.py ck-i1-100-trieu-tiet-kiem-hay-vnindex --min-syl 1900
+```
+
+`long_gate.py` đã chạy nhưng **TRƯỢT 19 lỗi**. Nguyên nhân không phải lỗi W1: ticket W1 chỉ cho ghi script, factcheck, analysis, check, results và báo cáo; chưa có `gen_scenes.py`, cảnh/HUD/spec YouTube hay TTS. Cổng yêu cầu các đầu ra W2 này nên báo thiếu HUD, tối thiểu 5 loại cảnh mỗi chương, TTS, `spec.youtube` và bảng SAY. Không chạy render; không có clip sheet hoặc thumbnail trong phạm vi W1.
+
+## Khẳng định chưa kiểm được
+
+Không có chuỗi lãi suất bình quân tiền gửi kỳ hạn 12 tháng theo từng năm 2018–2026 đủ chuẩn trong kho R6. Vì vậy không tính đường tiết kiệm, sức mua cuối kỳ hoặc kết luận tiết kiệm thắng/thua. Các mốc lãi suất quan sát chỉ được nói đúng phạm vi và không thay cho bình quân năm.
+
+
+--- docs/pm/tickets/2026-10-27-ck-lo-1811/R6-ket-qua.md ---
+# R6 — Kết quả nghiên cứu `ck-i1-100-trieu-tiet-kiem-hay-vnindex`
+
+Đã ghi kho nghiên cứu tại `data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/facts.md`.
+
+- Dữ kiện: 28 dòng, 7 chương × 4; nguồn mạnh 20, vừa 8. Có 10 nguồn Pexels ứng viên và các URL đã mở.
+- Bảng/biểu đồ: 9 bộ số, gồm race chính, mốc VN-Index, CPI, lãi suất quan sát, drawdown, tháng dưới vốn và lịch mua đều.
+- Có 2 cold open, 3 tiêu đề (đều dưới 60 ký tự), 2 ý thumbnail.
+- Đã đọc CSV ticket cấp bằng Python để kiểm các mốc: 09/04/2018 1.204,33; 24/03/2020 659,21; 06/01/2022 1.528,57; 15/11/2022 911,90; 09/04/2025 1.094,30; 06/10/2026 1.759,08.
+- Lệnh đã chạy: đọc 30 dòng mẫu `factcheck.md`; Python đọc hai CSV và tính kiểm độc lập các mốc/biến động. Không chạy lint, TTS, HTML, render, thumbnail hay `long_gate`, vì đây là ticket nghiên cứu và `00-CHUNG-R.md` cấm các bước đó.
+
+## Chưa kiểm được / blocker W1
+
+Chưa có chuỗi lãi suất **bình quân tiền gửi 12 tháng theo từng năm 2018–2026** từ nguồn đủ chuẩn. Kho chỉ lưu các khoảng/mốc quan sát có nguồn và đánh dấu rõ không phải bình quân năm. Vì vậy chưa tính phương án tiết kiệm, sức mua cuối kỳ và chưa gọi bất kỳ mốc lãi suất nào là bình quân năm. CPI 2026 hiện chỉ có số bình quân 9 tháng 4,52%, chưa có số cả năm.
+
+Không có clip sheet hay thumbnail ở ticket R6; các ID clip mới là ứng viên, bắt buộc tải và soi logo/chữ ở W2.
+
+
+--- data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/script.md ---
+# 100 Triệu Từ 2018: Gửi Tiết Kiệm Hay Mua VN-Index?
+
+Tiêu đề phụ: 100 Triệu Đúng Đỉnh 2018: Giờ Còn Bao Nhiêu? · 100 Triệu Trong 8 Năm: Mua Một Lần Hay Mua Đều?
+
+Câu hỏi trung tâm: Cùng một trăm triệu từ năm hai nghìn không trăm mười tám, gửi tiết kiệm, bỏ một lần vào chỉ số, hay mua đều, cách nào còn nhiều tiền hơn và cách nào đòi hỏi chịu đựng lớn hơn?
+
+## 5 câu trước khi viết
+
+Một: Người xem là người đang có một khoản tiền nhàn rỗi và muốn hiểu rủi ro bằng số liệu.
+Hai: Họ tò mò kết quả cuối cùng, nhưng cũng lo lúc tài khoản rơi sâu.
+Ba: Họ bấm vì một trăm triệu và đỉnh năm hai nghìn không trăm mười tám là tình huống rất dễ hình dung.
+Bốn: Thumbnail truyền một ý: cùng một trăm triệu nhưng ba đường đi khác nhau.
+Năm: Tiêu đề khớp với ba mươi giây đầu vì video bắt đầu ngay tại đỉnh chỉ số năm hai nghìn không trăm mười tám.
+
+## Bước lập luận
+
+| Mốc | Chương, câu | Bước tiến |
+|---|---|---|
+| Khoảng phút ba | CH02 | Kết quả cuối không nói hết cảm giác khi khoản tiền rơi sâu. |
+| Khoảng phút sáu | CH04 | Mua đều giảm mức rơi, nhưng vẫn không xóa hoàn toàn rủi ro. |
+| Khoảng phút chín | CH05 | Không có chuỗi lãi suất bình quân thì không thể tuyên bố tiết kiệm thắng hay thua. |
+| Khoảng phút mười một | CH06 | Backtest là bản đồ quá khứ, không phải dự báo hay mệnh lệnh. |
+
+## Biểu đồ
+
+| Chương | Biểu đồ | Điểm số và câu neo |
+|---|---|---|
+| CH00 | race tuyệt đối | Chín tháng tư năm hai nghìn không trăm mười tám: chỉ số một nghìn hai trăm lẻ bốn phẩy ba ba điểm; đường một lần mở ở một trăm triệu. |
+| CH01 | race ba đường có nhãn thiếu dữ liệu tiết kiệm | Một trăm triệu, hai mươi bốn lần mua, mỗi lần khoảng bốn phẩy một bảy triệu. |
+| CH02 | race và waterfall | Hai mươi bốn tháng ba năm hai nghìn không trăm hai mươi: một lần còn khoảng năm mươi bốn phẩy năm hai triệu. |
+| CH03 | race và line | Cuối năm hai nghìn không trăm hai mươi mốt: chỉ số một nghìn bốn trăm chín mươi tám phẩy hai tám điểm. |
+| CH04 | race và bars | Mười lăm tháng mười một năm hai nghìn không trăm hai mươi hai: mua đều còn khoảng chín mươi ba phẩy sáu ba triệu. |
+| CH05 | race và dots | Mười lăm tháng một năm hai nghìn không trăm hai mươi bốn: mốc lãi suất quan sát bốn phẩy chín phần trăm một năm, không phải bình quân năm. |
+| CH06 | race và counter | Sáu tháng mười năm hai nghìn không trăm hai mươi sáu: một lần khoảng một trăm bốn mươi lăm phẩy bốn tám triệu; mua đều khoảng một trăm tám mươi phẩy sáu mốt triệu. |
+
+## CH00 · Đỉnh cao và câu hỏi khó
+
+Ngày chín tháng tư năm hai nghìn không trăm mười tám, VN-Index đóng cửa một nghìn hai trăm lẻ bốn phẩy ba ba điểm.
+Đó là điểm bắt đầu của một trăm triệu trong ví dụ giả định của video này.
+Nếu mô phỏng mua theo chỉ số giá ngày đó, khoản tiền từng rơi về khoảng năm mươi bốn phẩy năm hai triệu.
+Nhưng ở phiên dữ liệu cuối, cùng phép tính lại lên khoảng một trăm bốn mươi lăm phẩy bốn tám triệu.
+Nghịch lý nằm ở đây.
+Kết quả cuối có thể xanh, còn đoạn đường ở giữa có thể rất khó chịu.
+Không có cổ tức.
+Nó cũng không phải thứ bạn mua trực tiếp được.
+Video chỉ dùng nó làm thước đo giá của cổ phiếu niêm yết.
+Đó là ví dụ giả định.
+Phí giao dịch và thuế bán cũng đã được đặt vào phép tính minh họa.
+Điều chưa thể đặt vào là một đường tiết kiệm hoàn chỉnh.
+Kho chưa có chuỗi bình quân từng năm.
+Vì vậy chưa xếp hạng tiết kiệm.
+Câu hỏi là: nếu cùng bắt đầu với một trăm triệu, đoạn rơi nào bạn phải nhìn thẳng vào trước khi nhìn kết quả cuối?
+Cuối video, ta sẽ quay lại câu hỏi đó.
+
+## CH01 · Ba luật chơi, một khoản tiền
+
+Ba luật chơi hiện ra.
+Tất cả đều là ví dụ giả định để tính, không phải lời khuyên đầu tư.
+Luật đầu là gửi kỳ hạn mười hai tháng rồi tái tục.
+Muốn tính luật này đúng, cần lãi suất bình quân từng năm có nguồn kiểm được.
+Kho hiện chỉ có vài mốc quan sát và vài khoảng lãi suất.
+Một mốc là chưa đủ.
+Vì thế đường tiết kiệm được giữ nhãn chưa xếp hạng.
+Chỗ trống vẫn để trống.
+Luật hai là bỏ một trăm triệu vào chỉ số giá ở ngày chín tháng tư năm hai nghìn không trăm mười tám.
+Phí giả định lúc mua là không phẩy mười lăm phần trăm.
+Khi bán, phép tính trừ thêm không phẩy mười lăm phần trăm phí và không phẩy một phần trăm thuế chuyển nhượng.
+Sau phí mua, giá trị mở đầu hiển thị khoảng chín mươi chín phẩy sáu triệu.
+Phí đã xuất hiện ngay đầu.
+Luật ba chia một trăm triệu thành hai mươi bốn phần.
+Mỗi phần khoảng bốn phẩy một bảy triệu.
+Mỗi tháng mua ở phiên đầu tiên, từ tháng tư năm hai nghìn không trăm mười tám đến tháng ba năm hai nghìn không trăm hai mươi.
+Phí và thuế giả định được áp theo cùng cách.
+Đây không phải lịch sử giao dịch của bất kỳ ai.
+Nó chỉ tách câu hỏi thời điểm mua ra khỏi câu hỏi chọn chỉ số.
+Ba luật chơi cùng nhìn một dữ liệu giá.
+Nhưng cách chịu biến động của chúng không giống nhau.
+
+## CH02 · Đoạn rơi mà kết quả cuối che mất
+
+Biểu đồ đi tiếp tới ngày hai mươi bốn tháng ba năm hai nghìn không trăm hai mươi.
+VN-Index đóng cửa sáu trăm năm mươi chín phẩy hai mốt điểm.
+So với điểm vào, chỉ số thấp hơn khoảng bốn mươi lăm phẩy hai sáu phần trăm.
+Với luật bỏ một lần và phí giả định, một trăm triệu còn khoảng năm mươi bốn phẩy năm hai triệu.
+Đây là đáy của đường bỏ một lần trong cửa sổ dữ liệu.
+Đó là cú rơi sâu.
+Kết quả cuối không kể hết.
+Đây là ví dụ giả định.
+Nó cũng chưa tính chênh lệch giá lúc khớp lệnh thật.
+Lúc ấy, người mua đều chưa góp đủ một trăm triệu.
+Để so sánh công bằng hơn, ta xét đáy sau khi lịch góp đã hoàn tất.
+Ở cùng ngày ấy, đường mua đều quy đổi còn khoảng sáu mươi bảy phẩy sáu tám triệu.
+Con số thấp hơn một trăm, nhưng cao hơn đường bỏ một lần.
+Sự khác nhau đến từ những lần mua sau khi giá đã giảm.
+Không phải vì mua đều xóa được rủi ro.
+Nó chỉ thay đổi lúc số tiền đi vào dữ liệu.
+CPI bình quân năm hai nghìn không trăm hai mươi tăng ba phẩy hai ba phần trăm.
+Giá cả vẫn đi tiếp, ngay cả khi biểu đồ tài sản đi xuống.
+Hai thứ không giống nhau.
+Một đoạn rơi sâu thường đặt ra câu hỏi khác với một đoạn tăng.
+Bạn có thể tiếp tục giữ một phép tính đang đỏ hay không?
+Biểu đồ không trả lời hộ bạn.
+
+## CH03 · Khi đường giá quay lên
+
+Đường giá không đi thẳng.
+Nhưng tới phiên cuối năm hai nghìn không trăm hai mươi mốt, VN-Index ở một nghìn bốn trăm chín mươi tám phẩy hai tám điểm.
+Phiên cuối năm hai nghìn không trăm hai mươi là một nghìn một trăm lẻ ba phẩy tám bảy điểm.
+Khoảng cách hai mốc cho thấy một năm tăng rất mạnh trong dữ liệu.
+Đường bỏ một lần trong ví dụ giả định khi đó khoảng một trăm hai mươi ba phẩy chín một triệu.
+Nó đã quay lại trên một trăm triệu vào ngày một tháng tư năm hai nghìn không trăm hai mươi mốt.
+Các tháng cũ vẫn còn đó.
+Nó chỉ đánh dấu lúc con số đi qua điểm xuất phát.
+Đường mua đều sau khi góp đủ quay lại một trăm triệu vào ngày mười chín tháng mười một năm hai nghìn không trăm hai mươi.
+Hai ngày hồi phục khác nhau vì hai cách nạp tiền khác nhau.
+Cuối năm hai nghìn không trăm hai mươi mốt, đường mua đều khoảng một trăm năm mươi ba phẩy tám bốn triệu.
+Đây vẫn là ví dụ giả định dựa trên chỉ số giá.
+Không có cổ tức nào được cộng thêm vào hai đường này.
+CPI bình quân năm hai nghìn không trăm hai mươi mốt tăng một phẩy tám bốn phần trăm.
+Đó là một mốc thấp.
+Nhưng sức mua cuối kỳ vẫn chưa được tính trọn cho năm hai nghìn không trăm hai mươi sáu.
+Vì mới có số bình quân chín tháng của năm đó.
+Thiếu dữ liệu phải nói thiếu.
+Nó không tự kéo dài đường bằng một dự đoán.
+Và đường hồi phục cũng không phải lời hứa cho lần giảm sau.
+
+## CH04 · Đỉnh mới, rồi một lần thử nữa
+
+Ngày sáu tháng một năm hai nghìn không trăm hai mươi hai, VN-Index đóng cửa một nghìn năm trăm hai mươi tám phẩy năm bảy điểm.
+Đó là đỉnh giá đóng cửa trong dữ liệu của video.
+Đường bỏ một lần khi ấy khoảng một trăm hai mươi sáu phẩy bốn hai triệu.
+Đường mua đều khoảng một trăm năm mươi sáu phẩy chín lăm triệu.
+Mọi thứ trông ổn.
+Rồi đường giá đổi hướng.
+Ngày mười lăm tháng mười một cùng năm, chỉ số đóng cửa chín trăm mười một phẩy chín mươi điểm.
+So với đỉnh tháng một, mức giảm là khoảng bốn mươi phẩy ba lăm phần trăm.
+Đường bỏ một lần về khoảng bảy mươi lăm phẩy bốn hai triệu.
+Đường mua đều về khoảng chín mươi ba phẩy sáu ba triệu.
+Ví dụ giả định này cho thấy một đường ít rơi hơn không đồng nghĩa không rơi.
+Không cách nào luôn tốt hơn.
+Nó chỉ ghi lại cách hai quy tắc gặp đúng các phiên đã xảy ra.
+CPI bình quân năm hai nghìn không trăm hai mươi hai tăng ba phẩy mười lăm phần trăm.
+Cuối năm đó, có tin về vài mức lãi suất mười hai tháng từ năm phẩy sáu đến bảy phẩy bốn phần trăm một năm.
+Đó là khoảng quan sát ở vài nơi, không phải bình quân hệ thống.
+Vì vậy nó không được đưa vào đường tiết kiệm.
+Đây là chỗ dễ biến một video thành kết luận quá đà.
+Một con số thật nhưng sai phạm vi vẫn dẫn đến phép so sánh sai.
+Ba đường phải cùng chuẩn.
+
+## CH05 · Đường tiết kiệm đang thiếu điều gì
+
+Từ năm hai nghìn không trăm hai mươi ba, mặt bằng lãi suất đi xuống trong các mốc quan sát.
+Đầu tháng mười hai năm hai nghìn không trăm hai mươi ba, một nguồn thị trường nêu mức bình quân mười hai tháng là năm phẩy mười ba phần trăm một năm.
+Ngày mười lăm tháng một năm hai nghìn không trăm hai mươi bốn, cùng kiểu quan sát nêu bốn phẩy chín phần trăm một năm.
+Lãi suất có thay đổi.
+Chúng không phải bình quân năm.
+Ví dụ giả định gửi tiết kiệm không được phép lấy một mốc tháng rồi kéo dài tám năm.
+Làm vậy sẽ tạo ra một đường rất mượt, nhưng không phải dữ liệu thật.
+Đó là lý do biểu đồ chính vẫn vẽ ba vị trí.
+Hai vị trí có chuỗi tính được là bỏ một lần và mua đều.
+Vị trí tiết kiệm ghi rõ chưa thể tính đầy đủ.
+Thiếu cũng là một kết quả.
+CPI bình quân năm hai nghìn không trăm hai mươi ba tăng ba phẩy hai lăm phần trăm.
+CPI bình quân năm hai nghìn không trăm hai mươi bốn tăng ba phẩy sáu ba phần trăm.
+Lạm phát cho thấy con số tiền đứng yên cũng đổi sức mua theo thời gian.
+Nhưng video không biến CPI thành lãi suất thực khi thiếu chuỗi tiết kiệm hoàn chỉnh.
+Mỗi năm phải có nguồn, phương pháp và giới hạn đi cùng.
+Không có đường tắt nào từ vài tiêu đề báo đến một kết luận tám năm.
+Phí giao dịch cũng là giả định minh họa không phẩy mười lăm phần trăm mỗi chiều.
+Phí thực tế, giá khớp và sản phẩm thực có thể khác.
+Đổi giả định, đổi kết quả.
+
+## CH06 · Kết quả cuối không phải mệnh lệnh
+
+Ta quay lại phiên sáu tháng mười năm hai nghìn không trăm hai mươi sáu.
+VN-Index đóng cửa một nghìn bảy trăm năm mươi chín phẩy không tám điểm.
+Với luật bỏ một lần, phí và thuế giả định, một trăm triệu thành khoảng một trăm bốn mươi lăm phẩy bốn tám triệu.
+Với luật mua đều hai mươi bốn tháng, nó thành khoảng một trăm tám mươi phẩy sáu mốt triệu.
+Đó là dữ liệu quá khứ.
+Chúng không dự báo ngày mai.
+Chúng cũng không nói bạn nên mua, bán hay gửi ở đâu.
+Đường bỏ một lần từng ở dưới một trăm triệu trong một giai đoạn dài.
+Đường mua đều cũng có lúc dưới một trăm triệu sau khi góp đủ.
+Mức đáy của chúng lần lượt khoảng năm mươi bốn phẩy năm hai và sáu mươi bảy phẩy sáu tám triệu.
+Đó là phần giá phải nhìn thấy khi đọc kết quả cuối.
+Còn tiết kiệm thì sao?
+Chưa thể xếp hạng.
+Không có chuỗi bình quân từng năm đủ chuẩn, không có phép so sánh hoàn chỉnh.
+VN-Index không gồm cổ tức trong mô phỏng này.
+Thuế chuyển nhượng không phẩy một phần trăm và phí giả định đã làm kết quả thấp hơn đường giá thô.
+Quá khứ không phải dự báo.
+Ví dụ giả định không phải tư vấn đầu tư.
+Nội dung giáo dục, không phải tư vấn đầu tư.
+Vòng mở ở đầu video vì thế có câu trả lời khác một bảng xếp hạng.
+Một trăm triệu không chỉ có kết quả cuối.
+Nó còn có thời điểm vào và đoạn rơi.
+Nó còn có phí, thuế và dữ liệu thiếu.
+Nó còn có khả năng chịu đựng của bạn.
+Trước khi tin một đường nào, hãy hỏi nó đã dùng dữ liệu nào và đã bỏ sót điều gì.
+
+
+--- data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/facts.md ---
+# Kho dữ kiện R6 — 100 triệu: tiết kiệm hay VN-Index?
+
+Ngày kiểm: 27/10/2026. Đây là kho nghiên cứu cho W1, không phải kịch bản hay khuyến nghị đầu tư. URL dưới đây đã mở trong phiên. Nhãn **mạnh** là nguồn cơ quan thống kê/chính phủ hoặc dữ liệu CSV mà ticket cấp; **vừa** là báo chí/dữ liệu tổng hợp.
+
+## Phạm vi và phương pháp phải giữ nguyên
+
+- CSV do ticket cấp: `data/ck/vnindex_1d_2016_2018.csv` (01/12/2016–05/10/2018) và `data/ck/vnindex_1d.csv` (08/10/2018–06/10/2026), giá đóng cửa từng phiên từ HOSE qua vnstock/VCI.
+- VN-Index là chỉ số giá; nó không phải sản phẩm có thể mua trực tiếp và phép tính dưới đây **không cộng cổ tức**. Mô tả cách chỉ số phản ánh thay đổi vốn hóa của cổ phiếu niêm yết HOSE: https://support.vndirect.com.vn/hc/vi/articles/13971271685273-Ch%E1%BB%89-s%E1%BB%91-VN-INDEX-l%C3%A0-g%C3%AC (**vừa**).
+- Khi mô phỏng bán, áp thuế chuyển nhượng chứng khoán cá nhân 0,1% trên giá chuyển nhượng; Thông tư 111/2013/TT-BTC: https://chinhphu.vn/default.aspx?docid=169566&pageid=27160 (**mạnh**). Chưa có bộ phí giao dịch thống nhất theo từng năm, nên W1 phải để phí giao dịch là biến/ghi rõ giả định, không tự coi bằng 0 mà không nói.
+- Không nêu tên tổ chức nhận tiền gửi, quỹ hay mã chứng khoán; không suy kết lợi nhuận tương lai từ backtest này.
+
+## Dữ kiện theo chương
+
+### CH00 — Cú rơi từ đỉnh (4)
+
+1. Ngày 09/04/2018, CSV ticket cấp ghi VN-Index đóng cửa **1.204,33 điểm**; đây là điểm vào của phương án bỏ một lần. **mạnh — dữ liệu ticket cấp;** phương pháp chỉ số: URL phạm vi ở trên.
+2. Bình quân CPI năm 2018 tăng **3,54%** so với năm trước. https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2021/12/thong-cao-bao-chi-ve-tinh-hinh-gia-thang-12-quy-iv-va-nam-2021/ (**mạnh**).
+3. Đầu năm 2018, mức bình quân tiền gửi VND kỳ hạn trên 12 tháng được nêu khoảng **6,55%/năm** (2 tháng đầu năm); đây là điểm quan sát, **không phải bình quân cả năm**. https://cafef.vn/nhieu-ngan-hang-tang-lai-suat-huy-dong-2018030723375295.chn (**vừa**).
+4. Câu hỏi của video là so sánh một khoản **100 triệu đồng** đặt vào ba luật chơi từ 04/2018; đó là **VÍ DỤ GIẢ ĐỊNH**, không phải lời khuyên. **mạnh — giả định biên tập.**
+
+### CH01 — Ba luật chơi (4)
+
+5. Phương án A: 100 triệu gửi kỳ hạn 12 tháng, tái tục hàng năm theo một chuỗi lãi suất được W1 chốt nguồn. Đây là **VÍ DỤ GIẢ ĐỊNH**; số dư cuối năm = số dư đầu năm × (1 + lãi suất năm). **mạnh — công thức.**
+6. Phương án B: mua theo mức đóng cửa 09/04/2018, số đơn vị quy ước = 100.000.000 / 1.204,33; giá trị hàng ngày = số đơn vị × điểm đóng cửa. **VÍ DỤ GIẢ ĐỊNH; mạnh — công thức và CSV ticket cấp.**
+7. Phương án C: chia 100 triệu thành **24** phần bằng nhau, mua tại phiên đầu tiên của từng tháng từ 04/2018 đến 03/2020. Đây là **VÍ DỤ GIẢ ĐỊNH** để so thời điểm mua, không phải lịch sử giao dịch của người thật. **mạnh — giả định.**
+8. Thuế 0,1% tính trên giá chuyển nhượng, vì vậy chỉ trừ ở giá trị bán cuối kỳ trong phép tính B/C; nguồn Thông tư 111/2013/TT-BTC: https://chinhphu.vn/default.aspx?docid=169566&pageid=27160 (**mạnh**).
+
+### CH02 — Đoạn tệ nhất (4)
+
+9. CSV ticket cấp ghi ngày 24/03/2020 VN-Index đóng cửa **659,21 điểm**, là đáy giá đóng cửa sâu nhất của phương án B trong cửa sổ 09/04/2018–06/10/2026. **mạnh — TÍNH từ CSV.**
+10. So với 1.204,33 điểm ngày vào, mức 659,21 điểm thấp hơn **45,26%**. Công thức: 659,21 / 1.204,33 − 1. **mạnh — TÍNH từ CSV.**
+11. CPI bình quân năm 2020 tăng **3,23%**. https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2021/12/thong-cao-bao-chi-ve-tinh-hinh-gia-thang-12-quy-iv-va-nam-2021/ (**mạnh**).
+12. Trong năm 2020, bài báo ghi một nhóm lãi suất 12–24 tháng giảm từ **6,5% xuống 6,0%/năm**; đây chỉ là quan sát nhóm, không dùng thay bình quân năm. https://www.tinnhanhchungkhoan.vn/lai-suat-vao-dot-cat-giam-moi-post248257.html (**vừa**).
+
+### CH03 — Phục hồi và CPI (4)
+
+13. CPI bình quân năm 2021 tăng **1,84%**, thấp nhất kể từ 2016 theo Cục Thống kê. https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2022/01/kiem-soat-lam-phat-thap-thanh-cong-cua-nam-2021-va-ap-luc-trong-nam-2022/ (**mạnh**).
+14. Tháng 7/2021, mặt bằng tiền gửi VND kỳ hạn 12–24 tháng được nêu là **5,4%–6,8%/năm**; đó là **khoảng**, không phải bình quân 12 tháng. https://www.div.gov.vn/lai-suat-cho-vay-giam-lai-suat-tien-gui-on-dinh (**vừa**).
+15. CSV ticket cấp ghi phiên cuối năm 2021 có VN-Index **1.498,28 điểm**; so với cuối 2020 là 1.103,87 điểm. **mạnh — TÍNH từ CSV.**
+16. Chỉ số giá không bao gồm cổ tức trong backtest này, nên đây là phép đo biến động giá, không phải tổng lợi nhuận của bất kỳ quỹ nào. Mô tả VN-Index theo vốn hóa: https://support.vndirect.com.vn/hc/vi/articles/13971271685273-Ch%E1%BB%89-s%E1%BB%91-VN-INDEX-l%C3%A0-g%C3%AC (**vừa**).
+
+### CH04 — Đỉnh 2022, đáy 2022 (4)
+
+17. CSV ticket cấp ghi ngày 06/01/2022 VN-Index đóng cửa **1.528,57 điểm**, là đỉnh giá đóng cửa trong dữ liệu. **mạnh — TÍNH từ CSV.**
+18. CSV ticket cấp ghi ngày 15/11/2022 đóng cửa **911,90 điểm**, thấp hơn 40,35% so với 1.528,57 điểm. **mạnh — TÍNH từ CSV.**
+19. CPI bình quân năm 2022 tăng **3,15%**. https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2022/12/thong-cao-bao-chi-ve-tinh-hinh-gia-thang-12-quy-iv-va-nam-2022/ (**mạnh**).
+20. Cuối 2022, một mức 12 tháng được báo chí ghi từ **5,6% lên 7,4%/năm** tại một số tổ chức; đó không đại diện toàn thị trường và không được dùng làm bình quân. https://znews.vn/bidv-vietinbank-va-agribank-tang-lai-suat-huy-dong-len-7-4-nam-post1369350.html (**vừa**).
+
+### CH05 — Giai đoạn lãi suất thấp (4)
+
+21. CPI bình quân năm 2023 tăng **3,25%**. https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2023/12/thong-cao-bao-chi-ve-tinh-hinh-gia-thang-12-quy-iv-va-nam-2023/ (**mạnh**).
+22. Đầu tháng 12/2023, lãi suất huy động bình quân kỳ hạn 12 tháng được một nguồn dữ liệu thị trường ghi **5,13%/năm**; đây là mốc quan sát tháng, không phải bình quân năm. https://tuoitre.vn/lai-suat-tiet-kiem-thap-ki-luc-nen-giam-hon-nua-thi-sao-20231206215733636.htm (**vừa**).
+23. Ngày 15/01/2024, cùng loại bình quân 12 tháng được nêu **4,9%/năm**. https://tuoitre.vn/ha-them-lai-suat-binh-quan-tien-gui-12-thang-lap-day-moi-vua-xuong-dau-4-20240115180305495.htm (**vừa**).
+24. CPI bình quân năm 2024 tăng **3,63%**. https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2025/01/chi-so-gia-tieu-dung-chi-so-gia-vang-va-chi-so-gia-do-la-my-thang-muoi-hai-quy-iv-va-nam-2024/ (**mạnh**).
+
+### CH06 — Điểm dữ liệu mới (4)
+
+25. CSV ticket cấp ghi 09/04/2025 VN-Index đóng cửa **1.094,30 điểm**. **mạnh — TÍNH từ CSV.**
+26. CPI bình quân năm 2025 được Cục Thống kê công bố/ước tổng kết là **3,31%**. https://www.nso.gov.vn/tin-tuc-khac/2026/01/kinh-te-viet-nam-dat-duoc-nhung-ket-qua-quan-trong-toan-dien-nhieu-diem-sang-noi-bat/ (**mạnh**).
+27. Tháng 12/2025, một bản tin thị trường nêu lãi suất huy động bình quân 12 tháng của nhóm tổ chức nhà nước ở **5,2%**; không dùng số này làm bình quân toàn hệ thống hay bình quân cả năm. https://finance.vietstock.vn/downloadedoc/18633 (**vừa**).
+28. Bình quân 9 tháng 2026, CPI tăng **4,52%**; đây chưa phải CPI bình quân cả năm 2026. https://www.nso.gov.vn/tin-tuc-thong-ke/2026/10/thong-cao-bao-chi-ve-tinh-hinh-gia-thang-chin-quy-iii-va-9-thang-nam-2026/ (**mạnh**).
+
+## Mốc và kết quả tính sơ bộ từ CSV
+
+| Mốc | Ngày | Đóng cửa VN-Index | Nguồn |
+|---|---:|---:|---|
+| Đỉnh vào tiền | 09/04/2018 | 1.204,33 | CSV ticket cấp |
+| Đáy Covid | 24/03/2020 | 659,21 | CSV ticket cấp |
+| Đỉnh dữ liệu | 06/01/2022 | 1.528,57 | CSV ticket cấp |
+| Đáy 2022 | 15/11/2022 | 911,90 | CSV ticket cấp |
+| Mốc 2025 | 09/04/2025 | 1.094,30 | CSV ticket cấp |
+| Phiên cuối | 06/10/2026 | 1.759,08 | CSV ticket cấp |
+
+**VÍ DỤ GIẢ ĐỊNH — chưa tính phí giao dịch; B/C chưa trừ thuế bán 0,1% trong số hiển thị:**
+
+| Cách | Giá trị 06/10/2026 | Âm sâu nhất | Tháng dưới 100 triệu | Về lại 100 triệu |
+|---|---:|---|---:|---|
+| Bỏ một lần 09/04/2018 | 146,06 triệu | 24/03/2020: 54,74 triệu (−45,26%) | 60 | cần W1 xác nhận ngày hồi phục theo tiêu chí sau ngày mua |
+| Mua đều 24 tháng (phiên đầu tháng 04/2018–03/2020) | 181,38 triệu | 24/03/2020: 67,97 triệu (−32,03%; sau khi đã góp đủ) | 10 | 18/11/2020 |
+| Gửi 12 tháng cuốn chiếu | **chưa chốt** | không áp dụng nếu không tất toán trước hạn | 0 theo giả định gốc được bảo toàn | không áp dụng |
+
+W1 phải chạy lại với (i) thuế bán 0,1%, (ii) phí giao dịch được nêu rõ hoặc làm hai kịch bản, và (iii) chuỗi **bình quân 12 tháng theo từng năm** có nguồn. Không được thay chuỗi đó bằng các mốc lãi suất đơn lẻ ở trên.
+
+## Bộ số cho biểu đồ
+
+1. **Đường đua chính** — `race`, triệu đồng; các điểm 04/2018, 03/2020, 01/2022, 11/2022, 04/2025, 10/2026; B/C từ CSV, A chờ chuỗi lãi suất chuẩn.
+2. **VN-Index các mốc căng thẳng** — `line`; 1.204,33; 659,21; 1.528,57; 911,90; 1.094,30; 1.759,08 điểm; nguồn CSV ticket cấp.
+3. **Mức giảm từ đỉnh vào tiền** — `waterfall`; 100 → 54,74 → 146,06 triệu, phương án B; VÍ DỤ GIẢ ĐỊNH, công thức theo CSV.
+4. **Mua đều sau góp đủ** — `bars`; 100; 67,97; 100; 181,38 triệu; VÍ DỤ GIẢ ĐỊNH, theo CSV.
+5. **CPI 2018–2026** — `line`; 3,54; 2,79; 3,23; 1,84; 3,15; 3,25; 3,63; 3,31; 4,52% (2026 là 9 tháng); nguồn URL Cục Thống kê ở trên.
+6. **Lãi suất quan sát, không dùng thay bình quân năm** — `dots`; 6,55 (đầu 2018); 5,4–6,8 (07/2021); 5,13 (12/2023); 4,9 (15/01/2024); 5,2 (12/2025); %/năm, nguồn từng URL ở trên.
+7. **Số tháng dưới 100 triệu** — `bars`; B: 60; C: 10 (chỉ tính từ lúc C góp đủ); A: 0 theo giả định gốc được bảo toàn; VÍ DỤ GIẢ ĐỊNH/TÍNH CSV.
+8. **24 lần mua đều** — `heat`; mỗi ô 4,1667 triệu đồng trong 04/2018–03/2020; tổng 100 triệu; VÍ DỤ GIẢ ĐỊNH, công thức 100/24.
+9. **Sức mua 100 triệu** — `counter`; chỉ số CPI lũy kế phải tính từ chuỗi 2018–2025 đã chốt; 2026 chưa dùng vì mới có 9 tháng. Công thức: tích (1+CPI năm); nguồn Cục Thống kê.
+
+## Biểu đồ chính
+
+`race` ba đường giá trị danh nghĩa, mốc đầu 100 triệu. CH00 thêm điểm 09/04/2018; CH02 thêm đáy 24/03/2020; CH03 thêm cuối 2021; CH04 thêm đỉnh 06/01 và đáy 15/11/2022; CH05 thêm cuối 2023/2024; CH06 thêm 09/04/2025; CH07 thêm 06/10/2026 và lớp ghi chú CPI. Đường tiết kiệm chỉ bật sau khi W1 chốt bộ lãi suất chuẩn.
+
+## Cold open
+
+1. “Ngày 9 tháng 4 năm 2018, 100 triệu đặt vào VN-Index ở 1.204 điểm. Chưa đầy hai năm sau, cùng phép tính còn khoảng 54,7 triệu. Nhưng đến phiên dữ liệu cuối, nó lại vượt 146 triệu. Nếu biết đoạn rơi ấy trước, bạn có chịu nổi để giữ không?” Biểu đồ race xuất hiện trước giây 15.
+2. “100 triệu không đổi, nhưng một cách phải chịu 60 tháng dưới vốn; một cách mua dần chỉ có 10 tháng sau khi góp đủ. Con số cuối cùng có thể đẹp hơn, vậy vì sao đoạn đường lại quan trọng hơn kết quả?” Biểu đồ cột tháng âm xuất hiện trước giây 15.
+
+## Tiêu đề và thumbnail
+
+- `100 Triệu Từ 2018: Gửi Tiết Kiệm Hay Mua VN-Index?`
+- `100 Triệu Đúng Đỉnh 2018: Giờ Còn Bao Nhiêu?`
+- `100 Triệu Trong 8 Năm: Mua Một Lần Hay Mua Đều?`
+
+1. Chữ lớn **100 TRIỆU → ?**, ba đường đua đơn giản; không ghi giả định.
+2. Chữ lớn **ĐỈNH 2018**, một mũi tên rơi cạnh nhãn **TIẾT KIỆM**; không có logo/tên tổ chức.
+
+## Clip Pexels ngang — ứng viên, phải soi lại trước dùng
+
+| ID | Nội dung | Ghi chú |
+|---:|---|---|
+| 6963480 | tay bấm máy tính, sổ | 16:9; soi logo/chữ |
+| 6780089 | tay và máy tính | 16:9; soi logo/chữ |
+| 8195661 | người dùng máy tính | 16:9; soi logo/chữ |
+| 6794227 | người trước laptop biểu đồ | 16:9; soi logo/chữ trên màn hình |
+| 7593891 | tay, máy tính, ghi chú | cần xác nhận khung ngang trước tải |
+| 6962707 | giấy tờ và máy tính | cần che/bỏ chữ đọc được |
+| 7016911 | giao thông thành phố trên cao | 16:9; soi biển hiệu |
+| 8342359 | viết sổ từ trên xuống | 16:9; soi chữ |
+| 5212605 | viết sổ cạnh laptop | 16:9; soi logo/chữ |
+| 7594719 | ghi chép ở bàn bếp | 16:9; soi logo/chữ |
+
+Nguồn các ID: https://www.pexels.com/video/a-person-computing-using-calculator-6963480/ ; https://www.pexels.com/video/person-using-calculator-6780089/ ; https://www.pexels.com/video/a-man-using-the-calculator-8195661/ ; https://www.pexels.com/video/a-man-is-sitting-in-front-of-a-laptop-with-a-stock-market-chart-6794227/ ; https://www.pexels.com/video/close-up-video-of-a-person-using-calculator-7593891/ ; https://www.pexels.com/video/a-person-computing-using-calculator-6962707/ ; https://www.pexels.com/video/video-of-a-city-traffic-7016911/ ; https://www.pexels.com/video/girl-writing-in-notebook-8342359/ ; https://www.pexels.com/video/man-writing-on-his-notebook-5212605/ ; https://www.pexels.com/video/man-writing-in-notebook-7594719/ .
+
+## Rủi ro và việc còn mở
+
+- **Chưa kiểm được:** một chuỗi lãi suất **bình quân tiền gửi 12 tháng theo từng năm 2018–2026**. Các URL thu được mới là khoảng/mốc tháng hoặc nhóm tổ chức; không được gọi chúng là “bình quân năm”. Đây là blocker duy nhất để tính hợp lệ phương án A và giá trị thực sau CPI.
+- 2026 mới có CPI bình quân 9 tháng 4,52%, chưa có số cả năm; không ghi nó là CPI bình quân năm.
+- Không ai mua trực tiếp được VN-Index; mô phỏng là chỉ số giá, không có cổ tức, không phản ánh chênh lệch theo sản phẩm thực tế.
+- Phí giao dịch, thời điểm khớp lệnh, chênh lệch giá và thuế làm kết quả thực tế khác mô phỏng. Không nói “nên mua/bán/gửi”.
+
+
+--- data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/analysis.py ---
+"""Backtest minh hoa: 100 trieu, chi so gia VN-Index, 09/04/2018–06/10/2026.
+
+Du lieu: hai CSV ticket cap. Gia tri B/C la VI DU GIA DINH, da ap phi giao dich
+0,15% luc mua va ban, va thue chuyen nhuong 0,1% luc ban. Khong co chuoi lai
+suat binh quan nam da duoc kiem chung, nen khong tinh duong tiet kiem.
+"""
+import csv
+import json
+from datetime import date
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[2]
+INITIAL = 100_000_000
+FEE = 0.0015
+TAX = 0.001
+START = date(2018, 4, 9)
+END = date(2026, 10, 6)
+
+def load(path):
+    with path.open(encoding="utf-8", newline="") as f:
+        return [(date.fromisoformat(r["time"]), float(r["close"])) for r in csv.DictReader(f)]
+
+rows = sorted(load(ROOT / "data" / "ck" / "vnindex_1d_2016_2018.csv") + load(ROOT / "data" / "ck" / "vnindex_1d.csv"))
+prices = {d: p for d, p in rows}
+window = [(d, p) for d, p in rows if START <= d <= END]
+assert prices[START] == 1204.33 and prices[END] == 1759.08
+
+# B: mua mot lan. Phi mua lam giam so don vi; khi ban tru phi va thue.
+b_units = INITIAL * (1 - FEE) / prices[START]
+def b_value(p): return b_units * p * (1 - FEE - TAX)
+
+# C: 24 lenh, phien dau tien moi thang 04/2018–03/2020.
+months = {(d.year, d.month) for d, _ in window}
+buy_dates = []
+for y, m in [(2018, m) for m in range(4, 13)] + [(2019, m) for m in range(1, 13)] + [(2020, m) for m in range(1, 4)]:
+    buy_dates.append(next(d for d, _ in window if (d.year, d.month) == (y, m)))
+assert len(buy_dates) == 24 and all((d.year, d.month) in months for d in buy_dates)
+piece = INITIAL / 24
+c_units = sum(piece * (1 - FEE) / prices[d] for d in buy_dates)
+def c_value(p): return c_units * p * (1 - FEE - TAX)
+
+def at(d): return prices[date.fromisoformat(d)]
+def money(x): return round(x / 1_000_000, 2)
+
+b_series = [(d, b_value(p)) for d, p in window]
+c_after = [(d, c_value(p)) for d, p in window if d >= buy_dates[-1]]
+b_low_d, b_low = min(b_series, key=lambda x: x[1])
+c_low_d, c_low = min(c_after, key=lambda x: x[1])
+def recover(series, start):
+    return next(d for d, v in series if d >= start and v >= INITIAL)
+
+points = ["2018-04-09", "2020-03-24", "2021-12-31", "2022-01-06", "2022-11-15", "2025-04-09", "2026-10-06"]
+race = [{"date": d, "mot_lan": money(b_value(at(d))), "mua_deu": money(c_value(at(d))) if date.fromisoformat(d) >= buy_dates[-1] else None} for d in points]
+res = {
+  "assumptions": {"initial_million": 100, "purchase_fee_pct": 0.15, "sale_fee_pct": 0.15, "sale_tax_pct": 0.1,
+                  "savings": "CHUA_TINH: kho R6 khong co chuoi lai suat binh quan 12 thang theo tung nam"},
+  "race": race,
+  "mot_lan": {"end_million": money(b_value(prices[END])), "low_date": b_low_d.isoformat(), "low_million": money(b_low),
+              "low_pct": round((b_low / INITIAL - 1) * 100, 2), "recover_date": recover(b_series, START).isoformat()},
+  "mua_deu": {"instalments": 24, "piece_million": round(piece / 1e6, 4), "end_million": money(c_value(prices[END])),
+              "low_after_full_date": c_low_d.isoformat(), "low_after_full_million": money(c_low),
+              "low_after_full_pct": round((c_low / INITIAL - 1) * 100, 2), "recover_after_full_date": recover(c_after, buy_dates[-1]).isoformat()},
+}
+(HERE / "results.json").write_text(json.dumps(res, ensure_ascii=False, indent=2), encoding="utf-8")
+print(json.dumps(res, ensure_ascii=False, indent=2))
+
+
+--- data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/check.py ---
+"""Kiem doc lap results.json bang cach tinh lai truc tiep tu CSV."""
+import csv, json
+from datetime import date
+from pathlib import Path
+H = Path(__file__).resolve().parent
+ROOT = H.parents[2]
+def read(p):
+    with p.open(encoding="utf-8", newline="") as f:
+        return {date.fromisoformat(r["time"]): float(r["close"]) for r in csv.DictReader(f)}
+p = read(ROOT / "data" / "ck" / "vnindex_1d_2016_2018.csv") | read(ROOT / "data" / "ck" / "vnindex_1d.csv")
+r = json.loads((H / "results.json").read_text(encoding="utf-8"))
+start, end, fee, tax = date(2018,4,9), date(2026,10,6), .0015, .001
+units = 100_000_000 * (1-fee) / p[start]
+end_b = round(units * p[end] * (1-fee-tax) / 1e6, 2)
+dates = []
+for y, ms in ((2018, range(4,13)), (2019, range(1,13)), (2020, range(1,4))):
+    for m in ms: dates.append(min(d for d in p if d >= start and d.year == y and d.month == m))
+units_c = sum((100_000_000/24)*(1-fee)/p[d] for d in dates)
+end_c = round(units_c*p[end]*(1-fee-tax)/1e6, 2)
+ok = [p[start] == 1204.33, p[end] == 1759.08, len(dates) == 24, r["mot_lan"]["end_million"] == end_b,
+      r["mua_deu"]["end_million"] == end_c, "CHUA_TINH" in r["assumptions"]["savings"]]
+print("I1 check:", "OK" if all(ok) else f"LOI o {[i for i, x in enumerate(ok) if not x]}", f"({len(ok)} phep)")
+assert all(ok)
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -Encoding utf8 'docs/pm/tickets/2026-10-27-ck-lo-1811/00-CONTENT-BRIEF.md'; \""'`n---SCRIPT---`n"; Get-Content -Raw -Encoding utf8 '"'data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/script.md'; \""'`n---FACTS---`n"; Get-Content -Raw -Encoding utf8 '"'data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/facts.md'" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 257ms:
+# Content Brief lô Long CK 18/11 – 02/12 (bản 2, theo chỉ đạo 27/10 "Áp dụng ngay")
+
+**Vì sao có bản 2:** chỉ đạo 27/10 không cho mở bằng nhân vật giả định, mà phải mở bằng sự kiện có thật, con số đáng chú ý hoặc câu hỏi thật. Bản 1 của cả 5 bài đều mở bằng một nhân vật giả định.
+- Nhân vật giả định vẫn giữ, nhưng **dời xuống CH01 hoặc CH02** và nói rõ là ví dụ.
+- Ảnh nhân vật vẫn dùng, ở phần giải thích.
+- Thumbnail không ghi "VÍ DỤ GIẢ ĐỊNH".
+
+**Độ dài CK:** 8–13 phút, tức khoảng 1.700–2.700 âm tiết.
+
+**Nhóm chủ đề của lô:** 2 bài tài chính cá nhân, 2 bài đầu tư, 1 bài quyết định tài chính trong gia đình.
+
+---
+
+## B1 · Trợ cấp thất nghiệp: `ck-f1-tro-cap-that-nghiep`
+
+| Mục | Nội dung |
+|---|---|
+| Nhu cầu | Người sắp nghỉ hoặc vừa mất việc gõ "trợ cấp thất nghiệp", "nghỉ việc cần bao nhiêu tiền". Luật Việc làm 74/2025 có hiệu lực 01/01/2026, đây là diễn biến mới |
+| Câu hỏi trung tâm | Trợ cấp thất nghiệp thật sự đỡ được bạn bao nhiêu tháng, và còn hở bao nhiêu? |
+| Góc khác biệt | Kênh khác giảng thủ tục. Bài này đặt trợ cấp cạnh chi phí sống và vẽ khoản hở cộng dồn theo tháng |
+| 3 tiêu đề | (1) Nghỉ Việc Lương 15 Triệu: Trợ Cấp Thất Nghiệp Mấy Tháng? · (2) Mất Việc Năm 2026: Trợ Cấp Đỡ Bạn Được Bao Lâu? · (3) Hơn 330 Nghìn Người Nhận Trợ Cấp Thất Nghiệp: Đủ Sống Không? |
+| 2 thumbnail | (a) "60% LƯƠNG" cỡ lớn, một cột lương bị cắt còn 60%, nền tối · (b) "ĐỦ MẤY THÁNG?" cạnh một lịch xé còn vài tờ |
+| Hook 30 giây | **Sự thật:** 6 tháng đầu 2026 có 332.629 quyết định hưởng trợ cấp thất nghiệp (BHXH Việt Nam). **Nghịch lý:** trợ cấp là 60% lương, có trần, và chỉ kéo dài vài tháng dù bạn đóng nhiều năm. **Câu hỏi:** đóng 7 năm thì được mấy tháng? Câu trả lời có ở cuối |
+| Cấu trúc | Hook (số thật) → luật mới đổi gì → công thức 60% và trần vùng → ví dụ (chị Lan, ghi rõ giả định) → thác chi phí theo tháng → những trường hợp bị dừng hưởng → kết: khoản hở và việc người xem tự tính được |
+| Nguồn | Luật 74/2025/QH15; NĐ 293/2025/NĐ-CP; BHXH Việt Nam (số 6 tháng đầu 2026) |
+| Độ dài | khoảng 11 phút (hiện 2.351 âm tiết) |
+
+## B2 · Viện phí và bảo hiểm y tế: `ck-f2-vien-phi-bhyt`
+
+| Mục | Nội dung |
+|---|---|
+| Nhu cầu | Người xem gõ "viện phí", "bảo hiểm y tế chi trả bao nhiêu", "miễn viện phí toàn dân". Nghị quyết 72-NQ/TW (09/2025) đang là tin nóng |
+| Câu hỏi trung tâm | Có thẻ bảo hiểm y tế rồi, vì sao người Việt vẫn tự trả gần nửa tiền khám chữa bệnh? |
+| Góc khác biệt | Bóc từng lớp hoá đơn bằng biểu đồ thác, và nói rõ cái gì "miễn viện phí" chưa phủ tới |
+| 3 tiêu đề | (1) Có Bảo Hiểm Y Tế Vẫn Trả 40%: Tiền Viện Phí Đi Đâu? · (2) Nằm Viện 7 Ngày Tốn Bao Nhiêu? Bảo Hiểm Y Tế Trả Phần Nào · (3) Miễn Viện Phí Toàn Dân: Năm 2030 Bạn Còn Trả Gì? |
+| 2 thumbnail | (a) "94% CÓ THẺ" đối lập với "40% TỰ TRẢ", hai khối màu · (b) "AI TRẢ PHẦN NÀY?" trên một hoá đơn bị khoanh đỏ |
+| Hook 30 giây | **Sự thật:** hết 2024 có 94,29% dân số tham gia bảo hiểm y tế, nhưng năm 2025 tiền túi vẫn khoảng 40% tổng chi y tế (Bộ Y tế). **Nghịch lý:** gần như ai cũng có thẻ. **Câu hỏi:** phần 40% ấy nằm ở đâu trên hoá đơn? |
+| Cấu trúc | Hook → luật 51/2024 đổi gì → ba mức hưởng → ví dụ 7 ngày (anh Minh, ghi rõ giả định) → phần ngoài hoá đơn → lộ trình miễn viện phí tới 2030: đã có và chưa có → kết |
+| Nguồn | Luật 51/2024/QH15; NĐ 188/2025; NQ 72-NQ/TW; BHXH Việt Nam; Bộ Y tế |
+| Độ dài | khoảng 12,5 phút (hiện 2.694 âm tiết) |
+
+## B3 · MỚI, thay bài tiền mừng cưới: `ck-i1-100-trieu-tiet-kiem-hay-vnindex`
+
+**Vì sao đổi:**
+- Kho của bài tiền mừng cưới không có số thật nào về mức mừng, nên bài chủ yếu dựa vào ví dụ giả định. Chỉ đạo yêu cầu tránh điều này.
+- Lô còn thiếu bài đầu tư.
+- Bài tiền mừng cưới dời sang **đầu tháng 1/2027**, sát Tết Đinh Mùi (06/02/2027) và mùa cưới. Lúc đó cần nghiên cứu thêm khảo sát thật.
+
+| Mục | Nội dung |
+|---|---|
+| Nhu cầu | "Có 100 triệu nên làm gì", "gửi tiết kiệm hay đầu tư". Hai Long CK đang thắng đều là backtest số liệu thật (mua đều VN-Index 8 năm: 82 view; 11 đợt xếp hàng mua vàng: 55 view) |
+| Câu hỏi trung tâm | Cùng 100 triệu từ năm 2018: gửi tiết kiệm, bỏ một lần vào VN-Index, hay chia ra mua đều mỗi tháng, cách nào còn nhiều tiền nhất, và cách nào làm bạn mất ngủ nhiều nhất? |
+| Góc khác biệt | Dữ liệu thật từng phiên (chartdata: VN-Index + lãi tiết kiệm), có cả **giai đoạn tệ nhất** cho từng cách, không chỉ kết quả cuối |
+| 3 tiêu đề | (1) 100 Triệu Từ 2018: Gửi Tiết Kiệm Hay Mua VN-Index? · (2) Bỏ 100 Triệu Vào Chứng Khoán Đúng Đỉnh 2018: Giờ Còn Bao Nhiêu? · (3) Tiết Kiệm, Bỏ Một Lần, Hay Mua Đều: 8 Năm Dữ Liệu Thật |
+| 2 thumbnail | (a) 3 đường đua cỡ lớn, chữ "100 TRIỆU → ?" · (b) "ĐỈNH 2018" có mũi tên rơi, đối lập với "TIẾT KIỆM" |
+| Hook 30 giây | **Sự thật:** tháng 4/2018 VN-Index lập đỉnh 1.204 điểm; người bỏ tiền đúng hôm đó phải chờ nhiều năm mới về lại vốn. Số chính xác do `chartdata` tính. **Câu hỏi:** vậy bỏ tiền đúng đỉnh có còn thua gửi tiết kiệm không? |
+| Cấu trúc | Hook (đỉnh 2018) → ba cách và luật chơi (phí, thuế, lãi tiết kiệm giả định, cổ tức hay không) → cuộc đua 2018–2026 (`race`) → giai đoạn tệ nhất của từng cách (giảm sâu nhất, số tháng âm) → nếu bắt đầu ngay trước đợt giảm 2022 thì sao → giới hạn của backtest → kết |
+| Nguồn | Dữ liệu VN-Index từng phiên (HOSE qua vnstock, đã có trong repo); lãi tiết kiệm bình quân theo năm (Ngân hàng Nhà nước / báo); không nêu tên ngân hàng |
+| Độ dài | khoảng 10–12 phút |
+| Việc | Bài mới hoàn toàn: R (nghiên cứu) → W1 → W2 |
+
+## B4 · Vợ chồng chia tiền: `ck-f4-vo-chong-chia-tien`
+
+| Mục | Nội dung |
+|---|---|
+| Nhu cầu | "tài chính vợ chồng", "cách quản lý tiền bạc vợ chồng", "bảng chi tiêu gia đình" |
+| Câu hỏi trung tâm | Chia đôi tiền nhà nghe rất công bằng, vì sao người lương thấp lại hết tiền trước? |
+| Góc khác biệt | Đặt 3 cách chia cạnh nhau, đi suốt 12 tháng, bằng cột chồng. Dẫn nghiên cứu thật về cặp đôi gộp hay tách tiền |
+| 3 tiêu đề | (1) Vợ 15 Triệu, Chồng 25 Triệu: Chia Tiền Nhà Sao Công Bằng? · (2) Chia Đôi Tiền Nhà: Vì Sao Người Lương Thấp Hết Tiền Trước? · (3) Gộp Hay Tách Tiền Vợ Chồng: Nghiên Cứu Nói Gì? |
+| 2 thumbnail | (a) "50/50 = CÔNG BẰNG?" có hai ví lệch nhau · (b) "CÒN 2 TRIỆU" đối lập với "CÒN 12 TRIỆU" |
+| Hook 30 giây | **Sự thật:** câu hỏi người ta thật sự gõ, "cách quản lý tài chính vợ chồng", và một nghiên cứu có thật trong `facts.md` về cặp đôi gộp tiền. **Nghịch lý:** chia đôi nghe công bằng nhưng ra kết quả lệch. Ví dụ Thảo–Nam ghi rõ giả định, vào từ CH01 |
+| Cấu trúc | Hook → vì sao tiền làm vợ chồng căng thẳng (nghiên cứu) → ba cách chia → 12 tháng của từng cách → khi một người nghỉ sinh hay mất việc → luật hôn nhân và gia đình nói gì về thu nhập (1–2 câu) → kết: khung tự chọn, không phán cách nào đúng |
+| Nguồn | KSMS 2022/2024 (Cục Thống kê); Luật 52/2014/QH13; nghiên cứu học thuật trong `facts.md` |
+| Độ dài | khoảng 12 phút (hiện 2.581 âm tiết) |
+
+## B5 · Giá trần, giá sàn, T+2 (Chứng Khoán Từ Số 0): `ck-c6-gia-tran-san-t2`
+
+| Mục | Nội dung |
+|---|---|
+| Nhu cầu | Người mới mở tài khoản gõ "T+2 là gì", "mua cổ phiếu bao lâu thì bán được" |
+| Câu hỏi trung tâm | Mua cổ phiếu sáng thứ Hai, vì sao phải tới chiều thứ Tư mới bán được, và điều đó đã làm ai mất tiền? |
+| Góc khác biệt | Mở bằng phiên có thật, không giảng định nghĩa. Bài trước (`ck-c2`) nói về "kẹt sàn không bán được"; bài này nói về chuyện **chưa có hàng để bán** |
+| 3 tiêu đề | (1) Mua Thứ Hai, Thứ Tư Mới Bán Được: T+2 Là Gì? · (2) Bắt Đáy Ngày 9/4/2025: Vì Sao Không Bán Kịp? · (3) Giá Trần, Giá Sàn, T+2: Ba Luật Người Mới Hay Trả Giá |
+| 2 thumbnail | (a) "THỨ 2 → THỨ 4" cỡ lớn, có ổ khoá trên nút BÁN · (b) "147 MÃ SÀN" cạnh lịch T, T+1, T+2 |
+| Hook 30 giây | **Sự thật:** ngày 09/04/2025, VN-Index giảm 3,4% về 1.094,3 điểm, 147 mã giảm sàn (VTV). **Nghịch lý:** người bắt đáy hôm đó dù đúng vẫn chưa bán được ngay. **Câu hỏi:** vì sao? Ví dụ anh Tuấn ghi rõ giả định, vào từ CH01 |
+| Cấu trúc | Hook (phiên thật) → biên độ trần/sàn (±7/10/15%) → chu kỳ thanh toán T+2 → ví dụ 100 cổ phiếu → phiên 03/04/2025 → lộ trình T+0 (chưa chốt) → kết |
+| Nguồn | TT 120/2020/TT-BTC; HOSE; VSDC; VietnamPlus, VTV (phiên 03/04 và 09/04/2025) |
+| Độ dài | khoảng 11 phút (hiện 2.306 âm tiết) |
+
+---
+
+## Việc sau khi brief được duyệt
+
+1. **W1c**, giao Codex, cho B1, B2, B4, B5: viết lại CH00 theo hook ở trên; dời nhân vật xuống CH01; giữ phần còn lại.
+   - Cảnh W2 đã dựng của F1 và F2 phải dựng lại phần CH00 và CH01.
+2. **B3 mới:** R → W1 → W2, dùng hạ tầng `chartdata` (VN-Index thật).
+3. Thumbnail theo 2 concept ở trên, không ghi "VÍ DỤ GIẢ ĐỊNH".
+4. **Lịch** (chủ kênh, 27/10: 5 Long/tuần cho lô mới), 20:00 VN: B1 T4 18/11 · B3 T5 19/11 · B2 T6 20/11 · B5 T7 21/11 · B4 CN 22/11.
+
+
+---SCRIPT---
+
+# 100 Triệu Từ 2018: Gửi Tiết Kiệm Hay Mua VN-Index?
+
+Tiêu đề phụ: 100 Triệu Đúng Đỉnh 2018: Giờ Còn Bao Nhiêu? · 100 Triệu Trong 8 Năm: Mua Một Lần Hay Mua Đều?
+
+Câu hỏi trung tâm: Cùng một trăm triệu từ năm hai nghìn không trăm mười tám, gửi tiết kiệm, bỏ một lần vào chỉ số, hay mua đều, cách nào còn nhiều tiền hơn và cách nào đòi hỏi chịu đựng lớn hơn?
+
+## 5 câu trước khi viết
+
+Một: Người xem là người đang có một khoản tiền nhàn rỗi và muốn hiểu rủi ro bằng số liệu.
+Hai: Họ tò mò kết quả cuối cùng, nhưng cũng lo lúc tài khoản rơi sâu.
+Ba: Họ bấm vì một trăm triệu và đỉnh năm hai nghìn không trăm mười tám là tình huống rất dễ hình dung.
+Bốn: Thumbnail truyền một ý: cùng một trăm triệu nhưng ba đường đi khác nhau.
+Năm: Tiêu đề khớp với ba mươi giây đầu vì video bắt đầu ngay tại đỉnh chỉ số năm hai nghìn không trăm mười tám.
+
+## Bước lập luận
+
+| Mốc | Chương, câu | Bước tiến |
+|---|---|---|
+| Khoảng phút ba | CH02 | Kết quả cuối không nói hết cảm giác khi khoản tiền rơi sâu. |
+| Khoảng phút sáu | CH04 | Mua đều giảm mức rơi, nhưng vẫn không xóa hoàn toàn rủi ro. |
+| Khoảng phút chín | CH05 | Không có chuỗi lãi suất bình quân thì không thể tuyên bố tiết kiệm thắng hay thua. |
+| Khoảng phút mười một | CH06 | Backtest là bản đồ quá khứ, không phải dự báo hay mệnh lệnh. |
+
+## Biểu đồ
+
+| Chương | Biểu đồ | Điểm số và câu neo |
+|---|---|---|
+| CH00 | race tuyệt đối | Chín tháng tư năm hai nghìn không trăm mười tám: chỉ số một nghìn hai trăm lẻ bốn phẩy ba ba điểm; đường một lần mở ở một trăm triệu. |
+| CH01 | race ba đường có nhãn thiếu dữ liệu tiết kiệm | Một trăm triệu, hai mươi bốn lần mua, mỗi lần khoảng bốn phẩy một bảy triệu. |
+| CH02 | race và waterfall | Hai mươi bốn tháng ba năm hai nghìn không trăm hai mươi: một lần còn khoảng năm mươi bốn phẩy năm hai triệu. |
+| CH03 | race và line | Cuối năm hai nghìn không trăm hai mươi mốt: chỉ số một nghìn bốn trăm chín mươi tám phẩy hai tám điểm. |
+| CH04 | race và bars | Mười lăm tháng mười một năm hai nghìn không trăm hai mươi hai: mua đều còn khoảng chín mươi ba phẩy sáu ba triệu. |
+| CH05 | race và dots | Mười lăm tháng một năm hai nghìn không trăm hai mươi bốn: mốc lãi suất quan sát bốn phẩy chín phần trăm một năm, không phải bình quân năm. |
+| CH06 | race và counter | Sáu tháng mười năm hai nghìn không trăm hai mươi sáu: một lần khoảng một trăm bốn mươi lăm phẩy bốn tám triệu; mua đều khoảng một trăm tám mươi phẩy sáu mốt triệu. |
+
+## CH00 · Đỉnh cao và câu hỏi khó
+
+Ngày chín tháng tư năm hai nghìn không trăm mười tám, VN-Index đóng cửa một nghìn hai trăm lẻ bốn phẩy ba ba điểm.
+Đó là điểm bắt đầu của một trăm triệu trong ví dụ giả định của video này.
+Nếu mô phỏng mua theo chỉ số giá ngày đó, khoản tiền từng rơi về khoảng năm mươi bốn phẩy năm hai triệu.
+Nhưng ở phiên dữ liệu cuối, cùng phép tính lại lên khoảng một trăm bốn mươi lăm phẩy bốn tám triệu.
+Nghịch lý nằm ở đây.
+Kết quả cuối có thể xanh, còn đoạn đường ở giữa có thể rất khó chịu.
+Không có cổ tức.
+Nó cũng không phải thứ bạn mua trực tiếp được.
+Video chỉ dùng nó làm thước đo giá của cổ phiếu niêm yết.
+Đó là ví dụ giả định.
+Phí giao dịch và thuế bán cũng đã được đặt vào phép tính minh họa.
+Điều chưa thể đặt vào là một đường tiết kiệm hoàn chỉnh.
+Kho chưa có chuỗi bình quân từng năm.
+Vì vậy chưa xếp hạng tiết kiệm.
+Câu hỏi là: nếu cùng bắt đầu với một trăm triệu, đoạn rơi nào bạn phải nhìn thẳng vào trước khi nhìn kết quả cuối?
+Cuối video, ta sẽ quay lại câu hỏi đó.
+
+## CH01 · Ba luật chơi, một khoản tiền
+
+Ba luật chơi hiện ra.
+Tất cả đều là ví dụ giả định để tính, không phải lời khuyên đầu tư.
+Luật đầu là gửi kỳ hạn mười hai tháng rồi tái tục.
+Muốn tính luật này đúng, cần lãi suất bình quân từng năm có nguồn kiểm được.
+Kho hiện chỉ có vài mốc quan sát và vài khoảng lãi suất.
+Một mốc là chưa đủ.
+Vì thế đường tiết kiệm được giữ nhãn chưa xếp hạng.
+Chỗ trống vẫn để trống.
+Luật hai là bỏ một trăm triệu vào chỉ số giá ở ngày chín tháng tư năm hai nghìn không trăm mười tám.
+Phí giả định lúc mua là không phẩy mười lăm phần trăm.
+Khi bán, phép tính trừ thêm không phẩy mười lăm phần trăm phí và không phẩy một phần trăm thuế chuyển nhượng.
+Sau phí mua, giá trị mở đầu hiển thị khoảng chín mươi chín phẩy sáu triệu.
+Phí đã xuất hiện ngay đầu.
+Luật ba chia một trăm triệu thành hai mươi bốn phần.
+Mỗi phần khoảng bốn phẩy một bảy triệu.
+Mỗi tháng mua ở phiên đầu tiên, từ tháng tư năm hai nghìn không trăm mười tám đến tháng ba năm hai nghìn không trăm hai mươi.
+Phí và thuế giả định được áp theo cùng cách.
+Đây không phải lịch sử giao dịch của bất kỳ ai.
+Nó chỉ tách câu hỏi thời điểm mua ra khỏi câu hỏi chọn chỉ số.
+Ba luật chơi cùng nhìn một dữ liệu giá.
+Nhưng cách chịu biến động của chúng không giống nhau.
+
+## CH02 · Đoạn rơi mà kết quả cuối che mất
+
+Biểu đồ đi tiếp tới ngày hai mươi bốn tháng ba năm hai nghìn không trăm hai mươi.
+VN-Index đóng cửa sáu trăm năm mươi chín phẩy hai mốt điểm.
+So với điểm vào, chỉ số thấp hơn khoảng bốn mươi lăm phẩy hai sáu phần trăm.
+Với luật bỏ một lần và phí giả định, một trăm triệu còn khoảng năm mươi bốn phẩy năm hai triệu.
+Đây là đáy của đường bỏ một lần trong cửa sổ dữ liệu.
+Đó là cú rơi sâu.
+Kết quả cuối không kể hết.
+Đây là ví dụ giả định.
+Nó cũng chưa tính chênh lệch giá lúc khớp lệnh thật.
+Lúc ấy, người mua đều chưa góp đủ một trăm triệu.
+Để so sánh công bằng hơn, ta xét đáy sau khi lịch góp đã hoàn tất.
+Ở cùng ngày ấy, đường mua đều quy đổi còn khoảng sáu mươi bảy phẩy sáu tám triệu.
+Con số thấp hơn một trăm, nhưng cao hơn đường bỏ một lần.
+Sự khác nhau đến từ những lần mua sau khi giá đã giảm.
+Không phải vì mua đều xóa được rủi ro.
+Nó chỉ thay đổi lúc số tiền đi vào dữ liệu.
+CPI bình quân năm hai nghìn không trăm hai mươi tăng ba phẩy hai ba phần trăm.
+Giá cả vẫn đi tiếp, ngay cả khi biểu đồ tài sản đi xuống.
+Hai thứ không giống nhau.
+Một đoạn rơi sâu thường đặt ra câu hỏi khác với một đoạn tăng.
+Bạn có thể tiếp tục giữ một phép tính đang đỏ hay không?
+Biểu đồ không trả lời hộ bạn.
+
+## CH03 · Khi đường giá quay lên
+
+Đường giá không đi thẳng.
+Nhưng tới phiên cuối năm hai nghìn không trăm hai mươi mốt, VN-Index ở một nghìn bốn trăm chín mươi tám phẩy hai tám điểm.
+Phiên cuối năm hai nghìn không trăm hai mươi là một nghìn một trăm lẻ ba phẩy tám bảy điểm.
+Khoảng cách hai mốc cho thấy một năm tăng rất mạnh trong dữ liệu.
+Đường bỏ một lần trong ví dụ giả định khi đó khoảng một trăm hai mươi ba phẩy chín một triệu.
+Nó đã quay lại trên một trăm triệu vào ngày một tháng tư năm hai nghìn không trăm hai mươi mốt.
+Các tháng cũ vẫn còn đó.
+Nó chỉ đánh dấu lúc con số đi qua điểm xuất phát.
+Đường mua đều sau khi góp đủ quay lại một trăm triệu vào ngày mười chín tháng mười một năm hai nghìn không trăm hai mươi.
+Hai ngày hồi phục khác nhau vì hai cách nạp tiền khác nhau.
+Cuối năm hai nghìn không trăm hai mươi mốt, đường mua đều khoảng một trăm năm mươi ba phẩy tám bốn triệu.
+Đây vẫn là ví dụ giả định dựa trên chỉ số giá.
+Không có cổ tức nào được cộng thêm vào hai đường này.
+CPI bình quân năm hai nghìn không trăm hai mươi mốt tăng một phẩy tám bốn phần trăm.
+Đó là một mốc thấp.
+Nhưng sức mua cuối kỳ vẫn chưa được tính trọn cho năm hai nghìn không trăm hai mươi sáu.
+Vì mới có số bình quân chín tháng của năm đó.
+Thiếu dữ liệu phải nói thiếu.
+Nó không tự kéo dài đường bằng một dự đoán.
+Và đường hồi phục cũng không phải lời hứa cho lần giảm sau.
+
+## CH04 · Đỉnh mới, rồi một lần thử nữa
+
+Ngày sáu tháng một năm hai nghìn không trăm hai mươi hai, VN-Index đóng cửa một nghìn năm trăm hai mươi tám phẩy năm bảy điểm.
+Đó là đỉnh giá đóng cửa trong dữ liệu của video.
+Đường bỏ một lần khi ấy khoảng một trăm hai mươi sáu phẩy bốn hai triệu.
+Đường mua đều khoảng một trăm năm mươi sáu phẩy chín lăm triệu.
+Mọi thứ trông ổn.
+Rồi đường giá đổi hướng.
+Ngày mười lăm tháng mười một cùng năm, chỉ số đóng cửa chín trăm mười một phẩy chín mươi điểm.
+So với đỉnh tháng một, mức giảm là khoảng bốn mươi phẩy ba lăm phần trăm.
+Đường bỏ một lần về khoảng bảy mươi lăm phẩy bốn hai triệu.
+Đường mua đều về khoảng chín mươi ba phẩy sáu ba triệu.
+Ví dụ giả định này cho thấy một đường ít rơi hơn không đồng nghĩa không rơi.
+Không cách nào luôn tốt hơn.
+Nó chỉ ghi lại cách hai quy tắc gặp đúng các phiên đã xảy ra.
+CPI bình quân năm hai nghìn không trăm hai mươi hai tăng ba phẩy mười lăm phần trăm.
+Cuối năm đó, có tin về vài mức lãi suất mười hai tháng từ năm phẩy sáu đến bảy phẩy bốn phần trăm một năm.
+Đó là khoảng quan sát ở vài nơi, không phải bình quân hệ thống.
+Vì vậy nó không được đưa vào đường tiết kiệm.
+Đây là chỗ dễ biến một video thành kết luận quá đà.
+Một con số thật nhưng sai phạm vi vẫn dẫn đến phép so sánh sai.
+Ba đường phải cùng chuẩn.
+
+## CH05 · Đường tiết kiệm đang thiếu điều gì
+
+Từ năm hai nghìn không trăm hai mươi ba, mặt bằng lãi suất đi xuống trong các mốc quan sát.
+Đầu tháng mười hai năm hai nghìn không trăm hai mươi ba, một nguồn thị trường nêu mức bình quân mười hai tháng là năm phẩy mười ba phần trăm một năm.
+Ngày mười lăm tháng một năm hai nghìn không trăm hai mươi bốn, cùng kiểu quan sát nêu bốn phẩy chín phần trăm một năm.
+Lãi suất có thay đổi.
+Chúng không phải bình quân năm.
+Ví dụ giả định gửi tiết kiệm không được phép lấy một mốc tháng rồi kéo dài tám năm.
+Làm vậy sẽ tạo ra một đường rất mượt, nhưng không phải dữ liệu thật.
+Đó là lý do biểu đồ chính vẫn vẽ ba vị trí.
+Hai vị trí có chuỗi tính được là bỏ một lần và mua đều.
+Vị trí tiết kiệm ghi rõ chưa thể tính đầy đủ.
+Thiếu cũng là một kết quả.
+CPI bình quân năm hai nghìn không trăm hai mươi ba tăng ba phẩy hai lăm phần trăm.
+CPI bình quân năm hai nghìn không trăm hai mươi bốn tăng ba phẩy sáu ba phần trăm.
+Lạm phát cho thấy con số tiền đứng yên cũng đổi sức mua theo thời gian.
+Nhưng video không biến CPI thành lãi suất thực khi thiếu chuỗi tiết kiệm hoàn chỉnh.
+Mỗi năm phải có nguồn, phương pháp và giới hạn đi cùng.
+Không có đường tắt nào từ vài tiêu đề báo đến một kết luận tám năm.
+Phí giao dịch cũng là giả định minh họa không phẩy mười lăm phần trăm mỗi chiều.
+Phí thực tế, giá khớp và sản phẩm thực có thể khác.
+Đổi giả định, đổi kết quả.
+
+## CH06 · Kết quả cuối không phải mệnh lệnh
+
+Ta quay lại phiên sáu tháng mười năm hai nghìn không trăm hai mươi sáu.
+VN-Index đóng cửa một nghìn bảy trăm năm mươi chín phẩy không tám điểm.
+Với luật bỏ một lần, phí và thuế giả định, một trăm triệu thành khoảng một trăm bốn mươi lăm phẩy bốn tám triệu.
+Với luật mua đều hai mươi bốn tháng, nó thành khoảng một trăm tám mươi phẩy sáu mốt triệu.
+Đó là dữ liệu quá khứ.
+Chúng không dự báo ngày mai.
+Chúng cũng không nói bạn nên mua, bán hay gửi ở đâu.
+Đường bỏ một lần từng ở dưới một trăm triệu trong một giai đoạn dài.
+Đường mua đều cũng có lúc dưới một trăm triệu sau khi góp đủ.
+Mức đáy của chúng lần lượt khoảng năm mươi bốn phẩy năm hai và sáu mươi bảy phẩy sáu tám triệu.
+Đó là phần giá phải nhìn thấy khi đọc kết quả cuối.
+Còn tiết kiệm thì sao?
+Chưa thể xếp hạng.
+Không có chuỗi bình quân từng năm đủ chuẩn, không có phép so sánh hoàn chỉnh.
+VN-Index không gồm cổ tức trong mô phỏng này.
+Thuế chuyển nhượng không phẩy một phần trăm và phí giả định đã làm kết quả thấp hơn đường giá thô.
+Quá khứ không phải dự báo.
+Ví dụ giả định không phải tư vấn đầu tư.
+Nội dung giáo dục, không phải tư vấn đầu tư.
+Vòng mở ở đầu video vì thế có câu trả lời khác một bảng xếp hạng.
+Một trăm triệu không chỉ có kết quả cuối.
+Nó còn có thời điểm vào và đoạn rơi.
+Nó còn có phí, thuế và dữ liệu thiếu.
+Nó còn có khả năng chịu đựng của bạn.
+Trước khi tin một đường nào, hãy hỏi nó đã dùng dữ liệu nào và đã bỏ sót điều gì.
+
+
+---FACTS---
+
+# Kho dữ kiện R6 — 100 triệu: tiết kiệm hay VN-Index?
+
+Ngày kiểm: 27/10/2026. Đây là kho nghiên cứu cho W1, không phải kịch bản hay khuyến nghị đầu tư. URL dưới đây đã mở trong phiên. Nhãn **mạnh** là nguồn cơ quan thống kê/chính phủ hoặc dữ liệu CSV mà ticket cấp; **vừa** là báo chí/dữ liệu tổng hợp.
+
+## Phạm vi và phương pháp phải giữ nguyên
+
+- CSV do ticket cấp: `data/ck/vnindex_1d_2016_2018.csv` (01/12/2016–05/10/2018) và `data/ck/vnindex_1d.csv` (08/10/2018–06/10/2026), giá đóng cửa từng phiên từ HOSE qua vnstock/VCI.
+- VN-Index là chỉ số giá; nó không phải sản phẩm có thể mua trực tiếp và phép tính dưới đây **không cộng cổ tức**. Mô tả cách chỉ số phản ánh thay đổi vốn hóa của cổ phiếu niêm yết HOSE: https://support.vndirect.com.vn/hc/vi/articles/13971271685273-Ch%E1%BB%89-s%E1%BB%91-VN-INDEX-l%C3%A0-g%C3%AC (**vừa**).
+- Khi mô phỏng bán, áp thuế chuyển nhượng chứng khoán cá nhân 0,1% trên giá chuyển nhượng; Thông tư 111/2013/TT-BTC: https://chinhphu.vn/default.aspx?docid=169566&pageid=27160 (**mạnh**). Chưa có bộ phí giao dịch thống nhất theo từng năm, nên W1 phải để phí giao dịch là biến/ghi rõ giả định, không tự coi bằng 0 mà không nói.
+- Không nêu tên tổ chức nhận tiền gửi, quỹ hay mã chứng khoán; không suy kết lợi nhuận tương lai từ backtest này.
+
+## Dữ kiện theo chương
+
+### CH00 — Cú rơi từ đỉnh (4)
+
+1. Ngày 09/04/2018, CSV ticket cấp ghi VN-Index đóng cửa **1.204,33 điểm**; đây là điểm vào của phương án bỏ một lần. **mạnh — dữ liệu ticket cấp;** phương pháp chỉ số: URL phạm vi ở trên.
+2. Bình quân CPI năm 2018 tăng **3,54%** so với năm trước. https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2021/12/thong-cao-bao-chi-ve-tinh-hinh-gia-thang-12-quy-iv-va-nam-2021/ (**mạnh**).
+3. Đầu năm 2018, mức bình quân tiền gửi VND kỳ hạn trên 12 tháng được nêu khoảng **6,55%/năm** (2 tháng đầu năm); đây là điểm quan sát, **không phải bình quân cả năm**. https://cafef.vn/nhieu-ngan-hang-tang-lai-suat-huy-dong-2018030723375295.chn (**vừa**).
+4. Câu hỏi của video là so sánh một khoản **100 triệu đồng** đặt vào ba luật chơi từ 04/2018; đó là **VÍ DỤ GIẢ ĐỊNH**, không phải lời khuyên. **mạnh — giả định biên tập.**
+
+### CH01 — Ba luật chơi (4)
+
+5. Phương án A: 100 triệu gửi kỳ hạn 12 tháng, tái tục hàng năm theo một chuỗi lãi suất được W1 chốt nguồn. Đây là **VÍ DỤ GIẢ ĐỊNH**; số dư cuối năm = số dư đầu năm × (1 + lãi suất năm). **mạnh — công thức.**
+6. Phương án B: mua theo mức đóng cửa 09/04/2018, số đơn vị quy ước = 100.000.000 / 1.204,33; giá trị hàng ngày = số đơn vị × điểm đóng cửa. **VÍ DỤ GIẢ ĐỊNH; mạnh — công thức và CSV ticket cấp.**
+7. Phương án C: chia 100 triệu thành **24** phần bằng nhau, mua tại phiên đầu tiên của từng tháng từ 04/2018 đến 03/2020. Đây là **VÍ DỤ GIẢ ĐỊNH** để so thời điểm mua, không phải lịch sử giao dịch của người thật. **mạnh — giả định.**
+8. Thuế 0,1% tính trên giá chuyển nhượng, vì vậy chỉ trừ ở giá trị bán cuối kỳ trong phép tính B/C; nguồn Thông tư 111/2013/TT-BTC: https://chinhphu.vn/default.aspx?docid=169566&pageid=27160 (**mạnh**).
+
+### CH02 — Đoạn tệ nhất (4)
+
+9. CSV ticket cấp ghi ngày 24/03/2020 VN-Index đóng cửa **659,21 điểm**, là đáy giá đóng cửa sâu nhất của phương án B trong cửa sổ 09/04/2018–06/10/2026. **mạnh — TÍNH từ CSV.**
+10. So với 1.204,33 điểm ngày vào, mức 659,21 điểm thấp hơn **45,26%**. Công thức: 659,21 / 1.204,33 − 1. **mạnh — TÍNH từ CSV.**
+11. CPI bình quân năm 2020 tăng **3,23%**. https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2021/12/thong-cao-bao-chi-ve-tinh-hinh-gia-thang-12-quy-iv-va-nam-2021/ (**mạnh**).
+12. Trong năm 2020, bài báo ghi một nhóm lãi suất 12–24 tháng giảm từ **6,5% xuống 6,0%/năm**; đây chỉ là quan sát nhóm, không dùng thay bình quân năm. https://www.tinnhanhchungkhoan.vn/lai-suat-vao-dot-cat-giam-moi-post248257.html (**vừa**).
+
+### CH03 — Phục hồi và CPI (4)
+
+13. CPI bình quân năm 2021 tăng **1,84%**, thấp nhất kể từ 2016 theo Cục Thống kê. https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2022/01/kiem-soat-lam-phat-thap-thanh-cong-cua-nam-2021-va-ap-luc-trong-nam-2022/ (**mạnh**).
+14. Tháng 7/2021, mặt bằng tiền gửi VND kỳ hạn 12–24 tháng được nêu là **5,4%–6,8%/năm**; đó là **khoảng**, không phải bình quân 12 tháng. https://www.div.gov.vn/lai-suat-cho-vay-giam-lai-suat-tien-gui-on-dinh (**vừa**).
+15. CSV ticket cấp ghi phiên cuối năm 2021 có VN-Index **1.498,28 điểm**; so với cuối 2020 là 1.103,87 điểm. **mạnh — TÍNH từ CSV.**
+16. Chỉ số giá không bao gồm cổ tức trong backtest này, nên đây là phép đo biến động giá, không phải tổng lợi nhuận của bất kỳ quỹ nào. Mô tả VN-Index theo vốn hóa: https://support.vndirect.com.vn/hc/vi/articles/13971271685273-Ch%E1%BB%89-s%E1%BB%91-VN-INDEX-l%C3%A0-g%C3%AC (**vừa**).
+
+### CH04 — Đỉnh 2022, đáy 2022 (4)
+
+17. CSV ticket cấp ghi ngày 06/01/2022 VN-Index đóng cửa **1.528,57 điểm**, là đỉnh giá đóng cửa trong dữ liệu. **mạnh — TÍNH từ CSV.**
+18. CSV ticket cấp ghi ngày 15/11/2022 đóng cửa **911,90 điểm**, thấp hơn 40,35% so với 1.528,57 điểm. **mạnh — TÍNH từ CSV.**
+19. CPI bình quân năm 2022 tăng **3,15%**. https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2022/12/thong-cao-bao-chi-ve-tinh-hinh-gia-thang-12-quy-iv-va-nam-2022/ (**mạnh**).
+20. Cuối 2022, một mức 12 tháng được báo chí ghi từ **5,6% lên 7,4%/năm** tại một số tổ chức; đó không đại diện toàn thị trường và không được dùng làm bình quân. https://znews.vn/bidv-vietinbank-va-agribank-tang-lai-suat-huy-dong-len-7-4-nam-post1369350.html (**vừa**).
+
+### CH05 — Giai đoạn lãi suất thấp (4)
+
+21. CPI bình quân năm 2023 tăng **3,25%**. https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2023/12/thong-cao-bao-chi-ve-tinh-hinh-gia-thang-12-quy-iv-va-nam-2023/ (**mạnh**).
+22. Đầu tháng 12/2023, lãi suất huy động bình quân kỳ hạn 12 tháng được một nguồn dữ liệu thị trường ghi **5,13%/năm**; đây là mốc quan sát tháng, không phải bình quân năm. https://tuoitre.vn/lai-suat-tiet-kiem-thap-ki-luc-nen-giam-hon-nua-thi-sao-20231206215733636.htm (**vừa**).
+23. Ngày 15/01/2024, cùng loại bình quân 12 tháng được nêu **4,9%/năm**. https://tuoitre.vn/ha-them-lai-suat-binh-quan-tien-gui-12-thang-lap-day-moi-vua-xuong-dau-4-20240115180305495.htm (**vừa**).
+24. CPI bình quân năm 2024 tăng **3,63%**. https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2025/01/chi-so-gia-tieu-dung-chi-so-gia-vang-va-chi-so-gia-do-la-my-thang-muoi-hai-quy-iv-va-nam-2024/ (**mạnh**).
+
+### CH06 — Điểm dữ liệu mới (4)
+
+25. CSV ticket cấp ghi 09/04/2025 VN-Index đóng cửa **1.094,30 điểm**. **mạnh — TÍNH từ CSV.**
+26. CPI bình quân năm 2025 được Cục Thống kê công bố/ước tổng kết là **3,31%**. https://www.nso.gov.vn/tin-tuc-khac/2026/01/kinh-te-viet-nam-dat-duoc-nhung-ket-qua-quan-trong-toan-dien-nhieu-diem-sang-noi-bat/ (**mạnh**).
+27. Tháng 12/2025, một bản tin thị trường nêu lãi suất huy động bình quân 12 tháng của nhóm tổ chức nhà nước ở **5,2%**; không dùng số này làm bình quân toàn hệ thống hay bình quân cả năm. https://finance.vietstock.vn/downloadedoc/18633 (**vừa**).
+28. Bình quân 9 tháng 2026, CPI tăng **4,52%**; đây chưa phải CPI bình quân cả năm 2026. https://www.nso.gov.vn/tin-tuc-thong-ke/2026/10/thong-cao-bao-chi-ve-tinh-hinh-gia-thang-chin-quy-iii-va-9-thang-nam-2026/ (**mạnh**).
+
+## Mốc và kết quả tính sơ bộ từ CSV
+
+| Mốc | Ngày | Đóng cửa VN-Index | Nguồn |
+|---|---:|---:|---|
+| Đỉnh vào tiền | 09/04/2018 | 1.204,33 | CSV ticket cấp |
+| Đáy Covid | 24/03/2020 | 659,21 | CSV ticket cấp |
+| Đỉnh dữ liệu | 06/01/2022 | 1.528,57 | CSV ticket cấp |
+| Đáy 2022 | 15/11/2022 | 911,90 | CSV ticket cấp |
+| Mốc 2025 | 09/04/2025 | 1.094,30 | CSV ticket cấp |
+| Phiên cuối | 06/10/2026 | 1.759,08 | CSV ticket cấp |
+
+**VÍ DỤ GIẢ ĐỊNH — chưa tính phí giao dịch; B/C chưa trừ thuế bán 0,1% trong số hiển thị:**
+
+| Cách | Giá trị 06/10/2026 | Âm sâu nhất | Tháng dưới 100 triệu | Về lại 100 triệu |
+|---|---:|---|---:|---|
+| Bỏ một lần 09/04/2018 | 146,06 triệu | 24/03/2020: 54,74 triệu (−45,26%) | 60 | cần W1 xác nhận ngày hồi phục theo tiêu chí sau ngày mua |
+| Mua đều 24 tháng (phiên đầu tháng 04/2018–03/2020) | 181,38 triệu | 24/03/2020: 67,97 triệu (−32,03%; sau khi đã góp đủ) | 10 | 18/11/2020 |
+| Gửi 12 tháng cuốn chiếu | **chưa chốt** | không áp dụng nếu không tất toán trước hạn | 0 theo giả định gốc được bảo toàn | không áp dụng |
+
+W1 phải chạy lại với (i) thuế bán 0,1%, (ii) phí giao dịch được nêu rõ hoặc làm hai kịch bản, và (iii) chuỗi **bình quân 12 tháng theo từng năm** có nguồn. Không được thay chuỗi đó bằng các mốc lãi suất đơn lẻ ở trên.
+
+## Bộ số cho biểu đồ
+
+1. **Đường đua chính** — `race`, triệu đồng; các điểm 04/2018, 03/2020, 01/2022, 11/2022, 04/2025, 10/2026; B/C từ CSV, A chờ chuỗi lãi suất chuẩn.
+2. **VN-Index các mốc căng thẳng** — `line`; 1.204,33; 659,21; 1.528,57; 911,90; 1.094,30; 1.759,08 điểm; nguồn CSV ticket cấp.
+3. **Mức giảm từ đỉnh vào tiền** — `waterfall`; 100 → 54,74 → 146,06 triệu, phương án B; VÍ DỤ GIẢ ĐỊNH, công thức theo CSV.
+4. **Mua đều sau góp đủ** — `bars`; 100; 67,97; 100; 181,38 triệu; VÍ DỤ GIẢ ĐỊNH, theo CSV.
+5. **CPI 2018–2026** — `line`; 3,54; 2,79; 3,23; 1,84; 3,15; 3,25; 3,63; 3,31; 4,52% (2026 là 9 tháng); nguồn URL Cục Thống kê ở trên.
+6. **Lãi suất quan sát, không dùng thay bình quân năm** — `dots`; 6,55 (đầu 2018); 5,4–6,8 (07/2021); 5,13 (12/2023); 4,9 (15/01/2024); 5,2 (12/2025); %/năm, nguồn từng URL ở trên.
+7. **Số tháng dưới 100 triệu** — `bars`; B: 60; C: 10 (chỉ tính từ lúc C góp đủ); A: 0 theo giả định gốc được bảo toàn; VÍ DỤ GIẢ ĐỊNH/TÍNH CSV.
+8. **24 lần mua đều** — `heat`; mỗi ô 4,1667 triệu đồng trong 04/2018–03/2020; tổng 100 triệu; VÍ DỤ GIẢ ĐỊNH, công thức 100/24.
+9. **Sức mua 100 triệu** — `counter`; chỉ số CPI lũy kế phải tính từ chuỗi 2018–2025 đã chốt; 2026 chưa dùng vì mới có 9 tháng. Công thức: tích (1+CPI năm); nguồn Cục Thống kê.
+
+## Biểu đồ chính
+
+`race` ba đường giá trị danh nghĩa, mốc đầu 100 triệu. CH00 thêm điểm 09/04/2018; CH02 thêm đáy 24/03/2020; CH03 thêm cuối 2021; CH04 thêm đỉnh 06/01 và đáy 15/11/2022; CH05 thêm cuối 2023/2024; CH06 thêm 09/04/2025; CH07 thêm 06/10/2026 và lớp ghi chú CPI. Đường tiết kiệm chỉ bật sau khi W1 chốt bộ lãi suất chuẩn.
+
+## Cold open
+
+1. “Ngày 9 tháng 4 năm 2018, 100 triệu đặt vào VN-Index ở 1.204 điểm. Chưa đầy hai năm sau, cùng phép tính còn khoảng 54,7 triệu. Nhưng đến phiên dữ liệu cuối, nó lại vượt 146 triệu. Nếu biết đoạn rơi ấy trước, bạn có chịu nổi để giữ không?” Biểu đồ race xuất hiện trước giây 15.
+2. “100 triệu không đổi, nhưng một cách phải chịu 60 tháng dưới vốn; một cách mua dần chỉ có 10 tháng sau khi góp đủ. Con số cuối cùng có thể đẹp hơn, vậy vì sao đoạn đường lại quan trọng hơn kết quả?” Biểu đồ cột tháng âm xuất hiện trước giây 15.
+
+## Tiêu đề và thumbnail
+
+- `100 Triệu Từ 2018: Gửi Tiết Kiệm Hay Mua VN-Index?`
+- `100 Triệu Đúng Đỉnh 2018: Giờ Còn Bao Nhiêu?`
+- `100 Triệu Trong 8 Năm: Mua Một Lần Hay Mua Đều?`
+
+1. Chữ lớn **100 TRIỆU → ?**, ba đường đua đơn giản; không ghi giả định.
+2. Chữ lớn **ĐỈNH 2018**, một mũi tên rơi cạnh nhãn **TIẾT KIỆM**; không có logo/tên tổ chức.
+
+## Clip Pexels ngang — ứng viên, phải soi lại trước dùng
+
+| ID | Nội dung | Ghi chú |
+|---:|---|---|
+| 6963480 | tay bấm máy tính, sổ | 16:9; soi logo/chữ |
+| 6780089 | tay và máy tính | 16:9; soi logo/chữ |
+| 8195661 | người dùng máy tính | 16:9; soi logo/chữ |
+| 6794227 | người trước laptop biểu đồ | 16:9; soi logo/chữ trên màn hình |
+| 7593891 | tay, máy tính, ghi chú | cần xác nhận khung ngang trước tải |
+| 6962707 | giấy tờ và máy tính | cần che/bỏ chữ đọc được |
+| 7016911 | giao thông thành phố trên cao | 16:9; soi biển hiệu |
+| 8342359 | viết sổ từ trên xuống | 16:9; soi chữ |
+| 5212605 | viết sổ cạnh laptop | 16:9; soi logo/chữ |
+| 7594719 | ghi chép ở bàn bếp | 16:9; soi logo/chữ |
+
+Nguồn các ID: https://www.pexels.com/video/a-person-computing-using-calculator-6963480/ ; https://www.pexels.com/video/person-using-calculator-6780089/ ; https://www.pexels.com/video/a-man-using-the-calculator-8195661/ ; https://www.pexels.com/video/a-man-is-sitting-in-front-of-a-laptop-with-a-stock-market-chart-6794227/ ; https://www.pexels.com/video/close-up-video-of-a-person-using-calculator-7593891/ ; https://www.pexels.com/video/a-person-computing-using-calculator-6962707/ ; https://www.pexels.com/video/video-of-a-city-traffic-7016911/ ; https://www.pexels.com/video/girl-writing-in-notebook-8342359/ ; https://www.pexels.com/video/man-writing-on-his-notebook-5212605/ ; https://www.pexels.com/video/man-writing-in-notebook-7594719/ .
+
+## Rủi ro và việc còn mở
+
+- **Chưa kiểm được:** một chuỗi lãi suất **bình quân tiền gửi 12 tháng theo từng năm 2018–2026**. Các URL thu được mới là khoảng/mốc tháng hoặc nhóm tổ chức; không được gọi chúng là “bình quân năm”. Đây là blocker duy nhất để tính hợp lệ phương án A và giá trị thực sau CPI.
+- 2026 mới có CPI bình quân 9 tháng 4,52%, chưa có số cả năm; không ghi nó là CPI bình quân năm.
+- Không ai mua trực tiếp được VN-Index; mô phỏng là chỉ số giá, không có cổ tức, không phản ánh chênh lệch theo sản phẩm thực tế.
+- Phí giao dịch, thời điểm khớp lệnh, chênh lệch giá và thuế làm kết quả thực tế khác mô phỏng. Không nói “nên mua/bán/gửi”.
+
+
+codex
+Mình đã xác nhận ticket chuyển đường tiết kiệm sang ba kịch bản giả định cố định 5%, 6%, 7%—không dùng các mốc quan sát như bình quân năm. Mình sẽ cập nhật phép tính, kịch bản và kiểm chứng độc lập theo đúng phạm vi cho phép.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -Encoding utf8 'data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/factcheck.md'; \""'`n---SAMPLE SCRIPT HEAD---`n"; Get-Content -Encoding utf8 '"'data/long/ck-e6-luong-huu-rut-mot-lan/script.md' -TotalCount 180; \""'`n---SAMPLE ANALYSIS---`n"; Get-Content -Raw -Encoding utf8 '"'data/long/ck-e6-luong-huu-rut-mot-lan/analysis.py'; \""'`n---SAMPLE CHECK---`n"; Get-Content -Raw -Encoding utf8 '"'data/long/ck-e6-luong-huu-rut-mot-lan/check.py'" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 126ms:
+# Factcheck — 100 Triệu Từ 2018: Gửi Tiết Kiệm Hay Mua VN-Index?
+
+| Khẳng định / số trong lời đọc | Nguồn đã mở |
+|---|---|
+| Dữ liệu đóng cửa VN-Index các ngày 09/04/2018, 24/03/2020, 31/12/2020, 31/12/2021, 06/01/2022, 15/11/2022, 09/04/2025, 06/10/2026; các kết quả tính B/C | CSV ticket cấp, phương pháp chỉ số: https://support.vndirect.com.vn/hc/vi/articles/13971271685273-Ch%E1%BB%89-s%E1%BB%91-VN-INDEX-l%C3%A0-g%C3%AC |
+| VN-Index là chỉ số giá, không cộng cổ tức trong mô phỏng | https://support.vndirect.com.vn/hc/vi/articles/13971271685273-Ch%E1%BB%89-s%E1%BB%91-VN-INDEX-l%C3%A0-g%C3%AC |
+| Thuế chuyển nhượng chứng khoán cá nhân 0,1% trên giá chuyển nhượng | https://chinhphu.vn/default.aspx?docid=169566&pageid=27160 |
+| CPI bình quân các năm 2018 và 2020 | https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2021/12/thong-cao-bao-chi-ve-tinh-hinh-gia-thang-12-quy-iv-va-nam-2021/ |
+| CPI bình quân năm 2021 | https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2022/01/kiem-soat-lam-phat-thap-thanh-cong-cua-nam-2021-va-ap-luc-trong-nam-2022/ |
+| CPI bình quân năm 2022 | https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2022/12/thong-cao-bao-chi-ve-tinh-hinh-gia-thang-12-quy-iv-va-nam-2022/ |
+| CPI bình quân năm 2023 | https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2023/12/thong-cao-bao-chi-ve-tinh-hinh-gia-thang-12-quy-iv-va-nam-2023/ |
+| CPI bình quân năm 2024 | https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2025/01/chi-so-gia-tieu-dung-chi-so-gia-vang-va-chi-so-gia-do-la-my-thang-muoi-hai-quy-iv-va-nam-2024/ |
+| CPI bình quân năm 2025 | https://www.nso.gov.vn/tin-tuc-khac/2026/01/kinh-te-viet-nam-dat-duoc-nhung-ket-qua-quan-trong-toan-dien-nhieu-diem-sang-noi-bat/ |
+| CPI 9 tháng năm 2026, không phải cả năm | https://www.nso.gov.vn/tin-tuc-thong-ke/2026/10/thong-cao-bao-chi-ve-tinh-hinh-gia-thang-chin-quy-iii-va-9-thang-nam-2026/ |
+| Mốc lãi suất đầu 2018 khoảng 6,55% | https://cafef.vn/nhieu-ngan-hang-tang-lai-suat-huy-dong-2018030723375295.chn |
+| Mốc/khoảng lãi suất năm 2020 và tháng 7/2021 | https://www.tinnhanhchungkhoan.vn/lai-suat-vao-dot-cat-giam-moi-post248257.html ; https://www.div.gov.vn/lai-suat-cho-vay-giam-lai-suat-tien-gui-on-dinh |
+| Mốc lãi suất cuối 2022 | https://znews.vn/bidv-vietinbank-va-agribank-tang-lai-suat-huy-dong-len-7-4-nam-post1369350.html |
+| Mốc 5,13% tháng 12/2023 và 4,9% ngày 15/01/2024 | https://tuoitre.vn/lai-suat-tiet-kiem-thap-ki-luc-nen-giam-hon-nua-thi-sao-20231206215733636.htm ; https://tuoitre.vn/ha-them-lai-suat-binh-quan-tien-gui-12-thang-lap-day-moi-vua-xuong-dau-4-20240115180305495.htm |
+| Mốc lãi suất tháng 12/2025 | https://finance.vietstock.vn/downloadedoc/18633 |
+| Phí 0,15% mỗi chiều, một trăm triệu, hai mươi bốn lần mua và các giá trị tiền | VÍ DỤ GIẢ ĐỊNH và phép tính trong analysis.py; không phải số liệu thị trường hay khuyến nghị. |
+
+## Không kiểm được
+
+Không có chuỗi lãi suất bình quân tiền gửi kỳ hạn mười hai tháng theo từng năm từ hai nghìn không trăm mười tám đến hai nghìn không trăm hai mươi sáu đủ chuẩn trong kho R6. Vì vậy không tính đường tiết kiệm, không tính sức mua cuối kỳ, và không tuyên bố cách nào thắng.
+
+
+---SAMPLE SCRIPT HEAD---
+
+# RÚT BẢO HIỂM XÃ HỘI MỘT LẦN ĐƯỢC BAO NHIÊU? ĐÓNG 10 NĂM LƯƠNG 10 TRIỆU: 200 TRIỆU HAY LƯƠNG HƯU (bản 1)
+
+**Kênh:** Biểu Đồ Biết Nói (CK) · **Chuỗi:** Quyết định lớn — Bài B5 · **Giọng:** Ngọc Huyền (dẫn) · Phạm Tuyên (dòng `HỎI:`)
+**Lịch:** CN 15/11/2026 20:00 · **Độ dài ước:** xem `script_lines.py` (mục tiêu ~2.800 âm tiết ≈ 13–14 phút), 7 chương
+**Mã tính:** [analysis.py](analysis.py) → `results.json` · kiểm độc lập [check.py](check.py) · **Kiểm chứng:** [factcheck.md](factcheck.md)
+**Tiêu đề (phương án):** (1) *Rút Bảo Hiểm Xã Hội Một Lần Được Bao Nhiêu? Đóng 10 Năm Lương 10 Triệu: 200 Triệu Hay Lương Hưu* · (2) *Đóng BHXH
+10 Năm Rồi Nghỉ Việc: Cầm 200 Triệu Năm 2027 Hay Chờ Lương Hưu Năm 2051?* · (3) *Luật BHXH Mới 15 Năm Là Có Lương Hưu: Phép Tính Cho Người Đã
+Đóng 10 Năm*
+
+Quy ước: mỗi dòng là một câu đọc · `‖` = ngừng dài · `HỎI:` = giọng người hỏi · **lời đọc không có chữ số**.
+**Luật cứng CK:** chỉ giáo dục — **không "nên rút / không nên rút"**, không chỉ dịch vụ làm hồ sơ, không tên công ty/ngân hàng. Chị Hạnh, lương đóng 10
+triệu, 10 năm đóng, lãi thực 0–3%/năm là **VÍ DỤ GIẢ ĐỊNH**; mọi số tiền quy về giá hôm nay (giả định bình quân tiền lương và lương hưu được điều chỉnh theo
+giá). Không phán người đã rút là sai — có cả chương về khi 200 triệu là nhu cầu thật. Mô tả có câu *"Nội dung giáo dục, không phải tư vấn đầu tư."*
+**Giữ chân:** cold open = **lời rủ "rút đi, được hai trăm triệu" + con số hơn bốn triệu tám lượt người rút** · **lộ trình dạng "Bản đồ bằng hình / chặng
+đường"**: một đường thẳng 2026 → 2051 trên màn hình, ba ngã rẽ (khác E5 "bảng tra hẹn trước", E4 "cảnh hẹn trước"; không "ba câu hỏi") · **vòng mở 1**
+hai trăm triệu từ đâu ra (đóng CH01) · **vòng mở 2** "mười lăm năm" đổi gì cho chị (đóng CH02) · **vòng mở 3** nếu cầm hai trăm triệu đi gửi thì sao (mở cuối
+CH03 = re-hook ~45%, đóng CH04) · **cảnh mạnh ~72%** = khi hai trăm triệu là nhu cầu thật + một triệu ba người quay lại (CH05) · mô-típ đường thẳng 25 năm
+(CH00, CH03, CH06).
+
+---
+
+## CH00 · Hai trăm triệu ở ngay trước mặt
+
+Tháng sáu năm nay, chị Hạnh nghỉ việc ở xưởng may, sau mười năm làm ở đó.
+Chị ba mươi lăm tuổi, một nhân vật ví dụ của video này.
+Mười năm ấy, tháng nào bảng lương của chị cũng có một dòng trừ bảo hiểm xã hội. ‖
+Một người bạn nói với chị một câu mà rất nhiều người từng nghe.
+Nghỉ rồi thì rút bảo hiểm đi, được cả trăm triệu đấy.
+Chị ngồi tính thử. Lương đóng bảo hiểm khoảng mười triệu, mười năm.
+Con số ra khoảng hai trăm triệu đồng. ‖
+Bằng hai mươi tháng lương.
+Đủ để trả một khoản nợ, sửa lại căn bếp, hay gửi về quê cho bố mẹ. ‖
+Hai trăm triệu, ở ngay trước mặt.
+Chị không phải người duy nhất đứng trước con số như thế.
+Từ năm hai nghìn không trăm mười sáu tới năm hai nghìn không trăm hai mươi hai, hơn bốn triệu tám trăm nghìn lượt người đã nhận bảo hiểm xã hội một lần.
+Gần chín phần mười số hồ sơ ấy đóng chưa tới mười năm. ‖
+HỎI: Vậy cầm hai trăm triệu bây giờ, hay chờ một khoản lương hưu, hai mươi lăm năm nữa?
+Đó là câu hỏi của video này.
+Và nó không có một đáp án đúng cho mọi người. Chỉ có từng con số. ‖
+Mình sẽ đi dọc một đường thẳng dài hai mươi lăm năm, từ hôm nay tới năm chị Hạnh sáu mươi tuổi.
+Trên đường ấy có ba ngã rẽ, và mỗi ngã có một con số.
+Đây là Biểu Đồ Biết Nói. Tiền bạc, giải thích bằng dữ liệu.
+Video chỉ nhằm giáo dục, không phải lời khuyên rút hay không rút bảo hiểm xã hội. Mọi số tiền đã quy về giá hôm nay.
+
+## CH01 · Hai trăm triệu đến từ đâu
+
+Ngã rẽ thứ nhất ở gần nhất: rút bảo hiểm xã hội một lần.
+Con số hai trăm triệu không phải tự nhiên mà có. ‖
+Luật tính như sau.
+Mỗi năm đóng từ năm hai nghìn không trăm mười bốn trở đi, được hai tháng lương bình quân.
+Mỗi năm đóng trước năm hai nghìn không trăm mười bốn, chỉ được một tháng rưỡi. ‖
+Lương bình quân ở đây là lương đóng bảo hiểm, được điều chỉnh theo trượt giá.
+Nên số tiền gần như giữ được sức mua của những năm chị đã đóng. Gần như thôi. ‖
+Chị Hạnh bắt đầu đóng năm hai nghìn không trăm mười sáu.
+Mười năm, mỗi năm hai tháng, là hai mươi tháng lương.
+Hai mươi tháng nhân mười triệu, đúng hai trăm triệu. Không hơn, không kém. ‖
+Để so sánh, mười năm qua, phần chị tự đóng cho bảo hiểm xã hội là tám phần trăm lương.
+Tám phần trăm của mười triệu, trong một trăm hai mươi tháng, là khoảng chín mươi sáu triệu.
+Hai trăm triệu gấp đôi phần chị tự bỏ ra. ‖
+Vì công ty của chị cũng đóng vào quỹ, mỗi tháng, song song với chị.
+Vì thế, rút một lần không phải là lấy lại đúng tiền của mình.
+Nó là một khoản quy đổi, theo công thức luật định. ‖
+HỎI: Thế nghỉ việc là rút được ngay à?
+Không.
+Theo luật bảo hiểm xã hội mới, có hiệu lực từ tháng bảy năm hai nghìn không trăm hai mươi lăm, người đóng từ trước ngày ấy phải nghỉ đủ mười hai tháng.
+Không đóng bắt buộc, cũng không đóng tự nguyện, và tổng thời gian đóng chưa đủ hai mươi năm. ‖
+Tức là sớm nhất, chị Hạnh có thể nhận vào giữa năm hai nghìn không trăm hai mươi bảy.
+Còn ai bắt đầu đóng từ tháng bảy năm hai nghìn không trăm hai mươi lăm trở đi, thì gần như không còn đường rút một lần. Đường ấy gần như đóng.
+Chỉ còn vài trường hợp đặc biệt, như ra nước ngoài định cư, hay mắc một số bệnh nặng. ‖
+Và có một điều quan trọng hơn cả con số.
+Khi đã nhận một lần, mười năm ấy coi như đã được thanh toán xong.
+Nếu sau này chị đi làm lại và đóng tiếp, đồng hồ đếm năm đóng bắt đầu lại từ số không. ‖
+Đổi lại, nếu không rút, mười năm ấy được bảo lưu.
+Không mất đi đâu, chờ được cộng nối với những năm sau.
+Và luật mới vừa làm cho mười năm ấy đáng giá hơn trước rất nhiều.
+
+## CH02 · Mười lăm năm
+
+Ngã rẽ thứ hai nằm ở năm năm phía trước.
+Trước tháng bảy năm hai nghìn không trăm hai mươi lăm, muốn có lương hưu, phải đóng đủ hai mươi năm.
+Luật mới hạ xuống còn mười lăm năm. Ngắn hơn năm năm. ‖
+Với chị Hạnh, đó là khác biệt rất lớn.
+Theo luật cũ, chị cần thêm mười năm nữa.
+Theo luật mới, chỉ cần thêm năm năm. Một nửa chặng. ‖
+HỎI: Đóng đủ mười lăm năm thì lương hưu được bao nhiêu?
+Với lao động nữ, mười lăm năm đóng ứng với bốn mươi lăm phần trăm lương bình quân.
+Mỗi năm đóng thêm, cộng hai phần trăm.
+Tối đa bảy mươi lăm phần trăm, khi đủ ba mươi năm. Không hơn nữa. ‖
+Với lao động nam thì chậm hơn.
+Mười lăm năm chỉ được bốn mươi phần trăm, mỗi năm thêm một phần trăm cho tới năm thứ hai mươi.
+Sau đó mới cộng hai phần trăm mỗi năm, và phải ba mươi lăm năm mới đạt bảy mươi lăm phần trăm. ‖
+Nếu chị Hạnh là đàn ông, cùng mười lăm năm, cùng lương mười triệu, lương hưu chỉ khoảng bốn triệu.
+Ít hơn năm trăm nghìn mỗi tháng. ‖
+Quay lại chị Hạnh, với lương bình quân mười triệu.
+Đóng tới mười lăm năm, tức năm hai nghìn không trăm ba mươi mốt: lương hưu khoảng bốn triệu rưỡi một tháng.
+Đóng tới hai mươi năm: khoảng năm triệu rưỡi.
+Hai mươi lăm năm: sáu triệu rưỡi.
+Ba mươi năm: bảy triệu rưỡi, mức trần. Không thể cao hơn. ‖
+Năm năm đóng thêm ấy có giá.
+Nếu đi làm có hợp đồng, phần chị tự đóng cho bảo hiểm xã hội là tám phần trăm lương, khoảng bốn mươi tám triệu trong năm năm.
+Nếu không có chỗ làm, chị có thể đóng tự nguyện, bằng hai mươi hai phần trăm mức thu nhập chị tự chọn.
+Với mức mười triệu, năm năm là khoảng một trăm ba mươi hai triệu, trước khi trừ phần Nhà nước hỗ trợ. Không hề rẻ. ‖
+Một bên là hai trăm triệu cầm ngay.
+Bên kia là bốn triệu rưỡi mỗi tháng, nhưng chưa phải bây giờ.
+Câu hỏi tiếp theo là: chính xác thì bao giờ?
+
+## CH03 · Hai mươi lăm năm chờ
+
+Ngã rẽ thứ ba nằm ở cuối con đường: tuổi nghỉ hưu.
+Tuổi nghỉ hưu ở Việt Nam đang tăng dần, theo một lộ trình đã định sẵn. ‖
+Năm nay, lao động nữ nghỉ hưu ở năm mươi bảy tuổi, lao động nam ở sáu mươi mốt tuổi rưỡi.
+Mỗi năm, tuổi hưu của nữ tăng thêm bốn tháng, cho tới sáu mươi tuổi vào năm hai nghìn không trăm ba mươi lăm.
+Của nam tăng ba tháng mỗi năm, tới sáu mươi hai tuổi vào năm hai nghìn không trăm hai mươi tám. ‖
+Chị Hạnh sinh năm một nghìn chín trăm chín mươi mốt.
+Tới lượt chị, tuổi nghỉ hưu đã là sáu mươi.
+Nghĩa là chị bắt đầu nhận lương hưu vào năm hai nghìn không trăm năm mươi mốt. ‖
+Hai mươi lăm năm nữa.
+Một quãng dài hơn toàn bộ thời gian chị đã đi làm. ‖
+HỎI: Chờ lâu như thế, bao lâu mới nhận lại đủ hai trăm triệu?
+Với bốn triệu rưỡi mỗi tháng, khoảng bốn mươi bốn tháng.
+Tức là tới khi chị chừng sáu mươi ba tuổi tám tháng. ‖
+Nếu chị đóng đủ ba mươi năm, lương hưu bảy triệu rưỡi, thì chỉ cần khoảng hai mươi bảy tháng.
+Chừng sáu mươi hai tuổi. ‖
+Sau mốc ấy, mỗi tháng lương hưu là phần chị nhận thêm so với rút một lần.
+Lương hưu được trả hằng tháng, cho tới hết đời. Không có ngày dừng.
+Và người hưởng lương hưu còn có thẻ bảo hiểm y tế, do quỹ bảo hiểm xã hội đóng. ‖
+Thử một mốc để dễ hình dung.
+Tuổi thọ trung bình của phụ nữ Việt Nam năm hai nghìn không trăm hai mươi tư là khoảng bảy mươi bảy tuổi.
+Đó là tuổi thọ tính từ lúc sinh, và người đã sống tới sáu mươi thường còn sống lâu hơn mốc ấy.
+Nếu chỉ tính tới bảy mươi bảy tuổi, mười bảy năm lương hưu là khoảng chín trăm ba mươi tư triệu, theo giá hôm nay. ‖
+Chín trăm ba mươi tư triệu, so với hai trăm triệu.
+Nhưng so như vậy chưa công bằng.
+Hai trăm triệu cầm hôm nay cũng có thể lớn lên trong hai mươi lăm năm.
+Câu hỏi là: lớn tới đâu?
+
+## CH04 · Nếu hai trăm triệu được đem đi gửi
+
+Giả sử chị Hạnh nhận hai trăm triệu, và không tiêu đồng nào.
+Chị đem gửi, hoặc đầu tư, suốt hai mươi lăm năm, tới năm sáu mươi tuổi. ‖
+Điều quan trọng không phải lãi suất ghi trên sổ, mà là phần còn lại sau khi trừ giá cả tăng.
+Gọi là lãi thực.
+Vì lương hưu cũng được tính theo giá hôm nay, nên phải so bằng lãi thực mới công bằng. ‖
+Nếu lãi thực bằng không, tức lãi chỉ vừa đủ bù giá cả, hai trăm triệu vẫn chỉ là hai trăm triệu.
+Lãi thực một phần trăm mỗi năm: khoảng hai trăm năm mươi sáu triệu.
+Hai phần trăm: khoảng ba trăm hai mươi tám triệu.
+Ba phần trăm: khoảng bốn trăm mười chín triệu. ‖
+Còn nếu tiền gửi có lãi thấp hơn tốc độ tăng giá, lãi thực bị âm.
+Âm một phần trăm mỗi năm, sau hai mươi lăm năm, hai trăm triệu chỉ còn sức mua khoảng một trăm năm mươi sáu triệu.
+Nhỏ đi gần một phần tư. ‖
+HỎI: Lãi thực hai, ba phần trăm có dễ không?
+Không dễ, và không chắc chắn.
+Đó là những mức giả định để so sánh, không phải lời hứa của bất kỳ kênh tiết kiệm hay đầu tư nào. ‖
+Giờ lấy mức ở giữa, ba trăm hai mươi tám triệu ở tuổi sáu mươi.
+Mỗi tháng chị rút ra bốn triệu rưỡi, đúng bằng lương hưu mười lăm năm, phần còn lại vẫn sinh lãi thực hai phần trăm.
+Khoản tiền ấy đủ trả khoảng bảy mươi tám tháng.
+Tức là chừng sáu năm rưỡi, tới khi chị khoảng sáu mươi sáu tuổi rưỡi. ‖
+Sau đó, sổ về không.
+Còn lương hưu thì vẫn tiếp tục, mỗi tháng, tới hết đời. ‖
+Đây là khác biệt lớn nhất mà bảng tính hay bỏ qua.
+Lương hưu không chỉ là một khoản tiền.
+Nó là một lời bảo đảm cho câu hỏi không ai trả lời trước được: mình sẽ sống bao lâu? ‖
+Người sống tới chín mươi tuổi và người sống tới bảy mươi, cùng nhận một mức lương hưu mỗi tháng.
+Còn một cuốn sổ thì chỉ đủ tới ngày nó cạn.
+Nhưng nói vậy không có nghĩa là rút một lần luôn là sai.
+Có những lúc hai trăm triệu là nhu cầu thật, không phải sự lựa chọn.
+
+## CH05 · Khi hai trăm triệu là nhu cầu thật
+
+Hãy công bằng với những người đã rút.
+Hơn bốn triệu tám trăm nghìn lượt ấy, không phải ai cũng tính sai. Nhiều người tính rất kỹ. ‖
+Có người cần tiền chữa bệnh cho bản thân hoặc cho con.
+Có người đang gánh một khoản nợ lãi rất cao, mỗi tháng lãi chồng lên lãi.
+Có người biết chắc mình sẽ không quay lại làm việc có hợp đồng nữa. ‖
+Với khoản nợ lãi ba mươi phần trăm một năm, hai trăm triệu dùng để trả nợ có thể đáng giá hơn nhiều so với hai trăm triệu nằm chờ.
+Một năm, khoản nợ ấy có thể ngốn khoảng sáu mươi triệu tiền lãi.
+Bài toán của mỗi người không giống nhau. Rất khác nhau. ‖
+Báo cáo của Bộ Lao động khi ấy cho thấy một điều đáng chú ý.
+Phần lớn người nhận một lần trong giai đoạn ấy ở độ tuổi từ hai mươi tới bốn mươi.
+Hai phần ba đóng chưa tới năm năm. ‖
+Và khoảng một triệu ba trăm nghìn người, sau khi rút, đã quay lại đóng bảo hiểm xã hội.
+
+---SAMPLE ANALYSIS---
+
+"""E6 "Rút BHXH một lần hay chờ lương hưu" — phép tính minh hoạ (VÍ DỤ GIẢ ĐỊNH, mọi số quy về giá hôm nay).
+
+    python data/long/ck-e6-luong-huu-rut-mot-lan/analysis.py      # in kết quả + ghi results.json
+
+Luật (nguồn trong factcheck.md): Luật BHXH 2024 (41/2024/QH15, hiệu lực 01/07/2025):
+- Lương hưu: tối thiểu 15 năm đóng. Nữ: 45% mức bình quân tiền lương đóng BHXH ứng với 15 năm, mỗi năm thêm +2%, tối đa 75% (30 năm).
+  Nam: 40% ứng với 15 năm, +1%/năm tới 20 năm, rồi +2%/năm, tối đa 75% (35 năm).
+- BHXH một lần (người đã đóng trước 01/07/2025, nghỉ đủ 12 tháng, chưa đủ 20 năm): mỗi năm đóng trước 2014 = 1,5 tháng bình quân,
+  từ 2014 = 2 tháng bình quân. Bình quân tiền lương được điều chỉnh theo chỉ số giá (hệ số trượt giá) -> giả định "đã quy về giá hôm nay".
+- Tuổi nghỉ hưu (NĐ 135/2020): nữ 57 tuổi năm 2026, 60 tuổi từ 2035; nam 61 tuổi 6 tháng năm 2026, 62 từ 2028.
+Ví dụ (chị Hạnh, nhân vật giả định): sinh 1991, đóng BHXH bắt buộc từ 2016 tới giữa 2026 = 10 năm, lương đóng bình quân 10 tr/tháng
+(đã điều chỉnh theo giá), nghỉ việc giữa 2026. Nghỉ hưu ở 60 tuổi = năm 2051. Lương hưu được giả định giữ sức mua (điều chỉnh theo giá).
+Tuổi thọ trung bình lúc sinh của phụ nữ Việt Nam 2024: 77,3 (Cục Thống kê) -> chỉ dùng làm mốc minh hoạ, không phải dự báo đời một người.
+Kiểm độc lập: check.py.
+"""
+import json
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+W, YEARS0, BIRTH = 10.0, 10, 1991              # triệu đồng/tháng, năm đã đóng, năm sinh
+RETIRE_AGE, LIFE = 60, 77.3
+
+
+def rate_female(y):
+    return 0.0 if y < 15 else min(0.75, 0.45 + 0.02 * (y - 15))
+
+
+def rate_male(y):
+    if y < 15:
+        return 0.0
+    if y < 20:
+        return 0.40 + 0.01 * (y - 15)
+    return min(0.75, 0.45 + 0.02 * (y - 20))
+
+
+def lump(years_before_2014, years_from_2014, w=W):
+    return w * (1.5 * years_before_2014 + 2 * years_from_2014)
+
+
+res = {"assume": {"wage": W, "years_paid": YEARS0, "birth": BIRTH, "retire_age": RETIRE_AGE, "retire_year": BIRTH + RETIRE_AGE}}
+L = lump(0, YEARS0)
+res["lump_now"] = L                                            # 200 tr
+res["lump_if_pre2014_mix"] = lump(4, 6)                        # minh hoạ: 4 năm trước 2014 + 6 năm sau -> 180 tr
+opts = {}
+for y in (15, 20, 25, 30):
+    p = W * rate_female(y)
+    months_to_match = L / p
+    years_paid_more = y - YEARS0
+    opts[str(y)] = {"rate": round(rate_female(y), 2), "pension": round(p, 2), "months_to_match_lump": round(months_to_match, 1),
+                    "age_match": round(RETIRE_AGE + months_to_match / 12, 1),
+                    "sum_to_77": round(p * 12 * (LIFE - RETIRE_AGE)),
+                    "employee_contrib_more": round(0.08 * W * 12 * years_paid_more, 1),     # phần người lao động đóng thêm (8%)
+                    "voluntary_contrib_more": round(0.22 * W * 12 * years_paid_more, 1),   # nếu tự đóng tự nguyện 22% (chưa trừ hỗ trợ)
+                    "year_reach": 2026 + years_paid_more}
+res["female"] = opts
+res["male_rates"] = {str(y): round(rate_male(y), 2) for y in (15, 18, 20, 25, 30, 35)}
+# nếu cầm 200 tr đi gửi/đầu tư, lãi THỰC (sau lạm phát) r mỗi năm, 24 năm tới 2051 -> bao nhiêu (giá hôm nay)
+res["lump_grow_2051"] = {f"{r:.0%}": round(L * (1 + r) ** 25) for r in (-0.01, 0.0, 0.01, 0.02, 0.03)}  # giữa 2026 -> giữa 2051 = 25 năm
+# số tháng lương hưu 4,5 tr mà khoản ấy (lãi thực 2%) trả được nếu rút đều từ 60 tuổi
+import math
+r_m = 0.02 / 12
+pv = res["lump_grow_2051"]["2%"]
+pay = 4.5
+n = -math.log(1 - pv * r_m / pay) / math.log(1 + r_m) if pv * r_m < pay else float("inf")
+res["lump_2pct_as_4_5_months"] = round(n, 1)
+res["own_contrib_10y"] = round(0.08 * W * 12 * YEARS0, 1)          # phần người lao động tự đóng BHXH (8%) trong 10 năm: 96 tr
+res["lump_vs_own"] = round(L / res["own_contrib_10y"], 2)
+res["male_15y_pension"] = round(W * rate_male(15), 2)              # nam cùng hoàn cảnh, 15 năm: 4 tr
+res["debt30_interest_saved_1y"] = round(L * 0.30, 1)              # trả 200 tr nợ lãi 30%/năm: bớt ~60 tr lãi một năm (giả định)
+res["life_years_after_60"] = round(LIFE - RETIRE_AGE, 1)
+res["retire_age_2026"] = {"female": "57", "male": "61 tuổi 6 tháng"}
+res["stats_2016_2022"] = {"recipients_million": 4.8, "returned_million": 1.3, "left_million": 3.5, "age20_40_pct": 77.5,
+                          "under5y_pct": 66.6, "5to10y_pct": 23.8, "under10y_pct": round(66.6 + 23.8, 1)}
+(HERE / "results.json").write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
+print(json.dumps(res, ensure_ascii=False, indent=1))
+
+
+---SAMPLE CHECK---
+
+"""Kiểm độc lập cho analysis.py (E6): tính lại bằng bảng tỷ lệ viết tay theo lời luật và mô phỏng tháng (không dùng hàm của
+analysis), so với results.json.
+
+    python data/long/ck-e6-luong-huu-rut-mot-lan/check.py
+"""
+import json
+from pathlib import Path
+
+H = Path(__file__).resolve().parent
+R = json.loads((H / "results.json").read_text(encoding="utf-8"))
+FEMALE = {15: 45, 20: 55, 25: 65, 30: 75}           # 45% + 2%/năm sau năm thứ 15, trần 75% ở năm 30
+MALE = {15: 40, 18: 43, 20: 45, 25: 55, 30: 65, 35: 75}
+ok = [R["lump_now"] == 10 * 2 * 10, R["lump_if_pre2014_mix"] == 10 * (4 * 1.5 + 6 * 2)]
+for y, p in FEMALE.items():
+    o = R["female"][str(y)]
+    pen = 10 * p / 100
+    ok += [abs(o["pension"] - pen) < 1e-9, abs(o["months_to_match_lump"] - 200 / pen) < 0.06,
+           abs(o["sum_to_77"] - pen * 12 * 17.3) < 0.6, abs(o["employee_contrib_more"] - 0.8 * 12 * (y - 10)) < 1e-6, o["year_reach"] == 2016 + y]
+ok += [abs(R["male_rates"][str(y)] - p / 100) < 1e-9 for y, p in MALE.items()]
+ok += [R["lump_grow_2051"]["2%"] == round(200 * 1.02 ** 25), R["lump_grow_2051"]["3%"] == round(200 * 1.03 ** 25)]
+bal, m = float(R["lump_grow_2051"]["2%"]), 0
+while bal > 0:                                      # rút đều 4,5 tr/tháng, lãi thực 2%/năm
+    bal = bal * (1 + 0.02 / 12) - 4.5
+    m += 1
+ok.append(abs(m - R["lump_2pct_as_4_5_months"]) <= 1)
+ok += [R["own_contrib_10y"] == 96.0, R["male_15y_pension"] == 4.0, R["debt30_interest_saved_1y"] == 60.0, R["lump_grow_2051"]["-1%"] == round(200 * 0.99 ** 25)]
+ok.append(R["stats_2016_2022"]["under10y_pct"] == 90.4)
+print("E6 check:", "OK" if all(ok) else f"LỖI ở mục {[i for i, x in enumerate(ok) if not x]}", f"({len(ok)} phép)")
+assert all(ok)
+
+
+2026-10-27T03:58:43.359617Z ERROR codex_core::tools::router: error=apply_patch verification failed: invalid patch: multiple operations target D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\ck-i1-100-trieu-tiet-kiem-hay-vnindex\analysis.py
+apply patch
+patch: completed
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\ck-i1-100-trieu-tiet-kiem-hay-vnindex\analysis.py
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\ck-i1-100-trieu-tiet-kiem-hay-vnindex\check.py
+diff --git a/data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/analysis.py b/data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/analysis.py
+deleted file mode 100644
+index 78e125eab51341a73e6786dcfaf6d2b44b679c46..0000000000000000000000000000000000000000
+--- a/data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/analysis.py
++++ /dev/null
+@@ -1,66 +0,0 @@
+-"""Backtest minh hoa: 100 trieu, chi so gia VN-Index, 09/04/2018–06/10/2026.
+-
+-Du lieu: hai CSV ticket cap. Gia tri B/C la VI DU GIA DINH, da ap phi giao dich
+-0,15% luc mua va ban, va thue chuyen nhuong 0,1% luc ban. Khong co chuoi lai
+-suat binh quan nam da duoc kiem chung, nen khong tinh duong tiet kiem.
+-"""
+-import csv
+-import json
+-from datetime import date
+-from pathlib import Path
+-
+-HERE = Path(__file__).resolve().parent
+-ROOT = HERE.parents[2]
+-INITIAL = 100_000_000
+-FEE = 0.0015
+-TAX = 0.001
+-START = date(2018, 4, 9)
+-END = date(2026, 10, 6)
+-
+-def load(path):
+-    with path.open(encoding="utf-8", newline="") as f:
+-        return [(date.fromisoformat(r["time"]), float(r["close"])) for r in csv.DictReader(f)]
+-
+-rows = sorted(load(ROOT / "data" / "ck" / "vnindex_1d_2016_2018.csv") + load(ROOT / "data" / "ck" / "vnindex_1d.csv"))
+-prices = {d: p for d, p in rows}
+-window = [(d, p) for d, p in rows if START <= d <= END]
+-assert prices[START] == 1204.33 and prices[END] == 1759.08
+-
+-# B: mua mot lan. Phi mua lam giam so don vi; khi ban tru phi va thue.
+-b_units = INITIAL * (1 - FEE) / prices[START]
+-def b_value(p): return b_units * p * (1 - FEE - TAX)
+-
+-# C: 24 lenh, phien dau tien moi thang 04/2018–03/2020.
+-months = {(d.year, d.month) for d, _ in window}
+-buy_dates = []
+-for y, m in [(2018, m) for m in range(4, 13)] + [(2019, m) for m in range(1, 13)] + [(2020, m) for m in range(1, 4)]:
+-    buy_dates.append(next(d for d, _ in window if (d.year, d.month) == (y, m)))
+-assert len(buy_dates) == 24 and all((d.year, d.month) in months for d in buy_dates)
+-piece = INITIAL / 24
+-c_units = sum(piece * (1 - FEE) / prices[d] for d in buy_dates)
+-def c_value(p): return c_units * p * (1 - FEE - TAX)
+-
+-def at(d): return prices[date.fromisoformat(d)]
+-def money(x): return round(x / 1_000_000, 2)
+-
+-b_series = [(d, b_value(p)) for d, p in window]
+-c_after = [(d, c_value(p)) for d, p in window if d >= buy_dates[-1]]
+-b_low_d, b_low = min(b_series, key=lambda x: x[1])
+-c_low_d, c_low = min(c_after, key=lambda x: x[1])
+-def recover(series, start):
+-    return next(d for d, v in series if d >= start and v >= INITIAL)
+-
+-points = ["2018-04-09", "2020-03-24", "2021-12-31", "2022-01-06", "2022-11-15", "2025-04-09", "2026-10-06"]
+-race = [{"date": d, "mot_lan": money(b_value(at(d))), "mua_deu": money(c_value(at(d))) if date.fromisoformat(d) >= buy_dates[-1] else None} for d in points]
+-res = {
+-  "assumptions": {"initial_million": 100, "purchase_fee_pct": 0.15, "sale_fee_pct": 0.15, "sale_tax_pct": 0.1,
+-                  "savings": "CHUA_TINH: kho R6 khong co chuoi lai suat binh quan 12 thang theo tung nam"},
+-  "race": race,
+-  "mot_lan": {"end_million": money(b_value(prices[END])), "low_date": b_low_d.isoformat(), "low_million": money(b_low),
+-              "low_pct": round((b_low / INITIAL - 1) * 100, 2), "recover_date": recover(b_series, START).isoformat()},
+-  "mua_deu": {"instalments": 24, "piece_million": round(piece / 1e6, 4), "end_million": money(c_value(prices[END])),
+-              "low_after_full_date": c_low_d.isoformat(), "low_after_full_million": money(c_low),
+-              "low_after_full_pct": round((c_low / INITIAL - 1) * 100, 2), "recover_after_full_date": recover(c_after, buy_dates[-1]).isoformat()},
+-}
+-(HERE / "results.json").write_text(json.dumps(res, ensure_ascii=False, indent=2), encoding="utf-8")
+-print(json.dumps(res, ensure_ascii=False, indent=2))
+diff --git a/data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/check.py b/data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/check.py
+deleted file mode 100644
+index ad962759d3b0f0ffa8a794e1eadc42eca031cd16..0000000000000000000000000000000000000000
+--- a/data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/check.py
++++ /dev/null
+@@ -1,23 +0,0 @@
+-"""Kiem doc lap results.json bang cach tinh lai truc tiep tu CSV."""
+-import csv, json
+-from datetime import date
+-from pathlib import Path
+-H = Path(__file__).resolve().parent
+-ROOT = H.parents[2]
+-def read(p):
+-    with p.open(encoding="utf-8", newline="") as f:
+-        return {date.fromisoformat(r["time"]): float(r["close"]) for r in csv.DictReader(f)}
+-p = read(ROOT / "data" / "ck" / "vnindex_1d_2016_2018.csv") | read(ROOT / "data" / "ck" / "vnindex_1d.csv")
+-r = json.loads((H / "results.json").read_text(encoding="utf-8"))
+-start, end, fee, tax = date(2018,4,9), date(2026,10,6), .0015, .001
+-units = 100_000_000 * (1-fee) / p[start]
+-end_b = round(units * p[end] * (1-fee-tax) / 1e6, 2)
+-dates = []
+-for y, ms in ((2018, range(4,13)), (2019, range(1,13)), (2020, range(1,4))):
+-    for m in ms: dates.append(min(d for d in p if d >= start and d.year == y and d.month == m))
+-units_c = sum((100_000_000/24)*(1-fee)/p[d] for d in dates)
+-end_c = round(units_c*p[end]*(1-fee-tax)/1e6, 2)
+-ok = [p[start] == 1204.33, p[end] == 1759.08, len(dates) == 24, r["mot_lan"]["end_million"] == end_b,
+-      r["mua_deu"]["end_million"] == end_c, "CHUA_TINH" in r["assumptions"]["savings"]]
+-print("I1 check:", "OK" if all(ok) else f"LOI o {[i for i, x in enumerate(ok) if not x]}", f"({len(ok)} phep)")
+-assert all(ok)
+
+apply patch
+patch: completed
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\ck-i1-100-trieu-tiet-kiem-hay-vnindex\analysis.py
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\ck-i1-100-trieu-tiet-kiem-hay-vnindex\check.py
+diff --git a/data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/analysis.py b/data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/analysis.py
+index 78e125eab51341a73e6786dcfaf6d2b44b679c46..620fc23bf7d2ba9156543dcf89fd868f86cca816
+--- a/data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/analysis.py
++++ b/data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/analysis.py
+@@ -1,8 +1,8 @@
+-"""Backtest minh hoa: 100 trieu, chi so gia VN-Index, 09/04/2018–06/10/2026.
++"""Backtest minh hoạ 100 triệu từ 09/04/2018 tới 06/10/2026.
+ 
+-Du lieu: hai CSV ticket cap. Gia tri B/C la VI DU GIA DINH, da ap phi giao dich
+-0,15% luc mua va ban, va thue chuyen nhuong 0,1% luc ban. Khong co chuoi lai
+-suat binh quan nam da duoc kiem chung, nen khong tinh duong tiet kiem.
++Tiết kiệm là VÍ DỤ GIẢ ĐỊNH: gửi 12 tháng, tái tục mỗi năm với lãi cố định
++5%, 6% hoặc 7%/năm. Đây là dải giả định nằm trong các mốc quan sát của kho,
++không phải lãi suất thực của bất kỳ tổ chức nào.
+ """
+ import csv
+ import json
+@@ -11,56 +11,89 @@
+ 
+ HERE = Path(__file__).resolve().parent
+ ROOT = HERE.parents[2]
+-INITIAL = 100_000_000
+-FEE = 0.0015
+-TAX = 0.001
+-START = date(2018, 4, 9)
+-END = date(2026, 10, 6)
++INITIAL, FEE, TAX = 100_000_000, 0.0015, 0.001
++START, END = date(2018, 4, 9), date(2026, 10, 6)
++SAVING_RATES = (0.05, 0.06, 0.07)
++
+ 
+ def load(path):
+-    with path.open(encoding="utf-8", newline="") as f:
+-        return [(date.fromisoformat(r["time"]), float(r["close"])) for r in csv.DictReader(f)]
++    with path.open(encoding="utf-8", newline="") as file:
++        return [(date.fromisoformat(row["time"]), float(row["close"])) for row in csv.DictReader(file)]
+ 
++
++def add_year(d):
++    return d.replace(year=d.year + 1)
++
++
++def savings_value(on, rate):
++    """Lãi kép cho mỗi kỳ tròn 12 tháng, lãi đơn theo ngày cho kỳ lẻ."""
++    value, anniversary = INITIAL, START
++    while add_year(anniversary) <= on:
++        anniversary = add_year(anniversary)
++        value *= 1 + rate
++    return value * (1 + rate * (on - anniversary).days / 365)
++
++
+ rows = sorted(load(ROOT / "data" / "ck" / "vnindex_1d_2016_2018.csv") + load(ROOT / "data" / "ck" / "vnindex_1d.csv"))
+ prices = {d: p for d, p in rows}
+ window = [(d, p) for d, p in rows if START <= d <= END]
+ assert prices[START] == 1204.33 and prices[END] == 1759.08
+ 
+-# B: mua mot lan. Phi mua lam giam so don vi; khi ban tru phi va thue.
+ b_units = INITIAL * (1 - FEE) / prices[START]
+-def b_value(p): return b_units * p * (1 - FEE - TAX)
++def b_value(price): return b_units * price * (1 - FEE - TAX)
+ 
+-# C: 24 lenh, phien dau tien moi thang 04/2018–03/2020.
+-months = {(d.year, d.month) for d, _ in window}
+ buy_dates = []
+-for y, m in [(2018, m) for m in range(4, 13)] + [(2019, m) for m in range(1, 13)] + [(2020, m) for m in range(1, 4)]:
+-    buy_dates.append(next(d for d, _ in window if (d.year, d.month) == (y, m)))
+-assert len(buy_dates) == 24 and all((d.year, d.month) in months for d in buy_dates)
+-piece = INITIAL / 24
++for year, months in ((2018, range(4, 13)), (2019, range(1, 13)), (2020, range(1, 4))):
++    for month in months:
++        buy_dates.append(next(d for d, _ in window if d.year == year and d.month == month))
++assert len(buy_dates) == 24
++piece = INITIAL / len(buy_dates)
+ c_units = sum(piece * (1 - FEE) / prices[d] for d in buy_dates)
+-def c_value(p): return c_units * p * (1 - FEE - TAX)
++def c_value(price): return c_units * price * (1 - FEE - TAX)
++
++
++def last_trade_of_month(year, month):
++    return [d for d, _ in window if d.year == year and d.month == month][-1]
++
++
++def month_ends():
++    year, month = START.year, START.month
++    while (year, month) <= (END.year, END.month):
++        yield last_trade_of_month(year, month)
++        month += 1
++        if month == 13:
++            year, month = year + 1, 1
+ 
+-def at(d): return prices[date.fromisoformat(d)]
+-def money(x): return round(x / 1_000_000, 2)
+ 
++def money(value): return round(value / 1_000_000, 2)
++dates = list(month_ends())
++labels = [d.strftime("%m/%Y") for d in dates]
++vals = {
++    "tiet_kiem_5": [money(savings_value(d, 0.05)) for d in dates],
++    "tiet_kiem_6": [money(savings_value(d, 0.06)) for d in dates],
++    "tiet_kiem_7": [money(savings_value(d, 0.07)) for d in dates],
++    "mot_lan": [money(b_value(prices[d])) for d in dates],
++    "mua_deu": [money(c_value(prices[d])) for d in dates],
++}
++
+ b_series = [(d, b_value(p)) for d, p in window]
+ c_after = [(d, c_value(p)) for d, p in window if d >= buy_dates[-1]]
+-b_low_d, b_low = min(b_series, key=lambda x: x[1])
+-c_low_d, c_low = min(c_after, key=lambda x: x[1])
+-def recover(series, start):
+-    return next(d for d, v in series if d >= start and v >= INITIAL)
++b_low_d, b_low = min(b_series, key=lambda item: item[1])
++c_low_d, c_low = min(c_after, key=lambda item: item[1])
++def recover(series, start): return next(d for d, value in series if d >= start and value >= INITIAL)
+ 
+-points = ["2018-04-09", "2020-03-24", "2021-12-31", "2022-01-06", "2022-11-15", "2025-04-09", "2026-10-06"]
+-race = [{"date": d, "mot_lan": money(b_value(at(d))), "mua_deu": money(c_value(at(d))) if date.fromisoformat(d) >= buy_dates[-1] else None} for d in points]
+ res = {
+-  "assumptions": {"initial_million": 100, "purchase_fee_pct": 0.15, "sale_fee_pct": 0.15, "sale_tax_pct": 0.1,
+-                  "savings": "CHUA_TINH: kho R6 khong co chuoi lai suat binh quan 12 thang theo tung nam"},
+-  "race": race,
+-  "mot_lan": {"end_million": money(b_value(prices[END])), "low_date": b_low_d.isoformat(), "low_million": money(b_low),
+-              "low_pct": round((b_low / INITIAL - 1) * 100, 2), "recover_date": recover(b_series, START).isoformat()},
+-  "mua_deu": {"instalments": 24, "piece_million": round(piece / 1e6, 4), "end_million": money(c_value(prices[END])),
+-              "low_after_full_date": c_low_d.isoformat(), "low_after_full_million": money(c_low),
+-              "low_after_full_pct": round((c_low / INITIAL - 1) * 100, 2), "recover_after_full_date": recover(c_after, buy_dates[-1]).isoformat()},
++    "assumptions": {
++        "initial_million": 100, "purchase_fee_pct": 0.15, "sale_fee_pct": 0.15, "sale_tax_pct": 0.1,
++        "savings": "VÍ DỤ GIẢ ĐỊNH: lãi cố định 5%, 6%, 7%/năm; gửi 12 tháng, tái tục hàng năm; kỳ lẻ tính theo ngày.",
++    },
++    "race": {"dates": labels, "vals": vals},
++    "savings": {f"{int(rate * 100)}pct_end_million": money(savings_value(END, rate)) for rate in SAVING_RATES},
++    "mot_lan": {"end_million": money(b_value(prices[END])), "low_date": b_low_d.isoformat(), "low_million": money(b_low),
++                 "low_pct": round((b_low / INITIAL - 1) * 100, 2), "recover_date": recover(b_series, START).isoformat()},
++    "mua_deu": {"instalments": 24, "piece_million": round(piece / 1e6, 4), "end_million": money(c_value(prices[END])),
++                 "low_after_full_date": c_low_d.isoformat(), "low_after_full_million": money(c_low),
++                 "low_after_full_pct": round((c_low / INITIAL - 1) * 100, 2), "recover_after_full_date": recover(c_after, buy_dates[-1]).isoformat()},
+ }
+ (HERE / "results.json").write_text(json.dumps(res, ensure_ascii=False, indent=2), encoding="utf-8")
+ print(json.dumps(res, ensure_ascii=False, indent=2))
+diff --git a/data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/check.py b/data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/check.py
+index ad962759d3b0f0ffa8a794e1eadc42eca031cd16..385fa28bf69da68520bc422de08161629130219e
+--- a/data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/check.py
++++ b/data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/check.py
+@@ -1,23 +1,31 @@
+-"""Kiem doc lap results.json bang cach tinh lai truc tiep tu CSV."""
+-import csv, json
++"""Kiểm độc lập các giá trị cuối trong results.json."""
++import csv
++import json
+ from datetime import date
+ from pathlib import Path
++
+ H = Path(__file__).resolve().parent
+ ROOT = H.parents[2]
+-def read(p):
+-    with p.open(encoding="utf-8", newline="") as f:
+-        return {date.fromisoformat(r["time"]): float(r["close"]) for r in csv.DictReader(f)}
++def read(path):
++    with path.open(encoding="utf-8", newline="") as file:
++        return {date.fromisoformat(row["time"]): float(row["close"]) for row in csv.DictReader(file)}
++
+ p = read(ROOT / "data" / "ck" / "vnindex_1d_2016_2018.csv") | read(ROOT / "data" / "ck" / "vnindex_1d.csv")
+ r = json.loads((H / "results.json").read_text(encoding="utf-8"))
+-start, end, fee, tax = date(2018,4,9), date(2026,10,6), .0015, .001
+-units = 100_000_000 * (1-fee) / p[start]
+-end_b = round(units * p[end] * (1-fee-tax) / 1e6, 2)
+-dates = []
+-for y, ms in ((2018, range(4,13)), (2019, range(1,13)), (2020, range(1,4))):
+-    for m in ms: dates.append(min(d for d in p if d >= start and d.year == y and d.month == m))
+-units_c = sum((100_000_000/24)*(1-fee)/p[d] for d in dates)
+-end_c = round(units_c*p[end]*(1-fee-tax)/1e6, 2)
+-ok = [p[start] == 1204.33, p[end] == 1759.08, len(dates) == 24, r["mot_lan"]["end_million"] == end_b,
+-      r["mua_deu"]["end_million"] == end_c, "CHUA_TINH" in r["assumptions"]["savings"]]
+-print("I1 check:", "OK" if all(ok) else f"LOI o {[i for i, x in enumerate(ok) if not x]}", f"({len(ok)} phep)")
++start, end, fee, tax = date(2018, 4, 9), date(2026, 10, 6), .0015, .001
++units = 100_000_000 * (1 - fee) / p[start]
++end_b = round(units * p[end] * (1 - fee - tax) / 1e6, 2)
++dates = [min(d for d in p if d >= start and d.year == year and d.month == month)
++         for year, months in ((2018, range(4, 13)), (2019, range(1, 13)), (2020, range(1, 4))) for month in months]
++units_c = sum((100_000_000 / 24) * (1 - fee) / p[d] for d in dates)
++end_c = round(units_c * p[end] * (1 - fee - tax) / 1e6, 2)
++days_after_eight_years = (end - date(2026, 4, 9)).days
++end_savings = {f"{rate}pct_end_million": round(100 * (1 + rate / 100) ** 8 * (1 + rate / 100 * days_after_eight_years / 365), 2)
++               for rate in (5, 6, 7)}
++vals = r["race"]["vals"]
++ok = [p[start] == 1204.33, p[end] == 1759.08, len(dates) == 24,
++      r["mot_lan"]["end_million"] == end_b, r["mua_deu"]["end_million"] == end_c,
++      r["savings"] == end_savings, len(r["race"]["dates"]) == 103,
++      all(len(series) == 103 for series in vals.values()), vals["tiet_kiem_6"][-1] == end_savings["6pct_end_million"]]
++print("I1 check:", "OK" if all(ok) else f"LỖI ở mục {[i for i, value in enumerate(ok) if not value]}", f"({len(ok)} phép)")
+ assert all(ok)
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; python data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/analysis.py; python data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/check.py" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 238ms:
+{
+  "assumptions": {
+    "initial_million": 100,
+    "purchase_fee_pct": 0.15,
+    "sale_fee_pct": 0.15,
+    "sale_tax_pct": 0.1,
+    "savings": "VÍ DỤ GIẢ ĐỊNH: lãi cố định 5%, 6%, 7%/năm; gửi 12 tháng, tái tục hàng năm; kỳ lẻ tính theo ngày."
+  },
+  "race": {
+    "dates": [
+      "04/2018",
+      "05/2018",
+      "06/2018",
+      "07/2018",
+      "08/2018",
+      "09/2018",
+      "10/2018",
+      "11/2018",
+      "12/2018",
+      "01/2019",
+      "02/2019",
+      "03/2019",
+      "04/2019",
+      "05/2019",
+      "06/2019",
+      "07/2019",
+      "08/2019",
+      "09/2019",
+      "10/2019",
+      "11/2019",
+      "12/2019",
+      "01/2020",
+      "02/2020",
+      "03/2020",
+      "04/2020",
+      "05/2020",
+      "06/2020",
+      "07/2020",
+      "08/2020",
+      "09/2020",
+      "10/2020",
+      "11/2020",
+      "12/2020",
+      "01/2021",
+      "02/2021",
+      "03/2021",
+      "04/2021",
+      "05/2021",
+      "06/2021",
+      "07/2021",
+      "08/2021",
+      "09/2021",
+      "10/2021",
+      "11/2021",
+      "12/2021",
+      "01/2022",
+      "02/2022",
+      "03/2022",
+      "04/2022",
+      "05/2022",
+      "06/2022",
+      "07/2022",
+      "08/2022",
+      "09/2022",
+      "10/2022",
+      "11/2022",
+      "12/2022",
+      "01/2023",
+      "02/2023",
+      "03/2023",
+      "04/2023",
+      "05/2023",
+      "06/2023",
+      "07/2023",
+      "08/2023",
+      "09/2023",
+      "10/2023",
+      "11/2023",
+      "12/2023",
+      "01/2024",
+      "02/2024",
+      "03/2024",
+      "04/2024",
+      "05/2024",
+      "06/2024",
+      "07/2024",
+      "08/2024",
+      "09/2024",
+      "10/2024",
+      "11/2024",
+      "12/2024",
+      "01/2025",
+      "02/2025",
+      "03/2025",
+      "04/2025",
+      "05/2025",
+      "06/2025",
+      "07/2025",
+      "08/2025",
+      "09/2025",
+      "10/2025",
+      "11/2025",
+      "12/2025",
+      "01/2026",
+      "02/2026",
+      "03/2026",
+      "04/2026",
+      "05/2026",
+      "06/2026",
+      "07/2026",
+      "08/2026",
+      "09/2026",
+      "10/2026"
+    ],
+    "vals": {
+      "tiet_kiem_5": [
+        100.25,
+        100.71,
+        101.11,
+        101.55,
+        101.97,
+        102.36,
+        102.81,
+        103.22,
+        103.6,
+        104.07,
+        104.45,
+        104.85,
+        105.24,
+        105.75,
+        106.15,
+        106.63,
+        107.06,
+        107.5,
+        107.95,
+        108.37,
+        108.83,
+        109.27,
+        109.67,
+        110.13,
+        110.55,
+        111.01,
+        111.49,
+        111.96,
+        112.42,
+        112.88,
+        113.33,
+        113.8,
+        114.27,
+        114.71,
+        115.13,
+        115.63,
+        116.08,
+        116.59,
+        117.06,
+        117.54,
+        118.05,
+        118.52,
+        118.98,
+        119.49,
+        119.98,
+        120.42,
+        120.92,
+        121.41,
+        121.88,
+        122.42,
+        122.92,
+        123.4,
+        123.95,
+        124.45,
+        124.96,
+        125.46,
+        125.96,
+        126.5,
+        126.96,
+        127.48,
+        127.96,
+        128.54,
+        129.06,
+        129.6,
+        130.15,
+        130.65,
+        131.21,
+        131.74,
+        132.24,
+        132.82,
+        133.33,
+        133.83,
+        134.32,
+        134.96,
+        135.48,
+        136.08,
+        136.63,
+        137.2,
+        137.77,
+        138.31,
+        138.89,
+        139.33,
+        139.98,
+        140.54,
+        141.1,
+        141.69,
+        142.29,
+        142.89,
+        143.45,
+        144.06,
+        144.66,
+        145.2,
+        145.84,
+        146.42,
+        146.96,
+        147.57,
+        148.15,
+        148.76,
+        149.41,
+        150.03,
+        150.6,
+        151.27,
+        151.39
+      ],
+      "tiet_kiem_6": [
+        100.3,
+        100.85,
+        101.33,
+        101.86,
+        102.37,
+        102.83,
+        103.37,
+        103.86,
+        104.32,
+        104.88,
+        105.34,
+        105.82,
+        106.3,
+        106.91,
+        107.39,
+        107.97,
+        108.49,
+        109.03,
+        109.57,
+        110.08,
+        110.63,
+        111.18,
+        111.66,
+        112.22,
+        112.73,
+        113.28,
+        113.87,
+        114.45,
+        115.02,
+        115.57,
+        116.13,
+        116.7,
+        117.27,
+        117.81,
+        118.33,
+        118.94,
+        119.49,
+        120.12,
+        120.71,
+        121.29,
+        121.92,
+        122.51,
+        123.08,
+        123.7,
+        124.31,
+        124.86,
+        125.46,
+        126.07,
+        126.66,
+        127.33,
+        127.95,
+        128.55,
+        129.24,
+        129.86,
+        130.5,
+        131.12,
+        131.75,
+        132.41,
+        132.99,
+        133.64,
+        134.24,
+        134.97,
+        135.63,
+        136.31,
+        136.99,
+        137.63,
+        138.33,
+        138.99,
+        139.63,
+        140.36,
+        140.99,
+        141.63,
+        142.25,
+        143.06,
+        143.72,
+        144.49,
+        145.19,
+        145.91,
+        146.63,
+        147.31,
+        148.05,
+        148.61,
+        149.43,
+        150.15,
+        150.86,
+        151.62,
+        152.39,
+        153.16,
+        153.87,
+        154.66,
+        155.43,
+        156.12,
+        156.94,
+        157.68,
+        158.37,
+        159.16,
+        159.91,
+        160.69,
+        161.53,
+        162.35,
+        163.08,
+        163.94,
+        164.1
+      ],
+      "tiet_kiem_7": [
+        100.35,
+        101.0,
+        101.55,
+        102.17,
+        102.76,
+        103.3,
+        103.93,
+        104.51,
+        105.04,
+        105.7,
+        106.23,
+        106.79,
+        107.35,
+        108.07,
+        108.64,
+        109.32,
+        109.93,
+        110.57,
+        111.21,
+        111.8,
+        112.46,
+        113.09,
+        113.67,
+        114.33,
+        114.93,
+        115.59,
+        116.29,
+        116.97,
+        117.65,
+        118.31,
+        118.97,
+        119.65,
+        120.33,
+        120.97,
+        121.58,
+        122.31,
+        122.97,
+        123.73,
+        124.43,
+        125.14,
+        125.89,
+        126.59,
+        127.27,
+        128.03,
+        128.75,
+        129.41,
+        130.14,
+        130.87,
+        131.58,
+        132.39,
+        133.14,
+        133.87,
+        134.7,
+        135.45,
+        136.23,
+        136.99,
+        137.74,
+        138.55,
+        139.25,
+        140.03,
+        140.77,
+        141.65,
+        142.46,
+        143.29,
+        144.13,
+        144.91,
+        145.77,
+        146.58,
+        147.36,
+        148.24,
+        149.02,
+        149.8,
+        150.56,
+        151.57,
+        152.38,
+        153.33,
+        154.19,
+        155.08,
+        155.97,
+        156.81,
+        157.73,
+        158.42,
+        159.43,
+        160.32,
+        161.19,
+        162.15,
+        163.1,
+        164.06,
+        164.95,
+        165.94,
+        166.89,
+        167.75,
+        168.77,
+        169.69,
+        170.56,
+        171.54,
+        172.48,
+        173.47,
+        174.52,
+        175.54,
+        176.46,
+        177.55,
+        177.75
+      ],
+      "mot_lan": [
+        86.86,
+        80.32,
+        79.46,
+        79.1,
+        81.84,
+        84.12,
+        75.65,
+        76.63,
+        73.81,
+        75.31,
+        79.85,
+        81.11,
+        81.02,
+        79.38,
+        78.56,
+        82.01,
+        81.38,
+        82.42,
+        82.6,
+        80.28,
+        79.48,
+        77.46,
+        72.96,
+        54.79,
+        63.61,
+        71.49,
+        68.24,
+        66.03,
+        72.91,
+        74.86,
+        76.54,
+        82.96,
+        91.29,
+        87.38,
+        96.63,
+        98.53,
+        102.5,
+        109.83,
+        116.49,
+        108.34,
+        110.12,
+        110.99,
+        119.44,
+        122.27,
+        123.91,
+        122.31,
+        123.24,
+        123.4,
+        113.04,
+        106.91,
+        99.04,
+        99.77,
+        105.9,
+        93.63,
+        85.01,
+        86.71,
+        83.29,
+        91.9,
+        84.74,
+        88.05,
+        86.76,
+        88.92,
+        92.64,
+        101.14,
+        101.23,
+        95.45,
+        85.03,
+        90.49,
+        93.45,
+        96.29,
+        103.6,
+        106.2,
+        100.03,
+        104.35,
+        102.99,
+        103.5,
+        106.18,
+        106.52,
+        104.57,
+        103.42,
+        104.77,
+        104.62,
+        107.96,
+        108.08,
+        101.42,
+        110.21,
+        113.8,
+        124.26,
+        139.12,
+        137.43,
+        135.6,
+        139.85,
+        147.58,
+        151.27,
+        155.51,
+        138.48,
+        153.34,
+        154.11,
+        153.83,
+        143.55,
+        151.52,
+        146.27,
+        145.48
+      ],
+      "mua_deu": [
+        107.84,
+        99.72,
+        98.65,
+        98.2,
+        101.6,
+        104.43,
+        93.92,
+        95.13,
+        91.64,
+        93.5,
+        99.13,
+        100.7,
+        100.59,
+        98.56,
+        97.54,
+        101.82,
+        101.04,
+        102.32,
+        102.55,
+        99.67,
+        98.67,
+        96.17,
+        90.58,
+        68.03,
+        78.97,
+        88.76,
+        84.72,
+        81.98,
+        90.52,
+        92.94,
+        95.02,
+        102.99,
+        113.34,
+        108.49,
+        119.97,
+        122.33,
+        127.25,
+        136.36,
+        144.62,
+        134.51,
+        136.71,
+        137.8,
+        148.29,
+        151.8,
+        153.84,
+        151.85,
+        153.0,
+        153.21,
+        140.34,
+        132.73,
+        122.96,
+        123.86,
+        131.48,
+        116.24,
+        105.54,
+        107.65,
+        103.4,
+        114.09,
+        105.21,
+        109.31,
+        107.72,
+        110.39,
+        115.02,
+        125.56,
+        125.68,
+        118.5,
+        105.57,
+        112.34,
+        116.02,
+        119.55,
+        128.62,
+        131.84,
+        124.19,
+        129.55,
+        127.86,
+        128.5,
+        131.82,
+        132.24,
+        129.83,
+        128.39,
+        130.07,
+        129.89,
+        134.03,
+        134.18,
+        125.91,
+        136.83,
+        141.29,
+        154.27,
+        172.72,
+        170.62,
+        168.35,
+        173.62,
+        183.22,
+        187.8,
+        193.06,
+        171.93,
+        190.37,
+        191.33,
+        190.98,
+        178.22,
+        188.11,
+        181.59,
+        180.61
+      ]
+    }
+  },
+  "savings": {
+    "5pct_end_million": 151.39,
+    "6pct_end_million": 164.1,
+    "7pct_end_million": 177.75
+  },
+  "mot_lan": {
+    "end_million": 145.48,
+    "low_date": "2020-03-24",
+    "low_million": 54.52,
+    "low_pct": -45.48,
+    "recover_date": "2021-04-01"
+  },
+  "mua_deu": {
+    "instalments": 24,
+    "piece_million": 4.1667,
+    "end_million": 180.61,
+    "low_after_full_date": "2020-03-24",
+    "low_after_full_million": 67.68,
+    "low_after_full_pct": -32.32,
+    "recover_after_full_date": "2020-11-19"
+  }
+}
+I1 check: OK (9 phép)
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Encoding utf8 'data/long/ck-i1-100-trieu-tiet-kiem-hay-vnindex/script.md' | Select-Object -Skip 75" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 222ms:
+Ba luật chơi cùng nhìn một dữ liệu giá.
+Nhưng cách chịu biến động của chúng không giống nhau.
+
+## CH02 · Đoạn rơi mà kết quả cuối che mất
+
+Biểu đồ đi tiếp tới ngày hai mươi bốn tháng ba năm hai nghìn không trăm hai mươi.
+VN-Index đóng cửa sáu trăm năm mươi chín phẩy hai mốt điểm.
+So với điểm vào, chỉ số thấp hơn khoảng bốn mươi lăm phẩy hai sáu phần trăm.
+Với luật bỏ một lần và phí giả định, một trăm triệu còn khoảng năm mươi bốn phẩy năm hai triệu.
+Đây là đáy của đường bỏ một lần trong cửa sổ dữ liệu.
+Đó là cú rơi sâu.
+Kết quả cuối không kể hết.
+Đây là ví dụ giả định.
+Nó cũng chưa tính chênh lệch giá lúc khớp lệnh thật.
+Lúc ấy, người mua đều chưa góp đủ một trăm triệu.
+Để so sánh công bằng hơn, ta xét đáy sau khi lịch góp đã hoàn tất.
+Ở cùng ngày ấy, đường mua đều quy đổi còn khoảng sáu mươi bảy phẩy sáu tám triệu.
+Con số thấp hơn một trăm, nhưng cao hơn đường bỏ một lần.
+Sự khác nhau đến từ những lần mua sau khi giá đã giảm.
+Không phải vì mua đều xóa được rủi ro.
+Nó chỉ thay đổi lúc số tiền đi vào dữ liệu.
+CPI bình quân năm hai nghìn không trăm hai mươi tăng ba phẩy hai ba phần trăm.
+Giá cả vẫn đi tiếp, ngay cả khi biểu đồ tài sản đi xuống.
+Hai thứ không giống nhau.
+Một đoạn rơi sâu thường đặt ra câu hỏi khác với một đoạn tăng.
+Bạn có thể tiếp tục giữ một phép tính đang đỏ hay không?
+Biểu đồ không trả lời hộ bạn.
+
+## CH03 · Khi đường giá quay lên
+
+Đường giá không đi thẳng.
+Nhưng tới phiên cuối năm hai nghìn không trăm hai mươi mốt, VN-Index ở một nghìn bốn trăm chín mươi tám phẩy hai tám điểm.
+Phiên cuối năm hai nghìn không trăm hai mươi là một nghìn một trăm lẻ ba phẩy tám bảy điểm.
+Khoảng cách hai mốc cho thấy một năm tăng rất mạnh trong dữ liệu.
+Đường bỏ một lần trong ví dụ giả định khi đó khoảng một trăm hai mươi ba phẩy chín một triệu.
+Nó đã quay lại trên một trăm triệu vào ngày một tháng tư năm hai nghìn không trăm hai mươi mốt.
+Các tháng cũ vẫn còn đó.
+Nó chỉ đánh dấu lúc con số đi qua điểm xuất phát.
+Đường mua đều sau khi góp đủ quay lại một trăm triệu vào ngày mười chín tháng mười một năm hai nghìn không trăm hai mươi.
+Hai ngày hồi phục khác nhau vì hai cách nạp tiền khác nhau.
+Cuối năm hai nghìn không trăm hai mươi mốt, đường mua đều khoảng một trăm năm mươi ba phẩy tám bốn triệu.
+Đây vẫn là ví dụ giả định dựa trên chỉ số giá.
+Không có cổ tức nào được cộng thêm vào hai đường này.
+CPI bình quân năm hai nghìn không trăm hai mươi mốt tăng một phẩy tám bốn phần trăm.
+Đó là một mốc thấp.
+Nhưng sức mua cuối kỳ vẫn chưa được tính trọn cho năm hai nghìn không trăm hai mươi sáu.
+Vì mới có số bình quân chín tháng của năm đó.
+Thiếu dữ liệu phải nói thiếu.
+Nó không tự kéo dài đường bằng một dự đoán.
+Và đường hồi phục cũng không phải lời hứa cho lần giảm sau.
+
+## CH04 · Đỉnh mới, rồi một lần thử nữa
+
+Ngày sáu tháng một năm hai nghìn không trăm hai mươi hai, VN-Index đóng cửa một nghìn năm trăm hai mươi tám phẩy năm bảy điểm.
+Đó là đỉnh giá đóng cửa trong dữ liệu của video.
+Đường bỏ một lần khi ấy khoảng một trăm hai mươi sáu phẩy bốn hai triệu.
+Đường mua đều khoảng một trăm năm mươi sáu phẩy chín lăm triệu.
+Mọi thứ trông ổn.
+Rồi đường giá đổi hướng.
+Ngày mười lăm tháng mười một cùng năm, chỉ số đóng cửa chín trăm mười một phẩy chín mươi điểm.
+So với đỉnh tháng một, mức giảm là khoảng bốn mươi phẩy ba lăm phần trăm.
+Đường bỏ một lần về khoảng bảy mươi lăm phẩy bốn hai triệu.
+Đường mua đều về khoảng chín mươi ba phẩy sáu ba triệu.
+Ví dụ giả định này cho thấy một đường ít rơi hơn không đồng nghĩa không rơi.
+Không cách nào luôn tốt hơn.
+Nó chỉ ghi lại cách hai quy tắc gặp đúng các phiên đã xảy ra.
+CPI bình quân năm hai nghìn không trăm hai mươi hai tăng ba phẩy mười lăm phần trăm.
+Cuối năm đó, có tin về vài mức lãi suất mười hai tháng từ năm phẩy sáu đến bảy phẩy bốn phần trăm một năm.
+Đó là khoảng quan sát ở vài nơi, không phải bình quân hệ thống.
+Vì vậy nó không được đưa vào đường tiết kiệm.
+Đây là chỗ dễ biến một video thành kết luận quá đà.
+Một con số thật nhưng sai phạm vi vẫn dẫn đến phép so sánh sai.
+Ba đường phải cùng chuẩn.
+
+## CH05 · Đường tiết kiệm đang thiếu điều gì
+
+Từ năm hai nghìn không trăm hai mươi ba, mặt bằng lãi suất đi xuống trong các mốc quan sát.
+Đầu tháng mười hai năm hai nghìn không trăm hai mươi ba, một nguồn thị trường nêu mức bình quân mười hai tháng là năm phẩy mười ba phần trăm một năm.
+Ngày mười lăm tháng một năm hai nghìn không trăm hai mươi bốn, cùng kiểu quan sát nêu bốn phẩy chín phần trăm một năm.
+Lãi suất có thay đổi.
+Chúng không phải bình quân năm.
+Ví dụ giả định gửi tiết kiệm không được phép lấy một mốc tháng rồi kéo dài tám năm.
+Làm vậy sẽ tạo ra một đường rất mượt, nhưng không phải dữ liệu thật.
+Đó là lý do biểu đồ chính vẫn vẽ ba vị trí.
+Hai vị trí có chuỗi tính được là bỏ một lần và mua đều.
+Vị trí tiết kiệm ghi rõ chưa thể tính đầy đủ.
+Thiếu cũng là một kết quả.
+CPI bình quân năm hai nghìn không trăm hai mươi ba tăng ba phẩy hai lăm phần trăm.
+CPI bình quân năm hai nghìn không trăm hai mươi bốn tăng ba phẩy sáu ba phần trăm.
+Lạm phát cho thấy con số tiền đứng yên cũng đổi sức mua theo thời gian.
+Nhưng video không biến CPI thành lãi suất thực khi thiếu chuỗi tiết kiệm hoàn chỉnh.
+Mỗi năm phải có nguồn, phương pháp và giới hạn đi cùng.
+Không có đường tắt nào từ vài tiêu đề báo đến một kết luận tám năm.
+Phí giao dịch cũng là giả định minh họa không phẩy mười lăm phần trăm mỗi chiều.
+Phí thực tế, giá khớp và sản phẩm thực có thể khác.
+Đổi giả định, đổi kết quả.
+
+## CH06 · Kết quả cuối không phải mệnh lệnh
+
+Ta quay lại phiên sáu tháng mười năm hai nghìn không trăm hai mươi sáu.
+VN-Index đóng cửa một nghìn bảy trăm năm mươi chín phẩy không tám điểm.
+Với luật bỏ một lần, phí và thuế giả định, một trăm triệu thành khoảng một trăm bốn mươi lăm phẩy bốn tám triệu.
+Với luật mua đều hai mươi bốn tháng, nó thành khoảng một trăm tám mươi phẩy sáu mốt triệu.
+Đó là dữ liệu quá khứ.
+Chúng không dự báo ngày mai.
+Chúng cũng không nói bạn nên mua, bán hay gửi ở đâu.
+Đường bỏ một lần từng ở dưới một trăm triệu trong một giai đoạn dài.
+Đường mua đều cũng có lúc dưới một trăm triệu sau khi góp đủ.
+Mức đáy của chúng lần lượt khoảng năm mươi bốn phẩy năm hai và sáu mươi bảy phẩy sáu tám triệu.
+Đó là phần giá phải nhìn thấy khi đọc kết quả cuối.
+Còn tiết kiệm thì sao?
+Chưa thể xếp hạng.
+Không có chuỗi bình quân từng năm đủ chuẩn, không có phép so sánh hoàn chỉnh.
+VN-Index không gồm cổ tức trong mô phỏng này.
+Thuế chuyển nhượng không phẩy một phần trăm và phí giả định đã làm kết quả thấp hơn đường giá thô.
+Quá khứ không phải dự báo.
+Ví dụ giả định không phải tư vấn đầu tư.
+Nội dung giáo dục, không phải tư vấn đầu tư.
+Vòng mở ở đầu video vì thế có câu trả lời khác một bảng xếp hạng.
+Một trăm triệu không chỉ có kết quả cuối.
+Nó còn có thời điểm vào và đoạn rơi.
+Nó còn có phí, thuế và dữ liệu thiếu.
+Nó còn có khả năng chịu đựng của bạn.
+Trước khi tin một đường nào, hãy hỏi nó đã dùng dữ liệu nào và đã bỏ sót điều gì.
+
+ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/settings/usage to purchase more credits or try again at 2:27 PM.
+ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/settings/usage to purchase more credits or try again at 2:27 PM.
+tokens used
+74,273

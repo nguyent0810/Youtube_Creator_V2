@@ -1,0 +1,294 @@
+{
+ "title": "Cái giỏ hàng của cả nước",
+ "lines": [
+  {
+   "t": "Thứ nằm giữa hai cảm giác ấy là lạm phát.",
+   "p": 0.8
+  },
+  {
+   "t": "Và cách đo nó là chỉ số giá tiêu dùng.",
+   "p": 1.0
+  },
+  "Hãy hình dung một cái giỏ hàng rất lớn.",
+  "Trong đó có gạo, tiền thuê nhà, xăng, và rất nhiều thứ khác.",
+  {
+   "t": "Cục Thống kê chia cái giỏ ấy thành mười một nhóm hàng hóa và dịch vụ chính.",
+   "p": 1.0
+  },
+  "Mỗi tháng, người ta ghi lại giá của cả giỏ, và công bố vào cuối tháng.",
+  {
+   "t": "Giỏ đắt lên bao nhiêu phần trăm, đó là lạm phát.",
+   "p": 1.0
+  },
+  {
+   "t": "Mười năm qua cái giỏ ấy đắt lên bao nhiêu?",
+   "ask": 1
+  },
+  "Từ năm hai nghìn không trăm mười sáu tới năm hai nghìn không trăm hai mươi lăm, giá cả bình quân tăng khoảng ba phẩy một phần trăm mỗi năm.",
+  "Năm thấp nhất là hai nghìn không trăm hai mươi mốt, chỉ khoảng một phẩy tám phần trăm.",
+  "Năm cao nhất là hai nghìn không trăm hai mươi tư, khoảng ba phẩy sáu.",
+  "Nghe nhỏ.",
+  {
+   "t": "Nhưng cộng dồn chín năm, cái giỏ đắt lên khoảng ba mươi hai phần trăm.",
+   "p": 1.0
+  },
+  "Năm nay chưa hết.",
+  "Chín tháng đầu năm, giá cả bình quân cao hơn cùng kỳ năm ngoái bốn phẩy năm hai phần trăm.",
+  {
+   "t": "Riêng tháng chín, mức tăng so với cùng kỳ là năm phẩy không tám phần trăm.",
+   "p": 1.0
+  },
+  {
+   "t": "Nếu lấy mức bình quân chín tháng cho cả năm nay, thì từ năm hai nghìn không trăm mười sáu tới nay, cái giỏ đã đắt lên khoảng ba mươi tám phần trăm.",
+   "p": 1.0
+  },
+  "Đổi ra tiền lương của anh Tuấn.",
+  "Muốn mua được đúng cái giỏ mà mười triệu mua được năm ấy, năm nay anh cần khoảng mười ba triệu tám.",
+  {
+   "t": "Không phải mười ba triệu.",
+   "p": 1.0
+  },
+  "Nói theo chiều ngược lại.",
+  "Nếu năm ấy anh cất mười triệu vào ngăn kéo, hôm nay nó chỉ mua được lượng hàng cỡ bảy triệu hai trăm năm mươi nghìn của năm ấy.",
+  {
+   "t": "Tờ tiền vẫn nguyên. Sức mua thì mất hơn một phần tư.",
+   "p": 1.0
+  },
+  "Vậy lương mười ba triệu của anh Tuấn là tăng, hay giảm?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "CÁI GIỎ HÀNG\nCỦA CẢ NƯỚC",
+   "sub": "CHỈ SỐ GIÁ TIÊU DÙNG (CPI)",
+   "vid": "35878664",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Thứ"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "CHỈ SỐ GIÁ TIÊU DÙNG",
+   "srcnote": "CỤC THỐNG KÊ",
+   "rows": [
+    {
+     "k": "GIỎ HÀNG",
+     "v": "GẠO · THUÊ NHÀ · XĂNG · …",
+     "at": 3
+    },
+    {
+     "k": "CHIA THÀNH",
+     "v": "11 NHÓM CHÍNH",
+     "at": 4
+    },
+    {
+     "k": "MỖI THÁNG",
+     "v": "GHI GIÁ · CÔNG BỐ",
+     "at": 5
+    }
+   ],
+   "total": {
+    "k": "GIỎ ĐẮT LÊN BAO NHIÊU %",
+    "v": "= LẠM PHÁT",
+    "at": 6
+   }
+  },
+  {
+   "type": "question",
+   "at": 7,
+   "text": "Mười năm qua,\ncái giỏ đắt lên bao nhiêu?"
+  },
+  {
+   "type": "bars",
+   "at": 8,
+   "title": "LẠM PHÁT BÌNH QUÂN NĂM (%)",
+   "unit": "WORLD BANK WDI · TỪ CỤC THỐNG KÊ",
+   "items": [
+    {
+     "k": "2016",
+     "v": 2.67,
+     "lbl": "2,7",
+     "at": 8
+    },
+    {
+     "k": "2018",
+     "v": 3.54,
+     "lbl": "3,5",
+     "at": [
+      8,
+      "tới"
+     ]
+    },
+    {
+     "k": "2020",
+     "v": 3.22,
+     "lbl": "3,2",
+     "at": [
+      8,
+      "bình"
+     ]
+    },
+    {
+     "k": "2021",
+     "v": 1.83,
+     "lbl": "1,8",
+     "at": 9,
+     "acc": true
+    },
+    {
+     "k": "2022",
+     "v": 3.16,
+     "lbl": "3,2",
+     "at": [
+      9,
+      "chỉ"
+     ]
+    },
+    {
+     "k": "2024",
+     "v": 3.62,
+     "lbl": "3,6",
+     "at": 10,
+     "acc": true
+    },
+    {
+     "k": "2025",
+     "v": 3.31,
+     "lbl": "3,3",
+     "at": [
+      10,
+      "khoảng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 12,
+   "from": 0,
+   "to": 32,
+   "suffix": "%",
+   "label": "GIỎ HÀNG ĐẮT LÊN · 2016 → 2025",
+   "sub": {
+    "text": "≈ 3,1%/NĂM · CỘNG DỒN 9 NĂM",
+    "at": [
+     12,
+     "cái"
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 13,
+   "title": "NĂM 2026 · CHƯA HẾT",
+   "srcnote": "CỤC THỐNG KÊ · 30/09/2026",
+   "rows": [
+    {
+     "k": "BÌNH QUÂN 9 THÁNG",
+     "v": "+4,52%",
+     "at": 14
+    },
+    {
+     "k": "THÁNG 9 SO CÙNG KỲ",
+     "v": "+5,08%",
+     "at": 15
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 16,
+   "from": 0,
+   "to": 38,
+   "suffix": "%",
+   "label": "GIỎ HÀNG ĐẮT LÊN · 2016 → 2026",
+   "sub": {
+    "text": "2026 GIẢ ĐỊNH = BÌNH QUÂN 9 THÁNG · KÊNH TỰ TÍNH",
+    "at": [
+     16,
+     "thì"
+    ]
+   }
+  },
+  {
+   "type": "bars",
+   "at": 17,
+   "title": "MUA ĐÚNG GIỎ CỦA 10 TRIỆU NĂM 2016 (TRIỆU)",
+   "unit": "KÊNH TỰ TÍNH",
+   "items": [
+    {
+     "k": "NĂM 2016",
+     "v": 10,
+     "lbl": "10",
+     "at": 17
+    },
+    {
+     "k": "NĂM 2026 · CẦN",
+     "v": 13.8,
+     "lbl": "≈ 13,8",
+     "at": [
+      18,
+      "năm"
+     ],
+     "acc": true
+    },
+    {
+     "k": "LƯƠNG ANH TUẤN",
+     "v": 13,
+     "lbl": "13",
+     "at": 19
+    }
+   ],
+   "label": {
+    "k": "CPI BÌNH QUÂN NĂM: WORLD BANK WDI (TỪ SỐ LIỆU CỤC THỐNG KÊ) · 2026 = BÌNH QUÂN 9 THÁNG +4,52%",
+    "v": "",
+    "at": 17
+   }
+  },
+  {
+   "type": "broll",
+   "at": 20,
+   "vid": "3752547",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "10 TRIỆU ĐỂ TRONG NGĂN KÉO TỪ 2016",
+     "at": 21,
+     "sm": true
+    },
+    {
+     "text": "SỨC MUA ≈ 7,25 TRIỆU",
+     "at": [
+      21,
+      "bảy"
+     ],
+     "acc": true
+    },
+    {
+     "text": "tờ tiền vẫn nguyên · mất hơn một phần tư",
+     "at": 22,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 23,
+   "text": "Lương 13 triệu của anh Tuấn\nlà tăng hay giảm?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "CÁI GIỎ HÀNG CỦA CẢ NƯỚC"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

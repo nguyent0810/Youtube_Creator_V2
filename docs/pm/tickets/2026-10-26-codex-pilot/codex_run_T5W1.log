@@ -1,0 +1,1824 @@
+Reading additional input from stdin...
+OpenAI Codex v0.164.0
+--------
+workdir: D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+model: gpt-5.6-terra
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR] (network access enabled)
+reasoning effort: medium
+reasoning summaries: none
+session id: 01a17844-9608-7282-b567-9a6b450e11af
+--------
+user
+Làm ticket docs/pm/tickets/2026-10-26-codex-pilot/T5W1-kich-ban-social-network.md từ đầu đến cuối. Tuân thủ AGENTS.md (đã nạp sẵn), nhất là 'Cấm tuyệt đối' và 'chỉ đọc đúng các file ticket chỉ định, không khám phá repo'. Trước khi báo xong phải chạy `python scripts/long_gate.py mim-social-network --min-syl 1900` và nó phải in ĐẠT (trừ khi ticket nói là ticket nghiên cứu). Viết báo cáo vào file kết quả mà ticket chỉ định. Tiếng Việt.
+codex
+Mình sẽ làm đúng ticket và chỉ mở các tài liệu nó chỉ định, rồi chạy cổng `long_gate` trước khi ghi báo cáo.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw 'docs/pm/tickets/2026-10-26-codex-pilot/T5W1-kich-ban-social-network.md'" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 81ms:
+# T5W1 â€” Ká»ŠCH Báº¢N + FACTCHECK cho `mim-social-network`
+
+## Pháº¡m vi
+
+**Chá»‰ ghi 3 file:**
+- `data/long/mim-social-network/script.md`
+- `data/long/mim-social-network/factcheck.md`
+- `docs/pm/tickets/2026-10-26-codex-pilot/T5W1-ket-qua.md`
+
+Lá»‡nh `script_lines.py` sáº½ táº¡o thÃªm cÃ¡c `chNN.json` chá»©a `lines`. Äiá»u Ä‘Ã³ cháº¥p nháº­n Ä‘Æ°á»£c.
+
+**Chá»‰ Ä‘á»c:**
+1. Ticket nÃ y.
+2. `docs/codex/long-rules.md`, má»¥c "Lá»—i Ä‘Ã£ gáº·p".
+3. `docs/codex/long-cheatsheet.md`, má»¥c "BÃ i há»c Moneyball".
+4. `data/long/mim-social-network/facts.md`. ÄÃ¢y lÃ  kho Ä‘Ã£ duyá»‡t. **Chá»‰ dÃ¹ng dá»¯ kiá»‡n trong kho.** Dá»¯ kiá»‡n "vá»«a" pháº£i cÃ³ quy dáº«n ngay trong cÃ¢u Ä‘á»c.
+5. Máº«u Ä‘á»‹nh dáº¡ng: CH00 vÃ  CH01 cá»§a `data/long/mim-moneyball/script.md`.
+
+KhÃ´ng grep repo, khÃ´ng Ä‘á»c code.
+
+## YÃªu cáº§u
+
+- **TiÃªu Ä‘á»:** dÃ²ng 1 cá»§a `script.md`, â‰¤ 60 kÃ½ tá»±, má»™t dáº¥u `:`. VÃ­ dá»¥: "THE SOCIAL NETWORK NgoÃ i Äá»i Tháº­t: Facemash 2003".
+- **Äá»™ dÃ i:** 8 chÆ°Æ¡ng, **2.000â€“2.300 Ã¢m tiáº¿t**.
+- **Cold open:** theo Ä‘á» xuáº¥t trong T5R, cÃ³ ngÃ y giá».
+- **MÃ´-tÃ­p:** chá»n má»™t mÃ´-tÃ­p, má»—i chÆ°Æ¡ng thÃªm má»™t dÃ²ng. Pháº£i khÃ¡c "sÃ¡u rÄƒng" (Turing), "sá»• má»™t con sá»‘" (Johnson) vÃ  "táº¥m báº£ng lÃªn gÃ´n" (Moneyball).
+- **NgÆ°á»i tháº­t cÃ²n sá»‘ng:**
+  - Chá»‰ ká»ƒ sá»± kiá»‡n cÃ³ nguá»“n.
+  - KhÃ´ng suy diá»…n Ä‘á»™ng cÆ¡ hay tÃ­nh cÃ¡ch.
+  - Lá»i trÃ­ch láº¥y Ä‘Ãºng nguá»“n trong kho, gáº¯n `[TRÃCH Dá»ŠCH]`.
+- **CÃ´ng thá»©c Elo:** chá»‰ nháº¯c nhÆ° má»™t cáº£nh trong phim. Kho khÃ´ng cÃ³ nguá»“n máº¡nh xÃ¡c nháº­n Facemash tháº­t sá»± dÃ¹ng Elo.
+- **Viáº¿t cho tai:**
+  - CÃ¢u má»™t hÆ¡i, nÃ³i vá»›i "báº¡n".
+  - Thuáº­t ngá»¯ (thuáº­t toÃ¡n, xáº¿p háº¡ng, Houseâ€¦) pháº£i giáº£i thÃ­ch ngay láº§n Ä‘áº§u xuáº¥t hiá»‡n.
+  - KhÃ´ng cÃ³ cÃ¢u Ä‘á»‡m.
+- **`factcheck.md`:** má»—i kháº³ng Ä‘á»‹nh cÃ³ sá»‘, ngÃ y hoáº·c tÃªn pháº£i cÃ³ má»™t dÃ²ng kÃ¨m URL. Má»i nÄƒm cÃ³ trong ká»‹ch báº£n Ä‘á»u pháº£i xuáº¥t hiá»‡n trong `factcheck.md`.
+
+## Cá»•ng (báº¯t buá»™c trong vÃ²ng nÃ y)
+
+1. Cháº¡y `PYTHONIOENCODING=utf-8 python motion/long/script_lines.py mim-social-network`. Pháº£i qua integrity; ghi sá»‘ Ã¢m tiáº¿t in ra.
+2. Cháº¡y `PYTHONIOENCODING=utf-8 python motion/long/studio_lint.py mim-social-network --strict`. Lá»—i "cÃ¢u > 35 tiáº¿ng" thÃ¬ **tÃ¡ch cÃ¢u ngay trong `script.md`**, cháº¡y láº¡i bÆ°á»›c 1 vÃ  2 cho tá»›i khi ra **0 lá»—i**. Cáº£nh bÃ¡o khÃ´ng cáº§n sá»­a.
+
+## BÃ¡o cÃ¡o
+
+- TiÃªu Ä‘á», sá»‘ Ã¢m tiáº¿t, mÃ´-tÃ­p Ä‘Ã£ chá»n.
+- Sá»‘ dá»¯ kiá»‡n Ä‘Ã£ dÃ¹ng á»Ÿ tá»«ng chÆ°Æ¡ng.
+- Káº¿t quáº£ `studio_lint`.
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$OutputEncoding = [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new(); Get-Content -Encoding utf8 -Raw '"'docs/codex/long-rules.md'; Get-Content -Encoding utf8 -Raw 'docs/codex/long-cheatsheet.md'; Get-Content -Encoding utf8 -Raw 'data/long/mim-social-network/facts.md'; Get-Content -Encoding utf8 'data/long/mim-moneyball/script.md' | Select-Object -First 160" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 169ms:
+# Luật Long cho agent sản xuất (chi tiết, chuyển từ AGENTS.md ngày 26/10/2026)
+
+Đọc cùng `docs/codex/long-cheatsheet.md`.
+
+### Ảnh AI khi không có ảnh tự do (từ 26/10/2026)
+
+Cảnh cần minh hoạ mà không có ảnh PD/CC0/CC BY (ví dụ cảnh trong phòng làm việc năm 1962, hay một vật đã mất) thì **không tự tạo ảnh**. Ghi prompt vào `data/long/<topic>/ai_prompts.md` để chủ kênh nhờ bot tạo.
+
+**Định dạng một mục:**
+
+```
+#### ai_01.png — <cảnh dùng ở chNN, câu số N>
+- Prompt (tiếng Anh): <mô tả chi tiết: bối cảnh, thời kỳ, ánh sáng, bố cục, phong cách>
+- Khung: 16:9, 1920x1080
+- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
+- Phong cách: <ví dụ "painterly editorial illustration, muted 1960s palette">
+```
+
+**Quy tắc:**
+- **Người thật: lấy dáng gốc, không vẽ mặt** (chủ kênh, 26/10/2026):
+  - Được vẽ người có thật (Johnson, Glenn…) theo **dáng gốc** trong ảnh tư liệu: vóc người, kiểu tóc, trang phục, đồ vật, bối cảnh đúng thời kỳ.
+  - Chỉ vẽ ở **góc nghiêng quay đi hoặc từ phía sau**, không thấy rõ mặt.
+  - Trong prompt, ghi ảnh tư liệu tham chiếu (URL Commons/NASA trong `facts.md`) và mô tả dáng cụ thể. Ví dụ: "woman in 1960s cat-eye glasses and cardigan, seen from behind at a desk with mechanical calculator".
+  - Mặt người thật chỉ dùng ảnh tư liệu PD.
+- **Phong cách:** minh hoạ hoặc tranh vẽ, **không giả ảnh tư liệu**, để người xem không nhầm là tư liệu thật.
+- **Không gắn nhãn AI:** không thêm nhãn "AI" trên màn hình hay trong mô tả, vì bản thân ảnh đã có chữ ký AI (chủ kênh quyết định ngày 26/10/2026).
+- **Đường dẫn:**
+  - Chủ kênh thả ảnh vào `motion/hf/assets/long/<topic>/img/ai/ai_NN.png`.
+  - Engine chỉ đọc `output/long/<topic>/img/aiNN.jpg` kèm `.json`. Claude chạy `python scripts/ai_img_import.py <topic>` để chép ảnh sang chỗ đó.
+  - Từ 26/10, Claude chạy `python scripts/ai_img_request.py <topic>`. Lệnh này gửi `ai_prompts.md` cho bot tạo ảnh qua webhook (khoá đọc từ registry User, xem `docs/tools/grokbot-webhook.md`), chờ ảnh về rồi chạy `ai_img_import`. **Agent sản xuất không gọi webhook**: chỉ viết prompt.
+  - Trong `IMGS`, khai key `aiNN` là `"EXT:ai:ai_NN"`.
+- **Ghi công:** cảnh dùng ảnh AI phải có `"credit": false`. Nếu thiếu, engine in "ẢNH: TƯ LIỆU · PHẠM VI CÔNG CỘNG", tức là gắn nhãn tư liệu cho tranh minh hoạ, sai sự thật. Nhãn `illus` "ẢNH MINH HỌA" thì giữ, vì đó là nhãn chuẩn cho tranh minh hoạ.
+- **Khi chưa có ảnh:** giữ nguyên cảnh và đường dẫn, rồi ghi trong báo cáo "chờ N ảnh AI". `html` hoặc `long_gate` có thể báo thiếu file; điều đó chấp nhận được cho tới khi ảnh về.
+- **Giới hạn:** tối đa 6 ảnh AI cho một bài 9–11 phút. Ưu tiên ảnh tư liệu thật.
+
+### Quy trình Long (theo mẫu `data/long/mim-ke-huy-diet-petrov`, `mim-google-maps-kal007`)
+
+Đọc trước:
+- `motion/long/README.md`, `RETENTION.md`, `SOURCES.md`;
+- `docs/pm/2026-10-23-mim-long-moi.md`;
+- `docs/pm/so-that-bai.md`.
+
+Các bước:
+1. Viết `script.md` và `factcheck.md` (nguồn là URL đã mở).
+2. Chạy `python motion/long/script_lines.py <topic>`; phải qua cổng integrity.
+3. Viết `gen_scenes.py`, rồi chạy `python data/long/<topic>/gen_scenes.py`, ra `spec.json` và `chNN.json`. Counter có số 1000–2100 phải khai `"year": true|false`.
+4. Chạy `python motion/long/studio_lint.py <topic> --strict`; phải ra 0 lỗi.
+5. Chạy `python motion/long/build_long.py <topic> tts`, rồi `... html`. Sửa mọi lỗi lint mà `html` báo.
+6. Chạy `python motion/long/clip_sheet.py <topic>`, xem ảnh clip sheet; clip sai nghĩa hoặc lộ logo thì thay.
+7. Chỉ render khi ticket cho phép: `build_long.py <topic> render`, rồi `final`.
+8. Dựng thumbnail `motion/long/thumbs/<topic>_t1.html`, rồi chạy `python motion/long/thumb.py <topic> t1`.
+
+### Cổng chất lượng (bắt buộc, từ 26/10/2026)
+
+Các cổng lint chỉ là mức sàn kỹ thuật. Trước khi báo xong một Long, phải chạy:
+
+```
+python scripts/long_gate.py <topic> --min-syl 1900
+```
+
+Lệnh phải in **ĐẠT**. Các ngưỡng được đo trên bài mẫu Petrov và KAL 007:
+
+| Ngưỡng | Giá trị |
+|---|---|
+| Âm tiết lời đọc | ≥ 1.900 (≈ 9 phút) |
+| Thời lượng mỗi cảnh | ≤ 9 giây |
+| Loại cảnh mỗi chương | ≥ 5 |
+| Một clip dùng lại (bài 9–12 phút) | ≤ 2 lần |
+| Một ảnh dùng lại | ≤ 3 lần |
+| URL nguồn trong `factcheck.md` | ≥ 8 |
+| Tiêu đề | ≤ 60 ký tự |
+
+Ngoài ra: mọi năm trong kịch bản phải có trong `factcheck.md`, và không được có câu đệm.
+
+**Bài mẫu để so:**
+- Petrov: 22,5 phút; 179 cảnh (7,6 giây/cảnh); ít nhất 7 loại cảnh mỗi chương; 15 ảnh khác nhau.
+- KAL 007: 10,5 phút; 82 cảnh (7,7 giây/cảnh); không dùng clip, chỉ ảnh và đồ hoạ (bản đồ, timeline, counter).
+
+Mỗi chương của hai bài này có 3–4 dữ kiện cụ thể có nguồn.
+
+### Lỗi đã gặp (đừng lặp lại)
+
+Thử nghiệm Codex T1/T1b, 26/10/2026:
+
+1. **Chèn câu đệm rỗng nghĩa cho qua tỉ lệ câu ngắn của lint.** Ví dụ: "Rất chậm.", "Đó là câu hỏi khó.". Câu ngắn chỉ đặt sau một phán định hoặc khoảnh khắc cảm xúc.
+2. **Bị yêu cầu bỏ câu đệm thì chỉ xoá, không viết nội dung thay.** Bài tụt từ 9 xuống 5 phút. Thiếu độ dài thì phải **tìm thêm dữ kiện có nguồn**, không được để bài ngắn đi.
+3. **Đọc một ngày cụ thể (18/3/1940) trong khi chính `factcheck.md` ghi là chưa chốt được.**
+4. **Một clip lặp 8 lần; 9 phút chỉ có 18 cảnh và toàn chữ.**
+5. **Cold open liệt kê tên người thay vì dựng một cảnh có căng thẳng; câu meta "Hôm nay mình không kể…".**
+6. **Coi việc qua lint là xong.** Xong nghĩa là `long_gate.py` in ĐẠT **và** nội dung đáng xem.
+7. **Thẻ chương ghi sai trường.** Đã ghi `"number": "05"` thay cho `no`/`k`, nên engine hiện chữ "undefined" giữa màn hình ở cả 8 chương. Thẻ chương đúng (theo `mim-ke-huy-diet-petrov/ch05.json`):
+
+   ```json
+   {"type":"chapter","no":"5","k":"CHƯƠNG NĂM","title":"…","sub":"<mốc>","bg":"<ảnh>","titleAt":[0,"<từ>"]}
+   ```
+
+   Mỗi `chNN.json` cũng phải có `"hud": {"k": "CHƯƠNG 05", "t": "<TIÊU ĐỀ>"}`. Thiếu `hud` thì `describe.py` chết và mô tả không có danh sách chương.
+8. **Một khuôn cảnh cho mọi chương.** Một khuôn 9 cảnh được dùng lại ở cả 8 chương, nên cùng một dòng chữ hiện 8 lần. Mỗi cảnh phải minh hoạ đúng câu đang đọc, và chữ trên màn hình lấy từ dữ kiện của chính chương đó. Mô-típ lặp chỉ được làm bằng `ledger` có tiêu đề cố định, mỗi chương thêm một dòng mới.
+9. **Quên bảng `SAY` và để `spec.youtube` trống.** Phải viết ngay từ đầu, theo mẫu Petrov và KAL:
+   - `SAY` phiên âm mọi tên nước ngoài, viết tắt (TNMOC, NASA…) và số rất lớn.
+   - `spec.youtube` gồm: `publish_at`, `playlist`, `category`, `thumb`, `summary`, `more`, `chapter_titles`, `sources` (≥ 8 URL công khai), `tags`, `hashtags`, `video_credits`.
+
+**Nghiên cứu trước, viết sau:** khi ticket chia đôi, ticket nghiên cứu chỉ gom kho dữ kiện có URL (`facts.md`). Ticket viết chỉ dùng dữ kiện trong kho đó.
+
+
+# Cheatsheet dựng Long MIM (cho Codex, đọc thay engine)
+
+**Không đọc** `motion/long/build_long.py`, `motion/hf/assets/engine/*`, `motion/stier/*`, `factory/*`, `pexels.py` hay thư mục của bài khác. Mọi thứ cần biết đều có trong cheatsheet này và trong **một file mẫu**:
+
+> `data/long/mim-katherine-johnson/gen_scenes.py`. Bài này đã qua cổng, render và đăng. **Chép nguyên file này làm khung.** Giữ các helper ở dòng 57–163 và `main()`. Chỉ thay phần nội dung bên dưới.
+
+## Thay những gì trong khung
+
+| Khối | Thay bằng |
+|---|---|
+| `TOPIC`, `TITLE` (≤ 60 ký tự, một dấu `:`) | Của bài mới |
+| `SAY` | Phiên âm mọi tên nước ngoài, viết tắt và số lớn trong lời đọc. Khoá viết thường. Ví dụ: `"nasa": "Na-sa"` |
+| `IMGS` | Ảnh Commons `"File:…"` (đã kiểm PD/CC0/CC BY) hoặc `"EXT:ai:ai_NN"` cho ảnh AI |
+| `AI_PATH`, `STAND` | Số ảnh AI của bài (≤ 6); `STAND` = ảnh tư liệu thay tạm cho từng ảnh AI |
+| `GEO` | Bản đồ: `countries`, `context`, `bbox [lon_min, lat_min, lon_max, lat_max]`, `pins [{name, lon, lat, label}]` |
+| `CHAPTER_TITLES` | `ch00`–`ch07`, tiếng Việt có dấu |
+| `LEDGER`, `ROWS` | Mô-típ của bài: một tiêu đề, mỗi chương thêm 1 dòng |
+| `ch00()`–`ch07()` | Cảnh của từng chương (mục dưới) |
+| `make_spec()` | Đủ 11 trường `youtube`, đổi `publish_at`; giữ `"say": SAY`, `imgs`, `geo` |
+
+## Helper: chữ ký và ý nghĩa
+
+**Neo thời gian:** `a(line, word)` neo cảnh vào câu `line` của chương, tại từ `word`. `word` phải là chữ **có thật trong câu đó**, không phải số và không phải chữ có trong `SAY`.
+
+| Helper | Dùng khi |
+|---|---|
+| `chapter(no, k, title, sub, bg, title_at)` | Cảnh đầu mỗi chương. `k = "CHƯƠNG MỘT"`; `sub` = mốc có nguồn; `bg` = key ảnh |
+| `photo(img, at, key, value, kin=None)` | Ảnh tư liệu hoặc ảnh AI. Ảnh AI tự có `illus` + `credit: False` |
+| `print_scene(img, at, head, key, value)` | Ảnh đặt như tờ in, có cột ghi chú |
+| `broll(vid, at, text)` | Clip Pexels (id số), có nhãn VIDEO MINH HỌA |
+| `kinetic(at, text, small=None)` | Chữ lớn động |
+| `slam(at, text, sub)` | Một con số hoặc cụm từ đập mạnh |
+| `date(at, day, d, sub)` | Mốc ngày lớn. `d = "20.02.1962"` (chữ số và dấu chấm); chữ thì để vào `day` |
+| `counter(at, to, suffix, label, frm=0, year=False)` | Số đếm. Năm thì `year=True` |
+| `timeline(at, bg, items)` | Dòng thời gian (xem cách dùng trong mẫu) |
+| `org(at, nodes)` | Sơ đồ người hoặc tổ chức |
+| `question(at, text)` | Câu hỏi treo |
+| `ledger(n, at)` | Hiện mô-típ tới dòng `n` |
+| `{"type": "map", "at": …, "geo": "<key GEO>"}` | Bản đồ; mẫu có ở `ch01`/`ch05` của khung |
+
+## Luật cảnh (cổng `long_gate.py` sẽ chặn nếu sai)
+
+- 60–80 cảnh, trung bình ≤ 9 giây/cảnh, mỗi chương ≥ 5 loại cảnh.
+- Không dòng chữ hiển thị nào lặp > 2 lần. Mô-típ chỉ qua `ledger`.
+- Một clip dùng ≤ 2 lần, ít nhất 6 clip khác nhau. Một ảnh dùng ≤ 3 lần.
+- Mỗi cảnh minh hoạ **câu đang đọc**.
+
+## Clip Pexels
+
+- Tải: `python motion/long/pexels.py get <topic> <id> …`. Chỉ dùng id đã ghi trong `facts.md`. Từ 26/10/2026 tải thẳng theo id, không cần `search` trước.
+  - Lệnh in "không có bản ngang ≤1920 -- bỏ qua" nghĩa là clip dọc. Phải thay bằng clip ngang. Tìm bằng `pexels.py search <topic> "từ khoá"`, rồi `get` id mới.
+- Soát: `python motion/long/clip_sheet.py <topic>`, mở `output/long/<topic>/qa_clips.jpg` xem. Clip lộ chữ, logo hoặc sai nghĩa thì thay.
+
+## Bài học Moneyball (26/10/2026)
+
+- **Vòng kịch bản (W1):** phải chạy `script_lines.py` và `studio_lint.py --strict` rồi sửa hết lỗi câu > 35 tiếng **ngay trong W1**. Tách câu sau khi đã dựng cảnh thì mọi neo phía sau bị lệch, sửa rất tốn.
+- **Neo phải tăng dần.** Cảnh sau phải neo vào từ đứng **sau** neo của cảnh trước, tính theo (câu, vị trí từ). Neo ngược hoặc trùng thì engine báo "cảnh quá ngắn".
+- **Không neo vào chữ số.** Ví dụ "11" không khớp với "11–0".
+- **"Qua html" nghĩa là** in đủ 8 dòng `chNN: … -> …html` và không có `Error`. Chạy bản `--standin` mà không đọc lỗi thì chưa tính là qua.
+
+## Thứ tự lệnh
+
+Đặt `PYTHONIOENCODING=utf-8` cho mọi lệnh.
+
+1. `python motion/long/script_lines.py <topic>`: đưa lời đọc từ `script.md` vào `chNN.json`.
+2. `python data/long/<topic>/gen_scenes.py`, rồi chạy lại `script_lines.py`. `gen_scenes` ghi đè `chNN.json` không kèm `lines`.
+3. `python motion/long/studio_lint.py <topic> --strict` phải ra **0 lỗi**.
+   - Câu quá 35 tiếng thì **tách thành 2 câu** trong `script.md`, giữ nguyên ý, kể cả khi kịch bản đã được duyệt.
+   - Tách câu xong, kiểm lại neo `a(line, word)` của các câu phía sau trong chương đó, vì số thứ tự câu đã lệch.
+4. `python motion/long/build_long.py <topic> tts` cho **đủ mọi chương**: phải có `output/long/<topic>/chNN/timing.json` cho từng chương. Rồi chạy `… html`. Nếu ảnh AI chưa có thì chạy `gen_scenes.py --standin` để soát html, sau đó chạy lại bản thật.
+5. `python scripts/long_gate.py <topic> --min-syl 1900` phải ra **ĐẠT**.
+
+# Kho dữ kiện — `mim-social-network`
+
+Ngày mở nguồn: 26/10/2026. Đây là kho nghiên cứu cho pha viết, không phải kịch bản. Dòng **mạnh** có thể dùng làm khẳng định trực tiếp; dòng **vừa** phải quy dẫn trong lời đọc. Không dùng hình, poster, đoạn trích hoặc âm thanh của phim.
+
+## CH00 — Một đêm, một trang bị tắt
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 01 | Bài của *The Harvard Crimson* ngày 04/11/2003 xác định Mark E. Zuckerberg là người lập Facemash khi đang học Harvard; trang dùng ảnh thẻ lấy từ các “House facebooks” trực tuyến. | [The Harvard Crimson — *Hot or Not? Website Briefly Judges Looks*](https://www.thecrimson.com/article/2003/11/4/hot-or-not-website-briefly-judges/) | **mạnh** |
+| 02 | Theo bài năm 2003, Facemash cho người xem chọn người “hotter” giữa hai ảnh được chọn ngẫu nhiên, hoặc chấm ảnh trong cùng một House. | [The Harvard Crimson — *Hot or Not?*](https://www.thecrimson.com/article/2003/11/4/hot-or-not-website-briefly-judges/) | **mạnh** |
+| 03 | Zuckerberg nói với Crimson rằng ông đã truy cập các House facebooks để gom ảnh thẻ vào Facemash. | [The Harvard Crimson — *Hot or Not?*](https://www.thecrimson.com/article/2003/11/4/hot-or-not-website-briefly-judges/) | **mạnh** |
+| 04 | Trang bị tắt vào tối Chủ nhật sau phản ứng trên trường; tới lúc đó có 450 khách truy cập và ít nhất 22.000 lượt bỏ phiếu, theo Zuckerberg nói với Crimson. | [The Harvard Crimson — *Hot or Not?*](https://www.thecrimson.com/article/2003/11/4/hot-or-not-website-briefly-judges/) | **mạnh** |
+
+## CH01 — Harvard xử lý vụ Facemash
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 05 | Crimson năm 2014 viết Facemash nhận hơn 20.000 lượt truy cập trong 24 giờ và thu hút sự chú ý của Administrative Board của Harvard College. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
+| 06 | Bài Crimson cùng năm nói Administrative Board không buộc Zuckerberg rời Harvard vì các vi phạm liên quan Facemash. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
+| 07 | Bản khiếu kiện đa quận về mạng xã hội nộp năm 2024 tóm lược rằng Zuckerberg bị triệu tập trước cơ quan kỷ luật của Harvard sau Facemash. Đây là tài liệu tố tụng, không phải phán quyết về nguồn gốc Facebook. | [In re: Social Media Adolescent Addiction/Personal Injury Products Liability Litigation — Complaint, tr. 64–66](https://s3.amazonaws.com/hoth.bizango/assets/26247/Palo_Alto_Complaint_032824.pdf) | **vừa** |
+| 08 | Trong bài năm 2003, Zuckerberg nói ông quan tâm đến phần khoa học máy tính của dự án; đây là phát biểu đương thời, không đủ để suy ra động cơ rộng hơn. | [The Harvard Crimson — *Hot or Not?*](https://www.thecrimson.com/article/2003/11/4/hot-or-not-website-briefly-judges/) | **mạnh** |
+
+## CH02 — Từ danh bạ House đến TheFacebook
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 09 | Trước TheFacebook, Harvard có danh bạ tìm kiếm cho khóa năm nhất, còn các House giữ danh bạ ảnh và số điện thoại riêng, thường bị hạn chế truy cập. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
+| 10 | TheFacebook đi vào hoạt động ngày 04/02/2004 từ phòng ký túc xá Kirkland House của Zuckerberg. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
+| 11 | Ban đầu chỉ sinh viên Harvard có thể đăng ký TheFacebook; một người dùng đầu tiên nói cần địa chỉ `harvard.edu`. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
+| 12 | Trang có 650 người đăng ký trong 24 giờ đầu và 4.300 tài khoản trong hai tuần đầu, theo Crimson phỏng vấn người dùng đầu tiên. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
+
+## CH03 — Đà mở rộng đầu năm 2004
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 13 | Đến tháng 03/2004, TheFacebook đã có chỗ đứng tại Columbia, Stanford và Yale, đồng thời đạt người đăng ký thứ 10.000. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
+| 14 | Một tính năng đầu tiên là Coursematch, cho phép người dùng xem bạn bè học lớp nào trong học kỳ. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
+| 15 | Khi Zuckerberg thi cuối kỳ vào tháng 05/2004, TheFacebook đã mở rộng trên toàn quốc và gần 100.000 người dùng, theo Crimson. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
+| 16 | Crimson ghi nhóm đi Palo Alto sau kỳ thi gồm Zuckerberg, Dustin Moskovitz, Andrew McCollum và các thực tập sinh; tháng 06/2004 công ty đổi tên thành Facebook. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
+
+## CH04 — Eduardo Saverin: sự kiện có nguồn, không suy diễn
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 17 | Hồ sơ chân dung của Crimson năm 2005 gọi Eduardo Saverin là CFO của Facebook, nhà đầu tư sớm và người điều phối quảng cáo quốc gia/lịa phương thời đầu. | [The Harvard Crimson — *Key Players*](https://www.thecrimson.com/article/2005/2/24/key-players-three-full-time-employees-have/?page=single) | **mạnh** |
+| 18 | Theo chính Saverin trong hồ sơ Crimson, Zuckerberg đã tiếp cận ông về TheFacebook trước khi lập trình trang. | [The Harvard Crimson — *Key Players*](https://www.thecrimson.com/article/2005/2/24/key-players-three-full-time-employees-have/?page=single) | **mạnh** |
+| 19 | Crimson năm 2014 ghi Saverin không đi Palo Alto cùng nhóm vào tháng 06/2004 và sau đó bị đẩy khỏi công ty. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
+| 20 | Không dùng lời đọc nào gán thái độ, động cơ hoặc mức độ trách nhiệm cá nhân cho Saverin ngoài các sự kiện ở dòng 17–19, trừ khi ticket viết có nguồn mới. | [The Harvard Crimson — *Key Players*](https://www.thecrimson.com/article/2005/2/24/key-players-three-full-time-employees-have/?page=single) | **mạnh** |
+
+## CH05 — Winklevoss, Narendra và hồ sơ vụ kiện
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 21 | Crimson ghi Cameron Winklevoss, Tyler Winklevoss và Divya Narendra đã tìm Zuckerberg để hỗ trợ xây mạng xã hội riêng cho sinh viên Harvard. | [The Harvard Crimson — *Ten Years Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
+| 22 | Tòa Phúc thẩm Liên bang Khu vực 9 tóm tắt rằng ba người Winklevoss/Narendra cáo buộc Zuckerberg lấy ý tưởng Facebook của họ; đây là cáo buộc của các bên, không phải kết luận thực tế của tòa về hành vi đó. | [U.S. Court of Appeals for the Ninth Circuit — *Facebook v. ConnectU* (2011)](https://law.justia.com/cases/federal/appellate-courts/ca9/08-16745/08-16745-2011-04-11.html) | **mạnh** |
+| 23 | Phán quyết năm 2011 giữ nguyên việc thực thi thỏa thuận dàn xếp giữa Facebook, Winklevosses/Narendra và ConnectU. | [U.S. Court of Appeals for the Ninth Circuit — *Facebook v. ConnectU* (2011)](https://law.justia.com/cases/federal/appellate-courts/ca9/08-16745/08-16745-2011-04-11.html) | **mạnh** |
+| 24 | Hồ sơ tòa Massachusetts mô tả phiên hòa giải toàn cầu ngày 22/02/2008; Facebook nhận toàn bộ cổ phần ConnectU đổi lấy 20 triệu USD tiền mặt và hơn một triệu cổ phiếu Facebook, giá trị khi đó xấp xỉ 65 triệu USD. | [Massachusetts Appeals Court — *Chang v. Winklevoss*](https://law.justia.com/cases/massachusetts/court-of-appeals/volumes/95/95massappct202.html) | **mạnh** |
+
+## CH06 — Phim và đời thật: chỉ nêu phần có thể kiểm
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 25 | Netflix Việt Nam hiển thị tên phim năm 2010 là **Mạng xã hội** và mô tả đây là phim tiểu sử của David Fincher về sự trỗi dậy của Mark Zuckerberg từ sinh viên Harvard. | [Netflix Việt Nam — *Mạng xã hội*](https://www.netflix.com/vn/title/70132721) | **vừa** |
+| 26 | Netflix xếp phim vào nhóm “Phim chuyển thể từ sách” và “Phim dựa trên câu chuyện có thật”; vì vậy không được mặc định mọi cảnh thoại là tư liệu lịch sử. | [Netflix Việt Nam — *Mạng xã hội*](https://www.netflix.com/vn/title/70132721) | **vừa** |
+| 27 | Vai Eduardo trong phim do Andrew Garfield thể hiện, còn vai Mark do Jesse Eisenberg thể hiện, theo trang Netflix Việt Nam; đây chỉ là thông tin dàn diễn viên, không xác nhận diễn biến phim. | [Netflix Việt Nam — *Mạng xã hội*](https://www.netflix.com/vn/title/70132721) | **vừa** |
+| 28 | Không có nguồn đã mở đủ mạnh để kiểm chứng cảnh mở đầu với bạn gái, cảnh công thức Elo trên cửa sổ, hay các đối thoại cụ thể của phim. Không đưa chúng thành sự kiện thật; nếu cần nhắc, chỉ nói rõ đó là cảnh phim. | [Netflix Việt Nam — *Mạng xã hội*](https://www.netflix.com/vn/title/70132721) | **mạnh** |
+
+## CH07 — Từ so cặp ảnh đến Feed xếp hạng
+
+| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+|---|---|---|---|
+| 29 | Facemash có cơ chế so sánh hai ảnh được chọn ngẫu nhiên, nhưng không có nguồn đã mở nào xác nhận nó dùng công thức Elo. Không được nói “Facemash dùng Elo”. | [The Harvard Crimson — *Hot or Not?*](https://www.thecrimson.com/article/2003/11/4/hot-or-not-website-briefly-judges/) | **mạnh** |
+| 30 | Meta mô tả Feed hiện đại là quá trình sắp thứ tự các bài có thể thấy để hiện nội dung liên quan hơn ở đầu Feed; bốn thành phần họ nêu là inventory, signals, predictions và relevancy score. | [Meta Newsroom — *News Feed Ranking in Three Minutes Flat*](https://about.fb.com/news/2018/05/inside-feed-news-feed-ranking/) | **mạnh** |
+| 31 | Theo Meta năm 2018, các tín hiệu xếp hạng có thể gồm mức phản ứng, bình luận và chia sẻ; bản cập nhật khi đó ưu tiên bài có thể tạo đối thoại và tương tác có ý nghĩa. | [Meta Newsroom — *Bringing People Closer Together*](https://about.fb.com/news/2018/01/news-feed-fyi-bringing-people-closer-together/) | **mạnh** |
+| 32 | Meta cũng nêu ví dụ các tín hiệu như độ mới của bài, dạng liên kết/ảnh/video và người đăng; họ nói trung bình có khoảng 3.000 bài khả dĩ mỗi ngày nhưng người dùng chỉ lướt khoảng 300. Đây là mô tả của công ty về hệ thống, cần quy dẫn “theo Meta”. | [Meta Newsroom — *Q&A on Upcoming US and Brazil Elections*](https://about.fb.com/news/2018/09/us-brazil-elections/) | **vừa** |
+
+> ## Ảnh Commons đã kiểm giấy phép
+
+Mỗi trang file dưới đây đã mở và hiển thị `LicenseShortName` phù hợp: chỉ **CC BY**, **CC0** hoặc **Public domain**. Không dùng các kết quả CC BY-SA/GFDL đã loại. Trước khi tải, kiểm lại trang file và crop/loại phần có logo, biển hiệu hoặc chữ đọc được.
+
+| # | File / mô tả | Giấy phép | Trang nguồn |
+|---|---|---|---|
+| I01 | Mark Zuckerberg, 2005; chỉ dùng ảnh tư liệu khi cần xác định nhân vật | CC BY 2.5 | [Commons](https://commons.wikimedia.org/wiki/File:MarkZuckerberg.jpg) |
+| I02 | Memorial Hall, Harvard, 2007 | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Harvard_memorial_hall.jpg) |
+| I03 | Memorial Hall, Harvard, 2016 | CC BY 2.0 | [Commons](https://commons.wikimedia.org/wiki/File:Memorial_Hall,_Harvard.jpg) |
+| I04 | Memorial Hall, Harvard, 2007 | CC BY 2.5 | [Commons](https://commons.wikimedia.org/wiki/File:HarvardMemorialHall24June07.jpg) |
+| I05 | Harvard Yard chapel | CC BY 2.0 | [Commons](https://commons.wikimedia.org/wiki/File:Harvard_Yard_chapel.jpg) |
+| I06 | Harvard Yard, 2011 | CC BY 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:Harvard_Yard,_Harvard_University,_Cambridge_MA.jpg) |
+| I07 | Weld Hall, Harvard | Public domain (Hoa Kỳ) | [Commons](https://commons.wikimedia.org/wiki/File:Weld_Hall_-_Harvard_University.jpg) |
+| I08 | Harvard Hall, 2022 | CC0 | [Commons](https://commons.wikimedia.org/wiki/File:Harvard_Hall_-_Harvard_University.jpg) |
+| I09 | Khuôn viên Harvard, 2016 | CC0 | [Commons](https://commons.wikimedia.org/wiki/File:Harvard_University.jpg) |
+
+> ## Ứng viên B-roll Pexels (chưa tải)
+
+Các trang đã mở ghi `Free`/`Free to use` và là khung ngang. Chỉ dùng minh họa trung tính; phải soi frame cuối cùng để loại logo, chữ đọc được và thương hiệu. Không nhận diện bất kỳ người nào trong clip là Zuckerberg, Saverin, Winklevoss hay sinh viên Harvard.
+
+| ID | Mô tả ngắn | Ghi chú bắt buộc | Trang nguồn |
+|---:|---|---|---|
+| 36392564 | Ngón tay gõ bàn phím trong phòng tối | Khung 16:9; soi bàn phím/màn hình, không để chữ đọc được. | [Pexels](https://www.pexels.com/video/typing-on-keyboard-in-dimly-lit-room-36392564/) |
+| 14314426 | Người dùng máy tính ban đêm | Khung 16:9; không gắn danh tính người thật, kiểm logo thiết bị. | [Pexels](https://www.pexels.com/video/man-typing-on-keyboard-at-night-14314426/) |
+| 7490429 | Góc bay toàn cảnh đại học | Khung 16:9; chỉ là minh họa đại học chung, loại logo/tên trường. | [Pexels](https://www.pexels.com/video/aerial-footage-of-a-university-7490429/) |
+| 5672679 | Drone qua các tòa nhà đại học | Khung 16:9; không nói là Harvard, loại bảng hiệu. | [Pexels](https://www.pexels.com/video/drone-footage-of-a-college-university-5672679/) |
+| 36802720 | Time-lapse khuôn viên đại học | Khung 16:9; không nói là Harvard, soi logo và chữ. | [Pexels](https://www.pexels.com/video/vibrant-university-campus-timelapse-in-india-36802720/) |
+| 33193839 | Bàn làm việc lập trình | Khung 16:9; màn hình có thể có chữ/logo, chỉ dùng khi crop/mờ được. | [Pexels](https://www.pexels.com/video/vibrant-computer-coding-workspace-setup-33193839/) |
+| 33314914 | Cận cảnh màn hình mã nguồn | Kiểm chữ/logo; chỉ dùng như code mờ, không là ảnh chụp Facemash. | [Pexels](https://www.pexels.com/video/modern-workspace-with-coding-on-screen-33314914/) |
+| 34160292 | Không gian code tối, nhiều màn hình | Kiểm chữ/logo; chỉ làm B-roll trung tính. | [Pexels](https://www.pexels.com/video/dark-room-coding-on-multiple-monitors-34160292/) |
+| 28913793 | Phòng ở bình dân | Khung 16:9; dùng minh họa ký túc xá chung, không gắn Harvard. | [Pexels](https://www.pexels.com/video/cozy-budget-accommodation-room-interior-28913793/) |
+| 5925294 | Góc từ trên xuống, tay gõ laptop | Khung 16:9; kiểm màn hình/laptop có logo hoặc chữ. | [Pexels](https://www.pexels.com/video/top-view-video-of-person-typing-on-laptop-5925294/) |
+
+> ## Đề xuất ảnh AI
+
+Các prompt này chỉ để chủ kênh tạo ảnh; không gọi webhook, không tự tạo ảnh. Không tham chiếu ảnh phim. Mark Zuckerberg nếu xuất hiện chỉ là dáng người trẻ tóc nâu ngắn, hoodie tối, góc sau/nghiêng quay đi; tham chiếu tư liệu: [Commons I01](https://commons.wikimedia.org/wiki/File:MarkZuckerberg.jpg).
+
+#### ai_01.png — phòng ký túc xá minh họa cho CH00, lúc một trang web được dựng trong đêm
+- Prompt (tiếng Anh): Painterly editorial illustration of a generic 2003 college dorm room at night, a young male student with short brown hair in a dark hoodie seen only from behind at a desk facing an old CRT monitor, loose books and a keyboard, dim tungsten desk lamp, no recognizable face, no institutional architecture, no brand marks, no readable screen content, clearly illustrated rather than archival photography.
+- Khung: 16:9, 1920x1080
+- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
+- Phong cách: painterly editorial illustration, muted amber and deep blue palette
+
+#### ai_02.png — màn hình so hai ô ảnh trừu tượng cho CH00, giải thích cơ chế so sánh
+- Prompt (tiếng Anh): Editorial illustration of a generic early-2000s CRT computer monitor viewed at an angle, showing two completely blank portrait-shaped silhouettes side by side with two unlabeled circular choice buttons, anonymous hands at a keyboard, no faces, no readable interface, no text, no numbers, no logos, deliberately painted and not a screenshot.
+- Khung: 16:9, 1920x1080
+- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
+- Phong cách: painterly editorial illustration, restrained gray-green and amber palette
+
+#### ai_03.png — khuôn viên đêm minh họa cho CH01, sau phản ứng trên trường
+- Prompt (tiếng Anh): Painterly editorial illustration of a fictional ivy-covered university walkway at night after rain, a few anonymous students seen from behind walking apart under warm lamps, brick buildings without plaques or emblems, no readable signs, no logos, no recognizable people, clearly an illustration.
+- Khung: 16:9, 1920x1080
+- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
+- Phong cách: painterly editorial illustration, nocturnal blue and warm window-light palette
+
+#### ai_04.png — sơ đồ Feed minh họa cho CH07, khi nói về ranking hiện đại
+- Prompt (tiếng Anh): Editorial illustration of an abstract social feed flowing across a dark field: anonymous blank post cards, dots, connecting lines and non-readable color blocks rising into ordered layers, no letters, no digits, no platform logos, no human faces, clearly a painted conceptual data illustration.
+- Khung: 16:9, 1920x1080
+- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
+- Phong cách: contemporary painterly editorial illustration, navy, cream and restrained coral accents
+
+
+# MONEYBALL Ngoài Đời Thật: Billy Beane Và Con Số
+
+**Kênh:** MIM · **Độ dài mục tiêu:** 9,5–11 phút · **Lộ trình:** một tấm bảng chờ một lần lên gôn, và mỗi chương thêm một ô dữ kiện để thấy vì sao đội bóng không cần tin vào một con số duy nhất.
+
+Quy ước: mỗi dòng là một câu đọc. `‖` là ngừng dài. `»` là lời trích, đọc giọng trích. Phim Moneyball chỉ được nhắc bằng lời và chữ, không dùng hình phim. Chỉ dùng dữ kiện trong facts.md.
+
+## CH00 · Một cú đánh ở hiệp chín
+
+Ngày 4 tháng 9 năm 2002, Oakland đang đứng trước chiến thắng thứ 20 liên tiếp, trong một trận bóng chày mà tỷ số cuối cùng sẽ là 12–11.
+
+Sau ba hiệp đầu, Oakland dẫn 11–0, một cách biệt đủ lớn để bạn nghĩ mọi chuyện đã xong từ rất sớm.
+
+Nhưng sang hiệp chín, Kansas City đã gỡ hòa, và sân bóng bỗng trở thành nơi một chuỗi thắng có thể đứt chỉ vì một khoảnh khắc.
+
+Scott Hatteberg vào sân để đánh thay ở đầu hiệp chín.
+
+Ông đánh bóng vượt qua hàng rào, một cú home run tức là cú đánh cho phép người đánh chạy trọn vòng về nhà và ghi điểm.
+
+Đối thủ không còn cơ hội đáp lại, và Oakland thắng 12–11. ‖
+
+Nếu bạn biết Moneyball, có thể bạn nhớ cảm giác về một đội bóng nghèo đang đi ngược cả giải đấu.
+
+Nó là điểm cuối của một chuỗi 20 trận, bắt đầu từ ngày 13 tháng 8 bằng chiến thắng 5–4 trước Toronto.
+
+Hai mươi trận liên tiếp là một kỷ lục chuỗi thắng của American League ở thời điểm đó.
+
+Và điều đáng hỏi không phải chỉ là vì sao họ thắng trận thứ 20.
+
+Trên tấm bảng của chúng ta, ô đầu tiên ghi: một lần lên gôn đúng lúc có thể thay đổi cả một đêm, nhưng không đủ để giải thích cả một mùa.
+
+Muốn đọc được câu chuyện ấy, ta phải nhìn mùa 2002 như một đường dài, thay vì chỉ nhìn cú đánh ở hiệp chín.
+
+## CH01 · Một mùa dài hơn chuỗi thắng
+
+Oakland kết thúc mùa thường năm 2002 với 103 trận thắng và 59 trận thua, đứng đầu khu AL West.
+
+Trước khi chuỗi 20 trận bắt đầu, Oakland có 20 trận thắng và 26 trận thua.
+
+Sau đó, trong phần còn lại của mùa thường, họ đi 83–33.
+
+Theo MLB, quỹ lương Oakland năm ấy khoảng 40 triệu đô la, đứng thứ 28 trong giải.
+
+Quỹ lương là tổng tiền đội dùng để trả cầu thủ, và thứ hạng này nói cho bạn biết Oakland không bước vào cuộc đua với nguồn lực như các đội giàu hơn.
+
+Họ buộc phải hỏi một câu khác: nếu thị trường đã thích một phẩm chất nào đó, liệu còn phẩm chất nào giúp thắng trận nhưng đang bị định giá thấp hơn không?
+
+Baseball-Reference ghi Oakland ghi 800 điểm chạy trong mùa đó và chỉ để lọt 654 điểm chạy.
+
+Điểm chạy là đơn vị ghi điểm trong bóng chày.
+
+Nhưng hai tổng số này là số liệu của cả mùa, không phải bằng chứng rằng chỉ riêng chuỗi 20 trận đã quyết định mọi thứ.
+
+Oakland không có một đêm hay một chỉ số để bám vào.
+
+Họ có một mùa dài, với những lựa chọn lặp lại mỗi ngày.
+
+Trên tấm bảng, ô thứ hai ghi: ngân sách thấp không xóa áp lực phải thắng, nó chỉ ép một đội phải đo giá trị kỹ hơn.
+
+Vậy giá trị mà Oakland được nhắc đến nhiều nhất thực ra là gì?
+
+## CH02 · Giá trị của việc lên gôn
+
+Trong câu chuyện Moneyball, bạn thường nghe tới OBP.
+
+OBP là tỷ lệ một cầu thủ lên được gôn, bằng cú đánh hợp lệ hoặc những cách hợp lệ khác.
+
+Một cách trong số đó là walk, tức là được lên gôn vì pitcher ném bóng sai vùng.
+
+Nói đơn giản, OBP hỏi cầu thủ có tránh bị loại và tạo mặt bằng cho điểm chạy hay không.
+
+Baseball-Reference ghi OBP toàn đội của Oakland năm 2002 là .339, đứng thứ ba American League.
+
+Con số đó không phải thần chú, và nó không nói rằng đội đã bỏ qua mọi kỹ năng khác.
+
+Scott Hatteberg là ví dụ dễ nhìn thấy.
+
+Mùa 2002, ông có 68 walk, đứng thứ hai đội về số lần được lên gôn vì pitcher ném bóng không hợp lệ.
+
+Trước mùa đó, Hatteberg chưa từng chơi first base, vị trí phòng ngự gần gôn số một.
+
+Ông có 88 lần xuất phát ở vị trí này cho Oakland.
+
+Nó cho thấy một đội có thể nhìn vào phần đóng góp vẫn còn dùng được, rồi cân nhắc liệu một vai trò mới có mở ra cơ hội hay không.
+
+MLB nêu ERA của Oakland năm 2002 là 3,68, đứng thứ ba toàn MLB.
+
+ERA là số điểm chạy trung bình mà pitcher để lọt trong chín hiệp, nên chỉ số thấp thường cho thấy hệ ném bóng có hiệu quả.
+
+Trên tấm bảng, ô thứ ba ghi: một chỉ số tốt là một đèn pin, không phải cả bản đồ.
+
+Để hiểu vì sao người ta bắt đầu dùng những chiếc đèn pin như vậy, ta phải lùi về trước Oakland rất lâu.
+
+## CH03 · Câu hỏi cũ hơn cuốn sách
+
+Tên gọi cho hướng nghiên cứu ấy là sabermetrics.
+
+Theo SABR, Bill James định nghĩa sabermetrics năm 1980 là việc tìm kiếm tri thức khách quan về bóng chày.
+
+Năm 1974, James, Pete Palmer và Dick Cramer đồng lập Statistical Analysis Committee của SABR.
+
+SABR là tổ chức nghiên cứu bóng chày, còn sabermetrics là cách dùng dữ liệu và phân tích để kiểm tra các niềm tin về môn này.
+
+Năm 1977, James tự xuất bản cuốn Baseball Abstract đầu tiên.
+
+Đến Baseball Abstract năm 1980, ông đặt tên sabermetrics cho cách tiếp cận đó.
+
+Theo mô tả của SABR, những nghiên cứu này thường dùng thống kê để chất vấn các thước đo quen thuộc, như batting average và số trận thắng của pitcher.
+
+Đặt câu hỏi với chỉ số truyền thống không có nghĩa là chế giễu những người xem bóng lâu năm.
+
+Đó cũng là lý do ta không nên kể Moneyball như cuộc chiến đơn giản giữa người có trực giác và chiếc máy lạnh lùng.
+
+Dữ liệu chỉ cho bạn một câu hỏi tốt hơn.
+
+Con người vẫn phải hiểu cầu thủ, hiểu vai trò, hiểu giới hạn của một mùa giải, rồi chịu trách nhiệm cho quyết định.
+
+Trên tấm bảng, ô thứ tư ghi: số liệu không cướp mất kinh nghiệm, nó buộc kinh nghiệm trả lời rõ hơn.
+
+Và đến Oakland, câu hỏi cũ ấy gặp một người quản lý đang phải làm việc với ngân sách rất hẹp.
+
+## CH04 · Người chọn câu hỏi
+
+Billy Beane là general manager của Oakland trong câu chuyện mùa 2002.
+
+MLB xác định cuốn sách Moneyball xuất bản năm 2003 kể về mùa 2002 của Oakland và về Beane.
+
+Nhưng đội không phải chỉ có một người ngồi một mình trước bảng số.
+
+Paul DePodesta gia nhập Athletics năm 1999 với vai trò assistant general manager của Beane.
+
+Theo AP, DePodesta từng chơi bóng chày và bóng bầu dục ở Harvard, rồi bắt đầu sự nghiệp baseball bằng vị trí thực tập tại Cleveland năm 1996.
+
+Tuy vậy, sẽ sai nếu dựng phòng tuyển trạch thành hai phe, một phe là người và một phe là máy.
+
+Theo Washington Post, DePodesta nói các quyết định có rất nhiều cảm xúc con người, còn xung đột ấy bị sách và phim mô tả mạnh hơn.
+
+Câu này đáng giữ nguyên tinh thần của nó: đội bóng là nơi nhiều người tranh luận về thông tin không hoàn hảo.
+
+Phân tích hữu ích khi nó làm cuộc tranh luận cụ thể hơn, thay vì biến cuộc tranh luận thành khẩu hiệu.
+
+Trên tấm bảng, ô thứ năm ghi: một quyết định tốt không sinh ra từ một người thắng tranh luận, mà từ câu hỏi đủ rõ để nhiều người cùng kiểm tra.
+
+Đó là chỗ phiên bản điện ảnh dễ làm câu chuyện gọn hơn đời thật.
+
+## CH05 · Bộ phim và phần không được cắt gọn
+
+Phim Moneyball ra mắt năm 2011, được chuyển thể từ cuốn Moneyball: The Art of Winning an Unfair Game xuất bản năm 2003 về mùa Oakland năm 2002.
+
+Peter Brand trong phim là nhân vật hư cấu, dựa một phần trên nền tảng phân tích của Paul DePodesta.
+
+Theo AP, DePodesta không cho dùng tên thật của mình trong phim.
+
+Vì vậy, khi bạn nhớ một cảnh có Peter Brand, hãy xem đó là cách điện ảnh cô đặc ý tưởng, không phải bằng chứng rằng ngoài đời đã xảy ra đúng như vậy.
+
+Theo Washington Post, xung đột giữa cách tiếp cận dữ liệu và người tuyển trạch trong phim được kịch tính hóa.
+
+Nó chỉ đổi cách ta dùng phim: như cánh cửa đi vào chủ đề, không phải bản đồ duy nhất dẫn qua lịch sử.
+
+Một chi tiết ngoài đời cũng hay bị làm mờ là vai trò của Art Howe.
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$OutputEncoding = [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new(); Get-Content -Encoding utf8 '"'data/long/mim-social-network/facts.md' | Select-Object -Skip 75 -First 95; Get-Content -Encoding utf8 'data/long/mim-moneyball/script.md' | Select-Object -First 105" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 164ms:
+
+> ## Ảnh Commons đã kiểm giấy phép
+
+Mỗi trang file dưới đây đã mở và hiển thị `LicenseShortName` phù hợp: chỉ **CC BY**, **CC0** hoặc **Public domain**. Không dùng các kết quả CC BY-SA/GFDL đã loại. Trước khi tải, kiểm lại trang file và crop/loại phần có logo, biển hiệu hoặc chữ đọc được.
+
+| # | File / mô tả | Giấy phép | Trang nguồn |
+|---|---|---|---|
+| I01 | Mark Zuckerberg, 2005; chỉ dùng ảnh tư liệu khi cần xác định nhân vật | CC BY 2.5 | [Commons](https://commons.wikimedia.org/wiki/File:MarkZuckerberg.jpg) |
+| I02 | Memorial Hall, Harvard, 2007 | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Harvard_memorial_hall.jpg) |
+| I03 | Memorial Hall, Harvard, 2016 | CC BY 2.0 | [Commons](https://commons.wikimedia.org/wiki/File:Memorial_Hall,_Harvard.jpg) |
+| I04 | Memorial Hall, Harvard, 2007 | CC BY 2.5 | [Commons](https://commons.wikimedia.org/wiki/File:HarvardMemorialHall24June07.jpg) |
+| I05 | Harvard Yard chapel | CC BY 2.0 | [Commons](https://commons.wikimedia.org/wiki/File:Harvard_Yard_chapel.jpg) |
+| I06 | Harvard Yard, 2011 | CC BY 3.0 | [Commons](https://commons.wikimedia.org/wiki/File:Harvard_Yard,_Harvard_University,_Cambridge_MA.jpg) |
+| I07 | Weld Hall, Harvard | Public domain (Hoa Kỳ) | [Commons](https://commons.wikimedia.org/wiki/File:Weld_Hall_-_Harvard_University.jpg) |
+| I08 | Harvard Hall, 2022 | CC0 | [Commons](https://commons.wikimedia.org/wiki/File:Harvard_Hall_-_Harvard_University.jpg) |
+| I09 | Khuôn viên Harvard, 2016 | CC0 | [Commons](https://commons.wikimedia.org/wiki/File:Harvard_University.jpg) |
+
+> ## Ứng viên B-roll Pexels (chưa tải)
+
+Các trang đã mở ghi `Free`/`Free to use` và là khung ngang. Chỉ dùng minh họa trung tính; phải soi frame cuối cùng để loại logo, chữ đọc được và thương hiệu. Không nhận diện bất kỳ người nào trong clip là Zuckerberg, Saverin, Winklevoss hay sinh viên Harvard.
+
+| ID | Mô tả ngắn | Ghi chú bắt buộc | Trang nguồn |
+|---:|---|---|---|
+| 36392564 | Ngón tay gõ bàn phím trong phòng tối | Khung 16:9; soi bàn phím/màn hình, không để chữ đọc được. | [Pexels](https://www.pexels.com/video/typing-on-keyboard-in-dimly-lit-room-36392564/) |
+| 14314426 | Người dùng máy tính ban đêm | Khung 16:9; không gắn danh tính người thật, kiểm logo thiết bị. | [Pexels](https://www.pexels.com/video/man-typing-on-keyboard-at-night-14314426/) |
+| 7490429 | Góc bay toàn cảnh đại học | Khung 16:9; chỉ là minh họa đại học chung, loại logo/tên trường. | [Pexels](https://www.pexels.com/video/aerial-footage-of-a-university-7490429/) |
+| 5672679 | Drone qua các tòa nhà đại học | Khung 16:9; không nói là Harvard, loại bảng hiệu. | [Pexels](https://www.pexels.com/video/drone-footage-of-a-college-university-5672679/) |
+| 36802720 | Time-lapse khuôn viên đại học | Khung 16:9; không nói là Harvard, soi logo và chữ. | [Pexels](https://www.pexels.com/video/vibrant-university-campus-timelapse-in-india-36802720/) |
+| 33193839 | Bàn làm việc lập trình | Khung 16:9; màn hình có thể có chữ/logo, chỉ dùng khi crop/mờ được. | [Pexels](https://www.pexels.com/video/vibrant-computer-coding-workspace-setup-33193839/) |
+| 33314914 | Cận cảnh màn hình mã nguồn | Kiểm chữ/logo; chỉ dùng như code mờ, không là ảnh chụp Facemash. | [Pexels](https://www.pexels.com/video/modern-workspace-with-coding-on-screen-33314914/) |
+| 34160292 | Không gian code tối, nhiều màn hình | Kiểm chữ/logo; chỉ làm B-roll trung tính. | [Pexels](https://www.pexels.com/video/dark-room-coding-on-multiple-monitors-34160292/) |
+| 28913793 | Phòng ở bình dân | Khung 16:9; dùng minh họa ký túc xá chung, không gắn Harvard. | [Pexels](https://www.pexels.com/video/cozy-budget-accommodation-room-interior-28913793/) |
+| 5925294 | Góc từ trên xuống, tay gõ laptop | Khung 16:9; kiểm màn hình/laptop có logo hoặc chữ. | [Pexels](https://www.pexels.com/video/top-view-video-of-person-typing-on-laptop-5925294/) |
+
+> ## Đề xuất ảnh AI
+
+Các prompt này chỉ để chủ kênh tạo ảnh; không gọi webhook, không tự tạo ảnh. Không tham chiếu ảnh phim. Mark Zuckerberg nếu xuất hiện chỉ là dáng người trẻ tóc nâu ngắn, hoodie tối, góc sau/nghiêng quay đi; tham chiếu tư liệu: [Commons I01](https://commons.wikimedia.org/wiki/File:MarkZuckerberg.jpg).
+
+#### ai_01.png — phòng ký túc xá minh họa cho CH00, lúc một trang web được dựng trong đêm
+- Prompt (tiếng Anh): Painterly editorial illustration of a generic 2003 college dorm room at night, a young male student with short brown hair in a dark hoodie seen only from behind at a desk facing an old CRT monitor, loose books and a keyboard, dim tungsten desk lamp, no recognizable face, no institutional architecture, no brand marks, no readable screen content, clearly illustrated rather than archival photography.
+- Khung: 16:9, 1920x1080
+- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
+- Phong cách: painterly editorial illustration, muted amber and deep blue palette
+
+#### ai_02.png — màn hình so hai ô ảnh trừu tượng cho CH00, giải thích cơ chế so sánh
+- Prompt (tiếng Anh): Editorial illustration of a generic early-2000s CRT computer monitor viewed at an angle, showing two completely blank portrait-shaped silhouettes side by side with two unlabeled circular choice buttons, anonymous hands at a keyboard, no faces, no readable interface, no text, no numbers, no logos, deliberately painted and not a screenshot.
+- Khung: 16:9, 1920x1080
+- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
+- Phong cách: painterly editorial illustration, restrained gray-green and amber palette
+
+#### ai_03.png — khuôn viên đêm minh họa cho CH01, sau phản ứng trên trường
+- Prompt (tiếng Anh): Painterly editorial illustration of a fictional ivy-covered university walkway at night after rain, a few anonymous students seen from behind walking apart under warm lamps, brick buildings without plaques or emblems, no readable signs, no logos, no recognizable people, clearly an illustration.
+- Khung: 16:9, 1920x1080
+- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
+- Phong cách: painterly editorial illustration, nocturnal blue and warm window-light palette
+
+#### ai_04.png — sơ đồ Feed minh họa cho CH07, khi nói về ranking hiện đại
+- Prompt (tiếng Anh): Editorial illustration of an abstract social feed flowing across a dark field: anonymous blank post cards, dots, connecting lines and non-readable color blocks rising into ordered layers, no letters, no digits, no platform logos, no human faces, clearly a painted conceptual data illustration.
+- Khung: 16:9, 1920x1080
+- Cấm: chữ hoặc số trong ảnh, logo, khuôn mặt nhận ra được của người thật
+- Phong cách: contemporary painterly editorial illustration, navy, cream and restrained coral accents
+
+# MONEYBALL Ngoài Đời Thật: Billy Beane Và Con Số
+
+**Kênh:** MIM · **Độ dài mục tiêu:** 9,5–11 phút · **Lộ trình:** một tấm bảng chờ một lần lên gôn, và mỗi chương thêm một ô dữ kiện để thấy vì sao đội bóng không cần tin vào một con số duy nhất.
+
+Quy ước: mỗi dòng là một câu đọc. `‖` là ngừng dài. `»` là lời trích, đọc giọng trích. Phim Moneyball chỉ được nhắc bằng lời và chữ, không dùng hình phim. Chỉ dùng dữ kiện trong facts.md.
+
+## CH00 · Một cú đánh ở hiệp chín
+
+Ngày 4 tháng 9 năm 2002, Oakland đang đứng trước chiến thắng thứ 20 liên tiếp, trong một trận bóng chày mà tỷ số cuối cùng sẽ là 12–11.
+
+Sau ba hiệp đầu, Oakland dẫn 11–0, một cách biệt đủ lớn để bạn nghĩ mọi chuyện đã xong từ rất sớm.
+
+Nhưng sang hiệp chín, Kansas City đã gỡ hòa, và sân bóng bỗng trở thành nơi một chuỗi thắng có thể đứt chỉ vì một khoảnh khắc.
+
+Scott Hatteberg vào sân để đánh thay ở đầu hiệp chín.
+
+Ông đánh bóng vượt qua hàng rào, một cú home run tức là cú đánh cho phép người đánh chạy trọn vòng về nhà và ghi điểm.
+
+Đối thủ không còn cơ hội đáp lại, và Oakland thắng 12–11. ‖
+
+Nếu bạn biết Moneyball, có thể bạn nhớ cảm giác về một đội bóng nghèo đang đi ngược cả giải đấu.
+
+Nó là điểm cuối của một chuỗi 20 trận, bắt đầu từ ngày 13 tháng 8 bằng chiến thắng 5–4 trước Toronto.
+
+Hai mươi trận liên tiếp là một kỷ lục chuỗi thắng của American League ở thời điểm đó.
+
+Và điều đáng hỏi không phải chỉ là vì sao họ thắng trận thứ 20.
+
+Trên tấm bảng của chúng ta, ô đầu tiên ghi: một lần lên gôn đúng lúc có thể thay đổi cả một đêm, nhưng không đủ để giải thích cả một mùa.
+
+Muốn đọc được câu chuyện ấy, ta phải nhìn mùa 2002 như một đường dài, thay vì chỉ nhìn cú đánh ở hiệp chín.
+
+## CH01 · Một mùa dài hơn chuỗi thắng
+
+Oakland kết thúc mùa thường năm 2002 với 103 trận thắng và 59 trận thua, đứng đầu khu AL West.
+
+Trước khi chuỗi 20 trận bắt đầu, Oakland có 20 trận thắng và 26 trận thua.
+
+Sau đó, trong phần còn lại của mùa thường, họ đi 83–33.
+
+Theo MLB, quỹ lương Oakland năm ấy khoảng 40 triệu đô la, đứng thứ 28 trong giải.
+
+Quỹ lương là tổng tiền đội dùng để trả cầu thủ, và thứ hạng này nói cho bạn biết Oakland không bước vào cuộc đua với nguồn lực như các đội giàu hơn.
+
+Họ buộc phải hỏi một câu khác: nếu thị trường đã thích một phẩm chất nào đó, liệu còn phẩm chất nào giúp thắng trận nhưng đang bị định giá thấp hơn không?
+
+Baseball-Reference ghi Oakland ghi 800 điểm chạy trong mùa đó và chỉ để lọt 654 điểm chạy.
+
+Điểm chạy là đơn vị ghi điểm trong bóng chày.
+
+Nhưng hai tổng số này là số liệu của cả mùa, không phải bằng chứng rằng chỉ riêng chuỗi 20 trận đã quyết định mọi thứ.
+
+Oakland không có một đêm hay một chỉ số để bám vào.
+
+Họ có một mùa dài, với những lựa chọn lặp lại mỗi ngày.
+
+Trên tấm bảng, ô thứ hai ghi: ngân sách thấp không xóa áp lực phải thắng, nó chỉ ép một đội phải đo giá trị kỹ hơn.
+
+Vậy giá trị mà Oakland được nhắc đến nhiều nhất thực ra là gì?
+
+## CH02 · Giá trị của việc lên gôn
+
+Trong câu chuyện Moneyball, bạn thường nghe tới OBP.
+
+OBP là tỷ lệ một cầu thủ lên được gôn, bằng cú đánh hợp lệ hoặc những cách hợp lệ khác.
+
+Một cách trong số đó là walk, tức là được lên gôn vì pitcher ném bóng sai vùng.
+
+Nói đơn giản, OBP hỏi cầu thủ có tránh bị loại và tạo mặt bằng cho điểm chạy hay không.
+
+Baseball-Reference ghi OBP toàn đội của Oakland năm 2002 là .339, đứng thứ ba American League.
+
+Con số đó không phải thần chú, và nó không nói rằng đội đã bỏ qua mọi kỹ năng khác.
+
+Scott Hatteberg là ví dụ dễ nhìn thấy.
+
+Mùa 2002, ông có 68 walk, đứng thứ hai đội về số lần được lên gôn vì pitcher ném bóng không hợp lệ.
+
+Trước mùa đó, Hatteberg chưa từng chơi first base, vị trí phòng ngự gần gôn số một.
+
+Ông có 88 lần xuất phát ở vị trí này cho Oakland.
+
+Nó cho thấy một đội có thể nhìn vào phần đóng góp vẫn còn dùng được, rồi cân nhắc liệu một vai trò mới có mở ra cơ hội hay không.
+
+MLB nêu ERA của Oakland năm 2002 là 3,68, đứng thứ ba toàn MLB.
+
+ERA là số điểm chạy trung bình mà pitcher để lọt trong chín hiệp, nên chỉ số thấp thường cho thấy hệ ném bóng có hiệu quả.
+
+Trên tấm bảng, ô thứ ba ghi: một chỉ số tốt là một đèn pin, không phải cả bản đồ.
+
+Để hiểu vì sao người ta bắt đầu dùng những chiếc đèn pin như vậy, ta phải lùi về trước Oakland rất lâu.
+
+## CH03 · Câu hỏi cũ hơn cuốn sách
+
+Tên gọi cho hướng nghiên cứu ấy là sabermetrics.
+
+Theo SABR, Bill James định nghĩa sabermetrics năm 1980 là việc tìm kiếm tri thức khách quan về bóng chày.
+
+Năm 1974, James, Pete Palmer và Dick Cramer đồng lập Statistical Analysis Committee của SABR.
+
+SABR là tổ chức nghiên cứu bóng chày, còn sabermetrics là cách dùng dữ liệu và phân tích để kiểm tra các niềm tin về môn này.
+
+Năm 1977, James tự xuất bản cuốn Baseball Abstract đầu tiên.
+
+Đến Baseball Abstract năm 1980, ông đặt tên sabermetrics cho cách tiếp cận đó.
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$OutputEncoding = [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new(); Select-String -Path '"'data/long/mim-social-network/facts.md' -Pattern '"'^## CH0[4-7]'"' -Context 0,12" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 154ms:
+
+> data\long\mim-social-network\facts.md:41:## CH04 — Eduardo Saverin: sự kiện có nguồn, không suy diễn
+  data\long\mim-social-network\facts.md:42:
+  data\long\mim-social-network\facts.md:43:| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+  data\long\mim-social-network\facts.md:44:|---|---|---|---|
+  data\long\mim-social-network\facts.md:45:| 17 | Hồ sơ chân dung của Crimson năm 2005 gọi Eduardo Saverin là CFO của 
+Facebook, nhà đầu tư sớm và người điều phối quảng cáo quốc gia/lịa phương thời đầu. | [The Harvard Crimson — *Key 
+Players*](https://www.thecrimson.com/article/2005/2/24/key-players-three-full-time-employees-have/?page=single) | 
+**mạnh** |
+  data\long\mim-social-network\facts.md:46:| 18 | Theo chính Saverin trong hồ sơ Crimson, Zuckerberg đã tiếp cận ông 
+về TheFacebook trước khi lập trình trang. | [The Harvard Crimson — *Key 
+Players*](https://www.thecrimson.com/article/2005/2/24/key-players-three-full-time-employees-have/?page=single) | 
+**mạnh** |
+  data\long\mim-social-network\facts.md:47:| 19 | Crimson năm 2014 ghi Saverin không đi Palo Alto cùng nhóm vào tháng 
+06/2004 và sau đó bị đẩy khỏi công ty. | [The Harvard Crimson — *Ten Years 
+Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
+  data\long\mim-social-network\facts.md:48:| 20 | Không dùng lời đọc nào gán thái độ, động cơ hoặc mức độ trách nhiệm 
+cá nhân cho Saverin ngoài các sự kiện ở dòng 17–19, trừ khi ticket viết có nguồn mới. | [The Harvard Crimson — *Key 
+Players*](https://www.thecrimson.com/article/2005/2/24/key-players-three-full-time-employees-have/?page=single) | 
+**mạnh** |
+  data\long\mim-social-network\facts.md:49:
+> data\long\mim-social-network\facts.md:50:## CH05 — Winklevoss, Narendra và hồ sơ vụ kiện
+  data\long\mim-social-network\facts.md:51:
+  data\long\mim-social-network\facts.md:52:| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+  data\long\mim-social-network\facts.md:53:|---|---|---|---|
+  data\long\mim-social-network\facts.md:54:| 21 | Crimson ghi Cameron Winklevoss, Tyler Winklevoss và Divya Narendra 
+đã tìm Zuckerberg để hỗ trợ xây mạng xã hội riêng cho sinh viên Harvard. | [The Harvard Crimson — *Ten Years 
+Later*](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/) | **mạnh** |
+  data\long\mim-social-network\facts.md:55:| 22 | Tòa Phúc thẩm Liên bang Khu vực 9 tóm tắt rằng ba người 
+Winklevoss/Narendra cáo buộc Zuckerberg lấy ý tưởng Facebook của họ; đây là cáo buộc của các bên, không phải kết luận 
+thực tế của tòa về hành vi đó. | [U.S. Court of Appeals for the Ninth Circuit — *Facebook v. ConnectU* 
+(2011)](https://law.justia.com/cases/federal/appellate-courts/ca9/08-16745/08-16745-2011-04-11.html) | **mạnh** |
+  data\long\mim-social-network\facts.md:56:| 23 | Phán quyết năm 2011 giữ nguyên việc thực thi thỏa thuận dàn xếp giữa 
+Facebook, Winklevosses/Narendra và ConnectU. | [U.S. Court of Appeals for the Ninth Circuit — *Facebook v. ConnectU* 
+(2011)](https://law.justia.com/cases/federal/appellate-courts/ca9/08-16745/08-16745-2011-04-11.html) | **mạnh** |
+  data\long\mim-social-network\facts.md:57:| 24 | Hồ sơ tòa Massachusetts mô tả phiên hòa giải toàn cầu ngày 
+22/02/2008; Facebook nhận toàn bộ cổ phần ConnectU đổi lấy 20 triệu USD tiền mặt và hơn một triệu cổ phiếu Facebook, 
+giá trị khi đó xấp xỉ 65 triệu USD. | [Massachusetts Appeals Court — *Chang v. 
+Winklevoss*](https://law.justia.com/cases/massachusetts/court-of-appeals/volumes/95/95massappct202.html) | **mạnh** |
+  data\long\mim-social-network\facts.md:58:
+> data\long\mim-social-network\facts.md:59:## CH06 — Phim và đời thật: chỉ nêu phần có thể kiểm
+  data\long\mim-social-network\facts.md:60:
+  data\long\mim-social-network\facts.md:61:| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+  data\long\mim-social-network\facts.md:62:|---|---|---|---|
+  data\long\mim-social-network\facts.md:63:| 25 | Netflix Việt Nam hiển thị tên phim năm 2010 là **Mạng xã hội** và mô 
+tả đây là phim tiểu sử của David Fincher về sự trỗi dậy của Mark Zuckerberg từ sinh viên Harvard. | [Netflix Việt Nam 
+— *Mạng xã hội*](https://www.netflix.com/vn/title/70132721) | **vừa** |
+  data\long\mim-social-network\facts.md:64:| 26 | Netflix xếp phim vào nhóm “Phim chuyển thể từ sách” và “Phim dựa 
+trên câu chuyện có thật”; vì vậy không được mặc định mọi cảnh thoại là tư liệu lịch sử. | [Netflix Việt Nam — *Mạng xã 
+hội*](https://www.netflix.com/vn/title/70132721) | **vừa** |
+  data\long\mim-social-network\facts.md:65:| 27 | Vai Eduardo trong phim do Andrew Garfield thể hiện, còn vai Mark do 
+Jesse Eisenberg thể hiện, theo trang Netflix Việt Nam; đây chỉ là thông tin dàn diễn viên, không xác nhận diễn biến 
+phim. | [Netflix Việt Nam — *Mạng xã hội*](https://www.netflix.com/vn/title/70132721) | **vừa** |
+  data\long\mim-social-network\facts.md:66:| 28 | Không có nguồn đã mở đủ mạnh để kiểm chứng cảnh mở đầu với bạn gái, 
+cảnh công thức Elo trên cửa sổ, hay các đối thoại cụ thể của phim. Không đưa chúng thành sự kiện thật; nếu cần nhắc, 
+chỉ nói rõ đó là cảnh phim. | [Netflix Việt Nam — *Mạng xã hội*](https://www.netflix.com/vn/title/70132721) | **mạnh** 
+|
+  data\long\mim-social-network\facts.md:67:
+> data\long\mim-social-network\facts.md:68:## CH07 — Từ so cặp ảnh đến Feed xếp hạng
+  data\long\mim-social-network\facts.md:69:
+  data\long\mim-social-network\facts.md:70:| # | Dữ kiện có thể dùng | Nguồn đã mở | Độ tin |
+  data\long\mim-social-network\facts.md:71:|---|---|---|---|
+  data\long\mim-social-network\facts.md:72:| 29 | Facemash có cơ chế so sánh hai ảnh được chọn ngẫu nhiên, nhưng không 
+có nguồn đã mở nào xác nhận nó dùng công thức Elo. Không được nói “Facemash dùng Elo”. | [The Harvard Crimson — *Hot 
+or Not?*](https://www.thecrimson.com/article/2003/11/4/hot-or-not-website-briefly-judges/) | **mạnh** |
+  data\long\mim-social-network\facts.md:73:| 30 | Meta mô tả Feed hiện đại là quá trình sắp thứ tự các bài có thể thấy 
+để hiện nội dung liên quan hơn ở đầu Feed; bốn thành phần họ nêu là inventory, signals, predictions và relevancy 
+score. | [Meta Newsroom — *News Feed Ranking in Three Minutes 
+Flat*](https://about.fb.com/news/2018/05/inside-feed-news-feed-ranking/) | **mạnh** |
+  data\long\mim-social-network\facts.md:74:| 31 | Theo Meta năm 2018, các tín hiệu xếp hạng có thể gồm mức phản ứng, 
+bình luận và chia sẻ; bản cập nhật khi đó ưu tiên bài có thể tạo đối thoại và tương tác có ý nghĩa. | [Meta Newsroom — 
+*Bringing People Closer Together*](https://about.fb.com/news/2018/01/news-feed-fyi-bringing-people-closer-together/) | 
+**mạnh** |
+  data\long\mim-social-network\facts.md:75:| 32 | Meta cũng nêu ví dụ các tín hiệu như độ mới của bài, dạng liên 
+kết/ảnh/video và người đăng; họ nói trung bình có khoảng 3.000 bài khả dĩ mỗi ngày nhưng người dùng chỉ lướt khoảng 
+300. Đây là mô tả của công ty về hệ thống, cần quy dẫn “theo Meta”. | [Meta Newsroom — *Q&A on Upcoming US and Brazil 
+Elections*](https://about.fb.com/news/2018/09/us-brazil-elections/) | **vừa** |
+  data\long\mim-social-network\facts.md:76:
+  data\long\mim-social-network\facts.md:77:> ## Ảnh Commons đã kiểm giấy phép
+  data\long\mim-social-network\facts.md:78:
+  data\long\mim-social-network\facts.md:79:Mỗi trang file dưới đây đã mở và hiển thị `LicenseShortName` phù hợp: chỉ 
+**CC BY**, **CC0** hoặc **Public domain**. Không dùng các kết quả CC BY-SA/GFDL đã loại. Trước khi tải, kiểm lại trang 
+file và crop/loại phần có logo, biển hiệu hoặc chữ đọc được.
+  data\long\mim-social-network\facts.md:80:
+
+
+
+codex
+Mình đã xác nhận kho dữ kiện chỉ chứa nguồn đã duyệt. Kịch bản sẽ dùng mô-típ “bản đồ kết nối”, và sẽ tách từng câu theo dòng để cổng kiểm độ dài câu có thể đối chiếu.
+apply patch
+patch: completed
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-social-network\factcheck.md
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-social-network\script.md
+diff --git a/data/long/mim-social-network/factcheck.md b/data/long/mim-social-network/factcheck.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..7443fea3b9e95837d78a0132c497a51cfdbcc6fe
+--- /dev/null
++++ b/data/long/mim-social-network/factcheck.md
+@@ -0,0 +1,16 @@
++# Factcheck — mim-social-network
++
++- CH00 — Ngày 04/11/2003, Mark E. Zuckerberg, Facemash, House facebooks, cơ chế so hai ảnh, 450 khách và ít nhất 22.000 phiếu: [The Harvard Crimson, 04/11/2003](https://www.thecrimson.com/article/2003/11/4/hot-or-not-website-briefly-judges/).
++- CH00/CH07 — Nguồn không xác nhận Facemash dùng Elo; cảnh Elo chỉ được nêu là cảnh phim: [The Harvard Crimson](https://www.thecrimson.com/article/2003/11/4/hot-or-not-website-briefly-judges/) và [Netflix Việt Nam](https://www.netflix.com/vn/title/70132721).
++- CH01 — Hơn 20.000 lượt truy cập trong 24 giờ, Administrative Board, không buộc Zuckerberg rời Harvard, và các mốc năm 2004: [The Harvard Crimson, 04/02/2014](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/).
++- CH01 — Hồ sơ tố tụng năm 2024 tóm lược việc Zuckerberg bị triệu tập trước cơ quan kỷ luật: [MDL complaint, 2024](https://s3.amazonaws.com/hoth.bizango/assets/26247/Palo_Alto_Complaint_032824.pdf).
++- CH02 — Danh bạ Harvard, ngày 04/02/2004, Kirkland House, harvard.edu, 650 đăng ký trong 24 giờ và 4.300 tài khoản trong hai tuần: [The Harvard Crimson, 04/02/2014](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/).
++- CH03 — Tháng 03/2004, Columbia, Stanford, Yale, người đăng ký thứ 10.000, Coursematch, tháng 05/2004 gần 100.000 người dùng, Palo Alto và tháng 06/2004 đổi tên Facebook: [The Harvard Crimson, 04/02/2014](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/).
++- CH04 — Eduardo Saverin, CFO, nhà đầu tư sớm, quảng cáo và lời kể về TheFacebook trước khi lập trình: [The Harvard Crimson, 24/02/2005](https://www.thecrimson.com/article/2005/2/24/key-players-three-full-time-employees-have/?page=single).
++- CH04 — Saverin không đi Palo Alto tháng 06/2004 và sau đó bị đẩy khỏi công ty: [The Harvard Crimson, 04/02/2014](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/).
++- CH05 — Cameron Winklevoss, Tyler Winklevoss, Divya Narendra, cáo buộc, thỏa thuận dàn xếp và phán quyết năm 2011: [U.S. Court of Appeals for the Ninth Circuit, 2011](https://law.justia.com/cases/federal/appellate-courts/ca9/08-16745/08-16745-2011-04-11.html).
++- CH05 — Hòa giải ngày 22/02/2008, 20 triệu USD, hơn một triệu cổ phiếu và giá trị xấp xỉ 65 triệu USD: [Massachusetts Appeals Court](https://law.justia.com/cases/massachusetts/court-of-appeals/volumes/95/95massappct202.html).
++- CH06 — Phim năm 2010, David Fincher, Netflix phân loại, Andrew Garfield và Jesse Eisenberg: [Netflix Việt Nam — Mạng xã hội](https://www.netflix.com/vn/title/70132721).
++- CH07 — Meta mô tả Feed, inventory, signals, predictions và relevancy score: [Meta Newsroom, 2018](https://about.fb.com/news/2018/05/inside-feed-news-feed-ranking/).
++- CH07 — Tín hiệu phản ứng, bình luận, chia sẻ và ưu tiên tương tác có ý nghĩa theo Meta năm 2018: [Meta Newsroom, 2018](https://about.fb.com/news/2018/01/news-feed-fyi-bringing-people-closer-together/).
++- CH07 — Theo Meta, khoảng 3.000 bài khả dĩ và khoảng 300 bài được lướt mỗi ngày; đây là mô tả của công ty: [Meta Newsroom, 2018](https://about.fb.com/news/2018/09/us-brazil-elections/).
+diff --git a/data/long/mim-social-network/script.md b/data/long/mim-social-network/script.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..c6872a30bf7510f61406adadee29503ba9e72259
+--- /dev/null
++++ b/data/long/mim-social-network/script.md
+@@ -0,0 +1,263 @@
++# THE SOCIAL NETWORK Ngoài Đời Thật: Facemash 2003
++
++**Kênh:** MIM · **Độ dài mục tiêu:** 9–10 phút · **Lộ trình:** một bản đồ kết nối, mỗi chương ghim thêm một điểm để tách điều bộ phim kể với điều nguồn lịch sử xác nhận.
++
++Quy ước: mỗi dòng là một câu đọc. `‖` là ngừng dài. Phim chỉ được nhắc bằng lời và chữ, không dùng hình phim. Chỉ dùng dữ kiện trong facts.md.
++
++## CH00 · Một trang bị tắt
++
++Ngày 4 tháng 11 năm 2003, báo sinh viên Harvard Crimson đăng một câu chuyện về Facemash, một trang vừa bị tắt sau một cuối tuần gây phản ứng trong trường.
++
++Theo bài báo này, Mark E. Zuckerberg, khi đó đang học Harvard, là người lập trang.
++
++Người vào Facemash thấy hai ảnh thẻ được chọn ngẫu nhiên và chọn người họ cho là “hotter”, nghĩa là hấp dẫn hơn.
++
++Họ cũng có thể chấm ảnh trong cùng một House, tức khu nhà ở của sinh viên tại Harvard.
++
++Đây không phải một mạng xã hội hoàn chỉnh, mà là một giao diện ép bạn chọn giữa hai hình ảnh.
++
++Zuckerberg nói với Crimson rằng ông đã vào các House facebooks trực tuyến để gom ảnh thẻ cho Facemash.
++
++House facebook khi ấy là danh bạ ảnh của một khu nhà, không phải tên của sản phẩm sau này.
++
++Trong tối Chủ nhật, trang bị tắt sau phản ứng trong trường.
++
++Zuckerberg nói với Crimson rằng tới lúc đó Facemash có 450 khách truy cập và ít nhất 22.000 lượt bỏ phiếu.
++
++Hai con số ấy cho thấy tốc độ lan truyền, nhưng không nói việc này được mọi người chấp nhận.
++
++Cảnh mở đầu của bộ phim có một công thức Elo trên cửa sổ.
++
++Elo là cách tính điểm xếp hạng thường dùng khi người chơi hoặc đối thủ được so cặp.
++
++Nhưng kho nguồn không xác nhận Facemash thật sự dùng công thức đó, nên đây chỉ là một cảnh phim.
++
++Trên bản đồ kết nối, ghim đầu tiên là một trang so cặp ảnh, được nhiều người mở và nhanh chóng bị tắt.
++
++Từ điểm ghim này, câu chuyện không nên bắt đầu bằng một thiên tài cô độc, mà bằng một hệ thống danh bạ và những người bị đưa vào đó.
++
++## CH01 · Cánh cửa kỷ luật
++
++Facemash không chỉ là một thử nghiệm kỹ thuật nằm yên trong phòng ký túc xá.
++
++Crimson viết năm 2014 rằng trang nhận hơn 20.000 lượt truy cập trong 24 giờ.
++
++Con số này khác cách đếm 450 khách và 22.000 phiếu trong bài năm 2003.
++
++Vì vậy, ta nên giữ nguyên cách từng nguồn mô tả thay vì trộn chúng thành một con số duy nhất.
++
++Theo bài năm 2014, Facemash thu hút sự chú ý của Administrative Board, cơ quan kỷ luật của Harvard College.
++
++Cùng nguồn đó nói hội đồng không buộc Zuckerberg rời Harvard vì các vi phạm liên quan Facemash.
++
++Một đơn kiện đa quận nộp năm 2024 cũng tóm lược rằng ông bị triệu tập trước cơ quan kỷ luật sau vụ việc.
++
++Đó là mô tả trong hồ sơ tố tụng, không phải phán quyết về nguồn gốc Facebook.
++
++Bài Crimson năm 2003 ghi Zuckerberg nói ông quan tâm đến phần khoa học máy tính của dự án.
++
++Đó là phát biểu đương thời về một phần của dự án.
++
++Nó không cho phép ta biến thành kết luận về động cơ rộng hơn, hay về tính cách của một người thật.
++
++Điểm quan trọng hơn là dữ liệu ảnh không tự nhiên trở thành dữ liệu vô chủ chỉ vì một trang có thể mở được chúng.
++
++Một danh bạ vốn có giới hạn truy cập, khi bị gom lại và đặt vào một trò so sánh, có ý nghĩa khác hẳn.
++
++Trên bản đồ kết nối, ghim thứ hai là cánh cửa kỷ luật: công nghệ, quy tắc trường học và sự đồng ý đã va vào nhau.
++
++Nó nhắc bạn rằng trước khi hỏi một sản phẩm tăng nhanh ra sao, cần hỏi nó đã lấy dữ liệu và đặt con người vào đâu.
++
++## CH02 · Một danh bạ có lối vào
++
++Trước TheFacebook, Harvard đã có danh bạ tìm kiếm cho khóa năm nhất.
++
++Các House cũng giữ những danh bạ ảnh và số điện thoại riêng, thường hạn chế người được truy cập.
++
++Nói cách khác, thông tin đã tồn tại, nhưng nằm trong các ngăn khác nhau.
++
++Ngày 4 tháng 2 năm 2004, TheFacebook đi vào hoạt động từ phòng ký túc xá Kirkland House của Zuckerberg.
++
++Ban đầu, chỉ sinh viên Harvard mới có thể đăng ký.
++
++Một người dùng đầu tiên nói với Crimson rằng địa chỉ email harvard.edu là điều kiện để vào trang.
++
++Điều kiện ấy tạo ra một đường biên đơn giản: bạn thuộc cộng đồng trường thì có một lối vào.
++
++Trong 24 giờ đầu, TheFacebook có 650 người đăng ký, theo Crimson phỏng vấn người dùng đầu tiên.
++
++Trong hai tuần đầu, con số là 4.300 tài khoản.
++
++Đăng ký không đồng nghĩa với một tình bạn mới hay một cộng đồng bền vững.
++
++Nhưng nó cho thấy danh bạ chung đã giải quyết một việc rất cụ thể: tìm và nhận ra người cùng môi trường.
++
++Thay vì so hai ảnh rồi buộc một người thắng, giao diện mới cho mỗi người một hồ sơ trong cùng một mạng.
++
++Sự thay đổi ấy nghe nhỏ, nhưng nó chuyển trọng tâm từ chấm điểm người khác sang dựng một nơi để người quen tìm nhau.
++
++Trên bản đồ kết nối, ghim thứ ba là địa chỉ harvard.edu: một cổng vào biến danh bạ rời rạc thành mạng có ranh giới.
++
++Và khi cổng vào đã rõ, câu hỏi tiếp theo là liệu mô hình đó có đi qua được cổng trường khác hay không.
++
++## CH03 · Đường nối ra ngoài trường
++
++Đến tháng 3 năm 2004, TheFacebook đã có chỗ đứng tại Columbia, Stanford và Yale.
++
++Cùng thời điểm, Crimson ghi người đăng ký thứ 10.000 đã xuất hiện.
++
++Một mạng chỉ hữu ích khi bạn thấy người mình muốn tìm cũng ở trong đó.
++
++Vì thế, mở sang từng trường không chỉ là thêm địa danh trên bản đồ.
++
++Đó là thêm những cụm người dùng mới vào một mạng đang có quy tắc đăng ký quen thuộc.
++
++Một tính năng đầu tiên tên Coursematch cho phép người dùng xem bạn bè học lớp nào trong học kỳ.
++
++Coursematch nghĩa là ghép theo môn học, tức dùng lịch học như một mối nối có thể nhìn thấy.
++
++Tính năng này cho thấy mạng không chỉ lưu tên và ảnh.
++
++Nó còn tổ chức thông tin quanh những nhịp sinh hoạt rất gần, như một lớp học chung.
++
++Khi Zuckerberg thi cuối kỳ vào tháng 5 năm 2004, TheFacebook đã mở rộng trên toàn quốc và gần 100.000 người dùng, theo Crimson.
++
++Sau kỳ thi, nhóm gồm Zuckerberg, Dustin Moskovitz, Andrew McCollum và các thực tập sinh đi Palo Alto.
++
++Tháng 6 năm 2004, công ty đổi tên thành Facebook.
++
++Các mốc này kể sự tăng trưởng của dịch vụ, chứ không cho ta đọc được suy nghĩ của từng người trong nhóm.
++
++Trên bản đồ kết nối, ghim thứ tư là Coursematch: một đường nối không chỉ qua tên, mà qua việc bạn đang học cùng ai.
++
++Từ đây, mạng đã không còn chỉ là một danh bạ trong một trường, mà là một hạ tầng có thể lặp lại ở nhiều nơi.
++
++## CH04 · Những vai trò đầu tiên
++
++Một câu chuyện công nghệ thường bị kể như thể một người duy nhất tạo ra mọi phần việc.
++
++Những hồ sơ đương thời cho thấy ít nhất các vai trò ban đầu đã đa dạng hơn cách kể ấy.
++
++Hồ sơ Crimson năm 2005 gọi Eduardo Saverin là CFO của Facebook.
++
++CFO là người phụ trách tài chính ở cấp lãnh đạo của một công ty.
++
++Cùng hồ sơ gọi ông là nhà đầu tư sớm và người điều phối quảng cáo quốc gia lẫn địa phương trong giai đoạn đầu.
++
++Theo chính Saverin trong hồ sơ này, Zuckerberg đã tiếp cận ông về TheFacebook trước khi lập trình trang.
++
++Đó là điều Saverin kể về trình tự tiếp cận, không phải một lời giải thích cho toàn bộ quan hệ giữa hai người.
++
++Crimson năm 2014 ghi Saverin không đi Palo Alto cùng nhóm vào tháng 6 năm 2004.
++
++Cùng bài báo nói ông sau đó bị đẩy khỏi công ty.
++
++Các dữ kiện này đủ để xác định một thay đổi vị trí trong câu chuyện doanh nghiệp.
++
++Chúng không đủ để gán cho Saverin hay Zuckerberg một thái độ, động cơ hoặc mức độ trách nhiệm ngoài điều nguồn nói.
++
++Sự thận trọng này không làm câu chuyện kém hấp dẫn.
++
++Nó giữ cho ranh giới giữa hồ sơ và kịch tính không bị xóa bằng một lời kể quá chắc.
++
++Trên bản đồ kết nối, ghim thứ năm là một vai trò: tài chính, quảng cáo và đầu tư sớm cũng là những đường nối tạo nên công ty.
++
++Khi một đường nối thay đổi, điều ta biết chắc là mốc sự kiện, còn phần còn lại phải để nguồn nói đến đâu thì dừng ở đó.
++
++## CH05 · Một tranh chấp có hồ sơ
++
++Cameron Winklevoss, Tyler Winklevoss và Divya Narendra từng tìm Zuckerberg để hỗ trợ xây một mạng xã hội riêng cho sinh viên Harvard, theo Crimson.
++
++Chi tiết này thường được kể lại bằng những câu rất tròn trịa, nhưng hồ sơ pháp lý buộc ta tách cáo buộc với kết luận.
++
++Tòa Phúc thẩm Liên bang Khu vực 9 tóm tắt rằng ba người Winklevoss và Narendra cáo buộc Zuckerberg lấy ý tưởng Facebook của họ.
++
++Đây là cáo buộc của các bên trong vụ kiện.
++
++Nó không phải kết luận thực tế của tòa rằng hành vi đó đã xảy ra đúng như lời cáo buộc.
++
++Phán quyết năm 2011 giữ nguyên việc thực thi thỏa thuận dàn xếp giữa Facebook, hai anh em Winklevoss, Narendra và ConnectU.
++
++Một hồ sơ tòa Massachusetts mô tả phiên hòa giải toàn cầu ngày 22 tháng 2 năm 2008.
++
++Theo hồ sơ đó, Facebook nhận toàn bộ cổ phần ConnectU để đổi lấy 20 triệu đô la tiền mặt và hơn một triệu cổ phiếu Facebook.
++
++Giá trị khi đó được mô tả xấp xỉ 65 triệu đô la.
++
++Những con số này nói về điều khoản được tòa mô tả, không phải thước đo đạo đức cho một bên nào.
++
++Phim có thể rút một tranh chấp thành các cảnh đối đầu dễ nhớ.
++
++Nhưng khi nghe một lời buộc tội trong câu chuyện thật, bạn cần biết nó là lời buộc tội, dàn xếp hay phán quyết.
++
++Ba nhãn đó không thể đổi cho nhau chỉ vì chúng làm nhịp kể nhanh hơn.
++
++Trên bản đồ kết nối, ghim thứ sáu là hồ sơ tòa: nó nối các bên bằng văn bản pháp lý, không bằng một kết luận mà nguồn không đưa ra.
++
++Đó cũng là cách xem một câu chuyện hấp dẫn mà không biến tranh chấp thành một phán quyết tưởng tượng.
++
++## CH06 · Phim không phải hồ sơ
++
++Năm 2010, bộ phim Mạng xã hội ra mắt dưới sự đạo diễn của David Fincher, theo trang Netflix Việt Nam.
++
++Trang này mô tả phim là một phim tiểu sử về sự trỗi dậy của Mark Zuckerberg từ sinh viên Harvard.
++
++Netflix cũng xếp phim vào nhóm chuyển thể từ sách và dựa trên câu chuyện có thật.
++
++Hai nhãn này nói cho bạn điều quan trọng: tác phẩm dùng lịch sử làm chất liệu, nhưng không tự biến mọi cảnh thoại thành tư liệu.
++
++Vai Eduardo trong phim do Andrew Garfield thể hiện.
++
++Vai Mark do Jesse Eisenberg thể hiện.
++
++Đó là thông tin dàn diễn viên, không phải bằng chứng cho diễn biến ngoài đời.
++
++Kho nguồn không có xác nhận đủ mạnh cho cảnh mở đầu với bạn gái.
++
++Kho cũng không có xác nhận mạnh cho công thức Elo trên cửa sổ hay những đối thoại cụ thể trong phim.
++
++Vì vậy, nếu bạn nhớ một khoảnh khắc như thế, cách gọi chính xác nhất là cảnh phim.
++
++Điều này không đòi bạn phải bỏ qua bộ phim.
++
++Nó chỉ đổi cách xem: phim có thể mở một câu hỏi lịch sử, còn báo đương thời và hồ sơ mới giúp kiểm phần trả lời.
++
++Sự phân biệt này đặc biệt quan trọng khi người thật còn sống và một câu thoại có thể bị nhớ như một sự kiện.
++
++Trên bản đồ kết nối, ghim thứ bảy là nhãn “phim”: nó nối người xem với câu chuyện, nhưng không thay thế chứng cứ.
++
++Giờ ta trở lại từ hình ảnh so cặp đầu tiên đến một hệ thống sắp thứ tự có ảnh hưởng rộng hơn nhiều.
++
++## CH07 · Ai đứng ở đầu Feed
++
++Facemash từng để người xem so sánh hai ảnh được chọn ngẫu nhiên.
++
++Nó không phải bằng chứng rằng Facemash dùng Elo, dù bộ phim có một cảnh như vậy.
++
++Sau này, Meta mô tả Feed hiện đại như quá trình sắp thứ tự các bài có thể nhìn thấy để nội dung liên quan hơn lên đầu Feed.
++
++Feed là dòng bài bạn nhìn thấy khi mở ứng dụng.
++
++Theo Meta, bốn phần của quá trình là inventory, signals, predictions và relevancy score.
++
++Inventory là tập các bài có thể được hiện ra.
++
++Signals là những tín hiệu hệ thống quan sát được.
++
++Predictions là dự đoán về điều bạn có thể làm với một bài.
++
++Relevancy score là điểm dùng để sắp thứ tự mức liên quan.
++
++Theo Meta năm 2018, các tín hiệu có thể gồm phản ứng, bình luận và chia sẻ.
++
++Công ty cũng nêu độ mới của bài, dạng liên kết, ảnh hoặc video, cùng người đăng, như các ví dụ về tín hiệu.
++
++Theo chính Meta, trung bình có khoảng 3.000 bài khả dĩ mỗi ngày, trong khi người dùng chỉ lướt khoảng 300 bài.
++
++Đây là mô tả của công ty về hệ thống của họ, nên cần được nghe như lời Meta giải thích, không phải một kiểm toán độc lập.
++
++Trên bản đồ kết nối, ghim cuối là Feed: từ hai ảnh ngẫu nhiên đến một hệ thống chọn thứ tự cho rất nhiều bài có thể xem.
++
++Câu chuyện ngoài đời thật không phải là một đường thẳng mà phim đã đóng dấu xong.
++
++Nó là bản đồ gồm trang báo, hồ sơ tòa, lời kể đương thời và cả những khoảng trống mà ta phải giữ nguyên là khoảng trống.
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; python motion/long/script_lines.py mim-social-network" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 158ms:
+ch00: 15 câu, 307 âm tiết, ~1.5 phút  Một trang bị tắt
+ch01: 15 câu, 304 âm tiết, ~1.5 phút  Cánh cửa kỷ luật
+ch02: 15 câu, 282 âm tiết, ~1.4 phút  Một danh bạ có lối vào
+ch03: 15 câu, 273 âm tiết, ~1.4 phút  Đường nối ra ngoài trường
+ch04: 15 câu, 292 âm tiết, ~1.5 phút  Những vai trò đầu tiên
+ch05: 15 câu, 315 âm tiết, ~1.6 phút  Một tranh chấp có hồ sơ
+ch06: 15 câu, 283 âm tiết, ~1.4 phút  Phim không phải hồ sơ
+ch07: 16 câu, 292 âm tiết, ~1.5 phút  Ai đứng ở đầu Feed
+TỔNG 121 câu, 2348 âm tiết
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; python motion/long/studio_lint.py mim-social-network --strict" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 164ms:
+  ! ch00: 1/16 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch01: 0/15 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch02: 0/15 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch03: 0/15 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch04: 0/15 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch05: 0/15 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch06: 0/15 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch07 dòng 10: có vẻ liệt kê hơn 3 mục trong một câu: Công ty cũng nêu độ mới của bài, dạng liên kết, ảnh hoặc video, cùng n…
+  ! ch07: 0/16 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+mim-social-network: 0 lỗi, 9 cảnh báo (luật studio)
+
+apply patch
+patch: completed
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-social-network\script.md
+diff --git a/data/long/mim-social-network/factcheck.md b/data/long/mim-social-network/factcheck.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..7443fea3b9e95837d78a0132c497a51cfdbcc6fe
+--- /dev/null
++++ b/data/long/mim-social-network/factcheck.md
+@@ -0,0 +1,16 @@
++# Factcheck — mim-social-network
++
++- CH00 — Ngày 04/11/2003, Mark E. Zuckerberg, Facemash, House facebooks, cơ chế so hai ảnh, 450 khách và ít nhất 22.000 phiếu: [The Harvard Crimson, 04/11/2003](https://www.thecrimson.com/article/2003/11/4/hot-or-not-website-briefly-judges/).
++- CH00/CH07 — Nguồn không xác nhận Facemash dùng Elo; cảnh Elo chỉ được nêu là cảnh phim: [The Harvard Crimson](https://www.thecrimson.com/article/2003/11/4/hot-or-not-website-briefly-judges/) và [Netflix Việt Nam](https://www.netflix.com/vn/title/70132721).
++- CH01 — Hơn 20.000 lượt truy cập trong 24 giờ, Administrative Board, không buộc Zuckerberg rời Harvard, và các mốc năm 2004: [The Harvard Crimson, 04/02/2014](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/).
++- CH01 — Hồ sơ tố tụng năm 2024 tóm lược việc Zuckerberg bị triệu tập trước cơ quan kỷ luật: [MDL complaint, 2024](https://s3.amazonaws.com/hoth.bizango/assets/26247/Palo_Alto_Complaint_032824.pdf).
++- CH02 — Danh bạ Harvard, ngày 04/02/2004, Kirkland House, harvard.edu, 650 đăng ký trong 24 giờ và 4.300 tài khoản trong hai tuần: [The Harvard Crimson, 04/02/2014](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/).
++- CH03 — Tháng 03/2004, Columbia, Stanford, Yale, người đăng ký thứ 10.000, Coursematch, tháng 05/2004 gần 100.000 người dùng, Palo Alto và tháng 06/2004 đổi tên Facebook: [The Harvard Crimson, 04/02/2014](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/).
++- CH04 — Eduardo Saverin, CFO, nhà đầu tư sớm, quảng cáo và lời kể về TheFacebook trước khi lập trình: [The Harvard Crimson, 24/02/2005](https://www.thecrimson.com/article/2005/2/24/key-players-three-full-time-employees-have/?page=single).
++- CH04 — Saverin không đi Palo Alto tháng 06/2004 và sau đó bị đẩy khỏi công ty: [The Harvard Crimson, 04/02/2014](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/).
++- CH05 — Cameron Winklevoss, Tyler Winklevoss, Divya Narendra, cáo buộc, thỏa thuận dàn xếp và phán quyết năm 2011: [U.S. Court of Appeals for the Ninth Circuit, 2011](https://law.justia.com/cases/federal/appellate-courts/ca9/08-16745/08-16745-2011-04-11.html).
++- CH05 — Hòa giải ngày 22/02/2008, 20 triệu USD, hơn một triệu cổ phiếu và giá trị xấp xỉ 65 triệu USD: [Massachusetts Appeals Court](https://law.justia.com/cases/massachusetts/court-of-appeals/volumes/95/95massappct202.html).
++- CH06 — Phim năm 2010, David Fincher, Netflix phân loại, Andrew Garfield và Jesse Eisenberg: [Netflix Việt Nam — Mạng xã hội](https://www.netflix.com/vn/title/70132721).
++- CH07 — Meta mô tả Feed, inventory, signals, predictions và relevancy score: [Meta Newsroom, 2018](https://about.fb.com/news/2018/05/inside-feed-news-feed-ranking/).
++- CH07 — Tín hiệu phản ứng, bình luận, chia sẻ và ưu tiên tương tác có ý nghĩa theo Meta năm 2018: [Meta Newsroom, 2018](https://about.fb.com/news/2018/01/news-feed-fyi-bringing-people-closer-together/).
++- CH07 — Theo Meta, khoảng 3.000 bài khả dĩ và khoảng 300 bài được lướt mỗi ngày; đây là mô tả của công ty: [Meta Newsroom, 2018](https://about.fb.com/news/2018/09/us-brazil-elections/).
+diff --git a/data/long/mim-social-network/script.md b/data/long/mim-social-network/script.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..0f164409ada168843053e144a7b4c80b78d95b89
+--- /dev/null
++++ b/data/long/mim-social-network/script.md
+@@ -0,0 +1,253 @@
++# THE SOCIAL NETWORK Ngoài Đời Thật: Facemash 2003
++
++**Kênh:** MIM · **Độ dài mục tiêu:** 9–10 phút · **Lộ trình:** một bản đồ kết nối, mỗi chương ghim thêm một điểm để tách điều bộ phim kể với điều nguồn lịch sử xác nhận.
++
++Quy ước: mỗi dòng là một câu đọc. `‖` là ngừng dài. Phim chỉ được nhắc bằng lời và chữ, không dùng hình phim. Chỉ dùng dữ kiện trong facts.md.
++
++## CH00 · Một trang bị tắt
++
++Ngày 4 tháng 11 năm 2003, báo sinh viên Harvard Crimson đăng một câu chuyện về Facemash, một trang vừa bị tắt sau một cuối tuần gây phản ứng trong trường.
++
++Theo bài báo này, Mark E. Zuckerberg, khi đó đang học Harvard, là người lập trang.
++
++Người vào Facemash thấy hai ảnh thẻ được chọn ngẫu nhiên và chọn người họ cho là “hotter”, nghĩa là hấp dẫn hơn.
++
++Họ cũng có thể chấm ảnh trong cùng một House, tức khu nhà ở của sinh viên tại Harvard.
++
++Đây không phải một mạng xã hội hoàn chỉnh, mà là một giao diện ép bạn chọn giữa hai hình ảnh.
++
++Zuckerberg nói với Crimson rằng ông đã vào các House facebooks trực tuyến để gom ảnh thẻ cho Facemash.
++
++House facebook khi ấy là danh bạ ảnh của một khu nhà, không phải tên của sản phẩm sau này.
++
++Trong tối Chủ nhật, trang bị tắt sau phản ứng trong trường.
++
++Zuckerberg nói với Crimson rằng tới lúc đó Facemash có 450 khách truy cập và ít nhất 22.000 lượt bỏ phiếu.
++
++Hai con số ấy cho thấy tốc độ lan truyền, nhưng không nói việc này được mọi người chấp nhận.
++
++Cảnh mở đầu của bộ phim có một công thức Elo trên cửa sổ.
++
++Elo là cách tính điểm xếp hạng thường dùng khi người chơi hoặc đối thủ được so cặp.
++
++Nhưng kho nguồn không xác nhận Facemash thật sự dùng công thức đó, nên đây chỉ là một cảnh phim.
++
++Trên bản đồ kết nối, ghim đầu tiên là một trang so cặp ảnh, được nhiều người mở và nhanh chóng bị tắt.
++
++Từ điểm ghim này, câu chuyện không nên bắt đầu bằng một thiên tài cô độc, mà bằng một hệ thống danh bạ và những người bị đưa vào đó.
++
++## CH01 · Cánh cửa kỷ luật
++
++Facemash không chỉ là một thử nghiệm kỹ thuật nằm yên trong phòng ký túc xá.
++
++Crimson viết năm 2014 rằng trang nhận hơn 20.000 lượt truy cập trong 24 giờ.
++
++Theo bài năm 2014, Facemash thu hút sự chú ý của Administrative Board, cơ quan kỷ luật của Harvard College.
++
++Cùng nguồn đó nói hội đồng không buộc Zuckerberg rời Harvard vì các vi phạm liên quan Facemash.
++
++Một đơn kiện đa quận nộp năm 2024 cũng tóm lược rằng ông bị triệu tập trước cơ quan kỷ luật sau vụ việc.
++
++Đó là mô tả trong hồ sơ tố tụng, không phải phán quyết về nguồn gốc Facebook.
++
++Bài Crimson năm 2003 ghi Zuckerberg nói ông quan tâm đến phần khoa học máy tính của dự án.
++
++Đó là phát biểu đương thời về một phần của dự án.
++
++Nó không cho phép ta biến thành kết luận về động cơ rộng hơn, hay về tính cách của một người thật.
++
++Điểm quan trọng hơn là dữ liệu ảnh không tự nhiên trở thành dữ liệu vô chủ chỉ vì một trang có thể mở được chúng.
++
++Một danh bạ vốn có giới hạn truy cập, khi bị gom lại và đặt vào một trò so sánh, có ý nghĩa khác hẳn.
++
++Trên bản đồ kết nối, ghim thứ hai là cánh cửa kỷ luật: công nghệ, quy tắc trường học và sự đồng ý đã va vào nhau.
++
++Nó nhắc bạn rằng trước khi hỏi một sản phẩm tăng nhanh ra sao, cần hỏi nó đã lấy dữ liệu và đặt con người vào đâu.
++
++## CH02 · Một danh bạ có lối vào
++
++Trước TheFacebook, Harvard đã có danh bạ tìm kiếm cho khóa năm nhất.
++
++Các House cũng giữ những danh bạ ảnh và số điện thoại riêng, thường hạn chế người được truy cập.
++
++Nói cách khác, thông tin đã tồn tại, nhưng nằm trong các ngăn khác nhau.
++
++Ngày 4 tháng 2 năm 2004, TheFacebook đi vào hoạt động từ phòng ký túc xá Kirkland House của Zuckerberg.
++
++Ban đầu, chỉ sinh viên Harvard mới có thể đăng ký.
++
++Một người dùng đầu tiên nói với Crimson rằng địa chỉ email harvard.edu là điều kiện để vào trang.
++
++Điều kiện ấy tạo ra một đường biên đơn giản: bạn thuộc cộng đồng trường thì có một lối vào.
++
++Trong 24 giờ đầu, TheFacebook có 650 người đăng ký, theo Crimson phỏng vấn người dùng đầu tiên.
++
++Trong hai tuần đầu, con số là 4.300 tài khoản.
++
++Nhưng nó cho thấy danh bạ chung đã giải quyết một việc rất cụ thể: tìm và nhận ra người cùng môi trường.
++
++Thay vì so hai ảnh rồi buộc một người thắng, giao diện mới cho mỗi người một hồ sơ trong cùng một mạng.
++
++Sự thay đổi ấy nghe nhỏ, nhưng nó chuyển trọng tâm từ chấm điểm người khác sang dựng một nơi để người quen tìm nhau.
++
++Trên bản đồ kết nối, ghim thứ ba là địa chỉ harvard.edu: một cổng vào biến danh bạ rời rạc thành mạng có ranh giới.
++
++Và khi cổng vào đã rõ, câu hỏi tiếp theo là liệu mô hình đó có đi qua được cổng trường khác hay không.
++
++## CH03 · Đường nối ra ngoài trường
++
++Đến tháng 3 năm 2004, TheFacebook đã có chỗ đứng tại Columbia, Stanford và Yale.
++
++Cùng thời điểm, Crimson ghi người đăng ký thứ 10.000 đã xuất hiện.
++
++Một mạng chỉ hữu ích khi bạn thấy người mình muốn tìm cũng ở trong đó.
++
++Một tính năng đầu tiên tên Coursematch cho phép người dùng xem bạn bè học lớp nào trong học kỳ.
++
++Coursematch nghĩa là ghép theo môn học, tức dùng lịch học như một mối nối có thể nhìn thấy.
++
++Tính năng này cho thấy mạng không chỉ lưu tên và ảnh.
++
++Nó còn tổ chức thông tin quanh những nhịp sinh hoạt rất gần, như một lớp học chung.
++
++Khi Zuckerberg thi cuối kỳ vào tháng 5 năm 2004, TheFacebook đã mở rộng trên toàn quốc và gần 100.000 người dùng, theo Crimson.
++
++Sau kỳ thi, nhóm gồm Zuckerberg, Dustin Moskovitz, Andrew McCollum và các thực tập sinh đi Palo Alto.
++
++Tháng 6 năm 2004, công ty đổi tên thành Facebook.
++
++Các mốc này kể sự tăng trưởng của dịch vụ, chứ không cho ta đọc được suy nghĩ của từng người trong nhóm.
++
++Trên bản đồ kết nối, ghim thứ tư là Coursematch: một đường nối không chỉ qua tên, mà qua việc bạn đang học cùng ai.
++
++Từ đây, mạng đã không còn chỉ là một danh bạ trong một trường, mà là một hạ tầng có thể lặp lại ở nhiều nơi.
++
++## CH04 · Những vai trò đầu tiên
++
++Một câu chuyện công nghệ thường bị kể như thể một người duy nhất tạo ra mọi phần việc.
++
++Những hồ sơ đương thời cho thấy ít nhất các vai trò ban đầu đã đa dạng hơn cách kể ấy.
++
++Hồ sơ Crimson năm 2005 gọi Eduardo Saverin là CFO của Facebook.
++
++CFO là người phụ trách tài chính ở cấp lãnh đạo của một công ty.
++
++Cùng hồ sơ gọi ông là nhà đầu tư sớm và người điều phối quảng cáo quốc gia lẫn địa phương trong giai đoạn đầu.
++
++Theo chính Saverin trong hồ sơ này, Zuckerberg đã tiếp cận ông về TheFacebook trước khi lập trình trang.
++
++Đó là điều Saverin kể về trình tự tiếp cận, không phải một lời giải thích cho toàn bộ quan hệ giữa hai người.
++
++Crimson năm 2014 ghi Saverin không đi Palo Alto cùng nhóm vào tháng 6 năm 2004.
++
++Cùng bài báo nói ông sau đó bị đẩy khỏi công ty.
++
++Các dữ kiện này đủ để xác định một thay đổi vị trí trong câu chuyện doanh nghiệp.
++
++Chúng không đủ để gán cho Saverin hay Zuckerberg một thái độ, động cơ hoặc mức độ trách nhiệm ngoài điều nguồn nói.
++
++Sự thận trọng này không làm câu chuyện kém hấp dẫn.
++
++Nó giữ cho ranh giới giữa hồ sơ và kịch tính không bị xóa bằng một lời kể quá chắc.
++
++Trên bản đồ kết nối, ghim thứ năm là một vai trò: tài chính, quảng cáo và đầu tư sớm cũng là những đường nối tạo nên công ty.
++
++Khi một đường nối thay đổi, điều ta biết chắc là mốc sự kiện, còn phần còn lại phải để nguồn nói đến đâu thì dừng ở đó.
++
++## CH05 · Một tranh chấp có hồ sơ
++
++Cameron Winklevoss, Tyler Winklevoss và Divya Narendra từng tìm Zuckerberg để hỗ trợ xây một mạng xã hội riêng cho sinh viên Harvard, theo Crimson.
++
++Chi tiết này thường được kể lại bằng những câu rất tròn trịa, nhưng hồ sơ pháp lý buộc ta tách cáo buộc với kết luận.
++
++Tòa Phúc thẩm Liên bang Khu vực 9 tóm tắt rằng ba người Winklevoss và Narendra cáo buộc Zuckerberg lấy ý tưởng Facebook của họ.
++
++Đây là cáo buộc của các bên trong vụ kiện.
++
++Nó không phải kết luận thực tế của tòa rằng hành vi đó đã xảy ra đúng như lời cáo buộc.
++
++Phán quyết năm 2011 giữ nguyên việc thực thi thỏa thuận dàn xếp giữa Facebook, hai anh em Winklevoss, Narendra và ConnectU.
++
++Một hồ sơ tòa Massachusetts mô tả phiên hòa giải toàn cầu ngày 22 tháng 2 năm 2008.
++
++Theo hồ sơ đó, Facebook nhận toàn bộ cổ phần ConnectU để đổi lấy 20 triệu đô la tiền mặt và hơn một triệu cổ phiếu Facebook.
++
++Giá trị khi đó được mô tả xấp xỉ 65 triệu đô la.
++
++Những con số này nói về điều khoản được tòa mô tả, không phải thước đo đạo đức cho một bên nào.
++
++Phim có thể rút một tranh chấp thành các cảnh đối đầu dễ nhớ.
++
++Nhưng khi nghe một lời buộc tội trong câu chuyện thật, bạn cần biết nó là lời buộc tội, dàn xếp hay phán quyết.
++
++Ba nhãn đó không thể đổi cho nhau chỉ vì chúng làm nhịp kể nhanh hơn.
++
++Trên bản đồ kết nối, ghim thứ sáu là hồ sơ tòa: nó nối các bên bằng văn bản pháp lý, không bằng một kết luận mà nguồn không đưa ra.
++
++Đó cũng là cách xem một câu chuyện hấp dẫn mà không biến tranh chấp thành một phán quyết tưởng tượng.
++
++## CH06 · Phim không phải hồ sơ
++
++Năm 2010, bộ phim Mạng xã hội ra mắt dưới sự đạo diễn của David Fincher, theo trang Netflix Việt Nam.
++
++Trang này mô tả phim là một phim tiểu sử về sự trỗi dậy của Mark Zuckerberg từ sinh viên Harvard.
++
++Netflix cũng xếp phim vào nhóm chuyển thể từ sách và dựa trên câu chuyện có thật.
++
++Hai nhãn này nói cho bạn điều quan trọng: tác phẩm dùng lịch sử làm chất liệu, nhưng không tự biến mọi cảnh thoại thành tư liệu.
++
++Vai Eduardo trong phim do Andrew Garfield thể hiện.
++
++Vai Mark do Jesse Eisenberg thể hiện.
++
++Đó là thông tin dàn diễn viên, không phải bằng chứng cho diễn biến ngoài đời.
++
++Kho nguồn không có xác nhận đủ mạnh cho cảnh mở đầu với bạn gái.
++
++Kho cũng không có xác nhận mạnh cho công thức Elo trên cửa sổ hay những đối thoại cụ thể trong phim.
++
++Vì vậy, nếu bạn nhớ một khoảnh khắc như thế, cách gọi chính xác nhất là cảnh phim.
++
++Điều này không đòi bạn phải bỏ qua bộ phim.
++
++Nó chỉ đổi cách xem: phim có thể mở một câu hỏi lịch sử, còn báo đương thời và hồ sơ mới giúp kiểm phần trả lời.
++
++Sự phân biệt này đặc biệt quan trọng khi người thật còn sống và một câu thoại có thể bị nhớ như một sự kiện.
++
++Trên bản đồ kết nối, ghim thứ bảy là nhãn “phim”: nó nối người xem với câu chuyện, nhưng không thay thế chứng cứ.
++
++Giờ ta trở lại từ hình ảnh so cặp đầu tiên đến một hệ thống sắp thứ tự có ảnh hưởng rộng hơn nhiều.
++
++## CH07 · Ai đứng ở đầu Feed
++
++Facemash từng để người xem so sánh hai ảnh được chọn ngẫu nhiên.
++
++Nó không phải bằng chứng rằng Facemash dùng Elo, dù bộ phim có một cảnh như vậy.
++
++Sau này, Meta mô tả Feed hiện đại như quá trình sắp thứ tự các bài có thể nhìn thấy để nội dung liên quan hơn lên đầu Feed.
++
++Feed là dòng bài bạn nhìn thấy khi mở ứng dụng.
++
++Theo Meta, bốn phần của quá trình là inventory, signals, predictions và relevancy score.
++
++Inventory là tập các bài có thể được hiện ra.
++
++Signals là những tín hiệu hệ thống quan sát được.
++
++Predictions là dự đoán về điều bạn có thể làm với một bài.
++
++Relevancy score là điểm dùng để sắp thứ tự mức liên quan.
++
++Theo Meta năm 2018, các tín hiệu có thể gồm phản ứng, bình luận và chia sẻ.
++
++Công ty cũng nêu độ mới của bài, dạng liên kết, ảnh hoặc video, cùng người đăng, như các ví dụ về tín hiệu.
++
++Theo chính Meta, trung bình có khoảng 3.000 bài khả dĩ mỗi ngày, trong khi người dùng chỉ lướt khoảng 300 bài.
++
++Đây là mô tả của công ty về hệ thống của họ, nên cần được nghe như lời Meta giải thích, không phải một kiểm toán độc lập.
++
++Trên bản đồ kết nối, ghim cuối là Feed: từ hai ảnh ngẫu nhiên đến một hệ thống chọn thứ tự cho rất nhiều bài có thể xem.
++
++Câu chuyện ngoài đời thật không phải là một đường thẳng mà phim đã đóng dấu xong.
++
++Nó là bản đồ gồm trang báo, hồ sơ tòa, lời kể đương thời và cả những khoảng trống mà ta phải giữ nguyên là khoảng trống.
+
+codex
+Bản nháp đạt 2.348 âm tiết ban đầu, vượt trần ticket 48 âm tiết; mình đã cắt ba câu lặp ý, giữ nguyên dữ kiện có nguồn. Giờ mình chạy lại các cổng bắt buộc.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; python motion/long/script_lines.py mim-social-network; python motion/long/studio_lint.py mim-social-network --strict; python scripts/long_gate.py mim-social-network --min-syl 1900" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ exited 1 in 341ms:
+ch00: 15 câu, 307 âm tiết, ~1.5 phút  Một trang bị tắt
+ch01: 13 câu, 268 âm tiết, ~1.3 phút  Cánh cửa kỷ luật
+ch02: 14 câu, 266 âm tiết, ~1.3 phút  Một danh bạ có lối vào
+ch03: 13 câu, 239 âm tiết, ~1.2 phút  Đường nối ra ngoài trường
+ch04: 15 câu, 292 âm tiết, ~1.5 phút  Những vai trò đầu tiên
+ch05: 15 câu, 315 âm tiết, ~1.6 phút  Một tranh chấp có hồ sơ
+ch06: 15 câu, 283 âm tiết, ~1.4 phút  Phim không phải hồ sơ
+ch07: 16 câu, 292 âm tiết, ~1.5 phút  Ai đứng ở đầu Feed
+TỔNG 116 câu, 2262 âm tiết
+  ! ch00: 1/16 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch01: 0/13 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch02: 0/14 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch03: 0/13 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch04: 0/15 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch05: 0/15 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch06: 0/15 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+  ! ch07 dòng 10: có vẻ liệt kê hơn 3 mục trong một câu: Công ty cũng nêu độ mới của bài, dạng liên kết, ảnh hoặc video, cùng n…
+  ! ch07: 0/16 câu ngắn (<= 6 tiếng); cần khoảng 1 câu mỗi 4-6 câu
+mim-social-network: 0 lỗi, 9 cảnh báo (luật studio)
+mim-social-network: âm tiết 2262, phút 10.8, cảnh 0, giây/cảnh 646.3, clip khác 0, ảnh khác 0, URL nguồn 15
+  LỖI: ch00: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch00: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: ch01: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch01: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: ch02: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch02: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: ch03: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch03: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: ch04: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch04: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: ch05: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch05: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: ch06: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch06: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: ch07: thiếu hud {k, t} (describe.py lấy tiêu đề chương từ đây)
+  LỖI: ch07: chỉ 0 loại cảnh []; cần >= 5
+  LỖI: chưa TTS: ['ch00', 'ch01', 'ch02', 'ch03', 'ch04', 'ch05', 'ch06', 'ch07'] -- chạy build_long.py <topic> tts cho đủ
+  LỖI: 646.3 giây/cảnh > 9.0: cần thêm cảnh (bài mẫu ~7,6)
+  LỖI: spec.youtube thiếu ['publish_at', 'playlist', 'chapter_titles', 'tags', 'video_credits'] (xem mẫu mim-ke-huy-diet-petrov)
+  LỖI: spec.youtube.sources chỉ 0 URL công khai (< 8)
+  LỖI: 59 tên/thuật ngữ nước ngoài trong lời đọc mà spec không có bảng say
+TRƯỢT (21 lỗi)
+
+codex
+Cổng kịch bản đã sạch lỗi (`studio_lint`: 0 lỗi), nhưng `long_gate` chưa thể đạt vì ticket giới hạn chỉ được ghi 3 file trong khi cổng này còn bắt buộc 8 file cảnh có `hud`, ≥5 loại cảnh/chương, TTS và `spec.youtube`; không có file nào trong phạm vi ticket cung cấp các phần đó. Mình sẽ ghi báo cáo trung thực nêu rõ trạng thái này, không tự tạo thêm file ngoài phạm vi.
+apply patch
+patch: completed
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-26-codex-pilot\T5W1-ket-qua.md
+diff --git a/data/long/mim-social-network/factcheck.md b/data/long/mim-social-network/factcheck.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..7443fea3b9e95837d78a0132c497a51cfdbcc6fe
+--- /dev/null
++++ b/data/long/mim-social-network/factcheck.md
+@@ -0,0 +1,16 @@
++# Factcheck — mim-social-network
++
++- CH00 — Ngày 04/11/2003, Mark E. Zuckerberg, Facemash, House facebooks, cơ chế so hai ảnh, 450 khách và ít nhất 22.000 phiếu: [The Harvard Crimson, 04/11/2003](https://www.thecrimson.com/article/2003/11/4/hot-or-not-website-briefly-judges/).
++- CH00/CH07 — Nguồn không xác nhận Facemash dùng Elo; cảnh Elo chỉ được nêu là cảnh phim: [The Harvard Crimson](https://www.thecrimson.com/article/2003/11/4/hot-or-not-website-briefly-judges/) và [Netflix Việt Nam](https://www.netflix.com/vn/title/70132721).
++- CH01 — Hơn 20.000 lượt truy cập trong 24 giờ, Administrative Board, không buộc Zuckerberg rời Harvard, và các mốc năm 2004: [The Harvard Crimson, 04/02/2014](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/).
++- CH01 — Hồ sơ tố tụng năm 2024 tóm lược việc Zuckerberg bị triệu tập trước cơ quan kỷ luật: [MDL complaint, 2024](https://s3.amazonaws.com/hoth.bizango/assets/26247/Palo_Alto_Complaint_032824.pdf).
++- CH02 — Danh bạ Harvard, ngày 04/02/2004, Kirkland House, harvard.edu, 650 đăng ký trong 24 giờ và 4.300 tài khoản trong hai tuần: [The Harvard Crimson, 04/02/2014](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/).
++- CH03 — Tháng 03/2004, Columbia, Stanford, Yale, người đăng ký thứ 10.000, Coursematch, tháng 05/2004 gần 100.000 người dùng, Palo Alto và tháng 06/2004 đổi tên Facebook: [The Harvard Crimson, 04/02/2014](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/).
++- CH04 — Eduardo Saverin, CFO, nhà đầu tư sớm, quảng cáo và lời kể về TheFacebook trước khi lập trình: [The Harvard Crimson, 24/02/2005](https://www.thecrimson.com/article/2005/2/24/key-players-three-full-time-employees-have/?page=single).
++- CH04 — Saverin không đi Palo Alto tháng 06/2004 và sau đó bị đẩy khỏi công ty: [The Harvard Crimson, 04/02/2014](https://www.thecrimson.com/article/2014/2/4/facebook-ten-years-feature-1/).
++- CH05 — Cameron Winklevoss, Tyler Winklevoss, Divya Narendra, cáo buộc, thỏa thuận dàn xếp và phán quyết năm 2011: [U.S. Court of Appeals for the Ninth Circuit, 2011](https://law.justia.com/cases/federal/appellate-courts/ca9/08-16745/08-16745-2011-04-11.html).
++- CH05 — Hòa giải ngày 22/02/2008, 20 triệu USD, hơn một triệu cổ phiếu và giá trị xấp xỉ 65 triệu USD: [Massachusetts Appeals Court](https://law.justia.com/cases/massachusetts/court-of-appeals/volumes/95/95massappct202.html).
++- CH06 — Phim năm 2010, David Fincher, Netflix phân loại, Andrew Garfield và Jesse Eisenberg: [Netflix Việt Nam — Mạng xã hội](https://www.netflix.com/vn/title/70132721).
++- CH07 — Meta mô tả Feed, inventory, signals, predictions và relevancy score: [Meta Newsroom, 2018](https://about.fb.com/news/2018/05/inside-feed-news-feed-ranking/).
++- CH07 — Tín hiệu phản ứng, bình luận, chia sẻ và ưu tiên tương tác có ý nghĩa theo Meta năm 2018: [Meta Newsroom, 2018](https://about.fb.com/news/2018/01/news-feed-fyi-bringing-people-closer-together/).
++- CH07 — Theo Meta, khoảng 3.000 bài khả dĩ và khoảng 300 bài được lướt mỗi ngày; đây là mô tả của công ty: [Meta Newsroom, 2018](https://about.fb.com/news/2018/09/us-brazil-elections/).
+diff --git a/data/long/mim-social-network/script.md b/data/long/mim-social-network/script.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..0f164409ada168843053e144a7b4c80b78d95b89
+--- /dev/null
++++ b/data/long/mim-social-network/script.md
+@@ -0,0 +1,253 @@
++# THE SOCIAL NETWORK Ngoài Đời Thật: Facemash 2003
++
++**Kênh:** MIM · **Độ dài mục tiêu:** 9–10 phút · **Lộ trình:** một bản đồ kết nối, mỗi chương ghim thêm một điểm để tách điều bộ phim kể với điều nguồn lịch sử xác nhận.
++
++Quy ước: mỗi dòng là một câu đọc. `‖` là ngừng dài. Phim chỉ được nhắc bằng lời và chữ, không dùng hình phim. Chỉ dùng dữ kiện trong facts.md.
++
++## CH00 · Một trang bị tắt
++
++Ngày 4 tháng 11 năm 2003, báo sinh viên Harvard Crimson đăng một câu chuyện về Facemash, một trang vừa bị tắt sau một cuối tuần gây phản ứng trong trường.
++
++Theo bài báo này, Mark E. Zuckerberg, khi đó đang học Harvard, là người lập trang.
++
++Người vào Facemash thấy hai ảnh thẻ được chọn ngẫu nhiên và chọn người họ cho là “hotter”, nghĩa là hấp dẫn hơn.
++
++Họ cũng có thể chấm ảnh trong cùng một House, tức khu nhà ở của sinh viên tại Harvard.
++
++Đây không phải một mạng xã hội hoàn chỉnh, mà là một giao diện ép bạn chọn giữa hai hình ảnh.
++
++Zuckerberg nói với Crimson rằng ông đã vào các House facebooks trực tuyến để gom ảnh thẻ cho Facemash.
++
++House facebook khi ấy là danh bạ ảnh của một khu nhà, không phải tên của sản phẩm sau này.
++
++Trong tối Chủ nhật, trang bị tắt sau phản ứng trong trường.
++
++Zuckerberg nói với Crimson rằng tới lúc đó Facemash có 450 khách truy cập và ít nhất 22.000 lượt bỏ phiếu.
++
++Hai con số ấy cho thấy tốc độ lan truyền, nhưng không nói việc này được mọi người chấp nhận.
++
++Cảnh mở đầu của bộ phim có một công thức Elo trên cửa sổ.
++
++Elo là cách tính điểm xếp hạng thường dùng khi người chơi hoặc đối thủ được so cặp.
++
++Nhưng kho nguồn không xác nhận Facemash thật sự dùng công thức đó, nên đây chỉ là một cảnh phim.
++
++Trên bản đồ kết nối, ghim đầu tiên là một trang so cặp ảnh, được nhiều người mở và nhanh chóng bị tắt.
++
++Từ điểm ghim này, câu chuyện không nên bắt đầu bằng một thiên tài cô độc, mà bằng một hệ thống danh bạ và những người bị đưa vào đó.
++
++## CH01 · Cánh cửa kỷ luật
++
++Facemash không chỉ là một thử nghiệm kỹ thuật nằm yên trong phòng ký túc xá.
++
++Crimson viết năm 2014 rằng trang nhận hơn 20.000 lượt truy cập trong 24 giờ.
++
++Theo bài năm 2014, Facemash thu hút sự chú ý của Administrative Board, cơ quan kỷ luật của Harvard College.
++
++Cùng nguồn đó nói hội đồng không buộc Zuckerberg rời Harvard vì các vi phạm liên quan Facemash.
++
++Một đơn kiện đa quận nộp năm 2024 cũng tóm lược rằng ông bị triệu tập trước cơ quan kỷ luật sau vụ việc.
++
++Đó là mô tả trong hồ sơ tố tụng, không phải phán quyết về nguồn gốc Facebook.
++
++Bài Crimson năm 2003 ghi Zuckerberg nói ông quan tâm đến phần khoa học máy tính của dự án.
++
++Đó là phát biểu đương thời về một phần của dự án.
++
++Nó không cho phép ta biến thành kết luận về động cơ rộng hơn, hay về tính cách của một người thật.
++
++Điểm quan trọng hơn là dữ liệu ảnh không tự nhiên trở thành dữ liệu vô chủ chỉ vì một trang có thể mở được chúng.
++
++Một danh bạ vốn có giới hạn truy cập, khi bị gom lại và đặt vào một trò so sánh, có ý nghĩa khác hẳn.
++
++Trên bản đồ kết nối, ghim thứ hai là cánh cửa kỷ luật: công nghệ, quy tắc trường học và sự đồng ý đã va vào nhau.
++
++Nó nhắc bạn rằng trước khi hỏi một sản phẩm tăng nhanh ra sao, cần hỏi nó đã lấy dữ liệu và đặt con người vào đâu.
++
++## CH02 · Một danh bạ có lối vào
++
++Trước TheFacebook, Harvard đã có danh bạ tìm kiếm cho khóa năm nhất.
++
++Các House cũng giữ những danh bạ ảnh và số điện thoại riêng, thường hạn chế người được truy cập.
++
++Nói cách khác, thông tin đã tồn tại, nhưng nằm trong các ngăn khác nhau.
++
++Ngày 4 tháng 2 năm 2004, TheFacebook đi vào hoạt động từ phòng ký túc xá Kirkland House của Zuckerberg.
++
++Ban đầu, chỉ sinh viên Harvard mới có thể đăng ký.
++
++Một người dùng đầu tiên nói với Crimson rằng địa chỉ email harvard.edu là điều kiện để vào trang.
++
++Điều kiện ấy tạo ra một đường biên đơn giản: bạn thuộc cộng đồng trường thì có một lối vào.
++
++Trong 24 giờ đầu, TheFacebook có 650 người đăng ký, theo Crimson phỏng vấn người dùng đầu tiên.
++
++Trong hai tuần đầu, con số là 4.300 tài khoản.
++
++Nhưng nó cho thấy danh bạ chung đã giải quyết một việc rất cụ thể: tìm và nhận ra người cùng môi trường.
++
++Thay vì so hai ảnh rồi buộc một người thắng, giao diện mới cho mỗi người một hồ sơ trong cùng một mạng.
++
++Sự thay đổi ấy nghe nhỏ, nhưng nó chuyển trọng tâm từ chấm điểm người khác sang dựng một nơi để người quen tìm nhau.
++
++Trên bản đồ kết nối, ghim thứ ba là địa chỉ harvard.edu: một cổng vào biến danh bạ rời rạc thành mạng có ranh giới.
++
++Và khi cổng vào đã rõ, câu hỏi tiếp theo là liệu mô hình đó có đi qua được cổng trường khác hay không.
++
++## CH03 · Đường nối ra ngoài trường
++
++Đến tháng 3 năm 2004, TheFacebook đã có chỗ đứng tại Columbia, Stanford và Yale.
++
++Cùng thời điểm, Crimson ghi người đăng ký thứ 10.000 đã xuất hiện.
++
++Một mạng chỉ hữu ích khi bạn thấy người mình muốn tìm cũng ở trong đó.
++
++Một tính năng đầu tiên tên Coursematch cho phép người dùng xem bạn bè học lớp nào trong học kỳ.
++
++Coursematch nghĩa là ghép theo môn học, tức dùng lịch học như một mối nối có thể nhìn thấy.
++
++Tính năng này cho thấy mạng không chỉ lưu tên và ảnh.
++
++Nó còn tổ chức thông tin quanh những nhịp sinh hoạt rất gần, như một lớp học chung.
++
++Khi Zuckerberg thi cuối kỳ vào tháng 5 năm 2004, TheFacebook đã mở rộng trên toàn quốc và gần 100.000 người dùng, theo Crimson.
++
++Sau kỳ thi, nhóm gồm Zuckerberg, Dustin Moskovitz, Andrew McCollum và các thực tập sinh đi Palo Alto.
++
++Tháng 6 năm 2004, công ty đổi tên thành Facebook.
++
++Các mốc này kể sự tăng trưởng của dịch vụ, chứ không cho ta đọc được suy nghĩ của từng người trong nhóm.
++
++Trên bản đồ kết nối, ghim thứ tư là Coursematch: một đường nối không chỉ qua tên, mà qua việc bạn đang học cùng ai.
++
++Từ đây, mạng đã không còn chỉ là một danh bạ trong một trường, mà là một hạ tầng có thể lặp lại ở nhiều nơi.
++
++## CH04 · Những vai trò đầu tiên
++
++Một câu chuyện công nghệ thường bị kể như thể một người duy nhất tạo ra mọi phần việc.
++
++Những hồ sơ đương thời cho thấy ít nhất các vai trò ban đầu đã đa dạng hơn cách kể ấy.
++
++Hồ sơ Crimson năm 2005 gọi Eduardo Saverin là CFO của Facebook.
++
++CFO là người phụ trách tài chính ở cấp lãnh đạo của một công ty.
++
++Cùng hồ sơ gọi ông là nhà đầu tư sớm và người điều phối quảng cáo quốc gia lẫn địa phương trong giai đoạn đầu.
++
++Theo chính Saverin trong hồ sơ này, Zuckerberg đã tiếp cận ông về TheFacebook trước khi lập trình trang.
++
++Đó là điều Saverin kể về trình tự tiếp cận, không phải một lời giải thích cho toàn bộ quan hệ giữa hai người.
++
++Crimson năm 2014 ghi Saverin không đi Palo Alto cùng nhóm vào tháng 6 năm 2004.
++
++Cùng bài báo nói ông sau đó bị đẩy khỏi công ty.
++
++Các dữ kiện này đủ để xác định một thay đổi vị trí trong câu chuyện doanh nghiệp.
++
++Chúng không đủ để gán cho Saverin hay Zuckerberg một thái độ, động cơ hoặc mức độ trách nhiệm ngoài điều nguồn nói.
++
++Sự thận trọng này không làm câu chuyện kém hấp dẫn.
++
++Nó giữ cho ranh giới giữa hồ sơ và kịch tính không bị xóa bằng một lời kể quá chắc.
++
++Trên bản đồ kết nối, ghim thứ năm là một vai trò: tài chính, quảng cáo và đầu tư sớm cũng là những đường nối tạo nên công ty.
++
++Khi một đường nối thay đổi, điều ta biết chắc là mốc sự kiện, còn phần còn lại phải để nguồn nói đến đâu thì dừng ở đó.
++
++## CH05 · Một tranh chấp có hồ sơ
++
++Cameron Winklevoss, Tyler Winklevoss và Divya Narendra từng tìm Zuckerberg để hỗ trợ xây một mạng xã hội riêng cho sinh viên Harvard, theo Crimson.
++
++Chi tiết này thường được kể lại bằng những câu rất tròn trịa, nhưng hồ sơ pháp lý buộc ta tách cáo buộc với kết luận.
++
++Tòa Phúc thẩm Liên bang Khu vực 9 tóm tắt rằng ba người Winklevoss và Narendra cáo buộc Zuckerberg lấy ý tưởng Facebook của họ.
++
++Đây là cáo buộc của các bên trong vụ kiện.
++
++Nó không phải kết luận thực tế của tòa rằng hành vi đó đã xảy ra đúng như lời cáo buộc.
++
++Phán quyết năm 2011 giữ nguyên việc thực thi thỏa thuận dàn xếp giữa Facebook, hai anh em Winklevoss, Narendra và ConnectU.
++
++Một hồ sơ tòa Massachusetts mô tả phiên hòa giải toàn cầu ngày 22 tháng 2 năm 2008.
++
++Theo hồ sơ đó, Facebook nhận toàn bộ cổ phần ConnectU để đổi lấy 20 triệu đô la tiền mặt và hơn một triệu cổ phiếu Facebook.
++
++Giá trị khi đó được mô tả xấp xỉ 65 triệu đô la.
++
++Những con số này nói về điều khoản được tòa mô tả, không phải thước đo đạo đức cho một bên nào.
++
++Phim có thể rút một tranh chấp thành các cảnh đối đầu dễ nhớ.
++
++Nhưng khi nghe một lời buộc tội trong câu chuyện thật, bạn cần biết nó là lời buộc tội, dàn xếp hay phán quyết.
++
++Ba nhãn đó không thể đổi cho nhau chỉ vì chúng làm nhịp kể nhanh hơn.
++
++Trên bản đồ kết nối, ghim thứ sáu là hồ sơ tòa: nó nối các bên bằng văn bản pháp lý, không bằng một kết luận mà nguồn không đưa ra.
++
++Đó cũng là cách xem một câu chuyện hấp dẫn mà không biến tranh chấp thành một phán quyết tưởng tượng.
++
++## CH06 · Phim không phải hồ sơ
++
++Năm 2010, bộ phim Mạng xã hội ra mắt dưới sự đạo diễn của David Fincher, theo trang Netflix Việt Nam.
++
++Trang này mô tả phim là một phim tiểu sử về sự trỗi dậy của Mark Zuckerberg từ sinh viên Harvard.
++
++Netflix cũng xếp phim vào nhóm chuyển thể từ sách và dựa trên câu chuyện có thật.
++
++Hai nhãn này nói cho bạn điều quan trọng: tác phẩm dùng lịch sử làm chất liệu, nhưng không tự biến mọi cảnh thoại thành tư liệu.
++
++Vai Eduardo trong phim do Andrew Garfield thể hiện.
++
++Vai Mark do Jesse Eisenberg thể hiện.
++
++Đó là thông tin dàn diễn viên, không phải bằng chứng cho diễn biến ngoài đời.
++
++Kho nguồn không có xác nhận đủ mạnh cho cảnh mở đầu với bạn gái.
++
++Kho cũng không có xác nhận mạnh cho công thức Elo trên cửa sổ hay những đối thoại cụ thể trong phim.
++
++Vì vậy, nếu bạn nhớ một khoảnh khắc như thế, cách gọi chính xác nhất là cảnh phim.
++
++Điều này không đòi bạn phải bỏ qua bộ phim.
++
++Nó chỉ đổi cách xem: phim có thể mở một câu hỏi lịch sử, còn báo đương thời và hồ sơ mới giúp kiểm phần trả lời.
++
++Sự phân biệt này đặc biệt quan trọng khi người thật còn sống và một câu thoại có thể bị nhớ như một sự kiện.
++
++Trên bản đồ kết nối, ghim thứ bảy là nhãn “phim”: nó nối người xem với câu chuyện, nhưng không thay thế chứng cứ.
++
++Giờ ta trở lại từ hình ảnh so cặp đầu tiên đến một hệ thống sắp thứ tự có ảnh hưởng rộng hơn nhiều.
++
++## CH07 · Ai đứng ở đầu Feed
++
++Facemash từng để người xem so sánh hai ảnh được chọn ngẫu nhiên.
++
++Nó không phải bằng chứng rằng Facemash dùng Elo, dù bộ phim có một cảnh như vậy.
++
++Sau này, Meta mô tả Feed hiện đại như quá trình sắp thứ tự các bài có thể nhìn thấy để nội dung liên quan hơn lên đầu Feed.
++
++Feed là dòng bài bạn nhìn thấy khi mở ứng dụng.
++
++Theo Meta, bốn phần của quá trình là inventory, signals, predictions và relevancy score.
++
++Inventory là tập các bài có thể được hiện ra.
++
++Signals là những tín hiệu hệ thống quan sát được.
++
++Predictions là dự đoán về điều bạn có thể làm với một bài.
++
++Relevancy score là điểm dùng để sắp thứ tự mức liên quan.
++
++Theo Meta năm 2018, các tín hiệu có thể gồm phản ứng, bình luận và chia sẻ.
++
++Công ty cũng nêu độ mới của bài, dạng liên kết, ảnh hoặc video, cùng người đăng, như các ví dụ về tín hiệu.
++
++Theo chính Meta, trung bình có khoảng 3.000 bài khả dĩ mỗi ngày, trong khi người dùng chỉ lướt khoảng 300 bài.
++
++Đây là mô tả của công ty về hệ thống của họ, nên cần được nghe như lời Meta giải thích, không phải một kiểm toán độc lập.
++
++Trên bản đồ kết nối, ghim cuối là Feed: từ hai ảnh ngẫu nhiên đến một hệ thống chọn thứ tự cho rất nhiều bài có thể xem.
++
++Câu chuyện ngoài đời thật không phải là một đường thẳng mà phim đã đóng dấu xong.
++
++Nó là bản đồ gồm trang báo, hồ sơ tòa, lời kể đương thời và cả những khoảng trống mà ta phải giữ nguyên là khoảng trống.
+diff --git a/docs/pm/tickets/2026-10-26-codex-pilot/T5W1-ket-qua.md b/docs/pm/tickets/2026-10-26-codex-pilot/T5W1-ket-qua.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..e832b518c4a66aa4ee75cc09e501072899853075
+--- /dev/null
++++ b/docs/pm/tickets/2026-10-26-codex-pilot/T5W1-ket-qua.md
+@@ -0,0 +1,44 @@
++# Kết quả T5W1 — mim-social-network
++
++## Đã thực hiện
++
++- Viết `data/long/mim-social-network/script.md` gồm 8 chương, tiêu đề `THE SOCIAL NETWORK Ngoài Đời Thật: Facemash 2003` (một dấu `:`, 54 ký tự).
++- Viết `data/long/mim-social-network/factcheck.md` với 15 URL công khai, chỉ dùng kho dữ kiện đã duyệt.
++- Mô-típ: **bản đồ kết nối**. Mỗi chương thêm một ghim: trang so cặp ảnh; cánh cửa kỷ luật; địa chỉ `harvard.edu`; Coursematch; vai trò đầu tiên; hồ sơ tòa; nhãn phim; Feed.
++- Không dùng Elo như sự kiện thật: chỉ gọi nó là cảnh phim và nêu rõ kho nguồn không xác nhận Facemash dùng Elo.
++
++## Dữ kiện theo chương
++
++| Chương | Dữ kiện đã dùng |
++|---|---|
++| CH00 | Crimson 04/11/2003; Facemash; House facebooks; 450 khách; ít nhất 22.000 phiếu; giới hạn kiểm chứng Elo |
++| CH01 | hơn 20.000 lượt trong 24 giờ; Administrative Board; hồ sơ tố tụng 2024; phát biểu về phần khoa học máy tính |
++| CH02 | danh bạ Harvard; 04/02/2004; Kirkland House; `harvard.edu`; 650 đăng ký; 4.300 tài khoản |
++| CH03 | tháng 03/2004; Columbia, Stanford, Yale; 10.000; Coursematch; tháng 05/2004 gần 100.000; tháng 06/2004 đổi tên |
++| CH04 | Eduardo Saverin; CFO; đầu tư, quảng cáo; Palo Alto tháng 06/2004; giới hạn không suy diễn động cơ |
++| CH05 | Cameron Winklevoss, Tyler Winklevoss, Divya Narendra; cáo buộc; phán quyết 2011; 22/02/2008; 20 triệu USD; hơn một triệu cổ phiếu; xấp xỉ 65 triệu USD |
++| CH06 | phim năm 2010; David Fincher; Andrew Garfield; Jesse Eisenberg; ranh giới giữa phim và hồ sơ |
++| CH07 | Feed; Meta 2018; inventory, signals, predictions, relevancy score; khoảng 3.000 bài và 300 bài |
++
++## Lệnh đã chạy
++
++1. `PYTHONIOENCODING=utf-8 python motion/long/script_lines.py mim-social-network`
++   - Integrity qua; tổng **116 câu, 2.262 âm tiết**, trong giới hạn ticket 2.000–2.300.
++2. `PYTHONIOENCODING=utf-8 python motion/long/studio_lint.py mim-social-network --strict`
++   - **0 lỗi, 9 cảnh báo**. Cảnh báo còn lại: mật độ câu ngắn ở các chương và một câu CH07 bị nhận là liệt kê nhiều mục. Đây là cảnh báo, không phải lỗi strict.
++3. `PYTHONIOENCODING=utf-8 python scripts/long_gate.py mim-social-network --min-syl 1900`
++   - **TRƯỢT, 21 lỗi**. Cổng xác nhận 2.262 âm tiết và 15 URL, nhưng yêu cầu các phần ngoài phạm vi ticket: `hud` và ≥5 loại cảnh cho từng `chNN.json`, timing TTS, `spec.youtube` với `publish_at`, `playlist`, `chapter_titles`, `tags`, `video_credits`, ít nhất 8 `spec.youtube.sources`, cùng bảng `say`.
++
++## Vướng mắc phạm vi
++
++Ticket chỉ cho phép ghi ba file: `script.md`, `factcheck.md` và báo cáo này; đồng thời chỉ định `script_lines.py` được tạo thêm `chNN.json` có `lines`.
++
++Để `long_gate.py` in **ĐẠT**, phải tạo cảnh, `spec.json` và timing TTS qua các file/lệnh không được ticket cho phép ghi hoặc đọc. Vì vậy không thể báo hoàn thành cổng cuối mà không vi phạm phạm vi ticket.
++
++## Khẳng định không kiểm được
++
++- Không có nguồn mạnh trong kho xác nhận Facemash dùng Elo, cảnh mở đầu với bạn gái, hoặc các đối thoại cụ thể của phim. Kịch bản không trình bày các chi tiết này là sự kiện thật.
++
++## Clip sheet và thumbnail
++
++- Không tạo clip sheet hoặc thumbnail: không thuộc ba file được phép của ticket.
+
+codex
+Đã hoàn thành phần được ticket cho phép ghi:
+
+- [Kịch bản](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-social-network\script.md): 8 chương, 2.262 âm tiết, tiêu đề đúng yêu cầu.
+- [Factcheck](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-social-network\factcheck.md): 15 URL nguồn đã duyệt.
+- [Báo cáo](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-26-codex-pilot\T5W1-ket-qua.md).
+
+`script_lines.py` qua integrity; `studio_lint --strict` ra 0 lỗi, 9 cảnh báo.
+
+`long_gate.py mim-social-network --min-syl 1900` đã chạy nhưng **TRƯỢT** vì đòi scene/spec/TTS ngoài đúng ba file ticket cho phép ghi. Báo cáo nêu đầy đủ 21 lỗi cổng và xung đột phạm vi này.
+tokens used
+83,530
+Đã hoàn thành phần được ticket cho phép ghi:
+
+- [Kịch bản](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-social-network\script.md): 8 chương, 2.262 âm tiết, tiêu đề đúng yêu cầu.
+- [Factcheck](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-social-network\factcheck.md): 15 URL nguồn đã duyệt.
+- [Báo cáo](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-26-codex-pilot\T5W1-ket-qua.md).
+
+`script_lines.py` qua integrity; `studio_lint --strict` ra 0 lỗi, 9 cảnh báo.
+
+`long_gate.py mim-social-network --min-syl 1900` đã chạy nhưng **TRƯỢT** vì đòi scene/spec/TTS ngoài đúng ba file ticket cho phép ghi. Báo cáo nêu đầy đủ 21 lỗi cổng và xung đột phạm vi này.

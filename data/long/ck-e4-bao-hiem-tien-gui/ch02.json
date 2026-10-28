@@ -1,0 +1,281 @@
+{
+ "title": "Gốc cộng lãi, và cuốn sổ tự lớn lên",
+ "lines": [
+  {
+   "t": "Hạn mức ba trăm năm mươi triệu tính cho cả gốc lẫn lãi.",
+   "p": 0.8
+  },
+  {
+   "t": "Không phải chỉ tiền gốc.",
+   "p": 1.0
+  },
+  "Thử một phép tính, với lãi suất giả định bảy phần trăm một năm.",
+  "Đầu tháng mười năm nay, sổ mười hai tháng được niêm yết phổ biến từ gần sáu tới hơn bảy phần trăm.",
+  "Bạn gửi đúng ba trăm năm mươi triệu, tròn hạn mức.",
+  "Một năm sau, cuốn sổ có khoảng ba trăm bảy mươi tư triệu rưỡi.",
+  {
+   "t": "Hơn hai mươi tư triệu đã nằm ngoài hạn mức.",
+   "p": 1.0
+  },
+  {
+   "t": "Vậy muốn cả gốc lẫn lãi một năm vẫn nằm trong hạn mức, gửi tối đa bao nhiêu?",
+   "ask": 1
+  },
+  "Với bảy phần trăm, khoảng ba trăm hai mươi bảy triệu.",
+  {
+   "t": "Lãi thấp hơn, con số này nhích lên một chút, nhưng không nhiều. Chỉ nhích nhẹ.",
+   "p": 1.0
+  },
+  "Bây giờ là chi tiết khó thấy nhất.",
+  "Một cuốn sổ ba trăm triệu, đến hạn thì để cuộn tiếp cả gốc lẫn lãi.",
+  "Năm đầu, nó thành khoảng ba trăm hai mươi mốt triệu.",
+  "Năm thứ hai, gần ba trăm bốn mươi bốn.",
+  {
+   "t": "Sang năm thứ ba, khoảng ba trăm sáu mươi tám triệu.",
+   "p": 1.0
+  },
+  "Không ai gửi thêm đồng nào.",
+  {
+   "t": "Cuốn sổ tự lớn lên, rồi tự bước qua vạch hạn mức. Rất lặng lẽ.",
+   "p": 1.0
+  },
+  "Chi tiết thứ hai: hạn mức tính cho mỗi người.",
+  "Chị Thu đứng tên một cuốn, chồng chị đứng tên một cuốn khác, ở cùng một nơi.",
+  {
+   "t": "Mỗi người có hạn mức riêng, tức là tổng cộng bảy trăm triệu. Gấp đôi lá chắn.",
+   "p": 1.0
+  },
+  "Chi tiết thứ ba: hạn mức tính cho mỗi tổ chức, không phải cho mỗi chi nhánh.",
+  "Hai cuốn sổ ở hai phòng giao dịch của cùng một ngân hàng, vẫn chỉ chung một hạn mức.",
+  {
+   "t": "Thế có nhiều người vượt hạn mức không?",
+   "ask": 1
+  },
+  "Theo số liệu được công bố khi nâng hạn mức, khoảng chín mươi ba phẩy bảy phần trăm người gửi có toàn bộ tiền nằm trong ba trăm năm mươi triệu.",
+  {
+   "t": "Tức là cứ khoảng mười sáu người gửi tiền, có một người có tiền vượt mức ấy ở ít nhất một nơi.",
+   "p": 1.0
+  },
+  "Phần lớn chúng ta đã nằm gọn trong lá chắn.",
+  "Vậy ba trăm năm mươi triệu là nhiều hay ít?",
+  "Muốn trả lời công bằng, phải nhìn lại cả hai mươi lăm năm của chính con số này."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "GỐC CỘNG LÃI",
+   "sub": "VÀ CUỐN SỔ TỰ LỚN LÊN",
+   "vid": "13107027",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Hạn"
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 1,
+   "mythLab": "NHIỀU NGƯỜI NGHĨ",
+   "myth": "350 TRIỆU TIỀN GỐC",
+   "truthLab": "THẬT RA",
+   "truth": "350 TRIỆU CẢ GỐC LẪN LÃI",
+   "strikeAt": [
+    1,
+    "Không"
+   ],
+   "truthAt": [
+    1,
+    "gốc"
+   ]
+  },
+  {
+   "type": "source",
+   "at": 2,
+   "source": "LÃI 12 THÁNG · KHẢO SÁT BÁO CHÍ 09/10/2026",
+   "ref": "LÃI SUẤT GIẢ ĐỊNH CỦA VÍ DỤ",
+   "snippet": "niêm yết phổ biến [[từ gần 6% tới hơn 7%]] · ví dụ dùng 7%",
+   "hlAt": [
+    3,
+    "gần"
+   ],
+   "seal": "VÍ DỤ GIẢ ĐỊNH",
+   "sealAt": 4
+  },
+  {
+   "type": "bars",
+   "at": 5,
+   "title": "GỬI ĐÚNG 350 TRIỆU, 1 NĂM SAU (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "HẠN MỨC",
+     "v": 350,
+     "lbl": "350",
+     "at": [
+      5,
+      "Một"
+     ]
+    },
+    {
+     "k": "GỐC + LÃI",
+     "v": 374.5,
+     "lbl": "374,5",
+     "at": [
+      5,
+      "ba"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "+24,5 TRIỆU",
+   "sub": "ĐÃ NGOÀI HẠN MỨC"
+  },
+  {
+   "type": "question",
+   "at": 7,
+   "text": "Gửi tối đa bao nhiêu\nđể gốc + lãi một năm vẫn trong hạn mức?"
+  },
+  {
+   "type": "counter",
+   "at": 8,
+   "from": 0,
+   "to": 327,
+   "suffix": " TRIỆU",
+   "label": "GỐC TỐI ĐA · LÃI 7%/NĂM · 12 THÁNG",
+   "sub": {
+    "text": "350 ÷ 1,07 · VÍ DỤ GIẢ ĐỊNH",
+    "at": 9
+   }
+  },
+  {
+   "type": "bars",
+   "at": 11,
+   "title": "SỔ 300 TRIỆU CUỘN CẢ GỐC LẪN LÃI (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "NĂM 1",
+     "v": 321,
+     "lbl": "321",
+     "at": [
+      12,
+      "Năm"
+     ]
+    },
+    {
+     "k": "NĂM 2",
+     "v": 343.5,
+     "lbl": "≈ 344",
+     "at": [
+      13,
+      "Năm"
+     ]
+    },
+    {
+     "k": "NĂM 3",
+     "v": 367.5,
+     "lbl": "≈ 368",
+     "at": [
+      14,
+      "Sang"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "KHÔNG GỬI THÊM ĐỒNG NÀO",
+     "at": 15,
+     "sm": true
+    },
+    {
+     "text": "CUỐN SỔ TỰ BƯỚC QUA VẠCH",
+     "at": 16,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 17,
+   "title": "HẠN MỨC TÍNH CHO…",
+   "rows": [
+    {
+     "k": "MỖI NGƯỜI",
+     "v": "VỢ + CHỒNG = 700 TRIỆU",
+     "at": [
+      19,
+      "Mỗi"
+     ]
+    },
+    {
+     "k": "MỖI TỔ CHỨC",
+     "v": "KHÔNG PHẢI MỖI CHI NHÁNH",
+     "at": 20
+    }
+   ],
+   "total": {
+    "k": "2 PHÒNG GIAO DỊCH",
+    "v": "VẪN 1 HẠN MỨC",
+    "at": 21
+   }
+  },
+  {
+   "type": "question",
+   "at": 22,
+   "text": "Có nhiều người\nvượt hạn mức không?"
+  },
+  {
+   "type": "units",
+   "at": 23,
+   "title": "MỨC 350 TRIỆU · NGƯỜI GỬI ĐƯỢC BẢO VỆ TOÀN BỘ",
+   "total": 16,
+   "cols": 16,
+   "lit": 15,
+   "litAt": [
+    23,
+    "chín"
+   ],
+   "unitLabel": "≈ 93,7% · CỨ KHOẢNG 16 NGƯỜI CÓ 1 NGƯỜI VƯỢT",
+   "label": {
+    "k": "SỐ LIỆU CÔNG BỐ KHI NÂNG HẠN MỨC (QUA BÁO PHÁP LUẬT)",
+    "v": "",
+    "at": 24
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 26,
+   "items": [
+    {
+     "text": "350 TRIỆU LÀ NHIỀU HAY ÍT?",
+     "at": 26,
+     "acc": true
+    },
+    {
+     "text": "nhìn lại 25 năm của chính con số này",
+     "at": 27,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "GỐC CỘNG LÃI"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

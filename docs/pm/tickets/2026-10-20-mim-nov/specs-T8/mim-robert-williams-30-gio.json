@@ -1,0 +1,164 @@
+{
+ "theme": "mim",
+ "title": "Bị giữ khoảng 30 giờ vì máy nhìn nhầm: chuyện Robert Williams, Detroit",
+ "description": "Tháng 1/2020, ở Detroit (Mỹ), Robert Williams bị cảnh sát bắt ngay trước nhà, trước mặt vợ con, sau khi một hệ thống nhận diện khuôn mặt ghép ảnh bằng lái cũ của anh với một đoạn video an ninh mờ nhoè. Anh không phải người trong video và bị giữ khoảng 30 giờ. Tháng 6/2024, vụ kiện kết thúc bằng một thoả thuận: cảnh sát thành phố không được bắt người chỉ dựa trên kết quả nhận diện khuôn mặt. Theo hồ sơ vụ kiện do ACLU đại diện và báo chí Mỹ.\n\nGiọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\nBản đầy đủ (khoảng 10 phút): https://youtu.be/7daMUBWG6mU (công khai từ 20:00 ngày 30/11).",
+ "tags": [
+  "robert williams",
+  "detroit",
+  "nhận diện khuôn mặt",
+  "bắt nhầm",
+  "ai và pháp luật",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "DETROIT · 2020",
+ "acc": [
+  "giữ",
+  "ba",
+  "nhầm",
+  "tin"
+ ],
+ "kicker": "KHUÔN MẶT VÀ AI",
+ "lines": [
+  "Bị giữ ba mươi giờ vì máy nhìn nhầm.",
+  "Tháng một năm hai nghìn không trăm hai mươi, ở Detroit, nước Mỹ, Robert Williams bị bắt ngay trước nhà, trước mặt vợ con.",
+  "Hệ thống nhận diện khuôn mặt ghép ảnh bằng lái cũ của anh với một đoạn video an ninh mờ nhoè.",
+  "Anh không phải người trong đoạn video ấy.",
+  "Anh bị giữ khoảng ba mươi giờ.",
+  "Năm hai nghìn không trăm hai mươi tư, vụ kiện kết thúc bằng một thoả thuận: cảnh sát không được bắt người chỉ dựa trên kết quả nhận diện khuôn mặt.",
+  "Máy sai, và người ta tin con số của nó hơn mức nó xứng đáng."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "BỊ GIỮ 30 GIỜ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "vì máy nhìn nhầm",
+     "at": [
+      0,
+      "vì"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7477609",
+   "veil": 0.55,
+   "ms": 1
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "MÁY GHÉP HAI THỨ",
+   "nodes": [
+    {
+     "text": "ảnh bằng lái cũ",
+     "x": 0.25,
+     "y": 0.25,
+     "at": [
+      2,
+      "ảnh"
+     ],
+     "w": 420
+    },
+    {
+     "text": "video mờ nhoè",
+     "x": 0.75,
+     "y": 0.25,
+     "at": [
+      2,
+      "video"
+     ],
+     "w": 420
+    },
+    {
+     "text": "anh không phải người này",
+     "x": 0.5,
+     "y": 0.75,
+     "at": [
+      3,
+      "Anh"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 760
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      2,
+      "ghép"
+     ],
+     "label": "MÁY GHÉP",
+     "bend": 0
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 0,
+   "to": 30,
+   "suffix": " GIỜ",
+   "label": "KHOẢNG, BỊ GIỮ",
+   "until": [
+    4,
+    "giờ"
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "THOẢ THUẬN NĂM 2024 · DIỄN Ý",
+   "cards": [
+    {
+     "k": "CẢNH SÁT KHÔNG ĐƯỢC BẮT",
+     "v": "CHỈ VÌ MÁY NHẬN RA",
+     "at": [
+      5,
+      "cảnh"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "TIN QUÁ MỨC",
+   "sub": "CON SỐ CỦA MÁY, HƠN MỨC XỨNG ĐÁNG"
+  }
+ ],
+ "sources": [
+  "https://www.aclu.org/cases/williams-v-city-of-detroit-face-recognition-false-arrest -- URL cần kiểm khi có mạng",
+  "michiganpublic.org; cbsnews.com (theo ghi chú nguồn của script)"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "imgs": {},
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4
+  }
+ },
+ "say": {
+  "Detroit": "Đi-troi",
+  "Robert": "Rô-bớt",
+  "Williams": "Uy-li-ừm"
+ }
+}

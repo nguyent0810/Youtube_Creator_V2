@@ -1,0 +1,173 @@
+{
+ "theme": "ck",
+ "kicker": "BIỂU ĐỒ NẾN",
+ "sub": "CHUYỆN KỂ",
+ "title": "Biểu đồ nến có từ thế kỷ 18? Chuyện thương nhân gạo Nhật Bản chưa chắc là chuyện thật",
+ "description": "Lời kể quen thuộc: biểu đồ nến do một thương nhân buôn gạo người Nhật nghĩ ra ở thế kỷ 18. Người làm biểu đồ nến phổ biến ở phương Tây là Steve Nison, qua cuốn sách năm 1991. Trong cuốn sau (Beyond Candlesticks, 1994), chính ông viết rằng khó có chuyện thương nhân ấy dùng biểu đồ nến; nến nhiều khả năng ra đời đầu thời Minh Trị, cuối thế kỷ 19.\n\nNguồn: Wikipedia, mục \"Candlestick chart\" (History), trích Nison 1994. Một câu chuyện đẹp chưa chắc là chuyện thật.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (13 phút): https://youtu.be/bsmkQIycAbA (công khai từ 20:00 ngày 14/11)",
+ "tags": [
+  "biểu đồ nến",
+  "lịch sử biểu đồ nến",
+  "nến Nhật",
+  "chứng khoán cho người mới",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "mười",
+  "tám",
+  "chín",
+  "đẹp",
+  "thật"
+ ],
+ "lines": [
+  "Biểu đồ nến có từ thế kỷ mười tám?",
+  "Chuyện thường kể rằng một thương nhân buôn gạo người Nhật thời ấy đã nghĩ ra nó.",
+  "Phương Tây biết tới nến qua một cuốn sách đầu những năm chín mươi.",
+  "Vài năm sau, chính tác giả viết: thương nhân kia nhiều khả năng chưa dùng nến.",
+  "Theo ông, biểu đồ nến có lẽ ra đời muộn hơn, vào cuối thế kỷ mười chín.",
+  "Một câu chuyện đẹp chưa chắc là chuyện thật."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "THẾ KỶ 18?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "biểu đồ nến ra đời từ bao giờ",
+     "at": [
+      0,
+      "nến"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6365840",
+   "veil": 0.55
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "CHUYỆN THƯỜNG KỂ",
+   "nodes": [
+    {
+     "text": "THƯƠNG NHÂN BUÔN GẠO",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      1,
+      "thương"
+     ],
+     "w": 760
+    },
+    {
+     "text": "NHẬT BẢN · THẾ KỶ 18",
+     "x": 0.5,
+     "y": 0.55,
+     "at": [
+      1,
+      "Nhật"
+     ],
+     "shape": "none",
+     "w": 700
+    },
+    {
+     "text": "NGHĨ RA BIỂU ĐỒ NẾN",
+     "x": 0.5,
+     "y": 0.82,
+     "at": [
+      1,
+      "nghĩ"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 720
+    }
+   ],
+   "arrows": [
+    {
+     "from": 1,
+     "to": 2,
+     "at": [
+      1,
+      "nghĩ"
+     ]
+    }
+   ],
+   "note": "LỜI KỂ PHỔ BIẾN · DIỄN Ý"
+  },
+  {
+   "type": "timeline",
+   "at": 2,
+   "items": [
+    {
+     "year": "1991",
+     "text": "STEVE NISON · CUỐN SÁCH PHỔ BIẾN NẾN Ở PHƯƠNG TÂY",
+     "at": [
+      2,
+      "sách"
+     ]
+    },
+    {
+     "year": "1994",
+     "text": "NISON: KHÓ CÓ CHUYỆN THƯƠNG NHÂN ẤY DÙNG NẾN",
+     "at": [
+      3,
+      "viết"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "NẾN RA ĐỜI KHI NÀO?",
+   "cards": [
+    {
+     "k": "CHUYỆN KỂ",
+     "v": "THẾ KỶ 18",
+     "at": 4,
+     "c": "dim"
+    },
+    {
+     "k": "THEO NISON (1994)",
+     "v": "CUỐI THẾ KỶ 19",
+     "sub": "NHIỀU KHẢ NĂNG · ĐẦU THỜI MINH TRỊ",
+     "at": [
+      4,
+      "cuối"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "NGUỒN: WIKIPEDIA, TRÍCH NISON 1994"
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "CHUYỆN ĐẸP\nCHƯA CHẮC LÀ THẬT",
+   "sub": "NGUỒN: NISON (1994), QUA WIKIPEDIA"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Candlestick_chart"
+ ],
+ "say": {},
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.55
+  }
+ },
+ "imgs": {}
+}

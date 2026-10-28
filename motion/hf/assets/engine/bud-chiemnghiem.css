@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap');
+/* 20/10/2026 profile chiem-nghiem: chu serif manh, khong bong gat, nhieu khoang tho */
+.theme-bud.chiem .kin, .theme-bud.chiem .slam, .theme-bud.chiem .ask {
+  font-family:'Cormorant Garamond', 'Playfair Display', Georgia, serif !important; font-weight:600 !important;
+  letter-spacing:.04em !important; text-transform:none; }
+.theme-bud.chiem .kin { text-shadow:0 4px 30px rgba(0,0,0,.9) !important; }
+.theme-bud.chiem .kin.acc { text-shadow:0 0 36px rgba(255,190,110,.35), 0 6px 30px rgba(0,0,0,.9) !important; }
+.theme-bud.chiem .slam { text-shadow:0 0 40px rgba(255,220,170,.18) !important; }
+.theme-bud.chiem .hfs .disp { font-family:'Cormorant Garamond', serif; font-weight:600; letter-spacing:.02em; }
+/* nen hfs toi, giay da chay nen (20/10) */
+.theme-bud.chiem .hfs { --ground:#1a120b; --ground2:#22170e; --card:#2a1d12; --ink:#f1e3c8; --ink-soft:#d9c6a3; --soft-text:#cdb894; --mute:#a8936f;
+  --accent:#e7a24b; --accent2:#f0c27a; --on-accent:#1a120b; --on-accent2:#1a120b; --glow:#e09f3e; --line:rgba(241,227,200,.18); --seal-bg:rgba(26,18,11,.85); }
+.theme-bud.chiem .hfs::before { background: radial-gradient(55% 38% at 50% 40%, rgba(231,162,75,.22), rgba(231,162,75,0) 75%), linear-gradient(#20160d, #120c07) !important;
+  box-shadow: 0 30px 90px rgba(0,0,0,.7), inset 0 0 0 1px rgba(241,227,200,.08); }
+
+/* bo anh tim (man che xanh than x nau = tim) -> man che nau den am */
+.theme-bud.chiem .vveil { background: linear-gradient(180deg, rgba(14,8,3,.62) 0%, rgba(14,8,3,.40) 40%, rgba(14,8,3,.70) 100%) !important; }
+.theme-bud.chiem .vveil::after { background: rgba(120,70,20,.18); mix-blend-mode: soft-light; }
+.theme-bud.chiem #bed { background: radial-gradient(60% 34% at 50% 30%, rgba(245,176,65,.14) 0%, transparent 70%),
+    radial-gradient(120% 70% at 50% 20%, #24170c 0%, #120b05 55%, #060402 100%) !important; }

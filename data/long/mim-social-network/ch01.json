@@ -1,0 +1,212 @@
+{
+ "title": "Cánh cửa kỷ luật",
+ "lines": [
+  {
+   "t": "Facemash không chỉ là một thử nghiệm kỹ thuật nằm yên trong phòng ký túc xá.",
+   "p": 0.8
+  },
+  "Crimson viết năm 2014 rằng trang nhận hơn 20.000 lượt truy cập trong 24 giờ.",
+  "Theo bài năm 2014, Facemash thu hút sự chú ý của Administrative Board, cơ quan kỷ luật của Harvard College.",
+  "Cùng nguồn đó nói hội đồng không buộc Zuckerberg rời Harvard vì các vi phạm liên quan Facemash.",
+  "Một đơn kiện đa quận nộp năm 2024 cũng tóm lược rằng ông bị triệu tập trước cơ quan kỷ luật sau vụ việc.",
+  "Đó là mô tả trong hồ sơ tố tụng, không phải phán quyết về nguồn gốc Facebook.",
+  "Bài Crimson năm 2003 ghi Zuckerberg nói ông quan tâm đến phần khoa học máy tính của dự án.",
+  "Đó là phát biểu đương thời về một phần của dự án.",
+  "Nó không cho phép ta biến thành kết luận về động cơ rộng hơn, hay về tính cách của một người thật.",
+  "Điểm quan trọng hơn là dữ liệu ảnh không tự nhiên trở thành dữ liệu vô chủ chỉ vì một trang có thể mở được chúng.",
+  "Một danh bạ vốn có giới hạn truy cập, khi bị gom lại và đặt vào một trò so sánh, có ý nghĩa khác hẳn.",
+  "Trên bản đồ kết nối, ghim thứ hai là cánh cửa kỷ luật: công nghệ, quy tắc trường học và sự đồng ý đã va vào nhau.",
+  "Nó nhắc bạn rằng trước khi hỏi một sản phẩm tăng nhanh ra sao, cần hỏi nó đã lấy dữ liệu và đặt con người vào đâu."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "CÁNH CỬA\nKỶ LUẬT",
+   "sub": "FACEMASH · QUY TẮC · ĐỒNG Ý",
+   "bg": "memorial16",
+   "titleAt": [
+    0,
+    "facemash"
+   ]
+  },
+  {
+   "type": "counter",
+   "at": [
+    1,
+    "hơn"
+   ],
+   "from": 0,
+   "to": 20000,
+   "suffix": " LƯỢT",
+   "label": "TRONG 24 GIỜ · THEO CRIMSON",
+   "year": false
+  },
+  {
+   "type": "print",
+   "at": [
+    2,
+    "administrative"
+   ],
+   "img": "chapel",
+   "tone": "bw",
+   "head": "HARVARD COLLEGE",
+   "side": {
+    "k": "ADMINISTRATIVE BOARD",
+    "h": "CƠ QUAN KỶ LUẬT",
+    "lines": [
+     {
+      "text": "CƠ QUAN KỶ LUẬT",
+      "at": [
+       2,
+       "administrative"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "at": [
+    3,
+    "harvard"
+   ],
+   "img": "ai03",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "PHẢN ỨNG",
+    "v": "MINH HỌA KHUÔN VIÊN ĐÊM",
+    "at": [
+     3,
+     "harvard"
+    ]
+   },
+   "illus": "ẢNH MINH HỌA",
+   "credit": false
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    4,
+    "đơn"
+   ],
+   "items": [
+    {
+     "text": "HỒ SƠ TỐ TỤNG",
+     "at": [
+      4,
+      "đơn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "KHÔNG PHẢI PHÁN QUYẾT",
+     "at": [
+      4,
+      "đơn"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": [
+    6,
+    "crimson"
+   ],
+   "bg": "yard",
+   "items": [
+    {
+     "year": "2003",
+     "text": "PHÁT BIỂU VỚI CRIMSON"
+    },
+    {
+     "year": "2014",
+     "text": "CRIMSON NHÌN LẠI"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": [
+    8,
+    "động"
+   ],
+   "text": "KHÔNG SUY DIỄN",
+   "sub": "TỪ MỘT PHÁT BIỂU"
+  },
+  {
+   "type": "org",
+   "at": [
+    10,
+    "danh"
+   ],
+   "nodes": [
+    {
+     "id": "access",
+     "t": "GIỚI HẠN",
+     "s": "DANH BẠ",
+     "at": [
+      10,
+      "danh"
+     ]
+    },
+    {
+     "id": "compare",
+     "t": "SO SÁNH",
+     "s": "NGỮ CẢNH MỚI",
+     "p": "access",
+     "at": [
+      10,
+      "danh"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": [
+    11,
+    "bản"
+   ],
+   "title": "BẢN ĐỒ KẾT NỐI",
+   "srcnote": "MỖI CHƯƠNG THÊM MỘT ĐƯỜNG",
+   "rows": [
+    {
+     "k": "MỞ ĐẦU",
+     "v": "SO CẶP ẢNH",
+     "at": [
+      11,
+      "bản"
+     ]
+    },
+    {
+     "k": "1 · QUY TẮC",
+     "v": "CỬA KỶ LUẬT",
+     "at": [
+      11,
+      "bản"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": [
+    12,
+    "dữ"
+   ],
+   "text": "DỮ LIỆU ĐƯỢC LẤY\nVÀ ĐẶT CON NGƯỜI Ở ĐÂU?"
+  }
+ ],
+ "topic": "mim-social-network",
+ "chapter": 1,
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "CÁNH CỬA KỶ LUẬT"
+ }
+}

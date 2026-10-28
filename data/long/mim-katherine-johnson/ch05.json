@@ -1,0 +1,358 @@
+{
+ "title": "Bài kiểm tra tay",
+ "lines": [
+  {
+   "t": "Để chuẩn bị cho chuyến bay quỹ đạo của Glenn, NASA dựng một mạng liên lạc phủ khắp thế giới.",
+   "p": 0.8
+  },
+  "Mạng ấy nối các trạm theo dõi với máy tính IBM đặt ở Washington, mũi Canaveral và quần đảo Bermuda.",
+  "Phương trình quỹ đạo của Friendship 7 nằm sẵn trong các máy ấy, từ lúc phóng tới lúc đáp.",
+  "Hệ thống đã sẵn sàng.",
+  "Nhưng như nhiều phi hành gia khi ấy, Glenn vẫn dè chừng máy điện tử.",
+  "Trong phần kiểm tra trước bay, ông yêu cầu các kỹ sư nhờ Johnson chạy lại cùng những con số, cùng những phương trình ấy.",
+  "Lần này không phải bằng máy IBM, mà bằng tay, trên chiếc máy tính cơ đặt trên bàn của bà.",
+  "NASA Langley còn ghi lại một câu được kể là của Glenn.",
+  "Ông bảo các kỹ sư:",
+  {
+   "t": "Hãy nhờ cô gái ấy kiểm tra các con số.",
+   "q": 1,
+   "tr": 1
+  },
+  "Theo NASA, cô gái mà Glenn nhắc tới chính là Katherine Johnson.",
+  "Trong tiểu sử NASA, Johnson còn kể lại một câu khác của ông.",
+  {
+   "t": "Nếu cô ấy nói các con số ổn, thì tôi sẵn sàng bay.",
+   "q": 1,
+   "tr": 1
+  },
+  "Đây là lời bà nhớ lại, không phải một bản ghi âm nguyên văn.",
+  "Ý của câu ấy rất rõ.",
+  "Máy vẫn dẫn đường cho chuyến bay, còn người kiểm tra xem máy có đúng hay không.",
+  "Ngày 20 tháng 2 năm 1962, Glenn trở thành người Mỹ đầu tiên bay vào quỹ đạo Trái Đất.",
+  "Tên lửa Atlas đưa tàu Mercury lên, và Friendship 7 bay ba vòng rồi đáp xuống đại dương sau gần năm tiếng.",
+  "Dòng thứ năm trong sổ: con số đáng tin là con số mà hai cách tính độc lập cùng chỉ ra.",
+  "Còn bản thân Johnson thì không dừng lại ở phép kiểm ấy."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "CHƯƠNG NĂM",
+   "title": "BÀI KIỂM TRA\nTAY",
+   "sub": "TRƯỚC 20.02.1962",
+   "bg": "orbitCam",
+   "titleAt": [
+    0,
+    "chuẩn"
+   ]
+  },
+  {
+   "type": "map",
+   "at": [
+    1,
+    "mạng"
+   ],
+   "geo": "east",
+   "tag": "VỊ TRÍ GẦN ĐÚNG · MÁY IBM CỦA MẠNG FRIENDSHIP 7",
+   "pins": [
+    {
+     "name": "Washington",
+     "at": [
+      1,
+      "washington"
+     ]
+    },
+    {
+     "name": "Canaveral",
+     "at": [
+      1,
+      "canaveral"
+     ]
+    },
+    {
+     "name": "Bermuda",
+     "at": [
+      1,
+      "bermuda"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "org",
+   "at": [
+    2,
+    "phương"
+   ],
+   "nodes": [
+    {
+     "id": "trk",
+     "t": "TRẠM THEO DÕI",
+     "s": "KHẮP THẾ GIỚI",
+     "at": [
+      2,
+      "phương"
+     ]
+    },
+    {
+     "id": "ibm",
+     "t": "MÁY IBM",
+     "s": "PHƯƠNG TRÌNH QUỸ ĐẠO",
+     "p": "trk",
+     "at": [
+      2,
+      "máy"
+     ]
+    },
+    {
+     "id": "f7",
+     "t": "FRIENDSHIP 7",
+     "s": "TỪ LÚC PHÓNG TỚI LÚC ĐÁP",
+     "p": "ibm",
+     "at": [
+      2,
+      "đáp"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": [
+    4,
+    "glenn"
+   ],
+   "vid": "854266",
+   "veil": 0.62,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "PHI HÀNH GIA DÈ CHỪNG MÁY ĐIỆN TỬ",
+     "at": [
+      4,
+      "glenn"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": [
+    5,
+    "johnson"
+   ],
+   "img": "kjGlobe",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "KATHERINE JOHNSON · LANGLEY",
+    "v": "ẢNH: NASA",
+    "at": [
+     5,
+     "johnson"
+    ]
+   },
+   "kin": [
+    {
+     "text": "CÙNG CON SỐ · CÙNG PHƯƠNG TRÌNH",
+     "at": [
+      5,
+      "johnson"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": [
+    6,
+    "tay"
+   ],
+   "img": "ai02",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "MÁY TÍNH CƠ TRÊN BÀN",
+    "v": "KIỂM BẰNG TAY",
+    "at": [
+     6,
+     "tay"
+    ]
+   },
+   "illus": "ẢNH MINH HỌA",
+   "credit": false
+  },
+  {
+   "type": "quote",
+   "at": 8,
+   "text": "Get the girl to check the numbers.",
+   "by": "JOHN GLENN · THEO LỜI KỂ LẠI · NASA LANGLEY",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 9,
+   "typeAt": [
+    9,
+    "hãy"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    10,
+    "katherine"
+   ],
+   "items": [
+    {
+     "text": "“CÔ GÁI ẤY” LÀ KATHERINE JOHNSON",
+     "at": [
+      10,
+      "katherine"
+     ],
+     "acc": true
+    },
+    {
+     "text": "THEO NASA LANGLEY",
+     "at": [
+      10,
+      "katherine"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 11,
+   "text": "If she says they're good, then I'm ready to go.",
+   "by": "JOHN GLENN · LỜI JOHNSON KỂ LẠI · TIỂU SỬ NASA",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 12,
+   "typeAt": [
+    12,
+    "nếu"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    13,
+    "đây"
+   ],
+   "items": [
+    {
+     "text": "TRÍ NHỚ ≠ BĂNG GHI ÂM",
+     "at": [
+      13,
+      "đây"
+     ],
+     "acc": true
+    },
+    {
+     "text": "LỜI KỂ LẠI CỦA JOHNSON",
+     "at": [
+      13,
+      "đây"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": [
+    16,
+    "glenn"
+   ],
+   "img": "launch",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "MERCURY-ATLAS 6 CẤT CÁNH",
+    "v": "ẢNH: NASA",
+    "at": [
+     16,
+     "glenn"
+    ]
+   },
+   "kin": [
+    {
+     "text": "20.02.1962 · LÊN QUỸ ĐẠO",
+     "at": [
+      16,
+      "glenn"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": [
+    18,
+    "dòng"
+   ],
+   "title": "SỔ CỦA MỘT CON SỐ ĐÁNG TIN",
+   "srcnote": "MỖI CHẶNG ĐỜI THÊM MỘT DÒNG",
+   "rows": [
+    {
+     "k": "HỎI",
+     "v": "VÌ SAO MỘT CON SỐ ĐÁNG TIN?",
+     "at": [
+      18,
+      "dòng"
+     ]
+    },
+    {
+     "k": "1 · NỀN",
+     "v": "NGƯỜI ĐƯỢC RÈN KỸ TỪ NHỎ",
+     "at": [
+      18,
+      "dòng"
+     ]
+    },
+    {
+     "k": "2 · VIỆC",
+     "v": "ĐƯỢC TRAO ĐÚNG BÀI TOÁN",
+     "at": [
+      18,
+      "dòng"
+     ]
+    },
+    {
+     "k": "3 · NGHỀ",
+     "v": "ĐỌC DỮ LIỆU · TÍNH · VẼ ĐỒ THỊ",
+     "at": [
+      18,
+      "dòng"
+     ]
+    },
+    {
+     "k": "4 · KINH NGHIỆM",
+     "v": "QUEN DỮ LIỆU BAY THẬT",
+     "at": [
+      18,
+      "dòng"
+     ]
+    },
+    {
+     "k": "5 · ĐỐI CHIẾU",
+     "v": "HAI CÁCH TÍNH · MỘT ĐÁP ÁN",
+     "at": [
+      18,
+      "dòng"
+     ]
+    }
+   ]
+  }
+ ],
+ "topic": "mim-katherine-johnson",
+ "chapter": 5,
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "BÀI KIỂM TRA TAY TRƯỚC FRIENDSHIP 7"
+ }
+}

@@ -1,0 +1,192 @@
+{
+ "title": "Trả góp xe 700 triệu: 5 năm tốn thêm khoảng 184 triệu tiền lãi so với trả thẳng (ví dụ giả định)",
+ "description": "VÍ DỤ GIẢ ĐỊNH, cùng xe 700 triệu, cùng tiền nuôi, cùng mất giá trong 5 năm. Chi ròng = lăn bánh 800 triệu + tiền nuôi xe 5 năm ≈ 274 triệu − tiền bán lại 385 triệu. Trả thẳng ≈ 689 triệu (≈ 11,5 triệu/tháng). Trả góp: trả trước 30% + lăn bánh = 310 triệu, vay 490 triệu trong 84 tháng, gốc đều, lãi 8% năm đầu rồi 13% → tiền lãi 60 tháng đầu ≈ 184 triệu, chi ròng ≈ 873 triệu (≈ 14,5 triệu/tháng). Chưa trừ tiền lãi mà phần tiền giữ lại lúc đầu có thể sinh ra nếu gửi tiết kiệm; lãi tiết kiệm thường thấp hơn lãi vay mua xe nên phần bù ấy nhỏ hơn tiền lãi phải trả.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ hoặc ví dụ giả định, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (9 phút): https://youtu.be/Bx9w_a_1YOI",
+ "tags": [
+  "trả góp ô tô",
+  "lãi vay mua xe",
+  "trả thẳng hay trả góp",
+  "mua xe",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "trăm",
+  "tám",
+  "mươi",
+  "tư",
+  "đắt"
+ ],
+ "kicker": "QUYẾT ĐỊNH LỚN",
+ "sub": "MUA XE · TRẢ GÓP",
+ "lines": [
+  "Trả góp xe tốn thêm gần hai trăm triệu.",
+  "Ví dụ giả định: cùng xe, cùng tiền nuôi, cùng mất giá, trong năm năm.",
+  "Trả thẳng chi ròng sáu trăm tám mươi chín triệu, mười một triệu rưỡi một tháng.",
+  "Trả góp, vay bốn trăm chín mươi triệu, lãi tám rồi mười ba phần trăm.",
+  "Năm năm đầu, riêng tiền lãi khoảng một trăm tám mươi tư triệu.",
+  "Chi ròng lên tám trăm bảy mươi ba triệu, mười bốn triệu rưỡi một tháng.",
+  "Trả góp không làm chiếc xe đắt hơn. Nó làm việc có xe đắt hơn."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "+184 TRIỆU",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "tiền lãi trả góp xe · 5 năm đầu",
+     "at": [
+      0,
+      "thêm"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34839526",
+   "veil": 0.58
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "HAI NGƯỜI · VÍ DỤ GIẢ ĐỊNH",
+   "nodes": [
+    {
+     "text": "CÙNG XE 700 TRIỆU",
+     "x": 0.5,
+     "y": 0.2,
+     "at": [
+      1,
+      "xe"
+     ]
+    },
+    {
+     "text": "CÙNG TIỀN NUÔI",
+     "x": 0.5,
+     "y": 0.5,
+     "at": [
+      1,
+      "nuôi"
+     ]
+    },
+    {
+     "text": "CÙNG MẤT GIÁ · 5 NĂM",
+     "x": 0.5,
+     "y": 0.8,
+     "at": [
+      1,
+      "mất"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "from": 0,
+   "to": 689,
+   "suffix": " TRIỆU",
+   "label": "TRẢ THẲNG · CHI RÒNG 5 NĂM",
+   "sub": {
+    "text": "≈ 11,5 TRIỆU/THÁNG · VÍ DỤ GIẢ ĐỊNH",
+    "at": [
+     2,
+     "mười"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "NGƯỜI TRẢ GÓP",
+   "cards": [
+    {
+     "k": "VAY",
+     "v": "490 TRIỆU",
+     "at": [
+      3,
+      "vay"
+     ]
+    },
+    {
+     "k": "LÃI",
+     "v": "8% → 13%",
+     "at": [
+      3,
+      "tám"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "TRẢ TRƯỚC 30% + LĂN BÁNH · 84 THÁNG · GỐC ĐỀU"
+  },
+  {
+   "type": "chart",
+   "at": 4,
+   "kind": "bars",
+   "title": "CHI RÒNG 5 NĂM (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "bars": [
+    {
+     "label": "TRẢ THẲNG",
+     "v": 689,
+     "text": "689",
+     "c": "ref",
+     "at": [
+      4,
+      "năm"
+     ]
+    },
+    {
+     "label": "TRẢ GÓP",
+     "v": 873,
+     "text": "873",
+     "c": "down",
+     "at": [
+      5,
+      "tám"
+     ]
+    }
+   ],
+   "badge": {
+    "text": "+184 TIỀN LÃI",
+    "at": [
+     4,
+     "một"
+    ],
+    "c": "down"
+   },
+   "note": "CHI RÒNG = CHI RA − TIỀN BÁN XE · CHƯA TRỪ LÃI GỬI"
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "XE KHÔNG ĐẮT HƠN.\nVIỆC CÓ XE ĐẮT HƠN.",
+   "sub": "TRẢ GÓP · VÍ DỤ GIẢ ĐỊNH"
+  }
+ ],
+ "sources": [
+  "https://cafef.vn/khach-vay-mua-o-to-oan-minh-ganh-lai-suat-tha-noi-gan-20-188261008111845813.chn",
+  "https://youtu.be/Bx9w_a_1YOI"
+ ],
+ "theme": "ck",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "say": {},
+ "imgs": {},
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.25,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.55
+  }
+ }
+}

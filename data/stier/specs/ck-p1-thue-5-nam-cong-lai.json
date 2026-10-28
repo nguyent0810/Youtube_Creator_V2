@@ -1,0 +1,248 @@
+{
+ "title": "Thuê nhà 6,25 triệu/tháng: 5 năm bạn trả bao nhiêu?",
+ "description": "VÍ DỤ GIẢ ĐỊNH của kênh: căn hộ khoảng 2,5 tỷ, tiền thuê 6,25 triệu mỗi tháng (khoảng 3% giá nhà một năm), tăng 5% mỗi năm. Năm đầu trả 75 triệu, năm thứ năm khoảng 7,6 triệu mỗi tháng, cộng 5 năm khoảng 414 triệu, bằng khoảng 1/6 giá căn hộ trong cùng ví dụ. Kênh tự tính, không phải dự báo giá thuê.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Nội dung do kênh biên soạn; giọng đọc tổng hợp.\n\nBản đầy đủ, phép tính 10 năm mua hay thuê: https://youtu.be/pXKfIo_nyVM",
+ "tags": [
+  "tiền thuê nhà",
+  "thuê nhà 5 năm",
+  "mua hay thuê nhà",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "bạn",
+  "năm",
+  "bốn",
+  "sáu",
+  "chênh"
+ ],
+ "kicker": "QUYẾT ĐỊNH LỚN",
+ "sub": "MUA HAY THUÊ",
+ "lines": [
+  "Bạn trả sáu triệu hai tiền thuê mỗi tháng. Năm năm sau, bạn đã trả tổng cộng bao nhiêu?",
+  "Đây là ví dụ giả định của kênh: tiền thuê tăng năm phần trăm mỗi năm.",
+  "Năm đầu tiên, mười hai tháng là bảy mươi lăm triệu.",
+  "Đến năm thứ năm, mỗi tháng đã gần bảy triệu sáu.",
+  "Cộng cả năm năm, bạn đã trả khoảng bốn trăm mười bốn triệu đồng.",
+  "Bằng khoảng một phần sáu giá căn hộ hai tỷ rưỡi, trong cùng ví dụ.",
+  "Đó không phải tiền mất trắng: bạn đổi nó lấy chỗ ở, và quyền chuyển đi khi cần.",
+  "Sáu triệu hai mỗi tháng, hơn bốn trăm triệu sau năm năm. Câu hỏi còn lại là phần chênh so với trả góp, bạn để đi đâu."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "6,25 TRIỆU / THÁNG",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "× 5 NĂM = ?",
+     "at": [
+      0,
+      "Năm"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:4553195",
+   "ms": 3,
+   "veil": 0.58
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 5,
+   "to": 5,
+   "prefix": "+",
+   "suffix": "%/NĂM",
+   "label": "TIỀN THUÊ TĂNG",
+   "sub": {
+    "text": "VÍ DỤ GIẢ ĐỊNH",
+    "at": [
+     1,
+     "ví"
+    ]
+   }
+  },
+  {
+   "type": "chart",
+   "at": 2,
+   "kind": "bars",
+   "title": "TIỀN THUÊ CẢ NĂM (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · TĂNG 5%/NĂM",
+   "bars": [
+    {
+     "label": "NĂM 1",
+     "v": 75,
+     "text": "75",
+     "c": "ref",
+     "at": 2
+    },
+    {
+     "label": "NĂM 2",
+     "v": 78.75,
+     "text": "≈79",
+     "c": "ref",
+     "at": [
+      2,
+      "mười"
+     ]
+    },
+    {
+     "label": "NĂM 3",
+     "v": 82.69,
+     "text": "≈83",
+     "c": "ref",
+     "at": [
+      2,
+      "bảy"
+     ]
+    },
+    {
+     "label": "NĂM 4",
+     "v": 86.82,
+     "text": "≈87",
+     "c": "ref",
+     "at": 3
+    },
+    {
+     "label": "NĂM 5",
+     "v": 91.16,
+     "text": "≈91",
+     "c": "down",
+     "at": [
+      3,
+      "gần"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "≈414",
+     "at": 4,
+     "acc": true
+    },
+    {
+     "text": "TRIỆU ĐỒNG · TỔNG TIỀN THUÊ 5 NĂM",
+     "at": [
+      4,
+      "năm"
+     ],
+     "sm": true
+    },
+    {
+     "text": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+     "at": [
+      4,
+      "bốn"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "at": 5,
+   "kind": "bars",
+   "title": "SO VỚI GIÁ CĂN HỘ (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH",
+   "bars": [
+    {
+     "label": "THUÊ 5 NĂM",
+     "v": 414,
+     "text": "≈414",
+     "c": "down",
+     "at": 5
+    },
+    {
+     "label": "GIÁ CĂN HỘ",
+     "v": 2500,
+     "text": "2.500",
+     "c": "ref",
+     "at": [
+      5,
+      "giá"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Tiền thuê đổi lấy",
+   "nodes": [
+    {
+     "text": "chỗ ở",
+     "x": 0.5,
+     "y": 0.3,
+     "at": 6,
+     "shape": "none",
+     "w": 620
+    },
+    {
+     "text": "quyền chuyển đi khi cần",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      6,
+      "quyền"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 700
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "≈414 TRIỆU / 5 NĂM",
+     "at": 7,
+     "sm": true
+    },
+    {
+     "text": "PHẦN CHÊNH ĐI ĐÂU?",
+     "at": [
+      7,
+      "phần"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:4553294",
+   "ms": 2,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 7
+  }
+ ],
+ "sources": [
+  "https://youtu.be/pXKfIo_nyVM"
+ ],
+ "theme": "ck",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.3,
+   "5": 0.22,
+   "6": 0.4
+  }
+ },
+ "say": {},
+ "imgs": {},
+ "short_type": "S"
+}

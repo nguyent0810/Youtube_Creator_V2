@@ -1,0 +1,244 @@
+{
+ "title": "Ba ô quan hệ",
+ "lines": [
+  {
+   "t": "Trong ví dụ giả định, chị Hà dùng ba nhãn: bạn thân, đồng nghiệp và họ hàng.",
+   "p": 0.8
+  },
+  "Ba nhãn này để đếm, không để chấm điểm tình cảm.",
+  "Nhóm bạn thân có hai đám, mỗi đám bảy trăm nghìn.",
+  "Hai nhân bảy trăm nghìn bằng một phẩy bốn triệu.",
+  "Nhóm đồng nghiệp có ba đám, mỗi đám năm trăm nghìn.",
+  "Ba nhân năm trăm nghìn bằng một phẩy năm triệu.",
+  "Nhóm họ hàng có hai đám, mỗi đám ba trăm nghìn.",
+  "Hai nhân ba trăm nghìn bằng không phẩy sáu triệu.",
+  "Ba cột đứng cạnh nhau là một phẩy bốn, một phẩy năm và không phẩy sáu triệu.",
+  "Cộng ba cột, tiền mừng cưới trong ví dụ là ba phẩy năm triệu.",
+  "Đó là bảy đám cưới.",
+  "Không phải bảy quy tắc.",
+  "Nếu đổi hai đám bạn thân thành một đám, riêng cột này giảm bảy trăm nghìn trong ví dụ giả định, từ một phẩy bốn xuống không phẩy bảy triệu.",
+  "Nếu đổi ba đám đồng nghiệp thành bốn đám, cột đồng nghiệp tăng thêm năm trăm nghìn, từ một phẩy năm lên đúng hai triệu trong bảng tính.",
+  "Hai phép đổi nhỏ ấy cho thấy biểu đồ chỉ làm phép nhân số dịp với mức đã nhập, rồi cộng các kết quả lại thành một dòng tổng.",
+  "Vì thế, tổng ba phẩy năm triệu là kết quả của bảy dịp trong lịch chị Hà, không phải một mức áp cho người xem ở bất cứ nơi nào.",
+  "Bạn có thể có không đám cưới, hoặc nhiều hơn bảy đám, và mỗi nơi mỗi khác.",
+  "Khảo sát mức sống được dùng ở đây vì nó nhìn thu nhập và chi tiêu.",
+  "Nó không nói nhóm nào phải nhận bao nhiêu.",
+  "Vì vậy, màn hình luôn giữ nhãn ví dụ giả định cạnh ba cột.",
+  "Chị Hà cũng không dồn ba phẩy năm triệu vào cùng một ngày.",
+  "Cô ấy lật lịch theo tháng.",
+  "Khi đưa các cột vào lịch, một câu hỏi khác xuất hiện.",
+  "Khoản nào đến sớm, khoản nào đến muộn?",
+  "Trang tháng hai sẽ cho bộ đếm nhảy lần đầu."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "BA Ô\nQUAN HỆ",
+   "sub": "VÍ DỤ GIẢ ĐỊNH",
+   "vid": "30263260",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": 0
+  },
+  {
+   "type": "photo",
+   "img": "ai03",
+   "at": 1,
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.5,
+    0.18
+   ],
+   "move": "out"
+  },
+  {
+   "type": "stack",
+   "at": 3,
+   "title": "BẢY ĐÁM CƯỚI",
+   "range": [
+    0,
+    1.7
+   ],
+   "unit": "TRIỆU",
+   "keys": [
+    {
+     "k": "SỐ ĐÁM"
+    },
+    {
+     "k": "MỨC PHONG BÌ"
+    },
+    {
+     "k": "TỔNG"
+    }
+   ],
+   "groups": [
+    {
+     "k": "BẠN THÂN",
+     "vals": [
+      2,
+      0.7,
+      1.4
+     ],
+     "at": 3
+    },
+    {
+     "k": "ĐỒNG NGHIỆP",
+     "vals": [
+      3,
+      0.5,
+      1.5
+     ],
+     "at": 3
+    },
+    {
+     "k": "HỌ HÀNG",
+     "vals": [
+      2,
+      0.3,
+      0.6
+     ],
+     "at": 3
+    }
+   ],
+   "calls": [
+    {
+     "i": 1,
+     "text": "1,5 TRIỆU",
+     "at": 3
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 4,
+   "title": "TỔNG BA NHÓM",
+   "unit": "VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "BẠN THÂN",
+     "v": 1.4,
+     "lbl": "1,4",
+     "at": 4
+    },
+    {
+     "k": "ĐỒNG NGHIỆP",
+     "v": 1.5,
+     "lbl": "1,5",
+     "at": 4
+    },
+    {
+     "k": "HỌ HÀNG",
+     "v": 0.6,
+     "lbl": "0,6",
+     "at": 4
+    }
+   ],
+   "calls": [
+    {
+     "i": 1,
+     "text": "1,5",
+     "at": 4
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "vid": "3122106",
+   "at": 8,
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA"
+  },
+  {
+   "type": "counter",
+   "at": 9,
+   "from": 0,
+   "to": 3.5,
+   "suffix": " TRIỆU",
+   "label": "BẢY ĐÁM CƯỚI",
+   "calls": [
+    {
+     "i": 0,
+     "text": "3,5 TRIỆU",
+     "at": 9
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 14,
+   "title": "PHÉP NHÂN",
+   "rows": [
+    {
+     "k": "SỐ DỊP",
+     "v": "× MỨC",
+     "at": 14
+    },
+    {
+     "k": "KẾT QUẢ",
+     "v": "CỘNG LẠI",
+     "at": 14
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 22,
+   "text": "Khoản nào đến sớm,\nkhoản nào đến muộn?"
+  },
+  {
+   "type": "heat",
+   "at": 23,
+   "title": "LỊCH BẮT ĐẦU",
+   "range": [
+    0,
+    1.1
+   ],
+   "unit": "TRIỆU",
+   "cols": 6,
+   "cells": [
+    {
+     "k": "T1",
+     "v": 0,
+     "at": 23
+    },
+    {
+     "k": "T2",
+     "v": 0.8,
+     "at": 23
+    }
+   ],
+   "total": {
+    "label": "CẢ NĂM",
+    "at": 23
+   },
+   "calls": [
+    {
+     "i": 1,
+     "text": "0,8 TRIỆU",
+     "at": 23
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 24,
+   "items": [
+    {
+     "text": "LẬT LỊCH THEO THÁNG",
+     "at": 24,
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "BA Ô QUAN HỆ"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.1
+ }
+}

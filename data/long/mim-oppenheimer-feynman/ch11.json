@@ -1,0 +1,388 @@
+{
+ "title": "Con xúc xắc điện tử",
+ "lines": [
+  {
+   "t": "Trong phòng máy IBM năm 1944 có một vị khách hay lui tới: John von Neumann.",
+   "p": 0.8
+  },
+  "Naomi Livesay và đồng nghiệp Eleanor Ewing chỉ cho ông cách chạy máy, cách cắm lại dây.",
+  "Đầu năm 1945, von Neumann mang về một tin.",
+  {
+   "t": "Ở Philadelphia, người ta đang làm ENIAC, một cỗ máy tính hoàn toàn bằng điện tử.",
+   "p": 1.0
+  },
+  "Tháng 3 năm 1945, ông cùng Frankel và Metropolis tới xem.",
+  "Họ choáng ngợp: chừng mười tám nghìn bóng đèn điện tử, nửa triệu mối hàn.",
+  "Metropolis về sau viết một câu rất thật.",
+  {
+   "t": "Chưa ai từng có một món đồ chơi tuyệt đến thế!",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Tháng 12 năm 1945, khi chiến tranh đã hết, ENIAC chạy một bài toán lớn cho Los Alamos.",
+  "Bài ấy cần tới một triệu tấm thẻ đục lỗ.",
+  "Mùa xuân năm 1946, kết quả được trình bày ở Los Alamos.",
+  "Trong phòng có nhà toán học Stanislaw Ulam, người thích chơi bài một mình.",
+  {
+   "t": "Ông còn mê poker.",
+   "p": 1.0
+  },
+  "Ulam nhớ tới một cách tính cũ: lấy mẫu ngẫu nhiên.",
+  "Nó bị bỏ quên vì quá dài, quá chán khi làm bằng tay.",
+  "Với ENIAC, nó có thể sống lại.",
+  "Ông đem ý ấy bàn với von Neumann.",
+  {
+   "t": "Von Neumann hiểu ngay.",
+   "p": 1.0
+  },
+  "Ý tưởng như sau.",
+  "Đừng cố giải phương trình cho cả đám neutron một lúc.",
+  "Hãy theo từng hạt một, và ở mỗi ngã rẽ, tung xúc xắc.",
+  "Nó va chạm ở đâu, bị hút mất, bị bật ra, hay làm vỡ một hạt nhân?",
+  "Lặp lại với thật nhiều hạt, bức tranh chung sẽ tự hiện ra.",
+  {
+   "t": "Tay người không kham nổi.",
+   "p": 1.0
+  },
+  "Ngày 11 tháng 3 năm 1947, von Neumann viết tay một lá thư, phác cách làm ấy cho trưởng Ban Lý thuyết.",
+  "Metropolis đặt cho nó một cái tên: Monte Carlo, như sòng bạc nổi tiếng.",
+  {
+   "t": "Vì Ulam có một ông chú hay vay tiền họ hàng, với lý do phải đi Monte Carlo.",
+   "p": 1.0
+  },
+  "Còn xúc xắc thì lấy đâu ra trong một cỗ máy?",
+  "Von Neumann dùng một mẹo: bình phương một số, lấy mấy chữ số ở giữa làm số tiếp theo.",
+  "Cuối năm 1947, ENIAC được chuyển tới Aberdeen, bang Maryland, một chuyến đi hơn ba trăm cây số.",
+  {
+   "t": "Klara von Neumann, vợ ông, cùng Metropolis đổi lại cách điều khiển, để máy chạy theo một chương trình nạp sẵn.",
+   "p": 1.0
+  },
+  "Tháng 4 năm 1948, mô phỏng Monte Carlo đầu tiên trên máy tính bắt đầu chạy.",
+  "Theo các sử gia Thomas Haigh và Mark Priestley, đó cũng là chương trình đầu tiên viết theo kiểu hiện đại từng được chạy.",
+  "Tới ngày 10 tháng 5, đợt chạy đầu tiên đã xong.",
+  {
+   "t": "Kết quả rất hứa hẹn.",
+   "p": 1.0
+  },
+  "Cạch, số cuối cùng.",
+  "Để một cỗ máy điện tử tự chạy theo chương trình, và tung xúc xắc thật nhiều lần thay cho con người."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "11",
+   "k": "CHƯƠNG MƯỜI MỘT",
+   "title": "CON XÚC XẮC\nĐIỆN TỬ",
+   "sub": "1945 — 1948",
+   "bg": "eniac",
+   "titleAt": [
+    0,
+    "Trong"
+   ]
+  },
+  {
+   "type": "print",
+   "at": 1,
+   "img": "vonneumann",
+   "tone": "bw",
+   "side": {
+    "k": "JOHN VON NEUMANN",
+    "h": "Khách quen\ncủa phòng máy",
+    "lines": [
+     {
+      "text": "học chạy máy từ *Livesay và Ewing*",
+      "at": [
+       1,
+       "chỉ"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "date",
+   "at": 2,
+   "day": "TIN TỪ PHILADELPHIA: ENIAC",
+   "date": "1945",
+   "sub": {
+    "text": "MÁY TÍNH HOÀN TOÀN BẰNG ĐIỆN TỬ",
+    "at": 3
+   }
+  },
+  {
+   "type": "photo",
+   "at": 4,
+   "img": "eniac",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.45,
+   "kin": [
+    {
+     "text": "≈ 18.000 BÓNG ĐÈN ĐIỆN TỬ",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "nửa triệu mối hàn · Metropolis, 1987",
+     "at": [
+      5,
+      "nửa"
+     ],
+     "sm": true
+    }
+   ],
+   "label": {
+    "k": "ENIAC",
+    "v": "ẢNH: QUÂN ĐỘI MỸ · PHẠM VI CÔNG CỘNG",
+    "at": 4
+   }
+  },
+  {
+   "type": "quote",
+   "at": 7,
+   "text": "No one ever had such a wonderful toy!",
+   "by": "N. METROPOLIS · LOS ALAMOS SCIENCE, 1987",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 7,
+   "typeAt": [
+    7,
+    "từng"
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 8,
+   "from": 0,
+   "to": 1000000,
+   "until": [
+    9,
+    "triệu"
+   ],
+   "suffix": " THẺ",
+   "label": "BÀI TOÁN CỦA LOS ALAMOS TRÊN ENIAC · 12.1945",
+   "sub": {
+    "text": "N. LEWIS · TRINITY BY THE NUMBERS (LANL)",
+    "at": 9
+   }
+  },
+  {
+   "type": "print",
+   "at": 10,
+   "img": "ulam",
+   "tone": "bw",
+   "side": {
+    "k": "STANISLAW ULAM",
+    "h": "Nhà toán học\nLos Alamos",
+    "lines": [
+     {
+      "text": "chơi bài một mình · mê *poker*",
+      "at": [
+       11,
+       "chơi"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "LẤY MẪU NGẪU NHIÊN",
+     "at": 13,
+     "acc": true
+    },
+    {
+     "text": "bị bỏ quên vì quá dài, quá chán",
+     "at": 14,
+     "sm": true
+    },
+    {
+     "text": "VỚI ENIAC: SỐNG LẠI",
+     "at": 15
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 16,
+   "text": "ULAM + VON NEUMANN",
+   "sub": "MÙA XUÂN 1946 · METROPOLIS, 1987"
+  },
+  {
+   "type": "timeline",
+   "at": 20,
+   "bg": "eniac",
+   "items": [
+    {
+     "year": "1",
+     "text": "theo *từng hạt* một",
+     "at": 20
+    },
+    {
+     "year": "2",
+     "text": "mỗi ngã rẽ: *tung xúc xắc*",
+     "at": [
+      20,
+      "tung"
+     ]
+    },
+    {
+     "year": "3",
+     "text": "lặp lại · *bức tranh chung* hiện ra",
+     "at": 22
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 24,
+   "day": "THƯ VIẾT TAY GỬI TRƯỞNG BAN LÝ THUYẾT",
+   "date": "11.03.1947",
+   "sub": {
+    "text": "VON NEUMANN PHÁC PHƯƠNG PHÁP · METROPOLIS, 1987",
+    "at": [
+     24,
+     "phác"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 25,
+   "text": "MONTE CARLO",
+   "sub": "TÊN DO METROPOLIS ĐẶT · ÔNG CHÚ CỦA ULAM “PHẢI ĐI MONTE CARLO”"
+  },
+  {
+   "type": "ledger",
+   "at": 27,
+   "title": "XÚC XẮC TRONG MÁY · “GIỮA BÌNH PHƯƠNG”",
+   "srcnote": "N. METROPOLIS 1987 · VÍ DỤ SỐ DO KÊNH TỰ TÍNH",
+   "rows": [
+    {
+     "k": "SỐ",
+     "v": "5.772",
+     "at": [
+      28,
+      "bình"
+     ]
+    },
+    {
+     "k": "BÌNH PHƯƠNG",
+     "v": "33.315.984",
+     "at": [
+      28,
+      "lấy"
+     ]
+    },
+    {
+     "k": "LẤY BỐN SỐ GIỮA",
+     "v": "3.159 → SỐ TIẾP THEO",
+     "at": [
+      28,
+      "giữa"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 29,
+   "img": "eniacbrl",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.45,
+   "kin": [
+    {
+     "text": "ABERDEEN, MARYLAND",
+     "at": [
+      29,
+      "bang"
+     ]
+    },
+    {
+     "text": "hơn 300 km · cuối 1947",
+     "at": [
+      29,
+      "chuyến"
+     ],
+     "sm": true
+    }
+   ],
+   "label": {
+    "k": "ENIAC Ở PHÒNG THÍ NGHIỆM ĐẠN ĐẠO, ABERDEEN",
+    "v": "ẢNH: QUÂN ĐỘI MỸ · PHẠM VI CÔNG CỘNG",
+    "at": 29
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 30,
+   "items": [
+    {
+     "text": "KLARA VON NEUMANN + METROPOLIS",
+     "at": 30,
+     "sm": true
+    },
+    {
+     "text": "CHẠY THEO CHƯƠNG TRÌNH NẠP SẴN",
+     "at": [
+      30,
+      "chương"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 31,
+   "day": "MONTE CARLO ĐẦU TIÊN TRÊN MÁY TÍNH",
+   "date": "04.1948",
+   "sub": {
+    "text": "CHẠY TỪ 17.04 · XONG 10.05 · HAIGH, PRIESTLEY & ROPE 2014",
+    "at": 32
+   }
+  },
+  {
+   "type": "quote",
+   "at": 34,
+   "text": "The results are very promising…",
+   "by": "J. VON NEUMANN GỬI ULAM · 11.05.1948 · QUA HAIGH, PRIESTLEY & ROPE",
+   "lbl": "TRÍCH",
+   "typeAt": [
+    34,
+    null,
+    0,
+    0.05
+   ],
+   "typeDur": 1.4
+  },
+  {
+   "type": "counter",
+   "at": 35,
+   "from": 2,
+   "to": 3,
+   "until": [
+    35,
+    "cuối"
+   ],
+   "suffix": " / 3",
+   "label": "Ổ KHOÁ · SỐ CUỐI CÙNG ĐÃ MỞ",
+   "sub": {
+    "text": "SỐ 3 · MÁY ĐIỆN TỬ TỰ CHẠY, TUNG XÚC XẮC",
+    "at": 36
+   }
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 11",
+  "t": "CON XÚC XẮC ĐIỆN TỬ"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

@@ -1,0 +1,178 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-hl-vo-thuong-khong-bi-quan",
+ "format": "hieu-lam",
+ "hook_type": "nghich-ly",
+ "open_shot": "la-roi",
+ "voice": "Thiện Minh",
+ "music": "arcadia.mp3",
+ "music_gain": 0.18,
+ "gap": 0.6,
+ "series": "Hiểu đúng #7",
+ "title": "Biết mọi thứ sẽ mất, lại sống vui hơn?",
+ "kicker": "HIỂU ĐÚNG #7",
+ "sub": "KINH PHÁP CÚ · KỆ 277",
+ "acc": [
+  "mất",
+  "vui",
+  "khổ"
+ ],
+ "lines": [
+  "Biết mọi thứ sẽ mất, lại sống vui hơn?",
+  "Nghe ngược đời. Nhiều người nghĩ hiểu vô thường là chán đời.",
+  "Hiểu đúng thì không phải vậy.",
+  "Phật dạy, diễn ý: thấy rõ vô thường, ta nhàm chán khổ.",
+  "Chán cái khổ, chứ không chán cuộc sống.",
+  "Nhưng thú vị hơn: hoa sắp tàn, lúc nở càng đáng quý.",
+  "Tối nay, nói một lời trân trọng với người bên cạnh.",
+  "Biết sẽ mất, hôm nay bạn trân trọng điều gì? Comment một chữ."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:34806988",
+   "items": [
+    {
+     "text": "SẼ MẤT, VUI HƠN?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "hiểu đúng #7",
+     "at": [
+      0,
+      "sống"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "hf_myth_strike",
+   "at": 1,
+   "mythLab": "NHIỀU NGƯỜI NGHĨ",
+   "myth": "Vô thường = **chán đời**",
+   "truthLab": "HIỂU ĐÚNG",
+   "truth": "Thấy rõ để **bớt khổ**",
+   "strikeAt": [
+    2,
+    "không"
+   ],
+   "truthAt": [
+    2,
+    "vậy."
+   ]
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Kệ 277 (diễn ý)",
+   "nodes": [
+    {
+     "text": "THẤY RÕ VÔ THƯỜNG",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      3,
+      "thấy"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "NHÀM CHÁN KHỔ",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      3,
+      "nhàm"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "DHP 277 · SUTTACENTRAL"
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "CHÁN CÁI KHỔ\nKHÔNG CHÁN ĐỜI",
+   "fx": "zoom"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "clip": "pexels:7311794",
+   "items": [
+    {
+     "text": "LÚC NỞ CÀNG QUÝ",
+     "at": [
+      5,
+      "lúc"
+     ],
+     "acc": true
+    },
+    {
+     "text": "hoa sắp tàn",
+     "at": [
+      5,
+      "hoa"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "to": 1,
+   "suffix": " LỜI TRÂN TRỌNG",
+   "label": "TỐI NAY · NGƯỜI BÊN CẠNH",
+   "until": [
+    6,
+    "trọng"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "veil": 0.4,
+   "clip": "pexels:28647803",
+   "items": [
+    {
+     "text": "TRÂN TRỌNG ĐIỀU GÌ?",
+     "at": [
+      7,
+      "hôm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "comment một chữ",
+     "at": [
+      7,
+      "comment"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp273-289/en/sujato"
+ ],
+ "description": "Biết mọi thứ sẽ mất, lại sống vui hơn?\n\nNguồn: https://suttacentral.net/dhp273-289/en/sujato"
+}

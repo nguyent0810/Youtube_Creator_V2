@@ -1,0 +1,177 @@
+{
+ "theme": "ck",
+ "kicker": "CÒN THIẾU",
+ "sub": "QUỸ KHẨN CẤP",
+ "title": "Mấy tháng không lương? Khảo sát 2025: 57% người Việt được hỏi có tiết kiệm đủ 3–6 tháng chi tiêu",
+ "description": "Khảo sát người tiêu dùng năm 2025 (theo Vietnam Briefing): 57% người Việt Nam được hỏi có khoản tiết kiệm khẩn cấp đủ 3–6 tháng chi tiêu, tức khoảng 43% chưa có (kênh tự tính: 100% − 57%). Khảo sát cũng ghi nhận người tiêu dùng trẻ ít có khoản tiết kiệm vững như các nhóm lớn tuổi hơn. “3–6 tháng” là quy tắc kinh nghiệm của tài chính cá nhân, không phải định luật.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (8 phút): https://youtu.be/iOxDRCkFbYY (công khai từ 20:00 ngày 04/11)",
+ "tags": [
+  "quỹ khẩn cấp",
+  "tiết kiệm",
+  "khảo sát",
+  "người trẻ",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "năm",
+  "bảy",
+  "bốn",
+  "trẻ",
+  "lẻ"
+ ],
+ "lines": [
+  "Bạn sống được mấy tháng không lương?",
+  "Một khảo sát năm hai nghìn không trăm hai mươi lăm hỏi người tiêu dùng Việt Nam.",
+  "Năm mươi bảy phần trăm có khoản tiết kiệm đủ ba tới sáu tháng chi tiêu.",
+  "Tức là hơn bốn trên mười người được hỏi chưa có tấm đệm ấy.",
+  "Khảo sát cũng ghi nhận người trẻ thường ít tiết kiệm hơn người lớn tuổi.",
+  "Chưa có thì bạn không lẻ loi. Nhưng biết con số của mình là bước đầu tiên."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MẤY THÁNG KHÔNG LƯƠNG?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "khảo sát 2025 · người Việt",
+     "at": [
+      0,
+      "không"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6913257",
+   "veil": 0.58
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Khảo sát 2025",
+   "nodes": [
+    {
+     "text": "người tiêu dùng Việt Nam",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      1,
+      "khảo"
+     ],
+     "shape": "box",
+     "w": 760
+    },
+    {
+     "text": "quỹ đủ 3–6 tháng chi tiêu?",
+     "x": 0.5,
+     "y": 0.66,
+     "at": [
+      1,
+      "người"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 780
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      1,
+      "hỏi"
+     ]
+    }
+   ],
+   "note": "KHẢO SÁT NGƯỜI TIÊU DÙNG · 2025"
+  },
+  {
+   "type": "chart",
+   "at": 2,
+   "kind": "bars",
+   "title": "VIỆT NAM · KHẢO SÁT 2025",
+   "unit": "% NGƯỜI ĐƯỢC HỎI · VIETNAM BRIEFING",
+   "bars": [
+    {
+     "label": "CÓ QUỸ ĐỦ\n3–6 THÁNG",
+     "v": 57,
+     "text": "57%",
+     "c": "up",
+     "at": [
+      2,
+      "bảy"
+     ]
+    },
+    {
+     "label": "CHƯA CÓ\n(KÊNH TỰ TÍNH)",
+     "v": 43,
+     "text": "≈43%",
+     "c": "down",
+     "at": [
+      3,
+      "bốn"
+     ]
+    }
+   ],
+   "ref": {
+    "v": 50,
+    "label": "MỘT NỬA",
+    "at": [
+     2,
+     "phần"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "NGƯỜI TRẺ",
+   "sub": "THƯỜNG ÍT TIẾT KIỆM HƠN"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "BẠN KHÔNG LẺ LOI",
+     "at": 5,
+     "sm": true
+    },
+    {
+     "text": "BIẾT CON SỐ CỦA MÌNH",
+     "at": [
+      5,
+      "biết"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:6391724",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  }
+ ],
+ "sources": [
+  "https://www.vietnam-briefing.com/news/rising-confidence-vietnam-tops-asean-in-consumer-sentiment.html/"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.3,
+   "4": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

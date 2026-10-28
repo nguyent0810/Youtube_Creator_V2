@@ -1,0 +1,197 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-vs-banh-xe-phap",
+ "format": "vi-sao",
+ "hook_type": "vi-sao",
+ "open_shot": "banh-xe",
+ "voice": "Thiền Tâm Đức",
+ "music": "fluidscape.mp3",
+ "music_gain": 0.18,
+ "gap": 0.1,
+ "title": "Biểu tượng Phật giáo: hoa sen, bánh xe hay chuông?",
+ "kicker": "VÌ SAO?",
+ "sub": "BÁNH XE PHÁP · SN 56.11",
+ "acc": [
+  "bánh",
+  "xe",
+  "nan"
+ ],
+ "lines": [
+  "Biểu tượng Phật giáo: hoa sen, bánh xe, hay chuông?",
+  "Cái nào hay được dùng làm biểu tượng chung của đạo Phật?",
+  "Đáp án: bánh xe Pháp, thường có tám nan.",
+  "Nhưng vì sao lại là bánh xe?",
+  "Tám nan là Bát chánh đạo, con đường tám nhánh dẫn đến hết khổ.",
+  "Kinh Chuyển Pháp Luân, diễn ý: bài pháp đầu tiên lăn bánh xe ấy.",
+  "Thật ra, bánh xe chỉ chạy khi lăn. Pháp cũng vậy, phải thực hành.",
+  "Bạn đoán biểu tượng nào? Comment sen, xe hay chuông."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:38484001",
+   "items": [
+    {
+     "text": "BIỂU TƯỢNG NÀO?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "sen · bánh xe · chuông",
+     "at": [
+      0,
+      "sen,"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "hf_list_build",
+   "at": 1,
+   "title": "BẠN CHỌN?",
+   "items": [
+    {
+     "key": "A",
+     "text": "HOA SEN",
+     "at": [
+      1,
+      "cái"
+     ]
+    },
+    {
+     "key": "B",
+     "text": "BÁNH XE",
+     "at": [
+      1,
+      "dùng"
+     ]
+    },
+    {
+     "key": "C",
+     "text": "CHUÔNG",
+     "at": [
+      1,
+      "chung"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 2,
+   "to": 8,
+   "suffix": " NAN",
+   "label": "BÁNH XE PHÁP",
+   "until": [
+    2,
+    "nan."
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "veil": 0.4,
+   "clip": "pexels:37917575",
+   "items": [
+    {
+     "text": "VÌ SAO BÁNH XE?",
+     "at": [
+      3,
+      "vì"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Bát chánh đạo",
+   "nodes": [
+    {
+     "text": "8 NAN",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      4,
+      "nan"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "8 NHÁNH · HẾT KHỔ",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      4,
+      "khổ."
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "DHARMACHAKRA · WIKIPEDIA"
+  },
+  {
+   "type": "source",
+   "at": 5,
+   "source": "KINH CHUYỂN PHÁP LUÂN",
+   "ref": "SN 56.11",
+   "snippet": "Bài pháp đầu tiên [[lăn bánh xe Pháp]].",
+   "hlAt": [
+    5,
+    "bánh"
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "XE CHỈ CHẠY\nKHI LĂN",
+   "fx": "zoom",
+   "sub": "PHÁP: PHẢI THỰC HÀNH"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "veil": 0.4,
+   "clip": "pexels:35220832",
+   "items": [
+    {
+     "text": "SEN, XE HAY CHUÔNG?",
+     "at": [
+      7,
+      "bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "comment một chữ",
+     "at": [
+      7,
+      "comment"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Dharmachakra",
+  "https://suttacentral.net/sn56.11/en/sujato"
+ ],
+ "description": "Biểu tượng Phật giáo: hoa sen, bánh xe hay chuông?\n\nNguồn: https://en.wikipedia.org/wiki/Dharmachakra · https://suttacentral.net/sn56.11/en/sujato"
+}

@@ -1,0 +1,149 @@
+{
+ "title": "Một phiên đỏ, nhưng người mua chưa có hàng để bán",
+ "lines": [
+  "Ngày chín tháng tư năm hai nghìn không trăm hai mươi lăm, VN-Index giảm ba phẩy bốn mươi phần trăm về một nghìn không trăm chín mươi bốn phẩy ba điểm.",
+  "Phiên đó có một trăm bốn mươi bảy mã giảm sàn.",
+  "Chúng cho thấy một bảng giá đỏ có thể rộng đến mức nào.",
+  "Nhưng chúng chưa trả lời câu khó hơn cho người vừa mua trong phiên ấy.",
+  "Nếu lệnh mua đã khớp sáng thứ Hai, vì sao có lúc phải tới chiều thứ Tư mới có thể bán?",
+  "Người mua đúng lúc giá rơi cũng chưa chắc có cổ phiếu trong ô bán ngay.",
+  "Đó là nghịch lý của video này.",
+  "Giá trần và giá sàn giới hạn giá trong một phiên.",
+  "Còn lịch thanh toán giới hạn thời điểm chứng khoán vừa mua được phân bổ.",
+  "Hai chiếc khóa này dễ bị trộn vào một.",
+  "Vì vậy, câu hỏi trung tâm là: mua cổ phiếu sáng thứ Hai, vì sao phải tới chiều thứ Tư mới bán được, và điều đó đã làm ai mất tiền?",
+  "Ta sẽ tách từng chiếc khóa, rồi quay lại phiên đỏ này ở cuối video.",
+  "Trước hết, ta cần một ví dụ giả định để nhìn thấy giá và thời điểm đứng ở hai hàng khác nhau."
+ ],
+ "scenes": [
+  {
+   "type": "candles",
+   "at": 0,
+   "series": "vnindex",
+   "from": "2025-03-03",
+   "to": "2025-04-09",
+   "title": "VN-INDEX · 03–04/2025",
+   "range": "DỮ LIỆU: HOSE QUA VNSTOCK",
+   "calls": [
+    {
+     "i": -1,
+     "text": "1.094,3 · −3,4%",
+     "at": [
+      0,
+      "về"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 0,
+   "to": 147,
+   "suffix": " MÃ GIẢM SÀN",
+   "label": "PHIÊN 09/04/2025",
+   "srcnote": "NGUỒN: VTV"
+  },
+  {
+   "type": "broll",
+   "at": 2,
+   "vid": "6794227",
+   "loop": true,
+   "veil": 0.56,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MỘT BẢNG GIÁ ĐỎ",
+     "at": 2,
+     "acc": true
+    },
+    {
+     "text": "người vừa mua thì sao?",
+     "at": 3,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 4,
+   "text": "KHỚP LỆNH SÁNG THỨ HAI\nSAO CHIỀU THỨ TƯ MỚI BÁN?"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "GIÁ RƠI ≠ CÓ HÀNG ĐỂ BÁN",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "nghịch lý của video",
+     "at": 6,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 7,
+   "title": "HAI CHIẾC KHÓA",
+   "items": [
+    {
+     "year": "TRẦN · SÀN",
+     "text": "giới hạn giá trong một phiên",
+     "at": 7
+    },
+    {
+     "year": "LỊCH THANH TOÁN",
+     "text": "giới hạn lúc chứng khoán được phân bổ",
+     "at": 8
+    },
+    {
+     "year": "DỄ NHẦM",
+     "text": "hai khóa bị trộn thành một",
+     "at": 9
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 10,
+   "text": "CHỜ TỪ THỨ HAI ĐẾN THỨ TƯ\nĐÃ LÀM AI MẤT TIỀN?"
+  },
+  {
+   "type": "broll",
+   "at": 11,
+   "vid": "8195667",
+   "loop": true,
+   "veil": 0.56,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "TÁCH TỪNG CHIẾC KHÓA",
+     "at": 11,
+     "acc": true
+    },
+    {
+     "text": "giá · thời điểm",
+     "at": 12,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "brand",
+   "at": 12,
+   "sub": "TIỀN BẠC · GIẢI THÍCH BẰNG DỮ LIỆU"
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "PHIÊN ĐỎ VÀ NÚT BÁN"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

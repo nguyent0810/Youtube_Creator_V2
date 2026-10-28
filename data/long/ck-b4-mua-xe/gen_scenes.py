@@ -136,12 +136,12 @@ CH["ch06"] = {"hud": {"k": "GIỚI HẠN", "t": "KHI NÀO KHÔNG ĐÚNG VỚI B�
 
 Y3 = B3["youtube"]
 SPEC = {
-    "title": "Mua Xe 700 Triệu: Mỗi Tháng Thật Sự Tốn Bao Nhiêu? Trả Thẳng, Trả Góp Hay Chưa Mua",
+    "title": "Mua Xe 700 Triệu: Mỗi Tháng Thật Sự Tốn Bao Nhiêu?",
     "channel": "CK", "accent": "#fbbf24", "master": True, "endcard": 25, "endcardSub": "VIDEO TIẾP THEO", "beat2": True,
     "acc": ["xe", "lăn", "bánh", "đồng", "hồ", "lãi", "tháng"],
     "say": SAY, "imgs": {}, "chapters": [f"ch{i:02d}" for i in range(7)],
     "youtube": {
-        "titles": ["Mua Xe 700 Triệu: Mỗi Tháng Thật Sự Tốn Bao Nhiêu? Trả Thẳng, Trả Góp Hay Chưa Mua",
+        "titles": ["Mua Xe 700 Triệu: Mỗi Tháng Thật Sự Tốn Bao Nhiêu?",
                    "Xe 700 Triệu Lăn Bánh Thành 800 Triệu: Phép Tính Mua Xe Ít Ai Làm Hết",
                    "Nuôi Một Chiếc Ô Tô Tốn Bao Nhiêu Mỗi Tháng? Ba Con Số Trước Khi Ký"],
         "summary": "Mua một chiếc ô tô 700 triệu (ví dụ giả định), mỗi tháng thật sự tốn bao nhiêu? Video bật “chiếc đồng hồ tính tiền” của chiếc xe: "

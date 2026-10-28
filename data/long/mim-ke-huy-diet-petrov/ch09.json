@@ -1,0 +1,378 @@
+{
+ "title": "Ánh nắng trên mây",
+ "lines": [
+  {
+   "t": "Câu trả lời đến từ các đoàn điều tra.",
+   "p": 0.8
+  },
+  "Petrov kể với tờ báo năm 2004 rằng ông không được ngủ mấy ngày liền, vì các uỷ ban kéo tới.",
+  "Ông cũng bác bỏ một giai thoại báo phương Tây hay kể: rằng xong việc, ông uống nửa lít vodka rồi ngủ hai mươi tám tiếng.",
+  "Theo ông, thị trấn quân sự ấy cấm rượu, chỉ thỉnh thoảng có bia.",
+  "Podvig viết rằng báo động giả năm 1983 về sau được quy cho phần mềm.",
+  "Cụ thể là phần mềm không xử lý đúng ánh nắng phản chiếu.",
+  "Bài của ông không đi sâu hơn, mà dẫn sang một phân tích khác năm 2001, mà mình không mở được.",
+  "Petrov thì tả bằng ngôn ngữ của người trong nghề.",
+  "Trên những quỹ đạo nhất định, ở một góc ống kính nhất định, trong dải hồng ngoại, máy đã nhầm.",
+  {
+   "t": "Ông gọi đó là một trò đùa của Chúa từ vũ trụ.",
+   "p": 1.0
+  },
+  "Guardian viết gọn hơn.",
+  "Năm 2017, báo này ghi: vệ tinh đã nhầm ánh mặt trời phản chiếu trên đỉnh mây thành một vụ phóng tên lửa.",
+  "Bạn còn nhớ chữ \"mây\" ở chương hai chứ?",
+  "Chính những người thiết kế đã biết vệ tinh có thể bị chói bởi ánh phản chiếu từ mây.",
+  "Họ cho nhiều vệ tinh cùng canh một chỗ để bớt rủi ro ấy.",
+  {
+   "t": "Đêm ấy, nó vẫn lọt qua.",
+   "p": 1.0
+  },
+  "Một số trang trên mạng còn kể chi tiết hơn, về mây ở độ cao lớn và một góc mặt trời hiếm gặp.",
+  "Mình chưa tìm được tài liệu gốc nào nói vậy, nên chỉ dừng ở mức các nguồn trên.",
+  "Về lâu dài, Podvig ghi rằng phải tới tháng 2 năm 1991, Liên Xô mới phóng vệ tinh thế hệ hai đầu tiên.",
+  "Loại này nhìn được tên lửa trên nền mặt đất, không cần nhìn xiên nữa.",
+  "Còn người ngồi ghế thì sao?",
+  "Tướng Yuri Votintsev, khi ấy chỉ huy lực lượng phòng thủ tên lửa và vũ trụ, đích thân tới.",
+  "Theo Petrov, lúc mới đến, ông tướng hứa đề nghị khen thưởng.",
+  "Rồi ông hỏi: sao cuốn nhật ký trực đúng lúc ấy lại để trống?",
+  {
+   "t": "Petrov đáp: một tay cầm ống nghe, một tay cầm micro, lấy gì mà viết.",
+   "p": 1.0
+  },
+  "Cuối cùng, không có khen thưởng.",
+  "Chỉ có một lần khiển trách, vì cuốn nhật ký.",
+  "Ông tự giải thích vì sao.",
+  {
+   "t": "Nếu thưởng cho tôi vì vụ ấy, thì phải có người chịu trận rất nặng. Trước hết là những người làm ra hệ thống cảnh báo.",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Ông im lặng suốt mười năm.",
+  "Ông nói với BBC rằng ông thấy xấu hổ cho quân đội Liên Xô, vì hệ thống đã hỏng như vậy.",
+  "Vài tháng sau đêm ấy, ông rời quân ngũ, và nhấn mạnh là tự xin đi, không bị ai đuổi.",
+  "Trong khi Petrov còn bị hỏi về cuốn nhật ký, thế giới bước vào tháng 11.",
+  "Và một lần nữa, có người ở giữa vòng lặp phải chọn."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "9",
+   "k": "CHƯƠNG CHÍN",
+   "title": "ÁNH NẮNG\nTRÊN MÂY",
+   "sub": "CÁC ĐOÀN ĐIỀU TRA",
+   "bg": "clouds",
+   "titleAt": [
+    0,
+    "câu"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "KHÔNG NGỦ MẤY NGÀY · UỶ BAN KÉO TỚI",
+     "at": [
+      1,
+      "ngủ"
+     ]
+    },
+    {
+     "text": "GIAI THOẠI: NỬA LÍT RƯỢU, NGỦ 28 TIẾNG",
+     "at": [
+      2,
+      "giai"
+     ],
+     "fx": "strike",
+     "strikeAt": [
+      3,
+      "cấm"
+     ]
+    },
+    {
+     "text": "thị trấn quân sự cấm rượu · Petrov, 2004",
+     "at": 3,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "source",
+   "at": 4,
+   "source": "P. PODVIG · 2002 · TR. 39–40",
+   "ref": "SCIENCE & GLOBAL SECURITY 10",
+   "snippet": "In 1983 the system almost generated a serious false alarm, which was later attributed to problems with the software being [[unable to cope with sun reflections properly]].",
+   "hlAt": 5,
+   "seal": "DẪN SANG FORDEN 2001 · KÊNH CHƯA MỞ ĐƯỢC",
+   "sealAt": [
+    6,
+    "dẫn"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "NHỮNG QUỸ ĐẠO NHẤT ĐỊNH",
+     "at": [
+      8,
+      "quỹ"
+     ]
+    },
+    {
+     "text": "MỘT GÓC ỐNG KÍNH NHẤT ĐỊNH",
+     "at": [
+      8,
+      "góc"
+     ]
+    },
+    {
+     "text": "DẢI HỒNG NGOẠI",
+     "at": [
+      8,
+      "hồng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 9,
+   "text": "“TRÒ ĐÙA CỦA CHÚA TỪ VŨ TRỤ”",
+   "sub": "PETROV · MOSKOVSKIYE NOVOSTI 2004"
+  },
+  {
+   "type": "photo",
+   "at": 10,
+   "img": "glint",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.5,
+   "illus": "ẢNH MINH HỌA",
+   "kin": [
+    {
+     "text": "NẮNG PHẢN CHIẾU TRÊN ĐỈNH MÂY",
+     "at": [
+      11,
+      "phản"
+     ],
+     "acc": true
+    },
+    {
+     "text": "bị nhầm thành một vụ phóng · Guardian 2017",
+     "at": [
+      11,
+      "thành"
+     ],
+     "sm": true
+    }
+   ],
+   "label": {
+    "k": "ÁNH NẮNG PHẢN CHIẾU, MÂY NHÌN TỪ ISS",
+    "v": "ẢNH NASA · 2012",
+    "at": 10
+   }
+  },
+  {
+   "type": "slam",
+   "at": 12,
+   "text": "MÂY",
+   "sub": "CHỮ Ở CHƯƠNG HAI · PODVIG 2002 TR. 45"
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "NGƯỜI THIẾT KẾ ĐÃ BIẾT",
+     "at": [
+      13,
+      "thiết"
+     ],
+     "acc": true
+    },
+    {
+     "text": "nhiều vệ tinh cùng canh một chỗ",
+     "at": 14,
+     "sm": true
+    },
+    {
+     "text": "ĐÊM ẤY VẪN LỌT QUA",
+     "at": 15
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 16,
+   "title": "NGUYÊN NHÂN · NGUỒN NÓI GÌ",
+   "srcnote": "KÊNH ĐỐI CHIẾU 23.10.2026",
+   "rows": [
+    {
+     "k": "PODVIG",
+     "v": "PHẦN MỀM NHẦM NẮNG PHẢN CHIẾU",
+     "at": 16
+    },
+    {
+     "k": "GUARDIAN",
+     "v": "NẮNG PHẢN CHIẾU TRÊN ĐỈNH MÂY",
+     "at": 16
+    },
+    {
+     "k": "WIKIPEDIA",
+     "v": "MÂY CAO + GÓC HIẾM (CHƯA RÕ)",
+     "at": [
+      16,
+      "mây"
+     ]
+    }
+   ],
+   "total": {
+    "k": "KÊNH",
+    "v": "DỪNG Ở HAI NGUỒN ĐẦU",
+    "at": 17
+   }
+  },
+  {
+   "type": "timeline",
+   "at": 18,
+   "bg": "glint",
+   "items": [
+    {
+     "year": "1982",
+     "text": "Oko *trực chiến* · nhìn xiên",
+     "at": 18
+    },
+    {
+     "year": "1983",
+     "text": "*báo động giả*",
+     "at": [
+      18,
+      "phóng"
+     ]
+    },
+    {
+     "year": "02.1991",
+     "text": "vệ tinh *thế hệ hai* · nhìn được trên nền mặt đất",
+     "at": 19
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 20,
+   "items": [
+    {
+     "text": "CÒN NGƯỜI NGỒI GHẾ?",
+     "at": 20,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 21,
+   "title": "CUỘC ĐIỀU TRA",
+   "srcnote": "MOSKOVSKIYE NOVOSTI 2004",
+   "rows": [
+    {
+     "k": "TƯỚNG Y. VOTINTSEV",
+     "v": "ĐÍCH THÂN TỚI",
+     "at": [
+      21,
+      "đích"
+     ]
+    },
+    {
+     "k": "LÚC ĐẦU",
+     "v": "HỨA ĐỀ NGHỊ KHEN THƯỞNG",
+     "at": [
+      22,
+      "hứa"
+     ]
+    },
+    {
+     "k": "RỒI HỎI",
+     "v": "SAO NHẬT KÝ TRỰC ĐỂ TRỐNG?",
+     "at": 23
+    },
+    {
+     "k": "PETROV ĐÁP",
+     "v": "1 TAY ỐNG NGHE · 1 TAY MICRO",
+     "at": 24
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 25,
+   "text": "KHIỂN TRÁCH",
+   "sub": "VÌ CUỐN NHẬT KÝ · KHÔNG KHEN THƯỞNG · BBC 2013 + BẢN 2004"
+  },
+  {
+   "type": "quote",
+   "at": 28,
+   "text": "Если награждать меня за тот случай, то кто-то за него же должен был очень крупно пострадать.",
+   "by": "S. PETROV · MOSKOVSKIYE NOVOSTI · 2004",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 28,
+   "typeAt": [
+    28,
+    "nếu"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 29,
+   "items": [
+    {
+     "text": "IM LẶNG MƯỜI NĂM",
+     "at": [
+      29,
+      "im"
+     ],
+     "acc": true
+    },
+    {
+     "text": "“xấu hổ cho quân đội Liên Xô” · BBC",
+     "at": 30,
+     "sm": true
+    },
+    {
+     "text": "tự xin rời quân ngũ · bản 2004",
+     "at": 31,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 32,
+   "vid": "5004222",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "THÁNG 11 NĂM 1983",
+     "at": 32,
+     "acc": true
+    },
+    {
+     "text": "lại có người ở giữa vòng lặp",
+     "at": 33,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 09",
+  "t": "ÁNH NẮNG TRÊN MÂY"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

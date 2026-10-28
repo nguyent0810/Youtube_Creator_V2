@@ -1,0 +1,259 @@
+{
+ "theme": "mim",
+ "title": "Ngày 29/01/2025, Wiz công bố cơ sở dữ liệu DeepSeek mở không cần xác thực, chứa lịch sử chat",
+ "description": "Ngày 29/01/2025, nhóm Wiz Research (bài của Gal Nagli) công bố phát hiện một cơ sở dữ liệu ClickHouse của DeepSeek mở hoàn toàn, không cần xác thực, trên hai tên miền phụ của DeepSeek (cổng 9000). Bảng log_stream có hơn một triệu dòng nhật ký, gồm lịch sử trò chuyện, khoá bí mật và chi tiết hệ thống phía sau. Wiz báo ngay cho DeepSeek và DeepSeek nhanh chóng đóng lại (theo Wiz). Bài không nêu có ai khác đã truy cập hay chưa. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện. Thông tin theo nguồn đã ghi, đọc ngày 20/10/2026; chưa có bản kiểm chứng riêng của kênh.\n\nBản đầy đủ: https://youtu.be/ejsjefnJQbI (công khai từ 20:00 ngày 23/11).",
+ "tags": [
+  "deepseek",
+  "wiz research",
+  "lộ dữ liệu ai",
+  "quyền riêng tư ai",
+  "chatgpt",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "AI QUANH TA",
+ "sub": "01/2025",
+ "acc": [
+  "kho",
+  "mật",
+  "khẩu",
+  "khoá",
+  "cửa"
+ ],
+ "lines": [
+  "Một kho dữ liệu chat không cần mật khẩu.",
+  "Ngày hai mươi chín tháng một 2025, nhóm nghiên cứu Wiz công bố một phát hiện.",
+  "Một cơ sở dữ liệu của DeepSeek mở toang trên mạng, không đòi xác thực.",
+  "Nhóm Wiz tự chạy được lệnh trên đó, ngay trong trình duyệt.",
+  "Nó nằm trên hai tên miền phụ của chính DeepSeek.",
+  "Bên trong có hơn một triệu dòng nhật ký.",
+  "Trong đó có lịch sử trò chuyện, khoá bí mật, và chi tiết của hệ thống phía sau.",
+  "Wiz báo ngay, và DeepSeek nhanh chóng đóng lại.",
+  "Kho không cần mật khẩu, nên chẳng ai phải phá khoá."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "KHÔNG CẦN MẬT KHẨU",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "một kho dữ liệu chat",
+     "at": [
+      0,
+      "kho"
+     ],
+     "sm": true
+    }
+   ],
+   "at": 0,
+   "clip": "pexels:39918565",
+   "veil": 0.55
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "29.01.2025",
+   "day": "WIZ RESEARCH CÔNG BỐ PHÁT HIỆN"
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Cơ sở dữ liệu mở",
+   "nodes": [
+    {
+     "text": "INTERNET",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      2,
+      "trên"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "KHO CỦA DEEPSEEK",
+     "x": 0.5,
+     "y": 0.68,
+     "at": [
+      2,
+      "không"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 700
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      2,
+      "mở"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "TỰ CHẠY LỆNH",
+     "at": [
+      3,
+      "tự"
+     ],
+     "acc": true
+    },
+    {
+     "text": "ngay trong trình duyệt",
+     "at": [
+      3,
+      "ngay"
+     ],
+     "sm": true
+    }
+   ],
+   "at": 3,
+   "clip": "pexels:6414097",
+   "veil": 0.58
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "ĐỊA CHỈ MỞ",
+   "rows": [
+    {
+     "k": "TÊN MIỀN PHỤ",
+     "v": "2 TÊN",
+     "at": [
+      4,
+      "hai"
+     ]
+    },
+    {
+     "k": "CỦA",
+     "v": "CHÍNH DEEPSEEK",
+     "at": [
+      4,
+      "chính"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 0,
+   "to": 1000000,
+   "prefix": "HƠN ",
+   "suffix": " DÒNG",
+   "label": "NHẬT KÝ TRONG MỘT BẢNG",
+   "until": [
+    5,
+    "triệu"
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "TRONG NHẬT KÝ",
+   "cards": [
+    {
+     "k": "CÓ",
+     "v": "LỊCH SỬ TRÒ CHUYỆN",
+     "at": [
+      6,
+      "lịch"
+     ]
+    },
+    {
+     "k": "CÓ",
+     "v": "KHOÁ BÍ MẬT",
+     "at": [
+      6,
+      "khoá"
+     ]
+    },
+    {
+     "k": "CÓ",
+     "v": "CHI TIẾT HỆ THỐNG",
+     "at": [
+      6,
+      "chi"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "ĐÓNG NGAY",
+   "sub": "SAU KHI WIZ BÁO"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CỬA ĐÃ MỞ SẴN",
+     "at": [
+      8,
+      "Kho"
+     ],
+     "acc": true
+    },
+    {
+     "text": "chẳng ai phải phá khoá",
+     "at": [
+      8,
+      "chẳng"
+     ],
+     "sm": true
+    }
+   ],
+   "at": 8,
+   "clip": "pexels:7830153",
+   "veil": 0.6
+  }
+ ],
+ "sources": [
+  "Wiz Research (Gal Nagli), 29/01/2025 — Wiz Research Uncovers Exposed DeepSeek Database Leak: https://www.wiz.io/blog/wiz-research-uncovers-exposed-deepseek-database-leak"
+ ],
+ "say": {
+  "=AI": "ây ai",
+  "chatgpt": "chát gi pi ti",
+  "openai": "Ô-pần ây ai",
+  "google": "Gu-gồ",
+  "chatbot": "chát bót",
+  "chat": "chát",
+  "deepseek": "Đíp-xích",
+  "wiz": "Uýt",
+  "clickhouse": "Cờ-lích-hao"
+ },
+ "rules": 2,
+ "mix": true,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.22,
+   "7": 0.5
+  }
+ },
+ "sources_internal": [
+  "https://www.wiz.io/blog/wiz-research-uncovers-exposed-deepseek-database-leak (đã đọc 20/10: 29/01/2025, Gal Nagli, 'completely open and unauthenticated', hơn một triệu dòng log_stream, chat history + secret keys + backend details, Wiz báo và DeepSeek nhanh chóng đóng)"
+ ],
+ "description_orig": "Ngày 29/01/2025, nhóm Wiz Research (bài của Gal Nagli) công bố phát hiện một cơ sở dữ liệu ClickHouse của DeepSeek mở hoàn toàn, không cần xác thực, trên hai tên miền phụ của DeepSeek (cổng 9000). Bảng log_stream có hơn một triệu dòng nhật ký, gồm lịch sử trò chuyện, khoá bí mật và chi tiết hệ thống phía sau. Wiz báo ngay cho DeepSeek và DeepSeek nhanh chóng đóng lại (theo Wiz). Bài không nêu có ai khác đã truy cập hay chưa. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện. Thông tin theo nguồn đã ghi, đọc ngày 20/10/2026; chưa có bản kiểm chứng riêng của kênh (data/long/mim-ai-chat-privacy chưa có factcheck.md).\n\nBản đầy đủ: https://youtu.be/ejsjefnJQbI (công khai từ 20:00 ngày 23/11)."
+}

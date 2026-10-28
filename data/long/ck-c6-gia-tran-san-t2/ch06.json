@@ -1,0 +1,420 @@
+{
+ "title": "Ba ô chưa được phép điền",
+ "lines": [
+  {
+   "t": "Khi có một lệnh bán, người xem thường nhìn ngay vào giá bán nhân số cổ phiếu.",
+   "p": 0.8
+  },
+  "Trong ví dụ giả định, một trăm cổ phiếu là một trăm đơn vị để đếm.",
+  "Nhưng giá trị cuối cùng không thể được rút gọn thành một con số chung cho mọi nơi.",
+  "Phí giao dịch theo biểu phí nơi mở tài khoản.",
+  "Tài liệu đang dùng không có một mức phí chung kèm ngày hiệu lực.",
+  "Ba ô ấy không giống nhau.",
+  "Vì vậy, biểu đồ để ô phí là “chưa điền”.",
+  "Đó là một lựa chọn có chủ ý.",
+  "Thuế cũng cần nói thật về mức độ chắc chắn.",
+  "Luật Thuế thu nhập cá nhân số một trăm linh chín trên hai nghìn không trăm hai mươi lăm có hiệu lực từ ngày một tháng bảy năm hai nghìn không trăm hai mươi sáu.",
+  "Nghị định hướng dẫn cũng được nêu có hiệu lực từ ngày một tháng bảy năm hai nghìn không trăm hai mươi sáu.",
+  "Tuy nhiên, kho này chưa chốt được điều khoản và hướng dẫn hiện hành để đọc mức không phẩy một phần trăm như một khẳng định.",
+  "Vì vậy, biểu đồ để ô thuế là “cần kiểm văn bản”.",
+  "Không lấy hai triệu đồng giả định để trừ một khoản chưa chốt.",
+  "Đó không phải né số.",
+  "Sự thận trọng có lý do.",
+  "Đó là không biến ví dụ thành thông tin sai.",
+  "Ô thứ ba là T cộng không.",
+  "Nguồn đang dùng xác nhận bước rút ngắn đến khả năng bán trong phiên chiều T cộng hai.",
+  "Nó không xác nhận cơ chế bán chứng khoán chờ về hay mốc T cộng không cho nhà đầu tư cá nhân.",
+  "Vì vậy, biểu đồ chỉ kéo lịch từ T tới T cộng hai.",
+  "Ô T cộng không để trống.",
+  "Không đoán ngày áp dụng.",
+  "Không gắn một lời hứa lên ô trống.",
+  "Và giờ, vòng mở đầu có thể khép lại.",
+  "Hai triệu đồng trong ví dụ giả định đã khớp ở T.",
+  "Một trăm cổ phiếu không bán được ngay không phải vì giá sàn là một cái khóa cho cả tuần.",
+  "Giá sàn giới hạn giá của từng phiên.",
+  "T cộng hai giới hạn thời điểm bạn có chứng khoán để đặt lệnh bán.",
+  "Đến chiều T cộng hai, ô một trăm cổ phiếu mới sáng trong ví dụ này.",
+  "Đó là câu trả lời cho nút bán ở đầu video.",
+  "Trước một lệnh cụ thể, hãy tách bảng thành hai hàng: giá và thời điểm.",
+  "Rồi chỉ điền những ô mà văn bản hiện hành xác nhận."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "CHƯƠNG SÁU",
+   "title": "BA Ô CHƯA ĐƯỢC\nPHÉP ĐIỀN",
+   "sub": "PHÍ · THUẾ · T+0",
+   "img": "ai06",
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.5,
+    0.3
+   ],
+   "titleAt": 0
+  },
+  {
+   "type": "dots",
+   "at": 1,
+   "total": 100,
+   "cols": 20,
+   "title": "100 CỔ PHIẾU = 100 ĐƠN VỊ",
+   "groups": [
+    {
+     "from": 0,
+     "n": 100,
+     "cls": "hollow",
+     "label": "100 CỔ PHIẾU · VÍ DỤ GIẢ ĐỊNH",
+     "at": 1
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 2,
+   "vid": "6794227",
+   "loop": true,
+   "veil": 0.56,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "GIÁ BÁN × SỐ CỔ PHIẾU",
+     "at": 2,
+     "sm": true
+    },
+    {
+     "text": "KHÔNG CÓ MỘT CON SỐ CHUNG",
+     "at": 2,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "Ô 1 · PHÍ GIAO DỊCH",
+   "srcnote": "TÀI LIỆU ĐANG DÙNG",
+   "rows": [
+    {
+     "k": "PHÍ",
+     "v": "THEO BIỂU PHÍ NƠI MỞ TÀI KHOẢN",
+     "at": 3
+    },
+    {
+     "k": "MỨC CHUNG",
+     "v": "KHÔNG CÓ KÈM NGÀY HIỆU LỰC",
+     "at": 4
+    }
+   ]
+  },
+  {
+   "type": "heat",
+   "at": 5,
+   "title": "BA Ô KHÔNG GIỐNG NHAU",
+   "range": "CHỈ ĐIỀN KHI VĂN BẢN XÁC NHẬN",
+   "unit": "Ô",
+   "cols": 3,
+   "cells": [
+    {
+     "k": "PHÍ",
+     "v": 0,
+     "note": "CHƯA ĐIỀN",
+     "at": 5
+    },
+    {
+     "k": "THUẾ",
+     "v": 0,
+     "note": "CẦN KIỂM VĂN BẢN",
+     "at": 5
+    },
+    {
+     "k": "T+0",
+     "v": 0,
+     "note": "CHƯA XÁC NHẬN",
+     "at": 5
+    }
+   ],
+   "calls": [
+    {
+     "i": 0,
+     "text": "CHƯA ĐIỀN",
+     "at": 6
+    }
+   ],
+   "total": {
+    "label": "ĐÃ ĐIỀN",
+    "at": 7
+   }
+  },
+  {
+   "type": "photo",
+   "img": "ai06",
+   "at": 8,
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.5,
+    0.3
+   ],
+   "move": "pan"
+  },
+  {
+   "type": "timeline",
+   "at": 9,
+   "title": "Ô 2 · THUẾ · MỐC VĂN BẢN",
+   "items": [
+    {
+     "year": "LUẬT 109/2025/QH15",
+     "text": "hiệu lực 01/07/2026",
+     "at": 9
+    },
+    {
+     "year": "NGHỊ ĐỊNH HƯỚNG DẪN",
+     "text": "hiệu lực 01/07/2026",
+     "at": 10
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "0,1%: CHƯA CHỐT",
+     "at": 11,
+     "acc": true
+    },
+    {
+     "text": "chưa đọc như một khẳng định",
+     "at": 11,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 12,
+   "title": "Ô 2 · THUẾ",
+   "srcnote": "NGUỒN: BỘ TÀI CHÍNH · BỘ TƯ PHÁP",
+   "rows": [
+    {
+     "k": "THUẾ",
+     "v": "CẦN KIỂM VĂN BẢN",
+     "at": 12
+    },
+    {
+     "k": "2.000.000 ĐỒNG",
+     "v": "KHÔNG TRỪ KHOẢN CHƯA CHỐT",
+     "at": 13
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 14,
+   "vid": "11899304",
+   "loop": true,
+   "veil": 0.56,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "KHÔNG NÉ SỐ",
+     "at": 14,
+     "sm": true
+    },
+    {
+     "text": "KHÔNG BIẾN VÍ DỤ THÀNH TIN SAI",
+     "at": 16,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 17,
+   "title": "Ô 3 · T+0",
+   "items": [
+    {
+     "year": "Ô THỨ BA",
+     "text": "T+0",
+     "at": 17
+    },
+    {
+     "year": "CHIỀU T+2",
+     "text": "nguồn xác nhận khả năng bán",
+     "at": 18
+    },
+    {
+     "year": "BÁN CHỜ VỀ · T+0",
+     "text": "nguồn không xác nhận",
+     "at": 19
+    }
+   ]
+  },
+  {
+   "type": "heat",
+   "at": 20,
+   "title": "LỊCH CHỈ KÉO TỚI T+2",
+   "range": "VÍ DỤ GIẢ ĐỊNH · NGUỒN: VSDC",
+   "unit": "CỔ PHIẾU",
+   "cols": 4,
+   "cells": [
+    {
+     "k": "T",
+     "v": 0,
+     "note": "KHỚP",
+     "at": 20
+    },
+    {
+     "k": "T+1",
+     "v": 0,
+     "note": "CHỜ",
+     "at": 20
+    },
+    {
+     "k": "CHIỀU T+2",
+     "v": 100,
+     "note": "CÓ THỂ BÁN",
+     "at": 20
+    },
+    {
+     "k": "T+0",
+     "v": 0,
+     "note": "ĐỂ TRỐNG",
+     "at": 21
+    }
+   ],
+   "calls": [
+    {
+     "i": 3,
+     "text": "Ô TRỐNG",
+     "at": 21
+    }
+   ],
+   "total": {
+    "label": "CÓ THỂ BÁN",
+    "at": 20
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 22,
+   "items": [
+    {
+     "text": "KHÔNG ĐOÁN NGÀY ÁP DỤNG",
+     "at": 22,
+     "acc": true
+    },
+    {
+     "text": "không hứa trên ô trống",
+     "at": 23,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "candles",
+   "at": 24,
+   "series": "vnindex",
+   "from": "2025-03-17",
+   "to": "2025-04-09",
+   "title": "QUAY LẠI PHIÊN 09/04/2025",
+   "range": "DỮ LIỆU: HOSE QUA VNSTOCK",
+   "calls": [
+    {
+     "i": -1,
+     "text": "PHIÊN MỞ ĐẦU",
+     "at": 24
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 25,
+   "title": "100 CỔ PHIẾU ĐANG Ở ĐÂU?",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "ĐÃ KHỚP Ở T",
+     "v": "2.000.000 ĐỒNG",
+     "at": 25
+    },
+    {
+     "k": "CHƯA BÁN NGAY",
+     "v": "KHÔNG PHẢI VÌ GIÁ SÀN",
+     "at": 26
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 27,
+   "title": "HAI CHIẾC KHÓA, HAI VIỆC",
+   "items": [
+    {
+     "year": "GIÁ SÀN",
+     "text": "giới hạn giá của từng phiên",
+     "at": 27
+    },
+    {
+     "year": "T+2",
+     "text": "giới hạn lúc có chứng khoán để bán",
+     "at": 28
+    }
+   ]
+  },
+  {
+   "type": "dots",
+   "at": 29,
+   "total": 100,
+   "cols": 20,
+   "title": "CHIỀU T+2: 100 Ô SÁNG",
+   "groups": [
+    {
+     "from": 0,
+     "n": 100,
+     "cls": "gold",
+     "label": "100 CỔ PHIẾU CÓ THỂ BÁN · VÍ DỤ GIẢ ĐỊNH",
+     "at": 29
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "img": "ai05",
+   "at": 30,
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.5,
+    0.3
+   ],
+   "move": "out"
+  },
+  {
+   "type": "kinetic",
+   "at": 31,
+   "items": [
+    {
+     "text": "GIÁ · THỜI ĐIỂM: HAI HÀNG",
+     "at": 31,
+     "acc": true
+    },
+    {
+     "text": "chỉ điền ô có văn bản xác nhận",
+     "at": 32,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 06",
+  "t": "BA Ô CHƯA ĐƯỢC PHÉP ĐIỀN"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.1
+ }
+}

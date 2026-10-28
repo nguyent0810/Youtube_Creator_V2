@@ -1,0 +1,261 @@
+{
+ "title": "Mười lăm năm",
+ "lines": [
+  {
+   "t": "Ngã rẽ thứ hai nằm ở năm năm phía trước.",
+   "p": 0.8
+  },
+  "Trước tháng bảy năm hai nghìn không trăm hai mươi lăm, muốn có lương hưu, phải đóng đủ hai mươi năm.",
+  {
+   "t": "Luật mới hạ xuống còn mười lăm năm. Ngắn hơn năm năm.",
+   "p": 1.0
+  },
+  "Với chị Hạnh, đó là khác biệt rất lớn.",
+  "Theo luật cũ, chị cần thêm mười năm nữa.",
+  {
+   "t": "Theo luật mới, chỉ cần thêm năm năm. Một nửa chặng.",
+   "p": 1.0
+  },
+  {
+   "t": "Đóng đủ mười lăm năm thì lương hưu được bao nhiêu?",
+   "ask": 1
+  },
+  "Với lao động nữ, mười lăm năm đóng ứng với bốn mươi lăm phần trăm lương bình quân.",
+  "Mỗi năm đóng thêm, cộng hai phần trăm.",
+  {
+   "t": "Tối đa bảy mươi lăm phần trăm, khi đủ ba mươi năm. Không hơn nữa.",
+   "p": 1.0
+  },
+  "Với lao động nam thì chậm hơn.",
+  "Mười lăm năm chỉ được bốn mươi phần trăm, mỗi năm thêm một phần trăm cho tới năm thứ hai mươi.",
+  {
+   "t": "Sau đó mới cộng hai phần trăm mỗi năm, và phải ba mươi lăm năm mới đạt bảy mươi lăm phần trăm.",
+   "p": 1.0
+  },
+  "Nếu chị Hạnh là đàn ông, cùng mười lăm năm, cùng lương mười triệu, lương hưu chỉ khoảng bốn triệu.",
+  {
+   "t": "Ít hơn năm trăm nghìn mỗi tháng.",
+   "p": 1.0
+  },
+  "Quay lại chị Hạnh, với lương bình quân mười triệu.",
+  "Đóng tới mười lăm năm, tức năm hai nghìn không trăm ba mươi mốt: lương hưu khoảng bốn triệu rưỡi một tháng.",
+  "Đóng tới hai mươi năm: khoảng năm triệu rưỡi.",
+  "Hai mươi lăm năm: sáu triệu rưỡi.",
+  {
+   "t": "Ba mươi năm: bảy triệu rưỡi, mức trần. Không thể cao hơn.",
+   "p": 1.0
+  },
+  "Năm năm đóng thêm ấy có giá.",
+  "Nếu đi làm có hợp đồng, phần chị tự đóng cho bảo hiểm xã hội là tám phần trăm lương, khoảng bốn mươi tám triệu trong năm năm.",
+  "Nếu không có chỗ làm, chị có thể đóng tự nguyện, bằng hai mươi hai phần trăm mức thu nhập chị tự chọn.",
+  {
+   "t": "Với mức mười triệu, năm năm là khoảng một trăm ba mươi hai triệu, trước khi trừ phần Nhà nước hỗ trợ. Không hề rẻ.",
+   "p": 1.0
+  },
+  "Một bên là hai trăm triệu cầm ngay.",
+  "Bên kia là bốn triệu rưỡi mỗi tháng, nhưng chưa phải bây giờ.",
+  "Câu hỏi tiếp theo là: chính xác thì bao giờ?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "NGÃ RẼ HAI",
+   "title": "MƯỜI LĂM NĂM",
+   "sub": "ĐIỀU KIỆN LƯƠNG HƯU MỚI",
+   "vid": "1793371",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Ngã"
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 1,
+   "title": "SỐ NĂM ĐÓNG TỐI THIỂU ĐỂ CÓ LƯƠNG HƯU",
+   "unit": "LUẬT BHXH 2024 (41/2024/QH15)",
+   "items": [
+    {
+     "k": "TRƯỚC 07/2025",
+     "v": 20,
+     "lbl": "20 NĂM",
+     "at": [
+      1,
+      "phải"
+     ]
+    },
+    {
+     "k": "TỪ 07/2025",
+     "v": 15,
+     "lbl": "15 NĂM",
+     "at": 2,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "CHỊ HẠNH ĐÃ ĐÓNG 10 NĂM",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · CHỊ HẠNH · LƯƠNG ĐÓNG 10 TRIỆU · GIÁ HÔM NAY",
+   "rows": [
+    {
+     "k": "LUẬT CŨ",
+     "v": "CẦN THÊM 10 NĂM",
+     "at": 4
+    },
+    {
+     "k": "LUẬT MỚI",
+     "v": "CẦN THÊM 5 NĂM",
+     "at": 5
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 6,
+   "text": "Đủ 15 năm thì lương hưu\nđược bao nhiêu?"
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "TỶ LỆ HƯỞNG LƯƠNG HƯU",
+   "srcnote": "PLO 01/12/2024 · LUẬT BHXH 2024",
+   "rows": [
+    {
+     "k": "NỮ · 15 NĂM",
+     "v": "45% · +2%/NĂM",
+     "at": 7
+    },
+    {
+     "k": "NỮ · TỐI ĐA",
+     "v": "75% Ở 30 NĂM",
+     "at": 9
+    },
+    {
+     "k": "NAM · 15 NĂM",
+     "v": "40% · +1%/NĂM TỚI 20",
+     "at": 11
+    },
+    {
+     "k": "NAM · TỐI ĐA",
+     "v": "75% Ở 35 NĂM",
+     "at": [
+      12,
+      "ba"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "NẾU LÀ NAM · CÙNG 15 NĂM, 10 TRIỆU",
+     "at": 13,
+     "sm": true
+    },
+    {
+     "text": "≈ 4 TRIỆU/THÁNG",
+     "at": [
+      13,
+      "lương"
+     ],
+     "acc": true
+    },
+    {
+     "text": "ít hơn 500 nghìn mỗi tháng",
+     "at": 14,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 15,
+   "title": "LƯƠNG HƯU CỦA CHỊ HẠNH (TRIỆU/THÁNG)",
+   "unit": "GIÁ HÔM NAY · VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "15 NĂM · ĐỦ NĂM 2031",
+     "v": 4.5,
+     "lbl": "4,5",
+     "at": 16,
+     "acc": true
+    },
+    {
+     "k": "20 NĂM",
+     "v": 5.5,
+     "lbl": "5,5",
+     "at": 17
+    },
+    {
+     "k": "25 NĂM",
+     "v": 6.5,
+     "lbl": "6,5",
+     "at": 18
+    },
+    {
+     "k": "30 NĂM · MỨC TRẦN",
+     "v": 7.5,
+     "lbl": "7,5",
+     "at": 19
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 20,
+   "title": "GIÁ CỦA 5 NĂM ĐÓNG THÊM",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · CHỊ HẠNH · LƯƠNG ĐÓNG 10 TRIỆU · GIÁ HÔM NAY",
+   "rows": [
+    {
+     "k": "ĐI LÀM · PHẦN TỰ ĐÓNG 8%",
+     "v": "≈ 48 TRIỆU",
+     "at": 21
+    },
+    {
+     "k": "TỰ NGUYỆN · 22%",
+     "v": "≈ 132 TRIỆU",
+     "at": 22
+    }
+   ],
+   "total": {
+    "k": "TỰ NGUYỆN",
+    "v": "TRƯỚC HỖ TRỢ CỦA NN",
+    "at": 23
+   }
+  },
+  {
+   "type": "myth",
+   "at": 24,
+   "mythLab": "MỘT BÊN",
+   "myth": "200 TRIỆU CẦM NGAY",
+   "truthLab": "BÊN KIA",
+   "truth": "4,5 TRIỆU/THÁNG · CHƯA PHẢI BÂY GIỜ",
+   "strikeAt": [
+    25,
+    "Bên"
+   ],
+   "truthAt": [
+    25,
+    "bốn"
+   ]
+  },
+  {
+   "type": "question",
+   "at": 26,
+   "text": "Chính xác thì\nbao giờ?"
+  }
+ ],
+ "hud": {
+  "k": "NGÃ RẼ 2",
+  "t": "MƯỜI LĂM NĂM"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

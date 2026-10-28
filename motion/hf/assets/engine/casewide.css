@@ -543,3 +543,18 @@ html, body { width:1920px; height:1080px; overflow:hidden; background:#060505; }
     font-family:'Be Vietnam Pro',sans-serif; font-weight:900; font-size:36px; line-height:1.35; color:#4ade80; white-space:nowrap; }
 .obtok { position:absolute; opacity:0; padding:8px 18px 11px; border-radius:40px; background:#22c55e; font-family:'Be Vietnam Pro',sans-serif; font-weight:900;
     font-size:30px; line-height:1.3; color:#052e1a; white-space:nowrap; z-index:5; }
+
+/* chart.js 27/10/2026: heat (lịch nhiệt) + stack (chú giải cột chồng) */
+.hcell { position:absolute; box-sizing:border-box; border-radius:16px; border:2px solid rgba(251,191,36,.35); padding:18px 22px; color:#f1f5f9; opacity:0;
+  display:flex; flex-direction:column; justify-content:space-between; font-family:'Be Vietnam Pro',sans-serif; }
+.hcell i { font-style:normal; font-family:'JetBrains Mono',monospace; font-weight:700; font-size:30px; letter-spacing:.1em; }
+.hcell b { font-weight:900; font-size:64px; line-height:1; }
+.hcell s { text-decoration:none; font-size:24px; font-weight:700; opacity:.85; }
+.hring { position:absolute; box-sizing:border-box; border:6px solid #fbbf24; border-radius:22px; box-shadow:0 0 36px 4px rgba(251,191,36,.45); opacity:0; }
+.hring span { position:absolute; left:50%; bottom:-58px; transform:translateX(-50%); white-space:nowrap; background:#0a1426; border:3px solid #fbbf24; color:#fbbf24;
+  border-radius:32px; padding:8px 24px; font:800 30px 'Be Vietnam Pro',sans-serif; }
+.htot { position:absolute; left:170px; right:170px; text-align:center; font:900 72px 'Be Vietnam Pro',sans-serif; color:#fbbf24; opacity:0; }
+.stlg { position:absolute; left:1560px; top:300px; opacity:0; font:800 34px 'Be Vietnam Pro',sans-serif; color:#f1f5f9; }
+.stlg p { margin:0 0 26px; display:flex; align-items:center; gap:16px; }
+.stlg i { display:inline-block; width:34px; height:34px; border-radius:8px; }
+.stv { font-family:'Be Vietnam Pro',sans-serif; font-weight:900; font-size:36px; fill:#fff; paint-order:stroke; stroke:rgba(10,20,38,.55); stroke-width:4px; }

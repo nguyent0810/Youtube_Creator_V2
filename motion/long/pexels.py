@@ -58,12 +58,25 @@ def search(topic, queries, orientation="landscape"):
     idx_p.write_text(json.dumps(idx, ensure_ascii=False, indent=0), encoding="utf-8")
 
 
+def by_id(i):
+    """Một clip theo id, không cần search trước (26/10/2026: id lấy từ facts.md của bài, index.json chưa có)."""
+    r = httpx.get(f"https://api.pexels.com/videos/videos/{i}", headers=_h(), timeout=30)
+    r.raise_for_status()
+    v = r.json()
+    return {"dur": v["duration"], "slug": v["url"].rstrip("/").split("/")[-1], "user": v["user"]["name"], "q": "id",
+            "files": [{"w": f["width"], "h": f["height"], "link": f["link"]} for f in v["video_files"] if f.get("width")]}
+
+
 def get(topic, ids, portrait=False):
-    idx = json.loads((out(topic) / "index.json").read_text(encoding="utf-8"))
+    idx_p = out(topic) / "index.json"
+    idx = json.loads(idx_p.read_text(encoding="utf-8")) if idx_p.exists() else {}
     for i in ids:
         dst = out(topic) / f"{i}.mp4"
         if dst.exists():
             continue
+        if i not in idx:
+            idx[i] = by_id(i)
+            idx_p.write_text(json.dumps(idx, ensure_ascii=False, indent=0), encoding="utf-8")
         v = idx[i]
         fs = sorted((f for f in v["files"] if max(f["w"], f["h"]) <= 1920 and (f["h"] > f["w"]) == portrait),
                     key=lambda f: -max(f["w"], f["h"]))

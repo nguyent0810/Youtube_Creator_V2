@@ -1,0 +1,195 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-ng-neu-ban-bi-so-sanh",
+ "format": "nhan-gui",
+ "hook_type": "noi-thang",
+ "open_shot": "dien-thoai",
+ "voice": "Ngọc Huyền",
+ "music": "healing.mp3",
+ "music_gain": 0.16,
+ "gap": 0.3,
+ "title": "Lướt thấy ai cũng hơn mình? Thử 1 câu này",
+ "kicker": "NHẮN GỬI",
+ "sub": "KINH PHÁP CÚ · KỆ 50",
+ "acc": [
+  "hơn",
+  "mình",
+  "lướt"
+ ],
+ "lines": [
+  "Lướt thấy ai cũng hơn mình? Thử một câu này.",
+  "Mạng chỉ cho bạn xem phần đẹp nhất của người khác.",
+  "Còn bạn so nó với phần mệt nhất của mình.",
+  "Thật ra, cuộc so sánh ấy chưa bao giờ công bằng.",
+  "Lời kệ, diễn ý: đừng soi việc người, hãy xét việc mình.",
+  "Câu thử là: hôm nay mình hơn hôm qua điều gì?",
+  "Viết ra một điều. Nhỏ thôi cũng được.",
+  "Gửi người bạn hay lướt khuya. Hôm nay bạn hơn hôm qua điều gì?"
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:10374888",
+   "items": [
+    {
+     "text": "AI CŨNG HƠN MÌNH?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "thử một câu này",
+     "at": [
+      0,
+      "thử"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "hf_split",
+   "at": 1,
+   "a": {
+    "lab": "HỌ",
+    "val": "họ **đẹp**",
+    "num": "+",
+    "at": [
+     1,
+     "đẹp"
+    ]
+   },
+   "b": {
+    "lab": "BẠN",
+    "val": "mình **mệt**",
+    "num": "−",
+    "at": [
+     2,
+     "mệt"
+    ]
+   }
+  },
+  {
+   "type": "hf_stamp",
+   "at": 3,
+   "kick": "",
+   "big": "≠",
+   "stamps": [
+    {
+     "text": "KHÔNG CÔNG BẰNG",
+     "at": [
+      3,
+      "công"
+     ],
+     "x": 200,
+     "y": 880,
+     "rot": -6
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Kệ 50 (diễn ý)",
+   "nodes": [
+    {
+     "text": "ĐỪNG SOI VIỆC NGƯỜI",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      4,
+      "đừng"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "XÉT VIỆC MÌNH",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      4,
+      "xét"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "DHP 50 · SUTTACENTRAL"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "clip": "pexels:34611148",
+   "items": [
+    {
+     "text": "HƠN HÔM QUA ĐIỀU GÌ?",
+     "at": [
+      5,
+      "hôm"
+     ],
+     "acc": true
+    },
+    {
+     "text": "câu thử",
+     "at": [
+      5,
+      "câu"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "to": 1,
+   "suffix": " ĐIỀU NHỎ",
+   "label": "VIẾT RA HÔM NAY",
+   "until": [
+    6,
+    "điều."
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "veil": 0.4,
+   "clip": "pexels:7942761",
+   "items": [
+    {
+     "text": "GỬI NGƯỜI HAY LƯỚT KHUYA",
+     "at": [
+      7,
+      "gửi"
+     ],
+     "acc": true
+    },
+    {
+     "text": "hôm nay bạn hơn hôm qua điều gì?",
+     "at": [
+      7,
+      "hôm"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp44-59/en/sujato"
+ ],
+ "description": "Lướt thấy ai cũng hơn mình? Thử 1 câu này\n\nNguồn: https://suttacentral.net/dhp44-59/en/sujato"
+}

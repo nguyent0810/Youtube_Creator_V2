@@ -1,0 +1,231 @@
+{
+ "title": "Một tỷ hai trong một cuốn sổ",
+ "lines": [
+  "Đầu tháng mười năm hai nghìn không trăm hai mươi hai, ở Thành phố Hồ Chí Minh, một tin đồn lan trên mạng xã hội.",
+  "Tin đồn nói về một ngân hàng.",
+  {
+   "t": "Chỉ trong vài ngày, nhiều người kéo tới đó, xin rút tiền trước hạn.",
+   "p": 1.0
+  },
+  "Có người chấp nhận mất lãi, chỉ để cầm được tiền về nhà. Cầm tiền mới yên.",
+  "Ngày mười tháng mười, người đứng đầu Ngân hàng Nhà nước lên tiếng.",
+  "Bà nói tiền gửi của người dân được Nhà nước bảo đảm trong mọi trường hợp.",
+  {
+   "t": "Dòng người dần thưa đi.",
+   "p": 1.0
+  },
+  "Bốn năm sau, mình muốn hỏi một câu bình tĩnh hơn.",
+  "Không phải về ngân hàng ấy, mà về cuốn sổ của chính bạn.",
+  "Thử hình dung chị Thu, năm mươi hai tuổi, một nhân vật ví dụ.",
+  "Hai mươi lăm năm đi làm, chị để dành được một tỷ hai.",
+  {
+   "t": "Toàn bộ nằm trong một cuốn sổ tiết kiệm, ở một ngân hàng gần nhà. Một chỗ duy nhất.",
+   "p": 1.0
+  },
+  {
+   "t": "Nếu một ngày nơi ấy không trả được tiền, chị Thu được trả lại bao nhiêu?",
+   "ask": 1
+  },
+  "Câu trả lời có thật, được ghi trong luật, và vừa thay đổi hồi tháng bảy năm nay.",
+  {
+   "t": "Nhưng nó có vài chữ nhỏ mà ít người đọc kỹ.",
+   "p": 1.0
+  },
+  "Cuối video, chị Thu sẽ quay lại đúng quầy giao dịch ấy.",
+  "Lần này, chị mang theo bốn cuốn sổ.",
+  "Và một câu hỏi khác hẳn câu hỏi chị vẫn hỏi suốt hai mươi lăm năm.",
+  "Đây là Biểu Đồ Biết Nói. Tiền bạc, giải thích bằng dữ liệu.",
+  "Video chỉ nhằm giáo dục, không phải lời khuyên gửi, rút hay chia tiền, và không nói về sức khoẻ của ngân hàng nào."
+ ],
+ "scenes": [
+  {
+   "type": "broll",
+   "vid": "35561857",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "THÁNG 10 NĂM 2022",
+     "at": [
+      0,
+      "Đầu"
+     ],
+     "sm": true
+    },
+    {
+     "text": "MỘT TIN ĐỒN TRÊN MẠNG XÃ HỘI",
+     "at": [
+      0,
+      "một"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 2,
+   "vid": "6229548",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "XIN RÚT TIỀN TRƯỚC HẠN",
+     "at": [
+      2,
+      "xin"
+     ],
+     "acc": true
+    },
+    {
+     "text": "chấp nhận mất lãi",
+     "at": [
+      3,
+      "chấp"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 4,
+   "date": "10/10/2022",
+   "sub": {
+    "text": "THỐNG ĐỐC: TIỀN GỬI “ĐƯỢC NHÀ NƯỚC ĐẢM BẢO TRONG MỌI TRƯỜNG HỢP”",
+    "at": 4
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "DÒNG NGƯỜI DẦN THƯA ĐI",
+     "at": 6
+    },
+    {
+     "text": "BỐN NĂM SAU · MỘT CÂU HỎI BÌNH TĨNH HƠN",
+     "at": 7,
+     "sm": true
+    },
+    {
+     "text": "VỀ CUỐN SỔ CỦA CHÍNH BẠN",
+     "at": [
+      8,
+      "về"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 9,
+   "title": "CHỊ THU",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "TUỔI",
+     "v": "52",
+     "at": 9
+    },
+    {
+     "k": "ĐỂ DÀNH 25 NĂM",
+     "v": "1,2 TỶ",
+     "at": [
+      10,
+      "một"
+     ]
+    },
+    {
+     "k": "Ở ĐÂU",
+     "v": "1 CUỐN SỔ · 1 NƠI",
+     "at": [
+      11,
+      "một"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 12,
+   "text": "Nơi ấy không trả được tiền,\nchị Thu được trả lại bao nhiêu?"
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "CÓ TRONG LUẬT · VỪA ĐỔI THÁNG 7/2026",
+     "at": 13
+    },
+    {
+     "text": "và vài chữ nhỏ ít người đọc kỹ",
+     "at": 14,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 15,
+   "vid": "8471105",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "CUỐI VIDEO",
+     "at": 15,
+     "sm": true
+    },
+    {
+     "text": "CHỊ THU QUAY LẠI QUẦY · VỚI 4 CUỐN SỔ",
+     "at": [
+      16,
+      "chị"
+     ],
+     "acc": true
+    },
+    {
+     "text": "và một câu hỏi khác",
+     "at": 17,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "brand",
+   "at": 18,
+   "sub": "TIỀN BẠC · GIẢI THÍCH BẰNG DỮ LIỆU"
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "items": [
+    {
+     "text": "CHỈ NHẰM GIÁO DỤC",
+     "at": 19,
+     "acc": true
+    },
+    {
+     "text": "không phải lời khuyên gửi, rút hay chia tiền · không nói về ngân hàng nào",
+     "at": [
+      19,
+      "không"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "MỘT TỶ HAI TRONG MỘT CUỐN SỔ"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

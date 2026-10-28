@@ -1,0 +1,303 @@
+{
+ "theme": "mim",
+ "title": "Tháng 12/2012: công ty ba người, chưa có sản phẩm, được trả giá tới 44 triệu đô",
+ "description": "Tháng 12/2012, bên hồ Tahoe, Geoffrey Hinton cùng hai học trò Alex Krizhevsky và Ilya Sutskever đem công ty mới lập ra đấu giá kín. Theo nhà báo Cade Metz (Wired, 2021, trích Genius Makers), bốn công ty trả giá từ xa, mỗi lần tăng ít nhất 1 triệu đô; khi giá tới 44 triệu đô, Hinton dừng và chọn về với Google. Giọng đọc tổng hợp; video Pexels.\n\nBản đầy đủ: https://youtu.be/Es4bogrdk-c",
+ "tags": [
+  "geoffrey hinton",
+  "alexnet",
+  "tahoe",
+  "đấu giá",
+  "cade metz",
+  "trí tuệ nhân tạo",
+  "gpu",
+  "mind in the machine"
+ ],
+ "kicker": "NGÀNH AI",
+ "sub": "TAHOE · 12.2012",
+ "acc": [
+  "ba",
+  "dừng",
+  "năm"
+ ],
+ "lines": [
+  "Công ty ba người, chưa có sản phẩm nào.",
+  "Tháng mười hai năm hai nghìn không trăm mười hai, bên hồ Tahoe, họ rao bán công ty.",
+  "Ba người: Geoffrey Hinton và hai học trò, Alex Krizhevsky, Ilya Sutskever.",
+  "Theo nhà báo Cade Metz, bốn công ty trả giá từ xa, mỗi lần tăng ít nhất một triệu đô.",
+  "Giá leo tới bốn mươi bốn triệu đô, rồi Hinton dừng cuộc đấu giá.",
+  "Ông chọn Google, nơi hợp với nghiên cứu hơn là con số cao nhất.",
+  "Thứ được định giá không phải một sản phẩm, mà là cách dạy máy nhìn.",
+  "Cách ấy từng chạy trên hai card chơi game, mỗi chiếc khoảng năm trăm đô.",
+  "Công ty ba người, chưa có sản phẩm, được trả tới bốn mươi bốn triệu đô."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "clip": "pexels:7180075",
+   "veil": 0.6,
+   "items": [
+    {
+     "text": "3 NGƯỜI",
+     "at": [
+      0,
+      "ba"
+     ],
+     "acc": true,
+     "size": 215
+    },
+    {
+     "text": "CHƯA CÓ SẢN PHẨM NÀO",
+     "at": [
+      0,
+      "chưa"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "12.2012",
+   "day": "BÊN HỒ TAHOE",
+   "sub": {
+    "text": "ĐẤU GIÁ KÍN",
+    "at": [
+     1,
+     "rao"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "BA NGƯỜI ẤY",
+   "cards": [
+    {
+     "k": "GIÁO SƯ",
+     "v": "GEOFFREY HINTON",
+     "at": [
+      2,
+      "Geoffrey"
+     ]
+    },
+    {
+     "k": "HAI HỌC TRÒ",
+     "v": "ALEX · ILYA",
+     "at": [
+      2,
+      "hai"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "clip": "pexels:8889195",
+   "veil": 0.6,
+   "items": [
+    {
+     "text": "THEO CADE METZ",
+     "at": [
+      3,
+      "Cade"
+     ],
+     "sm": true,
+     "size": 52
+    },
+    {
+     "text": "4 CÔNG TY",
+     "at": [
+      3,
+      "bốn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "TRẢ GIÁ TỪ XA · QUA EMAIL",
+     "at": [
+      3,
+      "từ"
+     ],
+     "sm": true,
+     "size": 56
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": [
+    3,
+    "mỗi"
+   ],
+   "to": 44,
+   "suffix": " TRIỆU ĐÔ",
+   "label": "GIÁ KHI HINTON DỪNG",
+   "sub": {
+    "text": "MỖI LẦN TĂNG ÍT NHẤT 1 TRIỆU ĐÔ",
+    "at": [
+     3,
+     "ít"
+    ]
+   },
+   "until": [
+    4,
+    "bốn"
+   ]
+  },
+  {
+   "type": "slam",
+   "at": [
+    4,
+    "rồi"
+   ],
+   "text": "HINTON DỪNG",
+   "sub": "KẾT THÚC CUỘC ĐẤU GIÁ"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "clip": "pexels:32005335",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "CHỌN GOOGLE",
+     "at": [
+      5,
+      "Google"
+     ],
+     "acc": true
+    },
+    {
+     "text": "nơi hợp với nghiên cứu, không phải số cao nhất",
+     "at": [
+      5,
+      "nơi"
+     ],
+     "sm": true,
+     "size": 40
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 6,
+   "title": "Thứ được định giá",
+   "nodes": [
+    {
+     "text": "KHÔNG PHẢI SẢN PHẨM",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      6,
+      "không"
+     ]
+    },
+    {
+     "text": "MÀ LÀ CÁCH DẠY MÁY NHÌN",
+     "x": 0.5,
+     "y": 0.7,
+     "at": [
+      6,
+      "cách"
+     ],
+     "c": "acc",
+     "w": 760
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      6,
+      "mà"
+     ],
+     "bend": 0
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "HAI CON SỐ",
+   "rows": [
+    {
+     "k": "MỖI CARD CHƠI GAME",
+     "v": "KHOẢNG 500 ĐÔ",
+     "at": [
+      7,
+      "khoảng"
+     ]
+    },
+    {
+     "k": "CẢ CÔNG TY",
+     "v": "44 TRIỆU ĐÔ",
+     "at": [
+      8,
+      "công"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    8,
+    "được"
+   ],
+   "clip": "pexels:6266434",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "44 TRIỆU ĐÔ",
+     "at": [
+      8,
+      "bốn"
+     ],
+     "acc": true,
+     "size": 137
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "Wired (2021) — trích từ Cade Metz, Genius Makers (2021)",
+  "Krizhevsky, Sutskever, Hinton — ImageNet Classification with Deep Convolutional Neural Networks (NeurIPS 2012)"
+ ],
+ "say": {
+  "google": "Gu-gồ",
+  "card": "các",
+  "game": "ghêm",
+  "hinton": "Hin-tần",
+  "geoffrey": "Giép-phri",
+  "alex": "A-lếch",
+  "krizhevsky": "Cri-dép-xki",
+  "ilya": "I-li-a",
+  "sutskever": "Xút-xkê-vơ",
+  "tahoe": "Ta-hô",
+  "cade": "Kết",
+  "metz": "Mét"
+ },
+ "rules": 2,
+ "mix": true,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "4": 0.3,
+   "5": 0.4,
+   "6": 0.3,
+   "7": 0.3
+  }
+ },
+ "sources_internal": [
+  "data/long/mim-ai-gpu/factcheck.md dòng 9 (Wired 2021, trích Genius Makers, Cade Metz: 12/2012, 4 công ty, từ xa, bước tăng >= 1 triệu USD, dừng ở 44 triệu, chọn Google)",
+  "data/long/mim-ai-gpu/factcheck.md dòng 12 (GTX 580 khoảng 499 USD, SECONDARY)"
+ ]
+}

@@ -1,0 +1,268 @@
+{
+ "topic": "mim-turing-bombe",
+ "chapter": 2,
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "BA NGƯỜI Ở WARSAW"
+ },
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "BA NGƯỜI\nỞ WARSAW",
+   "sub": "12.1932 · WARSAW",
+   "bg": "enigmaWarsaw",
+   "titleAt": [
+    0,
+    "rejewski"
+   ]
+  },
+  {
+   "type": "photo",
+   "at": [
+    0,
+    "rejewski"
+   ],
+   "img": "enigmaWarsaw",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "REJEWSKI · RÓŻYCKI · ZYGALSKI",
+    "v": "THÁNG 12 NĂM 1932",
+    "at": [
+     0,
+     "rejewski"
+    ]
+   },
+   "kin": [
+    {
+     "text": "NỀN MÓNG TỪ BA LAN",
+     "at": [
+      0,
+      "rejewski"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": [
+    2,
+    "cung"
+   ],
+   "day": "CUNG SACHSEN · WARSAW",
+   "date": "31.12.1932",
+   "sub": {
+    "text": "ĐIỆN ENIGMA ĐẦU TIÊN ĐƯỢC GIẢI",
+    "at": [
+     2,
+     "cung"
+    ]
+   }
+  },
+  {
+   "type": "broll",
+   "at": [
+    3,
+    "gustave"
+   ],
+   "vid": "31802320",
+   "veil": 0.62,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MỘT HỒ SƠ ĐỔI HƯỚNG",
+     "at": [
+      3,
+      "gustave"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": [
+    4,
+    "cyclometer"
+   ],
+   "bg": "enigmaWarsaw",
+   "items": [
+    {
+     "year": "12.1932",
+     "text": "PHÁ ENIGMA"
+    },
+    {
+     "year": "1936",
+     "text": "CYCLOMETER"
+    },
+    {
+     "year": "09.1938",
+     "text": "BOMBA"
+    },
+    {
+     "year": "07.1939",
+     "text": "PYRY"
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": [
+    6,
+    "henryk"
+   ],
+   "img": "enigmaPair",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "TẤM ĐỤC LỖ ZYGALSKI",
+    "v": "TÌM THỨ TỰ RÔ-TO",
+    "at": [
+     6,
+     "henryk"
+    ]
+   },
+   "kin": [
+    {
+     "text": "THAY ĐỔI KHÔNG KẾT THÚC CUỘC CHƠI",
+     "at": [
+      6,
+      "henryk"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    8,
+    "câu"
+   ],
+   "items": [
+    {
+     "text": "ĐỔI CÁCH ĐẶT CÂU HỎI",
+     "at": [
+      8,
+      "câu"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "map",
+   "at": [
+    9,
+    "mật"
+   ],
+   "geo": "europe",
+   "pins": [
+    {
+     "name": "Warsaw"
+    },
+    {
+     "name": "Pyry"
+    },
+    {
+     "name": "Paris"
+    },
+    {
+     "name": "Bletchley"
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": [
+    11,
+    "gchq"
+   ],
+   "title": "SÁU RĂNG CỦA KHÓA",
+   "srcnote": "MỖI CHƯƠNG THÊM MỘT MẮT XÍCH",
+   "rows": [
+    {
+     "k": "BỨC THƯ",
+     "v": "NGƯỜI XỬ LÝ MÁY",
+     "at": [
+      11,
+      "gchq"
+     ]
+    },
+    {
+     "k": "KHÓA NGÀY",
+     "v": "ÁP LỰC THỜI GIAN",
+     "at": [
+      11,
+      "gchq"
+     ]
+    },
+    {
+     "k": "BA LAN",
+     "v": "CÁCH ĐẶT CÂU HỎI",
+     "at": [
+      11,
+      "gchq"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": [
+    12,
+    "quà"
+   ],
+   "img": "enigmaWarsaw",
+   "tone": "bw",
+   "head": "TRI THỨC KHÔNG BIẾN MẤT",
+   "side": {
+    "k": "TỪ PYRY",
+    "h": "CÁCH GC&CS TIẾP CẬN ENIGMA",
+    "lines": [
+     {
+      "text": "CÁCH GC&CS TIẾP CẬN ENIGMA",
+      "at": [
+       12,
+       "quà"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "at": [
+    14,
+    "paris"
+   ],
+   "text": "MỘT Ý TƯỞNG ĐI TỪ WARSAW\nĐẾN PARIS RA SAO?"
+  }
+ ],
+ "title": "Ba người ở Warsaw",
+ "lines": [
+  {
+   "t": "Tháng 12 năm 1932, Marian Rejewski cùng Jerzy Różycki và Henryk Zygalski đã lần đầu phá được Enigma Đức.",
+   "p": 0.8
+  },
+  "Đó là ba người Ba Lan, không phải phần mở đầu trang trí cho câu chuyện về một thiên tài Anh.",
+  "Cơ quan Tình báo Ba Lan ghi rằng điện Enigma đầu tiên được họ giải tại Cung Sachsen ở Warsaw ngày 31 tháng 12 năm 1932.",
+  "Trước đó, ngày 8 tháng 12, Gustave Bertrand đã mang tài liệu đến Warsaw.",
+  "Nhóm Ba Lan tiếp tục làm cyclometer vào năm 1936.",
+  "Khi người Đức thay đổi Enigma vào tháng 9 năm 1938, Rejewski và đồng nghiệp tạo ra bomba kryptologiczna để tự động hóa việc phá mã.",
+  "Henryk Zygalski còn có những tấm giấy đục lỗ hỗ trợ tìm thứ tự rô-to.",
+  "Chi tiết này quan trọng vì nó cho thấy một thay đổi của đối phương không kết thúc cuộc chơi.",
+  "Nó buộc người giải mã đổi cách đặt câu hỏi.",
+  "Ngày 25 và 26 tháng 7 năm 1939, các nhà mật mã Ba Lan, Pháp và Anh gặp nhau gần Warsaw.",
+  "Đoàn Anh có Alastair Denniston và Dilly Knox.",
+  "Theo GCHQ, phía Ba Lan trình bày bomba kryptologiczna và những tiến bộ họ đã có với Enigma.",
+  "Tri thức ấy không phải một món quà đơn giản được trao một lần rồi biến mất.",
+  "Nó làm thay đổi cách GC&CS ở Anh tiếp cận Enigma.",
+  "Và vài tháng sau, nó đưa Alan Turing tới Paris."
+ ]
+}

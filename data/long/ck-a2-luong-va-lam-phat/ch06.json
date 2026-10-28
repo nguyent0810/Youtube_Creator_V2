@@ -1,0 +1,251 @@
+{
+ "title": "Ba con số của riêng bạn",
+ "lines": [
+  {
+   "t": "Con số thứ nhất: mức tăng thực của lương. Một phép chia.",
+   "p": 0.8
+  },
+  "Lấy lương tháng này chia cho lương cùng tháng năm ngoái.",
+  {
+   "t": "Rồi chia tiếp cho một cộng mức lạm phát, viết dưới dạng số thập phân.",
+   "p": 1.0
+  },
+  "Thử với anh Tuấn: giả sử năm ngoái lương anh là mười hai triệu rưỡi, năm nay mười ba triệu.",
+  "Mười ba chia mười hai rưỡi là một phẩy không bốn, tức tăng bốn phần trăm.",
+  "Chia tiếp cho mức giá tăng khoảng bốn phẩy năm phần trăm, kết quả nhỏ hơn một một chút.",
+  {
+   "t": "Sức mua của anh giảm khoảng nửa phần trăm, dù vừa được tăng lương. Rất nhẹ thôi.",
+   "p": 1.0
+  },
+  "Lớn hơn một, bạn đang khá lên.",
+  {
+   "t": "Nhỏ hơn một, bạn đang nghèo đi, dù phiếu lương có tăng.",
+   "p": 1.0
+  },
+  "Con số thứ hai: lạm phát của riêng bạn.",
+  "Ghi ra ba khoản chi lớn nhất của nhà mình, như tiền nhà, ăn uống, đi lại.",
+  "Mỗi khoản chiếm bao nhiêu phần trong tổng chi, và giá của nó năm nay tăng bao nhiêu.",
+  {
+   "t": "Cộng lại theo tỷ lệ ấy, bạn có một con số gần với cảm giác của mình hơn con số cả nước. Gần hơn nhiều.",
+   "p": 1.0
+  },
+  "Con số thứ ba: con số năm hai nghìn không trăm ba mươi sáu.",
+  "Lấy mức chi tiêu hôm nay, nhân với một cộng lạm phát, mười lần liên tiếp.",
+  {
+   "t": "Với ba phần trăm, là nhân khoảng một phẩy ba bốn. Với năm phần trăm, khoảng một phẩy sáu ba.",
+   "p": 1.0
+  },
+  "Như mọi video của kênh, đây là phần nói rõ giới hạn.",
+  "Thứ nhất, chỉ số giá là con số bình quân, và năm nay mình tạm dùng mức chín tháng cho cả năm.",
+  "Thứ hai, tỷ trọng giỏ hàng của anh Tuấn và chị Mai là giả định của ví dụ.",
+  {
+   "t": "Thứ ba, ba mức lạm phát cho mười năm tới là giả định để so sánh, không phải dự báo. Chỉ để so sánh.",
+   "p": 1.0
+  },
+  "Quay lại hai tờ giấy của anh Tuấn.",
+  "Phong bì mười triệu năm hai nghìn không trăm mười sáu.",
+  "Phiếu lương mười ba triệu năm hai nghìn không trăm hai mươi sáu.",
+  {
+   "t": "Con số lớn hơn chưa chắc mua được nhiều hơn. Chưa chắc.",
+   "p": 1.0
+  },
+  "Lạm phát không lấy tiền khỏi túi bạn.",
+  "Nó lặng lẽ làm mỗi tờ tiền nhẹ đi một chút, năm này qua năm khác. Rất chậm.",
+  "Còn bạn, năm nay khoản chi nào của nhà bạn tăng nhanh nhất?",
+  "Kể cho mình nghe ở phần bình luận nhé."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "6",
+   "k": "PHẦN CUỐI",
+   "title": "BA CON SỐ\nCỦA RIÊNG BẠN",
+   "sub": "VÀ KHI NÀO PHÉP TÍNH KHÔNG ĐÚNG",
+   "vid": "5466772",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Con"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "1 · TĂNG THỰC CỦA LƯƠNG",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "lương tháng này ÷ cùng tháng năm ngoái ÷ (1 + lạm phát)",
+     "at": 2,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "VÍ DỤ: ANH TUẤN",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "rows": [
+    {
+     "k": "NĂM NGOÁI → NĂM NAY",
+     "v": "12,5 → 13 TRIỆU",
+     "at": 3
+    },
+    {
+     "k": "13 ÷ 12,5",
+     "v": "1,04 · +4%",
+     "at": 4
+    },
+    {
+     "k": "÷ 1,045",
+     "v": "< 1",
+     "at": 5
+    }
+   ],
+   "total": {
+    "k": "SỨC MUA",
+    "v": "≈ −0,5%",
+    "at": 6
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "2 · LẠM PHÁT CỦA RIÊNG BẠN",
+     "at": 9,
+     "acc": true
+    },
+    {
+     "text": "3 khoản chi lớn nhất · tỷ trọng · mức tăng giá",
+     "at": 10,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "3 · CON SỐ NĂM 2036",
+     "at": 13,
+     "acc": true
+    },
+    {
+     "text": "chi tiêu hôm nay × (1 + lạm phát)^10",
+     "at": 14,
+     "sm": true
+    },
+    {
+     "text": "3% → × 1,34 · 5% → × 1,63",
+     "at": 15
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 16,
+   "title": "KHI NÀO PHÉP TÍNH KHÔNG ĐÚNG",
+   "rows": [
+    {
+     "k": "1",
+     "v": "CPI LÀ BÌNH QUÂN · 2026 MỚI 9 THÁNG",
+     "at": 17
+    },
+    {
+     "k": "2",
+     "v": "TỶ TRỌNG GIỎ LÀ GIẢ ĐỊNH",
+     "at": 18
+    },
+    {
+     "k": "3",
+     "v": "3–5% LÀ GIẢ ĐỊNH, KHÔNG DỰ BÁO",
+     "at": 19
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 20,
+   "title": "HAI TỜ GIẤY CỦA ANH TUẤN (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "PHONG BÌ 2016",
+     "v": 10,
+     "lbl": "10",
+     "at": 21
+    },
+    {
+     "k": "PHIẾU LƯƠNG 2026",
+     "v": 13,
+     "lbl": "13",
+     "at": 22
+    },
+    {
+     "k": "2026 · THEO GIÁ 2016",
+     "v": 9.42,
+     "lbl": "≈ 9,4",
+     "at": 23,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 24,
+   "vid": "5909917",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "LẠM PHÁT KHÔNG LẤY TIỀN KHỎI TÚI BẠN",
+     "at": 24,
+     "sm": true
+    },
+    {
+     "text": "NÓ LÀM MỖI TỜ TIỀN NHẸ ĐI",
+     "at": 25,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 26,
+   "text": "Năm nay khoản chi nào\ncủa nhà bạn tăng nhanh nhất?"
+  },
+  {
+   "type": "kinetic",
+   "at": 27,
+   "items": [
+    {
+     "text": "KỂ CHO MÌNH NGHE",
+     "at": 27
+    },
+    {
+     "text": "Ở PHẦN BÌNH LUẬN",
+     "at": [
+      27,
+      "ở"
+     ],
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "PHẦN CUỐI",
+  "t": "BA CON SỐ CỦA RIÊNG BẠN"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.11
+ }
+}

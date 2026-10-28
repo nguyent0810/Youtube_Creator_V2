@@ -1,0 +1,224 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-cx-hai-nguoi-nhao-lon",
+ "format": "chuyen-xua",
+ "hook_type": "pov",
+ "open_shot": "thang-bang",
+ "voice": "Thục Đoan",
+ "music": "floating_cities.mp3",
+ "music_gain": 0.16,
+ "gap": 0.1,
+ "series": "Chuyện xưa · Tập 11",
+ "title": "Lo cho cả nhà đến kiệt sức?",
+ "kicker": "CHUYỆN XƯA · TẬP 11",
+ "sub": "KINH TƯƠNG ƯNG 47.19",
+ "acc": [
+  "giữ",
+  "mình",
+  "kiệt"
+ ],
+ "lines": [
+  "Lo cho cả nhà đến kiệt sức, mà ai vẫn chênh vênh?",
+  "Chuyện xưa kể: hai thầy trò làm xiếc trên một cây sào cao.",
+  "Thầy dựng sào, trò trèo lên vai thầy.",
+  "Thầy bảo: con giữ cho thầy, thầy giữ cho con. Vậy là an toàn.",
+  "Nhưng trò lắc đầu.",
+  "Không đâu thầy. Mỗi người tự giữ thăng bằng của mình.",
+  "Giữ mình cho vững, thì cả hai mới an toàn xuống đất.",
+  "Kinh Tương Ưng, diễn ý: giữ mình là giữ người.",
+  "Thật ra, giữ mình không phải ích kỷ. Bạn ngã, ai giữ người khác?",
+  "Tối nay, cho mình mười phút. Không làm gì cho ai cả.",
+  "Ai đang ôm hết cho cả nhà? Gửi họ chuyện này."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:32337292",
+   "items": [
+    {
+     "text": "KIỆT SỨC VÌ LO?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "chuyện xưa · tập 11",
+     "at": [
+      0,
+      "cả"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Chuyện xưa",
+   "nodes": [
+    {
+     "text": "THẦY DỰNG SÀO",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      2,
+      "thầy"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "TRÒ TRÈO LÊN VAI",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      2,
+      "trò"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "SN 47.19 · SUTTACENTRAL"
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "CON GIỮ THẦY\nTHẦY GIỮ CON",
+   "fx": "zoom"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "clip": "pexels:35418939",
+   "items": [
+    {
+     "text": "TRÒ LẮC ĐẦU",
+     "at": [
+      4,
+      "trò"
+     ],
+     "acc": true
+    },
+    {
+     "text": "không đâu thầy",
+     "at": [
+      4,
+      "đầu."
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "LỜI TRÒ",
+   "cards": [
+    {
+     "k": "GIỮ MÌNH",
+     "v": "CHO VỮNG",
+     "at": [
+      6,
+      "vững,"
+     ]
+    },
+    {
+     "k": "CẢ HAI",
+     "v": "AN TOÀN",
+     "at": [
+      6,
+      "an"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "source",
+   "at": 7,
+   "source": "KINH TƯƠNG ƯNG 47.19",
+   "ref": "Kinh Người Làm Xiếc",
+   "snippet": "Giữ mình là giữ người, [[giữ người là giữ mình]].",
+   "hlAt": [
+    7,
+    "người"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "veil": 0.4,
+   "clip": "pexels:8011205",
+   "items": [
+    {
+     "text": "BẠN NGÃ, AI GIỮ?",
+     "at": [
+      8,
+      "bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "giữ mình không phải ích kỷ",
+     "at": [
+      8,
+      "giữ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 9,
+   "to": 10,
+   "suffix": " PHÚT CHO MÌNH",
+   "label": "TỐI NAY · KHÔNG LÀM GÌ CHO AI",
+   "until": [
+    9,
+    "phút."
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 10,
+   "veil": 0.4,
+   "clip": "pexels:6565090",
+   "items": [
+    {
+     "text": "GỬI HỌ CHUYỆN NÀY",
+     "at": [
+      10,
+      "gửi"
+     ],
+     "acc": true
+    },
+    {
+     "text": "người đang ôm hết cho cả nhà",
+     "at": [
+      10,
+      "ai"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/sn47.19/en/sujato"
+ ],
+ "description": "Lo cho cả nhà đến kiệt sức?\n\nNguồn: https://suttacentral.net/sn47.19/en/sujato"
+}

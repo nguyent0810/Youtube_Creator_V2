@@ -1,0 +1,325 @@
+{
+ "title": "Những \"máy tính\" biết thở",
+ "lines": [
+  {
+   "t": "Ở Los Alamos năm 1943, chữ \"máy tính\" trước hết là tên một nghề.",
+   "p": 0.8
+  },
+  "Người làm nghề ấy ngồi trước những chiếc máy cộng cơ khí: Marchant, Friden, Monroe.",
+  {
+   "t": "Họ làm tính theo một tờ hướng dẫn, hết bước này sang bước khác.",
+   "p": 1.0
+  },
+  "Kênh mình từng kể về những \"máy tính\" người ở Langley của NASA.",
+  "Ở Los Alamos, nghề ấy còn phải giữ thêm một bí mật quốc gia.",
+  "Mùa xuân năm 1943, nhóm tính tay chỉ có chừng mười hai người tình nguyện.",
+  "Nhiều người là vợ của các nhà khoa học, như Mici Teller, vợ nhà vật lý Edward Teller.",
+  "Lý do khá thực tế.",
+  {
+   "t": "Họ đã sống sẵn trên núi, không cần thêm nhà ở, cũng không cần điều tra an ninh mới.",
+   "p": 1.0
+  },
+  "Người giao bài cho họ là Mary Frankel, vợ nhà vật lý Stanley Frankel.",
+  "Bà viết mỗi bài toán ra một tờ mẫu.",
+  "Lấy số này ở đâu, cộng với số nào, chia đôi, rồi ghi vào ô nào.",
+  {
+   "t": "Một bài lớn được chẻ ra, để nhiều người cùng làm một lúc.",
+   "p": 1.0
+  },
+  "Cuối mùa hè, nhóm có chừng hai mươi người, nhờ thêm các nữ quân nhân.",
+  "Về sau, nhóm có hai mươi lăm người, đông nhất Ban Lý thuyết.",
+  "Phòng tính nằm trên tầng hai một toà nhà gỗ dựng vội.",
+  "Máy kêu lạch cạch suốt ngày.",
+  "Mùa nóng, bụi xe tải theo cửa sổ bay vào, mài mòn máy.",
+  "Bụi là kẻ thù.",
+  {
+   "t": "Nên những phép tính quan trọng phải làm hai lần.",
+   "p": 1.0
+  },
+  "Còn máy hỏng thì sao?",
+  "Ban đầu, máy phải gửi xuống Santa Fe hoặc Albuquerque để sửa.",
+  "Feynman và đồng nghiệp Nicholas Metropolis thấy chờ như vậy quá lâu.",
+  "Họ tháo nắp máy ra, dù quy định ghi rõ: tự tháo nắp thì hãng không chịu trách nhiệm.",
+  {
+   "t": "Rồi họ tự học sửa, ngay trong văn phòng của mình.",
+   "p": 1.0
+  },
+  "Feynman kể, về sau ông lo hết phần máy tính, còn một anh trong xưởng lo máy chữ.",
+  "Nhưng đến cuối năm 1943, cả nhóm tính tay vẫn không theo kịp nhu cầu.",
+  "Và bài toán sắp tới còn lớn hơn nhiều."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "NHỮNG “MÁY TÍNH”\nBIẾT THỞ",
+   "sub": "NHÓM TÍNH TAY · 1943",
+   "bg": "marchant",
+   "titleAt": [
+    0,
+    "Ở"
+   ]
+  },
+  {
+   "type": "print",
+   "at": 1,
+   "img": "marchant",
+   "tone": "color",
+   "illus": "ẢNH MINH HỌA · MÁY MARCHANT ĐỜI KHÁC, KHÔNG PHẢI MÁY Ở LOS ALAMOS",
+   "side": {
+    "k": "MÁY CỘNG CƠ KHÍ",
+    "h": "Marchant\nFriden · Monroe",
+    "lines": [
+     {
+      "text": "làm tính theo *tờ hướng dẫn*",
+      "at": [
+       2,
+       "hướng"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "NHƯ LANGLEY CỦA NASA",
+     "at": 3,
+     "sm": true
+    },
+    {
+     "text": "+ MỘT BÍ MẬT QUỐC GIA",
+     "at": 4,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 0,
+   "to": 12,
+   "until": [
+    5,
+    "người"
+   ],
+   "suffix": " NGƯỜI",
+   "label": "NHÓM TÍNH TAY · MÙA XUÂN 1943",
+   "sub": {
+    "text": "PHẦN LỚN LÀ NGƯỜI TÌNH NGUYỆN · N. LEWIS · TRINITY BY THE NUMBERS (LANL)",
+    "at": [
+     5,
+     "tình"
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 6,
+   "title": "VÌ SAO LÀ VỢ CÁC NHÀ KHOA HỌC",
+   "srcnote": "N. LEWIS · TRINITY BY THE NUMBERS (LANL)",
+   "rows": [
+    {
+     "k": "VÍ DỤ",
+     "v": "MICI TELLER · JEAN BACHER",
+     "at": [
+      6,
+      "vợ"
+     ]
+    },
+    {
+     "k": "NHÀ Ở",
+     "v": "ĐÃ CÓ SẴN",
+     "at": [
+      8,
+      "nhà"
+     ]
+    },
+    {
+     "k": "AN NINH",
+     "v": "KHÔNG CẦN ĐIỀU TRA MỚI",
+     "at": [
+      8,
+      "an"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "file",
+   "at": 9,
+   "k": "NGƯỜI GIAO BÀI",
+   "name": "MARY FRANKEL",
+   "desc": "Bằng tâm lý học và toán · chuyên gia phương pháp số",
+   "rows": [
+    {
+     "k": "TỜ MẪU",
+     "v": "lấy *a* ở đâu · lấy *b* ở đâu",
+     "at": 11
+    },
+    {
+     "k": "PHÉP TÍNH",
+     "v": "(a + b) ÷ 2",
+     "at": [
+      11,
+      "chia"
+     ]
+    },
+    {
+     "k": "KẾT QUẢ",
+     "v": "ghi vào ô nào",
+     "at": [
+      11,
+      "ghi"
+     ]
+    }
+   ],
+   "label": {
+    "k": "NGUỒN",
+    "v": "VÍ DỤ NỘI SUY TUYẾN TÍNH · B. J. ARCHER · LA-UR-21-20164 (LANL)",
+    "at": 10
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 12,
+   "items": [
+    {
+     "text": "MỘT BÀI LỚN · CHẺ RA",
+     "at": 12,
+     "acc": true
+    },
+    {
+     "text": "nhiều người làm cùng một lúc",
+     "at": [
+      12,
+      "nhiều"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 13,
+   "title": "NHÓM TÍNH TAY LỚN DẦN",
+   "unit": "N. LEWIS · TRINITY BY THE NUMBERS (LANL) · NGƯỜI",
+   "max": 30,
+   "items": [
+    {
+     "k": "XUÂN 1943",
+     "v": 12,
+     "lbl": "≈ 12",
+     "at": 13
+    },
+    {
+     "k": "CUỐI HÈ 1943",
+     "v": 20,
+     "lbl": "≈ 20",
+     "at": [
+      13,
+      "nữ"
+     ]
+    },
+    {
+     "k": "VỀ SAU",
+     "v": 25,
+     "lbl": "25",
+     "at": 14,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 15,
+   "img": "bldgT",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.5,
+   "illus": "ẢNH MINH HỌA · MỘT TOÀ NHÀ Ở KHU KỸ THUẬT",
+   "kin": [
+    {
+     "text": "MÁY KÊU LẠCH CẠCH SUỐT NGÀY",
+     "at": 16
+    }
+   ],
+   "label": {
+    "k": "TOÀ NHÀ T · KHU KỸ THUẬT LOS ALAMOS",
+    "v": "MANHATTAN DISTRICT HISTORY",
+    "at": 15
+   }
+  },
+  {
+   "type": "slam",
+   "at": 17,
+   "text": "BỤI",
+   "sub": "MÀI MÒN MÁY · PHÉP TÍNH QUAN TRỌNG LÀM HAI LẦN"
+  },
+  {
+   "type": "question",
+   "at": 20,
+   "text": "Còn máy hỏng thì sao?"
+  },
+  {
+   "type": "ledger",
+   "at": 21,
+   "title": "XƯỞNG SỬA MÁY TỰ PHÁT",
+   "srcnote": "LOS ALAMOS FROM BELOW (FEYNMAN, 1976) · N. LEWIS · TRINITY BY THE NUMBERS (LANL)",
+   "rows": [
+    {
+     "k": "BAN ĐẦU",
+     "v": "GỬI XUỐNG SANTA FE / ALBUQUERQUE",
+     "at": 21
+    },
+    {
+     "k": "FEYNMAN + METROPOLIS",
+     "v": "TỰ THÁO NẮP MÁY",
+     "at": [
+      23,
+      "tháo"
+     ]
+    },
+    {
+     "k": "QUY ĐỊNH",
+     "v": "“THÁO NẮP: HÃNG MIỄN TRÁCH”",
+     "at": [
+      23,
+      "quy"
+     ]
+    },
+    {
+     "k": "VỀ SAU",
+     "v": "FEYNMAN LO PHẦN MÁY TÍNH",
+     "at": 25
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 26,
+   "items": [
+    {
+     "text": "CUỐI 1943: VẪN KHÔNG THEO KỊP",
+     "at": 26
+    },
+    {
+     "text": "BÀI TOÁN SẮP TỚI CÒN LỚN HƠN",
+     "at": 27,
+     "acc": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "NHỮNG “MÁY TÍNH” BIẾT THỞ"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.1
+ }
+}

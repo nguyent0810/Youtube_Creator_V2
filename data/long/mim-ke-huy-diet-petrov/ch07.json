@@ -1,0 +1,362 @@
+{
+ "title": "Con mắt thứ hai im lặng",
+ "lines": [
+  {
+   "t": "Quay lại phòng chỉ huy.",
+   "p": 0.8
+  },
+  "Petrov cũng có một con mắt thứ hai.",
+  "Theo Podvig, mỗi vệ tinh Oko có một kính thiên văn chính, gương rộng chừng nửa mét.",
+  "Ngoài ra còn vài kính nhỏ, nhiều khả năng nhìn Trái Đất ở góc rộng, cả hồng ngoại lẫn ánh sáng thường.",
+  "Người vận hành dùng chúng như một kênh quan sát phụ.",
+  "Ông tả lại màn hình ấy với tờ báo năm 2004.",
+  {
+   "t": "Trên màn hình là lãnh thổ nước Mỹ, nhìn từ vệ tinh, trong dải quang học và trong hồng ngoại.",
+   "q": 1,
+   "tr": 1
+  },
+  {
+   "t": "Nhưng chỉ nhìn thôi thì không đủ để quyết định. Cần một trọng tài vô tư, tức là máy tính.",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Đêm ấy, con mắt thứ hai nói gì?",
+  "Với BBC, ông kể một nhóm chuyên viên theo dõi vệ tinh báo rằng họ không thấy tên lửa nào.",
+  {
+   "t": "Nghe như lời giải đáp.",
+   "p": 1.0
+  },
+  "Nhưng bài năm 2004 thêm một chi tiết làm nó yếu đi.",
+  "Nhìn trực tiếp, không qua hồng ngoại, thì chẳng thấy gì cả.",
+  {
+   "t": "Mà theo ông, ngày thường cũng hay như thế.",
+   "p": 1.0
+  },
+  "Và BBC ghi rõ: những người ấy chỉ là bộ phận hỗ trợ.",
+  "Quy trình nói quyết định phải dựa trên số liệu của máy tính.",
+  {
+   "t": "Và quyết định ấy thuộc về người trực.",
+   "p": 1.0
+  },
+  "Còn radar mặt đất thì sao?",
+  "Nhớ con số ở chương một chứ: radar cho chừng mười ba phút cảnh báo, vệ tinh cho chừng ba mươi.",
+  "Nếu tên lửa là thật, radar sẽ còn phải chờ nhiều phút nữa mới thấy nó.",
+  {
+   "t": "Chiếc ghế này không có nhiều phút như thế.",
+   "p": 1.0
+  },
+  "Có một điều khác làm Petrov nghi, theo lời ông với BBC.",
+  "Chính là cảnh báo quá mạnh, quá rõ ràng.",
+  "Mục tiêu phải đi qua mọi tầng kiểm tra, và ông không chắc điều đó có thể xảy ra trong hoàn cảnh ấy.",
+  "Bài năm 2004 thì ghi một câu thẳng thừng hơn.",
+  {
+   "t": "Máy tính, theo định nghĩa, là đồ ngốc. Ai biết nó sẽ nhận nhầm cái gì thành một vụ phóng.",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Đó là mẩu tin cuối cùng của bạn.",
+  "Máy nói chắc chắn.",
+  "Kênh nhìn bằng mắt không thấy gì, nhưng nó vốn hay không thấy gì.",
+  "Radar thì chưa thể thấy.",
+  "Lần hỏi cuối: bạn báo lên, hay chưa?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "7",
+   "k": "CHƯƠNG BẢY",
+   "title": "CON MẮT THỨ HAI\nIM LẶNG",
+   "sub": "KÊNH QUAN SÁT PHỤ",
+   "bg": "namerica",
+   "titleAt": [
+    0,
+    "quay"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "MỘT CON MẮT THỨ HAI",
+     "at": [
+      1,
+      "con"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "VỆ TINH OKO · BÊN TRONG",
+   "srcnote": "PODVIG 2002 · TR. 40",
+   "rows": [
+    {
+     "k": "KÍNH CHÍNH",
+     "v": "GƯƠNG ≈ 50 CM · HỒNG NGOẠI",
+     "at": [
+      2,
+      "kính"
+     ]
+    },
+    {
+     "k": "KÍNH NHỎ",
+     "v": "GÓC RỘNG · HỒNG NGOẠI + THƯỜNG?",
+     "at": 3
+    },
+    {
+     "k": "DÙNG ĐỂ",
+     "v": "KÊNH QUAN SÁT PHỤ",
+     "at": [
+      4,
+      "kênh"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 5,
+   "img": "namerica",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.5,
+   "illus": "ẢNH MINH HỌA",
+   "kin": [
+    {
+     "text": "LÃNH THỔ MỸ NHÌN TỪ VỆ TINH",
+     "at": [
+      5,
+      "màn"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "BẮC MỸ NHÌN TỪ VỆ TINH SUOMI NPP",
+    "v": "ẢNH NASA / NOAA · 2012",
+    "at": 5
+   }
+  },
+  {
+   "type": "quote",
+   "at": 6,
+   "text": "На экране — территория США, вид со спутников… в оптическом диапазоне… и в инфракрасном.",
+   "by": "S. PETROV · MOSKOVSKIYE NOVOSTI · 2004",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 6,
+   "typeAt": [
+    6,
+    "trên"
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 7,
+   "text": "Но просто наблюдать — этого мало для принятия решения. Нужен судья беспристрастный. То бишь компьютер.",
+   "by": "S. PETROV · MOSKOVSKIYE NOVOSTI · 2004",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 7,
+   "typeAt": [
+    7,
+    "nhưng"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "ĐÊM ẤY, CON MẮT THỨ HAI NÓI GÌ?",
+     "at": 8,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 9,
+   "title": "CON MẮT THỨ HAI · HAI BẢN KỂ",
+   "srcnote": "BBC 2013 · MOSKOVSKIYE NOVOSTI 2004",
+   "rows": [
+    {
+     "k": "BBC 2013",
+     "v": "QUAN SÁT: KHÔNG THẤY TÊN LỬA",
+     "at": [
+      9,
+      "không"
+     ]
+    },
+    {
+     "k": "BẢN 2004",
+     "v": "NHÌN TRỰC TIẾP: CHẲNG THẤY GÌ",
+     "at": 12
+    },
+    {
+     "k": "NHƯNG",
+     "v": "NGÀY THƯỜNG CŨNG HAY NHƯ THẾ",
+     "at": 13
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 14,
+   "items": [
+    {
+     "text": "chỉ là bộ phận hỗ trợ · BBC",
+     "at": 14,
+     "sm": true
+    },
+    {
+     "text": "QUYẾT ĐỊNH DỰA TRÊN SỐ LIỆU MÁY TÍNH",
+     "at": 15,
+     "acc": true
+    },
+    {
+     "text": "VÀ THUỘC VỀ NGƯỜI TRỰC",
+     "at": 16
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 17,
+   "title": "CẢNH BÁO TÊN LỬA MỸ · NHẮC LẠI CHƯƠNG MỘT",
+   "unit": "PHÚT · PFIAB 1990",
+   "max": 35,
+   "items": [
+    {
+     "k": "VỆ TINH",
+     "v": 30,
+     "lbl": "≈ 30",
+     "at": [
+      18,
+      "vệ"
+     ],
+     "acc": true
+    },
+    {
+     "k": "RADAR MẶT ĐẤT",
+     "v": 13,
+     "lbl": "≈ 13",
+     "at": [
+      18,
+      "mười"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "items": [
+    {
+     "text": "RADAR CÒN PHẢI CHỜ NHIỀU PHÚT",
+     "at": [
+      19,
+      "chờ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "chiếc ghế không có nhiều phút như thế",
+     "at": 20,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 22,
+   "text": "QUÁ MẠNH, QUÁ RÕ",
+   "sub": "ĐIỀU LÀM PETROV NGHI · BBC 2013 · 28–29 TẦNG KIỂM TRA"
+  },
+  {
+   "type": "broll",
+   "at": 24,
+   "vid": "14904107",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "BẢN 2004 · CÂU THẲNG THỪNG HƠN",
+     "at": 24,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 25,
+   "text": "Компьютер по определению — дурак. Мало ли что он за пуск примет…",
+   "by": "S. PETROV · MOSKOVSKIYE NOVOSTI · 2004",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 25,
+   "typeAt": [
+    25,
+    "máy"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 26,
+   "title": "GHẾ TRỰC · BẠN ĐANG CÓ",
+   "srcnote": "MẨU TIN 6 / 6 · BBC 2013 · BẢN 2004 · PFIAB",
+   "rows": [
+    {
+     "k": "1 · MÀN HÌNH",
+     "v": "1 VỤ PHÓNG · TIN CẬY TỐI ĐA",
+     "at": 26
+    },
+    {
+     "k": "2 · CON MẮT",
+     "v": "OKO MỚI · TỪNG HỎNG NHIỀU",
+     "at": 26
+    },
+    {
+     "k": "3 · SỐ LƯỢNG",
+     "v": "5 (BẢN 2004: 4) · 1 CĂN CỨ",
+     "at": 26
+    },
+    {
+     "k": "4 · BỐI CẢNH",
+     "v": "LÃNH ĐẠO TIN MỸ SẮP RA TAY",
+     "at": 26
+    },
+    {
+     "k": "5 · PHÍA MỸ",
+     "v": "TỪNG NHẦM · CẦN MẮT THỨ 2",
+     "at": 26
+    },
+    {
+     "k": "6 · MẮT THỨ 2",
+     "v": "KHÔNG THẤY · VỐN HAY THẾ",
+     "at": 28
+    }
+   ],
+   "total": {
+    "k": "MÁY",
+    "v": "CHẮC CHẮN · RADAR CHƯA THẤY",
+    "at": 29
+   }
+  },
+  {
+   "type": "question",
+   "at": 30,
+   "text": "Lần hỏi cuối.\nBÁO LÊN   |   CHƯA"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 07",
+  "t": "CON MẮT THỨ HAI IM LẶNG"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

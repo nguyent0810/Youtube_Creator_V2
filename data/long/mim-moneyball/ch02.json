@@ -1,0 +1,234 @@
+{
+ "title": "Giá trị của việc lên gôn",
+ "lines": [
+  {
+   "t": "Trong câu chuyện Moneyball, bạn thường nghe tới OBP.",
+   "p": 0.8
+  },
+  "OBP là tỷ lệ một cầu thủ lên được gôn, bằng cú đánh hợp lệ hoặc những cách hợp lệ khác.",
+  "Một cách trong số đó là walk, tức là được lên gôn vì pitcher ném bóng sai vùng.",
+  "Nói đơn giản, OBP hỏi cầu thủ có tránh bị loại và tạo mặt bằng cho điểm chạy hay không.",
+  "Baseball-Reference ghi OBP toàn đội của Oakland năm 2002 là .339, đứng thứ ba American League.",
+  "Con số đó không phải thần chú, và nó không nói rằng đội đã bỏ qua mọi kỹ năng khác.",
+  "Scott Hatteberg là ví dụ dễ nhìn thấy.",
+  "Mùa 2002, ông có 68 walk, đứng thứ hai đội về số lần được lên gôn vì pitcher ném bóng không hợp lệ.",
+  "Trước mùa đó, Hatteberg chưa từng chơi first base, vị trí phòng ngự gần gôn số một.",
+  "Ông có 88 lần xuất phát ở vị trí này cho Oakland.",
+  "Nó cho thấy một đội có thể nhìn vào phần đóng góp vẫn còn dùng được, rồi cân nhắc liệu một vai trò mới có mở ra cơ hội hay không.",
+  "MLB nêu ERA của Oakland năm 2002 là 3,68, đứng thứ ba toàn MLB.",
+  "ERA là số điểm chạy trung bình mà pitcher để lọt trong chín hiệp, nên chỉ số thấp thường cho thấy hệ ném bóng có hiệu quả.",
+  "Trên tấm bảng, ô thứ ba ghi: một chỉ số tốt là một đèn pin, không phải cả bản đồ.",
+  "Để hiểu vì sao người ta bắt đầu dùng những chiếc đèn pin như vậy, ta phải lùi về trước Oakland rất lâu."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "GIÁ TRỊ CỦA\nVIỆC LÊN GÔN",
+   "sub": "OAKLAND 2002 · OBP .339",
+   "bg": "score",
+   "titleAt": [
+    0,
+    "moneyball"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    1,
+    "obp"
+   ],
+   "items": [
+    {
+     "text": "OBP",
+     "at": [
+      1,
+      "obp"
+     ],
+     "acc": true
+    },
+    {
+     "text": "TỶ LỆ CẦU THỦ LÊN ĐƯỢC GÔN",
+     "at": [
+      1,
+      "obp"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "org",
+   "at": [
+    3,
+    "loại"
+   ],
+   "nodes": [
+    {
+     "id": "hit",
+     "t": "CÚ ĐÁNH HỢP LỆ",
+     "s": "LÊN GÔN",
+     "at": [
+      1,
+      "đánh"
+     ]
+    },
+    {
+     "id": "walk",
+     "t": "WALK",
+     "s": "PITCHER NÉM SAI VÙNG",
+     "p": "hit",
+     "at": [
+      2,
+      "walk"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": [
+    4,
+    "là"
+   ],
+   "from": 0,
+   "to": 339,
+   "suffix": " PHẦN NGHÌN",
+   "label": "OBP TOÀN ĐỘI · THỨ BA AL",
+   "year": false
+  },
+  {
+   "type": "photo",
+   "at": [
+    5,
+    "thần"
+   ],
+   "img": "beane06",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "MỘT CHỈ SỐ",
+    "v": "KHÔNG PHẢI THẦN CHÚ",
+    "at": [
+     5,
+     "thần"
+    ]
+   }
+  },
+  {
+   "type": "print",
+   "at": [
+    6,
+    "hatteberg"
+   ],
+   "img": "card",
+   "tone": "bw",
+   "head": "SCOTT HATTEBERG",
+   "side": {
+    "k": "68 WALK",
+    "h": "THỨ HAI ĐỘI",
+    "lines": [
+     {
+      "text": "THỨ HAI ĐỘI",
+      "at": [
+       6,
+       "hatteberg"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "at": [
+    8,
+    "một"
+   ],
+   "from": 0,
+   "to": 88,
+   "suffix": " LẦN",
+   "label": "XUẤT PHÁT Ở FIRST BASE",
+   "year": false
+  },
+  {
+   "type": "broll",
+   "at": [
+    10,
+    "đóng"
+   ],
+   "vid": "35557009",
+   "veil": 0.62,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MỘT SÂN BÓNG · MỘT VAI TRÒ MỚI",
+     "at": [
+      10,
+      "đóng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": [
+    10,
+    "không"
+   ],
+   "text": "ERA 3,68",
+   "sub": "THỨ BA TOÀN MLB"
+  },
+  {
+   "type": "ledger",
+   "at": [
+    13,
+    "bảng"
+   ],
+   "title": "TẤM BẢNG CHỜ MỘT LẦN LÊN GÔN",
+   "srcnote": "MỖI CHƯƠNG THÊM MỘT Ô",
+   "rows": [
+    {
+     "k": "HỎI",
+     "v": "MỘT LẦN LÊN GÔN GIẢI THÍCH ĐƯỢC GÌ?",
+     "at": [
+      13,
+      "bảng"
+     ]
+    },
+    {
+     "k": "1 · MÙA DÀI",
+     "v": "TIỀN ÍT · VẪN PHẢI THẮNG",
+     "at": [
+      13,
+      "bảng"
+     ]
+    },
+    {
+     "k": "2 · LÊN GÔN",
+     "v": "ĐÈN PIN · KHÔNG PHẢI BẢN ĐỒ",
+     "at": [
+      13,
+      "bảng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": [
+    14,
+    "oakland"
+   ],
+   "text": "VÌ SAO NGƯỜI TA BẮT ĐẦU\nDÙNG NHỮNG ĐÈN PIN NÀY?"
+  }
+ ],
+ "topic": "mim-moneyball",
+ "chapter": 2,
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "GIÁ TRỊ CỦA VIỆC LÊN GÔN"
+ }
+}

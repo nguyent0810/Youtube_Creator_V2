@@ -182,7 +182,7 @@
   B.counter = (s, d) => {
     // số thập phân (vd. "to": 3.1) giữ đúng số chữ số sau dấu phẩy; trước 12/10/2026 bị làm tròn thành "3"
     const dp = s.dec ?? Math.max(...[s.to, s.from || 0].map((n) => (String(n).split(".")[1] || "").length));
-    const vn = (n) => { const [a, b] = Number(n).toFixed(dp).split("."); return a.replace(/\B(?=(\d{3})+(?!\d))/g, ".") + (b ? "," + b : ""); };
+    const vn = (n) => { const [a, b] = Number(n).toFixed(dp).split("."); return (s.year ? a : a.replace(/\B(?=(\d{3})+(?!\d))/g, ".")) + (b ? "," + b : ""); };   // "year": true -> 1996, không chấm nghìn (26/10/2026: Short Turing hiện "1.996")
     const str = (s.prefix || "") + vn(s.to) + (s.suffix || ""), fs = fsz(str, 300, 1000, /[MWmw]/.test(str) ? 0.72 : 0.66);   // chữ có M/W rộng hơn hẳn: "500 NĂM" từng chạm hai mép khung (14/10/2026)
     const ct = el("div", "count", esc((s.prefix || "") + vn(s.from || 0) + (s.suffix || "")), d); ct.style.fontSize = px(fs); if (s.top) ct.style.top = px(s.top);
     const top = (s.top || 360) + fs + 20;
@@ -339,7 +339,7 @@
   /* ---------- quote: trích dẫn gõ máy chữ trên giấy ----------
      sfx: key mỗi ký tự (tối đa 40, rải đều) từ at trong typeDur */
   B.quote = (s, d) => {
-    const pp = el("div", "qpaper", null, d); el("div", "qm", "“", pp);
+    const pp = el("div", "qpaper", null, d); el("div", "qm", "“", pp).setAttribute("data-layout-allow-overlap", "");
     const qt = el("div", "qt", null, pp); const L = [...s.text].length; qt.style.fontSize = px(L < 60 ? 54 : L < 120 ? 44 : 36);
     const spans = [...s.text].map((ch) => el("span", null, esc(ch), qt));
     spans.forEach((sp, k) => tl.set(sp, { opacity: 1 }, s.at + (k / L) * s.typeDur));
@@ -482,7 +482,7 @@
      sfx: bar.at -> thud nhẹ + tick; point.at -> blip; badge.at -> thud; gapAt -> scratch */
   const nfmt = (v) => String(v).replace(".", ",");
   B.chart = (s, d) => {
-    const line = s.kind === "line", X0 = s.left || 150, X1 = s.right || 940, Y0 = s.top || 560, Y1 = s.bottom || 1150, H = Y1 - Y0;
+    const line = s.kind === "line", MIMC = TH.cls === "theme-mim", X0 = s.left || 150, X1 = s.right || 940, Y0 = s.top || (MIMC ? 470 : 560), Y1 = s.bottom || (MIMC ? 1300 : 1150), H = Y1 - Y0;   // MIM (21/10/2026): biểu đồ dùng cả khung -- số liệu chính to, cột cao; CK giữ nguyên
     const vals = line ? s.points.map((p) => p.v) : s.bars.flatMap((b) => [b.v, b.ghost ?? b.v]);
     if (s.ref) vals.push(s.ref.v);
     let lo = Math.min(...vals), hi = Math.max(...vals);
@@ -532,9 +532,9 @@
         Object.assign(bar.style, { left: px(x), width: px(bw), top: px(top), height: px(h), transformOrigin: up ? "50% 100%" : "50% 0%",
           background: `linear-gradient(180deg, ${col} 0%, color-mix(in srgb, ${col} 55%, #050912) 100%)`, boxShadow: `0 0 50px color-mix(in srgb, ${col} 35%, transparent)` });
         tl.fromTo(bar, { scaleY: 0 }, { scaleY: 1, duration: 0.6, ease: "power3.out", immediateRender: false }, b.at - 0.1);
-        if (b.text) { const v = el("div", "chval", esc(b.text), d); v.style.fontSize = px(fsz(b.text, 76, bw + gap - 10, 0.6));
+        if (b.text) { const v = el("div", "chval", esc(b.text), d); v.style.fontSize = px(fsz(b.text, MIMC ? 170 : 76, bw + gap - 10, 0.6));
           // cột có khung "ghost": số nằm TRONG cột (phía trên là phần hụt + chữ hụt)
-          Object.assign(v.style, { left: px(x - gap / 2), width: px(bw + gap), top: px(b.ghost != null ? top + 22 : up ? top - 96 : top + h + 14), color: b.ghost != null ? "#fff" : col });
+          Object.assign(v.style, { left: px(x - gap / 2), width: px(bw + gap), top: px(b.ghost != null ? top + 22 : up ? top - (MIMC ? 190 : 96) : top + h + 14), color: b.ghost != null ? "#fff" : col });
           tl.fromTo(v, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out", immediateRender: false }, b.at + 0.3); }
         if (b.label) { const lb = el("div", "chlbl", esc(b.label).replace(/\n/g, "<br/>"), d);
           Object.assign(lb.style, { left: px(x - gap / 2 + 4), width: px(bw + gap - 8), top: px(up ? y0 + 22 : y0 - 22 - 44 * (b.label.split("\n").length)) });
@@ -610,6 +610,57 @@
       tl.fromTo(e, { opacity: 0, rotationX: -92, rotationY: 0, y: 110 }, { opacity: 1, rotationX: 0, rotationY: 11 * dir, y: 0, duration: 0.55, ease: "back.out(1.3)", immediateRender: false }, c.at - 0.15);
       tl.to(e, { rotationY: -7 * dir, rotationX: 3, duration: Math.max(0.4, s.t1 - c.at - 0.4), ease: "sine.inOut" }, c.at + 0.4); });
     if (s.note) { const nt = el("div", "bdnote mono", esc(s.note), d); nt.style.top = px(top + tot + 34); tl.to(nt, { opacity: 1, duration: 0.3 }, s.t0 + 0.4); }
+  };
+
+  /* ---------- table: bảng tra tự dò (khuôn "bảng dừng hình", CK lô 4, chủ kênh duyệt 20/10/2026) ----------
+     Người xem dừng hình để tìm ô của mình: hàng = chìa khoá thứ nhất, cột = chìa khoá thứ hai.
+     title, rowHead (nhãn cột đầu), colHead (nhãn trên hàng tiêu đề), cols[], rows[{k, sub?, v[], at?}],
+     hl[{r?, c?, at, until?}] (r+c = một ô, chỉ r = cả hàng, chỉ c = cả cột; phần còn lại mờ tới hl kế tiếp; hết hl thì mọi ô sáng lại để khung cuối dò được),
+     foot (dòng mời dừng hình -- chỉ chữ trên màn, không đọc), note (dòng nhỏ: ví dụ / cách làm tròn).
+     Vùng an toàn: x 40–940 (nút Shorts bên phải), y 230–1440 (phụ đề từ 1478).
+     sfx: row.at -> key x2; hl.at -> thud + blip */
+  B.table = (s, d) => {
+    const X0 = 40, W = 900, LW = 236, nc = s.cols.length, CW = (W - LW) / nc, nr = s.rows.length;
+    const RH = Math.min(140, Math.floor(820 / nr)), Y0 = 300, HY = Y0 + 70, RY = HY + 96;
+    const tb = el("div", "tbl", null, d);
+    if (s.title) { const t = el("div", "tbt", esc(s.title), tb); t.style.fontSize = px(fsz(s.title, 54, W, 0.7)); t.style.top = px(Y0 - 66); }
+    if (s.colHead) { const ch = el("div", "tbch mono", esc(s.colHead), tb); Object.assign(ch.style, { left: px(X0 + LW), width: px(W - LW), top: px(Y0 + 12) }); }
+    const hdr = el("div", "tbh", null, tb); Object.assign(hdr.style, { left: px(X0), width: px(W), top: px(HY), height: px(82) });
+    const rh = el("div", "tbrh mono", esc(s.rowHead || ""), hdr); rh.style.width = px(LW); rh.style.fontSize = px(fsz(s.rowHead || "", 24, LW - 30, 0.66));
+    const colEl = s.cols.map((c) => { const e = el("div", "tbc", esc(c), hdr); e.style.width = px(CW); e.style.fontSize = px(fsz(c, 46, CW - 16, 0.62)); return e; });
+    const cells = [], rowEl = [];
+    s.rows.forEach((r, i) => {
+      const re = el("div", "tbr" + (i % 2 ? " odd" : ""), null, tb); Object.assign(re.style, { left: px(X0), width: px(W), top: px(RY + i * RH), height: px(RH - 8) });
+      const k = el("div", "tbk", `<b>${esc(r.k)}</b>${r.sub ? `<small class="mono">${esc(r.sub)}</small>` : ""}`, re); k.style.width = px(LW);
+      k.querySelector("b").style.fontSize = px(fsz(r.k, Math.min(58, RH * 0.42), LW - 30, 0.6));
+      cells.push(r.v.map((v) => { const c = el("div", "tbv", esc(v), re); c.style.width = px(CW); c.style.fontSize = px(fsz(String(v), Math.min(84, RH * 0.62), CW - 20, 0.6)); return c; }));
+      rowEl.push(k);
+      const at = r.at ?? s.t0 + 0.25 + i * 0.08;
+      tl.fromTo(re, { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.28, ease: "power3.out", immediateRender: false }, at - 0.05);
+    });
+    if (s.foot) { const f = el("div", "tbf", esc(s.foot), tb); f.style.fontSize = px(fsz(s.foot, 42, W, 0.6)); f.style.top = px(RY + nr * RH + 14);
+      tl.fromTo(f, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, immediateRender: false }, s.footAt ?? s.t0 + 1.2); }
+    if (s.note) { const n = el("div", "tbn mono", esc(s.note), tb); n.style.top = px(RY + nr * RH + 70); tl.to(n, { opacity: 1, duration: 0.3 }, s.t0 + 1.2); }
+    tl.fromTo([hdr, ...(s.title ? [tb.querySelector(".tbt")] : []), ...(s.colHead ? [tb.querySelector(".tbch")] : [])],
+      { opacity: 0, y: -24 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out", immediateRender: false }, s.t0 + 0.05);
+    // Làm sáng bằng tween màu (tua tới đâu cũng đúng trạng thái), không đổi class giữa timeline.
+    const ACC = (getComputedStyle(stage).getPropertyValue("--red") || "#fbbf24").trim(), INK = "#f1f5f9";
+    // hl có cả r và c = một ô; chỉ r = cả hàng (dẫn mắt "tìm hàng của bạn"); chỉ c = cả cột.
+    const all = cells.flat(), hl = s.hl || [];
+    hl.forEach((h, j) => { const end = j + 1 < hl.length ? hl[j + 1].at : (h.until ?? s.t1 - 0.5);
+      const hasR = h.r != null, hasC = h.c != null;
+      const on = hasR && hasC ? [cells[h.r][h.c]] : hasR ? cells[h.r] : cells.map((row) => row[h.c]);
+      const lab = [...(hasR ? [rowEl[h.r]] : []), ...(hasC ? [colEl[h.c]] : [])];
+      tl.to(all.filter((x) => !on.includes(x)), { opacity: 0.28, duration: 0.18 }, h.at);
+      tl.to(on, { opacity: 1, duration: 0.12 }, h.at);
+      tl.to(lab, { color: ACC, duration: 0.12 }, h.at);
+      tl.to(lab, { color: INK, duration: 0.2 }, end);
+      if (on.length === 1) { const cell = on[0];
+        tl.to(cell, { backgroundColor: ACC, color: "#0a1426", duration: 0.12 }, h.at);
+        tl.fromTo(cell, { scale: 1 }, { scale: 1.16, duration: 0.22, ease: "back.out(2)", immediateRender: false }, h.at);
+        tl.to(cell, { scale: 1, backgroundColor: "rgba(0,0,0,0)", color: INK, duration: 0.2 }, end); }
+      else tl.fromTo(on, { scale: 1 }, { scale: 1.08, duration: 0.18, yoyo: true, repeat: 1, ease: "power2.out", immediateRender: false }, h.at);
+      if (j + 1 === hl.length) tl.to(all, { opacity: 1, duration: 0.3 }, end); });
   };
 
   // ---------- dựng cảnh ----------

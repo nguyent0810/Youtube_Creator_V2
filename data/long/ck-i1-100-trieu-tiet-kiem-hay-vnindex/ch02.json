@@ -1,0 +1,354 @@
+{
+ "title": "Đoạn rơi mà kết quả cuối che mất",
+ "lines": [
+  {
+   "t": "Biểu đồ đi tiếp tới ngày hai mươi bốn tháng ba năm hai nghìn không trăm hai mươi.",
+   "p": 0.8
+  },
+  "VN-Index đóng cửa sáu trăm năm mươi chín phẩy hai mốt điểm.",
+  "So với điểm vào, chỉ số thấp hơn khoảng bốn mươi lăm phẩy hai sáu phần trăm.",
+  "Với luật bỏ một lần và phí giả định, một trăm triệu còn khoảng năm mươi bốn phẩy năm hai triệu.",
+  "Đây là đáy của đường bỏ một lần trong cửa sổ dữ liệu.",
+  "Đó là cú rơi sâu.",
+  "Kết quả cuối không kể hết.",
+  "Đây là ví dụ giả định.",
+  "Nó cũng chưa tính chênh lệch giá lúc khớp lệnh thật.",
+  "Lúc ấy, người mua đều vừa góp phần cuối ở phiên đầu tháng ba.",
+  "Vì vậy, đáy này đã nằm sau khi lịch góp hoàn tất.",
+  "Ở cùng ngày ấy, đường mua đều quy đổi còn khoảng sáu mươi bảy phẩy sáu tám triệu.",
+  "Con số thấp hơn một trăm, nhưng cao hơn đường bỏ một lần.",
+  "Sự khác nhau đến từ những lần mua sau khi giá đã giảm.",
+  "Không phải vì mua đều xóa được rủi ro.",
+  "Nó chỉ thay đổi lúc số tiền đi vào dữ liệu.",
+  "CPI bình quân năm hai nghìn không trăm hai mươi tăng ba phẩy hai ba phần trăm.",
+  "Giá cả vẫn đi tiếp, ngay cả khi biểu đồ tài sản đi xuống.",
+  "Hai thứ không giống nhau.",
+  "Một đoạn rơi sâu thường đặt ra câu hỏi khác với một đoạn tăng.",
+  "Bạn có thể tiếp tục giữ một phép tính đang đỏ hay không?",
+  "Biểu đồ không trả lời hộ bạn."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "ĐOẠN RƠI\nKẾT QUẢ CUỐI CHE MẤT",
+   "sub": "COVID · 03/2020",
+   "vid": "10603138",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": 0
+  },
+  {
+   "type": "candles",
+   "at": 1,
+   "series": "vnindex",
+   "from": "2019-12-02",
+   "to": "2020-03-24",
+   "title": "VN-INDEX · 12/2019–03/2020",
+   "range": "DỮ LIỆU: HOSE QUA VNSTOCK",
+   "calls": [
+    {
+     "i": -1,
+     "text": "659,21 · 24/03/2020",
+     "at": 1
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 2,
+   "title": "SO VỚI ĐIỂM VÀO",
+   "unit": "ĐIỂM",
+   "srcnote": "DỮ LIỆU: HOSE QUA VNSTOCK",
+   "items": [
+    {
+     "k": "09/04/2018",
+     "v": 1204.33,
+     "lbl": "1.204",
+     "at": 2
+    },
+    {
+     "k": "24/03/2020",
+     "v": 659.21,
+     "lbl": "659 · −45,3%",
+     "at": 2,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "waterfall",
+   "at": 3,
+   "title": "BỎ MỘT LẦN Ở ĐÁY",
+   "range": "DỮ LIỆU: HOSE QUA VNSTOCK · KÊNH TỰ TÍNH · VÍ DỤ GIẢ ĐỊNH 100 TRIỆU",
+   "unit": "TRIỆU",
+   "start": {
+    "k": "VÀO TIỀN",
+    "v": 100,
+    "at": 3
+   },
+   "steps": [
+    {
+     "k": "GIÁ GIẢM + PHÍ",
+     "v": -45.48,
+     "at": 3
+    }
+   ],
+   "end": {
+    "k": "CÒN LẠI",
+    "at": 4,
+    "tone": "down"
+   },
+   "calls": [
+    {
+     "i": 2,
+     "text": "ĐÁY 54,52",
+     "at": 4
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "CÚ RƠI SÂU",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "kết quả cuối không kể hết",
+     "at": 6,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "CHƯA ĐƯỢC TÍNH",
+   "srcnote": "DỮ LIỆU: HOSE QUA VNSTOCK · KÊNH TỰ TÍNH · VÍ DỤ GIẢ ĐỊNH 100 TRIỆU",
+   "rows": [
+    {
+     "k": "BẢN CHẤT",
+     "v": "VÍ DỤ GIẢ ĐỊNH",
+     "at": 7
+    },
+    {
+     "k": "KHỚP LỆNH THẬT",
+     "v": "CHÊNH LỆCH GIÁ",
+     "at": 8
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 9,
+   "title": "LỊCH GÓP CỦA NGƯỜI MUA ĐỀU",
+   "items": [
+    {
+     "year": "04/2018",
+     "text": "lần 1",
+     "at": 9
+    },
+    {
+     "year": "02/03/2020",
+     "text": "lần 24, góp đủ",
+     "at": 9
+    },
+    {
+     "year": "24/03/2020",
+     "text": "đáy, sau khi góp đủ",
+     "at": 10
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 11,
+   "title": "CÙNG NGÀY 24/03/2020",
+   "unit": "TRIỆU ĐỒNG",
+   "srcnote": "DỮ LIỆU: HOSE QUA VNSTOCK · KÊNH TỰ TÍNH · VÍ DỤ GIẢ ĐỊNH 100 TRIỆU",
+   "items": [
+    {
+     "k": "BỎ MỘT LẦN",
+     "v": 54.52,
+     "lbl": "54,52",
+     "at": 11
+    },
+    {
+     "k": "MUA ĐỀU",
+     "v": 67.68,
+     "lbl": "67,68",
+     "at": 11,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "race",
+   "at": 13,
+   "abs": true,
+   "unit": "TRIỆU ĐỒNG",
+   "xlab": "THÁNG ",
+   "xstep": 12,
+   "dates": [
+    "2018-04-27",
+    "2018-05-31",
+    "2018-06-29",
+    "2018-07-31",
+    "2018-08-31",
+    "2018-09-28",
+    "2018-10-31",
+    "2018-11-30",
+    "2018-12-28",
+    "2019-01-31",
+    "2019-02-28",
+    "2019-03-29",
+    "2019-04-26",
+    "2019-05-31",
+    "2019-06-28",
+    "2019-07-31",
+    "2019-08-30",
+    "2019-09-30",
+    "2019-10-31",
+    "2019-11-29",
+    "2019-12-31",
+    "2020-01-31",
+    "2020-02-28",
+    "2020-03-31"
+   ],
+   "title": "MUA SAU KHI GIÁ ĐÃ GIẢM",
+   "range": "DỮ LIỆU: HOSE QUA VNSTOCK · KÊNH TỰ TÍNH · VÍ DỤ GIẢ ĐỊNH 100 TRIỆU",
+   "series": [
+    {
+     "label": "BỎ MỘT LẦN",
+     "color": "#ef4444",
+     "vals": [
+      86.86,
+      80.32,
+      79.46,
+      79.1,
+      81.84,
+      84.12,
+      75.65,
+      76.63,
+      73.81,
+      75.31,
+      79.85,
+      81.11,
+      81.02,
+      79.38,
+      78.56,
+      82.01,
+      81.38,
+      82.42,
+      82.6,
+      80.28,
+      79.48,
+      77.46,
+      72.96,
+      54.79
+     ]
+    },
+    {
+     "label": "MUA ĐỀU",
+     "color": "#38bdf8",
+     "vals": [
+      99.45,
+      98.93,
+      98.7,
+      98.67,
+      99.35,
+      100.07,
+      97.13,
+      97.54,
+      96.13,
+      96.88,
+      99.45,
+      100.15,
+      100.04,
+      98.85,
+      98.26,
+      101.02,
+      100.43,
+      101.39,
+      101.54,
+      99.08,
+      98.24,
+      95.92,
+      90.61,
+      68.03
+     ]
+    }
+   ],
+   "calls": [
+    {
+     "s": 1,
+     "i": 23,
+     "text": "MUA ĐỀU 68",
+     "at": 13
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 14,
+   "vid": "8951964",
+   "loop": true,
+   "veil": 0.56,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "KHÔNG XOÁ ĐƯỢC RỦI RO",
+     "at": 14,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 16,
+   "title": "CPI BÌNH QUÂN NĂM 2020",
+   "unit": "PHẦN TRĂM",
+   "srcnote": "NGUỒN: CỤC THỐNG KÊ",
+   "items": [
+    {
+     "k": "2020",
+     "v": 3.23,
+     "lbl": "3,23%",
+     "at": 16,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 17,
+   "vid": "6964247",
+   "loop": true,
+   "veil": 0.56,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "GIÁ CẢ VẪN ĐI TIẾP",
+     "at": 17,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 20,
+   "text": "BẠN CÓ GIỮ ĐƯỢC\nMỘT PHÉP TÍNH ĐANG ĐỎ?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "ĐOẠN RƠI SÂU"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

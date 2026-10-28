@@ -1,0 +1,29 @@
+{
+  "bgm": "carefree.mp3",
+  "broll_queries": [],
+  "channel": "CK",
+  "created_at": "2026-10-22T06:55:00Z",
+  "description": "Bảng tra tự dò: tìm cột số tiền bạn để dành mỗi tháng, đọc xuống dòng mốc thời gian để biết tổng tiền tích lũy (đơn vị: triệu đồng).\n\nGiả định (VÍ DỤ GIẢ ĐỊNH, không phải lời hứa lãi): bắt đầu gửi từ tháng 11/2026, gửi vào cuối mỗi tháng, đến tháng 12/2030 là 50 lần gửi; lãi 5%/năm chia đều 12 tháng, ghép lãi hằng tháng, không đổi suốt thời gian; chưa tính thuế, phí, lạm phát. Công thức: tổng = số tiền gửi × ((1 + lãi tháng)^số tháng − 1) ÷ lãi tháng. Ví dụ giả định: để dành 10 triệu mỗi tháng → khoảng 555 triệu vào 12/2030, trong đó tiền gốc là 500 triệu.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Nội dung do kênh biên soạn; giọng đọc tổng hợp.\n\nNguồn:\n\n\nMusic: \"Carefree\" by Kevin MacLeod (incompetech.com). Licensed under Creative Commons: By Attribution 4.0 — http://creativecommons.org/licenses/by/4.0/\n\n#TàiChínhCáNhân #BiểuĐồBiếtNói",
+  "kind": "short",
+  "publish_at": "2026-10-23T12:00:00Z",
+  "render": {
+    "engine": "casefile",
+    "profile": "bang-tra",
+    "spec": "data/stier/specs/ck-bang-de-danh-den-2030.json"
+  },
+  "schema_version": 1,
+  "script": "Để dành mười triệu mỗi tháng, đến 2030 có khoảng năm trăm năm mươi lăm triệu. Lãi giả định năm phần trăm một năm. Dừng hình, tìm cột của bạn nhé.",
+  "slug": "ck-bang-de-danh-den-2030",
+  "source_note": "",
+  "tags": [
+    "để dành mỗi tháng",
+    "tiết kiệm đến 2030",
+    "lãi ghép",
+    "bảng tra",
+    "tài chính cá nhân",
+    "lãi 5%"
+  ],
+  "thumbnail_text": "",
+  "title": "Mỗi tháng để dành 2, 5, 10, 15 triệu: đến 2030 có bao nhiêu? Bảng tra theo tháng",
+  "voice": "Ngọc Huyền"
+}

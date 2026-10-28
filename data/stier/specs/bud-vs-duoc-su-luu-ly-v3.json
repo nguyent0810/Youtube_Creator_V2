@@ -1,0 +1,208 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-vs-duoc-su-luu-ly",
+ "format": "vi-sao",
+ "hook_type": "vi-sao",
+ "open_shot": "tuong-phat",
+ "voice": "Thanh Bình",
+ "music": "ether_vox.mp3",
+ "music_gain": 0.18,
+ "gap": 0.85,
+ "title": "Vị Phật nào cầm bình thuốc?",
+ "kicker": "VÌ SAO?",
+ "sub": "VÍA PHẬT DƯỢC SƯ · 30/9 ÂM",
+ "acc": [
+  "thuốc",
+  "lưu",
+  "ly"
+ ],
+ "lines": [
+  "Vị Phật nào cầm bình thuốc, thân xanh như ngọc?",
+  "Không phải Thích Ca, cũng không phải A Di Đà.",
+  "Đó là Phật Dược Sư Lưu Ly Quang.",
+  "Nhưng vì sao lại là màu lưu ly?",
+  "Lưu ly là ngọc xanh lam, tượng trưng cho chữa lành thân và tâm.",
+  "Mai, ba mươi tháng chín âm, là ngày vía của Ngài.",
+  "Biểu tượng nhắc chăm lo thân tâm, không thay bác sĩ.",
+  "Nhà bạn ai đang uống thuốc? Gửi người ấy một lời chúc bình an."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:38714055",
+   "items": [
+    {
+     "text": "CẦM BÌNH THUỐC LÀ AI?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "vị Phật thân xanh như ngọc",
+     "at": [
+      0,
+      "thân"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "hf_myth_strike",
+   "at": 1,
+   "mythLab": "NHIỀU NGƯỜI ĐOÁN",
+   "myth": "**Thích Ca** · **A Di Đà**",
+   "truthLab": "ĐÁP ÁN",
+   "truth": "Phật **Dược Sư**",
+   "strikeAt": [
+    1,
+    "đà."
+   ],
+   "truthAt": [
+    2,
+    "dược"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    2,
+    "lưu"
+   ],
+   "veil": 0.4,
+   "clip": "pexels:7526202",
+   "items": [
+    {
+     "text": "LƯU LY QUANG",
+     "at": [
+      2,
+      "lưu"
+     ],
+     "acc": true
+    },
+    {
+     "text": "ánh sáng như ngọc lưu ly",
+     "at": [
+      2,
+      "quang."
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "VÌ SAO\nMÀU XANH?",
+   "fx": "zoom",
+   "sub": "LƯU LY = NGỌC XANH LAM"
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "Lưu ly",
+   "nodes": [
+    {
+     "text": "NGỌC XANH LAM",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      4,
+      "ngọc"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "CHỮA LÀNH THÂN · TÂM",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      4,
+      "chữa"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "BHAIṢAJYAGURU · WIKIPEDIA"
+  },
+  {
+   "type": "date",
+   "at": 5,
+   "date": "08.11.2026",
+   "day": "CHỦ NHẬT",
+   "sub": {
+    "text": "30/9 ÂM · VÍA DƯỢC SƯ",
+    "at": [
+     5,
+     "vía"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "HIỂU ĐÚNG",
+   "cards": [
+    {
+     "k": "✓",
+     "v": "CHĂM LO THÂN TÂM",
+     "at": [
+      6,
+      "chăm"
+     ]
+    },
+    {
+     "k": "✗",
+     "v": "THAY THUỐC BÁC SĨ",
+     "at": [
+      6,
+      "thay"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "veil": 0.4,
+   "clip": "pexels:39083609",
+   "items": [
+    {
+     "text": "AI ĐANG UỐNG THUỐC?",
+     "at": [
+      7,
+      "nhà"
+     ],
+     "acc": true
+    },
+    {
+     "text": "gửi một lời chúc bình an",
+     "at": [
+      7,
+      "gửi"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Bhaisajyaguru",
+  "https://tapchinghiencuuphathoc.vn/cac-ngay-via-phat-bo-tat.html"
+ ],
+ "description": "Vị Phật nào cầm bình thuốc?\n\nNguồn: https://en.wikipedia.org/wiki/Bhaisajyaguru · https://tapchinghiencuuphathoc.vn/cac-ngay-via-phat-bo-tat.html"
+}

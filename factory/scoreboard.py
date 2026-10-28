@@ -226,6 +226,25 @@ MIN_GAP = 0.25                    # chênh thứ hạng tối thiểu để gợ
 # không bao giờ đạt n ≥ 5 (Grok vòng 4).
 LOOKBACK_WEEKS = 4
 
+# "% ở lại" = engagedViews / views, gần với "Stayed to watch" của Studio (Short
+# bị lướt qua vẫn đếm 1 view, nhưng không thành engaged view). Đo 20/10/2026:
+# view trung vị theo % ở lại, CK 5/5 Short >= 45% vượt 1.200 view, <= 35% chỉ
+# 1/19; MIM tương tự. averageViewPercentage KHÔNG dự báo được (MIM r ≈ -0,1).
+# Ngưỡng và luật dừng lấy từ phân tích FS của repo vietneu-tts
+# (docs/DATA_ANALYSIS_2026-10.md, mục 2b). Luật dừng chỉ CẢNH BÁO trong brief.
+STAYED_TARGET = 0.45              # ngưỡng thường thấy để thoát trần ~1.000 view
+STAYED_STOP = 0.25                # series có trung vị dưới mức này ...
+STOP_AFTER = 6                    # ... ở 6 Short gần nhất -> brief ghi "nên dừng"
+MIN_STAYED_VIEWS = 50             # dưới 50 view thì tỉ lệ chỉ là nhiễu
+MIN_SERIES_ROW = 3                # series ít bài hơn gộp thành một dòng "lẻ"
+
+
+def stayed(views: int | None, engaged: int | None) -> float | None:
+    """engaged / views, hoặc None khi không đo được hay quá ít view để tin."""
+    if engaged is None or not views or views < MIN_STAYED_VIEWS:
+        return None
+    return engaged / views
+
 
 @dataclass
 class Ranked:
@@ -238,6 +257,10 @@ class Ranked:
     engaged: int
     rank: float                   # 0 = đáy tuần, 1 = đỉnh tuần
     pool: int
+
+    @property
+    def stayed(self) -> float | None:
+        return stayed(self.views, self.engaged)
 
 
 @dataclass
@@ -275,11 +298,55 @@ class Board:
     rows: dict[str, dict] = field(default_factory=dict)   # slug -> dòng video_metrics
 
 
+@dataclass
+class SeriesStay:
+    series: str
+    n: int
+    median: float                 # % ở lại trung vị, mọi Short đã đo của series
+    recent: float                 # trung vị STOP_AFTER Short gần nhất
+    views: float                  # view trung vị
+    verdict: str                  # "đạt ngưỡng" | "nên dừng" | ""
+
+
 def _line(code: str, slug: str) -> str:
     from factory import channels
     prefixes = list(channels.CHANNELS[code]["prefixes"]) + ["long-"]
     match = [p for p in prefixes if slug.startswith(p)]
     return max(match, key=len) if match else slug.split("-")[0] + "-"
+
+
+def _series(code: str, slug: str) -> str:
+    """Dòng + từ đầu tiên sau nó: mim-qr-ban-30 -> mim-qr. MIM/CK chỉ có một
+    dòng ("mim-", "ck-"), nên series đọc từ slug; bundle không ghi series."""
+    line = _line(code, slug)
+    rest = slug[len(line):] if slug.startswith(line) else slug
+    return line + rest.split("-")[0]
+
+
+def stay_by_series(code: str, rows: list[dict]) -> tuple[list[SeriesStay], list[SeriesStay]]:
+    """(series có >= MIN_SERIES_ROW bài, series lẻ). Chỉ Short sau mốc 05/10
+    có % ở lại đo được; không cần tuần đủ 15 video như xếp hạng."""
+    groups: dict[str, list[dict]] = {}
+    for r in rows:
+        if r["kind"] != "short" or date.fromisoformat(r["pacific_date"]) < REGIME_START:
+            continue
+        if stayed(r["views"], r["engaged_views"]) is not None:
+            groups.setdefault(_series(code, r["slug"]), []).append(r)
+    big, small = [], []
+    for s, rs in groups.items():
+        rs.sort(key=lambda r: (r["pacific_date"], r["go_live"]))
+        vals = [stayed(r["views"], r["engaged_views"]) for r in rs]
+        last = vals[-STOP_AFTER:]
+        verdict = ""
+        if len(rs) >= STOP_AFTER and statistics.median(last) < STAYED_STOP:
+            verdict = "nên dừng"
+        elif statistics.median(vals) >= STAYED_TARGET:
+            verdict = "đạt ngưỡng"
+        row = SeriesStay(s, len(rs), statistics.median(vals), statistics.median(last),
+                         statistics.median(r["views"] for r in rs), verdict)
+        (big if len(rs) >= MIN_SERIES_ROW else small).append(row)
+    big.sort(key=lambda x: -x.median)
+    return big, small
 
 
 def _midranks(values: list[float]) -> list[float]:
@@ -415,21 +482,44 @@ def render_brief(b: Board) -> str:
     for r in b.recent:
         by_line.setdefault(r.line, []).append(r)
     if by_line:
-        L += ["| Dòng | n | Hạng trung vị | IQR | View trung vị | Engaged trung vị |",
-              "|---|---|---|---|---|---|"]
+        L += ["| Dòng | n | Hạng trung vị | IQR | View trung vị | Engaged trung vị | % ở lại trung vị |",
+              "|---|---|---|---|---|---|---|"]
         for line, rs in sorted(by_line.items(), key=lambda kv: -statistics.median(r.rank for r in kv[1])):
             ranks = [r.rank for r in rs]
+            stay = [r.stayed for r in rs if r.stayed is not None]
             L.append(f"| `{line}` | {len(rs)} | {statistics.median(ranks):.2f} | "
                      f"{_q(ranks, .25):.2f}–{_q(ranks, .75):.2f} | {statistics.median(r.views for r in rs):,.0f} | "
-                     f"{statistics.median(r.engaged for r in rs):,.0f} |")
+                     f"{statistics.median(r.engaged for r in rs):,.0f} | "
+                     f"{f'{statistics.median(stay):.0%}' if stay else '—'} |")
     else:
         L.append("_Chưa có tuần nào đóng trong 4 tuần gần nhất._")
+
+    L += ["", "## % ở lại theo series (Short)", "",
+          f"% ở lại = engagedViews / views trong {WINDOW_DAYS} ngày đầu, gần với \"Stayed to watch\" của Studio. "
+          f"Ngưỡng thường thấy để thoát trần ~1.000 view: **{STAYED_TARGET:.0%}**. Series có trung vị dưới "
+          f"{STAYED_STOP:.0%} ở {STOP_AFTER} Short gần nhất: **nên dừng** (chỉ cảnh báo, người quyết). "
+          f"Không tính Short dưới {MIN_STAYED_VIEWS} view.", ""]
+    series, odd = stay_by_series(b.code, list(b.rows.values()))
+    if series or odd:
+        if series:
+            L += [f"| Series | n | % ở lại trung vị | {STOP_AFTER} bài gần nhất | View trung vị | |",
+                  "|---|---|---|---|---|---|"]
+            for s in series:
+                L.append(f"| `{s.series}` | {s.n} | {s.median:.0%} | {s.recent:.0%} | {s.views:,.0f} | "
+                         f"{('**' + s.verdict + '**') if s.verdict else ''} |")
+        if odd:
+            vals = [s.median for s in odd]
+            L += ["", f"Series lẻ (dưới {MIN_SERIES_ROW} bài): {len(odd)} series, {sum(s.n for s in odd)} Short, "
+                      f"trung vị % ở lại của các series này {statistics.median(vals):.0%}."]
+    else:
+        L.append("_Chưa có Short nào đo được % ở lại._")
 
     def video_line(r: Ranked) -> str:
         t = titles.setdefault(r.slug, _topic(b.code, r.slug, None))
         topic = " · ".join(x for x in (t["key"], t["angle"]) if x)
         first = f' — "{t["first"]}"' if t["first"] else ""
-        return (f"- **{r.rank:.2f}** · {r.views:,} view · {r.slot} · {t['title']}{first}"
+        stay = f" · ở lại {r.stayed:.0%}" if r.stayed is not None else ""
+        return (f"- **{r.rank:.2f}** · {r.views:,} view{stay} · {r.slot} · {t['title']}{first}"
                 + (f" · _{topic}_" if topic else ""))
 
     ordered = sorted(b.recent, key=lambda r: r.rank, reverse=True)

@@ -1,0 +1,274 @@
+{
+ "theme": "mim",
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "rules": 2,
+ "mix": true,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "title": "Năm 2007, hai cao thủ thắng máy poker Polaris; một năm sau máy thắng lại",
+ "description": "Ngày 23–24/7/2007 ở Vancouver, Phil Laak và Ali Eslami đấu bốn phiên với chương trình poker Polaris của Đại học Alberta: người thắng hai phiên, máy thắng một, một phiên hòa. Tháng 7/2008 ở Las Vegas, Polaris bản mới trở lại và thắng hai trong bốn trận với một đội cao thủ (người thắng một, một trận hòa). Nguồn: PokerNews 07/2007 và 07/2008; Wikipedia (Polaris).\n\nVideo nói về nghiên cứu trí tuệ nhân tạo; không hướng dẫn chơi bài, không cổ vũ cờ bạc. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/Mz0HwBBSBbg (công khai từ 20:00 ngày 26/11).",
+ "tags": [
+  "polaris",
+  "poker",
+  "đại học alberta",
+  "phil laak",
+  "ali eslami",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "VANCOUVER · 2007",
+ "acc": [
+  "người",
+  "máy",
+  "đổi"
+ ],
+ "lines": [
+  "Năm hai nghìn lẻ bảy, máy poker thua người.",
+  "Ở Vancouver, hai cao thủ Phil Laak và Ali Eslami đấu bốn phiên với Polaris.",
+  "Polaris là chương trình của nhóm giáo sư Jonathan Schaeffer, Đại học Alberta, Canada.",
+  "Họ thắng hai phiên, thua một, và một phiên hòa.",
+  "Người thắng, nhưng sát nút.",
+  "Một năm sau, ở Las Vegas, Polaris trở lại với bản mới.",
+  "Lần này, đối thủ là cả một đội cao thủ, và bản mới biết đổi cách chơi theo từng người.",
+  "Vẫn bốn trận, nhưng kết quả đảo ngược: máy thắng hai, người thắng một, một trận hòa.",
+  "Chỉ một năm, ranh giới giữa người và máy poker đã đổi chỗ."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "clip": "pexels:7608702",
+   "veil": 0.5,
+   "items": [
+    {
+     "text": "2007",
+     "at": 0.0,
+     "acc": true,
+     "size": 300
+    },
+    {
+     "text": "MÁY POKER THUA NGƯỜI",
+     "at": [
+      0,
+      "máy"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "2007",
+   "day": "VANCOUVER",
+   "sub": {
+    "text": "LAAK · ESLAMI · POLARIS",
+    "at": [
+     1,
+     "Phil"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "POLARIS",
+   "nodes": [
+    {
+     "text": "nhóm Jonathan Schaeffer",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      2,
+      "nhóm"
+     ],
+     "shape": "none",
+     "w": 760
+    },
+    {
+     "text": "Đại học Alberta · Canada",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      2,
+      "Đại"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 760
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "VANCOUVER 2007 · 4 PHIÊN",
+   "rows": [
+    {
+     "k": "LAAK · ESLAMI THẮNG",
+     "v": "2",
+     "at": [
+      3,
+      "hai"
+     ]
+    },
+    {
+     "k": "POLARIS THẮNG",
+     "v": "1",
+     "at": [
+      3,
+      "một"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "SÁT NÚT",
+   "sub": "NGƯỜI THẮNG, NHƯNG MỎNG"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "clip": "pexels:35304178",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "2008",
+     "at": [
+      5,
+      "Một"
+     ],
+     "acc": true,
+     "size": 300
+    },
+    {
+     "text": "POLARIS BẢN MỚI",
+     "at": [
+      5,
+      "Polaris"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "POLARIS · BẢN MỚI",
+   "cards": [
+    {
+     "k": "ĐỐI THỦ",
+     "v": "CẢ MỘT ĐỘI",
+     "at": [
+      6,
+      "đội"
+     ]
+    },
+    {
+     "k": "CÁCH CHƠI",
+     "v": "ĐỔI THEO NGƯỜI",
+     "at": [
+      6,
+      "đổi"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "at": 7,
+   "kind": "bars",
+   "title": "SỐ TRẬN MÁY THẮNG",
+   "unit": "BỐN TRẬN MỖI NĂM",
+   "min": 0,
+   "bars": [
+    {
+     "label": "2007\nVANCOUVER",
+     "v": 1,
+     "text": "1",
+     "c": "dim",
+     "at": [
+      7,
+      "Vẫn"
+     ]
+    },
+    {
+     "label": "2008\nLAS VEGAS",
+     "v": 2,
+     "text": "2",
+     "c": "ref",
+     "at": [
+      7,
+      "máy"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "clip": "pexels:6153725",
+   "veil": 0.55,
+   "items": [
+    {
+     "text": "ĐỔI CHỖ",
+     "at": [
+      8,
+      "đã"
+     ],
+     "acc": true
+    },
+    {
+     "text": "người · máy poker",
+     "at": [
+      8,
+      "người"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://www.pokernews.com/news/2007/07/laak-eslami-team-defeats-polaris-man-machine-poker-champions-4136.htm",
+  "https://www.pokernews.com/news/2008/07/man-machine-ii-poker-championship-polaris-defeats-stoxpoker--5357.htm",
+  "https://en.wikipedia.org/wiki/Polaris_(poker_bot)"
+ ],
+ "say": {
+  "polaris": "Pô-la-rít",
+  "vancouver": "Van-cu-vơ",
+  "phil": "Phin",
+  "laak": "Lác",
+  "ali": "A-li",
+  "eslami": "Ét-la-mi",
+  "jonathan": "Giô-na-thần",
+  "schaeffer": "Xê-phơ",
+  "alberta": "An-bơ-tơ",
+  "canada": "Ca-na-đa",
+  "poker": "pô-ke",
+  "vegas": "Vê-gát",
+  "las": "Lát"
+ },
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.3,
+   "3": 0.22,
+   "4": 0.35,
+   "5": 0.22,
+   "6": 0.22,
+   "7": 0.5
+  }
+ },
+ "sources_internal": [
+  "https://www.pokernews.com/news/2007/07/laak-eslami-team-defeats-polaris-man-machine-poker-champions-4136.htm (23–24/07/2007; hai thắng, một thua, một hòa; người hơn tổng cộng ~36,5 cược nhỏ)",
+  "https://www.pokernews.com/news/2008/07/man-machine-ii-poker-championship-polaris-defeats-stoxpoker--5357.htm (03–06/07/2008, Gaming Life Expo, Las Vegas: bốn trận = hòa, người thắng, máy thắng, máy thắng; Polaris bản mới biết đổi chiến lược theo từng người)",
+  "https://en.wikipedia.org/wiki/Polaris_(poker_bot) (đối chiếu ngày/địa điểm)",
+  "data/long/mim-may-thang-poker/script.md CH03 (Polaris 2008, Đại học Alberta)"
+ ]
+}

@@ -1,0 +1,271 @@
+{
+ "title": "Ngày thứ mười một",
+ "lines": [
+  {
+   "t": "Đường thời gian bắt đầu tại ngày không: hồ sơ đủ.",
+   "p": 0.8
+  },
+  "Từ ngày một tới ngày mười là quãng kiểm tra.",
+  "Ngày làm việc thứ mười một là thời điểm hưởng theo luật hiện hành.",
+  {
+   "t": "Đây là mốc của hồ sơ đủ, không phải ngày chị Lan rời công việc.",
+   "p": 1.0
+  },
+  "Trên biểu đồ đường, mười điểm đầu chỉ là ngày chờ.",
+  "Điểm thứ mười một mới bật màu của khoản trợ cấp.",
+  "Chị Lan trong ví dụ giả định không có ngày nhận tiền cụ thể, vì chưa có ngày nộp hồ sơ.",
+  {
+   "t": "Không nên tự điền một ngày lên lịch.",
+   "p": 1.0
+  },
+  "So với khung luật cũ, đồng hồ đã ngắn hơn.",
+  "Luật năm hai nghìn không trăm mười ba dùng mốc ngày làm việc thứ mười sáu.",
+  "Luật có hiệu lực từ đầu năm hai nghìn không trăm hai mươi sáu dùng mốc ngày thứ mười một.",
+  {
+   "t": "Biểu đồ cột vì thế hạ từ mười sáu xuống mười một ngày.",
+   "p": 1.0
+  },
+  "Hai thanh ngày cho thấy mười sáu ngày của luật cũ và mười một ngày của luật mới trên cùng một trục lịch ngang.",
+  "Năm ô ngày chênh lệch là khoảng biểu đồ rút ngắn, không phải năm ngày tiền được cộng thêm vào cột trợ cấp.",
+  "Theo ví dụ, tháng mười một năm hai nghìn không trăm hai mươi sáu chỉ là tháng nghỉ, chưa đủ dữ liệu để đổi thành ngày nộp hay ngày nhận.",
+  {
+   "t": "Lịch minh hoạ dừng ở điểm thứ mười một, thay vì tự điền một ngày nhận tiền cho chị Lan.",
+   "p": 1.0
+  },
+  "Luật cũ được ban hành năm hai nghìn không trăm mười ba và có hiệu lực từ đầu năm hai nghìn không trăm mười lăm.",
+  "Khung mới được ban hành năm hai nghìn không trăm hai mươi lăm.",
+  "Nó có hiệu lực từ đầu năm hai nghìn không trăm hai mươi sáu.",
+  {
+   "t": "Mỗi mốc nằm trên lịch, không phải trên lời hứa.",
+   "p": 1.0
+  },
+  "Trong ví dụ giả định, chị Lan nghỉ việc vào tháng mười một năm hai nghìn không trăm hai mươi sáu.",
+  "Nhưng tháng mười một không tự biến thành ngày hưởng.",
+  "Hồ sơ đủ mới mở đồng hồ; ngày thứ mười một mới là điểm kế tiếp.",
+  "Và khi điểm ấy đến, câu hỏi chuyển sang số tháng được nhận."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "3",
+   "k": "CHƯƠNG BA",
+   "title": "NGÀY THỨ\nMƯỜI MỘT",
+   "sub": "SAU KHI HỒ SƠ ĐỦ",
+   "vid": "7801968",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": 0
+  },
+  {
+   "type": "photo",
+   "img": "ai04",
+   "at": 1,
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.5,
+    0.22
+   ],
+   "reveal": {
+    "kind": "wipe",
+    "at": 1,
+    "d": 0.9
+   }
+  },
+  {
+   "type": "timeline",
+   "at": 2,
+   "title": "TỪ NGÀY NỘP TỚI NGÀY HƯỞNG",
+   "items": [
+    {
+     "year": "NGÀY 1",
+     "text": "nộp đủ hồ sơ",
+     "at": 2
+    },
+    {
+     "year": "10 NGÀY",
+     "text": "làm việc chờ",
+     "at": [
+      2,
+      "thứ"
+     ]
+    },
+    {
+     "year": "NGÀY 11",
+     "text": "bắt đầu hưởng",
+     "at": [
+      2,
+      "hưởng"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 0,
+   "to": 10,
+   "suffix": " NGÀY",
+   "label": "NGÀY KIỂM TRA",
+   "sub": {
+    "text": "TRƯỚC ĐIỂM HƯỞNG",
+    "at": 4
+   }
+  },
+  {
+   "type": "bars",
+   "at": 5,
+   "title": "MỐC HƯỞNG CŨ VÀ MỚI",
+   "unit": "NGÀY LÀM VIỆC",
+   "items": [
+    {
+     "k": "LUẬT 2013",
+     "v": 16,
+     "lbl": "16",
+     "at": 6
+    },
+    {
+     "k": "LUẬT 2025",
+     "v": 11,
+     "lbl": "11",
+     "at": 7,
+     "acc": true
+    }
+   ],
+   "calls": [
+    {
+     "i": 1,
+     "text": "GIẢM 5",
+     "at": 7
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 8,
+   "title": "CHÊNH LỆCH THỜI GIAN",
+   "unit": "NGÀY",
+   "items": [
+    {
+     "k": "RÚT NGẮN",
+     "v": 5,
+     "lbl": "5",
+     "at": 8,
+     "acc": true
+    }
+   ],
+   "calls": [
+    {
+     "i": 0,
+     "text": "GIẢM 5",
+     "at": 8
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 9,
+   "title": "KHÔNG TỰ ĐIỀN NGÀY NHẬN",
+   "items": [
+    {
+     "year": "THÁNG 11",
+     "text": "nghỉ việc giả định",
+     "at": 9
+    },
+    {
+     "year": "HỒ SƠ ĐỦ",
+     "text": "mở đồng hồ",
+     "at": 10
+    },
+    {
+     "year": "NGÀY 11",
+     "text": "mốc hưởng",
+     "at": 11
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "vid": "6443909",
+   "at": 12,
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA"
+  },
+  {
+   "type": "waterfall",
+   "at": 13,
+   "title": "SAU NGÀY 11, THÁC MỚI CÓ CỘT",
+   "range": "TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH",
+   "unit": "TRIỆU",
+   "start": {
+    "k": "CHI PHÍ",
+    "v": 13,
+    "at": 13
+   },
+   "steps": [
+    {
+     "k": "TRỢ CẤP BÙ",
+     "v": -9.0,
+     "at": 15
+    }
+   ],
+   "end": {
+    "k": "CÒN THIẾU",
+    "at": 15
+   },
+   "calls": [
+    {
+     "i": 2,
+     "text": "THIẾU 4 TRIỆU",
+     "at": 15
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 16,
+   "from": 0,
+   "to": 11,
+   "suffix": " NGÀY",
+   "label": "MỐC THEO LUẬT MỚI",
+   "sub": {
+    "text": "KHÔNG PHẢI NGÀY NGHỈ",
+    "at": 16
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 17,
+   "title": "CÁC MỐC LUẬT",
+   "rows": [
+    {
+     "k": "2013",
+     "v": "KHUNG CŨ",
+     "at": 17
+    },
+    {
+     "k": "2015",
+     "v": "CÓ HIỆU LỰC",
+     "at": 18
+    },
+    {
+     "k": "2026",
+     "v": "KHUNG MỚI",
+     "at": 19
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 21,
+   "text": "Bảy năm đóng\nđổi ra mấy tháng?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 03",
+  "t": "NGÀY THỨ MƯỜI MỘT"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.1
+ }
+}

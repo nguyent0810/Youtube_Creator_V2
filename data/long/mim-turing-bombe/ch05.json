@@ -1,0 +1,275 @@
+{
+ "topic": "mim-turing-bombe",
+ "chapter": 5,
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "CỖ MÁY KHÔNG TÌM ĐÁP ÁN, NÓ LOẠI ĐƯỜNG SAI"
+ },
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "CHƯƠNG NĂM",
+   "title": "CỖ MÁY LÀM\nMỘT VIỆC",
+   "sub": "08.1940 · AGNUS DEI",
+   "bg": "bombeClose",
+   "titleAt": [
+    0,
+    "tnmoc"
+   ]
+  },
+  {
+   "type": "broll",
+   "at": [
+    1,
+    "kết"
+   ],
+   "vid": "6079428",
+   "veil": 0.62,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "DIAGONAL BOARD · GIẢM DỪNG GIẢ",
+     "at": [
+      1,
+      "kết"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    2,
+    "dừng"
+   ],
+   "items": [
+    {
+     "text": "ĐIỂM DỪNG GIẢ KHÔNG PHẢI LỜI GIẢI",
+     "at": [
+      2,
+      "dừng"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": [
+    3,
+    "diagonal"
+   ],
+   "img": "bombeClose",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "DIAGONAL BOARD",
+    "v": "GIẢM CÁC NGÕ CỤT",
+    "at": [
+     3,
+     "diagonal"
+    ]
+   },
+   "kin": [
+    {
+     "text": "THÔNG LƯỢNG TĂNG LÊN",
+     "at": [
+      3,
+      "diagonal"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": [
+    4,
+    "ngõ"
+   ],
+   "img": "bombeClose",
+   "tone": "bw",
+   "head": "GIỜ LAO ĐỘNG",
+   "side": {
+    "k": "KHÔNG BỊ NUỐT",
+    "h": "BỞI CÁC NGÕ CỤT",
+    "lines": [
+     {
+      "text": "BỞI CÁC NGÕ CỤT",
+      "at": [
+       4,
+       "ngõ"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "date",
+   "at": [
+    5,
+    "agnus"
+   ],
+   "day": "AGNUS DEI · AGNES",
+   "date": "08.1940",
+   "sub": {
+    "text": "BOMBE TỪ TURING VÀ WELCHMAN",
+    "at": [
+     5,
+     "agnus"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    6,
+    "british"
+   ],
+   "items": [
+    {
+     "text": "BTM · KỸ THUẬT VÀ CHẾ TẠO",
+     "at": [
+      6,
+      "british"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": [
+    8,
+    "dây"
+   ],
+   "img": "bombe1945",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "BẢN THIẾT KẾ VÀO XƯỞNG",
+    "v": "DÂY · BÁNH XE · TIẾP ĐIỂM",
+    "at": [
+     8,
+     "dây"
+    ]
+   },
+   "kin": [
+    {
+     "text": "Ý TƯỞNG THÀNH QUY TRÌNH",
+     "at": [
+      8,
+      "dây"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": [
+    9,
+    "211"
+   ],
+   "from": 0,
+   "to": 211,
+   "suffix": " BOMBE",
+   "label": "ĐƯỢC CHẾ TẠO",
+   "year": false
+  },
+  {
+   "type": "ledger",
+   "at": [
+    11,
+    "dây"
+   ],
+   "title": "SÁU RĂNG CỦA KHÓA",
+   "srcnote": "MỖI CHƯƠNG THÊM MỘT MẮT XÍCH",
+   "rows": [
+    {
+     "k": "BỨC THƯ",
+     "v": "NGƯỜI XỬ LÝ MÁY",
+     "at": [
+      11,
+      "dây"
+     ]
+    },
+    {
+     "k": "KHÓA NGÀY",
+     "v": "ÁP LỰC THỜI GIAN",
+     "at": [
+      11,
+      "dây"
+     ]
+    },
+    {
+     "k": "BA LAN",
+     "v": "CÁCH ĐẶT CÂU HỎI",
+     "at": [
+      11,
+      "dây"
+     ]
+    },
+    {
+     "k": "NHÓM",
+     "v": "Ý TƯỞNG THÀNH PHƯƠNG PHÁP",
+     "at": [
+      11,
+      "dây"
+     ]
+    },
+    {
+     "k": "CRIB VÀ MENU",
+     "v": "GIẢ THUYẾT ĐỂ THỬ",
+     "at": [
+      11,
+      "dây"
+     ]
+    },
+    {
+     "k": "BOMBE",
+     "v": "LOẠI ĐƯỜNG SAI",
+     "at": [
+      11,
+      "dây"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": [
+    15,
+    "điểm"
+   ],
+   "text": "ĐIỂM DỪNG NÀY\nLÀ MANH MỐI HAY LỜI GIẢI?"
+  }
+ ],
+ "title": "Cỗ máy không tìm đáp án, nó loại đường sai",
+ "lines": [
+  {
+   "t": "TNMOC ghi rằng hướng tấn công của Turing có thể được cơ giới hóa bằng crib.",
+   "p": 0.8
+  },
+  "Khi kết hợp với diagonal board của Welchman, Bombe giảm mạnh các điểm dừng giả và tăng thông lượng.",
+  "Một điểm dừng giả có nghĩa là máy tạm thời cho bạn một khả năng nghe có vẻ hứa hẹn, nhưng kiểm tra thêm sẽ bác bỏ nó.",
+  "Diagonal board không làm câu chuyện bớt hồi hộp.",
+  "Nó làm những giờ lao động đỡ bị nuốt bởi các ngõ cụt.",
+  "Theo TNMOC, chiếc Turing–Welchman Bombe đầu tiên mang tên Agnus Dei, hay Agnes, hoạt động vào tháng 8 năm 1940.",
+  "British Tabulating Machine Company, gọi tắt là BTM, đảm nhiệm kỹ thuật và chế tạo các Bombe gốc.",
+  "Vì vậy, đừng gọi đây là một ý tưởng sống duy nhất trong đầu một nhà toán học.",
+  "Nó là bản thiết kế đi vào xưởng, thành dây, bánh xe, tiếp điểm và quy trình bảo dưỡng.",
+  "Trong cả hoạt động thời chiến, TNMOC ghi khoảng 211 Bombe được chế tạo và nhiều khóa được phá theo ngày.",
+  "Con số ấy cho thấy một bước ngoặt khác.",
+  "Nhưng dây chuyền không tự chạy chỉ vì máy đã lắp xong.",
+  "Nó cần menu đúng.",
+  "Nó cần bánh xe được nạp đúng.",
+  "Nó cần người nhận ra máy đã dừng.",
+  "Và quan trọng nhất, nó cần người không nhầm một điểm dừng với lời giải cuối cùng.",
+  "Ở Eastcote, những người làm phần đó chia ngày thành ba ca."
+ ]
+}

@@ -1,0 +1,181 @@
+{
+ "theme": "mim",
+ "title": "Một bữa tối năm 2004 và nhà hàng im bặt: ý tưởng Watson của IBM bắt đầu thế nào (theo lời kể)",
+ "description": "Theo lời kể được báo chí ghi lại, khoảng năm 2004 một nhà quản lý của IBM đang ăn tối thì cả nhà hàng im lặng nhìn tivi: họ đang xem Ken Jennings kéo dài chuỗi thắng ở Jeopardy. Cờ vua, trò IBM thắng năm 1997 với Deep Blue, gói gọn trong 64 ô; ngôn ngữ con người thì không. Bảy năm sau, cỗ máy Watson lên sóng (2011). Chi tiết bữa tối là lời kể, không phải tài liệu chính thức. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/Mt5hYcQxH50 (công khai từ 20:00 ngày 19/11).",
+ "tags": [
+  "watson ibm",
+  "jeopardy",
+  "ken jennings",
+  "deep blue",
+  "trí tuệ nhân tạo",
+  "lịch sử máy tính",
+  "mind in the machine"
+ ],
+ "sub": "JEOPARDY · 2004",
+ "acc": [
+  "2004",
+  "im",
+  "bặt",
+  "ngôn",
+  "ngữ"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Năm 2004, cả nhà hàng im bặt nhìn tivi.",
+  "Theo lời kể được báo chí ghi lại, một nhà quản lý của IBM đang ăn tối ở đó.",
+  "Mọi người đang xem Ken Jennings kéo dài chuỗi thắng ở chương trình đố vui Jeopardy.",
+  "Cờ vua, trò mà IBM đã thắng năm 1997, gói gọn trong sáu mươi tư ô.",
+  "Ngôn ngữ của con người thì không gói gọn trong ô nào cả.",
+  "Bảy năm sau, câu hỏi ấy thành một cỗ máy tên Watson.",
+  "Một khoảnh khắc im lặng trong nhà hàng, theo lời kể, đã mở đầu cho nó."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "NHÀ HÀNG IM BẶT",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "năm 2004 · mọi người nhìn tivi",
+     "at": [
+      0,
+      "cả"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7005884",
+   "ms": 6,
+   "veil": 0.55
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Bữa tối theo lời kể",
+   "nodes": [
+    {
+     "text": "nhà quản lý IBM đang ăn tối",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      1,
+      "nhà"
+     ],
+     "shape": "none",
+     "w": 820
+    },
+    {
+     "text": "theo lời kể báo chí",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      1,
+      "lời"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 700
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "XEM KEN JENNINGS",
+     "at": [
+      2,
+      "Ken"
+     ],
+     "acc": true
+    },
+    {
+     "text": "chuỗi thắng ở Jeopardy",
+     "at": [
+      2,
+      "chuỗi"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6962281",
+   "ms": 12,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 2
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "HAI THỬ THÁCH",
+   "cards": [
+    {
+     "k": "CỜ VUA",
+     "v": "SÁU MƯƠI TƯ Ô",
+     "at": [
+      3,
+      "Cờ"
+     ]
+    },
+    {
+     "k": "NGÔN NGỮ",
+     "v": "KHÔNG CÓ Ô NÀO",
+     "at": 4,
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 5,
+   "items": [
+    {
+     "year": "2004",
+     "text": "bữa tối (theo lời kể)",
+     "at": 5
+    },
+    {
+     "year": "2011",
+     "text": "Watson lên sóng Jeopardy",
+     "at": [
+      5,
+      "Watson"
+     ]
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/IBM_Watson"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.45
+  }
+ },
+ "say": {
+  "watson": "Oát-xần",
+  "ibm": "ai bi em",
+  "=IBM": "ai bi em",
+  "jeopardy": "Gie-pơ-đi",
+  "ken": "Ken",
+  "jennings": "Gien-ninh",
+  "david": "Đây-vít",
+  "deep": "Đíp",
+  "blue": "Blu"
+ },
+ "imgs": {}
+}

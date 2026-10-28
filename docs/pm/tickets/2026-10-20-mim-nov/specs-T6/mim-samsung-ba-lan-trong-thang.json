@@ -1,0 +1,194 @@
+{
+ "theme": "mim",
+ "title": "Ba lần trong một tháng, kỹ sư Samsung đưa dữ liệu nội bộ vào ChatGPT: công ty tạm cấm AI (2023)",
+ "description": "Tháng 4/2023, ở bộ phận bán dẫn của Samsung, các kỹ sư dán mã nguồn nội bộ và ghi chép cuộc họp vào ChatGPT: ba lần trong khoảng một tháng. Đầu tháng 5/2023, công ty gửi thông báo nội bộ tạm cấm các công cụ AI tạo sinh trên máy tính của công ty. Theo tài liệu Bloomberg được xem, mối lo là dữ liệu nằm trên máy chủ bên ngoài, khó lấy lại và khó xoá (Bloomberg 02/05/2023, qua The Register). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/ejsjefnJQbI (công khai từ 20:00 ngày 23/11).",
+ "tags": [
+  "samsung chatgpt",
+  "lộ dữ liệu công ty",
+  "ai tạo sinh",
+  "quyền riêng tư ai",
+  "chatgpt",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "2023",
+ "acc": [
+  "ba",
+  "lần",
+  "tháng",
+  "cấm",
+  "ngoài"
+ ],
+ "kicker": "AI QUANH TA",
+ "lines": [
+  "Một tháng, ba lần dán dữ liệu nội bộ.",
+  "Tháng 4 năm 2023, các kỹ sư bán dẫn của Samsung bắt đầu dùng ChatGPT để làm việc.",
+  "Một người dán mã nguồn nội bộ để nhờ sửa lỗi. Một người khác dán ghi chép một cuộc họp.",
+  "Trong vòng một tháng, công ty ghi nhận ba lần như thế.",
+  "Đầu tháng 5, Samsung thông báo nội bộ: tạm cấm công cụ AI tạo sinh trên máy tính của công ty.",
+  "Theo Bloomberg, họ lo không phải AI học ngay, mà là dữ liệu nằm ở máy chủ bên ngoài, khó lấy lại, khó xoá.",
+  "Chỉ ba lần trong một tháng, và một công ty lớn đã tạm cấm cả công cụ."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "3 LẦN · 1 THÁNG",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "dán dữ liệu nội bộ vào ChatGPT",
+     "at": [
+      0,
+      "dán"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:5377698",
+   "veil": 0.58
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "04.2023",
+   "day": "KỸ SƯ BÁN DẪN DÙNG CHATGPT"
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "HAI LẦN DÁN VÀO",
+   "cards": [
+    {
+     "k": "DÁN",
+     "v": "MÃ NGUỒN NỘI BỘ",
+     "at": [
+      2,
+      "mã"
+     ]
+    },
+    {
+     "k": "DÁN",
+     "v": "GHI CHÉP CUỘC HỌP",
+     "at": [
+      2,
+      "ghi"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 3,
+   "from": 0,
+   "to": 3,
+   "suffix": " LẦN",
+   "label": "TRONG VÒNG MỘT THÁNG",
+   "sub": {
+    "text": "THEO BLOOMBERG · 02/05/2023",
+    "at": [
+     3,
+     "ghi"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "05.2023",
+   "nodes": [
+    {
+     "text": "THÔNG BÁO NỘI BỘ",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      4,
+      "thông"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "TẠM CẤM AI TẠO SINH",
+     "x": 0.5,
+     "y": 0.68,
+     "at": [
+      4,
+      "tạm"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 740
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      4,
+      "tạm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "items": [
+    {
+     "text": "DỮ LIỆU Ở NGOÀI",
+     "at": [
+      5,
+      "dữ"
+     ],
+     "acc": true
+    },
+    {
+     "text": "khó lấy lại · khó xoá",
+     "at": [
+      5,
+      "khó"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8141390",
+   "ms": 2,
+   "veil": 0.6
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "TẠM CẤM CẢ CÔNG CỤ",
+   "sub": "SAU BA LẦN TRONG MỘT THÁNG"
+  }
+ ],
+ "sources": [
+  "https://www.theregister.com/2023/05/02/samsung_generative_ai_ban/"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "=AI": "ây ai",
+  "chatgpt": "chát gi pi ti",
+  "samsung": "Xam-xung",
+  "bloomberg": "Blum-bớc"
+ },
+ "imgs": {}
+}

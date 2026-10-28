@@ -1,0 +1,225 @@
+{
+ "title": "Khi hai trăm triệu là nhu cầu thật",
+ "lines": [
+  {
+   "t": "Hãy công bằng với những người đã rút.",
+   "p": 0.8
+  },
+  {
+   "t": "Hơn bốn triệu tám trăm nghìn lượt ấy, không phải ai cũng tính sai. Nhiều người tính rất kỹ.",
+   "p": 1.0
+  },
+  "Có người cần tiền chữa bệnh cho bản thân hoặc cho con.",
+  "Có người đang gánh một khoản nợ lãi rất cao, mỗi tháng lãi chồng lên lãi.",
+  {
+   "t": "Có người biết chắc mình sẽ không quay lại làm việc có hợp đồng nữa.",
+   "p": 1.0
+  },
+  "Với khoản nợ lãi ba mươi phần trăm một năm, hai trăm triệu dùng để trả nợ có thể đáng giá hơn nhiều so với hai trăm triệu nằm chờ.",
+  "Một năm, khoản nợ ấy có thể ngốn khoảng sáu mươi triệu tiền lãi.",
+  {
+   "t": "Bài toán của mỗi người không giống nhau. Rất khác nhau.",
+   "p": 1.0
+  },
+  "Báo cáo của Bộ Lao động khi ấy cho thấy một điều đáng chú ý.",
+  "Phần lớn người nhận một lần trong giai đoạn ấy ở độ tuổi từ hai mươi tới bốn mươi.",
+  {
+   "t": "Hai phần ba đóng chưa tới năm năm.",
+   "p": 1.0
+  },
+  "Và khoảng một triệu ba trăm nghìn người, sau khi rút, đã quay lại đóng bảo hiểm xã hội.",
+  {
+   "t": "Họ quay lại với đồng hồ năm đóng bắt đầu từ số không.",
+   "p": 1.0
+  },
+  "Với người hai mươi lăm tuổi, đồng hồ về số không vẫn còn kịp đếm lại.",
+  {
+   "t": "Với người bốn mươi lăm tuổi, đếm lại mười lăm năm là chuyện khác hẳn.",
+   "p": 1.0
+  },
+  {
+   "t": "Nếu chờ tới sáu mươi mà vẫn chưa đủ mười lăm năm thì sao?",
+   "ask": 1
+  },
+  "Luật mới mở thêm vài lối.",
+  "Người đã đủ tuổi mà chưa đủ năm đóng có thể nhận một lần lúc ấy, hoặc chọn một khoản trợ cấp hằng tháng.",
+  {
+   "t": "Cũng có thể đóng tiếp, kể cả đóng tự nguyện, cho đủ mười lăm năm. Đủ mười lăm, có lương hưu.",
+   "p": 1.0
+  },
+  "Và từ bảy mươi lăm tuổi, người không có lương hưu có thể được nhận trợ cấp hưu trí xã hội, do ngân sách chi trả.",
+  "Mức chung hiện nay là năm trăm bốn mươi nghìn đồng một tháng, từ tháng mười năm nay.",
+  {
+   "t": "Đó là một tấm lưới đỡ ở cuối cùng, không phải một khoản lương hưu.",
+   "p": 1.0
+  },
+  "Nên câu hỏi thật không phải là rút hay không rút.",
+  "Mà là hai trăm triệu ấy sẽ làm gì cho mình, và mình đánh đổi điều gì để có nó."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "CHƯƠNG NĂM",
+   "title": "KHI 200 TRIỆU\nLÀ NHU CẦU THẬT",
+   "sub": "CÔNG BẰNG VỚI NGƯỜI ĐÃ RÚT",
+   "vid": "3192916",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Hãy"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 2,
+   "title": "KHÔNG PHẢI AI CŨNG TÍNH SAI",
+   "rows": [
+    {
+     "k": "1",
+     "v": "CHỮA BỆNH CHO MÌNH, CHO CON",
+     "at": 2
+    },
+    {
+     "k": "2",
+     "v": "MỘT KHOẢN NỢ LÃI RẤT CAO",
+     "at": 3
+    },
+    {
+     "k": "3",
+     "v": "KHÔNG QUAY LẠI LÀM CÓ HỢP ĐỒNG",
+     "at": 4
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 5,
+   "title": "NỢ 200 TRIỆU · LÃI 30%/NĂM (TRIỆU)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "TIỀN LÃI MỘT NĂM",
+     "v": 60,
+     "lbl": "≈ 60",
+     "at": 6,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "BÀI TOÁN CỦA MỖI NGƯỜI KHÔNG GIỐNG NHAU",
+     "at": 7,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 8,
+   "title": "NGƯỜI NHẬN MỘT LẦN 2016–2022 (%)",
+   "unit": "BỘ LĐ-TB&XH · QUA VNECONOMY",
+   "items": [
+    {
+     "k": "20 – 40 TUỔI",
+     "v": 77.5,
+     "lbl": "≈ 77,5",
+     "at": 9
+    },
+    {
+     "k": "ĐÓNG DƯỚI 5 NĂM",
+     "v": 66.6,
+     "lbl": "66,6",
+     "at": 10,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 11,
+   "from": 0,
+   "to": 1.3,
+   "suffix": " TRIỆU NGƯỜI",
+   "label": "QUAY LẠI ĐÓNG BHXH SAU KHI RÚT · 2016–2022",
+   "sub": {
+    "text": "ĐỒNG HỒ NĂM ĐÓNG BẮT ĐẦU TỪ SỐ KHÔNG",
+    "at": 12
+   }
+  },
+  {
+   "type": "myth",
+   "at": 13,
+   "mythLab": "25 TUỔI",
+   "myth": "CÒN KỊP ĐẾM LẠI",
+   "truthLab": "45 TUỔI",
+   "truth": "ĐẾM LẠI 15 NĂM LÀ CHUYỆN KHÁC",
+   "strikeAt": [
+    14,
+    "Với"
+   ],
+   "truthAt": [
+    14,
+    "đếm"
+   ]
+  },
+  {
+   "type": "question",
+   "at": 15,
+   "text": "Tới 60 mà chưa đủ\n15 năm thì sao?"
+  },
+  {
+   "type": "ledger",
+   "at": 16,
+   "title": "LUẬT MỚI MỞ THÊM VÀI LỐI",
+   "srcnote": "LUẬT BHXH 41/2024/QH15 · ĐIỀU 21, 23, 33, 70",
+   "rows": [
+    {
+     "k": "ĐỦ TUỔI",
+     "v": "MỘT LẦN HOẶC TRỢ CẤP THÁNG",
+     "at": 17
+    },
+    {
+     "k": "ĐÓNG TIẾP",
+     "v": "KỂ CẢ TỰ NGUYỆN, CHO ĐỦ 15",
+     "at": 18
+    },
+    {
+     "k": "TỪ 75 TUỔI",
+     "v": "TRỢ CẤP HƯU TRÍ XÃ HỘI",
+     "at": 19
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 20,
+   "from": 500,
+   "to": 540,
+   "suffix": " NGHÌN/THÁNG",
+   "label": "TRỢ CẤP HƯU TRÍ XÃ HỘI · TỪ 05/10/2026 (NĐ 335/2026)",
+   "sub": {
+    "text": "LƯỚI ĐỠ CUỐI CÙNG · KHÔNG PHẢI LƯƠNG HƯU",
+    "at": 21
+   }
+  },
+  {
+   "type": "slam",
+   "at": 22,
+   "text": "KHÔNG PHẢI RÚT HAY KHÔNG RÚT",
+   "sub": "200 TRIỆU SẼ LÀM GÌ · MÌNH ĐÁNH ĐỔI GÌ"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "KHI 200 TRIỆU LÀ NHU CẦU THẬT"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.09
+ }
+}

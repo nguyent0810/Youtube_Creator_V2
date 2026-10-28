@@ -1,0 +1,156 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-ts-dat-minh-vao-nguoi",
+ "format": "truoc-sau",
+ "hook_type": "pov",
+ "open_shot": "cai-nhau",
+ "voice": "Ngọc Trân",
+ "music": "at_rest.mp3",
+ "music_gain": 0.18,
+ "gap": 0.1,
+ "title": "Câu bạn sắp nói, nếu ai nói với bạn thì sao?",
+ "kicker": "TRƯỚC · SAU",
+ "sub": "KINH PHÁP CÚ · KỆ 129",
+ "acc": [
+  "câu",
+  "nói",
+  "đau"
+ ],
+ "lines": [
+  "Câu bạn sắp nói, nếu ai nói với bạn thì sao?",
+  "Lúc giận, ta chỉ nghĩ mình đúng, và nói cho hả.",
+  "Câu nói ra rồi, không rút lại được.",
+  "Nhưng có một mẹo rất cũ: đổi vai.",
+  "Lời Phật dạy: ai cũng sợ đau. Lấy mình làm ví dụ, đừng hại ai.",
+  "Ngày xưa ta nói cho thắng. Giờ hiểu: mình sợ đau, người cũng vậy.",
+  "Lần tới giận, đọc thầm câu ấy bằng giọng người kia.",
+  "Câu bạn sắp nói, có nên nói không? Gửi người hay nói thẳng."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:6670761",
+   "items": [
+    {
+     "text": "NẾU AI NÓI VỚI BẠN?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "câu bạn sắp nói",
+     "at": [
+      0,
+      "sắp"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "hf_split",
+   "at": 1,
+   "a": {
+    "lab": "LÚC GIẬN",
+    "val": "nói **hả**",
+    "num": "−",
+    "at": [
+     1,
+     "giận,"
+    ]
+   },
+   "b": {
+    "lab": "NÓI RỒI",
+    "val": "**không rút**",
+    "num": "!",
+    "at": [
+     2,
+     "rút"
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "MẸO CŨ:\nĐỔI VAI",
+   "fx": "zoom"
+  },
+  {
+   "type": "source",
+   "at": 4,
+   "source": "KINH PHÁP CÚ · KỆ 129",
+   "ref": "Phẩm Hình Phạt",
+   "snippet": "Ai cũng sợ đau; [[lấy mình làm ví dụ]], đừng hại ai.",
+   "hlAt": [
+    4,
+    "lấy"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "clip": "pexels:9750741",
+   "items": [
+    {
+     "text": "NGƯỜI CŨNG SỢ ĐAU",
+     "at": [
+      5,
+      "giờ"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "to": 1,
+   "suffix": " LẦN ĐỔI VAI",
+   "label": "ĐỌC BẰNG GIỌNG NGƯỜI KIA",
+   "until": [
+    6,
+    "thầm"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "veil": 0.4,
+   "clip": "pexels:29918275",
+   "items": [
+    {
+     "text": "CÓ NÊN NÓI KHÔNG?",
+     "at": [
+      7,
+      "câu"
+     ],
+     "acc": true
+    },
+    {
+     "text": "gửi người hay nói thẳng",
+     "at": [
+      7,
+      "gửi"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp129-145/en/sujato"
+ ],
+ "description": "Câu bạn sắp nói, nếu ai nói với bạn thì sao?\n\nNguồn: https://suttacentral.net/dhp129-145/en/sujato"
+}

@@ -1,0 +1,196 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-ts-thuong-minh",
+ "format": "truoc-sau",
+ "hook_type": "nghich-ly",
+ "open_shot": "anh-sang",
+ "voice": "Thanh Bình",
+ "music": "at_rest.mp3",
+ "music_gain": 0.18,
+ "gap": 0.7,
+ "title": "Ai là người bạn thương nhất? Đáp án xưa rất bất ngờ",
+ "kicker": "TRƯỚC · SAU",
+ "sub": "KINH TƯƠNG ƯNG 3.8",
+ "acc": [
+  "thương",
+  "mình",
+  "nhất"
+ ],
+ "lines": [
+  "Ai là người bạn thương nhất? Đáp án xưa rất bất ngờ.",
+  "Vua hỏi hoàng hậu Mạt Lợi: nàng thương ai nhất?",
+  "Bà đáp: thiếp thương chính mình nhất. Còn bệ hạ?",
+  "Vua ngập ngừng, rồi cũng nhận: ta cũng vậy.",
+  "Nhưng Đức Phật không chê hai người ích kỷ.",
+  "Kinh Tương Ưng, diễn ý: ai cũng thương mình nhất. Vậy ai thương mình, đừng hại người.",
+  "Ngày xưa ta tưởng thương mình là chiều mình. Giờ hiểu: là không làm ai đau.",
+  "Hôm nay, trước khi nói, hỏi: câu này có làm ai đau không?",
+  "Bạn thương mình theo cách nào? Gửi cho ai hay quên chính mình."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:34310169",
+   "items": [
+    {
+     "text": "THƯƠNG AI NHẤT?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "đáp án xưa rất bất ngờ",
+     "at": [
+      0,
+      "đáp"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Vua Pasenadi hỏi",
+   "nodes": [
+    {
+     "text": "NÀNG THƯƠNG AI NHẤT?",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      1,
+      "nàng"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "CHÍNH MÌNH",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      2,
+      "chính"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "SN 3.8 · SUTTACENTRAL"
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "TA CŨNG VẬY",
+   "fx": "zoom",
+   "sub": "VUA NHẬN"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "clip": "pexels:4800620",
+   "items": [
+    {
+     "text": "KHÔNG CHÊ ÍCH KỶ",
+     "at": [
+      4,
+      "không"
+     ],
+     "acc": true
+    },
+    {
+     "text": "Đức Phật",
+     "at": [
+      4,
+      "phật"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "source",
+   "at": 5,
+   "source": "KINH TƯƠNG ƯNG 3.8",
+   "ref": "Mallikā",
+   "snippet": "Ai cũng thương mình nhất; [[ai thương mình, đừng hại người]].",
+   "hlAt": [
+    5,
+    "đừng"
+   ]
+  },
+  {
+   "type": "hf_split",
+   "at": 6,
+   "a": {
+    "lab": "TRƯỚC",
+    "val": "chiều **mình**",
+    "num": "−",
+    "at": [
+     6,
+     "tưởng"
+    ]
+   },
+   "b": {
+    "lab": "SAU",
+    "val": "**không hại**",
+    "num": "+",
+    "at": [
+     6,
+     "hiểu:"
+    ]
+   }
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "to": 1,
+   "suffix": " CÂU HỎI",
+   "label": "TRƯỚC KHI NÓI",
+   "until": [
+    7,
+    "hỏi:"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "veil": 0.4,
+   "clip": "pexels:6548043",
+   "items": [
+    {
+     "text": "THƯƠNG MÌNH CÁCH NÀO?",
+     "at": [
+      8,
+      "bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "gửi cho ai hay quên mình",
+     "at": [
+      8,
+      "gửi"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/sn3.8/en/sujato"
+ ],
+ "description": "Ai là người bạn thương nhất? Đáp án xưa rất bất ngờ\n\nNguồn: https://suttacentral.net/sn3.8/en/sujato"
+}

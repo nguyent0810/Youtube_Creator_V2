@@ -1,0 +1,9 @@
+Đã hoàn thành phần được ticket cho phép ghi:
+
+- [Kịch bản](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-social-network\script.md): 8 chương, 2.262 âm tiết, tiêu đề đúng yêu cầu.
+- [Factcheck](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-social-network\factcheck.md): 15 URL nguồn đã duyệt.
+- [Báo cáo](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-26-codex-pilot\T5W1-ket-qua.md).
+
+`script_lines.py` qua integrity; `studio_lint --strict` ra 0 lỗi, 9 cảnh báo.
+
+`long_gate.py mim-social-network --min-syl 1900` đã chạy nhưng **TRƯỢT** vì đòi scene/spec/TTS ngoài đúng ba file ticket cho phép ghi. Báo cáo nêu đầy đủ 21 lỗi cổng và xung đột phạm vi này.

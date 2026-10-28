@@ -1,0 +1,229 @@
+{
+ "theme": "ck",
+ "kicker": "GIÁ SÀN",
+ "sub": "BIÊN ĐỘ",
+ "title": "Giá sàn không chặn được giá giảm: biên độ 7% chỉ giới hạn một ngày",
+ "description": "Biên độ dao động không chặn việc giảm giá, nó chỉ giới hạn mỗi ngày giá đi được bao xa: ở sàn TP.HCM, cổ phiếu được lên hoặc xuống tối đa 7% so với giá tham chiếu (thường là giá đóng cửa phiên trước). VÍ DỤ GIẢ ĐỊNH: tham chiếu 20.000 đồng → trần 21.400, sàn 18.600. Nếu phiên ấy đóng cửa ở giá sàn, sáng hôm sau tham chiếu là 18.600 và sàn mới ≈ 17.300 (18.600 × 0,93 = 17.298, kênh tự tính; giá thực tế làm tròn theo bước giá).\n\nQuy định theo thời điểm làm video (10/2026), áp cho ngày giao dịch thường; ngày đầu niêm yết hay sau tạm ngừng dài có biên độ khác. Quy chế VNX, QĐ 22/QĐ-HĐTV ngày 18/04/2025.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là ví dụ giả định, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (12 phút): https://youtu.be/S_oMZt36W60",
+ "tags": [
+  "giá sàn",
+  "giá trần",
+  "biên độ dao động",
+  "giá tham chiếu",
+  "chứng khoán cho người mới",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "chặn",
+  "giới",
+  "bảy",
+  "đáy",
+  "ngày"
+ ],
+ "lines": [
+  "Giá sàn không chặn được giá giảm.",
+  "Nó chỉ giới hạn mỗi ngày giá đi bao xa.",
+  "Ở sàn Thành phố Hồ Chí Minh, giá xê dịch tối đa bảy phần trăm.",
+  "Ví dụ giả định: tham chiếu hai mươi nghìn.",
+  "Trần hai mươi mốt nghìn bốn trăm, sàn mười tám nghìn sáu trăm.",
+  "Nếu đóng cửa ở giá sàn, sáng mai tham chiếu là mười tám nghìn sáu trăm.",
+  "Khung mới tính từ đó: sàn mới khoảng mười bảy nghìn ba trăm.",
+  "Giá sàn là giới hạn một ngày, không phải đáy của cổ phiếu."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "GIÁ SÀN KHÔNG CHẶN GIẢM",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "biên độ · sàn TP.HCM · quy định 10/2026",
+     "at": [
+      0,
+      "giá",
+      1
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:12902366",
+   "ms": 1,
+   "veil": 0.58
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "BIÊN ĐỘ LÀM GÌ?",
+   "nodes": [
+    {
+     "text": "CHẶN GIÁ GIẢM",
+     "x": 0.5,
+     "y": 0.24,
+     "at": [
+      1,
+      null,
+      0,
+      0.05
+     ],
+     "cross": [
+      1,
+      "chỉ"
+     ],
+     "w": 640
+    },
+    {
+     "text": "GIỚI HẠN MỖI NGÀY",
+     "x": 0.5,
+     "y": 0.5,
+     "at": [
+      1,
+      "giới"
+     ],
+     "shape": "circle",
+     "c": "acc",
+     "w": 700
+    },
+    {
+     "text": "±7% SO VỚI THAM CHIẾU",
+     "x": 0.5,
+     "y": 0.8,
+     "at": [
+      2,
+      "bảy"
+     ],
+     "w": 800
+    }
+   ],
+   "arrows": [
+    {
+     "from": 1,
+     "to": 2,
+     "at": [
+      2,
+      "tối"
+     ]
+    }
+   ],
+   "note": "SÀN TP.HCM · NGÀY GIAO DỊCH THƯỜNG · 10/2026"
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "KHUNG GIÁ MỘT NGÀY · VÍ DỤ GIẢ ĐỊNH",
+   "rows": [
+    {
+     "k": "THAM CHIẾU",
+     "v": "20.000",
+     "at": [
+      3,
+      "tham"
+     ]
+    },
+    {
+     "k": "TRẦN · +7%",
+     "v": "21.400",
+     "at": [
+      4,
+      "trần"
+     ]
+    },
+    {
+     "k": "SÀN · −7%",
+     "v": "18.600",
+     "at": [
+      4,
+      "sàn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "at": 5,
+   "kind": "line",
+   "title": "SÀN MỚI TÍNH TỪ SÀN CŨ",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH · ĐỒNG",
+   "points": [
+    {
+     "x": 0,
+     "v": 20000,
+     "at": [
+      5,
+      null,
+      0,
+      0.05
+     ],
+     "tag": "20.000",
+     "pos": "r"
+    },
+    {
+     "x": 1,
+     "v": 18600,
+     "at": [
+      5,
+      "sàn"
+     ],
+     "tag": "SÀN 18.600",
+     "pos": "t",
+     "c": "#22d3ee"
+    },
+    {
+     "x": 2,
+     "v": 17300,
+     "at": [
+      6,
+      "khoảng"
+     ],
+     "tag": "SÀN MỚI ≈ 17.300",
+     "pos": "l",
+     "c": "#22d3ee"
+    }
+   ],
+   "ticks": [
+    {
+     "x": 0,
+     "label": "THAM CHIẾU"
+    },
+    {
+     "x": 1,
+     "label": "PHIÊN 1"
+    },
+    {
+     "x": 2,
+     "label": "PHIÊN 2"
+    }
+   ],
+   "note": "NẾU PHIÊN 1 ĐÓNG CỬA Ở GIÁ SÀN · ±7% MỖI PHIÊN"
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "GIỚI HẠN MỘT NGÀY",
+   "sub": "KHÔNG PHẢI ĐÁY CỦA CỔ PHIẾU"
+  }
+ ],
+ "sources": [
+  "https://youtu.be/S_oMZt36W60",
+  "https://luatvietnam.vn/chung-khoan/quyet-dinh-22-qd-hdtv-2025-ban-hanh-quy-che-niem-yet-va-giao-dich-chung-khoan-399805-d1.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

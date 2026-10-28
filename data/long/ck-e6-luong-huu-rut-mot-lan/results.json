@@ -1,0 +1,87 @@
+{
+ "assume": {
+  "wage": 10.0,
+  "years_paid": 10,
+  "birth": 1991,
+  "retire_age": 60,
+  "retire_year": 2051
+ },
+ "lump_now": 200.0,
+ "lump_if_pre2014_mix": 180.0,
+ "female": {
+  "15": {
+   "rate": 0.45,
+   "pension": 4.5,
+   "months_to_match_lump": 44.4,
+   "age_match": 63.7,
+   "sum_to_77": 934,
+   "employee_contrib_more": 48.0,
+   "voluntary_contrib_more": 132.0,
+   "year_reach": 2031
+  },
+  "20": {
+   "rate": 0.55,
+   "pension": 5.5,
+   "months_to_match_lump": 36.4,
+   "age_match": 63.0,
+   "sum_to_77": 1142,
+   "employee_contrib_more": 96.0,
+   "voluntary_contrib_more": 264.0,
+   "year_reach": 2036
+  },
+  "25": {
+   "rate": 0.65,
+   "pension": 6.5,
+   "months_to_match_lump": 30.8,
+   "age_match": 62.6,
+   "sum_to_77": 1349,
+   "employee_contrib_more": 144.0,
+   "voluntary_contrib_more": 396.0,
+   "year_reach": 2041
+  },
+  "30": {
+   "rate": 0.75,
+   "pension": 7.5,
+   "months_to_match_lump": 26.7,
+   "age_match": 62.2,
+   "sum_to_77": 1557,
+   "employee_contrib_more": 192.0,
+   "voluntary_contrib_more": 528.0,
+   "year_reach": 2046
+  }
+ },
+ "male_rates": {
+  "15": 0.4,
+  "18": 0.43,
+  "20": 0.45,
+  "25": 0.55,
+  "30": 0.65,
+  "35": 0.75
+ },
+ "lump_grow_2051": {
+  "-1%": 156,
+  "0%": 200,
+  "1%": 256,
+  "2%": 328,
+  "3%": 419
+ },
+ "lump_2pct_as_4_5_months": 77.8,
+ "own_contrib_10y": 96.0,
+ "lump_vs_own": 2.08,
+ "male_15y_pension": 4.0,
+ "debt30_interest_saved_1y": 60.0,
+ "life_years_after_60": 17.3,
+ "retire_age_2026": {
+  "female": "57",
+  "male": "61 tuổi 6 tháng"
+ },
+ "stats_2016_2022": {
+  "recipients_million": 4.8,
+  "returned_million": 1.3,
+  "left_million": 3.5,
+  "age20_40_pct": 77.5,
+  "under5y_pct": 66.6,
+  "5to10y_pct": 23.8,
+  "under10y_pct": 90.4
+ }
+}

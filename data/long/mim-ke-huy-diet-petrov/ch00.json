@@ -1,0 +1,291 @@
+{
+ "title": "Chữ \"phóng\" trên màn hình đỏ",
+ "lines": [
+  "Năm 1984, bộ phim Kẻ Hủy Diệt kể về một mạng máy tính quốc phòng tự châm ngòi chiến tranh hạt nhân.",
+  "Một năm trước đó, ngoài đời thật, có một đêm suýt bắt đầu như thế.",
+  "Đêm 25 rạng sáng 26 tháng 9 năm 1983.",
+  "Một trung tâm chỉ huy bí mật, cách Mát-xcơ-va chừng bảy mươi cây số về phía tây nam.",
+  "Tên của nó là Serpukhov-15.",
+  {
+   "t": "Người ngồi ghế trực đêm nay là trung tá Stanislav Petrov, bốn mươi bốn tuổi.",
+   "p": 1.0
+  },
+  "Còi báo động bỗng rú lên.",
+  "Trên tấm màn hình đỏ lớn, sáng lên một chữ tiếng Nga, nghĩa là: phóng.",
+  {
+   "t": "Máy tính đang báo rằng Mỹ vừa phóng một tên lửa về phía Liên Xô.",
+   "p": 1.0
+  },
+  "Ba mươi năm sau, ông kể lại khoảnh khắc ấy với đài BBC.",
+  {
+   "t": "Còi hú, nhưng tôi chỉ ngồi yên vài giây, nhìn chằm chằm tấm màn hình đỏ lớn có chữ \"phóng\".",
+   "q": 1,
+   "tr": 1,
+   "p": 1.0
+  },
+  "Giờ mình mời bạn làm một việc.",
+  "Ngồi vào chiếc ghế của ông.",
+  "Mỗi chương, bạn sẽ được trao thêm đúng một mẩu tin mà ông có trong tay, hoặc đổi sang ghế của một người phía Mỹ.",
+  "Cuối chương, màn hình hiện hai nút: báo lên, hay chưa.",
+  {
+   "t": "Bạn chọn trước, rồi mình mới kể ông đã làm gì.",
+   "p": 1.0
+  },
+  "Còi vẫn đang hú."
+ ],
+ "scenes": [
+  {
+   "type": "broll",
+   "at": 0,
+   "vid": "5004222",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "KẺ HỦY DIỆT · 1984",
+     "at": 0,
+     "acc": true
+    },
+    {
+     "text": "mạng máy tính quốc phòng tự châm ngòi chiến tranh hạt nhân",
+     "at": [
+      0,
+      "mạng"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "MỘT NĂM TRƯỚC ĐÓ",
+     "at": 1,
+     "sm": true
+    },
+    {
+     "text": "NGOÀI ĐỜI THẬT",
+     "at": [
+      1,
+      "ngoài"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 2,
+   "day": "TRUNG TÂM CẢNH BÁO SỚM · LIÊN XÔ",
+   "date": "26.09.1983",
+   "sub": {
+    "text": "ĐÊM 25 RẠNG SÁNG 26",
+    "at": [
+     2,
+     "rạng"
+    ]
+   }
+  },
+  {
+   "type": "print",
+   "at": 3,
+   "img": "serp",
+   "tone": "color",
+   "illus": "ẢNH VỆ TINH NASA FIRMS 2025 · ĐỊA HÌNH CŨ HƠN",
+   "side": {
+    "k": "SERPUKHOV-15",
+    "h": "≈ 70 KM\nTÂY NAM MÁT-XCƠ-VA",
+    "lines": [
+     {
+      "text": "gần làng Kurilovo, tỉnh Kaluga · Podvig 2002",
+      "at": [
+       3,
+       "tây"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "SERPUKHOV-15",
+   "sub": "TRẠM ĐIỀU KHIỂN VỆ TINH CẢNH BÁO SỚM · PODVIG 2002"
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "NGƯỜI NGỒI GHẾ TRỰC ĐÊM NAY",
+   "srcnote": "BBC 2013 · GUARDIAN 2017 · KHÔNG DÙNG ẢNH CHÂN DUNG",
+   "rows": [
+    {
+     "k": "CẤP BẬC",
+     "v": "TRUNG TÁ PHÒNG KHÔNG",
+     "at": [
+      5,
+      "trung"
+     ]
+    },
+    {
+     "k": "TÊN",
+     "v": "STANISLAV PETROV",
+     "at": [
+      5,
+      "trung"
+     ]
+    },
+    {
+     "k": "TUỔI",
+     "v": "44 (SINH 09.09.1939)",
+     "at": [
+      5,
+      "tuổi"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 6,
+   "vid": "14904107",
+   "veil": 0.5,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "CÒI BÁO ĐỘNG",
+     "at": [
+      6,
+      "còi"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "СТАРТ",
+   "sub": "TIẾNG NGA: “PHÓNG” · MOSKOVSKIYE NOVOSTI 2004 · BBC: “LAUNCH”"
+  },
+  {
+   "type": "photo",
+   "at": 8,
+   "img": "mm3",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "illus": "ẢNH MINH HỌA",
+   "kin": [
+    {
+     "text": "MÁY BÁO: MỸ VỪA PHÓNG MỘT TÊN LỬA",
+     "at": [
+      8,
+      "báo"
+     ],
+     "acc": true
+    }
+   ],
+   "label": {
+    "k": "MINUTEMAN III PHÓNG THỬ · 2021",
+    "v": "ẢNH: LỰC LƯỢNG VŨ TRỤ MỸ",
+    "at": 8
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "30 NĂM SAU",
+     "at": 9,
+     "acc": true
+    },
+    {
+     "text": "kể với BBC tiếng Nga · 2013",
+     "at": [
+      9,
+      "kể"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 10,
+   "text": "The siren howled, but I just sat there for a few seconds, staring at the big, back-lit, red screen with the word ‘launch’ on it.",
+   "by": "STANISLAV PETROV · BBC NEWS · 26.09.2013",
+   "lbl": "TRÍCH DỊCH",
+   "qline": 10,
+   "typeAt": [
+    10,
+    "còi"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 11,
+   "items": [
+    {
+     "text": "MÌNH MỜI BẠN",
+     "at": 11,
+     "sm": true
+    },
+    {
+     "text": "NGỒI VÀO GHẾ TRỰC",
+     "at": [
+      12,
+      "ngồi"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 13,
+   "title": "GHẾ TRỰC · LUẬT CHƠI",
+   "srcnote": "MỖI CHƯƠNG THÊM MỘT DÒNG",
+   "rows": [
+    {
+     "k": "MỖI CHƯƠNG",
+     "v": "THÊM ĐÚNG 1 MẨU TIN ÔNG CÓ",
+     "at": 13
+    },
+    {
+     "k": "HOẶC",
+     "v": "ĐỔI SANG GHẾ PHÍA MỸ",
+     "at": [
+      13,
+      "đổi"
+     ]
+    },
+    {
+     "k": "CUỐI CHƯƠNG",
+     "v": "BẠN CHỌN: BÁO LÊN | CHƯA",
+     "at": 14
+    }
+   ],
+   "total": {
+    "k": "SAU ĐÓ",
+    "v": "MỚI KỂ ÔNG ĐÃ LÀM GÌ",
+    "at": 15
+   }
+  },
+  {
+   "type": "question",
+   "at": 16,
+   "text": "Còi vẫn đang hú.\nBÁO LÊN   |   CHƯA"
+  }
+ ],
+ "hud": {
+  "k": "MỞ ĐẦU",
+  "t": "CHỮ “PHÓNG” TRÊN MÀN HÌNH ĐỎ"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.1
+ }
+}

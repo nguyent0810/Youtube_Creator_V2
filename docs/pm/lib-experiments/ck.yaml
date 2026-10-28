@@ -1,0 +1,19 @@
+{
+  "kenh": "ck",
+  "ngach": ["tai_chinh_ca_nhan", "chung_khoan_co_ban"],
+  "giong": "Biểu Đồ Biết Nói: tài chính cá nhân tiếng Việt, giọng đọc AI + biểu đồ động, không mặt người, giáo dục không khuyến nghị.",
+  "dinh_dang_dung": ["short", "long"],
+  "luat_cam": [
+    {"noi_dung": "không tên ngân hàng, công ty chứng khoán, hãng xe, mã cổ phiếu; không khuyên mua/bán; số giả định ghi VÍ DỤ GIẢ ĐỊNH", "nguon": "AGENTS.md mục CK"},
+    {"noi_dung": "clip không lộ logo, biển hiệu, bảng giá", "nguon": "memory feedback-clip-sheet-before-render"}
+  ],
+  "khuon": [
+    {"ten": "short_tien_mot_nguoi_qua_thoi_gian", "dinh_dang": "short", "trang_thai": "thang", "nguon": "docs/pm/2026-10-26-phan-tich-thang-thua-3-kenh.md mục 3: Short ở lại >=45% trung vị 1.357 view; 3 tỷ 30 năm 3.210 view; bảo hiểm 350 2.264 view"},
+    {"ten": "short_ngan_sach_no_the", "dinh_dang": "short", "trang_thai": "thua", "nguon": "docs/pm/2026-10-26-phan-tich-thang-thua-3-kenh.md mục 3: nợ thẻ/ngân sách 51-139 view, ở lại 14-30%", "ly_do_thua": ["chu_de", "hook"]},
+    {"ten": "long_ck_giao_duc", "dinh_dang": "long", "trang_thai": "thua", "nguon": "docs/pm/2026-10-26-phan-tich-thang-thua-3-kenh.md mục 3b: 7 Long 1-82 view, CTR 0,7-2,5%, xem TB 1:41-5:08; 45% cảnh là thẻ chữ (docs/pm/2026-10-27-ck-dung-hinh-hap-dan.md)", "ly_do_thua": ["ctr", "hook", "nhip", "hinh"]}
+  ],
+  "bao_ve": [],
+  "do_hop_mac_dinh": 1,
+  "do_hop": {"glitch": 0, "chromatic_aberration": 0, "fire_flame": 0, "character_rig": 0, "game_interactive": 0, "film_grain": 0},
+  "thu_muc_thu_nghiem": "docs/pm/lib-experiments"
+}

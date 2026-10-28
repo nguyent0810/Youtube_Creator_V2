@@ -1,0 +1,261 @@
+{
+ "title": "Nếu hai trăm triệu được đem đi gửi",
+ "lines": [
+  {
+   "t": "Giả sử chị Hạnh nhận hai trăm triệu, và không tiêu đồng nào.",
+   "p": 0.8
+  },
+  {
+   "t": "Chị đem gửi, hoặc đầu tư, suốt hai mươi lăm năm, tới năm sáu mươi tuổi.",
+   "p": 1.0
+  },
+  "Điều quan trọng không phải lãi suất ghi trên sổ, mà là phần còn lại sau khi trừ giá cả tăng.",
+  "Gọi là lãi thực.",
+  {
+   "t": "Vì lương hưu cũng được tính theo giá hôm nay, nên phải so bằng lãi thực mới công bằng.",
+   "p": 1.0
+  },
+  "Nếu lãi thực bằng không, tức lãi chỉ vừa đủ bù giá cả, hai trăm triệu vẫn chỉ là hai trăm triệu.",
+  "Lãi thực một phần trăm mỗi năm: khoảng hai trăm năm mươi sáu triệu.",
+  "Hai phần trăm: khoảng ba trăm hai mươi tám triệu.",
+  {
+   "t": "Ba phần trăm: khoảng bốn trăm mười chín triệu.",
+   "p": 1.0
+  },
+  "Còn nếu tiền gửi có lãi thấp hơn tốc độ tăng giá, lãi thực bị âm.",
+  "Âm một phần trăm mỗi năm, sau hai mươi lăm năm, hai trăm triệu chỉ còn sức mua khoảng một trăm năm mươi sáu triệu.",
+  {
+   "t": "Nhỏ đi gần một phần tư.",
+   "p": 1.0
+  },
+  {
+   "t": "Lãi thực hai, ba phần trăm có dễ không?",
+   "ask": 1
+  },
+  "Không dễ, và không chắc chắn.",
+  {
+   "t": "Đó là những mức giả định để so sánh, không phải lời hứa của bất kỳ kênh tiết kiệm hay đầu tư nào.",
+   "p": 1.0
+  },
+  "Giờ lấy mức ở giữa, ba trăm hai mươi tám triệu ở tuổi sáu mươi.",
+  "Mỗi tháng chị rút ra bốn triệu rưỡi, đúng bằng lương hưu mười lăm năm, phần còn lại vẫn sinh lãi thực hai phần trăm.",
+  "Khoản tiền ấy đủ trả khoảng bảy mươi tám tháng.",
+  {
+   "t": "Tức là chừng sáu năm rưỡi, tới khi chị khoảng sáu mươi sáu tuổi rưỡi.",
+   "p": 1.0
+  },
+  "Sau đó, sổ về không.",
+  {
+   "t": "Còn lương hưu thì vẫn tiếp tục, mỗi tháng, tới hết đời.",
+   "p": 1.0
+  },
+  "Đây là khác biệt lớn nhất mà bảng tính hay bỏ qua.",
+  "Lương hưu không chỉ là một khoản tiền.",
+  {
+   "t": "Nó là một lời bảo đảm cho câu hỏi không ai trả lời trước được: mình sẽ sống bao lâu?",
+   "p": 1.0
+  },
+  "Người sống tới chín mươi tuổi và người sống tới bảy mươi, cùng nhận một mức lương hưu mỗi tháng.",
+  "Còn một cuốn sổ thì chỉ đủ tới ngày nó cạn.",
+  "Nhưng nói vậy không có nghĩa là rút một lần luôn là sai.",
+  "Có những lúc hai trăm triệu là nhu cầu thật, không phải sự lựa chọn."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "PHÉP THỬ",
+   "title": "NẾU 200 TRIỆU\nĐƯỢC ĐEM ĐI GỬI",
+   "sub": "LÃI THỰC · 25 NĂM",
+   "vid": "12033695",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": [
+    0,
+    "Giả"
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 2,
+   "mythLab": "KHÔNG PHẢI",
+   "myth": "LÃI GHI TRÊN SỔ",
+   "truthLab": "MÀ LÀ",
+   "truth": "LÃI THỰC = SAU KHI TRỪ GIÁ CẢ TĂNG",
+   "strikeAt": [
+    2,
+    "mà"
+   ],
+   "truthAt": 3
+  },
+  {
+   "type": "bars",
+   "at": 5,
+   "title": "200 TRIỆU SAU 25 NĂM · GIÁ HÔM NAY (TRIỆU)",
+   "unit": "LÃI THỰC GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "LÃI THỰC 0%",
+     "v": 200,
+     "lbl": "200",
+     "at": 5
+    },
+    {
+     "k": "1%/NĂM",
+     "v": 256,
+     "lbl": "≈ 256",
+     "at": 6
+    },
+    {
+     "k": "2%/NĂM",
+     "v": 328,
+     "lbl": "≈ 328",
+     "at": 7,
+     "acc": true
+    },
+    {
+     "k": "3%/NĂM",
+     "v": 419,
+     "lbl": "≈ 419",
+     "at": 8
+    },
+    {
+     "k": "−1%/NĂM",
+     "v": 156,
+     "lbl": "≈ 156",
+     "at": 10
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 11,
+   "text": "NHỎ ĐI GẦN 1/4",
+   "sub": "KHI LÃI THỰC ÂM 1%/NĂM"
+  },
+  {
+   "type": "question",
+   "at": 12,
+   "text": "Lãi thực 2–3%\ncó dễ không?"
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "KHÔNG DỄ · KHÔNG CHẮC CHẮN",
+     "at": 13,
+     "acc": true
+    },
+    {
+     "text": "mức giả định để so sánh · không phải lời hứa của kênh nào",
+     "at": 14,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 15,
+   "title": "328 TRIỆU Ở TUỔI 60 · RÚT 4,5 TRIỆU/THÁNG",
+   "srcnote": "LÃI THỰC 2% · VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "rows": [
+    {
+     "k": "ĐỦ TRẢ",
+     "v": "≈ 78 THÁNG",
+     "at": 17
+    },
+    {
+     "k": "TỨC",
+     "v": "≈ 6,5 NĂM · TỚI ≈ 66,5 TUỔI",
+     "at": 18
+    }
+   ],
+   "total": {
+    "k": "SAU ĐÓ",
+    "v": "SỔ VỀ KHÔNG",
+    "at": 19
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 20,
+   "items": [
+    {
+     "text": "LƯƠNG HƯU VẪN TIẾP TỤC",
+     "at": 20,
+     "acc": true
+    },
+    {
+     "text": "mỗi tháng · tới hết đời",
+     "at": [
+      20,
+      "mỗi"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 21,
+   "vid": "8970851",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "KHÁC BIỆT BẢNG TÍNH HAY BỎ QUA",
+     "at": 21,
+     "sm": true
+    },
+    {
+     "text": "MÌNH SẼ SỐNG BAO LÂU?",
+     "at": [
+      23,
+      "mình"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "myth",
+   "at": 24,
+   "mythLab": "LƯƠNG HƯU",
+   "myth": "SỐNG TỚI 70 HAY 90 · CÙNG MỘT MỨC",
+   "truthLab": "MỘT CUỐN SỔ",
+   "truth": "CHỈ ĐỦ TỚI NGÀY NÓ CẠN",
+   "strikeAt": [
+    25,
+    "Còn"
+   ],
+   "truthAt": [
+    25,
+    "chỉ"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 26,
+   "items": [
+    {
+     "text": "KHÔNG CÓ NGHĨA RÚT MỘT LẦN LUÔN SAI",
+     "at": 26,
+     "acc": true
+    },
+    {
+     "text": "có lúc 200 triệu là nhu cầu thật",
+     "at": 27,
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "PHÉP THỬ",
+  "t": "NẾU 200 TRIỆU ĐƯỢC ĐEM ĐI GỬI"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

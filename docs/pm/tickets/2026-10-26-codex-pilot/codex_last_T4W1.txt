@@ -1,0 +1,7 @@
+Đã hoàn tất phần ticket cho phép:
+
+- [Kịch bản](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-moneyball\script.md): 8 chương, 2.216 âm tiết, qua integrity.
+- [Factcheck](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\mim-moneyball\factcheck.md): 29 nguồn từ kho dữ kiện duyệt.
+- [Báo cáo](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-26-codex-pilot\T4W1-ket-qua.md).
+
+`long_gate.py mim-moneyball --min-syl 1900` đã chạy nhưng TRƯỢT 20 lỗi dựng/cấu hình (HUD, cảnh, `spec.json`, `SAY`…), vốn không thể tạo vì ticket giới hạn đúng 3 file và cấm dựng cảnh/TTS. Chi tiết đã ghi trung thực trong báo cáo.

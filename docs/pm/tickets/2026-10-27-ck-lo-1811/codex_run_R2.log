@@ -1,0 +1,512 @@
+Reading additional input from stdin...
+OpenAI Codex v0.164.0
+--------
+workdir: D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+model: gpt-5.6-terra
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR] (network access enabled)
+reasoning effort: medium
+reasoning summaries: none
+session id: 01a17b05-d91b-7970-b3f5-70facb073b8d
+--------
+user
+Làm ticket docs/pm/tickets/2026-10-27-ck-lo-1811/R2-vien-phi-bhyt.md từ đầu đến cuối. Tuân thủ AGENTS.md (đã nạp sẵn), nhất là 'Cấm tuyệt đối' và 'chỉ đọc đúng các file ticket chỉ định, không khám phá repo'. Trước khi báo xong phải chạy `python scripts/long_gate.py ck-f2-vien-phi-bhyt --min-syl 1900` và nó phải in ĐẠT (trừ khi ticket nói là ticket nghiên cứu). Viết báo cáo vào file kết quả mà ticket chỉ định. Tiếng Việt.
+codex
+Tôi sẽ làm đúng ticket và chỉ mở ticket cùng hai tài liệu long được quy định. Tôi sẽ không đụng nội dung CL, lịch phát hành, credential, git hay mã dùng chung.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw 'docs/pm/tickets/2026-10-27-ck-lo-1811/R2-vien-phi-bhyt.md'; Get-Content -Raw 'docs/codex/long-rules.md'; Get-Content -Raw 'docs/codex/long-cheatsheet.md'" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 107ms:
+# R2 â€” NGHIÃŠN Cá»¨U: `ck-f2-vien-phi-bhyt`
+
+Äá»c trÆ°á»›c `docs/pm/tickets/2026-10-27-ck-lo-1811/00-CHUNG-R.md` vÃ  lÃ m Ä‘Ãºng luáº­t trong Ä‘Ã³. MÃ£ bÃ¡o cÃ¡o: `R2`.
+
+| Má»¥c | Ná»™i dung |
+|---|---|
+| CÃ¢u ngÆ°á»i xem tá»± gÃµ | "viá»‡n phÃ­", "miá»…n viá»‡n phÃ­ toÃ n dÃ¢n", "báº£o hiá»ƒm y táº¿ chi tráº£ bao nhiÃªu", "chi phÃ­ náº±m viá»‡n" |
+| NhÃ¢n váº­t VÃ Dá»¤ GIáº¢ Äá»ŠNH | Anh Minh, 38 tuá»•i, cÃ³ tháº» báº£o hiá»ƒm y táº¿ theo cÃ´ng ty, náº±m viá»‡n 7 ngÃ y. HoÃ¡ Ä‘Æ¡n minh hoáº¡ dá»±ng tá»« khung giÃ¡ cÃ³ nguá»“n: khÃ¡m, xÃ©t nghiá»‡m, giÆ°á»ng, thuá»‘c, váº­t tÆ°, ngÃ y nghá»‰ lÃ m, Ä‘i láº¡i vÃ  Äƒn uá»‘ng ngÆ°á»i nhÃ  |
+| CÃ¢u há»i chÃ­nh | Báº£o hiá»ƒm y táº¿ tráº£ pháº§n nÃ o (má»©c hÆ°á»Ÿng 80/95/100%, Ä‘Ãºng tuyáº¿n/thÃ´ng tuyáº¿n, thuá»‘c vÃ  váº­t tÆ° ngoÃ i danh má»¥c), anh Minh tá»± tráº£ pháº§n nÃ o, vÃ  pháº§n "khÃ´ng náº±m trÃªn hoÃ¡ Ä‘Æ¡n" lá»›n Ä‘áº¿n Ä‘Ã¢u |
+| Nghá»‹ch lÃ½ | CÃ³ tháº» mÃ  váº«n tá»± tráº£, vÃ¬ khoáº£n lá»›n nháº¥t náº±m ngoÃ i hoÃ¡ Ä‘Æ¡n |
+| ChÃ­nh sÃ¡ch | Luáº­t Báº£o hiá»ƒm y táº¿ sá»­a Ä‘á»•i (sá»‘ 51/2024/QH15?), hiá»‡u lá»±c 01/07/2025; má»©c Ä‘Ã³ng; lá»™ trÃ¬nh **miá»…n viá»‡n phÃ­** (Nghá»‹ quyáº¿t cá»§a Bá»™ ChÃ­nh trá»‹ / Quá»‘c há»™i nÄƒm 2025, má»‘c 2026â€“2030). Ghi rÃµ cÃ¡i gÃ¬ Ä‘Ã£ cÃ³ hiá»‡u lá»±c vÃ  cÃ¡i gÃ¬ má»›i lÃ  lá»™ trÃ¬nh |
+| Biá»ƒu Ä‘á»“ chÃ­nh | Má»™t `waterfall`: tá»•ng chi phÃ­ 7 ngÃ y â†’ trá»« pháº§n báº£o hiá»ƒm y táº¿ tráº£ â†’ pháº§n tá»± tráº£ trÃªn hoÃ¡ Ä‘Æ¡n â†’ cá»™ng pháº§n ngoÃ i hoÃ¡ Ä‘Æ¡n |
+| Cáº¥m | KhÃ´ng nÃªu tÃªn bá»‡nh viá»‡n, hÃ£ng báº£o hiá»ƒm thÆ°Æ¡ng máº¡i hay thuá»‘c biá»‡t dÆ°á»£c. KhÃ´ng cÃ¢u nÃ o nghe nhÆ° tÆ° váº¥n y táº¿ |
+| Lá»‹ch | 12â€“14 phÃºt, Ä‘Äƒng thá»© SÃ¡u 20/11/2026 lÃºc 20:00 VN |
+
+# Luáº­t Long cho agent sáº£n xuáº¥t (chi tiáº¿t, chuyá»ƒn tá»« AGENTS.md ngÃ y 26/10/2026)
+
+Äá»c cÃ¹ng `docs/codex/long-cheatsheet.md`.
+
+### áº¢nh AI khi khÃ´ng cÃ³ áº£nh tá»± do (tá»« 26/10/2026)
+
+Cáº£nh cáº§n minh hoáº¡ mÃ  khÃ´ng cÃ³ áº£nh PD/CC0/CC BY (vÃ­ dá»¥ cáº£nh trong phÃ²ng lÃ m viá»‡c nÄƒm 1962, hay má»™t váº­t Ä‘Ã£ máº¥t) thÃ¬ **khÃ´ng tá»± táº¡o áº£nh**. Ghi prompt vÃ o `data/long/<topic>/ai_prompts.md` Ä‘á»ƒ chá»§ kÃªnh nhá» bot táº¡o.
+
+**Äá»‹nh dáº¡ng má»™t má»¥c:**
+
+```
+#### ai_01.png â€” <cáº£nh dÃ¹ng á»Ÿ chNN, cÃ¢u sá»‘ N>
+- Prompt (tiáº¿ng Anh): <mÃ´ táº£ chi tiáº¿t: bá»‘i cáº£nh, thá»i ká»³, Ã¡nh sÃ¡ng, bá»‘ cá»¥c, phong cÃ¡ch>
+- Khung: 16:9, 1920x1080
+- Cáº¥m: chá»¯ hoáº·c sá»‘ trong áº£nh, logo, khuÃ´n máº·t nháº­n ra Ä‘Æ°á»£c cá»§a ngÆ°á»i tháº­t
+- Phong cÃ¡ch: <vÃ­ dá»¥ "painterly editorial illustration, muted 1960s palette">
+```
+
+**Quy táº¯c:**
+- **NgÆ°á»i tháº­t: láº¥y dÃ¡ng gá»‘c, khÃ´ng váº½ máº·t** (chá»§ kÃªnh, 26/10/2026):
+  - ÄÆ°á»£c váº½ ngÆ°á»i cÃ³ tháº­t (Johnson, Glennâ€¦) theo **dÃ¡ng gá»‘c** trong áº£nh tÆ° liá»‡u: vÃ³c ngÆ°á»i, kiá»ƒu tÃ³c, trang phá»¥c, Ä‘á»“ váº­t, bá»‘i cáº£nh Ä‘Ãºng thá»i ká»³.
+  - Chá»‰ váº½ á»Ÿ **gÃ³c nghiÃªng quay Ä‘i hoáº·c tá»« phÃ­a sau**, khÃ´ng tháº¥y rÃµ máº·t.
+  - Trong prompt, ghi áº£nh tÆ° liá»‡u tham chiáº¿u (URL Commons/NASA trong `facts.md`) vÃ  mÃ´ táº£ dÃ¡ng cá»¥ thá»ƒ. VÃ­ dá»¥: "woman in 1960s cat-eye glasses and cardigan, seen from behind at a desk with mechanical calculator".
+  - Máº·t ngÆ°á»i tháº­t chá»‰ dÃ¹ng áº£nh tÆ° liá»‡u PD.
+- **Phong cÃ¡ch:** minh hoáº¡ hoáº·c tranh váº½, **khÃ´ng giáº£ áº£nh tÆ° liá»‡u**, Ä‘á»ƒ ngÆ°á»i xem khÃ´ng nháº§m lÃ  tÆ° liá»‡u tháº­t.
+- **KhÃ´ng gáº¯n nhÃ£n AI:** khÃ´ng thÃªm nhÃ£n "AI" trÃªn mÃ n hÃ¬nh hay trong mÃ´ táº£, vÃ¬ báº£n thÃ¢n áº£nh Ä‘Ã£ cÃ³ chá»¯ kÃ½ AI (chá»§ kÃªnh quyáº¿t Ä‘á»‹nh ngÃ y 26/10/2026).
+- **ÄÆ°á»ng dáº«n:**
+  - Chá»§ kÃªnh tháº£ áº£nh vÃ o `motion/hf/assets/long/<topic>/img/ai/ai_NN.png`.
+  - Engine chá»‰ Ä‘á»c `output/long/<topic>/img/aiNN.jpg` kÃ¨m `.json`. Claude cháº¡y `python scripts/ai_img_import.py <topic>` Ä‘á»ƒ chÃ©p áº£nh sang chá»— Ä‘Ã³.
+  - Tá»« 26/10, Claude cháº¡y `python scripts/ai_img_request.py <topic>`. Lá»‡nh nÃ y gá»­i `ai_prompts.md` cho bot táº¡o áº£nh qua webhook (khoÃ¡ Ä‘á»c tá»« registry User, xem `docs/tools/grokbot-webhook.md`), chá» áº£nh vá» rá»“i cháº¡y `ai_img_import`. **Agent sáº£n xuáº¥t khÃ´ng gá»i webhook**: chá»‰ viáº¿t prompt.
+  - Trong `IMGS`, khai key `aiNN` lÃ  `"EXT:ai:ai_NN"`.
+- **Ghi cÃ´ng:** cáº£nh dÃ¹ng áº£nh AI pháº£i cÃ³ `"credit": false`. Náº¿u thiáº¿u, engine in "áº¢NH: TÆ¯ LIá»†U Â· PHáº M VI CÃ”NG Cá»˜NG", tá»©c lÃ  gáº¯n nhÃ£n tÆ° liá»‡u cho tranh minh hoáº¡, sai sá»± tháº­t. NhÃ£n `illus` "áº¢NH MINH Há»ŒA" thÃ¬ giá»¯, vÃ¬ Ä‘Ã³ lÃ  nhÃ£n chuáº©n cho tranh minh hoáº¡.
+- **Khi chÆ°a cÃ³ áº£nh:** giá»¯ nguyÃªn cáº£nh vÃ  Ä‘Æ°á»ng dáº«n, rá»“i ghi trong bÃ¡o cÃ¡o "chá» N áº£nh AI". `html` hoáº·c `long_gate` cÃ³ thá»ƒ bÃ¡o thiáº¿u file; Ä‘iá»u Ä‘Ã³ cháº¥p nháº­n Ä‘Æ°á»£c cho tá»›i khi áº£nh vá».
+- **Giá»›i háº¡n:** tá»‘i Ä‘a 6 áº£nh AI cho má»™t bÃ i 9â€“11 phÃºt. Æ¯u tiÃªn áº£nh tÆ° liá»‡u tháº­t.
+
+### Quy trÃ¬nh Long (theo máº«u `data/long/mim-ke-huy-diet-petrov`, `mim-google-maps-kal007`)
+
+Äá»c trÆ°á»›c:
+- `motion/long/README.md`, `RETENTION.md`, `SOURCES.md`;
+- `docs/pm/2026-10-23-mim-long-moi.md`;
+- `docs/pm/so-that-bai.md`.
+
+CÃ¡c bÆ°á»›c:
+1. Viáº¿t `script.md` vÃ  `factcheck.md` (nguá»“n lÃ  URL Ä‘Ã£ má»Ÿ).
+2. Cháº¡y `python motion/long/script_lines.py <topic>`; pháº£i qua cá»•ng integrity.
+3. Viáº¿t `gen_scenes.py`, rá»“i cháº¡y `python data/long/<topic>/gen_scenes.py`, ra `spec.json` vÃ  `chNN.json`. Counter cÃ³ sá»‘ 1000â€“2100 pháº£i khai `"year": true|false`.
+4. Cháº¡y `python motion/long/studio_lint.py <topic> --strict`; pháº£i ra 0 lá»—i.
+5. Cháº¡y `python motion/long/build_long.py <topic> tts`, rá»“i `... html`. Sá»­a má»i lá»—i lint mÃ  `html` bÃ¡o.
+6. Cháº¡y `python motion/long/clip_sheet.py <topic>`, xem áº£nh clip sheet; clip sai nghÄ©a hoáº·c lá»™ logo thÃ¬ thay.
+7. Chá»‰ render khi ticket cho phÃ©p: `build_long.py <topic> render`, rá»“i `final`.
+8. Dá»±ng thumbnail `motion/long/thumbs/<topic>_t1.html`, rá»“i cháº¡y `python motion/long/thumb.py <topic> t1`.
+
+### Cá»•ng cháº¥t lÆ°á»£ng (báº¯t buá»™c, tá»« 26/10/2026)
+
+CÃ¡c cá»•ng lint chá»‰ lÃ  má»©c sÃ n ká»¹ thuáº­t. TrÆ°á»›c khi bÃ¡o xong má»™t Long, pháº£i cháº¡y:
+
+```
+python scripts/long_gate.py <topic> --min-syl 1900
+```
+
+Lá»‡nh pháº£i in **Äáº T**. CÃ¡c ngÆ°á»¡ng Ä‘Æ°á»£c Ä‘o trÃªn bÃ i máº«u Petrov vÃ  KAL 007:
+
+| NgÆ°á»¡ng | GiÃ¡ trá»‹ |
+|---|---|
+| Ã‚m tiáº¿t lá»i Ä‘á»c | â‰¥ 1.900 (â‰ˆ 9 phÃºt) |
+| Thá»i lÆ°á»£ng má»—i cáº£nh | â‰¤ 9 giÃ¢y |
+| Loáº¡i cáº£nh má»—i chÆ°Æ¡ng | â‰¥ 5 |
+| Má»™t clip dÃ¹ng láº¡i (bÃ i 9â€“12 phÃºt) | â‰¤ 2 láº§n |
+| Má»™t áº£nh dÃ¹ng láº¡i | â‰¤ 3 láº§n |
+| URL nguá»“n trong `factcheck.md` | â‰¥ 8 |
+| TiÃªu Ä‘á» | â‰¤ 60 kÃ½ tá»± |
+
+NgoÃ i ra: má»i nÄƒm trong ká»‹ch báº£n pháº£i cÃ³ trong `factcheck.md`, vÃ  khÃ´ng Ä‘Æ°á»£c cÃ³ cÃ¢u Ä‘á»‡m.
+
+**BÃ i máº«u Ä‘á»ƒ so:**
+- Petrov: 22,5 phÃºt; 179 cáº£nh (7,6 giÃ¢y/cáº£nh); Ã­t nháº¥t 7 loáº¡i cáº£nh má»—i chÆ°Æ¡ng; 15 áº£nh khÃ¡c nhau.
+- KAL 007: 10,5 phÃºt; 82 cáº£nh (7,7 giÃ¢y/cáº£nh); khÃ´ng dÃ¹ng clip, chá»‰ áº£nh vÃ  Ä‘á»“ hoáº¡ (báº£n Ä‘á»“, timeline, counter).
+
+Má»—i chÆ°Æ¡ng cá»§a hai bÃ i nÃ y cÃ³ 3â€“4 dá»¯ kiá»‡n cá»¥ thá»ƒ cÃ³ nguá»“n.
+
+### Lá»—i Ä‘Ã£ gáº·p (Ä‘á»«ng láº·p láº¡i)
+
+Thá»­ nghiá»‡m Codex T1/T1b, 26/10/2026:
+
+1. **ChÃ¨n cÃ¢u Ä‘á»‡m rá»—ng nghÄ©a cho qua tá»‰ lá»‡ cÃ¢u ngáº¯n cá»§a lint.** VÃ­ dá»¥: "Ráº¥t cháº­m.", "ÄÃ³ lÃ  cÃ¢u há»i khÃ³.". CÃ¢u ngáº¯n chá»‰ Ä‘áº·t sau má»™t phÃ¡n Ä‘á»‹nh hoáº·c khoáº£nh kháº¯c cáº£m xÃºc.
+2. **Bá»‹ yÃªu cáº§u bá» cÃ¢u Ä‘á»‡m thÃ¬ chá»‰ xoÃ¡, khÃ´ng viáº¿t ná»™i dung thay.** BÃ i tá»¥t tá»« 9 xuá»‘ng 5 phÃºt. Thiáº¿u Ä‘á»™ dÃ i thÃ¬ pháº£i **tÃ¬m thÃªm dá»¯ kiá»‡n cÃ³ nguá»“n**, khÃ´ng Ä‘Æ°á»£c Ä‘á»ƒ bÃ i ngáº¯n Ä‘i.
+3. **Äá»c má»™t ngÃ y cá»¥ thá»ƒ (18/3/1940) trong khi chÃ­nh `factcheck.md` ghi lÃ  chÆ°a chá»‘t Ä‘Æ°á»£c.**
+4. **Má»™t clip láº·p 8 láº§n; 9 phÃºt chá»‰ cÃ³ 18 cáº£nh vÃ  toÃ n chá»¯.**
+5. **Cold open liá»‡t kÃª tÃªn ngÆ°á»i thay vÃ¬ dá»±ng má»™t cáº£nh cÃ³ cÄƒng tháº³ng; cÃ¢u meta "HÃ´m nay mÃ¬nh khÃ´ng ká»ƒâ€¦".**
+6. **Coi viá»‡c qua lint lÃ  xong.** Xong nghÄ©a lÃ  `long_gate.py` in Äáº T **vÃ ** ná»™i dung Ä‘Ã¡ng xem.
+7. **Tháº» chÆ°Æ¡ng ghi sai trÆ°á»ng.** ÄÃ£ ghi `"number": "05"` thay cho `no`/`k`, nÃªn engine hiá»‡n chá»¯ "undefined" giá»¯a mÃ n hÃ¬nh á»Ÿ cáº£ 8 chÆ°Æ¡ng. Tháº» chÆ°Æ¡ng Ä‘Ãºng (theo `mim-ke-huy-diet-petrov/ch05.json`):
+
+   ```json
+   {"type":"chapter","no":"5","k":"CHÆ¯Æ NG NÄ‚M","title":"â€¦","sub":"<má»‘c>","bg":"<áº£nh>","titleAt":[0,"<tá»«>"]}
+   ```
+
+   Má»—i `chNN.json` cÅ©ng pháº£i cÃ³ `"hud": {"k": "CHÆ¯Æ NG 05", "t": "<TIÃŠU Äá»€>"}`. Thiáº¿u `hud` thÃ¬ `describe.py` cháº¿t vÃ  mÃ´ táº£ khÃ´ng cÃ³ danh sÃ¡ch chÆ°Æ¡ng.
+8. **Má»™t khuÃ´n cáº£nh cho má»i chÆ°Æ¡ng.** Má»™t khuÃ´n 9 cáº£nh Ä‘Æ°á»£c dÃ¹ng láº¡i á»Ÿ cáº£ 8 chÆ°Æ¡ng, nÃªn cÃ¹ng má»™t dÃ²ng chá»¯ hiá»‡n 8 láº§n. Má»—i cáº£nh pháº£i minh hoáº¡ Ä‘Ãºng cÃ¢u Ä‘ang Ä‘á»c, vÃ  chá»¯ trÃªn mÃ n hÃ¬nh láº¥y tá»« dá»¯ kiá»‡n cá»§a chÃ­nh chÆ°Æ¡ng Ä‘Ã³. MÃ´-tÃ­p láº·p chá»‰ Ä‘Æ°á»£c lÃ m báº±ng `ledger` cÃ³ tiÃªu Ä‘á» cá»‘ Ä‘á»‹nh, má»—i chÆ°Æ¡ng thÃªm má»™t dÃ²ng má»›i.
+9. **QuÃªn báº£ng `SAY` vÃ  Ä‘á»ƒ `spec.youtube` trá»‘ng.** Pháº£i viáº¿t ngay tá»« Ä‘áº§u, theo máº«u Petrov vÃ  KAL:
+   - `SAY` phiÃªn Ã¢m má»i tÃªn nÆ°á»›c ngoÃ i, viáº¿t táº¯t (TNMOC, NASAâ€¦) vÃ  sá»‘ ráº¥t lá»›n.
+   - `spec.youtube` gá»“m: `publish_at`, `playlist`, `category`, `thumb`, `summary`, `more`, `chapter_titles`, `sources` (â‰¥ 8 URL cÃ´ng khai), `tags`, `hashtags`, `video_credits`.
+
+**NghiÃªn cá»©u trÆ°á»›c, viáº¿t sau:** khi ticket chia Ä‘Ã´i, ticket nghiÃªn cá»©u chá»‰ gom kho dá»¯ kiá»‡n cÃ³ URL (`facts.md`). Ticket viáº¿t chá»‰ dÃ¹ng dá»¯ kiá»‡n trong kho Ä‘Ã³.
+
+
+# Cheatsheet dá»±ng Long MIM (cho Codex, Ä‘á»c thay engine)
+
+**KhÃ´ng Ä‘á»c** `motion/long/build_long.py`, `motion/hf/assets/engine/*`, `motion/stier/*`, `factory/*`, `pexels.py` hay thÆ° má»¥c cá»§a bÃ i khÃ¡c. Má»i thá»© cáº§n biáº¿t Ä‘á»u cÃ³ trong cheatsheet nÃ y vÃ  trong **má»™t file máº«u**:
+
+> `data/long/mim-katherine-johnson/gen_scenes.py`. BÃ i nÃ y Ä‘Ã£ qua cá»•ng, render vÃ  Ä‘Äƒng. **ChÃ©p nguyÃªn file nÃ y lÃ m khung.** Giá»¯ cÃ¡c helper á»Ÿ dÃ²ng 57â€“163 vÃ  `main()`. Chá»‰ thay pháº§n ná»™i dung bÃªn dÆ°á»›i.
+
+## Thay nhá»¯ng gÃ¬ trong khung
+
+| Khá»‘i | Thay báº±ng |
+|---|---|
+| `TOPIC`, `TITLE` (â‰¤ 60 kÃ½ tá»±, má»™t dáº¥u `:`) | Cá»§a bÃ i má»›i |
+| `SAY` | PhiÃªn Ã¢m má»i tÃªn nÆ°á»›c ngoÃ i, viáº¿t táº¯t vÃ  sá»‘ lá»›n trong lá»i Ä‘á»c. KhoÃ¡ viáº¿t thÆ°á»ng. VÃ­ dá»¥: `"nasa": "Na-sa"` |
+| `IMGS` | áº¢nh Commons `"File:â€¦"` (Ä‘Ã£ kiá»ƒm PD/CC0/CC BY) hoáº·c `"EXT:ai:ai_NN"` cho áº£nh AI |
+| `AI_PATH`, `STAND` | Sá»‘ áº£nh AI cá»§a bÃ i (â‰¤ 6); `STAND` = áº£nh tÆ° liá»‡u thay táº¡m cho tá»«ng áº£nh AI |
+| `GEO` | Báº£n Ä‘á»“: `countries`, `context`, `bbox [lon_min, lat_min, lon_max, lat_max]`, `pins [{name, lon, lat, label}]` |
+| `CHAPTER_TITLES` | `ch00`â€“`ch07`, tiáº¿ng Viá»‡t cÃ³ dáº¥u |
+| `LEDGER`, `ROWS` | MÃ´-tÃ­p cá»§a bÃ i: má»™t tiÃªu Ä‘á», má»—i chÆ°Æ¡ng thÃªm 1 dÃ²ng |
+| `ch00()`â€“`ch07()` | Cáº£nh cá»§a tá»«ng chÆ°Æ¡ng (má»¥c dÆ°á»›i) |
+| `make_spec()` | Äá»§ 11 trÆ°á»ng `youtube`, Ä‘á»•i `publish_at`; giá»¯ `"say": SAY`, `imgs`, `geo` |
+
+## Helper: chá»¯ kÃ½ vÃ  Ã½ nghÄ©a
+
+**Neo thá»i gian:** `a(line, word)` neo cáº£nh vÃ o cÃ¢u `line` cá»§a chÆ°Æ¡ng, táº¡i tá»« `word`. `word` pháº£i lÃ  chá»¯ **cÃ³ tháº­t trong cÃ¢u Ä‘Ã³**, khÃ´ng pháº£i sá»‘ vÃ  khÃ´ng pháº£i chá»¯ cÃ³ trong `SAY`.
+
+| Helper | DÃ¹ng khi |
+|---|---|
+| `chapter(no, k, title, sub, bg, title_at)` | Cáº£nh Ä‘áº§u má»—i chÆ°Æ¡ng. `k = "CHÆ¯Æ NG Má»˜T"`; `sub` = má»‘c cÃ³ nguá»“n; `bg` = key áº£nh |
+| `photo(img, at, key, value, kin=None)` | áº¢nh tÆ° liá»‡u hoáº·c áº£nh AI. áº¢nh AI tá»± cÃ³ `illus` + `credit: False` |
+| `print_scene(img, at, head, key, value)` | áº¢nh Ä‘áº·t nhÆ° tá» in, cÃ³ cá»™t ghi chÃº |
+| `broll(vid, at, text)` | Clip Pexels (id sá»‘), cÃ³ nhÃ£n VIDEO MINH Há»ŒA |
+| `kinetic(at, text, small=None)` | Chá»¯ lá»›n Ä‘á»™ng |
+| `slam(at, text, sub)` | Má»™t con sá»‘ hoáº·c cá»¥m tá»« Ä‘áº­p máº¡nh |
+| `date(at, day, d, sub)` | Má»‘c ngÃ y lá»›n. `d = "20.02.1962"` (chá»¯ sá»‘ vÃ  dáº¥u cháº¥m); chá»¯ thÃ¬ Ä‘á»ƒ vÃ o `day` |
+| `counter(at, to, suffix, label, frm=0, year=False)` | Sá»‘ Ä‘áº¿m. NÄƒm thÃ¬ `year=True` |
+| `timeline(at, bg, items)` | DÃ²ng thá»i gian (xem cÃ¡ch dÃ¹ng trong máº«u) |
+| `org(at, nodes)` | SÆ¡ Ä‘á»“ ngÆ°á»i hoáº·c tá»• chá»©c |
+| `question(at, text)` | CÃ¢u há»i treo |
+| `ledger(n, at)` | Hiá»‡n mÃ´-tÃ­p tá»›i dÃ²ng `n` |
+| `{"type": "map", "at": â€¦, "geo": "<key GEO>"}` | Báº£n Ä‘á»“; máº«u cÃ³ á»Ÿ `ch01`/`ch05` cá»§a khung |
+
+## Luáº­t cáº£nh (cá»•ng `long_gate.py` sáº½ cháº·n náº¿u sai)
+
+- 60â€“80 cáº£nh, trung bÃ¬nh â‰¤ 9 giÃ¢y/cáº£nh, má»—i chÆ°Æ¡ng â‰¥ 5 loáº¡i cáº£nh.
+- KhÃ´ng dÃ²ng chá»¯ hiá»ƒn thá»‹ nÃ o láº·p > 2 láº§n. MÃ´-tÃ­p chá»‰ qua `ledger`.
+- Má»™t clip dÃ¹ng â‰¤ 2 láº§n, Ã­t nháº¥t 6 clip khÃ¡c nhau. Má»™t áº£nh dÃ¹ng â‰¤ 3 láº§n.
+- Má»—i cáº£nh minh hoáº¡ **cÃ¢u Ä‘ang Ä‘á»c**.
+
+## Clip Pexels
+
+- Táº£i: `python motion/long/pexels.py get <topic> <id> â€¦`. Chá»‰ dÃ¹ng id Ä‘Ã£ ghi trong `facts.md`. Tá»« 26/10/2026 táº£i tháº³ng theo id, khÃ´ng cáº§n `search` trÆ°á»›c.
+  - Lá»‡nh in "khÃ´ng cÃ³ báº£n ngang â‰¤1920 -- bá» qua" nghÄ©a lÃ  clip dá»c. Pháº£i thay báº±ng clip ngang. TÃ¬m báº±ng `pexels.py search <topic> "tá»« khoÃ¡"`, rá»“i `get` id má»›i.
+- SoÃ¡t: `python motion/long/clip_sheet.py <topic>`, má»Ÿ `output/long/<topic>/qa_clips.jpg` xem. Clip lá»™ chá»¯, logo hoáº·c sai nghÄ©a thÃ¬ thay.
+
+## BÃ i há»c Moneyball (26/10/2026)
+
+- **VÃ²ng ká»‹ch báº£n (W1):** pháº£i cháº¡y `script_lines.py` vÃ  `studio_lint.py --strict` rá»“i sá»­a háº¿t lá»—i cÃ¢u > 35 tiáº¿ng **ngay trong W1**. TÃ¡ch cÃ¢u sau khi Ä‘Ã£ dá»±ng cáº£nh thÃ¬ má»i neo phÃ­a sau bá»‹ lá»‡ch, sá»­a ráº¥t tá»‘n.
+- **Neo pháº£i tÄƒng dáº§n.** Cáº£nh sau pháº£i neo vÃ o tá»« Ä‘á»©ng **sau** neo cá»§a cáº£nh trÆ°á»›c, tÃ­nh theo (cÃ¢u, vá»‹ trÃ­ tá»«). Neo ngÆ°á»£c hoáº·c trÃ¹ng thÃ¬ engine bÃ¡o "cáº£nh quÃ¡ ngáº¯n".
+- **KhÃ´ng neo vÃ o chá»¯ sá»‘.** VÃ­ dá»¥ "11" khÃ´ng khá»›p vá»›i "11â€“0".
+- **"Qua html" nghÄ©a lÃ ** in Ä‘á»§ 8 dÃ²ng `chNN: â€¦ -> â€¦html` vÃ  khÃ´ng cÃ³ `Error`. Cháº¡y báº£n `--standin` mÃ  khÃ´ng Ä‘á»c lá»—i thÃ¬ chÆ°a tÃ­nh lÃ  qua.
+
+## BÃ i há»c Social Network vÃ  Moneyball sau render (26/10/2026)
+
+- **Ghim trong cáº£nh `map` pháº£i trÃ¹ng tÃªn ghim trong `GEO`.** VÃ­ dá»¥ `{"name": "Harvard"}` thÃ¬ `GEO` cÅ©ng pháº£i cÃ³ `"name": "Harvard"`. Sai tÃªn thÃ¬ engine lá»—i vÃ  **cáº£ chÆ°Æ¡ng Ä‘á»©ng hÃ¬nh á»Ÿ tháº» chÆ°Æ¡ng** (72 giÃ¢y). `long_gate.py` giá» cháº·n lá»—i nÃ y.
+- **Cáº£nh `question` hay `slam` khÃ´ng Ä‘Æ°á»£c kÃ©o dÃ i.** Cáº£nh káº¿ tiáº¿p pháº£i neo vÃ o cÃ¢u ngay sau, khÃ´ng Ä‘Æ°á»£c Ä‘á»ƒ má»™t tháº» chá»¯ tÄ©nh 20 giÃ¢y. Claude cháº¡y thÃªm `scripts/freeze_check.py` sau render: Ä‘á»©ng hÃ¬nh > 12 giÃ¢y lÃ  trÆ°á»£t.
+
+- **áº¢nh dá»c cÃ³ máº·t ngÆ°á»i** (chÃ¢n dung, áº£nh tháº») khi Ä‘Æ°a vÃ o cáº£nh `photo` hay `chapter` pháº£i cÃ³ `"focus": [0.5, 0.12â€“0.2]`, Ä‘á»ƒ khung 16:9 láº¥y Ä‘Ãºng vÃ¹ng máº·t. Thiáº¿u `focus` thÃ¬ engine cáº¯t giá»¯a áº£nh: bÃ i Macintosh chá»‰ cÃ²n vest vÃ  tay cá»§a Jobs. `long_gate.py` cáº£nh bÃ¡o trÆ°á»ng há»£p nÃ y.
+
+## Thá»© tá»± lá»‡nh
+
+Äáº·t `PYTHONIOENCODING=utf-8` cho má»i lá»‡nh.
+
+1. `python motion/long/script_lines.py <topic>`: Ä‘Æ°a lá»i Ä‘á»c tá»« `script.md` vÃ o `chNN.json`.
+2. `python data/long/<topic>/gen_scenes.py`, rá»“i cháº¡y láº¡i `script_lines.py`. `gen_scenes` ghi Ä‘Ã¨ `chNN.json` khÃ´ng kÃ¨m `lines`.
+3. `python motion/long/studio_lint.py <topic> --strict` pháº£i ra **0 lá»—i**.
+   - CÃ¢u quÃ¡ 35 tiáº¿ng thÃ¬ **tÃ¡ch thÃ nh 2 cÃ¢u** trong `script.md`, giá»¯ nguyÃªn Ã½, ká»ƒ cáº£ khi ká»‹ch báº£n Ä‘Ã£ Ä‘Æ°á»£c duyá»‡t.
+   - TÃ¡ch cÃ¢u xong, kiá»ƒm láº¡i neo `a(line, word)` cá»§a cÃ¡c cÃ¢u phÃ­a sau trong chÆ°Æ¡ng Ä‘Ã³, vÃ¬ sá»‘ thá»© tá»± cÃ¢u Ä‘Ã£ lá»‡ch.
+4. `python motion/long/build_long.py <topic> tts` cho **Ä‘á»§ má»i chÆ°Æ¡ng**: pháº£i cÃ³ `output/long/<topic>/chNN/timing.json` cho tá»«ng chÆ°Æ¡ng. Rá»“i cháº¡y `â€¦ html`. Náº¿u áº£nh AI chÆ°a cÃ³ thÃ¬ cháº¡y `gen_scenes.py --standin` Ä‘á»ƒ soÃ¡t html, sau Ä‘Ã³ cháº¡y láº¡i báº£n tháº­t.
+5. `python scripts/long_gate.py <topic> --min-syl 1900` pháº£i ra **Äáº T**.
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw -Encoding utf8 'docs/pm/tickets/2026-10-27-ck-lo-1811/00-CHUNG-R.md'" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 66ms:
+# Luật chung cho ticket NGHIÊN CỨU (R) của lô Long CK 18–25/11
+
+**Ticket nghiên cứu.** Không viết kịch bản, không chạy lint, render hay `long_gate`. Không grep repo, không đọc code.
+
+**Mỗi ticket chỉ ghi 2 file:**
+- `data/long/<topic>/facts.md`
+- `docs/pm/tickets/2026-10-27-ck-lo-1811/<mã>-ket-qua.md`
+
+**Chỉ đọc:**
+- ticket của mình và file này;
+- `AGENTS.md`, mục "CK";
+- `data/long/ck-e6-luong-huu-rut-mot-lan/factcheck.md`, chỉ 30 dòng đầu, để biết định dạng nguồn CK.
+
+## Luật cứng của kênh CK (Biểu Đồ Biết Nói)
+
+- **Không nêu tên** ngân hàng, công ty chứng khoán, công ty bảo hiểm, bệnh viện, hãng xe hay mã cổ phiếu. Cơ quan nhà nước thì được nêu tên, ví dụ "Bảo hiểm xã hội Việt Nam", "Bộ Y tế".
+- **Không khuyên** mua, bán, gửi, rút hay chọn gói nào. Chỉ đặt các phép tính cạnh nhau.
+- **Nhân vật** là **VÍ DỤ GIẢ ĐỊNH** có tên Việt, ví dụ "chị Lan, lương 15 triệu". Không bịa người thật.
+- **Luật và quy định:**
+  - ưu tiên văn bản gốc: Cổng TTĐT Chính phủ (chinhphu.vn), Công báo, vbpl.vn, trang của bộ hoặc cơ quan;
+  - báo chí chỉ là nguồn **vừa**;
+  - ghi rõ số hiệu văn bản, ngày hiệu lực và điều khoản;
+  - nếu luật mới thay luật cũ trong 2025–2026, ghi cả hai cùng ngày chuyển tiếp.
+
+## Cần gom
+
+1. **Dữ kiện:** ít nhất **28**, chia cho 7 chương, mỗi chương 3–5. Mỗi dòng gồm:
+   - khẳng định;
+   - ít nhất một số, ngày hoặc tên cụ thể;
+   - URL **đã mở được**, kèm tên trang;
+   - độ tin **mạnh** hoặc **vừa**.
+2. **Bộ số để vẽ biểu đồ:** ít nhất **8 bảng nhỏ**. Đây là phần quan trọng nhất, vì kênh dựng chủ yếu bằng biểu đồ. Mỗi bảng gồm:
+   - tên;
+   - loại biểu đồ đề xuất: `bars`, `line` (theo năm), `waterfall` (tổng bị trừ dần), `stack` (cột xếp chồng), `heat` (lịch 12 tháng), `dots` (mỗi chấm một người), `counter`;
+   - 3–12 điểm số, kèm đơn vị;
+   - nguồn hoặc cách tính.
+   - Số tự tính phải ghi công thức và giả định, đánh dấu **VÍ DỤ GIẢ ĐỊNH**.
+3. **Biểu đồ chính:** một biểu đồ lớn dần qua các chương, ví dụ tiền của nhân vật cộng dồn. Ghi mỗi chương thêm điểm nào.
+4. **Cold open:** 2 phương án. Mỗi phương án:
+   - mở bằng một con số tiền của nhân vật;
+   - có một nghịch lý;
+   - biểu đồ hiện trước giây 15;
+   - có một câu hỏi treo, đóng ở chương cuối.
+5. **Tiêu đề:** 3 bản, mỗi bản ≤ 60 ký tự, có một dấu `:` hoặc `?`. Cấu trúc: khoản tiền × mốc thời gian × nhóm người. Không dùng các từ "sập, toang, xoá sổ".
+6. **Thumbnail:** 2 ý. Mỗi ý là một con số lớn + một biểu đồ nhỏ, tối đa 3 chữ.
+7. **Clip:** 8–10 clip Pexels **ngang**, trung tính, kèm id và ghi chú "không logo/chữ/biển hiệu". Không có quầy giao dịch ngân hàng hay biển bệnh viện đọc được tên.
+8. **Rủi ro:** những câu dễ nghe như lời khuyên, và những số còn tranh cãi.
+
+## Báo cáo `<mã>-ket-qua.md`
+
+- Số dữ kiện theo chương, chia mạnh/vừa.
+- Danh sách 8+ bảng số.
+- Biểu đồ chính.
+- 2 cold open, 3 tiêu đề, 2 ý thumbnail.
+- Văn bản luật đã mở được và chưa mở được.
+
+
+codex
+Ticket này là ticket nghiên cứu R2, nên theo luật chung của lô: chỉ lập kho dữ kiện và báo cáo; không viết kịch bản, không render và không chạy `long_gate`. Tôi đang lấy nguồn văn bản gốc, ưu tiên cơ quan nhà nước.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Encoding utf8 -TotalCount 30 'data/long/ck-e6-luong-huu-rut-mot-lan/factcheck.md'" in D:\Tools\Youtube Creator v2\Youtube_Creator_V2
+ succeeded in 95ms:
+# Fact-check — script.md (bản 1) · ck-e6-luong-huu-rut-mot-lan (B5 · Rút BHXH một lần hay lương hưu)
+
+Ngày kiểm: 23/10/2026. Mọi URL dưới đây đã được mở trong phiên viết. **Phép tính:** `analysis.py` → `results.json`; kiểm độc lập `check.py` (bảng tỷ
+lệ viết tay theo lời luật + mô phỏng tháng rút dần) → **"E6 check: OK (36 phép)"**. `script_lines.py` qua cổng; `studio_lint.py` 0/0; soát neo 0 lỗi.
+
+Nhãn: **OK** · **OK-2** (thứ cấp) · **SUY** · **TÍNH**.
+
+## 1. Quy định và số liệu
+
+| # | Câu / cảnh | Giá trị | Nguồn (đã mở) | Nhãn |
+|---|---|---|---|---|
+| 1 | Luật BHXH 2024 hiệu lực 01/07/2025; 15 năm có lương hưu (cũ 20) | | https://tuoitre.vn/plo/cach-tinh-luong-huu-theo-luat-bhxh-2024-post821894.html (PLO 01/12/2024) | OK-2 |
+| 2 | Nữ: 45% ứng 15 năm, +2%/năm, tối đa 75% ở 30 năm | | nguồn #1 | OK-2 |
+| 3 | Nam: 40% ứng 15 năm, +1%/năm tới 20 năm, rồi +2%/năm, tối đa 75% ở 35 năm | ví dụ ông B 18 năm 4 tháng = 43,5% (khớp +1%/năm); mốc 45% ở 20 năm theo nguồn khác trong kết quả tìm kiếm | nguồn #1 | OK-2 — PLO tóm tắt "+2%/năm" chung; cơ chế +1% suy từ ví dụ của chính bài → **kiểm Điều 66 Luật 41/2024** |
+| 4 | BHXH một lần: 1,5 tháng/năm trước 2014; 2 tháng/năm từ 2014; bình quân tiền lương | | https://luatvietnam.vn/bao-hiem/dieu-kien-huong-bao-hiem-xa-hoi-1-lan-563-23984-article.html | OK-2 |
+| 5 | Điều kiện người đóng trước 01/07/2025: nghỉ 12 tháng, không đóng bắt buộc/tự nguyện, chưa đủ 20 năm; định cư nước ngoài, bệnh nặng; đủ tuổi chưa đủ 15 năm → một lần hoặc trợ cấp hằng tháng | | nguồn #4 | OK-2 |
+| 6 | "Đóng từ 07/2025 gần như không còn đường rút một lần" | trường hợp 12 tháng chỉ áp cho người đóng trước ngày Luật hiệu lực | nguồn #4 | SUY (đúng theo danh sách điều kiện) |
+| 7 | Bình quân tiền lương được điều chỉnh trượt giá | | luật hiện hành (công cụ tính "cập nhật hệ số trượt giá" của thuvienphapluat trong kết quả tìm kiếm) | OK-2 (yếu) |
+| 8 | Đã nhận một lần → thời gian ấy không tính lương hưu; chưa nhận → bảo lưu, cộng nối | | https://ketoanthuanthien.vn/hoi-dap/tai-sao-can-bao-luu-thoi-gian-tham-gia-bhxh-thay-vi-rut-mot-lan/ (cập nhật 24/05/2026, dẫn Luật 41/2024 Đ23, 64, 65, 70, 71, 79) | OK-2 (yếu: trang kế toán) |
+| 9 | Tự nguyện: 22% thu nhập tự chọn (Điều 36 Luật 2024); Nhà nước hỗ trợ một phần (NĐ 159/2025) | | https://www.meinvoice.vn/tin-tuc/32269/bao-hiem-xa-hoi-tu-nguyen/ (16/11/2025) | OK-2 |
+| 10 | Tuổi nghỉ hưu: nữ 57 (2026), +4 tháng/năm → 60 từ 2035; nam 61 tuổi 6 tháng (2026), +3 tháng/năm → 62 từ 2028 | bảng Điều 4 | https://vnuf.edu.vn/wp-content/uploads/2021/01/Nghi-dinh_135-2020-ND-CP..pdf (trích chữ PDF) | OK |
+| 11 | Chị Hạnh sinh 1991 → 60 tuổi năm 2051 | nữ nghỉ hưu sau 2035 ở 60 | #10 | OK · TÍNH |
+| 12 | 2016–2022: > 4,8 triệu người hưởng một lần; ~1,3 triệu quay lại; 20–40 tuổi ≈ 77,5%; dưới 5 năm 66,6%; 5–10 năm 23,8% ("gần chín phần mười số hồ sơ đóng dưới mười năm" = 90,4%) | báo cáo Bộ LĐ-TB&XH | https://vneconomy.vn/phan-lon-nguoi-lao-dong-rut-bao-hiem-xa-hoi-mot-lan-la-lao-dong-tre.htm (03/07/2023) | OK-2 · TÍNH (cộng 2 nhóm; nguồn tính trên hồ sơ) |
+| 13 | Tuổi thọ trung bình nữ 2024: 77,3 (lúc sinh) | | https://news.tuoitre.vn/average-life-expectancy-in-vietnam-reaches-747-years-in-2024-10384693.htm (21/02/2025, Cục Thống kê) | OK |
+| 14 | "Người đã sống tới 60 thường còn sống lâu hơn mốc ấy" | tính chất của tuổi thọ kỳ vọng có điều kiện | — | SUY (kiến thức nhân khẩu học chung) |
+| 15 | Trợ cấp hưu trí xã hội từ 75 tuổi (người không có lương hưu, ngân sách chi); mức đề xuất 500 nghìn/tháng khi soạn nghị định | | https://hatinh.gov.vn/vi/bai-viet/nguoi-du-75-tuoi-co-the-nhan-tro-cap-huu-tri-500000-dong-moi-thang (20/01/2025, dự thảo) | OK-2 — lời đọc nói rõ "mức đề xuất khi soạn nghị định"; NĐ 176/2025 chưa mở → **kiểm mức chính thức** |
+| 16 | Người hưởng lương hưu có thẻ BHYT do quỹ BHXH đóng | | — | SUY (Luật BHYT: người hưởng lương hưu thuộc nhóm do tổ chức BHXH đóng) — chưa mở nguồn → **kiểm** |
+| 17 | Phần người lao động tự đóng BHXH = 8% lương | | https://luatvietnam.vn/bao-hiem/tu-2026-muc-dong-bhxh-bhyt-bhtn-cua-nld-va-nsdld-duoc-tinh-nhu-the-nao-563-106906-article.html | OK-2 |
+| 18 | "Công ty của chị cũng đóng vào quỹ, song song với chị" | không nêu tỷ lệ của doanh nghiệp | — | OK (định tính) |
+
+
+web search: 
+web search: site:baohiemxahoi.gov.vn Luật Bảo hiểm y tế 51/2024/QH15 mức hưởng 80 95 100 1/7/2025 ...
+web search: 
+web search: site:baohiemxahoi.gov.vn mức hưởng BHYT 80% 95% 100% cùng chi trả 5 năm liên tục 2025 ...
+web search: 
+web search: site:pexels.com/video hospital corridor patient bed video ...
+codex
+Tôi đã xác nhận được luật sửa đổi có hiệu lực, nghị định hướng dẫn, các mức hưởng và trạng thái “miễn viện phí” là lộ trình đến 2030 chứ không phải miễn tuyệt đối. Bây giờ tôi đóng gói 28 dữ kiện, các bảng số và rủi ro diễn đạt vào đúng hai file R2.
+apply patch
+patch: completed
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\ck-f2-vien-phi-bhyt\facts.md
+D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-27-ck-lo-1811\R2-ket-qua.md
+diff --git a/data/long/ck-f2-vien-phi-bhyt/facts.md b/data/long/ck-f2-vien-phi-bhyt/facts.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..3c5a07dcd7ba59fc98e4988471acbe401292cf10
+--- /dev/null
++++ b/data/long/ck-f2-vien-phi-bhyt/facts.md
+@@ -0,0 +1,135 @@
++# Kho dữ kiện R2 — ck-f2-vien-phi-bhyt
++
++Ngày kiểm: 27/10/2026. Mọi URL dưới đây đã mở trong phiên nghiên cứu. “Mạnh” là văn bản/cơ quan nhà nước; “vừa” là số liệu hoặc diễn giải chính thức cần giữ đúng ngữ cảnh. Nhân vật Minh và mọi hóa đơn minh họa bên dưới là **VÍ DỤ GIẢ ĐỊNH**, không phải ca bệnh hay báo giá thực tế.
++
++## Nguồn đã mở
++
++- [S1 — Cổng Văn bản Chính phủ, Luật 51/2024/QH15](https://vanban.chinhphu.vn/default.aspx?docid=212479&pageid=27160)
++- [S2 — Cơ sở dữ liệu VBPL, toàn văn Luật 51/2024/QH15](https://vbpl.moj.gov.vn/vanphongchinhphu/Pages/vbpq-toanvan.aspx?ItemID=172923&Keyword=)
++- [S3 — BHXH Việt Nam, Nghị định 02/2025 và lộ trình hưởng](https://baohiemxahoi.gov.vn/tintuc/Pages/linh-vuc-bao-hiem-y-te.aspx?CateID=169&ItemID=24217&OtItem=date)
++- [S4 — BHXH Việt Nam, thay đổi của Luật BHYT 2024](https://baohiemxahoi.gov.vn/tintuc/Pages/linh-vuc-bao-hiem-y-te.aspx?CateID=169&ItemID=24202)
++- [S5 — BHXH Việt Nam, mức đóng và Nghị định 188/2025/NĐ-CP](https://baohiemxahoi.gov.vn/tintuc/Pages/chuyen-doi-so.aspx?CateID=0&ItemID=25140)
++- [S6 — BHXH Việt Nam, quyền lợi 5 năm liên tục theo Nghị định 188](https://baohiemxahoi.gov.vn/tintuc/Pages/linh-vuc-bao-hiem-y-te.aspx?CateID=0&ItemID=27248&OtItem=date)
++- [S7 — Cổng TTĐT Chính phủ, toàn văn Nghị quyết 72-NQ/TW](https://cms.baochinhphu.vn/nghi-quyet-cua-bo-chinh-tri-ve-mot-so-giai-phap-dot-pha-tang-cuong-bao-ve-cham-soc-va-nang-cao-suc-khoe-nhan-dan-10225091200201604.htm)
++- [S8 — Cổng TTĐT Chính phủ, giải thích lộ trình miễn viện phí](https://baochinhphu.vn/nghi-quyet-72-nq-tw-cu-the-hoa-duong-loi-phat-trien-y-te-ben-vung-102250916111514137.htm)
++- [S9 — BHXH Việt Nam, báo cáo BHYT năm 2024](https://baohiemxahoi.gov.vn/tintuc/Pages/linh-vuc-bao-hiem-y-te.aspx?CateID=169&ItemID=25561)
++- [S10 — BHXH Việt Nam, chi quỹ và chi tiền túi](https://baohiemxahoi.gov.vn/chidaodieuhanh/Pages/thong-tin-bao-chi.aspx?CateID=0&ItemID=26332&OtItem=date)
++- [S11 — BHXH Việt Nam, hộ gia đình và mức đóng](https://baohiemxahoi.gov.vn/tintuc/Pages/kinh-te-xa-hoi.aspx?CateID=0&ItemID=25220&OtItem=date)
++
++## Dữ kiện theo chương
++
++### Chương 1 — Một hóa đơn có nhiều lớp (4)
++
++1. **VÍ DỤ GIẢ ĐỊNH:** Minh, 38 tuổi, nằm viện 7 ngày; tổng chi phí minh họa 30,0 triệu đồng. Đây chỉ là số dựng để vẽ waterfall, không đại diện cho bất kỳ bệnh hay cơ sở nào. **Nguồn/cách tính:** giả định biên tập. **Độ tin:** mạnh về nhãn giả định.
++2. Năm 2025, quỹ BHYT chi trả cho 195,1 triệu lượt khám chữa bệnh; số chi đề nghị thanh toán là 166,4 nghìn tỷ đồng. **Nguồn:** S10, BHXH Việt Nam. **Độ tin:** mạnh.
++3. Giai đoạn 2016–2024, quỹ BHYT chi trả hơn 1,48 tỷ lượt khám chữa bệnh với tổng tiền hơn 915 nghìn tỷ đồng. **Nguồn:** S10, BHXH Việt Nam. **Độ tin:** mạnh.
++4. “Phần ngoài hóa đơn BHYT” cần tách riêng với phần đồng chi trả trong phạm vi hưởng: ví dụ giả định gồm đi lại, ăn ở người nhà và ngày nghỉ làm; không được gọi toàn bộ là phần BHYT từ chối. **Nguồn:** cách phân loại biên tập dựa trên phạm vi KCB của S1/S5. **Độ tin:** vừa.
++
++### Chương 2 — Luật nào đang áp dụng? (4)
++
++5. Luật số 51/2024/QH15 được Quốc hội ban hành ngày 27/11/2024 và có hiệu lực từ 01/07/2025. **Nguồn:** S1; S2. **Độ tin:** mạnh.
++6. Luật 51/2024/QH15 sửa đổi, bổ sung Luật BHYT 25/2008/QH12 và các lần sửa đổi trước đó; khi nói quyền lợi hiện hành phải dẫn luật mới, không chỉ đọc quy tắc cũ. **Nguồn:** S2. **Độ tin:** mạnh.
++7. Nghị định 188/2025/NĐ-CP ngày 01/07/2025 quy định chi tiết và hướng dẫn thi hành một số điều của Luật BHYT; một số quy định có hiệu lực từ 01/01/2025. **Nguồn:** S5. **Độ tin:** mạnh.
++8. Thông tư 01/2025/TT-BYT thay Thông tư 40/2015/TT-BYT về đăng ký KCB BHYT ban đầu và chuyển cơ sở KCB, theo phần giới thiệu của BHXH Việt Nam. **Nguồn:** [BHXH Việt Nam](https://baohiemxahoi.gov.vn/tintuc/Pages/linh-vuc-bao-hiem-y-te.aspx?CateID=169&ItemID=24229). **Độ tin:** mạnh.
++
++### Chương 3 — 80%, 95%, 100% nghĩa là gì? (4)
++
++9. Các tỷ lệ 80%, 95% và 100% là **mức hưởng trong phạm vi quyền lợi BHYT**, không phải tỷ lệ của toàn bộ một hóa đơn do bệnh nhân cầm trên tay. **Nguồn:** S3; S5. **Độ tin:** mạnh.
++10. Người tham gia BHYT 5 năm liên tục trở lên chỉ đạt mức 100% trong phạm vi hưởng khi đồng thời đáp ứng điều kiện luật định, trong đó có số tiền cùng chi trả trong năm vượt 6 lần mức tham chiếu và KCB đúng quy định. **Nguồn:** S6. **Độ tin:** mạnh.
++11. Từ 01/07/2026, mức tham chiếu theo mức lương cơ sở là 2,53 triệu đồng/tháng; ngưỡng 6 lần tương ứng lớn hơn 15,18 triệu đồng cùng chi trả trong năm. **Nguồn:** S6. **Độ tin:** mạnh.
++12. Nhóm hộ cận nghèo và người từ đủ 75 tuổi đang hưởng trợ cấp hưu trí xã hội có mức hưởng 100% chi phí KCB trong phạm vi được hưởng từ 01/01/2026. **Nguồn:** [BHXH Việt Nam](https://baohiemxahoi.gov.vn/tintuc/Pages/linh-vuc-bao-hiem-y-te.aspx?CateID=169&ItemID=25977&OtItem=date). **Độ tin:** mạnh.
++
++### Chương 4 — Đúng nơi, đúng quy định vẫn quan trọng (4)
++
++13. Người tham gia được hưởng 100% mức hưởng khi KCB tại cơ sở cấp ban đầu trong toàn quốc. **Nguồn:** S4. **Độ tin:** mạnh.
++14. Người tham gia được hưởng 100% mức hưởng khi điều trị nội trú tại cơ sở KCB cấp cơ bản trong toàn quốc. **Nguồn:** S4. **Độ tin:** mạnh.
++15. Từ 01/07/2026, KCB ngoại trú tại một số cơ sở cấp cơ bản theo điều kiện luật định được quỹ thanh toán 50% mức hưởng; đây là 50% của “mức hưởng”, không phải mặc định 50% tổng hóa đơn. **Nguồn:** S3. **Độ tin:** mạnh.
++16. Một số bệnh hiếm, hiểm nghèo, cần phẫu thuật hoặc kỹ thuật cao thuộc danh mục có thể được KCB ở cấp cơ bản/chuyên sâu và hưởng 100% mức hưởng theo phạm vi, quyền lợi; BHXH Việt Nam nêu danh mục 62 bệnh, nhóm bệnh. **Nguồn:** nguồn ở dữ kiện 8. **Độ tin:** mạnh.
++
++### Chương 5 — Minh tự trả phần nào? (4)
++
++17. **VÍ DỤ GIẢ ĐỊNH:** trong 30,0 triệu đồng chi phí minh họa, tách 20,0 triệu đồng “trong phạm vi BHYT”, 5,0 triệu đồng đồng chi trả 20% và 5,0 triệu đồng ngoài phạm vi/quyền lợi. Công thức: 20,0 × 80% = 16,0 triệu quỹ; Minh trả 4,0 + 5,0 = 9,0 triệu trên hóa đơn. **Nguồn/cách tính:** phép tính giả định, không phải mức giá hay mức hưởng chung.
++18. **VÍ DỤ GIẢ ĐỊNH:** cộng 2,0 triệu đồng đi lại, ăn ở người nhà và thu nhập nghỉ làm, gánh nặng 7 ngày là 11,0 triệu đồng; 2,0 triệu này không phải chi phí KCB BHYT. **Nguồn/cách tính:** 9,0 + 2,0 = 11,0 triệu, giả định biên tập.
++19. Năm 2025, tỷ lệ chi trực tiếp từ tiền túi cho dịch vụ y tế được Bộ Y tế nêu là khoảng 40% tổng chi y tế, giảm từ khoảng 60% vào đầu những năm 2000. Đây là chỉ số toàn hệ thống, không suy ra tỷ lệ của Minh. **Nguồn:** S10. **Độ tin:** vừa.
++20. Cơ sở KCB có trách nhiệm kiểm tra quyền lợi và mức hưởng BHYT trước khi kết thúc lượt KCB, ra viện. **Nguồn:** [BHXH Việt Nam](https://baohiemxahoi.gov.vn/chidaodieuhanh/Pages/thong-tin-bao-chi.aspx?CateID=0&ItemID=25281). **Độ tin:** mạnh.
++
++### Chương 6 — Đóng bao nhiêu, quỹ đang bao phủ ra sao? (4)
++
++21. Mức đóng BHYT hằng tháng phổ biến là 4,5% tiền lương tháng làm căn cứ đóng BHXH bắt buộc, lương hưu, trợ cấp hoặc lương cơ sở; luật quy định mức tối đa 6%. **Nguồn:** S5. **Độ tin:** mạnh.
++22. Với hộ gia đình cùng tham gia trong năm tài chính: người thứ hai, ba, bốn lần lượt đóng 70%, 60%, 50% mức của người thứ nhất; từ người thứ năm là 40%. **Nguồn:** S11. **Độ tin:** mạnh.
++23. Hết năm 2024, Việt Nam có 95,525 triệu người tham gia BHYT, đạt khoảng 94,29% dân số. **Nguồn:** S9. **Độ tin:** mạnh.
++24. Năm 2024 có 183,6 triệu lượt KCB, tăng 5,6% so với 2023; khoảng 40 triệu người KCB BHYT thường xuyên, trung bình 4,5 lần/người/năm; chi phí quỹ khoảng 140.000 tỷ đồng. **Nguồn:** [Cổng TTĐT Chính phủ](https://baochinhphu.vn/du-kien-lo-trinh-trien-khai-chinh-sach-mien-vien-phi-102251201192347856.htm). **Độ tin:** mạnh.
++
++### Chương 7 — “Miễn viện phí” đã đến đâu? (4)
++
++25. Nghị quyết 72-NQ/TW do Bộ Chính trị ban hành ngày 09/09/2025. **Nguồn:** S7. **Độ tin:** mạnh.
++26. Mục tiêu đến 2030 là miễn chi phí KCB “ở mức cơ bản” trong phạm vi quyền lợi BHYT theo lộ trình; không phải tuyên bố miễn phí tuyệt đối cho mọi dịch vụ. **Nguồn:** S8. **Độ tin:** mạnh.
++27. Từ năm 2026, định hướng là từng bước tăng tỷ lệ, mức thanh toán và chi cho phòng bệnh, chẩn đoán/điều trị sớm với một số bệnh, đối tượng ưu tiên; thông tin này là lộ trình, không phải quyền lợi đồng loạt đã có hiệu lực. **Nguồn:** S8. **Độ tin:** mạnh.
++28. Giai đoạn 2028–2030, định hướng nêu mục tiêu giảm chi tiền túi xuống dưới 30%, bao phủ BHYT trên 95% dân số và điều chỉnh mức đóng từ năm 2030 lên 5,4%; đây là mục tiêu/đề xuất lộ trình công bố, không dùng như mức đang áp dụng. **Nguồn:** nguồn ở dữ kiện 24. **Độ tin:** vừa.
++
++## Bộ số để vẽ biểu đồ
++
++| # | Tên / loại | Điểm số | Nguồn hoặc cách tính |
++|---|---|---|---|
++| 1 | Waterfall “30 triệu của Minh đi đâu?” | Tổng 30,0; trong phạm vi 20,0; quỹ trả 16,0; đồng chi trả 4,0; ngoài phạm vi 5,0; ngoài hóa đơn 2,0; gánh nặng 11,0 (triệu đồng) | **VÍ DỤ GIẢ ĐỊNH**; 20 × 80%=16; 30−16=14 trên/tổng hóa đơn; 9+2=11 thực chi rộng. |
++| 2 | Bars “Ba mức hưởng” | 80; 95; 100 (%) | S3; chỉ chú thích “trong phạm vi hưởng”, không gắn vào một nhóm nếu chưa có thẻ/đối tượng cụ thể. |
++| 3 | Counter “Ngưỡng 5 năm liên tục” | 5 (năm); 6 (lần mức tham chiếu); 2,53; 15,18 (triệu đồng/tháng/ngưỡng) | S6; 6 × 2,53 = 15,18. |
++| 4 | Line “Chi tiền túi” | đầu những năm 2000: ~60%; 2025: ~40%; mục tiêu 2028–2030: <30% | S10 và nguồn dữ kiện 24; điểm cuối là mục tiêu. |
++| 5 | Bars “Bao phủ BHYT” | 2024: 95,525 triệu người; 94,29% dân số; mục tiêu 2028–2030: >95% | S9 và nguồn dữ kiện 24; không nội suy số người cho mục tiêu. |
++| 6 | Stack “Lượt KCB và quỹ” | 2024: 183,6 triệu lượt / ~140.000 tỷ; 2025: 195,1 triệu lượt / 166,4 nghìn tỷ | nguồn dữ kiện 24 và S10; hai đơn vị hiển thị hai trục/chú thích rõ. |
++| 7 | Bars “Giảm trừ hộ gia đình” | người 1: 100; người 2: 70; người 3: 60; người 4: 50; người 5+: 40 (%) | S11; tỷ lệ so với mức đóng của người thứ nhất. |
++| 8 | Timeline “Hiệu lực và lộ trình” | 01/01/2025; 01/07/2025; 01/07/2026; 2026; 2030 | S3, S5, S6, S8; gắn từng mốc đúng nhãn “hiệu lực” hoặc “lộ trình”. |
++| 9 | Dots “7 ngày của Minh” | 7 ngày nằm viện; 5 dòng chi phí KCB; 3 khoản ngoài hóa đơn | **VÍ DỤ GIẢ ĐỊNH**; dùng chấm/biểu tượng, không giả là thống kê. |
++
++## Biểu đồ chính xuyên bài
++
++**Waterfall “Từ 30 triệu hóa đơn đến 11 triệu gánh nặng 7 ngày của Minh”** — tất cả là **VÍ DỤ GIẢ ĐỊNH**. Mỗi chương thêm một lớp:
++
++1. Ch1: đặt cột tổng 30,0 triệu và nhãn “7 ngày”.
++2. Ch2: khoanh vùng “quyền lợi hiện hành”, chưa trừ tiền.
++3. Ch3: trừ 16,0 triệu quỹ BHYT trả theo ví dụ 80% của 20,0 triệu trong phạm vi.
++4. Ch4: gắn điều kiện “đúng quy định/phạm vi hưởng” lên cột quỹ, không đổi số.
++5. Ch5: hiện 4,0 triệu đồng chi trả + 5,0 triệu ngoài phạm vi = 9,0 triệu trên hóa đơn; cộng 2,0 triệu ngoài hóa đơn = 11,0 triệu.
++6. Ch6: đặt nhỏ bên cạnh tỷ lệ đóng 4,5% và quy mô bao phủ, không suy ra lợi ích cá nhân.
++7. Ch7: đổi nền thành lộ trình 2026→2030, giữ nguyên 11,0 triệu và đóng câu hỏi: “Lộ trình có thể thay đổi phần nào, còn khoản nào vẫn ngoài phạm vi?”
++
++## Cold open
++
++1. **“30 triệu trong 7 ngày, nhưng Minh không nhìn thấy số quan trọng nhất là 11 triệu.”** Nghịch lý: thẻ có mức hưởng 80% nhưng số tiền thực chi vẫn gồm những lớp ngoài phạm vi và ngoài hóa đơn. Waterfall xuất hiện ở giây 8; câu hỏi treo: “Đến 2030, lớp nào trong 11 triệu có thể thay đổi?”
++2. **“Một hóa đơn 30 triệu có thể được quỹ trả 16 triệu, mà gia đình Minh vẫn xoay 11 triệu.”** Nghịch lý: tỷ lệ 80% không áp lên mọi dòng chi. Biểu đồ hiện ở giây 12; câu hỏi treo: “Vậy ‘miễn viện phí’ đang hứa miễn phần nào?”
++
++## Tiêu đề đề xuất
++
++1. `30 Triệu Trong 7 Ngày: BHYT Trả Bao Nhiêu?`
++2. `11 Triệu Tự Trả Sau 7 Ngày Nằm Viện?`
++3. `7 Ngày Nằm Viện: 80% BHYT Vẫn Thiếu Gì?`
++
++## Thumbnail
++
++1. Số lớn `11 TRIỆU` + waterfall nhỏ; chữ tối đa 3 từ: `TỰ TRẢ GÌ?`
++2. Số lớn `80%` + cột “trong phạm vi / ngoài hóa đơn”; chữ tối đa 3 từ: `VẪN THIẾU?`
++
++## Clip Pexels đề xuất
++
++Tất cả là ứng viên minh họa trung tính; khi tải phải kiểm lại đúng bản **ngang**, không logo/chữ/biển hiệu đọc được, không gắn danh tính người thật.
++
++| ID | Cảnh | Ghi chú |
++|---|---|---|
++| 30141968 | nhân viên y tế hỗ trợ người bệnh | không logo/chữ/biển hiệu; kiểm ngang |
++| 6151283 | phòng bệnh, rèm và xe lăn | không logo/chữ/biển hiệu; kiểm ngang |
++| 5203510 | hành lang y tế trống | không logo/chữ/biển hiệu; kiểm ngang |
++| 6011532 | nhân viên y tế và người bệnh | không logo/chữ/biển hiệu; kiểm ngang |
++| 6011527 | hành lang, người bệnh xe lăn | không logo/chữ/biển hiệu; kiểm ngang |
++| 6011529 | người bệnh xe lăn | không logo/chữ/biển hiệu; kiểm ngang |
++| 6011530 | người bệnh trong hành lang | không logo/chữ/biển hiệu; kiểm ngang |
++| 8381605 | nhân viên y tế đi trong hành lang | không logo/chữ/biển hiệu; kiểm ngang |
++
++Nguồn xem ID: [30141968](https://www.pexels.com/video/healthcare-professional-assisting-patient-in-hospital-30141968/), [6151283](https://www.pexels.com/video/a-footage-inside-a-hospital-6151283/), [5203510](https://www.pexels.com/video/an-empty-hospital-hallway-5203510/), [6011532](https://www.pexels.com/video/a-female-doctor-with-her-patient-on-a-wheelchair-6011532/).
++
++## Rủi ro cần giữ khi viết kịch bản
++
++- Không nói “BHYT trả 80% hóa đơn”; phải nói “80% chi phí trong phạm vi hưởng”, và chỉ sau khi xác định trường hợp.
++- Không gọi 100% là “mọi thứ miễn phí”; phần ngoài phạm vi, dịch vụ theo yêu cầu và các khoản ngoài KCB vẫn là câu hỏi khác.
++- Không coi mốc 2030 là quyền lợi hiện hành; 2026–2030 trong S8 là lộ trình/mục tiêu.
++- Không dùng số 30,0 / 16,0 / 11,0 triệu như báo giá hoặc ca thật; mỗi lần xuất hiện đều gắn **VÍ DỤ GIẢ ĐỊNH**.
++- Không nêu tên cơ sở KCB, doanh nghiệp bảo hiểm thương mại, hãng xe hay thuốc biệt dược. Không biến nội dung thành tư vấn y tế hay quyết định điều trị.
+diff --git a/docs/pm/tickets/2026-10-27-ck-lo-1811/R2-ket-qua.md b/docs/pm/tickets/2026-10-27-ck-lo-1811/R2-ket-qua.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..130f9801b761b55213cdbe51796aa51bffdcfbbc
+--- /dev/null
++++ b/docs/pm/tickets/2026-10-27-ck-lo-1811/R2-ket-qua.md
+@@ -0,0 +1,22 @@
++# R2 — Kết quả nghiên cứu `ck-f2-vien-phi-bhyt`
++
++Đã ghi kho dữ kiện tại `data/long/ck-f2-vien-phi-bhyt/facts.md`. Đây là ticket nghiên cứu nên không viết kịch bản, không chạy lint/render và không chạy `long_gate` theo `00-CHUNG-R.md`.
++
++## Kết quả
++
++- Dữ kiện: 28, đủ 7 chương × 4 dữ kiện. Nhãn nguồn: 24 mạnh, 4 vừa; mọi URL nguồn đã mở trong phiên nghiên cứu.
++- Đã kiểm văn bản: Luật 51/2024/QH15 (27/11/2024; hiệu lực 01/07/2025), Nghị định 188/2025/NĐ-CP (01/07/2025), Nghị quyết 72-NQ/TW (09/09/2025). Thông tư 01/2025/TT-BYT được xác minh qua giới thiệu chính thức của BHXH Việt Nam.
++- Có 9 bảng số: waterfall hóa đơn giả định, ba mức hưởng, ngưỡng 5 năm, chi tiền túi, bao phủ, lượt KCB/quỹ, hộ gia đình, timeline, 7 ngày của Minh.
++- Biểu đồ chính: waterfall `30,0 → quỹ trả 16,0 → tự trả trên hóa đơn 9,0 → gánh nặng rộng 11,0 triệu`; mọi số của Minh được đánh dấu **VÍ DỤ GIẢ ĐỊNH**.
++- Có 2 cold open, 3 tiêu đề (đều dưới 60 ký tự), 2 hướng thumbnail và 8 ID clip Pexels kèm yêu cầu kiểm bản ngang/không logo-chữ trước khi dùng.
++
++## Điều chưa thể khẳng định chung
++
++- Không có một tỷ lệ BHYT duy nhất áp cho “toàn bộ hóa đơn”; mức hưởng phụ thuộc nhóm đối tượng, phạm vi quyền lợi và điều kiện KCB.
++- “Miễn viện phí” là mục tiêu/lộ trình cho chi phí cơ bản trong phạm vi BHYT đến 2030, không phải miễn phí tuyệt đối đã có hiệu lực.
++- Tám clip mới là ứng viên theo ID; người dựng phải tải và soi clip sheet để xác nhận bản ngang, không logo/chữ/biển hiệu.
++
++## Lệnh đã chạy
++
++- Chỉ đọc ba tài liệu bắt buộc của ticket R2 và 30 dòng mẫu định dạng CK theo `00-CHUNG-R.md`.
++- Không chạy lệnh dựng, lint, TTS, render hoặc cổng `long_gate`, đúng quy định ticket nghiên cứu.
+
+codex
+Đã hoàn thành ticket nghiên cứu R2.
+
+- Kho dữ kiện: [facts.md](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\ck-f2-vien-phi-bhyt\facts.md)
+- Báo cáo: [R2-ket-qua.md](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-27-ck-lo-1811\R2-ket-qua.md)
+
+Đã có 28 dữ kiện nguồn mở được, 9 bảng số, waterfall chính, cold open, tiêu đề, thumbnail, clip đề xuất và các rủi ro diễn đạt. Không chạy `long_gate` vì đây là ticket nghiên cứu, theo `00-CHUNG-R.md`.
+tokens used
+63,077
+Đã hoàn thành ticket nghiên cứu R2.
+
+- Kho dữ kiện: [facts.md](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\data\long\ck-f2-vien-phi-bhyt\facts.md)
+- Báo cáo: [R2-ket-qua.md](D:\Tools\Youtube Creator v2\Youtube_Creator_V2\docs\pm\tickets\2026-10-27-ck-lo-1811\R2-ket-qua.md)
+
+Đã có 28 dữ kiện nguồn mở được, 9 bảng số, waterfall chính, cold open, tiêu đề, thumbnail, clip đề xuất và các rủi ro diễn đạt. Không chạy `long_gate` vì đây là ticket nghiên cứu, theo `00-CHUNG-R.md`.

@@ -1,0 +1,337 @@
+{
+ "title": "Ba bộ máy không ai giao tay lái",
+ "lines": [
+  {
+   "t": "Theo ICAO, chiếc 747 mang ba bộ dẫn đường quán tính của hãng Litton.",
+   "p": 0.8
+  },
+  "Mỗi bộ có cảm biến riêng và một máy tính riêng, tự tính ra vị trí của máy bay.",
+  "Chúng không được nối với sóng radio để tự chỉnh, nên sai số cứ âm thầm cộng dồn.",
+  "Nhưng sai số ấy nhỏ: dưới hai hải lý cho mỗi giờ bay.",
+  "Ba bộ còn soi lẫn nhau, bộ nào lệch so với hai bộ kia là lộ ra ngay.",
+  "Theo báo cáo, màn hình của chúng đáng lẽ đã cho thấy máy bay đang trượt khỏi tuyến.",
+  "Nhưng báo cáo cũng kết luận: lái tự động không hề do bộ dẫn đường quán tính điều khiển.",
+  {
+   "t": "Máy biết đường.",
+   "p": 1.0
+  },
+  "Chỉ là không ai giao tay lái cho máy.",
+  "Còn chiếc 747 thì cứ lệch.",
+  "Ở điểm báo cáo thứ nhất trên biển, chừng sáu mươi hải lý.",
+  "Điểm thứ hai, một trăm. Điểm thứ ba, một trăm sáu mươi.",
+  {
+   "t": "Một trăm sáu mươi hải lý là gần ba trăm cây số.",
+   "p": 1.0
+  },
+  "Từ khoảng mười sáu giờ bốn mươi giờ quốc tế, tiêm kích Liên Xô cố chặn nó trên Kamchatka, nhưng không thành.",
+  "Gần đảo Sakhalin, họ bắt kịp.",
+  "Đúng lúc ấy, tổ lái xin trạm Tokyo cho lên cao thêm hai nghìn bộ, và được phép.",
+  "Báo cáo ghi: phía Liên Xô hiểu cú lên cao này là một động tác né tránh.",
+  "Trung tâm chỉ huy Liên Xô cho rằng đây là máy bay trinh sát RC-135 của Mỹ.",
+  {
+   "t": "Báo cáo ghi: không ai gọi tổ lái qua tần số cấp cứu.",
+   "p": 1.0
+  },
+  "Theo bản ghi liên lạc in trong báo cáo, chiếc tiêm kích số 805 là của phi công Osipovich.",
+  {
+   "t": "Khi được nhóm ICAO phỏng vấn, phi công ấy nói ông không hề biết đó là máy bay chở khách.",
+   "diy": 1
+  },
+  "Lúc mười tám giờ hai mươi sáu phút giờ quốc tế, quả tên lửa đầu tiên nổ.",
+  {
+   "t": "Hai trăm sáu mươi chín người trên máy bay, không ai sống sót.",
+   "p": 1.0
+  },
+  "Phân tích của phía Nga, đính kèm báo cáo ICAO, tính rằng lúc ấy máy bay đã lệch khoảng ba trăm năm mươi hải lý khỏi tuyến R20.",
+  "Hơn sáu trăm cây số.",
+  "Đó là nấc đầu tiên trên cây thước của mình.",
+  "Vậy sau đêm ấy, nước Mỹ đã làm gì?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "BA BỘ MÁY\nKHÔNG AI GIAO TAY LÁI",
+   "sub": "DẪN ĐƯỜNG QUÁN TÍNH",
+   "bg": "deck",
+   "titleAt": [
+    0,
+    "theo"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": [
+    0,
+    "ba"
+   ],
+   "title": "DẪN ĐƯỜNG QUÁN TÍNH TRÊN CHIẾC 747",
+   "srcnote": "ICAO 1993 · MỤC 1.6.3",
+   "rows": [
+    {
+     "k": "SỐ BỘ",
+     "v": "3 · LITTON LTN-72R",
+     "at": [
+      0,
+      "ba"
+     ]
+    },
+    {
+     "k": "MỖI BỘ",
+     "v": "CẢM BIẾN + MÁY TÍNH",
+     "at": 1
+    },
+    {
+     "k": "NỐI SÓNG RADIO ĐỂ TỰ CHỈNH",
+     "v": "KHÔNG",
+     "at": 2
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "< 2 HẢI LÝ / GIỜ",
+   "sub": "SAI SỐ CỦA BỘ DẪN ĐƯỜNG QUÁN TÍNH · ICAO 1993 MỤC 2.7"
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "items": [
+    {
+     "text": "BA BỘ SOI LẪN NHAU",
+     "at": 4
+    },
+    {
+     "text": "màn hình đáng lẽ đã cho thấy độ lệch",
+     "at": 5,
+     "sm": true
+    },
+    {
+     "text": "LÁI TỰ ĐỘNG KHÔNG DO CHÚNG ĐIỀU KHIỂN",
+     "at": 6,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "MÁY BIẾT ĐƯỜNG",
+   "sub": "CHỈ LÀ KHÔNG AI GIAO TAY LÁI · ICAO 1993 KẾT LUẬN 3.11"
+  },
+  {
+   "type": "ledger",
+   "at": 9,
+   "title": "ĐỘ LỆCH VỀ PHÍA BẮC",
+   "srcnote": "ICAO 1993 · MỤC 2.8.1 · ƯỚC TỪ DỮ LIỆU BAY VÀ RADAR",
+   "rows": [
+    {
+     "k": "NABIE",
+     "v": "≈ 60 HẢI LÝ",
+     "at": 10
+    },
+    {
+     "k": "NUKKS",
+     "v": "≈ 100 HẢI LÝ",
+     "at": [
+      11,
+      "hai"
+     ]
+    },
+    {
+     "k": "NEEVA",
+     "v": "≈ 160 HẢI LÝ",
+     "at": [
+      11,
+      "ba"
+     ]
+    }
+   ],
+   "total": {
+    "k": "≈",
+    "v": "300 KM · KÊNH TỰ ĐỔI",
+    "at": 12
+   }
+  },
+  {
+   "type": "map",
+   "at": 13,
+   "geo": "pac",
+   "tag": "ĐƯỜNG VẼ GẦN ĐÚNG · KHÔNG PHẢI DỮ LIỆU TUYẾN BAY",
+   "pins": [
+    {
+     "name": "Kamchatka",
+     "label": "16:40–17:08 UTC · CHẶN KHÔNG THÀNH",
+     "at": [
+      13,
+      "chặn"
+     ]
+    },
+    {
+     "name": "Sakhalin",
+     "label": "BẮT KỊP",
+     "at": 14
+    }
+   ],
+   "routes": [
+    {
+     "from": "Anchorage",
+     "to": "Kamchatka",
+     "at": 13,
+     "until": [
+      13,
+      "chặn"
+     ],
+     "bend": 0.12
+    },
+    {
+     "from": "Kamchatka",
+     "to": "Sakhalin",
+     "at": [
+      13,
+      "nhưng"
+     ],
+     "until": 14,
+     "bend": 0.1
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 15,
+   "title": "TRÊN ĐẢO SAKHALIN",
+   "srcnote": "ICAO 1993 · MỤC 1.9.5 · TÓM TẮT KẾT LUẬN",
+   "rows": [
+    {
+     "k": "18:20 UTC",
+     "v": "TOKYO CHO LÊN 35.000 BỘ",
+     "at": 15
+    },
+    {
+     "k": "PHÍA LIÊN XÔ HIỂU",
+     "v": "ĐỘNG TÁC NÉ TRÁNH",
+     "at": [
+      16,
+      "né"
+     ]
+    },
+    {
+     "k": "TƯỞNG LÀ",
+     "v": "MÁY BAY TRINH SÁT RC-135",
+     "at": [
+      17,
+      "trinh"
+     ]
+    },
+    {
+     "k": "GỌI QUA TẦN SỐ CẤP CỨU",
+     "v": "KHÔNG",
+     "at": [
+      18,
+      "cấp"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 19,
+   "items": [
+    {
+     "text": "TIÊM KÍCH SỐ 805 · PHI CÔNG OSIPOVICH",
+     "at": 19,
+     "acc": true
+    },
+    {
+     "text": "theo bản ghi liên lạc Liên Xô in trong báo cáo ICAO",
+     "at": [
+      19,
+      "liên"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": [
+    20,
+    "phi"
+   ],
+   "dy": true,
+   "text": "Phi công tiêm kích nói ông không hề biết đó là máy bay chở khách.",
+   "by": "PHI CÔNG CHIẾC 805 (OSIPOVICH, THEO BẢN GHI LIÊN LẠC) · PHỎNG VẤN DO ICAO TÓM TẮT, MỤC 1.16.1",
+   "lbl": "DIỄN Ý",
+   "typeAt": [
+    20,
+    "phi"
+   ],
+   "typeDur": 2.6
+  },
+  {
+   "type": "slam",
+   "at": 21,
+   "text": "18:26:02 UTC",
+   "sub": "QUẢ TÊN LỬA ĐẦU TIÊN NỔ · ICAO 1993"
+  },
+  {
+   "type": "kinetic",
+   "at": 22,
+   "items": [
+    {
+     "text": "269 NGƯỜI TRÊN MÁY BAY",
+     "at": 22
+    },
+    {
+     "text": "không ai sống sót",
+     "at": [
+      22,
+      "không"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 23,
+   "title": "CÂY THƯỚC SAI SỐ",
+   "srcnote": "PHÂN TÍCH PHÍA NGA · PHỤ LỤC D BÁO CÁO ICAO 1993 (ICAO KHÔNG THÔNG QUA)",
+   "rows": [
+    {
+     "k": "LÚC TRÚNG TÊN LỬA",
+     "v": "≈ 350 HẢI LÝ KHỎI R20",
+     "at": [
+      23,
+      "lệch"
+     ]
+    },
+    {
+     "k": "NẤC 1",
+     "v": "HƠN 600 KM",
+     "at": 24
+    }
+   ],
+   "total": {
+    "k": "NẤC ĐẦU TIÊN",
+    "v": "ĐÃ CHỐT",
+    "at": 25
+   }
+  },
+  {
+   "type": "question",
+   "at": 26,
+   "text": "Sau đêm ấy,\nnước Mỹ đã làm gì?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "BA BỘ MÁY KHÔNG AI GIAO TAY LÁI"
+ },
+ "bgm": {
+  "mood": "mystery",
+  "gain": 0.11
+ }
+}

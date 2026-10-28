@@ -486,7 +486,7 @@ CH["ch07"] = {"hud": {"k": "CHƯƠNG 07", "t": "BẢNG TÍNH CỦA RIÊNG BẠN"
     {"type": "question", "at": 21, "text": "Nếu được chọn lại,\nbạn sẽ đứng sau cánh cửa nào,\nvà vì sao?"},
 ]}
 
-TITLE = "Hai Căn Hộ Giống Hệt Nhau, Một Mua Một Thuê: 10 Năm Sau Ai Khá Hơn?"
+TITLE = "Trả Góp 19 Triệu Hay Thuê 6 Triệu: 10 Năm Sau Ai Khá Hơn?"
 DISCLAIMER = ("Nội dung giáo dục, không phải tư vấn tài chính, không phải lời khuyên mua hay thuê nhà, không dự báo giá nhà hay "
               "lãi suất. Căn hộ 2,5 tỷ, khoản vay, tiền thuê, mức tăng giá là ví dụ giả định do kênh tự tính. Số liệu thị trường "
               "lấy từ nguồn công khai (đa số qua báo chí dẫn lại); quá khứ không đảm bảo tương lai. Giọng đọc tổng hợp. Quy định "

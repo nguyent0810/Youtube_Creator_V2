@@ -13,7 +13,7 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "stier"))
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from sfx import Mix, SR  # noqa: E402
+from sfx import Mix, SR, soft_clip  # noqa: E402
 from scipy.signal import butter, sosfilt  # noqa: E402
 
 
@@ -77,16 +77,19 @@ class NoirMix(Mix):
         return self.bp(self.rng.standard_normal(n), 1500, 9000) * am * np.sin(np.pi * t / dur) * 0.9
 
     def static(self, dur):
+        # 23/10/2026: cụm nhiễu 300 mẫu cộng thẳng (không fade, 9 cụm/s) = vạch "tạch" phủ 0–24 kHz, nổi hẳn trên giọng radio
+        # 300–3400 Hz (docs/pm/2026-10-22-cl-am-thanh-set-set.md mục 1c). Nay: cửa sổ Hann, ~4 cụm/s nhỏ hơn, low-pass 4 kHz.
         n = int(dur * SR)
         hiss = self.bp(self.rng.standard_normal(n), 900, 4200) * 0.5
-        for _ in range(int(dur * 9)):
-            i = int(self.rng.uniform(0, n - 400)); hiss[i:i + 300] += self.rng.standard_normal(300) * self.rng.uniform(0.5, 1.6)
-        return self.fade(hiss, 0.15, 0.3)
+        win = np.hanning(300)
+        for _ in range(int(dur * 4)):
+            i = int(self.rng.uniform(0, n - 400)); hiss[i:i + 300] += self.rng.standard_normal(300) * win * self.rng.uniform(0.2, 0.6)
+        return self.fade(self.lowp(hiss, 4000), 0.15, 0.3)
 
     def projector(self, dur):
         n = int(dur * SR); t = np.arange(n) / SR
         out = self.lowp(self.rng.standard_normal(n), 300) * 0.25 + np.sin(2 * np.pi * 48 * t) * 0.05
-        c = self.tick(1100, 0.012) * 0.8
+        c = self.lowp(self.tick(1100, 0.012), 2500) * 0.4   # 23/10/2026: tick nửa nhiễu trắng 24 lần/s -> low-pass 2,5 kHz, nhỏ một nửa
         for k in range(int(dur * 24)):
             i = int(k * SR / 24)
             m = min(len(c), n - i)
@@ -96,7 +99,8 @@ class NoirMix(Mix):
 
     def needle(self, dur):
         n = int(dur * SR); t = np.arange(n) / SR
-        return self.fade(self.bp(self.rng.standard_normal(n), 2500, 9000) * (0.5 + 0.5 * np.sin(2 * np.pi * 3 * t) ** 2) * 0.35, 0.3, 0.5)
+        # 23/10/2026: nhiễu 2,5–9 kHz nhịp 6 Hz nghe đúng "sẹt… sẹt" -> dải 1,5–5 kHz, nhỏ hơn
+        return self.fade(self.bp(self.rng.standard_normal(n), 1500, 5000) * (0.5 + 0.5 * np.sin(2 * np.pi * 3 * t) ** 2) * 0.2, 0.3, 0.5)
 
     def rumble(self, dur):
         n = int(dur * SR); t = np.arange(n) / SR
@@ -325,6 +329,21 @@ def build(case: dict, dst: Path) -> None:
             for q in s["items"]:
                 M.put(q["at"], M.tone(0.45, 180, 360), 0.8)
                 M.put(q["at"] + 0.45, M.thud(0.3), 0.3)
+        elif ty == "waterfall":
+            for q in [s["start"]] + list(s.get("steps") or []):
+                M.put(q["at"], M.tone(0.45, 180, 360) if q.get("v", 1) >= 0 else M.tone(0.45, 360, 180), 0.7)
+            if s.get("end"):
+                M.put(s["end"]["at"] + 0.3, M.thud(0.6), 0.7)
+        elif ty == "stack":
+            for q in s.get("groups") or []:
+                M.put(q["at"], M.tone(0.45, 180, 360), 0.7)
+                M.put(q["at"] + 0.18 * len(q["vals"]), M.thud(0.3), 0.3)
+        elif ty == "heat":
+            n = len(s["cells"])
+            for k, c in enumerate(s["cells"]):
+                M.put(c.get("at", s["drawAt"] + (s["until"] - s["drawAt"]) * k / n), M.tick(2200 + k * 40, 0.03), 0.3)
+            if s.get("total") and s["total"].get("at") is not None:
+                M.put(s["total"]["at"], M.thud(0.6), 0.7)
         elif ty == "timeline":
             for q in s["items"]:
                 M.put(q["at"], M.tick(2400, 0.04), 0.5)
@@ -436,6 +455,6 @@ def build(case: dict, dst: Path) -> None:
             M.put(q["at"], getattr(M, q["k"])(), q.get("gain", 0.6), q.get("pan", 0.0))
     # KHÔNG chuẩn hoá theo đỉnh như Short: mỗi chương phải cùng một mức, chương ít tiếng động không được to lên
     import wave
-    out = (np.clip(M.bed * 0.5, -1, 1) * 32767).astype("<i2")
+    out = (soft_clip(M.bed * 0.5, 0.8, 0.98) * 32767).astype("<i2")   # 23/10/2026: thay np.clip (boom chồng -> mẫu vuông đầu)
     with wave.open(str(dst), "wb") as w:
         w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes(out.tobytes())

@@ -1,0 +1,170 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-hl-cau-xin-phat-ban",
+ "format": "hieu-lam",
+ "hook_type": "do-vui",
+ "open_shot": "nen-huong",
+ "voice": "Quang Sơn",
+ "music": "floating_cities.mp3",
+ "music_gain": 0.18,
+ "gap": 0.05,
+ "series": "Hiểu đúng #8",
+ "title": "Thắp hương xin điều ước, Phật có ban không?",
+ "kicker": "HIỂU ĐÚNG #8",
+ "sub": "KINH PHÁP CÚ · KỆ 165",
+ "acc": [
+  "hương",
+  "xin",
+  "nguyện"
+ ],
+ "lines": [
+  "Thắp hương xin điều ước, Phật có ban không?",
+  "A, có. B, không. C, tùy lòng thành.",
+  "Chọn trước nhé. Câu trả lời khiến nhiều người bất ngờ.",
+  "Kinh Pháp Cú dạy: tự mình làm ác, tự mình nhiễm ô.",
+  "Tự mình không làm ác, tự mình thanh tịnh. Không ai làm thay ai.",
+  "Nhưng điều tốt đến từ việc mình làm.",
+  "Thắp hương là để nhớ ơn, và nguyện một việc tốt mình sẽ làm.",
+  "Bạn thắp hương để xin hay để nguyện? Comment A, B hay C."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:7597760",
+   "items": [
+    {
+     "text": "PHẬT CÓ BAN KHÔNG?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "thắp hương xin điều ước",
+     "at": [
+      0,
+      "xin"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "hf_list_build",
+   "at": 1,
+   "title": "BẠN CHỌN?",
+   "items": [
+    {
+     "key": "A",
+     "text": "CÓ",
+     "at": [
+      1,
+      "có."
+     ]
+    },
+    {
+     "key": "B",
+     "text": "KHÔNG",
+     "at": [
+      1,
+      "không."
+     ]
+    },
+    {
+     "key": "C",
+     "text": "TÙY LÒNG THÀNH",
+     "at": [
+      1,
+      "tùy"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 2,
+   "text": "A · B hay C?",
+   "clip": "pexels:36718042",
+   "veil": 0.65
+  },
+  {
+   "type": "source",
+   "at": 3,
+   "source": "KINH PHÁP CÚ · KỆ 165",
+   "ref": "Phẩm Tự Ngã",
+   "snippet": "Tự mình làm ác, tự mình nhiễm ô; [[tự mình thanh tịnh]].",
+   "hlAt": [
+    4,
+    "tịnh."
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "ĐIỀU TỐT\nTỪ VIỆC MÌNH LÀM",
+   "fx": "zoom"
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "THẮP HƯƠNG ĐỂ",
+   "cards": [
+    {
+     "k": "1",
+     "v": "NHỚ ƠN",
+     "at": [
+      6,
+      "nhớ"
+     ]
+    },
+    {
+     "k": "2",
+     "v": "NGUYỆN 1 VIỆC TỐT",
+     "at": [
+      6,
+      "nguyện"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "veil": 0.4,
+   "clip": "pexels:8711349",
+   "items": [
+    {
+     "text": "XIN HAY NGUYỆN?",
+     "at": [
+      7,
+      "bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "comment A, B hay C",
+     "at": [
+      7,
+      "comment"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp157-166/en/sujato"
+ ],
+ "description": "Thắp hương xin điều ước, Phật có ban không?\n\nNguồn: https://suttacentral.net/dhp157-166/en/sujato"
+}

@@ -1,0 +1,201 @@
+{
+ "title": "Chín mươi K để làm việc",
+ "lines": [
+  {
+   "t": "Macintosh nguyên bản chỉ có 128K RAM, tức một phần tám megabyte theo Andy Hertzfeld.",
+   "p": 0.8
+  },
+  "RAM là bộ nhớ làm việc tạm thời, nơi chương trình giữ thứ nó đang cần ngay lúc này.",
+  "Con số nghe nhỏ khi nhìn từ hiện tại, nhưng nó quyết định từng khoảng trống trong chiếc máy năm 1984.",
+  "Khoảng 16K được dành cho hệ thống.",
+  "Khoảng 22K nữa dành cho màn hình đen trắng 512 nhân 342 điểm ảnh.",
+  "Điểm ảnh là những chấm rất nhỏ ghép thành hình trên màn hình.",
+  "Sau hai phần ấy, ứng dụng chỉ còn khoảng 90K để thở.",
+  "Vì vậy, một thao tác tưởng đơn giản như vẽ hay soạn thảo lại phải được cân từng mẩu bộ nhớ.",
+  "Đến mùa thu 1983, MacWrite và MacPaint về cơ bản đã hoàn tất tính năng.",
+  "MacWrite là chương trình soạn văn bản, còn MacPaint là chương trình vẽ bằng chuột.",
+  "Nhưng cả hai vẫn cần thử nghiệm nhiều trong tình trạng thiếu bộ nhớ.",
+  "Một con trỏ chạy theo chuột không chỉ là hiệu ứng đẹp mắt.",
+  "Nó phải có chỗ trong bộ nhớ, cùng cửa sổ, biểu tượng và phần việc người dùng đang làm.",
+  "Computer History Museum mô tả Macintosh 128K là một máy tự chứa với desktop đồ họa kiểu Alto đã được cải tiến.",
+  "Desktop ở đây là mặt bàn trên màn hình, nơi các biểu tượng và cửa sổ được đặt cạnh nhau.",
+  "Máy có giá 2.495 USD.",
+  "Giá đó gồm một lời hứa: thay vì nhớ câu lệnh, bạn có thể nhìn thấy việc mình sắp làm.",
+  "Lời hứa ấy vẫn chưa đủ nếu không có phần mềm chạy mượt trong giới hạn 90K.",
+  "Đó là lý do câu chuyện Macintosh không chỉ có Jobs ở sân khấu.",
+  "Nó còn có một đội phần mềm đang thử từng chi tiết, để một lần nhấp chuột không biến thành lúc máy đứng lại."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "90K\nĐỂ LÀM VIỆC",
+   "sub": "128K RAM · MÙA THU 1983",
+   "bg": "mac2",
+   "titleAt": [
+    0,
+    "Hertzfeld"
+   ]
+  },
+  {
+   "type": "counter",
+   "at": [
+    0,
+    "có"
+   ],
+   "from": 0,
+   "to": 128,
+   "suffix": "K RAM",
+   "label": "MỘT PHẦN TÁM MEGABYTE",
+   "year": false
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    1,
+    "RAM"
+   ],
+   "items": [
+    {
+     "text": "BỘ NHỚ LÀM VIỆC",
+     "at": [
+      1,
+      "RAM"
+     ],
+     "acc": true
+    },
+    {
+     "text": "NƠI CHƯƠNG TRÌNH GIỮ VIỆC ĐANG LÀM",
+     "at": [
+      1,
+      "RAM"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": [
+    3,
+    "khoảng"
+   ],
+   "from": 0,
+   "to": 16,
+   "suffix": "K",
+   "label": "DÀNH CHO HỆ THỐNG",
+   "year": false
+  },
+  {
+   "type": "photo",
+   "at": [
+    4,
+    "màn"
+   ],
+   "img": "ai02",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "MÀN HÌNH PIXEL",
+    "v": "MINH HỌA GIAO DIỆN ĐƠN SẮC",
+    "at": [
+     4,
+     "màn"
+    ]
+   },
+   "illus": "ẢNH MINH HỌA",
+   "credit": false
+  },
+  {
+   "type": "photo",
+   "at": [
+    11,
+    "chuột"
+   ],
+   "img": "mouse2",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "VẬT NỐI",
+    "v": "CON TRỎ CẦN CHỖ TRONG BỘ NHỚ",
+    "at": [
+     11,
+     "chuột"
+    ]
+   }
+  },
+  {
+   "type": "broll",
+   "at": [
+    14,
+    "desktop"
+   ],
+   "vid": "3592341",
+   "veil": 0.62,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "GÕ PHÍM MINH HỌA · KHÔNG PHẢI SỰ KIỆN THẬT",
+     "at": [
+      14,
+      "desktop"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": [
+    16,
+    "giá"
+   ],
+   "text": "2.495 USD",
+   "sub": "MỘT LỜI HỨA PHẢI CHẠY MƯỢT"
+  },
+  {
+   "type": "ledger",
+   "at": [
+    18,
+    "khấu"
+   ],
+   "title": "ĐƯỜNG ĐI CỦA CÚ NHẤP",
+   "srcnote": "MỖI CHƯƠNG THÊM MỘT MỐC",
+   "rows": [
+    {
+     "k": "MỞ ĐẦU",
+     "v": "PARC VÀ CON TRỎ",
+     "at": [
+      18,
+      "khấu"
+     ]
+    },
+    {
+     "k": "1 · BỘ NHỚ",
+     "v": "CHỈ CÒN 90K",
+     "at": [
+      18,
+      "khấu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": [
+    19,
+    "lại"
+   ],
+   "text": "LÀM SAO MỘT CÚ NHẤP\nKHÔNG KHIẾN MÁY ĐỨNG LẠI?"
+  }
+ ],
+ "topic": "mim-macintosh-1984",
+ "chapter": 1,
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "CHÍN MƯƠI K ĐỂ LÀM VIỆC"
+ }
+}

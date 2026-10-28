@@ -1,0 +1,30 @@
+{
+  "assumption": "Minh va hoa don la VI DU GIA DINH, don vi trieu dong",
+  "waterfall": {
+    "total": 30.0,
+    "covered": 25.0,
+    "fund": 20.0,
+    "copay": 5.0,
+    "outside_scope": 5.0,
+    "on_bill": 10.0,
+    "outside_invoice": 2.0,
+    "burden": 12.0
+  },
+  "five_year_threshold": {
+    "reference_monthly": 2.53,
+    "multiple": 6,
+    "threshold": 15.18
+  },
+  "household_discount": [
+    100,
+    70,
+    60,
+    50,
+    40
+  ],
+  "out_of_pocket": {
+    "early_2000s": 60,
+    "year_2025": 40,
+    "target_2028_2030_less_than": 30
+  }
+}

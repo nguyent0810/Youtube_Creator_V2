@@ -1,0 +1,195 @@
+{
+ "theme": "mim",
+ "title": "Người dạy máy poker cũng ghép cặp thận: giáo sư Sandholm và lượt ghép đầu tiên ngày 27/10/2010",
+ "description": "Tuomas Sandholm (Đại học Carnegie Mellon), đồng tác giả Libratus và Pluribus, cũng nghiên cứu thuật toán ghép cặp thận chéo. Ngày 27/10/2010, lượt chạy ghép đầu tiên của chương trình thử nghiệm quốc gia (OPTN/UNOS) xét 43 người cần thận và 45 người hiến; thuật toán của Carnegie Mellon và lời khuyên của ông là những phần quan trọng của chương trình. Nguồn: CMU qua ScienceDaily, 14/12/2010.\n\nVideo nói về nghiên cứu trí tuệ nhân tạo; không hướng dẫn chơi bài, không cổ vũ cờ bạc. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/Mz0HwBBSBbg (công khai từ 20:00 ngày 26/11).",
+ "tags": [
+  "tuomas sandholm",
+  "ghép thận chéo",
+  "thuật toán",
+  "libratus",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "OPTN · 27.10.2010",
+ "acc": [
+  "thận",
+  "ghép",
+  "chéo",
+  "bốn",
+  "mươi",
+  "ba"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Người dạy máy poker cũng ghép cặp thận.",
+  "Giáo sư Tuomas Sandholm, Đại học Carnegie Mellon, là đồng tác giả của Libratus và Pluribus.",
+  "Ông còn nghiên cứu một bài toán khác: người cần thận có người nhà muốn hiến, nhưng hai bên không hợp nhau.",
+  "Giải pháp là ghép chéo: người hiến ở cặp này cho người nhận ở cặp kia.",
+  "Chọn cách ghép tốt nhất giữa nhiều cặp là bài toán rất khó, và nhóm của ông viết thuật toán cho nó.",
+  "Ngày 27 tháng 10 năm 2010, lượt chạy ghép đầu tiên của chương trình thử nghiệm quốc gia xét bốn mươi ba người cần thận và bốn mươi lăm người hiến.",
+  "Người dạy máy cách tố bịp, cũng góp phần ghép đúng người cho quả thận."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "items": [
+    {
+     "text": "POKER → THẬN",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "cùng một giáo sư",
+     "at": [
+      0,
+      "Người"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:29671801",
+   "veil": 0.55
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Tuomas Sandholm",
+   "nodes": [
+    {
+     "text": "Libratus · Pluribus",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      1,
+      "Libratus"
+     ],
+     "shape": "none",
+     "w": 700
+    },
+    {
+     "text": "ghép cặp thận",
+     "x": 0.5,
+     "y": 0.64,
+     "at": [
+      2,
+      "thận"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 620
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "GHÉP CHÉO",
+   "cards": [
+    {
+     "k": "CẶP A",
+     "v": "HIẾN CHO CẶP B",
+     "at": [
+      3,
+      "người"
+     ]
+    },
+    {
+     "k": "CẶP B",
+     "v": "HIẾN CHO CẶP A",
+     "at": [
+      3,
+      "cặp",
+      1
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "BÀI TOÁN RẤT KHÓ",
+   "sub": "NHÓM SANDHOLM VIẾT THUẬT TOÁN"
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "27.10.2010 · LƯỢT CHẠY ĐẦU TIÊN",
+   "rows": [
+    {
+     "k": "NGƯỜI CẦN THẬN",
+     "v": "43",
+     "at": [
+      5,
+      "bốn"
+     ]
+    },
+    {
+     "k": "NGƯỜI HIẾN",
+     "v": "45",
+     "at": [
+      5,
+      "bốn",
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "TỪ BÀN BÀI TỚI THẬN",
+     "at": [
+      6,
+      "Người"
+     ],
+     "acc": true
+    },
+    {
+     "text": "cùng một nhà toán học",
+     "at": [
+      6,
+      "ghép"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6287762",
+   "ms": 3,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  }
+ ],
+ "sources": [
+  "https://sciencedaily.com/releases/2010/12/101214111917.htm",
+  "https://www.cmu.edu/news/stories/archives/2019/july/cmu-facebook-ai-beats-poker-pros.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "libratus": "Li-bra-tút",
+  "pluribus": "Plu-ri-bút",
+  "poker": "pô-cơ",
+  "Sandholm": "Xan-hôm",
+  "Tuomas": "Tu-ô-mát",
+  "Carnegie": "Các-nê-ghi",
+  "Mellon": "Mê-lần"
+ },
+ "imgs": {}
+}

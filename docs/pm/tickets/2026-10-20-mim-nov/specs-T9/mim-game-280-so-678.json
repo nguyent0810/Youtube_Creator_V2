@@ -1,0 +1,201 @@
+{
+ "theme": "mim",
+ "title": "AlphaStar bấm trung bình 280 hành động mỗi phút, ít hơn MaNa (390) và TLO (678): vì sao con số ấy chưa nói hết",
+ "description": "Theo DeepMind (24/01/2019), AlphaStar trung bình khoảng 280 hành động mỗi phút, MaNa khoảng 390, TLO khoảng 678. Con số của TLO bị đẩy cao vì kiểu bấm phím liên tục, và trong giao tranh tốc độ của cỗ máy có lúc vọt cao hơn cả hai (DeepMind làm rõ ngày 29/01/2019).\n\nGiọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/0J3dcjPjcdI (công khai từ 20:00 ngày 03/12).",
+ "tags": [
+  "alphastar",
+  "starcraft",
+  "tlo",
+  "mana",
+  "hành động mỗi phút",
+  "trận đấu người máy",
+  "trí tuệ nhân tạo",
+  "lịch sử máy tính",
+  "mind in the machine"
+ ],
+ "sub": "ALPHASTAR · 2019",
+ "acc": [
+  "chậm",
+  "tay",
+  "trung",
+  "bình",
+  "vọt"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Cỗ máy chậm tay hơn tuyển thủ. Trên giấy.",
+  "Số hành động mỗi phút của AlphaStar, trung bình, là khoảng hai trăm tám mươi.",
+  "MaNa khoảng ba trăm chín mươi. TLO khoảng sáu trăm bảy mươi tám.",
+  "Nhưng số của TLO bị đẩy cao bởi kiểu bấm phím liên tục, không phải hành động nào cũng có ích.",
+  "Còn trong các pha giao tranh, tốc độ của cỗ máy có lúc vọt lên cao hơn cả hai tuyển thủ.",
+  "Chậm tay hơn, chỉ là con số trung bình trên giấy."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "280 · 390 · 678",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "hành động mỗi phút",
+     "at": [
+      0,
+      "tuyển"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:5377700",
+   "ms": 1,
+   "veil": 0.55
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 0,
+   "to": 280,
+   "prefix": "KHOẢNG ",
+   "label": "HÀNH ĐỘNG MỖI PHÚT · ALPHASTAR",
+   "until": [
+    1,
+    "tám"
+   ],
+   "sub": {
+    "text": "TRUNG BÌNH · THEO DEEPMIND",
+    "at": [
+     1,
+     "trung"
+    ]
+   }
+  },
+  {
+   "type": "chart",
+   "at": 2,
+   "kind": "bars",
+   "title": "HÀNH ĐỘNG MỖI PHÚT",
+   "unit": "TRUNG BÌNH · XẤP XỈ",
+   "bars": [
+    {
+     "label": "ALPHASTAR",
+     "v": 280,
+     "text": "280",
+     "c": "up",
+     "at": [
+      2,
+      null,
+      0,
+      0.05
+     ]
+    },
+    {
+     "label": "MANA",
+     "v": 390,
+     "text": "390",
+     "c": "ref",
+     "at": [
+      2,
+      "ba"
+     ]
+    },
+    {
+     "label": "TLO",
+     "v": 678,
+     "text": "678",
+     "c": "ref",
+     "at": [
+      2,
+      "sáu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Vì sao số của TLO cao?",
+   "nodes": [
+    {
+     "text": "bấm phím liên tục",
+     "at": [
+      3,
+      "bấm"
+     ],
+     "x": 0.5,
+     "y": 0.3,
+     "shape": "none",
+     "w": 700
+    },
+    {
+     "text": "không phải hành động nào cũng có ích",
+     "at": [
+      3,
+      "không"
+     ],
+     "x": 0.5,
+     "y": 0.66,
+     "c": "acc",
+     "shape": "none",
+     "size": 46,
+     "w": 900
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "ĐỈNH CAO HƠN CẢ HAI",
+     "at": 4,
+     "acc": true
+    },
+    {
+     "text": "trong các pha giao tranh",
+     "at": [
+      4,
+      "trong"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7774567",
+   "ms": 1,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 4
+  },
+  {
+   "type": "slam",
+   "at": 5,
+   "text": "TRUNG BÌNH CHE ĐỈNH",
+   "sub": "CHẬM TAY CHỈ LÀ TRÊN GIẤY"
+  }
+ ],
+ "sources": [
+  "https://deepmind.google/discover/blog/alphastar-mastering-the-real-time-strategy-game-starcraft-ii/"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.6
+  }
+ },
+ "say": {
+  "alphastar": "An-pha Xờ-ta",
+  "starcraft": "Xờ-ta Cờ-ráp",
+  "deepmind": "Đíp-mai",
+  "mana": "Ma-na",
+  "tlo": "Ti-eo-ô"
+ },
+ "imgs": {}
+}

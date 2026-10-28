@@ -1,0 +1,163 @@
+{
+ "title": "Khoản đắt nhất của chiếc xe không có hoá đơn: mất giá khoảng 5,25 triệu mỗi tháng (ví dụ giả định)",
+ "description": "VÍ DỤ GIẢ ĐỊNH: xe 700 triệu, sau 5 năm bán lại được 55% giá ban đầu = 385 triệu → mất giá 315 triệu, chia 60 tháng ≈ 5,25 triệu/tháng. Cộng tiền nuôi xe năm đầu ≈ 4,73 triệu/tháng (ví dụ của kênh: phí đường bộ, bảo hiểm, gửi xe, xăng, bảo dưỡng) → ≈ 9,98 triệu/tháng. Giá xe cũ phụ thuộc dòng xe, tình trạng và thị trường lúc bán; 55% chỉ là giả định để minh hoạ.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ hoặc ví dụ giả định, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (9 phút): https://youtu.be/Bx9w_a_1YOI (công khai từ 20:00 ngày 11/11)",
+ "tags": [
+  "mất giá ô tô",
+  "chi phí sở hữu ô tô",
+  "bán lại xe",
+  "mua xe",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "mất",
+  "giá",
+  "hoá",
+  "đơn",
+  "mười"
+ ],
+ "kicker": "QUYẾT ĐỊNH LỚN",
+ "sub": "MUA XE · MẤT GIÁ",
+ "lines": [
+  "Khoản đắt nhất của xe không có hoá đơn.",
+  "Đó là mất giá. Không ai gửi bạn hoá đơn ấy mỗi tháng.",
+  "Bạn chỉ thấy nó một lần, vào ngày bán xe.",
+  "Ví dụ giả định: xe bảy trăm triệu, sau năm năm bán lại được năm mươi lăm phần trăm.",
+  "Tức ba trăm tám mươi lăm triệu. Phần mất đi là ba trăm mười lăm triệu.",
+  "Chia cho sáu mươi tháng, khoảng năm triệu hai mỗi tháng.",
+  "Cộng tiền nuôi xe năm đầu, chiếc xe tiêu của bạn gần mười triệu mỗi tháng."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "KHÔNG CÓ HOÁ ĐƠN",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "MẤT GIÁ",
+     "at": [
+      1,
+      "mất"
+     ]
+    },
+    {
+     "text": "chỉ thấy vào ngày bán xe",
+     "at": [
+      2,
+      "ngày"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:39445384",
+   "veil": 0.55
+  },
+  {
+   "type": "chart",
+   "at": 3,
+   "kind": "bars",
+   "title": "XE VÍ DỤ SAU 5 NĂM (TRIỆU ĐỒNG)",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · BÁN LẠI 55% GIÁ MỚI",
+   "bars": [
+    {
+     "label": "GIÁ MUA",
+     "v": 700,
+     "text": "700",
+     "c": "ref",
+     "at": [
+      3,
+      "bảy"
+     ]
+    },
+    {
+     "label": "BÁN LẠI\nSAU 5 NĂM",
+     "v": 385,
+     "text": "385",
+     "c": "down",
+     "at": [
+      4,
+      "ba"
+     ],
+     "ghost": 700,
+     "gapAt": [
+      4,
+      "mất"
+     ],
+     "gapText": "−315"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 5,
+   "from": 0,
+   "to": 5.25,
+   "suffix": " TRIỆU",
+   "label": "MẤT GIÁ MỖI THÁNG",
+   "sub": {
+    "text": "315 TRIỆU ÷ 60 THÁNG · VÍ DỤ GIẢ ĐỊNH",
+    "at": [
+     5,
+     "khoảng"
+    ]
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "MỖI THÁNG · NĂM ĐẦU",
+   "cards": [
+    {
+     "k": "TIỀN NUÔI XE",
+     "v": "≈ 4,7 TR",
+     "at": [
+      6,
+      "nuôi"
+     ]
+    },
+    {
+     "k": "MẤT GIÁ",
+     "v": "≈ 5,25 TR",
+     "at": [
+      6,
+      "chiếc"
+     ]
+    },
+    {
+     "k": "CỘNG",
+     "v": "GẦN 10 TR",
+     "at": [
+      6,
+      "gần"
+     ],
+     "c": "acc"
+    }
+   ],
+   "note": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH"
+  }
+ ],
+ "sources": [
+  "https://youtu.be/Bx9w_a_1YOI"
+ ],
+ "theme": "ck",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "say": {},
+ "imgs": {},
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.3,
+   "3": 0.22,
+   "4": 0.3,
+   "5": 0.5
+  }
+ }
+}

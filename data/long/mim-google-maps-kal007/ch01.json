@@ -1,0 +1,281 @@
+{
+ "title": "Một con số trên la bàn",
+ "lines": [
+  {
+   "t": "Muốn hiểu vì sao lệch, phải quay lại phút thứ ba sau khi cất cánh.",
+   "p": 0.8
+  },
+  "Lúc ấy, chiếc 747 quay mũi về hướng chừng hai trăm bốn mươi lăm độ theo la bàn từ.",
+  "Rồi nó giữ đúng hướng ấy cho tới lúc bị tấn công.",
+  {
+   "t": "Một con số, giữ suốt đêm.",
+   "p": 1.0
+  },
+  "Đó là kết luận của Tổ chức Hàng không Dân dụng Quốc tế, gọi tắt là ICAO, trong báo cáo năm 1993.",
+  "Gần mười năm sau.",
+  {
+   "t": "Vì hai hộp đen, do Liên Xô vớt lên năm 1983, mãi tháng 1 năm 1993 phía Nga mới trao cho ICAO.",
+   "p": 1.0
+  },
+  "Máy ghi dữ liệu cho thấy hướng bay gần như không đổi suốt hơn năm tiếng.",
+  "Đều đến mức, theo báo cáo, chỉ có lái tự động mới giữ được như vậy.",
+  "Cũng không có hỏng hóc lớn nào về điện tử hay dẫn đường trước lúc bị bắn.",
+  "Máy bay không hỏng.",
+  "Vậy chuyện gì đã xảy ra?",
+  "Lái tự động có nhiều chế độ.",
+  "Ở chế độ giữ hướng, nó cứ bay theo một con số la bàn, gió đẩy đi đâu thì trôi theo đó.",
+  "Ở chế độ dẫn đường quán tính, nó bám từng điểm trên lộ trình đã nạp sẵn.",
+  "Báo cáo ICAO đưa ra hai khả năng.",
+  "Một là tổ lái để quên lái tự động ở chế độ giữ hướng.",
+  "Hai là họ có bật dẫn đường quán tính, nhưng khi ấy máy bay đã lệch quá bảy phẩy năm hải lý, nên máy không bắt được tuyến.",
+  "Một hải lý là chừng một phẩy tám cây số.",
+  {
+   "t": "Trường hợp nào thì đèn báo trong buồng lái cũng không cho thấy máy bay đang bay theo hướng cố định.",
+   "p": 1.0
+  },
+  "Đài dẫn đường vô tuyến ở Anchorage đã ngừng hoạt động từ ngày 23 tháng 8.",
+  {
+   "t": "Nên cách thường dùng để bám tuyến ngay sau khi rời Anchorage không có sẵn.",
+   "p": 1.0
+  },
+  "Bốn mươi chín phút sau khi cất cánh, ngang trạm Bethel ở Alaska, máy bay đã lệch mười hai hải lý.",
+  "Hơn hai mươi cây số.",
+  "Báo cáo viết rằng chừng ấy đáng lẽ đã phải khiến tổ lái nghi ngờ.",
+  "Nhưng không có dấu hiệu nào cho thấy họ nhận ra.",
+  "Trên máy bay có tới ba bộ dẫn đường quán tính.",
+  "Vậy suốt năm tiếng ấy, chúng ở đâu?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "1",
+   "k": "CHƯƠNG MỘT",
+   "title": "MỘT CON SỐ\nTRÊN LA BÀN",
+   "sub": "ANCHORAGE · 13:00 UTC",
+   "bg": "deck",
+   "titleAt": [
+    0,
+    "muốn"
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "≈ 245°",
+   "sub": "HƯỚNG LA BÀN TỪ · ĐẠT ĐƯỢC 3 PHÚT SAU KHI CẤT CÁNH · ICAO 1993 MỤC 3.7"
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "GIỮ NGUYÊN HƯỚNG ẤY",
+     "at": 2,
+     "acc": true
+    },
+    {
+     "text": "cho tới lúc bị tấn công",
+     "at": [
+      2,
+      "tới"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "source",
+   "at": 4,
+   "source": "ICAO · THƯ LE 4/19.4-93/68 · 16/07/1993",
+   "ref": "BÁO CÁO HOÀN TẤT ĐIỀU TRA · C-WP/9781",
+   "snippet": "chiếc 747 giữ [[một hướng la bàn không đổi]] từ ngay sau khi rời Anchorage tới lúc bị tấn công",
+   "hlAt": [
+    4,
+    "kết"
+   ],
+   "seal": "DIỄN Ý TỪ BÁO CÁO · KHÔNG PHẢI TRÍCH NGUYÊN VĂN",
+   "sealAt": 5
+  },
+  {
+   "type": "timeline",
+   "at": 6,
+   "items": [
+    {
+     "year": "1983",
+     "text": "Liên Xô *vớt* hai hộp đen",
+     "at": 6
+    },
+    {
+     "year": "01.1993",
+     "text": "phía Nga *trao* cho ICAO",
+     "at": [
+      6,
+      "trao"
+     ]
+    },
+    {
+     "year": "06.1993",
+     "text": "Hội đồng ICAO *xem xét* báo cáo",
+     "at": 7
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "MÁY GHI DỮ LIỆU NÓI GÌ",
+   "srcnote": "ICAO 1993 · MỤC 1.14.3.8 VÀ TÓM TẮT",
+   "rows": [
+    {
+     "k": "HƯỚNG GHI ĐƯỢC",
+     "v": "245,4° (244,9°–246,0°)",
+     "at": 7
+    },
+    {
+     "k": "ĐỀU ĐẾN MỨC",
+     "v": "CHỈ LÁI TỰ ĐỘNG LÀM ĐƯỢC",
+     "at": [
+      8,
+      "lái"
+     ]
+    },
+    {
+     "k": "HỎNG HÓC LỚN",
+     "v": "KHÔNG CÓ",
+     "at": 9
+    }
+   ],
+   "total": {
+    "k": "KẾT LUẬN",
+    "v": "MÁY BAY KHÔNG HỎNG",
+    "at": 10
+   }
+  },
+  {
+   "type": "question",
+   "at": 11,
+   "text": "Vậy chuyện gì\nđã xảy ra?"
+  },
+  {
+   "type": "photo",
+   "at": 12,
+   "img": "deck",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.55,
+   "illus": "ẢNH MINH HỌA",
+   "kin": [
+    {
+     "text": "GIỮ HƯỚNG: BAY THEO MỘT CON SỐ LA BÀN",
+     "at": 13,
+     "acc": true
+    },
+    {
+     "text": "DẪN ĐƯỜNG QUÁN TÍNH: BÁM TỪNG ĐIỂM ĐÃ NẠP",
+     "at": 14
+    }
+   ],
+   "label": {
+    "k": "BUỒNG LÁI BOEING 747-100",
+    "v": "ẢNH: CLEMENS VASTERS · CC BY 2.0",
+    "at": 12
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 15,
+   "title": "ICAO: HAI KHẢ NĂNG",
+   "srcnote": "ICAO 1993 · KẾT LUẬN 3.9",
+   "rows": [
+    {
+     "k": "KHẢ NĂNG 1",
+     "v": "ĐỂ QUÊN Ở CHẾ ĐỘ GIỮ HƯỚNG",
+     "at": 16
+    },
+    {
+     "k": "KHẢ NĂNG 2",
+     "v": "LỆCH > 7,5 HẢI LÝ MỚI BẬT",
+     "at": 17
+    },
+    {
+     "k": "1 HẢI LÝ",
+     "v": "≈ 1,85 KM",
+     "at": 18
+    }
+   ],
+   "total": {
+    "k": "ĐÈN BÁO",
+    "v": "KHÔNG BÁO ĐANG GIỮ HƯỚNG",
+    "at": 19
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 20,
+   "items": [
+    {
+     "text": "ĐÀI VÔ TUYẾN ANCHORAGE",
+     "at": 20
+    },
+    {
+     "text": "ngừng hoạt động từ 23.08.1983",
+     "at": [
+      20,
+      "ngừng"
+     ],
+     "sm": true
+    },
+    {
+     "text": "CÁCH BÁM TUYẾN THƯỜNG DÙNG: KHÔNG CÓ",
+     "at": 21,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 22,
+   "from": 0,
+   "to": 12,
+   "suffix": " HẢI LÝ",
+   "until": [
+    22,
+    "lệch"
+   ],
+   "label": "LỆCH KHI NGANG TRẠM BETHEL · 49 PHÚT SAU CẤT CÁNH",
+   "sub": {
+    "text": "≈ 22 KM · ICAO 1993 MỤC 3.8 · KÊNH TỰ ĐỔI",
+    "at": 23
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 24,
+   "items": [
+    {
+     "text": "ĐÁNG LẼ ĐÃ PHẢI NGHI NGỜ",
+     "at": 24,
+     "acc": true
+    },
+    {
+     "text": "không có dấu hiệu họ nhận ra",
+     "at": 25,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 26,
+   "text": "Ba bộ dẫn đường quán tính:\nsuốt năm tiếng, chúng ở đâu?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 01",
+  "t": "MỘT CON SỐ TRÊN LA BÀN"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

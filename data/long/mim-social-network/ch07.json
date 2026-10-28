@@ -1,0 +1,337 @@
+{
+ "title": "Ai đứng ở đầu Feed",
+ "lines": [
+  {
+   "t": "Facemash từng để người xem so sánh hai ảnh được chọn ngẫu nhiên.",
+   "p": 0.8
+  },
+  "Nó không phải bằng chứng rằng Facemash dùng Elo, dù bộ phim có một cảnh như vậy.",
+  "Sau này, Meta mô tả Feed hiện đại như quá trình sắp thứ tự các bài có thể nhìn thấy để nội dung liên quan hơn lên đầu Feed.",
+  "Feed là dòng bài bạn nhìn thấy khi mở ứng dụng.",
+  "Theo Meta, bốn phần của quá trình là inventory, signals, predictions và relevancy score.",
+  "Inventory là tập các bài có thể được hiện ra.",
+  "Signals là những tín hiệu hệ thống quan sát được.",
+  "Predictions là dự đoán về điều bạn có thể làm với một bài.",
+  "Relevancy score là điểm dùng để sắp thứ tự mức liên quan.",
+  "Theo Meta năm 2018, các tín hiệu có thể gồm phản ứng, bình luận và chia sẻ.",
+  "Công ty cũng nêu độ mới của bài, dạng liên kết, ảnh hoặc video, cùng người đăng, như các ví dụ về tín hiệu.",
+  "Theo chính Meta, trung bình có khoảng 3.000 bài khả dĩ mỗi ngày, trong khi người dùng chỉ lướt khoảng 300 bài.",
+  "Đây là mô tả của công ty về hệ thống của họ, nên cần được nghe như lời Meta giải thích, không phải một kiểm toán độc lập.",
+  "Trên bản đồ kết nối, ghim cuối là Feed: từ hai ảnh ngẫu nhiên đến một hệ thống chọn thứ tự cho rất nhiều bài có thể xem.",
+  "Câu chuyện ngoài đời thật không phải là một đường thẳng mà phim đã đóng dấu xong.",
+  "Nó là bản đồ gồm trang báo, hồ sơ tòa, lời kể đương thời và cả những khoảng trống mà ta phải giữ nguyên là khoảng trống."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "7",
+   "k": "CHƯƠNG BẢY",
+   "title": "AI ĐỨNG Ở\nĐẦU FEED",
+   "sub": "TỪ SO CẶP ĐẾN XẾP HẠNG",
+   "bg": "campus",
+   "titleAt": [
+    0,
+    "facemash"
+   ]
+  },
+  {
+   "type": "photo",
+   "at": [
+    2,
+    "meta"
+   ],
+   "img": "ai04",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "FEED HIỆN ĐẠI",
+    "v": "MINH HỌA XẾP THỨ TỰ",
+    "at": [
+     2,
+     "meta"
+    ]
+   },
+   "illus": "ẢNH MINH HỌA",
+   "credit": false
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    3,
+    "feed"
+   ],
+   "items": [
+    {
+     "text": "FEED",
+     "at": [
+      3,
+      "feed"
+     ],
+     "acc": true
+    },
+    {
+     "text": "DÒNG BÀI KHI MỞ ỨNG DỤNG",
+     "at": [
+      3,
+      "feed"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "org",
+   "at": [
+    4,
+    "inventory"
+   ],
+   "nodes": [
+    {
+     "id": "inventory",
+     "t": "INVENTORY",
+     "s": "BÀI CÓ THỂ HIỆN",
+     "at": [
+      4,
+      "inventory"
+     ]
+    },
+    {
+     "id": "signals",
+     "t": "SIGNALS",
+     "s": "TÍN HIỆU",
+     "p": "inventory",
+     "at": [
+      4,
+      "signals"
+     ]
+    },
+    {
+     "id": "predict",
+     "t": "PREDICTIONS",
+     "s": "DỰ ĐOÁN",
+     "p": "signals",
+     "at": [
+      4,
+      "predictions"
+     ]
+    },
+    {
+     "id": "score",
+     "t": "SCORE",
+     "s": "XẾP THỨ TỰ",
+     "p": "predict",
+     "at": [
+      4,
+      "relevancy"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    6,
+    "signals"
+   ],
+   "items": [
+    {
+     "text": "TÍN HIỆU",
+     "at": [
+      6,
+      "signals"
+     ],
+     "acc": true
+    },
+    {
+     "text": "HỆ THỐNG QUAN SÁT ĐƯỢC",
+     "at": [
+      6,
+      "signals"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": [
+    8,
+    "score"
+   ],
+   "text": "RELEVANCY SCORE",
+   "sub": "ĐIỂM SẮP THỨ TỰ LIÊN QUAN"
+  },
+  {
+   "type": "timeline",
+   "at": [
+    10,
+    "hiệu"
+   ],
+   "bg": "hall",
+   "items": [
+    {
+     "year": "PHẢN ỨNG",
+     "text": "TÍN HIỆU TƯƠNG TÁC"
+    },
+    {
+     "year": "BÌNH LUẬN",
+     "text": "TÍN HIỆU THẢO LUẬN"
+    },
+    {
+     "year": "CHIA SẺ",
+     "text": "TÍN HIỆU LAN TRUYỀN"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": [
+    11,
+    "meta"
+   ],
+   "from": 0,
+   "to": 3000,
+   "suffix": " BÀI",
+   "label": "KHẢ DĨ MỖI NGÀY · THEO META",
+   "year": false
+  },
+  {
+   "type": "counter",
+   "at": [
+    11,
+    "khi"
+   ],
+   "from": 0,
+   "to": 300,
+   "suffix": " BÀI",
+   "label": "NGƯỜI DÙNG LƯỚT · THEO META",
+   "year": false
+  },
+  {
+   "type": "photo",
+   "at": [
+    12,
+    "kiểm"
+   ],
+   "img": "campus",
+   "tone": "bw",
+   "move": "in",
+   "veil": 0.55,
+   "label": {
+    "k": "LỜI META GIẢI THÍCH",
+    "v": "KHÔNG PHẢI KIỂM TOÁN ĐỘC LẬP",
+    "at": [
+     12,
+     "kiểm"
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": [
+    13,
+    "bản"
+   ],
+   "title": "BẢN ĐỒ KẾT NỐI",
+   "srcnote": "MỖI CHƯƠNG THÊM MỘT ĐƯỜNG",
+   "rows": [
+    {
+     "k": "MỞ ĐẦU",
+     "v": "SO CẶP ẢNH",
+     "at": [
+      13,
+      "bản"
+     ]
+    },
+    {
+     "k": "1 · QUY TẮC",
+     "v": "CỬA KỶ LUẬT",
+     "at": [
+      13,
+      "bản"
+     ]
+    },
+    {
+     "k": "2 · CỔNG VÀO",
+     "v": "EMAIL TRƯỜNG",
+     "at": [
+      13,
+      "bản"
+     ]
+    },
+    {
+     "k": "3 · MỞ RỘNG",
+     "v": "LỚP HỌC CHUNG",
+     "at": [
+      13,
+      "bản"
+     ]
+    },
+    {
+     "k": "4 · VAI TRÒ",
+     "v": "VỐN VÀ QUẢNG CÁO",
+     "at": [
+      13,
+      "bản"
+     ]
+    },
+    {
+     "k": "5 · HỒ SƠ",
+     "v": "CÁO BUỘC KHÁC ÁN",
+     "at": [
+      13,
+      "bản"
+     ]
+    },
+    {
+     "k": "6 · PHIM",
+     "v": "KHÔNG LÀ HỒ SƠ",
+     "at": [
+      13,
+      "bản"
+     ]
+    },
+    {
+     "k": "7 · FEED",
+     "v": "THỨ TỰ NỘI DUNG",
+     "at": [
+      13,
+      "bản"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    15,
+    "bản"
+   ],
+   "items": [
+    {
+     "text": "GIỮ NGUYÊN KHOẢNG TRỐNG",
+     "at": [
+      15,
+      "bản"
+     ],
+     "acc": true
+    },
+    {
+     "text": "KHI NGUỒN CHƯA NÓI",
+     "at": [
+      15,
+      "bản"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "topic": "mim-social-network",
+ "chapter": 7,
+ "hud": {
+  "k": "CHƯƠNG 07",
+  "t": "AI ĐỨNG Ở ĐẦU FEED"
+ }
+}

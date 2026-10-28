@@ -1,0 +1,208 @@
+{
+ "theme": "ck",
+ "kicker": "CHIA NHỎ QUỸ",
+ "sub": "QUỸ KHẨN CẤP",
+ "title": "Cần 10 triệu, đừng phá cả sổ: chia quỹ khẩn cấp thành 3 phần, 2/3 vẫn giữ lãi (ví dụ giả định)",
+ "description": "Ví dụ GIẢ ĐỊNH: quỹ khẩn cấp 30 triệu gửi có kỳ hạn. Thông thường, phần rút trước hạn chỉ được tính lãi không kỳ hạn (rất thấp). Nếu cả quỹ nằm chung một khoản và phải rút cả khoản, cả 30 triệu mất lãi kỳ hạn; chia thành 3 phần × 10 triệu thì cần 10 triệu chỉ rút một phần, 20 triệu (2/3 quỹ) vẫn giữ lãi kỳ hạn. Điều kiện rút trước hạn (được rút một phần hay phải rút cả khoản) mỗi nơi một khác — đọc kỹ trước khi gửi. Kênh không chỉ định nơi gửi hay sản phẩm nào.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là ví dụ giả định, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (8 phút): https://youtu.be/iOxDRCkFbYY",
+ "tags": [
+  "quỹ khẩn cấp",
+  "rút trước hạn",
+  "tiền gửi có kỳ hạn",
+  "tiết kiệm",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "phá",
+  "chia",
+  "phần",
+  "giữ",
+  "ít"
+ ],
+ "lines": [
+  "Cần mười triệu, đừng phá cả sổ.",
+  "Ví dụ giả định, quỹ khẩn cấp ba mươi triệu, gửi có kỳ hạn.",
+  "Thông thường, phần rút trước hạn chỉ được lãi không kỳ hạn, rất thấp.",
+  "Nếu cả quỹ chung một khoản, cần mười triệu có khi phải rút cả ba mươi.",
+  "Chia quỹ thành ba phần mười triệu, bạn chỉ rút một phần.",
+  "Hai phần còn lại, tức hai phần ba quỹ, vẫn giữ nguyên lãi kỳ hạn.",
+  "Chia nhỏ không làm quỹ lớn hơn. Nó làm mỗi lần rút tốn ít hơn."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "ĐỪNG PHÁ CẢ SỔ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "cần 10 triệu thôi",
+     "at": [
+      0,
+      "đừng"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7710770",
+   "veil": 0.55
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "from": 30,
+   "to": 30,
+   "suffix": " TRIỆU",
+   "label": "QUỸ KHẨN CẤP · GỬI CÓ KỲ HẠN",
+   "sub": {
+    "text": "VÍ DỤ GIẢ ĐỊNH",
+    "at": [
+     1,
+     "ba"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "RÚT TRƯỚC HẠN",
+     "at": 2,
+     "sm": true
+    },
+    {
+     "text": "THƯỜNG CHỈ LÃI KHÔNG KỲ HẠN",
+     "at": [
+      2,
+      "lãi"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:6266251",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  },
+  {
+   "type": "board",
+   "at": 3,
+   "title": "Cần 10 triệu",
+   "nodes": [
+    {
+     "text": "một khoản 30 triệu",
+     "x": 0.5,
+     "y": 0.26,
+     "at": [
+      3,
+      "chung"
+     ],
+     "shape": "box",
+     "w": 700,
+     "cross": [
+      3,
+      "cả",
+      1
+     ]
+    },
+    {
+     "text": "3 phần × 10 triệu",
+     "x": 0.5,
+     "y": 0.6,
+     "at": [
+      4,
+      "chia"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 700
+    },
+    {
+     "text": "chỉ rút 1 phần",
+     "x": 0.5,
+     "y": 0.86,
+     "at": [
+      4,
+      "rút"
+     ],
+     "shape": "none",
+     "w": 640
+    }
+   ],
+   "arrows": [
+    {
+     "from": 1,
+     "to": 2,
+     "at": [
+      4,
+      "rút"
+     ]
+    }
+   ],
+   "note": "VÍ DỤ GIẢ ĐỊNH · ĐIỀU KIỆN RÚT MỖI NƠI MỘT KHÁC"
+  },
+  {
+   "type": "chart",
+   "at": 5,
+   "kind": "bars",
+   "title": "PHẦN QUỸ CÒN GIỮ LÃI KỲ HẠN",
+   "unit": "TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH · CẦN RÚT 10 TRIỆU",
+   "bars": [
+    {
+     "label": "RÚT CẢ\nMỘT KHOẢN",
+     "v": 0,
+     "text": "0",
+     "c": "down",
+     "at": 5
+    },
+    {
+     "label": "CHIA\nBA PHẦN",
+     "v": 20,
+     "text": "20",
+     "c": "up",
+     "at": [
+      5,
+      "lại"
+     ]
+    }
+   ],
+   "badge": {
+    "text": "2/3 QUỸ GIỮ LÃI",
+    "at": [
+     5,
+     "giữ"
+    ],
+    "c": "up"
+   }
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "CHIA NHỎ ≠ QUỸ LỚN HƠN",
+   "sub": "MỖI LẦN RÚT TỐN ÍT HƠN"
+  }
+ ],
+ "sources": [
+  "https://youtu.be/iOxDRCkFbYY",
+  "https://baochinhphu.vn/quy-dinh-moi-ve-lai-suat-rut-truoc-han-tien-gui-10222062114522068.htm"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

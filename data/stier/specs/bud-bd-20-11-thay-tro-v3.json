@@ -1,0 +1,179 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-bd-20-11-thay-tro",
+ "format": "ba-dieu",
+ "hook_type": "con-so",
+ "open_shot": "lop-hoc",
+ "voice": "Đoan Trang",
+ "music": "frost_waltz.mp3",
+ "music_gain": 0.18,
+ "gap": 0.15,
+ "special_date": true,
+ "title": "20/11: thầy cô đã cho bạn mấy điều?",
+ "kicker": "20/11 · NGÀY NHÀ GIÁO",
+ "sub": "KINH TRƯỜNG BỘ 31",
+ "acc": [
+  "thầy",
+  "cô",
+  "điều"
+ ],
+ "lines": [
+  "Hai mươi tháng mười một: thầy cô đã cho bạn mấy điều?",
+  "Đức Phật kể năm điều. Đây là ba điều đáng nhớ nhất.",
+  "Một: dạy kỹ, đến khi bạn thật sự hiểu.",
+  "Hai: dạy hết nghề, không giấu điều gì.",
+  "Nhưng điều ba ít ai để ý: giới thiệu bạn với người tốt.",
+  "Kinh Trường Bộ, diễn ý: thầy thương trò, trò kính thầy.",
+  "Hôm nay nhắn một dòng cảm ơn cho một thầy cô cũ.",
+  "Thầy cô nào đã làm điều số ba cho bạn? Gửi video này cho thầy cô ấy."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:5897650",
+   "items": [
+    {
+     "text": "MẤY ĐIỀU?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "20/11 · ngày nhà giáo",
+     "at": [
+      0,
+      "thầy"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 5,
+   "suffix": " ĐIỀU",
+   "label": "ĐỨC PHẬT KỂ · CHỌN 3",
+   "until": [
+    1,
+    "năm"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "veil": 0.4,
+   "clip": "pexels:8342757",
+   "items": [
+    {
+     "text": "1 · DẠY KỸ",
+     "at": [
+      2,
+      "một:"
+     ],
+     "acc": true
+    },
+    {
+     "text": "đến khi bạn thật sự hiểu",
+     "at": [
+      2,
+      "đến"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "ĐIỀU 2",
+   "cards": [
+    {
+     "k": "2",
+     "v": "DẠY HẾT NGHỀ",
+     "at": [
+      3,
+      "hết"
+     ]
+    },
+    {
+     "k": "KHÔNG",
+     "v": "GIẤU ĐIỀU GÌ",
+     "at": [
+      3,
+      "giấu"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "ĐIỀU 3:\nGIỚI THIỆU NGƯỜI TỐT",
+   "fx": "zoom",
+   "sub": "ÍT AI ĐỂ Ý"
+  },
+  {
+   "type": "source",
+   "at": 5,
+   "source": "KINH TRƯỜNG BỘ 31",
+   "ref": "Kinh Thiện Sinh",
+   "snippet": "Thầy thương trò, [[trò kính thầy]].",
+   "hlAt": [
+    5,
+    "kính"
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "to": 1,
+   "suffix": " DÒNG CẢM ƠN",
+   "label": "CHO MỘT THẦY CÔ CŨ",
+   "until": [
+    6,
+    "ơn"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "veil": 0.4,
+   "clip": "pexels:5904548",
+   "items": [
+    {
+     "text": "GỬI THẦY CÔ ẤY",
+     "at": [
+      7,
+      "gửi"
+     ],
+     "acc": true
+    },
+    {
+     "text": "ai đã làm điều số 3?",
+     "at": [
+      7,
+      "thầy"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dn31/en/sujato"
+ ],
+ "description": "20/11: thầy cô đã cho bạn mấy điều?\n\nNguồn: https://suttacentral.net/dn31/en/sujato"
+}

@@ -1,0 +1,361 @@
+{
+ "title": "Bảy phần trăm không phải mọi chiếc khung",
+ "lines": [
+  {
+   "t": "Bảy phần trăm là biên độ thông thường được tài liệu HOSE nêu cho trường hợp vừa nói.",
+   "p": 0.8
+  },
+  "Nó không phải lời hứa rằng một người nắm giữ chỉ có thể lỗ bảy phần trăm.",
+  "Một phiên là một phiên.",
+  "Nhiều phiên nối nhau là một câu chuyện khác.",
+  "Trong ví dụ giả định, hai mươi nghìn giảm bảy phần trăm còn mười tám nghìn sáu trăm.",
+  "Ngày sau lại có một giá tham chiếu khác.",
+  "Vì vậy, không thể lấy một con số của một ngày làm phanh cho cả tuần.",
+  "Đây là nghịch lý thứ hai.",
+  "Một cái sàn nghe như đáy.",
+  "Không có đáy chung.",
+  "Nhưng nó là đáy trong dải của một phiên, không phải đáy cho mọi tương lai.",
+  "Tài liệu HOSE cũng nêu trường hợp ngày giao dịch đầu tiên hoặc giao dịch lại sau tạm ngừng dài.",
+  "Khi đó, biên độ được nêu là cộng trừ hai mươi phần trăm.",
+  "Hai mươi phần trăm của hai mươi nghìn trong ví dụ giả định là bốn nghìn đồng.",
+  "Dải minh họa khi ấy là từ mười sáu nghìn tới hai mươi bốn nghìn đồng.",
+  "Trên UPCoM, nguồn HNX ghi nhận biên độ thông thường mười lăm phần trăm từ năm hai nghìn không trăm mười lăm.",
+  "Nguồn đó cũng ghi nhận mức bốn mươi phần trăm cho ngày đầu hoặc giao dịch lại từ năm hai nghìn không trăm mười một.",
+  "Mười lăm phần trăm của hai mươi nghìn là ba nghìn đồng trong ví dụ giả định.",
+  "Bốn mươi phần trăm của hai mươi nghìn là tám nghìn đồng.",
+  "Các cột trên màn hình vì thế đứng cạnh nhau: bảy, hai mươi, mười lăm và bốn mươi.",
+  "Ngày giao dịch tạo bối cảnh.",
+  "Chúng không phải bảng chọn nơi giao dịch.",
+  "Chúng chỉ nhắc rằng phải hỏi: đây là sàn nào, ngày nào, tình huống nào?",
+  "Còn nếu một phiên thật sự nghẹt ở phía sàn, chiếc khung giá có tự mở nút bán không?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "BẢY PHẦN TRĂM\nKHÔNG PHẢI MỌI KHUNG",
+   "sub": "NGÀY THƯỜNG VÀ NGOẠI LỆ · HOSE · HNX",
+   "img": "ai02",
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.55,
+    0.3
+   ],
+   "titleAt": 0
+  },
+  {
+   "type": "kinetic",
+   "at": 1,
+   "items": [
+    {
+     "text": "±7% ≠ LỖ TỐI ĐA",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "biên độ của một phiên",
+     "at": 1,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "img": "ai01",
+   "at": 2,
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.45,
+    0.3
+   ],
+   "move": "pan"
+  },
+  {
+   "type": "bars",
+   "at": 4,
+   "title": "MỘT PHIÊN GIẢM 7%",
+   "unit": "ĐỒNG",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "THAM CHIẾU",
+     "v": 20000,
+     "lbl": "20.000",
+     "at": 4
+    },
+    {
+     "k": "SAU GIẢM 7%",
+     "v": 18600,
+     "lbl": "18.600",
+     "at": [
+      4,
+      "còn"
+     ],
+     "acc": true
+    }
+   ],
+   "calls": [
+    {
+     "i": 1,
+     "text": "18.600 ĐỒNG",
+     "at": [
+      4,
+      "còn"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "broll",
+   "at": 6,
+   "vid": "11899304",
+   "loop": true,
+   "veil": 0.56,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "MỘT NGÀY ≠ PHANH CẢ TUẦN",
+     "at": 6,
+     "acc": true
+    },
+    {
+     "text": "ngày sau: tham chiếu khác",
+     "at": 6,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "SÀN = ĐÁY?",
+     "at": 7,
+     "acc": true
+    },
+    {
+     "text": "không có đáy chung",
+     "at": 9,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "book",
+   "at": 10,
+   "title": "ĐÁY CỦA MỘT PHIÊN",
+   "range": "KHÔNG PHẢI ĐÁY CHO MỌI TƯƠNG LAI",
+   "ref": 20000,
+   "ceil": 21400,
+   "floor": 18600,
+   "prices": [
+    21400,
+    20000,
+    18600
+   ],
+   "rows": [],
+   "match": {
+    "price": 18600,
+    "at": 10,
+    "text": "SÀN: ĐÁY TRONG DẢI PHIÊN NÀY"
+   },
+   "source": "VÍ DỤ GIẢ ĐỊNH · HOSE ±7% · KHÔNG PHẢI GIÁ CỦA MÃ NÀO"
+  },
+  {
+   "type": "counter",
+   "at": 11,
+   "from": 7,
+   "to": 20,
+   "suffix": "%",
+   "label": "BIÊN ĐỘ HOSE · NGÀY ĐẦU HOẶC GIAO DỊCH LẠI",
+   "srcnote": "NGUỒN: HOSE",
+   "sub": {
+    "text": "±20% THAY CHO ±7%",
+    "at": 12
+   }
+  },
+  {
+   "type": "bars",
+   "at": 13,
+   "title": "DẢI ±20% QUANH 20.000",
+   "unit": "ĐỒNG",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "THAM CHIẾU",
+     "v": 20000,
+     "lbl": "20.000",
+     "at": 13
+    },
+    {
+     "k": "SÀN ±20%",
+     "v": 16000,
+     "lbl": "16.000",
+     "at": 14
+    },
+    {
+     "k": "TRẦN ±20%",
+     "v": 24000,
+     "lbl": "24.000",
+     "at": [
+      14,
+      "tới"
+     ],
+     "acc": true
+    }
+   ],
+   "calls": [
+    {
+     "i": 0,
+     "text": "±4.000 ĐỒNG",
+     "at": 13
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 15,
+   "title": "UPCOM · THEO NGUỒN HNX",
+   "items": [
+    {
+     "year": "01/07/2015",
+     "text": "biên độ thông thường lên ±15%",
+     "at": 15
+    },
+    {
+     "year": "04/04/2011",
+     "text": "ngày đầu, giao dịch lại: ±40%",
+     "at": 16
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 17,
+   "title": "MỨC DAO ĐỘNG QUANH 20.000",
+   "unit": "ĐỒNG",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH",
+   "items": [
+    {
+     "k": "±15%",
+     "v": 3000,
+     "lbl": "3.000",
+     "at": 17
+    },
+    {
+     "k": "±40%",
+     "v": 8000,
+     "lbl": "8.000",
+     "at": 18,
+     "acc": true
+    }
+   ],
+   "calls": []
+  },
+  {
+   "type": "bars",
+   "at": 19,
+   "title": "BỐN MỨC BIÊN ĐỘ",
+   "unit": "%",
+   "srcnote": "NGUỒN: HOSE · HNX",
+   "items": [
+    {
+     "k": "HOSE THƯỜNG",
+     "v": 7,
+     "lbl": "7%",
+     "at": 19
+    },
+    {
+     "k": "HOSE NGÀY ĐẦU",
+     "v": 20,
+     "lbl": "20%",
+     "at": [
+      19,
+      "hai"
+     ]
+    },
+    {
+     "k": "UPCOM THƯỜNG",
+     "v": 15,
+     "lbl": "15%",
+     "at": [
+      19,
+      "lăm"
+     ]
+    },
+    {
+     "k": "UPCOM NGÀY ĐẦU",
+     "v": 40,
+     "lbl": "40%",
+     "at": [
+      19,
+      "bốn"
+     ],
+     "acc": true
+    }
+   ],
+   "calls": []
+  },
+  {
+   "type": "broll",
+   "at": 20,
+   "vid": "7693395",
+   "loop": true,
+   "veil": 0.56,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "BỐI CẢNH, KHÔNG PHẢI BẢNG CHỌN",
+     "at": 20,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 22,
+   "title": "BA CÂU PHẢI HỎI",
+   "srcnote": "NGUỒN: HOSE · HNX",
+   "rows": [
+    {
+     "k": "SÀN NÀO?",
+     "v": "HOSE HAY UPCOM",
+     "at": 22
+    },
+    {
+     "k": "NGÀY NÀO?",
+     "v": "THƯỜNG HAY NGÀY ĐẦU",
+     "at": [
+      22,
+      "ngày"
+     ]
+    },
+    {
+     "k": "TÌNH HUỐNG NÀO?",
+     "v": "CÓ GIAO DỊCH LẠI KHÔNG",
+     "at": [
+      22,
+      "tình"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 23,
+   "text": "PHIÊN NGHẸT Ở PHÍA SÀN\nNÚT BÁN CÓ TỰ MỞ?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "BẢY PHẦN TRĂM KHÔNG PHẢI MỌI KHUNG"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.1
+ }
+}

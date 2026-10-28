@@ -1,0 +1,276 @@
+{
+ "theme": "mim",
+ "title": "Card đồ hoạ của bạn có bao nhiêu lõi? Bảng tra 5 đời card từ 2010 đến 2022",
+ "description": "Số lõi CUDA theo công bố của Nvidia: GTX 580 (2010) 512 lõi; GTX 1080 (2016) 2.560; RTX 2080 Ti (2018) 4.352; RTX 3090 (2020) 10.496; RTX 4090 (2022) 16.384, gấp 32 lần GTX 580. Cột cuối chia số lõi cho 512. Lõi của GPU nhỏ và đơn giản hơn lõi của CPU nên không so ngang được. Giọng đọc tổng hợp; video Pexels.\n\nBản đầy đủ: https://youtu.be/<ID-mim-ai-gpu> (công khai từ 20:00 ngày 16/11)",
+ "tags": [
+  "card đồ hoạ bao nhiêu lõi",
+  "số lõi cuda",
+  "rtx 4090",
+  "gtx 580",
+  "bảng tra",
+  "trí tuệ nhân tạo",
+  "gpu",
+  "nvidia",
+  "card đồ hoạ",
+  "mind in the machine"
+ ],
+ "kicker": "SỐ LIỆU GPU",
+ "sub": "5 ĐỜI CARD",
+ "acc": [
+  "năm",
+  "lõi",
+  "ba",
+  "mươi",
+  "hai"
+ ],
+ "lines": [
+  "Card của bạn có bao nhiêu lõi?",
+  "Đây là số lõi tính toán của năm đời card Nvidia, theo số hãng công bố.",
+  "Tìm hàng của đời card bạn đang dùng, rồi nhìn sang cột lõi.",
+  "Chiếc card năm hai nghìn không trăm mười, loại từng dạy AlexNet, có năm trăm mười hai lõi.",
+  "Chiếc ra mắt năm hai nghìn không trăm hai mươi hai có mười sáu nghìn ba trăm tám mươi bốn lõi.",
+  "Một lưu ý: lõi của card đồ hoạ nhỏ và đơn giản hơn nhiều lõi của bộ xử lý trung tâm, nên hai con số không so ngang được.",
+  "Cùng một dòng card, mười hai năm, gấp ba mươi hai lần."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "CARD CỦA BẠN",
+     "at": 0.0
+    },
+    {
+     "text": "MẤY LÕI?",
+     "at": [
+      0,
+      "bao"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:5466792",
+   "veil": 0.55
+  },
+  {
+   "type": "table",
+   "at": 1,
+   "title": "LÕI CUDA THEO ĐỜI CARD",
+   "rowHead": "CARD",
+   "colHead": "NVIDIA GEFORCE · SỐ LÕI CÔNG BỐ",
+   "cols": [
+    "RA MẮT",
+    "LÕI",
+    "SO 580"
+   ],
+   "rows": [
+    {
+     "k": "GTX 580",
+     "v": [
+      "2010",
+      "512",
+      "1×"
+     ],
+     "at": [
+      1,
+      "năm"
+     ]
+    },
+    {
+     "k": "GTX 1080",
+     "v": [
+      "2016",
+      "2.560",
+      "5×"
+     ],
+     "at": [
+      1,
+      "năm"
+     ]
+    },
+    {
+     "k": "RTX 2080 Ti",
+     "v": [
+      "2018",
+      "4.352",
+      "8,5×"
+     ],
+     "at": [
+      2,
+      "Tìm"
+     ]
+    },
+    {
+     "k": "RTX 3090",
+     "v": [
+      "2020",
+      "10.496",
+      "20,5×"
+     ],
+     "at": [
+      2,
+      "rồi"
+     ]
+    },
+    {
+     "k": "RTX 4090",
+     "v": [
+      "2022",
+      "16.384",
+      "32×"
+     ],
+     "at": [
+      2,
+      "rồi"
+     ]
+    }
+   ],
+   "hl": [
+    {
+     "r": 0,
+     "c": 1,
+     "at": [
+      3,
+      "năm",
+      1
+     ]
+    },
+    {
+     "r": 4,
+     "c": 1,
+     "at": [
+      4,
+      "mười"
+     ]
+    }
+   ],
+   "foot": "DỪNG HÌNH ĐỂ TRA · LƯU LẠI",
+   "note": "LÕI GPU KHÔNG SO NGANG ĐƯỢC LÕI CPU"
+  },
+  {
+   "type": "board",
+   "at": 5,
+   "title": "Hai loại lõi, hai việc",
+   "nodes": [
+    {
+     "text": "LÕI CPU: ít, lớn",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      5,
+      "bộ"
+     ],
+     "w": 700
+    },
+    {
+     "text": "LÕI GPU: nhiều, nhỏ",
+     "x": 0.5,
+     "y": 0.68,
+     "at": [
+      5,
+      "nhỏ"
+     ],
+     "c": "acc",
+     "w": 700
+    }
+   ],
+   "arrows": []
+  },
+  {
+   "type": "table",
+   "at": 6,
+   "title": "LÕI CUDA THEO ĐỜI CARD",
+   "rowHead": "CARD",
+   "colHead": "NVIDIA GEFORCE · SỐ LÕI CÔNG BỐ",
+   "cols": [
+    "RA MẮT",
+    "LÕI",
+    "SO 580"
+   ],
+   "rows": [
+    {
+     "k": "GTX 580",
+     "v": [
+      "2010",
+      "512",
+      "1×"
+     ],
+     "at": 6
+    },
+    {
+     "k": "GTX 1080",
+     "v": [
+      "2016",
+      "2.560",
+      "5×"
+     ],
+     "at": 6
+    },
+    {
+     "k": "RTX 2080 Ti",
+     "v": [
+      "2018",
+      "4.352",
+      "8,5×"
+     ],
+     "at": 6
+    },
+    {
+     "k": "RTX 3090",
+     "v": [
+      "2020",
+      "10.496",
+      "20,5×"
+     ],
+     "at": 6
+    },
+    {
+     "k": "RTX 4090",
+     "v": [
+      "2022",
+      "16.384",
+      "32×"
+     ],
+     "at": 6
+    }
+   ],
+   "hl": [
+    {
+     "r": 4,
+     "c": 2,
+     "at": [
+      6,
+      "ba"
+     ]
+    }
+   ],
+   "foot": "DỪNG HÌNH ĐỂ TRA · LƯU LẠI",
+   "note": "LÕI GPU KHÔNG SO NGANG ĐƯỢC LÕI CPU"
+  }
+ ],
+ "sources": [
+  "Số lõi: nvidia.com (trang thông số từng card) — CẦN KIỂM các hàng 2016/2018/2020 trước khi dựng; hàng 512 và 16.384 đã có ở factcheck.md dòng 12",
+  "https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf (GTX 580)"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6,
+   "0": 0.35
+  }
+ },
+ "say": {
+  "nvidia": "En-vi-đi-a",
+  "alexnet": "A-léc-nét",
+  "ng": "En-gờ"
+ },
+ "imgs": {}
+}

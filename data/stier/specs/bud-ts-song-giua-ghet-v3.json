@@ -1,0 +1,164 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-ts-song-giua-ghet",
+ "format": "truoc-sau",
+ "hook_type": "noi-dau",
+ "open_shot": "van-phong",
+ "voice": "Ngọc Trân",
+ "music": "clean_soul.mp3",
+ "music_gain": 0.18,
+ "gap": 0.15,
+ "title": "Có người ghét bạn ở chỗ làm?",
+ "kicker": "TRƯỚC · SAU",
+ "sub": "KINH PHÁP CÚ · KỆ 197",
+ "acc": [
+  "ghét",
+  "nhà",
+  "hận"
+ ],
+ "lines": [
+  "Có người ghét bạn ở chỗ làm, và bạn mệt cả tuần?",
+  "Ghét lại thì sao? Mệt gấp đôi.",
+  "Bạn mang cái ghét ấy về nhà, ăn cơm cũng nghĩ tới.",
+  "Kệ Pháp Cú dạy: sống giữa người thù hận, ta không thù hận.",
+  "Nhưng không thù hận không có nghĩa là chịu đựng.",
+  "Họ vẫn có thể ghét. Bạn chỉ không mang nó về nhà.",
+  "Tối nay, trước khi vào nhà, thở ra ba hơi. Để chuyện công ty ngoài cửa.",
+  "Bạn đang phải làm cạnh ai? Gửi đồng nghiệp cùng chịu trận."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:8141246",
+   "items": [
+    {
+     "text": "BỊ GHÉT Ở CHỖ LÀM?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "mệt cả tuần",
+     "at": [
+      0,
+      "mệt"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "hf_split",
+   "at": 1,
+   "a": {
+    "lab": "GHÉT LẠI",
+    "val": "mệt **gấp đôi**",
+    "num": "×2",
+    "at": [
+     1,
+     "ghét"
+    ]
+   },
+   "b": {
+    "lab": "MANG VỀ NHÀ",
+    "val": "ăn cơm **cũng nghĩ**",
+    "num": "+",
+    "at": [
+     2,
+     "mang"
+    ]
+   }
+  },
+  {
+   "type": "source",
+   "at": 3,
+   "source": "KINH PHÁP CÚ · KỆ 197",
+   "ref": "Phẩm An Lạc",
+   "snippet": "Sống giữa người thù hận, [[ta sống không thù hận]].",
+   "hlAt": [
+    3,
+    "không"
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "KHÔNG THÙ HẬN\n≠ CHỊU ĐỰNG",
+   "fx": "zoom"
+  },
+  {
+   "type": "kinetic",
+   "at": 5,
+   "veil": 0.4,
+   "clip": "pexels:6646056",
+   "items": [
+    {
+     "text": "KHÔNG MANG VỀ NHÀ",
+     "at": [
+      5,
+      "không"
+     ],
+     "acc": true
+    },
+    {
+     "text": "họ vẫn có thể ghét",
+     "at": [
+      5,
+      "họ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "to": 3,
+   "suffix": " HƠI THỞ RA",
+   "label": "TRƯỚC KHI VÀO NHÀ",
+   "until": [
+    6,
+    "hơi."
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "veil": 0.4,
+   "clip": "pexels:12909006",
+   "items": [
+    {
+     "text": "LÀM CẠNH AI?",
+     "at": [
+      7,
+      "bạn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "gửi đồng nghiệp cùng chịu trận",
+     "at": [
+      7,
+      "gửi"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/dhp197-208/en/sujato"
+ ],
+ "description": "Có người ghét bạn ở chỗ làm?\n\nNguồn: https://suttacentral.net/dhp197-208/en/sujato"
+}

@@ -1,0 +1,266 @@
+{
+ "theme": "mim",
+ "title": "18/04/2019: vài giờ sau khi OpenAI Five mở cửa, đội Alpha Red (Thái Lan) thắng trận đầu",
+ "description": "Ngày 18/04/2019, OpenAI mở Arena cho mọi người đấu với OpenAI Five (Dota 2). Vài giờ sau, đội chuyên nghiệp Alpha Red (Thái Lan) thắng một ván kéo dài khoảng 45 phút; Greg Brockman, đồng sáng lập OpenAI, viết đó là chiến thắng đầu tiên của con người (Motherboard/Vice 19/04/2019). Theo OpenAI qua Engadget, kết quả cuối: 7.215 ván đối đầu thắng, 42 thua.\n\nGiọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/0J3dcjPjcdI (công khai từ 20:00 ngày 03/12).",
+ "tags": [
+  "openai five",
+  "dota 2",
+  "alpha red",
+  "greg brockman",
+  "openai arena",
+  "trận đấu người máy",
+  "mind in the machine"
+ ],
+ "sub": "OPENAI FIVE · 04/2019",
+ "acc": [
+  "vài",
+  "giờ",
+  "đầu",
+  "người"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Mở cửa vài giờ, con người thắng trận đầu.",
+  "Tháng tư năm hai nghìn không trăm mười chín, OpenAI cho mọi người đấu với OpenAI Five.",
+  "Năm ngày trước đó, đội máy vừa thắng OG, nhà vô địch Dota.",
+  "Một đội chuyên nghiệp Thái Lan, Alpha Red, ngồi vào ghế.",
+  "Chỉ vài giờ sau, họ thắng một ván kéo dài khoảng bốn mươi lăm phút.",
+  "Đồng sáng lập OpenAI Greg Brockman viết: chiến thắng đầu tiên của con người.",
+  "Một tuyển thủ Thụy Điển nói: máy không học nữa, còn chúng tôi thì có.",
+  "Cuối cùng, máy thắng bảy nghìn hai trăm mười lăm ván đối đầu, và thua bốn mươi hai.",
+  "Nhưng trận thua đầu tiên đã đến chỉ sau vài giờ."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "VÀI GIỜ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "con người thắng trận đầu",
+     "at": [
+      0,
+      "con"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7915057",
+   "ms": 3,
+   "veil": 0.55
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "2019",
+   "day": "THÁNG TƯ",
+   "sub": {
+    "text": "OPENAI ARENA · MỞ CHO MỌI NGƯỜI",
+    "at": [
+     1,
+     "cho"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Năm ngày trước",
+   "nodes": [
+    {
+     "text": "OPENAI FIVE",
+     "at": [
+      2,
+      "đội"
+     ],
+     "x": 0.3,
+     "y": 0.34,
+     "shape": "circle",
+     "w": 420,
+     "c": "acc"
+    },
+    {
+     "text": "THẮNG OG",
+     "at": [
+      2,
+      "OG"
+     ],
+     "x": 0.7,
+     "y": 0.34,
+     "shape": "circle",
+     "w": 420
+    },
+    {
+     "text": "NHÀ VÔ ĐỊCH DOTA",
+     "at": [
+      2,
+      "nhà"
+     ],
+     "x": 0.5,
+     "y": 0.68,
+     "shape": "none",
+     "w": 700,
+     "size": 56
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "ALPHA RED",
+     "at": 3,
+     "acc": true
+    },
+    {
+     "text": "đội chuyên nghiệp · Thái Lan",
+     "at": [
+      3,
+      "đội"
+     ],
+     "sm": true,
+     "size": 56
+    }
+   ],
+   "clip": "pexels:8128344",
+   "ms": 1,
+   "veil": 0.5,
+   "at": 3
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "from": 0,
+   "to": 45,
+   "prefix": "KHOẢNG ",
+   "suffix": " PHÚT",
+   "label": "VÁN ĐẤU ĐẦU TIÊN CON NGƯỜI THẮNG",
+   "until": [
+    4,
+    "bốn"
+   ],
+   "sub": {
+    "text": "VÀI GIỜ SAU KHI MỞ CỬA",
+    "at": [
+     4,
+     "vài"
+    ]
+   }
+  },
+  {
+   "type": "question",
+   "at": 5,
+   "text": "Chiến thắng đầu tiên của con người."
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "MỘT TUYỂN THỦ THỤY ĐIỂN",
+   "cards": [
+    {
+     "k": "MÁY",
+     "v": "KHÔNG HỌC NỮA",
+     "at": [
+      6,
+      "máy"
+     ]
+    },
+    {
+     "k": "NGƯỜI",
+     "v": "VẪN ĐANG HỌC",
+     "at": [
+      6,
+      "còn"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "OPENAI ARENA · ĐỐI ĐẦU",
+   "rows": [
+    {
+     "k": "MÁY THẮNG",
+     "v": "7.215 VÁN",
+     "at": [
+      7,
+      "bảy"
+     ]
+    },
+    {
+     "k": "MÁY THUA",
+     "v": "42 VÁN",
+     "at": [
+      7,
+      "thua"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "TRẬN THUA ĐẦU TIÊN",
+     "at": 8,
+     "acc": true
+    },
+    {
+     "text": "chỉ sau vài giờ",
+     "at": [
+      8,
+      "chỉ"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:33315117",
+   "ms": 1,
+   "veil": 0.5,
+   "at": 8
+  }
+ ],
+ "sources": [
+  "https://vice.com/en/article/we-will-win-openais-dota-2-team-is-crushing-humans-online-but-players-are-not-giving-up",
+  "https://www.engadget.com/2019-04-23-openai-five-dota-2-arena-results.html",
+  "https://en.wikipedia.org/wiki/OG_(esports)"
+ ],
+ "say": {
+  "openai": "Ô-pần Ây-ai",
+  "dota": "Đô-ta",
+  "og": "Ô Gi",
+  "alpha": "An-pha",
+  "red": "Rét",
+  "brockman": "Brốc-men",
+  "greg": "Gờ-rếch",
+  "five": "Phai"
+ },
+ "rules": 2,
+ "mix": true,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.4,
+   "6": 0.22,
+   "7": 0.5
+  }
+ },
+ "imgs": {},
+ "sources_internal": [
+  "https://vice.com/en/article/we-will-win-openais-dota-2-team-is-crushing-humans-online-but-players-are-not-giving-up (đã mở: 18/04/2019, Alpha Red Thái Lan, ~45 phút, tweet Brockman 'First human victory!!', lời Wagamama người Thụy Điển)",
+  "https://www.engadget.com/2019-04-23-openai-five-dota-2-arena-results.html (không mở được: 7.215 thắng, 42 thua theo tweet OpenAI 22/04/2019; qua tìm kiếm; CẦN KIỂM). KHÔNG dùng '42.729 ván, 99,4%' của Long CH20",
+  "https://en.wikipedia.org/wiki/OG_(esports) (đã mở: OG thua OpenAI Five 04/2019, San Francisco; ngày 13/04/2019 theo Wikipedia OpenAI Five)"
+ ]
+}

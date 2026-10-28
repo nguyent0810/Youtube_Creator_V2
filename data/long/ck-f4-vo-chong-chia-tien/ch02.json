@@ -1,0 +1,474 @@
+{
+ "title": "Ví thứ hai: cùng chịu một tỷ lệ",
+ "lines": [
+  {
+   "t": "Ví thứ hai bắt đầu từ câu hỏi khác: mỗi người góp theo phần thu nhập của mình.",
+   "p": 0.8
+  },
+  "Trong ví dụ giả định, mười lăm trên bốn mươi là ba mươi bảy phẩy năm phần trăm.",
+  "Hai mươi lăm trên bốn mươi là sáu mươi hai phẩy năm phần trăm.",
+  "Hai phần khớp nhau.",
+  "Hai tỷ lệ cộng lại thành một trăm phần trăm.",
+  "Nếu chi chung là hai mươi sáu triệu, Thảo góp chín triệu bảy trăm năm mươi nghìn.",
+  "Nam góp mười sáu triệu hai trăm năm mươi nghìn.",
+  {
+   "t": "Hai khoản ấy cũng cộng lại đúng hai mươi sáu triệu.",
+   "p": 1.0
+  },
+  "Đó là toàn bộ hóa đơn.",
+  "Thảo còn năm triệu hai trăm năm mươi nghìn mỗi tháng.",
+  "Nam còn tám triệu bảy trăm năm mươi nghìn mỗi tháng.",
+  "Hai số dư vẫn không bằng nhau.",
+  "Tuy vậy, phần chi chung của mỗi người đều bằng sáu mươi lăm phần trăm thu nhập.",
+  "Đây là điểm mà biểu đồ chấm muốn cho thấy.",
+  "Nó không bảo một tỷ lệ chung là công bằng hơn một số tiền chung.",
+  "Nó chỉ đổi định nghĩa của chữ cùng.",
+  "Không đổi tổng tiền.",
+  "Sau sáu tháng, ví dụ giả định cho Thảo ba mươi mốt triệu năm trăm nghìn.",
+  "Nam có năm mươi hai triệu năm trăm nghìn.",
+  "Sau mười hai tháng, hai cột lên sáu mươi ba triệu và một trăm lẻ năm triệu.",
+  "Đó là nhánh thứ hai của biểu đồ chính.",
+  "So với nhánh đầu, cột của Thảo cao thêm ba mươi chín triệu.",
+  "Cột của Nam thấp đi ba mươi chín triệu.",
+  "Tổng hai khoản riêng vẫn là một trăm sáu mươi tám triệu.",
+  "Tổng này giữ nguyên.",
+  "Con số tổng ấy bằng mười bốn triệu còn lại mỗi tháng nhân mười hai.",
+  "Không có tiền mới xuất hiện.",
+  "Chỉ có cách phân phần còn lại thay đổi.",
+  "Nghiên cứu quốc tế về các cặp đôi dùng những nhãn như gộp, tách, hoặc gộp một phần.",
+  "Các nhãn giúp nhìn cấu trúc tài khoản.",
+  "Chúng không cho một công thức áp dụng cho mọi gia đình ở Việt Nam.",
+  "Đây là giới hạn.",
+  "Vì vậy, ví thứ hai chỉ nói điều rất hẹp.",
+  "Với giả định mười lăm, hai mươi lăm và hai mươi sáu, cùng tỷ lệ tạo ra số dư năm phẩy hai lăm và tám phẩy bảy lăm."
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "2",
+   "k": "CHƯƠNG HAI",
+   "title": "VÍ THỨ HAI\nCÙNG CHỊU MỘT TỶ LỆ",
+   "sub": "VÍ DỤ GIẢ ĐỊNH · THEO THU NHẬP",
+   "vid": "7735859",
+   "illus": "VIDEO MINH HỌA",
+   "titleAt": 0
+  },
+  {
+   "type": "bars",
+   "at": 1,
+   "title": "TỶ TRỌNG THU NHẬP",
+   "unit": "% CỦA 40 TRIỆU · VÍ DỤ GIẢ ĐỊNH",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "items": [
+    {
+     "k": "THẢO",
+     "v": 37.5,
+     "lbl": "37,5%",
+     "at": [
+      1,
+      "bảy"
+     ]
+    },
+    {
+     "k": "NAM",
+     "v": 62.5,
+     "lbl": "62,5%",
+     "at": [
+      2,
+      "sáu"
+     ]
+    },
+    {
+     "k": "CỘNG LẠI",
+     "v": 100.0,
+     "lbl": "100%",
+     "at": [
+      4,
+      "một"
+     ],
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "waterfall",
+   "at": 5,
+   "title": "26 TRIỆU THEO TỶ TRỌNG",
+   "range": "TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH",
+   "unit": "TRIỆU",
+   "start": {
+    "k": "CHI CHUNG",
+    "v": 26.0,
+    "at": 5
+   },
+   "steps": [
+    {
+     "k": "THẢO GÓP",
+     "v": -9.75,
+     "at": [
+      5,
+      "thảo"
+     ]
+    },
+    {
+     "k": "NAM GÓP",
+     "v": -16.25,
+     "at": 6
+    }
+   ],
+   "end": {
+    "k": "CÒN PHẢI TRẢ",
+    "at": 7
+   },
+   "calls": [
+    {
+     "i": 3,
+     "text": "ĐỦ HÓA ĐƠN",
+     "at": 8
+    }
+   ]
+  },
+  {
+   "type": "bars",
+   "at": 9,
+   "title": "TỶ TRỌNG: CÒN MỖI THÁNG",
+   "unit": "TRIỆU · VÍ DỤ GIẢ ĐỊNH",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "items": [
+    {
+     "k": "THẢO",
+     "v": 5.25,
+     "lbl": "5,25",
+     "at": 9
+    },
+    {
+     "k": "NAM",
+     "v": 8.75,
+     "lbl": "8,75",
+     "at": 10,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "dots",
+   "at": 12,
+   "title": "MỖI 100 ĐỒNG LƯƠNG",
+   "total": 100,
+   "cols": 20,
+   "srcnote": "MỖI CHẤM = 1% LƯƠNG · VÍ DỤ GIẢ ĐỊNH",
+   "groups": [
+    {
+     "from": 0,
+     "n": 65,
+     "cls": "gold",
+     "label": "CẢ HAI: 65% VÀO CHI CHUNG",
+     "at": 12
+    },
+    {
+     "from": 65,
+     "n": 35,
+     "cls": "hollow",
+     "label": "35% CÒN LẠI",
+     "at": [
+      12,
+      "thu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "img": "ai03",
+   "at": 14,
+   "credit": false,
+   "illus": "ẢNH MINH HỌA",
+   "focus": [
+    0.5,
+    0.35
+   ],
+   "move": "pan",
+   "veil": 0.35,
+   "kin": [
+    {
+     "text": "ĐỔI NGHĨA CHỮ “CÙNG”",
+     "at": 15,
+     "acc": true
+    },
+    {
+     "text": "tổng tiền không đổi",
+     "at": 16,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "race",
+   "at": 17,
+   "abs": true,
+   "unit": "TRIỆU",
+   "xlab": "THÁNG ",
+   "xstep": 3,
+   "dates": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+   ],
+   "title": "TỶ TRỌNG · 12 THÁNG",
+   "range": "CỘNG DỒN · TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH",
+   "series": [
+    {
+     "label": "THẢO",
+     "color": "#f472b6",
+     "vals": [
+      0.0,
+      5.25,
+      10.5,
+      15.75,
+      21.0,
+      26.25,
+      31.5,
+      36.75,
+      42.0,
+      47.25,
+      52.5,
+      57.75,
+      63.0
+     ]
+    },
+    {
+     "label": "NAM",
+     "color": "#38bdf8",
+     "vals": [
+      0.0,
+      8.75,
+      17.5,
+      26.25,
+      35.0,
+      43.75,
+      52.5,
+      61.25,
+      70.0,
+      78.75,
+      87.5,
+      96.25,
+      105.0
+     ]
+    }
+   ],
+   "calls": [
+    {
+     "s": 0,
+     "i": 6,
+     "text": "6 THÁNG: 31,5",
+     "at": [
+      17,
+      "thảo"
+     ]
+    },
+    {
+     "s": 1,
+     "i": 6,
+     "text": "6 THÁNG: 52,5",
+     "at": 18
+    },
+    {
+     "s": 0,
+     "i": 12,
+     "text": "THẢO 63",
+     "at": 19
+    },
+    {
+     "s": 1,
+     "i": 12,
+     "text": "NAM 105",
+     "at": [
+      19,
+      "trăm"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "stack",
+   "at": 20,
+   "title": "THÁNG 12: HAI NHÁNH",
+   "range": "TRIỆU ĐỒNG · VÍ DỤ GIẢ ĐỊNH",
+   "unit": "TRIỆU",
+   "keys": [
+    {
+     "k": "THẢO"
+    },
+    {
+     "k": "NAM"
+    }
+   ],
+   "groups": [
+    {
+     "k": "CHIA ĐỀU",
+     "vals": [
+      24.0,
+      144.0
+     ],
+     "at": 20
+    },
+    {
+     "k": "TỶ TRỌNG",
+     "vals": [
+      63.0,
+      105.0
+     ],
+     "at": [
+      20,
+      "thứ"
+     ]
+    }
+   ],
+   "calls": [
+    {
+     "i": 1,
+     "text": "THẢO +39 · NAM −39",
+     "at": 22
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 23,
+   "from": 0,
+   "to": 168.0,
+   "label": "TỔNG HAI KHOẢN RIÊNG · 12 THÁNG",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "suffix": " TRIỆU",
+   "sub": {
+    "text": "= 14 TRIỆU × 12 THÁNG",
+    "at": 25
+   }
+  },
+  {
+   "type": "broll",
+   "at": 26,
+   "vid": "6963967",
+   "veil": 0.55,
+   "illus": "VIDEO MINH HỌA",
+   "kin": [
+    {
+     "text": "KHÔNG CÓ TIỀN MỚI",
+     "at": 26,
+     "acc": true
+    },
+    {
+     "text": "chỉ đổi cách phân phần còn lại",
+     "at": 27,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 28,
+   "title": "NHÃN TRONG NGHIÊN CỨU",
+   "srcnote": "NGUỒN: VOGLER VÀ CỘNG SỰ 2008 · GLADSTONE VÀ CỘNG SỰ 2022",
+   "rows": [
+    {
+     "k": "GỘP",
+     "v": "TIỀN VÀO MỘT CHỖ",
+     "at": [
+      28,
+      "gộp"
+     ]
+    },
+    {
+     "k": "TÁCH",
+     "v": "MỖI NGƯỜI GIỮ RIÊNG",
+     "at": [
+      28,
+      "tách"
+     ]
+    },
+    {
+     "k": "GỘP MỘT PHẦN",
+     "v": "VỪA CHUNG VỪA RIÊNG",
+     "at": [
+      28,
+      "phần"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 30,
+   "items": [
+    {
+     "text": "KHÔNG PHẢI CÔNG THỨC",
+     "at": 30,
+     "acc": true
+    },
+    {
+     "text": "cho mọi gia đình ở Việt Nam",
+     "at": [
+      30,
+      "mọi"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 32,
+   "title": "VÍ THỨ HAI · PHẠM VI HẸP",
+   "srcnote": "VÍ DỤ GIẢ ĐỊNH · KÊNH TỰ TÍNH",
+   "rows": [
+    {
+     "k": "PHẠM VI",
+     "v": "MỘT BỘ SỐ VÍ DỤ GIẢ ĐỊNH",
+     "at": 32
+    },
+    {
+     "k": "THU NHẬP",
+     "v": "15 VÀ 25",
+     "at": [
+      33,
+      "mười"
+     ]
+    },
+    {
+     "k": "CHI CHUNG",
+     "v": "26",
+     "at": [
+      33,
+      "sáu"
+     ]
+    },
+    {
+     "k": "SỐ DƯ",
+     "v": "5,25 VÀ 8,75",
+     "at": [
+      33,
+      "số"
+     ]
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 02",
+  "t": "VÍ THỨ HAI · CÙNG CHỊU MỘT TỶ LỆ"
+ },
+ "bgm": {
+  "mood": "calm",
+  "gain": 0.1
+ }
+}

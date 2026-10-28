@@ -6,6 +6,8 @@
         -> output/long/_chart_demo_<chế độ>/demo.mp4 (độ rộng / treemap vốn hoá HOSE, dữ liệu data/ck/breadth_2026/)
     python motion/long/chart_demo.py breadth-day | book | book-queue
         -> độ rộng theo % trong ngày (09/03/2026, base "prev") / sổ lệnh giả định (bảng giá ATO, hàng đợi ở giá sàn)
+    python motion/long/chart_demo.py waterfall | heat | stack | line-calls
+        -> ba cảnh mới 27/10/2026 (thác tiền, lịch nhiệt, cột xếp chồng) + khoanh điểm trên đường (race abs + calls)
 """
 from __future__ import annotations
 
@@ -21,7 +23,7 @@ import build_long as BL  # noqa: E402
 import chartdata  # noqa: E402
 import variety  # noqa: E402
 
-MODES = ("breadth", "breadth-anim", "basket", "basket-pct", "breadth-day", "book", "book-queue")
+MODES = ("breadth", "breadth-anim", "basket", "basket-pct", "breadth-day", "book", "book-queue", "waterfall", "heat", "stack", "line-calls")
 
 def main() -> None:
     mode = next((a for a in sys.argv[1:] if a in MODES), None)
@@ -53,6 +55,26 @@ def main() -> None:
               "queue": {"price": 18600, "times": ["09:00", "09:00", "09:03", "09:07", "09:12", "09:16", "09:21", "09:30", "09:42", "09:55", "10:08", "10:20"],
                         "mine": 9, "at": 0.6, "until": 2.4, "labelAt": 2.8, "hlAt": 3.4, "buy": {"text": "BÊN MUA Ở GIÁ SÀN: RẤT ÍT", "at": 4.2},
                         "eat": [{"at": 5.4, "k": 2}, {"at": 7.4, "k": 1}]}}
+    elif mode == "waterfall":
+        sc = {"type": "waterfall", "t0": 0.0, "t1": dur, "title": "7 NGÀY NẰM VIỆN CỦA ANH MINH", "range": "VÍ DỤ GIẢ ĐỊNH · TRIỆU ĐỒNG", "unit": "TRIỆU",
+              "start": {"k": "HOÁ ĐƠN", "v": 30, "at": 0.5}, "steps": [{"k": "QUỸ TRẢ", "v": -16, "at": 1.6}, {"k": "NGOÀI HOÁ ĐƠN", "v": 2, "at": 2.8}],
+              "end": {"k": "TỰ GÁNH", "at": 4.0}, "calls": [{"i": 3, "text": "16 TRIỆU TỰ TRẢ", "at": 5.4}]}
+    elif mode == "heat":
+        vals = [0.5, 1.0, 0, 0.5, 0.3, 0, 0, 0.3, 0.5, 0.8, 1.0, 0.7]
+        sc = {"type": "heat", "t0": 0.0, "t1": dur, "title": "MỘT NĂM PHONG BÌ CỦA CHỊ HÀ", "range": "VÍ DỤ GIẢ ĐỊNH", "unit": "TRIỆU",
+              "cells": [{"k": f"T{i + 1}", "v": v, "note": "TẾT" if i == 1 else None} for i, v in enumerate(vals)], "drawAt": 0.5, "until": 5.0,
+              "total": {"label": "CẢ NĂM", "at": 5.6}, "calls": [{"i": 10, "text": "MÙA CƯỚI", "at": 6.6}]}
+    elif mode == "stack":
+        sc = {"type": "stack", "t0": 0.0, "t1": dur, "title": "SAU 12 THÁNG, TIỀN CỦA AI?", "range": "VÍ DỤ GIẢ ĐỊNH · TRIỆU ĐỒNG", "unit": "TRIỆU",
+              "keys": [{"k": "THẢO"}, {"k": "NAM"}, {"k": "QUỸ CHUNG"}],
+              "groups": [{"k": "50/50", "vals": [24, 144, 0], "at": 0.8}, {"k": "THEO LƯƠNG", "vals": [63, 105, 0], "at": 2.2},
+                         {"k": "GỘP + RIÊNG", "vals": [42, 42, 84], "at": 3.6}], "calls": [{"i": 0, "text": "THẢO CÒN 24", "at": 5.6}]}
+    elif mode == "line-calls":
+        yrs = [str(i) for i in range(8)]
+        sc = chartdata.attach_race({"type": "race", "t0": 0.0, "t1": dur, "abs": True, "unit": "TRIỆU", "xlab": "THÁNG ", "xstep": 1, "dates": yrs,
+                                    "title": "KHOẢN THIẾU CỘNG DỒN CỦA CHỊ LAN", "range": "VÍ DỤ GIẢ ĐỊNH",
+                                    "series": [{"label": "THIẾU", "color": "#f87171", "vals": [0, 4, 8, 12, 16, 20, 24, 28]}],
+                                    "drawAt": 0.6, "until": 4.6, "calls": [{"i": 7, "text": "THIẾU 28 TRIỆU", "at": 5.4}, {"i": 1, "text": "THÁNG ĐẦU", "at": 7.0}]})
     elif mode == "basket":
         sc = chartdata.attach_basket({"type": "basket", "t0": 0.0, "t1": dur, "date": "2026-09-30", "groupSmall": 200, "labels": 10,
                                       "drawAt": 0.4, "until": 2.6, "highlight": ["VIC", "VHM", "VRE", "VPL"], "hlAt": 7.6,

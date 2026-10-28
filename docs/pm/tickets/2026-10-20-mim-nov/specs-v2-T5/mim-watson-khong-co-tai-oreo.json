@@ -1,0 +1,278 @@
+{
+ "theme": "mim",
+ "title": "Ken Jennings đáp sai, Watson đáp y hệt: cỗ máy thắng Jeopardy nhưng không có tai",
+ "description": "Ngày 14/02/2011, trận đầu tiên giữa Watson và hai nhà vô địch Jeopardy lên sóng. Ken Jennings trả lời sai một gợi ý về chiếc bánh Oreo (những năm 1920), ngay sau đó Watson bấm chuông và đáp lại đúng câu ấy; người dẫn Alex Trebek nói: 'Không. Ken vừa nói rồi!' (bản tin AP). Lý do: Watson nhận gợi ý bằng chữ và không nhận ra câu trả lời của người chơi khác (Wikipedia, IBM Watson). Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật.\n\nBản đầy đủ: https://youtu.be/Mt5hYcQxH50 (công khai từ 20:00 ngày 19/11).",
+ "tags": [
+  "watson ibm",
+  "ken jennings",
+  "alex trebek",
+  "jeopardy",
+  "oreo",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "sub": "JEOPARDY · 14.02.2011",
+ "acc": [
+  "sai",
+  "y",
+  "hệt",
+  "tai",
+  "nghe"
+ ],
+ "lines": [
+  "Ken Jennings đáp sai, và Watson đáp y hệt.",
+  "Ngày mười bốn tháng hai năm hai nghìn không trăm mười một, trận đầu tiên giữa người và máy lên sóng.",
+  "Gợi ý hỏi chiếc bánh Oreo ra đời trong thập niên nào.",
+  "Jennings đáp: những năm hai mươi. Sai.",
+  "Ngay sau đó, Watson bấm chuông và đáp đúng câu ấy: những năm hai mươi.",
+  "Người dẫn Alex Trebek nói: không, Ken vừa nói rồi.",
+  "Watson nhận gợi ý bằng chữ, cùng lúc gợi ý hiện lên cho người chơi. Nó không nghe được câu trả lời của người chơi khác.",
+  "Cỗ máy thắng cuộc thi ấy, nhưng không nghe nổi câu vừa vang lên."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "items": [
+    {
+     "text": "ĐÁP SAI",
+     "at": 0.0,
+     "acc": true,
+     "size": 210
+    },
+    {
+     "text": "Jennings · rồi Watson đáp y hệt",
+     "at": [
+      0,
+      "Watson"
+     ],
+     "sm": true,
+     "size": 56
+    }
+   ],
+   "clip": "pexels:39402054",
+   "veil": 0.55
+  },
+  {
+   "type": "date",
+   "at": 1,
+   "date": "14.02.2011",
+   "day": "NGƯỜI VÀ MÁY",
+   "sub": {
+    "text": "JEOPARDY · LÊN SÓNG",
+    "at": [
+     1,
+     "lên"
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "Gợi ý",
+   "nodes": [
+    {
+     "text": "bánh Oreo",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      2,
+      "Oreo"
+     ],
+     "shape": "circle",
+     "c": "acc",
+     "w": 560
+    },
+    {
+     "text": "thập niên nào?",
+     "x": 0.5,
+     "y": 0.66,
+     "at": [
+      2,
+      "thập"
+     ],
+     "shape": "none",
+     "w": 700
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 3,
+   "items": [
+    {
+     "text": "KEN JENNINGS",
+     "at": [
+      3,
+      "Jennings"
+     ],
+     "sm": true,
+     "size": 64
+    },
+    {
+     "text": "NHỮNG NĂM 20",
+     "at": [
+      3,
+      "những"
+     ],
+     "acc": true
+    },
+    {
+     "text": "sai",
+     "at": [
+      3,
+      "Sai"
+     ],
+     "sm": true,
+     "size": 64
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "CÙNG MỘT ĐÁP ÁN SAI",
+   "rows": [
+    {
+     "k": "KEN JENNINGS",
+     "v": "NHỮNG NĂM 20",
+     "at": [
+      4,
+      "Ngay"
+     ]
+    },
+    {
+     "k": "WATSON, NGAY SAU ĐÓ",
+     "v": "NHỮNG NĂM 20",
+     "at": [
+      4,
+      "đáp"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 5,
+   "text": "Không. Ken vừa nói rồi!",
+   "by": "ALEX TREBEK · BẢN TIN AP · TRÍCH DỊCH"
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "KHÔNG CÓ TAI",
+     "at": [
+      6,
+      "Watson"
+     ],
+     "acc": true
+    },
+    {
+     "text": "nhận gợi ý bằng chữ",
+     "at": [
+      6,
+      "chữ"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8717005",
+   "veil": 0.55
+  },
+  {
+   "type": "board",
+   "at": [
+    6,
+    "Nó"
+   ],
+   "title": "Watson",
+   "nodes": [
+    {
+     "text": "gợi ý: chữ",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      6,
+      "Nó"
+     ],
+     "shape": "none",
+     "w": 620
+    },
+    {
+     "text": "câu người khác đáp: không nghe",
+     "x": 0.5,
+     "y": 0.66,
+     "at": [
+      6,
+      "nghe"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 780
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "THẮNG CUỘC THI",
+     "at": [
+      7,
+      "thắng"
+     ],
+     "acc": true
+    },
+    {
+     "text": "không nghe nổi câu vừa vang lên",
+     "at": [
+      7,
+      "không"
+     ],
+     "sm": true,
+     "size": 52
+    }
+   ],
+   "clip": "pexels:8246857",
+   "veil": 0.6
+  }
+ ],
+ "sources": [
+  "https://abc7.com/archive/7958839 (AP: Jennings sai 'những năm 1920' về Oreo; Watson đáp 'What is 1920s?'; Trebek: 'No. Ken said that!')",
+  "https://en.wikipedia.org/wiki/IBM_Watson (mục First match: phát sóng 14/02/2011; Watson không nhận ra câu trả lời của người chơi khác)",
+  "data/long/mim-watson-jeopardy/script.md CH08 ('nó không nghe thấy người khác nói gì'; nhận gợi ý dạng chữ). CẦN KIỂM: tên mục 'Name That Decade' và lời giải thích của IBM (Caemmerer/Welty) chỉ thấy qua tóm tắt tìm kiếm, nên KHÔNG đưa vào lời đọc."
+ ],
+ "say": {
+  "watson": "Oát-xần",
+  "ibm": "ai bi em",
+  "=IBM": "ai bi em",
+  "jeopardy": "Gie-pơ-đi",
+  "ken": "Ken",
+  "jennings": "Gien-ninh",
+  "rutter": "Rắt-tơ",
+  "oreo": "Ô-rê-ô",
+  "trebek": "Tre-béc",
+  "alex": "A-lếch"
+ },
+ "tts": {
+  "pauses": {
+   "0": 0.4,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.4,
+   "5": 0.22,
+   "6": 0.5
+  }
+ },
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "imgs": {}
+}

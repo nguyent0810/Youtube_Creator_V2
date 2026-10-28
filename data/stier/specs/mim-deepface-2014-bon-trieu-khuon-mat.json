@@ -1,0 +1,238 @@
+{
+ "theme": "mim",
+ "title": "Năm 2014, Facebook cho máy xem bốn triệu khuôn mặt: DeepFace gần bằng người ở bài thử LFW",
+ "description": "Năm 2014 (CVPR), Yaniv Taigman, Ming Yang, Marc'Aurelio Ranzato và Lior Wolf (Facebook AI Research, Đại học Tel Aviv) công bố DeepFace, huấn luyện trên khoảng 4 triệu ảnh khuôn mặt của hơn 4.000 người. Theo tóm tắt bài báo: đạt 97,35% trên bộ LFW và giảm hơn 27% mức sai so với kết quả tốt nhất trước đó. Theo Wikipedia, người thật làm cùng bài thử đạt 97,53%.\n\nGiọng đọc tổng hợp; video Pexels/Coverr minh hoạ, không phải cảnh thật của sự kiện.\nBản đầy đủ: https://youtu.be/7daMUBWG6mU",
+ "tags": [
+  "deepface",
+  "facebook",
+  "yaniv taigman",
+  "lfw",
+  "nhận diện khuôn mặt",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "KHUÔN MẶT VÀ AI",
+ "sub": "DEEPFACE · 2014",
+ "acc": [
+  "2014",
+  "bốn",
+  "triệu",
+  "người",
+  "thật"
+ ],
+ "lines": [
+  "Năm 2014, Facebook cho máy xem bốn triệu mặt.",
+  "Nhóm của Yaniv Taigman huấn luyện hệ thống DeepFace trên hơn bốn nghìn người khác nhau.",
+  "Bài thử tên LFW: máy phải nói hai tấm ảnh có cùng một người hay không.",
+  "DeepFace đúng chín mươi bảy phẩy ba lăm phần trăm.",
+  "Theo Wikipedia, người thật làm cùng bài thử đạt chín mươi bảy phẩy năm ba.",
+  "Theo bài báo, mức sai giảm hơn hai mươi bảy phần trăm so với kỷ lục trước đó.",
+  "Máy kém người chưa tới một điểm phần trăm.",
+  "Bốn triệu khuôn mặt đủ để máy gần bằng người trong bài thử ấy."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "items": [
+    {
+     "text": "2014",
+     "at": [
+      0,
+      "Năm"
+     ],
+     "acc": true,
+     "size": 300
+    },
+    {
+     "text": "BỐN TRIỆU MẶT · FACEBOOK",
+     "at": [
+      0,
+      "bốn"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:34268299",
+   "veil": 0.6
+  },
+  {
+   "type": "counter",
+   "at": 1,
+   "to": 4,
+   "suffix": " TRIỆU MẶT",
+   "label": "ẢNH HUẤN LUYỆN · HƠN 4.000 NGƯỜI",
+   "until": [
+    1,
+    "bốn"
+   ]
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "BÀI THỬ LFW",
+   "nodes": [
+    {
+     "text": "ẢNH A",
+     "x": 0.25,
+     "y": 0.2,
+     "at": [
+      2,
+      "hai"
+     ],
+     "w": 300
+    },
+    {
+     "text": "ẢNH B",
+     "x": 0.77,
+     "y": 0.2,
+     "at": [
+      2,
+      "tấm"
+     ],
+     "w": 300
+    },
+    {
+     "text": "CÙNG MỘT NGƯỜI?",
+     "x": 0.5,
+     "y": 0.7,
+     "at": [
+      2,
+      "cùng"
+     ],
+     "c": "acc",
+     "w": 520
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 2,
+     "at": [
+      2,
+      "cùng"
+     ]
+    },
+    {
+     "from": 1,
+     "to": 2,
+     "at": [
+      2,
+      "hay"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 3,
+   "title": "LFW · ĐỘ CHÍNH XÁC",
+   "rows": [
+    {
+     "k": "DEEPFACE",
+     "v": "97,35%",
+     "at": [
+      3,
+      "chín"
+     ]
+    },
+    {
+     "k": "NGƯỜI THẬT (THEO WIKIPEDIA)",
+     "v": "97,53%",
+     "at": [
+      4,
+      "chín"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "SO VỚI KỶ LỤC TRƯỚC",
+   "cards": [
+    {
+     "k": "MỨC SAI",
+     "v": "GIẢM HƠN 27%",
+     "at": [
+      5,
+      "hai"
+     ],
+     "c": "acc"
+    },
+    {
+     "k": "THEO",
+     "v": "BÀI BÁO CVPR",
+     "at": [
+      5,
+      "Theo"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "KÉM CHƯA TỚI 1 ĐIỂM",
+   "sub": "SO VỚI NGƯỜI THẬT · LFW"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "BỐN TRIỆU KHUÔN MẶT",
+     "at": [
+      7,
+      "Bốn"
+     ],
+     "acc": true
+    },
+    {
+     "text": "gần bằng người",
+     "at": [
+      7,
+      "gần"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:6120117",
+   "veil": 0.6
+  }
+ ],
+ "sources": [
+  "https://openaccess.thecvf.com/content_cvpr_2014/html/Taigman_DeepFace_Closing_the_2014_CVPR_paper.html",
+  "https://en.wikipedia.org/wiki/DeepFace"
+ ],
+ "say": {
+  "facebook": "Phây-búc",
+  "deepface": "Đíp-phây",
+  "yaniv": "Gia-nìp",
+  "taigman": "Tây-men",
+  "lfw": "eo ép đúp-liu",
+  "wikipedia": "Uy-ki-pê-đi-a"
+ },
+ "rules": 2,
+ "mix": true,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.4
+  }
+ },
+ "sources_internal": [
+  "https://openaccess.thecvf.com/content_cvpr_2014/html/Taigman_DeepFace_Closing_the_2014_CVPR_paper.html (không mở được: HTTP 403; số 97,35%, ~4 triệu ảnh, >4.000 danh tính, giảm sai >27% lấy qua kết quả tìm kiếm trích tóm tắt)",
+  "https://en.wikipedia.org/wiki/DeepFace (đã mở: 2014, 97,35% ± 0,25% so với 97,53% của người; ~4 triệu ảnh; tác giả Taigman, Yang, Ranzato, Wolf)",
+  "Số 97,53% (người thật) chỉ có từ Wikipedia: cần kiểm trong bài báo gốc trước khi dựng, nếu không khớp thì bỏ dòng 4, ô ledger thứ hai và slam"
+ ],
+ "description_orig": "Năm 2014 (CVPR), Yaniv Taigman, Ming Yang, Marc'Aurelio Ranzato và Lior Wolf (Facebook AI Research, Đại học Tel Aviv) công bố DeepFace, huấn luyện trên khoảng 4 triệu ảnh khuôn mặt của hơn 4.000 người. Theo tóm tắt bài báo: đạt 97,35% trên bộ LFW và giảm hơn 27% mức sai so với kết quả tốt nhất trước đó. Theo Wikipedia, người thật làm cùng bài thử đạt 97,53% (cần kiểm trong bài báo).\n\nGiọng đọc tổng hợp; video Pexels/Coverr minh hoạ, không phải cảnh thật của sự kiện.\nBản đầy đủ: https://youtu.be/7daMUBWG6mU"
+}

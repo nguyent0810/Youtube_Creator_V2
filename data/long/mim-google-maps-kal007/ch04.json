@@ -1,0 +1,260 @@
+{
+ "title": "Một trăm mét cố ý",
+ "lines": [
+  {
+   "t": "Mốc năm 1988 trôi qua.",
+   "p": 0.8
+  },
+  "Vệ tinh GPS thế hệ thứ hai đầu tiên phải tới ngày 14 tháng 2 năm 1989 mới được phóng.",
+  "Và khi tín hiệu tới tay người dân, nó mang sẵn một lớp nhiễu.",
+  "Phía Mỹ gọi lớp nhiễu ấy là \"khả dụng có chọn lọc\", viết tắt SA.",
+  "Trang chính thức về GPS của chính phủ Mỹ mô tả: đó là sự cố ý làm suy giảm tín hiệu GPS công cộng, vì lý do an ninh quốc gia.",
+  "Nhoè cỡ nào?",
+  {
+   "t": "Theo một tài liệu của Nhà Trắng năm 2000, máy dẫn đường trên ô tô khi ấy chỉ biết xe nằm trong phạm vi chừng một trăm mét.",
+   "p": 1.0
+  },
+  "Một trăm mét: nấc thứ hai của cây thước.",
+  "Nghe thì nhỏ, so với sáu trăm cây số.",
+  "Nhưng hãy nghĩ tới hai đường cao tốc chạy song song.",
+  {
+   "t": "Tài liệu ấy viết đúng chuyện này: máy khó biết xe đang ở trên đường nào.",
+   "p": 1.0
+  },
+  "Số đo thật còn rõ hơn.",
+  "Ở một trạm đo tại bang Kentucky, khi còn lớp nhiễu, chín mươi lăm phần trăm số điểm đo rơi trong bán kính bốn mươi lăm mét.",
+  {
+   "t": "Trang GPS của chính phủ Mỹ ví thế này.",
+   "p": 1.0
+  },
+  {
+   "t": "Bạn chỉ biết mình đang ở dưới sân, hay trên khán đài một sân bóng bầu dục.",
+   "diy": 1
+  },
+  "Lớp nhiễu được phát ra từ chính các vệ tinh.",
+  "Người dùng không tự gỡ được.",
+  "Muốn gỡ, phải có một quyết định từ trên cao.",
+  "Một văn bản của Tổng thống Mỹ năm 1996 đã hứa bỏ nó chậm nhất vào năm 2006.",
+  {
+   "t": "Và mỗi năm xem xét lại một lần.",
+   "p": 1.0
+  },
+  "Ai sẽ ký quyết định đó?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "4",
+   "k": "CHƯƠNG BỐN",
+   "title": "MỘT TRĂM MÉT\nCỐ Ý",
+   "sub": "SELECTIVE AVAILABILITY",
+   "bg": "navstar2f",
+   "titleAt": [
+    0,
+    "mốc"
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 1,
+   "img": "navstar2f",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.5,
+   "illus": "ẢNH MINH HỌA · VỆ TINH GPS ĐỜI SAU",
+   "kin": [
+    {
+     "text": "VỆ TINH THẾ HỆ HAI ĐẦU TIÊN",
+     "at": [
+      1,
+      "thế"
+     ],
+     "acc": true
+    },
+    {
+     "text": "phóng 14.02.1989 · sau mốc đã hứa",
+     "at": [
+      1,
+      "phóng"
+     ],
+     "sm": true
+    }
+   ],
+   "label": {
+    "k": "VỆ TINH GPS BLOCK IIF · KHÔNG PHẢI VỆ TINH 1989",
+    "v": "USAF",
+    "at": 1
+   }
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "SA",
+   "sub": "SELECTIVE AVAILABILITY · “KHẢ DỤNG CÓ CHỌN LỌC”"
+  },
+  {
+   "type": "source",
+   "at": 4,
+   "source": "GPS.GOV · SELECTIVE AVAILABILITY",
+   "ref": "TRANG CHÍNH THỨC CỦA CHÍNH PHỦ MỸ VỀ GPS",
+   "snippet": "SA là [[sự cố ý làm suy giảm]] tín hiệu GPS công cộng, vì lý do an ninh quốc gia",
+   "hlAt": [
+    4,
+    "suy"
+   ],
+   "seal": "DỊCH TỪ TRANG GỐC",
+   "sealAt": [
+    4,
+    "an"
+   ]
+  },
+  {
+   "type": "question",
+   "at": 5,
+   "text": "Nhoè cỡ nào?"
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "from": 100,
+   "to": 100,
+   "suffix": " MÉT",
+   "label": "MÁY DẪN ĐƯỜNG Ô TÔ · KHI CÒN SA",
+   "sub": {
+    "text": "BẢN TIN NHÀ TRẮNG 01.05.2000 (OSTP)",
+    "at": [
+     6,
+     "phạm"
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 7,
+   "title": "CÂY THƯỚC SAI SỐ",
+   "srcnote": "KÊNH TỰ KẺ · NGUỒN TỪNG NẤC: ICAO 1993 · NHÀ TRẮNG 2000",
+   "rows": [
+    {
+     "k": "NẤC 1 · 1983",
+     "v": "HƠN 600 KM",
+     "at": 7
+    },
+    {
+     "k": "NẤC 2 · CÒN SA",
+     "v": "≈ 100 M",
+     "at": [
+      7,
+      "thứ"
+     ]
+    }
+   ],
+   "total": {
+    "k": "NẤC 3",
+    "v": "?",
+    "at": 8
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 9,
+   "items": [
+    {
+     "text": "HAI ĐƯỜNG CAO TỐC SONG SONG",
+     "at": 9,
+     "acc": true
+    },
+    {
+     "text": "máy khó biết xe đang ở đường nào",
+     "at": 10,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 11,
+   "from": 45,
+   "to": 45,
+   "suffix": " MÉT",
+   "label": "BÁN KÍNH CHỨA 95% ĐIỂM ĐO · KHI CÒN SA · 01.05.2000",
+   "sub": {
+    "text": "NOAA NGS · TRẠM CORS ERLANGER, KENTUCKY · ĐĂNG TRÊN GPS.GOV",
+    "at": 12
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 13,
+   "items": [
+    {
+     "text": "DƯỚI SÂN HAY TRÊN KHÁN ĐÀI?",
+     "at": [
+      14,
+      "dưới"
+     ],
+     "acc": true
+    },
+    {
+     "text": "ví dụ trên gps.gov · diễn ý",
+     "at": 13,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "photo",
+   "at": 15,
+   "img": "launch",
+   "tone": "color",
+   "move": "out",
+   "veil": 0.55,
+   "illus": "ẢNH MINH HỌA",
+   "kin": [
+    {
+     "text": "NHIỄU PHÁT RA TỪ CHÍNH VỆ TINH",
+     "at": 15,
+     "acc": true
+    },
+    {
+     "text": "người dùng không tự gỡ được",
+     "at": 16,
+     "sm": true
+    }
+   ],
+   "label": {
+    "k": "PHÓNG VỆ TINH GPS IIR-21",
+    "v": "USAF · 2009",
+    "at": 15
+   }
+  },
+  {
+   "type": "timeline",
+   "at": 18,
+   "items": [
+    {
+     "year": "03.1996",
+     "text": "văn bản Tổng thống: *bỏ SA chậm nhất 2006*",
+     "at": 18
+    },
+    {
+     "year": "MỖI NĂM",
+     "text": "*xem xét lại* một lần",
+     "at": 19
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 20,
+   "text": "Ai sẽ ký\nquyết định đó?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 04",
+  "t": "MỘT TRĂM MÉT CỐ Ý"
+ },
+ "bgm": {
+  "mood": "curious",
+  "gain": 0.11
+ }
+}

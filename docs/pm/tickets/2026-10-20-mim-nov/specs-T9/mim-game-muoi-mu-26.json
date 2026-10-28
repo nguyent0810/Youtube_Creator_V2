@@ -1,0 +1,212 @@
+{
+ "theme": "mim",
+ "title": "StarCraft: mỗi bước có khoảng 10 mũ 26 hành động hợp lệ, vì sao máy không thể duyệt hết như Deep Blue",
+ "description": "Theo DeepMind, ở mỗi bước của một ván StarCraft II, trung bình có khoảng 10^26 hành động hợp lệ, vì mỗi hành động là một tổ hợp: chọn đơn vị nào, làm gì, ở đâu trên bản đồ. Một ván có thể dài tới một giờ (blog DeepMind, 24/01/2019).\n\nGiọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/0J3dcjPjcdI (công khai từ 20:00 ngày 03/12).",
+ "tags": [
+  "starcraft",
+  "alphastar",
+  "deepmind",
+  "không gian hành động",
+  "trận đấu người máy",
+  "trí tuệ nhân tạo",
+  "lịch sử máy tính",
+  "mind in the machine"
+ ],
+ "sub": "STARCRAFT II",
+ "acc": [
+  "mười",
+  "mũ",
+  "hai",
+  "mươi",
+  "sáu"
+ ],
+ "kicker": "TRẬN ĐẤU NGƯỜI – MÁY",
+ "lines": [
+  "Mỗi bước, mười mũ hai mươi sáu lựa chọn.",
+  "Đó là số hành động hợp lệ trung bình ở mỗi bước của một ván StarCraft, theo DeepMind.",
+  "Một thế cờ vua trung bình chỉ có vài chục nước hợp lệ.",
+  "Vì mỗi hành động là một tổ hợp: chọn đơn vị nào, làm gì, và làm ở đâu trên bản đồ.",
+  "Nhân ba lựa chọn ấy với nhau, con số phình ra rất nhanh.",
+  "Cỗ máy phải chọn như thế liên tục, trong một ván dài tới một giờ.",
+  "Mười mũ hai mươi sáu: số một, theo sau là hai mươi sáu chữ số không."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "10 MŨ 26",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "lựa chọn mỗi bước · StarCraft",
+     "at": [
+      0,
+      "lựa"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:33315117",
+   "ms": 1,
+   "veil": 0.55
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "HÀNH ĐỘNG HỢP LỆ",
+     "at": 1,
+     "acc": true
+    },
+    {
+     "text": "trung bình mỗi bước · theo DeepMind",
+     "at": [
+      1,
+      "trung"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8128500",
+   "ms": 1,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ",
+   "at": 1
+  },
+  {
+   "type": "chart",
+   "at": 2,
+   "kind": "bars",
+   "title": "HÀNH ĐỘNG HỢP LỆ MỖI BƯỚC",
+   "unit": "KHÔNG VẼ ĐÚNG TỈ LỆ · XẤP XỈ",
+   "bars": [
+    {
+     "label": "CỜ VUA",
+     "v": 1,
+     "text": "VÀI CHỤC",
+     "c": "ref",
+     "at": [
+      2,
+      "vài"
+     ]
+    },
+    {
+     "label": "STARCRAFT",
+     "v": 100,
+     "text": "10 MŨ 26",
+     "c": "up",
+     "at": [
+      2,
+      null,
+      0,
+      0.9
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 3,
+   "title": "MỘT HÀNH ĐỘNG LÀ MỘT TỔ HỢP",
+   "cards": [
+    {
+     "k": "THỨ NHẤT",
+     "v": "ĐƠN VỊ NÀO",
+     "at": [
+      3,
+      "đơn"
+     ]
+    },
+    {
+     "k": "THỨ HAI",
+     "v": "LÀM GÌ",
+     "at": [
+      3,
+      "gì"
+     ]
+    },
+    {
+     "k": "THỨ BA",
+     "v": "Ở ĐÂU",
+     "at": [
+      3,
+      "đâu"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "NHÂN LẠI",
+   "sub": "CON SỐ PHÌNH RA RẤT NHANH"
+  },
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "MỘT GIỜ",
+     "at": 5,
+     "acc": true
+    },
+    {
+     "text": "một ván liên tục phải chọn",
+     "at": [
+      5,
+      "liên"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:8128031",
+   "ms": 1,
+   "veil": 0.55,
+   "at": 5
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "from": 0,
+   "to": 26,
+   "label": "CHỮ SỐ KHÔNG SAU SỐ MỘT",
+   "until": [
+    6,
+    "sáu",
+    1
+   ],
+   "sub": {
+    "text": "THEO DEEPMIND · XẤP XỈ",
+    "at": [
+     6,
+     "số"
+    ]
+   }
+  }
+ ],
+ "sources": [
+  "https://deepmind.google/discover/blog/alphastar-mastering-the-real-time-strategy-game-starcraft-ii/"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.6
+  }
+ },
+ "say": {
+  "starcraft": "Xờ-ta Cờ-ráp",
+  "deepmind": "Đíp-mai"
+ },
+ "imgs": {}
+}

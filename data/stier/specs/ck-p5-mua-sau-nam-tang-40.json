@@ -1,0 +1,229 @@
+{
+ "theme": "ck",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "title": "VN-Index vừa tăng 40% một năm: mua lúc đó, 1 năm sau ra sao?",
+ "description": "Nhìn lại VN-Index 10/2018 → 10/2026: những ngày chỉ số đã tăng hơn 40% so với 12 tháng trước rơi gần hết vào 03/2021 – 01/2022. Mua theo chỉ số ở những ngày ấy, 12 tháng sau khoảng 8/10 trường hợp đang lỗ, mức giữa khoảng −7%; các ngày còn lại mức giữa khoảng +15%. Chỉ là một giai đoạn trong quá khứ, chưa tính cổ tức, phí, thuế; không phải quy luật hay dự báo. Dữ liệu VN-Index, kênh tự tính.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Nội dung do kênh biên soạn; giọng đọc tổng hợp.\n\nBản đầy đủ: https://youtu.be/ULLEUHkYz9g",
+ "tags": [
+  "vn-index",
+  "fomo chứng khoán",
+  "mua đuổi",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "bạn",
+  "bốn",
+  "tám",
+  "lỗ",
+  "quá"
+ ],
+ "kicker": "TÂM LÝ TIỀN BẠC",
+ "sub": "FOMO",
+ "lines": [
+  "Bạn mua đúng lúc VN-Index vừa tăng hơn bốn mươi phần trăm trong một năm. Một năm sau, lãi hay lỗ?",
+  "Nhìn lại dữ liệu từ năm hai nghìn không trăm mười tám.",
+  "Những ngày như vậy gần như chỉ có trong khoảng một năm, từ tháng ba năm hai nghìn không trăm hai mươi mốt.",
+  "Mua theo chỉ số ở những ngày ấy, một năm sau, khoảng tám trên mười lần đang lỗ.",
+  "Mức giữa là giảm khoảng bảy phần trăm.",
+  "Những ngày khác, mức giữa là tăng khoảng mười lăm phần trăm.",
+  "Đây chỉ là một giai đoạn trong quá khứ, không phải dự báo.",
+  "Lần tới VN-Index tăng hơn bốn mươi phần trăm một năm, bạn đã biết lần trước ra sao."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "+40% TRONG 1 NĂM",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "BẠN MUA VÀO LÚC NÀY?",
+     "at": [
+      0,
+      "Một"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:13929693",
+   "ms": 3,
+   "veil": 0.58
+  },
+  {
+   "type": "chart",
+   "at": 1,
+   "kind": "line",
+   "title": "VN-INDEX",
+   "unit": "ĐIỂM",
+   "min": 600,
+   "max": 1600,
+   "points": [
+    {
+     "x": 0,
+     "v": 659.21,
+     "at": 1,
+     "tag": "659",
+     "pos": "t"
+    },
+    {
+     "x": 11.6,
+     "v": 1181.73,
+     "at": [
+      2,
+      "tháng"
+     ],
+     "tag": "1.182",
+     "pos": "l"
+    },
+    {
+     "x": 21.4,
+     "v": 1528.57,
+     "at": [
+      2,
+      "mốt"
+     ],
+     "tag": "1.529",
+     "pos": "t"
+    },
+    {
+     "x": 31.7,
+     "v": 911.9,
+     "at": 3,
+     "tag": "912",
+     "pos": "b",
+     "c": "down"
+    }
+   ],
+   "ticks": [
+    {
+     "x": 0,
+     "label": "3/2020"
+    },
+    {
+     "x": 11.6,
+     "label": "3/2021"
+    },
+    {
+     "x": 21.4,
+     "label": "1/2022"
+    },
+    {
+     "x": 31.7,
+     "label": "11/2022"
+    }
+   ],
+   "badge": {
+    "text": "VÙNG ĐÃ TĂNG > 40%/NĂM",
+    "at": [
+     2,
+     "năm"
+    ],
+    "c": "up"
+   },
+   "note": "DỮ LIỆU: VN-INDEX 2018–2026 · KÊNH TỰ TÍNH"
+  },
+  {
+   "type": "kinetic",
+   "at": [
+    3,
+    "tám"
+   ],
+   "items": [
+    {
+     "text": "79%",
+     "at": [
+      3,
+      "tám"
+     ],
+     "acc": true
+    },
+    {
+     "text": "ĐANG LỖ SAU 12 THÁNG",
+     "at": [
+      3,
+      "lỗ"
+     ],
+     "sm": true
+    },
+    {
+     "text": "DỮ LIỆU: VN-INDEX 2018–2026 · KÊNH TỰ TÍNH",
+     "at": [
+      3,
+      "lỗ"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 4,
+   "title": "SAU 12 THÁNG · MỨC GIỮA",
+   "cards": [
+    {
+     "k": "MUA SAU NĂM TĂNG > 40%",
+     "v": "−7%",
+     "at": 4,
+     "c": "acc"
+    },
+    {
+     "k": "CÁC NGÀY KHÁC",
+     "v": "+15%",
+     "at": 5
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 6,
+   "text": "QUÁ KHỨ ≠ DỰ BÁO",
+   "sub": "MỘT GIAI ĐOẠN 2021–2022 · CHƯA TÍNH CỔ TỨC, PHÍ"
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "+40% MỘT NĂM",
+     "at": 7,
+     "sm": true
+    },
+    {
+     "text": "LẦN TRƯỚC: −7% SAU 1 NĂM",
+     "at": [
+      7,
+      "lần"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7703941",
+   "ms": 2,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  }
+ ],
+ "sources": [
+  "https://youtu.be/ULLEUHkYz9g"
+ ],
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.4
+  }
+ },
+ "say": {},
+ "imgs": {},
+ "short_type": "S"
+}

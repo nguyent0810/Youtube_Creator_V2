@@ -1,0 +1,231 @@
+{
+ "theme": "ck",
+ "kicker": "PHIÊN MỞ CỬA",
+ "sub": "KHỚP LỆNH",
+ "title": "Đặt mua giá cao mà chỉ trả giá thấp: phiên mở cửa 9:00–9:15 khớp lệnh thế nào?",
+ "description": "Từ 9:00 tới 9:15 (phiên khớp lệnh định kỳ mở cửa, ATO) chưa lệnh nào được khớp: hệ thống chỉ gom lệnh, rồi chọn một mức giá duy nhất khớp được nhiều cổ phiếu nhất, và mọi lệnh khớp đều khớp ở giá ấy. Sổ lệnh VÍ DỤ GIẢ ĐỊNH, tham chiếu 20.000 đồng: mua 20.100 × 300 · 20.000 × 500 · 19.900 × 700; bán 19.900 × 400 · 20.000 × 600 · 20.100 × 800. Cộng dồn: ở 19.900 khớp được 400, ở 20.000 khớp 800, ở 20.100 khớp 300 → giá mở cửa 20.000. Người đặt mua 20.100 cũng chỉ trả 20.000: giá đặt mua là mức cao nhất bạn chịu trả.\n\nNguyên tắc khớp lệnh định kỳ: Quy chế Niêm yết và giao dịch chứng khoán niêm yết (VNX, QĐ 22/QĐ-HĐTV ngày 18/04/2025); quy định của sàn TP.HCM theo thời điểm làm video (10/2026) và có thể thay đổi.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là ví dụ giả định, tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (12 phút): https://youtu.be/S_oMZt36W60",
+ "tags": [
+  "khớp lệnh",
+  "phiên mở cửa",
+  "lệnh ATO",
+  "chứng khoán cho người mới",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "cao",
+  "thấp",
+  "tám",
+  "chỉ",
+  "trả"
+ ],
+ "lines": [
+  "Đặt mua giá cao, lại trả giá thấp.",
+  "Mười lăm phút đầu phiên, chưa lệnh nào được khớp.",
+  "Hệ thống gom lệnh, rồi chọn một giá khớp được nhiều cổ phiếu nhất.",
+  "Ví dụ giả định: ở mười chín nghìn chín trăm, khớp bốn trăm.",
+  "Ở hai mươi nghìn một trăm, ba trăm. Ở hai mươi nghìn, tám trăm.",
+  "Giá mở cửa là hai mươi nghìn.",
+  "Người đặt mua hai mươi nghìn một trăm cũng chỉ trả hai mươi nghìn.",
+  "Giá bạn đặt là mức cao nhất bạn chịu trả, không phải giá bạn trả."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "ĐẶT CAO, TRẢ THẤP",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "phiên mở cửa · 9:00 → 9:15",
+     "at": [
+      0,
+      "lại"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7597961",
+   "ms": 2,
+   "veil": 0.58
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "PHIÊN MỞ CỬA",
+   "nodes": [
+    {
+     "text": "9:00 · CHỈ GOM LỆNH",
+     "x": 0.5,
+     "y": 0.24,
+     "at": [
+      1,
+      "Mười"
+     ],
+     "w": 760
+    },
+    {
+     "text": "9:15 · CHỌN MỘT GIÁ",
+     "x": 0.5,
+     "y": 0.52,
+     "at": [
+      2,
+      "rồi"
+     ],
+     "w": 760
+    },
+    {
+     "text": "KHỚP NHIỀU NHẤT",
+     "x": 0.5,
+     "y": 0.8,
+     "at": [
+      2,
+      "nhiều"
+     ],
+     "shape": "circle",
+     "c": "acc",
+     "w": 700
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      2,
+      "rồi"
+     ]
+    },
+    {
+     "from": 1,
+     "to": 2,
+     "at": [
+      2,
+      "khớp"
+     ]
+    }
+   ],
+   "note": "QUY ĐỊNH SÀN TP.HCM TẠI 10/2026"
+  },
+  {
+   "type": "chart",
+   "at": 3,
+   "kind": "bars",
+   "title": "NẾU CHỌN GIÁ… KHỚP ĐƯỢC",
+   "unit": "VÍ DỤ GIẢ ĐỊNH · SỐ CỔ PHIẾU KHỚP",
+   "bars": [
+    {
+     "label": "19.900",
+     "v": 400,
+     "text": "400",
+     "c": "ref",
+     "at": [
+      3,
+      "khớp"
+     ]
+    },
+    {
+     "label": "20.000",
+     "v": 800,
+     "text": "800",
+     "c": "acc",
+     "at": [
+      4,
+      "tám"
+     ]
+    },
+    {
+     "label": "20.100",
+     "v": 300,
+     "text": "300",
+     "c": "ref",
+     "at": [
+      4,
+      "ba"
+     ]
+    }
+   ],
+   "note": "SỔ LỆNH GIẢ ĐỊNH · THAM CHIẾU 20.000 Đ",
+   "badge": {
+    "text": "GIÁ MỞ CỬA = 20.000",
+    "at": 5
+   }
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "AI KHỚP CŨNG CÙNG MỘT GIÁ",
+   "cards": [
+    {
+     "k": "GIÁ MỞ CỬA",
+     "v": "20.000",
+     "at": 6
+    },
+    {
+     "k": "ĐẶT MUA",
+     "v": "20.100",
+     "at": [
+      6,
+      "đặt"
+     ]
+    },
+    {
+     "k": "VẪN CHỈ TRẢ",
+     "v": "20.000",
+     "at": [
+      6,
+      "trả"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "items": [
+    {
+     "text": "GIÁ ĐẶT ≠ GIÁ TRẢ",
+     "at": 7,
+     "acc": true
+    },
+    {
+     "text": "giá đặt mua = mức cao nhất bạn chịu trả",
+     "at": [
+      7,
+      "cao"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7710700",
+   "ms": 1,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  }
+ ],
+ "sources": [
+  "https://youtu.be/S_oMZt36W60",
+  "https://luatvietnam.vn/chung-khoan/quyet-dinh-22-qd-hdtv-2025-ban-hanh-quy-che-niem-yet-va-giao-dich-chung-khoan-399805-d1.html"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.6
+  }
+ },
+ "say": {},
+ "imgs": {}
+}

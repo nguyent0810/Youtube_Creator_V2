@@ -1,0 +1,221 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-dv-chen-nuoc-duc",
+ "format": "do-vui",
+ "hook_type": "do-vui",
+ "open_shot": "ly-nuoc",
+ "voice": "Thục Đoan",
+ "music": "frost_waltz.mp3",
+ "music_gain": 0.18,
+ "gap": 0.1,
+ "series": "Đố vui Phật pháp #8",
+ "title": "Nước đang sôi giống tâm đang thế nào?",
+ "kicker": "ĐỐ VUI PHẬT PHÁP #8",
+ "sub": "KINH TƯƠNG ƯNG 46.55",
+ "acc": [
+  "sôi",
+  "giận",
+  "nước"
+ ],
+ "lines": [
+  "Nước đang sôi giống tâm đang thế nào?",
+  "A, ham muốn. B, giận dữ. C, hoài nghi.",
+  "Chọn một chữ trước đã.",
+  "Đáp án bất ngờ không? Là B, giận dữ.",
+  "Kinh Tương Ưng, diễn ý: năm kiểu nước làm ta không soi rõ mặt.",
+  "Nước pha màu là ham muốn. Nước sôi là giận dữ.",
+  "Nhưng nước bùn trong tối, mới là hoài nghi.",
+  "Hôm nay, khi nóng lên, đợi nước nguội rồi hãy nói.",
+  "Chén nước của bạn đang thế nào? Comment A, B hay C."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:6956379",
+   "items": [
+    {
+     "text": "NƯỚC SÔI = TÂM GÌ?",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "đố vui Phật pháp #8",
+     "at": [
+      0,
+      "tâm"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "hf_list_build",
+   "at": 1,
+   "title": "BẠN CHỌN?",
+   "items": [
+    {
+     "key": "A",
+     "text": "HAM MUỐN",
+     "at": [
+      1,
+      "ham"
+     ]
+    },
+    {
+     "key": "B",
+     "text": "GIẬN DỮ",
+     "at": [
+      1,
+      "giận"
+     ]
+    },
+    {
+     "key": "C",
+     "text": "HOÀI NGHI",
+     "at": [
+      1,
+      "hoài"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "at": 2,
+   "text": "A · B hay C?",
+   "clip": "pexels:7311101",
+   "veil": 0.65
+  },
+  {
+   "type": "hf_stamp",
+   "at": 3,
+   "kick": "",
+   "big": "B",
+   "stamps": [
+    {
+     "text": "GIẬN DỮ",
+     "at": [
+      3,
+      "giận"
+     ],
+     "x": 200,
+     "y": 880,
+     "rot": -6
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 4,
+   "title": "SN 46.55 (diễn ý)",
+   "nodes": [
+    {
+     "text": "5 KIỂU NƯỚC ĐỤC",
+     "x": 0.5,
+     "y": 0.28,
+     "at": [
+      4,
+      "năm"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "KHÔNG SOI RÕ MẶT",
+     "x": 0.5,
+     "y": 0.62,
+     "at": [
+      4,
+      "soi"
+     ],
+     "shape": "circle",
+     "c": "acc"
+    }
+   ],
+   "arrows": [],
+   "note": "SN 46.55 · SUTTACENTRAL"
+  },
+  {
+   "type": "cards3d",
+   "at": 5,
+   "title": "NƯỚC ĐỤC",
+   "cards": [
+    {
+     "k": "PHA MÀU",
+     "v": "HAM MUỐN",
+     "at": [
+      5,
+      "màu"
+     ]
+    },
+    {
+     "k": "SÔI",
+     "v": "GIẬN DỮ",
+     "at": [
+      5,
+      "sôi"
+     ]
+    },
+    {
+     "k": "BÙN TỐI",
+     "v": "HOÀI NGHI",
+     "at": [
+      6,
+      "bùn"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 7,
+   "to": 1,
+   "suffix": " LẦN ĐỢI NGUỘI",
+   "label": "RỒI HÃY NÓI",
+   "until": [
+    7,
+    "nguội"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "veil": 0.4,
+   "clip": "pexels:5050119",
+   "items": [
+    {
+     "text": "CHÉN NƯỚC CỦA BẠN?",
+     "at": [
+      8,
+      "chén"
+     ],
+     "acc": true
+    },
+    {
+     "text": "comment A, B hay C",
+     "at": [
+      8,
+      "comment"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/sn46.55/en/sujato"
+ ],
+ "description": "Nước đang sôi giống tâm đang thế nào?\n\nNguồn: https://suttacentral.net/sn46.55/en/sujato"
+}

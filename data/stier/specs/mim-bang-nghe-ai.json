@@ -1,0 +1,167 @@
+{
+ "theme": "mim",
+ "kicker": "BẢNG TRA",
+ "sub": "AI VÀ NGHỀ NGHIỆP",
+ "title": "Nghề của bạn có bị AI thay thế không? Bảng ILO: nhóm nghề nào tiếp xúc AI nhiều nhất",
+ "description": "Bảng tra theo nhóm nghề: Tổ chức Lao động Quốc tế (ILO) chấm mức tiếp xúc với AI tạo sinh cho 427 nghề (mã 4 chữ số của ISCO-08). Cột \"Tiếp xúc\" là số nghề trong nhóm được xếp vào một trong bốn mức tiếp xúc; cột \"Cao nhất\" là số nghề ở mức cao nhất. Tiếp xúc không có nghĩa là bị thay thế: ILO nhấn mạnh phần lớn nghề vẫn cần con người, nên việc làm được biến đổi mới là kết quả dễ xảy ra hơn.\n\nToàn cầu, khoảng một phần tư việc làm nằm trong nghề có tiếp xúc, và 3,3% ở mức cao nhất (ILO 2025). Con số trên bảng là SỐ NGHỀ, không phải số người. Nhóm \"Tay chân\" gộp các nhóm 6–9 của ISCO-08 (nông nghiệp, thợ thủ công, vận hành máy, lao động giản đơn).\n\nNguồn: ILO và NASK, \"Generative AI and Jobs: A Refined Global Index of Occupational Exposure\" (Working Paper 140, 5/2025), Bảng A1.\n\nNội dung do kênh biên soạn. Giọng đọc tổng hợp.",
+ "tags": [
+  "AI",
+  "nghề nghiệp",
+  "ILO",
+  "AI thay thế việc làm",
+  "bảng tra",
+  "trí tuệ nhân tạo",
+  "tương lai việc làm",
+  "mind in the machine"
+ ],
+ "acc": [
+  "văn",
+  "phòng",
+  "hai",
+  "mươi",
+  "tám",
+  "chín",
+  "tay",
+  "chân",
+  "dừng",
+  "hình"
+ ],
+ "lines": [
+  "Nghề văn phòng chạm AI nhiều nhất.",
+  "Hai mươi tám trên hai mươi chín nghề.",
+  "Nghề tay chân thì gần như không.",
+  "Tiếp xúc, không phải bị thay.",
+  "Dừng hình tìm dòng của bạn nhé."
+ ],
+ "scenes": [
+  {
+   "type": "table",
+   "at": 0,
+   "title": "AI CHẠM NGHỀ BẠN?",
+   "rowHead": "NHÓM NGHỀ ↓",
+   "colHead": "SỐ NGHỀ · TOP = MỨC CAO NHẤT →",
+   "cols": [
+    "TỔNG",
+    "CHẠM",
+    "TOP"
+   ],
+   "rows": [
+    {
+     "k": "VĂN PHÒNG",
+     "v": [
+      29,
+      28,
+      8
+     ]
+    },
+    {
+     "k": "CHUYÊN GIA",
+     "v": [
+      92,
+      39,
+      2
+     ]
+    },
+    {
+     "k": "KỸ THUẬT",
+     "v": [
+      82,
+      28,
+      2
+     ]
+    },
+    {
+     "k": "QUẢN LÝ",
+     "v": [
+      30,
+      6,
+      0
+     ]
+    },
+    {
+     "k": "BÁN HÀNG",
+     "v": [
+      39,
+      7,
+      1
+     ]
+    },
+    {
+     "k": "TAY CHÂN",
+     "v": [
+      155,
+      4,
+      0
+     ]
+    }
+   ],
+   "hl": [
+    {
+     "r": 0,
+     "at": [
+      0,
+      "văn"
+     ]
+    },
+    {
+     "r": 0,
+     "c": 1,
+     "at": [
+      1,
+      "hai"
+     ]
+    },
+    {
+     "r": 5,
+     "at": [
+      2,
+      "tay"
+     ]
+    },
+    {
+     "r": 5,
+     "c": 1,
+     "at": [
+      2,
+      "gần"
+     ],
+     "until": [
+      4,
+      "dừng"
+     ]
+    }
+   ],
+   "foot": "DỪNG HÌNH ĐỂ TRA · LƯU LẠI",
+   "note": "CHẠM = TIẾP XÚC AI, KHÔNG PHẢI BỊ THAY"
+  }
+ ],
+ "sources": [
+  "https://webapps.ilo.org/static/english/intserv/working-papers/wp140/index.html"
+ ],
+ "sources_internal": [
+  "ILO WP140 (5/2025) mở được qua webapps.ilo.org (curl, 22/10/2026): Bảng A1 phân loại 427 nghề 4 chữ số theo gradient; đếm theo nhóm ISCO 1 chữ số bằng script, tổng khớp: 13 nghề gradient 4, 112 nghề tiếp xúc (G1-4). Tổng nghề theo nhóm (29/92/82/30/39/155) là số hàng trong Bảng A1, lệch 1-2 so với Bảng 1 (số nghề có mô tả nhiệm vụ). Các con số toàn cầu: 24% / 3,3% / 11% LIC vs 34% HIC trích abstract. ilo.org PDF trả 403 cho bot."
+ ],
+ "mix": false,
+ "rules": 2,
+ "min_words": 25,
+ "tail": 3.4,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.25,
+   "1": 0.2,
+   "2": 0.2,
+   "3": 0.35
+  }
+ },
+ "say": {
+  "=AI": "ây ai"
+ },
+ "imgs": {},
+ "profile": "bang-tra",
+ "look": "mim-heat",
+ "cls": "btl btl-mim-heat",
+ "extra_css": "bang-tra-looks.css\" /><script src=\"assets/engine/bang-tra-looks.js\"></script><link rel=\"x-end\" href=\"x"
+}

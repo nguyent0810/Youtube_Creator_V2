@@ -1,0 +1,198 @@
+{
+ "theme": "mim",
+ "title": "Trong lúc trò chuyện, chatbot không học gì cả: nó chỉ đọc lại cả cuộc trò chuyện",
+ "description": "Mô hình ngôn ngữ được dạy xong từ trước, thành một khối số cố định gọi là trọng số; lúc bạn trò chuyện, khối số ấy không đổi. Để nhớ điều đã nói, nó đọc lại toàn bộ cuộc trò chuyện mỗi lần trả lời; cuộc trò chuyện mới thì bắt đầu từ tờ giấy trống, và cuộc quá dài có thể bị cắt hoặc tóm tắt. Việc cuộc trò chuyện có được dùng để huấn luyện phiên bản sau hay không là chuyện khác, tuỳ cài đặt và chính sách của từng hãng. Cài đặt và tên nút có thể khác theo gói, vùng và phiên bản; thông tin theo trang của hãng, đọc ngày 09/10/2026. Giọng đọc tổng hợp; video minh hoạ lấy từ Pexels, không phải cảnh thật của sự kiện.\n\nBản đầy đủ: https://youtu.be/ejsjefnJQbI (công khai từ 20:00 ngày 23/11).",
+ "tags": [
+  "chatgpt có học từ bạn không",
+  "mô hình ngôn ngữ",
+  "trọng số",
+  "quyền riêng tư ai",
+  "chatbot",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "sub": "CƠ CHẾ",
+ "acc": [
+  "học",
+  "đọc",
+  "trống",
+  "giấy"
+ ],
+ "kicker": "AI QUANH TA",
+ "lines": [
+  "Trong lúc trò chuyện, chatbot không học gì cả.",
+  "Khối số làm nên mô hình, gọi là trọng số, đã được dạy xong từ trước và đứng yên.",
+  "Mỗi lần trả lời, nó đọc lại toàn bộ cuộc trò chuyện từ đầu, như đọc một tờ giấy.",
+  "Mở cuộc trò chuyện mới, tờ giấy ấy trống trơn.",
+  "Tờ giấy có giới hạn độ dài: cuộc trò chuyện quá dài thì phần đầu có thể bị cắt hoặc tóm tắt lại.",
+  "Vì thế đôi khi nó quên điều bạn dặn từ cả trăm tin nhắn trước.",
+  "Còn chuyện tin nhắn có được dùng để dạy phiên bản sau hay không, là một câu hỏi khác.",
+  "Trong cuộc trò chuyện, máy không học. Nó chỉ đọc."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "KHÔNG HỌC GÌ CẢ",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "trong lúc trò chuyện",
+     "at": [
+      0,
+      "trò"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:7341928",
+   "ms": 3,
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  },
+  {
+   "type": "board",
+   "at": 1,
+   "title": "Trọng số",
+   "nodes": [
+    {
+     "text": "TRỌNG SỐ",
+     "x": 0.5,
+     "y": 0.3,
+     "at": [
+      1,
+      "trọng"
+     ],
+     "shape": "box"
+    },
+    {
+     "text": "DẠY XONG · ĐỨNG YÊN",
+     "x": 0.5,
+     "y": 0.68,
+     "at": [
+      1,
+      "đứng"
+     ],
+     "c": "acc",
+     "shape": "circle",
+     "w": 760
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      1,
+      "xong"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 2,
+   "items": [
+    {
+     "text": "ĐỌC LẠI TỪ ĐẦU",
+     "at": 2,
+     "acc": true
+    },
+    {
+     "text": "mỗi lần trả lời",
+     "at": [
+      2,
+      "Mỗi"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:36864123",
+   "veil": 0.6
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "TỜ GIẤY TRỐNG",
+   "sub": "CUỘC TRÒ CHUYỆN MỚI"
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "CUỘC TRÒ CHUYỆN QUÁ DÀI",
+   "rows": [
+    {
+     "k": "PHẦN ĐẦU",
+     "v": "CẮT / TÓM TẮT",
+     "at": [
+      4,
+      "phần"
+     ]
+    },
+    {
+     "k": "ĐIỀU BẠN DẶN",
+     "v": "CÓ THỂ MẤT",
+     "at": [
+      5,
+      "quên"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards3d",
+   "at": 6,
+   "title": "HAI CÂU HỎI KHÁC NHAU",
+   "cards": [
+    {
+     "k": "TRONG CUỘC TRÒ CHUYỆN",
+     "v": "MÁY ĐỌC LẠI",
+     "at": [
+      6,
+      "Còn"
+     ]
+    },
+    {
+     "k": "DẠY PHIÊN BẢN SAU",
+     "v": "CHUYỆN KHÁC",
+     "at": [
+      6,
+      "dạy"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "MÁY CHỈ ĐỌC",
+   "sub": "TRONG CUỘC TRÒ CHUYỆN"
+  }
+ ],
+ "sources": [
+  "https://openai.com/policies/how-your-data-is-used-to-improve-model-performance/"
+ ],
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.6
+  }
+ },
+ "say": {
+  "chatbot": "chát bót"
+ },
+ "imgs": {}
+}

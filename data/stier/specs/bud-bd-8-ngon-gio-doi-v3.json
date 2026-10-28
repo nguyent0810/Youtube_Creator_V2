@@ -1,0 +1,178 @@
+{
+ "theme": "bud",
+ "mix": true,
+ "music_duck": 3,
+ "sfx_gain": 0.3,
+ "v2": true,
+ "loop": true,
+ "tags": [
+  "phật giáo",
+  "lời phật dạy",
+  "chữa lành"
+ ],
+ "based_on": "bud-bd-8-ngon-gio-doi",
+ "format": "ba-dieu",
+ "hook_type": "con-so",
+ "open_shot": "co-gio",
+ "voice": "Ngọc Trân",
+ "music": "clean_soul.mp3",
+ "music_gain": 0.18,
+ "gap": 0.15,
+ "title": "8 ngọn gió đời, bạn đang gặp ngọn số mấy?",
+ "kicker": "8 NGỌN GIÓ",
+ "sub": "KINH TĂNG CHI 8.6",
+ "acc": [
+  "gió",
+  "tám",
+  "khen"
+ ],
+ "lines": [
+  "Tám ngọn gió đời, bạn đang gặp ngọn số mấy?",
+  "Không ai tránh được. Kể cả người giỏi nhất.",
+  "Một, được. Hai, mất. Ba, có danh. Bốn, không danh.",
+  "Năm, khen. Sáu, chê. Bảy, sướng. Tám, khổ.",
+  "Nhưng thứ làm ta lay, không phải gió.",
+  "Kinh Tăng Chi, diễn ý: người hiểu thấy chúng vô thường, nên không lay.",
+  "Hôm nay ai khen hay chê, thầm nói: chỉ là gió.",
+  "Bạn đang gặp ngọn gió số mấy? Comment một con số."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "veil": 0.35,
+   "clip": "pexels:30639171",
+   "items": [
+    {
+     "text": "NGỌN GIÓ SỐ MẤY?",
+     "at": 0.0
+    },
+    {
+     "text": "8 ngọn gió đời",
+     "at": [
+      0,
+      "tám"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 1,
+   "text": "KHÔNG AI\nTRÁNH ĐƯỢC",
+   "fx": "zoom"
+  },
+  {
+   "type": "hf_list_build",
+   "at": 2,
+   "title": "8 NGỌN GIÓ",
+   "items": [
+    {
+     "key": "1-2",
+     "text": "ĐƯỢC · MẤT",
+     "at": [
+      2,
+      "được."
+     ]
+    },
+    {
+     "key": "3-4",
+     "text": "DANH · KHÔNG DANH",
+     "at": [
+      2,
+      "danh."
+     ]
+    },
+    {
+     "key": "5-6",
+     "text": "KHEN · CHÊ",
+     "at": [
+      3,
+      "khen."
+     ]
+    },
+    {
+     "key": "7-8",
+     "text": "SƯỚNG · KHỔ",
+     "at": [
+      3,
+      "sướng."
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 4,
+   "veil": 0.4,
+   "clip": "pexels:19280141",
+   "items": [
+    {
+     "text": "KHÔNG PHẢI GIÓ",
+     "at": [
+      4,
+      "không"
+     ]
+    },
+    {
+     "text": "thứ làm ta lay",
+     "at": [
+      4,
+      "lay,"
+     ],
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "source",
+   "at": 5,
+   "source": "KINH TĂNG CHI 8.6",
+   "ref": "Tám pháp thế gian",
+   "snippet": "Người hiểu thấy chúng vô thường, [[nên không lay]].",
+   "hlAt": [
+    5,
+    "lay."
+   ]
+  },
+  {
+   "type": "counter",
+   "at": 6,
+   "to": 1,
+   "suffix": " CÂU THẦM",
+   "label": "KHEN HAY CHÊ: CHỈ LÀ GIÓ",
+   "until": [
+    6,
+    "gió."
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 7,
+   "veil": 0.4,
+   "clip": "pexels:38162924",
+   "items": [
+    {
+     "text": "GIÓ SỐ MẤY?",
+     "at": [
+      7,
+      "bạn"
+     ]
+    },
+    {
+     "text": "comment một con số",
+     "at": [
+      7,
+      "comment"
+     ],
+     "sm": true
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "https://suttacentral.net/an8.6/en/sujato"
+ ],
+ "description": "8 ngọn gió đời, bạn đang gặp ngọn số mấy?\n\nNguồn: https://suttacentral.net/an8.6/en/sujato"
+}

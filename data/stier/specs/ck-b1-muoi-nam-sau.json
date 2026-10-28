@@ -1,0 +1,171 @@
+{
+ "theme": "ck",
+ "kicker": "QUYẾT ĐỊNH LỚN",
+ "sub": "MUA HAY THUÊ",
+ "mix": true,
+ "rules": 2,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "say": {},
+ "imgs": {},
+ "title": "Mười năm sau, căn hộ 4 tỷ của người mua còn lại bao nhiêu sau khi trừ nợ và thuế? (ví dụ giả định)",
+ "description": "VÍ DỤ GIẢ ĐỊNH (kênh tự tính): căn 2,5 tỷ, vay 1,5 tỷ gốc đều 25 năm; nhà thuê căn y hệt, để dành đủ phần chênh và gửi tiết kiệm 6,8%. Sau 10 năm: nếu giá nhà tăng 5%/năm, căn hộ ≈4,07 tỷ; trừ thuế bán 2% (≈0,08 tỷ) và dư nợ 0,9 tỷ, nhà mua còn ≈3,09 tỷ. Sổ tiết kiệm của nhà thuê ≈4,05 tỷ. Giá tăng 3%/năm: nhà mua còn ≈2,39 tỷ; giá đứng yên: ≈1,55 tỷ. Giá trị căn nhà khác phần thật sự thuộc về người mua. Không phải dự báo giá nhà.\n\nNội dung giáo dục, không phải tư vấn đầu tư. Kênh không khuyến nghị mua, bán hay giữ bất kỳ tài sản nào và không dự báo thị trường. Số liệu là quá khứ (hoặc ví dụ giả định), tính tới thời điểm làm video (10/2026). Nội dung do kênh biên soạn từ nguồn công khai; giọng đọc tổng hợp.\n\nBản đầy đủ (14 phút): https://youtu.be/pXKfIo_nyVM",
+ "tags": [
+  "mua hay thuê nhà",
+  "giá nhà",
+  "vay mua nhà",
+  "tài sản ròng",
+  "tài chính cá nhân",
+  "biểu đồ biết nói"
+ ],
+ "acc": [
+  "bốn",
+  "chín",
+  "ba",
+  "mốt",
+  "phần"
+ ],
+ "lines": [
+  "Mười năm sau, nhà nào có nhiều hơn?",
+  "Ví dụ giả định: căn hai tỷ rưỡi, giá tăng năm phần trăm mỗi năm.",
+  "Mười năm sau, căn hộ của nhà mua đáng khoảng bốn tỷ.",
+  "Nhà thuê để dành đủ phần chênh, sổ tiết kiệm cũng khoảng bốn tỷ.",
+  "Nhưng căn hộ còn nợ ngân hàng chín trăm triệu, bán đi còn nộp thuế hai phần trăm.",
+  "Trừ hết, nhà mua còn khoảng ba tỷ mốt.",
+  "Nếu giá đứng yên suốt mười năm, chỉ còn khoảng một tỷ rưỡi.",
+  "Giá căn nhà chưa phải phần của bạn, cho tới khi trừ xong nợ và thuế."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "items": [
+    {
+     "text": "10 NĂM SAU",
+     "at": 0.0,
+     "acc": true
+    },
+    {
+     "text": "nhà mua hay nhà thuê có nhiều hơn",
+     "at": [
+      0,
+      "nhà"
+     ],
+     "sm": true
+    },
+    {
+     "text": "VÍ DỤ GIẢ ĐỊNH · GIÁ NHÀ +5%/NĂM",
+     "at": [
+      1,
+      "căn"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:35259457",
+   "veil": 0.6
+  },
+  {
+   "type": "cards3d",
+   "at": 2,
+   "title": "SAU 10 NĂM · TRÔNG NGANG NHAU",
+   "cards": [
+    {
+     "k": "NHÀ MUA · CĂN HỘ",
+     "v": "≈4,07 TỶ",
+     "at": [
+      2,
+      "bốn"
+     ]
+    },
+    {
+     "k": "NHÀ THUÊ · TIẾT KIỆM",
+     "v": "≈4,05 TỶ",
+     "at": [
+      3,
+      "bốn"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 4,
+   "title": "NHÀ MUA · TRỪ HẾT",
+   "rows": [
+    {
+     "k": "CĂN HỘ (+5%/NĂM)",
+     "v": "4,07 TỶ",
+     "at": 4
+    },
+    {
+     "k": "DƯ NỢ NGÂN HÀNG",
+     "v": "− 0,90 TỶ",
+     "at": [
+      4,
+      "chín"
+     ]
+    },
+    {
+     "k": "THUẾ BÁN 2%",
+     "v": "− 0,08 TỶ",
+     "at": [
+      4,
+      "thuế"
+     ]
+    }
+   ],
+   "total": {
+    "k": "CÒN LẠI",
+    "v": "≈3,09 TỶ",
+    "at": [
+     5,
+     "ba"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "GIÁ ĐỨNG YÊN 10 NĂM",
+     "at": 6,
+     "sm": true
+    },
+    {
+     "text": "CÒN ≈1,55 TỶ",
+     "at": [
+      6,
+      "một"
+     ],
+     "acc": true
+    }
+   ],
+   "clip": "pexels:7986204",
+   "win": "top",
+   "winLabel": "VIDEO MINH HOẠ"
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "GIÁ CĂN NHÀ\n≠ PHẦN CỦA BẠN",
+   "sub": "TRỪ XONG NỢ VÀ THUẾ MỚI LÀ PHẦN CÒN LẠI"
+  }
+ ],
+ "sources": [
+  "https://youtu.be/pXKfIo_nyVM"
+ ],
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.22,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.6
+  }
+ }
+}

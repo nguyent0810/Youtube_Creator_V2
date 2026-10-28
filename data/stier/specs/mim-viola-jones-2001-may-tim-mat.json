@@ -1,0 +1,242 @@
+{
+ "theme": "mim",
+ "title": "Năm 2001, hai nhà nghiên cứu cho máy tìm mặt người chạy mười lăm hình mỗi giây",
+ "description": "Năm 2001, Paul Viola và Michael Jones đề xuất một khung phát hiện khuôn mặt; theo Wikipedia, nó xử lý ảnh 384x288 ở 15 hình/giây trên chip Intel Pentium III 700 MHz, và bài báo gốc báo cáo khoảng 2 hình/giây trên máy cầm tay Compaq iPAQ. Theo mô tả của Wikipedia, cách làm này vẫn được dùng ở nơi sức tính hạn chế.\n\nGiọng đọc tổng hợp; video Pexels/Coverr minh hoạ, không phải cảnh thật của sự kiện.\nBản đầy đủ: https://youtu.be/7daMUBWG6mU",
+ "tags": [
+  "viola jones",
+  "phát hiện khuôn mặt",
+  "paul viola",
+  "michael jones",
+  "thị giác máy tính",
+  "trí tuệ nhân tạo",
+  "mind in the machine"
+ ],
+ "kicker": "KHUÔN MẶT VÀ AI",
+ "sub": "TÌM MẶT · 2001",
+ "acc": [
+  "2001",
+  "mười",
+  "lăm",
+  "hình",
+  "giây"
+ ],
+ "lines": [
+  "Năm 2001, hai người dạy máy tìm mặt người.",
+  "Họ là Paul Viola và Michael Jones.",
+  "Với máy, một bức ảnh chỉ là lưới hàng triệu ô vuông, không ô nào ghi chữ mắt hay chữ mũi.",
+  "Họ cho máy dò những mẫu sáng tối đơn giản, như vùng mắt tối hơn vùng má.",
+  "Trên chip Pentium ba, bảy trăm mê-ga-hec, máy xử lý mười lăm hình mỗi giây.",
+  "Theo bài báo gốc, trên máy cầm tay iPAQ, nó vẫn chạy được khoảng hai hình mỗi giây.",
+  "Những ô vuông nhảy quanh mặt người trên màn hình máy ảnh là loại việc ấy.",
+  "Hơn hai mươi năm sau, cách làm của hai người vẫn còn chạy ở những máy yếu."
+ ],
+ "scenes": [
+  {
+   "type": "kinetic",
+   "at": 0,
+   "items": [
+    {
+     "text": "2001",
+     "at": [
+      0,
+      "Năm"
+     ],
+     "acc": true,
+     "size": 300
+    },
+    {
+     "text": "HAI NGƯỜI · TÌM MẶT",
+     "at": [
+      0,
+      "hai"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:5377697",
+   "veil": 0.55
+  },
+  {
+   "type": "cards3d",
+   "at": 1,
+   "title": "HAI TÁC GIẢ",
+   "cards": [
+    {
+     "k": "PAUL",
+     "v": "VIOLA",
+     "at": [
+      1,
+      "Paul"
+     ]
+    },
+    {
+     "k": "MICHAEL",
+     "v": "JONES",
+     "at": [
+      1,
+      "Michael"
+     ],
+     "c": "acc"
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "at": 2,
+   "title": "VỚI MÁY, ẢNH LÀ GÌ?",
+   "nodes": [
+    {
+     "text": "MỘT BỨC ẢNH",
+     "x": 0.5,
+     "y": 0.2,
+     "at": [
+      2,
+      "bức"
+     ],
+     "w": 440
+    },
+    {
+     "text": "LƯỚI Ô VUÔNG",
+     "x": 0.5,
+     "y": 0.5,
+     "at": [
+      2,
+      "lưới"
+     ],
+     "w": 440
+    },
+    {
+     "text": "KHÔNG Ô NÀO GHI 'MẮT'",
+     "x": 0.5,
+     "y": 0.8,
+     "at": [
+      2,
+      "không"
+     ],
+     "c": "acc",
+     "w": 560
+    }
+   ],
+   "arrows": [
+    {
+     "from": 0,
+     "to": 1,
+     "at": [
+      2,
+      "lưới"
+     ]
+    },
+    {
+     "from": 1,
+     "to": 2,
+     "at": [
+      2,
+      "không"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 3,
+   "text": "MẮT TỐI HƠN MÁ",
+   "sub": "MẪU SÁNG TỐI ĐƠN GIẢN"
+  },
+  {
+   "type": "counter",
+   "at": 4,
+   "to": 15,
+   "suffix": " HÌNH/GIÂY",
+   "label": "PENTIUM III · 700 MHZ · ẢNH 384×288",
+   "until": [
+    4,
+    "lăm"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 5,
+   "title": "TỐC ĐỘ PHÁT HIỆN MẶT",
+   "rows": [
+    {
+     "k": "MÁY ĐỂ BÀN · 700 MHZ",
+     "v": "15 HÌNH/GIÂY",
+     "at": [
+      4,
+      "mười"
+     ]
+    },
+    {
+     "k": "MÁY CẦM TAY IPAQ",
+     "v": "KHOẢNG 2",
+     "at": [
+      5,
+      "hai"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 6,
+   "items": [
+    {
+     "text": "Ô VUÔNG QUANH MẶT",
+     "at": [
+      6,
+      "ô"
+     ],
+     "acc": true
+    },
+    {
+     "text": "trên màn hình máy ảnh",
+     "at": [
+      6,
+      "màn"
+     ],
+     "sm": true
+    }
+   ],
+   "clip": "pexels:19784108",
+   "veil": 0.55
+  },
+  {
+   "type": "slam",
+   "at": 7,
+   "text": "VẪN CÒN CHẠY",
+   "sub": "Ở NƠI SỨC TÍNH HẠN CHẾ"
+  }
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Viola%E2%80%93Jones_object_detection_framework",
+  "Viola, Jones — Rapid Object Detection using a Boosted Cascade of Simple Features (CVPR 2001)"
+ ],
+ "say": {
+  "viola": "Vi-ô-la",
+  "jones": "Giôn",
+  "paul": "Pôn",
+  "michael": "Mai-cồ",
+  "pentium": "Pen-ti-ừm",
+  "ipaq": "ai-pác"
+ },
+ "rules": 2,
+ "mix": true,
+ "music_gain": 0.18,
+ "music_duck": 3,
+ "sfx_gain": 0.36,
+ "tts": {
+  "pauses": {
+   "0": 0.35,
+   "1": 0.22,
+   "2": 0.3,
+   "3": 0.22,
+   "4": 0.22,
+   "5": 0.22,
+   "6": 0.4
+  }
+ },
+ "sources_internal": [
+  "https://en.wikipedia.org/wiki/Viola%E2%80%93Jones_object_detection_framework (đã mở: Viola & Jones 2001; 15 hình/giây ảnh 384x288, Pentium III 700 MHz; ~2 hình/giây trên Compaq iPAQ; vẫn dùng ở nơi sức tính hạn chế)",
+  "Bài báo gốc Viola & Jones, CVPR 2001 (chưa mở; cần kiểm lại số 15 và 'mẫu sáng tối' trước khi dựng)"
+ ]
+}

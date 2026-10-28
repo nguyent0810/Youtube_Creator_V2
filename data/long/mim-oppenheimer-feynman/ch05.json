@@ -1,0 +1,318 @@
+{
+ "title": "Những thùng máy không có thợ",
+ "lines": [
+  {
+   "t": "Ngày 4 tháng 4 năm 1944, các thùng máy IBM tới Los Alamos.",
+   "p": 0.8
+  },
+  "Vì giữ bí mật, IBM không được biết máy đi đâu, nên không thể cử người tới lắp.",
+  "Hãng chỉ ra người thợ giỏi nhất của mình, John Johnston, lúc ấy đã nhập ngũ.",
+  {
+   "t": "Quân đội điều anh về Los Alamos, nhưng anh tới sau máy vài ngày.",
+   "p": 1.0
+  },
+  "Feynman không chờ được.",
+  "Ông cùng Frankel và Nelson tự mở thùng, lắp máy theo bản vẽ đi dây.",
+  "Đó là những cỗ máy phức tạp vào bậc nhất thời ấy, tới nơi còn tháo rời, chằng chịt dây.",
+  {
+   "t": "Theo Feynman, rắc rối lớn nhất là các sếp cứ ghé qua nhắc: coi chừng làm hỏng đấy!",
+   "p": 1.0
+  },
+  "Có máy chạy, có máy lắp sai nên không chạy.",
+  "Ở một máy nhân, ông thấy bên trong có một chi tiết bị cong.",
+  "Nhưng ông không dám nắn, sợ gãy.",
+  "Khi người thợ tới, anh sửa được các máy còn lại, trừ đúng cái máy ấy.",
+  {
+   "t": "Ba ngày sau, anh vẫn loay hoay với nó.",
+   "p": 1.0
+  },
+  "Feynman mới nói: lúc trước tôi thấy chỗ này bị cong.",
+  {
+   "t": "À, tất nhiên rồi, chỉ có thế thôi!",
+   "q": 1,
+   "diy": 1
+  },
+  {
+   "t": "Nắn lại, máy chạy.",
+   "p": 1.0
+  },
+  "Theo nghiên cứu của Los Alamos, Bethe về sau cho rằng họ là những người đầu tiên ngoài IBM tự lắp thành công loại máy này.",
+  "Còn người thật sự biết dạy máy làm toán thì có đúng một: Naomi Livesay.",
+  "Bà là nhà toán học, từng học sáu tháng với máy IBM ở Princeton.",
+  {
+   "t": "Ở Los Alamos, chỉ mình bà được đào tạo bài bản về những cỗ máy này.",
+   "p": 1.0
+  },
+  "Bà lập trình bằng cách cắm lại dây trên bảng cắm của từng máy.",
+  "Nhờ bà, chỉ chừng một tuần sau khi máy tới, bài toán nổ ép đầu tiên đã chạy.",
+  "Phòng máy chạy ba ca, hai mươi bốn giờ mỗi ngày, sáu ngày mỗi tuần.",
+  {
+   "t": "Tháng 4, Feynman bày một cuộc đua: nhóm tính tay đấu với dàn máy IBM.",
+   "p": 1.0
+  },
+  "Hai ngày đầu, gần như hoà.",
+  "Rồi người mệt.",
+  {
+   "t": "Máy thì không.",
+   "p": 1.0
+  },
+  "Máy thắng.",
+  "Vậy mà chính bài toán đầu tiên ấy lại mất tới ba tháng mới xong.",
+  "Vì sao?"
+ ],
+ "scenes": [
+  {
+   "type": "chapter",
+   "no": "5",
+   "k": "CHƯƠNG NĂM",
+   "title": "NHỮNG THÙNG MÁY\nKHÔNG CÓ THỢ",
+   "sub": "04.04.1944",
+   "bg": "ibm601",
+   "titleAt": [
+    0,
+    "Ngày"
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 1,
+   "title": "VÌ SAO KHÔNG CÓ THỢ",
+   "srcnote": "B. J. ARCHER · LA-UR-21-20164 (LANL) · N. LEWIS · TRINITY BY THE NUMBERS (LANL)",
+   "rows": [
+    {
+     "k": "IBM",
+     "v": "KHÔNG ĐƯỢC BIẾT MÁY ĐI ĐÂU",
+     "at": 1
+    },
+    {
+     "k": "THỢ GIỎI NHẤT",
+     "v": "J. JOHNSTON · ĐÃ NHẬP NGŨ",
+     "at": 2
+    },
+    {
+     "k": "TỚI SAU MÁY",
+     "v": "2–3 NGÀY (HAI NGUỒN LỆCH)",
+     "at": [
+      3,
+      "tới"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 4,
+   "text": "TỰ LẮP",
+   "sub": "FEYNMAN · FRANKEL · NELSON · THEO BẢN VẼ ĐI DÂY"
+  },
+  {
+   "type": "photo",
+   "at": 6,
+   "img": "ibm601",
+   "tone": "color",
+   "move": "in",
+   "veil": 0.5,
+   "illus": "ẢNH MINH HỌA · IBM 601 Ở BẢO TÀNG BERN",
+   "kin": [
+    {
+     "text": "PHỨC TẠP BẬC NHẤT THỜI ẤY",
+     "at": 6,
+     "acc": true
+    },
+    {
+     "text": "“coi chừng làm hỏng đấy!”",
+     "at": 7,
+     "sm": true
+    }
+   ],
+   "label": {
+    "k": "MÁY NHÂN ĐỤC LỖ IBM 601",
+    "v": "ẢNH: VASUVR · CC BY 4.0",
+    "at": 6
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 8,
+   "items": [
+    {
+     "text": "CÓ MÁY CHẠY · CÓ MÁY KHÔNG",
+     "at": 8,
+     "sm": true
+    },
+    {
+     "text": "MỘT CHI TIẾT BỊ CONG",
+     "at": 9,
+     "acc": true
+    },
+    {
+     "text": "không dám nắn · sợ gãy",
+     "at": 10,
+     "sm": true
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "at": 11,
+   "items": [
+    {
+     "year": "THỢ TỚI",
+     "text": "sửa *các máy còn lại*",
+     "at": 11
+    },
+    {
+     "year": "+3 NGÀY",
+     "text": "vẫn *loay hoay*",
+     "at": 12
+    },
+    {
+     "year": "FEYNMAN",
+     "text": "“chỗ này *bị cong*”",
+     "at": 13
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "at": 14,
+   "dy": true,
+   "text": "À, tất nhiên rồi, chỉ có thế thôi!",
+   "by": "NGƯỜI THỢ IBM, QUA LỜI FEYNMAN · LOS ALAMOS FROM BELOW (FEYNMAN, 1976)",
+   "lbl": "DIỄN Ý",
+   "qline": 14,
+   "typeAt": [
+    14,
+    "tất"
+   ]
+  },
+  {
+   "type": "kinetic",
+   "at": 15,
+   "items": [
+    {
+     "text": "NẮN LẠI · MÁY CHẠY",
+     "at": 15,
+     "acc": true
+    }
+   ]
+  },
+  {
+   "type": "ledger",
+   "at": 16,
+   "title": "NGƯỜI NGOÀI IBM ĐẦU TIÊN",
+   "srcnote": "N. LEWIS · TRINITY BY THE NUMBERS (LANL) · DẪN NHẬN ĐỊNH CỦA HANS BETHE",
+   "rows": [
+    {
+     "k": "BETHE:",
+     "v": "NGOÀI IBM, LẦN ĐẦU TỰ LẮP ĐƯỢC",
+     "at": [
+      16,
+      "đầu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "print",
+   "at": 17,
+   "img": "livesay",
+   "tone": "bw",
+   "side": {
+    "k": "NAOMI LIVESAY",
+    "h": "Nhà toán học\nlập trình máy IBM",
+    "lines": [
+     {
+      "text": "*6 tháng* học máy IBM ở Princeton",
+      "at": 18
+     },
+     {
+      "text": "người *duy nhất* được đào tạo bài bản",
+      "at": 19
+     },
+     {
+      "text": "lập trình = *cắm lại dây*",
+      "at": 20
+     }
+    ]
+   }
+  },
+  {
+   "type": "ledger",
+   "at": 21,
+   "title": "PHÒNG MÁY CHẠY",
+   "srcnote": "N. LEWIS · TRINITY BY THE NUMBERS (LANL) · B. J. ARCHER · LA-UR-21-20164 (LANL)",
+   "rows": [
+    {
+     "k": "BÀI ĐẦU TIÊN",
+     "v": "≈ 1 TUẦN SAU KHI MÁY TỚI",
+     "at": 21
+    },
+    {
+     "k": "CA",
+     "v": "3 CA · 24 GIỜ",
+     "at": 22
+    },
+    {
+     "k": "MỖI TUẦN",
+     "v": "6 NGÀY",
+     "at": [
+      22,
+      "sáu"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "date",
+   "at": 23,
+   "day": "CUỘC ĐUA NGƯỜI ĐẤU MÁY",
+   "date": "04.1944",
+   "sub": {
+    "text": "NHÓM TÍNH TAY vs DÀN MÁY IBM",
+    "at": [
+     23,
+     "nhóm"
+    ]
+   }
+  },
+  {
+   "type": "kinetic",
+   "at": 24,
+   "items": [
+    {
+     "text": "HAI NGÀY ĐẦU: GẦN NHƯ HOÀ",
+     "at": 24
+    },
+    {
+     "text": "RỒI NGƯỜI MỆT",
+     "at": 25,
+     "acc": true
+    },
+    {
+     "text": "MÁY THÌ KHÔNG",
+     "at": 26
+    }
+   ]
+  },
+  {
+   "type": "slam",
+   "at": 27,
+   "text": "MÁY THẮNG",
+   "sub": "NHƯNG BÀI ĐẦU TIÊN MẤT BA THÁNG"
+  },
+  {
+   "type": "question",
+   "at": 29,
+   "text": "Máy thắng,\nvậy sao vẫn mất ba tháng?"
+  }
+ ],
+ "hud": {
+  "k": "CHƯƠNG 05",
+  "t": "NHỮNG THÙNG MÁY KHÔNG CÓ THỢ"
+ },
+ "bgm": {
+  "mood": "epic",
+  "gain": 0.11
+ }
+}
