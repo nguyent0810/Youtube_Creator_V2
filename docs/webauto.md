@@ -45,7 +45,7 @@ Tạo ảnh hoặc video trong một dự án Flow mới, tải về `<tên>_<n>
 - `--session FILE` (hoặc biến `WEBAUTO_FLOW_SESSION`): dùng phiên đăng nhập đã xuất ra file thay cho profile, dành cho máy chủ không có cửa sổ để đăng nhập. Tạo file trên máy đã đăng nhập bằng `python -m webauto flow export-session --out <file>`; file được ghi quyền chỉ-chủ (600). **File này đăng nhập được Google thay bạn**: không commit, không gửi ai, chép sang máy chủ bằng `scp` rồi `chmod 600`. Phiên hết hạn thì xuất lại.
 - Linux: không có Google Chrome cho ARM, nên trên Linux `flow` dùng Chromium của Playwright (`python -m playwright install chromium`). Đã thử 28/10/2026 trên Oracle Ubuntu 24.04 aarch64: `flow generate --headless --session ...` ra 1 ảnh Nano Banana Pro 16:9 trong 36 giây; phiên trên Mac vẫn đăng nhập sau khi xuất.
 - File prompt: mỗi dòng `tên | prompt` hoặc chỉ `prompt` (đặt tên `001_<tóm-tắt>`), dòng `#` và dòng trống bị bỏ.
-- Flow có thể tính credit (xem dòng "Generating will use N credits" trong popup cài đặt). Video tốn đáng kể: Omni 1.1 Flash 8s x2 báo 24 credit; ảnh Nano Banana 2.1 báo 0 credit, còn Nano Banana Pro (mặc định) chưa đo.
+- Flow có thể tính credit (xem dòng "Generating will use N credits" trong popup cài đặt). Video tốn đáng kể: Omni 1.1 Flash 8s x2 báo 24 credit; ảnh Nano Banana 2.1 báo 0 credit; ảnh Nano Banana Pro (mặc định) cũng miễn phí, còn video Omni Flash 8s tốn 10 credit mỗi video (chủ tài khoản xác nhận 28/10/2026).
 
 ### `chatgpt images`
 Mỗi prompt tạo một ảnh bằng ChatGPT (gửi "Create an image: …"), lưu `<tên>.png`. File đã có thì bỏ qua, nên chạy lại sau khi gián đoạn không tạo trùng. Cần quy tắc Browsentic `file-download` = Allow. `--wait`, `--gap`, `--limit`.
