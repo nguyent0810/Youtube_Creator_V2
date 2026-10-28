@@ -19,6 +19,7 @@ import subprocess
 import sys
 from pathlib import Path
 
+from . import auth
 from .browsentic import browser, run
 
 CONTENT = "https://www.tiktok.com/tiktokstudio/content"
@@ -26,6 +27,15 @@ UPLOAD = "https://www.tiktok.com/tiktokstudio/upload"
 EDIT = "https://www.tiktok.com/tiktokstudio/upload/post/{id}?from=creator_center"
 CAPTION = "div[contenteditable=true]"
 PRIVACY = {"public": "Everyone", "friends": "Friends", "private": "Only you"}
+
+
+async def ensure_login(b):
+    """Signed out, TikTok Studio redirects to a login page. Wait for the owner; never type credentials."""
+    async def ok():
+        url = ((await b.call("browsentic_status")).get("activeTab") or {}).get("url", "")
+        return "tiktokstudio" in url and not auth.url_is_login(url)
+
+    await auth.ensure(ok, "TikTok Studio", "https://www.tiktok.com/tiktokstudio")
 
 
 def check_create(privacy, allow_public):
@@ -52,6 +62,8 @@ async def list_rows(b):
     with --id; identify those by title.
     """
     await b.call("page_navigate", url=CONTENT)
+    await asyncio.sleep(3)
+    await ensure_login(b)
     await b.call("page_waitForElement", target={"selector": "a[href*='/video/']"})
     await asyncio.sleep(2)
     ui = (await b.call("page_getPageInfo", maxPerKind=200, geometry=True))["interactive"]
@@ -125,6 +137,8 @@ async def update_post(a):
     TikTok allows one caption edit per post per day, so an earlier Save may have used the day's edit."""
     async with browser() as b:
         await b.call("page_navigate", url=EDIT.format(id=a.id))
+        await asyncio.sleep(3)
+        await ensure_login(b)
         await b.call("page_waitForElement", target={"selector": CAPTION})
         await type_caption(b, a.caption)
         await b.call("page_clickElement", target={"role": "button", "text": "Save"})
@@ -145,6 +159,8 @@ async def create_post(a):
         finally:
             srv.terminate()
         await b.call("page_navigate", url=UPLOAD)
+        await asyncio.sleep(3)
+        await ensure_login(b)
         await b.call("page_waitForElement", target={"text": "Select video"})
         await b.call("page_attachFile", target={"selector": "input[type=file]"}, downloadId=dl["downloadId"])
         await b.call("page_waitForElement", target={"selector": CAPTION})
