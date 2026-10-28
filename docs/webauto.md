@@ -46,7 +46,12 @@ Hỏi Muse AI (muse.ai) một danh sách câu hỏi trong **một side chat mớ
 
 ### `tiktok list | create | update | delete`
 Thao tác trên kênh **đang chạy thật**, nên có chốt (xem CLAUDE.md: không đăng, không xoá khi chủ kênh chưa nói rõ):
-- `create`: mặc định **riêng tư** ("Only you"), không bao giờ đặt lịch. Đăng friends/công khai cần `--allow-public`. Mô tả luôn có tiền tố `--marker` (mặc định `TEST-CRUD`).
+- `create`: mặc định **riêng tư** ("Only you"). Đăng friends/công khai cần `--allow-public`. Mô tả có tiền tố `--marker` (mặc định `TEST-CRUD`; bài thật truyền `--marker ""`).
+  - `--schedule "YYYY-MM-DD HH:MM"`: hẹn giờ thay vì đăng ngay. Giờ đọc theo múi giờ trang Studio hiện (`--tz`, mặc định `GMT+7`); phải cách hiện tại 20 phút tới 10 ngày (giới hạn TikTok), phút chia hết cho 5 (bộ chọn chỉ có bước 5).
+  - `--ai-label`: bật "AI-generated content" (Settings > Show more).
+  - Trước cú bấm không hoàn tác, lệnh **đọc lại từ trang** ngày, giờ, múi giờ, quyền xem và caption; lệch là từ chối và bỏ bản nháp.
+  - `--dry-run`: làm đủ mọi bước trừ cú bấm cuối, rồi bỏ bản nháp. Chạy cái này trước mỗi lần đổi giao diện.
+  - Ví dụ: `python -m webauto tiktok create --video v.mp4 --caption "..." --privacy public --allow-public --marker "" --schedule "2026-11-05 19:45" --ai-label --dry-run`
 - `delete`: cần `--id`; từ chối nếu bài không phải "Only me" (trừ `--allow-public`) hoặc nếu không có **đúng một** dòng khớp id. TikTok giữ bài đã xoá 30 ngày (Activity center > Recently deleted).
 - `update`: **chưa kiểm chứng** (xem dưới).
 
@@ -59,9 +64,15 @@ Thao tác trên kênh **đang chạy thật**, nên có chốt (xem CLAUDE.md: k
 | `muse research` | Chạy thật ở chế độ `--adopt-first`. Luồng tự mở side chat mới **chưa** kiểm chứng đủ. |
 | `tiktok list`, `tiktok delete` | Đã chạy thật (xoá một bài test Only me). |
 | `tiktok create` | Các bước đã chạy tay (tạo bài test Only me); chưa chạy bằng lệnh này. |
+| `tiktok create --schedule/--ai-label` | Bộ chọn ngày, giờ, nhãn AI đã soát tay trên Studio 28/10/2026 (selector `DatePicker__day[aria-label*="November 5th, 2026"]`, `TimePicker__item[aria-label="Hours 19"]`); logic chốt có test; **chưa** chạy `--dry-run` qua Browsentic. |
 | `tiktok update` | Chưa thành công: text gõ vào được nhưng caption trên máy chủ không đổi. TikTok chỉ cho sửa caption một lần mỗi ngày mỗi bài, nên lần Save đầu có thể đã dùng hết lượt. |
 
 ## Bài học (đừng lặp lại)
+
+- **Cột giờ của bộ chọn hẹn giờ bỏ qua click giả** (cột phút thì nhận): phải cuộn tới rồi `page_trustedClick` vào giữa nút. Chọn xong nhãn ô giờ đổi (`19:45`), dùng chính chữ đó để kiểm.
+- **mcp ≥ 2.x đổi `CallToolResult.isError` thành `is_error`**; `Browser.call` đọc cả hai.
+- **`pip install -e .` lỗi "Multiple top-level packages"** vì repo flat-layout: `pyproject.toml` khai báo `[tool.setuptools.packages.find]`. Trên máy chỉ cần webauto có thể cài `playwright mcp` rồi `pip install --no-deps -e .` (bỏ qua vieneu).
+- **Clipboard**: Windows dùng PowerShell, macOS dùng `pbpaste`/`pbcopy`.
 
 - **ChatGPT chặn Chrome do script mở** bằng Cloudflare "verify you are human", tick xong vẫn hiện lại. Không né. Dùng Chrome thật qua Browsentic.
 - **Browsentic từ chối thay người duyệt.** Hành động bị chặn (gửi form bằng phím Enter, tải file, đính file) từ client MCP bị từ chối cho tới khi chủ máy đặt quy tắc sang Allow trong Browsentic > Guardrails. Gửi tin bằng cách **bấm nút**, không nhấn Enter.

@@ -15,6 +15,11 @@ lunar = ["vnlunar"]
 # Lệnh tự động hoá trình duyệt `python -m webauto` (docs/webauto.md). Chỉ nạp khi dùng.
 webauto = ["playwright>=1.45", "mcp>=1.2"]
 
+# Flat layout có nhiều thư mục cấp cao (data, bundles, motion...): khai báo rõ package để
+# `pip install -e ".[webauto]"` không lỗi "Multiple top-level packages discovered".
+[tool.setuptools.packages.find]
+include = ["factory*", "webauto*"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]
