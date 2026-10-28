@@ -64,7 +64,7 @@ Thao tác trên kênh **đang chạy thật**, nên có chốt (xem CLAUDE.md: k
 | `muse research` | Chạy thật ở chế độ `--adopt-first`. Luồng tự mở side chat mới **chưa** kiểm chứng đủ. |
 | `tiktok list`, `tiktok delete` | Đã chạy thật (xoá một bài test Only me). |
 | `tiktok create` | Các bước đã chạy tay (tạo bài test Only me); chưa chạy bằng lệnh này. |
-| `tiktok create --schedule/--ai-label` | Bộ chọn ngày, giờ, nhãn AI đã soát tay trên Studio 28/10/2026 (selector `DatePicker__day[aria-label*="November 5th, 2026"]`, `TimePicker__item[aria-label="Hours 19"]`); logic chốt có test; **chưa** chạy `--dry-run` qua Browsentic. |
+| `tiktok create --schedule/--ai-label --dry-run` | **Đã chạy thật** qua Browsentic trên macOS 28/10/2026: 3/3 lượt (06:00, 19:45, 12:00) đọc lại đúng ngày, giờ, quyền xem, nhãn AI, caption rồi bỏ nháp; kênh vẫn 0 nháp. **Chưa** bấm Schedule thật lần nào. |
 | `tiktok update` | Chưa thành công: text gõ vào được nhưng caption trên máy chủ không đổi. TikTok chỉ cho sửa caption một lần mỗi ngày mỗi bài, nên lần Save đầu có thể đã dùng hết lượt. |
 
 ## Bài học (đừng lặp lại)
@@ -73,6 +73,13 @@ Thao tác trên kênh **đang chạy thật**, nên có chốt (xem CLAUDE.md: k
 - **mcp ≥ 2.x đổi `CallToolResult.isError` thành `is_error`**; `Browser.call` đọc cả hai.
 - **`pip install -e .` lỗi "Multiple top-level packages"** vì repo flat-layout: `pyproject.toml` khai báo `[tool.setuptools.packages.find]`. Trên máy chỉ cần webauto có thể cài `playwright mcp` rồi `pip install --no-deps -e .` (bỏ qua vieneu).
 - **Clipboard**: Windows dùng PowerShell, macOS dùng `pbpaste`/`pbcopy`.
+- **TikTok Studio upload (28/10/2026):**
+  - Gõ vào ô caption **trống** làm sập trang ("Something went wrong"): gõ nối sau tên file rồi mới xoá tên file bằng Delete từ đầu ô. Chọn-hết + Backspace cũng sập.
+  - Hashtag gõ nhanh bị nhân bản ("#phatgiao#phatgia#…"): gõ " #tag" tốc độ natural, rồi Escape.
+  - Rời trang tải lên (chuyển trang, tải lại, đóng tab, cả nút Discard của TikTok) có thể bật hộp thoại gốc "Leave site?" chặn tab; Browsentic không trả lời được. Lệnh dùng lại một tab tải lên đang mở, không tự chuyển trang/đóng tab. Thấy hộp thoại thì người dùng bấm Leave.
+  - Đóng tab có nháp thì lần sau trang hiện "A video you were editing wasn't saved. Continue editing?": lệnh bấm Discard.
+  - Ô ngày, ô giờ, "Show more", công tắc AI là div, không lộ qua `page_getPageInfo`; đọc HTML thô bị chính sách Browsentic chặn. Bấm theo toạ độ neo vào radio "Now", ô múi giờ và ô "Who can see this post", rồi **đọc lại bằng chữ** trên trang. Toạ độ Browsentic trả về là toạ độ trang (cửa sổ hẹp cuộn ngang), phải trừ `scrollX/scrollY`; form cuộn trong khung riêng.
+  - Bánh xe giờ trôi sau khi cuộn: chờ ~0,8 s rồi đo, đọc lại HH:MM, bấm lại nếu lệch.
 
 - **ChatGPT chặn Chrome do script mở** bằng Cloudflare "verify you are human", tick xong vẫn hiện lại. Không né. Dùng Chrome thật qua Browsentic.
 - **Browsentic từ chối thay người duyệt.** Hành động bị chặn (gửi form bằng phím Enter, tải file, đính file) từ client MCP bị từ chối cho tới khi chủ máy đặt quy tắc sang Allow trong Browsentic > Guardrails. Gửi tin bằng cách **bấm nút**, không nhấn Enter.
