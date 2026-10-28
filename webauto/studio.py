@@ -44,10 +44,11 @@ METRICS_BASE = ["EXTERNAL_VIEWS", "EXTERNAL_WATCH_TIME", "SUBSCRIBERS_NET_CHANGE
 METRICS_MIN = ["EXTERNAL_VIEWS", "EXTERNAL_WATCH_TIME"]
 METRICS_SUBS = ["SUBSCRIBERS_NET_CHANGE", "SUBSCRIBERS_GAINED", "SUBSCRIBERS_LOST"]  # subscription source has no views
 METRICS_DEVICE = ["EXTERNAL_VIEWS", "EXTERNAL_WATCH_TIME", "AVERAGE_WATCH_TIME", "UNIQUE_REACH"]
-METRIC_SETS = [METRICS_FULL, METRICS_BASE, METRICS_MIN, METRICS_SUBS, METRICS_DEVICE]
+METRICS_TRAFFIC = ["EXTERNAL_VIEWS", "VIDEO_THUMBNAIL_IMPRESSIONS", "VIDEO_THUMBNAIL_IMPRESSIONS_VTR"]
+METRIC_SETS = [METRICS_FULL, METRICS_BASE, METRICS_MIN, METRICS_SUBS, METRICS_DEVICE, METRICS_TRAFFIC]
 # order in which metric sets are tried for a report (indexes into METRIC_SETS); default is full > base > min
 REPORT_METRIC_SETS = {"videos": [0], "daily": [0], "subscription_source": [3],
-                      "device": [4, 1, 2], "operating_system": [4, 1, 2]}
+                      "device": [4, 1, 2], "operating_system": [4, 1, 2], "traffic_source": [5, 0, 1, 2]}
 
 PERIOD_CANDIDATES = {  # all five read off Studio's own period picker (the URL it navigates to)
     "7d": ["week"], "28d": ["4_weeks"], "90d": ["quarter"], "365d": ["year"], "lifetime": ["lifetime"],
@@ -137,8 +138,7 @@ def extract(zip_path, dest, report):
     out = {}
     for i, kind in classify(list(heads.items()), report).items():
         path = dest / f"{kind}.csv"
-        if path.exists():
-            continue
+        # Same report/period is a refresh: replace the old export with this attempt's CSV.
         path.write_bytes(raw[i])  # names come from `kind`, never from the zip, so no path traversal
         out[kind] = path
     return out
@@ -255,7 +255,10 @@ async def fetch(b, channel, report, period, cat, dest, authuser=None):
     dids = ([known_d] if known_d else []) + [d for d in DIMENSION_CANDIDATES[report] if d != known_d]
     known_m = cat["metric_sets"].get(report)
     order = REPORT_METRIC_SETS.get(report, [0, 1, 2])
-    msets = ([known_m] if known_m in order else []) + [i for i in order if i != known_m]
+    # For traffic, retry the impressions/CTR-specific export before a cached fallback set.
+    msets = [i for i in order if report == "traffic_source" and i == 5]
+    msets += ([known_m] if known_m in order and known_m not in msets else [])
+    msets += [i for i in order if i not in msets]
     last = "no candidate id rendered"
     for pid in pids:
         for did in dids:

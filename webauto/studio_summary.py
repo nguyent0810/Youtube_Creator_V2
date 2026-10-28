@@ -34,8 +34,24 @@ def num(s):
     s = (s or "").strip().replace(",", "")
     try:
         return float(s)
-    except ValueError:
+    except (ValueError, AttributeError):
         return None
+
+
+def duration_seconds(s):
+    """Parse Studio duration values (h:mm:ss or mm:ss) into seconds."""
+    if s is None:
+        return None
+    value = str(s).strip()
+    if ":" not in value:
+        return num(value)
+    parts = value.split(":")
+    if len(parts) not in (2, 3) or not all(p.isdigit() for p in parts):
+        return None
+    nums = [int(p) for p in parts]
+    if any(p >= 60 for p in nums[1:]):
+        return None
+    return nums[-1] + 60 * nums[-2] + (3600 * nums[0] if len(nums) == 3 else 0)
 
 
 def parse_date(s):
@@ -81,12 +97,14 @@ def video_rows(table):
     out, total = [], {}
     for r in rows:
         rec = {k: num(r[idx[h]]) for h, k in METRICS.items() if h in idx and idx[h] < len(r)}
+        if "Average view duration" in idx:
+            rec["avd_s"] = duration_seconds(r[idx["Average view duration"]])
         if r[0] == "Total":
             total = rec
             continue
         rec.update(id=r[0], title=r[idx.get("Video title", 1)] if "Video title" in idx else "",
                    published=parse_date(r[idx["Video publish time"]]) if "Video publish time" in idx else None,
-                   duration_s=num(r[idx["Duration"]]) if "Duration" in idx else None)
+                   duration_s=duration_seconds(r[idx["Duration"]]) if "Duration" in idx else None)
         out.append(rec)
     return out, total, truncated
 
@@ -218,11 +236,15 @@ def dimension_table(files, top=8):
     export's own header names."""
     header, rows = files["table"]
     rows, _ = clean(header, rows)
+    idx = {h: i for i, h in enumerate(header)}
     cols = header[1:]
     primary = "Views" if "Views" in cols else (cols[0] if cols else None)
     recs, total = [], None
+    label_idx = idx.get("City name", 0) if header and header[0] == "Cities" else 0
     for r in rows:
-        rec = {"name": r[0], **{h: num(r[i]) for i, h in enumerate(header) if i}}
+        rec = {"name": r[label_idx] if label_idx < len(r) else "",
+               **{h: (duration_seconds(r[i]) if h == "Average view duration" else num(r[i]))
+                  for i, h in enumerate(header) if i}}
         if r[0] == "Total":
             total = rec
         else:

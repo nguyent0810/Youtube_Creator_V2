@@ -51,8 +51,8 @@ def make_folder(tmp_path, footer=True):
         "videos__lifetime": {"table": videos_table(10, False)},
         "daily__28d": {"table": daily_table()},
         "traffic_source__28d": {"table": csv_text(
-            ["Traffic source", "Views", "Watch time (hours)"],
-            [["Total", 1000, 50], ["Shorts feed", 800, 30], ["Search", 200, 20]])},
+            ["Traffic source", "Views", "Thumbnail impressions", "Thumbnail click-through rate (%)", "Watch time (hours)"],
+            [["Total", 1000, 10000, 4.0, 50], ["Shorts feed", 800, 7000, 4.5, 30], ["Search", 200, 3000, 3.0, 20]])},
         "traffic_source__lifetime": {"table": csv_text(
             ["Traffic source", "Views", "Watch time (hours)"],
             [["Total", 5000, 300], ["Shorts feed", 3000, 100], ["Search", 1500, 150], ["Browse", 500, 50]])},
@@ -77,6 +77,8 @@ def make_folder(tmp_path, footer=True):
 def test_num_va_ngay():
     assert ss.num("1,234") == 1234 and ss.num("3.2") == 3.2
     assert ss.num("—") is None and ss.num("") is None and ss.num(None) is None
+    assert ss.num("Ho Chi Minh City") is None
+    assert ss.duration_seconds("0:00:23") == 23 and ss.duration_seconds("1:02:03") == 3723
     assert ss.parse_date("Oct 20, 2026") == date(2026, 10, 20)
     assert ss.parse_date("2026-10-20") == date(2026, 10, 20) and ss.parse_date("lạ") is None
 
@@ -90,9 +92,11 @@ def test_summarize_gop_video_va_chi_so_dan_xuat(tmp_path):
     assert a["age_days"] == 8
     assert a["28d"]["subs_per_1k_views"] == 20.0  # 12 sub / 600 views
     assert a["lifetime"]["views"] == 6000
+    assert s["channel_totals"]["28d"]["avd_s"] == 20
     assert s["top_views"][0]["id"] == "vidA" and s["bottom_views"][0]["id"] == "vidC"
     assert s["best_ctr"][0]["id"] == "vidA" and s["worst_ctr"][0]["id"] == "vidB"
     assert s["channel_totals"]["lifetime"]["views"] == 10000
+    assert videos["vidB"]["duration_s"] == 600 and videos["vidB"]["28d"]["avd_s"] == 120
 
 
 def test_theo_dinh_dang_va_tuoi(tmp_path):
@@ -115,6 +119,7 @@ def test_xu_huong_ngay_va_chieu_phan_tich(tmp_path):
     assert d["last_28d"]["views"] == 560 and d["prev_28d"]["views"] == 280
     t = s["dimensions"]["traffic_source"]["28d"]
     assert t["column"] == "Traffic source" and t["rows"][0]["name"] == "Shorts feed" and t["rows"][0]["share_pct"] == 80.0
+    assert t["rows"][0]["Thumbnail click-through rate (%)"] == 4.5
 
 
 def test_bang_chieu_khong_co_cot_views_van_chon_cot_chinh(tmp_path):
@@ -196,6 +201,31 @@ def test_extract_dat_ten_theo_loai_khong_theo_ten_trong_zip(tmp_path):
     assert not (tmp_path / "evil.csv").exists()
 
 
+def test_extract_ghi_de_csv_cu_trong_lan_thu_moi(tmp_path):
+    dest = tmp_path / "dest"
+    dest.mkdir()
+    (dest / "table.csv").write_text("old", encoding="utf-8")
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w") as z:
+        z.writestr("table.csv", "Content,Views\nTotal,5\n")
+    zp = tmp_path / "new.zip"
+    zp.write_bytes(buf.getvalue())
+    studio.extract(zp, dest, "videos")
+    assert (dest / "table.csv").read_text(encoding="utf-8") == "Content,Views\nTotal,5\n"
+
+
+def test_city_name_la_chu_khong_phai_so(tmp_path):
+    f = tmp_path / "city.csv"
+    f.write_text(csv_text(["Cities", "City name", "Views", "Average view duration"],
+                          [["Total", "", "20", "0:00:38"],
+                           ["id-1", "Ho Chi Minh City, Ho Chi Minh, Vietnam", "20", "0:00:31"]]),
+                 encoding="utf-8")
+    out = ss.dimension_table({"table": ss.read_csv(f)})
+    assert out["rows"][0]["name"] == "Ho Chi Minh City, Ho Chi Minh, Vietnam"
+    assert out["rows"][0]["City name"] is None
+    assert out["rows"][0]["Average view duration"] == 31
+
+
 def test_plan_gioi_han_ky_cho_bao_cao_chieu():
     p = studio.plan(["videos", "geography"], ["7d", "28d", "lifetime"])
     assert p == [("videos", "28d"), ("videos", "lifetime"), ("videos", "7d"), ("geography", "28d"), ("geography", "lifetime")]
@@ -219,5 +249,6 @@ def test_moi_chieu_co_ma_va_bo_chi_so_hop_le():
         assert all(0 <= i < len(studio.METRIC_SETS) for i in order), rep
     assert studio.DIMENSION_CANDIDATES["subscription_source"] == ["SUBSCRIPTION_SOURCE_TYPE"]
     assert studio.METRIC_SETS[studio.REPORT_METRIC_SETS["subscription_source"][0]][0] == "SUBSCRIBERS_NET_CHANGE"
+    assert studio.METRIC_SETS[studio.REPORT_METRIC_SETS["traffic_source"][0]] == studio.METRICS_TRAFFIC
     for p in ("7d", "28d", "90d", "365d", "lifetime"):
         assert studio.PERIOD_CANDIDATES[p]
