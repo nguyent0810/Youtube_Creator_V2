@@ -3,10 +3,15 @@
 Drives a Playwright persistent Chrome profile kept in ~/.webauto/profiles/flow (log in once with
 `webauto flow login`). Google does not challenge it, unlike chatgpt.com.
 
+On a server (no window to sign in, no Google Chrome on Linux ARM) export the session from a signed-in
+profile with `webauto flow export-session` and pass it with `--session` (or WEBAUTO_FLOW_SESSION).
+
 Selectors are English-UI selectors; the dedicated profile keeps Flow in English. Flow has no public
 API, so these selectors are the fragile part: when the UI changes, fix them here.
 """
+import os
 import re
+import sys
 import time
 from pathlib import Path
 
@@ -22,10 +27,29 @@ NEW_PROJECT = re.compile("Dự án mới|New project")
 VIDEO_DONE = "flow-video-tile img[alt='Generated video thumbnail']"
 
 
-def launch(p, headless=False):
+# Google Chrome has no Linux ARM build; Playwright's own Chromium works for Flow there
+CHANNEL = None if sys.platform.startswith("linux") else "chrome"
+ARGS = ["--disable-blink-features=AutomationControlled"]
+VIEWPORT = {"width": 1400, "height": 900}
+
+
+def session_file(session=None):
+    s = session or os.environ.get("WEBAUTO_FLOW_SESSION")
+    return Path(s).expanduser() if s else None
+
+
+def launch(p, headless=False, session=None):
+    """Persistent profile, or a fresh context loaded from an exported session file. The browser behind a
+    session context closes when sync_playwright() exits."""
+    state = session_file(session)
+    if state:
+        if not state.exists():
+            raise SystemExit(f"session file not found: {state} (make it with `webauto flow export-session`)")
+        browser = p.chromium.launch(channel=CHANNEL, headless=headless, args=ARGS)
+        return browser.new_context(storage_state=str(state), viewport=VIEWPORT, accept_downloads=True)
     return p.chromium.launch_persistent_context(
-        str(profile_dir("flow")), channel="chrome", headless=headless, accept_downloads=True,
-        viewport={"width": 1400, "height": 900}, args=["--disable-blink-features=AutomationControlled"])
+        str(profile_dir("flow")), channel=CHANNEL, headless=headless, accept_downloads=True,
+        viewport=VIEWPORT, args=ARGS)
 
 
 def login():
@@ -40,6 +64,32 @@ def login():
         print("Sign in to Google in the opened window, then close it.")
         page.wait_for_event("close", timeout=0)
         ctx.close()
+
+
+def export_session(out):
+    """Write the signed-in profile's cookies + storage to `out` (owner-only) for `--session` elsewhere.
+    The file signs in as you: keep it private, never commit it."""
+    from playwright.sync_api import sync_playwright
+
+    out = Path(out).expanduser()
+    out.parent.mkdir(parents=True, exist_ok=True)
+    with sync_playwright() as p:
+        ctx = launch(p, headless=True)
+        try:
+            page = ctx.pages[0] if ctx.pages else ctx.new_page()
+            page.goto(FLOW_URL)
+            page.wait_for_timeout(3000)
+            if auth.url_is_login(page.url) or page.get_by_role("button", name=NEW_PROJECT).count() == 0:
+                raise SystemExit("the flow profile is not signed in: run `webauto flow login` first")
+            old = os.umask(0o077)
+            try:
+                ctx.storage_state(path=str(out))
+            finally:
+                os.umask(old)
+        finally:
+            ctx.close()
+    out.chmod(0o600)
+    print(f"session written to {out} (owner-only; it signs in as you, do not share or commit it)")
 
 
 def new_project(page, headless=False):
@@ -152,7 +202,7 @@ def generate_video(page, prompt, out, tag, quality="720p", timeout_s=900):
 
 
 def generate(prompts, out, mode="image", model=None, count=1, duration=6, ratio=None, res=None,
-             quality="720p", image=None, timeout=None, headless=False):
+             quality="720p", image=None, timeout=None, headless=False, session=None):
     """Generate for each (stem, prompt) in `prompts` inside one new Flow project; return saved files.
 
     `image` (video mode only) is uploaded once as the start frame, so every prompt animates that image.
@@ -165,7 +215,7 @@ def generate(prompts, out, mode="image", model=None, count=1, duration=6, ratio=
     out.mkdir(parents=True, exist_ok=True)
     files = []
     with sync_playwright() as p:
-        ctx = launch(p, headless)
+        ctx = launch(p, headless, session)
         try:
             page = ctx.pages[0] if ctx.pages else ctx.new_page()
             new_project(page, headless)
@@ -196,6 +246,9 @@ def add_parser(sub):
     ap = sub.add_parser("flow", help="Google Flow: generate images / videos (Playwright)")
     s = ap.add_subparsers(dest="cmd", required=True)
     s.add_parser("login", help="sign in to Google once in the webauto profile").set_defaults(func=lambda a: login())
+    e = s.add_parser("export-session", help="save the signed-in profile's session to a file, for --session on a server")
+    e.add_argument("--out", required=True)
+    e.set_defaults(func=lambda a: export_session(a.out))
     g = s.add_parser("generate", help="generate and download")
     g.add_argument("--mode", choices=["image", "video"], default="image")
     src = g.add_mutually_exclusive_group(required=True)
@@ -211,10 +264,12 @@ def add_parser(sub):
     g.add_argument("--image", help="video mode: start-frame image (image-to-video)")
     g.add_argument("--timeout", type=int, help="seconds per prompt (default 240 image / 900 video)")
     g.add_argument("--headless", action="store_true", help="no Chrome window (the profile must be signed in already)")
+    g.add_argument("--session", help="session file from `flow export-session` instead of the profile "
+                   "(default: WEBAUTO_FLOW_SESSION)")
     g.set_defaults(func=_run_generate)
 
 
 def _run_generate(a):
     prompts = [("p1", a.prompt)] if a.prompt else parse_prompts(a.prompts_file)
     generate(prompts, a.out, a.mode, a.model, a.count, a.duration, a.ratio, a.res, a.quality, a.image, a.timeout,
-             a.headless)
+             a.headless, a.session)

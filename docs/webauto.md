@@ -42,6 +42,8 @@ Tạo ảnh hoặc video trong một dự án Flow mới, tải về `<tên>_<n>
 - `--count 1-4` số kết quả mỗi prompt (mặc định 1), `--duration 4|6|8|10` giây (video, mặc định 6), `--ratio`, `--res`, `--quality 720p|1080p|4K` (chất lượng tải; 720p là bản gốc).
 - `--image khung_dau.png` (video): ảnh làm **khung bắt đầu** (image-to-video). Một ảnh dùng cho mọi prompt trong lần chạy.
 - `--headless`: chạy không mở cửa sổ Chrome (đã thử 28/10/2026 trên macOS: 1 ảnh Nano Banana Pro 16:9 trong 35 giây, Flow không chặn). Profile phải đã đăng nhập: chạy ẩn thì không chờ đăng nhập mà báo lỗi ngay, khi đó chạy `flow login` rồi thử lại. Profile vẫn bị khoá nếu còn cửa sổ Flow khác đang mở.
+- `--session FILE` (hoặc biến `WEBAUTO_FLOW_SESSION`): dùng phiên đăng nhập đã xuất ra file thay cho profile, dành cho máy chủ không có cửa sổ để đăng nhập. Tạo file trên máy đã đăng nhập bằng `python -m webauto flow export-session --out <file>`; file được ghi quyền chỉ-chủ (600). **File này đăng nhập được Google thay bạn**: không commit, không gửi ai, chép sang máy chủ bằng `scp` rồi `chmod 600`. Phiên hết hạn thì xuất lại.
+- Linux: không có Google Chrome cho ARM, nên trên Linux `flow` dùng Chromium của Playwright (`python -m playwright install chromium`). Đã thử 28/10/2026 trên Oracle Ubuntu 24.04 aarch64: `flow generate --headless --session ...` ra 1 ảnh Nano Banana Pro 16:9 trong 36 giây; phiên trên Mac vẫn đăng nhập sau khi xuất.
 - File prompt: mỗi dòng `tên | prompt` hoặc chỉ `prompt` (đặt tên `001_<tóm-tắt>`), dòng `#` và dòng trống bị bỏ.
 - Flow có thể tính credit (xem dòng "Generating will use N credits" trong popup cài đặt). Video tốn đáng kể: Omni 1.1 Flash 8s x2 báo 24 credit; ảnh Nano Banana 2.1 báo 0 credit, còn Nano Banana Pro (mặc định) chưa đo.
 
