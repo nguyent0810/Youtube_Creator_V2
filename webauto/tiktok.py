@@ -83,14 +83,18 @@ def shown_date(d):
     return f"{MONTHS[d.month - 1][:3]} {d.day}, {d.year}"
 
 
-def settings_ok(text, when, privacy_label, tz_label):
-    """The page text must show exactly what we asked for; returns the list of problems (empty = ok)."""
+def settings_ok(text, when, privacy_label, ai_label=False):
+    """The page text must show exactly what we asked for; returns the list of problems (empty = ok).
+    The timezone selector's label is not part of the page text, so --tz cannot be read back here: it is
+    the zone the date/time are entered in (Studio shows '(GMT+7) Local Time' for this channel's Chrome)."""
     bad = []
     if when is not None:
         if f"Schedule\n{shown_date(when)}\n{when:%H:%M}" not in text:
-            bad.append(f"date/time is not {shown_date(when)} {when:%H:%M}")
-        if f"({tz_label})" not in text.replace("GMT+0", "GMT"):
-            bad.append(f"timezone on the page is not ({tz_label})")
+            m = re.search(r"Schedule\n([^\n]*)\n([^\n]*)", text)
+            seen = f" (page shows {m.group(1)} {m.group(2)})" if m else ""
+            bad.append(f"date/time is not {shown_date(when)} {when:%H:%M}{seen}")
+    if ai_label and "Creator labeled as AI-generated" not in text:
+        bad.append("AI-generated label is off")
     if f"Who can see this post\n{privacy_label}" not in text:
         bad.append(f"privacy is not {privacy_label}")
     return bad
@@ -199,9 +203,10 @@ async def type_caption(b, text, default=""):
         if part.startswith("#"):
             await asyncio.sleep(1.2)
             await b.call("page_pressKey", key="Escape")   # close the suggestion list without picking
-    if default:
-        await b.call("page_selectText", search=default + " ")
-        await b.call("page_pressKey", key="Delete")
+    if default:   # selecting the name with page_selectText deleted the wrong characters; walk from the start
+        await b.call("page_focusInput", target={"selector": CAPTION}, caret="start")
+        for _ in range(len(default) + 1):   # the file name and the space after it
+            await b.call("page_pressKey", key="Delete")
 
 
 async def update_post(a):
@@ -218,13 +223,36 @@ async def update_post(a):
         print("saved; verify on the Posts page (see the note in update_post)")
 
 
+async def viewport_point(b, bounds):
+    """Centre of `bounds` in viewport coordinates. Browsentic reports element bounds in PAGE coordinates
+    (a narrow window scrolls the Studio page sideways), while page_trustedClick takes viewport ones."""
+    vp = (await b.call("page_getPageInfo", maxPerKind=1)).get("viewport") or {}
+    return {"x": bounds["x"] + bounds["width"] / 2 - vp.get("scrollX", 0),
+            "y": bounds["y"] + bounds["height"] / 2 - vp.get("scrollY", 0)}
+
+
 async def click_at(b, selector):
     """Scroll an element into view and click its centre with a real (trusted) mouse event.
-    The Studio hour wheel ignores synthetic clicks (the minute wheel does not); this works for both."""
+    The Studio hour wheel ignores synthetic clicks (the minute wheel does not), and it keeps gliding for a
+    moment after scrollTo, so the bounds are measured only once it has settled."""
     await b.call("page_scrollTo", target={"selector": selector})
+    await asyncio.sleep(0.8)
     el = (await b.call("page_waitForElement", target={"selector": selector}, state="visible"))["element"]
-    bd = el["bounds"]
-    await b.call("page_trustedClick", point={"x": bd["x"] + bd["width"] / 2, "y": bd["y"] + bd["height"] / 2})
+    await b.call("page_trustedClick", point=await viewport_point(b, el["bounds"]))
+
+
+async def pick_wheel(b, kind, value, part):
+    """Pick `value` in the 'Hours' or 'Minutes' wheel and confirm it on the time field; retry if a neighbour
+    was hit (seen 28/10/2026: asked 06, got 05). `part` = 0 (hour) or 1 (minute) of the shown 'HH:MM'."""
+    sel = (f'button.TimePicker__item[aria-label="{kind} {value:02d}"], '
+           f'button.TimePicker__item[aria-label="{kind} {value}"]')
+    for _ in range(3):
+        await click_at(b, sel)
+        await asyncio.sleep(0.6)
+        m = re.search(r"Schedule\n[^\n]*\n(\d{2}):(\d{2})", await b.text())
+        if m and int(m.group(part + 1)) == value:
+            return
+    raise SystemExit(f"refused: could not set {kind.lower()} to {value:02d}")
 
 
 def schedule_points(ui):
@@ -251,12 +279,21 @@ def schedule_points(ui):
 
 async def open_field(b, index):
     """Open the date (0) or time (1) picker of the schedule row with a real click.
-    page_getPageInfo gives page coordinates; page_trustedClick wants viewport coordinates."""
-    info = await b.call("page_getPageInfo", maxPerKind=300, geometry=True)
-    vp = info.get("viewport") or {}
-    x, y = schedule_points(info["interactive"])[index]
-    await b.call("page_trustedClick", point={"x": x - vp.get("scrollX", 0), "y": y - vp.get("scrollY", 0)})
-    await asyncio.sleep(1)
+    page_getPageInfo gives page coordinates; page_trustedClick wants viewport coordinates. The form scrolls
+    in its own container, so the row is brought into view first; the click is retried once if the picker
+    did not open (date: weekday header 'Sun Mon …'; time: the hour wheel)."""
+    opened = (lambda t: "Sun\nMon" in t or "Su\nMo" in t) if index == 0 else (lambda t: "\n00\n" in t and "\n23\n" in t)
+    for _ in range(2):
+        await b.call("page_scrollTo", target={"text": "Schedule", "selector": "label"})
+        await asyncio.sleep(0.5)
+        info = await b.call("page_getPageInfo", maxPerKind=300, geometry=True)
+        vp = info.get("viewport") or {}
+        x, y = schedule_points(info["interactive"])[index]
+        await b.call("page_trustedClick", point={"x": x - vp.get("scrollX", 0), "y": y - vp.get("scrollY", 0)})
+        await asyncio.sleep(1)
+        if opened(await b.text()):
+            return
+    raise SystemExit(f"refused: the {'date' if index == 0 else 'time'} picker did not open")
 
 
 async def set_schedule(b, when):
@@ -282,34 +319,66 @@ async def set_schedule(b, when):
     await b.call("page_clickElement", target={"selector": f'button.DatePicker__day[aria-label*="{day_label(when)}"]'})
     await asyncio.sleep(1)
     await open_field(b, 1)
-    await click_at(b, f'button.TimePicker__item[aria-label="Hours {when.hour:02d}"]')
-    await asyncio.sleep(0.5)
-    await click_at(b, f'button.TimePicker__item[aria-label="Minutes {when.minute:02d}"]')
-    await asyncio.sleep(0.5)
+    await pick_wheel(b, "Hours", when.hour, 0)
+    await pick_wheel(b, "Minutes", when.minute, 1)
     await b.call("page_pressKey", key="Escape")
 
 
+AI_LABEL_ON = "Creator labeled as AI-generated"   # text the page adds once the switch is on
+
+
 async def set_ai_label(b):
-    """'AI-generated content' switch under Settings > Show more. Turning it on opens no dialog (checked 28/10/2026)."""
-    try:
-        await b.call("page_clickElement", target={"text": "Show more"})
+    """Turn on Settings > Show more > 'AI-generated content'.
+
+    Neither 'Show more' (a div) nor the switch is exposed to Browsentic, and raw HTML is off-limits, so
+    both are clicked at offsets from the 'Who can see this post' combobox, the nearest exposed element.
+    Measured on Studio 28/10/2026 (CSS px from the combobox's top-left): 'Show more' (+381, +146),
+    the AI switch (+171, +286); the 'Disclose post content' switch is 67 px above it. The form scrolls
+    inside its own container, so it is scrolled to the bottom (the Discard button) before the switch
+    click. The page then shows AI_LABEL_ON, which is checked here and again before posting."""
+    async def combobox():
+        info = await b.call("page_getPageInfo", maxPerKind=300, geometry=True)
+        box = next((x["bounds"] for x in info["interactive"].get("buttons", [])
+                    if x.get("role") == "combobox" and x.get("text") in PRIVACY.values()), None)
+        if not box:
+            raise SystemExit("refused: cannot find the 'Who can see this post' selector")
+        return box, info.get("viewport") or {}
+    if AI_LABEL_ON in await b.text():
+        return
+    if "Show less" not in await b.text():
+        await b.call("page_scrollTo", target={"text": "Discard", "role": "button"})
+        await asyncio.sleep(0.6)
+        box, vp = await combobox()
+        await b.call("page_trustedClick", point={"x": box["x"] + 381 - vp.get("scrollX", 0),
+                                                 "y": box["y"] + 146 - vp.get("scrollY", 0)})
         await asyncio.sleep(1)
-    except RuntimeError:
-        pass   # already expanded
-    sel = "input.Switch__input"
-    ui = (await b.call("page_getPageInfo", maxPerKind=300, geometry=True))["interactive"]
-    labels = [x for k in ui.values() if isinstance(k, list) for x in k if (x.get("text") or "").strip() == "AI-generated content"]
-    switches = [x for k in ui.values() if isinstance(k, list) for x in k if sel in (x.get("selector") or "")]
-    if not labels or not switches:
-        raise SystemExit("refused: cannot find the AI-generated content switch")
-    y = labels[0]["bounds"]["y"]
-    sw = min(switches, key=lambda x: abs(x["bounds"]["y"] - y))
-    if abs(sw["bounds"]["y"] - y) > 30:
-        raise SystemExit("refused: no switch on the AI-generated content row")
-    if not sw.get("checked"):
-        bd = sw["bounds"]
-        await b.call("page_trustedClick", point={"x": bd["x"] + bd["width"] / 2, "y": bd["y"] + bd["height"] / 2})
-        await asyncio.sleep(1)
+        if "Show less" not in await b.text():
+            raise SystemExit("refused: could not open Settings > Show more")
+    await b.call("page_scrollTo", target={"text": "Discard", "role": "button"})
+    await asyncio.sleep(0.6)
+    box, vp = await combobox()
+    await b.call("page_trustedClick", point={"x": box["x"] + 171 - vp.get("scrollX", 0),
+                                             "y": box["y"] + 286 - vp.get("scrollY", 0)})
+    await asyncio.sleep(1)
+    text = await b.text()
+    if AI_LABEL_ON not in text:
+        raise SystemExit("refused: the AI-generated label did not turn on")
+    if "Your brand" in text or "Branded content" in text:
+        raise SystemExit("refused: the click hit 'Disclose post content' instead of the AI label")
+
+
+async def upload_tab(b):
+    """Switch to an open TikTok Studio upload tab (one showing a clean 'Select video' screen if there is
+    one), or open a new one. Never navigates: see create_post."""
+    tabs = [t for t in (await b.call("page_switchTab")).get("tabs", []) if "tiktokstudio/upload" in t.get("url", "")]
+    for t in tabs:
+        await b.call("page_switchTab", tabId=t["tabId"])
+        if "When to post" not in await b.text():
+            return
+    if tabs:
+        await b.call("page_switchTab", tabId=tabs[0]["tabId"])
+    else:
+        await b.call("page_openTab", url=UPLOAD)
 
 
 async def discard(b):
@@ -329,10 +398,7 @@ async def create_post(a):
         # Reuse ONE upload tab and never navigate away from it or close it. The upload page keeps a
         # beforeunload handler even after Discard, so leaving it (navigate, reload, close) raises Chrome's
         # native "Leave site?" dialog, which blocks the tab: Browsentic cannot answer it.
-        try:
-            await b.call("page_switchTab", match="tiktokstudio/upload")
-        except RuntimeError:
-            await b.call("page_openTab", url=UPLOAD)
+        await upload_tab(b)
         try:
             if "When to post" in await b.text():   # a draft from an interrupted run is still open in this tab
                 await discard(b)
@@ -398,7 +464,7 @@ async def _fill_and_submit(b, a, when, caption):
     # last checks before the irreversible click: everything is read back from the page
     text = await b.text()
     typed = (await b.call("page_extractText", target={"selector": CAPTION}, maxLength=5000)).get("content", "")
-    bad = settings_ok(text, when, PRIVACY[a.privacy], a.tz.replace("UTC", "GMT"))
+    bad = settings_ok(text, when, PRIVACY[a.privacy], a.ai_label)
     if not same_caption(typed, caption):
         bad.append(f"caption on the page differs: {typed[:120]!r}")
     if bad:

@@ -192,11 +192,12 @@ def test_nhan_ngay_cua_lich():
 
 def test_doc_lai_cai_dat_truoc_khi_bam():
     w = datetime(2026, 11, 5, 19, 45, tzinfo=TZ7)
-    page = "When to post\nNow\nSchedule\nNov 5, 2026\n19:45\n(GMT+7) Local Time\nWho can see this post\nEveryone\n"
-    assert tiktok.settings_ok(page, w, "Everyone", "GMT+7") == []
-    assert tiktok.settings_ok(page.replace("19:45", "12:45"), w, "Everyone", "GMT+7")
-    assert tiktok.settings_ok(page.replace("GMT+7", "GMT+9"), w, "Everyone", "GMT+7")
-    assert tiktok.settings_ok(page, w, "Only you", "GMT+7")
+    page = "When to post\nNow\nSchedule\nNov 5, 2026\n19:45\nWho can see this post\nEveryone\n"
+    assert tiktok.settings_ok(page, w, "Everyone") == []
+    assert tiktok.settings_ok(page.replace("19:45", "12:45"), w, "Everyone")
+    assert tiktok.settings_ok(page, w, "Only you")
+    assert tiktok.settings_ok(page, w, "Everyone", ai_label=True)          # nhãn AI chưa bật
+    assert tiktok.settings_ok(page + "Creator labeled as AI-generated\n", w, "Everyone", ai_label=True) == []
 
 
 def test_so_caption_bo_qua_khoang_trang():
