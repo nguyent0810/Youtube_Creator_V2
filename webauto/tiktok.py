@@ -195,13 +195,23 @@ def one_paragraph(text):
     return " ".join(ln.strip() for ln in text.splitlines() if ln.strip())
 
 
+def chunks(text, size):
+    """Split text into pieces of at most `size` characters, cutting after a space where possible."""
+    out = []
+    while len(text) > size:
+        cut = text.rfind(" ", 0, size) + 1 or size
+        out.append(text[:cut])
+        text = text[cut:]
+    return out + ([text] if text else [])
+
+
 async def type_caption(b, text, default=""):
     """Write the caption with real key events (fillInput changes the DOM but not the editor state: the
     counter stays at the old length and the old caption would be posted).
 
     - typed AFTER the prefilled file name, then the name is deleted from the front, so the editor is
       never empty (see one_paragraph for why an empty line is fatal);
-    - plain text at speed "fast" ("instant" also loses keys);
+    - plain text at speed "natural": "fast" lost 6 of 506 keys once, "instant" loses more;
     - each #tag at natural speed, then Escape to close the suggestion list (fast tags are mangled into
       "#phatgiao#phatgia#…")."""
     text = one_paragraph(text)
@@ -210,14 +220,37 @@ async def type_caption(b, text, default=""):
     for i, part in enumerate(parts):
         lead = " " if (i == 0 and default) or part.startswith("#") else ""
         tag = part.startswith("#")
-        await b.call("page_typeText", text=lead + part, clear=False, speed="natural" if tag else "fast")
+        # "fast" lost 6 keys in 500 (28/10); one call is capped at ~2 min, so send <=150-char pieces
+        for piece in chunks(lead + part, 150):
+            await b.call("page_typeText", text=piece, clear=False, speed="natural")
         if tag:
             await asyncio.sleep(1.2)
             await b.call("page_pressKey", key="Escape")
     if default:
-        await b.call("page_focusInput", target={"selector": CAPTION}, caret="start")
-        for _ in range(len(default) + 1):   # the file name and the space after it
-            await b.call("page_pressKey", key="Delete")
+        # a Delete keystroke is occasionally lost (28/10/2026: one space was left in front), so delete,
+        # read the editor back and delete what is still in front of the caption, up to 3 rounds
+        n = len(default) + 1   # the file name and the space after it
+        for _ in range(3):
+            await b.call("page_focusInput", target={"selector": CAPTION}, caret="start")
+            for _ in range(n):
+                await b.call("page_pressKey", key="Delete")
+            await asyncio.sleep(0.3)
+            now = (await b.call("page_extractText", target={"selector": CAPTION})).get("content", "")
+            n = leftover(now, text, default)
+            if n == 0:
+                break
+
+
+def leftover(now, text, default):
+    """How many characters still sit in front of the caption: what is left of the file name and the
+    space typed after it (0 when the editor starts with the caption itself)."""
+    head = text[:20]
+    i = now.find(head)
+    if i <= 0:
+        return 0
+    junk = now[:i]
+    return len(junk) if junk.strip() in ("", default) or default.startswith(junk.strip()) or \
+        default.endswith(junk.strip()) else 0
 
 
 async def update_post(a):
@@ -490,6 +523,13 @@ async def _fill_and_submit(b, a, when, caption):
     bad = settings_ok(text, when, PRIVACY[a.privacy], a.ai_label)
     if not same_caption(typed, caption):
         bad.append(f"caption on the page differs: {typed[:120]!r}")
+    # the DOM can disagree with the editor state (fillInput showed it): the "N/4000" counter is computed
+    # from the state, so it must equal the caption length (UTF-16 units, as the page counts)
+    m = re.search(r"(\d+)/4000", text)
+    want = len(caption.encode("utf-16-le")) // 2
+    if not m or int(m.group(1)) != want:
+        bad.append(f"editor state holds {m.group(1) if m else '?'} characters, caption has {want}"
+                   " (file name left in, or keys lost)")
     if bad:
         raise SystemExit("REFUSED: " + "; ".join(bad))
     if a.dry_run:

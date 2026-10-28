@@ -220,3 +220,17 @@ def test_tim_o_ngay_gio_theo_toa_do():
 def test_caption_mot_doan():
     cap = "Câu hỏi?\nGiải thích.\n\nẢnh: Pexels\n\n#phatgiao #thiendinh"
     assert tiktok.one_paragraph(cap) == "Câu hỏi? Giải thích. Ảnh: Pexels #phatgiao #thiendinh"
+
+
+def test_con_sot_truoc_caption():
+    cap = "Vì sao mõ chùa có hình con cá? #phatgiao"
+    assert tiktok.leftover(cap, cap, "zz_test") == 0
+    assert tiktok.leftover(" " + cap, cap, "zz_test") == 1          # một Delete bị lỡ
+    assert tiktok.leftover("t " + cap, cap, "zz_test") == 2
+    assert tiktok.leftover("zz_test " + cap, cap, "zz_test") == 8
+
+
+def test_chia_doan_go():
+    t = "một hai ba " * 40
+    parts = tiktok.chunks(t, 150)
+    assert "".join(parts) == t and all(len(p) <= 150 for p in parts)
