@@ -215,3 +215,8 @@ def test_tim_o_ngay_gio_theo_toa_do():
     assert 200 < dx < 245 and 390 < tx < 435 and dy == ty == 480
     with pytest.raises(SystemExit):
         tiktok.schedule_points({"fields": [], "buttons": []})
+
+
+def test_caption_mot_doan():
+    cap = "Câu hỏi?\nGiải thích.\n\nẢnh: Pexels\n\n#phatgiao #thiendinh"
+    assert tiktok.one_paragraph(cap) == "Câu hỏi? Giải thích. Ảnh: Pexels #phatgiao #thiendinh"

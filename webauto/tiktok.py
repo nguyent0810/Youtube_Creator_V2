@@ -185,32 +185,36 @@ async def delete_post(a):
         print("deleted" if all(a.id not in r["id"] for r in await list_rows(b)) else "STILL PRESENT - check Studio")
 
 
-async def type_caption(b, text, default=""):
-    """Write the caption with real key events (the editor ignores fillInput; the value reverts on submit).
+def one_paragraph(text):
+    """Caption as ONE line: the lines joined by a space, blank lines dropped.
 
-    Traps found on Studio 28/10/2026:
-      - typing into an EMPTY editor (after select-all + Backspace, or after deleting the prefilled file
-        name first) crashes the upload page ("Something went wrong"). So the caption is typed AFTER the
-        prefilled file name, and only then the name is selected and deleted: the editor is never empty;
-      - the hashtag autocomplete mangles fast typing ("#phatgiao#phatgia#…"), and a tag typed without a
-        space in front can be swallowed. Each tag is typed as " #tag" at natural speed."""
+    On Studio 28/10/2026 the first keystroke typed into an EMPTY block (empty editor, or the new line after
+    Enter / Shift+Enter) is doubled ("ĐĐức") and the editor state desyncs; the next keystrokes crash the
+    page ("Something went wrong"). Typing that continues a non-empty line always works. A single line
+    is the only safe shape until a trusted input path exists."""
+    return " ".join(ln.strip() for ln in text.splitlines() if ln.strip())
+
+
+async def type_caption(b, text, default=""):
+    """Write the caption with real key events (fillInput changes the DOM but not the editor state: the
+    counter stays at the old length and the old caption would be posted).
+
+    - typed AFTER the prefilled file name, then the name is deleted from the front, so the editor is
+      never empty (see one_paragraph for why an empty line is fatal);
+    - plain text at speed "fast" ("instant" also loses keys);
+    - each #tag at natural speed, then Escape to close the suggestion list (fast tags are mangled into
+      "#phatgiao#phatgia#…")."""
+    text = one_paragraph(text)
     await b.call("page_focusInput", target={"selector": CAPTION}, caret="end")
-    # a "\n" inside page_typeText scrambles the editor (lines duplicated / swapped): type line by line
-    # and press a real Enter between lines
-    for n, line in enumerate(text.split("\n")):
-        if n:
-            await b.call("page_pressKey", key="Enter")
-        parts = [p for p in re.split(r"\s*(#\w+)\s*", line) if p]
-        for i, part in enumerate(parts):
-            lead = " " if (n == 0 and i == 0 and default) or (part.startswith("#") and (i or n == 0)) else ""
-            if part.startswith("#") and i == 0 and n:   # a line that starts with a tag: no leading space
-                lead = ""
-            speed = "natural" if part.startswith("#") else "instant"
-            await b.call("page_typeText", text=lead + part, clear=False, speed=speed)
-            if part.startswith("#"):
-                await asyncio.sleep(1.2)
-                await b.call("page_pressKey", key="Escape")   # close the suggestion list without picking
-    if default:   # selecting the name with page_selectText deleted the wrong characters; walk from the start
+    parts = [p for p in re.split(r"\s*(#\w+)\s*", text) if p]
+    for i, part in enumerate(parts):
+        lead = " " if (i == 0 and default) or part.startswith("#") else ""
+        tag = part.startswith("#")
+        await b.call("page_typeText", text=lead + part, clear=False, speed="natural" if tag else "fast")
+        if tag:
+            await asyncio.sleep(1.2)
+            await b.call("page_pressKey", key="Escape")
+    if default:
         await b.call("page_focusInput", target={"selector": CAPTION}, caret="start")
         for _ in range(len(default) + 1):   # the file name and the space after it
             await b.call("page_pressKey", key="Delete")
@@ -380,7 +384,7 @@ async def upload_tab(b):
     tabs = [t for t in (await b.call("page_switchTab")).get("tabs", []) if "tiktokstudio/upload" in t.get("url", "")]
     for t in tabs:
         await b.call("page_switchTab", tabId=t["tabId"])
-        if "When to post" not in await b.text():
+        if "Select video" in await b.text() and "When to post" not in await b.text():
             return
     if tabs:
         await b.call("page_switchTab", tabId=tabs[0]["tabId"])
@@ -389,6 +393,17 @@ async def upload_tab(b):
 
 
 async def discard(b):
+    """Drop the draft without leaving the page. If the editor crashed ("Something went wrong" with an
+    in-page "Discard this post?" box), Discard there and then Retry brings back a clean upload screen,
+    still without Chrome's "Leave site?" dialog (checked 28/10/2026)."""
+    text = await b.text()
+    if "Something went wrong" in text:
+        if "Discard this post?" in text:
+            await b.call("page_clickElement", target={"text": "Discard", "role": "button"})
+            await asyncio.sleep(1.5)
+        await b.call("page_clickElement", target={"text": "Retry", "role": "button"})
+        await asyncio.sleep(3)
+        return
     await b.call("page_clickElement", target={"role": "button", "text": "Discard"})
     await b.call("page_waitForElement", target={"text": "Discard this post?"})
     await b.call("page_clickElement", target={"selector": "[role=dialog] button", "text": "Discard"})
@@ -399,7 +414,7 @@ async def create_post(a):
     check_create(a.privacy, a.allow_public)
     tz = tz_of(a.tz)
     when = check_schedule(a.schedule, tz) if a.schedule else None
-    caption = f"{a.marker} {a.caption}".strip()
+    caption = one_paragraph(f"{a.marker} {a.caption}")
     video = Path(a.video).resolve()
     async with browser() as b:
         # Reuse ONE upload tab and never navigate away from it or close it. The upload page keeps a
@@ -407,7 +422,8 @@ async def create_post(a):
         # native "Leave site?" dialog, which blocks the tab: Browsentic cannot answer it.
         await upload_tab(b)
         try:
-            if "When to post" in await b.text():   # a draft from an interrupted run is still open in this tab
+            text = await b.text()
+            if "When to post" in text or "Something went wrong" in text:   # leftover draft / crashed editor
                 await discard(b)
             await b.call("page_waitForElement", target={"text": "Select video"}, timeoutMs=30000)
             # a draft left by an earlier closed tab comes back as "A video you were editing wasn't saved.
