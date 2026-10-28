@@ -195,14 +195,21 @@ async def type_caption(b, text, default=""):
       - the hashtag autocomplete mangles fast typing ("#phatgiao#phatgia#…"), and a tag typed without a
         space in front can be swallowed. Each tag is typed as " #tag" at natural speed."""
     await b.call("page_focusInput", target={"selector": CAPTION}, caret="end")
-    parts = [p for p in re.split(r"\s*(#\w+)\s*", text) if p]
-    for i, part in enumerate(parts):
-        lead = " " if (i == 0 and default) or part.startswith("#") else ""
-        speed = "natural" if part.startswith("#") else "instant"
-        await b.call("page_typeText", text=lead + part, clear=False, speed=speed)
-        if part.startswith("#"):
-            await asyncio.sleep(1.2)
-            await b.call("page_pressKey", key="Escape")   # close the suggestion list without picking
+    # a "\n" inside page_typeText scrambles the editor (lines duplicated / swapped): type line by line
+    # and press a real Enter between lines
+    for n, line in enumerate(text.split("\n")):
+        if n:
+            await b.call("page_pressKey", key="Enter")
+        parts = [p for p in re.split(r"\s*(#\w+)\s*", line) if p]
+        for i, part in enumerate(parts):
+            lead = " " if (n == 0 and i == 0 and default) or (part.startswith("#") and (i or n == 0)) else ""
+            if part.startswith("#") and i == 0 and n:   # a line that starts with a tag: no leading space
+                lead = ""
+            speed = "natural" if part.startswith("#") else "instant"
+            await b.call("page_typeText", text=lead + part, clear=False, speed=speed)
+            if part.startswith("#"):
+                await asyncio.sleep(1.2)
+                await b.call("page_pressKey", key="Escape")   # close the suggestion list without picking
     if default:   # selecting the name with page_selectText deleted the wrong characters; walk from the start
         await b.call("page_focusInput", target={"selector": CAPTION}, caret="start")
         for _ in range(len(default) + 1):   # the file name and the space after it
