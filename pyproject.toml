@@ -13,7 +13,8 @@ dev = ["pytest>=8.0"]
 # Cần cho factory/lunar.py (kênh FS/BUD) và 7 test lịch âm. Tên gói trên PyPI chưa được kiểm.
 lunar = ["vnlunar"]
 # Lệnh tự động hoá trình duyệt `python -m webauto` (docs/webauto.md). Chỉ nạp khi dùng.
-webauto = ["playwright>=1.45", "mcp>=1.2"]
+# pillow + opencv: gỡ dấu ✦ trên ảnh Flow (webauto/imagefix.py). numpy đi theo opencv.
+webauto = ["playwright>=1.45", "mcp>=1.2", "pillow>=10", "opencv-python-headless>=4.10"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

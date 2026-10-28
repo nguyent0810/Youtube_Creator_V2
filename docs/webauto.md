@@ -14,7 +14,7 @@ python -m webauto tiktok list
 ## Cài đặt
 
 ```
-pip install -e ".[webauto]"        # playwright + mcp
+pip install -e ".[webauto]"        # playwright, mcp, pillow, opencv-python-headless
 python -m playwright install chrome   # chỉ khi máy chưa có Chrome
 ```
 
@@ -44,6 +44,9 @@ Tạo ảnh hoặc video trong một dự án Flow mới, tải về `<tên>_<n>
 - `--headless`: chạy không mở cửa sổ Chrome (đã thử 28/10/2026 trên macOS: 1 ảnh Nano Banana Pro 16:9 trong 35 giây, Flow không chặn). Profile phải đã đăng nhập: chạy ẩn thì không chờ đăng nhập mà báo lỗi ngay, khi đó chạy `flow login` rồi thử lại. Profile vẫn bị khoá nếu còn cửa sổ Flow khác đang mở.
 - `--session FILE` (hoặc biến `WEBAUTO_FLOW_SESSION`): dùng phiên đăng nhập đã xuất ra file thay cho profile, dành cho máy chủ không có cửa sổ để đăng nhập. Tạo file trên máy đã đăng nhập bằng `python -m webauto flow export-session --out <file>`; file được ghi quyền chỉ-chủ (600). **File này đăng nhập được Google thay bạn**: không commit, không gửi ai, chép sang máy chủ bằng `scp` rồi `chmod 600`. Phiên hết hạn thì xuất lại.
 - Linux: không có Google Chrome cho ARM, nên trên Linux `flow` dùng Chromium của Playwright (`python -m playwright install chromium`). Đã thử 28/10/2026 trên Oracle Ubuntu 24.04 aarch64: `flow generate --headless --session ...` ra 1 ảnh Nano Banana Pro 16:9 trong 36 giây; phiên trên Mac vẫn đăng nhập sau khi xuất.
+- `--strip-mark {crop,fill,off}` (mặc định `crop`), chỉ ảnh, không đụng video. Gỡ dấu ✦ Gemini ở góc phải dưới. Ảnh vừa tải từ Flow luôn có dấu ở một chỗ: tâm cách mép phải `97/1376` bề rộng và mép dưới `98/768` bề cao, cạnh khoảng `55/1376` bề rộng. `crop` cắt mép phải và mép dưới theo hộp đó, cộng lề an toàn `8/1376` bề rộng mỗi phía, rồi giữ tỉ lệ khung gốc (sai số ≤ 1 px), **kể cả khi không dò thấy dấu**. Nếu dò thấy hộp lớn hơn thì cắt theo hợp của hai hộp. Trên khung 1376×768, hộp là `(1243, 634, 1315, 706)` và ảnh còn 1136×634 (mất 17,44% ngang, 17,45% dọc). `fill` giữ nguyên kích thước và vá bằng inpaint, nhưng chỉ khi dò thấy dấu; không thấy thì in cảnh báo và không sửa file. `off` để nguyên dấu.
+- `--keep-raw`: khi file thực sự đổi, giữ bản vừa tải thành `<tên>_raw.jpg`. `crop` trên ảnh Flow luôn đổi file nên luôn có bản `_raw`. `fill` không thấy dấu thì không tạo file phụ và không ghi đè.
+- Giới hạn: `fill` có thể để vệt nhòe (lối gạch, cạnh nến, nếp lụa). Dấu đè lên mép gỗ hoặc dốc xám–trắng thì `find_mark` thấy; dấu vắt qua khung tranh tối và tường kem thì vẫn không thấy — `crop` vẫn cắt được nhờ hộp cố định, `fill` thì bỏ qua và cảnh báo. `crop` bỏ hẳn mép phải và mép dưới. Gọi cắt lần hai trên ảnh đã cắt sẽ cắt tiếp một góc (dấu không còn ở chỗ cũ); `flow generate` chỉ cắt một lần, ngay sau khi tải. `strip_mark` không gắn cờ ảnh Flow thì giữ hành vi cũ: không thấy dấu thì không sửa. Cần `pillow` và `opencv-python-headless` (có trong extra `webauto`); thiếu thì lệnh dừng và không ghi đè.
 - File prompt: mỗi dòng `tên | prompt` hoặc chỉ `prompt` (đặt tên `001_<tóm-tắt>`), dòng `#` và dòng trống bị bỏ.
 - Flow có thể tính credit (xem dòng "Generating will use N credits" trong popup cài đặt). Video tốn đáng kể: Omni 1.1 Flash 8s x2 báo 24 credit; ảnh Nano Banana 2.1 báo 0 credit; ảnh Nano Banana Pro (mặc định) cũng miễn phí, còn video Omni Flash 8s tốn 10 credit mỗi video (chủ tài khoản xác nhận 28/10/2026).
 
