@@ -30,3 +30,11 @@ Xưởng dựng video YouTube cho kênh CL ("Into The Killer's Mind") và các k
 ## Sự cố 11/10/2026 (lý do có file này)
 
 Một phiên được nhờ "cải thiện" đã dựng bốn Long (escobar, capone, bulger, namcam) trong 100 phút: bỏ bước tư liệu, kịch bản 1.300–2.100 âm tiết (7–11 phút), 94% cảnh là bốn từ đầu câu trên nền đen, rồi đặt lịch public cả bốn. Chủ kênh phải gỡ lịch và làm lại. Tự động hóa việc viết cảnh là mục tiêu đúng, nhưng đầu ra phải qua được `floor.py` và mắt chủ kênh trước khi thành video.
+
+## Ticket (để không quên việc)
+
+Dự án dùng `tk` ([wedow/ticket](https://github.com/wedow/ticket), MIT, bản chép trong `tools/ticket/`). Ticket là file markdown trong `.tickets/`, commit cùng repo.
+
+- Đầu phiên: `bash tools/ticket/tk ready` (việc đang mở, đã hết phụ thuộc).
+- Việc kéo dài hơn một phiên hoặc có mốc ngày: `bash tools/ticket/tk create "<tiêu đề>" -p <0-4> --tags <...> -d "..." --acceptance "..."`.
+- Tiến độ: `tk add-note <id> "..."`; xong: `tk close <id>`. Lệnh `ls`/`query` là plugin, cần `PATH="$PWD/tools/ticket:$PATH"`.
