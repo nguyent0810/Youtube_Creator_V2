@@ -153,7 +153,7 @@ def media_srcs(page):
         "img[data-media-id], video[data-media-id]", "els => els.map(e => [e.dataset.mediaId, e.currentSrc || e.src])"))
 
 
-def generate_images(page, prompt, out, tag, timeout_s=240):
+def generate_images(page, prompt, out, tag, timeout_s=240, strip_mark="crop", keep_raw=False):
     before = media_srcs(page)
     page.click(EDITOR)
     page.fill(EDITOR, prompt)
@@ -169,10 +169,36 @@ def generate_images(page, prompt, out, tag, timeout_s=240):
                 ext = ".jpg" if "jpeg" in resp.headers.get("content-type", "") else ".png"
                 f = out / f"{tag}_{n}_{mid[:8]}{ext}"
                 f.write_bytes(resp.body())
-                saved.append(f)
+                saved.append(finish_image(f, strip_mark, keep_raw))
             return saved
         time.sleep(2)
     raise TimeoutError("no new image appeared")
+
+
+def finish_image(path, mode="crop", keep_raw=False):
+    """Drop the corner sparkle on a file just downloaded.
+
+    `off` does nothing. `fill` / `crop` are `imagefix.strip_mark` with
+    `known_flow` set, because a fresh Flow download always has the sparkle
+    in the fixed corner. `crop` therefore cuts that corner even when the
+    detector misses it. `fill` still skips (and warns) when nothing is
+    detected. With `keep_raw`, the untouched bytes are also written as
+    `<stem>_raw<suffix>`, and only when the file actually changed.
+    """
+    path = Path(path)
+    if mode == "off":
+        return path
+    original = path.read_bytes()
+    try:
+        from .imagefix import strip_mark as _strip
+    except ImportError as e:
+        raise SystemExit(
+            "flow --strip-mark needs pillow and opencv-python-headless "
+            "(pip install -e '.[webauto]')") from e
+    _strip(path, mode, known_flow=True)
+    if keep_raw and path.read_bytes() != original:
+        path.with_name(path.stem + "_raw" + path.suffix).write_bytes(original)
+    return path
 
 
 def generate_video(page, prompt, out, tag, quality="720p", timeout_s=900):
@@ -202,10 +228,12 @@ def generate_video(page, prompt, out, tag, quality="720p", timeout_s=900):
 
 
 def generate(prompts, out, mode="image", model=None, count=1, duration=6, ratio=None, res=None,
-             quality="720p", image=None, timeout=None, headless=False, session=None):
+             quality="720p", image=None, timeout=None, headless=False, session=None, strip_mark="crop",
+             keep_raw=False):
     """Generate for each (stem, prompt) in `prompts` inside one new Flow project; return saved files.
 
     `image` (video mode only) is uploaded once as the start frame, so every prompt animates that image.
+    `strip_mark` applies to images only (`crop` by default, or `fill` / `off`). Videos are saved as downloaded.
     """
     if image and mode != "video":
         raise SystemExit("--image needs --mode video")
@@ -227,7 +255,7 @@ def generate(prompts, out, mode="image", model=None, count=1, duration=6, ratio=
                     if mode == "video":
                         got = generate_video(page, prompt, out, stem, quality, timeout or 900)
                     else:
-                        got = generate_images(page, prompt, out, stem, timeout or 240)
+                        got = generate_images(page, prompt, out, stem, timeout or 240, strip_mark, keep_raw)
                 except TimeoutError:
                     (out / "fail.html").write_text(page.content(), encoding="utf-8")
                     try:
@@ -266,10 +294,17 @@ def add_parser(sub):
     g.add_argument("--headless", action="store_true", help="no Chrome window (the profile must be signed in already)")
     g.add_argument("--session", help="session file from `flow export-session` instead of the profile "
                    "(default: WEBAUTO_FLOW_SESSION)")
+    g.add_argument("--strip-mark", choices=["crop", "fill", "off"], default="crop",
+                   help="images only: remove the Gemini sparkle (crop=cut the fixed right and "
+                        "bottom corner, even if detection misses, keeping aspect; fill=inpaint "
+                        "only when the sparkle is detected, otherwise warn and leave the file; "
+                        "off=leave it). Default crop")
+    g.add_argument("--keep-raw", action="store_true",
+                   help="also keep the untouched download as *_raw.jpg when a sparkle was removed")
     g.set_defaults(func=_run_generate)
 
 
 def _run_generate(a):
     prompts = [("p1", a.prompt)] if a.prompt else parse_prompts(a.prompts_file)
     generate(prompts, a.out, a.mode, a.model, a.count, a.duration, a.ratio, a.res, a.quality, a.image, a.timeout,
-             a.headless, a.session)
+             a.headless, a.session, strip_mark=a.strip_mark, keep_raw=a.keep_raw)
