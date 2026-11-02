@@ -18,3 +18,7 @@ Mọi khoản tiền, số dịp và phân bổ tháng của chị Hà đều l�
 | Một phong bì 500 nghìn trên lương 12 triệu là 4,17%. | VÍ DỤ GIẢ ĐỊNH; phép tính tái lập trong `analysis.py` và `check.py`. |
 | Lịch giả định có 14 dịp; bốn tháng không phát sinh khoản là tháng một, ba, sáu và chín. | VÍ DỤ GIẢ ĐỊNH; lịch tháng và tổng sự kiện được tái lập trong `analysis.py` và `check.py`. |
 | Bỏ một phong bì lì xì 200 nghìn làm nhóm dịp khác từ 2,1 còn 1,9 triệu; thay một đám bạn thân làm cột này từ 1,4 còn 0,7 triệu. | VÍ DỤ GIẢ ĐỊNH; phép tính trực tiếp từ bộ số trong `facts.md`, tái lập trong `analysis.py` và `check.py`. |
+| Lì xì là 0,8 triệu đồng (4 phong bì × 200 nghìn). | VÍ DỤ GIẢ ĐỊNH; `facts.md` #19. |
+| Ba dịp còn lại là 1,3 triệu đồng, gồm 500 nghìn, 300 nghìn và 500 nghìn đồng. | VÍ DỤ GIẢ ĐỊNH; `facts.md` #20. |
+| Ba đám đồng nghiệp là 1,5 triệu đồng (3 × 500 nghìn). | VÍ DỤ GIẢ ĐỊNH; `facts.md` #15. |
+| Cộng dồn tới tháng 8 là 2,8 triệu đồng. | VÍ DỤ GIẢ ĐỊNH; bảng biểu đồ mục 1–6 trong `facts.md`. |

@@ -25,6 +25,7 @@ import sys
 import time
 import urllib.parse
 import urllib.request
+from datetime import datetime
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -47,9 +48,13 @@ BLD.ANCHORS |= {"sumAt", "zeroAt", "titleAt", "hAt", "countAt", "hitAt", "typeAt
                 "truthAt", "sealAt", "litAt"}   # lab.js qr/flap (12/10/2026)      # mốc riêng của cảnh video dài (breadth/basket theme chart; strikeAt: fx strike)
 BLD.ANCHOR_LISTS |= {"flips", "readAt"}
 import floor  # noqa: E402
+import branch_gate  # noqa: E402
 import lint_html  # noqa: E402
 import sfx_long  # noqa: E402
 import chartdata  # noqa: E402
+import scene_params  # noqa: E402
+import clip_sheet  # noqa: E402
+import img_sheet  # noqa: E402
 
 # ffmpeg: FFMPEG_DIR, rồi bản vendor của máy sản xuất, rồi ffmpeg trong PATH (máy khác).
 _FF_VENDOR = r"C:\Tools\Youtuber\video-editor\vendor\ffmpeg"
@@ -71,6 +76,25 @@ _engine = None
 
 def paths(topic):
     return ROOT / "data" / "long" / topic, ROOT / "output" / "long" / topic
+
+
+def _refuse_unreviewed_sheets(topic):
+    """Dấu QA chỉ hợp lệ khi đúng với ảnh/clip mà scenes hiện đang dùng."""
+    data, out = paths(topic)
+    checks = (("clip", clip_sheet.clip_uses(data), clip_sheet.uses_hash, clip_sheet.ok_path(out),
+               f"python motion/long/clip_sheet.py {topic}"),
+              ("ảnh", img_sheet.image_uses(data), img_sheet.uses_hash, img_sheet.ok_path(out),
+               f"python motion/long/img_sheet.py {topic}"))
+    problems = []
+    for kind, uses, hash_fn, mark, command in checks:
+        if not uses:
+            continue
+        actual = mark.read_text(encoding="utf-8").strip() if mark.exists() else ""
+        if actual != hash_fn(uses):
+            state = "thiếu dấu" if not actual else "dấu đã cũ (cảnh đã đổi sau khi soát)"
+            problems.append(f"{kind}: {state}. Chạy `{command}`, mở tờ soát, rồi chạy `{command} --ok`.")
+    if problems:
+        raise SystemExit("chặn render: chưa soát asset\n  " + "\n  ".join(problems))
 
 
 SAY_EXACT = {}
@@ -613,6 +637,12 @@ def ledger_overflow(scenes, theme) -> list[str]:
     for k, sc in enumerate(scenes):
         if sc["type"] != "ledger":
             continue
+        # The ledger has no clipping boundary of its own.  A row that reaches
+        # #caps hides the subtitles even when every individual row fits.
+        row_h, row_limit, caps_top = scene_params.LEDGER_LIMITS.get(theme, scene_params.LEDGER_LIMITS["default"])
+        row_count = len(sc.get("rows") or []) + (1 if sc.get("total") else 0)
+        if row_count > row_limit:
+            out.append(f"ledger#{k} {row_count} dòng (rows + total) > {row_limit} (row {row_h}px, #caps y={caps_top}px)")
         for r in [*sc.get("rows", []), *([{**sc["total"], "tot": True}] if sc.get("total") else [])]:
             f = fst if r.get("tot") else fs
             w = (max(len(str(r.get("k", ""))) * 0.6, kmin) + len(str(r.get("v", ""))) * 0.6) * f + gap
@@ -686,12 +716,29 @@ def first_delay(s: dict) -> float | None:
     return d
 
 
-def late_first(scenes: list[dict], ch: str = "") -> list[str]:
+def late_first(scenes: list[dict], ch: str = "", child_deadline: bool = True) -> list[str]:
     """Cảnh trống đầu: [chương, chỉ số cảnh, loại, độ trễ]. Counter: số đứng yên ở giá trị `from` (vd. "+0%") tới lúc đếm
     -> sai nghĩa dù có nền (retro 2 mục 3), nên soi cả khi có ảnh/clip."""
     out = []
+    children = {
+        "org": "nodes", "timeline": "items", "ledger": "rows", "file": "rows",
+        # Kinetic lines are deliberately sequential narration, unlike the
+        # independently meaningful children below.
+        "dots": "groups", "board": "pins", "sticker": "items",
+        "memorial": "names", "evidence": "callouts", "pizzini": "notes",
+        "map": "pins", "split": None,
+    }
     for i, s in enumerate(scenes):
         ty = s.get("type", "?")
+        field = children.get(ty)
+        parts = list(s.get(field) or []) if field else ([s.get("a"), s.get("b")] if ty == "split" else [])
+        if ty == "ledger" and s.get("total"):
+            parts.append(s["total"])
+        if child_deadline and len(parts) >= 2:
+            second = parts[1]
+            at = second.get("at") if isinstance(second, dict) else None
+            if isinstance(at, (int, float)) and not isinstance(at, bool) and at - s["t0"] > LATE_MAX:
+                out.append(f"{ch} cảnh {i} {ty}: phần tử con thứ hai hiện sau {at - s['t0']:.1f}s — phải <= {LATE_MAX:.1f}s")
         if ty == "counter":
             d = s.get("at", s["t0"]) - s["t0"]
             if d > LATE_MAX:
@@ -719,7 +766,10 @@ def late_report(topic, only=None) -> list[str]:
             out.append(f"{name}: THIẾU data.js — `html` chưa dựng được chương này (xem lỗi của lệnh html)")
             continue
         case = json.loads(f.read_text(encoding="utf-8").split("=", 1)[1].strip().rstrip(";"))
-        out += late_first(case["scenes"], name)
+        # Existing rendered data is kept as a baseline for the historical
+        # blank-screen lint.  The stricter child rhythm gate is enforced in
+        # do_html on every newly planned chapter.
+        out += late_first(case["scenes"], name, child_deadline=False)
         if BEAT2["on"]:      # beat2: cả dòng CHÍNH cũng phải hiện sớm (late_first chỉ nhìn phần tử đầu tiên)
             from beatfx import light_start, overflow_lines
             out += light_start(case["scenes"], name)
@@ -879,8 +929,9 @@ def _refuse_craft(topic: str, spec: dict, chs) -> None:
 
 
 def _refuse_floor(topic: str, chs) -> None:
-    """Sàn sản xuất (floor.py): độ dài kịch bản, ảnh, b-roll, độ đa dạng cảnh. Áp cho mọi topic."""
-    bad = floor.problems(chs)
+    """Sàn sản xuất theo kênh; render thật/final không được bỏ qua kênh nào."""
+    spec = json.loads((paths(topic)[0] / "spec.json").read_text(encoding="utf-8"))
+    bad = floor.problems(chs, spec.get("channel", "CL"), topic)
     if bad:
         raise SystemExit(f"floor ({topic}): video này kém các Long đã đăng, không dựng bản thật:\n  " + "\n  ".join(bad))
 
@@ -888,6 +939,17 @@ def _refuse_floor(topic: str, chs) -> None:
 def do_html(topic, only=None):
     _refuse_html_lint(topic, only)   # chặn trước khi tải ảnh và trộn tiếng
     spec, chs, od = load(topic)
+    # ``plan()`` resolves cue aliases (hitAt/typeAt/countAt) before the engine
+    # sees a scene. At this point only check image declarations; the complete
+    # scene contract runs below on each planned scene.
+    source_check = scene_params.validate_topic(
+        ((name, ch.get("scenes") or []) for name, ch in chs if not only or name in only),
+        spec.get("imgs") or {}, THEME["name"], check_scenes=False,
+    )
+    if source_check["errors"]:
+        raise SystemExit("tham số cảnh:\n  " + "\n  ".join(source_check["errors"]))
+    for warning in source_check["warnings"]:
+        print(f"  ! WARNING tham số cảnh: {warning}", flush=True)
     _refuse_craft(topic, spec, chs)
     durs = {}
     for name, ch in chs:
@@ -926,6 +988,14 @@ def do_html(topic, only=None):
             scenes.append({"type": "endcard", "t0": d, "t1": d + ec, "bg": spec.get("endcardBg"),
                            "sub": spec.get("endcardSub", None if THEME["name"] == "lab" else "HỒ SƠ TIẾP THEO")})
             d = d + ec
+        planned_check = scene_params.validate_topic([(name, scenes)], None, THEME["name"])
+        if planned_check["errors"]:
+            raise SystemExit("tham số cảnh:\n  " + "\n  ".join(planned_check["errors"]))
+        for warning in planned_check["warnings"]:
+            print(f"  ! WARNING tham số cảnh: {warning}", flush=True)
+        late = late_first(scenes, name)
+        if late:
+            raise SystemExit("nhịp cảnh:\n  " + "\n  ".join(late))
         vids = []
         for k, s in enumerate(scenes):
             if s.get("vid"):
@@ -1073,6 +1143,9 @@ def render_key(topic, name, od, draft) -> str:
 
 
 def do_render(topic, only=None, draft=False, force=False):
+    if not draft:
+        branch_gate.refuse(ROOT)  # bản nháp chỉ để soi cảnh, không cần nhánh đã đồng bộ
+    _refuse_unreviewed_sheets(topic)  # áp dụng cả --draft: tờ soát phải đi trước mọi pixel render
     _refuse_html_lint(topic, only)   # không render 70 phút một bản html đã biết là hỏng
     spec, chs, od = load(topic)
     if not draft:
@@ -1120,7 +1193,27 @@ def cmd_render(topic, only=None, rest=()):
         do_render(topic, only, draft="--draft" in rest, force="--force" in rest)
 
 
+def _write_final_commit(od: Path) -> None:
+    """Ghi dấu QA của bản final sau khi video và phụ đề đều đã hoàn tất."""
+    try:
+        head = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True,
+                              text=True, encoding="utf-8", errors="replace")
+        status = subprocess.run(["git", "status", "--porcelain"], cwd=ROOT, capture_output=True,
+                                text=True, encoding="utf-8", errors="replace")
+    except OSError as e:
+        raise SystemExit(f"final: không đọc được Git: {e}")
+    if head.returncode != 0 or status.returncode != 0 or not head.stdout.strip():
+        detail = (head.stderr or status.stderr or head.stdout or status.stdout).strip()
+        raise SystemExit(f"final: không đọc được Git{': ' + detail if detail else ''}")
+    stamp = datetime.now().astimezone().isoformat(timespec="seconds")
+    (od / "final.commit").write_text(
+        f"commit: {head.stdout.strip()}\nworking_tree: {'dirty' if status.stdout.strip() else 'clean'}\ncreated_at: {stamp}\n",
+        encoding="utf-8")
+
+
 def do_final(topic):
+    branch_gate.refuse(ROOT)
+    _refuse_unreviewed_sheets(topic)
     spec, chs, od = load(topic)
     _refuse_floor(topic, chs)
     _refuse_craft(topic, spec, chs)
@@ -1134,20 +1227,25 @@ def do_final(topic):
         r = run([FFMPEG, "-v", "error", "-y", "-i", str(od / n / "mix.wav"), "-af", af, "-t", f"{vd:.6f}", str(od / n / "mixpad.wav")])
         if r.returncode != 0:
             raise SystemExit(r.stderr[-1500:])
-    # 23/10/2026: lint âm thanh TRƯỚC khi ghép (docs/pm/2026-10-22-cl-am-thanh-set-set.md S4): CL vượt ngưỡng -> chặn, kênh khác cảnh báo
+    # Kỹ thuật (cạnh nối/clip) hỏng thì mọi kênh đều chặn; buzz giọng giữ ngưỡng CL
+    # vì chúng được hiệu chuẩn cho bộ lọc giọng CL, MIM/CK chỉ nhận cảnh báo cùng số đo.
     import audio_lint as AL
-    block = spec.get("channel", "CL") == "CL"
     try:
-        err = AL.check_parts([od / n / "mixpad.wav" for n, _ in chs], [od / n / "sfx.wav" for n, _ in chs if (od / n / "sfx.wav").exists()])
+        technical = AL.check_parts([od / n / "mixpad.wav" for n, _ in chs], [od / n / "sfx.wav" for n, _ in chs if (od / n / "sfx.wav").exists()])
+    except Exception as e:      # công cụ đo kỹ thuật hỏng: không xuất final không kiểm được
+        AL.report(topic, [f"không đo được kỹ thuật: {e}"], [], True)
+    AL.report(topic, technical, [], True)
+    voice_block = spec.get("channel", "CL") == "CL"
+    try:
         verr, vwarn, _ = AL.check_voices([(n, od / n / "voice.wav") for n, _ in chs],
                                          CHAN.get("voice_fx", VOICE_FX) if spec.get("master", True) else None, FFMPEG)
-    except Exception as e:      # noqa: BLE001 — công cụ đo hỏng: CL chặn, kênh khác chỉ cảnh báo
-        if block:
-            raise
-        err, verr, vwarn = [], [], [f"không đo được: {e}"]
+    except Exception as e:      # đo buzz chỉ là cổng giọng CL; MIM/CK vẫn xuất kèm cảnh báo
+        if voice_block:
+            AL.report(topic, [f"không đo được buzz giọng: {e}"], [], True)
+        verr, vwarn = [], [f"không đo được buzz giọng: {e}"]
     if not spec.get("master", True):   # "master": false (Yakuza) = cố ý giữ giọng thô -> buzz chỉ cảnh báo
         vwarn, verr = vwarn + verr, []
-    AL.report(topic, err + verr, vwarn, block)
+    AL.report(topic, verr, vwarn, voice_block)
     alst = od / "concat_a.txt"
     alst.write_text("".join(f"file '{(od / n / 'mixpad.wav').as_posix()}'\n" for n, _ in chs), encoding="utf-8")
     r = run([FFMPEG, "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(lst), "-f", "concat", "-safe", "0", "-i", str(alst),
@@ -1156,11 +1254,23 @@ def do_final(topic):
              "-shortest", "-movflags", "+faststart", str(od / "final.mp4")])
     if r.returncode != 0:
         raise SystemExit(r.stderr[-2000:])
-    ferr, fm = AL.check_final(od / "final.mp4", FFMPEG)   # 23/10/2026: true peak ≤ −1 dBTP sau AAC
+    try:
+        ferr, fm = AL.check_final(od / "final.mp4", FFMPEG)   # true peak ≤ −1 dBTP sau AAC
+    except Exception as e:
+        (od / "final.mp4").unlink(missing_ok=True)
+        AL.report(topic, [f"không đo được final sau AAC: {e}"], [], True)
     print(f"  audio_lint: true peak {fm['tp']} dBTP, {fm['lufs']} LUFS", flush=True)
-    if ferr and block:
+    if ferr:
         (od / "final.mp4").unlink(missing_ok=True)   # chặn thì không để final hỏng nằm lại cho chuỗi đăng (như 15/10)
-    AL.report(topic, ferr, [], block)
+    AL.report(topic, ferr, [], True)
+    # Phụ đề là đầu ra bắt buộc của final; srt.py lỗi phải làm final lỗi thay vì
+    # để publish phát hiện muộn sau khi video đã ghép xong.
+    r = run([sys.executable, str(ROOT / "motion" / "long" / "srt.py"), topic])
+    if r.returncode != 0:
+        raise SystemExit((r.stderr or r.stdout)[-2000:])
+    if not (od / "captions.vi.srt").exists():
+        raise SystemExit("srt.py không tạo captions.vi.srt")
+    _write_final_commit(od)
     print(od / "final.mp4", f"{probe_dur(od / 'final.mp4') / 60:.2f} phút")
 
 
@@ -1179,9 +1289,9 @@ if __name__ == "__main__":
         do_html(topic, only)
         for x in variety.audit(topic):
             print("  ! variety:", x)
-        _chs = load(topic)[1]
+        _spec, _chs, _ = load(topic)
         print("  floor:", floor.report(_chs))
-        for x in floor.problems(_chs):
+        for x in floor.problems(_chs, _spec.get("channel", "CL"), topic):
             print("  ! floor:", x)
     elif cmd == "render":
         cmd_render(topic, only, rest)
@@ -1191,6 +1301,8 @@ if __name__ == "__main__":
     elif cmd == "pick":
         do_pick(topic)
     elif cmd == "final":
+        branch_gate.refuse(ROOT)  # trước khi xoá final cũ hoặc bắt đầu ghép
+        _refuse_unreviewed_sheets(topic)  # không xoá final cũ chỉ vì dấu QA còn thiếu/cũ
         # 15/10/2026: final hỏng ở bước audit mà final.mp4 cũ còn đó -> chuỗi vẫn QA/đăng bản cũ (MIM game). Xoá trước.
         (ROOT / "output" / "long" / topic / "final.mp4").unlink(missing_ok=True)
         bad = variety.audit(topic)

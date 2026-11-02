@@ -47,6 +47,8 @@ def mim_lines(spec, meta, chapters, used, vids, music, od):
     pd = 0
     for k in sorted(used):
         f = spec["imgs"][k]
+        if str(f).startswith("EXT:ai:"):   # 29/10: ảnh AI (Grok Bot) không ghi công, không đếm vào "phạm vi công cộng"
+            continue
         m = json.loads((od / "img" / f"{k}.json").read_text(encoding="utf-8"))
         if m["license"].lower().startswith(("public", "pd", "cc0", "no restr")):
             pd += 1
@@ -63,26 +65,25 @@ def mim_lines(spec, meta, chapters, used, vids, music, od):
     users = sorted({idx[v]["user"] for v in vids if v in idx})
     if vids:   # 23/10/2026: chỉ ghi dòng Pexels khi video thật sự có clip Pexels
         L += ["", "🎬 VIDEO: Pexels (pexels.com), giấy phép Pexels" + (" — quay bởi " + ", ".join(users) if users else "")]
-    L += ["", "🎵 NHẠC NỀN"]
     mac = [b for b in music if b in MUSIC]
+    if music:
+        L += ["", "🎵 NHẠC NỀN"]
     if mac:
         L.append(", ".join(f"\"{MUSIC[b]}\"" for b in mac) + " by Kevin MacLeod (incompetech.com)")
         L.append("Licensed under Creative Commons: By Attribution 4.0 License — http://creativecommons.org/licenses/by/4.0/")
     L += ["", FOOTER.get(ch, ""), "", " ".join("#" + x for x in meta.get("hashtags", []))]
-    i = L.index(SRC_SLOT)
-    rest = len("\n".join(L[:i] + L[i + 1:]))
-    return L[:i] + fit_sources(meta.get("sources", []), DESC_CAP - rest) + L[i + 1:]
+    return sources_for_description(L, meta.get("sources", []))
 
 
 SRC_SLOT = object()
-DESC_CAP = 4900   # YouTube: mô tả tối đa 5000 ký tự (Bundle.validate chặn) -- chừa lề
+DESC_CAP = 5000   # YouTube: mô tả tối đa 5.000 byte; chỉ rút nguồn khi thực sự vượt ngưỡng
 
 
 def fit_sources(src: list[str], budget: int) -> list[str]:
     """Danh sách nguồn vừa ngân sách ký tự của mô tả (D1 07/10/2026: 32 nguồn = 5.079 ký tự -> mô tả 8.199 > 5.000, upload
     bị chặn). Thứ tự: đủ nguyên văn -> bỏ tên bài ("Báo dd/mm — tên bài: URL" -> "Báo dd/mm: URL") -> giữ các nguồn đầu (spec
     xếp theo thứ tự xuất hiện) + một dòng nói phần còn lại ghi trên màn hình ở từng cảnh."""
-    size = lambda xs: len("\n".join(xs)) + 1
+    size = lambda xs: len(("\n".join(xs) + "\n").encode("utf-8"))
     if size(src) <= budget:
         return list(src)
     short = [re.sub(r"^(.+?) — .+?: (https?://\S+)$", r"\1: \2", x) for x in src]
@@ -95,6 +96,21 @@ def fit_sources(src: list[str], budget: int) -> list[str]:
             return out + [f"…và {len(short) - k} nguồn khác: tên báo và ngày đăng ghi trên màn hình ở từng cảnh."]
         out.append(x)
     return out
+
+
+def sources_for_description(lines: list, src: list[str], limit: int = DESC_CAP) -> list:
+    """Chỉ rút nguồn khi *toàn bộ* mô tả vượt 5.000 byte.
+
+    Nhờ vậy mọi nguồn (đặc biệt nguồn được nêu thẳng trong lời đọc) giữ nguyên
+    trong mô tả bình thường; fit_sources chỉ là phương án khi YouTube sẽ từ chối.
+    """
+    i = lines.index(SRC_SLOT)
+    full = lines[:i] + list(src) + lines[i + 1:]
+    if len(("\n".join(full).strip() + "\n").encode("utf-8")) <= limit:
+        return full
+    fixed = lines[:i] + lines[i + 1:]
+    budget = limit - len(("\n".join(fixed).strip() + "\n").encode("utf-8"))
+    return lines[:i] + fit_sources(src, max(0, budget)) + lines[i + 1:]
 
 
 LIMIT = 4900   # YouTube cắt mô tả ở 5.000 byte; tiếng Việt có dấu tốn 2–3 byte mỗi ký tự
@@ -129,13 +145,15 @@ def main(topic, shrink=0):
         chapters.append(f"{int(t // 60):02d}:{int(t % 60):02d} {title}")
         t += json.loads((od / c / "timing.json").read_text(encoding="utf-8"))["duration"]
     lines = [meta.get("summary", ""), "", *meta.get("more", []), "", "⏱ CHƯƠNG", *chapters, "", "📚 NGUỒN THAM KHẢO (Wikipedia tiếng Anh và các nguồn được trích trong đó)",
-             *meta.get("sources", [])[:8], "và các bài Wikipedia liên quan.", "",
+             SRC_SLOT, "và các bài Wikipedia liên quan.", "",
              "Lời dẫn là bản viết mới dựa trên tư liệu công khai; những câu có nhãn DIỄN Ý là diễn đạt lại, không phải nguyên văn.",
              "Hình ảnh/video có nhãn MINH HỌA chỉ mang tính minh họa bối cảnh.", "", "🖼 ẢNH (Wikimedia Commons và các kho tư liệu mở)"]
     pd, bylic, pdsrc = 0, {}, set()
     INST = {"wellcome": "Wellcome Collection", "artic": "Art Institute of Chicago"}
     for k in sorted(used):
         f = spec["imgs"][k]
+        if str(f).startswith("EXT:ai:"):   # 29/10: ảnh AI không ghi công, không đếm vào "phạm vi công cộng"
+            continue
         mp = od / "img" / f"{k}.json"
         m = json.loads(mp.read_text(encoding="utf-8"))
         if m["license"].lower().startswith(("public", "pd", "cc0", "no restr")):
@@ -159,8 +177,10 @@ def main(topic, shrink=0):
         bylic = {lic: [a + (f" ({v.count(a)} ảnh)" if v.count(a) > 1 else "") for a in dict.fromkeys(v)] for lic, v in bylic.items()}
     lines += [f"• {lic}: " + "; ".join(v) for lic, v in sorted(bylic.items())]   # gom theo giấy phép: đủ tác giả + giấy phép, ít byte hơn
     lines += [f"• Và {pd} ảnh tư liệu thuộc phạm vi công cộng (Public domain / CC0)" + (f", gồm ảnh từ {', '.join(sorted(pdsrc))}." if pdsrc else "."), "",
-              "🎬 VIDEO B-ROLL: Pexels (pexels.com) — giấy phép Pexels, dùng tự do.", "", "🎵 NHẠC NỀN"]
+              "🎬 VIDEO B-ROLL: Pexels (pexels.com) — giấy phép Pexels, dùng tự do."]
     mac = [b for b in music if b in MUSIC]
+    if music:
+        lines += ["", "🎵 NHẠC NỀN"]
     if mac:
         lines.append(", ".join(f"\"{MUSIC[b]}\"" for b in mac) + " by Kevin MacLeod (incompetech.com)")
         lines.append("Licensed under Creative Commons: By Attribution 4.0 License — http://creativecommons.org/licenses/by/4.0/")
@@ -173,6 +193,8 @@ def main(topic, shrink=0):
     lines += ["", " ".join("#" + x for x in meta.get("hashtags", []))]
     if mim:
         lines = mim_lines(spec, meta, chapters, used, vids, music, od)
+    else:
+        lines = sources_for_description(lines, meta.get("sources", []), LIMIT)
     text = "\n".join(lines).strip() + "\n"
     if not mim and len(text.encode("utf-8")) > LIMIT and shrink < 8:
         return main(topic, shrink + 1)

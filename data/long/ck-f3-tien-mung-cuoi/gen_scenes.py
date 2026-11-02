@@ -91,7 +91,7 @@ CH["ch05"] = {"hud": {"k": "CHƯƠNG 05", "t": "BẢY DỊP KHÔNG PHẢI CƯỚ
     bars(2, "BỐN KHOẢN KHÁC", [{"k": "LÌ XÌ", "v": .8, "lbl": "0,8", "at": 2}, {"k": "TÂN GIA", "v": .5, "lbl": "0,5", "at": 2}, {"k": "ĐẦY THÁNG", "v": .3, "lbl": "0,3", "at": 2}, {"k": "ĐÁM HIẾU", "v": .5, "lbl": "0,5", "at": 2}], 0),
     {"type": "counter", "at": 5, "from": 0, "to": R["other_total_million"], "suffix": " TRIỆU", "label": "BẢY DỊP KHÁC", "calls": [{"i": 0, "text": "2,1 TRIỆU", "at": 5}]},
     {"type": "broll", "vid": VIDS[5], "at": 9, "veil": .55, "illus": VM}, heat(13, 8, "LỊCH CÁC DỊP KHÁC", [{"i": 1, "text": "0,8 TRIỆU", "at": 13}]),
-    {"type": "ledger", "at": 15, "title": "CÁC SỐ HẠNG", "rows": [{"k": "0,8", "v": "LÌ XÌ", "at": 15}, {"k": "1,3", "v": "BA DỊP CÒN LẠI", "at": 15}]},
+    {"type": "ledger", "at": 15, "title": "CÁC SỐ HẠNG", "rows": [{"k": "0,8 TRIỆU", "v": "LÌ XÌ", "at": 15}, {"k": "1,3 TRIỆU", "v": "BA DỊP CÒN LẠI", "at": 15}]},
     bars(16, "CƯỚI VÀ DỊP KHÁC", [{"k": "CƯỚI", "v": 3.5, "lbl": "3,5", "at": 16}, {"k": "DỊP KHÁC", "v": 2.1, "lbl": "2,1", "at": 16}], 1),
     {"type": "question", "at": 20, "text": "Hai nhóm ghép lại\nra con số nào?"}, {"type": "kinetic", "at": 24, "items": [{"text": "TRỞ LẠI TỔNG NĂM", "at": 24, "acc": True}]}
 ]}

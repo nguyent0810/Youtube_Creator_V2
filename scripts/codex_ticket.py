@@ -101,7 +101,7 @@ def main() -> int:
     env = {**os.environ, "PYTHONIOENCODING": "utf-8"}
     env.pop("YT_CREDS_DIR", None)                    # Codex không bao giờ thấy credential YouTube
     with open(log, "w", encoding="utf-8") as fh:
-        r = subprocess.run(cmd, stdout=fh, stderr=subprocess.STDOUT, env=env, cwd=ROOT)
+        r = subprocess.run(cmd, stdin=subprocess.DEVNULL, stdout=fh, stderr=subprocess.STDOUT, env=env, cwd=ROOT)  # 02/11/2026: không để codex chờ stdin
     full = log.read_text(encoding="utf-8", errors="replace")
     tail = full[-6000:]
     m = re.findall(r"tokens used\s*\n\s*([\d,\.]+)", full)

@@ -2,6 +2,15 @@
 
 Đọc cùng `docs/codex/long-cheatsheet.md`.
 
+## Engine của Long (ghi 02/11/2026, retro Jobs 1985)
+
+- Mọi cảnh Long (mọi kênh) do `motion/hf/assets/engine/casewide.js` dựng, **không** phải `longform.js` hay `engine.js`. Khi so tham số hoặc hành vi thì đọc casewide.js. `build_long.py` nhúng file này vào HTML.
+- Cảnh `print` chỉ vẽ `side.k`, `side.h` và `side.lines`. Trường `head` bị bỏ qua, nên tiêu đề biến mất. Đặt tiêu đề chính vào `side.h`.
+- `maxW` / `maxH` tính bằng **pixel** (mặc định 760 / 700). Giá trị như 0.52 làm ảnh co thành một chấm.
+- `pos` là chuỗi CSS, ví dụ `"50% 14%"`, không phải mảng.
+- Engine không kiểm tra trường. Sai kiểu hoặc khoá lạ bị bỏ qua im lặng, nên mọi thay đổi phải kiểm trên khung hình. Cổng cho việc này đang được thêm ở issue #23.
+- Sau `build_long.py <topic> final` phải có phụ đề: chạy `python motion/long/srt.py <topic>` để ra `output/long/<topic>/captions.vi.srt`. `publish_long.py` từ chối nếu thiếu file này. Việc để `final` tự chạy bước này là issue #25.
+
 ### Ảnh AI khi không có ảnh tự do (từ 26/10/2026)
 
 Cảnh cần minh hoạ mà không có ảnh PD/CC0/CC BY (ví dụ cảnh trong phòng làm việc năm 1962, hay một vật đã mất) thì **không tự tạo ảnh**. Ghi prompt vào `data/long/<topic>/ai_prompts.md` để chủ kênh nhờ bot tạo.
@@ -51,6 +60,14 @@ Các bước:
 8. Dựng thumbnail `motion/long/thumbs/<topic>_t1.html`, rồi chạy `python motion/long/thumb.py <topic> t1`.
 
 ### Cổng chất lượng (bắt buộc, từ 26/10/2026)
+
+- **A4:** phần tử con thứ hai phải hiện không quá 1 giây sau khi cảnh mở.
+- **A7:** mọi cảnh dài từ 2,5 đến 9 giây; đây là lỗi chặn ở bước `html`.
+- **A8:** mỗi ảnh dùng không quá 3 lần. Ảnh khai trong `spec.imgs` mà không có cảnh nào dùng là lỗi.
+- **A9:** số dòng `ledger` bị giới hạn theo theme; tính cả `total` nếu có.
+- **A10:** phải chạy `img_sheet.py` và `clip_sheet.py`, xem tờ soát rồi mới chạy lại từng lệnh với `--ok`. `render` và `final` bị chặn nếu thiếu dấu hoặc dấu cũ vì cảnh đã đổi.
+- **A11:** `factcheck.md` dùng bảng theo chương: `| CHNN | khẳng định có số/ngày/tên | nguồn/URL đã mở |`. Mục `[TRÍCH DỊCH]` ghi thêm nguyên văn tiếng gốc. `publish_long.py` chặn khi cổng factcheck còn lỗi.
+- **A12:** trước `render` bản thật, `final` và `publish`, nhánh hiện tại phải chứa `origin/main`. Nếu cổng báo thiếu ref hoặc nhánh cũ, dừng và chạy `git fetch origin && git merge origin/main`; không có cờ bỏ qua. `render --draft` được phép để soi cảnh.
 
 Các cổng lint chỉ là mức sàn kỹ thuật. Trước khi báo xong một Long, phải chạy:
 
@@ -156,6 +173,14 @@ Luật:
 4. Tự rà: đọc từng câu trong `chNN.json`, rồi đối chiếu với cảnh neo ở câu đó.
 
 Claude sẽ trả lại mọi bài có cảnh đệm.
+
+## Cổng sàn theo kênh (29/10/2026)
+
+- Mọi kênh đều trượt nếu còn cảnh `auto`: đó là cảnh nháp chưa được biên tập.
+- CL, và spec cũ không có `channel`, giữ nguyên sàn đã rút từ sáu Long CL đã đăng.
+- MIM và CK không bị ép các ngưỡng CL về độ dài, số chương/cảnh, ảnh hoặc b-roll. Thay vào đó, sau khi có đủ `timing.json`, chữ trên nền trống không quá 22% thời lượng và một chuỗi chữ liên tục không quá 17 giây. Biểu đồ, timeline và infographic là đồ họa, không tính là chữ nền trống.
+- Thiếu `timing.json` thì MIM/CK trượt cổng sàn. Chạy TTS đủ chương trước khi render bản thật.
+- Đây không thay các cổng kỹ thuật chung: `build_long.py` vẫn kiểm TTS/timing, asset, `html_lint` và `craft`; `scripts/long_gate.py` vẫn kiểm cấu trúc, lặp clip/ảnh, dữ kiện và nguồn. Render bản thật, final và publish không được miễn các cổng này theo kênh.
 
 ## Short đi kèm Long: hai loại S và L (28/10/2026, chủ kênh duyệt)
 

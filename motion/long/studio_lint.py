@@ -46,6 +46,72 @@ def sentences(t: str) -> list[str]:
     return [x.strip() for x in re.split(r"(?<=[.!?…])\s+", t.replace("‖", " ")) if x.strip()]
 
 
+def _words(t: str) -> list[str]:
+    """Từ để so chữ trên hình với câu đọc: bỏ hoa/thường và dấu câu, giữ dấu tiếng Việt."""
+    return re.findall(r"[^\W_]+", t.casefold(), flags=re.UNICODE)
+
+
+def spoken_prefix_issues(chapter: str, lines, scenes) -> list[str]:
+    """Chữ chính không được đọc lại nguyên tiền tố của câu đang phát.
+
+    ``at`` dùng chỉ số dòng ở phần tử đầu; các dạng neo khác không có đủ ngữ cảnh
+    tĩnh nên được bỏ qua để không báo nhầm.  TRÍCH DỊCH là câu có chủ đích hiện
+    nguyên văn/bản dịch trên hình nên được miễn.
+    """
+    out = []
+    for i, scene in enumerate(scenes or []):
+        at = scene.get("at")
+        if not isinstance(at, (list, tuple)) or not at or not isinstance(at[0], int):
+            continue
+        line_no = at[0]
+        if not 0 <= line_no < len(lines or []):
+            continue
+        spoken = text_of(lines[line_no])
+        if "TRÍCH DỊCH" in spoken.upper():
+            continue
+        prefix = _words(spoken)[:5]
+        if len(prefix) < 4:
+            continue
+        # Các trường này là chữ chính của từng loại cảnh, không lấy nhãn kỹ thuật
+        # (img, geo, type…) vì chúng không hiện cho người xem.
+        displayed = [scene.get(k) for k in ("text", "title", "head", "key", "value", "label", "day", "sub")]
+        for value in displayed:
+            if not isinstance(value, str):
+                continue
+            words = _words(value)
+            if words[:4] == prefix[:4]:
+                out.append(f"{chapter} cảnh {i}: chữ trên hình lặp 4 từ đầu câu {line_no}: {value[:70]!r}")
+                break
+    return out
+
+
+# Từ có dấu quen thuộc mà viết toàn ASCII trên hình hầu như là lỗi dựng, nhưng
+# danh sách cố ý hẹp để không đụng tên riêng/thuật ngữ tiếng Anh (Apple, NeXT, CEO).
+# Danh sách bằng chứng, có chủ ý hẹp: từ đơn như BA, DO, CAN quá dễ là tiếng
+# Anh/mã/tên riêng.  "CONG TY" và "NAM <số>" được xét như cụm để tránh gán lỗi
+# cho một họ tên hoặc viết tắt đứng riêng.
+UNACCENTED_VIETNAMESE = {"TRIEU", "NGUOI", "CHUONG", "THANG", "TIEN", "KHONG", "NHIEU", "DUOC"}
+
+
+def unaccented_vietnamese_issues(chapter: str, scenes) -> list[str]:
+    out = []
+    for i, scene in enumerate(scenes or []):
+        for key in ("text", "title", "head", "key", "value", "label", "day", "sub"):
+            value = scene.get(key)
+            if not isinstance(value, str) or not value.isascii():
+                continue
+            words = re.findall(r"[A-Za-z]+", value.upper())
+            found = {word for word in words if word in UNACCENTED_VIETNAMESE}
+            if any(words[n:n + 2] == ["CONG", "TY"] for n in range(len(words) - 1)):
+                found.add("CONG TY")
+            if "NAM" in words and any(word.isdigit() for word in re.findall(r"[A-Za-z]+|\d+", value.upper())):
+                found.add("NAM")
+            found = sorted(found)
+            if found:
+                out.append(f"{chapter} cảnh {i}: nhãn tiếng Việt thiếu dấu ({', '.join(found)}): {value[:70]!r}")
+    return out
+
+
 def lint(topic: str) -> tuple[list[str], list[str]]:
     err, warn = [], []
     for p in sorted((ROOT / "data" / "long" / topic).glob("ch[0-9][0-9].json")):
@@ -71,6 +137,8 @@ def lint(topic: str) -> tuple[list[str], list[str]]:
             if types[i] == types[i - 1] == types[i - 2] and types[i] not in ("broll",):
                 warn.append(f"{name} cảnh {i - 2}-{i}: ba cảnh '{types[i]}' liền nhau")
         err += [f"{name} {m}" for m in year_counter_issues(ch.get("scenes"))]
+        err += spoken_prefix_issues(name, ch.get("lines") or [], ch.get("scenes"))
+        err += unaccented_vietnamese_issues(name, ch.get("scenes"))
         for i, s in enumerate(ch.get("scenes") or []):
             if s["type"] != "counter":
                 continue

@@ -1,4 +1,4 @@
-"""Giao một ticket `tk` cho agent CLI trên máy (Codex, agy, Grok), thử lần lượt, báo về cho Claude điều phối (28/10/2026).
+"""Giao một việc (GitHub issue, dạng GH-<số>) cho agent CLI trên máy (Codex, agy, Grok), thử lần lượt, báo về cho Claude điều phối (28/10/2026).
 
     python scripts/agent_ticket.py <ticket-id> --brief docs/pm/tickets/<id>-<agent>.md --expect <file báo cáo>
                                    [--agents codex,agy,grok] [--effort high] [--timeout 5400]
@@ -60,13 +60,18 @@ def failed(code: int, out: str, expect: Path, started: float) -> str | None:
 
 
 def note(ticket: str, text: str) -> None:
-    tk = ROOT / "tools" / "ticket" / "tk"
-    bash = shutil.which("bash") if os.name != "nt" else str(Path(os.environ.get("ProgramFiles", r"C:\Program Files")) / "Git" / "bin" / "bash.exe")
+    """Ghi tiến độ vào GitHub issue (từ 29/10 Issues thay tk). Ticket dạng GH-<số>; dạng khác chỉ in ra."""
+    m = re.fullmatch(r"GH-(\d+)", ticket)
+    if not m:
+        print(f"[{ticket}] {text}")
+        return
     try:
-        subprocess.run([bash, str(tk), "add-note", ticket, text], cwd=ROOT, capture_output=True, timeout=30,
-                       env={**os.environ, "TICKETS_DIR": (ROOT / ".tickets").as_posix()})
-    except (OSError, subprocess.SubprocessError):
-        print("không ghi được note vào ticket:", text)
+        r = subprocess.run(["gh", "issue", "comment", m.group(1), "--body", f"[agent_ticket] {text}"], cwd=ROOT,
+                           capture_output=True, timeout=60)
+        if r.returncode:
+            raise subprocess.SubprocessError(r.stderr.decode("utf-8", "replace")[:200])
+    except (OSError, subprocess.SubprocessError) as e:
+        print(f"không ghi được comment vào issue {ticket}: {e}\n  {text}")
 
 
 def main() -> int:
@@ -95,7 +100,7 @@ def main() -> int:
         try:
             with open(log, "w", encoding="utf-8") as fh:
                 r = subprocess.run(command(agent, prompt, a.effort, TICKETS / f"{a.ticket}-{agent}.last.txt"), cwd=ROOT,
-                                   stdout=fh, stderr=subprocess.STDOUT, env=env, timeout=a.timeout)
+                                   stdin=subprocess.DEVNULL, stdout=fh, stderr=subprocess.STDOUT, env=env, timeout=a.timeout)  # 02/11/2026: stdin kế thừa mà không EOF -> codex exec treo ở "Reading additional input from stdin"
             code = r.returncode
         except subprocess.TimeoutExpired:
             code = -1

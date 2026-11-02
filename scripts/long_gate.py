@@ -121,7 +121,7 @@ def gate(topic: str, min_syl: int) -> tuple[list[str], list[str], dict]:
                 if p and p.exists() and "focus" not in s:
                     with Image.open(p) as im:
                         if im.size[1] > im.size[0] * 1.15:
-                            warn.append(f"{f.stem}: ảnh dọc '{k}' {im.size[0]}x{im.size[1]} không có focus -- dễ cắt mất mặt")
+                            err.append(f"{f.stem}: ảnh dọc '{k}' {im.size[0]}x{im.size[1]} không có focus -- dễ cắt mất mặt")
     except ImportError:
         pass
     seen = collections.Counter()

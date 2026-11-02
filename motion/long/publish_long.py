@@ -26,6 +26,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "motion"))
+sys.path.insert(0, str(ROOT / "motion" / "long"))
+import branch_gate  # noqa: E402
 from factory import channels, publish as P, store  # noqa: E402
 from factory.bundle import Bundle  # noqa: E402
 from factory.channel import Channel, Upload, upload_when_free, wait_turn  # noqa: E402
@@ -98,6 +100,7 @@ def preflight(od: Path, thumb: Path) -> list[str]:
 
 def main():
     topic, ch, publish_at, *rest = sys.argv[1:]
+    branch_gate.refuse(ROOT)
     wait = "--wait" in rest
     rest = [x for x in rest if x != "--wait"]      # --playlist đọc các đối số SAU nó theo vị trí
     sd, od = ROOT / "data" / "long" / topic, ROOT / "output" / "long" / topic
@@ -111,9 +114,12 @@ def main():
     import floor
     _spec = json.loads((ROOT / "data" / "long" / topic / "spec.json").read_text(encoding="utf-8"))
     _chs = [(n, json.loads((ROOT / "data" / "long" / topic / f"{n}.json").read_text(encoding="utf-8"))) for n in _spec["chapters"]]
-    _bad = floor.problems(_chs)
+    _bad = floor.problems(_chs, _spec.get("channel", "CL"), topic)
     if not _spec.get("approved"):
         _bad.append('spec thiếu "approved": chủ kênh chưa duyệt kịch bản + lịch đăng (ghi ngày và lời duyệt của họ, không tự điền)')
+    if not res.get("video_id"):
+        import factcheck_lint
+        _bad.extend(factcheck_lint.lint(topic))
     if _bad and not res.get("video_id"):   # video đã upload từ trước thì chạy lại các bước sau vẫn được
         raise SystemExit(f"KHÔNG ĐĂNG {topic}:\n  " + "\n  ".join(_bad))
     save = lambda: rp.write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")

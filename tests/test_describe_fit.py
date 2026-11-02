@@ -22,3 +22,14 @@ def test_fit_truncates_with_a_count_line_inside_budget():
     out = D.fit_sources(src, 800)
     assert len("\n".join(out)) + 1 <= 800
     assert out[-1].startswith("…và ") and str(40 - (len(out) - 1)) in out[-1]
+
+
+def test_sources_stay_complete_until_whole_description_exceeds_limit():
+    src = [f"Nguồn {i}: https://example.test/{i}" for i in range(12)]
+    lines = ["Mô tả ngắn", D.SRC_SLOT, "Kết"]
+    assert D.sources_for_description(lines, src, 5_000) == ["Mô tả ngắn", *src, "Kết"]
+
+
+def test_mim_description_omits_music_heading_without_music():
+    lines = D.mim_lines({"channel": "MIM", "imgs": {}}, {"summary": "Tóm tắt", "sources": []}, [], set(), set(), [], Path("."))
+    assert "🎵 NHẠC NỀN" not in lines

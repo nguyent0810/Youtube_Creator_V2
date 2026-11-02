@@ -6,7 +6,9 @@ mỗi đầu chương có tiếng "tách". Lint này đo lại đúng các chỉ
 - true peak (ffmpeg ebur128) của thành phẩm;
 - mẫu đầu/cuối mỗi đoạn ghép (mixpad) + số mẫu clip cứng của sfx;
 - số click/phút (đỉnh đường bao > 6 kHz vượt 12 dB trung vị cục bộ 50 ms, như set/voicem.py).
-CL: vượt ngưỡng -> CHẶN. Kênh khác: chỉ cảnh báo (MIM/CK/BUD/FS chưa ai chê, ngưỡng lấy theo CL).
+Lỗi kỹ thuật thành phẩm (cạnh nối, clip cứng, true peak sau AAC hoặc không đo được)
+luôn CHẶN. Riêng buzz giọng dùng ngưỡng hiệu chuẩn theo bộ lọc CL: CL chặn,
+kênh khác chỉ cảnh báo để không áp nhầm bộ lọc giọng CL cho MIM/CK/BUD/FS.
 
 CLI đo tay: python motion/long/audio_lint.py <file.wav|mp4> ...
 """
@@ -186,13 +188,13 @@ def check_parts(parts: list[Path], sfx: list[Path] = ()) -> list[str]:
 
 
 def report(tag: str, err: list[str], warn: list[str], block: bool) -> None:
-    """In kết quả; `block` (kênh CL) + có lỗi -> SystemExit. Kênh khác: lỗi in thành cảnh báo."""
+    """In kết quả; ``block`` chọn lỗi có dừng pipeline hay chỉ là cảnh báo."""
     for w in warn:
         print(f"  ! audio_lint {tag}: {w}", flush=True)
     for e in err:
         print(f"  ! audio_lint {tag}: {'LỖI' if block else 'WARNING'} {e}", flush=True)
     if err and block:
-        raise SystemExit(f"{tag}: audio_lint chặn (CL): " + " | ".join(err))
+        raise SystemExit(f"{tag}: audio_lint chặn: " + " | ".join(err))
 
 
 if __name__ == "__main__":

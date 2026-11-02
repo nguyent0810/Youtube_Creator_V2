@@ -1,0 +1,3 @@
+#!/bin/sh
+# chặn blob staged > 50 MB (GH-26). "python3" trên Windows có thể là alias Microsoft Store -> gọi python
+exec python scripts/precommit_size.py

@@ -45,6 +45,15 @@ def test_counter_idle_at_zero_is_flagged_even_with_background():
     assert BL.late_first([{**s, "at": 0.2}]) == []
 
 
+def test_second_child_must_appear_within_one_second_even_when_frame_exists():
+    org = {"type": "org", "t0": 4.0, "t1": 8.0, "nodes": [
+        {"id": "a", "at": 4.2}, {"id": "b", "p": "a", "at": 5.2},
+    ]}
+    late = BL.late_first([org], "ch04")
+    assert len(late) == 1 and "phần tử con thứ hai" in late[0] and "org" in late[0]
+    assert BL.late_first([{**org, "nodes": [org["nodes"][0], {**org["nodes"][1], "at": 4.9}]}]) == []
+
+
 @pytest.mark.parametrize("topic", ["mim-ai-voice", "ck-c2-phien-giao-dich"])
 def test_calibrated_on_current_round(topic):
     if not (ROOT / "output" / "long" / topic / "ch00" / "data.js").exists():
