@@ -4,6 +4,7 @@ from __future__ import annotations
 import json
 import re
 import sqlite3
+import unicodedata
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from typing import Any
@@ -23,6 +24,27 @@ def _parse(value: str) -> datetime:
 
 def _keywords() -> dict[str, Any]:
     return json.loads(Path(__file__).with_name("keywords.json").read_text(encoding="utf-8"))
+
+
+def _deny() -> dict[str, Any]:
+    return json.loads(Path(__file__).with_name("deny.json").read_text(encoding="utf-8"))
+
+
+def _words(value: str) -> str:
+    """Chữ thường NFC, giữ dấu (bão khác báo), tách theo từ để khớp nguyên cụm."""
+    return " " + " ".join(re.findall(r"\w+", unicodedata.normalize("NFC", value).lower())) + " "
+
+
+def deny_reason(text: str, deny: dict[str, Any], channel: str) -> str | None:
+    """Trả lý do chặn ('nhóm: từ khoá') nếu văn bản trúng danh sách chặn của kênh; None nếu sạch."""
+    if channel not in deny.get("channels", []):
+        return None
+    haystack = _words(text)
+    for group in deny.get("groups", {}).values():
+        for word in group["keywords"]:
+            if _words(word) in haystack:
+                return f"{group['label']}: {word}"
+    return None
 
 
 def _contains(haystack: str, phrase: str) -> bool:
@@ -109,10 +131,16 @@ def _render_primary(articles: list[dict[str, Any]]) -> list[str]:
     return lines + [""]
 
 
+def configured_channels(keywords: dict[str, Any]) -> list[str]:
+    """Kênh lấy từ keywords.json (mọi khoá trừ vn_impact), không bỏ cứng."""
+    return [key for key in keywords if key != "vn_impact"]
+
+
 def write_report(db_path: Path | str = DEFAULT_DB, output_root: Path | str = "output/trend", sources_path: Path | str | None = None, now: datetime | None = None) -> Path:
     now = now or datetime.now(UTC)
     lookup = source_map(sources_path) if sources_path else source_map()
     keywords = _keywords()
+    deny = _deny()
     conn = sqlite3.connect(db_path); conn.row_factory = sqlite3.Row
     try:
         events: list[tuple[int, float, float, sqlite3.Row, list[dict[str, Any]]]] = []
@@ -135,7 +163,7 @@ def write_report(db_path: Path | str = DEFAULT_DB, output_root: Path | str = "ou
     target.mkdir(parents=True, exist_ok=True)
     path = target / f"{now:%H}.md"
     lines = [f"# Trend scan — {now:%Y-%m-%d %H:00 UTC}", "", "Tín hiệu biên tập chỉ đọc; không phải hàng đợi xuất bản.", ""]
-    for channel in ("MIM", "CK"):
+    for channel in configured_channels(keywords):
         channel_articles = [article for _independent, _traffic, _velocity, _event, articles in events for article in articles
                             if channel in lookup.get(article["source_id"], {}).get("channels", []) and _parse(article["published_at"]) >= now - timedelta(hours=72)]
         valid = [(independent, traffic, velocity, event, articles) for independent, traffic, velocity, event, articles in events
@@ -144,10 +172,30 @@ def write_report(db_path: Path | str = DEFAULT_DB, output_root: Path | str = "ou
         candidates = [(independent, traffic, velocity, event, [article for article in articles if _belongs(article, channel, lookup, keywords)])
                       for independent, traffic, velocity, event, articles in valid]
         candidates = [item for item in candidates if item[4]]
+        # Chặn trước khi xếp hạng: một bài trúng thì cả cụm bị loại (cụm về thiên tai/tang... không dùng được), ghi lý do.
+        blocked: list[tuple[str, str, str]] = []
+        allowed = []
+        for item in candidates:
+            reasons = [(article, deny_reason(article["title"] + " " + article["summary"], deny, channel)) for article in item[4]]
+            reasons = [(article, reason) for article, reason in reasons if reason] or ([(item[4][0], reason)] if (reason := deny_reason(str(item[3]["label"]), deny, channel)) else [])
+            if reasons:
+                article, reason = reasons[0]
+                blocked.append((str(item[3]["label"]), article["url"], reason))
+            else:
+                allowed.append(item)
+        candidates = allowed
         candidates.sort(key=lambda item: (-(item[0] >= 2 or item[1] > 0), -item[0], -item[1], -item[2], item[3]["first_seen"]))
         hot_count = sum(independent >= 2 or traffic > 0 for independent, traffic, _velocity, _event, _articles in candidates)
         opportunity_count = sum(_opportunity(event, articles) for _independent, _traffic, _velocity, event, articles in candidates)
-        primary_for_channel = [article for article in primary if _belongs(article, channel, lookup, keywords)]
+        primary_for_channel = []
+        for article in primary:
+            if not _belongs(article, channel, lookup, keywords):
+                continue
+            reason = deny_reason(article["title"] + " " + article["summary"], deny, channel)
+            if reason:
+                blocked.append((article["title"], article["url"], reason))
+            else:
+                primary_for_channel.append(article)
         lines.extend([f"## {channel}", "", "#### Bộ đếm 72 giờ", "", "| Bài | Sự kiện hợp lệ | Ứng viên liên quan | Sự kiện nóng | Cơ hội sản xuất |", "|---:|---:|---:|---:|---:|", f"| {len(channel_articles)} | {len(valid)} | {len(candidates)} | {hot_count} | {opportunity_count} |", "", "#### ỨNG VIÊN LIÊN QUAN"])
         if candidates:
             for independent, traffic, velocity, event, articles in candidates[:25]:
@@ -155,6 +203,10 @@ def write_report(db_path: Path | str = DEFAULT_DB, output_root: Path | str = "ou
         else:
             lines.extend(["_Chưa có ứng viên liên quan._", ""])
         lines.extend(_render_primary(primary_for_channel))
+        if channel in deny.get("channels", []):
+            lines.extend(["#### ĐÃ CHẶN", ""])
+            lines.extend([f"- {label} — {url} — lý do: {reason}" for label, url, reason in blocked[:25]] or ["_Không có cụm nào bị chặn._"])
+            lines.append("")
     lines.extend(["## Trạng thái nguồn", "", "| Nguồn | ToS | Lần chạy | Bài |", "|---|---|---|---:|"])
     for source in lookup.values():
         run = last_runs.get(source["id"])

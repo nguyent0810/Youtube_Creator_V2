@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 import html
+import os
 import re
 import sqlite3
 import statistics
@@ -22,8 +23,21 @@ DEFAULT_DB = Path("data/trend/trend.sqlite")
 GDELT_MIN_WAIT_SECONDS = 5.0
 ROBOTS_CACHE_HOURS = 24
 FEED_MIN_INTERVAL = timedelta(hours=3)
-# Lead replaces this contact before a production scan. SEC and Wikimedia require one.
-USER_AGENT = "Youtube-Creator-Trend-Scanner/1.0 trend-contact@example.invalid"
+SIGNAL_RETENTION = timedelta(days=30)
+# Tên sản phẩm dùng để khớp robots.txt; liên hệ thật đọc từ TREND_CONTACT (SEC và Wikimedia bắt buộc có).
+USER_AGENT = "Youtube-Creator-Trend-Scanner/1.0"
+
+
+class TrendContactMissing(RuntimeError):
+    """Chưa đặt TREND_CONTACT nên không được quét mạng thật."""
+
+
+def user_agent() -> str:
+    """User-Agent đầy đủ kèm liên hệ thật; không bịa liên hệ."""
+    contact = os.environ.get("TREND_CONTACT", "").strip()
+    if not contact or "example" in contact.lower():
+        raise TrendContactMissing("Chưa đặt biến môi trường TREND_CONTACT (email/URL liên hệ thật của chủ kênh): từ chối quét mạng thật. Test/fixture vẫn chạy bình thường.")
+    return f"{USER_AGENT} {contact}"
 WIKI_NAMESPACES = {"special:", "wikipedia:", "file:", "image:", "category:", "template:", "help:", "portal:", "module:", "draft:", "talk:", "user:", "media:", "thành viên:", "đặc biệt:", "tập tin:", "thể loại:", "bản mẫu:", "trợ giúp:"}
 WIKI_NON_ARTICLES = {"main page", "main_page", "trang chinh", "trang_chinh"}
 HTML_ENTITY = re.compile(r"&(?:#\d+|#x[0-9a-fA-F]+|[a-zA-Z][a-zA-Z0-9]+);")
@@ -89,7 +103,7 @@ def init_db(db_path: Path | str = DEFAULT_DB) -> sqlite3.Connection:
         );
         CREATE TABLE IF NOT EXISTS signal (
           id INTEGER PRIMARY KEY, source_id TEXT NOT NULL, title TEXT NOT NULL, normalized_title TEXT NOT NULL,
-          observed_at TEXT NOT NULL, value REAL, baseline REAL, kind TEXT NOT NULL
+          observed_at TEXT NOT NULL, value REAL, baseline REAL, kind TEXT NOT NULL, run_id TEXT NOT NULL DEFAULT ''
         );
         CREATE TABLE IF NOT EXISTS run (
           id INTEGER PRIMARY KEY, started_at TEXT NOT NULL, ended_at TEXT, source_id TEXT, status TEXT NOT NULL,
@@ -106,6 +120,8 @@ def init_db(db_path: Path | str = DEFAULT_DB) -> sqlite3.Connection:
     event_columns = {row[1] for row in conn.execute("PRAGMA table_info(event)")}
     if "signals" not in event_columns:
         conn.execute("ALTER TABLE event ADD COLUMN signals TEXT NOT NULL DEFAULT '[]'")
+    if "run_id" not in {row[1] for row in conn.execute("PRAGMA table_info(signal)")}:
+        conn.execute("ALTER TABLE signal ADD COLUMN run_id TEXT NOT NULL DEFAULT ''")
     article_columns = {row[1] for row in conn.execute("PRAGMA table_info(article)")}
     if "undated" not in article_columns:
         conn.execute("ALTER TABLE article ADD COLUMN undated INTEGER NOT NULL DEFAULT 0")
@@ -306,7 +322,7 @@ def parse_gdelt_json(payload: bytes, source: dict[str, Any], now: datetime | Non
 
 
 def _fetch(url: str, timeout: int = 20) -> bytes:
-    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/json, application/xml, text/xml;q=0.9"})
+    request = urllib.request.Request(url, headers={"User-Agent": user_agent(), "Accept": "application/json, application/xml, text/xml;q=0.9"})
     with urllib.request.urlopen(request, timeout=timeout) as response:  # nosec B310: configured URLs only
         return response.read()
 
@@ -344,14 +360,17 @@ def _wiki_history(source: dict[str, Any], now: datetime, fetch: Callable[[str], 
 def scan_sources(db_path: Path | str = DEFAULT_DB, sources_path: Path | str | None = None, fetch: Callable[[str], bytes] | None = None, pause_seconds: float = 0.2, now: datetime | None = None) -> dict[str, int]:
     """Scan only reviewed sources explicitly enabled for the internal trial."""
     now = now or utc_now()
-    fetch = fetch or _fetch
+    if fetch is None:
+        user_agent()  # chặn quét mạng thật khi chưa có TREND_CONTACT, trước mọi thao tác DB
+        fetch = _fetch
     sources = load_sources(sources_path) if sources_path else load_sources()
     conn = init_db(db_path)
     outcome = {"sources": 0, "articles": 0, "signals": 0, "errors": 0}
     try:
         # Retain a 72-hour window when a scheduled run is rate-skipped.
         conn.execute("DELETE FROM article WHERE published_at < ?", (iso(now - timedelta(hours=72)),))
-        conn.execute("DELETE FROM signal")
+        # Giữ lịch sử signal theo run_id (30 ngày) để đo trend lên/xuống nhiều ngày; event được cluster dựng lại mỗi lần.
+        conn.execute("DELETE FROM signal WHERE observed_at < ?", (iso(now - SIGNAL_RETENTION),))
         conn.execute("DELETE FROM event")
         conn.commit()
         for source in sources:
@@ -391,7 +410,7 @@ def scan_sources(db_path: Path | str = DEFAULT_DB, sources_path: Path | str | No
                 if records:
                     conn.executemany("""INSERT INTO article(url,title,summary,published_at,source_id,owner_group,fetched_at,undated,trend_title) VALUES(:url,:title,:summary,:published_at,:source_id,:owner_group,:fetched_at,:undated,:trend_title) ON CONFLICT(url) DO UPDATE SET title=excluded.title,summary=excluded.summary,published_at=excluded.published_at,source_id=excluded.source_id,owner_group=excluded.owner_group,fetched_at=excluded.fetched_at,undated=excluded.undated,trend_title=excluded.trend_title""", records)
                 if signals:
-                    conn.executemany("INSERT INTO signal(source_id,title,normalized_title,observed_at,value,baseline,kind) VALUES(:source_id,:title,:normalized_title,:observed_at,:value,:baseline,:kind)", signals)
+                    conn.executemany("INSERT INTO signal(source_id,title,normalized_title,observed_at,value,baseline,kind,run_id) VALUES(:source_id,:title,:normalized_title,:observed_at,:value,:baseline,:kind,:run_id)", [{**signal, "run_id": iso(now)} for signal in signals])
                 conn.execute("INSERT INTO run(started_at,ended_at,source_id,status,article_count) VALUES(?,?,?,?,?)", (started, iso(utc_now()), source["id"], "ok", len(records)))
                 outcome["sources"] += 1; outcome["articles"] += len(records); outcome["signals"] += len(signals)
             except Exception as exc:  # one endpoint must not stop later sources
@@ -403,3 +422,10 @@ def scan_sources(db_path: Path | str = DEFAULT_DB, sources_path: Path | str | No
     finally:
         conn.close()
     return outcome
+
+
+def signal_history(conn: sqlite3.Connection, normalized_title: str, source_id: str | None = None) -> list[tuple[str, float]]:
+    """Chuỗi (run_id, value) của một tín hiệu qua các lần quét, cũ -> mới, để đo xu hướng nhiều ngày."""
+    query = "SELECT run_id, value FROM signal WHERE normalized_title=?" + (" AND source_id=?" if source_id else "") + " ORDER BY run_id"
+    params = (normalized_title, source_id) if source_id else (normalized_title,)
+    return [(row["run_id"], float(row["value"] or 0)) for row in conn.execute(query, params)]

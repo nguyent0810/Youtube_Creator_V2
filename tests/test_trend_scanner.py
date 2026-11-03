@@ -234,7 +234,7 @@ def test_benchmark_matching_uses_entity_cores_accentless_tokens_and_jaccard_thre
 
 
 def test_lead_manual_match_pairs_are_regression_covered() -> None:
-    benchmark = json.loads((Path("docs/pm/tickets/GH-31-benchmark.json")).read_text(encoding="utf-8"))
+    benchmark = json.loads((ROOT / "lead_match_targets.json").read_text(encoding="utf-8"))
     targets = {item["id"]: item for item in benchmark["events"]}
     cases = json.loads((ROOT / "lead_match_regression.json").read_text(encoding="utf-8"))
     for case in cases:

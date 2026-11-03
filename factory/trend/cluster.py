@@ -171,7 +171,8 @@ def cluster_db(db_path: Path | str = DEFAULT_DB, threshold: float = 0.25, source
                     and lookup.get(row["source_id"], {}).get("role") != "primary"]
         groups = cluster_articles(articles, threshold)
         events = [event_from_group(group) for group in groups]
-        signals = [dict(row) for row in conn.execute("SELECT * FROM signal")]
+        # Chỉ lấy signal của lần quét mới nhất mỗi nguồn; các lần cũ giữ lại làm lịch sử.
+        signals = [dict(row) for row in conn.execute("SELECT s.* FROM signal s WHERE s.run_id=(SELECT MAX(run_id) FROM signal WHERE source_id=s.source_id)")]
         for event, group in zip(events, groups):
             event["signals"] = json.dumps(_matching_signals(group, signals), ensure_ascii=False)
         conn.execute("DELETE FROM event")
