@@ -1,0 +1,28 @@
+{
+  "events": [
+    {
+      "id": "no_source",
+      "channel": "MIM",
+      "hotness": "medium",
+      "entities": ["Missing Thing"],
+      "first_reported": "2026-11-02T12:00:00Z",
+      "urls": []
+    },
+    {
+      "id": "filtered",
+      "channel": "MIM",
+      "hotness": "medium",
+      "entities": ["OpenAI"],
+      "first_reported": "2026-11-02T12:00:00Z",
+      "urls": []
+    },
+    {
+      "id": "not_clustered",
+      "channel": "MIM",
+      "hotness": "medium",
+      "entities": ["Gemini"],
+      "first_reported": "2026-11-02T12:00:00Z",
+      "urls": []
+    }
+  ]
+}

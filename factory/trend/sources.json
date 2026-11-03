@@ -1,0 +1,812 @@
+﻿[
+    {
+        "id":  "google_trends_vn",
+        "name":  "Google Trends Daily Trending RSS (Vietnam)",
+        "url":  "https://trends.google.com/trending/rss?geo=VN",
+        "kind":  "rss",
+        "lang":  "vi",
+        "owner_group":  "Google",
+        "channels":  [
+                         "MIM",
+                         "CK"
+                     ],
+        "is_primary":  false,
+        "rate_limit":  "KhÃ´ng cÃ´ng bá»‘ tráº§n cá»©ng; feed cáº­p nháº­t ~10 phÃºt/láº§n, quÃ©t 3h/láº§n",
+        "tos_url":  "https://support.google.com/trends/answer/4365538",
+        "tos_status":  "ok",
+        "tos_note":  "\"Google Trends data can be used in any publication, for free, and without prior permission from Google.\" â€” https://support.google.com/trends/answer/4365538",
+        "role":  "article+signal"
+    },
+    {
+        "id":  "hacker_news",
+        "name":  "Hacker News Firebase API (Top Stories)",
+        "url":  "https://hacker-news.firebaseio.com/v0/topstories.json",
+        "kind":  "json_hn",
+        "lang":  "en",
+        "owner_group":  "Y Combinator",
+        "channels":  [
+                         "MIM"
+                     ],
+        "is_primary":  false,
+        "rate_limit":  "There is currently no rate limit (gá»i tuáº§n tá»± tá»‘i Ä‘a 30 item/láº§n)",
+        "tos_url":  "https://github.com/HackerNews/API",
+        "tos_status":  "ok",
+        "tos_note":  "\"Permission is hereby granted, free of charge, to any person... without restriction... There is currently no rate limit.\" â€” https://github.com/HackerNews/API",
+        "role":  "article"
+    },
+    {
+        "id":  "wikipedia_pageviews_vi",
+        "name":  "Wikimedia Pageviews API (vi.wikipedia Top Daily)",
+        "url":  "https://wikimedia.org/api/rest_v1/metrics/pageviews/top/vi.wikipedia/all-access/{YYYY}/{MM}/{DD}",
+        "kind":  "wiki_pageviews",
+        "lang":  "vi",
+        "owner_group":  "Wikimedia Foundation",
+        "channels":  [
+                         "MIM",
+                         "CK"
+                     ],
+        "is_primary":  false,
+        "rate_limit":  "200 requests/phÃºt (báº¯t buá»™c User-Agent Ä‘á»‹nh danh cÃ³ liÃªn há»‡)",
+        "tos_url":  "https://doc.wikimedia.org/generated-data-platform/aqs/analytics-api/documentation/access-policy.html",
+        "tos_status":  "ok",
+        "tos_note":  "\"All datasets and endpoints available through the Analytics API are available under the Creative Commons CC0 1.0 dedication.\" â€” https://doc.wikimedia.org/generated-data-platform/aqs/analytics-api/documentation/access-policy.html",
+        "role":  "signal"
+    },
+    {
+        "id":  "wikipedia_pageviews",
+        "name":  "Wikimedia Pageviews API (en.wikipedia Top Daily)",
+        "url":  "https://wikimedia.org/api/rest_v1/metrics/pageviews/top/en.wikipedia/all-access/{YYYY}/{MM}/{DD}",
+        "kind":  "wiki_pageviews",
+        "lang":  "en",
+        "owner_group":  "Wikimedia Foundation",
+        "channels":  [
+                         "MIM",
+                         "CK"
+                     ],
+        "is_primary":  false,
+        "rate_limit":  "200 requests/phÃºt (báº¯t buá»™c User-Agent Ä‘á»‹nh danh cÃ³ liÃªn há»‡)",
+        "tos_url":  "https://doc.wikimedia.org/generated-data-platform/aqs/analytics-api/documentation/access-policy.html",
+        "tos_status":  "ok",
+        "tos_note":  "\"All datasets and endpoints available through the Analytics API are available under the Creative Commons CC0 1.0 dedication.\" â€” https://doc.wikimedia.org/generated-data-platform/aqs/analytics-api/documentation/access-policy.html",
+        "role":  "signal"
+    },
+    {
+        "id":  "sec_press_releases",
+        "name":  "U.S. SEC Press Releases RSS",
+        "url":  "https://www.sec.gov/news/pressreleases.rss",
+        "kind":  "rss",
+        "lang":  "en",
+        "owner_group":  "US SEC",
+        "channels":  [
+                         "MIM",
+                         "CK"
+                     ],
+        "is_primary":  true,
+        "rate_limit":  "Tá»‘i Ä‘a 10 requests/giÃ¢y; báº¯t buá»™c User-Agent cÃ³ tÃªn Ä‘Æ¡n vá»‹ vÃ  email",
+        "tos_url":  "https://www.sec.gov/os/webmaster-faq#developers",
+        "tos_status":  "ok",
+        "tos_note":  "\"Current maximum request rate: 10 requests/second... declare your user agent in request headers.\" (Public Domain) â€” https://www.sec.gov/os/webmaster-faq#developers",
+        "role":  "primary"
+    },
+    {
+        "id":  "sec_edgar_current",
+        "name":  "U.S. SEC EDGAR Current Filings Atom Feed",
+        "url":  "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent\u0026output=atom",
+        "kind":  "rss",
+        "lang":  "en",
+        "owner_group":  "US SEC",
+        "channels":  [
+                         "MIM",
+                         "CK"
+                     ],
+        "is_primary":  true,
+        "rate_limit":  "Tá»‘i Ä‘a 10 requests/giÃ¢y; báº¯t buá»™c User-Agent cÃ³ tÃªn Ä‘Æ¡n vá»‹ vÃ  email",
+        "tos_url":  "https://www.sec.gov/os/webmaster-faq#developers",
+        "tos_status":  "ok",
+        "tos_note":  "\"Current maximum request rate: 10 requests/second... declare your user agent in request headers.\" (Public Domain) â€” https://www.sec.gov/os/webmaster-faq#developers",
+        "role":  "primary"
+    },
+    {
+        "id":  "google_blog_rss",
+        "name":  "Google Official Blog (The Keyword) RSS",
+        "url":  "https://blog.google/rss/",
+        "kind":  "rss",
+        "lang":  "en",
+        "owner_group":  "Google",
+        "channels":  [
+                         "MIM"
+                     ],
+        "is_primary":  true,
+        "rate_limit":  "TuÃ¢n thá»§ robots.txt (Allow /rss/); quÃ©t 3h/láº§n",
+        "tos_url":  "https://policies.google.com/terms",
+        "tos_status":  "ok",
+        "tos_note":  "\"Don\u0027t abuse our services... using automated means to access content... in violation of the machine-readable instructions.\" â€” https://policies.google.com/terms",
+        "role":  "primary"
+    },
+    {
+        "id":  "google_devs_blog_rss",
+        "name":  "Google Developers Blog Feed (CC BY 4.0)",
+        "url":  "https://developers.googleblog.com/feeds/posts/default",
+        "kind":  "rss",
+        "lang":  "en",
+        "owner_group":  "Google",
+        "channels":  [
+                         "MIM"
+                     ],
+        "is_primary":  true,
+        "rate_limit":  "KhÃ´ng giá»›i háº¡n cá»©ng; quÃ©t 3h/láº§n",
+        "tos_url":  "https://developers.google.com/terms/site-policies",
+        "tos_status":  "ok",
+        "tos_note":  "\"Except as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 4.0 License.\" â€” https://developers.google.com/terms/site-policies",
+        "role":  "primary"
+    },
+    {
+        "id":  "arxiv_cs_ai",
+        "name":  "arXiv CS.AI Daily RSS (CC0 Metadata)",
+        "url":  "https://rss.arxiv.org/rss/cs.AI",
+        "kind":  "rss",
+        "lang":  "en",
+        "owner_group":  "Cornell University (arXiv)",
+        "channels":  [
+                         "MIM"
+                     ],
+        "is_primary":  true,
+        "rate_limit":  "Tá»‘i Ä‘a 1 request / 3 giÃ¢y, 1 káº¿t ná»‘i táº¡i má»™t thá»i Ä‘iá»ƒm",
+        "tos_url":  "https://info.arxiv.org/help/api/tou.html",
+        "tos_status":  "ok",
+        "tos_note":  "\"Descriptive metadata... may be used under the terms of the Creative Commons CC0 1.0 Universal Public Domain Dedication.\" â€” https://info.arxiv.org/help/api/tou.html",
+        "role":  "primary"
+    },
+    {
+        "id":  "nist_news_rss",
+        "name":  "U.S. NIST News \u0026 AI Standards RSS",
+        "url":  "https://www.nist.gov/news-events/news/rss.xml",
+        "kind":  "rss",
+        "lang":  "en",
+        "owner_group":  "US Department of Commerce (NIST)",
+        "channels":  [
+                         "MIM"
+                     ],
+        "is_primary":  true,
+        "rate_limit":  "KhÃ´ng giá»›i háº¡n cá»©ng; quÃ©t 3h/láº§n",
+        "tos_url":  "https://www.nist.gov/oism/copyrights",
+        "tos_status":  "ok",
+        "tos_note":  "\"NIST web pages are provided as a public service... and therefore are considered to be in the public domain.\" â€” https://www.nist.gov/oism/copyrights",
+        "role":  "primary"
+    },
+    {
+        "id":  "fed_press_monetary",
+        "name":  "U.S. Federal Reserve Monetary Policy Releases RSS",
+        "url":  "https://www.federalreserve.gov/feeds/press_monetary.xml",
+        "kind":  "rss",
+        "lang":  "en",
+        "owner_group":  "US Federal Reserve",
+        "channels":  [
+                         "CK"
+                     ],
+        "is_primary":  true,
+        "rate_limit":  "KhÃ´ng giá»›i háº¡n cá»©ng; quÃ©t 3h/láº§n",
+        "tos_url":  "https://www.federalreserve.gov/disclaimer.htm",
+        "tos_status":  "ok",
+        "tos_note":  "\"Information on this site is in the public domain and may be reproduced without permission.\" (17 U.S.C. Â§105) â€” https://www.federalreserve.gov/disclaimer.htm",
+        "role":  "primary"
+    },
+    {
+        "id":  "bls_latest_rss",
+        "name":  "U.S. Bureau of Labor Statistics (CPI/Jobs) RSS",
+        "url":  "https://www.bls.gov/feed/bls_latest.rss",
+        "kind":  "rss",
+        "lang":  "en",
+        "owner_group":  "US Department of Labor (BLS)",
+        "channels":  [
+                         "CK"
+                     ],
+        "is_primary":  true,
+        "rate_limit":  "KhÃ´ng giá»›i háº¡n cá»©ng; quÃ©t 3h/láº§n",
+        "tos_url":  "https://www.bls.gov/bls/linksite.htm",
+        "tos_status":  "ok",
+        "tos_note":  "\"Public domain information on the Bureau of Labor Statistics (BLS) webpages may be freely distributed and copied.\" â€” https://www.bls.gov/bls/linksite.htm",
+        "role":  "primary"
+    },
+    {
+        "id":  "gdelt_vi_news",
+        "name":  "GDELT DOC 2.0 API (Vietnamese News RSS)",
+        "url":  "https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:VM\u0026timespan=24h\u0026mode=artlist\u0026maxrecords=50\u0026format=json",
+        "kind":  "json_gdelt",
+        "lang":  "vi",
+        "owner_group":  "GDELT Project",
+        "channels":  [
+                         "MIM",
+                         "CK"
+                     ],
+        "is_primary":  false,
+        "rate_limit":  "Tá»‘i Ä‘a 1 request / 5 giÃ¢y",
+        "tos_url":  "https://www.gdeltproject.org/about.html",
+        "tos_status":  "ok",
+        "tos_note":  "\"All datasets released by the GDELT Project are available for unlimited and unrestricted use for any commercial, non-commercial, or research purpose.\" â€” https://www.gdeltproject.org/about.html",
+        "role":  "article"
+    },
+    {
+        "id":  "thanhnien_kinh_te",
+        "name":  "BÃ¡o Thanh NiÃªn - Kinh táº¿ RSS",
+        "url":  "https://thanhnien.vn/rss/kinh-te.rss",
+        "kind":  "rss",
+        "lang":  "vi",
+        "owner_group":  "Thanh NiÃªn",
+        "channels":  [
+                         "CK"
+                     ],
+        "is_primary":  false,
+        "rate_limit":  "trial_internal: <= 1 req/feed/3h (max 8 req/24h); delay >= 5s giữa các feed thanhnien.vn; gửi kèm ETag/If-Modified-Since và User-Agent định danh rõ",
+        "tos_url":  "https://thanhnien.vn/rss.html",
+        "tos_status":  "ok",
+        "trial": "internal",
+        "tos_note":  "\"Khi sá»­ dá»¥ng láº¡i cÃ¡c thÃ´ng tin tá»« nguá»“n tin cá»§a Thanh NiÃªn Online pháº£i ghi rÃµ nguá»“n tin lÃ  \u0027Theo BÃ¡o Thanh NiÃªn\u0027.\" â€” https://thanhnien.vn/rss.html",
+        "role":  "article"
+    },
+    {
+        "id":  "thanhnien_cong_nghe",
+        "name":  "BÃ¡o Thanh NiÃªn - CÃ´ng nghá»‡ RSS",
+        "url":  "https://thanhnien.vn/rss/cong-nghe.rss",
+        "kind":  "rss",
+        "lang":  "vi",
+        "owner_group":  "Thanh NiÃªn",
+        "channels":  [
+                         "MIM"
+                     ],
+        "is_primary":  false,
+        "rate_limit":  "trial_internal: <= 1 req/feed/3h (max 8 req/24h); delay >= 5s giữa các feed thanhnien.vn; gửi kèm ETag/If-Modified-Since và User-Agent định danh rõ",
+        "tos_url":  "https://thanhnien.vn/rss.html",
+        "tos_status":  "ok",
+        "trial": "internal",
+        "tos_note":  "\"Khi sá»­ dá»¥ng láº¡i cÃ¡c thÃ´ng tin tá»« nguá»“n tin cá»§a Thanh NiÃªn Online pháº£i ghi rÃµ nguá»“n tin lÃ  \u0027Theo BÃ¡o Thanh NiÃªn\u0027.\" â€” https://thanhnien.vn/rss.html",
+        "role":  "article"
+    },
+    {
+        "id":  "cafef_tai_chinh",
+        "name":  "CafeF - TÃ i chÃ­nh NgÃ¢n hÃ ng RSS",
+        "url":  "https://cafef.vn/tai-chinh-ngan-hang.rss",
+        "kind":  "rss",
+        "lang":  "vi",
+        "owner_group":  "VCCorp",
+        "channels":  [
+                         "CK"
+                     ],
+        "is_primary":  false,
+        "rate_limit":  "KhÃ´ng nÃªu rÃµ; khuyáº¿n nghá»‹ quÃ©t 3h/láº§n",
+        "tos_url":  "https://cafef.vn/rss.chn",
+        "tos_status":  "pending",
+        "tos_note":  "\"Khi sá»­ dá»¥ng láº¡i cÃ¡c thÃ´ng tin tá»« nguá»“n tin... pháº£i ghi rÃµ nguá»“n tin... Cáº¥m sao chÃ©p dÆ°á»›i má»i hÃ¬nh thá»©c.\" â€” https://cafef.vn/rss.chn",
+        "role":  "article"
+    },
+    {
+        "id":  "cafef_vi_mo",
+        "name":  "CafeF - VÄ© mÃ´ Äáº§u tÆ° RSS",
+        "url":  "https://cafef.vn/vi-mo-dau-tu.rss",
+        "kind":  "rss",
+        "lang":  "vi",
+        "owner_group":  "VCCorp",
+        "channels":  [
+                         "CK"
+                     ],
+        "is_primary":  false,
+        "rate_limit":  "KhÃ´ng nÃªu rÃµ; khuyáº¿n nghá»‹ quÃ©t 3h/láº§n",
+        "tos_url":  "https://cafef.vn/rss.chn",
+        "tos_status":  "pending",
+        "tos_note":  "\"Khi sá»­ dá»¥ng láº¡i cÃ¡c thÃ´ng tin tá»« nguá»“n tin... pháº£i ghi rÃµ nguá»“n tin... Cáº¥m sao chÃ©p dÆ°á»›i má»i hÃ¬nh thá»©c.\" â€” https://cafef.vn/rss.chn",
+        "role":  "article"
+    },
+    {
+        "id":  "genk_tin_ict",
+        "name":  "GenK - Tin ICT \u0026 AI RSS",
+        "url":  "https://genk.vn/rss/tin-ict.rss",
+        "kind":  "rss",
+        "lang":  "vi",
+        "owner_group":  "VCCorp",
+        "channels":  [
+                         "MIM"
+                     ],
+        "is_primary":  false,
+        "rate_limit":  "trial_internal: <= 1 req/feed/3h (max 8 req/24h); gửi kèm ETag/If-Modified-Since và User-Agent định danh rõ",
+        "tos_url":  "https://genk.vn/rss.chn",
+        "tos_status":  "ok",
+        "trial": "internal",
+        "tos_note":  "\"Khi sá»­ dá»¥ng láº¡i cÃ¡c thÃ´ng tin tá»« nguá»“n tin cá»§a Genk.vn pháº£i ghi rÃµ nguá»“n tin lÃ  \u0027Theo Genk.vn\u0027 hoáº·c \u0027Genk.vn\u0027.\" â€” https://genk.vn/rss.chn",
+        "role":  "article"
+    },
+    {
+        "id":  "vietnamnet_kinh_doanh",
+        "name":  "VietNamNet - Kinh doanh RSS",
+        "url":  "https://vietnamnet.vn/rss/kinh-doanh.rss",
+        "kind":  "rss",
+        "lang":  "vi",
+        "owner_group":  "VietNamNet",
+        "channels":  [
+                         "CK"
+                     ],
+        "is_primary":  false,
+        "rate_limit":  "KhÃ´ng nÃªu rÃµ; khuyáº¿n nghá»‹ quÃ©t 3h/láº§n",
+        "tos_url":  "https://vietnamnet.vn/rss",
+        "tos_status":  "pending",
+        "tos_note":  "\"Chá»‰ Ä‘Æ°á»£c phÃ¡t hÃ nh láº¡i thÃ´ng tin tá»« website nÃ y khi cÃ³ sá»± Ä‘á»“ng Ã½ báº±ng vÄƒn báº£n cá»§a bÃ¡o VietNamNet.\" â€” https://vietnamnet.vn/rss",
+        "role":  "article"
+    },
+    {
+        "id":  "vietnamnet_cong_nghe",
+        "name":  "VietNamNet - CÃ´ng nghá»‡ RSS",
+        "url":  "https://vietnamnet.vn/rss/cong-nghe.rss",
+        "kind":  "rss",
+        "lang":  "vi",
+        "owner_group":  "VietNamNet",
+        "channels":  [
+                         "MIM"
+                     ],
+        "is_primary":  false,
+        "rate_limit":  "KhÃ´ng nÃªu rÃµ; khuyáº¿n nghá»‹ quÃ©t 3h/láº§n",
+        "tos_url":  "https://vietnamnet.vn/rss",
+        "tos_status":  "pending",
+        "tos_note":  "\"Chá»‰ Ä‘Æ°á»£c phÃ¡t hÃ nh láº¡i thÃ´ng tin tá»« website nÃ y khi cÃ³ sá»± Ä‘á»“ng Ã½ báº±ng vÄƒn báº£n cá»§a bÃ¡o VietNamNet.\" â€” https://vietnamnet.vn/rss",
+        "role":  "article"
+    },
+    {
+        "id":  "sjc_gold_xml",
+        "name":  "Báº£ng giÃ¡ vÃ ng SJC XML cÃ´ng khai",
+        "url":  "https://sjc.com.vn/xml/tygiavang.xml",
+        "kind":  "rss",
+        "lang":  "vi",
+        "owner_group":  "SJC",
+        "channels":  [
+                         "CK"
+                     ],
+        "is_primary":  true,
+        "rate_limit":  "KhÃ´ng nÃªu rÃµ; lÆ°u Ã½ XML tháº» \u003cratelist\u003e cáº§n parser riÃªng náº¿u báº­t",
+        "tos_url":  "https://sjc.com.vn/giavang/textContent.php",
+        "tos_status":  "pending",
+        "tos_note":  "\"ThÃ´ng tin tá»· giÃ¡ vÃ ng chá»‰ mang tÃ­nh cháº¥t tham kháº£o... Báº£n quyá»n thuá»™c CÃ´ng ty TNHH MTV VÃ ng báº¡c ÄÃ¡ quÃ½ SÃ i GÃ²n.\" â€” https://sjc.com.vn/giavang/textContent.php",
+        "role":  "article"
+    },
+    {
+        "id":  "chinhphu_kinh_te",
+        "name":  "BÃ¡o Äiá»‡n tá»­ ChÃ­nh phá»§ - Kinh táº¿ RSS",
+        "url":  "https://baochinhphu.vn/rss/kinh-te.rss",
+        "kind":  "rss",
+        "lang":  "vi",
+        "owner_group":  "ChÃ­nh phá»§ Viá»‡t Nam",
+        "channels":  [
+                         "MIM",
+                         "CK"
+                     ],
+        "is_primary":  true,
+        "rate_limit":  "KhÃ´ng nÃªu rÃµ; khuyáº¿n nghá»‹ quÃ©t 3h/láº§n",
+        "tos_url":  "https://baochinhphu.vn",
+        "tos_status":  "pending",
+        "tos_note":  "\"Ghi rÃµ nguá»“n \u0027Cá»•ng ThÃ´ng tin Ä‘iá»‡n tá»­ ChÃ­nh phá»§\u0027 hoáº·c \u0027baochinhphu.vn\u0027 khi phÃ¡t hÃ nh láº¡i thÃ´ng tin tá»« cÃ¡c nguá»“n nÃ y.\" â€” https://baochinhphu.vn",
+        "role":  "article"
+    },
+    {
+        "id":  "vanban_chinhphu_rss",
+        "name":  "CÃ´ng bÃ¡o \u0026 VÄƒn báº£n ChÃ­nh phá»§ má»›i ban hÃ nh RSS",
+        "url":  "https://congbao.chinhphu.vn/cac-van-ban-moi-ban-hanh.rss",
+        "kind":  "rss",
+        "lang":  "vi",
+        "owner_group":  "ChÃ­nh phá»§ Viá»‡t Nam",
+        "channels":  [
+                         "MIM",
+                         "CK"
+                     ],
+        "is_primary":  true,
+        "rate_limit":  "KhÃ´ng nÃªu rÃµ; vÄƒn báº£n luáº­t thuá»™c pháº¡m vi cÃ´ng cá»™ng (Äiá»u 15 Luáº­t SHTT)",
+        "tos_url":  "https://congbao.chinhphu.vn/rss",
+        "tos_status":  "pending",
+        "tos_note":  "\"CÃ¡c nguá»“n kÃªnh tin Ä‘Æ°á»£c cung cáº¥p miá»…n phÃ­ cho cÃ¡c cÃ¡ nhÃ¢n vÃ  cÃ¡c tá»• chá»©c phi lá»£i nhuáº­n.\" â€” https://congbao.chinhphu.vn/rss (vÃ  https://vanban.chinhphu.vn)",
+        "role":  "article"
+    },
+    {
+        "id":  "sbv_gov_vn",
+        "name":  "Cá»•ng TTÄT NgÃ¢n hÃ ng NhÃ  nÆ°á»›c Viá»‡t Nam (SBV)",
+        "url":  "https://www.sbv.gov.vn/webcenter/portal/vi/home/rm/rss",
+        "kind":  "rss",
+        "lang":  "vi",
+        "owner_group":  "NgÃ¢n hÃ ng NhÃ  nÆ°á»›c Viá»‡t Nam",
+        "channels":  [
+                         "CK"
+                     ],
+        "is_primary":  true,
+        "rate_limit":  "KhÃ´ng nÃªu rÃµ; khuyáº¿n nghá»‹ dÃ¹ng tra cá»©u sÆ¡ cáº¥p hoáº·c quÃ©t 3h/láº§n",
+        "tos_url":  "https://www.sbv.gov.vn",
+        "tos_status":  "pending",
+        "tos_note":  "\"Ghi rÃµ nguá»“n \u0027Cá»•ng thÃ´ng tin Ä‘iá»‡n tá»­ NgÃ¢n hÃ ng NhÃ  nÆ°á»›c Viá»‡t Nam\u0027 hoáº·c \u0027www.sbv.gov.vn\u0027 khi phÃ¡t hÃ nh láº¡i thÃ´ng tin.\" â€” https://www.sbv.gov.vn",
+        "role":  "article"
+    },
+    {
+        "id":  "mof_gov_vn",
+        "name":  "Cá»•ng TTÄT Bá»™ TÃ i chÃ­nh Viá»‡t Nam (MOF)",
+        "url":  "https://mof.gov.vn/webcenter/portal/btcvn/pages_r/l/tin-bo-tai-chinh",
+        "kind":  "rss",
+        "lang":  "vi",
+        "owner_group":  "Bá»™ TÃ i chÃ­nh Viá»‡t Nam",
+        "channels":  [
+                         "CK"
+                     ],
+        "is_primary":  true,
+        "rate_limit":  "KhÃ´ng nÃªu rÃµ; trang tin HTML, Æ°u tiÃªn dÃ¹ng lÃ m nguá»“n kiá»ƒm chá»©ng sÆ¡ cáº¥p P1",
+        "tos_url":  "https://mof.gov.vn",
+        "tos_status":  "pending",
+        "tos_note":  "\"Ghi rÃµ nguá»“n \u0027Cá»•ng ThÃ´ng tin Ä‘iá»‡n tá»­ Bá»™ TÃ i chÃ­nh\u0027 hoáº·c \u0027www.mof.gov.vn\u0027 khi phÃ¡t hÃ nh láº¡i thÃ´ng tin tá»« Ä‘á»‹a chá»‰ nÃ y.\" â€” https://mof.gov.vn",
+        "role":  "article"
+    },
+    {
+        "id":  "bhxh_gov_vn",
+        "name":  "Cá»•ng TTÄT Báº£o hiá»ƒm xÃ£ há»™i Viá»‡t Nam (BHXH)",
+        "url":  "https://baohiemxahoi.gov.vn/rss/tin-tuc-su-kien.rss",
+        "kind":  "rss",
+        "lang":  "vi",
+        "owner_group":  "Báº£o hiá»ƒm xÃ£ há»™i Viá»‡t Nam",
+        "channels":  [
+                         "CK"
+                     ],
+        "is_primary":  true,
+        "rate_limit":  "KhÃ´ng nÃªu rÃµ; khuyáº¿n nghá»‹ quÃ©t 3h/láº§n",
+        "tos_url":  "https://baohiemxahoi.gov.vn",
+        "tos_status":  "pending",
+        "tos_note":  "\"Ghi rÃµ nguá»“n \u0027Cá»•ng ThÃ´ng tin Ä‘iá»‡n tá»­ Báº£o hiá»ƒm xÃ£ há»™i Viá»‡t Nam\u0027 khi trÃ­ch dáº«n, sá»­ dá»¥ng láº¡i thÃ´ng tin.\" â€” https://baohiemxahoi.gov.vn",
+        "role":  "article"
+    },
+    {
+        "id":  "openai_news_rss",
+        "name":  "OpenAI News RSS",
+        "url":  "https://openai.com/news/rss.xml",
+        "kind":  "rss",
+        "lang":  "en",
+        "owner_group":  "OpenAI",
+        "channels":  [
+                         "MIM"
+                     ],
+        "is_primary":  true,
+        "rate_limit":  "KhÃ´ng nÃªu rÃµ cho RSS; quÃ©t 3h/láº§n",
+        "tos_url":  "https://openai.com/policies/terms-of-use/",
+        "tos_status":  "pending",
+        "tos_note":  "\"You may not... automatically or programmatically extract data or Output.\" (Ãp dá»¥ng cho Services; RSS cÃ´ng khai chÆ°a tÃ¡ch Ä‘iá»u khoáº£n) â€” https://openai.com/policies/terms-of-use/",
+        "role":  "article"
+    },
+    {
+        "id":  "microsoft_blog_rss",
+        "name":  "Official Microsoft Blog RSS",
+        "url":  "https://blogs.microsoft.com/feed/",
+        "kind":  "rss",
+        "lang":  "en",
+        "owner_group":  "Microsoft",
+        "channels":  [
+                         "MIM"
+                     ],
+        "is_primary":  true,
+        "rate_limit":  "KhÃ´ng nÃªu rÃµ cho RSS; quÃ©t 3h/láº§n",
+        "tos_url":  "https://www.microsoft.com/en-us/legal/terms-of-use",
+        "tos_status":  "pending",
+        "tos_note":  "\"Unless otherwise specified, the Services are for your personal and non-commercial use.\" â€” https://www.microsoft.com/en-us/legal/terms-of-use",
+        "role":  "article"
+    },
+    {
+        "id":  "apple_newsroom_rss",
+        "name":  "Apple Newsroom RSS",
+        "url":  "https://www.apple.com/newsroom/rss-feed.rss",
+        "kind":  "rss",
+        "lang":  "en",
+        "owner_group":  "Apple",
+        "channels":  [
+                         "MIM",
+                         "CK"
+                     ],
+        "is_primary":  true,
+        "rate_limit":  "KhÃ´ng nÃªu rÃµ cho RSS; quÃ©t 3h/láº§n",
+        "tos_url":  "https://www.apple.com/legal/internet-services/terms/site.html",
+        "tos_status":  "pending",
+        "tos_note":  "\"No part of the Site and no Content may be copied, reproduced, republished... for any commercial enterprise.\" â€” https://www.apple.com/legal/internet-services/terms/site.html",
+        "role":  "article"
+    },
+    {
+        "id":  "huggingface_blog_rss",
+        "name":  "Hugging Face Blog RSS",
+        "url":  "https://huggingface.co/blog/feed.xml",
+        "kind":  "rss",
+        "lang":  "en",
+        "owner_group":  "Hugging Face",
+        "channels":  [
+                         "MIM"
+                     ],
+        "is_primary":  true,
+        "rate_limit":  "KhÃ´ng nÃªu rÃµ cho RSS; quÃ©t 3h/láº§n",
+        "tos_url":  "https://huggingface.co/terms-of-service",
+        "tos_status":  "pending",
+        "tos_note":  "\"You may not access or search... the Services by any means (automated or otherwise) other than through our currently available, published interfaces.\" â€” https://huggingface.co/terms-of-service",
+        "role":  "article"
+    },
+    {
+        "id":  "vnexpress_kinh_doanh",
+        "name":  "VnExpress - Kinh doanh RSS",
+        "url":  "https://vnexpress.net/rss/kinh-doanh.rss",
+        "kind":  "rss",
+        "lang":  "vi",
+        "owner_group":  "VnExpress (FPT)",
+        "channels":  [
+                         "CK"
+                     ],
+        "is_primary":  false,
+        "rate_limit":  "KhÃ´ng nÃªu rÃµ",
+        "tos_url":  "https://vnexpress.net/rss",
+        "tos_status":  "blocked",
+        "tos_note":  "\"CÃ¡c nguá»“n kÃªnh tin Ä‘Æ°á»£c cung cáº¥p miá»…n phÃ­ cho cÃ¡c cÃ¡ nhÃ¢n vÃ  cÃ¡c tá»• chá»©c phi lá»£i nhuáº­n.\" â€” https://vnexpress.net/rss",
+        "role":  "article"
+    },
+    {
+        "id":  "vnexpress_so_hoa",
+        "name":  "VnExpress - Khoa há»c CÃ´ng nghá»‡ / Sá»‘ hÃ³a RSS",
+        "url":  "https://vnexpress.net/rss/khoa-hoc-cong-nghe.rss",
+        "kind":  "rss",
+        "lang":  "vi",
+        "owner_group":  "VnExpress (FPT)",
+        "channels":  [
+                         "MIM"
+                     ],
+        "is_primary":  false,
+        "rate_limit":  "KhÃ´ng nÃªu rÃµ",
+        "tos_url":  "https://vnexpress.net/rss",
+        "tos_status":  "blocked",
+        "tos_note":  "\"CÃ¡c nguá»“n kÃªnh tin Ä‘Æ°á»£c cung cáº¥p miá»…n phÃ­ cho cÃ¡c cÃ¡ nhÃ¢n vÃ  cÃ¡c tá»• chá»©c phi lá»£i nhuáº­n.\" â€” https://vnexpress.net/rss",
+        "role":  "article"
+    },
+    {
+        "id":  "tuoitre_kinh_doanh",
+        "name":  "Tuá»•i Tráº» - Kinh doanh RSS",
+        "url":  "https://tuoitre.vn/rss/kinh-doanh.rss",
+        "kind":  "rss",
+        "lang":  "vi",
+        "owner_group":  "Tuá»•i Tráº»",
+        "channels":  [
+                         "CK"
+                     ],
+        "is_primary":  false,
+        "rate_limit":  "KhÃ´ng nÃªu rÃµ",
+        "tos_url":  "https://tuoitre.vn/rss.htm",
+        "tos_status":  "blocked",
+        "tos_note":  "\"CÃ¡c nguá»“n kÃªnh tin Ä‘Æ°á»£c cung cáº¥p miá»…n phÃ­ cho cÃ¡c cÃ¡ nhÃ¢n vÃ  cÃ¡c tá»• chá»©c phi lá»£i nhuáº­n.\" â€” https://tuoitre.vn/rss.htm",
+        "role":  "article"
+    },
+    {
+        "id":  "tuoitre_cong_nghe",
+        "name":  "Tuá»•i Tráº» - Nhá»‹p sá»‘ng sá»‘ RSS",
+        "url":  "https://tuoitre.vn/rss/nhip-song-so.rss",
+        "kind":  "rss",
+        "lang":  "vi",
+        "owner_group":  "Tuá»•i Tráº»",
+        "channels":  [
+                         "MIM"
+                     ],
+        "is_primary":  false,
+        "rate_limit":  "KhÃ´ng nÃªu rÃµ",
+        "tos_url":  "https://tuoitre.vn/rss.htm",
+        "tos_status":  "blocked",
+        "tos_note":  "\"CÃ¡c nguá»“n kÃªnh tin Ä‘Æ°á»£c cung cáº¥p miá»…n phÃ­ cho cÃ¡c cÃ¡ nhÃ¢n vÃ  cÃ¡c tá»• chá»©c phi lá»£i nhuáº­n.\" â€” https://tuoitre.vn/rss.htm",
+        "role":  "article"
+    },
+    {
+        "id":  "dantri_kinh_doanh",
+        "name":  "DÃ¢n TrÃ­ - Kinh doanh RSS",
+        "url":  "https://dantri.com.vn/rss/kinh-doanh.rss",
+        "kind":  "rss",
+        "lang":  "vi",
+        "owner_group":  "DÃ¢n TrÃ­",
+        "channels":  [
+                         "CK"
+                     ],
+        "is_primary":  false,
+        "rate_limit":  "KhÃ´ng nÃªu rÃµ",
+        "tos_url":  "https://dantri.com.vn/rss.htm",
+        "tos_status":  "blocked",
+        "tos_note":  "\"CÃ¡c nguá»“n kÃªnh tin Ä‘Æ°á»£c cung cáº¥p miá»…n phÃ­ cho cÃ¡c cÃ¡ nhÃ¢n vÃ  cÃ¡c tá»• chá»©c phi lá»£i nhuáº­n.\" â€” https://dantri.com.vn/rss.htm",
+        "role":  "article"
+    },
+    {
+        "id":  "dantri_suc_manh_so",
+        "name":  "DÃ¢n TrÃ­ - Sá»©c máº¡nh sá»‘ RSS",
+        "url":  "https://dantri.com.vn/rss/suc-manh-so.rss",
+        "kind":  "rss",
+        "lang":  "vi",
+        "owner_group":  "DÃ¢n TrÃ­",
+        "channels":  [
+                         "MIM"
+                     ],
+        "is_primary":  false,
+        "rate_limit":  "KhÃ´ng nÃªu rÃµ",
+        "tos_url":  "https://dantri.com.vn/rss.htm",
+        "tos_status":  "blocked",
+        "tos_note":  "\"CÃ¡c nguá»“n kÃªnh tin Ä‘Æ°á»£c cung cáº¥p miá»…n phÃ­ cho cÃ¡c cÃ¡ nhÃ¢n vÃ  cÃ¡c tá»• chá»©c phi lá»£i nhuáº­n.\" â€” https://dantri.com.vn/rss.htm",
+        "role":  "article"
+    },
+    {
+        "id":  "vneconomy_tai_chinh",
+        "name":  "VnEconomy - TÃ i chÃ­nh RSS",
+        "url":  "https://vneconomy.vn/tai-chinh.rss",
+        "kind":  "rss",
+        "lang":  "vi",
+        "owner_group":  "VnEconomy",
+        "channels":  [
+                         "CK"
+                     ],
+        "is_primary":  false,
+        "rate_limit":  "KhÃ´ng nÃªu rÃµ",
+        "tos_url":  "https://vneconomy.vn/rss.htm",
+        "tos_status":  "blocked",
+        "tos_note":  "\"CÃ¡c nguá»“n kÃªnh tin Ä‘Æ°á»£c cung cáº¥p miá»…n phÃ­ cho cÃ¡c cÃ¡ nhÃ¢n vÃ  cÃ¡c tá»• chá»©c phi lá»£i nhuáº­n.\" â€” https://vneconomy.vn/rss.htm",
+        "role":  "article"
+    },
+    {
+        "id":  "vneconomy_kinh_te_so",
+        "name":  "VnEconomy - Kinh táº¿ sá»‘ RSS",
+        "url":  "https://vneconomy.vn/kinh-te-so.rss",
+        "kind":  "rss",
+        "lang":  "vi",
+        "owner_group":  "VnEconomy",
+        "channels":  [
+                         "MIM"
+                     ],
+        "is_primary":  false,
+        "rate_limit":  "KhÃ´ng nÃªu rÃµ",
+        "tos_url":  "https://vneconomy.vn/rss.htm",
+        "tos_status":  "blocked",
+        "tos_note":  "\"CÃ¡c nguá»“n kÃªnh tin Ä‘Æ°á»£c cung cáº¥p miá»…n phÃ­ cho cÃ¡c cÃ¡ nhÃ¢n vÃ  cÃ¡c tá»• chá»©c phi lá»£i nhuáº­n.\" â€” https://vneconomy.vn/rss.htm",
+        "role":  "article"
+    },
+    {
+        "id":  "google_news_mim",
+        "name":  "Google News RSS Search (MIM Keywords)",
+        "url":  "https://news.google.com/rss/search?q=AI+OR+chip+OR+b%C3%A1n+d%E1%BA%ABn+OR+OpenAI\u0026hl=vi\u0026gl=VN\u0026ceid=VN:vi",
+        "kind":  "rss",
+        "lang":  "vi",
+        "owner_group":  "Google",
+        "channels":  [
+                         "MIM"
+                     ],
+        "is_primary":  false,
+        "rate_limit":  "Cháº·n bá»Ÿi robots.txt (Disallow: /search)",
+        "tos_url":  "https://policies.google.com/terms",
+        "tos_status":  "blocked",
+        "tos_note":  "\"Don\u0027t abuse our services... using automated means to access content... in violation of the machine-readable instructions.\" (Disallow /search) â€” https://policies.google.com/terms",
+        "role":  "article"
+    },
+    {
+        "id":  "google_news_ck",
+        "name":  "Google News RSS Search (CK Keywords)",
+        "url":  "https://news.google.com/rss/search?q=l%C3%A3i+su%E1%BA%A5t+OR+t%E1%BB%B7+gi%C3%A1+OR+gi%C3%A1+v%C3%A0ng+OR+tr%C3%A1i+phi%E1%BA%BFu\u0026hl=vi\u0026gl=VN\u0026ceid=VN:vi",
+        "kind":  "rss",
+        "lang":  "vi",
+        "owner_group":  "Google",
+        "channels":  [
+                         "CK"
+                     ],
+        "is_primary":  false,
+        "rate_limit":  "Cháº·n bá»Ÿi robots.txt (Disallow: /search)",
+        "tos_url":  "https://policies.google.com/terms",
+        "tos_status":  "blocked",
+        "tos_note":  "\"Don\u0027t abuse our services... using automated means to access content... in violation of the machine-readable instructions.\" (Disallow /search) â€” https://policies.google.com/terms",
+        "role":  "article"
+    },
+    {
+        "id":  "reddit_technology",
+        "name":  "Reddit r/technology JSON",
+        "url":  "https://www.reddit.com/r/technology/hot.json?limit=25",
+        "kind":  "json_reddit",
+        "lang":  "en",
+        "owner_group":  "Reddit",
+        "channels":  [
+                         "MIM"
+                     ],
+        "is_primary":  false,
+        "rate_limit":  "10 QPM (unauthenticated) / 100 QPM (OAuth); cáº¥m thÆ°Æ¡ng máº¡i miá»…n phÃ­",
+        "tos_url":  "https://redditinc.com/policies/data-api-terms",
+        "tos_status":  "blocked",
+        "tos_note":  "\"You may not use the Data API Services for any commercial purposes... without Reddit\u0027s prior written consent.\" â€” https://redditinc.com/policies/data-api-terms",
+        "role":  "article"
+    },
+    {
+        "id":  "reddit_machinelearning",
+        "name":  "Reddit r/MachineLearning JSON",
+        "url":  "https://www.reddit.com/r/MachineLearning/hot.json?limit=25",
+        "kind":  "json_reddit",
+        "lang":  "en",
+        "owner_group":  "Reddit",
+        "channels":  [
+                         "MIM"
+                     ],
+        "is_primary":  false,
+        "rate_limit":  "10 QPM (unauthenticated) / 100 QPM (OAuth); cáº¥m thÆ°Æ¡ng máº¡i miá»…n phÃ­",
+        "tos_url":  "https://redditinc.com/policies/data-api-terms",
+        "tos_status":  "blocked",
+        "tos_note":  "\"You may not use the Data API Services for any commercial purposes... without Reddit\u0027s prior written consent.\" â€” https://redditinc.com/policies/data-api-terms",
+        "role":  "article"
+    },
+    {
+        "id":  "reddit_vietnam",
+        "name":  "Reddit r/vietnam JSON",
+        "url":  "https://www.reddit.com/r/vietnam/hot.json?limit=25",
+        "kind":  "json_reddit",
+        "lang":  "vi",
+        "owner_group":  "Reddit",
+        "channels":  [
+                         "MIM",
+                         "CK"
+                     ],
+        "is_primary":  false,
+        "rate_limit":  "10 QPM (unauthenticated) / 100 QPM (OAuth); cáº¥m thÆ°Æ¡ng máº¡i miá»…n phÃ­",
+        "tos_url":  "https://redditinc.com/policies/data-api-terms",
+        "tos_status":  "blocked",
+        "tos_note":  "\"You may not use the Data API Services for any commercial purposes... without Reddit\u0027s prior written consent.\" â€” https://redditinc.com/policies/data-api-terms",
+        "role":  "article"
+    },
+    {
+        "id":  "vcb_exchange_xml",
+        "name":  "Tá»· giÃ¡ ngoáº¡i tá»‡ Vietcombank XML",
+        "url":  "https://portal.vietcombank.com.vn/Usercontrols/TVPortal.TyGia/pXML.aspx",
+        "kind":  "rss",
+        "lang":  "vi",
+        "owner_group":  "Vietcombank",
+        "channels":  [
+                         "CK"
+                     ],
+        "is_primary":  true,
+        "rate_limit":  "KhÃ´ng nÃªu rÃµ; CK cáº¥m nÃªu tÃªn ngÃ¢n hÃ ng thÆ°Æ¡ng máº¡i",
+        "tos_url":  "https://www.vietcombank.com.vn/vi-VN/Dieu-khoan-su-dung",
+        "tos_status":  "blocked",
+        "tos_note":  "\"NghiÃªm cáº¥m viá»‡c sao chÃ©p, sá»­a Ä‘á»•i, phÃ¢n phá»‘i, xuáº¥t báº£n... vÃ¬ má»¥c Ä‘Ã­ch thÆ°Æ¡ng máº¡i mÃ  khÃ´ng cÃ³ sá»± Ä‘á»“ng Ã½ báº±ng vÄƒn báº£n.\" â€” https://www.vietcombank.com.vn/vi-VN/Dieu-khoan-su-dung",
+        "role":  "article"
+    },
+    {
+        "id":  "meta_newsroom_rss",
+        "name":  "Meta Newsroom Feed",
+        "url":  "https://about.fb.com/news/feed/",
+        "kind":  "rss",
+        "lang":  "en",
+        "owner_group":  "Meta",
+        "channels":  [
+                         "MIM"
+                     ],
+        "is_primary":  true,
+        "rate_limit":  "KhÃ´ng nÃªu rÃµ",
+        "tos_url":  "https://www.facebook.com/terms.php",
+        "tos_status":  "blocked",
+        "tos_note":  "\"You may not access or collect data from our Products using automated means (without our prior permission).\" â€” https://www.facebook.com/terms.php",
+        "role":  "article"
+    },
+    {
+        "id":  "nvidia_blog_rss",
+        "name":  "NVIDIA Official Blog RSS",
+        "url":  "https://blogs.nvidia.com/feed/",
+        "kind":  "rss",
+        "lang":  "en",
+        "owner_group":  "NVIDIA",
+        "channels":  [
+                         "MIM"
+                     ],
+        "is_primary":  true,
+        "rate_limit":  "KhÃ´ng nÃªu rÃµ",
+        "tos_url":  "https://www.nvidia.com/en-us/about-nvidia/terms-of-service/",
+        "tos_status":  "blocked",
+        "tos_note":  "\"RSS service is provided free of charge for non-commercial purposes only... NVIDIA reserves the right to discontinue this service.\" â€” https://www.nvidia.com/en-us/about-nvidia/terms-of-service/",
+        "role":  "article"
+    },
+    {"id":"reuters_news","name":"Reuters (Outbound Feeds / News Sitemap)","url":"https://www.reuters.com/arc/outboundfeeds/news-sitemap-index/?outputType=xml","kind":"rss","lang":"en","owner_group":"Thomson Reuters","channels":["MIM","CK"],"tos_status":"blocked","tos_note":"Grok v2: robots/ToS prohibit automated collection.","role":"article"},
+    {"id":"ap_news","name":"Associated Press - AP News","url":"https://apnews.com/ap-sitemap.xml","kind":"rss","lang":"en","owner_group":"Associated Press","channels":["MIM","CK"],"tos_status":"blocked","tos_note":"Grok v2: ToS prohibits automated access.","role":"article"},
+    {"id":"bbc_technology_rss","name":"BBC News - Technology","url":"https://feeds.bbci.co.uk/news/technology/rss.xml","kind":"rss","lang":"en","owner_group":"BBC","channels":["MIM"],"tos_status":"blocked","tos_note":"Grok v2: commercial automated use is not permitted.","role":"article"},
+    {"id":"bbc_business_rss","name":"BBC News - Business","url":"https://feeds.bbci.co.uk/news/business/rss.xml","kind":"rss","lang":"en","owner_group":"BBC","channels":["CK"],"tos_status":"blocked","tos_note":"Grok v2: commercial automated use is not permitted.","role":"article"},
+    {"id":"theverge_rss","name":"The Verge - All Posts","url":"https://www.theverge.com/rss/index.xml","kind":"rss","lang":"en","owner_group":"Vox Media","channels":["MIM"],"tos_status":"blocked","tos_note":"Grok v2: robots and ToS prohibit this crawl.","role":"article"},
+    {"id":"arstechnica_rss","name":"Ars Technica - All Content","url":"https://feeds.arstechnica.com/arstechnica/index","kind":"rss","lang":"en","owner_group":"Condé Nast","channels":["MIM"],"tos_status":"blocked","tos_note":"Grok v2: ToS prohibits automated commercial use.","role":"article"},
+    {"id":"techcrunch_rss","name":"TechCrunch","url":"https://techcrunch.com/feed/","kind":"rss","lang":"en","owner_group":"TechCrunch","channels":["MIM"],"tos_status":"blocked","tos_note":"Grok v2: ToS limits use to personal noncommercial use.","role":"article"},
+    {"id":"coindesk_rss","name":"CoinDesk","url":"https://www.coindesk.com/arc/outboundfeeds/rss/","kind":"rss","lang":"en","owner_group":"CoinDesk (Bullish)","channels":["MIM","CK"],"tos_status":"blocked","tos_note":"Grok v2: commercial automated use is not approved.","role":"article"},
+    {"id":"worldbank_vn_news","name":"World Bank - Vietnam News & Data","url":"https://search.worldbank.org/api/v2/news?format=json&rows=20&qterm=Vietnam","kind":"rss","lang":"en","owner_group":"World Bank Group","channels":["CK"],"tos_status":"pending","tos_note":"Grok v2: pending legal approval for site news API.","role":"primary"},
+    {"id":"imf_news_rss","name":"International Monetary Fund News","url":"https://www.imf.org/en/News/RSS","kind":"rss","lang":"en","owner_group":"IMF","channels":["CK"],"tos_status":"blocked","tos_note":"Grok v2: WAF and noncommercial terms.","role":"primary"},
+    {"id":"adb_news_rss","name":"Asian Development Bank News","url":"https://www.adb.org/rss","kind":"rss","lang":"en","owner_group":"Asian Development Bank (ADB)","channels":["CK"],"tos_status":"pending","tos_note":"Grok v2: pending while Cloudflare blocks access.","role":"primary"},
+    {"id":"theregister_security_atom","name":"The Register - Security","url":"https://www.theregister.com/security/headlines.atom","kind":"rss","lang":"en","owner_group":"Situation Publishing","channels":["MIM"],"tos_status":"blocked","tos_note":"Grok v2: robots default-deny.","role":"article"},
+    {"id":"krebsonsecurity_rss","name":"Krebs on Security","url":"https://krebsonsecurity.com/feed/","kind":"rss","lang":"en","owner_group":"Krebs on Security","channels":["MIM"],"tos_status":"pending","tos_note":"Grok v2: pending project approval; Crawl-delay applies if enabled.","role":"article"},
+    {"id":"bleepingcomputer_rss","name":"BleepingComputer","url":"https://www.bleepingcomputer.com/feed/","kind":"rss","lang":"en","owner_group":"BleepingComputer","channels":["MIM"],"tos_status":"blocked","tos_note":"Grok v2: Cloudflare and ToS block automated use.","role":"article"},
+    {"id":"cisa_advisories_rss","name":"U.S. CISA Cybersecurity Advisories","url":"https://www.cisa.gov/cybersecurity-advisories/all.xml","kind":"rss","lang":"en","owner_group":"US DHS (CISA)","channels":["MIM"],"tos_status":"pending","tos_note":"Grok v2: public-domain content but endpoint is pending due to WAF.","role":"primary"}
+]
