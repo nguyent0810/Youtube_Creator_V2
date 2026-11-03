@@ -39,7 +39,7 @@ BLOCK = [
 ]
 ALLOW = [
     "Lễ Vu Lan báo hiếu tại chùa", "Sinh tử luân hồi trong lời Phật dạy", "Rằm tháng Mười 2026 cúng gì",
-    "Giá vàng hôm nay", "Ngày tốt tháng 11 âm lịch để xuất hành", "Hiểu về cái chết trong thiền định",
+    "Giá vàng hôm nay", "Năm 2027: tuổi nào dễ phát tài nhất?", "Cầu tài lộc đầu năm theo truyền thống", "Ngày tốt tháng 11 âm lịch để xuất hành", "Hiểu về cái chết trong thiền định",
     "Chùa cổ sập sệ cần trùng tu, Phật tử góp công", "Mưa sao băng Song Tử đêm nay", "Báo Giác Ngộ giới thiệu kinh Kim Cang",
     "Tết Đinh Mùi 2027 mùng 1 là ngày nào",
 ]
