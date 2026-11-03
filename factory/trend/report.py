@@ -132,8 +132,8 @@ def _render_primary(articles: list[dict[str, Any]]) -> list[str]:
 
 
 def configured_channels(keywords: dict[str, Any]) -> list[str]:
-    """Kênh lấy từ keywords.json (mọi khoá trừ vn_impact), không bỏ cứng."""
-    return [key for key in keywords if key != "vn_impact"]
+    """Kênh lấy từ khoá tường minh `channels` của keywords.json; khoá metadata khác không bị hiểu là kênh."""
+    return [key for key in keywords.get("channels", []) if isinstance(keywords.get(key), list)]
 
 
 def write_report(db_path: Path | str = DEFAULT_DB, output_root: Path | str = "output/trend", sources_path: Path | str | None = None, now: datetime | None = None) -> Path:

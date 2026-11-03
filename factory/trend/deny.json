@@ -1,15 +1,146 @@
 {
-  "_ghi_chu": "Danh sách chặn cho kênh nhạy cảm (FS, BUD). Cụm trúng từ khoá bị loại khỏi xếp hạng nhưng vẫn ghi lý do ở mục 'Đã chặn' của báo cáo. Khớp theo từ nguyên cụm, có phân biệt dấu (bão != báo).",
-  "channels": ["FS", "BUD"],
+  "_ghi_chu": "Danh sách chặn cho kênh nhạy cảm (FS, BUD). Chỉ dùng cụm rõ nghĩa, tránh từ đơn mơ hồ (chết/sập/cúm). Cụm trúng từ khoá bị loại khỏi xếp hạng nhưng vẫn ghi lý do ở mục 'Đã chặn'. Khớp theo từ nguyên cụm, phân biệt dấu (bão != báo).",
+  "channels": [
+    "FS",
+    "BUD"
+  ],
   "groups": {
-    "thien_tai": {"label": "thiên tai", "keywords": ["thiên tai", "bão", "áp thấp nhiệt đới", "lũ lụt", "lũ quét", "sạt lở", "ngập lụt", "động đất", "sóng thần", "hạn hán", "cháy rừng", "lốc xoáy"]},
-    "tai_nan": {"label": "tai nạn", "keywords": ["tai nạn", "cháy nổ", "hỏa hoạn", "hoả hoạn", "đuối nước", "va chạm", "lật xe", "sập", "ngộ độc"]},
-    "nguoi_chet": {"label": "người chết/tang", "keywords": ["tử vong", "qua đời", "từ trần", "viên tịch", "tang lễ", "lễ tang", "đám tang", "thiệt mạng", "nạn nhân", "di cốt", "cái chết", "chết"]},
-    "chinh_tri": {"label": "chính trị/bầu cử", "keywords": ["bầu cử", "chính trị", "đại hội đảng", "quốc hội", "chính phủ", "biểu tình", "tổng thống", "đảng cộng sản", "trừng phạt"]},
-    "toi_pham": {"label": "tội phạm", "keywords": ["bắt giữ", "khởi tố", "vụ án", "lừa đảo", "giết người", "cướp", "ma túy", "ma tuý", "án mạng", "truy nã", "đường dây"]},
-    "dich_benh": {"label": "dịch bệnh", "keywords": ["dịch bệnh", "covid", "đại dịch", "ổ dịch", "sốt xuất huyết", "cúm", "ung thư", "nhiễm bệnh"]},
-    "tin_don": {"label": "tin đồn/chưa kiểm chứng", "keywords": ["tin đồn", "chưa kiểm chứng", "tin giả", "rộ tin", "lan truyền", "chưa xác thực", "bí ẩn", "hiện tượng lạ", "phốt", "bê bối"]},
-    "doa_xui": {"label": "doạ/xui rủi", "keywords": ["điềm báo", "điềm xấu", "ứng nghiệm", "tai họa", "tai hoạ", "tai ương", "đại hạn", "sao xấu", "xui xẻo", "vận hạn", "hung tinh", "báo hiệu thảm", "tận thế", "lời nguyền", "yểm bùa", "bùa ngải"]},
-    "hua_tien": {"label": "hứa tiền/làm giàu", "keywords": ["làm giàu", "trúng số", "xổ số", "đổi đời", "phát tài", "giàu to", "hái ra tiền", "kiếm tiền", "giá vàng", "cầu tài", "sổ xố"]}
+    "thien_tai": {
+      "label": "thiên tai",
+      "keywords": [
+        "thiên tai",
+        "bão",
+        "áp thấp nhiệt đới",
+        "lũ lụt",
+        "lũ quét",
+        "sạt lở",
+        "ngập lụt",
+        "động đất",
+        "sóng thần",
+        "hạn hán",
+        "cháy rừng",
+        "lốc xoáy"
+      ]
+    },
+    "tai_nan": {
+      "label": "tai nạn",
+      "keywords": [
+        "tai nạn",
+        "cháy nổ",
+        "hỏa hoạn",
+        "hoả hoạn",
+        "đuối nước",
+        "lật xe",
+        "sập cầu",
+        "sập nhà",
+        "sập hầm",
+        "ngộ độc thực phẩm",
+        "va chạm giao thông"
+      ]
+    },
+    "nguoi_chet": {
+      "label": "người chết/tang",
+      "keywords": [
+        "tử vong",
+        "qua đời",
+        "từ trần",
+        "tang lễ",
+        "lễ tang",
+        "đám tang",
+        "thiệt mạng",
+        "nạn nhân",
+        "tìm thấy thi thể",
+        "chết người"
+      ]
+    },
+    "chinh_tri": {
+      "label": "chính trị/bầu cử",
+      "keywords": [
+        "bầu cử",
+        "chính trị",
+        "đại hội đảng",
+        "quốc hội",
+        "chính phủ",
+        "biểu tình",
+        "tổng thống",
+        "đảng cộng sản",
+        "trừng phạt"
+      ]
+    },
+    "toi_pham": {
+      "label": "tội phạm",
+      "keywords": [
+        "bắt giữ",
+        "khởi tố",
+        "vụ án",
+        "lừa đảo",
+        "giết người",
+        "cướp tiệm",
+        "ma túy",
+        "ma tuý",
+        "án mạng",
+        "truy nã"
+      ]
+    },
+    "dich_benh": {
+      "label": "dịch bệnh",
+      "keywords": [
+        "dịch bệnh",
+        "covid",
+        "đại dịch",
+        "ổ dịch",
+        "sốt xuất huyết",
+        "dịch cúm",
+        "cúm gia cầm",
+        "ung thư"
+      ]
+    },
+    "tin_don": {
+      "label": "tin đồn/chưa kiểm chứng",
+      "keywords": [
+        "tin đồn",
+        "chưa kiểm chứng",
+        "tin giả",
+        "rộ tin",
+        "chưa xác thực",
+        "hiện tượng lạ",
+        "bê bối"
+      ]
+    },
+    "doa_xui": {
+      "label": "doạ/xui rủi",
+      "keywords": [
+        "điềm báo",
+        "điềm xấu",
+        "ứng nghiệm",
+        "tai họa",
+        "tai hoạ",
+        "tai ương",
+        "đại hạn",
+        "sao xấu",
+        "xui xẻo",
+        "vận hạn",
+        "hung tinh",
+        "báo hiệu thảm",
+        "tận thế",
+        "lời nguyền",
+        "yểm bùa",
+        "bùa ngải"
+      ]
+    },
+    "hua_tien": {
+      "label": "hứa tiền/làm giàu",
+      "keywords": [
+        "làm giàu nhanh",
+        "trúng số",
+        "xổ số",
+        "đổi vận phát tài",
+        "phát tài ngay",
+        "giàu to",
+        "hái ra tiền",
+        "cầu tài đổi đời",
+        "kiếm tiền nhanh"
+      ]
+    }
   }
 }

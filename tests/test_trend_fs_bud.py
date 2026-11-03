@@ -31,6 +31,35 @@ def test_deny_json_covers_required_groups_and_distinguishes_diacritics() -> None
     assert deny_reason("Bão số 9 đổ bộ miền Trung", deny, "MIM") is None  # MIM/CK không áp danh sách chặn
 
 
+BLOCK = [
+    "Bão số 9 đổ bộ miền Trung", "Sập cầu khiến nhiều người thiệt mạng", "Nghệ sĩ qua đời, tang lễ tổ chức sáng mai",
+    "Bầu cử Mỹ: kết quả mới nhất", "Khởi tố vụ án lừa đảo tại chùa", "Ổ dịch sốt xuất huyết lan rộng",
+    "Tin đồn chưa kiểm chứng về ngày tận thế", "Sao hạn 2027: điềm báo xấu cho tuổi Mùi", "Cách làm giàu nhanh theo phong thủy",
+    "Trúng số nhờ đặt tượng Phật hướng này",
+]
+ALLOW = [
+    "Lễ Vu Lan báo hiếu tại chùa", "Sinh tử luân hồi trong lời Phật dạy", "Rằm tháng Mười 2026 cúng gì",
+    "Giá vàng hôm nay", "Ngày tốt tháng 11 âm lịch để xuất hành", "Hiểu về cái chết trong thiền định",
+    "Chùa cổ sập sệ cần trùng tu, Phật tử góp công", "Mưa sao băng Song Tử đêm nay", "Báo Giác Ngộ giới thiệu kinh Kim Cang",
+    "Tết Đinh Mùi 2027 mùng 1 là ngày nào",
+]
+
+
+def test_deny_two_way_titles() -> None:
+    deny = _deny()
+    for title in BLOCK:
+        assert deny_reason(title, deny, "FS") and deny_reason(title, deny, "BUD"), title
+    for title in ALLOW:
+        assert deny_reason(title, deny, "FS") is None, title
+        assert deny_reason(title, deny, "BUD") is None, title
+
+
+def test_configured_channels_ignore_unknown_metadata_keys() -> None:
+    keywords = {"channels": ["MIM", "FS"], "MIM": ["ai"], "FS": ["rằm"], "_ghi_chu": "x", "vn_impact": {}, "version": ["1"]}
+    assert configured_channels(keywords) == ["MIM", "FS"]
+    assert configured_channels({"MIM": ["ai"]}) == []
+
+
 def _db_with(conn, items: list[tuple[str, str, str]]) -> None:
     for n, (source_id, title, summary) in enumerate(items):
         article = _article(f"https://{source_id}.test/{n}", title, summary, NOW.isoformat(), src(source_id, ["FS", "BUD"]), NOW)
@@ -66,23 +95,27 @@ def test_channels_come_from_keywords_and_fs_bud_work() -> None:
     assert not _belongs({"source_id": "s", "title": "Giá điện tăng", "summary": ""}, "BUD", sources, keywords)
 
 
-def test_mim_ck_sections_unchanged_by_new_channels(tmp_path, monkeypatch) -> None:
-    sources = [src("kv", ["MIM", "CK", "FS", "BUD"])]
-    path = tmp_path / "sources.json"; path.write_text(json.dumps(sources), encoding="utf-8")
-    db = tmp_path / "t.sqlite"
-    conn = init_db(db)
-    _db_with(conn, [("kv", "OpenAI ra mắt chip AI mới tại Việt Nam", ""), ("kv", "EVN giảm giá điện, lãi suất giữ nguyên", "")])
-    conn.close()
-    cluster_db(db, sources_path=path, now=NOW)
+def test_mim_ck_output_identical_with_and_without_new_sources(tmp_path) -> None:
+    core = src("kv", ["MIM", "CK"])
+    gtrends = {**src("google_trends_vn", ["FS", "BUD"]), "role": "article+signal"}
+    off = tmp_path / "off.json"; off.write_text(json.dumps([core]), encoding="utf-8")
+    on = tmp_path / "on.json"; on.write_text(json.dumps([core, gtrends]), encoding="utf-8")
+    items = [("kv", "OpenAI ra mắt chip AI mới tại Việt Nam", ""), ("kv", "EVN giảm giá điện, lãi suất giữ nguyên", "")]
+    extra = [("google_trends_vn", "OpenAI chip AI Việt Nam rằm tháng Mười", ""), ("google_trends_vn", "Rằm tháng Mười 2026 cúng gì", "")]
 
-    def head(text: str) -> str:
-        return text.split("## FS")[0].split("## Trạng thái nguồn")[0]
+    def run(sources_path, rows, name: str) -> str:
+        db = tmp_path / f"{name}.sqlite"
+        conn = init_db(db)
+        _db_with(conn, rows)
+        conn.execute("INSERT INTO signal(source_id,title,normalized_title,observed_at,value,baseline,kind,run_id) VALUES('google_trends_vn','openai chip','openai chip',?,500,NULL,'trends',?)", (NOW.isoformat(), NOW.isoformat()))
+        conn.commit(); conn.close()
+        cluster_db(db, sources_path=sources_path, now=NOW)
+        text = write_report(db, tmp_path / name, sources_path=sources_path, now=NOW).read_text(encoding="utf-8")
+        return text.split("## FS")[0]
 
-    full = head(write_report(db, tmp_path / "a", sources_path=path, now=NOW).read_text(encoding="utf-8"))
-    old = {key: value for key, value in _keywords().items() if key not in {"FS", "BUD"}}
-    monkeypatch.setattr(report_module, "_keywords", lambda: old)
-    legacy = head(write_report(db, tmp_path / "b", sources_path=path, now=NOW).read_text(encoding="utf-8"))
-    assert full == legacy and "## MIM" in full and "## CK" in full
+    before = run(off, items, "off")
+    after = run(on, items + extra, "on")
+    assert before == after and "## MIM" in before and "## CK" in before
 
 
 def test_trial_sources_enabled_without_blocked_ones() -> None:
@@ -91,6 +124,7 @@ def test_trial_sources_enabled_without_blocked_ones() -> None:
     assert all(s["tos_status"] == "ok" for s in load_sources() if s.get("trial") == "internal")
     fs_sources = [s for s in load_sources() if "FS" in s["channels"]]
     assert {s["id"] for s in fs_sources} == {"google_trends_vn", "wikipedia_pageviews_vi"}
+    assert all(set(s["channels"]) == {"FS", "BUD"} for s in fs_sources)  # không đụng MIM/CK
 
 
 def test_user_agent_requires_real_contact(monkeypatch, tmp_path) -> None:

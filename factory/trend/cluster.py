@@ -169,12 +169,20 @@ def cluster_db(db_path: Path | str = DEFAULT_DB, threshold: float = 0.25, source
         articles = [dict(row) for row in conn.execute("SELECT * FROM article")
                     if datetime.fromisoformat(row["published_at"].replace("Z", "+00:00")).astimezone(UTC) >= cutoff
                     and lookup.get(row["source_id"], {}).get("role") != "primary"]
-        groups = cluster_articles(articles, threshold)
-        events = [event_from_group(group) for group in groups]
-        # Chỉ lấy signal của lần quét mới nhất mỗi nguồn; các lần cũ giữ lại làm lịch sử.
-        signals = [dict(row) for row in conn.execute("SELECT s.* FROM signal s WHERE s.run_id=(SELECT MAX(run_id) FROM signal WHERE source_id=s.source_id)")]
-        for event, group in zip(events, groups):
-            event["signals"] = json.dumps(_matching_signals(group, signals), ensure_ascii=False)
+        # Tách hai phân vùng để nguồn của FS/BUD không làm đổi cụm/tín hiệu của MIM/CK.
+        core = {"MIM", "CK"}
+        def is_core(source_id: str) -> bool:
+            return bool(core & set(lookup.get(source_id, {}).get("channels", [])))
+        all_signals = [dict(row) for row in conn.execute("SELECT s.* FROM signal s WHERE s.run_id=(SELECT MAX(run_id) FROM signal WHERE source_id=s.source_id)")]
+        events = []
+        for part_core in (True, False):
+            part = [article for article in articles if is_core(article["source_id"]) is part_core]
+            signals = [signal for signal in all_signals if is_core(signal["source_id"]) is part_core]
+            groups = cluster_articles(part, threshold)
+            for group in groups:
+                event = event_from_group(group)
+                event["signals"] = json.dumps(_matching_signals(group, signals), ensure_ascii=False)
+                events.append(event)
         conn.execute("DELETE FROM event")
         conn.executemany("INSERT INTO event(id,label,entities,first_seen,last_seen,article_ids,signals) VALUES(:id,:label,:entities,:first_seen,:last_seen,:article_ids,:signals)", events)
         conn.commit()

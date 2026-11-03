@@ -1,5 +1,5 @@
 {
-  "_ghi_chu": "Tái tạo tối thiểu: benchmark gốc docs/pm/tickets/GH-31-benchmark.json bị thiếu. Mục tiêu dương dựng từ tiêu đề của các ca expected=true; mục tiêu âm là nhãn gần-đúng tổng hợp. Không phải dữ liệu Lead chấm tay.",
+  "_ghi_chu": "HỒI QUY KỸ THUẬT, KHÔNG phải benchmark chất lượng. Benchmark gốc docs/pm/tickets/GH-31-benchmark.json bị thiếu nên không kiểm lại được recall 22%/35%. Mục tiêu dương dựng từ tiêu đề các ca expected=true; mục tiêu âm (id mim_04.. ck_14) là nhãn TỔNG HỢP tự nghĩ, chỉ dùng ở test riêng. Lưu ý: lead_match_regression.json có cùng tiêu đề Apple ở mim_10 (dương) và mim_04 (âm) — hợp lý nếu là hai sự kiện đích khác nhau, nhưng không xác minh được vì thiếu benchmark gốc.",
   "events": [
     {
       "id": "mim_03",
